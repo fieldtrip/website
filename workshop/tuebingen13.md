@@ -2,7 +2,7 @@
 layout: default
 ---
 
-##  Workshop on FieldTrip, nonparametric statistics and connectivity 
+##  Workshop on FieldTrip, nonparametric statistics and connectivity
 
 ### Where
 
@@ -25,7 +25,7 @@ have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
  1.  Copy the complete Tuebingen directory from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Unzip the "data.zip" and "spm atlas.zip" file, you should place the contents in the tutorial directory.
 
 `<note warning>`
@@ -56,7 +56,7 @@ present working directory, i.e. the directory containing the fieldtrip
 main funcctions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the tutorial directory
 
@@ -70,11 +70,11 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
 *  morning
     * 1h intro lecture
-    * 2h handson http://fieldtrip.fcdonders.nl/tutorial/sensor_analysis
+    * 2h handson http://www.fieldtriptoolbox.org/tutorial/sensor_analysis
 
 *  afternoon
     * 1h beamforming lecture
-    * 2h handson http://fieldtrip.fcdonders.nl/tutorial/beamformingextended
+    * 2h handson http://www.fieldtriptoolbox.org/tutorial/beamformingextended
 
 *  evening
     * dinner
@@ -84,12 +84,12 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
 *  morning
     * 1h connectivity lecture
-    * 2h hands on http://fieldtrip.fcdonders.nl/tutorial/connectivityextended
+    * 2h hands on http://www.fieldtriptoolbox.org/tutorial/connectivityextended
 
 *  afternoon
     * 1h nonparametric statistics lecture
-    * 1h hands on http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_timelock
-    * 1h hands on http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_freq
+    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
+    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
 
 *  evening
     * pub?
@@ -98,5 +98,3 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
 *  morning
     * 3h playground (working on own data)
-
-

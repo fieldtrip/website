@@ -4,40 +4,34 @@ layout: default
 
 # Jyväskylä, Finland
 
-There will be a M/EEG analysis workshop in Jyvaskyla, focussing on connectivity analysis. On one of the days we will use FieldTrip for the teaching (on the other day we will use MNE python. This workshop is part of a summer school: [International summer school on understanding learning in the brain](http://cibr.jyu.fi/en/training/brain-summerschool2017/scientific_program). 
-
+There will be a M/EEG analysis workshop in Jyvaskyla, focussing on connectivity analysis. On one of the days we will use FieldTrip for the teaching (on the other day we will use MNE python. This workshop is part of a summer school: [International summer school on understanding learning in the brain](http://cibr.jyu.fi/en/training/brain-summerschool2017/scientific_program).
 
 *  By whom: Simo Monto, Matti Stenroos, Jan Kujala, Jan-Mathijs Schoffelen and others
-
 *  When: 15-16 June 2017
- 
-More details are provided by the local organizers [here](http://cibr.jyu.fi/en/training/brain-summerschool2017/scientific_program). 
 
-Tentative plan for the second (FieldTrip-based) da
+More details are provided by the local organizers [here](http://cibr.jyu.fi/en/training/brain-summerschool2017/scientific_program).
 
 ## How should you prepare for the workshop?
 
 `<note important>`
-In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared. 
+In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
 `</note>`
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
 
-Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the toolbox design. 
+Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the toolbox design.
 
 Furthermore, we recommend you to watch the following online videos prior to the workshop. Note that these video lectures cannot be quickly glanced over. You should **plan ahead and take your time** to go through them.
 
-
 *  [Fieldtrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
-
 *  [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
 
 The content of the shorter second lecture is also covered in the first, but presented differently and therefore possibly useful to get a good understanding of the signals that we deal with.
 
-For most of the hands-on session, we will create some simulated data to learn and understand about some basic connectivity measures. We will also process some real data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours). 
+For most of the hands-on session, we will create some simulated data to learn and understand about some basic connectivity measures. We will also process some real data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours).
 
 `<note important>`
-So overall there is about 2 to 5 hours of preparation required from you prior to the workshop! 
+So overall there is about 2 to 5 hours of preparation required from you prior to the workshop!
 `</note>`
 
 ## Getting started with the hands-on sessions
@@ -61,5 +55,3 @@ Furthermore, please do NOT add fieldtrip with all subdirectories, subdirectories
 
 *  afternoon
     * 1.5h handson [Networkanalysis](/tutorial/networkanalysis)
-
-    

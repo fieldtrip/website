@@ -4,11 +4,8 @@ layout: default
 
 # FieldTrip workshop in Zürich
 
-
 *  Where: Department of Psychology, University Zürich
-
 *  When: 24-26 February, 2014
-
 *  Who: Eelke Spaak and Jörn Horschig, the local organizers are Maj-Britt Niemi and Alexandra Buender
 
 ### Installing FieldTrip and Tutorial preparation
@@ -20,7 +17,7 @@ have installed. (If you have a FieldTrip version dating from sometime in the las
 downloaded but will also be distributed on the USB stick.
 
  1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
 `<note warning>`
@@ -51,7 +48,7 @@ present working directory, i.e. the directory containing the fieldtrip
 main funcctions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the tutorial directory
 
@@ -65,26 +62,26 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
 *  morning
     * 1h intro lecture [ppt](https://db.tt/wNf4lyNH)
-    * 2h hands-on http://fieldtrip.fcdonders.nl/tutorial/eventrelatedaveraging
+    * 2h hands-on http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
 
 *  afternoon
     * 1h oscillations lecture [ppt](https://db.tt/IRxD9rDb)
-    * 2h handson http://fieldtrip.fcdonders.nl/tutorial/timefrequencyanalysis
+    * 2h handson http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
 
 *  evening
-    * pub?
-    
+    * pub
+
 
 #### Tuesday
 
 *  morning
     * 1h beamforming lecture [ppt](https://db.tt/kR4N2pSp)
-    * 2h hands on http://fieldtrip.fcdonders.nl/tutorial/beamformer
+    * 2h hands on http://www.fieldtriptoolbox.org/tutorial/beamformer
 
 *  afternoon
     * 1h nonparametric statistics lecture [ppt](https://db.tt/x9E0jmDG)
-    * 1h hands on http://fieldtrip.fcdonders.nl/tutorial/eventrelatedstatistics
-    * 1h hands on http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_freq
+    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics
+    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
 
 *  evening
     * dinner http://goo.gl/maps/IM6yX

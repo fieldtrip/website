@@ -4,14 +4,11 @@ layout: default
 
 # FieldTrip workshop in Kiel, Germany
 
-We will keep this page up to date and post new information here when available.\\ 
+We will keep this page up to date and post new information here when available.
 
-*  Instructor: Cristiano Micheli\\
-
-*  When: 25-27 April 2016\\
-
-*  Where: Kiel, Germany\\
-\\
+*  Instructor: Cristiano Micheli
+*  When: 25-27 April 2016
+*  Where: Kiel, Germany
 
 ####  Monday April 25th
 
@@ -24,7 +21,6 @@ We will keep this page up to date and post new information here when available.\
 
     * 13:00 – 14:00		Lunch
 
-
 *  Session II
     * 14:00 – 15:15		Lecture: Non-parametric randomization techniques
     * 15:15 – 15:30		Coffee break
@@ -32,9 +28,8 @@ We will keep this page up to date and post new information here when available.\
           * http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics
           * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
     * 17:15 – 18:00		Wrap-up-the-day: “Ask the expert” session
-    
 
-*  Evening : ... socials
+*  Evening : ... social activity
 
 #### Tuesday April 26th
 
@@ -46,7 +41,6 @@ We will keep this page up to date and post new information here when available.\
 
     * 13:00 – 14:00		Lunch
 
-
 *  Session IV
     * 14:00 – 15:15		Hands-on: Virtual sensors' connectivity
           * http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo
@@ -55,7 +49,7 @@ We will keep this page up to date and post new information here when available.\
           * http://www.fieldtriptoolbox.org/tutorial/networkanalysis
     * 17:15 – 18:00		Wrap-up-the-day: “Ask the expert” session
 
-    * Evening : ... socials
+    * Evening : ... social activity
 
 #### Wednesday April 27th
 
@@ -68,7 +62,7 @@ For the hands-on sessions you have to start MATLAB. To ensure that everything ru
 
 If you work on your own lapto
  1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Put Subject01.zip in a directory called 'tutorial'.
 
 `<note warning>`
@@ -98,7 +92,7 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing FieldTrip to your path, you change into the tutorial directory
 

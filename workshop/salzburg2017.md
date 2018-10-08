@@ -2,40 +2,31 @@
 layout: default
 ---
 
-# Salzburg, Austria
+# FieldTrip workshop in Salzburg, Austria
 
-There will be a FieldTrip training event linked to the first [Salzburg Mind-Brain Annual Meeting](https://samba.ccns.sbg.ac.at). 
-
+There will be a FieldTrip training event linked to the first [Salzburg Mind-Brain Annual Meeting](https://samba.ccns.sbg.ac.at).
 
 *  By whom: Robert Oostenveld and Jan-Mathijs Schoffelen
-
 *  When: 11-12 July 2017
-
 *  Where: Centre for Cognitive Neuroscience ([CCNS](https://ccns.sbg.ac.at/about/)) at the Paris Lodron University of Salzburg ([PLUS](https://www.uni-salzburg.at/)).
-
 *  Local organization: Nathan Weisz and Thomas Hartmann.
- 
-More details are provided by the local organizers [here](https://samba.ccns.sbg.ac.at/fieldtrip/). 
 
-Tentative pla
+More details are provided by the local organizers [here](https://samba.ccns.sbg.ac.at/fieldtrip/).
 
 ## How should you prepare for the workshop?
 
 `<note important>`
-In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared. 
+In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
 `</note>`
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
 
-Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the toolbox design. 
+Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the toolbox design.
 
-Furthermore, we recommend you to watch the following online video prior to the workshop. 
+Furthermore, we recommend you to watch the [MEG basics and instrumentation video](https://www.youtube.com/watch?v=CPj4jJACeIs)prior to the workshop.
 
-
-*  [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
 
 In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
-
 
 *We will start each day at 9:00 sharp and will finish around 17:30.*
 
@@ -62,13 +53,9 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session. These folders are located in C:\FieldTrip_workshop\toolkit_salzburg\fieldtrip\data.
-
-
-
-
 
 ####  Tuesday
 
@@ -83,7 +70,7 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 
 *  evening
     * dinner and drinks + visit to Mozart Geburtshaus
-    
+
 #### Wednesday
 
 *  morning

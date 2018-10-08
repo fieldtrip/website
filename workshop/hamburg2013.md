@@ -2,79 +2,57 @@
 layout: default
 ---
 
-#  FieldTrip workshop in Hamburg 
+#  FieldTrip workshop in Hamburg
 
 ## When
 
 Wednesday 11 to Friday 13 September 2013.
 
-##  Where 
+##  Where
 
-Dept. of Neurophysiology and Pathophysiology\\
-University Medical Center Hamburg-Eppendorf\\
+Dept. of Neurophysiology and Pathophysiology
+University Medical Center Hamburg-Eppendorf
 Martinistrasse 52, D - 20246 Hamburg, Germany
 
 N55,Campus Lehre,room 210/11
+
 ## Program
 
 ### Wednesday 11 September (day 1)
 
-
-*  Lecture 1: Introduction into FieldTrip - Laura 
-
+*  Lecture 1: Introduction into FieldTrip - Laura
 *  Coffee break
-
 *  Lecture 2: Generation and propagation of signals - Guido
-
 *  Lunch break
-
 *  Hands-on 1: [data preprocessing and artifact detection](/tutorial/eventrelatedaveraging) (data provided, see below)
-
 *  Tea break
-
 *  Hands-on 2: processing own data, event-related potentials (own data)
-
 *  Wrap-up of the day
 
 *The first hands-on can be skipped by people that already have been using FieldTrip. It is meant to get everyone at the same level and to make sure that everyone is comfortable with processing their own data.*
 
 ### Thursday 12 September (day 2)
 
-
 *  Lecture 3:  Frequency analysis - Jan-Mathijs
-
 *  Coffee break
-
 *  Hands-on 3: [Frequency and time-frequency analysis](/tutorial/timefrequencyanalysis) (own data)
-
 *  Lunch break
-
 *  Lecture 4: Inverse modeling of EEG and MEG - Robert
-
 *  Tea break
-
 *  Hands-on 4: [Beamforming](/tutorial/beamformer) and [Minimum-norm estimation](/tutorial/minimumnormestimate) (own data, bring the MRI)
-
 *  Wrap-up of the day
 
-*We will use the online tutorials on the wiki, but in principle you will be working on your own data.* 
+*We will use the online tutorials on the wiki, but in principle you will be working on your own data.*
+
 ### Friday 13 September (day 3)
 
-
 *  Lecture 5: Connectivity analysis - Jan-Mathijs
-
 *  Coffee break
-
 *  Hands-on 5: Connectivity and network analysis
-
 *  Lunch break
-
 *  Lecture: Non-parametric statistics
-
 *  Tea break
-
 *  Hands-on: Experimental design and statistics
-
 *  Wrap-up of the day
 
 ## Installing FieldTrip and preparing for the hands-on sessions
@@ -86,9 +64,7 @@ version of fieldtrip that is distributed on a USB stick, rather than the older v
 If you want to download it in advance, please go to ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip and get
 
 *  fieldtrip-20130906.zip
-
 *  Subject01.zip
-
 *  all files in the tutorial/eventrelatedaveraging directory
 
 `<note warning>`
@@ -118,9 +94,8 @@ present working directory, i.e. the directory containing the fieldtrip
 main funcctions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the data directory
 
     cd path_to_directory/data
-

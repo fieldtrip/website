@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#  Workshop on analyzing intracranial data: spikes and fields 
+#  Workshop on analyzing intracranial data: spikes and fields
 
 ## Where
 
@@ -14,20 +14,19 @@ Saturday 9 March 2013 up to Monday 11 March 2013.
 
 ## Who
 
-Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Nijmegen, NL) and Martin Vinck (SILS, Amsterdam, NL) are the main tutors. 
+Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Nijmegen, NL) and Martin Vinck (SILS, Amsterdam, NL) are the main tutors.
 
 ## Program
-
 
 ###  Saturday
 
 *  morning
-    * 1h lecture - Introduction to FieldTrip and LFP/EEG analysis (Robert Oostenveld) 
-    * 2h handson http://fieldtrip.fcdonders.nl/tutorial/eventrelatedaveraging
+    * 1h lecture - Introduction to FieldTrip and LFP/EEG analysis (Robert Oostenveld)
+    * 2h handson http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
 
 *  afternoon
     * 1h lecture - Spike, and Spike-LFP Analysis (Martin Vinck)
-    * 1h handson http://fieldtrip.fcdonders.nl/tutorial/spike
+    * 1h handson http://www.fieldtriptoolbox.org/tutorial/spike
     * 1h people work on own data with ERFs and/or spikes
 
 *  evening - special interest lectures on decoding methods
@@ -39,12 +38,12 @@ Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Ni
 
 *  morning
     * 1h lecture - Frequency analysis of power and coherence (Robert)
-    * 2h handson http://fieldtrip.fcdonders.nl/tutorial/timefrequencyanalysis
+    * 2h handson http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
 
 *  afternoon
     * 1h lecture - Connectivity analysis (Martin)
-    * 1h handson http://fieldtrip.fcdonders.nl/tutorial/spikefield
-    * 1h handson http://fieldtrip.fcdonders.nl/tutorial/connectivity
+    * 1h handson http://www.fieldtriptoolbox.org/tutorial/spikefield
+    * 1h handson http://www.fieldtriptoolbox.org/tutorial/connectivity
 
 *  evening
     * short project presentations from participants
@@ -67,7 +66,7 @@ version of fieldtrip that is distributed on the workstations and on a USB stick.
 
 If you work on your own laptop you need the USB stic
  1.  Copy the complete content from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 `<note warning>`
@@ -87,16 +86,16 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. 
-    
+The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes.
+
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and e.g. not in another subfolder. You should see a long list of ft_xxx.m functions.
-    
+
 The addpath(pwd) statement adds the
 present working directory, i.e. the directory containing the fieldtrip
 main funcctions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 `<note warning>`
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
@@ -115,5 +114,3 @@ the Subject01.ds directory, but stay at the level of the tutorial
 directory. If a specific tutorial instructs you to load data (and
 if you want the skip the step just prior to that because of time
 limitations), you should go into the tutorial data directory.
-
-

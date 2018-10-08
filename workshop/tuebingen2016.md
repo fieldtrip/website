@@ -30,14 +30,14 @@ We will keep this page up to date and post new information here when available.
 
 *  15:00 – 15:15               Coffee Break
 
-*  15:15 – 16:15               Hands-on 2: 
+*  15:15 – 16:15               Hands-on 2:
         * [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and/or
-        * [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) 
+        * [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
 
 *  16:30 – 17:00               Wrap-up-the-day: special topics, general questions and answers
 
 *  19:00 – 21:30               Dinner: **tba** (not included in registration)
-    
+
 
 #### Day 2 (Friday 14 October, 2016)
 
@@ -57,8 +57,8 @@ We will keep this page up to date and post new information here when available.
 *  14:45 – 17:00               FieldTrip playground (bring your own data!)
 
 *  17:00 – 17:30               Wrap up the event, questions and answers!
-    
-       
+
+
 ## Tutorial preparation
 
 To prepare for the hands-on sessions, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
@@ -66,7 +66,7 @@ To prepare for the hands-on sessions, you should watch the following online vide
 
 *  [MEG instrumentation (video)](https://www.youtube.com/watch?v=15Qs4fuPpes)
 
-*  [FieldTrip intro (video and hands-on)](http://www.fieldtriptoolbox.org/tutorial/introduction)
+*  [FieldTrip intro (video and hands-on)](/tutorial/introduction)
 
 ## Installing FieldTrip and Tutorial preparation
 
@@ -75,7 +75,7 @@ everything runs smooth, we will work with a clean and well-tested
 version of fieldtrip. The tutorial data together with the fieldtrip version can be downloaded [ here](https://depot.uni-konstanz.de/cgi-bin/exchange.pl?g=s38xv3f76w )).
 
  1.  Unzip the FieldTrip-Tutorial-Tübingen.zip file.
- 2.  Unzip the fieldtrip-master.zip file. 
+ 2.  Unzip the fieldtrip-master.zip file.
  3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
 `<note warning>`
@@ -106,9 +106,8 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
-    

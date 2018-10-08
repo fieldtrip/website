@@ -4,11 +4,8 @@ layout: default
 
 # Toolkit of Cognitive Neuroscience: EEG/MEG
 
-
 *  Where: Donders Institute, Radboud University Nijmegen
-
 *  When: 6-9 May 2014
-
 *  Who: Robert Oostenveld, Jan-Mathijs Schoffelen, et al.
 
 ## Installing FieldTrip and Tutorial preparation
@@ -40,7 +37,7 @@ present working directory, i.e. the directory containing the FieldTrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the tutorial directory
 
@@ -58,23 +55,23 @@ A {{:workshop:nijmegen2014:program.pdf|PDF with the detailed program}} is availa
     * 1h data acquisition demo
 
 *  afternoon
-    * 2h hands-on http://fieldtrip.fcdonders.nl/tutorial/eventrelatedaveraging
+    * 2h hands-on http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
     * 1h neuronal oscillations lecture
     * 1h wrap-up session
 
 *  evening
     * pub?
-    
+
 
 ### Wednesday 7 May
 
 *  morning
-    * 2h hands-on http://fieldtrip.fcdonders.nl/tutorial/timefrequencyanalysis
+    * 2h hands-on http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
     * 1h forward and inverse modelling lecture
 
 *  afternoon
     * 1h beamforming lecture
-    * 2h hands on http://fieldtrip.fcdonders.nl/tutorial/beamformer
+    * 2h hands on http://www.fieldtriptoolbox.org/tutorial/beamformer
     * 1h wrap-up session
 
 *  evening
@@ -84,13 +81,13 @@ A {{:workshop:nijmegen2014:program.pdf|PDF with the detailed program}} is availa
 
 *  morning
     * 1h non-parametric permutation statistics lecture
-    * 2h hands-o
-      * http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_timelock
-      * http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_freq
+    * 2h hands-on
+      * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
+      * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
 
 *  afternoon
     * 1h connectivity lecture
-    * 2h hands on http://fieldtrip.fcdonders.nl/tutorial/connectivity
+    * 2h hands on http://www.fieldtriptoolbox.org/tutorial/connectivity
     * 1h wrap-up session
 
 ### Friday 9 May

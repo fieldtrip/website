@@ -4,32 +4,25 @@ layout: default
 
 # FieldTrip Workshop in Guangzhou, China
 
-
-
-*  Who: Diego Lozano-Soldevilla
-
-*  When: August 23rd-25th 2016
-
-*  Where: South China Normal University, Guangzhou
+  *  Who: Diego Lozano-Soldevilla
+  *  When: August 23rd-25th 2016
+  *  Where: South China Normal University, Guangzhou
 
 REGISTRATION CLOSED: NO PLACES AVAILABLE
 
-
-Progra
+# Program
 
 ####  Tuesday August 23rd
 
 *  Session I
     * 9:45			Registration, coffee, opening remarks
-    * 10:05 – 11:00		Lecture: Introduction to EEG (vs MEG) and the FieldTrip toolbox 
+    * 10:05 – 11:00		Lecture: Introduction to EEG (vs MEG) and the FieldTrip toolbox
     * 11:00 – 11:15		Coffee Break
     * 11:15 – 12:45             Hands-on: Preprocessing EEG and event-related averaging, design your own sensory ECoG electrode montage
          * http://www.fieldtriptoolbox.org/tutorial/preprocessing_erp
          * http://www.fieldtriptoolbox.org/tutorial/layout
-          
 
     * 12:45 – 13:45		Lunch
-
 
 *  Session II
     * 13:45 – 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
@@ -37,7 +30,7 @@ Progra
     * 15:00 – 16:45		Hands-on: Time-frequency analysis of power  
          * http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis     
     * 16:45 – 17:30		Wrap-up-the-day: “Ask the experts” session
-    
+
 
 *  dinner (not included, i.e. on own costs)
 
@@ -68,8 +61,8 @@ Progra
     * 10:00 – 13:00		FieldTrip playground: bring your own data
          * http://www.fieldtriptoolbox.org/tutorial/monkey_ecog
                                * Wrap up of the workshop
-                               
-                               
+
+
 ## Installing FieldTrip and Tutorial preparation
 
 For the hands-on sessions you have to start MATLAB. To ensure that
@@ -77,7 +70,7 @@ everything runs smooth, we will work with a clean and well-tested
 version of fieldtrip that you can download [ here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/fieldtrip-20160818.zip )). Importantly, the tutorial data does not have to be
 downloaded but we strongly recommend to download before the workshop clicking at this  [ link](https://www.dropbox.com/s/0sqv44taxhjbsqk/data_tutorials.rar?dl=0 ))
  1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-20160818.zip file. 
+ 2.  Unzip the fieldtrip-20160818.zip file.
  3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
 `<note warning>`
@@ -108,9 +101,8 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
-    

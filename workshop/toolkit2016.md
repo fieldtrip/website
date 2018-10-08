@@ -15,7 +15,7 @@ The code in line 1604-1606 in ft_volumerealign.m should be commented out to work
 `</note>`
 
 
-On April 18-21, 2016 we will host the "Toolkit of Cognitive Neuroscience: advanced data analysis and source modelling of EEG and MEG data" at the Donders Institute in Nijmegen. 
+On April 18-21, 2016 we will host the "Toolkit of Cognitive Neuroscience: advanced data analysis and source modelling of EEG and MEG data" at the Donders Institute in Nijmegen.
 
 This intense 4-day toolkit course will teach you advanced MEG and EEG data analysis skills. Preprocessing, frequency analysis, source reconstruction, connectivity and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG data set using the FieldTrip toolbox. The lectures and tutoring will be provided by the core FieldTrip development team, and there will also be plenty of opportunity to interact and ask questions to us about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of the tutors.
 
@@ -28,60 +28,60 @@ Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many 
  | 09:00-09:30 | Registration, handouts and coffee                                                                                    |         
  | ----------- | ---------------------------------                                                                                    |         
  | 09.30-09:45 | Welcome                                                                                                              |         
- | 09:45-10:45 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - lecture {{:workshop:toolkit2016:introduction.pdf | slides}} | 
+ | 09:45-10:45 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - lecture {{:workshop:toolkit2016:introduction.pdf | slides}} |
  | 10:45-11:00 | Coffee Break                                                                                                         |         
  | 11:00-12:00 | Data acquisition demonstration in the EEG and MEG labs                                                               |         
  | 12:00-13:00 | Lunch                                                                                                                |         
- | 13:00-14:45 | Introduction to Event-Related Fields - [hands-on](http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging)    |         
+ | 13:00-14:45 | Introduction to Event-Related Fields - [hands-on](/tutorial/eventrelatedaveraging)    |         
  | 14:45-15:15 | Tea Break                                                                                                            |         
- | 15:15-16:30 | Fundamentals of neuronal oscillations and synchrony - lecture {{:workshop:toolkit2016:frequencyanalysis.pdf          | slides}} | 
+ | 15:15-16:30 | Fundamentals of neuronal oscillations and synchrony - lecture {{:workshop:toolkit2016:frequencyanalysis.pdf          | slides}} |
  | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                                       |         
 ### Tuesday April 19, 2016
 
- | 09:00-10:45 | Time-frequency analysis of power - [hands-on](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis)       |         
+ | 09:00-10:45 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis)       |         
  | ----------- | -------------------------------------------------------------------------------------------------------------       |         
  | 10:45-11:00 | Coffee Break                                                                                                        |         
- | 11:00-12:15 | Forward and inverse modeling - lecture {{:workshop:toolkit2016:forwinv.pdf                                          | slides}} | 
+ | 11:00-12:15 | Forward and inverse modeling - lecture {{:workshop:toolkit2016:forwinv.pdf                                          | slides}} |
  | 12:15-13:00 | Lunch                                                                                                               |         
- | 13:00-14:00 | Source reconstruction using beamformers - lecture {{:workshop:toolkit2016:beamforming.pdf                           | slides}} | 
- | 14:00-15:00 | Identifying oscillatory sources using beamformers - [hands-on](http://www.fieldtriptoolbox.org/tutorial/beamformer) |         
+ | 13:00-14:00 | Source reconstruction using beamformers - lecture {{:workshop:toolkit2016:beamforming.pdf                           | slides}} |
+ | 14:00-15:00 | Identifying oscillatory sources using beamformers - [hands-on](/tutorial/beamformer) |         
  | 15:00-15:30 | Tea break                                                                                                           |         
  | 15:30-16:30 | Identifying oscillatory sources using beamformers (continued)                                                       |         
  | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                                      |         
  | 19:00-21:30 | Free DINNER - included in registration                                                                              |         
 
- 
+
 
 Humphreys Restaurant\\
 Vismarkt 7 (Waalkade, i.e. along the river front)\\
 6511 VJ Nijmegen\\
 http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen\\
-[Google maps](https://www.google.nl/maps/place/Humphrey's+Restaurant/@51.849361,5.865258,17z/data=!4m7!1m4!3m3!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a!2sHumphrey's+Restaurant!3b1!3m1!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a?hl=nl) 
+[Google maps](https://www.google.nl/maps/place/Humphrey's+Restaurant/@51.849361,5.865258,17z/data=!4m7!1m4!3m3!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a!2sHumphrey's+Restaurant!3b1!3m1!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a?hl=nl)
 
 
 ### Wednesday April 20, 2016
 
- | 09:00-10:00 | Statistics using non-parametric randomization techniques  - lecture {{:workshop:toolkit2016:statistics.pdf                                    | slides}} | 
- | ----------- | ----------------------------------------------------------------------------------------------------------                                    | -------- | 
+ | 09:00-10:00 | Statistics using non-parametric randomization techniques  - lecture {{:workshop:toolkit2016:statistics.pdf                                    | slides}} |
+ | ----------- | ----------------------------------------------------------------------------------------------------------                                    | -------- |
  | 10:00-10:15 | Coffee Break                                                                                                                                  |         
- | 10:15-12:15 | Statistics using non-parametric randomization techniques -  [hands-on](http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock) |         
+ | 10:15-12:15 | Statistics using non-parametric randomization techniques -  [hands-on](/tutorial/cluster_permutation_timelock) |         
  | 12:15-13:00 | Lunch                                                                                                                                         |         
- | 13:00-14:00 | Connectivity analysis in MEG and EEG data - lecture {{:workshop:toolkit2016:connectivity.pdf                                                  | slides}} | 
- | 14:00-15:00 | Analysis of sensor- and source-level connectivity - [hands-on](http://www.fieldtriptoolbox.org/tutorial/connectivity)                         |         
+ | 13:00-14:00 | Connectivity analysis in MEG and EEG data - lecture {{:workshop:toolkit2016:connectivity.pdf                                                  | slides}} |
+ | 14:00-15:00 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity)                         |         
  | 15:00-15:30 | Tea Break                                                                                                                                     |         
  | 15:30-16:30 | Analysis of sensor- and source-level connectivity (continued)                                                                                 |         
  | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                                                                |         
 
 ### Thursday April 21, 2016
 
- | 9:00-14:00  | FieldTrip playground, bring your own data! | 
- | ----------  | ------------------------------------------ | 
- | 12:30-13:00 | Lunch                                      | 
- | 13:00-14:00 | FieldTrip playground continued             | 
- | 14:00-14:15 | Tea break                                  | 
- | 14:15-15.00 | Testimonial & evaluation                   | 
+ | 9:00-14:00  | FieldTrip playground, bring your own data! |
+ | ----------  | ------------------------------------------ |
+ | 12:30-13:00 | Lunch                                      |
+ | 13:00-14:00 | FieldTrip playground continued             |
+ | 14:00-14:15 | Tea break                                  |
+ | 14:15-15.00 | Testimonial & evaluation                   |
 
- 
+
 
 ## Getting started with the hands-on sessions
 
@@ -97,7 +97,7 @@ A recent copy of fieldtrip and the data have been preinstalled on the computer a
     cd D:\toolkit\fieldtrip
     addpath(pwd)
     ft_defaults
-    
+
     cd D:\toolkit\data
 
 

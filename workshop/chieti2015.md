@@ -4,7 +4,7 @@ layout: default
 
 {{tag>chieti}}
 
-#  FieldTrip workshop in Chieti 
+#  FieldTrip workshop in Chieti
 
 {{ :workshop:screen_shot_2015-09-17_at_17.29.15.png?150|}}
 
@@ -19,10 +19,9 @@ University "G. d'Annunzio" - Chieti-Pescara, Italy\\
 
 [Find the ITAB on google maps](https://www.google.nl/maps/place/Istituto+per+le+Tecnologie+Avanzate+Biomediche,+66100+Chieti+CH,+Italië/@42.3667541,14.148373,17z/data=!4m7!1m4!3m3!1s0x1331ac2c47560d77/0x71decc418c53312d!2sVia+Colle+dell'Ara,+66100+Chieti+CH,+Italië!3b1!3m1!1s0x1331ac2c973b8067/0x27369d91f2b65216?hl=nl)
 
-
 ### When
 
-September 18, 2015. 
+September 18, 2015.
 
 ### Who
 
@@ -32,28 +31,18 @@ This workshop is an **advanced** workshop in which we will move beyond standard 
 
 To prepare for the hands-on session, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
-
 *  [MEG instrumentation (video)](https://www.youtube.com/watch?v=15Qs4fuPpes)
-
-*  [FieldTrip intro (video and hands-on)](http://www.fieldtriptoolbox.org/tutorial/introduction)
-
-*  [Frequency analysis (video and hands-on)](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis) 
-
-*  [Beamformer source analysis (video and hands-on)](http://www.fieldtriptoolbox.org/tutorial/beamformer)
+*  [FieldTrip intro (video and hands-on)](/tutorial/introduction)
+*  [Frequency analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
+*  [Beamformer source analysis (video and hands-on)](/tutorial/beamformer)
 
 ## Program
 
 ### Friday 18 September 2015
 
-
 *  8:30 - 9:30 MEG connectivity: concepts, metrics and implementation (lecture)
-
 *  9:30 - 10:15 Hands-on: [Seed-based connectivity](/tutorial/chieti/virtualchannel)
-
 *  10:15 - 10:45 Coffee break
-
 *  10:45 - 11:30 Hands-on: [Simulating and estimating, what about model (mis)match?](/tutorial/chieti/simulation)
-
 *  11:30 - 12:15 Hands-on: [Whole-brain connectivity](/tutorial/chieti/wholebrain)
-
 *  12:15 - 12:30 Review of MEG connectivity, challenges and opportunities (lecture)

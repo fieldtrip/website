@@ -7,7 +7,7 @@ layout: default
 #### Where
 
 Dipartimento di Neuroscienze - Sezione di Fisiologia, Universitá degli Studi di Parma\\
-Via Volturno 39, Parma, Italia 
+Via Volturno 39, Parma, Italia
 
 #### When
 
@@ -24,10 +24,10 @@ Sebo Uithol is the host and local organizer
 
 *  Session I
     * 9:45			Registration, coffee, opening remarks
-    * 10:05 - 11:00		Lecture: An introduction to the MEG and the FieldTrip toolbox 
+    * 10:05 - 11:00		Lecture: An introduction to the MEG and the FieldTrip toolbox
     * 11:00 - 11:15		Coffee Break
-    * 11:15 - 12:45 Hands-on: Getting started with event-related fields 
-          * http://fieldtrip.fcdonders.nl/tutorial/eventrelatedaveraging
+    * 11:15 - 12:45 Hands-on: Getting started with event-related fields
+          * http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
     * 12:45 - 13:45		Lunch
 
 
@@ -35,9 +35,9 @@ Sebo Uithol is the host and local organizer
     * 13:45 - 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
     * 14:45 - 15:00   	Coffee Break
     * 15:00 - 16:45		Hands-on: Time-frequency analysis of power       
-          * http://fieldtrip.fcdonders.nl/tutorial/timefrequencyanalysis
+          * http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
     * 16:45 - 17:30		Wrap-up-the-day: Ask the experts session
-    
+
 
 ####  Tuesday April 29
 
@@ -45,7 +45,7 @@ Sebo Uithol is the host and local organizer
     * 10:00 - 11:00		Lecture: Beamformer techniques for source reconstruction
     * 11:00 - 11:15		Coffee break
     * 11:15 - 13:00		Hands-on: Identifying oscillatory sources using beamformer techniques
-          * http://fieldtrip.fcdonders.nl/tutorial/beamformer
+          * http://www.fieldtriptoolbox.org/tutorial/beamformer
 
     * 13:00 - 14:00		Lunch
 
@@ -54,8 +54,8 @@ Sebo Uithol is the host and local organizer
     * 14:00 - 15:15		Lecture: Non-parametric randomization techniques
     * 15:15 - 15:30		Coffee break
     * 15:30 - 17:15	Hands-on: Parametric and non-parametric statistics on event related fields
-          * http://fieldtrip.fcdonders.nl/tutorial/eventrelatedstatistics
-          * http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_freq
+          * http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics
+          * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
     * 17:15 - 18:00		Wrap-up-the-day: Ask the experts session
 
     * 20:00			Workshop Dinner @ ???
@@ -75,7 +75,7 @@ have installed. (If you have a FieldTrip version dating from sometime in the las
 downloaded but will also be distributed on the USB stick.
 
  1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
 `<note warning>`
@@ -106,12 +106,8 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
-    
-
-
-    

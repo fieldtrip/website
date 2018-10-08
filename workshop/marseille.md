@@ -6,11 +6,8 @@ layout: default
 
 Together with Jean-Michel Badier and Christian Benar from the [MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page), we will run a FieldTrip workshop.
 
-
 *  Who: Robert Oostenveld with help from local staff
-
 *  When: 11-13 January 2016
-
 *  Where: You should have received detailed instructions on the venue at INSERM Marseille. If you have questions, please contact [demat-form.dr-marseille@inserm.fr](/demat-form.dr-marseille@inserm.fr).
 
 We will keep this page up to date and post new information here when available.
@@ -22,31 +19,27 @@ Please download the ft_connectivitysimulation data here: {{:workshop:data.mat|da
 ## How should you prepare for the workshop?
 
 `<note important>`
-In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared. 
+In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
 `</note>`
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
 
-Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the toolbox design. 
+Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the toolbox design.
 
 Furthermore, we recommend you to watch the following online videos prior to the workshop. Note that these video lectures cannot be quickly glanced over. You should **plan ahead and take your time** to go through them.
 
-
 *  [Fieldtrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
-
 *  [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
 
 The content of the shorter second lecture is also covered in the first, but presented differently and therefore possibly useful to get a good understanding of the signals that we deal with.
 
-In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours). 
+In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours).
 
 `<note important>`
-So over all there is about 2 to 5 hours of preparation required from you prior to the workshop! 
+So over all there is about 2 to 5 hours of preparation required from you prior to the workshop!
 `</note>`
 
-
-
-## Final program
+## Program
 
 *We will start each day at 9:00 sharp and will finish around 17:00 on Monday and Tuesday, and around 12:30 on Wednesday.*
 
@@ -63,7 +56,6 @@ So over all there is about 2 to 5 hours of preparation required from you prior t
 
 *  evening
     * dinner (not included, i.e. on own costs)
-    
 
 #### Tuesday
 
@@ -82,12 +74,11 @@ So over all there is about 2 to 5 hours of preparation required from you prior t
 #### Wednesday
 
 *  Playground in which you will be working on own data (under supervision)
-
 *  Wrap up of the workshop
 
 For the playground you should bring your own data. In case you don't have a suitable dataset for analysis (yet), we will provide you with a dataset and details on the experiment and analysis options.
 
- 
+
 ## Setting the path
 
 The data and FieldTrip have been installed on the computers at the workshop venue.
@@ -102,7 +93,7 @@ For the hands-on sessions you have to start MATLAB. To ensure that everything ru
 
 If you work on your own lapto
  1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Put Subject01.zip in a directory called 'tutorial'.
 
 `<note warning>`
@@ -132,9 +123,8 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing FieldTrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
-    

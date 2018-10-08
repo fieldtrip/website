@@ -2,7 +2,7 @@
 layout: default
 ---
 
-##  FieldTrip workshop Donostia 
+##  FieldTrip workshop Donostia
 
 ### Where
 
@@ -14,7 +14,7 @@ Monday May 13 - Wednesday May 15.
 
 ### Who
 
-Nicola Molinaro is the host and local organizer. Jan-Mathijs Schoffelen, Diego Lozano-Soldevilla and Lilla Magyari (Donders, Nijmegen, NL) are the main tutors. 
+Nicola Molinaro is the host and local organizer. Jan-Mathijs Schoffelen, Diego Lozano-Soldevilla and Lilla Magyari (Donders, Nijmegen, NL) are the main tutors.
 
 ### Installing FieldTrip and Tutorial preparation
 
@@ -25,8 +25,8 @@ have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
  1.  Copy the contents from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
- 3.  Unzip the "data.zip" file, you should place the contents in the same directory, e.g. in a newly created directory called 'toolkit'. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+ 3.  Unzip the "data.zip" file, you should place the contents in the same directory, e.g. in a newly created directory called 'toolkit'.
 
 `<note warning>`
 Depending on the unzip program you are using (e.g. Winrar), the name
@@ -56,7 +56,7 @@ present working directory, i.e. the directory containing the fieldtrip
 main funcctions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 After installing fieldtrip to your path, you change into the data directory
 
@@ -70,26 +70,26 @@ After installing fieldtrip to your path, you change into the data directory
 
 *  morning
     * 1h intro lecture
-    * 2h handson http://fieldtrip.fcdonders.nl/tutorial/eventrelatedaveraging
+    * 2h handson http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
 
 *  afternoon
-    * 1h spectral analysis lecture 
-    * 2h handson http://fieldtrip.fcdonders.nl/tutorial/timefrequencyanalysis
+    * 1h spectral analysis lecture
+    * 2h handson http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
 
 *  evening
     * food and drinks
-    
+
 
 #### Tuesday
 
 *  morning
     * 1h beamforming lecture
-    * 2h hands on http://fieldtrip.fcdonders.nl/tutorial/beamformer
+    * 2h hands on http://www.fieldtriptoolbox.org/tutorial/beamformer
 
 *  afternoon
     * 1h nonparametric statistics lecture
-    * 1h hands on http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_timelock
-    * 1h hands on http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_freq
+    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
+    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
 
 *  evening
     * food and drinks
@@ -98,4 +98,3 @@ After installing fieldtrip to your path, you change into the data directory
 
 *  morning
     * playground (working on own data)
-

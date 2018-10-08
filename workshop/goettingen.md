@@ -6,12 +6,10 @@ layout: default
 
 ## Where
 
+Room 2.122
 Georg-Elias-Müller-Institut für Psychologie
-
 Gosslerstrasse 14
 D-37073 Göttingen
-
-Room 2.122
 
 ## When
 

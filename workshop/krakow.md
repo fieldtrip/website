@@ -2,7 +2,7 @@
 layout: default
 ---
 
-#  FieldTrip workshop in Krakow, Poland 
+#  FieldTrip workshop in Krakow, Poland
 
 ## Using the tutorial data and the FieldTrip version provided
 
@@ -13,7 +13,7 @@ have installed. Furthermore, the tutorial data **does not have to be
 downloaded** but will also be distributed on the USB stick.
 
  1.  Copy the complete Krakow directory from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 `<note warning>`
@@ -34,17 +34,17 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     ft_defaults
 
 The restoredefaultpath command clears your path, keeping only the
-official MATLAB toolboxes. 
-    
+official MATLAB toolboxes.
+
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and e.g. not in another subfolder. You should see a long list of ft_xxx.m functions.
-    
+
 
 The addpath(pwd) statement adds the
 present working directory, i.e. the directory containing the fieldtrip
 main funcctions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 `<note warning>`
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
@@ -67,7 +67,7 @@ i.e. tutorial/eventreltedaveraging.
 
 ## Krakow specific information
 
-The tutorials that we will use during this toolkit ar
+The tutorials that we will use during this toolkit are
 
 **Tuesday morning:**  Please begin with [Event related averaging](/tutorial/eventrelatedaveraging) going up to and including the axial gradiometer section only. It is helpful to read [The data set used in this tutorial](/tutorial/shared/dataset) prior to running the tutorial.  When you reach the section on planar gradiometer, switch then to this EEG example: [EEG data: reading-in trials and pre-processing](/example/preprocessing_eeg).   For this EEG example, you will also need the BrainVision data provided on the USB sticks.
 
