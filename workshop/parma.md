@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+# FieldTrip workshop in Parma
+
+#### Where
+
+Dipartimento di Neuroscienze - Sezione di Fisiologia, Universitá degli Studi di Parma\\
+Via Volturno 39, Parma, Italia 
+
+#### When
+
+April 28-30 2014
+
+#### Who
+
+Diego Lozano-Soldevilla and Arjen Stolk will be lecturing and tutoring.\\
+Sebo Uithol is the host and local organizer
+
+## Tentative Program
+
+####  Monday April 28
+
+*  Session I
+    * 9:45			Registration, coffee, opening remarks
+    * 10:05 - 11:00		Lecture: An introduction to the MEG and the FieldTrip toolbox 
+    * 11:00 - 11:15		Coffee Break
+    * 11:15 - 12:45 Hands-on: Getting started with event-related fields 
+          * http://fieldtrip.fcdonders.nl/tutorial/eventrelatedaveraging
+    * 12:45 - 13:45		Lunch
+
+
+*  Session II
+    * 13:45 - 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
+    * 14:45 - 15:00   	Coffee Break
+    * 15:00 - 16:45		Hands-on: Time-frequency analysis of power       
+          * http://fieldtrip.fcdonders.nl/tutorial/timefrequencyanalysis
+    * 16:45 - 17:30		Wrap-up-the-day: Ask the experts session
+    
+
+####  Tuesday April 29
+
+*  Session III
+    * 10:00 - 11:00		Lecture: Beamformer techniques for source reconstruction
+    * 11:00 - 11:15		Coffee break
+    * 11:15 - 13:00		Hands-on: Identifying oscillatory sources using beamformer techniques
+          * http://fieldtrip.fcdonders.nl/tutorial/beamformer
+
+    * 13:00 - 14:00		Lunch
+
+
+*  Session IV
+    * 14:00 - 15:15		Lecture: Non-parametric randomization techniques
+    * 15:15 - 15:30		Coffee break
+    * 15:30 - 17:15	Hands-on: Parametric and non-parametric statistics on event related fields
+          * http://fieldtrip.fcdonders.nl/tutorial/eventrelatedstatistics
+          * http://fieldtrip.fcdonders.nl/tutorial/cluster_permutation_freq
+    * 17:15 - 18:00		Wrap-up-the-day: Ask the experts session
+
+    * 20:00			Workshop Dinner @ ???
+
+
+####  Wednesday April 30
+
+*  Session V
+    * 10:00 - 13:00		FieldTrip playground
+
+## Installing FieldTrip and Tutorial preparation
+
+For the hands-on sessions you have to start MATLAB. To ensure that
+everything runs smooth, we will work with a clean and well-tested
+version of fieldtrip that is distributed on a USB stick, rather than the version you might already
+have installed. (If you have a FieldTrip version dating from sometime in the last few weeks, that should be fine.) Importantly, the tutorial data does not have to be
+downloaded but will also be distributed on the USB stick.
+
+ 1.  Copy the complete contents of the USB stick to your computer.
+ 2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
+ 3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
+
+`<note warning>`
+Depending on the unzip program you are using (e.g. Winrar), the name
+of the zip file might also appear as directiory, resulting in
+path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the
+fieldtrip directory in a fieldtrip directory. Please fix that by
+moving all files one level up.
+`</note>`
+
+After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
+
+
+    restoredefaultpath
+    cd path_to_directory/Fieldtrip-xxxxxxxx
+    addpath(pwd)
+    ft_defaults
+
+`<note warning>`
+Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
+
+Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
+`</note>`
+
+The restoredefaultpath command clears your path, keeping only the
+official MATLAB toolboxes. The addpath(pwd) statement adds the
+present working directory, i.e. the directory containing the fieldtrip
+main functions. The ft_defaults command ensures that all required
+subdirectories are added to the path.
+
+If you get the error "can't find the command ft_defaults" you should check the present working directory. 
+
+After installing fieldtrip to your path, you change into the tutorial directory
+
+    cd path_to_directory/tutorial
+    
+
+
+    

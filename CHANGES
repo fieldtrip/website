@@ -1,0 +1,9 @@
+# CHANGES
+
+2018-09-25:
+  - The file content-20180925.tgz was used in the initial conversion of dokuwiki to markdown.
+  - A lot (but not all) of the autoconverted markdown files have been fixed.
+
+2018-10-08:
+  - Removed the project section, including monkey, hcp and guidelines.
+  - Added some external links.

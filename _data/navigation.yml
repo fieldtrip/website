@@ -1,0 +1,44 @@
+- name: Home
+  link: /index
+
+- name: Download
+  link: /download
+
+- name: Discussion List
+  link: /discussion_list
+
+- name: Contact
+  link: /contact
+
+- name: Getting started
+  link: /getting_started
+
+- name: Frequently asked questions
+  link: /faq
+
+- name: Tutorial documentation
+  link: /tutorial
+
+- name: Example matlab scripts
+  link: /example
+
+- name: Reference documentation
+  link: /reference
+
+- name: More documentation ...
+  link: /documentation
+
+- name: Contribute
+  link: /contribute
+
+- name: Development
+  link: /development
+
+- name: Publications
+  link: /publications
+
+- name: External Links
+  link: /external_links
+
+- name: Copyrights
+  link: /copyrights

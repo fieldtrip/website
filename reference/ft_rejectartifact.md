@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+##  FT_REJECTARTIFACT
+
+Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_rejectartifact".
+
+`<html>``<pre>`
+    `<a href=/reference/ft_rejectartifact>``<font color=green>`FT_REJECTARTIFACT`</font>``</a>` removes data segments containing artifacts. It returns a
+    configuration structure with a modified trial definition which can be used for
+    preprocessing of only the clean data.
+ 
+    You should start by detecting the artifacts in the data using the function
+    FT_ARTIFACT_xxx where xxx is the type of artifact. Subsequently `<a href=/reference/ft_rejectartifact>``<font color=green>`FT_REJECTARTIFACT`</font>``</a>`
+    looks at the detected artifacts and removes them from the trial definition or from
+    the data. In case you wish to replace bad parts by nans, you have to specify data
+    as an input parameter.
+ 
+    Use as
+    cfg = ft_rejectartifact(cfg)
+    with the cfg as obtained from `<a href=/reference/ft_definetrial>``<font color=green>`FT_DEFINETRIAL`</font>``</a>`, or as
+    data = ft_rejectartifact(cfg, data)
+    with the data as obtained from `<a href=/reference/ft_preprocessing>``<font color=green>`FT_PREPROCESSING`</font>``</a>`
+ 
+    The following configuration options are supporte
+    cfg.artfctdef.reject          = 'none', 'partial', 'complete', 'nan', or 'value' (default = 'complete')
+    cfg.artfctdef.minaccepttim    = when using partial rejection, minimum length
+                                    in seconds of remaining trial (default = 0.1)
+    cfg.artfctdef.crittoilim      = when using complete rejection, reject trial only when artifacts occur within
+                                    this time window (default = whole trial). This only works with in-memory data,
+                                    since trial time axes are unknown for data on disk.
+    cfg.artfctdef.feedback        = 'yes' or 'no' (default = 'no')
+    cfg.artfctdef.invert          = 'yes' or 'no' (default = 'no')
+    cfg.artfctdef.value           = scalar value to replace the data in the artifact segments (default = nan)
+    cfg.artfctdef.eog.artifact    = Nx2 matrix with artifact segments, this is added to the cfg by using `<a href=/reference/ft_artifact_eog>``<font color=green>`FT_ARTIFACT_EOG`</font>``</a>`
+    cfg.artfctdef.jump.artifact   = Nx2 matrix with artifact segments, this is added to the cfg by using `<a href=/reference/ft_artifact_jump>``<font color=green>`FT_ARTIFACT_JUMP`</font>``</a>`
+    cfg.artfctdef.muscle.artifact = Nx2 matrix with artifact segments, this is added to the cfg by using `<a href=/reference/ft_artifact_muscle>``<font color=green>`FT_ARTIFACT_MUSCLE`</font>``</a>`
+    cfg.artfctdef.zvalue.artifact = Nx2 matrix with artifact segments, this is added to the cfg by using `<a href=/reference/ft_artifact_zvalue>``<font color=green>`FT_ARTIFACT_ZVALUE`</font>``</a>`
+    cfg.artfctdef.visual.artifact = Nx2 matrix with artifact segments, this is added to the cfg by using `<a href=/reference/ft_databrowser>``<font color=green>`FT_DATABROWSER`</font>``</a>`
+    cfg.artfctdef.xxx.artifact    = Nx2 matrix with artifact segments, this could be added by your own artifact detection function
+ 
+    A trial that contains an artifact can be rejected completely or partially. In case
+    of partial rejection, a minimum length of the resulting sub-trials can be
+    specified using minaccepttim.
+ 
+    Outpu
+    If cfg is used as the only input parameter, the output is a cfg structure with an updated trl.
+    If cfg and data are both input parameters, the output is an updated raw data structure with only the clean data segments.
+ 
+    To facilitate data-handling and distributed computing you can use
+    cfg.inputfile   =  ...
+    If you specify this option the input data will be read from a *.mat
+    file on disk. This mat files should contain only a single variable named 'data',
+    corresponding to the input structure.
+ 
+    See also `<a href=/reference/ft_artifact_eog>``<font color=green>`FT_ARTIFACT_EOG`</font>``</a>`, `<a href=/reference/ft_artifact_muscle>``<font color=green>`FT_ARTIFACT_MUSCLE`</font>``</a>`, `<a href=/reference/ft_artifact_jump>``<font color=green>`FT_ARTIFACT_JUMP`</font>``</a>`, `<a href=/reference/ft_artifact_threshold>``<font color=green>`FT_ARTIFACT_THRESHOLD`</font>``</a>`,
+    `<a href=/reference/ft_artifact_clip>``<font color=green>`FT_ARTIFACT_CLIP`</font>``</a>`, `<a href=/reference/ft_artifact_ecg>``<font color=green>`FT_ARTIFACT_ECG`</font>``</a>`, `<a href=/reference/ft_databrowser>``<font color=green>`FT_DATABROWSER`</font>``</a>`, `<a href=/reference/ft_rejectvisual>``<font color=green>`FT_REJECTVISUAL`</font>``</a>`
+`</pre>``</html>`
+
