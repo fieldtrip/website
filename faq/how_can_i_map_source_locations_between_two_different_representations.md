@@ -8,22 +8,22 @@ layout: default
 
 After doing your source reconstruction, you may want to interpolate an atlas onto your sourcemodel, for example to be able to find peaks of activity within an anatomical ROI.
 
-The best way to go about is to do your beamformer source reconstruction on a subject-specific grid, which is inverse-warped from a regular grid defined on the MNI-template. You can read more about it in the example script [create a grid in individual head space from a template grid in MNI space](http://fieldtrip.fcdonders.nl/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
+The best way to go about is to do your beamformer source reconstruction on a subject-specific grid, which is inverse-warped from a regular grid defined on the MNI-template. You can read more about it in the example script [create a grid in individual head space from a template grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
 
 Then, you can interpolate the atlas of your choice onto this sourcemodel using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
 
 
 	% read the atlas
 	atlas = ft_read_atlas('~/fieldtrip/template/atlas/aal/ROI_MNI_V4.nii');
-	
+
 	% load the template sourcemodel with the resolution you need (i.e. the resolution you used in your beamformer grid)
 	load('~/fieldtrip/template/sourcemodel/standard_sourcemodel3d10mm.mat')
-	
-	% and call ft_sourceinterpolate: 
-	cfg = []; 
-	cfg.interpmethod = 'nearest'; 
-	cfg.parameter = 'tissue'; 
-	sourcemodel2 = ft_sourceinterpolate(cfg, atlas, sourcemodel); 
+
+	% and call ft_sourceinterpolate:
+	cfg = [];
+	cfg.interpmethod = 'nearest';
+	cfg.parameter = 'tissue';
+	sourcemodel2 = ft_sourceinterpolate(cfg, atlas, sourcemodel);
 
 *Some useful tips:* \\
 - Ensure that the units are consistent in atlas and sourcemodel. If that's not the case, use **[ft_convert_units](/reference/ft_convert_units)**.\\
@@ -37,6 +37,3 @@ Now without the need to call **[ft_sourceinterpolate](/reference/ft_sourceinterp
 
 
 	indx = find(sourcemodel2.tissue==x); % where x is the number of your choice
-
-
-

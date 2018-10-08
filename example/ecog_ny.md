@@ -3,6 +3,7 @@ layout: default
 ---
 
 {{tag>example ieeg eeg ecog ecog-visual}}
+
 ## Analysis of high-gamma band signals in human ECoG
 
 ### Introduction
@@ -19,7 +20,7 @@ The data can be downloaded from [SubjectNY394.zip](ftp://ftp.fieldtriptoolbox.or
 
 ### Data analysis
 
-In line with the [main tutorial](http://www.fieldtriptoolbox.org/tutorial/human_ecog), you can use the following code for surface rendering and the plotting of electrodes. Note that in this dataset many steps are skipped and we are just plotting the result of the anatomical coregistration and electrode placement.
+In line with the [main tutorial](/tutorial/human_ecog), you can use the following code for surface rendering and the plotting of electrodes. Note that in this dataset many steps are skipped and we are just plotting the result of the anatomical coregistration and electrode placement.
 
 	
 	%% load electrode locations

@@ -4,11 +4,11 @@ layout: default
 
 {{tag>tutorial sleep EDF EEG EMG ECG artifacts continuous}}
 
-# Extracting the brain state and events from continuous sleep EEG 
+# Extracting the brain state and events from continuous sleep EEG
 
 ## Introduction
 
-In this tutorial you will explore and combine continuous EEG with multiple recordings from other modalities, such as muscles (EMG), eyes (EOG) and the heart (ECG). You will learn how combining the modalities can give a better understanding of the brain states and the switching between them. 
+In this tutorial you will explore and combine continuous EEG with multiple recordings from other modalities, such as muscles (EMG), eyes (EOG) and the heart (ECG). You will learn how combining the modalities can give a better understanding of the brain states and the switching between them.
 
 We will be using sleep recordings as an example for multimodal data and will form a picture of what is happening in the brain during sleep. Sleep is the most standardized and well-analyzed brain state to date. The methods used for analyzing sleep might also help you in characterizing drowsiness during a task, detect closed eyes or eye movements, detect spontaneous events in EEG (such as epileptic spikes) and in general how to include other modalities relevant to your task. Along the way you will learn a bit about the structure of sleep.
 
@@ -22,7 +22,7 @@ Discrete events and continuous shifts in activity during sleep are not easily ob
 
 ** Sleep states by Polysomnography **
 
-Sleep has well defined brain states which are called Wake, Stage 1, Stage 2, Stage 3, Stage 4 and rapid-eye-movement (REM) sleep. In the more recent terminology Stage 3 and Stage 4 are combined as one stage and called slow-wave sleep (SWS). A more coarse classification consists of Wake, REM and non-REM, where non-REM combines Stage 1, Stage 2 and SWS sleep. Often we have movement arousals as well as longer times with movement during sleep. These arousals and movement times do not necessarily reflect the Wake state, but give us information about sleep as well. Furthermore, the movements indicate where we can find artifactual data in our recordings we might want to exclude for more focused analyses. Sleep states happen usually in clearly defined temporal cycles about every 1 to 2 hours. An idealized sleep “hypnogram” example is given below. However, sleep varies a lot between individuals and real sleep “hypnograms” from two different individuals by expert scoring are given below. 
+Sleep has well defined brain states which are called Wake, Stage 1, Stage 2, Stage 3, Stage 4 and rapid-eye-movement (REM) sleep. In the more recent terminology Stage 3 and Stage 4 are combined as one stage and called slow-wave sleep (SWS). A more coarse classification consists of Wake, REM and non-REM, where non-REM combines Stage 1, Stage 2 and SWS sleep. Often we have movement arousals as well as longer times with movement during sleep. These arousals and movement times do not necessarily reflect the Wake state, but give us information about sleep as well. Furthermore, the movements indicate where we can find artifactual data in our recordings we might want to exclude for more focused analyses. Sleep states happen usually in clearly defined temporal cycles about every 1 to 2 hours. An idealized sleep “hypnogram” example is given below. However, sleep varies a lot between individuals and real sleep “hypnograms” from two different individuals by expert scoring are given below.
 
 Sleep states can only be reliably identified by using combined EEG, EOG and EMG. But also additional modalities are often recorded, such as ECG, breathing, accelerometers, body temperature, snoring noise etc. This kind of recording of multiple signals during sleep is called polysomnography. Polysomnography is typically scored (i.e. classified) in 30-second segments using a manual procedure.
 
@@ -56,11 +56,11 @@ Load the subject specific information. Then read and preprocess the continuous s
 
 	  % set the path to the data to the current directory
 	  datapath = pwd;
-	  
+
 	  % load the Subject specific information
 	  %Subject01
 	  Subject05
-	  
+
 	  % load the continous sleep EEG, EOG, EMG and ECG data
 	  cfg             = [];
 	  cfg.dataset     = [datapath filesep subjectdata.subjectdir filesep subjectdata.datafile];
@@ -72,7 +72,7 @@ The provided example data sets were already originally pre-filtered for scoring 
 
 The data from Subject01 should have the following structur
 
-    data_orig = 
+    data_orig =
            hdr: [1x1 struct]
          label: {4x1 cell}
           time: {[1x4024448 double]}
@@ -88,7 +88,7 @@ Because the original channels are not named conveniently we apply a montage stru
 	  montage_rename.labelold = {'C4-A1' 'ROC-LOC' 'EMG1-EMG2' 'ECG1-ECG2'};
 	  montage_rename.labelnew = {'EEG' 'EOG' 'EMG' 'ECG'};
 	  montage_rename.tra      = eye(4);
-	
+
 	  cfg         = [];
 	  cfg.montage = montage_rename;
 	  data_continuous = ft_preprocessing(cfg, data_orig);
@@ -111,7 +111,7 @@ Please also skip through several epochs in the data and zoom out in the time axi
 
 **//Figure 2: **[ft_databrowser](/reference/ft_databrowser)** of the original data with renamed channels. The data can be horizontally (time axis) and vertically (y-axis/signal amplitude) zoomed in and out to view the data in smaller or larger segments. And data can be viewed segment by segment.//**
 
-We now additionaly segment the continous data in 30-second trials. This that allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales. 
+We now additionaly segment the continous data in 30-second trials. This that allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
 
 
 	  % segment the continous data in segments of 30-seconds
@@ -130,12 +130,12 @@ To identify periods of wake (including brief arousals), non-REM and REM states d
 	  cfg                              = [];
 	  cfg.continuous                   = 'yes';
 	  cfg.artfctdef.muscle.interactive = 'yes';
-	
+
 	  % channel selection, cutoff and padding
 	  cfg.artfctdef.muscle.channel     = 'EMG';
 	  cfg.artfctdef.muscle.cutoff      = 4; % z-value at which to threshold (default = 4)
 	  cfg.artfctdef.muscle.trlpadding  = 0;
-	
+
 	  % algorithmic parameters
 	  cfg.artfctdef.muscle.bpfilter    = 'yes';
 	  cfg.artfctdef.muscle.bpfreq      = [20 45];% typicall [110 140] but sampling rate is too low for that
@@ -149,22 +149,22 @@ To identify periods of wake (including brief arousals), non-REM and REM states d
 Please note that due to the reduced sample rate of 128 Hz we cannot use the typical frequency range to better detect EMG, however this should suffice for our case.
 `</note>`
 
-We now use  **[ft_artifact_muscle](/reference/ft_artifact_muscle)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [ automatic artifact rejection tutorial](http://www.fieldtriptoolbox.org/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection )).
+We now use  **[ft_artifact_muscle](/reference/ft_artifact_muscle)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [ automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection )).
 
 We want to be very cautious with excluding and exclude more than we must since EMG artifacts point towards movement or wake periods have happened probably some seconds earlier and later.
-    
+
 
 
 	  % conservative rejection intervals around EMG events
 	  cfg.artfctdef.muscle.pretim  = 10; % pre-artifact rejection-interval in seconds
 	  cfg.artfctdef.muscle.psttim  = 10; % post-artifact rejection-interval in seconds
-	
+
 	  % keep a copy for the exercise
 	  cfg_muscle_epoched = cfg;
-	
+
 	  % feedback, explore the right threshold for all data (one trial, th=4 z-values)
 	  cfg = ft_artifact_muscle(cfg, data_continuous);
-	
+
 	  % make a copy of the samples where the EMG artifacts start and end, this is needed further down
 	  EMG_detected = cfg.artfctdef.muscle.artifact;
 
@@ -173,15 +173,15 @@ We want to be very cautious with excluding and exclude more than we must since E
 
 `<note exercise>`
 Explore and find the best cutoff in z-values (i.e. standard deviations) to exclude most of the artifacts for this subject!
-Typically EMG higher than 100 microVolts are best excluded. Note that we exclude the data on the whole data length, i.e. as one big trial. 
+Typically EMG higher than 100 microVolts are best excluded. Note that we exclude the data on the whole data length, i.e. as one big trial.
 `</note>`
 
 {{ :tutorial:sleep:ft_artifact_muscle_gui.png?800 |}}
 
 **//Figure 3: Interactive figure of ft_artifact_muscle. The left panel shows the z-score of the processed data. Suprathreshold data points are marked in red. The lower right panel shows one trial, which in our case is the same as on the left panel, as we inspect the data all in one.//**
- 
- 
- 
+
+
+
 We can now look at the detected "artifacts" using **[ft_databrowser](/reference/ft_databrowser)**
 
 
@@ -212,13 +212,13 @@ Another indicator of wake periods (or REM sleep) is eye movement. In the EOG we 
 	  cfg = [];
 	  cfg.continuous                = 'yes';
 	  cfg.artfctdef.eog.interactive = 'yes';
-	
+
 	  % channel selection, cutoff and padding
 	  cfg.artfctdef.eog.channel     = 'EOG';
 	  cfg.artfctdef.eog.cutoff      = 2.5; % z-value at which to threshold (default = 4)
 	  cfg.artfctdef.eog.trlpadding  = 0;
 	  cfg.artfctdef.eog.boxcar      = 10;
-	
+
 	  % conservative rejection intervals around EOG events
 	  cfg.artfctdef.eog.pretim      = 10; % pre-artifact rejection-interval in seconds
 	  cfg.artfctdef.eog.psttim      = 10; % post-artifact rejection-interval in seconds
@@ -232,7 +232,7 @@ Explore the right threshold for detecting all EOG artifacts. Again, the data is 
 
 
 	  cfg = ft_artifact_eog(cfg, data_continuous);
-	
+
 	  % make a copy of the samples where the EOG artifacts start and end, this is needed further down
 	  EOG_detected = cfg.artfctdef.eog.artifact;
 
@@ -263,7 +263,7 @@ Let us view the data in 2-hour blocks again after excluding the parts with EMG o
 
 ## Estimating frequency-represtation over sleep
 
-Electrophysiological recordings can also be used to identify wake periods. In the EEG we focus on 4 frequency bands, which are slow-wave activity (0.5 to 4 Hz), theta (4 to 8 Hz), alpha (8-11) and sleep spindle band/ sigma (11-16 Hz). Note that the frequency bands might be defined here differently than in some other literature. 
+Electrophysiological recordings can also be used to identify wake periods. In the EEG we focus on 4 frequency bands, which are slow-wave activity (0.5 to 4 Hz), theta (4 to 8 Hz), alpha (8-11) and sleep spindle band/ sigma (11-16 Hz). Note that the frequency bands might be defined here differently than in some other literature.
 
 
 	% define the EEG frequency bands of interest
@@ -273,7 +273,7 @@ Electrophysiological recordings can also be used to identify wake periods. In th
 	  8   11    % alpha band actity
 	  11  16    % spindle band actity
 	  ];
-	
+
 	cfg = [];
 	cfg.output        = 'pow';
 	cfg.channel       = 'EEG';
@@ -285,7 +285,7 @@ Electrophysiological recordings can also be used to identify wake periods. In th
 
 
 
-	freq_epoched = 
+	freq_epoched =
 	        label: {'EEG'}
 	       dimord: 'rpt_chan_freq'
 	         freq: [1x32 double]
@@ -295,10 +295,10 @@ Electrophysiological recordings can also be used to identify wake periods. In th
 	          cfg: [1x1 struct]
 
 
-Now comes a trick to analyse the data more efficiently: 
-the trials/segments/epochs in the data represent time at the level of the experiment, i.e. every subsequent trial is one 30-s epoch advanced in time. 
+Now comes a trick to analyse the data more efficiently:
+the trials/segments/epochs in the data represent time at the level of the experiment, i.e. every subsequent trial is one 30-s epoch advanced in time.
 We can reformat the freq_epoched structure into a regular time-frequency representation. The time or latency of each trial can be constructed using the sampleinfo from the segmented data, which specified for each trial the begin and the end-sample relative in the original datafile.
-See also ["How can I do time-frequency analysis on continuous data"](http://www.fieldtriptoolbox.org/faq/how_can_i_do_time-frequency_analysis_on_continuous_data) for more details.
+See also the frequently asked question ["how can I do time-frequency analysis on continuous data"](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data) for more details.
 
 
 	begsample = data_epoched_clean.sampleinfo(:,1);
@@ -335,17 +335,17 @@ What we need in the end is time-frequency spectra over specific frequency bands.
 	cfg.frequency           = freq_bands(1,:);
 	cfg.avgoverfreq         = 'yes';
 	freq_continuous_swa     = ft_selectdata(cfg, freq_continuous);
-	
+
 	cfg                     = [];
 	cfg.frequency           = freq_bands(2,:);
 	cfg.avgoverfreq         = 'yes';
 	freq_continuous_theta   = ft_selectdata(cfg, freq_continuous);
-	
+
 	cfg                     = [];
 	cfg.frequency           = freq_bands(3,:);
 	cfg.avgoverfreq         = 'yes';
 	freq_continuous_alpha   = ft_selectdata(cfg, freq_continuous);
-	
+
 	cfg                     = [];
 	cfg.frequency           = freq_bands(4,:);
 	cfg.avgoverfreq         = 'yes';
@@ -359,22 +359,22 @@ Concatenate the average frequency band signals to one data trial and combine the
 	  data_continuous_swa.label            = {'swa'};
 	  data_continuous_swa.time{1}          = freq_continuous_swa.time;
 	  data_continuous_swa.trial{1}         = squeeze(freq_continuous_swa.powspctrm)';
-	
+
 	  data_continuous_swa_spindle          = [];
 	  data_continuous_swa_spindle.label    = {'theta'};
 	  data_continuous_swa_spindle.time{1}  = freq_continuous_theta.time;
 	  data_continuous_swa_spindle.trial{1} = squeeze(freq_continuous_theta.powspctrm)';
-	
+
 	  data_continuous_alpha                = [];
 	  data_continuous_alpha.label          = {'alpha'};
 	  data_continuous_alpha.time{1}        = freq_continuous_alpha.time;
 	  data_continuous_alpha.trial{1}       = squeeze(freq_continuous_alpha.powspctrm)';
-	
+
 	  data_continuous_spindle              = [];
 	  data_continuous_spindle.label        = {'spindle'};
 	  data_continuous_spindle.time{1}      = freq_continuous_spindle.time;
 	  data_continuous_spindle.trial{1}     = squeeze(freq_continuous_spindle.powspctrm)';
-	  
+
 	  cfg = [];
 	  data_continuous_perband = ft_appenddata(cfg, ...
 	  data_continuous_swa, ...
@@ -386,7 +386,7 @@ Concatenate the average frequency band signals to one data trial and combine the
 The resulting data structure should then look like thi
 
 
-	data_continuous_perband = 
+	data_continuous_perband =
 	    label: {4x1 cell}
 	    trial: {[4x1154 double]}
 	     time: {[1x1154 double]}
@@ -439,7 +439,7 @@ Create a new combined channel from the normalized signal of slow-wave activity (
 	  0 0 0 1
 	  1 0 0 1   % the sum of two channels
 	  ];
-	
+
 	cfg = [];
 	cfg.montage = montage_sum;
 	data_continuous_perband_sum = ft_preprocessing(cfg, data_continuous_perband);
@@ -465,17 +465,17 @@ As an estimate to find epochs that are very likely to be non-REM we identify eve
 	cfg.artfctdef.threshold.bpfilter  = 'no';
 	cfg.artfctdef.threshold.max       = nanmean(data_continuous_perband_sum.trial{1}(5,:)); % mean of the 'swa+spindle' channel
 	cfg = ft_artifact_threshold(cfg, data_continuous_perband_sum);
-	
+
 	% keep the begin and end sample of each "artifact", we need it later
 	nonREM_detected = cfg.artfctdef.threshold.artifact;
 
 
-Given the information above about periods in the data with EOG activity, EMG artifacts and the estimates for non-REM we can now try to reconstruct a sleep hypnogram that estimates periods. This is of only a simple estimation but it is still useful for subsequent analyses and getting an overview about the changes in sleep states over the course of sleep. 
+Given the information above about periods in the data with EOG activity, EMG artifacts and the estimates for non-REM we can now try to reconstruct a sleep hypnogram that estimates periods. This is of only a simple estimation but it is still useful for subsequent analyses and getting an overview about the changes in sleep states over the course of sleep.
 
 
 	% construct a hypnogram, Wake-0, Stage-1, Stage-2, Stage-3, Stage-4, REM-5
 	hypnogram = -1 * ones(1,numel(data_epoched.trial)); %initalize the vector with -1 values
-	
+
 	%REM defined by the detected EOG activity
 	for i=1:size(EOG_detected,1)
 	    start_sample = EOG_detected(i,1);
@@ -484,14 +484,14 @@ Given the information above about periods in the data with EOG activity, EMG art
 	    end_epoch    = ceil((  end_sample)/(30*128));
 	    hypnogram(start_epoch:end_epoch) = 5; % REM
 	end
-	
+
 	%Non-REM defined by EMG
 	for i=1:size(nonREM_detected,1)
 	    start_epoch = nonREM_detected(i,1);
 	    end_epoch   = nonREM_detected(i,2);
 	    hypnogram(start_epoch:end_epoch) = 2.5; % it could be any of 1, 2, 3 or 4
 	end
-	
+
 	%Epochs with detected EMG artifacts are now again (re)labled as Wake
 	for i=1:size(EMG_detected,1)
 	    start_sample = EMG_detected(i,1);
@@ -505,7 +505,7 @@ Given the information above about periods in the data with EOG activity, EMG art
 Sometimes the data is longer and does not add up to 30 sec epochs. For example the Subject05 data is 1 second (128 samples) longer than 1048 epochs. We might have introduced an epoch by artifacts that are in this one second that would be the 1049 epoch. but there is no full 30-second 1049 epoch. Thus we want to prune it again to 1048 trials. Here the data_orig.sampleinfo(2) contains the number of samples in the original data
 
 
-	% prune the hypnogram to complete 30-sec epochs in the data 
+	% prune the hypnogram to complete 30-sec epochs in the data
 	% discarding the rest at the end
 	number_complete_epochs = floor(data_orig.sampleinfo(2)/(30*128));
 	hypnogram = hypnogram(1:number_complete_epochs);
@@ -516,14 +516,14 @@ Lets load a prescored hypnogram as the reference
 
 	% Wake-0, Stage-1, Stage-2, Stage-3, Stage-4, REM-5, Movement Time-0.5
 	prescored = load([datapath filesep subjectdata.subjectdir filesep subjectdata.hypnogramfile])';
-	
+
 	figure
 	plot([prescored-0.05; hypnogram+0.05]', 'LineWidth', 1); % shift them a little bit
 	legend({'prescored', 'hypnogram'})
 	ylim([-1.1 5.1]);
-	
+
 	lab = yticklabels; %lab = get(gca,'YTickLabel'); %prior to Matlab 2016b use this
-	
+
 	lab(strcmp(lab, '0'))  = {'wake'};
 	lab(strcmp(lab, '1'))  = {'S1'};
 	lab(strcmp(lab, '2'))  = {'S2'};
@@ -547,7 +547,7 @@ Now we want to view either the prescored or the estimated hypnogram information 
 	  epochs_SWS    = find(prescored == 3 | prescored == 4);
 	  epochs_nonREM = find(prescored >= 1 & prescored <= 4);
 	  epochs_REM    = find(prescored == 5);
-	  
+
 	  artfctdef.S1.artifact      = [epochs_S1(:)   epochs_S1(:)];
 	  artfctdef.S2.artifact      = [epochs_S2(:)   epochs_S2(:)];
 	  artfctdef.SWS.artifact     = [epochs_SWS(:)  epochs_SWS(:)];
@@ -555,7 +555,7 @@ Now we want to view either the prescored or the estimated hypnogram information 
 	  epochs_wake   = find(hypnogram == 0);
 	  epochs_nonREM = find(hypnogram >= 1 & hypnogram <= 4);
 	  epochs_REM    = find(hypnogram == 5);
-	  
+
 	  artfctdef.nonREM.artifact  = [epochs_nonREM(:)  epochs_nonREM(:)];
 	end
 
@@ -565,8 +565,8 @@ View it in the time-resolved spectral estimate each sample corresponding to a 30
 
 	artfctdef.wake.artifact    = [epochs_wake(:) epochs_wake(:)];
 	artfctdef.REM.artifact     = [epochs_REM(:)  epochs_REM(:)];
-	
-	
+
+
 	cfg               = [];
 	cfg.continuous    = 'yes';
 	cfg.artfctdef     = artfctdef;
@@ -597,7 +597,7 @@ View it then together with the original data after adjusting the hypnograms from
 	%artfctdef.SWS.artifact     = [(epochs_SWS(:)   -1)*30*128+1 (epochs_SWS(:)   +0)*30*128];
 	artfctdef.nonREM.artifact  = [(epochs_nonREM(:)-1)*30*128+1 (epochs_nonREM(:)+0)*30*128];
 	artfctdef.REM.artifact     = [(epochs_REM(:)   -1)*30*128+1 (epochs_REM(:)   +0)*30*128];
-	
+
 	cfg               = [];
 	cfg.continuous    = 'yes';
 	cfg.artfctdef     = artfctdef;
@@ -617,14 +617,14 @@ Store the hypnogram in the epoched data as "trialinfo". In a cognitive experimen
 ## Event detection during sleep
 
 Other than detecting periods of hightened or lowered activity often it is interesting to detect discrete short, transient events in the signals.
-During sleep we can for example detect events like QRS complexes in the ECG (where we use the RR-interval to define the heart rate), or EEG events like slow waves (single waves of about 0.5 to 2 Hz which have a high amplitude of about 75 uV), 
-sleep spindles (transient waxing and waning events of about 0.5 to 2 seconds duration and 15 to 50 uV maximal amplitude). Note that for simplicity we do not make any distinction between slow-waves, K-complexes or slow oscillations but lump them all together. 
+During sleep we can for example detect events like QRS complexes in the ECG (where we use the RR-interval to define the heart rate), or EEG events like slow waves (single waves of about 0.5 to 2 Hz which have a high amplitude of about 75 uV),
+sleep spindles (transient waxing and waning events of about 0.5 to 2 seconds duration and 15 to 50 uV maximal amplitude). Note that for simplicity we do not make any distinction between slow-waves, K-complexes or slow oscillations but lump them all together.
 For example the precise temporal relationship and (phase-locking) and shape of sleep spindles within slow waves is a good indicator for the success of the consolidation of memory during sleep and has become a target that can be influenced during the night to affect our memory.
-First we practice how to detect a very well defined event, the QRS complex, and then we take a look at more arbitrarily defined events like slow-waves and sleep spindles and see if they interact within the same modality (EEG) and across modalities (EEG and ECG/EKG). 
+First we practice how to detect a very well defined event, the QRS complex, and then we take a look at more arbitrarily defined events like slow-waves and sleep spindles and see if they interact within the same modality (EEG) and across modalities (EEG and ECG/EKG).
 
 ### R-waves and heart rate in ECG
 
-Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band 
+Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band
 that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maximums in the envelope of the envelope signals.
 Note that this methods also works if the R-waves would be inversed pointing towards the negative values.
 
@@ -632,14 +632,14 @@ Note that this methods also works if the R-waves would be inversed pointing towa
 	%% find heart R-waves in ECG
 	cfg            = [];
 	cfg.continuous = 'yes';
-	
+
 	% channel selection, cutoff and padding
 	cfg.artfctdef.zvalue.channel     = 'ECG';
 	cfg.artfctdef.zvalue.cutoff      = 0.5;
 	cfg.artfctdef.zvalue.trlpadding  = 0;
 	cfg.artfctdef.zvalue.fltpadding  = 0;
 	cfg.artfctdef.zvalue.artpadding  = 0.1;
-	
+
 	% algorithmic parameters
 	cfg.artfctdef.zvalue.bpfilter    = 'yes';
 	cfg.artfctdef.zvalue.bpfreq      = [20 45];
@@ -648,10 +648,10 @@ Note that this methods also works if the R-waves would be inversed pointing towa
 	cfg.artfctdef.zvalue.hilbert     = 'yes';
 	cfg.artfctdef.zvalue.boxcar      = 0.2;
 	cfg.artfctdef.zvalue.artfctpeak  = 'yes'; % to get the peak of the R-wave
-	
+
 	% make the process interactive
 	cfg.artfctdef.zvalue.interactive = 'yes';
-	
+
 	cfg = ft_artifact_zvalue(cfg, data_continuous);
 
 
@@ -664,16 +664,16 @@ Safe when (the samples of the R-waves occur for later
 
 `<note>`
 The R-peaks are difficult to see, since there are so many (>35000 heart beats during one night) use the MATLAB magnifying glass to zoom in.
-Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards). 
+Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards).
 In this case the signal could be inverted by multiplying this channel's data with -1. For example: data_continuous.trial{1}(4,:) = -1*data_continuous.trial{1}(4,:)
 `</note>`
 
-Check if the detected peaks are good estimates of the R-wave in the **[ft_databrowser](/reference/ft_databrowser)** 
+Check if the detected peaks are good estimates of the R-wave in the **[ft_databrowser](/reference/ft_databrowser)**
 
 
 	artfctdef = [];
 	artfctdef.rwave.artifact = [Rwave_peaks-10 Rwave_peaks+10];
-	
+
 	cfg = [];
 	cfg.continuous    = 'yes';
 	cfg.artfctdef     = artfctdef;
@@ -689,13 +689,13 @@ From this R-wave samples we can also compute a continuous heart rate signal.
 
 
 	heart_rate = 60 ./ (diff(Rwave_peaks') ./ data_continuous.fsample);
-	
+
 	% determine the time in seconds of each detected beat
 	heart_time = Rwave_peaks / data_continuous.fsample;
-	
+
 	% let us place the heart rate in between the beats
 	heart_time = (heart_time(1:end-1) + heart_time(2:end)) / 2;
-	
+
 	figure;
 	plot(heart_time, heart_rate)
 	xlabel('time (s)');
@@ -709,7 +709,7 @@ From this R-wave samples we can also compute a continuous heart rate signal.
 #### Filter for non-REM data for detection
 Before we can detect concrete events in non-REM we need to prepare the data for this analysis by excluding all the epochs from the data that would intefere with our detection method.
 First we discard all trials that are wake or REM from the information of the hypnogram we stored previously in the trialinfo of the epoched data.
-since spindles and non-REM mostly occur during Stages 2, 3 and 4 this is the epochs we want to focus on (Stage 1 by definition does not contain sleep spindles or slow waves). 
+since spindles and non-REM mostly occur during Stages 2, 3 and 4 this is the epochs we want to focus on (Stage 1 by definition does not contain sleep spindles or slow waves).
 Here you can choose if you want to contine with the information of the prescored hypnogram or our estimated one.
 
 
@@ -726,13 +726,13 @@ Reconstruct the original continuous data since the wake and REM data is not pres
 	cfg.trl(1,2) = data_continuous.sampleinfo(2);
 	cfg.trl(1,3) = 0;
 	data_continuous_nonREM = ft_redefinetrial(cfg, data_epoched_nonREM);
-	
+
 	% replace the nans with zeros
 	selnan = any(isnan(data_continuous_nonREM.trial{1}), 1);
 	data_continuous_nonREM.trial{1}(:,selnan) = 0;
 
 
-Lets view the prepared non-REM data 
+Lets view the prepared non-REM data
 
 
 	cfg            = [];
@@ -751,32 +751,32 @@ Candidates for slow waves or sleep spindle events can be detected using **[ft_ar
 
 	cfg            = [];
 	cfg.continuous = 'yes';
-	
+
 	% channel selection and padding
 	cfg.artfctdef.zvalue.channel     = 'EEG';
 	cfg.artfctdef.zvalue.trlpadding  = 0;
 	cfg.artfctdef.zvalue.fltpadding  = 0;
 	cfg.artfctdef.zvalue.artpadding  = 0.1;
-	
+
 	% cutoff and algorithmic parameters
 	cfg.artfctdef.zvalue.cutoff      = 1.75; % 1.75 for both slow waves and spindles
 	cfg.artfctdef.zvalue.bpfilter    = 'yes';
 	cfg.artfctdef.zvalue.bpfiltord   = 4;
 	cfg.artfctdef.zvalue.bpfilttype  = 'but';
-	
+
 	if true % true for slow-waves, false for spindles
 	    cfg.artfctdef.zvalue.bpfreq      = [0.5 4];
 	else
 	    cfg.artfctdef.zvalue.bpfreq      = [12 15];
 	end
-	
+
 	cfg.artfctdef.zvalue.hilbert     = 'yes';
 	cfg.artfctdef.zvalue.boxcar      = 0.2;
 	cfg.artfctdef.zvalue.artfctpeak  = 'yes'; % to get the peak of the event envelope
-	
+
 	% make the process interactive
 	cfg.artfctdef.zvalue.interactive = 'yes';
-	
+
 	[cfg, ] = ft_artifact_zvalue(cfg,data_continuous_nonREM);
 
 
@@ -804,7 +804,7 @@ By definition valid slow waves or sleep spindles have a minimum and maximum dura
 	duration_min       = 0.5;
 	duration_max       = 2;
 	valid_events_index = ((event_duration > duration_min) & (event_duration < duration_max));
-	
+
 	%update our event information accodingly with the valid slow waves or sleep spindles.
 	event_detected     = event_detected(valid_events_index,:);
 	event_peaks        = event_peaks(valid_events_index);
@@ -832,7 +832,7 @@ For sleep spindles and slow waves the minimum peak of the hightest amplitude is 
 	cfg = [];
 	cfg.channel     = {'EEG'};
 	data_continuous_nonREM_EEG  =  ft_selectdata(cfg,data_continuous_nonREM);
-	
+
 	% filter the data in the slow wave or spindle band to remove non-event noise
 	cfg.bpfilter    = 'yes';
 	if true % true for slow-waves, false for spindles
@@ -841,37 +841,37 @@ For sleep spindles and slow waves the minimum peak of the hightest amplitude is 
 	    cfg.bpfreq  = [12 15];
 	end
 	data_continuous_nonREM_EEG_event_filtered = ft_preprocessing(cfg,data_continuous_nonREM_EEG);
-	
+
 	% redefine the trial with the offset preserving timepoint from beginning of the raw data
 	search_offset = data_continuous_nonREM.fsample% +-1 seconds around the center
 	cfg.trl = [event_peaks-search_offset event_peaks+search_offset -search_offset+event_peaks];
 	data_continuous_nonREM_EEG_event_filtered_temp   = ft_redefinetrial(cfg,data_continuous_nonREM_EEG_event_filtered);
-	
+
 	% find the minimums within the trials
 	event_trial_minimums = cellfun(@(signal) find(signal == min(signal),1,'first'),data_continuous_nonREM_EEG_event_filtered_temp.trial);
-	
+
 	% update the times from the time points with respect to the original raw data
 	event_minimum_times = event_trial_minimums;
 	for iTrialSpindle = 1:numel(data_continuous_nonREM_EEG_event_filtered_temp.trial)
 	    event_minimum_times(iTrialSpindle) = data_continuous_nonREM_EEG_event_filtered_temp.time{iTrialSpindle}(event_trial_minimums(iTrialSpindle));
 	end
-	
+
 	%get the samples of the minimum sleep spindle signals (troughs)
 	event_minimum_samples = round(event_minimum_times*data_continuous_nonREM.fsample);
 
 
-Redefine the trial with the offset at the time of the filtered spindle signal minimum 
+Redefine the trial with the offset at the time of the filtered spindle signal minimum
 
 
 	% a buffer we need to have padding left and right to make nice
 	% time-frequency graph later on
-	padding_buffer = 4*data_continuous_nonREM.fsample; % 8 seconds 
+	padding_buffer = 4*data_continuous_nonREM.fsample; % 8 seconds
 	cfg     = [];
 	cfg.trl = [event_minimum_samples'-data_continuous_nonREM.fsample-padding_buffer event_minimum_samples'+data_continuous_nonREM.fsample+padding_buffer repmat(-(data_continuous_nonREM.fsample+padding_buffer),numel(event_minimum_samples),1)];
 	data_continuous_nonREM_EEG_events = ft_redefinetrial(cfg,data_continuous_nonREM_EEG);
 
 
-View the event average signal timelocked to the trough. 
+View the event average signal timelocked to the trough.
 
 #### Sanity check
 
@@ -921,7 +921,7 @@ Visualize the event related time-frequency around the event timelocked to the tr
 View the detected events in the orginal data.
 
 
-	cfg                                 = []; 
+	cfg                                 = [];
 	cfg.continuous 	                    = 'yes';
 	cfg.viewmode                        = 'vertical';
 	cfg.blocksize                       = 60; %view the data in 30-s blocks
@@ -945,7 +945,7 @@ Repeat the above analysis for event detection for sleep spindles when you did sl
 #### Exercise 7
 
 `<note exercise>`
-View the outcomes of the slow-wave and spindle detection in the same window of **[ft_databrowser](/reference/ft_databrowser)** 
+View the outcomes of the slow-wave and spindle detection in the same window of **[ft_databrowser](/reference/ft_databrowser)**
 `</note>`
 
 #### Exercise 8
@@ -962,15 +962,15 @@ Try to visualize an average QRS complex around the R-wave like was done for slee
 
 ## Summary and suggested further reading
 
-In this tutorial we learned how to read and interpret continous sleep data. We learned how to use modalities EMG, EOG, EEG and ECG to gain more information about the changing states during a long recording. We used EMG and EOG to find epochs of Wake that we considered artifacts for further analysis of non-REM sleep. 
+In this tutorial we learned how to read and interpret continous sleep data. We learned how to use modalities EMG, EOG, EEG and ECG to gain more information about the changing states during a long recording. We used EMG and EOG to find epochs of Wake that we considered artifacts for further analysis of non-REM sleep.
 
-Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information of further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g. Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further. 
+Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information of further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g. Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further.
 
-Finally we explored how easy it is to detect spontaneous events in signlas like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g. we found R-waves, sleep slow waves and spindles. These have been then viewed in the ft_databrowser and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activit (ERF), all in a single channel. 
+Finally we explored how easy it is to detect spontaneous events in signlas like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g. we found R-waves, sleep slow waves and spindles. These have been then viewed in the ft_databrowser and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activit (ERF), all in a single channel.
 
-This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techinques here can thus also be used as sanity check in other data. 
+This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techinques here can thus also be used as sanity check in other data.
 
-Interesting to continue the analyis if you want to go further: 
+Interesting to continue the analyis if you want to go further:
 
 
 *  do the analyis on data with multiple EEG channels and topographic plots (e.g. [Time-frequency analysis of combined MEG/EEG](/tutorial/natmeg/timefrequency))
@@ -984,7 +984,7 @@ Interesting to continue the analyis if you want to go further:
 Suggested tutorials for further readin
 
 
-*  [Preprocessing - Reading continuous EEG data](/tutorial/continuous) 
+*  [Preprocessing - Reading continuous EEG data](/tutorial/continuous)
 
 *  [Getting started with EDF (European Data Format) data](/getting_started/edf)
 
@@ -998,5 +998,3 @@ Suggested frequently asked question
 
 
 *  [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
-
-

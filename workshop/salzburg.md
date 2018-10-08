@@ -17,7 +17,6 @@ The University of Salzburg, with support from the [TINNET-COST Action](http://ti
 #### Who
 
 Nietzsche Lam and Tzvetan Popov will be the lecturers and teachers.
-
 Gaetan Sanchez, Nathan Weisz and Thomas Hartmann are the local organizers.
 
 

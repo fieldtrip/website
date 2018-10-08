@@ -21,7 +21,7 @@ This tutorial consists of three part
 
 *  Simulated data with directed connections. In this part we are going to simulate some data and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model and we will use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** for this. Subsequently, we will estimate the multivariate autoregressive model and the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with  **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
-*  Simulated data with common pick-up and different noise levels. In this part we are going to simulate some data consisting of an instantaneous mixture of 3 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates. 
+*  Simulated data with common pick-up and different noise levels. In this part we are going to simulate some data consisting of an instantaneous mixture of 3 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
 
 *  Connectivity between MEG virtual channels and EMG. In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between these virtual channels and EMG. The data used for this part are the same as in the [extended beamforming](/tutorial/beamformingextended) tutorial.
 
@@ -37,7 +37,7 @@ This tutorial consists of three part
 
 The virtual channel data just computed has three channels per location. These correspond to the three orientations of the dipole in a single voxel. The interpretation of connectivity is facilitated if we can compute it between plain channels rather than between triplets of channels. Therefore we will project the time-series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
 
-	
+
 	visualTimeseries = cat(2, gam_pow_data.trial{:});
 	motorTimeseries = cat(2, coh_lft_data.trial{:});
 	[u1, s1, v1] = svd(visualTimeseries, 'econ');
@@ -48,11 +48,10 @@ Matrices u1 and u2 contain the spatial decomposition, matrices v1 and v2 the tem
 
 We now recompute the virtual channel time-series, but now only for the dipole direction that has the most power.
 
-	
 	virtualchanneldata = [];
 	virtualchanneldata.label = {'visual', 'motor'};
 	virtualchanneldata.time = data_cmb.time;
-	
+
 	for k = 1:length(data_cmb.trial)
 	  virtualchanneldata.trial{k}(1,:) = u1(:,1)' * beamformer_gam_pow * data_cmb.trial{k}(chansel,:);
 	  virtualchanneldata.trial{k}(2,:) = u2(:,1)' * beamformer_lft_coh * data_cmb.trial{k}(chansel,:);
@@ -63,12 +62,12 @@ We now recompute the virtual channel time-series, but now only for the dipole di
 
 The raw data structure containing one (virtual) channel can be combined with the two EMG channels from the original preprocessed data.
 
-	
+
 	% select the two EMG channels
 	cfg = [];
 	cfg.channel = 'EMG';
 	emgdata = ft_selectdata(cfg, data_cmb);
-	
+
 	% combine the virtual channel with the two EMG channels
 	cfg = [];
 	combineddata = ft_appenddata(cfg, virtualchanneldata, emgdata);
@@ -78,7 +77,7 @@ The raw data structure containing one (virtual) channel can be combined with the
 
 The resulting combined data structure now has four channels: the activity from the visual cortex, the activity from the right motor cortex, the left EMG and the right EMG. We can now treat this data structure as any other, and perform connectivity analysis 'as if' we were working on a channel-level data set!
 
-	
+
 	%% compute the spectral decomposition
 	cfg            = [];
 	cfg.output     = 'fourier';
@@ -88,7 +87,7 @@ The resulting combined data structure now has four channels: the activity from t
 	cfg.keeptrials = 'yes';
 	cfg.channel    = {'visual' 'motor' 'EMGlft' 'EMGrgt'};
 	freq    = ft_freqanalysis(cfg, combineddata);
-	
+
 	cfg = [];
 	cfg.method = 'coh';
 	coherence = ft_connectivityanalysis(cfg, freq);
@@ -96,7 +95,7 @@ The resulting combined data structure now has four channels: the activity from t
 
 This computes the spectral decomposition and the coherence spectrum between all channel pairs, which can be plotted with
 
-	
+
 	cfg = [];
 	cfg.zlim = [0 0.25];
 	figure
@@ -115,4 +114,3 @@ Rather than looking at undirected coherence, the virtual channel level data can 
 `<note exercise>`
 Now that you have the virtual channel data, you can also use it to look at, for instance, power correlations across trials between visual gamma and motor beta. Do this! (Hint: this involves computing trial-specific estimates of power using ft_freqanalysis, extracting those estimates from the resulting freq structure, and using matlab's own corr function.)
 `</note>`
-
