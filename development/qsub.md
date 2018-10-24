@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: distributed
 ---
 
-{{tag>distributed}}
 
 # Distributed computing using a Linux compute cluster
 

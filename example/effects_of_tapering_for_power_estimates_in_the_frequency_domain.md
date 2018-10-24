@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example freq
 ---
 
-{{tag>example freq}}
 
 # Effects of tapering for power estimates
 

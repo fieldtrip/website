@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq matlab
 ---
 
-{{tag>faq matlab}}
 
 ## How can I use my MacBook Pro for stimulus presentation in the MEG lab?
 

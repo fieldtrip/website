@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq matlab mex
 ---
 
-{{tag>faq matlab mex}}
 
 # Can I use FieldTrip without MATLAB license?
 

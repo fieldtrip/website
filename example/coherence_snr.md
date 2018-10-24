@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example freq coherence
 ---
 
-{{tag>example freq coherence}}
 
 # Effect of SNR on Coherence
 

@@ -22,7 +22,7 @@ E.g.
 
 *  fieldtrip/external/eeglab -> containing runica
 
-\\
+
 Better would be to get rid of spm2 altogether and migrate spm5 towards spm8, but that requires real coding. 
 
 # Steps to take

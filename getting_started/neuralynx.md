@@ -1,14 +1,14 @@
 ---
 layout: default
+tags: neuralynx lfp spike dataformat
 ---
 
-{{tag>neuralynx lfp spike dataformat}}
 
 # Getting started with Neuralynx data
 
 ## Introduction
 
-\\
+
 The Neuralynx acquisition software writes a variety of file formats. 
 
 
@@ -30,7 +30,7 @@ Neuralynx also writes a raw data file (*.nrd) in which all the channels are samp
 
 ## Set Path
 
-\\
+
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 	
@@ -40,7 +40,7 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 ## Low-level reading functions
 
-\\
+
 FieldTrip includes a number of low-level reading functions, located in fieldtrip/fileio/private: 
 
 	
@@ -68,7 +68,7 @@ This returns the content of a single-channel file as a Matlab structure.
 
 ## Working with a complete dataset
 
-\\
+
 To facilitate working with multichannel recordings, FieldTrip has an additional layer on top of the low level Neuralynx file reading functions. The idea is that all files belonging to a single recording are located in a single directory, which represents the "dataset" as a whole. The FieldTrip functions **[ft_read_header](/reference/ft_read_header)**,  **[ft_read_data](/reference/ft_read_data)**,  **[ft_read_event](/reference/ft_read_event)** operate on the LFP and spike files in the dataset directory.
 
 The LFP files are used for setting the sample "time" axis. If you only have spike files during a recording, you cannot merge them automatically. Merging is done by reading the LFP files (*.nsc), determining the first and last timestamp, and subsequently the spikes are represented as "1" in an other wise "0" channel. So the spike and LFP channels are jointly represented by **[ft_read_data](/reference/ft_read_data)** in a nchan X nsamples matrix. This is also how the FieldTrip high level **[ft_preprocessing](/reference/ft_preprocessing)** function accesses the collection of LFP and spike channels in the dataset.
@@ -99,7 +99,7 @@ It might be that you first only want to process the LFP channels and keep the sp
 
 ## Regarding Events
 
-\\
+
 The events.nev file (which you probably use) only contains timestamps and not sample numbers. For writing trialfuns (see documentation) and using preprocessing to read the data, you should compute the corresponding sample numbers yourself by using hdr.FirstTimesStamp and hdr.TimeStampPerSample according to
 
 	

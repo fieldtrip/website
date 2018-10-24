@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example freq
 ---
 
-{{tag>example freq}}
 
 #  Simulate an oscillatory signal with phase resetting
 

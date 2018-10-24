@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial meg freq source headmodel mri plot MEG-language
 ---
 
-{{tag>tutorial meg freq source headmodel mri plot MEG-language}}
 
 # Localizing oscillatory sources using beamformer techniques
 

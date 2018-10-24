@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime siemens fmri
 ---
 
-{{tag>realtime siemens fmri}}
 
 # Realtime fMRI from Siemens scanners
 
@@ -118,7 +118,7 @@ How does the ''PixelDataGrabber'' determine the number of slices and their dimen
 way is to modify the MR sequence by adding
 
     #ifndef VXWORKS
-     pMrProt->fwrite("E:\\image\\mrprot.txt")
+     pMrProt->fwrite("E:imagemrprot.txt")
     #endif
 
 to the function ''fSeqCheck'' in the sequence code, which is executed once before the first scan. This will dump the 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example statistics
 ---
 
-{{tag>example statistics}}
 
 # Computing and using estimates of effect size
 

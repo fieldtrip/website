@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq dataformat preprocessing
 ---
 
-{{tag>faq dataformat preprocessing}}
 ## How can I import my own dataformat?
 
 There are two approaches for importing data from an unsupported format: you can extend FieldTrip with new code, or you can circumvent the import procedure.

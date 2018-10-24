@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq ctf raw anonymize sharing
 ---
 
-{{tag>faq ctf raw anonymize sharing}}
 
 # How can I anonymize or deidentify a CTF dataset?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq freq wavelet
 ---
 
-{{tag>faq freq wavelet}}
 ## What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
 
 Several things have changed in the new implementation of frequency analysis by the new low-level module 'specest'.

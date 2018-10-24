@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq
 ---
 
-{{tag>faq}}
 ## How many lines of code does Fieldtrip consist of?
 
 You can count that using the following commands

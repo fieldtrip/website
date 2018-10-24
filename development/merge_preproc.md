@@ -31,7 +31,7 @@ A "preproc" module has been made that contains all low-level functionality that 
 *  highpassfilter.m        
 
 *  notchfilter.m
-\\
+
 
 Also all use of other low-level code for preprocessing (e.g. detrending or median filtering) should be changed to use the respective preproc_xxx function. 
 
@@ -119,7 +119,7 @@ The most obvious function to start in is fieldtrip/private/preproc, but other fi
 *  spikeanalysis.m
 
 *  private/preproc.m  -done-
-\\
+
 
 ## Functions that Robert should look into
 

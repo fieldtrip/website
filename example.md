@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example
 ---
 
-{{tag>example}}
 
 # Example MATLAB scripts
 

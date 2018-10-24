@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 ## What happens if a job fails to execute properly?
 
 Your peer master records the time at which jobs are submitted. When the finished job returns, the time is also recorded. This allows the peer master to create a list of all execution times. 

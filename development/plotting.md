@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: development plot
 ---
 
-{{tag>development plot}}
 
 # Plotting of channel-level, source-level and other geometrical data related to EEG/MEG 
 

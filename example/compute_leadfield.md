@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example headmodel source
 ---
 
-{{tag>example headmodel source}}
 
 ## Example use of the compute_leadfield function
 

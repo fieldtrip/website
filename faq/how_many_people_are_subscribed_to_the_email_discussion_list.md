@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq email
 ---
 
-{{tag>faq email}}
 
 
 ## How many people are subscribed to the email discussion list?

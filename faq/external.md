@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq matlab toolbox
 ---
 
-{{tag>faq matlab toolbox}}
 
 ##  Which external toolboxes are used by FieldTrip?
 

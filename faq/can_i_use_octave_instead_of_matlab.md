@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq octave
 ---
 
-{{tag>faq octave}}
 
 ## Can I use Octave instead of MATLAB?
 

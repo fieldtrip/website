@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq eeg fiducial
 ---
 
-{{tag>faq eeg fiducial}}
 
 ##  How should I specify the fiducials for electrode realignment?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime neuralynx
 ---
 
-{{tag>realtime neuralynx}}
 
 # Neuralynx
 

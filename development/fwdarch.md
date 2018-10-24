@@ -12,9 +12,9 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 ## Refurbishing the FORWARD module
 
-The forward module routines generate leadfields which are used used in different contexts (e.g. beamformer). To build the forward model we make use of various methods and we start from very different geometrical descriptions, generally representing the head shape.\\
+The forward module routines generate leadfields which are used used in different contexts (e.g. beamformer). To build the forward model we make use of various methods and we start from very different geometrical descriptions, generally representing the head shape.
 
-Let's list some of the the methods currently supported by FieldTrip (in parentheses which modality they are used for):\\
+Let's list some of the the methods currently supported by FieldTrip (in parentheses which modality they are used for):
 
 *  ASA bem (EEG)
 *  Bemcp (EEG)
@@ -28,7 +28,7 @@ Let's list some of the the methods currently supported by FieldTrip (in parenthe
 *  Single shell (MEG)
 *  Concentric spheres (EEG)
 
-According to the different anatomy acquisition techniques it is possible to distinguish among the following types of input:\\
+According to the different anatomy acquisition techniques it is possible to distinguish among the following types of input:
 
 *  CT scan
 *  MRI scan
@@ -43,11 +43,11 @@ All the routines which create a forward model need a description of the volume c
 The leftmost box indicates a set of functions (Matlab/external toolboxes, FieldTrip) that deal with anatomical volumes (a 3D matrix filled with intensity values - a set of voxels). 
 This step manages the volumetric information (MRI/CT scans) and transforms the anatomy into a processed anatomy ('ana2ana' functions), transforms the anatomy into a binary segmentation ('ana2seg' functions) or manipulates segmented images ('seg2seg' functions, i.e. morphology operators).
 
-The content of the central box is a set of functions which refines the geometrical description derived from the volumetric analysis. Any visual quality control is processed in this section, including interactions with the operator. The input can be a segmented volume, a triangulated set of points or a cloud of points. The output is a geometry (geom), defined as a geometrical description other than volumetric, like for example a triangulated mesh, a cloud of points representing the head, a 3D lattice of tetrahedrons/hexahedrons, etc.\\
+The content of the central box is a set of functions which refines the geometrical description derived from the volumetric analysis. Any visual quality control is processed in this section, including interactions with the operator. The input can be a segmented volume, a triangulated set of points or a cloud of points. The output is a geometry (geom), defined as a geometrical description other than volumetric, like for example a triangulated mesh, a cloud of points representing the head, a 3D lattice of tetrahedrons/hexahedrons, etc.
 
 The third block (Post-processing) performs all automatic steps to build the description of the volume conductor ('vol' structure with various fields). This last step provides the piece of information  which is fed to the forward solution algorithms ([the various lead field computation routines](/#The functions in Forward module)). This post-processing functions are **not supposed to change the meshes anymore** and call method-specific head model functions (**[ft_headmodel_XXX](/#A list of the headmodel functions)** routines)
 
-As a general rule all volumetric geometry descriptions should not contain holes or be hollow. All mesh geometries (excluded 3D meshes for FEM) should not intersect with each other or be nested (apart for concentric spheres).\\
+As a general rule all volumetric geometry descriptions should not contain holes or be hollow. All mesh geometries (excluded 3D meshes for FEM) should not intersect with each other or be nested (apart for concentric spheres).
 
 ##  Architecture: defining a table for the possible implementations
 
@@ -82,147 +82,147 @@ The following paragraphs describe in synthesis the pipelines for the various met
 # Having a CT scan and EEG data
 
 ## INF1 method
-From CT to Infinite space\\
-{{page>:development:shared:forwinf}}\\
+From CT to Infinite space
+{{page>:development:shared:forwinf}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## HS1 method
 
 FROM CT TO Infinite halfspace
 
-This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)\\
-Method:\\
-{{page>:development:shared:forwsegm}}\\
-{{page>:development:shared:forwslab}}\\
+This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
+Method:
+{{page>:development:shared:forwsegm}}
+{{page>:development:shared:forwslab}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 ## SL1 method
 
 FROM CT TO Infinite slab
 
-This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)\\
-{{page>:development:shared:forwsegm}}\\
-{{page>:development:shared:forwslab}}\\
+This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
+{{page>:development:shared:forwsegm}}
+{{page>:development:shared:forwslab}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 ## SPH1 method
 
 FROM CT TO Single sphere
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:\\
-{{page>:development:shared:forwsegm}}\\
-{{page>:development:shared:forwsphere}}\\
+This method applies to ECoG or iEEG and is normally not used for scalp EEG:
+{{page>:development:shared:forwsegm}}
+{{page>:development:shared:forwsphere}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 
 
 ##  CS1 method
 
-FROM CT TO Concentric spheres\\
+FROM CT TO Concentric spheres
 
 For a 3-sphere model the spheres represent the skin surface, the outside of the skull and the inside of the skull. For a 4-sphere model, the surfaces describe the skin, the outside-skull, the inside-skull and the inside of the cerebro-spinal fluid (CSF) boundaries.
 
-Accordingly:\\
+Accordingly:
 
-**For 3 spheres:**\\
-{{page>:development:shared:forwsegm}}\\
-5 - Extract the filled volume of the outer skull using morphological operators\\
-6 - Dilate the outer skull to estimate the scalp compartment\\
-7 - For each compartment fit a sphere (see [#SPH1 method](/#SPH1 method))\\
-8 - Assign the conductivity to each compartment (from literature)\\
+**For 3 spheres:**
+{{page>:development:shared:forwsegm}}
+5 - Extract the filled volume of the outer skull using morphological operators
+6 - Dilate the outer skull to estimate the scalp compartment
+7 - For each compartment fit a sphere (see [#SPH1 method](/#SPH1 method))
+8 - Assign the conductivity to each compartment (from literature)
 
-**For 4 spheres:**\\
-7 - Erode the inner skull to estimate the inside of the CSF compartment\\
-8 - For each compartment fit a sphere (see [#SPH1 method](/#SPH1 method))\\
-9 - Assign the conductivity to each compartment (from literature)\\
+**For 4 spheres:**
+7 - Erode the inner skull to estimate the inside of the CSF compartment
+8 - For each compartment fit a sphere (see [#SPH1 method](/#SPH1 method))
+9 - Assign the conductivity to each compartment (from literature)
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  FEM1 method
 
-FROM CT TO FEM\\
+FROM CT TO FEM
 
-For a FEM model we have to represent as many different volumetric compartments as wanted. In the case of a CT scan we can identify the following tissue compartments:\\
+For a FEM model we have to represent as many different volumetric compartments as wanted. In the case of a CT scan we can identify the following tissue compartments:
 volume of the scalp, the skull, inside of the skull, inside of the CSF
 
-{{page>:development:shared:forwsegm}}\\
-5 - Dilate the outer skull to estimate the scalp compartment\\
-6 - Erode the skull to obtain the inner CSF compartment\\
-7 - Check that each compartment does not contain holes, and fill them\\
+{{page>:development:shared:forwsegm}}
+5 - Dilate the outer skull to estimate the scalp compartment
+6 - Erode the skull to obtain the inner CSF compartment
+7 - Check that each compartment does not contain holes, and fill them
 8a - Use one of the [triangulation methods](/#Triangulation methods) to obtain th
- 1. - scalp surface\\
- 2. - scalp-skull interface\\
- 3. - skull-CSF interface\\
+ 1. - scalp surface
+ 2. - scalp-skull interface
+ 3. - skull-CSF interface
 
-9a - Check the triangulations for intersections\\
-10a - Using Tetgen to generate a set of tetrahedrons for: \\
-   --the inner CSF compartment\\
-   --the inner skull compartment\\
-   --the skull\\
-   --the scalp\\
-OR\\
-8-10b - Generate a set of hexahedrons using vgrid\\
-11  - Assign the conductivity tensor to each -hedron element (from literature and DTI data)\\
-12 - Check the consistency of tetrahedral/hexahedral normals (vertices order has to be consistent)\\
+9a - Check the triangulations for intersections
+10a - Using Tetgen to generate a set of tetrahedrons for: 
+   --the inner CSF compartment
+   --the inner skull compartment
+   --the skull
+   --the scalp
+OR
+8-10b - Generate a set of hexahedrons using vgrid
+11  - Assign the conductivity tensor to each -hedron element (from literature and DTI data)
+12 - Check the consistency of tetrahedral/hexahedral normals (vertices order has to be consistent)
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 
 ##  FDM1 method
 
-FROM CT TO FDM\\
+FROM CT TO FDM
 
-This method is based on anatomical description obtained from the segmentation of the CT scan. Normally the 'elements' of the FDM (Finite Differences Method) are the voxels of each compartment (as for example for the FNS method). Consequently it is important to obtain the segmentation of as many compartments as possible from the CT scan. Typically we will try to obtain:\\
-the scalp, the skull, the inner skull, the inner CSF compartments\\
+This method is based on anatomical description obtained from the segmentation of the CT scan. Normally the 'elements' of the FDM (Finite Differences Method) are the voxels of each compartment (as for example for the FNS method). Consequently it is important to obtain the segmentation of as many compartments as possible from the CT scan. Typically we will try to obtain:
+the scalp, the skull, the inner skull, the inner CSF compartments
 
-{{page>:development:shared:forwsegm}}\\
-5 - Dilate the skull to estimate the scalp compartment\\
-6 - Erode the skull to obtain the inner CSF compartment\\
-7 - Assign the conductivity value to each compartment (from literature)\\
-8 - Define the points in which the solution has to be calculated as:\\
- 1.  Deep brain points, OR\\ 
- 2.  The vertices of a previously defined surface (i.e. the scalp)\\
+{{page>:development:shared:forwsegm}}
+5 - Dilate the skull to estimate the scalp compartment
+6 - Erode the skull to obtain the inner CSF compartment
+7 - Assign the conductivity value to each compartment (from literature)
+8 - Define the points in which the solution has to be calculated as:
+ 1.  Deep brain points, OR 
+ 2.  The vertices of a previously defined surface (i.e. the scalp)
 
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  ASA1 method
 
-FROM CT TO ASA BEM\\
-{{page>:development:shared:forwasa}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+FROM CT TO ASA BEM
+{{page>:development:shared:forwasa}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  BEMCP1 method
 
-FROM CT TO BEMCP\\
+FROM CT TO BEMCP
 
-This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.\\
-{{page>:development:shared:forwsegm}}\\
-{{page>:development:shared:fwdbemct}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
+{{page>:development:shared:forwsegm}}
+{{page>:development:shared:fwdbemct}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  Dipoli1 method
 
-FROM CT TO Dipoli\\
+FROM CT TO Dipoli
 
-This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.\\
-{{page>:development:shared:forwsegm}}\\
-{{page>:development:shared:fwdbemct}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
+{{page>:development:shared:forwsegm}}
+{{page>:development:shared:fwdbemct}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  OpenMEEG1 method
 
-FROM CT TO OpenMEEG\\
+FROM CT TO OpenMEEG
 
-This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.\\
-{{page>:development:shared:forwsegm}}\\
-{{page>:development:shared:fwdbemct}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
+{{page>:development:shared:forwsegm}}
+{{page>:development:shared:fwdbemct}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 # Having a MRI scan and EEG data
 
 ## INF2 method
 
 From MRI to Infinite space
 
-{{page>:development:shared:forwinf}}\\
+{{page>:development:shared:forwinf}}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -230,28 +230,28 @@ From MRI to Infinite space
 
 FROM MRI TO Infinite halfspace
 
-This applies for example when the set of electrodes is distributed on a very flat surface (e.g. Utah array)\\
-Method:\\
-{{page>:development:shared:forwsegmmri}}\\
-{{page>:development:shared:forwslab}}\\
+This applies for example when the set of electrodes is distributed on a very flat surface (e.g. Utah array)
+Method:
+{{page>:development:shared:forwsegmmri}}
+{{page>:development:shared:forwslab}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SL2 method
 
 FROM MRI TO Infinite slab
 
-This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)\\
-{{page>:development:shared:forwsegmmri}}\\
-{{page>:development:shared:forwslab}}\\
+This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
+{{page>:development:shared:forwsegmmri}}
+{{page>:development:shared:forwslab}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SPH2 method
 
 FROM MRI TO Single sphere
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:\\
-{{page>:development:shared:forwsegmmri}}\\
-{{page>:development:shared:forwsphere}}\\
+This method applies to ECoG or iEEG and is normally not used for scalp EEG:
+{{page>:development:shared:forwsegmmri}}
+{{page>:development:shared:forwsphere}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## CS2 method
@@ -273,38 +273,38 @@ FROM MRI TO FDM
 [Back](/#Architecture/ defining a table for the possible implementations)
 ##  ASA2 method
 
-FROM MRI TO ASA BEM\\
+FROM MRI TO ASA BEM
 
-{{page>:development:shared:forwasa}}\\
+{{page>:development:shared:forwasa}}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  BEMCP2 method
 
-FROM MRI TO BEMCP\\
+FROM MRI TO BEMCP
 
-This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.\\
-{{page>:development:shared:forwsegmmri}}\\
-{{page>:development:shared:fwdbemmri}}\\
+This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
+{{page>:development:shared:forwsegmmri}}
+{{page>:development:shared:fwdbemmri}}
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  Dipoli2 method
 
-FROM MRI TO Dipoli\\
+FROM MRI TO Dipoli
 
-This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.\\
-{{page>:development:shared:forwsegmmri}}\\
-{{page>:development:shared:fwdbemmri}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
+{{page>:development:shared:forwsegmmri}}
+{{page>:development:shared:fwdbemmri}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  OpenMEEG2 method
 
-FROM MRI TO OpenMEEG\\
-This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.\\
-{{page>:development:shared:forwsegmmri}}\\
-{{page>:development:shared:fwdbemmri}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+FROM MRI TO OpenMEEG
+This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
+{{page>:development:shared:forwsegmmri}}
+{{page>:development:shared:fwdbemmri}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 
 
@@ -350,7 +350,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 
 From Headshape points to Infinite space
 
-{{page>:development:shared:forwinf}}\\
+{{page>:development:shared:forwinf}}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -360,9 +360,9 @@ FROM Headshape points TO Infinite halfspace
 
 Headshape points are the 3D electrodes positions in this case. This is the case, for example, of a set of points manually poked on a rendering of the brain surface (e.g. in the case of ECoG surgical pictures availability).
 
-Method:\\
--With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.\\
-{{page>:development:shared:forwslab}}\\
+Method:
+-With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.
+{{page>:development:shared:forwslab}}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -370,9 +370,9 @@ Method:\\
 
 FROM Headshape points TO Infinite slab
 
-This case happens when I have a set of electrodes positions and an estimate of the average cortical thickness in the electrode's positions (i.e. Utah array)\\
--With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.\\
-{{page>:development:shared:forwslab}}\\
+This case happens when I have a set of electrodes positions and an estimate of the average cortical thickness in the electrode's positions (i.e. Utah array)
+-With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.
+{{page>:development:shared:forwslab}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SPH3 method
@@ -380,43 +380,43 @@ This case happens when I have a set of electrodes positions and an estimate of t
 FROM Headshape points TO Single sphere
 
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:\\
+This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 
-- Load in the set of points of the head shape (these can be the electrodes positions as well)\\
-- Fit a sphere to the points\\
+- Load in the set of points of the head shape (these can be the electrodes positions as well)
+- Fit a sphere to the points
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## CS3 method
 
 FROM Headshape points TO Concentric spheres
 
-- Load in the set of points of the concentric shapes\\
-- Fit a sphere to each shape\\
+- Load in the set of points of the concentric shapes
+- Fit a sphere to each shape
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## ASA3 method
 
-FROM Headshape points TO ASA\\
-{{page>:development:shared:forwasa}}\\
+FROM Headshape points TO ASA
+{{page>:development:shared:forwasa}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 
 ## BEMCP3 method
 
-FROM Headshape points TO BEMCP\\
-{{page>:development:shared:fwdbemheadshape}}\\
+FROM Headshape points TO BEMCP
+{{page>:development:shared:fwdbemheadshape}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## Dipoli3 method
 
-FROM Headshape points TO Dipoli\\
-{{page>:development:shared:fwdbemheadshape}}\\
+FROM Headshape points TO Dipoli
+{{page>:development:shared:fwdbemheadshape}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## OpenMEEG3 method
 
-FROM Headshape points TO OpenMEEG\\
-{{page>:development:shared:fwdbemheadshape}}\\
+FROM Headshape points TO OpenMEEG
+{{page>:development:shared:fwdbemheadshape}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 # Having a headshape triangulation and EEG data
@@ -424,7 +424,7 @@ FROM Headshape points TO OpenMEEG\\
 ## INF4 method
 
 FROM Headshape triangulation TO Infinite space
-{{page>:development:shared:forwinf}}\\
+{{page>:development:shared:forwinf}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## HS4 method
@@ -433,9 +433,9 @@ FROM Headshape triangulation TO Infinite halfspace
 
 Headshape points are read from an external software file, in form of a closed triangulated surface. This case applies to manual segmentations/triangulations performed (e.g.) in Solid Works/Blender and exported in STL format.
 
-Method:\\
--With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.\\
-{{page>:development:shared:forwslab}}\\
+Method:
+-With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.
+{{page>:development:shared:forwslab}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SL4 method
@@ -444,9 +444,9 @@ FROM Headshape triangulation TO Slab
 
 The user has a closed boundary, e.g. representing the brain, and an estimate of the average cortical thickness. This is the case for example of a boundary calculated in another software and read in Matlab, with points and edges.
 
-Method:\\
--With the available points consider if it is necessary to further process the inner skull/brain surface. Avoid the next point if no further processing is necessary.\\
-{{page>:development:shared:forwslab}}\\
+Method:
+-With the available points consider if it is necessary to further process the inner skull/brain surface. Avoid the next point if no further processing is necessary.
+{{page>:development:shared:forwslab}}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -455,49 +455,49 @@ Method:\\
 FROM Headshape triangulation TO Single sphere
 
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:\\
+This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 
-1 - Load in the set of points of the head triangulation\\
-2 - Get rid of the .tri (edges of the mesh) and exclude the points corresponding to the inferior part of the head\\
-3 - Fit a sphere to the points\\
+1 - Load in the set of points of the head triangulation
+2 - Get rid of the .tri (edges of the mesh) and exclude the points corresponding to the inferior part of the head
+3 - Fit a sphere to the points
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  CS4 method
 
-FROM Headshape triangulation TO Concentric spheres\\
+FROM Headshape triangulation TO Concentric spheres
 
-- Load the boundaries\\
-- Discard the edges of the triangulations\\
-- For each compartment fit a sphere\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+- Load the boundaries
+- Discard the edges of the triangulations
+- For each compartment fit a sphere
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 
 
 ##  ASA4 method
 
-FROM Headshape triangulation TO ASA BEM\\
+FROM Headshape triangulation TO ASA BEM
 
-{{page>:development:shared:forwasa}}\\
+{{page>:development:shared:forwasa}}
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  BEMCP4 method
 
-FROM Headshape triangulation TO BEMCP\\
-{{page>:development:shared:fwdbemheadshape}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+FROM Headshape triangulation TO BEMCP
+{{page>:development:shared:fwdbemheadshape}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  Dipoli4 method
 
-FROM Headshape triangulation TO Dipoli\\
-{{page>:development:shared:fwdbemheadshape}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+FROM Headshape triangulation TO Dipoli
+{{page>:development:shared:fwdbemheadshape}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  OpenMEEG4 method
 
-FROM Headshape triangulation TO OpenMEEG\\
-{{page>:development:shared:fwdbemheadshape}}\\
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+FROM Headshape triangulation TO OpenMEEG
+{{page>:development:shared:fwdbemheadshape}}
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 # Having nothing and EEG data
 
@@ -506,7 +506,7 @@ FROM Headshape triangulation TO OpenMEEG\\
 
 ## INF5 method
 
-{{page>:development:shared:forwinf}}\\
+{{page>:development:shared:forwinf}}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -514,9 +514,9 @@ FROM Headshape triangulation TO OpenMEEG\\
 
 FROM Nothing TO Infinite halfspace
 
-- determine a standard plane crossing (0,0,0) and with normal (e.g.) along the z axis\\
-- Determine one point on the non-conductive side of the electrodes\\
-- Electrodes are not allowed to be in the vacuum side, therefore faulty electrodes are automatically reprojected on the plane\\
+- determine a standard plane crossing (0,0,0) and with normal (e.g.) along the z axis
+- Determine one point on the non-conductive side of the electrodes
+- Electrodes are not allowed to be in the vacuum side, therefore faulty electrodes are automatically reprojected on the plane
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -525,9 +525,9 @@ FROM Nothing TO Infinite halfspace
 
 FROM Nothing TO Infinite slab
 
-- Determine one point on the non-conductive side of the electrodes\\
-- Determine the thickness of the slab (e.g. cortical thickness)\\
-- Electrodes are not allowed to be in the vacuum side, therefore faulty electrodes are automatically reprojected on the plane\\
+- Determine one point on the non-conductive side of the electrodes
+- Determine the thickness of the slab (e.g. cortical thickness)
+- Electrodes are not allowed to be in the vacuum side, therefore faulty electrodes are automatically reprojected on the plane
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -542,7 +542,7 @@ FROM Nothing TO Infinite slab
 FROM Nothing TO Single sphere
 
 
-This method applies to ECoG or iEEG and is normally not used for scalp EEG:\\
+This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 
 1 - Use priors or informed guess about the radius and the center of the sphere (i.e. radius = 12cm and center = [0,0,4]cm in head coordinates is normally a good guess!)
 
@@ -560,21 +560,21 @@ This method applies to ECoG or iEEG and is normally not used for scalp EEG:\\
 For all inputs we consider the same approaches of EEG to be valid. A couple of methods described below are typical for MEG only (single shell Nolte method and the local spheres method).
 ##  SH1 method
 
-FROM CT TO Single shell (MEG only)\\
+FROM CT TO Single shell (MEG only)
 
 The single shell method is also know as the Nolte method and consists in creating a realistic description of the geometry by fitting a series of spherical harmonics to the points describing the geometry of the outer skull.
 
 Therefor
 
-1 - [SH1 only] Segment the skull with threshold and morph operators\\
-OR\\
-1 - [SH1 only] Segment the skull using BET-FSL\\
-2 - Create a filled outer skull compartment\\
-3 - Use marching cubes (isosurface.m) to determine the mesh\\
-OR\\
-3 - Project lines out of a inner icosaedron onto the outer skull to determine the mesh\\
+1 - [SH1 only] Segment the skull with threshold and morph operators
+OR
+1 - [SH1 only] Segment the skull using BET-FSL
+2 - Create a filled outer skull compartment
+3 - Use marching cubes (isosurface.m) to determine the mesh
+OR
+3 - Project lines out of a inner icosaedron onto the outer skull to determine the mesh
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 ##  LS1 method
 
 FROM CT TO Local spheres (MEG only)
@@ -582,24 +582,24 @@ FROM CT TO Local spheres (MEG only)
 For all we apply the same algorithms defined in SPH1-6, except that the point 4 of SPH1 (fit a sphere)
 become
 
-4 - define a maximum radius for each sensor\\
-5 - define the points of the head shape included in this radius\\
-6 - for every sensor fit a sphere to the points define in 5\\
+4 - define a maximum radius for each sensor
+5 - define the points of the head shape included in this radius
+6 - for every sensor fit a sphere to the points define in 5
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  SH2 method
 
-FROM MRI TO Single shell (MEG only)\\
+FROM MRI TO Single shell (MEG only)
 
 The single shell method is also know as the Nolte method and consists in creating a realistic description of the geometry by fitting a series of spherical harmonics to the points describing the geometry of the outer skull.
 
-- Segment the brain using SPM/Freesurfer\\
-- Obtain the inner skull compartment by using csf+white+gray\\
-- smooth and threshold the obtained volume\\
-- Use one of the known [#Triangulation methods](/#Triangulation methods) to obtain a surface\\
+- Segment the brain using SPM/Freesurfer
+- Obtain the inner skull compartment by using csf+white+gray
+- smooth and threshold the obtained volume
+- Use one of the known [#Triangulation methods](/#Triangulation methods) to obtain a surface
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  LS2 method
 
@@ -608,20 +608,20 @@ FROM MRI TO Local spheres (MEG only)
 For all we apply the same algorithms defined in SPH1-6, except that the point 4 of SPH1 (fit a sphere)
 become
 
-4 - define a maximum radius for each sensor\\
-5 - define the points of the head shape included in this radius\\
-6 - for every sensor fit a sphere to the points define in 5\\
+4 - define a maximum radius for each sensor
+5 - define the points of the head shape included in this radius
+6 - for every sensor fit a sphere to the points define in 5
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  SH3 method
 
-FROM Headshape points TO Single shell (MEG only)\\
+FROM Headshape points TO Single shell (MEG only)
 
-1 - Load the outer skull boundary points\\
-2 - Discard the .tri field (if any)\\
+1 - Load the outer skull boundary points
+2 - Discard the .tri field (if any)
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  LS3 method
 
@@ -630,20 +630,20 @@ FROM Headshape points TO Local spheres (MEG only)
 For all we apply the same algorithms defined in SPH1-6, except that the point 4 of SPH1 (fit a sphere)
 become
 
-4 - define a maximum radius for each sensor\\
-5 - define the points of the head shape included in this radius\\
-6 - for every sensor fit a sphere to the points define in 5\\
+4 - define a maximum radius for each sensor
+5 - define the points of the head shape included in this radius
+6 - for every sensor fit a sphere to the points define in 5
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  SH4 method
 
-FROM Headshape boundary TO Single shell (MEG only)\\
+FROM Headshape boundary TO Single shell (MEG only)
 
-1 - Load the outer skull boundary points\\
-2 - Discard the .tri field (if any)\\
+1 - Load the outer skull boundary points
+2 - Discard the .tri field (if any)
 
-[Back](/#Architecture/ defining a table for the possible implementations)\\
+[Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  LS4 method
 
@@ -652,9 +652,9 @@ FROM Headshape boundary TO Local spheres (MEG only)
 For all we apply the same algorithms defined in SPH1-6, except that the point 4 of SPH1 (fit a sphere)
 become
 
-4 - define a maximum radius for each sensor\\
-5 - define the points of the head shape included in this radius\\
-6 - for every sensor fit a sphere to the points define in 5\\
+4 - define a maximum radius for each sensor
+5 - define the points of the head shape included in this radius
+6 - for every sensor fit a sphere to the points define in 5
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -664,9 +664,9 @@ The triangulation methods are generally applied to pre-processed volumetric obje
 
 These methods are commonly used in FieldTri
 
- - The marching cubes algorithm implemented by the Matlab function isosurface.m\\
- - The projection of lines from the center of an icosaedron, to obtain the points of the volume that correspond to the transition between inside and outside of the volume\\
- - The use of edge detection to determine the points of the volumetric boundaries (see the **edge** function in the Image Processing Toolbox)\\
+ - The marching cubes algorithm implemented by the Matlab function isosurface.m
+ - The projection of lines from the center of an icosaedron, to obtain the points of the volume that correspond to the transition between inside and outside of the volume
+ - The use of edge detection to determine the points of the volumetric boundaries (see the **edge** function in the Image Processing Toolbox)
 
 The second method is more stable in case of noise in the volumetric compartment
 
@@ -691,7 +691,7 @@ An example is reported belo
 
 
 
-The code used to generate the figure is:\\
+The code used to generate the figure is:
 
 	seg = imdilate(seg,strel_bol(3));
 	figure,volplot(seg);
@@ -703,7 +703,7 @@ An example of the **imfill** function is given below. This is the case, for exam
 
 ![image](/media/development/wiki34.png)
 
-The code used to generate the figure is:\\
+The code used to generate the figure is:
 
 	seg = imfill(seg,'holes');
 	figure,volplot(seg);
@@ -763,40 +763,40 @@ transfer_elec.m
 
 Examples of volumetric functions are: 
 
-**ana2ana functions:**\\
-**[ft_read_mri](/reference/ft_read_mri)**\\
-**[ft_volumereslice](/reference/ft_volumereslice)**\\
-**[ft_volumerealign](/reference/ft_volumerealign)**\\
-**[ft_volumenormalise](/reference/ft_volumenormalise)**\\
-**[ft_volumesmooth](/reference/ft_volumesmooth)**\\
+**ana2ana functions:**
+**[ft_read_mri](/reference/ft_read_mri)**
+**[ft_volumereslice](/reference/ft_volumereslice)**
+**[ft_volumerealign](/reference/ft_volumerealign)**
+**[ft_volumenormalise](/reference/ft_volumenormalise)**
+**[ft_volumesmooth](/reference/ft_volumesmooth)**
 
-**ana2seg functions:**\\
-**[ft_volumesegment](/reference/ft_volumesegment)**\\
-**[ft_volumethreshold](/reference/ft_volumesegment)**\\
-**[#Morphology operators](/#Morphology operators)**\\
+**ana2seg functions:**
+**[ft_volumesegment](/reference/ft_volumesegment)**
+**[ft_volumethreshold](/reference/ft_volumesegment)**
+**[#Morphology operators](/#Morphology operators)**
 
 
-**seg2seg functions:**\\
+**seg2seg functions:**
 e.g. the functions from the image processing toolbox
 
-**seg2mesh functions:**\\
-**[ft_prepare_mesh](/reference/ft_prepare_mesh)**\\
-**[ft_surface_extract](/#Triangulation methods)**\\
+**seg2mesh functions:**
+**[ft_prepare_mesh](/reference/ft_prepare_mesh)**
+**[ft_surface_extract](/#Triangulation methods)**
 
-**mesh2mesh functions:**\\
-**[ft_read_headshape](/reference/ft_read_headshape)**\\
-**[ft_read_sens](/reference/ft_read_sens)**\\
-**[ft_electroderealign](/reference/ft_electroderealign)**\\
-**[ft_prepare_mesh](/reference/ft_prepare_mesh)** gone into:\\
+**mesh2mesh functions:**
+**[ft_read_headshape](/reference/ft_read_headshape)**
+**[ft_read_sens](/reference/ft_read_sens)**
+**[ft_electroderealign](/reference/ft_electroderealign)**
+**[ft_prepare_mesh](/reference/ft_prepare_mesh)** gone into:
 
-**[ft_surfaceextract](/reference/ft_surfaceextract)**\\
-**[ft_surfacerefine](/reference/ft_surfacerefine)**\\
-**[ft_surfacedownsample](/reference/ft_surfacedownsample)**\\
+**[ft_surfaceextract](/reference/ft_surfaceextract)**
+**[ft_surfacerefine](/reference/ft_surfacerefine)**
+**[ft_surfacedownsample](/reference/ft_surfacedownsample)**
 
-**[ft_surfacesmooth](/reference/ft_surfacesmooth)**\\
-**[ft_surfacecheck](/reference/ft_surfacecheck)**, like closed? outward pointing? etc\\
+**[ft_surfacesmooth](/reference/ft_surfacesmooth)**
+**[ft_surfacecheck](/reference/ft_surfacecheck)**, like closed? outward pointing? etc
 
-**mesh2vol functions:**\\
+**mesh2vol functions:**
 **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 
 
@@ -809,12 +809,12 @@ This function performs a set of sanity checks on the triangulated surfaces which
 
 We want to chec
 
-1. the area of the entire surface\\
-2. the intersection of two surfaces\\
-3. the orientation of the triangles (outwards/inwards)\\
-4. the presence of disconnected triangles\\
-5. the presence of redundant vertices\\
-6. the surface represents a closed area (i.e. the brain)\\
+1. the area of the entire surface
+2. the intersection of two surfaces
+3. the orientation of the triangles (outwards/inwards)
+4. the presence of disconnected triangles
+5. the presence of redundant vertices
+6. the surface represents a closed area (i.e. the brain)
 
 The reason for this function to exist is to understand if the mesh represents a regular and correct triangulation (e.g. the area is in cm2 and not km2).
 These checks are required in order to generate a correct forward model and are model dependent. Some of the steps might require direct interaction with the operator for a further visual inspection.
@@ -827,15 +827,15 @@ The characteristic of voxel based routines is that the volumes are regular (cubi
 
 Alternatively the routines that deal with geometric information other that voxel-based are handling the following geometrical object
 
-- 0d : a point\\
-- 1d : a line\\
-- 2d : a plane/triangle/surface\\
-- 3d : tetrahedra or hexahedra (irregular volume information, non voxel based)\\
+- 0d : a point
+- 1d : a line
+- 2d : a plane/triangle/surface
+- 3d : tetrahedra or hexahedra (irregular volume information, non voxel based)
 
-(they might belong to the mesh2mesh routines class)\\
+(they might belong to the mesh2mesh routines class)
 
 All routines that create head models must allow the transition from all objects to all others (if possible), and from voxel based images to geometrical objects.
-For example the routine prepare_mesh_manual segments boundaries directly from the MRI scans and generates connected lines (if goes from ana to 1d objects).\\
+For example the routine prepare_mesh_manual segments boundaries directly from the MRI scans and generates connected lines (if goes from ana to 1d objects).
 
 
 

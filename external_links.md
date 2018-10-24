@@ -3,8 +3,10 @@ layout: default
 ---
 
 # External links
+
 Feel free to edit this page and add links that you think are appropriate.
-FieldTrip development is supported through the [Human Connectome](http://humanconnectome.org), [BrainGain](http://www.braingain.nu) and [ChildBrain](http://www.childbrain.eu) projects.
+
+FieldTrip development has received support from the [Human Connectome](http://humanconnectome.org), [BrainGain](http://www.braingain.nu) and [ChildBrain](http://www.childbrain.eu) projects.
 
 ## Collaborating institutes
 *  The Donders Centre for Cognitive Neuroimaging (DCCN), Donders Centre for Cognition (DCC) and Donders Centre for Neuroscience (DCN) are all part of the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders) at the [Radboud University](http://www.ru.nl), Nijmegen, The Netherlands.

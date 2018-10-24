@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq ctf raw
 ---
 
-{{tag>faq ctf raw}}
 
 # I am having problems reading the CTF *.hc headcoordinates file
 

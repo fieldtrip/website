@@ -1,14 +1,14 @@
 ---
 layout: default
+tags: 4d bti meg dataformat
 ---
 
-{{tag>4d bti meg dataformat}}
 
 # Getting started with 4D-neuroimaging/BTi data
 
 ## Introduction
 
-\\
+
 The recommended way of working with 4D-Neuroimaging/BTi data is to work on the raw data files directly. The code for reading header information from the raw files is based on Eugene Kronberg's msi2matlab tools, and have been further developed by Gavin Paterson and Jan-Mathijs Schoffelen, at CCNi. 
 
 Alternatively, you can work with 4D-Neuroimaging/BTi data using intermediate ASCII files (.m4d and .xyz), created with "pdf2set", which is a c-program linked to the 4D libraries. This "pdf2set" program should be available to all 4D-users.
@@ -33,7 +33,7 @@ FieldTrip knows how to deal with raw, i.e. unprocessed, data files. Data files w
 
 ## Set path
 
-\\
+
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 	

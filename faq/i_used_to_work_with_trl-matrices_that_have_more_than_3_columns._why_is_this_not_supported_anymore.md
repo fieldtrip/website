@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq trialinfo trialdef trialfun
 ---
 
-{{tag>faq trialinfo trialdef trialfun}}
 ## I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
 
 In the past, it was not straightforward to keep track of trial-specific information throughout the analysis pipeline. Some users actually knew how to work around this by coding trial-specific information in the trl-matrix (by building it from a custom-defined function, which was called by ft_definetrial). Subsequently, since the trl-matrix percolated into cfg.previous.previous.previous and so on, information about conditions, reaction times etc. could be recovered. However, this approach was far from straightforward, because some fieldtrip functions actually affect the trl-matrix (such as ft-redefinetrial, but also all function which have an option cfg.trials, allowing for doing the computation on just a subset of trials in the input). Therefore, it was important to keep track of changing trial boundaries, changing number of trials etc. 

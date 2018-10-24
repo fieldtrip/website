@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial MEG-epilepsy
 ---
 
-{{tag>tutorial MEG-epilepsy}}
 
 #  Virtual channel analysis of epilepsy MEG data 
 

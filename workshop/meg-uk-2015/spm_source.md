@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: meg-uk-2015
 ---
 
-{{tag>meg-uk-2015}}
 
 # SPM Source reconstruction demo
 

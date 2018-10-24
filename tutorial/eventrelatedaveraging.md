@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial meg timelock preprocessing plot MEG-language
 ---
 
-{{tag>tutorial meg timelock preprocessing plot MEG-language}}
 
 # Event related averaging and MEG planar gradient
 

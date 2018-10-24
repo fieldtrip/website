@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial eeg source headmodel mri plot MEG-language
 ---
 
-{{tag>tutorial eeg source headmodel mri plot MEG-language}}
 
 # Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
 
@@ -48,11 +48,11 @@ The anatomical mri of the [tutorial data set](/tutorial/shared/dataset) is avail
 
 *  Finally, we will check the geometry of the head model by plotting it with **[ft_plot_mesh](/reference/ft_plot_vol)**.
 
-\\
+
 ![image](/media/tutorial/headmodel/hedmodel_eeg-01.png)
-\\
+
 *Figure 2. Pipeline of creating a BEM model*
-\\
+
 
 
 ## Reading in the anatomical  data
@@ -63,7 +63,7 @@ Before starting with FieldTrip, it is important that you set up your [MATLAB pat
 	cd PATH_TO_FIELDTRIP
 	ft_defaults
 
-\\
+
 Then, you can read in the mri data. 
 
 	
@@ -76,7 +76,7 @@ Then, you can read in the mri data.
 	    transform: [4x4 double]
 	     coordsys: 'ctf'
 
-\\
+
 The structure of your mri variable contains the following field
 
 *  **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
@@ -90,12 +90,12 @@ The structure of your mri variable contains the following field
 *  **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
 
 You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system). 
-\\
+
 `<note>`
 Later in this tutorial, we will segment the anatomical MRI. Segmentation works properly when the voxels of the anatomical images are homogenous (i.e. the size of the voxel is the same into each direction). If you do not have homogenous voxels (or you are not sure of), you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function on the anatomical data before segmentation. Read more about re-slicing [here](/faq/how_change_mri_orientation_size_fov).
 `</note>` 
 
-\\ 
+
 ##  Align MRI to the head coordinate system 
 
 When you prepare a head model for EEG, the head model should be in the same coordinate system as the electrodes. It is not relevant in which coordinate system the geometrical information is defined, until all are [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions). For this, you can do two thing
@@ -105,13 +105,13 @@ When you prepare a head model for EEG, the head model should be in the same coor
 *  or you can also align later your electrodes interactively or manually to an existing head model. 
 
 
-\\
+
 
 The anatomical MRI that we use in this tutorial is already aligned to a head coordinate system (ctf). We also have information (see later) how the EEG electrodes are positioned relative to the fiducials.  Therefore, we do not need to align the anatomical MRI to any other convention. 
 
 It is also possible to read in anatomical MRI data in [other formats](/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined).  When you read in your own anatomical data, it may does not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no transformation matrix specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/ft_determine_coordsys)** function.
-\\
-\\
+
+
 
 ## Segmentation
 
@@ -139,7 +139,7 @@ Note that the segmentation is quite time consuming (~15mins) and if you want you
 	          cfg: [1x1 struct]
 	         
 
-\\
+
 The segmentedmri data structure is similar to the mri data structure, but contains the new field
 
 *  **unit**: unit of the head coordinate system
@@ -153,11 +153,11 @@ The segmentedmri data structure is similar to the mri data structure, but contai
 *  **cfg**: configuration information of the function which created segmentedmri
 
 The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain**, **skull** and **scalp** to the coordinate system defined in the **coordsys** field. 
-\\
+
 
 ## Mesh
 
-\\
+
 In this step, surfaces are created at the borders of the different tissue-types by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. The output of this function are surfaces which are represented by points (vertices) connected in a triangular way. The tissues from which the surfaces are created have to be specified and also the number of vertices for each tissue.
 
 	
@@ -211,7 +211,7 @@ The scalp, skull and brain mask have already been segmented and a surface descri
 
 
 The vol data structure contains the following field
-\\
+
 
 *  **bnd**:  contains the geometrical description of the head model.
 
@@ -226,7 +226,7 @@ The vol data structure contains the following field
 *  **cfg**:  configuration of the function that was used to create vol
 
 The **bnd** field contains the same information as the mesh we created in the earlier step. But the vol also contains a conductivity value for each surface and a matrix used for the volume conduction model. Note that the unit of measurement used in the geometrical description of vol is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
-\\
+
 
 `<note warning>`
 The order in which different tissue types are represented in the output of ft_prepare_headmodel may depend on the volume conduction model you are using. Make sure to double-check which tissue type is represented where in vol.bnd.
@@ -234,7 +234,7 @@ The order in which different tissue types are represented in the output of ft_pr
 ##  Visualization 
 
 The head model (vol) contains three structures in the **bnd** field. These are the geometrical descriptions of the scalp, skull and brain surfaces. First, we will plot each of the surfaces using the **[ft_plot_mesh](/reference/ft_plot_mesh)** function. Then, all surfaces will be plot together on the same figure.
-\\
+
 
 	
 	figure;
@@ -257,13 +257,13 @@ The head model (vol) contains three structures in the **bnd** field. These are t
 	hold on;
 	ft_plot_mesh(vol.bnd(3),'edgecolor','none','facecolor',[0.4 0.6 0.4]);
 
-\\
+
 {{:tutorial:headmodel:bem.png?350|scalp,skull,brain}}
-\\
+
 *Figure 4. The geometry of the volume conduction  model. All surfaces (scalp:gray,skull:white,brain:green) plotted together*
-\\
+
 When the figure is plotted, you can look at the figure from different views using the curved arrow in the MATLAB figure menu. 
-\\
+
 ## Align the electrodes
 
 The head model is expressed in head coordinates of the anatomical mri (ctf [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)). We need to define the electrode positions in the same head coordinate system. First, we plot the outermost layer of the head model (scalp) together with the electrodes to check if the alignment is necessary. We use a template set of electrodes which you can find in the FieldTrip/template/electrode/standard_1020.elc file.  
@@ -294,7 +294,7 @@ The electrode positions are described in the **elecpos** field. The **label** fi
 
 
 {{:tutorial:headmodel:vol_elec_off.png?300|}}
-\\
+
 *Figure 5.*
 
 The figure shows that the electrodes are not aligned with the scalp surface. 
@@ -376,12 +376,12 @@ We can check the alignment by plotting together the scalp surface with the elect
 	hold on;
 	ft_plot_mesh(vol.bnd(1),'facealpha', 0.85, 'edgecolor', 'none', 'facecolor', [0.65 0.65 0.65]); %scalp
 
-\\
+
 {{:tutorial:headmodel:vol_elec.png?350|}}
-\\
+
 *Figure 6. Electrodes plotted together with the scalp surface.*
-\\
-\\
+
+
 `<note important>`
 Some of the electrodes are below the skin in the front, while the electrodes in the back do not fit tightly to the head. This happened because there are [different conventions to define the fiducials](/faq/how_are_the_lpa_and_rpa_points_defined). 
 
@@ -406,7 +406,7 @@ In the subsequent section however, we try to improve the alignment of the electr
 Here, we only need to use translation. We can shift the x axis with a few mm (12). This will move the electrodes more towards the front of the head. (Note: the positive x is towards the nasion in the ctf ccordinate system.) The electrodes fit better to the head surface after the translation.
 
 {{:tutorial:headmodel:vol_elec1.png?350|}}
-\\
+
 *Figure 7. Aligned electrodes plotted together with the scalp surface*
 
 This electrode structure can be used later when the leadfield is computed during source-reconstruction. During the computation of the leadfield, the electrodes will be projected onto the scalp surface. 
@@ -421,14 +421,14 @@ This electrode structure can be used later when the leadfield is computed during
    * Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
    * What is the difference between this head model and the BEM? 
 `</note>`
-\\
+
 ## Exercise 2
 
 `<note exercise>`
 
    * In exercise 1, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the  concentric spheres model and BEM model? 
 `</note>`
-\\
+
 ## Summary and further reading
 
 In this tutorial, it was explained how to build a volume conduction model of the head using a single subject anatomical mri and the boundary element method (BEM) developed by Oostendorp and van Oosterom (1989). In the exercises, we compared the BEM model to a concentric spheres model that was fitted on the scalp, skull and brain surfaces. 
@@ -436,9 +436,9 @@ In this tutorial, it was explained how to build a volume conduction model of the
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
 Here are the related [faqs](/faq
-\\
+
 {{topic>headmodel eeg +faq&list}}
 and the related [example scripts](/example
-\\
+
 {{topic>headmodel eeg +example&list}}
 

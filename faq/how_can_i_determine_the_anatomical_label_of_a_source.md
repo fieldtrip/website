@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq source
 ---
 
-{{tag>faq source}}
 # How can I determine the anatomical label of a source?
 
 FieldTrip supports the use of an anatomical atlas to look up the anatomical label of a source that you have localized. Vice versa you can also first look up the location of an anatomical region and subsequently use that in source analysis, e.g. as region of interest for beamforming or as starting point for dipole fitting.

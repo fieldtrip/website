@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq layout plot
 ---
 
-{{tag>faq layout plot}}
 
 
 
@@ -29,8 +29,8 @@ Here is a small snippet of an EEG layout fil
     ...
 
 
-The 1st column is the channel number in the layout file, it is not used any more by the plotting functions, but should be present in the layout file.\\
-The 2nd and 3rd are the X-position and Y-position.\\
+The 1st column is the channel number in the layout file, it is not used any more by the plotting functions, but should be present in the layout file.
+The 2nd and 3rd are the X-position and Y-position.
 The 4th and 5th column specify the width and height 
 The 6th column is a string with the channel label. 
 

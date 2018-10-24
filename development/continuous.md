@@ -42,7 +42,7 @@ It is conceivable that similar changes can be made for other functions on the in
 *  redefinetrial
 
 *  recodeevent
-\\
+
 
 
 

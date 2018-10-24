@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial nirs preprocessing nirs-multichannel
 ---
 
-{{tag>tutorial nirs preprocessing nirs-multichannel}}
 
 #  Preprocessing and averaging of multi-channel NIRS data
 

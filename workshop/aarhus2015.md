@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: Aarhus MEG-audodd
 ---
 
-{{tag>Aarhus MEG-audodd}}
 
 #  FieldTrip workshop in Aarhus
 
@@ -12,7 +12,7 @@ http://interactingminds.au.dk/events/single-events/artikel/field-trip-workshop/
 
 ### Where
 
-Interacting Minds Centre, Aarhus University, Nobelparken, building 1483, 3rd floor, 8000 Aarhus C\\
+Interacting Minds Centre, Aarhus University, Nobelparken, building 1483, 3rd floor, 8000 Aarhus C
 {{:workshop:aulogo.jpg?300|}}
 
 ### When

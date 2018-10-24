@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime development
 ---
 
-{{tag>realtime development}}
 
 # FieldTrip buffer reference implementation
 
@@ -27,7 +27,7 @@ License (GPL) and the Berkeley Software Distribution License (BSD).
 You can choose the license that has the most advantages for yo
  1.  Use the [BSD License](http://www.opensource.org/licenses/bsd-license.php) to use the FieldTrip buffer commercially or
  2.  Use the [GNU General Public License](http://www.opensource.org/licenses/gpl-2.0.php) to use the FieldTrip buffer into your open source project.
-\\
+
 A plain-text version of the GNU General Public License is included with the
 FieldTrip buffer source code release in the file LICENSE_GPL. It can also be
 found [here](http://www.opensource.org/licenses/gpl-2.0.php).

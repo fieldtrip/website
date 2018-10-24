@@ -1,9 +1,9 @@
 ---
 layout: default
+tags: tutorial timelock source meg headmodel mri plot MEG-language
 ---
 
-{{tag>tutorial timelock source meg headmodel mri plot MEG-language}}
-\\
+
 # Source reconstruction of event-related fields using minimum-norm estimation
 
 
@@ -59,7 +59,7 @@ Once we have the headmodel and sourcemodel, we perform the following step
 
 ## Processing of functional data
 
-\\
+
 The following will use the MEG data belonging to Subject01. The file can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 For both preprocessing and averaging, we will follow the steps that have been written in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. We will use trials belonging to two conditions (FC and FIC) and we will calculate their difference.
 
@@ -113,7 +113,7 @@ The source space, the volume conduction model  and the position of the sensors a
 
 ## Inverse solution
 
-\\
+
 The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function calculates the inverse solution. The method used (minimum-norm estimation) has to be specified with the cfg.method option. The averaged functional data, the forward solution (the output of the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function), the volume conduction model (in this case, the output of the **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** function) and the noise-covariance matrix (the cov field of the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function) have to be provided. 
 
 The lambda value is a scaling factor that is responsible for scaling the noise-covariance matrix. If it is zero the noise-covariance estimation will be not taken into account during the computation of the inverse solution. Noise-covariance is estimated in each trial separately and then averaged, while the functional data (of which we calculate the source-analysis) is simply averaged across all the trials. Therefore,  the higher the number of trials the lower the noise is in the averaged, functional data, but the number trials is not reducing the noise in the noise-covariance estimation. This is the reason while it is useful to use a scaling factor for the noise-covariance matrix if we want to estimate more realistically the amount of noise.  
@@ -155,10 +155,10 @@ You can plot the inverse solution onto the source-space at a specific time-point
 
 
 ![image](/media/tutorial/minimumnormestimate/plotmeshsourceic01new.png@450)
-\\
+
 //Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point
 //
-\\
+
 
 But we would like to know where the difference between the conditions can be localized. Therefore, we calculate the difference of the two conditions, and we use **[ft_sourcemovie](/reference/ft_sourcemovie)** to visualize the results.
 
@@ -181,7 +181,7 @@ But we would like to know where the difference between the conditions can be loc
 
 
 ![image](/media/tutorial/minimumnormestimate/sourcemovie01new.png@500)
-\\
+
 *Figure 7. One frame from the movie that shows the differences of the two source-reconstructions*
 ## Summary and further readings
 

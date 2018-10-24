@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer debug
 ---
 
-{{tag>faq peer debug}}
 ## How can I debug a problematic distributed job?
 
 A distributed job may fail for various reasons. If the error is properly caught by the slave that executed the job, **[peercellfun](/reference/peercellfun)** will display the error on the master. If **[peercellfun](/reference/peercellfun)** fails to return the output arguments of the jobs that it sent out, you'll have to dig deeper...

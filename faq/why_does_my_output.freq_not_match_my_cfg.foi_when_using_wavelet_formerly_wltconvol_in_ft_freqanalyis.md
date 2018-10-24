@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq freq wavelet
 ---
 
-{{tag>faq freq wavelet}}
 ##  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
 
 

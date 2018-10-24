@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq source fiducial
 ---
 
-{{tag>faq source fiducial}}
 
 # Where is the anterior commissure?
 

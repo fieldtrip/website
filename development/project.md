@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: development
 ---
 
-{{tag>development}}
 
 # Project overview
 

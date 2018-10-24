@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq ica data crash databrowser surf topoplot topo
 ---
 
-{{tag>faq ica data crash databrowser surf topoplot topo}}
 # The databrowser crashes and destroys the whole matlab session, how can I resolve this?
 
 FieldTrip relies on MATLABs plotting routines, which uses specific renderers. Unfortunately, specific combinations of graphics card, operating system and MATLAB version can cause MATLAB to crash using specific renderer. This can happen when using the databrowser, and if this happens for you, it will always happen unless you change something. The easiest change can be made to the renderer, as it entails only a simple MATLAB command. In most FieldTrip functions, you can set the renderer via the cfg. As such, for the databrowser you can simply add 

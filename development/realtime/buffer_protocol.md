@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime
 ---
 
-{{tag>realtime}}
 
 # Low-level FieldTrip buffer TCP network protocol
 
@@ -257,10 +257,10 @@ takes one byte, the **bufsize** field is the sum of both string lengths. All in 
 
  | ^ field           ^ type     ^ content    ^                                 
  | -------------------------------------------                                 
- | message\\ definition\\ (request) | **version**     | uint16   | 1          |
+ | message definition (request) | **version**     | uint16   | 1          |
  | :::                              | **command**     | uint16   | 0x103      |
  | :::                              | **bufsize**     | uint32   | 85         |
- | event 1\\ fixed part             | **type_type**   | uint32   | 0          |
+ | event 1 fixed part             | **type_type**   | uint32   | 0          |
  | :::                              | **type_numel**  | uint32   | 6          |
  | :::                              | **value_type**  | uint32   | 0          |
  | :::                              | **value_numel** | uint32   | 4          |
@@ -268,9 +268,9 @@ takes one byte, the **bufsize** field is the sum of both string lengths. All in 
  | :::                              | **offset**      | int32    | 0          |
  | :::                              | **duration**    | int32    | 0          |
  | :::                              | **bufsize**     | uint32   | 10         |
- | event 1\\ variable part          | *type*        | char[6] | Button      |
+ | event 1 variable part          | *type*        | char[6] | Button      |
  | :::                              | *value*       | char[4] | Left        |
- | event 2\\ fixed part             | **type_type**   | uint32   | 0          |
+ | event 2 fixed part             | **type_type**   | uint32   | 0          |
  | :::                              | **type_numel**  | uint32   | 6          |
  | :::                              | **value_type**  | uint32   | 0          |
  | :::                              | **value_numel** | uint32   | 4          |
@@ -278,7 +278,7 @@ takes one byte, the **bufsize** field is the sum of both string lengths. All in 
  | :::                              | **offset**      | int32    | 0          |
  | :::                              | **duration**    | int32    | 0          |
  | :::                              | **bufsize**     | uint32   | 11         |
- | event 2\\ variable part          | *type*        | char[6] | Button      |
+ | event 2 variable part          | *type*        | char[6] | Button      |
  | :::                              | *value*       | char[5] | Right       |
 
 

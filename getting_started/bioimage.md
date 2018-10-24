@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: getting_started bioimagesuite bioimage ieeg ecog seeg localization
 ---
 
-{{tag>getting_started bioimagesuite bioimage ieeg ecog seeg localization}}
 
 # Getting started with BioImage Suite
 

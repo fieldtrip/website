@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq raw neuroscan eeg dataformat preprocessing
 ---
 
-{{tag>faq raw neuroscan eeg dataformat preprocessing}}
 
 # I have problems reading in neuroscan .cnt files. How can I fix this?
 

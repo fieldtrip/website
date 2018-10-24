@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example statistics
 ---
 
-{{tag>example statistics}}
 
 # Stratify the distribution of one variable that differs in two conditions
 

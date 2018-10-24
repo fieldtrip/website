@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq discussion list question ask question help
 ---
 
-{{tag>faq discussion list question ask question help}}
 
 # How to ask good questions to the community?
 

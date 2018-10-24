@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq dataset sharing
 ---
 
-{{tag>faq dataset sharing}}
 
 # How can I share my MEG data?
 

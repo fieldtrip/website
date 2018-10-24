@@ -1,15 +1,15 @@
 ---
 layout: default
+tags: example source headmodel neuromag
 ---
 
-{{tag>example source headmodel neuromag}}
 
 `<note warning>`
 The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif mri, please look at [this](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space) example script.
 `</note>`
 
 
-\\
+
 This example script relies on the example script [Create mni-aligned grids in individual head_space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). But for Neuromag data there are some differences. First make a mni template as is done in the above mentioned example script.
 
 	

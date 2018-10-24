@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial ecog animal
 ---
 
-{{tag>tutorial ecog animal}}
 
 # Analysis of monkey ECoG recordings
 

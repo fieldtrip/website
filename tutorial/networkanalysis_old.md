@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial connectivity
 ---
 
-{{tag>tutorial connectivity}}
 
 
 # Whole brain connectivity and network analysis

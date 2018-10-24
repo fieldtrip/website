@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: plexon lfp spike dataformat
 ---
 
-{{tag>plexon lfp spike dataformat}}
 
 # Getting started with Plexon data
 
@@ -18,7 +18,7 @@ FieldTrip can read Plexon data from the following file formats.
 *  *.nex
 
 *  *.plx
-\\
+
 
 The *.plx files contain the multiplexed raw acquisition data. During acquisition the data arrives in random order from the different continuous and spike channels. The *.plx file therefore contains data in many small fragments, which causes the reading of plx files to be slow. The newer plexon *.pl2 file recording format doesn't have this limitation. One option for the slow *.plx format is to convert the data to the *.nex file format. These *.nex files also contain the continuous and spike data, but in a orderer format that allows much faster read-access. Using the newer plexon_plx_v2 filetype also greatly speeds up *.plx file reading by using the official Plexon SDK (see below).
 

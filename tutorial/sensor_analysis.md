@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial meg freq timelock preprocessing plot MEG-visuomotor151
 ---
 
-{{tag>tutorial meg freq timelock preprocessing plot MEG-visuomotor151}}
 
 # Sensor-level ERF, TFR and connectivity analyses
 

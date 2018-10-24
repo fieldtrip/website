@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial meg eeg lfp spike cfg matlab
 ---
 
-{{tag>tutorial meg eeg lfp spike cfg matlab}}
 
 # Introduction
 

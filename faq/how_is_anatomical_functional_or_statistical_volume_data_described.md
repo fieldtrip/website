@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq volume datatype
 ---
 
-{{tag>faq volume datatype}}
 
 ## How is anatomical, functional or statistical "volume data" described?
 

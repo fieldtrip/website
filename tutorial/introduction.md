@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial meg eeg raw timelock freq source statistics lfp spike cfg matlab
 ---
 
-{{tag>tutorial meg eeg raw timelock freq source statistics lfp spike cfg matlab}}
 
 # Introduction to the FieldTrip toolbox
 

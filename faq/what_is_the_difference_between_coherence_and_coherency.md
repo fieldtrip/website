@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq coherence
 ---
 
-{{tag>faq coherence}}
 
 ## What is the difference between coherence and coherency?
 

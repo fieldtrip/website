@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 ## How can I stop the different threads created by peermaster and peerslave?
 
 The easiest way to do it is b

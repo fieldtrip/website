@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq source mri headmodel
 ---
 
-{{tag>faq source mri headmodel}}
 
 ## Can I restrict the source reconstruction to the grey matter?
 

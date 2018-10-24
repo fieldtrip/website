@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: template
 ---
 
-{{tag>template}}
 
 # Template anatomical atlases and parcellation schemes
 

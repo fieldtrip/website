@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 
 ## How do I avoid having to allocate N copies of my data if I want to execute N jobs?
 

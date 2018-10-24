@@ -10,8 +10,8 @@ After making changes to the code and/or documentation, this page should remain o
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-Goal: convert ft_connectivityanalysis into a module, to facilitate collaboration with Tim Mullen's EEGLAB connectivity module.\\
-Action plan (from the FT side):\\
+Goal: convert ft_connectivityanalysis into a module, to facilitate collaboration with Tim Mullen's EEGLAB connectivity module.
+Action plan (from the FT side):
 
 *  facilitate interaction with EEGLAB developers by providing more detailed information with respect to the datatypes (wiki)
 

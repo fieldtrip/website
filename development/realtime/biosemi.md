@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime biosemi
 ---
 
-{{tag>realtime biosemi}}
 
 # Biosemi ActiveTwo EEG amplifier
 

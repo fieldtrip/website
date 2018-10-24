@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial example memory matlab script
 ---
 
-{{tag>tutorial example memory matlab script}}
 
 # Making a memory efficient analysis script
 

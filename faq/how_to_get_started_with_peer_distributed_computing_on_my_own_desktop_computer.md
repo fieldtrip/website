@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 
 # How to get started with peer distributed computing on my own desktop computer?
 

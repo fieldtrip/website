@@ -45,9 +45,9 @@ Each function can take a set of common and function-specific additional argument
 ##### Definition of Phase
 
 In the case of **[ft_specest_mtmconvol](/reference/ft_specest_mtmconvol)**, the phase at the peak of an oscillation in the data is defined to be 0, and the trough of an oscillation in the data is defined to be π/-π, progressing counter-clockwise around the circle.
-\\ In the case of **[ft_specest_mtmfft](/reference/ft_specest_mtmfft)**, the average phase of the data segment is from the perspective that an oscillation in the data has a phase of 0, i.e. is at it's peak (following the same convention as ft_specest_mtmconvol), at time-point t=0.
-\\ For **[ft_specest_hilbert](/reference/ft_specest_hilbert)** how phase is defined at the peak and at the trough of an oscillation in the data depends on the type of filter and the filter order that is used to bandpass filter the data, prior to computing the Hilbert transform.
-\\ For **[ft_specest_wavelet](/reference/ft_specest_wavelet)** and **[ft_specest_tfr](/reference/ft_specest_tfr)** how phase is defined at the peak and at the trough of an oscillation in the data depends on the width of the Gaussian that is used. 
+ In the case of **[ft_specest_mtmfft](/reference/ft_specest_mtmfft)**, the average phase of the data segment is from the perspective that an oscillation in the data has a phase of 0, i.e. is at it's peak (following the same convention as ft_specest_mtmconvol), at time-point t=0.
+ For **[ft_specest_hilbert](/reference/ft_specest_hilbert)** how phase is defined at the peak and at the trough of an oscillation in the data depends on the type of filter and the filter order that is used to bandpass filter the data, prior to computing the Hilbert transform.
+ For **[ft_specest_wavelet](/reference/ft_specest_wavelet)** and **[ft_specest_tfr](/reference/ft_specest_tfr)** how phase is defined at the peak and at the trough of an oscillation in the data depends on the width of the Gaussian that is used. 
 
 
 

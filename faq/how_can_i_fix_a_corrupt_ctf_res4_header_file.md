@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq corrupt ctf raw
 ---
 
-{{tag>faq corrupt ctf raw}}
 
 ## How can I fix a corrupt CTF res4 header file?
 

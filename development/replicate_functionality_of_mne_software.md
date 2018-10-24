@@ -495,7 +495,7 @@ Test on phantom data
 
  | Phantom data                             | MNE Suite                                           | FieldTrip            | FieldTrip                                          |   
  | ------------                             | ---------                                           | ---------            | ---------                                          |   
- | plot inverse solution\\ at max (in time) | {{:development:ftplotmesh_mne_phantom_at284.jpg?160 | }}                   | {{:development:ftplotmesh_ft_phantom_at198.jpg?200 | }} | {{:development:phantom_ft_sameleadfield.jpg?200 | }} | 
+ | plot inverse solution at max (in time) | {{:development:ftplotmesh_mne_phantom_at284.jpg?160 | }}                   | {{:development:ftplotmesh_ft_phantom_at198.jpg?200 | }} | {{:development:phantom_ft_sameleadfield.jpg?200 | }} | 
  | leadfield                                | mne                                                 | fieldtrip            | mne                                                |   
  | volume conductor                         | icosahedron642                                      | single sphere        | single sphere                                      |   
  | source space                             | grid with 635 points                                | grid with 641 points | grid with 635 points                               |   

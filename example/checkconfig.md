@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example cfg
 ---
 
-{{tag>example cfg}}
 
 # How to use ft_checkconfig
 

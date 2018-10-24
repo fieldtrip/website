@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq download development cvs svn git
 ---
 
-{{tag>faq download development cvs svn git}}
 
 ## How can I keep track of changes to the code?
 

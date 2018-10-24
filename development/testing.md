@@ -34,11 +34,11 @@ XX = does not work
 
 1) mySQL mex error: libmex.so: version v7.0 not found. Required by mysql.mexglx
 
-2) mySQL mex error: libmex.so: version GCC_3.3 not found. Required by /usr/lib/libstdc++.so.6\\
+2) mySQL mex error: libmex.so: version GCC_3.3 not found. Required by /usr/lib/libstdc++.so.6
 The solution requires export LD_PRELOAD=/lib/libgcc_s.so.1, see [Mathworks technical solution 1-2H64MF](http://www.mathworks.com/support/solutions/data/1-2H64MF.html?product=CO&solution=1-2H64MF)
 
-3) this version is not yet installed on mentat in a clean fashion, furthermore it requires\\
-cd /opt/matlab70/sys/os/glnxa64\\
+3) this version is not yet installed on mentat in a clean fashion, furthermore it requires
+cd /opt/matlab70/sys/os/glnxa64
 mv libgcc_s.so.1 libgcc_s.so.1.BAK
 
 
@@ -60,14 +60,14 @@ Windows 32 bit
 *  matlab 7.3
 
 *  matlab 7.4
-\\
+
 
 Windows 64 bit
 
 *  matlab 7.3
 
 *  matlab 7.4
-\\
+
 
 Linux 32 bit
 
@@ -82,7 +82,7 @@ Linux 32 bit
 *  matlab 7.2
 
 *  matlab 7.4 (?)
-\\
+
 
 Linux 64 bit
 
@@ -95,7 +95,7 @@ Linux 64 bit
 *  matlab 7.3
 
 *  matlab 7.4
-\\
+
 
 Macintosh PPC
 
@@ -110,12 +110,12 @@ Macintosh PPC
 *  matlab 7.3
 
 *  matlab 7.4
-\\
+
 
 Macintosh Intel
 
 *  matlab 7.3
 
 *  matlab 7.4
-\\
+
 

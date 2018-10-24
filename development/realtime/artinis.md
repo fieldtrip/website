@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime artinis
 ---
 
-{{tag>realtime artinis}}
 
 # Artinis Medical Systems
 

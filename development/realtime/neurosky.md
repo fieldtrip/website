@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime neurosky
 ---
 
-{{tag>realtime neurosky}}
 
 # Neurosky ThinkCap
 

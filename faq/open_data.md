@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq dataset
 ---
 
-{{tag>faq dataset}}
 
 # Where can I find open access MEG/EEG data?
 

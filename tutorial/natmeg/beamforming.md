@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial natmeg meg+eeg beamforming MEG-audodd
 ---
 
-{{tag>tutorial natmeg meg+eeg beamforming MEG-audodd}}
 
 
 # Beamforming oscillatory responses in combined MEG/EEG data

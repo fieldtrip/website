@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq qsub peer engine distcomp matlab
 ---
 
-{{tag>faq qsub peer engine distcomp matlab}}
 
 # What are the different approaches I can take for distributed computing?
 

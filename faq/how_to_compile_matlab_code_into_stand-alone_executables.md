@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq qsub
 ---
 
-{{tag>faq qsub}}
 
 ## How to compile MATLAB code into stand-alone executables?
 

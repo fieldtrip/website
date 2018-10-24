@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq datatype function
 ---
 
-{{tag>faq datatype function}}
 
 ## What does a typical call to a FieldTrip function look like?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example preprocessing filter
 ---
 
-{{tag>example preprocessing filter}}
 
 # Determine the filter characteristics
 

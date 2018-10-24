@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq edf preprocessing
 ---
 
-{{tag>faq edf preprocessing}}
 
 # How can I read all channels from an EDF file that contains multiple sampling rates?
 

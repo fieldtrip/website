@@ -1,7 +1,7 @@
 ---
 layout: default
+tags: faq headmodel mri source coordinate
 ---
-{{tag>faq headmodel mri source coordinate}}
 
 ## How are the different head and MRI coordinate systems defined?
 `<note important>`
@@ -38,8 +38,8 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
  | Paxinos-Franklin   | mm    | RSP         | Bregma point                                |                                                                                                           |                              | 
  | Talairach-Tournoux | mm    | RAS         | anterior commissure                         | scaled to match atlas                                                                                     |                              | 
  | Yokogawa           |       | ALS         | center of device                            |                                                                                                           |                             
-A/P means anterior/posterior\\
-L/R means left/right\\
+A/P means anterior/posterior
+L/R means left/right
 S/I means superior/inferior
 As an example: **RAS** means that the first dimension orients towards **R**ight, the second dimension orients towards **A**nterior, the third dimension orients towards **S**uperior.
 See also [this page](http://neuroimage.usc.edu/brainstorm/CoordinateSystems) from the BrainStorm documentation that also explains different MEG coordinate systems and [this page](http://www.grahamwideman.com/gw/brain/orientation/orientterms.htm) that discusses orientations in MRI.

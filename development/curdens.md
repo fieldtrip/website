@@ -20,51 +20,51 @@ Upon reviewing this page on the wiki, it seems to me that this project is not go
 
 ## Introduction
 
-What is the tutorial about\\
+What is the tutorial about
 This is relevant for TMS tDCS ....
 
 
 ## Background
 
-What is TMS/tDCS\\
-Why we need current densities\\
-Overview about the methods which are used\\
+What is TMS/tDCS
+Why we need current densities
+Overview about the methods which are used
 
 ## Procedure
 
-A set of logical steps describing the pipeline, in Matlab, FieldTrip code or also from somewhere else (e.g. FreeSurfer)\\
+A set of logical steps describing the pipeline, in Matlab, FieldTrip code or also from somewhere else (e.g. FreeSurfer)
 Examples with code/command lines instructions
 
-**@Cristiano**\\
-- segment inner skull from CT\\
-- segment the outer brain from the MRI\\
-- project the electrodes from CT onto inner skull (CT space)\\
-- superimpose two surfaces (electrodes are expressed in brain coordinates afterwards)\\
-This is done in SPM by coregistering CT to MRI images.\\
-This automatically gives the transfer matrix from CT to MRI coordinates (and hence you also have the electrodes expressed in MRI coordinates)\\
+**@Cristiano**
+- segment inner skull from CT
+- segment the outer brain from the MRI
+- project the electrodes from CT onto inner skull (CT space)
+- superimpose two surfaces (electrodes are expressed in brain coordinates afterwards)
+This is done in SPM by coregistering CT to MRI images.
+This automatically gives the transfer matrix from CT to MRI coordinates (and hence you also have the electrodes expressed in MRI coordinates)
 
-- check the surface does not contain self intersections\\
-- mesh the brain triangulation with Tetgen\\
-- assign conductivity to nodes -> elements\\
+- check the surface does not contain self intersections
+- mesh the brain triangulation with Tetgen
+- assign conductivity to nodes -> elements
 
-**@Arno**\\
-- convert mesh pnt and tri into a structure readable by Tetgen (.poly and .nodes)\\
-- run Tetgen\\
-- collect result (.node, .ele, (maybe .faces))\\
+**@Arno**
+- convert mesh pnt and tri into a structure readable by Tetgen (.poly and .nodes)
+- run Tetgen
+- collect result (.node, .ele, (maybe .faces))
 
 **@All**
-- write wfmesh/elec/parameters/cond on disk\\
-- run SimBio solver\\
+- write wfmesh/elec/parameters/cond on disk
+- run SimBio solver
 
-Alternatively (interactive)\\
-- write .mat files : elec/wfmesh/cond\\
-- write a SciRun schematic\\
-- run SciRun\\
-- collect solution and save it in a .mat file\\
+Alternatively (interactive)
+- write .mat files : elec/wfmesh/cond
+- write a SciRun schematic
+- run SciRun
+- collect solution and save it in a .mat file
 
 
-**@Robert** \\
-- discuss next steps\\
+**@Robert** 
+- discuss next steps
 
 
 ### Questions

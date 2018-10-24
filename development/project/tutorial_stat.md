@@ -296,10 +296,10 @@ This is implemented in FieldTrip in the function statistics_montecarlo which is 
 
 {{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_nomcc.png?200|depttest_nonpara_FieldTrip_nomcc.png}}
 
-\\ 
+ 
 
 Also in the non-parametric approach for testing of statistical significance different corrections for multiple comparisons such as Bonferoni, fdr, and others are implemented. See the options for cfg.correctm in statistics_montecarlo.
-\\
+
 
 ###  Permutation test based on cluster statistics
 
@@ -343,7 +343,7 @@ With this method for multiple comparisons the following sensors show a significa
 
 {{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster2.png?200|depttest_nonpara_FieldTrip_cluster2.png}}
 
-\\ 
+ 
 
 So far we predefined a time window over which the effect was averaged, and tested the difference of that between conditions. You can also **not** predefine a timewindow and cluster simultaneously over neighboring channels and neighboring time points. See the example below. Now a channel-time cluster is found from 0.33 s untill 0.52 s in which p < 0.05.
 

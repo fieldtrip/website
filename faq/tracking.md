@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq
 ---
 
-{{tag>faq}}
 
 ## What usage information is FieldTrip tracking?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics cluster
 ---
 
-{{tag>faq statistics cluster}}
 
 ## How can I define my own neighbourhood templates or updating an already existing template?
 

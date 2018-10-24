@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq tutorial dataset
 ---
 
-{{tag>faq tutorial dataset}}
 
 # Which datasets are used in the documentation and where are they used?
 

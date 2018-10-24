@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: 
 ---
 
-{{tag>}}
 
 #  General instructions for MATLAB demo's
 

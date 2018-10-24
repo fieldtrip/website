@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq ica
 ---
 
-{{tag>faq ica}}
 
 ## Why does my ICA output contain complex numbers?
 

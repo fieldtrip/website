@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq video
 ---
 
-{{tag>faq video}}
 
 #  Are the FieldTrip lectures available on video?
 

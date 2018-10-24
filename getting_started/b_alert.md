@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: eeg b-alert balert abm advanced brain monitoring X10 X-10 X24 X-24 fixme
 ---
 
-{{tag>eeg b-alert balert abm advanced brain monitoring X10 X-10 X24 X-24 fixme}}
 
 # Getting started with ABM's B-Alert EEG data
 

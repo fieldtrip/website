@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: template
 ---
 
-{{tag>template}}
 
 ## Template head models for forward volume conduction modeling
 

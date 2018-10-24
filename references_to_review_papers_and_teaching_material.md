@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: references
 ---
 
-{{tag>references}}
 
 # References to review papers and teaching material
 

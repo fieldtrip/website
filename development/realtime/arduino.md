@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime arduino
 ---
 
-{{tag>realtime arduino}}
 
 #  Streaming realtime EEG data to and from Arduino 
 

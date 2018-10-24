@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq dataformat preprocessing
 ---
 
-{{tag>faq dataformat preprocessing}}
 
 # How can I extend the reading functions with a new dataformat?
 

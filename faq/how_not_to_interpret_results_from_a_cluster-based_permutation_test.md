@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics
 ---
 
-{{tag>faq statistics}}
 
 ##  How NOT to interpret results from a cluster-based permutation test
 

@@ -37,8 +37,6 @@ Please note that the script for the Cuban EEG dataset is further down on this pa
 
 `<note>`
 Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the FieldTrip toolbox design.
-\\
-\\
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the [MATLAB for psychologists](http://www.antoniahamilton.com/matlab.html) tutorial (which is also useful for non-psychologists).
 `</note>`

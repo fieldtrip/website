@@ -10,11 +10,10 @@ Sensory-motor processing is assessed using a task in which participants are pres
 
 In the Motor task, participants executed a simple hand or foot movement. The limb and the side were instructed by a visual cue, and the timing of each movement was controlled by a pacing arrow presented on the center of the screen (A, right). The paradigm included movement and rest blocks (B, right).
 
-{{:tutorial:shared:screen_shot_2015-09-15_at_14.21.52.png?200|A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements.
-}}
+{{:tutorial:shared:screen_shot_2015-09-15_at_14.21.52.png?200|A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements.}}
 
 *Figure Caption: A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements.*
-￼￼
+
 #### Block/Trial Overview
 
 Each block started with an instruction screen, indicating the side (left, right) and the limb (hand, foot) to be used by the subject in the current block. Then, 10 pacing stimuli were presented in sequence, each one instructing the participant to make a brisk movement. The pacing stimulus consisted of a small arrow in the center of the screen pointing to the side of the limb movement (left or right, above). The interval between consecutive stimuli was fixed to 1200 msec. The arrow stayed on the screen for 150 msec and for the remaining 1050 msec the screen was black.
@@ -37,7 +36,7 @@ The photodiode was activated whenever a cueing stimulus or pacing arrow was pres
 
 *Figure Caption: Photodiode trigger sequence extracted from the Trigger channel of one Motor Task run.*
 
-\\
+
 ￼￼
 ￼The E-Prime triggers contain the information about the experimental sequence. These triggers are superimposed on the photodiode triggers, in the following description it is assumed that the photodiode triggers have been subtracted from the trigger channel so that only the triggers from the E-Prime stimulation protocol remain. Such an E-Prime trigger sequence, extracted from the trigger channel is shown, right.
 

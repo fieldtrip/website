@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial source electrode
 ---
 
-{{tag>tutorial source electrode}}
 
 # Localizing electrodes using a 3D-scanner
 

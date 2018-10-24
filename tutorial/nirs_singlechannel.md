@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial nirs preprocessing nirs-singlechannel
 ---
 
-{{tag>tutorial nirs preprocessing nirs-singlechannel}}
 
 #  Preprocessing and averaging of single-channel NIRS data
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: nirs artinis
 ---
 
-{{tag>nirs artinis}}
 
 # Getting started with Artinis NIRS data
 

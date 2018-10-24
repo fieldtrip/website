@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-\\
+
 
 `<note warning>`
 The purpose of this page is just to serve as a scratch pad for the new version of the example script.

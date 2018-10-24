@@ -58,7 +58,7 @@ January 2010: Because of switching to the new low-level plotting functions in th
 
 
 *  **topoplot.m**
-\\
+
 
 May 2009: The read_fcdc/write_fcdc functions have all been replaced over the course of the last years by new functions in the fileio module. The new functions have a cleaner interface and should therefore be used preferably.
 
@@ -78,7 +78,7 @@ May 2009: The read_fcdc/write_fcdc functions have all been replaced over the cou
 *  **read_fcdc_spike.m**     
 
 *  **write_fcdc_spike.m**
-\\
+
 
 April 2007: The following functions have been excluded from the 0.9.8 release version
 
@@ -101,7 +101,7 @@ April 2007: The following functions have been excluded from the 0.9.8 release ve
 *  **meginterpolate.m**
 
 *  **precompute_leadfield.m**
-\\
+
 
 January 2006: The *xxx*volume functions have all been renamed to volume//xxx// to make their names more consistent and to make it easier to find the FieldTrip functions that operate on volume dat
 
@@ -110,7 +110,7 @@ January 2006: The *xxx*volume functions have all been renamed to volume//xxx// t
 *  **normalisevolume.m** has been renamed to volumenormalise
 
 *  **segmentvolume.m** has been renamed to volumesegment
-\\
+
 
 January 2006: Some of the artifact detection functions have been completely rewritten. Although the new functions should have the same behaviour, the exact same result cannot be guaranteed. To allow people to use the old implementations, they are stil available: 
 
@@ -119,7 +119,7 @@ January 2006: Some of the artifact detection functions have been completely rewr
 *  **artifact_jump_old.m**  is the old implementation of artifact_jump
 
 *  **artifact_muscle_old.m**  is the old implementation of artifact_muscle
-\\
+
 
 September 2005: The list of trial functions below all predate the generic event handling that has been implemented using read_fcdc_event. These trial functions are file-format specific, and therefore deprecated.
 
@@ -140,7 +140,7 @@ The idea underlying the new implementation for trialfuns is to seperate the "har
 *  **trialfun_neuroscan_cnt.m**
 
 *  **trialfun_neuroscan_eeg.m**
-\\
+
 
 Some miscellaneous functions that are deprecated ar
 
@@ -153,7 +153,7 @@ Some miscellaneous functions that are deprecated ar
 *  **rejecttrial.m** has been replaced by rejectvisual
 
 *  **statistics_random.m** has been replaced by statistics_montecarlo
-\\
+
 
 
  
@@ -217,19 +217,19 @@ January 2010: Several old options from topoplot.m (deprecated) have been renamed
 *  **cfg.showlabels** (deprecated)
 
 *  **cfg.hllinewidth** (deprecated)
-\\
+
 
 July 2008
 
 *  **cfg.tightgrid** (in prepare_dipole_grid)
-\\
+
 
 February 2007
 
 *  **cfg.plot3d** (in megrealign) has been replaced by cfg.feedback
 
 *  **cfg.plot3d** (in electroderealign) has been merged with cfg.feedback
-\\
+
 
 Older
 

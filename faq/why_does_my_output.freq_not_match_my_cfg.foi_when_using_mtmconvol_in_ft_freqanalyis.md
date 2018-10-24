@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq freq mtmconvol
 ---
 
-{{tag>faq freq mtmconvol}}
 ## Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?
 
 

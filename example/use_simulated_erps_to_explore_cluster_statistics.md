@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example statistics cluster
 ---
 
-{{tag>example statistics cluster}}
 
 # Use simulated ERPs to explore cluster statistics
 

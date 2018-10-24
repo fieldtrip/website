@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 ## How can I set up the peer distributed computing on a small number of computers?
 
 It is common for researchers to share their office with multiple people, each one with a workstation computer under their desk. In the evening, when everyone has gone home, those computers just stand around, unused. The peer distributed computing toolbox allows you to easily make use of them! 

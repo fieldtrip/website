@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial eeg brainvision preprocessing trialfun timelock EEG-affective
 ---
 
-{{tag>tutorial eeg brainvision preprocessing trialfun timelock EEG-affective}}
 
 # Preprocessing of EEG data and computing ERPs
 

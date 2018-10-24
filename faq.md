@@ -1,14 +1,13 @@
 ---
 layout: default
+tags: faq
 ---
-
-{{tag>faq}}
 
 # Frequently Asked Questions
 
-On this page you can find (and add) answers to a variety of Fieldtrip-related questions.
+On this page you can find (and add) answers to a variety of FieldTrip and MATLAB related questions.
 
-We invite you to [add your own](/contribute) example scripts or frequently asked questions on the wiki. Also tutorials can be added. Every time you explain somebody something about Fieldtrip, please consider whether you could use the wiki for this so others can learn from it as well.
+We invite you to [add your own](/contribute) example scripts or frequently asked questions on the wiki. Also tutorials can be added. Every time you explain somebody something about FieldTrip, please consider whether you could use the wiki for this so others can learn from it as well.
 
 See also the [tutorials](/tutorial) and [example scripts](/example).
 

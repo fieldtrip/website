@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq coordinate
 ---
 
-{{tag>faq coordinate}}
 
 # How do homogenous coordinate transformation matrices work?
 

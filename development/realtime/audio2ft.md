@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime audio
 ---
 
-{{tag>realtime audio}}
 
 # Soundcard input using PortAudio
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example meg timelock source dipole fixme MEG-tactile
 ---
 
-{{tag>example meg timelock source dipole fixme MEG-tactile}}
 
 # Fit a dipole to the tactile ERF after mechanical stimulation
 

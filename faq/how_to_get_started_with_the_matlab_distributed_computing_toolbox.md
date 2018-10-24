@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq distcomp
 ---
 
-{{tag>faq distcomp}}
 
 #  How to get started with the MATLAB distributed computing toolbox? 
 

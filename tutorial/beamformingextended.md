@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial meg source coherence MEG-visuomotor151
 ---
 
-{{tag>tutorial meg source coherence MEG-visuomotor151}}
 
 # Localizing visual gamma and cortico-muscular coherence using DICS
 
@@ -430,7 +430,7 @@ Compute the cross-spectral density matrix for 20 H
 
 ### Source analysis
 
-Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration. \\
+Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration. 
 This step requires the subject's head- and sourcemodel that we both computed above.
 
     % if not yet in memory
@@ -451,7 +451,7 @@ When you input the sourcemodel on which you have **not** already computed the le
 
 ### Plotting cortico-muscular coherent sources
 
-The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the anatomical MRI, we have to do the exact same step as described above, just this time we have to interpolate the coherence parameter rather than the power parameter. \\
+The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the anatomical MRI, we have to do the exact same step as described above, just this time we have to interpolate the coherence parameter rather than the power parameter. 
 For this, we first need to overwrite the position information of the sourcemodel and then load the template MRI, which is distributed with FieldTrip. 
 
     source_coh_lft.pos = template.sourcemodel.pos;

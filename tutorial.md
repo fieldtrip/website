@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial
 ---
 
-{{tag>tutorial}}
 
 # Table of contents
 {:.no_toc}

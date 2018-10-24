@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial example script matlab beginner batching
 ---
 
-{{tag>tutorial example script matlab beginner batching}}
 
 # Creating a clean analysis script
 

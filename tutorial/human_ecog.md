@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial ieeg ecog seeg anatomy human localization mri ct freesurfer ecog-protocol
 ---
 
-{{tag>tutorial ieeg ecog seeg anatomy human localization mri ct freesurfer ecog-protocol}}
 
 # Analysis of human ECoG and sEEG recordings
 

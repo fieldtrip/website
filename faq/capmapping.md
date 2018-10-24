@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq eeg
 ---
 
-{{tag>faq eeg}}
 # Can I compare EEG channels between different electrode caps?
 
 Different EEG caps use different labels and especially different electrode placements. However,  sometimes you want to relate the different electrodes from one layout to another.

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq preprocessing artifact filter
 ---
 
-{{tag>faq preprocessing artifact filter}}
 # How can I interpret the different types of padding in FieldTrip? 
 
 Padding is an operation that extends a predetermined segment of data (usually referred to as a "trial") either with zeros or with additional data points. Consequently, for padding you should distinguish **zero padding** from **data padding**.

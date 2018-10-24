@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq eeg meg mri headmodel source coordinate}}
 ---
 
-{{tag>faq eeg meg mri headmodel source coordinate}}  
 
 # How to coregister an anatomical MRI with the gradiometer or electrode positions? 
 

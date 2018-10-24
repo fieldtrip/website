@@ -24,7 +24,7 @@ The following BCI input agents are desired
 *  Online data from BrainAmp EEG system
 
 *  ...
-\\
+
 
 The following BCI classifying agents are desired
 
@@ -36,7 +36,7 @@ The following BCI classifying agents are desired
 
 *  ...
 
-\\
+
 
 
 The following BCI actor agents are desired
@@ -62,7 +62,7 @@ The following BCI actor agents are desired
 *  Hex-o-spell
 
 *  ...
-\\
+
 
 Using the different actors, it is possible to implement a complete BCI system. The following BCI systems are desired
 
@@ -73,6 +73,6 @@ Using the different actors, it is possible to implement a complete BCI system. T
 *  head movement detector (only for MEG)
 
 *  ...
-\\
+
 
 

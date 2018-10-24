@@ -52,10 +52,10 @@ Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many 
 
 
 
-Humphreys Restaurant\\
-Vismarkt 7 (Waalkade, i.e. along the river front)\\
-6511 VJ Nijmegen\\
-http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen\\
+Humphreys Restaurant
+Vismarkt 7 (Waalkade, i.e. along the river front)
+6511 VJ Nijmegen
+http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen
 [Google maps](https://www.google.nl/maps/place/Humphrey's+Restaurant/@51.849361,5.865258,17z/data=!4m7!1m4!3m3!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a!2sHumphrey's+Restaurant!3b1!3m1!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a?hl=nl)
 
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: template
 ---
 
-{{tag>template}}
 
 # Template 3-D electrode sets
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq sharing anonymize
 ---
 
-{{tag>faq sharing anonymize}}
 
 # How can I anonymize data processed in FieldTrip?
 

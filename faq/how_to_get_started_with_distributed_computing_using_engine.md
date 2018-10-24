@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq engine
 ---
 
-{{tag>faq engine}}
 
 # How to get started with distributed computing using engine?
 

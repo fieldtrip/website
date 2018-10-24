@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq freq connectivity coherence
 ---
 
-{{tag>faq freq connectivity coherence}}
 # In what way can frequency domain data be represented in FieldTrip?
 
 ## Different output options in ft_freqanalysis

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: chieti
 ---
 
-{{tag>chieti}}
 
 #  FieldTrip workshop in Chieti
 
@@ -12,9 +12,9 @@ A FieldTrip MEG connectivity workshop will be hosted by the [ITAB in Chieti](htt
 
 ### Where
 
-Institute for Advanced Biomedical Technologies (ITAB)\\
-Dept. of Neuroscience, Imaging and Clinical Sciences\\
-University "G. d'Annunzio" - Chieti-Pescara, Italy\\
+Institute for Advanced Biomedical Technologies (ITAB)
+Dept. of Neuroscience, Imaging and Clinical Sciences
+University "G. d'Annunzio" - Chieti-Pescara, Italy
 ![image](/media/workshop/chieti.png)
 
 [Find the ITAB on google maps](https://www.google.nl/maps/place/Istituto+per+le+Tecnologie+Avanzate+Biomediche,+66100+Chieti+CH,+Italië/@42.3667541,14.148373,17z/data=!4m7!1m4!3m3!1s0x1331ac2c47560d77/0x71decc418c53312d!2sVia+Colle+dell'Ara,+66100+Chieti+CH,+Italië!3b1!3m1!1s0x1331ac2c973b8067/0x27369d91f2b65216?hl=nl)

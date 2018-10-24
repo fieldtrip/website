@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics
 ---
 
-{{tag>faq statistics}}
 
 ##  How to test an interaction effect using cluster-based permutation tests?
 

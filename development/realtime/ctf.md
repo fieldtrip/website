@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime ctf
 ---
 
-{{tag>realtime ctf}}
 
 # CTF
 

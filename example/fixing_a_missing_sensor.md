@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example meg preprocessing ctf
 ---
 
-{{tag>example meg preprocessing ctf}}
 # Fixing a missing sensor
 
 Use this script when one or more channels in the 275 channel CTF system are dead. It identifies the missing sensors and uses FT_CHANNELREPAIR to fix the problem, so you can compare or average this handicapped dataset with complete datasets. Use this function after preprocessing. This snippet of code works if you have loaded into memory (in addition to the data structure you would like to fix,) a full list of labels (let's call this label), and a gradiometer description (a grad-structure) describing all the sensors.

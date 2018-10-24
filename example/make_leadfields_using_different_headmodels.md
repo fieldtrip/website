@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example meg headmodel source
 ---
 
-{{tag>example meg headmodel source}}
 
 # Make leadfields using different headmodels
 

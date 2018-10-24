@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example realtime
 ---
 
-{{tag>example realtime}}
 
 # Example real-time power estimate
 

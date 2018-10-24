@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example artifact meg regression confound
 ---
 
-{{tag>example artifact meg regression confound}}
 # How to incorporate head movements in MEG analysis
 
 ## Description

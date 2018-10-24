@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial artifact preprocessing eeg meg
 ---
 
-{{tag>tutorial artifact preprocessing eeg meg}}
 
 # Introduction: dealing with artifacts
 

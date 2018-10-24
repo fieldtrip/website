@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime elekta neuromag
 ---
 
-{{tag>realtime elekta neuromag}}
 
 # Elekta / Neuromag
 

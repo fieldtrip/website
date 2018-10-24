@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: cfg timelock freq source headmodel statistics plot
 ---
 
-{{tag>cfg timelock freq source headmodel statistics plot}}
 
 # Reference documentation
 

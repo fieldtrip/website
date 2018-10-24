@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics cluster
 ---
 
-{{tag>faq statistics cluster}}
 
 ## How does ft_prepare_neighbours work?
 

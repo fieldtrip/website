@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq spm toolbox path
 ---
 
-{{tag>faq spm toolbox path}}
 
 # How to select the correct SPM toolbox?
 

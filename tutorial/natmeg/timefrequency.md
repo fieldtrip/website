@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial natmeg meg+eeg frequency MEG-audodd
 ---
 
-{{tag>tutorial natmeg meg+eeg frequency MEG-audodd}}
 
 # Time-frequency analysis of combined MEG/EEG data
 
@@ -38,11 +38,11 @@ To calculate the time-frequency analysis for the example dataset we will perform
    * Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
    * Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
 
-\\
+
 
 ![image](/media/tutorial/timefrequencyanalysis/tfr_pipelinenew.png@200)
 
-\\
+
 *Figure 2; Schematic overview of the steps in time-frequency analysis*
 
 {{page>:tutorial:natmeg:shared:preproc_response_meg}}

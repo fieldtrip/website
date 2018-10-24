@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial meg raw preprocessing MEG-language
 ---
 
-{{tag>tutorial meg raw preprocessing MEG-language}}
 
 # Trigger-based trial selection
 

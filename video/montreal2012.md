@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: video
 ---
 
-{{tag>video}}
 
 # Workshop at BRAMS Institute, Montreal (2012)
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example meg source
 ---
 
-{{tag>example meg source}}
 
 # Compute forward simulated data and apply a beamformer scan
 

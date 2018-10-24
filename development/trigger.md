@@ -30,7 +30,7 @@ Issues to be solved in the flank detectio
 *  slow rise of flank, i.e. value should be detected a few samples later
 
 *  consistent naming of triggers, but also backward compatibility
-\\
+
 
 
 

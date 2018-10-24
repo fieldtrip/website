@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example realtime
 ---
 
-{{tag>example realtime}}
 
 # Measuring the timing delay and jitter for a real-time application
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq workshop
 ---
 
-{{tag>faq workshop}}
 
 # How should I prepare for the upcoming FieldTrip workshop?
 

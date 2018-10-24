@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial tms eeg preprocesing plot EEG-TMS
 ---
 
-{{tag>tutorial tms eeg preprocesing plot EEG-TMS}}
 
 # Dealing with TMS-EEG datasets
 

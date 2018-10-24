@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: dataformat meg ctf neuromag 4d yokogawa
 ---
 
-{{tag>dataformat meg ctf neuromag 4d yokogawa}}
 
 # MEG dataformats
 

@@ -1,14 +1,14 @@
 ---
 layout: default
+tags: elekta neuromag dataformat meg
 ---
 
-{{tag>elekta neuromag dataformat meg}}
 
 # Getting started with Elekta/Neuromag data
 
 ## Introduction
 
-\\
+
 All data in Neuromag is stored in *.fif files, where the files can contain different data objects. The following data objects can be read and used in FieldTrip: MEG data, EEG data, gradiometer positions, single sphere models, BEM models (using the MEG-CALC toolbox). FieldTrip reads Neuromag fif files using low-level Matlab functions from the MNE toolbox from Matti Hamalainen, see [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php). This will work on any platform, as it is based on open-source m-files. To load the data into Matlab you need the MNE toolbox from Matti Hämäläinen, see [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php). 
 
 Alternative support for Neuromag data is implemented by calling the mex files from [Kimmo Uutela's MEG-PD toolbox](http://www.kolumbus.fi/kuutela/programs/meg-pd/). The files in the MEG-PD toolbox are not included with FieldTrip, but you can download them[here](http://www.kolumbus.fi/kuutela/programs/meg-pd/). Extract the toolbox and put it on your matlab path, or copy the files into the "fieldtrip/private" directory. This is used if you select the file format as "neuromag_fif".
@@ -17,7 +17,7 @@ Note that the MEG-PD toolbox will only function on 32-bit machines, and requires
 
 ## Set Path
 
-\\
+
 To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. In respect to FiedlTrip, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 	
@@ -27,7 +27,7 @@ To get started, you need to add the paths where the FieldTrip and MNE toolboxes 
 
 ## Reading MEG data
 
-\\
+
 The first step is to see if you can read in the data using both the toolboxes by typing the following in the command windo
 
 	
@@ -75,7 +75,7 @@ When this works you are sure that fieldtrip can handle your dataset and you can 
 
 ##  Frequently Asked Questions
 
-\\
+
     - Can I do source reconstruction with combined planar and magnetometer channels? 
 
         *Yes, by specifying cfg.coilaccuracy=1 or 2 during ft_preprocessing

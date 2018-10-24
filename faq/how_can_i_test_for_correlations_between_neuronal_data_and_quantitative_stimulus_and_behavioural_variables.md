@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics
 ---
 
-{{tag>faq statistics}}
 
 # How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?
 

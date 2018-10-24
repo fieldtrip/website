@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq mex compile
 ---
 
-{{tag>faq mex compile}}
 
 ##  How can I compile the mex files and command-line executables ? 
 
@@ -137,14 +137,14 @@ This error is caused by the unrobust MATLAB design. The problem is that even whe
 
 *  Install the package "ia32-libs", for example with the easy-to-use *Synaptic Package Manager*.
 
-*  Let ''__MATLABROOT__'' stand for the directory where your MATLAB is installed. In the file   ''__MATLABROOT__/bin/mexopts.sh'' change the line:\\
+*  Let ''__MATLABROOT__'' stand for the directory where your MATLAB is installed. In the file   ''__MATLABROOT__/bin/mexopts.sh'' change the line:
 '' CLIBS="$CLIBS -lstdc++" ''
-to:\\
+to:
 '' CLIBS="$CLIBS -L__MATLABROOT__/sys/os/glnx86 -lstdc++" ''
 
 *  Now make a *symbolic link* so that the *linker* can find the *C++ standard library*, for example in the following way.
     * Press CTRL-ALT-T on your keyboard to open a terminal window.
-    * In that terminal window type a command of this form:\\
+    * In that terminal window type a command of this form:
 ''ln -s __MATLABROOT__/sys/os/glnx86/libstdc++.so.6 __MATLABROOT__/sys/os/glnx86/libstdc++.so''.
 
 *  Start MATLAB again, and be sure to explicity specify the architecture to MATLAB.

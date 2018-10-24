@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: guidelines development
 ---
 
-{{tag>guidelines development}}
 
 # Template guidelines
 

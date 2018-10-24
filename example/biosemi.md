@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example eeg dataformat biosemi bdf
 ---
 
-{{tag>example eeg dataformat biosemi bdf}}
 
 ## Example analysis pipeline for Biosemi bdf data
 

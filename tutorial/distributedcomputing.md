@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial qsub peer distcomp matlab MEG-language
 ---
 
-{{tag>tutorial qsub peer distcomp matlab MEG-language}}
 
 # Speeding up your analysis with distributed computing
 

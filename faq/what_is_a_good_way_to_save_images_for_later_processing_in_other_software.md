@@ -4,9 +4,9 @@ layout: default
 
 ## What is a good way to save images for later processing in other software?
 
-This is a question with many possible answers. Below is a list of tips from various users/developers:\\
+This is a question with many possible answers. Below is a list of tips from various users/developers:
 
-*  Save in *.EPS (these can be easily edited in e.g. Adobe Illustrator)\\
+*  Save in *.EPS (these can be easily edited in e.g. Adobe Illustrator)
 
 *  Use the function [saveSameSize](http://www.mathworks.com/matlabcentral/fileexchange/17868-savesamesize) from the Mathworks File Exchange. This function saves the the figure like it looks on-screen.
 

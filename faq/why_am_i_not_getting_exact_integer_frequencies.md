@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq preprocessing freq
 ---
 
-{{tag>faq preprocessing freq}}
 
 #  Why am I not getting integer frequencies?
 

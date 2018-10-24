@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq fiducial mri ctf source coordinate
 ---
 
-{{tag>faq fiducial mri ctf source coordinate}}
 
 #  How are the Left and Right Pre-Auricular (LPA and RPA) points defined? 
 

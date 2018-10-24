@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: spike lfp
 ---
 
-{{tag>spike lfp}}
 
 # Working with animal electrophysiology data
 
@@ -12,7 +12,7 @@ If you are only processing LFPs and no spikes, then the remainder of this page i
 
 ## Representation of a data set
 
-FieldTrip is mainly developed for the analysis of continuous electrophysiological data, such as EEG, MEG, ECoG, and local field potentials (LFPs) recorded in the neuropil. These data can all be considered as a **continuous** multivariate time series, which is sampled at discrete time points at regular intervals. 
+FieldTrip is mainly developed for the analysis of continuous electrophysiological data, such as EEG, MEG, ECoG, and local field potentials (LFPs) recorded in the neuropil. These data can all be considered as a **continuous** multivariate time series, which is sampled at discrete time points at regular intervals.
 
 Many animal neurophysiology experiments also allow the recording of spiking activity of small groups of neurons. Spiking activity is fully characterized by the set of time points at which the spikes occur. These data are inherently discrete and represents events (spikes) that happen at irregular moments in time. The inherently discrete and irregular nature of spiking activity requires a some effort to combine it with the simultaneously recorded LFPs.
 
@@ -36,7 +36,6 @@ The accurate specification of the time (by means of the timestamp) at which the 
 An essential part in every analysis is trial selection. Typically, the interest is in segments of data that precede, follow, or include certain stimulus or response events. This event information (Which event occurred when?) is usually stored in a separate file. In FieldTrip, the event information is obtained by calling the function **[ft_read_event](/reference/ft_read_event)**, which produces a so-called event structure. The timing information in this event structure involves timestamps, and therefore the events can be linked to the LFP and the spike data.
 
 Trial selection operates in three steps. In the first step, trials of LFP data are selected. In the second step, spike data are read into memory, And in the third step, spike data are appended to the selected trials of LFP data. These three steps are now described in some detail.
- 1.  Trials of LFP data are selected in essentially the same way as trials of human EEG and MEG data. In a user-written trial function, a so-called trl-structure has to be constructed which specifies the timestamps that correspond to the beginning and the end of the trials. The trials of LFP data are then extracted from the data on disk. 
- 2.  Reading spike data into memory is performed by the function **[ft_read_spike](/reference/ft_read_spike)**. This function takes the spike filename as an argument. In the function's output, spikes are identified by their timestamps. This function must be applied to every file that contains spike data. Once loaded into memory, multiple spike data sets can be appended by means of the function **[ft_appendspike](/reference/ft_appendspike)**. 
+ 1.  Trials of LFP data are selected in essentially the same way as trials of human EEG and MEG data. In a user-written trial function, a so-called trl-structure has to be constructed which specifies the timestamps that correspond to the beginning and the end of the trials. The trials of LFP data are then extracted from the data on disk.
+ 2.  Reading spike data into memory is performed by the function **[ft_read_spike](/reference/ft_read_spike)**. This function takes the spike filename as an argument. In the function's output, spikes are identified by their timestamps. This function must be applied to every file that contains spike data. Once loaded into memory, multiple spike data sets can be appended by means of the function **[ft_appendspike](/reference/ft_appendspike)**.
  3.  Appending spike data to LFP data is also performed by the function **[ft_appendspike](/reference/ft_appendspike)**. An important point here is that, in the output, the spikes are no longer identified by their timestamps. Instead, spike channels are now stored as time series of zeros and ones with the same sampling frequency as the LFP channels. This format allows for joint analyses of spike and LFP data, such as spike-field coherence analyses and spike-triggered averages.
-

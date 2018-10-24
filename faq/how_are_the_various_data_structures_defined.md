@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq datatype dataformat
 ---
 
-{{tag>faq datatype dataformat}}
 
 # How are the various MATLAB data structures defined?
 
@@ -80,7 +80,7 @@ An example of a source structure obtained after performing a frequency domain so
 	
 	
 
-\\   
+   
 ### New style
 
 This is the new definition of a data structure that represents data corresponding to locations in 3-D space. In the future this will replace the 'old style' definition. It has been designed to be more flexible and more easy to manage. Also, exchange with other software toolboxes and code development should be facilitated by this. An example of such a source structure obtained after performing a frequency domain source reconstruction is shown here: 

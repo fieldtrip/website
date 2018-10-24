@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics cluster
 ---
 
-{{tag>faq statistics cluster}}
 ## Why should I use the cfg.correcttail option when using statistics_montecarlo?
 
 When running statistics using **[ft_freqstatistics](/reference/ft_freqstatistics)**, **[ft_timelockstatistics](/reference/ft_timelockstatistics)**, or **[ft_sourcestatistics](/reference/ft_sourcestatistics)** with cfg.method = 'montecarlo' you are presented with the option cfg.correcttail, which is relevant when you are doing a two-sided tes

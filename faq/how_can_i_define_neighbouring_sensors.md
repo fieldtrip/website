@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics cluster plot
 ---
 
-{{tag>faq statistics cluster plot}}
 
 ## How can I define neighbouring sensors?
 

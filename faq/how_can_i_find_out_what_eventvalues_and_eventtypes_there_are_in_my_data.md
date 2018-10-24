@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: preprocessing raw faq trigger event values type eventvalue eventtype
 ---
 
-{{tag>preprocessing raw faq trigger event values type eventvalue eventtype}}
 
 # How can I find out what eventvalues and eventtypes there are in my data?
 

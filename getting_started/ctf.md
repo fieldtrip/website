@@ -1,13 +1,13 @@
 ---
 layout: default
+tags: ctf meg dataformat
 ---
 
-{{tag>ctf meg dataformat}}
 
 # Getting started with CTF data
 
 ## Introduction
-\\
+
 The following data files can be read and used in FieldTrip: *.meg4, *.res4, *.mri, *.hdm, ClassFile.cls, MarkerFile.mrk. All required CTF reading functions are supplied with the FieldTrip toolbox.
 
 Initially, reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in  the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
@@ -44,7 +44,7 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
  3.  a folder that contains the MATLAB/FieldTrip data that you want to save
 ## Set path
 
-\\
+
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 	

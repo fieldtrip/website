@@ -45,7 +45,7 @@ Overview of relevant functions (where checkconfig should be implemented
 
 *  perhaps also other private functions that take a cfg as input
 
-\\
+
 
 Overview of existing relevant function
 
@@ -62,7 +62,7 @@ Overview of existing relevant function
 
 Add the check (objective 1) to the existing functions.
 
-\\
+
 
 **Required**: check whether required options are present, give error when missing
 
@@ -70,19 +70,19 @@ Add the check (objective 1) to the existing functions.
 
 *  ...(perhaps in general search for cfg.method using grep and check whether this is a more common required feature)
 
-\\
+
 
 **Renamed**: change old options/values into new ones + give warning
 
 *  this should replace most of the backward compatibility code regarding renamed options and values
 
-\\
+
 
 **Deprecated**: give warning when deprecated options are used
 
 *  search for that using grep
 
-\\
+
 
 **Forbidden**: give error when forbidden option is used
 
@@ -112,7 +112,7 @@ Control the output cf
 
 *  remove large fields from output cfg (checksize)
 
-\\
+
 
 **trackconfig:**
 
@@ -122,7 +122,7 @@ Control the output cf
 
 *  end of each FT function: cfg=checkconfig(cfg, 'trackconfig', 'off')
 
-\\
+
 
 **checksize:**
 

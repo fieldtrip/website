@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example bids sharing anonymize
 ---
 
-{{tag>example bids sharing anonymize}}
 
 # Preparing an EEG dataset for sharing
 

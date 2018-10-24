@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial statistics eeg meg raw freq MEG-language
 ---
 
-{{tag>tutorial statistics eeg meg raw freq MEG-language}}
 # Cluster-based permutation tests on time-frequency data
 
 ## Introduction
@@ -39,7 +39,7 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 *  Plotting the result using the **[ft_freqdescriptives](/reference/ft_freqdescriptives)** and the **[ft_clusterplot](/reference/ft_clusterplot)** functions
 
 ![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planar_ficvsfc.png)
-\\
+
 *Figure 1. Pipeline of statistical analysis of planar TFR's in a between trials design*
 
 Subsequently we will consider a **within-trials** experiment, in which we compare the pre-stimulus baseline to the post-stimulus activity time window. The steps we perform are as follows
@@ -53,7 +53,7 @@ Subsequently we will consider a **within-trials** experiment, in which we compar
 *  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
 ![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planarfic_actvsbl2.png)
-\\
+
 *Figure 2. Pipeline of statistical analysis of planar TFR's in a within-trials design*
 
 Finally we will consider a **within-subjects** experiment with the following step
@@ -69,7 +69,7 @@ Finally we will consider a **within-subjects** experiment with the following ste
 *  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
 ![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_ga_planar_ficvsfc.png)
-\\
+
 *Figure 3. Pipeline of statistical analysis of planar TFR's in a within-subjects design*
 
 ## Between-trial experiments
@@ -309,7 +309,7 @@ To compare freqFIC_baseline_planar_cmb and freqFIC_activation_planar_cmb by mean
     cfg.uvar     = 2;
 
 This configuration for a within-trials experiment is very similar to the configuration for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments) in which we compared the evoked responses to fully incongruent and fully congruent sentence endings. The main difference is the measure that we use to evaluate the effect at the sample level (cfg.statistic = 'ft_statfun_actvsblT' instead of cfg.statistic = 'ft_statfun_depsamplesT'). With cfg.statistic = 'ft_statfun_actvsblT', we choose the so-called *activation-versus-baseline T-statistic*. This statistic compares the power in every sample (i.e., a (channel,frequency,time)-triplet) in the activation period with the corresponding time-averaged power (i.e., the average over the temporal dimension) in the baseline period. The comparison of the activation and the time-averaged baseline power is performed by means of a dependent samples T-statistic. 
-\\
+
 You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQ's](/faq/how_does_ft_prepare_neighbours_work).
 
 We can now run **[ft_freqstatistics](/reference/ft_freqstatistics)**

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq freq mtmfft
 ---
 
-{{tag>faq freq mtmfft}}
 ## What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalyis?
 
 Several things have changed in the new implementation of frequency analysis by the new low-level module 'specest'. 

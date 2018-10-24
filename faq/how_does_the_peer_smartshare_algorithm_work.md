@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 ## How does the peer smartshare algorithm work?
 
 If multiple end-users are simultaneously distributing their computational jobs, a problem can arise in distributing the limited resources to these users. One limited resource is cpu time, another is memory. A fair-sharing algorithm has been implemented to improve the distribution of resources over multiple concurrent users.

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq realtime matlab memory
 ---
 
-{{tag>faq realtime matlab memory}}
 # How fast is the FieldTrip buffer for realtime data streaming?
 
 For real-time use of the buffer it is relevant to know how fast it can handle read and write requests. For a write request, the time depends on the number of channels and on the number of samples in the data block.

@@ -43,9 +43,9 @@ Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many 
 
 
 
-Mi Barrio\\
-Fransestraat 58, Nijmegen\\
-http://mibarrio.nl\\
+Mi Barrio
+Fransestraat 58, Nijmegen
+http://mibarrio.nl
 [Google maps](https://www.google.nl/maps/dir/Mi+Barrio,+Fransestraat,+Nijmegen/Kapittelweg+29,+6525+EN+Nijmegen/@51.8321229,5.8524935,15z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x41701c8778dae51f/0xdc30bc96f7ed1418!2m2!1d5.860964!2d51.8383775!1m5!1m1!1s0x47c708f0ee77debd/0x2097068b19fc0afd!2m2!1d5.8633555!2d51.826093!3e2)
 
 ### Wednesday April 5, 2017

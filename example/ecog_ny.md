@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example ieeg eeg ecog ecog-visual
 ---
 
-{{tag>example ieeg eeg ecog ecog-visual}}
 
 ## Analysis of high-gamma band signals in human ECoG
 

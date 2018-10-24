@@ -1,14 +1,14 @@
 ---
 layout: default
+tags: meg yokogawa dataformat coordinate
 ---
 
-{{tag>meg yokogawa dataformat coordinate}}
 
 # Getting started with Yokogawa data
 
 ## Introduction
 
-\\
+
 The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: *.sqe, *.ave, *.con, *.raw. Furthermore, gradiometer positions and orientations are read from the header (see below). 
 
 The low-level MATLAB reading functions are included in the FieldTrip release. Note that these files are not open source and **not covered by the GPL license**, but they are copyrighted by Yokogawa.
@@ -43,7 +43,7 @@ Usually you will be starting your FieldTrip analysis with raw continuous data wh
 
 ## Set path
 
-\\
+
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 
@@ -86,7 +86,7 @@ Instead of using the low-level reading functions for reading and handling the da
 The historical development and continuous push for improvements causes FieldTrip to supports three different codebases to read in Yokogawa file
  1.  *external\yokogawa* by the Yokogawa company, old version
  2.  *external\sqdproject* by Shantanu Ray, ISR, University of Maryland
- 3.  *external\\yokogawa_meg_reader* by the Yokogawa company, latest version
+ 3.  *externalyokogawa_meg_reader* by the Yokogawa company, latest version
 
 The initial implementation was based on the first external toolbox. It turned out that especially on windows computers it was too slow to work efficiently, that is why we looked into an alternative. The second Sqdproject toolbox is more memory and time efficient for reading the data and it can be used in conjunction to the first (for reading the header and meta information) by also adding sqdproject to the matlab path. 
 

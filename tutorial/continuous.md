@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial preprocessing continuous eeg raw brainvision memory EEG-language
 ---
 
-{{tag>tutorial preprocessing continuous eeg raw brainvision memory EEG-language}}
 
 # Preprocessing - Reading continuous EEG data
 

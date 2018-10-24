@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example bids sharing anonymize
 ---
 
-{{tag>example bids sharing anonymize}}
 
 # Preparing a combined MEG/fMRI dataset for sharing
 

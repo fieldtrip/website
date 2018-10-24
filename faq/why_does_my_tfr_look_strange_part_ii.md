@@ -1,13 +1,13 @@
 ---
 layout: default
+tags: faq mtmconvol freq preprocessing artifact filter
 ---
 
-{{tag>faq mtmconvol freq preprocessing artifact filter}}
 ### Why does my TFR look strange (part II, detrending)?
 
 If you use 'mtmconvol' as a method for frequency analysis it could happen that the Time-Frequency Representation of your data looks like thi
 
-{{:faq:strangetfr3.png?400|}}\\
+{{:faq:strangetfr3.png?400|}}
 This phenomenon is caused by the time domain data having a slow low-frequency drift. This low-frequency component leaks into the estimates of all time-frequency points in a variable (but patterned) way. The reason why this actually happens is related to the fact that none of the tapered basis functions (i.e. windowed sine and cosine waves of increasing frequency) are exactly orthogonal to this slow drift.
 The solution to this problem is to detrend or high-pass filter your data prior to calling ft_freqanalysi
 

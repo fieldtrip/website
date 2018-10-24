@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 
 ## Why does peercellfun resubmit jobs that take too long to get started?
 

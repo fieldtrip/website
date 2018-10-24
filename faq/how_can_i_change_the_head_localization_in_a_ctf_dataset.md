@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq ctf
 ---
 
-{{tag>faq ctf}}
 
 ## How can I change the head localization in a CTF dataset?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: neuralynx lfp dataformat
 ---
 
-{{tag>neuralynx lfp dataformat}}
 
 # Getting started with the Neuralynx data recorded at the Donders Institute 
 
@@ -141,7 +141,7 @@ After spikesplitting, there is a *.ttl file containing the same 32kHz representa
 After spikedownsampling, the continuous sampled LFP channels are not represented at 32kHz any more, but typically at 1000 Hz. That means that the samples at which the triggers occur in the *.ttl channel cannot directly be mapped onto the samples in the LFP channels. The method to link the original triggers to the downsampled data is by means of the timestamps. The **[ft_spikedownsample](/reference/ft_spikedownsample)** function has the option *cfg.timestampdefinition* which can be *'orig'* or *'sample'*. If you specify it as *cfg.timestampdefinition='sample'*, the timestamps in the downsampled LFP channels will correspond to the original samples, i.e. there will be 32566 timestamps per second in the downsampled data. The first downsampled sample will be at timestamp 17, because the first 32 original samples are all compressed into the first downsampled sample. If you specify *cfg.timestampdefinition='orig'*, the downsampled LFP data will be written to disk with the original timestamp definition with 1e6 timestamps per second.
 ### Data preprocessing
 
-Data sessions that had been subsequently split, downsampled and stored in Plexon *.nex* format are suitable to be preprocessed for further analysis. To get a general idea of how to proceed, we recommend to read the documentation of the FieldTrip  **[ft_preprocessing](/reference/ft_preprocessing)** function and the preprocessing tutorials in the [tutorial documentation](/tutorial) .\\
+Data sessions that had been subsequently split, downsampled and stored in Plexon *.nex* format are suitable to be preprocessed for further analysis. To get a general idea of how to proceed, we recommend to read the documentation of the FieldTrip  **[ft_preprocessing](/reference/ft_preprocessing)** function and the preprocessing tutorials in the [tutorial documentation](/tutorial) .
 Here, we will focused on how to read the Plexon dataset directories (//_ds//) which contain multiple *.nex files. A basic configuration structure is provided belo
 
 	
@@ -170,7 +170,7 @@ The specification of the dataformat and headerformat options as *combined_ds* en
 
 Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g. *010*) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that  changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**, with the montage as a part of the cfg option **montage**, channel labels can be modified. 
 
-All montage files for our particular experiment are available upon request.\\ An example of changing the channel labels is provided belo
+All montage files for our particular experiment are available upon request. An example of changing the channel labels is provided belo
 
 	
 	load kurt_montage_rename_plx2elec.mat
@@ -179,20 +179,20 @@ All montage files for our particular experiment are available upon request.\\ An
 	data = ft_preprocessing(cfg,data);
 
 
-It is important to note that to change labels in our recordings on Kurt, we use two montages structures. This is because recordings between sessions 17 and 60 headstages were inversely connected to the electrode connectors. In this case, the correct montage file to use is *kurt_montage_rename_plx2elec_17_60.mat*. After session number 60, headstages were correctly positioned. For later sessions therefore the montage file *kurt_montage_rename_plx2elec.mat* should be used. These files are available upon request.\\
+It is important to note that to change labels in our recordings on Kurt, we use two montages structures. This is because recordings between sessions 17 and 60 headstages were inversely connected to the electrode connectors. In this case, the correct montage file to use is *kurt_montage_rename_plx2elec_17_60.mat*. After session number 60, headstages were correctly positioned. For later sessions therefore the montage file *kurt_montage_rename_plx2elec.mat* should be used. These files are available upon request.
 
 ### Dealing with data re-referencing
 
-Similar to what we described in the last section, re-reference of the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request. \\
+Similar to what we described in the last section, re-reference of the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request. 
 
 ## Plotting Options
 
-To visualize the data, we take advantage of the several specialized plotting functions available in FieldTrip. To obtain a detailed description of the functions and their implementation, please refer to [Plotting data](/tutorial/plotting) in the [tutorial documentation](/tutorial) section.\\
+To visualize the data, we take advantage of the several specialized plotting functions available in FieldTrip. To obtain a detailed description of the functions and their implementation, please refer to [Plotting data](/tutorial/plotting) in the [tutorial documentation](/tutorial) section.
 
 ### Dealing with layouts
 
-Datasets obtained from electrocortigraphic (ECoG) grids might be particular for each recording. Number, position and relation with anatomical number of the electrodes used in a grid might differ completely to the same parameters in another ECoG grid.  The FieldTrip function **[ft_prepare_layout](/reference/ft_prepare_layout)** allows the possibility to create a particular layout structures of a electrode grid from an image of the grid.\\ 
-In the following, we will show the layout structures that are currently used in our datasets. These layouts are avalaible upon request.\\
+Datasets obtained from electrocortigraphic (ECoG) grids might be particular for each recording. Number, position and relation with anatomical number of the electrodes used in a grid might differ completely to the same parameters in another ECoG grid.  The FieldTrip function **[ft_prepare_layout](/reference/ft_prepare_layout)** allows the possibility to create a particular layout structures of a electrode grid from an image of the grid. 
+In the following, we will show the layout structures that are currently used in our datasets. These layouts are avalaible upon request.
 
 For example, a schematic layout of the 256 electrode grid might be obtained using the following the function **[ft_layoutplot](/reference/ft_layoutplot)*
 
@@ -203,10 +203,10 @@ For example, a schematic layout of the 256 electrode grid might be obtained usin
 	ft_layoutplot(cfg)
 
 
-To obtain something like this: \\
+To obtain something like this: 
 ![image](/media/getting_started:/chematic_common3.png)
 
-An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:\\
+An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:
 
 {{:getting_started:ku_039_256elec.png?571x367}}
 

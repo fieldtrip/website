@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime micromed
 ---
 
-{{tag>realtime micromed}}
 
 # Micromed
 

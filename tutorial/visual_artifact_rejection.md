@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: fixme tutorial artifact meg raw preprocessing MEG-language
 ---
 
-{{tag>fixme tutorial artifact meg raw preprocessing MEG-language}}
 
 # Visual artifact rejection
 

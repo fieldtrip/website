@@ -16,12 +16,12 @@ This page contains questions that users could ask when they analyze their data w
 
 ### Questions and Answers
 
-\\
+
 ### What kind of source-reconstruction methods are implemented in FieldTrip?
 
-\\
+
 The [Inverse source parameter estimates from EEG/MEG data](/development/inverse) page describes under the second point which are the supported methods.
-\\
+
  1.  dipole fitting 
     - simultaneous optimisation of position, orientation and strength
     -  symmetry constrains and/or fixed position, with free orientation and strength
@@ -49,34 +49,34 @@ The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** funct
 
 
 
-\\
+
 ### What is the difference between the methods?
 
-\\
-Here are the [References to implemented methods](/references_to_implemented_methods).\\
+
+Here are the [References to implemented methods](/references_to_implemented_methods).
 ### What kind of source-reconstruction method should I use?
 
       * *Does it depend on the data?* (EEG vs. MEG, oscillations vs event-related, realistic vs. non-realistic headmodel)
-\\ Event-related Field/Potential + time-course: MNE
-\\ Oscillatory activity + at certain point in time: beamforming (dics)
-\\ beamforming: lcmv - ?
-\\ (see Hesse, Jensen (2010) and Background of the MNE tutorial)
-\\
+ Event-related Field/Potential + time-course: MNE
+ Oscillatory activity + at certain point in time: beamforming (dics)
+ beamforming: lcmv - ?
+ (see Hesse, Jensen (2010) and Background of the MNE tutorial)
+
 
       * *Does it depend on a priori hypothesis of the source involved?* (cortical sheets vs. 3D grid)
       * *Does it depend on what kind of information I am interested in?* (e.g. changes in time or not)
 
 ### What kind of data I need for source-reconstruction?
 
-\\ functional data, anatomical data, channel/electrode positions\\  
+ functional data, anatomical data, channel/electrode positions  
 
 ### Why should I use source-reconstruction?
 
-\\ point to  introductionary literature\\
+ point to  introductionary literature
 
 ### How should I do source-reconstruction?
 
-\\ depends on the specific method; available documentation in FT at the momen
+ depends on the specific method; available documentation in FT at the momen
 
 #### dipolefitting
 
@@ -84,20 +84,20 @@ Here are the [References to implemented methods](/references_to_implemented_meth
     - symmetry constrains and/or fixed position, with free orientation and strength
 
 **tutorial sites:**
-\\
+
 none.
-\\
+
 
 ** example scripts:**
-\\
+
 [Compute forward simulated data and apply a dipole fit](/example/compute_forward_simulated_data_and_apply_a_dipole_fit)
-\\
+
 [Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
-\\
+
 *Why is this fixme?*
-\\
+
 [Source-reconstruction using two dipoles](/development/symmetric_dipoles) 
-\\
+
 *This is under construction, but it is not really clear how this exactly relates to dipole fitting.*
 
 #### dipole scanning
@@ -116,7 +116,7 @@ none.
 
 FA
 [What kind of volume conduction models are implemented?](/faq/what_kind_of_volume_conduction_models_are_implemented)
-\\
+
 Referenc
 
 **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
@@ -126,11 +126,11 @@ Referenc
 
 *  The references to implemented methods can be probably extended.
  
-\\
-Method
-\\
 
-**EEG**\\
+Method
+
+
+**EEG**
 
 *  name in help of ft_prepare_headmodel: asa
 
@@ -141,7 +141,7 @@ Method
 *  reference in help of the lower-level function: **none** but it is probably not applicable
 
 *  **reading function** (reads in a certain type of volume conduction model) 
-\\
+
 
 *  name in help of ft_prepare_headmodel: bemcp
 
@@ -150,7 +150,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **none** but the person's name who provided the code is mentioned
-    \\
+    
 
 *  name in help of ft_prepare_headmodel: dipoli
 
@@ -159,7 +159,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: yes
-    \\
+    
 
 *  name in help of ft_prepare_headmodel: openmeeg
 
@@ -168,7 +168,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **yes**
-    \\
+    
 
 *  name in help of ft_prepare_headmodel: concentricspheres
 
@@ -177,7 +177,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **none**
-\\
+
 
 *  name in help of ft_prepare_headmodel: halfspace
 
@@ -186,7 +186,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **none** (but is it relevant?)
-\\
+
 
 *  name in help of ft_prepare_headmodel: infinite
 
@@ -195,14 +195,14 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **none** (but is it relevant?)
-\\
+
 
 *  name in help of ft_prepare_headmodel: multispheres
 
 *  Does this methods apply also to EEG? It says so in [Refurbishing the FORWARD module](/development/fwdarch) but it is **not listed as method for EEG** in the reference of ft_prepare_headmodel.
 
 *  see it under MEG methods. 
-\\
+
 
 *  name in help of ft_prepare_headmodel: singlesphere
 
@@ -211,7 +211,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: yes
-\\
+
 
 *  name in help of ft_prepare_headmodel: **none**
 
@@ -224,7 +224,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **none** 
-\\
+
 
 *  name in help of ft_prepare_headmodel: simbio
 
@@ -235,7 +235,7 @@ Method
 *  reference in help of the lower-level function: **none** but it is probably not applicable
 
 *  **reading function** (reads in a certain type of volume conduction model) 
-\\
+
 
 *  name in help of ft_prepare_headmodel: fns
 
@@ -244,14 +244,14 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **yes** (or at least a link provided)
-\\
 
-**MEG**\\
+
+**MEG**
 
 *  name in help of ft_prepare_headmodel: singlesphere
 
 *  see it under EEG methods.
-\\
+
 
 *  name in help of ft_prepare_headmodel: **multispheres** FIXME rather not use multisphere because it is ambiguous 
 
@@ -264,7 +264,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: yes
-\\
+
 
 *  name in help of ft_prepare_headmodel: singleshell
 
@@ -273,12 +273,12 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: yes
-\\
+
 
 *  name in help of ft_prepare_headmodel: infinite
 
 *  see it under EEG methods.
-\\
+
 
 *  name in help of ft_prepare_headmodel: openmeeg
 

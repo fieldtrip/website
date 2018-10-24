@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example eeg source dipole
 ---
 
-{{tag>example eeg source dipole}}
 
 # Compute forward simulated data and apply a dipole fit
 

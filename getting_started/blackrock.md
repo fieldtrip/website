@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: blackrock lfp spike dataformat
 ---
 
-{{tag>blackrock lfp spike dataformat}}
 
 # Getting started with Blackrock data
 

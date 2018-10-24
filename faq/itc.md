@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq freq
 ---
 
-{{tag>faq freq}}
 
 # How can I compute inter-trial coherence?
 

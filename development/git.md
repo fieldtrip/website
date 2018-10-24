@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: development git
 ---
 
-{{tag>development git}}
 
 # Accessing the FieldTrip source code through Git
 

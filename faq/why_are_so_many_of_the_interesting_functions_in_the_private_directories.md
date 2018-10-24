@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq function
 ---
 
-{{tag>faq function}}
 ## Why are so many of the interesting functions in the private directories?
 
 In the FieldTrip code, we make a distinction between functions that the end-user should call, and helper functions that are called by other functions. Most functions that the end-user calls are prefixed with ft_xxx and are present in the main directory. The functions that the end-user should not call are mainly in the private directory. The reason for the private directory is that we can maintain backward compatibility for the main functions, but not for **all** functions. We want to be able to make changes in these helper functions (i.e. the private fnuctions) without worrying about whether any of the end-users is affected by the change. 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime faq
 ---
 
-{{tag>realtime faq}}
 
 # How should I get started with the FieldTrip realtime buffer?
 
@@ -33,16 +33,16 @@ The sine2ft and viewer initially looks like thi
 {{:faq:sine2ft.png?300|}}
 {{:faq:bufferviewer.png?400|}}
 
-\\
+
 
 If you click "start" in the sine2ft window, and subsequently "connect" in the viewer window, you will see that data starts streaming from sine2ft->buffer->viewer.
 
-\\
+
 
 {{:faq:sine2ft_running.png?300|}}
 {{:faq:bufferviewer_running.png?400|}}
 
-\\
+
 
 ## Connect from MATLAB
 

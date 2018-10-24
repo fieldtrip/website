@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial coherence meg emg plot source connectivity MEG-visuomotor275
 ---
 
-{{tag>tutorial coherence meg emg plot source connectivity MEG-visuomotor275}}
 
 # Analysis of corticomuscular coherence
 
@@ -353,7 +353,7 @@ Compute the cross-spectral density matrix for 18 H
     cfg.channelcmb = {'MEG' 'MEG';'MEG' 'EMGlft'};
     freq           = ft_freqanalysis(cfg, data);
 
-Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration. \\
+Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration. 
 This step requires the subject's headmodel, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
     cfg                 = [];
@@ -366,7 +366,7 @@ This step requires the subject's headmodel, which is available from [ftp:/ftp.fi
     cfg.grid.unit       = 'cm';
     source              = ft_sourceanalysis(cfg, freq);
     
-The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI. \\
+The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI. 
 For this, we need the subject's MRI, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). After reading the anatomical MRI, we reslice it along the axes of the head coordinate system for improved visualization.
 
     mri = ft_read_mri('SubjectCMC.mri');

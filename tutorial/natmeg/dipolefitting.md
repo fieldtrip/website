@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial natmeg meg+eeg dipole MEG-audodd
 ---
 
-{{tag>tutorial natmeg meg+eeg dipole MEG-audodd}}
 
 # Dipole fitting of combined MEG/EEG data
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example source mri plot
 ---
 
-{{tag>example source mri plot}}
 
 # Check the quality of the anatomical coregistration
 

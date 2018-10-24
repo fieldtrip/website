@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq matlab
 ---
 
-{{tag>faq matlab}}
 
 ## MATLAB version 7.3 (2006b) crashes when I try to do ...
 

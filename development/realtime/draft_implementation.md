@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime development
 ---
 
-{{tag>realtime development}}
 
 # Suggested changes to the reference implementation
 

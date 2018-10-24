@@ -23,7 +23,7 @@ The functions should be tested regularly on correctness, therefore test scripts 
 *  proper parsing of configuration options, including backward compatibility
 
 *  support for the normal data structures, also backward compatible
-\\
+
 
 **Method A:** If possible, the scripts should check against an internal reference solution, i.e., the outcome of the algorithm on  particular ideal data is known, therefore the correctness of the algorithm can be tested using simulated data.
 

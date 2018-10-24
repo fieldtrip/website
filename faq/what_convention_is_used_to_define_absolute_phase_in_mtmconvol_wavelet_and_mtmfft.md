@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq freq mtmconvol wavelet mtmfft phase
 ---
 
-{{tag>faq freq mtmconvol wavelet mtmfft phase}}
 ## What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
 
 

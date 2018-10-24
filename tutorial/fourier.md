@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example freq coherence eeg meg fixme
 ---
 
-{{tag>example freq coherence eeg meg fixme}}
 
 # Fourier analysis of neuronal oscillations and synchronization
 

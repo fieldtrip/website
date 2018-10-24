@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq headmodel source
 ---
 
-{{tag>faq headmodel source}}
 
 ## What kind of volume conduction models of the head (head models) are implemented?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial natmeg meg+eeg raw preprocessing MEG-audodd
 ---
 
-{{tag>tutorial natmeg meg+eeg raw preprocessing MEG-audodd}}
 
 # Preprocessing and event-related activity in combined MEG/EEG data
 

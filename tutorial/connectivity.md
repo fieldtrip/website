@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial freq connectivity coherence granger dtf pdc
 ---
 
-{{tag>tutorial freq connectivity coherence granger dtf pdc}}
 
 # Analysis of sensor- and source-level connectivity
 

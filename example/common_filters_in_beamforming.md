@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example meg freq source fixme
 ---
 
-{{tag>example meg freq source fixme}}
 
 # Common filters in beamforming
 

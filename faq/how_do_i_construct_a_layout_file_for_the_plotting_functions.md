@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq layout plot
 ---
 
-{{tag>faq layout plot}}
 
 ##  How do I construct a layout file for the plotting functions?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq matlab path warning
 ---
 
-{{tag>faq matlab path warning}}
 ## Should I add FieldTrip with all subdirectories to my MATLAB path?
 
 In general you should **not** add FieldTrip with all subdirectories to your path. There are a number of external toolboxes (in fieldtrip/external) which are irrelevant for most users, and even can cause some problems if they overlap with other (custom) toolboxes on your path. Furthermore, there are some functions for backward compatibility in fieldtrip/compat, which should only be added to your path in case you use an older MATLAB release.

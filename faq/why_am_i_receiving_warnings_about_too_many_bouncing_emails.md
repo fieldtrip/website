@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq email
 ---
 
-{{tag>faq email}}
 
 # Why am I receiving warnings about too many bouncing emails?
 

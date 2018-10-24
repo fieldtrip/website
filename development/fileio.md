@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: development
 ---
 
-{{tag>development}}
 
 # Reading and writing of EEG/MEG time series data
 
@@ -167,16 +167,16 @@ The following piece of code will read a one-second segment of data from a contin
 ##  The representation of discontinuous data on disk
 
     
-The event.sample relates to the sample index into the file, disregarding any internal structure in the file. Different data formats that are supported allow for\\
+The event.sample relates to the sample index into the file, disregarding any internal structure in the file. Different data formats that are supported allow for
 
-1) fully continuous data\\
-2) continuous recordings that are stored in blocks, with no gaps in between (e.g. EDF)\\
-3) epoched recordings, i.e. a fixed block representation with known or unknown gaps in between\\
-4) continuous recordings with an occasional break (e.g. a pause)\\
+1) fully continuous data
+2) continuous recordings that are stored in blocks, with no gaps in between (e.g. EDF)
+3) epoched recordings, i.e. a fixed block representation with known or unknown gaps in between
+4) continuous recordings with an occasional break (e.g. a pause)
 
-1 and 2 are continuous or pseudo-continuous respectively\\
-2 and 3 can most of the times not be distinguished based on the file content, but can sometimes be dinstinguished by external information (e.g. EDF is meant to represent continuous data, but for CTF it can be either continuous or have gaps in between).\\
-4 has segments ("trials" in fieldtrip-speak) of unequal length.\\
+1 and 2 are continuous or pseudo-continuous respectively
+2 and 3 can most of the times not be distinguished based on the file content, but can sometimes be dinstinguished by external information (e.g. EDF is meant to represent continuous data, but for CTF it can be either continuous or have gaps in between).
+4 has segments ("trials" in fieldtrip-speak) of unequal length.
 
 To support all of these with ft_read_header, ft_read_data and ft_read_event, some conventions have been adopted. Say we do
     hdr = ft_read_header(filename)
@@ -236,7 +236,7 @@ Another recommendation for file type detection is to use the potential context, 
 
 # Related documentation
 
-\\
+
 Related projects on electrophysiology (EEG, MEG) data I/O are
 
 *  Biosig, http://biosig.sourceforge.net/
@@ -247,7 +247,7 @@ Related projects on electrophysiology (EEG, MEG) data I/O are
 
 *  FIFF access, http://ltl.tkk.fi/~kuutela/meg-pd/
 
-\\
+
 Lists of EEG and MEG file formats can be found her
 
 *  http://www.eemagine.com/fileformats.htm

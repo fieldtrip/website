@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: dataformat spike lfp
 ---
 
-{{tag>dataformat spike lfp}}
 
 # Spike and LFP dataformats
 

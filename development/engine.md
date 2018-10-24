@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: distributed
 ---
 
-{{tag>distributed}}
 
 # Distributed computing using the MATLAB engine system
 

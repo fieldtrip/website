@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial statistics meg eeg timelock freq
 ---
 
-{{tag>tutorial statistics meg eeg timelock freq}}
 
 #  Parametric and non-parametric statistics on event-related fields 
 
@@ -109,7 +109,7 @@ Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and 
 {{tutorial:eventrelatedstatistics:multiplot_ga_fc_fic.png?400|multiplot_GA_FC_FIC.png}}
 
 {{tutorial:eventrelatedstatistics:singleplotMLT12_ga_fc_fic.png?400|singleplotMLT12_GA_FC_FIC.pngg}}
-\\ 
+ 
 
 From the grand average plot we can zoom in on our comparison of interest and only plot the ERF of channel MLT12 for all subjects, using the individual subject averages data.
 
@@ -137,7 +137,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 
 
 {{tutorial:eventrelatedstatistics:erfstats-allsubj-indiv.png?400|erfstats-allsubj-indiv.png}}
-\\
+
 From the individual plots and grand average plots above, it seems that between 300ms and 700ms there is a difference between the two conditions in channel MLT12 (channel 52).
 
 
@@ -345,12 +345,12 @@ With the method (cfg.method) of statistical test set  as a permutation-based tes
 
 {{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_nomcc.png?200|depttest_nonpara_FieldTrip_nomcc.png}}
 
-\\ 
+ 
 
 Compare this plot with the earlier one using parametric statistics with the uncorrected p-values.
 
 Also in the non-parametric approach for testing of statistical significance different corrections for multiple comparisons such as Bonferroni, fdr, and others are implemented. See the options for cfg.correctm in statistics_montecarlo.
-\\
+
 
 ###  Permutation test based on cluster statistics
 
@@ -406,7 +406,7 @@ With the cluster-based permutation method for multiple comparisons the following
 
 {{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster2.png?200|depttest_nonpara_FieldTrip_cluster2.png}}
 
-\\ 
+ 
 
 So far we predefined a time window over which the effect was averaged, and tested the difference of that between conditions. You can also chose to not average over the predefine time window, and instead cluster simultaneously over neighboring channels and neighboring time points within your time window of interest . From the example below, we now find a channel-time cluster is found from 0.33 s until 0.52 s in which p < 0.05.
 

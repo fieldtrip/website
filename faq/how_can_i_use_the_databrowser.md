@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq databrowser plot artifact
 ---
 
-{{tag>faq databrowser plot artifact}}
 
 ## How can I use the databrowser?
 

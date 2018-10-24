@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial aarhus meg+eeg beamforming ERF lcmv MEG-audodd
 ---
 
-{{tag>tutorial aarhus meg+eeg beamforming ERF lcmv MEG-audodd}}
 
 
 # Beamforming evoked fields and potentials in combined MEG/EEG data

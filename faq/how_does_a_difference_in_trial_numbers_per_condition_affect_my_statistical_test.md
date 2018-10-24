@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics
 ---
 
-{{tag>faq statistics}}
 
 `<note warning>`
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 

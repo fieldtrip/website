@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime modeeg openeeg
 ---
 
-{{tag>realtime modeeg openeeg}}
 
 # Modular EEG, OpenEEG
 

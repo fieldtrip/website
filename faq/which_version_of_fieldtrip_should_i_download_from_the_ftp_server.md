@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq download
 ---
 
-{{tag>faq download}}
 ## Which version of FieldTrip should I download from the ftp server?
 
 Although initially we considered to have version 1.0, 1.1, 2.0, etc., eventually we decided against it. We have a smooth development path and sofar we have been able to maintain backward compatibility quite well. The latest version of the toolbox will generally work with your older scripts. There is a limited number of people that can directly change the code, and they take their responsibility to the other users very seriously. When we add or change functionality in the code, we always test it prior to committing it to the code repository.

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics
 ---
 
-{{tag>faq statistics}}
 
 ## How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
 

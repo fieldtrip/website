@@ -16,7 +16,7 @@ Ricoh took over the MEG branch from Yokogawa in 2016 and has started manufacturi
 
 ## Introduction
 
-\\
+
 The RICOH MEG is an MEG system that is developed by Ricoh Company, Ltd. Ricoh took over the MEG branch from Yokogawa in 2016 and has started manufacturing and installing the MEG system, continuing to support Yokogawa systems. They released their first MEG system at the end of 2017. A current RICOH MEG system is a successor to Yokogawa MEG systems and has most of the same characteristics as those of Yokogawa systems, especially those of the 160-channel Yokogawa MEG system.
 
 The following data files can be read and used in FieldTrip: the files with the extensions of '.con', '.ave', and '.mrk'. All required reading low-level functions are located in the ''external/ricoh_meg_reader'' directory as a set of pre-compiled p-files and will be called by appropriate FieldTrip functions. The low-level functions are officially supplied by Ricoh Company, Ltd. for using their data in open-source software environments.
@@ -36,7 +36,7 @@ The functions in FieldTrip that allows you to execute the pre-processing and co-
 
 ## Set path
 
-\\
+
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)). You also need to set the path to your data files. 
 
 	
@@ -58,7 +58,7 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 ## Read MEG data
 
-\\
+
 To check if you can read in the data, you try the FieldTrip functions, **[ft_read_header](/reference/ft_read_header)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_read_event](/reference/ft_read_event)**, in the command window. 
 
 ### Read header
@@ -178,7 +178,7 @@ The first 14 components of the event structure in the above example ar
 
 ## Trial Selection
 
-\\
+
 As the same way as that in the tutorial, [Trigger-based trial selection](/tutorial/preprocessing), you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**. For example, 
 
 	
@@ -264,7 +264,7 @@ An example of your own trial function, ''yourowntrialfun'' is
 
 ## MRI-MEG Co-registration
 
-\\
+
 The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/dataformat), anatomical MRI data are assumed to be saved as NIfTI (*.nii) or DICOM files in this page. 
 
 The co-registration is usually done in two steps; the first step is an approximate alignment that is based on fiducial points, and the second step is a refinement with additional head-shape digitized points. You practically have two possible cases regarding to the first ste

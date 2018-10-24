@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 ## How can I read and write files if I use other people's peers?
 
 If you want to use peerslaves that have been started by another person, you have to realize that the corresponding MATLAB sessions in which your computations will be evaluated under the account of **that other person**. 

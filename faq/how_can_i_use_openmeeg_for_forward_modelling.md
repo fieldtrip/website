@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq headmodel source
 ---
 
-{{tag>faq headmodel source}}
 
 `<note warning>`
 This documentation is outdated, the latest version is available from http://openmeeg.github.io.

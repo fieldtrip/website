@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial eeg meg multivariate timelock freq attention MEG-attention
 ---
 
-{{tag>tutorial eeg meg multivariate timelock freq attention MEG-attention}}
 # Multivariate analysis of electrophysiological data
 
 ## Introduction

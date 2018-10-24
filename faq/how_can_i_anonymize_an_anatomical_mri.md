@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq mri anonymize sharing
 ---
 
-{{tag>faq mri anonymize sharing}}
 
 # How can I anonymize or deidentify an anatomical MRI?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial statistics eeg meg timelock plot MEG-language
 ---
 
-{{tag>tutorial statistics eeg meg timelock plot MEG-language}}
 
 # Cluster-based permutation tests on event related fields
 
@@ -32,14 +32,14 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 *  Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
 
 ![image](/media/tutorial/cluster_permutation_erf/bwtrial_stat_procedure_axial.png@250)
-\\
+
 *Figure 1. Analysis protocol of a between-trials experiment with axial data*
-\\
+
 
 ![image](/media/tutorial/cluster_permutation_erf/bwtrial_stat_procedure_planar.png@220)
-\\
+
 *Figure 2. Analysis protocol of a between-trials experiment with planar data*
-\\
+
 
 Subsequently, we consider a **within-subjects** experiment, in which we compare differences between (planar gradient) ERFs over all subjects. The steps we perform are as follow
 
@@ -54,9 +54,9 @@ Subsequently, we consider a **within-subjects** experiment, in which we compare 
 *  Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
 
 ![image](/media/development/project/tutorial_stat/ft_stat_tutorial2.png@550)
-\\
+
 *Figure 3. Analysis protocol of a within-subjects experiment with planar data*
-\\
+
 
 ## Between-trials experiments
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq realtime
 ---
 
-{{tag>faq realtime}}
 
 ## What kind of cable do I need for a serial port connection between two computers?
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: fixme
 ---
 
-{{tag>fixme}}
 
 `<note warning>`
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete. 

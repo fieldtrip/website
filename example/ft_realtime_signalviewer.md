@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example realtime
 ---
 
-{{tag>example realtime}}
 # Example real-time signal viewer
 
 The simplest example for continuous data without any events or triggers is a simple data viewer that lets the data scroll by in a figure, while the data streams from the acquisition system. This example is implemented in the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** function. You can of course take this function as starting point for your BCI system and modify it to your own needs.

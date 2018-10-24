@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: meg-uk-2015 mmfaces
 ---
 
-{{tag>meg-uk-2015 mmfaces}}
 
 # MEG-UK 2015 meeting
 

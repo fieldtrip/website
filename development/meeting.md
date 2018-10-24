@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: development meeting
 ---
 
-{{tag>development meeting}}
 
 # Meetings
 

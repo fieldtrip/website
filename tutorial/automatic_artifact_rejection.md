@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: fixme tutorial artifact meg raw preprocessing MEG-artifact
 ---
 
-{{tag>fixme tutorial artifact meg raw preprocessing MEG-artifact}}
 
 `<note>` The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)**, that were used for automatic artifact rejection, will soon become obsolete. They are being replaced by the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function. This function is already called every time one of the three functions above is run, but users will soon need to set the various cfg parameters for the different types of artifacts themselves and then run only the zvalue function. Examples of these parameters are given in the last section of this page.
 `</note>`
@@ -64,24 +64,24 @@ The automatic artifact detection approach used here is based on three characteri
  4.  Per timepoint these z-values are averaged. Since an artifact might occur on any and often on more than one electrode (think of eyeblinks and muscle artifacts), averaging z-values over channels/electrodes allows evidence for an artifact to accumulate. 
 *This results in one timecourse representing standardized deviations from the mean of all channels.*  
 
-The formulas for calculating the z-scores are:\\
+The formulas for calculating the z-scores are:
 {{:tutorial:eq1.png?120}}
 
-where\\
+where
 
 {{:tutorial:eq2.png?nolink&120}}
 {{:tutorial:eq3.png?nolink&150}}
-\\
-\\
-with: N = the total number of time samples.\\ 
+
+
+with: N = the total number of time samples.
 
 In the code this formula is formed such as to optimize the calculation of the channel means and standard deviations.
 
 The summation is performed lik
 
 {{:tutorial:eq4.png?120}}
-\\
-\\
+
+
 
 with: C = the number of channels.
 

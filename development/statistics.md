@@ -57,16 +57,16 @@ Without optimization it is approximately a factor of 2x slower than clusterranda
 
 ### Supported and allowed permutations of the design matrix
 
-{{:development:statistics:perm1.png}}\\
+{{:development:statistics:perm1.png}}
 Independent samples design, ivar=A
 
-{{:development:statistics:perm2.png}}\\
+{{:development:statistics:perm2.png}}
 Dependent samples design, uvar=A, ivar=B
 
-{{:development:statistics:perm3.png}}\\
+{{:development:statistics:perm3.png}}
 Independent samples design with a control variable, ivar=A, cvar=B
 
-{{:development:statistics:perm4.png}}\\
+{{:development:statistics:perm4.png}}
 Mixed design, uvar=A, ivar=B, cvar=C
 
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial spike animal Spike-attention
 ---
 
-{{tag>tutorial spike animal Spike-attention}}
 
 # Preprocessing and analysis of spike and local field potential data
 

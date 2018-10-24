@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq statistics cluster
 ---
 
-{{tag>faq statistics cluster}}
 ## What is the idea behind statistical inference at the second-level?
 
 A common approach for statistical inference is to split the statistics into two levels. At level 1 you compute a within-subject statistic which **describes** the effect size (i.e. no inference). At level 2 you do the **inference**, testing whether the effect is consistent over subjects. 

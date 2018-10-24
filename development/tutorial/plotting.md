@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial plot eeg meg timelock freq statistics source layout MEG-language
 ---
 
-{{tag>tutorial plot eeg meg timelock freq statistics source layout MEG-language}}
 
 `<note warning>`
 This page is under development, use with caution 
@@ -166,19 +166,19 @@ Options specific for to using topoplot.m
     cfg.style = 'straight';               
     cfg.marker = 'labels';                
     figure; ft_topoplotTFR(cfg,TFRhann);
-\\ 
+ 
 
 ![image](/media/tutorial/plotting/tuto_funcytopo3.png@250)
-\\ 
+ 
 
     cfg.gridscale = 300;                
     cfg.contournum = 10;                
     cfg.colormap = gray(10);            
     figure; ft_topoplotTFR(cfg,TFRhann);
-\\ 
+ 
 
 ![image](/media/tutorial/plotting/tuto_funcytopo2.png@250)
-\\ 
+ 
 
     cfg.gridscale = 300;
     cfg.contournum = 4;
@@ -187,10 +187,10 @@ Options specific for to using topoplot.m
     cfg.markersize = 12;
     cfg.markercolor = [0 0.69 0.94];
     figure; ft_topoplotTFR(cfg,TFRhann);
-\\ 
+ 
 
 ![image](/media/tutorial/plotting/tuto_funcytopo1.png@250)
-\\ 
+ 
 
 ### Interactive mode
 
@@ -233,12 +233,12 @@ The function automatically finds the clusters in the data which are smaller than
 	ft_clusterplot(cfg,statERF)
 
 
-\\
+
 {{:tutorial:staterf1.png?400|}}
 {{:tutorial:staterf2.png?400|}}
 {{:tutorial:staterf3.png?400|}}
 {{:tutorial:staterf4.png?400|}}
-\\
+
 
 ##### Freqdata
 
@@ -253,9 +253,9 @@ The function automatically finds the clusters in the data which are smaller than
 	ft_clusterplot(cfg,statTFR)
 
 
-\\
+
 {{:tutorial:plotting:plottingtutorial_tfrstat.jpg?400|clusterplotTFR}}
-\\
+
 
 ### Plotting channel-level connectivity
 

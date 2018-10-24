@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: guidelines
 ---
 
-{{tag>guidelines}}
 
 # Guidelines
 

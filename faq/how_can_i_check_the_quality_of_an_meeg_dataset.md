@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq artifact
 ---
 
-{{tag>faq artifact}}
 # How can I check the quality of an EEG or MEG recording ?
 
 

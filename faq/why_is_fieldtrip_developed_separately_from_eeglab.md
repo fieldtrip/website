@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq eeglab
 ---
 
-{{tag>faq eeglab}}
 
 ## Why is FieldTrip developed separately from EEGLAB?
 

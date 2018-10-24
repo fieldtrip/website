@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime jinga-hi jaga16
 ---
 
-{{tag>realtime jinga-hi jaga16}}
 
 # Jinga-Hi
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime emotiv
 ---
 
-{{tag>realtime emotiv}}
 
 # Emotiv neuroheadset
 

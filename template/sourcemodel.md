@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: template sourcemodel grid
 ---
 
-{{tag>template sourcemodel grid}}
 
 ## Template models for source reconstruction
 

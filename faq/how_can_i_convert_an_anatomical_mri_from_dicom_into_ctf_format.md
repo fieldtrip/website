@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq mri meg ctf dataformat coordinate
 ---
 
-{{tag>faq mri meg ctf dataformat coordinate}}
 
 # How can I convert an anatomical MRI from DICOM into CTF format?
 

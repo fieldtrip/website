@@ -1,8 +1,9 @@
 ---
 layout: default
+tags: guidelines development
+    tags: example eeg source statistics}}
 ---
 
-{{tag>guidelines development}}
 
 # Documentation guidelines
 
@@ -35,7 +36,6 @@ You now see the title of your contribution as a red link. If you click on this l
 ## How to add tags?
 
 By adding [tags](http://www.dokuwiki.org/plugin:tag) your contribution will be easier to find. Add as a first line (for example
-    {{tag>example eeg source statistics}}
 if you add an example script that describes performing source statistics in eeg. The tags 'example','eeg', 'source', and 'statistics' will be given to your page. [Here](/tagcloud) you can find  a list of possible tags. Please always add 'faq', 'example' or 'tutorial', depending on your type of contribution.
 
 ## How to structure a tutorial?

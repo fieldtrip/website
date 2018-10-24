@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq
 ---
 
-{{tag>faq}}
 
 ## What are the different Neuromag and Yokogawa layouts good for?
 

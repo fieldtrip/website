@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial freq connectivity coherence granger dtf pdc MEG-visuomotor151
 ---
 
-{{tag>tutorial freq connectivity coherence granger dtf pdc MEG-visuomotor151}}
 
 # Extended analysis of sensor- and source-level connectivity
 

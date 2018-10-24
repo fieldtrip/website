@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example freq
 ---
 
-{{tag>example freq}}
 
 
 # Analyze Steady-State Visual Evoked Potentials (SSVEPs)

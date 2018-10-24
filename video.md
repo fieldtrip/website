@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: video
 ---
 
-{{tag>video}}
 
 # Video lectures and tutorials
 

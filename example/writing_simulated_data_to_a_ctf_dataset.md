@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example dataformat ctf meg
 ---
 
-{{tag>example dataformat ctf meg}}
 
 # Can I create an artificial CTF dataset using MATLAB?
 

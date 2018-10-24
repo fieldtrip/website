@@ -1,15 +1,15 @@
 ---
 layout: default
+tags: faq mri anonymize sharing
 ---
 
-{{tag>faq mri anonymize sharing}}
 
 # How can I anonymize DICOM files?
 
 DICOM files contain a lot of header details that might provide information about your subject, such as the name and date of birth, but also the date and time at which the scan was performed.
 
-`<note info>`Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images. \\
-\\
+`<note info>`Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images. 
+
 The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) or about imposing legal restrictions to prevent matching data against external databases. `</note>`
 
 Since it is not easy to determine if there is potentially identifying data in the DICOM headers, many researchers choose to share the data in NIfTI format rather than DICOM format. The NIfTI format is used by most neuroimaging software anyway, and the NIfTI header is very simple and does not allow to store any identifying information. However, there are also situations where it is desired to share the original DICOM files.  

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq audio video
 ---
 
-{{tag>faq audio video}}
 
 ## How can I play back EEG/MEG and synchronous audio or video?
 

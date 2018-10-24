@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq dataformat preprocessing
 ---
 
-{{tag>faq dataformat preprocessing}}
 ## How can I convert one dataformat into an other?
 
 You can read in the data from the original data format using **[ft_preprocessing](/reference/ft_preprocessing.html)** and subsequently use the **[ft_write_data](/reference/ft_write_data)** function to write the data to another  format that you can specify.

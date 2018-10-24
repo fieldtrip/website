@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example source erf
 ---
 
-{{tag>example source erf}}
 
 # Localizing the sources underlying the difference in event related fields
 

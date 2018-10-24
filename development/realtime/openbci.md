@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime openbci
 ---
 
-{{tag>realtime openbci}}
 
 # OpenBCI
 

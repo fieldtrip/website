@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq peer
 ---
 
-{{tag>faq peer}}
 ## Why are the peers using multicast to announce themselves?
 
 The feature of a peer-to-peer network is that peers can find each other and request resources (e.g. pieces of a file). The FieldTrip peer-to-peer distributed computing toolbox allows to share computational resources. The network is not managed, i.e. there is not a single location where all information about available peers is collected. Instead, all peers communicate their presence and status to all other peers. This is achieved by the peers joining a multicast network. 

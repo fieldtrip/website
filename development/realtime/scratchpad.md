@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime development
 ---
 
-{{tag>realtime development}}
 
 # Scratchpad for the realtime buffer interface
 

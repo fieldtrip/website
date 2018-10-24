@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq trigger trialfun preprocessing
 ---
 
-{{tag>faq trigger trialfun preprocessing}}
 
 ## How can I check or decipher the sequence of triggers in my data?
 

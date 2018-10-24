@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: development cvs svn git
 ---
 
-{{tag>development cvs svn git}}
 
 #  Accessing the FieldTrip source code through CVS 
 

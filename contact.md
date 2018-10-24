@@ -12,10 +12,10 @@ For questions that are **not suitable** for the public email list, e.g. potentia
 
 If you like FieldTrip, you can show us your appreciation by sending us a postcard t
 
-Donders Centre for Cognitive Neuroimaging, c/o Robert Oostenveld\\
-University Nijmegen\\
-P.O. Box 9101\\
-NL-6500 AH Nijmegen\\
+Donders Centre for Cognitive Neuroimaging, c/o Robert Oostenveld
+University Nijmegen
+P.O. Box 9101
+NL-6500 AH Nijmegen
 The Netherlands
 
 ## Frequently Asked Questions

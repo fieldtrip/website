@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: template layout
 ---
 
-{{tag>template layout}}
 
 # Template 2D layouts for plotting
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq
 ---
 
-{{tag>faq}}
 
 # What are the units of the data and of the derived results?
 

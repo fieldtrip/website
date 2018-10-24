@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq download
 ---
 
-{{tag>faq download}}
 ## I am having problems downloading from the FTP server
 
 The FieldTrip source code and example datasets are released to the general public on our ftp server. This server requires an anonymous login. This means that you use the username "anonymous" and your password as email address. In case you don't want to share your email address, you can use any string that is formatted as a valid email address (e.g. anonymous@example.com).

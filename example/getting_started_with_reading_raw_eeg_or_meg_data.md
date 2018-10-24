@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example eeg meg raw preprocessing trialdef
 ---
 
-{{tag>example eeg meg raw preprocessing trialdef}}
 
 # Getting started with reading raw EEG or MEG data
 

@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq ft_sourceplot anatomical mri
 ---
 
-{{tag>faq ft_sourceplot anatomical mri}}
 
 ## What is the plotting convention for anatomical MRIs?
 
@@ -16,7 +16,7 @@ One important concept to take into account in the interpretation is the handedne
 
 **If the transformation matrix is describing the transformation from voxel space to a world coordinate system where the XYZ-axes are described with right-handed coordinate axes, AND the transformation matrix is also right-handed, then 'right is right, and left is left'**.
 
-**If the transformation matrix is describing the transformation from voxel space to a world coordinate system where the XYZ-axes are described with right-handed coordinate axes, AND the transformation matrix is left-handed, then 'right is left, and left is right', and equivalently 'the image is flipped'**.\\
+**If the transformation matrix is describing the transformation from voxel space to a world coordinate system where the XYZ-axes are described with right-handed coordinate axes, AND the transformation matrix is left-handed, then 'right is left, and left is right', and equivalently 'the image is flipped'**.
 
 This leaves the question how to determine the handedness of the transformation matrix. This can be determined from the determinant of the upper-left part of this matrix. When `det(X.transform(1:3,1:3))` has a positive value, the transformation-matrix is right-handed, otherwise it's left-handed. Alternatively, you can also explore the data in **[ft_sourceplot ](/reference/ft_sourceplot)** (using cfg.method='interactive') and start clicking around on positions on the left/right axis. Pay special attention to what is happening with the real world coordinate that is describing the left/right axis. This should give you a clue as to what is left and what is right in the image. 
 

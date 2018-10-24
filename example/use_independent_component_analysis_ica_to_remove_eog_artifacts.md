@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example artifact preprocessing ica
 ---
 
-{{tag>example artifact preprocessing ica}}
 
 # Use independent component analysis (ICA) to remove EOG artifacts
 

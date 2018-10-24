@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example eeg fem leadfield headmodel
 ---
 
-{{tag>example eeg fem leadfield headmodel}}
 
 # Example script for leadfield based on FEM headmodel
 

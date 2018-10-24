@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: tutorial natmeg meg+eeg statistics
 ---
 
-{{tag>tutorial natmeg meg+eeg statistics}}
 
 # Statistical analysis and multiple comparison correction for combined MEG/EEG data
 

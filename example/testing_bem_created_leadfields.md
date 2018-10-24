@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example eeg mri headmodel source
 ---
 
-{{tag>example eeg mri headmodel source}}
 
 # Testing BEM created EEG lead fields
 

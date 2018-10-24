@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: example plot source
 ---
 
-{{tag>example plot source}}
 
 ## Plotting the result of source reconstructing on a cortical mesh
 

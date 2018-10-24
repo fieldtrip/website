@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: realtime
 ---
 
-{{tag>realtime}}
 
 # Overview of the realtime buffer
 

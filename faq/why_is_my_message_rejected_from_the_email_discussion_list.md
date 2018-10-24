@@ -1,8 +1,8 @@
 ---
 layout: default
+tags: faq email
 ---
 
-{{tag>faq email}}
 
 ## Why is my message rejected from the email discussion list?
 
