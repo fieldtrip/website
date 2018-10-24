@@ -506,13 +506,13 @@ Test on phantom data
 
 I have read in the source space created on the sample data (subject 10 in Lin's experiment) into Matlab.
 
-In MN
+In MNE:
 
 	
 	mne_setup_source_space --ico -6
 
 
-In Matla
+In Matlab:
 
 	
 	src = mne_read_source_spaces('/`<path>`/sub10-oct-6-src.fif');

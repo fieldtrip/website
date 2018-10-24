@@ -68,7 +68,7 @@ This example script relies on the example script [Create mni-aligned grids in in
 
 
 ** Figure 1 The segmented mri**
-{{{{:example:segmri.jpg|}}}
+{{:example:segmri.jpg|}}
 
 	
 	%make the single_shell headmodel

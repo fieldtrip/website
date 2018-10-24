@@ -205,14 +205,15 @@ In a data inspection phase you can use the interactive modus to go from one plot
     cfg.interactive = 'yes';
     figure; ft_multiplotTFR(cfg,TFRhann)
 
-{{tutorial:plotting:interactive1.jpg?300| multiplot select channels}}
+{{tutorial:plotting:interactive1.jpg?300}}
+
 plot with ft_multiplot, and select channels of interest
 
-{{tutorial:plotting:interactive2.jpg?300| then you get singleplot average over those channels, select time freq window}} 
+{{tutorial:plotting:interactive2.jpg?300}}
+
 selected channels are averaged and displayed as one plot (ft_singleplotTFR is called).  Then, select a section within the TFR to get a topoplot
 
-{{tutorial:plotting:interactive3.jpg?300| then you get topoplot average over that time freq window}}
-
+{{tutorial:plotting:interactive3.jpg?300}}
 
 ### Plotting clusters
 

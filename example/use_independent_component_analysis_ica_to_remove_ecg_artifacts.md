@@ -121,7 +121,8 @@ However, given that you measured the heartbeat on a separate channel, you can us
 
 You will be asked for feedback at two points while running this code. The visual display of your data should look similar to this. If it doesn't, you may still have some jump artifacts in the data that you haven't removed.
 
-{{:example:ecgpeaks1.jpg?400|}} 
+{{:example:ecgpeaks1.jpg?400|}}
+
 {{:example:ecgpeaks2.jpg?400|}}
 
 You can go on with the analysis now.
