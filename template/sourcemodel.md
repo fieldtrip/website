@@ -3,13 +3,19 @@ layout: default
 tags: template sourcemodel grid
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 ## Template models for source reconstruction
 
 Source models are a necessary ingredient for estimating the cortical activity from EEG or MEG data. Sources are typically modelled as equivalent current dipoles (ECDs), i.e. point sources with a location, orientation and strength.
 
 ### Grid search in dipole fitting
 
-When you do source reconstruction with dipole fit methods (as implemented in **[ft_dipolefitting](/reference/ft_dipolefitting)**), you usually assume a source model that consists of a single or a small number of equivalent current dipoles and you fit the source location, orientation and strength to the data. In this case you might start with an exhaustive grid search on a pre-defined grid, which in general is then followed by a non-linear optimization of the location of the dipoles. The initial grid on which the search is performed is not that important and is usually constructed on the fly as 3d grid  with a reasonable resolution. The resolution should not be too high, otherwise the grid search will take too long, but should also not be too low, otherwise the non-lienar search will have to start from a grid location that is still far of from the minimum. Both a too low and a too high grid resolution will cause the dipole fitting procedure to take more time. 
+When you do source reconstruction with dipole fit methods (as implemented in **[ft_dipolefitting](/reference/ft_dipolefitting)**), you usually assume a source model that consists of a single or a small number of equivalent current dipoles and you fit the source location, orientation and strength to the data. In this case you might start with an exhaustive grid search on a pre-defined grid, which in general is then followed by a non-linear optimization of the location of the dipoles. The initial grid on which the search is performed is not that important and is usually constructed on the fly as 3d grid  with a reasonable resolution. The resolution should not be too high, otherwise the grid search will take too long, but should also not be too low, otherwise the non-lienar search will have to start from a grid location that is still far of from the minimum. Both a too low and a too high grid resolution will cause the dipole fitting procedure to take more time.
 
 ### Scanning with a beamformer
 
@@ -19,28 +25,23 @@ The FieldTrip template directory provides a set of sourcemodels defined on regul
 Template source models with the varying dipole spacing (4, 5, 6, 7.5, 8 and 10 mm) on a regular 3-D grid are available in fieldtrip/template/sourcemodel director
 
 *  standard_sourcemodel3d10mm.mat
-
 *  standard_sourcemodel3d4mm.mat
-
 *  standard_sourcemodel3d5mm.mat
-
 *  standard_sourcemodel3d6mm.mat
-
 *  standard_sourcemodel3d7point5mm.mat
-
 *  standard_sourcemodel3d8mm.mat
 
 To load and visualize the 3D regular grids, you can do for example
 
     load standard_sourcemodel3d5mm.mat
-    
+
     figure
     plot3(sourcemodel.pos(:,1), sourcemodel.pos(:,2), sourcemodel.pos(:,3), '.')
     axis equal
     axis vis3d
     grid on
 
-or you can use 
+or you can use
 
     figure
     ft_plot_mesh(sourcemodel)
@@ -49,20 +50,18 @@ You will notice that the 3D regular grids are not that interesting to look at; s
 
 ### Distributed source models with MNE
 
-When doing source reconstruction using minimum norm estimation (MNE, also known as linear estimation) techniques, the assumption is that the sources in the brain are distributed and that only the strength at all possible cortical locations is to be estimated. Since the strength of all dipoles in the cortical mesh is estimated simultaneously, sources should only be placed in regions where generators might be present. MNE therefore usually assumes a source model that consists of grey matter only, which can be modeled as a highly folded cortical sheet. 
+When doing source reconstruction using minimum norm estimation (MNE, also known as linear estimation) techniques, the assumption is that the sources in the brain are distributed and that only the strength at all possible cortical locations is to be estimated. Since the strength of all dipoles in the cortical mesh is estimated simultaneously, sources should only be placed in regions where generators might be present. MNE therefore usually assumes a source model that consists of grey matter only, which can be modeled as a highly folded cortical sheet.
 
 A canonical cortical sheet is available in fieldtrip/template/sourcemodel with different numbers of vertices (20484, 8192 and 5124 vertices). These files were taken from the SPM8 release version; they refer to the canonical T1 anatomical MRI and are expressed in MNI coordinates.
 
 *  cortex_20484.surf.gii
-
 *  cortex_8196.surf.gii
-
 *  cortex_5124.surf.gii
 
-You can load and visualize the cortical sheets with 
+You can load and visualize the cortical sheets with
 
     sourcemodel = ft_read_headshape('cortex_20484.surf.gii')
-    
+
     ft_plot_mesh(sourcemodel, 'facecolor', 'brain', 'edgecolor', 'none')
     camlight
     lighting gouraud
@@ -74,9 +73,7 @@ You can load and visualize the cortical sheets with
 The following documentation is a verbatim copy of *spm_mesh.man* in [SPM8](http://www.fil.ion.ucl.ac.uk/spm) and describes the details of
 
 *  cortex_20484.surf.gii
-
 *  cortex_5124.surf.gii
-
 *  cortex_8196.surf.gii
 
 The cortical mesh surfaces here were created using Freesurfer version
@@ -101,23 +98,19 @@ They are saved in the GIfTI file format, with GZipBase64Binary encoding.
 
 ### References
 
-Dale, A.M., Fischl, B., Sereno, M.I., 1999. Cortical surface-based
+* Dale, A.M., Fischl, B., Sereno, M.I., 1999. Cortical surface-based
 analysis. I. Segmentation and surface reconstruction. Neuroimage 9,
 179-194.
-
-Fischl, B., Liu, A., Dale, A.M., 2001. Automated manifold surger
+* Fischl, B., Liu, A., Dale, A.M., 2001. Automated manifold surger
 constructing geometrically accurate and topologically correct models
 of the human cerebral cortex. IEEE Trans Med Imaging 20, 70-80.
-
-Fischl, B., Sereno, M.I., Dale, A.M., 1999. Cortical surface-based
+* Fischl, B., Sereno, M.I., Dale, A.M., 1999. Cortical surface-based
 analysis. II: Inflation, flattening, and a surface-based coordinate
 system. Neuroimage 9, 195-207.
-
-Segonne, F., Dale, A.M., Busa, E., Glessner, M., Salat, D., Hahn,
+* Segonne, F., Dale, A.M., Busa, E., Glessner, M., Salat, D., Hahn,
 H.K., Fischl, B., 2004. A hybrid approach to the skull stripping
 problem in MRI. Neuroimage 22, 1060-1075.
-
-Tzourio-Mazoyer, N., Landeau, B., Papathanassiou, D., Crivello, F.,
+* Tzourio-Mazoyer, N., Landeau, B., Papathanassiou, D., Crivello, F.,
 Etard, O., Delcroix, N., et al, 2002. Automated anatomical labelling of
 activations in spm using a macroscopic anatomical parcellation of the MNI
 MRI single subject brain. Neuroimage 15, 273-289.
@@ -130,26 +123,21 @@ Up until March 7, 2013 (svn revision number 7600) the sourcemodels were a bit ti
 The new set of sourcemodels are not compatible with the old set. If you were in the middle of an analysis, that relies on the template sourcemodels in FieldTrip, you should either stick to the old version of the sourcemodels, or recompute all results using the new version of the sourcemodels. The old version of the sourcemodels will not be kept in the release version of FieldTrip, but they are recoverable from FieldTrip version predating March 7, 2013.
 `</note>`
 
-**Figure 1**
+![image](/media/template/sourcemodel1.png@300)
+*Figure 1A: Template brain surface with template dipole locations (old version sourcemodel).*
 
-**A**![image](/media/template/sourcemodel1.png@300)
+![image](/media/template/sourcemodel3.png@300)
+*Figure 1B: Warped dipole locations (linear warp only) on top of an individual brain surface.*
 
-**B**![image](/media/template/sourcemodel3.png@300)**C**![image](/media/template/sourcemodel2.png@300)
-
-*A: Template brain surface with template dipole locations (old version sourcemodel). B: Warped dipole locations (linear warp only) on top of an individual brain surface. C: Warped dipole locations (nonlinear warp) on top of an individual brain surface.*
-
-**Figure 2**
+![image](/media/template/sourcemodel2.png@300)
+*Figure 1C: Warped dipole locations (nonlinear warp) on top of an individual brain surface.*
 
 ![image](/media/template/sourcemodel4.png@400)
-
-*The brain surface extracted from the blurred template brain warped to, and projected onto an individual MRI (yellow), and the brain surface extracted from the individual MRI (red).*
-
-** Figure 3**
+*Figure 2: The brain surface extracted from the blurred template brain warped to, and projected onto an individual MRI (yellow), and the brain surface extracted from the individual MRI (red).*
 
 ![image](/media/template/sourcemodel5.png@300)
-
-//Updated sourcemodel with template dipole locations (linearly warped) on top of an individual brain surface.
+** Figure 3: Updated sourcemodel with template dipole locations (linearly warped) on top of an individual brain surface.**
 
 ## UPDATE: updated 3D source models uploaded on February 19, 2016
 
-Essentially this update does not include a functional change, it only pertains to the structure in the data-structures. Before, the source model variable contained 'xgrid'/'ygrid'/'grid' fields. These fields since long have been obsolete. Also, the inside/outside handling used to be in terms of index-vectors. More recently, the default functionality has been replaced by inside being a boolean vector, which is easier to handle in terms of bookkeeping. The sourcemodels now reflect these current standards. 
+Essentially this update does not include a functional change, it only pertains to the structure in the data-structures. Before, the source model variable contained 'xgrid'/'ygrid'/'grid' fields. These fields since long have been obsolete. Also, the inside/outside handling used to be in terms of index-vectors. More recently, the default functionality has been replaced by inside being a boolean vector, which is easier to handle in terms of bookkeeping. The sourcemodels now reflect these current standards.

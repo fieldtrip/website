@@ -3,6 +3,12 @@ layout: default
 tags: template layout
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Template 2D layouts for plotting
 
 Electrode positions in the layouts are represented as points in 2-D Carthesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ascii .lay files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
@@ -34,19 +40,12 @@ The following series of template layouts is for the electrode caps from [EASY CA
 The following template layout sets are provide
 
 *  easycapM25.mat
-
 *  easycapM3.mat
-
 *  easycapM22.mat
-
 *  easycapM23.mat
-
 *  easycapM24.mat
-
 *  easycapM11.mat
-
 *  easycapM1.mat
-
 *  easycapM15.mat
 
 ####  easycapM25 - International 10/20-System (used in EC20)
@@ -93,11 +92,8 @@ The following template layout sets are provide
 The following template layout sets are provide
 
 *  easycapM7.mat
-
 *  easycapM10.mat
-
 *  easycapM16.mat
-
 *  easycapM14.mat
 
 #### easycapM7 - Spherical 32-Channel-Arrangement
@@ -125,9 +121,7 @@ The following template layout sets are provide
 The following template layout sets are provide
 
 *  easycapM20.mat
-
 *  easycapM17.mat
-
 *  easycapM19.mat
 
 #### easycapM20 - BESA 32-Channel-Arrangement for Epilepsy Diagnostics
@@ -170,7 +164,6 @@ This is the standard 64-channel-Arrangement from [Brain Products](http://www.bra
 The following template layout set is for an electrode cap from [NeuroScan](http://www.neuroscan.com). The origin and construction is described on http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=679. The QuikCap_NSL_128 layout has been provided by Andre Cravo.  
 
 *  ![image](/media/template/quickcap64.mat.png) (since june 2012 - r6055)
-
 *  ![image](/media/template/quikcap_nsl_128.mat.png) (since nov 2012 - r6915)
 
 ## BioSemi cap
@@ -178,39 +171,29 @@ The following template layout set is for an electrode cap from [NeuroScan](http:
 The following template layouts are for an electrode cap from [BioSemi](http://www.biosemi.com).  
 
 *  ![image](/media/template/biosemi16.lay.png)
-
 *  ![image](/media/template/biosemi32.lay.png)
-
 *  ![image](/media/template/biosemi64.lay.png)
-
 *  ![image](/media/template/biosemi128.lay.png)
-
 *  ![image](/media/template/biosemi160.lay.png)
-
 *  ![image](/media/template/biosemi256.lay.png)
+
 ## Standard 10-XX cap
 
 The following template layouts are for an electrode cap based on a standard 10-XX montage.
 
 *  ![image](/media/template/EEG1005.lay.png)
-
 *  ![image](/media/template/EEG1010.lay.png)
-
 *  ![image](/media/template/EEG1020.lay.png)
-
 *  ![image](/media/template/elec1005.lay.png)
-
 *  ![image](/media/template/elec1010.lay.png)
-
 *  ![image](/media/template/elec1020.lay.png)
+
 ## 4D/BTI array
 
 The following template layouts are for a sensor array of the 4D/BTI MEG system.
 
 *  ![image](/media/template/4D148.lay.png)
-
 *  ![image](/media/template/4D248.lay.png)
-
 *  ![image](/media/template/4D248_helmet.png) - realistic display of temporal sensors
 
 ## CTF array
@@ -218,11 +201,8 @@ The following template layouts are for a sensor array of the 4D/BTI MEG system.
 The following template layouts are for a sensor array of the CTF MEG system.
 
 *  ![image](/media/template/CTF151.lay.png)
-
 *  ![image](/media/template/CTF151_helmet.png) - realistic display of temporal sensors
-
 *  ![image](/media/template/CTF275.lay.png)
-
 *  ![image](/media/template/CTF275_helmet.png) - realistic display of temporal sensors
 
 ## Neuromag array
@@ -230,34 +210,22 @@ The following template layouts are for a sensor array of the CTF MEG system.
 The following template layouts are for a sensor array of the Neuromag MEG system. The major difference between the neuromag306 and the NM306 layouts is the labelling of the sensors (e.g. 'MEG1431' and '1431' respectively). In a similar vein, NM122.lay and NM122_combined.lay contain the lengthier labels (e.g. 'MEG 008'), whereas NM122all.lay has the shorter labels ('008').
 
 *  ![image](/media/template/neuromag306all.lay.png)
-
 *  ![image](/media/template/neuromag306cmb.lay.png) - includes the combined planar gradiometers
-
 *  ![image](/media/template/neuromag306mag.lay.png) - includes only the magnetometers
-
 *  ![image](/media/template/neuromag306planar.lay.png) - includes only the planar gradiometers
-
 *  ![image](/media/template/NM122.lay.png)
-
 *  ![image](/media/template/NM122all.lay.png)
-
 *  ![image](/media/template/NM122combined.lay.png) - includes the combined planar gradiometers
-
 *  ![image](/media/template/NM306all.lay.png)
-
 *  ![image](/media/template/NM306mag.lay.png) - includes only the magnetometers
-
 *  ![image](/media/template/NM306planar.lay.png) - includes only the planar gradiometers
+
 ## Yokogawa array
 
 The following template layouts are for a sensor array of the Yokogawa MEG system. The labels in these layouts, except for the old variant, are prefixed to indicate the gradiometer type ('PG*' - planar gradiometer, 'AG*' - axial gradiometer).
 
 *  ![image](/media/template/yokogawa440.lay.png)
-
 *  ![image](/media/template/yokogawa440_old.lay.png)
-
 *  ![image](/media/template/yokogawa440ag.lay.png) - includes only the axial gradiometers
-
 *  ![image](/media/template/yokogawa440all.lay.png)
-
 *  ![image](/media/template/yokogawa440pg.lay.png)  - includes only the planar gradiometers

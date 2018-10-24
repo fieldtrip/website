@@ -3,6 +3,12 @@ layout: default
 tags: template
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Anatomical templates for visualizing source reconstructed activity
 
 When visualizing source reconstructed activity, one can interpolate the activity maps onto a subject-specific anatomical image, using [ft_sourceinterpolate](/reference/ft_sourceinterpolate). Subsequently, the interpolated activity can be spatially normalized (using volumetric normalization) using [ft_volumenormalise](/reference/ft_volumenormalise). The activity can also be rendered onto the cortical surface. FieldTrip includes a set of template surfaces that have been derived from the Colin27 brain (in MNI152 space) with Freesurfer. These surfaces have been derived from the SPM Canonical Brain.
@@ -31,4 +37,3 @@ The volumetric image fieldtrip/template/anatomy/single_subj_T1_1mm.nii is the co
 ## Volumetric anatomical image at 2mm isotropic resolution
 
 The volumetric image fieldtrip/template/anatomy/single_subj_T1 is a downsampled version of single_subj_T1_1mm.nii, obtained with [ft_volumedownsample](/reference/ft_volumedownsample), using cfg.downsample=2. The anatomical volume was written back to disk, using [ft_volumewrite](/reference/ft_volumewrite).
-

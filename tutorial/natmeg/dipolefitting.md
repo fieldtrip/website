@@ -3,11 +3,17 @@ layout: default
 tags: tutorial natmeg meg+eeg dipole MEG-audodd
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Dipole fitting of combined MEG/EEG data
 
 ## Introduction
 
-In this tutorial you can find information about how to fit dipole models to the event-related fields (MEG) and potentials (EEG) of a single subject. We will be working on the dataset described in the [Preprocessing and event-related activity](/tutorial/natmeg/preprocessing) tutorial, and we will use the anatomical images that belong to the same subject. We will repeat some code here to select the trials, preprocess the data and compute averages that are suitable for dipole fitting. We assume that preprocessing and event-related averaging is already clear for the reader. 
+In this tutorial you can find information about how to fit dipole models to the event-related fields (MEG) and potentials (EEG) of a single subject. We will be working on the dataset described in the [Preprocessing and event-related activity](/tutorial/natmeg/preprocessing) tutorial, and we will use the anatomical images that belong to the same subject. We will repeat some code here to select the trials, preprocess the data and compute averages that are suitable for dipole fitting. We assume that preprocessing and event-related averaging is already clear for the reader.
 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the [Localizing oscillatory sources using beamformer techniques](/tutorial/natmeg/beamforming) tutorial if you are interested in the later.
 
@@ -24,7 +30,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 In the [Preprocessing and event-related activity](/tutorial/natmeg/preprocessing) tutorial, time-locked averages of event related fields of the standard and deviant conditions were computed and it was shown that there is a difference between the conditions. The topographical distribution of the ERFs belonging to each condition to the difference have been plotted. The aim of this tutorial is to localise the sources of the underlying neuronal activity. For this we need a source model and a volume conduction model.
 ### Source model
 
- 
+
 In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (1990) ((Source localization by fitting an equivalent current dipole model
 Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.ucsb.edu/wcsl/courses/ECE594/594C_F10Madhow/dipole_model_scherg90.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990)).
 
@@ -35,7 +41,7 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.
 
 To fit the dipole models to the data, we will perform the following step
 
-*  We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**,  then the mri is aligned with the MEG data using **[ft_volumerealign](/reference/ft_volumerealign)**, and subsequently it is resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system. 
+*  We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**,  then the mri is aligned with the MEG data using **[ft_volumerealign](/reference/ft_volumerealign)**, and subsequently it is resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system.
 
 *  The resliced volume is segmented to obtain the anatomical description of the brain, skull and skin with **[ft_volumesegment](/reference/ft_volumesegment)**.
 
@@ -43,7 +49,7 @@ To fit the dipole models to the data, we will perform the following step
 
 *  We preprocess the MEG and EEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** and compute the average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-*  Using **[:reference/ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions. 
+*  Using **[:reference/ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
 
 *  Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/plotting) functions to make detailled visualisations.
 
@@ -54,7 +60,7 @@ We start with the anatomical MRI data, which comes directly from the scanner in 
 DICOM datasets consist of a large number of files, one per slice. As filename you have to specify a single file, the reading function will automatically determine which other slices are part of the same anatomical volume and put them in the correct order.
 
     mrifile = './dicom/00000113.dcm';
-    
+
     mri_orig = ft_read_mri(mrifile);
 
 We also read the geometrical data from the fif file. It contains information about the MEG magnetometer and gradiometer positions (the “grad” structure), about the EEG electrodes (the “elec” structure) and about the head shape.
@@ -62,7 +68,7 @@ We also read the geometrical data from the fif file. It contains information abo
 The MEG dataset is available as   [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
 
     dataset = 'oddball1_mc_downsampled.fif';
-    
+
     grad    = ft_read_sens(dataset,'senstype','meg');
     elec    = ft_read_sens(dataset,'senstype','eeg');
     shape   = ft_read_headshape(dataset,'unit','cm');
@@ -73,18 +79,18 @@ The high-level plotting functions do not offer support for flexible plotting of 
     ft_plot_headshape(shape);
     ft_plot_sens(grad, 'style', '*b');
     ft_plot_sens(elec, 'style', '*g');
-    
+
     view([1 0 0])
     print -dpng natmeg_dip_geometry1.png
 
 ![image](/media/tutorial/natmeg_temp/natmeg_dip_geometry1.png@500)
 
-It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z]. 
+It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z].
 
     figure;
     cfg = [];
     ft_sourceplot(cfg, mri_orig);
-    
+
     save mri_orig mri_orig
 
 {{tutorial:natmeg_temp:natmeg_dip_mri_orig.png?500"}}
@@ -94,16 +100,16 @@ You can see that the MRI is displayed upside down. That in itself is not a probl
 
 The coregistration of the anatomical MRI with the Neuromag head coordinate system is required to express the anatomical MRI in a consistent fashion relative to the MEG and EEG sensors. Since we will use the anatomical MRI to construct the volume conduction model of the head, coregistration is also a prerequisite to ensure that the volume conduction model is aligned with the sensors.
 
-The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/how_are_the_lpa_and_rpa_points_defined). We use **[ft_volumerealign](/reference)** with cfg.method=‘interactive’. It allows us to click on a voxel, and to press ’n’, ‘l’ or ‘r’ to indicate the nasion, left and right pre-auricular point respectively. 
+The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/how_are_the_lpa_and_rpa_points_defined). We use **[ft_volumerealign](/reference)** with cfg.method=‘interactive’. It allows us to click on a voxel, and to press ’n’, ‘l’ or ‘r’ to indicate the nasion, left and right pre-auricular point respectively.
 
     cfg = [];
     cfg.method = 'interactive';
     cfg.coordsys = 'neuromag';
     [mri_realigned1] = ft_volumerealign(cfg, mri_orig);
-    
+
     save mri_realigned1 mri_realigned1
 
-It is difficult to precisely determine the position of the pre auricular points. One solution therefore is to use markers that are visible in the MRI, which is the [strategy we commonly emply at the Donders Institute](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format). The alternative, which is often used at 4D/BTi and Neuromag sites, is to record the shape of the head using a Polhemus electromagnetic tracker. The Polhemus head shape and the skin surface that is extracted from the MRI are subsequently coregistered. 
+It is difficult to precisely determine the position of the pre auricular points. One solution therefore is to use markers that are visible in the MRI, which is the [strategy we commonly emply at the Donders Institute](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format). The alternative, which is often used at 4D/BTi and Neuromag sites, is to record the shape of the head using a Polhemus electromagnetic tracker. The Polhemus head shape and the skin surface that is extracted from the MRI are subsequently coregistered.
 
     cfg = [];
     cfg.method = 'headshape';
@@ -116,9 +122,9 @@ The headshape based coregistration starts with an interactive step to improve th
 
 `<note instruction>`
 Check once more with **[ft_sourceplot](/reference/ft_sourceplot)** whether the coordinate system is consistent with the MRI. Is the problem of the MRI being upside down resolved? Is the coordinate system correct?
-`</note>` 
+`</note>`
 
-We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is not only convenient for plotting, but we also need it later on for the imerode/imdilate image processing functions. 
+We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is not only convenient for plotting, but we also need it later on for the imerode/imdilate image processing functions.
 
     cfg = [];
     cfg.resolution = 1;
@@ -126,9 +132,9 @@ We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordin
     cfg.yrange = [-110 140];
     cfg.zrange = [-80 120];
     mri_resliced = ft_volumereslice(cfg, mri_realigned2);
-    
+
     save mri_resliced mri_resliced
-    
+
     figure
     ft_sourceplot([], mri_resliced);
     print -dpng natmeg_dip_mri_resliced.png
@@ -138,7 +144,7 @@ We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordin
     % the low level plotting functions do not know how to deal with units,
     % so make sure we have the MRI expressed in cm as well
     mri_resliced_cm = ft_convert_units(mri_resliced, 'cm');
-    
+
     save mri_resliced_cm mri_resliced_cm
 
 ### Construct the MEG volume conduction model
@@ -151,7 +157,7 @@ Now that we have the anatomical MRI coregistered and resliced in to [isotropic](
 
     % copy the anatomy into the segmented mri
     mri_segmented.anatomy = mri_resliced.anatomy;
-    
+
     save mri_segmented mri_segmented
 
 By treating the segmentation of brain/skull/scalp as a “functional” volume, we can trick **[ft_sourceplot](/reference/ft_sourceplot)** into plotting it on top of the anatomical MRI.  
@@ -160,11 +166,11 @@ By treating the segmentation of brain/skull/scalp as a “functional” volume, 
     cfg.funparameter = 'brain';
     ft_sourceplot(cfg, mri_segmented);
     print -dpng natmeg_dip_segmented_brain.png
-    
+
     cfg.funparameter = 'skull';
     ft_sourceplot(cfg, mri_segmented);
     print -dpng natmeg_dip_segmented_skull.png
-    
+
     cfg.funparameter = 'scalp';
     ft_sourceplot(cfg, mri_segmented);
     print -dpng natmeg_dip_segmented_scalp.png
@@ -199,16 +205,16 @@ After having confirmed that the segmentations are consistent with the anatomical
 
 `<note instruction>`
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
-`</note>` 
+`</note>`
 
-These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the *isosurface* method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment. 
+These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the *isosurface* method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
 
     cfg = [];
     cfg.method = 'isosurface';
     cfg.tissue = 'scalp';
     cfg.numvertices = 16000;
     highres_scalp = ft_prepare_mesh(cfg, mri_segmented);
-    
+
     save mesh mesh_* highres_scalp
 
     figure
@@ -229,8 +235,8 @@ These meshes are all relatively coarse and don’t look so nice in a visualisati
 
 {{tutorial:natmeg_temp:natmeg_dip_highres_scalp.png?400"}}
 
-`<note>` 
-You can type "camlight" multiple times, to get light from various directions. 
+`<note>`
+You can type "camlight" multiple times, to get light from various directions.
 
 It is also convenient to switch on the “Camera Toolbar” (under the figure menu -> View).
 
@@ -242,9 +248,9 @@ Now that we have the meshes, we use them to compute the volume conduction model.
     cfg = [];
     cfg.method = 'singleshell';
     headmodel_meg = ft_prepare_headmodel(cfg, mesh_brain);
-    
+
     headmodel_meg = ft_convert_units(headmodel_meg,'cm');
-    
+
     save headmodel_meg headmodel_meg
 
     figure;
@@ -255,8 +261,8 @@ Now that we have the meshes, we use them to compute the volume conduction model.
     ft_plot_vol(headmodel_meg, 'facealpha', 0.5, 'edgecolor', 'none'); % "lighting phong" does not work with opacity
     material dull
     camlight
-    
-    view([1 0 0]) 
+
+    view([1 0 0])
     print -dpng natmeg_dip_geometry2.png
 
 {{tutorial:natmeg_temp:natmeg_dip_geometry2.png?500"}}
@@ -607,7 +613,7 @@ The EEG needs a different volume conduction model than the EEG. Previously we al
 
 {{tutorial:natmeg_temp:natmeg_dip_meshorig.png?400"}}
 
-If you look carefully, you can identify a problem with the mesh. The BEM requires that the meshes are closed and non-intersecting. The figure shows that over right temporal regions there are some vertices of the skull surface that stick out of the skull. This is due to an overestimation of the skull thickness over the temporal region. 
+If you look carefully, you can identify a problem with the mesh. The BEM requires that the meshes are closed and non-intersecting. The figure shows that over right temporal regions there are some vertices of the skull surface that stick out of the skull. This is due to an overestimation of the skull thickness over the temporal region.
 
 One solution would be to inflate the scalp mesh a bit, i.e. to scale it a bit outward.
 
@@ -629,7 +635,7 @@ This does address the problem, however also causes the skin to become thicker al
 
 A better approach is to return to the segmented anatomical MRI and to use image processing tools to fix the segmentation. The tools we will use are [imerode](http://www.mathworks.nl/help/images/ref/imerode.html) and [imdilate](http://www.mathworks.nl/help/images/ref/imdilate.html). Their effect is demonstrated in one of the [frequently asked questions](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model#converting_segmentation_to_segmentation).
 
-Here we will divert from FieldTrip and use some off-the-shelf MATLAB code. We start by copying the 3-D arrays of the segmentation into three separate variables. Using |, i.e. the logical “OR” operator, we can combine the brain skull and scalp into filled volumes. 
+Here we will divert from FieldTrip and use some off-the-shelf MATLAB code. We start by copying the 3-D arrays of the segmentation into three separate variables. Using |, i.e. the logical “OR” operator, we can combine the brain skull and scalp into filled volumes.
 
     binary_brain = mri_segmented.brain;
     binary_skull = mri_segmented.skull | binary_brain;
@@ -639,7 +645,7 @@ The following code demonstrates the effect of the imdilate function. It makes fo
 
     close all
 
-    % using ft_sourceplot I identified the crossection with voxel 
+    % using ft_sourceplot I identified the crossection with voxel
     % indices [107 100 100] where the problem is visible and I will
     % plot that intersection multiple times
 
@@ -692,13 +698,13 @@ The following code demonstrates the effect of the imdilate function. It makes fo
 
 *The final segmentation *
 
-Using a combination of imerode and Boolean locic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**. 
+Using a combination of imerode and Boolean locic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**.
 
 `<note instruction>`
 Compare the four figures and toggle back and forth. Can you see the effect of the dilation on the outside of the scalp?
 `</note>`
 
-Having completed the manual refinement of the segmentation on the three temporary arrays, we copy them back into the original segmentation structure. 
+Having completed the manual refinement of the segmentation on the three temporary arrays, we copy them back into the original segmentation structure.
 
     mri_segmented2 = mri_segmented;
     % insert the updated binary volumes, taking out the center part for skull and scalp
@@ -721,22 +727,22 @@ The trick with the “combined” field is a bit of a hack, and we should remove
     % this has to be removed, otherwise ft_prepare_mesh gets confused
     mri_segmented2 = rmfield(mri_segmented2, 'combined');
 
-Using the updated segmentation, we reconstruct the three triangulated meshes. 
+Using the updated segmentation, we reconstruct the three triangulated meshes.
 
     cfg = [];
     cfg.method = 'projectmesh';
     cfg.tissue = 'brain';
     cfg.numvertices = 3000;
     mesh_eeg(1) = ft_prepare_mesh(cfg, mri_segmented2);
-    
+
     cfg.tissue = 'skull';
     cfg.numvertices = 2000;
     mesh_eeg(2) = ft_prepare_mesh(cfg, mri_segmented2);
-    
+
     cfg.tissue = 'scalp';
     cfg.numvertices = 1000;
     mesh_eeg(3) = ft_prepare_mesh(cfg, mri_segmented2);
-    
+
     figure
     ft_plot_mesh(mesh_eeg(1), 'edgecolor', 'none', 'facecolor', 'r')
     ft_plot_mesh(mesh_eeg(2), 'edgecolor', 'none', 'facecolor', 'g')
@@ -753,7 +759,7 @@ The three meshes are combined in one struct-array and used as input to **[ft_pre
     headmodel_eeg = ft_prepare_headmodel(cfg, mesh_eeg);
 
     save headmodel_eeg headmodel_eeg
-    
+
 `<note instruction>`
 Here we've set the ratio of conductivity between the different tissue types to [1 1/20 1]. What would happen if we would change the ratio to: [1 1/80 1]? See [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue)
 `</note>`
@@ -773,9 +779,9 @@ First we are going to read the data into trial
     cfg.trialdef.rsp_triggers   = [256 4096];
     cfg.trialdef.stim_triggers  = [1 2];
     cfg.trialfun                = 'trialfun_oddball_stimlocked';
-    
+
     cfg = ft_definetrial(cfg);
-    
+
     cfg.continuous    = 'yes';
     cfg.hpfilter      = 'no';
     cfg.detrend       = 'no';
@@ -787,9 +793,9 @@ First we are going to read the data into trial
     cfg.lpfreq        = 120;
     cfg.channel       = 'EEG';
     cfg.precision     = 'single';
-    
+
     data_eeg = ft_preprocessing(cfg);
-    
+
     save data_eeg data_eeg
 
 #### Remove bad trials
@@ -811,7 +817,7 @@ The EEG forward model is computed with an common average reference. Consequently
     cfg.reref = 'yes';
     cfg.refchannel = 'all';
     data_eeg_reref = ft_preprocessing(cfg, data_eeg_clean);
-    
+
     save data_eeg_reref data_eeg_reref
 
 #### Compute the time-locked average
@@ -820,26 +826,26 @@ We will now calculate the ERPs on which we are going to fit the dipole
 
     cfg = [];
     timelock_eeg_all = ft_timelockanalysis(cfg, data_eeg_reref);
-    
+
     cfg.trials = find(data_eeg_reref.trialinfo==1);
     timelock_eeg_std = ft_timelockanalysis(cfg, data_eeg_reref);
-    
+
     cfg.trials = find(data_eeg_reref.trialinfo==2);
     timelock_eeg_dev = ft_timelockanalysis(cfg, data_eeg_reref);
-    
+
 Before continuing lets just have a quick look whether we processed our data correctly, the following code should produce a familiar imag
 
     cfg = [];
     cfg.layout = 'neuromag306eeg1005_natmeg.lay';
     ft_multiplotER(cfg, timelock_eeg_std, timelock_eeg_dev);
-    
+
     print -dpng natmeg_dip_meg_multiplot.png
 
     cfg = [];
     cfg.parameter = 'avg';
     cfg.operation = 'x1 - x2';
     timelock_eeg_dif = ft_math(cfg, timelock_eeg_dev, timelock_eeg_std);
-    
+
     cfg = [];
     cfg.layout = 'neuromag306eeg1005_natmeg.lay';
     ft_multiplotER(cfg, timelock_eeg_dif);
@@ -856,7 +862,7 @@ Now we are actually able to do the dipole fitting on the EEG dat
     cfg.grid.unit = 'cm';
     cfg.gridsearch = 'yes';
     cfg.vol = headmodel_eeg;
-    cfg.senstype = 'eeg'; 
+    cfg.senstype = 'eeg';
     cfg.channel = 'all';
     source_eeg = ft_dipolefitting(cfg, timelock_eeg_all);
 
@@ -867,31 +873,31 @@ Lets plot the dipoles and see how it compares to our fit of the MEG dat
     ft_sourceplot(cfg, mri_resliced_cm);
 
     figure
-    
+
     ft_plot_dipole(source_eeg.dip.pos(1,:), mean(source_eeg.dip.mom(1:3,:),2), 'color', 'b')
     ft_plot_dipole(source_eeg.dip.pos(2,:), mean(source_eeg.dip.mom(4:6,:),2), 'color', 'b')
-    
+
     ft_plot_dipole(source_mag.dip.pos(1,:), mean(source_mag.dip.mom(1:3,:),2), 'color', 'r')
     ft_plot_dipole(source_mag.dip.pos(2,:), mean(source_mag.dip.mom(4:6,:),2), 'color', 'r')
-    
+
     ft_plot_dipole(source_planar.dip.pos(1,:), mean(source_planar.dip.mom(1:3,:),2), 'color', 'g')
     ft_plot_dipole(source_planar.dip.pos(2,:), mean(source_planar.dip.mom(4:6,:),2), 'color', 'g')
-    
+
     pos = mean(source_eeg.dip.pos,1);
     % pos = source_eeg.dip.pos(1,:); % use another crossection for the MRI
-    
+
     ft_plot_slice(mri_resliced_cm.anatomy, 'transform', mri_resliced_cm.transform, 'location', pos, 'orientation', [1 0 0], 'resolution', 0.1)
     ft_plot_slice(mri_resliced_cm.anatomy, 'transform', mri_resliced_cm.transform, 'location', pos, 'orientation', [0 1 0], 'resolution', 0.1)
     ft_plot_slice(mri_resliced_cm.anatomy, 'transform', mri_resliced_cm.transform, 'location', pos, 'orientation', [0 0 1], 'resolution', 0.1)
-    
+
     ft_plot_crosshair(pos, 'color', [1 1 1]/2);
-    
+
     axis tight
     axis off
 
 {{tutorial:natmeg_temp:natmeg_dip_sourceeeg_symx.png?400"}}
 
-The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to release the symmetry constraint and fit the 2-dipole mode, starting from the symmetric position as initial guess. 
+The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to release the symmetry constraint and fit the 2-dipole mode, starting from the symmetric position as initial guess.
 
     cfg = [];
     cfg.latency = [0.080 0.110];
@@ -900,27 +906,27 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
     cfg.gridsearch = 'no';
     cfg.nonlinear = 'yes';
     cfg.vol = headmodel_eeg;
-    cfg.senstype = 'eeg'; 
+    cfg.senstype = 'eeg';
     cfg.channel = 'all';
     source_eeg2 = ft_dipolefitting(cfg, timelock_eeg_all);
 
     figure
-    
+
     ft_plot_dipole(source_eeg.dip.pos(1,:), mean(source_eeg.dip.mom(1:3,:),2), 'color', 'b')
     ft_plot_dipole(source_eeg.dip.pos(2,:), mean(source_eeg.dip.mom(4:6,:),2), 'color', 'b')
-    
+
     ft_plot_dipole(source_eeg2.dip.pos(1,:), mean(source_eeg2.dip.mom(1:3,:),2), 'color', 'm')
     ft_plot_dipole(source_eeg2.dip.pos(2,:), mean(source_eeg2.dip.mom(4:6,:),2), 'color', 'm')
-    
+
     pos = mean(source_eeg.dip.pos,1);
     % pos = source_eeg.dip.pos(1,:); % alternative crossection for the MRI
-    
+
     ft_plot_slice(mri_resliced_cm.anatomy, 'transform', mri_resliced_cm.transform, 'location', pos, 'orientation', [1 0 0], 'resolution', 0.1)
     ft_plot_slice(mri_resliced_cm.anatomy, 'transform', mri_resliced_cm.transform, 'location', pos, 'orientation', [0 1 0], 'resolution', 0.1)
     ft_plot_slice(mri_resliced_cm.anatomy, 'transform', mri_resliced_cm.transform, 'location', pos, 'orientation', [0 0 1], 'resolution', 0.1)
-    
+
     ft_plot_crosshair(pos, 'color', [1 1 1]/2);
-    
+
     axis tight
     axis off
 
@@ -944,4 +950,3 @@ FAQ
 
 Example script
 {{topic>source headmodel +example &list}}
-

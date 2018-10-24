@@ -8,10 +8,10 @@ tags: chieti HCP-motort
 ## Introduction
 
 `<note exercise>`
-This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015). 
+This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 `</note>`
 
-In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org). The experiment in which this data was acquired is described in detail [here](/tutorial/shared/hcp_motort). 
+In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org). The experiment in which this data was acquired is described in detail [here](/tutorial/shared/hcp_motort).
 
 ## Procedure
 
@@ -20,30 +20,30 @@ We start by setting up the path to the FieldTrip toolbox, to the HCP megconnecto
     restoredefaultpath;
     clear;
     clc;
-    
+
     workshopdir = 'd:/';
-    
+
     addpath(fullfile(workshopdir, 'workshop/fieldtrip-20150909'));
     ft_defaults;
-    
+
     addpath(genpath(fullfile(workshopdir, 'workshop/fieldtrip-20150909/template')));
     addpath(genpath(fullfile(workshopdir, 'workshop/megconnectome-2.2')));
     addpath(genpath(fullfile(workshopdir, 'workshop/177746')));
 
-### Load the MEG and the anatomical data 
+### Load the MEG and the anatomical data
 
 All of this has already been preprocessed and is available from http://db.humanconnectome.org.
 
     load('177746_MEG_10-Motort_tmegpreproc_TEMG.mat')
     load('177746_MEG_10-Motort_tmegpreproc_trialinfo.mat')
-    
+
     % the balanced gradiometer in the preprocessed data is not fully correct
     % hence we use one from the unprocessed data (FIXME this is a hack)
     load('177746_MEG_10-Motort_grad.mat');
     data.grad = grad;
 
     load('177746_MEG_anatomy_headmodel.mat')
-    tmp = load('177746_MEG_anatomy_sourcemodel_3d6mm.mat'); 
+    tmp = load('177746_MEG_anatomy_sourcemodel_3d6mm.mat');
     individual_sourcemodel3d = tmp.sourcemodel3d;
 
 The anatomical MRI can be expressed in different coordinate systems. For some of the processing in HCP it is needed in FreeSurfer coordinates, but here we need it in 4D/BTi MEG coordinates.
@@ -60,9 +60,9 @@ Best is always to check the coordinate system of the MRI.
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.36.22.png@500)
 
 `<note exercice>`
-Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_4dbti_coordinate_system). 
+Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_4dbti_coordinate_system).
 
-You can see that the orientation of the MRI is not as expected. Especially annoying is that it has a left-right flip. Note that each voxel's coordinates are technically OK, but the interpretation of the figure will be easier if the MRI is resliced on a voxel grid that is aligned along the axes of the 4D/BTi coordinate system. 
+You can see that the orientation of the MRI is not as expected. Especially annoying is that it has a left-right flip. Note that each voxel's coordinates are technically OK, but the interpretation of the figure will be easier if the MRI is resliced on a voxel grid that is aligned along the axes of the 4D/BTi coordinate system.
 `</note>`
 
 You might also want to read this [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot) which explains that there can be a difference between what your see and how the computer interprets the coordinates. You can also search google for "radiological versus neurological" representations of data.
@@ -82,7 +82,7 @@ Check it once more.
 
     % load these from fieldtrip/template
     template_mri = ft_read_mri('single_subj_T1_1mm.nii');
-    tmp = load('standard_sourcemodel3d6mm.mat'); 
+    tmp = load('standard_sourcemodel3d6mm.mat');
     template_sourcemodel3d = tmp.sourcemodel;
 
 We want to visualise the various geometrical objects that we read into memory. For that we want to have them all expressed in the right coordinate system (which now has been taken care of) and in the same units.
@@ -160,15 +160,15 @@ Having done this sanity check on the data, we will make subsets for the differen
     % 4 - Right Hand
     % 5 - Right Foot
     % 6 - Fixation
-    
+
     cfg = [];
     cfg.trials = find(data.trialinfo(:, 2) == 1);
     data_lh = ft_selectdata(cfg, data);
-    
+
     cfg = [];
     cfg.trials = find(data.trialinfo(:, 2) == 4);
     data_rh = ft_selectdata(cfg, data);
-    
+
     % make a shorter selection of the data around the movement
     cfg = [];
     cfg.toilim = [-0.75 0.75];
@@ -195,7 +195,7 @@ Having done this sanity check on the data, we will make subsets for the differen
     cfg.keeptrials = 'yes';
     cfg.foi = 1:2:60;
     cfg.toi = data_lh.time{1}(1:25:end); % every 25th timepoint, approximately every 50 ms
-    
+
     tfr_lh = ft_freqanalysis(cfg, data_lh);
     tfr_rh = ft_freqanalysis(cfg, data_rh);
 
@@ -211,10 +211,10 @@ Having computed the TFR, we want to visualise it. However, we computed the singl
     cfg.showlabels = 'no';
     cfg.layout = '4D248.lay';
     % cfg.zlim = [0 2];
-    
+
     figure('name', 'LEFT HAND')
     ft_multiplotTFR(cfg, tfr_lh_pow);
-    
+
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.38.43.png@500)
 
     figure('name', 'RIGHT HAND')
@@ -229,7 +229,7 @@ We can also compute the difference between the power in the left and right-hand 
     % cfg.operation = 'x1-x2';
     cfg.operation = 'log(x1/x2)';
     tfr_diff = ft_math(cfg, tfr_lh_pow, tfr_rh_pow);
-    
+
     cfg = [];
     cfg.layout = '4D248.lay';
     cfg.zlim = 'maxabs';
@@ -256,7 +256,7 @@ Another way of looking at the dynamics in this channel-time-frequency representa
 
 Around the movement there is a clear differential beta-band effect over bilateral sensory-motor areas. We can zoom in on this effect using DICS as frequency domain source reconstruction.
 
-####  Create the lead field, i.e. the forward model 
+####  Create the lead field, i.e. the forward model
 
     cfg = [];
     cfg.grid = individual_sourcemodel3d;
@@ -280,7 +280,7 @@ Usually we would not look at the forward solution, i.e. the lead fields. But the
 
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.39.33.png@500)
 
-Rather than doing the source reconstruction on the wavelet decomposed data, we can zoom in and concentrate the spectral estimation in the exact time-frequency window of interest (following movement, around 20 Hz). 
+Rather than doing the source reconstruction on the wavelet decomposed data, we can zoom in and concentrate the spectral estimation in the exact time-frequency window of interest (following movement, around 20 Hz).
 
     % make a selection of 500ms directly following movement
     cfg = [];
@@ -330,20 +330,20 @@ Since we have the left- and right-hand  conditions, which have the same depth bi
     cfg.operation = 'log(x1/x2)';
     dics_diff = ft_math(cfg, dics_lh, dics_rh);
 
-Following interpolation of the (non-uniform grid) source reconstructed data onto the individual's MRI, we can visualise the distribution of the source estimate. 
+Following interpolation of the (non-uniform grid) source reconstructed data onto the individual's MRI, we can visualise the distribution of the source estimate.
 
     cfg = [];
     cfg.parameter = 'all';
     dics_lh_int = ft_sourceinterpolate(cfg, dics_lh, individual_mri);
     dics_rh_int = ft_sourceinterpolate(cfg, dics_rh, individual_mri);
     dics_diff_int = ft_sourceinterpolate(cfg, dics_diff, individual_mri);
-    
+
     cfg = [];
     cfg.funparameter = 'nai'; % or 'pow'
     cfg.anaparameter = 'anatomy';
     ft_sourceplot(cfg, dics_lh_int);
     ft_sourceplot(cfg, dics_rh_int);
-    
+
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.39.40.png@500)
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.39.48.png@500)
 
@@ -362,11 +362,11 @@ We can define the seeds, expressed in voxels. Subsequently we have to convert th
 
     lh_seed_vox = [88   125   119]; %% left hemisphere
     rh_seed_vox = [93    73   127]; %% right hemisphere
-    
+
     lh_seed_pos = ft_warp_apply(individual_mri.transform, lh_seed_vox, 'homogeneous');
     rh_seed_pos = ft_warp_apply(individual_mri.transform, rh_seed_vox, 'homogeneous');
 
-Note that we could also have read the head coordinates directly from the source plot figure. 
+Note that we could also have read the head coordinates directly from the source plot figure.
 
 We also define a seed region in the midline as a control region. We would not expect any differential activity here.
 
@@ -425,13 +425,13 @@ With the covariance and the forward model for the specific seed points, we can c
     cfg.lcmv.projectmom = 'yes';
     cfg.lcmv.lambda = '10%';
     cfg.grid.units = 'mm';
-    
+
     cfg.grid.pos = [
     lh_seed_pos
     rh_seed_pos
     ml_seed_pos
     ];
-    
+
     lcmv_rh = ft_sourceanalysis(cfg, timelock_rh);
 
 `<note exercice>`
@@ -469,7 +469,7 @@ We can also compute the source-level ERF
     cfg.preproc.demean = 'yes';
     cfg.preproc.baselinewindow = [-0.6 -0.1];
     virtualchannel_avg = ft_timelockanalysis(cfg, virtualchannel_raw);
-    
+
     figure
     plot(virtualchannel_avg.time, virtualchannel_avg.avg)
     legend(virtualchannel_avg.label);
@@ -485,20 +485,20 @@ and we can compute the source-level time-frequency representation of the virtual
     cfg.method = 'mtmconvol';
     cfg.taper = 'hanning';
     cfg.t_ftimwin = 7./cfg.foi; % 7 cycles per time window
-    
+
     virtualchannel_wavelet = ft_freqanalysis(cfg, virtualchannel_raw);
-    
+
     cfg = [];
     cfg.baselinetype = 'relchange';
     cfg.baseline = [-0.6 -0.1];
     cfg.zlim = [-0.8 0.8];
-    
+
     cfg.channel = {'left hemisphere seed'};
     figure; ft_singleplotTFR(cfg, virtualchannel_wavelet);
-    
+
     cfg.channel = {'right hemisphere seed'};
     figure; ft_singleplotTFR(cfg, virtualchannel_wavelet);
-    
+
     cfg.channel = {'midline seed'};
     figure; ft_singleplotTFR(cfg, virtualchannel_wavelet);
 
@@ -514,13 +514,13 @@ The virtual channel time-series seem to be consistent with what we expect to hap
     cfg.method = 'coh';
     cfg.complex = 'absimag';
     coherence = ft_connectivityanalysis(cfg, virtualchannel_wavelet);
-    
+
     figure
     imagesc(coherence.time, coherence.freq, squeeze(coherence.cohspctrm(1, :, :)));
     title(sprintf('COHERENCE BETWEEN %s AND %s', coherence.labelcmb{1,1}, coherence.labelcmb{1,2}))
     colorbar
     axis xy
-    
+
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.41.51.png@500)
 
     figure
@@ -530,7 +530,7 @@ The virtual channel time-series seem to be consistent with what we expect to hap
     axis xy
 
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.41.56.png@500)
-    
+
     figure
     imagesc(coherence.time, coherence.freq, squeeze(coherence.cohspctrm(3, :, :)));
     title(sprintf('COHERENCE BETWEEN %s AND %s', coherence.labelcmb{3,1}, coherence.labelcmb{3,2}))
@@ -541,4 +541,4 @@ The virtual channel time-series seem to be consistent with what we expect to hap
 
 `<note exercice>`
 There are many more connectivity methods available in **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Try out some of the others.
-`</note>` 
+`</note>`

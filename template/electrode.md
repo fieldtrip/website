@@ -3,14 +3,20 @@ layout: default
 tags: template
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Template 3-D electrode sets
 
 Electrodes are represented as points in 3-D Carthesian space, i.e. with an X, Y and Z position for each electrode. Furthermore, each electrode has a label. There is a frequently asked question about [how the electrode structure is described](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).
 
 You can use the following snippet of code to get a quick overview of the template electrode sets.
 
-	
-	dirlist  = dir('template/electrode/*'); 
+
+	dirlist  = dir('template/electrode/*');
 	filename = {dirlist(~[dirlist.isdir]).name}'
 	for i=1:length(filename)
 	  elec = ft_read_sens(filename{i});
@@ -64,4 +70,3 @@ The following template electrode sets are for the [Easycap](http://www.easycap.d
 *  easycap-M1.sfp (Full 10%-System)
 
 *  easycap-M10.sfp (Equidistant 61-Channel-Arrangement)
-

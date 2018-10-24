@@ -52,22 +52,22 @@ Following the workshop, the data has also been made available on the Donders [FT
 Downloading the data to your own computer should allow you to go through the demonstrations once more, but now at your own pace.
 `</note>`
 
- | 9:30        | lecture {{:workshop:meg-uk-2015:lecture1.pdf                  | }}                                    | General Linear Model                  | SPM                   | Vladimir Litvak     |
- | ----        | --------------------------------------------                  | --                                    | --------------------                  | ---                   | ---------------     |
- | 10:00       | [hands-on](/workshop/meg-uk-2015/spm_stats)                   | General Linear Model                  | SPM                                   | Guillaume Flandin     |                    
- | 10:30       | lecture {{:workshop:meg-uk-2015:lecture2.pdf                  | }}                                    | Non-Parametric Statistics             | Fieldtrip             | Robert Oostenveld   |
- | 10:45       | [hands-on](/workshop/meg-uk-2015/fieldtrip-stats-demo)        | Non-Parametric Statistics             | Fieldtrip                             |                       |                    
- | 11:15       |                                                               | **Coffee**                            |                                      
- | 11:45       | lecture {{:workshop:meg-uk-2015:lecture3.pdf                  | }}                                    | Source analysis: Bayesian perspective | SPM                   | Gareth Barnes       |
- | 12:00       | [hands-on](/workshop/meg-uk-2015/spm_source)                  | Source analysis: Bayesian perspective | SPM                                   | Saskia Helbling       |                    
- | 12:45       | lecture {{:workshop:meg-uk-2015:lecture4.pdf                  | }}                                    | Source analysis: beamforming          | Fieldtrip             | Robert Oostenveld   |
- | 13:00       | [hands-on](/workshop/meg-uk-2015/fieldtrip-beamformer-demo)   | Source analysis: beamforming          | Fieldtrip                             |                       |                    
- | 13:30       |                                                               | **Lunch**                             |                                      
- | 14:30       | lecture {{:workshop:meg-uk-2015:lecture5.pdf                  | }}                                    | Connectivity measures                 | Fieldtrip             | Robert Oostenveld   |
- | 14:45       | [hands-on](/workshop/meg-uk-2015/fieldtrip-connectivity-demo) | Connectivity measures                 | Fieldtrip                             |                       |                    
- | 15:30       | lecture {{:workshop:meg-uk-2015:lecture6.pdf                  | }}                                    | Dynamic causal modelling              | SPM                   | Bernadette van Wijk |
- | 16:00       | [hands-on](/workshop/meg-uk-2015/dcm_tutorial)                | Dynamic causal modelling              | SPM                                   | Ryszard Auksztulewicz |                    
- | 16:30       |                                                               | **Tea**                               |                                      
- | 17:00-18:30 | hands-on                                                      | Playground                            | Fieldtrip/SPM                         |                       |                    
+| ----        | --------------------------------------------                  | --------------------                  | --------------------  | ---                   |
+| 9:30        | lecture {{:workshop:meg-uk-2015:lecture1.pdf}}                | General Linear Model                  | SPM                   | Vladimir Litvak       |
+| 10:00       | [hands-on](/workshop/meg-uk-2015/spm_stats)                   | General Linear Model                  | SPM                   | Guillaume Flandin     |
+| 10:30       | lecture {{:workshop:meg-uk-2015:lecture2.pdf}}                | Non-Parametric Statistics             | Fieldtrip             | Robert Oostenveld     |
+| 10:45       | [hands-on](/workshop/meg-uk-2015/fieldtrip-stats-demo)        | Non-Parametric Statistics             | Fieldtrip             |                       |
+| 11:15       |                                                               | **Coffee**                            |                       |                       |
+| 11:45       | lecture {{:workshop:meg-uk-2015:lecture3.pdf}}                | Source analysis: Bayesian perspective | SPM                   | Gareth Barnes         |
+| 12:00       | [hands-on](/workshop/meg-uk-2015/spm_source)                  | Source analysis: Bayesian perspective | SPM                   | Saskia Helbling       |
+| 12:45       | lecture {{:workshop:meg-uk-2015:lecture4.pdf}}                | Source analysis: beamforming          | Fieldtrip             | Robert Oostenveld     |
+| 13:00       | [hands-on](/workshop/meg-uk-2015/fieldtrip-beamformer-demo)   | Source analysis: beamforming          | Fieldtrip             |                       |
+| 13:30       |                                                               | **Lunch**                             |                       |                       |
+| 14:30       | lecture {{:workshop:meg-uk-2015:lecture5.pdf}}                | Connectivity measures                 | Fieldtrip             | Robert Oostenveld     |
+| 14:45       | [hands-on](/workshop/meg-uk-2015/fieldtrip-connectivity-demo) | Connectivity measures                 | Fieldtrip             |                       |
+| 15:30       | lecture {{:workshop:meg-uk-2015:lecture6.pdf}}                | Dynamic causal modelling              | SPM                   | Bernadette van Wijk   |
+| 16:00       | [hands-on](/workshop/meg-uk-2015/dcm_tutorial)                | Dynamic causal modelling              | SPM                   | Ryszard Auksztulewicz |
+| 16:30       |                                                               | **Tea**                               |                       |                       |
+| 17:00-18:30 | hands-on                                                      | Playground                            | Fieldtrip/SPM         |                       |
 
 All demonstrations will be using the same [/workshop/meg-uk-2015/dataset](/workshop/meg-uk-2015/dataset).

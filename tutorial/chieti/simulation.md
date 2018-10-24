@@ -8,7 +8,7 @@ tags: chieti tutorial freq connectivity coherence granger dtf pdc
 ## Introduction
 
 `<note exercise>`
-This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015). 
+This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 `</note>`
 
 ## Background
@@ -22,4 +22,3 @@ We will simulate (virtual) channel-data and use it to compute various connectivi
 ## Simulated data with directed connections
 
 {{page>:tutorial:shared:connectivity_simulation_simulations}}
-

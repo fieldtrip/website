@@ -3,6 +3,12 @@ layout: default
 tags: tutorial aarhus meg+eeg beamforming ERF lcmv MEG-audodd
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Beamforming evoked fields and potentials in combined MEG/EEG data
 
 ## Introduction
@@ -22,18 +28,18 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 ## Procedure
 
-   
+
 To localize the oscillatory sources for the example dataset we will perform the following step
 
-*  Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/ft_read_mri)** 
+*  Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/ft_read_mri)**
 
-*  Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** 
+*  Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 
 *  Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
 Next, we head out to investigate the response to the finger movement. We will localize the sources of the motor beta-band activity following the following step
 
-*  Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)** 
+*  Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
 
 *  Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
 
@@ -55,7 +61,7 @@ Note that some of the steps will be skipped in this tutorial as we have already 
 
 ### Loading the data
 
-We will briefly explain the steps that allowed the generation of the epoched file in case you might want to generate the data structure yourself. 
+We will briefly explain the steps that allowed the generation of the epoched file in case you might want to generate the data structure yourself.
 
 The following steps had been performe
 
@@ -67,11 +73,11 @@ To run the following section of code you need the original dataset and trial fun
 
 	clear all
 	close all
-	
+
 	cfg = [];
 	cfg.dataset = 'oddball1_mc_downsampled.fif';
 	cfg.channel = 'MEG';
-	 
+
 	% define trials based on responses
 	cfg.trialdef.prestim       = 1.5;
 	cfg.trialdef.poststim      = 2.0;
@@ -79,13 +85,13 @@ To run the following section of code you need the original dataset and trial fun
 	cfg.trialdef.rsp_triggers  = [256 4096];
 	cfg.trialfun               = 'trialfun_oddball_responselocked';
 	cfg                        = ft_definetrial(cfg);
-	 
+
 	% preprocess MEG data
 	cfg.continuous             = 'yes';
 	cfg.demean                 = 'yes';
 	cfg.dftfilter              = 'yes';
 	cfg.dftfreq                = [50 100];
-	 
+
 	data_meg_clean    = ft_preprocessing(cfg);
 
 The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/data_meg_clean.mat).
@@ -109,7 +115,7 @@ Next, we perform the independent component analysis according to the following s
 	datads = ft_resampledata(cfg, data_meg_clean);
 	% perform the independent component analysis (i.e., decompose the data)
 	cfg        = [];
-	cfg.method = 'runica'; 
+	cfg.method = 'runica';
 	cfg.runica.maxsteps = 100;
 	comp = ft_componentanalysis(cfg, datads);
 	cfg           = [];
@@ -123,7 +129,7 @@ Now we could explore the decomposed data by using **[ft_databrowser](/reference/
 	cfg.channel = {comp_meg.label{1:5}}; % components to be plotted
 	cfg.layout = 'neuromag306mag.lay'; % specify the layout file that should be used for plotting
 	cfg.compscale = 'local';
-	
+
 	ft_databrowser(cfg, comp_meg);
 
 Take your time to browse and evaluate the topographies and the corresponding time courses. We will reject several of these with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
@@ -136,23 +142,23 @@ Take your time to browse and evaluate the topographies and the corresponding tim
 
 In the first step we re-segment the data into left and right hand responses using the information orgnized in the trialinfo substructure. We use **[ft_redefinetrial](/reference/ft_redefinetrial)**. After this we'll focus on right hand responses for simplicity and average over repetitions using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Finally, we use **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)** with a predefined latency window to plot the topography and time course of the early motor evoked field.
 
-	
+
 	cfg = [];
 	cfg.trials       = find(data_meg_clean_ica.trialinfo(:,1) == 256);
 	data_left     = ft_redefinetrial(cfg, data_meg_clean_ica);
-	 
+
 	cfg.trials       = find(data_meg_clean_ica.trialinfo(:,1) == 4096);
 	data_right    = ft_redefinetrial(cfg, data_meg_clean_ica);
 	%%
 	tlk = ft_timelockanalysis([],data_right);
 	%%
-	cfg = []; 
-	cfg.fontsize = 6; 
+	cfg = [];
+	cfg.fontsize = 6;
 	cfg.layout = 'neuromag306mag.lay';
-	cfg.xlim = [0.040553 0.062673]; 
+	cfg.xlim = [0.040553 0.062673];
 	figure;
 	subplot(2,2,1);ft_topoplotER(cfg, tlk);
-	
+
 	cfg.channel = {'MEG0431'}
 	cfg.xlim    = [-.2 1];
 	subplot(2,2,2);ft_singleplotER(cfg,tlk);
@@ -161,14 +167,14 @@ In the first step we re-segment the data into left and right hand responses usin
 
 *Figure 1: Topography and time course of the motor evoked response performed with the right hand.*
 
-`<note exercise>` 
-Use your knowledge about the distribution of the in and out going field. 
+`<note exercise>`
+Use your knowledge about the distribution of the in and out going field.
 What is the orientation of the source?
 Is this source likely located on a gyral bank or sylcus wall?
 `</note>`
 ### Loading the headmodel
 
-The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution. 
+The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
 We are going to use the forward model that was calculated in the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting) which you can download to your working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/headmodel_meg.mat).
 
 Load the forward model using the following cod
@@ -177,12 +183,12 @@ Load the forward model using the following cod
 
 ## Computing the leadfield
 
-The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution. 
+The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
 `<note important>`Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
 `</note>`
 
-We first prepare the magnetometer and electrode position information that can be also downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/) and [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/elec). 
+We first prepare the magnetometer and electrode position information that can be also downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/) and [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/elec).
 
 	dataset = 'oddball1_mc_downsampled.fif';
 	grad    = ft_read_sens(dataset,'senstype','meg');
@@ -207,8 +213,8 @@ Save the gri
 
 The grid data structure has the following field
 
-	grid = 
-	
+	grid =
+
 	              xgrid: [-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7]% X-axsis grid
 	              ygrid: [-8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9]% Y-axis grid
 	              zgrid: [-4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9]% Z-axis grid
@@ -223,12 +229,12 @@ The grid data structure has the following field
 
 ## (MEG) Source analysis on motor evoked field
 
-Using the data covariance matrix and the lead field matrices a spatial filter is calculated for each grid point. By applying the filter to the time-domain data we can then estimate the power for the pre- and post-response activity. This results in a power estimate for each grid point. 
+Using the data covariance matrix and the lead field matrices a spatial filter is calculated for each grid point. By applying the filter to the time-domain data we can then estimate the power for the pre- and post-response activity. This results in a power estimate for each grid point.
 We will focus on right hand responses. First, we select the latencies of the early evoked field and the pre response baselin
 
 	cfg = [];            
 	cfg.toilim = [-.15 -.05];
-	datapre = ft_redefinetrial(cfg, data_right); 
+	datapre = ft_redefinetrial(cfg, data_right);
 	cfg.toilim = [.05 .15];
 	datapost = ft_redefinetrial(cfg, data_right);          
 
@@ -267,8 +273,8 @@ Now using the headmodel and the precomputed leadfield we make three subsequent c
 
 The source data structure has the following field
 
-	sourceavg = 
-	
+	sourceavg =
+
 	      time: [1x876 double]   % time dimension of the input data
 	       dim: [14 18 14]       % 3D dimensions of the scanned space
 	    inside: [3528x1 logical] % locations inside the brain
@@ -336,7 +342,7 @@ The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' an
 #### Exercise: covariance matrix computation
 
 `<note exercise>`
-The covariance matrix was computed on the basis of the single trials. Compute the cov matrix on the basis of the mean over the trials and redo the steps above. Why and how is the source reconstructed power changed? 
+The covariance matrix was computed on the basis of the single trials. Compute the cov matrix on the basis of the mean over the trials and redo the steps above. Why and how is the source reconstructed power changed?
 `</note>`
 
 ## (MEG) Plotting sources of response related evoked field using statistical threshold
@@ -348,7 +354,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 {{youtube>x0hR-VsHZj8}}
 `</note>`
 
-First we will repeat some of the previous steps. We will compute the covariance matrix on the basis of the data including the pre and post-response latencies. This is followed by averaging of the pre and post data segments separately, yet keeping the individual observations using the option **cfg.keeptrials = 'yes'**. Here it is important that we also calculate the single-trial covariance using the option **cfg.covariance = 'yes'** as this will later be used to calculate the source activity. 
+First we will repeat some of the previous steps. We will compute the covariance matrix on the basis of the data including the pre and post-response latencies. This is followed by averaging of the pre and post data segments separately, yet keeping the individual observations using the option **cfg.keeptrials = 'yes'**. Here it is important that we also calculate the single-trial covariance using the option **cfg.covariance = 'yes'** as this will later be used to calculate the source activity.
 
 If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/headmodel_meg.mat),[datapre](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/datapre.mat),[datapost](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/datapost.mat),[grid](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/grid.mat),[data_right](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/data_right.mat)
 
@@ -364,7 +370,7 @@ If this is where you started in the tutorial, make sure you have downloaded and 
 	cfg.covariancewindow = [-.15 .15];
 	cfg.vartrllength = 2;
 	avg = ft_timelockanalysis(cfg,data_right);
-	
+
 	cfg = [];
 	cfg.keeptrials = 'yes';
 	cfg.covariance = 'yes'; % This is important as the single-trial source activity is calculated based on the covariance matrix
@@ -392,8 +398,8 @@ Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/f
 
 The source structure now contains the single trial estimates in the field **sourcepstM1.trial**
 
-	sourcepstM1 = 
-	
+	sourcepstM1 =
+
 	      time: [1x26 double]
 	       dim: [14 18 14]
 	    filter: {3528x1 cell}
@@ -419,14 +425,14 @@ Now we can statistically compare the difference between the pre and post respons
 	cfg.clustertail      = 0;
 	cfg.alpha            = 0.025;
 	cfg.numrandomization = 10000;
-	
+
 	ntrials = numel(sourcepreM1.trial);
 	design  = zeros(2,2*ntrials);
 	design(1,1:ntrials) = 1;
 	design(1,ntrials+1:2*ntrials) = 2;
 	design(2,1:ntrials) = [1:ntrials];
 	design(2,ntrials+1:2*ntrials) = [1:ntrials];
-	
+
 	cfg.design   = design;
 	cfg.ivar     = 1;
 	cfg.uvar     = 2;
@@ -482,10 +488,10 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 	cfg = [];
 	cfg.channel=data_right.label;
 	cfg.covariance='yes';
-	cfg.covariancewindow=[.05 .18]; 
+	cfg.covariancewindow=[.05 .18];
 	avg = ft_timelockanalysis(cfg,data_right);
 
-##### Perform source analysis 
+##### Perform source analysis
 
 	cfg=[];
 	cfg.method='lcmv';
@@ -527,7 +533,7 @@ Now we will use **[ ft_timelockanalysis](/reference/ ft_timelockanalysis )** and
 	cfg.toi          = -.5:0.05:1.75;               
 	cfg.keeptrials ='no';
 	tfrvc= ft_freqanalysis(cfg,virtsens);
-	
+
 	% baseline correction
 	cfg=[];
 	cfg.baseline=[-.5 0];
@@ -542,7 +548,7 @@ Now we can plot the result.
 	    cfg.channel = tlkvc.label{i};
 	    cfg.parameter = 'avg';
 	    cfg.xlim    = [-.3 1.75];
-	    
+
 	    subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
 	end;
 	for i=1:length(tfrvc.label)
@@ -558,7 +564,7 @@ Now we can plot the result.
 
 *Figure 4: Time course of activity in the primary motor cortex averaged across trials (left) and its single trial time-frequency decomposition right.*
 
-#### Exercise: Evoked vs. induced activity 
+#### Exercise: Evoked vs. induced activity
 
 `<note exercise>`
 Take your time to verbalize what you see. Try to decompose the averaged response into the time-frequency domain. Plot the result with and without baseline correction. Why is there a difference?
@@ -572,7 +578,7 @@ We will continue to analyse the EEG data according to a series of steps similar 
 	cfg = [];
 	cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 256);
 	data_eeg_left     = ft_redefinetrial(cfg, data_eeg_reref_ica);
-	 
+
 	cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 4096);
 	data_eeg_right    = ft_redefinetrial(cfg, data_eeg_reref_ica);
 
@@ -580,7 +586,7 @@ We will continue to analyse the EEG data according to a series of steps similar 
 
 	cfg = [];            
 	cfg.toilim = [-.15 -.05];
-	datapre = ft_redefinetrial(cfg, data_eeg_right); 
+	datapre = ft_redefinetrial(cfg, data_eeg_right);
 	cfg.toilim = [.05 .15];
 	datapost = ft_redefinetrial(cfg, data_eeg_right);          
 	%% output cov matrix of the entire interval
@@ -604,7 +610,7 @@ Load the EEG head model using the following cod
 
 ## (EEG) Lead field calculation
 
-The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**. 
+The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
 	cfg                 = [];
 	cfg.elec         = elec;
@@ -622,7 +628,7 @@ Discuss the option **cfg.lcmv.reducerank = 3**
 `</note>`
 ## (EEG) Source analysis
 
-Now that we have everything prepared we can start to calculate the spatial filter through which we we project the data from both conditions. 
+Now that we have everything prepared we can start to calculate the spatial filter through which we we project the data from both conditions.
 
 	cfg=[];
 	cfg.method='lcmv';
@@ -634,7 +640,7 @@ Now that we have everything prepared we can start to calculate the spatial filte
 	cfg.channel           = data_eeg_reref_ica.label;
 	cfg.senstype = 'EEG';
 	sourceavg=ft_sourceanalysis(cfg, avg);
-	
+
 	%%
 	cfg=[];
 	cfg.method='lcmv';
@@ -668,7 +674,7 @@ Finally, we can plot the result using the same masking strategy as in the MEG se
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
 	cfg.maskparameter = 'mask';
-	cfg.location = [-28 -17 67]; 
+	cfg.location = [-28 -17 67];
 	cfg.funcolorlim = [-.2 .2];
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,source_int);
@@ -694,9 +700,9 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	cfg = [];
 	cfg.channel=data_eeg_right.label;
 	cfg.covariance='yes';
-	cfg.covariancewindow=[.05 .18]; 
+	cfg.covariancewindow=[.05 .18];
 	avg = ft_timelockanalysis(cfg,data_eeg_right);
-	
+
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.senstype = 'EEG';
@@ -728,7 +734,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	cfg.preproc.lpfilter='yes';
 	cfg.preproc.lpfreq=40;
 	tlkvc=ft_timelockanalysis(cfg, virtsens);
-	
+
 	cfg              = [];
 	cfg.output       = 'pow';
 	cfg.method       = 'mtmconvol';
@@ -738,7 +744,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	cfg.toi          = -.5:0.05:1.75;               
 	cfg.keeptrials ='no';
 	tfrvc= ft_freqanalysis(cfg,virtsens);
-	
+
 	%% baseline correction
 	cfg=[];
 	cfg.baseline=[-.5 0];
@@ -753,7 +759,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	    cfg.channel = tlkvc.label{i};
 	    cfg.parameter = 'avg';
 	    cfg.xlim    = [-.3 1.75];
-	    
+
 	    subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
 	end;
 	for i=1:length(tfrvc.label)

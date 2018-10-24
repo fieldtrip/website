@@ -8,7 +8,7 @@ tags: chieti HCP-motort
 ## Introduction
 
 `<note exercise>`
-This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015). 
+This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 `</note>`
 
 In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org). The experiment in which this data was acquired is described in detail [here](/tutorial/shared/hcp_motort). This tutorial follows on the [MEG virtual channels and seed-based connectivity](/tutorial/chieti/virtualchannel) tutorial and continues with the data that has already partially been computed there.
@@ -40,7 +40,7 @@ Most data has already been prepared in the previous tutorial, here we just load 
 
 ### Whole brain connectivity, starting at a seed location
 
-Previously we computed the time-ferquency representation over the full time and frequency range, and we computed with "mtmfft" the multi-tapered spectral representation at a single time-frequency point. We can also use wavelets to obtain the spectral estimate at a single time-ferquency point. 
+Previously we computed the time-ferquency representation over the full time and frequency range, and we computed with "mtmfft" the multi-tapered spectral representation at a single time-frequency point. We can also use wavelets to obtain the spectral estimate at a single time-ferquency point.
 
     cfg = [];
     cfg.channel = 'meg';
@@ -58,7 +58,7 @@ The have pre-computed the lead field for a full 3-D grid with source locations. 
     cfg.grid = leadfield;
     cfg.method = 'pcc';
     cfg.pcc.fixedori = 'yes';
-    
+
     source = ft_sourceanalysis(cfg, freq);
 
 The source level data now contains the complex-values spectral estimate at each grid location.
@@ -67,7 +67,7 @@ The source level data now contains the complex-values spectral estimate at each 
     plot(squeeze(freq.fourierspctrm(:,1,1,1)), '.')
     xlabel('real');
     ylabel('imag');
-    
+
     figure
     plot(source.avg.mom{find(source.inside, 1, 'first')}, '.')
     xlabel('real');
@@ -80,7 +80,7 @@ In the previous tutorial we have determined some regions of interest. These are 
     pos = lh_seed_pos;
     % pos = rh_seed_pos;
     % pos = ml_seed_pos;
-    
+
     % compute the nearest grid location
     dif = leadfield.pos;
     dif(:, 1) = dif(:, 1)-pos(1);
@@ -114,7 +114,7 @@ It will look nicer if we interpolate the connectivity map on the subject's indiv
     cfg = [];
     cfg.parameter = 'cohspctrm';
     source_coh_int = ft_sourceinterpolate(cfg, source_coh, individual_mri);
-    
+
     cfg = [];
     cfg.funparameter = 'cohspctrm';
     ft_sourceplot(cfg, source_coh_int);
@@ -131,7 +131,3 @@ Subsequently, you can make a contrast between left-hand and right-hand connectiv
 ### All-to-all connectivity
 
 In principle it is also possible to compute all-to-all source connectivity. However, that requires more memory than is available in the workshop computers. The source model consists of 24024 locations, which means that the connectivity will consist of a 24024x24024 matrix. Each element is 8 bytes, which means that the whole matrix requires about ~4.5 GB of RAM.
-
- 
- 
-
