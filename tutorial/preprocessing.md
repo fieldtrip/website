@@ -36,11 +36,9 @@ The output of ft_definetrial is a configuration structure containing the field c
 
 {{page>:tutorial:shared:dataset}}
 
-
 ## Procedure
 
 The following steps are taken in this tutorial:
-
 
 *  Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
 
@@ -54,7 +52,6 @@ The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/re
 
 Do the trial definition for the fully incongruent (FIC) conditio
 
-
 	  cfg                         = [];
 	  cfg.dataset                 = 'Subject01.ds';
 	  cfg.trialfun                = 'ft_trialfun_general'; % this is the default
@@ -65,9 +62,7 @@ Do the trial definition for the fully incongruent (FIC) conditio
 
 	  cfg = ft_definetrial(cfg);
 
-
 This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined.
-
 
 The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **[ft_preprocessing](/reference/ft_preprocessing)**.
 
@@ -75,13 +70,11 @@ The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **
     cfg.continuous = 'yes';
     dataFIC = ft_preprocessing(cfg);
 
-
 Save the preprocessed data to dis
 
     save PreprocData dataFIC
 
 The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure dataFIC which has the following field
-
 
 	dataFIC =
 	           hdr: [1x1 struct]
@@ -93,7 +86,6 @@ The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structu
 	     trialinfo: [87x1 double]
 	          grad: [1x1 struct]
 	           cfg: [1x1 struct]
-
 
 The most important fields are dataFIC.trial containing the individual trials and dataFIC.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
 
@@ -185,17 +177,14 @@ Save the trial function together with your other scripts as mytrialfun.m. To ens
     cfg.trialdef.prestim    = 1; % in seconds
     cfg.trialdef.poststim   = 2; % in seconds
 
-
     cfg = ft_definetrial(cfg);
 
     cfg.channel = {'MEG' 'STIM'};
     dataMytrialfun = ft_preprocessing(cfg);
 
-
 When you do not specify cfg.trialfun, **[ft_definetrial](/reference/ft_definetrial)** will call a function named trialfun_general as default. Then trials will be defined as we have seen it in the earlier section (Reading and preprocessing the interesting trials).
 
 The output dataMytrialfun now contains all of the trials of the three conditions (since we specified all three triggers values: 3, 5 and 9). It also contains a field dataMytrialfun.trialinfo, which contains the 4th column of the trl (trial definition) which contains the trigger values, i.e., it tells you to which condition each trial belong
-
 
 	dataMytrialfun =
 
@@ -208,7 +197,6 @@ The output dataMytrialfun now contains all of the trials of the three conditions
 	     trialinfo: [261x1 double]
 	          grad: [1x1 struct]
 	           cfg: [1x1 struct]
-
 
 More on the trialinfo field can be found in the [faq](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline).
 

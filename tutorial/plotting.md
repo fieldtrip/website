@@ -395,7 +395,6 @@ With the **[/reference/ft_sourceplot](/reference/ft_sourceplot)** function you c
 
 In visualising source reconstructed data, you should consider that  there are two principled ways of representing the spatial dimension of source reconstructed data:
 
-
 *  On a regular, 3-dimensional grid, i.e. volumetric data like an MRI scan
 
 *  On a surface geometry, i.e. a cortical sheet.
@@ -464,7 +463,6 @@ Let us first provide the basic code to use one of these plotting methods, using 
 
 The three essential cfg parameters ar
 
-
 *  cfg.anaparameter the anatomy parameter, specifying the anatomy to be plotted
 
 *  cfg.funparameter the functional parameter, specifying the functional data to be plotted
@@ -494,7 +492,6 @@ Imagine that your functional data has values ranging from -3 to 3. Here we plot 
     cfg.opacitymap    = 'rampup'
     cfg.opacitylim    = [0 3] % or 'zeromax'
 
-
 #### Example 2: Plotting high absolute values
 
 Suppose the functional data is the same as in example 1, but now we only wants to plot the high negative values and high positive values (using ‘maxabs’). We set these high absolute values to opaque, and the values around zero to transparen
@@ -504,14 +501,12 @@ Suppose the functional data is the same as in example 1, but now we only wants t
     cfg.opacitymap    = 'vdown'
     cfg.opacitylim    = [-3 3] % or 'maxabs'
 
-
 #### Example 3: Masking voxels outside values of interest
 
 Here, we make a field in the data with an opacity value for each voxel, and apply that as your mask. For instance if you only want to plot the values between 2 and 2.5 you can specif
 
     data.mask         = (data.fun>2 & data.fun<2.5)
     cfg.maskparameter = 'mask'
-
 
 ### Plotting on a brain surface
 
@@ -521,9 +516,7 @@ The representation of source activity on a surface results from source estimatio
 
 Scalar data (e.g., time-averaged activity, frequency-specific power estimates, statistics, etc.) can be plotted using the ft_plot_mesh function. Alternatively, volumetric data can also be rendered on a surface by projecting it to a surface geometry, using **[/reference/ft_sourceplot](/reference/ft_sourceplot)**. An example of the latter is given below, where we use the same data as in the preceding section.
 
-
 #### Project volumetric data to an MNI white-matter surface surface
-
 
     cfg = [];
     cfg.method         = 'surface';
@@ -542,7 +535,6 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
 ![image](/media/tutorial/plotting/2017/fig34.png)
 
 If you enable the camera toolbar (menu option "view", "camera toolbar") you have more options for controlling the 3-dimensional rendering, e.g. change perspective, change the position of the light (used for relection and shadows).
-
 
 As with the channel-level multiplots, you can change the colormap that maps the functional values on the colors.
 
@@ -573,8 +565,6 @@ Since source-level function data requires three dimensions for "space" and uses 
 
 Although MATLAB is a very flexible development and analysis environment, it is not super-fast in visualisation. Hence external visualisation tools are sometimes more useful for exploring your data. Volumetric and surface based data can be exported to standard file formats using **[ft_sourcewrite](/reference/ft_sourcewrite)**. Subsequently, you can use external tools such as
 
-
-
 *  [MRIcron](http://www.mccauslandcenter.sc.edu/mricro/mricron/index.html)
 
 *  [OpenWallnut](http://www.openwalnut.org)
@@ -583,11 +573,9 @@ Although MATLAB is a very flexible development and analysis environment, it is n
 
 *  [gramm](https://github.com/piermorel/gramm)
 
-
 ## Suggested further reading
 
 Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/layout) explains how this mapping is constructed.   
-
 
 Frequently asked question
 {{topic>plot +faq &list}}

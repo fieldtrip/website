@@ -3,7 +3,6 @@ layout: default
 tags: example meg timelock source dipole fixme MEG-tactile
 ---
 
-
 # Fit a dipole to the tactile ERF after mechanical stimulation
 
 ## Description
@@ -12,7 +11,6 @@ The Matlab script is given first; the figures that this script produces are at t
 
 The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) is available from our FTP server.
 ## Matlab script
-
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Tactile Stimulus Dipolefit
@@ -141,7 +139,6 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
 	figure; ft_sourceplot(cfg, mri)
 	cfg.location = dipM100.dip.pos * 10;  % convert from cm to mm
 	figure; ft_sourceplot(cfg, mri)
-
 
 ## Figures
 

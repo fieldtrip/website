@@ -4,7 +4,6 @@ layout: default
 
 # Inverse problem
 
-
 ## Introduction
 
 In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [ preprocessing](http://www.fieldtriptoolbox.org/workshop/baci2017/preprocessing ).
@@ -24,12 +23,9 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 ## BEM
 
-
-
 ###  Dipole fit
 
 First we load the relevant data
-
 
 	load elec
 	load sourcemodel
@@ -40,7 +36,6 @@ First we load the relevant data
 
 Then we do the dipole fit
 
-
 	% Dipole fit
 	cfg = [];
 	cfg.numdipoles    =  1;                             %number of expected 
@@ -49,7 +44,6 @@ Then we do the dipole fit
 	cfg.elec          = elec;                           %the electrode model
 	cfg.latency       = 0.025;                          %the latency of interest
 	dipfit_bem        = ft_dipolefitting(cfg,EEG_avg);
-
 
 	dipfit_bem.dip
 	
@@ -65,19 +59,16 @@ A quick look dipfit_bem.dip gives us information about the dipole fit. Especiall
 
 And we visualize the dipole and see where it was localized in the brain.
 
-
 	%Visualise dipole fit
 	ft_plot_mesh(headmodel_bem.bnd(3));
 	alpha 0.7;
 	ft_plot_dipole(dipfit_bem.dip.pos(1,:), mean(dipfit_bem.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
-
 
 ![image](/media/workshop/baci2017/dipole_fit_bem.png@500)
 ![image](/media/workshop/baci2017/dipole_fit_bem2.png@500)
 
 *Figure 1. Dipole computed with BEM model*
 ### Minimum norm estimate
-
 
 	cfg                     = [];
 	cfg.method              = 'mne';                    %specify minimum norm estimate as method
@@ -89,9 +80,7 @@ And we visualize the dipole and see where it was localized in the brain.
 	cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
 	minimum_norm_bem        = ft_sourceanalysis(cfg,EEG_avg);
 
-
 For the purpose of visualisation we internet the MNE results onto the replaced anatomical MRI.
-
 
 	cfg            = [];
 	cfg.parameter  = 'avg.pow';
@@ -99,12 +88,10 @@ For the purpose of visualisation we internet the MNE results onto the replaced a
 
     
 
-
 	cfg = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
 	ft_sourceplot(cfg,interpolate); 
-
 
 ![image](/media/workshop/baci2017/mne.png@900)
 *Figure 2. Minimum norm estimation with BEM model*
@@ -115,11 +102,7 @@ For the purpose of visualisation we internet the MNE results onto the replaced a
 You can play around with cfg.mne.lambda? Do you see the influence of different lambdas? 
 `</note>`
 
-
-
-
 ## FEM
-
 
 	%% FEM
 	load elec
@@ -128,7 +111,6 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	load leadfield_fem
 	load mri_resliced
 	load EEG_avg
-
 
 	%% dipole fit
 	cfg = [];
@@ -140,7 +122,6 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	cfg.latency       = 0.025;
 	dipfit_fem        = ft_dipolefitting(cfg,EEG_avg);
 
-
 	ft_plot_mesh(headmodel_bem.bnd(3));alpha 0.7;
 	ft_plot_dipole(dipfit_fem.dip.pos(1,:), mean(dipfit_fem.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
@@ -148,7 +129,6 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 ![image](/media/workshop/baci2017/dipole_fit_fem2.png@500)
 
 *Figure 3. Dipole computed with FEM model*
-
 
 	% Minimum norm estimate
 	cfg         = [];
@@ -161,33 +141,26 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	cfg.mne.scalesourcecov = 'yes';
 	minimum_norm  = ft_sourceanalysis(cfg,EEG_avg);
 
-
-
 	cfg            = [];
 	cfg.parameter  = 'avg.pow';
 	interpolate  = ft_sourceinterpolate(cfg, minimum_norm , mri_resliced);
-
 
 	cfg = [];
 	cfg.funparameter = 'pow';
 	cfg.method        = 'ortho';
 	ft_sourceplot(cfg,interpolate); 
 
-
 ![image](/media/workshop/baci2017/mne.png@900)
 *Figure 4. Minimum norm estimation with FEM model*
 ## Comparison of BEM and FEM
-
 
 	ft_plot_mesh(headmodel_bem.bnd(3));alpha 0.7;
 	ft_plot_dipole(dipfit_fem.dip.pos(1,:), mean(dipfit_fem.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 	ft_plot_dipole(dipfit_bem.dip.pos(1,:), mean(dipfit_bem.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 
-
 ![image](/media/workshop/baci2017/bem_fem1.png@500) ![image](/media/workshop/baci2017/bem_fem2.png@500)
 
 *Figure 5. Comparison of a BEM and FEM dipole fit*
-
 
 #### Exercise 2
 

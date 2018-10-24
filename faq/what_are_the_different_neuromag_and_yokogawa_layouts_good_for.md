@@ -3,7 +3,6 @@ layout: default
 tags: faq
 ---
 
-
 ## What are the different Neuromag and Yokogawa layouts good for?
 
 The Neuromag and Yokogawa MEG systems use two different kind of sensors, gradiometers and magnetometers. Gradiometer consists of two coils, and the data recorded of such a pair reflects the gradient of the magnetic field, measured in Tesla per distance unit. In contrast, magnetometers measure the magnetic field using one coil only, resulting in a measure in Tesla. Since the two type of sensors measure in different units, data obtained from these two types of sensor cannot be easily compared directly. Therefore FieldTrip features layouts for gradiometer and magnetometer sensor positions separately, so that the user can visualize either the magnetometer data or the gradiometer data.

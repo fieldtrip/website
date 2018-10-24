@@ -15,7 +15,6 @@ The code development project mentioned on this page has been finished by now. Ch
 
 The idea is to make a graphical user interface that allows the user to step through a sequence of functions, where for example each block consists of a computation with the associated graphical feedback. E.g. consider the following analysis protoco
 
-
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Step 1: do the preprocessing
 	%
@@ -63,7 +62,6 @@ The idea is to make a graphical user interface that allows the user to step thro
 	cfg.layout      = 'CTF151.lay';
 	multiplotTFR(cfg, TFRhann);
 
-
 Using the wizard on this analalysis protocol would result in a graphical user interface like thi
 
 ![image](/media/development/wizard/wizard1.png)
@@ -72,7 +70,6 @@ Using the wizard on this analalysis protocol would result in a graphical user in
 Pressing the "next" button would result in the snippet of matlab code inside the edit box to be executed, pressing the "previous" button results in going one step back. The code would be executed in the main Matlab workspace as if it were a normal script, which means that the variable names are also defined in the wizard. Loading and saving data from/to files would also be easy to implement using the standard Matlab "uigetfile" function.
 
 The wizard would have to read and parse the matlab script that contains the documentation and the code, and it would have to detect the sections by the "%%%%%" separators. To make a usefull wizard using this graphical interface would then only require making example matlab scripts with a well-defined structure with comments and with code. 
-
 
 ## Ideas for further refinement
 

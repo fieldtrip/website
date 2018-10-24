@@ -3,11 +3,9 @@ layout: default
 tags: realtime development
 ---
 
-
 # Scratchpad for the realtime buffer interface
 
 This page contains some loose ends and random pieces that don't fit elsewhere. 
-
 
 *  [closing the loop](/closing the loop) lists some methods for interacting with, and controlling the external world (i.e. outside the analysis computer)
 
@@ -38,7 +36,6 @@ The following macro names are defined at compile time and may be handy for debug
               of the standard they comply.
 
 The threaded functions should be checked with http://en.wikipedia.org/wiki/Reentrant in mind
-
 
 ## Suggestions for improvement
 
@@ -127,7 +124,6 @@ See also the light-header proposal.
 It would be nice to mention a list of some available chunks. For
 example, the gradiometer positions are not mentioned in that page.
 
-
 ### Timestamps
 
 We are missing discussion on multi-platform (Windows+Linux+OSX) issues, due to
@@ -173,8 +169,6 @@ In the offline case, adding index information to the events is useful since it
 reflects the incoming following order of events, which may differ from the
 ordering based on the sample field. 
 
-
-
 ### Homogeneous sample rate
 
 The assumption here is that all channels have the same sampling frequency. TMSi
@@ -185,7 +179,6 @@ events can be useful in case requesting events from far history or in case many
 events occur in a relatively short time interval. Also, prior information about
 the buffer sizes seems not available. This would be useful since in the current
 version such change is reflected in a sudden decrease in the number of samples.
-
 
 ### Versions and compatibility
 
@@ -207,7 +200,6 @@ implementation can be certified as adhering to a particular version of the
 protocol. The reference implementation should contain an independent mechanism
 for verifying the compliance with particular versions of the protocol. 
 
-
 ### Doc and site
 
 It is not clear from the page, how to call the functions in practice. For
@@ -218,7 +210,6 @@ to be used.
 Er moet een centrale tabel moeten hebben met alle constanten. Chunk information is hardly available. De pagina buffer_protocol zou alleen volgens mij alleen
 constanten moeten hebben die niet specifiek zijn voor de referentie
 implementatie. 
-
 
 #### FAQ 
 

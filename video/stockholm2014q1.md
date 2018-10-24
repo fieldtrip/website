@@ -3,7 +3,6 @@ layout: default
 tags: video
 ---
 
-
 # FieldTrip/MNE workshop at NatMEG, Stockholm (January 2014)
 
 ### FieldTrip introduction by Robert Oostenveld

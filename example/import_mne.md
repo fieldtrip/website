@@ -3,7 +3,6 @@ layout: default
 tags: example mne source
 ---
 
-
 # How to import data from MNE-Python and FreeSurfer
 
 ![image](/media/example/import_mne.png@400)
@@ -134,5 +133,4 @@ tags: example mne source
 	save(src_outFname, 'sourcemodel', '-v7.3');
 	save(hdm_outFname, 'headmodel', '-v7.3');
 	disp('DONE')
-
 

@@ -3,7 +3,6 @@ layout: default
 tags: meg-uk-2015
 ---
 
-
 # SPM DCM demo
 
 In this demo we will specify one subject’s dynamic causal model, compare several models across participants, and look at posterior estimates of parameters (connectivity weights). 
@@ -11,7 +10,6 @@ In this demo we will specify one subject’s dynamic causal model, compare sever
 With DCM for evoked responses one typically models smooth ERP/ERF deflections. The dataset prepared for you has been low-pass filtered with a 48Hz cut-off. 
 
 Now you can **specify one DCM model** for this subject’s dat
-
 
 *  In the Menu window press the DCM button – this will open a new window called “DCM for M/EEG”. A figure of this panel has been included at the end of the tutorial.
 
@@ -46,7 +44,6 @@ Now you can **specify one DCM model** for this subject’s dat
 
 ![image](/media/workshop/meg-uk-2015/image001hires3.png@400)
 
-
 *  In terms of the A (baseline connectivity), B (modulatory connectivity) and C (input) matrices, this model can be decomposed into the connections listed below. You can also turn to the last page of this instruction sheet to see if you have correctly defined the model.
 
 	
@@ -80,8 +77,6 @@ Now you can **specify one DCM model** for this subject’s dat
 	(1) rOFA
 	(2) lOFA
 
-
-
 *  Finally, we do not impose constraints on dipolar symmetry, optimise source location, lock trial-specific effects or assume trial-specific inputs. You can ignore the wavelet options – these are used when modelling spectral responses (e.g. with CSD or IND models).
 
 *  You can now save this model definition as a file, e.g. as “DCM_inpO1F0_modF1B1”.
@@ -92,9 +87,7 @@ Now you can **specify one DCM model** for this subject’s dat
 
 ![image](/media/workshop/meg-uk-2015/image_inv.png@400)
 
-
 To compare different models and select the winning model, you should use **Bayesian model selection**. You will find a “BMS” button at the bottom of the “DCM for M/EEG” window. Also, you will find some inverted DCMs for several subjects in your folder.
-
 
 *  You can load the “BMS_batch.mat” file to use the pre-specified batch structure. To specify it manually, first you will need to create and select a directory where you will store your BMS results.
 
@@ -113,11 +106,9 @@ To compare different models and select the winning model, you should use **Bayes
 
 **Parameter inference**
 
-
 *  First, you can inspect a single model from a single participant using the GUI. To do this, in Matlab go to the "pre-computed" directory, and in the GUI load one of Subject 15’s inverted models. Then use the drop-down menu in the lower left corner of the “DCM for M/EEG” window to view the results. For example, selecting “ERPs (mode)” will plot the observed (dashed lines) and model-predicted (solid lines) responses for all experimental conditions and spatiotemporal modes you have modelled. “ERPs (sources)” will plot the activity modelled for each neuronal source, including its different neuronal populations – in case of an ERP neuronal model, the solid lines will represent superficial pyramidal cells which contribute most strongly to the measured signals. Further options include e.g. “Coupling (B)” which will show you posterior estimates of modulatory connectivity parameters (the B matrix), and “trial-specific effects” (see below) which will show you connection strengths for different conditions (here 100% represents the connection strength for the baseline condition). Finally, “Response (image)” will show you the model fits across all modelled time points and sensors. This is the end of our demo.
 
 ![image](/media/workshop/meg-uk-2015/image007.png@400)
-
 
 *  To formally test whether your posterior parameter estimates are significant, you can use Bayesian parameter averaging (spm_dcm_average) of the winning model across all participants and inspect the posterior estimates and probabilities of parameters (e.g. DCM.Ep.B{1}(1,3) and  DCM.Pp.B{1}(1,3) will give you the posterior estimate and probability of the strength of a forward modulatory connection from region 3 to region 1). In a random effects context, you can load the posterior estimates of parameters from single subjects’ DCM structures – here, this would be one value of DCM.Ep.B{1}(1,3) per subject – to perform a one-sample t-test.
 

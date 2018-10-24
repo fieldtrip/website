@@ -3,7 +3,6 @@ layout: default
 tags: references
 ---
 
-
 # Literature
 
 FieldTrip is [Open Source software](http://www.opensource.org) and you can use it freely under the  [GPL license](http://www.gnu.org/copyleft/gpl.html) without other restrictions. However, we do appreciate getting acknowledged for the contribution of our project to your research. Please note that your references to FieldTrip also help us to ensure continued funding for the FieldTrip project, code development and support.

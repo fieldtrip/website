@@ -258,7 +258,6 @@ Nx2 matrix with artifact segments, this is added to the cfg by using FT_ARTIFACT
 
 ** cfg.artfctdef.zvalue.artpadding ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
 
-
 ** cfg.artfctdef.zvalue.baselinewindow ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
 [begin end] in seconds, the default is the complete trial
 
@@ -288,9 +287,7 @@ bandstop frequency range, specified as [low high] in Hz
 
 ** cfg.artfctdef.zvalue.channel ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
 
-
 ** cfg.artfctdef.zvalue.cutoff ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
-
 
 ** cfg.artfctdef.zvalue.demean ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
 'no' or 'yes'
@@ -302,7 +299,6 @@ bandstop frequency range, specified as [low high] in Hz
 'no' or 'yes' line noise removal using discrete fourier transform
 
 ** cfg.artfctdef.zvalue.fltpadding ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
-
 
 ** cfg.artfctdef.zvalue.hilbert ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
 'no' or 'yes'
@@ -344,7 +340,6 @@ length of median filter
 'no' or 'yes'
 
 ** cfg.artfctdef.zvalue.trlpadding ** // [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
-
 
 ** cfg.artifact ** // [ft_removetemplateartifact](/reference/ft_removetemplateartifact) //
 Mx2 matrix with sample numbers of the artifact segments, e.g. obtained from FT_ARTIFACT_EOG
@@ -452,48 +447,33 @@ single number or Nx1 vector, expressed in samples relative to the start of the i
 
 ** cfg.binica.annealdeg ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.annealstep ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.binica.bias ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.blocksize ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.binica.extended ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.filenum ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.binica.lrate ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.maxsteps ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.binica.momentum ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.pca ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.binica.posact ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.sphering ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.binica.stop ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.verbose ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.binica.weightsin ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.blocksize ** // [ft_databrowser](/reference/ft_databrowser) //
 duration in seconds for cutting the data up
@@ -787,7 +767,6 @@ string, 'global' or 'local', defines whether the colormap for the topographic sc
 
 ** cfg.conductivity ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
 
-
 ** cfg.conductivity ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
 a number or a vector containing the conductivities of the compartments
 
@@ -857,7 +836,6 @@ number or list with indices, control variable(s)
 string with the filename
 
 ** cfg.dataformat ** // [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
-
 
 ** cfg.datahdr ** // [ft_audiovideobrowser](/reference/ft_audiovideobrowser) //
 header structure of the EEG/MEG data, see FT_READ_HEADER
@@ -957,7 +935,6 @@ initial dipole position, matrix of Ndipoles x 3
 
 ** cfg.dip.signal ** // [ft_dipolesimulation](/reference/ft_dipolesimulation) //
 
-
 ** cfg.dipfit.display ** // [ft_dipolefitting](/reference/ft_dipolefitting) //
 level of display, can be 'off', 'iter', 'notify' or 'final' (default = 'iter')
 
@@ -993,9 +970,7 @@ integer, amount of downsampling before segmentation (default = 1; i.e., no downs
 
 ** cfg.dss.denf.function ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.dss.denf.params ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.duration ** // [ft_steadystatesimulation](/reference/ft_steadystatesimulation) //
 scalar, trial length in seconds (default = 4.56)
@@ -1012,7 +987,6 @@ number, scaling to apply to the ECG channels prior to display
 number, scaling to apply to the EEG channels prior to display
 
 ** cfg.elec ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
-
 
 ** cfg.elec ** // [ft_electrodeplacement](/reference/ft_electrodeplacement) //
 struct containing previously placed electrodes (this overwrites cfg.channel)
@@ -1072,81 +1046,55 @@ empty or a list of event values (can be numeric or string)
 
 ** cfg.fastica.a1 ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.a2 ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.approach ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.dewhiteMat ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.displayInterval ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.displayMode ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.epsilon ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.finetune ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.firstEig ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.g ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.initGuess ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.interactivePCA ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.lastEig ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.maxFinetune ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.maxNumIterations ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.mu ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.numOfIC ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.only ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.pcaD ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.pcaE ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.sampleSize ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.stabilization ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.verbose ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.fastica.whiteMat ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.fastica.whiteSig ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.feedback ** // [ft_megplanar](/reference/ft_megplanar) //
-
 
 ** cfg.feedback ** // [ft_defacevolume](/reference/ft_defacevolume) //
 'no' or 'yes', whether to provide graphical feedback (default = 'no')
@@ -1395,7 +1343,6 @@ string, functional parameter that is color coded
 
 ** cfg.grad ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
 
-
 ** cfg.grad ** // [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot) //
 structure with gradiometer definition
 
@@ -1437,7 +1384,6 @@ structure, see FT_PREPARE_SOURCEMODEL or FT_PREPARE_LEADFIELD
 
 ** cfg.grid.filter ** // [ft_sourceanalysis](/reference/ft_sourceanalysis) //
 
-
 ** cfg.grid.filter ** // [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel) //
 or alternatively cfg.grid.avg.filter
 
@@ -1446,9 +1392,7 @@ N*1 vector with boolean value whether grid point is inside brain (optional)
 
 ** cfg.grid.lbex ** // [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel) //
 
-
 ** cfg.grid.leadfield ** // [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis) //
-
 
 ** cfg.grid.nonlinear ** // [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel) //
 'no' (or 'yes'), use non-linear normalization
@@ -1466,7 +1410,6 @@ number (e.g. 1 cm) for automatic grid generation
 number (e.g. 6) of the resolution of the template MNI grid, defined in mm
 
 ** cfg.grid.subspace ** // [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel) //
-
 
 ** cfg.grid.template ** // [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel) //
 specification of a template grid (grid structure), or a filename of a template grid (defined in MNI space), either cfg.grid.resolution or cfg.grid.template needs to be defined. If both are defined cfg.grid.template prevails
@@ -1507,7 +1450,6 @@ determines the length of the used wavelets in standard deviations of the implici
 string with the filename
 
 ** cfg.headerformat ** // [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue) //
-
 
 ** cfg.headmodel ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
 (required) string, filename of precomputed FEM leadfield
@@ -1639,9 +1581,7 @@ deal with filter instability, 'no', 'reduce', 'split' (default = 'no')
 
 ** cfg.icasso.Niter ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.icasso.mode ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.image ** // [ft_prepare_layout](/reference/ft_prepare_layout) //
 filename, use an image to construct a layout (e.g. useful for ECoG grids)
@@ -1713,7 +1653,6 @@ string 'yes', 'no' (default = 'yes') interpolate over channels containing NaNs
 'linear','cubic','nearest','v4' (default = 'v4') see GRIDDATA
 
 ** cfg.inwardshift ** // [ft_megrealign](/reference/ft_megrealign) //
-
 
 ** cfg.inwardshift ** // [ft_megplanar](/reference/ft_megplanar) //
 depth of the source layer relative to the head model surface (default = 2.5 cm, which is appropriate for a skin-based head model)
@@ -2637,7 +2576,6 @@ scalar, the length of time to be plotted in one panel (default = 3600)
 
 ** cfg.point ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
 
-
 ** cfg.polyorder ** // [ft_preprocessing](/reference/ft_preprocessing) //
 polynome order for poly trend removal (default = 2; note that all lower-order trends will also be removed when using cfg.polyremoval)
 
@@ -2878,54 +2816,37 @@ number, rotation around the z-axis in degrees (default = [], which means automat
 
 ** cfg.runica.anneal ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.annealdeg ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.runica.bias ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.block ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.runica.extended ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.interput ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.runica.logfile ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.lrate ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.runica.maxsteps ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.momentum ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.runica.pca ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.posact ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.runica.specgram ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.sphering ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.runica.stop ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.verbose ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.runica.weights ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ## S
 
@@ -3105,9 +3026,7 @@ range of slices in data, (default = 'auto') 'auto', full range of data [min max]
 
 ** cfg.sobi.n_sources ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 
-
 ** cfg.sobi.p_correlations ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
-
 
 ** cfg.spacemax ** // [ft_sliceinterp](/reference/ft_sliceinterp) //
 'auto' (default) or integer (last slice position)
@@ -3302,7 +3221,6 @@ single electrode set that serves as standard
 
 ** cfg.template ** // [ft_megrealign](/reference/ft_megrealign) //
 
-
 ** cfg.template ** // [ft_megrealign](/reference/ft_megrealign) //
 datasets that are averaged into the standard
 
@@ -3356,7 +3274,6 @@ cell-array with one time axis per trial, which are for example obtained from an 
 
 ** cfg.tissue ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
 
-
 ** cfg.tissue ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
 a string or integer, to be used in combination with a 'seg' for the second intput. If 'brain', 'skull', and 'scalp' are fields present in 'seg', then cfg.tissue need not be specified, as these are defaults, depending on cfg.method. Otherwise, cfg.tissue should refer to which field(s) of seg should be used.
 
@@ -3376,7 +3293,6 @@ see above; in combination with 'seg' input; default options are 'brain' or 'scal
 {'scalp', 'skull', 'brain'};
 
 ** cfg.tissueval ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
-
 
 ** cfg.title ** // [ft_sliceinterp](/reference/ft_sliceinterp) //
 optional title (default is %%''%%)
@@ -3415,7 +3331,6 @@ Nx1 cell-array with the channel labels
 cell-array containing the filenames of the tissue probability maps
 
 ** cfg.transform ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
-
 
 ** cfg.translate ** // [ft_defacemesh](/reference/ft_defacemesh), [ft_defacevolume](/reference/ft_defacevolume) //
 initial position of the center of the box (default = [0 0 0])
@@ -3492,7 +3407,6 @@ optional truncation of the singular value spectrum (default = 'no')
 ## U
 
 ** cfg.unit ** // [ft_prepare_headmodel](/reference/ft_prepare_headmodel) //
-
 
 ** cfg.unmixing ** // [ft_componentanalysis](/reference/ft_componentanalysis) //
 NxN unmixing matrix
@@ -3653,5 +3567,4 @@ plotting limits for color dimension, 'maxmin', 'maxabs', 'zeromax', 'minzero', o
 
 ** cfg.zscore ** // [ft_denoise_pca](/reference/ft_denoise_pca) //
 standardise reference data prior to PCA (default = 'no')
-
 

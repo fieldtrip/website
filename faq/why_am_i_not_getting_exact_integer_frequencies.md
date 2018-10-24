@@ -3,18 +3,15 @@ layout: default
 tags: faq preprocessing freq
 ---
 
-
 #  Why am I not getting integer frequencies?
 
 Probably this is due to your time windows being one sample longer than you expect, at a sampling frequency of 1000 Hz you might have e.g. 1001 samples rather than 1000 samples.
 
 When defining time and/or frequency intervals, you should be aware about the different behaviour of FieldTrip functions of the specification of bounds. The problem is sketched in general on the Wikipedia lemma on [interval notation](http://en.wikibooks.org/wiki/Algebra/Interval_Notation). 
 
-
 ## Using ft_definetrial with INCLUSIVE and/or EXCLUSIVE interval selection
 
 For trigger-based trial selection, when using the default trial function **ft_trialfun_general**, the cfg.trialdef.postim value is NOT inclusive. For example, if the configuration is like thi
-
 
 	cfg                         = [];
 	cfg.dataset                 = 'Subject01.ds';
@@ -33,9 +30,7 @@ For trigger-based trial selection, when using the default trial function **ft_tr
 	ans =
 	   899 
 
-
 You can see that the first trial is 900 samples long, starting at sample 901 and ending at sample 1800. Since the sample frequency is 300 Hz, the interval is 3 seconds long. We can continue with preprocessing.
-
 
 	data = ft_preprocessing(cfg);
 	  
@@ -48,7 +43,6 @@ You can see that the first trial is 900 samples long, starting at sample 901 and
 	ans =
 	    1.9967
 
-
 where you see that the first sample is at time -1 seconds and the last sample is at time 1.9967 seconds, i.e. 2 seconds minus one sample. 
 
 The interval notation here is therefore followin
@@ -56,7 +50,6 @@ The interval notation here is therefore followin
 where the square bracket “[” indicates the INCLUSION of the cfg.trialdef.prestim value and the rounded bracket “)” indicates the EXCLUSION of the value cfg.trialdef.poststim, being the convention that the last sample will not be included.
 
 You can define your time window in inclusive terms. i.e. as [-1 2] with square brackets on both sides, by creating your own trialfun as the example below.
-
 
 	function trl = trialfun_inclusive(cfg)
 	
@@ -85,15 +78,12 @@ You can define your time window in inclusive terms. i.e. as [-1 2] with square b
 	  end
 	end
 
-
 Alternatively, you can add one sample (in seconds) to the poststim specification like thi
-
 
 	hdr         = ft_read_header(cfg.dataset);
 	
 	cfg.trialdef.prestim  = 1;
 	cfg.trialdef.poststim = 2 + 1/hdr.Fs;
-
 
 ## Using ft_redefinetrial with INCLUSIVE and/or EXCLUSIVE interval selection
 
@@ -109,17 +99,14 @@ will work in INCLUSIVE terms: both tmin and tmax will be included in the data se
 
 If you want to follow the ft_trialfun_general convention and exclude the last sample, then you should exclude it from the input: 
 
-
 	hdr         = ft_read_header(cfg.dataset);
 	cfg.toilim  = [tmin (tmax-(1/hdr.Fs))];
-
 
 ## cfg.length
 
 The cfg.length option in ft_redefinetrial behaves excluding then the last sample.
 
 Combining cfg.length and cfg.overlap you can cut data into NON-overlapping segments, starting from the beginning of each trial
-
 
 	% make epochs of 1 sec duration with NO overlaping between epochs
 	cfg = [];

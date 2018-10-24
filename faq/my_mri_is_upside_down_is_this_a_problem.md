@@ -3,7 +3,6 @@ layout: default
 tags: faq mri volume coordinate
 ---
 
-
 ## My MRI is upside down, is this a problem?
 
 No, it isn't. The anatomical image is represented as a cube in which a bunch of numbers are stored. Each of these numbers represent a voxel and have a specific physical dimension. The interpretation of these voxels in 3-dimensional space can be done in two ways. We can attach an (uninteresting) voxel-based coordinate system to the cube of numbers, where we start in the lower left corner, and call this the origin. (Note: this can be (0,0,0), or (1,1,1) depending on whether you use the convention to start counting voxels with 0 or with 1). The other (interesting) coordinate system relates to a set of Cartesian axes which make sense relative to a reference object. In our case, this is typically the brain. In this case, there may be different conventions that can be used. See this Frequently Asked Question about [the definition of coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) for more information. 

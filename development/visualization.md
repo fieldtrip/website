@@ -32,16 +32,13 @@ There are 3 visualization path
 
 3) Go directly to ft_singleplotER representations in time or frequency space.
 
-
 ![image](/media/development/4d_plotting_flow.jpg)
-
 
 #### Sample Data For Development
 
 a link to sample data will be provided here
 
 #### Steps to be taken
-
 
 *  Inventorise how (dis)similar the different high-level plotting routines are, in particular with respect how the data are handled. The intention should be that the backbones of the functions should be very similar (particularly between the singleplotXXX, between the topoplotXXX and between the multiplotXXXs).
 

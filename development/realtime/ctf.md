@@ -3,7 +3,6 @@ layout: default
 tags: realtime ctf
 ---
 
-
 # CTF
 
 ## Introduction
@@ -61,20 +60,17 @@ where ''flags'' can be any combination of **R**, which enables writing the ''.re
 	
 	ctf2ft_v3 -:1972:RE:1:*
 
-
 Actually you can have multiple definitions and stream different parts of the data to different buffers. For example, the following call will spawn a local FieldTrip buffer on port 1972, which will receive all channels, the ''.res4'' header, and events (but data is kept at 32 bit integers), and in addition stream out 4x downsampled and scaled head-localization channels to a buffer on the lab-meg001 computer (also port=1972
 
 	
 	ctf2ft_v3 -:1972:RE:1:*
 	lab-meg001:1972:G:4:HLC0011,HLC0012,HLC0013,HLC0021,HLC0022,HLC0023,HLC0031,HLC0032,HLC0033
 
-
 Note that the previous command should all be on a single line.
 
 ### Compilation
 
 On the command line, change to the ''realtime/acquisition/ctf'' directory and type ''make''. This will produce all versions of the interface, as well as some tools for testing and managing the shared memory. Note that you might need to compile the buffer library first.
-
 
 ## Original interface between MATLAB and shared memory
 
@@ -152,7 +148,6 @@ There is a problem in the CTF acquisition software that sometimes causes the sha
 	 int data[28160];
 	} ACQ_MessagePacketType;
 
-
 So in total each packet is 5*4+28160*4 bytes long, and there are 600 of those in shared memory. If the numChannels*numSamples of the previous block is slightly larger than 28160, it means that Acq is trying to write more data points into the "data" section of that packet than fits in, causing the data to flow over into the next packet. The first couple of integers in the next packet (indicating the Type and other details) are therefore messed up, and Aqc thinks that that packet is already filled. Then it stops writing to shared memory altogether.
 
 I have tested this idea with a specially tweaked version of my AcqBuffer shared memory "maintenance" program and indeed see this happen for a data block that has 91*310=28210 samples in it, which is 50 more than the 28160 that would fit in. The next block is therefore corrupt.
@@ -171,7 +166,6 @@ i.e. rounding off to the bottom. To solve this, we can look at
 	>> find(success)
 	ans =
 	    1     2     4     5     6     8    10    11    13    14    15    16    17    18    19    20    22    23    24    25    26    29   31    32    33    34    36    37    38    39    40    42    44    46    47    50    51    53    54    55    57    59    60    62    64    65    67    68    69    70    72    75    78    79    80    82    83    84    85    86    88    89    91    92    95    96    97    98    99   102   103   105   107   109   110   112   113   114   124   125   126   128   129   132   134   136   138   140   142   145   148   151   152   153   157   158   159   160   176   177   178   179   180   184   185   186   190   191   194   195   198   201   202   204   205   207   208   210   211   213   216   218   220   221   223   225   227   230   232   234   236   238   240   242   244   246   247   249   251   253   255   256   258   260   262   263   265   267   268   270   273   275   276   278   281   284   286   287   289   290   292   293   295   296   298   299   302   305   306   308   309   312   315   316   319   320   322   323   326   327   330   331   334   335   338   339   342   343   346   347   350   351   352   355   356   359   360   361   364   365   369   370   373   374   375   378   379   380   384   385   389   390   391   394   395   396   400   401   402   406   407   408   412   413   414   418   419   420   424   425   426   430   431   432   433   437   438   439   440   444   445   446   451   452   453   454   458   459   460   461   466   467   468   469   474   475   476   477   482   483   484   485   490   491   492   493   494   499   500
-
 
 Update: This calculation seems not to be 100% correct. For example, 359 channels do NOT work. 360 seems to be okay.
 

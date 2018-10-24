@@ -111,7 +111,6 @@ In practice, we may want to average the parameters over folds to get an average 
 
 * Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of *overfitting* and *generalization* in your explanation.
 
-
 * Suppose you try multiple different classification procedures and find at some point that you reach a classification performance that is significantly better than chance at p=0.05. Should you trust this result? Why (not)?
 
 `</note>`
@@ -182,7 +181,6 @@ This multivariate analysis standardizes the data and subsequently calls an elast
 
 If we inspect stat.model{1} then we find that a different set of parameters is estimated (weights and bias). The weights are the regression coefficients of interest and bias is just an offset term.
 If we look at the weights then we find that just a very small number of features from the total of 912 possible features are used. This is also reflected in the topoplot.
-
 
     stat.mymodel     = stat.model{1}.weights;
 

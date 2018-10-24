@@ -50,7 +50,6 @@ For recording with the structure.io we use [Scanner - Structure Sensor Sample](h
 
 Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
-
 	cd PATH_TO_FIELDTRIP
 	ft_defaults
 
@@ -76,7 +75,6 @@ We visualise the mesh surface
 
 In the next step we will transform our mesh into the ctf-coordinates. For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
 
-
 	cfg = [];
 	cfg.method = 'headshape';
 	fiducials = ft_electrodeplacement(cfg,head_surface);
@@ -98,7 +96,6 @@ With having specified the fiducials we are now able to coregister our head surfa
 
 Again we visualise the head surface, but we also plot the axes along with it.
 
-
 	ft_plot_axes(head_surface)
 	ft_plot_mesh(head_surface)
 
@@ -111,11 +108,9 @@ The previous made sure that our head model is now in the right coordinate system
 
 To localise the electrode we use the crates that are visible on the surface.
 
-
 	cfg = [];
 	cfg.method = 'headshape';
 	elec = ft_electrodeplacement(cfg,head_surface);
-
 
 ![image](/media/tutorial/structure_electrodeplacement.png@500)
 *Figure: Identifying electrode locations*
@@ -133,7 +128,6 @@ As [ft_electrodeplacement](/reference/ft_electrodeplacement) uses the the labell
 	    'LPA'
 	    'RPA'  
 	};
-
 
 ### Visualize the electrodes in 3D
 

@@ -77,15 +77,12 @@ You can then read the file into Python (MNE-Python 0.8
 	events = read_events('ctf_raw-eve.fif')
 	print(events)
 
-
-
 #### Import Raw
 
 Once you have the data in Python as Raw, you can use the ''save'' method.
 
 	:::python
 	raw.save('mne_python_raw.fif')
-
 
 Then use FieldTrip to read the file
 
@@ -136,7 +133,6 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
 	epochs.save('mne_python-epo.fif')
 	mne.write_events('mne_python-eve.fif', epochs.events)
 
-
 And then in Matla
 
 	fiff_file = 'mne_python-epo.fif';
@@ -153,7 +149,6 @@ And then in Matla
 
 where ''data1'' contains the data organized in multiple trials.
 
-
 Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_definetrial
 
 	fiff_file = 'mne_python-epo.fif';
@@ -164,7 +159,6 @@ Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_d
 	cfg = ft_definetrial(cfg);
 
 where ''data1'' contains the data organized in multiple trials including condition labelling.
-
 
 ### datatype_timelock `<->` Evoked
 
@@ -225,5 +219,4 @@ In addition, we can read multiple conditions too, if there are present in the ''
 	avg2 = ft_timelockanalysis(cfg, data1);
 	cfg.trials = 3;
 	avg3 = ft_timelockanalysis(cfg, data1);
-
 

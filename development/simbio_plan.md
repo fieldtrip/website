@@ -25,7 +25,6 @@ A list of the typical scenarios for which you would like to use SIMBIO, written 
 [Our scenarios](/development/simbio/simbio_scenarios)
 # Steps to be taken (Cristiano)
 
-
 *  Make a good example script to show the FieldTrip pipeline in generating BEM models lead fields
     * this requires an anatomical MRI and location of the electrodes to be shared: use standard_BEM mri (convert to nii) and elc files
     * how to read the elc and the nii 
@@ -41,7 +40,6 @@ A list of the typical scenarios for which you would like to use SIMBIO, written 
       * how to make the FEM leadfield (based on the vol model and the electrodes), done by SimBio
       * how to read the FEM leadfield back into MATLAB, done by read_msr.m
     * how to plot the leadfield in MATLAB (using the 3d electrode positions)
-
 
 *  read simbio documentation, done
 
@@ -64,7 +62,6 @@ A list of the typical scenarios for which you would like to use SIMBIO, written 
 *  unerstand how to import a volume and generate a mesh for SimBio
 
 # Steps to be taken (Johannes/Felix/Carsten)
-
 
 *  Get familiar with the Fieldtrip toolbox / data structures / code style.
 

@@ -56,8 +56,6 @@ The operation mode of the tool is controlled by given a configuration file. A do
 	# UDP port for RESET messages
 	port=1990
 
-
-
 ### Compilation
 
 We provide a simple ''Makefile'' for the MinGW compiler or GCC. Please go to the ''realtime/utilities/serial2event'' directory and type ''make'' or ''mingw32-make''. Note that you might need to [compile](/development/realtime/buffer) the **buffer** library first.

@@ -3,7 +3,6 @@ layout: default
 tags: faq email
 ---
 
-
 # Why am I receiving warnings about too many bouncing emails?
 
 A "bounce" means that the email from the mailing list cannot be delivered to your email server. 
@@ -17,5 +16,4 @@ We are using the mailman list server of the Radboud University and cannot check 
 However, every time your mail server bounces (i.e. returns because of an error) an email to our server, our server gets the extra load to deal with it. It will accept a few occasional bounces, but if there are more you will receive a warning you of frequent bounces. If there are too many bounces, your email address will be automatically disabled. 
 
 You can consider switching to a more robust mail provider and re-register on the list with a new email address. 
-
 

@@ -3,16 +3,13 @@ layout: default
 tags: template
 ---
 
-
 # Anatomical templates for visualizing source reconstructed activity
 
 When visualizing source reconstructed activity, one can interpolate the activity maps onto a subject-specific anatomical image, using [ft_sourceinterpolate](/reference/ft_sourceinterpolate). Subsequently, the interpolated activity can be spatially normalized (using volumetric normalization) using [ft_volumenormalise](/reference/ft_volumenormalise). The activity can also be rendered onto the cortical surface. FieldTrip includes a set of template surfaces that have been derived from the Colin27 brain (in MNI152 space) with Freesurfer. These surfaces have been derived from the SPM Canonical Brain.
 
-
 ## High resolution triangulations of the neocortical sheet
 
 The Freesurfer cortical sheets can be downloaded from the [SurfRend toolbox website](http://spmsurfrend.sourceforge.net/). The mat-files that are in FieldTrip have been obtained using [ft_read_headshape](/reference/ft_read_headshape). The following sheets are include
-
 
 *  surface defined at the gray/white matter boundary: surface_white_both/left/right.
 
@@ -30,7 +27,6 @@ The Freesurfer cortical sheets can be downloaded from the [SurfRend toolbox webs
 ## Volumetric anatomical image at 1mm isotropic resolution
 
 The volumetric image fieldtrip/template/anatomy/single_subj_T1_1mm.nii is the colin27 brain at 1 mm resolution downloaded from the web: [http://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27](http://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27).
-
 
 ## Volumetric anatomical image at 2mm isotropic resolution
 

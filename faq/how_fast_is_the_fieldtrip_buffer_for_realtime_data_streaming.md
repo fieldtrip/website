@@ -9,7 +9,6 @@ For real-time use of the buffer it is relevant to know how fast it can handle re
 
 The following benchmarks have been run using the **rt_benchmark** script in the **realtime** directory on the following computer
 
-
 *  **fcdc334**: Dell PC with Windows XP, P4 2.8 GHz, 1GB RAM
 
 *  **mentat204**, **mentat205**, **mentat232**: 64-bit Linux, Core 2 Quad 2.8 GHz, 8GB RAM
@@ -27,13 +26,11 @@ Update 19-08-2010: After implementing an alternative communication channel using
 
 ![image](/media/faq/mentat201_tcp_vs_unix.png)
 
-
 # Older comparisons involving Apple computers
 
 The benchmarking results presented in the table below were determined with the demo_buffer and the test_benchmark command-line executables, both present in the directory fieldtrip/realtime/buffer/test. Both applications were running on the same computer, i.e. using the local TCP stack. The blocksize below is the number of channels times the number of samples per block in each write request. The result is expressed in samples per second, and was measured over multiple seconds. Each sample is 4 bytes.
 
 The tests have been performed on and between the following computer
-
 
 *  **powerbook**: Apple PowerBook G4 PPC 1.33GHz, 1.25GB RAM, OS X 10.4.11
 
@@ -95,7 +92,6 @@ The best result above for statefull tcp corresponds with 60 kHz @ 32 channels or
  | 32*256=8192             | 20894       | remote host (100Mbps), tcp, stateless | 
  | 64*256=16384            | 41785       | remote host (100Mbps), tcp, stateless | 
 
-
 ## Determine the bandwidth/throughput in Matlab
 
 You can replicate this benchmark within MATLAB using the following lines of cod
@@ -122,7 +118,6 @@ You can replicate this benchmark within MATLAB using the following lines of cod
 	t1 = toc;
 	
 	fprintf('nchan = %d, blocksize = %d: wrote %f samples per second\n', nchan, blocksize, (duration*hdr.nChans)/(t1-t0));
-
 
 Note that the MATLAB interface to the buffer does not allow you to use a statefull connection or a DMA connection, it only provides the stateless TCP connection.
 

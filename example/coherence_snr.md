@@ -34,8 +34,6 @@ Specify the parameters of the two datasets.
 	snr1 = 0.400;
 	snr2 = 0.060;
 
-
-
 Compute two simulated datasets, each with the same channels.
 
 	data1 = [];
@@ -65,11 +63,9 @@ Compute two simulated datasets, each with the same channels.
 	subplot(2,2,3); plot(data2.time{1}, data2.trial{1}(1,:)); title(sprintf('dataset 2, channel %s', data2.label{1}));
 	subplot(2,2,4); plot(data2.time{1}, data2.trial{1}(2,:)); title(sprintf('dataset 2, channel %s', data2.label{2}));
 
-
 ![image](/media/example/example_coherence_snr_1.png@500)
 
 Next we compute the spectral decomposition of the raw data and subsequently compute the coherence with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Note that for coherence (or other measures of phase synchrony) we need to specify either 'powandcsd' or 'fourier' as cfg.output to **[ft_freqanalysis](/reference/ft_freqanalysis)**.
-
 
 	cfg = [];
 	cfg.method = 'mtmfft';
@@ -89,7 +85,6 @@ Next we compute the spectral decomposition of the raw data and subsequently comp
 	plot(conn1.freq, conn1.cohspctrm, 'b');
 	plot(conn2.freq, conn2.cohspctrm, 'r');
 	legend({sprintf('snr = %f', snr1), sprintf('snr = %f', snr2)});
-
 
 ![image](/media/example/example_coherence_snr_2.png@500)
 

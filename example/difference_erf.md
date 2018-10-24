@@ -3,7 +3,6 @@ layout: default
 tags: example source erf
 ---
 
-
 # Localizing the sources underlying the difference in event related fields
 
 ## Background
@@ -13,7 +12,6 @@ Activity of neuronal sources can be measured with EEG or MEG as event related po
 Reconstructing the source location in case of simultaneous activity of multiple sources is more difficult than localizing a single source. However, the superposition principle can effectively be used in source lozalization if two experimental conditions differentiate the strenth of the two sources. 
 
 Consider a source in area A1 with a channel-level spatial field distribution F1 of and another source in area A2 with field distribution F2. If the source 1 is active with strength one and source 2 with strength zero, the field distribution can be described as “one times F1”. If both sources are active, the field distribution is “one times F1 plus one times F2”. In general the field distribution of source 1 with strength S1 and source 2 with strength S2 is
-
 
     F(combined)  = S1 * F1  + S2 * F2
 
@@ -58,7 +56,6 @@ In this experiment, MEG was recorded during stimulation of the affected/painfull
 *Figure 2; A16/SV-med-R-block (i.e. no pain)*
 
 Looking at these two topographies, a single dipole seems sufficient to explain the field distribution. It is also not clear that the dipole would be at a different location, although there is a small change in the global field strength. A dipole that corresponds with the dipolar field is schematically drawn in the two topographies as a yellow arrow. Subsequently we can look at the difference map (see below). 
-
 
 ![image](/media/example/difference_erf_result.png@300)
 

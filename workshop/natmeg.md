@@ -3,7 +3,6 @@ layout: default
 tags: natmeg MEG-audodd
 ---
 
-
 # FieldTrip course at the NatMEG in Stockholm
 
 ![image](/media/tutorial/natmeg_temp:natmeg_pos.png)

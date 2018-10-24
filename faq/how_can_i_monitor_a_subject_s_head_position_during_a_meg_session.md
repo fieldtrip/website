@@ -34,7 +34,6 @@ The head shape can also be measured with a 3D-Scanner (i.e. structure.io) to acq
 	cfg.method = 'headshape';
 	fid = ft_electrodeplacement(headshape);
 
-
 After the localization of the fiducials we realign the head shape to the respective coordinate syste
 
 	
@@ -56,7 +55,6 @@ After initializing the MEG system, one starts the **acq2ftx/neuromag2ft applicat
 	  cfg.dataset = 'buffer://hostname:1972';     % get data from buffer
 	  ft_realtime_headlocalizer(cfg)
 
-
 To improve the real time head movement compensation, we can also specify a realistic head shape and a realistic model of the dewa
 
 	
@@ -65,7 +63,6 @@ To improve the real time head movement compensation, we can also specify a reali
 	cfg.dewar       = ctf_dewar;
 	cfg.head        = headshape_ctf;
 	ft_realtime_headlocalizer(cfg)
-
 
 **Repositioning within a recording session** can be achieved by marking the head position indicator (HPI) coil positions at an arbitrary point in time, operationalized through clicking the 'Update' button. Black unfilled markers should appear which indicate the positions of the coils at the moment of buttonpress. Distance to these marked positions then become colorcoded.
 
@@ -95,9 +92,6 @@ The other option is to use maxfilter to create an ascii file containing the rele
 	  cfg.headmovement = 'maxfilter.pos'; 
 	  ft_realtime_headlocalizer(cfg)
 
-
-
-
 ### CTF specific protocol
 
 1) 'Initialize the MEG system'.
@@ -116,7 +110,6 @@ The other option is to use maxfilter to create an ascii file containing the rele
 	  cfg = [];
 	  ft_realtime_headlocalizer(cfg)
 
-
 *6) You can project the head localizer into the MSR by one buttonclick. Click the left button on the video matrix and the signal from the presentation computer is being overwritten by the head localizer computer. This way both experimenter and subject get to see the virtual representation of the subject's head.   
 
 *7) You can also reposition the subject according to a previous session. The headlocalizer dedicated computer has access to Odin's data directory, and thus, the headcoil coordinates. This is the .hc file, located in the .ds directory. Specify the template as follows and run the headlocalizer which should give you the markers from the start. 
@@ -124,7 +117,6 @@ The other option is to use maxfilter to create an ascii file containing the rele
 	
 	  cfg.template = '/mnt/megdata/20100812/ArjSto_1200hz_20100812_01.ds';
 	  ft_realtime_headlocalizer(cfg)
-
 
 Keep in mind that Odin's data directory is automatically cleaned every now and then. If your template dataset has been removed, you could still read it from your own M disk in case you have backed it up there. Logout the meg user on the headlocalizer dedicated computer and login as yourself. Now run the headlocalizer with specifying the file location on your M disk (e.g. cfg.template = '/home/action/arjsto/MEG/ArjSto_1200hz_20100812_01.ds'). 
 
@@ -148,7 +140,6 @@ Currently the option for online monitoring is only available for the CTF system.
 	  cfg.dataset = 'buffer://server:port'
 	  ft_realtime_headlocalizer(cfg)
 
-
 ### Further reading
 
 For further reading of real time head localizer please read {{:faq:stolkneuroimage2013.pdf|this paper}} from Stolk A, et al.
@@ -158,6 +149,5 @@ The above online head localization procedure can substantially reduce the influe
 Furthermore, despite using the Polhemus to localize electrode locations we can use the structure.io to localize them. You can find the tutorial [here](/tutorial/electrode). This means we do not need the Polhemus for our experimental procedure and therefore reduce the preparation time by having less to measure.
 
 For the Elekta Neuromag system the maxfilter [User’s guide Chapter4 MaxMove](https://www.google.nl/search?hl=nl&dcr=0&source=hp&ei=HtczWtaeGMbawAKP0JiYBg&q=maxfilter+user%E2%80%99s+guide&oq=maxfilter+user%E2%80%99s+guide&gs_l=psy-ab.3...708.708.0.1007.1.1.0.0.0.0.81.81.1.1.0....0...1c.2.64.psy-ab..0.0.0....0.PPP2C6Blbso)  provides further information on offline head movement visualization and compensation. 
-
 
 For more information about the CTF head localization we recommend  [Head Localization Guide CTF MEGTM Software](https://www.google.nl/search?ei=htczWqiUCs2VsAefoZP4BA&q=Head+Localization+Guide+CTF+MEGTM+Software&oq=Head+Localization+Guide+CTF+MEGTM+Software&gs_l=psy-ab.3...665.2032.0.2495.2.2.0.0.0.0.127.197.1j1.2.0....0...1c.1.64.psy-ab..0.0.0....0.S5__Ll6gens).

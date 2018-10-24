@@ -28,7 +28,6 @@ It contains high-level functions that are publicly available for experienced end
 
 The inverse methods for computing a source reconstruction can be divided into three categories: **dipole fitting** (using an overdetermined model with a few sources), **dipole scaning** (using a metric that can be computed independently on each point of a grid) and **distributed source modelling** (using an underdetermined distributed source model). The following source reconstruction methods are implemented
 
-
 *  dipole fitting 
     * simultaneous optimisation of position, orientation and strength
     * symmetry constrains and/or fixed position, with free orientation and strength
@@ -66,7 +65,6 @@ Most functions have additional optional input arguments that are specified as ke
 
 FIXME We are currently redesigning the interface to these functions, therefore the documentation is a bit sparse at the moment.
 
-
 # Related documentation
 
 The literature references to the implemented methods are given [here](/references_to_implemented_methods).
@@ -82,9 +80,6 @@ Example material for forward and inverse modelingd
 Ttutorial material for forward and inverse modelin
 
 {{topic>tutorial +source &list}}
-
-
-
 
  
 

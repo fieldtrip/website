@@ -3,7 +3,6 @@ layout: default
 tags: blackrock lfp spike dataformat
 ---
 
-
 # Getting started with Blackrock data
 
 FIXME This getting started guide and the reading code are still under development,
@@ -18,72 +17,53 @@ To read Blackrock data into FieldTrip, you will need the NPMK toolbox. The lates
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
-	
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
 
-
 ## Reading header information
 
-To read header information, us
+To read header information, use
 
-	
 	filename = 'your_cyberkinetics_file.nev';
-	
 	hdr = ft_read_header(filename, 'headerformat', 'neuroshare');
-
 
 This calls the NPMK toolbox and gives back the header structure in FieldTrip format, which includes the original header information (included as hdr.orig) as retrieved with the neuroshare functions *openNSx* or *openNEV*.
 
 ## Reading triggers and other events
 
-To read events, us
+To read events, use
 
-	
 	filename = 'your_datafile';
-	
 	event = ft_read_event(filename, 'eventformat', 'neuroshare');
-
 
 TO BE DONE.
 
 ## Reading LFP data
 
-To read analog data, us
+To read analog data, use
 
-	
 	filename = 'your_datafile.ns1';
-	
 	data = ft_read_data(filename);
-
 
 This calls the NPMK toolbox (using the function *openNSx*) and gives back a data structure in FieldTrip format.
 
 Optional input arguments should be specified in key-value pairs and may includ
 
-	
 	%   'chanindx'   = list with channel indices to read
 	%   'begsample   = first sample to read
 	%   'endsample   = last sample to read
-
 
 TO BE DONE.
 
 ## Reading spike data
 
-To read spike data, us
+To read spike data, use
 
-	
 	filename = 'your_cyberkinetics_file.nev';
-	
 	spike = ft_read_spike(filename, 'spikeformat', 'neuroshare');
-
 
 TO BE DONE.
 
-
-
 ## External links
-
 
 *  http://www.blackrockmicro.com  Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)

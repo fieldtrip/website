@@ -24,11 +24,9 @@ the output structure should become more fieldtrippish: i.e. contain a dimord. Ge
 
 from previous changes the data representation will be much less complicated, allowing for a cleaner implementation.
 
-
 *  Ad sourcedescriptives/freqdescriptive
 
 identify commonalities in required functionality. With more consistent data representations sharing of common code will be the goal.
-
 
 *  Ad everythin
 
@@ -50,7 +48,6 @@ Detailed plan for tackling the cleaning up of the source-structure format will b
         > source.leadfield {N,1}[nChanx3] / source.leadfielddimord = '{pos}_chan_ori'
         > source.csd {N,1}[3x3]           / source.csddimord = '{pos}_ori_ori'
 
-
 *  The following steps have to be taken in this orde
      - adjust checkdata to be able to make conversion between old-style source data an new-style source data
      - create new functions 'parallel' to the existing ones, starting from the back of the analysis pipeline to allow for a smooth transition and to enable us to commit code throughout the re-structuring
@@ -58,7 +55,6 @@ Detailed plan for tackling the cleaning up of the source-structure format will b
      - sourcedescriptives
      - sourcegrandaverage/parameterselection/source2full/source2sparse/volumeXXX)
      - sourceanalysis
-
 
 *  Grep all functions which call parameterselection/getsubfield, because they may lead to conflicts since these functions then
     possibly rely on the old-style source format.

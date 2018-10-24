@@ -14,7 +14,6 @@ Another advantage is that you use the same filters for estimating the sources in
 
 ## When can you use common filters?
 
-
 Common filters can be used when you want to compare conditions for which you assume the underlying sources are the same, but active to a different extent.
 It is not a problem to have different amounts of trials in the conditions.
 It is a requirement that the time windows in all conditions are of equal length.
@@ -40,11 +39,9 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 
 ### PCC
 
-
 	% append the two conditions and remember the design %
 	data = ft_appenddata([], dataA, dataB);
 	design = [ones(1,length(dataA.trial)) ones(1,length(dataB.trial))*2]; % only necessary if you are interested in reconstructing single trial data
-
 
 	% ft_freqanalysis %
 	cfg=[];
@@ -58,7 +55,6 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 
 	freq = ft_freqanalysis(cfg, data);
 
-
 	% compute common spatial filter AND project all trials through it %
 	cfg=[];
 	cfg.method      = 'pcc';
@@ -69,7 +65,6 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 
 	source = ft_sourceanalysis(cfg, freq);
 
-
 	% average over tapers, keep single trials %
 
 	% This step is only necessary if you need to reconstruct single trial data
@@ -78,7 +73,6 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	cfg.keeptrials = 'yes';
 
 	source = ft_sourcedescriptives(cfg, source); % contains the source estimates for all trials/both conditions
-
 
 	% calculate average for each condition %
 	A = find(design==1); % find trial numbers belonging to condition A
@@ -96,14 +90,11 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	sourceB.method = 'rawtrial';
 	sourceB = ft_sourcedescriptives([], sourceB); % compute average source reconstruction for condition B
 
-
 ### DICS
-
 
 	% append the two conditions and remember the design %
 	data = ft_appenddata([], dataA, dataB);
 	design = [ones(1,length(dataA.trial)) ones(1,length(dataB.trial))*2]; % only necessary if you are interested in reconstructing single trial data
-
 
 	% freqanalysis %
 	cfg=[];
@@ -117,7 +108,6 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 
 	freq = ft_freqanalysis(cfg, data);
 
-
 	% compute common spatial filter %
 	cfg=[];
 	cfg.method      = 'dics';
@@ -127,7 +117,6 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	cfg.dics.keepfilter  = 'yes';        % remember the filter
 
 	source = ft_sourceanalysis(cfg, freq);
-
 
 	% project all trials through common spatial filter %
 	cfg=[];
@@ -139,7 +128,6 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	cfg.rawtrial    = 'yes';      % project each single trial through the filter. Only necessary if you are interested in reconstructing single trial data
 
 	source = ft_sourceanalysis(cfg, freq); % contains the source estimates for all trials/both conditions
-
 
 	% calculate average for each condition %
 

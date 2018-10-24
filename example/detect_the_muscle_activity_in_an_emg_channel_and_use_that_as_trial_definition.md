@@ -3,7 +3,6 @@ layout: default
 tags: example trialfun emg preprocessing
 ---
 
-
 # Detect the muscle activity in an EMG channel and use that as trial definition
 
 This page describes a FieldTrip trialfunction that detects muscle activity in an EMG channel 
@@ -19,7 +18,6 @@ You would use this function as follows
 Note that there are some parameters, like the EMG channel name and the
 processing that is done on the EMG channel data, which are hardcoded in
 this trial function. You should change these parameters if neccessary.
-
 
 	function [trl] = trialfun_emgdetect(cfg);
 	
@@ -51,5 +49,4 @@ this trial function. You should change these parameters if neccessary.
 	trl(:,2) = emgoff(:) - hdr.Fs*0.5;  % as a consequence of the convolution with a one-second boxcar
 	trl(:,3) = 0;
 	
-
 

@@ -20,9 +20,6 @@ Implement function checkconfig that checks consistency of cfg
  2.  Internal use: checkconfig should control the relevant cfg options that are being passed on to other functions.
  3.  Output: only relevant cfg fields should be contained in the output (data.cfg), e.g. it should not contain unused default settings.
 
-
-
-
 ## Relevant functions
 
 Overview of relevant functions (where checkconfig should be implemented
@@ -45,8 +42,6 @@ Overview of relevant functions (where checkconfig should be implemented
 
 *  perhaps also other private functions that take a cfg as input
 
-
-
 Overview of existing relevant function
 
 *  createsubcfg
@@ -57,12 +52,9 @@ Overview of existing relevant function
 
 *  check_cfg_required
 
-
 ## Step 1
 
 Add the check (objective 1) to the existing functions.
-
-
 
 **Required**: check whether required options are present, give error when missing
 
@@ -70,27 +62,17 @@ Add the check (objective 1) to the existing functions.
 
 *  ...(perhaps in general search for cfg.method using grep and check whether this is a more common required feature)
 
-
-
 **Renamed**: change old options/values into new ones + give warning
 
 *  this should replace most of the backward compatibility code regarding renamed options and values
-
-
 
 **Deprecated**: give warning when deprecated options are used
 
 *  search for that using grep
 
-
-
 **Forbidden**: give error when forbidden option is used
 
 *  e.g. cfg.trl when calling preprocessing on data that has already been read
-
-
-
-
 
 ## Step 2
 
@@ -99,8 +81,6 @@ Incorporate existing functions in checkconfi
 *  createsubcfg - done -
 
 *  dataset2files - done -
-
-
 
 ## Step 3
 
@@ -112,8 +92,6 @@ Control the output cf
 
 *  remove large fields from output cfg (checksize)
 
-
-
 **trackconfig:**
 
 *  controlled via ft_defaults or overruled by cfg.trackconfig: 'report', 'cleanup', or 'off'
@@ -122,13 +100,9 @@ Control the output cf
 
 *  end of each FT function: cfg=checkconfig(cfg, 'trackconfig', 'off')
 
-
-
 **checksize:**
 
 *  controlled via ft_defaults or overruled by cfg.checksize: inf or number in bytes
 
 *  end of each FT function: cfg=checkconfig(cfg, 'checksize', 'yes')
-
-
 

@@ -3,13 +3,11 @@ layout: default
 tags: template layout
 ---
 
-
 # Template 2D layouts for plotting
 
 Electrode positions in the layouts are represented as points in 2-D Carthesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ascii .lay files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 
 You can use the following snippet of code to get a quick overview of the template layout sets.
-
 
 	dirlist  = dir('template/layout/*');
 	filename = {dirlist(~[dirlist.isdir]).name}'
@@ -167,13 +165,9 @@ This is the standard 64-channel-Arrangement from [Brain Products](http://www.bra
 ![image](/media/template/acticap-64-channel-standard-2_original.jpg@200)
 ![image](/media/template/acticap-64-channel-standard-2_fieldtrip.jpg@200)
 
-
-
-
 ## NeuroScan Quick-cap
 
 The following template layout set is for an electrode cap from [NeuroScan](http://www.neuroscan.com). The origin and construction is described on http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=679. The QuikCap_NSL_128 layout has been provided by Andre Cravo.  
-
 
 *  ![image](/media/template/quickcap64.mat.png) (since june 2012 - r6055)
 
@@ -182,7 +176,6 @@ The following template layout set is for an electrode cap from [NeuroScan](http:
 ## BioSemi cap
 
 The following template layouts are for an electrode cap from [BioSemi](http://www.biosemi.com).  
-
 
 *  ![image](/media/template/biosemi16.lay.png)
 
@@ -199,7 +192,6 @@ The following template layouts are for an electrode cap from [BioSemi](http://ww
 
 The following template layouts are for an electrode cap based on a standard 10-XX montage.
 
-
 *  ![image](/media/template/EEG1005.lay.png)
 
 *  ![image](/media/template/EEG1010.lay.png)
@@ -215,7 +207,6 @@ The following template layouts are for an electrode cap based on a standard 10-X
 
 The following template layouts are for a sensor array of the 4D/BTI MEG system.
 
-
 *  ![image](/media/template/4D148.lay.png)
 
 *  ![image](/media/template/4D248.lay.png)
@@ -225,7 +216,6 @@ The following template layouts are for a sensor array of the 4D/BTI MEG system.
 ## CTF array
 
 The following template layouts are for a sensor array of the CTF MEG system.
-
 
 *  ![image](/media/template/CTF151.lay.png)
 
@@ -238,7 +228,6 @@ The following template layouts are for a sensor array of the CTF MEG system.
 ## Neuromag array
 
 The following template layouts are for a sensor array of the Neuromag MEG system. The major difference between the neuromag306 and the NM306 layouts is the labelling of the sensors (e.g. 'MEG1431' and '1431' respectively). In a similar vein, NM122.lay and NM122_combined.lay contain the lengthier labels (e.g. 'MEG 008'), whereas NM122all.lay has the shorter labels ('008').
-
 
 *  ![image](/media/template/neuromag306all.lay.png)
 

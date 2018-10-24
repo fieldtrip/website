@@ -3,7 +3,6 @@ layout: default
 tags: development meeting
 ---
 
-
 # Meetings
 
 The core FieldTrip development team is located at the Donders Institute in Nijmegen, NL. We also have active contributors  elsewhere, e.g. people that worked in Nijmegen in the past, or people that have no ties to the Donders. 

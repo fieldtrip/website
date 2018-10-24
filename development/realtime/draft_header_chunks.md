@@ -3,7 +3,6 @@ layout: default
 tags: realtime development
 ---
 
-
 # Suggested improvements for handling header and chunks
 
 This is a draft for the calls involved in writing and reading header information and chunks, where the server
@@ -79,5 +78,4 @@ If **any** of the chunks the client asked for is not available, the server will 
 *  [draft compatability](/draft compatability)
 
 *  [scratchpad](/scratchpad)
-
 

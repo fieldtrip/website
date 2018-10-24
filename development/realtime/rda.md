@@ -3,7 +3,6 @@ layout: default
 tags: realtime brainvision
 ---
 
-
 # BrainVision Recorder Remote Data Access (RDA)
 
 ## Introduction
@@ -89,7 +88,6 @@ Currently, the translation scheme is the followin
 where the fixed value -1 for *nChannel* is defined as the "don't care" value by the RDA protocol.
 To clarify the last row, the following rules are applied for the *type* and *value* field
 
-
 *  If both are strings, e.g. *type*="button" and *value*="right", the RDA marker will contain the type string "button:right"
 
 *  If the *value* field is not a string, it will be replace by "-". For example, if button presses are encoded by a number, the RDA marker might look like "button:-"
@@ -108,7 +106,6 @@ that it needs to be send as a marker in the next data block, but then the sample
 index cannot be represented as a positive number anymore, because it refers to a block
 in the past.
 
-
 ### Block size setting in BCI2000
 
 If the FieldTrip-to-RDA streaming tool is used for sending data to BCI2000, care should be taken to 
@@ -122,7 +119,6 @@ data blocks sent out will be of equal size.
 RDA -> FieldTrip: Channel number field of RDA markers should be matched to value field of FieldTrip buffer events, type string should be converted to FieldTrip event *type* field (keep as string, but remove trailing zero).
 
 ## External links
-
 
 *  http://www.brainproducts.de
 

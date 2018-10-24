@@ -12,4 +12,3 @@ The dipoli-executable for Linux was compiled on a 32bit system. In order to run 
 
 BEMCP is a MATLAB toolbox for BEM modeling, developed by Christophe Phillips from the Universite Liege in Belgium. It is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/external and should be installed under the directory fieldtrip/external/bemcp.
 
-

@@ -4,7 +4,6 @@ layout: default
 
 # Phalow_freqhigh
 
-
 ## Help freqsimulation
 
 	
@@ -20,10 +19,6 @@ layout: default
 	%     5th channel: inst_pha_base   instantaneous phase of the high (=base) frequency signal s1
 	%     6th channel: inst_pha_mod    low frequency phase modulation, this is equal to s2
 	%     7th channel: inst_pha        instantaneous phase, i.e. inst_pha_base + inst_pha_mod
-
-
-
-
 
 ## Simulating the data
 
@@ -44,10 +39,6 @@ layout: default
 	
 	data = ft_freqsimulation(cfg);
 
-
-
-
-
 ## What does the signal look like?
 
 	
@@ -65,7 +56,6 @@ layout: default
 	figure;plot(diff(data.trial{1}(7,:))); title('diff inst phase, should not be less than or close to zero')
 	print -dpng phalow_freqhigh_fig2.png
 
-
 ![image](/media/example/crossfreq/phalow_freqhigh_fig1.png@400) ![image](/media/example/crossfreq/phalow_freqhigh_fig2.png@400)
 
 	
@@ -81,16 +71,9 @@ layout: default
 	figure; ft_singleplotER([],fft_data);
 	print -dpng phalow_freqhigh_fig3.png
 
-
 ![image](/media/example/crossfreq/phalow_freqhigh_fig3.png@400)
 
 ## Analysis Methods
-
-
-
-
-
-
 
 ### Calculate power of power
 
@@ -137,7 +120,6 @@ layout: default
 	subplot(3,4,11); plot(freq1.time(1:1000),pow_30Hz(1:1000));title('pow @ 30 Hz');ylim([0 0.4])
 	print -dpng phalow_freqhigh_fig5.png
 
-
 ![image](/media/example/crossfreq/phalow_freqhigh_fig4b.png@400)
 ![image](/media/example/crossfreq/phalow_freqhigh_fig5.png@400)
 
@@ -166,12 +148,10 @@ layout: default
 	axis xy
 	print -dpng phalow_freqhigh_fig7.png
 
-
 ![image](/media/example/crossfreq/phalow_freqhigh_fig6.png@400)
 ![image](/media/example/crossfreq/phalow_freqhigh_fig7.png@400)
 
 In figure 7 you can see that most frequencies are modulated at 2 Hz, which was indeed the frequency of the modulation (s2 in data). Harmonics are seen at 4 and 6 Hz. The base frequency (20 Hz, s1 in data) is the only frequency that shows the strongest correlation with the modulation frequency (s2.freq = 2Hz) * 2 = 4Hz.
-
 
 ### Calculate power of derivative of estimated instanteneous phase
 
@@ -207,7 +187,6 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
 	legend(data.label{7},'estimated ins phase','location','Best')
 	print -dpng phalow_freqhigh_fig9.png
 
-
 ![image](/media/example/crossfreq/phalow_freqhigh_fig8.png@400)
 ![image](/media/example/crossfreq/phalow_freqhigh_fig9.png@400)
 
@@ -235,8 +214,6 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
 	figure; ft_singleplotER([],fft_data_diff);
 	print -dpng phalow_freqhigh_fig11.png
 
-
 ![image](/media/example/crossfreq/phalow_freqhigh_fig10.png@400)
 ![image](/media/example/crossfreq/phalow_freqhigh_fig11.png@400)
-
 

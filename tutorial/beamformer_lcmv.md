@@ -9,7 +9,6 @@ tags: fixme
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-
 `<note warning>`
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete.
 
@@ -29,13 +28,11 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the frequency-domain option for DICS/PCC beamformers (which is explained [here](/tutorial/beamformer)), nor how to compute minimum-norm-estimated sources of evoked/averaged data (which is explained [here](/tutorial/minimumnormestimate)).
 
-
 ## Background
 
 Stimulation of the median nerve is known to consistently evoke activity at sensors covering the contralateral sensory cortex. The goal of this section is to identify the sources responsible for producing this evoked activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source signal(or variance) at a given location, and subject it to a 'unit-gain constraint'. This latter part means that, if a source had signal of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct signal of amplitude 1 at that location. Beamforming assumes that sources in different parts of the brain are not temporally correlated.
 
 The brain is divided in a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Linearly Constrained Minimum Variance (LCMV) and the estimates are calculated in the time domain (van Veen et al., 1997). Other beamformer methods rely on sources estimates calculated in the frequency domain, e.g. the Dynamical Imaging of Coherent Sources (DICS) (Gross et al. 2001). These methods produce a 3D spatial distribution of the amplitude or power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source amplitude can be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
-
 
 ## Procedure
 
@@ -48,17 +45,13 @@ To localize the evoked sources for the example dataset we will perform the follo
 *  Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
    * Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-
 ## Preprocessing
-
 
 ### Reading the data
 
 The aim is to identify the sources underlying somatosensory evoked fields. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. We know that the subject's median nerve was stimulated almost at 3Hz (every 0.36 sec), which influences our selection of the pre- and post-stimulus interval (i.e. as short as possible).
 
 The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectSEF.zip.
-
-
 
 	% find the interesting segments of data
 	cfg                         = [];
@@ -77,8 +70,6 @@ The ft_definetrial and ft_preprocessing functions require the original MEG datas
 	cfg.lpfreq                  = 55;        % lowpass at 55 Hz
 	data = ft_preprocessing(cfg);  
 
-
-
 ### Averaging and computation of the covariance matrix
 
 The function ft_timelockanalysis makes averages of all the trials in a data structure and also estimates the covariance. For a correct covariance estimation it is important that you used the cfg.demean = 'yes' option when the function ft_preprocessing was applied.
@@ -87,27 +78,21 @@ The trials belonging to one condition will now be averaged with the onset of the
 
 Note that we have not yet cleaned the data from artifacts. For your own dataset, we recommend that you have a look at the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection).
 
-
-
 	cfg                  = [];
 	cfg.covariance       = 'yes';
 	cfg.covariancewindow = 'all';
 	cfg.vartrllength     = 2;
 	timelock             = ft_timelockanalysis(cfg, data);
 
-
 ### Visualize the sensor level results (axial gradients)
 
 We can plot the results with the matlab plot command to get a first impressio
 
-
 	plot(timelock.time, timelock.avg)
-
 
 ![image](/media/tutorial/beamformer/subjectseftimelock.png@400)
 
 We can additionally explore the spatiotemporal dynamics using fieldtrip interactive plotting function
-
 
 	% view the results
 	cfg                    = [];
@@ -116,7 +101,6 @@ We can additionally explore the spatiotemporal dynamics using fieldtrip interact
 
 	% or using
 	ft_movieplotER(cfg, timelock);
-
 
 ### Visualize the sensor level results (planar gradients)
 
@@ -128,7 +112,6 @@ The planar gradient at a given sensor location can be approximated by comparing 
 
 Calculate the planar gradient of the averaged dat
 
-
 	% calculate planar gradients
 	cfg                 = [];
 	cfg.feedback        = 'yes';
@@ -139,9 +122,7 @@ Calculate the planar gradient of the averaged dat
 	cfg.planarmethod    = 'sincos';
 	timelock_planar     = ft_megplanar(cfg, timelock);
 
-
 Compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient according to Pythagoras rule, and visualize the results (can you see the differences between the axial and planar gradients?
-
 
 	% combine planar gradients
 	cfg                 = [];
@@ -155,7 +136,6 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
 	% or using
 	ft_movieplotER(cfg, timelock_planarcomb);
 
-
 ## The forward model and lead field matrix
 
 ### Head model
@@ -163,7 +143,6 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
 The first step in the procedure is to construct a forward model. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In  MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
 The first step in constructing the forward model is to find the brain surface from the subject's MRI, using [ft_volumesegment](/reference/ft_volumesegment). The MRI scan used in this tutorial has already been realigned to the same coordinate system as the MEG data (in this case 'CTF', see [this page](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) on how to realign your subject's brain volume.
-
 
 	% read and segment the subject's anatomical scan
 	load('SubjectSEF_mri.mat'); % matfile containing the realigned anatomical scan
@@ -179,16 +158,13 @@ The first step in constructing the forward model is to find the brain surface fr
 	cfg.funparameter       = 'brain';
 	ft_sourceplot(cfg, segmentedmri);
 
-
 Now prepare the head model from the segmented brain surfac
-
 
 	% compute the subject's headmodel/volume conductor model
 	cfg                = [];
 	cfg.method         = 'singleshell';
 	vol                = ft_prepare_headmodel(cfg, seg);
 	vol                = ft_convert_units(vol, 'cm'); % mm to cm, since the grid will also be expressed in cm
-
 
 `<note important>`
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference [*], i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
@@ -203,7 +179,6 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 ### Source model
 
 Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). In this tutorial, we continue with non-normalized grid point
-
 
 	% create the subject specific grid
 	hdr                 = ft_read_header('SubjectSEF.ds');
@@ -221,11 +196,9 @@ Now prepare the source model. Here one has the option to make a 'normalized grid
 	ft_plot_vol(vol, 'edgecolor', 'none'); alpha 0.4;
 	ft_plot_mesh(grid.pos(grid.inside,:));
 
-
 ### Leadfield
 
 Combine all the information into the leadfield matri
-
 
 	% create leadfield
 	hdr                  = ft_read_header('SubjectSEF.ds');
@@ -237,9 +210,7 @@ Combine all the information into the leadfield matri
 	cfg.normalize        = 'yes'; % to remove depth bias (Q in eq. 27 of van Veen et al, 1997)
 	lf                   = ft_prepare_leadfield(cfg);
 
-
 ## Source analysis
-
 
 	% create spatial filter using the lcmv beamformer
 	cfg                  = [];

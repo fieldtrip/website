@@ -17,7 +17,6 @@ Unicast packets are sent from host to host. The communication is from a single h
 
 ### Broadcast
 
-
 Broadcast is when a single device is transmitting a message to all other devices in a given address range. This broadcast could reach all hosts on the subnet, all subnets, or all hosts on all subnets. Broadcast packets have the host (and/or subnet) portion of the address set to all ones. By design, most modern routers will block IP broadcast traffic and restrict it to the local subnet.
 
 ### Multicast

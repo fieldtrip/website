@@ -3,7 +3,6 @@ layout: default
 tags: faq statistics
 ---
 
-
 `<note warning>`
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
 
@@ -24,7 +23,6 @@ The easiest way to see whether a difference in the number of trials can be a pro
 
 First we will start with simulating the data for all subject
 
-
 	n_subjects = 20;
 	data = cell(1,n_subjects);
 	
@@ -38,9 +36,7 @@ First we will start with simulating the data for all subject
 	  data{i} = ft_freqsimulation(cfg);
 	end;
 
-
 Now that we have simulated the data for all subjects we are going to divide the data into conditions A and B. Note that the assignment into one or the other condition is random and there should be no difference between conditions! After we have divided the data into two conditions, we will average the data per condition and test the difference on the group level. We will repeat this process 100 times and check the distribution of p-values for this particular test and ratio of trials. We will start out with an equal amount of trials in both condition
-
 
 	% Divide the data 1. case, equal amount of trial
 	
@@ -82,19 +78,11 @@ Now that we have simulated the data for all subjects we are going to divide the 
 	  h(j) = sum(stat.mask)/numel(stat.mask); % calculate proportion of significant tests 
 	end;
 
-
-
-
-
  
-
-
 
 ### Assumptions of statistical tests
 
 ### Skewed distributions
-
-
 
 `<note warning >`
 
@@ -102,5 +90,4 @@ H0: The data are exchangeable between the conditions, i.e. the data in the condi
 
 H1: The data are not exchangeable between the conditions, i.e. the data are different.
 `</note>`
-
 

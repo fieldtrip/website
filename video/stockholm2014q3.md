@@ -3,7 +3,6 @@ layout: default
 tags: video
 ---
 
-
 # FieldTrip MEG/EEG workshop at NatMEG, Stockholm (October 2014)
 
 ### Introduction to MEG (vs. EEG) instrumentation by Stephen Whitmarsh

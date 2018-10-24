@@ -3,11 +3,9 @@ layout: default
 tags: faq email
 ---
 
-
 ## Why am I not receiving emails from the discussion list?
 
 Your registration may have been automatically disabled because
-
 
 *  your mailbox is full, no more messages can be sent to you. 
 

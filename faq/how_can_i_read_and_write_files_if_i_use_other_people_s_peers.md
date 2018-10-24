@@ -14,9 +14,7 @@ If your job also entails writing data to disk, then those files will be written 
     mkdir $HOME/public
     chmod 777 $HOME/public
 
-
 The chmod 777 will allow other people (including the other peerslave) to write in the public directory. You should see the "public" directory as a temporary scratch space. Once your computations have finished, you can move the results to their final location elsewhere in your home directory.
-
 
 You can test the writing using the following function
 
@@ -36,6 +34,5 @@ and evaluate this function using
     peercellfun(@testwrite, filename);
 
 See also the FAQ on [debugging problematic jobs](/faq/how_can_i_debug_a_problematic_distributed_job).
-
 
  

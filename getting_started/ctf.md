@@ -3,7 +3,6 @@ layout: default
 tags: ctf meg dataformat
 ---
 
-
 # Getting started with CTF data
 
 ## Introduction
@@ -18,7 +17,6 @@ An alternative ("old") implementation for reading the CTF data is available in t
 
 The following types of CTF data can be read and used in FieldTrip: 
 
-
 *  MEG/EEG and AUX data: .res4, .meg4, .1_meg4, .2_meg4, etc.
 
 *  event information: .meg4, ClassFile.cls, MarkerFile.mrk
@@ -26,7 +24,6 @@ The following types of CTF data can be read and used in FieldTrip:
 *  single sphere and multi-sphere volume conduction models: .hdm
 
 *  anatomical MRI: .mri
-
 
 This page explains how to get started reading and using each of these file types in FieldTrip.
 
@@ -44,13 +41,11 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
  3.  a folder that contains the MATLAB/FieldTrip data that you want to save
 ## Set path
 
-
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 	
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
-
 
 ## Reading MEG data
 
@@ -60,8 +55,6 @@ The header and data are in different files, and the data itself can be split ove
 FieldTrip automatically figures out what the actual header and datafiles are.
 
 To get started with reading your CTF MEG data into FieldTrip, it might be a good check to call the low-level reading functions directly. As an example for the code below, we will use the tutorial dataset, which can be downloaded from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
-
-
 
 ### Read header
 
@@ -78,7 +71,6 @@ or
 	
 	hdr = ft_read_header('Subject01.ds/Subject01.res4')
 
-
 This should return a header structure with the following element
 
 	
@@ -93,7 +85,6 @@ This should return a header structure with the following element
 	           grad: [1x1 struct]  % gradiometer structure
 	           orig: [1x1 struct]  % additional header information
 
-
 Make sure that the header information is correctly read.
 ### Read data
 
@@ -104,12 +95,10 @@ To read the data from the tutorial dataset, use
 	
 	dat = ft_read_data('Subject01.ds');
 
-
 or
 
 	
 	dat = ft_read_data('Subject01.ds/Subject01.meg4');
-
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 187x900x266 in case of the tutorial data, which is a trial-based dataset. In case of continuous data, this function returns a 2-D matrix of size Nchans*Nsamples.
 Additional options should be specified in key-value pairs (see **[ft_read_data](/reference/ft_read_data)**). When only the filename is specified, all data in the dataset will be read. To only read the first 3 trials from channels 5-9, us
@@ -117,14 +106,12 @@ Additional options should be specified in key-value pairs (see **[ft_read_data](
 	
 	dat = ft_read_data('Subject01.ds', 'begtrial', 1, 'endtrial', 3, 'chanindx', [5:9]);
 
-
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 5x900x3.
 
 You can explicitly specify the data format (also [see below](/#Specifying the low-level reading functions)), e.g.
 
 	
 	dat = ft_read_data('Subject01.ds', 'dataformat', 'ctf_ds');
-
 
 ### Preprocessing
 
@@ -134,7 +121,6 @@ After checking that the low-level reading functions successfully read your CTF d
 	cfg=[];
 	cfg.dataset = 'Subject01.ds';
 	data = ft_preprocessing(cfg)
-
 
 This should return the following data structur
 
@@ -150,10 +136,7 @@ This should return the following data structur
 	        cfg: [1x1 struct]    % the configuration used for processing the data
 	
 
-
-
 With cfg.continuous = 'yes' or 'no' you can specify whether the file contains continuous data. The default is determined automatically. Data that is measured pseudo-continuously should be treated as cfg.continuous = 'yes'.
-
 
 For more preprocessing options and information on how to define trials, see the [tutorial documentation](/tutorial).
 
@@ -174,9 +157,7 @@ The old 64-channel CTF datasets are not supported in the native CTF reading func
 
 Usually, you would call **[ft_definetrial](/reference/ft_definetrial)** to select pieces of data around those events in the data that interest you, either using a generic definition or using your own “trialfun”. The trialfunction calls the low-level reading function **[ft_read_event](/reference/ft_read_event)**. The **[ft_read_event](/reference/ft_read_event)** function reads event information and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
 
-
 **[ft_read_event](/reference/ft_read_event)** reads the triggers from the trigger channels in the MEG dataset (.meg4), and if available classified trials from the classification file (ClassFile.cls) and markers from the marker file (MarkerFile.mrk), and combines all the available events into one structure. For more information on events, triggers and trials refer to the [faq](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials?).
-
 
 To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
@@ -194,7 +175,6 @@ This automatically reads the events from the trigger channels, from the class fi
 	    offset
 	    duration
 
-
 To access the first event, use
 
 	
@@ -207,7 +187,6 @@ To access the first event, use
 	      offset: -300
 	    duration: 900
 
-
 ### Frontpanel and Backpanel triggers
 
 The 151 channel MEG system we started off with at the Donders in 2002 had an electronics rack which   was placed such that there was a clear front and back side. Each side of the rack exposed 16 binary inputs (i.e. bits) for connecting external triggers. To the front we connected the button boxes, to the back we connected the stimulus presentation computer. The 16 bits from the front and from the back were combined in the 32 bit STIM channel. 
@@ -217,8 +196,6 @@ Given the connections of the button boxes and stimulus computers, in the analysi
 The front and back panel at other CTF sites with the old electronics rack may be (or have been) connected differently. Furthermore, the present CTF systems have more trigger input options and no front and back side any more, so better don't use those any more in your analyses. In many cases UPPT001 and similarly named channels are the interesting trigger channels. MEG data acquired with the older CTF systems uses the STIM channel. If you want to relate FieldTrip to the CTF software, you will have to focus on the STIM and UPPT channels.
 
 So please be aware that "frontpanel" and "backpanel" are Donders conventions that have ended up in FieldTrip, but may not be of any relevance to you.
-
-
 
 ## Reading headmodels
 
@@ -242,15 +219,12 @@ For example, to read and plot the single sphere model produced with CTF software
 	figure
 	ft_headmodelplot(cfg);
 
-
 For more information on reading, creating and plotting headmodels refer to 
 [this page](/example/make_leadfields_using_different_headmodels).
 
 ## Reading MRI files
 
-
 Anatomical MRI files can be converted into CTF compatible data using the CTF software MRIConverter and MRIViewer. After this process, a .mri file is saved which can be used in FieldTrip.
-
 
 *  Open the original MRI data in MRIConverter
 
@@ -264,11 +238,9 @@ Anatomical MRI files can be converted into CTF compatible data using the CTF sof
 
 *  Save the changes in the .mri file
 
-
 The .mri file can be read into FieldTrip using **[ft_read_mri](/reference/ft_read_mri)**. To read the mri file of the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
     mri = ft_read_mri('Subject01.mri');
-
 
 The FieldTrip mri can be visualized using **[ft_sourceplot](/reference/ft_sourceplot)**,
 
@@ -276,9 +248,7 @@ The FieldTrip mri can be visualized using **[ft_sourceplot](/reference/ft_source
     figure
     ft_sourceplot(cfg, mri)
 
-
 To enter interactive mode (i.e, to browse through the volume), use
-
 
     cfg = [];
     cfg.interactive = 'yes';

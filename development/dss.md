@@ -9,9 +9,7 @@ There is no guarantee that this page is updated in the end to reflect the final 
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-
 ## Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
-
 
 ### Description
 
@@ -37,7 +35,6 @@ To load this dataset into matlab and preprocess with FieldTrip, us
 	cfg.trialdef.eventtype = 'trial';
 	cfg = ft_definetrial(cfg);
 
-
 ### ECG peak detection
 
 We can use ft_artifact_zvalue.  Apply preproc to the ECG channel, and use some cfg options to obtain the peak time point above threshold within a certain time range (rather than all values above threshold), and furthermore, set a fixed time-range around this peak.
@@ -55,14 +52,12 @@ Filter the ECG channel to optimize separation of a single peak per heartbeat rel
 	cfg.artfctdef.zvalue.artfctpeakrange=[-.25 .5]; % save out 250ms prior and 500ms post ECG peak
 	cfg=ft_artifact_zvalue(cfg,rawcleanrere);
 
-
 The DSS code wants a 'params' structure which contains peak time points, as well as the range around the peak that you think is relevant.  Note that the subfield 'dssartifact' is different from 'artifact' in 2 ways: 1) beginning/end points based on cfg.artfctdef.zvalue.artfctpeakrange rather than where the channel exceeded the threshold, and 2) the sample counts between trial end to the start of next trial have been subtracted.
 
 	
 	params.tr=cfg.artfctdef.zvalue.peaks;
 	params.tr_begin=cfg.artfctdef.zvalue.dssartifact(:,1);
 	params.tr_end=cfg.artfctdef.zvalue.dssartifact(:,2);
-
 
 ### DSS component rejection
 
@@ -86,7 +81,6 @@ The output compdss contains the components to reject.  Use ft_databrowser to plo
 	cfg.showcallinfo='no';
 	ft_databrowser(cfg,compdss);
 
-
 Once you are happy with the number of components to reject, then actually remove them from the data.
 
 	
@@ -94,6 +88,4 @@ Once you are happy with the number of components to reject, then actually remove
 	cfg.component = 1:size(compdss.topo,2);
 	cfg.feedback  = 'textbar';
 	rawdssrej     = ft_rejectcomponent(cfg, compdss, rawcleanrere);
-
-
 

@@ -25,7 +25,6 @@ The following BCI input agents are desired
 
 *  ...
 
-
 The following BCI classifying agents are desired
 
 *  CSP (common spatial pattern)
@@ -35,9 +34,6 @@ The following BCI classifying agents are desired
 *  2-channel power t-score
 
 *  ...
-
-
-
 
 The following BCI actor agents are desired
 
@@ -63,7 +59,6 @@ The following BCI actor agents are desired
 
 *  ...
 
-
 Using the different actors, it is possible to implement a complete BCI system. The following BCI systems are desired
 
 *  Pong game, single and dual player mode
@@ -73,6 +68,4 @@ Using the different actors, it is possible to implement a complete BCI system. T
 *  head movement detector (only for MEG)
 
 *  ...
-
-
 

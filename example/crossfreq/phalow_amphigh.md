@@ -4,7 +4,6 @@ layout: default
 
 # Phalow_amphigh
 
-
 ## Help ft_freqsimulation
 
 	
@@ -18,7 +17,6 @@ layout: default
 	%     3rd channel: s2
 	%     4th channel: s3
 	%     5th channel: noise
-
 
 ## Simulating the data
 
@@ -46,12 +44,6 @@ layout: default
 	% noise
 	cfg.noise.ampl = 0.5;
 
-
-
-
-
-
-
 ## What does the signal look like?
 
 	
@@ -77,13 +69,9 @@ layout: default
 	figure; ft_singleplotER([],fft_data);
 	print -dpng phalow_amphigh_fig2.png
 
-
 ![image](/media/example/crossfreq/phalow_amphigh_fig1.png@400) ![image](/media/example/crossfreq/phalow_amphigh_fig2.png@400)
 
-
 ## Analysis Methods
-
-
 
 ### Calculate power of power
 
@@ -121,12 +109,8 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig4.png
 
-
 ![image](/media/example/crossfreq/phalow_amphigh_fig3.png@400)
 ![image](/media/example/crossfreq/phalow_amphigh_fig4.png@400)
-
-
-
 
 ### Calculate coherence between power and raw 
 
@@ -174,7 +158,6 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig5.png
 
-
 ![image](/media/example/crossfreq/phalow_amphigh_fig5.png@400)
 
 	
@@ -197,10 +180,7 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig6.png
 
-
 ![image](/media/example/crossfreq/phalow_amphigh_fig6.png@400)
-
-
 
 ### Power spectrum of amplitude envelope (by Hilbert transform)
 
@@ -235,7 +215,6 @@ layout: default
 	cfg.xlim = [1 20];
 	figure; ft_singleplotER(cfg,fft_hilbert);
 	print -dpng phalow_amphigh_fig8.png
-
 
 ![image](/media/example/crossfreq/phalow_amphigh_fig7.png@400)
 ![image](/media/example/crossfreq/phalow_amphigh_fig8.png@400)

@@ -8,7 +8,6 @@ layout: default
 
 EEGLAB is an interactive Matlab toolbox for processing continuous and event-related EEG, MEG and other electrophysiological data using independent component analysis (ICA), time/frequency analysis, and other methods including artifact rejection. EEGLAB incorporates and extends the ICA/EEG toolbox of Makeig, and it provides the user with a graphical interface. The homepage of EEGLAB is located at www.sccn.ucsd.edu/eeglab/.
 
-
 EEGLAB supports external plug-ins and one of them is DIPFIT. With the DIPFIT plugin, you can localize the sources of signal components that have been separated using ICA. The DIPFIT plugin is based on code from Robert Oostenveld, and the same code is included in FieldTrip.
 
 ## Converting data between EEGLAB and FieldTrip

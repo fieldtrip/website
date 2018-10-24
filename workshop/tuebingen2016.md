@@ -4,7 +4,6 @@ layout: default
 
 # FieldTrip Workshop in Tübingen, Germany
 
-
 *  Workshop leaders: Britta Westner and Tzvetan Popov
 
 *  When: 13-14 October 2016
@@ -16,7 +15,6 @@ We will keep this page up to date and post new information here when available.
 ## Schedule
 
 ####  Day 1 (Thursday 13 October, 2016)
-
 
 *  09:00 – 09:30		Registration, welcome and coffee
 
@@ -38,9 +36,7 @@ We will keep this page up to date and post new information here when available.
 
 *  19:00 – 21:30               Dinner: **tba** (not included in registration)
 
-
 #### Day 2 (Friday 14 October, 2016)
-
 
 *  9:00 – 10:30		Lecture 3: Source reconstruction using beamformers (**Britta Westner**)    
 
@@ -58,11 +54,9 @@ We will keep this page up to date and post new information here when available.
 
 *  17:00 – 17:30               Wrap up the event, questions and answers!
 
-
 ## Tutorial preparation
 
 To prepare for the hands-on sessions, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
-
 
 *  [MEG instrumentation (video)](https://www.youtube.com/watch?v=15Qs4fuPpes)
 
@@ -87,7 +81,6 @@ moving all files one level up.
 `</note>`
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
-
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-master

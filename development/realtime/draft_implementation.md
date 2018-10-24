@@ -3,7 +3,6 @@ layout: default
 tags: realtime development
 ---
 
-
 # Suggested changes to the reference implementation
 
 ### Provide a unified open_connection call

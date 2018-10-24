@@ -24,8 +24,6 @@ Plan: investigate at which locations knowledge about the units is assumed/needed
  8. mri related functions: transformation matrix!
  9. sourceinterpolate
 
-
-
 This project has been taken up in 
 
 *  http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=953

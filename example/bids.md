@@ -34,7 +34,6 @@ Prior to conversion, the total dataset contains some 2000 files per subject (man
 
 The organization of the original raw data is like this
 
-
 	raw/README.txt
 	raw/A2001
 	raw/A2002
@@ -45,9 +44,7 @@ The organization of the original raw data is like this
 	raw/V1003
 	...
 
-
 with this underlying directory structure
-
 
 	raw/A2001/behaviour
 	raw/A2001/genetics
@@ -58,7 +55,6 @@ with this underlying directory structure
 	raw/A2001/mri_restingstate
 	raw/A2001/mri_spectroscopy
 	raw/A2001/mri_task
-
 
 for each subject. The actual data files (CTF, DICOM, Presentation log files, Polhemus, etc.) are located in these directories.
 
@@ -98,11 +94,9 @@ The scripts are included on this page for completeness. You can also download th
 	mkdir -p $BIDS/stimuli
 	mkdir -p $BIDS/source
 
-
 ### Step 2: collect and convert MRI data from DICOM to NIFTI
 
 In this section we are using [dcm2niix](https://github.com/rordenlab/dcm2niix) not only to convert the DICOMs to nifti, but also to create the initial json sidecar files with the information about the MR scan parameters. In step 6 we will update the sidecar files with information that is not available in the DICOMs, such as the task instructions.
-
 
 	RAW=/project/3011020.13/raw
 	BIDS=/project/3011020.13/bids
@@ -128,7 +122,6 @@ In this section we are using [dcm2niix](https://github.com/rordenlab/dcm2niix) n
 ### Step 3: collect and rename the CTF MEG datasets
 
 In this step we are copying and renaming the CTF datasets to the target location using a CTF command line utility. During this process, the identifying information about the subject (i.e name) is removed from the dataset. Since the "newDs -anon" option does not remove the time and date of the recording from the dataset, at the end we do another step to remove the date of acquisition from the res4 header file. We keep the time, as it is not unique enough to identify which recording goes with which participant. See also this [frequently asked question](/faq/how_can_i_anonymize_a_ctf_dataset).
-
 
 	RAW=/project/3011020.13/raw
 	BIDS=/project/3011020.13/bids
@@ -205,8 +198,6 @@ In this step we are copying and renaming the CTF datasets to the target location
 	####################################################################################################
 	find $BIDS -name \*.res4 -exec $HOME/bids-tools/bin/remove_ctf_datetime -d {} \;
 
-
-
 `<note>`You can see a few exceptions, which reflect datasets that did not convert well automatically. The reason for this is the fact that during data acquisition, the data ended up in two different .ds datasets. According to BIDS, these are supposed to be represented by different 'runs'.
 `</note>`
 ### Step 4: collect the NBS Presentation log files
@@ -214,7 +205,6 @@ In this step we are copying and renaming the CTF datasets to the target location
 All Presentation log files are copied from their original location to the sourcedata folder. Although in step 6 the events in the log files will be used to construct the events.tsv files, we want to keep (and share) the Presentation log files, as those contain slightly more information than what can be represented in the events.tsv.
 
 One issue is that the Presentation log files contains the exact date and time of the experiment. To avoid possible identification of participants, we are using [sed](https://www.gnu.org/software/sed/manual/sed.html) to replace the time and date in the files.
-
 
 	RAW=/project/3011020.13/raw
 	BIDS=/project/3011020.13/bids
@@ -239,8 +229,6 @@ Since the orientation of the CTF coregistered MRI has been flipped relative to t
 
 The CTF coregistered MRI gets the same json sidecar file as the one converted by dcm2niix, which will be updated in step 6 regarding the coordinate system.
 
-
-
 	PROCESSED=/project/3011020.09/processed
 	BIDS=/project/3011020.13/bids
 
@@ -260,7 +248,6 @@ The CTF coregistered MRI gets the same json sidecar file as the one converted by
 	done
 
 ### Step 6: create the sidecar files for each dataset
-
 
 	bidsroot = '/project/3011020.13/bids';
 	subject  = dir(fullfile(bidsroot, 'sub-*'));
@@ -465,8 +452,6 @@ The CTF coregistered MRI gets the same json sidecar file as the one converted by
 	  end % for each dataset
 	end % for each subject
 
-
-
 `<note>` This script here deals with some dataset specific exceptions. Indeed, given the fact that we are working with real data here, due to various reasons, automatic conversions (one-size-fits-all) are likely to occasionally fail.
 
 In the current context, the tricky part happened to be the creation of the events.tsv files for the MEG task data. In order to create these files, data2bids attempts to align the experimental events, as extracted from the presentation software logfile, with the experimental events, as extracted from the digital trigger channel in the MEG data files. This only works well and unambiguously, if there's a one-to-one-mapping of the events (or a specific type of event) in the two representations.
@@ -477,13 +462,11 @@ In the current example, there were occasional issues with the digital trigger ch
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-
 	BIDS=/project/3011020.13/bids
 
 	$HOME/bids-tools/bin/create_sidecar_files  --description  $BIDS   # create the dataset_description.json file
 	$HOME/bids-tools/bin/create_sidecar_files  --participants $BIDS   # create the participants.tsv file
 	$HOME/bids-tools/bin/create_sidecar_files  --scans        $BIDS   # create the scans.tsv files (per subject and session)
-
 
 ### Finalize
 

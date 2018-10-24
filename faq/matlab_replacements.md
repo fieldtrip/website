@@ -3,7 +3,6 @@ layout: default
 tags: faq matlab toolbox path
 ---
 
-
 ## Replacements for functions from Mathworks toolboxes
 
 To prevent unnecessary dependencies on functions from additional Mathworks toolboxes, FieldTrip includes a number of drop-in replacement functions with the same behaviour as their MATLAB counterpart. 

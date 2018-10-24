@@ -3,9 +3,7 @@ layout: default
 tags: example meg ctf
 ---
 
-
 # Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
-
 
 	
 	% the two example files with the 151 and 275 channel CTF specifications are available from
@@ -47,7 +45,6 @@ tags: example meg ctf
 	cfg.template{1} = grad151; avg275_151 = ft_timelockanalysis([], ft_megrealign(cfg, avg275));
 	cfg.template{1} = grad275; avg275_275 = ft_timelockanalysis([], ft_megrealign(cfg, avg275));
 
-
     % plot the realigned datasets
     cfg = [];
     figure; ft_multiplotER(cfg, avg151_151); 
@@ -79,5 +76,4 @@ tags: example meg ctf
     figure; ft_multiplotER(cfg, avg275, avg275_275, avg151_275); 
     orient portrait; print -dpng -r300 compare275.png
 ![image](/media/example/megrealign/compare275.png@500)
-
 

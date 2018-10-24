@@ -3,7 +3,6 @@ layout: default
 tags: tutorial meg eeg lfp spike cfg matlab
 ---
 
-
 # Introduction
 
 ## Introduction
@@ -15,7 +14,6 @@ This tutorial will give you an introduction into how to use FieldTrip with Matla
 When performing EEG/MEG experiments, the aim is to gain insight into the functioning of the brain while it is engaged in certain activities. When analyzing EEG/MEG data, we hope to identify the aspects of the data that relate to the experimental question. This means that we seek to reduce the data to interpretable concepts or statements regarding hypotheses underlying the experiment. The successful analysis of EEG/MEG data does not only depend on acquiring good quality data, but also on incorporating the researcher's knowledge and assumptions into the analysis protocol.
 
 The analysis protocol includes tools and/or algorithms used, and how they are used. The knowledge or assumptions incorporated by the researcher in the protocol might b
-
 
 *  At a certain time after the presentation of a stimulus, the brain will process the stimulus. 
 
@@ -38,7 +36,6 @@ We will use the FieldTrip toolbox for EEG/MEG analysis that is developed within 
 ## The FieldTrip toolbox
 
 The FieldTrip toolbox is not a program with a user interface where you can click around in, but rather a collection of functions. The functions can be grouped into a few major categories: 
-
 
 *  Functions for preprocessing, reading and coverting data (e.g. **[ft_preprocessing](/reference/ft_preprocessing)**)
 
@@ -103,12 +100,9 @@ It is now possible to execute the Matlab scripts by copying/pasting the relevant
 
 Make sure that the path is set correctly to the directory of the FieldTrip toolbox and the data. For the tutorials it is recommend to 'cd' to the directory where the data are. Look at [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) for more information on how to correctly set your path for FieldTrip.
 
-
 ## Making an analysis protocol
 
-
 When you are using FieldTrip, your analysis protocol is the Matlab script, in which you call the different FieldTrip functions. Such a script (or set of scripts) can be considered as an analysis protocol, since in them you are defining all the steps that you are taking during the analysis. For most of the analysis steps, you will be able to use a function from the FieldTrip toolbox, but sometimes you also will want to include your own Matlab code in the script.
-
 
 In the next section, you will see how the protocol of the ERP example looks using FieldTrip.
 Some other standard analysis protocols are given also below. The figures indicate which functions you (probably) will use in the analysis, and give you a guideline in finding the documentation that you need.
@@ -119,9 +113,7 @@ ERP/ERF analysis consists of preprocessing, averaging the data timelocked to the
 
 ![image](/media/development/introduction/introduction_erpfnew2.png)
 
-
 **//Figure 3; An example analysis protocol for Event-Related Potentials (ERPs) using the FieldTrip functions//**
-
 
 ### Frequency and time-frequency analysis
 
@@ -146,7 +138,6 @@ If you do a source reconstruction of the data for multiple subjects, and if you 
 
 The spatial normalisation towards a template brain is done in FieldTrip with the **[ft_volumenormalise](/reference/ft_volumenormalise)** function, which internally calls some low-level functions from the SPM2 toolbox. In general, it is also advisable to normalise your individual subject's data to the SPM/MNI template brain.
 
-
 Below you can see the protocol that you would use for averaging the source reconstruction over subjects and for group statistics on the source level. If the statistical test involves two conditions, then you should do the source normalisation in both conditions for all subjects and feed the two grandaveraged source reconstructions into **[ft_sourcestatistics](/reference/ft_sourcestatistics)**.
 
 ![image](/media/development/introduction/introduction_source_multiple2.png)
@@ -167,6 +158,4 @@ FAQs related to issues with Matla
 
 You can find examples that specifically relate to Matlab her
 {{topic>example +matlab &list}}
-
-
 

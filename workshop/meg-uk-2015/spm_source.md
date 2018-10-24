@@ -3,23 +3,17 @@ layout: default
 tags: meg-uk-2015
 ---
 
-
 # SPM Source reconstruction demo
 
 During this demo we will estimate the current sources on the cortical surface that gave rise to the electromagnetic activity we measured with MEG and EEG outside the head. To do so, we first need to build a head model, based on the individual MRI, coregister the head model and our M/EEG data and then build a forward model which describes how sources in the brain appear on the different M/EEG sensors. We will then apply two different inversion approaches, both in a Bayesian framework: the Multiple Sparse Priors and the Minimum Norm solution. We will compare the model evidences for these distributed imaging approaches and source localise the evoked oscillatory activity at a particular time-frequency window.
 
-
 We start by opening SPM1
-
 
 *  First go to the source reconstruction demo folder: cd C:/workshop/spm-source-demo.
 
-
 *  Type ’spm eeg’ in the command line to start SPM.
 
-
 ####  Create Head Model and Forward Model
-
 
 We will use the subject’s structural MRI to define meshes describing the cortex, skull and scalp of our subject. Due to the different conductivities (for example between the skull and the scalp) the geometry of the head is important to derive realistic physical forward models that predict how cortical current sources map onto the M/EEG sensors.
 
@@ -37,9 +31,7 @@ We will use the subject’s structural MRI to define meshes describing the corte
 
 You can now run this batch file by pressing the green “run” button. Note that at this stage the model parameters are saved, but the lead fields themselves are not estimated until inversion.
 
-
 #### Review the head model and forward model
-
 
  1.  You can review the head model and the forward model by pressing the “3D Source Reconstruction” button within the SPM window.
  2.  This will create a new window; select “Load” and choose the “PapMcbdspmeeg_run_01_sss.mat” file. You can find the forward model we just computed under the inversion index “3” (use the “next” and “previous” buttons to navigate between different inversion indices).
@@ -47,9 +39,7 @@ You can now run this batch file by pressing the green “run” button. Note tha
  4.  Next, select the “display” button beneath “Co-register” and then select “MEG” when asked what to display. The graphics window should the sensor locations in green discs, the digitized headpoints in small red dots, the fiducials in the MEG data as purple diamonds, and the MRI fiducials as cyan discs again. The overlap between MRI and MEG fiducials indicates how well the data have been co-registered.
  5.  Finally, select “Display”, located beneath “Forward Model”, and select again “MEG”. You should see an image displaying the MEG sensor locations relative to the cortical mesh and the single shell fitted to the inner skull mesh.
 
-
 #### Model Inversion
-
 
 We will next compute the inverse solutions and compare two distributed source reconstruction approaches. Since the inverse problem is ill-posed, prior information must be included to give a unique solution. We will first apply the **Multiple Sparse Priors** approach; this corresponds to a sparse prior on the sources, namely that only a few sources are activ
 
@@ -81,9 +71,7 @@ With the previous steps, we invert data of whole trials from -100 to +800ms acro
  7.  Then replicate this module to produce a second “inversion results” module by right-clicking on the module and selecting “replicate”.
  8.  Here, change the inversion index from “1” to “2” to write out the time-frequency contrast for the MNM (IID) distributed solution as well.
 
-
 #### Generating batch scripts
-
 
 You can use the batch framework to construct a processing pipeline across a group of subjects or across different source reconstruction approaches. A brief exampl
 
@@ -94,9 +82,7 @@ You can use the batch framework to construct a processing pipeline across a grou
  5.  In batch_localise_inv_subj.m replace nrun = X; with nrun = 1 and as inputs specify “{’PapMcbdspmeeg_run_01_sss.mat’}” and [-100 800].
  6.  Finally, save and run the batch_localise_inv_subj.m script.
 
-
 #### Review inverse solutions
-
 
  1.  Review the inverse results by pressing the “3D Source Reconstruction” button within the SPM window; re-load the “PapMcbdspmeeg_run_01_sss.mat” file.
  2.  Press the “mip” (“Maximum intensity projection”) button below the “Invert” button. The top plot shows the evoked responses for the three conditions from the peak vertex, with the red line being the currently selected condition, here “1” for Famous faces (press the “condition” button to toggle through the other conditions). The bottom plot will show the maximal intensity projection at the time of the maximal activation.
@@ -113,10 +99,7 @@ SPM offers many other options for source reconstruction. Here we used two differ
 distributed source reconstruction methods, but you could also use a Bayesian version
 of an Equivalent Current Dipole algorithm by selecting VB-ECD after clicking the “Invert” button within the “3D Source Reconstruction” window.
 
-
 #### Literature
-
-
 
 *  http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf
 

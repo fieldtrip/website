@@ -3,7 +3,6 @@ layout: default
 tags: faq workshop
 ---
 
-
 # How should I prepare for the upcoming FieldTrip workshop?
 
 //This assumes that you will be attending one of the upcoming [FieldTrip workshops](/workshop).

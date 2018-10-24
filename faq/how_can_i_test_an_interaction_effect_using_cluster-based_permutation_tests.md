@@ -3,11 +3,9 @@ layout: default
 tags: faq statistics
 ---
 
-
 ##  How to test an interaction effect using cluster-based permutation tests?
 
 You can use cluster-based permutation tests for some but not for all interaction effects. Specifically, you can only use them for testing interaction effects in factorial designs with only a single between-subjects factor. In this text, I only consider two-way designs (of which only a single "way" corresponds to a between-subjects factor), although generalisation to to multi-way designs is possible.
-
 
 **A 2-by-2 factorial design**
 
@@ -17,20 +15,17 @@ I assume you have the output of your time-locked or frequency analysis for each 
 
 From these 4 data structures, you now make 2 difference data structures in the following wa
 
-
 *  Copy GA11 to GAdiff11_12 and perform the assignment GAdiff11_12.individual=GA11.individual-GA12.individual.
 
 *  Copy GA21 to GAdiff21_22 and perform the assignment GAdiff21_22.individual=GA21.individual-GA22.individual.
 
 The objective is now to statistically compare GAdiff11_12 and GAdiff21_22. Because we will be comparing two differences, we will be testing an interaction effect. Using a cluster-based permutation test, we have to choose the appropriate statfun, depending on whether this comparison involves a within-subjects or a between-subjects factor. In a full within-subjects design, it involves a within-subject factor, and in a mixed between-within-subjects design, it involves a between-subjects factor (remember that the first factor in the design is the between-subjects factor). In the form of a recip
 
-
 *  In a full within-subjects design, compare GAdiff11_12 and GAdiff21_22 using the statfun depsamplesT.
 
 *  In a mixed between-within-subjects design, compare GAdiff11_12 and GAdiff21_22 using the statfun indepsamplesT.
 
 Following this rationale, you can also construct statistical tests for interaction effects that involve factors with more than 2 levels. However, especially with neurobiological data, it is almost never wise to statistically test interaction effects in designs more complicated than the 2-by-2 factorial design. In these more complicated designs, you always end up with F-tests, and these do not inform you about the pattern in the data that is responsible for the interaction effect. Nevertheless, for those of you that cannot resist the temptation(-;), I now describe the analysis steps for a general K-by-L factorial design (with K and L being positive integer >=2).
-
 
 **The general K-by-L factorial design**
 
@@ -39,7 +34,6 @@ I assume you have the output of your time-locked or frequency analysis for each 
 From these KL data structures, you now make K(L-1) difference data structures in the following wa
 
 For k=1,...,K and l=2,...,L 
-
 
 *  Copy GAk1 to GAdiffk1_kl and perform the assignment GAdiffk1_kl.individual=GAk1.individual-GAkl.individual.
 
@@ -50,5 +44,4 @@ In the form of a recip
  1.  In a full within-subjects design with K=2, compare the array [GAdiff11_12, GAdiff11_13, ... , GAdiff11_1L] with the array [GAdiff21_22, GAdiff21_23, ... , GAdiff21_2L] using the statfun depsamplesHotTsqr (which does not exist yet, but can be implemented in a straightforward way).
  2.  In a mixed between-within-subjects design with K=2, compare the array [GAdiff11_12, GAdiff11_13, ... , GAdiff11_1L] with the array [GAdiff21_22, GAdiff21_23, ... , GAdiff21_2L] using the statfun indepsamplesHotTsqr (which does not exist yet, but can be implemented in a straightforward way).
  3.  In a mixed between-within-subjects design with K>2, compare the K arrays [GAdiffk1_k2, GAdiffk1_k3, ... , GAdiffk1_kL] (k=1, ..., K) using the statfun indepsamplesWilksLambda (which does not exist yet, but can be implemented in a straightforward way).
-
 

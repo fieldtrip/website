@@ -43,7 +43,6 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
     cd d:/toolkit
 
-
 ## Program
 
 A {{:workshop:nijmegen2014:program.pdf|PDF with the detailed program}} is available. See below for the relevant tutorials for the hands-on sessions.
@@ -61,7 +60,6 @@ A {{:workshop:nijmegen2014:program.pdf|PDF with the detailed program}} is availa
 
 *  evening
     * pub?
-
 
 ### Wednesday 7 May
 

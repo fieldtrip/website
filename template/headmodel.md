@@ -3,7 +3,6 @@ layout: default
 tags: template
 ---
 
-
 ## Template head models for forward volume conduction modeling
 
 Volume conduction models of the head are a necessary ingredient for source reconstruction. Sources are typically modelled as equivalent current dipoles (ECDs), i.e. point sources with a location and orientation. These sources produce an electrical current that flows through all surrounding tissue. The geometrical and conductive aspects of the tissue influence how the source becomes visible in the EEG or MEG.
@@ -32,7 +31,6 @@ The "colin27" anatomical MRI and its relation to the TT and MNI template atlas i
 	the same image, in the canonical directory of the SPM distribution.
 	In SPM96 this is called T1 in later distributions it is called
 	single_subj_T1.
-
 
 The original construction of the averaged MRI is detailed in 
 [[http://www.ncbi.nlm.nih.gov/pubmed/9530404|
@@ -63,7 +61,6 @@ You can visualize it with
 	
 	>> ft_plot_mesh(skin, 'edgecolor', 'none', 'facecolor', 'skin')
 	>> camlight
-
 
 ![image](/media/template/headmodel_skin.png@300)
 

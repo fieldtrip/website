@@ -15,7 +15,6 @@ Note that the FieldTrip toolbox comes with a user-friendly **[ft_preprocessing](
 
 All of the low-level preprocessing functions require data to be represented as a 2D matrix (Nchans X Nsamples). The following functions are implemented in the preproc modul
 
-
 *  **[ft_preproc_bandpassfilter](/reference/ft_preproc_bandpassfilter)**         - applies a band-pass filter to the data
 
 *  **[ft_preproc_bandstopfilter](/reference/ft_preproc_bandstopfilter)**         - applies a band-stop filter to the data
@@ -114,5 +113,4 @@ The full code for the benchmarking (one script per preproc function and some hel
  | preproc_rereference; refchan = 'all';                                                                | 0.13 ms      | 0.17 ms      | 0.71 ms       | 
  | function name and algorithm details                                                                  | 8ch x 100smp | 8ch x 500smp | 64ch x 500smp | 
  | preproc_standardize; begsample = []; endsample = [];                                                 | 0.20 ms      | 0.29 ms      | 1.48 ms       | 
-
 

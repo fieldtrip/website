@@ -10,7 +10,6 @@ After making changes to the code and/or documentation, this page should remain o
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-
 __**Tutorials:**__
 
 **Preprocessing - trigger based trial selection**
@@ -59,8 +58,6 @@ Because I didn't do source analysis myself until now I don't now the best way to
 **Working with animal electrophysiology data (LFPs and spikes)**
 
 **How to use checkconfig**
-
-
 
 __**Example matlab scripts:**__
 

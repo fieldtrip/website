@@ -4,7 +4,6 @@ layout: default
 
 # Chengdu, China
 
-
 *  By whom: Robert Oostenveld
 *  When: 27-29 September 2017
 *  Where: Room 133 (theoretical part) and Room 135 (practical part), Center for Information in Medicine, School of Life Science & Technology, University of Electronic Science & Technology of China (UESTC)
@@ -63,7 +62,6 @@ If you get the error "can't find the command ft_defaults" you should check the p
 After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session.
 
 ##  Script for the Cuban EEG dataset
-
 
 	%%
 
@@ -236,7 +234,6 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 	ft_plot_sens(data_clean.elec, 'label', 'label');
 	% in the FIGURE: turn the axes around, then do
 	ft_plot_axes(data_clean.elec);
-
 
 	edit average58.ele
 

@@ -3,7 +3,6 @@ layout: default
 tags: example preprocessing filter
 ---
 
-
 # Determine the filter characteristics
 
 The following script demonstrates how you can determine the filter characteristics. Better ways than those described here are available, but this will give you an idea on how to approach the filter details. This snippet of code generates a one second piece of data with a delta function in it (i.e. a spike). This signal is passed though the **[ft_preproc_lowpassfilter](/reference/ft_preproc_lowpassfilter)** function (located in fieldtrip/preproc) and the result is plotted in the time domain (left panel) and frequency domain (right panel).
@@ -47,7 +46,6 @@ The following script demonstrates how you can determine the filter characteristi
 	print -dpng fig2.png
 
 ![image](/media/example/filter/fig2.png@600)
-
 
 	
 	str = 'compare Butterworth and FIR';

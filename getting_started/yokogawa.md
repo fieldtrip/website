@@ -3,11 +3,9 @@ layout: default
 tags: meg yokogawa dataformat coordinate
 ---
 
-
 # Getting started with Yokogawa data
 
 ## Introduction
-
 
 The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: .sqe, .ave, .con, .raw. Furthermore, gradiometer positions and orientations are read from the header (see below). 
 
@@ -43,18 +41,14 @@ Usually you will be starting your FieldTrip analysis with raw continuous data wh
 
 ## Set path
 
-
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
-
 
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
 
-
 # Testing that the reading into MATLAB works
 
 To test that the reading of the continuous data works on your computer, you can try something like the following on your own data fil
-
 
 	
 	>> hdr = ft_read_header('Continuous1.con')
@@ -69,15 +63,12 @@ To test that the reading of the continuous data works on your computer, you can 
 	           grad: [1x1 struct]
 	           orig: [1x1 struct]
 
-
 In hdr.label you can find the channel labels (as strings). In hdr.grad you can find the magnetometer and gradiometer definition (i.e. the position of each coil and how the coils are combined into channels). 
 
 Subsequently you can read the data from one of the channels (here the first) and simply plot i
 
-
 	>> dat = ft_read_data('Continuous1.con', 'chanindx', 1);
 	>> plot(dat) 
-
 
 Instead of using the low-level reading functions for reading and handling the data manually, normally you would use the  **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**. Please read through the tutorials to learn how to do a complete analysis.
 
@@ -102,12 +93,9 @@ This means that the user (you!) needs to know exactly which channels are used, w
 
 After reading the data wit
 
-
 	data = ft_read_data('test.sqd');
 
-
 We can make a plot of one of the trigger channels 
-
 
 	figure;
 	plot(data(161,1:100000);
@@ -116,14 +104,12 @@ We can make a plot of one of the trigger channels
 
 zooming in a bi
 
-
 	figure;
 	plot(data(161,1:10000);
 
 ![image](/media/getting_started/triggers2.png@300)
 
 zooming in even more using the matlab figure magnifying glass on the top left corner of one trigger even
-
 
 	figure;
 	plot(data(161,1:10000,'.-');
@@ -140,7 +126,6 @@ According to the example here we can now determine
 Together with our knowledge of the experimental design and stimulus equipment we also know that the stimulus is presented at the moment of up-flank of the trigger channel. Lets say the same turned out to be the case in trigger channels 162 to 166, we can make a trialfunction to read in the events.
 
 For exampl
-
 
 	function [trl, event] = mytrialfun(cfg)
 	
@@ -162,11 +147,9 @@ For exampl
 	end
 	
 
-
 We can then proceed in the standard way of defining trials and reading data as follows. 
 Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc. 
 Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In Fieldtrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding ` cfg.trialdef.trigchannel = '162' `{matlab} into the trialfunctio
-
 
 	cfg = [];
 	cfg.dataset                 = data.sqd;
@@ -184,8 +167,6 @@ Also realize that how the Yokogawa system is recording events through individual
 	% read data   
 	preproc                     = ft_preprocessing(cfg);
 	
-
-
 
 # Coordinate system coregistration
 
@@ -223,35 +204,28 @@ Read subject MRI
 	ft_hastoolbox('spm8',1);
 	mri = ft_read_mri('Structural.hdr');
 
-
 First we use **[ft_volumerealign](/reference/ft_volumerealign)** to locate the nasion and the auricular points (using the n/l/r keyboard input). This will return the anatomical MRI in head coordinates.
-
 
 	cfg             = [];
 	cfg.method      = 'interactive';
 	cfg.coordsys    = 'ctf'; 
 	mri_aligned     = ft_volumerealign(cfg,mri); 
 
-
 ### Aligning the MEG with the head coordinate system
 
 With the MEG we have determined the position of the forehead marker coils relative to the MEG dewar. Using **[ft_sourceplot](/reference/ft_sourceplot)** we can determine the coordinates of the forehead markers in the anatomical MRI. 
-
 
 	cfg             = [];
 	cfg.method      = 'ortho';
 	cfg.interactive = 'yes';
 	ft_sourceplot(cfg,mri_aligned);
 
-
 By clicking in one of the panels of the figure, the position of the crosshair will be updated and the three orthogonal slices will be redrawn. If you look in the MATLAB command-line window, you will also see that the current position of the crosshair is displayed. You should see something like this every time you clic
-
 
 	click with mouse button to reposition the cursor
 	press n/l/r on keyboard to record a fiducial position
 	press q on keyboard to quit interactive mode
 	voxel 2152181, indices [91 173 55], ctf coordinates [0.0 47.0 -18.0] mm
-
 
 The location of the crosshair is expressed in voxel indices and in mm units relative to the head coordinate system that you determined previously with **[ft_volumerealign](/reference/ft_volumerealign)**
 
@@ -263,19 +237,14 @@ Using the three fiducial points expressed both in head coordinates and in MEG de
 
 The MEG fiducial positions are stored in an ascii text file that you can open in the MATLAB editor.
 
-
 	edit  marker-coregis.txt
 
-
 Using the MRI fiducial positions expressed in [head coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), and the MEG fiducial positions expressed in dewar coordinates, we can transform the MEG sensor positions from dewar into head coordinates.
-
 
 	% read the gradiometer definition from file, this is in dewar coordinates
 	grad = ft_read_sens('Continuous.con');
 
-
 Alternative to reading the gradiometer definition from the raw data file, you can also obtain the gradiometer definition after **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_freqanalysis](/reference/ft_freqanalysis)**: the data structures resulting from those functions contain the "grad" field which corresponds to the gradiometer definition from the original raw file. 
-
 
 	% add the fiducials (expressed in dewar coordinates) to the gradiometer definition
 	grad.fid.pnt(1,:) = fid1_dewarcoordinates;
@@ -302,38 +271,30 @@ Alternative to reading the gradiometer definition from the raw data file, you ca
 	    };
 	grad_aligned = ft_sensorrealign(cfg, grad);
 
-
 ## Example: Sourceanalysis
 
 ### Headmodel
 
 The realigned anatomical MRI can be segmented to aid in the construction of the volume conduction model can be made.
 
-
 	cfg           = [];
 	mri_segmented = ft_volumesegment(cfg, mri_aligned);
 	% it is convenient to keep the original anatomical MRI with the segmentation
 	mri_segmented.anatomy = mri_aligned.anatomy;
 
-
 We can now make the headmodel
-
 
 	cfg             = [];
 	cfg.sourceunits = 'mm'; %this option will be depricated
 	cfg.mriunits    = 'mm'; %this option will be depricated
 	vol             = ft_prepare_singleshell(cfg, seg); 
 
-
 Because the gradiometer coordinates are in cm, and the MRI derived geometrical objects in mm, we have to put those in cm also.
-
 
 	vol_cm          = ft_convert_units(vol,'cm');
 	coil_cm         = ft_convert_units(coil_sens, 'cm');
 
-
 Plot sensors, fiducials and headmodel to doublecheck
-
 
 	figure;
 	plot3(coil_cm.pnt(:,1), ...
@@ -354,7 +315,6 @@ Plot sensors, fiducials and headmodel to doublecheck
 	camlight left
 	camlight left
 
-
 ![image](/media/getting_started/headmodel_and_sensors_and_fiducials.png@400)
 
 ### Freqanalysis
@@ -362,7 +322,6 @@ Plot sensors, fiducials and headmodel to doublecheck
 Now we're at it, lets make a start using the above frequency data / geometrical objects for beamforming sourceanalysis.
 
 Redefine trials to make baseline estimate
-
 
 	cfg             = [];
 	cfg.toilim      = [-.8 -.3];
@@ -376,9 +335,7 @@ Redefine trials to make baseline estimate
 	cfg.tapsmofrq   = 2;
 	freq_BL         = ft_freqanalysis(cfg,data_BL);
 
-
 Do freqanalysis on left/right cue conditions 
-
 
 	cfg             = [];
 	cfg.toilim      = [.5 1];
@@ -407,9 +364,7 @@ Do freqanalysis on left/right cue conditions
 	cfg.tapsmofrq   = 2;
 	freq_stimr      = ft_freqanalysis(cfg,data_stimr);
 
-
 Its always good to use as much data as possible for your common filter
-
 
 	data_common     = ft_appenddata([], data_BL, data_stimr, data_stiml);
 	
@@ -421,9 +376,7 @@ Its always good to use as much data as possible for your common filter
 	cfg.tapsmofrq   = 2;
 	freq_common     = ft_freqanalysis(cfg,data_common);
 
-
 Lets check out the sensor level first
-
 
 	freq_diff = freq_stimr;
 	freq_diff.powspctrm = (freq_stimr.powspctrm - freq_stiml.powspctrm) ./ (freq_stimr.powspctrm + freq_stiml.powspctrm) ;
@@ -456,7 +409,6 @@ not too bad...
 
 compute common spatial filter 
 
-
 	cfg = [];
 	cfg.grad            = data_concat.grad;
 	cfg.grid.xgrid      = -15:0.5:15;
@@ -475,9 +427,7 @@ compute common spatial filter
 	cfg.lambda          = '0.005%';
 	source_common       = ft_sourceanalysis(cfg, freq_common);
 
-
 Project cue condition through common spatial filter 
-
 
 	cfg = [];
 	cfg.grad            = data_concat.grad;
@@ -511,11 +461,9 @@ Project cue condition through common spatial filter
 	source_right_bl         = source_right;
 	source_right_bl.avg.pow = source_right_bl.avg.pow ./ source_common.avg.pow;
 
-
 ### Plotting results
 
 Interpolate for plotting on MRI
-
 
 	cfg                 = [];
 	cfg.method          = 'linear';
@@ -525,9 +473,7 @@ Interpolate for plotting on MRI
 	% source_left_bl_int  = ft_sourceinterpolate(cfg,source_left_bl,mri_aligned);
 	source_right_bl_int = ft_sourceinterpolate(cfg,source_right_bl,mri_aligned);
 
-
 Plot results
-
 
 	figure;
 	cfg                 = [];
@@ -545,5 +491,4 @@ Plot results
 `<note exercise>`
 Thanks to Akiko Ikkai for contributing her Yokogawa data to make this page
 `</note>`
-
 

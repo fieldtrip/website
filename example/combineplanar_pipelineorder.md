@@ -15,7 +15,6 @@ It requires CTF275 gradiometer description data, which is available [here](ftp:/
 
 The following code creates a single dipole that projects brain activity on posterior sensors. We simulate an alpha component (10Hz) whose power decreases after a hypothetical visual stimulus delivery. The signal itself is not very important (you can design your own).
 
-
 	grad275 = ft_read_sens('ctf275.mat');
 
 	vol = [];
@@ -51,8 +50,6 @@ The following code creates a single dipole that projects brain activity on poste
 Now let's simulate how ft_combineplanar can or cannot influence the power output as a function of pipeline order.
 But first, it's important to remind the logic behind the induced Time-Frequency Representation (TFR). What the induced TFR archives is the computation of the power estimates (non-linear transformation) for each single trial. As a consequence, the grand-mean (single-trials) of the induced TFR will add phase-locked PLUS non-phase-locked (time jittered) components. This is fundamentally different from the evoked TFR: first single-trials are averaged and then a TFR is computed. With the latter approach, non-phase-locked components wont be efficiently added because they'll average out. More info in [ Tallon-Baudry et al 1996 J Neurosci](http://www.ncbi.nlm.nih.gov/pubmed/8753885)
 
-
-
 	%% synthetic planar computation
 	cfg              = [];
 	cfg.feedback     = 'no';
@@ -63,9 +60,7 @@ But first, it's important to remind the logic behind the induced Time-Frequency 
 	cfg.neighbours   = ft_prepare_neighbours(cfg, data_axial);
 	data_planar      = ft_megplanar(cfg,data_axial);
 
-
 With the ft_megplanar 'sincos' method, the vertical and horizontal components of each channel contain the negative and the positive parts of the signal. However, ft_combineplanar cfg.combinemethod = 'sum' for freq datatype, sums the power of the vertical and the horizontal components.
-
 
 	%% time-frequency analysis on axial and synthetic planar data
 	cfg            = [];
@@ -84,11 +79,9 @@ With the ft_megplanar 'sincos' method, the vertical and horizontal components of
 	%% average the axial representation to compare later
 	freq_axial_avg = ft_freqdescriptives([],freq_axial);
 
-
 Now let's test the influence of pipeline order on the espected value
 
 A) Combine planar for each single trial and then average
-
 
 	cfg               = [];
 	cfg.combinemethod = 'sum';
@@ -96,11 +89,9 @@ A) Combine planar for each single trial and then average
 
 	freq_combined_avg1 = ft_freqdescriptives([],freq_combined);
 
-
 The other wa
 
 B) Average single trials planar data (vertical and horizontal components) and then combine planar
-
 
 	freq_planar_avg = ft_freqdescriptives([],freq_planar);
 
@@ -108,9 +99,7 @@ B) Average single trials planar data (vertical and horizontal components) and th
 	cfg.combinemethod  = 'sum';
 	freq_combined_avg2 = ft_combineplanar(cfg,freq_planar_avg);
 
-
 Let's plot the results and see if there's a differenc
-
 
 	cfg         = [];
 	cfg.layout  = 'CTF275.lay';
@@ -131,7 +120,6 @@ Let's plot the results and see if there's a differenc
 	subplot(324);ft_singleplotTFR(cfg, freq_combined_avg1);title('combined-then-average');colorbar;
 	subplot(326);ft_singleplotTFR(cfg, freq_combined_avg2);title('average-then-combined');colorbar;
 
-
 ![image](/media/example/example/tfr.png@700)
 
 We can see that the second and the third row indicates that the other of the ft_combineplanar does not influence the power output (same topo and power scale). This is because with the induced TFR each single trial is squared (power estimate) and ft_combineplanar cfg.combinemethod='sum' on freq datatype [sums](http://mathworld.wolfram.com/VectorAddition.html) the vertical and the horizontal components. As the single trial estimates are positive (power estimates), the order of the operation does not influence the output. You can now guess whether the same logic is going to hold for the Event-Related Fields.
@@ -148,9 +136,7 @@ A) Combine planar for each single trial and then average
 
 	data_combined_avg1 = ft_timelockanalysis([],data_combined);
 
-
 B) Average axial single trials, compute the planar gradient (vertical and horizontal components) and then combine i
-
 
 	data_axial_avg = ft_timelockanalysis([],data_axial); %% this is an Axial ERF
 
@@ -166,7 +152,6 @@ B) Average axial single trials, compute the planar gradient (vertical and horizo
 	cfg                = [];
 	cfg.combinemethod  = 'sum';
 	data_combined_avg2 = ft_combineplanar(cfg,data_planar_avg);
-
 
 But as with the 'sincos' planar method the vertical and horizontal components preserve the positive and negative parts of the signal (it's still not squared -> this is done in ft_combineplanar
 

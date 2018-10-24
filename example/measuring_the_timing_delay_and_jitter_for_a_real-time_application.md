@@ -3,7 +3,6 @@ layout: default
 tags: example realtime
 ---
 
-
 # Measuring the timing delay and jitter for a real-time application
 
 ## Timing of a closed loop system
@@ -15,7 +14,6 @@ The idea is to make a trigger-echo application. Triggers are sent (e.g. via matl
 	                            ^                                   |
 	                            |                                   |
 	                            -------------------------------------
-
 
 On the trigger sending side, the code looks something like thi
 
@@ -45,7 +43,6 @@ On the trigger sending side, the code looks something like thi
 	%% close serial port
 	fclose(serobjw); 
 	
-
 
 On the receiving side (the machine, that reads the data online from shared memory), we need to read the appropriate trigger channel, detect incoming triggers and then once a trigger is detected, write a new trigger to the data (in this case this was done by sending a command to serial port that was connnected to PPT1 of teh MEG system and recorded on channel UPPT001 with the data).
  
@@ -174,7 +171,6 @@ On the receiving side (the machine, that reads the data online from shared memor
 	end % while true
 	
 
-
 Once, the data is saved on disk (in a ctf .ds), we can now detect incoming and outgoing triggers.
 We could use **[ft_read_event](/reference/ft_read_event)** to detect the pulses but first we need to make sure , that incoming and outgoing triggers always come in couplets.
 
@@ -191,7 +187,6 @@ We can just plot the trigger channe
 	data_r=reshape(dat,[size(dat,1)*size(dat,2),1]);
 	figure
 	plot(data_r);
-
 
 This then looks a bit like this figure.
 
@@ -222,7 +217,6 @@ i.e. a train of couplets comprising a 4 followed by a 16. We can now extract the
 	
 	
 	diff_in_sampl=out_sample-in_sample;
-
 
 The data I obtained (at a sampling rate of 1200) after sending about 3000 triggers looks like this: 
 
@@ -297,7 +291,6 @@ This means set up a buffer on the localhost (or other machine, whose name needs 
 	cfg. headerfile= 'buffer://localhost:1972';
 	cfg.dataset  = 'buffer://localhost:1972';
 
-
 We now want to read the STIM REF channel at which the trigger arrives (UPPT001) and then send an echo (a trigger of different value) to the same channel, so we can subsequently calculate the delay from the recorded data.
 
 	
@@ -322,7 +315,6 @@ We now want to read the STIM REF channel at which the trigger arrives (UPPT001) 
 	    
 	
 
-
 Now we start the streaming of the data using ft_poll_buffer
 
 	
@@ -330,7 +322,6 @@ Now we start the streaming of the data using ft_poll_buffer
 	    
 	   
 	    newNum = ft_poll_buffer(cfg.headerfile);
-
 
 Note that this is replacing   the reading of the header in the previous example i.e.
 
@@ -421,7 +412,6 @@ The number of new samples is now already returned by the ft_poll_buffer function
 	    end % if enough new samples
 	end % while true
 
-
 6) Both trigger and flank are now recorded on the same channel (here UPTT001). Now we can offline calculate the delays in the online loo
 
 	
@@ -463,7 +453,6 @@ The number of new samples is now already returned by the ft_poll_buffer function
 	hdr=read_header(filename); %% read header to get sample rate to get difference in time
 	diff_in_s=(smp_out-smp_in)./hdr.Fs; %% in [s]
 
-
 We can now plot the distribution of all delay
 
 	
@@ -471,7 +460,6 @@ We can now plot the distribution of all delay
 	hist(diff_in_s,50)
 	xlabel('delay echo-trigger in [s]')
 	title(sprintf(' HL before and after, No of trig =2000, Fs =%d Hz, Nchans = %d',hdr.Fs, hdr.nChans));
-
 
 and plot the sample number of the echo against the sample number of the sent trigger. Accumulative delays will be seen as a departure from linearity with increasing sample number.
 
@@ -481,7 +469,6 @@ and plot the sample number of the echo against the sample number of the sent tri
 	xlabel('sample No of trigger')
 	ylabel('sample No of trigger-echo')
 	title(sprintf('HL before and after: not continuous,Fs =%d Hz, Nchans = %d',hdr.Fs, hdr.nChans))
-
 
 Below follow the results of the testing in the DCCN for continuous head localization (HL) or head localization before and after (HL off) and two sampling rates (1200Hz, and 4KHz
 
@@ -494,7 +481,6 @@ NOTE: this is a configuration previously considered as buggy, which is now worki
 
 We now also plot the sample number of the echo against the sample number of the trigger that preceded i
 
-
 # Figure 1
 
 ![image](/media/example/trigger_smp_vs_echo_smp.jpg)
@@ -504,7 +490,6 @@ This shows no samples missing and no accumulative delays
 # CHL off, Fs=1200, Nchans=311
 
 # Figure 
-
 
 ![image](/media/example/delay_hist._1200hz_hl_off.jpg)
 
@@ -534,12 +519,9 @@ This shows no events missing and no accumulative delays.The delay distribution i
 
 # Figure 
 
-
 ![image](/media/example/delay_hist_hl_on_fs_4khz_detection_read_ev.jpg)
 
 Although, here we only have 200 delays (compared to 2000 before), we see  that the detection of triggers with read_event is not faster than with the online flank detection, although we might be able to squeeze out a bit more performance (reduce latency) once we use a clever scheme for only reading *new* events. This also depends on whether **acq2ftx** first writes the events or the samples to the buffer.
-
-
 
 ## Timing of data blocks with and without head localization
 
@@ -593,7 +575,6 @@ The first example shows how you can read data from a real-time acquisition ssyte
 	xlabel('iteration number')
 	
 
-
 ## Timing of the ft_read_header function
 
  
@@ -638,7 +619,6 @@ This will show you something like
 	       12240
 	...
 
-
 You can notice the number of samples increasing now and then with 40 samples (the blocksize in **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)**). In this example, it increases approximately every 7th iteration of the **[ft_read_header](/reference/ft_read_header)** function. That means that the **[ft_read_header](/reference/ft_read_header)** function is called 7 times in the time that it took to collect 40 data samples, corresponding to 7 calls per 40 ms, or 5.7 ms per single call to **[ft_read_header](/reference/ft_read_header)**.
 
 ## Timing of the ft_read_header function when accessing shared memory, performed on the CTF275 MEG system at the FCDC
@@ -660,7 +640,6 @@ The code below will give you a sense for the distribution of time delays associa
 	t1 = t1 - t0;
 	plot(t1*1000); % in miliseconds
 	
-
 
 A typical distribution of access times is belo
 

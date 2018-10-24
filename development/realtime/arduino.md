@@ -3,7 +3,6 @@ layout: default
 tags: realtime arduino
 ---
 
-
 #  Streaming realtime EEG data to and from Arduino 
 
 The following is a scratch pad for a demo that I (=Robert) have prepared for the [BrainGain public showcase event](https://twitter.com/intent/user?screen_name=BrainGain_NL). It consists of three Arduino devices, a Raspberry Pi and and a number of laptops. The flow of the data is as follow
@@ -35,7 +34,6 @@ The Bluetooth module was configured with the following settings. See http://www.
 	PinCod=1234
 	Bonded=0
 	Rem=000666495493
-
 
 The modeeg synchronization code is 0xA5 0x5A, or 165 90 in decimal.
 
@@ -71,7 +69,6 @@ The connections for an [Arduino Uno](http://arduino.cc/en/Main/ArduinoBoardUno) 
 
 I am using the DIP version of the RFM12B module. The pin connections ar
 
-
  | RFM12B         | Arduino Pro Mini | 
  | ------         | ---------------- | 
  | VDD            | 3.3v             | 
@@ -91,24 +88,17 @@ I am using the DIP version of the RFM12B module. The pin connections ar
 
 The purpose of this device is to demonstrate that something can be controlled. It reads the control signal using a wireless RFM12b (433/886 MHz) connection and visualizes it with a 10-segment LED array. Instead of driving the LED array, it could also act as a switch or drive a servo motor.
 
-
-
 It is based on a `<del>`[3V3 Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)`</del>` [5V Arduino Mini](http://arduino.cc/en/Main/ArduinoBoardMini). 
-
 
 *  SPI: 10 (SS), 11 (MOSI), 12 (MISO), 13 (SCK)
 
 *  External Interrupts: 2 and 3 (?)
 
-
 Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/products/9582) module and uses this [library](http://jeelabs.net/pub/docs/jeelib/RF12_8cpp.html).
 
 ![image](/media/development/realtime/rfm12b.png@200)
 
-
-
 ## See also
-
 
 *  [development/realtime/modulareeg](/development/realtime/modulareeg) for the bluetooth OpenEEG interface 
 

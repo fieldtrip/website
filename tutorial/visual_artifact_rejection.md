@@ -47,8 +47,6 @@ The following steps are taken to do visual artifact rejectio
    * Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
    * Alternatively: use **[ft_databrowser](/reference/ft_databrowser)** and mark the artifacts manually by interactively paging trial by trial
 
-
-
 ### Manual artifact rejection - display one trial at a time
 
 The function **[ft_rejectvisual](/reference/ft_rejectvisual)** provides various ways of identifying trials contaminated with artifacts.
@@ -87,9 +85,7 @@ By browsing through the trials, related artifacts become evident (trial 15, 36, 
 
 If you would like to keep track of which trials you reject, keep in mind that the trialnumbers change when you call **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once. An example: There are 87 trials in your data and first you reject trial 15, 36 and 39. Then trial number 87 becomes trial number 84. Later when you also want to reject trials 42, 43, 45 ,49, 50, 81, 82 and 84 you should be very careful and subtract 3 from all the old trial numbers. If you would like to know which trials you rejected, it is best to call rejectvisual only once.
 
-
 ### Manual artifact rejection - display one channel at a time
-
 
 It can also be convenient to view data from one channel at a time. This can be particularly relevant for the EOG channel. To do so writ
 
@@ -104,7 +100,6 @@ Click through the data using the > button.
 While clicking through all the trials you see that channels MLO12 and MLP31 contain a lot of artifacts (see the figure below ). They should be marked as 'bad'. After pressing the 'quit' button the channels marked 'bad' are now removed from the data structure.
 
 ![image](/media/tutorial/artifactdetect/untitled-2.jpg)
-
 
 ### Manual artifact rejection - display a summary
 
@@ -167,7 +162,6 @@ You can also call **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** m
     clean3  = ft_rejectvisual(cfg, clean2);
 `</note>`
 
-
 ----
 
 You can repeat this for the initially congruent (IC) condition. To detect all the artifacts use **[ft_rejectvisual](/reference/ft_rejectvisual)** with all 3 methods (trial, channel and summary) like in the examples above.
@@ -204,7 +198,6 @@ Trials 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85 contain various a
 An alternative way to remove artifacts is to page through the butterfly plots of the single trials, by using the ft_databrowser function.
 Call the function like
 
-
 	% first select only the MEG channels
 	cfg = [];
 	cfg.channel = 'MEG';
@@ -213,7 +206,6 @@ Call the function like
 	cfg=[];
 	cfg.channel = 'MEG';
 	artf=ft_databrowser(cfg,dataFIC);
-
 
 In the image below are two figures for the same trial (trial 75). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image).  Then, as in the right figure click within the dotted line
 

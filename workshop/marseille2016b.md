@@ -43,7 +43,6 @@ We will keep this page up to date and post new information here when available.
     * 13:00 – 16:00		FieldTrip playground
     * 16:00 – 17:00		Wrap-up-the-day: “Ask the expert” session
 
-
 ## Tutorial preparation
 
 To maximally benefit from this course, we expect the users to have basic knowledge of MATLAB and Fieldtrip. To prepare for the hands-on sessions, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!

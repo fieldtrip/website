@@ -3,7 +3,6 @@ layout: default
 tags: faq peer
 ---
 
-
 ## How can I set up the peer distributed computing on a large Linux cluster?
 
 At the Donders Centre we have a Linux cluster with approximately 50 quad-core desktop computers, each with 8-12 GB of RAM (mentat195 to mentat245). 

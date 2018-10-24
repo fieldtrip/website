@@ -30,7 +30,6 @@ moving all files one level up.
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
 
-
     restoredefaultpath
     cd path_to_directory/Fieldtrip-xxxxxxxx
     addpath(pwd)
@@ -54,9 +53,7 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
 
-
 ### Program
-
 
 #### Monday
 
@@ -70,7 +67,6 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
 *  evening
     * pub
-
 
 #### Tuesday
 

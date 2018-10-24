@@ -26,7 +26,6 @@ moving all files one level up.
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the **MATLAB command window**
 
-
     restoredefaultpath
     cd path_to_directory/Fieldtrip-xxxxxxxx
     ls
@@ -37,7 +36,6 @@ The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes.
 
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and e.g. not in another subfolder. You should see a long list of ft_xxx.m functions.
-
 
 The addpath(pwd) statement adds the
 present working directory, i.e. the directory containing the fieldtrip
@@ -51,7 +49,6 @@ Please do NOT use the graphical path management tool from MATLAB. In this hands-
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
 `</note>`
-
 
 After installing fieldtrip to your path, you change into the tutorial directory
 

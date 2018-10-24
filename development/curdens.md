@@ -14,15 +14,12 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 Upon reviewing this page on the wiki, it seems to me that this project is not going to happen. Although the fieldtrip code base might be used (in combination with other code), the release code will not be extended to specifically facilitate this.
 `</note>`
 
-
-
 # How to create a volumetric current density
 
 ## Introduction
 
 What is the tutorial about
 This is relevant for TMS tDCS ....
-
 
 ## Background
 
@@ -62,18 +59,13 @@ Alternatively (interactive)
 - run SciRun
 - collect solution and save it in a .mat file
 
-
 **@Robert** 
 - discuss next steps
-
 
 ### Questions
 
 Is the output of SimBio/SciRun the stiffness matrix (profiles of current in the head)?
 (input: current, output: spatial current density)
-
-
-
 
 ## Summary
 
@@ -82,5 +74,4 @@ General conclusions
 ## Suggested readings
 
 Other FT documentation pages
-
 

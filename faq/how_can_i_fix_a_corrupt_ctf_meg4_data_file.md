@@ -9,7 +9,6 @@ A corrupt .meg4 file can occur if your recording did not end properly. In this c
 
 If your datafile is corrupt, maybe due to incomplete storing or because the acquisition machine showed an error, you can still repair this file and use it. You can use the following script written by Ivar Clemens to fix both the datafile and the heade
 
-
     function repair_ctf_size(dataset)
     %
     % REPAIR_CTF_SIZE recalculates the amount of trials in

@@ -24,8 +24,6 @@ Create again, when finished, in the initial page unde
 The goal of this tutorial is to give insights about biological electric-magnetic fields generated at the neural level and how this impacts signals from EEG, MEG, ECoG, single cell recordings, tetrodes, etc. A so-called forward solution is here intended as the set of equations which lead from sources in the brain to the signal recorded at the sensors level. The spatial pattern of activation corresponding to a specific neural source is called most of the times 'lead field'. The availability of such a model allows to calculate the inverse solution: (extract source characteristics from real recordings) and therefore to regress neurally related useful information.
 In practical terms a forward solution is a tool which is made available to users in order to be able to perform source reconstruction/localization (for example with beamforming). The final goal is the reconstruction of neural activity in terms of its time course and location in space.
 
-
-
 A good tutorial for this topic is 'Electromagnetic Brain Mapping' from Baillet S et al, 2001.
 For MEG specific material, please refer also to: [MEG community site](http://megcommunity.org/index.php?option=com_content&view=article&id=27&Itemid=13)
 
@@ -60,9 +58,7 @@ One of the most important differences across methods takes into account the mode
 
 Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.fcdonders.nl/tutorial/beamformer) (MEG specific way to do that)
 
-
 ### Ingredients to build the forward model
-
 
 *  volume conductor geometry
 
@@ -95,7 +91,6 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 *  BEM
 
 ### ECoG forward models
-
 
 *  BEM
 

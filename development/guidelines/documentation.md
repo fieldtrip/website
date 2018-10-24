@@ -4,7 +4,6 @@ tags: guidelines development
     tags: example eeg source statistics}}
 ---
 
-
 # Documentation guidelines
 
 When you add documentation, please consider the following documentation guidelines to keep it consistent with other documentation and to facilitate cross-linking.
@@ -43,7 +42,6 @@ if you add an example script that describes performing source statistics in eeg.
 The tutorials should be written with a clear audience in mind: the reader of the tutorial expects to learn something. The tutorial should contain examples that can be reproduced. Furthermore, the examples should be explained in such a manner that the reader can generalize these hands-on examples to his/her own experimental data analysis.
 
 For consistency the tutorials should preferably be structured in the following wa
-
 
 *  **Introduction:** introduction to the tutorial and dataset. This should include
     * What will you learn from this tutorial?
@@ -90,7 +88,6 @@ Making schematic figures in SVG is easy in Office Word or Office Powerpoint usin
 ![image](/media/excel-drawing-tools-2007-2010.jpg@200)
 
 When you are done making the figure just select all text and images and copy-paste them it in Adobe Illustrator to save as SVG.
-
 
 ## What colors to use
 

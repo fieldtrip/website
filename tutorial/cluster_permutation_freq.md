@@ -27,7 +27,6 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 {{youtube>x0hR-VsHZj8}}
 `</note>`
 
-
 ## Background
 
 {{page>:tutorial:shared:cluster_permutation_background}}
@@ -207,15 +206,12 @@ Subsequently we add the raw effect (FIC-FC) to the obtained stat structure and p
 
 **//Figure 1: Raw effect (FIC-FC) and channel-time cluster of planar gradient TFRs of subject 1//**
 
-
-
 ## Within trial experiments
 
 We will now show how to statistically test the difference between the TFRs in the pre-stimulus (baseline) and the post-stimulus (activation) period of the fully incongruent sentence endings.
 To perform this comparison by means of a permutation test, we have to select equal-length non-overlapping time intervals in the baseline and the activation period. For the baseline period we choose [-1 0], which is the time interval from 1 to 0 seconds before stimulus onset. And for the activation period we choose [0.6 1.6], which is the time interval from 0.6 to 1.6 seconds after stimulus onset.
 
 It must be stressed that the time windows we choose to compare are **nonoverlapping** and of **equal length**. This constraint follows from the null hypothesis that is tested with a permutation test. This null hypothesis involves that the data (spatiotemporal matrices) observed in the two experimental conditions are drawn from the same probability distribution. This null hypothesis only makes sense if the dimensions of the data matrices in the two experimental conditions are equal. In other words, the number of channels and the number of time points of these spatiotemporal data matrices must be equal. This also applies to a within trials experiment in which a baseline and an activation condition are compared: the number of channels and time points of the baseline and the activation data matrices must be equal.
-
 
 ### Preprocessing and freqanalysis on planar data
 
@@ -326,14 +322,11 @@ Save the output:
 
     save stat_freqFIC_ACTvsBL stat;
 
-
 The output can also be obtained from the FieldTrip FTP server ( [stat_freqFIC_ACTvsBL.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/stat_freqFIC_ACTvsBL.mat)). If you need to reload the statistics output, us
 
     load stat_freqFIC_ACTvsBL
 
-
 By inspecting stat.posclusters and stat.negclusters, you will see that there is one substantially large cluster showing a positive effect and no large clusters showing a negative effect.
-
 
 ### Plotting the results
 
@@ -350,13 +343,11 @@ This time we will plot the largest cluster on top of the statistics, which are p
 
 **//Figure 2: Largest cluster that shows a difference between activation and baseline, plotted on top of the T-statistic of the difference.//**
 
-
 ## Within subjects experiments
 
 In this paragraph we describe permutation testing for TFRs obtained in experiments involving multiple subjects that are each observed in multiple experimental conditions. Every subject is observed in a large number of trials, each one belonging to one experimental condition. For every subject, averages are computed over all trials belonging to each of the experimental conditions. Thus, for every subject, the data are summarized in an array of condition-specific averages. The permutation test that will be described in the following informs us about the following null hypothesis: the probability distribution of the condition-specific averages is identical for all experimental conditions.
 
 ### Preprocessing, planar gradient and grandaverage
-
 
 To test the difference between the average TFRs for fully incongruent (FIC) and fully congruent (FC) sentence endings we use planar gradient data. To load the data structures containing time frequency grand averages of all ten subjects (available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat)), use:
 
@@ -412,7 +403,6 @@ The output can also be obtained from [stat_freq_planar_FICvsFC_GA.mat](ftp://ftp
 
 From inspection of stat.posclusters and stat.negclusters, we observe that there is one significant negative cluster.
 
-
 ### Plotting the results
 
 Plot again with **[ft_clusterplot](/reference/ft_clusterplot)*
@@ -424,11 +414,9 @@ Plot again with **[ft_clusterplot](/reference/ft_clusterplot)*
     cfg.layout = 'CTF151_helmet.mat';
     ft_clusterplot(cfg, stat);
 
-
 ![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_topos_20Hz_FIC_ACTvsBL_plan_GA_clusterplot3.png@700)
 
 **//Figure 3: T-statistic of the difference (FIC-FC) (of the combined planar gradient TFRs) and largest channel-time clusters//**
-
 
 #### Exercise
 
@@ -449,7 +437,6 @@ FAQ
 
 Example script
 {{topic>statistics cluster neighbour +example &list}}
-
 
 -----
 This tutorial was last tested by Jörn with version r9460 (April 30 2014) of FieldTrip using MATLAB 2010b on a 64-bit Linux platform.

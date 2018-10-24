@@ -3,14 +3,11 @@ layout: default
 tags: faq databrowser plot artifact
 ---
 
-
 ## How can I use the databrowser?
 
 The databrowser can be used to look at your raw or preprocessed data and annotate time periods at which specific events happen. Originally designed to identify sleep spindles, it's current main purpose is manual artifact detection. You can call the databrowser in an interactive mode by storing the output in a cfg like thi
 
-
 	  cfg = ft_databrowser(cfg, data);
-
 
 Note that the second argument, data, is optional. You can also read in data from your harddrive instead, see **[ft_databrowser](/reference/ft_databrowser)**. Note that you need to specify whether your data is continuous or not by setting cfg.continuous to 'yes' or 'no'. If your data is trial based, then continuous is 'no', if you have one long continuous recordings without breaks, you can set continous to 'yes'.
 

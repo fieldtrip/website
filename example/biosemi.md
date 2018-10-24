@@ -40,8 +40,6 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 
 	save('LayoutNY_fiducials',q);
 
-
-
 	% construct 3D electrode positions
 
 	load LayoutNY_fiducials.mat
@@ -72,9 +70,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	%save new electrodes
 	save elec160.mat elec
 
-
 ### Preprocessing
-
 
 	clear all
 
@@ -125,10 +121,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	  end
 	end
 
-
 ### Artifact rejection
-
-
 
 	clear all
 	cond = {'Pitch20' 'Pitch40', 'Timbre490', 'Timbre510'};
@@ -174,14 +167,11 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	  k = k+1;
 	end
 
-
 	% remove components that reflect eog artifacts
 	cfg=[];
 	cfg.component = [12 49]; % note the exact numbers will vary per run
 	data = ft_rejectcomponent(cfg, datacomp);
 	save('analysis/data_clean', 'data')
-
-
 
 	%% manual artifact rejection
 
@@ -214,12 +204,9 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	% the following trials were removed: 43, 87, 174, 261, 307, 333, 343, 398, 557, 583, 593, 606, 666, 670, 674, 741, 742, 743, 744, 745, 899
 	% the following channels were removed: A7, A13, A14, A25, A26, A27, A28, B8, B9, B12, B19, B32, D1, D21, D23, D25, D26, D31, D32, E1, E17, E21, E32
 
-
 	save('analysis/data_clean', 'data')
 
-
 ### Timelock Analysis
-
 
 	clear all
 
@@ -305,8 +292,6 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	end
 	print(gcf, '-dpng', 'figures/fig3_ERP')
 
-
-
 	%% now collapse
 
 	% compute averages for pitch and timbre
@@ -328,7 +313,6 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	end
 	save('analysis/timelock/timelock_avg','timelock_*');
 
-
 	% plot contrasts
 	figure
 	subplot(1,2,1);
@@ -341,11 +325,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 
 	print(gcf, '-dpng', 'figures/fig4_ERP')
 
-
-
 ### Statistics
-
-
 
 	cfg=[];
 	cfg.layout = 'biosemi160lay.mat'; %in meters
@@ -371,14 +351,11 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 
 	save('analysis/timelock/stat','stat');
 
-
-
 	%% plot
 
 	% cfg=[];
 	% cfg.layout = 'biosemi160lay.mat';
 	% ft_clusterplot(cfg, stat)
-
 
 	% find relevant clusters
 	ipos = find([stat.posclusters.prob]<=0.05);
@@ -449,8 +426,6 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	  title('negative cluster')
 	  print(gcf, '-dpng', ['figures/fig6_STAT_neg', num2str(i)])
 	end
-
-
 
 	load analysis/timelock/timelock_all.mat
 	load headmodel/standard_mri.mat

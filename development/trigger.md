@@ -31,10 +31,5 @@ Issues to be solved in the flank detectio
 
 *  consistent naming of triggers, but also backward compatibility
 
-
-
-
-
-
  
 

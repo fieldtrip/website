@@ -3,7 +3,6 @@ layout: default
 tags: faq eeg reference source
 ---
 
-
 # Why should I use an average reference for EEG source reconstruction?
 
 With EEG we always need N+1 electrodes to obtain N independent channels with potential differences. This is the case with a common reference (e.g. M1 behind the left ear), with offline re-referenced linked mastoids (i.e. using the average of M1 and M2 as the reference), or with a common average reference over all electrodes. 

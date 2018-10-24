@@ -3,7 +3,6 @@ layout: default
 tags: faq trialinfo trialdef trialfun
 ---
 
-
 ## Is it possible to keep track of trial-specific information in my analysis pipeline?
 
 Sometimes it may be useful to keep trial-specific information tightly linked to your data structure. This trial-specific information for example can relate to the experimental condition, or to behavioural parameters. 

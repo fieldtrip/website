@@ -3,7 +3,6 @@ layout: default
 tags: realtime audio
 ---
 
-
 # Soundcard input using PortAudio
 
 We provide a standalone tool called **audio2ft** (see ''realtime/datasource/audio'') to grab audio data from the soundcard using PortAudio, and stream it to a FieldTrip buffer. 
@@ -24,6 +23,5 @@ is available. Please go to the ''realtime/datasource/audio'' directory and type 
 Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
 ## External links
-
 
 *  http://www.portaudio.com  cross-platform library for accessing audio devices

@@ -3,7 +3,6 @@ layout: default
 tags: template
 ---
 
-
 # Template models and data
 
 The FieldTrip release comes with a number of templates to facilitate data processing and to ensure consistent high-quality results.

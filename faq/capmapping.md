@@ -21,7 +21,6 @@ We can see that the channel **Cz** from M10 relates to the channel **1** from M1
 
 Mapping between easycapM10 and easycapM11:
 
-
 	1  - Cz
 	2  - FCz
 	5  - CPz

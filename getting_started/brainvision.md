@@ -3,9 +3,7 @@ layout: default
 tags: dataformat brainvision eeg layout
 ---
 
-
 # Getting started with BrainVision Analyzer and Easycap
-
 
 ### Introduction
 
@@ -22,8 +20,6 @@ FieldTrip needs the user to define what file to read in. The BrainVision Recorde
 The .eeg files are the raw data files, i.e. they contain the data as it has been stored upon acquisition. 
 
 You can subsequently epoch your data using [ft_definetrial](/reference/ft_definetrial), and you can read in the data and preprocess it using [ft_preprocessing](/reference/ft_preprocessing). Note that in FieldTrip, no unit conversion takes place.
-
-
 
 Sometimes users have already done some processing (e.g., rereferencing, epoching, artifact identification) in BrainVision Analyzer, and in order to avoid repeating the time consuming / subjective selection steps it might be preferable to start from the processed data. BrainVision Analyzer stores the processing steps in a so called history file, keeping the raw data unchanged, and applying the processing steps on-the-fly. This is not something that FieldTrip can work with, so you need to export your data first.
 

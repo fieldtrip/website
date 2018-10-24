@@ -2,9 +2,6 @@
 layout: default
 ---
 
-
-
-
 `<note warning>`
 The purpose of this page is just to serve as a scratch pad for the new version of the example script.
 
@@ -68,7 +65,6 @@ FIXME in the following section the simulated data should consist of two dipoles 
 	cfg.relnoise = 10;
 	data = ft_dipolesimulation(cfg);
 
-
 FIXME the following code should do freqanalysis instead of timelockanalysis
 
 	
@@ -77,8 +73,6 @@ FIXME the following code should do freqanalysis instead of timelockanalysis
 	cfg = [];
 	cfg.covariance = 'yes';
 	timelock = ft_timelockanalysis(cfg, data);
-
-
 
 ### Conventional beamformer source reconstruction fails for correlated sources
 
@@ -107,8 +101,6 @@ FIMXE insert figure at the end of the following block of code
 	cfg.funcolorlim = [1.6 2.2];  % the voxel in the center of the volume conductor messes up the autoscaling
 	ft_sourceplot(cfg, source);
 
-
-
 ### Beamformer source reconstruction with a two-dipole source model
 
 The following code demonstrates how to do beamformer source reconstruction with a two-dipole source model.
@@ -118,7 +110,4 @@ FIMXE insert subsequent code, based on prepare_leadfield, sourceanalysis with me
 ### Beaming cortico-muscular coherence with a two-dipole source model
 
 FIXME extend with refchan, e.g. repeat dipolesimulation and add the timecourse of a nice signal to an additional channel in the data.
-
-
-
 

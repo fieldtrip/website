@@ -12,7 +12,6 @@ The aim of this tutorial is to solve the EEG forward problem using two different
 
 {{page>:tutorial:shared:sourcelocalization_background}}
 
-
 ## Procedure
 
 As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved in the next session ([ inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem )).
@@ -35,16 +34,12 @@ A more detailed description of these steps is following.
 
 ##  1. Read the MRI
 
-
 	mri_orig = ft_read_mri('subject01.nii');
-
 
 Visualize the MRI
 
-
 	cfg=[]; 
 	ft_sourceplot(cfg,mri_orig);
-
 
 ![image](/media/workshop/baci2017/mri_orig.png)
 *Figure2: visualization of the MRI*
@@ -53,15 +48,12 @@ Visualize the MRI
 
 In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI.
 
-
 	cfg = [];
 	cfg.method = 'interactive';
 	cfg.coordsys = 'ctf';
 	mri_realigned = ft_volumerealign(cfg, mri_orig);
 
-
 We can visualize the realigned MRI
-
 
 	cfg = []; 
 	ft_sourceplot(cfg, mri_realigned);
@@ -70,29 +62,23 @@ We can visualize the realigned MRI
 *Figure3: visualization of the realigned MRI*
 ##  3. Reslice the MRI
 
-
 	cfg = [];
 	mri_resliced = ft_volumereslice(cfg, mri_realigned);
 
-
 We can visualize the resliced MRI
-
 
 	cfg = []; 
 	ft_sourceplot(cfg, mri_resliced);
 
-
 ##  A. Boundary Element Method (BEM)
 
 ##  4A. Segment the MRI
-
 
 	cfg           = [];
 	cfg.output    = {'brain','skull', 'scalp'};
 	mri_segmented_3_compartment = ft_volumesegment(cfg, mri_resliced);
 
 Visualize the segmentation
-
 
 	seg_i = ft_datatype_segmentation(mri_segmented_3_compartment,'segmentationstyle','indexed');
 	
@@ -108,15 +94,12 @@ Visualize the segmentation
 
 ##  5A. Create the mesh
 
-
 	cfg=[];
 	cfg.tissue={'brain','skull','scalp'};
 	cfg.numvertices = [3000 2000 1000];
 	mesh_bem=ft_prepare_mesh(cfg,mri_segmented_3_compartment);
 
-
 Visualize the mesh and the electrode
-
 
 	load elec; %load the electrodes
 	figure, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
@@ -132,11 +115,9 @@ Visualize the mesh and the electrode
 
 ##  6A. Create the headmodel
 
-
 	cfg        = [];
 	cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
 	headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
-
 
 `<note warning>`
 In Windows the method 'dipoli' does not work. You can either load "headmodel_bem" and continue with this tutorial, or explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
@@ -145,13 +126,11 @@ In Windows the method 'dipoli' does not work. You can either load "headmodel_bem
 
 If the electrodes are not well aligned with the mesh, we can realign them wit
 
-
 	cfg          = [];
 	cfg.method   = 'interactive';
 	cfg.elec     = elec;
 	cfg.headshape = headmodel_bem.bnd;
 	elec = ft_electroderealign(cfg);
-
 
 Check the alignment visually.
 
@@ -166,12 +145,7 @@ Check the alignment visually.
 ![image](/media/workshop/baci2017/aligned.png)
 *Figure6: mesh, electrodes and axes.*
 
-
-
-
-
 ##  8A. Create the sourcemodel
-
 
 	cfg = [];
 	cfg.grid.resolution = 7.5;
@@ -183,22 +157,18 @@ Check the alignment visually.
 
 Visualize the sourcemodel
 
-
 	figure, ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:))
 	hold on, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
 	             'skin','facealpha',0.5,'edgealpha',0.1)
-
 
 ![image](/media/workshop/baci2017/sourcemodel_all.png)
 *Figure7: sourcemodel on the brain compartment*
 
 Save the sourcemode
 
-
 	save sourcemodel sourcemodel;
 
 ##  9A. Compute the leadfield
-
 
 	cfg = [];
 	cfg.grid = sourcemodel;
@@ -207,11 +177,9 @@ Save the sourcemode
 	cfg.reducerank = 3;
 	leadfield_bem = ft_prepare_leadfield(cfg);
 
-
 ##  B. Finite Element Method (FEM)
 
 ##  4B. Segment the MRI
-
 
 	cfg           = [];
 	cfg.output    = {'scalp','skull','csf','gray','white'};
@@ -221,9 +189,7 @@ Save the sourcemode
 	cfg.brainthreshold = 0.15;
 	mri_segmented_5_compartment = ft_volumesegment(cfg, mri_resliced); 
 
-
 Visualize the segmentation result
-
 
 	seg_i = ft_datatype_segmentation(mri_segmented_5_compartment,'segmentationstyle','indexed');
 	
@@ -240,16 +206,13 @@ Visualize the segmentation result
 
 ##  5B. Create the mesh
 
-
 	cfg        = [];
 	cfg.shift  = 0.3;
 	cfg.method = 'hexahedral';
 	cfg.resolution = 1; % this is in mm
 	mesh_fem = ft_prepare_mesh(cfg,mri_segmented_5_compartment);
 
-
 ##  6B. Create the headmodel
-
 
 	cfg = [];
 	cfg.method = 'simbio';
@@ -257,9 +220,7 @@ Visualize the segmentation result
 	cfg.tissuelabel = {'scalp', 'skull', 'csf', 'gray','white'};
 	headmodel_fem = ft_prepare_headmodel(cfg, mesh_fem);
 
-
 Visualize the headmodel and the electrodes (it might take time and memory)
-
 
 	% csf: 1, gm: 2, scalp: 3, skull: 4, wm: 5
 	ts = 3;
@@ -285,15 +246,12 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 	
 	ft_plot_sens(elec, 'style', '*g');
 
-
 ![image](/media/workshop/baci2017/mesh_fem_elec.png)
 *Figure9: visualization of headmodel_fem and electrodes*
-
 
 ## 7B. Align the electrodes
 
 If the electrodes are not well aligned with the mesh, we can realign them wit
-
 
 	cfg          = [];
 	cfg.method   = 'interactive';
@@ -305,20 +263,15 @@ If the electrodes are not well aligned with the mesh, we can realign them wit
 
 We will use the sourcemodel already generated in 7A. 
 
-
 	load('sourcemodel.mat');
-
 
 ##  9B. Compute the leadfield
 
 `<note warning>`
 Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take too much time and memory. Load "headmodel_fem_tr". `</note>`
 
-
 	%% compute the transfer matrix
 	[headmodel_fem_tr, elec] = ft_prepare_vol_sens(headmodel_fem, elec); 
-
-
 
 	%% compute the leadfield
 	cfg = [];

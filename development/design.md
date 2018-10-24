@@ -24,7 +24,6 @@ and http://fieldtrip.fcdonders.nl/development/statistics  for uvar.
 
 Is there any explanation on the wiki for more on uvar and wvar?   (Seems it is all on the email discussion list specific to people's questions).
 
-
 #####  links to already existing pages with some mention of design matrix
 
 *  http://fieldtrip.fcdonders.nl/walkthrough
@@ -63,6 +62,4 @@ however, in ft_sourcestatistics, instead sourcestatistics_(cfg.method) is called
 statistics_montecarlo.m (only) calls resampledesign.m
 
 statistics_stat.m (deprecated: see http://fieldtrip.fcdonders.nl/example/statistics_toolbox )
-
-
 

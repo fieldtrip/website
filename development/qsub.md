@@ -3,7 +3,6 @@ layout: default
 tags: distributed
 ---
 
-
 # Distributed computing using a Linux compute cluster
 
 The FieldTrip-qsub toolbox facilitates distributed computing on
@@ -29,5 +28,4 @@ details on the qsub toolbox or see http://www.fieldtriptoolbox.org/faq for quest
 ## Frequently asked questions about distributed computing using this toolbox
 
 {{topic>qsub +faq &list}}
-
 

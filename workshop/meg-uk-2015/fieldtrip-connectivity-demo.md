@@ -3,7 +3,6 @@ layout: default
 tags: meg-uk-2015 mmfaces connectivity
 ---
 
-
 # FieldTrip connectivity demo
 
 In this demonstration we will use the [face recognition dataset](/dataset). 
@@ -11,7 +10,6 @@ In this demonstration we will use the [face recognition dataset](/dataset).
 Please use the [general MATLAB instructions](/general) to get started.
 
 ## Part 1 - virtual channel connectivity
-
 
 	
 	%% start with data that was preprocessed in FieldTrip
@@ -56,7 +54,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.10.png@300)
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.26.png@300)
-
 
 	%%
 	% timelock2 was computed in http://fieldtrip.fcdonders.nl/workshop/meg-uk-2015/fieldtrip-beamformer-demo#part_3_-_reconstruct_single-trial_cortical_responses
@@ -103,7 +100,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.31.png)
 
-
 	%%
 	
 	cfg         = [];
@@ -126,7 +122,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.36.png@300)
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.39.png@300)
 
-
 	%%
 	
 	cfg = [];
@@ -139,12 +134,9 @@ Please use the [general MATLAB instructions](/general) to get started.
 	axis xy
 	
 
-
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.54.png)
 
-
 ## Part 2 - whole brain connectivity
-
 
 	%% start from data that was processed by FieldTrip
 	subj = 15;
@@ -222,7 +214,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.37.png)
 
-
 	%%
 	
 	pos = [21 -64 30];
@@ -257,7 +248,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.44.png)
 
-
 	cfg             = [];
 	cfg.parameter   = 'cohspctrm';
 	sourceI = ft_sourceinterpolate(cfg, conn, mri_realigned);
@@ -268,7 +258,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.49.png)
-
 
 	%% look at connectivity difference
 	
@@ -312,7 +301,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.52.png)
 
-
 	%% look at the analysis history
 	
 	% for saving to disk
@@ -322,6 +310,5 @@ Please use the [general MATLAB instructions](/general) to get started.
 	cfg.filename  = [prefix '_source_difint.html'];
 	ft_analysispipeline(cfg, source_difint);
 	
-
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.45.50.png)

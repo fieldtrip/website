@@ -16,9 +16,7 @@ This page contains questions that users could ask when they analyze their data w
 
 ### Questions and Answers
 
-
 ### What kind of source-reconstruction methods are implemented in FieldTrip?
-
 
 The [Inverse source parameter estimates from EEG/MEG data](/development/inverse) page describes under the second point which are the supported methods.
 
@@ -47,11 +45,7 @@ The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** funct
 	                     'music'   multiple signal classification
 	                     'mvl'   multivariate Laplace source localization
 
-
-
-
 ### What is the difference between the methods?
-
 
 Here are the [References to implemented methods](/references_to_implemented_methods).
 ### What kind of source-reconstruction method should I use?
@@ -61,7 +55,6 @@ Here are the [References to implemented methods](/references_to_implemented_meth
  Oscillatory activity + at certain point in time: beamforming (dics)
  beamforming: lcmv - ?
  (see Hesse, Jensen (2010) and Background of the MNE tutorial)
-
 
       * *Does it depend on a priori hypothesis of the source involved?* (cortical sheets vs. 3D grid)
       * *Does it depend on what kind of information I am interested in?* (e.g. changes in time or not)
@@ -86,7 +79,6 @@ Here are the [References to implemented methods](/references_to_implemented_meth
 **tutorial sites:**
 
 none.
-
 
 ** example scripts:**
 
@@ -121,14 +113,12 @@ Referenc
 
 **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 
-
 *  The methods listed in the reference of ft_prepare_headmodel should be matched to the articles in [References to implemented methods](/references_to_implemented_methods).
 
 *  The references to implemented methods can be probably extended.
  
 
 Method
-
 
 **EEG**
 
@@ -141,7 +131,6 @@ Method
 *  reference in help of the lower-level function: **none** but it is probably not applicable
 
 *  **reading function** (reads in a certain type of volume conduction model) 
-
 
 *  name in help of ft_prepare_headmodel: bemcp
 
@@ -178,7 +167,6 @@ Method
 
 *  reference in help of the lower-level function: **none**
 
-
 *  name in help of ft_prepare_headmodel: halfspace
 
 *  article in References to implemented methods: **none** (but is it relevant?)
@@ -186,7 +174,6 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **none** (but is it relevant?)
-
 
 *  name in help of ft_prepare_headmodel: infinite
 
@@ -196,13 +183,11 @@ Method
 
 *  reference in help of the lower-level function: **none** (but is it relevant?)
 
-
 *  name in help of ft_prepare_headmodel: multispheres
 
 *  Does this methods apply also to EEG? It says so in [Refurbishing the FORWARD module](/development/fwdarch) but it is **not listed as method for EEG** in the reference of ft_prepare_headmodel.
 
 *  see it under MEG methods. 
-
 
 *  name in help of ft_prepare_headmodel: singlesphere
 
@@ -211,7 +196,6 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: yes
-
 
 *  name in help of ft_prepare_headmodel: **none**
 
@@ -225,7 +209,6 @@ Method
 
 *  reference in help of the lower-level function: **none** 
 
-
 *  name in help of ft_prepare_headmodel: simbio
 
 *  article in References to implemented methods: **none** but is probably not applicable
@@ -236,7 +219,6 @@ Method
 
 *  **reading function** (reads in a certain type of volume conduction model) 
 
-
 *  name in help of ft_prepare_headmodel: fns
 
 *  article in References to implemented methods: **none**
@@ -245,13 +227,11 @@ Method
 
 *  reference in help of the lower-level function: **yes** (or at least a link provided)
 
-
 **MEG**
 
 *  name in help of ft_prepare_headmodel: singlesphere
 
 *  see it under EEG methods.
-
 
 *  name in help of ft_prepare_headmodel: **multispheres** FIXME rather not use multisphere because it is ambiguous 
 
@@ -265,7 +245,6 @@ Method
 
 *  reference in help of the lower-level function: yes
 
-
 *  name in help of ft_prepare_headmodel: singleshell
 
 *  article in References to implemented methods: yes (Nolte, 2003)
@@ -274,11 +253,9 @@ Method
 
 *  reference in help of the lower-level function: yes
 
-
 *  name in help of ft_prepare_headmodel: infinite
 
 *  see it under EEG methods.
-
 
 *  name in help of ft_prepare_headmodel: openmeeg
 

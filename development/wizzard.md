@@ -8,7 +8,6 @@ layout: default
 
 The idea is to make a graphical user interface that allows the user to step through a sequence of functions, where for example each block consists of a computation with the associated graphical feedback. E.g. consider the following analysis protoco
 
-
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% Step 1: do the preprocessing
 	
@@ -55,7 +54,6 @@ The idea is to make a graphical user interface that allows the user to step thro
 	cfg.showlabels  = 'yes';	
 	cfg.layout      = 'CTF151.lay';
 	multiplotTFR(cfg, TFRhann);
-
 
 Using the wizzard on this analalysis protocol would result in a graphical user interface like thi
 

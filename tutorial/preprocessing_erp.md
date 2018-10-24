@@ -23,7 +23,6 @@ The output of ft_definetrial is a configuration structure containing the field c
 
 ## Dataset
 
-
 The EEG dataset used in this script is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_erp). In the experiment, subjects made positive/negative or animal/human judgments on nouns. The nouns were either positive animals (puppy), negative animals (maggot), positive humans (princess), or negative humans (murderer). The nouns were presented visually (written words). The task cue (which judgement to make) was given with each word.
 
 ## Procedure
@@ -37,16 +36,13 @@ Instead of using the default 'trialfun_general' function with **[ft_definetrial]
 
 The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](/#appendixthe_trialfun_used_in_this_example ) of this example script. Please save it to a local file with the name **trialfun_affcog.m**.
 
-
 	cfg = [];
 	cfg.trialfun     = 'trialfun_affcog';
 	cfg.headerfile   = 's04.vhdr';
 	cfg.datafile     = 's04.eeg';
 	cfg = ft_definetrial(cfg);
 
-
 After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now not only stores the dataset name, but also the definition of the segments of data that will be used for further processing and analysis. The first column is the begin sample, the second the end sample, the third the offset and the fourth contains the condition for each trial (1=affective, 2=ontological).
-
 
 	>> disp(cfg.trl)
 	ans =
@@ -58,14 +54,11 @@ After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now n
 	       74747       75347        -100           1
 	       ...
 
-
-
 ### Pre-processing and re-referencing
 
 In this raw BrainVision dataset, the signal from all electrodes is monopolar and referenced to the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition the 'RM' electrode (number 32) had been placed on the right mastoid. In order to re-reference the data (e.g. including also the right mastoid in the reference) we added implicit channel 'REF' to the channels (which represents the left mastoid), and assigned two reference channels ('REF' and 'RM', channels of the left and right mastoids).
 
 Now call pre-processin
-
 
 	% Baseline-correction options
 	cfg.demean          = 'yes';
@@ -82,17 +75,13 @@ Now call pre-processin
 
 	data = ft_preprocessing(cfg);
 
-
 Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data segments that were read into memory.
-
 
 	cfg = [];  % use only default options                 
 	ft_databrowser(cfg, data);
 
-
 `<note>`
 You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk.
-
 
 	cfg         = [];
 	cfg.dataset = 's04.vhdr';
@@ -111,7 +100,6 @@ You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize th
 
 FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memor
 
-
 	>> data
 
 	data =
@@ -125,9 +113,7 @@ FieldTrip data structures are intended to be 'lightweight', in the sense that th
 	     trialinfo: [192x1 double]
 	           cfg: [1x1 struct]
 
-
 and note that, if you wanted to, you could plot a single trial with default Matlab function
-
 
 	plot(data.time{1}, data.trial{1});
 
@@ -139,9 +125,7 @@ We now continue with re-referencing to extract the bipolar EOG signal from the d
 Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The re-referencing step to obtain the EOG is therefore not required when working with Biosemi or other bipolar data.
 `</note>`
 
-
 ![image](/media/example/example_eog.png@200)
-
 
 	% EOGV channel
 	cfg              = [];
@@ -171,9 +155,7 @@ Some acquisition systems, such as Biosemi, allow for direct bipolar recording of
 	eogh             = ft_selectdata(cfg, eogh);
 	eogh.label       = {'eogh'};
 
-
 We now discard these extra channels that were used as EOG from the data and add the bipolar-referenced EOGv and EOGh channels that we have just create
-
 
 	% only keep all non-EOG channels
 	cfg         = [];
@@ -184,9 +166,7 @@ We now discard these extra channels that were used as EOG from the data and add 
 	cfg = [];
 	data = ft_appenddata(cfg, data, eogv, eogh);
 
-
 You can check the channel labels that are now present in the data and use **[ft_databrowser](/reference/ft_databrowser)** to look at all data combined.
-
 
 	disp(data.label')
 	  Columns 1 through 12
@@ -213,9 +193,6 @@ You can check the channel labels that are now present in the data and use **[ft_
 
 	    '60'    'eogv'    'eogh'
 
-
-
-
 ### Channel layout
 
 For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was use
@@ -224,11 +201,9 @@ For topoplotting and sometimes for analysis it is necessary to know how the elec
 
 The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data.
 
-
 	cfg = [];
 	cfg.layout   = 'mpi_customized_acticap64.mat';
 	ft_layoutplot(cfg);
-
 
 Note that the layout should contain correct channel labels that match the channel labels in the data (channel labels not present in either will not be plotted when using a given layout).
 
@@ -238,11 +213,9 @@ An next important step of EEG preprocessing is detection (and rejection) of arti
 
 #### Channel mode
 
-
 	cfg        = [];
 	cfg.method = 'channel';
 	ft_rejectvisual(cfg, data)
-
 
 You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yourself that trials 22, 42, 126, 136 and 150 contain blinks. You can exclude a trial from the data by clicking on it. Note, however, that in this example we do not assign any output to the function. MATLAB will create the default output "ans" variable. All the changes (rejections) that you make will be applied to the "ans". The "data" will remain the same, no trials will be removed!  
 
@@ -256,13 +229,11 @@ In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' y
 
 The data can be also displayed in a "summary" mode, in which case the variance (or another metric) in each channel and each trial is computed. Close the "channel" mode figure and try the "summary" mode. Note, that a new variable "data_clean" will be created now.
 
-
 	cfg = [];
 	cfg.method   = 'summary';
 	cfg.layout   = 'mpi_customized_acticap64.mat';   % this allows for plotting individual trials
 	cfg.channel  = [1:60];    % do not show EOG channels
 	data_clean   = ft_rejectvisual(cfg, data);
-
 
 ![image](/media/example/example_script_artifacts.png)
 
@@ -273,11 +244,9 @@ Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes 
 `<note>`
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
-
 	cfg          = [];
 	cfg.viewmode = 'vertical';
 	ft_databrowser(cfg, data_clean);
-
 
 Note that you can also use the data browser to mark artifacts (instead of or in addition to ft_rejectvisual).
 `</note>`
@@ -285,7 +254,6 @@ Note that you can also use the data browser to mark artifacts (instead of or in 
 ### Computing and plotting the ERP's
 
 We now would like to compute the ERP's for two conditions: positive-negative judgement and human-animal judgement. For each trial, the condition is assigned by the trialfun that we used in the beginning when defined the trials, this information is kept with the data in data.trialinfo.
-
 
 	disp(data_clean.trialinfo')
 
@@ -300,12 +268,9 @@ We now would like to compute the ERP's for two conditions: positive-negative jud
 	 Columns 172 through 184
 	   2 1 1 2 2 2 1 2 1 1 1 1 2
 
-
-
 FieldTrip automatically kept track of the trials with artifacts that were rejected: the data_clean.trialinfo field contains the condition code for the 184 clean trials, whereas the data.trialinfo field contained the information for the original 192 trials.  
 
 We now select the trials with conditions 1 and 2 and compute ERP's.
-
 
 	% use ft_timelockanalysis to compute the ERPs
 	cfg = [];
@@ -322,13 +287,11 @@ We now select the trials with conditions 1 and 2 and compute ERP's.
 	cfg.showoutline = 'yes';
 	ft_multiplotER(cfg, task1, task2)
 
-
 Note, that we use the layout file for plotting the results. With the cfg.interactive = 'yes' option you can select channels and zoom in.
 
 ![image](/media/example/preprocessing_eeg_multiploter.png@400)
 
 The following code allows you to look at the ERP difference waves.
-
 
 	cfg = [];
 	cfg.operation = 'subtract';
@@ -346,13 +309,11 @@ The following code allows you to look at the ERP difference waves.
 	cfg.showoutline = 'yes';
 	ft_multiplotER(cfg, difference)
 
-
 `<note exercise>`
 Explore the event-related potential by dragging boxes around (groups of) sensors and time points in the 'multiplot' and the resulting 'singleplots' and 'topoplots'.
 `</note>`
 
 ## Appendix: the trialfun used in this example
-
 
 	function [trl, event] = trialfun_affcog(cfg)
 
@@ -393,8 +354,6 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 	trl = [begsample endsample offset task];
 
 	end % function
-
-
 
 ## Suggested further reading
 

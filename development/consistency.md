@@ -9,11 +9,9 @@ The purpose of this page is just to serve as todo or scratch pad for the develop
 The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-
 # Check the consistency between the documentation and the implementations
 
 ## Objectives
-
 
 *  the reference documentation should be included in the m-files (i.e. "help function_name")
 
@@ -40,7 +38,6 @@ The help of any function could look like this
 	%
 	% See also OTHER_FUNNAME, and other related functions
 
-
 The second commented block in each file (i.e. which is not visible when you type help, but which is visible if you edit the file) can contain the more advanced and obscure options. Furthermore, it can contain a description of the dependencies of the reference documentation of this function on the documentation in other (private) functions.
 
 	
@@ -64,7 +61,6 @@ The second commented block in each file (i.e. which is not visible when you type
 	%   cfg.aaa
 	%
 	% ...
-
 
 ## Step 1: get an overview of all undocumented options
 
@@ -96,5 +92,4 @@ Get a set of files that describe all config options in the help and in the code,
     for file in *.m ; do diff $file.cfg_* > $file.diff ; done
     for file in *.diff ; do grep '^`<' $file | tr '<' '%' >` $file.missing_help ; done
     for file in *.diff ; do grep '^>' $file | tr '>' '%' > $file.missing_code ; done
-
 

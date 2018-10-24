@@ -5,13 +5,11 @@ layout: default
 We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.
 The model we are going to use to simulate the data is as follow
 
-
 x(t) = 0.8*x(t-1) - 0.5*x(t-2)
 
 y(t) = 0.9*y(t-1) + 0.5*z(t-1) - 0.8*y(t-2)
 
 z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
-
 
 	
 	cfg             = [];
@@ -35,8 +33,6 @@ z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
 	
 	data              = ft_connectivitysimulation(cfg);
 	
-
-
 
 The simulated data consists of 3 channels in 500 trials. You can easily visualize the data for example in the first trial using
 
@@ -79,7 +75,6 @@ In this tutorial we will use the bsmart toolbox. The relevant functions have bee
 	            cfg: [1x1 struct]
 	            
 
-
 The resulting variable **mdata** contains a description of the data in terms of a multivariate autoregressive model. For each time-lag up to the model order (which is 5 in this case), a 3x3 matrix of coefficients is outputted. The noisecov-field contains covariance matrix of the model's residuals.
 
 #### Exercise 1
@@ -108,7 +103,6 @@ From the autoregressive coefficients it is now possible to compute the spectral 
 	          cfg: [1x1 struct]
 	          
 
-
 The resulting **mfreq** data structure contains the pairwise transfer function between the 3 channels for 101 frequencies. 
 
 It is also possible to compute the spectral transfer function using non-parametric spectral factorization of the cross-spectral density matrix. For this, we need a Fourier decomposition of the data. This is done in the following section.
@@ -135,9 +129,7 @@ Some connectivity metrics can be computed from a non-parametric spectral estimat
 	              cfg: [1x1 struct]
 	
 
-
 The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies.
-
 
 ### Computation and inspection of the connectivity measures
 
@@ -150,7 +142,6 @@ The actual computation of the connectivity metric is done by **[ft_connectivitya
 	cohm          = ft_connectivityanalysis(cfg, mfreq);
 	
 
-
 Subsequently, the data can be visualized using **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
 	
@@ -158,7 +149,6 @@ Subsequently, the data can be visualized using **[ft_connectivityplot](/referenc
 	cfg.parameter = 'cohspctrm';
 	cfg.zlim      = [0 1];
 	ft_connectivityplot(cfg, coh, cohm);
-
 
 ![image](/media/tutorial/connectivity/connectivityplot.png@400)
 
@@ -174,7 +164,6 @@ The coherence measure is a symmetric measure, which means that it does not provi
 	cfg.zlim      = [0 1];
 	ft_connectivityplot(cfg, granger);
 	
-
 
 ![image](/media/tutorial/connectivity/grangerplot1.png@400)
 
@@ -195,7 +184,6 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 	end
 	end
 
-
 ![image](/media/tutorial/connectivity/grangerplot2.png@400)
 
 #### Exercise 3
@@ -204,11 +192,9 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 Discuss the differences between the granger causality spectra, and the coherence spectra.
 `</note>`
 
-
 #### Exercise 4
 
 `<note exercise>`
 Compute the following connectivity measures from the **mfreq** data, and visualize and discuss the results: partial directed coherence (pdc), directed transfer function (dtf), phase slope index (psi). (Note that psi will require specifying cfg.bandwidth. What is the meaning of this parameter?)
 `</note>`
-
 

@@ -3,7 +3,6 @@ layout: default
 tags: chieti
 ---
 
-
 #  FieldTrip workshop in Chieti
 
 ![image](/media/workshop/screen_shot_2015-09-17_at_17.29.15.png)

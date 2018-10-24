@@ -3,7 +3,6 @@ layout: default
 tags: faq distcomp
 ---
 
-
 #  How to get started with the MATLAB distributed computing toolbox? 
 
 The MATLAB [parallel computing toolbox](http://www.mathworks.com/products/index.html), formerly known as the distributed computing toolbox (DCT) is a commercial toolbox provided by Mathworks. It allows you to execute distributed computations on multiple cores in a single computer, or if you have access to [distributed computing engines](http://www.mathworks.com/products/distriben/index.html) on a compute cluster. To figure out whether you have it, you can try
@@ -46,7 +45,6 @@ Alternatively you can use the dfeval function like this
 	
 	data = dfeval(@ft_preprocessing, cfg, 'Configuration', 'local');
 
-
 The dfeval function works similar to the standard MATLAB cellfun function, and thereby to the FieldTrip **[qsubcellfun](/reference/qsubcellfun)** and **[peercellfun](/reference/peercellfun)** functions. 
 
 A third approach that is available in the distributed computing toolbox is to use the spmd construct. Given the same definition of the dataset as a cell-array with three strings as above, this would look like
@@ -59,7 +57,6 @@ A third approach that is available in the distributed computing toolbox is to us
 	  data{labindex} = ft_preprocessing(cfg);
 	end
 
-
 The labindex variable is automatically replaced by the number of the worker. Note that this only works if your matlabpool is greater than or equal to the number of jobs.
 
 ### Some closing remarks
@@ -68,10 +65,7 @@ Many of the FieldTrip functions allow to specify the cfg.inputfile and cfg.outpu
 
 Elsewhere on this FieldTrip wiki you can find more documentation, such as the [distributed computing tutorial](/tutorial/distributedcomputing). Some of the FAQs on distributed computing with the FieldTrip [tag/qsub?do=showtag&tag=qsub](/tag/qsub?do=showtag&tag=qsub) toolbox and the [tag/peer?do=showtag&tag=peer](/tag/peer?do=showtag&tag=peer) toolbox will also be informative in general. 
 
-
-
  
 
  
-
 

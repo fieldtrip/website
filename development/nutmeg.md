@@ -26,7 +26,6 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 See [/development/compat](/development/compat) for mydepfun example
 
-
 ### 2) fileio questions
 
 *  How is it recommended to deal with datasets larger than one's RAM? i.e. is there a recommended pipeline to follow? (e.g. load in trials individually, do separate filtering computations, then bring it all together to compute an inverse weight, apply weights to trials separately again, etc).
@@ -48,7 +47,6 @@ See [/development/compat](/development/compat) for mydepfun example
 
 *  ft_volumesegment sufficient (which calls SPM), or prefer other software/method?
         * Can't do 'skull' yet.
-
 
 ### 4) NM ideas missing from FT
 
@@ -100,7 +98,6 @@ See [/development/compat](/development/compat) for mydepfun example
 The conversion from FieldTrip to NUTMEG is done with the following functions inside NUTMEG sv
 Please see: http://nutmeg.berkeley.edu/index.php?title=Reading_FieldTrip_processed_data
 
-
 *  nut_ft2nuts
 
 *  nut_ft2beam
@@ -108,7 +105,6 @@ Please see: http://nutmeg.berkeley.edu/index.php?title=Reading_FieldTrip_process
 *  nut_ftgrid2nutsLpvox
 
 *  nut_ftmriN2coreg.m
-
 
 The conversion from NUTMEG to FieldTrip is done with the following functions inside FieldTrip sv
 
@@ -169,9 +165,6 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
     beam.coreg=nuts.coreg;
     save('s_beam_both_ftDICS.mat','-struct','beam')
 
-
-
-
 ##### 9.4 Time-freq LCMV in NM, keeptrials (in tfZ), then further stats in ft_sourcestatistics
 
     tfbf(['nuts_sim.mat'],'actconwindows',2,80,'firlsbp200cn.mat');
@@ -202,5 +195,4 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
     cfg.design(5,:)=ones(1,size(tmp,2));
     cfg.ivar=1:5;
     stat=ft_sourcestatistics(cfg,source{1});
-
 

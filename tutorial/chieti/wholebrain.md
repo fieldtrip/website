@@ -3,7 +3,6 @@ layout: default
 tags: chieti HCP-motort
 ---
 
-
 # MEG whole-brain connectivity
 
 ## Introduction

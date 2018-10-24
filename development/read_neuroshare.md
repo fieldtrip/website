@@ -14,12 +14,9 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 ## Objectives
 
-
 *  should be general function that can work with any of the formats supported by neuroshare
 
 *  test and implement for cyberkinetics data
-
-
 
 ## Steps
 
@@ -33,11 +30,9 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 *  read spike (timestamps and waveforms)
 
-
 **documentation:**
 
 *  getting started with cyberkinetics data
-
 
 ## Code
 
@@ -71,9 +66,6 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 	hdr.FirstTimeStamp      = tmp.spikew.timestamp(1); % tmp.spiket.data(1) = same ???
 	hdr.TimeStampPerSample  = [];
 
-
-
-
 	
 	%% read_event
 	
@@ -106,9 +98,6 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 	%     event(i).sample    = tmp.event.sample(i);
 	% end
 
-
-
-
 	
 	%% read_data
 	
@@ -120,9 +109,6 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 	% data when begtrial and endtrial are specified.
 	
 	dat = tmp.analog.data';
-
-
-
 
 	
 	%% read_spike
@@ -144,7 +130,6 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 	end
 	
 	% FIXME: spiket is somehow similar to spikew.timestamp, but without the nan/zero elements...?
-
 
 ## Links
 

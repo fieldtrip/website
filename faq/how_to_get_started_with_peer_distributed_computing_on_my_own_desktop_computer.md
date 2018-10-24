@@ -3,7 +3,6 @@ layout: default
 tags: faq peer
 ---
 
-
 # How to get started with peer distributed computing on my own desktop computer?
 
 The [FieldTrip peer toolbox](https://github.com/fieldtrip/fieldtrip/tree/master/peer) is a small stand-alone toolbox to facilitate distributed computing on an ad-hoc cluster. You can use the peer system on multiple computers or on a single computer with multiple CPUs or multiple cores. Note that starting multiple MATLAB sessions on a single computer only requires one MATLAB license. 
@@ -63,10 +62,7 @@ Whether your specific computational job can be efficiently distributed depends o
 
 The example above describes how to start the peerslaves within a MATLAB session. The disadvantage of that is that the peerslaves are always using a MATLAB license, even if they are not doing any computations. To solve this license inefficiency we have implemented a [command-line peerslave executable](/faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses).
 
-
     
    
-
-
 
  

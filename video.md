@@ -3,7 +3,6 @@ layout: default
 tags: video
 ---
 
-
 # Video lectures and tutorials
 
 This page lists the video documentation that is publicly available online. Please note that we are no expert on-screen presenters, most of us are not native English speakers, nor experts on recording and editing video material. We are doing our best to make this video material as good as we can and to make it available, but be considerate that it sometimes is not as polished as we would like it to be.
@@ -27,7 +26,6 @@ Please use the menu to the left of this page to get an overview and to navigate 
 Please note that the recording of the lecture on Sleep and continuous EEG by Martin Dresler failed due to technical reasons, so we cannot share that.
 
 ## Advanced MEG/EEG data analysis toolkit course, Nijmegen (April 2015)
-
 
 *  [Introduction to EEG/MEG and introduction to the FieldTrip toolbox](https://www.youtube.com/watch?v=eUVL_twWNdk) by Robert Oostenveld
 *  [Fundamentals of neuronal oscillations and synchrony](https://www.youtube.com/watch?v=vwPpSglPJTE) by Nietzsche Lam

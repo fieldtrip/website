@@ -3,7 +3,6 @@ layout: default
 tags: development git
 ---
 
-
 # Accessing the FieldTrip source code through Git
 
 The FieldTrip code is accessible using [git](http://git-scm.com/) at [github](http://github.com/fieldtrip/fieldtrip).
@@ -13,7 +12,6 @@ To quickly get access to the code, you would do the following from the command l
 
 	
 	git clone https://github.com/fieldtrip/fieldtrip
-
 
 Note that all of this goes on a single line, but the link is slightly too long for it being properly displayed here.
 
@@ -30,7 +28,6 @@ We use git and github.com (see below) in combination with a [Forking Workflow](h
  2.  The core team reviews the code in the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and should be documented. 
  3.  The code in the pull request is tested by the core team to ensure that it does not break anything. 
  4.  After successful reviewing and testing, the core team merges the pull request with the master branch.
-
 
 ## How to contribute with git and github.com
 
@@ -105,7 +102,6 @@ Go with your web browser to [https://github.com/fieldtrip/fieldtrip](https://git
 	username / fieldtrip
 	forked from fieldtrip/fieldtrip
 
-
 ### 2. Clone your remote repository
 
 Now you can just clone your remote repository. There are two equivalent methods to connect to your remote repository: https (see [setup instructions](https://help.github.com/articles/set-up-git)) or ssh (see [setup instructions](https://help.github.com/articles/generating-ssh-keys)). If you're using https, the
@@ -122,7 +118,6 @@ Now you have a local repository of FieldTrip that you can work on. Then go into 
 
 	
 	cd fieldtrip
-
 
 ### 3. Create an experimental branch
 
@@ -205,7 +200,6 @@ and git will retur
 	 1 file changed, 1 insertion(+)
 	 create mode 100644 ft_welcome.m
 
-
 #### Switch to master
 
 While you are working on the developmental branch called *welcome*, you might want to run some analysis on the main branch (called by default *master*). You can easily switch into the main branch wit
@@ -244,7 +238,6 @@ which means that we are pushing the commits in the branch called *welcome* to th
 
 	 * [new branch]      welcome -> welcome
 
-
 ### 7. Make a pull request
 
 Go to [github.com](https://github.com) to review the changes. By default on the webpage, you are shown the branch *master*, so you should switch to the newly created branch called *welcome*. Review the commits, by clicking on *commits*. Click on **pull request** in the top middle. The next page will show you the changes that are part of the pull request. 
@@ -259,7 +252,6 @@ When you are done, you can delete the branch *welcome* on the local and remote r
 	
 	git branch -D welcome
 	git push origin :welcome
-
 
 ### 9. Keeping up to date
 

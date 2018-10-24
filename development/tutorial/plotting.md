@@ -3,11 +3,9 @@ layout: default
 tags: tutorial plot eeg meg timelock freq statistics source layout MEG-language
 ---
 
-
 `<note warning>`
 This page is under development, use with caution 
 `</note>`
-
 
 # Plotting data at the channel and source level
 
@@ -25,7 +23,6 @@ Normally, as an end-user, you do not need to bother with low level functions (wh
 ## Procedure
 
 To determine which high level functions are suitable for you depends on the type of data you have: sensor or source space data. In this tutorial we assume that you already have the data from the [event related averaging tutorial](/tutorial/eventrelatedaveraging), the [time-frequency representations of power tutorial](/tutorial/timefrequencyanalysis) and the [applying beamforming techniques in the frequency domain tutorial](/tutorial/beamformer), and we will demonstrate plotting at both the sensor and source level.
-
 
 ## Plotting data at the channel level
 
@@ -233,13 +230,10 @@ The function automatically finds the clusters in the data which are smaller than
 	cfg.alpha = 0.05;
 	ft_clusterplot(cfg,statERF)
 
-
-
 ![image](/media/tutorial/staterf1.png@400)
 ![image](/media/tutorial/staterf2.png@400)
 ![image](/media/tutorial/staterf3.png@400)
 ![image](/media/tutorial/staterf4.png@400)
-
 
 ##### Freqdata
 
@@ -253,15 +247,11 @@ The function automatically finds the clusters in the data which are smaller than
 	cfg.alpha = 0.05;
 	ft_clusterplot(cfg,statTFR)
 
-
-
 ![image](/media/tutorial/plotting/plottingtutorial_tfrstat.jpg@400)
-
 
 ### Plotting channel-level connectivity
 
 Please see **[ft_connectivityplot](/reference/ft_connectivityplot)**, **[ft_multiplotCC](/reference/ft_multiplotCC)** and **[ft_topoplotCC](/reference/ft_topoplotCC)**.
-
 
 ### Plotting Independent Component Analysis (ICA) results  
 
@@ -273,7 +263,6 @@ With the **[ft_sourceplot](/reference/ft_sourceplot)** function you can plot fun
 At the source level, there are two main ways of representing functional data: 
  1.  On a regular, 3-dimensional grid (volumetric data) 
  2.  On a surface geometry.
-
 
 ### Volumetric data 
 
@@ -303,7 +292,6 @@ Here we will plot axial slices of the brain
 	% note
 	To play around with the number of slices, and which slice to begin plotting, check the documentation for cfg.nslices, and cfg.slicerange, respectively.
 
-
 ![image](/media/tutorial/plotting/sourcestattfr_slice.png@500)
 
 #### Source-Freq-Time data plotted as in 3 orthogonal orientations
@@ -316,7 +304,6 @@ For exploring your data, plotting the brain from 3 orthogonal orientations simul
 	cfg.funcolorlim   = 'maxabs';
 	cfg.funparameter  = 'stat';
 	ft_sourceplot(cfg,statsourceTFR);
-
 
 ![image](/media/tutorial/plotting/sourcestattfr_ortho.png@500)
 
@@ -367,7 +354,6 @@ This section uses the data from Subject01 in the [:tutorial:beamformer](/tutoria
 	cfg.opacitymap    = 'rampup';  
 	figure; ft_sourceplot(cfg, sourceDiffIntNorm);
 
-
 ![image](/media/tutorial/beamformer/figure8bf.png@500)
 
 The three essential cfg parameters ar
@@ -391,7 +377,6 @@ The functional data is plotted in color optionally on top of the anatomy. The co
 
 You can control the opacity of the functional data by the mask parameter. Which values are plotted opaque and which transparent is determined by cfg.opacitymap and cfg.opacitylim (see MATLAB function ALPHA and ALPHAMAP). The opacity map determines the degree of opacity of the functional data going from opaque to transparent.  There are multiple ways to determine your opacity scale, as a user you can determine the opacity values for each and every single voxel (and as such, region of interest).  As such, the opacity limits determine how the opacity map is assigned to the values of the mask parameter.  
 
-
 #### Example 1: Plotting only positive values
 
 Your functional data has values ranging from -3 to 3. Here we plot only the positive values  (zeromax), using the scale whereby the strongest values are opaque, and the values close to zero are transparen
@@ -414,7 +399,6 @@ Suppose the functional data is the same as in example 1, but now we only wants t
 Here, we make a field in the data with an opacity value for each voxel, and apply that as your mask. For instance if you only want to plot the values between 2 and 2.5 you can specif
     data.mask         = (data.fun>2 & data.fun<2.5)
     cfg.maskparameter = 'mask'
-
 
 ** Here are some figures to help understand how the data is manipulated when specifying cfg.opacitymap:**
 
@@ -445,7 +429,6 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
 	cfg.surfdownsample = 10;  % downsample to speed up processing
 	ft_sourceplot(cfg, sourceDiffIntNorm);
 	view ([90 0])             % rotate the object in the view
-
 
 ![image](/media/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png@500)
 
@@ -479,7 +462,6 @@ Let's select our data segment of interest, so we have scalar data, which we can 
 	statSubSel.time = stat.time(ixTimeSel);
 	statSubSel.freq = stat.freq(ixFreqSel);
 
-
 The resulting statSubSel-structure can be processed by **[ft_sourceplot](/reference/ft_sourceplot)**. 
 #### Plotting data selection to surface
 
@@ -491,18 +473,15 @@ The resulting statSubSel-structure can be processed by **[ft_sourceplot](/refere
 	cfg.location     = 'center';
 	ft_sourceplot(cfg, statSubSel);
 
-
 ### Using external tools
 
 Although MATLAB is a very flexible development and analysis environment, it is not super-fast in visualisation. Hence external visualisation tools are sometimes more useful for exploring your data. Volumetric and surface based data can be exported to standard file formats using **[ft_sourcewrite](/reference/ft_sourcewrite)**. Subsequently, you can use external tools such as
-
 
 *  [MRIcron](http://www.mccauslandcenter.sc.edu/mricro/mricron/index.html)
 
 *  [OpenWallnut](http://www.openwalnut.org)
 
 *  [Connectome Workbench](http://www.humanconnectome.org/software/connectome-workbench.html)
-
 
 ## Suggested further reading
 

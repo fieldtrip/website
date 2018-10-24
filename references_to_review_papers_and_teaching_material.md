@@ -3,7 +3,6 @@ layout: default
 tags: references
 ---
 
-
 # References to review papers and teaching material
 
 Here we try to compile a list of background reading/studying material. If you know of good papers or other material, please add it by clicking on the edit button.

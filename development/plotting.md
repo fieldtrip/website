@@ -3,7 +3,6 @@ layout: default
 tags: development plot
 ---
 
-
 # Plotting of channel-level, source-level and other geometrical data related to EEG/MEG 
 
 FieldTrip supports plotting of channel-level and source-level data using functions that are described in the [plotting tutorial](/tutorial/plotting). These functions allow the user to specify a configuration and to work with all standard [data structures](/faq/how_are_the_various_data_structures_defined). Under the hood, these functions make use of a collection of shared lower-level functions which are still at a higher level than the standard MATLAB plotting tools.
@@ -18,13 +17,11 @@ The plotting module contains functions that are publicly available for the end-u
 
 The remainder of this page mainly describes the core features for plotting channel- and source-level EEG and MEG data and all related geometrical information. 
 
-
 ## Definition of the function-calls (API)
 
 These are the low-level functions that are be called by the higher-level FieldTrip functions. These functions usually take matrices or vectors as input, as opposed to FieldTrip data structures.
 
 For data objects with a 2D representation, i.e. for a flat screen or pape
-
 
 *  ft_plot_vector                 - visualizes a vector as a line, similar to PLOT
 
@@ -41,7 +38,6 @@ For data objects with a 2D representation, i.e. for a flat screen or pape
 *  ft_plot_box                    - plots the outline of a box that is specified by its lower
 
 For data objects with a 3D geometrical representatio
-
 
 *  ft_plot_crosshair              - plots a crosshair in two or three dimensions
 
@@ -80,7 +76,5 @@ A number of functions serves to construct interactive graphical user interfaces.
 
 *  ft_uilayout                    - is a helper function to facilitate the layout of multiple
 
-
 All functions take some required fixed input arguments, followed by a variable number of key-value pairs.
-
 

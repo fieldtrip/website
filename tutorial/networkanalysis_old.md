@@ -26,7 +26,6 @@ with a characteristic occipito-parietal topography. It is probably the strongest
 
 Towards this end we have to identify/define the nodal structure of the network where in this case each voxel would be interpreted as a "node". Furthermore, we have to identify/define the links or "edges" connecting all of the nodes within the network.
 
-
 ## Procedure
 
 The data analyses in the context of networks follows the following step
@@ -41,17 +40,13 @@ The data analyses in the context of networks follows the following step
    * Compute "node degree" using **[ft_networkanalysis](/reference/ft_networkanalysis)**.
    * Visualize the results, again by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-
 ## Preprocessing
-
 
 ### Reading the data
 
 The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** to read the continuous data and segment it into epochs of 2 seconds length.
 
 The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip.
-
-
 
 	%% read the continuous data and segment into 2 seconds epochs
 	cfg = [];
@@ -64,11 +59,9 @@ The ft_definetrial and ft_preprocessing functions require the original MEG datas
 	cfg.channel     = {'MEG'};
 	data = ft_preprocessing(cfg);
 
-
 ### Artefact rejection
 
 We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
-
 
 	%% make a visual inspection and reject bad trials/sensors
 	cfg = [];
@@ -84,13 +77,11 @@ We will first clean the data from potential bad segments such as SQUID jumps and
 	end;
 	disp(trlind);
 
-
 	%% downsample the data to speed up component analysis
 	cfg = [];
 	cfg.resamplefs = 60;
 	cfg.detrend    = 'yes';
 	datads = ft_resampledata(cfg, dataclean);
-
 
 	%% use ICA in order to identify cardiac and blink components
 	cfg = [];
@@ -98,7 +89,6 @@ We will first clean the data from potential bad segments such as SQUID jumps and
 	cfg.runica.maxsteps = 50;
 	cfg.updatesens      = 'no';
 	comp = ft_componentanalysis(cfg, datads);
-
 
 	%% visualize components
 
@@ -113,25 +103,20 @@ We will first clean the data from potential bad segments such as SQUID jumps and
 	cfg.continuous = 'yes';
 	ft_databrowser(cfg, comp);
 
-
-
 ![image](/media/tutorial/networkanalysis/components.png@400)
 
 *Figure 1: Topography and time course of IC's likely reflecting cardiac and eye movement artifacts*
 
 We project the component data back to the channel representation, leaving out the bad components.
 
-
 	cfg            = [];
 	cfg.component  = [2 14 18 29];
 	cfg.updatesens = 'no';
 	dataica = ft_rejectcomponent(cfg, comp);
 
-
 ### Spectral analysis
 
 We will analyze the spectral content of the data using  **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
-
 
 	%% compute the power spectrum
 	cfg              = [];
@@ -142,7 +127,6 @@ We will analyze the spectral content of the data using  **[ft_freqanalysis](/ref
 	cfg.tapsmofrq    = 2;             
 	cfg.keeptrials   = 'no';
 	fft_data = ft_freqanalysis(cfg, dataica);
-
 
 	%% compute the planar transformation
 	cfgneigh          = [];
@@ -171,11 +155,9 @@ We will analyze the spectral content of the data using  **[ft_freqanalysis](/ref
 	cfg.xlim   = [9 11];
 	subplot(2,1,1); ft_topoplotER(cfg, fft_data);
 
-
 	cfg = [];
 	cfg.channel = {'MRO22', 'MRO32', 'MRO33'};
 	subplot(2,1,2); ft_singleplotER(cfg, fft_data);
-
 
 ![image](/media/tutorial/networkanalysis/topo_alpha_peak.png@400)
 
@@ -183,7 +165,6 @@ We will analyze the spectral content of the data using  **[ft_freqanalysis](/ref
 ### Source analysis
 
 In the following section we will compute the ingredients for accurate reconstruction of the underlying sources. First computing the source model with **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. We will use the individual MRI and a mni template source model, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). If you are not familiar with this strategy, please have a look [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
-
 
 	%% load the required geometrical information
 
@@ -213,7 +194,6 @@ In the following section we will compute the ingredients for accurate reconstruc
 
 	view([0 -90 0])
 
-
 ![image](/media/tutorial/networkanalysis/hdm_lf_sens_alignment2.png@400)
 
 *Figure 3: Sensors (green), head model (grey) and source model(blue) are properly aligned all in units of cm.*
@@ -221,7 +201,6 @@ In the following section we will compute the ingredients for accurate reconstruc
 `<note warning>`
 The source model describes a regular 3D grid. Not all positions of the source model are inside the brain. This is represented in the "inside" field.
 `</note>`
-
 
 	%% compute sensor level Fourier spectra
 	cfg            = [];
@@ -286,16 +265,12 @@ The source model describes a regular 3D grid. Not all positions of the source mo
 	cfg.funcolormap   = 'jet';
 	ft_sourceplot(cfg, source_int);
 
-
-
 ![image](/media/tutorial/networkanalysis/source_pow.png@400)
 
 *Figure 4: Reconstructed activity (neural activity index) with peak maxima in occipital but also sensorimotor and some deep brain areas.*
 
 `<note instruction>`
 The accurate judgment of the source reconstructed data is often not straight forward. However, you can make your judgment dependent on the comparison of sensor and source topography. In the present case the activation of the visual areas provide a good match to the observed scalp topography.
-
-
 
 	cfg               = [];
 	cfg.method        = 'ortho';
@@ -325,8 +300,6 @@ The accurate judgment of the source reconstructed data is often not straight for
 	subplot(2,2,3); ft_topoplotER(cfg, fft_data_planar_cmb);
 	title('planar gradient')
 
-
-
 ![image](/media/tutorial/networkanalysis/source_topo.png@400)
 
 *Figure 5: Reconstructed activity (neural activity index) with peak maxima in occipital areas (top left) together with scalp topographic representation of the signal on the axial (top right) and planar (bottom left) gradients. Note that the presumably bilateral origin suggested by the scalp topography of the axial gradiometers is actually reflecting the in and out going fields of a summed dipolar activity located somewhere in between.*
@@ -334,7 +307,6 @@ The accurate judgment of the source reconstructed data is often not straight for
 `</note>`
 
 Comparing source reconstruction results to scalp topography is more or less mandatory. However, a potential mismatch shouldn't prevent you to try out a different strategy. In the beamforming tutorial [here](/tutorial/beamformer) the reconstructed activity is represented as a ratio change from pre stimulus baseline. Although there isn't a baseline we can compare with here, still there is an alternative approach. In the next section we will compute the sensor level alpha power but keep the individual trials. Next we will determine the sensor with a maximum power and use a median split on the trials at that sensor. This would allow us to split the data into trials dominated by high and low alpha power respectively.
-
 
 	%% compute the power spectrum again but keep the individual trials
 	cfg              = [];
@@ -346,18 +318,13 @@ Comparing source reconstruction results to scalp topography is more or less mand
 	cfg.keeptrials   = 'yes';
 	fft_data = ft_freqanalysis(cfg, dataica);
 
-
 	%% identify the indices of trials with high and low alpha power
 	tmp     = mean(fft_data.powspctrm,3);           % mean over frequencies between 8-12Hz
 	ind     = find(mean(tmp,1)==max(mean(tmp,1)));  % find the sensor where power is max
 	indlow  = find(tmp(:,ind)<=median(tmp(:,ind)));
 	indhigh = find(tmp(:,ind)>=median(tmp(:,ind)));
 
-
-
 Next, we will compute the power spectra as above but this time computing them on the planar rather then on the axial gradiometers. Detailed information can be found [here](/tutorial/eventrelatedaveraging) and also [here](http://fieldtrip.fcdonders.nl/example/combineplanar_pipelineorder).
-
-
 
 	%% compute the planar gradient
 	load ctf275_neighb; % this loads a variable 'neighbours', to be used below
@@ -403,9 +370,7 @@ Next, we will compute the power spectra as above but this time computing them on
 	cfg.trials       = indhigh;
 	fft_data_high = ft_freqanalysis(cfg,dataica);
 
-
 Subsequently, we will compute the difference between high and low alpha conditions using **[ft_math](/reference/ft_math)** for both axial and planar representation and plot the corresponding scalp topographies along with the power spectra.
-
 
 	%% compute the difference between high and low
 	cfg = [];
@@ -435,15 +400,11 @@ Subsequently, we will compute the difference between high and low alpha conditio
 	title('')
 	legend('high alpha','low alpha','Location','northoutside','Orientation','horizontal');
 
-
 ![image](/media/tutorial/networkanalysis/high_low_sens_alpha.png@400)
 
 *Figure 6: Planar (left) and axial (middle) topography of the 10 Hz difference between the high and the low alpha conditions. Right- power spectra split by condition high (blue) and low alpha (red).*
 
-
 Now we will compute the source analysis steps again as illustrated above, however we will use a common filter approach in order to avoid a filter estimated bias beeing responsible for potential condition differences, see also [here](http://fieldtrip.fcdonders.nl/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
-
-
 
 	%% compute fourier spectra for frequency of interest
 	cfg            = [];
@@ -512,19 +473,14 @@ Now we will compute the source analysis steps again as illustrated above, howeve
 	source_int_high  = ft_sourceinterpolate(cfg, source_proj_high, template_mri);
 	source_int_low   = ft_sourceinterpolate(cfg, source_proj_low,  template_mri);
 
-
 Now instead of computing the neural activity index by contrsting against the noise, we will compute the power change in condition high relative to that of low.
-
 
 	cfg  = [];
 	cfg.operation = '(x1-x2)/x2';
 	cfg.parameter = 'pow';
 	source_int = ft_math(cfg, source_int_high, source_int_low)
 
-
-
 We create a mask that plots a fraction, i.e. most active brain areas.
-
 
 	% up to 50 percent of maximum
 	source_int.mask = source_int.pow > max(source_int.pow(:))*.5;
@@ -532,9 +488,7 @@ We create a mask that plots a fraction, i.e. most active brain areas.
 	% copy the anatomy
 	source_int.anatomy = source_int_high.anatomy;
 
-
 Now we plot the result together with the scalp topography again.
-
 
 	cfg = [];
 	cfg.method        = 'ortho';
@@ -549,7 +503,6 @@ Now we plot the result together with the scalp topography again.
 	cfg.layout = 'CTF275.lay';
 	cfg.xlim   = [9.777650 11.309908];
 	subplot(2,2,2); ft_topoplotER(cfg, diff_planar);
-
 
 ![image](/media/tutorial/networkanalysis/high_low_senssource_alpha.png?direct&400)
 
@@ -566,7 +519,6 @@ We will first reduce the size of the matix by calling **[ft_source2sparse](/refe
 After computing this memory demanding step we will return to the full representation of the data by calling **[ft_source2full](/reference/ft_source2full)**.
 
 Next, we will use **[ft_networkanalysis](/reference/ft_networkanalysis)** with the configuration options **cfg.method** = 'degrees'; and **cfg.threshold** = .1;. The former one refers to one of the most fundamental metrics in graph theory- node degree ((Ed Bullmore and Olaf Sporns: Complex brain networks: graph theorethical analysis of structural and functional systems. 2009 Nat Rev Neurosci, vol 10(3) pp. 186-198 )). Node degree refers to the number of links connected to the node and can be directed or undirected (as in this tutorial). Prerequisite for calculating node degree is the computation of the so called adjecency matrix (AM). This is a binary matrix of the same size as our coherence spectrum matrix (720 x 720) with 1 and 0 for link or no link between pairs respectively. Hence the coherence spectrum has to be thresholded at some value where everything below will be 0 and everything above will be replaced by 1. This is provided by the configuration option cfg.threshold and it is one of the most critical step in graph-theoretical networkanalysis of MEEG data. There are several ways to determine the threshold, for instance based on some statistical parameterization or previous observation in the literature, yet all of them are and remain arbitrary. Here we used an arbitrary value of 0.1.
-
 
 	%% reduce memory demands and compute connectivity
 
@@ -623,7 +575,6 @@ Next, we will use **[ft_networkanalysis](/reference/ft_networkanalysis)** with t
 	cfg.funparameter  = 'degrees';
 	ft_sourceplot(cfg, network_int);
 
-
 ![image](/media/tutorial/networkanalysis/node_degree.png@400)
 
 *Figure 8: Color coded node degree distribution based on imaginary part of coherency. Cold colors indicated little or disconnected nodes, warm colors indicate highly connected/integrated nodes.*
@@ -631,7 +582,6 @@ Next, we will use **[ft_networkanalysis](/reference/ft_networkanalysis)** with t
 Figure 8 pictures the node degree distribution across the entire brain volume. But what does a node degree of 30 mean? And why 30? The degree of a given node quantifies the number of connections that link to that node. In our case we the dark red nodes in the occipital cortex express a node degree of around 30, which means that they link to approximately 30 other nodes withing the network. Yet, 30 is defined by the threshold we choose in the configuration settings during the call to ft_networkanalysis. The maximum value of the node degree is limited by the total number of network nodes which in our case is *numel(sourcemodel.inside)= **372***. It is up to you to decide on the value of the thresholding parameter, which is often not trivial and hard to justify. Therefore it is one of the criticial steps in graph theoretical connectivity analyis.
 
 It is also possible to plot the nodal size along with the respective edge pattern. For this we will use the *BrainNet Viewer* toolbox ((Xia M, Wang J, He Y (2013) BrainNet Viewer: A Network Visualization Tool for Human Brain Connectomics. Plos ONE 8: e68910)) that can be downloaded [here](http://www.nitrc.org/projects/bnv/). After you set the *BrainNet Viewer* toolbox on your matlab path you need to generate two files that representd the nodal structure of the data ***node.node*** and the corresponding edges ***edge.edge***.
-
 
 	% we increase the threshold here to highlight the dominant links
 	edge = source_conn.cohspctrm >.15;
@@ -647,20 +597,16 @@ It is also possible to plot the nodal size along with the respective edge patter
 	node(:,1:3) = node(:,1:3)*10
 	dlmwrite('node.node',node,' ');
 
-
 You can download the volume model ***mesh.nv*** of the standard mni brain [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/). Alternatively you can use the templates provided with the BrainNet Viewer toolbox. Please refer to the corresponding manual [here](http://www.nitrc.org/docman/view.php/504/1280/BrainNet).Now you are ready to to plot the graph by typing
-
 
 	BrainNet_MapCfg('/yourpath/mesh.nv','/yourpath/node.node','/yourpath/edge.edge');
 	view([0 -90 0])
-
 
 ![image](/media/tutorial/networkanalysis/topview_brainnet.png@400)
 
 ![image](/media/tutorial/networkanalysis/backview_brainnet.png@400)
 
 Of course one can use also phase locking value or some other metric for quantification of communication between the nodes. Here we will compute the same lines of code again where the only difference is in the specification of the connectivity method. In order to plot the result the above lines of code can be used again.
-
 
 	cfg = [];
 	cfg.method = 'plv';
@@ -681,7 +627,6 @@ Of course one can use also phase locking value or some other metric for quantifi
 	cfg.parameter = fn{4};
 	cfg.threshold = .5;
 	deg = ft_networkanalysis(cfg,source_conn_full);
-
 
 ![image](/media/tutorial/networkanalysis/node_degree_plv.png@400)
 

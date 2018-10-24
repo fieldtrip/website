@@ -32,7 +32,6 @@ After starting the **[ft_realtime_signalviewer](/reference/ft_realtime_signalvie
 
 ## Matlab code
 
-
 	function ft_realtime_signalviewer(cfg)
 	
 	% FT_REALTIME_SIGNALVIEWER is an example realtime application for online
@@ -212,5 +211,4 @@ After starting the **[ft_realtime_signalviewer](/reference/ft_realtime_signalvie
 	
 	  end % if enough new samples
 	end % while true
-
 

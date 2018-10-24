@@ -33,11 +33,9 @@ The new layout also makes the use of templates (for layout and cortical surfaces
 	fieldtrip/external/toolbox2/…
 	fieldtrip/external/toolbox3/…
 
-
 All changes have been made with backward compatibility in mind. This is achieved through "hastoolbox" and the use of a "fixpath" module, where for the time being most code that used to be in fieldtrip/private still can be found. Furthermore, there is a "ft_defaults" script which is now included in all fieldtrip main functions.
 
 ## What still needs to be done is
-
 
 *  remove files from private that are unused
 
@@ -168,6 +166,4 @@ using the matlab "depfun" functio
 	
 	FUNCTION spass2fieldtrip
 	  /home/common/matlab/fieldtrip/fixpath/read_labview_dtlg.m
-
-
 

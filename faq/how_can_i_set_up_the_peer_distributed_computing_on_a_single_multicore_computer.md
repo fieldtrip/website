@@ -3,7 +3,6 @@ layout: default
 tags: faq peer
 ---
 
-
 # How can I set up the peer distributed computing on a single multicore computer?
 
 There are in principle two options for setting up the peer-to-peer computing system. The first, using an interactive MATLAB session for each peer is recommended for occasional or novice users. The second, using the command-line peerslave is recommended for frequent users and if your computer remains switched on and is only put to sleep during the night.

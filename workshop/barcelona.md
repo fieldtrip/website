@@ -31,7 +31,6 @@ Diego Lozano-Soldevilla and Robert Oostenveld will be lecturing and tutoring. Jo
    * 10:30 – 10:45		Coffee Break
    * 10:45 – 12:30		Hands-on: [Getting started with event-related fields](/tutorial/eventrelatedaveraging)
 
-
    * 12:30 – 13:45		Lunch
 
  Session II
@@ -42,7 +41,6 @@ Diego Lozano-Soldevilla and Robert Oostenveld will be lecturing and tutoring. Jo
    * 17:00 – 17:30		Wrap-up-the-day: “Ask the experts” session
 
    * 21:00	– ...		  Social get-together
-
 
 ### Friday July 10th
 
@@ -80,7 +78,6 @@ moving all files one level up.
 `</note>`
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
-
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-xxxxxxxx

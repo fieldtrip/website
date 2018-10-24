@@ -3,7 +3,6 @@ layout: default
 tags: meg-uk-2015 mmfaces
 ---
 
-
 # FieldTrip stats demo
 
 In this demonstration we will use the [face recognition dataset](/dataset). 
@@ -11,7 +10,6 @@ In this demonstration we will use the [face recognition dataset](/dataset).
 Please use the [general MATLAB instructions](/general) to get started.
 
 ## Part 1 - explore a simple contrast
-
 
 	
 	datadir = '../data';  % CHANGE THIS FOR THE CORRECT LOCATION OF THE DATA
@@ -96,9 +94,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, avg_Faces, avg_Scrambled);
 	
 
-
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.23.37.png)
-
 
 	
 	%% compute the difference between faces and
@@ -114,9 +110,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, avg_Faces_vs_Scrambled);
 	
 
-
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.25.12.png)
-
 
 	
 	cfg           = [];
@@ -125,9 +119,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_movieplotER(cfg, avg_Faces_vs_Scrambled);
 	
 
-
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.26.09.png)
-
 
 	
 	% for saving to disk
@@ -150,11 +142,9 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_analysispipeline(cfg, avg_Faces_vs_Scrambled);
 	
 
-
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.27.48.png)
 
 ## Part 2 - use a custom statfun
-
 
 	subj = 15; % CHANGE THIS NUMBER FOR EACH SUBJECT
 	
@@ -190,7 +180,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.23.png)
 
-
 	
 	cfg = [];
 	cfg.channel = analytic.label;
@@ -212,7 +201,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.26.png)
-
 
 	
 	%% use montecarlo and correctm=max
@@ -239,7 +227,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.28.png)
 
-
 	
 	%% compare the observed statistical values to the distributions
 	
@@ -265,7 +252,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.30.png)
-
 
 	
 	%% use your own trialfunction, e.g. spearman rank correlation
@@ -297,14 +283,11 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.33.png)
 
-
 	
 	save analytic2 analytic2
 	save montecarlo2 montecarlo2
 
-
 ## Appendix - statfun_parametric
-
 
 	function stat = statfun_parametric(cfg, dat, design)
 	

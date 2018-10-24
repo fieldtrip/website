@@ -3,7 +3,6 @@ layout: default
 tags: example statistics
 ---
 
-
 # Computing and using estimates of effect size
 
 The following code demonstrates how you can compute and plot the effect size. 
@@ -93,7 +92,6 @@ The following code demonstrates how you can compute and plot the effect size.
 	% Huge        2.00
 	
 
-
 It is interesting to see how the effect size increases by taking the average over more channels and time points.
 
 	
@@ -104,8 +102,6 @@ It is interesting to see how the effect size increases by taking the average ove
 	timesel = nearest(timelock_FC.time, 0.496607) : nearest(timelock_FC.time, 0.765893);
 	
 	% now repeat the computation of Cohen's d above
-
-
 
 Proper preprocessing of the data also increases the effect size.
 

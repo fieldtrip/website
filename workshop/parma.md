@@ -30,14 +30,12 @@ Sebo Uithol is the host and local organizer
           * http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
     * 12:45 - 13:45		Lunch
 
-
 *  Session II
     * 13:45 - 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
     * 14:45 - 15:00   	Coffee Break
     * 15:00 - 16:45		Hands-on: Time-frequency analysis of power       
           * http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
     * 16:45 - 17:30		Wrap-up-the-day: Ask the experts session
-
 
 ####  Tuesday April 29
 
@@ -49,7 +47,6 @@ Sebo Uithol is the host and local organizer
 
     * 13:00 - 14:00		Lunch
 
-
 *  Session IV
     * 14:00 - 15:15		Lecture: Non-parametric randomization techniques
     * 15:15 - 15:30		Coffee break
@@ -59,7 +56,6 @@ Sebo Uithol is the host and local organizer
     * 17:15 - 18:00		Wrap-up-the-day: Ask the experts session
 
     * 20:00			Workshop Dinner @ ???
-
 
 ####  Wednesday April 30
 
@@ -87,7 +83,6 @@ moving all files one level up.
 `</note>`
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
-
 
     restoredefaultpath
     cd path_to_directory/Fieldtrip-xxxxxxxx

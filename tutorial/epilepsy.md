@@ -15,7 +15,6 @@ tags: tutorial MEG-epilepsy
 This documentation is under development and hence incomplete and perhaps incorrect.
 `</note>`
 
-
 {{page>:tutorial/shared/disclaimer}}
 
 The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy)
@@ -90,7 +89,6 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
 
 #### Processing the channel level data
 
-
     dataset = 'case1.ds';
 
     cfg = [];
@@ -131,7 +129,6 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
 
 #### Construction of the volume conduction model of the head
 
-
     % we will use the defaced MRI, which has been realigned with the CTF system and resliced
 
     mri = ft_read_mri('mri_defaced.mat');
@@ -155,7 +152,6 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     % save headmodel headmodel
 
 #### Construction of the source model
-
 
     cfg = [];
     cfg.grid.resolution = 7;
@@ -311,9 +307,6 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     ft_analysispipeline(cfg, sourcepi);
 
     !open sourcepi.html
-
-
-
 
 ### Analysis of the Elekta dataset
 

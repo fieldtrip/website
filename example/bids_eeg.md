@@ -32,7 +32,6 @@ It is important that you use appropriate tools. Command line utilities are very 
 
 ### Step 1a: create empty directory structure
 
-
 	BIDSROOT=$HOME/example
 
 	mkdir -p $BIDSROOT/code
@@ -43,13 +42,11 @@ It is important that you use appropriate tools. Command line utilities are very 
 	mkdir -p $BIDSROOT/sub-$SUB/eeg
 	done
 
-
 ### Step 2a: copy the EEG data to the BIDS organization
 
 The original data gets copied and renamed to the location in the BIDS structure. In reality we would of course copy the data of each individual subject, rather than copying the same data 10 times.
 
 In this case it is not needed to convert the data, since the EEGLAB .set format is explicitly allowed according to the BIDS standard (although BrainVision and EDF are preferred).  
-
 
 	BIDSROOT=$HOME/example
 	SOURCEDATA=$BIDSROOT/sourcedata
@@ -70,11 +67,9 @@ In this case it is not needed to convert the data, since the EEGLAB .set format 
 	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
 	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
 
-
 ### Step 3a: create the sidecar files for each subject
 
 The **[/reference/data2bids](/reference/data2bids)** function will read each EEG recording and determine the metadata that is available in the file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
-
 
 	%% this is an example that starts with data in a supported format
 
@@ -128,14 +123,12 @@ The **[/reference/data2bids](/reference/data2bids)** function will read each EEG
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-
 	BIDSROOT=$HOME/example
 	BIDSTOOLS=$HOME/bids-tools/bin
 
 	$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
 	$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
 	$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
-
 
 ### Step 5a: finalize
 
@@ -149,7 +142,6 @@ Throughout the development of the scripts and and after having completed the con
 
 ### Step 1b: create empty directory structure
 
-
 	BIDSROOT=$HOME/example
 
 	mkdir -p $BIDSROOT/code
@@ -160,11 +152,9 @@ Throughout the development of the scripts and and after having completed the con
 	mkdir -p $BIDSROOT/sub-$SUB/eeg
 	done
 
-
 ### Step 2b: copy the EEG data for all participants
 
 This would normally not be needed, since you would already have the original data somewhere in some structure.
-
 
 	BIDSROOT=$HOME/example
 	SOURCEDATA=$BIDSROOT/sourcedata
@@ -184,7 +174,6 @@ This would normally not be needed, since you would already have the original dat
 	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
 	rm $SOURCEDATA/Eeglab_data.set
 
-
 ### Step 3b: convert the data and create the sidecar files for each subject
 
 The **[/reference/data2bids](/reference/data2bids)** function will get the metadata that is available from the original file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
@@ -192,7 +181,6 @@ The **[/reference/data2bids](/reference/data2bids)** function will get the metad
 Besides creating the sidecar files with the metadata, in this step we are also converting the data from EEGLAB .set format into BrainVision format. This is (along with EDF) the preferred format for EEG data in BIDS, since it is widely supported by many EEG analysis software packages.
 
 In principle converting the data is not needed, since EEGLAB .set is also one of the (non-preferred) formats allowed for EEG data in BIDS.
-
 
 	%% this is an example that converts the EEG data to BrainVision format
 
@@ -240,11 +228,9 @@ In principle converting the data is not needed, since EEGLAB .set is also one of
 
 	end % for each dataset
 
-
 ### Step 4b: create the general sidecar files
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
-
 
 	BIDSROOT=$HOME/example
 	BIDSTOOLS=$HOME/bids-tools/bin
@@ -252,7 +238,6 @@ This step is again done on the Linux command line, using some tools that are sha
 	$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
 	$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
 	$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
-
 
 ### Step 5b: finalize
 
@@ -276,6 +261,5 @@ In this example it all looks very simple, which is partially because the data is
 `<note important>`
 As a rule of thumb: if you have few exceptions, better don't try to make the scripts above too complex, but deal with them manually. If you have many exceptions of the same or similar type, it is worthwhile to invest into making these scripts smarter to automate the exception handling.
 `</note>`
-
 
 In reusing the data, either by yourself, your (future) colleagues in your lab, or people outside your lab, this type of information is very relevant. Although it is frustrating to encounter these inconsistencies when converting to BIDS, it actually reveals that these aspects need to be represented and documented properly in the (meta)data.

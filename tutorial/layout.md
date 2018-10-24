@@ -68,7 +68,6 @@ or including the original image as black-and-white background like this
 
 ![image](/media/tutorial/layout/fig3.png@400)
 
-
 Once you are happy with the result, you can save it to a MATLAB fil
 
     save dalal_ecog.mat lay         % save the layout in the variable "lay" to a MATLAB file

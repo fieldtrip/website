@@ -6,16 +6,13 @@ layout: default
 
 Ricoh took over the MEG branch from Yokogawa in 2016 and has started manufacturing and installing the MEG system. The Ricoh system has some updates over the Yokogawa system. 
 
-
 *  This page is under construction [Last updated on June 12th by KK]. 
 
 *  Ricoh MEG Reader Toolbox (ver. 1.0) was merged into FieldTrip on June 11th, 2018!
 
 *  Yokogawa MEG Reader Toolbox has been upgraded from ver. 1.4 to 1.5. The reader ver. 1.5 allows you to analyze EEG data.  
 
-
 ## Introduction
-
 
 The RICOH MEG is an MEG system that is developed by Ricoh Company, Ltd. Ricoh took over the MEG branch from Yokogawa in 2016 and has started manufacturing and installing the MEG system, continuing to support Yokogawa systems. They released their first MEG system at the end of 2017. A current RICOH MEG system is a successor to Yokogawa MEG systems and has most of the same characteristics as those of Yokogawa systems, especially those of the 160-channel Yokogawa MEG system.
 
@@ -36,7 +33,6 @@ The functions in FieldTrip that allows you to execute the pre-processing and co-
 
 ## Set path
 
-
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)). You also need to set the path to your data files. 
 
 	
@@ -55,9 +51,7 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 	mri_path = `<full_path_to_meg_data>`;
 	mri_file = 'mri_data.nii';  % your NIfTI filename or the first DICOM file
 
-
 ## Read MEG data
-
 
 To check if you can read in the data, you try the FieldTrip functions, **[ft_read_header](/reference/ft_read_header)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_read_event](/reference/ft_read_event)**, in the command window. 
 
@@ -79,7 +73,6 @@ To check if you can read in the data, you try the FieldTrip functions, **[ft_rea
 	           grad: [1×1 struct]
 	       chantype: {251×1 cell}
 	       chanunit: {251×1 cell}
-
 
 The header contains a lot of information about the measurement parameters. In this example 251 channels were recorded, and the sampling frequency was a 2000 Hz. The field 'hdr.orig' contains all the original header information. 
  
@@ -175,9 +168,7 @@ The first 14 components of the event structure in the above example ar
 	    29044     'triginfo'       'AEF'        []        []      
 	    29044     'analogtrig'     'TRIG162'    []        []      
 
-
 ## Trial Selection
-
 
 As the same way as that in the tutorial, [Trigger-based trial selection](/tutorial/preprocessing), you can define segments of epochs-of-interest (trials) in your recorded MEG data using the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**. For example, 
 
@@ -198,13 +189,11 @@ As the same way as that in the tutorial, [Trigger-based trial selection](/tutori
 	cfg.trl = trl;
 	data = ft_redefinetrial(cfg, data);
 
-
 If you change the options for ''eventtype'' and ''eventvalue'' as
 
 	
 	cfg.trialdef.eventtype  = 'annotations';
 	cfg.trialdef.eventvalue = [30 40];
-
 
 you can select the events that were annotated as 'noise' and 'text'. Alternatively, if you use the options  
 
@@ -228,7 +217,6 @@ you can select the trials based on the triggers signals of the channel 'TRIG162'
 	cfg.trialdef.poststim   = 0.5; %sec
 	cfg = ft_definetrial(cfg);
 	trl = cfg.trl;
-
 
 An example of your own trial function, ''yourowntrialfun'' is  
 
@@ -261,9 +249,7 @@ An example of your own trial function, ''yourowntrialfun'' is
 	
 	end
 
-
 ## MRI-MEG Co-registration
-
 
 The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/dataformat), anatomical MRI data are assumed to be saved as NIfTI (.nii) or DICOM files in this page. 
 
@@ -296,7 +282,6 @@ Load MRI and rescale i
 	cfg = [];
 	mri = ft_volumereslice(cfg, mri)
 
-
 If your MRI has HPI positions, e.g., represented by vitamin E capsules, load their positions [otherwise skip the code below
 
 	
@@ -309,7 +294,6 @@ If your MRI has HPI positions, e.g., represented by vitamin E capsules, load the
 Below is a schematic of five HPI positions and an example of a text file you should load
 
 *[I'd like to put a figure here]*
-
 
 The "fid_hpi.txt" file contains vitamin-E dot positions (with the units of mm) in the MRI with the order of 'HPI_3', 'HPI_1', 'HPI_2', 'HPI_4', and 'HPI_5'. Including the above five HPIs, several special points are defined in the Ricoh system (this is the same as Yokogawa system.);  the eight special points are defined in the Ricoh system in the convention with the following orde
  1.  fidt9:  Left pre-auricular point [lpa]
@@ -339,7 +323,6 @@ Define a head coordinate system by manually taking up the anatomical landmarks, 
 	
 	%% Represent fiducial points and HPIs in the head coordinate system for MRI 
 	fid_mri = ft_warp_apply(mri.transform, fid_vox, 'homogeneous');
-
 
 ### Read HPIs and anatomical landmarks that are represented in MEG coordinate 
 
@@ -407,7 +390,6 @@ On contrary to an exported .con file, an original (not-exported) data file (.con
 	    'Marker4'
 	    'Marker5'
 
-
 The labels, 'nas', 'lpa', 'rpa', 'Marker4', and 'Marker5', represent the magnetic-marker coils at 'CPF', 'LPA', 'RPA', 'LPF', and 'RPF' in order. The name of 'nas' is just a label, not indicating the anatomical nasion. The values of 'headshape.fid.pos' represent the marker coil positions estimated through MEG measurement. It should be noted that the case 2 as the first step of co-registration is not applicable to an original data file, and only the case 1 is applicable.
 
 ### Derive the transformation matrix from the MEG to Head coordinate systems
@@ -420,7 +402,6 @@ Now you conduct the alignment to derive the transformation matrix from the MEG t
 	 %% Get the transformation matrix from MEG to Head
 	[TR, TT, ER, t, info] = icp(hpi_mri',coil_pos');
 	meg2ctf = [[TR TT]; 0 0 0 1];
-
 
 #### Case 2: Using anatomical landmarks
 
@@ -436,9 +417,7 @@ Now you conduct the alignment to derive the transformation matrix from the MEG t
 	%% Get the transformation matrix from MEG to Head
 	meg2ctf = meg2head*head2head;
 
-
 For both cases, the iterative closest point (ICP) algorithm, in which ''[TR, TT] = icp(q,p)'' returns the rotation matrix TR and translation vector TT that minimizes the distances from (TR * p + TT) to q, can be employed to derive the transformation matrix.  
-
 
 ### Co-register the sensor array with MRI
 
@@ -484,7 +463,6 @@ To refine the above fiducial-points based registration, it is recommended to uti
 	%% Save data
 	save(fullfile(output_path, 'mri_coreg'), '-struct', 'mri_coreg')
 
-
 ### Check the result
 
 	
@@ -513,12 +491,4 @@ To refine the above fiducial-points based registration, it is recommended to uti
 	plot3(hpi_mri(3,1), hpi_mri(3,2), hpi_mri(3,3),'g.','MarkerSize',25);
 	plot3(hpi_mri(4,1), hpi_mri(4,2), hpi_mri(4,3),'g.','MarkerSize',25);
 	plot3(hpi_mri(5,1), hpi_mri(5,2), hpi_mri(5,3),'g.','MarkerSize',25);
-
-
-
-
-
-
-
-
 

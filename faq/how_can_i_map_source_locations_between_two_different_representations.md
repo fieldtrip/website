@@ -3,7 +3,6 @@ layout: default
 tags: source interpolate atlas label
 ---
 
-
 ## How can I map source locations onto an anatomical label in an atlas?
 
 After doing your source reconstruction, you may want to interpolate an atlas onto your sourcemodel, for example to be able to find peaks of activity within an anatomical ROI.
@@ -11,7 +10,6 @@ After doing your source reconstruction, you may want to interpolate an atlas ont
 The best way to go about is to do your beamformer source reconstruction on a subject-specific grid, which is inverse-warped from a regular grid defined on the MNI-template. You can read more about it in the example script [create a grid in individual head space from a template grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
 
 Then, you can interpolate the atlas of your choice onto this sourcemodel using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
-
 
 	% read the atlas
 	atlas = ft_read_atlas('~/fieldtrip/template/atlas/aal/ROI_MNI_V4.nii');
@@ -31,9 +29,7 @@ Then, you can interpolate the atlas of your choice onto this sourcemodel using *
 ![image](/media/faq/atlas_afni_brainweb_sourcespace.png@600)
 *Comparing grey matter tagging using atlases AFNI (all labels; blue) and Brainweb (tissue grey_matter; red). Note how the AFNI version does not fill the volume conductor model completely, probably due to TAL to MNI transformation issues.*
 
-
 From the previous step, a field 'tissue' should be created in sourcemodel2: 'tissue' represents the anatomical labels, according to the corresponding atlas. 'atlas.tissuelabel' gives the labels that correspond to the numbers in the tissue field.
 Now without the need to call **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** or **[ft_volumenormalise](/reference/ft_volumenormalise)** on your source-reconstructed data, you can get the indices of the source positions that have this particular anatomical label in your source variable.
-
 
 	indx = find(sourcemodel2.tissue==x); % where x is the number of your choice

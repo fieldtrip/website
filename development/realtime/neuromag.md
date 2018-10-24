@@ -3,7 +3,6 @@ layout: default
 tags: realtime elekta neuromag
 ---
 
-
 # Elekta / Neuromag
 
 This software has been developed as a collaboration between [Gustavo Sudre](/gsudre@andrew.cmu.edu) (Carnegie Mellon University), [Lauri Parkkonen](/lauri@neuro.hut.fi) (Aalto University School of Science and Technology), [Elizabeth Bock](/ebock@mcw.edu) and [Sylvain Baillet](/sbaillet@mcw.edu) (Medical College of Wisconsin), and [Wei Wang](/wangwei3@pitt.edu) and [Doug Weber](/djw50@pitt.edu) (University of Pittsburgh). We would also like to thank Robert Oostenveld and Stefan Klanke (Donders/DCCN) for their assistance with the integration with the Fieldtrip buffer. Please cite the paper [rtMEG: A Real-time Software Interface for Magnetoencephalography](http://www.hindawi.com/journals/cin/2011/327953/) (Computational Intelligence and Neuroscience,
@@ -12,7 +11,6 @@ Volume 2011) in any work that uses it.
 The rtMEG software relays signals from a 306-channel Elekta Neuromag® MEG device in real-time to a Fieldtrip buffer. This buffer can then be read by any computer in the same network as the computer hosting the buffer. The data is still stored by the Acquisition computer (i.e. where you run the Acquisition software by Neuromag) as a FIF file, and it can be read by as many computers in the network as necessary. The rtMEG software has the capability of running the Fieldtrip buffer by itself, or it can output the data to a separate computer hosting the buffer when necessary. The delay introduced by the software to the data being relayed has been measured to be smaller than 50ms, which is sufficient for most real-time studies. 
 
 For more information on how to read from a Fieldtrip buffer, please check [:development:realtime](/development/realtime) for a collection of technical documents or the [getting started section](/getting_started/realtime).
-
 
 ## Usage
 
@@ -42,14 +40,12 @@ The following are the optional arguments available to the use
 
 *  help: shows the help text for the different arguments.
 
-
 ##  Example scenario
 
  1.  Open a terminal window in the Acquisition computer and go to the folder where you copied the neuromag2ft executable (cd folder). Run it by typing ./neuromag2ft
  2.  Because no extra parameters were specified, rtMEG runs its own Fieldtrip buffer on port 1972. Start your software that will read from the Fieldtrip buffer (see above for options) and point it the acquisition computer's address (e.g. hostname=sinuhe, port=1972).
  3.  Start you measurement as you would usually do. Right after you press the Go button, you should start to see MEG data being read by your program. If you don't, there's something wrong.
  4.  When you're done, press Ctrl+C in the terminal window where you executed rtMEG. 
-
 
 ##  How it works
 
@@ -59,14 +55,11 @@ Each DSP (Digital Signal Processor) manages 12 different channels in the MEG mac
 
 The data received from the real-time computer are then stored in a local buffer that is used by different Neuromag programs, such as the visualization interface. So, rtMEG taps into this local buffer and reads the data being retrieved from the real-time computer. Once the data has been read, rtMEG writes them to a Fieldtrip buffer, which can be easily read by several different clients (see above) using an open-source format. This Fieldtrip buffer can be run by rtMEG itself, or by a separate computer in the network (i.e. the ’ftbuffer’ option). 
 
-
 ###  Tips
-
 
 *  It's been reported that closing the visualizer window in the Acquisition computer helps when using small buflen values. When this is the case, the data will pass by too fast in the visualizer for anything to be seen anyways, so having it open only consumes computer resources unnecessarily.
 
 *  Make sure that the computer reading the data from the Fieldtrip buffer can see the computer storing the buffer in the network (i.e. no firewalls blocking the traffic in the necessary ports). That also applies to the case when rtMEG is writing to a different computer that hosts the Fieldtrip buffer.   
-
 
 ##   Distribution
 

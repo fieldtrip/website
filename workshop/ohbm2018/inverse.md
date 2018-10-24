@@ -4,7 +4,6 @@ layout: default
 
 # Inverse problem
 
-
 ## Introduction
 
 In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [ preprocessing](http://www.fieldtriptoolbox.org/workshop/baci2017/preprocessing ).
@@ -26,7 +25,6 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 For this tutorial you should have already computed everything need in advance.
 
-
 	load elec
 	load headmodel_fem_eeg_tr
 	load leadfield_fem_eeg
@@ -35,16 +33,13 @@ For this tutorial you should have already computed everything need in advance.
 	load MEG_avg
 	load mesh_surf
 
-
 If you can use duneuro you should already computed this files. If not you can load them here.
-
 
 	load leadfield_fem_meg
 
 ### EEG
 
 We start with a grid search. In our case, this should be enough. The resolution of the source model is fine enough so that a further nonlinear fitting is not necessary.
-
 
 	% Dipole fit
 	cfg = [];
@@ -56,9 +51,7 @@ We start with a grid search. In our case, this should be enough. The resolution 
 	cfg.latency       = 0.025;                          %the latency of interest
 	dipfit_fem_eeg    = ft_dipolefitting(cfg,EEG_avg);
 
-
 A quick look dipfit_bem.dip gives us information about the dipole fit. Especially a low residual variance (rv) shows us that the fitted dipole quite well explains the data.
-
 
 	dipfit_fem_eeg.dip
 	
@@ -72,16 +65,12 @@ A quick look dipfit_bem.dip gives us information about the dipole fit. Especiall
 	
 	     
 
-
-
 And we visualize the dipole and see where it was localized in the brain.
-
 
 	%Visualise dipole fit
 	ft_plot_mesh(mesh_surf(3));
 	alpha 0.7;
 	ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
-
 
 ![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_simbio_top.png@500)
 ![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_simbio_side.png@500)
@@ -94,7 +83,6 @@ Now we do a grid search with MEG.
 
 `<note warning>`Be aware that this step only works, if you can use Duneuro. Otherwise just load dipfit_fem_meg and skip ft_dipolefitting `</note>`
 
-
 	% Dipole fit
 	cfg = [];
 	cfg.numdipoles    = 1;                              %number of expected 
@@ -105,9 +93,7 @@ Now we do a grid search with MEG.
 	cfg.latency       = 0.025;                          %the latency of interest
 	dipfit_fem_meg    = ft_dipolefitting(cfg,MEG_avg);
 
-
 Again we look at dipfit_bem.dip to see the information about the reconstructed dipole. The residual variance again is very low.
-
 
 	dipfit_fem_meg.dip
 	
@@ -120,16 +106,12 @@ Again we look at dipfit_bem.dip to see the information about the reconstructed d
 	     unit: 'mm' 
 	     
 
-
-
 And we visualize the dipole and see where it was localized in the brain.
-
 
 	%Visualise dipole fit
 	ft_plot_mesh(mesh_surf(3));
 	alpha 0.7;
 	ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
-
 
 ![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_duneuro_top.png@500)
 ![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_duneuro_side.png@500)
@@ -138,22 +120,18 @@ And we visualize the dipole and see where it was localized in the brain.
 
 ### Comparison of EEG and MEG
 
-
 	ft_plot_mesh(mesh_surf(3));alpha 0.7;
 	ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 	ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
-
 ![image](/media/workshop/ohbm2018/ohbm_sep_combined_top.png@500)
 ![image](/media/workshop/ohbm2018/ohbm_sep_combined_side.png@500)
-
 
 ## Minimum norm estimate
 
 #### EEG
 
 We now start with a MNE in EEG.
-
 
 	cfg                     = [];
 	cfg.method              = 'mne';                    %specify minimum norm estimate as method
@@ -165,9 +143,7 @@ We now start with a MNE in EEG.
 	cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
 	minimum_norm_eeg        = ft_sourceanalysis(cfg,EEG_avg);
 
-
 For the purpose of visualization, we interpolate the MNE results onto the replaced anatomical MRI.
-
 
 	cfg            = [];
 	cfg.parameter  = 'avg.pow';
@@ -175,20 +151,16 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 
     
 
-
 	cfg = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
 	ft_sourceplot(cfg,interpolate); 
 
-
 ![image](/media/workshop/ohbm2018/mne_eeg.png@700)
 
 *Figure 3. Minimum norm estimation with FEM model for EEG*
 
-
 #### MEG
-
 
 	cfg                     = [];
 	cfg.method              = 'mne';                    %specify minimum norm estimate as method
@@ -200,9 +172,7 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 	cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
 	minimum_norm_meg        = ft_sourceanalysis(cfg,MEG_avg);
 
-
 For the purpose of visualization, we interpolate the MNE results onto the replaced anatomical MRI.
-
 
 	cfg            = [];
 	cfg.parameter  = 'avg.pow';
@@ -210,17 +180,14 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 
     
 
-
 	cfg = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
 	ft_sourceplot(cfg,interpolate); 
 
-
 ![image](/media/workshop/ohbm2018/mne_meg.png@700)
 
 *Figure 4. Minimum norm estimation with FEM model for MEG*
-
 
 ## Exercises
 
@@ -236,21 +203,17 @@ Can you think of reasons why the dipoles are at different locations?
 You can play around with cfg.mne.lambda? Do you see the influence of different lambdas on the MNE solution? 
 `</note>`
 
-
 #### Exercise 3
 
 `<note exercise>`
 You can also play around with other parameters for the MNE. To find out more about MNE just type "help minimumnormestimate" into MatLab
 `</note>`
 
-
-
 #### Exercise 4
 
 `<note exercise>`
 Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the FEM forward model (e.g. changing conductivity values, move electrodes or play around with the segmentation) and redo the inverse solution. If you need more input for this please ask us!
 `</note>`
-
 
 ## Summary and suggested further reading
 

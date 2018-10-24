@@ -20,7 +20,6 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
 
 # Steps to be taken
 
-
 *  schedule conference call (done)
 
 *  create accounts on cvs machine (done)
@@ -30,7 +29,6 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
 *  make licensing clear to users (persistent/1-time) (done)
 
 *  commit code for the glue functions (done)
-
 
 *  provide test scenario 
     * spherical model (done, only low-level sofar)
@@ -42,18 +40,14 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
     * test in-house -> robert, cristiano
     * external test (selected users)
 
-
 *  add glue code and perhaps binaries to fieldtrip release -> robert
 
 *  communicate it and ensure that it gets used -> all
 
-
 # Steps to be taken (cristiano)
-
 
 *  Document the steps to build a bem model for a generic conductor (done)
     * See [/example/testing_bem_created_leadfields](/example/testing_bem_created_leadfields)
-
 
 *  Test OpenMEEG binaries under the different OS ( linux32, linux64, windows)
     * For Linux: (done)
@@ -63,12 +57,10 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
     * For Windows
       * check the installer (done)
 
-
 *  Test installation for a new user (done)
     * See [/development/openmeeg/testinginstallation](/development/openmeeg/testinginstallation)
 
 # External links
-
 
 *  http://openmeeg.gforge.inria.fr
 

@@ -12,7 +12,6 @@ Changes in head position during MEG sessions may cause a significant error in th
 Continuous head localization information is stored in HLC channels (Head Localization Channels) in CTF MEG system. An example script here shows how to read these channels in FieldTrip and estimate the amount of movement offline. Information from these channels can also be used to [track the head position in real time.](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
 The data used in this example script  [can be obtained here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/regressconfound/TacStimRegressConfound.zip)
 
-
 In general there are multiple ways that you can use the continuous head localization information. 
  1.  you can discard a subject or trial(s) from subsequent analysis if he/she moved too much
  2.  you can regress out the movements from the processed data
@@ -30,7 +29,6 @@ The fourth way of dealing with the movements is implemented in the **[ft_headmov
 
 Prepare configuration to define trials: 
 
-
 	
 	cfg                         = [];
 	cfg.dataset                 = 'TacStimRegressConfound.ds';
@@ -42,9 +40,7 @@ Prepare configuration to define trials:
 	cfg = ft_definetrial(cfg);
 	
 
-
 Read the data with the following HLC channels: 
-
 
 *  HLC00n1 X coordinate relative to the dewar (in meters) of the nth head localization coil
 
@@ -52,16 +48,13 @@ Read the data with the following HLC channels:
 
 *  HLC00n3 Z coordinate relative to the dewar (in meters) of the nth head localization coil
 
-
 	cfg.channel                 = {'HLC0011','HLC0012','HLC0013', ...
 	                              'HLC0021','HLC0022','HLC0023', ...
 	                              'HLC0031','HLC0032','HLC0033'};
 	
 	headpos = ft_preprocessing(cfg);
 
-
 Determine the mean (per trial) circumcenter (the center of the circumscribed circle) of the three headcoils and its orientation (see subfunction at the bottom of this page)
-
 
 	% calculate the mean coil position per trial
 	ntrials = length(headpos.sampleinfo)
@@ -74,9 +67,7 @@ Determine the mean (per trial) circumcenter (the center of the circumscribed cir
 	% calculate the headposition and orientation per trial (for function see bottom page) 
 	cc = circumcenter(coil1, coil2, coil3)
 
-
 Now you can plot the head position relative to the first value, and compute the maximal position change.
-
 
 	
 	cc_rel = [cc - repmat(cc(:,1),1,size(cc,2))]';
@@ -92,18 +83,15 @@ Now you can plot the head position relative to the first value, and compute the 
 	maxposchange = max(abs(cc_rel(:,1:3)*1000)) % in mm
 	
 
-
 ![image](/media/example/headmovementexample.png)
 
 The figure illustrates head position changes during 1-hour MEG session (data used for this plot are different from those used in the example above). You may decide to exclude a subject from the subsequent analysis if the head movement exceeds a certain threshold. 
-
 
 ## Regressing out headposition confounds
 
 MEG experiments typically involve repeated trials of an evoked or induced brain response. A mixture of different head positions over time adds variance to the data that is not accounted for by the experimental manipulation, thus potentially deteriorating statistical sensitivity. By using a general linear model, head movement related trial-by-trial variance can be removed from the data, both at the sensor- and source level. This procedure involves 3 step
 
 1) Preprocess the MEG data, for instance pertaining to an ERF analysis at the sensor level. Note the keeptrials = 'yes' when calling ft_timelockanalysis.
-
 
 	% define trials
 	cfg                         = [];
@@ -127,9 +115,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 	cfg.keeptrials              = 'yes';
 	timelock = ft_timelockanalysis(cfg, data);
 
-
 2) Create trial-by-trial estimates of head movement. Here one may assume that the head is a rigid body that can be described by 6 parameters (3 translations and 3 rotations). The circumcenter function (see below) gives us these parameters. By demeaning, we obtain the deviations. In other words; translations and rotations relative to the average head position and orientation.  
-
 
 	% define trials
 	cfg                         = [];
@@ -161,9 +147,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 	% demean to obtain translations and rotations from the average position and orientation
 	cc_dem = [cc - repmat(mean(cc,2),1,size(cc,2))]';
 
-
 3) Fit the headmovement regressors to the data and remove variance that can be explained by these confounds. 
-
 
 	
 	% add head movements to the regressorlist. also add the constant (at the end; column 7)
@@ -174,7 +158,6 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 	cfg.confound                = confound;
 	cfg.reject                  = [1:6]; % keeping the constant (nr 7)
 	regr = ft_regressconfound(cfg, timelock);
-
 
 ## Figure
 
@@ -191,7 +174,6 @@ Second, the same trials in the headposition data have to be selected as those pr
  
 Finally, note that the circumcenter function is a helper function that calculates the position (geometrical center of the three localizer coils) and orientation of the head. This saves some **degrees of freedom** (df=6) as compared to taking into account the x,y,z-coordinates of each coil separately (n=3) as regressors (df=9). If you want to also use the squares, cubes, and derivatives as regressors (to account for non-linear effects of head motion on the MEG signal), this can save quite a bit of degrees. However, too large a number of covariates can reduce statistical efficiency for procedures. In that case, Matlab will produce the Warning 'Rank deficient'. A rule of thumb is to roughly have 10% of the sample size (based on chapter 8 of Tabachnick & Fidell (1996)).
 
-
 `<note important>`
 Please cite {{:faq:stolkneuroimage2013.pdf|this paper}} when you have used the offline head movement compensation in your study.
 
@@ -201,10 +183,7 @@ Stolk A, Todorovic A, Schoffelen JM, Oostenveld R.
 Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 `</note>`
 
-
-
 ## Appendix: circumcenter
-
 
 	function [cc] = circumcenter(coil1,coil2,coil3)
 	
@@ -270,5 +249,4 @@ Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 	  cc(5,j) = (thetay(j) * (180/pi));
 	  cc(6,j) = (thetaz(j) * (180/pi));
 	end
-
 

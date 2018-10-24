@@ -64,7 +64,6 @@ Most of the automatic artifact detection functions are based on filtering the da
 
 The available functions for automatic artifact detection ar
 
-
 *  **[ft_artifact_clip](/reference/ft_artifact_clip)**
 
 *  **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
@@ -87,7 +86,6 @@ More information about automatic detection of artifacts is found in the [Automat
 
 If you use manual or automatic detection of time segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
-
 ## Subtracting spatial/temporal/spectral aspects of data reflecting artifacts
 
 In this type of artifact detection and rejection, spatial/temporal/spectral aspects of the data that contain artifacts are identified and removed from the data set. For example, certain spectral components such as line noise, are subtracted from the data.
@@ -95,7 +93,6 @@ In this type of artifact detection and rejection, spatial/temporal/spectral aspe
 ### Using ICA to identify artifacts
 
 Another commonly used approach is to make a linear decomposition of the data using methods such as ICA (independent component analysis) or PCA (principal component analysis). These methods consist of applying a set of spatial filters to the data, after which the data is no longer represented at the level of recorded (scalp) channels, but as a set of virtual channels or components. In the case of ICA decomposition, the filters are chosen to produce the maximally temporally independent signals available in the channel-level data. Certain artifacts, such as those caused by eye blinks, are often reflected by a few components which are, with some experience, fairly easy to identify. These visually identified components can then be removed from the data and the remaining components can be projected back to the sensor level.
-
 
 #### Removing artifacts from the data
 
@@ -106,7 +103,6 @@ The following example scripts explain how to use ICA to detect and remove [EOG](
 ## Suggested further reading
 
 Following this introduction on how you can deal with artifacts in FieldTrip, you can continue with the [visual artifact rejection](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorials. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the email discussion list which can be searched [like this](http://www.google.com/search?q=artifact&sitesearch=mailman.science.ru.nl%2Fpipermail%2Ffieldtrip%2F).
-
 
 #### Example scripts
 

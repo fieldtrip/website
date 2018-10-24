@@ -15,7 +15,6 @@ FieldTrip is being modularized to facilitate further development of the toolbox 
 
 A "preproc" module has been made that contains all low-level functionality that is used in the fieldtrip/preprocessing function. The existing functions in fieldtrip that still use the old code have to be converted to using the new module. Subsequently, the old version of the functions should be removed from the FieldTrip release. This pertains to 
 
-
 *  avgref.m
 
 *  blc.m
@@ -32,11 +31,9 @@ A "preproc" module has been made that contains all low-level functionality that 
 
 *  notchfilter.m
 
-
 Also all use of other low-level code for preprocessing (e.g. detrending or median filtering) should be changed to use the respective preproc_xxx function. 
 
 The most obvious function to start in is fieldtrip/private/preproc, but other fieldtrip functions are also affected (a.o. freqsimulation->bandpassfilter and probably the older artifact detection functions).
-
 
 ## To do
 
@@ -53,12 +50,6 @@ The most obvious function to start in is fieldtrip/private/preproc, but other fi
 
 *  remove the code that has become obsolete
 
-
-
-
-
-
-
 ## Affected functions
 
 **avgref:**
@@ -68,7 +59,6 @@ The most obvious function to start in is fieldtrip/private/preproc, but other fi
 *  private/prepare_headmodel.m
 
 *  private/preproc.m  -done-
-
 
 **blc:**
 
@@ -88,7 +78,6 @@ The most obvious function to start in is fieldtrip/private/preproc, but other fi
 
 *  private/preproc.m  -done-
 
-
 **bandpassfilter:**
 
 *  freqsimulation.m -done-
@@ -99,11 +88,9 @@ The most obvious function to start in is fieldtrip/private/preproc, but other fi
 
 *  private/preproc.m  -done-
 
-
 **all other filters:**
 
 *  private/preproc.m  -done-
-
 
 **detrend:**
 
@@ -113,16 +100,13 @@ The most obvious function to start in is fieldtrip/private/preproc, but other fi
 
 *  private/preproc.m  -done-
 
-
 **hilbert:**
 
 *  spikeanalysis.m
 
 *  private/preproc.m  -done-
 
-
 ## Functions that Robert should look into
-
 
 **avgref:**
 
@@ -143,7 +127,6 @@ The most obvious function to start in is fieldtrip/private/preproc, but other fi
 **hilbert:**
 
 *  spikeanalysis.m
-
 
 ## Usefull commands
 

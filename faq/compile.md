@@ -101,8 +101,6 @@ We generally only provide a ''Makefile'' for the GNU toolchain. This should be e
 
 In this situation you could encounter errors like the followin
 
-
-
 	(...)
 
 	Compiling tprod for first use
@@ -118,9 +116,7 @@ In this situation you could encounter errors like the followin
 	incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.a when searching for -lstdc++ /usr/bin/l
 	  cannot find -lstdc++ collect2: ld returned 1 exit status
 
-
 	mex: link of ' "tprod.mexglx"' failed.
-
 
 	??? Error using ==> tprod at 132 unable to compile MEX version of '/mnt/data/FieldTrip/bin/fieldtrip-read-only/multivariate/external/farquhar/tprod/tprod', please make sure your MEX compiler is set up correctly (try 'mex -setup')."
 

@@ -3,7 +3,6 @@ layout: default
 tags: references
 ---
 
-
 # Publications using FieldTrip
 
 On [Google Scholar](http://scholar.google.com/scholar?cites=3328911510682538425) you can find a list of publications that made use of the FieldTrip toolbox or referred to it.

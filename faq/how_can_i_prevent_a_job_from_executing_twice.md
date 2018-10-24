@@ -3,7 +3,6 @@ layout: default
 tags: faq peer
 ---
 
-
 ## How can I prevent a job from executing twice?
 
 Jobs that fail to finish in the expected amount of time (1), or jobs that fail to start properly (2) are by default automatically resubmitted by **[peercellfun](/reference/peercellfun)**. In general this is desired behavior, becaus
@@ -37,7 +36,6 @@ If you also want to prevent case two, you can modify your jobs such that they ar
 	... 
 	save(outfile);
 
-
 Prior to reading the data, starting the computations and writing the results to disk, you can use a lockfile to prevent the job from being executed twice, e.g. change the job into
 
 	
@@ -68,7 +66,4 @@ Prior to reading the data, starting the computations and writing the results to 
 	% do computation
 	... 
 	save(outfile);
-
-
-
 

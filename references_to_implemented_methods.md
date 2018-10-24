@@ -3,7 +3,6 @@ layout: default
 tags: references eeg meg source headmodel freq statistics coherence
 ---
 
-
 # References to implemented methods
 
 This list is far from complete, many more algorithms that have been published in papers are implemented in FieldTrip. If you want to know which paper describes a method in detail and the information is not given here, you can ask on the email [discussion list](/discussion list).

@@ -3,7 +3,6 @@ layout: default
 tags: realtime openbci
 ---
 
-
 # OpenBCI
 
 This page describes the interface between the 8-channel [OpenBCI](http://www.openbci.com) microcontroller board and the FieldTrip buffer. The OpenBCI Board is a versatile and affordable bio-sensing microcontroller that can be used to sample electrical brain activity (EEG), muscle activity (EMG), heart rate (EKG), and more. Besides the 8 ExG channels, it includes an accelerometer, resulting in a total of 11 channels.

@@ -167,7 +167,6 @@ Note that we create a 'neighbours' structure before calling **[ft_megplanar](/re
     cfg.layout          = 'CTF151_helmet.mat';
     ft_multiplotER(cfg, tl_plancmb);
 
-
 `<note warning>`The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
 Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/combineplanar_pipelineorder).
 `</note>`    

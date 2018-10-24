@@ -3,7 +3,6 @@ layout: default
 tags: video
 ---
 
-
 # Workshop at BRAMS Institute, Montreal (2012)
 
 A while ago Julian Keil held a little local workshop at the BRAMS Institute in Montreal covering the basic steps in FieldTrip. He recorded the whole session and put the videos online at http://vimeo.com/user11934546/videos. 

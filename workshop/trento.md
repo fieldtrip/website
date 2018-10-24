@@ -33,7 +33,6 @@ moving all files one level up.
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the **MATLAB command window**
 
-
     restoredefaultpath
     cd path_to_directory/fieldtrip-xxxxxxxx
     ls
@@ -57,7 +56,6 @@ Please do NOT use the graphical path management tool from MATLAB. In this hands-
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
 `</note>`
 
-
 After installing fieldtrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
@@ -75,20 +73,17 @@ Each of the topics consists of a 1h lecture and a 2h hands-on session.
 
 ### Monday
 
-
 *  morning: [intro and ERFs](/tutorial/eventrelatedaveraging) 
 
 *  afternoon: [time-frequency analysis](/tutorial/timefrequencyanalysis)
 
 ### Tuesday
 
-
 *  morning: [beamforming](/tutorial/beamformer) 
 
 *  afternoon: [randomization stats](/tutorial/cluster_permutation_timelock)
 
 ### Wednesday
-
 
 *  playground, analyzing your own data
 
@@ -130,8 +125,5 @@ Each of the topics consists of a 1h lecture and a 2h hands-on session.
 	
 	trl = [trialbeg trialend];
 	trl(:,3) = offset;
-
-
-
 
     

@@ -19,7 +19,6 @@ The University of Salzburg, with support from the [TINNET-COST Action](http://ti
 Nietzsche Lam and Tzvetan Popov will be the lecturers and teachers.
 Gaetan Sanchez, Nathan Weisz and Thomas Hartmann are the local organizers.
 
-
 #### External Applicant Call
 
 Applications for this workshop are now closed. Please check out our other upcoming workshops on [ here](http://fieldtriptoolbox.org/workshop).

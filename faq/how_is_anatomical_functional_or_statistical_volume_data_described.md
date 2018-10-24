@@ -3,7 +3,6 @@ layout: default
 tags: faq volume datatype
 ---
 
-
 ## How is anatomical, functional or statistical "volume data" described?
 
 One data object used throughout FieldTrip is that of "volume data", i.e. data that can be described as a regular arrangement of voxels in a 3D volume. For example, the function **[ft_read_mri](/reference/ft_read_mri)** is used to read anatomical MRI data. The function **[ft_sourceanalysis](/reference/ft_sourceanalysis)** is used to perform a beamformer scan on a regular 3D grid. The function **[ft_sourcestatistics](/reference/ft_sourcestatistics)** can be used to do statistics on the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** output, and therefore also statistical parameters such as t-score and probability are defined on a grid that is the same as the source grid.
@@ -52,5 +51,4 @@ and the other way around, to express the position of a point in headcoordinates 
     k = round(k)
 
 If no homogeneous transformation matrix is specified, it is assumed to be equal to the identity matrix (i.e. no coordinate transformation is done).
-
 

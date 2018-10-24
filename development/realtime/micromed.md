@@ -3,7 +3,6 @@ layout: default
 tags: realtime micromed
 ---
 
-
 # Micromed
 
 ## Introduction
@@ -28,7 +27,6 @@ where you specify
 
 as the filename to the reading functions.
 
-
 ## License and access to the source code
 
 The **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** function is included in the FieldTrip release as pre-compiled .p file. That means that you cannot see or modify the source code. The rt_realtime_micromedproxy function is not released under an open source license, because the Micromed system is licensed according to certain ISO regulations. Since the external link interferes with their system, Micromed does not allow the external TCP link to be documented. However, the company has indicated that upon request from registered Micromed users the source code of the **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** can be released to that user. 
@@ -40,6 +38,5 @@ If you want to have the source code of the **[ft_realtime_micromedproxy](/refere
 The Micromed system is also supported by [BCI2000](http://www.bci2000.org), which means that you can use the interface between BCI2000 and FieldTrip as an alternative to the rt_micromedproxy function. That interface is documented [here](/development/realtime/bci2000) and [here](http://www.bci2000.org/wiki/index.php/Contributions:FieldTripBuffer).
 
 ## External links
-
 
 *  http://www.micromed.eu

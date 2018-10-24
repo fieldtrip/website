@@ -3,8 +3,6 @@ layout: default
 tags: meg-uk-2015 mmfaces
 ---
 
-
-
 # FieldTrip beamformer demo
 
 In this demonstration we will use the [face recognition dataset](/dataset). 
@@ -12,7 +10,6 @@ In this demonstration we will use the [face recognition dataset](/dataset).
 Please use the [general MATLAB instructions](/general) to get started.
 
 ## Part 1 - coregistration and head model construction
-
 
 	
 	%% get data from SPM
@@ -53,7 +50,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.11.png)
 
-
 	
 	%% validate the positions of the fiducials that were provided by Rik
 	
@@ -73,7 +69,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.20.png@180)
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.26.png@180)
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.33.png@180)
-
 
 	
 	%%
@@ -99,7 +94,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.38.png)
-
 
 	
 	
@@ -144,7 +138,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.42.png)
 
-
 	
 	figure
 	hold on; % add the subsequent objects to the same figure
@@ -154,7 +147,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.46.png)
-
 
 	
 	figure
@@ -166,7 +158,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.49.png)
 
 ## Part 2 - reconstruct beta-band power
-
 
 	%% get data from SPM
 	
@@ -235,7 +226,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.11.55.png@630)
 
-
 	
 	%%
 	
@@ -296,7 +286,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.30.png)
 
-
 	
 	
 	%% interpolate and plot on individual anatomical MRI
@@ -313,7 +302,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.53.png)
 
 ## Part 3 - reconstruct single-trial cortical responses
-
 
 	
 	%% start from data that was processed by FieldTrip
@@ -362,7 +350,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.11.png)
 
-
 	
 	cfg = [];
 	cfg.layout = 'neuromag306mag.lay';
@@ -370,7 +357,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.13.png)
-
 
 	
 	%%
@@ -394,7 +380,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.16.png)
-
 
 	
 	%% construct single-trial virtual channel data
@@ -428,7 +413,6 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.19.png)
 
-
 	
 	figure
 	plot(virtualchannel_avg.time, [virtualchannel_avg1.avg; virtualchannel_avg2.avg; virtualchannel_avg3.avg]);
@@ -437,14 +421,12 @@ Please use the [general MATLAB instructions](/general) to get started.
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.26.png)
 
-
 	
 	figure
 	imagesc(squeeze(virtualchannel_avg.trial))
 	
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.28.png)
-
 
 	
 	%% investigate the virtual channel spectrally
@@ -462,6 +444,5 @@ Please use the [general MATLAB instructions](/general) to get started.
 	cfg.interactive = 'no';
 	ft_singleplotTFR(cfg, virtualchannel_wavelet);
 	
-
 
 ![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.32.png)

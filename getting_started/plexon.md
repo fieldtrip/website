@@ -3,7 +3,6 @@ layout: default
 tags: plexon lfp spike dataformat
 ---
 
-
 # Getting started with Plexon data
 
 The Plexon acquisition system writes data to .plx files, and more recent systems like the Omniplex also support a new efficient .pl2 format. Furthermore, the Plexon software and the accompanying NeuroExplorer and OfflineSorter software can write data to .ddt and .nex files. Currently Fieldtrip supports legacy .plx file reading code (filetype = plexon_plx), though there is a [plexon V2 patch (filetype = plexon_plx_v2)](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1795) that uses the official Plexon SDK to make file loading much faster and more robust.
@@ -16,7 +15,6 @@ FieldTrip can read Plexon data from the following file formats.
 *  .nex
 *  .plx
 
-
 The .plx files contain the multiplexed raw acquisition data. During acquisition the data arrives in random order from the different continuous and spike channels. The .plx file therefore contains data in many small fragments, which causes the reading of plx files to be slow. The newer plexon .pl2 file recording format doesn't have this limitation. One option for the slow .plx format is to convert the data to the .nex file format. These .nex files also contain the continuous and spike data, but in a orderer format that allows much faster read-access. Using the newer plexon_plx_v2 filetype also greatly speeds up .plx file reading by using the official Plexon SDK (see below).
 
 There are some constraints related to the way that FieldTrip represents continuous and spike data. All main FieldTrip functions read continuous data using the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions. These functions require the continuous data in all channels contained in the file to have the same sampling frequency. This can be a problem because Plexon file formats often contain both 40kHz spike data and 1kHz sampled LFP data in the same file. One solution is to resave all source files into two separate files. The other is to modify the fileio fuctions to select the correct sampling frequency and channels.
@@ -26,7 +24,6 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 	
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
-
 
 ## Reading continuous data from a .ddt file
 
@@ -48,7 +45,6 @@ The .ddt format is a Plexon continuous data file optimized for continuous (strea
 	
 	>> dat = ft_read_data('test1.ddt');
 	>> plot(dat');
-
 
 ## Reading continuous data from a .nex file
 
@@ -74,7 +70,6 @@ The .nex file format can contain continuous and spike data. To test the reading 
 	% read the events a.k.a. the triggers 
 	>> event = ft_read_event('p021parall.nex')                                  
 
-
 After having tested the reading of continuous data, you can use the **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions as explained in the [tutorial documentation](/tutorial).
 
 ## Reading spike data from a .nex file
@@ -90,7 +85,6 @@ To read the spike data, you should use the **[ft_read_spike](/reference/ft_read_
 	         unit: {1x4 cell}
 	    timestamp: {1x4 cell}
 	          hdr: [1x1 struct]
-
 
 If you have read the continuous data using the standard FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function, you can subsequently use the **[ft_appendspike](/reference/ft_appendspike)** function to add the spike channels to the continuous LFP data. Once the LFP and spike data are represented in the same datastructure, you can for example compute field-field, field-spike and spike-spike coherence using **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 
@@ -109,7 +103,6 @@ Triggers are in FieldTrip represented as events. These events are read using the
 If you use the [plexon V2 patch (filetype = plexon_plx_v2)](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1795), then the various fileio reading functions will use the newer official SDK and enable loading of the new .pl2 files. To do so you must specify plexon_plx_v2 when using the fileio functions.
 
 ## External links
-
 
 *  http://www.plexoninc.com
 

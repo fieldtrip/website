@@ -25,4 +25,3 @@ If you are using FieldTrip within the F.C. Donders Centre, you can add the follo
     addpath /home/common/matlab/fieldtrip
     addpath /home/common/matlab/fieldtrip_private
 
-

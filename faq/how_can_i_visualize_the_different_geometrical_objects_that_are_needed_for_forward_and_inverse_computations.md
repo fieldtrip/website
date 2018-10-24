@@ -36,4 +36,3 @@ The following code shows how to visualize the gradiometer positions in combinati
 	ft_plot_headshape(shape);
 	
 
-

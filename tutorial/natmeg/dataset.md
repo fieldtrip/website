@@ -42,7 +42,6 @@ The standard tones were 400ms 1000Hz sine-waves, with a short 50ms ramping up- a
 
 The MEG system records event-triggers in a separate channels, called STI101 and STI102. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset (or offset) can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the worksho
 
-
 *  Onset of standard stimulus: 1
 
 *  Onset of oddball stimulus: 2
@@ -64,13 +63,6 @@ The MEG system records event-triggers in a separate channels, called STI101 and 
 *  Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
 
 *  Electromyography of the lower arm flexors of the left(1) and right(2) arm were recorded.
-
-
-
-
-
-
-
 
  
 

@@ -38,11 +38,9 @@ For example, the following will result in an error because of the invalid input 
 	Error in ft_timelockanalysis (line 105)
 	data = ft_checkdata(data, 'datatype', {'raw+comp', 'raw'}, 'feedback', 'yes', 'hassampleinfo', 'yes');
 
-
 Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the fieldtrip code (see [:bugzilla](/bugzilla)).
 
 You can load the input variables to the function (and some extra information from the file).
-
 
 	>> load /private/tmp/ft_timelockanalysis_20140719T103549.mat
 	>> whos
@@ -54,7 +52,6 @@ You can load the input variables to the function (and some extra information fro
 	  last_err          1x89              178  char                
 	  last_error        1x1              2396  struct              
 	  last_warning      0x0                 0  char          
-
 
 This allows you to replicate the same error very quickly, but now with "dbstop on error" to look into the details of the problem. Even without knowing the function name, you can do
 

@@ -23,4 +23,3 @@ The most important function for using an atlas is **[ft_volumelookup](/reference
  1.   Given the anatomical or functional label, it looks up the locations and creates a mask (as a binary volume) based on the label, or creates a sphere or box around a point of interest. 
  2.   Given a binary volume that indicates a region of interest, it looks up the corresponding anatomical or functional labels from a given atlas.
 
-

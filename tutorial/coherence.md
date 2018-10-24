@@ -39,7 +39,6 @@ The first step is to read the data. In this section we will apply automatic arti
 
 The epochs of interest have to be defined according to a custom-written function called trialfun_left.m. Note that this function is not part of the FieldTrip toolbox: see [appendix 2](/tutorial/coherence#appendix_2trialfun_left), or download it from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m). This function uses the information provided by the triggers which were recorded simultaneously with the data. In this experiment each trigger corresponds with the start or the end of a contraction. The epochs which correspond to a contraction of the left forearm muscle are selected. Subsequently these 10-second pieces are cut into ten 1-second epochs.
 
-
 	% find the interesting epochs of data
 	cfg = [];
 	cfg.trialfun                  = 'trialfun_left';
@@ -77,8 +76,6 @@ The epochs of interest have to be defined according to a custom-written function
 	cfg.channel                   = {'MEG'};
 	cfg.continuous                = 'yes';
 	meg = ft_preprocessing(cfg);
-
-
 
 Next, read the left and right EMG data. Note that the settings are different for the EMG and MEG data. Most importantly, the EMG data are highpass filtered and rectified. This is a standard procedure when calculating cortico-muscle coherence.  
 
@@ -118,7 +115,6 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
     plot(data.time{1},data.trial{1}(152:153,:));
     axis tight;
     legend(data.label(152:153));
-
 
 ![image](/media/tutorial/coherence/figure1c.png@400)
 
@@ -166,7 +162,6 @@ In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** f
     cfg.channelcmb = {'MEG' 'EMGlft'; 'MEG' 'EMGrgt'};
     freq           = ft_freqanalysis(cfg, data);
 
-
 To calculate the coherence between the EMG and the MEG signals from the fourier spectra, or from the power- and cross spectra use the following function. This function does not care whether the input data contains fourier spectra, or power/cross spectra.
 
     cfg            = [];
@@ -199,7 +194,6 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
     figure; ft_singleplotER(cfg, fd);
 
 ![image](/media/tutorial/coherence/figure3b.png@400)
-
 
 *Figure 3; The coherence spectrum between the EMG and sensor MRC21.*
 
@@ -250,7 +244,6 @@ a) 2 Hz smoothing (cfg.tapsmofrq = 2 Hz)
     cfg.channelcmb = {'MEG' 'EMG'};
     fd2            = ft_connectivityanalysis(cfg,freq2);
 
-
 Plot the results of the 5 and 2Hz smoothin
 
     cfg               = [];
@@ -276,8 +269,6 @@ b) 10 Hz smoothing (e.g. cfg.tapsmofrq = 10 Hz)
     cfg.method     = 'coh';
     cfg.channelcmb = {'MEG' 'EMG'};
     fd10          = ft_connectivityanalysis(cfg,freq10);
-
-
 
 Plot the results of the 5, 2, and 10 Hz smoothin
 
@@ -314,7 +305,6 @@ Create the following configuration, and compute the coherence.
     cfg.channelcmb = {'MEG' 'EMG'};
     fd50           = ft_connectivityanalysis(cfg,freq50);
 
-
 Plot the result
 
     cfg                  = [];
@@ -331,7 +321,6 @@ Compare the results with figure 3. Pay special attention to the noise bias.
 ## Summary and further reading
 
 This tutorial demonstrated how to compute one specific measure of connectivity. Using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** you can also compute other undirected and directed connectivity measures, such as Granger causality. This is explained in more detail in the [connectivity tutorial](/tutorial/connectivity).
-
 
 FAQ
 {{topic>connectivity coherence +faq &list}}
@@ -428,6 +417,5 @@ The trial function used to extract the trial
       trl        = [trl; trlok];
     end
     end
-
 
 This tutorial was last tested by Jörn with version r9460 (April 30 2014) of FieldTrip using MATLAB 2010b on a 64-bit Linux platform.

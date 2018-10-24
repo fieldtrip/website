@@ -23,7 +23,6 @@ Using this approach, you can read all data from the file into memory, apply filt
 
 The following steps are taken to read data, to apply filters and to reference the data (in case of EEG), and optionally to select interesting segments of data around events or triggers or by cutting the continuous data into convenient constant-length segments.
 
-
 *  read the data for the EEG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, apply a filter and re-reference to linked mastoids
 
 *  read the data for the horizontal and vertical EOG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, and compute the horizontal and vertical bipolar EOG derivations
@@ -63,13 +62,11 @@ The simplest method for preprocessing and reading the data into memory is by cal
 
 This reads the data from file as one long continuous segment without any additional filtering. The resulting data is represented as one very long trial. To plot the potential in one of the channels, you can simply use the MATLAB plot function.
 
-
 	chansel  = 1;
 	plot(data_org.time{1}, data_org.trial{1}(chansel, :))
 	xlabel('time (s)')
 	ylabel('channel amplitude (uV)')
 	legend(data_org.label(chansel))
-
 
 If the data on disk is stored in a segmented or epoched format, i.e. where the file format already reflects the trials in the experiment, a call to **[ft_preprocessing](/reference/ft_preprocessing)** will return in the data being read and segmented into the original trials.
 
@@ -89,8 +86,6 @@ If the data on disk is stored in a segmented or epoched format, i.e. where the f
 
 This segmented MEG data dataset contains 266 trials. The following example shows how you can plot the data in a subset of the trials.
 
-
-
 	for trialsel=1:10
 	  chansel = 1; % this is the STIM channel that contains the trigger
 	  figure
@@ -100,9 +95,7 @@ This segmented MEG data dataset contains 266 trials. The following example shows
 	  title(sprintf('trial %d', trialsel));
 	end
 
-
 If you want to force epoched data to be interpreted as continuous data, you can use the cfg.continuous option, like thi
-
 
 	cfg = [];
 	cfg.dataset     = 'Subject01.ds';
@@ -113,7 +106,6 @@ If you want to force epoched data to be interpreted as continuous data, you can 
 	plot(data_meg.time{1}, data_meg.trial{1}(chansel, :))
 	xlabel('time (s)')
 	ylabel('channel amplitude (a.u.)')
-
 
 ## Preprocessing, filtering and re-referencing
 
@@ -270,7 +262,6 @@ If you have more questions about preprocessing, you can also read the following 
 {{topic>faq +preprocessing &list}}
 Or you can also read the example script
 {{topic>example +preprocessing &list}}
-
 
 -----
 This tutorial was last tested with version 20130617 of FieldTrip using MATLAB R2012b on a 64-bit Windows platform.

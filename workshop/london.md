@@ -36,7 +36,6 @@ We will keep this page up to date and post new information here when available.
 
 #### Day 3 (Saturday 5 March, 2016)
 
-
 *  9:00 - 11:00		Hands-on 3: [Parametric and non-parametric statistics on event related fields](/tutorial/EventRelatedStatistics)
       * If you finish the above early and time permits (or you want to do something more in-depth immediately; feel free!), you may want to try eithe
         * [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and/or
@@ -57,7 +56,6 @@ Further reading on connectivity and its pitfalls (Bastos and Schoffelen, 2016): 
 ## Tutorial preparation
 
 All the code (correct FieldTrip version) and data for the tutorials are already downloaded on your workshop computer (thus no need to install FieldTrip, nor to download the data when the tutorial indicates this).
-
 
 *  Change directory to the location of the FieldTrip package (here: M:\kcl-london).  Note the subfolders present.
 *  Add the FieldTrip folder to the path

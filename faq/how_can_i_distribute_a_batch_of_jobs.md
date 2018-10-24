@@ -8,7 +8,6 @@ Peer distributed computing allows to have multiple computers running the same an
 
 Let's say we have an analysis-script and we want to run that particular analysis for every subject, every condition (say we have 2), every event (again 2), and 5 different frequencies of interest. The analysis-script should receive any of these parameters and then compute. For example, such an analysis-script could look like thi
 
-
     myanalysis(input)
     
     % our study parameters
@@ -95,6 +94,4 @@ This script will simply perform 'analysis' on the parameters specified. Now we s
     
 
 Our joblist (i.e. 'input') should now contain 60 jobs (20 different settings * 3 subjects) which are distributed over the computer cluster. Having 'myanalysis' loading and saving the data is memory efficient. None of the output, namely, is sent to the workspace but instead stored on disk. 
-
-
 

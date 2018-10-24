@@ -3,7 +3,6 @@ layout: default
 tags: realtime neuralynx
 ---
 
-
 # Neuralynx
 
 ## Introduction
@@ -34,6 +33,5 @@ On the command line (Windows), change to the ''realtime/datasource/neuralynx'' d
 depending on the setup of your MinGW compiler. Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
 ## External links
-
 
 *  http://www.neuralynx.com

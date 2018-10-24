@@ -3,7 +3,6 @@ layout: default
 tags: example freq
 ---
 
-
 # Effects of tapering for power estimates
 
 A simple way of looking at how (multi-)tapering affects the estimate of power in your signal is by using a very simple simulated signal. The **[ft_freqsimulation](/reference/ft_freqsimulation)** function allows you to quickly create a simulated signal with a well-defined frequency component in it. Subsequently you can use **[ft_freqanalysis ](/reference/ft_freqanalysis )** with different taper settings to see the effect of tapering on your power estimate.
@@ -28,7 +27,6 @@ Create and plot a simulated signal. The simulated data contains only one trial, 
 
 ![image](/media/example/tapering/taper_picture_1.png)
 
-
 Compare the power estimate using a single Hanning taper with a single dpss taper (cfg.taper). 
 
     cfg        = [];
@@ -49,7 +47,6 @@ Compare the power estimate using a single Hanning taper with a single dpss taper
     legend({'hanning', 'dpss'});
 
 ![image](/media/example/tapering/taper_picture_2.png)
-
 
 Look at the effect of multitapering with various amounts of smoothing (cfg.tapsmofrq).
 
@@ -78,7 +75,6 @@ Look at the effect of multitapering with various amounts of smoothing (cfg.tapsm
 
 ![image](/media/example/tapering/taper_picture_3.png)
 
-
 Look at the effect of spectral leakage of frequencies that are in between the natural frequencies of your time segment (cfg.pad). Note that the power spectral density per sqrt(Hz) decreases due to the zero-padding (compare the green and the blue). Multiplying the time series with a scaling factor fixes this, and makes the power spectral density estimates easier to compare (red and blue).
 
     cfg           = [];
@@ -105,8 +101,4 @@ Look at the effect of spectral leakage of frequencies that are in between the na
     legend({'1s', '5s', '10s'});
 
 ![image](/media/example/tapering/taper_picture_4.png)
-
-
-
-
 

@@ -3,7 +3,6 @@ layout: default
 tags: tutorial natmeg meg+eeg dipole MEG-audodd
 ---
 
-
 # Dipole fitting of combined MEG/EEG data
 
 ## Introduction
@@ -17,7 +16,6 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 {{youtube>4pVaY6f25w0}}
 `</note>`
-
 
 ## Background
 
@@ -35,9 +33,7 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.
 {{page>:tutorial:shared:headmodel_background}}
 ## Procedure
 
-
 To fit the dipole models to the data, we will perform the following step
-
 
 *  We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**,  then the mri is aligned with the MEG data using **[ft_volumerealign](/reference/ft_volumerealign)**, and subsequently it is resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system. 
 
@@ -50,8 +46,6 @@ To fit the dipole models to the data, we will perform the following step
 *  Using **[:reference/ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions. 
 
 *  Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/plotting) functions to make detailled visualisations.
-
-
 
 ### Read and visualise the anatomical data
 
@@ -86,7 +80,6 @@ The high-level plotting functions do not offer support for flexible plotting of 
 ![image](/media/tutorial/natmeg_temp/natmeg_dip_geometry1.png@500)
 
 It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z]. 
-
 
     figure;
     cfg = [];
@@ -184,7 +177,6 @@ By treating the segmentation of brain/skull/scalp as a “functional” volume, 
 You should check that the segmentation covers the appropriate part of the anatomical MRI and that it does not have any artefacts due to noisy voxels in the MRI or local contrast drop-out.
 `</note>`  
 
-
 After having confirmed that the segmentations are consistent with the anatomical MRI, we construct triangulated meshes to describe the outside of each segmented volume.
 
     cfg = [];
@@ -210,7 +202,6 @@ Why do we use fewer vertices for the outer mesh than for the inner mesh?
 `</note>` 
 
 These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the *isosurface* method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment. 
-
 
     cfg = [];
     cfg.method = 'isosurface';
@@ -269,7 +260,6 @@ Now that we have the meshes, we use them to compute the volume conduction model.
     print -dpng natmeg_dip_geometry2.png
 
 {{tutorial:natmeg_temp:natmeg_dip_geometry2.png?500"}}
-
 
 ### Process the MEG data
 
@@ -362,7 +352,6 @@ As before, we also compute the difference waveform, i.e. the [mismatch negativit
 ### Fit a dipole model to the MEG data
 
 Having constructed the volume conduction model and completed the processing of the channel level data, we can investigate how well the data can be modeled with an Equivalent current Dipole (ECD) model. Since we expect activity in both auditory cortices, we will use a two-dipole model. Scanning the whole brain with two separate dipoles is not possible, but we can also start with the assumtion that the two dipoles are symmetric. In the [Neuromag coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_neuromag_coordinate_system) the x-axis runs from the right to the left, hence we specify symmetry along the x-direction.
-
 
     cfg = [];
     cfg.latency = [0.080 0.110];
@@ -459,7 +448,6 @@ Now that we have a better starting point for the dipole fit, we can release the 
 {{tutorial:natmeg_temp:natmeg_dip_nosym.png?400"}}
 
 You can see that the dipoles have moved a little bit from their original location and that they are not symmetric any more.
-
 
 Using the dipole locations that we fitted to the rather short time window of the M100, we can estimate the timecourse of activity. That is also done using **[ft_dipolefitting](/reference/ft_dipolefitting)**, now using both cfg.nonlinear=‘no’ and cfg.gridsearch='no’.
 
@@ -558,14 +546,11 @@ We can plot the dipoles together in 3D. Note the color-coding that is used to di
 
     print -dpng natmeg_dip_sourcedif.png
 
-
 {{tutorial:natmeg_temp:natmeg_dip_sourcedif.png?400"}}
-
 
 `<note instruction>`
 The dipole positions are not exactly the same. Explain the difference in the dipole position and how the MMN might contribute to the dipole position of the deviant being shifted inward.
 `</note>`
-
 
 Rather than assuming that the dipole position is fixed over a certain time-window, we can also fit a dipole to each topography separately, i.e. to each sample in the data. Since this results in a dipole position that is different over time, this is also referred to as a “moving dipole” model.
 
@@ -607,10 +592,7 @@ Rather than assuming that the dipole position is fixed over a certain time-windo
 
 {{tutorial:natmeg_temp:natmeg_dip_moving.png?400"}}
 
-
-
 ### Construct the EEG volume conduction model
-
 
 The EEG needs a different volume conduction model than the EEG. Previously we already constructed the meshes for the three important compartments of the head.
 
@@ -624,7 +606,6 @@ The EEG needs a different volume conduction model than the EEG. Previously we al
     print -dpng natmeg_dip_meshorig.png
 
 {{tutorial:natmeg_temp:natmeg_dip_meshorig.png?400"}}
-
 
 If you look carefully, you can identify a problem with the mesh. The BEM requires that the meshes are closed and non-intersecting. The figure shows that over right temporal regions there are some vertices of the skull surface that stick out of the skull. This is due to an overestimation of the skull thickness over the temporal region. 
 
@@ -867,7 +848,6 @@ Before continuing lets just have a quick look whether we processed our data corr
 
 Now we are actually able to do the dipole fitting on the EEG dat
 
-
     cfg = [];
     cfg.latency = [0.080 0.110];
     cfg.numdipoles = 2;
@@ -911,9 +891,7 @@ Lets plot the dipoles and see how it compares to our fit of the MEG dat
 
 {{tutorial:natmeg_temp:natmeg_dip_sourceeeg_symx.png?400"}}
 
-
 The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to release the symmetry constraint and fit the 2-dipole mode, starting from the symmetric position as initial guess. 
-
 
     cfg = [];
     cfg.latency = [0.080 0.110];
@@ -948,9 +926,7 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
 
 `<note exercise>`How does this fit compare to the previous? Can you explain the difference?`</note>`
 
-
 ##  Summary and conclusion
-
 
 We demonstrated how to use dipole fitting to estimate the location and timecourse of the auditory evoked fields and the mismatch negativity. We computed the optimal dipole fits using different constraints (i.e. assumptions) on the dipole models. The fitted dipole position of the AEF in the “deviant” condition differs from the position in the “standard” condition, which can be explained by an additional set of sources in the deviant condition at a slightly deeper location.     
 

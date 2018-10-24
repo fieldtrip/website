@@ -4,7 +4,6 @@ layout: default
 
 # Advanced analysis and source modeling of EEG and MEG data
 
-
 `<note warning>`
 
 The code in line 1604-1606 in ft_volumerealign.m should be commented out to work around the MATLAB 2012b error with the slider.
@@ -13,7 +12,6 @@ The code in line 1604-1606 in ft_volumerealign.m should be commented out to work
     % set(h2,'sortMethod','childorder')
     % set(h3,'sortMethod','childorder')
 `</note>`
-
 
 On April 18-21, 2016 we will host the "Toolkit of Cognitive Neuroscience: advanced data analysis and source modelling of EEG and MEG data" at the Donders Institute in Nijmegen.
 
@@ -50,14 +48,11 @@ Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many 
  | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                                      |         
  | 19:00-21:30 | Free DINNER - included in registration                                                                              |         
 
-
-
 Humphreys Restaurant
 Vismarkt 7 (Waalkade, i.e. along the river front)
 6511 VJ Nijmegen
 http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen
 [Google maps](https://www.google.nl/maps/place/Humphrey's+Restaurant/@51.849361,5.865258,17z/data=!4m7!1m4!3m3!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a!2sHumphrey's+Restaurant!3b1!3m1!1s0x47c70846a3920f8b/0x9fa5f2e2c6e3c91a?hl=nl)
-
 
 ### Wednesday April 20, 2016
 
@@ -81,8 +76,6 @@ http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen
  | 14:00-14:15 | Tea break                                  |
  | 14:15-15.00 | Testimonial & evaluation                   |
 
-
-
 ## Getting started with the hands-on sessions
 
 For the hands-on sessions we will use MATLAB R2012b, which you can start from the Desktop shortcut. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers and that we will bring on on a USB stick. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the computers and available on the USB stick.
@@ -99,7 +92,6 @@ A recent copy of fieldtrip and the data have been preinstalled on the computer a
     ft_defaults
 
     cd D:\toolkit\data
-
 
 The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes. The addpath(pwd) statement adds the

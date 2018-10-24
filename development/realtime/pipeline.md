@@ -139,7 +139,5 @@ As long as we only have one **process** functions, we can also build a simple ta
      [PE{k}, tmp_out] = feval(procFunc{k}, PE{k}, tmp_in);
     end
 
-
 If you like tables, please consider [brainstream](/brainstream).
-
 

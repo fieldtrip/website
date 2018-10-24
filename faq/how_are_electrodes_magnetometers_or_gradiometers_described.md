@@ -25,7 +25,6 @@ to tell FieldTrip how to combine the electrodes into channels. This array can be
 The EEG potential is in first instance computed on the locations in elec.elecpos, and when applicable combined using elec.tra. The elec.chanpos field is used e.g. for visualization and determining neighbours.  
 `</note>`
 
-
 ### The definition of MEG sensors
 
 The gradiometer definition generally consists of multiple coils per channel, e.g. two coils for a 1st order axial gradiometer, in which the orientation of the coils is opposite. Each coil is described separately and one large matrix (grad.tra: can be sparse) has to be given that defines how the forward computed field is combined over the coils to generate the output of each channel. The gradiometer definition consists of the following fields as of September 23, 201
@@ -45,9 +44,7 @@ MEG forward computations are performed for each grad.coilpos and grad.coilori, a
 By default a first order gradiometer is described by 2 "coils", but you could use more digitization points to get a more accurate forward model.   
 `</note>`
 
-
 ### The old electrode and gradiometer structure
-
 
 The old electrode definition contained the following field
 
@@ -62,7 +59,6 @@ The old gradiometer definition contained the following field
     grad.tra
 
 The upgrade from this to the current representation is motivated by the fact that the relevant information that is needed from the grad/elec structure is different for different analysis/visualization step
-
 
 *  for displaying purposes, usually the channels are the entities of relevance. Also, in the context of finding neighbours to a given channel (for clustering, or synthetic gradient computation, or interpolation as in scalpcurrentdensity or channelrepair), the channels are the relevant entities.
 

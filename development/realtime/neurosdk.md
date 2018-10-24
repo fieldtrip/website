@@ -3,7 +3,6 @@ layout: default
 tags: realtime ant
 ---
 
-
 # ANT NeuroSDK
 
 ## Introduction

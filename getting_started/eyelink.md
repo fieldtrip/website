@@ -16,8 +16,6 @@ With your presentation script on the stimulus presentation computer you can also
 
 It is possible to use the eye tracker in combination with a behavioural task that involves stimuli (usually on a screen) and response, but without EEG or MEG recordings. In this case the EyeLink computer records all data.
 
-
-
 ###  Converting the EDF file to an ASC file 
 
  
@@ -25,7 +23,6 @@ The Eyelink 1000 output is an *.EDF file (eyelink data file). There are several 
 
 	
 	EDF2ASC filename.edf
-
 
 You can type DIR to see if your *.EDF file is located in the current working directory. When the conversion is finished, you need to reboot the Eyelink PC to windows to read your data, because in MSDOS you cannot use USB memory stick. 
 
@@ -58,7 +55,6 @@ The output data contains this
     '3'
     '4'
 
-
 Channel 1 represents time, channel 2 is the horizontal x-coordinate, channel 3 is the vertical y-coordinate and channel 4 is the pupil dilation. 
 
 If you want your channel names to be more consistent, you can use the following montage (see **[ft_apply_montage](/reference/ft_apply_montage)**) to rename the channels while preprocessin
@@ -74,13 +70,11 @@ Typically you would want to analyse the eye movements relative to certain events
 
 The events represented in the eye tracker datafile can be explored using **[ft_read_event](/reference/ft_read_event)** like thi
 
-
     event_eye = ft_read_event(filename_eye);
     
     disp(unique({event_eye.type}))
     
       'INPUT'
-
 
 You can see that all events are coded as type "INPUT". The following plots the event values against the time. Although the dots are very small, there is an individual point for each INPUT event. 
 
@@ -250,7 +244,6 @@ The DAC conversion in the Eyelink system takes some time, and therefore the UADC
 
 Since both MEG and Eyelink get the same triggers, you can use FieldTrip **[ft_definetrial](/reference/ft_definetrial)** on both to read the same segments.
 
-
 	
 	cfg = [];
 	cfg.dataset = filename_meg;
@@ -353,21 +346,16 @@ This is an example how to convert the horizontal and vertical traces from the UA
     
     end
 
-
-
-
 ### EDF data - position
 
 In the 'Set Options' screen, set 'File Sample Contents' to 'GAZE position'.
 
 Gaze position data reports the actual (x, y) coordinates of the subject's gaze on the display, compensating for distance from the display. The units are in actual Data Files display coordinates (usually pixels) which can be set in the EyeLink configuration file PHYSICAL.INI. The default EyeLink coordinates are mapped to a 1024x768 display, with (0,0) at the top left and (1023,767) at the bottom right. Note that the settings of your presentation screen and the presentation software may overwrite the settings in PHYSICAL.INI. 
 
-
 ### EDF data - pupil
 
 Pupil size data can be recorded as 'area' or 'diameter' in pixels. The area is recorded in scaled image pixels. Diameter is calculated from pupil area fit using a circle model.
 Note that when pupil diameter is your variable of interest, you should correct for viewing direction. When the eye rotates away from the camera during viewing, the pupil seems smaller. This effect can be corrected for with a geometrical model described by [Hayes and Petrov (2016)](https://www.ncbi.nlm.nih.gov/pubmed/25953668), but this requires that you know the geometry of the eye tracking camera relative to the eye and the computer screen. Alternatively, you could use ft_regressconfound to try and remove the influence of viewing direction on pupil diameter.
-
 
 ### Mapping to Presentation Stimuli
 

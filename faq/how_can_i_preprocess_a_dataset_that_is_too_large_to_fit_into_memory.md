@@ -28,7 +28,3 @@ In summary, the code would look like this
 	cfg = [];
 	datall = ft_appenddata(cfg, datr{:}); % this expands all cells into input variables
 
-
-
-
-

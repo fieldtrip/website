@@ -3,7 +3,6 @@ layout: default
 tags: development
 ---
 
-
 # Reading and writing of EEG/MEG time series data
 
 FieldTrip has a flexible way of supporting dataformats. It uses three wrapper functions that provide a common interface to all electrophysiological file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. Other data that is commonly used in electrophysiological analysis such as anatomical measurements can be read with **[ft_read_mri](/reference/ft_read_mri)**, **[ft_read_sens](/reference/ft_read_sens)** and **[ft_read_headshape](/reference/ft_read_headshape)**. Furthermore, **[ft_read_vol](/reference/ft_read_vol)** can be used  for reading EEG and MEG volume conduction models of the head, and neuronal spiking data can be read with **[ft_read_spike](/reference/ft_read_spike)**.
@@ -27,7 +26,6 @@ The remainder of this page mainly describes the core features for reading electr
 
 The following features are implemented in the fileio module
 
-
 *  the API for the functions is transparent to the data format
 
 *  adding support for new file formats require only little change to the existing functions
@@ -39,7 +37,6 @@ The following features are implemented in the fileio module
 *  the event information is represented in a structure that is common to all data formats
 
 Other options that have been suggested, but that are not implemented yet are 
-
 
 *  supporting data in multiple files (i.e. an EEG session with a break in the acquisition)
 
@@ -66,7 +63,6 @@ The motivation for separating the reading into header/event/data is (among other
 ### Header format
 
 In order to make the API transparent to the final application, the header structure by default only contains those elements that are common to all file types
-
 
 *  sampling frequency
 
@@ -184,7 +180,6 @@ To support all of these with ft_read_header, ft_read_data and ft_read_event, som
 
 then in all cases hdr.nSamples*ndr.nTrials reflects the total number of samples present in the datafile. Each sample in the datafile is indexed, starting from 1, up to hdr.nSamples*ndr.nTrials.
 
-
 *  In case 1, hdr.nTrials = 1.
 
 *  In case 2 and 3, hdr.nTrials is usually the number of segments that can be represented in the file and hdr.nSamples is the number of samples in a segment (fixed for all segments).
@@ -194,7 +189,6 @@ then in all cases hdr.nSamples*ndr.nTrials reflects the total number of samples 
 *  In case 4, hdr.nSamples does not apply as a single number to the variable length segments.
 
 To deal with the more detailed structure in the file, the output of ft_read_event is neede
-
 
 *  In case 1, there are events for each trigger.
 
@@ -236,7 +230,6 @@ Another recommendation for file type detection is to use the potential context, 
 
 # Related documentation
 
-
 Related projects on electrophysiology (EEG, MEG) data I/O are
 
 *  Biosig, http://biosig.sourceforge.net/
@@ -246,7 +239,6 @@ Related projects on electrophysiology (EEG, MEG) data I/O are
 *  EEG toolbox, http://eeg.sourceforge.net/
 
 *  FIFF access, http://ltl.tkk.fi/~kuutela/meg-pd/
-
 
 Lists of EEG and MEG file formats can be found her
 

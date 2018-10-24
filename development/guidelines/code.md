@@ -3,7 +3,6 @@ layout: default
 tags: guidelines development
 ---
 
-
 #  Code guidelines
 
 A recent paper "Best Practices for Scientific Computing" which can be found [here](http://arxiv.org/pdf/1210.0530v1.pdf) provides a very accessible account of things you should consider when developing software such as FieldTrip. It is recommended reading material for all contributors.
@@ -57,7 +56,6 @@ When a new function is written in FieldTrip, it is important to include these fe
 The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a **[Frequently Asked Question](/faq)** should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
 should also have the same 'warning' or 'error' tag (e.g. FieldTrip:fileio:fileNotExisting).
 
-
 ## Use the dimord field to describe or deciper the data
 
 In general (although some exceptions apply, see below) the specification of the dimensions in the data structure is like this
@@ -102,9 +100,6 @@ If a structure only contains a single data field, all fields (i.e. the only one)
     datastructure.dimord = ‘xxx_yyy’
     datastructure.xxx = scalar vector or cell array that describes the 1st dimension
     datastructure.yyy = scalar vector or cell array that describes the 2st dimension
-
-
-
 
 Some high-level FieldTrip functions allow or require the specification of the parameter on which to perform their algorithm, whereas other functions do not require or allow the parameter to be specified. If the parameter is not specified, and if the non-specific “dimord” only refers to a single data field, that field is considered to be the main data and will be used as input for the algorithm.
 
@@ -228,7 +223,6 @@ Examples of good and useful log messages are
 
     bugfix - fixed the problem described in http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=50
 
-
 Examples of bad log messages are
 
     `<empty>`
@@ -238,7 +232,6 @@ Examples of bad log messages are
     lot of small changes
 
     fixed a bug
-
 
 ## Public and private functions
 
@@ -258,13 +251,11 @@ of inputs describing the name of one property and its value.
 These arguments have to be handled at the very beginning inside the function, by setting a default value,
 like thi
 
-
 	function ft_plot_mesh(bnd, varargin)
 	...
 	% get the optional input arguments
 	facecolor   = ft_getopt(varargin, 'facecolor',   'white');
 	vertexcolor = ft_getopt(varargin, 'vertexcolor', 'none');
-
 
 The function ft_getopt is specific to check syntactic consinstency of the arguments, and the
 optional third input arguments specifies the default value for the option in the function. If this optional input argument is not specified, it defaults to [].
@@ -275,7 +266,6 @@ In this way the variables which are used in the function are always correctly in
 Since we support FieldTrip on all currently popular platforms regarding hardware and software, we have to create executables for all platforms that we can. If an executable cannot be compiled on a particular platform, e.g. because it depends on windows specific DLLs, then you of course don't have to bother.
 
 Ensuring that all executables can co-exist on all platforms (and especially on the unix base platforms) means that they should have unique file names. The choice for that is based on the specification according to the MATLAB function "computer", i.e.
-
 
 	>> help computer
 	 COMPUTER Computer type.
@@ -306,9 +296,7 @@ Ensuring that all executables can co-exist on all platforms (and especially on t
 
 	    See also ispc, isunix, ismac.
 
-
 The binaries for the different versions of the unix platforms (Linux, OS X) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
-
 
 *  buffer.exe     for Microsoft Windows
 *  buffer.glnx86  for 32-bit Linux
@@ -415,8 +403,6 @@ MATLAB is not supported on 32 bit OS X any more.
 
 You should use the gcc compiler that is included in the XCode package. Further details are not known at the moment.
 
-
-
 ## Avoid using nested functions
 
 Although a nested function has certain advantages, it makes maintaining the code more difficult. Furthermore, ft_preamble and eval are not fully compatible with nested functions.
@@ -453,7 +439,6 @@ In this case we aim at imposing the following behaviour of the functio
 
 You should add something like this to code that you have written yourself, or together with your colleagues. If you borrow code from elsewhere, you should include the original copyright statement.
 
-
 	% Copyright (C) 2012, Donders Centre for Cognitive Neuroimaging, Nijmegen, NL
 	%
 	% This file is part of FieldTrip, see http://www.ru.nl/neuroimaging/fieldtrip
@@ -473,7 +458,6 @@ You should add something like this to code that you have written yourself, or to
 	%    along with FieldTrip. If not, see `<http://www.gnu.org/licenses/>`.
 	%
 	% $Id: ft_preprocessing.m 6987 2012-11-26 11:56:08Z jorhor $
-
 
 Note the Id tag at the bottom (see below).
 

@@ -34,7 +34,6 @@ We could consider splitting the problem into three categorie
  3.  computational backend: torque, sge, AC2
 My thought for making this double divide is to try and focus on the middleware, and try to stay sufficiently far away from 1 to make it flexible and to keep 3 for the sysadmins. Of course they all interact, but we should try to focus on a particular problem that can be solved. My idea with this focus on the middleware is to achieve the goal of more variants of "(1) end-user software" run on more variants of "(3) computational backends".
 
-
 #### Some thoughts on using aa
 
 There are two features (present in aa version 4) that I think will be especially useful for distributed neuroimaging analyse
@@ -44,7 +43,6 @@ There are two features (present in aa version 4) that I think will be especially
 #### Some thoughts on peercellfun/qsubcellfun
 
 These are two functions that were implemented for different backends, but in both cases mimicking MATLAB cellfun/dfeval and specifically designed for single-process-multiple-data (SPMD) scenarios. These cellfun functions are not meant for jobs in which dependencies are important. The code that is underneath (peerfeval and qsubfeval) would be at the appropriate level to implement these dependencies. 
-
 
 Note that although these two were made within the fieldtrip project, the fieldtrip code itself does not call them. It is the end-user who calls them in his/her script. See [this](/faq/what_are_the_different_approaches_i_can_take_for_distributed_computing) to get a feeling for how they relate.
  
@@ -90,7 +88,6 @@ Q (Robert): what are the defining features of the various systems? E.g.
  3.  keep workers open between calls 
  4.  suitable for MPI
  5.  ...
-
 
 2) Get more people interested/involved.
 

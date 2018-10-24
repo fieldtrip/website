@@ -11,7 +11,6 @@ The code development project mentioned on this page has been finished by now. Ch
 
 # Handling of continuous data
 
-
 ## Introduction
 
 At the moment most of the fieldtrip functions work with segmented data in memory. The segments or trials are specified by DEFINETRIAL and the segments are read with PREPROCESSING. This also affects artifact detection, which is largely done prior to preprocessing, using data that still resides on disk. 
@@ -28,7 +27,6 @@ but also like
 
 It is conceivable that similar changes can be made for other functions on the input side of fieldtrip. A list of functions to consider is
 
-
 *  definetrial
 
 *  artifact_eog/jump/muscle/xxx 
@@ -43,16 +41,7 @@ It is conceivable that similar changes can be made for other functions on the in
 
 *  recodeevent
 
-
-
-
-
-
-
-
-
 ## To do
-
 
 *  Discuss the desired functionality and features
 
@@ -82,7 +71,6 @@ example
      count(trl(i,1):trl(i,2)) = count(trl(i,1):trl(i,2))+1;
    end
 
-
 addded by Esther 22 april 08
 
 Done: 
@@ -96,6 +84,4 @@ To d
 * study out how they work
 
 * addapt the artifact functions so they can handle the described output of redefinetrial
-
-
 

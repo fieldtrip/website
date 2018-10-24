@@ -3,9 +3,7 @@ layout: default
 tags: faq statistics
 ---
 
-
 ##  How NOT to interpret results from a cluster-based permutation test
-
 
 ### The correct interpretation
 
@@ -35,7 +33,6 @@ Finding **a significant effect** using some test statistic (with some sensitivit
 
 Keep in mind that the extent of the cluster depends on multiple factor
 
-
 *  The signal to noise ratio in the data 
 
 *  The length of the sliding time window (when calculating frequency data)
@@ -50,13 +47,11 @@ You could imagine that with a dipolar scalp topography, one of the poles of the 
 
 You could also imagine that the moment at which you can distinguish an ERP from the zero-baseline depends on the number of trials. The more trials, the more sensitive you will be in deciding that it starts to be different from the baseline. That does not mean that the ERP starts earlier if you have more trials, only that you are able to detect the effect earlier.
 
-
 ###  What if I preselect a latency range and a spatial region?
 
 If you a-priori select a certain time window and some scalp location in which to do the cluster-based permutation test, then you can say that there is a difference in the specific latency range and specific area. 
 
 However, this does not necessarily represent the entire true effect in the data. 
-
 
 `<note>`
 Here is what NOT to writ
@@ -74,7 +69,6 @@ or if you would only select a latency rang
 "Testing for an N400 effect in the latency range from 350 to 500 ms post-stimulus, the cluster-based permutation test revealed a significant difference between the fully congruent and fully incongruent condition (p<0.05). In this latency range, the difference was most pronounced over left frontotemporal sensors."
 
 `</note>`
-
 
 ###  Is there a paper on this topic?
 

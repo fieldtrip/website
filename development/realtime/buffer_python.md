@@ -3,7 +3,6 @@ layout: default
 tags: realtime development
 ---
 
-
 # FieldTrip buffer Python interface
 
 ## Client side pure Python implementation

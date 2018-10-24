@@ -3,7 +3,6 @@ layout: default
 tags: realtime tmsi
 ---
 
-
 ## TMSI EEG amplifiers
 
 We provide two tools for grabbing EEG data from [TMSi](http://www.tmsi.com) amplifiers. The code for both can be found

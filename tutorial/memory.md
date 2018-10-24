@@ -102,7 +102,6 @@ Change the first line to preallocate a 1-by-1000 block of memory for x initializ
      x(k) = x(k-1) + 5;
     end
 
-
 ## Clear old variables from memory when no longer needed
 
 When you are working with a very large data set repeatedly or interactively, clear the old variable first to make space for the new variable. Otherwise, MATLAB requires temporary storage of equal size before overriding the variable. For example,

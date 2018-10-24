@@ -16,13 +16,10 @@ Cristiano would like to make source reconstruction on these datasets and comes a
 Apart from the electrophysiological data, some other data is at hand, like the anatomy of the patients, which consists of: a pre-surgery MRI T1 scan of each subject and a post-surgery CT scan for each subject. The electrodes positions are visible in the CT scan.
 What does he need to run his pipeline from raw data to source reconstruction/visualization?
 
-
-
 ##  Scenario #2
 
 Gomez is a physicist working in team with psychologists on resting state data acquired with EEG and MEG and sleep recordings, acquired with EEG.
 He is trying to answer some crucial cognitive questions such as 
-
 
 *  What are the effects of sleep (or sleep deprivation) in learning and memory?
 
@@ -47,8 +44,4 @@ Carsten is a mathematician working in the area of Bioelectromagnetism. His main 
 He disposes of MRI T1/T2 scans, DW-MRI (diffusion weighted) scans (a modality that allows for the estimation of the electrical conductivity of the head tissue. In that context it is often called DTI for diffusion tensor imaging) and EEG, MEG and possibly also ECoG recordings. 
 
 How does he combine all this information in a thorough pipeline?
-
-
-
-
 

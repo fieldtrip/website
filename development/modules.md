@@ -3,7 +3,6 @@ layout: default
 tags: development
 ---
 
-
 # Organization of the source code
 
 The source code in the FieldTrip toolbox is split over multiple directories, which reflect the modular organization. Furthermore, the directories have specific dependencies on each other, and additions to FieldTrip should follow this structure.

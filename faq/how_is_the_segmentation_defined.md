@@ -3,7 +3,6 @@ layout: default
 tags: faq datatype segmentation eeg meg headmodel
 ---
 
-
 ## How is the segmentation defined?
 
 The MATLAB structure that FieldTrip uses to describe a **[segmentation](/reference/ft_datatype_segmentation)** represents different tissue-types in the anatomical MRI typically after obtained calling **[ft_volumesegment](/reference/ft_volumesegment)** or **[ft_read_atlas](/reference/ft_read_atlas)**. The segmentation is a special kind of a **[volumetric](/reference/ft_datatype_volume)** structure that contains additional fields describing for each voxel to which tissue type or brain area it belongs. 
@@ -19,7 +18,6 @@ An example segmentation obtained after ft_volumesegment with the default segment
 	        white: [256x256x256 double] % probabilistic map of the white matter
 	          csf: [256x256x256 double] % probabilistic map of the cerebrospinal fluid
 
-
 The tissue type of each voxel can be represented in the FieldTrip structure in two different ways, which are mutually exclusive. The representation can be either *"probablistic"* or *"indexed"*. The remainder of this page explains the difference between the two representations. 
 
 ### Probabilistic representation
@@ -33,7 +31,6 @@ The default output of the ft_volumesegment function (see above) is a segmentatio
 ![image](/media/faq/segmentation/csf.png@186)
 
 *Figure 1. Probabilistic maps of the gray (left), white (middle) and cerebrospinal fluid (right). The colors represent probabilities ranging from 0 to 1.*
-
 
 Here is to code that creates this data-structure. It makes use of one of the MRIs from the tutorials.
 
@@ -54,7 +51,6 @@ Here is to code that creates this data-structure. It makes use of one of the MRI
 	cfg              = [];
 	cfg.funparameter = 'gray';
 	ft_sourceplot(cfg, tpm);
-
 
 The output of this code can be seen in the introduction of this faq. 
 
@@ -87,7 +83,6 @@ The brain, scalp and skull segmentations are used for creating **volume conducti
 	cfg.location     = 'center';
 	ft_sourceplot(cfg, bss);
 
-
 This segmentation data structure looks similar to the structure above (in the introduction), but here, the fields representing the different tissue types contain binary matrices.
 
 	
@@ -98,7 +93,6 @@ This segmentation data structure looks similar to the structure above (in the in
 	          brain: [256x256x256 logical] % binary map representing the brain
 	          scalp: [256x256x256 logical] % binary map representing the scalp
 	          skull: [256x256x256 logical] % binary map representing the skull
-
 
 Regardless of whether the probabilities are crisp (i.e. either exactly 0 or 1) or probabilistic (i.e. a floating point value ranging between 0 and 1), the representation of the volume is always in a field of the MATLAB structure with a field name that describes the tissue. A similar example would be
 
@@ -113,13 +107,11 @@ Regardless of whether the probabilities are crisp (i.e. either exactly 0 or 1) o
 	  brodmann_area_4: [256x256x256 logical] % binary map representing a Brodmann area
 	  ...
 
-
 When only the scalp as output is required from the segmentation, the scalp-mask includes also the brain and skull tissues. 
 
 ![image](/media/faq/segmentation/scalponly.png@200)
 
 *Figure 3. The binary representation of the outside surface of the scalp. The colors represent only zeros and ones.*
-
 
 This representation differentiates the boarder of the outer skin, but not the inside skin surface. The advantage of such a representation is that it is created faster.    
 
@@ -134,10 +126,6 @@ This representation differentiates the boarder of the outer skin, but not the in
 	ft_sourceplot(cfg, scalp);
 	
 
-
-
-
-
 ### Indexed representation
 
 Another way of representing tissue types is done by *indexing*. When indexing, one field structure can represent multiple non-overlapping tissues or brain areas with integer numbers. Everything that doesn't belong to any tissue types is represented by 0 and the voxels which belong to different tissues are represented by different numbers (Figure 3). The index-numbers must start with 1 and should increased one-by-one for each subsequent tissue type. 
@@ -145,7 +133,6 @@ Another way of representing tissue types is done by *indexing*. When indexing, o
 An additional field in the structure contains the labels that describe the names of the tissues for each index number. The order of the names in the label field are according to the index numbering. This representation is memory wise more efficient in the case of many tissue types and therefore often used for representing a brain atlas. 
 
 An example of an indexed segmentation data-structure (the AFNI TTatlas+tlrc segmented brain atlas
-
 
 	
 	atlas            =   ft_read_atlas('TTatlas+tlrc.BRICK');
@@ -160,7 +147,6 @@ An example of an indexed segmentation data-structure (the AFNI TTatlas+tlrc segm
 	       brick0label: {50x1 cell}          % names (labels) of brain areas indexed in brick0 
 	       brick1label: {69x1 cell}          % names (labels) of brain areas indexed in brick1
 
-
 In this structure, the **brick0** and **brick1** field contains two different indexed representations of brain areas. The corresponding labels of the index-numbers can be found in the **briack0label** and in the **brick1label** fields. Note that the nomenclature "brick0" and "brick1" is AFNI specific and does not mean anything in special.
 
 An indexed representation can also be plotted to inspect the different tissues in an image (see below). 
@@ -168,7 +154,6 @@ An indexed representation can also be plotted to inspect the different tissues i
 ![image](/media/development/afni_atlas.png@300)
 
 *Figure 4. Plot of the integer values that are represented in the indexed "brick0" representation of the AFNI atlas. The figure was made with "colormap lines".*
-
 
 ### Conversion between probabilistic and indexed representations
 
@@ -191,7 +176,6 @@ The following code demonstrates how to create an indexed representation from the
 	map = [0 0 0; 1 0 0; 0 1 0; 0 0 1];
 	
 	colormap(map);
-
 
 ![image](/media/faq/segmentation/seg_indexed.png@350)
 

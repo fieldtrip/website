@@ -21,7 +21,6 @@ The problem with using the LPA and RPA according to this definition is that it c
 Regardless of which convention you use for the points representing the left and right ear landmarks, you have to be aware of it and use it consistently throughout.
 `</note>`
 
-
 Because of the difficulty of localizing the LPA and RPA points in both EEG/MEG and in the anatomical MRI, various labs have adopted slightly different conventions for the fiducial points for the ears. Some labs use the junction between the tragus and the helix, marked with the red dot in the figure of the ear above, which can be located more precisely both anatomically and on the MRI slices. Other possibilities that are less frequently uses are the tip of the tragus, the ear lobe or the [mastoid](http://en.wikipedia.org/wiki/Mastoid).
 
 At the Donders Centre in Nijmegen we use ear molds with a hole in them (see below) to attach the markers: In the MEG scanner we insert a small tube into the hole (the tube is also used for auditory stimulation) and attach the MEG localizer coil to the tube. In the MRI scanner we use the same ear molds, but rather insert a custom-made marker with a small drop of vitamine E into the hole. The position thereby obtained with the MEG localizer coils is as precisely as possible reproduced in the MRI, given the movement that is allowed by the ear molds. We have various sizes of ear molds, both at the MEG and MRI scanner, and subjects should use the same size in both scanners.

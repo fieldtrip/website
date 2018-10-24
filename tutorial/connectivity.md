@@ -29,7 +29,6 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 This tutorial consists of three part
 
-
 *  Simulated data with directed connections. In this part we are going to simulate some data and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model and we will use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** for this. Subsequently, we will estimate the multivariate autoregressive model and the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with  **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
 *  Simulated data with common pick-up and different noise levels. In this part we are going to simulate some data consisting of an instantaneous mixture of 3 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
@@ -58,7 +57,6 @@ You can download the result from the DICS reconstruction from the [FieldTrip ftp
 
 We will first determine the position on which the cortico-muscular coherence is the largest.
 
-
 	load source
 
 	[maxval, maxindx] = max(source.avg.coh);
@@ -67,7 +65,6 @@ We will first determine the position on which the cortico-muscular coherence is 
 	maxpos =
 	    4 -3 12
 
-
 The cortical position is expressed in individual subject [head-coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) and in centimeter. Relative to the center of the head (in between the ears) the position is 4 cm towards the nose, -3 towards the left side (i.e., 3 cm towards the right!) and 12 cm towards the vertex.
 
 The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually applied to the whole brain using a regular 3-D grid or using a triangulated cortical sheet. You can also just specify the location of a single or multiple points of interest with *cfg.grid.pos* and the LCMV beamformer will simply be performed at the location of interest.
@@ -75,7 +72,6 @@ The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually ap
 The LCMV beamformer spatial filter for the location of interest will pass the activity at that location  with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
 Rather than doing all the preprocessing again, you can download the preprocessed data from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)
-
 
 	load data
 
@@ -94,11 +90,9 @@ Rather than doing all the preprocessing again, you can download the preprocessed
 	cfg.keepfilter  = 'yes';
 	source          = ft_sourceanalysis(cfg, timelock);
 
-
 The source reconstruction contains the estimated power and the source-level time-series of the averaged ERF, but here we are not interested in those. The *cfg.keepfilter* option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
 ### Extract the virtual channel time-series
-
 
 	%% construct the 3-D virtual channel at the location of interest
 	beamformer = source.avg.filter{1};
@@ -113,7 +107,6 @@ The source reconstruction contains the estimated power and the source-level time
 	  sourcedata.trial{i} = beamformer * data.trial{i}(chansel,:);
 	end
 
-
 `<note important>`
 The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the  broadband data allows us to compute a broadband source level time-series.
 
@@ -122,11 +115,9 @@ If you would know that the subsequent analysis would be limited to a specific fr
 
 The *sourcedata* structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)*
 
-
 	cfg = [];
 	cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
 	ft_databrowser(cfg, sourcedata);
-
 
 ![image](/media/tutorial/virtualchan.png@link&300)
 
@@ -136,7 +127,6 @@ rrent dipole source at the location of interest.
 ### Project along the strongest dipole direction
 
 The interpretation of connectivity is facilitated if we can compute it between two plain channels rather than between one channel versus a triplet of channels. Therefore we will project the time-series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
-
 
 	%% construct a single virtual channel in the maximum power orientation
 	timeseries = cat(2, sourcedata.trial{:});
@@ -150,17 +140,12 @@ The interpretation of connectivity is facilitated if we can compute it between t
 	%   u              3x3                  72  double              
 	%   v         196800x3             4723200  double            
 
-
 Matrix u contains the spatial decomposition, matrix v the temporal and on the diagonal of matrix s you can find the eigenvalues. See "help svd" for more details.
 
 We now recompute the virtual channel time-series, but now only for the dipole direction that has the most power.
 
-
 	% this is equal to the first column of matrix V, apart from the scaling with s(1,1)
 	timeseriesmaxproj = u(:,1)' * timeseries;
-
-
-
 
 	virtualchanneldata = [];
 	virtualchanneldata.label = {'cortex'};
@@ -168,7 +153,6 @@ We now recompute the virtual channel time-series, but now only for the dipole di
 	for i=1:length(data.trial)
 	  virtualchanneldata.trial{i} = u(:,1)' * beamformer * data.trial{i}(chansel,:);
 	end
-
 
 #### Exercise 8
 
@@ -187,7 +171,6 @@ Note that one orientation is represented in the SVD matrix "u" and the other is 
 
 The raw data structure containing one (virtual) channel can be combined with the two EMG channels from the original preprocessed data.
 
-
 	%% select the two EMG channels
 	cfg = [];
 	cfg.channel = 'EMG';
@@ -199,11 +182,9 @@ The raw data structure containing one (virtual) channel can be combined with the
 
 	save combineddata combineddata
 
-
 ### Compute the connectivity
 
 The resulting combined data structure has three channels: the activity from the cortex, the left EMG and the right EMG. We can now continue with regular channel-level connectivity analysis.
-
 
 	%% compute the spectral decomposition
 	cfg            = [];
@@ -219,9 +200,7 @@ The resulting combined data structure has three channels: the activity from the 
 	cfg.method = 'coh';
 	coherence = ft_connectivityanalysis(cfg, freq);
 
-
 This computes the spectral decomposition and the coherence spectrum between all channel pairs, which can be plotted with
-
 
 	cfg = [];
 	cfg.zlim = [0 0.2];
@@ -229,18 +208,15 @@ This computes the spectral decomposition and the coherence spectrum between all 
 	ft_connectivityplot(cfg, coherence);
 	title('coherence')
 
-
 ![image](/media/tutorial/connectivity/virtualchan.png@300)
 
 To look in more detail into the numerical representation of the coherence results, you can use
-
 
 	figure
 	plot(coherence.freq, squeeze(coherence.cohspctrm(1,2,:)))
 	title(sprintf('connectivity between %s and %s', coherence.label{1}, coherence.label{2}));
 	xlabel('freq (Hz)')
 	ylabel('coherence')
-
 
 ![image](/media/tutorial/connectivity/coherencecortexemglft.png@300)
 
@@ -264,11 +240,9 @@ Rather than looking at undirected coherence, the virtual channel level data can 
 Let's say you wanted to look at cortico-cortical connectivity, e.g. interactions between visual and motor cortex in a particular frequency band. How would you approach this?
 `</note>`
 
-
 ## Summary and further reading
 
 This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence](/tutorial/coherence) tutorial.
-
 
 FAQ
 {{topic>connectivity coherence granger +faq &list}}

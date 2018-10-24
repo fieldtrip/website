@@ -3,7 +3,6 @@ layout: default
 tags: realtime
 ---
 
-
 # Real-time access to neurophysiological data
 
 Although the FieldTrip toolbox is primarily developed for offline analysis, you can also use it for real-time data analysis, feature extraction and classification. To implement Brain-Computer Interface (BCI) and neurofeedback applications, the toolbox includes functionality for real-time processing of all sorts of neuroimaging data (including EEG, MEG, LFP, ECoG, iEEG, NIRS, fMRI) using a common interface to all types of data.
@@ -25,7 +24,6 @@ The page [scratchpad](/development/realtime/scratchpad) contains some loose ends
 ### Example scripts
 
 {{topic>example +realtime &list}}
-
 
 ### General tips and tricks
 

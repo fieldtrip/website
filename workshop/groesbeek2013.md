@@ -28,4 +28,3 @@ Please start MATLAB directly from the Desktop: this ensures all paths to be corr
 
 We are going to work on the online tutorial [Analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
 
-

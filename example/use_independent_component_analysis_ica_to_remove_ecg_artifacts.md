@@ -3,9 +3,7 @@ layout: default
 tags: example artifact preprocessing ica
 ---
 
-
 # Use independent component analysis (ICA) to remove ECG artifacts
-
 
 ## Description
 
@@ -28,14 +26,12 @@ To load this dataset into matlab and preprocess with FieldTrip, us
 	cfg.trialdef.eventtype = 'trial';
 	cfg = ft_definetrial(cfg);
 
-
 It is very important to remove all jump and muscle artifacts before running your ICA, otherwise they may change the results you get. To remove artifacts on the example dataset, us
 
 	
 	cfg = ft_artifact_jump(cfg);
 	cfg = ft_rejectartifact(cfg);
 	cfg.trl([3 11 23],:) = []; % quick removal of trials with muscle artifacts, works only for this dataset! 
-
 
 You can now preprocess the dat
 
@@ -54,7 +50,6 @@ You can now preprocess the dat
 	cfg.channel      = {'MEG'};
 	data              = ft_selectdata(cfg, data); 
 
-
 Finally, you should downsample your data before continuing, otherwise ICA decomposition will take too long. 
 
 	
@@ -63,8 +58,6 @@ Finally, you should downsample your data before continuing, otherwise ICA decomp
 	cfg.resamplefs = 150;
 	cfg.detrend    = 'no';
 	data           = ft_resampledata(cfg, data);
-
-
 
 ## Code
 
@@ -79,7 +72,6 @@ It uses the decomposition from the original data to estimate the timecourse of t
 	cfg.method     = 'runica';
 	comp           = ft_componentanalysis(cfg, data);
 
-
 Once your component analysis is done, you can look at the topography of the components. Normally you will get the ECG components within the first 20 because the heartbeat is a very regular and very salient signal. You can almost always expect to get two ECG components, and they should look similar to each other, but slightly rotated. In the example below, these are components 4 and 17. They may come out as different components if you run the analysis on the same dataset, but their topography should look the same.
 
 	
@@ -88,7 +80,6 @@ Once your component analysis is done, you can look at the topography of the comp
 	cfg.layout    = 'CTF275.lay'; % specify the layout file that should be used for plotting
 	cfg.comment   = 'no';
 	ft_topoplotIC(cfg, comp)
-
 
 ![image](/media/example/small_20components_topo2.jpg@400)
 
@@ -100,7 +91,6 @@ To be certain these are the ECG components, you can also look at their time cour
 	cfg.viewmode = 'component';
 	cfg.layout   = 'CTF275.lay'; % specify the layout file that should be used for plotting
 	ft_databrowser(cfg, comp)
-
 
 ![image](/media/example/small_ecgcomponents_compbrowser2.jpg@400)
 
@@ -117,7 +107,6 @@ However, given that you measured the heartbeat on a separate channel, you can us
 	cfg.channel               = {'ECG'};
 	cfg.artfctdef.ecg.inspect = {'ECG'};
 	[cfg, artifact]           = ft_artifact_ecg(cfg, ecg);
-
 
 You will be asked for feedback at two points while running this code. The visual display of your data should look similar to this. If it doesn't, you may still have some jump artifacts in the data that you haven't removed.
 
@@ -162,7 +151,6 @@ You can go on with the analysis now.
 	cfg           = [];
 	timelock      = ft_timelockanalysis(cfg, comp_ecg);
 
-
 Below is the code for generating images which will help you detect which components correlate more with the time course of the heartbeat. Normally you will get two components that follow each other quickly in time. By zooming into the second subplot of the second graph you can see which numbers these components have. In this case it is indeed components 4 and 17.
 
 	
@@ -200,7 +188,6 @@ A second way of finding which components contain the ECG artifacts is through ca
 	subplot(2,1,1); plot(fdcomp.freq, abs(fdcomp.cohspctrm));
 	subplot(2,1,2); imagesc(abs(fdcomp.cohspctrm));
 
-
 Again, by zooming in to the lower subplot, you can see that in this case those are components 4 and 17.
 
 ![image](/media/example/ecgcoherence.jpg@400)
@@ -218,5 +205,4 @@ Based on the figures, you now should select the components that explain the ECG 
 	cfg           = [];
 	cfg.component = [4 17];
 	data_clean    = ft_rejectcomponent(cfg, comp_orig,data_orig);
-
 

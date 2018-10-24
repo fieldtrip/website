@@ -3,7 +3,6 @@ layout: default
 tags: cfg timelock freq source headmodel statistics plot
 ---
 
-
 # Reference documentation
 
 The reference documentation is provided here for your convenience. In the first part of this page the most important FieldTrip functions are listed by category. In the second part of this page you will find an alphabetical list of all FieldTrip functions.
@@ -122,11 +121,9 @@ Note that this reference documentation is identical to the help text that is dis
 *  [ft_topoplotIC](/reference/ft_topoplotIC)
 *  [ft_topoplotTFR](/reference/ft_topoplotTFR)
 
-
 ## Low-level functions ...
 
 ### ... from the preproc module
-
 
 *  [ft_preproc_bandpassfilter](/reference/ft_preproc_bandpassfilter)
 *  [ft_preproc_bandstopfilter](/reference/ft_preproc_bandstopfilter)
@@ -186,7 +183,6 @@ Note that this reference documentation is identical to the help text that is dis
 *  [ft_plot_vol](/reference/ft_plot_vol)
 
 ### ... from the forward module
-
 
 *  [ft_compute_leadfield](/reference/ft_compute_leadfield)
 *  [ft_convert_units](/reference/ft_convert_units)

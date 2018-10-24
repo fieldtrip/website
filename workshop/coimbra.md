@@ -27,7 +27,6 @@ layout: default
           * http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
     * 16:45 – 17:30		Wrap-up-the-day: “Ask the experts” session
 
-
 *  20:00			Workshop Dinner @ ???
 
 #### Tuesday June 7th
@@ -48,7 +47,6 @@ layout: default
           * http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics
           * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
     * 17:15 – 18:00		Wrap-up-the-day: “Ask the experts” session
-
 
 #### Wednesday June 8th
 
@@ -75,7 +73,6 @@ moving all files one level up.
 `</note>`
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
-
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-20160531

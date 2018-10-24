@@ -3,7 +3,6 @@ layout: default
 tags: faq email
 ---
 
-
 ## Why is my message rejected from the email discussion list?
 
 It might be that you receive the message

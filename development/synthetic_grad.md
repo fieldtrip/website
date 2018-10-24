@@ -73,9 +73,6 @@ When changing the balancing (e.g. using the fieldtrip/ft_denoise_synthetic.m fun
 
 TODO: think of a way of adding this information to the output of fieldtrip/preprocessing and related functions (e.g. have a field data.grad.order='G1BR').
 
-
-
-
 ## Appendix: description from CTF
 
 `<file>`
@@ -137,7 +134,6 @@ A[i] = area of coil i
 p[i] = unit vector normal to area of coil i.
 Total flux(of sensor) = Sum{ flux[coil i], i = 1 to number of coils}.
 If you are integrating over the coil area, the procedure is similar.
-
 
 Reading and using coefficients
 ------------------------------

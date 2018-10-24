@@ -112,8 +112,6 @@ This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 {{page>:development:shared:forwsphere}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
-
-
 ##  CS1 method
 
 FROM CT TO Concentric spheres
@@ -165,7 +163,6 @@ OR
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
-
 ##  FDM1 method
 
 FROM CT TO FDM
@@ -180,7 +177,6 @@ the scalp, the skull, the inner skull, the inner CSF compartments
 8 - Define the points in which the solution has to be calculated as:
  1.  Deep brain points, OR 
  2.  The vertices of a previously defined surface (i.e. the scalp)
-
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -306,45 +302,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 {{page>:development:shared:fwdbemmri}}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Having headshape points and EEG data
-
 
 ## INF3 method
 
@@ -379,7 +337,6 @@ This case happens when I have a set of electrodes positions and an estimate of t
 
 FROM Headshape points TO Single sphere
 
-
 This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 
 - Load in the set of points of the head shape (these can be the electrodes positions as well)
@@ -399,7 +356,6 @@ FROM Headshape points TO Concentric spheres
 FROM Headshape points TO ASA
 {{page>:development:shared:forwasa}}
 [Back](/#Architecture/ defining a table for the possible implementations)
-
 
 ## BEMCP3 method
 
@@ -454,7 +410,6 @@ Method:
 
 FROM Headshape triangulation TO Single sphere
 
-
 This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 
 1 - Load in the set of points of the head triangulation
@@ -470,8 +425,6 @@ FROM Headshape triangulation TO Concentric spheres
 - Discard the edges of the triangulations
 - For each compartment fit a sphere
 [Back](/#Architecture/ defining a table for the possible implementations)
-
-
 
 ##  ASA4 method
 
@@ -501,9 +454,6 @@ FROM Headshape triangulation TO OpenMEEG
 
 # Having nothing and EEG data
 
-
-
-
 ## INF5 method
 
 {{page>:development:shared:forwinf}}
@@ -520,7 +470,6 @@ FROM Nothing TO Infinite halfspace
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
-
 ## SL5 method
 
 FROM Nothing TO Infinite slab
@@ -531,29 +480,15 @@ FROM Nothing TO Infinite slab
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
-
-
-
-
-
-
 ## SPH5 method
 
 FROM Nothing TO Single sphere
-
 
 This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 
 1 - Use priors or informed guess about the radius and the center of the sphere (i.e. radius = 12cm and center = [0,0,4]cm in head coordinates is normally a good guess!)
 
 [Back](/#Architecture/ defining a table for the possible implementations)
-
-
-
-
-
-
-
 
 # Having MEG data
 
@@ -680,26 +615,14 @@ Some of the most common operators are **imfill**, **imdilate**, **bwlabeln**, et
 In particular **imdilate** can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull).
 An example is reported belo
 
-
-
 ![image](/media/development/wiki12.png)
-
-
-
-
-
-
-
 
 The code used to generate the figure is:
 
 	seg = imdilate(seg,strel_bol(3));
 	figure,volplot(seg);
 
-
 An example of the **imfill** function is given below. This is the case, for example, in which we want to fill the volume so that it constitutes a single entity. It results in being useful for [triangulation](/#Triangulation methods), as explained in one of the techniques to obtain the outer-most surface (i.e. the skin).
-
-
 
 ![image](/media/development/wiki34.png)
 
@@ -707,7 +630,6 @@ The code used to generate the figure is:
 
 	seg = imfill(seg,'holes');
 	figure,volplot(seg);
-
 
 The same effect can be reached with the use of another morphology function: **bwlabeln**.
 This function classifies the cluster of neighboring voxels and attaches a label to them, so that different objects can be easily distinguished (and processed) in the successive steps.
@@ -732,8 +654,6 @@ This function classifies the cluster of neighboring voxels and attaches a label 
 **[ft_headmodel_strip](/reference/ft_headmodel_strip)**
 
 [Back](/#Architecture/ defining a table for the possible implementations)
-
-
 
 # The functions in Forward module
 
@@ -775,7 +695,6 @@ Examples of volumetric functions are:
 **[ft_volumethreshold](/reference/ft_volumesegment)**
 **[#Morphology operators](/#Morphology operators)**
 
-
 **seg2seg functions:**
 e.g. the functions from the image processing toolbox
 
@@ -799,9 +718,7 @@ e.g. the functions from the image processing toolbox
 **mesh2vol functions:**
 **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 
-
 [Back](/#Architecture/ defining a table for the possible implementations)
-
 
 ## The ft_check_surface function
 
@@ -819,7 +736,6 @@ We want to chec
 The reason for this function to exist is to understand if the mesh represents a regular and correct triangulation (e.g. the area is in cm2 and not km2).
 These checks are required in order to generate a correct forward model and are model dependent. Some of the steps might require direct interaction with the operator for a further visual inspection.
 
-
 ## The implementation of the volume and mesh routines
 
 The routines that handle voxel based volumes can be described as functions that go from an anatomical input to segmented binary images (**ana2seg** routines), from anatomy to processed anatomy (**ana2ana** routines) and from segmented volumes into segmented volumes (**seg2seg** routines).
@@ -836,10 +752,4 @@ Alternatively the routines that deal with geometric information other that voxel
 
 All routines that create head models must allow the transition from all objects to all others (if possible), and from voxel based images to geometrical objects.
 For example the routine prepare_mesh_manual segments boundaries directly from the MRI scans and generates connected lines (if goes from ana to 1d objects).
-
-
-
-
-
-
 

@@ -12,18 +12,15 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 # Check the correctness of the implementation of the algorithms
 
-
 ## Objectives
 
 The functions should be tested regularly on correctness, therefore test scripts are needed. These scripts should cover
-
 
 *  the correctness of the implemented algorithms
 
 *  proper parsing of configuration options, including backward compatibility
 
 *  support for the normal data structures, also backward compatible
-
 
 **Method A:** If possible, the scripts should check against an internal reference solution, i.e., the outcome of the algorithm on  particular ideal data is known, therefore the correctness of the algorithm can be tested using simulated data.
 
@@ -47,8 +44,6 @@ Create testscripts fo
 
 *  use the scripts of the toolkit 2006 as test (method C)
 
-
-
 Frequency Analysis progres
 
       * data of 10 Hz oscillations;
@@ -69,8 +64,6 @@ Frequency Analysis progres
       * tjirp data
       - tested the methods for analysing 'tjirp' data. Results shown in freq002_g. (/hanvdgei/test_HD_002/freq002_g). When t_ftimwin is big (I took one second before) the read curve has peaks like wltconvol but the amplitudes are similar over time (they don't decrease like wltconvol).
       - tested mtmfft and mtmwelch for the same timewindow (cfg.t_ftimwin=10 for mtmwelch and mtmconvol). Amplitudes are now close to eachother. (5.6039 e -8 (mtmfft) and 5.6051 e -8 (mtmwelch and mtmconvol)).
-
-
 
 **freq002_a**
 ![image](/media/wiki/averagesfreq.png)
@@ -102,6 +95,4 @@ legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = 
 
 **freq002_h**
 ![image](/media/wiki/waveletstfrdelta.png)
-
-
 

@@ -3,7 +3,6 @@ layout: default
 tags: example realtime
 ---
 
-
 # Example real-time average
 
 ## Flowchart
@@ -11,7 +10,6 @@ tags: example realtime
 ![image](/media/example/realtime/realtime_average.png@350)
 
 ## Matlab code
-
 
 	function ft_realtime_average(cfg)
 	
@@ -132,5 +130,4 @@ tags: example realtime
 	
 	  end % looping over new trials
 	end % while true
-
 

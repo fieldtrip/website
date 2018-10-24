@@ -3,7 +3,6 @@ layout: default
 tags: example realtime
 ---
 
-
 # Example real-time classification
 
 ## Flowchart
@@ -23,7 +22,6 @@ The simplest is to try and classify the tutorial MEG dataset which is available 
 	cfg.trialdef.eventvalue2 = 3; % FIC
 	cfg.trialdef.prestim     = 0.3;
 	cfg.trialdef.poststim    = 0.7;
-
 
 The trial definition function *trialfun_twoclass_classification * that is being used is included in the fieldtrip/trialfun directory. Based on the code above you can already do 
 
@@ -45,9 +43,7 @@ to see how the configuration and especially the trial definition looks lik
 	        7411        7710          90           1           0
 	        ...
 
-
 The first column is the beginsample, the second the endsample, the third column the offset of each segment. The fourth column indicates the class of each data segment (NaN means unknown, which happens for the third trigger type in this dataset) and the fifth column whether it should be used for training (0) or testing (1).
-
 
 However, here we are not interested in the trial definition for offline processing, but instead for online classification. So based on the cfg structure above, you can run
 
@@ -56,7 +52,6 @@ However, here we are not interested in the trial definition for offline processi
 The **[ft_realtime_classification](/reference/ft_realtime_classification)** function will print the classification result on screen and will open a figure in which the timing is displayed. It being an offline application here, the timing is measured relative to the amount of data that is processed. An acceleration factor larger than 1 means that data is processed faster than realtime, whereas smaller than 1 would indicate that it cannot keep up with the realtime speed. Note that there is quite some time spent on plotting the timing figure. Furthermore note that the timing is relative to the processed data, whereas there is also time between the trials for which the data does not have to be processed.
 
 ## Matlab code
-
 
 	function ft_realtime_classification(cfg)
 	
@@ -260,5 +255,4 @@ The **[ft_realtime_classification](/reference/ft_realtime_classification)** func
 	
 	  end % looping over new trials
 	end % while true
-
 

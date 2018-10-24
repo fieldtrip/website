@@ -28,8 +28,6 @@ suggested directory layout
 	/home/common/matlab/fieldtrip/testcode/test_private_whatever.m
 	/home/common/matlab/fieldtrip/testcode/test_bug42.m
 
-
-
 *  Needed fo
 - code stability testing in general 
 - frequently occurring problems:
@@ -54,9 +52,7 @@ http://www.mathworks.com/matlabcentral/fx_files/22846/7/content/matlab_xunit/doc
     `<process output>`
     `<continue working>`
 
-
  
-
 
 *  Can look like
 - 1 testscript per 1 .m file 
@@ -71,8 +67,6 @@ Directory/file layout example:
     ./test/testtopoplotER/data_....  
     ./test/testfreqanalysis_mtmconvol.m 
     ./test/testfreqanalysis_mtmconvol/data_dpss.m (or on the fly simulation of data)
-
-
 
 *  Example test-script for testtopoplotER: 
 
@@ -106,8 +100,6 @@ Directory/file layout example:
     load(datafile)
     `<perform test>` 
     `<perform reference check>`
-
-
 
  
 

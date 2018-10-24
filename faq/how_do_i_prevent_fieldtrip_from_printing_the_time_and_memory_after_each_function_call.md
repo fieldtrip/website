@@ -3,7 +3,6 @@ layout: default
 tags: faq
 ---
 
-
 ## How do I prevent FieldTrip from printing the time and memory after each function call?
 
 To inform the user about the requirements of each function call and thereby give him/her a better feeling on how to optimize the analysis using distributed computing, each FieldTrip function estimates the time and memory(*) it requires. This information about the call is printed at the end of the function, like this 
@@ -19,7 +18,6 @@ To inform the user about the requirements of each function call and thereby give
     ...
     reading and preprocessing trial 266 from 266
     the call to "ft_preprocessing" took 14 seconds and an estimated 386 MB
-
 
 If you do not want the time and memory to be printed, you can specify cfg.showcallinfo='no' instead of the default 'yes'. This is something you can do for every function separately, like thi
 

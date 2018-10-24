@@ -31,4 +31,3 @@ This has been resolved with http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id
 	% this shows the call details, i.e. which function calls which
 	mat(sel1,sel2)
 
-

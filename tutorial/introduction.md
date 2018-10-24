@@ -27,7 +27,6 @@ When performing EEG/MEG experiments, the aim is to gain insight into the functio
 
 The analysis protocol includes tools and/or algorithms used, and how they are used. The knowledge or assumptions incorporated by the researcher in the protocol might b
 
-
 *  At a certain time after the presentation of a stimulus, the brain will process the stimulus.
 
 *  The brain will process repeated stimuli similarly.
@@ -107,12 +106,9 @@ It is now possible to execute the MATLAB scripts by copying/pasting the relevant
 
 Make sure that the path is set correctly to the directory of the FieldTrip toolbox and the data. For the tutorials it is recommend to 'cd' to the directory where the data are. Look at [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) for more information on how to correctly set your path for FieldTrip.
 
-
 ## Making an analysis protocol
 
-
 When you are using FieldTrip, your analysis protocol is the MATLAB script, in which you call the different FieldTrip functions. Such a script (or set of scripts) can be considered as an analysis protocol, since in them you are defining all the steps that you are taking during the analysis. For most of the analysis steps, you will be able to use a function from the FieldTrip toolbox, but sometimes you also will want to include your own MATLAB code in the script.
-
 
 In the next section, you will see how the protocol of the ERP example looks using FieldTrip.
 Some other standard analysis protocols are given also below. The figures indicate which functions you (probably) will use in the analysis, and give you a guideline in finding the documentation that you need.
@@ -123,9 +119,7 @@ ERP/ERF analysis consists of preprocessing, averaging the data timelocked to the
 
 ![image](/media/development/introduction/introduction_erpfnew2.png)
 
-
 **//Figure 3; An example analysis protocol for Event-Related Potentials (ERPs) using the FieldTrip functions//**
-
 
 ### Frequency and time-frequency analysis
 
@@ -149,7 +143,6 @@ Prior to any source reconstruction, you should have performed a complete timeloc
 If you do a source reconstruction of the data for multiple subjects, and if you use individual volume conduction models for your subjects (common for MEG), then the individual source reconstructions cannot immediately be averaged or used for statistical comparison. The anatomy of each subject is different (i.e. the shape and size of the brain), and the locations of the voxels (i.e. the dipoles) will also be different for each subject. Using the individual subject's anatomical MRI, you can align all subjects to a template brain using a non-linear deformation. The same deformation can be applied to the functional data. Subsequently the subjects functional data can be compared.
 
 The spatial normalisation towards a template brain is done in FieldTrip with the **[ft_volumenormalise](/reference/ft_volumenormalise)** function, which internally calls some low-level functions from the SPM2 toolbox. In general, it is also advisable to normalise your individual subject's data to the SPM/MNI template brain.
-
 
 Below you can see the protocol that you would use for averaging the source reconstruction over subjects and for group statistics on the source level. If the statistical test involves two conditions, then you should do the source normalisation in both conditions for all subjects and feed the two grandaveraged source reconstructions into **[ft_sourcestatistics](/reference/ft_sourcestatistics)**.
 

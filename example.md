@@ -3,7 +3,6 @@ layout: default
 tags: example
 ---
 
-
 # Example MATLAB scripts
 
 Here you can find example MATLAB scripts together with documentation that show specific analyses done in FieldTrip or in MATLAB. The documentation here is often not as elaborate as the [tutorials](/tutorial), but goes more in detail into specific aspects of the data, code or analysis.

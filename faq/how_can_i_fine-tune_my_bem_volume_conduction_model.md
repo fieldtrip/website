@@ -3,13 +3,11 @@ layout: default
 tags: faq source headmodel
 ---
 
-
 # How can I fine-tune my BEM volume conduction model?
 
 The construction of a BEM volume conduction model is not always straight forward, especially if the quality of the MRI is not optimal or if the model needs to be very accurate. For example, getting an accurate estimate of the thickness of the skull or incorporating the CSF layer is difficult.
 
 The strategy employed in FieldTrip for constructing the BEM model boils down to the manipulation of geometrical data. The following qualitatively different classes of data are distinguishe
-
 
 *  anatomical MRI, described as voxels in a regular 3-D lattice, grey values
 
@@ -27,20 +25,17 @@ We will refrain from using "head model" in the subsequent explanation, since eac
 
 ##  Converting anatomy to anatomy
 
-
 *  **[ft_volumerealign](/reference/ft_volumerealign)**
 
 *  **[ft_volumereslice](/reference/ft_volumereslice)**
 
 ##  Converting anatomy to segmentation
 
-
 *  **[ft_volumesegment](/reference/ft_volumesegment)**
 
 ##  Converting segmentation to segmentation
 
 Here it helps to distinguish the different representations. Examples of these are given in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**.
-
 
 *  probabilistic, also known as tissue probability map (tpm): there is a value between 0 and 1 for each tissue at each of the voxels. This requires each tissue to be described in a separate 3-D array.
 
@@ -84,7 +79,6 @@ The isosurface method corresponds to the [marching cubes algorithm](http://en.wi
 
 The iso2mesh method uses the vol2surf function from the [iso2mesh](http://iso2mesh.sourceforge.net) toolbox.
 
-
 ##  Converting mesh to mesh
 
 The [iso2mesh](http://iso2mesh.sourceforge.net) toolbox includes very useful functions for mesh manipulations. 
@@ -116,6 +110,5 @@ Also SPM includes functions for triangular mesh manipulatio
 The **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix. 
 
 After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the tutorial documentation elsewhere on this website for complete examples.
-
 
  

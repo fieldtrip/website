@@ -3,7 +3,6 @@ layout: default
 tags: chieti HCP-motort
 ---
 
-
 # MEG virtual channels and seed-based connectivity
 
 ## Introduction
@@ -13,7 +12,6 @@ This tutorial contains hands-on material that we use for the [MEG connectivity w
 `</note>`
 
 In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org). The experiment in which this data was acquired is described in detail [here](/tutorial/shared/hcp_motort). 
-
 
 ## Procedure
 
@@ -356,7 +354,6 @@ Following interpolation of the (non-uniform grid) source reconstructed data onto
     % cfg.locationcoordinates = 'voxel';
     ft_sourceplot(cfg, dics_diff_int);
 
-
 ### Estimate seed based connectivity
 
 The left/right source-level contrast image gives us a suggestion of the left and right motor cortices. Using the interactive option of **[ft_sourceplot](/reference/ft_sourceplot)**, we can click around in the figure and identify the voxel coordinates of the peak in both hemispheres.  
@@ -466,7 +463,6 @@ Just like MEG channel level data, we can plot the time courses of the virtual ch
 
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.40.43.png@500)
 
-
 We can also compute the source-level ERF
 
     cfg = [];
@@ -509,8 +505,6 @@ and we can compute the source-level time-frequency representation of the virtual
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.40.50.png@200)
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.40.56.png@200)
 ![image](/media/tutorial/chieti/screen_shot_2015-09-17_at_09.41.06.png@200)
-
-
 
 ### Virtual channel connectivity
 

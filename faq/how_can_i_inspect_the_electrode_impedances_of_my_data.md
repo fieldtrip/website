@@ -14,7 +14,6 @@ This example reads the impedance values from an EEG dataset recorded with [Brain
 
 ## Read impedance values
 
-
 	%Read header file
 	fid = fopen('PP01.vhdr', 'r');
 	C = textscan(fid, '%s', 'Delimiter', '\n');
@@ -46,11 +45,9 @@ This example reads the impedance values from an EEG dataset recorded with [Brain
 	imp.time        = 1;
 	imp.dimord      = 'chan_time';
 
-
 ## Plot impedance values
 
 Make a plot of the ''imp'' structure containing the impedance values using a custom colormap (green, yellow and red)
-
 
 	cfg             = [];
 	cfg.parameter   = 'imp';
@@ -98,7 +95,6 @@ Make a plot of the ''imp'' structure containing the impedance values using a cus
 	
 	%figure
 	ft_topoplotER(cfg, imp)
-
 
 ![image](/media/faq/impedance.png)
 

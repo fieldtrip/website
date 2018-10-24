@@ -3,7 +3,6 @@ layout: default
 tags: example raw preprocessing trialfun trialdef
 ---
 
-
 # Making your own trialfun for conditional trial definition
 
 The **[ft_definetrial](/reference/ft_definetrial)** function allows you to specify your own MATLAB function for conditional selection of data segments or trials of interest. That is done using the **cfg.trialfun** option. Using a trial-function you can use an arbitrary complex conditional sequence of events to select data, e.g. only correct responses, or only responses that happened between 300 and 750 ms after the presentation of the stimulus. You can also use your own reading function to obtain the events, or you can read the data from an EMG channel to detect the onset of muscle activity. 
@@ -13,7 +12,6 @@ This trial-function should be a MATLAB function with the following function defi
     function [trl, event] = your_trialfun_name(cfg);
 
 The configuration structure will contain the fields cfg.dataset, cfg.headerfile and cfg.datafile. If you want to pass additional information (e.g. trigger value), then you should do that in the sub-structure cfg.trialdef.xxx. The second output argument of the trialfun is optional, it will be added to the configuration if present (i.e. for later reference). 
-
 
 `<note information>`
 In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/trialfun) directory you can find a number of example trial functions. 
@@ -50,7 +48,6 @@ In the [fieldtrip/trialfun](https://github.com/fieldtrip/fieldtrip/tree/master/t
     end
     end
 
-
 When calling **[ft_definetrial](/reference/ft_definetrial)**, you would specify
 
     cfg = ...
@@ -65,7 +62,6 @@ and you would call
 followed by 
 
     data = ft_preprocessing(cfg);
-
 
 You could of course also make the trigger value (which are hard-coded here) configurable by passing them in the cfg structure. 
 

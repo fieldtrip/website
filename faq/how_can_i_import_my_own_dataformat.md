@@ -35,7 +35,6 @@ Keep in mind that your reading functions have to follow the following input/outp
     event = myeventfunction(filename)  
 See ft_read_header/data/event to find details of each of these variables are.
 
-
 ### Circumvent the FieldTrip reading functions
 
 Alternatively, if you already are able to read the data into MATLAB somehow, you can reformat that data within Matlab into a datastructure that is compatible with FieldTrip. Raw data that is comparable with the output of preprocessing should consist of a structure with the fields

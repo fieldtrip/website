@@ -17,7 +17,6 @@ Instead of using only peerslaves on your colleagues' computers, you should also 
 
 Please note that [firewall settings](/faq/does_a_firewall_affect_the_communication_between_peers) can affect the peer network.
 
-
 ### Access control
 
 To ensure that the slaves that you have started cannot be accessed by another user on the same network, you can do 
@@ -35,13 +34,10 @@ If you want to control the computers to which the master submits the jobs, you c
 
 will only execute the jobs on your own slaves.
 
-
 ### The next morning...
 
 In the morning, your colleagues might arrive earlier to their desk than you, and of course then they want their computer back. If the slaves are idle, they can simply exit the MATLAB sessions you started and regain control. If the slaves are still busy executing their job, they can simply kick you out (e.g. reboot, or ctrl-c your MATLAB slaves). The **[peercellfun](/reference/peercellfun)** will automatically resubmit the jobs that fail, i.e. if one of the slaves disappears, the job that it was running will be resubmitted elsewhere. 
 
 That is why you want also to have a few slaves running on your own computer: these will take over the remaining jobs, once all your colleagues' computers are confiscated again by their respective owners.
-
-
 
  

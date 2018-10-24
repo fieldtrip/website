@@ -3,7 +3,6 @@ layout: default
 tags: realtime modeeg openeeg
 ---
 
-
 # Modular EEG, OpenEEG
 
 This page describes the interface between the 2-6 channel Modular EEG amplifier of the OpenEEG project and the FieldTrip [buffer](/development/realtime/buffer_overview).
@@ -29,7 +28,6 @@ The second tool is called **modeeg2ft_2chn** and is basically a simplication of 
 
 	
 	modeeg2ft_2chn COM5:  nameOfGDF  localhost  1972
-
 
 If you don't want to save data to GDF, you can replace the second argument (''nameOfGdf'') by a minus (-).
 
@@ -93,9 +91,6 @@ The page http://openeeg.sourceforge.net/doc/modeeg/firmware/modeeg-p2.c describe
 	// that re-sync (i.e after disconnecting the data line) is always safe.
 	
 
-
-
 ## External links
-
 
 *  http://openeeg.sourceforge.net/doc/

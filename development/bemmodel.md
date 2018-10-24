@@ -14,9 +14,7 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 This page presents the outline of an algorithm (or set of algoritms) that allow the robust creation of single-subject triangulations of the skin/skull/brain boundaries to be used in EEG-BEM volume conduction modelling. The algorithm described here is not implemented in FieldTrip, but an improved version could be considered for implementation
 
-
 # A short description of the algorithm
-
 
 ## The skin
 

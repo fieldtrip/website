@@ -15,7 +15,6 @@ In */Users/yourname/.matlab/R2012b/mexopts.sh* under the maxi64 section you need
 
 In */Applications/MATLAB_R2012b.app/extern/include/tmwtypes.h* towards the end, the lines
 
-
 	#if defined(__STDC_UTF_16__) || (defined(_HAS_CHAR16_T_LANGUAGE_SUPPORT) && _HAS_CHAR16_T_LANGUAGE_SUPPORT)
 	typedef char16_t CHAR16_T;
 	#elif defined(_MSC_VER)

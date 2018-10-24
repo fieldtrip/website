@@ -3,7 +3,6 @@ layout: default
 tags: faq reference
 ---
 
-
 # How should I refer to FieldTrip in my publication?
 
 We would appreciate it to be mentioned in your publication if you have used FieldTrip for a considerable part of your analysis. 
@@ -16,17 +15,13 @@ Oostenveld, R., Fries, P., Maris, E., Schoffelen, JM (2011) FieldTrip: Open Sour
 
 Besides referring to the paper, you can use a phrasing like this, where REF corresponds to the reference to the paper. 
 
-
 *  The data analysis was performed using the Fieldtrip toolbox for EEG/MEG-analysis (REF; Donders Institute for Brain, Cognition and Behaviour,  Radboud University Nijmegen, the Netherlands. See %%http://www.ru.nl/neuroimaging/fieldtrip%%).
 
-
 *  The data analysis was performed using the Fieldtrip toolbox for EEG/MEG-analysis, developed at the Donders Institute for Brain, Cognition and Behaviour (REF; %%http://www.ru.nl/neuroimaging/fieldtrip%%).
-
 
 *  The data analysis was performed using Fieldtrip (REF; %%http://www.ru.nl/neuroimaging/fieldtrip%%).
 
 Important is that you refer to the correct web address, so not to %%"www2.ru.nl"%% and not to %%"fieldtrip.fcdonders.nl"%%, but to %%"www.ru.nl/neuroimaging/fieldtrip"%%.
-
 
     
 

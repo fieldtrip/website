@@ -25,7 +25,6 @@ The low-level functions are combined in the **specest** toolbox which is self-co
 
     * *Wavelet convolution in the time-domain using Morlet wavelets.*
 
-
 ## Definition of the function-calls (API)
 
 The functions should be called as
@@ -37,7 +36,6 @@ The functions should be called as
 	        [spectrum, freqoi, timeoi] = ft_specest_wavelet  (dat, time, key1, value1, ...)
 	        [spectrum, freqoi, timeoi] = ft_specest_tfr      (dat, time, key1, value1, ...)
 
-
 Where *dat* consists of a matrix of dimensionality Nchan x Ntime, and *time* is a 1xNtime vector containing the time indices in seconds. The time vector is used to compute the sampling rate, and to determine, in the case of mtmfft, where t=0 resides with respect to *dat*. 
 
 Each function can take a set of common and function-specific additional arguments in key-value pairs. Which additional arguments a function can take is described in the reference documentation: **[ft_specest_mtmconvol](/reference/ft_specest_mtmconvol)**, **[ft_specest_mtmfft](/reference/ft_specest_mtmfft)**, **[ft_specest_hilbert](/reference/ft_specest_hilbert)**, **[ft_specest_wavelet](/reference/ft_specest_wavelet)**, **[ft_specest_tfr](/reference/ft_specest_tfr)**. 
@@ -48,10 +46,4 @@ In the case of **[ft_specest_mtmconvol](/reference/ft_specest_mtmconvol)**, the 
  In the case of **[ft_specest_mtmfft](/reference/ft_specest_mtmfft)**, the average phase of the data segment is from the perspective that an oscillation in the data has a phase of 0, i.e. is at it's peak (following the same convention as ft_specest_mtmconvol), at time-point t=0.
  For **[ft_specest_hilbert](/reference/ft_specest_hilbert)** how phase is defined at the peak and at the trough of an oscillation in the data depends on the type of filter and the filter order that is used to bandpass filter the data, prior to computing the Hilbert transform.
  For **[ft_specest_wavelet](/reference/ft_specest_wavelet)** and **[ft_specest_tfr](/reference/ft_specest_tfr)** how phase is defined at the peak and at the trough of an oscillation in the data depends on the width of the Gaussian that is used. 
-
-
-
-
-
-
 

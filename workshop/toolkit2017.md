@@ -4,7 +4,6 @@ layout: default
 
 # Advanced analysis and source modeling of EEG and MEG data
 
-
 On April 3-6, 2017 we will host the “Advanced MEG/EEG Tool-kit” at the Donders Institute in Nijmegen.
 
 This intense 4-day toolkit course will teach you advanced MEG and EEG data analysis skills. Preprocessing, frequency analysis, source reconstruction, connectivity and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG data, and there will also be plenty of opportunity to interact and ask questions to us about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of the tutors.
@@ -41,8 +40,6 @@ Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many 
  | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                                                                |          
  | 19:00-21:30 | Free DINNER - included in registration                                                                                                        |          
 
-
-
 Mi Barrio
 Fransestraat 58, Nijmegen
 http://mibarrio.nl
@@ -70,8 +67,6 @@ http://mibarrio.nl
  | 14:00-14:15 | Tea break                                  |
  | 14:15-15.00 | Testimonial & evaluation                   |
 
-
-
 ## Getting started with the hands-on sessions
 
 For the hands-on sessions we will use MATLAB R2012b, which you can start from the Desktop shortcut. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers and that we will bring on on a USB stick. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the computers and available on the USB stick.
@@ -88,7 +83,6 @@ A recent copy of FieldTrip and the data have been preinstalled on the computer a
     ft_defaults
 
     cd D:\toolkit\data
-
 
 The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes. The addpath(pwd) statement adds the

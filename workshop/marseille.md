@@ -78,7 +78,6 @@ So over all there is about 2 to 5 hours of preparation required from you prior t
 
 For the playground you should bring your own data. In case you don't have a suitable dataset for analysis (yet), we will provide you with a dataset and details on the experiment and analysis options.
 
-
 ## Setting the path
 
 The data and FieldTrip have been installed on the computers at the workshop venue.

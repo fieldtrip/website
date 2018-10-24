@@ -3,7 +3,6 @@ layout: default
 tags: example realtime
 ---
 
-
 # Example real-time power estimate
 
 The **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** function reads data in small chunks and performs a spectral estimation for each chunck. The output of this function is a constantly updating figure with the power spectrum, averaged over the selected channels.
@@ -37,7 +36,6 @@ After starting the **[ft_realtime_powerestimate](/reference/ft_realtime_powerest
 You can also start the two Matlab sessions on two different computers, where on the second you would then point the reading function to the first computer.
 
 ## Matlab code
-
 
 	function ft_realtime_powerestimate(cfg)
 	
@@ -193,5 +191,4 @@ You can also start the two Matlab sessions on two different computers, where on 
 	
 	  end % if enough new samples
 	end % while true
-
 

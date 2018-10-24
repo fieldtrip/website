@@ -9,7 +9,6 @@ tags: fixme tutorial artifact meg raw preprocessing MEG-artifact
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-
 `<note>` The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)**, that were used for automatic artifact rejection, will soon become obsolete. They are being replaced by the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function. This function is already called every time one of the three functions above is run, but users will soon need to set the various cfg parameters for the different types of artifacts themselves and then run only the zvalue function. Examples of these parameters are given in the last section of this page.
 `</note>`
 
@@ -21,13 +20,11 @@ tags: fixme tutorial artifact meg raw preprocessing MEG-artifact
 
 Before further analysis in any of the other tutorials, it is best to have artifact free data. Within FieldTrip you can choose to do visual/manual or automatic artifact detection and rejection.
 
-
 ## Background
 
 For a successful analysis of EEG or MEG signals, “clean” data is required. That means that you should try to reduce variance in the data due to factors unrelated to your experimental conditions. One of the factors that is difficult to control for is the presence of artifacts in the data. These artifacts can be physiological or the result of the acquisition electronics. The strongest physiological artifacts stem from eye blinks, eye movements and head movements. Muscle artifacts from swallowing and neck contraction can be a problem as well. An example of artifacts related to the electronics are 'SQUID jumps' or spikes.
 
 Of course it is best to try to avoid those artifacts in the first place. For instance, you might give your test-subjects some well-defined time interval between the trials in which they are allowed to blink, but ask them to withold blinks in the time intervals of interest. Sooner or later, however, you would like to go through the data and make sure artifacts are detected, removed or corrected.
-
 
 ## Procedure
 
@@ -77,7 +74,6 @@ where
 ![image](/media/tutorial/eq2.png@120)
 ![image](/media/tutorial/eq3.png@150)
 
-
 with: N = the total number of time samples.
 
 In the code this formula is formed such as to optimize the calculation of the channel means and standard deviations.
@@ -86,15 +82,12 @@ The summation is performed lik
 
 ![image](/media/tutorial/eq4.png@120)
 
-
-
 with: C = the number of channels.
 
 ### IV. Thresholding the accumulated z-score
 
 Now that every timepoint is expressed as a deviation for the mean over time & channels, we can use an artifact detection threshold: all timepoints that are above or below this threshold (set ''with cfg.artfctdef.zvalue.cutoff'') will be considered belonging to artifacts. Depending on the variance of the artifacts versus the variance of your brain signal a higher or lower threshold has to be set. The lower this threshold the more conservative the artifact detection will behave, the higher the more liberal (see figure). Since these characteristics of the data might vary per experiment and even from one recording to another, care has to be taken to investigate the threshold that works for you.
 By using the option ''cfg.feedback='yes''', you enter an interactive mode where you can browse through the data and adjust the cut-off value (i.e., the z-value used for thresholding) according to your data and filter settings.
-
 
 ![image](/media/tutorial/zthreshold.png)
 
@@ -125,14 +118,12 @@ To avoid that, filter padding (''cfg.artfctdef.xxx.fltpadding'') is used. Always
 ![image](/media/tutorial/fltpadding.png@600)
 *Figure: Filter padding. Filter padding is only used during filtering and removed afterwards*
 
-
 ### Combining filter and trial padding
 
 Filter and trial padding are often used together. Trialpadding is first added to the trial, after which filterpadding is added (and removed again after filtering has been applied).
 
 ![image](/media/tutorial/bothpadding.png)
 *Figure: Filter and trial padding*
-
 
 ### Negative trialpadding
 
@@ -177,7 +168,6 @@ First we need to define our trial
 
 For detecting jump artifacts, begin with the following parameter
 
-
 	% jump
 	cfg                    = [];
 	cfg.trl = trl;
@@ -203,14 +193,12 @@ For detecting jump artifacts, begin with the following parameter
 
 	[cfg, artifact_jump] = ft_artifact_zvalue(cfg);
 
-
 Specifying cfg.artfctdef.zvalue.interactive = 'yes' will open a figure,
 such as the one below, which provides you information with respect to
 the detection procedure and gives you the ability to try out different
 z-value cutoff values.
 
 ![image](/media/tutorial/artifactjump.png@600)
-
 
 //Interactive figure of ft_artifact_zvalue. The left panel shows the
 z-score of the processed data, along with the threshold. Suprathreshold
@@ -240,7 +228,6 @@ definition of the artifacts in cfg.artfctdef.zvalue.artifact.
 
 The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts,it can be used to detect muscle artifacts.
 
-
 	  % muscle
 	  cfg            = [];
 	  cfg.trl        = trl;
@@ -268,7 +255,6 @@ The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used 
 
 	  [cfg, artifact_muscle] = ft_artifact_zvalue(cfg);
 
-
 ![image](/media/tutorial/artifactmuscle.png@600)
 
 *A typical muscle artifact can be observed on channel MRT12, trial 32.*
@@ -277,8 +263,6 @@ The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used 
 
 The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts,it can be used to detect eye blinks artifacts (EOG).
 Note that only the EOG is scanned in the eye artifacts case, which will take less time than scanning all MEG channels, which was needed for jump and muscle artifacts.
-
-
 
 	   % EOG
 	   cfg            = [];
@@ -305,8 +289,6 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
 	   cfg.artfctdef.zvalue.interactive = 'yes';
 
 	   [cfg, artifact_EOG] = ft_artifact_zvalue(cfg);
-
-
 
 ![image](/media/tutorial/artifacteog.png@600)
 

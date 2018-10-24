@@ -67,9 +67,7 @@ This script demonstrates how FieldTrip can be used for timeseries analysis of fM
 	save mri mri -v6
 	save raw raw -v6
 
-
 ## Apply frequency analysis, compute frequency specific correlation/coherence
-
 
 	cfg = [];
 	cfg.blc = 'yes';

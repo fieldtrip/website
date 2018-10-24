@@ -2,8 +2,6 @@
 layout: default
 ---
 
-
-
 `<note warning>`
 The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.
 
@@ -24,5 +22,4 @@ and the related [example scripts](/example
 and the related [tutorials](/tutorial
 
 {{topic>tutorial +headmodel &list}}
-
 

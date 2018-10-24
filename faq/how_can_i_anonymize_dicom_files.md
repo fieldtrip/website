@@ -25,7 +25,6 @@ to see all the header information, and
 
 to remove all confidential metadata from the DICOM header.
 
-
 ## Using Horos
 
 [Horos](https://www.horosproject.org) is a free DICOM image file viewer for Mac OS X. You can use it to view your image files and explore the metadata in the header. It works by importing all DICOM files and organizing it in its own internal database.  It has an "anonymize" option which allows you to remove/replace the values in specific fields.

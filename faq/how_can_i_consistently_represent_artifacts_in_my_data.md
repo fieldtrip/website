@@ -32,7 +32,6 @@ To specify lists of bad channels, you can use a consistent representation, e.g.
 
 and use the following code to merge the bad channels into a single list
 
-
 	hdr = ft_read_header(filename);
 	sel = false(size(hdr.label));
 
@@ -47,6 +46,5 @@ and use the following code to merge the bad channels into a single list
 	% combine them into one list
 	badchannel  = hdr.label(sel);
 	goodchannel = setdiff(hdr.label, badchannel);
-
 
 This list with good channels can be passed to **[ft_preprocessing](/reference/ft_preprocessing)** in the cfg.channel option.

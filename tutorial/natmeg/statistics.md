@@ -3,7 +3,6 @@ layout: default
 tags: tutorial natmeg meg+eeg statistics
 ---
 
-
 # Statistical analysis and multiple comparison correction for combined MEG/EEG data
 
 ## Introduction
@@ -73,7 +72,6 @@ The MEG dataset that we use in this tutorial is available as   [oddball1_mc_down
     
     cfg.trials    = find(data_responselocked.trialinfo(:,1) == 4096);
     TFR_right     = ft_freqanalysis(cfg, data_responselocked);
-
 
     cfg = [];
     cfg.baseline     = [0 0];
@@ -158,11 +156,9 @@ Spectral power is not normally distributed. Although this is in theory not a pro
     cfg.operation = 'log10';
     TFR_logpow    = ft_math(cfg, TFR_all);
 
-
 ### Compute the neighbours
 
 With time-frequency data we have three dimensions in which we can form clusters. In the time and frequency dimension it is trivial how to form the clusters, but the spatial dimension is not regularly represented in the data. Hence we have to construct an explicit description of the neighbourhood of each channel 
-
 
     cfg           = [];
     cfg.channel   = 'MEG*1';
@@ -179,7 +175,6 @@ With time-frequency data we have three dimensions in which we can form clusters.
 The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as //[]//, i.e. empty.
 
 ![image](/media/tutorial/natmeg_temp/natmeg_stat_neighbours.png@500)
-
 
 ### Compute the statistics
 
@@ -198,7 +193,6 @@ The neighbourhood structure contains for each channel a list of other channels t
 
 The result of **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a *dimord* field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[/reference/ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[/reference/singleplotTFR](/reference/singleplotTFR)** or **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
-
     disp(TFR_stat1)
     
          df: 98
@@ -213,7 +207,6 @@ The result of **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** i
         cfg: [1x1 struct]
 
 Having computed the probability without correcting for multiple comparisons, we proceed with three methods that do correct for the MCP.
-
 
     cfg.method    = 'analytic';
     cfg.correctm  = 'bonferoni';
@@ -254,7 +247,6 @@ Let us now move on with the stimulus-locked activity, i.e. the auditory event-re
 
 The following requires that the custom trial function [ trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/trialfun_oddball_stimlocked.m) is present in a directory that is on your MATLAB path.
 
-
     cfg = [];
     cfg.dataset = 'oddball1_mc_downsampled.fif';
 
@@ -278,13 +270,11 @@ The following requires that the custom trial function [ trialfun_oddball_stimloc
 
 The oddball effect is rather strong, and with 600 trials (500 standards and 100 oddballs) it would be  trivial to find a significant effect. To make the procedure slightly more interesting and informative, we will make a subselection by taking the first 100 trials.
 
-
     cfg                 = [];
     cfg.trials          = 1:100;
     data_stimlocked     = ft_selectdata(cfg, data_stimlocked);
 
 After this subselection, there are 84 standard trials and only 16 deviant trials remaining. 
-
 
 We can compute the ERFs for the two experimental conditions by selecting the standard (1) and deviant (2) trigger codes in the *trialinfo* field.
 
@@ -303,8 +293,6 @@ The **[/reference/ft_selectdata](/reference/ft_selectdata)** function is a very 
     cfg.avgovertime = 'yes';
     ERF_peak =  ft_selectdata(cfg, ERF_std)
 `</note>`
-
-
 
     cfg        = [];
     cfg.layout = 'neuromag306mag.lay';
@@ -346,7 +334,6 @@ However, we will leave the statistical evaluation to the **[/reference/ft_timelo
          elec: [1x1 struct]
     trialinfo: [100x3 double]
           cfg: [1x1 struct]
-
 
 Note that the dimord is *rpt_chan_time*, i.e. trials by channels by time, which matches with the size of the ERF_all.trial array.
 
@@ -408,12 +395,9 @@ Again we can visualize the results of the statistical comparison. Since we have 
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels. 
 `</note>`
 
-
 ## Summary and conclusion
 
-
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip. It addresses multiple ways of dealing with the multiple comparison problem. Furthermore, it demonstrated how to plot the part of the data that show the significant effect.
-
 
 ### Suggested further reading
 

@@ -41,7 +41,6 @@ Using the basic FieldTrip functions in a memory efficient manner requires that y
 
 The distributed operations of FieldTrip functions in this example require the original MEG datasets for the four subjects, which are available from
 
-
 *  [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)
 
 *  [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip)
@@ -52,15 +51,11 @@ The distributed operations of FieldTrip functions in this example require the or
 
 Or, when at the Donders Centre for Cognitive Neuroimaging, use
 
-
 	cd /home/common/matlab/fieldtrip/data
-
-
 
 ##  Example 1: using only FieldTrip functions in distributed computing
 
 This example script demonstrates how to run basic FieldTrip functions in parallel. The idea is schematically depicted in the following figure.
-
 
 	subjectlist = {
 	  'Subject01.ds'
@@ -137,11 +132,9 @@ This example script demonstrates how to run basic FieldTrip functions in paralle
 	cfg.channel = {'MLC33', 'MLC43', 'MLP11', 'MLP12', 'MLP13', 'MLP33', 'MLP34', 'MLT14', 'MLT15', 'MLT25'}
 	ft_singleplotER(cfg, avgFC, avgFIC, avgIC);
 
-
 ![image](/media/example/singleplot_fig1.png@400)
 
 In the code above all data is processed by the distributed computers and subsequently returned to the workspace of your desktop computer. The data can take quite a lot of RAM, which you can check like this.
-
 
 	>> whos
 	  Name               Size                 Bytes  Class     Attributes
@@ -154,9 +147,7 @@ In the code above all data is processed by the distributed computers and subsequ
 	  timelock           4x3               65515200  cell                
 	  ...
 
-
 Instead of returning the 12 variables for the different subjects and conditions all to your workspace, you can also use the cfg.inputfile and cfg.outputfile options to have the distributed computers read/write the data to/from disk. For example the section on **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** could be changed into
-
 
 	% ...
 
@@ -188,13 +179,9 @@ Instead of returning the 12 variables for the different subjects and conditions 
 
 	% ...
 
-
-
 ##  Example 2: writing custom functions for distributed computing
 
 This example script demonstrates how you can efficiently design your custom code for distributed computing.
-
-
 
 	subjectlist = {
 	  'Subject01.ds'
@@ -274,11 +261,7 @@ This example script demonstrates how you can efficiently design your custom code
 	cfg.layout = 'CTF151_helmet.mat';
 	ft_multiplotER(cfg, avgFC, avgFIC, avgIC)
 
-
-
-
 This way you can distribute your custom function (e.g. see below) along with the input and output parameters.
-
 
 	function preproc_timelock_planar(cfg1, cfg2, cfg3, cfg4, outputfile)
 
@@ -296,8 +279,6 @@ This way you can distribute your custom function (e.g. see below) along with the
 
 	save(outputfile, 'combined');
 	clear combined
-
-
 
 ## Summary and suggested further reading
 

@@ -3,7 +3,6 @@ layout: default
 tags: faq continuous freq
 ---
 
-
 #  How can I do time-frequency analysis on continuous data?
 
 There are cases where you have recorded continuous data without specific events of interest, e.g. resting state data. In the absence of events on the basis of which to segment the data into trials, you would proceed processing the data as [continuous data](/tutorial/continuous). 
@@ -12,9 +11,7 @@ In continuous data you primarily would expect the EEG or MEG signal to be statio
 
 However, you might be interested in changes in the power spectrum at a much longer time scale. Regular time-frequency analysis (e.g. with method wavelet or mtmconvol in **[ft_freqanalysis](/reference/ft_freqanalysis)**) is not appropriate to reveal the dynamics of spectral changes over a long time scale. Below we outline an alternative approach that does work well and that is computationally efficient.
 
-
 We start by reading the data as one long continuous segment. It may be useful at this stage to apply a high-pass filter to remove the slow drift from the data
-
 
     cfg = [];
     cfg.dataset  = 'subj2.vhdr''
@@ -64,9 +61,4 @@ Finally we can plot it, just like a regular time-frequency representation
     cfg = []
     cfg.layout = 'easycapM10.mat'
     ft_multiplotTFR(cfg, freq_continuous);
-
-
-
-
-
 

@@ -9,16 +9,11 @@ There are several ways in which cross-frequency interactions might occur. In [Je
 
 ![image](/media/example/crossfreq/jensencolgin.png@700)
 
-
-
 With the **[ft_freqsimulation](/reference/ft_freqsimulation)** function you can generate simulated data in FieldTrip format which the different types of cross-frequency interactions. The different methods ar
-
 
 *  [ phalow_amphigh (is phase to power in Jensen and Colgin)](/example/crossfreq/phalow_amphigh )
 
 *  [ amplow_amphigh (is power to power in Jensen and Colgin](/example/crossfreq/amplow_amphigh )
 
 *  [ phalow_freqhigh (is phase to frequency in Jensen and Colgin)](/example/crossfreq/phalow_freqhigh )
-
-
 

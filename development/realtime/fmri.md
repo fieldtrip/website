@@ -3,7 +3,6 @@ layout: default
 tags: realtime siemens fmri
 ---
 
-
 # Realtime fMRI from Siemens scanners
 
 The present system for acquiring fMRI data in real time consists of three main blocks: 
@@ -11,7 +10,6 @@ The present system for acquiring fMRI data in real time consists of three main b
  2.  a FieldTrip buffer running on another machine in the network, and 
  3.  MATLAB scripts or other client applications that retrieve their data from the buffer. 
 Further to that, a small modification needs to be made to the applied MR sequence such that protocol information is written to a specific location. By now, all the sequences commonly used at the DCCN contain this modification.
-
 
 ## Design considerations
 
@@ -157,7 +155,6 @@ stick to the usual FieldTrip functions.
 ### Compilation
 
 We provide a simple ''Makefile'' for the MinGW compiler on Windows or GCC on other platforms. Please go to the ''realtime/datasource/siemens'' directory and type ''make'' or ''mingw32-make''. You will need to have the [FLTK](http://www.fltk.org) library installed for your platform. Note that you also might need to [compile](/development/realtime/buffer) the **buffer** library first.
-
 
 ##  Testing with pre-recorded fMRI data
 

@@ -3,7 +3,6 @@ layout: default
 tags: edf eeg dataformat
 ---
 
-
 # Getting started with EDF (European Data Format) data
 
 `<note info>`
@@ -89,7 +88,6 @@ The detect flank option is explicitly disabled here, this indicates to the code 
 	sel = trl(:,2)<hdr.nSamples;
 	trl = trl(sel,:);
 
-
 #### EDF files that are exported from EGI NetStation
 
 Following the use of **[ft_read_header](/reference/ft_read_header)**, the index of the annotation channel can be found in hdr.orig.annotation. However, when using the EGI 'Net Station', the events are written in a way that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream (please add, anyone, whether this also holds for other acquisition systems).
@@ -145,7 +143,6 @@ The example scripts also assume that the event is marked by an 'up flank' in the
       trl       = [trl; newtrl]; % store in the trl matrix
     end
 
-
 In this second example, we define a data segment as the time the trigger was 'on', i.e. during the 'up flank', until it was 'off
 
     function [trl, event] = trialfun_ttl(cfg)
@@ -175,7 +172,6 @@ In this second example, we define a data segment as the time the trigger was 'on
       waitfordown = 0;
     end
     end
-
 
 Alternatively, when the event channel index is unknown, but its name, or a part thereof (e.g., 'DC01'), is, one may us
     chanindx      = find(ismember(hdr.label, ft_channelselection('*DC01*', hdr.label))); 

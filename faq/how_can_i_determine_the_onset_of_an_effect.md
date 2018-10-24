@@ -3,7 +3,6 @@ layout: default
 tags: faq statistics
 ---
 
-
 # How can I determine the onset of an effect?
 
 `<note>`I received the following question: 

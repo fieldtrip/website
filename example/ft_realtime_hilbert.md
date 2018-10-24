@@ -3,7 +3,6 @@ layout: default
 tags: example realtime
 ---
 
-
 # Realtime neurofeedback application based on Hilbert phase estimation
 
 This page describes the neurofeedback application that was developed by Marco Rotonda for his MSc thesis **"Controllo volontario della sincronizzazione di fase intraemisferica nella banda gamma eeg mediante neurofeedback"** (Voluntary control of intrahemispheric phase sychronization in the EEG gamma band using neurofeedback).
@@ -28,7 +27,6 @@ Basically there are 12 channels: 4 for EEG (I used F3-P3-F4-P4), 4 for the EOG, 
 The algorithm will care to take away both EOG and EMG artifacts.
 
 ## Source code for realtime_hilbert
-
 
 	function realtime_hilbert()
 	
@@ -404,9 +402,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
 	end % while true
 	
 
-
 ## Source code for realtime_baseline
-
 
 	function realtime_baseline()
 	
@@ -713,5 +709,4 @@ The algorithm will care to take away both EOG and EMG artifacts.
 	save means.mat;   % save to the working folder - (edit jonaweber 2010)
 	
 	
-
 

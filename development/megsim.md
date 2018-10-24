@@ -10,7 +10,5 @@ After making changes to the code and/or documentation, this page should remain o
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-
 On http://portal.mind.unm.edu/megsim/simdata there is a complete set of simulated(?) data. It would be nice to use that data in a tutorial. Probably it means that we'll also have to add support for that particular data format.
-
 

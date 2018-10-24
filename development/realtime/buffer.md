@@ -3,7 +3,6 @@ layout: default
 tags: realtime
 ---
 
-
 # Overview of the realtime buffer
 
 This page is part of the documentation series of the Fieldtrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, bein

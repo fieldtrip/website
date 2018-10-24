@@ -39,14 +39,11 @@ First create and store the system matrix in output file data.h
 	# Example of linux shell comman
 	elecsfwd --img smri-seghead --electrodes electrodes.h5 --data data.h5 --contable  ../../data/conductivity/contable.csv --TOL 1e-8'
 
-
 The smri-seghead file is the name of a analyze format file (.hdr, .img) which contains the segmentations with the assigned tissue values (e.g. gray matter = 1, white matter =2, or single sphere = 1).
 
 electrodes.h5 contains the electrodes matrix with a row for each electrode and 4 columns (X,Y,Z positions of the electrode in voxel space) and label.
 
 contable.csv is a comma saparated file which assigns a conductivity value for each tissue type present in the analyze file.
-
-
 
 # Steps to be taken
 
@@ -56,23 +53,17 @@ contable.csv is a comma saparated file which assigns a conductivity value for ea
 
 3. The call to elecsfwd should be modified as follow
 
-
 __  * input arguments --img segfile and --electrodes elecs disappear
 they are substituted by two other arguments called --dim and --3dmesh__
 
-
 __  * the input argument --3dmesh contains the coordinates of the voxels' centers (all and only voxels belonging to the head) and an additional columns with the tissue label of each voxel. The resulting matrix V has dimensions [N (head voxels) X 4]__
 
-
 __  * the input argument dim contains the dimensions of the MRI (e.g. 256X256X256] in order to be able to build the box around the head__
-
 
 __  * output argument --data datafile now contains only a matrix M of dimensions [skinXbrain voxels]
 no additional fields__
 
 __  * provide Hung with 2 files: one semgmented labelled MRI, one text file with the output voxels, containing the positions of the solutions in voxels coordinates__
-
-
 
 # Steps to be taken (Cristiano)
 
@@ -93,7 +84,6 @@ in particula
 - tolerance: of what?
 
 - what is the format h5? done
-
 
 2. Understand how to retrieve them (from disk? in memory?) done
 

@@ -56,9 +56,7 @@ Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Ni
 
 ## Preparing for the hands-on sessions
 
-
 Please copy the data and the fieldtrip version that we will use from http://storage.aml.yorku.ca. This will take some time.
-
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a **clean and well-tested**
@@ -78,7 +76,6 @@ moving all files one level up.
 `</note>`
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the **MATLAB command window**
-
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-xxxxxxxx
@@ -102,7 +99,6 @@ Please do NOT use the graphical path management tool from MATLAB. In this hands-
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
 `</note>`
-
 
 After installing fieldtrip to your path, you change into the tutorial directory
 

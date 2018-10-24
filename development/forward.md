@@ -58,7 +58,6 @@ Normally, end-users of the FieldTrip toolbox would use the functions in the main
 
 Some high-level functions that are of relevance for forward modeling ar
 
-
 *  **[ft_read_mri](/reference/ft_read_mri)**
 
 *  **[ft_read_sens](/reference/ft_read_sens)**
@@ -158,7 +157,6 @@ The simbio implementation is kindly provided by [Carsten Wolters](http://www.uni
 
 MATLAB allows the representation of any data in arrays, but does not have an explicit mechanism for dealing with the representation of physical properties of the numbers in those arrays. The FieldTrip data structures provide slightly more information on the units of the numbers represented in the arrays and consider
 
-
 *  the geometrical properties of the volume conduction model
 
 *  the conductive properties of the volume conduction model
@@ -172,7 +170,6 @@ MATLAB allows the representation of any data in arrays, but does not have an exp
 *  the units of of dipole strength
 
 The forward module functions are written such that they operate correctly if all input data to the functions is specified according to the [International System of Units](http://en.wikipedia.org/wiki/International_System_of_Units), i.e. in meter, Volt, Tesla, Ohm, Ampere, etc. The high-level FieldTrip code or any other code that calls the forward module functions (e.g. EEGLAB) is responsible for data handling and bookkeeping and for converting MATLAB arrays and structures that represent units into SI units prior to passing the arrays and structures to the forward code. 
-
 
 # Related documentation
 
@@ -189,5 +186,4 @@ Example material for forward and inverse modelin
 Tutorial material for forward and inverse modelin
 
 {{topic>tutorial +source &list}}
-
 

@@ -3,7 +3,6 @@ layout: default
 tags: realtime meg
 ---
 
-
 # Getting started with real-time head localization in MEG
 
 Using FieldTrip it is possible to [monitor](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session) a subject's head position during a MEG recording session. This allows you as experimenter to reposition your subject within sessions, e.g. after each experimental block. It also allows you to reposition your subject at the start of a session to the same head position of a previous session. 
@@ -36,7 +35,6 @@ The second (visualization / real-time analysis) computer runs MATLAB, reads the 
 	
 	sudo echo 67596000 > /proc/sys/kernel/shmmax
 
-
 This command increases the amount of shared memory that the software is allowed to use; the RHEL3 default of 32MB is not enough for the CTF software realtime interface. Note that you can restore the default setting with 
 
 	
@@ -49,7 +47,6 @@ or by rebooting the system. To make this change permanent, you can update the fi
 	
 	$HOME/fieldtrip/realtime/src/acquisition/ctf/acq2ftx
 
-
 4) Start Acquisition. You should see some information being printed in the terminal that you used to start acq2ftx.
 
 ## Step by step description for the Neuromag acquisition computer
@@ -60,7 +57,6 @@ or by rebooting the system. To make this change permanent, you can update the fi
 
 	
 	$HOME/fieldtrip/realtime/src/acquisition/neuromag/neuromag2ft
-
 
 3) Start Acquisition. You should see some information being printed in the terminal that you used to start neuromag2ftx.
 
@@ -75,14 +71,12 @@ or by rebooting the system. To make this change permanent, you can update the fi
 	addpath ~/fieldtrip/realtime/online_meg
 	ft_defaults
 
-
 3) Type in the MATLAB command windo
 
 	
 	cfg = [];
 	cfg.dataset = 'buffer://hostname:1972'; 
 	ft_realtime_headlocalizer(cfg)
-
 
 The hostname address should points to the location where the buffer is run - i.e. the CTF / Neuromag acquisition computer. You should now see the real-time head location being visualized. You can also explore **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** or the other [realtime examples](/getting_started/realtime).
 

@@ -3,7 +3,6 @@ layout: default
 tags: example artifact preprocessing ica
 ---
 
-
 # Use independent component analysis (ICA) to remove EOG artifacts
 
 ## Description
@@ -47,7 +46,6 @@ After reading in the preprocessed data into memory in FieldTrip format, you can 
 	
 	comp = ft_componentanalysis(cfg, data);
 
-
 Note that this is a time-consuming step. The output "comp" structure resembles the input raw data structure, i.e. it contains a time course for each component and each trial. Furthermore, it contains the spatial mixing matrix. In principle you can continue analyzing the data on the component level by doing
 
     cfg = [];
@@ -62,7 +60,6 @@ or
 
 but for this example we want to analyze the data eventually on the original channel level and only remove the components that represent the artifacts.
 
-
 ## Identify the artifacts
 
 	
@@ -74,7 +71,6 @@ but for this example we want to analyze the data eventually on the original chan
 	cfg.comment   = 'no';
 	ft_topoplotIC(cfg, comp)
 
-
 Make sure to plot and inspect all components. Write down the components that contain the eye artifacts. Very important is to know that on subsequent evaluations of the component decomposition result in components that **can have a different order**. That means that component numbers that you write down do not apply to another run of the ICA decomposition on the same data.
 
 ![image](/media/example/ica/ica_eog.png@600)
@@ -83,7 +79,6 @@ The spatial topography of the components aids in interpreting whether a componen
 
 Besides the spatial topography you should inspect the time course of the components, which gives additional information on separating the cortical from the non-cortical contributions to the data.
 
-
 For further inspection of the time course of the components, us
 
 	
@@ -91,7 +86,6 @@ For further inspection of the time course of the components, us
 	cfg.layout = 'CTF151.lay'; % specify the layout file that should be used for plotting
 	cfg.viewmode = 'component';
 	ft_databrowser(cfg, comp)
-
 
 You can browse through the components and the trials. The EOG artifacts can be easily identified in the time course plots, see the figure below for an example.
 
@@ -104,7 +98,6 @@ You can browse through the components and the trials. The EOG artifacts can be e
 	cfg = [];
 	cfg.component = [9 10 14 24]; % to be removed component(s)
 	data = ft_rejectcomponent(cfg, comp, data)
-
 
 Compare the data before (red trace) and after (blue trace) the EOG removal - for example trial 4, channel MLF1
 

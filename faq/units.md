@@ -3,7 +3,6 @@ layout: default
 tags: faq
 ---
 
-
 # What are the units of the data and of the derived results?
 
 It depends. FieldTrip tries to adhere to the units of the original manufacturer file formats, which are not always consistent. Furthermore, not all file formats clearly specify the units, so sometimes the units are not even known. 

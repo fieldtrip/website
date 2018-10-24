@@ -3,7 +3,6 @@ layout: default
 tags: realtime faq
 ---
 
-
 # How should I get started with the FieldTrip realtime buffer?
 
 The fastest and best way to get started is to try out something really simple. This does not require MATLAB. 
@@ -33,16 +32,10 @@ The sine2ft and viewer initially looks like thi
 ![image](/media/faq/sine2ft.png@300)
 ![image](/media/faq/bufferviewer.png@400)
 
-
-
 If you click "start" in the sine2ft window, and subsequently "connect" in the viewer window, you will see that data starts streaming from sine2ft->buffer->viewer.
-
-
 
 ![image](/media/faq/sine2ft_running.png@300)
 ![image](/media/faq/bufferviewer_running.png@400)
-
-
 
 ## Connect from MATLAB
 
@@ -83,7 +76,6 @@ to see the amount of data in the buffer steadily increasing over time. Note that
 After a certain amount of time, the [ring buffer](http://en.wikipedia.org/wiki/Circular_buffer) will fill up and start wrapping around. From that point onward you will not be able to read the data all the way back from sample 1. 
 
 You can combine the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** calls to plot only the data of interest. You can also use **[ft_read_event](/reference/ft_read_event)** to determine triggers, and based on those process certain pieces of data. 
-
 
 ## Suggested further reading
 

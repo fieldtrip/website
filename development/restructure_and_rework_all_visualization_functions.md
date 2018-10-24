@@ -10,7 +10,6 @@ After making changes to the code and/or documentation, this page should remain o
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-
 ## Restructure and rework all visualization functions
 
 The current naming scheme is ambiguous and/or inefficient for end-users and developers. The goal of this page is to develop a new scheme for naming functions and structuring the underlying code. 
@@ -25,7 +24,6 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
     * 2d/3d data should be plotted by the same underlying 2d or 3d code (irrespective of freq/timelock)
     * handling of options/data should be done in the higher-level functions.
 
-
 ##### What is wrong with the current format
 
 *  Event-Related (ER) versus Time-Frequency-Representation (TFR) are not exclusive categories, but they are used as if they were 
@@ -37,7 +35,6 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
 *  inside single/multi/topoER/TFR a lot of data-handling is done to make the plotting code usable for different purposes, which is not ideal from a development perspective (debugging, adding features)
 
 *  ft_multiplotCC depends on ft_topoplotTFR, which is confusing for developers
-
 
 ##### Existing implicated functions
 
@@ -68,8 +65,6 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
 *  ft_multiplotCC   (wraps around ft_topoplotTFR)
 
 *  ft_topoplotCC 
-
-
 
 ##### Naming proposal
 
@@ -121,7 +116,6 @@ The current naming scheme is ambiguous and/or inefficient for end-users and deve
 *above naming scheme is ft_functionplot to avoid developer confusion with the low-level functions ft_plot_vector/matrix/lay/mesh/etc.*
 
 ## See also
-
 
 *  http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=827
 

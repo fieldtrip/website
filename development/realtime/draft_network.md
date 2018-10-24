@@ -3,7 +3,6 @@ layout: default
 tags: realtime development
 ---
 
-
 # Suggested changes to the network protocol
 
 ### GET_REQ_VER: Get supported request and version numbers
@@ -21,9 +20,6 @@ V1 clients would never notice a change to the server (SK: I would advise against
 the limited error reporting we have in V1). Newer clients could send this directly after connecting, and then either report an error 
 (if the server does not provide all the requests they need), or adapt their protocol to the capabilities of the server.
 
-
-
-
 ### Better error reporting
 
 Currently (V1) the server sends an error identifier that is specific to each request, e.g., GET_ERR for GET_XXX requests, and PUT_ERR for PUT_XXX requests, but it does not specify the type of error. We could drop the GET/PUT/... distinction since this provides almost no value, and should rather define more informative symbols like this (numerical values to follow
@@ -37,9 +33,6 @@ Currently (V1) the server sends an error identifier that is specific to each req
  | FT_ERR_NO_HEADER         | no header information is present yet (all GET requests fail in this case, as well as PUT_EVT + PUT_DAT)                                        | 
  | FT_ERR_DATA_MISMATCH     | returned when the client tries to write data of a different type or number of channels                                                         | 
  | FT_ERR_BAD_SELECT        | returned when the client tries to grab a specific interval of samples or events, which is not completely contained in the buffer [anymore/yet] | 
-
-
-
 
 ### Retrieving events
 
@@ -92,8 +85,6 @@ Remark 1: Why is the **sample** field defined to be a (signed) int32 originally?
 Remark 2: Note that a logical *OR* can still be achieved by sending multiple requests and then 
 filtering out duplicate events on the client side. *AND* seems more useful.
 
-
-
 ### Timestamp field of events
 
 Some of the offline file formats supported by FieldTrip have a *timestamp* field for events. We should
@@ -103,20 +94,15 @@ application specific, or for example contain the system time of a specific machi
 maybe encoded as UNIX time (seconds and fractions thereof since the epoch / 1970). Currently the timing is
 based on samples alone, which makes it hard to fuse data from different sources.
 
-
-
 ####  WAIT_GET_DAT: Block the request until the desired data samples are available 
 
 Instead of requiring a separate WAIT_DAT and GET_DAT, it should be possible to request data that is not yet in the buffer, upon which the server would block until the requested data is available. This should include a error given a user-specified timeout. Requesting previous data that is not in the buffer (and will not get into the buffer any more) should also result in an error.
-
-
 
 ### GET_DAT: Retrieving samples with start and end index
 
 Instead of reporting the number of samples inside the **datadef_t** field in the response to a GET_DAT (as in V1), the server should rather send the index of the first and last sample that is being transmitted. The number of samples can be inferred from that, but the opposite direction is not possible. This is useful because the ring buffer will loose old samples after some time, where the V1 GET_DAT without a (begsample;endsample) tuple makes it impossible for the client to infer which samples it got. Another possible extension is to include a filter condition to grab samples within certain limits (as opposed to grabbing the specific interval in V1).
 
 (This would also be more consistent with the new GET_EVT call, where you get event indices as well).
-
 
 ### Atomic PUT_DAT + PUT_EVT
 
@@ -172,5 +158,4 @@ Robert has proposed adding seperate requests for adding and reading chunks. Issu
 *  [draft compatability](/draft compatability)
 
 *  [scratchpad](/scratchpad)
-
 

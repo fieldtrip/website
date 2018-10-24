@@ -2,7 +2,6 @@
 layout: default
 ---
 
-
 ## Introduction
 
 In this tutorial we will explore different measures of connectivity, using simulated data and using source-level MEG data. You will learn how to compute various connectivity measures and how these measures can be interpreted. Furthermore, a number of interpretational problems will be addressed.
@@ -21,11 +20,9 @@ Many measures of connectivity exist, and they can be broadly divided into measur
 
 After the identification of the network nodes and the characterization of the edges between the nodes, it is possible to analyze and describe certain network features in more detail. This network analysis is also not covered in this tutorial, although FieldTrip provides some functionality in this direction (see **[ft_networkanalysis](/reference/ft_networkanalysis)** to get started).
 
-
 ## Procedure
 
 This tutorial consists of three part
-
 
 *  Simulated data with directed connections. In this part we are going to simulate some data and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model and we will use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** for this. Subsequently, we will estimate the multivariate autoregressive model and the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with  **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
@@ -33,19 +30,16 @@ This tutorial consists of three part
 
 *  Connectivity between MEG virtual channel and EMG. In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between this virtual channel and EMG. The data used for this part are the same as in the [Analysis of corticomuscular coherence](/tutorial/coherence) tutorial.
 
-
 ## Simulated data with directed connections
 
 We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.
 The model we are going to use to simulate the data is as follow
-
 
 x(t) = 0.8*x(t-1) - 0.5*x(t-2)
 
 y(t) = 0.9*y(t-1) + 0.5*z(t-1) - 0.8*y(t-2)
 
 z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
-
 
 	
 	cfg             = [];
@@ -69,8 +63,6 @@ z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
 	
 	data              = ft_connectivitysimulation(cfg);
 	
-
-
 
 The simulated data consists of 3 channels in 500 trials. You can easily visualize the data for example in the first trial using
 
@@ -112,7 +104,6 @@ In this tutorial we will use the bsmart toolbox. The relevant functions have bee
 	    fsampleorig: 200
 	            cfg: [1x1 struct]
 	            
-
 
 The resulting variable **mdata** contains a description of the data in terms of a multivariate autoregressive model. For each time-lag up to the model order (which is 5 in this case), a 3x3 matrix of coefficients is outputted. The noisecov-field contains covariance matrix of the model's residuals.
 
@@ -169,9 +160,7 @@ Some connectivity metrics can be computed from a non-parametric spectral estimat
 	              cfg: [1x1 struct]
 	
 
-
 The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies.
-
 
 ### Computation and inspection of the connectivity measures
 
@@ -184,7 +173,6 @@ The actual computation of the connectivity metric is done by **[ft_connectivitya
 	cohm          = ft_connectivityanalysis(cfg, mfreq);
 	
 
-
 Subsequently, the data can be visualized using **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
 	
@@ -192,7 +180,6 @@ Subsequently, the data can be visualized using **[ft_connectivityplot](/referenc
 	cfg.parameter = 'cohspctrm';
 	cfg.zlim      = [0 1];
 	ft_connectivityplot(cfg, coh, cohm);
-
 
 ![image](/media/tutorial/connectivity/connectivityplot.png@400)
 
@@ -209,7 +196,6 @@ The coherence measure is a symmetric measure, which means that it does not provi
 	ft_connectivityplot(cfg, granger);
 	
 
-
 ![image](/media/tutorial/connectivity/grangerplot1.png@400)
 
 Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivityplot)**, you can use the following low-level Matlab plotting code which gives a better understanding of the numerical representation of the results.
@@ -224,7 +210,6 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 	end
 	end
 
-
 ![image](/media/tutorial/connectivity/grangerplot2.png@400)
 
 #### Exercise 2
@@ -232,7 +217,6 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 `<note exercise>`
 Discuss the differences between the granger causality spectra, and the coherence spectra.
 `</note>`
-
 
 #### Exercise 3
 
@@ -279,7 +263,6 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	set(findobj(gcf,'color',[0 0.5 0]), 'color', [1 0 0]);
 	title('mixed ''sources''');
 
-
 ![image](/media/tutorial/connectivity/mixingmixed.png@300)
 ![image](/media/tutorial/connectivity/mixingunmixed.png@300)
 
@@ -299,7 +282,6 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	title('powerpectrum');
 	
 
-
 ![image](/media/tutorial/connectivity/mixingpowerspectrum.png@300)
 
 	
@@ -312,7 +294,6 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	c = ft_connectivityanalysis(cfg, freq);
 	
 
-
 	
 	
 	% visualize the results
@@ -322,7 +303,6 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	cfg.parameter = 'cohspctrm';
 	figure;ft_connectivityplot(cfg, c);
 	
-
 
 ![image](/media/tutorial/connectivity/mixinggranger.png@300)
 ![image](/media/tutorial/connectivity/mixingcoherence.png@300)

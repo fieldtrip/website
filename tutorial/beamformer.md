@@ -50,13 +50,11 @@ To localize the oscillatory sources for the example dataset we will perform the 
 
 The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
 
-
 ![image](/media/tutorial/beamformer/tfrbmf.png@700)
 
 **//Figure 1; The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.//**
 
 {{page>:tutorial:shared:preprocessing_fic}}          
-
 
 ### Time windows of interest
 
@@ -107,7 +105,6 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
     cfg.foilim    = [18 18];
     freqPost = ft_freqanalysis(cfg, dataPost);
 
-
 ## The forward model and lead field matrix
 
 ### Head model
@@ -133,7 +130,6 @@ Now prepare the head model from the segmented brain surfac
     cfg.method = 'singleshell';
     headmodel = ft_prepare_headmodel(cfg, segmentedmri);
 
-
 `<note important>`
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference [*], i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
@@ -143,8 +139,6 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 
 [*] except in some rare cases, like with bipolar iEEG electrode montages
 `</note>`
-
-
 
 ### Exercise 2: head model
 
@@ -189,14 +183,11 @@ The purpose of cfg.dics.projectnoise will become more clear in the section on Ne
 Save the outpu
     save sourcePost_nocon sourcePost_nocon
 
-
-
 The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip ftp server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also is available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
 
     load sourcePost_nocon
 
 The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the measure of power increase with the structural MRI of the subject. The alignment is done according to the anatomical landmarks (nasion, left and right ear canal) that were both determined in the MEG measurement and in the MRI scan. Using the ft_volumereslice function before doing the interpolation ensures that the MRI is well behaved, because the reslicing causes the voxel axes to be aligned with the head coordinate axe
-
 
     mri = ft_read_mri('Subject01.mri');
     mri = ft_volumereslice([], mri);
@@ -249,7 +240,6 @@ Plot it:
     figure
     ft_sourceplot(cfg, sourceNAIInt);
 
-
 ![image](/media/tutorial/beamformer/figure2bf.png@500)
 
 **//Figure 3; The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate.//**
@@ -258,7 +248,6 @@ Plot it:
 `<note exercise>`
 Another option, besides contrasting to the noise estimate, is to normalize the lead field when you compute it (cfg.normalize='yes' in the call to ft_prepare_leadfield).  Recompute the lead field and source estimate this way and plot the result.
 `</note>`
-
 
 ## Source Analysis: Contrast activity to another interval
 
@@ -354,7 +343,6 @@ To plot an 'orthogonal cut
     cfg.opacitylim    = [0.0 1.2];
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
-
 
 ![image](/media/tutorial/beamformer/figure7bf.png@500)
 

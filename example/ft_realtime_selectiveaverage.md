@@ -3,7 +3,6 @@ layout: default
 tags: example realtime
 ---
 
-
 # Example real-time selective average
 
 ## Flowchart
@@ -11,7 +10,6 @@ tags: example realtime
 ![image](/media/example/realtime/realtime_selectiveaverage.png@400)
 
 ## Matlab code
-
 
 	function ft_realtime_selectiveaverage(cfg)
 	
@@ -163,5 +161,4 @@ tags: example realtime
 	
 	  end % looping over new trials
 	end % while true
-
 

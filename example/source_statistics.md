@@ -31,8 +31,6 @@ To evaluate the reliability of the activation by a statistical measure we will c
 	
 	stat = ft_sourcestatistics(cfg, source);
 
-
-
 The output (//stat//) contains fields pertaining to the cluster based statistic. It contains the field *stat.prob* with the p values for each grid point, and a field *stat.mask* with a 1 for each grid point if it is significant and a 0 if it is not significant. In *stat.posclusters* and *stat.negclusters* you will find for each cluster the p and cluster-t values. For a further explanation of the output see the cluster permutation tutorials for [ERFs](/tutorial/cluster_permutation_timelock) and [time frequency data](/tutorial/cluster_permutation_freq).
 
 Now the statistical values can be plotted on the subject's MRI, using *stat.mask* to mask the data, meaning that only  significant voxels are plotted. 
@@ -50,8 +48,6 @@ Now the statistical values can be plotted on the subject's MRI, using *stat.mask
 	cfg.maskparameter = 'mask';
 	figure
 	ft_sourceplot(cfg, statplot);
-
-
 
 ## Group level, statistics over subjects
 
@@ -76,5 +72,4 @@ In the following, it is assumed that there are two source reconstructions (//gra
 	cfg.ivar        = 2; % row of design matrix that contains independent variable (the conditions)
 	
 	stat = ft_sourcestatistics(cfg, grandavgA{:}, grandavgB{:});
-
 

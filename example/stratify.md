@@ -3,7 +3,6 @@ layout: default
 tags: example statistics
 ---
 
-
 # Stratify the distribution of one variable that differs in two conditions
 
 This example script demonstrates two stratification methods. In the first, the extremes are trimmed, such that at the end the mean of the distributions is (close to) equal. In the second the distribution itself is equated, including the mean, variance and all higher order statistics. Note that, although the second method looks nicer, it is not completely flawless. There is still a small bias within each bin for the selected items to be shifted, and hence the two distributions will not be perfectly equal.
@@ -25,7 +24,6 @@ Finally, this example page shows how you can very simply stratify with the Field
 	s = [s1(:) s2(:)];
 	figure; hist(s, 100)
 	
-
 
 ![image](/media/example/twodistributions.png@500)
 
@@ -51,7 +49,6 @@ Finally, this example page shows how you can very simply stratify with the Field
 	s = [s1(:) s2(:)];
 	figure; hist(s, 100)
 	
-
 
 ![image](/media/example/rmextremes.png@500)
 
@@ -105,11 +102,9 @@ Finally, this example page shows how you can very simply stratify with the Field
 	figure; hist(s, 100)
 	
 
-
 ![image](/media/example/align_distib.png@500)
 
 **Figure 3** Now we have taken only the part of the two distributions that overlap. Note that this method preserves fewer trials than trimming the extremes.
-
 
 Note that this easily can be achieved with the FieldTrip **[ft_stratify](/reference/ft_stratify)** function like this
 
@@ -131,5 +126,4 @@ Note that this easily can be achieved with the FieldTrip **[ft_stratify](/refere
 	% make the same figure as above
 	s = [s1(:) s2(:)];
 	figure; hist(s, 100)
-
 

@@ -3,7 +3,6 @@ layout: default
 tags: peer
 ---
 
-
 # Distributed computing using a peer-to-peer cluster
 
 The FieldTrip-peer toolbox facilitates you to do distributed computing on an ad-hoc cluster. Setting up this peer-to-peer cluster does not require a system administrator, and using it does not require a lot of technical skills.
@@ -22,7 +21,6 @@ Each of the peers in the network consists of a MATLAB session. Withing that MATL
 
 Assume that you have started one peer on your own computer and three peers on the computers of your colleagues that already went home for the evening. Your peer is the master, and can send commands to the other slaves. For example
 
-
 	>> peercellfun(@rand, {10, 20, 30}, 'UniformOutput', false)
 	
 	submitted 3/3, collected 3/3, busy 0, speedup 0.1
@@ -31,15 +29,12 @@ Assume that you have started one peer on your own computer and three peers on th
 	ans = 
 	    [10x10 double]    [20x20 double]    [30x30 double]
 
-
 which will compute a random matrix on each of the three slaves. You can compare this to the standard MATLAB [cellfun](http://www.mathworks.nl/help/techdoc/ref/cellfun.html) function, which works almost identical but that executes the funcion locall
-
 
 	>> cellfun(@rand, {10, 20, 30}, 'UniformOutput', false)
 	
 	ans = 
 	    [10x10 double]    [20x20 double]    [30x30 double]
-
 
 What happened in the peercellfun call is that each of the sets of input arguments {'rand', 10},  {'rand', 20} and {'rand', 30} was sent to one of the available slaves. The slave peer is waiting for something to arrive, and as soon as a job arrives, the slave executes rand(10), rand(20) or rand(30) and the output arguments are sent back to the master.
 
@@ -49,9 +44,7 @@ The example above demonstrates how you can use **[peercellfun](/reference/peerce
 
 On your own computer you start a MATLAB session and type 
 
-
 	peermaster
-
 
 The **[peermaster](/reference/peermaster)** command will start the network buffer and the peer discovery threads in the background and signal the other peers on the network that you are not willing to execute jobs for them.
 
@@ -61,9 +54,7 @@ In case you have a computer with a multi-core CPU (as most computers have nowada
 
 You start multiple MATLAB instances, one per available core. Within each MATLAB instance you type
 
-
 	peerslave
-
 
 The **[peerslave](/reference/peerslave)** command will start the network buffer and the peer discovery threads in the background, switch to slave mode to signal the other peers that it is willing to execute a job and wait until a request for execution comes in. 
 
@@ -92,7 +83,6 @@ Elsewhere on this website you can find more examples on the use of the peer tool
 ## Frequently asked questions about distributed computing using this toolbox
 
 {{topic>peer +faq &list}}
-
 
 ## Technical appendix
 
@@ -203,7 +193,6 @@ Displays information about all the peers in the network.
 
 The disadvantage of running peerslave inside MATLAB is that each slave requires one active MATLAB license, even while waiting for a job. To allow for having a lot of idle slaves on the network that do not take licenses when not in use, I have implemented a command-line peerslave which is an executable that you start from the command line. The following compiled executables are currently included
 
-
 *  peerslave.glnxa64 (Linux, 64 bit)
 
 *  peerslave.glnx86 (Linux, 32 bit)
@@ -240,7 +229,6 @@ The tcpserver of a peer that runs as zombie does not allow any incoming connecti
 
 The following is a list with details that are already implemented and/or supported.
 
-
 *  each matlab session is either master (i.e. sending/receiving jobs) or slave (performing jobs)
 
 *  there can be multiple masters and multiple slaves on the same network (preferably many more slaves than masters)
@@ -270,7 +258,6 @@ The following is a list with details that are already implemented and/or support
 *  output on screen can be captured in a diary file and sent back to the master
 
 The following is a list with unassorted ideas and considerations for improving and/or using the peer-to-peer parallel toolbox in an efficient manner in the typical research lab setting. 
-
 
 *  localhost slaves should be preferred over remote hosts
 

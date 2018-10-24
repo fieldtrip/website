@@ -3,7 +3,6 @@ layout: default
 tags: elekta planar
 ---
 
-
 ## Find the orientation of planar gradiometers
 
 The Elekta Neuromag Vectorview and Triux scanners have a combination of magnetometers and two planar gradiometers at each sensor location.
@@ -34,6 +33,5 @@ The following code demonstrates how you can determine the orientation of the two
 	quiver3(pos(:,1), pos(:,2), pos(:,3), ori(:,1), ori(:,2), ori(:,3))
 	axis equal
 	axis vis3d
-
 
 ![image](/media/example/planar_orientation.png)

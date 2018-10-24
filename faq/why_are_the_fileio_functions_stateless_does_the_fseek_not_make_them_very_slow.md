@@ -3,7 +3,6 @@ layout: default
 tags: faq memory matlab
 ---
 
-
 ## Why are the fileio functions stateless, does the fseek not make them very slow?
 
 The **[ft_read_data](/reference/ft_read_data)** function in the fileio module is used to read the data into Matlab from all supported EEG and MEG adta formats. However, between multiple read operations the file is closed. This "stateless" handling of the read operations makes the interface simpler, i.e. in between read operations there is no state to be remembered (the state being the file pointer). It being stateless means that you don't have to keep track of the file-pointer and facilitates error handling. However, developers that started programming on the DOS operating system might know from experience that fseek operations are slow, which would impact reading performance. 
@@ -45,7 +44,6 @@ This belief that fopen and fseek are slow certainly applied to old-fashioned fil
 	fclose(fid);
 	fprintf('reading the data without fopen and fseek took %g seconds\n', toc);
 
-
 On my MacPro desktop computer with 2GB RAM, it results in 
 
     the total size of the data is 600 MB
@@ -58,9 +56,5 @@ Note that there are some potential caching effects that might influence these re
 The example above shows that reading segments of one second with fseek and fopen is 10% slower than continuous reading. Depending on the file size and how well the file can be cached by the operating system, the difference will even be smaller. Note that my MacPro only has 2GB of memory, which leaves little space for caching this 600MB example file, because I have Matlab, Safari, Mail, Word quite a few other small programs open, which means that the memory is more or less full. 
 
 You can try the code above on your own computer. Please post the results here, including your computer specs.
-
-
-
-
 
  

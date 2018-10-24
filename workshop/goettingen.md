@@ -40,7 +40,6 @@ Session II
 16:00 - 18:00	Hands-on: Time-frequency analysis of power
 18:00 - 18:30	Wrap-up-the-day and Summary
 
-
 *Sunday 9th February*
 
 Session III

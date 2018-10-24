@@ -3,7 +3,6 @@ layout: default
 tags: faq preprocessing trialfun
 ---
 
-
 ## What is the relation between "events" (such as triggers) and "trials"?
 
 FieldTrip can work both with epoched and with continuously recorded data files (both are treated as continuous). However, FieldTrip does assume that in the stream of data, some pieces are of interest. Those are the "trials". In contrast with other software packages, trials in FieldTrip can have a variable duration. For example, you want to analyze the data in a time window between a stimulus and the subject's response, and the subject responds faster in one trial than in the next.
@@ -31,7 +30,6 @@ and/or it can return events that represent a single individual trigger
          value: 1
         offset: []
       duration: []
-
 
 The duration and offset are represented as empty if they are unknown, in that case you can assume them to be zero.
 

@@ -21,7 +21,6 @@ By the end of this tutorial, you will be able to read in fNIRS data, segment it 
 You will also learn how to create basic visualizations of the data such as plotting single traces or topographic mapping.
 Finally, in this tutorial you will compute time-locked averages from the segmented data.
 
-
 This tutorial does not show how to deal with bad channels as it only operates on single channel data. You can find more information about [how to remove bad channels](/tutorial/nirs_multichannel#remove_bad_channels) and generally how to analyise multiple channels in the [Preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs_multichannel) tutorial.
 ## Background
 
@@ -38,13 +37,11 @@ In this dataset the motor cortex was probed using an Oxymon MK III system of Art
 
 The data used in this tutorial is available from our FTP server; please download [motor_cortex.oxy3](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel/motor_cortex.oxy3) and [optodetemplates.xml](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel/optodetemplates.xml). For the XML file please right-click and save-as.
 
-
 ## Procedure
 
 Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. We will first introduce you to a standard order of analysis steps, which you can subsequently try out step-by-step in this tutorial.
 
 The following order of steps provide a good standard approach for analysing fNIRS data (see Fig 1 for an overview
-
 
 *  read data & trim off non-experimental time windows
 
@@ -66,8 +63,6 @@ The following order of steps provide a good standard approach for analysing fNIR
 ![image](/media/tutorial/nirs_tut1_fig1.png@&400)
 
 **//Figure 1; Overview of fNIRS analysis procedure.//**
-
-
 
 ### Getting Started
 
@@ -137,17 +132,14 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
 
 **//Figure 2; Databrowser read-in.//**
 
-
 Using **[ft_databrowser](/reference/ft_databrowser)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don’t need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
 
 Additionally, we'll from here select just one channel, to reduce the complexity for those new to fNIRS analyses.
-
 
 	cfg = [];
 	cfg.ylim = 'maxmin'
 	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
 	ft_databrowser(cfg, data);
-
 
 ![image](/media/tutorial/nirs_tut1_fig3_databrowser_one_chan.png@400)
 
@@ -158,8 +150,6 @@ Additionally, we'll from here select just one channel, to reduce the complexity 
 `<note exercise>`
 Take a moment to familiarize yourself with the user-interface. Change the horizontal and vertical scales until you can see the heartbeat signal in the selected channels. Tip: A time slice of something between 10 to 20 seconds is optimal. Picking up the heartbeat in the NIRS measurement is a sign of good data quality, if the heartbeat cannot be detected in the data, contact with the skin must have been poor.
 `</note>`
-
-
 
 ### Remove artifacts
 
@@ -184,18 +174,14 @@ In the interactive mode, you can change the threshold to see which parts of the 
 What is the optimal threshold to get rid off short lived peaks?
 `</note>`
 
-
-
 ### Transform to changes in oxyHB/deoxyHB
 
 You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather  than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using  **[ft__nirs_transform_ODs](/reference/ft__nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analysing changes in blood oxygenation in muscles
-
 
 	cfg = [];
 	cfg.dpf = 5.9;
 	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
 	data_conc = ft_nirs_transform_ODs(cfg, data);
-
 
 #### Exercise 3
 
@@ -212,7 +198,6 @@ interest for the hemodynamic response. That is activation below 0.1 Hz. Addition
     cfg.bpfreq = [0.01 0.1];
     data_filtered = ft_preprocessing(cfg, data_conc);
 
-
 ### Define epochs of interest
 
 Because we are interested to find whether the brain responds specifically to the events that took place during the experiment, we want to focus our analyses on the timewindows in which the events took place (these timewindows are often called epochs or trials). More specifically, we want to investigate whether there is increase in oxygenation in the channel of interest timelocked to the experimental event. In the current dataset, the events are fingertaps of the participant. To be able to analyse these specific event-related responses, we have not only recorded the NIRS signal, but also when which event happened, stored in a so-called trigger channel. The triggers indicate when what happened in the experiment.
@@ -223,13 +208,11 @@ Earlier, we have read in all epochs by not specifying cfg.trl during our previou
 
 Let us assume for now that we have no clue about the triggers in the data. We will thus now utilize a more-or-less hidden functionality to retrieve this information.
 
-
 	cfg = [];
 	cfg.dataset = 'motor_cortex.oxy3';
 	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
 	cfg.trialdef = [];
 	cfg.trialdef.eventtype = '?';
-
 
 The question mark indicates that we are not sure about the event triggers, and the function **[ft_trialfun_general](/reference/ft_trialfun_general)** will thus output all events that are found in the dataset. Now, we can call **[ft_definetrial](/reference/ft_definetrial)**
 
@@ -240,14 +223,12 @@ did not add events during the measurement, you can include them here, see FAQ.
 
 Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event ‘A’) and ending 35 seconds after ‘A’ (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)*
 
-
 	cfg.trialdef.eventtype  = 'event';
 	cfg.trialdef.eventvalue = 'A';
 	cfg.trialdef.prestim    = 10;
 	cfg.trialdef.poststim   = 35;
 	cfg = ft_definetrial(cfg);
 	data_epoch = ft_redefinetrial(cfg,data_filtered);
-
 
 Note that we left out the brackets around the output variable as we have a single output variable here. Great, we have 12 trials now! Check them out using the databrowser, but let us use some settings to make the plots look neate
 
@@ -274,15 +255,12 @@ All signal values seem to be around the same values. Why could that be?
 You might want to perform an additional preprocessing step now. What  steps do you consider useful? Check out the options in **[ft_preprocessing](/reference/ft_preprocessing)**!
 `</note>`
 
-
 ### Timelockanalysis
 
 We would like to compute the average of our data and have a look at the average response. We can use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** for computing the average and the various available plotting function for plotting.
 
-
 	cfg = [];
 	data_timelock = ft_timelockanalysis(cfg, data_epoch);
-
 
 The output is the data structure data_timelock with the following field
 
@@ -300,7 +278,6 @@ The most important field is data.timelock.avg, containing the average over all t
 
 Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seconds. To follow fNIRS convention, O2Hb is coloured red and HHb is coloured blue.
 
-
 	time = data_timelock.time;
 	O2Hb = data_timelock.avg(1,:);
 	HHb  = data_timelock.avg(2,:);
@@ -309,13 +286,9 @@ Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seco
 	plot(time,HHb,'b');
 	legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
 
-
 ![image](/media/tutorial/nirs_tut1_fig4_ft_average_hem_respons.png@400)
 
 **//Figure 5; Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941).//**
-
-
-
 
 ## Summary and conclusion
 

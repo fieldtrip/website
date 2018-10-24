@@ -3,7 +3,6 @@ layout: default
 tags: realtime development
 ---
 
-
 # FieldTrip buffer reference implementation
 
 This page is part of the documentation series of the Fieldtrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, bein
@@ -50,7 +49,6 @@ The box in the middle represents the actual buffer, with the actual data being s
 
 Given the symmetry in the design, it is possible to have a standalone buffer, i.e. have the tcpserver run in its own application with its own memory. It is also possible to link the tcpserver with the associated buffer memory (the middle box) to the acquisition software. Finally it is also possible to link the tcpserver with the associated buffer memory to the application that is doing the processing. The MATLAB mex file includes the tcpserver, which can optionally be started as a seperate thread.
 
-
 ## Compiling the code
 
 Building the source code on different platforms can appear challenging. The buffer has been successfully compiled and tested on Linux (32 and 64 bit), Windows (32 bit) and Mac OS X (32 bit PowerPC and 32 and 64 bit Intel platform). We try to facilitate the compilation of the source code by supplying various build methods.
@@ -64,8 +62,6 @@ Generally, please note that no matter which platform, there are three different 
 *  ''.../buffer/matlab'' contains the sources of the MEX file ''buffer.mex???''. Since Matlab installations vary so much, we rely on the command ''mex'' to compile this part **inside** Matlab. As of October 2010, the MEX files are not linked against ''libbuffer'' anymore, but rather the same source files are directly pulled in using ''mex''.
 
 The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, OS X and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, Mac OSX, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and OSX is pretty straight forward while doing that on Windows is a bit more tricky.
-
-
 
 ### Linux and Mac OS X
 

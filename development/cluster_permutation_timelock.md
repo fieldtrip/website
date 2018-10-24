@@ -3,13 +3,11 @@ layout: default
 tags: tutorial statistics eeg meg timelock plot MEG-language
 ---
 
-
 # Cluster-based permutation tests on event related fields
 
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the statistical analysis of event-related EEG and MEG data (denoted as MEEG data in the following) by means of cluster-based permutation tests. The tutorial starts with a long background section that sketches the background of permutation tests. Subsequently it is shown how to use FieldTrip to perform cluster-based permutation tests on actual axial and planar event-related fields in a between-trials (using single-subject data) and in a within-subjects design (using data from multiple subjects).
-
 
 In this tutorial we will continue working on the [dataset](/tutorial/shared/dataset) of a single subject described in the [trigger-based trial selection preprocessing tutorial](/tutorial/preprocessing). Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [artifact rejection](/tutorial/artifacts), [event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
 
@@ -35,11 +33,9 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 
 *Figure 1. Analysis protocol of a between-trials experiment with axial data*
 
-
 ![image](/media/tutorial/cluster_permutation_erf/bwtrial_stat_procedure_planar.png@220)
 
 *Figure 2. Analysis protocol of a between-trials experiment with planar data*
-
 
 Subsequently, we consider a **within-subjects** experiment, in which we compare differences between (planar gradient) ERFs over all subjects. The steps we perform are as follow
 
@@ -56,7 +52,6 @@ Subsequently, we consider a **within-subjects** experiment, in which we compare 
 ![image](/media/development/project/tutorial_stat/ft_stat_tutorial2.png@550)
 
 *Figure 3. Analysis protocol of a within-subjects experiment with planar data*
-
 
 ## Between-trials experiments
 
@@ -318,11 +313,9 @@ Having calculated synthetic planar gradient data, one can use the same configura
     
     save stat_ERF_planar_FICvsFC stat
 
-
 The output can also be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, us
     
     load stat_ERF_planar_FICvsFC
-
 
 We now calculate the raw effect in the average with planar gradient data using the following configuratio
 
@@ -389,8 +382,6 @@ The format for these variables, are a prime example of how you should organise y
 
 On a technical note, it is preferred to represent the multi-subject data as a cell-array of structures, rather than a so-called struct-array. The reason for this is that the cell-array representation allows for easy expansion into a MATLAB function that allows for a variable number of input arguments (which is how the ft_XXXstatistics functions have been designed).
 
-
-
 ### Permutation test
 
 We now perform the permutation test using **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. The configuration settings for this analysis differ from the previous settings in several fields: 
@@ -447,7 +438,6 @@ Now, use the configuration above to perform the following statistical analysi
 The output can also be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat). If you need to reload the statistics output, us
     
     load stat_ERF_planar_FICvsFC_GA
-
 
 From inspection of stat.posclusters and stat.negclusters, we observe that there is only one significant positive cluster and no significant negative cluster. 
 
@@ -514,7 +504,6 @@ FAQ
 
 Example script
 {{topic>statistics cluster neighbour +example &list}}
-
 
 -----
 This tutorial was last tested by Jörn with version r9460 (April 30 2014) of FieldTrip using Matlab 2010b on a 64-bit Linux platform. 

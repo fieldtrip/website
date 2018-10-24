@@ -17,7 +17,6 @@ The low-level read_neuralynx_ncs function detects the presence of gaps in the .N
 
 One can then construct a time-stamp axis and interpolate in-between samples, and set samples occurring within gaps to NaNs. This is demonstrated in the following cod
 
-
 	% start with normal preprocessing of a single channel
 	cfg         = [];
 	cfg.dataset = 'CSC1.Ncs';
@@ -43,11 +42,9 @@ One can then construct a time-stamp axis and interpolate in-between samples, and
 	xlabel('sample number')
 	ylabel('time (s)')
 
-
 This shows the default time axis of the data, which FieldTrip assumes to be continuous.
 
 Now we continue with reading the actual timestamps and performing interpolation and gap-filling with NaNs across multiple channels. Your multiple channels can happen to have different start or end timestamps (which is another "feature" of the Cheetah software). This function then constructs a single timestamp-axis onto which all channels are represented.
-
 
 	function [data_all] = ft_read_neuralynx_interp(fname)
 

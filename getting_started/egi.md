@@ -3,7 +3,6 @@ layout: default
 tags: egi eeg dataformat
 ---
 
-
 # Getting started with Philips/EGI data
 
 Please add information if you're using Philips/EGI data and want to share info with other FieldTrip users.
@@ -11,7 +10,6 @@ Please add information if you're using Philips/EGI data and want to share info w
 # Introduction for the EGI file formats
 
 Net Station can export data to several data formats that FieldTrip can read in. 
-
 
 *  .egis, .sbin, and .mff can be read in by FieldTrip (I have no details on how well they work, and what the known issues are). Other formats like .ave, .gave, .ses are not supported but the data can be read by exporting to one of the supported formats.
 

@@ -48,7 +48,6 @@ We first read in the spike data by **[ft_read_spike](/reference/ft_read_spike)**
 	cfg.spikechannel = {'sig002a_wf', 'sig003a_wf'};
 	spike            = ft_spike_select(cfg, spike);
 
-
 giving a spike structure
 
 	spike =
@@ -60,7 +59,6 @@ giving a spike structure
 	          hdr: [1x1 struct]
 	       dimord: '{chan}_lead_time_spike'
 	          cfg: [1x1 struct]
-
 
 For more information on the spike format see the spike tutorial. Briefly, the field spike.timestamps contains the times of spiking for every cell in the unit of the recording system (called 'timestamps').
 
@@ -96,7 +94,6 @@ We then construct a cfg.trl matrix to preprocess the LFP data. In this case, the
 	    end
 	end
 
-
 Subsequently, we read out the LFP data using
 
 	% get the cfg.trl
@@ -111,7 +108,6 @@ Subsequently, we read out the LFP data using
 	cfg.dftfreq   = [60-1*(1/10):(1/10):60+1*(1/10) ]; % filter out 60 hz line noise
 	cfg.dftfilter = 'yes';
 	data_lfp      = ft_preprocessing(cfg); % read in the LFP
-
 
 The LFP data is now represented in a structure that has the following standard form (see **[ft_datatype_raw](/reference/ft_datatype_raw)**
 
@@ -138,11 +134,9 @@ data.hdr.Fs, data.hdr.TimeStampPerSample and data.hdr.FirstTimeStamp. In this ca
 	       FirstTimeStamp: 0
 	       TimeStampPerSample: 40
 
-
 The relationship between (unrounded) LFP sample and a timestamp ts (of a spike) is then given as
 
 	sample = double(ts-FirstTimeStamp) / double(TimeStampPerSample) + 1;
-
 
 The factor +1 arises because the first LFP sample is numbered 1, not 0.
 
@@ -163,7 +157,6 @@ First of all, we can directly create trials for the spike structure, by
 	cfg.trl       = trl; % now in samples
 	spikeTrials   = ft_spike_maketrials(cfg,spike);
 
-
 giving a struct
 
 	spikeTrials =
@@ -178,7 +171,6 @@ giving a struct
 	         trial: {[1x83601 double]  [1x61513 double]}
 	     trialtime: [600x2 double]
 
-
 where spike.trial{i} and spike.time{i} specify, for every i-th unit, the trial in which the spike was fired and the time at which it was fired relative to the trigger, respectively.
 
 An equivalent method (but potentially more error-prone!) would have been to directly use the timestamp representation per event to create the trials, i.e. use the 'trialfun_stimon' that we defined in the [tutorial/spike](/tutorial/spike) tutorial. For the purpose of walking through this tutorial, you should copy and paste the code of trialfun_stimon.m (from the [:tutorial:spike](/tutorial/spike) tutorial) in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
@@ -190,11 +182,9 @@ An equivalent method (but potentially more error-prone!) would have been to dire
 	cfg.timestampspersecond = 40000;
 	spikeTrials2 = ft_spike_maketrials(cfg,spike);
 
-
 A second method would have been to append the spikes to the LFP data in binary data format, by
 
 	data_all = ft_appendspike([],data_lfp, spike);
-
 
 We then get
 
@@ -207,7 +197,6 @@ We then get
 	    sampleinfo: [600x2 double]
 	           cfg: [1x1 struct]
 
-
 A disadvantage of the second method relative to the first methods is that the spike times are converted to samples, such that we introduce a (minor) distortion of the estimated spike-LFP phases. In practice, this has only minor consequences if data_all.fsample is high and the frequency of interest at which we want to measure the spike-LFP phase is low. However, for quantifying locking at frequencies of >100 Hz, this error may substantially reduce locking values. Two further disadvantages are that it unnecessarily decreases the memory-load, and makes it more difficult to link the spike-LFP phase information to information that was stored per individual spike, e.g. the AP waveforms.
 
 The spike trains have now been binarized (as mentioned earlier, values higher than 1 can occasionally occur if the sample frequency is not high enough), and a piece of data.trial{i} has the following conten
@@ -219,7 +208,6 @@ The spike trains have now been binarized (as mentioned earlier, values higher th
 	   14.5906    9.6772    7.5005   11.9295
 	         0         0         0         0 % the binarized spike trains
 	         0    1.0000         0         0            
-
 
 ### Analyzing spikes and LFPs recorded from the same electrode
 
@@ -235,7 +223,6 @@ To analyze high-frequency phase-coupling between spikes and LFPs recorded from t
 	cfg.method       = 'linear'; % remove the replaced segment with interpolation
 	data_i           = ft_spiketriggeredinterpolation(cfg, data_all);
 
-
 We illustrate this method by plotting the dat
 
 	figure,
@@ -246,7 +233,6 @@ We illustrate this method by plotting the dat
 	plot(data_all.time{1},data_all.trial{1}(2,:),'k-')
 	xlim([0.9 1])
 	xlabel('time (s)')
-
 
 ![image](/media/tutorial/spiketriggeredinterpolation.png)
 
@@ -268,7 +254,6 @@ The first step in the analysis of spike-LFP phase-coupling should be the computa
 	xlabel('time (s)')
 	xlim(cfg.timwin)
 
-
 ![image](/media/tutorial/sta_post.png)
 
 The STA reveals several oscillatory cycles at gamma frequency around the spike. For channel 'AD02', we see a characteristic sharp peak around t = 0, caused by the occurrence of the spike itself.
@@ -287,7 +272,6 @@ We also show the STA for the pre-stimulus perio
 	legend(data_lfp.label)
 	xlabel('time (s)')
 	xlim(cfg.timwin)
-
 
 ![image](/media/tutorial/sta_pre.png)
 
@@ -312,7 +296,6 @@ One can either have the spike train in binarized format or enter it separately a
 	cfg.channel      = data_lfp.label;
 	stsFFT           = ft_spiketriggeredspectrum(cfg, data_all);
 
-
 We then obtain
 
 	stsFFT =
@@ -326,18 +309,15 @@ We then obtain
 	            label: {'sig002a_wf'}
 	              cfg: [1x1 struct]
 
-
 This structure is a spike (**[ft_datatype_spike](/reference/ft_datatype_spike)**) formatted structure with the additional field sts.fourierspctrm.
 For every i-th unit, the field stsFFT.fourierspctrm{i} contains complex valued LFP fourierspectra taken around the occurrence of every spike.
 The spike phases for the unit 'sig001U_wf' are thus obtained by
 
 	ang = angle(stsFFT.fourierspctrm{1})
 
-
 and the magnitude of the LFP is obtained by
 
 	mag = abs(stsFFT.fourierspctrm{1})
-
 
 The convolution algorithm (cfg.method = 'mtmconvol') accepts spikes both in binarized (raw) and spike format. Multiple spike channels can be selected at the same time. For every frequency, we can specify a different time window as well, such that for example the number of cycles per frequency can be kept constant. The algorithm allows for large speed-ups if the number of spikes and units is large, as the instantaneous LFP phase is determined (only once) for all possible time-points through convolution. However this method is not preferred if there are few spikes and very long LFP traces (in this case iteratively using the FFT method would be faster).
 
@@ -348,11 +328,9 @@ The convolution algorithm (cfg.method = 'mtmconvol') accepts spikes both in bina
 	cfg.taper     = 'hanning';
 	stsConvol     = ft_spiketriggeredspectrum(cfg, data_all);
 
-
 Note that we could have also used a third spike input instead of the data_all inpu
 
 	stsConvol2    = ft_spiketriggeredspectrum(cfg, data_lfp, spikeTrials);
-
 
 The latter way of calling ft_spiketriggeredspectrum is advantageous because 1) it is more memory efficient, and 2) within **[ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)**, the spike samples do not have to be converted back to spike times. Instead, the spike times are exact and readily available, such that the phase estimation is more accurate as the raw spike time is used to determine the spike-LFP phase, instead of the rounded spike sample that is obtained using **[ft_appendspike](/reference/ft_appendspike)**. This is relevant when studying fast LFP oscillations.
 
@@ -368,7 +346,6 @@ The output from the mtmconvol method is
 	           dimord: '{chan}_spike_lfpchan_freq'
 	        trialtime: [600x2 double]
 	              cfg: [1x1 struct]
-
 
 Note that in this instance data is present for multiple units.
 
@@ -402,7 +379,6 @@ For example, we can plot the PPC spectra for every cell by
 	  ylabel('PPC')
 	end
 
-
 This code computes the PPC spectrum as a function of frequencies, giving an output for the last unit of
 
 	statSts =
@@ -413,7 +389,6 @@ This code computes the PPC spectrum as a function of frequencies, giving an outp
 	        freq: [20 30.1205 40.3226 50 60.9756 71.4286 80.6452 89.2857 100]
 	      dimord: 'chancmb_freq_time'
 	         cfg: [1x1 struct]
-
 
 For example, the PPC for unit 'sig002a_wf' looks like
 
@@ -446,7 +421,6 @@ It is often desired to study the evolution of the spike-LFP phase consistency ov
 	  ft_singleplotTFR(cfg, statSts)    
 	end
 
-
 For example, the PPC TFR for unit 'sig002a_wf' reveals a specific increase in gamma-band synchronization after stimulus onset, increasing over time, as reported in Fries et al. (2008
 
 ![image](/media/tutorial/ppctfr_example_sig002a_wf.png@300)
@@ -467,7 +441,6 @@ The output from **[ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggereds
 	        freq: [20 30.1205 40.3226 50 60.9756 71.4286 80.6452 89.2857 100]
 	      dimord: 'chancmb_freq_time'
 	         cfg: [1x1 struct]
-
 
 In statSts.labelcmb all the combinations between the unit and the different LFPs are specified, for 9 frequencies and 155 time-points.
 

@@ -3,7 +3,6 @@ layout: default
 tags: realtime jinga-hi jaga16
 ---
 
-
 # Jinga-Hi
 
 This page describes the interface between the Jinga-Hi JAGA16 device and the FieldTrip buffer.

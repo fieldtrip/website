@@ -3,7 +3,6 @@ layout: default
 tags: template sourcemodel grid
 ---
 
-
 ## Template models for source reconstruction
 
 Source models are a necessary ingredient for estimating the cortical activity from EEG or MEG data. Sources are typically modelled as equivalent current dipoles (ECDs), i.e. point sources with a location, orientation and strength.
@@ -18,7 +17,6 @@ When doing source reconstruction with beamformers, people typically scan the bra
 The FieldTrip template directory provides a set of sourcemodels defined on regular 3D-grids that are constructed from the MNI-template anatomy from SPM. These template sourcemodels can subsequently be used to be inverse normalized to the individual participant's anatomy. See this [example](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space) for more information.
 
 Template source models with the varying dipole spacing (4, 5, 6, 7.5, 8 and 10 mm) on a regular 3-D grid are available in fieldtrip/template/sourcemodel director
-
 
 *  standard_sourcemodel3d10mm.mat
 
@@ -55,7 +53,6 @@ When doing source reconstruction using minimum norm estimation (MNE, also known 
 
 A canonical cortical sheet is available in fieldtrip/template/sourcemodel with different numbers of vertices (20484, 8192 and 5124 vertices). These files were taken from the SPM8 release version; they refer to the canonical T1 anatomical MRI and are expressed in MNI coordinates.
 
-
 *  cortex_20484.surf.gii
 
 *  cortex_8196.surf.gii
@@ -71,8 +68,6 @@ You can load and visualize the cortical sheets with
     lighting gouraud
 
 ![image](/media/template/screen_shot_2013-12-05_at_8.59.46.png@400)
-
-
 
 ## UPDATE: cortical meshes from SPM8 added on 17 May, 2013
 
@@ -126,7 +121,6 @@ Tzourio-Mazoyer, N., Landeau, B., Papathanassiou, D., Crivello, F.,
 Etard, O., Delcroix, N., et al, 2002. Automated anatomical labelling of
 activations in spm using a macroscopic anatomical parcellation of the MNI
 MRI single subject brain. Neuroimage 15, 273-289.
-
 
 ## UPDATE: new 3D source models uploaded on March 7, 2013
 

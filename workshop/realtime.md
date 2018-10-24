@@ -3,7 +3,6 @@ layout: default
 tags: realtime workshop
 ---
 
-
 #  Realtime MEG BCI hands-on session in Nijmegen
 
 To set up MATLAB, you should do

@@ -3,7 +3,6 @@ layout: default
 tags: example statistics cluster
 ---
 
-
 # Use simulated ERPs to explore cluster statistics
 
 The following code starts off with an ERP in two conditions, where it is slightly larger in condition 1 than 2. This simulation demonstrates a randomization test, correcting for multiple comparisons by using the largest cluster mass.

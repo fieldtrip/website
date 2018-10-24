@@ -39,9 +39,7 @@ The data analyses will follow the following step
    * Compute "node degree" using **[ft_networkanalysis](/reference/ft_networkanalysis)**.
    * Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-
 ## Preprocessing
-
 
 ### Reading the data
 
@@ -50,7 +48,6 @@ The aim is to identify the frequency and topography of an 10Hz oscillation. We f
 **[ft_redefinetrial](/reference/ft_redefinetrial)** to segment it into epochs of 2 seconds length.
 
 The ft_redefinetrial and ft_preprocessing functions require the original MEG dataset, which is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip. Alternatively, you can skip this step and directly load the preprocessed data from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis. This latter folder contains a few files that we will need later in this tutorial as well, so it's recommended to download its contents.
-
 
 	%% read the continuous data and segment into 2 seconds epochs
 	cfg            = [];
@@ -71,12 +68,9 @@ The ft_redefinetrial and ft_preprocessing functions require the original MEG dat
 	cfg.trials = 1:(numel(data.trial)-6);
 	data       = ft_preprocessing(cfg, data);
 
-
-
 ### Artefact rejection
 
 We will first clean the data from potential bad segments such as SQUID jumps and/or bad channels using **[ft_rejectvisual](/reference/ft_rejectvisual)**. Subsequently, we will identify occular and cardiac artifacts by means of ICA using **[ft_componentanalysis](/reference/ft_componentanalysis)**. Since, these type of artifacts are predominately low frequent and we are interested in a 10Hz signal, we will downsample the data using **[ft_resampledata](/reference/ft_resampledata)** in order to speed up calculations during ft_componentanalysis and reduce potential working memory issues. Alternatively, you can skip these steps and download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis/).
-
 
 	%% make a visual inspection and reject bad trials/sensors
 	cfg         = [];
@@ -131,24 +125,19 @@ We will first clean the data from potential bad segments such as SQUID jumps and
 	cfg.component = badcomp;
 	dataica       = ft_rejectcomponent(cfg, comp);
 
-
-
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_comp.png@400)
 
 *Figure 1: Topography and time course of IC's likely reflecting cardiac and eye movement artifacts*
 
 We project the component data back to the channel representation, leaving out the bad components.
 
-
 	cfg            = [];
 	cfg.component  = badcomp;
 	dataica        = ft_rejectcomponent(cfg, comp);
 
-
 ### Spectral analysis
 
 We will analyze the spectral content of the data using  **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently interactively explore the data with **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)**. For those interested in more detailed overview of the configuration options and strategies please refer to our video lectures [here](http://fieldtrip.fcdonders.nl/video) and also [here](https://www.youtube.com/watch?v=QLvsa1r1Voc).
-
 
 	%% compute the power spectrum
 	cfg              = [];
@@ -193,7 +182,6 @@ We will analyze the spectral content of the data using  **[ft_freqanalysis](/ref
 	cfg.channel = {'MRO22', 'MRO32', 'MRO33'};
 	subplot(2,2,3); ft_singleplotER(cfg, datapow);
 
-
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_topo_alpha.png@400)
 
 *Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz (left: axial gradient representation, right: planar gradient representation). Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak.*
@@ -202,7 +190,6 @@ We will analyze the spectral content of the data using  **[ft_freqanalysis](/ref
 
 In the following section we will compute the forward model, i.e. the leadfield matrix that defines for a set of predefined dipole locations the expected magnetic field distribution as it is picked up by the MEG sensors. In this tutorial we will use a cortical sheet based source model, in which the individual dipole locations are constrained to the cortical sheet. This anatomical model has been obtained with freesurfer and it takes quite some time to generate. This falls outside the scope of this tutorial. If you would like to get an idea how this can be done, please have a look at our [sourcemodel tutorial](/tutorial/sourcemodel).
 Alternatively, one could create a volumetric dipole grid based on regularly spaced 3-dimensional grid of dipole locations, or an inverse-warp from MNI normalized volumetric space of a template 3D grid. More information about this can be found in our [sourcemodel tutorial](/tutorial/sourcemodel) as well.
-
 
 	%% load the required geometrical information
 	load hdm
@@ -217,13 +204,11 @@ Alternatively, one could create a volumetric dipole grid based on regularly spac
 	ft_plot_sens(dataclean.grad);
 	view([0 -90 0])
 
-
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_geometry.png@400)
 
 *Figure 3: Coregistration between headmodel, sourcemodel and sensor array.*
 
 Now we can proceed with the computation of the leadfield matrix, using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
-
 
 	%% compute the leadfield
 	cfg             = [];
@@ -232,13 +217,11 @@ Now we can proceed with the computation of the leadfield matrix, using **[ft_pre
 	cfg.channel     = {'MEG'};
 	lf              = ft_prepare_leadfield(cfg, dataica);
 
-
 ### Source reconstruction
 
 In addition to a forward model, the beamformer needs a sensor-level covariance matrix, or a cross-spectral density matrix. The preliminaries for the cross-spectral density matrix can be obtained with
 
 **[ft_freqanalysis](/reference/ft_freqanalysis)**. In this tutorial, you will compute a memory-wise more compact representation of the single epoch spectral representation, from which the cross-spectral density can be computed in a straightforward way. This will be done 'under the hood' in ft_sourceanalysis, so you don't need to worry about this particular conversion step.
-
 
 	%% compute sensor level Fourier spectra, to be used for cross-spectral density computation.
 	cfg            = [];
@@ -249,9 +232,7 @@ In addition to a forward model, the beamformer needs a sensor-level covariance m
 	cfg.foi        = 10;
 	freq           = ft_freqanalysis(cfg, dataica);
 
-
 Next, we call **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with 'pcc' as method. Essentially, this methods implements DICS (the underlying algorithm for computing the spatial filters is according to DICS), but provides more flexibility with respect to data handling. In this context, the advantage is that the 'pcc'-implementation directly outputs, for each dipole location in the sourcemodel, the fourier coefficients (i.e. phase and amplitude estimates) for each of the trials. This can subsequently be used in a straightforward way for connectivity analysis. In contrast, using 'dics' as a method, to obtain the single trial representation of phase and amplitude is quite a bit more tedious.
-
 
 	%% do the source reconstruction
 	cfg                   = [];
@@ -266,11 +247,9 @@ Next, we call **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with 'pcc' a
 	source = ft_sourceanalysis(cfg, freq);
 	source = ft_sourcedescriptives([], source); % to get the neural-activity-index
 
-
 ### Visualization of the neural-activity-index
 
 In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
-
 
 	%% plot the neural activity index (power/noise)
 	cfg               = [];
@@ -286,7 +265,6 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](/r
 	view([-90 30]);
 	light;
 
-
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_nai.png@400)
 
 *Figure 4: Reconstructed activity (neural activity index) of resting state alpha power is not as instructive as one would hope.*
@@ -298,7 +276,6 @@ Compare the distribution of the neural activity index with the sensor topographi
 ### Creation of a 'pseudo-contrast' based on a median split of the epochs
 
 Typically, in an experimental context, it is useful to visualize activity contrasts, e.g. baseline vs. activation intervals, in order to get spatially interpretable beamformer results. Although the neural-activity-index intends to improve interpretability by normalization with a poor man's approximation of the projected noise, and although it takes care of the depth bias of the beamformer to some extent, it doesn't usually work well. In order to convince ourselves that the beamformer is adequately reconstructing the activity of the neural sources, we will resort here to faking an 'experimental' contrast, using a median split of the data, where the data are split according to occipital alpha power. This requires an estimate of the single epoch alpha power. Next, identify the epoch indices for which the alpha power is less/more than the median across epochs.
-
 
 	%% compute sensor level single trial power spectra
 	cfg              = [];
@@ -317,9 +294,7 @@ Typically, in an experimental context, it is useful to visualize activity contra
 	indlow  = find(tmp(:,chanind)<=median(tmp(:,chanind)));
 	indhigh = find(tmp(:,chanind)>=median(tmp(:,chanind)));
 
-
 Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescriptives](/reference/freqdescriptives)** and compute the difference with **[ft_math](/reference/ft_math)**
-
 
 	%% compute the power spectrum for the median splitted data
 	cfg              = [];
@@ -345,7 +320,6 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
 	cfg.channel = {'MRO33'};
 	figure; ft_singleplotER(cfg, datapow_high, datapow_low);
 
-
 ![image](/media/tutorial/networkanalysis/nwa_topo_powratio.png@300)
 ![image](/media/tutorial/networkanalysis/nwa_spectrum_mediansplit.png@300)
 
@@ -354,8 +328,6 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
 ### Source reconstruction of 'low' and 'high' alpha activity epochs
 
 Now we will compute the source reconstructed alpha power again, as illustrated above, based on the median split. We will use a common filter approach, where we compute the spatial filters based on the cross-spectral density averaged across all epochs. See also [here](http://fieldtrip.fcdonders.nl/example/common_filters_in_beamforming) and [here](/tutorial/beamformingextended) for further information on common filters.
-
-
 
 	%% compute fourier spectra for frequency of interest according to the trial split
 	cfg            = [];
@@ -402,9 +374,7 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
 	cfg.parameter = 'pow';
 	source_ratio  = ft_math(cfg, source_high, source_low);
 
-
 We now create a fancy opacity mask for the functional data, and visualize the log-difference on the cortical sheet.
-
 
 	% create a fancy mask
 	source_ratio.mask = (1+tanh(2.*(source_ratio.pow./max(source_ratio.pow(:))-0.5)))./2;
@@ -420,7 +390,6 @@ We now create a fancy opacity mask for the functional data, and visualize the lo
 	view([-90 30]);
 	light('style','infinite','position',[0 -200 200]);
 
-
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_source_alpha.png@400)
 
 *Figure 6: Source reconstructed activity illustrating the relative difference in alpha power between the high and low alpha conditions.*
@@ -433,19 +402,15 @@ Compare this source reconstruction with the sensor topographies generated above.
 
 Next, we will call **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** to compute a connectivity matrix between all pairs of dipoles, which is sometimes referred to as a 'connectome'. There are several connectivity measures to choose  from. Here, we first will compute the imaginary part of the coherencey, using **cfg.method** = 'coh'; and **cfg.complex** = 'absimag';. This syntax will return only the imaginary part of the coherence spectrum and effectivly suppress spurious coherence driven by electromagnetic field spread ((Nolte et al. Identifying true brain interaction from EEG data using the imaginary part of coherence. Clinical Neurophysiology, 2004; 115; 2292-2307 )). For the computation, we take advantage of the fact that the 'source' variable constructed earlier, contains the single trial estimates of amplitude and phase at the source-level. This is the consequence of the fact that we used cfg.method='pcc' for ft_sourceanalysis, and requested cfg.output = 'fourier' for ft_freqanalysis.
 
-
 	%% compute connectivity
 	cfg         = [];
 	cfg.method  ='coh';
 	cfg.complex = 'absimag';
 	source_conn = ft_connectivityanalysis(cfg, source);
 
-
 We can now make a, rather uninformative, visualization of the connectome, plotting the full weighted graph, between all pairs of nodes.
 
-
 	figure;imagesc(source_conn.cohspctrm);
-
 
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_connectomefull.png@300)
 
@@ -457,7 +422,6 @@ When creating a parcellated connectivity matrix, we combine the connectivity val
 
 In fieldtrip, we use **[ft_sourceparcellate](/reference/ft_sourceparcellate)**
 
-
 	load atlas_MMP1.0_4k.mat;
 	atlas.pos = source_conn.pos; % otherwise the parcellation won't work
 
@@ -468,14 +432,12 @@ In fieldtrip, we use **[ft_sourceparcellate](/reference/ft_sourceparcellate)**
 
 	figure;imagesc(parc_conn.cohspctrm);
 
-
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_connectomeparc.png@300)
 
 *Figure 7: connectivity matrix between all pairs of parcels*
 ### Network analysis
 
 We can now explore the structure in the estimated connectivity matrices using graph theoretic tools. It is not really clear what the effect of the residual spatial leakage of activity is on the estimates of some of these measures, so we would caution for careful interpretations of graph metrics derived from such connectivity matrices, particularly when comparing groups of experimental participants or experimental conditions. Yet, the intention of this tutorial is still to illustrate how such graph theoretic measures can in principle be computed and visualized using fieldtrip. To this end, we are going to use **[ft_networkanalysis](/reference/ft_networkanalysis)**, using **cfg.method** = 'degrees'. Specifying a prior threshold (e.g., **cfg.threshold** = .1) results in an estimate of the 'node degree', i.e. the amount of nodes with which a particular node has an estimated connectivity of (in this case) 0.1 or higher. There are several ways to determine the threshold, for instance based on some statistical parameterization or previous observation in the literature, yet all of them are and remain arbitrary.
-
 
 	cfg           = [];
 	cfg.method    = 'degrees';
@@ -494,7 +456,6 @@ We can now explore the structure in the estimated connectivity matrices using gr
 
 	ft_sourceplot(cfg, network_parc);
 	view([-150 30]);
-
 
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_degreefull.png@300)
 ![image](/media/tutorial/networkanalysis/tutorial_nwa_degreeparc.png@300)
@@ -516,11 +477,9 @@ We can now explore the structure in the estimated connectivity matrices using gr
 
 The graph-based analysis illustrated above allows for only a crude inspection of the connectomes. One detail that is not visualized in this way is the spatial structure of the connections for a given node/parcel. To get a feel how the estimated connectivity patterns change as a function of 'seed' location is important. You will notice that the patterns may quite dramatically change, when moving from one seed location to the next. On the other hand, often nearby seed locations will lead to very similar spatial pattern. The directory that contains the data for this tutorial contains a simple function that allows for this exploration. It can be invoked as follow
 
-
 	load sourcemodel_4k_inflated;
 	source_conn.pos = sourcemodel.pos;
 	tutorial_nwa_connectivityviewer(source_conn, 'cohspctrm', [0 0.1]);
-
 
 The first input argument is the data structure with the connectivity matrix you want to explore. The second input argument is a string that designates the name of the field to be visualized. The third input argument defines the limits of the color scale. When clicking on the cortical sheet in the figure, you will specify the seed location from which the spatial pattern of connectivity will be displayed.
 

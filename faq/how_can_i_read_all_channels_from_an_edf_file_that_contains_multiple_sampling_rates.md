@@ -3,7 +3,6 @@ layout: default
 tags: faq edf preprocessing
 ---
 
-
 # How can I read all channels from an EDF file that contains multiple sampling rates?
 
 The representation of time-series data in FieldTrip requires that all channels have the same number of samples, since the data is stored in a Nchan by Nsamples matrix. 

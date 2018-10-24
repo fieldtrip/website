@@ -3,11 +3,9 @@ layout: default
 tags: faq freq
 ---
 
-
 # How can I compute inter-trial coherence?
 
 Inter-trial coherence is a measure of phase consistency over trials. It is not a connectivity measure, as it does not relate the phase in one channel to that of another channel. You can compute it following frequency decomposition of your data. You can use cfg.method='mtmfft', 'mtmconvol' or 'wavelet, but in either case you should use cfg.output='fourier'. Here is an example
-
 
     cfg = [];
     cfg.numtrl = 100

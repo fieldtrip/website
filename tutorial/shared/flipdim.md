@@ -8,7 +8,6 @@ Flipping dimensions after segmenting the volumes (gray, white, and CSF) can easi
 
 The example segmented data is available at [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat).   
 
-
 	load segmentedmri
 	
 	mri = ft_read_mri('Subject01.mri');
@@ -28,9 +27,7 @@ The example segmented data is available at [ftp:/ftp.fieldtriptoolbox.org/pub/fi
 	cfg.funparameter = 'csf';
 	ft_sourceplot(cfg,segmentedmri); %segmented csf matter on top
 
-
 ![image](/media/example/mnispace/segmentcheck_right.jpg)
-
 
 When the segmented volumes are not correctly aligned with the anatomical volume, they could look like this. 
 
@@ -38,9 +35,7 @@ When the segmented volumes are not correctly aligned with the anatomical volume,
 
 In this particular example, the volumes are flipped one too many times around the x-axis. In order to solve this, one could flip the image around the x-axis again before preparing the headmodel. For exampl
 
-
 	segmentedmri.gray  = flipdim(segmentedmri.gray,1);
 	segmentedmri.white = flipdim(segmentedmri.white,1);
 	segmentedmri.csf   = flipdim(segmentedmri.csf,1);
-
 

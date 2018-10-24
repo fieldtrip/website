@@ -3,13 +3,11 @@ layout: default
 tags: example freq
 ---
 
-
 #  Simulate an oscillatory signal with phase resetting
 
 ## Narrow-band oscillation
 
 The following code simulates a clean oscillating signal with a phase reset at time zero.
-
 
 	clear all
 	close all
@@ -32,14 +30,11 @@ The following code simulates a clean oscillating signal with a phase reset at ti
 	figure; 
 	plot(t, mean(d,1))
 
-
 ![image](/media/example/phase_reset_narrowband.png@400)
 
 ## Broad-band oscillation
 
 The following code also includes a small "random walk" in the phase, i.e. the signal is a little bit broad-band and over time there is some phase dispersion. At t=0 there is still a phase reset. The phase dispersion causes the average ERF again to disappear some time following the phase reset.
-
-
 
 	clear all
 	close all
@@ -64,7 +59,6 @@ The following code also includes a small "random walk" in the phase, i.e. the si
 	 
 	figure; 
 	plot(t, mean(d,1))
-
 
 ![image](/media/example/phase_reset_broadband.png@400)
 

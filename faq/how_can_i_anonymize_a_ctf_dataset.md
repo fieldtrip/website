@@ -25,7 +25,6 @@ It is advisable to also convert the headlocalizer datasets, which are inside the
 After creating the anonymous dataset, you should delete the **defaults.de** ascii file that is present in the `<savePath>`, because that contains some information that can be traced back to the original file location on disk (which may include your name or the name of the subject).
 `</note>`
 
-
 An example use is (note that this should all be on a single line)
 
     newDs -anon -includeBadChannels -includeBadSegments -includeBad /home/common/matlab/fieldtrip/data/Subject01.ds ~/anon/Subject01.ds

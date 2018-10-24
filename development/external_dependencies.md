@@ -15,25 +15,21 @@ Some fieldtrip functions use spm2, spm5 and eeglab for the actual computations. 
 
 E.g.
 
-
 *  fieldtrip/external/spm2 -> containing smoothing and segmentation
 
 *  fieldtrip/external/spm5 -> containing reading of niftii
 
 *  fieldtrip/external/eeglab -> containing runica
 
-
 Better would be to get rid of spm2 altogether and migrate spm5 towards spm8, but that requires real coding. 
 
 # Steps to take
-
 
 *  make inventory of external dependencies: which functions are involved
 
 *  add a copy of those functions to fieldtrip
 
 *  modify "hastoolbox" to ensure that it correctly recognizes the stripped down version
-
 
  
 

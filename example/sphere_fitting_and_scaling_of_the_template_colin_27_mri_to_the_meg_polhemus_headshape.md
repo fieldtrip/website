@@ -143,4 +143,3 @@ layout: default
 	lighting phong
 	
 
-

@@ -26,5 +26,3 @@ which results in something like this
     idle slave  at roboos@mentat003.fcdonders.nl:1701, group = unknown, hostid = 902023272
     idle slave  at roboos@mentat002.fcdonders.nl:1701, group = unknown, hostid = 194834309
 
-
-

@@ -119,7 +119,6 @@ The worst that can happen is that the next morning you’ll see some red lines i
 	  end
     end
 
-
 ## Example batches
 
 The following function will load the data as specified in Subject01.m, uses the databrowser for visual inspection of artifacts, rejects those trials containing artifacts and then saves the data in a separate folder as “01_preproc_dataM.mat”. You can simply call it by “do_preprocess_MM(‘Subject01’);”

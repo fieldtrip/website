@@ -3,7 +3,6 @@ layout: default
 tags: example ieeg eeg ecog ecog-visual
 ---
 
-
 ## Analysis of high-gamma band signals in human ECoG
 
 ### Introduction
@@ -54,7 +53,6 @@ In line with the [main tutorial](/tutorial/human_ecog), you can use the followin
 	hs = ft_plot_sens(elec, 'style', 'ko', 'label', 'on');
 	set(hs, 'MarkerFaceColor', 'k', 'MarkerSize', 6);
 
-
 ![image](/media/tutorial/ny394_elec_loc_lateral.png@400)
 
 #### 1. Data preprocessing
@@ -72,14 +70,12 @@ First, we will load the data and segment them into trials using **[/reference/ft
 	cfg.continuous = 'yes';
 	epoch_data = ft_preprocessing(cfg);
 
-
 The data still contain some channels that are not required for the further analysis (e.g. 'Pulse' and 'ECG' channels). We will use **[/reference/ft_selectdata](/reference/ft_selectdata)** to select only channels that have the 'EEG' prefix. Only these data will be submitted to subsequent analysis steps.
 
 	
 	cfg         = [];
 	cfg.channel = 'EEG*'; % select 'EEG' channles
 	epoch_data = ft_selectdata(cfg,epoch_data);
-
 
 Artifact rejection can be done by visually inspecting individual trials and channels, or by using summary statistics that are calculated across trials and channels (see tutorial [here](/tutorial/visual_artifact_rejection)). We will first visually reject bad channels by browsing through the data channel-wise using **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** with the method 'channel'. You will notice that the data from channel 23 appear very noisy after about a quarter of trials. This is probably a technical artifact due to a bad electrode contact. Therefore, the channel should be marked as bad.
 
@@ -88,7 +84,6 @@ Artifact rejection can be done by visually inspecting individual trials and chan
 	cfg.method  = 'channel'; % browse through channels
 	cfg.channel = 'all';
 	epoch_data_clean_chan = ft_rejectvisual(cfg, epoch_data);
-
 
 ![image](/media/tutorial/ny394_bad_channel.png@400)
 
@@ -99,7 +94,6 @@ For rejecting artifact trials, we will use the 'summary' method in **[/reference
 	cfg.method  = 'summary'; % summary statistics across channels and trials
 	cfg.channel = 'all';
 	epoch_data_clean = ft_rejectvisual(cfg, epoch_data_clean_chan);
-
 
 #### 2. Re-reference the data
 
@@ -134,7 +128,6 @@ The analysis of event-related potentials is done in accordance with the standard
 	ERP_object_bl = ft_timelockbaseline(cfg,ERP_object);
 	ERP_face_bl   = ft_timelockbaseline(cfg,ERP_face);
 
-
 For plotting the data we select channel 'IO_03', located in or in close proximity of the fusiform face area, which is known to strongly respond to face stimuli. In agreement with the literature, the ERPs appear to be larger for 'face' compared to ‘object’ stimuli. Before plotting, we need to average the data across trials, because we kept the individual trials when initially calling ft_timelockanalysis.
 
 	
@@ -149,7 +142,6 @@ For plotting the data we select channel 'IO_03', located in or in close proximit
 	cfg.channel   = 'EEG IO_03-REF'; % other responsive channels: 'EEG PT_04-REF', 'EEG IO_02-REF', 'EEG IO_04-REF', 'EEG SO_01-REF', 'EEG SO_02-REF''EEG SO_03-REF'
 	 
 	figure, ft_singleplotER(cfg,ERP_object_avg,ERP_face_avg)
-
 
 ![image](/media/tutorial/ny394_erp_single_small.png@400)
 
@@ -201,7 +193,6 @@ To calculate HGP, we will first perform **[/reference/ft_freqanalysis](/referenc
 	 
 	clear TFR*
 
-
 Again, we decided to plot channel 'IO_03'. As was the case for the ERPs, the HGP response at this channel was larger for 'face' stimuli than 'object' stimuli.
 
 	
@@ -211,7 +202,6 @@ Again, we decided to plot channel 'IO_03'. As was the case for the ERPs, the HGP
 	cfg.channel   = 'EEG IO_03-REF'; % other responsive channels: 'EEG PT_03-REF', 'EEG PT_04-REF', 'EEG IO_02-REF', 'EEG IO_04-REF', 'EEG SO_01-REF', 'EEG SO_02-REF''EEG SO_03-REF'
 	 
 	figure, ft_singleplotER(cfg,HGP_object_bl,HGP_face_bl)
-
 
 ![image](/media/tutorial/ny394_hgp_single_small.png@400)
 
@@ -236,7 +226,6 @@ In the next analysis step, we statistically compare the responses of 'objects' v
 	stats_ERP = ft_timelockstatistics(cfg,ERP_object_bl,ERP_face_bl);
 	stats_HGP = ft_timelockstatistics(cfg,HGP_object_bl,HGP_face_bl);
 
-
 We first check whether the cluster statistic revealed significant channels. If there are significant channels, we will plot them.
 
 	
@@ -246,14 +235,12 @@ We first check whether the cluster statistic revealed significant channels. If t
 	% none of the channels contain significant differences between conditions
 	
 
-
 Although the visual inspection of the data indicated stronger ERP responses for 'face' stimuli in an electrode near the fusiform face area, the statistical analysis of ERPs did not reveal significant effects at any channel. Thus, we move on to the statistics of the HGP data.
 
 	
 	% look for significant channels in HGP stats
 	[chans time] = find(stats_HGP.mask);
 	chans = unique(chans)
-
 
 There are six channels with significantly different HGP time courses when comparing the ‘objects’ and ‘faces’ conditions. We will plot each of these channels using **[/reference/ft_singleplotER](/reference/ft_singleplotER)**.
 
@@ -280,7 +267,6 @@ There are six channels with significantly different HGP time courses when compar
 	    figure, ft_singleplotER(cfg,HGP_object_bl,HGP_face_bl),
 	end
 	
-
 
 ![image](/media/tutorial/ny394_hgp_contrast_io3.png@400)
 ![image](/media/tutorial/ny394_hgp_contrast_io2.png@400)
@@ -316,7 +302,6 @@ To get an idea about the spectral content in the ECoG dataset, we will calculate
 	TFR_object_bl = ft_freqbaseline(cfg, TFR_object);
 	TFR_face_bl   = ft_freqbaseline(cfg, TFR_face);
 
-
 To visualize the time-frequency data from the two conditions, we will plot TFRs for some representative channels using **[/reference/ft_singleplotTFR](/reference/ft_singleplotTFR)**.
 
 	
@@ -328,7 +313,6 @@ To visualize the time-frequency data from the two conditions, we will plot TFRs 
 	 
 	figure, ft_singleplotTFR(cfg,TFR_object_bl)
 	figure, ft_singleplotTFR(cfg,TFR_face_bl)
-
 
 ![image](/media/tutorial/ny394_tfr_io3_object.png@400)
 ![image](/media/tutorial/ny394_tfr_io3_face.png@400)
@@ -355,7 +339,6 @@ In the next step, we statistically compare the TFRs of the ‘house’ and ‘fa
 	 
 	stats_TFR = ft_freqstatistics(cfg,TFR_object_bl,TFR_face_bl);
 
-
 Finally, we will plot the masked t-values from significant channels of the statistical contrast.
 
 	
@@ -377,7 +360,6 @@ Finally, we will plot the masked t-values from significant channels of the stati
 	    cfg.channel = chan(ichan);
 	    figure, ft_singleplotTFR(cfg,stats_TFR),
 	end 
-
 
 ![image](/media/tutorial/ny394_tfr_contrast_io3.png@400)
 ![image](/media/tutorial/ny394_tfr_contrast_io2.png@400)

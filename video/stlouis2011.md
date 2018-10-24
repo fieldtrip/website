@@ -3,7 +3,6 @@ layout: default
 tags: video
 ---
 
-
 # FieldTrip workshop for the Human Connectome project at Washington University, St. Louis (2011)
 
 The lectures of a FieldTrip workshop that we presented at WashU in St. Louis in the context of the Human Connectome Project have been recorded and made online available. 

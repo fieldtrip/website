@@ -9,7 +9,6 @@ The purpose of this page is just to serve as todo or scratch pad for the develop
 The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-
 Status: the connectivityanalysis and connectivitysimulation function have been implemented.
 
 The goal is to create a multi-purpose function which takes raw/timelock/freq/source/mvar data as an input and computes coupling measures such as

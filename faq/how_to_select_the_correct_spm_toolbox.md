@@ -3,7 +3,6 @@ layout: default
 tags: faq spm toolbox path
 ---
 
-
 # How to select the correct SPM toolbox?
 
 Before May 2010, FieldTrip relied on old SPM2 code to do some operations on volumetric images. These operations entailed volumetric smoothing, spatial normalisation, segmentation, and the reading in of a few mri-filetypes. The SPM2 code dates from 2002 and the toolbox does not run correctly on recent versions of matlab. In particular, some MATLAB functions (on which the SPM2 code relied) do not exist in recent versions of matlab anymore. Moreover, SPM2 is not compiled for a 64-bit architecture.
@@ -19,7 +18,6 @@ In such case you have to put a lower SPM-version higher on your MATLAB path. One
 You can check in your command window which SPM is currently in your path with:
 
     which spm
-
 
     
 

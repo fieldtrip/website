@@ -6,7 +6,6 @@ layout: default
 
 **[Ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** require the original MEG dataset, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 
-
 	
 	% find the interesting segments of data
 	cfg = [];                                           % empty configuration
@@ -25,7 +24,6 @@ layout: default
 	cfg.demean    = 'yes';                              % do baseline correction with the complete trial
 	
 	dataFIC = ft_preprocessing(cfg);
-
 
 These data have been cleaned from artifacts by removing several trials and two sensors; see the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection).
 

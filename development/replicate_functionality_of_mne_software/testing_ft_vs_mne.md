@@ -87,7 +87,6 @@ The data looks like this when I plot i
 	cfg  = [];
 	average = ft_timelockanalysis(cfg, data);
 
-
 There is nothing to average indeed, because I use only one trial but I need to get the right structure from  ft_timelockanalysis. The avg field of average and the trial field of data are indeed identical.
 
 	
@@ -119,7 +118,6 @@ And I used this code for noise-covariance estimation. I defined the entire lengt
 	%         cov: [1x151x151 double]
 	%        grad: [1x1 struct]
 	%         cfg: [1x1 struct]
-
 
 It is not totally clear for me from the help why 'keeptrials' has to be yes. But I guess it is necessary for the noise-covariance estimation otherwise it makes an average from the data.
 It is written in the help that the default values of 'latency' is 'maxperlength' but I still had to define it.
@@ -173,7 +171,6 @@ The source space is a 2D surface.
 	%       outside: [200x1 double]
 	%     leadfield: {1x841 cell}
 	%          cfg: [1x1 struct]
-
 
 It is not clear for me when you have to define the option grid.inside and grid.outside at ft_prepare_leadfield.
 
@@ -250,12 +247,10 @@ Trying to understand the results above, we looked at the phantom data in detail.
 	figure;surf(x,y,z,reshape(mean(source2.avg.pow,2), [29 29])); title('no pinv');
 	
 
-
 This yields the following figure
 
 ![image](/media/development/mne-pinv.png@400)
 ![image](/media/development/mne-nopinv.png@400)
-
 
 Clearly, there is an issue with the (default) pinv implementation. Apparently, some regularization should be done for the MNE to give meaningful results.
 
@@ -323,7 +318,6 @@ This involves specifying cfg.mne.noisecov, cfg.mne.sourcecov, cfg.mne.lambda pri
 	% plot a random source
 	figure;plot(source.avg.mom{source.inside(100)}');
 
-
 This gives the following figur
 
 ![image](/media/development/phantomftvsmne01.png@400)
@@ -355,7 +349,6 @@ This gives the following figur
 	
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
-
 
 ![image](/media/development/phantomftvsmne02.png@400)
 
@@ -426,7 +419,6 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	% plot a random source
 	figure;plot(source.avg.mom{source.inside(100)}');
 
-
 ![image](/media/development/plot_source_100.jpg@300)
 
 	
@@ -458,7 +450,6 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
-
 ![image](/media/development/ftplotmesh_ft_phantom.jpg@300)
 
 I have also tried to plot it the same way as I plot the mesh for the mne suite results (see below). And I changed lambda to 0.01 (because 0.01^2 = 1e-4).
@@ -484,7 +475,6 @@ I have also tried to plot it the same way as I plot the mesh for the mne suite r
 	
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',mred,'edgecolor','none');axis on
-
 
 ![image](/media/development/ftplotmesh_ft_phantom_at198.jpg@300)
 
@@ -549,7 +539,6 @@ Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
 	hold on;
 	ft_plot_mesh(grid.pos(gridnew,:));
 
-
 ![image](/media/development/griddiff_mne_ft.jpg@450)
 
 	
@@ -585,7 +574,6 @@ Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
 	    data2 = cat(2, data(:,2), data(:,1), data(:,3));
 	    grid2.leadfield{grid2.inside(i)}=data2;
 	end
-
 
 FIXME I should match the positions of the source points with each other.
 
@@ -623,7 +611,6 @@ FIXME I should match the positions of the source points with each other.
 	% plot a random source
 	figure;plot(source2.avg.mom{source2.inside(100)}');
 
-
 ![image](/media/development/replicate_functionality_of_mne_software/plot_source3_100.jpg@650)
 
 The same figure of a random source calculated with the original leadfield of FieldTrip looks like thi
@@ -660,7 +647,6 @@ Note, that the values in the second figure are much larger.
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',mred,'edgecolor','none');axis on
 
-
 ![image](/media/development/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at284_leadfmne.jpg@300)
 
 Compare this to figure at the end of the next session ("Minimum-norm estimate with MNE Suite using phantom data").
@@ -678,18 +664,15 @@ Compare this to figure at the end of the next session ("Minimum-norm estimate wi
 	echo $SUBJECTS_DIR
 	export SUBJECT=phantomas
 
-
 ### Data conversion
 
 	
 	cd /`<path>`/test/MEG/phantomas
 	mne_ctf2fiff --ds MagPhant_Phantom_20031211_01-av.ds --fif phantomas-raw
 
-
 ### Setup source space
 
 First, I have created text files with matlab.
-
 
 	pos_mm=pos.*10; %this pos structure is the same that I used in FT
 	
@@ -707,17 +690,14 @@ First, I have created text files with matlab.
 	end
 	fclose(fid);
 
-
 And then, I created the source space for MNE Suite.
 
 	
 	mne_volume_source_space --pos /`<path>`/pos.txt --src /`<path>`/test/subjects/phantomas/bem/phantomas-src.fif
 
-
 ### Creating the volume-conductor
 
 First, I have created a text file in matlab with .tri extension
-
 
 	clear all;
 	[pnt, tri]=icosahedron642;
@@ -747,13 +727,11 @@ First, I have created a text file in matlab with .tri extension
 	end
 	fclose(fid);
 
-
 I renamed the .txt file to .tri.
 And then, I used MNE Suite.
 
 	
 	mne_surf2bem --tri /`<path>`/vol.tri --sigma 1 --id 1 --fif /`<path>`/test/subjects/phantomas/bem/phantomas-bem.fif
-
 
 :?: The value (1) after sigma is the conductivity value that is supposed to be in S/m. I set it to 1 because conductivity was set to 1 also in FT, but I do not know the unit of the conductivity in FT.
 The value (1) after id means that this is an innerskull mesh. I do not know if it is necessary to specify this.
@@ -765,7 +743,6 @@ I had to rename phantomas-raw.fif to phantomas_raw.fif.
 	
 	cd /data/corpora/MPI_workspace/ncl/studass/lilla/FT/test/MEG/phantomas
 	mne_browse_raw
-
 
 File... Open... 
 
@@ -789,7 +766,6 @@ I did the averaging in batch mode with the help of an averaging file.
 
 	
 	mne_process_raw --raw phantomas_raw.fif --projoff  --filteroff --events phantomas1.eve --ave phantomas.ave --digtrig STIM
-
 
 The averaging file (phantomas.ave
 
@@ -832,7 +808,6 @@ Windows... Manage averages... (It should be N=1)
 
 I made a noise-covariance matrix in Matlab. It was necessary because MNE did not calculate a noise-covariance matrix because I had only 1 trial that is shorter than 20 s.
 
-
 	cov = [];
 	cov.data = eye(186);
 	
@@ -853,12 +828,10 @@ I made a noise-covariance matrix in Matlab. It was necessary because MNE did not
 	
 	mne_write_cov_file('phantomas3-cov.fif',cov);
 
-
 ### Coordinate alignment
 
 	
 	mne_analyze
-
 
 I haven't aligned anything but a transformation matrix saved (with diagonal matrix with 1's on the diagonal).
 
@@ -869,19 +842,15 @@ I haven't aligned anything but a transformation matrix saved (with diagonal matr
 	
 	mne_do_forward_solution --src phantomas-src.fif --bem phantomas-bem.fif  --meas phantomas-ave.fif --fwd phantomas-fwd.fif --megonly 
 
-
-
 ###  Inverse solution
 
 	
 	mne_do_inverse_operator --fwd phantomas-fwd.fif --senscov phantomas3-cov.fif --meg
 
-
 ### Visualizing the result in Matlab
 
 	
 	res = mne_ex_compute_inverse('/home/language/lilmag/Lilla/phantom_mne/phantomas-ave.fif',1,'/home/language/lilmag/Lilla/phantom_mne/phantomas-meg-inv.fif',1,1e-4,[]);
-
 
 The arguments ar
 
@@ -902,12 +871,10 @@ I got a res structure.
 	
 	figure; plot(res.sol(100,:));
 
-
 ![image](/media/development/plot_res_sol_100.jpg@400)
 
 	
 	[r,c]=find(res.sol==max(res.sol(:)))
-
 
 Maximum was at 284.
 
@@ -937,7 +904,5 @@ Maximum was at 284.
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
-
 ![image](/media/development/ftplotmesh_mne_phantom_at284.jpg@300)
-
 

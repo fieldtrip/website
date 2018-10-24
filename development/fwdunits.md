@@ -18,7 +18,6 @@ This refere to a bug submitted by V.Litvak, suggesting to give the lead field a 
 
 The discussed issues regard, among others, the following topic
 
-
 *  Units can be estimated by looking at the raw datasets, does the 'units' field have to be attached from the beginning?
 
 *  In case of absence of units, they can be recovered by looking at the header
@@ -27,16 +26,13 @@ The discussed issues regard, among others, the following topic
 
 *  The user should dispose of function to convert to the wanted units: i.e. I dont know what the units are but i want my data in microvolts
 
-
 This topic is important and its implementation impacts both on FT and SPM users, so: BE CAREFUL!
-
 
 ## Some actions to take (Cristiano)
 
 Here is the list of the functions in the module Forward (folders: _fieldtrip/forward and _fieldtrip/forwar/private) that need the units to be documented in their help (this is necessary also for other modules, like e.g. the fileio module
 
 ### _fieldtrip/forward 
-
 
 __UNITS are required for:__
 
@@ -70,7 +66,6 @@ ft_senstype.m
 ft_senslabel.m
 ft_sourcedepth.m (?)
 
-
 ### _fieldtrip/forward/private 
 
 __UNITS are required for:__
@@ -95,7 +90,6 @@ meg_ini.m
 monopole_leadfield.m
 project_elec.m
 transfer_elec.m
-
 
 __UNITS are NOT required for:__
 
@@ -123,7 +117,6 @@ ptriproj.m
 solid_angle.m
 triangle4pt.m
 warp_apply.m
-
 
 **functions which have the .m file somewhere else (src folder?)**
 

@@ -3,7 +3,6 @@ layout: default
 tags: faq video
 ---
 
-
 #  Are the FieldTrip lectures available on video?
 
 Yes and no. Some material is online available, but not all. Please see the [video documentation](/video) page.

@@ -17,7 +17,6 @@ If you give a structure as input to an existing function, the type of the input 
 
 A FieldTrip data structure consists at least of numeric data specific to that particular datatype, and of descriptive fields which are needed to interpret the data. The different datatypes, their features and their historical development are defined in the following reference documentatio
 
-
 *  **[ft_datatype_raw](/reference/ft_datatype_raw)** contains sensor level time domain data typically obtained after calling [ft_definetrial](/reference/ft_definetrial) and [ft_preprocessing](/reference/ft_preprocessing).
 *  **[ft_datatype_comp](/reference/ft_datatype_comp)** contains the spatial topograpies of the components and the component timecourses and is obtained from a call to [ft_componentanalysis](/reference/ft_componentanalysis). It is represented just as raw data, except that an additional matrix is added describing the spatial topographies of the components. The original channel labels are replaced by strings like 'ica001', 'ica002', ... After [ft_componentanalysis](/reference/ft_componentanalysis), you can call any function that can work with raw data, e.g. [ft_timelockanalysis](/reference/ft_timelockanalysis) or [ft_freqanalysis](/reference/ft_freqanalysis). The [ft_topoplotIC](/reference/ft_topoplotIC) function can be used to visualize the component topographies and the [ft_databrowser](/reference/ft_databrowser) to look at the component timecourses.
 *  **[ft_datatype_timelock](/reference/ft_datatype_timelock)** contains sensor level data, time-locked to time point 0, either as an average over trials or represented as single trials in a 3-D array. It is obtained after a call to [ft_timelockanalysis](/reference/ft_timelockanalysis) or [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage). Optionally, it can contain the estimated covariance matrix (again averaged over trials or for each trial in a 3-D array).
@@ -65,8 +64,6 @@ An example of a source structure obtained after performing a frequency domain so
 ### New style
 
 This is the new definition of a data structure that represents data corresponding to locations in 3-D space. In the future this will replace the 'old style' definition. It has been designed to be more flexible and more easy to manage. Also, exchange with other software toolboxes and code development should be facilitated by this. An example of such a source structure obtained after performing a frequency domain source reconstruction is shown here:
-
-
 
 	          pos: [6732x3 double]       positions at which the source activity could have been estimated
 	       inside: [6732x1 logical]      logical vector of positions at which the source activity is actually estimated

@@ -3,7 +3,6 @@ layout: default
 tags: nirs artinis
 ---
 
-
 # Getting started with Artinis NIRS data
 
 [Artinis Medical Systems BV](http://www.artinis.com/) is a Dutch company that develops and produces systems for functional NIRS. Artinis has multiple hardware designs, which all work with the same [Oxysoft](http://www.artinis.com/oxysoft) acquisition and analysis software. 

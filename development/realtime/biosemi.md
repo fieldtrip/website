@@ -3,7 +3,6 @@ layout: default
 tags: realtime biosemi
 ---
 
-
 # Biosemi ActiveTwo EEG amplifier
 
 This page describes the interface between the [Biosemi EEG amplifier](http://www.biosemi.com) and the [FieldTrip buffer](/buffer).
@@ -86,7 +85,6 @@ The ActiveTwo can send out 312 data channels in total, out of which there are 25
 	# low and high byte of the original signal, respectively.
 	splittrigger stimulus response
 
-
 ### Compilation
 
 You will need the Labview DLL (or shared object), which you can download from [the Biosemi website](http://www.biosemi.com/download.htm).
@@ -96,6 +94,5 @@ For compiling the ''biosemi2ft'' tool, change to the ''realtime/datasource/biose
 also work with the MinGW compiler on Windows. Note that you might need to compile the buffer library first.
 
 ## External links
-
 
 *  http://www.biosemi.com

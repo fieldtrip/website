@@ -3,8 +3,6 @@ layout: default
 tags: example freq
 ---
 
-
-
 # Analyze Steady-State Visual Evoked Potentials (SSVEPs)
 
 Steady-state stimulation is frequently used for sensory stimulation in the visual (SSVEP), auditory (SSAEP), and somatosensory (SSSEP) domains. On this page, we will first present an example analysis strategy for a 64-channel SSVEP dataset. Subsequently, we will make some simulated data and use another analysis strategy.
@@ -17,22 +15,18 @@ There are 2 loads x 4 blocks x 4 ring excentricities x 10 trials = 320 SSVEP tri
 
 ![image](/media/example/ssvep.jpg@600)
 
-
 In the analysis, consider whether the frequency tagged (or steady state ) stimulus is 
  1.  phase consistent over trials. If so, average and then do wavelet/mtmconvol/mtmfft, or time-domain regression. (In the example, each 4.56-s SSVEP trial has the same phase.)
  2.  not phase consistent across trials, but the phase of the stimulus is known. If so, Fourier decompose to get the complex representation, deal with single-trial phase differences, then average. (In the example, the onset of the rectangles is jittered relative to the onset of a SSVEP trial. Thus, the phase of the flashing rings varies between rectangle trials).
  3.  not phase consistent across trials, and the phase of the stimulus is not known. If so, Fourier decompose to get the power and average over trials. 
 
-
 Furthermore, consider whether the cortical response 
  1.  is assumed to be constant within the trial
  2.  changes over time within the trial
 
-
 Finally, consider whether the stimulation contains 
  1.  a single frequency, as in a traditional SSVEP
  2.  a mixture of multiple frequencies, as in frequency tagging 
-
 
 ### Using time-domain analysis
 
@@ -45,7 +39,6 @@ This section is still to be written.
 `<note warning>`
 This section should be made specific to the example dataset.
 `</note>`
-
 
 ## Create and analyze a simulated steady-state dataset
 

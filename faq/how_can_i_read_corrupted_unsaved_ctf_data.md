@@ -3,7 +3,6 @@ layout: default
 tags: faq raw corrupt preprocessing ctf
 ---
 
-
 # How can I read corrupted (unsaved) CTF data?
 
 When during recording a system failure occurs, the dataset may not be (properly) saved. This may have its problematic consequences with respect to the offline reading of the data. Because prior to recording the CTF system is set up to record 1000 10-second trials, and subsequently corrected during saving of the actually recorded trials, there is a mismatch between the headerinformation and the datafile.

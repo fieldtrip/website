@@ -36,7 +36,6 @@ The photodiode was activated whenever a cueing stimulus or pacing arrow was pres
 
 *Figure Caption: Photodiode trigger sequence extracted from the Trigger channel of one Motor Task run.*
 
-
 ￼￼
 ￼The E-Prime triggers contain the information about the experimental sequence. These triggers are superimposed on the photodiode triggers, in the following description it is assumed that the photodiode triggers have been subtracted from the trigger channel so that only the triggers from the E-Prime stimulation protocol remain. Such an E-Prime trigger sequence, extracted from the trigger channel is shown, right.
 

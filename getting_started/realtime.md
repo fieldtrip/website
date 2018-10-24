@@ -3,7 +3,6 @@ layout: default
 tags: realtime tutorial example
 ---
 
-
 # Getting started with real-time analysis for BCI/neurofeedback
 
 With FieldTrip it is possible to analyze EEG/MEG data in real-time and to create applications for BCI, neurofeedback or for other situations in which you want to be flexible in the analysis and display of data. The real-time support in FieldTrip is not yet as mature as the other functions, so it requires a little more programming from your side.
@@ -45,7 +44,6 @@ Instead of playing back real data to get a realistic experience , you can also s
 
 Both the **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)** and **[ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)** should be started in a separate Matlab session, just like all other ft_realtime_XXXproxy functions, i.e. you should have one Matlab session that generates or reads data from file or acquisition system and writes it to the buffer. In the other Matlab session, which can be on another computer, you read from the buffer to do real-time analysis and visualization.
 
-
 ## Analyzing the data stream
 
 There are two approaches for processing data in real-time. It might be that you want to analyze all data that comes from the amplifier, irrespective of triggers or events. Alternatively, you might want to analyze only pieces of data following a stimulus. An example of the first could be an imagined movement BCI control system, whereas an example of the second would be a P300 speller.
@@ -73,7 +71,6 @@ To close the loop in your BCI application, you have to communicate the control s
 There are various options for closing the loop documented [here](/development/realtime/closing_the_loop).
 
 ## Overview of all examples used here
-
 
 *  [example:ft_realtime_signalviewer](/example/ft_realtime_signalviewer)
 

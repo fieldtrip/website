@@ -3,7 +3,6 @@ layout: default
 tags: faq realtime
 ---
 
-
 ## What kind of cable do I need for a serial port connection between two computers?
 
 For the type of connection we are talking about here, you need a so called 'null modem cable'. [A null modem cable is an RS-232 serial cable where the transmit and receive lines are crosslinked.](http://en.wikipedia.org/wiki/Null_modem)
@@ -12,14 +11,11 @@ For the type of connection we are talking about here, you need a so called 'null
 
 To check that the serial connection between a linux computer and a windows computer is functional, you can do the followin
 
-
 *  On the linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g. /dev/ttyS0/). The main thing to consider is the Baudrate(e.g. 115200), which has to be the same on sending and receiving end. 
 
 *  On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baudrate is the same as on the linux machine(i.e. 115200).
 
 *  Then once the connection is established you can type in the windows putty display and can then read it from the linux putty display and vice versa. If this doesn't work just check the hardware connections.
-
-
 
 ### Measure delays of sending and receiving a control command using a serial port connection
 
@@ -83,13 +79,11 @@ This is what I did on my office PC using fieldtrip commands **[ft_read_event](/r
 	fclose('all');
 	
 
-
 What I got looks like thi
 
 ![image](/media/faq/serial_connect_write_read_event.jpg@400)
 
 Alternatively, one can simply use matlab serial objects and low level reading function fread or fscan
-
 
 	
 	%% objects are cleared
@@ -163,14 +157,7 @@ Alternatively, one can simply use matlab serial objects and low level reading fu
 	fclose('all');
 	delete(instrfind);
 
-
 The picture looks similar, only slightly faster.
 
 ![image](/media/faq/serial_connect_write_read_matlab_serial.jpg@400)
-
-
-
-
-
-
 

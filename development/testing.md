@@ -14,7 +14,6 @@ FIXME See also [/development/infrastructure_for_testing](/development/infrastruc
 
 # Testing code quality
 
-
 ## Supported Matlab versions and operating systems
 
 An overview of Matlab versions is available on the [Mathworks site](http://www.mathworks.com/support/sysreq/previous_releases.html).
@@ -41,8 +40,6 @@ The solution requires export LD_PRELOAD=/lib/libgcc_s.so.1, see [Mathworks techn
 cd /opt/matlab70/sys/os/glnxa64
 mv libgcc_s.so.1 libgcc_s.so.1.BAK
 
-
-
 ## Available Matlab versions within the FC Donders
 
 Windows 32 bit
@@ -61,13 +58,11 @@ Windows 32 bit
 
 *  matlab 7.4
 
-
 Windows 64 bit
 
 *  matlab 7.3
 
 *  matlab 7.4
-
 
 Linux 32 bit
 
@@ -83,7 +78,6 @@ Linux 32 bit
 
 *  matlab 7.4 (?)
 
-
 Linux 64 bit
 
 *  matlab 7.0
@@ -95,7 +89,6 @@ Linux 64 bit
 *  matlab 7.3
 
 *  matlab 7.4
-
 
 Macintosh PPC
 
@@ -111,11 +104,9 @@ Macintosh PPC
 
 *  matlab 7.4
 
-
 Macintosh Intel
 
 *  matlab 7.3
 
 *  matlab 7.4
-
 

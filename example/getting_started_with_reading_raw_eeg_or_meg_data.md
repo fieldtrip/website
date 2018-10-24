@@ -3,7 +3,6 @@ layout: default
 tags: example eeg meg raw preprocessing trialdef
 ---
 
-
 # Getting started with reading raw EEG or MEG data
 
 In FieldTrip you first have to define the segments of data in which you are interested, i.e. the "trials". That is done using the DEFINETRIAL function. You can use the DEFINETRIAL function also to show a summary of all events on your data fil
@@ -14,7 +13,6 @@ In FieldTrip you first have to define the segments of data in which you are inte
 	cfg.trialdef.eventtype  = '?';
 	ft_definetrial(cfg); % no output variable neccessary here, just look at the output in the Matlab screen
 
-
 The output on screen might look like this
 
 	
@@ -24,7 +22,6 @@ The output on screen might look like this
 	no trials have been defined yet, see DEFINETRIAL for further help
 	found 76 events
 	created 0 trials
-
 
 The important line is 
 
@@ -39,7 +36,6 @@ Since "trial" events have a clear begin, end and duration, you do not have to sp
 	cfg.trialdef.eventtype = 'trial';
 	cfg = ft_definetrial(cfg); % now you do want to use an output variable for definetrial, since you need its output
 
-
 This time the following lines will appear on the Matlab output
 
 	
@@ -51,7 +47,6 @@ which indicate that 76 "fieldtrip-trials" have been made out of the 76 "trial-ev
 
 	
 	raw_data = ft_preprocessing(cfg)
-
 
 which will show the following information on screen
 
@@ -78,7 +73,6 @@ which will show the following information on screen
 	    fsample: 1200
 	       grad: [1x1 struct]
 
-
 P.S. prior to calling PREPROCESSING, you might want to do artifact detection using the ARTIFACT_xxx functions (where xxx is for example EOG) and the REJECTARTIFACT function.
 
 # Another example using "trigger" events
@@ -92,7 +86,6 @@ First determine all event types that are present in the datafile.
 	cfg.dataset = 'Subject01.ds';
 	cfg.trialdef.eventtype  = '?';
 	ft_definetrial(cfg); % no output, just look at screen
-
 
 This will show the following information on scree
 
@@ -114,7 +107,6 @@ This will show the following information on scree
 	found 1343 events
 	created 0 trials
 
-
 As you can see, this MEG dataset contains a lot of different events. The interesting events are the "backpanel" triggers. Those triggers can have different values, which are also displayed here. Now specify the trigger value, pre-trigger and post-trigger duration  with 
 
 	
@@ -124,7 +116,6 @@ As you can see, this MEG dataset contains a lot of different events. The interes
 	cfg.trialdef.poststim   = 0.6;
 	cfg = ft_definetrial(cfg); % now remember the output
 
-
 which results in the following info on screen.
 
 	
@@ -132,12 +123,10 @@ which results in the following info on screen.
 	found 1343 events
 	created 5 trials
 
-
 Subsequently, you can do 
 
 	
 	data_raw = ft_preprocessing(cfg)
-
 
 which reads the data and gives following information on screen.
 
@@ -164,7 +153,6 @@ which reads the data and gives following information on screen.
 	       time: {[1x300 double]  [1x300 double]  [1x300 double]  [1x300 double]  [1x300 double]}
 	    fsample: 300
 	       grad: [1x1 struct]
-
 
 (*) I may be wrong about the file being recorded in pseudo-continuous mode, but that would not change the example.
 

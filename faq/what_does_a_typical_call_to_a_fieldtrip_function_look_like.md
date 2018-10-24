@@ -3,7 +3,6 @@ layout: default
 tags: faq datatype function
 ---
 
-
 ## What does a typical call to a FieldTrip function look like?
 
 All high-level FieldTrip functions take a configuration input structure as first input argument. The FieldTrip functions in general work like this

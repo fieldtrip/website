@@ -25,5 +25,3 @@ Example for n =
 	% output1 = 4x1 cell-array with output 1 in each cell
 	% output2 = 4x1 cell-array with output 2 in each cell
 
-
-

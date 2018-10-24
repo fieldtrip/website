@@ -3,7 +3,6 @@ layout: default
 tags: faq discussion list question ask question help
 ---
 
-
 # How to ask good questions to the community?
 
 The FieldTrip community is represented in the [email discussion list](/discussion_list). You can freely sign up and ask for help if you are stuck in using FieldTrip. Asking good questions there (and giving useful answers) is the key to a successful community. However, please do some research yourself on them before approaching all people on the discussion list. Keep in mind that several hundreds of researchers around the world will get note of your question will spend valuable time on reading your question. In addition, also keep career perspectives into mind. By asking your first question on the mailinglist (which could be before you wrote your first paper), they will get a first impression of you and may start to form a picture of you, be it as a prospective colleague or collaborator. Many of the members are senior researchers and might have a job opening and are looking for you! But, don't be afraid to ask questions, we really appreciate if you approach us and we will try to help, even if your question turns out to be a trivial one :)
@@ -28,14 +27,12 @@ Feel free to ask a question any time, be it day or night.
 
 Actually, the intention of 'when?' is 'what should you have done before asking a question?'. Of course, think thoroughly yourself about possible answers. Use Google and the FieldTrip webpage to search for keywords and try to put your question into perspective with papers by other researchers. Spend at least about an hour of time for finding an answer yourself before turning to the discussion list. That way, you can guarantee that you tried yourself finding an answer. Often, you will find that the answer is more trivial than expected. By going through the process yourself of thinking about how to best search for the answer (and eventually finding an answer yourself), you will learn much more about 'whatever you are looking for' than by asking someone else.
 
-
 ## How to ask a question?
 
 The better you describe the problem or state the question, the more likely you will get help. Better hereby does not mean more information. As being concise is a key skill of a scientist, show off by staying concise (but complete) when writing to the mailing list. Completeness of the question and background information is equally important though. This counts for all kind of questions, be it directly FieldTrip related or about anything else. A useful tip: Before sending your mail, read the message thoroughly and think whether all necessary information for a person naive to your question is included. Does it make sense what you wrote? Is there too much information? Remember that many people are busy and won't like having (a) long conversations asking you to provide more information and (b) reading through much more than 10 sentences per mail.
 
 `<note important>`
 If it comes to asking questions about FieldTrip including the following is a mus
-
 
 *  The cfg you used
 *  The fields of your data structure
@@ -70,7 +67,6 @@ Dear community,
 My name is MyName MyLastname and I am working in the BigBoss lab in MyCity on intracranial and extracranial Brain-Computer Interfaces. Currently I am analysing data of a side-project, where we recorded using combined EEG/fMRI.
 
 I tried using ft_functionname to assess spatio-temporal aspects of my data. When I call ft_functionname, I expect to get a structure with several fields, which I can subsequently plot using ft_XXXplot. However, I receive the following error messag
-
 
 	??? In an assignment  A(:) = B, the number of elements in A and B
 	must be the same.

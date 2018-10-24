@@ -3,7 +3,6 @@ layout: default
 tags: example meg headmodel source
 ---
 
-
 # Make leadfields using different headmodels
 
 ## Introduction
@@ -16,15 +15,12 @@ The MEG dataset that is used in this demo is available from ftp:/ftp.fieldtripto
 
 If you download this data into a folder named 'testdata', the directory should look like thi
 
-
 	>> cd testdata
 	>> ls
 	Subject01.ds   Subject01.mri    Subject01.shape_info
 	Subject01.hdm  Subject01.shape  
 
-
 ## Single sphere model from CTF
-
 
 	%--------------------------------------------------------------------------------------
 	% making a leadfield using the single-sphere headmodel that is 
@@ -55,13 +51,11 @@ If you download this data into a folder named 'testdata', the directory should l
 	cfg.grid.unit        = 'cm';
 	grid_ctf_ss          = ft_prepare_leadfield(cfg);
 
-
 **CTF headmodel, single sphere:**
 
 ![image](/media/example/headmodels/singlesphere.png)
 
 ## Local spheres model from CTF
-
 
 	%--------------------------------------------------------------------------------------
 	% making a leadfield using the localSpheres headmodel that is produced with CTF software
@@ -83,14 +77,11 @@ If you download this data into a folder named 'testdata', the directory should l
 	cfg.grid.unit       = 'cm';
 	grid_ctf_ls         = ft_prepare_leadfield(cfg);
 
-
 **CTF headmodel, local spheres:**
 
 ![image](/media/example/headmodels/localspheresctf.png)
 
-
 ## Local spheres model from FieldTrip, using the CTF headshape
-
 
 	%--------------------------------------------------------------------------------------
 	% making a leadfield using ft_prepare_headmodel implemented in FieldTrip 
@@ -118,13 +109,11 @@ If you download this data into a folder named 'testdata', the directory should l
 	cfg.grid.unit       = 'cm';
 	grid_ls_headshape   = ft_prepare_leadfield(cfg);
 
-
 **FieldTrip headmodel, local spheres with CTF headshape:**
 
 ![image](/media/example/headmodels/localspheresfths.png)
 
 ## Local spheres model from FieldTrip, using brain surface from segmented mri
-
 
 	%--------------------------------------------------------------------------------------
 	% making a leadfield using the local spheres model implemented in FieldTrip
@@ -171,13 +160,11 @@ If you download this data into a folder named 'testdata', the directory should l
 	cfg.grid.unit        = 'cm';
 	grid_ls_mri          = ft_prepare_leadfield(cfg);
 
-
 **FieldTrip headmodel, local spheres based on segmented mri:**
 
 ![image](/media/example/headmodels/localspheresftsegment.png)
 
 ## Realistic single-shell model, using brain surface from segmented mri
-
 
 	%--------------------------------------------------------------------------------------
 	% making a leadfield using ft_prepare_singleshell (developed by Nolte) implemented in FieldTrip 
@@ -205,7 +192,6 @@ If you download this data into a folder named 'testdata', the directory should l
 	cfg.grid.unit        = 'cm';
 	grid_singleshell   = ft_prepare_leadfield(cfg);
 
-
 **Single-shell headmodel, realistic geometry:**
 
 ![image](/media/example/headmodels/nolttsegment.png)
@@ -215,7 +201,6 @@ If you download this data into a folder named 'testdata', the directory should l
 ![image](/media/example/headmodels/noltesegment.png)
 
 ## Comparing the forward models
-
 
 	%----------------------------------------------------------------------------------------------------------
 	% compute the amplitudes of the leadfields 
@@ -254,9 +239,6 @@ If you download this data into a folder named 'testdata', the directory should l
 	ft_sourceplot(cfg, sourceinterp{3});
 	ft_sourceplot(cfg, sourceinterp{4});
 	ft_sourceplot(cfg, sourceinterp{5});
-
-
-
 
 	%--------------------------------------------------------------------------------------------
 	% compute the correlations between the different leadfields
@@ -311,13 +293,11 @@ If you download this data into a folder named 'testdata', the directory should l
 	figure;
 	ft_sliceinterp(cfg, sourceinterp{2, 3});% etcetera...
 
-
 **Correlations between the leadfields computed based on the FieldTrip localspheres model based on the CTF headshape and the realistic single-shell headmodel**
 
 ![image](/media/example/headmodels/correlations.png)
 
 ## Appendix: creating a segmentation of the mri
-
 
 	
 	%-------------------------------------------------------------------------------

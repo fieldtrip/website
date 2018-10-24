@@ -3,7 +3,6 @@ layout: default
 tags: fixme
 ---
 
-
 FIXME add tags
 
 `<note warning>`
@@ -15,7 +14,6 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 # Source reconstruction of event-related fields using minimum-norm estimate
 
 ## Introduction
-
 
 In this tutorial we will show how to do source-analysis with minimum-norm estimate on the event-related fields (MEG) of a single subject. 
 
@@ -39,7 +37,6 @@ The major differences (beside the algorithm of the inverse solution) compared to
 *  We will calculate the source-activation over time and not average the activation over a time-window.
 
 *  We will use a source model that only models the cortex as a surface (i.e. the cortical sheet) and not by scanning on a volumetric grid covering the whole brain. 
-
 
 ## Background
 
@@ -68,16 +65,13 @@ To compute the minimum-norm estimation we perform the following step
 
 ## Processing of anatomical data
 
-
 Some of the functions described in this part of the tutorial are using the SPM toolbox which can be found under the fieldtrip/external folder. You do not have to add this toolbox yourself, but it is important that [you set up your MATLAB path properly](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path). 
 
 	
 	cd `<PATH_TO_FIELDTRIP>`
 	ft_defaults
 
-
 ### Processing of the subject's mri
-
 
 In the following, we will use the anatomical MRI belonging to Subject01. The file can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 We read in the subject's MRI as follow
@@ -91,7 +85,6 @@ We read in the subject's MRI as follow
 	          hdr: [1x1 struct]
 	    transform: [4x4 double]
 	     coordsys: 'ctf'
-
 
 The structure of your MRI variable contains the following field
 
@@ -111,12 +104,10 @@ You can see that the **coordsys** field of anatomical data shows 'ctf'. The subj
 `<note>`
 It is also possible to read in anatomical MRI data in [other formats](/dataformat) or from raw DICOM files. The different coordinate systems are explained in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). If your anatomical MRI is not aligned to the coordinate system in which your sensors are expressed, you can  [align](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) them using either **[ft_volumerealign](/reference/ft_volumerealign)** or **[ft_electroderealign](/reference/ft_electroderealign)**. This alignment or coregistration is commonly done using [fiducial points](/faq/how_are_the_lpa_and_rpa_points_defined) on the head. 
 
-
 When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can visually inspect and determine the coordinate-system with **[ft_determine_coordsys](/reference/ft_determine_coordsys)**.
 `</note>` 
 
 In the next step, we normalize the individual MRI using the MNI template anatomy from SPM. We do not explicitly have to give the MNI template to the function as it is used by default. In the subsequent step, we will also use a template MRI and a template cortical sheet. All templates we use are based on the same "colin27" anatomical MRI.
-
 
 	
 	cfg = [];
@@ -130,7 +121,6 @@ In the next step, we normalize the individual MRI using the MNI template anatomy
 	      initial: [4x4 double]
 	     coordsys: 'spm'
 	          cfg: [1x1 struct]
-
 
 After the normalization, the MRI is aligned to the SPM/MNI coordinate system, in which the template cortical sheet and template MRI are also expressed. In **norm_mri.cfg.final** we find a [homogenous transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) that defines how the voxel positions can be transformed between the CTF head coordinates to the normalized SPM/MNI coordinates. We will use this transformation matrix in the subsequent steps.
 
@@ -176,7 +166,6 @@ The brain surface is represented by points (vertices) that are connected into tr
 	        3893        3870        3845
 	        3917        3893        3845
 
-
 ### Exercise 2
 
 `<note exercise>`
@@ -219,14 +208,12 @@ What is the difference in the location of the points between the original (temp_
 
 The location of the vertices of the cortical sheet are now expressed in the CTF coordinate system relative to a point between the two ears. However, the sheet also needs to be in the same units as at the gradiometer positions. Therefore, we convert the units to 'cm'.
 
-
 	
 	ind_cortex = ft_convert_units(ind_cortex, 'cm');
 
 This completes the construction of the source model.
 
 ### Head model
-
 
 #### Segmentation
 
@@ -237,7 +224,6 @@ First, the template anatomical MRI is [segmented](/faq/how_is_the_segmentation_d
 	template_mri          = ft_read_mri('... fieldtrip/template/anatomy/single_subj_T1_1mm.nii');
 	template_mri.coordsys = 'spm';  % we know that the template is in spm/mni coordinates 
 	clear mri;                      % to avoid confusion between the template and subject's MRI
-
 
 `<note important>`
 Note that the segmentation can be time consuming (~15 mins) and if you want, you can load the pre-computed result and skip ahead to the next step. The segmented MRI of this tutorial can be downloaded from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/mne) (template_seg.mat). 
@@ -258,9 +244,7 @@ FIXME the naming of the tutorials and ftp directories has to be consistent (ther
 	        brain: [181x217x181 logical]
 	          cfg: [1x1 struct]
 
-
 The *template_seg* structure is similar to the MRI data structure, but contains the following new field
-
 
 *  **brain**: binary representation of the brain tissue
 
@@ -268,9 +252,7 @@ The *template_seg* structure is similar to the MRI data structure, but contains 
 
 The procedure of the segmentation does not change the units, coordinate system, nor the size of the volume. You can see this in the first three fields (**dim**, **transform** and **coordsys**) which are the same as the corresponding fields of the input MRI data structure. The field **transform** specifies how each voxel of the **brain** volume can be expressed in the coordinate system defined in the **coordsys** field. 
 
-
 #### Mesh
-
 
 The surface of the brain approximates the inside of the skull. We construct a triangulated surface description from the binary brainmask of *template_seg* by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. 
 
@@ -285,9 +267,7 @@ The surface of the brain approximates the inside of the skull. We construct a tr
 	    unit: 'mm'
 	     cfg: [1x1 struct]
 
-
 The *template_mesh* contains the following field
-
 
 *  **pnt**: represents the vertices of the surface. 
 
@@ -301,9 +281,7 @@ Similar to the cortical sheet, we transform the mesh that describes the inside o
 	ind_insideskull = ft_transform_geometry(inv(norm_mri.cfg.final), template_mesh);
 	ind_insideskull = ft_convert_units(ind_insideskull, 'cm');
 
-
 #### Volume conduction model of the head
-
 
 We have the right geometry of the brain (an individualized template) from the earlier step, so we can finally create the volume conduction model. We will use the single shell type model which is suitable for MEG data.
 
@@ -318,9 +296,7 @@ We have the right geometry of the brain (an individualized template) from the ea
 	    unit: 'cm'
 	     cfg: [1x1 struct]
 
-
 The *vol* data structure contains the following field
-
 
 *  **bnd**: contains the geometrical description of the head model.
 
@@ -332,9 +308,7 @@ The *vol* data structure contains the following field
 
 The **bnd** field describes a surface with vertices and triangles (in the **vol.bnd.pnt** and **vol.bnd.tri** fields) as the geometrical description of the volume conductor. 
 
-
 ### Visualization
-
 
 As the final step of the anatomical processing pipeline it is important to check the alignment and the transformation of all geometrical data. We will plot the sensors together with the source and head model to check whether they are aligned to each other and have the right proportions. 
 
@@ -354,8 +328,6 @@ The location of the MEG channels are defined in the .ds file of the tutorial dat
 	axis on
 	grid on
 
-
-
 ![image](/media/tutorial/minimumnormestimate/headm_sourcem_sens3.jpg@400)
 
 *Figure 2. Head model, sourcemodel and sensors plotted in the same figure*
@@ -367,7 +339,6 @@ Plot also the sensor labels and check whether all anatomical information is defi
 `</note>`
 
 ## Processing of functional data
-
 
 In the following section, we will use the MEG data belonging to Subject01. The raw data can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 For both preprocessing and averaging, we will follow the steps outlined in the [Event related averaging](/tutorial/eventrelatedaveraging) tutorial. We will use the trials belonging to the FC and FIC conditions. 
@@ -409,7 +380,6 @@ The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes ave
 	      grad: [1x1 struct]
 	       cfg: [1x1 struct]
 
-
 You can see that the average of all data (dataall_tlck) also has a **cov** field that contains the noise covariance matrix.
 
 ## Forward solution
@@ -432,8 +402,6 @@ The source model, the volume conduction model and the sensor positions are neede
 	      outside: [8x1 double]
 	          cfg: [1x1 struct]
 	    leadfield: {1x8196 cell}
-
-
 
 The *leadfield* contains the following field
 
@@ -472,7 +440,6 @@ If you see that many points are marked *outside*, something seems to be wrong wi
 	    outside: []
 	        cfg: [1x1 struct]
 
-
 Now the field **outside** is empty, i.e. we do not have any sourcepoints outside the brain surface of the headmodel anymore.
 
 ### Exercise 5
@@ -502,11 +469,9 @@ We compute the leadfield again with the modified cortical sheet.
 
 ## Inverse solution
 
-
 The goal of the analysis in this tutorial is to contrast the data between the two conditions in the time window of interest relative to the stimulus. If we later want to compare the two conditions statistically, we have to compute the sources based on an inverse estimation based on both conditions, i.e. the so called ['common filters'](/example/common_filters_in_beamforming) approach, and then apply this inverse estimation "filter" separately to each condition to obtain the source estimates per condition. The rationale is that you don't want differences in noise-levels between the conditions to explain differences in the source estimates. 
 
 The following computes the filter using the average and the noise-covariance matrix of all trials over conditions, and subsequently computes the source estimate for each condition.
-
 
 	
 	% compute the filter
@@ -519,7 +484,6 @@ The following computes the filter using the average and the noise-covariance mat
 	cfg.mne.prewhiten      = 'yes';
 	cfg.mne.scalesourcecov = 'yes';
 	sourceAll = ft_sourceanalysis(cfg, dataall_tlck);
-
 
 The configuration structure for this function contains some general options that are used in all source analysis methods, but also some method-specific options. In order to use the computed filters later, we need to specify the 'keepfilter' option. The 'lambda' value is responsible for scaling the noise-covariance matrix. If it is zero, the noise-covariance estimation will not be taken into account during the computation of the inverse solution. The options 'prewhiten' and 'scalesourcecov' options modify the leadfield matrix and the source covariance matrix for a more optimal solution. We do not need to specify the noise-covariance matrix in the configuration structure, as it is contained in **dataall_tlck.cov**.
 
@@ -536,7 +500,6 @@ During execution of the source analysis, some text is printed on screen that sho
 *  prewhitening the leadfields using the noise covariance
 
 *  scaling the source covariance
-
 
 	
 	% compute source-analysis
@@ -567,7 +530,6 @@ During execution of the source analysis, some text is printed on screen that sho
 	    mom: {8196x1 cell}
 	    pow: [8196x900 double]
 
-
 When computing the source estimate, the following text printed on screen shows that the common filter has been used in the computatio
 
 *  using pre-computed spatial filter: some of the specified options will not have an effect
@@ -592,7 +554,6 @@ You can plot the estimated source strength at a specific time-point with the low
 	
 	ft_plot_mesh(bnd, 'vertexcolor', value);
 
-
 ![image](/media/tutorial/minimumnormestimate/mnesource2.jpg@500)
 
 *Figure 3. The result of the source-reconstruction of the FIC condition plotted at 500 ms*
@@ -605,7 +566,6 @@ Plot the source in MNI space together with a slice of the MNI template MRI (use 
 
 ## Summary and suggested further reading
 
-
 In this tutorial, we demonstrated the minimum-norm estimate method for source reconstruction using a individualized template. If you would like to compute the source estimation on an individual cortical sheet, you can go to this tutorial (:!: Insert link). Two other tutorials show in more detail how to construct a volume conduction model for [MEG](/tutorial/headmodel_meg) and [EEG](/tutorial/headmodel_eeg) data.
 
 Here you can find related FAQs: 
@@ -615,5 +575,4 @@ Here you can find related FAQs:
 and example script
 
 {{topic>example +source &list}}
-
 

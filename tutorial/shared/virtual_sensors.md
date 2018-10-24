@@ -23,7 +23,6 @@ After having done all steps in [ the extended beamformer tutorial](/tutorial/bea
 
 We will now determine the positions on which the cortico-muscular coherence is the largest and the position where the induced visual gamma activity is largest: 
 
-
     [maxval, maxcohindx] = max(source_coh_lft.avg.coh);
     source_coh_lft.pos(maxcohindx, :)
     
@@ -42,7 +41,6 @@ The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually ap
 
 The LCMV beamformer spatial filter for the location of interest will pass the activity at that location  with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-
     cfg                   = [];
     cfg.covariance        = 'yes';
     cfg.channel           = 'MEG';
@@ -58,7 +56,6 @@ The LCMV beamformer spatial filter for the location of interest will pass the ac
     cfg.grid.unit    = sourcemodel.unit;
     cfg.lcmv.keepfilter = 'yes';
     source_idx       = ft_sourceanalysis(cfg, tlock);
-
 
 The source reconstruction contains the estimated power and the source-level time-series of the averaged ERF, but here we are not interested in those. The *cfg.keepfilter* option results in the spatial filter being kept in the output source structure. That spatial filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
@@ -88,7 +85,6 @@ If you would know that the subsequent analysis would be limited to a specific fr
 `</note>`
 
 The structures *coh_lft_data* and *gam_pow_data* resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)*
-
 
     cfg = [];
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'

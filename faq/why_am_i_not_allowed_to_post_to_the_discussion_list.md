@@ -3,7 +3,6 @@ layout: default
 tags: faq email
 ---
 
-
 ## Why am I not allowed to post to the discussion list?
 
 If you try to post on the FieldTrip [email discussion list](/discussion_list) and get the following error: 

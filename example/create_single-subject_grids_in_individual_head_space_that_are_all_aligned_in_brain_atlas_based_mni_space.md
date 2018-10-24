@@ -31,7 +31,6 @@ The procedure is as follows. First, a template grid is computed on the basis of 
 	alpha 0.5
 	camlight
 
-
 Read the atlas, convert to units of cm and create the binary mask.
 
 	atlas = ft_read_atlas(fullfile(ftpath, 'template/atlas/aal/ROI_MNI_V4.nii'));
@@ -44,7 +43,6 @@ Read the atlas, convert to units of cm and create the binary mask.
 	cfg.inputcoord = 'mni';
 	mask           = ft_volumelookup(cfg, template_grid);
 
-
 Now we determine all indices of the binary mask to be considered as inside the head model. And plot the result. Note the missing dipole locations for example in the vicinity of the ventricles.
 
 	template_grid.inside = false(template_grid.dim);
@@ -52,7 +50,6 @@ Now we determine all indices of the binary mask to be considered as inside the h
 
 	figure;
 	ft_plot_mesh(template_grid.pos(template_grid.inside,:));
-
 
 {{:example:atlasbasedmnigrid.png?600|}}
 
@@ -66,7 +63,6 @@ Load the subject-specific MRI from [here](ftp://ftp.fieldtriptoolbox.org/pub/fie
 	cfg.grid.nonlinear = 'yes'; % use non-linear normalization
 	cfg.mri            = mri;
 	sourcemodel        = ft_prepare_sourcemodel(cfg);
-
 
 Finally, you can load the subject-specific headmodel from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat) and check the result with the following code.
 

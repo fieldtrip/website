@@ -3,7 +3,6 @@ layout: default
 tags: meg eeg raw freg cfg trialfun trialdef
 ---
 
-
 # Fieldtrip Walkthrough
 
 ## Foreword
@@ -374,13 +373,11 @@ As you are well aware, however, the power of our statistical test (not to be con
 
 Once the design matrix is specified and the test statistic is defined we only need to decide how we are going to test our hypothesis. Of course the statistical methods one will use are somewhat dependent on the design matrix you specified but let’s just summarize them all her
 
-
 *  Montecarlo
 *  Analytic
 *  Stats
 *  Crossvalidate
 
 ### Calling ft_freqanalysis
-
 
 ![image](/media/wt_fig19.png@650)

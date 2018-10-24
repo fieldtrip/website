@@ -34,4 +34,3 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 *  show examples of how grad.tra is for different systems, especially Neuromag
 
-

@@ -3,7 +3,6 @@ layout: default
 tags: faq artifact filter noise preprocessing
 ---
 
-
 ## Why is there a residual 50Hz line-noise component after applying a DFT filter?
 
 It is due to the non-stationarity of the line noise component in the data. Imagine a trial in which the 50Hz line noise increases in amplitude over time (e.g. trial #3 in the first figure). 

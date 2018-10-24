@@ -3,7 +3,6 @@ layout: default
 tags: faq ft_sourceplot anatomical mri
 ---
 
-
 ## What is the plotting convention for anatomical MRIs?
 
 The convention used in Fieldtrip for the plotting of anatomical MRI data in **[ft_sourceplot ](/reference/ft_sourceplot)** (when using cfg.method = 'ortho', or 'slice'), and in **[ft_volumerealign](/reference/ft_volumerealign)** is to plot the data along the voxel-indices' axes, rather than along the world coordinate system's axes. Statements such as 'the image appears flipped', or 'the image is presented in neurological/radiological convention' are basically dependent on the anatomical data. The question now of course is how it is possible to determine whether the data at hand is plotted in neurological/radiological convention, or otherwise stated: 'whether left is left, or left is right'.
@@ -19,5 +18,4 @@ One important concept to take into account in the interpretation is the handedne
 **If the transformation matrix is describing the transformation from voxel space to a world coordinate system where the XYZ-axes are described with right-handed coordinate axes, AND the transformation matrix is left-handed, then 'right is left, and left is right', and equivalently 'the image is flipped'**.
 
 This leaves the question how to determine the handedness of the transformation matrix. This can be determined from the determinant of the upper-left part of this matrix. When `det(X.transform(1:3,1:3))` has a positive value, the transformation-matrix is right-handed, otherwise it's left-handed. Alternatively, you can also explore the data in **[ft_sourceplot ](/reference/ft_sourceplot)** (using cfg.method='interactive') and start clicking around on positions on the left/right axis. Pay special attention to what is happening with the real world coordinate that is describing the left/right axis. This should give you a clue as to what is left and what is right in the image. 
-
 

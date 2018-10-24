@@ -3,7 +3,6 @@ layout: default
 tags: realtime
 ---
 
-
 # Low-level FieldTrip buffer TCP network protocol
 
 This page is part of the documentation series of the FieldTrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, bein
@@ -37,10 +36,7 @@ old data samples and events will not be accessible anymore.
 
 The binary TCP/IP network protocol allows client applications to be developed in an arbitrary programming language, e.g. C, Matlab, Java or Python. The [network protocol](/buffer_protocol) documents the low-level protocol used for serializing requests and responses.
 
-
-
 ### Outside our scope
-
 
 We do not aim to provide or specif
 
@@ -50,7 +46,6 @@ We do not aim to provide or specif
    * writing data to disk,
    * a complete implementation for all possible programming languages (e.g. FORTRAN, COBOL),
    * a complete implementation for all possible operating systems (e.g. Amiga, OS/2 Warp, Windows 95).
-
 
 ## FieldTrip buffer definition
 
@@ -80,13 +75,11 @@ corresponds to the definition of **messagedef_t** in ''message.h'' in the [refer
  | **command** | uint16 | encodes the type of request (see further below)                    |
  | **bufsize** | uint32 | describes the size (in bytes) of the remaining part of the message |
 
-
 ### Endianness
 
 The buffer always stores data in its native format, that is, on a x86 compatible processor all numbers are stored in little-endian format, and on a PowerPC (G4/G5/...) numbers are stored in big-endian format. The server will automatically convert incoming requests and its responses to the endianness of the client, which is detected by the 16-bit **version** field. Clients can always transmit requests in their own native format, and can assume that the data they receive is in their native format.
 
 Because we are relying on detecting endianness by looking at the 16-bit version number, we will get problems if we ever want to bump the version number to 256 or bigger.
-
 
 ### PUT_HDR: Put header information into the buffer
 
@@ -104,7 +97,6 @@ The fixed part (24 bytes) consists of the following (**headerdef_t** in ''messag
  | **fsamp**     | float32 | sampling frequency (Hz)                                                    |
  | **data_type** | uint32  | type of the sample data (see table above)                                  |
  | **bufsize**   | uint32  | size of remaining parts of the message in bytes (total size of all chunks) |
-
 
 The fixed part of the header is sufficient to interpret the data as a feature vector of length nchans, which is sampled at regular intervals (fsamp). Additional information that are system specific such as channel names for EEG/MEG, or calibration values (in case the EEG/MEG data type is int16 or int32) are not represented in the fixed part of the header. In order to transmit this type of extended header information, one needs to use the backwards-compatible extension of *chunks* (see at the bottom of this page).
 
@@ -128,8 +120,6 @@ and that your volumes contain 64x64x20 = 81920 voxels. The complete request woul
 Note that for every additional chunk, you need to increase the **bufsize** field of both the message definition and the header definition by
 the size of the chunk (including the 8 bytes for its **type** and **size** field).
 
-
-
 ### GET_HDR: Get header information from the buffer
 
 This request is the opposite of PUT_HDR and uses the same data structures. Its command number is 0x201 (=513). The client just sends the 8-byte triple
@@ -144,7 +134,6 @@ request, the returned header definition structure will contain the actual number
 
 If an error occurs, or no header information has been written yet, the buffer server will only return the 8-byte triplet **version**;**command**;**bufsize**,
 with the **command** value set to 0x205 (=517) for GET_ERR, and **bufsize**=0 to indicate no extra message payload.
-
 
 ### PUT_DAT: Append data (=samples) to the buffer
 
@@ -176,8 +165,6 @@ is 200*32*4 = 25600 bytes. The complete request would look like thi
  | message definition (request)                        | fixed data definition                                               | data samples                                       |
  | ----------------------------                        | ---------------------                                               | ------------                                       |
  | **version**=1, **command**=0x102, **bufsize**=25616 | **nchans**=32, **nsamples**=200, **data_type**=9, **bufsize**=25600 | sample 0 [channel 0-31], sample 1, ..., sample 199 |
-
-
 
 ### GET_DAT: Retrieve data (=samples) from the buffer
 
@@ -216,8 +203,6 @@ If an error occurs, for example if the requested indices are outside of the rang
 in the ring buffer, the server responds with the triple **version**=1;**command**;**bufsize**=0, where
 
 **command**=0x205 (=517) for GET_ERR.
-
-
 
 ### PUT_EVT: Put events into the buffer
 
@@ -281,8 +266,6 @@ takes one byte, the **bufsize** field is the sum of both string lengths. All in 
  | event 2 variable part          | *type*        | char[6] | Button      |
  | :::                              | *value*       | char[5] | Right       |
 
-
-
 ### GET_EVT: Retrieve events from the buffer
 
 This request is used for retrieving events from the buffer. Similarly to GET_DAT, it comes in two flavours.
@@ -310,7 +293,6 @@ same format as for PUT_EVT. The only difference to PUT_EVT is indeed that on suc
 value has the code 0x204 (GET_OK). If an error occurs, the server does not transmit any events and just
 responds with the triple **version**=1;**command**;**bufsize**=0, where **command**=0x205 (=517) for GET_ERR.
 
-
 ### FLUSH_DAT: Remove all samples from the buffer
 
 Using this request, the client can ask to remove all data from the buffer. All events and the header information are kept,
@@ -327,8 +309,6 @@ and on success the server responds with
  | message definition (response)                              |
  | -----------------------------                              |
  | **version**=1, **command**=0x304 (FLUSH_OK), **bufsize**=0 |
-
-
 
 ### FLUSH_EVT: Remove all events from the buffer
 
@@ -347,8 +327,6 @@ and on success the server responds with
  | -----------------------------                              |
  | **version**=1, **command**=0x304 (FLUSH_OK), **bufsize**=0 |
 
-
-
 ### FLUSH_HDR: Clear the buffer (header + samples + events)
 
 This request is for clearing **all** contents of the buffer, including samples, events, and any chunks present in the header.
@@ -364,9 +342,6 @@ and the server responds with
  | message definition (response)                              |
  | -----------------------------                              |
  | **version**=1, **command**=0x304 (FLUSH_OK), **bufsize**=0 |
-
-
-
 
 ### WAIT_DAT: Wait for samples and/or events
 
@@ -406,9 +381,6 @@ and the server will respond with the **nsamples** and **nevents** quantities imm
 
 If you only want to wait for new events, and do not care about data samples (yet), you can set the **nsamples** field in the request to
 a very high number (2^32-1 as the biggest uint32). The same works for the opposite case where you're interested in samples, not events.
-
-
-
 
 ###  Chunks for transmitting extended header information
 
@@ -497,7 +469,6 @@ Used for transporting a NIFTI-1 header structure for specifying fMRI data.
  | **size** | 348                           |
  | **data** | NIFTI-1 header in binary form |
 
-
 #### Siemens MR sequence protocol (ASCII)
 
 Used for transporting the sequence protocol used in Siemens MR scanners (VB17). This
@@ -541,7 +512,6 @@ These chunks contain .fif files as written by the neuromag2ft realtime interface
  | **type** | FT_CHUNK_NEUROMAG_HPIRESULT = 10 |
  | **size** | size of the .fif file            |
  | **data** | contents of the .fif file        |
-
 
 ## See also
 

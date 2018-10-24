@@ -3,11 +3,9 @@ layout: default
 tags: development guidelines video
 ---
 
-
 # Guidelines for audio and video material
 
 This page is for sharing our knowledge and suggestions on how to write, record, produce, archive and upload audio and audiovisual presentations. There are several situations where audio or audiovisual recordings can be mad
-
 
 *  During an internal MEG toolkit
 
@@ -16,7 +14,6 @@ This page is for sharing our knowledge and suggestions on how to write, record, 
 *  At an improvised studio
 
 For several purpose
-
 
 *  For creating a video lecture on the [FieldTrip channel](https://www.youtube.com/c/fieldtriptoolbox) on YouTube
 
@@ -148,9 +145,6 @@ First of all, if you import files (images, video, audio), Adobe Premiere will no
 If you start a new Premiere project, you will need to specify whether you captured you video in DV or HDV (high definition). Secondly, you need to specify the resolution and frame rate. Of course the resolution and frame rate depends on the recording as well, but you can upgrade your final video to a higher resolution, for instance, when you want to use high-resolutions stills with a miniature 'talking head'. You will not need 50 frames per second, 25 is good. For our first videos we used 1080p25 as shown belo
 
 ![image](/media/development/guidelines/setting_premiere.png@200)
-
-
-
 
 ###  Archiving
 

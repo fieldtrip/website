@@ -104,4 +104,3 @@ The following functions depend on the Mathworks "stats" toolbox
 
 *  ft_spiketriggeredspectrum_convol
 
-

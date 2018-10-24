@@ -3,7 +3,6 @@ layout: default
 tags: example plot source
 ---
 
-
 ## Plotting the result of source reconstructing on a cortical mesh
 
 The following function can be used to plot the results of source reconstruction on a cortical surface sheet. It assumes a cortical sheet *surf*, described by vertices (pnt) and triangles (tri). The vertices can be used as positions in **[ft_sourceanalysis](/reference/ft_sourceanalysis)** by specifying cfg.grid.pos = surf.pnt.
@@ -78,8 +77,4 @@ The following function can be used to plot the results of source reconstruction 
 	handles.h1 = h1;
 	handles.h2 = h2;
 	
-
-
-
-
 

@@ -23,7 +23,6 @@ tags: tutorial freq connectivity coherence granger dtf pdc MEG-visuomotor151
 
 This tutorial consists of three part
 
-
 *  Simulated data with directed connections. In this part we are going to simulate some data and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model and we will use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** for this. Subsequently, we will estimate the multivariate autoregressive model and the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with  **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
 *  Simulated data with common pick-up and different noise levels. In this part we are going to simulate some data consisting of an instantaneous mixture of 3 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
@@ -42,12 +41,10 @@ This tutorial consists of three part
 
 The virtual channel data just computed has three channels per location. These correspond to the three orientations of the dipole in a single voxel. The interpretation of connectivity is facilitated if we can compute it between plain channels rather than between triplets of channels. Therefore we will project the time-series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
 
-
 	visualTimeseries = cat(2, gam_pow_data.trial{:});
 	motorTimeseries = cat(2, coh_lft_data.trial{:});
 	[u1, s1, v1] = svd(visualTimeseries, 'econ');
 	[u2, s2, v2] = svd(motorTimeseries, 'econ');     
-
 
 Matrices u1 and u2 contain the spatial decomposition, matrices v1 and v2 the temporal and on the diagonal of matrices s1 and s2 you can find the eigenvalues. See "help svd" for more details.
 
@@ -62,11 +59,9 @@ We now recompute the virtual channel time-series, but now only for the dipole di
 	  virtualchanneldata.trial{k}(2,:) = u2(:,1)' * beamformer_lft_coh * data_cmb.trial{k}(chansel,:);
 	end
 
-
 ### Combine the virtual channel with the EMG
 
 The raw data structure containing one (virtual) channel can be combined with the two EMG channels from the original preprocessed data.
-
 
 	% select the two EMG channels
 	cfg = [];
@@ -77,11 +72,9 @@ The raw data structure containing one (virtual) channel can be combined with the
 	cfg = [];
 	combineddata = ft_appenddata(cfg, virtualchanneldata, emgdata);
 
-
 ### Compute the connectivity
 
 The resulting combined data structure now has four channels: the activity from the visual cortex, the activity from the right motor cortex, the left EMG and the right EMG. We can now treat this data structure as any other, and perform connectivity analysis 'as if' we were working on a channel-level data set!
-
 
 	%% compute the spectral decomposition
 	cfg            = [];
@@ -97,18 +90,14 @@ The resulting combined data structure now has four channels: the activity from t
 	cfg.method = 'coh';
 	coherence = ft_connectivityanalysis(cfg, freq);
 
-
 This computes the spectral decomposition and the coherence spectrum between all channel pairs, which can be plotted with
-
 
 	cfg = [];
 	cfg.zlim = [0 0.25];
 	figure
 	ft_connectivityplot(cfg, coherence);
 
-
 ![image](/media/tutorial/virtualchannels_emg_coherence.png@500)
-
 
 The spectrum reveals a strong coherence peak around 20 Hz between the right motor cortex and the left EMG, as expected, and as we found in the beamforming tutorial as well, where we beamed the sensor-level coherence directly. Additionally, we also see a corticomuscular coherence peak in the gamma frequency range.
 

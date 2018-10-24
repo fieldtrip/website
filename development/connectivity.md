@@ -45,7 +45,6 @@ The functions should be called as
 	outputdata = ft_connectivity_psi (inputdata, 'key1', value1, 'key2', value2, ....);
 	outputdata = ft_connectivity_wpli(inputdata, 'key1', value1, 'key2', value2, ....);
 
-
 The inputdata consists of a matrix of one of the following dimensionalitie
 
  1.  Nrpt x Nchan x Nchan (x Nfreq) (x Ntime)
@@ -58,7 +57,6 @@ One exception to the API described above i
 	
 	outputdata = ft_connectivity_granger(H, Z, S, key1, value1, ...);
 
-
 Spectrally resolved granger causality is a function of both the spectral transfer function (H) and the covariance of the noise (Z). For computational reasons, the cross-spectral density is also a required input argument for the function.
 
 ## Related documentation
@@ -68,6 +66,4 @@ The literature references to the implemented methods are given [here](/reference
 Tutorial material for connectivity analysi
 
 {{topic>tutorial +connectivity &list}}
-
-
 

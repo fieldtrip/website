@@ -19,7 +19,6 @@ The typical routines in which padding is used are:
 
 *  the artifact detection routines use both zero and data padding **with** a certain amount.
 
-
 The automatic artifacts detection functions (ft_artifact_xxx) make use of an articulated scheme of padding with different purpose
 
 *  trial padding (fig 1): data padding **with**, to include segments of data before and after the trial.
@@ -27,7 +26,6 @@ The automatic artifacts detection functions (ft_artifact_xxx) make use of an art
 *  filter padding (fig 1): zero padding **with**, to avoid the classification of edge effects as artifacts after filtering.
 
 *  artifact padding (fig 2): data padding **with**, to extend the length of a detected artifact.
-
 
 ![image](/media/tutorial/artifactdetect/padding_fig1.png)
 

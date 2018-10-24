@@ -180,7 +180,6 @@ In addition to using the mri_watershed FS program, the brain MRI volume will be 
 
 ##### Setting up the boundary-element model
 
-
 This step assigns **conductivity values to the BEM meshes**. The conductivity values can de specified. Without specification, default values are used.
 
 `mne_setup_forward_model --homog --surf --ico 4`
@@ -221,13 +220,11 @@ There are two options for processing the dat
  1.  in interactive mode
  2.  in batch mode
 
-
 #### Data conversion
 
 The EEG/MEG data has to  be converted to .fif format. 
 
 `mne_cft2fiff --ds /`<path to the ds directory>`/xxx.ds --fif `<subject's name>`_raw`
-
 
 #### Identifying bad channels and checking filters
 
@@ -254,7 +251,6 @@ It is useful if one calls the interactive mode from the directory where the raw 
 Go to File in the menu and choose: Open Evoked. Choose the fif file that containes the averaged data.
 Then go to Adjust in menu, choose: Layouts. Choose the appropriate layout file.
 And go to Windows in menu and choose: Show Averages.
-
 
 ### 3. Forward solution
 
@@ -302,7 +298,6 @@ In MNE Suite, the alignment and the coordinate transformation happens only just 
 	innerskull = ft_read_headshape(`<path to directory>`/subjects/`<subject's name>`/bem/`<subject's name>`-inner_skull-5120.surf');
 	ft_plot_mesh(innerskull);
 
-
 ![image](/media/development/innerskull_5120.jpg@300)
 
 #### Innerskull in tkmedit
@@ -316,15 +311,12 @@ I could load in only the sub10_inner_skull_surface file (output of mne_watershed
 	
 	ft_plot_mesh(vol.bnd);
 
-
 ![image](/media/development/plot_vol.jpg@300)
-
 
 #### Plotting bnd3 from FT
 
 	
 	ft_plot_mesh(bnd3);
-
 
 ![image](/media/development/plot_bnd3.jpg@300)
 
@@ -438,7 +430,6 @@ With this kind of segmentation, the output is the identification of the gray mat
 	cfg.covariancewindow = cfg.latency;
 	tlckb       = ft_timelockanalysis(cfg, data);
 
-
 :?: It is not clear for me yet, what is (or should be) the covariance window. 
 
 In MNE, it is possible (and recommended) to remove a baseline from the epochs before they are included in the noise-covariance estimation.
@@ -454,7 +445,6 @@ First, the units of the source space should be converted because all units shoul
 	bnd3.unit = 'mm';
 	bnd3 = ft_convert_units(bnd3, 'cm');
 
-
 	
 	cfg             = [];
 	cfg.grad        = data.grad;
@@ -463,7 +453,6 @@ First, the units of the source space should be converted because all units shoul
 	cfg.grid.inside = 1:size(bnd3.pnt,1);
 	cfg.channel     = 'MEG';
 	grid            = ft_prepare_leadfield(cfg);
-
 
  
 
@@ -480,8 +469,6 @@ This code shows how to calculate the inverse solution in FieldTrip. It needs the
 	cfg.mne.sourcecov = speye(numel(grid.leadfield)*3); 
 	cfg.mne.lambda   = 1e13;
 	source     = ft_sourceanalysis(cfg, tlck);
-
-
 
 ### Visualization
 
@@ -511,7 +498,6 @@ In MNE:
 	
 	mne_setup_source_space --ico -6
 
-
 In Matlab:
 
 	
@@ -524,7 +510,6 @@ In Matlab:
 	figure;
 	ft_plot_mesh(bnd_mne)
 
-
 ![image](/media/development/mesh_bnd_ts_mne.jpg@750)
 
 And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the matlab reducepatch functio
@@ -535,9 +520,7 @@ And the source space of the same volume created in FieldTrip, and reduced to the
 	
 	ft_plot_mesh(bnd2_ft);
 
-
 ![image](/media/development/mesh_bnd5_ts_ft.jpg@650)
-
 
 ## Step 3: Tutorial 
 

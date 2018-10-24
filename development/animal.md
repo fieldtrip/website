@@ -30,7 +30,6 @@ lfp stuff
 spike stuff
 {{topic>spike &list}}
 
-
 ## Introduction
 
 ## Procedure

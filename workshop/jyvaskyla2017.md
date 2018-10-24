@@ -48,7 +48,6 @@ In general, please do NOT use the graphical path management tool from MATLAB. In
 Furthermore, please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).
 `</note>`
 
-
 *  morning
     * 1h Lecture on some aspects related to connectivity analysis on M/EEG data. Measures of directed interactions, interpretational issues, and howto's.
     * 1.5h handson [Connectivity](/tutorial/connectivity)

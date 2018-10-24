@@ -94,5 +94,4 @@ When adding or contributing to the tutorials please consider the [documentation 
   -  [Plotting data at the channel and source level](/tutorial/plotting)
   -  [Specifying the channel layout for plotting](/tutorial/layout)
 
-
 The data that is used for the tutorials is available from the ftp server at ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial. You can login with username 'anonymous' and use your email address as password.

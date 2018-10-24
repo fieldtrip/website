@@ -69,4 +69,3 @@ Independent samples design with a control variable, ivar=A, cvar=B
 ![image](/media/development/statistics/perm4.png)
 Mixed design, uvar=A, ivar=B, cvar=C
 
-

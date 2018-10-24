@@ -10,8 +10,6 @@ When running statistics using **[ft_freqstatistics](/reference/ft_freqstatistics
 	
 	%   cfg.correcttail = correct p-values or alpha-values when doing a two-sided test, 'alpha','prob' or 'no' (default = 'no')
 
-
-
 ##### Correct alph
 
 In case of a two-tailed test, the type-I error rate (alpha) refers to

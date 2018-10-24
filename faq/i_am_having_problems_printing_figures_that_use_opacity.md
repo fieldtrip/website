@@ -3,7 +3,6 @@ layout: default
 tags: faq plot
 ---
 
-
 ## I am having problems printing figures that use opacity
 
 In some FieldTrip figures opacity is used to indicate statistical significance, for example in sourceplot where you can use color=functional-value, opacity=significance, grey-level=anatomy, or for example in topoplot. 

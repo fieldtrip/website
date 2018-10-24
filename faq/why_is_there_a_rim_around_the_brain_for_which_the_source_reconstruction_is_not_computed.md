@@ -3,7 +3,6 @@ layout: default
 tags: faq source
 ---
 
-
 ##  Why is there a rim around the brain for which the source reconstruction is not computed? 
 
 The sourceanalysis function starts by determining a regular 3-D grid, and for each gridpoint it determines whether it falls within the brain compartment of the volume conduction model or not. Grid points that are inside the brain are marked as "inside", points outside the brain are marked as "outside". The subsequent source reconstruction is only computed on the grid points that are inside the brain.

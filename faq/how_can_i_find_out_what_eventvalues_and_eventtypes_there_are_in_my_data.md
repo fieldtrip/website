@@ -3,7 +3,6 @@ layout: default
 tags: preprocessing raw faq trigger event values type eventvalue eventtype
 ---
 
-
 # How can I find out what eventvalues and eventtypes there are in my data?
 
 If you recorded data and do not know what eventvalues or eventtypes there are in your data or if the expected values or types do not show up in your data, there is an easy way in FieldTrip to find out what actually *is* in your data. You need to call **[ft_definetrial](/reference/ft_definetrial)** with cfg.dataset as you are interested in and cfg.eventtype set to '?
@@ -25,5 +24,4 @@ Another way to find out eventvalues is to use **[ft_databrowser](/reference/ft_d
 `<note>`
 Each recording environment (lab/system/program) has a very specific way of naming the eventtype and labelling the triggers. For example, BrainVision recorder marks stimulus triggers by having them start with an 'S' and response triggers with an 'R'. Further, all trigger-values have a length of four characters. For example, the response trigger 100 will be 'R100', and stimulus trigger 15 will be 'S 15' (note the blank!). As another example that the eventtype also depends on the recording environment, we at the DCCN MEG lab have event-types that can be named 'frontpanel trigger' or 'backpanel trigger' (and this depends whether the device sending the trigger is connected to the front- or to the backside).
 `</note>`
-
 

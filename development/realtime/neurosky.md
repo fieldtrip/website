@@ -3,7 +3,6 @@ layout: default
 tags: realtime neurosky
 ---
 
-
 # Neurosky ThinkCap
 
 This page describes the interface between the 7 channel wireless ThinkCap of Neurosky and the FieldTrip buffer.
@@ -30,7 +29,6 @@ inside this application, replace the hostname by a minus (-).
 On the command line, change to the ''realtime/datasource/neurosky'' directory and type ''make''. The Makefile will also work with the MinGW compiler on Windows. Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
 ## External links
-
 
 *  http://www.neurosky.com/
 

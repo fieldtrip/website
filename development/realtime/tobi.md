@@ -3,7 +3,6 @@ layout: default
 tags: realtime tobi
 ---
 
-
 # TOBI: Tools for Brain-Computer Interaction
 
 The [TOBI](http://www.tobi-project.org) project defines a standardized interface called TiA (TOBI interface A) to transmit raw biosignals, supporting multi rate and block-oriented transmission of different kinds of signals from various acquisition devices (e.g., EEG, EOG, near-infrared spectroscopy signals, etc.) at the same time [1].
@@ -12,14 +11,12 @@ Interoperability between on streams provided with the TiA and the FieldTrip buff
 
 Note that only homogeneous signal streams (i.e. with a sampling rate and block size that is consistent between channels) are supported at the moment.
 
-
 # License
 
 Tia2ft is available under the 3-clause BSD license (see LICENSE.txt). This
 license permits commercial use, and is compatible with the GPL license. The
 licences of the libraries used in tia2ft are available in their respective
 directories.
-
 
 # Usage
 

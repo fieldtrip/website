@@ -3,7 +3,6 @@ layout: default
 tags: faq qsub peer engine distcomp matlab
 ---
 
-
 # What are the different approaches I can take for distributed computing?
 
 At the Donders Centre we have a linux cluster that we use for the analysis of the neuroimaging data (MEG, fMRI, DTi, ...). On this cluster we have explored various options for distributed computing to speed up the analysis. Particular considerations have resulted so far in own development of two add-on toolboxes that are both distributed along with FieldTrip: fieldtrip/peer and fieldtrip/qsub. We are of course also aware of the Mathworks parallel computing toolbox and the accompanying distributed computing engines, although we don't have a license for those. 
@@ -72,5 +71,4 @@ See **[/reference/peercellfun](/reference/peercellfun)**, **[/reference/peerfeva
 The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development/engine).
 
 `<note warning>`Please note that this requires compilation of some mex files. At this moment it is not actively supported.`</note>`
-
 

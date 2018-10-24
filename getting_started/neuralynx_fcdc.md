@@ -3,7 +3,6 @@ layout: default
 tags: neuralynx lfp dataformat
 ---
 
-
 # Getting started with the Neuralynx data recorded at the Donders Institute 
 
 ## Introduction
@@ -45,7 +44,6 @@ An example of the configuration for spikesplitting is provided belo
 	cfg.format  = 'int32'; 
 	cfg.channel = 'all';
 	cfg         = ft_spikesplitting(cfg);
-
 
 It is also important to note that: 
 
@@ -109,7 +107,6 @@ In FieldTrip the relation between the timestamps and the samples is represented 
     TimeStampPerSample: 30.7200
                   orig: [1x1 struct]
 
-
 or this
 
     >> hdr = ft_read_header('p021parall.nex')
@@ -151,7 +148,6 @@ Here, we will focused on how to read the Plexon dataset directories (//_ds//) wh
 	cfg.headerformat     = 'plexon_ds';  % this is optional, and will be auto-detected
 	cfg = ft_preprocessing(cfg)
 
-
 The specification of the dataformat and headerformat options as *combined_ds* ensures that the appropriate low-level FieldTrip reading function will be called to read the multiple single-channel Plexon .nex files contained in the dataset directory. After preprocessing, we can obtain a data structure like thi
 
 	
@@ -165,7 +161,6 @@ The specification of the dataformat and headerformat options as *combined_ds* en
 	
 	        cfg: [1x1 struct]
 
-
 ### Dealing with changing of channel labels
 
 Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g. *010*) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that  changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**, with the montage as a part of the cfg option **montage**, channel labels can be modified. 
@@ -177,7 +172,6 @@ All montage files for our particular experiment are available upon request. An e
 	cfg = [];
 	cfg.montage = montage;
 	data = ft_preprocessing(cfg,data);
-
 
 It is important to note that to change labels in our recordings on Kurt, we use two montages structures. This is because recordings between sessions 17 and 60 headstages were inversely connected to the electrode connectors. In this case, the correct montage file to use is *kurt_montage_rename_plx2elec_17_60.mat*. After session number 60, headstages were correctly positioned. For later sessions therefore the montage file *kurt_montage_rename_plx2elec.mat* should be used. These files are available upon request.
 
@@ -202,14 +196,12 @@ For example, a schematic layout of the 256 electrode grid might be obtained usin
 	cfg.layout = ft_layout;
 	ft_layoutplot(cfg)
 
-
 To obtain something like this: 
 ![image](/media/getting_started:/chematic_common3.png)
 
 An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:
 
 ![image](/media/getting_started/ku_039_256elec.png@571x367)
-
 
  
  

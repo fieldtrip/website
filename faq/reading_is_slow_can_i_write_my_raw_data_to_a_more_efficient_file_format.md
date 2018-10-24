@@ -3,7 +3,6 @@ layout: default
 tags: faq preprocessing dataformat raw
 ---
 
-
 # Reading is slow, can I write my raw data to a more efficient file format?
 
 Usually the **[ft_preprocessing](/reference/ft_preprocessing)** function will read small segments of data from your original data file, corresponding to the trials in your experiment. Some file formats are inefficient to read in, and if you read many small segments from such a file, you may notice that it is very slow. One method to speed it up is by converting your original raw data into a more efficient format. Another method is to first preprocess all data as a single long continuous segment. Subsequently the data can be cut into smaller pieces, corresponding with the trials as indicated by the trigger events.
@@ -41,7 +40,6 @@ Below is an example how you can convert an arbitrary file (here a BCI2000 file) 
 	
 	>> ls test.*
 	test.bin	test.mat
-
 
 You can read the fcdc_matbin file just like any other file format in FieldTrip, i.e. by using the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** function. For **[ft_preprocessing](/reference/ft_preprocessing)** you can specify the name of the dataset like this
 

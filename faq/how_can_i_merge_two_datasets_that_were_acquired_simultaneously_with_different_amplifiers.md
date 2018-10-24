@@ -3,7 +3,6 @@ layout: default
 tags: faq preprocessing raw dataformat eeg meg
 ---
 
-
 ## How can I merge two datasets that were acquired simultaneously with different amplifiers?
 
 If your experimental setup requires you to acquire the data with two (or more) amplifiers, you end up with datasets that cannot easily be processed together. An example is an EEG setup with a separate GSR signal, or a MEG system with a non-standard EEG amplifier.
@@ -35,7 +34,6 @@ Below a piece of example code is given that outlines the approach that can be us
     data2 = ft_preprocessing(cfg);
 
 Note that the triggers in dataset2 might have a different descriptive name (event type) than in dataset 1, and that the values might be different (depending on how the triggers are wired up). Important is that the triggers in reality were send synchronously to both acquisition systems.
-
 
 Immediately after preprocessing data1 and data2 represent the same segments of data from the two systems. They will have the same time-axis for each data segment/trial, even though the sampling frequencies are different. You can check this with
 

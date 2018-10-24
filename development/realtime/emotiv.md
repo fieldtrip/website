@@ -3,7 +3,6 @@ layout: default
 tags: realtime emotiv
 ---
 
-
 # Emotiv neuroheadset
 
 This page describes the interface between the 14-channel Emotiv neuroheadset and the FieldTrip buffer.
@@ -36,6 +35,5 @@ Please go to the ''realtime/datasource/emotiv'' directory and type ''make'' or '
 Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
 ## External links
-
 
 *  http://www.emotiv.com

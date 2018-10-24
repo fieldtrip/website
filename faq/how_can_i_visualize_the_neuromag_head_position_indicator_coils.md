@@ -28,7 +28,6 @@ The following code reads and visualizes the digitized positions of the HPI coils
 	    end
 	end
 
-
 The following code reads and visualizes the topographical magnetic field distributions. This is done for specific frequency bands, known from the Neuromag documentation to contain signal evoked by the HPI coils (panel C).
 
 	
@@ -75,7 +74,6 @@ The following code reads and visualizes the topographical magnetic field distrib
 	cfg.comment = '328 Hz';
 	ft_topoplotER(cfg, freq);
 
-
 According to Neuromag documentation, frequencies of the HPI signals are 154, 158, 162, 166 and 170 Hz for the sampling rate of 600 Hz (low-pass filter at 200 Hz), or 293, 307, 314, 321
 and 328 Hz for higher sampling rates. 
 
@@ -83,7 +81,6 @@ Note that in this example dataset, the digitized position of HPI coil 5, energiz
 
 	
 	cfg.coilfreq = [293, 307, 314, 321]; % note 328 Hz is missing
-
 
 ![image](/media/faq/neuromag_wikiexample.png@400)
 

@@ -9,21 +9,17 @@ The purpose of this page is just to serve as todo or scratch pad for the develop
 The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 `</note>`
 
-
 # Implement trial selection option
 
 Consistent implementation of option for trial selection in all relevant functions (such as plotting functions, functions that handle raw data, etc.).
 
 ## Objectives
 
-
 *  implement configuration option for doing trial selection in all relevant functions
 
 *  consistent implementation and documentation
 
-
 ## Step 1: get an overview of all functions for which this is relevant
-
 
 *  functions that use raw data
 
@@ -33,7 +29,6 @@ Consistent implementation of option for trial selection in all relevant function
 
 ----
 ##### Functions that use raw dat
-
 
 *  preprocessing.m (when called with preprocessed data) -done-
 
@@ -57,11 +52,9 @@ Consistent implementation of option for trial selection in all relevant function
 
 *  freqanalysis.m   -done-
 
-
 ##### Functions that (could) use data with an 'rpt' dimensio
 
 *  freqdescriptives.m   -done-
-
 
 *  singleplotER.m   -done-
 
@@ -75,25 +68,20 @@ Consistent implementation of option for trial selection in all relevant function
 
 *  multiplotTFR.m   -done-
 
-
 ##### Functions where this has already been implemente
-
 
 *  componentanalysis.m   -done-
 
 *  nonlinearassociation.m   -done-
-
 
 How it's currently implemented in these function
 
 	
 	%   cfg.trials       = 'all' or a selection like 1:10 (default = 'all')
 
-
 	
 	% set the defaults
 	if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
-
 
 	
 	% select trials of interest
@@ -103,28 +91,7 @@ How it's currently implemented in these function
 	  data.time   = data.time(cfg.trials);
 	end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Step 2: develop and implement solution
-
 
 *  ensure consistency in solution
 
@@ -149,14 +116,11 @@ __For raw data input functions (implement before 'Ntrials=...' or equivalent):__
 	    data.time   = data.time(cfg.trials);
 	end
 
-
 __For rpt data input functions:__
 
 	
 	% set the defaults
 	if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
-
-
 
 *  for topoplotE
 
@@ -168,8 +132,6 @@ __For rpt data input functions:__
 	  if ~isfield(cfg, 'xparam'),      cfg.xparam='time';         end
 	  if ~isfield(cfg, 'yparam'),      cfg.yparam='';             end
 	  if ~isfield(cfg, 'zparam'),      cfg.zparam='avg';          end
-
-
 
 *  for singleplotER, multiplotER (varargin
 
@@ -183,8 +145,6 @@ __For rpt data input functions:__
 	    if ~isfield(cfg, 'xparam'),      cfg.xparam='time';         end
 	    if ~isfield(cfg, 'zparam'),      cfg.zparam='avg';          end
 
-
-
 *  for topoplotER, singleplotTFR, multiplotTF
 
 	
@@ -197,14 +157,11 @@ __For rpt data input functions:__
 	  if ~isfield(cfg, 'yparam'),      cfg.yparam='freq';                  end
 	  if ~isfield(cfg, 'zparam'),      cfg.zparam='powspctrm';             end
 
-
 ##### Relevant fields (trl) should be adjusted accordingl
 
 (note: when cfg.trials='all' this doesn't apply)
 
 the code for adjusting the trl should look something like thi
-
-
 
 finding the trl (see e.g. appenddata.m
 
@@ -225,7 +182,6 @@ finding the trl (see e.g. appenddata.m
 	    end
 	  end
 
-
 adjusting the tr
 
 	
@@ -234,12 +190,10 @@ adjusting the tr
 	  cfg.trl=trl(cfg.trials,:);
 	end
 
-
 ##### Documentatio
 
 	
 	%   cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
-
 
 ## Appendix: useful linux commands
 
@@ -248,10 +202,8 @@ Find functions that use raw dat
 	
 	grep -n datatype.*raw *.m
 
-
 Find functions that already have cfg.trials optio
 
 	
 	grep -n cfg.trials *.m
-
 

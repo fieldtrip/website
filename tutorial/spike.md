@@ -42,7 +42,6 @@ Neurons often fire in synchrony, meaning that action potentials from different n
 
 ## Procedure
 
-
 *  Read the spike data into MATLAB using **[ft_read_spike](/reference/ft_read_spike)**
 *  Create a trial structure for the spike trains using using **[ft_read_event](/reference/ft_read_event)** and **[ ft_spike_maketrials](/reference/ ft_spike_maketrials)**.
 *  Converting spike structure into continuous raw structure, and back, using **[ ft_checkdata](/reference/ ft_checkdata)**
@@ -63,11 +62,9 @@ Make sure you run **[ ft_defaults](/reference/ ft_defaults)**
 after having added the main FieldTrip path (e.g. addpath('path_to_fieldtrip')), ensuring that the required functions are in your MATLAB path.
 For spike analysis there is spike toolbox that is located in fieldtrip/contrib/spike.
 
-
 Spike data can be read out using the function **[ft_read_spike](/reference/ft_read_spike)**. At the time of writing this tutorial the supported formats are neurosim, mclust t files, neuralynx (nse, nst, ntt, nts) and  plexon (nex and plx) files..
 The original data can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex).
 After reading out the spike data, we select the spike channels of interest.
-
 
 	spike = ft_read_spike('p029_sort_final_01.nex');
 
@@ -76,7 +73,6 @@ After reading out the spike data, we select the spike channels of interest.
 	spike = ft_spike_select(cfg, spike);
 
 one obtains a so called spike structure (see **[ft_datatype_spike](/reference/ft_datatype_spike)**). In this spike structure we simply gather the raw spike data (timestamps of spikes and waveforms) for multiple cells, which are identified through their label
-
 
 	spike =
 
@@ -88,7 +84,6 @@ one obtains a so called spike structure (see **[ft_datatype_spike](/reference/ft
 	       dimord: '{chan}_lead_time_spike'
 	          cfg: [1x1 struct]
 
-
 The spike structure contains a representation of timestamps, waveform and labels for a number of cells (N = 2).
 The field spike.label is an 1 x N cell array containing a character string that identifies each cell. For each of the N units, the field spike.timestamp contains the spike timestamps, where one timestamps corresponds to 1/40000 seconds in this case, as can be seen from spike.hdr.FileHeader.Frequency (and would correspond to microseconds for the Digital Neuralynx, for example).
 For example, 164456 spikes were recorded for the isolated single unit 'sig002a_wf'.
@@ -98,13 +93,11 @@ The second dimension of waveform contains the samples. In this case one sample c
 The third dimension of spike.waveform{i} equals the length of spike.timestamp{i}, such that a waveform is present for every spike ('spike' dimension).
 The waveforms can be processed further using **[ft_spike_waveform](/reference/ft_spike_waveform)**.
 
-
 ### Computing average waveforms
 
 An important tool to characterize the particular cell class a recorded neuron belongs to, is the analysis of its action potential waveform. For example, pyramidal cells have broad waveforms, while fast spiking inhibitory interneurons have narrow waveforms (i.e., short peak-to-through duration of action potential). For characterizing waveforms we use the function **[ft_spike_waveform](/reference/ft_spike_waveform)**.
 The function ft_spike_waveform preforms alignment of waveforms based on the peak, such that they can also be aligned across different units, normalizes them to unit amplitude (if requested), interpolates the waveforms and performs outlier rejection. It also returns a spike structure (if two outputs are requested) in which the rejected outlier waveforms have been removed. Hence, it can be used as an additional preprocessing step.
 We ru
-
 
 	cfg             = [];
 	cfg.fsample     = 40000;
@@ -112,7 +105,6 @@ We ru
 	[wave, spikeCleaned] = ft_spike_waveform(cfg,spike);
 
 The resulting wave structure has the following content
-
 
 	wave =
 
@@ -126,7 +118,6 @@ The resulting wave structure has the following content
 
 and the structure spikeCleaned contains fewer spikes than originally now. In addition, the individual waveforms have been aligne
 
-
 	spikeCleaned =
 
 	           label: {'sig002a_wf'  'sig003a_wf'}
@@ -138,9 +129,7 @@ and the structure spikeCleaned contains fewer spikes than originally now. In add
 	             cfg: [1x1 struct]
 	    waveformtime: [1x67 double]
 
-
 Plotting the mean waveform and variance for two units by
-
 
 	for k = [1 2]
 	  figure,
@@ -158,7 +147,6 @@ Plotting the mean waveform and variance for two units by
 	  ylabel('normalized voltage')
 	end
 
-
 shows that one unit has the structure of a fast spiking cell (as its waveform is narrow), and one unit of a broad spiking cell (as its waveform is broad
 
 ![image](/media/tutorial/waveform_sig002a_wf.png)
@@ -173,12 +161,9 @@ Secondly, an nTrials x 3 cfg.trl matrix containing start (:,1) (first column) an
 This requires the event file to be read out.
 The event file is read out using
 
-
 	event = ft_read_event('p029_sort_final_01.nex')
 
-
 The structure event
-
 
 	event =
 	37689x1 struct array with field
@@ -191,7 +176,6 @@ The structure event
 
 specifies for each of the 37689 recorded events the sample (if available: this corresponds to the LFP samples, see the spike-field tutorial), the value (a number uniquely identifying the event) and the timestamp at which it occurred.
 Using the value and timestamp fields, we built a user-specified function that constructs a cfg.trl matrix. In this case, we take -2.75 before stimulus onset until the first change of the stimulus. We first create a trial function that needs to be saved in the MATLAB path.
-
 
 	function trl = trialfun_stimon(cfg)
 
@@ -224,26 +208,21 @@ Using the value and timestamp fields, we built a user-specified function that co
 	  end
 	end
 
-
 For the purpose of walking through the tutorial, you should copy and paste the code above in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
 
 We then call **[ft_definetrial](/reference/ft_definetrial)**
-
 
 	cfg          = [];
 	cfg.dataset  = 'p029_sort_final_01.nex';
 	cfg.trialfun = 'trialfun_stimon';
 	cfg = ft_definetrial(cfg);
 
-
 Running
-
 
 	cfg.timestampspersecond =  spike.hdr.FileHeader.Frequency; % 40000
 	spikeTrials = ft_spike_maketrials(cfg,spike);  
 
 then gives us for this dataset a new structure
-
 
 	spikeTrials =
 
@@ -258,7 +237,6 @@ then gives us for this dataset a new structure
 	         trial: {[1x83613 double]  [1x61511 double]}
 	     trialtime: [600x2 double]
 
-
 The structure now contains the spike times in seconds (spikeTrials.time) and in timestamp units (spikeTrials.timestamp) for the spikes that occurred in the specified trials (see that there are less spikes in spikeTrials.timestamp now than before).
 We have created three new fields in the spike structure, namely spikeTrials.time, spikeTrials.trial and spikeTrials.trialtime.
 Together, these three fields fully identify the structure of the spiketrain relative to the event trigger. The relationship between spikeTrials.time{1} and spikeTrials.timestamp{1} is shown for the first 8 trials. All spikes that fall in the same trial have the same value in spikeTrials.trial{1}.
@@ -269,7 +247,6 @@ In this example, unit 'sig002a_wf' fired in total 83613 spikes in the selected t
 The spikeTrials.trialtime field fully specifies the structure of the spike trains, as it conveys in which trials no spike was fired, and what the borders of the trials were. The first and second column of spikeTrials.trialtime tell us what the start and end of the trial was relative to the event trigger.
 For example,
 
-
 	spikeTrials.trialtime(1:5,:)  
 	ans
 	   [ -2.750000000000000  3.353600000000000
@@ -278,10 +255,8 @@ For example,
 	     -2.750000000000000   1.051875000000000
 	     -2.750000000000000   2.853950000000000]
 
-
 Note that the end of the trial is variable because we defined our trials running until the first target or distractor change.
 The field spikeTrials.cfg.trl tells us what the start and ends of the trials was in timestamps units.
-
 
 	spikeTrials.cfg.trl(1:5,:)  
 	ans
@@ -291,12 +266,10 @@ The field spikeTrials.cfg.trl tells us what the start and ends of the trials was
 	     2872531     3024606
 	     3662529     3886687]
 
-
 The advantage of the spike structure is that it is very memory efficient as compared to e.g. a binary (zeros and integers) format, and that data from hundreds of neurons can easily be stored in this structure. For many functions, e.g. PSTHs, raster-plots and cross-correlations, it is also the most natural format to perform computations. Furthermore, the format makes it easy to associate certain data with single spikes, for example spike-triggered LFP spectra and waveform information.
 
 It is also possible to create only one trial. This is useful for two reasons. First of all, we explicitly convert timestamps to time. Secondly, we can correct for the fact the first recorded timestamp often does not start at zero (for example, with Neuralynx data).
 In this case, the first recorded timestamp does correspond to zero. To this end, we run
-
 
 	cfg                     = [];
 	hdr                     = ft_read_header('p029_sort_final_01.nex');
@@ -305,7 +278,6 @@ In this case, the first recorded timestamp does correspond to zero. To this end,
 	spike_notrials   = ft_spike_maketrials(cfg,spike);
 
 to obtain the structure
-
 
 	spike_notrials =
 
@@ -326,7 +298,6 @@ Now, all spike_notrials.trial{i} are set to ones, and all spike times (spike_not
 
 For some analyses, it may be desired to have the data in binary format. The spike structure can be converted to a continuous binary raw format (see **[ft_datatype_raw](/reference/ft_datatype_raw)**) by using
 
-
 	dat = ft_checkdata(spikeTrials,'datatype', 'raw', 'fsample', 1000)
 
 where fsample (in this case arbitrarily set at 1000 samples / sec) determines the desired spacing of samples. If fsample is too low compared to the spike firing rate, then the spike trains will not be binary (as multiple spikes can fall into one bin, resulting in integer values larger than one to keep track of the number of spikes in one sample) and the round-off errors will become larger.
@@ -342,7 +313,6 @@ The structure data has the contents
 
 Each dat.trial{iTrial} contains a chan x time matrix with zeros at samples with no spikes and n at samples with n spikes. For example,
 
-
 	dat.trial{1}(:,4000:4004)
 	ans =
 
@@ -350,7 +320,6 @@ Each dat.trial{iTrial} contains a chan x time matrix with zeros at samples with 
 	     0     0     1     0     0
 
 We can also convert the data structure back to a spike structure by using
-
 
 	spike_converted = ft_checkdata(dat,'datatype', 'spike')
 
@@ -363,15 +332,12 @@ If spike trains are governed by a Poisson process, then the statistics of the sp
 For the current dataset, we study the ISI distribution for the stimulus period, using the functions **[ft_spike_isi](/reference/ft_spike_isi)** and **[ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn)**.
 We compute the isi histogram using
 
-
 	cfg       = [];
 	cfg.bins  = [0:0.0005:0.1]; % use bins of 0.5 milliseconds
 	cfg.param = 'coeffvar'; % compute the coefficient of variation (sd/mn of isis)
 	isih = ft_spike_isi(cfg,spikeTrials);
 
-
 The resulting structure isih has the following content
-
 
 	isih =
 
@@ -384,7 +350,6 @@ The resulting structure isih has the following content
 	         cfg: [1x1 struct]
 
 The field isih.isi contains the isi per spike (w.r.t the previous spike) and contains NaNs at the beginning of the trials. The field isih.avg contains the average isi histogram per unit, and isih.coeffvar the computed parameter summarizing the statistics of the isi histogram (e.g. see Shinomoto et al., 2009) .We then plot the isi histogram (which can be plotted alone using **[ ft_spike_plot_isi](/reference/ ft_spike_plot_isi)**) together with the isi (Poincare) return plot, which plots the current isi(n) against the next isi(n+1), thereby giving insight into the second order statistics of the isi distributio
-
 
 	for k = [1 2] % only do for the single units
 	  cfg              = [];
@@ -405,7 +370,6 @@ This gives two figures, one with a longer refractory period (the narrow spiking 
 
 We also read in an additional dataset consisting of an M-clust .t file, that can be found at
 [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t)
-
 
 	% read in the .t file
 	filename    = 'tt6_7.t'
@@ -433,7 +397,6 @@ We also read in an additional dataset consisting of an M-clust .t file, that can
 	cfg.colormap    = jet(300);
 	figure, ft_spike_plot_isireturn(cfg,isih)
 
-
 ![image](/media/tutorial/isica1_example.png@300)
 
 This plot shows that after a burst, either a new burst follows, or a long waiting period on the order of a theta cycle (100 ms).
@@ -445,7 +408,6 @@ For computing the PSTH, use the function **[ft_spike_psth](/reference/ft_spike_p
 
 Running
 
-
 	cfg             = [];
 	cfg.binsize     =  0.1; % if cfgPsth.binsize = 'scott' or 'sqrt', we estimate the optimal bin size from the data itself
 	cfg.outputunit  = 'rate'; % give as an output the firing rate
@@ -455,7 +417,6 @@ Running
 	psth = ft_spike_psth(cfg,spikeTrials);
 
 gives us the output
-
 
 	psth =
 
@@ -474,7 +435,6 @@ The PSTH structure is a so called 'timelock' data structure (**[ft_datatype_time
 
 A raster plot with psth is obtained by running
 
-
 	cfg         = [];
 	cfg.binsize =  [0.05];
 	cfg.latency = [-1 3];
@@ -488,13 +448,11 @@ A raster plot with psth is obtained by running
 	cfg.interactive  = 'no'; % toggle off interactive mode
 	figure, ft_spike_plot_raster(cfg,spikeTrials, psth)
 
-
 ![image](/media/tutorial/psth_example3.png@300)
 
 The yellow lines in the raster plot indicate the trial borders. Configuration options are available to control spike length and width, and size of the raster relative to the summarizing PSTH / spike density data. Also, multiple neurons are plotted with different colors. This can also be used to plot multiple conditions at the same time.
 
 We then run spike-density functions on the spike trains, to obtain spike density with rasters. The advantage of the spike-density function is that an estimate of the instantaneous firing rate or expected spike count can be obtained for every time-point, instead of larger bins (as with the PSTH).
-
 
 	cfg         = [];
 	cfg.latency = [-1 3];
@@ -509,11 +467,9 @@ We then run spike-density functions on the spike trains, to obtain spike density
 	cfg.interactive  = 'no'; % toggle off interactive mode
 	figure, ft_spike_plot_raster(cfg,spikeTrials, sdf)
 
-
 ![image](/media/tutorial/sdf_example.png@300)
 
 The output from **[ft_spikedensity](/reference/ft_spikedensity)** is again a timelock structure. A second output can be obtained from **[ft_spikedensity](/reference/ft_spikedensity)**, containing the estimated spike densities per trial in a continuous raw data structure. To this end, do
-
 
 	cfg         = [];
 	cfg.latency = [-1 3];
@@ -522,7 +478,6 @@ The output from **[ft_spikedensity](/reference/ft_spikedensity)** is again a tim
 	[sdf, sdfdata] = ft_spikedensity(cfg,spikeTrials);
 
 Now, sdfdata is a continuous raw structure with the following content
-
 
 	sdfdata =
 
@@ -535,7 +490,6 @@ Now, sdfdata is a continuous raw structure with the following content
 
 For example,
 
-
 	sdfdata.trial{1}(:,3000:3005)
 	   69.9088   68.6629   68.5491   68.4371   68.3268   67.1327
 	   12.2671   12.2494   12.2315   12.2135   12.1954   12.1772
@@ -544,15 +498,12 @@ For example,
 
 The average firing rates for a certain period are computed by
 
-
 	cfg            = [];
 	cfg.latency    = [0.3 max(spikeTrials.trialtime(:))]; % sustained response period
 	cfg.keeptrials = 'yes';
 	rate = ft_spike_rate(cfg,spikeTrials);
 
-
 The output rate is a timelock structure with content
-
 
 	rate =
 
@@ -565,10 +516,8 @@ The output rate is a timelock structure with content
 	     trial: [600x2 double]
 	       cfg: [1x1 struct]
 
-
 An important question in neurophysiology is whether neurons are capable of transmitting information independent from each other, or whether neurons have shared trial-by-trial fluctuations (called 'noise correlations') in their firing rate (given an identical stimulus) that diminish the coding capacity of the population (e.g. see Ecker et al., 2010).
 One can compute noise correlations between units by doing
-
 
 	[R,P] = corrcoef(rate.trial)
 
@@ -577,12 +526,10 @@ One can compute noise correlations between units by doing
 	    1.0000    0.0988
 	    0.0988    1.0000
 
-
 	P = % probability
 
 	    1.0000    0.0155
 	    0.0155    1.0000
-
 
 ###  Computing cross-correlations between spike trains
 
@@ -590,7 +537,6 @@ Auto- and cross-correlations between spike trains are computed using **[ ft_spik
 The cross-correlogram is one of the classic techniques to show rhythmic synchronization between different neurons (e.g. see Gray et al., 1989) but also to identify synaptic connections between recorded neurons (e.g. see Bartho et al., 2004). The auto-correlogram typically offers a more sensitive measure of the degree to which a single neuronal source displays rhythmic firing than the ISI distribution, especially if firing rates are high. For this analysis we select the unsorted multi-units from the same data-set, as they give more reliable cross-correlations. The observed cross-correlogram should always be compared against a cross-correlogram obtained by shuffling the trials. Cross-correlations between neurons can either arise because of common, time-locked fluctuations in the firing rate (Brody et al., 1999). These correlations are invariant to a change in the order of trials. The shuffling of trials in **[ ft_spike_xcorr](/reference/ ft_spike_xcorr)** always pertains to two subsequent trials, in order to avoid an influence of slow changes in the firing rate across trials. We refer to this cross-correlogram that is obtained under a permutation of subsequent trials as the 'shift-predictor' cross-correlogram. If the observed features of the cross-correlogram that are not present in the shift-predictor cross-correlogram, then this indicates that they arise because of induced synchronous activity. Note that for the shift-predictor, it is required that the trials cover the full latency window that is specified by cfg.latency. For example, if the first trial has a duration of 3 sec. and the second of 2 sec., we can only compute the contribution to the shift-predictor based on the spikes from the first 2 seconds. Hence, cfg.vartriallen must be specified to 'no'.
 
 We run
-
 
 	% read in the data, select the channels and define the trials
 	spike = ft_read_spike('p029_sort_final_01.nex');
@@ -606,9 +552,7 @@ We run
 	cfg.timestampspersecond =  spike.hdr.FileHeader.Frequency; % 40000
 	spikeTrials = ft_spike_maketrials(cfg,spike);  
 
-
 and then compute the cross-correlogram (and the shift-predictor cross-correlogram) by
-
 
 	cfg             = [];
 	cfg.maxlag      = 0.2; % maximum 200 ms
@@ -623,9 +567,7 @@ and then compute the cross-correlogram (and the shift-predictor cross-correlogra
 	cfg.method      = 'shiftpredictor'; % compute the shift predictor
 	Xshuff = ft_spike_xcorr(cfg,spikeTrials);
 
-
 The output Xc is a structure with the following content
-
 
 	Xc =
 
@@ -653,13 +595,11 @@ For example, the computed cross-correlogram reveals strong zero-lag and alpha-ba
 	title([Xc.label{iCmb} Xc.label{jCmb}])
 	axis tight
 
-
 ![image](/media/tutorial/xcorr34.png)
 ###  The joint peri stimulus time histogram
 
 Cross-correlations are computed over the complete trial period. To gain insight into the temporal evolution of spike-spike correlations, the JPSTH tool can be used.
 We compute the JPSTH using **[ ft_spike_jpsth](/reference/ ft_spike_jpsth)** and visualize it using **[ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)**.
-
 
 	% compute the spike densities
 	cfg         = [];
@@ -682,9 +622,7 @@ We compute the JPSTH using **[ ft_spike_jpsth](/reference/ ft_spike_jpsth)** and
 	jpsthSubtr = jpsth;
 	jpsthSubtr.jpsth = jpsth.jpsth-jpsthShuff.shiftpredictor;
 
-
 We then plot the JPSTH using **[ ft_spike_plot_jpsth](/reference/ ft_spike_plot_jpsth)**
-
 
 	cfg        = [];
 	figure
@@ -693,7 +631,6 @@ We then plot the JPSTH using **[ ft_spike_plot_jpsth](/reference/ ft_spike_plot_
 	ft_spike_plot_jpsth(cfg,jpsthShuff)
 	figure
 	ft_spike_plot_jpsth(cfg,jpsthSubtr)
-
 
 giving the normalized jpsth, the shuffle corrected normalized jpsth, and the difference between the two, revealing an increase in synchronization between spike trains that is not due to evoked, joint fluctuations in the firing rate.
 

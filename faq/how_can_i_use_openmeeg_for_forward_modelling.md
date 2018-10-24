@@ -3,7 +3,6 @@ layout: default
 tags: faq headmodel source
 ---
 
-
 `<note warning>`
 This documentation is outdated, the latest version is available from http://openmeeg.github.io.
 `</note>`
@@ -53,7 +52,6 @@ Installation procedur
 	#example using RPM command (from Linux shell)
 	rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
 
-
     
 #### For Windows
 
@@ -75,7 +73,6 @@ The source code of OpenMEEG can be accessed by SVN
 OpenMEEG is build with CMake on all platforms.
 
 It only depends on blas/lapack or atlas on Linux and Mac OS X and the Intel MKL on Windows.
-
 
 ### Make sure that it works
 

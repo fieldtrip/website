@@ -3,7 +3,6 @@ layout: default
 tags: faq trigger trialfun preprocessing
 ---
 
-
 ## How can I check or decipher the sequence of triggers in my data?
 
 Triggers, stimuli, responses, annotations, etcetera in the recording are in FieldTrip jointly represented as "events" and read from the dataset using **[ft_read_event](/reference/ft_read_event)**. The following code demonstrates how you can do a visual check of the triggers and export them to an excel file.
@@ -64,7 +63,6 @@ The following code finds all unique events and aligns the individual bits in the
 	trigtable = [table(sample, latency) trigtable];
 	
 	writetable(trigtable, 'trigger.xls');
-
 
 The table can easily be exported to Excel or LibreOffice, where you can do additional checks on the columns. 
 

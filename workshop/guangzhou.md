@@ -31,9 +31,7 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
          * http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis     
     * 16:45 – 17:30		Wrap-up-the-day: “Ask the experts” session
 
-
 *  dinner (not included, i.e. on own costs)
-
 
 #### Wednesday August 24th
 
@@ -45,7 +43,6 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
 
     * 13:00 – 14:00		Lunch
 
-
 *  Session IV
     * 14:00 – 15:15		Lecture: Non-parametric randomization techniques
     * 15:15 – 15:30		Coffee break
@@ -54,14 +51,12 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
          * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
     * 17:15 – 18:00		Wrap-up-the-day: “Ask the experts” session
 
-
 #### Thursday August 25th
 
 *  Session V
     * 10:00 – 13:00		FieldTrip playground: bring your own data
          * http://www.fieldtriptoolbox.org/tutorial/monkey_ecog
                                * Wrap up of the workshop
-
 
 ## Installing FieldTrip and Tutorial preparation
 
@@ -82,7 +77,6 @@ moving all files one level up.
 `</note>`
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
-
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-20160818

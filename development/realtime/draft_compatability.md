@@ -3,7 +3,6 @@ layout: default
 tags: realtime development
 ---
 
-
 # Suggested improvements for compatibility across versions
 
 This section pertains to the implementation of backward compatibility in the C language reference implementation. 
@@ -22,11 +21,9 @@ The logic would involve detecting the server version by sending requests with de
 
 #### Advantages
 
-
 *  High compatibility, easy for (naive) users
 
 #### Disadvantages
-
 
 *  Probably hard to maintain for developers in the long run
 
@@ -41,7 +38,6 @@ The logic would involve detecting the server version by sending requests with de
 *  How to add new language bindings (e.g., Python / Java)? Should a language binding initiated at V4 include support for V1-V3 as well?
  
 #### Practical notes
-
 
 *  Old versions of the ''dmarequest'' function should be kept, starting with V2 it should get a version number suffix. Protocol data structures, when modified, should also be duplicated and renamed to get a version number suffix, so the old functions (based on old data structures) still compile.
 

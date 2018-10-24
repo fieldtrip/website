@@ -3,16 +3,12 @@ layout: default
 tags: dataformat eeg ant asa eeprobe
 ---
 
-
 # Getting started with asa and eeprobe data
 
 **asa** and **ee**probe are software packages developed by [ANT Neuro](http://www.ant-neuro.com). The **ee**probe format consists of files with the following extension
 
-
-*  .cnt continuous data 
-
+*  .cnt continuous data
 *  .trg trigger information, this complements the .cnt file
-
 *  .avr averaged (i.e. ERP) data
 
 The data in the .cnt and .avr files is compressed with a zip-like algorithm, which makes the implementation of reading functions more difficult. The original source code (C-language) is available at this page [ANT Neuro Documentation and Download](http://ant-neuro.com/supporting-documentation-and-downloads). Contact [ANT Neuro support](/support@ant-neuro.com) in case you need help to compile import/export functionality based on this source code.

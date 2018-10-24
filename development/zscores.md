@@ -14,11 +14,9 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 Z-scores are being used as a means to 'normalize' the data before doing over-subjects statistics. However, there are many ways of implementing this and at the moment there is not much consensus what the best method is.
 
-
 ## Objectives
 
 *  to find a proper method for homogenizing data prior to statistical testing, with the purpose of not losing sensitivity (or even possibly gaining sensitivity) in case of a MCP
-
 
 ## Step 1: get an overview
 
@@ -26,7 +24,6 @@ Z-scores are being used as a means to 'normalize' the data before doing over-sub
  2.  which problems should be solved / why does one need to 'normalize' in the first place?
  3.  what are the possible solutions?
  4.  what are the underlying assumptions?
-
 
 ----
 ##### 1. Goa
@@ -47,7 +44,6 @@ Ad 1)
 Ad 2)
 
 *  large individual differences
-
 
 ##### 3. Possible solution
 
@@ -73,10 +69,7 @@ Ad 2)
 
 *  zscores
 
-
 *--> Problem: these solutions may introduce additional noise!*
-
-
 
 ##### 4. Assumption
 
@@ -86,53 +79,6 @@ Properties of the dat
 
 *  model of effect (additive or multiplicative)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Step 2: simulate data
 
 The choice of the 'best' solution will (probably) depend on the characteristics of the data. Ideally, this will lead to a simple scheme with for each type of data characteristics the optimal method. The choice for the best method for a particular dataset will then depend on the question 'what are the properties of the data?'.
@@ -140,9 +86,7 @@ The choice of the 'best' solution will (probably) depend on the characteristics 
  1.  develop realistic effect and noise models
  2.  find optimal noise and effect range
 
-
 ----
-
 
 ##### 1. Effect and noise model
 
@@ -154,8 +98,6 @@ The data should be of the for
 	  baseline   = phys           + noise
 	  activation = phys * e1 + e2 + noise
 
-
-
 *  with for the additive effect model: e1 = 1, e2 > 0, and for the multiplicative effect model: e1 > 1, e2 = 0.
 
 *  phys is the physiological signal, consisting of a 'constant' (e.g. alpha oscillation) modulated by a slow drift
@@ -166,12 +108,7 @@ The data should be of the for
 	phys  = phys_constant + phys_noise * lambda_phys
 	noise = random_noise  * lambda_ext
 
-
-
 *  lambda_phys and lambda_ext are scaling factors for the physiological and external noise, resp.
-
-
-
 
 This gives us the following dimension
 
@@ -185,29 +122,21 @@ This gives us the following dimension
 
 This way we can vary the size/range of effect and noise, have multiple trials and at the same time repeat the statistical test several times, using freqstatistics. 
 
-
-
-
 ##### 2. Find interesting rang
 
 We need a range of effect and noise size where at the edges the effect is always found (effect high, noise low) resp. never found (effect low, noise high). In the range in between, it will sometimes turn up, sometimes not. If we repeat the statistical test several times (using the chan dim) and average the results we have a nice measure of the statistical power. Now we can go to the next step and repeat this using the different homogenization methods and see whether they improve the statistical power. 
 
-
-
 *To illustrate (using additive effect model)
 
 The results of using 1 repetition of the stats test (i.e., 1 channel). The left figure shows 'stat', right shows 'mask'. On the x-axis is noise level, on y-axis effect level, the colouring codes the stat (t values) resp. mask (1=sig effect, 0=no sig effect).
-
 
 ![image](/media/development/stat_noise_4_10_effect_1_4.png@500)
 ![image](/media/development/mask_noise_4_10_effect_1_4.png@500)
 
 The results of using 500 repetitions of the stats test. Since the noise is randomly generated the results turn out little bit different for each run. Averaging the masks over repetitions reflects the statistical power (=1-beta)
 
-
 ![image](/media/development/stat_noise_4_10_effect_1_4_n500.png@500)
 ![image](/media/development/mask_noise_4_10_effect_1_4_n500.png@500)
-
 
 *To illustrate (using multiplicative effect model)
 
@@ -222,13 +151,11 @@ To test the methods we will take the following step
  2.  apply different methods and calculate statistical power
  3.  compare results with the reference
 
-
 effect mode
 
 *  additive
 
 *  multiplicative
-
 
 noise mode
 

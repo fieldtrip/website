@@ -6,7 +6,6 @@ layout: default
 
 For the documentation, communication and development of the FieldTrip project we use various tools. This page lists the tools and the integration that we have implemented between them.
 
-
 ### Dokuwiki
 
 We use [dokuwiki](http://dokuwiki.org/) as the CMS system on which our website is implemented. The CMS is hosted on a virtual machine at the DCCN. Upon an edit of the wiki, a tweet is send to http://twitter.com/fieldtriptoolbx.

@@ -3,7 +3,6 @@ layout: default
 tags: meg-uk-2015 mmfaces
 ---
 
-
 # MEG-UK 2015 meeting
 
 The workshop highlights complementary analysis methods offered by FieldTrip and SPM. It is aimed at people who already have some MEG/EEG experience, who would like to improve their analysis skills and get a better overview of the features offered by FieldTrip and SPM. The topics that will be discussed include: statistical inference, source reconstruction, and connectivity. The aim of the workshop will be to demonstrate the different analysis methods available within FieldTrip and SPM, and how to apply them. Advantages/disadvantages of the different methods will be discussed.
@@ -24,7 +23,6 @@ Some familiarity with Fieldtrip and SPM is required. Please read the [SPM EEG/ME
 
 As time is limited for the lectures, we strongly recommend to watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
-
 For SPM (all taken from http://www.fil.ion.ucl.ac.uk/spm/course/video)
 
 *  [The general linear model](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_GLM)
@@ -43,7 +41,6 @@ For FieldTrip (all taken from http://www.fieldtriptoolbox.org/video)
 ## Programme
 
 The programme mixes short theoretical sessions with hands-on computer assignments. The day ends with a supervised computer session where people are free to work on their dataset of choice.
-
 
 `<note>`
 Please look at the [general instructions](/workshop/meg-uk-2015/general) for the hands-on sessions to start MATLAB and navigate to the data directory on the Aston computer-lab machines.

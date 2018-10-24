@@ -3,7 +3,6 @@ layout: default
 tags: realtime development
 ---
 
-
 # FieldTrip buffer C++ implementation
 
 This page describes the C++ wrappers around the reference implementation and a generic framework for writing an acquisition driver using a set of ready-made C++ modules.
@@ -23,7 +22,6 @@ as the internally used data type to hold the filter states. For example, you can
 	MultiChannelFilter`<int,double>` *filter = new MultiChannelFilter`<int,double>`(10, 4);  // 4th-order filter
 	filter->setButterLP(0.1);  // normalised frequency, 1=Nyquist
 	filter->process(out, in);  // out and in point to 10 integers each (=one sample)
-
 
 ### TemplateVectorMath
 
@@ -47,7 +45,6 @@ integers, you would call something like
 	gdfWriter->createAndWriteHeader(filename);
 	...
 	gdfWriter->addSamples(num, data);      // data must point to 11*num integer values 
-
 
 ### ChannelSelection & SignalConfiguration
 
@@ -88,13 +85,11 @@ and saving it to a GDF file at the same time. The general scheme looks like this
 	      (write selected channels to disk)
 	ENDLOOP
 
-
 Saving to disk will be handled in a separate thread to allow for smallest possible latencies + jitter.
 
 #### Commands that influence runtime behaviour
 
 The OnlineDataManager will listen on a certain TCP port for incoming commands given as line-feed-terminated ASCII strings such a
-
 
 *  ''STREAM START'' will enable streaming.
 

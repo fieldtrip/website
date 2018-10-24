@@ -3,7 +3,6 @@ layout: default
 tags: preprocessing continuous raw faq
 ---
 
-
 # How can I process continuous data without triggers?
 
 Most of the FieldTrip documentation is written for a cognitive neuroscience audience, i.e. researchers that usually are performing experiments in which different stimuli are presented and where the subject performs different mental tasks. 
@@ -50,7 +49,4 @@ This uses the **ft_trialfun_general** function to segment the data. This functio
 	cfg.trl(sel, :) = [];                             % remove the segments that are beyond the end of the file
 	
 	data = ft_preprocessing(cfg);
-
-
-
 

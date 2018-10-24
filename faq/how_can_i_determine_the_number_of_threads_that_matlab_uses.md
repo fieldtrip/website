@@ -3,7 +3,6 @@ layout: default
 tags: faq peer matlab
 ---
 
-
 ## How can I determine the number of threads that MATLAB uses?
 
 In MATLAB versions up to 7.7 (2008b) you can determine the maximum number of threads that it can use with

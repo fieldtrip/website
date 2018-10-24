@@ -3,7 +3,6 @@ layout: default
 tags: faq
 ---
 
-
 ## What usage information is FieldTrip tracking?
 
 The FieldTrip software includes the **[/reference/ft_trackusage](/reference/ft_trackusage)** function for usage tracking. This function is called once in every MATLAB session from within **[/reference/ft_defaults](/reference/ft_defaults)** at the moment that you start using the first high-level FieldTrip function. Furthermore, this function could be called at the start of each high-level FieldTrip function or could be called at specific events, such as errors.

@@ -3,7 +3,6 @@ layout: default
 tags: faq mri volume coordinate
 ---
 
-
 ## How to change the MRI orientation, the voxel size or the field-of-view?
 
 The function **[ft_volumereslice](/reference/ft_volumereslice)** allows you to 
@@ -29,7 +28,6 @@ An example volume structure is
 	       hdr: [1x1 struct] 
 	            
 
-
 This volume is already aligned to the 'ctf' head [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). But the alignment by itself does not change the orientation of the original **anatomy** field, it just adds a transformation matrix which allows for relating each voxel coordinate to the CTF head coordinate system. (Note: the transformation matrix is taken into account at subsequent computations.)
 
 When the anatomical data is plotted, the default behavior is to plot the anatomical data as it is in the **anatomy** field (without changing its orientation according to the transformation matrix). This is the reason why anatomical data is sometimes plotted with the top of the head pointing downwards (figure 1).
@@ -37,7 +35,6 @@ When the anatomical data is plotted, the default behavior is to plot the anatomi
 	
 	cfg = [];
 	ft_sourceplot(cfg,mri)
-
 
 ![image](/media/faq/mri_orinetation/mri.png@400)
 
@@ -54,7 +51,6 @@ Plotting the resliced anatomical MRI results in a figure with the usually desire
 	cfg = [];
 	ft_sourceplot(cfg,mrirs); 
 
-
 ![image](/media/faq/mri_orinetation/mrirs.png)
 
 *Figure 2. Plot of the anatomical mri after using ft_volumereslice*  
@@ -70,7 +66,6 @@ Isotropic voxels are necessary if we want to apply morphological operators to th
 The **[ft_volumereslice](/reference/ft_volumereslice)** function is also able to change the number of voxels along each direction. This can be useful for example, when the preprocessing of the anatomical images requires a specific image size (e.g. see [this tutorial](/tutorial/minimumnormestimate)).
 
 In the figures above you can appreciate the change in the FOV by considering the MRI in the original representation not being in the centre of the picture, whereas after reslicing it is in the centre and better fills the available space.
-
 
 ### General principle of reslicing as a 3D interpolation
 

@@ -64,7 +64,6 @@ If preprocessing was done as described, the data will have the following field
           grad: [1x1 struct]
            cfg: [1x1 struct]
 
-
 Note that 'dataFIC_LP.label' has 149 in stead of 151 labels since channels MLP31 and MLO12 were excluded. 'dataFIC-LP.trial' has 77 in stead of 87 trials because 10 trials were rejected because of artifacts.
 
 The most important fields are 'dataFIC_LP.trial' containing the individual trials and 'data.time' containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
@@ -231,7 +230,6 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
     cfg.layout = 'CTF151_helmet.mat';
     ft_topoplotER(cfg,avgFICplanarComb);
 
-
 ![image](/media/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png@500)
 
 **//Figure 8; A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using FT_MEGPLANAR and FT_COMBINEPLANAR.//**
@@ -262,7 +260,6 @@ If you are interested in a different analysis of your data that shows event rela
 Here you can find related FAQs:
 
 {{topic>preprocessing timelock +faq &list}}
-
 
 -----
 

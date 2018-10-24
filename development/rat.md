@@ -48,13 +48,11 @@ Has to be completed and consists o
 
 - retriangulation of the mesh
 
-
 	addpath ~/fieldtrip-dev/surface
 	cfg=[];
 	cfg.checkdoublevertices = 'yes';
 	cfg.convert = 'yes';
 	newshape = ft_surfacecheck(cfg,shape);
-
 
 - interpolation of the triangles
 
@@ -66,19 +64,16 @@ Look at the Gram matrix of the leadfields to check for regularity, by looking at
 Fieldtrip typically generated a volume conductor structure when dealing with Electrostatics/Magnetostatics forward solutions.
 Here is the logi
 
-
 	shape = ft_read_headshape('rat_dura','format','STL');
 	cfg=[];
 	cfg.method = 'dipoli';
 	vol=ft_prepare_headmodel(cfg,shape);
-
 
 where 'shape' is a structure defining the boundary for the Boundary Element model to be used in the next step. (shape.tri is the vertex connectivity for each triangle element, shape.pnt are all the vertices, a M points X 3 matrix).
 
 ### Use the 'vol' structure to create the leadfields
 
 The electrodes are also given as a matrix of NX3 elements. They have to be put in a FieldTrip 'sensor' structure (see ). Given the electrodes and the volume conductor we are already able to generate the forward solution by means of the general purpose function 'ft_prepare_leadfield'.
-
 
 	% check for uniqueness of triangles and remove the nearest ones...
 	
@@ -90,10 +85,8 @@ The electrodes are also given as a matrix of NX3 elements. They have to be put i
 	  elec.label{i} = num2str(i);
 	end
 
-
 The real labels are then assigned using the routine ft_apply_montage (a manual operations to be done by the experimenter).
 The next step is the calculation of the lead field
-
 
 	
 	% Option 1. Calculate the lead fields (example with only one point)
@@ -122,11 +115,9 @@ The next step is the calculation of the lead field
 	lf = ft_prepare_leadfield(cfg);
 	
 
-
 ### Visualize the leadfields
 
 Uses the function ft_plot_topo3d.m
-
 
 ### Solve the inverse problem, finally ...
 

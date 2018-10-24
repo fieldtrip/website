@@ -4,7 +4,6 @@ layout: default
 
 # Advanced MEG/EEG toolkit at the Donders
 
-
 On 9-13 April 2018 we will host the “Advanced MEG/EEG toolkit” at the Donders Institute in Nijmegen.
 
 This intense 5-day toolkit course will teach you advanced MEG and EEG data analysis skills. Preprocessing, frequency analysis, source reconstruction, connectivity and various statistical methods will be covered. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of MEG and EEG data sets, and there will also be plenty of opportunity to interact and ask questions to us about your research and data. On the final day you will have the opportunity to work on your own dataset under supervision of the tutors.
@@ -13,9 +12,7 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
  
 ## Detailed Program
 
-
 ### Monday April 9, 2018
-
 
  | 09:00-09:30 | Registration, handouts and coffee                                                                            |           
  | ----------- | ---------------------------------                                                                            |           
@@ -42,7 +39,6 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
  | 16:30-17:15                              | Wrap-up-the-day: special topics, general questions and answers                 |           
  |                                          |                                                                                |           
  | 18:30-22:00	Drinks & dinner at Mi Barrio |                                                                               
-
 
 ### Wednesday April 11, 2018
 
@@ -96,7 +92,6 @@ A recent copy of FieldTrip and the data have been preinstalled on the computer a
     ft_defaults
     
     cd D:\toolkit2018
-
 
 The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes. The addpath statement adds the

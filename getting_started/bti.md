@@ -3,11 +3,9 @@ layout: default
 tags: 4d bti meg dataformat
 ---
 
-
 # Getting started with 4D-neuroimaging/BTi data
 
 ## Introduction
-
 
 The recommended way of working with 4D-Neuroimaging/BTi data is to work on the raw data files directly. The code for reading header information from the raw files is based on Eugene Kronberg's msi2matlab tools, and have been further developed by Gavin Paterson and Jan-Mathijs Schoffelen, at CCNi. 
 
@@ -33,7 +31,6 @@ FieldTrip knows how to deal with raw, i.e. unprocessed, data files. Data files w
 
 ## Set path
 
-
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 	
@@ -57,7 +54,6 @@ The 4D software organizes all files in a nested directory structure, managing th
  | exp2     | redundant information about the experiment                                          | 
  | hs_file  | digitized head-shape coordinates (x-, y-, z-points)                                 | 
  | pdf.txt  | ascii file with a description of the alternative file names of the data (see below) | 
-
 
 Depending on how the dataset is exported the actual data files are just named 0, 1, 2, ..., (as above) but could also be called something like: 
 
@@ -85,7 +81,6 @@ The 4D software also uses a directory structure to organize the data in line wit
 	p0/s4/n0/r0
 	p0/s4/n0/r1
 
-
 where the numbers (here 0, 1, 2, ...) can be different. 
 
  | directory level | explanation                                                       | 
@@ -94,10 +89,6 @@ where the numbers (here 0, 1, 2, ...) can be different.
  | sN              | scan level, this usually corresponds to the experimental protocol | 
  | nN              | session level, this usually is identified by the date and time    | 
  | rN              | run level                                                         | 
-
-
-
-
 
 ### Read header
 
@@ -112,7 +103,6 @@ when your current directory is where the data can be seen, or
 
 	
 	hdr = ft_read_header('/basepath/subjid/scanname/sessionname/runname/c,rfDC')
-
 
 `<note warning>` Make sure that the run config file is in the same directory as the data-file, otherwise the relevant header information cannot be extracted.`</note>`
 

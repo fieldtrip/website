@@ -3,7 +3,6 @@ layout: default
 tags: template
 ---
 
-
 # Template anatomical atlases and parcellation schemes
 
 An atlas is a volumetric or surface based description of the geometry of the brain, where each anatomical coordinate is labeled according to some scheme, e.g. as [Brodmann area](http://en.wikipedia.org/wiki/Brodmann_area). A recent review of brain templates and atlases is presented in [Brain templates and atlases (2012)](http://www.ncbi.nlm.nih.gov/pubmed/22248580) in NeuroImage.
@@ -36,7 +35,6 @@ This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was 
 	    
 	>> imagesc(afni.brick0(:,:,70))
 
-
 ![image](/media/template/afni.png@400)
 
 ## The AAL atlas
@@ -58,7 +56,6 @@ N. Tzourio-Mazoyer, B. Landeau, D. Papathanassiou, F. Crivello, O. Etard, N. Del
 	
 	>> imagesc(aal.tissue(:,:,45))
 
-
 ![image](/media/template/aal.png@400)
 
 ## The BrainWeb Dataset 
@@ -69,7 +66,6 @@ The segmentation is defined at a 1 mm isotropic voxel grid in Talairach space, w
 
 The discrete model is represented in a MATLAB .mat file as 
 
-
 	>> load brainweb_discrete
 	>> disp(segmentation)
 	segmentation = 
@@ -79,9 +75,7 @@ The discrete model is represented in a MATLAB .mat file as
 	         tissue: [181x217x181 double]
 	    tissuelabel: {'csf'  'grey_matter'  'white_matter'  'fat'  'muscle_and_skin'  'skin'  'skull'  'glial_matter'  'connective'}
 
-
 The fuzzy model is represented in a MATLAB .mat file as 
-
 
 	>> load brainweb_fuzzy
 	>> disp(segmentation)
@@ -100,7 +94,6 @@ The fuzzy model is represented in a MATLAB .mat file as
 	       glial_matter: [181x217x181 double]
 	         connective: [181x217x181 double]
 	         background: [181x217x181 double]
-
 
 Both discrete and fuzzy model are consistent with the data representation descibed in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**.
 
@@ -124,7 +117,6 @@ S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Z
 	    tissuelabel: {67x1 cell}
 	       coordsys: 'spm'    
 	
-
 
 Besides the 'v17' version, the 'v18' is also supported.
 
@@ -158,7 +150,6 @@ Cortex. Cerebral Cortex. 25: 3911-3931
 
 ![image](/media/template/vtpm.png@400)
 
-
 ## The Brainnetome Atlas
 
 The Brainnetome Atlas is designed to study activation and connectivity. Each hemisphere is subdivided into 123 subregions and the parcellation is based on both structural and functional connectivity features. More information can be found [here](http://atlas.brainnetome.org/). 
@@ -184,7 +175,6 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
 	
 	imagesc(brainnetome.tissue(:,:,68))
 
-
 ![image](/media/template/brainnetome_atlas2.png@400)
 ## References
 
@@ -201,5 +191,4 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
 *  S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data, NeuroImage 25(4), 2005, 1325-1335.
 
 *  Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in  Human Cortex. Cerebral Cortex. 25: 3911-3931 
-
 

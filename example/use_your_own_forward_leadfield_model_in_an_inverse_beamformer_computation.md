@@ -39,4 +39,3 @@ Using the geometrical description of the sensor locations and the geometrical de
 
 The idea now is that, using your own forward model, you construct a "grid" structure with the same elements. Note that the channel numbering should correspond with the channels in the data, and that the EEG leadfields should be averaged referenced.
 
-

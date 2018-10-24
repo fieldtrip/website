@@ -3,14 +3,11 @@ layout: default
 tags: neuralynx lfp spike dataformat
 ---
 
-
 # Getting started with Neuralynx data
 
 ## Introduction
 
-
 The Neuralynx acquisition software writes a variety of file formats. 
-
 
 *  .ncs single continuous channel file
 
@@ -30,16 +27,13 @@ Neuralynx also writes a raw data file (.nrd) in which all the channels are sampl
 
 ## Set Path
 
-
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 	
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
 
-
 ## Low-level reading functions
-
 
 FieldTrip includes a number of low-level reading functions, located in fieldtrip/fileio/private: 
 
@@ -59,7 +53,6 @@ FieldTrip includes a number of low-level reading functions, located in fieldtrip
 	read_neuralynx_tsl.m
 	read_neuralynx_ttl.m
 
-
 These functions are used to read the actual files. If you are not sure whether your particular file is supported, you can "cd fieldtrip/fileio/private" and do 
 
     read_neuralynx_xxx('fullpath/filename.xxx')   % where XXX is the file format
@@ -67,7 +60,6 @@ These functions are used to read the actual files. If you are not sure whether y
 This returns the content of a single-channel file as a Matlab structure. 
 
 ## Working with a complete dataset
-
 
 To facilitate working with multichannel recordings, FieldTrip has an additional layer on top of the low level Neuralynx file reading functions. The idea is that all files belonging to a single recording are located in a single directory, which represents the "dataset" as a whole. The FieldTrip functions **[ft_read_header](/reference/ft_read_header)**,  **[ft_read_data](/reference/ft_read_data)**,  **[ft_read_event](/reference/ft_read_event)** operate on the LFP and spike files in the dataset directory.
 
@@ -92,13 +84,11 @@ The LFP files are used for setting the sample "time" axis. If you only have spik
 	    TimeStampPerSample: 30.7200
 	                  orig: [5x1 struct]
 
-
 You can see from the header that some additional fields are included, such as the filename (needed to link a channel label to the corresponding file), the first timestamp, the last timestamp and the number of timestamps per channel.
 
 It might be that you first only want to process the LFP channels and keep the spike channels separate. You can do that using the **[ft_read_spike](/reference/ft_read_spike)** function and the **[ft_appendspike](/reference/ft_appendspike)** function.
 
 ## Regarding Events
-
 
 The events.nev file (which you probably use) only contains timestamps and not sample numbers. For writing trialfuns (see documentation) and using preprocessing to read the data, you should compute the corresponding sample numbers yourself by using hdr.FirstTimesStamp and hdr.TimeStampPerSample according to
 
@@ -111,11 +101,9 @@ The events.nev file (which you probably use) only contains timestamps and not sa
 	    event(i).sample = (event(i).timestamp-double(hdr.FirstTimeStamp))./hdr.TimeStampPerSample + 1;
 	  end
 
-
 {{page>:faq:discontinuous_neuralynx}}
 
 ## External Links and Further Readings
-
 
 *  http://www.neuralynx.com
 
