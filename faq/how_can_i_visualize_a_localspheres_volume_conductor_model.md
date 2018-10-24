@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq headmodel localspheres
+tags: [faq, headmodel, localspheres]
 ---
 
 ## How can I visualize a localspheres volume conductor model?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial source meg headmodel mri plot MEG-language
+tags: [tutorial, source, meg, headmodel, mri, plot, MEG-language]
 ---
 
 # Table of contents

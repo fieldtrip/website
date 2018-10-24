@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mtmconvol freq preprocessing artifact
+tags: [faq, mtmconvol, freq, preprocessing, artifact]
 ---
 
 ### Why does my TFR look strange (part I, demeaning)?

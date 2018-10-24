@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: guidelines
+tags: [guidelines]
 ---
 
 # Guidelines

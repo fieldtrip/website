@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq freq wavelet
+tags: [faq, freq, wavelet]
 ---
 
 ## What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?

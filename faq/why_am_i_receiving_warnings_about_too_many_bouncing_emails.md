@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq email
+tags: [faq, email]
 ---
 
 # Why am I receiving warnings about too many bouncing emails?

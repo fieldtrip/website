@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq source
+tags: [faq, source]
 ---
 
 ##  Why is there a rim around the brain for which the source reconstruction is not computed? 

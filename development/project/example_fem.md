@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example eeg fem leadfield headmodel
+tags: [example, eeg, fem, leadfield, headmodel]
 ---
 
 # Example script for leadfield based on FEM headmodel

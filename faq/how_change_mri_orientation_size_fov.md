@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mri volume coordinate
+tags: [faq, mri, volume, coordinate]
 ---
 
 ## How to change the MRI orientation, the voxel size or the field-of-view?

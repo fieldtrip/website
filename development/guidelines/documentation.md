@@ -1,7 +1,6 @@
 ---
 layout: default
-tags: guidelines development
-    tags: example eeg source statistics}}
+tags: [guidelines, development]
 ---
 
 # Documentation guidelines

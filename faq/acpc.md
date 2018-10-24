@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mri coordinate
+tags: [faq, mri, coordinate]
 ---
 
 # What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?

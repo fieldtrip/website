@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq
+tags: [faq]
 ---
 
 ## How do I prevent FieldTrip from printing the time and memory after each function call?

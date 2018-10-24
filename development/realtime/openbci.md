@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime openbci
+tags: [realtime, openbci]
 ---
 
 # OpenBCI

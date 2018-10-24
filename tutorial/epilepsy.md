@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial MEG-epilepsy
+tags: [tutorial, MEG-epilepsy]
 ---
 
 # Table of contents

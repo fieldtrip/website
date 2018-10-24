@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example
+tags: [example]
 ---
 
 # Example MATLAB scripts

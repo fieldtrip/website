@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime faq
+tags: [realtime, faq]
 ---
 
 # How should I get started with the FieldTrip realtime buffer?

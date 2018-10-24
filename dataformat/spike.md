@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: dataformat spike lfp
+tags: [dataformat, spike, lfp]
 ---
 
 # Spike and LFP dataformats

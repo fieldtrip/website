@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq ica data crash databrowser surf topoplot topo
+tags: [faq, ica, data, crash, databrowser, surf, topoplot, topo]
 ---
 
 # The databrowser crashes and destroys the whole matlab session, how can I resolve this?

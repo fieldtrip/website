@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq source eeg
+tags: [faq, source, eeg]
 ---
 
 ## Is it important to have accurate measurements of electrode locations for EEG source reconstruction?

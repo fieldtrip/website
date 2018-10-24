@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer debug
+tags: [faq, peer, debug]
 ---
 
 ## How can I debug a problematic distributed job?

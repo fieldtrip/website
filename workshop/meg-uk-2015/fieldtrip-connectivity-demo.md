@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: meg-uk-2015 mmfaces connectivity
+tags: [meg-uk-2015, mmfaces, connectivity]
 ---
 
 # FieldTrip connectivity demo

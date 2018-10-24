@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq source
+tags: [faq, source]
 ---
 
 # How can I determine the anatomical label of a source?

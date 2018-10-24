@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime modeeg openeeg
+tags: [realtime, modeeg, openeeg]
 ---
 
 # Modular EEG, OpenEEG

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: references
+tags: [references]
 ---
 
 # Literature

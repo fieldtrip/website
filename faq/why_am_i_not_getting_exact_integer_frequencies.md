@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq preprocessing freq
+tags: [faq, preprocessing, freq]
 ---
 
 #  Why am I not getting integer frequencies?

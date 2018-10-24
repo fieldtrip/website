@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example mri raw freq coherence
+tags: [example, mri, raw, freq, coherence]
 ---
 
 # Correlation analysis in fMRI data

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example mne source
+tags: [example, mne, source]
 ---
 
 # How to import data from MNE-Python and FreeSurfer

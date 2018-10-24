@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq statistics
+tags: [faq, statistics]
 ---
 
 `<note warning>`

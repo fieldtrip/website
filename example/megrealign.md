@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example meg ctf
+tags: [example, meg, ctf]
 ---
 
 # Interpolating data from the CTF151 to the CTF275 sensor array using megrealign

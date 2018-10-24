@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq
+tags: [faq]
 ---
 
 # What are the units of the data and of the derived results?

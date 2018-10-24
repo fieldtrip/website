@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example cfg
+tags: [example, cfg]
 ---
 
 # How to use ft_checkconfig

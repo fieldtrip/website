@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial plot eeg meg timelock freq statistics source layout MEG-language
+tags: [tutorial, plot, eeg, meg, timelock, freq, statistics, source, layout, MEG-language]
 ---
 
 `<note warning>`

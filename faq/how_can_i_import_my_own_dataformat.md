@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq dataformat preprocessing
+tags: [faq, dataformat, preprocessing]
 ---
 
 ## How can I import my own dataformat?

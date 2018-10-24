@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq realtime matlab memory
+tags: [faq, realtime, matlab, memory]
 ---
 
 # How fast is the FieldTrip buffer for realtime data streaming?

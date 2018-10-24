@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: template
+tags: [template]
 ---
 
 # Table of contents

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq ctf
+tags: [faq, ctf]
 ---
 
 # How does the CTF higher-order gradiometer work?

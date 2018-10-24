@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq function
+tags: [faq, function]
 ---
 
 ## Why are so many of the interesting functions in the private directories?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime meg
+tags: [realtime, meg]
 ---
 
 # Getting started with real-time head localization in MEG

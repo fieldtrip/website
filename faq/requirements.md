@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq matlab toolbox
+tags: [faq, matlab, toolbox]
 ---
 
 {{page>:faq:matlab_requirements}}

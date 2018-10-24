@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq workshop
+tags: [faq, workshop]
 ---
 
 # How should I prepare for the upcoming FieldTrip workshop?

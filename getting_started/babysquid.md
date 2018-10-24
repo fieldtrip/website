@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: babysquid meg dataformat
+tags: [babysquid, meg, dataformat]
 ---
 
 # Getting started with BabySQUID data

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime ant
+tags: [realtime, ant]
 ---
 
 # ANT NeuroSDK

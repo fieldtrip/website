@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer matlab
+tags: [faq, peer, matlab]
 ---
 
 ## How can I determine the number of threads that MATLAB uses?

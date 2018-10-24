@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mex
+tags: [faq, mex]
 ---
 
 # How can I compile the mex files on OS X?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq datatype dataformat
+tags: [faq, datatype, dataformat]
 ---
 
 # How are the various MATLAB data structures defined?

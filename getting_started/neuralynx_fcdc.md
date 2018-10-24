@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: neuralynx lfp dataformat
+tags: [neuralynx, lfp, dataformat]
 ---
 
 # Getting started with the Neuralynx data recorded at the Donders Institute 

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: 4d bti meg dataformat
+tags: [4d, bti, meg, dataformat]
 ---
 
 # Getting started with 4D-neuroimaging/BTi data

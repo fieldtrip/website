@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial artifact preprocessing eeg meg
+tags: [tutorial, artifact, preprocessing, eeg, meg]
 ---
 
 # Table of contents

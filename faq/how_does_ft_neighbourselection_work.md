@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq statistics cluster
+tags: [faq, statistics, cluster]
 ---
 
 ## How does ft_prepare_neighbours work?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq meg realtime
+tags: [faq, meg, realtime]
 ---
 
 ## How can I monitor a subject's head position during a MEG session?

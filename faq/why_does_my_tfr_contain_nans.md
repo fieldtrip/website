@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq freq
+tags: [faq, freq]
 ---
 
 ## Why does my TFR contain NaNs?

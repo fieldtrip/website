@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq matlab path warning
+tags: [faq, matlab, path, warning]
 ---
 
 ## Should I add FieldTrip with all subdirectories to my MATLAB path?

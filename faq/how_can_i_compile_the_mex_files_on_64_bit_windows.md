@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mex matlab
+tags: [faq, mex, matlab]
 ---
 
 ## How can I compile the mex files on 64 bit Windows?

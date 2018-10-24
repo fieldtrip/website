@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial example script matlab beginner batching
+tags: [tutorial, example, script, matlab, beginner, batching]
 ---
 
 # Table of contents

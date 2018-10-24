@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial aarhus meg+eeg beamforming ERF lcmv MEG-audodd
+tags: [tutorial, aarhus, meg+eeg, beamforming, ERF, lcmv, MEG-audodd]
 ---
 
 # Table of contents

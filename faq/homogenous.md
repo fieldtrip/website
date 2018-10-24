@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq coordinate
+tags: [faq, coordinate]
 ---
 
 # How do homogenous coordinate transformation matrices work?

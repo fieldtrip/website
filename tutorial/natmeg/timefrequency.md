@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial natmeg meg+eeg frequency MEG-audodd
+tags: [tutorial, natmeg, meg+eeg, frequency, MEG-audodd]
 ---
 
 # Table of contents

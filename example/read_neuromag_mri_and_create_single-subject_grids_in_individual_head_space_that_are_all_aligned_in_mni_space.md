@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example source headmodel neuromag
+tags: [example, source, headmodel, neuromag]
 ---
 
 `<note warning>`

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime neurosky
+tags: [realtime, neurosky]
 ---
 
 # Neurosky ThinkCap

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq qsub
+tags: [faq, qsub]
 ---
 
 # How to get started with distributed computing using qsub?

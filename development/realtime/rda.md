@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime brainvision
+tags: [realtime, brainvision]
 ---
 
 # BrainVision Recorder Remote Data Access (RDA)

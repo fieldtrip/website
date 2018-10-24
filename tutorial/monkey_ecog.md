@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial ecog animal
+tags: [tutorial, ecog, animal]
 ---
 
 # Table of contents

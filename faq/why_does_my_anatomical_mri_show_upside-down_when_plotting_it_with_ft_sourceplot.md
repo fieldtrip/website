@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq ft_sourceplot anatomical mri
+tags: [faq, ft_sourceplot, anatomical, mri]
 ---
 
 ## Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?

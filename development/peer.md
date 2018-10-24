@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: peer
+tags: [peer]
 ---
 
 # Distributed computing using a peer-to-peer cluster

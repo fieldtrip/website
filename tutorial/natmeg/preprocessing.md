@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial natmeg meg+eeg raw preprocessing MEG-audodd
+tags: [tutorial, natmeg, meg+eeg, raw, preprocessing, MEG-audodd]
 ---
 
 # Table of contents

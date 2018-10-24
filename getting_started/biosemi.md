@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: eeg dataformat biosemi bdf
+tags: [eeg, dataformat, biosemi, bdf]
 ---
 
 # Getting started with Biosemi BDF data

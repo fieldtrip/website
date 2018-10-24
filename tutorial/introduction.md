@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial meg eeg raw timelock freq source statistics lfp spike cfg matlab
+tags: [tutorial, meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, cfg, matlab]
 ---
 
 # Table of contents

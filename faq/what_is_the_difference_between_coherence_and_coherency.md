@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq coherence
+tags: [faq, coherence]
 ---
 
 ## What is the difference between coherence and coherency?

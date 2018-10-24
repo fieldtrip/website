@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial connectivity
+tags: [tutorial, connectivity]
 ---
 
 # Table of contents

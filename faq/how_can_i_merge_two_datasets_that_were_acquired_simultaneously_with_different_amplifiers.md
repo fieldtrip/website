@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq preprocessing raw dataformat eeg meg
+tags: [faq, preprocessing, raw, dataformat, eeg, meg]
 ---
 
 ## How can I merge two datasets that were acquired simultaneously with different amplifiers?

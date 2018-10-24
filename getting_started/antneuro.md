@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: dataformat eeg ant asa eeprobe
+tags: [dataformat, eeg, ant, asa, eeprobe]
 ---
 
 # Getting started with asa and eeprobe data

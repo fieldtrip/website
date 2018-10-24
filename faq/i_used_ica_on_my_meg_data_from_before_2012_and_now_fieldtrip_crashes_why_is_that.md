@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq ica data crash
+tags: [faq, ica, data, crash]
 ---
 
 # I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?

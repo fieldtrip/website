@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq tutorial dataset
+tags: [faq, tutorial, dataset]
 ---
 
 # Which datasets are used in the documentation and where are they used?

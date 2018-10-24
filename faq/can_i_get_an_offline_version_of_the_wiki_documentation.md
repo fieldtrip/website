@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq tutorial documentation
+tags: [faq, tutorial, documentation]
 ---
 
 ## Can I get an offline version of the wiki documentation?

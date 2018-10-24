@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial spike animal Spike-attention
+tags: [tutorial, spike, animal, Spike-attention]
 ---
 
 # Table of contents

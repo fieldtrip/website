@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer
+tags: [faq, peer]
 ---
 
 ## How can I stop the different threads created by peermaster and peerslave?

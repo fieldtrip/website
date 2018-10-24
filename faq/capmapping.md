@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq eeg
+tags: [faq, eeg]
 ---
 
 # Can I compare EEG channels between different electrode caps?

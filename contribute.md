@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: development
+tags: [development]
 ---
 
 # Contribute

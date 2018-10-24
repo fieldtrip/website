@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq layout plot
+tags: [faq, layout, plot]
 ---
 
 ## What is the format of the layout file which is used for plotting?

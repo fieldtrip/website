@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example meg source
+tags: [example, meg, source]
 ---
 
 # Compute forward simulated data and apply a beamformer scan

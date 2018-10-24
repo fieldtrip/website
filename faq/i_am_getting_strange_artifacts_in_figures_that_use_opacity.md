@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq plot artifact
+tags: [faq, plot, artifact]
 ---
 
 ## I am getting strange artifacts in figures that use opacity

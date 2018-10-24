@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq source headmodel
+tags: [faq, source, headmodel]
 ---
 
 # How can I fine-tune my BEM volume conduction model?

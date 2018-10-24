@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial preprocessing continuous eeg raw brainvision memory EEG-language
+tags: [tutorial, preprocessing, continuous, eeg, raw, brainvision, memory, EEG-language]
 ---
 
 # Table of contents

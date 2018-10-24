@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial coherence meg emg plot source connectivity MEG-visuomotor275
+tags: [tutorial, coherence, meg, emg, plot, source, connectivity, MEG-visuomotor275]
 ---
 
 # Table of contents

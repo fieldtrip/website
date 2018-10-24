@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq path download
+tags: [faq, path, download]
 ---
 
 ## I am working at the Donders, should I also download FieldTrip?

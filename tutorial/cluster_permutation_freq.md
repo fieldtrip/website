@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial statistics eeg meg raw freq MEG-language
+tags: [tutorial, statistics, eeg, meg, raw, freq, MEG-language]
 ---
 
 # Table of contents

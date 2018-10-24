@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq
+tags: [faq]
 ---
 
 ## How many lines of code does Fieldtrip consist of?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: purge
+tags: [purge]
 ---
 
 This page has been moved to [faq:requirements](/faq/requirements).

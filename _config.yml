@@ -30,7 +30,13 @@ plugins:
   - jekyll-feed
   - jekyll-toc
 
+tag_page_layout: tag_page
+tag_page_dir: tag
+
 # Exclude from processing.
 exclude:
    - README
    - CHANGES
+   - TODO
+   - Gemfile*
+   - bin

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq source forward inverse warning
+tags: [faq, source, forward, inverse, warning]
 ---
 
 ## How can I visualize the different geometrical objects that are needed for forward and inverse computations?

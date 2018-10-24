@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial statistics meg eeg timelock freq
+tags: [tutorial, statistics, meg, eeg, timelock, freq]
 ---
 
 # Table of contents

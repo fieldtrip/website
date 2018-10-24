@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example freq
+tags: [example, freq]
 ---
 
 # Cross Frequency analysis

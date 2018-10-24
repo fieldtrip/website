@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: java realtime development
+tags: [java, realtime, development]
 ---
 
 # FieldTrip buffer Java interface

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial meg timelock preprocessing plot MEG-language
+tags: [tutorial, meg, timelock, preprocessing, plot, MEG-language]
 ---
 
 # Table of contents

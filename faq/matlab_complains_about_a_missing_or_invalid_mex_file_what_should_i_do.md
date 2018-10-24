@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq matlab mex
+tags: [faq, matlab, mex]
 ---
 
 ## MATLAB complains about a missing or invalid MEX file, what should I do?

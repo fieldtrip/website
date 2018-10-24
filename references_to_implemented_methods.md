@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: references eeg meg source headmodel freq statistics coherence
+tags: [references, eeg, meg, source, headmodel, freq, statistics, coherence]
 ---
 
 # References to implemented methods

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq continuous freq
+tags: [faq, continuous, freq]
 ---
 
 #  How can I do time-frequency analysis on continuous data?

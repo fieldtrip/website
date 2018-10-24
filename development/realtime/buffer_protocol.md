@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime
+tags: [realtime]
 ---
 
 # Low-level FieldTrip buffer TCP network protocol

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq preprocessing artifact
+tags: [faq, preprocessing, artifact]
 ---
 
 ## How can I consistently represent artifacts in my data?

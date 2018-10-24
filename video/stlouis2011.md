@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: video
+tags: [video]
 ---
 
 # FieldTrip workshop for the Human Connectome project at Washington University, St. Louis (2011)

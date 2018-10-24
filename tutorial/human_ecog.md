@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial ieeg ecog seeg anatomy human localization mri ct freesurfer ecog-protocol
+tags: [tutorial, ieeg, ecog, seeg, anatomy, human, localization, mri, ct, freesurfer, ecog-protocol]
 ---
 
 # Table of contents

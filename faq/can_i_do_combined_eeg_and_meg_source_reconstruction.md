@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq eeg meg headmodel source
+tags: [faq, eeg, meg, headmodel, source]
 ---
 
 # Can I do combined EEG and MEG source reconstruction?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq download development cvs svn git
+tags: [faq, download, development, cvs, svn, git]
 ---
 
 ## How can I keep track of changes to the code?

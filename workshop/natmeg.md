@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: natmeg MEG-audodd
+tags: [natmeg, MEG-audodd]
 ---
 
 # FieldTrip course at the NatMEG in Stockholm

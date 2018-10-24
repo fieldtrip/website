@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: edf eeg dataformat
+tags: [edf, eeg, dataformat]
 ---
 
 # Getting started with EDF (European Data Format) data

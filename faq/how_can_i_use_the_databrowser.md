@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq databrowser plot artifact
+tags: [faq, databrowser, plot, artifact]
 ---
 
 ## How can I use the databrowser?

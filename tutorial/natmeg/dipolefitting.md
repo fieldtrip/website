@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial natmeg meg+eeg dipole MEG-audodd
+tags: [tutorial, natmeg, meg+eeg, dipole, MEG-audodd]
 ---
 
 # Table of contents

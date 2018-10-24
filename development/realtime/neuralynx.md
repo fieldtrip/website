@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime neuralynx
+tags: [realtime, neuralynx]
 ---
 
 # Neuralynx

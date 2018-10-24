@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq email
+tags: [faq, email]
 ---
 
 ## Why am I not allowed to post to the discussion list?

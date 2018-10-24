@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: development
+tags: [development]
 ---
 
 The source code in the FieldTrip toolbox is split over multiple directories reflecting the [modular organization](/development/modules). The modular organization facilitates a separation between end-user functions that also do data bookkeeping, and low level functions that focus on the algorithms.

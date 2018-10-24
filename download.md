@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: download
+tags: [download]
 ---
 
 # Download the FieldTrip toolbox

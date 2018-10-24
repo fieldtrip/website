@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq preprocessing artifact filter
+tags: [faq, preprocessing, artifact, filter]
 ---
 
 ## How does the filter padding in preprocessing work?

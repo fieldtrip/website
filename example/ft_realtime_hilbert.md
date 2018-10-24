@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example realtime
+tags: [example, realtime]
 ---
 
 # Realtime neurofeedback application based on Hilbert phase estimation

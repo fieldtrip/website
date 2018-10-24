@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq freq mtmconvol
+tags: [faq, freq, mtmconvol]
 ---
 
 ## What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalyis?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial example memory matlab script
+tags: [tutorial, example, memory, matlab, script]
 ---
 
 # Table of contents

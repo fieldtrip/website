@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq electrode polhemus structure-sensor
+tags: [faq, electrode, polhemus, structure-sensor]
 ---
 
 ## Should I use a Polhemus or a Structure Sensor to record electrode positions?

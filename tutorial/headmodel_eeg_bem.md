@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial eeg source headmodel mri plot MEG-language
+tags: [tutorial, eeg, source, headmodel, mri, plot, MEG-language]
 ---
 
 # Table of contents

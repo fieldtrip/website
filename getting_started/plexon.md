@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: plexon lfp spike dataformat
+tags: [plexon, lfp, spike, dataformat]
 ---
 
 # Getting started with Plexon data

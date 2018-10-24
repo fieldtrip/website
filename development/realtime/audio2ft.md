@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime audio
+tags: [realtime, audio]
 ---
 
 # Soundcard input using PortAudio

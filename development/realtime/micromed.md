@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime micromed
+tags: [realtime, micromed]
 ---
 
 # Micromed

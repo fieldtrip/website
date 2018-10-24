@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq datatype segmentation eeg meg headmodel
+tags: [faq, datatype, segmentation, eeg, meg, headmodel]
 ---
 
 ## How is the segmentation defined?

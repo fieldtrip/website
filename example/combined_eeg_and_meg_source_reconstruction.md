@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example eeg meg headmodel source
+tags: [example, eeg, meg, headmodel, source]
 ---
 
 # Combined EEG and MEG source reconstruction

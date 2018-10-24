@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq debug
+tags: [faq, debug]
 ---
 
 # How can I debug my analysis script if a FieldTrip function gives an error?

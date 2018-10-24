@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: fixme tutorial artifact meg raw preprocessing MEG-language
+tags: [fixme, tutorial, artifact, meg, raw, preprocessing, MEG-language]
 ---
 
 # Table of contents

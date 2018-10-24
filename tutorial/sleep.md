@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial sleep EDF EEG EMG ECG artifacts continuous
+tags: [tutorial, sleep, EDF, EEG, EMG, ECG, artifacts, continuous]
 ---
 
 # Table of contents

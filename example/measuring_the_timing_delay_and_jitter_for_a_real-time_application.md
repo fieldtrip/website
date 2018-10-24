@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example realtime
+tags: [example, realtime]
 ---
 
 # Measuring the timing delay and jitter for a real-time application

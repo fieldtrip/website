@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial eeg meg multivariate timelock freq attention MEG-attention
+tags: [tutorial, eeg, meg, multivariate, timelock, freq, attention, MEG-attention]
 ---
 
 # Table of contents

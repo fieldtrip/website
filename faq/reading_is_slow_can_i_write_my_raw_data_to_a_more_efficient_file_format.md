@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq preprocessing dataformat raw
+tags: [faq, preprocessing, dataformat, raw]
 ---
 
 # Reading is slow, can I write my raw data to a more efficient file format?

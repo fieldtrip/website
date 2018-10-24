@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example eeg source
+tags: [example, eeg, source]
 ---
 
 # Use your own forward leadfield model in an inverse beamformer computation

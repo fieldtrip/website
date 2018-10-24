@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial nirs preprocessing nirs-multichannel
+tags: [tutorial, nirs, preprocessing, nirs-multichannel]
 ---
 
 # Table of contents

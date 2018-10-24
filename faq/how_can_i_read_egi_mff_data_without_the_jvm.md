@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq egi
+tags: [faq, egi]
 ---
 
 ## How can I read EGI mff data without the JVM?

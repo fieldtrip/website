@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example meg mri headmodel source
+tags: [example, meg, mri, headmodel, source]
 ---
 
 # Create MNI-aligned grids in individual head-space

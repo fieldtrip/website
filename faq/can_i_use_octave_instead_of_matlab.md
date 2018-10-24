@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq octave
+tags: [faq, octave]
 ---
 
 ## Can I use Octave instead of MATLAB?

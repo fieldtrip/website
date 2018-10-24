@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq logo
+tags: [faq, logo]
 ---
 
 ## Can I use the FieldTrip logo on my poster?

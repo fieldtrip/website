@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial freq connectivity coherence granger dtf pdc MEG-visuomotor151
+tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc, MEG-visuomotor151]
 ---
 
 # Table of contents

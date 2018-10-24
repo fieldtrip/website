@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq
+tags: [faq]
 ---
 
 # Frequently Asked Questions

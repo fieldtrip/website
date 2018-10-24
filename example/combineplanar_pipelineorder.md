@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example planar gradient combineplanar
+tags: [example, planar, gradient, combineplanar]
 ---
 
 # The correct pipeline order for combining planar MEG channels

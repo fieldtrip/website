@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example freq coherence eeg meg fixme
+tags: [example, freq, coherence, eeg, meg, fixme]
 ---
 
 # Table of contents

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq trialfun
+tags: [faq, trialfun]
 ---
 
 # How can I transform trigger values from bits to decimal representation with a trialfun?

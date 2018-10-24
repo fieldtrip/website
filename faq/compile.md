@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mex compile
+tags: [faq, mex, compile]
 ---
 
 ##  How can I compile the mex files and command-line executables ?

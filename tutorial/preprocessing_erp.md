@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial eeg brainvision preprocessing trialfun timelock EEG-affective
+tags: [tutorial, eeg, brainvision, preprocessing, trialfun, timelock, EEG-affective]
 ---
 
 # Table of contents

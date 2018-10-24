@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: development meeting
+tags: [development, meeting]
 ---
 
 # Meetings

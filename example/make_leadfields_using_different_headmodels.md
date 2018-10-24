@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example meg headmodel source
+tags: [example, meg, headmodel, source]
 ---
 
 # Make leadfields using different headmodels

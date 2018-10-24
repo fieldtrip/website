@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example statistics freq cluster
+tags: [example, statistics, freq, cluster]
 ---
 
 # Apply clusterrandanalysis on TFRs of power that were computed with BESA

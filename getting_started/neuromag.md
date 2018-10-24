@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: elekta neuromag dataformat meg
+tags: [elekta, neuromag, dataformat, meg]
 ---
 
 # Getting started with Elekta/Neuromag data

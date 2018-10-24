@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq headmodel source matlab
+tags: [faq, headmodel, source, matlab]
 ---
 
 ## Where can I find the dipoli command-line executable?

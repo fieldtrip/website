@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: ctf meg dataformat
+tags: [ctf, meg, dataformat]
 ---
 
 # Getting started with CTF data

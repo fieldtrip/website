@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime siemens fmri
+tags: [realtime, siemens, fmri]
 ---
 
 # Realtime fMRI from Siemens scanners

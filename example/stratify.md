@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example statistics
+tags: [example, statistics]
 ---
 
 # Stratify the distribution of one variable that differs in two conditions

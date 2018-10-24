@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer
+tags: [faq, peer]
 ---
 
 ## How does the peer smartshare algorithm work?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial timelock source meg headmodel mri plot MEG-language
+tags: [tutorial, timelock, source, meg, headmodel, mri, plot, MEG-language]
 ---
 
 # Table of contents

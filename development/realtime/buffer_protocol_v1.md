@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: purged
+tags: [purged]
 ---
 
 This page has been [moved](/buffer protocol).

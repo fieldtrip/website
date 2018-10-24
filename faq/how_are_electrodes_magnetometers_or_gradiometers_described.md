@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq eeg meg layout
+tags: [faq, eeg, meg, layout]
 ---
 
 ## How are electrodes, magnetometers or gradiometers described?

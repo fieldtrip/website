@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial meg freq timelock preprocessing plot MEG-visuomotor151
+tags: [tutorial, meg, freq, timelock, preprocessing, plot, MEG-visuomotor151]
 ---
 
 # Table of contents

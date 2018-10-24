@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer
+tags: [faq, peer]
 ---
 
 ## How can I use the command-line peerslave and optimize the MATLAB licenses?

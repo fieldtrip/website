@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq headmodel source
+tags: [faq, headmodel, source]
 ---
 
 ## What is the conductivity of the brain, CSF, skull and skin tissue?

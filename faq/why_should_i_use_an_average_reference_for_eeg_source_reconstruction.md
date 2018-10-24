@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq eeg reference source
+tags: [faq, eeg, reference, source]
 ---
 
 # Why should I use an average reference for EEG source reconstruction?

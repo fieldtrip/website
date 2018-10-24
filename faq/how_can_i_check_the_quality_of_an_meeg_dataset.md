@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq artifact
+tags: [faq, artifact]
 ---
 
 # How can I check the quality of an EEG or MEG recording ?

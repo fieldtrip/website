@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: workshop
+tags: [workshop]
 ---
 
 # FieldTrip courses and workshops

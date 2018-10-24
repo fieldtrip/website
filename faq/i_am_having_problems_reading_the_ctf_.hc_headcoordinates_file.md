@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq ctf raw
+tags: [faq, ctf, raw]
 ---
 
 # I am having problems reading the CTF .hc headcoordinates file

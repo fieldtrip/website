@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq freq connectivity coherence
+tags: [faq, freq, connectivity, coherence]
 ---
 
 # In what way can frequency domain data be represented in FieldTrip?

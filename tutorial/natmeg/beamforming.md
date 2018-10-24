@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial natmeg meg+eeg beamforming MEG-audodd
+tags: [tutorial, natmeg, meg+eeg, beamforming, MEG-audodd]
 ---
 
 # Table of contents

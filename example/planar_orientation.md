@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: elekta planar
+tags: [elekta, planar]
 ---
 
 ## Find the orientation of planar gradiometers

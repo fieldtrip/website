@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq download
+tags: [faq, download]
 ---
 
 ## I am having problems downloading from the FTP server

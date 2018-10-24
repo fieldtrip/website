@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial sleep EDF EEG EMG ECG artifacts continuous sleep-spindles slow-waves
+tags: [tutorial, sleep, EDF, EEG, EMG, ECG, artifacts, continuous, sleep-spindles, slow-waves]
 ---
 
 `<note warning>`

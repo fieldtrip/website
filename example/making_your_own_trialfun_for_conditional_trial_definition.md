@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example raw preprocessing trialfun trialdef
+tags: [example, raw, preprocessing, trialfun, trialdef]
 ---
 
 # Making your own trialfun for conditional trial definition

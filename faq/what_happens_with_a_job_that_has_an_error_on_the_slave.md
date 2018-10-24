@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer
+tags: [faq, peer]
 ---
 
 ## What happens with a job that has an error on the slave?

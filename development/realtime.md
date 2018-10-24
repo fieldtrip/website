@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime
+tags: [realtime]
 ---
 
 # Real-time access to neurophysiological data

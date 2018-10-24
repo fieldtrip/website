@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq statistics
+tags: [faq, statistics]
 ---
 
 # How can I determine the onset of an effect?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime development
+tags: [realtime, development]
 ---
 
 # Suggested changes to the reference implementation

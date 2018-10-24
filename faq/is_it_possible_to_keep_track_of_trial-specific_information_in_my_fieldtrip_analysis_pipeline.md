@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq trialinfo trialdef trialfun
+tags: [faq, trialinfo, trialdef, trialfun]
 ---
 
 ## Is it possible to keep track of trial-specific information in my analysis pipeline?

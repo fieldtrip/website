@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq spm toolbox path
+tags: [faq, spm, toolbox, path]
 ---
 
 # How to select the correct SPM toolbox?

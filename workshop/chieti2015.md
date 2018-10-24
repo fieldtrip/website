@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: chieti
+tags: [chieti]
 ---
 
 #  FieldTrip workshop in Chieti

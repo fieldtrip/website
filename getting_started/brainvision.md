@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: dataformat brainvision eeg layout
+tags: [dataformat, brainvision, eeg, layout]
 ---
 
 # Getting started with BrainVision Analyzer and Easycap

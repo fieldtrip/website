@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example meg preprocessing ctf
+tags: [example, meg, preprocessing, ctf]
 ---
 
 # Fixing a missing sensor

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial freq meg eeg plot MEG-language
+tags: [tutorial, freq, meg, eeg, plot, MEG-language]
 ---
 
 # Table of contents

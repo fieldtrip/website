@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example freq coherence
+tags: [example, freq, coherence]
 ---
 
 # Effect of SNR on Coherence

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq headmodel source
+tags: [faq, headmodel, source]
 ---
 
 `<note warning>`

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example headmodel source
+tags: [example, headmodel, source]
 ---
 
 ## Example use of the compute_leadfield function

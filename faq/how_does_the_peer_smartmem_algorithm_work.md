@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer memory
+tags: [faq, peer, memory]
 ---
 
 ##  How does the smartmem algorithm work?

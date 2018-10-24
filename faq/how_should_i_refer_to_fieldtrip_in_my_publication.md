@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq reference
+tags: [faq, reference]
 ---
 
 # How should I refer to FieldTrip in my publication?

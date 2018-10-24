@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: development guidelines video
+tags: [development, guidelines, video]
 ---
 
 # Guidelines for audio and video material

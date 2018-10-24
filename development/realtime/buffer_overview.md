@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime
+tags: [realtime]
 ---
 
 # Overview of the realtime buffer

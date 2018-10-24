@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial nirs preprocessing nirs-singlechannel
+tags: [tutorial, nirs, preprocessing, nirs-singlechannel]
 ---
 
 # Table of contents

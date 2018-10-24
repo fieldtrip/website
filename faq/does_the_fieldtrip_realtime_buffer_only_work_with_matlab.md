@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq realtime
+tags: [faq, realtime]
 ---
 
 # Does the FieldTrip realtime buffer only work with MATLAB?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example preprocessing filter
+tags: [example, preprocessing, filter]
 ---
 
 # Determine the filter characteristics

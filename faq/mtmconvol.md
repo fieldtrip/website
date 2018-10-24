@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq freq
+tags: [faq, freq]
 ---
 
 ## How does MTMCONVOL work?

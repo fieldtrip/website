@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq development cvs svn git
+tags: [faq, development, cvs, svn, git]
 ---
 
 ## Why was FieldTrip maintained in SVN and not in git?

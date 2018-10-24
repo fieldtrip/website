@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example statistics
+tags: [example, statistics]
 ---
 
 # Computing and using estimates of effect size

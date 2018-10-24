@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: dataformat meg eeg lfp spike raw
+tags: [dataformat, meg, eeg, lfp, spike, raw]
 ---
 
 # Supported data formats

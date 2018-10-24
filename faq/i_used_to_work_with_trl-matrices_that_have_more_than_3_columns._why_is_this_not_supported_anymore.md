@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq trialinfo trialdef trialfun
+tags: [faq, trialinfo, trialdef, trialfun]
 ---
 
 ## I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?

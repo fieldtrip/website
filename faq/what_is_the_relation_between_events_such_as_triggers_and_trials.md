@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq preprocessing trialfun
+tags: [faq, preprocessing, trialfun]
 ---
 
 ## What is the relation between "events" (such as triggers) and "trials"?

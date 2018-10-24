@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq ica
+tags: [faq, ica]
 ---
 
 ## Why does my ICA output contain complex numbers?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime jinga-hi jaga16
+tags: [realtime, jinga-hi, jaga16]
 ---
 
 # Jinga-Hi

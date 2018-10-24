@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime tobi
+tags: [realtime, tobi]
 ---
 
 # TOBI: Tools for Brain-Computer Interaction

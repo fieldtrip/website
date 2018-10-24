@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: Aarhus MEG-audodd
+tags: [Aarhus, MEG-audodd]
 ---
 
 #  FieldTrip workshop in Aarhus

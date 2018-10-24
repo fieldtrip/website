@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial statistics eeg meg timelock plot MEG-language
+tags: [tutorial, statistics, eeg, meg, timelock, plot, MEG-language]
 ---
 
 # Table of contents

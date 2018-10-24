@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq freq
+tags: [faq, freq]
 ---
 
 ##  Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis

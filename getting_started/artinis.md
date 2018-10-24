@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: nirs artinis
+tags: [nirs, artinis]
 ---
 
 # Getting started with Artinis NIRS data

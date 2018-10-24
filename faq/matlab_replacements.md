@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq matlab toolbox path
+tags: [faq, matlab, toolbox, path]
 ---
 
 ## Replacements for functions from Mathworks toolboxes

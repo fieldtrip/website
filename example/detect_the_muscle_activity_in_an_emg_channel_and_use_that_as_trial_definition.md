@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example trialfun emg preprocessing
+tags: [example, trialfun, emg, preprocessing]
 ---
 
 # Detect the muscle activity in an EMG channel and use that as trial definition

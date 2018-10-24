@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: meg-uk-2015
+tags: [meg-uk-2015]
 ---
 
 #  SPM Sensor-level stats demo 

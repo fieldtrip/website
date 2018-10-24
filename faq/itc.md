@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq freq
+tags: [faq, freq]
 ---
 
 # How can I compute inter-trial coherence?

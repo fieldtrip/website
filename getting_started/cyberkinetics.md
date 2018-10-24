@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: cyberkinetics lfp spike dataformat
+tags: [cyberkinetics, lfp, spike, dataformat]
 ---
 
 `<note warning>`

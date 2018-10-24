@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: chieti HCP-motort
+tags: [chieti, HCP-motort]
 ---
 
 # MEG virtual channels and seed-based connectivity

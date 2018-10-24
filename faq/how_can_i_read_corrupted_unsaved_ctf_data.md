@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq raw corrupt preprocessing ctf
+tags: [faq, raw, corrupt, preprocessing, ctf]
 ---
 
 # How can I read corrupted (unsaved) CTF data?

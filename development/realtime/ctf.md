@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime ctf
+tags: [realtime, ctf]
 ---
 
 # CTF

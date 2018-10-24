@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial freq connectivity coherence granger dtf pdc
+tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 ---
 
 # Table of contents

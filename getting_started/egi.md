@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: egi eeg dataformat
+tags: [egi, eeg, dataformat]
 ---
 
 # Getting started with Philips/EGI data

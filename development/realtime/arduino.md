@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime arduino
+tags: [realtime, arduino]
 ---
 
 #  Streaming realtime EEG data to and from Arduino 

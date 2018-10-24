@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial meg source coherence MEG-visuomotor151
+tags: [tutorial, meg, source, coherence, MEG-visuomotor151]
 ---
 
 # Table of contents

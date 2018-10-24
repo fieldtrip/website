@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: fixme
+tags: [fixme]
 ---
 
 FIXME add tags

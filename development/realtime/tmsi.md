@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime tmsi
+tags: [realtime, tmsi]
 ---
 
 ## TMSI EEG amplifiers

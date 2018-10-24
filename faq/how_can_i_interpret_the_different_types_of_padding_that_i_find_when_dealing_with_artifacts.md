@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq preprocessing artifact filter
+tags: [faq, preprocessing, artifact, filter]
 ---
 
 # How can I interpret the different types of padding in FieldTrip? 

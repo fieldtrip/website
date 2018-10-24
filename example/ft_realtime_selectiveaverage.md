@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example realtime
+tags: [example, realtime]
 ---
 
 # Example real-time selective average

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq memory matlab
+tags: [faq, memory, matlab]
 ---
 
 ## Why are the fileio functions stateless, does the fseek not make them very slow?

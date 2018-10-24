@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: meg yokogawa dataformat coordinate
+tags: [meg, yokogawa, dataformat, coordinate]
 ---
 
 # Getting started with Yokogawa data

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: meg eeg raw freg cfg trialfun trialdef
+tags: [meg, eeg, raw, freg, cfg, trialfun, trialdef]
 ---
 
 # Fieldtrip Walkthrough

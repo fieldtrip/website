@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq matlab toolbox path
+tags: [faq, matlab, toolbox, path]
 ---
 
 ## Can I prevent "external" toolboxes from being added to my MATLAB path?

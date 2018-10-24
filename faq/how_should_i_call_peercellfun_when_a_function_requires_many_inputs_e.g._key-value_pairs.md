@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq peer
+tags: [faq, peer]
 ---
 
 ## How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime workshop
+tags: [realtime, workshop]
 ---
 
 #  Realtime MEG BCI hands-on session in Nijmegen

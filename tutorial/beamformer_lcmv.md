@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: fixme
+tags: [fixme]
 ---
 
 # Table of contents

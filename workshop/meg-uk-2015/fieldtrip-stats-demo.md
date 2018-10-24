@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: meg-uk-2015 mmfaces
+tags: [meg-uk-2015, mmfaces]
 ---
 
 # FieldTrip stats demo

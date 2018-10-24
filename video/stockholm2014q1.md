@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: video
+tags: [video]
 ---
 
 # FieldTrip/MNE workshop at NatMEG, Stockholm (January 2014)

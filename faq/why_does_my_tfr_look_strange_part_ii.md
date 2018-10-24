@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mtmconvol freq preprocessing artifact filter
+tags: [faq, mtmconvol, freq, preprocessing, artifact, filter]
 ---
 
 ### Why does my TFR look strange (part II, detrending)?

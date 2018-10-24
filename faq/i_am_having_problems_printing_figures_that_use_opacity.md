@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq plot
+tags: [faq, plot]
 ---
 
 ## I am having problems printing figures that use opacity

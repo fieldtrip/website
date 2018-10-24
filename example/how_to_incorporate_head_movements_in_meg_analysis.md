@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example artifact meg regression confound
+tags: [example, artifact, meg, regression, confound]
 ---
 
 # How to incorporate head movements in MEG analysis

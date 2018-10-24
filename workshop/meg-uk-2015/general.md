@@ -1,6 +1,5 @@
 ---
 layout: default
-tags: 
 ---
 
 #  General instructions for MATLAB demo's

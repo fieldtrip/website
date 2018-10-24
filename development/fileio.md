@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: development
+tags: [development]
 ---
 
 # Reading and writing of EEG/MEG time series data

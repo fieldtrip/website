@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: preprocessing continuous raw faq
+tags: [preprocessing, continuous, raw, faq]
 ---
 
 # How can I process continuous data without triggers?

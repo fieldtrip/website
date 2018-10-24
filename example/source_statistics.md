@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: example meg source statistics
+tags: [example, meg, source, statistics]
 ---
 
 # Source statistics

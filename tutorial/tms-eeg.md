@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial tms eeg preprocesing plot EEG-TMS
+tags: [tutorial, tms, eeg, preprocesing, plot, EEG-TMS]
 ---
 
 # Table of contents

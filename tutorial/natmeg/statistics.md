@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial natmeg meg+eeg statistics
+tags: [tutorial, natmeg, meg+eeg, statistics]
 ---
 
 # Table of contents

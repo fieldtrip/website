@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial plot eeg meg ecog layout
+tags: [tutorial, plot, eeg, meg, ecog, layout]
 ---
 
 # Table of contents

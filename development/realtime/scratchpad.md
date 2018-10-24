@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime development
+tags: [realtime, development]
 ---
 
 # Scratchpad for the realtime buffer interface

@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: spike lfp
+tags: [spike, lfp]
 ---
 
 # Working with animal electrophysiology data

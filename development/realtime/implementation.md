@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime development
+tags: [realtime, development]
 ---
 
 #  Specific software implementations for realtime EEG/MEG/fMRI/NIRS

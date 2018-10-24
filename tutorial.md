@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial
+tags: [tutorial]
 ---
 
 # Table of contents
@@ -28,7 +28,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Preprocessing of MEG and EEG data
 
-  -  [Introduction on artifacts](/tutorial/Artifacts)
+  -  [Introduction on artifacts](/tutorial/artifacts)
   -  [Visual artifact detection](/tutorial/visual_artifact_rejection)
   -  [Automatic artifact detection](/tutorial/automatic_artifact_rejection)
   -  [Preprocessing - Trigger based trial selection](/tutorial/Preprocessing)

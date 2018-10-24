@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: neuralynx lfp spike dataformat
+tags: [neuralynx, lfp, spike, dataformat]
 ---
 
 # Getting started with Neuralynx data

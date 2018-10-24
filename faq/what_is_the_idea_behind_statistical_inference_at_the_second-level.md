@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq statistics cluster
+tags: [faq, statistics, cluster]
 ---
 
 ## What is the idea behind statistical inference at the second-level?

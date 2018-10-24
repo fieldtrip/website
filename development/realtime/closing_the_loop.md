@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime
+tags: [realtime]
 ---
 
 # Closing the loop in a real-time BCI application

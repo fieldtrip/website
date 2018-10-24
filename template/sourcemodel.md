@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: template sourcemodel grid
+tags: [template, sourcemodel, grid]
 ---
 
 # Table of contents

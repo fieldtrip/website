@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq neuralynx corrupt preprocessing}
+tags: [faq, neuralynx, corrupt, preprocessing]
 ---
 
 ## How can I deal with a discontinuous Neuralynx recording

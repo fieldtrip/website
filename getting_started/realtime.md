@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime tutorial example
+tags: [realtime, tutorial, example]
 ---
 
 # Getting started with real-time analysis for BCI/neurofeedback

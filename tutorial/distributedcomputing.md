@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial qsub peer distcomp matlab MEG-language
+tags: [tutorial, qsub, peer, distcomp, matlab, MEG-language]
 ---
 
 # Table of contents

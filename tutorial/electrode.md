@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: tutorial source electrode
+tags: [tutorial, source, electrode]
 ---
 
 # Table of contents

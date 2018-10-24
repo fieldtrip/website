@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq source headmodel seg
+tags: [faq, source, headmodel, seg]
 ---
 
 ## How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?

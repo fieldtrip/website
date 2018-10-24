@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq neuromag template warning
+tags: [faq, neuromag, template, warning]
 ---
 
 ## Why are there multiple neighbour templates for the NeuroMag306 system?

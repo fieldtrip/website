@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq dataformat preprocessing raw
+tags: [faq, dataformat, preprocessing, raw]
 ---
 
 ## What kind of dataformats can I read in?

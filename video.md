@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: video
+tags: [video]
 ---
 
 # Video lectures and tutorials

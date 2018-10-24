@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: faq mri volume coordinate
+tags: [faq, mri, volume, coordinate]
 ---
 
 ## My MRI is upside down, is this a problem?

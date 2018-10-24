@@ -1,6 +1,6 @@
 ---
 layout: default
-tags: realtime artinis
+tags: [realtime, artinis]
 ---
 
 # Artinis Medical Systems
