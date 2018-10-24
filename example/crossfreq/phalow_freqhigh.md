@@ -66,7 +66,7 @@ layout: default
 	print -dpng phalow_freqhigh_fig2.png
 
 
-{{:example:crossfreq:phalow_freqhigh_fig1.png?400|phalow_freqhigh_fig1.png}} {{:example:crossfreq:phalow_freqhigh_fig2.png?400|phalow_freqhigh_fig2.png}}
+![image](/media/example/crossfreq/phalow_freqhigh_fig1.png@400) {{:example:crossfreq:phalow_freqhigh_fig2.png?400|phalow_freqhigh_fig2.png}}
 
 	
 	% show powerspectrum simulated data
@@ -82,7 +82,7 @@ layout: default
 	print -dpng phalow_freqhigh_fig3.png
 
 
-{{:example:crossfreq:phalow_freqhigh_fig3.png?400|phalow_freqhigh_fig3.png}}
+![image](/media/example/crossfreq/phalow_freqhigh_fig3.png@400)
 
 ## Analysis Methods
 
@@ -138,8 +138,8 @@ layout: default
 	print -dpng phalow_freqhigh_fig5.png
 
 
-{{:example:crossfreq:phalow_freqhigh_fig4b.png?400|phalow_freqhigh_fig4.png}}
-{{:example:crossfreq:phalow_freqhigh_fig5.png?400|phalow_freqhigh_fig5.png}}
+![image](/media/example/crossfreq/phalow_freqhigh_fig4b.png@400)
+![image](/media/example/crossfreq/phalow_freqhigh_fig5.png@400)
 
 	
 	% mtmfft on freq1 with output power
@@ -167,8 +167,8 @@ layout: default
 	print -dpng phalow_freqhigh_fig7.png
 
 
-{{:example:crossfreq:phalow_freqhigh_fig6.png?400|phalow_freqhigh_fig6.png}}
-{{:example:crossfreq:phalow_freqhigh_fig7.png?400|phalow_freqhigh_fig7.png}}
+![image](/media/example/crossfreq/phalow_freqhigh_fig6.png@400)
+![image](/media/example/crossfreq/phalow_freqhigh_fig7.png@400)
 
 In figure 7 you can see that most frequencies are modulated at 2 Hz, which was indeed the frequency of the modulation (s2 in data). Harmonics are seen at 4 and 6 Hz. The base frequency (20 Hz, s1 in data) is the only frequency that shows the strongest correlation with the modulation frequency (s2.freq = 2Hz) * 2 = 4Hz.
 
@@ -208,8 +208,8 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
 	print -dpng phalow_freqhigh_fig9.png
 
 
-{{:example:crossfreq:phalow_freqhigh_fig8.png?400|phalow_freqhigh_fig8.png}}
-{{:example:crossfreq:phalow_freqhigh_fig9.png?400|phalow_freqhigh_fig9.png}}
+![image](/media/example/crossfreq/phalow_freqhigh_fig8.png@400)
+![image](/media/example/crossfreq/phalow_freqhigh_fig9.png@400)
 
 	
 	% calculate derivative of instantaneous phase
@@ -236,7 +236,7 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
 	print -dpng phalow_freqhigh_fig11.png
 
 
-{{:example:crossfreq:phalow_freqhigh_fig10.png?400|phalow_freqhigh_fig10.png}}
-{{:example:crossfreq:phalow_freqhigh_fig11.png?400|phalow_freqhigh_fig11.png}}
+![image](/media/example/crossfreq/phalow_freqhigh_fig10.png@400)
+![image](/media/example/crossfreq/phalow_freqhigh_fig11.png@400)
 
 

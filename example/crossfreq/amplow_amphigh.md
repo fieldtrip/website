@@ -89,7 +89,7 @@ layout: default
 	print -dpng amplow_amphigh_fig2.png
 
 
-{{:example:crossfreq:amplow_amphigh_fig1.png?400|amplow_amphigh_fig1.png}} {{:example:crossfreq:amplow_amphigh_fig2b.png?400|amplow_amphigh_fig2.png}}
+![image](/media/example/crossfreq/amplow_amphigh_fig1.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig2b.png@400)
 
 ## Analysis Methods
 
@@ -126,7 +126,7 @@ layout: default
 	
 
 
-{{:example:crossfreq:amplow_amphigh_fig3.png?400|amplow_amphigh_fig3.png}} {{:example:crossfreq:amplow_amphigh_fig4.png?400|amplow_amphigh_fig4.png}}
+![image](/media/example/crossfreq/amplow_amphigh_fig3.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig4.png@400)
 
 	
 	% calculate covariance with ft_timelockanalysis
@@ -153,7 +153,7 @@ layout: default
 	print -dpng amplow_amphigh_fig6.png
 	
 
-{{:example:crossfreq:amplow_amphigh_fig5b.png?400|amplow_amphigh_fig5.png}} {{:example:crossfreq:amplow_amphigh_fig6.png?400|amplow_amphigh_fig6.png}}
+![image](/media/example/crossfreq/amplow_amphigh_fig5b.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig6.png@400)
 
 
 
@@ -204,5 +204,5 @@ layout: default
 	print -dpng amplow_amphigh_fig9.png
 
 
-{{:example:crossfreq:amplow_amphigh_fig8.png?400|amplow_amphigh_fig8.png}} {{:example:crossfreq:amplow_amphigh_fig9.png?400|amplow_amphigh_fig9.png}}
+![image](/media/example/crossfreq/amplow_amphigh_fig8.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig9.png@400)
 

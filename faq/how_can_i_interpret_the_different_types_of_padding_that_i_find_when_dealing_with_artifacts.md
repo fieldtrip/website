@@ -31,7 +31,7 @@ The automatic artifacts detection functions (ft_artifact_xxx) make use of an art
 
 {{:tutorial:artifactdetect:padding_fig1.png|}}
 
-{{:tutorial:artifactdetect:padding_fig2.png}}
+![image](/media/tutorial/artifactdetect/padding_fig2.png)
 
 See also the [automatic artifact rejection tutorial](http://fieldtrip.fcdonders.nl/tutorial/automatic_artifact_rejection) for more details on the different types of padding that can be used during data preprocessing (artifact padding, trial padding, filter padding). 
 

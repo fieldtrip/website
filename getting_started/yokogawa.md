@@ -201,7 +201,7 @@ In general MEG analyses are performed in a ["head coordinate system"](/faq/how_a
 
 Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the  Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehea
 
-{{:getting_started:coordinate_systems.png}}
+![image](/media/getting_started/coordinate_systems.png)
 
 In the frequently asked questions you can find an overview of the conventions for the [coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that are used by various MEG and MRI systems/software.
 

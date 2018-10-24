@@ -29,7 +29,7 @@ Here, we will briefly explain how we use FieldTrip to obtain these representatio
 
 The overall flow of datafile formats transformations that we currently use in our recording setup, looks as follow
 
-{{:getting_started:slide1.png}}
+![image](/media/getting_started/slide1.png)
 
 ### Data splitting
 

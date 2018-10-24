@@ -78,7 +78,7 @@ layout: default
 	print -dpng phalow_amphigh_fig2.png
 
 
-{{:example:crossfreq:phalow_amphigh_fig1.png?400|phalow_amphigh_fig1.png}} {{:example:crossfreq:phalow_amphigh_fig2.png?400|phalow_amphigh_fig2.png}}
+![image](/media/example/crossfreq/phalow_amphigh_fig1.png@400) ![image](/media/example/crossfreq/phalow_amphigh_fig2.png@400)
 
 
 ## Analysis Methods
@@ -175,7 +175,7 @@ layout: default
 	print -dpng phalow_amphigh_fig5.png
 
 
-{{:example:crossfreq:phalow_amphigh_fig5.png?400|phalow_amphigh_fig5.png}}
+![image](/media/example/crossfreq/phalow_amphigh_fig5.png@400)
 
 	
 	% mtmfft output cross-spectral-density between s1 (AM)(raw) and freq1
@@ -198,7 +198,7 @@ layout: default
 	print -dpng phalow_amphigh_fig6.png
 
 
-{{:example:crossfreq:phalow_amphigh_fig6.png?400|phalow_amphigh_fig6.png}}
+![image](/media/example/crossfreq/phalow_amphigh_fig6.png@400)
 
 
 
@@ -237,6 +237,6 @@ layout: default
 	print -dpng phalow_amphigh_fig8.png
 
 
-{{:example:crossfreq:phalow_amphigh_fig7.png?400|phalow_amphigh_fig7.png}}
-{{:example:crossfreq:phalow_amphigh_fig8.png?400|phalow_amphigh_fig8.png}}
+![image](/media/example/crossfreq/phalow_amphigh_fig7.png@400)
+![image](/media/example/crossfreq/phalow_amphigh_fig8.png@400)
 
