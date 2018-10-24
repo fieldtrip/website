@@ -2,6 +2,12 @@
 layout: default
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Analysis of auditory evoked fields in sensor and source space
 
 ## Introduction
@@ -290,7 +296,7 @@ In this section we would demonstrate how to derive the time series of neuronal a
 {{youtube>7eS11DtbIPw}}
 `</note>`
 
-Furthermore the details around how to compute the ingredients needed herein (e.g. headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space). 
+Furthermore the details around how to compute the ingredients needed herein (e.g. headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space).
 
 We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/hdm.mat). We will first construct a regular dipole grid using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**. Subsequently we want to determine the grid locations corresponding to particular brain areas (parcels). For this step we will read an anatomical atlas using **[ft_read_atlas](/reference/ ft_read_atlas)** and generate a binary mask with entries of ones indicating grid points corresponding to brain parcels using **[ft_volumelookup](/reference/ ft_volumelookup)**. Finally, on the basis of the individual anatomy we will construct a source model that is inverse-warped to this atlas-based source model in mni space.
 

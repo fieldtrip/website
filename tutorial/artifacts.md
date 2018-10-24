@@ -3,6 +3,11 @@ layout: default
 tags: tutorial artifact preprocessing eeg meg
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Introduction: dealing with artifacts
 
@@ -20,7 +25,7 @@ Generally speaking, an artifact (or artefact) is some unexpected or unwanted fea
 
 # How does FieldTrip manage artifacts?
 
-FieldTrip deals with artifacts by first identifying them, and subsequently removing them. Detection of artifacts can be done visually, or using automatic routines (or a combination of both). After you know what the artifacts are, they are removed by 
+FieldTrip deals with artifacts by first identifying them, and subsequently removing them. Detection of artifacts can be done visually, or using automatic routines (or a combination of both). After you know what the artifacts are, they are removed by
 
 *  rejecting the piece of data containing the artifact (e.g. for a short-lived artifact)   
 
@@ -32,7 +37,7 @@ Detecting the artifacts without reading the complete data into memory allows you
 
 ## Rejecting segments of data containing artifacts
 
-In this type of artifact detection and rejection, pieces of data that contain artifacts are identified and removed from the data set. For example, complete trials or parts of trials, are removed entirely from the data. 
+In this type of artifact detection and rejection, pieces of data that contain artifacts are identified and removed from the data set. For example, complete trials or parts of trials, are removed entirely from the data.
 
 ### Manual/visual detection
 
@@ -53,7 +58,7 @@ More information about manually dealing with artifacts is found in the [Visual a
 
 ### Automatic detection
 
-To speed up the processing of many or of very large datasets, and to facilitate the use of objective criteria for artifacts, FieldTrip also includes a collection of functions for automatic artifact detection. Although the automatic artifact detection algorithm works efficiently for well-known artifacts in well-behaved data, you should **not** use the automatic detection functions as your default method. 
+To speed up the processing of many or of very large datasets, and to facilitate the use of objective criteria for artifacts, FieldTrip also includes a collection of functions for automatic artifact detection. Although the automatic artifact detection algorithm works efficiently for well-known artifacts in well-behaved data, you should **not** use the automatic detection functions as your default method.
 
 Most of the automatic artifact detection functions are based on filtering the data and subsequently  combining the data over channels. The relevant parameters for this are the various linear and non-linear filtering and the data padding options are set *a priori* for each of them via the configuration options. For example, in continuous datasets these might be the bandpass filter frequencies or the padding length.
 
@@ -62,7 +67,7 @@ The available functions for automatic artifact detection ar
 
 *  **[ft_artifact_clip](/reference/ft_artifact_clip)**
 
-*  **[ft_artifact_ecg](/reference/ft_artifact_ecg)** 
+*  **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
 
 *  **[ft_artifact_threshold](/reference/ft_artifact_threshold)**
 
@@ -80,12 +85,12 @@ More information about automatic detection of artifacts is found in the [Automat
 
 #### Removing artifacts from the data
 
-If you use manual or automatic detection of time segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials. 
+If you use manual or automatic detection of time segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
 
 ## Subtracting spatial/temporal/spectral aspects of data reflecting artifacts
 
-In this type of artifact detection and rejection, spatial/temporal/spectral aspects of the data that contain artifacts are identified and removed from the data set. For example, certain spectral components such as line noise, are subtracted from the data. 
+In this type of artifact detection and rejection, spatial/temporal/spectral aspects of the data that contain artifacts are identified and removed from the data set. For example, certain spectral components such as line noise, are subtracted from the data.
 
 ### Using ICA to identify artifacts
 

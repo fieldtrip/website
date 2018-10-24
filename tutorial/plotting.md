@@ -2,6 +2,12 @@
 layout: default
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Plotting data at the channel and source level
 
 ## Introduction
@@ -33,13 +39,13 @@ Let us start by loading some data.
 
 ## Plotting data at the channel level
 
-Data at the channel level has a value for each sensor (MEG) or electrode (EEG). Those values can change over time and/or over frequency. 
+Data at the channel level has a value for each sensor (MEG) or electrode (EEG). Those values can change over time and/or over frequency.
 
 ### Singleplot functions
 
 With **[/reference/ft_singleplotER](/reference/ft_singleplotER)** you can make a plot using the avgFC data from the ERF tutorial by the following cod
 
-The **[/reference/ft_singleplotER](/reference/ft_singleplotER)** function first selects the data to be plotted, in this case channel MLC24, from -0.2 to 1.0 seconds. Subsequently this selected data is plotted with the MATLAB plot function. 
+The **[/reference/ft_singleplotER](/reference/ft_singleplotER)** function first selects the data to be plotted, in this case channel MLC24, from -0.2 to 1.0 seconds. Subsequently this selected data is plotted with the MATLAB plot function.
 
     cfg = [];
     cfg.xlim = [-0.2 1.0];
@@ -79,7 +85,7 @@ and change the line width or colo
     cfg.linewidth = 10;
     cfg.graphcolor = 'g';
     figure; ft_singleplotER(cfg,avgFC);
-    
+
 ![image](/media/tutorial/plotting/2017/fig4.png)
 
 The **[/reference/ft_singleplotER](/reference/ft_singleplotER)** function might not look so impressive compared to standard plot; that is because the ERF data representation is quite simple.
@@ -89,9 +95,9 @@ The advantage of using the standard MATLAB plot function is that you can easily 
 The FieldTrip plotting functions have a lot of built-in intelligence to make plotting of multidimensional data easier. It is for instance possible to do baseline correction before plotting, by specifying the baseline type and time limits. In the plotting functions either the FieldTrip function **[/reference/ft_timelockbaseline](/reference/ft_timelockbaseline)** or **[/reference/ft_freqbaseline](/reference/ft_freqbaseline)** is called. If you specify multiple channels in cfg.channel both singleplot functions will plot the mean over these channels. In the plotting functions the FieldTrip function **[/reference/ft_channelselection](/reference/ft_channelselection)** is called, which makes it straightforward to plot for instance the mean TFR (download here, see time-frequency analysis tutorial)of the left central channels.
 
     cfg = [];
-    cfg.baseline = [-0.5 -0.1]; 
+    cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'absolute'; 	
-    cfg.zlim = [-1.5e-27 1.5e-27];	
+    cfg.zlim = [-1.5e-27 1.5e-27];
     cfg.channel = 'MLC24'; % top figure
     figure; ft_singleplotTFR(cfg, TFRhann);
 
@@ -123,7 +129,7 @@ Still, the power is more difficult to interpret due to it being larger for low f
 
 ### Multiplot functions
 
-The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions plot and imagesc. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes. In the subsequent figures you can see these axes that are normally set to “off”. 
+The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions plot and imagesc. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes. In the subsequent figures you can see these axes that are normally set to “off”.
 
     cfg = [];
     cfg.layout = 'CTF151.lay';
@@ -132,7 +138,7 @@ The multiplot functions work similarly to the singleplot functions, again first 
 
 ![image](/media/tutorial/plotting/2017/fig9.png)
 
-Normally the axes of the figure are not visible, only the “axis” of each channel, but remember these are not real axes on which you can use MATLAB axis commands, the are just lines drawn by the function. Of course you can set the limits of the channel “axis” by the cfg structure (cfg.xlim, cfg.ylim). 
+Normally the axes of the figure are not visible, only the “axis” of each channel, but remember these are not real axes on which you can use MATLAB axis commands, the are just lines drawn by the function. Of course you can set the limits of the channel “axis” by the cfg structure (cfg.xlim, cfg.ylim).
 
     cfg = [];
     cfg.baseline = [-0.5 -0.1];
@@ -160,10 +166,10 @@ Note that the layout contains all 151 MEG channels; the one channel missing in t
 
 All channels are squeezed in a circle and the nose and ears are indicated at the top and sides. The actual 3-D layout of the MEG channels in the CTF system is more complex than the circular arrangement suggested by the flat 2-D layout. This is a generic challenge for projections onto a 2-D plane and also applies to cartography. We can plot the bottom coil of the CTF gradiometer channels with  
 
-    figure; 
+    figure;
     ft_plot_sens(avgFC.grad, 'chantype', 'meggrad')
     ft_plot_axes(avgFC.grad)
-    view(-90, 90) % you should rotate the figure to get a good 3-D feel of the channel locations. 
+    view(-90, 90) % you should rotate the figure to get a good 3-D feel of the channel locations.
 
 ![image](/media/tutorial/plotting/2017/fig12.png)
 
@@ -191,11 +197,11 @@ For multiplotting planar gradient data from the Elekta Neuromag system it is esp
 
 ![image](/media/tutorial/plotting/2017/fig14.png)
 
-You should zoom in on the figure to see the triplets for the three channels ar each sensor locations. There are also template layouts available that only contain the magnetometer channels at the correct location (i.e. not shifted) and that contain the combined planar channels. The latter one can be used after applying ft_combineplanar on your data. 
+You should zoom in on the figure to see the triplets for the three channels ar each sensor locations. There are also template layouts available that only contain the magnetometer channels at the correct location (i.e. not shifted) and that contain the combined planar channels. The latter one can be used after applying ft_combineplanar on your data.
 
 ### Topoplot functions
 
-**[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** plot the topographic distribution of 2-Dimensional or 3-Dimensional datatypes as a 2-D circular view (looking down at the top of the head). The arrangement of the channels is again specified in the layout (see above in multiplot functions). The **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** functions first again select the data to be plotted from the 2D or 3D input data and subsequently plot the selected data using low-level Fieldtrip functions. Using one value for each channel and the x and y coordinates, the values between points are interpolated and plotted. 
+**[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** plot the topographic distribution of 2-Dimensional or 3-Dimensional datatypes as a 2-D circular view (looking down at the top of the head). The arrangement of the channels is again specified in the layout (see above in multiplot functions). The **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** functions first again select the data to be plotted from the 2D or 3D input data and subsequently plot the selected data using low-level Fieldtrip functions. Using one value for each channel and the x and y coordinates, the values between points are interpolated and plotted.
 
     cfg = [];                            
     cfg.xlim = [0.3 0.5];                
@@ -205,7 +211,7 @@ You should zoom in on the figure to see the triplets for the three channels ar e
     figure; ft_topoplotER(cfg,GA_FC); colorbar
 
 ![image](/media/tutorial/plotting/2017/fig15.png)
-    
+
     cfg = [];
     cfg.xlim = [0.9 1.3];                
     cfg.ylim = [15 20];                  
@@ -216,7 +222,7 @@ You should zoom in on the figure to see the triplets for the three channels ar e
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
 
 ![image](/media/tutorial/plotting/2017/fig16.png)
-    
+
 You can compare this to the more realistic helmet-style layout, which better acknowledges the fact that the MEG channels extend below the ears and that the helmet has sort of an opening at the face.
 
     cfg = [];
@@ -280,7 +286,7 @@ In the help of **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/
 
 In **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**, you can specify many options to fully control the appearance of the picture. Subsequently you can use the MATLAB print function to write the figure to a file. Preferred file formats are EPS for vector drawings that can be edited in Adobe Illustrator or in Canvas (using “print -depsc”) or PNG for bitmaps (using “print -dpng”).
 
-To make the EPS-files optimally suitable for Adobe Illustrator, use the command “print -depsc -adobecs -painter”. 
+To make the EPS-files optimally suitable for Adobe Illustrator, use the command “print -depsc -adobecs -painter”.
 
 Since MATLAB uses the 'painter' renderer to export in Illustrator format, this method allows one to export quite complex figures that otherwise would be exported as bitmaps. Note, however, that the 'painter' renderer also has certain limitations compared to the z-buffer and openGL renderers. (See also MATLAB help on selecting a renderer).
 
@@ -340,9 +346,9 @@ You should select channels using the mouse and click, then you get a singleplot 
 
 ### Plotting clusters
 
-Ft_clusterplot plots a series of topoplots that highlight the clusters from cluster-based permutation testing. The output "stat" is 2D data from **[/reference/ft_timelockstatistics](/reference/ft_timelockstatistics)** or **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** with cfg.correctm='cluster'. 
+Ft_clusterplot plots a series of topoplots that highlight the clusters from cluster-based permutation testing. The output "stat" is 2D data from **[/reference/ft_timelockstatistics](/reference/ft_timelockstatistics)** or **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** with cfg.correctm='cluster'.
 
-The function automatically finds the clusters in the data which are smaller than the pre-specified threshold (cfg.alpha) and plots a series of topoplots with the data in "stat" field (are for instance t-values) and the sensors which are part of the cluster highlighted. 
+The function automatically finds the clusters in the data which are smaller than the pre-specified threshold (cfg.alpha) and plots a series of topoplots with the data in "stat" field (are for instance t-values) and the sensors which are part of the cluster highlighted.
 
 Stat should be 2D, i.e. channels-by-time, or channels-by frequency. You cannot visualize channels-by-frequency-by-time, that case requires either averaging over time, or averaging over frequency.
 
@@ -387,20 +393,20 @@ To plot PCA, ICA or other decompositions that result from **[/reference/ft_compo
 
 With the **[/reference/ft_sourceplot](/reference/ft_sourceplot)** function you can plot functional source reconstructed data. Data structures can be source estimates from ft_sourceanalysis or ft_sourcegrandaverage or statistical values from **[/reference/ft_sourcestatistics](/reference/ft_sourcestatistics)**. The following sections will present the available options for source-level plotting, following the same structure as previous sections.
 
-In visualising source reconstructed data, you should consider that  there are two principled ways of representing the spatial dimension of source reconstructed data: 
+In visualising source reconstructed data, you should consider that  there are two principled ways of representing the spatial dimension of source reconstructed data:
 
 
-*  On a regular, 3-dimensional grid, i.e. volumetric data like an MRI scan 
+*  On a regular, 3-dimensional grid, i.e. volumetric data like an MRI scan
 
 *  On a surface geometry, i.e. a cortical sheet.
 
-Besides the three dimensions that describe the spatial or geometrical aspect of source reconstructed brain activity, the data can have additional dimensions for time and/or frequency. 
+Besides the three dimensions that describe the spatial or geometrical aspect of source reconstructed brain activity, the data can have additional dimensions for time and/or frequency.
 
-### Volumetric data 
+### Volumetric data
 
 Source level data is considered volumetric if the locations at which activity is estimated are spaced in a regular 3-dimensional grid, like voxels in an MRI. FieldTrip offers multiple plotting options for volumetric data that can be specified in the cfg for **[/reference/ft_sourceplot](/reference/ft_sourceplot)**.
 
-You can (1) make multiple 2D axials slices throughout the brain on which the functional data is plotted, (2) create three slices in each of the three orthogonal directions (axial, sagittal and coronal) on which you can click around to navigate the whole the brain (3) project the functional data onto a surface and make a 3-D rendering of that. 
+You can (1) make multiple 2D axials slices throughout the brain on which the functional data is plotted, (2) create three slices in each of the three orthogonal directions (axial, sagittal and coronal) on which you can click around to navigate the whole the brain (3) project the functional data onto a surface and make a 3-D rendering of that.
 
 Let us first provide the basic code to use one of these plotting methods, using the data from Subject01 from the beamformer tutorial.  Later on, we will give more details on the configuration options for **[/reference/ft_sourceplot](/reference/ft_sourceplot)**.
 
@@ -428,7 +434,7 @@ Let us first provide the basic code to use one of these plotting methods, using 
     cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2]; 
+    cfg.opacitylim    = [0.0 1.2];
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
@@ -525,9 +531,9 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
     cfg.maskparameter  = cfg.funparameter;
     cfg.funcolorlim    = [0.0 1.2];
     cfg.funcolormap    = 'jet';
-    cfg.opacitylim     = [0.0 1.2]; 
+    cfg.opacitylim     = [0.0 1.2];
     cfg.opacitymap     = 'rampup';  
-    cfg.projmethod     = 'nearest'; 
+    cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat'; % Cortical sheet from canonical MNI brain
     cfg.surfdownsample = 10;  % downsample to speed up processing
     ft_sourceplot(cfg, sourceDiffIntNorm);
@@ -561,7 +567,7 @@ To  interactively explore higher-dimensional data (such as TFR data) on the surf
 
 #### Higher dimensional source-level data
 
-Since source-level function data requires three dimensions for "space" and uses the color dimension for "strength", there is no graphical dimension in which the temporal evolution or the spectral distribution can be visualized in full detail. The **[/reference/ft_sourceplot](/reference/ft_sourceplot)** function allows you with method=ortho to use teh lower right corner of the figure to show the timecourse or spectrum of the functional activity at a specific location (the one you click). The ft_sourcemovie function allows you to use time (as in a movie) to explore the changes of cortical activity over time and/or frequency. 
+Since source-level function data requires three dimensions for "space" and uses the color dimension for "strength", there is no graphical dimension in which the temporal evolution or the spectral distribution can be visualized in full detail. The **[/reference/ft_sourceplot](/reference/ft_sourceplot)** function allows you with method=ortho to use teh lower right corner of the figure to show the timecourse or spectrum of the functional activity at a specific location (the one you click). The ft_sourcemovie function allows you to use time (as in a movie) to explore the changes of cortical activity over time and/or frequency.
 
 ### Using external tools
 
@@ -588,4 +594,3 @@ Frequently asked question
 
 Example script
 {{topic>plot +example &list}}
-

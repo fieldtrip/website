@@ -3,6 +3,11 @@ layout: default
 tags: tutorial tms eeg preprocesing plot EEG-TMS
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Dealing with TMS-EEG datasets
 

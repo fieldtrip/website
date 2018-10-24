@@ -3,6 +3,12 @@ layout: default
 tag: tutorial spike animal spike-placefield spike-attention
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Preprocessing and analysis of spike-train data
 
 ##  Introduction

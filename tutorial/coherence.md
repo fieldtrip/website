@@ -3,6 +3,11 @@ layout: default
 tags: tutorial coherence meg emg plot source connectivity MEG-visuomotor275
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Analysis of corticomuscular coherence
 
@@ -12,7 +17,7 @@ In this tutorial we will analyze cortico-muscular coherence, which reflects func
 
 The dataset used in this example has been recorded in an experiment in which the subject had to lift her hand and exert a constant force against a lever. The force was monitored by strain gauges on the lever. The subject performed two blocks of 20 trials in which either the left or the right wrist was extended for about 10 seconds. A trial started as soon as the subject managed to get his force output within a specified range from 1 to 2 N. If the force was not kept constant during the course of a trial, the trial was terminated prematurely.
 
-The bipolar EMG signal was recorded from the right extensor carpi radialis longus muscle in the lower arm. MEG signals were recorded with a 151 sensor CTF Omega System (Port Coquitlam, Canada). In addition, the EOG was recorded to later discard trials contaminated by eye movements and blinks. The ongoing MEG and EOG signals were lowpass filtered at 300 Hz, digitized at 1200 Hz and stored for off-line analysis. To measure the head position with respect to the sensors, three coils were placed at anatomical landmarks of the head (nasion, left and right ear canal). While the subjects were seated under the MEG helmet, the positions of the coils were determined before and after the experiment by measuring the magnetic signals produced by currents passed through the coils. Magnetic resonance images (MRIs) were obtained from a 1.5 T Siemens system. During the MRI scan, ear molds containing small containers filled with vitamin E marked the same landmarks. This allows us, together with the anatomical landmarks, to align source estimates of the MEG with the MRI. 
+The bipolar EMG signal was recorded from the right extensor carpi radialis longus muscle in the lower arm. MEG signals were recorded with a 151 sensor CTF Omega System (Port Coquitlam, Canada). In addition, the EOG was recorded to later discard trials contaminated by eye movements and blinks. The ongoing MEG and EOG signals were lowpass filtered at 300 Hz, digitized at 1200 Hz and stored for off-line analysis. To measure the head position with respect to the sensors, three coils were placed at anatomical landmarks of the head (nasion, left and right ear canal). While the subjects were seated under the MEG helmet, the positions of the coils were determined before and after the experiment by measuring the magnetic signals produced by currents passed through the coils. Magnetic resonance images (MRIs) were obtained from a 1.5 T Siemens system. During the MRI scan, ear molds containing small containers filled with vitamin E marked the same landmarks. This allows us, together with the anatomical landmarks, to align source estimates of the MEG with the MRI.
 
 ## Background
 
@@ -27,20 +32,20 @@ To compute the coherence between the MEG and EMG signals for the example dataset
 
 *  Subsequently it is possible to localise the neuronal sources coherent with the EMG, using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
 
-## Preprocessing 
+## Preprocessing
 
-We will calculate the coherence between the MEG and the EMG when the subject extended her LEFT wrist, while keeping the right forearm muscle relaxed. 
+We will calculate the coherence between the MEG and the EMG when the subject extended her LEFT wrist, while keeping the right forearm muscle relaxed.
 The first step is to read the data. In this section we will apply automatic artifact rejection. Preprocessing requires the original MEG dataset, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
 The epochs of interest have to be defined according to a custom-written function called trialfun_left.m. Note that this function is not part of the FieldTrip toolbox: see [appendix 2](/tutorial/coherence#appendix_2trialfun_left), or download it from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m). This function uses the information provided by the triggers which were recorded simultaneously with the data. In this experiment each trigger corresponds with the start or the end of a contraction. The epochs which correspond to a contraction of the left forearm muscle are selected. Subsequently these 10-second pieces are cut into ten 1-second epochs.
 
-	
+
 	% find the interesting epochs of data
 	cfg = [];
 	cfg.trialfun                  = 'trialfun_left';
 	cfg.dataset                   = 'SubjectCMC.ds';
 	cfg = ft_definetrial(cfg);
-	
+
 	% detect EOG artifacts in the MEG data
 	cfg.continuous                = 'yes';
 	cfg.artfctdef.eog.padding     = 0;
@@ -51,21 +56,21 @@ The epochs of interest have to be defined according to a custom-written function
 	cfg.artfctdef.eog.cutoff      = 2.5;
 	cfg.artfctdef.eog.interactive = 'no';
 	cfg = ft_artifact_eog(cfg);
-	
+
 	% detect jump artifacts in the MEG data
 	cfg.artfctdef.jump.interactive = 'no';
 	cfg.padding                    = 5;
 	cfg = ft_artifact_jump(cfg);
-	
+
 	% detect muscle artifacts in the MEG data
 	cfg.artfctdef.muscle.cutoff      = 8;
 	cfg.artfctdef.muscle.interactive = 'no';
 	cfg = ft_artifact_muscle(cfg);
-	
+
 	% reject the epochs that contain artifacts
 	cfg.artfctdef.reject          = 'complete';
 	cfg = ft_rejectartifact(cfg);
-	
+
 	% preprocess the MEG data
 	cfg.demean                    = 'yes';
 	cfg.dftfilter                 = 'yes';
@@ -94,12 +99,12 @@ Finally, combine the EMG and MEG trials to a common data structur
     data = ft_appenddata([], meg, emg);
 
 Note, that due to the artifact rejection, this procedure is very slow and we typically would want to perform this step only once. Therefore you can save the preprocessed dat
-    
-    save data data 
+
+    save data data
 
 The preprocessed data is available as a mat-file from the  [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this
 
-    load data 
+    load data
 
 To get a feel for the data, plot a trial from a sensor overlying the left motor-cortex (MRC21) and the left and right EMG-signals, by selecting the first trial from the dat
 
@@ -108,7 +113,7 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
     plot(data.time{1},data.trial{1}(77,:));
     axis tight;
     legend(data.label(77));
-    
+
     subplot(2,1,2);
     plot(data.time{1},data.trial{1}(152:153,:));
     axis tight;
@@ -128,13 +133,13 @@ Explore the MEG and EMG in figure 1, e.g. by zooming in. How are the signals dif
 
 Using **[ft_freqanalysis](/reference/ft_freqanalysis)**, the characteristics in the frequency domain will be computed. This step requires the preprocessed MEG and EMG data (see above or download from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat)). Load the data wit
 
-    load data 
+    load data
 
 After the computation of the frequency domain representation **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** will be used to compute the coherence. There are essentially two ways of achieving the same coherence, and these will be explained below. The main difference is the way in which the frequency domain representation is computed. You can also check out [the different ways of representing frequency domain data](/faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip)
 
 ##### Method 1
 
-In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the fourier spectra, which is the 'bare' frequency domain representation of the signal, where both amplitude and phase information of the oscillations are represented in a complex number for each frequency. 
+In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the fourier spectra, which is the 'bare' frequency domain representation of the signal, where both amplitude and phase information of the oscillations are represented in a complex number for each frequency.
 
 First, a configuration structure (cfg) must be defined. The FFT-algorithm will be used to compute the fourier representation of each signal. To optimize the estimation, spectral smoothing using ‘multitapers’ will be applied. In this context, the degree of ‘smoothing’ (as defined in the parameter cfg.tapsmofrq) is critical. We will return to this parameter later.  
 
@@ -146,7 +151,7 @@ First, a configuration structure (cfg) must be defined. The FFT-algorithm will b
     cfg.keeptrials = 'yes';
     cfg.channel    = {'MEG' 'EMGlft' 'EMGrgt'};
     freqfourier    = ft_freqanalysis(cfg, data);
-    
+
 ##### Method 2
 
 In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the cross- and power spectra, which are mathematically constructed from the multiplication of a complex-valued fourier spectrum with the complex conjugate of another fourier spectrum. If the two fourier spectra are derived from the same channel, the cross spectrum is called the auto spectrum, and this is exactly the same as the power spectrum. Rather than in method 1 (see above), where the phase in the fourier spectra represented the *phase* of the oscillation, the phase in the cross spectra represent the *phase difference* between the oscillations of a specific channel pair. For this reason, we need to specify in the cfg between which pairs we want to compute the cross spectra.
@@ -195,7 +200,7 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
 
 ![image](/media/tutorial/coherence/figure3b.png@400)
 
- 
+
 *Figure 3; The coherence spectrum between the EMG and sensor MRC21.*
 
 ### Exercise 2
@@ -239,7 +244,7 @@ a) 2 Hz smoothing (cfg.tapsmofrq = 2 Hz)
     cfg.channel    = {'MEG' 'EMGlft'};
     cfg.channelcmb = {'MEG' 'EMGlft'};
     freq2          = ft_freqanalysis(cfg,data);
-    
+
     cfg            = [];
     cfg.method     = 'coh';
     cfg.channelcmb = {'MEG' 'EMG'};
@@ -254,7 +259,7 @@ Plot the results of the 5 and 2Hz smoothin
     cfg.xlim          = [5 80];
     cfg.channel       = 'MRC21';
     figure; ft_singleplotER(cfg, fd, fd2);
-    
+
 b) 10 Hz smoothing (e.g. cfg.tapsmofrq = 10 Hz)
 
     cfg            = [];
@@ -266,7 +271,7 @@ b) 10 Hz smoothing (e.g. cfg.tapsmofrq = 10 Hz)
     cfg.channelcmb = {'MEG' 'EMGlft'};
     cfg.tapsmofrq = 10;
     freq10        = ft_freqanalysis(cfg,data);
-    
+
     cfg            = [];
     cfg.method     = 'coh';
     cfg.channelcmb = {'MEG' 'EMG'};
@@ -283,13 +288,13 @@ Plot the results of the 5, 2, and 10 Hz smoothin
     cfg.refchannel    = 'EMGlft';
     cfg.channel       = 'MRC21';
     figure;ft_singleplotER(cfg, fd, fd2, fd10);
-    
+
 Which degree of smoothing do you consider optimal in the calculations above?
 `</note>`
 ### Exercise 5
 
 `<note exercise>`
-Another question pertains to how the estimate of coherence is affected by the number of trials. We will compare the cortico-muscular coherence at two MEG sensors for different amount of data. 
+Another question pertains to how the estimate of coherence is affected by the number of trials. We will compare the cortico-muscular coherence at two MEG sensors for different amount of data.
 
 Create the following configuration, and compute the coherence.
 
@@ -303,7 +308,7 @@ Create the following configuration, and compute the coherence.
     cfg.channelcmb = {'MEG' 'EMGlft'};
     cfg.trials     = 1:50;  
     freq50         = ft_freqanalysis(cfg,data);
-    
+
     cfg            = [];
     cfg.method     = 'coh';
     cfg.channelcmb = {'MEG' 'EMG'};
@@ -337,7 +342,7 @@ Example script
 ## Appendix 1: Localisation of neuronal sources coherent with the EMG using beamformers
 
 In order to localise the neuronal sources which are coherent with the EMG, we can apply beamformers to the data. For a more extensive background in beamforming, in particular beamforming with frequency-domain data, please consult the beamformer tutorial.
-In this example, we are going to use an algorithm, known as DICS, to estimate the activity of the neuronal sources and to subsequently estimate the coherence with the EMG. In order to achieve this, we first need an estimate of the cross-spectral density between all MEG-channel combinations, and between the MEG-channels and the EMG, at a frequency of interest. 
+In this example, we are going to use an algorithm, known as DICS, to estimate the activity of the neuronal sources and to subsequently estimate the coherence with the EMG. In order to achieve this, we first need an estimate of the cross-spectral density between all MEG-channel combinations, and between the MEG-channels and the EMG, at a frequency of interest.
 This requires the preprocessed data, see above, or download from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat). Load wit
 
     load data
@@ -353,7 +358,7 @@ Compute the cross-spectral density matrix for 18 H
     cfg.channelcmb = {'MEG' 'MEG';'MEG' 'EMGlft'};
     freq           = ft_freqanalysis(cfg, data);
 
-Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration. 
+Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration.
 This step requires the subject's headmodel, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
     cfg                 = [];
@@ -365,12 +370,12 @@ This step requires the subject's headmodel, which is available from [ftp:/ftp.fi
     cfg.grid.resolution = 1;
     cfg.grid.unit       = 'cm';
     source              = ft_sourceanalysis(cfg, freq);
-    
-The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI. 
+
+The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI.
 For this, we need the subject's MRI, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). After reading the anatomical MRI, we reslice it along the axes of the head coordinate system for improved visualization.
 
     mri = ft_read_mri('SubjectCMC.mri');
-    
+
     cfg = [];
     mri = ft_volumereslice(cfg, mri);
 
@@ -398,21 +403,21 @@ There are various ways to visualise the volumetric interpolated data. The most s
 The trial function used to extract the trial
 
     function trl = trialfun_left(cfg)
-    
+
     % read in the triggers and create a trial-matrix
-    % consisting of 1-second data segments, in which 
+    % consisting of 1-second data segments, in which
     % left ECR-muscle is active.
-    
+
     event = ft_read_event(cfg.dataset);
     trig  = [event(find(strcmp('backpanel trigger', {event.type}))).value];
     indx  = [event(find(strcmp('backpanel trigger', {event.type}))).sample];
-    
+
     %left-condition
     sel = [find(trig==1028):find(trig==1029)];
-    
+
     trig = trig(sel);
     indx = indx(sel);
-   
+
     trl = [];
     for j = 1:length(trig)-1
     trg1 = trig(j);
@@ -424,6 +429,5 @@ The trial function used to extract the trial
     end
     end
 
-    
-This tutorial was last tested by Jörn with version r9460 (April 30 2014) of FieldTrip using MATLAB 2010b on a 64-bit Linux platform. 
 
+This tutorial was last tested by Jörn with version r9460 (April 30 2014) of FieldTrip using MATLAB 2010b on a 64-bit Linux platform.

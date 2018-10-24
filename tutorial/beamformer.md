@@ -3,6 +3,11 @@ layout: default
 tags: tutorial meg freq source headmodel mri plot MEG-language
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Localizing oscillatory sources using beamformer techniques
 
@@ -51,7 +56,7 @@ The aim is to identify the sources of oscillatory activity in the beta band. Fro
 **//Figure 1; The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.//**
 
 {{page>:tutorial:shared:preprocessing_fic}}          
- 
+
 
 ### Time windows of interest
 
@@ -64,7 +69,7 @@ Now 'cut' out the pre- and post-stimulus time window
     cfg = [];                                           
     cfg.toilim = [-0.5 0];                       
     dataPre = ft_redefinetrial(cfg, dataFIC);
-     
+
     cfg.toilim = [0.8 1.3];                       
     dataPost = ft_redefinetrial(cfg, dataFIC);
 
@@ -72,11 +77,11 @@ As mentioned in the Background, it is ideal to contrast the activity of interest
  1.  Suitable control windows are, for exampl
     - Activity contrasted with baseline (example shown here using dataPre)
     - Activity of condition 1 contrasted with condition 2 (example not shown)
- 2.  However, if no other suitable data condition or baseline time-window exists, then 
+ 2.  However, if no other suitable data condition or baseline time-window exists, then
     - Activity contrasted with estimated noise (example shown below)
     - Use normalized leadfields (mentioned in ['the forward model and lead field matrix'](/tutorial/beamformer?&#the_forward_model_and_lead_field_matrix) section and Exercise 4 below)
 
-The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition. 
+The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
 
 ### Exercise 1: data length
 
@@ -86,7 +91,7 @@ Why is it important that the length of each data piece is the length of a fixed 
 
 ## Calculating the cross spectral density matrix
 
-The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd'. The frequency of interest is 18 Hz and the smoothing window is +/-4 Hz: 
+The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd'. The frequency of interest is 18 Hz and the smoothing window is +/-4 Hz:
 
     cfg = [];
     cfg.method    = 'mtmfft';
@@ -94,15 +99,15 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
     cfg.tapsmofrq = 4;
     cfg.foilim    = [18 18];
     freqPre = ft_freqanalysis(cfg, dataPre);
-    
+
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.output    = 'powandcsd';
     cfg.tapsmofrq = 4;
     cfg.foilim    = [18 18];
     freqPost = ft_freqanalysis(cfg, dataPost);
-    
- 
+
+
 ## The forward model and lead field matrix
 
 ### Head model
@@ -130,16 +135,16 @@ Now prepare the head model from the segmented brain surfac
 
 
 `<note important>`
-If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference [*], i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data. 
+If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference [*], i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
-Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference. 
+Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
 
 Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.   
 
 [*] except in some rare cases, like with bipolar iEEG electrode montages
 `</note>`
 
- 
+
 
 ### Exercise 2: head model
 
@@ -149,9 +154,9 @@ Why might a single sphere model be inadequate for performing beamformer estimate
 
 ### Compute lead field
 
-The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution. 
+The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
-`<note important>`Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields. 
+`<note important>`Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields.
 `</note>`
 
     cfg                 = [];
@@ -169,14 +174,14 @@ As mentioned earlier on, if you are not contrasting the activity of interest aga
 
 Using the cross-spectral density and the lead field matrices a spatial filter is calculated for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for the pre- and post-stimulus activity. This results in a power estimate for each grid point.  We first show the example as if you only had dataPost (and no dataPre against which to make a contrast).
 
-    cfg              = []; 
+    cfg              = [];
     cfg.method       = 'dics';
     cfg.frequency    = 18;  
-    cfg.grid         = grid; 
+    cfg.grid         = grid;
     cfg.headmodel    = headmodel;
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda       = 0;
-    
+
     sourcePost_nocon = ft_sourceanalysis(cfg, freqPost);
 
 The purpose of cfg.dics.projectnoise will become more clear in the section on Neural Activity Index. The purpose of lambda is discussed in Exercise 6.
@@ -195,20 +200,20 @@ The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns 
 
     mri = ft_read_mri('Subject01.mri');
     mri = ft_volumereslice([], mri);
-    
+
     cfg            = [];
     cfg.downsample = 2;
     cfg.parameter = 'avg.pow';
     sourcePostInt_nocon  = ft_sourceinterpolate(cfg, sourcePost_nocon , mri);
-    
-Plot the interpolated data: 
+
+Plot the interpolated data:
 
     cfg              = [];
     cfg.method       = 'slice';
     cfg.funparameter = 'avg.pow';
     figure
     ft_sourceplot(cfg,sourcePostInt_nocon);
- 
+
 ![image](/media/tutorial/beamformer/figure1bf.png@500)
 
 **//Figure 2; The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**.//**
@@ -226,25 +231,25 @@ If it is not possible to compare two conditions (e.g. A versus B or post versus 
 
     sourceNAI = sourcePost_nocon;
     sourceNAI.avg.pow = sourcePost_nocon.avg.pow ./ sourcePost_nocon.avg.noise;
-   
+
     cfg = [];
     cfg.downsample = 2;
     cfg.parameter = 'avg.pow';
     sourceNAIInt = ft_sourceinterpolate(cfg, sourceNAI , mri);
-    
-Plot it: 
+
+Plot it:
 
     cfg = [];
     cfg.method        = 'slice';
     cfg.funparameter  = 'avg.pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [4.0 6.2];
-    cfg.opacitylim    = [4.0 6.2]; 
+    cfg.opacitylim    = [4.0 6.2];
     cfg.opacitymap    = 'rampup';  
     figure
     ft_sourceplot(cfg, sourceNAIInt);
 
- 
+
 ![image](/media/tutorial/beamformer/figure2bf.png@500)
 
 **//Figure 3; The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate.//**
@@ -267,7 +272,7 @@ First we compute a single data structure with both conditions, and compute the f
 
     cfg = [];
     cfg.method    = 'mtmfft';
-    cfg.output    = 'powandcsd'; 
+    cfg.output    = 'powandcsd';
     cfg.tapsmofrq = 4;
     cfg.foilim    = [18 18];
     freqAll = ft_freqanalysis(cfg, dataAll);
@@ -291,16 +296,16 @@ By placing this pre-computed filter inside cfg.grid.filter, it can now be applie
     sourcePre_con  = ft_sourceanalysis(cfg, freqPre );
     sourcePost_con = ft_sourceanalysis(cfg, freqPost);
 
-    save sourcePre_con sourcePre_con 
+    save sourcePre_con sourcePre_con
     save sourcePost_con sourcePost_con
 
-Now we can compute the contrast of (post-pre)/pre. In this operation we assume that the noise bias is the same for the pre- and post-stimulus interval and it will thus be removed. 
+Now we can compute the contrast of (post-pre)/pre. In this operation we assume that the noise bias is the same for the pre- and post-stimulus interval and it will thus be removed.
 
     sourceDiff = sourcePost_con;
     sourceDiff.avg.pow = (sourcePost_con.avg.pow - sourcePre_con.avg.pow) ./ sourcePre_con.avg.pow;
-    
+
 Load and reslice the MRI if not done already in previous ste
-    
+
     mri = ft_read_mri('Subject01.mri');  
     mri = ft_volumereslice([], mri);
 
@@ -310,15 +315,15 @@ Then interpolate the source to the MR
     cfg.downsample = 2;
     cfg.parameter  = 'avg.pow';
     sourceDiffInt  = ft_sourceinterpolate(cfg, sourceDiff , mri);
-    
-Now plot the power ratios: 
+
+Now plot the power ratios:
 
     cfg = [];
     cfg.method        = 'slice';
     cfg.funparameter  = 'avg.pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2]; 
+    cfg.opacitylim    = [0.0 1.2];
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
@@ -328,7 +333,7 @@ Now plot the power ratios:
 ### Exercise 5: comparing normalizations
 
 `<note exercise>`
-Compare figure 3 and 4. It appears that normalizing the power with the baseline activity result in fewer and more focal sources.  Why? 
+Compare figure 3 and 4. It appears that normalizing the power with the baseline activity result in fewer and more focal sources.  Why?
 `</note>`
 
 ### Exercise 6: regularization
@@ -346,7 +351,7 @@ To plot an 'orthogonal cut
     cfg.funparameter  = 'avg.pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2]; 
+    cfg.opacitylim    = [0.0 1.2];
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
@@ -369,7 +374,7 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
     cfg.funparameter  = 'avg.pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2]; 
+    cfg.opacitylim    = [0.0 1.2];
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
@@ -391,11 +396,11 @@ Now the data can be plotted
     cfg.maskparameter  = cfg.funparameter;
     cfg.funcolorlim    = [0.0 1.2];
     cfg.funcolormap    = 'jet';
-    cfg.opacitylim     = [0.0 1.2]; 
+    cfg.opacitylim     = [0.0 1.2];
     cfg.opacitymap     = 'rampup';  
-    cfg.projmethod     = 'nearest'; 
+    cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat';
-    cfg.surfdownsample = 10; 
+    cfg.surfdownsample = 10;
     ft_sourceplot(cfg, sourceDiffIntNorm);
     view ([90 0])
 

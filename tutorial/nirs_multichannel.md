@@ -3,6 +3,11 @@ layout: default
 tags: tutorial nirs preprocessing nirs-multichannel
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 #  Preprocessing and averaging of multi-channel NIRS data
 
@@ -14,7 +19,7 @@ This tutorial is still under development.
 
 In this tutorial, you will process a functional near-infrared spectroscopy (fNIRS) data set consisting of multiple channels. We will read in the raw data, have a look at the setup and the data, preprocess the data incorporating specific procedures for multichannel setups, and explore different methods of visualizing the temporal and spatial aspects of the response.
 
-We suggest to first read the [Getting started with Artinis](/getting_started/artinis) page to get the details on the recording system. Furthermore, we suggest you follow the [NIRS single channel](/tutorial/nirs_singlechannel) tutorial to learn how to pre-process a simpler fNIRS data set with only a a single channel. 
+We suggest to first read the [Getting started with Artinis](/getting_started/artinis) page to get the details on the recording system. Furthermore, we suggest you follow the [NIRS single channel](/tutorial/nirs_singlechannel) tutorial to learn how to pre-process a simpler fNIRS data set with only a a single channel.
 
 Note that other NIRS systems will have a different file format than the ones used here and that this tutorial might not directly translate. The global structure however applies to other NIRS systems as well.
 
@@ -22,7 +27,7 @@ Note that other NIRS systems will have a different file format than the ones use
 
 fNIRS is a method to assess changes in oxygenated and deoxygenated hemoglobin concentrations and as such is comparable to fMRI. Disadvantage of fNIRS over fMRI is that it has a (much!) poorer spatial resolution than fMRI, but, the advantage is that it has a better temporal resolution and allows the brain measurements of populations that typically cannot easily be scanned using fMRI. More about the method can be read on the page of the [single channel tutorial](/tutorial/nirs_singlechannel).
 
-Using multiple channels allows the researcher to investigate whether the found event-related brain activity is local, found in mainly one channel, or more widespread and can be observed in multiple channels. Moreover, the location of the effect can then be determined, though of course one is limited by the spatial resolution of the measurement. 
+Using multiple channels allows the researcher to investigate whether the found event-related brain activity is local, found in mainly one channel, or more widespread and can be observed in multiple channels. Moreover, the location of the effect can then be determined, though of course one is limited by the spatial resolution of the measurement.
 
 Typically, a detector optode can detect light that originates from multiple source optodes. NIRS systems differ in how this is implemented: for instance, some use slightly different source wavelengths per source optode, others vary the pulse frequency per source optode. Systems also vary in their flexibility: some allow only specific detectors to "look" at specific sources, others allow many more different combinations of sources and optodes. A flexible system can allow you to put for instance a source optode on location x,y, a detector optode on location x+1,y and another detector optode on location x+2,y. Such an arrangement allows the researcher to find proximal, shallow, effects, namely effects observed between the source and detector pair that are positioned next to each other, as well as brain activity somewhat deeper in the brain, namely effects observed between the source and detector pair that are further apart. Combining short channel separations with normal or longer channel separations (channel separation being the distance between source and detector) is a helpful way to cancel out artifacts from among others the skin and motion. Before you can turn to these more sophisticated types of analyses, you need to familiarize yourself with analyzing multiple channels, which is the aim of the current tutorial.
 
@@ -35,7 +40,7 @@ For the XML file please right-click and use the save-as option, otherwise it wil
 
 You should now have the following files in your folder
 
-	
+
 	LR-01-2015-06-01-0002.oxy3
 	LR-02-2015-06-08-0001.oxy3
 	LR-03-2015-06-15-0001.oxy3
@@ -51,15 +56,15 @@ The participant was engaged in a basic event-related auditory oddball paradigm i
 
 #### fNIRS Measurement
 
-The fNIRS data was recorded using 4 connected Oxymon systems from Artinis to enable a 48 channel recording. 
+The fNIRS data was recorded using 4 connected Oxymon systems from Artinis to enable a 48 channel recording.
 
 FIXME add a photo of the cap as Figure 1
 
 Half of the optode fibers (n = 16) were placed over left temporal cortex, the other half over the right temporal cortex (Fig. 1 grey text). Of the optodes, half were detectors (or receivers, Rx), and the other half were sources (or transmitters, Tx). The source and detector optodes were positioned such that there were deep and shallow channels of 3 cm and 1.5 cm, respectively (black text indicating both receivers and transmitters).  
 
-Sampling was done at 250 Hz. This sampling rate is much higher than needed for NIRS data, so we will downsample the data before starting any fancy analyses. 
+Sampling was done at 250 Hz. This sampling rate is much higher than needed for NIRS data, so we will downsample the data before starting any fancy analyses.
 
-Trigger events were recorded in the ADC channels 1 (standards) and 2 (deviants). In the Epoch section we will retrieve the onsets and offsets of the trials relative to the triggers. 
+Trigger events were recorded in the ADC channels 1 (standards) and 2 (deviants). In the Epoch section we will retrieve the onsets and offsets of the trials relative to the triggers.
 
 ## Procedure
 
@@ -68,17 +73,17 @@ Analyses can be conducted in many different ways and in different orders, depend
 
 *  read data & downsample
 
-*  remove bad channels 
+*  remove bad channels
 
-*  define epochs 
+*  define epochs
 
 *  transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
 
 *  separate functional from systemic responses (signal conditioning)
 
-*  filter; i.e. temporal processing 
+*  filter; i.e. temporal processing
     * subtract reference channel; i.e. spatial processing
-    * anti-correlate oxyHb/deoxyHb-traces per channel 
+    * anti-correlate oxyHb/deoxyHb-traces per channel
 
 *  plot results
 
@@ -90,7 +95,7 @@ Analyses can be conducted in many different ways and in different orders, depend
 
 We first need to read in the data into the MATLAB workspace, by executing **[/reference/ft_preprocessing](/reference/ft_preprocessing)*
 
-	
+
 	cfg         		= [];
 	cfg.dataset         	= 'LR-01-2015-06-01-0002.oxy3';
 	data_raw            	= ft_preprocessing(cfg);
@@ -114,7 +119,7 @@ For information about FieldTrip data structures and their fields, see this [freq
 `</note>`
 
 
-To retrieve the layout from the data file as shown above, you can use: 
+To retrieve the layout from the data file as shown above, you can use:
 
     cfg           = [];
     cfg.optofile  = 'LR-01-2015-06-01-0002.oxy3';
@@ -123,7 +128,7 @@ To retrieve the layout from the data file as shown above, you can use:
 ![image](/media/tutorial/nirs_tut2_optodepositions.png@&400)
 
 **//Figure 3; Layout of the optode positions//**
-    
+
 
 #### Trigger channels
 
@@ -136,7 +141,7 @@ which should you tell you that the data in channel ADC001 is the 97th row in the
 
 Plotting the data from ADC001 and ADC002 will yield the figure below, showing the TTL pulses as analog voltages. Stimulus onset is marked by an abrupt increase in one of the analog channels. Later on, when epoching the data, we will use an automatic routine to find these marked changes.
 
-	
+
 	figure; hold on
 	% plot the voltage of ADC001 and ADC002
 	% ADC002 is scaled up a little bit to make it more clear
@@ -167,10 +172,10 @@ FieldTrip can detect the onset in the ADC channels automatically and represent t
 Explore the information in the event structure. How many stimuli were played and how many oddballs? As not all events are stimuli onsets, it might help to find the oddballs by running adc002 = find(strcmp({event.type}, 'ADC002'));
 `</note>`
 
-We will use these events later to define segments of interest and to cut the standard and deviant trials out of the continuous data. 
+We will use these events later to define segments of interest and to cut the standard and deviant trials out of the continuous data.
 
 As mentioned, the fNIRS data is stored at 250 Hz. You can check this by executin
-    
+
     data_raw.fsample
 
 Since the hemodynamic response takes about 5 to 10 s to reach peak (i.e. corresponding to a frequency of 0.2 to 0.1 Hz), a 250 Hz measurement is much higher than needed. To save memory and to make subsequent processing faster, we will downsample the data to 10 Hz using **[/reference/ft_resampledata](/reference/ft_resampledata)**.
@@ -178,7 +183,7 @@ Since the hemodynamic response takes about 5 to 10 s to reach peak (i.e. corresp
     cfg                 	= [];
     cfg.resamplefs      	= 10;
     data_down           	= ft_resampledata(cfg, data_raw);
- 
+
 `<note note>`
 It is better to resample multiple times if the resampling factor is larger than 10, see [here](https://allsignalprocessing.com/very-low-frequency-filtering/)
 `</note>`
@@ -189,7 +194,7 @@ The resampling also includes low-pass filtering of the data. As the new sampling
 
 We can now plot the data and see what it looks like. In cfg.preproc we can specify some options for on-the-fly preprocessing. Here, we will demean the data, i.e. subtract the mean value. The options you can specify in cfg.preproc are largely the same as the options for **[ft_preprocessing](/reference/ft_preprocessing)** with as a difference that in our current command, namely ft_databrowser, the demeaning is only applied for plotting, the data itself remains the same.   
 
-	
+
 	cfg                = [];
 	cfg.preproc.demean = 'yes';
 	cfg.viewmode       = 'vertical';
@@ -207,16 +212,16 @@ This is very noisy! Do not give up hope. In the next steps, you will remove most
 
 As we are also not interested in very slow changes (and/or a constant offset/ DC) in the hemodynamic response, we can ‘safely’ throw away low-frequency information by high-pass filtering.
 
-	
+
 	cfg                 = [];
 	cfg.hpfilter        = 'yes';
-	cfg.hpfreq          = 0.01; 
+	cfg.hpfreq          = 0.01;
 	data_flt            = ft_preprocessing(cfg,data_down);
 
- 
+
 This step has removed some of the variability in the hemodynamic response between channels. Let’s plot the filtered data to see how things have improved.
 
-	
+
 	cfg                = [];
 	cfg.preproc.demean = 'yes';
 	cfg.viewmode       = 'vertical';
@@ -234,59 +239,59 @@ This step has removed some of the variability in the hemodynamic response betwee
 
 In the single channel tutorial, after initial preprocessing we continued with removing ‘bad’ data as there were no pieces of the data that were both irrelevant (say, during a break) and very noisy. In this tutorial, we will first segment the data to get the time segments of interest before we move on to cleaning the data further. The motivation here to first segment and then detect artifacts is that the largest artifacts in the data are due to motion artifacts that occur between the experimental blocks. By segmenting the data in trials, these non-relevant sections in the data are ignored and we obtain a cleaner data set already.
 
-In this experiment, the segment of interest is a period of 5 s before and 20s after stimulus onset. We will cut out the segments in the data using the function **[/reference/ft_redefinetrial](/reference/ft_redefinetrial)**. Normally we would use **[/reference/ft_definetrial](/reference/ft_definetrial)** to determine the segments, but due to the resampling the sample indices have changed and hence we will do it by hand. 
+In this experiment, the segment of interest is a period of 5 s before and 20s after stimulus onset. We will cut out the segments in the data using the function **[/reference/ft_redefinetrial](/reference/ft_redefinetrial)**. Normally we would use **[/reference/ft_definetrial](/reference/ft_definetrial)** to determine the segments, but due to the resampling the sample indices have changed and hence we will do it by hand.
 
-	
+
 	event = ft_read_event('LR-01-2015-06-01-0002.oxy3');
-	
+
 	adc001 = find(strcmp({event.type}, ‘ADC001’));
 	adc002 = find(strcmp({event.type}, ‘ADC002’));
-	
+
 	% get the sample number in the original data
 	% note that we transpose them to get columns
 	smp001 = [event(adc001).sample]’;
 	smp002 = [event(adc002).sample]’;
-	
+
 	factor = data_raw.fsample / data_down.fsample
-	
+
 	% get the sample number after downsampling
 	smp001 = round((smp001-1)/factor + 1);
 	smp002 = round((smp002-1)/factor + 1);
-	
+
 	pre    =  round( 5*data_down.fsample);
 	post   =  round(20*data_down.fsample);
 	offset = -pre; % see ft_definetrial
-	
+
 	trl001 = [smp001-pre smp001+post];
 	trl002 = [smp002-pre smp002+post];
-	
+
 	% add the offset
 	trl001(:,3) = offset;
 	trl002(:,3) = offset;
-	
+
 	trl001(:,4) = 1; % add a column with the condition number
 	trl002(:,4) = 2; % add a column with the condition number
-	
+
 	% concatenate the two conditions and sort them
 	trl = sortrows([trl001; trl002])
-	
+
 	% remove trials that stretch beyond the end of the recording
 	sel = trl(:,2)<size(data_down.trial{1},2);
 	trl = trl(sel,:);
-	
+
 	cfg     = []
 	cfg.trl = trl
 	data_epoch = ft_redefinetrial(cfg,data_down);
 
 
 If you type in data_epoch, you should see this in  the command windo
-    
 
-	
-	data_epoch = 
-	
+
+
+	data_epoch =
+
 	  struct with field
-	
+
 	           hdr: [1×1 struct]
 	         trial: {1×597 cell}
 	          time: {1×597 cell}
@@ -304,15 +309,15 @@ Notably, both trial and time fields will now have 1x597 cell array (compare this
 
 which should give yo
 
-	
+
 	idx =
-	
+
 	     8
 
 
 Let’s take a look at what happens around the first deviant, by plotting the average optical densit
 
-	
+
 	cfg          = [];
 	cfg.channel  = 'Rx*';
 	cfg.trials   = 8;
@@ -338,14 +343,14 @@ First, we will remove the optode channels that make poor contact with the skin o
 
     cfg                 = [];
     data_sci            = ft_nirs_scalpcouplingindex(cfg, data_epoch);
- 
+
 You can see that you throw away some channels in data_sci.label, where we now only have 86 labels instead of 10
 
-	
-	data_sci = 
-	
+
+	data_sci =
+
 	  struct with field
-	
+
 	           hdr: [1×1 struct]
 	         trial: {1×597 cell}
 	          time: {1×597 cell}
@@ -371,7 +376,7 @@ We just wrote "Therefore, this step can be ignored." Check this yourself, are th
 
 Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[/reference/ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**.
 
-	
+
 	cfg                 = [];
 	cfg.target          = {'O2Hb', 'HHb'};
 	cfg.channel         = 'nirs'; % e.g. one channel incl. wildcards, you can also use ?all? to select all nirs channels
@@ -387,16 +392,16 @@ Check the data again using **[/reference/ft_singleplotER](/reference/ft_singlepl
 ### Separate functional from systemic responses
 
 #### Low-pass filtering
-The heartbeat is not a signal that we are currently interested in, although you might be if you are interested in effort or exertion. To suppress the heartbeat, we will low-pass filter our data below the frequency of the heart beat (around 1 Hz). 
+The heartbeat is not a signal that we are currently interested in, although you might be if you are interested in effort or exertion. To suppress the heartbeat, we will low-pass filter our data below the frequency of the heart beat (around 1 Hz).
 
-	
+
 	cfg                 	= [];
 	cfg.lpfilter        	= 'yes';
 	cfg.lpfreq          	= 0.8;
 	cfg.bpfilttype          = 'fir';
 	data_lpf            	= ft_preprocessing(cfg,data_trans);
 
-The changes in average concentration now reveals a perfect example of the hemodynamic response. No heartbeat, the signal starts to rise at stimulus onset, peaks at around 4 s, and then drops again. Note that the absolute values also make sense (0.37 for the peak). 
+The changes in average concentration now reveals a perfect example of the hemodynamic response. No heartbeat, the signal starts to rise at stimulus onset, peaks at around 4 s, and then drops again. Note that the absolute values also make sense (0.37 for the peak).
 
 ![image](/media/tutorial/nirs_tut2_hemoglobinovertimeafterlowpass.png@&400)
 
@@ -423,12 +428,12 @@ In the previous steps, you averaged over all standard trials and baseline correc
     cfg           = [];
     cfg.trials    = find(data_lpf.trialinfo(:,1) == 2);
     timelockDEV   = ft_timelockanalysis(cfg, data_lpf);
-    
+
     cfg           = [];
     cfg.baseline  = [-5 0];
     timelockDEV   = ft_timelockbaseline(cfg, timelockDEV);
- 
-To visualize the data in spatial terms (‘where on the head do we find functional brain activity in response to my different conditions?’), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called ‘nirs_48ch_layout.mat’. In case you would like to get an idea of how to create your own layout file, the following page might be informative: [/tutorial/layout](/tutorial/layout). 
+
+To visualize the data in spatial terms (‘where on the head do we find functional brain activity in response to my different conditions?’), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called ‘nirs_48ch_layout.mat’. In case you would like to get an idea of how to create your own layout file, the following page might be informative: [/tutorial/layout](/tutorial/layout).
 
 The layout can be loaded using the standard MATLAB function ‘load’. The file ‘nirs_48ch_layout.mat’ contains a structure called ‘lay’. Just for clarity, we will rename the O2Hb channels representing changes in oxygenation concentration ‘functional’. We do this as follow
 
@@ -436,7 +441,7 @@ The layout can be loaded using the standard MATLAB function ‘load’. The file
     label               = lay.label;
     label               = strrep(label, 'O2Hb', 'functional');
     lay.label           = label;
- 
+
 There are a number of FieldTrip options available for visualizing the results, such as **[/reference/ft_singleplotER](/reference/ft_singleplotER)** (ER stands for Event Related), which allows you to plot a single channel, and **[/reference/ft_multiplotER](/reference/ft_multiplotER)**, which allows you to plot multiple channels on a schematic representation of the head. The **[/reference/ft_multiplotER](/reference/ft_multiplotER)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window). For now, we are interested to first see whether we find the typical hemodynamic response, hence the changes in oxygenated concentration. Therefore, we select all channels which contain ‘functional’ in their label. This is done by cfg.channel = ‘* [functional]’; If you want to see what other options the plotting functions has, you can look at the documentatio
 
     doc ft_multiplotER
@@ -459,7 +464,7 @@ You can also generate a spatial representation of the signal at a certain time p
 
 `<note>` Per default FieldTrip uses the minimum and the maximum in the selected part of the data for the zlim parameter. Setting the scale manually has the advantage that you can set zero as the middle point in the scale, which can be helpful for the interpretation of the color-coded graph.`</note>`
 
-	
+
 	cfg          = [];
 	cfg.layout   = lay;
 	cfg.channel  = '* [functional]';
@@ -475,7 +480,7 @@ You can also generate a spatial representation of the signal at a certain time p
 **//Figure 11; Topographical representation of the measured signal.//**
 ## Summary and conclusion
 
-FIXME 
+FIXME
 
 *  What has been covered?
 

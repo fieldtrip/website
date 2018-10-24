@@ -3,6 +3,11 @@ layout: default
 tags: tutorial freq meg eeg plot MEG-language
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets
 
@@ -12,7 +17,7 @@ In this tutorial you can find information about the time-frequency analysis of a
 
 Here, we will work on the MEG-language-semantics dataset, you can click [here](/tutorial/shared/dataset) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([ trigger based trial selection](/tutorial/Preprocessing), [artifact rejection](/tutorial/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
 
-There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](/#Summary and suggested further reading)). 
+There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](/#Summary and suggested further reading)).
 
 `<note exercise>`
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
@@ -25,13 +30,13 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)). The goal of this section is to compute and visualize event related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. The Fourier analysis will include the application of multitapers ((Mitra and Pesaran (1999) Analysis of dynamic brain imaging data.
 Biophys J. 76(2):691-708))((Percival and Walden, 1993 Spectral analysis for physical applications: multitaper and conventional univariate techniques. Cambridge, UK: Cambridge UP.)) which allow a better control of time and frequency smoothing.
 
-Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing. 
+Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
 ![image](/media/tutorial/timefrequencyanalysis/tfrtiles.png@600)
 
 *Figure 1; Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases.*
 
-If you want to know more about tapers/ window functions you can have a look at this 
+If you want to know more about tapers/ window functions you can have a look at this
 [wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for Hanning window used in this tutorial. There is also a wikipedia site about multitapers, to take a look at it click [here](http://en.wikipedia.org/wiki/Multitaper).
 ## Procedure
 
@@ -63,14 +68,14 @@ Here, we will describe how to calculate time frequency representations using Han
 
     load dataFIC
 
-In the following example a time window with length 500 ms is applied. 
+In the following example a time window with length 500 ms is applied.
 
     cfg              = [];
     cfg.output       = 'pow';
     cfg.channel      = 'MEG';
     cfg.method       = 'mtmconvol';
     cfg.taper        = 'hanning';
-    cfg.foi          = 2:2:30;                         % analysis 2 to 30 Hz in steps of 2 Hz 
+    cfg.foi          = 2:2:30;                         % analysis 2 to 30 Hz in steps of 2 Hz
     cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;   % length of time window = 0.5 sec
     cfg.toi          = -0.5:0.05:1.5;                  % time window "slides" from -0.5 to 1.5 sec in steps of 0.05 sec (50 ms)
     TFRhann = ft_freqanalysis(cfg, dataFIC);
@@ -78,18 +83,18 @@ In the following example a time window with length 500 ms is applied.
 Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following element
 
 
-	TFRhann = 
-	
+	TFRhann =
+
 	        label: {149x1 cell}                % Channel names
 	       dimord: 'chan_freq_time'            % Dimensions contained in powspctrm, channels X frequencies X time
-	         freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30]  % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length) 
+	         freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30]  % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
 	         time: [1x41 double]               % Array of time points considered
 	    powspctrm: [149x15x41 double]          % 3-D matrix containing the power values
 	         grad: [1x1 struct]                % Gradiometer positions etc
 	          cfg: [1x1 struct]                % Settings used in computing this frequency decomposition
 
 
-The element TFRhann.powspctrm contains the temporal evolution of the raw power values for each specified frequency. 
+The element TFRhann.powspctrm contains the temporal evolution of the raw power values for each specified frequency.
 
 
 
@@ -101,19 +106,19 @@ The element TFRhann.powspctrm contains the temporal evolution of the raw power v
 
 This part of the tutorial shows how to visualize the results of any type of time-frequency analysis.
 
-To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: (a) subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the absolute change in power with respect to the baseline interval. (b) expressing, for each frequency, the raw power values as the relative increase or decrease with respect to the power in the baseline interval. This means active period/baseline. Note that the relative baseline is expressed as a ratio; i.e. no change is represented by 1. 
+To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: (a) subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the absolute change in power with respect to the baseline interval. (b) expressing, for each frequency, the raw power values as the relative increase or decrease with respect to the power in the baseline interval. This means active period/baseline. Note that the relative baseline is expressed as a ratio; i.e. no change is represented by 1.
 
-There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel (or average of several channels), 3) topographical 2-D map of the power changes in a specified time-frequency interval. 
+There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel (or average of several channels), 3) topographical 2-D map of the power changes in a specified time-frequency interval.
 
 To plot the TFRs from all the sensors use the function **[ft_multiplotTFR](/reference/ft_multiplotTFR)**. Settings can be adjusted in the cfg structure. For exampl
 
     cfg = [];
-    cfg.baseline     = [-0.5 -0.1]; 
-    cfg.baselinetype = 'absolute'; 
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
     cfg.zlim         = [-3e-27 3e-27];	        
-    cfg.showlabels   = 'yes';	
+    cfg.showlabels   = 'yes';
     cfg.layout       = 'CTF151_helmet.mat';
-    figure 
+    figure
     ft_multiplotTFR(cfg, TFRhann);
 
 ![image](/media/tutorial/timefrequencyanalysis/tfrhannmult.png@650)
@@ -127,10 +132,10 @@ An interesting effect seems to be present in the TFR of sensor MRC15. To make a 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';  
-    cfg.maskstyle    = 'saturation';	
-    cfg.zlim         = [-3e-27 3e-27];	
+    cfg.maskstyle    = 'saturation';
+    cfg.zlim         = [-3e-27 3e-27];
     cfg.channel      = 'MRC15';
-    figure 
+    figure
     ft_singleplotTFR(cfg, TFRhann);
 
 ![image](/media/tutorial/timefrequencyanalysis/tfr_mrc15_1_feb_2012.png@400)
@@ -143,13 +148,13 @@ If you see artifacts in your figure, see [faq:I am getting strange artifacts in 
 From Figure 4 one can see that there is an increase in power around 15-20 Hz in the time interval 0.9 to 1.3 s after stimulus onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)*
 
     cfg = [];
-    cfg.baseline     = [-0.5 -0.1];	
+    cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
     cfg.xlim         = [0.9 1.3];   
     cfg.zlim         = [-1.5e-27 1.5e-27];
     cfg.ylim         = [15 20];
     cfg.marker       = 'on';
-    figure 
+    figure
     ft_topoplotTFR(cfg, TFRhann);
 
 ![image](/media/tutorial/timefrequencyanalysis/tfrhanntopoplot.png@400)
@@ -179,11 +184,11 @@ From Figure 4 one can see that there is an increase in power around 15-20 Hz in 
 ### Hanning taper, frequency dependent window length
 
 
-It is also possible to calculate the TFRs with respect to a time window that varies with frequency. Typically the time window gets shorter with an increase in frequency. The main advantage of this approach is that the temporal smoothing decreases with higher frequencies; however, this is on the expense of frequency smoothing. We will here show how to perform this analysis with a Hanning window. The approach is very similar to wavelet analysis. A wavelet analysis performed with a Morlet wavelet mainly differs by applying a Gaussian shaped taper. 
+It is also possible to calculate the TFRs with respect to a time window that varies with frequency. Typically the time window gets shorter with an increase in frequency. The main advantage of this approach is that the temporal smoothing decreases with higher frequencies; however, this is on the expense of frequency smoothing. We will here show how to perform this analysis with a Hanning window. The approach is very similar to wavelet analysis. A wavelet analysis performed with a Morlet wavelet mainly differs by applying a Gaussian shaped taper.
 
-The analysis is best done by first selecting the numbers of cycles per time window which will be the same for all frequencies. For instance if the number of cycles per window is 7, the time window is 1000 ms for 7 Hz (1/7 x 7 cycles); 700 ms for 10 Hz (1/10 x 7 cycles) and 350 ms for 20 Hz (1/20 x 7 cycles). The frequency can be chosen arbitrarily - however; too fine a frequency resolution is just going to increase the redundancy rather than providing new information. 
+The analysis is best done by first selecting the numbers of cycles per time window which will be the same for all frequencies. For instance if the number of cycles per window is 7, the time window is 1000 ms for 7 Hz (1/7 x 7 cycles); 700 ms for 10 Hz (1/10 x 7 cycles) and 350 ms for 20 Hz (1/20 x 7 cycles). The frequency can be chosen arbitrarily - however; too fine a frequency resolution is just going to increase the redundancy rather than providing new information.
 
-Below is the cfg for a 7 cycle time window. The calculation is only done for one sensor (MRC15) but it can of course be extended to all sensors. 
+Below is the cfg for a 7 cycle time window. The calculation is only done for one sensor (MRC15) but it can of course be extended to all sensors.
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -194,17 +199,17 @@ Below is the cfg for a 7 cycle time window. The calculation is only done for one
     cfg.t_ftimwin    = 7./cfg.foi;  % 7 cycles per time window
     cfg.toi          = -0.5:0.05:1.5;
     TFRhann7 = ft_freqanalysis(cfg, dataFIC);
-    
-    
+
+
 
 
 To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)*
 
     cfg              = [];
-    cfg.baseline     = [-0.5 -0.1]; 
-    cfg.baselinetype = 'absolute'; 
-    cfg.maskstyle    = 'saturation';	
-    cfg.zlim         = [-3e-27 3e-27];	
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.maskstyle    = 'saturation';
+    cfg.zlim         = [-3e-27 3e-27];
     cfg.channel      = 'MRC15';
     cfg.interactive  = 'no';
     figure
@@ -243,7 +248,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
     cfg.t_ftimwin    = 5./cfg.foi;  	
     TFRhann5 = ft_freqanalysis(cfg, dataFIC);
 
-10 cycles per time window: 
+10 cycles per time window:
 
     cfg.t_ftimwin    = 10./cfg.foi;  	
     TFRhann10 = ft_freqanalysis(cfg, dataFIC);
@@ -251,14 +256,14 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
 
 ##  Time-frequency analysis III.
 
-###  Multitapers 
+###  Multitapers
 
-Multitapers are typically used in order to achieve better control over the frequency smoothing. More tapers for a given time window will result in greater smoothing. High frequency smoothing has been shown to be particularly advantageous when dealing with electrophysiological brain signals above 30 Hz. Oscillatory gamma activity (30-100 Hz) is quite broad band and thus analysis of such signals benefit from multitapering. For signals lower than 30 Hz it is recommend to use only a single taper, e.g. a Hanning taper as shown above (beware that in the example below multitapers are used to analyze low frequencies because there are no effects in the gamma band in this dataset). 
+Multitapers are typically used in order to achieve better control over the frequency smoothing. More tapers for a given time window will result in greater smoothing. High frequency smoothing has been shown to be particularly advantageous when dealing with electrophysiological brain signals above 30 Hz. Oscillatory gamma activity (30-100 Hz) is quite broad band and thus analysis of such signals benefit from multitapering. For signals lower than 30 Hz it is recommend to use only a single taper, e.g. a Hanning taper as shown above (beware that in the example below multitapers are used to analyze low frequencies because there are no effects in the gamma band in this dataset).
 
 Time-frequency analysis based on multitapers can be performed by the function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transformations the data are ‘tapered’. Several orthogonal tapers might be used for each time window. The power is calculated for each tapered data segment and then combined. In the example below we apply a time window which gradually becomes shorter for higher frequencies (similar to wavelet techniques). The arguments for the chosen parameters are as follows
 
 
-*  cfg.foi , the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased at the expense of computation time and redundancy. 
+*  cfg.foi , the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased at the expense of computation time and redundancy.
 
 *  cfg.toi, the time-interval of interest. This vector determines the center times for the time windows for which the power values should be calculated. The setting cfg.toi = -0.5:0.05:1.5 results in power values from -0.5 to 1.5 s in steps of 50 ms. A finer time resolution will give redundant information and longer computation times, but a smoother graphical output.
 
@@ -266,9 +271,9 @@ Time-frequency analysis based on multitapers can be performed by the function **
 
 *  cfg.tapsmofrq determines the width of frequency smoothing in Hz (= fw). We have chosen cfg.tapsmofrq = cfg.foi*0.4, i.e. the smoothing will increase with frequency. Specifying larger values will result in more frequency smoothing. For less smoothing you can specify smaller values, however, the following relation (determined by the Shannon number) must hold (see Percival and Walden, 1993
 
-    K = 2*tw*fw-1,  where K is required to be larger than 0. 
+    K = 2*tw*fw-1,  where K is required to be larger than 0.
 
-K is the number of multitapers applied; the more tapers the greater the smoothing. 
+K is the number of multitapers applied; the more tapers the greater the smoothing.
 
 These settings result in the following characteristics as a function of the frequencies of interes
 
@@ -294,7 +299,7 @@ Plot the result
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];  
     cfg.baselinetype = 'absolute';	        
-    cfg.zlim         = [-3e-27 3e-27];	
+    cfg.zlim         = [-3e-27 3e-27];
     cfg.showlabels   = 'yes';	        
     cfg.layout       = 'CTF151_helmet.mat';
     figure
@@ -309,7 +314,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 ##  Time-frequency analysis IV.
 
-###  Morlet wavelets 
+###  Morlet wavelets
 
 An alternative to calculating TFRs with the multitaper method is to use Morlet wavelets. The approach is equivalent to calculating TFRs with time windows that depend on frequency using a taper with a Gaussian shape. The commands below illustrate how to do this. One crucial parameter to set is cfg.width. It determines the width of the wavelets in number of cycles. Making the value smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width*2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7*2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)).
 
@@ -318,8 +323,8 @@ Calculate TFRs using Morlet wavelet
     cfg = [];
     cfg.channel    = 'MEG';	                
     cfg.method     = 'wavelet';                
-    cfg.width      = 7; 
-    cfg.output     = 'pow';	
+    cfg.width      = 7;
+    cfg.output     = 'pow';
     cfg.foi        = 1:2:30;	                
     cfg.toi        = -0.5:0.05:1.5;		              
     TFRwave = ft_freqanalysis(cfg, dataFIC);
@@ -327,7 +332,7 @@ Calculate TFRs using Morlet wavelet
 Plot the result
 
     cfg = [];
-    cfg.baseline     = [-0.5 -0.1]; 
+    cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute'; 	        
     cfg.zlim         = [-3e-25 3e-25];
     cfg.showlabels   = 'yes';	        
@@ -335,7 +340,7 @@ Plot the result
     figure
     ft_multiplotTFR(cfg, TFRwave)
 
- 
+
 ![image](/media/tutorial/timefrequencyanalysis/tfrwavemult.png@650)
 
 *Figure 9; Time-frequency representations of power calculated using Morlet wavelets.*
@@ -363,4 +368,3 @@ Example script
 -----
 
 This tutorial was last tested by Robert with version 20150609 of FieldTrip using MATLAB R2014b on a 64-bit OS X computer.
-

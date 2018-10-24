@@ -3,13 +3,18 @@ layout: default
 tags: tutorial meg source coherence MEG-visuomotor151
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Localizing visual gamma and cortico-muscular coherence using DICS
 
 ## Introduction
 
 In this tutorial we will continue working on the combined visual and motor task dataset((Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective
-Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758)) described in the [channel-level analysis tutorial](/tutorial/sensor_analysis). 
+Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758)) described in the [channel-level analysis tutorial](/tutorial/sensor_analysis).
 
 In this tutorial you will learn about applying beamformer techniques in the frequency domain.  You will learn how to compute an appropriate head model and lead field matrix, how to compute appropriate time-frequency windows, and how to contrast the effect of interest against some control/baseline.  Also, you will play around with several options for plotting the results overlaid on a structural MRI. Finally, you will apply the results from the sensor-level coherence analysis and localize sources that are coherent with the EMG signals.
 
@@ -23,22 +28,22 @@ In the [sensor-level tutorial](/tutorial/sensor_analysis) we found gamma-band os
 
 The brain is divided in a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross et al. 2001). Other beamformer methods rely on sources estimates calculated in the time domain, e.g. the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. These distributions of source power can then be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
 
-When conducting a multiple-subject study, it is essential that averaging over subjects does not violate any statistical assumption. One of these assumptions is that subject's sources are represented in a common space, i.e. an averaged grid point represents the estimate of the same brain region across subjects. One way to get subjects in a common space is by spatially deforming and interpolating the source reconstruction after beamforming. However, we will use an alternative way that does not require interpolation. Prior to source estimation we construct a regular grid in MNI template space and spatially deform this grid to each of the individual subjects (note that you will only have the data from one subject here). The beamformer estimation is done on the direct grid mapped to MNI space, so that the results can be compared over subjects. This procedure is explained in detail [in this example code](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). Creating the MNI template grid only needs to be done once, and the result is provided in the fieldtrip/template directory. We strongly suggest that you have a quick (but thorough) look at the example code page and understand the essence of what is being done there anyway! 
+When conducting a multiple-subject study, it is essential that averaging over subjects does not violate any statistical assumption. One of these assumptions is that subject's sources are represented in a common space, i.e. an averaged grid point represents the estimate of the same brain region across subjects. One way to get subjects in a common space is by spatially deforming and interpolating the source reconstruction after beamforming. However, we will use an alternative way that does not require interpolation. Prior to source estimation we construct a regular grid in MNI template space and spatially deform this grid to each of the individual subjects (note that you will only have the data from one subject here). The beamformer estimation is done on the direct grid mapped to MNI space, so that the results can be compared over subjects. This procedure is explained in detail [in this example code](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). Creating the MNI template grid only needs to be done once, and the result is provided in the fieldtrip/template directory. We strongly suggest that you have a quick (but thorough) look at the example code page and understand the essence of what is being done there anyway!
 
 The tutorial is split into three parts. In the first part of the tutorial, we will explain how to compute the forward and inverse model, which is the fundamental basic for source level analysis. In the second part, we will localize the sources responsible for the posterior gamma activity upon visual stimlation. In the third part of the tutorial, we will compute coherence to study the oscillatory synchrony between two sources in the brain. This is computed in the frequency domain by normalizing the magnitude of the summed cross-spectral density between two signals by their respective power. For each frequency bin the coherence value is a number between 0 and 1. The coherence values reflect the consistency of the phase difference between the two signals at a given frequency. In the dataset we will analyse the subject was required to maintain an isometric contraction of a forearm muscle. The example in this session covers thus cortico-muscular coherence on source level. The same principles, however, apply to cortico-cortical coherence, for which the interested reader can already have a look at [ another tutorial](/tutorial/connectivityextended) that will be covered later.
 ## Procedure
 
 In the first part of this tutorial we will use the anatomical data to prepare the source analysis. This involve
 
- * Reading in the subject specific anatomical MRI using  **[ft_read_mri](/reference/ft_read_mri)** 
+ * Reading in the subject specific anatomical MRI using  **[ft_read_mri](/reference/ft_read_mri)**
 
-*  Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** 
+*  Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 
 *  Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
 Next, we head out to investigate the response to the visual stimulation. We will localize the sources of the visual gamma-band activity following the following step
 
-   * Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)** 
+   * Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
    * Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
    * Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
 
@@ -50,7 +55,7 @@ Next, we head out to investigate the response to the visual stimulation. We will
 
 In the third part we shift our attention to the motor task in this dataset. We will compute the spatial distribution of the cortico-muscular coherence over the whole brain using a very similar analysis pipelin
 
-   * Define a suitable time window without interfering stimulation **[ft_redefinetrial](/reference/ft_redefinetrial)** 
+   * Define a suitable time window without interfering stimulation **[ft_redefinetrial](/reference/ft_redefinetrial)**
    * Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](/reference/ft_freqanalysis)**
    * Use the source- and headmodel as computed above using  **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_singleshell)**
    * Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
@@ -70,48 +75,48 @@ First, we will load the already preprocessed data (see above), which is availabl
 Since we are not interested in the difference between left and right hand responses at this moment, we combine data from the left-hand and the right-hand response conditio
 
     data_combined = ft_appenddata([], data_left, data_right);
-    
+
 That is it with the data for now. We will now turn to preparing the head- and sourcemodel.
-    
+
 ### Computing the headmodel
 
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution. The forward models for MEG are typically constructed for each subject individually, taking the position and especially the size of the head into account. The size of the head determines the distance between brain and MEG sensors, the larger the distance, the weaker the cortical sources will be observed by the MEG sensors. If you were to use a single head model for all subjects, the variance in signal strength that is due to the differences in distance would not be explained by the model, causing unexplained variance over subjects and reduced statistical sensitivity.
 
 There are many types of forward models that, to various degrees, take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
-The first step in constructing the forward model is to find the brain surface from the subjects MRI. The MRI is available from [ the FieldTrip ftp server (subjectK.mri)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/subjectK.mri). Each of the voxels of the anatomical MRI is assigned to a tissue class, this procedure is termed segmentation. Note that making the segmentation is quite time consuming. 
+The first step in constructing the forward model is to find the brain surface from the subjects MRI. The MRI is available from [ the FieldTrip ftp server (subjectK.mri)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/subjectK.mri). Each of the voxels of the anatomical MRI is assigned to a tissue class, this procedure is termed segmentation. Note that making the segmentation is quite time consuming.
 
 
 For the sake of time efficiency, you can load the already segmented MRI that is available from the [FieldTrip ftp server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/segmentedmri.mat
 
     load segmentedmri
-    
+
 Otherwise, the segmentation involves the following steps ((**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM. Note that you don't need a separate SPM installation, the required SPM-files are included in the FieldTrip release in the fieldtripXXX/external/spm8 directory)
 
     mri = ft_read_mri('subjectK.mri');
-    
+
     cfg          = [];
     segmentedmri = ft_volumesegment(cfg, mri);
 
 Note that the anatomical MRI has already been aligned to the coordinate system of the CTF MEG system, according to the anatomical landmarks (nasion, left and right ear canal) using **[ft_volumerealign](/reference/ft_volumerealign)**. The location of these anatomical fiducials relative to the head were determined both in the MEG measurement (with localizer coils) and in the MRI scan (with vitamine E capsules). Having the fiducials in both measurements allows the data to be aligned to each other.
 
 You can check whether the segmentation was successful by callin
-    
+
     % add anatomical information to the segmentation
     segmentedmri.transform = mri.transform;
     segmentedmri.anatomy   = mri.anatomy;
-    
+
     cfg              = [];
     cfg.funparameter = 'gray';
     ft_sourceplot(cfg,segmentedmri);
-    
+
 ![image](/media/tutorial/beamforming_extended/fig2_segmri.png)
 
 *Figure: The segmented MRI and the original MRI on top of each other. If everything went well, there is a perfect overlap between these two!*
 
 If the yellow-greyish brain shows up in the subjects heads, everything went fine as shown in above Figure. Otherwise, it might be that you need to flip either of the three dimensions or that some unit conversion went wrong before segmenting the MRI (note to yourself: never blame FieldTrip, always blame yourself for not checking what you were doing!)
 
-`<note>` 
+`<note>`
 You might wonder why the anatomical MRI shows upside down: this is a [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
 `</note>`
 
@@ -126,14 +131,14 @@ Note that we call the headmodel on some occasions volume conduction model, do no
     save hdm hdm
 
 `<note important>`
-If you want to do a source reconstruction of EEG data, you have to pay special attention to the  referencing. The forward model will be computed with a common average reference [*], i.e. the mean value of the forward model over all electrodes is zero. Consequently, this also has to hold for your data. 
+If you want to do a source reconstruction of EEG data, you have to pay special attention to the  referencing. The forward model will be computed with a common average reference [*], i.e. the mean value of the forward model over all electrodes is zero. Consequently, this also has to hold for your data.
 
-Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference. 
+Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference.
 
 Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.   
 
 [*] except in some rare cases, like with bipolar iEEG electrode montages
-`</note>` 
+`</note>`
 
 #### Exercise: head model
 
@@ -144,17 +149,17 @@ Why might a single sphere model be inadequate for performing beamformer estimate
 
 ### Computing the sourcemodel
 
-Following the construction of the volume conduction model, we need to discretize the brain into a source model or grid. For each grid point in the brain, the lead field matrix is calculated later. When constructing the source model, you might want to keep in mind that averaging and statistics over subjects can only be done if the individual subjects source reconstructed results are mapped onto a common space. Now, we will construct a regular grid in MNI template space and spatially deform this grid to the individual subjects brain. The following code loads the template grid that is included in the FieldTrip release: 
+Following the construction of the volume conduction model, we need to discretize the brain into a source model or grid. For each grid point in the brain, the lead field matrix is calculated later. When constructing the source model, you might want to keep in mind that averaging and statistics over subjects can only be done if the individual subjects source reconstructed results are mapped onto a common space. Now, we will construct a regular grid in MNI template space and spatially deform this grid to the individual subjects brain. The following code loads the template grid that is included in the FieldTrip release:
 
     % this returns the location where FieldTrip is installed
-    [ftver, ftdir] = ft_version; 
-    
+    [ftver, ftdir] = ft_version;
+
     % and this is where the template source models are
     templatedir = fullfile(ftdir, 'template', 'sourcemodel');
-    
+
     template = load(fullfile(templatedir, 'standard_sourcemodel3d8mm'));
 
-    % inverse-warp the template grid to subject specific coordinates 
+    % inverse-warp the template grid to subject specific coordinates
     cfg                = [];
     cfg.grid.warpmni   = 'yes';
     cfg.grid.template  = template.sourcemodel;
@@ -165,20 +170,20 @@ Following the construction of the volume conduction model, we need to discretize
 Please note that we are using the terms *source model* and *grid* interchangeably. Next we can save the sourcemodel so that we do not have to repeat all above steps for this subject agai
 
     save sourcemodel sourcemodel
-    
+
 Finally, it is wise to check whether all computed objects align well with one another, i.e. whether the grid is correctly placed within the volume conduction model, which both have to be aligned with the MEG sensors. Note that all objects that we plot need to be expressed in the same units and the same coordinate space. Here, we need to transform the head model from 'mm' into 'cm'.
 
     hdm_cm = ft_convert_units(hdm, 'cm');
-    
+
     figure; hold on     % plot all objects in one figure
-    
+
     ft_plot_vol(hdm_cm, 'edgecolor', 'none')
-    
+
     alpha 0.4           % make the surface transparent
-    
+
     ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));
     ft_plot_sens(data_combined.grad);
-    
+
 ![image](/media/tutorial/beamforming_extended/fig3_srcalign.png)
 
 *Figure: The sensor positions, the source model and the head model nicely align up. Note that the front of the brain is located where the helmet opens up (which it does at the front).*
@@ -221,7 +226,7 @@ Now, we 'cut' out the pre- and post-stimulus time window
     cfg        = [];                                           
     cfg.toilim = [-0.8 0];                       
     data_bsl   = ft_redefinetrial(cfg, data);
-       
+
     cfg.toilim = [0.3 1.1];                       
     data_exp   = ft_redefinetrial(cfg, data);
 
@@ -229,24 +234,24 @@ As mentioned in the Background, it is ideal to contrast the activity of interest
  1.  Suitable control windows are, for exampl
     - Activity contrasted with baseline (example shown here using data_bsl)
     - Activity of condition 1 contrasted with condition 2 (using data_left and data_right)
- 2.  However, if no other suitable data condition or baseline time-window exists, then 
+ 2.  However, if no other suitable data condition or baseline time-window exists, then
     - Activity contrasted with estimated noise
-    - Use normalized leadfields 
+    - Use normalized leadfields
 The latter two cases are covered in [another tutorial](/tutorial/beamformer#source_analysiswithout_contrasting_condition) that we will not deal with today
 
-The null hypothesis for both options in (1) is that the data (thus also the noise-level) in these conditions are the same, and thus the best spatial filter is the one computed using both these conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition. 
+The null hypothesis for both options in (1) is that the data (thus also the noise-level) in these conditions are the same, and thus the best spatial filter is the one computed using both these conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
 
 In order to not run every function twice, we can combine the two data structure for now. Note that we have to keep track of the condition of each trial, which we will code in the .trialinfo field (you could code it in any variable, but for consistency with the FieldTrip coding style and structure, we strongly advise you to use the .trialinfo field
 
     cfg      = [];
     data_cmb = ft_appenddata(cfg, data_bsl, data_exp);
-    
+
     % give a number to each trial: 0 = baseline, 1 = experimental condition
     data_cmb.trialinfo = [zeros(length(data_bsl.trial), 1); ones(length(data_exp.trial), 1)];
-    
+
 ### Calculating the cross spectral density matrix
 
-The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd', but we can also use cfg.output = 'fourier' for that (the CSD will then be inferred from the Fourier coeffcients). Since the frequency band we identified [on sensor level](/tutorial/sensor_analysis) ranged from about 40 Hz to 70 Hz, we select the frequency of interest as 55 Hz and a smoothing window of +/-15 Hz: 
+The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd', but we can also use cfg.output = 'fourier' for that (the CSD will then be inferred from the Fourier coeffcients). Since the frequency band we identified [on sensor level](/tutorial/sensor_analysis) ranged from about 40 Hz to 70 Hz, we select the frequency of interest as 55 Hz and a smoothing window of +/-15 Hz:
 
     cfg            = [];
     cfg.method     = 'mtmfft';
@@ -255,7 +260,7 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
     cfg.tapsmofrq  = 15;
     cfg.foi        = 55;
     freq_cmb       = ft_freqanalysis(cfg, data_cmb);
-    
+
 Now, we can separate the two conditions agai
 
     cfg                = [];
@@ -264,7 +269,7 @@ Now, we can separate the two conditions agai
     % remember the number of tapers per trial
     freq_bsl.cumtapcnt = freq_cmb.cumtapcnt(cfg.trials);
     freq_bsl.cumsumcnt = freq_cmb.cumsumcnt(cfg.trials);
-    
+
     cfg.trials         = freq_cmb.trialinfo == 1;
     freq_exp           = ft_selectdata(cfg, freq_cmb);
     % remember the number of tapers per trial
@@ -272,14 +277,14 @@ Now, we can separate the two conditions agai
     freq_exp.cumsumcnt = freq_cmb.cumsumcnt(cfg.trials);
 
 Note that we will need all three data structures for beamforming later on, so keep them.
- 
+
 ###  Computing the leadfield matrices
 
 Before computing the leadfields, we need to load again our source- and headmodels if they are not in memory anymor
-    
+
     load hdm;
     load sourcemodel;
-    
+
 Since we already verified that sensors, head- and sourcemodel align up, we can continue to computing the leadfield matrices by incorporating our just computed frequency dat
 
     cfg             = [];
@@ -314,7 +319,7 @@ The purpose of cfg.fixedori is that we only keep the largest of the three dipole
 #### Exercise: imaginary numbers
 
 `<note exercise>`
-What would keeping an imaginary-valued filter imply for the mapping from sources to sensors? 
+What would keeping an imaginary-valued filter imply for the mapping from sources to sensors?
 `</note>`
 
 ### Plotting sources of oscillatory gamma-band activity
@@ -329,7 +334,7 @@ Remember that we intended to contrast the baseline with the experiment time peri
     source_exp       = ft_sourceanalysis(cfg, freq_exp);
 
 Now we can finally compute the difference between the two conditions. Here we take the ratio between the two conditions centered around 0, so that we obtain the relative difference of the experimental condition from the baseline condition in percent. In this operation we assume that the noise bias is the same for the baseline and experimental stimulus interval and it will thus cancel out when contrasting.
-    
+
     source_diff = source_exp;
     source_diff.avg.pow = (source_exp.avg.pow ./ source_bsl.avg.pow) - 1;
 
@@ -337,33 +342,33 @@ After successfully applying the above steps, we obtained an estimate of the diff
 
     source_diff.pos = template.sourcemodel.pos;
     source_diff.dim = template.sourcemodel.dim;
-    
+
 The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation. Here, we again use the template MRI. For reading in the template MRI, you can just use **[ft_read_mri](/reference/ft_read_mri)**. That template is distributed with SPM and also is in the fieldtrip/external/spm8 director
 
     % this returns the location where FieldTrip is installed
-    [ftver, ftdir] = ft_version; 
-    
+    [ftver, ftdir] = ft_version;
+
     % and this is where the template source models are
     templatedir = fullfile(ftdir, 'external', 'spm8', 'templates');
-    
+
     template_mri = ft_read_mri(fullfile(templatedir, 'T1.nii'));
-    
+
     cfg              = [];
     cfg.parameter    = 'avg.pow';
     cfg.interpmethod = 'nearest';
     source_diff_int  = ft_sourceinterpolate(cfg, source_diff, template_mri);
 
-Now, we can plot the interpolated data: 
+Now, we can plot the interpolated data:
 
     cfg               = [];
     cfg.method        = 'slice';
     cfg.funparameter  = 'avg.pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2]; 
+    cfg.opacitylim    = [0.0 1.2];
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg,source_diff_int);
- 
+
 
 ![image](/media/tutorial/beamforming_extended/fig4_beamed2.png)
 *Figure: The power estimates of the activity induced by the visual stimulus around 55 Hz. The image was done using[ft_sourceinterpolate and ft_sourceplot*
@@ -377,7 +382,7 @@ The 'slice' method is not the only plotting method implemented. Use the 'help' o
 
 `<note hint>` Use these settings for 'surface' plottin
 
-    cfg.projmethod     = 'nearest'; 
+    cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat';
     cfg.surfdownsample = 10;
 `</note>`
@@ -430,7 +435,7 @@ Compute the cross-spectral density matrix for 20 H
 
 ### Source analysis
 
-Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration. 
+Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration.
 This step requires the subject's head- and sourcemodel that we both computed above.
 
     % if not yet in memory
@@ -444,27 +449,27 @@ This step requires the subject's head- and sourcemodel that we both computed abo
     cfg.headmodel       = hdm;
     cfg.grid            = sourcemodel;
     source_coh_lft      = ft_sourceanalysis(cfg, freq_csd);
-    
+
 `<note hint>`
 When you input the sourcemodel on which you have **not** already computed the leadfield matrices, **[ft_sourceanalysis](/reference/sourceanalysis)** will compute the leadfield matrices itself first.
 `</note>`
 
 ### Plotting cortico-muscular coherent sources
 
-The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the anatomical MRI, we have to do the exact same step as described above, just this time we have to interpolate the coherence parameter rather than the power parameter. 
-For this, we first need to overwrite the position information of the sourcemodel and then load the template MRI, which is distributed with FieldTrip. 
+The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the anatomical MRI, we have to do the exact same step as described above, just this time we have to interpolate the coherence parameter rather than the power parameter.
+For this, we first need to overwrite the position information of the sourcemodel and then load the template MRI, which is distributed with FieldTrip.
 
     source_coh_lft.pos = template.sourcemodel.pos;
     source_coh_lft.dim = template.sourcemodel.dim;  
-    
+
     % this returns the location where FieldTrip is installed
-    [ftver, ftdir] = ft_version; 
-    
+    [ftver, ftdir] = ft_version;
+
     % and this is where the template source models are
     templatedir = fullfile(ftdir, 'external', 'spm8', 'templates');
-    
+
     template_mri = ft_read_mri(fullfile(templatedir, 'T1.nii'));
-    
+
     cfg              = [];
     cfg.parameter    = 'coh';
     cfg.interpmethod = 'nearest';
@@ -497,7 +502,7 @@ Since the data is expressed in MNI coordinates, you can also make a surface rend
 #### Exercise: anatomical labeling
 
 `<note exercise>`
-Determine the anatomical location of the coherence peak. How does this result compare to coherence with the right EMG? 
+Determine the anatomical location of the coherence peak. How does this result compare to coherence with the right EMG?
 `</note>`
 
 #### Exercise: Comparison with sensor level analysis

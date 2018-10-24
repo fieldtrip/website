@@ -3,6 +3,11 @@ layout: default
 tags: example freq coherence eeg meg fixme
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Fourier analysis of neuronal oscillations and synchronization
 
@@ -27,11 +32,8 @@ does and how we can use its outputs to compute power-spectra and cross-spectral 
 
 In this tutorial the following steps will be demonstrate
 
-
 *  Spectral analysis using the **Fast Fourier Transform** (FFT).
-
 *  Computation of the **power spectrum** from the Fourier transformed data.
-
 *  Computation of the **coherence spectrum** from the Fourier transformed data of two signals.
 
 
@@ -59,7 +61,7 @@ signals.
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	clear all
 	close all
-	
+
 	% get a sine and cosine wave of equal frequency and plot them
 	frq = 20; % Hz
 	len = 1; % seconds
@@ -72,7 +74,7 @@ signals.
 	plot(sinwav);
 	hold on;
 	plot(coswav,'r');
-	
+
 	% get the FFT of the waves and plot the real and imaginary components
 	fftsin = fft(sinwav);
 	figure;
@@ -80,7 +82,7 @@ signals.
 	plot(real(fftsin));
 	subplot(2,1,2);
 	plot(imag(fftsin),'r');
-	
+
 	fftcos = fft(coswav);
 	figure;
 	subplot(2,1,1);
@@ -89,11 +91,11 @@ signals.
 	plot(imag(fftcos),'r');
 
 
-![image](/media/tutorial/fourier/fft_sinwav2.png	)	
+![image](/media/tutorial/fourier/fft_sinwav2.png	)
 
 *Figure 1; The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
-![image](/media/tutorial/fourier/fft_coswav2.png	)	
+![image](/media/tutorial/fourier/fft_coswav2.png	)
 
 *Figure 2; The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
@@ -110,7 +112,7 @@ signals.
 	figure;
 	plot([0,coscmpsin],[0,sincmpsin]);
 	set(gca,'xlim',[-600 600],'ylim',[-600 600])
-	
+
 	figure;
 	subplot(2,1,1);
 	plot(coswav .* coswav)
@@ -137,7 +139,7 @@ signals.
 	plot(wav);
 
 
-![image](/media/tutorial/fourier/cos45.png	)	
+![image](/media/tutorial/fourier/cos45.png	)
 
 *Figure 3; A 20 Hz cosine wave shifted 45 degrees.*
 
@@ -151,7 +153,7 @@ signals.
 	plot(imag(fftwav),'r');
 
 
-![image](/media/tutorial/fourier/fft_cos45.png	)	
+![image](/media/tutorial/fourier/fft_cos45.png	)
 
 *Figure 4; The FFT of a 20 Hz cosine wave shifted 45 degrees.*
 
@@ -180,7 +182,7 @@ signals.
 	wav = sin(ind);
 	figure;
 	plot(wav);
-	
+
 	% get the FFT of the wave
 	fftwav = fft(wav);
 	figure;
@@ -188,14 +190,14 @@ signals.
 	plot(real(fftwav));
 	subplot(2,1,2);
 	plot(imag(fftwav),'r');
-	
+
 	% calculate the FFT result OF THE SIGNAL FREQUENCY "by hand"
 	figure;
 	subplot(2,1,1);
 	plot(wav .* coswav)
 	subplot(2,1,2);
 	plot(wav .* sinwav)
-	
+
 	coscmpwav = sum(wav .* coswav)
 	sincmpwav = sum(wav .* sinwav)
 
@@ -216,7 +218,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	% calculate the power spectrum
 	clear all
 	close all
-	
+
 	% get a sine and cosine wave of equal frequency and plot them
 	frq = 10; % Hz
 	len = 1; % seconds
@@ -230,7 +232,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	hold on;
 	plot(coswav,'r');
 
-	
+
 ![image](/media/tutorial/fourier/sincos.png)
 
 *Figure 5; A sine (blue) and cosine wave (red) of equal frequency (10 Hz).*
@@ -243,14 +245,14 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	plot(real(fftsin));
 	subplot(2,1,2);
 	plot(imag(fftsin),'r');
-		
+
 	fftcos = fft(coswav);
 	figure('name','fft cos');
 	subplot(2,1,1);
 	plot(real(fftcos));
 	subplot(2,1,2);
 	plot(imag(fftcos),'r');
-		
+
 	numsmp = length(sinwav);
 	psdsin = 2 .* abs(fftsin) .^ 2 ./ (numsmp .^2);
 	figure('name','power sin');
@@ -279,9 +281,9 @@ turns out that the phase difference between two signals is easily obtained if on
 Fourier transform of the two signals. The product of the Fourier transform of one signal with
 the conjugate of the Fourier Transform of the signal gives the Cross-Spectral density (CSD).
 We will not go into the detail what the conjugate actually is and why this multiplication gives
-this particular results. Let’s simply accept this for now as a fact. 
+this particular results. Let’s simply accept this for now as a fact.
 
-The CSD is complex and a 
+The CSD is complex and a
 function of frequency, just like the Fourier Transforms. The amplitude of the CSD is the
 product of the amplitudes of the Fourier Transforms of the two signals. The interesting
 component is the phase of the CSD: It corresponds to the difference in the phase of the two
@@ -289,7 +291,7 @@ Fourier transforms of the two signals. Just like the Fourier Transform itself, w
 CSD at one frequency as a vector. If we have multiple measurements from two signals and
 the CSD for each of those measurements, then we can analyze the distribution of those
 vectors. If there is some consistency in the phase difference, those vectors should not be
-pointing in random directions, but they should be bundled around one main direction. 
+pointing in random directions, but they should be bundled around one main direction.
 
 In order
 to quantify how much those vectors are bundled, one simply sums up all the vectors. Vector
@@ -307,12 +309,12 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% The Coherence spectrum
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% get many repetitions of two signals with random phase difference
 	clear all
 	close all
-	
+
 	frq = 10; % Hz
 	len = 1; % seconds
 	smpfrq = 100; % Hz
@@ -326,13 +328,13 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	  wav(:,rptlop,2) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+((ranphs(rptlop,2)+phsdif).*2.*pi)) + ...
 	    randn(1,len.*smpfrq).*noifac;
 	end
-	
+
 	% get the FFT of the waves
 	for rptlop = 1:numrpt
 	  fftwav(:,rptlop,1) = fft(wav(:,rptlop,1));
 	  fftwav(:,rptlop,2) = fft(wav(:,rptlop,2));
 	end
-	
+
 	% calculate the power-spectral densities (psd) and the cross-spectral
 	% densities (csd) and sum them over repetitions
 	numsmp = length(wav);
@@ -340,10 +342,10 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	csd = 2.*(fftwav(:,:,1).*conj(fftwav(:,:,2)))./(numsmp.^2);
 	sumpsd = squeeze(sum(psd,2));
 	sumcsd = squeeze(sum(csd,2));
-	
+
 	% calculate coherence
 	coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
-	
+
 	figure;
 	plot(squeeze(wav(:,:,1)));
 	figure;
@@ -352,7 +354,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	plot(coh);
 
 
-![image](/media/tutorial/fourier/coh_randomphase.png	)	
+![image](/media/tutorial/fourier/coh_randomphase.png	)
 
 *Figure 7; Coherence spectrum for two 10 Hz signals with a random phase difference.*
 
@@ -362,7 +364,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	% get many repetitions of two signals with somewhat consistent phase difference
 	clear all
 	%close all
-	
+
 	frq = 10; % Hz
 	len = 1; % seconds
 	smpfrq = 100; % Hz
@@ -378,13 +380,13 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	  wav(:,rptlop,2) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+((ranphs(rptlop,2)+phsdif).*2.*pi)) + ...
 	    randn(1,len.*smpfrq).*noifac;
 	end
-	
+
 	% get the FFT of the waves
 	for rptlop = 1:numrpt
 	  fftwav(:,rptlop,1) = fft(wav(:,rptlop,1));
 	  fftwav(:,rptlop,2) = fft(wav(:,rptlop,2));
 	end
-	
+
 	% calculate the power-spectral densities (psd) and the cross-spectral
 	% densities (csd) and sum them over repetitions
 	numsmp = length(wav);
@@ -392,10 +394,10 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	csd = 2.*(fftwav(:,:,1).*conj(fftwav(:,:,2)))./(numsmp.^2);
 	sumpsd = squeeze(sum(psd,2));
 	sumcsd = squeeze(sum(csd,2));
-	
+
 	% calculate coherence
 	coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
-	
+
 	figure;
 	plot(squeeze(wav(:,:,1)));
 	figure;
@@ -404,7 +406,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	plot(coh);
 
 
-![image](/media/tutorial/fourier/coh_consphase.png	)	
+![image](/media/tutorial/fourier/coh_consphase.png	)
 
 *Figure 8; Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference.*
 

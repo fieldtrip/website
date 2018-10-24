@@ -2,6 +2,12 @@
 layout: default
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 `<note warning>`
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas.
 
@@ -15,8 +21,8 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 ## Introduction
 This tutorial describes how to deal with mouse EEG in the aspect of preprocessing, time-frequency analysis, and visualization layout and how to apply the coregistration steps for making volume conduction model.
 If you are interested in how to measure mouse EEG prior to main process, you can check the nice video tutorial[http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based). You can also find information about how to stimulate mouse brain by optical fiber `<link*>`. If you want to learn how to process EEG data conventionally, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
-##  Goals
 
+##  Goals
 
 *  improve channel level analysis
     * preprocessing and re-referencing
@@ -1022,8 +1028,6 @@ To calculate neural activity index is the same like below equation. The function
 
 ### Visualize source reconstruction
 
-
-
 	cfg               = [];
 	cfg.atlas         = atlas;
 	cfg.method        = 'ortho'; % 'slice'
@@ -1033,7 +1037,6 @@ To calculate neural activity index is the same like below equation. The function
 	cfg.opacitylim    = [0.0 1.2];
 	cfg.opacitymap    = 'rampup';  
 	ft_sourceplot(cfg, sourceDiffInt);
-
 
 
 FIXME insert figure (24 source localization by DICS -ortho view)

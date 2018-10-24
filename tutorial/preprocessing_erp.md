@@ -3,18 +3,23 @@ layout: default
 tags: tutorial eeg brainvision preprocessing trialfun timelock EEG-affective
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Preprocessing of EEG data and computing ERPs
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options. 
+In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the EEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done according to a specified trigger channel or according to your own criteria when you write your own trial function. Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](/reference/ft_preprocessing)**.
 
-The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. 
+The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
 ## Dataset
 
@@ -28,11 +33,11 @@ Make sure that all files that you have downloaded from the ftp link are unzipped
 
 For memory efficiency (especially relevant for large datasets), with FieldTrip we commonly use the strategy to only read in those segments of data that are of interest. This requires first to define the segments of interest (the trials) and subsequently to read them in and preprocess them. It is also possible to read in the whole continuous data, and segment the data in memory [(see here)](/tutorial/continuous).
 
-Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data. 
+Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
 The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](/#appendixthe_trialfun_used_in_this_example ) of this example script. Please save it to a local file with the name **trialfun_affcog.m**.
 
-	
+
 	cfg = [];
 	cfg.trialfun     = 'trialfun_affcog';
 	cfg.headerfile   = 's04.vhdr';
@@ -42,7 +47,7 @@ The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.or
 
 After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now not only stores the dataset name, but also the definition of the segments of data that will be used for further processing and analysis. The first column is the begin sample, the second the end sample, the third the offset and the fourth contains the condition for each trial (1=affective, 2=ontological).
 
-	
+
 	>> disp(cfg.trl)
 	ans =
 	       52441       53041        -100           2
@@ -61,26 +66,26 @@ In this raw BrainVision dataset, the signal from all electrodes is monopolar and
 
 Now call pre-processin
 
-	
+
 	% Baseline-correction options
 	cfg.demean          = 'yes';
 	cfg.baselinewindow  = [-0.2 0];
-	
+
 	% Fitering options
 	cfg.lpfilter        = 'yes';
 	cfg.lpfreq          = 100;
-	
+
 	% Re-referencing options - see explanation below
 	cfg.reref         = 'yes';
 	cfg.implicitref   = 'REF';
 	cfg.refchannel    = {'RM' 'REF'};
-	
+
 	data = ft_preprocessing(cfg);
 
 
 Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data segments that were read into memory.
 
-	
+
 	cfg = [];  % use only default options                 
 	ft_databrowser(cfg, data);
 
@@ -88,9 +93,9 @@ Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data se
 `<note>`
 You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk.
 
-	
+
 	cfg         = [];
-	cfg.dataset = 's04.vhdr'; 
+	cfg.dataset = 's04.vhdr';
 	ft_databrowser(cfg);
 
 `</note>`
@@ -106,11 +111,11 @@ You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize th
 
 FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memor
 
-	
+
 	>> data
-	
-	data = 
-	
+
+	data =
+
 	           hdr: [1x1 struct]
 	         label: {1x65 cell}
 	          time: {1x192 cell}
@@ -123,7 +128,7 @@ FieldTrip data structures are intended to be 'lightweight', in the sense that th
 
 and note that, if you wanted to, you could plot a single trial with default Matlab function
 
-	
+
 	plot(data.time{1}, data.trial{1});
 
 ### Extracting the EOG signals
@@ -137,7 +142,7 @@ Some acquisition systems, such as Biosemi, allow for direct bipolar recording of
 
 ![image](/media/example/example_eog.png@200)
 
-	
+
 	% EOGV channel
 	cfg              = [];
 	cfg.channel      = {'53' 'LEOG'};
@@ -145,13 +150,13 @@ Some acquisition systems, such as Biosemi, allow for direct bipolar recording of
 	cfg.implicitref  = []; % this is the default, we mention it here to be explicit
 	cfg.refchannel   = {'53'};
 	eogv             = ft_preprocessing(cfg, data);
-	
+
 	% only keep one channel, and rename to eogv
 	cfg              = [];
 	cfg.channel      = 'LEOG';
-	eogv             = ft_selectdata(cfg, eogv); 
+	eogv             = ft_selectdata(cfg, eogv);
 	eogv.label       = {'eogv'};
-	
+
 	% EOGH channel
 	cfg              = [];
 	cfg.channel      = {'57' '25'};
@@ -159,55 +164,55 @@ Some acquisition systems, such as Biosemi, allow for direct bipolar recording of
 	cfg.implicitref  = []; % this is the default, we mention it here to be explicit
 	cfg.refchannel   = {'57'};
 	eogh             = ft_preprocessing(cfg, data);
-	
+
 	% only keep one channel, and rename to eogh
 	cfg              = [];
 	cfg.channel      = '25';
-	eogh             = ft_selectdata(cfg, eogh); 
+	eogh             = ft_selectdata(cfg, eogh);
 	eogh.label       = {'eogh'};
 
 
 We now discard these extra channels that were used as EOG from the data and add the bipolar-referenced EOGv and EOGh channels that we have just create
 
-	
+
 	% only keep all non-EOG channels
 	cfg         = [];
 	cfg.channel = setdiff(1:60, [53, 57, 25]);              % you can use either strings or numbers as selection
-	data        = ft_selectdata(cfg, data); 
-	
-	% append the EOGH and EOGV channel to the 60 selected EEG channels 
+	data        = ft_selectdata(cfg, data);
+
+	% append the EOGH and EOGV channel to the 60 selected EEG channels
 	cfg = [];
 	data = ft_appenddata(cfg, data, eogv, eogh);
 
 
 You can check the channel labels that are now present in the data and use **[ft_databrowser](/reference/ft_databrowser)** to look at all data combined.
 
-	
+
 	disp(data.label')
 	  Columns 1 through 12
-	
+
 	    '1'    '2'    '3'    '4'    '5'    '6'    '7'    '8'    '9'    '10'    '11'    '12'
-	
+
 	  Columns 13 through 23
-	
+
 	    '13'    '14'    '15'    '16'    '17'    '18'    '19'    '20'    '21'    '22'    '23'
-	
+
 	  Columns 24 through 34
-	
+
 	    '24'    '26'    '27'    '28'    '29'    '30'    '31'    'RM'    '33'    '34'    '35'
-	
+
 	  Columns 35 through 45
-	
+
 	    '36'    '37'    '38'    '39'    '40'    '41'    '42'    '43'    '44'    '45'    '46'
-	
+
 	  Columns 46 through 56
-	
+
 	    '47'    '48'    '49'    '50'    '51'    '52'    '54'    '55'    '56'    '58'    '59'
-	
+
 	  Columns 57 through 59
-	
+
 	    '60'    'eogv'    'eogh'
-	
+
 
 
 
@@ -217,9 +222,9 @@ For topoplotting and sometimes for analysis it is necessary to know how the elec
 
 ![image](/media/example/layoutacticapmpi.png)
 
-The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data. 
+The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data.
 
-	
+
 	cfg = [];
 	cfg.layout   = 'mpi_customized_acticap64.mat';
 	ft_layoutplot(cfg);
@@ -233,7 +238,7 @@ An next important step of EEG preprocessing is detection (and rejection) of arti
 
 #### Channel mode
 
-	
+
 	cfg        = [];
 	cfg.method = 'channel';
 	ft_rejectvisual(cfg, data)
@@ -249,9 +254,9 @@ In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' y
 
 #### Summary mode
 
-The data can be also displayed in a "summary" mode, in which case the variance (or another metric) in each channel and each trial is computed. Close the "channel" mode figure and try the "summary" mode. Note, that a new variable "data_clean" will be created now. 
+The data can be also displayed in a "summary" mode, in which case the variance (or another metric) in each channel and each trial is computed. Close the "channel" mode figure and try the "summary" mode. Note, that a new variable "data_clean" will be created now.
 
-	
+
 	cfg = [];
 	cfg.method   = 'summary';
 	cfg.layout   = 'mpi_customized_acticap64.mat';   % this allows for plotting individual trials
@@ -268,7 +273,7 @@ Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes 
 `<note>`
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
-	
+
 	cfg          = [];
 	cfg.viewmode = 'vertical';
 	ft_databrowser(cfg, data_clean);
@@ -281,36 +286,36 @@ Note that you can also use the data browser to mark artifacts (instead of or in 
 
 We now would like to compute the ERP's for two conditions: positive-negative judgement and human-animal judgement. For each trial, the condition is assigned by the trialfun that we used in the beginning when defined the trials, this information is kept with the data in data.trialinfo.
 
-	
+
 	disp(data_clean.trialinfo')
-	
+
 	 Columns 1 through 19
 	   2 1 1 2 1 1 2 1 1 2 1 1 1 2 1 1 2 2 2   
-	
+
 	 Columns 20 through 38
 	   1 2 2 2 2 2 1 2 1 2 1 2 2 1 2 1 2 1 2   
-	
+
 	 ...
-	
+
 	 Columns 172 through 184
 	   2 1 1 2 2 2 1 2 1 1 1 1 2
-	
+
 
 
 FieldTrip automatically kept track of the trials with artifacts that were rejected: the data_clean.trialinfo field contains the condition code for the 184 clean trials, whereas the data.trialinfo field contained the information for the original 192 trials.  
 
 We now select the trials with conditions 1 and 2 and compute ERP's.
 
-	
-	% use ft_timelockanalysis to compute the ERPs 
+
+	% use ft_timelockanalysis to compute the ERPs
 	cfg = [];
 	cfg.trials = find(data_clean.trialinfo==1);
 	task1 = ft_timelockanalysis(cfg, data_clean);
-	
+
 	cfg = [];
 	cfg.trials = find(data_clean.trialinfo==2);
 	task2 = ft_timelockanalysis(cfg, data_clean);
-	
+
 	cfg = [];
 	cfg.layout = 'mpi_customized_acticap64.mat';
 	cfg.interactive = 'yes';
@@ -324,17 +329,17 @@ Note, that we use the layout file for plotting the results. With the cfg.interac
 
 The following code allows you to look at the ERP difference waves.
 
-	
+
 	cfg = [];
 	cfg.operation = 'subtract';
 	cfg.parameter = 'avg';
 	difference = ft_math(cfg, task1, task2);
-	
+
 	% note that the following appears to do the sam
 	% difference     = task1;                   % copy one of the structures
 	% difference.avg = task1.avg - task2.avg;   % compute the difference ERP
 	% however that will not keep provenance information, whereas ft_math will
-	
+
 	cfg = [];
 	cfg.layout      = 'mpi_customized_acticap64.mat';
 	cfg.interactive = 'yes';
@@ -348,23 +353,23 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 
 ## Appendix: the trialfun used in this example
 
-	
+
 	function [trl, event] = trialfun_affcog(cfg)
-	
+
 	%% the first part is common to all trial functions
 	% read the header (needed for the samping rate) and the events
 	hdr        = ft_read_header(cfg.headerfile);
 	event      = ft_read_event(cfg.headerfile);
-	
+
 	%% from here on it becomes specific to the experiment and the data format
 	% for the events of interest, find the sample numbers (these are integers)
 	% for the events of interest, find the trigger values (these are strings in the case of BrainVision)
 	EVsample   = [event.sample]';
 	EVvalue    = {event.value}';
-	
+
 	% select the target stimuli
 	Word = find(strcmp('S141', EVvalue)==1);
-	
+
 	% for each word find the condition
 	for w = 1:length(Word)
 	  % code for the judgement task: 1 => Affective; 2 => Ontological;
@@ -374,26 +379,26 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 	    task(w,1) = 2;
 	  end
 	end
-	
+
 	PreTrig   = round(0.2 * hdr.Fs);
 	PostTrig  = round(1 * hdr.Fs);
-	
+
 	begsample = EVsample(Word) - PreTrig;
 	endsample = EVsample(Word) + PostTrig;
-	
+
 	offset = -PreTrig*ones(size(endsample));
-	
+
 	%% the last part is again common to all trial functions
 	% return the trl matrix (required) and the event structure (optional)
 	trl = [begsample endsample offset task];
-	
+
 	end % function
-	
+
 
 
 ## Suggested further reading
 
-After having finished this tutorial on EEG data, you can look at the [event related averaging](/tutorial/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial. 
+After having finished this tutorial on EEG data, you can look at the [event related averaging](/tutorial/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
 If you have more questions about preprocessing or timelocked-analysis, you can also read the following faq-
 {{topic>preprocessing timelock +faq&list}}

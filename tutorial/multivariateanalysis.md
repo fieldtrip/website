@@ -3,21 +3,27 @@ layout: default
 tags: tutorial eeg meg multivariate timelock freq attention MEG-attention
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
 # Multivariate analysis of electrophysiological data
 
 ## Introduction
 
-
 The objective of this tutorial is to give an introduction to multivariate analysis of electrophysiological data. Multivariate methods aim to find task-related features in the data which allows prediction of to which task single trials belong. Note that this is very different from classical statistical testing, where such features are identified by pooling over multiple trials and/or subjects and where features are typically assumed to be independent. In this tutorial, you will learn to apply standard classification algorithms such as the support vector machine to electrophysiological data. Furthermore, you will learn about the importance of regularization. Note that FieldTrip uses the external Donders Machine Learning Toolbox ([DMLT](https://github.com/distrep/DMLT)) for its multivariate analyses. This toolbox requires at least MATLAB distribution 7.6.0.324 (R2008a).
 
 This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
+
 ## Background
 
 Multivariate methods present an alternative approach to electrophysiological data analysis. They allow statements to be made about the information content available in single trials. They also can be used for real-time analysis, which allows for new experimental designs based on the idea of [brain-state dependent stimulation](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3108578/) as well as the development of [brain-computer interfaces](http://iopscience.iop.org/1741-2552/6/4/041001). The methods described are also heavily used for the purpose of multivariate analysis in functional neuroimaging. For an introduction into the use of these methods please consult the following [tutorial](http://www.ncbi.nlm.nih.gov/pubmed/20600976).
 
 ## Procedure
 
-In this tutorial we will use classifiers to analyze a brain-computer interfacing dataset which has been used in this [paper](http://www.sciencedirect.com/science/article/pii/S0893608009001075). In short: 275-channel MEG data was acquired while the subject was instructed with a centrally presented cue to covertly attend to the left or to the right visual hemifield (one faulty sensor was removed in the subsequent analyses). The experimental question is whether we can predict on a single-trial level to which condition (attention to the left or to the right) the single trials belong. 
+In this tutorial we will use classifiers to analyze a brain-computer interfacing dataset which has been used in this [paper](http://www.sciencedirect.com/science/article/pii/S0893608009001075). In short: 275-channel MEG data was acquired while the subject was instructed with a centrally presented cue to covertly attend to the left or to the right visual hemifield (one faulty sensor was removed in the subsequent analyses). The experimental question is whether we can predict on a single-trial level to which condition (attention to the left or to the right) the single trials belong.
 
 The data has already been segmented into the trials of interest using **[ft_definetrial](/reference/ft_definetrial)** and has been preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. The data has been detrended and downsampled to 300 Hz. The trials start at cue offset and end 2.5 seconds later. The subject has been attending to either the left or right direction during this period. No artifact rejection has been performed.
 
@@ -31,9 +37,9 @@ In the following, we will work our way through the time- and frequency-domain an
 
 Make sure that the multivariate toolbox at /fieldtrip_xxx/external/dmlt/ is in your MATLAB path.
 
-    addpath(genpath('/your-path-to-fieldtrip/external/dmlt')) 
+    addpath(genpath('/your-path-to-fieldtrip/external/dmlt'))
 
-We will start by analyzing the data in the time domain for our subject. 
+We will start by analyzing the data in the time domain for our subject.
 
     load covatt;
 
@@ -46,7 +52,7 @@ We now perform a timelock analysis in order to make the data suitable as input t
     tleft   = ft_timelockanalysis(cfg,left);
     tright  = ft_timelockanalysis(cfg,right);
 
-Now we specify cross-validation as a method for timelock statistics. This ensures that we will perform a classification of our data based on five-fold cross-validation. This splits up the data into five partitions or folds and attempts to build five different classifiers using the remaining four folds. The end result is then averaged over folds. 
+Now we specify cross-validation as a method for timelock statistics. This ensures that we will perform a classification of our data based on five-fold cross-validation. This splits up the data into five partitions or folds and attempts to build five different classifiers using the remaining four folds. The end result is then averaged over folds.
 
     cfg         = [];
     cfg.layout  = 'CTF275.lay';
@@ -59,7 +65,7 @@ We also need to specify a design matrix; this is simply a vector with labels *1*
 Let's focus on the last segment of the data
 
     cfg.latency     = [2.0 2.5]; % final bit of the attention period
- 
+
 Finally, we call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** which uses the default classification procedure; namely a standardization of the data (subtraction of the mean and division by the standard deviation), followed by applying a linear support vector machin
 
     stat = ft_timelockstatistics(cfg,tleft,tright);
@@ -67,7 +73,7 @@ Finally, we call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** w
 The stat.statistic field now contains some useful statistics. By default it contains stat.accuracy (proportion of correctly classified trials) and a binomial significance test
 
     stat.statistic
-    
+
 Here, it indicates that classification performance is above chance level (0.5) and it is significant according to the binomial test (p<0.05). Note that we may be interested in other representations of classification performance such as the contingency matrix with true classes in rows and predicted classes in columns. Statistics may be specified as follow
 
     cfg.statistic = {'accuracy' 'binomial' 'contingency'};
@@ -80,7 +86,7 @@ when running **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. We c
 We may also plot the parameters of the used classifier as if it were electrophysiological data. This is represented in the stat.model field. For each fold we have a model and each such model may contain different parameters. For example, for the default support vector machine ([SVM](http://en.wikipedia.org/wiki/Support_vector_machine)), we have a stat.model{i}.primal field for each fold i. The easiest way to plot one of the parameters is to assign it to a different field in the stat objec
 
     stat.mymodel = stat.model{1}.primal;
-    
+
 and subsequently to treat the stat object as if it were data. The *parameter* field is then used to determine what to plo
 
     cfg             = [];
@@ -93,7 +99,7 @@ and subsequently to treat the stat object as if it were data. The *parameter* fi
     ft_topoplotER(cfg,stat);
 ![image](/media/tutorial/clf_1.png@200)
 
-In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using *imagesc(stat.mymodel)* then it will be found that all features are used due to the way classifier operates. One way to solve this is to use *dimensionality reduction* or *feature selection*. We will see examples later in this tutorial. 
+In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using *imagesc(stat.mymodel)* then it will be found that all features are used due to the way classifier operates. One way to solve this is to use *dimensionality reduction* or *feature selection*. We will see examples later in this tutorial.
 
 #### Exercise 1
 
@@ -101,10 +107,10 @@ In practice, we may want to average the parameters over folds to get an average 
 
 * Explain which information the contingency matrix gives you, which the accuracy does not.  
 
-* Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data. 
+* Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
 
 * Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of *overfitting* and *generalization* in your explanation.
-    
+
 
 * Suppose you try multiple different classification procedures and find at some point that you reach a classification performance that is significantly better than chance at p=0.05. Should you trust this result? Why (not)?
 
@@ -141,7 +147,7 @@ We can compare classification performance with the previous results
 and we see a major improvement since we are focusing on the physiologically relevant alpha band. Again, we may plot the classifier parameters to obtain a so-called importance map
 
     stat.mymodel = stat.model{1}.primal;
-    
+
     cfg              = [];
     cfg.layout       = 'CTF275.lay';
     cfg.parameter    = 'mymodel';
@@ -175,11 +181,11 @@ This multivariate analysis standardizes the data and subsequently calls an elast
     stat.statistic
 
 If we inspect stat.model{1} then we find that a different set of parameters is estimated (weights and bias). The weights are the regression coefficients of interest and bias is just an offset term.
-If we look at the weights then we find that just a very small number of features from the total of 912 possible features are used. This is also reflected in the topoplot. 
+If we look at the weights then we find that just a very small number of features from the total of 912 possible features are used. This is also reflected in the topoplot.
 
 
     stat.mymodel     = stat.model{1}.weights;
-    
+
     cfg              = [];
     cfg.layout       = 'CTF275.lay';
     cfg.parameter    = 'mymodel';
@@ -188,6 +194,7 @@ If we look at the weights then we find that just a very small number of features
     cfg.interplimits = 'electrodes';
     ft_topoplotTFR(cfg,stat);
 ![image](/media/tutorial/clf_3.png@200)
+
 #### Exercise 3
 
 `<note exercise>`
@@ -201,7 +208,7 @@ Alpha is a free parameter in our model. How would you determine the optimal sett
 
 If we use more and more features then classification performance will first go up but eventually starts to degrade. Explain why this may happen.
 
-Suppose we wish to select the optimal feature subset by testing all possible subsets. How many subsets do we need to test when we have *n* features in total? 
+Suppose we wish to select the optimal feature subset by testing all possible subsets. How many subsets do we need to test when we have *n* features in total?
 
 `</note>`
 
@@ -212,8 +219,7 @@ In this tutorial we have touched on a number of important issues in the classifi
 To use some of the more advanced methods it is required to call lower level functions. We recommend looking at the tutorials which have been written for DMLT. These can be accessed through MATLAB's *doc* facility.
 
 To construct online experimental designs that make use of multivariate analysis, for example to build BCI or neurofeedback applications, we have developed the [development:realtime](/development/realtime) module.
- 
+
 ----
 
 This tutorial was last tested with version 20120503 of FieldTrip by alibah, using MATLAB 2011b on a 64-bit Linux platform.
-

@@ -3,8 +3,13 @@ layout: default
 tags: tutorial statistics meg eeg timelock freq
 ---
 
+# Table of contents
+{:.no_toc}
 
-#  Parametric and non-parametric statistics on event-related fields 
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
+#  Parametric and non-parametric statistics on event-related fields
 
 ## Introduction
 
@@ -15,7 +20,7 @@ This tutorial uses the same [ MEG language dataset](/tutorial/shared/dataset) as
 
 You can download the   [averaged dataset for each subject](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat) from our Fieldtrip ftp server.
 
-The tutorial assumes that the preprocessing and timelock-analysis steps are already clear for the reader. If this is not the case, you can read about those steps in other tutorials. 
+The tutorial assumes that the preprocessing and timelock-analysis steps are already clear for the reader. If this is not the case, you can read about those steps in other tutorials.
 
 Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from freqanalysis), nor on source-level statistics.  However, FieldTrip does have similar statistical options for frequency data: at the sensor-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function, the latter works on data obtained from **[ft_sourceanalysis](/reference/ft_sourceanalysis)**).
 
@@ -26,7 +31,7 @@ and the [Cluster-based permutation tests on time-frequency data](/tutorial/clust
 
 ## Background
 
-The topic of this tutorial is the statistical analysis of MEG and EEG data. In experiments, the data is usually collected in different experimental conditions, and the experimenter wants to know, by means of statistical testing, whether there is a difference in the data observed in these conditions. In statistics, a result (for example, a difference among conditions) is statistically significant if it is unlikely to have occurred by chance according to a predetermined threshold probability, the significance level. 
+The topic of this tutorial is the statistical analysis of MEG and EEG data. In experiments, the data is usually collected in different experimental conditions, and the experimenter wants to know, by means of statistical testing, whether there is a difference in the data observed in these conditions. In statistics, a result (for example, a difference among conditions) is statistically significant if it is unlikely to have occurred by chance according to a predetermined threshold probability, the significance level.
 
 An important feature of the MEG and EEG data is that it has a spatial temporal structure, i.e. the data is sampled at multiple time-points and sensors. The nature of the data influences which kind of statistics is the most suitable for comparing conditions. If the experimenter is interested in a difference in the signal at a certain time-point and sensor, then the more widely used parametric tests are also sufficient. If it is not possible to predict where the differences are, then many statistical comparisons are necessary which lead to the *multiple comparisons problem* (MCP). The MCP arises from the fact that the effect of interest (i.e., a difference between experimental conditions) is evaluated at an extremely large number of (channel,time)-pairs. This number is usually in the order of several thousands. Now, the MCP involves that, due to the large number of statistical comparisons (one per (channel,time)-pair), it is not possible to control the so called *family-wise error rate* (FWER) by means of the standard statistical procedures that operate at the level of single (channel,time)-pairs. The FWER is the probability, under the hypothesis of no effect, of falsely concluding that there is a difference between the experimental conditions at one or more (channel,time)-pairs. A solution of the MCP requires a procedure that controls the FWER at some critical alpha-level (typically, 0.05 or 0.01). The FWER is also called the *false alarm rate*.
 
@@ -42,7 +47,7 @@ To do parametric or non-parametric statistics on event-related fields in a withi
 
 We will perform the following steps to do a statistical test in FieldTrip:
 
-* We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiploter)**, the **[ft_singleplotER](/reference/ft_singleploter)** and the MATLAB plot functions. This step is optional for this tutorial, but in general it is of course good practice to have a feel of what is going on in your data before you decide to do a statistical test. 
+* We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiploter)**, the **[ft_singleplotER](/reference/ft_singleploter)** and the MATLAB plot functions. This step is optional for this tutorial, but in general it is of course good practice to have a feel of what is going on in your data before you decide to do a statistical test.
 
 * To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
 
@@ -53,16 +58,16 @@ We will perform the following steps to do a statistical test in FieldTrip:
 *Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.*
 
 
-## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data 
+## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data
 
 We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. You can download the [subject averages](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat).
-We will also make use of the function [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) to calculate the grand average (average across subjects) and plot it to visually inspect the data 
+We will also make use of the function [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) to calculate the grand average (average across subjects) and plot it to visually inspect the data
 
 
 	  load ERF_orig;    % averages for each individual subject, for each condition
 
 
-ERF_orig contains allsubjFIC and allsubjFC, each storing the event-related averages for the fully incongruent, and the fully congruent sentence endings, respectively. 
+ERF_orig contains allsubjFIC and allsubjFC, each storing the event-related averages for the fully incongruent, and the fully congruent sentence endings, respectively.
 
 The format for these variables, are a prime example of how you should organise your data to be suitable for ft_XXXstatistics. Specifically, each variable is a cell array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function [ft_timelockanalysis](/reference/ft_timelockanalysis). Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
 
@@ -81,7 +86,7 @@ To begin with we will compute the grand average data using [ft_timelockgrandaver
 
 	% load individual subject data
 	load('ERF_orig');
-	
+
 	% calculate grand average for each condition
 	cfg = [];
 	cfg.channel   = 'all';
@@ -90,7 +95,7 @@ To begin with we will compute the grand average data using [ft_timelockgrandaver
 	GA_FC         = ft_timelockgrandaverage(cfg,allsubjFC{:});  
 	GA_FIC        = ft_timelockgrandaverage(cfg,allsubjFIC{:});
 	% "{:}" means to use data from all elements of the variable
-	
+
 
 
 Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and channel MLT12 with **[ft_singleplotER](/reference/ft_singleplotER)** using the grand average data.
@@ -100,7 +105,7 @@ Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and 
 	cfg.showlabels  = 'yes';
 	cfg.layout    	= 'CTF151_helmet.mat';
 	figure; ft_multiplotER(cfg,GA_FC, GA_FIC)
-	
+
 	cfg = [];
 	cfg.channel = 'MLT12';
 	figure; ft_singleplotER(cfg,GA_FC, GA_FIC)
@@ -109,7 +114,7 @@ Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and 
 ![image](/media/tutorial/eventrelatedstatistics/multiplot_ga_fc_fic.png@400)
 
 ![image](/media/tutorial/eventrelatedstatistics/singleplotMLT12_ga_fc_fic.png@400)
- 
+
 
 From the grand average plot we can zoom in on our comparison of interest and only plot the ERF of channel MLT12 for all subjects, using the individual subject averages data.
 
@@ -117,11 +122,11 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 
 	time = [0.3 0.7];
 	% Scaling of the vertical axis for the plots below
-	ymax = 1.9e-13; 
-	figure; 
+	ymax = 1.9e-13;
+	figure;
 	for isub = 1:10
 	    subplot(3,4,isub)
-	    % use the rectangle to indicate the time range used later 
+	    % use the rectangle to indicate the time range used later
 	    rectangle('Position',[time(1) 0 (time(2)-time(1)) ymax],'FaceColor',[0.7 0.7 0.7]);
 	    hold on;
 	    % plot the lines in front of the rectangle
@@ -130,8 +135,8 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 	    title(strcat('subject ',num2str(isub)))
 	    ylim([0 1.9e-13])
 	    xlim([-1 2])
-	end 
-	subplot(3,4,11); 
+	end
+	subplot(3,4,11);
 	text(0.5,0.5,'FC','color','b') ;text(0.5,0.3,'FIC','color','r')
 	axis off
 
@@ -149,23 +154,23 @@ We can also plot the differences between conditions, for each subject, in a diff
 
 	chan = 52;
 	time = [0.3 0.7];
-	
+
 	% find the time points for the effect of interest in the grand average data
 	timesel_FIC = find(GA_FIC.time >= time(1) & GA_FIC.time <= time(2));
 	timesel_FC = find(GA_FC.time >= time(1) & GA_FC.time <= time(2));
-	
+
 	% select the individual subject data from the time points and calculate the mean
 	for isub = 1:10
 	    values_FIC(isub)  = mean(allsubjFIC{isub}.avg(chan,timesel_FIC));   
 	    values_FC(isub)  = mean(allsubjFC{isub}.avg(chan,timesel_FC));
 	end
-	
+
 	% plot to see the effect in each subject
 	M = [values_FC',values_FIC'];
 	figure; plot(M','o-'); xlim([0.5 2.5])
 	legend({'subj1', 'subj2', 'subj3', 'subj4', 'subj5', 'subj6', ...
 	        'subj7', 'subj8', 'subj9', 'subj10'}, 'location','EastOutside');
-	
+
 
 
 
@@ -199,13 +204,13 @@ You can do the same thing in FieldTrip (which does not require the statistics to
 	cfg.statistic   = 'ft_statfun_depsamplesT';
 	cfg.alpha       = 0.05;
 	cfg.correctm    = 'no';
-	
+
 	Nsub = 10;
 	cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];
 	cfg.design(2,1:2*Nsub)  = [1:Nsub 1:Nsub];
 	cfg.ivar                = 1; % the 1st row in cfg.design contains the independent variable
 	cfg.uvar                = 2; % the 2nd row in cfg.design contains the subject number
-	
+
 	stat = ft_timelockstatistics(cfg,allsubjFC{:},allsubjFIC{:});   % don't forget the {:}!
 
 
@@ -215,7 +220,7 @@ From the code above you can see that the statistical comparison is between condi
 
 `<note exercise>`
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
-`</note>` 
+`</note>`
 ### Multiple comparisons
 
 In the previous paragraph we picked a channel and time window by hand after eyeballing the effect. If you would like to test the significance of the effect in all channels you could make a loop over channels.
@@ -226,19 +231,19 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
 	timesel_FIC = find(GA_FIC.time >= time(1) & GA_FIC.time <= time(2));
 	timesel_FC = find(GA_FC.time >= time(1) & GA_FC.time <= time(2));
 	clear h p
-	
+
 	FICminFC = zeros(1,10);
-	
+
 	for iChan = 1:151
 	    for isub = 1:10
 	        FICminFC(isub) = ...
 	            mean(allsubjFIC{isub}.avg(iChan,timesel_FIC)) - ...
 	            mean(allsubjFC{isub}.avg(iChan,timesel_FC));
 	    end
-	    
+
 	    [h(iChan), p(iChan)] = ttest(FICminFC, 0, 0.05 ); % test each channel separately
 	end
-	
+
 	% plot uncorrected "significant" channels
 	cfg = [];
 	cfg.style     = 'blank';
@@ -254,7 +259,7 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
 ![image](/media/tutorial/eventrelatedstatistics/depttestmatlab_nomcc.png@200)
 
 
-However, since now you are performing 151 individual tests, you can no longer control  the false alarm rate. Given the null-hypothesis and an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly concluding that the null-hypothesis should be rejected. As this false alarm rate applies to each test that you perform, the chance of making a false alarm for 151 tests in parallel is much larger than the desired 5%. This is the multiple comparison problem. 
+However, since now you are performing 151 individual tests, you can no longer control  the false alarm rate. Given the null-hypothesis and an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly concluding that the null-hypothesis should be rejected. As this false alarm rate applies to each test that you perform, the chance of making a false alarm for 151 tests in parallel is much larger than the desired 5%. This is the multiple comparison problem.
 
 To ensure that the false alarm rate is controlled at the desired alpha level over all channels, you should do a correction for multiple comparisons. The best known correction is the Bonferroni correction, which controls the false alarm rate for multiple independent tests. To do this, divide your initial alpha level (i.e. the desired upper boundary for the false alarm rate) by the number of tests that you perform. In this case with 151 channels the alpha level would become 0.05/151 which is 0.00033113. With this alpha value the effect is no longer significant on any channel. In some cases, as in this one, a Bonferroni correction is then too conservative because the effect on one MEG channel is highly correlated with neighboring channels (in space, and also in time). In sum, even though the Bonferroni correction achieves the desired control of the type-I error (false alarm rate), the type-II error (chance of not rejecting H0 when in fact it should be rejected) is much larger than desired.
 
@@ -265,14 +270,14 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
 
 	% with Bonferroni correction for multiple comparisons
 	FICminFC = zeros(1,10);
-	
+
 	for iChan = 1:151
 	    for isub = 1:10
 	        FICminFC(isub) = ...
 	            mean(allsubjFIC{isub}.avg(iChan,timesel_FIC)) - ...
 	            mean(allsubjFC{isub}.avg(iChan,timesel_FC));
 	    end
-	    
+
 	    [h(iChan), p(iChan)] = ttest(FICminFC, 0, 0.05/151); % test each channel separately
 	end
 
@@ -289,13 +294,13 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
 	cfg.statistic   = 'ft_statfun_depsamplesT'
 	cfg.alpha       = 0.05;
 	cfg.correctm    = 'bonferroni';
-	
+
 	Nsub = 10;
 	cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];
 	cfg.design(2,1:2*Nsub)  = [1:Nsub 1:Nsub];
 	cfg.ivar                = 1; % the 1st row in cfg.design contains the independent variable
 	cfg.uvar                = 2; % the 2nd row in cfg.design contains the subject number
-	
+
 	stat = ft_timelockstatistics(cfg,allsubjFC{:},allsubjFIC{:});
 
 
@@ -305,7 +310,7 @@ Fieldtrip also has other methods implemented for performing a multiple compariso
 
 ### Permutation test based on t statistics
 
-Instead of using the analytic t-distribution to calculate the appropriate p-value for your effect, you can use a nonparametric randomisation test to obtain the p-value. 
+Instead of using the analytic t-distribution to calculate the appropriate p-value for your effect, you can use a nonparametric randomisation test to obtain the p-value.
 
 This is implemented in FieldTrip in the function statistics_montecarlo which is called by **[ft_timelockstatistics](/reference/ft_timelockstatistics)** when you set cfg.method = 'montecarlo'. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomising or permuting your data many times between the conditions.
 
@@ -321,15 +326,15 @@ This is implemented in FieldTrip in the function statistics_montecarlo which is 
 	cfg.correctm    = 'no';
 	cfg.correcttail = 'prob';
 	cfg.numrandomization = 1000;
-	
+
 	Nsub = 10;
 	cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];
 	cfg.design(2,1:2*Nsub)  = [1:Nsub 1:Nsub];
 	cfg.ivar                = 1; % the 1st row in cfg.design contains the independent variable
 	cfg.uvar                = 2; % the 2nd row in cfg.design contains the subject number
-	
+
 	stat = ft_timelockstatistics(cfg,allsubjFIC{:},allsubjFC{:})
-	
+
 	% make the plot
 	cfg = [];
 	cfg.style     = 'blank';
@@ -341,11 +346,11 @@ This is implemented in FieldTrip in the function statistics_montecarlo which is 
 	title('Nonparametric: significant without multiple comparison correction')
 
 
-With the method (cfg.method) of statistical test set  as a permutation-based test (montecarlo) the following sensors show a significant effect (p<0.05) between 0.3 and 0.7 s. 
+With the method (cfg.method) of statistical test set  as a permutation-based test (montecarlo) the following sensors show a significant effect (p<0.05) between 0.3 and 0.7 s.
 
 ![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_nomcc.png@200)
 
- 
+
 
 Compare this plot with the earlier one using parametric statistics with the uncorrected p-values.
 
@@ -363,9 +368,9 @@ This method requires you to define neighbouring sensors. FieldTrip has a functio
 	cfg.method      = 'template'; % try 'distance' as well
 	cfg.template    = 'ctf151_neighb.mat';               % specify type of template
 	cfg.layout      = 'CTF151_helmet.mat';               % specify layout of sensors*
-	cfg.feedback    = 'yes';                             % show a neighbour plot 
+	cfg.feedback    = 'yes';                             % show a neighbour plot
 	neighbours      = ft_prepare_neighbours(cfg, GA_FC); % define neighbouring channels
-	
+
 	%*note that the layout and template fields have to be entered because at the earlier stage when ft_timelockgrandaverage is called the field 'grad' is removed. It is this field that holds information about the (layout of the) sensors.
 
 
@@ -383,15 +388,15 @@ This method requires you to define neighbouring sensors. FieldTrip has a functio
 	cfg.correctm    = 'cluster';
 	cfg.correcttail = 'prob';
 	cfg.numrandomization = 1000;
-	
+
 	Nsub = 10;
 	cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];
 	cfg.design(2,1:2*Nsub)  = [1:Nsub 1:Nsub];
 	cfg.ivar                = 1; % the 1st row in cfg.design contains the independent variable
 	cfg.uvar                = 2; % the 2nd row in cfg.design contains the subject number
-	
+
 	stat = ft_timelockstatistics(cfg,allsubjFIC{:},allsubjFC{:});
-	
+
 	% make a plot
 	cfg = [];
 	cfg.style     = 'blank';
@@ -402,11 +407,11 @@ This method requires you to define neighbouring sensors. FieldTrip has a functio
 	figure; ft_topoplotER(cfg, GA_FC)
 	title('Nonparametric: significant with cluster multiple comparison correction')
 
-With the cluster-based permutation method for multiple comparisons the following sensors show a significant effect (p<0.05) between 0.3 and 0.5 s. 
+With the cluster-based permutation method for multiple comparisons the following sensors show a significant effect (p<0.05) between 0.3 and 0.5 s.
 
 ![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster2.png@200)
 
- 
+
 
 So far we predefined a time window over which the effect was averaged, and tested the difference of that between conditions. You can also chose to not average over the predefine time window, and instead cluster simultaneously over neighboring channels and neighboring time points within your time window of interest . From the example below, we now find a channel-time cluster is found from 0.33 s until 0.52 s in which p < 0.05.
 
@@ -424,13 +429,13 @@ So far we predefined a time window over which the effect was averaged, and teste
 	cfg.correcttail = 'prob';
 	cfg.numrandomization = 1000;
 	cfg.minnbchan        = 2; % minimal neighbouring channels
-	
+
 	Nsub = 10;
 	cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];
 	cfg.design(2,1:2*Nsub)  = [1:Nsub 1:Nsub];
 	cfg.ivar                = 1; % the 1st row in cfg.design contains the independent variable
 	cfg.uvar                = 2; % the 2nd row in cfg.design contains the subject number
-	
+
 	stat = ft_timelockstatistics(cfg,allsubjFIC{:},allsubjFC{:});
 
 
@@ -491,7 +496,7 @@ If you would like to read about neighborhood selection, you can read the followi
 
 Or you can look also at the following example script
 
-*  [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa) 
+*  [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 
 *  [Source statistics](/example/source_statistics)
 
@@ -501,4 +506,3 @@ Or you can look also at the following example script
 
 -----
 This tutorial was last tested with version 20120612 of FieldTrip by Jan-Mathijs using MATLAB 2011b on MacOS 64-bit
-

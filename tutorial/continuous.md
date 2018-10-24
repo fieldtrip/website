@@ -3,16 +3,21 @@ layout: default
 tags: tutorial preprocessing continuous eeg raw brainvision memory EEG-language
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Preprocessing - Reading continuous EEG data
 
 ## Introduction
 
-A convenient use of the **[ft_preprocessing](/reference/ft_preprocessing)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once. 
+A convenient use of the **[ft_preprocessing](/reference/ft_preprocessing)** is to read the continuous data fully in memory. This is feasible if your data set is relatively small and if your computer has enough memory to hold all data in memory at once.
 
 ## Background
 
-Using this approach, you can read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. 
+Using this approach, you can read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments.
 
 ## Procedure
 
@@ -48,7 +53,7 @@ The simplest method for preprocessing and reading the data into memory is by cal
     data_org        = ft_preprocessing(cfg)
 
     >> data_org                             
-    data_org = 
+    data_org =
         hdr: [1x1 struct]
       label: {64x1 cell}
       trial: {[64x1974550 double]}
@@ -58,8 +63,8 @@ The simplest method for preprocessing and reading the data into memory is by cal
 
 This reads the data from file as one long continuous segment without any additional filtering. The resulting data is represented as one very long trial. To plot the potential in one of the channels, you can simply use the MATLAB plot function.
 
-	
-	chansel  = 1; 
+
+	chansel  = 1;
 	plot(data_org.time{1}, data_org.trial{1}(chansel, :))
 	xlabel('time (s)')
 	ylabel('channel amplitude (uV)')
@@ -73,7 +78,7 @@ If the data on disk is stored in a segmented or epoched format, i.e. where the f
     data_meg        = ft_preprocessing(cfg);
 
     >> data_meg
-    data_meg = 
+    data_meg =
         hdr: [1x1 struct]
       label: {187x1 cell}
       trial: {1x266 cell}
@@ -83,9 +88,9 @@ If the data on disk is stored in a segmented or epoched format, i.e. where the f
         cfg: [1x1 struct]
 
 This segmented MEG data dataset contains 266 trials. The following example shows how you can plot the data in a subset of the trials.
- 
 
-	
+
+
 	for trialsel=1:10
 	  chansel = 1; % this is the STIM channel that contains the trigger
 	  figure
@@ -98,12 +103,12 @@ This segmented MEG data dataset contains 266 trials. The following example shows
 
 If you want to force epoched data to be interpreted as continuous data, you can use the cfg.continuous option, like thi
 
-	
+
 	cfg = [];
 	cfg.dataset     = 'Subject01.ds';
 	cfg.continuous  = 'yes';
 	data_meg        = ft_preprocessing(cfg);
-	
+
 	chansel = 1;
 	plot(data_meg.time{1}, data_meg.trial{1}(chansel, :))
 	xlabel('time (s)')
@@ -149,23 +154,23 @@ Subsequently we read the data for the horizontal EOG
     cfg.refchannel = '51';
     data_eogh      = ft_preprocessing(cfg);
 
-The resulting channel 51 in this representation of the data is referenced to itself, which means that it contains zero values. This can be checked by 
+The resulting channel 51 in this representation of the data is referenced to itself, which means that it contains zero values. This can be checked by
 
     figure
     plot(data_eogh.time{1}, data_eogh.trial{1}(1,:));
     hold on
-    plot(data_eogh.time{1}, data_eogh.trial{1}(2,:),'g'); 
-    legend({'51' '60'}); 
+    plot(data_eogh.time{1}, data_eogh.trial{1}(2,:),'g');
+    legend({'51' '60'});
 
 For convenience we rename channel 60 into EOGH and use the **[ft_preprocessing](/reference/ft_preprocessing)** function once more to select the horizontal EOG channel and discard the dummy channel.
 
     data_eogh.label{2} = 'EOGH';
-    
+
     cfg = [];
     cfg.channel = 'EOGH';
     data_eogh   = ft_preprocessing(cfg, data_eogh); % nothing will be done, only the selection of the interesting channel
 
-The processing of the vertical EOG is done similar, using the difference between channel 50 and 64 as the bipolar EOG 
+The processing of the vertical EOG is done similar, using the difference between channel 50 and 64 as the bipolar EOG
 
     cfg = [];
     cfg.dataset    = 'subj2.vhdr';
@@ -173,14 +178,14 @@ The processing of the vertical EOG is done similar, using the difference between
     cfg.reref      = 'yes';
     cfg.refchannel = '50'
     data_eogv      = ft_preprocessing(cfg);
-    
+
     data_eogv.label{2} = 'EOGV';
-    
+
     cfg = [];
     cfg.channel = 'EOGV';
     data_eogv   = ft_preprocessing(cfg, data_eogv); % nothing will be done, only the selection of the interesting channel
 
-Now that we have the EEG data rereferenced to linked mastoids and the horizontal and vertical bipolar EOG, we can combine the three raw data structures into a single representation of using 
+Now that we have the EEG data rereferenced to linked mastoids and the horizontal and vertical bipolar EOG, we can combine the three raw data structures into a single representation of using
 
     cfg = [];
     data_all = ft_appenddata(cfg, data_eeg, data_eogh, data_eogv);
@@ -200,13 +205,13 @@ This will display the event types and values on screen.
 
     evaluating trialfunction 'trialfun_general'
     the following events were found in the datafile
-    event type: 'New Segment' with event values: 
-    event type: 'Response' with event values: 'R  8' 
-    event type: 'Stimulus' with event values: 'S  1' 'S 12' 'S 13' 'S 21' 'S 27' 'S111' 
+    event type: 'New Segment' with event values:
+    event type: 'Response' with event values: 'R  8'
+    event type: 'Stimulus' with event values: 'S  1' 'S 12' 'S 13' 'S 21' 'S 27' 'S111'
      'S112' 'S113' 'S121' 'S122' 'S123' 'S131' 'S132' 'S133' 'S141' 'S142' 'S143'  
-     'S151' 'S152' 'S153' 'S161' 'S162' 'S163' 'S171' 'S172' 'S173' 'S181' 'S182' 
-     'S183' 'S211' 'S212' 'S213' 'S221' 'S222' 'S223' 'S231' 'S232' 'S233' 'S241' 
-     'S242' 'S243' 
+     'S151' 'S152' 'S153' 'S161' 'S162' 'S163' 'S171' 'S172' 'S173' 'S181' 'S182'
+     'S183' 'S211' 'S212' 'S213' 'S221' 'S222' 'S223' 'S231' 'S232' 'S233' 'S241'
+     'S242' 'S243'
     no trials have been defined yet, see FT_DEFINETRIAL for further help
     found 1570 events
     created 0 trials
@@ -218,7 +223,7 @@ The trigger codes S111, S121, S131, S141 correspond to the presented pictures of
     cfg.trialdef.eventtype = 'Stimulus';
     cfg.trialdef.eventvalue = {'S111', 'S121', 'S131', 'S141'};
     cfg_vis_animal          = ft_definetrial(cfg);
-    
+
     cfg.trialdef.eventvalue = {'S151', 'S161', 'S171', 'S181'};
     cfg_vis_tool            = ft_definetrial(cfg);
 
@@ -231,7 +236,7 @@ Subsequently we could do artifact detection with **[ft_rejectvisual](/reference/
 
 ## Segmenting continuous data into one-second pieces
 
-For processing of continuous data without triggers it is convenient to cut the data into constant-length pieces. This can be done while reading the data from disk, or it can be done after the complete continuous data is in memory. 
+For processing of continuous data without triggers it is convenient to cut the data into constant-length pieces. This can be done while reading the data from disk, or it can be done after the complete continuous data is in memory.
 
 The following example shows how to read and segment the data in one go.
 
@@ -241,7 +246,7 @@ The following example shows how to read and segment the data in one go.
     cfg.trialdef.triallength = 1;                      % duration in seconds
     cfg.trialdef.ntrials     = inf;                    % number of trials, inf results in as many as possible
     cfg                      = ft_definetrial(cfg);
-    
+
     % read the data from disk and segment it into 1-second pieces
     data_seg                 = ft_preprocessing(cfg);
 
@@ -251,15 +256,15 @@ The following example shows how to read the data as a single continuous segment,
     cfg = [];
     cfg.dataset              = 'subj2.vhdr';
     data_org                 = ft_preprocessing(cfg);
-    
+
     % segment it into 1-second pieces
     cfg = [];
     cfg.length               = 1;
     data_ref                 = ft_redefinetrial(cfg, data_org);
-    
+
 ## Suggested further reading
 
-After having finished this tutorial on preprocessing, you can continue with the tutorial on [Preprocessing of EEG data and compute ERPs](/tutorial/preprocessing_ERP), with the [event related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial. 
+After having finished this tutorial on preprocessing, you can continue with the tutorial on [Preprocessing of EEG data and compute ERPs](/tutorial/preprocessing_ERP), with the [event related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
 If you have more questions about preprocessing, you can also read the following faq-
 {{topic>faq +preprocessing &list}}

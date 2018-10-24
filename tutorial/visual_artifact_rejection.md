@@ -3,25 +3,28 @@ layout: default
 tags: fixme tutorial artifact meg raw preprocessing MEG-language
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Visual artifact rejection
 
 ## Introduction
 
-This tutorial makes use of the preprocessed data from [Preprocessing - Trigger based trial selection](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download it from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat). Load the data with the following command: 
+This tutorial makes use of the preprocessed data from [Preprocessing - Trigger based trial selection](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download it from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat). Load the data with the following command:
 
     load PreprocData dataFIC
 
-Before further analysis in any of the other tutorials, it is best to have artifact free data. Within FieldTrip you can choose to do visual/manual or automatic artifact detection and rejection. 
-
+Before further analysis in any of the other tutorials, it is best to have artifact free data. Within FieldTrip you can choose to do visual/manual or automatic artifact detection and rejection.
 
 ## Background
 
+For a successful analysis of EEG or MEG signals, "clean" data is required. That means that you should try to reduce the amount of variance in the data due to factors that you cannot influence. One of the factors that is difficult to control are the presence of artifacts in the data. These artifact are physiological or can result from the acquisition electronics. The strongest physiological artifacts stem from eye blinks, eye movements and head movements. Muscle artifact from swallowing and neck contraction can be a problem as well. Artifacts related to the electronics are 'SQUID jumps' or spikes seen in several channels.
+To start with, it is best to avoid those artifacts during the recording. You can instruct the subject not to blink during the trial, but instead give him some well-defined time between the trials in which he is allowed to blink. But of course there will always be some artifacts in the raw data.
 
-For a successful analysis of EEG or MEG signals, "clean" data is required. That means that you should try to reduce the amount of variance in the data due to factors that you cannot influence. One of the factors that is difficult to control are the presence of artifacts in the data. These artifact are physiological or can result from the acquisition electronics. The strongest physiological artifacts stem from eye blinks, eye movements and head movements. Muscle artifact from swallowing and neck contraction can be a problem as well. Artifacts related to the electronics are 'SQUID jumps' or spikes seen in several channels. 
-To start with, it is best to avoid those artifacts during the recording. You can instruct the subject not to blink during the trial, but instead give him some well-defined time between the trials in which he is allowed to blink. But of course there will always be some artifacts in the raw data. 
-
-While detecting artifacts by visual inspection, keep in mind that it is a subjective decision to reject certain trials and keep other trials. Which type of artifacts should be rejected depends on the analysis you would like to do on the clean data. If you would like to do a time-frequency analysis of power in the gamma band it is important to reject all trials with muscle artifacts, but for a ERF analysis it is more important to reject trials with drifts and eye artifacts. 
+While detecting artifacts by visual inspection, keep in mind that it is a subjective decision to reject certain trials and keep other trials. Which type of artifacts should be rejected depends on the analysis you would like to do on the clean data. If you would like to do a time-frequency analysis of power in the gamma band it is important to reject all trials with muscle artifacts, but for a ERF analysis it is more important to reject trials with drifts and eye artifacts.
 
 In visual artifact detection, the user visually inspects the data and identifies the trials or data segments and the channels that are affected and that should be removed. The visual inspection results in a list of noisy data segments and channels.
 
@@ -36,17 +39,12 @@ The **[ft_databrowser](/reference/ft_databrowser)** function works both for cont
 
 Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function can also be used to visualise the timecourse of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. Note that a proper ICA unmixing of your data requires that the atypical artifacts (e.g. electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](/reference/ft_componentanalysis)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the data back to the sensor level, excluding the bad components.
 
-
-
-
-
-
 ## Procedure
 
 The following steps are taken to do visual artifact rejectio
 
    * Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**, as explained in the [previous tutorial](/tutorial/preprocessing)
-   * Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)** 
+   * Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
    * Alternatively: use **[ft_databrowser](/reference/ft_databrowser)** and mark the artifacts manually by interactively paging trial by trial
 
 
@@ -55,7 +53,7 @@ The following steps are taken to do visual artifact rejectio
 
 The function **[ft_rejectvisual](/reference/ft_rejectvisual)** provides various ways of identifying trials contaminated with artifacts.
 
-The configuration option cfg.method provides the possibility of browsing through the data channel by channel (cfg.method= 'channel'), trial by trial (cfg.method = 'trial') or displaying all the data at once (cfg.method = 'summary'). The field cfg.latency determines the time window of interest with respect to the trigger signals. In the example below the whole trial is inspected (i.e. cfg.latency is per default assigned to the whole trial). 
+The configuration option cfg.method provides the possibility of browsing through the data channel by channel (cfg.method= 'channel'), trial by trial (cfg.method = 'trial') or displaying all the data at once (cfg.method = 'summary'). The field cfg.latency determines the time window of interest with respect to the trigger signals. In the example below the whole trial is inspected (i.e. cfg.latency is per default assigned to the whole trial).
 
 The scaling of the plots is automatically adjusted according to the maximum amplitude over all channels. The scaling can be set using cfg.alim. For EOG/EEG channels cfg.alim=5e-5 (50 micro Volt) is a useful scale and for the MEG channels cfg.alim=1e-12 (10 fT/cm).
 
@@ -63,16 +61,16 @@ To browse through the data trial by trial while viewing all channels writ
 
     cfg          = [];
     cfg.method   = 'trial';
-    cfg.alim     = 1e-12; 
+    cfg.alim     = 1e-12;
     dummy        = ft_rejectvisual(cfg,dataFIC);
 
-Click through the trials using the > button to inspect each trial. 
+Click through the trials using the > button to inspect each trial.
 
 If your dataset contains MEG and EEG channels (like this dataset), the MEG and EEG channels are scaled differently when using only cfg.alim (the EEG channels show up as big black bars on the screen). One of the reasons to record EOG, EMG or ECG is to check these channels while identifying eye, muscle and heart artifacts. The following code can be used to scale MEG and EEG channels both properl
 
     cfg          = [];
     cfg.method   = 'trial';
-    cfg.alim     = 1e-12; 
+    cfg.alim     = 1e-12;
     cfg.megscale = 1;
     cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataFIC);
@@ -85,7 +83,7 @@ Trial 84 shows an artifact which is caused by the electronics. Notice the jump i
 
 ![image](/media/tutorial/artifactdetect/untitled-1.jpg@530)
 
-By browsing through the trials, related artifacts become evident (trial 15, 36, 39, 42, 43, 45 ,49, 50, 81, 82 and 84). They should be marked as 'bad'. After pressing the 'quit' button the trials marked 'bad' are now removed from the data structure. 
+By browsing through the trials, related artifacts become evident (trial 15, 36, 39, 42, 43, 45 ,49, 50, 81, 82 and 84). They should be marked as 'bad'. After pressing the 'quit' button the trials marked 'bad' are now removed from the data structure.
 
 If you would like to keep track of which trials you reject, keep in mind that the trialnumbers change when you call **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once. An example: There are 87 trials in your data and first you reject trial 15, 36 and 39. Then trial number 87 becomes trial number 84. Later when you also want to reject trials 42, 43, 45 ,49, 50, 81, 82 and 84 you should be very careful and subtract 3 from all the old trial numbers. If you would like to know which trials you rejected, it is best to call rejectvisual only once.
 
@@ -97,13 +95,13 @@ It can also be convenient to view data from one channel at a time. This can be p
 
     cfg          = [];
     cfg.method   = 'channel';
-    cfg.alim     = 1e-12; 
+    cfg.alim     = 1e-12;
     cfg.megscale = 1;
     cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataFIC);
 
 Click through the data using the > button.
-While clicking through all the trials you see that channels MLO12 and MLP31 contain a lot of artifacts (see the figure below ). They should be marked as 'bad'. After pressing the 'quit' button the channels marked 'bad' are now removed from the data structure. 
+While clicking through all the trials you see that channels MLO12 and MLP31 contain a lot of artifacts (see the figure below ). They should be marked as 'bad'. After pressing the 'quit' button the channels marked 'bad' are now removed from the data structure.
 
 ![image](/media/tutorial/artifactdetect/untitled-2.jpg)
 
@@ -114,10 +112,10 @@ To produce an overview of the data choose the cfg.method 'summary
 
     cfg          = [];
     cfg.method   = 'summary';
-    cfg.alim     = 1e-12; 
-    dummy        = ft_rejectvisual(cfg,dataFIC); 
+    cfg.alim     = 1e-12;
+    dummy        = ft_rejectvisual(cfg,dataFIC);
 
-This gives you a plot with the variance for each channel and trial. 
+This gives you a plot with the variance for each channel and trial.
 
 ![image](/media/tutorial/artifactdetect/channel_trialvariance.png@650)
 
@@ -142,12 +140,12 @@ After quitting, the trials/channels will be rejected from the data set and the c
     the following channels were removed: MLP31, MLT33, MLT41, EOG
     the call to "ft_rejectvisual" took 20 seconds and an estimated 84 MB
 
-This operation could be repeated for each of the metrics, by clicking on the different radio buttons 'var', 'min', 'max', etc. 
+This operation could be repeated for each of the metrics, by clicking on the different radio buttons 'var', 'min', 'max', etc.
 
 `<note>`
-The summary mode in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** has been primarily designed to visually screen for artefacts in channels of a consistent type, i.e. in this example only for the axial MEG gradiometers. 
+The summary mode in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** has been primarily designed to visually screen for artefacts in channels of a consistent type, i.e. in this example only for the axial MEG gradiometers.
 
-If you have EEG data, the EOG channels have the same physical units and very similar amplitudes and therefore can be visualised simultaneously. 
+If you have EEG data, the EOG channels have the same physical units and very similar amplitudes and therefore can be visualised simultaneously.
 
 If you have data from a 306-channel Neuromag system, you will have both magnetometers and planar gradiometers, which have different physical units and rather different numbers. Combining them in a single visualisation is likely to result in a biassed selection, either mainly relying on the magnetometers or the gradiometers being used to find artefacts.
 
@@ -158,13 +156,13 @@ You can also call **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** m
     cfg = [];
     cfg.method = 'summary'
     cfg.keepchannel = 'yes';
-    
+
     cfg.channel = 'MEGMAG';
     clean1  = ft_rejectvisual(cfg, orig);
-    
+
     cfg.channel = 'MEGGRAD';
     clean2  = ft_rejectvisual(cfg, clean1);
-    
+
     cfg.channel = 'EEG';
     clean3  = ft_rejectvisual(cfg, clean2);
 `</note>`
@@ -176,12 +174,12 @@ You can repeat this for the initially congruent (IC) condition. To detect all th
 
     clear all
     load PreprocData dataIC
-   
+
     cfg          = [];
     cfg.method   = 'trial'; % also try cfg.method = 'channel' and cfg.method = 'summary'
-    cfg.alim     = 1e-12; 
+    cfg.alim     = 1e-12;
     cfg.megscale = 1;
-    cfg.eogscale = 5e-8; 
+    cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataIC);
 
  Trials 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86 contain various artifacts, classify these as 'BAD'. Also reject the channels MLO12 and MLP31.
@@ -191,15 +189,16 @@ Repeat the procedure for the fully congruent condition (FC
 
     clear all
     load PreprocData dataFC
-    
+
     cfg          = [];
     cfg.method   = 'trial'; % also try cfg.method = 'channel' and cfg.method = 'summary'
-    cfg.alim     = 1e-12; 
+    cfg.alim     = 1e-12;
     cfg.megscale = 1;
-    cfg.eogscale = 5e-8; 
+    cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataFC);
 
- Trials 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85 contain various artifacts, classify these as 'BAD'. Also reject the channels MLO12 and MLP31.
+Trials 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85 contain various artifacts, classify these as 'BAD'. Also reject the channels MLO12 and MLP31.
+
 ### Use ft_databrowser to mark the artifacts manually
 
 An alternative way to remove artifacts is to page through the butterfly plots of the single trials, by using the ft_databrowser function.
@@ -226,19 +225,14 @@ artf.artfctdef.visual.artifact = [begartf endartf]
 
 with the beginning and ending sample for all marked sections.
 
-
 ## Summary
 
-Per condition, the following trials contain artifact
-
+Per condition, the following trials contain artifacts:
 
 *  FIC: 15, 36, 39, 42, 43, 49, 50, 81, 82, 84
-
 *  IC:  1,  2,  3,  4,  14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86
-
-*  FC:  2,  3,  4,  30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85 
+*  FC:  2,  3,  4,  30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85
 
 Channels MLO12 and MLP31 are removed because of artifacts.
 
 This tutorial was last tested with version 20120501 of FieldTrip using MATLAB 2009b on a 64-bit Linux platform.
-

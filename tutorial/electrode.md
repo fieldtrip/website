@@ -3,6 +3,11 @@ layout: default
 tags: tutorial source electrode
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Localizing electrodes using a 3D-scanner
 

@@ -3,6 +3,11 @@ layout: default
 tags: tutorial plot eeg meg ecog layout
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Specifying the channel layout for plotting
 
@@ -19,7 +24,6 @@ FieldTrip can use layout files that gives you exact control of the 2-D position 
     7   0.410919  0.519568  0.750000  0.450000  F4
     8   0.809069  0.587789  0.750000  0.450000  F8
     ...
-
 
 The format of the layout file is described in more detail in this [frequently asked question](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 

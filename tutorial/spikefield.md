@@ -3,6 +3,11 @@ layout: default
 tags: tutorial spike animal Spike-attention
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Preprocessing and analysis of spike and local field potential data
 
@@ -27,7 +32,7 @@ In this tutorial we will use the approach to compute a single phase per individu
 *  Compute the spike triggered average on the raw and bandpass filtered LFP using **[ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage)**.             
 *  Compute the phase and power of the LFP at each time of spiking using **[ft_spiketriggeredspectrum](/reference/ft_spiketriggeredspectrum)**
 *  Compute statistics on these instantaneous spike-LFP phases using **[ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)**
-	
+
 ![image](/media/tutorial/flowchartspikelfp02.png)
 
 ### Preprocessing
@@ -37,8 +42,8 @@ Make sure you add the main Fieldtrip directory to your path and run **[ft_defaul
 We first read in the spike data by **[ft_read_spike](/reference/ft_read_spike)** and select the following channels for analysis from the spike structure using **[ft_spike_select](/reference/ft_spike_select)** by
 
 	filename         = 'p029_sort_final_01.nex';
-	spike            = ft_read_spike(filename); 
-	
+	spike            = ft_read_spike(filename);
+
 	cfg              = [];
 	cfg.spikechannel = {'sig002a_wf', 'sig003a_wf'};
 	spike            = ft_spike_select(cfg, spike);
@@ -46,8 +51,8 @@ We first read in the spike data by **[ft_read_spike](/reference/ft_read_spike)**
 
 giving a spike structure
 
-	spike = 
-	
+	spike =
+
 	        label: {'sig002a_wf'  'sig003a_wf'}
 	    timestamp: {[1x164456 int32]  [1x134803 int32]}
 	     waveform: {[1x32x164456 double]  [1x32x134803 double]}
@@ -81,14 +86,14 @@ We then construct a cfg.trl matrix to preprocess the LFP data. In this case, the
 	    vals = value(begmark(k):endmark(k));
 	    if any(ismember(vals,attCnds)) && ~isempty(find(vals==correctresponse))
 	        % create the trl matrix in sample units
-	        samp = samples(begmark(k):endmark(k)); % in timestamp units	
+	        samp = samples(begmark(k):endmark(k)); % in timestamp units
 	        beginSamp      = samp(find(vals==stimon));        
 	        sampDistractor = samp(find(vals==distractorChange));
 	        sampTarget     = samp(find(vals==targetChange));       
 	        endSamp        = min([sampTarget(:);sampDistractor(:)]); % limit until first change        
 	        offset         = -round(hdr.Fs*2.75);        
 	        trl            = [trl; [beginSamp+offset endSamp offset]];
-	    end 
+	    end
 	end
 
 
@@ -99,7 +104,7 @@ Subsequently, we read out the LFP data using
 	cfg.dataset  = filename;
 	cfg.trialfun = 'trialfun_stimon_samples';
 	cfg          = ft_definetrial(cfg);
-	
+
 	% read in the data in trials
 	cfg.channel   = {'AD01', 'AD02', 'AD03', 'AD04'}; % these channels contain the LFP
 	cfg.padding   = 10; % length to which we pad for filtering
@@ -110,7 +115,7 @@ Subsequently, we read out the LFP data using
 
 The LFP data is now represented in a structure that has the following standard form (see **[ft_datatype_raw](/reference/ft_datatype_raw)**
 
-	data_lfp = 
+	data_lfp =
 	       hdr: [1x1 struct]
 	         label: {4x1 cell}
 	          time: {1x600 cell}
@@ -119,24 +124,24 @@ The LFP data is now represented in a structure that has the following standard f
 	    sampleinfo: [600x2 double]
 	           cfg: [1x1 struct]
 
-Here, every cell of data_lfp.trial contains a chan x time data matrix for one trial (# trials = 600). 
+Here, every cell of data_lfp.trial contains a chan x time data matrix for one trial (# trials = 600).
 
 It is important to note that we assume that there are no gaps in the recording, i.e. that the LFP recording is continuous. It may occasionally occur that (at least for Neuralynx software this is known) there are gaps in the LFP recording because the recording software has been turned on and off, such that there is one Ncs file with a large gap. In that case, one must take care of linking timestamps and samples as there will not be a linear relationship anymore. We refer to [this page](/getting_started/neuralynx) for potential solutions.
 
 The critical pieces of information needed to link LFPs to spikes are the number of timestamps per LFP sample, the LFP sampling rate and the first timestamp of the recording.
 If one reads out the LFP files using **[ft_read_spike](/reference/ft_read_spike)** then this information is represented in
-data.hdr.Fs, data.hdr.TimeStampPerSample and data.hdr.FirstTimeStamp. In this case, 
+data.hdr.Fs, data.hdr.TimeStampPerSample and data.hdr.FirstTimeStamp. In this case,
 
-	data_lfp.hdr = 
+	data_lfp.hdr =
 	       Fs: 1000
 	       nSamples: 7555983
 	       FirstTimeStamp: 0
 	       TimeStampPerSample: 40
 
 
-The relationship between (unrounded) LFP sample and a timestamp ts (of a spike) is then given as 
+The relationship between (unrounded) LFP sample and a timestamp ts (of a spike) is then given as
 
-	sample = double(ts-FirstTimeStamp) / double(TimeStampPerSample) + 1; 
+	sample = double(ts-FirstTimeStamp) / double(TimeStampPerSample) + 1;
 
 
 The factor +1 arises because the first LFP sample is numbered 1, not 0.
@@ -144,24 +149,24 @@ The factor +1 arises because the first LFP sample is numbered 1, not 0.
 ![image](/media/tutorial/tssamp.png)
 
 We now have two options to further process the raw spike data such that the resulting spike structure has the same trial definition as the data_lfp structure.
-First of all, we can directly create trials for the spike structure, by 
+First of all, we can directly create trials for the spike structure, by
 
 	cfg           = [];
 	cfg.dataset   = filename;
 	cfg.trialfun  = 'trialfun_stimon_samples';
 	cfg           = ft_definetrial(cfg);
 	trl           = cfg.trl;
-	
-	cfg           = []; 
+
+	cfg           = [];
 	cfg.hdr       = data_lfp.hdr; % contains information for conversion of samples to timestamps
 	cfg.trlunit   = 'samples';
 	cfg.trl       = trl; % now in samples
-	spikeTrials   = ft_spike_maketrials(cfg,spike); 
+	spikeTrials   = ft_spike_maketrials(cfg,spike);
 
 
 giving a struct
 
-	spikeTrials = 
+	spikeTrials =
 	         label: {'sig002a_wf'  'sig003a_wf'}
 	     timestamp: {[1x83601 int32]  [1x61513 int32]}
 	      waveform: {[1x32x83601 double]  [1x32x61513 double]}
@@ -186,14 +191,14 @@ An equivalent method (but potentially more error-prone!) would have been to dire
 	spikeTrials2 = ft_spike_maketrials(cfg,spike);
 
 
-A second method would have been to append the spikes to the LFP data in binary data format, by 
+A second method would have been to append the spikes to the LFP data in binary data format, by
 
 	data_all = ft_appendspike([],data_lfp, spike);
 
 
 We then get
 
-	data_all = 
+	data_all =
 	           hdr: [1x1 struct]
 	         label: {6x1 cell}
 	          time: {1x600 cell}
@@ -226,14 +231,14 @@ To analyze high-frequency phase-coupling between spikes and LFPs recorded from t
 	cfg.spikechannel = spike.label{1};
 	cfg.channel      = data_lfp.label(2);
 	data_nan         = ft_spiketriggeredinterpolation(cfg, data_all);
-	
+
 	cfg.method       = 'linear'; % remove the replaced segment with interpolation
 	data_i           = ft_spiketriggeredinterpolation(cfg, data_all);
 
 
 We illustrate this method by plotting the dat
 
-	figure, 
+	figure,
 	plot(data_i.time{1},data_i.trial{1}(2,:),'g-'), hold on, plot(data_i.time{1}, data_i.trial{1}(5,:),'r')
 	hold on
 	plot(data_nan.time{1},data_nan.trial{1}(2,:),'go')
@@ -255,7 +260,7 @@ The first step in the analysis of spike-LFP phase-coupling should be the computa
 	cfg.channel      = data_lfp.label(1:4); % first four chans
 	cfg.latency      = [0.3 10];
 	staPost          = ft_spiketriggeredaverage(cfg, data_all);
-	
+
 	% plot the sta
 	figure
 	plot(staPost.time, staPost.avg(:,:)')
@@ -276,7 +281,7 @@ We also show the STA for the pre-stimulus perio
 	cfg.channel      = data_lfp.label(1:4); % first four chans
 	cfg.latency      = [-2.75 0];
 	staPre           = ft_spiketriggeredaverage(cfg, data_all);
-	
+
 	figure
 	plot(staPre.time, staPre.avg(:,:)')
 	legend(data_lfp.label)
@@ -292,8 +297,8 @@ The pre-stimulus STA reveals locking of spikes to alpha LFP cycles.
 
 After we obtained, from the preprocessing steps, a data structure containing the spike information that was either appended in binarized form to the LFP data (through **[ft_appendspike]]**) or stored in a separate spike structure (through **[ft_spike_maketrials](/reference/ft_spike_maketrials)**) we can proceed with computing the phase of the LFP relative to single spikes. It is also possible (not covered in this tutorial) to analyze the data_all structure (containing both LFP and spike data) using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute connectivity measures with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. This would have been the method to compute the spike-field coherence metric. However, this latter methodology has disadvantages, as explained in the introduction.
 
-The idea of our procedure is to take an LFP segment around the spike and compute the Discrete Fourier Transform of that. 
-Two algorithms are available for computing the phases of single spikes relative to the LFP. The first algorithm **[ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft)** computes the FFT locally around every spike by calling MATLAB's FFT function and uses the same window length for all frequencies. The other algorithm in **[ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)** computes the phase for every frequency separately by computing the DFT for a given frequency through convolution. Different time-windows per frequency are then allowed. The choice of the algorithm at the user-end is determined by calling **[ft_spiketriggeredspectrum](/reference/ft_spiketriggeredspectrum)** with cfg.method = 'mtmfft' or cfg.method = 'mtmconvol'. 
+The idea of our procedure is to take an LFP segment around the spike and compute the Discrete Fourier Transform of that.
+Two algorithms are available for computing the phases of single spikes relative to the LFP. The first algorithm **[ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft)** computes the FFT locally around every spike by calling MATLAB's FFT function and uses the same window length for all frequencies. The other algorithm in **[ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)** computes the phase for every frequency separately by computing the DFT for a given frequency through convolution. Different time-windows per frequency are then allowed. The choice of the algorithm at the user-end is determined by calling **[ft_spiketriggeredspectrum](/reference/ft_spiketriggeredspectrum)** with cfg.method = 'mtmfft' or cfg.method = 'mtmconvol'.
 
 The MTMFFT algorithm allows that only one spikechannel can be selected at a time.
 One can either have the spike train in binarized format or enter it separately as a third input.
@@ -310,7 +315,7 @@ One can either have the spike train in binarized format or enter it separately a
 
 We then obtain
 
-	stsFFT = 
+	stsFFT =
 	         lfplabel: {4x1 cell}
 	             freq: [20 30 40 50 60 70 80 90 100]
 	           dimord: '{chan}_spike_lfpchan_freq'
@@ -329,7 +334,7 @@ The spike phases for the unit 'sig001U_wf' are thus obtained by
 	ang = angle(stsFFT.fourierspctrm{1})
 
 
-and the magnitude of the LFP is obtained by 
+and the magnitude of the LFP is obtained by
 
 	mag = abs(stsFFT.fourierspctrm{1})
 
@@ -346,14 +351,14 @@ The convolution algorithm (cfg.method = 'mtmconvol') accepts spikes both in bina
 
 Note that we could have also used a third spike input instead of the data_all inpu
 
-	stsConvol2    = ft_spiketriggeredspectrum(cfg, data_lfp, spikeTrials); 
+	stsConvol2    = ft_spiketriggeredspectrum(cfg, data_lfp, spikeTrials);
 
 
 The latter way of calling ft_spiketriggeredspectrum is advantageous because 1) it is more memory efficient, and 2) within **[ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)**, the spike samples do not have to be converted back to spike times. Instead, the spike times are exact and readily available, such that the phase estimation is more accurate as the raw spike time is used to determine the spike-LFP phase, instead of the rounded spike sample that is obtained using **[ft_appendspike](/reference/ft_appendspike)**. This is relevant when studying fast LFP oscillations.
- 
-The output from the mtmconvol method is 
 
-	stsConvol = 
+The output from the mtmconvol method is
+
+	stsConvol =
 	         lfplabel: {4x1 cell}
 	             freq: [20 30.1205 40.3226 50 60.9756 71.4286 80.6452 89.2857 100]
 	            label: {'sig002a_wf'  'sig003a_wf'}
@@ -366,7 +371,7 @@ The output from the mtmconvol method is
 
 
 Note that in this instance data is present for multiple units.
-            
+
 ### Computing statistics on the output from ft_spiketriggeredspectrum.m
 
 Statistics on the obtained data are computed using the function **[ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)**. The configuration cfg.method tells us which statistic to compute. These include standard Rayleigh test, mean phase, and the Pairwise Phase Consistency metrics (Vinck et al., 2010, Neuroimage, Vinck et al., 2011, J Comput Neurosci). Three versions of the PPC measure are available: 'ppc0', 'ppc1', and 'ppc2'. The 'ppc0' measure considers all pairs of spikes across all trials, is not biased by spike count (as the phase locking value is) and is fastest to compute, however can be influenced by history effects within the spike trains (e.g. refractoriness and bursting). This is not an issue however if the number of trials is large, as it is here. The 'ppc1' measure avoids this problem of history effects within spike trains, and the 'ppc2' measure improves on the 'ppc1' measure by being robust against dependencies between spike phase and spike rate (as with gamma phase shifting, Vinck et al. (2010, J Neurosci)), at the cost of an increase in variance.
@@ -376,7 +381,7 @@ The configuration cfg.timwin determines whether we compute the statistics in a t
 For example, we can plot the PPC spectra for every cell by
 
 	for k = 1:length(stsConvol.label)
-	
+
 	  % compute the statistics on the phases
 	  cfg               = [];
 	  cfg.method        = 'ppc0'; % compute the Pairwise Phase Consistency
@@ -386,10 +391,10 @@ For example, we can plot the PPC spectra for every cell by
 	  cfg.spikechannel  = stsConvol.label{k};
 	  cfg.channel       = stsConvol.lfplabel(chan); % selected LFP channels
 	  cfg.avgoverchan   = 'unweighted'; % weight spike-LFP phases irrespective of LFP power
-	  cfg.timwin        = 'all'; % compute over all available spikes in the window 
+	  cfg.timwin        = 'all'; % compute over all available spikes in the window
 	  cfg.latency       = [0.3 nanmax(stsConvol.trialtime(:))]; % sustained visual stimulation period
 	  statSts           = ft_spiketriggeredspectrum_stat(cfg,stsConvol);
-	  
+
 	  % plot the results
 	  figure
 	  plot(statSts.freq,statSts.ppc0')  
@@ -400,7 +405,7 @@ For example, we can plot the PPC spectra for every cell by
 
 This code computes the PPC spectrum as a function of frequencies, giving an output for the last unit of
 
-	statSts = 
+	statSts =
 	        time: 'all'
 	        ppc0: [1.1836e-04 0.0012 0.0041 0.0034 0.0021 6.4740e-04 1.4600e-04 3.5249e-05 1.6104e-05]
 	     nspikes: [24663 24663 24663 24663 24663 24663 24663 24663 24663]
@@ -429,10 +434,10 @@ It is often desired to study the evolution of the spike-LFP phase consistency ov
 	  cfg.winstepsize    = 0.01; % step size of the window that we slide over time
 	  cfg.timwin         = 0.5; % duration of sliding window
 	  statSts            = ft_spiketriggeredspectrum_stat(cfg,stsConvol);
-	  
+
 	  statSts.(param) = permute(conv2(squeeze(statSts.(param)), ones(1,20)./20, 'same'),[3 1 2]); % apply some smoothing over 0.2 sec
-	  
-	  figure 
+
+	  figure
 	  cfg            = [];
 	  cfg.parameter  = param;
 	  cfg.refchannel = statSts.labelcmb{1,1};
@@ -454,7 +459,7 @@ Note that the 'plv' measure is (positively) biased by the number of spikes, and 
 
 The output from **[ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)** is a structure with the following content
 
-	statSts = 
+	statSts =
 	        time: [1x155 double]
 	        ppc0: [1x9x155 double] % can be plv, ang, ppc1, ppc2, ral
 	     nspikes: [1x9x155 double]
@@ -470,11 +475,10 @@ In statSts.labelcmb all the combinations between the unit and the different LFPs
 
 We have shown how to compute measures of spike-LFP phase-coupling using the spike toolbox in Fieldtrip. Time-frequency representations of mean spike-LFP phase or the spike-LFP phase consistency can be obtained. We have shown examples of how to implement measures of spike-LFP phase consistency that are not affected by the number of available spikes.
 
-Further development of the functionality will be in the direction of computing inferential statistics on the phase consistency measures using permutation statistics. 
+Further development of the functionality will be in the direction of computing inferential statistics on the phase consistency measures using permutation statistics.
 
 You might want to continue with the [spike](/spike) tutorial, which presents more detailed analysis methods that are specific to the spikes.
 
 -----
 
-This tutorial was last tested by Robert with version 20130305 of FieldTrip using MATLAB 2011b on a 64-bit OS X platform. 
-
+This tutorial was last tested by Robert with version 20130305 of FieldTrip using MATLAB 2011b on a 64-bit OS X platform.

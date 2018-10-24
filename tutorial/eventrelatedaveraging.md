@@ -3,6 +3,11 @@ layout: default
 tags: tutorial meg timelock preprocessing plot MEG-language
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Event related averaging and MEG planar gradient
 
@@ -43,12 +48,12 @@ To calculate the event related field / potential for the example dataset we will
 {{page>:tutorial:shared:preprocessing_fic_lp}}
 
 `<note note>`
-A note about padding: The padding parameter (cfg.padding) defines the duration to which the data in the trial will be padded (i.e. data-padded, not zero-padded). The padding is removed from the trial after filtering. Padding the data is beneficial, since the edge artifacts that are typically seen after filtering will be in the padding and not in the part of interest. Padding can also be relevant for DFT filtering of the 50Hz line noise artifact: long padding ensures a higher frequency resolution for the DFT filter, causing a narrower notch to be removed from the data. Padding can only be done on data that is stored in continuous format, therefore it is not used here. 
+A note about padding: The padding parameter (cfg.padding) defines the duration to which the data in the trial will be padded (i.e. data-padded, not zero-padded). The padding is removed from the trial after filtering. Padding the data is beneficial, since the edge artifacts that are typically seen after filtering will be in the padding and not in the part of interest. Padding can also be relevant for DFT filtering of the 50Hz line noise artifact: long padding ensures a higher frequency resolution for the DFT filter, causing a narrower notch to be removed from the data. Padding can only be done on data that is stored in continuous format, therefore it is not used here.
 `</note>`
 
 If preprocessing was done as described, the data will have the following field
 
-    dataFIC_LP = 
+    dataFIC_LP =
            hdr: [1x1 struct]
          label: {149x1 cell}
           time: {1x77 cell}
@@ -58,8 +63,8 @@ If preprocessing was done as described, the data will have the following field
      trialinfo: [77x1 double]
           grad: [1x1 struct]
            cfg: [1x1 struct]
-           
-           
+
+
 Note that 'dataFIC_LP.label' has 149 in stead of 151 labels since channels MLP31 and MLO12 were excluded. 'dataFIC-LP.trial' has 77 in stead of 87 trials because 10 trials were rejected because of artifacts.
 
 The most important fields are 'dataFIC_LP.trial' containing the individual trials and 'data.time' containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
@@ -92,7 +97,7 @@ The trials belonging to one condition will now be averaged with the onset of the
 
 The output is the data structure avgFIC with the following field
 
-    avgFIC = 
+    avgFIC =
         avg: [149x900 double]
         var: [149x900 double]
        time: [1x900 double]
@@ -102,20 +107,20 @@ The output is the data structure avgFIC with the following field
        grad: [1x1 struct]
         cfg: [1x1 struct]
 
-The most important field is avgFIC.avg, containing the average over all trials for each sensor. 
+The most important field is avgFIC.avg, containing the average over all trials for each sensor.
 
 ## Plot the results (axial gradients)
 
 Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
-Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure: 
+Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
     cfg = [];
-    cfg.showlabels = 'yes'; 
-    cfg.fontsize = 6; 
+    cfg.showlabels = 'yes';
+    cfg.fontsize = 6;
     cfg.layout = 'CTF151_helmet.mat';
     cfg.ylim = [-3e-13 3e-13];
-    ft_multiplotER(cfg, avgFIC); 
+    ft_multiplotER(cfg, avgFIC);
 
 ![image](/media/tutorial/eventrelatedaveraging/multiplot_1cond_3feb09_erf.png@700)
 
@@ -124,12 +129,12 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure. To plot all conditions list them as multiple variable
 
     cfg = [];
-    cfg.showlabels = 'no'; 
-    cfg.fontsize = 6; 
+    cfg.showlabels = 'no';
+    cfg.fontsize = 6;
     cfg.layout = 'CTF151_helmet.mat';
-    cfg.baseline = [-0.2 0]; 
-    cfg.xlim = [-0.2 1.0]; 
-    cfg.ylim = [-3e-13 3e-13]; 
+    cfg.baseline = [-0.2 0];
+    cfg.xlim = [-0.2 1.0];
+    cfg.ylim = [-3e-13 3e-13];
     ft_multiplotER(cfg, avgFC, avgIC, avgFIC);
 
 ![image](/media/tutorial/eventrelatedaveraging/multiplot_allcond_3feb09_erf.png@700)
@@ -175,21 +180,21 @@ To plot a sequence of topographic plots define the time intervals in cfg.xli
 
 `<note exercise>`
 
-   * What changes in data if you extend the baseline correction from -200 ms to 0 ms to  -500 ms to 0? 
+   * What changes in data if you extend the baseline correction from -200 ms to 0 ms to  -500 ms to 0?
    * Apply a band-pass filter in the preprocessing instead of only a low-pass filter. Use for example the values from 1 to 30 Hz. What changes in the data? What are the pros and cons of using a high-pass filter?
 `</note>`
 #### Exercise 2
 
 `<note exercise>`
 
-   * Which type of source configuration can explain the topography? 
+   * Which type of source configuration can explain the topography?
 `</note>`
 
 ## Calculate the planar gradient
 
 With **[ft_megplanar](/reference/ft_megplanar)** we calculate the planar gradient of the averaged data. **[Ft_megplanar](/reference/ft_megplanar)** is used to compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient;
 
-The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbors (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](/reference/ft_megplanar)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the Fieldtrip function **[ft_combineplanar](/reference/ft_combineplanar)**. 
+The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbors (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](/reference/ft_megplanar)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the Fieldtrip function **[ft_combineplanar](/reference/ft_combineplanar)**.
 
 Calculate the planar gradient of the averaged dat
 
@@ -197,7 +202,7 @@ Calculate the planar gradient of the averaged dat
     cfg.feedback        = 'yes';
     cfg.method          = 'template';
     cfg.neighbours      = ft_prepare_neighbours(cfg, avgFIC);
-    
+
     cfg.planarmethod    = 'sincos';
     avgFICplanar        = ft_megplanar(cfg, avgFIC);
 
@@ -208,7 +213,7 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
 
 ## Plot the results (planar gradients)
 
-To compare the axial gradient data to the planar gradient data we plot them both in one figure here 
+To compare the axial gradient data to the planar gradient data we plot them both in one figure here
 
 Plot the results of the field of the axial gradiometers and the planar gradient to compare the
 
@@ -225,7 +230,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
     cfg.zlim = 'maxabs';
     cfg.layout = 'CTF151_helmet.mat';
     ft_topoplotER(cfg,avgFICplanarComb);
- 
+
 
 ![image](/media/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png@500)
 
@@ -236,7 +241,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
 `<note exercise>`
 Compare the axial and planar gradient field
 
-   * Why are there only positive values above the sources in the representation of the combined planar gradient? 
+   * Why are there only positive values above the sources in the representation of the combined planar gradient?
    * Explain the topography of the planar gradient from the fields of the axial gradient
 `</note>`
 ## Grand average over subjects
@@ -250,16 +255,15 @@ For more information about this type the following commands in the MATLAB comman
 
 ## Summary and suggested further reading
 
-This tutorial covered how to do event-related averaging on EEG/MEG data, and on how to plot the results. The tutorial gave also information about how to average the results across subjects. After calculating the ERPs/ERFs for each subject and for each condition in an experiment, it is a relevant next step to see if there are statistically significant differences in the amplitude of the ERPs/ERFs between the conditions. If you are interested in this, you can continue with the [ event-related statistics](/tutorial/eventrelatedstatistics) tutorial. 
+This tutorial covered how to do event-related averaging on EEG/MEG data, and on how to plot the results. The tutorial gave also information about how to average the results across subjects. After calculating the ERPs/ERFs for each subject and for each condition in an experiment, it is a relevant next step to see if there are statistically significant differences in the amplitude of the ERPs/ERFs between the conditions. If you are interested in this, you can continue with the [ event-related statistics](/tutorial/eventrelatedstatistics) tutorial.
 
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-Here you can find related FAQs: 
+Here you can find related FAQs:
 
 {{topic>preprocessing timelock +faq &list}}
 
 
 -----
 
-This tutorial was last tested by Robert with version 20150609 of FieldTrip using MATLAB R2014b on a 64-bit OS X computer. 
-
+This tutorial was last tested by Robert with version 20150609 of FieldTrip using MATLAB R2014b on a 64-bit OS X computer.

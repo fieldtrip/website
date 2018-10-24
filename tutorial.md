@@ -3,7 +3,6 @@ layout: default
 tags: tutorial
 ---
 
-
 # Table of contents
 {:.no_toc}
 

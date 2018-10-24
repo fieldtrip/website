@@ -3,6 +3,11 @@ layout: default
 tags: tutorial meg freq timelock preprocessing plot MEG-visuomotor151
 ---
 
+# Table of contents
+{:.no_toc}
+
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
 
 # Sensor-level ERF, TFR and connectivity analyses
 
@@ -29,8 +34,8 @@ The data file is available at this link:[ftp:/ftp.fieldtriptoolbox.org/pub/field
 
 Take a look at one of the data structure
 
-    data_left = 
-    
+    data_left =
+
            hdr: [1x1 struct]
          label: {153x1 cell}
           time: {1x140 cell}
@@ -45,7 +50,7 @@ Most important for now are the trial, time, and label fields. The trial field co
 Plot the data for the first trial, 130th channe
 
     plot(data_left.time{1}, data_left.trial{1}(130,:));
-    
+
 `<note exercise>`
 
 *  Which channel is the 130th channel?
@@ -140,17 +145,17 @@ We can compute the planar magnetic gradient using **[ft_megplanar](/reference/ft
     cfg.method          = 'template';
     cfg.template        = 'CTF151_neighb.mat';
     neighbours          = ft_prepare_neighbours(cfg, data);
-    
+
     cfg                 = [];
     cfg.method          = 'sincos';
     cfg.neighbours      = neighbours;
     data_planar         = ft_megplanar(cfg, data);
-    
+
     cfg                 = [];
     cfg.channel         = 'MEG';
     cfg.vartrllength    = 1;
     tl_planar           = ft_timelockanalysis(cfg, data_planar);
-    
+
     cfg                 = [];
     tl_plancmb          = ft_combineplanar(cfg, tl_planar);
 
@@ -163,7 +168,7 @@ Note that we create a 'neighbours' structure before calling **[ft_megplanar](/re
     ft_multiplotER(cfg, tl_plancmb);
 
 
-`<note warning>`The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform. 
+`<note warning>`The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
 Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/combineplanar_pipelineorder).
 `</note>`    
 ## Time-frequency analysis
@@ -173,13 +178,13 @@ Please be advised that this might result in unexpected and undesirable effects d
 Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)). The goal of this section is to compute and visualize event related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. The Fourier analysis will include the application of multitapers ((Mitra and Pesaran (1999) Analysis of dynamic brain imaging data.
 Biophys J. 76(2):691-708))((Percival and Walden, 1993 Spectral analysis for physical applications: multitaper and conventional univariate techniques. Cambridge, UK: Cambridge UP.)) which allow a better control of time and frequency smoothing.
 
-Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing. 
+Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
 ![image](/media/tutorial/timefrequencyanalysis/tfrtiles.png)
 
 *Figure 6: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases.*
 
-If you want to know more about tapers/ window functions you can have a look at this 
+If you want to know more about tapers/ window functions you can have a look at this
 [wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for Hanning window used in this tutorial. There is also a wikipedia site about multitapers, to take a look at it click [here](http://en.wikipedia.org/wiki/Multitaper).
 
 ### Time-frequency representations using Hanning tapers
@@ -199,19 +204,19 @@ The structure data_small contains less trials than the original data, because we
     cfg.method          = 'mtmconvol';
     cfg.taper           = 'hanning';
     cfg.channel         = 'MEG';
-    
+
     % set the frequencies of interest
     cfg.foi             = 20:5:100;
-    
+
     % set the timepoints of interest: from -0.8 to 1.1 in steps of 100ms
     cfg.toi             = -0.8:0.1:1;
-    
+
     % set the time window for TFR analysis: constant length of 200ms
     cfg.t_ftimwin       = 0.2 * ones(length(cfg.foi), 1);
-    
+
     % average over trials
     cfg.keeptrials      = 'no';
-    
+
     % pad trials to integer number of seconds, this speeds up the analysis
     % and results in a neatly spaced frequency axis
     cfg.pad             = 2;
@@ -258,12 +263,12 @@ Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_ana
 
     cfg = [];  
     ft_analysispipeline(cfg, freq);
-    
+
 The function ft_analysispipeline puts all conducted analysis steps into perspective and visualizes them in a flowchar
 
 ![image](/media/tutorial/sensor_analysis/analysispipeline_sensor_analysis.png)
 
-By clicking on one of the boxes (in MATLAB), a new figure will appear that shows all cfg-options that were used to in the respective function. 
+By clicking on one of the boxes (in MATLAB), a new figure will appear that shows all cfg-options that were used to in the respective function.
 ## Cortico-muscular coherence
 
 Up to now, we have exclusively looked at the characteristics of the MEG signal. However, as explained in the introduction, this data set also contains EMG data for the left and right wrist muscles. These signals provide excellent reference signals to investigate the connectivity between the cortex and the muscle. This is what we will now look at; specifically, we will compute the coherence between the MEG signal and the left and right EMG signals.
@@ -314,7 +319,7 @@ Non-time-resolved spectra (such as our coherence spectrum) can be visualized usi
     ft_multiplotER(cfg, conn);
 
 Again, this is an interactive plot, so click around it to get a nice overview of the exact spectrum and the topography of the peak (which is in the beta frequency range).
-    
+
 ![image](/media/tutorial/sensor_analysis/cmc.png)
 
 *Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG.*
@@ -340,4 +345,3 @@ Example script
 
 -----
 This tutorial has last been tested by Eelke with version 20130219 of FieldTrip, using MATLAB 2011b on a 64-bit Windows platform.
-

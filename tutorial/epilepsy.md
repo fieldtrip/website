@@ -3,8 +3,13 @@ layout: default
 tags: tutorial MEG-epilepsy
 ---
 
+# Table of contents
+{:.no_toc}
 
-#  Virtual channel analysis of epilepsy MEG data 
+* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+
+#  Virtual channel analysis of epilepsy MEG data
 
 `<note>`
 This documentation is under development and hence incomplete and perhaps incorrect.
@@ -19,13 +24,13 @@ The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fie
 
 *Male, age 9.  Right parietal Glioma with parietal extended lesionectomy. Corticography also showed interictal discharges in the frontal lobe, though seizures were of parietal origin. Following the MEG, was operated and is now seizure free and off medication.*
 
-MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes. 
+MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
 ### Analysis of the CTF dataset
 
 ####  Coregistration of the anatomical MRI
 
-The original MRI that is provided for this patient has been partially processed in the CTF software and is stored in CTF .mri format. This MRI is *not shared* for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip. 
+The original MRI that is provided for this patient has been partially processed in the CTF software and is stored in CTF .mri format. This MRI is *not shared* for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
 
     mri_orig = ft_read_mri('case1.mri');
 
@@ -39,7 +44,7 @@ Check the coregistration of the Polhemus headshape and the anatomical MRI. In th
     ft_determine_coordsys(mri_orig, 'interactive', 'no')
     ft_plot_headshape(headshape);
 
-In this case the coregistration is already nearly perfect. 
+In this case the coregistration is already nearly perfect.
 
 ![image](/media/tutorial/case1a-coreg.png@400)
 
@@ -57,7 +62,7 @@ The coregistration procedure starts with a coarse manual coregistration, followe
 
 ![image](/media/tutorial/case1a-coreg-manual.png@400)
 
-The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface of the **[/reference/ft_defacevolume](/reference/ft_defacevolume)** function. 
+The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface of the **[/reference/ft_defacevolume](/reference/ft_defacevolume)** function.
 
     cfg = [];
     cfg.translate = [100 0 -60];
@@ -74,7 +79,7 @@ For convenience in later plotting, we reslice the MRI so that the axes of the vo
     cfg = [];
     mri_resliced = ft_volumereslice(cfg, mri_defaced);
 
-Finally we should do a visual inspection of the realigned, defaced and replaced MRI. 
+Finally we should do a visual inspection of the realigned, defaced and replaced MRI.
 
     cfg = [];
     ft_sourceplot(cfg, mri_resliced)
@@ -85,9 +90,9 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
 
 #### Processing the channel level data
 
-    
+
     dataset = 'case1.ds';
-    
+
     cfg = [];
     cfg.dataset   = dataset;
     cfg.hpfilter  = 'yes';
@@ -98,7 +103,7 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     data = ft_preprocessing(cfg);
 
     %% visualize the preprocessed data
-    
+
     cfg = [];
     cfg.viewmode = 'vertical';
     cfg.channel  = 'MEG';
@@ -107,51 +112,51 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     ft_databrowser(cfg, data);
 
     %% compute channel-level kurtosis
-    
+
     datak = [];
     datak.label    = data.label;
     datak.dimord   = 'chan';
     datak.kurtosis = kurtosis(data.trial{1}')';
-    
+
     cfg = [];
     cfg.comment = 'computed channel-level kurtosis';
     datak = ft_annotate(cfg, datak);
-    
+
     cfg = [];
     cfg.layout    = 'CTF275.lay';
     cfg.parameter = 'kurtosis';
     ft_topoplotER(cfg, datak);
-    
+
     % caxis([0 40])
 
 #### Construction of the volume conduction model of the head
 
-    
+
     % we will use the defaced MRI, which has been realigned with the CTF system and resliced
 
     mri = ft_read_mri('mri_defaced.mat');
-    
+
     %% segment the brain compartment from the anatomical MRI and make the volume conduction model
-    
+
     cfg = [];
     cfg.tissue = 'brain';
     seg = ft_volumesegment(cfg, mri);
-    
+
     % save seg seg
-    
+
     cfg = [];
     cfg.tissue = 'brain';
     brain = ft_prepare_mesh(cfg, seg);
-    
+
     cfg = [];
     cfg.method = 'singleshell';
     headmodel = ft_prepare_headmodel(cfg, brain);
-    
+
     % save headmodel headmodel
-    
+
 #### Construction of the source model
 
-    
+
     cfg = [];
     cfg.grid.resolution = 7;
     cfg.grid.unit = 'mm';
@@ -165,7 +170,7 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     cfg.yrange = [min(sourcemodel.pos(:,2))-30 max(sourcemodel.pos(:,2))+30];
     cfg.zrange = [min(sourcemodel.pos(:,3))-30 max(sourcemodel.pos(:,3))+30];
     mri_resliced = ft_volumereslice(cfg, mri_defaced);
-    
+
     % save mri_resliced mri_resliced
 
     figure
@@ -173,23 +178,23 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     ft_plot_sens(data.grad, 'unit', 'mm', 'coildiameter', 10);
     ft_plot_mesh(sourcemodel.pos);
     ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced, 'style', 'intersect');
-    
+
     %% compute data covariance for source reconstruction
-    
+
     cfg = [];
     cfg.channel = 'MEG';
     cfg.covariance = 'yes';
     timelock = ft_timelockanalysis(cfg, data);
 
     %% this is not required, but speeds up repeated source reconstructions
-    
+
     cfg = [];
     cfg.channel = 'MEG';
     cfg.vol  = headmodel;
     cfg.grid = sourcemodel;
     cfg.normalize = 'yes';
     sourcemodel = ft_prepare_leadfield(cfg, timelock);
-    
+
     % save sourcemodel sourcemodel
 
     cfg = [];
@@ -206,67 +211,67 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     disp(i);
     sourcep.kurtosis(sel(i)) = kurtosis(sourcep.avg.mom{sel(i)});
     end
-    
+
     cfg = [];
     cfg.comment = 'computed source-level kurtosis';
     sourcep = ft_annotate(cfg, sourcep);
-    
+
     %% explore the results
-    
+
     cfg = [];
     cfg.parameter = 'kurtosis';
     sourcepi = ft_sourceinterpolate(cfg, sourcep, mrir);
-    
+
     %%
-    
+
     % cfg = [];
     % cfg.funparameter = 'mom';
     % ft_sourceplot(cfg, sourcep);
-    
+
     %%
-    
+
     cfg = [];
     cfg.funparameter = 'kurtosis';
     ft_sourceplot(cfg, sourcep);
 
     %%
-    
+
     cfg = [];
     cfg.funparameter = 'kurtosis';
     ft_sourceplot(cfg, sourcepi);
-    
+
     %% find peaks and plot timecourse
-    
+
     ispeak = findpeaksn(sourcep.kurtosis);
     j = find(ispeak(:));
     [m, i] = sort(-sourcep.kurtosis(j));
     peaks = j(i);
     disp(sourcep.pos(peaks(1:20),:));
-    
+
     % peak 1 is left frontal
     % peak 4 is right frontal
-    
+
     s1 = sourcep.avg.mom{peaks(1)};
     s4 = sourcep.avg.mom{peaks(4)};
     shift = 1.1*(max(s1) - min(s4));
-    
+
     figure;
     plot(sourcep.time, s1, 'r');
     hold on
     plot(sourcep.time, s4 + shift, 'm');
     legend({'area 1', 'area 4'})
-    
+
     datas = [];
     datas.time = {sourcep.time};
     datas.trial = {[s1; s4]};
     datas.label = {'area 1', 'area 4'}';
-    
+
     cfg = [];
     cfg.comment = 'constructed virtual-channel raw data structure';
     datas = ft_annotate(cfg, datas);
 
     %%
-    
+
     cfg = [];
     cfg.funparameter = 'kurtosis';
     cfg.location = sourcep.pos(peaks(1),:);
@@ -275,10 +280,10 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     ft_sourceplot(cfg, sourcepi);
 
     %% find maxima in virtual channel time series based on 6 SDs
-    
+
     sd1 = std(s1);
     sd4 = std(s4);
-    
+
     tr = abs(s1)>6*sd1 & abs(s4)>6*sd4;
     % tr = conv(double(tr), ones(1,60), 'same');
     tr = tr>0;
@@ -286,10 +291,10 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     endsample = find(diff([tr 0]==1));
 
     %%
-    
+
     cfg = [];
     datac = ft_appenddata(cfg, data, datas);
-    
+
     cfg = [];
     cfg.artfctdef.interictal.artifact = [begsample(:) endsample(:)];
     cfg.viewmode = 'vertical';
@@ -299,15 +304,15 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     ft_databrowser(cfg, datac);
 
     %% show the provenance of the analysis pipeline
-    
+
     cfg = [];
     cfg.filename = 'sourcepi';
     cfg.filetype = 'html';
     ft_analysispipeline(cfg, sourcepi);
-    
+
     !open sourcepi.html
-    
- 
+
+
 
 
 ### Analysis of the Elekta dataset
@@ -318,7 +323,7 @@ FIXME
 
 *Female, age 14. Epilepsy. Referral for MEG because EEG did not allow laterlisation or localisation of discharges, though clinically they appeared to come from the left hemisphere. Functional neuroimaging in the form of a PET scan showed a right area of hypo metabolism. Surgical follow-up information about this patient is not available.*
 
-MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes. 
+MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
 ### Analysis of the CTF dataset
 
