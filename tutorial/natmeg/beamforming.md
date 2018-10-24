@@ -57,7 +57,7 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-{{:tutorial:bf_pipeline.jpg?direct&650|}}
+![image](/media/tutorial/bf_pipeline.jpg@650)
 
 *Figure 1; An example of a pipeline to locate oscillatory sources.*
 

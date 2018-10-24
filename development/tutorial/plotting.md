@@ -35,7 +35,7 @@ Plotting 2D data at the sensor level using:  ft_singleplotER (top left), ft_mult
 
 ![image](/media/tutorial/plotting/figure5.png@250)
 ![image](/media/tutorial/plotting/figure5era.png@250)
-{{tutorial:plotting:figure5.jpg?250|topoplotER}}
+![image](/media/tutorial/plotting/figure5.jpg@250)
 
 Plotting 3D data at the sensor level: using ft_singleplotTFR (top left), ft_multiplotTFR (top right) and ft_topoplotTFR (bottom left) 
 
@@ -205,15 +205,15 @@ In a data inspection phase you can use the interactive modus to go from one plot
     cfg.interactive = 'yes';
     figure; ft_multiplotTFR(cfg,TFRhann)
 
-{{tutorial:plotting:interactive1.jpg?300}}
+![image](/media/tutorial/plotting/interactive1.jpg@300)
 
 plot with ft_multiplot, and select channels of interest
 
-{{tutorial:plotting:interactive2.jpg?300}}
+![image](/media/tutorial/plotting/interactive2.jpg@300)
 
 selected channels are averaged and displayed as one plot (ft_singleplotTFR is called).  Then, select a section within the TFR to get a topoplot
 
-{{tutorial:plotting:interactive3.jpg?300}}
+![image](/media/tutorial/plotting/interactive3.jpg@300)
 
 ### Plotting clusters
 
@@ -255,7 +255,7 @@ The function automatically finds the clusters in the data which are smaller than
 
 
 
-{{:tutorial:plotting:plottingtutorial_tfrstat.jpg?400|clusterplotTFR}}
+![image](/media/tutorial/plotting/plottingtutorial_tfrstat.jpg@400)
 
 
 ### Plotting channel-level connectivity

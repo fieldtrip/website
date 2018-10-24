@@ -138,4 +138,4 @@ The "gain" of a specific channel can be calculated by: (Physical max - Physical 
 The last 10 fields are defined for each fields separately. Each channel can be different.
 `</note>`
 
-{{:getting_started:file_format_bdf.gif|}}
+![image](/media/getting_started/file_format_bdf.png)

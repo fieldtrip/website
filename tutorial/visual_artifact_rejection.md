@@ -79,11 +79,11 @@ If your dataset contains MEG and EEG channels (like this dataset), the MEG and E
 
 In trial 15 notice the slower drift observed over a larger group of sensors. This is most likely due to a head movement.
 
-{{:tutorial:artifactdetect:untitled.jpg|}}
+![image](/media/tutorial/artifactdetect/untitled.jpg)
 
 Trial 84 shows an artifact which is caused by the electronics. Notice the jump in sensor MLT4
 
-{{:tutorial:artifactdetect:untitled-1.jpg?530|}}
+![image](/media/tutorial/artifactdetect/untitled-1.jpg@530)
 
 By browsing through the trials, related artifacts become evident (trial 15, 36, 39, 42, 43, 45 ,49, 50, 81, 82 and 84). They should be marked as 'bad'. After pressing the 'quit' button the trials marked 'bad' are now removed from the data structure. 
 
@@ -105,7 +105,7 @@ It can also be convenient to view data from one channel at a time. This can be p
 Click through the data using the > button.
 While clicking through all the trials you see that channels MLO12 and MLP31 contain a lot of artifacts (see the figure below ). They should be marked as 'bad'. After pressing the 'quit' button the channels marked 'bad' are now removed from the data structure. 
 
-{{:tutorial:artifactdetect:untitled-2.jpg|}}
+![image](/media/tutorial/artifactdetect/untitled-2.jpg)
 
 
 ### Manual artifact rejection - display a summary

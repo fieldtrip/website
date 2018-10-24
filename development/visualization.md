@@ -33,7 +33,7 @@ There are 3 visualization path
 3) Go directly to ft_singleplotER representations in time or frequency space.
 
 
-{{:development:4d_plotting_flow.jpg|}}
+![image](/media/development/4d_plotting_flow.jpg)
 
 
 #### Sample Data For Development

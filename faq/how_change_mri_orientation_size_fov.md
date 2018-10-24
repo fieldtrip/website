@@ -76,7 +76,7 @@ In the figures above you can appreciate the change in the FOV by considering the
 
 The ft_volumereslice operations, such as changing the orientation of the anatomy and changing the resolution of the voxels can be conceptually understood by looking at the figure belo
 
-{{:tutorial:reslice2.jpg?nolink&500|}}
+![image](/media/tutorial/reslice2.jpg@500)
 
 The figure shows the original volumetric slices (dotted black lines) and the desired slices (bold red). Note that the distance between the original slices is 2 cm, whereas the pixel distance within the same slice is 1 cm (black). After re-slicing (red) the voxel's dimensions are the same. You can also see that the voxels are aligned with the axes of the coordinate system to which the image was re-aligned earlier (see the black vs. red axes at the bottom of the figures). 
 

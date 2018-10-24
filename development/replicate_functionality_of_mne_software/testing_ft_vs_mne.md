@@ -79,7 +79,7 @@ The data looks like this when I plot i
 	cfg=[];
 	topoplotER(cfg,data)
 
-{{:development:phantom_topoploter.jpg?400|}}
+![image](/media/development/phantom_topoploter.jpg@400)
 
 ### Averaging and Noise-covariance estimation
 
@@ -139,7 +139,7 @@ It looks like this (the function below creates a mesh out of it
 	
 	ft_plot_vol(vol_ph)
 
-{{:development:plot_vol_vol_ph.jpg?400|}}
+![image](/media/development/plot_vol_vol_ph.jpg@400)
 ### Source space
 
 The source space is a 2D surface.
@@ -152,7 +152,7 @@ The source space is a 2D surface.
 	
 	ft_plot_mesh(pos);
 
-{{:development:ft_plot_mesh_pos.jpg?300|}}
+![image](/media/development/ft_plot_mesh_pos.jpg@300)
 
 (This latest code does not work properly with an earlier version of Matlab (Matlab R2008b).) 
 ### Leadfield
@@ -190,12 +190,12 @@ It is not clear for me when you have to define the option grid.inside and grid.o
 	figure;
 	mne1.avg.pow(100,30)
 
-{{:development:plot_mne1.jpg?400|}}
+![image](/media/development/plot_mne1.jpg@400)
 
 	
 	imagesc(reshape(mne1.avg.pow(:,30), 29,29))
 
-{{:development:plot_mne1_2.jpg?400|}}
+![image](/media/development/plot_mne1_2.jpg@400)
 
 ## Minimum-norm estimate in FieldTrip using simulated data
 
@@ -427,7 +427,7 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	figure;plot(source.avg.mom{source.inside(100)}');
 
 
-{{:development:plot_source_100.jpg?300|}}
+![image](/media/development/plot_source_100.jpg@300)
 
 	
 	% strange enough the data are not 0 mean
@@ -459,7 +459,7 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
 
-{{:development:ftplotmesh_ft_phantom.jpg?300|}}
+![image](/media/development/ftplotmesh_ft_phantom.jpg@300)
 
 I have also tried to plot it the same way as I plot the mesh for the mne suite results (see below). And I changed lambda to 0.01 (because 0.01^2 = 1e-4).
 
@@ -486,7 +486,7 @@ I have also tried to plot it the same way as I plot the mesh for the mne suite r
 	ft_plot_mesh(bnd,'vertexcolor',mred,'edgecolor','none');axis on
 
 
-{{:development:ftplotmesh_ft_phantom_at198.jpg?300|}}
+![image](/media/development/ftplotmesh_ft_phantom_at198.jpg@300)
 
 ### Part 3.
 
@@ -550,7 +550,7 @@ Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
 	ft_plot_mesh(grid.pos(gridnew,:));
 
 
-{{:development:griddiff_mne_ft.jpg?450|}}
+![image](/media/development/griddiff_mne_ft.jpg@450)
 
 	
 	grid2 = grid;
@@ -624,11 +624,11 @@ FIXME I should match the positions of the source points with each other.
 	figure;plot(source2.avg.mom{source2.inside(100)}');
 
 
-{{:development:replicate_functionality_of_mne_software:plot_source3_100.jpg?650|}}
+![image](/media/development/replicate_functionality_of_mne_software/plot_source3_100.jpg@650)
 
 The same figure of a random source calculated with the original leadfield of FieldTrip looks like thi
 
-{{:development:replicate_functionality_of_mne_software:plot_source_100.jpg?650|}}
+![image](/media/development/replicate_functionality_of_mne_software/plot_source_100.jpg@650)
 
 Note, that the values in the second figure are much larger.
 
@@ -661,7 +661,7 @@ Note, that the values in the second figure are much larger.
 	ft_plot_mesh(bnd,'vertexcolor',mred,'edgecolor','none');axis on
 
 
-{{:development:replicate_functionality_of_mne_software:ftplotmesh_ft_phantom_at284_leadfmne.jpg?300|}}
+![image](/media/development/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at284_leadfmne.jpg@300)
 
 Compare this to figure at the end of the next session ("Minimum-norm estimate with MNE Suite using phantom data").
 ## Minimum-norm estimate in MNE Suite using phantom data
@@ -903,7 +903,7 @@ I got a res structure.
 	figure; plot(res.sol(100,:));
 
 
-{{:development:plot_res_sol_100.jpg?400|}}
+![image](/media/development/plot_res_sol_100.jpg@400)
 
 	
 	[r,c]=find(res.sol==max(res.sol(:)))
@@ -938,6 +938,6 @@ Maximum was at 284.
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
 
-{{:development:ftplotmesh_mne_phantom_at284.jpg?300|}}
+![image](/media/development/ftplotmesh_mne_phantom_at284.jpg@300)
 
 

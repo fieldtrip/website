@@ -26,9 +26,9 @@ Because of the difficulty of localizing the LPA and RPA points in both EEG/MEG a
 
 At the Donders Centre in Nijmegen we use ear molds with a hole in them (see below) to attach the markers: In the MEG scanner we insert a small tube into the hole (the tube is also used for auditory stimulation) and attach the MEG localizer coil to the tube. In the MRI scanner we use the same ear molds, but rather insert a custom-made marker with a small drop of vitamine E into the hole. The position thereby obtained with the MEG localizer coils is as precisely as possible reproduced in the MRI, given the movement that is allowed by the ear molds. We have various sizes of ear molds, both at the MEG and MRI scanner, and subjects should use the same size in both scanners.
 
-{{:faq:ear_molds_1.jpg?200|Ear molds in various sizes}}
+![image](/media/faq/ear_molds_1.jpg@200)
 
-{{:faq:ear_molds_2.jpg?200|Ear mold with MRI marker}}
+![image](/media/faq/ear_molds_2.jpg@200)
 
 When using different fiducial locations in the MEG and the MRI, the difference in the coordinates (which can be 5-20 mm) has to be taken into account in the coregistration procedure, otherwise the source localization would suffer from the systematic coregistration error. Luckily, most research labs acquire the EEG/MEG and the MRI using the same fiducial locations.
 

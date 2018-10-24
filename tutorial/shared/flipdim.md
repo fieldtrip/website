@@ -29,12 +29,12 @@ The example segmented data is available at [ftp:/ftp.fieldtriptoolbox.org/pub/fi
 	ft_sourceplot(cfg,segmentedmri); %segmented csf matter on top
 
 
-{{:example:mnispace:segmentcheck_right.jpg|}}
+![image](/media/example/mnispace/segmentcheck_right.jpg)
 
 
 When the segmented volumes are not correctly aligned with the anatomical volume, they could look like this. 
 
-{{:example:mnispace:segmentcheck_wrong.jpg|}}
+![image](/media/example/mnispace/segmentcheck_wrong.jpg)
 
 In this particular example, the volumes are flipped one too many times around the x-axis. In order to solve this, one could flip the image around the x-axis again before preparing the headmodel. For exampl
 

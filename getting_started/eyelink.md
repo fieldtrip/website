@@ -377,6 +377,6 @@ In case of even screen width and height, Presentation assumes an extra Pixel, i.
 
 An example for mapping between Gaze postions and presented stimuli (trials 1 to 5) is shown below (+ indicates presented targets, Gaze position depicted in blue).
 
-{{ :getting_started:s35_accuracy2.jpg?300 |}}
+![image](/media/getting_started/s35_accuracy2.jpg@300)
 
 In this example, a 1920 x 1080 screen was used.

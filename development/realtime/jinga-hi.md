@@ -14,7 +14,7 @@ The [Jinga-Hi](http://www.jinga-hi.com) JAGA16 is a miniaturised stand-alone dev
 
 The packaged version that is depicted above includes a micro-USB interface at the side that can be used to power the device, although for normal operation it should be battery powered. Below is the device (wrapped in protective foil) besides a 500mAh battery.
 
-{{:development:realtime:jaga16b.jpg?300|}}
+![image](/media/development/realtime/jaga16b.jpg@300)
 
 Jinga-Hi [releases](https://github.com/Jinga-hi) MATLAB (mex-based) and Python code to interface with the device. Since the device dumps the data in a well-defined format over a UDP connection, it is not hard to implement your own software to access the data. 
 

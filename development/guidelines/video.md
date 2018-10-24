@@ -52,7 +52,7 @@ Using the internal [microphone](http://reviewsformusicians.com/best-microphone-f
 When you plan to do an audiovisual recording you need need to synchronize the audio recording with the video recording. This can be done later (i.e. during editing) but it is easier to record audio and video simultaneously from the start. For this purpose the Zoom H2 be used as a USB microphone. 
 To use the Zoom H2 as a USB microphone, make sure it is in XY recording mode. This is a 2-channel mode (4-channels do not work through USB) which is directed towards you if you have the menu screen directed towards yo
 
-{{:development:guidelines:zoom_xy.jpg?300|}}
+![image](/media/development/guidelines/zoom_xy.jpg@300)
 
 Then, to connect the Zoom H2 to your compute
 
@@ -121,7 +121,7 @@ Using a camera with a good zoom, it is possible to place it in front of a projec
 
 When using a webcam, you can use the setup shown below (ignore the extra camcorder). The webcam is placed on the top of the laptop, which is placed on a platform. This allows you to stand up, which is good for you own energy and voice, as well as coming across more dynamic. The microphone is on a separate tripod, placed just out of view of the webcam. It is connected to the laptop by USB cable. This setup is relatively easy to put together and to edit later, because the audio and video are recorded together and both are of good quality. Also it is quite mobile and robust. Both the microphone tripod and laptop platform are in Robert's office.
 
-{{:development:videosetup1.jpg?300|}}
+![image](/media/development/videosetup1.jpg@300)
 
 ### Recording (Software)
 

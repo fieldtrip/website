@@ -90,7 +90,7 @@ Once your component analysis is done, you can look at the topography of the comp
 	ft_topoplotIC(cfg, comp)
 
 
-{{:example:small_20components_topo2.jpg?400|}}
+![image](/media/example/small_20components_topo2.jpg@400)
 
 To be certain these are the ECG components, you can also look at their time courses. In the image below, components 4 and 17 show a regular signal, typical for the heartbeat. You can also flip through all the trials, to see if this regular signal continues throughout the recording.  (Note: ft_componentbrowser is deprecated; please use ft_databrowser instead.)
 
@@ -102,7 +102,7 @@ To be certain these are the ECG components, you can also look at their time cour
 	ft_databrowser(cfg, comp)
 
 
-{{:example:small_ecgcomponents_compbrowser2.jpg?400|}}
+![image](/media/example/small_ecgcomponents_compbrowser2.jpg@400)
 
 However, given that you measured the heartbeat on a separate channel, you can use this information to extract the two components of interest. Two possible ways of doing this is by using timelock data, and frequency data. You do not need to use both unless you are uncertain which components to remove.
 
@@ -121,9 +121,9 @@ However, given that you measured the heartbeat on a separate channel, you can us
 
 You will be asked for feedback at two points while running this code. The visual display of your data should look similar to this. If it doesn't, you may still have some jump artifacts in the data that you haven't removed.
 
-{{:example:ecgpeaks1.jpg?400|}}
+![image](/media/example/ecgpeaks1.jpg@400)
 
-{{:example:ecgpeaks2.jpg?400|}}
+![image](/media/example/ecgpeaks2.jpg@400)
 
 You can go on with the analysis now.
 
@@ -174,8 +174,8 @@ Below is the code for generating images which will help you detect which compone
 	subplot(2,1,1); plot(timelock.time, timelock.avg(1,:))
 	subplot(2,1,2); imagesc(timelock.avg(2:end,:));
 
-{{:example:ecgtimelock_corr.jpg?400|}}
-{{:example:ecgimagesc.jpg?400|}}
+![image](/media/example/ecgtimelock_corr.jpg@400)
+![image](/media/example/ecgimagesc.jpg@400)
 
 A second way of finding which components contain the ECG artifacts is through calculating coherence of your component analysis with the heartbeat. Two components should be prominent here as well.
 
@@ -203,7 +203,7 @@ A second way of finding which components contain the ECG artifacts is through ca
 
 Again, by zooming in to the lower subplot, you can see that in this case those are components 4 and 17.
 
-{{:example:ecgcoherence.jpg?400|}}
+![image](/media/example/ecgcoherence.jpg@400)
 
 Based on the figures, you now should select the components that explain the ECG artifact, and remove them from your data. The resulting dataset will contain the measured brain activity, with the variance attributable to the heartbeat partialled out. 
 

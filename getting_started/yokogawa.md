@@ -257,7 +257,7 @@ The location of the crosshair is expressed in voxel indices and in mm units rela
 
 You now have to find the three forehead markers in the MRI and write down the coordinates of these three fiducials in the head coordinate system.
 
-{{:getting_started:forehead_coil.jpg?600px}}
+![image](/media/getting_started/forehead_coil.jpg@600)
 
 Using the three fiducial points expressed both in head coordinates and in MEG dewar coordinates, we can transform all other spatial locations (i.e. the sensors) from dewar coordinates to head coordinates. We have determined the positions relative to the head coordinate system using the MRI, so we now need the fiducial positions that were recorded relative to the MEG dewar coordinate system. 
 
@@ -448,7 +448,7 @@ Lets check out the sensor level first
 	% figure; ft_topoplotTFR(cfg, freq_l_bl);
 	
 
-{{:getting_started:cuer_versus_bl.jpg?400px}}
+![image](/media/getting_started/cuer_versus_bl.jpg@400)
 
 not too bad...
 
@@ -540,7 +540,7 @@ Plot results
 	cfg.colorbar        = 'yes';
 	ft_sourceplot(cfg,source_right_bl_int);
 
-{{:getting_started:beamformer_single_subject_lambda_0005perc_b.jpg?600px}}
+![image](/media/getting_started/beamformer_single_subject_lambda_0005perc_b.jpg@600)
 
 `<note exercise>`
 Thanks to Akiko Ikkai for contributing her Yokogawa data to make this page

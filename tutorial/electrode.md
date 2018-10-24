@@ -66,7 +66,7 @@ We visualise the mesh surface
 
 	ft_plot_mesh(head_surface)
 
-{{ :tutorial:structure_headsurface.jpg?400 |}}
+![image](/media/tutorial/structure_headsurface.jpg@400)
 *Figure 1: Mesh recorded with 3D-scanner*
 
 In the next step we will transform our mesh into the ctf-coordinates. For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
@@ -97,7 +97,7 @@ Again we visualise the head surface, but we also plot the axes along with it.
 	ft_plot_axes(head_surface)
 	ft_plot_mesh(head_surface)
 
-{{ :tutorial:structure_realigned.jpg?1000 |}}
+![image](/media/tutorial/structure_realigned.jpg@1000)
 *Figure: Realigned head surface*
 
 ### Identify electrode locations

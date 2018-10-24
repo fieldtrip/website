@@ -303,13 +303,13 @@ In MNE Suite, the alignment and the coordinate transformation happens only just 
 	ft_plot_mesh(innerskull);
 
 
-{{:development:innerskull_5120.jpg?300|}}
+![image](/media/development/innerskull_5120.jpg@300)
 
 #### Innerskull in tkmedit
 
 I could load in only the sub10_inner_skull_surface file (output of mne_watershed_bem) in tkmedit overlayed on the T1.mgz.
 
-{{:development:sub10_inner_skull_surface.jpg?350|}}
+![image](/media/development/sub10_inner_skull_surface.jpg@350)
 
 #### Plotting vol from FT
 
@@ -317,7 +317,7 @@ I could load in only the sub10_inner_skull_surface file (output of mne_watershed
 	ft_plot_mesh(vol.bnd);
 
 
-{{:development:plot_vol.jpg?300|}}
+![image](/media/development/plot_vol.jpg@300)
 
 
 #### Plotting bnd3 from FT
@@ -326,7 +326,7 @@ I could load in only the sub10_inner_skull_surface file (output of mne_watershed
 	ft_plot_mesh(bnd3);
 
 
-{{:development:plot_bnd3.jpg?300|}}
+![image](/media/development/plot_bnd3.jpg@300)
 
 ### Anatomical processing: EEG
 
@@ -377,15 +377,15 @@ With this kind of segmentation, the output is the identification of the gray mat
 	
 	seg.gra
 	
-	{{:development:mgz_gray.jpg?400|}}
+	![image](/media/development/mgz_gray.jpg@400)
 	
 	seg.whit
 	
-	{{:development:mgz_white.jpg?400|}}
+	![image](/media/development/mgz_white.jpg@400)
 	
 	seg.cs
 	
-	{{:development:mgz_csf.jpg?400|}}
+	![image](/media/development/mgz_csf.jpg@400)
 	
 	
 	This segmentation is not the same what MNE does with the help of FS. In order to make BEM meshes, one should create a volume that contains the brain, the brain with (or until) the skull and the entire head until the skin. For creating BEM meshes, I have followed this script: [[example:create_bem_headmodel_for_eeg|Create BEM headmodel for EEG]]. This script needs a proper documentation because it is difficult to figure out to what one should attend during creating the brain, skin, skull volumes. :
@@ -410,7 +410,7 @@ With this kind of segmentation, the output is the identification of the gray mat
 	
 	The following picture show the BEM meshe
 	
-	{{:development:meshes2.jpg?500|}}
+	![image](/media/development/meshes2.jpg@500)
 	
 	
 	
@@ -525,7 +525,7 @@ In Matlab:
 	ft_plot_mesh(bnd_mne)
 
 
-{{:development:mesh_bnd_ts_mne.jpg?750|}}
+![image](/media/development/mesh_bnd_ts_mne.jpg@750)
 
 And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the matlab reducepatch functio
 
@@ -536,7 +536,7 @@ And the source space of the same volume created in FieldTrip, and reduced to the
 	ft_plot_mesh(bnd2_ft);
 
 
-{{:development:mesh_bnd5_ts_ft.jpg?650|}}
+![image](/media/development/mesh_bnd5_ts_ft.jpg@650)
 
 
 ## Step 3: Tutorial 

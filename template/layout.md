@@ -164,8 +164,8 @@ This is a custom 64-Channel-Arrangement for the MPI. Note that the electrode pos
 
 This is the standard 64-channel-Arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the easycap electrode caps. This particular layout was created using the [easycapM1 layout](http://www.fieldtriptoolbox.org/_media/template/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two eletrodes (AFz, FCz) were renamed to their purpose of being Ground(Gnd) and Reference(Ref) electrode.
 
-{{:template:acticap-64-channel-standard-2_original.jpg?direct&200 |actiCAP-64-channel-Standard-2 Brain Products}}
-{{:template:acticap-64-channel-standard-2_fieldtrip.jpg?direct&200 |actiCAP-64-channel-Standard-2 FieldTrip}}
+![image](/media/template/acticap-64-channel-standard-2_original.jpg@200)
+![image](/media/template/acticap-64-channel-standard-2_fieldtrip.jpg@200)
 
 
 

@@ -88,9 +88,9 @@ While still in MRIViewer, perform the following action
 
 At the DCCN we use ear-molds that come in a variety of sizes to position the MEG head localiser coils just outside the left and right ear . For the MRI we use the same ear-molds, but now with small MRI markers.
 
-{{:faq:ear_molds_1.jpg?0x300|Ear molds in various sizes}}
+![image](/media/faq/ear_molds_1.jpg@0x300)
 
-{{:faq:ear_molds_2.jpg?0x300|Ear mold with MRI marker}}
+![image](/media/faq/ear_molds_2.jpg@0x300)
 
 On top of that, the right ear also contains a large vitamine E marker to help distinguish left and right. At the location of the nasion we don't put a marker. Below you see three slices with the right-ear marker. Note that the ear marker is the small dot in the middle of the ear shell (yellow arrow), not the large dot close to the ear lobe (red arrow; that is the vitamine E capsule to indicate the right side).
 

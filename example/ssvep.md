@@ -15,7 +15,7 @@ The design of a trial is shown in the figure below. On each trial, a ring is fla
 
 There are 2 loads x 4 blocks x 4 ring excentricities x 10 trials = 320 SSVEP trials. Because 4 rectangles are shown within each trial, this gives 4 x 320 = 1280 rectangle trials. This gives a total of 320 + 1280 = 1600 trials.
 
-{{:example:ssvep.jpg?600|}}
+![image](/media/example/ssvep.jpg@600)
 
 
 In the analysis, consider whether the frequency tagged (or steady state ) stimulus is 

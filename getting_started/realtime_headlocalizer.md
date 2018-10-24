@@ -88,7 +88,7 @@ The hostname address should points to the location where the buffer is run - i.e
 
 ## Practical issues and suggestions
 
-It is recommended to install a {{:getting_started:switch-box-hd15-2-way-bestlink.jpg?linkonly|VGA switch }} or 'video matrix' in the lab that can overwrite the signal from the stimulus presentation computer by that of the realtime visualization computer. This way the visualization can also be presented to the subject in the magnetically shielded room, allowing the subject to reposition himself/herself.
+It is recommended to install a ![image](/media/getting_started/switch-box-hd15-2-way-bestlink.jpg) or 'video matrix' in the lab that can overwrite the signal from the stimulus presentation computer by that of the realtime visualization computer. This way the visualization can also be presented to the subject in the magnetically shielded room, allowing the subject to reposition himself/herself.
 
 For **Neuromag** systems, the real-time head localizer uses a rigidbody constraint to optimally dipole fit the real time positions of the head position indicator (HPI) coils, and thus of the subject's head. This means a hypothetical magnetic field distribution of all coils combined, is generated, based on their relative digitized positions. The actual positions and orientations of the coils making up this rigid body are then approximated by fitting the resulting hypothetical field distribution to the actually recorded magnetic field distribution. It is, thus, important that all coils are working optimally. This can be [checked offline](/faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils?), using an already recorded dataset.
 
