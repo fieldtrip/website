@@ -244,9 +244,10 @@ The head model (vol) contains three structures in the **bnd** field. These are t
 	figure;
 	ft_plot_mesh(vol.bnd(1),'facecolor','none'); %brain
 
-\\
-{{:tutorial:headmodel:skin.png?180|triangulation of the skin surface}}{{:tutorial:headmodel:skull.png?180|triangulation of the outside skull surface}}{{:tutorial:headmodel:brain.png?180|triangulation of the outside brain surface}}
-\\
+{{:tutorial:headmodel:skin.png?180|triangulation of the skin surface}}
+{{:tutorial:headmodel:skull.png?180|triangulation of the outside skull surface}}
+{{:tutorial:headmodel:brain.png?180|triangulation of the outside brain surface}}
+
 *Figure 3. The geometry of the volume conduction model using BEM ('dipoli'): scalp (left), skull (middle) and brain (right)*
 
 	

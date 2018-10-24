@@ -83,7 +83,8 @@ And we visualize the dipole and see where it was localized in the brain.
 	ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 
 
-{{:workshop:ohbm2018:ohbm_sep_dipfit_simbio_top.png?direct&500|}}{{:workshop:ohbm2018:ohbm_sep_dipfit_simbio_side.png?direct&500|}}
+{{:workshop:ohbm2018:ohbm_sep_dipfit_simbio_top.png?direct&500|}}
+{{:workshop:ohbm2018:ohbm_sep_dipfit_simbio_side.png?direct&500|}}
 
 *Figure 1. Dipole computed with FEM model for EEG*
 
@@ -130,7 +131,8 @@ And we visualize the dipole and see where it was localized in the brain.
 	ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
 
-{{:workshop:ohbm2018:ohbm_sep_dipfit_duneuro_top.png?direct&500|}}{{:workshop:ohbm2018:ohbm_sep_dipfit_duneuro_side.png?direct&500|}}
+{{:workshop:ohbm2018:ohbm_sep_dipfit_duneuro_top.png?direct&500|}}
+{{:workshop:ohbm2018:ohbm_sep_dipfit_duneuro_side.png?direct&500|}}
 
 *Figure 2. Dipole computed with FEM model for MEG*
 
@@ -142,7 +144,8 @@ And we visualize the dipole and see where it was localized in the brain.
 	ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
 
-{{:workshop:ohbm2018:ohbm_sep_combined_top.png?500|}} {{:workshop:ohbm2018:ohbm_sep_combined_side.png?500|}}
+{{:workshop:ohbm2018:ohbm_sep_combined_top.png?500|}}
+{{:workshop:ohbm2018:ohbm_sep_combined_side.png?500|}}
 
 
 ## Minimum norm estimate
@@ -260,7 +263,8 @@ and the related [example scripts](/example
 \\
 {{topic>example +headmodel +eeg &list}}
 and other tutorials
-{{topic>tutorial +electrode &list}}{{topic>tutorial +headmodel +meg &list}}
+{{topic>tutorial +electrode &list}}
+{{topic>tutorial +headmodel +meg &list}}
 
 
 

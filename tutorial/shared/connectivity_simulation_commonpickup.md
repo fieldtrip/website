@@ -82,7 +82,8 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	
 
 
-{{:tutorial:connectivity:mixinggranger.png?nolink&300|}}{{:tutorial:connectivity:mixingcoherence.png?nolink&300|}}
+{{:tutorial:connectivity:mixinggranger.png?nolink&300|}}
+{{:tutorial:connectivity:mixingcoherence.png?nolink&300|}}
 
 #### Exercise 5
 

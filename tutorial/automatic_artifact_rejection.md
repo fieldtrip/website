@@ -64,12 +64,12 @@ The automatic artifact detection approach used here is based on three characteri
 *This results in one timecourse representing standardized deviations from the mean of all channels.*  
 
 The formulas for calculating the z-scores are:\\
-{{:tutorial:eq1.png?120, z`<sub>`ch,t`</sub>` = (x`<sub>`ch,t`</sub>` - mu`<sub>`ch`</sub>`)/(sigma`<sub>`ch`</sub>`)}}
+{{:tutorial:eq1.png?120}}
 
 where\\
 
-{{:tutorial:eq2.png?nolink&120, mu`<sub>`ch`</sub>` = (1/N) sum`<sub>`t=1`</sub>``<sup>`N`</sup>`(x`<sub>`ch,t`</sub>`) |}}
-{{:tutorial:eq3.png?nolink&150, sigma`<sub>`ch`</sub>` = sqrt( (1/N) sum`<sub>`t=1`</sub>``<sup>`N`</sup>`(x`<sub>`ch,t`</sub>` - mu`<sub>`ch`</sub>`)`<sup>`2`</sup>` ) |}}\\
+{{:tutorial:eq2.png?nolink&120}}
+{{:tutorial:eq3.png?nolink&150}}
 \\
 \\
 with: N = the total number of time samples.\\ 
@@ -78,7 +78,7 @@ In the code this formula is formed such as to optimize the calculation of the ch
 
 The summation is performed lik
 
-{{:tutorial:eq4.png?120, zsum`<sub>`t`</sub>` = (sum`<sub>`ch`</sub>``<sup>`C`</sup>`(z`<sub>`ch,t`</sub>` / (sqrt(C)) |}}\\
+{{:tutorial:eq4.png?120}}
 \\
 \\
 

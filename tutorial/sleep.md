@@ -780,7 +780,8 @@ Candidates for slow waves or sleep spindle events can be detected using **[ft_ar
 	[cfg, ] = ft_artifact_zvalue(cfg,data_continuous_nonREM);
 
 
-{{:tutorial:sleep_slow-wave_artifact.png?400|}}{{:tutorial:sleep_spindle_artifact.png?400|}}
+{{:tutorial:sleep_slow-wave_artifact.png?400|}}
+{{:tutorial:sleep_spindle_artifact.png?400|}}
 
 #### Exercise 5
 

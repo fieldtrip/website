@@ -18,7 +18,8 @@ The following benchmarks have been run using the **rt_benchmark** script in the 
 
 The first name in the legend always refers to the machine where the **rt_benchmark** script was run from, whereas the other name behind the dash refers to the machine that contained the buffer, with the exception of **dma**, which means that the buffer was kept in the same Matlab instance, thus involving no TCP/IP communication.
 
-{{:faq:benchmark_w.png|}}{{:faq:benchmark_r.png|}} 
+{{:faq:benchmark_w.png|}}
+{{:faq:benchmark_r.png|}} 
 
 The dramatic dip for the mentat2xx-localhost connections needs further investigation.
 

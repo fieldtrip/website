@@ -253,7 +253,8 @@ Trying to understand the results above, we looked at the phantom data in detail.
 
 This yields the following figure
 
-{{:development:mne-pinv.png?400|}}{{:development:mne-nopinv.png?400|}}
+{{:development:mne-pinv.png?400|}}
+{{:development:mne-nopinv.png?400|}}
 
 
 Clearly, there is an issue with the (default) pinv implementation. Apparently, some regularization should be done for the MNE to give meaningful results.

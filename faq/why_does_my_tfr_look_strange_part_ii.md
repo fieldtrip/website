@@ -43,9 +43,10 @@ The following code shows the effect of a large amplitude low-frequency drift on 
 	cfg.baselinetype = 'relchange';
 	figure;ft_singleplotTFR(cfg, freq);
 
-##### -Figure: Example data with a large amplitude low-frequency drift (left) and its TFR (right)
+##### -Figure: Example data with a large amplitude low-frequency drift (1st) and its TFR (2nd)
 
-{{:faq:strangetfr4.png?300|}}{{:faq:strangetfr3.png?300|}} \\
+{{:faq:strangetfr4.png?300|}}
+{{:faq:strangetfr3.png?300|}}
 
 ##### cfg.polyremoval
 

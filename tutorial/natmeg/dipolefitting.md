@@ -176,7 +176,9 @@ By treating the segmentation of brain/skull/scalp as a “functional” volume, 
     ft_sourceplot(cfg, mri_segmented);
     print -dpng natmeg_dip_segmented_scalp.png
 
-{{tutorial:natmeg_temp:natmeg_dip_segmented_brain.png?400}}{{tutorial:natmeg_temp:natmeg_dip_segmented_skull.png?400}}{{tutorial:natmeg_temp:natmeg_dip_segmented_scalp.png?400}}
+{{tutorial:natmeg_temp:natmeg_dip_segmented_brain.png?400}}
+{{tutorial:natmeg_temp:natmeg_dip_segmented_skull.png?400}}
+{{tutorial:natmeg_temp:natmeg_dip_segmented_scalp.png?400}}
 
 `<note important>`
 You should check that the segmentation covers the appropriate part of the anatomical MRI and that it does not have any artefacts due to noisy voxels in the MRI or local contrast drop-out.

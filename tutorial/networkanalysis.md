@@ -342,7 +342,8 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
 	figure; ft_singleplotER(cfg, datapow_high, datapow_low);
 
 
-{{:tutorial:networkanalysis:nwa_topo_powratio.png?300|}}{{:tutorial:networkanalysis:nwa_spectrum_mediansplit.png?300|}}
+{{:tutorial:networkanalysis:nwa_topo_powratio.png?300|}}
+{{:tutorial:networkanalysis:nwa_spectrum_mediansplit.png?300|}}
 
 *Figure 5: Difference topography (left) and power spectra of the median splitted data, according to 10 Hz power at sensor 'MRO33'.*
 
@@ -491,7 +492,8 @@ We can now explore the structure in the estimated connectivity matrices using gr
 	view([-150 30]);
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_degreefull.png?300|}}{{:tutorial:networkanalysis:tutorial_nwa_degreeparc.png?300|}}
+{{:tutorial:networkanalysis:tutorial_nwa_degreefull.png?300|}}
+{{:tutorial:networkanalysis:tutorial_nwa_degreeparc.png?300|}}
 
 *Figure 8: Node degree based on imaginary part of coherency, thresholded at a value of 0.1. Cold colors indicated few suptrathreshold connections, warm colors indicate many suprathreshold connections. Left panel: degree based on the thresholded full connectome. Right panel: degree based on the thresholded parcellated connectome.*
 
