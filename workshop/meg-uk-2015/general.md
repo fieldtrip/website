@@ -20,7 +20,7 @@ Start MATLAB and type
 
 ## FieldTrip instructions
 
-The FieldTrip demonstrations all share the same preprocessed data (i.e. *.mat files), which a are gathered in the ''fieldtrip-demo'' folder. Prior to executing sections of the MATLAB demo scripts from the wiki, you should therefore change into that directory.
+The FieldTrip demonstrations all share the same preprocessed data (i.e. .mat files), which a are gathered in the ''fieldtrip-demo'' folder. Prior to executing sections of the MATLAB demo scripts from the wiki, you should therefore change into that directory.
 
 Start MATLAB and type
 

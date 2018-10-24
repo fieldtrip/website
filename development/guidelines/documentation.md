@@ -21,7 +21,7 @@ When you add documentation, please consider the following documentation guidelin
 
 *  Please give clear [names for example data](/#How to name example data).
 
-*  If you refer to file formats using the extension, please do it like *.txt, *.dat or *.ext in general.
+*  If you refer to file formats using the extension, please do it like .txt, .dat or .ext in general.
 
 ## Where to add documentation on the website?
 

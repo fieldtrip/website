@@ -73,7 +73,7 @@ The **Analyze** coordinate system is defined by and used in the Analyze software
 *  the x-axis goes from right to left
 *  the y-axis goes from posterior to anterior
 *  the z-axis goes from inferior to superior
-Note that the Analyze *.img/*.hdr file format is also being used by other software (notably SPM), but the conventions of the coordinate systems may be different. Typically, fMRI specific software will use neurological conventions instead of radiological conventions.
+Note that the Analyze .img/.hdr file format is also being used by other software (notably SPM), but the conventions of the coordinate systems may be different. Typically, fMRI specific software will use neurological conventions instead of radiological conventions.
 
 ### Details of the BESA coordinate system
 The **BESA** native coordinate system is expressed in spherical coordinates. If you want to express the location of a dipole in 3-D space, it is more convenient to translate from spherical coordinates (phi, theta, r) to cartesian coordinates (x, y, z). If you have measured electrode positions with a Polhemus 3-D tracker, you also need this transformation. In the BESA cartesian coordinate system, the principal (x, y, z) axes are defined as

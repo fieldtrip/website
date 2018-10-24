@@ -9,7 +9,7 @@ tags: meg yokogawa dataformat coordinate
 ## Introduction
 
 
-The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: *.sqe, *.ave, *.con, *.raw. Furthermore, gradiometer positions and orientations are read from the header (see below). 
+The datafiles for the 64-, 160- and 440-channel Yokogawa MEG systems are supported by using the precompiled (i.e. closed source) p-files that are supplied by Yokogawa. The data in the following files can be read and used in FieldTrip: .sqe, .ave, .con, .raw. Furthermore, gradiometer positions and orientations are read from the header (see below). 
 
 The low-level MATLAB reading functions are included in the FieldTrip release. Note that these files are not open source and **not covered by the GPL license**, but they are copyrighted by Yokogawa.
 
@@ -39,7 +39,7 @@ The following Yokogawa file formats are recognized by FieldTri
 
 *  yokogawa_fll
 
-Usually you will be starting your FieldTrip analysis with raw continuous data which is stored in files with the *.con or the *.sqd extention.
+Usually you will be starting your FieldTrip analysis with raw continuous data which is stored in files with the .con or the .sqd extention.
 
 ## Set path
 

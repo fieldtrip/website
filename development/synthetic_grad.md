@@ -18,7 +18,7 @@ The code development project mentioned on this page has been finished by now. Ch
 
 ## Step 1: read the coefficients
 
-The coefficients are stored in a site specific *.coef file (e.g. /opt/ctf/hardware/M016/M017_1706.coef). Those should **not** be used, instead they should be read from the res4 file (see CTF comments in the appendix).
+The coefficients are stored in a site specific .coef file (e.g. /opt/ctf/hardware/M016/M017_1706.coef). Those should **not** be used, instead they should be read from the res4 file (see CTF comments in the appendix).
 
 The coefficients should be put into a Nchan X Nchan matrix, where Nchan = Nref+Nmeg. Assuming that the uncorrected data has been read in for all channels, the conversion of 0th order to 3rd order only requires a multiplication with this matrix.
 
@@ -45,7 +45,7 @@ TODO: This requires testing on real data using the CTF software as gold standard
 
 ## Step 3: apply the coefficients to the gradiometer array
 
-The gradiometer array is described by all coil (positions and orientations) and the weights (+1 or -1) to combine the coils into hardware channels. From the FA
+The gradiometer array is described by all coil (positions and orientations) and the weights (+1 or -1) to combine the coils into hardware channels. From the FAQ:
 
 *The gradiometer definition generally consists of multiple coils per channel, e.g. two coils for a 1st order gradiometer in which the orientation of the coils is opposite. Each coil is described separately and one large matrix (can be sparse) has to be given that defines how the forward computed field is combined over the coils to generate the output of each channel. The gradiometer definition constsis of the following fields*
 

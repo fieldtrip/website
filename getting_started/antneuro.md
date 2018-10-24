@@ -9,13 +9,13 @@ tags: dataformat eeg ant asa eeprobe
 **asa** and **ee**probe are software packages developed by [ANT Neuro](http://www.ant-neuro.com). The **ee**probe format consists of files with the following extension
 
 
-*  *.cnt continuous data 
+*  .cnt continuous data 
 
-*  *.trg trigger information, this complements the *.cnt file
+*  .trg trigger information, this complements the .cnt file
 
-*  *.avr averaged (i.e. ERP) data
+*  .avr averaged (i.e. ERP) data
 
-The data in the *.cnt and *.avr files is compressed with a zip-like algorithm, which makes the implementation of reading functions more difficult. The original source code (C-language) is available at this page [ANT Neuro Documentation and Download](http://ant-neuro.com/supporting-documentation-and-downloads). Contact [ANT Neuro support](/support@ant-neuro.com) in case you need help to compile import/export functionality based on this source code.
+The data in the .cnt and .avr files is compressed with a zip-like algorithm, which makes the implementation of reading functions more difficult. The original source code (C-language) is available at this page [ANT Neuro Documentation and Download](http://ant-neuro.com/supporting-documentation-and-downloads). Contact [ANT Neuro support](/support@ant-neuro.com) in case you need help to compile import/export functionality based on this source code.
 
 The FieldTrip functionality for reading **asa** or **ee**probe files depends on the mex files that are present in fieldtrip/external/eeprobe. The FieldTrip release includes these files as a service to the users, however, these files are not maintained or supported by the FieldTrip team. Any problems with the source code of the mex files files should be addressed to [ANT Neuro's support](http://www.ant-neuro.com/support).
 ## Known limitations

@@ -31,7 +31,7 @@ as the filename to the reading functions.
 
 ## License and access to the source code
 
-The **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** function is included in the FieldTrip release as pre-compiled *.p file. That means that you cannot see or modify the source code. The rt_realtime_micromedproxy function is not released under an open source license, because the Micromed system is licensed according to certain ISO regulations. Since the external link interferes with their system, Micromed does not allow the external TCP link to be documented. However, the company has indicated that upon request from registered Micromed users the source code of the **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** can be released to that user. 
+The **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** function is included in the FieldTrip release as pre-compiled .p file. That means that you cannot see or modify the source code. The rt_realtime_micromedproxy function is not released under an open source license, because the Micromed system is licensed according to certain ISO regulations. Since the external link interferes with their system, Micromed does not allow the external TCP link to be documented. However, the company has indicated that upon request from registered Micromed users the source code of the **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** can be released to that user. 
 
 If you want to have the source code of the **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)**, please contact Cristiano Rizzo at Micromed (for the permission) and Robert Oostenveld at the Donders Centre (for the copy of the latest code).
 

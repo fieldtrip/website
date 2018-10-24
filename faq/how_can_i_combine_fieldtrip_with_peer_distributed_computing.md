@@ -9,9 +9,9 @@ The peer distributed computing toolbox was implemented with FieldTrip (and SPM) 
 
 At the moment the only way of distributing the workload over multiple nodes requires that you adapt your scripts. The easiest is to distribute the workload of the analysis of multiple subjects over multiple nodes. Since each subject usually represents a lot of data, it is not always possible to keep multiple subjects simultaneously in memory. To facilitate the distributed analysis over multiple subjects, the FieldTrip functions therefore have the cfg.inputfile and cfg.outputfile options.
 
-FieldTrip functions usually have two input arguments, the first is the configuration structure and the second is a structure with the input data. The cfg.inputfile option can be used to specify the name of the *.mat file from which the input data is read. The *.mat file is assumed to contain a single variable.
+FieldTrip functions usually have two input arguments, the first is the configuration structure and the second is a structure with the input data. The cfg.inputfile option can be used to specify the name of the .mat file from which the input data is read. The .mat file is assumed to contain a single variable.
 
-FieldTrip functions usually also have an output argument, which is a structure with the output data. The cfg.outputfile option specifies to which *.mat file that data will be written.
+FieldTrip functions usually also have an output argument, which is a structure with the output data. The cfg.outputfile option specifies to which .mat file that data will be written.
 
 So instead of preprocessing data like
     cfg = [];

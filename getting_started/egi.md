@@ -13,7 +13,7 @@ Please add information if you're using Philips/EGI data and want to share info w
 Net Station can export data to several data formats that FieldTrip can read in. 
 
 
-*  *.egis, *.sbin, and *.mff can be read in by FieldTrip (I have no details on how well they work, and what the known issues are). Other formats like *.ave, *.gave, *.ses are not supported but the data can be read by exporting to one of the supported formats.
+*  .egis, .sbin, and .mff can be read in by FieldTrip (I have no details on how well they work, and what the known issues are). Other formats like .ave, .gave, .ses are not supported but the data can be read by exporting to one of the supported formats.
 
 *  **Simple binary** (.raw), only the channels from the hdEEG net are exported, the PIB channels, for instance, are not. Channel labels are not present in this format, and are thus made on the fly by FieldTrip. Events are present and read in correctly. Data sets containing multiple epochs are exported by NetStation as separate .raw files. The events are, however, exported as one file, which make it tricky (read impossible) to align data and events properly when having multiple discontinuous epochs.
 

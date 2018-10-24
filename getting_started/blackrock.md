@@ -12,9 +12,9 @@ However, we very much welcome you to start using this functionality, and would b
 
 ## Introduction
 
-The specifications of this data format can be found on [the company's website](http://support.blackrockmicro.com/KB/View/166838-file-specifications-packet-details-headers-etc). Basically, the files come in 2 flavors. One type of file has as extension *.nev, and contains information about extracellularly recorded spiking activity. The other file type has as extension *.nsX, with X any number between 1 and 9. These files contain continuously sampled data (e.g. Local Field Potentials).
+The specifications of this data format can be found on [the company's website](http://support.blackrockmicro.com/KB/View/166838-file-specifications-packet-details-headers-etc). Basically, the files come in 2 flavors. One type of file has as extension .nev, and contains information about extracellularly recorded spiking activity. The other file type has as extension .nsX, with X any number between 1 and 9. These files contain continuously sampled data (e.g. Local Field Potentials).
 
-To read Blackrock data into FieldTrip, you will need the NPMK toolbox. The latest version of it can be cloned from github: https://github.com/BlackrockMicrosystems/NPMK. This is a MATLAB-toolbox provided by Blackrock microsystems. FieldTrip relies on the low-level reading functionality of this code. Make sure that the *.m files in the NPMK toolbox are on the MATLAB path.
+To read Blackrock data into FieldTrip, you will need the NPMK toolbox. The latest version of it can be cloned from github: https://github.com/BlackrockMicrosystems/NPMK. This is a MATLAB-toolbox provided by Blackrock microsystems. FieldTrip relies on the low-level reading functionality of this code. Make sure that the .m files in the NPMK toolbox are on the MATLAB path.
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 

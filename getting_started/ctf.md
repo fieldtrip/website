@@ -8,7 +8,7 @@ tags: ctf meg dataformat
 
 ## Introduction
 
-The following data files can be read and used in FieldTrip: *.meg4, *.res4, *.mri, *.hdm, ClassFile.cls, MarkerFile.mrk. All required CTF reading functions are supplied with the FieldTrip toolbox.
+The following data files can be read and used in FieldTrip: .meg4, .res4, .mri, .hdm, ClassFile.cls, MarkerFile.mrk. All required CTF reading functions are supplied with the FieldTrip toolbox.
 
 Initially, reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in  the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
 
@@ -19,13 +19,13 @@ An alternative ("old") implementation for reading the CTF data is available in t
 The following types of CTF data can be read and used in FieldTrip: 
 
 
-*  MEG/EEG and AUX data: *.res4, *.meg4, *.1_meg4, *.2_meg4, etc.
+*  MEG/EEG and AUX data: .res4, .meg4, .1_meg4, .2_meg4, etc.
 
-*  event information: *.meg4, ClassFile.cls, MarkerFile.mrk
+*  event information: .meg4, ClassFile.cls, MarkerFile.mrk
 
-*  single sphere and multi-sphere volume conduction models: *.hdm
+*  single sphere and multi-sphere volume conduction models: .hdm
 
-*  anatomical MRI: *.mri
+*  anatomical MRI: .mri
 
 
 This page explains how to get started reading and using each of these file types in FieldTrip.
@@ -175,7 +175,7 @@ The old 64-channel CTF datasets are not supported in the native CTF reading func
 Usually, you would call **[ft_definetrial](/reference/ft_definetrial)** to select pieces of data around those events in the data that interest you, either using a generic definition or using your own “trialfun”. The trialfunction calls the low-level reading function **[ft_read_event](/reference/ft_read_event)**. The **[ft_read_event](/reference/ft_read_event)** function reads event information and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
 
 
-**[ft_read_event](/reference/ft_read_event)** reads the triggers from the trigger channels in the MEG dataset (*.meg4), and if available classified trials from the classification file (ClassFile.cls) and markers from the marker file (MarkerFile.mrk), and combines all the available events into one structure. For more information on events, triggers and trials refer to the [faq](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials?).
+**[ft_read_event](/reference/ft_read_event)** reads the triggers from the trigger channels in the MEG dataset (.meg4), and if available classified trials from the classification file (ClassFile.cls) and markers from the marker file (MarkerFile.mrk), and combines all the available events into one structure. For more information on events, triggers and trials refer to the [faq](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials?).
 
 
 To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
@@ -222,7 +222,7 @@ So please be aware that "frontpanel" and "backpanel" are Donders conventions tha
 
 ## Reading headmodels
 
-Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a *.hdm file. The *.hdm headmodel files can be read using **[ft_read_vol](/reference/ft_read_vol)** and visualized using **[ft_headmodelplot](/reference/ft_headmodelplot)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create MEG headmodels.
+Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a .hdm file. The .hdm headmodel files can be read using **[ft_read_vol](/reference/ft_read_vol)** and visualized using **[ft_headmodelplot](/reference/ft_headmodelplot)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create MEG headmodels.
 
 For example, to read and plot the single sphere model produced with CTF software for the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
@@ -249,23 +249,23 @@ For more information on reading, creating and plotting headmodels refer to
 ## Reading MRI files
 
 
-Anatomical MRI files can be converted into CTF compatible data using the CTF software MRIConverter and MRIViewer. After this process, a *.mri file is saved which can be used in FieldTrip.
+Anatomical MRI files can be converted into CTF compatible data using the CTF software MRIConverter and MRIViewer. After this process, a .mri file is saved which can be used in FieldTrip.
 
 
 *  Open the original MRI data in MRIConverter
 
 *  Make sure that the View Direction and Image Orientation are correctly set
 
-*  Save the file in the *.mri format
+*  Save the file in the .mri format
 
-*  Open the newly created *.mri file in MRIViewer
+*  Open the newly created .mri file in MRIViewer
 
 *  Mark the fiducials: left and right ear and nasion; they should reflect the location of the MEG coils
 
-*  Save the changes in the *.mri file
+*  Save the changes in the .mri file
 
 
-The *.mri file can be read into FieldTrip using **[ft_read_mri](/reference/ft_read_mri)**. To read the mri file of the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
+The .mri file can be read into FieldTrip using **[ft_read_mri](/reference/ft_read_mri)**. To read the mri file of the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
     mri = ft_read_mri('Subject01.mri');
 

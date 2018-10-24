@@ -12,21 +12,21 @@ tags: neuralynx lfp spike dataformat
 The Neuralynx acquisition software writes a variety of file formats. 
 
 
-*  *.ncs single continuous channel file
+*  .ncs single continuous channel file
 
-*  *.nse single electrode waveform file
+*  .nse single electrode waveform file
 
-*  *.nts single stereotrode file
+*  .nts single stereotrode file
 
-*  *.nst spike timestamps
+*  .nst spike timestamps
 
-*  *.ntt single tetrode file
+*  .ntt single tetrode file
 
-*  *.nev event information
+*  .nev event information
 
 All files acquired during one recording are combined in a common directory. We refer to that directory as the "dataset".
 
-Neuralynx also writes a raw data file (*.nrd) in which all the channels are sampled at 32kHz and multiplexed. This file can get very large for the 256 channel recordings (up to 200GB). The standard output format for Neuralynx writes a single file for each channel. All channels together are combined in the "dataset directory". All channels/files within that directory can be read simultaneously. 
+Neuralynx also writes a raw data file (.nrd) in which all the channels are sampled at 32kHz and multiplexed. This file can get very large for the 256 channel recordings (up to 200GB). The standard output format for Neuralynx writes a single file for each channel. All channels together are combined in the "dataset directory". All channels/files within that directory can be read simultaneously. 
 
 ## Set Path
 
@@ -71,7 +71,7 @@ This returns the content of a single-channel file as a Matlab structure.
 
 To facilitate working with multichannel recordings, FieldTrip has an additional layer on top of the low level Neuralynx file reading functions. The idea is that all files belonging to a single recording are located in a single directory, which represents the "dataset" as a whole. The FieldTrip functions **[ft_read_header](/reference/ft_read_header)**,  **[ft_read_data](/reference/ft_read_data)**,  **[ft_read_event](/reference/ft_read_event)** operate on the LFP and spike files in the dataset directory.
 
-The LFP files are used for setting the sample "time" axis. If you only have spike files during a recording, you cannot merge them automatically. Merging is done by reading the LFP files (*.nsc), determining the first and last timestamp, and subsequently the spikes are represented as "1" in an other wise "0" channel. So the spike and LFP channels are jointly represented by **[ft_read_data](/reference/ft_read_data)** in a nchan X nsamples matrix. This is also how the FieldTrip high level **[ft_preprocessing](/reference/ft_preprocessing)** function accesses the collection of LFP and spike channels in the dataset.
+The LFP files are used for setting the sample "time" axis. If you only have spike files during a recording, you cannot merge them automatically. Merging is done by reading the LFP files (.nsc), determining the first and last timestamp, and subsequently the spikes are represented as "1" in an other wise "0" channel. So the spike and LFP channels are jointly represented by **[ft_read_data](/reference/ft_read_data)** in a nchan X nsamples matrix. This is also how the FieldTrip high level **[ft_preprocessing](/reference/ft_preprocessing)** function accesses the collection of LFP and spike channels in the dataset.
 
 	
 	>> ls dataset/

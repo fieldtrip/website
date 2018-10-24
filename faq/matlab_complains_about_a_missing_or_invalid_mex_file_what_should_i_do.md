@@ -38,7 +38,7 @@ The following files all depend on some shared code in geometry.c and geometry.h,
     mex -I. -c routlm.c      ; mex -o routlm      routlm.o      geometry.o
     mex -I. -c plinproj.c    ; mex -o plinproj    plinproj.o    geometry.o
 
-If you are on a Windows computer, the compiled object files with have extension *.obj instead of *.o and hence you then should do 
+If you are on a Windows computer, the compiled object files with have extension .obj instead of .o and hence you then should do 
 
     mex -I. -c geometry.c
     mex -I. -c solid_angle.c ; mex solid_angle.c solid_angle.obj geometry.obj

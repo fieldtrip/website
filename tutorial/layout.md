@@ -8,7 +8,7 @@ tags: tutorial plot eeg meg ecog layout
 
 ## Introduction to layout files (.lay files)
 
-FieldTrip can use layout files that gives you exact control of the 2-D position of the sensors for topoplotting, and of the per-channel local coordinate axes for the multiplotting. These layout files are ascii file with the extention *.lay, or MATLAB files containing a variable with the name "lay". In general, FieldTrip prefers .mat-files because of more flexible outlines of the headshape. For .lay files a standard headshape is drawn around the normalized channel positions. Here is a small snippet of an ascii layout fil
+FieldTrip can use layout files that gives you exact control of the 2-D position of the sensors for topoplotting, and of the per-channel local coordinate axes for the multiplotting. These layout files are ascii file with the extention .lay, or MATLAB files containing a variable with the name "lay". In general, FieldTrip prefers .mat-files because of more flexible outlines of the headshape. For .lay files a standard headshape is drawn around the normalized channel positions. Here is a small snippet of an ascii layout fil
 
     1  -0.308949  0.951110  0.750000  0.450000  Fp1
     2   0.000121  1.000000  0.750000  0.450000  Fpz

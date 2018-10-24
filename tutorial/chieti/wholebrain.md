@@ -28,7 +28,7 @@ We start by setting up the path to the FieldTrip toolbox, to the HCP megconnecto
     addpath(genpath('/Volumes/SEAGATE 2TB/workshop/megconnectome-2.2'));
     addpath(genpath('/Volumes/SEAGATE 2TB/workshop/177746'));
 
-Most data has already been prepared in the previous tutorial, here we just load the relevant *.mat files.
+Most data has already been prepared in the previous tutorial, here we just load the relevant .mat files.
 
     load data_rh
     load headmodel

@@ -40,7 +40,7 @@ You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. il
  6.  BinaryFormat should be 'IEEE_FLOAT_32'
 
 `<note warning>`
- At this moment, FieldTrip has problems reading in *.dat files, [see our Bugzilla page](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1567).
+ At this moment, FieldTrip has problems reading in .dat files, [see our Bugzilla page](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1567).
 `</note>`
 
 `<note>`
@@ -53,7 +53,7 @@ When comparing your preprocessed data to preprocessed data from BrainVision Anal
  
 ### Plotting
 
-FieldTrip provides digital layouts for the purpose of plotting data recorded by means of an easycap. These layouts are stored in *.mat files and are based on the manufacturer's original drawings, which can also be found as *.gif files in the /template/layout directory.
+FieldTrip provides digital layouts for the purpose of plotting data recorded by means of an easycap. These layouts are stored in .mat files and are based on the manufacturer's original drawings, which can also be found as .gif files in the /template/layout directory.
 
 Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications. Specify the layout that matches your set-up/easycap when plotting, e.g.
 

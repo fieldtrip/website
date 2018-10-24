@@ -32,7 +32,7 @@ respectively. All these files also contain information of channel types and grad
 
 In general, the first step of analyzing MEG data is composed of **MEG data read-in**, **trial selection**, and **MEG-MRI co-registration**. This page therefore describes how to get started reading and using these file types in FieldTrip, mainly focusing on how to use the exported .con file in such pre-processing and co-registration. It is worth noting that almost all the contents in this page can be utilized for Yokogawa data (Yokogawa's .con, .ave, and .mrk files) because the extensions of '.con', '.ave', and '.mrk' are common between Ricoh and Yokogawa systems and the corresponding files have the same data structure.
 
-The functions in FieldTrip that allows you to execute the pre-processing and co-registration are: **[ft_read_header](/reference/ft_read_header)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_read_event](/reference/ft_read_event)**, **[ft_read_headshape](/reference/ft_read_headshape)**, and **[ft_read_sens](/reference/ft_read_sens)**. This page will describe how these FieldTrip functions perform for Ricoh and Yokogawa data by showing several examples on pre-processing and co-registration. As for the co-registration, you need to prepare MRI file with formats supported in FieldTrip. An MRI file with NIfTI (*.nii) or DICOM format is assumed to be used in this page. 
+The functions in FieldTrip that allows you to execute the pre-processing and co-registration are: **[ft_read_header](/reference/ft_read_header)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_read_event](/reference/ft_read_event)**, **[ft_read_headshape](/reference/ft_read_headshape)**, and **[ft_read_sens](/reference/ft_read_sens)**. This page will describe how these FieldTrip functions perform for Ricoh and Yokogawa data by showing several examples on pre-processing and co-registration. As for the co-registration, you need to prepare MRI file with formats supported in FieldTrip. An MRI file with NIfTI (.nii) or DICOM format is assumed to be used in this page. 
 
 ## Set path
 
@@ -265,7 +265,7 @@ An example of your own trial function, ''yourowntrialfun'' is
 ## MRI-MEG Co-registration
 
 
-The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/dataformat), anatomical MRI data are assumed to be saved as NIfTI (*.nii) or DICOM files in this page. 
+The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/dataformat), anatomical MRI data are assumed to be saved as NIfTI (.nii) or DICOM files in this page. 
 
 The co-registration is usually done in two steps; the first step is an approximate alignment that is based on fiducial points, and the second step is a refinement with additional head-shape digitized points. You practically have two possible cases regarding to the first ste
  1.  To use HPIs (marker coils) as the fiducial points
@@ -346,7 +346,7 @@ Define a head coordinate system by manually taking up the anatomical landmarks, 
 Read the HPIs and anatomical landmarks by calling ft_read_headshap
 
 	
-	%% Read HPIs & anatomical landmarks in MEG coordinate system from *.con, *ave, or .mrk files
+	%% Read HPIs & anatomical landmarks in MEG coordinate system from .con, .ave, or .mrk files
 	headshape = ft_read_headshape(fullfile(meg_path, meg_file));
 	headshape = ft_convert_units(headshape, 'mm');
 	

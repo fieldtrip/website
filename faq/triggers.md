@@ -8,7 +8,7 @@ tags: faq trigger trialfun preprocessing
 
 Triggers, stimuli, responses, annotations, etcetera in the recording are in FieldTrip jointly represented as "events" and read from the dataset using **[ft_read_event](/reference/ft_read_event)**. The following code demonstrates how you can do a visual check of the triggers and export them to an excel file.
 
-We start by reading the header (which we need for the sampling frequency) and the events. In case of NeuroMag *.fif data that was recorded with internal active shielding (IAS) and that has not been maxfiltered yet, you can disable the check for maxfilter. 
+We start by reading the header (which we need for the sampling frequency) and the events. In case of NeuroMag .fif data that was recorded with internal active shielding (IAS) and that has not been maxfiltered yet, you can disable the check for maxfilter. 
 
     hdr   = ft_read_header(dataset, 'checkmaxfilter', 'no');
     event = ft_read_event(dataset, 'checkmaxfilter', 'no');

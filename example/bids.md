@@ -207,7 +207,7 @@ In this step we are copying and renaming the CTF datasets to the target location
 
 
 
-`<note>`You can see a few exceptions, which reflect datasets that did not convert well automatically. The reason for this is the fact that during data acquisition, the data ended up in two different *.ds datasets. According to BIDS, these are supposed to be represented by different 'runs'.
+`<note>`You can see a few exceptions, which reflect datasets that did not convert well automatically. The reason for this is the fact that during data acquisition, the data ended up in two different .ds datasets. According to BIDS, these are supposed to be represented by different 'runs'.
 `</note>`
 ### Step 4: collect the NBS Presentation log files
 

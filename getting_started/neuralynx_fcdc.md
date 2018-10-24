@@ -15,8 +15,8 @@ In the following, we will describe our procedure to preprocess high-density elec
 At the Donders Institute, we record brain activity using an ECoG electrode grid with 252 electrodes. The signal is amplified by a factor of 20 using a headstage amplifier (Headstage 32V-G20, Plexon Inc., Dallas, TX, USA), and subsequently low-pass filtered at 8 kHz and digitized at ~32 kHz sampling frequency using a Neuralynx amplifier (Digital Lynx, 256 channels, Neuralynx Tucson, AZ, USA). 
 
 To deal with the tremendous amounts of data recorded each session (approximately 1.5 Gb/min), we develop a recording procedure that allows us t
- 1.  Ensure the correct recording and storage of a particular session (using the *.nrd Neuralynx dataformat).
- 2.  Use a format that allows us to keep long-term storages copies of the original datasets (using the **[ft_spikesplitting](/reference/ft_spikesplitting)** function to split the original file and store as a *.sdma* file format).
+ 1.  Ensure the correct recording and storage of a particular session (using the .nrd Neuralynx dataformat).
+ 2.  Use a format that allows us to keep long-term storages copies of the original datasets (using the **[ft_spikesplitting](/reference/ft_spikesplitting)** function to split the original file and store it in the .sdma file format).
  3.  Obtain a 1 kHz downsampled working copy of the LFP data that can be conveniently used by the **[ft_preprocessing](/reference/ft_preprocessing)** and other FieldTrip functions. 
  4.  Obtain a 1 kHz downsampled estimate of the multi-unit activity (MUA).
  5.  Eventually obtain an estimate of single-unit activity (SUA), depending on the electrode grid configuration.
@@ -33,7 +33,7 @@ The overall flow of datafile formats transformations that we currently use in ou
 
 ### Data splitting
 
-The Neuralynx acquisition system provides the data in a format containing the raw data directly after A/D conversion. During each recorded session, the *.nrd file is written directly to an external Lacie RAID-0 hard disk that is connected by firewire 800. The *.nrd datafiles contain a 16kB ascii header, followed by the multiplexed 32-bit channel-level data (see also [this](/getting_started/neuralynx) page). The huge size of these multiplexed files (>100 Gb per 45 minute session) precludes them for efficient post-processing. Using the FieldTrip  **[ft_spikesplitting](/reference/ft_spikesplitting)** function, we split the *.nrd file into seperate files for each channel, containing exactly the same 32-bit information. These files are written into a single directory which usually has the extension *.sdma, since it contains the "split dma" channels. We refer to this directory as the output dataset, whereas the *.nrd file is the input dataset.
+The Neuralynx acquisition system provides the data in a format containing the raw data directly after A/D conversion. During each recorded session, the .nrd file is written directly to an external Lacie RAID-0 hard disk that is connected by firewire 800. The .nrd datafiles contain a 16kB ascii header, followed by the multiplexed 32-bit channel-level data (see also [this](/getting_started/neuralynx) page). The huge size of these multiplexed files (>100 Gb per 45 minute session) precludes them for efficient post-processing. Using the FieldTrip  **[ft_spikesplitting](/reference/ft_spikesplitting)** function, we split the .nrd file into seperate files for each channel, containing exactly the same 32-bit information. These files are written into a single directory which usually has the extension .sdma, since it contains the "split dma" channels. We refer to this directory as the output dataset, whereas the .nrd file is the input dataset.
 
 An example of the configuration for spikesplitting is provided belo
 
@@ -49,11 +49,11 @@ An example of the configuration for spikesplitting is provided belo
 
 It is also important to note that: 
 
-*  The information extracted from a single *.nrd file also contains the timestamps, trigger and event information (see below for details). 
+*  The information extracted from a single .nrd file also contains the timestamps, trigger and event information (see below for details). 
 
-*  The new version of Neuralynx software also reserves an initial segment of the recorded file to write a header. The FieldTrip function **[ft_spikesplitting](/reference/ft_spikesplitting)** could extract this information and write it in a *.txt file in the dataset directory. According to Neuralynx, this header will be operative in future releases.
+*  The new version of Neuralynx software also reserves an initial segment of the recorded file to write a header. The FieldTrip function **[ft_spikesplitting](/reference/ft_spikesplitting)** could extract this information and write it in a .txt file in the dataset directory. According to Neuralynx, this header will be operative in future releases.
 
-*  The *.sdma dataset format is used as our back up copy and long-term storage. After creating two backup copies, the original *.nrd file is erased.
+*  The .sdma dataset format is used as our back up copy and long-term storage. After creating two backup copies, the original .nrd file is erased.
 
 *  For the same reason, the data is kept as close as possible to the original recorded file. We do not apply further preprocessing during this step.
 
@@ -85,9 +85,9 @@ This basic configuration structure is necessary to downsample the data. Optional
     cfg.preproc.precision  = 'double';
     cfg = ft_spikedownsample(cfg);    
 
-By using the option **format** in the configuration structure, we can choose the file format to which the downsampled LFP data will be written. FieldTrip can write the file dataset in several formats (see **[ft_write_data](/reference/ft_write_data)**). We use the Plexon *.nex format which provides us the best compromise between data read/write speed and storage capacity. To get more details about the  Plexon dataformats, please see the [getting started with Plexon data](/getting_started/plexon) section. The output dataset directory for the LFP data uses the suffix *_ds*.
+By using the option **format** in the configuration structure, we can choose the file format to which the downsampled LFP data will be written. FieldTrip can write the file dataset in several formats (see **[ft_write_data](/reference/ft_write_data)**). We use the Plexon .nex format which provides us the best compromise between data read/write speed and storage capacity. To get more details about the  Plexon dataformats, please see the [getting started with Plexon data](/getting_started/plexon) section. The output dataset directory for the LFP data uses the suffix *_ds*.
 
-The raw *.nrd file and the split DMA files contains AD values that are not scaled in uV and require an additional factor of 64x. In addition, our acquisition system includes a Plexon headstage with an additional amplification of 20x. Thus, in our case the calibration should be specified as 1/(64*20).
+The raw .nrd file and the split DMA files contains AD values that are not scaled in uV and require an additional factor of 64x. In addition, our acquisition system includes a Plexon headstage with an additional amplification of 20x. Thus, in our case the calibration should be specified as 1/(64*20).
 
 ### Dealing with timestamps
 
@@ -134,15 +134,15 @@ Samples and timestamps are related to each other according to
 Note that timestamps start counting at zero, whereas in Matlab/FieldTrip convention the first sample of the recording is sample 1.
 ### Dealing with triggers
 
-During acquisition the 16 bit trigger channel is sampled with 32kHz, just like all other channels. Consequently in the *.ndr DMA log file there is a "ttl" channel that represents the triggers. The ttl channel is a 32 bit channel, although only 16 of those bits are connected to the trigger input.
+During acquisition the 16 bit trigger channel is sampled with 32kHz, just like all other channels. Consequently in the .ndr DMA log file there is a "ttl" channel that represents the triggers. The ttl channel is a 32 bit channel, although only 16 of those bits are connected to the trigger input.
 
-After spikesplitting, there is a *.ttl file containing the same 32kHz representation of the trigger channel as in the DMA log file. There are also two files (*.tsl and *.tsh) that represent the lowest and highest 32 bits of the 64 bit timestamp channel. The Neuralynx timestamp channel has a clock rate of 1MHz, i.e. 1e6 timestamps per second, or approximately 32 timestamps per data sample at 32kHz (1e6/32556). 
+After spikesplitting, there is a .ttl file containing the same 32kHz representation of the trigger channel as in the DMA log file. There are also two files (.tsl and .tsh) that represent the lowest and highest 32 bits of the 64 bit timestamp channel. The Neuralynx timestamp channel has a clock rate of 1MHz, i.e. 1e6 timestamps per second, or approximately 32 timestamps per data sample at 32kHz (1e6/32556). 
 
-After spikedownsampling, the continuous sampled LFP channels are not represented at 32kHz any more, but typically at 1000 Hz. That means that the samples at which the triggers occur in the *.ttl channel cannot directly be mapped onto the samples in the LFP channels. The method to link the original triggers to the downsampled data is by means of the timestamps. The **[ft_spikedownsample](/reference/ft_spikedownsample)** function has the option *cfg.timestampdefinition* which can be *'orig'* or *'sample'*. If you specify it as *cfg.timestampdefinition='sample'*, the timestamps in the downsampled LFP channels will correspond to the original samples, i.e. there will be 32566 timestamps per second in the downsampled data. The first downsampled sample will be at timestamp 17, because the first 32 original samples are all compressed into the first downsampled sample. If you specify *cfg.timestampdefinition='orig'*, the downsampled LFP data will be written to disk with the original timestamp definition with 1e6 timestamps per second.
+After spikedownsampling, the continuous sampled LFP channels are not represented at 32kHz any more, but typically at 1000 Hz. That means that the samples at which the triggers occur in the .ttl channel cannot directly be mapped onto the samples in the LFP channels. The method to link the original triggers to the downsampled data is by means of the timestamps. The **[ft_spikedownsample](/reference/ft_spikedownsample)** function has the option *cfg.timestampdefinition* which can be *'orig'* or *'sample'*. If you specify it as *cfg.timestampdefinition='sample'*, the timestamps in the downsampled LFP channels will correspond to the original samples, i.e. there will be 32566 timestamps per second in the downsampled data. The first downsampled sample will be at timestamp 17, because the first 32 original samples are all compressed into the first downsampled sample. If you specify *cfg.timestampdefinition='orig'*, the downsampled LFP data will be written to disk with the original timestamp definition with 1e6 timestamps per second.
 ### Data preprocessing
 
-Data sessions that had been subsequently split, downsampled and stored in Plexon *.nex* format are suitable to be preprocessed for further analysis. To get a general idea of how to proceed, we recommend to read the documentation of the FieldTrip  **[ft_preprocessing](/reference/ft_preprocessing)** function and the preprocessing tutorials in the [tutorial documentation](/tutorial) .
-Here, we will focused on how to read the Plexon dataset directories (//_ds//) which contain multiple *.nex files. A basic configuration structure is provided belo
+Data sessions that had been subsequently split, downsampled and stored in Plexon .nex format are suitable to be preprocessed for further analysis. To get a general idea of how to proceed, we recommend to read the documentation of the FieldTrip  **[ft_preprocessing](/reference/ft_preprocessing)** function and the preprocessing tutorials in the [tutorial documentation](/tutorial) .
+Here, we will focused on how to read the Plexon dataset directories (//_ds//) which contain multiple .nex files. A basic configuration structure is provided belo
 
 	
 	cfg = [];
@@ -152,7 +152,7 @@ Here, we will focused on how to read the Plexon dataset directories (//_ds//) wh
 	cfg = ft_preprocessing(cfg)
 
 
-The specification of the dataformat and headerformat options as *combined_ds* ensures that the appropriate low-level FieldTrip reading function will be called to read the multiple single-channel Plexon *.nex files contained in the dataset directory. After preprocessing, we can obtain a data structure like thi
+The specification of the dataformat and headerformat options as *combined_ds* ensures that the appropriate low-level FieldTrip reading function will be called to read the multiple single-channel Plexon .nex files contained in the dataset directory. After preprocessing, we can obtain a data structure like thi
 
 	
 	data = 

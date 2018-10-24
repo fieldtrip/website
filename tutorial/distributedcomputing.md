@@ -249,7 +249,7 @@ This example script demonstrates how you can efficiently design your custom code
 	% note that the "preproc_timelock_planar" function is defined further down in this tutorial
 	qsubcellfun(@preproc_timelock_planar, cfg1, cfg2, cfg3, cfg4, outputfile);
 	
-	% let's now load the individual subject data from the 12 *.mat files and 
+	% let's now load the individual subject data from the 12 .mat files and 
 	% average it for subsequent plotting
 	timelock = {};
 	for subj=1:4

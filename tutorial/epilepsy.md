@@ -25,7 +25,7 @@ MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/researc
 
 ####  Coregistration of the anatomical MRI
 
-The original MRI that is provided for this patient has been partially processed in the CTF software and is stored in CTF *.mri format. This MRI is *not shared* for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip. 
+The original MRI that is provided for this patient has been partially processed in the CTF software and is stored in CTF .mri format. This MRI is *not shared* for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip. 
 
     mri_orig = ft_read_mri('case1.mri');
 

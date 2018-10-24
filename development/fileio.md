@@ -230,9 +230,9 @@ or like this
     % do something else
     ...
 
-The ft_filetype function does its checks in one long if-elseif-elseif ladder. The consequence is that the detection sometimes is order sensitive: the first match in ft_filetype will be the one returned. So for common file extensions like "*.dat" it can be problematic. The solution for identical file extensions is to have the most stringent check first (e.g. "extension is *.dat and header contains a few magic bytes") followed by the less stringent check ("extension is *.dat").
+The ft_filetype function does its checks in one long if-elseif-elseif ladder. The consequence is that the detection sometimes is order sensitive: the first match in ft_filetype will be the one returned. So for common file extensions like ".dat" it can be problematic. The solution for identical file extensions is to have the most stringent check first (e.g. "extension is .dat and header contains a few magic bytes") followed by the less stringent check ("extension is .dat").
 
-Another recommendation for file type detection is to use the potential context, i.e. the simultaneous presence of multiple files. That is used for example in BrainAnalyzer, which always has a set of three files (an ascii *.vhdr, another ascii *.vmrk and one binary file with extension *.dat, *.eeg or *.seg). The *.dat file in then easy to recognize because it is always accompanied by the *.vhdr and *.vmrk file.
+Another recommendation for file type detection is to use the potential context, i.e. the simultaneous presence of multiple files. That is used for example in BrainAnalyzer, which always has a set of three files (an ascii .vhdr, another ascii .vmrk and one binary file with extension .dat, .eeg or .seg). The .dat file in then easy to recognize because it is always accompanied by the .vhdr and .vmrk file.
 
 # Related documentation
 

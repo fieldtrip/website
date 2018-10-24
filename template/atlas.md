@@ -67,7 +67,7 @@ Using the normal anatomical model downloaded from the [BrainWeb](http://www.bic.
 
 The segmentation is defined at a 1 mm isotropic voxel grid in Talairach space, with dimensions 181x217x181 (XxYxZ) and start coordinates -90,-126,-72 (x,y,z). 
 
-The discrete model is represented in a MATLAB *.mat file as 
+The discrete model is represented in a MATLAB .mat file as 
 
 
 	>> load brainweb_discrete
@@ -80,7 +80,7 @@ The discrete model is represented in a MATLAB *.mat file as
 	    tissuelabel: {'csf'  'grey_matter'  'white_matter'  'fat'  'muscle_and_skin'  'skin'  'skull'  'glial_matter'  'connective'}
 
 
-The fuzzy model is represented in a MATLAB *.mat file as 
+The fuzzy model is represented in a MATLAB .mat file as 
 
 
 	>> load brainweb_fuzzy

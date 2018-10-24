@@ -22,20 +22,20 @@ BESA has its own file formats for storing various aspects of the data. Most of t
 
 Fieldtrip directly supports the following BESA file format
 
-	*.avr contains an averaged ERP/ERF
-	*.mul contains an averaged ERP/ERF stored in a multiplexed format
-	*.elp contains electrode labels
-	*.sfp contains electrode labels and positions
-	*.pdg contains the settings of an analysis paradigm
-	*.tfc contains a time-frequency representation of power or coherence
-        *.dat contains multiple source beamformer output on a regular 3D grid
+	.avr contains an averaged ERP/ERF
+	.mul contains an averaged ERP/ERF stored in a multiplexed format
+	.elp contains electrode labels
+	.sfp contains electrode labels and positions
+	.pdg contains the settings of an analysis paradigm
+	.tfc contains a time-frequency representation of power or coherence
+        .dat contains multiple source beamformer output on a regular 3D grid
 
 
 It is possible to use the low-level functions in Fieldtrip to read in the BESA data into Matlab, but it is preferred to use the high-level besa2fieldtrip function. That function will read the data and format it into a structure that is compatible with fieldtrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the fieldtrip function
 
-	*.avr converted to ft_timelockanalysis
-	*.mul converted to ft_timelockanalysis
-	*.tfc converted to ft_freqanalysis
+	.avr converted to ft_timelockanalysis
+	.mul converted to ft_timelockanalysis
+	.tfc converted to ft_freqanalysis
 
 
 For example, you can read in event-related potential data using
@@ -57,10 +57,10 @@ BESA electrode files can also be read into Matlab, using the **[ft_read_sens](/r
     data = besa2fieldtrip(‘yourbesafile.avr’);
     data.elec = ft_read_sens(‘yourelectrodes.sfp’);
     
-## Reading *.dat files with source reconstructions
+## Reading .dat files with source reconstructions
 
-Because BESA *.dat files do not include mask information, the resulting data structure will not have the .inside and .outside fields assigned correctly, which will lead to errors in subsequent analyses in fieldtrip. Consequently these fields much be set for each subject. The following code is an example of how to develop a reasonable mask and apply it to all subjects (it masks out only those coordinates with a value of 0 for all subjects
-    files=dir(['yoursubjectdirectory' filesep '*.dat']);
+Because BESA .dat files do not include mask information, the resulting data structure will not have the .inside and .outside fields assigned correctly, which will lead to errors in subsequent analyses in fieldtrip. Consequently these fields much be set for each subject. The following code is an example of how to develop a reasonable mask and apply it to all subjects (it masks out only those coordinates with a value of 0 for all subjects
+    files=dir(['yoursubjectdirectory' filesep '.dat']);
     inside=[];
     for k=1:length(files)
       src(k)=besa2fieldtrip(files(k).name);
@@ -75,9 +75,9 @@ Because BESA *.dat files do not include mask information, the resulting data str
       src(k).inside=inside;
     end
 
-## Continuous data in the *.besa format
+## Continuous data in the .besa format
 
-The *.besa format contains continuous (unprocessed) data, including header and event details. 
+The .besa format contains continuous (unprocessed) data, including header and event details. 
 
 FIXME: needs elaboration
 
