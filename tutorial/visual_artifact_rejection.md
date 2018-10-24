@@ -119,7 +119,7 @@ To produce an overview of the data choose the cfg.method 'summary
 
 This gives you a plot with the variance for each channel and trial. 
 
-{{:tutorial:artifactdetect:channel_trialvariance.png?650|}}
+![image](/media/tutorial/artifactdetect/channel_trialvariance.png@650)
 
 You should note that there is one channel which has a very high variance. That is the EOG channel, which contains numbers in uV which are of a very different order of magnitude than all MEG channels in T. Toggling the EOG channel will also change the figure with the maximal variance per trial (second row, left) a lot. Then you only see the variance in each trial in the MEG channels.
 
@@ -129,7 +129,7 @@ Alternatively use the mouse directly to toggle (e.g.) channels off as following:
 
 Before pressing the 'Quit' button, you can always toggle the channels/trials back on, by using the edit boxes 'Toggle trial' or 'Toggle channel'.
 
-{{:tutorial:artifactdetect:channel_trialvariance2.png?650|}}
+![image](/media/tutorial/artifactdetect/channel_trialvariance2.png@650)
 
 After quitting, the trials/channels will be rejected from the data set and the command line output appears as follow
 
@@ -218,7 +218,7 @@ Call the function like
 
 In the image below are two figures for the same trial (trial 75). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image).  Then, as in the right figure click within the dotted line
 
-{{:tutorial:fig4.png?nolink&600|}}
+![image](/media/tutorial/fig4.png@600)
 
 The resulting variable contains the fiel
 

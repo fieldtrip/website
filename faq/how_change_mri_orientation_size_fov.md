@@ -39,7 +39,7 @@ When the anatomical data is plotted, the default behavior is to plot the anatomi
 	ft_sourceplot(cfg,mri)
 
 
-{{:faq:mri_orinetation:mri.png?400|}}
+![image](/media/faq/mri_orinetation/mri.png@400)
 
 *Figure 1. Anatomical mri plotted **without** using ft_volumereslice before plotting*
 

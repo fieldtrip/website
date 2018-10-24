@@ -70,9 +70,9 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, mri_orig);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.20.png?180|}}
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.26.png?180|}}
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.33.png?180|}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.20.png@180)
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.26.png@180)
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.33.png@180)
 
 
 	
@@ -233,7 +233,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_multiplotTFR(cfg, wavelet)
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.11.55.png?630}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.11.55.png@630)
 
 
 	

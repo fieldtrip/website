@@ -419,7 +419,7 @@ Plot again with **[ft_clusterplot](/reference/ft_clusterplot)*
     ft_clusterplot(cfg, stat);
 
 
-{{tutorial:cluster_permutation_freq:clusperm_freq_topos_20Hz_FIC_ACTvsBL_plan_GA_clusterplot3.png?700}}
+![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_topos_20Hz_FIC_ACTvsBL_plan_GA_clusterplot3.png@700)
 
 **//Figure 3: T-statistic of the difference (FIC-FC) (of the combined planar gradient TFRs) and largest channel-time clusters//**
 

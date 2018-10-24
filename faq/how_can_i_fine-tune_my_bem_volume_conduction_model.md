@@ -54,7 +54,7 @@ The MATLAB image processing toolbox includes a number of morphological operation
 
 In particular imdilate can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull). An example is shown belo
 
-{{:faq:wiki12.png?direct&300|imdilate}}
+![image](/media/faq/wiki12.png@300)
 
 The code used to generate the figure i
     seg = imdilate(seg,strel_bol(3));
@@ -62,7 +62,7 @@ The code used to generate the figure i
 
 An example of the imfill function is given below. This is the case, for example, in which we want to fill the volume so that it constitutes a single entity. It results in being useful for triangulation, as explained in one of the techniques to obtain the outer-most surface (i.e. the skin).
 
-{{:faq:wiki34.png?direct&300|imfill}}
+![image](/media/faq/wiki34.png@300)
 
 The code used to generate the figure i
     seg = imfill(seg,'holes');

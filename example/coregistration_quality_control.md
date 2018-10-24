@@ -27,7 +27,7 @@ Please note that this is an example where the coregistration was not completely 
 	ft_plot_vol(headmodel_mri, 'unit', 'mm')
 	ft_plot_axes([], 'unit', 'mm');
 
-{{:example:coreg_qc_fig1.png?400|}}
+![image](/media/example/coreg_qc_fig1.png@400)
 
 	%% figure 2, MRI anatomy and brain segmentation
 
@@ -37,7 +37,7 @@ Please note that this is an example where the coregistration was not completely 
 	cfg.location = [0 0 60];
 	ft_sourceplot(cfg, mri_segmented)
 
-{{:example:coreg_qc_fig2.png?400|}}
+![image](/media/example/coreg_qc_fig2.png@400)
 
 	%% figure 3 and 4, MRI anatomy and headmodel
 
@@ -48,8 +48,8 @@ Please note that this is an example where the coregistration was not completely 
 	figure
 	ft_plot_montage(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'intersectmesh', headmodel_mri.bnd)
 
-{{:example:coreg_qc_fig3.png?400|}}
-{{:example:coreg_qc_fig4.png?400|}}
+![image](/media/example/coreg_qc_fig3.png@400)
+![image](/media/example/coreg_qc_fig4.png@400)
 
 	%% figure 5, MRI scalp surface and polhemus headshape
 
@@ -68,7 +68,7 @@ Please note that this is an example where the coregistration was not completely 
 	alpha 0.5
 	ft_plot_headshape(headshapeMEG, 'vertexcolor', 'k');
 
-{{:example:coreg_qc_fig5.png?400|}}
+![image](/media/example/coreg_qc_fig5.png@400)
 
 	%% figure 6, MRI and anatomical landmarks
 
@@ -80,7 +80,7 @@ Please note that this is an example where the coregistration was not completely 
 	  ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'style', 'intersect', 'location', location, 'plotmarker', location, 'markersize', 5, 'markercolor', 'y')
 	end
 
-{{:example:coreg_qc_fig6.png?400|}}
+![image](/media/example/coreg_qc_fig6.png@400)
 
 	%% figure 7, MRI scalp surface and anatomical landmarks
 
@@ -93,4 +93,4 @@ Please note that this is an example where the coregistration was not completely 
 	alpha 0.3
 	ft_plot_mesh(headshapeMEG.fid, 'vertexcolor', 'k', 'vertexsize', 10);
 
-{{:example:coreg_qc_fig7.png?400|}}
+![image](/media/example/coreg_qc_fig7.png@400)

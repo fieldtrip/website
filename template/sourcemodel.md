@@ -70,7 +70,7 @@ You can load and visualize the cortical sheets with
     camlight
     lighting gouraud
 
-{{:template:screen_shot_2013-12-05_at_8.59.46.png?direct&400|}}
+![image](/media/template/screen_shot_2013-12-05_at_8.59.46.png@400)
 
 
 
@@ -138,21 +138,21 @@ The new set of sourcemodels are not compatible with the old set. If you were in 
 
 **Figure 1**
 
-**A**{{:template:sourcemodel1.png?nolink&300|}}
+**A**![image](/media/template/sourcemodel1.png@300)
 
-**B**{{:template:sourcemodel3.png?nolink&250|}}**C**{{:template:sourcemodel2.png?nolink&250|}}
+**B**![image](/media/template/sourcemodel3.png@300)**C**![image](/media/template/sourcemodel2.png@300)
 
 *A: Template brain surface with template dipole locations (old version sourcemodel). B: Warped dipole locations (linear warp only) on top of an individual brain surface. C: Warped dipole locations (nonlinear warp) on top of an individual brain surface.*
 
 **Figure 2**
 
-{{:template:sourcemodel4.png?nolink&400|}}
+![image](/media/template/sourcemodel4.png@400)
 
 *The brain surface extracted from the blurred template brain warped to, and projected onto an individual MRI (yellow), and the brain surface extracted from the individual MRI (red).*
 
 ** Figure 3**
 
-{{:template:sourcemodel5.png?nolink&300|}}
+![image](/media/template/sourcemodel5.png@300)
 
 //Updated sourcemodel with template dipole locations (linearly warped) on top of an individual brain surface.
 

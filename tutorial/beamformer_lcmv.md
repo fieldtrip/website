@@ -98,7 +98,7 @@ We can plot the results with the matlab plot command to get a first impressio
 	plot(timelock.time, timelock.avg)
 
 
-{{:tutorial:beamformer:subjectseftimelock.png?direct&400|}}
+![image](/media/tutorial/beamformer/subjectseftimelock.png@400)
 
 We can additionally explore the spatiotemporal dynamics using fieldtrip interactive plotting function
 

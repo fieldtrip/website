@@ -29,7 +29,7 @@ It can be helpful to prepare a (video) presentation by writing a 'storyboard'. A
 
 To make the 'storyboard' from your Powerpoint presentation, ''[save as pdf]'', then go to ''[options]'' and select ''[Notes pages]'' under ''[publish options]'' (see below).
 
-{{:development:save_notes.png?300|}}
+![image](/media/development/save_notes.png@300)
 
 ## Recording
 
@@ -128,7 +128,7 @@ When using a webcam, you can use the setup shown below (ignore the extra camcord
 When recording video and/or audio using a Mac, you can use QuickTime Player. This is probably installed on your system already. It is easy to use and so far we encountered no problems. Well, except the fact that it can only record your primary screen and is therefor incompatible with using a dual-screen setup (with your notes on primary, and the display for the audience on secondary screen).
 Record your video and audio simultaneously using ''Start Video Recording'', under ''File'
 
-{{:development:screen_shot_quicktime.png?300|}}
+![image](/media/development/screen_shot_quicktime.png@300)
 
 For recording video and/or audio using a PC, we have not found a satisfactory solution. We have tried [CamStudio](http://camstudio.org/), which can be downloaded for free. However, in our experience it stalls/crashes when recording files over 2 GB. There are several settings which will determine the size and (inversely) the quality of the recording which depends on your purpose. Note that when recording video, audio is not included by default.
 
@@ -147,7 +147,7 @@ First of all, if you import files (images, video, audio), Adobe Premiere will no
 
 If you start a new Premiere project, you will need to specify whether you captured you video in DV or HDV (high definition). Secondly, you need to specify the resolution and frame rate. Of course the resolution and frame rate depends on the recording as well, but you can upgrade your final video to a higher resolution, for instance, when you want to use high-resolutions stills with a miniature 'talking head'. You will not need 50 frames per second, 25 is good. For our first videos we used 1080p25 as shown belo
 
-{{:development:guidelines:setting_premiere.png?200|}}
+![image](/media/development/guidelines/setting_premiere.png@200)
 
 
 
@@ -161,7 +161,7 @@ The recordings and edited material are organized according to Bugzilla identifie
 
 An Adobe Premiere project links all the files you use - video, images, etc - but does not copy them. Therefore, you can not simply copy your project to a new location on disk as all the links will be broken. The only way in which you *can* move a project is to export it, using the option to copy all used files with it to the new location. To do this, go to Project --> Project Manager. Then tick the boxes as belo
 
-{{:development:guidelines:export_premiere.png?300|}}
+![image](/media/development/guidelines/export_premiere.png@300)
 
 Note that the drive letter is Q. Always map the QNAP folder to Q, so that the links are not broken.
 

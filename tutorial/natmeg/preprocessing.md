@@ -432,7 +432,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 	print -dpng natmeg_erf4.png
 
 
-{{tutorial:natmeg_temp:natmeg_erf4.png?650}}
+![image](/media/tutorial/natmeg_temp/natmeg_erf4.png@650)
 
 *Figure 7; The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis** *
 
@@ -458,7 +458,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 	print -dpng natmeg_erf5.png
 
 
-{{tutorial:natmeg_temp:natmeg_erf5.png?650}}
+![image](/media/tutorial/natmeg_temp/natmeg_erf5.png@650)
 
 *Figure 8; The event related field plotted using ft_singleplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis***
 
@@ -493,7 +493,7 @@ Now we are going to look at the topographical spread of the field by usin
 	print -dpng natmeg_erf6.png
 
 
-{{tutorial:natmeg_temp:natmeg_erf6.png?650}}
+![image](/media/tutorial/natmeg_temp/natmeg_erf6.png@650)
 
 *Figure 9; A topographic plot of the event related fields obtained using **ft_topoplotER***
 
@@ -693,11 +693,11 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 
 
-{{tutorial:natmeg_temp:natmeg_erp2.png?650}}
+![image](/media/tutorial/natmeg_temp/natmeg_erp2.png@650)
 
 //Figure 8; The event related potentials plotted for three conditions for channel EEG020 using **[ ft_singleplotER](/reference/ ft_singleplotER) ** //
 
-{{tutorial:natmeg_temp:natmeg_erf2.png?650}}
+![image](/media/tutorial/natmeg_temp/natmeg_erf2.png@650)
 
 //Figure 9; The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER) ** // 
 

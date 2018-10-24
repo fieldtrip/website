@@ -29,7 +29,7 @@ The automatic artifacts detection functions (ft_artifact_xxx) make use of an art
 *  artifact padding (fig 2): data padding **with**, to extend the length of a detected artifact.
 
 
-{{:tutorial:artifactdetect:padding_fig1.png|}}
+![image](/media/tutorial/artifactdetect/padding_fig1.png)
 
 ![image](/media/tutorial/artifactdetect/padding_fig2.png)
 

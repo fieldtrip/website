@@ -258,7 +258,7 @@ The head model (vol) contains three structures in the **bnd** field. These are t
 	ft_plot_mesh(vol.bnd(3),'edgecolor','none','facecolor',[0.4 0.6 0.4]);
 
 
-{{:tutorial:headmodel:bem.png?350|scalp,skull,brain}}
+![image](/media/tutorial/headmodel/bem.png@350)
 
 *Figure 4. The geometry of the volume conduction  model. All surfaces (scalp:gray,skull:white,brain:green) plotted together*
 
@@ -293,7 +293,7 @@ The electrode positions are described in the **elecpos** field. The **label** fi
 	ft_plot_sens(elec,'style', 'sk');    
 
 
-{{:tutorial:headmodel:vol_elec_off.png?300|}}
+![image](/media/tutorial/headmodel/vol_elec_off.png@300)
 
 *Figure 5.*
 
@@ -377,7 +377,7 @@ We can check the alignment by plotting together the scalp surface with the elect
 	ft_plot_mesh(vol.bnd(1),'facealpha', 0.85, 'edgecolor', 'none', 'facecolor', [0.65 0.65 0.65]); %scalp
 
 
-{{:tutorial:headmodel:vol_elec.png?350|}}
+![image](/media/tutorial/headmodel/vol_elec.png@350)
 
 *Figure 6. Electrodes plotted together with the scalp surface.*
 
@@ -405,7 +405,7 @@ In the subsequent section however, we try to improve the alignment of the electr
 
 Here, we only need to use translation. We can shift the x axis with a few mm (12). This will move the electrodes more towards the front of the head. (Note: the positive x is towards the nasion in the ctf ccordinate system.) The electrodes fit better to the head surface after the translation.
 
-{{:tutorial:headmodel:vol_elec1.png?350|}}
+![image](/media/tutorial/headmodel/vol_elec1.png@350)
 
 *Figure 7. Aligned electrodes plotted together with the scalp surface*
 

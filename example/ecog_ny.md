@@ -55,7 +55,7 @@ In line with the [main tutorial](/tutorial/human_ecog), you can use the followin
 	set(hs, 'MarkerFaceColor', 'k', 'MarkerSize', 6);
 
 
-{{:tutorial:ny394_elec_loc_lateral.png?400|}}
+![image](/media/tutorial/ny394_elec_loc_lateral.png@400)
 
 #### 1. Data preprocessing
 
@@ -90,7 +90,7 @@ Artifact rejection can be done by visually inspecting individual trials and chan
 	epoch_data_clean_chan = ft_rejectvisual(cfg, epoch_data);
 
 
-{{:tutorial:ny394_bad_channel.png?400|}}
+![image](/media/tutorial/ny394_bad_channel.png@400)
 
 For rejecting artifact trials, we will use the 'summary' method in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)**. Identifying artifact trials in ECoG is similar to EEG analysis and can be done according to the tutorial on [visual artifact rejection](/tutorial/visual_artifact_rejection). Note, that ECoG data typically have higher amplitudes and better signal-to-noise ratios compared with data from scalp EEG, because they are recorded directly from the cortex. Still, a number of technical and physiological artifacts can be present in the data. Due to the clinical - and therefore less rigorously controlled - environment during the recording process, technical artifacts are quite common. The present dataset is relatively clean and, hence, does not need much rejection. Some moderate outliers can be found for the metrics: maxabs, zvalue and maxzvalue.
 
@@ -151,7 +151,7 @@ For plotting the data we select channel 'IO_03', located in or in close proximit
 	figure, ft_singleplotER(cfg,ERP_object_avg,ERP_face_avg)
 
 
-{{:tutorial:ny394_erp_single_small.png?400|}}
+![image](/media/tutorial/ny394_erp_single_small.png@400)
 
 ##### 3.2 calculate and plot HGPs
 
@@ -213,7 +213,7 @@ Again, we decided to plot channel 'IO_03'. As was the case for the ERPs, the HGP
 	figure, ft_singleplotER(cfg,HGP_object_bl,HGP_face_bl)
 
 
-{{:tutorial:ny394_hgp_single_small.png?400|}}
+![image](/media/tutorial/ny394_hgp_single_small.png@400)
 
 ##### 3.3 calculate timelock statistics
 
@@ -282,8 +282,8 @@ There are six channels with significantly different HGP time courses when compar
 	
 
 
-{{:tutorial:ny394_hgp_contrast_io3.png?400|}}
-{{:tutorial:ny394_hgp_contrast_io2.png?400|}}
+![image](/media/tutorial/ny394_hgp_contrast_io3.png@400)
+![image](/media/tutorial/ny394_hgp_contrast_io2.png@400)
 
 The analysis revealed stronger HGP in response to 'faces' compared with 'objects' in some channels (IO3, SO2), while other channels show the opposite pattern (PT3, PT6, IO2, SO4). This finding - together with the absence of significant effects in ERPs - suggests that HGP might be more sensitive to the type of visual stimulus presented than ERPs. The results are also in line with the notion that HGP represents highly locally specific activity whereas ERPs and low frequency oscillations are more widespread.
 
@@ -330,8 +330,8 @@ To visualize the time-frequency data from the two conditions, we will plot TFRs 
 	figure, ft_singleplotTFR(cfg,TFR_face_bl)
 
 
-{{:tutorial:ny394_tfr_io3_object.png?400|}}
-{{:tutorial:ny394_tfr_io3_face.png?400|}}
+![image](/media/tutorial/ny394_tfr_io3_object.png@400)
+![image](/media/tutorial/ny394_tfr_io3_face.png@400)
 
 ##### 4.2 Time-frequency statistics
 
@@ -379,7 +379,7 @@ Finally, we will plot the masked t-values from significant channels of the stati
 	end 
 
 
-{{:tutorial:ny394_tfr_contrast_io3.png?400|}}
-{{:tutorial:ny394_tfr_contrast_io2.png?400|}}
+![image](/media/tutorial/ny394_tfr_contrast_io3.png@400)
+![image](/media/tutorial/ny394_tfr_contrast_io2.png@400)
 
 Similar to the outcome of the HGP analysis, power differences are found in some occipital channels (IO, SO and PT). For instance, channel IO3 responds more strongly to 'face' Stimuli, whereas channel IO2 responds more strongly to 'object' Stimuli. Notably, the power differences are predominantly found in the high-gamma band range. This suggests that local HGP is highly sensitive for the presented stimulus type.

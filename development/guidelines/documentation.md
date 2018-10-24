@@ -96,7 +96,7 @@ When you are done making the figure just select all text and images and copy-pas
 
 If you make schematic figures yourself we suggest the default Office 2007 color scheme. The lighter (pastel) colors are made by making the images 50% transparent (//right-button// click on figure, then change transparency under *format shape*), or by using the RGB values in the boxes below. Also, we suggest using the Calibri or Arial font in figures. Here you can download Adobe Illustrator swatch (palette) and an example.
 
-{{:fieltrip_palette.png|}}
+![image](/media/fieltrip_palette.png)
 
 ## How to make the banners for this Wiki?
 

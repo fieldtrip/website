@@ -66,7 +66,7 @@ layout: default
 	print -dpng phalow_freqhigh_fig2.png
 
 
-![image](/media/example/crossfreq/phalow_freqhigh_fig1.png@400) {{:example:crossfreq:phalow_freqhigh_fig2.png?400|phalow_freqhigh_fig2.png}}
+![image](/media/example/crossfreq/phalow_freqhigh_fig1.png@400) ![image](/media/example/crossfreq/phalow_freqhigh_fig2.png@400)
 
 	
 	% show powerspectrum simulated data

@@ -85,5 +85,5 @@ Note that in this example dataset, the digitized position of HPI coil 5, energiz
 	cfg.coilfreq = [293, 307, 314, 321]; % note 328 Hz is missing
 
 
-{{:faq:neuromag_wikiexample.png?direct&400|}}
+![image](/media/faq/neuromag_wikiexample.png@400)
 

@@ -106,9 +106,9 @@ Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and 
 	figure; ft_singleplotER(cfg,GA_FC, GA_FIC)
 
 
-{{tutorial:eventrelatedstatistics:multiplot_ga_fc_fic.png?400|multiplot_GA_FC_FIC.png}}
+![image](/media/tutorial/eventrelatedstatistics/multiplot_ga_fc_fic.png@400)
 
-{{tutorial:eventrelatedstatistics:singleplotMLT12_ga_fc_fic.png?400|singleplotMLT12_GA_FC_FIC.pngg}}
+![image](/media/tutorial/eventrelatedstatistics/singleplotMLT12_ga_fc_fic.png@400)
  
 
 From the grand average plot we can zoom in on our comparison of interest and only plot the ERF of channel MLT12 for all subjects, using the individual subject averages data.
@@ -136,7 +136,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 	axis off
 
 
-{{tutorial:eventrelatedstatistics:erfstats-allsubj-indiv.png?400|erfstats-allsubj-indiv.png}}
+![image](/media/tutorial/eventrelatedstatistics/erfstats-allsubj-indiv.png@400)
 
 From the individual plots and grand average plots above, it seems that between 300ms and 700ms there is a difference between the two conditions in channel MLT12 (channel 52).
 
@@ -169,7 +169,7 @@ We can also plot the differences between conditions, for each subject, in a diff
 
 
 
-{{tutorial:eventrelatedstatistics:mlt12_300to700ms_allsubj_fc_fic.png?400|MLT12_300to700ms_allsubj_FC_FIC.png}}
+![image](/media/tutorial/eventrelatedstatistics/mlt12_300to700ms_allsubj_fc_fic.png@400)
 
 
 
@@ -251,7 +251,7 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
 
 
 
-{{tutorial:eventrelatedstatistics:depttestmatlab_nomcc.png?200|depttestMATLAB_nomcc.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttestmatlab_nomcc.png@200)
 
 
 However, since now you are performing 151 individual tests, you can no longer control  the false alarm rate. Given the null-hypothesis and an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly concluding that the null-hypothesis should be rejected. As this false alarm rate applies to each test that you perform, the chance of making a false alarm for 151 tests in parallel is much larger than the desired 5%. This is the multiple comparison problem. 
@@ -343,7 +343,7 @@ This is implemented in FieldTrip in the function statistics_montecarlo which is 
 
 With the method (cfg.method) of statistical test set  as a permutation-based test (montecarlo) the following sensors show a significant effect (p<0.05) between 0.3 and 0.7 s. 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_nomcc.png?200|depttest_nonpara_FieldTrip_nomcc.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_nomcc.png@200)
 
  
 
@@ -404,7 +404,7 @@ This method requires you to define neighbouring sensors. FieldTrip has a functio
 
 With the cluster-based permutation method for multiple comparisons the following sensors show a significant effect (p<0.05) between 0.3 and 0.5 s. 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster2.png?200|depttest_nonpara_FieldTrip_cluster2.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster2.png@200)
 
  
 
@@ -452,16 +452,16 @@ So far we predefined a time window over which the effect was averaged, and teste
 
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig1.png?400|depttest_nonpara_FieldTrip_cluster_fig1.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig1.png@400)
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig2.png?400|depttest_nonpara_FieldTrip_cluster_fig2.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig2.png@400)
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig3.png?400|depttest_nonpara_FieldTrip_cluster_fig3.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig3.png@400)
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig4.png?400|depttest_nonpara_FieldTrip_cluster_fig4.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
 
 `<note>`
 If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).

@@ -180,7 +180,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 
 Example statistical results in a single-subject (baseline vs. task activity contrasts). With ft_regressconfound, sensor-level statistical sensitivity was increased after tactile stimulation (40-50 ms; note the more extreme t-scores in the upper panel). In a similar vein, source-level statistical sensitivity was increased after visual stimulation (0-500 ms; 65Hz; lower panel).
 
-{{:example:regr_ftwiki.png?&300|}} Figure taken from {{:faq:stolkneuroimage2013.pdf|Stolk et al., NeuroImage 2013}}.
+![image](/media/example/regr_ftwiki.png@&300) Figure taken from {{:faq:stolkneuroimage2013.pdf|Stolk et al., NeuroImage 2013}}.
 ## Practical issues
 
 Some features of this GLM-based compensation method need emphasizing. These points are described in more detail in the 'Testing the offline GLM-based head movement compensation' section of {{:faq:stolkneuroimage2013.pdf|Stolk et al., NeuroImage 2013}}.

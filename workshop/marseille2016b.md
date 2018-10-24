@@ -27,7 +27,7 @@ We will keep this page up to date and post new information here when available.
     * 12:30 – 13:30		Lunch
 
 *  Session II
-    * 13:30 – 14:30		Lecture: Connectivity basics, issues and how-to's. {{:workshop:marseille2016b_connectivity2.pdf|slides}}
+    * 13:30 - 14:30		Lecture: Connectivity basics, issues and how-to's. {{:workshop:marseille2016b_connectivity2.pdf|slides}}
     * 14:30 – 14:45		Coffee break
     * 14:45 – 16:15	  Hands-on: Analysis of source-level connectivity and networks
           * http://www.fieldtriptoolbox.org/tutorial/networkanalysis

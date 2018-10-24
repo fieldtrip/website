@@ -28,7 +28,7 @@ The following script demonstrates how you can determine the filter characteristi
 	
 	print -dpng fig1.png
 
-{{:example:filter:fig1.png?600}}
+![image](/media/example/filter/fig1.png@600)
 
 	
 	str = 'compare different filter orders (Butterworth)';
@@ -46,7 +46,7 @@ The following script demonstrates how you can determine the filter characteristi
 	
 	print -dpng fig2.png
 
-{{:example:filter:fig2.png?600}}
+![image](/media/example/filter/fig2.png@600)
 
 
 	
@@ -65,7 +65,7 @@ The following script demonstrates how you can determine the filter characteristi
 	
 	print -dpng fig3.png
 
-{{:example:filter:fig3.png?600}}
+![image](/media/example/filter/fig3.png@600)
 
 	
 	str = 'compare filter direction';
@@ -83,7 +83,7 @@ The following script demonstrates how you can determine the filter characteristi
 	
 	print -dpng fig4.png
 
-{{:example:filter:fig4.png?600}}
+![image](/media/example/filter/fig4.png@600)
 
 Note that the two-pass filter characteristic drops off twice as fast as the forward and reverse filter, even though the specified filter order is the same. 
 

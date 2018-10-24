@@ -90,7 +90,7 @@ You can see that all events are coded as type "INPUT". The following plots the e
     xlabel('time (s)');
     ylabel('trigger value');
 
-{{:getting_started:screen_shot_2015-10-14_at_10.30.26.png?500|}}
+![image](/media/getting_started/screen_shot_2015-10-14_at_10.30.26.png@500)
 
 You can also visualise the eye tracker data in combination with the INPUT triggers using **[ft_databrowser](/reference/ft_databrowser)**
 
@@ -108,7 +108,7 @@ or by reading the data straight from dis
 
 The following shows the data and the events in the first 20 seconds.
 
-{{:getting_started:screen_shot_2015-10-14_at_10.31.13.png?500|}}
+![image](/media/getting_started/screen_shot_2015-10-14_at_10.31.13.png@500)
 
 ### Alternative ways of importing the data
 
@@ -154,9 +154,9 @@ In this dataset (since it is a MEG dataset) there are four types of events. The 
     xlabel('time (s)');
     ylabel('trigger value');
 
-{{:getting_started:screen_shot_2015-10-14_at_16.05.16.png?500|}}
+![image](/media/getting_started/screen_shot_2015-10-14_at_16.05.16.png@500)
 
-{{:getting_started:screen_shot_2015-10-14_at_16.05.19.png?500|}}
+![image](/media/getting_started/screen_shot_2015-10-14_at_16.05.19.png@500)
 
 Important to notice here is that the stimulus events in the EEG dataset largely correspond to the events in the eye tracker dataset. The response events however are not represented in the eye tracker dataset. Furthermore, the exact number of stimuli in the Eyelink data is approximately double the number of stimulus events in the EEG data.
 
@@ -203,7 +203,7 @@ Again using the **[ft_databrowser](/reference/ft_databrowser)** you can check th
     cfg.preproc.demean = 'yes';
     ft_databrowser(cfg);
 
-{{:getting_started:screen_shot_2015-10-14_at_16.11.50.png?500|}}
+![image](/media/getting_started/screen_shot_2015-10-14_at_16.11.50.png@500)
 
 To do a combined analysis of the eye tracker and the EEG data, you would use the stimulus triggers that are present in both. Using a trial function and **[ft_definetrial](/reference/ft_definetrial)** you would do **[ft_preprocessing](/reference/ft_preprocessing)** on both eye tracker and EEG data, cutting out exactly the same segment of data around each event of interest.
 
@@ -287,11 +287,11 @@ and plot them side by side
     plot(data_meg.time{2}, data_meg.trial{2}(uadc005,:))
     grid on 
 
-{{:getting_started:screen_shot_2015-11-11_at_16.38.59.png?500|}}
+![image](/media/getting_started/screen_shot_2015-11-11_at_16.38.59.png@500)
 
 If you look carefully, you can see the delay in the MEG ADC channels
 
-{{:getting_started:screen_shot_2015-11-11_at_16.38.02.png?500|}}
+![image](/media/getting_started/screen_shot_2015-11-11_at_16.38.02.png@500)
 
 Subsequently you can resample the 1000Hz Eyelink data to the 1200Hz MEG data and append them in the same data structure for more convenient joint processing.
 

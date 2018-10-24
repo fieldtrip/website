@@ -60,7 +60,7 @@ In this experiment, MEG was recorded during stimulation of the affected/painfull
 Looking at these two topographies, a single dipole seems sufficient to explain the field distribution. It is also not clear that the dipole would be at a different location, although there is a small change in the global field strength. A dipole that corresponds with the dipolar field is schematically drawn in the two topographies as a yellow arrow. Subsequently we can look at the difference map (see below). 
 
 
-{{:example:difference_erf_result.png?300|}}
+![image](/media/example/difference_erf_result.png@300)
 
 *Figure 3; difference =  block - pain*
 

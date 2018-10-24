@@ -33,7 +33,7 @@ The following code simulates a clean oscillating signal with a phase reset at ti
 	plot(t, mean(d,1))
 
 
-{{:example:phase_reset_narrowband.png?400|}}
+![image](/media/example/phase_reset_narrowband.png@400)
 
 ## Broad-band oscillation
 
@@ -66,5 +66,5 @@ The following code also includes a small "random walk" in the phase, i.e. the si
 	plot(t, mean(d,1))
 
 
-{{:example:phase_reset_broadband.png?400|}}
+![image](/media/example/phase_reset_broadband.png@400)
 

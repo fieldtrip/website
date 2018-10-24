@@ -41,9 +41,9 @@ The conversion involves two steps, both using the CTF-program MRIViewer: First, 
 
 The earphone of the MRI scanner has a large (~1 cm) vitamine E marker built in on the right side. Make sure to check that this marker is visible on the right side.
 
-{{:faq:vitamine_marker1.png?150}}
-{{:faq:vitamine_marker2.png?150}}
-{{:faq:vitamine_marker3.png?150}}
+![image](/media/faq/vitamine_marker1.png@150)
+![image](/media/faq/vitamine_marker2.png@150)
+![image](/media/faq/vitamine_marker3.png@150)
 
 ### Directory structure
 
@@ -92,9 +92,9 @@ At the DCCN we use ear-molds that come in a variety of sizes to position the MEG
 
 On top of that, the right ear also contains a large vitamine E marker to help distinguish left and right. At the location of the nasion we don't put a marker. Below you see three slices with the right-ear marker. Note that the ear marker is the small dot in the middle of the ear shell (yellow arrow), not the large dot close to the ear lobe (red arrow; that is the vitamine E capsule to indicate the right side).
 
-{{:faq:fiducials1.png?150}}
-{{:faq:fiducials2.png?150}}
-{{:faq:fiducials3.png?150}}
+![image](/media/faq/fiducials1.png@150)
+![image](/media/faq/fiducials2.png@150)
+![image](/media/faq/fiducials3.png@150)
 
 The most elegant way to identify the markers would include:
 

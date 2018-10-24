@@ -33,15 +33,15 @@ Data at the channel level has a value for each sensor (MEG) or electrode (EEG). 
 
 Plotting 2D data at the sensor level using:  ft_singleplotER (top left), ft_multiplotER (top right) and ft_topoplotER (bottom left)
 
-{{tutorial:plotting:figure5.png?250|singleplotER}}
-{{tutorial:plotting:figure5era.png?250|multiplotER}}
+![image](/media/tutorial/plotting/figure5.png@250)
+![image](/media/tutorial/plotting/figure5era.png@250)
 {{tutorial:plotting:figure5.jpg?250|topoplotER}}
 
 Plotting 3D data at the sensor level: using ft_singleplotTFR (top left), ft_multiplotTFR (top right) and ft_topoplotTFR (bottom left) 
 
-{{tutorial:plotting:figure3.png?250|singleplotTFR}}
-{{tutorial:plotting:figure2.png?250|multiplotTFR}}
-{{tutorial:plotting:figure4.png?250|topoplotTFR}}
+![image](/media/tutorial/plotting/figure3.png@250)
+![image](/media/tutorial/plotting/figure2.png@250)
+![image](/media/tutorial/plotting/figure4.png@250)
 
 ### Singleplot functions
 
@@ -97,8 +97,8 @@ The multiplot functions work similarly to the singleplot functions, again first 
 
 Normally the axes of the figure are not visible, only the "axis" of each channel, but remember these are not real axes on which you can use MATLAB axis commands, the are just lines drawn by the function. Of course you can set the limits of the channel "axis" by the cfg structure (cfg.xlim, cfg.ylim). And you can see the limits in the scale in **[ft_multiplotER](/reference/ft_multiplotER)** (righ upper corner) or in the comment for **[ft_multiplotTFR](/reference/ft_multiplotTFR)** (left upper corner).
 
-{{:tutorial:plotting:avgfic.png?400|multiplotER}}
-{{:tutorial:plotting:tfrhannall.png?400|multiplotTFR}}
+![image](/media/tutorial/plotting/avgfic.png@400)
+![image](/media/tutorial/plotting/tfrhannall.png@400)
 
 The layout is determined by the layout file. Read more on layout files 
 [here](/tutorial/layout), and in the [frequently asked questions](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
@@ -128,7 +128,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.layout = 'CTF151.lay';
     figure; ft_topoplotTFR(cfg,TFRhann);
     
-{{tutorial:plotting:tuto_topotfr.png?250|topoplotTFR}}
+![image](/media/tutorial/plotting/tuto_topotfr.png@250)
 
     % for the multiple plots als
     cfg.xlim = [-0.4:0.2:1.4];
@@ -136,7 +136,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.commentpos = 'title';
     figure; ft_topoplotTFR(cfg,TFRhann);
 
-{{tutorial:plotting:tuto_topotfr_multi.png?300|topoplotTFR_xlim_vector}}
+![image](/media/tutorial/plotting/tuto_topotfr_multi.png@300)
 
 #### Exercise 2
 
@@ -234,10 +234,10 @@ The function automatically finds the clusters in the data which are smaller than
 
 
 
-{{:tutorial:staterf1.png?400|}}
-{{:tutorial:staterf2.png?400|}}
-{{:tutorial:staterf3.png?400|}}
-{{:tutorial:staterf4.png?400|}}
+![image](/media/tutorial/staterf1.png@400)
+![image](/media/tutorial/staterf2.png@400)
+![image](/media/tutorial/staterf3.png@400)
+![image](/media/tutorial/staterf4.png@400)
 
 
 ##### Freqdata
@@ -303,7 +303,7 @@ Here we will plot axial slices of the brain
 	To play around with the number of slices, and which slice to begin plotting, check the documentation for cfg.nslices, and cfg.slicerange, respectively.
 
 
-{{:tutorial:plotting:sourcestattfr_slice.png?500|}}
+![image](/media/tutorial/plotting/sourcestattfr_slice.png@500)
 
 #### Source-Freq-Time data plotted as in 3 orthogonal orientations
 
@@ -317,7 +317,7 @@ For exploring your data, plotting the brain from 3 orthogonal orientations simul
 	ft_sourceplot(cfg,statsourceTFR);
 
 
-{{:tutorial:plotting:sourcestattfr_ortho.png?500|}}
+![image](/media/tutorial/plotting/sourcestattfr_ortho.png@500)
 
 #### Source-Freq-Time data interpolated on to an MRI
 
@@ -417,8 +417,8 @@ Here, we make a field in the data with an opacity value for each voxel, and appl
 
 ** Here are some figures to help understand how the data is manipulated when specifying cfg.opacitymap:**
 
-{{tutorial:plotting:plottuto_opac_rampup2.png?280|rampup}}
-{{tutorial:plotting:plottuto_opac_vdown2.png?280|vdown}}
+![image](/media/tutorial/plotting/plottuto_opac_rampup2.png@280)
+![image](/media/tutorial/plotting/plottuto_opac_vdown2.png@280)
 ![image](/media/tutorial/plotting/plottuto_opac_mask.png@280)
 ### Plotting on a brain surface
 

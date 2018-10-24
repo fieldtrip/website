@@ -165,7 +165,7 @@ In this structure, the **brick0** and **brick1** field contains two different in
 
 An indexed representation can also be plotted to inspect the different tissues in an image (see below). 
 
-{{:development:afni_atlas.png?300|atlas}}
+![image](/media/development/afni_atlas.png@300)
 
 *Figure 4. Plot of the integer values that are represented in the indexed "brick0" representation of the AFNI atlas. The figure was made with "colormap lines".*
 
@@ -203,6 +203,6 @@ An indexed segmentation can represent only non-overlapping tissues/brain areas, 
 
 When a non-binary probabilistic segmentation is used and when the binary representations of the different tissue types partially overlap, the conversion to an indexed representation would involve a disambiguation of each voxel to which tissue/brain area it belongs to and the more fine-grade information of the probability values would disappear. 
 
-{{:faq:segmentation:tissue_representation.png?500|}}
+![image](/media/faq/segmentation/tissue_representation.png@500)
 
 *Figure 6. Schematic figure of conversion between different representation of the segmentation. Binary probabilistic representation of non-overlapping tissue-types can be directly converted to an indexed representation (A). When an overlapping or/and non-binary probabilistic representation is converted to indexed, the representations are not equivalent (B)*

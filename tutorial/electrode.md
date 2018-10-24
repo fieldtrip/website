@@ -112,7 +112,7 @@ To localise the electrode we use the crates that are visible on the surface.
 	elec = ft_electrodeplacement(cfg,head_surface);
 
 
-{{:tutorial:structure_electrodeplacement.png?500|}}
+![image](/media/tutorial/structure_electrodeplacement.png@500)
 *Figure: Identifying electrode locations*
 
 ### Assign electrode labels
@@ -137,7 +137,7 @@ A final visualisation showing the electrodes on the color surface mesh of the su
 	ft_plot_mesh(head_surface)
 	ft_plot_sens(elec)
 
-{{:tutorial:structure_electrode_head_surface.png?300|}}
+![image](/media/tutorial/structure_electrode_head_surface.png@300)
 
 *Figure: Head surface with localised electrodes*
 

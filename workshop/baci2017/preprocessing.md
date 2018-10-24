@@ -175,7 +175,7 @@ We will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the d
 	cfg.method = 'summary'; % use by default summary method
 	data       = ft_rejectvisual(cfg,data);
 
-{{:workshop:baci2017:artifactrejection.png?600|}}
+![image](/media/workshop/baci2017/artifactrejection.png@600)
 
 
 *figure 1: Example of visual rejection.*
@@ -244,7 +244,7 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft
 	h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 	
 
-{{:workshop:baci2017:baci_sep_singleploter.png?600|}}
+![image](/media/workshop/baci2017/baci_sep_singleploter.png@600)
 
 *figure 2: Representation of single trial (blue) and the global mean field power (red).*
 
@@ -296,7 +296,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sep_multiplotER.png
 
-{{:workshop:baci2017:baci_sep_multiploter.png?600|}}
+![image](/media/workshop/baci2017/baci_sep_multiploter.png@600)
 
 *figure 3: Use of ft_multiplotER for representation of the single trial according to the EEG cap.*
 
@@ -318,7 +318,7 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 	print -dpng baci_sep_topo.png
 	
 
-{{:workshop:baci2017:baci_sep_topo.png?400|}}
+![image](/media/workshop/baci2017/baci_sep_topo.png@400)
 
 
 *figure 4: Representation of the P20/N20 component using the function, ft_topoplotER.*

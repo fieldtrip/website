@@ -199,22 +199,22 @@ We need a range of effect and noise size where at the edges the effect is always
 The results of using 1 repetition of the stats test (i.e., 1 channel). The left figure shows 'stat', right shows 'mask'. On the x-axis is noise level, on y-axis effect level, the colouring codes the stat (t values) resp. mask (1=sig effect, 0=no sig effect).
 
 
-{{development:stat_noise_4_10_effect_1_4.png?500}}
-{{development:mask_noise_4_10_effect_1_4.png?500}}
+![image](/media/development/stat_noise_4_10_effect_1_4.png@500)
+![image](/media/development/mask_noise_4_10_effect_1_4.png@500)
 
 The results of using 500 repetitions of the stats test. Since the noise is randomly generated the results turn out little bit different for each run. Averaging the masks over repetitions reflects the statistical power (=1-beta)
 
 
-{{development:stat_noise_4_10_effect_1_4_n500.png?500}}
-{{development:mask_noise_4_10_effect_1_4_n500.png?500}}
+![image](/media/development/stat_noise_4_10_effect_1_4_n500.png@500)
+![image](/media/development/mask_noise_4_10_effect_1_4_n500.png@500)
 
 
 *To illustrate (using multiplicative effect model)
 
 The results of using 500 repetitions of the stats test. The left figure shows 'stat', right shows 'mask'.
 
-{{development:stat_noise_2_8_effect_0.5_1.5_n500.png?500}}
-{{development:mask_noise_2_8_effect_0.5_1.5_n500.png?500}}
+![image](/media/development/stat_noise_2_8_effect_0.5_1.5_n500.png@500)
+![image](/media/development/mask_noise_2_8_effect_0.5_1.5_n500.png@500)
 ## Step 3: develop and test methods
 
 To test the methods we will take the following step

@@ -8,7 +8,7 @@ For the FieldTrip project we are using the [bugzilla](http://www.bugzilla.org) b
 
 Our Bugzilla server is located at http://bugzilla.fieldtriptoolbox.org. 
 
-{{buggie.png}}
+![image](/media/buggie.png)
 
 ## Use bugzilla to report or to get updates
 

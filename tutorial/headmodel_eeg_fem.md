@@ -42,7 +42,7 @@ Here, we will work towards a  volume conduction model of the head based on the f
 The anatomical mri of the [tutorial data set](/tutorial/shared/dataset) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). 
 
 
-{{:tutorial:headmodel:hedmodel_fem2.png?nolink&200|}}
+![image](/media/tutorial/headmodel/hedmodel_fem2.png@200)
 
 *Figure 2. Pipeline for creating a FEM model*
 
@@ -209,8 +209,8 @@ The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot t
 
 In this step, a geometrical description of the head is created by the **[ft_prepare_mesh](/reference/ft_prepare_mesh)** function. The output of this function is a hexahedral mesh (i.e. the points of the mesh are connected in such way that they create hexahedrons). Each hexahedron is assigned to one of the five tissue-types.
 In order to improve the geometrical properties of the mesh (i. e. its approximation of the head shape), a node-shift approach can be applied which shifts boundary vertices in the direction of those hexahedrons that represent the minority around it(see figure. The magnitude of the shift is controlled by a shift parameter which can range from 0 (no shift) to 0.49(maximum shift). However, choosing the shift parameter too large can result in degenerated hexahedrons. For starters we recommend a shift parameter of 0.3.
-{{:development:slide_mesh_detailed.png?direct&300|}}
-{{:development:slide_mesh_ns_detailed.png?direct&300|}}
+![image](/media/development/slide_mesh_detailed.png@300)
+![image](/media/development/slide_mesh_ns_detailed.png@300)
 
 *Figure 5.*
 Comparison of an unshifted mesh(upper) and shifted mesh(lower). Visualization done with ParaView.
@@ -295,7 +295,7 @@ The hexahedral mesh is a geometrical description of the head. It is built up fro
 
     ft_plot_mesh(mesh, 'surfaceonly', 'yes');
     
-{{:development:fem_mesh.png?600|}}
+![image](/media/development/fem_mesh.png@600)
 
 
 
@@ -335,7 +335,7 @@ Since for this subject we have an MRI, but no EEG electrodes, we will use a temp
 	ft_plot_sens(elec,'style', 'sr');    
 
 
-{{:development:fem_mesh_misaligned_electrodes.png?500|}}
+![image](/media/development/fem_mesh_misaligned_electrodes.png@500)
 
 
 *Figure 7.* FEM mesh surface plotted with electrode-positions (not aligned).
@@ -418,7 +418,7 @@ We can check the alignment by plotting together the scalp surface with the elect
 	ft_plot_sens(elec_aligned,'style','sr');
 
 
-{{:development:fem_mesh_misaligned_electrodes_corrected.png?500|}}
+![image](/media/development/fem_mesh_misaligned_electrodes_corrected.png@500)
 
 *Figure 8. Electrodes plotted together with the head surface after automatic alignement.*
 
@@ -439,7 +439,7 @@ The alignment is much better, but not perfect. Some of the electrodes are below 
 
 Here, we only need to use translation. We can shift about 15 mm along the x-axis and -10 mm along the y-axis. Note that in the CTF head coordinate system the x-axis is towards the nose. 
 
-{{:development:fem_mesh_misaligned_electrodes_manually_corrected.png?500|}}
+![image](/media/development/fem_mesh_misaligned_electrodes_manually_corrected.png@500)
 
 *Figure 9. Aligned electrodes plotted together with the head surface*
 

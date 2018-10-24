@@ -135,7 +135,7 @@ Some acquisition systems, such as Biosemi, allow for direct bipolar recording of
 `</note>`
 
 
-{{:example:example_eog.png?nolink&200|}}
+![image](/media/example/example_eog.png@200)
 
 	
 	% EOGV channel
@@ -241,7 +241,7 @@ An next important step of EEG preprocessing is detection (and rejection) of arti
 
 You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yourself that trials 22, 42, 126, 136 and 150 contain blinks. You can exclude a trial from the data by clicking on it. Note, however, that in this example we do not assign any output to the function. MATLAB will create the default output "ans" variable. All the changes (rejections) that you make will be applied to the "ans". The "data" will remain the same, no trials will be removed!  
 
-{{:example:example_script_artifacts1.png?nolink&600|}}
+![image](/media/example/example_script_artifacts1.png@600)
 
 `<note>`
 In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
@@ -320,7 +320,7 @@ We now select the trials with conditions 1 and 2 and compute ERP's.
 
 Note, that we use the layout file for plotting the results. With the cfg.interactive = 'yes' option you can select channels and zoom in.
 
-{{:example:preprocessing_eeg_multiploter.png?direct&400|}}
+![image](/media/example/preprocessing_eeg_multiploter.png@400)
 
 The following code allows you to look at the ERP difference waves.
 

@@ -112,7 +112,7 @@ We can make a plot of one of the trigger channels
 	figure;
 	plot(data(161,1:100000);
 
-{{:getting_started:triggers1.png?300px}}
+![image](/media/getting_started/triggers1.png@300)
 
 zooming in a bi
 
@@ -120,7 +120,7 @@ zooming in a bi
 	figure;
 	plot(data(161,1:10000);
 
-{{:getting_started:triggers2.png?300px}}
+![image](/media/getting_started/triggers2.png@300)
 
 zooming in even more using the matlab figure magnifying glass on the top left corner of one trigger even
 
@@ -128,7 +128,7 @@ zooming in even more using the matlab figure magnifying glass on the top left co
 	figure;
 	plot(data(161,1:10000,'.-');
 
-{{:getting_started:triggers3.png?300px}}
+![image](/media/getting_started/triggers3.png@300)
 
 We can no clearly see that a single trigger is composed of several samples of a 'high' signal, and that its 'noisy' due to the fact that it is a digitized analogue signal. Its important to make sure one has a minimal and consistent duration of the trigger signal so it can be sampled reliable for the detection of events.
 
@@ -209,7 +209,7 @@ In the frequently asked questions you can find an overview of the conventions fo
 
 Unlike other systems, the Yokogawa system software does not automatically analyze its sensorlocations relative to fiducial coils. Instead the positions of the fiducial points are saved in an external textfile - in the helmet's own coordinate system - using the property menu of the YOKOGAWA MEG-VISION software. Origin of the coordinate system is at the center of the helmet, where Z+ is towards the top of the head, X+ is towards the nose, Y+ is towards the left.
 
-{{:getting_started:yokogawa_coord.png|}}
+![image](/media/getting_started/yokogawa_coord.png)
 
 ## Coregistration using forehead coils/markers
 
@@ -355,7 +355,7 @@ Plot sensors, fiducials and headmodel to doublecheck
 	camlight left
 
 
-{{:getting_started:headmodel_and_sensors_and_fiducials.png?px400}}
+![image](/media/getting_started/headmodel_and_sensors_and_fiducials.png@400)
 
 ### Freqanalysis
 

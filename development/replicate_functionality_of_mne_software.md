@@ -49,13 +49,13 @@ The pipeline of the MNE analysis can be divided into 5 bigger step
 
 The last three steps are using the outputs from processing of anatomical and electrophysiological data.
 
-{{:development:mne_step1_biggersteps.png?250|}}
+![image](/media/development/mne_step1_biggersteps.png@250)
 
 ### 1. Anatomical processing
 
 The first part of anatomical processing of the MRI data is done by the Freesurfer program. MNE is using the output of this program and one of the FS functions to create head shapes with the boundary element method (BEM) and to set up the source space for the forward solution. The next figure shows the filenames (with red) that were created by FS and MNE is using them for input. When MNE is creating the BEM model meshes it is using a function (mri_watershed) from FS. Therefore, the FS has to be set up before running this MNE function.
 
-{{:development:anatomical_processing_2.png?650|}}
+![image](/media/development/anatomical_processing_2.png@650)
 
 First, one should run FS for creating the input files for MNE. 
 
@@ -82,7 +82,7 @@ This code will recognize the first xxx.ima file in the directory of the anatomic
 
 This figure shows the processing steps done by -autorecon1 when there is only one scanning run of one subject is available. The input and output file names are shown also for each step.
 
-{{:development:fs_autorecon1.png?350|}}
+![image](/media/development/fs_autorecon1.png@350)
 
 This first processing step takes around 1,5 hour.
 
@@ -112,7 +112,7 @@ For further instructions, read http://surfer.nmr.mgh.harvard.edu/fswiki/Recommen
 
 This figure shows the processing steps that happens when -autorecon2 is running. Not all of the output files are shown, and many of the processing stages could be divided into more individual FS functions. But I tried to add those output files that are used as input of later processing stages. The red file names are used later by MNE. The last step (green) belongs to -autorecon3.
 
-{{:development:fs_autorecon23.png?500|}}
+![image](/media/development/fs_autorecon23.png@500)
 
 In the first stage (**automatic subcortical segmentation**) the volume is further normalized based on a GCA (gaussian filter array) model. 
 
@@ -281,14 +281,14 @@ mne_analyze`</code>`
 
 This is a general pipeline about how to do source analysis based on minimum-norm estimate.
 
-{{:development:gen_pipeline2.png?600|}}
+![image](/media/development/gen_pipeline2.png@600)
  
 
 ### Anatomical processing:MEG
 
 The following figure shows the MNE and FS and FT pipeline of anatomical processing. 
 
-{{:development:anatomical_processing_fs_ft_mne.png?1000|}}
+![image](/media/development/anatomical_processing_fs_ft_mne.png@1000)
 
 :!: Creating source space in FieldTrip has been tested only on MRI data with .mri extension.
 

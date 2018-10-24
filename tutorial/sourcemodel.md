@@ -421,7 +421,7 @@ As an alternative you can create a template grid yourself, like thi
 	ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
 
-{{:example:mnispace:mni_fig1a.png?300|fig2a}}
+![image](/media/example/mnispace/mni_fig1a.png@300)
 
 **fig 2: template grid and headmodel, top view**
 
@@ -465,7 +465,7 @@ As an alternative you can create a template grid yourself, like thi
 	
 
 
-{{:example:mnispace:mni_fig2b.png?300|fig3}}
+![image](/media/example/mnispace/mni_fig2b.png@300)
 
 **fig 3: template grid in single-subject head coordinates, superimposed onto the headmodel**
 

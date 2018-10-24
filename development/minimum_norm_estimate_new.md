@@ -68,7 +68,7 @@ The functions described in this part of the tutorial are using toolboxes that ar
 
 The following figure shows the steps of the preprocessing and of the rest of the anatomical processing (volume conduction and source-model).
 
-{{:tutorial:minimumnormestimate:anatomical_preproc_mne.png?500|}}
+![image](/media/tutorial/minimumnormestimate/anatomical_preproc_mne.png@500)
 
 *Figure 2. Pipeline for processing of the anatomical data*
 

@@ -36,4 +36,4 @@ The following code demonstrates how you can determine the orientation of the two
 	axis vis3d
 
 
-{{:example:planar_orientation.png|}}
+![image](/media/example/planar_orientation.png)

@@ -42,7 +42,7 @@ Please note that the use of these layout files requires that the channel labelin
     cfg.layout = 'biosemi160.lay'
     ft_layoutplot(cfg)
 
-{{:getting_started:biosemi160.png?400|}}
+![image](/media/getting_started/biosemi160.png@400)
 	
 
 ## Referencing Biosemi EEG data

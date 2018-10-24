@@ -10,7 +10,7 @@ Sensory-motor processing is assessed using a task in which participants are pres
 
 In the Motor task, participants executed a simple hand or foot movement. The limb and the side were instructed by a visual cue, and the timing of each movement was controlled by a pacing arrow presented on the center of the screen (A, right). The paradigm included movement and rest blocks (B, right).
 
-{{:tutorial:shared:screen_shot_2015-09-15_at_14.21.52.png?200|A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements.}}
+![image](/media/tutorial/shared/screen_shot_2015-09-15_at_14.21.52.png@200)
 
 *Figure Caption: A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements.*
 

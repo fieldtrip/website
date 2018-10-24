@@ -122,8 +122,8 @@ layout: default
 	print -dpng phalow_amphigh_fig4.png
 
 
-{{:example:crossfreq:phalow_amphigh_fig3.png?400}}
-{{:example:crossfreq:phalow_amphigh_fig4.png?400}}
+![image](/media/example/crossfreq/phalow_amphigh_fig3.png@400)
+![image](/media/example/crossfreq/phalow_amphigh_fig4.png@400)
 
 
 

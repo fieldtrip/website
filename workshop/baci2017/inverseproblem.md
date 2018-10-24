@@ -72,8 +72,8 @@ And we visualize the dipole and see where it was localized in the brain.
 	ft_plot_dipole(dipfit_bem.dip.pos(1,:), mean(dipfit_bem.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 
 
-{{:workshop:baci2017:dipole_fit_bem.png?direct&500|}}
-{{:workshop:baci2017:dipole_fit_bem2.png?direct&500}}
+![image](/media/workshop/baci2017/dipole_fit_bem.png@500)
+![image](/media/workshop/baci2017/dipole_fit_bem2.png@500)
 
 *Figure 1. Dipole computed with BEM model*
 ### Minimum norm estimate
@@ -106,7 +106,7 @@ For the purpose of visualisation we internet the MNE results onto the replaced a
 	ft_sourceplot(cfg,interpolate); 
 
 
-{{:workshop:baci2017:mne.png?900|}}
+![image](/media/workshop/baci2017/mne.png@900)
 *Figure 2. Minimum norm estimation with BEM model*
 
 #### Exercise 1
@@ -144,8 +144,8 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	ft_plot_mesh(headmodel_bem.bnd(3));alpha 0.7;
 	ft_plot_dipole(dipfit_fem.dip.pos(1,:), mean(dipfit_fem.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
-{{:workshop:baci2017:dipole_fit_fem.png?direct&500|}}
-{{:workshop:baci2017:dipole_fit_fem2.png?direct&500|}}
+![image](/media/workshop/baci2017/dipole_fit_fem.png@500)
+![image](/media/workshop/baci2017/dipole_fit_fem2.png@500)
 
 *Figure 3. Dipole computed with FEM model*
 
@@ -174,7 +174,7 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	ft_sourceplot(cfg,interpolate); 
 
 
-{{:workshop:baci2017:mne.png?900|}}
+![image](/media/workshop/baci2017/mne.png@900)
 *Figure 4. Minimum norm estimation with FEM model*
 ## Comparison of BEM and FEM
 
@@ -184,7 +184,7 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	ft_plot_dipole(dipfit_bem.dip.pos(1,:), mean(dipfit_bem.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 
 
-{{:workshop:baci2017:bem_fem1.png?500|}} {{:workshop:baci2017:bem_fem2.png?500|}}
+![image](/media/workshop/baci2017/bem_fem1.png@500) ![image](/media/workshop/baci2017/bem_fem2.png@500)
 
 *Figure 5. Comparison of a BEM and FEM dipole fit*
 

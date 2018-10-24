@@ -115,7 +115,7 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
     legend(data.label(152:153));
 
 
-{{tutorial:coherence:figure1c.png?400}}
+![image](/media/tutorial/coherence/figure1c.png@400)
 
 *Figure 1; An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG.*
 
@@ -184,7 +184,7 @@ Visualize the coherence between the EMG and all the MEG sensor
     cfg.showlabels       = 'yes';
     figure; ft_multiplotER(cfg, fd)
 
-{{tutorial:coherence:figure2.png?400}}
+![image](/media/tutorial/coherence/figure2.png@400)
 
 *Figure 2; The coherence between the left EMG and all the MEG sensors calculated using ft_freqanalysis and ft_connectivityanalysis. Plotting was done with ft_multiplotER.*
 
@@ -193,7 +193,7 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
     cfg.channel = 'MRC21';
     figure; ft_singleplotER(cfg, fd);
 
-{{tutorial:coherence:figure3b.png?400}}
+![image](/media/tutorial/coherence/figure3b.png@400)
 
  
 *Figure 3; The coherence spectrum between the EMG and sensor MRC21.*
@@ -212,7 +212,7 @@ b) Plot a topographical distribution of the coherence in the beta band. The vari
     cfg.layout           = 'CTF151_helmet.mat';
     figure; ft_topoplotER(cfg, fd)
 
-{{tutorial:coherence:tutorial4b.png?400}}
+![image](/media/tutorial/coherence/tutorial4b.png@400)
 *Figure 4; A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER.*
 
 `</note>`
@@ -389,7 +389,7 @@ There are various ways to visualise the volumetric interpolated data. The most s
     cfg.funparameter = 'coh';
     figure; ft_sourceplot(cfg, interp);
 
-{{tutorial:coherence:figure5.png}}
+![image](/media/tutorial/coherence/figure5.png)
 
 //Figure 5; The neuronal source showing maximum coherence with the left EMG at 18 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**//.
 

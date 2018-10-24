@@ -42,7 +42,7 @@ The FieldTrip buffer makes use of POSIX threads. This is available by default on
 
 The low-level code for the realtime buffering is implemented in C. Streaming of the data from the EEG/MEG acquisition system to the buffer is system-dependent. The access to the data in Matlab is realized by mex files. The outline of the acquisition client, the buffer server and a Matlab client that processes the data is given below. The names in the flowcharts correspond to the functions in the C-code.
 
-{{:development:realtime:buffer:buffer_implementation.png?600}}
+![image](/media/development/realtime/buffer/buffer_implementation.png@600)
 
 The leftmost box represents the application that is writing data into the buffer. The rightmost box represents the application that is doing the analysis. You can see that reading and writing from/to the buffer is completely symmetric and that there is no fundamental difference between a client that is continuously streaming data to the buffer and another client that is processing segments of the data.
 

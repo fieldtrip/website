@@ -38,8 +38,8 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	title('mixed ''sources''');
 
 
-{{:tutorial:connectivity:mixingmixed.png?nolink&300|}}
-{{:tutorial:connectivity:mixingunmixed.png?nolink&300|}}
+![image](/media/tutorial/connectivity/mixingmixed.png@300)
+![image](/media/tutorial/connectivity/mixingunmixed.png@300)
 
 	
 	
@@ -58,7 +58,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	
 
 
-{{:tutorial:connectivity:mixingpowerspectrum.png?nolink&300|}}
+![image](/media/tutorial/connectivity/mixingpowerspectrum.png@300)
 
 	
 	
@@ -82,8 +82,8 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	
 
 
-{{:tutorial:connectivity:mixinggranger.png?nolink&300|}}
-{{:tutorial:connectivity:mixingcoherence.png?nolink&300|}}
+![image](/media/tutorial/connectivity/mixinggranger.png@300)
+![image](/media/tutorial/connectivity/mixingcoherence.png@300)
 
 #### Exercise 5
 

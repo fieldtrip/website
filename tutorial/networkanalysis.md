@@ -129,7 +129,7 @@ We will first clean the data from potential bad segments such as SQUID jumps and
 	
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_comp.png?400|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_comp.png@400)
 
 *Figure 1: Topography and time course of IC's likely reflecting cardiac and eye movement artifacts*
 
@@ -190,7 +190,7 @@ We will analyze the spectral content of the data using  **[ft_freqanalysis](/ref
 	subplot(2,2,3); ft_singleplotER(cfg, datapow);
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_topo_alpha.png?400|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_topo_alpha.png@400)
 
 *Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz (left: axial gradient representation, right: planar gradient representation). Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak.*
 
@@ -214,7 +214,7 @@ Alternatively, one could create a volumetric dipole grid based on regularly spac
 	view([0 -90 0])
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_geometry.png?400|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_geometry.png@400)
 
 *Figure 3: Coregistration between headmodel, sourcemodel and sensor array.*
 
@@ -283,7 +283,7 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](/r
 	light;
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_nai.png?400|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_nai.png@400)
 
 *Figure 4: Reconstructed activity (neural activity index) of resting state alpha power is not as instructive as one would hope.*
 
@@ -342,8 +342,8 @@ Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescr
 	figure; ft_singleplotER(cfg, datapow_high, datapow_low);
 
 
-{{:tutorial:networkanalysis:nwa_topo_powratio.png?300|}}
-{{:tutorial:networkanalysis:nwa_spectrum_mediansplit.png?300|}}
+![image](/media/tutorial/networkanalysis/nwa_topo_powratio.png@300)
+![image](/media/tutorial/networkanalysis/nwa_spectrum_mediansplit.png@300)
 
 *Figure 5: Difference topography (left) and power spectra of the median splitted data, according to 10 Hz power at sensor 'MRO33'.*
 
@@ -417,7 +417,7 @@ We now create a fancy opacity mask for the functional data, and visualize the lo
 	light('style','infinite','position',[0 -200 200]);
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_source_alpha.png?400|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_source_alpha.png@400)
 
 *Figure 6: Source reconstructed activity illustrating the relative difference in alpha power between the high and low alpha conditions.*
 
@@ -443,7 +443,7 @@ We can now make a, rather uninformative, visualization of the connectome, plotti
 	figure;imagesc(source_conn.cohspctrm);
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_connectomefull.png?300|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_connectomefull.png@300)
 
 *Figure 7: connectivity matrix between all pairs of dipole locations*
 
@@ -465,7 +465,7 @@ In fieldtrip, we use **[ft_sourceparcellate](/reference/ft_sourceparcellate)**
 	figure;imagesc(parc_conn.cohspctrm);
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_connectomeparc.png?300|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_connectomeparc.png@300)
 
 *Figure 7: connectivity matrix between all pairs of parcels*
 ### Network analysis
@@ -492,8 +492,8 @@ We can now explore the structure in the estimated connectivity matrices using gr
 	view([-150 30]);
 
 
-{{:tutorial:networkanalysis:tutorial_nwa_degreefull.png?300|}}
-{{:tutorial:networkanalysis:tutorial_nwa_degreeparc.png?300|}}
+![image](/media/tutorial/networkanalysis/tutorial_nwa_degreefull.png@300)
+![image](/media/tutorial/networkanalysis/tutorial_nwa_degreeparc.png@300)
 
 *Figure 8: Node degree based on imaginary part of coherency, thresholded at a value of 0.1. Cold colors indicated few suptrathreshold connections, warm colors indicate many suprathreshold connections. Left panel: degree based on the thresholded full connectome. Right panel: degree based on the thresholded parcellated connectome.*
 

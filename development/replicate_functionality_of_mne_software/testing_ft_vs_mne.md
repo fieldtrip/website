@@ -253,8 +253,8 @@ Trying to understand the results above, we looked at the phantom data in detail.
 
 This yields the following figure
 
-{{:development:mne-pinv.png?400|}}
-{{:development:mne-nopinv.png?400|}}
+![image](/media/development/mne-pinv.png@400)
+![image](/media/development/mne-nopinv.png@400)
 
 
 Clearly, there is an issue with the (default) pinv implementation. Apparently, some regularization should be done for the MNE to give meaningful results.
@@ -326,7 +326,7 @@ This involves specifying cfg.mne.noisecov, cfg.mne.sourcecov, cfg.mne.lambda pri
 
 This gives the following figur
 
-{{:development:phantomftvsmne01.png?400|}}
+![image](/media/development/phantomftvsmne01.png@400)
 
 	
 	% strange enough the data are not 0 mean
@@ -357,7 +357,7 @@ This gives the following figur
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
 
-{{:development:phantomftvsmne02.png?400|}}
+![image](/media/development/phantomftvsmne02.png@400)
 
 ### Part 2.
 
@@ -771,7 +771,7 @@ File... Open...
 
 Compensation:Third-order gradient, Selection: phantomas_raw.fif
 
-{{:development:mne_phantom_browse.png?600|}}
+![image](/media/development/mne_phantom_browse.png@600)
 
 To look at the data in topographical vie
 

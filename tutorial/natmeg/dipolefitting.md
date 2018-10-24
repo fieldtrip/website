@@ -83,7 +83,7 @@ The high-level plotting functions do not offer support for flexible plotting of 
     view([1 0 0])
     print -dpng natmeg_dip_geometry1.png
 
-{{tutorial:natmeg_temp:natmeg_dip_geometry1.png?500}}
+![image](/media/tutorial/natmeg_temp/natmeg_dip_geometry1.png@500)
 
 It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z]. 
 
@@ -176,9 +176,9 @@ By treating the segmentation of brain/skull/scalp as a “functional” volume, 
     ft_sourceplot(cfg, mri_segmented);
     print -dpng natmeg_dip_segmented_scalp.png
 
-{{tutorial:natmeg_temp:natmeg_dip_segmented_brain.png?400}}
-{{tutorial:natmeg_temp:natmeg_dip_segmented_skull.png?400}}
-{{tutorial:natmeg_temp:natmeg_dip_segmented_scalp.png?400}}
+![image](/media/tutorial/natmeg_temp/natmeg_dip_segmented_brain.png@400)
+![image](/media/tutorial/natmeg_temp/natmeg_dip_segmented_skull.png@400)
+![image](/media/tutorial/natmeg_temp/natmeg_dip_segmented_scalp.png@400)
 
 `<note important>`
 You should check that the segmentation covers the appropriate part of the anatomical MRI and that it does not have any artefacts due to noisy voxels in the MRI or local contrast drop-out.
@@ -695,19 +695,19 @@ The following code demonstrates the effect of the imdilate function. It makes fo
     imagesc(squeeze(tmp(:,:,100)));
     print -dpng natmeg_dip_segbool.png
 
-{{tutorial:natmeg_temp:natmeg_dip_segorg.png?200}}
+![image](/media/tutorial/natmeg_temp/natmeg_dip_segorg.png@200)
 
 *The original segmentation *
 
-{{tutorial:natmeg_temp:natmeg_dip_segdil1.png?200}}
+![image](/media/tutorial/natmeg_temp/natmeg_dip_segdil1.png@200)
 
 *After dilation of 1 voxel *
 
-{{tutorial:natmeg_temp:natmeg_dip_segdil2.png?200}}
+![image](/media/tutorial/natmeg_temp/natmeg_dip_segdil2.png@200)
 
 *After dilation of 2 voxels *
 
-{{tutorial:natmeg_temp:natmeg_dip_segbool.png?200}}
+![image](/media/tutorial/natmeg_temp/natmeg_dip_segbool.png@200)
 
 *The final segmentation *
 

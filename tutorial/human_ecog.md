@@ -32,7 +32,7 @@ The second workflow focuses on improving the signal-to-noise ratio and extractin
 
 The two workflows become intrinsically connected for the first time during the electrode placement activity (Step 17), which offers the opportunity to directly link anatomical locations to electrode labels corresponding to the neural recordings. This activity involves a graphical user interface designed for efficient yet precise identification of electrodes in even the most challenging cases. The integration of the two workflows culminates in an interactive and anatomically informed data exploration tool and the ability to represent functional and epileptiform neural activity overlaid on cortical and subcortical surface models, in figure or video format (Steps 47-57).
 
-{{:tutorial:ieeg_pipeline.png?600|}}
+![image](/media/tutorial/ieeg_pipeline.png@600)
 ## Anatomical workflow
 
 **1|** Specify the subject ID. This ID will be used in the file naming, in addition to information about the type of data (e.g., MRI, CT), the coordinate system it is in (e.g., ACPC, MNI), and the process(es) that were applied to it (e.g., f for fusion). For example, a CT scan that is aligned to the ACPC coordinate system and that has just been fused with the anatomical MRI is written out to file as subjID_CT_acpc_f.nii.
@@ -174,7 +174,7 @@ CRITICAL STEP Accuracy of the fusion operation is important for correctly placin
 	elec_acpc_f = ft_electrodeplacement(cfg, ct_acpc_f, fsmri_acpc);
 
 
-{{:tutorial:elecplace.png?800|}}
+![image](/media/tutorial/elecplace.png@800)
 
 **18|** Examine whether the variables in resulting electrode structure elec_acpc_f match the recording parameters, e.g., the number of channels stored in the label field. The electrode and channel positions are stored in the elecpos and chanpos fields, respectively. The elecpos field contains the original electrode positions. With exception of possible brain shift compensation, this field is not adjusted. The channel positions in the chanpos field are initially identical to the electrode positions but may be updated to accommodate offline adjustments in channel combinations, i.e. during re-montaging. For bipolar iEEG data, the best considered channel position is in between the two corresponding electrode positions. The chanpos field is used for overlaying the neural data on (sub-)cortical models during data visualization. The tra field is a matrix with the weight of each electrode into each channel, which at this stage merely is an identity matrix reflecting one-to-one mappings between electrodes and channels.
 
@@ -253,7 +253,7 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
 	camlight;
 
 
-{{:tutorial:elecrealign.png?800|}}
+![image](/media/tutorial/elecrealign.png@800)
 
 ?TROUBLESHOOTING
 
@@ -333,7 +333,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 	camlight;
 
 
-{{:tutorial:elecnormalize.png?500|}}
+![image](/media/tutorial/elecnormalize.png@500)
 
 **32|** Save the normalized electrode information to file. 
 
@@ -527,7 +527,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	ft_multiplotTFR(cfg, freq_blc);
 
 
-{{:tutorial:interactiveplotting_ecog.png?700|}}
+![image](/media/tutorial/interactiveplotting_ecog.png@700)
 
 ### ECoG data representation
 
@@ -565,7 +565,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	ft_plot_sens(elec_acpc_fr);
 
 
-{{:tutorial:ecogrepresentation.png?400|}}
+![image](/media/tutorial/ecogrepresentation.png@400)
 
 ### SEEG data representation
 
@@ -627,7 +627,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	ft_sourceplot(cfg, freq_sel2, mesh_rha);
 
 
-{{:tutorial:seegrepresentation.png?600|}}
+![image](/media/tutorial/seegrepresentation.png@600)
 
 ## Summary and conclusion
 

@@ -7,11 +7,11 @@ tags: faq fiducial mri ctf source coordinate
 
 The correct definition (taken from http://www.medilexicon.com) of the pre-auriciular point is *"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"*. The [zygomatic arch](http://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
 
-{{:faq:zygomatic_arch.png?200|Zygomatic_arch}}
+![image](/media/faq/zygomatic_arch.png@200)
 
 and the [tragus](http://en.wikipedia.org/wiki/Tragus_(ear)) is a small backward-pointing eminence situated in front of the ear canal.
 
-{{:faq:tragus.png?200|Tragus}}
+![image](/media/faq/tragus.png@200)
 
 The approximate position of the pre-auriciular point is indicated in the figure above by the green point. It can be palpated (i.e. felt with the finger tip) the best if the subject moves his jaw by opening and closing his or her mouth.
 

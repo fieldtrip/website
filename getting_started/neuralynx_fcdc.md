@@ -208,7 +208,7 @@ To obtain something like this:
 
 An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:
 
-{{:getting_started:ku_039_256elec.png?571x367}}
+![image](/media/getting_started/ku_039_256elec.png@571x367)
 
 
  

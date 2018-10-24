@@ -58,7 +58,7 @@ The following order of steps provide a good standard approach for analysing fNIR
 
 *  average over conditions and visualize the data 
 
-{{tutorial:nirs_tut1_fig1.png?&400}}
+![image](/media/tutorial/nirs_tut1_fig1.png@&400)
 
 **//Figure 1; Overview of fNIRS analysis procedure.//**
 
@@ -128,7 +128,7 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
     cfg.ylim = 'maxmin' 
     ft_databrowser(cfg, data);
 
-{{tutorial:nirs_tut1_fig1_ft_databrowser_readin.png?&400}}
+![image](/media/tutorial/nirs_tut1_fig1_ft_databrowser_readin.png@&400)
 
 **//Figure 2; Databrowser read-in.//**
 
@@ -144,7 +144,7 @@ Additionally, we'll from here select just one channel, to reduce the complexity 
 	ft_databrowser(cfg, data);
 
 
-{{tutorial:nirs_tut1_fig3_databrowser_one_chan.png?400}}
+![image](/media/tutorial/nirs_tut1_fig3_databrowser_one_chan.png@400)
 
 **//Figure 3; Databrowser with one channel selected.//**
 
@@ -251,7 +251,7 @@ Note that we left out the brackets around the output variable as we have a singl
     cfg.viewmode = 'vertical';
     ft_databrowser(cfg, data_epoch);
 
-{{:tutorial:nirs_tut1_fig3_ft_define_trial_v2.png?400|}}
+![image](/media/tutorial/nirs_tut1_fig3_ft_define_trial_v2.png@400)
 
 **//Figure 4; Databrowser for 12 trials.//**
 
@@ -305,7 +305,7 @@ Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seco
 	legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
 
 
-{{:tutorial:nirs_tut1_fig4_ft_average_hem_respons.png?400}}
+![image](/media/tutorial/nirs_tut1_fig4_ft_average_hem_respons.png@400)
 
 **//Figure 5; Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941).//**
 

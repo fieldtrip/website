@@ -50,7 +50,7 @@ The **4D Neuroimaging** (also known as BTi) coordinate system is expressed in me
 *  the X-axis goes towards NAS
 *  the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 *  the Z-axis goes approximately towards the vertex, orthogonal to X and Y
-{{:faq:coordinatesystem_bti.png?200px|}}
+![image](/media/faq/coordinatesystem_bti.png@200)
 
 ### Details on the ACPC coordinate system
 The ACPC coordinate system corresponds to that used in the Talairach atlas, but without the piecewise linear scaling applied to the brain, i.e. a brain in ACPC coordinates retains the individual shape and size. The landmarks used in the ACPC coordinate system are the anterior and posterior commisura (AC and PC) and the coordinate axes are defined according to
@@ -91,7 +91,7 @@ The coordinates of each electrode are defined in millimeters x,y,z with respect 
 *  the Z-axis goes orthogonally to the X-Y-plane towards the vertex
 If the ears are not symmetric, the origin will not be precisely between the ears but shifted to one side. E.g., if the right ear is more to the front, the origin will be shifted to the right.
 See below a visualization of the coordinate system.
-{{:faq:captrack.png?nolink&300|}}
+![image](/media/faq/captrack.png@300)
 
 ### Details of the Chieti ITAB coordinate system
 The **ITAB** coordinate system is expressed in meter, with the principal (X, Y, Z) axes going through external landmarks (i.e. fiducials). The details are
@@ -106,7 +106,7 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI which i
 *  the X-axis goes towards NAS
 *  the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 *  the Z-axis goes approximately towards the vertex, orthogonal to X and Y
-{{:faq:coordinatesystem_ctf.png?200px|}}
+![image](/media/faq/coordinatesystem_ctf.png@200)
 
 ### Details of the DICOM coordinate system
 **DICOM** is a standard for handling digital imaging in medicine, and as such uses a radiological coordinate system, defined as
@@ -134,7 +134,7 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 *  Y-axis from the origin towards the nasion (exactly through)
 *  Z-axis from the origin upwards orthogonal to the XY-plane
 *  Origin: Intersection of the line through LPA and RPA and a line orthogonal to L passing through the nasion.
-{{:faq:coordinatesystem_neuromag.png?200px|}}
+![image](/media/faq/coordinatesystem_neuromag.png@200)
 
 ### Details of the NIfTI coordinate system
 **NIfTI** is adapted from the Analyze 7.5 format (see [this page](http://nifti.nimh.nih.gov/)  for more information). It allows two coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform) such as MNI or Talairach-Tournoux (see below). The default scanner coordinate system is defined as

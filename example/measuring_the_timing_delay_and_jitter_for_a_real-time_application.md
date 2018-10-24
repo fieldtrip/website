@@ -226,11 +226,11 @@ i.e. a train of couplets comprising a 4 followed by a 16. We can now extract the
 
 The data I obtained (at a sampling rate of 1200) after sending about 3000 triggers looks like this: 
 
-{{:example:picture_3.png|}}
+![image](/media/example/picture_3.png)
 
 This is rather consistent with a uniform distribution between 100-250ms
 
-{{:example:picture_2.png|}}
+![image](/media/example/picture_2.png)
 
 ## Timing of a closed system using the FT buffer to do the online streaming
 

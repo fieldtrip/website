@@ -210,7 +210,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)*
     figure
     ft_singleplotTFR(cfg, TFRhann7);
 
-{{tutorial:timefrequencyanalysis:tfrhann7_1_feb_2012.png?400|}}
+![image](/media/tutorial/timefrequencyanalysis/tfrhann7_1_feb_2012.png@400)
 
 *Figure 6; A time-frequency representation of channel MRC15 obtained using ft_singleplotTFR*
 

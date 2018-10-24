@@ -35,7 +35,7 @@ The **[ft_prepare_layout](/reference/ft_prepare_layout)** function can be used t
 
 for the Easycap M10 electrodecap arrangement (see http://www.easycap.de/easycap/e/electrodes/13_M10.htm) for full details), or like this
 
-{{:tutorial:layout:dalal_ecog.png?450|}}
+![image](/media/tutorial/layout/dalal_ecog.png@450)
 
 for an ECoG electrode arrangement (this example photo is taken from [Dalal et al. in Journal of Neuroscience Methods 174 (2008) 106–115)](http://www.ncbi.nlm.nih.gov/pubmed/18657573).
 
@@ -45,7 +45,7 @@ You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)
     cfg.image = 'dalal_ecog.png';
     lay = ft_prepare_layout(cfg);
 
-{{:tutorial:layout:fig1.png?400|}}
+![image](/media/tutorial/layout/fig1.png@400)
 
 After creating the layout, you should manually assign the correct name of the channel labels in the lay.label cell-array. Furthermore, you probably should place the SCALE and COMNT locations at a convenient place in the figure and modify the width and height of the boxes used for multiplotting. You can use **[ft_layoutplot](/reference/ft_layoutplot)** for a visual inspection of the complete layout
 
@@ -53,7 +53,7 @@ After creating the layout, you should manually assign the correct name of the ch
     cfg.layout = lay;   % this is the layout structure that you created with ft_prepare_layout
     ft_layoutplot(cfg);
 
-{{:tutorial:layout:fig2.png?400|}}
+![image](/media/tutorial/layout/fig2.png@400)
 
 or including the original image as black-and-white background like this
 
@@ -62,7 +62,7 @@ or including the original image as black-and-white background like this
     cfg.layout = lay;                 % this is the layout structure that you created with ft_prepare_layout
     ft_layoutplot(cfg);
 
-{{:tutorial:layout:fig3.png?400|}}
+![image](/media/tutorial/layout/fig3.png@400)
 
 
 Once you are happy with the result, you can save it to a MATLAB fil

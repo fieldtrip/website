@@ -92,9 +92,9 @@ The event-related averages for the fully incongruent and the fully congruent sen
 	figure; ft_singleplotER(cfg,GA_FC, GA_FIC)
 
 
-{{tutorial:eventrelatedstatistics:multiplot_ga_fc_fic.png?400|multiplot_GA_FC_FIC.png}}
+![image](/media/tutorial/eventrelatedstatistics/multiplot_ga_fc_fic.png@400)
 
-{{tutorial:eventrelatedstatistics:singleplotMLT12_ga_fc_fic.png?400|singleplotMLT12_GA_FC_FIC.pngg}}
+![image](/media/tutorial/eventrelatedstatistics/singleplotMLT12_ga_fc_fic.png@400)
 
 
 To get an idea of the data, plot the ERF of channel MLT12 for all subject
@@ -115,7 +115,7 @@ To get an idea of the data, plot the ERF of channel MLT12 for all subject
 	axis off
 
 
-{{tutorial:eventrelatedstatistics:plotmlt12_allsubj_fc_fic.png?400|plotMLT12_allsubj_FC_FIC.png}}
+![image](/media/tutorial/eventrelatedstatistics/plotmlt12_allsubj_fc_fic.png@400)
 
 
 Between 300ms and 700ms there seems to be a difference between the FC and the FIC condition in the grand average in channel MLT12 (channel 52).
@@ -138,7 +138,7 @@ Between 300ms and 700ms there seems to be a difference between the FC and the FI
 
 
 
-{{tutorial:eventrelatedstatistics:mlt12_300to700ms_allsubj_fc_fic.png?400|MLT12_300to700ms_allsubj_FC_FIC.png}}
+![image](/media/tutorial/eventrelatedstatistics/mlt12_300to700ms_allsubj_fc_fic.png@400)
 
 #### T-test with Matlab function
 
@@ -208,7 +208,7 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
 
 
 
-{{tutorial:eventrelatedstatistics:depttestmatlab_nomcc.png?200|depttestMATLAB_nomcc.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttestmatlab_nomcc.png@200)
 
 
 But since you're now performing 151 individual tests, you are not controlling the false alarm rate any more. Under the null-hypothesis and with an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly conclude that the null-hypothesis should be rejected. That false alarm rate applies to each test that you perform, so the chance of making a false alarm if you do 151 subsequent tests is much larger than the desired 5%. This is the multiple comparison problem. 
@@ -294,7 +294,7 @@ This is implemented in FieldTrip in the function statistics_montecarlo which is 
 
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_nomcc.png?200|depttest_nonpara_FieldTrip_nomcc.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_nomcc.png@200)
 
  
 
@@ -341,7 +341,7 @@ With this method for multiple comparisons the following sensors show a significa
 
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster2.png?200|depttest_nonpara_FieldTrip_cluster2.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster2.png@200)
 
  
 
@@ -388,16 +388,16 @@ So far we predefined a time window over which the effect was averaged, and teste
 
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig1.png?400|depttest_nonpara_FieldTrip_cluster_fig1.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig1.png@400)
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig2.png?400|depttest_nonpara_FieldTrip_cluster_fig2.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig2.png@400)
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig3.png?400|depttest_nonpara_FieldTrip_cluster_fig3.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig3.png@400)
 
 
-{{tutorial:eventrelatedstatistics:depttest_nonpara_fieldtrip_cluster_fig4.png?400|depttest_nonpara_FieldTrip_cluster_fig4.png}}
+![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
 
 ## Summary and suggested further reading
 

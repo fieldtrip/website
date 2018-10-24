@@ -25,7 +25,7 @@ The CTF / Neuromag acquisition computer only runs a small program in the backgro
 
 The second (visualization / real-time analysis) computer runs MATLAB, reads the data over the network from the buffer and does the plotting using **[ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)**.
 
-{{:getting_started:headloc_flowchart.png?600px|}}
+![image](/media/getting_started/headloc_flowchart.png@600)
 
 ## Step by step description for the CTF acquisition computer
 

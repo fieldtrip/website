@@ -54,8 +54,8 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, mri_realigned);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.02.10.png?300|}}
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.02.26.png?300|}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.10.png@300)
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.26.png@300)
 
 
 	%%
@@ -123,8 +123,8 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_singleplotTFR(cfg, virtualchannel_wavelet);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.02.36.png?300|}}
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.02.39.png?300|}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.36.png@300)
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.39.png@300)
 
 
 	%%

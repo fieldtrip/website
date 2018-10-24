@@ -83,8 +83,8 @@ And we visualize the dipole and see where it was localized in the brain.
 	ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 
 
-{{:workshop:ohbm2018:ohbm_sep_dipfit_simbio_top.png?direct&500|}}
-{{:workshop:ohbm2018:ohbm_sep_dipfit_simbio_side.png?direct&500|}}
+![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_simbio_top.png@500)
+![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_simbio_side.png@500)
 
 *Figure 1. Dipole computed with FEM model for EEG*
 
@@ -131,8 +131,8 @@ And we visualize the dipole and see where it was localized in the brain.
 	ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
 
-{{:workshop:ohbm2018:ohbm_sep_dipfit_duneuro_top.png?direct&500|}}
-{{:workshop:ohbm2018:ohbm_sep_dipfit_duneuro_side.png?direct&500|}}
+![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_duneuro_top.png@500)
+![image](/media/workshop/ohbm2018/ohbm_sep_dipfit_duneuro_side.png@500)
 
 *Figure 2. Dipole computed with FEM model for MEG*
 
@@ -144,8 +144,8 @@ And we visualize the dipole and see where it was localized in the brain.
 	ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
 
-{{:workshop:ohbm2018:ohbm_sep_combined_top.png?500|}}
-{{:workshop:ohbm2018:ohbm_sep_combined_side.png?500|}}
+![image](/media/workshop/ohbm2018/ohbm_sep_combined_top.png@500)
+![image](/media/workshop/ohbm2018/ohbm_sep_combined_side.png@500)
 
 
 ## Minimum norm estimate
@@ -182,7 +182,7 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 	ft_sourceplot(cfg,interpolate); 
 
 
-{{:workshop:ohbm2018:mne_eeg.png?700|}}
+![image](/media/workshop/ohbm2018/mne_eeg.png@700)
 
 *Figure 3. Minimum norm estimation with FEM model for EEG*
 
@@ -217,7 +217,7 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 	ft_sourceplot(cfg,interpolate); 
 
 
-{{:workshop:ohbm2018:mne_meg.png?700|}}
+![image](/media/workshop/ohbm2018/mne_meg.png@700)
 
 *Figure 4. Minimum norm estimation with FEM model for MEG*
 

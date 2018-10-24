@@ -30,8 +30,8 @@ The buffer application does not show anything, it only starts the buffer, which 
 
 The sine2ft and viewer initially looks like thi
 
-{{:faq:sine2ft.png?300|}}
-{{:faq:bufferviewer.png?400|}}
+![image](/media/faq/sine2ft.png@300)
+![image](/media/faq/bufferviewer.png@400)
 
 
 
@@ -39,8 +39,8 @@ If you click "start" in the sine2ft window, and subsequently "connect" in the vi
 
 
 
-{{:faq:sine2ft_running.png?300|}}
-{{:faq:bufferviewer_running.png?400|}}
+![image](/media/faq/sine2ft_running.png@300)
+![image](/media/faq/bufferviewer_running.png@400)
 
 
 
@@ -78,7 +78,7 @@ Subsequently you could do
 
 to see the amount of data in the buffer steadily increasing over time. Note that all channels have exactly the same value, hence you will only see a single sine wave. 
 
-{{:faq:screen_shot_2013-11-12_at_17.05.01.png?400|}}
+![image](/media/faq/screen_shot_2013-11-12_at_17.05.01.png@400)
 
 After a certain amount of time, the [ring buffer](http://en.wikipedia.org/wiki/Circular_buffer) will fill up and start wrapping around. From that point onward you will not be able to read the data all the way back from sample 1. 
 

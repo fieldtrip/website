@@ -7,7 +7,7 @@ tags: faq mtmconvol freq preprocessing artifact
 
 If you use 'mtmconvol' as a method for frequency analysis it could happen that the Time-Frequency Representation of your data looks like thi
 
-{{:faq:strangetfr1.png?400|}}
+![image](/media/faq/strangetfr1.png@400)
 This phenomenon is caused by the time domain data having a non-zero DC component. This component leaks into the estimates of all time-frequency points in a variable (but patterned) way. The reason why this actually happens is related to the exact algorithm with which the TFR is computed in ft_freqanalysis_mtmconvol. The algorithm takes (computational) advantage of the fact that convolution in the time domain is mathematically equivalent to multiplication in the frequency domain. To this end, a fast fourier transform is applied to the time domain data, and it is combined with the fourier transform of the tapered basis functions. Importantly, no taper is applied to the data prior to fourier transformation. This leads to spectral leakage of the DC component across the whole frequency range.
 The solution to this problem is to demean your data prior to calling ft_freqanalysi
 `<code>`cfg = [];
@@ -43,7 +43,7 @@ The following code shows the effect of a non-zero DC component on the TF
 
 ##### TFR of chan02 with large DC component (left) and chan01 without DC component (right) after ft_freqanalysis without demeaning
 
-{{:faq:strangetfr1.png?400|TFRchan2}} {{:faq:strangetfr2.png?400|TFRchan1}} 
+![image](/media/faq/strangetfr1.png@400) ![image](/media/faq/strangetfr2.png@400) 
 
 ##### cfg.polyremoval
 

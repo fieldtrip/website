@@ -57,7 +57,7 @@ In the third part we shift our attention to the motor task in this dataset. We w
 
 *  Visualize the cortico-muscular coherence with **[ft_sourceplot](/reference/ft_sourceplot)**
 
-{{:tutorial:beamforming_extended:pipeline.png?direct&650|}}
+![image](/media/tutorial/beamforming_extended/pipeline.png@650)
 
 ## Preparing the data and the forward and inverse model
 

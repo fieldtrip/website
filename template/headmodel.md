@@ -65,5 +65,5 @@ You can visualize it with
 	>> camlight
 
 
-{{:template:headmodel_skin.png?300|}}
+![image](/media/template/headmodel_skin.png@300)
 
