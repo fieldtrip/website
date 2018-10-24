@@ -3,10 +3,9 @@ layout: default
 tags: example meg freq source fixme
 ---
 
-
 # Common filters in beamforming
 
-When you want to reconstruct and compare the sources of two (or more) conditions using a beamformer approach, you can either compute separate spatial filters for each condition, or use a common filter based on the combined conditions. 
+When you want to reconstruct and compare the sources of two (or more) conditions using a beamformer approach, you can either compute separate spatial filters for each condition, or use a common filter based on the combined conditions.
 
 ## What are the advantages of common filters?
 
@@ -15,9 +14,9 @@ Another advantage is that you use the same filters for estimating the sources in
 
 ## When can you use common filters?
 
- 
-Common filters can be used when you want to compare conditions for which you assume the underlying sources are the same, but active to a different extent. 
-It is not a problem to have different amounts of trials in the conditions. 
+
+Common filters can be used when you want to compare conditions for which you assume the underlying sources are the same, but active to a different extent.
+It is not a problem to have different amounts of trials in the conditions.
 It is a requirement that the time windows in all conditions are of equal length.
 
 ## How to do this in FieldTrip
@@ -32,7 +31,7 @@ The general procedure is as follow
 
 ## Example code
 
-FIXME Code for reconstruction of single trial data is incomplete 
+FIXME Code for reconstruction of single trial data is incomplete
 
 In the following, scripts for both approaches are presented.
 Let’s say we have data for two conditions, condition A and B, and we assume that the same sources are active in both, but to a different extent.
@@ -41,12 +40,12 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 
 ### PCC
 
-	
+
 	% append the two conditions and remember the design %
 	data = ft_appenddata([], dataA, dataB);
 	design = [ones(1,length(dataA.trial)) ones(1,length(dataB.trial))*2]; % only necessary if you are interested in reconstructing single trial data
-	
-	
+
+
 	% ft_freqanalysis %
 	cfg=[];
 	cfg.method      = 'mtmfft';
@@ -56,41 +55,41 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	cfg.tapsmofrq   = 20;
 	cfg.keeptrials  = 'yes';      % in order to separate the conditions again afterwards, we need to keep the trials. This is not otherwise necessary to compute the common filter
 	cfg.keeptapers  = 'yes';
-	
+
 	freq = ft_freqanalysis(cfg, data);
-	
-	
+
+
 	% compute common spatial filter AND project all trials through it %
-	cfg=[]; 
+	cfg=[];
 	cfg.method      = 'pcc';
 	cfg.grid        = grid;       % previously computed grid
 	cfg.headmodel   = vol;        % previously computed volume conduction model
 	cfg.frequency   = 60;
 	cfg.keeptrials  = 'yes';      % keep single trials. Only necessary if you are interested in reconstructing single trial data
-	
-	source = ft_sourceanalysis(cfg, freq); 
-	
-	
+
+	source = ft_sourceanalysis(cfg, freq);
+
+
 	% average over tapers, keep single trials %
-	
+
 	% This step is only necessary if you need to reconstruct single trial data
-	
+
 	cfg=[];
 	cfg.keeptrials = 'yes';
-	
+
 	source = ft_sourcedescriptives(cfg, source); % contains the source estimates for all trials/both conditions
-	
-	
+
+
 	% calculate average for each condition %
 	A = find(design==1); % find trial numbers belonging to condition A
 	B = find(design==2); % find trial numbers belonging to condition B
-	
+
 	sourceA = source;
 	sourceA.trial(B) = [];
 	sourceA.cumtapcnt(B) = [];
 	sourceA.method = 'rawtrial';
 	sourceA = ft_sourcedescriptives([], sourceA); % compute average source reconstruction for condition A
-	
+
 	sourceB=source;
 	sourceB.trial(A) = [];
 	sourceB.cumtapcnt(A) = [];
@@ -100,12 +99,12 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 
 ### DICS
 
-	
+
 	% append the two conditions and remember the design %
 	data = ft_appenddata([], dataA, dataB);
 	design = [ones(1,length(dataA.trial)) ones(1,length(dataB.trial))*2]; % only necessary if you are interested in reconstructing single trial data
-	
-	
+
+
 	% freqanalysis %
 	cfg=[];
 	cfg.method      = 'mtmfft';
@@ -115,10 +114,10 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	cfg.tapsmofrq   = 20;
 	cfg.keeptrials  = 'yes';        % in order to separate the conditions again afterwards, we need to keep the trials. This is not otherwise necessary to compute the common filter
 	cfg.keeptapers  = 'no';
-	
+
 	freq = ft_freqanalysis(cfg, data);
-	
-	
+
+
 	% compute common spatial filter %
 	cfg=[];
 	cfg.method      = 'dics';
@@ -126,10 +125,10 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	cfg.headmodel   = vol;          % previously computed volume conduction model
 	cfg.frequency   = 60;
 	cfg.dics.keepfilter  = 'yes';        % remember the filter
-	
+
 	source = ft_sourceanalysis(cfg, freq);
-	
-	
+
+
 	% project all trials through common spatial filter %
 	cfg=[];
 	cfg.method      = 'dics';
@@ -138,27 +137,25 @@ We have the preprocessed data for both conditions (//dataA// and *dataB*) and we
 	cfg.grid.filter = source.avg.filter; % use the common filter computed in the previous step!
 	cfg.frequency   = 60;
 	cfg.rawtrial    = 'yes';      % project each single trial through the filter. Only necessary if you are interested in reconstructing single trial data
-	
+
 	source = ft_sourceanalysis(cfg, freq); % contains the source estimates for all trials/both conditions
-	
-	
+
+
 	% calculate average for each condition %
-	
+
 	% This step is only necessary if you need to reconstruct single trial data
-	
+
 	A = find(design==1); % find trial numbers belonging to condition A
 	B = find(design==2); % find trial numbers belonging to condition B
-	
+
 	sourceA = source;
 	sourceA.trial(B) = [];
 	sourceA.cumtapcnt(B) = [];
 	sourceA.df = length(A);
 	sourceA = ft_sourcedescriptives([], sourceA); % compute average source reconstruction for condition A
-	
+
 	sourceB=source;
 	sourceB.trial(A) = [];
 	sourceB.cumtapcnt(A) = [];
 	sourceB.df = length(B);
 	sourceB = ft_sourcedescriptives([], sourceB); % compute average source reconstruction for condition B
-	
-

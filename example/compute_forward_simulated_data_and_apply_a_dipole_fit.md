@@ -3,11 +3,9 @@ layout: default
 tags: example eeg source dipole
 ---
 
-
 # Compute forward simulated data and apply a dipole fit
 
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a set of electrodes, randomly placed on the sphere
 	elec = [];
 	elec.pnt = randn(128,3);
@@ -16,18 +14,18 @@ tags: example eeg source dipole
 	for i=1:128
 	   elec.label{i} = sprintf('%03d', i);
 	end
-	
-	% Note: I suggest that you do not use these electrodes, but instead that 
+
+	% Note: I suggest that you do not use these electrodes, but instead that
 	% you get more meaningful electrode locations. See for example  
 	% http://robertoostenveld.ruhosting.nl/index.php/electrode/
-	
+
 	% create a concentric 3-sphere volume conductor, the radius is the same as for the electrodes
 	vol = [];
 	vol.r = [0.88 0.92 1.00]; % radii of spheres
 	vol.cond = [1 1/80 1];       % conductivity
 	vol.o = [0 0 0];          % center of sphere
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a dipole simulation with one dipole and a 10Hz sine wave
 	cfg      = [];
 	cfg.vol  = vol;             % see above
@@ -41,8 +39,8 @@ tags: example eeg source dipole
 	raw1 = ft_dipolesimulation(cfg);
 	avg1 = ft_timelockanalysis([], raw1);
 	plot(avg1.time, avg1.avg);  % plot the timecourse
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a dipole simulation with one dipole and a custom timecourse
 	cfg      = [];
 	cfg.vol  = vol;               % see above
@@ -56,8 +54,8 @@ tags: example eeg source dipole
 	raw2 = ft_dipolesimulation(cfg);
 	avg2 = ft_timelockanalysis([], raw2);
 	plot(avg2.time, avg2.avg);    % plot the timecourse
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a dipole simulation with two dipoles and a custom timecourse
 	cfg      = [];
 	cfg.vol  = vol;      % see above
@@ -77,8 +75,8 @@ tags: example eeg source dipole
 	cfg.fsample = 250;                     % Hz
 	raw3 = ft_dipolesimulation(cfg);
 	avg3 = ft_timelockanalysis([], raw3);
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% do a dipole fit of the first simulated dataset
 	cfg      = [];
 	cfg.vol  = vol;         % see above
@@ -86,7 +84,7 @@ tags: example eeg source dipole
 	cfg.dip.pos = [0 0 0];  % initial search position
 	cfg.gridsearch = 'no';
 	dip1 = ft_dipolefitting(cfg, avg1);
-	
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% or alternatively start with an exhaustive search on a coarse grid
 	cfg = [];
@@ -97,6 +95,3 @@ tags: example eeg source dipole
 	cfg.ygrid = linspace(-1,1,5);
 	cfg.zgrid = linspace(-1,1,5);
 	dip2 = ft_dipolefitting(cfg, avg1);
-	
-
-

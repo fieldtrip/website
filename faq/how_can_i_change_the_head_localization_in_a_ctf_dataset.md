@@ -3,7 +3,6 @@ layout: default
 tags: faq ctf
 ---
 
-
 ## How can I change the head localization in a CTF dataset?
 
 ### Introduction
@@ -31,5 +30,3 @@ Using the CTF command line utility changeHeadPos, you can change the head coil p
    changeHeadPos -swap N R L dataset.ds
 
 where N L R would be the normal order. It is noteworthy that execution of this command is preferably done at the acquisition computer. A computer not supporting this operation, may yield a 'Segmentation fault (core dumped)' error.
-
-

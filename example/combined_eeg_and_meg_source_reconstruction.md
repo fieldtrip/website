@@ -3,7 +3,6 @@ layout: default
 tags: example eeg meg headmodel source
 ---
 
-
 # Combined EEG and MEG source reconstruction
 
 ## Description
@@ -15,7 +14,7 @@ Below is an example that demonstrates how forward computations can be done. Inve
 Note that the same approach can also be used for combined EEG and invasive EEG, or combined MEG and invasive EEG, or any other data fusion. Furthermore note that the combination of volume conduction models can  contain more realistically and accurate forward models than those used below.  
 
 ## Matlab script
-	
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a set of electrodes, randomly placed on the sphere
 	elec = [];

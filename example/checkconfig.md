@@ -3,7 +3,6 @@ layout: default
 tags: example cfg
 ---
 
-
 # How to use ft_checkconfig
 
 The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input configuration (cfg) for the main fieldtrip functions. This is similar to what **[ft_checkdata](/reference/ft_checkdata)** does for the input data. **[Ft_checkconfig](/reference/Ft_checkconfig)** is automatically called when you use a fieldtrip function. You may not even notice this, unless it gives you feedback about your cfg (i.e., warning or error messages).
@@ -13,7 +12,6 @@ The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input co
 **WARNING: currently the full implementation of [ft_checkconfig](/reference/ft_checkconfig) as described here, is only available for internal users (at the Donders Centre). In time, these features (trackconfig) will also become available for external users!**
 
 ## Introduction to ft_checkconfig
-
 
 	% FT_CHECKCONFIG checks the input cfg of the main FieldTrip functions.
 	%
@@ -32,16 +30,6 @@ The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input co
 	% relevant and used fields. The size of fields in the output cfg is also
 	% controlled: fields exceeding a certain maximum size are emptied.
 	% This part of the functionality is still under construction!
-
-
-
-
-
-
-
-
-
-
 
 ## How to control the behaviour of ft_checkconfig
 
@@ -86,12 +74,8 @@ In this case, you don't have to do anything: **[ft_checkconfig](/reference/ft_ch
 
 //Note: the feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives on your input cfg is not exhaustive, meaning that not all possible options you could come up with will be taken care of. It mainly ensures backward compatibility of old scripts, and checks some important required and forbidden fields.
 
-
-
 *  **cfg.trackconfig: 'cleanup', 'report' or 'off'**
 **[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg. It tracks the cfg from the moment you put it into a function until it comes out again (usually as data.cfg). This can provide you with useful feedback: which of the options you specified were actually used? Which options have been added as defaults by the fieldtrip function? You can control the behaviour of configtracking: **'report'** will only give you a report, **'cleanup'** will give both a report and a cleaned output cfg. If you do not want to use configtracking at all, use **'off'**.
-
-
 
 *  **cfg.checksize: number in bytes, can be inf**
 This determines the maximum size allowed for output cfg fields (i.e. the data.cfg). Some fields in the output cfg can be very large, e.g. the cfg.grid field when you do sourceanalysis. To avoid that several MBs or even GBs of your disk space are taken up by the data.cfg, you can set a maximum and **[ft_checkconfig](/reference/ft_checkconfig)** will empty all the cfg fields that are too big, before adding the cfg to the data. Crucial fields such as the cfg.trl and cfg.event will never be removed ((currently, the following fields are ignored: 'checksize', 'trl', 'trlold', 'event', 'artifact', 'artfctdef', 'previous')). The default is set to **100000** bytes, but you can change this to anything you want. If you do not want any fields to be removed, set checksize to **inf**.
@@ -111,17 +95,13 @@ If you are using the tutorial dataset, first get the trial definitio
 	cfg.trialdef.eventvalue  = 3;
 	cfg = ft_definetrial(cfg);    
 
-
-Now, run **[ft_preprocessing](/reference/ft_preprocessing)** with trackconfig set to cleanup. This will give you both a report (on screen) and a cleaned data.cf
-
+Now, run **[ft_preprocessing](/reference/ft_preprocessing)** with trackconfig set to cleanup. This will give you both a report (on screen) and a cleaned data.cfg:
 
 	cfg.trackconfig = 'cleanup';
 	cfg.unused = 1; % to test whether it works!
 	data = ft_preprocessing(cfg);
 
-
-The report will look like thi
-
+The report will look like this:
 
 	The following config fields were specified by YOU and were USED
 	  cfg.dataset
@@ -185,7 +165,7 @@ The report will look like thi
 	  cfg.dftinvert
 
 
-Thus, it specifies which options were set by you and whether they were used. As you can see, the cfg.unused indeed ends up as "set by you, not used". Furthermore, the report shows the options that were added by the **[ft_preprocessing](/reference/ft_preprocessing)** function, and whether they were actually used for your analysis. There is quite a list of unused defaults. When we now look at the output cfg we see that it is nicely cleaned. Compare this with a call to **[ft_preprocessing](/reference/ft_preprocessing)** without using configtrackin
+Thus, it specifies which options were set by you and whether they were used. As you can see, the cfg.unused indeed ends up as "set by you, not used". Furthermore, the report shows the options that were added by the **[ft_preprocessing](/reference/ft_preprocessing)** function, and whether they were actually used for your analysis. There is quite a list of unused defaults. When we now look at the output cfg we see that it is nicely cleaned. Compare this with a call to **[ft_preprocessing](/reference/ft_preprocessing)** without using trackconfig:
 
 
 	cfg.trackconfig = 'off';
@@ -193,7 +173,6 @@ Thus, it specifies which options were set by you and whether they were used. As 
 
 	data.cfg  % cleaned
 	data2.cfg % not cleaned
-
 
 This example showed how trackconfig can be used when doing preprocessing. The same approach can be applied for all the main fieldtrip functions. (Currently, trackconfig has been implemented in about 20 fieldtrip functions, this will be expanded.)
 
@@ -220,6 +199,5 @@ However, you may have lots of analysed data on disk, with data.cfgs that might b
 
 	  save(downsizefiles{k}, 'data')
 	end
-
 
 This way **[ft_checkconfig](/reference/ft_checkconfig)** will run recursively through the entire data.cfg, including all the previous fields, and empty the fields that are larger than the specified maximum. This can be used on all fieldtrip data.

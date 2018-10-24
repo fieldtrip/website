@@ -3,10 +3,9 @@ layout: default
 tags: faq mri coordinate
 ---
 
-
 # What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
 
-There are a number of coordinate systems that have the origin, i.e., the [0,0,0] point, at the Anterior Commissure and that have a RAS orientation (i.e. the x-axis pointing to the right, the y-axis pointing to anterior, the z-axis pointing to superior). 
+There are a number of coordinate systems that have the origin, i.e., the [0,0,0] point, at the Anterior Commissure and that have a RAS orientation (i.e. the x-axis pointing to the right, the y-axis pointing to anterior, the z-axis pointing to superior).
 
 *  ACPC is used if the geometry is according to the individual subject head/brain size.
 *  TAL is used if the geometry is piecewise scaled to match the Talairach-Tournoux (1988) atlas.
@@ -19,5 +18,4 @@ Coordinates in the tal, mni/mni152/spm, and mni305/fsaverage all imply that some
 
 See also [this page](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach) which describes the TT and MNI space in more detail and [this page](http://www.nil.wustl.edu/labs/kevin/man/answers/mnispace.html) that explain the differences between MNI152 and MNI305.
 
-See also this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that explains how the different EEG, MEG and MRI coordinate systems are defined. 
-
+See also this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that explains how the different EEG, MEG and MRI coordinate systems are defined.

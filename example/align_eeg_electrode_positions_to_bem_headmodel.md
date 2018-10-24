@@ -3,7 +3,6 @@ layout: default
 tags: example eeg mri source headmodel
 ---
 
-
 # Align EEG electrode positions to BEM headmodel
 
 ## Description

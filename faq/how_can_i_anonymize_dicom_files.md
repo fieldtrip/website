@@ -3,12 +3,11 @@ layout: default
 tags: faq mri anonymize sharing
 ---
 
-
 # How can I anonymize DICOM files?
 
 DICOM files contain a lot of header details that might provide information about your subject, such as the name and date of birth, but also the date and time at which the scan was performed.
 
-`<note info>`Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images. 
+`<note info>`Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images.
 
 The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) or about imposing legal restrictions to prevent matching data against external databases. `</note>`
 
@@ -20,26 +19,26 @@ The MATLAB image processing toolbox contains functions for reading and writing D
 
     dicominfo(FILE_IN)
 
-to see all the header information, and 
+to see all the header information, and
 
     dicomanon(FILE_IN, FILE_OUT)
 
-to remove all confidential metadata from the DICOM header. 
+to remove all confidential metadata from the DICOM header.
 
 
 ## Using Horos
 
-[Horos](https://www.horosproject.org) is a free DICOM image file viewer for Mac OS X. You can use it to view your image files and explore the metadata in the header. It works by importing all DICOM files and organizing it in its own internal database.  It has an "anonymize" option which allows you to remove/replace the values in specific fields. 
+[Horos](https://www.horosproject.org) is a free DICOM image file viewer for Mac OS X. You can use it to view your image files and explore the metadata in the header. It works by importing all DICOM files and organizing it in its own internal database.  It has an "anonymize" option which allows you to remove/replace the values in specific fields.
 
-The default behavior of the anonymize option is that only the metadata in own internal database is anonymized; if you want the DICOM files to be anonymized on disk, you should use the export option to write the data back to disk. To be sure that the data on disk is anonymized, I recommend importing it a second time to check the metadata. 
+The default behavior of the anonymize option is that only the metadata in own internal database is anonymized; if you want the DICOM files to be anonymized on disk, you should use the export option to write the data back to disk. To be sure that the data on disk is anonymized, I recommend importing it a second time to check the metadata.
 
 ## Using GDCM
 
-[GDMC](http://gdcm.sourceforge.net/wiki/index.php/Main_Page) is an open source implementation of the DICOM standard in C++. You can download the software from [SourceForge](http://gdcm.sourceforge.net), or on the compute cluster at the DCCN you can use 
+[GDMC](http://gdcm.sourceforge.net/wiki/index.php/Main_Page) is an open source implementation of the DICOM standard in C++. You can download the software from [SourceForge](http://gdcm.sourceforge.net), or on the compute cluster at the DCCN you can use
 
     module add gdcm
 
-to add it to your path. Subsequently you can use the [gdcmanon](http://gdcm.sourceforge.net/html/gdcmanon.html) command to anonymize individual files 
+to add it to your path. Subsequently you can use the [gdcmanon](http://gdcm.sourceforge.net/html/gdcmanon.html) command to anonymize individual files
 
     gdcmanon `<file-in>` `<file-out>`
 
@@ -51,7 +50,7 @@ You can use the [gdcmdump](http://gdcm.sourceforge.net/html/gdcmdump.html) comma
 
 ## Using DCMTK
 
-[DCMTK](http://www.dcmtk.org) is a collection of libraries and applications implementing large parts the DICOM standard. It includes software for examining, constructing and converting DICOM image files. You can download the software from its [homepage](http://www.dcmtk.org), or on the compute cluster at the DCCN you can use 
+[DCMTK](http://www.dcmtk.org) is a collection of libraries and applications implementing large parts the DICOM standard. It includes software for examining, constructing and converting DICOM image files. You can download the software from its [homepage](http://www.dcmtk.org), or on the compute cluster at the DCCN you can use
 
     module add dcmtk
 
@@ -59,7 +58,7 @@ to add it to your path. Subsequently you can use the [dcmdump](http://support.dc
 
     dcmdump `<file>`
 
-and the [dcmodify](http://support.dcmtk.org/docs/dcmodify.html) command 
+and the [dcmodify](http://support.dcmtk.org/docs/dcmodify.html) command
 
     dcmodify -ea "(0010,0010)" `<file>`
 

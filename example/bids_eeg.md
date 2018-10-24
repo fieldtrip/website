@@ -3,7 +3,6 @@ layout: default
 tags: example bids sharing anonymize
 ---
 
-
 # Preparing an EEG dataset for sharing
 
 This example describes how to prepare an EEG dataset for sharing in the BIDS format. The example starts from a single publicly available EEG recording of a single subject, which is copied multiple times to simulate a dataset comprising data from ten subjects.

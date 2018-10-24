@@ -3,14 +3,12 @@ layout: default
 tags: example mri raw freq coherence
 ---
 
-
 # Correlation analysis in fMRI data
 
-This script demonstrates how FieldTrip can be used for timeseries analysis of fMRI data. 
+This script demonstrates how FieldTrip can be used for timeseries analysis of fMRI data.
 
-##  Get the data in a "raw" data structure, similar to preprocessed MEG data 
+##  Get the data in a "raw" data structure, similar to preprocessed MEG data
 
-	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% contruct the projection matrix for the ROIs
 	load aal_new_mat
@@ -22,9 +20,9 @@ This script demonstrates how FieldTrip can be used for timeseries analysis of fM
 	  project(i,:) = project(i,:)./sum(project(i,:));
 	end
 	project = sparse(project);
-	
+
 	mri = ft_read_mri('bwamarspr_rs_sess01_vol0001.nii');
-	
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% read the data and put into a FT structure
 	session = {
@@ -41,11 +39,11 @@ This script demonstrates how FieldTrip can be used for timeseries analysis of fM
 	'sess11'
 	'sess12'
 	};
-	
+
 	raw = [];
 	raw.fsample  = 1/1.35;
 	raw.label    = {ROI.Nom_L}';
-	
+
 	for s=1:length(session)
 	path = session{s}
 	filename = dir(path);
@@ -53,18 +51,18 @@ This script demonstrates how FieldTrip can be used for timeseries analysis of fM
 	for i=1:length(filename)
 	  filename{i} = fullfile(path, filename{i});
 	end
-	
+
 	dat = zeros(length(ROI), length(filename));
 	for i=1:length(filename)
 	  disp(i);
 	  tmp = ft_read_mri(filename{i});
 	  dat(:,i) = project * tmp.anatomy(:);
 	end
-	
+
 	raw.time{s}  = (0:(size(dat,2)-1)) ./ raw.fsample;
 	raw.trial{s} = dat;
 	end % for session
-	
+
 	save project project -v6
 	save mri mri -v6
 	save raw raw -v6
@@ -72,15 +70,15 @@ This script demonstrates how FieldTrip can be used for timeseries analysis of fM
 
 ## Apply frequency analysis, compute frequency specific correlation/coherence
 
-	
+
 	cfg = [];
 	cfg.blc = 'yes';
 	cfg.keeptrials = 'yes';
 	timelock = ft_timelockanalysis(cfg, raw);
-	
+
 	winsize = 64;
 	fr = (256/winsize)./timelock.time(end);
-	
+
 	cfg = [];
 	cfg.method     = 'mtmwelch';
 	cfg.output     = 'powandcsd';
@@ -95,22 +93,22 @@ This script demonstrates how FieldTrip can be used for timeseries analysis of fM
 	cfg.keeptapers = 'no';
 	cfg.pad        = 'maxperlen';
 	freq = ft_freqanalysis(cfg, timelock);
-	
+
 	cfg = [];
 	% cfg.complex = 'abs';
 	cfg.complex = 'real';
 	fd = ft_freqdescriptives(cfg, freq);
-	
+
 	cfg = [];
 	cfg.layout = 'ordered';
 	lay = ft_prepare_layout(cfg, fd);
-	
+
 	cfg = [];
 	cfg.layout = lay;
 	cfg.interactive = 'yes';
 	cfg.showlabels = 'yes';
 	figure; ft_multiplotER(cfg, fd);
-	
+
 	cfg = [];
 	cfg.layout = lay;
 	cfg.interactive = 'yes';
@@ -119,5 +117,3 @@ This script demonstrates how FieldTrip can be used for timeseries analysis of fM
 	cfg.zlim = [0 1];
 	cfg.cohrefchannel = fd.label{1};
 	figure; ft_multiplotER(cfg, fd);
-
-

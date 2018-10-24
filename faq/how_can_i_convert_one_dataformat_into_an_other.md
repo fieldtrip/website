@@ -23,25 +23,14 @@ If you want to write multiple trials, you have to concatenate them and like thi
 
 Note that in the additional options to ft_write_data you should specify the file format. The **[ft_write_data](/reference/ft_write_data.html)** function can export data to the following file formats
 
-
 *  edf
-
 *  gdf
-
 *  brainvision_eeg
-
 *  neuralynx_ncs
-
 *  neuralynx_sdma
-
 *  plexon_nex
-
 *  riff_wave
-
 *  fcdc_matbin
-
 *  fcdc_mysql
-
 *  fcdc_buffer
-
 *  matlab  

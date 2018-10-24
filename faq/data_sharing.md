@@ -3,12 +3,11 @@ layout: default
 tags: faq dataset sharing
 ---
 
-
 # How can I share my MEG data?
 
 Sharing data along with published results is a vital step towards better reproducibility of MEG research and supports the ongoing development and validation of new analysis methods.
 
-Funding agencies and journals are requiring more and more that data is being shared. 
+Funding agencies and journals are requiring more and more that data is being shared.
 
 ## Where can I share my data?
 

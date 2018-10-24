@@ -3,7 +3,6 @@ layout: default
 tags: faq debug
 ---
 
-
 # How can I debug my analysis script if a FieldTrip function gives an error?
 
 You may write an elaborate data analysis pipeline in a script, which calls other data analysis scripts. If you get an error in such a nested combination of scripts, it might be difficult to debug because reaching the error takes a long time and MATLAB bails out as soon as the error happens.
@@ -18,7 +17,7 @@ which will stop the debugger in case an error is detected. The presently running
 
 ## FieldTrip specific debugging
 
-Another way of debugging an analysis pipeline is by using the FieldTrip debugging functionality. If you add 
+Another way of debugging an analysis pipeline is by using the FieldTrip debugging functionality. If you add
 
     cfg.debug = 'saveonerror'
 
@@ -26,7 +25,6 @@ to your high-level FieldTrip function calls, the function that detects the error
 
 For example, the following will result in an error because of the invalid input data structur
 
-	
 	>> cfg = [];
 	>> cfg.debug = 'saveonerror'
 	>> ft_timelockanalysis(cfg, [])
@@ -36,20 +34,20 @@ For example, the following will result in an error because of the invalid input 
 	-----------------------------------------------------------------------
 	Error using ft_checkdata (line 442)
 	This function requires raw+comp or raw data as input.
-	
+
 	Error in ft_timelockanalysis (line 105)
 	data = ft_checkdata(data, 'datatype', {'raw+comp', 'raw'}, 'feedback', 'yes', 'hassampleinfo', 'yes');
 
 
-Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the fieldtrip code (see [:bugzilla](/bugzilla)). 
+Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the fieldtrip code (see [:bugzilla](/bugzilla)).
 
 You can load the input variables to the function (and some extra information from the file).
 
-	
+
 	>> load /private/tmp/ft_timelockanalysis_20140719T103549.mat
 	>> whos
 	  Name              Size            Bytes  Class     Attributes
-	
+
 	  cfg               1x1             17670  struct              
 	  data              0x0                 0  double              
 	  funname           1x19               38  char                
@@ -66,7 +64,7 @@ to replicate the error.
 
 ## Use FieldTrip debugging everywhere
 
-It is likely that you don't want to edit all of your analysis scripts to add 
+It is likely that you don't want to edit all of your analysis scripts to add
 
     cfg.debug = 'saveonerror'
 
@@ -74,8 +72,5 @@ to each individual function call. It is possible to enable this behaviour global
 
     global ft_default
     ft_default.debug = 'saveonerror'
-    
+
 The fields in ft_default are merged with the input cfg structure to all FieldTrip functions. This is explained in more detail in **[ft_defaults](/reference/ft_defaults)**.
-
-
- 

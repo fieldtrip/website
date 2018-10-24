@@ -3,7 +3,6 @@ layout: default
 tags: example bids sharing anonymize
 ---
 
-
 # Preparing a combined MEG/fMRI dataset for sharing
 
 This example describes how to prepare a combined MEG/fMRI dataset for sharing. The study involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. The data and the experiment are descriobed in more details in the references that you find at the end of this page.

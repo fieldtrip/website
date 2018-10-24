@@ -3,17 +3,15 @@ layout: default
 tags: faq audio video
 ---
 
-
 ## How can I play back EEG/MEG and synchronous audio or video?
 
 In epilepsy recordings it is common to record video along with the EEG. Also for some cognitive tasks, e.g. involving communicative expressions or spoken feedback, it is possible to record video and/or audio along with the EEG or MEG.
 
-FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[/reference/ft_databrowser](/reference/ft_databrowser)** and **[/reference/ft_audiovideobrowser](/reference/ft_audiovideobrowser)**. 
+FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[/reference/ft_databrowser](/reference/ft_databrowser)** and **[/reference/ft_audiovideobrowser](/reference/ft_audiovideobrowser)**.
 
-For both functions you should consider that 
+For both functions you should consider that
 
 *  the moment at which the recordings started will in general be different
-
 *  the sampling rate of the two recordings will be different (e.g. much higher for audio, but much lower for video)
 
 The synchronization between the two recordings is realized by specifying both in **timestamps** that are expressed relative a common temporal reference (e.g. the time on an external clock) using the offset and slope, where timestamp=offset+slope*sample.
@@ -30,26 +28,26 @@ This function puts the focus on the audio/video data and allows you to segment i
 
 The following code demonstrates the use of **[/reference/ft_databrowser](/reference/ft_databrowser)**. You first specify the EEG dataset and the function that is to be executed upon selecting a piece of EEG data. The *browse_audiovideo* is a small helper function located in fieldtrip/private directory; similar functions exist for a quick spectral analysis or topographic plotting of a selected piece of EEG data.
 
-In cfg.selcfg you specify the configuration that is needed by *browse_audiovideo*: it contains the audio file, and the header of both data and audio. The header of the data and the audio are extended with the **FirstTimeStamp** and **TimeStampPerSample** fields. The timestamps should be defined the same for synchronous samples in both recordings. 
+In cfg.selcfg you specify the configuration that is needed by *browse_audiovideo*: it contains the audio file, and the header of both data and audio. The header of the data and the audio are extended with the **FirstTimeStamp** and **TimeStampPerSample** fields. The timestamps should be defined the same for synchronous samples in both recordings.
 
 In this case the EEG starts at timestamp 0, the audio (which was started a bit earlier) starts at timestamp -19.865. In both recordings the timestamps correspond to seconds, but the number of timestamps per second is different for both recordings due to the different sampling frequency. Both for the EEG and for the audio the relation **timestamp=FirstTimeStamp+TimeStampPerSample*sample** holds, not only for the first sample in the respective recording, but also for all subsequent samples.
 
-	
+
 	cfg = [];
 	cfg.dataset = 'bitalino_2018.05.27_09.46.14.edf';
-	
+
 	cfg.selfun = 'browse_audiovideo';
-	
+
 	cfg.selcfg.audiofile = 'bitalino_2018.05.27_09.46.14_log.m4a';
-	
+
 	cfg.selcfg.audiohdr = ft_read_header(cfg.selcfg.audiofile);
 	cfg.selcfg.audiohdr.FirstTimeStamp = -19.865;
 	cfg.selcfg.audiohdr.TimeStampPerSample = 1/cfg.selcfg.audiohdr.Fs;
-	
+
 	cfg.selcfg.datahdr = ft_read_header(cfg.dataset);
 	cfg.selcfg.datahdr.FirstTimeStamp = 0;
 	cfg.selcfg.datahdr.TimeStampPerSample = 1/cfg.selcfg.datahdr.Fs;
-	
+
 	ft_databrowser(cfg);
 
 

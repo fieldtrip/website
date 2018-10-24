@@ -3,7 +3,6 @@ layout: default
 tags: dataformat meg ctf neuromag 4d yokogawa
 ---
 
-
 # MEG dataformats
 
 ## Support for CTF and/or VSM MedTech MEG data.

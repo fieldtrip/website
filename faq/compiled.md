@@ -3,7 +3,6 @@ layout: default
 tags: faq matlab mex
 ---
 
-
 # Can I use FieldTrip without MATLAB license?
 
 Yes, if you have the MATLAB [compiler toolbox](https://www.mathworks.com/products/compiler.html) you can make a compiled version and use that to run your analysis pipelines. You compile FieldTrip with all its dependencies like this
@@ -17,10 +16,10 @@ If you make a script like the following
     cfg = [];
     cfg.numtrl = 10;
     data = ft_freqsimulation(cfg);
-    
+
     cfg = [];
     ft_databrowser(cfg, data);
-    
+
     input('press a buton to exit');
 
 you would execute
@@ -34,6 +33,3 @@ Note that the "press a button to exit" statement is used to prevent the compiled
 `<note>`
 This is the strategy we also used for running the Human Connectome Project [megconnectome](https://github.com/Washington-University/megconnectome) analysis pipelines on the WashU compute cluster.   
 `</note>`
-
-   
-   

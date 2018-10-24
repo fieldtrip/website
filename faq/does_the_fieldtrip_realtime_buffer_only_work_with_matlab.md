@@ -3,12 +3,11 @@ layout: default
 tags: faq realtime
 ---
 
-
 # Does the FieldTrip realtime buffer only work with MATLAB?
 
 No, the FieldTrip realtime buffer defines a network communication protocol which only requires TCP/IP. It does not require any specific operating system, programming language or data analysis environment, although we do use it a lot in combination with MATLAB and with functions from the FieldTrip toolbox on the analysis side. Most of the applications on the data acquisition side are implemented in C or C++.
 
-Furthermore, it helps to distinguish between the buffer server and the clients. 
+Furthermore, it helps to distinguish between the buffer server and the clients.
 
 ## C client
 
@@ -29,10 +28,3 @@ A native Java implementation of the client-side functions is available in ''fiel
 ## MATLAB client
 
 The MATLAB implementation consists of the **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)** functions from the ''fieldtrip/fileio'' directory. Under the hood, these functions call a mex file in which the [reference implementation](/development/realtime/reference_implementation) is being used. Please see [this documentation](/development/realtime/buffer_matlab) for more details and go through the [getting started](/getting_started/realtime) documentation.
-
-
-
-
-
-
-
