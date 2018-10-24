@@ -34,7 +34,7 @@ The analysis protocol includes tools and/or algorithms used, and how they are us
 
 These tools can be combined in an analysis protocol that for example looks like Figure 1.
 
-{{ :development:introduction:introduction_anprotocol2.png?350 |}}
+![image](/media/development/introduction/introduction_anprotocol2.png)
 
 **//Figure 1; Analysis protocol for Event-Related Potentials (ERPs)//**
 
@@ -122,7 +122,7 @@ Some other standard analysis protocols are given also below. The figures indicat
 
 ERP/ERF analysis consists of preprocessing, averaging the data timelocked to the stimulus or response, optionally averaging over subjects and/or testing for significant effects and finally plotting the result.
 
-{{ :development:introduction:introduction_erpfnew2.png?310 |}}
+![image](/media/development/introduction/introduction_erpfnew2.png)
 
 
 **//Figure 3; An example analysis protocol for Event-Related Potentials (ERPs) using the FieldTrip functions//**
@@ -132,7 +132,7 @@ ERP/ERF analysis consists of preprocessing, averaging the data timelocked to the
 
 Frequency analysis consists of preprocessing, performing a Fourier or wavelet decomposition of the data, optionally averaging over subjects and/or testing for significant effects and finally plotting the result.
 
-{{ :development:introduction:introduction_tfr4.png?310 |}}
+![image](/media/development/introduction/introduction_tfr4.png)
 
 **//Figure 4; An example analysis protocol of (time-)frequency analysis in FieldTrip//**
 
@@ -141,7 +141,7 @@ Frequency analysis consists of preprocessing, performing a Fourier or wavelet de
 A schematic display of the analysis steps for source reconstruction using a beamformer approach is given below.
 Prior to any source reconstruction, you should have performed a complete timelock or frequency analysis of the data at the channel level.
 
-{{ :development:introduction:introduction_beamforming3.png?370 |}}
+![image](/media/development/introduction/introduction_beamforming3.png)
 
 **//Figure 5; An example analysis protocol of the source analysis using beamforming in FieldTrip//**
 
@@ -154,7 +154,7 @@ The spatial normalisation towards a template brain is done in FieldTrip with the
 
 Below you can see the protocol that you would use for averaging the source reconstruction over subjects and for group statistics on the source level. If the statistical test involves two conditions, then you should do the source normalisation in both conditions for all subjects and feed the two grandaveraged source reconstructions into **[ft_sourcestatistics](/reference/ft_sourcestatistics)**.
 
-{{ :development:introduction:introduction_source_multiple2.png?410 |}}
+![image](/media/development/introduction/introduction_source_multiple2.png)
 
 **//Figure 6; An example analysis protocol of source reconstruction for multiple subjects in FieldTrip//**
 

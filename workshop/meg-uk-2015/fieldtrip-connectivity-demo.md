@@ -101,7 +101,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	legend(virtualchannel_avg.label);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.02.31.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.31.png)
 
 
 	%%
@@ -140,7 +140,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.02.54.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.54.png)
 
 
 ## Part 2 - whole brain connectivity
@@ -220,7 +220,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ylabel('imag');
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.44.37.png?| }}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.37.png)
 
 
 	%%
@@ -255,7 +255,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, conn);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.44.44.png?| }}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.44.png)
 
 
 	cfg             = [];
@@ -267,7 +267,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, sourceI);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.44.49.png?| }}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.49.png)
 
 
 	%% look at connectivity difference
@@ -310,7 +310,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, source_difint);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.44.52.png?| }}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.52.png)
 
 
 	%% look at the analysis history
@@ -324,4 +324,4 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_12.45.50.png?650| }}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.45.50.png)

@@ -93,7 +93,7 @@ Now you can plot the head position relative to the first value, and compute the 
 	
 
 
-{{ :example:headmovementexample.png?nolink&500 |}}
+![image](/media/example/headmovementexample.png)
 
 The figure illustrates head position changes during 1-hour MEG session (data used for this plot are different from those used in the example above). You may decide to exclude a subject from the subsequent analysis if the head movement exceeds a certain threshold. 
 

@@ -49,11 +49,11 @@ Here the original field distributions in both conditions are dominated by the st
 
 In this experiment, MEG was recorded during stimulation of the affected/painfull hand prior to, and after application of a pain blocker. These correspond to the conditions A and B as explained above. First the MEG topography of the M24 event-related field is given for both conditions seperately.
 
-{{:example:difference_erf_pain.png?300|}} 
+![image](/media/example/difference_erf_pain.png)
 
 *Figure 1; A16/SV-med-R (i.e. pain)*
 
-{{:example:difference_erf_nopain.png?300|}}  
+![image](/media/example/difference_erf_nopain.png)
 
 *Figure 2; A16/SV-med-R-block (i.e. no pain)*
 

@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-\\
+
 
 `<note warning>`
 The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.
@@ -30,8 +30,8 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 Figure 1. shows the bigger steps in the calculation of the minimum-norm estimate. It shows that the computation of the inverse solution is based on the outputs of two independent processing steps: the processing of the anatomical images that leads to the forward solution and the processing of the MEG data. Creating the source model requires the use of two additional software packages, FreeSurfer and MNE Suite.
 
-{{:tutorial:minimumnormestimate:analysis_protocol_mne.png?550|Figure 1. An overview of the bigger steps in the calculation of the minimum-norm estimate}}
-\\
+![image](/media/tutorial/minimumnormestimate/analysis_protocol_mne.png@550)
+
 *Figure 1. An overview of the bigger steps in the calculation of the minimum-norm estimate*
 
 To compute the distributed neuronal activation using minimum-norm estimate we will perform the following step
@@ -56,7 +56,7 @@ To compute the distributed neuronal activation using minimum-norm estimate we wi
 
 ## Processing of anatomical data
 
-\\
+
 The following will use the anatomical MRI belonging to Subject01. The file can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 The functions described in this part of the tutorial are using toolboxes that are under the fieldtrip/external folder. You do not have to add these toolboxes yourself, but it is important that you set up your matlab path properly. You can read about how to set up your matlab path [here](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path). 
 
@@ -66,13 +66,13 @@ The functions described in this part of the tutorial are using toolboxes that ar
 
 ### Preprocessing of the anatomical MRI
 
-\\ The following figure shows the steps of the preprocessing and of the rest of the anatomical processing (volume conduction and source-model).
-\\
+The following figure shows the steps of the preprocessing and of the rest of the anatomical processing (volume conduction and source-model).
+
 {{:tutorial:minimumnormestimate:anatomical_preproc_mne.png?500|}}
-\\
-//Figure 2. Pipeline for processing of the anatomical data
-//
-\\
+
+*Figure 2. Pipeline for processing of the anatomical data*
+
+
 The anatomical preprocessing is done in Matlab with FieldTrip. At the end, a segmented mri is created for the volume conduction model, and an anatomical volume with and without brainmask is created in a Freesurfer compatible format for the source-space. The preprocessing involves the following step
 
 
@@ -88,14 +88,14 @@ The anatomical preprocessing is done in Matlab with FieldTrip. At the end, a seg
 
 *  obtain a skull-stripped anatomy and a brain mask from the MNI-aligned mri volume using **[ft_volumesegment](/reference/volumesegment)**
 
-*  save the MNI-aligned anatomy and the segmented anatomy in Freesurfer compatible format, using **[ft_volumewrite](/reference/ft_volumewrite)**. These two will be used for creating the source model.\\
+*  save the MNI-aligned anatomy and the segmented anatomy in Freesurfer compatible format, using **[ft_volumewrite](/reference/ft_volumewrite)**. These two will be used for creating the source model.
 
 The input of the preprocessing is the anatomical MRI. We will create four outputs that will be necessary for the subsequent processing: 2 files in .mgz format that will be used for creating the source space, a matlab structure called "seg" that will be used for creating the volume conduction model, and a transformation matrix that will help us later to transform the volume conductor and the source-model to CTF space later.
 
-\\
+
 #### 1. Preprocessing of the anatomical MRI: read in MRI data
 
-\\
+
 
 	
 	mri = ft_read_mri('Subject01.mri');
@@ -103,7 +103,7 @@ The input of the preprocessing is the anatomical MRI. We will create four output
 
 #### 2. Preprocessing of the anatomical MRI: realign to CTF
 
-\\
+
 The volume conduction model describes the geometry and the electrical (conductive) properties of the head. The volume conduction model (or headmodel) requires a geometrical description of the head. In this tutorial we have an anatomical MRI of the subject from which we can construct the head model. [Here](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), you can read more about the coordinate systems. And [here](/tutorial/headmodel), you can read more about the headmodel.
 
 In this example, we are using an MRI which has been already processed to contain a transformation matrix that corresponds to the CTF convention. Therefore, it does not need to be realigned. 
@@ -126,7 +126,7 @@ If it worked well, you will see the coordinate system specified in the mri struc
 
 #### 3. Preprocessing of the anatomical MRI: reslicing
 
-\\
+
 This steps reslices the anatomical volume in a way that each slice will be equaly thick. We use 1 mm thick slices and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with. 
 
 	
@@ -150,7 +150,7 @@ For a detail guide on identifying landmarks in the anatomical volume see this li
 **moved and edited text for this link**
 
 `<note warning>`Importantly, the implicit assumption is that the original transformation matrix correctly describes a right-handed coordinate system (otherwise left and right may become mixed up). In this example, we are using an MRI which has been already processed to contain a correct transformation matrix (in this case corresponding to the CTF convention, which is also a right-handed coordinate system). If you are processing MRI scans in the native file format without explicit orientation information, the previous step may lead to a left/right flip. **I THINK THIS LEFT/RIGHT FLIP NEEDS TO BE EXPLAINED MORE. DO YOU MEAN THAT THE LEFT HEMISPHERE BECOMES THE RIGHT, AND THE RIGHT BECOMES THE LEFT? IS THAT THE SAME/DIFF AS SEEING THE REFLECTION OF THE BRAIN??**
-`</note>`\\
+`</note>`
 
 	
 	load mrirs;
@@ -163,7 +163,7 @@ For a detail guide on identifying landmarks in the anatomical volume see this li
 
 ####  5. Preprocessing of the anatomical MRI: segmentation
 
-\\
+
 This step uses a segmentation of the anatomy, where gray, white and the cerebro-spinal fluid compartments are differentiated, to create a skull-stripped anatomy and a brainmask. The brainmask is a binary mask of the inner skull.  The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output.
 
 	
@@ -180,7 +180,7 @@ The seg structure will be used later for creating the volume conduction model. A
 
 #### 6. Preprocessing of the anatomical MRI: save to disk
 
-\\
+
 
 	
 	load mri_mni;
@@ -199,23 +199,23 @@ The seg structure will be used later for creating the volume conduction model. A
 
 
 `<note warning>`Importantly, the mgz-filetype can only be used on the Linux and Mac platforms (and on Windows running virtual box). When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). Note however that these files cannot be saved and read on a Windows PC. If you have your Matlab installed on Windows, you may try to save the volume as a nifti file, for example. For this, you have to use cfg.filetype = 'nifti'. And you can convert the nifti file to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer. 
-`</note>`\\
+`</note>`
 
 The matlab-based preprocessing of the anatomical data is now finished. We created two .mgz files that will be used for creating the source model and a seg structure that will be used for creating the volume conduction model.
 
 However, it is important that the anatomical MRI and the sensor positions are expressed in the same coordinate system. The MEG sensor positions are always defined relative to the fiducial coils. If we want to create a volume conduction model and a sourcemodel, the anatomical data must also be expressed relative to these points (i.e., in the CTF coordinate system). Therefore, we saved also the mri volume aligned to MNI and also CTF coordinates. We will use the transformation matrices of these volumes to transform the volume conduction model and the sourcespace to the CTF coordinate system.
 ### Source model
 
-\\
+
 #### Source model: Introduction
 
-\\
-This part describes how to set up the source-space for the minimum norm estimate. This entails the creation of a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere. The latter property is required to create an inflated cortex and to do intersubject realignment. The following uses Freesurfer to create a topologically correct description of the cortex. This typically yields a mesh with > 100000 vertices per hemisphere which is too much for a workable minimum norm estimate. Therefore, we use the MNE-suite to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, Matlab's reducepatch function breaks the topology and leads to a bigger variance in triangle size.\\ 
+
+This part describes how to set up the source-space for the minimum norm estimate. This entails the creation of a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere. The latter property is required to create an inflated cortex and to do intersubject realignment. The following uses Freesurfer to create a topologically correct description of the cortex. This typically yields a mesh with > 100000 vertices per hemisphere which is too much for a workable minimum norm estimate. Therefore, we use the MNE-suite to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, Matlab's reducepatch function breaks the topology and leads to a bigger variance in triangle size. 
 The creation process of the source-space can be divided into 4 stages (after the preprocessing steps
  1.  Volumetric processing in Freesurfer.
  2.  Surface based processing in Freesurfer.
  3.  Creation of the mesh using MNE-suite.
- 4.  Coregistration of the source space to the sensor-based coordinate system with FieldTrip.\\
+ 4.  Coregistration of the source space to the sensor-based coordinate system with FieldTrip.
 
 **The volumetric and surface based processing (first and the second steps) takes 10 hours altogether. These steps will run on the computer for themselves. There is only one checkpoint between the volume and the surface based processing where an intermediate result can be checked interactively. **
 
@@ -225,16 +225,16 @@ The instructions about how to install and run Freesurfer and MNE Suite are aimed
     
 #### 1. Source model: Volumetric processing in Freesurfer
 
-\\
+
 Freesurfer's anatomical processing pipeline consists of a series of automated steps, which essentially consist o
  1.  processing steps on a volumetric anatomical MRI (image intensity normalization, co-registration with Talairach space, skull stripping, automatic segmentation of sub-cortical structures, and finally segmentation) 
  2.  extraction of the cortical mesh
  3.  processing of the surface meshes (smoothing, topology fixing, inflation, co-registration with a spherical template)
 
-Here is a [link](http://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllDevTable) to the different processing steps. Although the Freesurfer procedure can be invoked using only a few Freesurfer commands, below we will describe the (sub)commands that will achieve the same. These commands sequentially generate a series of files (volumetric, surface and transformation matrices). Each of the output files serves as input to the sequential analysis steps. A table of file dependencies can be found [here](http://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllFilesVsSteps).\\
+Here is a [link](http://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllDevTable) to the different processing steps. Although the Freesurfer procedure can be invoked using only a few Freesurfer commands, below we will describe the (sub)commands that will achieve the same. These commands sequentially generate a series of files (volumetric, surface and transformation matrices). Each of the output files serves as input to the sequential analysis steps. A table of file dependencies can be found [here](http://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllFilesVsSteps).
 There are a few analysis steps in Freesurfer, which are not guaranteed to give a nice result, and require some user interaction to get it right. Moreover, Freesurfer can be quite picky with respect to the exact format of the MRI-volumes. **One step, which in our experience is notorious for not being very robust, is automatic skull-stripping.** Therefore, we advocate a hybrid approach that uses SPM for an initial segmentation of the anatomical MRI during the preprocessing. With this segmentation, we created a brainmask that provides a robustly skull-stripped image, which is a prerequisite for a correct segmentation in Freesurfer. Although this approach may seem a bit convoluted (you may rightfully ask why we need to redo the segmentation in Freesurfer if we already did it in SPM), the interdependencies between different files generated along the Freesurfer pipeline make tapping into this pipeline at a random point quite complicated. For this reason a large part of the volumetric processing in Freesurfer needs to be done as well.
 
-\\
+
 In order to be able to use Freesurfer, you need to have a working installation of the package. It can be downloaded from [here](http://surfer.nmr.mgh.harvard.edu/fswiki). If you are working at the Center of Neuroimaging of the Donders Institute you can find more versions of Freesurfer under the /opt/FreesurferXXX directories. (If you are working at the MPI for Psycholinguistics, you should install the software yourself in your directory.) We recommend to use Freesurfer 5.1.0. **You can run the commands below by just copying and pasting them into the terminal window of the Linux system (from where you use/initiate  Matlab).**
 
 **%% I totally skipped past the previous line and got confused with the code below, CAN WE KEEP THE PREVIOUS LINE IN BOLD?? I also added a comment above the first box of code below.  ALSO FOR CLARITY, CAN WE INSERT A COMMENT IN THE FIRST CODE BOX THAT RETURNS/RESUMES TO BEING EXECUTED IN MATLAB?**
@@ -247,7 +247,7 @@ export SUBJECTS_DIR=`<Subject directory>``</code>`
 SUBJECTS_DIR is the directory where you will store all the Freesurfer-processed anatomical data of all your subjects. Then, type this command to set up Freesurfe
 `source $FREESURFER_HOME/SetUpFreeSurfer.sh`
 It is useful to set up a subject-specific director
-`mksubjdirs $SUBJECTS_DIR/Subject01`\\
+`mksubjdirs $SUBJECTS_DIR/Subject01`
 Now, we are ready to start using Freesurfer. As a first step in the volumetric pipeline, we have to 'convert' the anatomical MRI once more, but now using a Freesurfer command. You can find now a new folder in the subject directory called "mri" into which you will copy both the masked and the original mgz files you created in the previous preprocessing steps in FieldTrip. All the Freesurfer commands will be called from the "mri" directory. (The first three lines of the following code is doing all of these for you.)
 
 	
@@ -281,14 +281,14 @@ This ends the part of the Freesurfer pipeline concerned with volumetric processi
 	cfg.interactive = 'yes';
 	figure;ft_sourceplot(cfg, mri);
 
-{{:tutorial:minimumnormestimate:filled01new.png?550|Figure 3. Filled mgz}}
+![image](/media/tutorial/minimumnormestimate/filled01new.png@550)
 
-\\
+
 *Figure 3. Filled mgz created by Freesurfer. The two hemispheres have different colors (white and grey), cerebellum is not included.*
 
 #### 2. Source model: Surface based processing in Freesurfer
 
-\\
+
 The surface construction is done by the following sequence of commands (from the Subject01/mri directory
 
 	
@@ -304,11 +304,11 @@ The surface construction is done by the following sequence of commands (from the
 	recon-all -sphere -subjid Subject01
 	recon-all -surfreg -subjid Subject01
 
-After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. We are going to use **lh.white** and **rh.white** to create the source space in the next step.\\
+After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. We are going to use **lh.white** and **rh.white** to create the source space in the next step.
 
 #### 3. Source model: Creation of the mesh using MNE Suite
 
-\\
+
 Just like with Freesurfer, we have to first take care that MNE-suite is installed, and that some environmental variables are correctly specified. If you are working at the Center of Neuroimaging of the Donders Institute, you can find the MNE Suite under the /opt/mne directory. At the MPI for Psycholinguistics, MNE Suite is installed under the /mnt/data1/mne directory.
 
 	
@@ -331,15 +331,14 @@ This step creates a bunch of files in `<Subject directory>`/Subject01/bem/**, co
 	figure;ft_plot_mesh(bnd);
 
 
-{{:tutorial:minimumnormestimate:sspace01new.png?450|Figure 4. Source-space downsampled}}
-\\ 
-//Figure 4. The source-space downsampled by MNE Suite
-//
-\\
+![image](/media/tutorial/minimumnormestimate/sspace01new.png@450)
+
+*Figure 4. The source-space downsampled by MNE Suite*
+
+
 
 #### 4. Source model: Co-registration of the source space to the sensor-based head coordinate system
 
-\\
 We have the source locations co-registered to the Talairach (MNI) coordinate system, so now we need to co-register the source space to the sensor-array (i.e., we have to express the positions of the sources in the same (CTF) coordinate system as the sensors). For this, we will use transformation matrices of the earlier re-aligned mri volumes. By combining the transformation matrix of the volume that is aligned to the CTF coordinates (from voxel space to CTF space) and the transformation of the volume that is aligned to the MNI coordinates (from voxel space to MNI space), we will get a matrix that transforms the data from CTF to MNI space. We will apply this transformation matrix to the source-points. Next to this, we will convert the units to cm.
 
 	
@@ -363,7 +362,7 @@ We have the source locations co-registered to the Talairach (MNI) coordinate sys
 
 ### Volume conduction model
 
-\\
+
 We create the volume conduction model from the segmented volume (see Preprocessing of the anatomical MRI, step 5). In order to get a volume conduction model that is aligned with the source space we will apply the same transformation matrix (T) on the volume conductor as the transformation matrix that we applied on the sourcespace. 
 
 	
@@ -391,12 +390,12 @@ To plot, you can use this cod
 
 If they are not aligned, it may be because **vol** is not expressed in CTF coordinates.  You can check using **[ft_determine_coordsys](/reference/ft_determine_coordsys)**.  
 
-{{:tutorial:minimumnormestimate:sourcespace_vol01new.png?450|Figure 5. Source-space with volume conductor}}
-\\
+![image](/media/tutorial/minimumnormestimate/sourcespace_vol01new.png@450)
+
 *Figure 5. The final version of the source-space aligned and plotted together with the volume conductor* 
 ## Processing of functional data
 
-\\
+
 The following will use the MEG data belonging to Subject01. The file can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 For both preprocessing and averaging, we will follow the steps that have been written in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. We will use trials belonging to two conditions (FC and FIC) and we will calculate their difference.
 
@@ -451,7 +450,7 @@ The source space, the volume conduction model  and the position of the sensors a
 ## Inverse solution
 
 FIXME
-\\
+
 The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function calculates the inverse solution. The method used (minimum-norm estimation) has to be specified with the cfg.method option. The averaged functional data, the forward solution (the output of the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function), the volume conduction model (in this case, the output of the **[ft_prepare_singleshell](/reference/ft_prepare_singleshell)** function) and the noise-covariance matrix (the cov field of the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function) has to be provided. 
 
 The lambda value is a scaling factor that is responsible for scaling the noise-covariance matrix. If it is zero the noise-covariance estimation will be not taken into account during the computation of the inverse solution. Noise-covariance is estimated in each trial separately and then averaged, while the functional data (of which we calculate the source-analysis) is simply averaged across all the trials. Therefore,  the higher the number of trials the lower the noise is in the averaged, functional data, but the number trials is not reducing the noise in the noise-covariance estimation. This is the reason while it is useful to use a scaling factor for the noise-covariance matrix if we want to estimate more realistically the amount of noise.  
@@ -490,11 +489,11 @@ You can plot the inverse solution onto the source-space at a specific time-point
 	ft_plot_mesh(bnd, 'vertexcolor', m);
 
 
-{{:tutorial:minimumnormestimate:plotmeshsourceic01new.png?450|Figure 6. The source reconstruction at 500 ms}}
-\\
-//Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point
-//
-\\
+![image](/media/tutorial/minimumnormestimate/plotmeshsourceic01new.png@450)
+
+*Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point*
+
+
 
 But we would like to know where the difference between the conditions can be localized. Therefore, we calculate the difference of the two conditions, and we use **[ft_sourcemovie](/reference/ft_sourcemovie)** to visualize the results.
 
@@ -516,8 +515,8 @@ But we would like to know where the difference between the conditions can be loc
 	
 
 
-{{:tutorial:minimumnormestimate:sourcemovie01new.png?500|Figure 7. One frame from ft_sourcemovie}}
-\\
+![image](/media/tutorial/minimumnormestimate/sourcemovie01new.png@500)
+
 *Figure 7. One frame from the movie that shows the differences of the two source-reconstructions*
 ## Summary and further readings
 

@@ -204,7 +204,7 @@ For example, a schematic layout of the 256 electrode grid might be obtained usin
 
 
 To obtain something like this: \\
-{{:getting_started:schematic_common3.png|}} \\
+![image](/media/getting_started:/chematic_common3.png)
 
 An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:\\
 

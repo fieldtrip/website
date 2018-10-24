@@ -306,10 +306,9 @@ If your MRI has HPI positions, e.g., represented by vitamin E capsules, load the
 	%% Derive the voxel locations
 	hpi_vox = ft_warp_apply(inv(mri.transform), hpi_mri);
 
-Below is a schematic of five HPI positions and an example of a text file you should loa
+Below is a schematic of five HPI positions and an example of a text file you should load
 
-
-//**[I'd like to put a figure here]**//
+*[I'd like to put a figure here]*
 
 
 The "fid_hpi.txt" file contains vitamin-E dot positions (with the units of mm) in the MRI with the order of 'HPI_3', 'HPI_1', 'HPI_2', 'HPI_4', and 'HPI_5'. Including the above five HPIs, several special points are defined in the Ricoh system (this is the same as Yokogawa system.);  the eight special points are defined in the Ricoh system in the convention with the following orde

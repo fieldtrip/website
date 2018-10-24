@@ -130,8 +130,8 @@ We check if the resolution and the dimensions were well specified, and the resli
 	ft_sourceplot(cfg,mri);
 
 \\
-{{:tutorial:headmodel:mri_noreslice.png?250 |not-resliced mri}}
-{{ :tutorial:headmodel:mri.png?250 |resliced mri}}
+![image](/media/tutorial/headmodel/mri_noreslice.png@250)
+![image](/media/tutorial/headmodel/mri.png@250)
 \\
 *Figure 3. Mri plotted before reslicement (left) and after reslicement (right)*
 
@@ -197,7 +197,7 @@ The function **[ft_sourceplot](/reference/ft_sourceplot)** can be used to plot t
 	ft_sourceplot(cfg, seg_i);
 
 
-{{:tutorial:headmodel:5tissues_segmentation.png?450|Binary masks}}
+![image](/media/tutorial/headmodel/5tissues_segmentation.png@450)
 \\
 *Figure 4. Binary representations of scalp, skull tissues, gray and white matter, csf *
 \\

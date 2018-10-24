@@ -49,7 +49,7 @@ The anatomical mri of the [tutorial data set](/tutorial/shared/dataset) is avail
 *  Finally, we will check the geometry of the head model by plotting it with **[ft_plot_mesh](/reference/ft_plot_vol)**.
 
 \\
-{{{:tutorial:headmodel:hedmodel_eeg-01.png?220|Head model pipeline for EEG BEM model}}
+![image](/media/tutorial/headmodel/hedmodel_eeg-01.png)
 \\
 *Figure 2. Pipeline of creating a BEM model*
 \\
@@ -244,9 +244,9 @@ The head model (vol) contains three structures in the **bnd** field. These are t
 	figure;
 	ft_plot_mesh(vol.bnd(1),'facecolor','none'); %brain
 
-{{:tutorial:headmodel:skin.png?180|triangulation of the skin surface}}
-{{:tutorial:headmodel:skull.png?180|triangulation of the outside skull surface}}
-{{:tutorial:headmodel:brain.png?180|triangulation of the outside brain surface}}
+![image](/media/tutorial/headmodel/skin.png)
+![image](/media/tutorial/headmodel/skull.png)
+![image](/media/tutorial/headmodel/brain.png)
 
 *Figure 3. The geometry of the volume conduction model using BEM ('dipoli'): scalp (left), skull (middle) and brain (right)*
 

@@ -682,7 +682,7 @@ An example is reported belo
 
 
 
-{{:development:wiki12.png?nolink&300 |}}
+![image](/media/development/wiki12.png)
 
 
 
@@ -701,7 +701,7 @@ An example of the **imfill** function is given below. This is the case, for exam
 
 
 
-{{:development:wiki34.png?nolink&300 |}}
+![image](/media/development/wiki34.png)
 
 The code used to generate the figure is:\\
 

@@ -61,8 +61,8 @@ The ft_singleplotER function first selects the data to be plotted, in this case 
     xlim([-0.2 1.0])
     ylim([-1e-13 3e-13])
 
-{{tutorial:plotting:singleploter_avgfc.png?400|plotted by singleplotER.m}}
-{{tutorial:plotting:plot_avgfc.png?400|plotted by maptlab plot.m function}}
+![image](/media/utorial/plotting/singleploter_avgfc.png@400)
+![image](/media/utorial/plotting/plot_avgfc.png@400)
 
 In **[ft_singleplotTFR](/reference/ft_singleplotTFR)** the channel, time bins and frequency bins are selected and subsequently plotted with the MATLAB IMAGESC.m function. 
 
@@ -80,8 +80,8 @@ If you specify multiple channels in cfg.channel both singleplot functions will p
     % cfg.channelname  = 'MRC' % bottom figure
     % figure; ft_singleplotTFR(cfg,TFRhann);
 
-{{tutorial:plotting:singleplottfr_mlc.png?350 | singleplotTFR MLC}}
-{{tutorial:plotting:singleplottfr_mrc.png?350 | singleplotTFR MRC}}
+![image](/media/utorial/plotting/singleplottfr_mlc.png@350)
+![image](/media/utorial/plotting/singleplottfr_mrc.png@350)
 
 #### Exercise 1
 
@@ -92,8 +92,8 @@ Try to replicate [Figure 5 from the Event Related Averaging tutorial](/tutorial/
 
 The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions PLOT.m and IMAGESC.m. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes. In the subsequent figures you can see these axes that are normally set to "off".  Exemplar code for using ft_multiplotER/TFR is shown in the 'interative mode' section of this tutorial (further down).
 
-{{:tutorial:plotting:multiploter_axison2.png?400|multiplotER axis on}}
-{{:tutorial:plotting:multiplottfr_axison2.png?400|multiplotTFR axis on}}
+![image](/media/tutorial/plotting/multiploter_axison2.png@400)
+![image](/media/tutorial/plotting/multiplottfr_axison2.png@400)
 
 Normally the axes of the figure are not visible, only the "axis" of each channel, but remember these are not real axes on which you can use MATLAB axis commands, the are just lines drawn by the function. Of course you can set the limits of the channel "axis" by the cfg structure (cfg.xlim, cfg.ylim). And you can see the limits in the scale in **[ft_multiplotER](/reference/ft_multiplotER)** (righ upper corner) or in the comment for **[ft_multiplotTFR](/reference/ft_multiplotTFR)** (left upper corner).
 
@@ -117,7 +117,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.layout = 'CTF151.lay';            
     figure; ft_topoplotER(cfg,GA_FC); colorbar;
     
-{{tutorial:plotting:tuto_topoer.png?250|topoplotER}}    
+![image](/media/utorial/plotting/tuto_topoer.png@250)
 
     cfg = [];
     cfg.xlim = [0.9 1.3];                
@@ -168,7 +168,7 @@ Options specific for to using topoplot.m
     figure; ft_topoplotTFR(cfg,TFRhann);
 \\ 
 
-{{tutorial:plotting:tuto_funcytopo3.png?250 |with channel labels}}                                                                            
+![image](/media/tutorial/plotting/tuto_funcytopo3.png@250)
 \\ 
 
     cfg.gridscale = 300;                
@@ -177,7 +177,7 @@ Options specific for to using topoplot.m
     figure; ft_topoplotTFR(cfg,TFRhann);
 \\ 
 
-{{tutorial:plotting:tuto_funcytopo2.png?250 |grayscale}}
+![image](/media/tutorial/plotting/tuto_funcytopo2.png@250)
 \\ 
 
     cfg.gridscale = 300;
@@ -189,7 +189,7 @@ Options specific for to using topoplot.m
     figure; ft_topoplotTFR(cfg,TFRhann);
 \\ 
 
-{{tutorial:plotting:tuto_funcytopo1.png?250 |you can go crazy!}}
+![image](/media/tutorial/plotting/tuto_funcytopo1.png@250)
 \\ 
 
 ### Interactive mode
@@ -347,7 +347,7 @@ This section uses the data from Subject01 in the [:tutorial:beamformer](/tutoria
 	ft_sourceplot(cfg, sourceDiffInt);
 	
 
-{{:tutorial:beamformer:figure4bf.png?500|"Figure 4"}}
+![image](/media/tutorial/beamformer/figure4bf.png@500)
 
 ####  Plotting on 3 orthogonal slices 
 
@@ -367,7 +367,7 @@ This section uses the data from Subject01 in the [:tutorial:beamformer](/tutoria
 	figure; ft_sourceplot(cfg, sourceDiffIntNorm);
 
 
-{{:tutorial:beamformer:figure8bf.png?500|"Figure 6"}}
+![image](/media/tutorial/beamformer/figure8bf.png@500)
 
 The three essential cfg parameters ar
 
@@ -419,7 +419,7 @@ Here, we make a field in the data with an opacity value for each voxel, and appl
 
 {{tutorial:plotting:plottuto_opac_rampup2.png?280|rampup}}
 {{tutorial:plotting:plottuto_opac_vdown2.png?280|vdown}}
-{{tutorial:plotting:plottuto_opac_mask.png?280|own mask}}
+![image](/media/tutorial/plotting/plottuto_opac_mask.png@280)
 ### Plotting on a brain surface
 
 #### Scalar data per vertex
@@ -446,7 +446,7 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
 	view ([90 0])             % rotate the object in the view
 
 
-{{:tutorial:beamformer:bf_tut_surfacepowrelnorm_comfilt.png?500|"Figure 7"}}
+![image](/media/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png@500)
 
 However, if you want to explore higher-dimensional data (such as TFR data) on the surface, using  **[ft_sourceplot](/reference/ft_sourceplot)** directly, is currently not supported. You can, however, select a data sub-selection manually.
 

@@ -209,7 +209,7 @@ Plot the interpolated data:
     figure
     ft_sourceplot(cfg,sourcePostInt_nocon);
  
-{{:tutorial:beamformer:figure1bf.png?500|"Figure 2"}}
+![image](/media/tutorial/beamformer/figure1bf.png@500)
 
 **//Figure 2; The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**.//**
 
@@ -245,7 +245,7 @@ Plot it:
     ft_sourceplot(cfg, sourceNAIInt);
 
  
-{{:tutorial:beamformer:figure2bf.png?500|"Figure 3"}}
+![image](/media/tutorial/beamformer/figure2bf.png@500)
 
 **//Figure 3; The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate.//**
 ### Exercise 4: lead field normalization
@@ -322,7 +322,7 @@ Now plot the power ratios:
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
-{{:tutorial:beamformer:figure4bf.png?500|"Figure 4"}}
+![image](/media/tutorial/beamformer/figure4bf.png@500)
 
 **//Figure 4; sourceplot with method "slice" //**
 ### Exercise 5: comparing normalizations
@@ -351,7 +351,7 @@ To plot an 'orthogonal cut
     ft_sourceplot(cfg, sourceDiffInt);
 
 
-{{:tutorial:beamformer:figure7bf.png?500|"Figure 5"}}
+![image](/media/tutorial/beamformer/figure7bf.png@500)
 
 **//Figure 5; sourceplot with method "ortho"//**
 
@@ -373,7 +373,7 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
-{{:tutorial:beamformer:figure8bf.png?500|"Figure 6"}}
+![image](/media/tutorial/beamformer/figure8bf.png@500)
 
 **//Figure 6; sourceplot with method "ortho" after volume normalisation//**
 
@@ -399,7 +399,7 @@ Now the data can be plotted
     ft_sourceplot(cfg, sourceDiffIntNorm);
     view ([90 0])
 
-{{:tutorial:beamformer:bf_tut_surfacepowrelnorm_comfilt.png?500|"Figure 7"}}
+![image](/media/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png@500)
 
 **//Figure 7; sourceplot with method "surface"//**
 

@@ -58,37 +58,37 @@ The following template layout sets are provide
 
 #### easycapM3 - Extended 10/20-System with 30 Channels
 
-{{:template:easycapm3.png?direct&200|}} 
+![image](/media/template/easycapm3.png@200)
 {{:template:easycapm3.mat.png?direct&200x200|}}
 
 #### easycapM22 - Small Equidistant 29-Channel-Arrangment (used in Braincap32)
 
-{{:template:easycapm22.png?direct&200|}} 
+![image](/media/template/easycapm22.png@200)
 {{:template:easycapm22.mat.png?direct&200x200|}}
 
 #### easycapM23 - Large Equidistant 32-Channel-Arrangement
 
-{{:template:easycapm23.png?direct&200|}} 
+![image](/media/template/easycapm23.png@200)
 {{:template:easycapm23.mat.png?direct&200x200|}}
 
 #### easycapM24 - Large Equidistant 34-Channel-Arrangement (used in EC40)
 
-{{:template:easycapm24.png?direct&200|}} 
+![image](/media/template/easycapm24.png@200)
 {{:template:easycapm24.mat.png?direct&200x200|}}
 
 #### easycapM11 - 61-Channel-Arrangement ("10%-System") (used in BrainCap64)
 
-{{:template:easycapm11.png?direct&200|}} 
+![image](/media/template/easycapm11.png@200)
 {{:template:easycapm11.mat.png?direct&200x200|}}
 
 #### easycapM1 - 74-Channel-Arrangement (used in EC80)
 
-{{:template:easycapm1.png?direct&200|}} 
+![image](/media/template/easycapm1.png@200)
 {{:template:easycapm1.mat.png?direct&200x200|}}
 
 #### easycapM15 - 128-Channel-Arrangement
 
-{{:template:easycapm15.png?direct&200|}} 
+![image](/media/template/easycapm15.png@200)
 {{:template:easycapm15.mat.png?direct&200x200|}}
 ### Triangulated Equidistant Arrangements
 
@@ -109,12 +109,12 @@ The following template layout sets are provide
 
 #### easycapM10 - Equidistant 61-Channel-Arrangement
 
-{{:template:easycapm10.png?direct&200|}} 
+![image](/media/template/easycapm10.png@200)
 {{:template:easycapm10.mat.png?direct&200x200|}}
 
 #### easycapM16 - Equidistant 88-Channel-Arrangement
 
-{{:template:easycapm16.png?direct&200|}} 
+![image](/media/template/easycapm16.png@200)
 {{:template:easycapm16.mat.png?direct&200x200|}}
 
 #### easycapM14 - Spherical 124-Channel-Arrangement
@@ -134,12 +134,12 @@ The following template layout sets are provide
 
 #### easycapM20 - BESA 32-Channel-Arrangement for Epilepsy Diagnostics
 
-{{:template:easycapm20.png?direct&200|}} 
+![image](/media/template/easycapm20.png@200)
 {{:template:easycapm20.mat.png?direct&200x200|}}
 
 #### easycapM17 - 29-Channel-Arrangement for Language Research
 
-{{:template:easycapm17.png?direct&200|}} 
+![image](/media/template/easycapm17.png@200)
 {{:template:easycapm17.mat.png?direct&200x200|}}
 
 ## actiCAP
@@ -157,8 +157,8 @@ This is a custom 64-Channel-Arrangement for the DCCN. The 32 channels from the 1
 
 This is a custom 64-Channel-Arrangement for the MPI. Note that the electrode positions are the same as for the DCCN customized version, but that the channel order is different. The MPI version has the 32 channels from the 1st amplifier on the right and the 32 channels from the 2nd amplifier on the left.
 
-{{:template:mpi_customized_acticap64.png?direct&200|}}  
-{{:template:mpi_customized_acticap64.mat.png?direct&200x200|}} 
+![image](/media/template/mpi_customized_acticap64.png@200)
+![image](/media/template/mpi_customized_acticap64.mat.png@200)
 
 #### acticap-64ch-standard2.mat
 
@@ -186,39 +186,39 @@ The following template layouts are for an electrode cap from [BioSemi](http://ww
 
 *  {{:template:biosemi16.lay.png?linkonly|biosemi16.lay}}
 
-*  {{:template:biosemi32.lay.png?linkonly|biosemi32.lay}}
+*  ![image](/media/template/biosemi32.lay.png)
 
-*  {{:template:biosemi64.lay.png?linkonly|biosemi64.lay}}
+*  ![image](/media/template/biosemi64.lay.png)
 
-*  {{:template:biosemi128.lay.png?linkonly|biosemi128.lay}}
+*  ![image](/media/template/biosemi128.lay.png)
 
-*  {{:template:biosemi160.lay.png?linkonly|biosemi160.lay}}
+*  ![image](/media/template/biosemi160.lay.png)
 
-*  {{:template:biosemi256.lay.png?linkonly|biosemi256.lay}}
+*  ![image](/media/template/biosemi256.lay.png)
 ## Standard 10-XX cap
 
 The following template layouts are for an electrode cap based on a standard 10-XX montage. 
 
 
-*  {{:template:EEG1005.lay.png?linkonly|EEG1005.lay}}
+*  ![image](/media/template/EEG1005.lay.png)
 
-*  {{:template:EEG1010.lay.png?linkonly|EEG1010.lay}}
+*  ![image](/media/template/EEG1010.lay.png)
 
-*  {{:template:EEG1020.lay.png?linkonly|EEG1020.lay}}
+*  ![image](/media/template/EEG1020.lay.png)
 
-*  {{:template:elec1005.lay.png?linkonly|elec1005.lay}}
+*  ![image](/media/template/elec1005.lay.png)
 
-*  {{:template:elec1010.lay.png?linkonly|elec1010.lay}}
+*  ![image](/media/template/elec1010.lay.png)
 
-*  {{:template:elec1020.lay.png?linkonly|elec1020.lay}}
+*  ![image](/media/template/elec1020.lay.png)
 ## 4D/BTI array
 
 The following template layouts are for a sensor array of the 4D/BTI MEG system. 
 
 
-*  {{:template:4D148.lay.png?linkonly|4D148.lay}}
+*  ![image](/media/template/4D148.lay.png)
 
-*  {{:template:4D248.lay.png?linkonly|4D248.lay}}
+*  ![image](/media/template/4D248.lay.png)
 
 *  {{:template:4D248_helmet.png?linkonly|4D248_helmet.mat}} - realistic display of temporal sensors
 
@@ -227,11 +227,11 @@ The following template layouts are for a sensor array of the 4D/BTI MEG system.
 The following template layouts are for a sensor array of the CTF MEG system. 
 
 
-*  {{:template:CTF151.lay.png?linkonly|CTF151.lay}}
+*  ![image](/media/template/CTF151.lay.png)
 
 *  {{:template:CTF151_helmet.png?linkonly|CTF151_helmet.mat}} - realistic display of temporal sensors
 
-*  {{:template:CTF275.lay.png?linkonly|CTF275.lay}}
+*  ![image](/media/template/CTF275.lay.png)
 
 *  {{:template:CTF275_helmet.png?linkonly|CTF275_helmet.mat}} - realistic display of temporal sensors
  
@@ -240,7 +240,7 @@ The following template layouts are for a sensor array of the CTF MEG system.
 The following template layouts are for a sensor array of the Neuromag MEG system. The major difference between the neuromag306 and the NM306 layouts is the labelling of the sensors (e.g. 'MEG1431' and '1431' respectively). In a similar vein, NM122.lay and NM122_combined.lay contain the lengthier labels (e.g. 'MEG 008'), whereas NM122all.lay has the shorter labels ('008').
 
 
-*  {{:template:neuromag306all.lay.png?linkonly|neuromag306all.lay}}
+*  ![image](/media/template/neuromag306all.lay.png)
 
 *  {{:template:neuromag306cmb.lay.png?linkonly|neuromag306cmb.lay}} - includes the combined planar gradiometers
 
@@ -248,13 +248,13 @@ The following template layouts are for a sensor array of the Neuromag MEG system
 
 *  {{:template:neuromag306planar.lay.png?linkonly|neuromag306planar.lay}} - includes only the planar gradiometers
 
-*  {{:template:NM122.lay.png?linkonly|NM122.lay}}
+*  ![image](/media/template/NM122.lay.png)
 
-*  {{:template:NM122all.lay.png?linkonly|NM122all.lay}}
+*  ![image](/media/template/NM122all.lay.png)
 
 *  {{:template:NM122combined.lay.png?linkonly|NM122combined.lay}} - includes the combined planar gradiometers
 
-*  {{:template:NM306all.lay.png?linkonly|NM306all.lay}}
+*  ![image](/media/template/NM306all.lay.png)
 
 *  {{:template:NM306mag.lay.png?linkonly|NM306mag.lay}} - includes only the magnetometers
 
@@ -263,12 +263,12 @@ The following template layouts are for a sensor array of the Neuromag MEG system
 
 The following template layouts are for a sensor array of the Yokogawa MEG system. The labels in these layouts, except for the old variant, are prefixed to indicate the gradiometer type ('PG*' - planar gradiometer, 'AG*' - axial gradiometer). 
 
-*  {{:template:yokogawa440.lay.png?linkonly|yokogawa440.lay}}
+*  ![image](/media/template/yokogawa440.lay.png)
 
-*  {{:template:yokogawa440_old.lay.png?linkonly|yokogawa440_old.lay}}
+*  ![image](/media/template/yokogawa440_old.lay.png)
 
 *  {{:template:yokogawa440ag.lay.png?linkonly|yokogawa440ag.lay}} - includes only the axial gradiometers
 
-*  {{:template:yokogawa440all.lay.png?linkonly|yokogawa440all.lay}}
+*  ![image](/media/template/yokogawa440all.lay.png)
 
 *  {{:template:yokogawa440pg.lay.png?linkonly|yokogawa440pg.lay}}  - includes only the planar gradiometers

@@ -213,7 +213,7 @@ We should rereference the averaged EEG data for later use in the inverse problem
 Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](http://dx.doi.org/10.1016/0013-4694(80)90419-8), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
 
 GMFP can be calculated using the following formula (from [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003))
-{{ :development:tms:gmfp.png?nolink& | test}}
+![image](/media/development/tms/gmfp.png)
 
 where t is time, V is the voltage at channel i and K is the number of channels.
 

@@ -117,7 +117,7 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
 
 {{tutorial:coherence:figure1c.png?400}}
 
-//Figure 1; An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG.//
+*Figure 1; An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG.*
 
 #### Exercise 1
 
@@ -186,7 +186,7 @@ Visualize the coherence between the EMG and all the MEG sensor
 
 {{tutorial:coherence:figure2.png?400}}
 
-//Figure 2; The coherence between the left EMG and all the MEG sensors calculated using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Plotting was done with **[ft_multiplotER](/reference/ft_multiplotER)**.//
+*Figure 2; The coherence between the left EMG and all the MEG sensors calculated using ft_freqanalysis and ft_connectivityanalysis. Plotting was done with ft_multiplotER.*
 
 Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multiplotER](/reference/ft_multiplotER)**
 
@@ -199,7 +199,6 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
 *Figure 3; The coherence spectrum between the EMG and sensor MRC21.*
 
 ### Exercise 2
-
 `<note exercise>`
 a) What determines the frequency resolution of the spectrum, as displayed in figure 3? How can it be increased or decreased? Answer the same question for smoothing.
 
@@ -214,18 +213,18 @@ b) Plot a topographical distribution of the coherence in the beta band. The vari
     figure; ft_topoplotER(cfg, fd)
 
 {{tutorial:coherence:tutorial4b.png?400}}
+*Figure 4; A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER.*
 
-//Figure 4; A topographic representation of the coherence between the left EMG and the sensors. The plot was created with **[ft_topoplotER](/reference/topoplotER)**.//
 `</note>`
-### Exercise 3
 
+### Exercise 3
 `<note exercise>`
 a) Explain the pattern of activation in Figure 4.
 
 b) Plot the topographic representation for other frequencies that might be of interest.
 `</note>`
-### Exercise 4
 
+### Exercise 4
 `<note exercise>`
 Explore the consequence of changing the smoothing in the frequency domain. Do this by recomputing the cortico-muscular coherence between the EMG signal and MEG sensor MRC21 for different degrees of smoothing. Compute the powerspectra and the cross-spectra, and the corresponding coherence using different degrees of smoothing.
 

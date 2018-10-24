@@ -178,7 +178,7 @@ layout: default
 	print -dpng amplow_amphigh_fig7.png
 
 
-{{:example:crossfreq:amplow_amphigh_fig7.png?400|amplow_amphigh_fig7.png}} 
+![image](/media/example/crossfreq:amplow_amphigh_fig7.png@400)
 
 	
 	cfg = [];

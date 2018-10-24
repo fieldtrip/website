@@ -264,7 +264,7 @@ This ends the part of the FreeSurfer pipeline concerned with volumetric processi
 	ft_sourceplot(cfg, mri);
 
 
-{{:tutorial:minimumnormestimate:filled01new.png?550|Figure 3. Filled mgz}}
+![image](/media/tutorial/minimumnormestimate/filled01new.png@550)
 
 \\
 *Figure 3. Filled mgz created by FreeSurfer. The two hemispheres have different colors (white and grey), cerebellum is not included.*
@@ -320,15 +320,12 @@ This step creates a bunch of files in `<Subject directory>`/Subject01/bem/**, co
 	ft_plot_mesh(sourcespace);
 
 
-{{:tutorial:minimumnormestimate:sspace01new.png?450|Figure 4. Source-space downsampled}}
-\\ 
-//Figure 4. The source-space downsampled by MNE Suite
-//
-\\
+![image](/media/tutorial/minimumnormestimate/sspace01new.png@450)
+
+*Figure 4. The source-space downsampled by MNE Suite*
 
 #### 4. Source model: Co-registration of the source space to the sensor-based head coordinate system
 
-\\
 We have the source locations co-registered to the MNI coordinate system, so now we need to co-register the source space to the sensor-array (i.e., we have to express the positions of the sources in the same coordinate system as the sensors). For this, we will use the transformation matrices computed in earlier in this tutorial. Specifically, using the resliced anatomical data in the mrirs-structure, we obtained a set of 2 transformation matrices, that describe the mapping of anatomical volumetric voxel indices into the sensor-based coordinate system **transform_vox2ctf** and into the MNI coordinate system **transform_vox2spm**. These two matrices can be combined in the following way, to yield a transformation matrix that transforms from MNI coordinates to sensor-based coordinates: 
 
 	

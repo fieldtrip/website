@@ -215,7 +215,7 @@ You can check the channel labels that are now present in the data and use **[ft_
 
 For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was use
 
-{{:example:layoutacticapmpi.png?nolink&400|}}   
+![image](/media/example/layoutacticapmpi.png)
 
 The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a *.mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data. 
 
@@ -259,7 +259,7 @@ The data can be also displayed in a "summary" mode, in which case the variance (
 	data_clean   = ft_rejectvisual(cfg, data);
 
 
-{{ :example:example_script_artifacts.png?nolink&600 |}}
+![image](/media/example/example_script_artifacts.png)
 
 The left lower box of Figure 4 shows the variance of the signal in each trial. By dragging the mouse over the trials in this box you can remove them from the plot and reject them from the data. You will see the numbers of the rejected trials in the box on the right. You can undo the rejection by typing the trial's number in "Toggle trial" box. You can also plot the signal in a specific trial with "Plot trial" box. Here, we have plotted the trial 90 - the one with the highest variance. On the topoplot you can see a drift in the channel 48. You can zoom in to this channel by dragging the mouse over it.
 

@@ -97,7 +97,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.23.37.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.23.37.png)
 
 
 	
@@ -115,7 +115,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.25.12.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.25.12.png)
 
 
 	
@@ -126,7 +126,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.26.09.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.26.09.png)
 
 
 	
@@ -151,7 +151,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.27.48.png?630 |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.27.48.png)
 
 ## Part 2 - use a custom statfun
 
@@ -188,7 +188,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	colorbar
 	
 
-{{ :workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.34.23.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.23.png)
 
 
 	
@@ -211,7 +211,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, analytic);
 	
 
-{{ :workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.34.26.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.26.png)
 
 
 	
@@ -237,7 +237,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 	
 
-{{ :workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.34.28.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.28.png)
 
 
 	
@@ -264,7 +264,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	xlim([-10 10]);
 	
 
-{{ :workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.34.30.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.30.png)
 
 
 	
@@ -295,7 +295,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	line([montecarlo2.time(1) montecarlo2.time(end)], [1.3 1.3])
 	
 
-{{ :workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.34.33.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.33.png)
 
 
 	

@@ -14,7 +14,7 @@ Depending on the resolution of your 3-D grid, there will be points in the grid t
 
 If you have a low grid resolution, the rim will apear to be wider (see figure below). 
 
-{{faq:grid_resolution_low.png}}   
+![image](/media/faq/grid_resolution_low.png)
 
 In the figures, the brain is indicated with the circle, the "inside" points are indicated with red dots and the yellow region indicates that part of the brain volume on which the functional data will be interpolated.
 

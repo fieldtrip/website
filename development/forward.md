@@ -26,7 +26,7 @@ The forward module is complemented by an [development:inverse](/development/inve
 
 Instead of implementing all forward methods completely from scratch, the FieldTrip forward module makes use of some high quality implementations that have been provided by the original method developers. Some of these contributions consist of MATLAB code, some contain MEX files and some are implemented using an external command-line executable that is called from the command-line. All of these external implementations are fully wrapped in the  FieldTrip forward module and do not require specific expertise on behalf of the end-user. 
 
-{{  :development:forward.png?600  |forward EEG and MEG leadfield computations with FIeldTrip}}
+![image](/media/development/forward.png@600)
 
 ## Supported methods for forward computations of the potential or field
 

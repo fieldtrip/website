@@ -33,7 +33,7 @@ In this case, the head and source models are created with the intent of using a 
 In this example, a single sphere is used as a head model. The brain however, is not spherical. If we want to prevent brain areas to be missed in source reconstruction, a sphere is needed with a radius that is at least equal to the longest distance between any two points in the brain. Such a situation is depicted in the figure below. Here, the sphere is large enough to encompass the entire brain, and will therefore have many dipole locations which are not inside the brain (e.g. near temporal cortex).
 
 
-{{faq:singlespheredipolelocations.png?400| }}
+![image](/media/faq/singlespheredipolelocations.png)
 
 *Dipole locations of a source model plotted with on top of a 'singlesphere' head model. Inside the sphere, the 'singleshell' head model in the above figure is plotted as well, to indicate the shape of the brain inside the sphere. Dipole locations marked as 'inside' are red, dipole locations marked as 'outside' are blue.*
  

@@ -11,7 +11,7 @@ The following is taken from the CTF documentation "MEG File Formats - release 5.
 ---
 //Higher-order gradiometer formation is a noise-cancellation technique exclusive to the CTF MEG System. It permits the MEG detectors to be sensitive to the weak signals of the brain, yet impervious to the much stronger sources from the environment. This process, which is carried out in real time, allows the system to be run without the expense of magnetic shielding, or in combination with a standard shielded room for enhanced noise reduction.
 
-In order to calculate the forward solution, the same procedure must be performed on any field data calculated from a simulated dipole. The procedure consists of calculating the field at each coil in the sensor as well as each coil in a set of reference channels. The field values at the reference channels are then multiplied by the appropriate weight and subtracted from the MEG sensor channels.//
+In order to calculate the forward solution, the same procedure must be performed on any field data calculated from a simulated dipole. The procedure consists of calculating the field at each coil in the sensor as well as each coil in a set of reference channels. The field values at the reference channels are then multiplied by the appropriate weight and subtracted from the MEG sensor channels.
 ---
 
 The data set on disk contains in the header the parameters that are used to convert the data between the original (raw) representation and the higher-order gradiometer representation ("balancing"). This conversion can be done in real-time during acquisition, but can also be done (and undone) afterwards using CTF DataEditor, or using **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**.
@@ -54,7 +54,7 @@ We can explore the different higher order synthetic gradiometer forward solution
 	xlim([0 175]);ylim([-1.2 1.2]);
 
 
-{{ :faq:g1brv.png?700 |}}
+![image](/media/faq/g1brv.png)
 
 The left part of the figure shows how the first order gradiometer forward solution is computed. The X and the Y axes are the MEG sensors inside grad.balance.G1BR.labelnew and grad.balance.G1BR.labelold. The right plot shows how to compute the first order gradiometer for a specific MEG sensor, in this case sensor MLC12, which is the second sensor of the CTF151 system. You can notice that on the x axes the second sensor, the MLC12 scores one, and the rest of the 150 MEG sensors scored zero (blue dots). This is important because the forward computation of the first order gradient is basically constituted by the field contribution of each MEG sensor. However, colored in red, there are some MEG sensors (the environment sensors) that slightly deviated from zero, which means that they're also contribution to the field of sensor MLC12 but with a negligible degree.
 
@@ -73,7 +73,7 @@ If we explore the second and the third synthetic gradiometers, things become ver
 	xlim([0 175]);ylim([-1.2 1.2]);
 
 
-{{ :faq:g2brv.png?700 |}}
+![image](/media/faq/g2brv.png)
 
 
 	figure;
@@ -88,7 +88,7 @@ If we explore the second and the third synthetic gradiometers, things become ver
 	xlim([0 175]);ylim([-1.2 1.2]);
 
 
-{{ :faq:g3brv.png?700 |}}
+![image](/media/faq/g3brv.png)
 
 Now is more evident that the higher the synthetic gradiometer, the higher the contribution of other MEG sensors to the Nth-order gradiometer forward solution.
 

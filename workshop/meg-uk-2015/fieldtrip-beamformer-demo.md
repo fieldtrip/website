@@ -51,7 +51,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot3(mri_fids(3,1), mri_fids(3,2), mri_fids(3,3), 'm*');
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.11.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.11.png)
 
 
 	
@@ -98,7 +98,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_headshape(headshape);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.38.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.38.png)
 
 
 	
@@ -142,7 +142,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_vol(ft_convert_units(vol, 'mm'));
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.42.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.42.png)
 
 
 	
@@ -153,7 +153,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_vol(ft_convert_units(vol, 'mm'));
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.46.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.46.png)
 
 
 	
@@ -163,7 +163,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	alpha 0.5
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_10.43.49.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.49.png)
 
 ## Part 2 - reconstruct beta-band power
 
@@ -294,7 +294,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, sourceR);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.12.30.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.30.png)
 
 
 	
@@ -310,7 +310,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, sourceI);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.12.53.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.53.png)
 
 ## Part 3 - reconstruct single-trial cortical responses
 
@@ -360,7 +360,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(timelock2.time, timelock2.avg)
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.23.11.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.11.png)
 
 
 	
@@ -369,7 +369,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, timelock2);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.23.13.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.13.png)
 
 
 	
@@ -393,7 +393,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(source.time, source.avg.mom{1})
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.23.16.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.16.png)
 
 
 	
@@ -426,7 +426,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(virtualchannel_avg.time, virtualchannel_avg.avg);
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.23.19.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.19.png)
 
 
 	
@@ -435,7 +435,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	legend({'1-Famous', '2-Unfamiliar', '3-Scrambled'})
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.23.26.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.26.png)
 
 
 	
@@ -443,7 +443,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	imagesc(squeeze(virtualchannel_avg.trial))
 	
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.23.28.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.28.png)
 
 
 	
@@ -464,4 +464,4 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 
 
-{{:workshop:meg-uk-2015:screen_shot_2015-01-05_at_11.23.32.png? |}}
+![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.32.png)

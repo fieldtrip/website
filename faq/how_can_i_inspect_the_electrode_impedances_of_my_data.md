@@ -100,6 +100,6 @@ Make a plot of the ''imp'' structure containing the impedance values using a cus
 	ft_topoplotER(cfg, imp)
 
 
-{{ :faq:impedance.png?600 |}}
+![image](/media/faq/impedance.png)
 
 Mark Noordenbos (2016)

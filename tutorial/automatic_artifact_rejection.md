@@ -38,7 +38,8 @@ The following steps are used to detect artifacts in FieldTrip's automatic artifa
 This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This 'artifact definition' (''.artfctdef'') can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use [ft_rejectartifact](/reference/ft_rejectartifact). All the steps that the automatic artifact rejection routine takes will now be explained in detail.
 
 {{:tutorial:overview_artifact_detection.png?600|}}
-// Automatic artifact rejection processes the data in several steps to allow rejection of artifactual time intervals from the trial definition//
+*Figure: Automatic artifact rejection processes the data in several steps to allow rejection of artifactual time intervals from the trial definition*
+
 ### I. Reading the data (with padding) from disk
 
 Physiological data is often very large and takes system memory. For this reason it is most efficient to read only the data you need from disk instead of reading in all the data first and selecting interesting segments later. This is the reason that in FieldTrip we commonly read the (marker/trigger) events first to determine data segments (trials) of interest, which are then read into memory in a separate step. For how to define trials see [Getting started with reading raw EEG or MEG data](/example/getting_started_with_reading_raw_eeg_or_meg_data) and [Trigger-based trial selection](/tutorial/preprocessing).
@@ -92,7 +93,7 @@ By using the option ''cfg.feedback='yes''', you enter an interactive mode where 
 
 {{:tutorial:zthreshold.png|}}
 
-// Setting a higher or lower z-value threshold will make the detection of artifacts more conservative or liberal//
+*Figure: Setting a higher or lower z-value threshold will make the detection of artifacts more conservative or liberal*
 
 ## Padding
 
@@ -101,7 +102,6 @@ By using the option ''cfg.feedback='yes''', you enter an interactive mode where 
 When a series of continuous timepoints are detected they are considered part of one artifact // period// and enter the artifact definition as one start and end samplenumber. Often the artifact starts a bit earlier and ends a bit later than what the artifact detection is able to capture. Artifact padding (''cfg.artfctdef.xxx.artpadding'') can then be used to extend the timeperiod of the artifact on both sides. This can also be used to ensure that the artifact will 'reach into' the trial that has to be rejected. 
 
 {{:tutorial:artpadding.png|}}
-
 *Artifact padding extends the segment of data that will be marked as artifact.*
 
 ### Trial padding
@@ -118,8 +118,7 @@ Each artifact type can best be detected with filters of a certain pass band (e.g
 To avoid that, filter padding (''cfg.artfctdef.xxx.fltpadding'') is used. Always in addition to trial padding (if any) existing trial padding, extra data is read on both sides prior to filtering. After the filtering has been applied, the filter padding is removed again. In other words, the filter padding is used only for filtering, not for artifact detection (see figure).
 
 {{:tutorial:fltpadding.png?600|}}
-
-// Filter padding. Filter padding is only used during filtering and removed afterwards. //
+*Figure: Filter padding. Filter padding is only used during filtering and removed afterwards*
     
 
 ### Combining filter and trial padding
@@ -127,8 +126,7 @@ To avoid that, filter padding (''cfg.artfctdef.xxx.fltpadding'') is used. Always
 Filter and trial padding are often used together. Trialpadding is first added to the trial, after which filterpadding is added (and removed again after filtering has been applied).
 
 {{:tutorial:bothpadding.png|}}
-
-// Filter and trial padding//
+*Figure: Filter and trial padding*
 
 
 ### Negative trialpadding
@@ -216,7 +214,7 @@ of the processed data for a particular trial, and the upper right panel
 shows the unprocessed data of the channel that contributed most to the 
 (cumulated) z-score. You can browse through the trials using the buttons
  at the bottom of the figure. Also, you can adjust the threshold, and 
-manually keep/reject trials.//
+manually keep/reject trials.
 
 In this example data set, a lot of data points are detected to be a 
 'jump' artifact, although they seem more often 'muscular' in nature. A 

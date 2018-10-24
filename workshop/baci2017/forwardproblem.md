@@ -30,8 +30,9 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
 The first 3 steps are the same for BEM and FEM. Steps from 4 to 8 differ between BEM and FEM.
 A more detailed description of these steps is following.
 
-{{ :workshop:baci2017:scheme.png?200 |}}
-// Figure1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM//
+![image](/media/workshop/baci2017/scheme.png)
+*Figure1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM*
+
 ##  1. Read the MRI
 
 
@@ -45,9 +46,8 @@ Visualize the MRI
 	ft_sourceplot(cfg,mri_orig);
 
 
-{{ :workshop:baci2017:mri_orig.png?600 |}}
-
-// Figure2: visualization of the MRI //
+![image](/media/workshop/baci2017/mri_orig.png)
+*Figure2: visualization of the MRI*
 
 ##  2. Realign the MRI
 
@@ -66,7 +66,7 @@ We can visualize the realigned MRI
 	cfg = []; 
 	ft_sourceplot(cfg, mri_realigned);
 
-{{ :workshop:baci2017:mri_resliced.png?600 |}}
+![image](/media/workshop/baci2017/mri_resliced.png)
 *Figure3: visualization of the realigned MRI*
 ##  3. Reslice the MRI
 
@@ -103,8 +103,9 @@ Visualize the segmentation
 	cfg.atlas        = seg_i;   
 	ft_sourceplot(cfg, seg_i);
 
-{{ :workshop:baci2017:mri_segmented_bem.png?600 |}}
-// Figure4: 3 compartment segmentation output //
+![image](/media/workshop/baci2017/mri_segmented_bem.png)
+*Figure4: 3 compartment segmentation output*
+
 ##  5A. Create the mesh
 
 
@@ -126,8 +127,9 @@ Visualize the mesh and the electrode
 	             'skin','facealpha',0.5,'edgealpha',0.1) 
 	hold on, ft_plot_sens(elec, 'style', '*g');
 
-{{ :workshop:baci2017:mesh_bem_elec.png?400 |}}
+![image](/media/workshop/baci2017/mesh_bem_elec.png)
 *Figure5: 3 compartment mesh with electrodes*
+
 ##  6A. Create the headmodel
 
 
@@ -161,7 +163,7 @@ Check the alignment visually.
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 	ft_plot_sens(elec,'style', '.k'); 
 
-{{ :workshop:baci2017:aligned.png?800 |}}
+![image](/media/workshop/baci2017/aligned.png)
 *Figure6: mesh, electrodes and axes.*
 
 
@@ -187,7 +189,7 @@ Visualize the sourcemodel
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 
 
-{{ :workshop:baci2017:sourcemodel_all.png?500 |}}
+![image](/media/workshop/baci2017/sourcemodel_all.png)
 *Figure7: sourcemodel on the brain compartment*
 
 Save the sourcemode
@@ -233,7 +235,7 @@ Visualize the segmentation result
 	ft_sourceplot(cfg, seg_i);
 	
 
-{{ :workshop:baci2017:mri_segmented_fem.png?600 |}}
+![image](/media/workshop/baci2017/mri_segmented_fem.png)
 *Figure8: 5 compartment segmentation output *
 
 ##  5B. Create the mesh
@@ -284,7 +286,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 	ft_plot_sens(elec, 'style', '*g');
 
 
-{{ :workshop:baci2017:mesh_fem_elec.png?500 |}}
+![image](/media/workshop/baci2017/mesh_fem_elec.png)
 *Figure9: visualization of headmodel_fem and electrodes*
 
 

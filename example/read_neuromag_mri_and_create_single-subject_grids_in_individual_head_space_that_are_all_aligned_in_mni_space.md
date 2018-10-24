@@ -108,7 +108,7 @@ This example script relies on the example script [Create mni-aligned grids in in
 
 
 ** Figure 1 The results **
-{{:example:headmodels:headmodel.png|The result}}
+![image](/media/example/headmodels/headmodel.png)
 {{:example:headmodel2.png|}}
 
 

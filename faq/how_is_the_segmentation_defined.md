@@ -28,9 +28,9 @@ The tissue type of each voxel can be represented in the FieldTrip structure in t
 
 The default output of the ft_volumesegment function (see above) is a segmentation data-type structure with probabilistic tissue maps. The **gray**, **white** and **csf** fields contain *probabilistic values* for representing the gray, white matter and the cerebrospinal fluid. This means, for example, that at the field **white** everything that is not the white matter represented by 0, and voxels which belong to the white matter have a value between 0 and 1. 
 
-{{:faq:segmentation:gray.png?186|probability tissue map of gray matter}}
-{{:faq:segmentation:white.png?186|probability tissue map of white matter}}
-{{:faq:segmentation:csf.png?186|probability tissue map of cerebro-spinal fluid}}
+![image](/media/faq/segmentation/gray.png@186)
+![image](/media/faq/segmentation/white.png@186)
+![image](/media/faq/segmentation/csf.png@186)
 \\
 *Figure 1. Probabilistic maps of the gray (left), white (middle) and cerebrospinal fluid (right). The colors represent probabilities ranging from 0 to 1.*
 
@@ -68,9 +68,9 @@ The reason for this is explained in more detail [here](/faq/how_change_mri_orien
 
 When the brain, skull and scalp tissues are requested as outputs from ft_volumesegment, the output also represents the probabilistic representation. However, in this case each fields contain a binary or boolean value, i.e. a probability of 0 (false) or 1 (true). Hence, the binary representation is a special case of the probabilistic representation. 
 
-{{:faq:segmentation:brain.png?186|binary brain-mask}}
-{{:faq:segmentation:skull.png?186|binary skull-mask}}
-{{:faq:segmentation:scalp.png?186|binary scalp-mask}}
+![image](/media/faq/segmentation/brain.png@186)
+![image](/media/faq/segmentation/skull.png@186)
+![image](/media/faq/segmentation/scalp.png@186)
 \\
 *Figure 2. The brain (left), the skull (middle) and scalp (right). The colors represent only zeros and ones.*
 
@@ -116,7 +116,7 @@ Regardless of whether the probabilities are crisp (i.e. either exactly 0 or 1) o
 
 When only the scalp as output is required from the segmentation, the scalp-mask includes also the brain and skull tissues. 
 
-{{:faq:segmentation:scalponly.png?200|binary scalp-mask}}
+![image](/media/faq/segmentation/scalponly.png@200)
 \\
 *Figure 3. The binary representation of the outside surface of the scalp. The colors represent only zeros and ones.*
 
@@ -193,7 +193,7 @@ The following code demonstrates how to create an indexed representation from the
 	colormap(map);
 
 
-{{:faq:segmentation:seg_indexed.png?350|indexed representation of brain, skull and scalp}}
+![image](/media/faq/segmentation/seg_indexed.png@350)
 
 *Figure 5. The brain (blue), skull (green) and scalp (red) after segmentation with indexing. The colors represent integers from zero to three.*
 

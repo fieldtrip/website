@@ -77,7 +77,7 @@ but for this example we want to analyze the data eventually on the original chan
 
 Make sure to plot and inspect all components. Write down the components that contain the eye artifacts. Very important is to know that on subsequent evaluations of the component decomposition result in components that **can have a different order**. That means that component numbers that you write down do not apply to another run of the ICA decomposition on the same data.
 
-{{:example:ica:ica_eog.png?600|Figure 1. First 20 components.}}
+![image](/media/example/ica/ica_eog.png@600)
 
 The spatial topography of the components aids in interpreting whether a component represents activity from the cortex, or non-cortical physiological activity (muscle, eyes, heart) or even non-physiological activity (line noise and other environmental noise). If you are trained in this type of analysis, you can relatively easily spot the components that represent the eye movements: 9, 14 and 10. 
 
@@ -95,7 +95,7 @@ For further inspection of the time course of the components, us
 
 You can browse through the components and the trials. The EOG artifacts can be easily identified in the time course plots, see the figure below for an example.
 
-{{:example:ica:compbrowser.png?600|Figure 2. Components 9, 10 and 14, topo and time course of one trial.}}
+![image](/media/example/ica/compbrowser.png@600)
 
 ## Remove the artifacts
 
@@ -108,5 +108,5 @@ You can browse through the components and the trials. The EOG artifacts can be e
 
 Compare the data before (red trace) and after (blue trace) the EOG removal - for example trial 4, channel MLF1
 
-{{:example:ica:ica_eog_after.png?400|Figure 3. Before (red) and after (blue) EOG removal.}}
+![image](/media/example/ica/ica_eog_after.png@400)
 

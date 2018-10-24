@@ -26,7 +26,7 @@ Sleep has well defined brain states which are called Wake, Stage 1, Stage 2, Sta
 
 Sleep states can only be reliably identified by using combined EEG, EOG and EMG. But also additional modalities are often recorded, such as ECG, breathing, accelerometers, body temperature, snoring noise etc. This kind of recording of multiple signals during sleep is called polysomnography. Polysomnography is typically scored (i.e. classified) in 30-second segments using a manual procedure.
 
-{{ :tutorial:sleep:hypnogram-01-768x288.png?800 |}}
+![image](/media/tutorial/sleep/hypnogram-01-768x288.png)
 
 **//Figure 1: Hypnogram and sleep stages according to manual sleep scoring rules by Rechtschaffen and Kales (1968) and how they transfer to a sleep table//**
 
@@ -176,7 +176,7 @@ Explore and find the best cutoff in z-values (i.e. standard deviations) to exclu
 Typically EMG higher than 100 microVolts are best excluded. Note that we exclude the data on the whole data length, i.e. as one big trial.
 `</note>`
 
-{{ :tutorial:sleep:ft_artifact_muscle_gui.png?800 |}}
+![image](/media/tutorial/sleep/ft_artifact_muscle_gui.png)
 
 **//Figure 3: Interactive figure of ft_artifact_muscle. The left panel shows the z-score of the processed data. Suprathreshold data points are marked in red. The lower right panel shows one trial, which in our case is the same as on the left panel, as we inspect the data all in one.//**
 

@@ -84,7 +84,7 @@ You will get the following feedbac
 
 In this case, you don't have to do anything: **[ft_checkconfig](/reference/ft_checkconfig)** will rename the field for you, and **[ft_freqdescriptives](/reference/ft_freqdescriptives)** can do its job. Of course the idea is, that you will use this feedback to improve your scripts!
 
-//Note: the feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives on your input cfg is not exhaustive, meaning that not all possible options you could come up with will be taken care of. It mainly ensures backward compatibility of old scripts, and checks some important required and forbidden fields.//
+//Note: the feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives on your input cfg is not exhaustive, meaning that not all possible options you could come up with will be taken care of. It mainly ensures backward compatibility of old scripts, and checks some important required and forbidden fields.
 
 
 

@@ -38,7 +38,7 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 
 *  Plotting the result using the **[ft_freqdescriptives](/reference/ft_freqdescriptives)** and the **[ft_clusterplot](/reference/ft_clusterplot)** functions
 
-{{:tutorial:cluster_permutation_freq:clusperm_freq_anaprot_stat_planar_ficvsfc.png?350|Analysis protocol between-trials experiment}}
+![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planar_ficvsfc.png)
 \\
 *Figure 1. Pipeline of statistical analysis of planar TFR's in a between trials design*
 
@@ -52,7 +52,7 @@ Subsequently we will consider a **within-trials** experiment, in which we compar
 
 *  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
-{{:tutorial:cluster_permutation_freq:clusperm_freq_anaprot_stat_planarfic_actvsbl2.png?400|Analysis protocol within-trials experiment}}
+![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planarfic_actvsbl2.png)
 \\
 *Figure 2. Pipeline of statistical analysis of planar TFR's in a within-trials design*
 
@@ -68,7 +68,7 @@ Finally we will consider a **within-subjects** experiment with the following ste
 
 *  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
-{{:tutorial:cluster_permutation_freq:clusperm_freq_anaprot_stat_ga_planar_ficvsfc.png?550|Analysis protocol within subjects experiment}}
+![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_ga_planar_ficvsfc.png)
 \\
 *Figure 3. Pipeline of statistical analysis of planar TFR's in a within-subjects design*
 
@@ -197,7 +197,7 @@ Subsequently we add the raw effect (FIC-FC) to the obtained stat structure and p
     cfg.layout = 'CTF151_helmet.mat';
     ft_clusterplot(cfg, stat);
 
-{{:tutorial:cluster_permutation_freq:clusperm_freq_topos_20hz_raweffect_ficvsfc_plan_subj1_clusterplot1.png?700|FIC versus FC}}
+![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_topos_20hz_raweffect_ficvsfc_plan_subj1_clusterplot1.png)
 
 **//Figure 1: Raw effect (FIC-FC) and channel-time cluster of planar gradient TFRs of subject 1//**
 
@@ -340,7 +340,7 @@ This time we will plot the largest cluster on top of the statistics, which are p
     cfg.layout = 'CTF151_helmet.mat';
     ft_clusterplot(cfg, stat);
 
-{{:tutorial:cluster_permutation_freq:clusperm_freq_topos_20hz_fic_actvsbl_plan_subj1_clusterplot.png?700|activity versus baseline FIC}}
+![image](/media/tutorial/cluster_permutation_freq/clusperm_freq_topos_20hz_fic_actvsbl_plan_subj1_clusterplot.png)
 
 **//Figure 2: Largest cluster that shows a difference between activation and baseline, plotted on top of the T-statistic of the difference.//**
 

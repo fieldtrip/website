@@ -547,7 +547,7 @@ Now we plot the result together with the scalp topography again.
 	subplot(2,2,2); ft_topoplotER(cfg, diff_planar);
 
 
-{{:tutorial:networkanalysis:high_low_senssource_alpha.png?direct&400|}} 
+![image](/media/tutorial/networkanalysis/high_low_senssource_alpha.png?direct&400)
 
 *Figure 7: Source reconstructed activity illustrating the relative change in alpha power increase between the high and low alpha conditions.*
 

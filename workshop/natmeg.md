@@ -6,7 +6,7 @@ layout: default
 
 # FieldTrip course at the NatMEG in Stockholm
 
-{{  tutorial:natmeg_temp:natmeg_pos.png?150|NatMEG tutorial}}
+![image](/media/tutorial/natmeg_temp:natmeg_pos.png)
 
 *  Where: NatMEG, Karolinska Institute, Stockholm, Sweden
 *  When: 29 Sept - 3 Oct 2014

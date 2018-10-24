@@ -73,8 +73,7 @@ It reads the data from the serial interface and copies the first two channels to
 
 The page http://openeeg.sourceforge.net/doc/modeeg/firmware/modeeg-p2.c describes the communication protocol as follows 
 
-	
- */*///// Packet Format Version 2 */*///////
+  // Packet Format Version 2
 	// 17-byte packets are transmitted from the ModularEEG at 256Hz,
 	// using 1 start bit, 8 data bits, 1 stop bit, no parity, 57600 bits per second.
 	// Minimial transmission speed is 256Hz * sizeof(modeeg_packet) * 10 = 43520 bps.

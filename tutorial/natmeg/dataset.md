@@ -11,7 +11,7 @@ For the EEG-MEG workshop we recorded a dataset of a single subject to allow you 
 The experiment that the subject performed is a slight adaptation of the classical oddball experiment. Using the oddball paradigm one can study the well-known EEG component called the mismatch-negativity (MMN). The classical auditory oddball experiment involves the presentation of a continuous series of identical tones at a relatively slow rate, say between one every two seconds to two every second. Every so often, say one out of ten, the tone is slightly different in pitch, duration or loudness.
 In our version, an oddball occurs after every 3 to 7 standard tones. The interval between each tone is jittered between 700 to 900 ms.
 
-{{tutorial:natmeg_temp:paradigm.png?600|"The experimental oddball paradigm used for the tutorial}}
+![image](/media/tutorial/natmeg_temp/paradigm.png@600)
 
 ### Mismatch negativity
 

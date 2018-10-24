@@ -40,19 +40,18 @@ and the [Cluster-based permutation tests on time-frequency data](/tutorial/clust
 To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been preprocessed, the planar gradient and the subject-averages of two conditions have been computed.  The gray boxes of Figure 1 show those steps that have been done already. The orange boxes within the gray boxes represent processing steps that are done on all trials that belong to one subject in one condition. These steps are described in the [Trigger-based trial selection](/tutorial/preprocessing) and in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. How to use the **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** and **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function will be described in this tutorial.
 
 
-We will perform the following steps to do a statistical test in FieldTri
+We will perform the following steps to do a statistical test in FieldTrip:
 
+* We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiploter)**, the **[ft_singleplotER](/reference/ft_singleploter)** and the MATLAB plot functions. This step is optional for this tutorial, but in general it is of course good practice to have a feel of what is going on in your data before you decide to do a statistical test. 
 
-*  We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiploter)**, the **[ft_singleplotER](/reference/ft_singleploter)** and the MATLAB plot functions. This step is optional for this tutorial, but in general it is of course good practice to have a feel of what is going on in your data before you decide to do a statistical test. 
+* To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
 
-*  To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
+* We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoploter)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
 
-*  We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoploter)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
+![image](/media/development/project/tutorial_stat/ft_stat_tutorial2.png)
 
-{{:development:project:tutorial_stat:ft_stat_tutorial2.png|Figure 1. Pipeline of statistical testing}}
-\\
-//Figure 1. Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.
-//
+*Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.*
+
 
 ## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data 
 

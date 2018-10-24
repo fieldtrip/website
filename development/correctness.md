@@ -73,35 +73,35 @@ Frequency Analysis progres
 
 
 **freq002_a**
-{{ wiki:averagesfreq.png }}
+![image](/media/wiki/averagesfreq.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_b**
-{{ wiki:freq002_b.png }}
+![image](/media/wiki/freq002_b.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_c**
-{{ wiki:freq002_c.png }}
+![image](/media/wiki/freq002_c.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_d**
-{{ wiki:freq002_d.png }}
+![image](/media/wiki/freq002_d.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_e**
-{{ wiki:tapsmo.png }}
+![image](/media/wiki/tapsmo.png)
 
 **freq002_f**
-{{ wiki:delta_freqs.png }}
+![image](/media/wiki/delta_freqs.png)
 
 **freq002_g**
-{{ wiki:tjirptfr.png }}
+![image](/media/wiki/tjirptfr.png)
 
-{{ wiki:tjirp.png }}
+![image](/media/wiki/tjirp.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_h**
-{{ wiki:waveletstfrdelta.png  }}
+![image](/media/wiki/waveletstfrdelta.png)
 
 
 

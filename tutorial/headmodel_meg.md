@@ -46,7 +46,7 @@ We will create a head model based on the anatomical mri of the [tutorial data se
 
 *  Finally, we will check the geometry of the head model by plotting it with **[ft_plot_vol](/reference/ft_plot_vol)**.
 
-{{:tutorial:headmodel:headmodel-01.png?250|Head model pipeline}}
+![image](/media/tutorial/headmodel/headmodel-01.png@250)
 \\
 *Figure 2. Pipeline of creating and visualizing a head model*
 
@@ -202,7 +202,7 @@ The head model (vol) contains the brain-skull boundary as the geometrical descri
 	ft_plot_vol(vol);
 
 \\
-{{:tutorial:minimumnormestimate:vol1_sens.png?300|head model single shell}}
+![image](/media/tutorial/minimumnormestimate/vol1_sens.png@300)
 \\
 *Figure 3. The geometry of the volume conduction  model of the head using method "singleshell"*
 \\

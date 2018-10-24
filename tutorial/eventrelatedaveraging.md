@@ -34,7 +34,7 @@ To calculate the event related field / potential for the example dataset we will
    * Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
    *Grandaverage and realignment (optional). When you have data from more than one subject you can make a grand average of the ERPs / ERFs with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. **[ft_megrealign](/reference/ft_megrealign)** can be used to realign each subjects data to standard sensor positions before computing the grand average.
 
-{{tutorial:eventrelatedaveraging:figure1.png|"Figure 1; A schematic overview of the steps in averaging of event related fields"}}
+![image](/media/tutorial/eventrelatedaveraging/figure1.png)
 
 **//Figure 1; A schematic overview of the steps in averaging of event related fields//**
 
@@ -66,7 +66,7 @@ The most important fields are 'dataFIC_LP.trial' containing the individual trial
 
     plot(dataFIC_LP.time{1}, dataFIC_LP.trial{1}(130,:))
 
-{{tutorial:eventrelatedaveraging:trial1_3feb09_ERF.png?400|"Figure 2; The MEG data from a single trial in a single sensor obtained after FT_PREPROCESSING"}}
+![image](/media/tutorial/eventrelatedaveraging/trial1_3feb09_ERF.png@400)
 
 **//Figure 2; The MEG data from a single trial in a single sensor obtained after FT_PREPROCESSING//**
 
@@ -117,7 +117,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim = [-3e-13 3e-13];
     ft_multiplotER(cfg, avgFIC); 
 
-{{tutorial:eventrelatedaveraging:multiplot_1cond_3feb09_erf.png?700|Figure 3; The event related fields plotted using FT_MULTIPLOTER. The event related fields were calculated using FT_PREPROCESSING followed by FT_TIMELOCKANALYSIS}}
+![image](/media/tutorial/eventrelatedaveraging/multiplot_1cond_3feb09_erf.png@700)
 
 **//Figure 3; The event related fields plotted using ft_multiplotER. The event related fields were calculated using FT_PREPROCESSING followed by FT_TIMELOCKANALYSIS//**
 
@@ -132,7 +132,7 @@ This plots the event related fields for all sensors arranged topographically acc
     cfg.ylim = [-3e-13 3e-13]; 
     ft_multiplotER(cfg, avgFC, avgIC, avgFIC);
 
-{{tutorial:eventrelatedaveraging:multiplot_allcond_3feb09_erf.png?700|Figure 4; The event related fields for three conditions plotted simultaneously using ft_multiplotER}}
+![image](/media/tutorial/eventrelatedaveraging/multiplot_allcond_3feb09_erf.png@700)
 
 **//Figure 4; The event related fields for three conditions plotted simultaneously using ft_multiplotER//**
 
@@ -144,7 +144,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
     clf;
     ft_singleplotER(cfg,avgFC, avgIC, avgFIC);
 
-{{tutorial:eventrelatedaveraging:singleplot_mlc24_3feb09_erf.png?400|"Figure 5; The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER"}}
+![image](/media/tutorial/eventrelatedaveraging/singleplot_mlc24_3feb09_erf.png@400)
 
 **//Figure 5; The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER//**
 
@@ -155,7 +155,7 @@ To plot the topographic distribution of the data averaged over the time interval
     cfg.colorbar = 'yes';
     ft_topoplotER(cfg,avgFIC);
 
-{{tutorial:eventrelatedaveraging:topoplot_FIC_3feb09_erf.png?400|"Figure 6; A topographic plot of the event related fields obtained using ft_topoplotER"}}
+![image](/media/tutorial/eventrelatedaveraging/topoplot_FIC_3feb09_erf.png@400)
 
 **//Figure 6; A topographic plot of the event related fields obtained using ft_topoplotER//**
 
@@ -167,7 +167,7 @@ To plot a sequence of topographic plots define the time intervals in cfg.xli
     clf;
     ft_topoplotER(cfg,avgFIC);
 
-{{tutorial:eventrelatedaveraging:topoplot_timeserie_3feb09_erf.png?700|"Figure 7; The topography of event related fields over time obtained using ft_topoplotER"}}
+![image](/media/tutorial/eventrelatedaveraging/topoplot_timeserie_3feb09_erf.png@700)
 
 **//Figure 7; The topography of event related fields over time obtained using ft_topoplotER//**
 
@@ -227,7 +227,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
     ft_topoplotER(cfg,avgFICplanarComb);
  
 
-{{:tutorial:eventrelatedaveraging:topoplot_axialplanar_30apr14_erf.png?500|Figure 8; A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using FT_MEGPLANAR and FT_COMBINEPLANAR.}}
+![image](/media/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png@500)
 
 **//Figure 8; A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using FT_MEGPLANAR and FT_COMBINEPLANAR.//**
 

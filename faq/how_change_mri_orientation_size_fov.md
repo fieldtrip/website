@@ -55,7 +55,7 @@ Plotting the resliced anatomical MRI results in a figure with the usually desire
 	ft_sourceplot(cfg,mrirs); 
 
 
-{{:faq:mri_orinetation:mrirs.png?400|}} 
+![image](/media/faq/mri_orinetation/mrirs.png)
 
 *Figure 2. Plot of the anatomical mri after using ft_volumereslice*  
 

@@ -29,11 +29,11 @@ In addition to the recorded MEG channels, EMG activity was recorded from each li
 The signal on the trigger channel consists of 2 superimposed trigger sequences. One from the Stimulus PC running the E-Prime protocol and one from a photodiode placed on the stimulus presentation screen. The trigger channel for one Motor task run is shown, top right.
 The photodiode was activated whenever a cueing stimulus or pacing arrow was presented on the display. It was deactivated when the display was black. The trigger value for on is 255 and the trigger value for off is 0. The photodiode trigger sequence extracted from the trigger channel of one Motor task run is shown, bottom right.
 
-{{:tutorial:shared:screen_shot_2015-09-15_at_14.22.40.png?200|Original Trigger channel sequence from one run of Motor Task. E-Prime and Photodiode triggers are superimposed.}}
+![image](/media/tutorial/shared/screen_shot_2015-09-15_at_14.22.40.png@200)
 
 *Figure Caption: Original Trigger channel sequence from one run of Motor Task. E-Prime and Photodiode triggers are superimposed.*
 
-{{:tutorial:shared:screen_shot_2015-09-15_at_14.22.49.png?200|Photodiode trigger sequence extracted from the Trigger channel of one Motor Task run.}}
+![image](/media/tutorial/shared/screen_shot_2015-09-15_at_14.22.49.png@200)
 
 *Figure Caption: Photodiode trigger sequence extracted from the Trigger channel of one Motor Task run.*
 

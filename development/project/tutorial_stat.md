@@ -45,8 +45,7 @@ and the [Cluster-based permutation tests on time-frequency data](/tutorial/clust
 
 To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been already preprocessed, the planar gradient and the subject-averages of two conditions have been already computed, and the **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** function has already combined the data from each subject to one structure for both conditions. The gray boxes of Figure 1. show those steps which have been done already. (The orange boxes in the gray boxes (except of the ft_timelockgrandaverage step) represent processing steps that are done on all trials that belong to one subject in one condition). These steps are described in the [Trigger-based trial selection](/tutorial/preprocessing) and in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. How to use the **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** function will be described in this tutorial.
 
-We will perform the following steps to do a statistical test in FieldTri
-
+We will perform the following steps to do a statistical test in FieldTrip
 
 *  Optionally, we can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiploter)**, the **[ft_singleplotER](/reference/ft_singleploter)** and the Matlab plot functions
 
@@ -54,10 +53,10 @@ We will perform the following steps to do a statistical test in FieldTri
 
 *  We can plot a schematic head with the channels where the effect is significant with the **[ft_topoplotER](/reference/ft_topoploter)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
 
-{{:development:project:tutorial_stat:ft_stat_tutorial2.png|Figure 1. Pipeline of statistical testing}}
-\\
-//Figure 1. Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.
-//
+![image](/media/development/project/tutorial_stat/ft_stat_tutorial2.png)
+
+*Figure 1. Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.*
+
 
 ## Reading-in, preprocessing, timelockanalysis, planar gradient, and grandaveraging
 
@@ -96,7 +95,7 @@ The event-related averages for the fully incongruent and the fully congruent sen
 {{tutorial:eventrelatedstatistics:multiplot_ga_fc_fic.png?400|multiplot_GA_FC_FIC.png}}
 
 {{tutorial:eventrelatedstatistics:singleplotMLT12_ga_fc_fic.png?400|singleplotMLT12_GA_FC_FIC.pngg}}
-\\ 
+
 
 To get an idea of the data, plot the ERF of channel MLT12 for all subject
 
@@ -117,7 +116,7 @@ To get an idea of the data, plot the ERF of channel MLT12 for all subject
 
 
 {{tutorial:eventrelatedstatistics:plotmlt12_allsubj_fc_fic.png?400|plotMLT12_allsubj_FC_FIC.png}}
-\\
+
 
 Between 300ms and 700ms there seems to be a difference between the FC and the FIC condition in the grand average in channel MLT12 (channel 52).
 
