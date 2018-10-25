@@ -1,0 +1,12 @@
+- name:  FieldTrip workshop in Chieti
+  link:  /workshop/chieti2015
+
+- name:  MEG whole-brain connectivity
+  link:  /tutorial/chieti/wholebrain
+
+- name:  MEG virtual channels and seed-based connectivity
+  link:  /tutorial/chieti/virtualchannel
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /tutorial/chieti/simulation
+

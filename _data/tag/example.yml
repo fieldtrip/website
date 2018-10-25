@@ -1,0 +1,168 @@
+- name:  Fourier analysis of neuronal oscillations and synchronization
+  link:  /tutorial/fourier
+
+- name:  Making a memory efficient analysis script
+  link:  /tutorial/memory
+
+- name:  Creating a clean analysis script
+  link:  /tutorial/scripting
+
+- name:  Example MATLAB scripts
+  link:  /example
+
+- name:  Example script for leadfield based on FEM headmodel
+  link:  /development/project/example_fem
+
+- name:  Common filters in beamforming
+  link:  /example/common_filters_in_beamforming
+
+- name:  Getting started with reading raw EEG or MEG data
+  link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
+
+- name:  Determine the filter characteristics
+  link:  /example/determine_the_filter_characteristics
+
+- name:  Detect the muscle activity in an EMG channel and use that as trial definition
+  link:  /example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition
+
+- name:  Computing and using estimates of effect size
+  link:  /example/effectsize
+
+- name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+  link:  /example/megrealign
+
+- name:  Use independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
+
+- name:  Correlation analysis in fMRI data
+  link:  /example/correlation_analysis_in_fmri_data
+
+- name:  Simulate an oscillatory signal with phase resetting
+  link:  /example/phase_reset
+
+- name:  Example real-time signal viewer
+  link:  /example/ft_realtime_signalviewer
+
+- name:  Example analysis pipeline for Biosemi data
+  link:  /example/biosemi
+
+- name:  Compute forward simulated data and apply a dipole fit
+  link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
+
+- name:  Plotting the result of source reconstructing on a cortical mesh
+  link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
+
+- name:  Compute forward simulated data and apply a beamformer scan
+  link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
+
+- name:  Analysis of high-gamma band signals in human ECoG
+  link:  /example/ecog_ny
+
+- name:  Example real-time average
+  link:  /example/ft_realtime_average
+
+- name:  Effects of tapering for power estimates
+  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
+
+- name:  Effect of SNR on Coherence
+  link:  /example/coherence_snr
+
+- name:  Create MNI-aligned grids in individual head-space
+  link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+
+- name:  Testing BEM created EEG lead fields
+  link:  /example/testing_bem_created_leadfields
+
+- name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+  link:  /example/ssvep
+
+- name:  Making your own trialfun for conditional trial definition
+  link:  /example/making_your_own_trialfun_for_conditional_trial_definition
+
+- name:  The correct pipeline order for combining planar MEG channels
+  link:  /example/combineplanar_pipelineorder
+
+- name:  Combined EEG and MEG source reconstruction
+  link:  /example/combined_eeg_and_meg_source_reconstruction
+
+- name:  How to import data from MNE-Python and FreeSurfer
+  link:  /example/import_mne
+
+- name:  Use independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
+
+- name:  Preparing a combined MEG/fMRI dataset for sharing
+  link:  /example/bids
+
+- name:  Can I create an artificial CTF dataset using MATLAB?
+  link:  /example/writing_simulated_data_to_a_ctf_dataset
+
+- name:  Align EEG electrode positions to BEM headmodel
+  link:  /example/align_eeg_electrode_positions_to_bem_headmodel
+
+- name:  Measuring the timing delay and jitter for a real-time application
+  link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application
+
+- name:  Check the quality of the anatomical coregistration
+  link:  /example/coregistration_quality_control
+
+- name:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+
+- name:  Preparing an EEG dataset for sharing
+  link:  /example/bids_eeg
+
+- name:  Example use of the compute_leadfield function
+  link:  /example/compute_leadfield
+
+- name:  Fixing a missing sensor
+  link:  /example/fixing_a_missing_sensor
+
+- name:  Localizing the sources underlying the difference in event related fields
+  link:  /example/difference_erf
+
+- name:  Example real-time selective average
+  link:  /example/ft_realtime_selectiveaverage
+
+- name:  Example real-time classification
+  link:  /example/ft_realtime_classification
+
+- name:  How to incorporate head movements in MEG analysis
+  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+
+- name:  Use simulated ERPs to explore cluster statistics
+  link:  /example/use_simulated_erps_to_explore_cluster_statistics
+
+- name:  Make leadfields using different headmodels
+  link:  /example/make_leadfields_using_different_headmodels
+
+- name:  Use your own forward leadfield model in an inverse beamformer computation
+  link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
+
+- name:  Stratify the distribution of one variable that differs in two conditions
+  link:  /example/stratify
+
+- name:  How to use ft_checkconfig
+  link:  /example/checkconfig
+
+- name:  Example real-time power estimate
+  link:  /example/ft_realtime_powerestimate
+
+- name:  Source statistics
+  link:  /example/source_statistics
+
+- name:  Realtime neurofeedback application based on Hilbert phase estimation
+  link:  /example/ft_realtime_hilbert
+
+- name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
+  link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
+
+- name:  Cross Frequency analysis
+  link:  /example/cross_frequency_analysis
+
+- name:  Doing source-analysis with the created headmodel
+  link:  /example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+
+- name:  Getting started with real-time analysis for BCI/neurofeedback
+  link:  /getting_started/realtime
+

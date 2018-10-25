@@ -1,0 +1,6 @@
+- name:  MEG whole-brain connectivity
+  link:  /tutorial/chieti/wholebrain
+
+- name:  MEG virtual channels and seed-based connectivity
+  link:  /tutorial/chieti/virtualchannel
+

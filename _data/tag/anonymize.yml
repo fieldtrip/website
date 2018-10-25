@@ -1,0 +1,18 @@
+- name:  How can I anonymize or deidentify a CTF dataset?
+  link:  /faq/how_can_i_anonymize_a_ctf_dataset
+
+- name:  How can I anonymize or deidentify an anatomical MRI?
+  link:  /faq/how_can_i_anonymize_an_anatomical_mri
+
+- name:  How can I anonymize DICOM files?
+  link:  /faq/how_can_i_anonymize_dicom_files
+
+- name:  How can I anonymize data processed in FieldTrip?
+  link:  /faq/how_can_i_anonymize_fieldtrip_data
+
+- name:  Preparing a combined MEG/fMRI dataset for sharing
+  link:  /example/bids
+
+- name:  Preparing an EEG dataset for sharing
+  link:  /example/bids_eeg
+

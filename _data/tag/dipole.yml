@@ -1,0 +1,9 @@
+- name:  Table of contents
+  link:  /tutorial/natmeg/dipolefitting
+
+- name:  Compute forward simulated data and apply a dipole fit
+  link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
+
+- name:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+

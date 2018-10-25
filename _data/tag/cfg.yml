@@ -1,0 +1,15 @@
+- name: 
+  link:  /reference
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
+- name:  Introduction
+  link:  /development/introduction
+
+- name:  How to use ft_checkconfig
+  link:  /example/checkconfig
+
+- name:  Fieldtrip Walkthrough
+  link:  /walkthrough
+

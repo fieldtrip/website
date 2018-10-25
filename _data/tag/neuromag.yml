@@ -1,0 +1,18 @@
+- name:  Elekta / Neuromag
+  link:  /development/realtime/neuromag
+
+- name:  Why are there multiple neighbour templates for the NeuroMag306 system?
+  link:  /faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system
+
+- name:  How can I visualize the neuromag head position indicator coils?
+  link:  /faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils
+
+- name:  Doing source-analysis with the created headmodel
+  link:  /example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
+
+- name:  MEG dataformats
+  link:  /dataformat/meg
+
+- name:  Getting started with Elekta/Neuromag data
+  link:  /getting_started/neuromag
+

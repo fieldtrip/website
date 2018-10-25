@@ -1,0 +1,24 @@
+- name:  Specifying the channel layout for plotting
+  link:  /tutorial/layout
+
+- name:  Plotting data at the channel and source level
+  link:  /development/tutorial/plotting
+
+- name:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
+
+- name:  What is the format of the layout file which is used for plotting?
+  link:  /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting
+
+- name:  How do I construct a layout file for the plotting functions?
+  link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
+
+- name:  Table of contents
+  link:  /template/layout
+
+- name:  Getting started with 20%, 10% and 5% electrode arrangements
+  link:  /getting_started/1020
+
+- name:  Getting started with BrainVision Analyzer and Easycap
+  link:  /getting_started/brainvision
+

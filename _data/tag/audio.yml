@@ -1,0 +1,6 @@
+- name:  Soundcard input using PortAudio
+  link:  /development/realtime/audio2ft
+
+- name:  How can I play back EEG/MEG and synchronous audio or video?
+  link:  /faq/audiovideo
+
