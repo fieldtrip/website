@@ -19,7 +19,7 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 <div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
-{{youtube>ZBwh0Vm4fh4}}
+{% include youtube.html id="ZBwh0Vm4fh4" %}
 </div>
 
 ## Background

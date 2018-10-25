@@ -25,7 +25,7 @@ This tutorial will not cover the time-domain option for LCMV/SAM beamformers (de
 <div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
-{{youtube>Ez72OFjSABs}}
+{% include youtube.html id="Ez72OFjSABs" %}
 </div>
 
 ## Background

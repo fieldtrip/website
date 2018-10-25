@@ -19,7 +19,7 @@ This tutorial will give you an introduction into how to use FieldTrip with MATLA
 <div class="exercise">
 This short tutorial introduces the design of the FieldTrip toolbox. If you have some more time, you watch a more elaborate introduction in this lecture.  
 
-{{youtube>eUVL_twWNdk}}
+{% include youtube.html id="eUVL_twWNdk" %}
 </div>
 
 ## Background

@@ -6,26 +6,26 @@ tags: [video]
 
 # FieldTrip MEG/EEG workshop at NatMEG, Stockholm (October 2014)
 
-### Introduction to MEG (vs. EEG) instrumentation by Stephen Whitmarsh
+## Introduction to MEG (vs. EEG) instrumentation by Stephen Whitmarsh
 
-{{youtube>15Qs4fuPpes}}
+{% include youtube.html id="15Qs4fuPpes" %}
 
-### Introducing FieldTrip by Robert Oostenveld 
+## Introducing FieldTrip by Robert Oostenveld
 
-{{youtube>zOxCqcYmIfA}}
+{% include youtube.html id="zOxCqcYmIfA" %}
 
-### Forward modelling in MEG and EEG by Robert Oostenveld
+## Forward modelling in MEG and EEG by Robert Oostenveld
 
-{{youtube>4pVaY6f25w0}}
+{% include youtube.html id="4pVaY6f25w0" %}
 
-### Principles of frequency analysis by Robert Oostenveld
+## Principles of frequency analysis by Robert Oostenveld
 
-{{youtube>QLvsa1r1Voc}}
+{% include youtube.html id="QLvsa1r1Voc" %}
 
-### Connectivity analysis in MEG and EEG: metrics and issues by Robert Oostenveld
+## Connectivity analysis in MEG and EEG: metrics and issues by Robert Oostenveld
 
-{{youtube>-RpQklxbCsg}}
+{% include youtube.html id="RpQklxbCsg" %}
 
-### Beamforming EEG and MEG data by Robert Oostenveld
+## Beamforming EEG and MEG data by Robert Oostenveld
 
-{{youtube>7eS11DtbIPw}}
+{% include youtube.html id="7eS11DtbIPw" %}

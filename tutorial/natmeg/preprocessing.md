@@ -19,9 +19,9 @@ This tutorial describes how to define epochs-of-interest (trials) from your reco
 This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
 <div class="exercise">
-This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
+This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.
 
-{{youtube>zOxCqcYmIfA}}
+{% include youtube.html id="zOxCqcYmIfA" %}
 </div>
 
 ## Background

@@ -266,8 +266,9 @@ Now we can plot the result in a similar way as illustrated above. The difference
 ## Localizing auditory evoked fields using beamforming techniques in parceled brain space
 
 In this section we would demonstrate how to derive the time series of neuronal activity at a particular brain location. We will apply a beamforming technique. Before you continue it is recommended to make your self familiar with the relevant concepts by watching the following lecture.
+
 <div class="exercise">
-{{youtube>7eS11DtbIPw}}
+{% include youtube.html id="7eS11DtbIPw" %}
 </div>
 
 Furthermore the details around how to compute the ingredients needed herein (e.g. headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space).
@@ -508,10 +509,11 @@ Alternatively, the maximal activity in the left Heschl gyrus can be plotted on t
 In the previous section we used an arbitrary threshold (80% of maximum) to illustrate the "hill" of the activity. However, in some situations one might be interested in the spatial activation pattern that is statistically different from pre stimulus baseline. In order to achieve this we will keep the units of observation (i.e. trials) and apply nonparametric permutation approach  to quantify the spatial activation pattern after stimulus presentation.
 
 It is recommended to make yourself familiar with the permutation framework before you continue. This is explained in detail in the statics tutorial. You might also consult this on-line lecture.
+
 <div class="exercise">
 This tutorial contains the hands-on material of the [Salzburg workshop](/workshop/salzburg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
-{{youtube>vOSfabsDUNg}}
+{% include youtube.html id="vOSfabsDUNg" %}
 </div>
 
 First we keep single trial information and perform source analysis once again. It is important to estimate the spatial filter on the basis of all data and not the single trials. The latter is typically noisy and results in not very robust estimates.

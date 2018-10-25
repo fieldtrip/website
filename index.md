@@ -22,7 +22,9 @@ when you have used FieldTrip for data analysis in your study.</p>
 
 To get started with FieldTrip, please continue reading the [getting started](/getting started) documentation.
 
-Join the [FieldTrip community on Facebook](http://www.facebook.com/pages/FieldTrip-toolbox/192257040789426).
+Join the [FieldTrip community on Facebook](https://www.facebook.com/fieldtriptoolbox/).
+
+{% include facebook.html %}
 
 # News and announcements
 

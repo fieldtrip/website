@@ -25,7 +25,7 @@ This tutorial is not covering statistical test on event-related fields. If you a
 <div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
-{{youtube>x0hR-VsHZj8}}
+{% include youtube.html id="x0hR-VsHZj8" %}
 </div>
 
 ## Background

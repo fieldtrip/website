@@ -24,7 +24,7 @@ This tutorial will not cover the time-domain option for LCMV/SAM beamformers (de
 <div class="exercise">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
-{{youtube>7eS11DtbIPw}}
+{% include youtube.html id="7eS11DtbIPw" %}
 </div>
 
 ## Background

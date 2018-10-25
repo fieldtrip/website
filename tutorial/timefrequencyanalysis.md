@@ -23,7 +23,7 @@ There is no information in this tutorial about how to compare conditions, how to
 <div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
-{{youtube>vwPpSglPJTE}}
+{% include youtube.html id="vwPpSglPJTE" %}
 </div>
 
 ## Background

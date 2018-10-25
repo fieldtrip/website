@@ -29,7 +29,7 @@ In this tutorial we want to focus on creating a electrode  based on 3D surface s
 <div class="exercise">
 This youtube video shows the procedure that is explained in this tutorial
 
-{{youtube>d6FZlZTf-Hg}}
+{% include youtube.html id="d6FZlZTf-Hg" %}
 </div>
 
 ## Procedure

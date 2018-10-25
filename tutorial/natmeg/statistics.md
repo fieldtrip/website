@@ -24,7 +24,7 @@ This tutorial is not covering group analysis. If you are interested in that, you
 <div class="exercise">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
-{{youtube>vOSfabsDUNg}}
+{% include youtube.html id="vOSfabsDUNg" %}
 </div>
 
 ## Background

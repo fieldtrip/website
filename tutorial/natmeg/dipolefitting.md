@@ -21,7 +21,7 @@ This tutorial will not show how to combine source-level data over multiple subje
 <div class="exercise">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
-{{youtube>4pVaY6f25w0}}
+{% include youtube.html id="4pVaY6f25w0" %}
 </div>
 
 ## Background

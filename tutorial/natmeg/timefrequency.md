@@ -19,7 +19,7 @@ In this tutorial you can find information about the time-frequency analysis of a
 <div class="exercise">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
-{{youtube>QLvsa1r1Voc}}
+{% include youtube.html id="QLvsa1r1Voc" %}
 </div>
 
 ## Background
