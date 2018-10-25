@@ -1,0 +1,41 @@
+.highlight {
+  margin-bottom: 15px;
+  padding: 4px 12px;
+  background-color: #eeeeee;
+  border-left: 6px solid #eeeeee;
+}
+
+.exercise  {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #eeeeff;
+    border-left: 6px solid #ccccff;
+}
+
+.danger {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.success {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #ddffdd;
+    border-left: 6px solid #4caf50;
+}
+
+.info {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196f3;
+}
+
+.warning {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+}
