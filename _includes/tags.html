@@ -1,0 +1,10 @@
+<!-- This shows the tags for a specific page -->
+
+<small>
+  {% if page.tags[0] %}
+    Tags:
+    {% for thistag in page.tags %}
+      <a href="/tag/{{ thistag }}/">{{ thistag }}</a>
+    {% endfor %}
+  {% endif %}
+</small>
