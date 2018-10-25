@@ -7,3 +7,13 @@
 2018-10-08:
   - Removed the project section, including monkey, hcp and guidelines.
   - Added some external links.
+
+2018-10-24
+  - Converted the figures in the markdown files
+  - Manually created a page for each of the tags, containing a list of pages with the specific tag
+
+2018-10-25
+  - Moved favicon to a subdirectory
+  - Do not show tags section when empty
+  - Add title to each of the pages
+  - Moved bash scripts to _scripts directory

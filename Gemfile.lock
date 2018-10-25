@@ -33,8 +33,6 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
-    jekyll-tagging (1.1.0)
-      nuggets
     jekyll-toc (0.8.0)
       nokogiri (~> 1.7)
     jekyll-watch (2.1.2)
@@ -53,7 +51,6 @@ GEM
       jekyll-seo-tag (~> 2.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    nuggets (1.6.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.3)
@@ -75,7 +72,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 3.8.4)
   jekyll-feed (~> 0.6)
-  jekyll-tagging
   jekyll-toc
   minima (~> 2.0)
   tzinfo-data
