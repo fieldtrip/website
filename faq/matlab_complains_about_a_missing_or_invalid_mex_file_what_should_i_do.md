@@ -8,10 +8,11 @@ tags: [faq, matlab, mex]
 
 The FieldTrip version that we release includes compiled mex files for the most common platforms (Windows, Linux, macOS). However, it might be that you have a combination of operating system and MATLAB on which the precompiled mex files are not included or on which they do not work. In that case you have to (re)compile them yourself.
 
-`<note warning>`Note that in general the toolboxes in fieldtrip/external are **not** maintained by the FieldTrip team but come from an external source.
+<div class="warning">
+Note that in general the toolboxes in fieldtrip/external are **not** maintained by the FieldTrip team but come from an external source.
 
 If you run into problems with mex files from SPM, i.e. the ones included in fieldtrip/external/spmX, you should have a look at https://en.wikibooks.org/wiki/SPM/MATLAB. See also further down on this page.
-`</note>`
+</div>
  
 The source code for the mex files is mostly contained in the fieldtrip/src directory. Some mex files are contained in fieldtrip/external, for example for SPM. Those are not the responsibility of the FieldTrip team.
 

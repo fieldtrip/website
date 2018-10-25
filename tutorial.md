@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Overview of all tutorials
 layout: default
 tags: [tutorial]
 ---

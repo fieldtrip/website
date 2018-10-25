@@ -81,8 +81,8 @@ To find out what the trigger codes are in your BDF file, you can use the followi
 
 ## The BDF fileformat
 
-`<note warning>`
-The documentation below is only for reference. To work with this data format you can simply use the standard reading functions **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. `</note>`
+<div class="warning">
+The documentation below is only for reference. To work with this data format you can simply use the standard reading functions **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. </div>
 
 BDF is a 24 bit version of the popular 16 bit EDF format, which was used on previous BioSemi models with 16 bit converters. BDF is almost the same as EDF Although initially the EDF format was mainly used in sleep research, BDF/EDF is now quickly gaining popularity in other EEG applications, ECG body surface potential mapping as well as EMG.
 
@@ -126,6 +126,6 @@ N x 32 bytes
 Total header length (for BDF and EDF) is: {(N+1)*256} bytes, where N is number of channels (including the status channel).
 The "gain" of a specific channel can be calculated by: (Physical max - Physical min) / (Digital max - Digital min). The result is the LSB value in the specified Physical dimension of channels. (31,25nV / 1uV in the BDF/EDF example Header from above).
 The last 10 fields are defined for each fields separately. Each channel can be different.
-`</note>`
+</div>
 
 ![image](/media/getting_started/file_format_bdf.png)

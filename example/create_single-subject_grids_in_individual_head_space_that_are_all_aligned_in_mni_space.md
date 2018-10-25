@@ -12,4 +12,4 @@ It is also possible to define the source-reconstruction grid for each individual
 
 `<note>`
 The content of this page has moved to another location, and is dealt with **in context** in the tutorial about [the construction of different types of source models](/tutorial/sourcemodel#subject-specific_grids_that_are_equivalent_across_subjects_in_normalized_space).
-`</note>`
+</div>

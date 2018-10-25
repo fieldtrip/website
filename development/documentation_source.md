@@ -5,12 +5,12 @@ layout: default
 
 ## Developing the documentation of the source-reconstruction methods
 
-`<note warning>`
+<div class="warning">
 The purpose of this page is just to serve as a scratch pad for developing the documentation.
 
 There is no guarantee that this page is updated or that is contains correct information. 
 So chances are that this page is considerably outdated, irrelevant or not correct. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-`</note>`
+</div>
 ### Introduction
 
 This page contains questions that users could ask when they analyze their data with FieldTrip. If it is possible  the answers are also provided. If any documentation already exist on the FieldTrip wiki which gives an answer, the answer should point to those pages. In some cases, may we just want to point to relevant literature.

@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Dipole fitting of combined MEG/EEG data
 layout: default
 tags: [tutorial, natmeg, meg+eeg, dipole, MEG-audodd]
 ---
@@ -18,19 +18,19 @@ In this tutorial you can find information about how to fit dipole models to the 
 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the [Localizing oscillatory sources using beamformer techniques](/tutorial/natmeg/beamforming) tutorial if you are interested in the later.
 
-`<note exercise>`
+<div class="exercise">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {{youtube>4pVaY6f25w0}}
-`</note>`
+</div>
 
 ## Background
 
 {{page>:tutorial:shared:sourcelocalization_background}}
 
 In the [Preprocessing and event-related activity](/tutorial/natmeg/preprocessing) tutorial, time-locked averages of event related fields of the standard and deviant conditions were computed and it was shown that there is a difference between the conditions. The topographical distribution of the ERFs belonging to each condition to the difference have been plotted. The aim of this tutorial is to localise the sources of the underlying neuronal activity. For this we need a source model and a volume conduction model.
-### Source model
 
+### Source model
 
 In this tutorial we will use the dipole fitting approach (1) to localise the neuronal activity and (2) to estimate the time course of the activity. This approach is most suitable for relatively early cortical activity which is not spread over many or large cortical areas. Dipole fitting assumes that a small number of point-like equivalent current dipoles (ECDs) can describe the measured topography. It optimises the location, the orientation and the amplitude of the model dipoles in order to minimise the difference between the model and measured topography. A good introduction to dipole fitting is provided by Scherg (1990) ((Source localization by fitting an equivalent current dipole model
 Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.ucsb.edu/wcsl/courses/ECE594/594C_F10Madhow/dipole_model_scherg90.pdf). In: Auditory evoked magnetic fields and electric potentials. eds. F. Grandori, M. Hoke and G.L. Romani. Advances in Audiology, vol. 6. Karger, Basel, pp 40-69, 1990)).
@@ -38,20 +38,16 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.
 ### Volume conduction model
 
 {{page>:tutorial:shared:headmodel_background}}
+
 ## Procedure
 
-To fit the dipole models to the data, we will perform the following step
+To fit the dipole models to the data, we will perform the following steps:
 
 *  We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**,  then the mri is aligned with the MEG data using **[ft_volumerealign](/reference/ft_volumerealign)**, and subsequently it is resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system.
-
 *  The resliced volume is segmented to obtain the anatomical description of the brain, skull and skin with **[ft_volumesegment](/reference/ft_volumesegment)**.
-
 *  After creating meshes with the triangulated description of the outer brain, skull and skin compartment with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, we create a volume conduction model using **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
-
 *  We preprocess the MEG and EEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** and compute the average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
-
 *  Using **[:reference/ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
-
 *  Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/plotting) functions to make detailled visualisations.
 
 ### Read and visualise the anatomical data
@@ -61,7 +57,6 @@ We start with the anatomical MRI data, which comes directly from the scanner in 
 DICOM datasets consist of a large number of files, one per slice. As filename you have to specify a single file, the reading function will automatically determine which other slices are part of the same anatomical volume and put them in the correct order.
 
     mrifile = './dicom/00000113.dcm';
-
     mri_orig = ft_read_mri(mrifile);
 
 We also read the geometrical data from the fif file. It contains information about the MEG magnetometer and gradiometer positions (the “grad” structure), about the EEG electrodes (the “elec” structure) and about the head shape.
@@ -97,6 +92,7 @@ It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/refe
 {{tutorial:natmeg_temp:natmeg_dip_mri_orig.png?500"}}
 
 You can see that the MRI is displayed upside down. That in itself is not a problem, as long as the coordinate system correctly describes the MRI. This [frequently asked question](/faq/my_mri_is_upside_down_is_this_a_problem) explains why it is not a problem. However, if you click around in the MRI and look how the [x y z] position in the lower right panel is updated, you should recognize that the MRI is not coregistered with the [Neuromag head coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_neuromag_coordinate_system).
+
 ### Coregister the anatomical MRI to the MEG coordinate system
 
 The coregistration of the anatomical MRI with the Neuromag head coordinate system is required to express the anatomical MRI in a consistent fashion relative to the MEG and EEG sensors. Since we will use the anatomical MRI to construct the volume conduction model of the head, coregistration is also a prerequisite to ensure that the volume conduction model is aligned with the sensors.
@@ -121,9 +117,9 @@ The headshape based coregistration starts with an interactive step to improve th
 
     save mri_realigned2 mri_realigned2
 
-`<note instruction>`
+<div class="note">
 Check once more with **[ft_sourceplot](/reference/ft_sourceplot)** whether the coordinate system is consistent with the MRI. Is the problem of the MRI being upside down resolved? Is the coordinate system correct?
-`</note>`
+</div>
 
 We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is not only convenient for plotting, but we also need it later on for the imerode/imdilate image processing functions.
 
@@ -177,12 +173,14 @@ By treating the segmentation of brain/skull/scalp as a “functional” volume, 
     print -dpng natmeg_dip_segmented_scalp.png
 
 ![image](/media/tutorial/natmeg_temp/natmeg_dip_segmented_brain.png@400)
+
 ![image](/media/tutorial/natmeg_temp/natmeg_dip_segmented_skull.png@400)
+
 ![image](/media/tutorial/natmeg_temp/natmeg_dip_segmented_scalp.png@400)
 
-`<note important>`
+<div class="important">
 You should check that the segmentation covers the appropriate part of the anatomical MRI and that it does not have any artefacts due to noisy voxels in the MRI or local contrast drop-out.
-`</note>`  
+</div>  
 
 After having confirmed that the segmentations are consistent with the anatomical MRI, we construct triangulated meshes to describe the outside of each segmented volume.
 
@@ -204,9 +202,9 @@ After having confirmed that the segmentations are consistent with the anatomical
     cfg.numvertices = 1000;
     mesh_scalp = ft_prepare_mesh(cfg, mri_segmented);
 
-`<note instruction>`
+<div class="note">
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
-`</note>`
+</div>
 
 These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the *isosurface* method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
 
@@ -242,7 +240,7 @@ You can type "camlight" multiple times, to get light from various directions.
 It is also convenient to switch on the “Camera Toolbar” (under the figure menu -> View).
 
 Using the rotate3d command, or the corresponding button in the toolbar, you can rotate the mesh in the figure with your mouse.
-`</note>`
+</div>
 
 Now that we have the meshes, we use them to compute the volume conduction model. For the MEG, only the mesh that describes the interface between the brain and the skull is relevant.  
 
@@ -356,6 +354,7 @@ As before, we also compute the difference waveform, i.e. the [mismatch negativit
     ft_multiplotER(cfg, timelock_dif);
 
     save timelock timelock*
+
 ### Fit a dipole model to the MEG data
 
 Having constructed the volume conduction model and completed the processing of the channel level data, we can investigate how well the data can be modeled with an Equivalent current Dipole (ECD) model. Since we expect activity in both auditory cortices, we will use a two-dipole model. Scanning the whole brain with two separate dipoles is not possible, but we can also start with the assumtion that the two dipoles are symmetric. In the [Neuromag coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_neuromag_coordinate_system) the x-axis runs from the right to the left, hence we specify symmetry along the x-direction.
@@ -375,9 +374,9 @@ Having constructed the volume conduction model and completed the processing of t
     cfg.channel = 'MEG*1';
     source_mag = ft_dipolefitting(cfg, timelock_all);
 
-`<note instruction>`
+<div class="note">
 Inspect the content of the source_mag structure. Can you identify where the position of the two dipoles is represented? And the orientation?
-`</note>`
+</div>
 
 We can use **[ft_sourceplot](/reference/ft_sourceplot)** to plot the cross-section of the MRI at the location of the first dipole.
 
@@ -555,9 +554,9 @@ We can plot the dipoles together in 3D. Note the color-coding that is used to di
 
 {{tutorial:natmeg_temp:natmeg_dip_sourcedif.png?400"}}
 
-`<note instruction>`
+<div class="note">
 The dipole positions are not exactly the same. Explain the difference in the dipole position and how the MMN might contribute to the dipole position of the deviant being shifted inward.
-`</note>`
+</div>
 
 Rather than assuming that the dipole position is fixed over a certain time-window, we can also fit a dipole to each topography separately, i.e. to each sample in the data. Since this results in a dipole position that is different over time, this is also referred to as a “moving dipole” model.
 
@@ -701,9 +700,9 @@ The following code demonstrates the effect of the imdilate function. It makes fo
 
 Using a combination of imerode and Boolean locic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**.
 
-`<note instruction>`
+<div class="note">
 Compare the four figures and toggle back and forth. Can you see the effect of the dilation on the outside of the scalp?
-`</note>`
+</div>
 
 Having completed the manual refinement of the segmentation on the three temporary arrays, we copy them back into the original segmentation structure.
 
@@ -761,9 +760,9 @@ The three meshes are combined in one struct-array and used as input to **[ft_pre
 
     save headmodel_eeg headmodel_eeg
 
-`<note instruction>`
+<div class="note">
 Here we've set the ratio of conductivity between the different tissue types to [1 1/20 1]. What would happen if we would change the ratio to: [1 1/80 1]? See [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue)
-`</note>`
+</div>
 
 ### Process the EEG data
 
@@ -810,9 +809,9 @@ As before we are going to check for, and remove bad trial
     cfg.preproc.refchannel = 'all';
     data_eeg_clean = ft_rejectvisual(cfg, data_eeg);
 
-`<note important>`
+<div class="important">
 The EEG forward model is computed with an common average reference. Consequently, the EEG data that you want to fit also should be average referenced. Whenever you remove a (bad) channel from the data, you have to recompute the common average reference in the EEG data.
-`</note>`
+</div>
 
     cfg = [];
     cfg.reref = 'yes';
@@ -931,7 +930,9 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
     axis tight
     axis off
 
-`<note exercise>`How does this fit compare to the previous? Can you explain the difference?`</note>`
+<div class="exercise">
+How does this fit compare to the previous? Can you explain the difference?
+</div>
 
 ##  Summary and conclusion
 
@@ -943,11 +944,11 @@ More details on constructing volume conduction models of the head can be found [
 
 ### Suggested further reading
 
-Tutorial
+Tutorials:
 {{topic>source headmodel +tutorial &list}}
 
-FAQ
+FAQs:
 {{topic>source headmodel +faq &list}}
 
-Example script
+Example scripts:
 {{topic>source headmodel +example &list}}

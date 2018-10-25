@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Template head models for forward volume conduction modeling
 layout: default
 tags: [template]
 ---

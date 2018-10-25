@@ -3,12 +3,12 @@ title: Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
 layout: default
 ---
 
-`<note warning>`
+<div class="warning">
 The purpose of this page is just to serve as a scratch pad for the new version of the example script.
 
 There is no guarantee that this page is updated in the end to reflect the final state of the script.
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-`</note>`
+</div>
 
 ## Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
 

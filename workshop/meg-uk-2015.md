@@ -45,13 +45,13 @@ The programme mixes short theoretical sessions with hands-on computer assignment
 
 `<note>`
 Please look at the [general instructions](/workshop/meg-uk-2015/general) for the hands-on sessions to start MATLAB and navigate to the data directory on the Aston computer-lab machines.
-`</note>`
+</div>
 
-`<note important>`
+<div class="important">
 Following the workshop, the data has also been made available on the Donders [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/meg-uk-2015). You can download all example data that we used in Aston, except for the toolbox code itself. You should get the latest version of [FieldTrip](/download) and [SPM](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) from their respective download pages.
 
 Downloading the data to your own computer should allow you to go through the demonstrations once more, but now at your own pace.
-`</note>`
+</div>
 
 | ----        | --------------------------------------------                  | --------------------                  | --------------------  | ---                   |
 | 9:30        | lecture {{:workshop:meg-uk-2015:lecture1.pdf}}                | General Linear Model                  | SPM                   | Vladimir Litvak       |

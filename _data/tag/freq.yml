@@ -25,7 +25,7 @@
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 
-- name:  Table of contents
+- name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/natmeg/timefrequency
 
 - name:  Extended analysis of sensor- and source-level connectivity

@@ -4,9 +4,9 @@ layout: default
 tags: [tutorial, plot, eeg, meg, timelock, freq, statistics, source, layout, MEG-language]
 ---
 
-`<note warning>`
+<div class="warning">
 This page is under development, use with caution 
-`</note>`
+</div>
 
 # Plotting data at the channel and source level
 
@@ -83,9 +83,9 @@ If you specify multiple channels in cfg.channel both singleplot functions will p
 
 #### Exercise 1
 
-`<note exercise>`
+<div class="exercise">
 Try to replicate [Figure 5 from the Event Related Averaging tutorial](/tutorial/eventrelatedaveraging#plotting_the_result) and [Figure 3 from the Time Frequency analysis tutorial](/tutorial/timefrequencyanalysis#plotting_the_results ) without using FieldTrip functions.
-`</note>`
+</div>
 ### Multiplot functions
 
 The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions PLOT.m and IMAGESC.m. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes. In the subsequent figures you can see these axes that are normally set to "off".  Exemplar code for using ft_multiplotER/TFR is shown in the 'interative mode' section of this tutorial (further down).
@@ -138,9 +138,9 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
 
 #### Exercise 2
 
-`<note exercise>`
+<div class="exercise">
 The most left picture made with **[ft_topoplotER](/reference/ft_topoplotER)** is planar ERF data. Planar data can not have values lower than zero. Explain why you nevertheless see values in the plot that correspond to negative values.
-`</note>`
+</div>
 ####  
 
 In **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)**, you can specify many options to fully control the appearance of the picture. Subsequently you can use the MATLAB print function to write the figure to a file. Preferred file formats are EPS for vector drawings that can be edited in Adobe Illustrator or in Canvas (using “print -depsc”) or PNG for bitmaps (using “print -dpng”).

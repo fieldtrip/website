@@ -16,9 +16,9 @@ More details are provided by the local organizers [here](https://samba.ccns.sbg.
 
 ## How should you prepare for the workshop?
 
-`<note important>`
+<div class="important">
 In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
-`</note>`
+</div>
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
 
@@ -41,11 +41,11 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
     addpath(pwd)
     ft_defaults
 
-`<note warning>`
+<div class="warning">
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
-`</note>`
+</div>
 
 The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes. The addpath(pwd) statement adds the

@@ -5,13 +5,13 @@ tags: [faq, headmodel, mri, source, coordinate]
 ---
 
 ## How are the different head and MRI coordinate systems defined?
-`<note important>`
+<div class="important">
 For understanding the coordinate system, the following questions need to be addressed:
 *  What is the definition of the origin of the coordinate system, i.e. where is [0,0,0]?
 *  In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?
 *  In what units are coordinates expressed, i.e. does the number "1" mean 1 meter, 1 centimeter or 1 milimeter?
 *  Is the geometry scaled to some template or atlas, or does it still match the individual's head/brain size?     
-`</note>`
+</div>
 FieldTrip does not have a native coordinate system, but assumes that all geometrical data which are used together (i.e. mri, headmodel, electrodes, dipoles) are expressed in the same coordinate system and with the same physical units (e.g. mm or cm). In order to be able to compare these fundamental properties across data structures, FieldTrip defines two fields in the geometrical data mentioned above. These fields pertain to the interpretation of the physical **units**, XXX.unit, and to the interpretation of the **coordinate system** in which the coordinates are expressed, XXX.coordsys.
 If the unit-field is not present in the data, FieldTrip typically tries to estimate this from the magnitude and range of the values in the spatial coordinates (e.g. the position of the vertices in the boundaries that describe the volume conductor, or the positions of electrodes, assuming that a human head was used to attach the electrodes to).
 The real-world interpretation of the coordinate system can typically not be determined automatically, and for this FieldTrip uses a helper-function **[ft_determine_coordsys](/reference/ft_determine_coordsys)**, that requires some user-interaction for the specification of the orientation of the cardinal axes of the coordinate system, as well as the origin. The only thing that this function does, is to add a coordsys-field to the input data structure, specifying how the spatial coordinates in the data structure should be interpreted. Importantly, it does not change the values of the spatial coordinates that are present in the data structure.

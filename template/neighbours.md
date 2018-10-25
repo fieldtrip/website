@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Templates for defining neighbouring channels
 layout: default
 tags: [template]
 ---
@@ -35,7 +35,7 @@ Currently, the following neighbour templates are shipping with FieldTrip (note t
 
 `<note>`
 Other 'Easycaps' constitute a subset of one of these systems or feature freely placable electrodes. You are required to manually edit them for your purposes. Please see [the layout section](/template/layout) and [the Easycap webpage](http://www.easycap.de) for more information.
-`</note>`
+</div>
 
 ###  The standard 10% system
 
@@ -83,7 +83,7 @@ MEG neighbour templates are based on [automatic, symmetric triangulation](http:/
 
 `<note>`
 Please see our FAQ for [ why there are multiple neighbour templates for the neuromag306 system](http://fieldtrip.fcdonders.nl/faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system)
-`</note>`
+</div>
 
 ### Yokogawa systems
 

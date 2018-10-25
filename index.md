@@ -13,9 +13,10 @@ The FieldTrip software is released free of charge as [open source software](http
 
 This FieldTrip website is a [Wiki](http://en.wikipedia.org/wiki/Wiki) (just like [Wikipedia](http://en.wikipedia.org/)), which allows all visitors to contribute, very quickly and easily, without the need for registration. The IP addresses of people that make changes are logged, and they can be blocked if required. Please act responsibly and only make changes that improve this site.
 
-<div class="warning">
+<div class="important">
 <p>Please cite the <a href="http://www.hindawi.com/journals/cin/2011/156869">FieldTrip Reference Paper</a>
 when you have used FieldTrip for data analysis in your study.</p>
+
 <p>Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen, <strong>FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.</strong> Computational Intelligence and Neuroscience, vol. 2011, Article ID 156869, 9 pages, 2011. doi:10.1155/2011/156869</p>
 </div>
 

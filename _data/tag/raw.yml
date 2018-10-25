@@ -13,7 +13,7 @@
 - name:  Preprocessing - Reading continuous EEG data
   link:  /tutorial/continuous
 
-- name:  Table of contents
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
 - name:  Visual artifact rejection

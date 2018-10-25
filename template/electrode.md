@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Template 3-D electrode sets
 layout: default
 tags: [template]
 ---

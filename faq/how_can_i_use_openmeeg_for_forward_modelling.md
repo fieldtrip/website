@@ -4,9 +4,9 @@ layout: default
 tags: [faq, headmodel, source]
 ---
 
-`<note warning>`
+<div class="warning">
 This documentation is outdated, the latest version is available from http://openmeeg.github.io.
-`</note>`
+</div>
 
 ## How can I use OpenMEEG for forward modeling?
 
@@ -96,7 +96,7 @@ A good start is the example script "openmeeg_eeg_leadfield_example.m" found in "
 
 `<note>`
 Some of the pre-compiled packages could have issues running on a particular Linux OS (e.g. Fedora, CentOS), if you use the OpenMEEG 2 packages. Try then to download the OpenMEEG statically linked version (OpenMEEG-2.1.0-Linux.amd64-gcc-4.1.2-OpenMP-static.tar.gz or OpenMEEG-2.1.0-Linux.i386-gcc-4.1.2-static.tar.gz for Linux)
-`</note>`
+</div>
 
 If you still meet any difficulty do not hesitate to contact the OpenMEEG team: openmeeg-info@lists.gforge.inria.fr
 

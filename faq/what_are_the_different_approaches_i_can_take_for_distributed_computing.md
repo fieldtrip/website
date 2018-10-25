@@ -55,7 +55,9 @@ See **[/reference/qsubcellfun](/reference/qsubcellfun)**, **[/reference/qsubfeva
 
 The FieldTrip peer computing toolbox was developed to harness the computational resources in an unorganized organization, e.g. to use the computers of your office mates during the night, or to use multiple linux computers that are not clustered. More documentation on the peer toolbox can be found [here](/development/peer).
 
-`<note warning>`Please note that this requires compilation of some mex files. At this moment it is not actively supported.`</note>`
+<div class="warning">
+Please note that this requires compilation of some mex files. At this moment it is not actively supported.
+</div>
 
 The syntax you would use to distribute jobs with the peer system is identitcal to DFEVAL, i.e.
 
@@ -71,5 +73,7 @@ See **[/reference/peercellfun](/reference/peercellfun)**, **[/reference/peerfeva
 
 The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development/engine).
 
-`<note warning>`Please note that this requires compilation of some mex files. At this moment it is not actively supported.`</note>`
+<div class="warning">
+Please note that this requires compilation of some mex files. At this moment it is not actively supported.
+</div>
 

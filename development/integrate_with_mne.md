@@ -3,22 +3,22 @@ title: Integrate FieldTrip and MNE-Python
 layout: default
 ---
 
-`<note warning>`
+<div class="warning">
 This page is work in progress. Some code might be experimental and might not be included in the main repository. 
-`</note>`
-`<note warning>`
+</div>
+<div class="warning">
 Not all the information contained in either Matlab or Python can be completely copied into the other format.
-`</note>`
-`<note warning>`
+</div>
+<div class="warning">
 We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/bugzilla) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
-`</note>`
-`<note important>`
+</div>
+<div class="important">
 Code under development, the mne-python community currently works on reader functions for fieldtrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
-`</note>`
+</div>
 `<note>`
 More functions to work with files coming from MNE-python in Matlab are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
-`</note>`
+</div>
 # Integrate FieldTrip and MNE-Python
 
 ## Introduction
@@ -99,13 +99,13 @@ Then use FieldTrip to read the file
 So, ''data1'' is of type ''datatype_raw'' with one trial.
 `<note>`
 Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip.
-`</note>`
+</div>
 ### datatype_raw (many trials) `<->` Epochs
 
 #### Export to Epochs
 `<note>`
 Currently, there is no export functionality to create mne-Epochs from fieldtrip. Feel free to add it on [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip).
-`</note>`
+</div>
 
 And then in Python, you can read the ''Epochs'' wit
 

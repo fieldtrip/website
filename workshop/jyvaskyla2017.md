@@ -14,9 +14,9 @@ More details are provided by the local organizers [here](http://cibr.jyu.fi/en/t
 
 ## How should you prepare for the workshop?
 
-`<note important>`
+<div class="important">
 In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
-`</note>`
+</div>
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
 
@@ -31,9 +31,9 @@ The content of the shorter second lecture is also covered in the first, but pres
 
 For most of the hands-on session, we will create some simulated data to learn and understand about some basic connectivity measures. We will also process some real data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours).
 
-`<note important>`
+<div class="important">
 So overall there is about 2 to 5 hours of preparation required from you prior to the workshop!
-`</note>`
+</div>
 
 ## Getting started with the hands-on sessions
 
@@ -43,11 +43,11 @@ In order to get started, and ensure that all paths are set correctly, after you 
 
 Next, the hands-on sessions are pretty self explanatory. The tutorials contain quite some text to read, providing background, and then some sections of MATLAB code, which you are to execute on the command line. The most efficient way to do this, is to copy-and-paste the sections of MATLAB code into a MATLAB-script (for novices: this is a text file that you can edit, and from which you can easily execute code). If you are unsure about how to do this, ask a knowledgeable colleague, or one of the tutors.
 
-`<note warning>`
+<div class="warning">
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Furthermore, please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).
-`</note>`
+</div>
 
 *  morning
     * 1h Lecture on some aspects related to connectivity analysis on M/EEG data. Measures of directed interactions, interpretational issues, and howto's.

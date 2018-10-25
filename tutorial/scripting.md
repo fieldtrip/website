@@ -57,9 +57,9 @@ As already said, FieldTrip is most efficiently used by calling its functions wit
 
 Make sure you save the filename identical as the function name, i.e. MyOwnFunction, and to save it in your personal folder dedicated to your own functions and scripts.
 
-`<note warning>`
+<div class="warning">
 Do not save your own functions/scripts in the FieldTrip folder! This will not help you to organize your own functions - the number of functions will grow exponentially. Also, it makes it harder to update your FieldTrip folder.
-`</note>`
+</div>
 
 Having saved your function in a folder of your MATLAB path you can, from within any script or from the command line, use your function. In our example ` MyOwnFunction(4) ` will give you the answer ` 2 ` To put the answer in a variable for storage or future use you need to call something like ` output = MyOwnFunction(4) `
 

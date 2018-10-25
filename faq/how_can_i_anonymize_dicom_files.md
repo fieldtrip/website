@@ -8,9 +8,11 @@ tags: [faq, mri, anonymize, sharing]
 
 DICOM files contain a lot of header details that might provide information about your subject, such as the name and date of birth, but also the date and time at which the scan was performed.
 
-`<note info>`Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images.
+<div class="warning">
+Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images.
 
-The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) or about imposing legal restrictions to prevent matching data against external databases. `</note>`
+The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) or about imposing legal restrictions to prevent matching data against external databases.
+</div>
 
 Since it is not easy to determine if there is potentially identifying data in the DICOM headers, many researchers choose to share the data in NIfTI format rather than DICOM format. The NIfTI format is used by most neuroimaging software anyway, and the NIfTI header is very simple and does not allow to store any identifying information. However, there are also situations where it is desired to share the original DICOM files.  
 
@@ -64,6 +66,6 @@ and the [dcmodify](http://support.dcmtk.org/docs/dcmodify.html) command
 
 to erase the specific tags. In this case the "PatientName" tag (0010,0010) is erased from the file. Note that this overwrites the existing file, but keeps a backup of the original. You may have to erase other fields as well.
 
-`<note warning>`
+<div class="warning">
 The help of dcmodify suggests that "-ep" or "--erase-private" can be used to erase private data, but this is **not** the personal data of the subject, but rather header information that is system/software specific and not shared between different DICOM systems.
-`</note>`
+</div>

@@ -3,12 +3,12 @@ title: Redesign and implement a common statistical backend for various data type
 layout: default
 ---
 
-`<note warning>`
+<div class="warning">
 
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
 
 The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-`</note>`
+</div>
 
 # Redesign and implement a common statistical backend for various data types
 

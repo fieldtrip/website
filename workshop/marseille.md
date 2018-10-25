@@ -19,9 +19,9 @@ Please download the ft_connectivitysimulation data here: {{:workshop:data.mat|da
 
 ## How should you prepare for the workshop?
 
-`<note important>`
+<div class="important">
 In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
-`</note>`
+</div>
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
 
@@ -36,9 +36,9 @@ The content of the shorter second lecture is also covered in the first, but pres
 
 In the first workshop hands-on session we will start with preprocessing MEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction) and you should go through the [MEG preprocessing tutorial](/tutorial/eventrelatedaveraging). Depending on your understanding of MATLAB and MEG, you can **simply read** the preprocessing tutorial (which will take you 30 minutes) or download the example data and **go through it step by step** (which will take you 2 hours).
 
-`<note important>`
+<div class="important">
 So over all there is about 2 to 5 hours of preparation required from you prior to the workshop!
-`</note>`
+</div>
 
 ## Program
 
@@ -96,13 +96,13 @@ If you work on your own lapto
  2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Put Subject01.zip in a directory called 'tutorial'.
 
-`<note warning>`
+<div class="warning">
 Depending on the unzip program you are using (e.g. Winrar), the name
 of the zip file might also appear as directiory, resulting in
 path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the
 fieldtrip directory in a fieldtrip directory. Please fix that by
 moving all files one level up.
-`</note>`
+</div>
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
 
@@ -111,11 +111,11 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-`<note warning>`
+<div class="warning">
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).
-`</note>`
+</div>
 
 The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes. The addpath(pwd) statement adds the

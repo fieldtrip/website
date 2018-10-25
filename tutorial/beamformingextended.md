@@ -118,7 +118,7 @@ If the yellow-greyish brain shows up in the subjects heads, everything went fine
 
 `<note>`
 You might wonder why the anatomical MRI shows upside down: this is a [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
-`</note>`
+</div>
 
 Now prepare the head model from the segmented brain surfac
 
@@ -130,7 +130,7 @@ Note that we call the headmodel on some occasions volume conduction model, do no
 
     save hdm hdm
 
-`<note important>`
+<div class="important">
 If you want to do a source reconstruction of EEG data, you have to pay special attention to the  referencing. The forward model will be computed with a common average reference [*], i.e. the mean value of the forward model over all electrodes is zero. Consequently, this also has to hold for your data.
 
 Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference.
@@ -138,13 +138,13 @@ Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft
 Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.   
 
 [*] except in some rare cases, like with bipolar iEEG electrode montages
-`</note>`
+</div>
 
 #### Exercise: head model
 
-`<note exercise>`
+<div class="exercise">
 Why might a single sphere model be inadequate for performing beamformer estimates?
-`</note>`
+</div>
 
 ### Computing the sourcemodel
 
@@ -191,9 +191,10 @@ When all these align up well, we have already have the first half of the ingredi
 
 #### Exercise: averaging over subjects
 
-`<note exercise>`
+<div class="exercise">
 What would be the consequence of averaging over subject specific grids?
-`</note>`
+</div>
+
 ## Localization of sources of oscillatory gamma-band activity
 
 The aim is to identify the sources of oscillatory activity in the gamma band. In the section time-frequency analysis we have identified the frequency band around 40 Hz to 70 Hz with a center frequency of about 55 Hz. We seek to compare the activation during the post-stimulus interval to the activation during the pre-stimulus interval. We will use  **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. Remember that the length of each data piece has to be the length of a fixed integer number of oscillatory cycles. Here we select a time window of 0.8s, which allows for an integer amount of cycles: 0.8 s*55 Hz = 44 cycles. Thus, the pre-stimulus time-window ranges from -0.8 s to 0.0 s and the post-stimulus interval between 0.3 s to 1.1 s (see Figure 1).
@@ -204,9 +205,9 @@ The aim is to identify the sources of oscillatory activity in the gamma band. In
 
 #### Exercise: data length
 
-`<note exercise>`
+<div class="exercise">
 Why does the length of each data piece has to have the length of a fixed number of oscillatory cycles?
-`</note>`
+</div>
 
 ### Time windows of interest
 
@@ -314,9 +315,9 @@ The purpose of cfg.fixedori is that we only keep the largest of the three dipole
 
 #### Exercise: imaginary numbers
 
-`<note exercise>`
+<div class="exercise">
 What would keeping an imaginary-valued filter imply for the mapping from sources to sensors?
-`</note>`
+</div>
 
 ### Plotting sources of oscillatory gamma-band activity
 
@@ -372,33 +373,29 @@ Congratulations, you successfully beamed visual gamma!
 
 #### Exercise: plotting options
 
-`<note exercise>`
+<div class="exercise">
 The 'slice' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 
-`<note hint>` Use these settings for 'surface' plottin
+Use these settings for 'surface' plotting
 
     cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat';
     cfg.surfdownsample = 10;
-`</note>`
-
-`</note>`
+</div>
 
 #### Exercise: determining anatomical labels
 
-`<note exercise>`
+<div class="exercise">
 If you were to name the anatomical label of the source of this visual gamma, what you say? What plotting method is most appropriate for this?
 
-`<note hint>` With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'.
-`</note>`
-
-`</note>`
+With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'.
+</div>
 
 #### Exercise: regularization
 
-`<note exercise>`
+<div class="exercise">
 The regularization parameter was lambda = '5%'. Change it to 0 or to '10%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
-`</note>`
+</div>
 ## Localization of cortical sources that are coherent with the EMG
 
 As explained for this data in [ the sensor analysis tutorial](/tutorial/sensor_analysis), the subjects had to extend both their wrists after cue onset, producing a strong beta-band coherence between some MEG and EMG sensors. You already localized the sensor location of this coherence in the above linked tutorial. In order to localise the neuronal sources which are coherent with the EMG, we can apply beamformers to the data. In this example, we are again going to use the DICS algorithm to estimate the activity of the neuronal sources and to subsequently estimate the coherence with the EMG. In order to achieve this, we now need an estimate of the cross-spectral density between all MEG-channel combinations, and between the MEG-channels and the EMG, at a frequency of interest. This requires the preprocessed data, see above, or download from [the FieldTrip ftp server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/subjectK.mat).
@@ -444,9 +441,9 @@ This step requires the subject's head- and sourcemodel that we both computed abo
     cfg.grid            = sourcemodel;
     source_coh_lft      = ft_sourceanalysis(cfg, freq_csd);
 
-`<note hint>`
+<div class="note">
 When you input the sourcemodel on which you have **not** already computed the leadfield matrices, **[ft_sourceanalysis](/reference/sourceanalysis)** will compute the leadfield matrices itself first.
-`</note>`
+</div>
 
 ### Plotting cortico-muscular coherent sources
 
@@ -493,13 +490,16 @@ Since the data is expressed in MNI coordinates, you can also make a surface rend
 
 #### Exercise: anatomical labeling
 
-`<note exercise>`
+<div class="exercise">
 Determine the anatomical location of the coherence peak. How does this result compare to coherence with the right EMG?
-`</note>`
+</div>
 
 #### Exercise: Comparison with sensor level analysis
 
-`<note exercise>` How do all these beamforming result relate to the [sensor level analysis](/tutorial/sensor_analysis)? `</note>`
+<div class="exercise">
+How do all these beamforming result relate to the [sensor level analysis](/tutorial/sensor_analysis)?
+</div>
+
 ## Summary
 
 We demonstrated how to apply the DICS beamformer algorithm in the frequency domain. The essence of a source reconstruction model requires to compute a head- and sourcemodel to derive the leadfields. Here, we showed how to compute a head model (single shell) and forward lead field based on an anatomical template in MNI space. Then, we applied the beamformer to retrieve activity on source level. We interpolated the source level result and plotted it against the template anatomy. Subsequently, options for plotting on slices, orthogonal views, or on the surface were shown. In a next step, we discussed how to identify sources of cortico-muscular coherence using the nearly exact pipeline as for ordinary source reconstruction.

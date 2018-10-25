@@ -9,33 +9,33 @@
     margin-bottom: 15px;
     padding: 4px 12px;
     background-color: #eeeeff;
-    border-left: 6px solid #ccccff;
+    border-left: 6px solid #ddddee;
 }
 
-.danger {
+.note  {
     margin-bottom: 15px;
     padding: 4px 12px;
-    background-color: #ffdddd;
-    border-left: 6px solid #f44336;
+    background-color: #eeeeff;
+    border-left: 6px solid #ddddee;
 }
 
-.success {
+.important {
     margin-bottom: 15px;
     padding: 4px 12px;
-    background-color: #ddffdd;
-    border-left: 6px solid #4caf50;
+    background-color: #ffffcc;
+    border-left: 6px solid #eeeebb;
 }
 
-.info {
+.tip {
     margin-bottom: 15px;
     padding: 4px 12px;
-    background-color: #e7f3fe;
-    border-left: 6px solid #2196f3;
+    background-color: #deffde;
+    border-left: 6px solid #cdeecd;
 }
 
 .warning {
     margin-bottom: 15px;
     padding: 4px 12px;
-    background-color: #ffffcc;
-    border-left: 6px solid #ffeb3b;
+    background-color: #ffdede;
+    border-left: 6px solid #eecdcd;
 }

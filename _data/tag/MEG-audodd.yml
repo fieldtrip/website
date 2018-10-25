@@ -4,18 +4,18 @@
 - name:  FieldTrip workshop in Aarhus
   link:  /workshop/aarhus2015
 
-- name:  Table of contents
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /tutorial/aarhus/beamformingerf
 
-- name:  Table of contents
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
-- name:  Table of contents
+- name:  Dipole fitting of combined MEG/EEG data
   link:  /tutorial/natmeg/dipolefitting
 
-- name:  Table of contents
+- name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/natmeg/timefrequency
 
-- name:  Table of contents
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/natmeg/beamforming
 

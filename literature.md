@@ -12,7 +12,7 @@ If you have used FieldTrip for the analysis that you are reporting on in a scien
 
 `<note>`
 Oostenveld, R., Fries, P., Maris, E., Schoffelen, JM (2011) *FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.* Computational Intelligence and Neuroscience, Volume 2011, doi:10.1155/2011/156869
-`</note>`
+</div>
 
 The FieldTrip reference paper has been published in an [Open Access journal](http://en.wikipedia.org/wiki/Open_access_journal) and you can get the {{:oostenveld_et_al_2011_computational_intelligence_and_neuroscience.pdf|PDF version here}} or read  the [HTML version here](http://www.hindawi.com/journals/cin/2011/156869).
 

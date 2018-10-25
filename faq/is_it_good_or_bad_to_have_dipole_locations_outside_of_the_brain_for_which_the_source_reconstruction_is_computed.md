@@ -3,9 +3,9 @@ title: Is it good or bad to have dipole locations outside of the brain for which
 layout: default
 ---
 
-`<note important>`
+<div class="important">
 This page is under construction/discussion
-`</note>`
+</div>
 
 ##  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed? 
 

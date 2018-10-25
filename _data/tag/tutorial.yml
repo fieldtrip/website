@@ -31,7 +31,7 @@
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
-- name:  Table of contents
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /tutorial/aarhus/beamformingerf
 
 - name:  Cluster-based permutation tests on event related fields
@@ -58,19 +58,19 @@
 - name: 
   link:  /tutorial/sleep_analysis
 
-- name:  Table of contents
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
-- name:  Table of contents
+- name:  Dipole fitting of combined MEG/EEG data
   link:  /tutorial/natmeg/dipolefitting
 
-- name:  Table of contents
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/statistics
 
-- name:  Table of contents
+- name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/natmeg/timefrequency
 
-- name:  Table of contents
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/natmeg/beamforming
 
 - name:  Preprocessing of EEG data and computing ERPs
@@ -154,7 +154,7 @@
 - name:  Can I get an offline version of the wiki documentation?
   link:  /faq/can_i_get_an_offline_version_of_the_wiki_documentation
 
-- name:  Table of contents
+- name:  Overview of all tutorials
   link:  /tutorial
 
 - name:  Getting started with real-time analysis for BCI/neurofeedback

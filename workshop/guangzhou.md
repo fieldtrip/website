@@ -69,13 +69,13 @@ downloaded but we strongly recommend to download before the workshop clicking at
  2.  Unzip the fieldtrip-20160818.zip file.
  3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
-`<note warning>`
+<div class="warning">
 Depending on the unzip program you are using (e.g. Winrar), the name
 of the zip file might also appear as directiory, resulting in
 path_to_directory/fieldtrip-20160818/fieldtrip-20160818, i.e. the
 fieldtrip directory in a fieldtrip directory. Please fix that by
 moving all files one level up.
-`</note>`
+</div>
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
 
@@ -84,11 +84,11 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-`<note warning>`
+<div class="warning">
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
-`</note>`
+</div>
 
 The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes. The addpath(pwd) statement adds the

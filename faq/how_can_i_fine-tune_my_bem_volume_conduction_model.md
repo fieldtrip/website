@@ -22,7 +22,7 @@ To make the highest quality BEM volume conduction model, FieldTrip offers a numb
 
 `<note>`
 We will refrain from using "head model" in the subsequent explanation, since each of the representations can be thought of as a "model describing the head". 
-`</note>`
+</div>
 
 ##  Converting anatomy to anatomy
 

@@ -56,4 +56,4 @@ With the code above the events (e.g. trigger codes) are not stored in the output
     save event.mat event
 
 i.e. and simply save the events to a MATLAB file for later reuse.
- `</note>`
+ </div>

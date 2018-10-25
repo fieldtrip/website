@@ -3,13 +3,13 @@ title: Header
 layout: default
 ---
 
-`<note warning>`
+<div class="warning">
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
 
 After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
 
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-`</note>`
+</div>
 
 see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2753
 
@@ -85,7 +85,7 @@ The resulting transform matrix can be multiplied with the data to obtain the con
 I think we actually *do* need a high-level function dealing directly with the data. Otherwise the channel labels will not be updated respectively. The ft_convertODs function can, however, serve as the low-level implementation.
 
 Update: We might overcome this problem by having the function return a montage, which contains the new channel labels and the mixing coefficient of the channels
-`</note>`
+</div>
 
 ## Preprocessing
 

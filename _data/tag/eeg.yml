@@ -13,7 +13,7 @@
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
-- name:  Table of contents
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /tutorial/aarhus/beamformingerf
 
 - name:  Cluster-based permutation tests on event related fields
@@ -34,19 +34,19 @@
 - name:  Preprocessing - Reading continuous EEG data
   link:  /tutorial/continuous
 
-- name:  Table of contents
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
-- name:  Table of contents
+- name:  Dipole fitting of combined MEG/EEG data
   link:  /tutorial/natmeg/dipolefitting
 
-- name:  Table of contents
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/statistics
 
-- name:  Table of contents
+- name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/natmeg/timefrequency
 
-- name:  Table of contents
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/natmeg/beamforming
 
 - name:  Preprocessing of EEG data and computing ERPs

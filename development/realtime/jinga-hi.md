@@ -35,7 +35,7 @@ The UDP network interface in MATLAB is implemented in the freely available [TCP/
 
 `<note>`
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less  system resources. 
-`</note>`
+</div>
 
 ## Standalone interface with jaga2ft
 

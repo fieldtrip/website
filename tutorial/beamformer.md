@@ -22,11 +22,11 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/shared/virtual_sensors) for an example of this).
 
-`<note exercise>`
+<div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
 {{youtube>Ez72OFjSABs}}
-`</note>`
+</div>
 
 ## Background
 
@@ -84,9 +84,9 @@ The null hypothesis for both options within (1) is that the data in both conditi
 
 ### Exercise 1: data length
 
-`<note exercise>`
+<div class="exercise">
 Why is it important that the length of each data piece is the length of a fixed number of oscillatory cycles?
-`</note>`
+</div>
 
 ## Calculating the cross spectral density matrix
 
@@ -131,7 +131,7 @@ Now prepare the head model from the segmented brain surfac
     cfg.method = 'singleshell';
     headmodel = ft_prepare_headmodel(cfg, segmentedmri);
 
-`<note important>`
+<div class="important">
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference [*], i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
 Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
@@ -139,20 +139,21 @@ Prior to doing the spectral decomposition with ft_freqanalysis you have to ensur
 Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.   
 
 [*] except in some rare cases, like with bipolar iEEG electrode montages
-`</note>`
+</div>
 
 ### Exercise 2: head model
 
-`<note exercise>`
+<div class="exercise">
 Why might a single sphere model be inadequate for performing beamformer estimates?
-`</note>`
+</div>
 
 ### Compute lead field
 
 The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
-`<note important>`Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields.
-`</note>`
+<div class="important">
+Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields.
+</div>
 
     cfg                 = [];
     cfg.grad            = freqPost.grad;
@@ -213,9 +214,9 @@ Plot the interpolated data:
 Notice that the power is strongest in the center of the brain. There are several ways of circumventing the noise bias towards the center of the head which we will show below.
 ### Exercise 3: center of head bias
 
-`<note exercise>`
+<div class="exercise">
 Discuss why the source power is overestimated in the center of the brain.  Hint 1: what are the leadfield values in the center of the head? Why?  Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
-`</note>`
+</div>
 
 ### Neural Activity Index
 
@@ -246,9 +247,9 @@ Plot it:
 **//Figure 3; The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate.//**
 ### Exercise 4: lead field normalization
 
-`<note exercise>`
+<div class="exercise">
 Another option, besides contrasting to the noise estimate, is to normalize the lead field when you compute it (cfg.normalize='yes' in the call to ft_prepare_leadfield).  Recompute the lead field and source estimate this way and plot the result.
-`</note>`
+</div>
 
 ## Source Analysis: Contrast activity to another interval
 
@@ -322,15 +323,15 @@ Now plot the power ratios:
 **//Figure 4; sourceplot with method "slice" //**
 ### Exercise 5: comparing normalizations
 
-`<note exercise>`
+<div class="exercise">
 Compare figure 3 and 4. It appears that normalizing the power with the baseline activity result in fewer and more focal sources.  Why?
-`</note>`
+</div>
 
 ### Exercise 6: regularization
 
-`<note exercise>`
+<div class="exercise">
 The regularization parameter was cfg.dics.lambda = '5%'. Change it to 0 or to '10%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
-`</note>`
+</div>
 
 ## Plotting options
 

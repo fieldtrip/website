@@ -21,9 +21,9 @@ Jörn Horschig, Jan-Mathijs Schoffelen, Diego Lozano-Soldevilla, Eelke Spaak and
 
 For the hands-on sessions you have to start MATLAB through the shortcut on the workstation's Desktop. 
 
-`<note warning>`
+<div class="warning">
 Please start MATLAB directly from the Desktop: this ensures all paths to be correct.
-`</note>`
+</div>
 
 ### Program
 

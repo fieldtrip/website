@@ -9,7 +9,7 @@ We use the FieldTrip dashboard in development and for maintaining the quality of
 
 `<note>`
 If you suspect that there is an problem with the FieldTrip code, the best way for you to report is is to post it on [github](https://github.com/fieldtrip/fieldtrip/issues) and to contribute a (small) test script that helps us to reproduce the problem.
-`</note>`
+</div>
 
 All functions in the test directory are executed regularly. If there are problems with the test scripts, an email sent to the main developers.
 

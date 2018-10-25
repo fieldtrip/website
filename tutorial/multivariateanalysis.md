@@ -104,17 +104,16 @@ In practice, we may want to average the parameters over folds to get an average 
 
 #### Exercise 1
 
-`<note exercise>`  
+<div class="exercise">
+Explain which information the contingency matrix gives you, which the accuracy does not.  
 
-* Explain which information the contingency matrix gives you, which the accuracy does not.  
+Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
 
-* Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
+Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of *overfitting* and *generalization* in your explanation.
 
-* Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of *overfitting* and *generalization* in your explanation.
+Suppose you try multiple different classification procedures and find at some point that you reach a classification performance that is significantly better than chance at p=0.05. Should you trust this result? Why (not)?
+</div>
 
-* Suppose you try multiple different classification procedures and find at some point that you reach a classification performance that is significantly better than chance at p=0.05. Should you trust this result? Why (not)?
-
-`</note>`
 ### Sensor level classification in the frequency domain
 
 We now try to classify the same data in the frequency domain. Therefore, we need to perform a frequency analysis. Let's focus on the alpha band at the end of the attention period.
@@ -158,11 +157,9 @@ and we see a major improvement since we are focusing on the physiologically rele
 ![image](/media/tutorial/clf_2.png@200)
 #### Exercise 2
 
-`<note exercise>`
-
-* Rerun the previous cross-validation with 'cfg.nfolds=2'. Explain the difference and motivate why it is important to perform cross-validation instead of just dividing the data into one training and one test set.
-
-`</note>`
+<div class="exercise">
+Rerun the previous cross-validation with 'cfg.nfolds=2'. Explain the difference and motivate why it is important to perform cross-validation instead of just dividing the data into one training and one test set.
+</div>
 
 ### Dimensionality reduction and feature selection
 
@@ -196,7 +193,7 @@ If we look at the weights then we find that just a very small number of features
 
 #### Exercise 3
 
-`<note exercise>`
+<div class="exercise">
 Use MATLAB to compute the number of non-zero elements in stat.model{1}.weights.
 
 Why is it useful to have a representation in terms of a small number of non-zero elements?
@@ -208,8 +205,7 @@ Alpha is a free parameter in our model. How would you determine the optimal sett
 If we use more and more features then classification performance will first go up but eventually starts to degrade. Explain why this may happen.
 
 Suppose we wish to select the optimal feature subset by testing all possible subsets. How many subsets do we need to test when we have *n* features in total?
-
-`</note>`
+</div>
 
 ## Conclusion
 

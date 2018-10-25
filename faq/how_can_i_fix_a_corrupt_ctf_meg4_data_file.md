@@ -117,6 +117,6 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
         fclose(infile);
     end;
  
-`<note important>`
+<div class="important">
 This script will backup your data by appending the extension '.old'. Your newly obtained set of files might be truncated by a few bytes, so you might loose a little bit of data.
-`</note>`
+</div>

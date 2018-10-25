@@ -99,9 +99,9 @@ For the purpose of visualisation we internet the MNE results onto the replaced a
 
 #### Exercise 1
 
-`<note exercise>`
+<div class="exercise">
 You can play around with cfg.mne.lambda? Do you see the influence of different lambdas? 
-`</note>`
+</div>
 
 ## FEM
 
@@ -165,15 +165,15 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 
 #### Exercise 2
 
-`<note exercise>`
+<div class="exercise">
 Can you think of reasons why the dipoles are at different locations?
-`</note>`
+</div>
 
 #### Exercise 3
 
-`<note exercise>`
+<div class="exercise">
 Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the BEM forward model (e.g. changing conductivity values) and redo the inverse solution. If you need more input for this please ask us!
-`</note>`
+</div>
 ## Summary and suggested further reading
 
 In this tutorial we learned how solve the inverse problem. For this we used the preprocessed functional data and the forward model. The inverse techniques we used in this tutorial were "Dipole Fit" and "Minimum Norm Estimation". We used both techniques with the different choices of for the forward model BEM and FEM. 

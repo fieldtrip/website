@@ -143,7 +143,7 @@ To identify periods of wake (including brief arousals), non-REM and REM states d
 
 `<note>`
 Please note that due to the reduced sample rate of 128 Hz we cannot use the typical frequency range to better detect EMG, however this should suffice for our case.
-`</note>`
+</div>
 
 We now use  **[ft_artifact_muscle](/reference/ft_artifact_muscle)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [ automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection )).
 
@@ -164,10 +164,10 @@ We want to be very cautious with excluding and exclude more than we must since E
 
 #### Exercise 1
 
-`<note exercise>`
+<div class="exercise">
 Explore and find the best cutoff in z-values (i.e. standard deviations) to exclude most of the artifacts for this subject!
 Typically EMG higher than 100 microVolts are best excluded. Note that we exclude the data on the whole data length, i.e. as one big trial.
-`</note>`
+</div>
 
 ![image](/media/tutorial/sleep/ft_artifact_muscle_gui.png)
 
@@ -189,9 +189,9 @@ For the epoched data we can do a similar EMG artifact identification as abov
 
 #### Exercise 2
 
-`<note exercise>`
+<div class="exercise">
  Compare the artifact begin and end samples when detected in the continuous data and when detected in the epoched data. What do you notice?
-`</note>`
+</div>
 
 Another indicator of wake periods (or REM sleep) is eye movement. In the EOG we observe different types of eye movements (blinks, normal, slow, and rapid eye movements). Therefore, we will next detect periods with increased EO
 
@@ -211,9 +211,9 @@ Another indicator of wake periods (or REM sleep) is eye movement. In the EOG we 
 
 #### Exercise 3
 
-`<note exercise>`
+<div class="exercise">
 Explore the right threshold for detecting all EOG artifacts. Again, the data is displayed as one single long trial.
-`</note>`
+</div>
 
 	  cfg = ft_artifact_eog(cfg, data_continuous);
 
@@ -519,9 +519,9 @@ View it in the time-resolved spectral estimate each sample corresponding to a 30
 ![image](/media/tutorial/sleep_databrowser_hypnogarm_annotation.png@600)
 #### Exercise 4
 
-`<note exercise>`
+<div class="exercise">
 Optional Explore how the prescored hypnogram looks like in the databrowser with all the sleep stages (non only non-REM, REM and Wake but also S1, S2, and SWS). You can switch the 'if false' to 'if true' above.
-`</note>`
+</div>
 
 View it then together with the original data after adjusting the hypnograms from the 30-second time scale to the 128 Hz sampling rate.
 
@@ -596,7 +596,7 @@ Safe when (the samples of the R-waves occur for later
 The R-peaks are difficult to see, since there are so many (>35000 heart beats during one night) use the MATLAB magnifying glass to zoom in.
 Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards).
 In this case the signal could be inverted by multiplying this channel's data with -1. For example: data_continuous.trial{1}(4,:) = -1*data_continuous.trial{1}(4,:)
-`</note>`
+</div>
 
 Check if the detected peaks are good estimates of the R-wave in the **[ft_databrowser](/reference/ft_databrowser)**
 
@@ -703,9 +703,9 @@ Candidates for slow waves or sleep spindle events can be detected using **[ft_ar
 
 #### Exercise 5
 
-`<note exercise>`
+<div class="exercise">
 The threshold here is key for the proper detection, the value here is based on experience. Try to use a more strict (higher) threshold and see if the results later on change.
-`</note>`
+</div>
 
 Safe the detected candiate events for later with their beginnings and ends (spindle_detected) and calculating their duration.
 
@@ -786,7 +786,7 @@ View the event average signal timelocked to the trough.
 `<note>`
 Does the amplitude match to the definition of slow waves (minimum amplitude of 75 microVolts)? The signal before sleep spindles starts with a negative potential and at the end of spindles is more positive, what can this tell us of the temporal occurrence of sleep spindles with respect to slow waves?
 The polarity of the signal matters. Does the activity that we timelock give us confidence that the data was actually recroded or read in with the right polarity of the EEG channels, for example sometimes channels are unintentionally inverted, that is slow waves, spindles or epileptic spikes etc. would appear in the "wrong" direction because we then detect them here by the negative trough of the signal. This also depends on the referencing of the electrodes for used channel.
-`</note>`
+</div>
 
 	figure
 	cfg        = [];
@@ -841,27 +841,27 @@ View the detected events in the orginal data.
 
 #### Exercise 6
 
-`<note exercise>`
+<div class="exercise">
 Repeat the above analysis for event detection for sleep spindles when you did slow waves and vice versa. For this you need to switch between **two** last occurrances from or to "if true" or "if false".
-`</note>`
+</div>
 
 #### Exercise 7
 
-`<note exercise>`
+<div class="exercise">
 View the outcomes of the slow-wave and spindle detection in the same window of **[ft_databrowser](/reference/ft_databrowser)**
-`</note>`
+</div>
 
 #### Exercise 8
 
-`<note exercise>`
+<div class="exercise">
 Repeat the tutorial or parts of it with the other dataset of Subject05, are there any differences in the data and the detection of events?
-`</note>`
+</div>
 
 #### Exercise 9
 
-`<note exercise>`
+<div class="exercise">
 Try to visualize an average QRS complex around the R-wave like was done for sleep slow waves and spindles. What kind of epochs/artifacts would you exclude here from the analysis?
-`</note>`
+</div>
 
 ## Summary and suggested further reading
 

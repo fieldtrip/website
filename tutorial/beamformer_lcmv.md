@@ -10,14 +10,14 @@ tags: [fixme]
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-`<note warning>`
+<div class="warning">
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete.
 
 See http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718 for the progress.
 
 Once this tutorial is completed, it will be listed in the tutorial section in the menu. Also once complete, it will receive the tags *tutorial meg source headmodel mri lcmv beamformer* to link it to other pages.
 
-`</note>`
+</div>
 
 # Localizing sources using beamformer techniques
 
@@ -167,7 +167,7 @@ Now prepare the head model from the segmented brain surfac
 	vol                = ft_prepare_headmodel(cfg, seg);
 	vol                = ft_convert_units(vol, 'cm'); % mm to cm, since the grid will also be expressed in cm
 
-`<note important>`
+<div class="important">
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference [*], i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
 Prior to averaging the data with ft_timelockanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
@@ -175,7 +175,7 @@ Prior to averaging the data with ft_timelockanalysis you have to ensure with ft_
 Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.   
 
 [*] except in some rare cases, like with bipolar iEEG electrode montages
-`</note>`
+</div>
 
 ### Source model
 

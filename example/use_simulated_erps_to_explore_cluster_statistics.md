@@ -14,7 +14,7 @@ Maris E., Oostenveld R. //[Nonparametric statistical testing of EEG- and MEG-dat
 
 and look in the [reference](/references_to_implemented_methods) section for more literature pointers.
 
-`</note>`
+</div>
 
 	
 	

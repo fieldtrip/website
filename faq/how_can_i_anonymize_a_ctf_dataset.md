@@ -16,15 +16,15 @@ Make sure the savePath has an unambiguous name, so that you don't mix up your da
 
 Fields that are blanked out: purpose, site, institute, operator name, run title and description, collection description. The subject ID is set to Anon-1. The collection date and time are changed to 11/11/1911, 11:11.
 
-`<note warning>`
+<div class="warning">
 newDd version 5.4.0-linux-20061212 is known to have a bug that causes the collection date and time not to be cleared. To remove these from your recording,  you can use the remove_ctf_datetime script available [here](https://github.com/robertoostenveld/bids-tools).
-`</note>`
+</div>
 
 It is advisable to also convert the headlocalizer datasets, which are inside the SubjectXX.ds and are named hz.ds, hz2.ds, etc.
 
-`<note important>`
+<div class="important">
 After creating the anonymous dataset, you should delete the **defaults.de** ascii file that is present in the `<savePath>`, because that contains some information that can be traced back to the original file location on disk (which may include your name or the name of the subject).
-`</note>`
+</div>
 
 An example use is (note that this should all be on a single line)
 

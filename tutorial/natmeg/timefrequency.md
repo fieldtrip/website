@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Time-frequency analysis of combined MEG/EEG data
 layout: default
 tags: [tutorial, natmeg, meg+eeg, frequency, MEG-audodd]
 ---
@@ -16,11 +16,11 @@ tags: [tutorial, natmeg, meg+eeg, frequency, MEG-audodd]
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's EEG-MEG data using a Hanning window. This tutorial also shows how to visualize the results, which will now have an extra dimension beyond time and sensor: frequency. We will pay special attention to differences between EEG and MEG, which will shown themselves not only in visualizing the results, but also in the effects of having a reference in EEG, i.e. of having relative signals versus absolute signals in MEG. We will also compare conditions in the frequency domain, looking at differences in beta-rebound after left versus the right hand responses. Familiarize yourself with the paradigm and data we recorded by re-reading [the example dataset description](/tutorial/natmeg/dataset)
 
-`<note exercise>`
+<div class="exercise">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {{youtube>QLvsa1r1Voc}}
-`</note>`
+</div>
 
 ## Background
 
@@ -159,9 +159,9 @@ From Figure 4 one can see that there is an increase in power around 15-25 Hz in 
 
 *Figure 5; A topographic representation of the time-frequency representations of beta (15-25 Hz) after (0.5-1.0s) left-finger response, obtained using ft_topoplotTFR.*
 
-`<note exercise>`
+<div class="exercise">
 So what do you think we are looking at? I guess the introduction gave it away, but how would you argue for it?
-`</note>`
+</div>
 
 Perhaps we should now also look at the beta-rebound after a response of the other (right) hand? We can use the same parameters to make them comparabl
 
@@ -211,9 +211,9 @@ Until now we have been using an (absolute) baseline. However, because we have tw
 
 We will now proceed with doing the time-frequency analysis in EEG. Note we are using mainly similar parameters as in the MEG analysis.
 
-`<note exercise>`
+<div class="exercise">
 Keep an eye open for the differences in processing and visualizing EEG.
-`</note>`
+</div>
 
 ### Read-in trials
 
@@ -348,9 +348,9 @@ Great! Now lets plot the EEG and see what we get.
 
 *Figure 9; Frequency topography (EEG) calculated using ft_freqanalysis. Plotting was done with ft_topoplotTFR.*
 
-`<note exercise>`
+<div class="exercise">
 Hmmm... What do you think? A bit strange, right? Is this real, or perhaps an artifact? Try to find it out using the interactive mode.
-`</note>`
+</div>
 
 In fact, we are now encountering an aspect of EEG recordings we haven't seen in MEG before. Take a look what happens when instead of an absolute baseline we use a relative baseline.
 
@@ -370,11 +370,11 @@ In fact, we are now encountering an aspect of EEG recordings we haven't seen in 
 
 *Figure 10; Frequency topography (EEG) calculated using ft_freqanalysis. Plotting was done with **[ft_topoplotTFR.*
 
-`<note exercise>`
+<div class="exercise">
 Why this difference?
 To round up our comparison between EEG and MEG, lets plot the difference between conditions.
 This will at the same time solved the above problem. Can you say why?
-`</note>`
+</div>
 
 	cfg = [];
 	cfg.parameter    = 'powspctrm';
@@ -424,9 +424,9 @@ Finally, lets take a look at how the topography looks when we use the MEG planar
 
 *Figure 12; A topographic representation of the time-frequency representations of the relative change in beta (15-25 Hz) power, for gradiometers, after 0.5-1.0s, obtained using ft_topoplotTFR.*
 
-`<note exercise>`
+<div class="exercise">
 Now that looks a bit funky, right? Do you know why?
-`</note>`
+</div>
 
 In fact, we are now plotting the two different gradiometers together. You can see the channel locations being in pairs, one above the other. They are in reality, however, at the same location but oriented differently - radially and axially *with respect to the surface of the helmet*. They can thereby pick up both radial orientations of the magnetic fields. To use them properly for the purpose of plotting, we should therefor combine them first, adding their fields.
 
@@ -481,11 +481,11 @@ Finally, let's plot the difference between conditions using the combined gradiom
 
 We have now reached the end of the MEG-EEG part of the tutorial.
 
-`<note exercise>`
+<div class="exercise">
 
 Please take some time to reflect on the differences and similarities between EEG and MEG in frequency analysis. Please write down any questions you might have so that we can discuss them together.
 
-`</note>`
+</div>
 
 ## Summary and suggested further reading
 

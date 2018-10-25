@@ -52,10 +52,9 @@ Plot the data for the first trial, 130th channe
 
     plot(data_left.time{1}, data_left.trial{1}(130,:));
 
-`<note exercise>`
-
-*  Which channel is the 130th channel?
-`</note>`
+<div class="exercise">
+Which channel is the 130th channel?
+</div>
 
 Time point 0 in all trials corresponds to the onset of the visual stimulation. Trials end when the visual stimulus changed its speed, which is when the subject had to move their wrist (so the data for the actual movement is not in the trials). The visual stimulus speed change happened at an unpredictable time after t=0, so not all trials are the same length. To see this, plot some trials like thi
 
@@ -128,14 +127,14 @@ Again, you can select a time range and click it to bring up a topographical plot
 
 *Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset.*
 
-`<note exercise>`
+<div class="exercise">
+Given that the CTF system uses axial gradiometers (i.e. detecting the magnetic gradient orthogonal to the scalp), what electrical dipole configuration would explain the observed field pattern in the above figure?
 
-*  Given that the CTF system uses axial gradiometers (i.e. detecting the magnetic gradient orthogonal to the scalp), what electrical dipole configuration would explain the observed field pattern in the above figure?
+Feel free to click around a bit in the multi- and singleplots to explore the characteristics of the ERF.
 
-*  Feel free to click around a bit in the multi- and singleplots to explore the characteristics of the ERF.
+Use the cfg.baseline option in ft_multplotER to correct the ERF for the baseline in the pre-stimulus interval.
+</div>
 
-*  Use the cfg.baseline option in ft_multplotER to correct the ERF for the baseline in the pre-stimulus interval.
-`</note>`
 ### The planar gradient
 
 The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-order axial gradiometer sensors that measure the gradient of the magnetic field in the radial direction, i.e. orthogonal to the scalp. Often it is helpful to interpret the MEG fields after transforming the data to a planar gradient configuration, i.e. by computing the gradient tangential to the scalp. This representation of MEG data is comparable to the field measured by planar gradiometer sensors. One advantage of the planar gradient transformation is that the signal amplitude typically is largest directly above a source, whereas with axial gradient the signal amplitude is largest away from the source.
@@ -168,9 +167,12 @@ Note that we create a 'neighbours' structure before calling **[ft_megplanar](/re
     cfg.layout          = 'CTF151_helmet.mat';
     ft_multiplotER(cfg, tl_plancmb);
 
-`<note warning>`The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
+<div class="warning">
+The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
+
 Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/combineplanar_pipelineorder).
-`</note>`    
+</div>    
+
 ## Time-frequency analysis
 
 ### Background
@@ -248,10 +250,10 @@ Note the baseline and baselinetype parameters. These govern what baseline correc
 
 This is an interactive plot, so just as with the event-related part you can select sensors and click to get an average TFR. With this, you can select a time and frequency range and plot a topography.
 
-`<note exercise>`
+<div class="exercise">
 
 *  Click around the multiplot to explore the visual gamma response and its topography!
-`</note>`
+</div>
 
 ###  Overview of the conducted analysis
 
@@ -324,12 +326,11 @@ Again, this is an interactive plot, so click around it to get a nice overview of
 
 *Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG.*
 
-`<note exercise>`
+<div class="exercise">
+After exploring the coherence results when the reference channel is the left EMG, do the same for the right EMG (which is called 'EMGrgt'). What do you conclude?
 
-*  After exploring the coherence results when the reference channel is the left EMG, do the same for the right EMG (which is called 'EMGrgt'). What do you conclude?
-
-*  Try changing the cfg.tapsmofrq parameter in the **[ft_freqanalysis](/reference/ft_freqanalysis)** step. How does this affect the resulting coherence spectrum?
-`</note>`
+Try changing the cfg.tapsmofrq parameter in the **[ft_freqanalysis](/reference/ft_freqanalysis)** step. How does this affect the resulting coherence spectrum?
+</div>
 
 ## Summary and suggested further reading
 

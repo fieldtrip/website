@@ -33,4 +33,4 @@ Note that the "press a button to exit" statement is used to prevent the compiled
 
 `<note>`
 This is the strategy we also used for running the Human Connectome Project [megconnectome](https://github.com/Washington-University/megconnectome) analysis pipelines on the WashU compute cluster.   
-`</note>`
+</div>

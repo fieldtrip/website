@@ -54,4 +54,4 @@ When the databrowser window shows, you drag with your left-mouse button to selec
 
 `<note>`
 This has been implemented specifically for the [VideoMEG](https://github.com/andreyzhd/VideoMEG) software, but also works with audio and video recordings stored in another format as demonstrated above. For the VideoMEG system the synchronization between audio/video and MEG is realized by triggers that are sent by the VideoMEG to the MEG data stream.
-`</note>`
+</div>

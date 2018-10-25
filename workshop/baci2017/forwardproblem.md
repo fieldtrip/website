@@ -120,9 +120,9 @@ Visualize the mesh and the electrode
 	cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
 	headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
 
-`<note warning>`
+<div class="warning">
 In Windows the method 'dipoli' does not work. You can either load "headmodel_bem" and continue with this tutorial, or explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
-`</note>`
+</div>
 ##  7A. Align the electrodes
 
 If the electrodes are not well aligned with the mesh, we can realign them wit
@@ -268,8 +268,8 @@ We will use the sourcemodel already generated in 7A.
 
 ##  9B. Compute the leadfield
 
-`<note warning>`
-Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take too much time and memory. Load "headmodel_fem_tr". `</note>`
+<div class="warning">
+Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take too much time and memory. Load "headmodel_fem_tr". </div>
 
 	%% compute the transfer matrix
 	[headmodel_fem_tr, elec] = ft_prepare_vol_sens(headmodel_fem, elec); 

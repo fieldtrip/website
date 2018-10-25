@@ -32,7 +32,7 @@ Actually, the intention of 'when?' is 'what should you have done before asking a
 
 The better you describe the problem or state the question, the more likely you will get help. Better hereby does not mean more information. As being concise is a key skill of a scientist, show off by staying concise (but complete) when writing to the mailing list. Completeness of the question and background information is equally important though. This counts for all kind of questions, be it directly FieldTrip related or about anything else. A useful tip: Before sending your mail, read the message thoroughly and think whether all necessary information for a person naive to your question is included. Does it make sense what you wrote? Is there too much information? Remember that many people are busy and won't like having (a) long conversations asking you to provide more information and (b) reading through much more than 10 sentences per mail.
 
-`<note important>`
+<div class="important">
 If it comes to asking questions about FieldTrip including the following is a mus
 
 *  The cfg you used
@@ -43,7 +43,7 @@ If it comes to asking questions about FieldTrip including the following is a mus
 The cfg and data can be displayed in MATLAB using the display(variable_name) command. Call display(cfg) and display(data) and copy the answer over to include it in your mail.
 
 If you have data to share and it exceeds 1 MB, use a file hoster!
-`</note>`
+</div>
 
 ## Example message
 
@@ -56,7 +56,7 @@ Subject: HELP
 
  `<no name>`
 
-`</note>`
+</div>
 
 If this is your first mail, please introduce yourself shortly.
 
@@ -96,4 +96,4 @@ Best,
 
 MyName
 
-`</note>`
+</div>

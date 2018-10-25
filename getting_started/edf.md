@@ -6,9 +6,9 @@ tags: [edf, eeg, dataformat]
 
 # Getting started with EDF (European Data Format) data
 
-`<note info>`
+<div class="note">
 Please feel free to add information if you're using EDF data and want to share info with other FieldTrip users. Just click on "page tools, edit this page".
-`</note>`
+</div>
 
 ## Introduction
 

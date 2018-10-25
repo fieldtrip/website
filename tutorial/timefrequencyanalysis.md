@@ -20,11 +20,11 @@ Here, we will work on the MEG-language-semantics dataset, you can click [here](/
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](/#Summary and suggested further reading)).
 
-`<note exercise>`
+<div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
 {{youtube>vwPpSglPJTE}}
-`</note>`
+</div>
 
 ## Background
 
@@ -153,19 +153,19 @@ From Figure 4 one can see that there is an increase in power around 15-20 Hz in 
 
 ##### Exercise 1
 
-`<note exercise>`
+<div class="exercise">
 
 *  Plot the power with respect to a relative baseline (hint: use cfg.zlim = [0 2.0] and use the cfg.baselinetype option)
 
 *  How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline
-`</note>`
+</div>
 
 ##### Exercise 2
 
-`<note exercise>`
+<div class="exercise">
 
 *  Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms (hint: compare to ERFs)?  
-`</note>`
+</div>
 
 ## Time-frequency analysis II.
 
@@ -211,7 +211,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 #### Exercise 3
 
-`<note exercise>`
+<div class="exercise">
 
 Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting
 
@@ -236,7 +236,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
 
     cfg.t_ftimwin    = 10./cfg.foi;  	
     TFRhann10 = ft_freqanalysis(cfg, dataFIC);
-`</note>`  
+</div>  
 
 ##  Time-frequency analysis III.
 
@@ -323,12 +323,12 @@ Plot the result
 
 *Figure 9; Time-frequency representations of power calculated using Morlet wavelets.*
 
-`<note exercise>`
+<div class="exercise">
 
 **Exercise 4**
 
 Adjust cfg.width and see how the TFRs change.
-`</note>`  
+</div>  
 
 If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](/#Visualization).
 ## Summary and suggested further reading

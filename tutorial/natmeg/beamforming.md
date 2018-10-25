@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Beamforming oscillatory responses in combined MEG/EEG data
 layout: default
 tags: [tutorial, natmeg, meg+eeg, beamforming, MEG-audodd]
 ---
@@ -21,11 +21,11 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/shared/virtual_sensors) for an example of this).
 
-`<note exercise>`
+<div class="exercise">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {{youtube>7eS11DtbIPw}}
-`</note>`
+</div>
 
 ## Background
 
@@ -102,15 +102,16 @@ The null hypothesis for both options within (1) is that the data in both conditi
 
 ### Exercise 1: data length
 
-`<note exercise>`
+<div class="exercise">
 Why is it important that the length of each data piece is the length of a fixed number of oscillatory cycles?
-`</note>`
+</div>
 
 ### Exercise 2: common filter data
 
-`<note exercise>`
+<div class="exercise">
 Why shouldn't we calculate a spatial filter for both conditions separately in this case? Would there be a reason to do so?
-`</note>`
+</div>
+
 ## (MEG) Calculating the cross spectral density matrix
 
 The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd'. The frequency of interest is 18 Hz and the smoothing window is +/- 4 Hz:
@@ -148,14 +149,18 @@ The cross-spectral density data structure has a similar data structure as other 
 	         grad: [1x1 struct]     % MEG sensor information
 	          cfg: [1x1 struct]     % Configuration
 
-`<note exercise>`How come our target frequency is 17.8657, didn't we ask for 18? *Hint: How large is our time window?*`</note>`
+<div class="exercise">
+How come our target frequency is 17.8657, didn't we ask for 18?
+<em>Hint: How large is our time window?</em>
+</div>
 
 ### Compute lead field
 
 The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 0.5 cm resolution.
 
-`<note important>`Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
-`</note>`
+<div class="important">
+Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
+</div>
 
 As mentioned earlier on, if you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.  
 
@@ -271,7 +276,9 @@ Now, we can plot the interpolated data:
 
 *Figure 3; A source plot of the beta response in the left-hand condition.*
 
-`<note exercise>`As you can see the strongest motor response is located in the center of the head. Can you explain this finding?`</note>`
+<div class="exercise">
+As you can see the strongest motor response is located in the center of the head. Can you explain this finding?
+</div>
 
 	cfg.location = [35 -13 76];
 	ft_sourceplot(cfg, source_diff_int);
@@ -280,27 +287,30 @@ Now, we can plot the interpolated data:
 
 *Figure 4; A source plot of the beta response ratio between the left- and right-hand conditions.*
 
-`<note exercise>`Try to explain the location of the red and blue blobs`</note>`
+<div class="exercise">
+Try to explain the location of the red and blue blobs.
+</div>
 
-`<note exercise>`
+<div class="exercise">
 The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
-`</note>`
+</div>
 
 #### Exercise: determining anatomical labels
 
-`<note exercise>`
+<div class="exercise">
 If you were to name the anatomical label of the source of this motor beta, what you say? What plotting method is most appropriate for this?
+</div>
 
-`<note hint>` With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
-`</note>`
-
-`</note>`
+<div class="tip">
+With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
+</div>
 
 #### Exercise: regularization
 
-`<note exercise>`
+<div class="exercise">
 The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?  
-`</note>`
+</div>
+
 ## (EEG) The forward model and lead field matrix
 
 We will continue to analyse the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data.
@@ -371,7 +381,9 @@ Now that we have everything prepared we can start to calculate the common filter
 	cfg.dics.lambda       = '15%';
 	source_all = ft_sourceanalysis(cfg, powcsd_all);
 
-`<note exercise>`How does the value for lambda set here compare to the one for the MEG dataset? Why do you think it is different?`</note>`
+<div class="exercise">
+How does the value for lambda set here compare to the one for the MEG dataset? Why do you think it is different?
+</div>
 
 Finally, we can apply source analysis on the separate conditions using the common filter calculated previously.
 
@@ -421,19 +433,23 @@ Finally, we can plot the dat
 
 *Figure 6; An EEG-source plot of ratio of the beta response in the left versus the right hand condition.*
 
-`<note exercise>` How well can you identify the source of the beta-response ration in the EEG source reconstruction? The image seems quite noisy, could you think of a way to enhance the image?`</note>`
+<div class="exercise">
+How well can you identify the source of the beta-response ration in the EEG source reconstruction? The image seems quite noisy, could you think of a way to enhance the image?
+</div>
 
 ![image](/media/tutorial/natmeg_temp/natmeg_beam2.png@650)
 
 *Figure 7; A MEG-source plot of the beta response in the left versus the right hand condition.*
 
-`<note exercise>`How do the EEG and MEG source plots compare?`</note>`
+<div class="exercise">
+How do the EEG and MEG source plots compare?
+</div>
 
-`<note exercise>`If you've made it this far, perhaps you could try beamforming a different time window. Looking at the time-frequency plot you might be interested in trying to localise the less obvious beta-band response between 0.75 and 1.25 seconds after response.
+<div class="exercise">
+If you've made it this far, perhaps you could try beamforming a different time window. Looking at the time-frequency plot you might be interested in trying to localise the less obvious beta-band response between 0.75 and 1.25 seconds after response.
 
 ![image](/media/tutorial/natmeg_temp/natmeg_beam5.png@400)
-
-`</note>`
+</div>
 
 ## Summary and suggested further reading
 

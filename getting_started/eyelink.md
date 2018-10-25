@@ -11,7 +11,7 @@ The eye tracker can be used on itself, or in combination with other data acquisi
 
 `<note>`
 With your presentation script on the stimulus presentation computer you can also write "data" to disk in the form of behavioural log files. In the subsequent examples we will not consider integrating the physiological measurements with the "data" in these behavioural log files. We will only consider physiological data from the eye tracker, from the EEG system and from the MEG system.
-`</note>`
+</div>
 
 ## Eye tracker recordings by themselves
 
@@ -186,7 +186,7 @@ There are 2 triggers in the CTF file, that are not specified anywhere and should
 There are 9 triggers (without doubling) in the EDF explained by the fact that the recording of the EDF file, but not the MEG file, includes practice trials (because I usually start the recording of the EDF during practice to check whether the eye tracking looks okay).
 
 There are then still 2 surplus Triggers with a value of 0 in the EDF file, which appear at the start and the end of the EDF. These are software generated and hence not in the CTF dataset. 
-`</note>`
+</div>
 
 Again using the **[ft_databrowser](/reference/ft_databrowser)** you can check the data relative to the events.
 
@@ -239,9 +239,9 @@ The Eyelink channels are connected to the MEG dataset channels UADC005, UADC006,
 
 Again, using the procedure as described for the EEG, you can combine the recordings of the Eyelink system and the MEG.
 
-`<note warning>`
+<div class="warning">
 The DAC conversion in the Eyelink system takes some time, and therefore the UADC channels in the MEG recording have a small (but fixed) delay relative to the actual eye movements.
-`</note>` 
+</div> 
 
 Since both MEG and Eyelink get the same triggers, you can use FieldTrip **[ft_definetrial](/reference/ft_definetrial)** on both to read the same segments.
 

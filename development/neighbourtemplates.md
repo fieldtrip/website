@@ -3,7 +3,7 @@ title: Neighbour templates
 layout: default
 ---
 
-`<note warning>`
+<div class="warning">
 This project has been completed and it's result can be found her
 
 *  http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors
@@ -23,7 +23,7 @@ related bugzilla bug
 *  http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1929
 
 Find below the old project notes
-`</note>`
+</div>
 
 # Neighbour templates
 

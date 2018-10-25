@@ -110,9 +110,9 @@ The resulting variable **mdata** contains a description of the data in terms of 
 
 #### Exercise 1
 
-`<note exercise>`
+<div class="exercise">
 Compare the parameters specified for the simulation with the estimated coefficients and discuss.
-`</note>`
+</div>
 
 ### Computation of the spectral transfer function
 
@@ -215,15 +215,15 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 
 #### Exercise 2
 
-`<note exercise>`
+<div class="exercise">
 Discuss the differences between the granger causality spectra, and the coherence spectra.
-`</note>`
+</div>
 
 #### Exercise 3
 
-`<note exercise>`
+<div class="exercise">
 Compute the following connectivity measures from the **mfreq** data, and visualize and discuss the results: partial directed coherence (pdc), directed transfer function (dtf), phase slope index (psi)
-`</note>`
+</div>
 
 ## Simulated data with common pick-up and different noise levels
 
@@ -310,7 +310,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 
 #### Exercise 4
 
-`<note exercise>`
+<div class="exercise">
 Simulate new data using the following mixing matrix: 
 
 	
@@ -320,17 +320,17 @@ Simulate new data using the following mixing matrix:
 
 and recompute the connectivity measures. Discuss what you see.
 
-`</note>`
+</div>
 
 #### Exercise 5
 
-`<note exercise>`
+<div class="exercise">
 Play a bit with the parameters in the mixing matrix and see what is the effect on the estimated connectivity.
-`</note>`
+</div>
 
 #### Exercise 6
 
-`<note exercise>`
+<div class="exercise">
 Simulate new data where the 2 mixed signals are created from 4 underlying sources, and where two of these sources are common input to both signals, and where these two sources are temporally shifted copies of one another.
 
 Hint: the mixing matrix could look like thi
@@ -352,4 +352,4 @@ and the trials could be created like thi
 	end
 
 Compute connectivity between the signals and discuss what you observe. In particular, also compute measures of directed interaction.
-`</note>`
+</div>

@@ -3,12 +3,13 @@ title: Source reconstruction of event-related fields using minimum-norm estimate
 layout: default
 ---
 
-`<note warning>`
+<div class="warning">
 The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.
 
 There is no guarantee that this page is updated in the end to reflect the final state of the tutorial site.
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-`</note>`
+</div>
+
 # Source reconstruction of event-related fields using minimum-norm estimate
 
 ## Introduction
@@ -33,19 +34,12 @@ Figure 1. shows the bigger steps in the calculation of the minimum-norm estimate
 To compute the distributed neuronal activation using minimum-norm estimate we will perform the following step
 
 *  Preprocess the anatomical images in Matlab: First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**,  then the volume realigned to the ctf coordinate system with  **[ft_volumerealign](/reference/ft_volumerealign)** and resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic. The resliced volume is realigned to the MNI space with  **[ft_volumerealign](/reference/ft_volumerealign)** and segmented to obtain the skull-stripped anatomy and a brainmask with **[ft_volumesegment](/reference/ft_volumesegment)**. The volume realigned to the MNI space and the skull-stripped anatomical volume are written to disk with **[ft_volumewrite](/reference/ft_volumewrite)**;
-
 *  Create a volume conduction model from the segmented volume using **[ft_prepare_singleshell](/reference/ft_prepare_singleshell)** and we re-align the volume conduction model to the ctf space using the transformation matrices of the earlier alignments with **[ft_convert_units](/reference/ft_convert_units)** and with **  [ft_transform_geometry](/reference/ft_transform_geometry)**;
-
 *  Create a source space by using FreeSurfer and MNE Suite, and create the source model in Matlab using the functions **[ft_read_headshape](/reference/ft_read_headshape)** and we apply the transformation matrix created earlier with **[ft_convert_units](/reference/ft_convert_units)** and **[ft_transform_geometry](/reference/ft_transform_geometry)**; 
-
 *  compute the forward solution using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**;
-
 *  preprocess the MEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**;
-
 *  compute the average over trials and estimate the noise-covariance using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**;
-
 *  compute the inverse solution using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** and **[ft_sourcedescriptives](/reference/ft_sourcedescriptives)**;
-
 *  visualize the results with **[ft_plot_mesh](/reference/ft_plot_mesh)** and **[ft_sourcemovie](/reference/ft_sourcemovie)**.
 
 ## Processing of anatomical data
@@ -131,10 +125,10 @@ For a detail guide on identifying landmarks in the anatomical volume see this li
 
 **moved and edited text for this link**
 
-`<note warning>`Importantly, the implicit assumption is that the original transformation matrix correctly describes a right-handed coordinate system (otherwise left and right may become mixed up). In this example, we are using an MRI which has been already processed to contain a correct transformation matrix (in this case corresponding to the CTF convention, which is also a right-handed coordinate system). If you are processing MRI scans in the native file format without explicit orientation information, the previous step may lead to a left/right flip. **I THINK THIS LEFT/RIGHT FLIP NEEDS TO BE EXPLAINED MORE. DO YOU MEAN THAT THE LEFT HEMISPHERE BECOMES THE RIGHT, AND THE RIGHT BECOMES THE LEFT? IS THAT THE SAME/DIFF AS SEEING THE REFLECTION OF THE BRAIN??**
-`</note>`
+<div class="warning">
+Importantly, the implicit assumption is that the original transformation matrix correctly describes a right-handed coordinate system (otherwise left and right may become mixed up). In this example, we are using an MRI which has been already processed to contain a correct transformation matrix (in this case corresponding to the CTF convention, which is also a right-handed coordinate system). If you are processing MRI scans in the native file format without explicit orientation information, the previous step may lead to a left/right flip. **I THINK THIS LEFT/RIGHT FLIP NEEDS TO BE EXPLAINED MORE. DO YOU MEAN THAT THE LEFT HEMISPHERE BECOMES THE RIGHT, AND THE RIGHT BECOMES THE LEFT? IS THAT THE SAME/DIFF AS SEEING THE REFLECTION OF THE BRAIN??**
+</div>
 
-	
 	load mrirs;
 	cfg        = [];
 	cfg.method = 'interactive';
@@ -174,8 +168,9 @@ The seg structure will be used later for creating the volume conduction model. A
 	cfg.filename    = 'Subject01masked';
 	ft_volumewrite(cfg, seg);
 
-`<note warning>`Importantly, the mgz-filetype can only be used on the Linux and Mac platforms (and on Windows running virtual box). When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). Note however that these files cannot be saved and read on a Windows PC. If you have your Matlab installed on Windows, you may try to save the volume as a nifti file, for example. For this, you have to use cfg.filetype = 'nifti'. And you can convert the nifti file to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer. 
-`</note>`
+<div class="warning">
+Importantly, the mgz-filetype can only be used on the Linux and Mac platforms (and on Windows running virtual box). When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). Note however that these files cannot be saved and read on a Windows PC. If you have your Matlab installed on Windows, you may try to save the volume as a nifti file, for example. For this, you have to use cfg.filetype = 'nifti'. And you can convert the nifti file to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer. 
+</div>
 
 The matlab-based preprocessing of the anatomical data is now finished. We created two .mgz files that will be used for creating the source model and a seg structure that will be used for creating the volume conduction model.
 

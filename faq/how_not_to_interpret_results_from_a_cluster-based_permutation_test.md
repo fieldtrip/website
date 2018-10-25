@@ -10,12 +10,12 @@ tags: [faq, statistics]
 
 The permutation test as implemented in **[/reference/ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)** serves to test  the null hypothesis (H0) that the data in the experimental conditions come from (are drawn from) the same probability distribution. In specialised statistics books, one sometimes reads the technical term that the probability distributions are **exchangeable**. Getting a significant result means that we can reject the null hypothesis (H0) that the data come from the same probability distribution in favour of the alternative hypothesis (H1) that the data come from different distributions. Based on a significant test result, you therefore can report that **"there is a significant difference between condition A and condition B"**.
 
-`<note warning >`
-
+<div class="warning">
 H0: The data in the experimental conditions come from the same probability distribution, i.e. the data in the conditions cannot be distinguished.
 
 H1: The data in the experimental conditions do **not** come from the same probability distributions, i.e. the data are different.
-`</note>`
+</div>
+
 ### What the test DOES NOT show
 
 However, you cannot report a significant outcome of a permutation test as **"there is a significant cluster ..."**.  This is because the significance in the test only speaks to the null hypothesis and not to the "where" or "when" of this difference. The binary test result (H0 is rejected: yes or no) by itself does not provide information on the exact spatial or temporal extent of the effect.
@@ -28,20 +28,16 @@ If you test that the physical dimensions of male bodies are different from those
 However, from this result, one cannot conclude that men and women have different foot sizes. In fact, it may be that the test statistic that was used to compare male and female bodies was sensitive to other aspects than foot size. 
 
 Finding **a significant effect** using some test statistic (with some sensitivity profile) does **not mean that it tells the complete story**. Making a decision of H1 over H0 still requires that you interpret the result using your understanding of the (processed) data and the sensitivity profile of the test statistic (i.e., which between-condition differences will be reflected by the statistic). The decision and the interpretation are two separate steps.
-`</note>`
+</div>
 
 ### The extent of a cluster depends on multiple factors
 
 Keep in mind that the extent of the cluster depends on multiple factor
 
 *  The signal to noise ratio in the data 
-
 *  The length of the sliding time window (when calculating frequency data)
-
 *  The chosen time bins or brain regions on which to perform the statistical test 
-
 *  The threshold chosen to select samples to belong to a cluster (choosing a stringent threshold will lead to a focal effect, while a liberal threshold will produce a widespread effect.
-
 *  Coverage of the head, i.e. the sensor arrangement.
 
 You could imagine that with a dipolar scalp topography, one of the poles of the dipole would be above threshold and included in a cluster, whereas the other pole is below threshold and hence not represented in a cluster.
@@ -58,7 +54,7 @@ However, this does not necessarily represent the entire true effect in the data.
 Here is what NOT to writ
 
 "We found a significant cluster in area X, between time point A and B"
-`</note>`
+</div>
 
 `<note>`
 Here are some examples of what you CAN writ
@@ -69,7 +65,7 @@ or if you would only select a latency rang
 
 "Testing for an N400 effect in the latency range from 350 to 500 ms post-stimulus, the cluster-based permutation test revealed a significant difference between the fully congruent and fully incongruent condition (p<0.05). In this latency range, the difference was most pronounced over left frontotemporal sensors."
 
-`</note>`
+</div>
 
 ###  Is there a paper on this topic?
 

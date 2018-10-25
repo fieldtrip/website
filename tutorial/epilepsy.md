@@ -14,7 +14,7 @@ tags: [tutorial, MEG-epilepsy]
 
 `<note>`
 This documentation is under development and hence incomplete and perhaps incorrect.
-`</note>`
+</div>
 
 {{page>:tutorial/shared/disclaimer}}
 

@@ -189,9 +189,9 @@ From the code above you can see that the statistical comparison is between condi
 
 ####  Exercise 1
 
-`<note exercise>`
+<div class="exercise">
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
-`</note>`
+</div>
 ### Multiple comparisons
 
 In the previous paragraph we picked a channel and time window by hand after eyeballing the effect. If you would like to test the significance of the effect in all channels you could make a loop over channels.
@@ -414,7 +414,7 @@ So far we predefined a time window over which the effect was averaged, and teste
 If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 
 And be sure to cite the relevant papers (Robert Oostenveld's FieldTrip paper and the Eric Maris' cluster-based permutation paper) in your methods section!
-`</note>`
+</div>
 ## Summary and suggested further reading
 
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip, as well as the the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to plot the sensors that show a significant effect.

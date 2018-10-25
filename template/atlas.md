@@ -1,5 +1,5 @@
 ---
-title: Table of contents
+title: Template anatomical atlases and parcellation schemes
 layout: default
 tags: [template]
 ---

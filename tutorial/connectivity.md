@@ -16,11 +16,11 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 
 {{page>:tutorial:shared:connectivity_simulation_intro}}
 
-`<note exercise>`
+<div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
 {{youtube>ZBwh0Vm4fh4}}
-`</note>`
+</div>
 
 ## Background
 
@@ -108,11 +108,11 @@ The source reconstruction contains the estimated power and the source-level time
 	  sourcedata.trial{i} = beamformer * data.trial{i}(chansel,:);
 	end
 
-`<note important>`
+<div class="important">
 The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the  broadband data allows us to compute a broadband source level time-series.
 
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. *cfg.hpfilter=yes* and *cfg.hpfreq=30*) prior to computing the covariance and the spatial filter.  
-`</note>`
+</div>
 
 The *sourcedata* structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)*
 
@@ -157,7 +157,7 @@ We now recompute the virtual channel time-series, but now only for the dipole di
 
 #### Exercise 8
 
-`<note exercise>`
+<div class="exercise">
 Rather than using a sourcemodel in the beamformer that consists of all three (x, y, z) directions, you can also have the beamformer compute the filter for only the optimal source orientation. This is implemented using the *cfg.lcmv.fixedori='yes'* option.
 
 Recompute the spatial filter for the optimal source orientation and using that spatial filter (a 1x151 vector) recompute the time-series.
@@ -166,7 +166,7 @@ Investigate and describe the difference between the two time-series. What is the
 
 Note that one orientation is represented in the SVD matrix "u" and the other is in the source.avg.ori field.
 
-`</note>`
+</div>
 
 ### Combine the virtual channel with the EMG
 
@@ -225,21 +225,21 @@ The spectrum reveals coherence peaks at 10 and 20 Hz (remember that the initial 
 
 #### Exercise 9
 
-`<note exercise>`
+<div class="exercise">
 The spectral decomposition was performed with mutitapering and 5 Hz spectral smoothing (i.e. 5Hz in both directions). Recompute the spectral decomposition and the coherence with a hanning taper. Recompute it with mutitapering and 10 Hz smoothing. Plot the three coherence spectra and look at the differences.
-`</note>`
+</div>
 
 #### Exercise 10
 
-`<note exercise>`
+<div class="exercise">
 Rather than looking at undirected coherence, the virtual channel level data can now also easily be submitted to directed connectivity measures. Compute the spectrally resolved granger connectivity and try to assess whether the directionality is from cortex to EMG or vice versa.   
-`</note>`
+</div>
 
 #### Exercise 11
 
-`<note exercise>`
+<div class="exercise">
 Let's say you wanted to look at cortico-cortical connectivity, e.g. interactions between visual and motor cortex in a particular frequency band. How would you approach this?
-`</note>`
+</div>
 
 ## Summary and further reading
 

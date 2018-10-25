@@ -20,11 +20,11 @@ In this tutorial we will continue working on the [dataset](/tutorial/shared/data
 
 This tutorial is not covering statistical test on time-frequency representations. If you are interested in that, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial. If you are interested how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
-`<note exercise>`
+<div class="exercise">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
 {{youtube>x0hR-VsHZj8}}
-`</note>`
+</div>
 
 ## Background
 

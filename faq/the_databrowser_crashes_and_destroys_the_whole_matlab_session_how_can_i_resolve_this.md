@@ -57,4 +57,4 @@ Here "gcf" refers to the currently active figure window.
 I would suggest that you try changing the renderer just before the "surf"
 command is executed and see if the crash stops happening when using a
 particular renderer."
-`</note>`
+</div>

@@ -161,7 +161,7 @@ You can also call **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** m
 
     cfg.channel = 'EEG';
     clean3  = ft_rejectvisual(cfg, clean2);
-`</note>`
+</div>
 
 ----
 

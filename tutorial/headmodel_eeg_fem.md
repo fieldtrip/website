@@ -22,12 +22,12 @@ Furthermore, elsewhere on this wiki you can find also information [about MEG hea
 
 We want to note that the FEM modelling works only on MATLAB versions 2011 and above.
 
-`<note important>`
+<div class="important">
 The SimBio software is described in detail [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome). The integration with FieldTrip is described in the reference below. Please cite this reference if you use the FieldTrip-SimBio pipeline in your research.
 
 Vorwerk, J., Oostenveld, R., Piastra, M.C., Magyari, L., & Wolters, C. H. **The FieldTrip‐SimBio pipeline for EEG forward solutions.** BioMed Eng OnLine (2018) 17:37. [DOI: 10.1186/s12938-018-0463-y](https://doi.org/10.1186/s12938-018-0463-y).
 
-`</note>`
+</div>
 ## Background
 
 {{page>:tutorial:shared:sourcelocalization_background}}
@@ -38,7 +38,7 @@ This tutorial is focusing on how to build the **FEM volume conduction model for 
 
 `<note>`
 If an anatomical MRI is not available for your EEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. If you do not have an MRI, but if you do have a measurement of the scalp surface (e.g. with a Polhemus tracker), you can use concentric spheres volume conduction model. If you do not want to (or cannot) use any realistic information about the brain-surface or the head-shape, you can resort to the single sphere volume conduction model.
-`</note>`
+</div>
 
 ## Procedure
 
@@ -116,7 +116,7 @@ In the next step of this tutorial, we will segment the anatomical MRI. Segmentat
 
 `<note>`
 Reslicing will apply the coordinate transformation on your anatomical data. (While **[ft_volumerealign](/reference/ft_volumerealign)** does not change the anatomical data, but it adjusts the transformation matrix of the data, **[ft_volumereslice](/reference/ft_volumereslice)** will change the anatomical data, i.e. it will arrange data in field **anatomy** according to the coordinate system.) Do not use this function if later you need to recover the original orientation of the voxels.
-`</note>`
+</div>
 
 We check if the resolution and the dimensions were well specified, and the reslicement did not cause any loss in the anatomical information (i.e. if all parts of the head are present in the resliced images).
 
@@ -132,9 +132,9 @@ We check if the resolution and the dimensions were well specified, and the resli
 
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the five different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. These latest three tissues belong to the brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The segmentation should contain a binary representation of 5 tissue types which do not overlap.
 
-`<note important>`
+<div class="important">
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
-`</note>`
+</div>
 
 	cfg           = [];
 	cfg.output    = {'gray','white','csf','skull','scalp'};
@@ -330,9 +330,9 @@ In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and '
 	    lpa: [29 145 155]
 	    rpa: [144 142 158]
 
-`<note important>`
+<div class="important">
 If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to get those positions.
-`</note>`
+</div>
 
 First, we convert the fiducial positions from voxel into CTF headcoordinate system using the [transformation matrix](/faq/what_is_the_plotting_convention_for_anatomical_mris) and the **[ft_warp_apply](/reference/ft_warp_apply)** function.
 
@@ -394,19 +394,19 @@ Here, we only need to use translation. We can shift about 15 mm along the x-axis
 
 ## Exercise 1
 
-`<note exercise>`
+<div class="exercise">
 
    * Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
    * Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
    * What is the difference between this head model and the FEM?
-`</note>`
+</div>
 
 ## Exercise 2
 
-`<note exercise>`
+<div class="exercise">
 
    * In exercise 1, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the  concentric spheres model and BEM model?
-`</note>`
+</div>
 
 ## Summary and further reading
 

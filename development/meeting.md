@@ -12,7 +12,7 @@ We organize occasional meetings at the Donders to discuss topics related to the 
 
 `<note>`
 You should add the tag "meeting" to a page to have it appear here.
-`</note>`
+</div>
 
 {{topic>meeting &list}}
 
