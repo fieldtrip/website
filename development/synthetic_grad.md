@@ -1,4 +1,5 @@
 ---
+title: Implement support for CTF synthetic gradiometers
 layout: default
 ---
 

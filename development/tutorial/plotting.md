@@ -1,4 +1,5 @@
 ---
+title: Plotting data at the channel and source level
 layout: default
 tags: [tutorial, plot, eeg, meg, timelock, freq, statistics, source, layout, MEG-language]
 ---

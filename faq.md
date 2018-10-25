@@ -1,4 +1,5 @@
 ---
+title: Frequently Asked Questions
 layout: default
 tags: [faq]
 ---

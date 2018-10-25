@@ -1,4 +1,5 @@
 ---
+title: Integration with SPM8
 layout: default
 ---
 

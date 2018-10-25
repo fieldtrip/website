@@ -1,4 +1,5 @@
 ---
+title: Integration with SPM12
 layout: default
 ---
 

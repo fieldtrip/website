@@ -1,4 +1,5 @@
 ---
+title: How can I use the databrowser?
 layout: default
 tags: [faq, databrowser, plot, artifact]
 ---

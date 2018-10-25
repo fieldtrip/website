@@ -1,4 +1,5 @@
 ---
+title: FieldTrip buffer MATLAB interface
 layout: default
 tags: [realtime, development]
 ---

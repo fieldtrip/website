@@ -1,4 +1,5 @@
 ---
+title: How are the different head and MRI coordinate systems defined?
 layout: default
 tags: [faq, headmodel, mri, source, coordinate]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Toolkit of Cognitive Neuroscience: EEG/MEG
 layout: default
 ---
 

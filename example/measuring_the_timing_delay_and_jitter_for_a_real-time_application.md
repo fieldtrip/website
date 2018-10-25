@@ -1,4 +1,5 @@
 ---
+title: Measuring the timing delay and jitter for a real-time application
 layout: default
 tags: [example, realtime]
 ---

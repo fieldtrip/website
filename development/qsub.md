@@ -1,4 +1,5 @@
 ---
+title: Distributed computing using a Linux compute cluster
 layout: default
 tags: [distributed]
 ---

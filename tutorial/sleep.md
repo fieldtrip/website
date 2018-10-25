@@ -1,4 +1,5 @@
 ---
+title: Extracting the brain state and events from continuous sleep EEG
 layout: default
 tags: [tutorial, sleep, EDF, EEG, EMG, ECG, artifacts, continuous]
 ---

@@ -1,4 +1,5 @@
 ---
+title: How do I avoid having to allocate N copies of my data if I want to execute N jobs?
 layout: default
 tags: [faq, peer]
 ---

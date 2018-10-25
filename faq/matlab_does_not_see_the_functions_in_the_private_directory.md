@@ -1,4 +1,5 @@
 ---
+title: Matlab does not see the functions in the "private" directory
 layout: default
 ---
 

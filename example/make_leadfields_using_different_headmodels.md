@@ -1,4 +1,5 @@
 ---
+title: Make leadfields using different headmodels
 layout: default
 tags: [example, meg, headmodel, source]
 ---

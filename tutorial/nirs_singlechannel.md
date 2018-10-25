@@ -1,4 +1,5 @@
 ---
+title: Preprocessing and averaging of single-channel NIRS data
 layout: default
 tags: [tutorial, nirs, preprocessing, nirs-singlechannel]
 ---

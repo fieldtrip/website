@@ -1,4 +1,5 @@
 ---
+title: Restructure the directory layout
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Redesign and implement a common statistical backend for various data types
 layout: default
 ---
 

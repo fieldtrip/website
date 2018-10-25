@@ -1,4 +1,5 @@
 ---
+title: How can I define my own neighbourhood templates or updating an already existing template?
 layout: default
 tags: [faq, statistics, cluster]
 ---

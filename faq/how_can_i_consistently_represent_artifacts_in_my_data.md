@@ -1,4 +1,5 @@
 ---
+title: How can I consistently represent artifacts in my data?
 layout: default
 tags: [faq, preprocessing, artifact]
 ---

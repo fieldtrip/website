@@ -1,4 +1,5 @@
 ---
+title: Getting started with particular MEG data types
 layout: default
 ---
 

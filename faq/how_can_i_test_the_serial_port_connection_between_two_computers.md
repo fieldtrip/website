@@ -1,4 +1,5 @@
 ---
+title: What kind of cable do I need for a serial port connection between two computers?
 layout: default
 tags: [faq, realtime]
 ---

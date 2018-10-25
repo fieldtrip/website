@@ -1,4 +1,5 @@
 ---
+title: Literature
 layout: default
 tags: [references]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Resolution: see faq
 layout: default
 ---
 

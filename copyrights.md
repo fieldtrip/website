@@ -1,4 +1,5 @@
 ---
+title: Copyrights
 layout: default
 ---
 

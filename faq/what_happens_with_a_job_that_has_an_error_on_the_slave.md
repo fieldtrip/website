@@ -1,4 +1,5 @@
 ---
+title: What happens with a job that has an error on the slave?
 layout: default
 tags: [faq, peer]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Getting started with the Neuralynx data recorded at the Donders Institute
 layout: default
 tags: [neuralynx, lfp, dataformat]
 ---

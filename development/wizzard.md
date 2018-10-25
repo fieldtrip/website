@@ -1,4 +1,5 @@
 ---
+title: Implement a graphical user interface as a "wizzard" for certain analysis protocols
 layout: default
 ---
 

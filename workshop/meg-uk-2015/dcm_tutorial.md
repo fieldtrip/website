@@ -1,4 +1,5 @@
 ---
+title: SPM DCM demo
 layout: default
 tags: [meg-uk-2015]
 ---

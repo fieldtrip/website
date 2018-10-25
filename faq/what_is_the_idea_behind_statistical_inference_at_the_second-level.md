@@ -1,4 +1,5 @@
 ---
+title: What is the idea behind statistical inference at the second-level?
 layout: default
 tags: [faq, statistics, cluster]
 ---

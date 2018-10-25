@@ -1,4 +1,5 @@
 ---
+title: Use independent component analysis (ICA) to remove ECG artifacts
 layout: default
 tags: [example, artifact, preprocessing, ica]
 ---

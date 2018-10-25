@@ -1,4 +1,5 @@
 ---
+title: FieldTrip/SIMBIO integration
 layout: default
 ---
 

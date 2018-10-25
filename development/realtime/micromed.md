@@ -1,4 +1,5 @@
 ---
+title: Micromed
 layout: default
 tags: [realtime, micromed]
 ---

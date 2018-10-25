@@ -1,4 +1,5 @@
 ---
+title: Restructure and rework all visualization functions
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: TMSI EEG amplifiers
 layout: default
 tags: [realtime, tmsi]
 ---

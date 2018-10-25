@@ -1,4 +1,5 @@
 ---
+title: Deprecated functions and options
 layout: default
 ---
 

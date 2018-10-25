@@ -1,4 +1,5 @@
 ---
+title: How are electrodes, magnetometers or gradiometers described?
 layout: default
 tags: [faq, eeg, meg, layout]
 ---

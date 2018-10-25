@@ -1,4 +1,5 @@
 ---
+title: Introduction: dealing with artifacts
 layout: default
 tags: [tutorial, artifact, preprocessing, eeg, meg]
 ---
@@ -13,11 +14,10 @@ tags: [tutorial, artifact, preprocessing, eeg, meg]
 
 This tutorial explains the general approach on how to deal with artifacts in FieldTrip.
 
-`<note warning>`
-Since FieldTrip supports the data of many different acquisition systems, the particular artifacts in your data might behave very different from the artifata. Therefore you should be aware of the different approaches and of the variability of artifact rejection (automatic/manual) procedures described onwards.
-
-At the end of an automated procedure, consider always to visual inspect your data, after rejection.
-`</note>`
+<div class="warning">
+<p>Since FieldTrip supports the data of many different acquisition systems, the particular artifacts in your data might behave very different from the artifata. Therefore you should be aware of the different approaches and of the variability of artifact rejection (automatic/manual) procedures described onwards.</p>
+<p>At the end of an automated procedure, consider always to visual inspect your data, after rejection.</p>
+</div>
 
 # Background: what is an artifact?
 
@@ -28,7 +28,6 @@ Generally speaking, an artifact (or artefact) is some unexpected or unwanted fea
 FieldTrip deals with artifacts by first identifying them, and subsequently removing them. Detection of artifacts can be done visually, or using automatic routines (or a combination of both). After you know what the artifacts are, they are removed by
 
 *  rejecting the piece of data containing the artifact (e.g. for a short-lived artifact)   
-
 *  subtracting the spatio-temporal contribution of the artifact from the data (e.g. for line noise)
 
 For the artifact detection the functions FieldTrip provides depend on whether your data is continuous or trial-based (i.e. segmented with holes between the segments) and depending on whether your data is stored on disk or already in memory.
@@ -45,8 +44,8 @@ In manual artifact detection, the user visually inspects the data and identifies
 
 The functions that are available for manual artifact detection are
 
-    * **[ft_rejectvisual](/reference/ft_rejectvisual)**
-    * **[ft_databrowser](/reference/ft_databrowser)**
+* **[ft_rejectvisual](/reference/ft_rejectvisual)**
+* **[ft_databrowser](/reference/ft_databrowser)**
 
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by either showing all channels at once (per trial) or showing all trials at once (per channel) or by showing a summary of all channels and trials. Using the mouse, you can select trials and/or channels that should be removed from the data. This function directly returns the data with the noise parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
@@ -65,17 +64,11 @@ Most of the automatic artifact detection functions are based on filtering the da
 The available functions for automatic artifact detection ar
 
 *  **[ft_artifact_clip](/reference/ft_artifact_clip)**
-
 *  **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
-
 *  **[ft_artifact_threshold](/reference/ft_artifact_threshold)**
-
 *  **[ft_artifact_eog](/reference/ft_artifact_eog)**
-
 *  **[ft_artifact_jump](/reference/ft_artifact_jump)**
-
 *  **[ft_artifact_muscle](/reference/ft_artifact_muscle)**
-
 *  **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**
 
 Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** where the filter and padding options are set to reasonable defaults.

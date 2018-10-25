@@ -1,4 +1,5 @@
 ---
+title: Welcome to the FieldTrip wiki
 layout: default
 ---
 
@@ -12,17 +13,15 @@ The FieldTrip software is released free of charge as [open source software](http
 
 This FieldTrip website is a [Wiki](http://en.wikipedia.org/wiki/Wiki) (just like [Wikipedia](http://en.wikipedia.org/)), which allows all visitors to contribute, very quickly and easily, without the need for registration. The IP addresses of people that make changes are logged, and they can be blocked if required. Please act responsibly and only make changes that improve this site.
 
-`<note important>`
-Please cite the[FieldTrip Reference Paper](http://www.hindawi.com/journals/cin/2011/156869/)### when you have used FieldTrip for data analysis in your study.
-
-Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen,“FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data,”### Computational Intelligence and Neuroscience, vol. 2011, Article ID 156869, 9 pages, 2011. doi:10.1155/2011/156869
-`</note>`
+<div class="warning">
+<p>Please cite the <a href="http://www.hindawi.com/journals/cin/2011/156869">FieldTrip Reference Paper</a>
+when you have used FieldTrip for data analysis in your study.</p>
+<p>Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen, <strong>FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.</strong> Computational Intelligence and Neuroscience, vol. 2011, Article ID 156869, 9 pages, 2011. doi:10.1155/2011/156869</p>
+</div>
 
 To get started with FieldTrip, please continue reading the [getting started](/getting started) documentation.
 
-`<html>``<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FFieldTrip-toolbox%2F192257040789426&amp;layout=standard&amp;show_faces=true&amp;width=500&amp;action=like&amp;colorscheme=light&amp;height=75" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:500px; height:75px;" allowTransparency="true">``</iframe>``</html>`
-
-Join the [FieldTrip community on Facebook](http://www.facebook.com/pages/FieldTrip-toolbox/192257040789426)!
+Join the [FieldTrip community on Facebook](http://www.facebook.com/pages/FieldTrip-toolbox/192257040789426).
 
 # News and announcements
 

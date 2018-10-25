@@ -1,4 +1,5 @@
 ---
+title: Preprocessing and analysis of spike and local field potential data
 layout: default
 tags: [tutorial, spike, animal, Spike-attention]
 ---

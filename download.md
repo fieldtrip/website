@@ -1,4 +1,5 @@
 ---
+title: Download the FieldTrip toolbox
 layout: default
 tags: [download]
 ---

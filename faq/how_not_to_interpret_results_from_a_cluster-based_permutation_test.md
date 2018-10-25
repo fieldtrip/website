@@ -1,4 +1,5 @@
 ---
+title: How NOT to interpret results from a cluster-based permutation test
 layout: default
 tags: [faq, statistics]
 ---

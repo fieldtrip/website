@@ -1,4 +1,5 @@
 ---
+title: Why are so many of the interesting functions in the private directories?
 layout: default
 tags: [faq, function]
 ---

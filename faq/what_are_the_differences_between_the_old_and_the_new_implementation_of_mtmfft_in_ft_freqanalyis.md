@@ -1,4 +1,5 @@
 ---
+title: What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalyis?
 layout: default
 tags: [faq, freq, mtmfft]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Getting started with Philips/EGI data
 layout: default
 tags: [egi, eeg, dataformat]
 ---

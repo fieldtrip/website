@@ -1,4 +1,5 @@
 ---
+title: Analyze Steady-State Visual Evoked Potentials (SSVEPs)
 layout: default
 tags: [example, freq]
 ---

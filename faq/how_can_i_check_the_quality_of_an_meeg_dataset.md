@@ -1,4 +1,5 @@
 ---
+title: How can I check the quality of an EEG or MEG recording ?
 layout: default
 tags: [faq, artifact]
 ---

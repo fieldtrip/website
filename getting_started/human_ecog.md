@@ -1,4 +1,5 @@
 ---
+title:
 layout: default
 tags: [getting_started, ieeg, ecog, seeg, human, localization, mri, ct]
 ---

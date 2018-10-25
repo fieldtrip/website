@@ -1,4 +1,5 @@
 ---
+title: Integrate FieldTrip and MNE-Python
 layout: default
 ---
 

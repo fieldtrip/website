@@ -1,4 +1,5 @@
 ---
+title: How to test an interaction effect using cluster-based permutation tests?
 layout: default
 tags: [faq, statistics]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Should I add FieldTrip with all subdirectories to my MATLAB path?
 layout: default
 tags: [faq, matlab, path, warning]
 ---

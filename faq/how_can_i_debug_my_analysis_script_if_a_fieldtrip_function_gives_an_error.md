@@ -1,4 +1,5 @@
 ---
+title: How can I debug my analysis script if a FieldTrip function gives an error?
 layout: default
 tags: [faq, debug]
 ---

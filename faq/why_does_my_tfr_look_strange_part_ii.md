@@ -1,4 +1,5 @@
 ---
+title: Why does my TFR look strange (part II, detrending)?
 layout: default
 tags: [faq, mtmconvol, freq, preprocessing, artifact, filter]
 ---

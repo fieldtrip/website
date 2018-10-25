@@ -1,4 +1,5 @@
 ---
+title: How can I check or decipher the sequence of triggers in my data?
 layout: default
 tags: [faq, trigger, trialfun, preprocessing]
 ---

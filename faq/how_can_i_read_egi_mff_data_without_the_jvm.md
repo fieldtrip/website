@@ -1,4 +1,5 @@
 ---
+title: How can I read EGI mff data without the JVM?
 layout: default
 tags: [faq, egi]
 ---

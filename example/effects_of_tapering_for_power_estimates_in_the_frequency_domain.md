@@ -1,4 +1,5 @@
 ---
+title: Effects of tapering for power estimates
 layout: default
 tags: [example, freq]
 ---

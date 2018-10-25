@@ -1,4 +1,5 @@
 ---
+title: Table of contents
 layout: default
 tags: [tutorial, natmeg, meg+eeg, statistics]
 ---

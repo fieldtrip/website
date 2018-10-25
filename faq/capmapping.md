@@ -1,4 +1,5 @@
 ---
+title: Can I compare EEG channels between different electrode caps?
 layout: default
 tags: [faq, eeg]
 ---

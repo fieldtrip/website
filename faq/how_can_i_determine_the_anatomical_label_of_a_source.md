@@ -1,4 +1,5 @@
 ---
+title: How can I determine the anatomical label of a source?
 layout: default
 tags: [faq, source]
 ---

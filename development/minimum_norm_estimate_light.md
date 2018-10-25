@@ -1,4 +1,5 @@
 ---
+title: Source reconstruction of event-related fields using minimum-norm estimate
 layout: default
 tags: [fixme]
 ---

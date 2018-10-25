@@ -1,4 +1,5 @@
 ---
+title: Getting started with 4D-neuroimaging/BTi data
 layout: default
 tags: [4d, bti, meg, dataformat]
 ---

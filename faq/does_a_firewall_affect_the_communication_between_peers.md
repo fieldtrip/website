@@ -1,4 +1,5 @@
 ---
+title: Does a firewall affect the communication between peers?
 layout: default
 tags: [faq, peer]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Example analysis pipeline for Biosemi data
 layout: default
 tags: [example, eeg, dataformat, biosemi, bdf]
 ---

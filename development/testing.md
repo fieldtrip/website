@@ -1,4 +1,5 @@
 ---
+title: Testing code quality
 layout: default
 ---
 

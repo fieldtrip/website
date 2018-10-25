@@ -1,4 +1,5 @@
 ---
+title: Switch from SPM2 to SPM8
 layout: default
 ---
 

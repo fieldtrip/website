@@ -1,4 +1,5 @@
 ---
+title: FieldTrip Workshop in Exeter, UK
 layout: default
 ---
 

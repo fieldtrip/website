@@ -1,4 +1,5 @@
 ---
+title: Common filters in beamforming
 layout: default
 tags: [example, meg, freq, source, fixme]
 ---

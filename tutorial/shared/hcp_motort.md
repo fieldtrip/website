@@ -1,4 +1,5 @@
 ---
+title: Details of the tMEG Motor task
 layout: default
 ---
 

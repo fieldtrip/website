@@ -1,4 +1,5 @@
 ---
+title: Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
 layout: default
 ---
 

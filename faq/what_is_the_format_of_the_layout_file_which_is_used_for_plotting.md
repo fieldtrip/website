@@ -1,4 +1,5 @@
 ---
+title: What is the format of the layout file which is used for plotting?
 layout: default
 tags: [faq, layout, plot]
 ---

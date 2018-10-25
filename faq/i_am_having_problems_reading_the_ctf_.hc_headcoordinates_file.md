@@ -1,4 +1,5 @@
 ---
+title: I am having problems reading the CTF .hc headcoordinates file
 layout: default
 tags: [faq, ctf, raw]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Modular EEG, OpenEEG
 layout: default
 tags: [realtime, modeeg, openeeg]
 ---

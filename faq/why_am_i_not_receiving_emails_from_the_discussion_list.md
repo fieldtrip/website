@@ -1,4 +1,5 @@
 ---
+title: Why am I not receiving emails from the discussion list?
 layout: default
 tags: [faq, email]
 ---

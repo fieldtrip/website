@@ -1,4 +1,5 @@
 ---
+title: CTF
 layout: default
 tags: [realtime, ctf]
 ---

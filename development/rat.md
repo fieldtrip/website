@@ -1,4 +1,5 @@
 ---
+title: The rat beamformer
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: General instructions for MATLAB demo's
 layout: default
 ---
 

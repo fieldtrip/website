@@ -1,4 +1,5 @@
 ---
+title: How does the CTF higher-order gradiometer work?
 layout: default
 tags: [faq, ctf]
 ---

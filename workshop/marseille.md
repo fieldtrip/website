@@ -1,4 +1,5 @@
 ---
+title: FieldTrip Workshop in Marseille
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Artinis Medical Systems
 layout: default
 tags: [realtime, artinis]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Multivariate analysis of electrophysiological data
 layout: default
 tags: [tutorial, eeg, meg, multivariate, timelock, freq, attention, MEG-attention]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Getting started with BabySQUID data
 layout: default
 tags: [babysquid, meg, dataformat]
 ---

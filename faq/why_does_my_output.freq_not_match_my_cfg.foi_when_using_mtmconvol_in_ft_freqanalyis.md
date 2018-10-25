@@ -1,4 +1,5 @@
 ---
+title: Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?
 layout: default
 tags: [faq, freq, mtmconvol]
 ---

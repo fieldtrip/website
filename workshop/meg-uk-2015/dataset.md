@@ -1,4 +1,5 @@
 ---
+title: Face recognition dataset
 layout: default
 tags: [meg-uk-2015]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Testing minimum-norm estimate in FieldTrip and in MNE Suite
 layout: default
 ---
 

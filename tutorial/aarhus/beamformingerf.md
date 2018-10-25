@@ -1,4 +1,5 @@
 ---
+title: Table of contents
 layout: default
 tags: [tutorial, aarhus, meg+eeg, beamforming, ERF, lcmv, MEG-audodd]
 ---

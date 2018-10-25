@@ -1,4 +1,5 @@
 ---
+title: Getting started with EEGLAB
 layout: default
 ---
 

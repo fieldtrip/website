@@ -1,4 +1,5 @@
 ---
+title: Simulating and estimating, what about model (mis)match?
 layout: default
 tags: [chieti, tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 ---

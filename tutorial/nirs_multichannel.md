@@ -1,4 +1,5 @@
 ---
+title: Preprocessing and averaging of multi-channel NIRS data
 layout: default
 tags: [tutorial, nirs, preprocessing, nirs-multichannel]
 ---

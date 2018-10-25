@@ -1,4 +1,5 @@
 ---
+title: Use simulated ERPs to explore cluster statistics
 layout: default
 tags: [example, statistics, cluster]
 ---

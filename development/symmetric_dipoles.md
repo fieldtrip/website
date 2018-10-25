@@ -1,4 +1,5 @@
 ---
+title: Source-reconstruction using two dipoles
 layout: default
 ---
 

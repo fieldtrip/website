@@ -1,4 +1,5 @@
 ---
+title: How does the smartmem algorithm work?
 layout: default
 tags: [faq, peer, memory]
 ---

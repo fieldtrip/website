@@ -1,4 +1,5 @@
 ---
+title: What is the relation between "events" (such as triggers) and "trials"?
 layout: default
 tags: [faq, preprocessing, trialfun]
 ---

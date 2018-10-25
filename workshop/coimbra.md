@@ -1,4 +1,5 @@
 ---
+title: FieldTrip workshop in Coimbra, Portugal
 layout: default
 ---
 

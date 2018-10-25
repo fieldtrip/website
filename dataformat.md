@@ -1,4 +1,5 @@
 ---
+title: Supported data formats
 layout: default
 tags: [dataformat, meg, eeg, lfp, spike, raw]
 ---

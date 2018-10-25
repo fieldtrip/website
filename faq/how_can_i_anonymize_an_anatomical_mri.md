@@ -1,4 +1,5 @@
 ---
+title: How can I anonymize or deidentify an anatomical MRI?
 layout: default
 tags: [faq, mri, anonymize, sharing]
 ---

@@ -1,4 +1,5 @@
 ---
+title: How can I compile the mex files and command-line executables ?
 layout: default
 tags: [faq, mex, compile]
 ---

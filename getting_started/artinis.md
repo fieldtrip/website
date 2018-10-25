@@ -1,4 +1,5 @@
 ---
+title: Getting started with Artinis NIRS data
 layout: default
 tags: [nirs, artinis]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Can I prevent "external" toolboxes from being added to my MATLAB path?
 layout: default
 tags: [faq, matlab, toolbox, path]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Sphere fitting and scaling of the template (Colin 27) MRI to the MEG polhemus headshape
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: How to use ft_checkconfig
 layout: default
 tags: [example, cfg]
 ---

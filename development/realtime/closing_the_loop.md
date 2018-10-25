@@ -1,4 +1,5 @@
 ---
+title: Closing the loop in a real-time BCI application
 layout: default
 tags: [realtime]
 ---

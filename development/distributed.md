@@ -1,4 +1,5 @@
 ---
+title: Core idea
 layout: default
 ---
 

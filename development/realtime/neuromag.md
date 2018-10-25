@@ -1,4 +1,5 @@
 ---
+title: Elekta / Neuromag
 layout: default
 tags: [realtime, elekta, neuromag]
 ---

@@ -1,4 +1,5 @@
 ---
+title: How is the segmentation defined?
 layout: default
 tags: [faq, datatype, segmentation, eeg, meg, headmodel]
 ---

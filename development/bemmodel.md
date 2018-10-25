@@ -1,4 +1,5 @@
 ---
+title: An alternative algorithm for constructing triangulated EEG-BEM head models
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: How can I find out what eventvalues and eventtypes there are in my data?
 layout: default
 tags: [preprocessing, raw, faq, trigger, event, values, type, eventvalue, eventtype]
 ---

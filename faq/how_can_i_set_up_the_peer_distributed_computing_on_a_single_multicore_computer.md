@@ -1,4 +1,5 @@
 ---
+title: How can I set up the peer distributed computing on a single multicore computer?
 layout: default
 tags: [faq, peer]
 ---

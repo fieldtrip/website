@@ -1,4 +1,5 @@
 ---
+title: Computation of the multivariate autoregressive model
 layout: default
 ---
 

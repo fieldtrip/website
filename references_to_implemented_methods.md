@@ -1,4 +1,5 @@
 ---
+title: References to implemented methods
 layout: default
 tags: [references, eeg, meg, source, headmodel, freq, statistics, coherence]
 ---

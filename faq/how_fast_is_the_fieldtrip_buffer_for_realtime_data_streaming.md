@@ -1,4 +1,5 @@
 ---
+title: How fast is the FieldTrip buffer for realtime data streaming?
 layout: default
 tags: [faq, realtime, matlab, memory]
 ---

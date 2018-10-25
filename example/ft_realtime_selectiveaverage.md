@@ -1,4 +1,5 @@
 ---
+title: Example real-time selective average
 layout: default
 tags: [example, realtime]
 ---

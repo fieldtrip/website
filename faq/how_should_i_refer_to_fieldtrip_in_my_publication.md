@@ -1,4 +1,5 @@
 ---
+title: How should I refer to FieldTrip in my publication?
 layout: default
 tags: [faq, reference]
 ---

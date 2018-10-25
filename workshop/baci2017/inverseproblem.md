@@ -1,4 +1,5 @@
 ---
+title: Inverse problem
 layout: default
 ---
 

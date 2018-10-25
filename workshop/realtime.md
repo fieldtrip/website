@@ -1,4 +1,5 @@
 ---
+title: Realtime MEG BCI hands-on session in Nijmegen
 layout: default
 tags: [realtime, workshop]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Event related averaging and MEG planar gradient
 layout: default
 tags: [tutorial, meg, timelock, preprocessing, plot, MEG-language]
 ---
@@ -21,11 +22,11 @@ This tutorial assumes that the steps of preprocessing are already clear for the 
 
 ## Background
 
-** ERP / ERF **
+### ERP / ERF
 
 When analyzing EEG or MEG signals, the aim is to investigate the modulation of the measured brain signals with respect to a certain event. However, due to intrinsic and extrinsic noise in the signals - which in single trials is often higher than the signal evoked by the brain - it is typically required to average data from several trials to increase the signal-to-noise ratio(SNR). One approach is to repeat a given event in your experiment and average the corresponding EEG/MEG signals. The assumption is that the noise is independent of the events and thus reduced when averaging, while the effect of interest is time-locked to the event. The approach results in ERPs and ERFs for respectively EEG and MEG. Timelock analysis can be used to calculate ERPs/ ERFs.
 
-** Planar gradient **
+### Planar gradient
 
 The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-order axial gradiometer sensors that measure the gradient of the magnetic field in the radial direction, i.e. orthogonal to the scalp. Often it is helpful to interpret the MEG fields after transforming the data to a planar gradient configuration, i.e. by computing the gradient tangential to the scalp. This representation of MEG data is comparable to the field measured by planar gradiometer sensors. One advantage of the planar gradient transformation is that the signal amplitude typically is largest directly above a source.
 
@@ -182,6 +183,7 @@ To plot a sequence of topographic plots define the time intervals in cfg.xli
    * What changes in data if you extend the baseline correction from -200 ms to 0 ms to  -500 ms to 0?
    * Apply a band-pass filter in the preprocessing instead of only a low-pass filter. Use for example the values from 1 to 30 Hz. What changes in the data? What are the pros and cons of using a high-pass filter?
 `</note>`
+
 #### Exercise 2
 
 `<note exercise>`

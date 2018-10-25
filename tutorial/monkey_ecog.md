@@ -1,4 +1,5 @@
 ---
+title: Analysis of monkey ECoG recordings
 layout: default
 tags: [tutorial, ecog, animal]
 ---

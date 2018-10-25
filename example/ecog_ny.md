@@ -1,4 +1,5 @@
 ---
+title: Analysis of high-gamma band signals in human ECoG
 layout: default
 tags: [example, ieeg, eeg, ecog, ecog-visual]
 ---

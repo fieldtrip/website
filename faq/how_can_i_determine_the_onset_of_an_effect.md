@@ -1,4 +1,5 @@
 ---
+title: How can I determine the onset of an effect?
 layout: default
 tags: [faq, statistics]
 ---

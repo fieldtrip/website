@@ -1,4 +1,5 @@
 ---
+title: Introduction
 layout: default
 tags: [tutorial, meg, eeg, lfp, spike, cfg, matlab]
 ---

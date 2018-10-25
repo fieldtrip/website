@@ -1,4 +1,5 @@
 ---
+title: How to change the MRI orientation, the voxel size or the field-of-view?
 layout: default
 tags: [faq, mri, volume, coordinate]
 ---

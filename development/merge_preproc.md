@@ -1,4 +1,5 @@
 ---
+title: Switch to using the preproc functions and phase out the old preprocessing code
 layout: default
 ---
 

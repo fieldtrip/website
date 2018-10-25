@@ -1,4 +1,5 @@
 ---
+title: Correlation analysis in fMRI data
 layout: default
 tags: [example, mri, raw, freq, coherence]
 ---

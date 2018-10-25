@@ -1,4 +1,5 @@
 ---
+title: Preprocessing - Reading continuous EEG data
 layout: default
 tags: [tutorial, preprocessing, continuous, eeg, raw, brainvision, memory, EEG-language]
 ---

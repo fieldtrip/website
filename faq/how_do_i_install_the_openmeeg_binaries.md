@@ -1,4 +1,5 @@
 ---
+title: How do I install the OpenMEEG binaries?
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: FieldTrip Community
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Distributed computing using a peer-to-peer cluster
 layout: default
 tags: [peer]
 ---

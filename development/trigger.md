@@ -1,4 +1,5 @@
 ---
+title: Consistent flank detection for triggers
 layout: default
 ---
 

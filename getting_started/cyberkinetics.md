@@ -1,4 +1,5 @@
 ---
+title: Getting started with Cyberkinetics data
 layout: default
 tags: [cyberkinetics, lfp, spike, dataformat]
 ---

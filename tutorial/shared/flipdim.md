@@ -1,4 +1,5 @@
 ---
+title: Checking your segmented volumes
 layout: default
 ---
 

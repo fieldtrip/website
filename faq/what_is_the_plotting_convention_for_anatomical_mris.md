@@ -1,4 +1,5 @@
 ---
+title: What is the plotting convention for anatomical MRIs?
 layout: default
 tags: [faq, ft_sourceplot, anatomical, mri]
 ---

@@ -1,4 +1,5 @@
 ---
+title: How to import data from MNE-Python and FreeSurfer
 layout: default
 tags: [example, mne, source]
 ---

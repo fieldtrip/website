@@ -1,4 +1,5 @@
 ---
+title: Replicate functionality of MNE software
 layout: default
 ---
 

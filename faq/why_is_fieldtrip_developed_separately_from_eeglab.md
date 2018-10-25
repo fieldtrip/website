@@ -1,4 +1,5 @@
 ---
+title: Why is FieldTrip developed separately from EEGLAB?
 layout: default
 tags: [faq, eeglab]
 ---

@@ -1,4 +1,5 @@
 ---
+title: How can I compute inter-trial coherence?
 layout: default
 tags: [faq, freq]
 ---

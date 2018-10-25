@@ -1,4 +1,5 @@
 ---
+title: Documentation guidelines
 layout: default
 tags: [guidelines, development]
 ---

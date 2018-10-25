@@ -1,4 +1,5 @@
 ---
+title: How to make Wiki banners
 layout: default
 ---
 

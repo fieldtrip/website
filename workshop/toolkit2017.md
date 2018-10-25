@@ -1,4 +1,5 @@
 ---
+title: Advanced analysis and source modeling of EEG and MEG data
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Why am I not allowed to post to the discussion list?
 layout: default
 tags: [faq, email]
 ---

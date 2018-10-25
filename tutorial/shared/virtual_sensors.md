@@ -1,4 +1,5 @@
 ---
+title: Computation of virtual MEG channels in source-space
 layout: default
 ---
 

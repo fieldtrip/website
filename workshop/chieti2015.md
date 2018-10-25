@@ -1,4 +1,5 @@
 ---
+title: FieldTrip workshop in Chieti
 layout: default
 tags: [chieti]
 ---

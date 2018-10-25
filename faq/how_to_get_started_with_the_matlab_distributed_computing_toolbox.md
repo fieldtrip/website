@@ -1,4 +1,5 @@
 ---
+title: How to get started with the MATLAB distributed computing toolbox?
 layout: default
 tags: [faq, distcomp]
 ---

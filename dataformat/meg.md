@@ -1,4 +1,5 @@
 ---
+title: MEG dataformats
 layout: default
 tags: [dataformat, meg, ctf, neuromag, 4d, yokogawa]
 ---

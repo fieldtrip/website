@@ -1,4 +1,5 @@
 ---
+title: Simulate an oscillatory signal with phase resetting
 layout: default
 tags: [example, freq]
 ---

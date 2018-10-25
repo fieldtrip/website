@@ -1,4 +1,5 @@
 ---
+title: Example real-time power estimate
 layout: default
 tags: [example, realtime]
 ---

@@ -1,4 +1,5 @@
 ---
+title: MATLAB complains about a missing or invalid MEX file, what should I do?
 layout: default
 tags: [faq, matlab, mex]
 ---

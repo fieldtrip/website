@@ -1,4 +1,5 @@
 ---
+title: I am having problems printing figures that use opacity
 layout: default
 tags: [faq, plot]
 ---

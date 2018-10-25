@@ -1,4 +1,5 @@
 ---
+title: Getting started with asa and eeprobe data
 layout: default
 tags: [dataformat, eeg, ant, asa, eeprobe]
 ---

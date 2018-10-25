@@ -1,4 +1,5 @@
 ---
+title: Preparing an EEG dataset for sharing
 layout: default
 tags: [example, bids, sharing, anonymize]
 ---

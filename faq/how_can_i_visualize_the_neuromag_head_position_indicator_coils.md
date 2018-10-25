@@ -1,4 +1,5 @@
 ---
+title: How can I visualize the neuromag head position indicator coils?
 layout: default
 tags: [faq, neuromag, head, localization]
 ---

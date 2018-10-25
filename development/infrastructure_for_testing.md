@@ -1,4 +1,5 @@
 ---
+title: Infrastructure for testing
 layout: default
 ---
 

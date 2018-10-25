@@ -1,4 +1,5 @@
 ---
+title: Handling of continuous data
 layout: default
 ---
 

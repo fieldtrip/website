@@ -1,4 +1,5 @@
 ---
+title: How can I process continuous data without triggers?
 layout: default
 tags: [preprocessing, continuous, raw, faq]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Plotting data at the channel and source level
 layout: default
 ---
 

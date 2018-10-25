@@ -1,4 +1,5 @@
 ---
+title: Sensor-level ERF, TFR and connectivity analyses
 layout: default
 tags: [tutorial, meg, freq, timelock, preprocessing, plot, MEG-visuomotor151]
 ---

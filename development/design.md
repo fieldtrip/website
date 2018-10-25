@@ -1,4 +1,5 @@
 ---
+title: Explain how to create cfg.design for ft_*statistics
 layout: default
 ---
 

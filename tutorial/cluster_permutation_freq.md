@@ -1,4 +1,5 @@
 ---
+title: Cluster-based permutation tests on time-frequency data
 layout: default
 tags: [tutorial, statistics, eeg, meg, raw, freq, MEG-language]
 ---

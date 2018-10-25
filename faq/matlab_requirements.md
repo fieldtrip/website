@@ -1,4 +1,5 @@
 ---
+title: What are the MATLAB requirements for using FieldTrip?
 layout: default
 ---
 

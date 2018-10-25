@@ -1,4 +1,5 @@
 ---
+title: How do homogenous coordinate transformation matrices work?
 layout: default
 tags: [faq, coordinate]
 ---

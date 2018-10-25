@@ -1,4 +1,5 @@
 ---
+title: Discussion List
 layout: default
 ---
 

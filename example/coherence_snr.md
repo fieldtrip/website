@@ -1,4 +1,5 @@
 ---
+title: Effect of SNR on Coherence
 layout: default
 tags: [example, freq, coherence]
 ---

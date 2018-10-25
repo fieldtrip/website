@@ -1,4 +1,5 @@
 ---
+title: Clean up the documentation on head modeling, anatomical processing, etc.
 layout: default
 ---
 

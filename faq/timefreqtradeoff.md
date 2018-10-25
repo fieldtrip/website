@@ -1,4 +1,5 @@
 ---
+title: What is meant by time-frequency trade off?
 layout: default
 ---
 

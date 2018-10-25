@@ -1,4 +1,5 @@
 ---
+title: Suggested changes to the reference implementation
 layout: default
 tags: [realtime, development]
 ---

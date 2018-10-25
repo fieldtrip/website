@@ -1,4 +1,5 @@
 ---
+title: Check the quality of the anatomical coregistration
 layout: default
 tags: [example, source, mri, plot]
 ---

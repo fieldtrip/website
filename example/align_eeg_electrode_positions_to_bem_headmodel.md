@@ -1,4 +1,5 @@
 ---
+title: Align EEG electrode positions to BEM headmodel
 layout: default
 tags: [example, eeg, mri, source, headmodel]
 ---

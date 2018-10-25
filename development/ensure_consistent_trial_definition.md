@@ -1,4 +1,5 @@
 ---
+title: Ensure consistent trial definition
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Implement online data processing and classification for BCI
 layout: default
 ---
 

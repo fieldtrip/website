@@ -1,4 +1,5 @@
 ---
+title: Can I get an offline version of the wiki documentation?
 layout: default
 tags: [faq, tutorial, documentation]
 ---

@@ -1,4 +1,5 @@
 ---
+title: How many lines of code does Fieldtrip consist of?
 layout: default
 tags: [faq]
 ---

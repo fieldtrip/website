@@ -1,4 +1,5 @@
 ---
+title: Accessing the FieldTrip source code through Git
 layout: default
 tags: [development, git]
 ---

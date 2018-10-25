@@ -1,4 +1,5 @@
 ---
+title: Preprocessing EEG & MEG
 layout: default
 ---
 

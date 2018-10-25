@@ -1,4 +1,5 @@
 ---
+title: FieldTrip workshop at Washington University, St Louis
 layout: default
 ---
 

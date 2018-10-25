@@ -1,4 +1,5 @@
 ---
+title: Testing with sine waves and pre-recorded EEG data
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: The multiple comparisons problem
 layout: default
 ---
 

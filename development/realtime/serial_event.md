@@ -1,4 +1,5 @@
 ---
+title: Translating characters received on a serial port to FieldTrip events
 layout: default
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Dealing with the geometry of the forward model
 layout: default
 ---
 

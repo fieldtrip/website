@@ -1,4 +1,5 @@
 ---
+title: How can I keep track of changes to the code?
 layout: default
 tags: [faq, download, development, cvs, svn, git]
 ---

@@ -1,4 +1,5 @@
 ---
+title: FieldTrip Workshop in Tübingen, Germany
 layout: default
 ---
 

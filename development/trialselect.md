@@ -1,4 +1,5 @@
 ---
+title: Implement trial selection option
 layout: default
 ---
 

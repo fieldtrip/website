@@ -1,4 +1,5 @@
 ---
+title: Importing your data
 layout: default
 tags: [meg, eeg, lfp, spike, raw, dataformat]
 ---

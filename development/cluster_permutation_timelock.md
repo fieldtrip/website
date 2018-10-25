@@ -1,4 +1,5 @@
 ---
+title: Cluster-based permutation tests on event related fields
 layout: default
 tags: [tutorial, statistics, eeg, meg, timelock, plot, MEG-language]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Getting started with EDF (European Data Format) data
 layout: default
 tags: [edf, eeg, dataformat]
 ---

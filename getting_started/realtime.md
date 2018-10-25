@@ -1,4 +1,5 @@
 ---
+title: Getting started with real-time analysis for BCI/neurofeedback
 layout: default
 tags: [realtime, tutorial, example]
 ---

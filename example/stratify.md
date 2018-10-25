@@ -1,4 +1,5 @@
 ---
+title: Stratify the distribution of one variable that differs in two conditions
 layout: default
 tags: [example, statistics]
 ---

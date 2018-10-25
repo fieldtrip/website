@@ -1,4 +1,5 @@
 ---
+title: Can I use Octave instead of MATLAB?
 layout: default
 tags: [faq, octave]
 ---

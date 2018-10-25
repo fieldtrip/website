@@ -1,4 +1,5 @@
 ---
+title: Whole brain connectivity and network analysis
 layout: default
 tags: [tutorial, connectivity]
 ---

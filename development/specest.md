@@ -1,4 +1,5 @@
 ---
+title: Spectral estimation of of EEG/MEG time series data
 layout: default
 ---
 

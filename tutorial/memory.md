@@ -1,4 +1,5 @@
 ---
+title: Making a memory efficient analysis script
 layout: default
 tags: [tutorial, example, memory, matlab, script]
 ---

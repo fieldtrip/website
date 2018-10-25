@@ -1,4 +1,5 @@
 ---
+title: Advanced MEG/EEG toolkit at the Donders
 layout: default
 ---
 

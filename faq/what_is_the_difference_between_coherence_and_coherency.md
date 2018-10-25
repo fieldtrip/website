@@ -1,4 +1,5 @@
 ---
+title: What is the difference between coherence and coherency?
 layout: default
 tags: [faq, coherence]
 ---

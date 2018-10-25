@@ -1,4 +1,5 @@
 ---
+title: What kind of volume conduction models of the head (head models) are implemented?
 layout: default
 tags: [faq, headmodel, source]
 ---

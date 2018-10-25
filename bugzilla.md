@@ -1,4 +1,5 @@
 ---
+title: Bugzilla bug tracking system
 layout: default
 ---
 

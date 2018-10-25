@@ -1,4 +1,5 @@
 ---
+title: Real-time access to neurophysiological data
 layout: default
 tags: [realtime]
 ---

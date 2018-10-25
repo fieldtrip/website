@@ -1,4 +1,5 @@
 ---
+title: What is the best way to homogenize data?
 layout: default
 ---
 

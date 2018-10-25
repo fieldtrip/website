@@ -1,4 +1,5 @@
 ---
+title: FieldTrip buffer reference implementation
 layout: default
 tags: [realtime, development]
 ---

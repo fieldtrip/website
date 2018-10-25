@@ -1,4 +1,5 @@
 ---
+title: Streaming realtime EEG data to and from Arduino
 layout: default
 tags: [realtime, arduino]
 ---

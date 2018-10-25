@@ -1,4 +1,5 @@
 ---
+title: Example MATLAB scripts
 layout: default
 tags: [example]
 ---

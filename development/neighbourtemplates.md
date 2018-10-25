@@ -1,4 +1,5 @@
 ---
+title: Neighbour templates
 layout: default
 ---
 

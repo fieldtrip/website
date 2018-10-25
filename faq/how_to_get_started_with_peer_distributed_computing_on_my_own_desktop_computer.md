@@ -1,4 +1,5 @@
 ---
+title: How to get started with peer distributed computing on my own desktop computer?
 layout: default
 tags: [faq, peer]
 ---

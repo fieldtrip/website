@@ -1,4 +1,5 @@
 ---
+title: Example real-time classification
 layout: default
 tags: [example, realtime]
 ---

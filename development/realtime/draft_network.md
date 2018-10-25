@@ -1,4 +1,5 @@
 ---
+title: Suggested changes to the network protocol
 layout: default
 tags: [realtime, development]
 ---

@@ -1,4 +1,5 @@
 ---
+title: Fieldtrip Walkthrough
 layout: default
 tags: [meg, eeg, raw, freg, cfg, trialfun, trialdef]
 ---

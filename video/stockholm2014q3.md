@@ -1,4 +1,5 @@
 ---
+title: FieldTrip MEG/EEG workshop at NatMEG, Stockholm (October 2014)
 layout: default
 tags: [video]
 ---

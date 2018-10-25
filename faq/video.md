@@ -1,4 +1,5 @@
 ---
+title: Are the FieldTrip lectures available on video?
 layout: default
 tags: [faq, video]
 ---

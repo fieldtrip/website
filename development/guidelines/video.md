@@ -1,4 +1,5 @@
 ---
+title: Guidelines for audio and video material
 layout: default
 tags: [development, guidelines, video]
 ---

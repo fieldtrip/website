@@ -1,4 +1,5 @@
 ---
+title: TOBI: Tools for Brain-Computer Interaction
 layout: default
 tags: [realtime, tobi]
 ---

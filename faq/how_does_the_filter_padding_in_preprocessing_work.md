@@ -1,4 +1,5 @@
 ---
+title: How does the filter padding in preprocessing work?
 layout: default
 tags: [faq, preprocessing, artifact, filter]
 ---

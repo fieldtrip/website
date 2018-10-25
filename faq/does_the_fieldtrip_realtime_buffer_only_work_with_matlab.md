@@ -1,4 +1,5 @@
 ---
+title: Does the FieldTrip realtime buffer only work with MATLAB?
 layout: default
 tags: [faq, realtime]
 ---

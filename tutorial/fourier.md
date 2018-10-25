@@ -1,4 +1,5 @@
 ---
+title: Fourier analysis of neuronal oscillations and synchronization
 layout: default
 tags: [example, freq, coherence, eeg, meg, fixme]
 ---

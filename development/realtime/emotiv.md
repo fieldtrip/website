@@ -1,4 +1,5 @@
 ---
+title: Emotiv neuroheadset
 layout: default
 tags: [realtime, emotiv]
 ---

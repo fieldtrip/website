@@ -1,4 +1,5 @@
 ---
+title: How can I anonymize DICOM files?
 layout: default
 tags: [faq, mri, anonymize, sharing]
 ---
