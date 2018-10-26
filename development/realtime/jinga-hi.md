@@ -8,7 +8,7 @@ tags: [realtime, jinga-hi, jaga16]
 
 This page describes the interface between the Jinga-Hi JAGA16 device and the FieldTrip buffer.
 
-{{:development:realtime:jaga16.jpeg?120|}}
+{{:development:realtime:jaga16.jpg?120|}}
 
 The [Jinga-Hi](http://www.jinga-hi.com) JAGA16 is a miniaturised stand-alone device includes amplifier, digitizer, signal processor and transmitter. The device has 16 channels. Although the JAGA16 has been primarily designed for electrophysiological recordings (spikes and LFPs) in small animals, its specifications also make it very applicable to wireless EEG-BCI systems.  
 

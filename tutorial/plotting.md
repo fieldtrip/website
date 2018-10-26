@@ -285,7 +285,7 @@ In the help of **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/
 
 ![image](/static/img/tutorial/plotting/2017/fig20.png)
 
-In **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**, you can specify many options to fully control the appearance of the picture. Subsequently you can use the MATLAB print function to write the figure to a file. Preferred file formats are EPS for vector drawings that can be edited in Adobe Illustrator or in Canvas (using “print -depsc”) or PNG for bitmaps (using “print -dpng”).
+In **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**, you can specify many options to fully control the appearance of the picture. Subsequently you can use the MATLAB print function to write the figure to a file. Preferred file formats are EPS for vector drawings that can be edited in Adobe Illustrator or in Canvas (using “print -depsc”) or .png for bitmaps (using “print -dpng”).
 
 To make the EPS-files optimally suitable for Adobe Illustrator, use the command “print -depsc -adobecs -painter”.
 

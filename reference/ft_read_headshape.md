@@ -32,7 +32,7 @@ Note that this reference documentation is identical to the help that is displaye
     'coordsys'    = string, e.g. 'head' or 'dewar' (only supported for CTF)
     'unit'        = string, e.g. 'mm' (default is the native units of the file)
     'concatenate' = 'no' or 'yes' (default = 'yes')
-    'image'       = path to .jpeg file
+    'image'       = path to .jpg file
  
     Supported input file formats include
     'matlab'       containing FieldTrip or BrainStorm headshapes or cortical meshes
