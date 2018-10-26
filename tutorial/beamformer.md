@@ -411,5 +411,3 @@ FAQ
 Example script
 {{topic>source +example &list}}
 
------
-This tutorial was last tested by Robert with version 20150609 of FieldTrip using MATLAB R2014b on a 64-bit OS X computer.

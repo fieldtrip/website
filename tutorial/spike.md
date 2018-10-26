@@ -645,6 +645,3 @@ giving the normalized jpsth, the shuffle corrected normalized jpsth, and the dif
 
 We have shown how to perform several common spike train analyses. As the outputs from many functions are standard FieldTrip functions (e.g. the output from **[ ft_spikedensity](/reference/ ft_spikedensity)**), the powerful statistical methods available in FieldTrip can be readily applied on them. Also not discussed was the joint analysis of LFP and spike data. but this is dealt with in the [spikefield](/tutorial/spikefield) tutorial.
 
------
-
-This tutorial was last tested by Robert with version 20130305 of FieldTrip using Matlab 2011b on a 64-bit OS X platform.

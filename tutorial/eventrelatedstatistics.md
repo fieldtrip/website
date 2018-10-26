@@ -425,26 +425,18 @@ and the [cluster-based permutation tests on time-frequency data](/tutorial/clust
 If you would like to read more about issues related to statistical analysis, you can read the following FAQ's as wel
 
 *  [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo)
-
 *  [What is the idea behind statistical inference at the second-level?](/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level)
 
 If you would like to read about neighborhood selection, you can read the following FAQ'
 
 *  [How can I define my own neighbourhood templates or updating an already existing template?](/faq/how_can_i_define_my_own_neighbourhood_template)
-
 *  [How can I define neighbouring sensors?](/faq/how_can_i_define_neighbouring_sensors)
-
 *  [How does ft_prepare_neighbours work?](/faq/how_does_ft_prepare_neighbours_work)
 
 Or you can look also at the following example script
 
 *  [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
-
 *  [Source statistics](/example/source_statistics)
-
 *  [Stratify the distribution of one variable that differs in two conditions](/example/stratify)
-
 *  [Using the MATLAB statistics toolbox](/example/statistics_toolbox)
 
------
-This tutorial was last tested with version 20120612 of FieldTrip by Jan-Mathijs using MATLAB 2011b on MacOS 64-bit

@@ -215,6 +215,3 @@ To use some of the more advanced methods it is required to call lower level func
 
 To construct online experimental designs that make use of multivariate analysis, for example to build BCI or neurofeedback applications, we have developed the [development:realtime](/development/realtime) module.
 
-----
-
-This tutorial was last tested with version 20120503 of FieldTrip by alibah, using MATLAB 2011b on a 64-bit Linux platform.

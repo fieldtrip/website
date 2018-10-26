@@ -453,6 +453,3 @@ Further development of the functionality will be in the direction of computing i
 
 You might want to continue with the [spike](/spike) tutorial, which presents more detailed analysis methods that are specific to the spikes.
 
------
-
-This tutorial was last tested by Robert with version 20130305 of FieldTrip using MATLAB 2011b on a 64-bit OS X platform.

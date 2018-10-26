@@ -25,15 +25,10 @@ Using this approach, you can read all data from the file into memory, apply filt
 The following steps are taken to read data, to apply filters and to reference the data (in case of EEG), and optionally to select interesting segments of data around events or triggers or by cutting the continuous data into convenient constant-length segments.
 
 *  read the data for the EEG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, apply a filter and re-reference to linked mastoids
-
 *  read the data for the horizontal and vertical EOG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, and compute the horizontal and vertical bipolar EOG derivations
-
 *  combine the EEG and EOG into a single data representation using **[ft_appenddata](/reference/ft_appenddata)**
-
 *  determine interesting pieces of data based on the trigger events using **[ft_definetrial](/reference/ft_definetrial)**
-
 *  segment the continuous data into trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**
-
 *  segment the continuous data into one-second pieces using   **[ft_redefinetrial](/reference/ft_redefinetrial)**
 
 ## The data set used in this tutorial
@@ -264,5 +259,3 @@ If you have more questions about preprocessing, you can also read the following 
 Or you can also read the example script
 {{topic>example +preprocessing &list}}
 
------
-This tutorial was last tested with version 20130617 of FieldTrip using MATLAB R2012b on a 64-bit Windows platform.

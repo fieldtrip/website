@@ -26,7 +26,6 @@ There are largely two alternative approaches for preprocessing, which especially
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done
 
 *  according to a specified trigger channel
-
 *  according to your own criteria when you write your own trial function
 
 Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](/reference/ft_preprocessing)**.
@@ -42,7 +41,6 @@ The output of ft_definetrial is a configuration structure containing the field c
 The following steps are taken in this tutorial:
 
 *  Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-
 *  Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
 
 ## Reading and preprocessing the interesting trials
@@ -205,11 +203,9 @@ More on the trialinfo field can be found in the [faq](/faq/is_it_possible_to_kee
 
 After having finished this tutorial on preprocessing, you can continue with the [event related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-If you have more questions about preprocessing, you can also read the following faq-
+If you have more questions about preprocessing, you can also read the following faqs:
 {{topic>faq +preprocessing &list}}
-Or you can also read the example script
+
+Or you can also read the example scripts:
 {{topic>example +preprocessing &list}}
 
------
-
-This tutorial was last tested with version 20120501 of FieldTrip using MATLAB 2009b on a 64-bit Linux platform.

@@ -419,4 +419,3 @@ The trial function used to extract the trial
     end
     end
 
-This tutorial was last tested by Jörn with version r9460 (April 30 2014) of FieldTrip using MATLAB 2010b on a 64-bit Linux platform.

@@ -228,4 +228,3 @@ Per condition, the following trials contain artifacts:
 
 Channels MLO12 and MLP31 are removed because of artifacts.
 
-This tutorial was last tested with version 20120501 of FieldTrip using MATLAB 2009b on a 64-bit Linux platform.

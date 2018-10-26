@@ -495,5 +495,3 @@ As we noted in the introduction, there are more ways of doing a frequency analys
 
 If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](/#Visualization).
 
------
-This tutorial was last tested by Stephen with version 20140925 of FieldTrip using Matlab 2013b on a 64-bit CentOS platform.

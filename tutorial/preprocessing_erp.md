@@ -367,6 +367,3 @@ If you have more questions about preprocessing or timelocked-analysis, you can a
 Or you can also read the example script
 {{topic>preprocessing timelock +example &list}}
 
------
-
-This tutorial was last tested with version 20170925 of FieldTrip using MATLAB 2015a on 64-bit Windows.

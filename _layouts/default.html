@@ -3,10 +3,20 @@
   {% include head.html %}
   <body>
     {% include navigation.html %}
-    {% include tags.html %}
-    <div class="container">
-      {{ content }}
+
+    <div class="row">
+      <div class="col-md-2">
+        {% include left.html %}
+      </div>
+      <div class="col-md-8">
+        {% include tags.html %}
+        {{ content }}
+      </div>
+      <div class="col-md-2">
+        {% include right.html %}
+      </div>
     </div>
+
     {% include footer.html %}
   </body>
 </html>

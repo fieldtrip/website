@@ -297,4 +297,3 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
 
 See also this [FAQ](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts) on the different types of padding.
 
-This tutorial was last tested with version 20120501 of FieldTrip using MATLAB 2009b on a 64-bit Linux platform.

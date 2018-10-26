@@ -263,6 +263,3 @@ Here you can find related FAQs:
 
 {{topic>preprocessing timelock +faq &list}}
 
------
-
-This tutorial was last tested by Robert with version 20150609 of FieldTrip using MATLAB R2014b on a 64-bit OS X computer.

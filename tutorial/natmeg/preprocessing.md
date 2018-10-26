@@ -807,5 +807,3 @@ In this tutorial we learned how to look at raw MEG and EEG data, define trials b
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/tutorial/natmeg/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 If you are currently doing the local NatMEG analysis course, please let the teachers know you are ready.
 
------
-This tutorial was last tested on 28-09-2014 by Stephen Whitmarsh on Windows 7, Matlab 2013b.
