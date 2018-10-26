@@ -4,7 +4,7 @@ layout: default
 tags: [faq, headmodel, source]
 ---
 
-<div class="warning">
+<div class="alert-danger">
 This documentation is outdated, the latest version is available from http://openmeeg.github.io.
 </div>
 

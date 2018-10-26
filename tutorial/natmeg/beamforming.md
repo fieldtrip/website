@@ -21,7 +21,7 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/shared/virtual_sensors) for an example of this).
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {% include youtube.html id="7eS11DtbIPw" %}
@@ -102,13 +102,13 @@ The null hypothesis for both options within (1) is that the data in both conditi
 
 ### Exercise 1: data length
 
-<div class="exercise">
+<div class="alert-info">
 Why is it important that the length of each data piece is the length of a fixed number of oscillatory cycles?
 </div>
 
 ### Exercise 2: common filter data
 
-<div class="exercise">
+<div class="alert-info">
 Why shouldn't we calculate a spatial filter for both conditions separately in this case? Would there be a reason to do so?
 </div>
 
@@ -149,7 +149,7 @@ The cross-spectral density data structure has a similar data structure as other 
 	         grad: [1x1 struct]     % MEG sensor information
 	          cfg: [1x1 struct]     % Configuration
 
-<div class="exercise">
+<div class="alert-info">
 How come our target frequency is 17.8657, didn't we ask for 18?
 <em>Hint: How large is our time window?</em>
 </div>
@@ -158,7 +158,7 @@ How come our target frequency is 17.8657, didn't we ask for 18?
 
 The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 0.5 cm resolution.
 
-<div class="important">
+<div class="alert-warning">
 Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
 </div>
 
@@ -276,7 +276,7 @@ Now, we can plot the interpolated data:
 
 *Figure 3; A source plot of the beta response in the left-hand condition.*
 
-<div class="exercise">
+<div class="alert-info">
 As you can see the strongest motor response is located in the center of the head. Can you explain this finding?
 </div>
 
@@ -287,27 +287,27 @@ As you can see the strongest motor response is located in the center of the head
 
 *Figure 4; A source plot of the beta response ratio between the left- and right-hand conditions.*
 
-<div class="exercise">
+<div class="alert-info">
 Try to explain the location of the red and blue blobs.
 </div>
 
-<div class="exercise">
+<div class="alert-info">
 The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 </div>
 
 #### Exercise: determining anatomical labels
 
-<div class="exercise">
+<div class="alert-info">
 If you were to name the anatomical label of the source of this motor beta, what you say? What plotting method is most appropriate for this?
 </div>
 
-<div class="tip">
+<div class="alert-success">
 With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
 </div>
 
 #### Exercise: regularization
 
-<div class="exercise">
+<div class="alert-info">
 The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?  
 </div>
 
@@ -381,7 +381,7 @@ Now that we have everything prepared we can start to calculate the common filter
 	cfg.dics.lambda       = '15%';
 	source_all = ft_sourceanalysis(cfg, powcsd_all);
 
-<div class="exercise">
+<div class="alert-info">
 How does the value for lambda set here compare to the one for the MEG dataset? Why do you think it is different?
 </div>
 
@@ -433,7 +433,7 @@ Finally, we can plot the dat
 
 *Figure 6; An EEG-source plot of ratio of the beta response in the left versus the right hand condition.*
 
-<div class="exercise">
+<div class="alert-info">
 How well can you identify the source of the beta-response ration in the EEG source reconstruction? The image seems quite noisy, could you think of a way to enhance the image?
 </div>
 
@@ -441,11 +441,11 @@ How well can you identify the source of the beta-response ration in the EEG sour
 
 *Figure 7; A MEG-source plot of the beta response in the left versus the right hand condition.*
 
-<div class="exercise">
+<div class="alert-info">
 How do the EEG and MEG source plots compare?
 </div>
 
-<div class="exercise">
+<div class="alert-info">
 If you've made it this far, perhaps you could try beamforming a different time window. Looking at the time-frequency plot you might be interested in trying to localise the less obvious beta-band response between 0.75 and 1.25 seconds after response.
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_beam5.png@400)

@@ -4,7 +4,7 @@ layout: default
 tags: [example, source, headmodel, neuromag]
 ---
 
-<div class="warning">
+<div class="alert-danger">
 The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif mri, please look at [this](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space) example script.
 </div>
 

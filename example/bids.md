@@ -25,7 +25,7 @@ Simulus presentation was done using using [NBS Presentation](https://www.neurobs
 
 The shared data is organized according to [BIDS](http://bids.neuroimaging.io), the Brain Imaging Data Structure. This not only gives structure to the organization of the data files, but also helps to ensure that appropriate metadata and documentation are shared. We believe that this will facilitate reuse and increase the value of the shared data.
 
-<div class="important">
+<div class="alert-warning">
 At this moment the data sharing has not been totally completed. Right now we are working on a publication that describes the details of this dataset, and the data is currently under review. Once completed, the data will be published on the [Donders Repository](https://www.ru.nl/donders/research/data/) with DOI http://hdl.handle.net/11633/di.dccn.DSC_3011020.09_236.
 </div>
 

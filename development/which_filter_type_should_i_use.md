@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 The purpose of this page is to serve as a placeholder for future documentation.
 
 Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation** until the page is promoted to actual documentation.

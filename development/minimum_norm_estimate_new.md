@@ -3,7 +3,7 @@ title: Source reconstruction of event-related fields using minimum-norm estimate
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.
 
 There is no guarantee that this page is updated in the end to reflect the final state of the tutorial site.
@@ -125,7 +125,7 @@ For a detail guide on identifying landmarks in the anatomical volume see this li
 
 **moved and edited text for this link**
 
-<div class="warning">
+<div class="alert-danger">
 Importantly, the implicit assumption is that the original transformation matrix correctly describes a right-handed coordinate system (otherwise left and right may become mixed up). In this example, we are using an MRI which has been already processed to contain a correct transformation matrix (in this case corresponding to the CTF convention, which is also a right-handed coordinate system). If you are processing MRI scans in the native file format without explicit orientation information, the previous step may lead to a left/right flip. **I THINK THIS LEFT/RIGHT FLIP NEEDS TO BE EXPLAINED MORE. DO YOU MEAN THAT THE LEFT HEMISPHERE BECOMES THE RIGHT, AND THE RIGHT BECOMES THE LEFT? IS THAT THE SAME/DIFF AS SEEING THE REFLECTION OF THE BRAIN??**
 </div>
 
@@ -168,7 +168,7 @@ The seg structure will be used later for creating the volume conduction model. A
 	cfg.filename    = 'Subject01masked';
 	ft_volumewrite(cfg, seg);
 
-<div class="warning">
+<div class="alert-danger">
 Importantly, the mgz-filetype can only be used on the Linux and Mac platforms (and on Windows running virtual box). When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). Note however that these files cannot be saved and read on a Windows PC. If you have your Matlab installed on Windows, you may try to save the volume as a nifti file, for example. For this, you have to use cfg.filetype = 'nifti'. And you can convert the nifti file to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer. 
 </div>
 

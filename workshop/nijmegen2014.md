@@ -26,7 +26,7 @@ If you see that ft_defaults is found by MATLAB, you are all set. Otherwise (e.g.
     addpath(pwd)
     ft_defaults
 
-<div class="warning">
+<div class="alert-danger">
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.

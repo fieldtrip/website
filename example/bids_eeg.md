@@ -8,7 +8,7 @@ tags: [example, bids, sharing, anonymize]
 
 This example describes how to prepare an EEG dataset for sharing in the BIDS format. The example starts from a single publicly available EEG recording of a single subject, which is copied multiple times to simulate a dataset comprising data from ten subjects.
 
-<div class="important">
+<div class="alert-warning">
 If you want to share data, there are multiple things to consider. For example the file format of the data, the access mechanism for the data (ftphttp/sftp), the data use agreement, whether all data or some part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
 
 In this example we will only be dealing with the format in which the data is organized (over directories) and stored (in files), for which we use the [Brain Imaging Data Structure](http://bids.neuroimaging.io).
@@ -260,7 +260,7 @@ In this example it all looks very simple, which is partially because the data is
 *  for one subject the triggers were recorded incorrectly
 *  etc.
 
-<div class="important">
+<div class="alert-warning">
 As a rule of thumb: if you have few exceptions, better don't try to make the scripts above too complex, but deal with them manually. If you have many exceptions of the same or similar type, it is worthwhile to invest into making these scripts smarter to automate the exception handling.
 </div>
 

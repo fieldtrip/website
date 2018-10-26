@@ -93,7 +93,7 @@ You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize th
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 
    * Why is there a vertical line with label S141 on the first call to ft_databrowser(cfg,data)?
    * Can you find this line (or lines with other labels) on the second call to ft_databrowser(cfg)?
@@ -123,7 +123,7 @@ and note that, if you wanted to, you could plot a single trial with default Matl
 
 We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels 57 and 25 (see the plot of the layout and the figure below). For the vertical EOG we will use channel 53 and channel "LEOG" which was placed below the subjects' left eye (not pictured on the layout).
 
-<div class="tip">
+<div class="alert-success">
 Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The re-referencing step to obtain the EOG is therefore not required when working with Biosemi or other bipolar data.
 </div>
 
@@ -223,7 +223,7 @@ You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yo
 
 ![image](/static/img/example/example_script_artifacts1.png@600)
 
-<div class="note">
+<div class="alert-info">
 In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 </div>
 
@@ -311,7 +311,7 @@ The following code allows you to look at the ERP difference waves.
 	cfg.showoutline = 'yes';
 	ft_multiplotER(cfg, difference)
 
-<div class="exercise">
+<div class="alert-info">
 Explore the event-related potential by dragging boxes around (groups of) sensors and time points in the 'multiplot' and the resulting 'singleplots' and 'topoplots'.
 </div>
 

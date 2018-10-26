@@ -8,7 +8,7 @@ tags: [chieti, HCP-motort]
 
 ## Introduction
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 </div>
 
@@ -120,11 +120,11 @@ It will look nicer if we interpolate the connectivity map on the subject's indiv
     cfg.funparameter = 'cohspctrm';
     ft_sourceplot(cfg, source_coh_int);
 
-<div class="exercise">
+<div class="alert-info">
 Compute a full brain connectivity distribution with another connectivity metric.
 </div>
 
-<div class="exercise">
+<div class="alert-info">
 Compute the connectivity distribution in the left-hand movement data using the right hemisphere seed location.
 Subsequently, you can make a contrast between left-hand and right-hand connectivity results.
 </div>

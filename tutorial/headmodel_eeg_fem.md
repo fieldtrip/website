@@ -22,7 +22,7 @@ Furthermore, elsewhere on this wiki you can find also information [about MEG hea
 
 We want to note that the FEM modelling works only on MATLAB versions 2011 and above.
 
-<div class="important">
+<div class="alert-warning">
 The SimBio software is described in detail [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome). The integration with FieldTrip is described in the reference below. Please cite this reference if you use the FieldTrip-SimBio pipeline in your research.
 
 Vorwerk, J., Oostenveld, R., Piastra, M.C., Magyari, L., & Wolters, C. H. **The FieldTrip‐SimBio pipeline for EEG forward solutions.** BioMed Eng OnLine (2018) 17:37. [DOI: 10.1186/s12938-018-0463-y](https://doi.org/10.1186/s12938-018-0463-y).
@@ -132,7 +132,7 @@ We check if the resolution and the dimensions were well specified, and the resli
 
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the five different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. These latest three tissues belong to the brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The segmentation should contain a binary representation of 5 tissue types which do not overlap.
 
-<div class="important">
+<div class="alert-warning">
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
 </div>
 
@@ -330,7 +330,7 @@ In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and '
 	    lpa: [29 145 155]
 	    rpa: [144 142 158]
 
-<div class="important">
+<div class="alert-warning">
 If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to get those positions.
 </div>
 
@@ -394,7 +394,7 @@ Here, we only need to use translation. We can shift about 15 mm along the x-axis
 
 ## Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 
    * Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
    * Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
@@ -403,7 +403,7 @@ Here, we only need to use translation. We can shift about 15 mm along the x-axis
 
 ## Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 
    * In exercise 1, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the  concentric spheres model and BEM model?
 </div>

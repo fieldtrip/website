@@ -99,7 +99,7 @@ For the purpose of visualisation we internet the MNE results onto the replaced a
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 You can play around with cfg.mne.lambda? Do you see the influence of different lambdas? 
 </div>
 
@@ -165,13 +165,13 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 Can you think of reasons why the dipoles are at different locations?
 </div>
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the BEM forward model (e.g. changing conductivity values) and redo the inverse solution. If you need more input for this please ask us!
 </div>
 ## Summary and suggested further reading

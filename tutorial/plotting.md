@@ -353,7 +353,7 @@ The function automatically finds the clusters in the data which are smaller than
 
 Stat should be 2D, i.e. channels-by-time, or channels-by frequency. You cannot visualize channels-by-frequency-by-time, that case requires either averaging over time, or averaging over frequency.
 
-<div class="warning">
+<div class="alert-danger">
 Although the code below shows how to visualize clusters, you should be [cautious on how to interpret clusters](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 </div>
 

@@ -36,7 +36,7 @@ You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. il
  5.  DataType should be 'TIMEDOMAIN'
  6.  BinaryFormat should be 'IEEE_FLOAT_32'
 
-<div class="warning">
+<div class="alert-danger">
  At this moment, FieldTrip has problems reading in .dat files, [see our Bugzilla page](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1567).
 </div>
 

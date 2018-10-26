@@ -3,7 +3,7 @@ title: Parametric and non-parametric statistics on event-related fields
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
 
 After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
@@ -155,7 +155,7 @@ You can do the same thing in FieldTrip (which does not require the statistics to
 
 ####  Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
 </div> 
 

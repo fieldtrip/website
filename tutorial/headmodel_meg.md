@@ -20,7 +20,7 @@ The volume conduction model of the head that will be constructed here is specifi
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-<div class="tip">
+<div class="alert-success">
 The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG tutorial](/tutorial/headmodel_eeg).
 </div>
 
@@ -98,7 +98,7 @@ When you read in your own anatomical data, it may not give information on the co
 
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into [different tissue types](/faq/how_is_the_segmentation_defined) . By default, the gray matter, white matter and the cerebro-spinal fluid (csf) compartments are differentiated. Based on these compartments a so called brainmask is created, which is a binary mask of the content inside the skull. All voxels that are inside the skull (i.e. the complete brain) are represented by 1, all other voxels by 0. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output.
 
-<div class="important">
+<div class="alert-warning">
 Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
 </div>
 
@@ -193,7 +193,7 @@ When the figure is plotted, you can look at the figure from different views usin
 
 ### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 
    * Create a head model with method 'singlesphere' that you fit on the inside brain surface, i.e. using the output of the already made segmentation.
    * Plot both head models in the same figure, check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the two head models together.
@@ -202,7 +202,7 @@ When the figure is plotted, you can look at the figure from different views usin
 
 ### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 
    * In exercise 1, you created a head model with method 'singlesphere'. How is its geometrical description defined? What is the difference between the fields of the single sphere and single shell model which contain the geometrical description?
 </div>

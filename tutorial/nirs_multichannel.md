@@ -12,7 +12,7 @@ tags: [tutorial, nirs, preprocessing, nirs-multichannel]
 
 #  Preprocessing and averaging of multi-channel NIRS data
 
-<div class="important">
+<div class="alert-warning">
 This tutorial is still under development.
 </div>
 
@@ -110,7 +110,7 @@ You will see something like this in  the command windo
 
 The structure **data_raw** contains all data and information about the experiment, all stored in separate fields.
 
-<div class="note">
+<div class="alert-info">
 For information about FieldTrip data structures and their fields, see this [frequently asked question](/faq/how_are_the_various_data_structures_defined).
 </div>
 
@@ -145,7 +145,7 @@ Plotting the data from ADC001 and ADC002 will yield the figure below, showing th
 
 **//Figure 4; Oddball paradigm trigger. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants. You can see that there are four blocks of events.//**
 
-<div class="exercise">
+<div class="alert-info">
 
 ** Exercise 1 **
 Zoom in on 355 to 365 seconds to better see what is going on.  All stimuli onsets are indicated by the blue lines.  Red dotted lines indicate onsets of the deviants (the oddballs). Can you now better spot the oddball?
@@ -155,7 +155,7 @@ FieldTrip can detect the onset in the ADC channels automatically and represent t
 
     event = ft_read_event('LR-01-2015-06-01-0002.oxy3')
 
-<div class="exercise">
+<div class="alert-info">
 
 ** Exercise 2 **
 Explore the information in the event structure. How many stimuli were played and how many oddballs? As not all events are stimuli onsets, it might help to find the oddballs by running adc002 = find(strcmp({event.type}, 'ADC002'));
@@ -173,11 +173,11 @@ Since the hemodynamic response takes about 5 to 10 s to reach peak (i.e. corresp
     cfg.resamplefs      	= 10;
     data_down           	= ft_resampledata(cfg, data_raw);
 
-<div class="note">
+<div class="alert-info">
 It is better to resample multiple times if the resampling factor is larger than 10, see [here](https://allsignalprocessing.com/very-low-frequency-filtering/)
 </div>
 
-<div class="note">
+<div class="alert-info">
 The resampling also includes low-pass filtering of the data. As the new sampling rate is 10 Hz, we will lose data with frequencies larger than 5 Hz. This means we will lose a lot of information from the standards in our experiment, as they are presented near 6.7 Hz, but we keep the deviant information, which is presented near 0.6 Hz. For the current analysis, we are only interested in the deviant data. Just remember: be wary of filtering!
 </div>
 
@@ -305,7 +305,7 @@ Let’s take a look at what happens around the first deviant, by plotting the av
 
 The most obvious thing you should see, is the heartbeat. This is great! It means that your subject is alive and has some blood flowing through his/her brain (or skin). Importantly, this is an indicative sign of a good measurement. If you would not see this, you could throw this data in the bin (see next paragraph).
 
-<div class="exercise">
+<div class="alert-info">
 
 ** Exercise 3 **
 Inspect the signal carefully! When does it increase/decrease, when does it peak? Could this be a functional response? We have to do a few more additional analysis steps, before we know for sure.
@@ -338,7 +338,7 @@ You can see that you throw away some channels in data_sci.label, where we now on
 
 We already removed major motion artefacts by epoching, thus removing the periods in between blocks, and by throwing away poorly coupled optodes. Therefore, this step can be ignored for this dataset.
 
-<div class="exercise">
+<div class="alert-info">
 
 ** Exercise 4 **
 We just wrote "Therefore, this step can be ignored." Check this yourself, are there indeed no artifacts? Hint: you can use cfg.artfctdef.zvalue.interactive = 'yes'; and [cfg, artifact] = ft_artifact_zvalue(cfg, data_epoch); like in Exercise 2 of the single channel tutorial.

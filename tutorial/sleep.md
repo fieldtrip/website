@@ -164,7 +164,7 @@ We want to be very cautious with excluding and exclude more than we must since E
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Explore and find the best cutoff in z-values (i.e. standard deviations) to exclude most of the artifacts for this subject!
 Typically EMG higher than 100 microVolts are best excluded. Note that we exclude the data on the whole data length, i.e. as one big trial.
 </div>
@@ -189,7 +189,7 @@ For the epoched data we can do a similar EMG artifact identification as abov
 
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
  Compare the artifact begin and end samples when detected in the continuous data and when detected in the epoched data. What do you notice?
 </div>
 
@@ -211,7 +211,7 @@ Another indicator of wake periods (or REM sleep) is eye movement. In the EOG we 
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Explore the right threshold for detecting all EOG artifacts. Again, the data is displayed as one single long trial.
 </div>
 
@@ -519,7 +519,7 @@ View it in the time-resolved spectral estimate each sample corresponding to a 30
 ![image](/static/img/tutorial/sleep_databrowser_hypnogarm_annotation.png@600)
 #### Exercise 4
 
-<div class="exercise">
+<div class="alert-info">
 Optional Explore how the prescored hypnogram looks like in the databrowser with all the sleep stages (non only non-REM, REM and Wake but also S1, S2, and SWS). You can switch the 'if false' to 'if true' above.
 </div>
 
@@ -703,7 +703,7 @@ Candidates for slow waves or sleep spindle events can be detected using **[ft_ar
 
 #### Exercise 5
 
-<div class="exercise">
+<div class="alert-info">
 The threshold here is key for the proper detection, the value here is based on experience. Try to use a more strict (higher) threshold and see if the results later on change.
 </div>
 
@@ -841,25 +841,25 @@ View the detected events in the orginal data.
 
 #### Exercise 6
 
-<div class="exercise">
+<div class="alert-info">
 Repeat the above analysis for event detection for sleep spindles when you did slow waves and vice versa. For this you need to switch between **two** last occurrances from or to "if true" or "if false".
 </div>
 
 #### Exercise 7
 
-<div class="exercise">
+<div class="alert-info">
 View the outcomes of the slow-wave and spindle detection in the same window of **[ft_databrowser](/reference/ft_databrowser)**
 </div>
 
 #### Exercise 8
 
-<div class="exercise">
+<div class="alert-info">
 Repeat the tutorial or parts of it with the other dataset of Subject05, are there any differences in the data and the detection of events?
 </div>
 
 #### Exercise 9
 
-<div class="exercise">
+<div class="alert-info">
 Try to visualize an average QRS complex around the R-wave like was done for sleep slow waves and spindles. What kind of epochs/artifacts would you exclude here from the analysis?
 </div>
 

@@ -12,7 +12,7 @@ The databrowser can be used to look at your raw or preprocessed data and annotat
 
 Note that the second argument, data, is optional. You can also read in data from your harddrive instead, see **[ft_databrowser](/reference/ft_databrowser)**. Note that you need to specify whether your data is continuous or not by setting cfg.continuous to 'yes' or 'no'. If your data is trial based, then continuous is 'no', if you have one long continuous recordings without breaks, you can set continous to 'yes'.
 
-<div class="important">
+<div class="alert-warning">
 If you call the databrowser without an output argument like thi
 
 	
@@ -25,6 +25,6 @@ The databrowser supports three viewmodes: butterfly, vertical or component. In '
 
 When the databrowser opens, you will see buttons to navigate at the bottom and artifact annotation buttons on the right. Note that also artifacts that were marked in automatic artifact detection methods will be displayed here, see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**. You can click on one of the artifact types, select thet start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
 
-<div class="important">
+<div class="alert-warning">
  The databrowser will **not** change your data in any way, it will just store your selected or de-selected artifacts in your cfg.
 </div>

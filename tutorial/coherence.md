@@ -123,7 +123,7 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Explore the MEG and EMG in figure 1, e.g. by zooming in. How are the signals different from one another?
 </div>
 ## Computing the coherence
@@ -199,7 +199,7 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
 *Figure 3; The coherence spectrum between the EMG and sensor MRC21.*
 
 ### Exercise 2
-<div class="exercise">
+<div class="alert-info">
 a) What determines the frequency resolution of the spectrum, as displayed in figure 3? How can it be increased or decreased? Answer the same question for smoothing.
 
 b) Plot a topographical distribution of the coherence in the beta band. The variable cfg.xlim defines the edges of the frequency band.
@@ -218,14 +218,14 @@ b) Plot a topographical distribution of the coherence in the beta band. The vari
 </div>
 
 ### Exercise 3
-<div class="exercise">
+<div class="alert-info">
 a) Explain the pattern of activation in Figure 4.
 
 b) Plot the topographic representation for other frequencies that might be of interest.
 </div>
 
 ### Exercise 4
-<div class="exercise">
+<div class="alert-info">
 Explore the consequence of changing the smoothing in the frequency domain. Do this by recomputing the cortico-muscular coherence between the EMG signal and MEG sensor MRC21 for different degrees of smoothing. Compute the powerspectra and the cross-spectra, and the corresponding coherence using different degrees of smoothing.
 
 a) 2 Hz smoothing (cfg.tapsmofrq = 2 Hz)
@@ -285,7 +285,7 @@ Which degree of smoothing do you consider optimal in the calculations above?
 </div>
 ### Exercise 5
 
-<div class="exercise">
+<div class="alert-info">
 Another question pertains to how the estimate of coherence is affected by the number of trials. We will compare the cortico-muscular coherence at two MEG sensors for different amount of data.
 
 Create the following configuration, and compute the coherence.

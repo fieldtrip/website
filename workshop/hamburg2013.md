@@ -68,7 +68,7 @@ If you want to download it in advance, please go to ftp:/ftp.fieldtriptoolbox.or
 *  Subject01.zip
 *  all files in the tutorial/eventrelatedaveraging directory
 
-<div class="warning">
+<div class="alert-danger">
 Depending on the unzip program you are using (e.g. Winrar), the name
 of the zip file might also appear as directiory, resulting in
 path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the
@@ -83,7 +83,7 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-<div class="warning">
+<div class="alert-danger">
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using a startup.m file than the path GUI.
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.

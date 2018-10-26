@@ -18,7 +18,7 @@ In this tutorial you can find information about how to fit dipole models to the 
 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the [Localizing oscillatory sources using beamformer techniques](/tutorial/natmeg/beamforming) tutorial if you are interested in the later.
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {% include youtube.html id="4pVaY6f25w0" %}
@@ -117,7 +117,7 @@ The headshape based coregistration starts with an interactive step to improve th
 
     save mri_realigned2 mri_realigned2
 
-<div class="note">
+<div class="alert-info">
 Check once more with **[ft_sourceplot](/reference/ft_sourceplot)** whether the coordinate system is consistent with the MRI. Is the problem of the MRI being upside down resolved? Is the coordinate system correct?
 </div>
 
@@ -178,7 +178,7 @@ By treating the segmentation of brain/skull/scalp as a “functional” volume, 
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_dip_segmented_scalp.png@400)
 
-<div class="important">
+<div class="alert-warning">
 You should check that the segmentation covers the appropriate part of the anatomical MRI and that it does not have any artefacts due to noisy voxels in the MRI or local contrast drop-out.
 </div>  
 
@@ -202,7 +202,7 @@ After having confirmed that the segmentations are consistent with the anatomical
     cfg.numvertices = 1000;
     mesh_scalp = ft_prepare_mesh(cfg, mri_segmented);
 
-<div class="note">
+<div class="alert-info">
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 </div>
 
@@ -374,7 +374,7 @@ Having constructed the volume conduction model and completed the processing of t
     cfg.channel = 'MEG*1';
     source_mag = ft_dipolefitting(cfg, timelock_all);
 
-<div class="note">
+<div class="alert-info">
 Inspect the content of the source_mag structure. Can you identify where the position of the two dipoles is represented? And the orientation?
 </div>
 
@@ -554,7 +554,7 @@ We can plot the dipoles together in 3D. Note the color-coding that is used to di
 
 {{tutorial:natmeg_temp:natmeg_dip_sourcedif.png?400"}}
 
-<div class="note">
+<div class="alert-info">
 The dipole positions are not exactly the same. Explain the difference in the dipole position and how the MMN might contribute to the dipole position of the deviant being shifted inward.
 </div>
 
@@ -700,7 +700,7 @@ The following code demonstrates the effect of the imdilate function. It makes fo
 
 Using a combination of imerode and Boolean locic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**.
 
-<div class="note">
+<div class="alert-info">
 Compare the four figures and toggle back and forth. Can you see the effect of the dilation on the outside of the scalp?
 </div>
 
@@ -760,7 +760,7 @@ The three meshes are combined in one struct-array and used as input to **[ft_pre
 
     save headmodel_eeg headmodel_eeg
 
-<div class="note">
+<div class="alert-info">
 Here we've set the ratio of conductivity between the different tissue types to [1 1/20 1]. What would happen if we would change the ratio to: [1 1/80 1]? See [What is the conductivity of the brain, CSF, skull and skin tissue?](/faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue)
 </div>
 
@@ -809,7 +809,7 @@ As before we are going to check for, and remove bad trial
     cfg.preproc.refchannel = 'all';
     data_eeg_clean = ft_rejectvisual(cfg, data_eeg);
 
-<div class="important">
+<div class="alert-warning">
 The EEG forward model is computed with an common average reference. Consequently, the EEG data that you want to fit also should be average referenced. Whenever you remove a (bad) channel from the data, you have to recompute the common average reference in the EEG data.
 </div>
 
@@ -930,7 +930,7 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
     axis tight
     axis off
 
-<div class="exercise">
+<div class="alert-info">
 How does this fit compare to the previous? Can you explain the difference?
 </div>
 

@@ -20,7 +20,7 @@ Here, we will work on the MEG-language-semantics dataset, you can click [here](/
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](/#Summary and suggested further reading)).
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
 
 {% include youtube.html id="vwPpSglPJTE" %}
@@ -153,7 +153,7 @@ From Figure 4 one can see that there is an increase in power around 15-20 Hz in 
 
 ##### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 
 *  Plot the power with respect to a relative baseline (hint: use cfg.zlim = [0 2.0] and use the cfg.baselinetype option)
 
@@ -162,7 +162,7 @@ From Figure 4 one can see that there is an increase in power around 15-20 Hz in 
 
 ##### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 
 *  Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms (hint: compare to ERFs)?  
 </div>
@@ -211,7 +211,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 
 Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting
 
@@ -323,7 +323,7 @@ Plot the result
 
 *Figure 9; Time-frequency representations of power calculated using Morlet wavelets.*
 
-<div class="exercise">
+<div class="alert-info">
 
 **Exercise 4**
 

@@ -5,7 +5,7 @@ tags: [faq, headmodel, mri, source, coordinate]
 ---
 
 ## How are the different head and MRI coordinate systems defined?
-<div class="important">
+<div class="alert-warning">
 For understanding the coordinate system, the following questions need to be addressed:
 *  What is the definition of the origin of the coordinate system, i.e. where is [0,0,0]?
 *  In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?

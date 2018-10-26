@@ -4,7 +4,7 @@ layout: default
 tags: [tutorial, plot, eeg, meg, timelock, freq, statistics, source, layout, MEG-language]
 ---
 
-<div class="warning">
+<div class="alert-danger">
 This page is under development, use with caution 
 </div>
 
@@ -83,7 +83,7 @@ If you specify multiple channels in cfg.channel both singleplot functions will p
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Try to replicate [Figure 5 from the Event Related Averaging tutorial](/tutorial/eventrelatedaveraging#plotting_the_result) and [Figure 3 from the Time Frequency analysis tutorial](/tutorial/timefrequencyanalysis#plotting_the_results ) without using FieldTrip functions.
 </div>
 ### Multiplot functions
@@ -138,7 +138,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
 
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 The most left picture made with **[ft_topoplotER](/reference/ft_topoplotER)** is planar ERF data. Planar data can not have values lower than zero. Explain why you nevertheless see values in the plot that correspond to negative values.
 </div>
 ####  

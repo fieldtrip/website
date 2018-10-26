@@ -17,7 +17,7 @@ To contribute a new issue to bugzilla or to add yourself to one of the existing 
 
 Note that the easier it is for one of the developers to reproduce the bug, the more likely it is that we can fix the problem.
 
-<div class="note">
+<div class="alert-info">
 You will have to register on the bugzilla server with your email address. Your address will not be visible to external visitors and will only be used to report back to you when the bug is resolved or to ask for additional information that we might need from you.
 </div>
 

@@ -5,7 +5,7 @@ layout: default
 
 ## Developing the documentation of the source-reconstruction methods
 
-<div class="warning">
+<div class="alert-danger">
 The purpose of this page is just to serve as a scratch pad for developing the documentation.
 
 There is no guarantee that this page is updated or that is contains correct information. 

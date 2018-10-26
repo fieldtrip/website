@@ -3,7 +3,7 @@ title: Neighbour templates
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 This project has been completed and it's result can be found her
 
 *  http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors

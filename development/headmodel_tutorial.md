@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.
 
 There is no guarantee that this page is updated in the end to reflect the final state of the tutorial site.

@@ -10,7 +10,7 @@ We would appreciate it to be mentioned in your publication if you have used Fiel
 
 Please cite the **[FieldTrip Reference Paper](http://www.hindawi.com/journals/cin/2011/156869/)** when you have used FieldTrip for data analysis in your study.
 
-<div class="important">
+<div class="alert-warning">
 Oostenveld, R., Fries, P., Maris, E., Schoffelen, JM (2011) FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data. *Computational Intelligence and Neuroscience* Volume 2011 (2011), Article ID 156869, doi:10.1155/2011/156869
 </div>
 

@@ -11,7 +11,7 @@ The toolbox offers advanced analysis methods of MEG, EEG, and invasive electroph
 
 The FieldTrip software is released free of charge as [open source software](http://en.wikipedia.org/wiki/Open_source) under the GNU [general public license](http://www.gnu.org/copyleft/gpl.html).
 
-<div class="important">
+<div class="alert-warning">
 <p>Please cite the <a href="http://www.hindawi.com/journals/cin/2011/156869">FieldTrip Reference Paper</a>
 when you have used FieldTrip for data analysis in your study.</p>
 

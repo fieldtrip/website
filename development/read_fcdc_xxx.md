@@ -3,7 +3,7 @@ title: Redesign the interface to the read_fcdc_xxx functions
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
 

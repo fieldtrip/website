@@ -6,7 +6,7 @@ tags: [faq, dataset]
 
 # Where can I find open access MEG/EEG data?
 
-<div class="important">
+<div class="alert-warning">
 Feel free to hit the **edit** button to share links to other open access datasets here.
 </div>
 

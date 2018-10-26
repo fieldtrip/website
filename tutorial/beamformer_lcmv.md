@@ -10,7 +10,7 @@ tags: [fixme]
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-<div class="warning">
+<div class="alert-danger">
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete.
 
 See http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718 for the progress.
@@ -167,7 +167,7 @@ Now prepare the head model from the segmented brain surfac
 	vol                = ft_prepare_headmodel(cfg, seg);
 	vol                = ft_convert_units(vol, 'cm'); % mm to cm, since the grid will also be expressed in cm
 
-<div class="important">
+<div class="alert-warning">
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference [*], i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
 Prior to averaging the data with ft_timelockanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.

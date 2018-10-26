@@ -10,7 +10,7 @@ tags: [faq, statistics]
 
 The permutation test as implemented in **[/reference/ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)** serves to test  the null hypothesis (H0) that the data in the experimental conditions come from (are drawn from) the same probability distribution. In specialised statistics books, one sometimes reads the technical term that the probability distributions are **exchangeable**. Getting a significant result means that we can reject the null hypothesis (H0) that the data come from the same probability distribution in favour of the alternative hypothesis (H1) that the data come from different distributions. Based on a significant test result, you therefore can report that **"there is a significant difference between condition A and condition B"**.
 
-<div class="warning">
+<div class="alert-danger">
 H0: The data in the experimental conditions come from the same probability distribution, i.e. the data in the conditions cannot be distinguished.
 
 H1: The data in the experimental conditions do **not** come from the same probability distributions, i.e. the data are different.

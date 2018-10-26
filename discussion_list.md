@@ -9,7 +9,7 @@ The aim of the FieldTrip [email discussion list](http://mailman.science.ru.nl/ma
 
 Please send an email to fieldtrip-subscribe@science.ru.nl to subscribe or to fieldtrip-unsubscribe@science.ru.nl to unsubscribe to the FieldTrip list. Only people who are subscribed to the discussion list will be able to receive and post messages.
 
-<div class="important">
+<div class="alert-warning">
 If you get the message <em>"You are not allowed to post to this mailing list, and your message has been automatically rejected"</em> then please read this <a href="/faq/why_am_i_not_allowed_to_post_to_the_discussion_list">frequently asked question</a>.
 </div>
 

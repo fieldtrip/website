@@ -21,7 +21,7 @@ In this tutorial we will continue working on the dataset described in the [Prepr
 
 This tutorial is not covering group analysis. If you are interested in that, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
 {% include youtube.html id="vOSfabsDUNg" %}
@@ -146,7 +146,7 @@ Let us compare the single-trial TFR with the averaged TFR.
          grad: [1x1 struct]
           cfg: [1x1 struct]
 
-<div class="note">
+<div class="alert-info">
 Use the MATLAB [boxplot](http://www.mathworks.se/help/stats/boxplot.html) function to plot the power in channel 'MEG0431' at 18 Hz and around 700 ms following movement offset.
 
 Hint: you can make a selection of the data like
@@ -398,7 +398,7 @@ Again we can visualize the results of the statistical comparison. Since we have 
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_stat_erfcluster.png@500)
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels.
 </div>
 

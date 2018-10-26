@@ -3,7 +3,7 @@ title: Redesign and implement a common statistical backend for various data type
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
 

@@ -74,7 +74,7 @@ As FieldTrip is an open-source toolbox, you can always have a look at the code d
 
     edit ft_preprocessing
 
-<div class="note">
+<div class="alert-info">
 If this is your first time using FieldTrip you might also want to have a look at the [introduction to the toolbox and matlab tutorial](/tutorial/introduction).
 </div>
 
@@ -98,7 +98,7 @@ FieldTrip is finished when you see something like this on the scree
 
     >> the call to "ft_preprocessing" took 9 seconds
 
-<div class="note">
+<div class="alert-info">
 There are more options to specify when reading in your data, such as cfg.padding, cfg.padtype and cfg.continuous. Those options have default values or are determined automatically, so we ignore them here but you can find all of them in the help documentation.
 Through the option cfg.trl you can specify which trials should be read in. For now we will read in all trials, but we will make a selection later on.
 </div>
@@ -142,7 +142,7 @@ Additionally, we'll from here select just one channel, to reduce the complexity 
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Take a moment to familiarize yourself with the user-interface. Change the horizontal and vertical scales until you can see the heartbeat signal in the selected channels. Tip: A time slice of something between 10 to 20 seconds is optimal. Picking up the heartbeat in the NIRS measurement is a sign of good data quality, if the heartbeat cannot be detected in the data, contact with the skin must have been poor.
 </div>
 
@@ -162,7 +162,7 @@ You will see that FieldTrip identified 8 artifacts through this procedure. These
 
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 Play around with the cut-off z-value. You can do this by running the artifact rejection in interactive mode by adding cfg.artfctdef.zvalue.interactive = 'yes'; before you run [cfg, artifact] = ft_artifact_zvalue(cfg, data);.
 In the interactive mode, you can change the threshold to see which parts of the data would be rejected, the rejected bits are marked in red.
 
@@ -180,7 +180,7 @@ You might have noticed that you were looking at OD values (OD stands for optical
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Check out the data again! As expected, the selected channel, in which you were able to see a clear heartbeat in the raw signal, also shows a clean signal once transformed to oxy- and deoxyHb values, right?
 </div>
 ### Separate functional from systemic responses
@@ -240,13 +240,13 @@ So we pulled our data out of the measurement. The data looks crisps and clear.
 
 #### Exercise 4
 
-<div class="exercise">
+<div class="alert-info">
 All signal values seem to be around the same values. Why could that be?
 </div>
 
 #### Exercise 5
 
-<div class="exercise">
+<div class="alert-info">
 You might want to perform an additional preprocessing step now. What  steps do you consider useful? Check out the options in **[ft_preprocessing](/reference/ft_preprocessing)**!
 </div>
 

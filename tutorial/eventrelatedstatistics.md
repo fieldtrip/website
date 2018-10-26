@@ -189,7 +189,7 @@ From the code above you can see that the statistical comparison is between condi
 
 ####  Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
 </div>
 ### Multiple comparisons

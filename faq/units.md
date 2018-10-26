@@ -16,7 +16,7 @@ Raw data structures with EEG or MEG data may include the "hdr" field, which is t
 
 Your EEG or MEG data structures may also contain sensor descriptions, which may have the chanunit field (especially relevant for Elekta/Neuromag data) and the unit field. Planar gradiometers in the Elekta/Neuromag system have "T/m" or "T/cm" as units (field per distance), although axial gradiometer data in the CTF system is expressed as "T" (field difference between bottom and top coil, not divided by the distance).
 
-<div class="important">
+<div class="alert-warning">
 If you want to ensure that all computations are done correctly, you should ensure that all physical quantities are expressed according to the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) (SI). That means: meter, volt, tesla, ohm, amperes, kilogram, etc. 
 
 These SI units are not necessarily the most convenient to work with, but you can always change the units back at the time of editing your figures to get more convenient values. 

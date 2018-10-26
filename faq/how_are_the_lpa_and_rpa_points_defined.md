@@ -18,7 +18,7 @@ The approximate position of the pre-auriciular point is indicated in the figure 
 
 The problem with using the LPA and RPA according to this definition is that it can be really difficult to localize them precisely on the anatomical MRI. Mislocalization of these points can lead to severe misregistration between the MRI and MEG/EEG, and consequently affect the accuracy of source localization.
 
-<div class="warning">
+<div class="alert-danger">
 Regardless of which convention you use for the points representing the left and right ear landmarks, you have to be aware of it and use it consistently throughout.
 </div>
 

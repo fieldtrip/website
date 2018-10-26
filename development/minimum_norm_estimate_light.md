@@ -6,7 +6,7 @@ tags: [fixme]
 
 FIXME add tags
 
-<div class="warning">
+<div class="alert-danger">
 The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.
 
 There is no guarantee that this page is updated in the end to reflect the final state of the tutorial site.
@@ -127,7 +127,7 @@ After the normalization, the MRI is aligned to the SPM/MNI coordinate system, in
 
 ### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 What is the relation between the following transformation matrices?
 
 *  *mri.transform* 
@@ -169,7 +169,7 @@ The brain surface is represented by points (vertices) that are connected into tr
 
 ### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 What are the coordinates of the three points which define the first triangle (i.e the first row) of *temp_sheet_orig.tri*?
 </div>  
 
@@ -180,7 +180,7 @@ The template cortical sheet needs to be transformed from [MNI/SPM into CTF coord
 
 ### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Plot the points of the transformed and the original template sheet using
 
 	
@@ -226,7 +226,7 @@ First, the template anatomical MRI is [segmented](/faq/how_is_the_segmentation_d
 	template_mri.coordsys = 'spm';  % we know that the template is in spm/mni coordinates 
 	clear mri;                      % to avoid confusion between the template and subject's MRI
 
-<div class="important">
+<div class="alert-warning">
 Note that the segmentation can be time consuming (~15 mins) and if you want, you can load the pre-computed result and skip ahead to the next step. The segmented MRI of this tutorial can be downloaded from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/mne) (template_seg.mat). 
 </div>
 
@@ -335,7 +335,7 @@ The location of the MEG channels are defined in the .ds file of the tutorial dat
 
 ### Exercise 4
 
-<div class="exercise">
+<div class="alert-info">
 Plot also the sensor labels and check whether all anatomical information is defined in CTF head coordinates!
 </div>
 
@@ -420,7 +420,7 @@ For beamformer source reconstructions we typically scan a regular 3-D grid that 
 
 For the cortical sheet source model the source points are all supposed to be inside the brain compartment. However, you can see that some points are marked as *outside* in the leadfield. These points stick out from the headmodel. We will use the **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** function to move these inward. 
 
-<div class="important">
+<div class="alert-warning">
 If you see that many points are marked *outside*, something seems to be wrong with the coregistrationYou can check by visual inspection. 
 </div>  
 
@@ -445,7 +445,7 @@ Now the field **outside** is empty, i.e. we do not have any sourcepoints outside
 
 ### Exercise 5
 
-<div class="exercise">
+<div class="alert-info">
 Which points have been moved in the cortical sheet? Compare the pos and pnt fields of the new and the original sheets. Plot all points with plot3, and use different colors for the points which are different in the two cortical sheets.
 </div>
 
@@ -539,7 +539,7 @@ The **pos**, **inside** and **outside** fields of the source contains specifies 
 
 ### Exercise 6
 
-<div class="exercise">
+<div class="alert-info">
 Compute the source estimate for the FIC condition using a filter where cfg.mne.lambda = 0 was specified. Plot the result at 500 ms (see the plotting in the next section) and compare it to the original result. What is the difference?
 </div> 
 ## Visualization
@@ -561,7 +561,7 @@ You can plot the estimated source strength at a specific time-point with the low
 
 ### Exercise 7
 
-<div class="exercise">
+<div class="alert-info">
 Plot the source in MNI space together with a slice of the MNI template MRI (use ft_plot_slice).
 </div> 
 

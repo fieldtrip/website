@@ -84,7 +84,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 
 #### Exercise 5
 
-<div class="exercise">
+<div class="alert-info">
 Simulate new data using the following mixing matrix: 
 
 	
@@ -98,13 +98,13 @@ and recompute the connectivity measures. Discuss what you see.
 
 #### Exercise 6
 
-<div class="exercise">
+<div class="alert-info">
 Play a bit with the parameters in the mixing matrix and see what is the effect on the estimated connectivity.
 </div>
 
 #### Exercise 7
 
-<div class="exercise">
+<div class="alert-info">
 Simulate new data where the 2 mixed signals are created from 4 underlying sources, and where two of these sources are common input to both signals, and where these two sources are temporally shifted copies of one another.
 
 Hint: the mixing matrix could look like thi

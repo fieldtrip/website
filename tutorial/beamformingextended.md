@@ -130,7 +130,7 @@ Note that we call the headmodel on some occasions volume conduction model, do no
 
     save hdm hdm
 
-<div class="important">
+<div class="alert-warning">
 If you want to do a source reconstruction of EEG data, you have to pay special attention to the  referencing. The forward model will be computed with a common average reference [*], i.e. the mean value of the forward model over all electrodes is zero. Consequently, this also has to hold for your data.
 
 Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference.
@@ -142,7 +142,7 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 
 #### Exercise: head model
 
-<div class="exercise">
+<div class="alert-info">
 Why might a single sphere model be inadequate for performing beamformer estimates?
 </div>
 
@@ -191,7 +191,7 @@ When all these align up well, we have already have the first half of the ingredi
 
 #### Exercise: averaging over subjects
 
-<div class="exercise">
+<div class="alert-info">
 What would be the consequence of averaging over subject specific grids?
 </div>
 
@@ -205,7 +205,7 @@ The aim is to identify the sources of oscillatory activity in the gamma band. In
 
 #### Exercise: data length
 
-<div class="exercise">
+<div class="alert-info">
 Why does the length of each data piece has to have the length of a fixed number of oscillatory cycles?
 </div>
 
@@ -315,7 +315,7 @@ The purpose of cfg.fixedori is that we only keep the largest of the three dipole
 
 #### Exercise: imaginary numbers
 
-<div class="exercise">
+<div class="alert-info">
 What would keeping an imaginary-valued filter imply for the mapping from sources to sensors?
 </div>
 
@@ -373,7 +373,7 @@ Congratulations, you successfully beamed visual gamma!
 
 #### Exercise: plotting options
 
-<div class="exercise">
+<div class="alert-info">
 The 'slice' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
 
 Use these settings for 'surface' plotting
@@ -385,7 +385,7 @@ Use these settings for 'surface' plotting
 
 #### Exercise: determining anatomical labels
 
-<div class="exercise">
+<div class="alert-info">
 If you were to name the anatomical label of the source of this visual gamma, what you say? What plotting method is most appropriate for this?
 
 With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'.
@@ -393,7 +393,7 @@ With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot
 
 #### Exercise: regularization
 
-<div class="exercise">
+<div class="alert-info">
 The regularization parameter was lambda = '5%'. Change it to 0 or to '10%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
 </div>
 ## Localization of cortical sources that are coherent with the EMG
@@ -441,7 +441,7 @@ This step requires the subject's head- and sourcemodel that we both computed abo
     cfg.grid            = sourcemodel;
     source_coh_lft      = ft_sourceanalysis(cfg, freq_csd);
 
-<div class="note">
+<div class="alert-info">
 When you input the sourcemodel on which you have **not** already computed the leadfield matrices, **[ft_sourceanalysis](/reference/sourceanalysis)** will compute the leadfield matrices itself first.
 </div>
 
@@ -490,13 +490,13 @@ Since the data is expressed in MNI coordinates, you can also make a surface rend
 
 #### Exercise: anatomical labeling
 
-<div class="exercise">
+<div class="alert-info">
 Determine the anatomical location of the coherence peak. How does this result compare to coherence with the right EMG?
 </div>
 
 #### Exercise: Comparison with sensor level analysis
 
-<div class="exercise">
+<div class="alert-info">
 How do all these beamforming result relate to the [sensor level analysis](/tutorial/sensor_analysis)?
 </div>
 

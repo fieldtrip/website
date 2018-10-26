@@ -10,7 +10,7 @@ FieldTrip is [Open Source software](http://www.opensource.org) and you can use i
 
 If you have used FieldTrip for the analysis that you are reporting on in a scientific publication, we kindly ask you to refer to the following publication
 
-<div class="important">
+<div class="alert-warning">
 Oostenveld, R., Fries, P., Maris, E., Schoffelen, JM (2011) *FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.* Computational Intelligence and Neuroscience, Volume 2011, doi:10.1155/2011/156869
 </div>
 

@@ -110,7 +110,7 @@ The resulting variable **mdata** contains a description of the data in terms of 
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Compare the parameters specified for the simulation with the estimated coefficients and discuss.
 </div>
 
@@ -215,13 +215,13 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 Discuss the differences between the granger causality spectra, and the coherence spectra.
 </div>
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Compute the following connectivity measures from the **mfreq** data, and visualize and discuss the results: partial directed coherence (pdc), directed transfer function (dtf), phase slope index (psi)
 </div>
 
@@ -310,7 +310,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 
 #### Exercise 4
 
-<div class="exercise">
+<div class="alert-info">
 Simulate new data using the following mixing matrix: 
 
 	
@@ -324,13 +324,13 @@ and recompute the connectivity measures. Discuss what you see.
 
 #### Exercise 5
 
-<div class="exercise">
+<div class="alert-info">
 Play a bit with the parameters in the mixing matrix and see what is the effect on the estimated connectivity.
 </div>
 
 #### Exercise 6
 
-<div class="exercise">
+<div class="alert-info">
 Simulate new data where the 2 mixed signals are created from 4 underlying sources, and where two of these sources are common input to both signals, and where these two sources are temporally shifted copies of one another.
 
 Hint: the mixing matrix could look like thi

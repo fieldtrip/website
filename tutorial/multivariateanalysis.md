@@ -104,7 +104,7 @@ In practice, we may want to average the parameters over folds to get an average 
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Explain which information the contingency matrix gives you, which the accuracy does not.  
 
 Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
@@ -157,7 +157,7 @@ and we see a major improvement since we are focusing on the physiologically rele
 ![image](/static/img/tutorial/clf_2.png@200)
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 Rerun the previous cross-validation with 'cfg.nfolds=2'. Explain the difference and motivate why it is important to perform cross-validation instead of just dividing the data into one training and one test set.
 </div>
 
@@ -193,7 +193,7 @@ If we look at the weights then we find that just a very small number of features
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Use MATLAB to compute the number of non-zero elements in stat.model{1}.weights.
 
 Why is it useful to have a representation in terms of a small number of non-zero elements?

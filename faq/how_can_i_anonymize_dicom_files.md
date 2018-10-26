@@ -8,7 +8,7 @@ tags: [faq, mri, anonymize, sharing]
 
 DICOM files contain a lot of header details that might provide information about your subject, such as the name and date of birth, but also the date and time at which the scan was performed.
 
-<div class="warning">
+<div class="alert-danger">
 Besides the potentially identifying data in the header of the DICOM file, the facial information in an anatomical MRI can in principle also be reconstructed into a facial picture that can be used for identification. Furthermore, the cortical folding or the specific anatomical connectivity in a DTi scan can be considered as a "fingerprint". Both in the case of facial details and the cortical or anatomical "fingerprints", an external database would be needed to match them against, e.g. facial reconstructions can be matched against the database formed by Google images.
 
 The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) or about imposing legal restrictions to prevent matching data against external databases.
@@ -66,6 +66,6 @@ and the [dcmodify](http://support.dcmtk.org/docs/dcmodify.html) command
 
 to erase the specific tags. In this case the "PatientName" tag (0010,0010) is erased from the file. Note that this overwrites the existing file, but keeps a backup of the original. You may have to erase other fields as well.
 
-<div class="warning">
+<div class="alert-danger">
 The help of dcmodify suggests that "-ep" or "--erase-private" can be used to erase private data, but this is **not** the personal data of the subject, but rather header information that is system/software specific and not shared between different DICOM systems.
 </div>

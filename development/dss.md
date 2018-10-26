@@ -3,7 +3,7 @@ title: Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 The purpose of this page is just to serve as a scratch pad for the new version of the example script.
 
 There is no guarantee that this page is updated in the end to reflect the final state of the script.

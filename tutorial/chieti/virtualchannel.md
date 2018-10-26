@@ -8,7 +8,7 @@ tags: [chieti, HCP-motort]
 
 ## Introduction
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 </div>
 
@@ -60,7 +60,7 @@ Best is always to check the coordinate system of the MRI.
 
 ![image](/static/img/tutorial/chieti/screen_shot_2015-09-17_at_09.36.22.png@500)
 
-<div class="exercise">
+<div class="alert-info">
 Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_4dbti_coordinate_system).
 
 You can see that the orientation of the MRI is not as expected. Especially annoying is that it has a left-right flip. Note that each voxel's coordinates are technically OK, but the interpretation of the figure will be easier if the MRI is resliced on a voxel grid that is aligned along the axes of the 4D/BTi coordinate system.
@@ -148,7 +148,7 @@ Each movement instruction is followed by a movement, which can be seen in the co
 
 ![image](/static/img/tutorial/chieti/screen_shot_2015-09-17_at_09.38.23.png@500)
 
-<div class="exercise">
+<div class="alert-info">
 
 Does the mapping of the trigger codes correspond to the sequence of EMG activity?
 
@@ -239,7 +239,7 @@ We can also compute the difference between the power in the left and right-hand 
 
 ![image](/static/img/tutorial/chieti/screen_shot_2015-09-17_at_09.38.55.png@500)
 
-<div class="exercise">
+<div class="alert-info">
 You should use the interactive functionality of the **[ft_multiplotTFR](/reference/ft_multiplotTFR)** figures. Click in the figures to identify the time, frequency and channel selections that show interesting effects,
 </div>
 
@@ -312,7 +312,7 @@ Using the cross-spectral density matrix, we can do the beamformer estimate of th
     dics_rh = ft_sourceanalysis(cfg, tfr_rh_sel);
     dics_lh = ft_sourceanalysis(cfg, tfr_lh_sel);
 
-<div class="exercise">
+<div class="alert-info">
 The source reconstruction contains the power at each grid location, but also the noise. Explore the structure, especially "source.avg". Can you find the power and the noise estimate? Why is the estimate not computed for all grid locations?
 </div>
 
@@ -435,7 +435,7 @@ With the covariance and the forward model for the specific seed points, we can c
 
     lcmv_rh = ft_sourceanalysis(cfg, timelock_rh);
 
-<div class="exercise">
+<div class="alert-info">
 Look at the source structure, again in "source.avg". Can you find the representation of the spatial filter?
 </div>
 

@@ -30,7 +30,7 @@ The first step is the same for solving both the EEG and MEG forward problem, the
 
 In particular, the EEG forward solution is computed via the method so-called *simbio* which relies on the code that you can find [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome), while the MEG forward solution calls the *duneuro* method, which makes use of the code developed in the University of Münster, visit [this](http://duneuro.org/) for further details. 
 
-<div class="important">
+<div class="alert-warning">
 The integration of SimBio with FieldTrip is described in the reference below. Please cite this reference if you use the FieldTrip-SimBio pipeline in your research.
 
 Vorwerk, J., Oostenveld, R., Piastra, M.C., Magyari, L., & Wolters, C. H. **The FieldTrip‐SimBio pipeline for EEG forward solutions.** BioMed Eng OnLine (2018) 17:37. [DOI: 10.1186/s12938-018-0463-y](https://doi.org/10.1186/s12938-018-0463-y).
@@ -153,7 +153,7 @@ For this tutorial we downsample the mesh to 2mm resolution, in order to reduce t
 
 Once the volumetric mesh has been created, the forward solution can be computed. In the following, steps 2-5 are described for EEG and MEG separately. 
 
-<div class="important">
+<div class="alert-warning">
 The MEG forward problem pipeline is currently tested in Ubuntu systems, where Matlab should be started 
 </div>
 ##  2(EEG). Create the head-model
@@ -227,7 +227,7 @@ In case the electrodes are not aligned to the MRI (i.e., CTF space), we can use 
 *Figure9: visualization of headmodel_fem_eeg and electrodes*
 ##  5(EEG). Compute the leadfield
 
-<div class="warning">
+<div class="alert-danger">
 Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take too much time and memory. Load "headmodel_fem_eeg_tr". </div>
 
 	%% compute the transfer matrix
@@ -284,7 +284,7 @@ We can visualize both EEG and MEG sensors, together with the scalp surface mesh
 
 ##  5(MEG). Compute the leadfield
 
-<div class="warning">
+<div class="alert-danger">
 Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take too much time and memory. Load "headmodel_fem_eeg_tr". </div>
 
 	%% compute the transfer matrix
@@ -307,19 +307,19 @@ Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take t
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 Realign the electrodes in the file *elec_shifted.mat* to the head-model you created.
 </div>
 
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 [NOT NOW!] Compute a finer sourcemodel, e.g., 2 mm resolution and compute the respective EEG and MEG forward solutions.
 </div>
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Compute the EEG and MEG forward solution using the Boundary Element Method (BEM), e.g., following  [ this tutorial](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem ).
 </div>
 

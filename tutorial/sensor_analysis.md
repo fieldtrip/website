@@ -52,7 +52,7 @@ Plot the data for the first trial, 130th channe
 
     plot(data_left.time{1}, data_left.trial{1}(130,:));
 
-<div class="exercise">
+<div class="alert-info">
 Which channel is the 130th channel?
 </div>
 
@@ -127,7 +127,7 @@ Again, you can select a time range and click it to bring up a topographical plot
 
 *Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset.*
 
-<div class="exercise">
+<div class="alert-info">
 Given that the CTF system uses axial gradiometers (i.e. detecting the magnetic gradient orthogonal to the scalp), what electrical dipole configuration would explain the observed field pattern in the above figure?
 
 Feel free to click around a bit in the multi- and singleplots to explore the characteristics of the ERF.
@@ -167,7 +167,7 @@ Note that we create a 'neighbours' structure before calling **[ft_megplanar](/re
     cfg.layout          = 'CTF151_helmet.mat';
     ft_multiplotER(cfg, tl_plancmb);
 
-<div class="warning">
+<div class="alert-danger">
 The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
 
 Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/combineplanar_pipelineorder).
@@ -250,7 +250,7 @@ Note the baseline and baselinetype parameters. These govern what baseline correc
 
 This is an interactive plot, so just as with the event-related part you can select sensors and click to get an average TFR. With this, you can select a time and frequency range and plot a topography.
 
-<div class="exercise">
+<div class="alert-info">
 
 *  Click around the multiplot to explore the visual gamma response and its topography!
 </div>
@@ -326,7 +326,7 @@ Again, this is an interactive plot, so click around it to get a nice overview of
 
 *Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG.*
 
-<div class="exercise">
+<div class="alert-info">
 After exploring the coherence results when the reference channel is the left EMG, do the same for the right EMG (which is called 'EMGrgt'). What do you conclude?
 
 Try changing the cfg.tapsmofrq parameter in the **[ft_freqanalysis](/reference/ft_freqanalysis)** step. How does this affect the resulting coherence spectrum?

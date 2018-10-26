@@ -57,7 +57,7 @@ As already said, FieldTrip is most efficiently used by calling its functions wit
 
 Make sure you save the filename identical as the function name, i.e. MyOwnFunction, and to save it in your personal folder dedicated to your own functions and scripts.
 
-<div class="warning">
+<div class="alert-danger">
 Do not save your own functions/scripts in the FieldTrip folder! This will not help you to organize your own functions - the number of functions will grow exponentially. Also, it makes it harder to update your FieldTrip folder.
 </div>
 

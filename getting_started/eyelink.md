@@ -239,7 +239,7 @@ The Eyelink channels are connected to the MEG dataset channels UADC005, UADC006,
 
 Again, using the procedure as described for the EEG, you can combine the recordings of the Eyelink system and the MEG.
 
-<div class="warning">
+<div class="alert-danger">
 The DAC conversion in the Eyelink system takes some time, and therefore the UADC channels in the MEG recording have a small (but fixed) delay relative to the actual eye movements.
 </div> 
 

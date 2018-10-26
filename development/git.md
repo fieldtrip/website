@@ -137,7 +137,7 @@ If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch
 ### 4. Add and edit files
 
 Now we need to create a function that says *Welcome to FieldTrip*. Let's call it *ft_welcome.m*, just as you'd create any new Matlab function. 
-<div class="important">
+<div class="alert-warning">
 When you create a new function or edit an existing one, follow the [code guidelines](/development/guidelines/code) for a consistent and readable code.
 </div>
 In addition to this function, we will also modify the function **[ft_defaults](/reference/ft_defaults)**. 
@@ -192,7 +192,7 @@ You can now commit these changes.
 	git commit -m "print welcome message when executing ft_defaults"
 
 where the option -m allows you to add a log entry.
-<div class="important">
+<div class="alert-warning">
 Follow these [guidelines](/development/guidelines/code#svn_log_messages) when writing a log entry.
 </div>
 and git will retur
@@ -242,7 +242,7 @@ which means that we are pushing the commits in the branch called *welcome* to th
 ### 7. Make a pull request
 
 Go to [github.com](https://github.com) to review the changes. By default on the webpage, you are shown the branch *master*, so you should switch to the newly created branch called *welcome*. Review the commits, by clicking on *commits*. Click on **pull request** in the top middle. The next page will show you the changes that are part of the pull request. 
-<div class="important">
+<div class="alert-warning">
 You are about to send the changes to the main developers of FieldTrip, so explain in the box what you did and why. Please, review the commits very carefully before sending the pull request. It happens that you have commits that you forgot about and you did not intend to share. 
 </div>
 Do **not** click on **Send Pull Request** when finishing this tutorial.
@@ -258,7 +258,7 @@ When you are done, you can delete the branch *welcome* on the local and remote r
 
 Your suggested contributions to FieldTrip will not be the only changes: the code on the master branch is constantly updated. This means that you should regularly synchronize to benefit from these updates and to ensure that you won't be making changes to an outdated copy of the code. 
 
-<div class="important">
+<div class="alert-warning">
 It is important to first pull the changes from others before you start implementing your own changes, otherwise your (new) changes might conflict with already accepted changes to the code.
 </div>
 

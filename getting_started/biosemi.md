@@ -81,7 +81,7 @@ To find out what the trigger codes are in your BDF file, you can use the followi
 
 ## The BDF fileformat
 
-<div class="warning">
+<div class="alert-danger">
 The documentation below is only for reference. To work with this data format you can simply use the standard reading functions **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. </div>
 
 BDF is a 24 bit version of the popular 16 bit EDF format, which was used on previous BioSemi models with 16 bit converters. BDF is almost the same as EDF Although initially the EDF format was mainly used in sleep research, BDF/EDF is now quickly gaining popularity in other EEG applications, ECG body surface potential mapping as well as EMG.

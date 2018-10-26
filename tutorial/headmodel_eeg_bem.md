@@ -108,7 +108,7 @@ It is also possible to read in anatomical MRI data in [other formats](/dataforma
 
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the three different tissue types: scalp, skull and brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined).
 
-<div class="important">
+<div class="alert-warning">
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/segmentedmri.mat) (segmentedmri.mat).
 </div>
 
@@ -204,7 +204,7 @@ The vol data structure contains the following field
 
 The **bnd** field contains the same information as the mesh we created in the earlier step. But the vol also contains a conductivity value for each surface and a matrix used for the volume conduction model. Note that the unit of measurement used in the geometrical description of vol is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
 
-<div class="warning">
+<div class="alert-danger">
 The order in which different tissue types are represented in the output of ft_prepare_headmodel may depend on the volume conduction model you are using. Make sure to double-check which tissue type is represented where in vol.bnd.
 </div>
 ##  Visualization
@@ -296,7 +296,7 @@ In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and '
 	    lpa: [29 145 155]
 	    rpa: [144 142 158]
 
-<div class="important">
+<div class="alert-warning">
 If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to get those positions.
 </div>
 
@@ -340,7 +340,7 @@ We can check the alignment by plotting together the scalp surface with the elect
 
 *Figure 6. Electrodes plotted together with the scalp surface.*
 
-<div class="important">
+<div class="alert-warning">
 Some of the electrodes are below the skin in the front, while the electrodes in the back do not fit tightly to the head. This happened because there are [different conventions to define the fiducials](/faq/how_are_the_lpa_and_rpa_points_defined).
 
 The anatomical MRI is in CTF coordinates with the fiducials for the left and right ear [aligned with the ear canal](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) according to DCCN convention.
@@ -369,7 +369,7 @@ This electrode structure can be used later when the leadfield is computed during
 
 ## Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 
    * Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
    * Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
@@ -378,7 +378,7 @@ This electrode structure can be used later when the leadfield is computed during
 
 ## Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 
    * In exercise 1, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the  concentric spheres model and BEM model?
 </div>

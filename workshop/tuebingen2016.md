@@ -59,7 +59,7 @@ version of fieldtrip. The tutorial data together with the fieldtrip version can 
  2.  Unzip the fieldtrip-master.zip file.
  3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
-<div class="warning">
+<div class="alert-danger">
 Depending on the unzip program you are using (e.g. Winrar), the name
 of the zip file might also appear as directiory, resulting in
 path_to_directory/fieldtrip-master/fieldtrip-master, i.e. the
@@ -74,7 +74,7 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-<div class="warning">
+<div class="alert-danger">
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.

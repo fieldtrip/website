@@ -267,7 +267,7 @@ Now we can plot the result in a similar way as illustrated above. The difference
 
 In this section we would demonstrate how to derive the time series of neuronal activity at a particular brain location. We will apply a beamforming technique. Before you continue it is recommended to make your self familiar with the relevant concepts by watching the following lecture.
 
-<div class="exercise">
+<div class="alert-info">
 {% include youtube.html id="7eS11DtbIPw" %}
 </div>
 
@@ -510,7 +510,7 @@ In the previous section we used an arbitrary threshold (80% of maximum) to illus
 
 It is recommended to make yourself familiar with the permutation framework before you continue. This is explained in detail in the statics tutorial. You might also consult this on-line lecture.
 
-<div class="exercise">
+<div class="alert-info">
 This tutorial contains the hands-on material of the [Salzburg workshop](/workshop/salzburg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
 {% include youtube.html id="vOSfabsDUNg" %}
@@ -638,7 +638,7 @@ Based on visual inspection of the data provided by the interactive navigation af
 
 Alternative approach is enabled due to the utilized parcellation strategy. We can derive the coordinates of all locations corresponding to a particular parcel, e.g. left heschl gyrus. In the following we will reduce the data to three loacations: left and right heschl gyri and left Cingulum_Mid in the frontal cortex.
 
-<div class="important">
+<div class="alert-warning">
 We used statistics to reject the hypothesis that: the data in the pre and post stimulus intervals is exchangeable. It might appear that the decision about which nodes to choose is based on this statistical evaluation. However this is false. The spatial aspect of the data is not subject to hypothesis testing. We motivate our decision on the basis of our interpretation of the conclusion- the data is not exchangeable. The interpretation and not the statistical testing per se is based on prior knowledge, knowledge about function-anatomy, credible expectations of spatial patterns in the context of the experimental design and many other factors. Consulting this [FAQ](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test) is recommended.  
 </div>
 
@@ -847,7 +847,7 @@ A property of volume conduction is instantaneousness. As a consequence a given p
 
 #### Exercise: coherence vs. imaginary part of coherency
 
-<div class="exercise">
+<div class="alert-info">
 Take your time to evaluate both outputs. To what extend the description of the interacting sources still holds?
 </div>
 

@@ -82,7 +82,7 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
 
 For the hands-on sessions we will use MATLAB R2016b, which you can start from the Desktop shortcut. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers and that we will bring on on a USB stick. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the computers and available on the USB stick.
 
-<div class="warning">
+<div class="alert-danger">
 Please do not use another MATLAB version than 2016b. It should be available on all hands-on computers.
 </div>
 
@@ -100,7 +100,7 @@ present working directory, i.e. the directory containing the fieldtrip
 main functions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
-<div class="warning">
+<div class="alert-danger">
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Furthermore, please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).

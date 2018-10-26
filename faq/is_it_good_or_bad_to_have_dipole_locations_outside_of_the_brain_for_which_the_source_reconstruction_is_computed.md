@@ -3,7 +3,7 @@ title: Is it good or bad to have dipole locations outside of the brain for which
 layout: default
 ---
 
-<div class="important">
+<div class="alert-warning">
 This page is under construction/discussion
 </div>
 

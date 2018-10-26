@@ -48,7 +48,7 @@ To calculate the event related field / potential for the example dataset we will
 
 {{page>:tutorial:shared:preprocessing_fic_lp}}
 
-<div class="note">
+<div class="alert-info">
 A note about padding: The padding parameter (cfg.padding) defines the duration to which the data in the trial will be padded (i.e. data-padded, not zero-padded). The padding is removed from the trial after filtering. Padding the data is beneficial, since the edge artifacts that are typically seen after filtering will be in the padding and not in the part of interest. Padding can also be relevant for DFT filtering of the 50Hz line noise artifact: long padding ensures a higher frequency resolution for the DFT filter, causing a narrower notch to be removed from the data. Padding can only be done on data that is stored in continuous format, therefore it is not used here.
 </div>
 
@@ -178,7 +178,7 @@ To plot a sequence of topographic plots define the time intervals in cfg.xli
 
 #### Exercise 1
 
-<div class="exercise">
+<div class="alert-info">
 
    * What changes in data if you extend the baseline correction from -200 ms to 0 ms to  -500 ms to 0?
    * Apply a band-pass filter in the preprocessing instead of only a low-pass filter. Use for example the values from 1 to 30 Hz. What changes in the data? What are the pros and cons of using a high-pass filter?
@@ -186,7 +186,7 @@ To plot a sequence of topographic plots define the time intervals in cfg.xli
 
 #### Exercise 2
 
-<div class="exercise">
+<div class="alert-info">
 
    * Which type of source configuration can explain the topography?
 </div>
@@ -238,7 +238,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
 
 #### Exercise 3
 
-<div class="exercise">
+<div class="alert-info">
 Compare the axial and planar gradient field
 
    * Why are there only positive values above the sources in the representation of the combined planar gradient?

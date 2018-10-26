@@ -3,16 +3,16 @@ title: Integrate FieldTrip and MNE-Python
 layout: default
 ---
 
-<div class="warning">
+<div class="alert-danger">
 This page is work in progress. Some code might be experimental and might not be included in the main repository. 
 </div>
-<div class="warning">
+<div class="alert-danger">
 Not all the information contained in either Matlab or Python can be completely copied into the other format.
 </div>
-<div class="warning">
+<div class="alert-danger">
 We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/bugzilla) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
 </div>
-<div class="important">
+<div class="alert-warning">
 Code under development, the mne-python community currently works on reader functions for fieldtrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
 </div>
