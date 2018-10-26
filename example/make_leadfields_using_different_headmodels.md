@@ -54,7 +54,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **CTF headmodel, single sphere:**
 
-![image](/media/example/headmodels/singlesphere.png)
+![image](/static/img/example/headmodels/singlesphere.png)
 
 ## Local spheres model from CTF
 
@@ -80,7 +80,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **CTF headmodel, local spheres:**
 
-![image](/media/example/headmodels/localspheresctf.png)
+![image](/static/img/example/headmodels/localspheresctf.png)
 
 ## Local spheres model from FieldTrip, using the CTF headshape
 
@@ -112,7 +112,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **FieldTrip headmodel, local spheres with CTF headshape:**
 
-![image](/media/example/headmodels/localspheresfths.png)
+![image](/static/img/example/headmodels/localspheresfths.png)
 
 ## Local spheres model from FieldTrip, using brain surface from segmented mri
 
@@ -163,7 +163,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **FieldTrip headmodel, local spheres based on segmented mri:**
 
-![image](/media/example/headmodels/localspheresftsegment.png)
+![image](/static/img/example/headmodels/localspheresftsegment.png)
 
 ## Realistic single-shell model, using brain surface from segmented mri
 
@@ -195,11 +195,11 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **Single-shell headmodel, realistic geometry:**
 
-![image](/media/example/headmodels/nolttsegment.png)
+![image](/static/img/example/headmodels/nolttsegment.png)
 
 **Single-shell headmodel, displayed without headshape and rotated:**
 
-![image](/media/example/headmodels/noltesegment.png)
+![image](/static/img/example/headmodels/noltesegment.png)
 
 ## Comparing the forward models
 
@@ -296,7 +296,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **Correlations between the leadfields computed based on the FieldTrip localspheres model based on the CTF headshape and the realistic single-shell headmodel**
 
-![image](/media/example/headmodels/correlations.png)
+![image](/static/img/example/headmodels/correlations.png)
 
 ## Appendix: creating a segmentation of the mri
 

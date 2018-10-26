@@ -67,33 +67,33 @@ Frequency Analysis progres
       - tested mtmfft and mtmwelch for the same timewindow (cfg.t_ftimwin=10 for mtmwelch and mtmconvol). Amplitudes are now close to eachother. (5.6039 e -8 (mtmfft) and 5.6051 e -8 (mtmwelch and mtmconvol)).
 
 **freq002_a**
-![image](/media/wiki/averagesfreq.png)
+![image](/static/img/wiki/averagesfreq.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_b**
-![image](/media/wiki/freq002_b.png)
+![image](/static/img/wiki/freq002_b.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_c**
-![image](/media/wiki/freq002_c.png)
+![image](/static/img/wiki/freq002_c.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_d**
-![image](/media/wiki/freq002_d.png)
+![image](/static/img/wiki/freq002_d.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_e**
-![image](/media/wiki/tapsmo.png)
+![image](/static/img/wiki/tapsmo.png)
 
 **freq002_f**
-![image](/media/wiki/delta_freqs.png)
+![image](/static/img/wiki/delta_freqs.png)
 
 **freq002_g**
-![image](/media/wiki/tjirptfr.png)
+![image](/static/img/wiki/tjirptfr.png)
 
-![image](/media/wiki/tjirp.png)
+![image](/static/img/wiki/tjirp.png)
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_h**
-![image](/media/wiki/waveletstfrdelta.png)
+![image](/static/img/wiki/waveletstfrdelta.png)
 

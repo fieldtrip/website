@@ -63,7 +63,7 @@ In the third part we shift our attention to the motor task in this dataset. We w
 
 *  Visualize the cortico-muscular coherence with **[ft_sourceplot](/reference/ft_sourceplot)**
 
-![image](/media/tutorial/beamforming_extended/pipeline.png@650)
+![image](/static/img/tutorial/beamforming_extended/pipeline.png@650)
 
 ## Preparing the data and the forward and inverse model
 
@@ -110,7 +110,7 @@ You can check whether the segmentation was successful by callin
     cfg.funparameter = 'gray';
     ft_sourceplot(cfg,segmentedmri);
 
-![image](/media/tutorial/beamforming_extended/fig2_segmri.png)
+![image](/static/img/tutorial/beamforming_extended/fig2_segmri.png)
 
 *Figure: The segmented MRI and the original MRI on top of each other. If everything went well, there is a perfect overlap between these two!*
 
@@ -183,7 +183,7 @@ Finally, it is wise to check whether all computed objects align well with one an
     ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));
     ft_plot_sens(data_combined.grad);
 
-![image](/media/tutorial/beamforming_extended/fig3_srcalign.png)
+![image](/static/img/tutorial/beamforming_extended/fig3_srcalign.png)
 
 *Figure: The sensor positions, the source model and the head model nicely align up. Note that the front of the brain is located where the helmet opens up (which it does at the front).*
 
@@ -199,7 +199,7 @@ What would be the consequence of averaging over subject specific grids?
 
 The aim is to identify the sources of oscillatory activity in the gamma band. In the section time-frequency analysis we have identified the frequency band around 40 Hz to 70 Hz with a center frequency of about 55 Hz. We seek to compare the activation during the post-stimulus interval to the activation during the pre-stimulus interval. We will use  **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. Remember that the length of each data piece has to be the length of a fixed integer number of oscillatory cycles. Here we select a time window of 0.8s, which allows for an integer amount of cycles: 0.8 s*55 Hz = 44 cycles. Thus, the pre-stimulus time-window ranges from -0.8 s to 0.0 s and the post-stimulus interval between 0.3 s to 1.1 s (see Figure 1).
 
-![image](/media/tutorial/beamforming_extended/fig1_tfr.png)
+![image](/static/img/tutorial/beamforming_extended/fig1_tfr.png)
 
 *Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response!.*
 
@@ -366,7 +366,7 @@ Now, we can plot the interpolated data:
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg,source_diff_int);
 
-![image](/media/tutorial/beamforming_extended/fig4_beamed2.png)
+![image](/static/img/tutorial/beamforming_extended/fig4_beamed2.png)
 *Figure: The power estimates of the activity induced by the visual stimulus around 55 Hz. The image was done using[ft_sourceinterpolate and ft_sourceplot*
 
 Congratulations, you successfully beamed visual gamma!
@@ -475,7 +475,7 @@ Again there are various ways to visualise the volumetric interpolated data. The 
     cfg.coordsys     = 'mni';
     ft_sourceplot(cfg, source_coh_int);
 
-![image](/media/tutorial/beamforming_extended/fig5_beamedcoh2.png)
+![image](/static/img/tutorial/beamforming_extended/fig5_beamedcoh2.png)
 
 //Figure: The neuronal source showing maximum coherence with the left EMG at 20 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**//.
 

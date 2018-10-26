@@ -31,15 +31,15 @@ Data at the channel level has a value for each sensor (MEG) or electrode (EEG). 
 
 Plotting 2D data at the sensor level using:  ft_singleplotER (top left), ft_multiplotER (top right) and ft_topoplotER (bottom left)
 
-![image](/media/tutorial/plotting/figure5.png@250)
-![image](/media/tutorial/plotting/figure5era.png@250)
-![image](/media/tutorial/plotting/figure5.jpg@250)
+![image](/static/img/tutorial/plotting/figure5.png@250)
+![image](/static/img/tutorial/plotting/figure5era.png@250)
+![image](/static/img/tutorial/plotting/figure5.jpg@250)
 
 Plotting 3D data at the sensor level: using ft_singleplotTFR (top left), ft_multiplotTFR (top right) and ft_topoplotTFR (bottom left) 
 
-![image](/media/tutorial/plotting/figure3.png@250)
-![image](/media/tutorial/plotting/figure2.png@250)
-![image](/media/tutorial/plotting/figure4.png@250)
+![image](/static/img/tutorial/plotting/figure3.png@250)
+![image](/static/img/tutorial/plotting/figure2.png@250)
+![image](/static/img/tutorial/plotting/figure4.png@250)
 
 ### Singleplot functions
 
@@ -59,8 +59,8 @@ The ft_singleplotER function first selects the data to be plotted, in this case 
     xlim([-0.2 1.0])
     ylim([-1e-13 3e-13])
 
-![image](/media/utorial/plotting/singleploter_avgfc.png@400)
-![image](/media/utorial/plotting/plot_avgfc.png@400)
+![image](/static/img/utorial/plotting/singleploter_avgfc.png@400)
+![image](/static/img/utorial/plotting/plot_avgfc.png@400)
 
 In **[ft_singleplotTFR](/reference/ft_singleplotTFR)** the channel, time bins and frequency bins are selected and subsequently plotted with the MATLAB IMAGESC.m function. 
 
@@ -78,8 +78,8 @@ If you specify multiple channels in cfg.channel both singleplot functions will p
     % cfg.channelname  = 'MRC' % bottom figure
     % figure; ft_singleplotTFR(cfg,TFRhann);
 
-![image](/media/utorial/plotting/singleplottfr_mlc.png@350)
-![image](/media/utorial/plotting/singleplottfr_mrc.png@350)
+![image](/static/img/utorial/plotting/singleplottfr_mlc.png@350)
+![image](/static/img/utorial/plotting/singleplottfr_mrc.png@350)
 
 #### Exercise 1
 
@@ -90,13 +90,13 @@ Try to replicate [Figure 5 from the Event Related Averaging tutorial](/tutorial/
 
 The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions PLOT.m and IMAGESC.m. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes. In the subsequent figures you can see these axes that are normally set to "off".  Exemplar code for using ft_multiplotER/TFR is shown in the 'interative mode' section of this tutorial (further down).
 
-![image](/media/tutorial/plotting/multiploter_axison2.png@400)
-![image](/media/tutorial/plotting/multiplottfr_axison2.png@400)
+![image](/static/img/tutorial/plotting/multiploter_axison2.png@400)
+![image](/static/img/tutorial/plotting/multiplottfr_axison2.png@400)
 
 Normally the axes of the figure are not visible, only the "axis" of each channel, but remember these are not real axes on which you can use MATLAB axis commands, the are just lines drawn by the function. Of course you can set the limits of the channel "axis" by the cfg structure (cfg.xlim, cfg.ylim). And you can see the limits in the scale in **[ft_multiplotER](/reference/ft_multiplotER)** (righ upper corner) or in the comment for **[ft_multiplotTFR](/reference/ft_multiplotTFR)** (left upper corner).
 
-![image](/media/tutorial/plotting/avgfic.png@400)
-![image](/media/tutorial/plotting/tfrhannall.png@400)
+![image](/static/img/tutorial/plotting/avgfic.png@400)
+![image](/static/img/tutorial/plotting/tfrhannall.png@400)
 
 The layout is determined by the layout file. Read more on layout files 
 [here](/tutorial/layout), and in the [frequently asked questions](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
@@ -115,7 +115,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.layout = 'CTF151.lay';            
     figure; ft_topoplotER(cfg,GA_FC); colorbar;
     
-![image](/media/utorial/plotting/tuto_topoer.png@250)
+![image](/static/img/utorial/plotting/tuto_topoer.png@250)
 
     cfg = [];
     cfg.xlim = [0.9 1.3];                
@@ -126,7 +126,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.layout = 'CTF151.lay';
     figure; ft_topoplotTFR(cfg,TFRhann);
     
-![image](/media/tutorial/plotting/tuto_topotfr.png@250)
+![image](/static/img/tutorial/plotting/tuto_topotfr.png@250)
 
     % for the multiple plots als
     cfg.xlim = [-0.4:0.2:1.4];
@@ -134,7 +134,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.commentpos = 'title';
     figure; ft_topoplotTFR(cfg,TFRhann);
 
-![image](/media/tutorial/plotting/tuto_topotfr_multi.png@300)
+![image](/static/img/tutorial/plotting/tuto_topotfr_multi.png@300)
 
 #### Exercise 2
 
@@ -166,7 +166,7 @@ Options specific for to using topoplot.m
     figure; ft_topoplotTFR(cfg,TFRhann);
  
 
-![image](/media/tutorial/plotting/tuto_funcytopo3.png@250)
+![image](/static/img/tutorial/plotting/tuto_funcytopo3.png@250)
  
 
     cfg.gridscale = 300;                
@@ -175,7 +175,7 @@ Options specific for to using topoplot.m
     figure; ft_topoplotTFR(cfg,TFRhann);
  
 
-![image](/media/tutorial/plotting/tuto_funcytopo2.png@250)
+![image](/static/img/tutorial/plotting/tuto_funcytopo2.png@250)
  
 
     cfg.gridscale = 300;
@@ -187,7 +187,7 @@ Options specific for to using topoplot.m
     figure; ft_topoplotTFR(cfg,TFRhann);
  
 
-![image](/media/tutorial/plotting/tuto_funcytopo1.png@250)
+![image](/static/img/tutorial/plotting/tuto_funcytopo1.png@250)
  
 
 ### Interactive mode
@@ -203,15 +203,15 @@ In a data inspection phase you can use the interactive modus to go from one plot
     cfg.interactive = 'yes';
     figure; ft_multiplotTFR(cfg,TFRhann)
 
-![image](/media/tutorial/plotting/interactive1.jpg@300)
+![image](/static/img/tutorial/plotting/interactive1.jpg@300)
 
 plot with ft_multiplot, and select channels of interest
 
-![image](/media/tutorial/plotting/interactive2.jpg@300)
+![image](/static/img/tutorial/plotting/interactive2.jpg@300)
 
 selected channels are averaged and displayed as one plot (ft_singleplotTFR is called).  Then, select a section within the TFR to get a topoplot
 
-![image](/media/tutorial/plotting/interactive3.jpg@300)
+![image](/static/img/tutorial/plotting/interactive3.jpg@300)
 
 ### Plotting clusters
 
@@ -231,10 +231,10 @@ The function automatically finds the clusters in the data which are smaller than
 	cfg.alpha = 0.05;
 	ft_clusterplot(cfg,statERF)
 
-![image](/media/tutorial/staterf1.png@400)
-![image](/media/tutorial/staterf2.png@400)
-![image](/media/tutorial/staterf3.png@400)
-![image](/media/tutorial/staterf4.png@400)
+![image](/static/img/tutorial/staterf1.png@400)
+![image](/static/img/tutorial/staterf2.png@400)
+![image](/static/img/tutorial/staterf3.png@400)
+![image](/static/img/tutorial/staterf4.png@400)
 
 ##### Freqdata
 
@@ -248,7 +248,7 @@ The function automatically finds the clusters in the data which are smaller than
 	cfg.alpha = 0.05;
 	ft_clusterplot(cfg,statTFR)
 
-![image](/media/tutorial/plotting/plottingtutorial_tfrstat.jpg@400)
+![image](/static/img/tutorial/plotting/plottingtutorial_tfrstat.jpg@400)
 
 ### Plotting channel-level connectivity
 
@@ -293,7 +293,7 @@ Here we will plot axial slices of the brain
 	% note
 	To play around with the number of slices, and which slice to begin plotting, check the documentation for cfg.nslices, and cfg.slicerange, respectively.
 
-![image](/media/tutorial/plotting/sourcestattfr_slice.png@500)
+![image](/static/img/tutorial/plotting/sourcestattfr_slice.png@500)
 
 #### Source-Freq-Time data plotted as in 3 orthogonal orientations
 
@@ -306,7 +306,7 @@ For exploring your data, plotting the brain from 3 orthogonal orientations simul
 	cfg.funparameter  = 'stat';
 	ft_sourceplot(cfg,statsourceTFR);
 
-![image](/media/tutorial/plotting/sourcestattfr_ortho.png@500)
+![image](/static/img/tutorial/plotting/sourcestattfr_ortho.png@500)
 
 #### Source-Freq-Time data interpolated on to an MRI
 
@@ -336,7 +336,7 @@ This section uses the data from Subject01 in the [:tutorial:beamformer](/tutoria
 	ft_sourceplot(cfg, sourceDiffInt);
 	
 
-![image](/media/tutorial/beamformer/figure4bf.png@500)
+![image](/static/img/tutorial/beamformer/figure4bf.png@500)
 
 ####  Plotting on 3 orthogonal slices 
 
@@ -355,7 +355,7 @@ This section uses the data from Subject01 in the [:tutorial:beamformer](/tutoria
 	cfg.opacitymap    = 'rampup';  
 	figure; ft_sourceplot(cfg, sourceDiffIntNorm);
 
-![image](/media/tutorial/beamformer/figure8bf.png@500)
+![image](/static/img/tutorial/beamformer/figure8bf.png@500)
 
 The three essential cfg parameters ar
 
@@ -403,9 +403,9 @@ Here, we make a field in the data with an opacity value for each voxel, and appl
 
 ** Here are some figures to help understand how the data is manipulated when specifying cfg.opacitymap:**
 
-![image](/media/tutorial/plotting/plottuto_opac_rampup2.png@280)
-![image](/media/tutorial/plotting/plottuto_opac_vdown2.png@280)
-![image](/media/tutorial/plotting/plottuto_opac_mask.png@280)
+![image](/static/img/tutorial/plotting/plottuto_opac_rampup2.png@280)
+![image](/static/img/tutorial/plotting/plottuto_opac_vdown2.png@280)
+![image](/static/img/tutorial/plotting/plottuto_opac_mask.png@280)
 ### Plotting on a brain surface
 
 #### Scalar data per vertex
@@ -431,7 +431,7 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
 	ft_sourceplot(cfg, sourceDiffIntNorm);
 	view ([90 0])             % rotate the object in the view
 
-![image](/media/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png@500)
+![image](/static/img/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png@500)
 
 However, if you want to explore higher-dimensional data (such as TFR data) on the surface, using  **[ft_sourceplot](/reference/ft_sourceplot)** directly, is currently not supported. You can, however, select a data sub-selection manually.
 

@@ -14,7 +14,7 @@ After downloading the toolbox, you unzip it and add the directory in which all t
 
 You can download the tutorial data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial).
 
-# License
+# Copyrights
 
 Copyright (C) 2008-2018, Donders Institute for Brain, Cognition and Behaviour, Radboud University, The Netherlands (DCCN, DCC, DCN)  
 Copyright (C) 2014-2018, Karolinska Institute, Stockholm, Sweden (NatMEG)  

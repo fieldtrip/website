@@ -1,6 +1,7 @@
 ---
-title:
+title: Menu
 layout: default
+tags: [obsolete]
 ---
 
 *  [Home](/index)

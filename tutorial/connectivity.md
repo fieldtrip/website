@@ -120,7 +120,7 @@ The *sourcedata* structure resembles the raw-data output of **[ft_preprocessing]
 	cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
 	ft_databrowser(cfg, sourcedata);
 
-![image](/media/tutorial/virtualchan.png@link&300)
+![image](/static/img/tutorial/virtualchan.png@link&300)
 
 Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent cu
 rrent dipole source at the location of interest.
@@ -209,7 +209,7 @@ This computes the spectral decomposition and the coherence spectrum between all 
 	ft_connectivityplot(cfg, coherence);
 	title('coherence')
 
-![image](/media/tutorial/connectivity/virtualchan.png@300)
+![image](/static/img/tutorial/connectivity/virtualchan.png@300)
 
 To look in more detail into the numerical representation of the coherence results, you can use
 
@@ -219,7 +219,7 @@ To look in more detail into the numerical representation of the coherence result
 	xlabel('freq (Hz)')
 	ylabel('coherence')
 
-![image](/media/tutorial/connectivity/coherencecortexemglft.png@300)
+![image](/static/img/tutorial/connectivity/coherencecortexemglft.png@300)
 
 The spectrum reveals coherence peaks at 10 and 20 Hz (remember that the initial DICS localizer was done at beta). Furthermore, there is a broader plateau of coherence in the gamma range from 40-50 Hz.
 

@@ -70,7 +70,7 @@ layout: default
 	figure; ft_singleplotER([],fft_data);
 	print -dpng phalow_amphigh_fig2.png
 
-![image](/media/example/crossfreq/phalow_amphigh_fig1.png@400) ![image](/media/example/crossfreq/phalow_amphigh_fig2.png@400)
+![image](/static/img/example/crossfreq/phalow_amphigh_fig1.png@400) ![image](/static/img/example/crossfreq/phalow_amphigh_fig2.png@400)
 
 ## Analysis Methods
 
@@ -110,8 +110,8 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig4.png
 
-![image](/media/example/crossfreq/phalow_amphigh_fig3.png@400)
-![image](/media/example/crossfreq/phalow_amphigh_fig4.png@400)
+![image](/static/img/example/crossfreq/phalow_amphigh_fig3.png@400)
+![image](/static/img/example/crossfreq/phalow_amphigh_fig4.png@400)
 
 ### Calculate coherence between power and raw 
 
@@ -159,7 +159,7 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig5.png
 
-![image](/media/example/crossfreq/phalow_amphigh_fig5.png@400)
+![image](/static/img/example/crossfreq/phalow_amphigh_fig5.png@400)
 
 	
 	% mtmfft output cross-spectral-density between s1 (AM)(raw) and freq1
@@ -181,7 +181,7 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig6.png
 
-![image](/media/example/crossfreq/phalow_amphigh_fig6.png@400)
+![image](/static/img/example/crossfreq/phalow_amphigh_fig6.png@400)
 
 ### Power spectrum of amplitude envelope (by Hilbert transform)
 
@@ -217,6 +217,6 @@ layout: default
 	figure; ft_singleplotER(cfg,fft_hilbert);
 	print -dpng phalow_amphigh_fig8.png
 
-![image](/media/example/crossfreq/phalow_amphigh_fig7.png@400)
-![image](/media/example/crossfreq/phalow_amphigh_fig8.png@400)
+![image](/static/img/example/crossfreq/phalow_amphigh_fig7.png@400)
+![image](/static/img/example/crossfreq/phalow_amphigh_fig8.png@400)
 

@@ -27,7 +27,7 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 Figure 1. shows the bigger steps in the calculation of the minimum-norm estimate. It shows that the computation of the inverse solution is based on the outputs of two independent processing steps: the processing of the anatomical images that leads to the forward solution and the processing of the MEG data. Creating the source model requires the use of two additional software packages, FreeSurfer and MNE Suite.
 
-![image](/media/tutorial/minimumnormestimate/analysis_protocol_mne.png@550)
+![image](/static/img/tutorial/minimumnormestimate/analysis_protocol_mne.png@550)
 
 *Figure 1. An overview of the bigger steps in the calculation of the minimum-norm estimate*
 
@@ -55,7 +55,7 @@ The functions described in this part of the tutorial are using toolboxes that ar
 
 The following figure shows the steps of the preprocessing and of the rest of the anatomical processing (volume conduction and source-model).
 
-![image](/media/tutorial/minimumnormestimate/anatomical_preproc_mne.png@500)
+![image](/static/img/tutorial/minimumnormestimate/anatomical_preproc_mne.png@500)
 
 *Figure 2. Pipeline for processing of the anatomical data*
 
@@ -247,7 +247,7 @@ This ends the part of the Freesurfer pipeline concerned with volumetric processi
 	cfg.interactive = 'yes';
 	figure;ft_sourceplot(cfg, mri);
 
-![image](/media/tutorial/minimumnormestimate/filled01new.png@550)
+![image](/static/img/tutorial/minimumnormestimate/filled01new.png@550)
 
 *Figure 3. Filled mgz created by Freesurfer. The two hemispheres have different colors (white and grey), cerebellum is not included.*
 
@@ -292,7 +292,7 @@ This step creates a bunch of files in `<Subject directory>`/Subject01/bem/**, co
 	bnd = ft_read_headshape('Subject01-oct-6-src.fif', 'format', 'mne_source');
 	figure;ft_plot_mesh(bnd);
 
-![image](/media/tutorial/minimumnormestimate/sspace01new.png@450)
+![image](/static/img/tutorial/minimumnormestimate/sspace01new.png@450)
 
 *Figure 4. The source-space downsampled by MNE Suite*
 
@@ -343,7 +343,7 @@ To plot, you can use this cod
 
 If they are not aligned, it may be because **vol** is not expressed in CTF coordinates.  You can check using **[ft_determine_coordsys](/reference/ft_determine_coordsys)**.  
 
-![image](/media/tutorial/minimumnormestimate/sourcespace_vol01new.png@450)
+![image](/static/img/tutorial/minimumnormestimate/sourcespace_vol01new.png@450)
 
 *Figure 5. The final version of the source-space aligned and plotted together with the volume conductor* 
 ## Processing of functional data
@@ -432,7 +432,7 @@ You can plot the inverse solution onto the source-space at a specific time-point
 	                         % 500 ms after the zero time-point
 	ft_plot_mesh(bnd, 'vertexcolor', m);
 
-![image](/media/tutorial/minimumnormestimate/plotmeshsourceic01new.png@450)
+![image](/static/img/tutorial/minimumnormestimate/plotmeshsourceic01new.png@450)
 
 *Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point*
 
@@ -455,7 +455,7 @@ But we would like to know where the difference between the conditions can be loc
 	ft_sourcemovie(cfg,sdDIFF);
 	
 
-![image](/media/tutorial/minimumnormestimate/sourcemovie01new.png@500)
+![image](/static/img/tutorial/minimumnormestimate/sourcemovie01new.png@500)
 
 *Figure 7. One frame from the movie that shows the differences of the two source-reconstructions*
 ## Summary and further readings

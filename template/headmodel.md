@@ -69,4 +69,4 @@ You can visualize it with
 	>> ft_plot_mesh(skin, 'edgecolor', 'none', 'facecolor', 'skin')
 	>> camlight
 
-![image](/media/template/headmodel_skin.png@300)
+![image](/static/img/template/headmodel_skin.png@300)

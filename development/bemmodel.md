@@ -23,7 +23,7 @@ This page presents the outline of an algorithm (or set of algoritms) that allow 
 
 *  Project triangulated sphere at center of mass brain onto boundary
 
-![image](/media/development/bemmodel/bemmodel2.png)
+![image](/static/img/development/bemmodel/bemmodel2.png)
 
 ## The brain
 
@@ -33,7 +33,7 @@ This page presents the outline of an algorithm (or set of algoritms) that allow 
 
 *  Optional: use laplacian smoothing on the triangulated surface
 
-![image](/media/development/bemmodel/bemmodel1.png)
+![image](/static/img/development/bemmodel/bemmodel1.png)
 
 ## The skull 
 
@@ -47,17 +47,17 @@ A potential problem in the bottom half is that the skull and brain triangulation
 
 A known problem in the top half is that the algorithms for determining the skull-skin boundary are not 100% robust. They are based on the MRI intensity countour along the radial lines through the skull and skin.
 
-![image](/media/development/bemmodel/bemmodel3.png)
+![image](/static/img/development/bemmodel/bemmodel3.png)
 
 This results in outliers.
 
-![image](/media/development/bemmodel/bemmodel4.png)
+![image](/static/img/development/bemmodel/bemmodel4.png)
 
 ## Optimizing the skull triangulation
 
 This requires the computation of the surface laplacial (i.e. smoothness) of the radius of the skull surface. Subsequently the following steps are take
 
-![image](/media/development/bemmodel/bemmodel5.png)
+![image](/static/img/development/bemmodel/bemmodel5.png)
 
  1.  Detect suspicious vertices in the skull triangulation 
 
@@ -68,7 +68,7 @@ This requires the computation of the surface laplacial (i.e. smoothness) of the 
  3.  Check that the 2.5 and 3.5 criteria are optimally met
  4.  Go back to step 1 and repeat untill it converges
 
-![image](/media/development/bemmodel/bemmodel6.png)
+![image](/static/img/development/bemmodel/bemmodel6.png)
 
 # Additional ideas
 

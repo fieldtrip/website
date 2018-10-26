@@ -1,7 +1,6 @@
 title: FieldTrip toolbox
 email: fieldtriptoolbox@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  FieldTrip - the toolbox for MEG, EEG and iEEG
+description: FieldTrip - the toolbox for MEG, EEG and iEEG
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""     # the base hostname & protocol for your site, e.g. http://example.com
@@ -9,6 +8,9 @@ twitter_username: fieldtriptoolbx
 github_username:  fieldtrip
 
 # Build settings
+sass:
+  sass_dir: ./static/css
+permalink: pretty
 markdown: kramdown
 theme: minima
 plugins:

@@ -1,14 +1,9 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    {% include favicon.html %}
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
   <body>
     {% include navigation.html %}
-
-    <h1>{{ page.tag | capitalize }}</h1>
+    <h1>Pages tagged with "{{ page.tag }}"</h1>
 
     <ul>
       {% for item in site.data.tag.[page.tag] %}
@@ -18,5 +13,6 @@
       {% endfor %}
     </ul>
 
+    {% include footer.html %}
   </body>
 </html>

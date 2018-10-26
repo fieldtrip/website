@@ -12,4 +12,4 @@ Below you can find the logo as a bitmap in high resolution, and in Encapsulated 
 
 {{:faq:fieldtriplogo.eps|encapsulated postscript}}
 
-![image](/media/faq/fieldtriplogo.png)
+![image](/static/img/faq/fieldtriplogo.png)

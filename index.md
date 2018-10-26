@@ -3,15 +3,13 @@ title: Welcome to the FieldTrip wiki
 layout: default
 ---
 
-# Welcome to the FieldTrip wiki
+# Welcome to the FieldTrip website
 
 FieldTrip is the MATLAB software toolbox for MEG and EEG analysis that is being developed by a team of researchers at the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders) in Nijmegen, the Netherlands in close collaboration with [collaborating institutes](/external_links#collaborating_institutes). The development of FieldTrip currently receives support from the [ChildBrain](http://www.childbrain.eu) project and from [the Netherlands Organization for Scientific Research (NWO)](http://www.nwo.nl) and has previously been supported by the [Human Connectome](http://humanconnectome.org) project and [BrainGain](http://www.braingain.nl).
 
 The toolbox offers advanced analysis methods of MEG, EEG, and invasive electrophysiological data, such as time-frequency analysis, source reconstruction using dipoles, distributed sources and beamformers and non-parametric statistical testing. It supports the [data formats](/dataformat) of all major MEG systems (CTF, Elekta/Neuromag, 4D/BTi, Yokogawa) and of most popular EEG systems, and new formats can be added easily. FieldTrip contains high-level functions that you can use to construct your own analysis protocols in MATLAB. Furthermore, it easily allows developers to incorporate low-level algorithms for new EEG/MEG analysis methods.
 
 The FieldTrip software is released free of charge as [open source software](http://en.wikipedia.org/wiki/Open_source) under the GNU [general public license](http://www.gnu.org/copyleft/gpl.html).
-
-This FieldTrip website is a [Wiki](http://en.wikipedia.org/wiki/Wiki) (just like [Wikipedia](http://en.wikipedia.org/)), which allows all visitors to contribute, very quickly and easily, without the need for registration. The IP addresses of people that make changes are logged, and they can be blocked if required. Please act responsibly and only make changes that improve this site.
 
 <div class="important">
 <p>Please cite the <a href="http://www.hindawi.com/journals/cin/2011/156869">FieldTrip Reference Paper</a>
@@ -21,8 +19,6 @@ when you have used FieldTrip for data analysis in your study.</p>
 </div>
 
 To get started with FieldTrip, please continue reading the [getting started](/getting started) documentation.
-
-Join the [FieldTrip community on Facebook](https://www.facebook.com/fieldtriptoolbox/).
 
 {% include facebook.html %}
 
@@ -52,7 +48,7 @@ Here are the slides of the topics that we presented and discussed in the Open Sc
 
 On June 29th, Robert and Jan-Mathijs taught at the Human Connectome Project's workshop, which this year took place in Oxford. During an intense one-week program, 105 participants learnt about the ins and outs of the Human Connectome Project (HCP). Did you know that the HCP consortium also collected (and partially analysed) MEG data from about 100 participants? And that this data is freely available for download? And that the analysis pipelines and software are also available to the community? Check it out on [https://www.humanconnectome.org](https://www.humanconnectome.org).
 
-![image](/media/ft_in_oxford.jpg@400)
+![image](/static/img/ft_in_oxford.jpg@400)
 
 ## 12 June, 2018
 

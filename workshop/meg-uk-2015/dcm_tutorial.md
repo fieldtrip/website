@@ -43,7 +43,7 @@ Now you can **specify one DCM model** for this subject’s dat
 
 *  You should now be able to define the neuronal model. We would like to compare several alternative models. However, depending on the number of sources, connections and effects to be modelled, the inversion of each model can take from several minutes up to a couple hours. For now let’s define a single model and save it. This is the model that we would like to defin
 
-![image](/media/workshop/meg-uk-2015/image001hires3.png@400)
+![image](/static/img/workshop/meg-uk-2015/image001hires3.png@400)
 
 *  In terms of the A (baseline connectivity), B (modulatory connectivity) and C (input) matrices, this model can be decomposed into the connections listed below. You can also turn to the last page of this instruction sheet to see if you have correctly defined the model.
 
@@ -86,7 +86,7 @@ Now you can **specify one DCM model** for this subject’s dat
 
 *  As model inversion can take some time (several minutes up to a couple hours), instead of inverting the model now you can find all inverted models in your folder "Precalc_DCMs". Still, to see how model inversion looks like, you can now press “invert DCM”. This will – after some time – save the posterior parameter estimates and other statistics (crucially, the free-energy approximation to model evidence, which will be used to compare different models) in your DCM file. If you have already inverted some models, SPM will ask you if you would like to initialise the inversion with previous posteriors, priors or hyperpriors – usually you should answer “no”, unless you would like to e.g. user one subject’s posteriors as another subject’s priors. Then DCM will start to be estimated using an iterative model inversion technique called Variational Bayes. Usually the model inversion would converge (i.e., achieve the best model fit for the specified model structure) after several iterations. Below you can see an example of a window (updated with every iteration) showing the progress of model inversion. The panel at the top shows the estimated source activity for different neuronal sources and populations (separate lines) and experimental conditions (separate subplots). The middle panel shows the observed (dashed lines) and model-predicted (solid lines) responses for all experimental conditions (separate subplots), with different colours representing different spatiotemporal modes. The lower panels show updates in parameter space (left: neuronal parameters of the model; right: spatial parameters of the model). After each iteration, Matlab will also display the current update of the free-energy approximation to model evidence. If no convergence has been reached after 64 iterations, model inversion will stop automatically and save its current posterior parameter and model evidence estimates. You can press ctrl+c in Matlab to interrupt model inversion and load one of the already inverted models.
 
-![image](/media/workshop/meg-uk-2015/image_inv.png@400)
+![image](/static/img/workshop/meg-uk-2015/image_inv.png@400)
 
 To compare different models and select the winning model, you should use **Bayesian model selection**. You will find a “BMS” button at the bottom of the “DCM for M/EEG” window. Also, you will find some inverted DCMs for several subjects in your folder.
 
@@ -100,8 +100,8 @@ To compare different models and select the winning model, you should use **Bayes
 
 *  Press the green button to run BMS. After several seconds, you should see a new plot with expected probability and exceedance probability for each family of models. Exceedance probability is the probability of each model being better than any other model. In the plot below on the left, you can see that the models with both forward and backward connections modulated by face presentation have higher evidence than the remaining models. The plot on the right shows single models.
 
-![image](/media/workshop/meg-uk-2015/image004new.png@300)
-![image](/media/workshop/meg-uk-2015/image006new.png@300)
+![image](/static/img/workshop/meg-uk-2015/image004new.png@300)
+![image](/static/img/workshop/meg-uk-2015/image006new.png@300)
 
  
 
@@ -109,11 +109,11 @@ To compare different models and select the winning model, you should use **Bayes
 
 *  First, you can inspect a single model from a single participant using the GUI. To do this, in Matlab go to the "pre-computed" directory, and in the GUI load one of Subject 15’s inverted models. Then use the drop-down menu in the lower left corner of the “DCM for M/EEG” window to view the results. For example, selecting “ERPs (mode)” will plot the observed (dashed lines) and model-predicted (solid lines) responses for all experimental conditions and spatiotemporal modes you have modelled. “ERPs (sources)” will plot the activity modelled for each neuronal source, including its different neuronal populations – in case of an ERP neuronal model, the solid lines will represent superficial pyramidal cells which contribute most strongly to the measured signals. Further options include e.g. “Coupling (B)” which will show you posterior estimates of modulatory connectivity parameters (the B matrix), and “trial-specific effects” (see below) which will show you connection strengths for different conditions (here 100% represents the connection strength for the baseline condition). Finally, “Response (image)” will show you the model fits across all modelled time points and sensors. This is the end of our demo.
 
-![image](/media/workshop/meg-uk-2015/image007.png@400)
+![image](/static/img/workshop/meg-uk-2015/image007.png@400)
 
 *  To formally test whether your posterior parameter estimates are significant, you can use Bayesian parameter averaging (spm_dcm_average) of the winning model across all participants and inspect the posterior estimates and probabilities of parameters (e.g. DCM.Ep.B{1}(1,3) and  DCM.Pp.B{1}(1,3) will give you the posterior estimate and probability of the strength of a forward modulatory connection from region 3 to region 1). In a random effects context, you can load the posterior estimates of parameters from single subjects’ DCM structures – here, this would be one value of DCM.Ep.B{1}(1,3) per subject – to perform a one-sample t-test.
 
-![image](/media/workshop/meg-uk-2015/image009.png@500)
+![image](/static/img/workshop/meg-uk-2015/image009.png@500)
  
 More examples and tutorials can be found in the SPM12 manua
 [http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf](http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf)

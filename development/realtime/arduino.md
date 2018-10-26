@@ -97,7 +97,7 @@ It is based on a `<del>`[3V3 Arduino Pro Mini](http://arduino.cc/en/Main/Arduino
 
 Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/products/9582) module and uses this [library](http://jeelabs.net/pub/docs/jeelib/RF12_8cpp.html).
 
-![image](/media/development/realtime/rfm12b.png@200)
+![image](/static/img/development/realtime/rfm12b.png@200)
 
 ## See also
 

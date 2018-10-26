@@ -40,7 +40,7 @@ The following steps are used to detect artifacts in FieldTrip's automatic artifa
 
 This procedure will result in an artifact definition, a two column array with the onset and offset sample number of every detected artifact. This 'artifact definition' (''.artfctdef'') can then, in a separate step, be used to reject (parts of) trials in your trialdefinition (so before reading the data in using ft_preprocessing for your subsequent analysis), or rejecting (parts of) data already in memory. Both methods use [ft_rejectartifact](/reference/ft_rejectartifact). All the steps that the automatic artifact rejection routine takes will now be explained in detail.
 
-![image](/media/tutorial/overview_artifact_detection.png@600)
+![image](/static/img/tutorial/overview_artifact_detection.png@600)
 *Figure: Automatic artifact rejection processes the data in several steps to allow rejection of artifactual time intervals from the trial definition*
 
 ### I. Reading the data (with padding) from disk
@@ -68,12 +68,12 @@ The automatic artifact detection approach used here is based on three characteri
 *This results in one timecourse representing standardized deviations from the mean of all channels.*  
 
 The formulas for calculating the z-scores are:
-![image](/media/tutorial/eq1.png@120)
+![image](/static/img/tutorial/eq1.png@120)
 
 where
 
-![image](/media/tutorial/eq2.png@120)
-![image](/media/tutorial/eq3.png@150)
+![image](/static/img/tutorial/eq2.png@120)
+![image](/static/img/tutorial/eq3.png@150)
 
 with: N = the total number of time samples.
 
@@ -81,7 +81,7 @@ In the code this formula is formed such as to optimize the calculation of the ch
 
 The summation is performed lik
 
-![image](/media/tutorial/eq4.png@120)
+![image](/static/img/tutorial/eq4.png@120)
 
 with: C = the number of channels.
 
@@ -90,7 +90,7 @@ with: C = the number of channels.
 Now that every timepoint is expressed as a deviation for the mean over time & channels, we can use an artifact detection threshold: all timepoints that are above or below this threshold (set ''with cfg.artfctdef.zvalue.cutoff'') will be considered belonging to artifacts. Depending on the variance of the artifacts versus the variance of your brain signal a higher or lower threshold has to be set. The lower this threshold the more conservative the artifact detection will behave, the higher the more liberal (see figure). Since these characteristics of the data might vary per experiment and even from one recording to another, care has to be taken to investigate the threshold that works for you.
 By using the option ''cfg.feedback='yes''', you enter an interactive mode where you can browse through the data and adjust the cut-off value (i.e., the z-value used for thresholding) according to your data and filter settings.
 
-![image](/media/tutorial/zthreshold.png)
+![image](/static/img/tutorial/zthreshold.png)
 
 *Figure: Setting a higher or lower z-value threshold will make the detection of artifacts more conservative or liberal*
 
@@ -100,14 +100,14 @@ By using the option ''cfg.feedback='yes''', you enter an interactive mode where 
 
 When a series of continuous timepoints are detected they are considered part of one artifact // period// and enter the artifact definition as one start and end samplenumber. Often the artifact starts a bit earlier and ends a bit later than what the artifact detection is able to capture. Artifact padding (''cfg.artfctdef.xxx.artpadding'') can then be used to extend the timeperiod of the artifact on both sides. This can also be used to ensure that the artifact will 'reach into' the trial that has to be rejected.
 
-![image](/media/tutorial/artpadding.png)
+![image](/static/img/tutorial/artpadding.png)
 *Artifact padding extends the segment of data that will be marked as artifact.*
 
 ### Trial padding
 
 You might want to include segments of data preceding or following the trial, e.g. when you want to reject trials with an eye blink right before the trial onset. For this purpose trial padding (''cfg.artfctdef.xxx.trlpadding'') is used. Trial padding pads data on both sides of the trial with the specified length, such that artifact detection and rejection is also performed for those padded segments.
 
-![image](/media/tutorial/trlpadding.png@600)
+![image](/static/img/tutorial/trlpadding.png@600)
 
 *Trialpadding extends the period around the trial where artifact detection is performed*
 
@@ -116,21 +116,21 @@ You might want to include segments of data preceding or following the trial, e.g
 Each artifact type can best be detected with filters of a certain pass band (e.g. pass band of 1–15 Hz for eye blinks, and 110–140 Hz for muscle artifacts). However, filters are known to produce edge effects which can also be detected by the artifact-detection routine and mistaken for real artifacts.
 To avoid that, filter padding (''cfg.artfctdef.xxx.fltpadding'') is used. Always in addition to trial padding (if any) existing trial padding, extra data is read on both sides prior to filtering. After the filtering has been applied, the filter padding is removed again. In other words, the filter padding is used only for filtering, not for artifact detection (see figure).
 
-![image](/media/tutorial/fltpadding.png@600)
+![image](/static/img/tutorial/fltpadding.png@600)
 *Figure: Filter padding. Filter padding is only used during filtering and removed afterwards*
 
 ### Combining filter and trial padding
 
 Filter and trial padding are often used together. Trialpadding is first added to the trial, after which filterpadding is added (and removed again after filtering has been applied).
 
-![image](/media/tutorial/bothpadding.png)
+![image](/static/img/tutorial/bothpadding.png)
 *Figure: Filter and trial padding*
 
 ### Negative trialpadding
 
 Negative trialpadding is an option included in automatic artifact rejection because a couple of people have requested its implementation. It's a bit of a strange one and should only be applied when more appropriate steps are unavailable. This could be the case when trials have, in previous processing steps, been defined larger than necessary for artifact detection, e.g. when one has already included something similar as trial- and filter padding. Filter artifacts might then still be a problem without the possiblity of padding the data (since it is already in memory). Therefore you might want to constrain the artifact detection to a limited part of the trial, i.e. without the edges. You could then apply *negative* trialpadding (using a negative value for ''cfg.artfctdef.xxx.trlpadding'').
 
-![image](/media/tutorial/negative_trlpadding.png)
+![image](/static/img/tutorial/negative_trlpadding.png)
 
 *Negative trialpadding excluded the edges of trials for artifact detection*
 
@@ -199,7 +199,7 @@ such as the one below, which provides you information with respect to
 the detection procedure and gives you the ability to try out different
 z-value cutoff values.
 
-![image](/media/tutorial/artifactjump.png@600)
+![image](/static/img/tutorial/artifactjump.png@600)
 
 //Interactive figure of ft_artifact_zvalue. The left panel shows the
 z-score of the processed data, along with the threshold. Suprathreshold
@@ -214,7 +214,7 @@ In this example data set, a lot of data points are detected to be a
 'jump' artifact, although they seem more often 'muscular' in nature. A
 typical jump artifact can be seen belo
 
-![image](/media/tutorial/artifactjump2.png@600)
+![image](/static/img/tutorial/artifactjump2.png@600)
 
 *A typical SQUID jump can be observed on channel MLT42, trial 18.*
 
@@ -256,7 +256,7 @@ The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used 
 
 	  [cfg, artifact_muscle] = ft_artifact_zvalue(cfg);
 
-![image](/media/tutorial/artifactmuscle.png@600)
+![image](/static/img/tutorial/artifactmuscle.png@600)
 
 *A typical muscle artifact can be observed on channel MRT12, trial 32.*
 
@@ -291,7 +291,7 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
 
 	   [cfg, artifact_EOG] = ft_artifact_zvalue(cfg);
 
-![image](/media/tutorial/artifacteog.png@600)
+![image](/static/img/tutorial/artifacteog.png@600)
 
 *Typical eyeblink artifacts can be observed in trial 4. Note that the trial considers artifacts to precede and last longer than the threshold crossing, by padding data with 0.1 seconds on the left and 0.1 sec on the right*
 

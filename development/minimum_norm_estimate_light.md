@@ -329,7 +329,7 @@ The location of the MEG channels are defined in the .ds file of the tutorial dat
 	axis on
 	grid on
 
-![image](/media/tutorial/minimumnormestimate/headm_sourcem_sens3.jpg@400)
+![image](/static/img/tutorial/minimumnormestimate/headm_sourcem_sens3.jpg@400)
 
 *Figure 2. Head model, sourcemodel and sensors plotted in the same figure*
 
@@ -555,7 +555,7 @@ You can plot the estimated source strength at a specific time-point with the low
 	
 	ft_plot_mesh(bnd, 'vertexcolor', value);
 
-![image](/media/tutorial/minimumnormestimate/mnesource2.jpg@500)
+![image](/static/img/tutorial/minimumnormestimate/mnesource2.jpg@500)
 
 *Figure 3. The result of the source-reconstruction of the FIC condition plotted at 500 ms*
 

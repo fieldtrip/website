@@ -214,7 +214,7 @@ This ends the part of the FreeSurfer pipeline concerned with volumetric processi
 	cfg.interactive = 'yes';
 	ft_sourceplot(cfg, mri);
 
-![image](/media/tutorial/minimumnormestimate/filled01new.png@550)
+![image](/static/img/tutorial/minimumnormestimate/filled01new.png@550)
 
 *Figure 3. Filled mgz created by FreeSurfer. The two hemispheres have different colors (white and grey), cerebellum is not included.*
 
@@ -260,7 +260,7 @@ This step creates a bunch of files in `<Subject directory>`/Subject01/bem/**, co
 	figure
 	ft_plot_mesh(sourcespace);
 
-![image](/media/tutorial/minimumnormestimate/sspace01new.png@450)
+![image](/static/img/tutorial/minimumnormestimate/sspace01new.png@450)
 
 *Figure 4. The source-space downsampled by MNE Suite*
 
@@ -352,7 +352,7 @@ As an alternative you can create a template grid yourself, like thi
 	ft_plot_vol(template_headmodel, 'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
 	ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
-![image](/media/example/mnispace/mni_fig1a.png@300)
+![image](/static/img/example/mnispace/mni_fig1a.png@300)
 
 **fig 2: template grid and headmodel, top view**
 
@@ -390,7 +390,7 @@ As an alternative you can create a template grid yourself, like thi
 	ft_plot_vol(headmodel, 'edgecolor', 'none', 'facealpha', 0.4);
 	ft_plot_mesh(grid.pos(grid.inside,:));
 
-![image](/media/example/mnispace/mni_fig2b.png@300)
+![image](/static/img/example/mnispace/mni_fig2b.png@300)
 
 **fig 3: template grid in single-subject head coordinates, superimposed onto the headmodel**
 

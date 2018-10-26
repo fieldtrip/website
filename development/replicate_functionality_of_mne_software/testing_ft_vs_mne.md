@@ -80,7 +80,7 @@ The data looks like this when I plot i
 	cfg=[];
 	topoplotER(cfg,data)
 
-![image](/media/development/phantom_topoploter.jpg@400)
+![image](/static/img/development/phantom_topoploter.jpg@400)
 
 ### Averaging and Noise-covariance estimation
 
@@ -138,7 +138,7 @@ It looks like this (the function below creates a mesh out of it
 	
 	ft_plot_vol(vol_ph)
 
-![image](/media/development/plot_vol_vol_ph.jpg@400)
+![image](/static/img/development/plot_vol_vol_ph.jpg@400)
 ### Source space
 
 The source space is a 2D surface.
@@ -151,7 +151,7 @@ The source space is a 2D surface.
 	
 	ft_plot_mesh(pos);
 
-![image](/media/development/ft_plot_mesh_pos.jpg@300)
+![image](/static/img/development/ft_plot_mesh_pos.jpg@300)
 
 (This latest code does not work properly with an earlier version of Matlab (Matlab R2008b).) 
 ### Leadfield
@@ -188,12 +188,12 @@ It is not clear for me when you have to define the option grid.inside and grid.o
 	figure;
 	mne1.avg.pow(100,30)
 
-![image](/media/development/plot_mne1.jpg@400)
+![image](/static/img/development/plot_mne1.jpg@400)
 
 	
 	imagesc(reshape(mne1.avg.pow(:,30), 29,29))
 
-![image](/media/development/plot_mne1_2.jpg@400)
+![image](/static/img/development/plot_mne1_2.jpg@400)
 
 ## Minimum-norm estimate in FieldTrip using simulated data
 
@@ -250,8 +250,8 @@ Trying to understand the results above, we looked at the phantom data in detail.
 
 This yields the following figure
 
-![image](/media/development/mne-pinv.png@400)
-![image](/media/development/mne-nopinv.png@400)
+![image](/static/img/development/mne-pinv.png@400)
+![image](/static/img/development/mne-nopinv.png@400)
 
 Clearly, there is an issue with the (default) pinv implementation. Apparently, some regularization should be done for the MNE to give meaningful results.
 
@@ -321,7 +321,7 @@ This involves specifying cfg.mne.noisecov, cfg.mne.sourcecov, cfg.mne.lambda pri
 
 This gives the following figur
 
-![image](/media/development/phantomftvsmne01.png@400)
+![image](/static/img/development/phantomftvsmne01.png@400)
 
 	
 	% strange enough the data are not 0 mean
@@ -351,7 +351,7 @@ This gives the following figur
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
-![image](/media/development/phantomftvsmne02.png@400)
+![image](/static/img/development/phantomftvsmne02.png@400)
 
 ### Part 2.
 
@@ -420,7 +420,7 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	% plot a random source
 	figure;plot(source.avg.mom{source.inside(100)}');
 
-![image](/media/development/plot_source_100.jpg@300)
+![image](/static/img/development/plot_source_100.jpg@300)
 
 	
 	% strange enough the data are not 0 mean
@@ -451,7 +451,7 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
-![image](/media/development/ftplotmesh_ft_phantom.jpg@300)
+![image](/static/img/development/ftplotmesh_ft_phantom.jpg@300)
 
 I have also tried to plot it the same way as I plot the mesh for the mne suite results (see below). And I changed lambda to 0.01 (because 0.01^2 = 1e-4).
 
@@ -477,7 +477,7 @@ I have also tried to plot it the same way as I plot the mesh for the mne suite r
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',mred,'edgecolor','none');axis on
 
-![image](/media/development/ftplotmesh_ft_phantom_at198.jpg@300)
+![image](/static/img/development/ftplotmesh_ft_phantom_at198.jpg@300)
 
 ### Part 3.
 
@@ -540,7 +540,7 @@ Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
 	hold on;
 	ft_plot_mesh(grid.pos(gridnew,:));
 
-![image](/media/development/griddiff_mne_ft.jpg@450)
+![image](/static/img/development/griddiff_mne_ft.jpg@450)
 
 	
 	grid2 = grid;
@@ -612,11 +612,11 @@ FIXME I should match the positions of the source points with each other.
 	% plot a random source
 	figure;plot(source2.avg.mom{source2.inside(100)}');
 
-![image](/media/development/replicate_functionality_of_mne_software/plot_source3_100.jpg@650)
+![image](/static/img/development/replicate_functionality_of_mne_software/plot_source3_100.jpg@650)
 
 The same figure of a random source calculated with the original leadfield of FieldTrip looks like thi
 
-![image](/media/development/replicate_functionality_of_mne_software/plot_source_100.jpg@650)
+![image](/static/img/development/replicate_functionality_of_mne_software/plot_source_100.jpg@650)
 
 Note, that the values in the second figure are much larger.
 
@@ -648,7 +648,7 @@ Note, that the values in the second figure are much larger.
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',mred,'edgecolor','none');axis on
 
-![image](/media/development/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at284_leadfmne.jpg@300)
+![image](/static/img/development/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at284_leadfmne.jpg@300)
 
 Compare this to figure at the end of the next session ("Minimum-norm estimate with MNE Suite using phantom data").
 ## Minimum-norm estimate in MNE Suite using phantom data
@@ -749,7 +749,7 @@ File... Open...
 
 Compensation:Third-order gradient, Selection: phantomas_raw.fif
 
-![image](/media/development/mne_phantom_browse.png@600)
+![image](/static/img/development/mne_phantom_browse.png@600)
 
 To look at the data in topographical vie
 
@@ -872,7 +872,7 @@ I got a res structure.
 	
 	figure; plot(res.sol(100,:));
 
-![image](/media/development/plot_res_sol_100.jpg@400)
+![image](/static/img/development/plot_res_sol_100.jpg@400)
 
 	
 	[r,c]=find(res.sol==max(res.sol(:)))
@@ -905,5 +905,5 @@ Maximum was at 284.
 	figure;hold on;
 	ft_plot_mesh(bnd,'vertexcolor',m,'edgecolor','none');axis on
 
-![image](/media/development/ftplotmesh_mne_phantom_at284.jpg@300)
+![image](/static/img/development/ftplotmesh_mne_phantom_at284.jpg@300)
 

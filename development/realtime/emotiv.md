@@ -8,7 +8,7 @@ tags: [realtime, emotiv]
 
 This page describes the interface between the 14-channel Emotiv neuroheadset and the FieldTrip buffer.
 
-![image](/media/development/realtime/emotiv.jpg)
+![image](/static/img/development/realtime/emotiv.jpg)
 
 The acquisition setup consists of the headset itself and a bluetooth dongle, which we talk to using the Emotiv SDK on Windows. We provide a standalone
 tool called **emotiv2ft** (see ''realtime/datasource/emotiv'') to grab data from the headset, and stream it to a FieldTrip buffer. 

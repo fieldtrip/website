@@ -8,7 +8,7 @@ tags: [development]
 
 The source code in the FieldTrip toolbox is split over multiple directories, which reflect the modular organization. Furthermore, the directories have specific dependencies on each other, and additions to FieldTrip should follow this structure.
 
-![image](/media/development/modules-general.png)
+![image](/static/img/development/modules-general.png)
 
 The main directory of FieldTrip and the different modules contain high-level functions that are publicly available for the end-user. The functionality of the functions within these directories often depends on low-level functions that are not available for the end-user and are stored in so-called private directories. Some of the module directories are shared with other open-source MATLAB toolboxes.
 

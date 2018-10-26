@@ -50,13 +50,13 @@ The pipeline of the MNE analysis can be divided into 5 bigger step
 
 The last three steps are using the outputs from processing of anatomical and electrophysiological data.
 
-![image](/media/development/mne_step1_biggersteps.png@250)
+![image](/static/img/development/mne_step1_biggersteps.png@250)
 
 ### 1. Anatomical processing
 
 The first part of anatomical processing of the MRI data is done by the Freesurfer program. MNE is using the output of this program and one of the FS functions to create head shapes with the boundary element method (BEM) and to set up the source space for the forward solution. The next figure shows the filenames (with red) that were created by FS and MNE is using them for input. When MNE is creating the BEM model meshes it is using a function (mri_watershed) from FS. Therefore, the FS has to be set up before running this MNE function.
 
-![image](/media/development/anatomical_processing_2.png@650)
+![image](/static/img/development/anatomical_processing_2.png@650)
 
 First, one should run FS for creating the input files for MNE. 
 
@@ -83,7 +83,7 @@ This code will recognize the first xxx.ima file in the directory of the anatomic
 
 This figure shows the processing steps done by -autorecon1 when there is only one scanning run of one subject is available. The input and output file names are shown also for each step.
 
-![image](/media/development/fs_autorecon1.png@350)
+![image](/static/img/development/fs_autorecon1.png@350)
 
 This first processing step takes around 1,5 hour.
 
@@ -113,7 +113,7 @@ For further instructions, read http://surfer.nmr.mgh.harvard.edu/fswiki/Recommen
 
 This figure shows the processing steps that happens when -autorecon2 is running. Not all of the output files are shown, and many of the processing stages could be divided into more individual FS functions. But I tried to add those output files that are used as input of later processing stages. The red file names are used later by MNE. The last step (green) belongs to -autorecon3.
 
-![image](/media/development/fs_autorecon23.png@500)
+![image](/static/img/development/fs_autorecon23.png@500)
 
 In the first stage (**automatic subcortical segmentation**) the volume is further normalized based on a GCA (gaussian filter array) model. 
 
@@ -278,14 +278,14 @@ mne_analyze`</code>`
 
 This is a general pipeline about how to do source analysis based on minimum-norm estimate.
 
-![image](/media/development/gen_pipeline2.png@600)
+![image](/static/img/development/gen_pipeline2.png@600)
  
 
 ### Anatomical processing:MEG
 
 The following figure shows the MNE and FS and FT pipeline of anatomical processing. 
 
-![image](/media/development/anatomical_processing_fs_ft_mne.png@1000)
+![image](/static/img/development/anatomical_processing_fs_ft_mne.png@1000)
 
 :!: Creating source space in FieldTrip has been tested only on MRI data with .mri extension.
 
@@ -299,27 +299,27 @@ In MNE Suite, the alignment and the coordinate transformation happens only just 
 	innerskull = ft_read_headshape(`<path to directory>`/subjects/`<subject's name>`/bem/`<subject's name>`-inner_skull-5120.surf');
 	ft_plot_mesh(innerskull);
 
-![image](/media/development/innerskull_5120.jpg@300)
+![image](/static/img/development/innerskull_5120.jpg@300)
 
 #### Innerskull in tkmedit
 
 I could load in only the sub10_inner_skull_surface file (output of mne_watershed_bem) in tkmedit overlayed on the T1.mgz.
 
-![image](/media/development/sub10_inner_skull_surface.jpg@350)
+![image](/static/img/development/sub10_inner_skull_surface.jpg@350)
 
 #### Plotting vol from FT
 
 	
 	ft_plot_mesh(vol.bnd);
 
-![image](/media/development/plot_vol.jpg@300)
+![image](/static/img/development/plot_vol.jpg@300)
 
 #### Plotting bnd3 from FT
 
 	
 	ft_plot_mesh(bnd3);
 
-![image](/media/development/plot_bnd3.jpg@300)
+![image](/static/img/development/plot_bnd3.jpg@300)
 
 ### Anatomical processing: EEG
 
@@ -370,15 +370,15 @@ With this kind of segmentation, the output is the identification of the gray mat
 	
 	seg.gra
 	
-	![image](/media/development/mgz_gray.jpg@400)
+	![image](/static/img/development/mgz_gray.jpg@400)
 	
 	seg.whit
 	
-	![image](/media/development/mgz_white.jpg@400)
+	![image](/static/img/development/mgz_white.jpg@400)
 	
 	seg.cs
 	
-	![image](/media/development/mgz_csf.jpg@400)
+	![image](/static/img/development/mgz_csf.jpg@400)
 	
 	
 	This segmentation is not the same what MNE does with the help of FS. In order to make BEM meshes, one should create a volume that contains the brain, the brain with (or until) the skull and the entire head until the skin. For creating BEM meshes, I have followed this script: [[example:create_bem_headmodel_for_eeg|Create BEM headmodel for EEG]]. This script needs a proper documentation because it is difficult to figure out to what one should attend during creating the brain, skin, skull volumes. :
@@ -403,7 +403,7 @@ With this kind of segmentation, the output is the identification of the gray mat
 	
 	The following picture show the BEM meshe
 	
-	![image](/media/development/meshes2.jpg@500)
+	![image](/static/img/development/meshes2.jpg@500)
 	
 	
 	
@@ -511,7 +511,7 @@ In Matlab:
 	figure;
 	ft_plot_mesh(bnd_mne)
 
-![image](/media/development/mesh_bnd_ts_mne.jpg@750)
+![image](/static/img/development/mesh_bnd_ts_mne.jpg@750)
 
 And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the matlab reducepatch functio
 
@@ -521,7 +521,7 @@ And the source space of the same volume created in FieldTrip, and reduced to the
 	
 	ft_plot_mesh(bnd2_ft);
 
-![image](/media/development/mesh_bnd5_ts_ft.jpg@650)
+![image](/static/img/development/mesh_bnd5_ts_ft.jpg@650)
 
 ## Step 3: Tutorial 
 

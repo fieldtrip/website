@@ -89,11 +89,11 @@ signals.
 	subplot(2,1,2);
 	plot(imag(fftcos),'r');
 
-![image](/media/tutorial/fourier/fft_sinwav2.png	)
+![image](/static/img/tutorial/fourier/fft_sinwav2.png	)
 
 *Figure 1; The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
-![image](/media/tutorial/fourier/fft_coswav2.png	)
+![image](/static/img/tutorial/fourier/fft_coswav2.png	)
 
 *Figure 2; The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
@@ -132,7 +132,7 @@ signals.
 	figure;
 	plot(wav);
 
-![image](/media/tutorial/fourier/cos45.png	)
+![image](/static/img/tutorial/fourier/cos45.png	)
 
 *Figure 3; A 20 Hz cosine wave shifted 45 degrees.*
 
@@ -144,7 +144,7 @@ signals.
 	subplot(2,1,2);
 	plot(imag(fftwav),'r');
 
-![image](/media/tutorial/fourier/fft_cos45.png	)
+![image](/static/img/tutorial/fourier/fft_cos45.png	)
 
 *Figure 4; The FFT of a 20 Hz cosine wave shifted 45 degrees.*
 
@@ -217,7 +217,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	hold on;
 	plot(coswav,'r');
 
-![image](/media/tutorial/fourier/sincos.png)
+![image](/static/img/tutorial/fourier/sincos.png)
 
 *Figure 5; A sine (blue) and cosine wave (red) of equal frequency (10 Hz).*
 
@@ -244,7 +244,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	figure('name','power cos');
 	plot(psdcos);
 
-![image](/media/tutorial/fourier/powsin.png)
+![image](/static/img/tutorial/fourier/powsin.png)
 
 *Figure 6; The power spectrum of a 10 Hz sine wave. The power spectrum of the 10 Hz cosine wave is identical.*
 
@@ -334,7 +334,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	figure;
 	plot(coh);
 
-![image](/media/tutorial/fourier/coh_randomphase.png	)
+![image](/static/img/tutorial/fourier/coh_randomphase.png	)
 
 *Figure 7; Coherence spectrum for two 10 Hz signals with a random phase difference.*
 
@@ -383,7 +383,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	figure;
 	plot(coh);
 
-![image](/media/tutorial/fourier/coh_consphase.png	)
+![image](/static/img/tutorial/fourier/coh_consphase.png	)
 
 *Figure 8; Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference.*
 

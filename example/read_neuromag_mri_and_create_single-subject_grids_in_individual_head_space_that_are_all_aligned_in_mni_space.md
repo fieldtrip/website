@@ -65,7 +65,7 @@ This example script relies on the example script [Create mni-aligned grids in in
 	ft_sourceplot(cfg,test);
 
 ** Figure 1 The segmented mri**
-![image](/media/example/segmri.jpg)
+![image](/static/img/example/segmri.jpg)
 
 	
 	%make the single_shell headmodel
@@ -104,7 +104,7 @@ This example script relies on the example script [Create mni-aligned grids in in
 	ft_headmodelplot(cfg);
 
 ** Figure 1 The results **
-![image](/media/example/headmodels/headmodel.png)
+![image](/static/img/example/headmodels/headmodel.png)
 {{:example:headmodel2.png|}}
 
 ## Doing source-analysis with the created headmodel

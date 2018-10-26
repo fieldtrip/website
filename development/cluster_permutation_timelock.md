@@ -30,11 +30,11 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 
 *  Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
 
-![image](/media/tutorial/cluster_permutation_erf/bwtrial_stat_procedure_axial.png@250)
+![image](/static/img/tutorial/cluster_permutation_erf/bwtrial_stat_procedure_axial.png@250)
 
 *Figure 1. Analysis protocol of a between-trials experiment with axial data*
 
-![image](/media/tutorial/cluster_permutation_erf/bwtrial_stat_procedure_planar.png@220)
+![image](/static/img/tutorial/cluster_permutation_erf/bwtrial_stat_procedure_planar.png@220)
 
 *Figure 2. Analysis protocol of a between-trials experiment with planar data*
 
@@ -50,7 +50,7 @@ Subsequently, we consider a **within-subjects** experiment, in which we compare 
 
 *  Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
 
-![image](/media/development/project/tutorial_stat/ft_stat_tutorial2.png@550)
+![image](/static/img/development/project/tutorial_stat/ft_stat_tutorial2.png@550)
 
 *Figure 3. Analysis protocol of a within-subjects experiment with planar data*
 
@@ -266,7 +266,7 @@ To plot the data use the following for-loop:
 
 In this for-loop, cfg.xlim defines the time interval of each subplot. The variables pos_int and neg_int boolean vectors indicating which channels of pos and neg are significant in the time interval of interest. This is defined in cfg.highlight. The for-loop plots 20 subplots covering a time interval of 50 ms each. Running this for-loop creates the following figur
 
-![image](/media/tutorial/cluster_permutation_erf/clusperm_erf_topos_raweffect_ficvsfc_ax_subj1.png@700)
+![image](/static/img/tutorial/cluster_permutation_erf/clusperm_erf_topos_raweffect_ficvsfc_ax_subj1.png@700)
 
 **//Figure 4: Raw effect (FIC-FC) on the ERFs of subject 1, significant clusters are highlighted.//**
 
@@ -363,7 +363,7 @@ Using the following configuration for **[ft_topoplotER](/reference/ft_topoploter
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
 
-![image](/media/tutorial/cluster_permutation_erf/clusperm_erf_topos_raweffect_ficvsfc_pl_subj1.png@700)
+![image](/static/img/tutorial/cluster_permutation_erf/clusperm_erf_topos_raweffect_ficvsfc_pl_subj1.png@700)
 
 **//Figure 5:  Raw effect (FIC-FC) on the planar gradient ERFs of subject 1, the significant clusters are highlighted.//**
 
@@ -489,7 +489,7 @@ With the output, we can now create the plots
        cfg.layout = 'CTF151.lay';
        ft_topoplotER(cfg, GA_FICvsFC);
     end  
-![image](/media/tutorial/cluster_permutation_erf/clusperm_erf_topos_raweffect_ficvsfc_pl_ga.png@700)
+![image](/static/img/tutorial/cluster_permutation_erf/clusperm_erf_topos_raweffect_ficvsfc_pl_ga.png@700)
 
 **//Figure 6: Raw effect (FIC-FC) on the grand average planar gradient ERFs the significant cluster is highlighted//**
 

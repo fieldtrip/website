@@ -10,7 +10,7 @@ The **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** functi
 
 ## Flowchart
 
-![image](/media/example/realtime/realtime_powerestimate.png@350)
+![image](/static/img/example/realtime/realtime_powerestimate.png@350)
 ## Example use
 
 The easiest way to try out the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** example is by starting two Matlab sessions. In the first session you create some random signal and write it to the buffer by means of **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)*

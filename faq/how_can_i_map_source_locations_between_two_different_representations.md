@@ -27,7 +27,7 @@ Then, you can interpolate the atlas of your choice onto this sourcemodel using *
 *Some useful tips:* 
 - Ensure that the units are consistent in atlas and sourcemodel. If that's not the case, use **[ft_convert_units](/reference/ft_convert_units)**.
 - When using **[ft_read_atlas](/reference/ft_read_atlas)**, it is better to use an atlas defined in MNI space, like the AAL atlas, in order to avoid too much distortion when converting between MNI and Talairach space. The figure below exemplifies this issue.
-![image](/media/faq/atlas_afni_brainweb_sourcespace.png@600)
+![image](/static/img/faq/atlas_afni_brainweb_sourcespace.png@600)
 *Comparing grey matter tagging using atlases AFNI (all labels; blue) and Brainweb (tissue grey_matter; red). Note how the AFNI version does not fill the volume conductor model completely, probably due to TAL to MNI transformation issues.*
 
 From the previous step, a field 'tissue' should be created in sourcemodel2: 'tissue' represents the anatomical labels, according to the corresponding atlas. 'atlas.tissuelabel' gives the labels that correspond to the numbers in the tissue field.

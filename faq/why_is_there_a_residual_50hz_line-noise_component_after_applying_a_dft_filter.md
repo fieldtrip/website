@@ -8,7 +8,7 @@ tags: [faq, artifact, filter, noise, preprocessing]
 
 It is due to the non-stationarity of the line noise component in the data. Imagine a trial in which the 50Hz line noise increases in amplitude over time (e.g. trial #3 in the first figure). 
 
-![image](/media/faq/linenoise.png@600)
+![image](/static/img/faq/linenoise.png@600)
 
 If you fit a constant sine wave, its amplitude will be the mean, i.e. at the begin of the trial it will be larger than the actual amplitude and towards the end it will be smaller (second figure, using a 5 Hz example sine).
 
@@ -30,7 +30,7 @@ If you fit a constant sine wave, its amplitude will be the mean, i.e. at the beg
     s2 = avgamp.*sin(2*pi*f*t);
     hold on; plot(t, s2, 'r');
 
-![image](/media/faq/dftfilter1.png@500)
+![image](/static/img/faq/dftfilter1.png@500)
 
 Then imagine subtracting the estimated 5 Hz component. At the begin you subtract too much, causing a negative (sign-flipped) 50Hz signal remaining in the data, and towards the end of the trial you are not subtracting enough, causing a positive (non sign-flipped) 5 Hz signal remaining (black line in third figure). Computed over the whole time interval, the 5 Hz amplitude is zero. However, for a short time interval at the begin, there is non-zero amplitude at 5 Hz. In the middle the amplitude dips, but towards the end of the trial the amplitude increases and is again non-zero. I.e. the time-varying amplitude is V-shaped: large at the edges, small in the middle. Similarly, if you were to look at the power, it would be U-shaped.
 
@@ -42,6 +42,6 @@ Then imagine subtracting the estimated 5 Hz component. At the begin you subtract
     s4 = ft_preproc_bandpstopfilter(s1, fs, [4.9 5.1], 2);
     hold on; plot(t, s4, 'm');  
 
-![image](/media/faq/dftfilter2.png@500)
+![image](/static/img/faq/dftfilter2.png@500)
 
 After spectral estimation this would lead to a consistent decrease in 50 Hz towards the middle of the trials. Note that it depends on the spectral estimation technique and the data padding during filtering whether and how the residual line noise will express itself. An alternative approach would be to use a bandstop filter instead of the dftfilter (for result see magenta line in third figure).

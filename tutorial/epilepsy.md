@@ -46,7 +46,7 @@ Check the coregistration of the Polhemus headshape and the anatomical MRI. In th
 
 In this case the coregistration is already nearly perfect.
 
-![image](/media/tutorial/case1a-coreg.png@400)
+![image](/static/img/tutorial/case1a-coreg.png@400)
 
 Usually you would start with an anatomical MRI (e.g. stored as a stack of DICOM files) that is not yet coregistered with the MEG. We will improve the coregistration a bit, using the same procedure you could use to coregister from scratch.
 
@@ -60,7 +60,7 @@ The coregistration procedure starts with a coarse manual coregistration, followe
     cfg.coordsys = 'ctf';
     mri_realigned = ft_volumerealign(cfg, mri_orig);
 
-![image](/media/tutorial/case1a-coreg-manual.png@400)
+![image](/static/img/tutorial/case1a-coreg-manual.png@400)
 
 The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface of the **[/reference/ft_defacevolume](/reference/ft_defacevolume)** function.
 
@@ -70,9 +70,9 @@ The headshape not only covers the scalp, but also the face and nose. Hence the c
     cfg.scale = [75 150 120];
     mri_defaced = ft_defacevolume(cfg, mri_realigned);
 
-![image](/media/tutorial/case1a-deface.png@400)
+![image](/static/img/tutorial/case1a-deface.png@400)
 
-![image](/media/tutorial/case1a-deface_result.png@400)
+![image](/static/img/tutorial/case1a-deface_result.png@400)
 
 For convenience in later plotting, we reslice the MRI so that the axes of the volume are aligned with the axes of the coordinate system.
 
@@ -84,7 +84,7 @@ Finally we should do a visual inspection of the realigned, defaced and replaced 
     cfg = [];
     ft_sourceplot(cfg, mri_resliced)
 
-![image](/media/tutorial/case1a-resliced.png@400)
+![image](/static/img/tutorial/case1a-resliced.png@400)
 
 Note that the patients head is tilted to the right. Apparently the anatomical landmarks at the left and right ear were not clicked symmetrically with the Polhemus. This is not a problem for further processing, as long as we remember that results are expressed in head coordinates relative to the anatomical landmark of this specific recording.
 

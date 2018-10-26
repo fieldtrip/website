@@ -36,7 +36,7 @@ You can plot the events in a scatter plot. Along the horizontal axis is time, ve
     figure
     plot(smp/hdr.Fs, val, '.');
 
-![image](/media/faq/screen_shot_2017-09-20_at_17.50.53.png@400)
+![image](/static/img/faq/screen_shot_2017-09-20_at_17.50.53.png@400)
 
 The visual inspection of the figure shows you the overall structure of the events in the recording. Often it allows you to decipher part of the experimental design.
 
@@ -67,7 +67,7 @@ The following code finds all unique events and aligns the individual bits in the
 
 The table can easily be exported to Excel or LibreOffice, where you can do additional checks on the columns. 
 
-![image](/media/faq/screen_shot_2017-09-20_at_17.50.22.png@600)
+![image](/static/img/faq/screen_shot_2017-09-20_at_17.50.22.png@600)
 
 The STI101 channel represents stimuli, in STI102 you can see the response codes corresponding to button presses.
 

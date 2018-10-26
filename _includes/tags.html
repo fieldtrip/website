@@ -1,10 +1,12 @@
 <!-- This shows the tags for a specific page -->
 
-<small>
+<span class="tag">
   {% if page.tags[0] %}
     Tags:
     {% for thistag in page.tags %}
       <a href="/tag/{{ thistag }}/">{{ thistag }}</a>
     {% endfor %}
+    {% else %}
+    &nbsp;
   {% endif %}
-</small>
+</span>

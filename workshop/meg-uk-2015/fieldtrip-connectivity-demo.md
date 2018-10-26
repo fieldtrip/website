@@ -53,8 +53,8 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, mri_realigned);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.10.png@300)
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.26.png@300)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.10.png@300)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.26.png@300)
 
 	%%
 	% timelock2 was computed in http://fieldtrip.fcdonders.nl/workshop/meg-uk-2015/fieldtrip-beamformer-demo#part_3_-_reconstruct_single-trial_cortical_responses
@@ -99,7 +99,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	legend(virtualchannel_avg.label);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.31.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.31.png)
 
 	%%
 	
@@ -120,8 +120,8 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_singleplotTFR(cfg, virtualchannel_wavelet);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.36.png@300)
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.39.png@300)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.36.png@300)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.39.png@300)
 
 	%%
 	
@@ -135,7 +135,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	axis xy
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.54.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.02.54.png)
 
 ## Part 2 - whole brain connectivity
 
@@ -213,7 +213,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ylabel('imag');
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.37.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.37.png)
 
 	%%
 	
@@ -247,7 +247,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, conn);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.44.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.44.png)
 
 	cfg             = [];
 	cfg.parameter   = 'cohspctrm';
@@ -258,7 +258,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, sourceI);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.49.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.49.png)
 
 	%% look at connectivity difference
 	
@@ -300,7 +300,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_sourceplot(cfg, source_difint);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.52.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.44.52.png)
 
 	%% look at the analysis history
 	
@@ -312,4 +312,4 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_analysispipeline(cfg, source_difint);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.45.50.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_12.45.50.png)

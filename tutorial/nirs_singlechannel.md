@@ -45,25 +45,19 @@ Analyses can be conducted in many different ways and in different orders, depend
 The following order of steps provide a good standard approach for analysing fNIRS data (see Fig 1 for an overview
 
 *  read data & trim off non-experimental time windows
-
 *  remove bad channels (not covered in this tutorial, because we focus on one channel only)
-
 *  remove artifacts within channels; segments of data within channels that will be excluded from the analysis, e.g. motion artifacts
-
 *  transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
-
 *  separate functional from systemic responses (signal conditioning); this step in itself is necessary, people choose one or more of the steps below
     * filter; i.e. temporal processing
     * subtract reference channel; i.e. spatial processing
     * anti-correlate oxyHb/deoxyHb-traces per channel
-
 *  define epochs; in some experiments, this step could be taken earlier (e.g. if you have a long recording with a very short piece of relevant data)
-
 *  average over conditions and visualize the data
 
-![image](/media/tutorial/nirs_tut1_fig1.png@&400)
+![image](/static/img/tutorial/nirs_tut1_fig1.png@400)
 
-**//Figure 1; Overview of fNIRS analysis procedure.//**
+*Figure 1; Overview of fNIRS analysis procedure.*
 
 ### Getting Started
 
@@ -129,9 +123,9 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
     cfg.ylim = 'maxmin'
     ft_databrowser(cfg, data);
 
-![image](/media/tutorial/nirs_tut1_fig1_ft_databrowser_readin.png@&400)
+![image](/static/img/tutorial/nirs_tut1_fig1_ft_databrowser_readin.png@400)
 
-**//Figure 2; Databrowser read-in.//**
+*Figure 2; Databrowser read-in.*
 
 Using **[ft_databrowser](/reference/ft_databrowser)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don’t need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
 
@@ -142,9 +136,9 @@ Additionally, we'll from here select just one channel, to reduce the complexity 
 	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
 	ft_databrowser(cfg, data);
 
-![image](/media/tutorial/nirs_tut1_fig3_databrowser_one_chan.png@400)
+![image](/static/img/tutorial/nirs_tut1_fig3_databrowser_one_chan.png@400)
 
-**//Figure 3; Databrowser with one channel selected.//**
+*Figure 3; Databrowser with one channel selected.*
 
 #### Exercise 1
 
@@ -238,9 +232,9 @@ Note that we left out the brackets around the output variable as we have a singl
     cfg.viewmode = 'vertical';
     ft_databrowser(cfg, data_epoch);
 
-![image](/media/tutorial/nirs_tut1_fig3_ft_define_trial_v2.png@400)
+![image](/static/img/tutorial/nirs_tut1_fig3_ft_define_trial_v2.png@400)
 
-**//Figure 4; Databrowser for 12 trials.//**
+*Figure 4; Databrowser for 12 trials.*
 
 So we pulled our data out of the measurement. The data looks crisps and clear.
 
@@ -287,9 +281,9 @@ Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seco
 	plot(time,HHb,'b');
 	legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
 
-![image](/media/tutorial/nirs_tut1_fig4_ft_average_hem_respons.png@400)
+![image](/static/img/tutorial/nirs_tut1_fig4_ft_average_hem_respons.png@400)
 
-**//Figure 5; Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941).//**
+*Figure 5; Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941).*
 
 ## Summary and conclusion
 

@@ -104,7 +104,7 @@ We will first clean the data from potential bad segments such as SQUID jumps and
 	cfg.continuous = 'yes';
 	ft_databrowser(cfg, comp);
 
-![image](/media/tutorial/networkanalysis/components.png@400)
+![image](/static/img/tutorial/networkanalysis/components.png@400)
 
 *Figure 1: Topography and time course of IC's likely reflecting cardiac and eye movement artifacts*
 
@@ -160,7 +160,7 @@ We will analyze the spectral content of the data using  **[ft_freqanalysis](/ref
 	cfg.channel = {'MRO22', 'MRO32', 'MRO33'};
 	subplot(2,1,2); ft_singleplotER(cfg, fft_data);
 
-![image](/media/tutorial/networkanalysis/topo_alpha_peak.png@400)
+![image](/static/img/tutorial/networkanalysis/topo_alpha_peak.png@400)
 
 *Figure 2: Top- scalp topography of oscillatory power centered at 10 Hz. Bottom- power spectrum averaged over three occipital sensors illustrating a clear ~10 Hz peak.*
 ### Source analysis
@@ -195,7 +195,7 @@ In the following section we will compute the ingredients for accurate reconstruc
 
 	view([0 -90 0])
 
-![image](/media/tutorial/networkanalysis/hdm_lf_sens_alignment2.png@400)
+![image](/static/img/tutorial/networkanalysis/hdm_lf_sens_alignment2.png@400)
 
 *Figure 3: Sensors (green), head model (grey) and source model(blue) are properly aligned all in units of cm.*
 
@@ -266,7 +266,7 @@ The source model describes a regular 3D grid. Not all positions of the source mo
 	cfg.funcolormap   = 'jet';
 	ft_sourceplot(cfg, source_int);
 
-![image](/media/tutorial/networkanalysis/source_pow.png@400)
+![image](/static/img/tutorial/networkanalysis/source_pow.png@400)
 
 *Figure 4: Reconstructed activity (neural activity index) with peak maxima in occipital but also sensorimotor and some deep brain areas.*
 
@@ -301,7 +301,7 @@ The accurate judgment of the source reconstructed data is often not straight for
 	subplot(2,2,3); ft_topoplotER(cfg, fft_data_planar_cmb);
 	title('planar gradient')
 
-![image](/media/tutorial/networkanalysis/source_topo.png@400)
+![image](/static/img/tutorial/networkanalysis/source_topo.png@400)
 
 *Figure 5: Reconstructed activity (neural activity index) with peak maxima in occipital areas (top left) together with scalp topographic representation of the signal on the axial (top right) and planar (bottom left) gradients. Note that the presumably bilateral origin suggested by the scalp topography of the axial gradiometers is actually reflecting the in and out going fields of a summed dipolar activity located somewhere in between.*
 
@@ -401,7 +401,7 @@ Subsequently, we will compute the difference between high and low alpha conditio
 	title('')
 	legend('high alpha','low alpha','Location','northoutside','Orientation','horizontal');
 
-![image](/media/tutorial/networkanalysis/high_low_sens_alpha.png@400)
+![image](/static/img/tutorial/networkanalysis/high_low_sens_alpha.png@400)
 
 *Figure 6: Planar (left) and axial (middle) topography of the 10 Hz difference between the high and the low alpha conditions. Right- power spectra split by condition high (blue) and low alpha (red).*
 
@@ -505,7 +505,7 @@ Now we plot the result together with the scalp topography again.
 	cfg.xlim   = [9.777650 11.309908];
 	subplot(2,2,2); ft_topoplotER(cfg, diff_planar);
 
-![image](/media/tutorial/networkanalysis/high_low_senssource_alpha.png?direct&400)
+![image](/static/img/tutorial/networkanalysis/high_low_senssource_alpha.png?direct&400)
 
 *Figure 7: Source reconstructed activity illustrating the relative change in alpha power increase between the high and low alpha conditions.*
 
@@ -576,7 +576,7 @@ Next, we will use **[ft_networkanalysis](/reference/ft_networkanalysis)** with t
 	cfg.funparameter  = 'degrees';
 	ft_sourceplot(cfg, network_int);
 
-![image](/media/tutorial/networkanalysis/node_degree.png@400)
+![image](/static/img/tutorial/networkanalysis/node_degree.png@400)
 
 *Figure 8: Color coded node degree distribution based on imaginary part of coherency. Cold colors indicated little or disconnected nodes, warm colors indicate highly connected/integrated nodes.*
 
@@ -603,9 +603,9 @@ You can download the volume model ***mesh.nv*** of the standard mni brain [here]
 	BrainNet_MapCfg('/yourpath/mesh.nv','/yourpath/node.node','/yourpath/edge.edge');
 	view([0 -90 0])
 
-![image](/media/tutorial/networkanalysis/topview_brainnet.png@400)
+![image](/static/img/tutorial/networkanalysis/topview_brainnet.png@400)
 
-![image](/media/tutorial/networkanalysis/backview_brainnet.png@400)
+![image](/static/img/tutorial/networkanalysis/backview_brainnet.png@400)
 
 Of course one can use also phase locking value or some other metric for quantification of communication between the nodes. Here we will compute the same lines of code again where the only difference is in the specification of the connectivity method. In order to plot the result the above lines of code can be used again.
 
@@ -629,7 +629,7 @@ Of course one can use also phase locking value or some other metric for quantifi
 	cfg.threshold = .5;
 	deg = ft_networkanalysis(cfg,source_conn_full);
 
-![image](/media/tutorial/networkanalysis/node_degree_plv.png@400)
+![image](/static/img/tutorial/networkanalysis/node_degree_plv.png@400)
 
 ##### Exercise 1
 

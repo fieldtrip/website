@@ -84,7 +84,7 @@ Now you can plot the head position relative to the first value, and compute the 
 	maxposchange = max(abs(cc_rel(:,1:3)*1000)) % in mm
 	
 
-![image](/media/example/headmovementexample.png)
+![image](/static/img/example/headmovementexample.png)
 
 The figure illustrates head position changes during 1-hour MEG session (data used for this plot are different from those used in the example above). You may decide to exclude a subject from the subsequent analysis if the head movement exceeds a certain threshold. 
 
@@ -164,7 +164,7 @@ MEG experiments typically involve repeated trials of an evoked or induced brain 
 
 Example statistical results in a single-subject (baseline vs. task activity contrasts). With ft_regressconfound, sensor-level statistical sensitivity was increased after tactile stimulation (40-50 ms; note the more extreme t-scores in the upper panel). In a similar vein, source-level statistical sensitivity was increased after visual stimulation (0-500 ms; 65Hz; lower panel).
 
-![image](/media/example/regr_ftwiki.png@&300) Figure taken from {{:faq:stolkneuroimage2013.pdf|Stolk et al., NeuroImage 2013}}.
+![image](/static/img/example/regr_ftwiki.png@&300) Figure taken from {{:faq:stolkneuroimage2013.pdf|Stolk et al., NeuroImage 2013}}.
 ## Practical issues
 
 Some features of this GLM-based compensation method need emphasizing. These points are described in more detail in the 'Testing the offline GLM-based head movement compensation' section of {{:faq:stolkneuroimage2013.pdf|Stolk et al., NeuroImage 2013}}.

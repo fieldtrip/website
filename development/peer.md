@@ -276,5 +276,5 @@ erasing all users files on the computer hosting the slave. To solve this problem
 
 The schematic figure below shows how Matlab and the peer server (running as a mex file) work together in writing and receiving data from other peers.
 
-![image](/media/development/peer/peer1.png)
+![image](/static/img/development/peer/peer1.png)
 

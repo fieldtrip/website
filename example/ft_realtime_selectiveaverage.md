@@ -8,7 +8,7 @@ tags: [example, realtime]
 
 ## Flowchart
 
-![image](/media/example/realtime/realtime_selectiveaverage.png@400)
+![image](/static/img/example/realtime/realtime_selectiveaverage.png@400)
 
 ## Matlab code
 

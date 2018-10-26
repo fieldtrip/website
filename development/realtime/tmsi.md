@@ -9,8 +9,8 @@ tags: [realtime, tmsi]
 We provide two tools for grabbing EEG data from [TMSi](http://www.tmsi.com) amplifiers. The code for both can be found
 in the directory ''realtime/acquisition/tmsi''. As far as I know, the FieldTrip code can be used both with the standard REFA and the mobile PORTI systems.
 
-![image](/media/development/realtime/refa.jpg@200)
-![image](/media/development/realtime/porti.jpg@200)
+![image](/static/img/development/realtime/refa.jpg@200)
+![image](/static/img/development/realtime/porti.jpg@200)
 
 Note that the PORTI amplifier is in real life much smaller than it seems to be on the photo above (~20% of the size of the REFA). The type of connectors that you can see on both photos are identical.
 

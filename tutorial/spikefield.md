@@ -22,7 +22,7 @@ A popular choice of signals to study rhythmic neuronal synchronization is the co
 
 In this tutorial we will use the approach to compute a single phase per individual spike (see Figure below) and a consistency measure over the set of spike phases, which is the conventional technique in the hippocampus field (e.g. see O'Keefe et al., 1993; Bragin et al., 1995, Csicsvari et al., 1999) and which was recently applied by us to visual cortex data (Vinck et al., 2010, J Neurosci, Womelsdorf et al., 2012, PNAS). This approach has two advantages. Firstly, by centering a segment of the LFP around each individual spike, we ensure that the phase of the LFP is determined locally, as opposed to directly computing (spike-field) coherence between spike and LFP signals, where spikes fall at arbitrary positions relative to the LFP segments. Empirical data shows that this is an important consideration, because spike-triggered LFP averages show only few side lobes (Fries et al., 2001). Secondly, we can directly compare the statistics of the spike-triggered LFP spectrum to the spike-triggered average, i.e. we can compare the frequency-domain representation of the LFP around the spikes with its time-domain representation, which may offer complementary information. Thirdly, by measuring a single phase per individual spike we can explicitly control the bias as a function of the number of spikes (Vinck et al., 2010, 2011), which is a serious problem for spike-field coherence measures (Zeitler et al., 2006, Lepage et al., 2011, Vinck et al., 2011, J Comp Neurosci). For further details on the comparison between these different measures and their advantages/disadvantages, we refer to Vinck et al. (2011).
 
-![image](/media/tutorial/tutorialfieldtrip2.png)
+![image](/static/img/tutorial/tutorialfieldtrip2.png)
 
 ## Procedure
 
@@ -34,7 +34,7 @@ In this tutorial we will use the approach to compute a single phase per individu
 *  Compute the phase and power of the LFP at each time of spiking using **[ft_spiketriggeredspectrum](/reference/ft_spiketriggeredspectrum)**
 *  Compute statistics on these instantaneous spike-LFP phases using **[ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)**
 
-![image](/media/tutorial/flowchartspikelfp02.png)
+![image](/static/img/tutorial/flowchartspikelfp02.png)
 
 ### Preprocessing
 
@@ -141,7 +141,7 @@ The relationship between (unrounded) LFP sample and a timestamp ts (of a spike) 
 
 The factor +1 arises because the first LFP sample is numbered 1, not 0.
 
-![image](/media/tutorial/tssamp.png)
+![image](/static/img/tutorial/tssamp.png)
 
 We now have two options to further process the raw spike data such that the resulting spike structure has the same trial definition as the data_lfp structure.
 First of all, we can directly create trials for the spike structure, by
@@ -235,7 +235,7 @@ We illustrate this method by plotting the dat
 	xlim([0.9 1])
 	xlabel('time (s)')
 
-![image](/media/tutorial/spiketriggeredinterpolation.png)
+![image](/static/img/tutorial/spiketriggeredinterpolation.png)
 
 ### Computing the spike triggered average LFP
 
@@ -255,7 +255,7 @@ The first step in the analysis of spike-LFP phase-coupling should be the computa
 	xlabel('time (s)')
 	xlim(cfg.timwin)
 
-![image](/media/tutorial/sta_post.png)
+![image](/static/img/tutorial/sta_post.png)
 
 The STA reveals several oscillatory cycles at gamma frequency around the spike. For channel 'AD02', we see a characteristic sharp peak around t = 0, caused by the occurrence of the spike itself.
 
@@ -274,7 +274,7 @@ We also show the STA for the pre-stimulus perio
 	xlabel('time (s)')
 	xlim(cfg.timwin)
 
-![image](/media/tutorial/sta_pre.png)
+![image](/static/img/tutorial/sta_pre.png)
 
 The pre-stimulus STA reveals locking of spikes to alpha LFP cycles.
 
@@ -393,7 +393,7 @@ This code computes the PPC spectrum as a function of frequencies, giving an outp
 
 For example, the PPC for unit 'sig002a_wf' looks like
 
-![image](/media/tutorial/ppcavgsig002a_wf.png)
+![image](/static/img/tutorial/ppcavgsig002a_wf.png)
 
 It is often desired to study the evolution of the spike-LFP phase consistency over time. To do so, we run
 
@@ -424,11 +424,11 @@ It is often desired to study the evolution of the spike-LFP phase consistency ov
 
 For example, the PPC TFR for unit 'sig002a_wf' reveals a specific increase in gamma-band synchronization after stimulus onset, increasing over time, as reported in Fries et al. (2008
 
-![image](/media/tutorial/ppctfr_example_sig002a_wf.png@300)
+![image](/static/img/tutorial/ppctfr_example_sig002a_wf.png@300)
 
 Running the same script but now replacing param = 'ppc0' with 'param = plv' gives the following figur
 
-![image](/media/tutorial/plvtfr_example_sig002a_wf.png@300)
+![image](/static/img/tutorial/plvtfr_example_sig002a_wf.png@300)
 
 Note that the 'plv' measure is (positively) biased by the number of spikes, and hence gives a less sharp contrast as pre-stimulus PLV values are biased upwards.
 

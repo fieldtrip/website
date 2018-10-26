@@ -52,7 +52,7 @@ We will perform the following steps to do a statistical test in FieldTrip
 
 *  We can plot a schematic head with the channels where the effect is significant with the **[ft_topoplotER](/reference/ft_topoploter)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
 
-![image](/media/development/project/tutorial_stat/ft_stat_tutorial2.png)
+![image](/static/img/development/project/tutorial_stat/ft_stat_tutorial2.png)
 
 *Figure 1. Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.*
 
@@ -82,9 +82,9 @@ The event-related averages for the fully incongruent and the fully congruent sen
 	cfg.channel = 'MLT12';
 	figure; ft_singleplotER(cfg,GA_FC, GA_FIC)
 
-![image](/media/tutorial/eventrelatedstatistics/multiplot_ga_fc_fic.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/multiplot_ga_fc_fic.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/singleplotMLT12_ga_fc_fic.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/singleplotMLT12_ga_fc_fic.png@400)
 
 To get an idea of the data, plot the ERF of channel MLT12 for all subject
 
@@ -102,7 +102,7 @@ To get an idea of the data, plot the ERF of channel MLT12 for all subject
 	text(0.5,0.5,'FC','color','b') ;text(0.5,0.3,'FIC','color','r')
 	axis off
 
-![image](/media/tutorial/eventrelatedstatistics/plotmlt12_allsubj_fc_fic.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/plotmlt12_allsubj_fc_fic.png@400)
 
 Between 300ms and 700ms there seems to be a difference between the FC and the FIC condition in the grand average in channel MLT12 (channel 52).
 
@@ -121,7 +121,7 @@ Between 300ms and 700ms there seems to be a difference between the FC and the FI
 	legend({'subj1', 'subj2', 'subj3', 'subj4', 'subj5', 'subj6', ...
 	        'subj7', 'subj8', 'subj9', 'subj10'}, 'location','EastOutside');
 
-![image](/media/tutorial/eventrelatedstatistics/mlt12_300to700ms_allsubj_fc_fic.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/mlt12_300to700ms_allsubj_fc_fic.png@400)
 
 #### T-test with Matlab function
 
@@ -183,7 +183,7 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
 	figure; ft_topoplotER(cfg, GA_FC)
 	title('significant without multiple comparison correction')
 
-![image](/media/tutorial/eventrelatedstatistics/depttestmatlab_nomcc.png@200)
+![image](/static/img/tutorial/eventrelatedstatistics/depttestmatlab_nomcc.png@200)
 
 But since you're now performing 151 individual tests, you are not controlling the false alarm rate any more. Under the null-hypothesis and with an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly conclude that the null-hypothesis should be rejected. That false alarm rate applies to each test that you perform, so the chance of making a false alarm if you do 151 subsequent tests is much larger than the desired 5%. This is the multiple comparison problem. 
 
@@ -259,7 +259,7 @@ This is implemented in FieldTrip in the function statistics_montecarlo which is 
 	figure; ft_topoplotER(cfg, GA_FC)
 	title('Nonparametric: significant without multiple comparison correction')
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_nomcc.png@200)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_nomcc.png@200)
 
  
 
@@ -302,7 +302,7 @@ With this method for multiple comparisons the following sensors show a significa
 	figure; ft_topoplotER(cfg, GA_FC)
 	title('Nonparametric: significant with cluster multiple comparison correction')
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster2.png@200)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster2.png@200)
 
  
 
@@ -342,13 +342,13 @@ So far we predefined a time window over which the effect was averaged, and teste
 	cfg.zlim = [-5 5];
 	ft_clusterplot(cfg,stat);
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig1.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig1.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig2.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig2.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig3.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig3.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
 
 ## Summary and suggested further reading
 

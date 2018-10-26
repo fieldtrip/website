@@ -51,7 +51,7 @@ We will perform the following steps to do a statistical test in FieldTrip:
 
 * We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoploter)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
 
-![image](/media/development/project/tutorial_stat/ft_stat_tutorial2.png)
+![image](/static/img/development/project/tutorial_stat/ft_stat_tutorial2.png)
 
 *Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.*
 
@@ -101,9 +101,9 @@ Now plot all channels with **[ft_multiplotER](/reference/ft_multiplotER)**, and 
 	cfg.channel = 'MLT12';
 	figure; ft_singleplotER(cfg,GA_FC, GA_FIC)
 
-![image](/media/tutorial/eventrelatedstatistics/multiplot_ga_fc_fic.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/multiplot_ga_fc_fic.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/singleplotMLT12_ga_fc_fic.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/singleplotMLT12_ga_fc_fic.png@400)
 
 From the grand average plot we can zoom in on our comparison of interest and only plot the ERF of channel MLT12 for all subjects, using the individual subject averages data.
 
@@ -127,7 +127,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 	text(0.5,0.5,'FC','color','b') ;text(0.5,0.3,'FIC','color','r')
 	axis off
 
-![image](/media/tutorial/eventrelatedstatistics/erfstats-allsubj-indiv.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/erfstats-allsubj-indiv.png@400)
 
 From the individual plots and grand average plots above, it seems that between 300ms and 700ms there is a difference between the two conditions in channel MLT12 (channel 52).
 
@@ -152,7 +152,7 @@ We can also plot the differences between conditions, for each subject, in a diff
 	legend({'subj1', 'subj2', 'subj3', 'subj4', 'subj5', 'subj6', ...
 	        'subj7', 'subj8', 'subj9', 'subj10'}, 'location','EastOutside');
 
-![image](/media/tutorial/eventrelatedstatistics/mlt12_300to700ms_allsubj_fc_fic.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/mlt12_300to700ms_allsubj_fc_fic.png@400)
 
 #### T-test with MATLAB function
 
@@ -224,7 +224,7 @@ In the previous paragraph we picked a channel and time window by hand after eyeb
 	figure; ft_topoplotER(cfg, GA_FC)
 	title('significant without multiple comparison correction')
 
-![image](/media/tutorial/eventrelatedstatistics/depttestmatlab_nomcc.png@200)
+![image](/static/img/tutorial/eventrelatedstatistics/depttestmatlab_nomcc.png@200)
 
 However, since now you are performing 151 individual tests, you can no longer control  the false alarm rate. Given the null-hypothesis and an alpha of 5%, you have a 5% chance of making a false alarm and incorrectly concluding that the null-hypothesis should be rejected. As this false alarm rate applies to each test that you perform, the chance of making a false alarm for 151 tests in parallel is much larger than the desired 5%. This is the multiple comparison problem.
 
@@ -309,7 +309,7 @@ This is implemented in FieldTrip in the function statistics_montecarlo which is 
 
 With the method (cfg.method) of statistical test set  as a permutation-based test (montecarlo) the following sensors show a significant effect (p<0.05) between 0.3 and 0.7 s.
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_nomcc.png@200)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_nomcc.png@200)
 
 Compare this plot with the earlier one using parametric statistics with the uncorrected p-values.
 
@@ -363,7 +363,7 @@ This method requires you to define neighbouring sensors. FieldTrip has a functio
 
 With the cluster-based permutation method for multiple comparisons the following sensors show a significant effect (p<0.05) between 0.3 and 0.5 s.
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster2.png@200)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster2.png@200)
 
 So far we predefined a time window over which the effect was averaged, and tested the difference of that between conditions. You can also chose to not average over the predefine time window, and instead cluster simultaneously over neighboring channels and neighboring time points within your time window of interest . From the example below, we now find a channel-time cluster is found from 0.33 s until 0.52 s in which p < 0.05.
 
@@ -402,13 +402,13 @@ So far we predefined a time window over which the effect was averaged, and teste
 	cfg.zlim = [-5 5];
 	ft_clusterplot(cfg,stat);
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig1.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig1.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig2.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig2.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig3.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig3.png@400)
 
-![image](/media/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
+![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
 
 `<note>`
 If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).

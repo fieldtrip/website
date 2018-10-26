@@ -27,7 +27,7 @@ The Freesurfer cortical sheets can be downloaded from the [SurfRend toolbox webs
 FieldTrip versions 9031-9400 (Dec 13, 2013 - April 12, 2014) contain the surfaces in an incorrect coordinate system. The consequence of this is that the on-the-fly interpolation and rendering of source reconstructed data onto the cortical sheets (using ft_sourceplot) was incorrect. This has been fixed in revision 9401. The figures below show an overlay of the current (r.9401) cortical sheet surface_white_both with the single_subj_T1_1mm.nii. The incorrect coordinate system was due to not taking into account that the original surfaces were expressed in the Freesurfer coordinate system. The correction that had to be taken into account was the xfm matrix in spm_CanonicalBrain from the spm-surfrend toolbox.
 </div>
 
-![image](/media/template/surface_white_both.png@600)
+![image](/static/img/template/surface_white_both.png@600)
 
 ## Volumetric anatomical image at 1mm isotropic resolution
 

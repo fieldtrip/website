@@ -10,4 +10,4 @@ This is explained in detail on [this page](http://people.cas.sc.edu/rorden/anato
 
 See also the figure below, which was taken from the [MRC CBSU Wiki](http://imaging.mrc-cbu.cam.ac.uk/imaging/NeuroanatomyTutorial).
 
-![image](/media/faq/acpcline.png@)
+![image](/static/img/faq/acpcline.png@)

@@ -191,7 +191,7 @@ We can just plot the trigger channe
 
 This then looks a bit like this figure.
 
-![image](/media/example/sent_and_received_triggers_head_localization_off.jpg)
+![image](/static/img/example/sent_and_received_triggers_head_localization_off.jpg)
 
 i.e. a train of couplets comprising a 4 followed by a 16. We can now extract the incoming and detected events;
 
@@ -221,11 +221,11 @@ i.e. a train of couplets comprising a 4 followed by a 16. We can now extract the
 
 The data I obtained (at a sampling rate of 1200) after sending about 3000 triggers looks like this: 
 
-![image](/media/example/picture_3.png)
+![image](/static/img/example/picture_3.png)
 
 This is rather consistent with a uniform distribution between 100-250ms
 
-![image](/media/example/picture_2.png)
+![image](/static/img/example/picture_2.png)
 
 ## Timing of a closed system using the FT buffer to do the online streaming
 
@@ -478,13 +478,13 @@ Below follow the results of the testing in the DCCN for continuous head localiza
 NOTE: this is a configuration previously considered as buggy, which is now working
 # Figure 1
 
-![image](/media/example/delay_hist._1200hz.jpg)
+![image](/static/img/example/delay_hist._1200hz.jpg)
 
 We now also plot the sample number of the echo against the sample number of the trigger that preceded i
 
 # Figure 1
 
-![image](/media/example/trigger_smp_vs_echo_smp.jpg)
+![image](/static/img/example/trigger_smp_vs_echo_smp.jpg)
 
 This shows no samples missing and no accumulative delays
 
@@ -492,7 +492,7 @@ This shows no samples missing and no accumulative delays
 
 # Figure 
 
-![image](/media/example/delay_hist._1200hz_hl_off.jpg)
+![image](/static/img/example/delay_hist._1200hz_hl_off.jpg)
 
 We note that the delays are smaller when the continuous HL is off. This is probably to do with an additinal data granularity related to the time required to fit a dipole while doing continuous localization- more details on this will follow soon...
 
@@ -504,7 +504,7 @@ Here we increase the sampel rate to Fs=4000Hz
 
 # Figure 
 
-![image](/media/example/delay_hist_hl_on_fs_4khz.jpg)
+![image](/static/img/example/delay_hist_hl_on_fs_4khz.jpg)
 
 Comparing Figure 3 to Figure 1a, we see that the delays have decreased.
 
@@ -514,13 +514,13 @@ We now use the 2nd option for detecting events: using ft_read_event. Note that t
 The events were detected with ft_read_event.
 # Figure 
 
-![image](/media/example/trigger_smp_vs_echo_smp_4khz_read_ev.jpg)
+![image](/static/img/example/trigger_smp_vs_echo_smp_4khz_read_ev.jpg)
 
 This shows no events missing and no accumulative delays.The delay distribution is in Figure 5.
 
 # Figure 
 
-![image](/media/example/delay_hist_hl_on_fs_4khz_detection_read_ev.jpg)
+![image](/static/img/example/delay_hist_hl_on_fs_4khz_detection_read_ev.jpg)
 
 Although, here we only have 200 delays (compared to 2000 before), we see  that the detection of triggers with read_event is not faster than with the online flank detection, although we might be able to squeeze out a bit more performance (reduce latency) once we use a clever scheme for only reading *new* events. This also depends on whether **acq2ftx** first writes the events or the samples to the buffer.
 
@@ -644,5 +644,5 @@ The code below will give you a sense for the distribution of time delays associa
 
 A typical distribution of access times is belo
 
-![image](/media/example/delay_read_header_acq_buffer.jpg)
+![image](/static/img/example/delay_read_header_acq_buffer.jpg)
 

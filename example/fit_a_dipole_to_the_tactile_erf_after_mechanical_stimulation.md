@@ -143,11 +143,11 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
 
 ## Figures
 
-![image](/media/example/time.jpg)
+![image](/static/img/example/time.jpg)
 
-![image](/media/example/topos.jpg@600)
+![image](/static/img/example/topos.jpg@600)
 
-![image](/media/example/fig1.jpg)
+![image](/static/img/example/fig1.jpg)
 
-![image](/media/example/fig2.jpg)
+![image](/static/img/example/fig2.jpg)
 

@@ -48,17 +48,17 @@ Here the original field distributions in both conditions are dominated by the st
 
 In this experiment, MEG was recorded during stimulation of the affected/painfull hand prior to, and after application of a pain blocker. These correspond to the conditions A and B as explained above. First the MEG topography of the M24 event-related field is given for both conditions seperately.
 
-![image](/media/example/difference_erf_pain.png)
+![image](/static/img/example/difference_erf_pain.png)
 
 *Figure 1; A16/SV-med-R (i.e. pain)*
 
-![image](/media/example/difference_erf_nopain.png)
+![image](/static/img/example/difference_erf_nopain.png)
 
 *Figure 2; A16/SV-med-R-block (i.e. no pain)*
 
 Looking at these two topographies, a single dipole seems sufficient to explain the field distribution. It is also not clear that the dipole would be at a different location, although there is a small change in the global field strength. A dipole that corresponds with the dipolar field is schematically drawn in the two topographies as a yellow arrow. Subsequently we can look at the difference map (see below). 
 
-![image](/media/example/difference_erf_result.png@300)
+![image](/static/img/example/difference_erf_result.png@300)
 
 *Figure 3; difference =  block - pain*
 

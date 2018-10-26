@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Use as
+#    edit_inline.sh FILE OLD NEW
 
 FILE="$1"
 export FIND="$2"

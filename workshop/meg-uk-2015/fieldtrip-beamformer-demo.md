@@ -49,7 +49,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot3(mri_fids(3,1), mri_fids(3,2), mri_fids(3,3), 'm*');
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.11.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.11.png)
 
 	
 	%% validate the positions of the fiducials that were provided by Rik
@@ -67,9 +67,9 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, mri_orig);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.20.png@180)
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.26.png@180)
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.33.png@180)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.20.png@180)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.26.png@180)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.33.png@180)
 
 	
 	%%
@@ -94,7 +94,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_headshape(headshape);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.38.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.38.png)
 
 	
 	
@@ -137,7 +137,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_vol(ft_convert_units(vol, 'mm'));
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.42.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.42.png)
 
 	
 	figure
@@ -147,7 +147,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_vol(ft_convert_units(vol, 'mm'));
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.46.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.46.png)
 
 	
 	figure
@@ -156,7 +156,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	alpha 0.5
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.49.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.49.png)
 
 ## Part 2 - reconstruct beta-band power
 
@@ -225,7 +225,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_multiplotTFR(cfg, wavelet)
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.11.55.png@630)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.11.55.png@630)
 
 	
 	%%
@@ -285,7 +285,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, sourceR);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.30.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.30.png)
 
 	
 	
@@ -300,7 +300,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, sourceI);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.53.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.53.png)
 
 ## Part 3 - reconstruct single-trial cortical responses
 
@@ -349,7 +349,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(timelock2.time, timelock2.avg)
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.11.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.11.png)
 
 	
 	cfg = [];
@@ -357,7 +357,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, timelock2);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.13.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.13.png)
 
 	
 	%%
@@ -380,7 +380,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(source.time, source.avg.mom{1})
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.16.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.16.png)
 
 	
 	%% construct single-trial virtual channel data
@@ -412,7 +412,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(virtualchannel_avg.time, virtualchannel_avg.avg);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.19.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.19.png)
 
 	
 	figure
@@ -420,14 +420,14 @@ Please use the [general MATLAB instructions](/general) to get started.
 	legend({'1-Famous', '2-Unfamiliar', '3-Scrambled'})
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.26.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.26.png)
 
 	
 	figure
 	imagesc(squeeze(virtualchannel_avg.trial))
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.28.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.28.png)
 
 	
 	%% investigate the virtual channel spectrally
@@ -446,4 +446,4 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_singleplotTFR(cfg, virtualchannel_wavelet);
 	
 
-![image](/media/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.32.png)
+![image](/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.32.png)

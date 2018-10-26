@@ -164,7 +164,7 @@ We will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the d
 	cfg.method = 'summary'; % use by default summary method
 	data       = ft_rejectvisual(cfg,data);
 
-![image](/media/workshop/baci2017/artifactrejection.png@600)
+![image](/static/img/workshop/baci2017/artifactrejection.png@600)
 
 *figure 1: Example of visual rejection.*
 
@@ -198,7 +198,7 @@ We should rereference the averaged EEG data for later use in the inverse problem
 Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](http://dx.doi.org/10.1016/0013-4694(80)90419-8), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
 
 GMFP can be calculated using the following formula (from [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003))
-![image](/media/development/tms/gmfp.png)
+![image](/static/img/development/tms/gmfp.png)
 
 where t is time, V is the voltage at channel i and K is the number of channels.
 
@@ -226,7 +226,7 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft
 	h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 	
 
-![image](/media/workshop/baci2017/baci_sep_singleploter.png@600)
+![image](/static/img/workshop/baci2017/baci_sep_singleploter.png@600)
 
 *figure 2: Representation of single trial (blue) and the global mean field power (red).*
 
@@ -272,7 +272,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sep_multiplotER.png
 
-![image](/media/workshop/baci2017/baci_sep_multiploter.png@600)
+![image](/static/img/workshop/baci2017/baci_sep_multiploter.png@600)
 
 *figure 3: Use of ft_multiplotER for representation of the single trial according to the EEG cap.*
 
@@ -293,7 +293,7 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 	print -dpng baci_sep_topo.png
 	
 
-![image](/media/workshop/baci2017/baci_sep_topo.png@400)
+![image](/static/img/workshop/baci2017/baci_sep_topo.png@400)
 
 *figure 4: Representation of the P20/N20 component using the function, ft_topoplotER.*
 ## Summary and suggested further reading

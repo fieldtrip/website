@@ -34,11 +34,11 @@ At the moment the only way of distributing the workload over multiple nodes requ
 
 To distribute your processes and to speed up your analyses, we provide two examples. The first example script will show you how to use basic FieldTrip functions for the distribution.
 
-![image](/media/tutorial/distributedcomputing/peertutorial_figure_peercellfun.png@500)
+![image](/static/img/tutorial/distributedcomputing/peertutorial_figure_peercellfun.png@500)
 
 Using the basic FieldTrip functions in a memory efficient manner requires that you save the intermediate data of each step to disk, and that you load it upon the next (parallel) step in the analysis. If you prefer not to store all intermediate results, or if you want to have more control over other aspects of the parallel execution, you can provide your own functions that are executed in parallel. This is demonstrated in the second example script.
 
-![image](/media/tutorial/distributedcomputing/peertutorial_figure_myanalysis.png@500)
+![image](/static/img/tutorial/distributedcomputing/peertutorial_figure_myanalysis.png@500)
 
 The distributed operations of FieldTrip functions in this example require the original MEG datasets for the four subjects, which are available from
 
@@ -133,7 +133,7 @@ This example script demonstrates how to run basic FieldTrip functions in paralle
 	cfg.channel = {'MLC33', 'MLC43', 'MLP11', 'MLP12', 'MLP13', 'MLP33', 'MLP34', 'MLT14', 'MLT15', 'MLT25'}
 	ft_singleplotER(cfg, avgFC, avgFIC, avgIC);
 
-![image](/media/example/singleplot_fig1.png@400)
+![image](/static/img/example/singleplot_fig1.png@400)
 
 In the code above all data is processed by the distributed computers and subsequently returned to the workspace of your desktop computer. The data can take quite a lot of RAM, which you can check like this.
 

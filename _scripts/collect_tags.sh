@@ -2,6 +2,10 @@
 
 if [[ ! -e _config.yml ]] ; then echo ERROR this should be executed in the toplevel directory ;  exit 1 ; fi
 
+# these will be recreated
+rm       tag/*.md
+rm _data/tag/*.yml
+
 TAGFILE=`mktemp`
 
 # this constructs a list of all tags

@@ -10,7 +10,7 @@ The best example for integrating the FieldTrip buffer in your own application is
 
 If you want to implement the buffer in your own application, you should consider whether your application should maintain the buffer itself, or whether your application would be writing to a buffer that is maintained by another application.
 
-![image](/media/development/realtime/screen_shot_2018-03-28_at_14.14.39.png@600)
+![image](/static/img/development/realtime/screen_shot_2018-03-28_at_14.14.39.png@600)
 
 The best way to get started with incorporating the FieldTrip buffer in your own software project, is by looking at the example applications in the buffer/test directory. It contains a number of examples
 

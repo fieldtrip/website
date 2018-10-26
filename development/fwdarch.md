@@ -39,7 +39,7 @@ According to the different anatomy acquisition techniques it is possible to dist
 
 All the routines which create a forward model need a description of the volume conductor model as input. This model is represented in a vol structure which contains a set of fields, among which vol.method (e.g. vol.method = 'dipoli'). All other fields are specific for the various methods and are generated in a pipeline which can be summarized in the following pictur
 
-![image](/media/development/wikie_scheme2.jpg@&600))
+![image](/static/img/development/wikie_scheme2.jpg@&600))
 
 The leftmost box indicates a set of functions (Matlab/external toolboxes, FieldTrip) that deal with anatomical volumes (a 3D matrix filled with intensity values - a set of voxels). 
 This step manages the volumetric information (MRI/CT scans) and transforms the anatomy into a processed anatomy ('ana2ana' functions), transforms the anatomy into a binary segmentation ('ana2seg' functions) or manipulates segmented images ('seg2seg' functions, i.e. morphology operators).
@@ -616,7 +616,7 @@ Some of the most common operators are **imfill**, **imdilate**, **bwlabeln**, et
 In particular **imdilate** can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull).
 An example is reported belo
 
-![image](/media/development/wiki12.png)
+![image](/static/img/development/wiki12.png)
 
 The code used to generate the figure is:
 
@@ -625,7 +625,7 @@ The code used to generate the figure is:
 
 An example of the **imfill** function is given below. This is the case, for example, in which we want to fill the volume so that it constitutes a single entity. It results in being useful for [triangulation](/#Triangulation methods), as explained in one of the techniques to obtain the outer-most surface (i.e. the skin).
 
-![image](/media/development/wiki34.png)
+![image](/static/img/development/wiki34.png)
 
 The code used to generate the figure is:
 

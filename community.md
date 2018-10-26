@@ -1,6 +1,7 @@
 ---
 title: FieldTrip Community
 layout: default
+tags: [obsolete]
 ---
 
 # FieldTrip Community
@@ -11,6 +12,6 @@ We also have a [Facebook page](https://www.facebook.com/fieldtriptoolbox/), whic
 
 {% include facebook.html %}
 
-# The larger community
+## The larger community
 
 FieldTrip is not the only analysis toolbox or software package out there. We collaborate with many open source research groups and with various companies, exchanging ideas and source code.

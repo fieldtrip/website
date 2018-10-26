@@ -8,11 +8,11 @@ tags: [faq, fiducial, mri, ctf, source, coordinate]
 
 The correct definition (taken from http://www.medilexicon.com) of the pre-auriciular point is *"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"*. The [zygomatic arch](http://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
 
-![image](/media/faq/zygomatic_arch.png@200)
+![image](/static/img/faq/zygomatic_arch.png@200)
 
 and the [tragus](http://en.wikipedia.org/wiki/Tragus_(ear)) is a small backward-pointing eminence situated in front of the ear canal.
 
-![image](/media/faq/tragus.png@200)
+![image](/static/img/faq/tragus.png@200)
 
 The approximate position of the pre-auriciular point is indicated in the figure above by the green point. It can be palpated (i.e. felt with the finger tip) the best if the subject moves his jaw by opening and closing his or her mouth.
 
@@ -26,9 +26,9 @@ Because of the difficulty of localizing the LPA and RPA points in both EEG/MEG a
 
 At the Donders Centre in Nijmegen we use ear molds with a hole in them (see below) to attach the markers: In the MEG scanner we insert a small tube into the hole (the tube is also used for auditory stimulation) and attach the MEG localizer coil to the tube. In the MRI scanner we use the same ear molds, but rather insert a custom-made marker with a small drop of vitamine E into the hole. The position thereby obtained with the MEG localizer coils is as precisely as possible reproduced in the MRI, given the movement that is allowed by the ear molds. We have various sizes of ear molds, both at the MEG and MRI scanner, and subjects should use the same size in both scanners.
 
-![image](/media/faq/ear_molds_1.jpg@200)
+![image](/static/img/faq/ear_molds_1.jpg@200)
 
-![image](/media/faq/ear_molds_2.jpg@200)
+![image](/static/img/faq/ear_molds_2.jpg@200)
 
 When using different fiducial locations in the MEG and the MRI, the difference in the coordinates (which can be 5-20 mm) has to be taken into account in the coregistration procedure, otherwise the source localization would suffer from the systematic coregistration error. Luckily, most research labs acquire the EEG/MEG and the MRI using the same fiducial locations.
 

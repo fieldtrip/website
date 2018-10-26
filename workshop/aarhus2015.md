@@ -13,7 +13,7 @@ http://interactingminds.au.dk/events/single-events/artikel/field-trip-workshop/
 ### Where
 
 Interacting Minds Centre, Aarhus University, Nobelparken, building 1483, 3rd floor, 8000 Aarhus C
-![image](/media/workshop/aulogo.jpg@300)
+![image](/static/img/workshop/aulogo.jpg@300)
 
 ### When
 

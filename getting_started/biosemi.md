@@ -34,7 +34,7 @@ Please note that the use of these layout files requires that the channel labelin
     cfg.layout = 'biosemi160.lay'
     ft_layoutplot(cfg)
 
-![image](/media/getting_started/biosemi160.png@400)
+![image](/static/img/getting_started/biosemi160.png@400)
 
 
 ## Referencing Biosemi EEG data
@@ -128,4 +128,4 @@ The "gain" of a specific channel can be calculated by: (Physical max - Physical 
 The last 10 fields are defined for each fields separately. Each channel can be different.
 </div>
 
-![image](/media/getting_started/file_format_bdf.png)
+![image](/static/img/getting_started/file_format_bdf.png)

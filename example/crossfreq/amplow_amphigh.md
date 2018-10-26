@@ -81,7 +81,7 @@ layout: default
 	figure; ft_singleplotER([],fft_data);
 	print -dpng amplow_amphigh_fig2.png
 
-![image](/media/example/crossfreq/amplow_amphigh_fig1.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig2b.png@400)
+![image](/static/img/example/crossfreq/amplow_amphigh_fig1.png@400) ![image](/static/img/example/crossfreq/amplow_amphigh_fig2b.png@400)
 
 ## Analysis Methods
 
@@ -113,7 +113,7 @@ layout: default
 	print -dpng amplow_amphigh_fig4.png
 	
 
-![image](/media/example/crossfreq/amplow_amphigh_fig3.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig4.png@400)
+![image](/static/img/example/crossfreq/amplow_amphigh_fig3.png@400) ![image](/static/img/example/crossfreq/amplow_amphigh_fig4.png@400)
 
 	
 	% calculate covariance with ft_timelockanalysis
@@ -140,7 +140,7 @@ layout: default
 	print -dpng amplow_amphigh_fig6.png
 	
 
-![image](/media/example/crossfreq/amplow_amphigh_fig5b.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig6.png@400)
+![image](/static/img/example/crossfreq/amplow_amphigh_fig5b.png@400) ![image](/static/img/example/crossfreq/amplow_amphigh_fig6.png@400)
 
 ### Coherence between amplitude envelopes (by Hilbert transform) 
 
@@ -162,7 +162,7 @@ layout: default
 	plot(data_bp.time{1}, data_bp.trial{1}); legend(data_bp.label)
 	print -dpng amplow_amphigh_fig7.png
 
-![image](/media/example/crossfreq:amplow_amphigh_fig7.png@400)
+![image](/static/img/example/crossfreq:amplow_amphigh_fig7.png@400)
 
 	
 	cfg = [];
@@ -187,5 +187,5 @@ layout: default
 	xlim([0 10]);
 	print -dpng amplow_amphigh_fig9.png
 
-![image](/media/example/crossfreq/amplow_amphigh_fig8.png@400) ![image](/media/example/crossfreq/amplow_amphigh_fig9.png@400)
+![image](/static/img/example/crossfreq/amplow_amphigh_fig8.png@400) ![image](/static/img/example/crossfreq/amplow_amphigh_fig9.png@400)
 

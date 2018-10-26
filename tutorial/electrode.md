@@ -71,7 +71,7 @@ We visualise the mesh surface
 
 	ft_plot_mesh(head_surface)
 
-![image](/media/tutorial/structure_headsurface.jpg@400)
+![image](/static/img/tutorial/structure_headsurface.jpg@400)
 *Figure 1: Mesh recorded with 3D-scanner*
 
 In the next step we will transform our mesh into the ctf-coordinates. For this we have to specify the nasion (NAS), left preauricular (LPA) and right preauricular (RPA) points.
@@ -82,9 +82,9 @@ In the next step we will transform our mesh into the ctf-coordinates. For this w
 
 With having specified the fiducials we are now able to coregister our head surface to the ctf-coordinates. To easier identify the locations of the fiducials you can also mark the locations on your subject with a coloured pen.
 
-![image](/media/tutorial/structure_nas.png)
-![image](/media/tutorial/structure_left.png)
-![image](/media/tutorial/structure_right.png)
+![image](/static/img/tutorial/structure_nas.png)
+![image](/static/img/tutorial/structure_left.png)
+![image](/static/img/tutorial/structure_right.png)
 *Figures: Location of the fiducials*
 
 	cfg = [];
@@ -100,7 +100,7 @@ Again we visualise the head surface, but we also plot the axes along with it.
 	ft_plot_axes(head_surface)
 	ft_plot_mesh(head_surface)
 
-![image](/media/tutorial/structure_realigned.jpg@1000)
+![image](/static/img/tutorial/structure_realigned.jpg@1000)
 *Figure: Realigned head surface*
 
 ### Identify electrode locations
@@ -113,7 +113,7 @@ To localise the electrode we use the crates that are visible on the surface.
 	cfg.method = 'headshape';
 	elec = ft_electrodeplacement(cfg,head_surface);
 
-![image](/media/tutorial/structure_electrodeplacement.png@500)
+![image](/static/img/tutorial/structure_electrodeplacement.png@500)
 *Figure: Identifying electrode locations*
 
 ### Assign electrode labels
@@ -137,7 +137,7 @@ A final visualisation showing the electrodes on the color surface mesh of the su
 	ft_plot_mesh(head_surface)
 	ft_plot_sens(elec)
 
-![image](/media/tutorial/structure_electrode_head_surface.png@300)
+![image](/static/img/tutorial/structure_electrode_head_surface.png@300)
 
 *Figure: Head surface with localised electrodes*
 

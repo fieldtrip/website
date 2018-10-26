@@ -12,7 +12,7 @@ The Neuralynx electrophysiology system is used at the DCCN for high-density reco
 
 The acquisition setup consists of the Digital Lynx amplifier hardware and the Cheetah acquisition software. The Cheetah software runs on a Windows computer that is connected with the amplifier through a fiber-optic cable.
 
-![image](/media/development/realtime/digital_lynx_16sx-front.png@300)
+![image](/static/img/development/realtime/digital_lynx_16sx-front.png@300)
 ## MATLAB-based interface
 
 The **[ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy)** function implements the interface between the Cheetah software and the [FieldTrip buffer](/development/realtime/buffer). Using the dll files that have been made available by Neuralynx, it reads the data and event streams over the network from the Cheetah system and copies them into the buffer. The **[ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy)** function should be started in a stand-alone MATLAB session because Neuralynx only provides the dlls for Windows. 

@@ -12,11 +12,11 @@ Here is a schematic layout of the easycapM10 and easycapM11 electrode caps.
 
 #### easycapM10 - Equidistant 61-Channel-Arrangement
 
-![image](/media/template/easycapm10.png@200)
+![image](/static/img/template/easycapm10.png@200)
 
 #### easycapM11 - 61-Channel-Arrangement ("10%-System") (used in BrainCap64)
 
-![image](/media/template/easycapm11.png@200)
+![image](/static/img/template/easycapm11.png@200)
 
 We can see that the channel **Cz** from M10 relates to the channel **1** from M11. However for the channel **FT10** there exist non relating channel in the M11. So we can only make a few-to-few mapping with channels that mostly overlap.
 
