@@ -34,7 +34,7 @@ Previous FieldTrip workshops took place at
 *  2016, [Guangzhou, China](/workshop/guangzhou)
 *  2016, [London, UK](/workshop/london)
 *  2016, [Coimbra, Portugal](/workshop/coimbra)
-*  2016, [Kiel, Germany](/workshop/Kiel)
+*  2016, [Kiel, Germany](/workshop/kiel)
 *  2016, [MEG/EEG toolkit](/workshop/toolkit2016) - Nijmegen, NL
 *  2016, [Marseille, France](/workshop/marseille)
 *  2015, [Salzburg, Austria](/workshop/salzburg)
@@ -53,8 +53,8 @@ Previous FieldTrip workshops took place at
 *  2013, [Groesbeek, Netherlands](/workshop/groesbeek2013) - DCCN summerschool on brain networks
 *  2013, [Hamburg, Germany](/workshop/hamburg2013)
 *  2013, [San Sebastian, Spain](/workshop/donostia2013)
-*  2013, [Toronto, Canada](/workshop/Toronto)
-*  2013, [Tuebingen, Germany](/workshop/Tuebingen13)
+*  2013, [Toronto, Canada](/workshop/toronto)
+*  2013, [Tuebingen, Germany](/workshop/tuebingen13)
 *  2013, MEG/EEG toolkit, Nijmegen, NL
 *  2012, [Trento, Italy](/workshop/trento)
 *  2012, [Krakow, Poland](/workshop/krakow)

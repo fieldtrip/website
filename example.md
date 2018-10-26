@@ -27,7 +27,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Spectral analysis
 
-*  [Fourier analysis of oscillatory power and coherence](/tutorial/Fourier)
+*  [Fourier analysis of oscillatory power and coherence](/tutorial/fourier)
 *  [Cross-frequency analysis](/example/cross_frequency_analysis)
 *  [Effects of tapering for power estimates](/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain)
 *  [Simulate an oscillatory signal with phase resetting](/example/phase_reset)
@@ -46,20 +46,20 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 *  [Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
 *  [Make leadfields using different headmodels](/example/make_leadfields_using_different_headmodels)
 *  [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
-*  [Common filters in beamforming](/example/Common_filters_in_beamforming)
+*  [Common filters in beamforming](/example/common_filters_in_beamforming)
 *  [Read neuromag .fif mri and create MNI-aligned single_shell grids in individual head-space](/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)
 *  [Using the low-level compute_leadfield function](/example/compute_leadfield)
 *  [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
 *  [Combined EEG and MEG source reconstruction](/example/combined_eeg_and_meg_source_reconstruction)
 *  [Localizing the sources underlying the difference in event related fields](/example/difference_erf)
 *  [Check the quality of the anatomical coregistration](/example/coregistration_quality_control)
-*  [Sphere fitting and scaling of the template (Colin27) MRI to the MEG polhemus headshape](/example/sphere_fitting_and_scaling_of_the_template_Colin_27_MRI_to_the_MEG_polhemus_headshape)
+*  [Sphere fitting and scaling of the template (Colin27) MRI to the MEG polhemus headshape](/example/sphere_fitting_and_scaling_of_the_template_colin_27_mri_to_the_meg_polhemus_headshape)
 
 ### Statistical analysis
 
 *  [Stratify the distribution of two variables](/example/stratify)
 *  [Source statistics](/example/Source_statistics)
-*  [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_TFRs_of_power_that_were_computed_with_BESA)
+*  [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 *  [Use simulated ERPs to explore cluster statistics](/example/use_simulated_erps_to_explore_cluster_statistics)
 *  [How can I compute and report the effect size?](/example/effectsize)
 

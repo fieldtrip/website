@@ -26,15 +26,15 @@ When adding or contributing to the tutorials please consider the [documentation 
   -  [Introduction on artifacts](/tutorial/artifacts)
   -  [Visual artifact detection](/tutorial/visual_artifact_rejection)
   -  [Automatic artifact detection](/tutorial/automatic_artifact_rejection)
-  -  [Preprocessing - Trigger based trial selection](/tutorial/Preprocessing)
-  -  [Preprocessing - Reading continuous EEG data](/tutorial/Continuous)
+  -  [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
+  -  [Preprocessing - Reading continuous EEG data](/tutorial/continuous)
   -  [Preprocessing and event-related activity in combined MEG/EEG data](/tutorial/natmeg/preprocessing)
 
 ## Sensor-level analyses of MEG and EEG data
 
-  -  [Event related fields and MEG planar gradient](/tutorial/EventRelatedAveraging)
-  -  [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_ERP)
-  -  [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/TimeFrequencyAnalysis)
+  -  [Event related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
+  -  [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
+  -  [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
   -  [Time-frequency analysis of combined MEG/EEG](/tutorial/natmeg/timefrequency)
   -  [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
   -  [Extracting the brain state and events from continuous sleep EEG](/tutorial/sleep)
@@ -78,7 +78,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Statistics
 
-  -  [Parametric and non-parametric statistics on event related fields](/tutorial/EventRelatedStatistics)
+  -  [Parametric and non-parametric statistics on event related fields](/tutorial/eventrelatedstatistics)
   -  [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
   -  [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
   -  [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/tutorial/natmeg/statistics)

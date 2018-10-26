@@ -32,6 +32,6 @@ tags: [obsolete]
 *  [Community](/community)
     * [Discussion list](/discussion_list)
     * [External links](/external_links)
-*  [Download](/Download)
+*  [Download](/download)
     * [Copyrights](/copyrights)
-*  [Contact](/Contact)
+*  [Contact](/contact)
