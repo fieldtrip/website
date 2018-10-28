@@ -1,5 +1,5 @@
 ---
-title: Introduction: dealing with artifacts
+title: Introduction in dealing with artifacts
 layout: default
 tags: [tutorial, artifact, preprocessing, eeg, meg]
 ---
@@ -99,8 +99,8 @@ Following this introduction on how you can deal with artifacts in FieldTrip, you
 
 #### Example scripts
 
-{{topic>example +artifact &list}}
+{% include seealso.html tag1="artifact" tag2="example" %}
 
 #### Frequently asked questions
 
-{{topic>faq +artifact &list}}
+{% include seealso.html tag1="artifact" tag2="faq" %}

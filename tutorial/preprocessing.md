@@ -169,10 +169,10 @@ There are often cases in which it is not sufficient to define a trial only accor
 Save the trial function together with your other scripts as mytrialfun.m. To ensure that **[ft_preprocessing](/reference/ft_preprocessing)** is making use of the new trial function use the commands
 
     cfg = [];
-    cfg.dataset  = 'Subject01.ds';
-    cfg.trialfun = 'mytrialfun'; % ft_definetrial will call your function and pass on the cfg
+    cfg.dataset  						= 'Subject01.ds';
+    cfg.trialfun 						= 'mytrialfun'; 		% it will call your function and pass the cfg
     cfg.trialdef.eventtype  = 'backpanel trigger';
-    cfg.trialdef.eventvalue = [3 5 9]; % read all conditions at once
+    cfg.trialdef.eventvalue = [3 5 9]; 					% read all conditions at once
     cfg.trialdef.prestim    = 1; % in seconds
     cfg.trialdef.poststim   = 2; % in seconds
 
@@ -203,9 +203,10 @@ More on the trialinfo field can be found in the [faq](/faq/is_it_possible_to_kee
 
 After having finished this tutorial on preprocessing, you can continue with the [event related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-If you have more questions about preprocessing, you can also read the following faqs:
-{{topic>faq +preprocessing &list}}
+If you have more questions about preprocessing, you can also read the following FAQs:
 
-Or you can also read the example scripts:
-{{topic>example +preprocessing &list}}
+{% include seealso.html tag1="preprocessing" tag2="faq" %}
 
+and example scripts:
+
+{% include seealso.html tag1="preprocessing" tag2="example" %}

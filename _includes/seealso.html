@@ -1,0 +1,25 @@
+<ul>
+  {% for p in site.pages %}
+  {% if include.tag  == nil or include.tag  == "" or p.tags contains include.tag  %}
+  {% if include.tag1 == nil or include.tag1 == "" or p.tags contains include.tag1 %}
+  {% if include.tag2 == nil or include.tag2 == "" or p.tags contains include.tag2 %}
+  {% if include.tag3 == nil or include.tag3 == "" or p.tags contains include.tag3 %}
+  {% if include.tag4 == nil or include.tag4 == "" or p.tags contains include.tag4 %}
+  {% if include.tag5 == nil or include.tag5 == "" or p.tags contains include.tag5 %}
+  {% if include.tag6 == nil or include.tag6 == "" or p.tags contains include.tag6 %}
+  {% if include.tag7 == nil or include.tag7 == "" or p.tags contains include.tag7 %}
+  {% if include.tag8 == nil or include.tag8 == "" or p.tags contains include.tag8 %}
+  {% if include.tag9 == nil or include.tag9 == "" or p.tags contains include.tag9 %}
+  <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+</ul>

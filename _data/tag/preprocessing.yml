@@ -7,7 +7,7 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
-- name:  Introduction
+- name:  Introduction in dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Event related averaging and MEG planar gradient
