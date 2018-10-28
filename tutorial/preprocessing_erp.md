@@ -82,23 +82,24 @@ Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data se
 	cfg = [];  % use only default options                 
 	ft_databrowser(cfg, data);
 
-<div class="alert-info">
+{:.alert-info}
 You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk.
-
+<br/>
+<br/>
 	cfg         = [];
 	cfg.dataset = 's04.vhdr';
 	ft_databrowser(cfg);
 
-</div>
-
 #### Exercise 1
 
-<div class="alert-info">
-
-   * Why is there a vertical line with label S141 on the first call to ft_databrowser(cfg,data)?
-   * Can you find this line (or lines with other labels) on the second call to ft_databrowser(cfg)?
-   * Try setting cfg.viewmode = 'vertical' before the call to ft_databrowser.
-</div>
+{:.alert-info}
+Why is there a vertical line with label S141 on the first call to ft_databrowser(cfg,data)?
+<br/>
+<br/>
+Can you find this line (or lines with other labels) on the second call to ft_databrowser(cfg)?
+<br/>
+<br/>
+Try setting cfg.viewmode = 'vertical' before the call to ft_databrowser.
 
 FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memor
 
@@ -123,9 +124,8 @@ and note that, if you wanted to, you could plot a single trial with default Matl
 
 We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels 57 and 25 (see the plot of the layout and the figure below). For the vertical EOG we will use channel 53 and channel "LEOG" which was placed below the subjects' left eye (not pictured on the layout).
 
-<div class="alert-success">
+{:.alert-success}
 Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The re-referencing step to obtain the EOG is therefore not required when working with Biosemi or other bipolar data.
-</div>
 
 ![image](/static/img/example/example_eog.png@200)
 
@@ -223,9 +223,8 @@ You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yo
 
 ![image](/static/img/example/example_script_artifacts1.png@600)
 
-<div class="alert-info">
+{:.alert-info}
 In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
-</div>
 
 #### Summary mode
 
@@ -243,7 +242,7 @@ The left lower box of Figure 4 shows the variance of the signal in each trial. B
 
 Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes it is not easy to decide if a trial has to be rejected or not. In this exercise we suggest that you remove 8 trials with the highest variance (trial numbers 22, 42, 89, 90, 92, 126, 136 and 150). As you see, the trials with blinks that we saw in the "Channel" mode are among them. To complete the rejection press "Quit" button. You get the data_clean variable that will be used for subsequent analyses.
 
-<div class="alert-info">
+{% include startclass.html class="alert-info" %}
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
 	cfg          = [];
@@ -251,7 +250,7 @@ After removing data segments that contain artifacts, you might want to do a last
 	ft_databrowser(cfg, data_clean);
 
 Note that you can also use the data browser to mark artifacts (instead of or in addition to ft_rejectvisual).
-</div>
+{% include endclass.html %}
 
 ### Computing and plotting the ERP's
 
@@ -311,9 +310,8 @@ The following code allows you to look at the ERP difference waves.
 	cfg.showoutline = 'yes';
 	ft_multiplotER(cfg, difference)
 
-<div class="alert-info">
+{:.alert-info}
 Explore the event-related potential by dragging boxes around (groups of) sensors and time points in the 'multiplot' and the resulting 'singleplots' and 'topoplots'.
-</div>
 
 ## Appendix: the trialfun used in this example
 

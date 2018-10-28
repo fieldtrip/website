@@ -10,7 +10,7 @@ FieldTrip relies on MATLABs plotting routines, which uses specific renderers. Un
     cfg.renderer = 'painters' 
 prior to the call to ft_databrowser. 
 
-<div class="alert-info">
+{:.alert-info}
 This error and solution has been confirmed by the Mathworks. Thanks to Martine van Schouwenburg for contacting Mathworks and forwarding their response.
 
 EMAIL SUPPORT TEAM MATHWORK
@@ -22,8 +22,7 @@ MATLAB has three renderers- OpenGL, Painters and Z-Buffer. Each of these
 renderers has its own merits and limitations. MATLAB chooses the correct
 renderer based on the type of figure that you are plotting. 
 
-Here is a documentation page that talks more about the three renderers in
-MATLA
+Here is a documentation page that talks more about the three renderers in MATLAB:
 http://www.mathworks.com/help/matlab/creating_plots/changing-a-figures-settings.html#f3-102410
 
 Of the three renderers OpenGL has the ability to use the graphics hardware
@@ -57,4 +56,5 @@ Here "gcf" refers to the currently active figure window.
 I would suggest that you try changing the renderer just before the "surf"
 command is executed and see if the crash stops happening when using a
 particular renderer."
-</div>
+{# FIXME the following might be displayed incorrectly #}
+

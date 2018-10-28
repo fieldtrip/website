@@ -8,11 +8,10 @@ tags: [development, cvs, svn, git]
 
 Initial development of the FieldTrip code started using CVS, the Concurrent Versions System. Around 2009 we switched over to SVN. In February 2016 we switched over to [git](http://git-scm.com) and you can now access the code and contribute on [github](http://github.com/fieldtrip).
 
-Please see our [github tutorial](/[[/development/git) for details.
+Please see our [github tutorial](/development/git) for details.
 
 ### Related documentation
 
 {% include seealso.html tag="git" %}
 {% include seealso.html tag="svn" %}
 {% include seealso.html tag="cvs" %}
-

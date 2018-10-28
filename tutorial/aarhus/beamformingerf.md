@@ -16,11 +16,11 @@ tags: [tutorial, aarhus, meg+eeg, beamforming, ERF, lcmv, MEG-audodd]
 In this tutorial we will apply beaforming techniques to event-realted fields. The data used herein has been used and preprocessing procedures have been extensively explained in the Natmeg tutorial [dataset](/tutorial/natmeg/dataset). Below we will focus on motor evoked fields associated with right hand button press.We will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)). Except, we will focus on motor responses rather than the preceding stimuli. Further we will compare the measured topography and the corresponding source reconstruction. The quality of the topography often depends on the presence of super-positioned activity of no interest, i.e. ocular and cardiac artifacts. Thus, we will apply ICA in order to identify and subsequently remove such activity.
 In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as   computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/tutorial/natmeg/beamforming).
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
-
+<br/>
+<br/>
 {% include youtube.html id="7eS11DtbIPw" %}
-</div>
 
 ## Background
 
@@ -168,11 +168,12 @@ In the first step we re-segment the data into left and right hand responses usin
 
 *Figure 1: Topography and time course of the motor evoked response performed with the right hand.*
 
-<div class="alert-info">
-Use your knowledge about the distribution of the in and out going field.
-What is the orientation of the source?
-Is this source likely located on a gyral bank or sylcus wall?
-</div>
+{:.alert-info}
+Use your knowledge about the distribution of the ingoing and outgoing field.
+- What is the orientation of the source?
+- Is this source likely located on a gyral bank or sylcus wall?
+{# FIXME this is probably not displayed correctly #}
+
 ### Loading the headmodel
 
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
@@ -186,9 +187,8 @@ Load the forward model using the following cod
 
 The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
-<div class="alert-warning">
+{:.alert-warning}
 Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
-</div>
 
 We first prepare the magnetometer and electrode position information that can be also downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/) and [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/elec).
 
@@ -321,39 +321,36 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
 
 *Figure 2: A source plot of the motor evoked field- ratio between the pre- and post-response conditions.*
 
-<div class="alert-info">
+{:.alert-info}
 The 'ortho' method is not the only plotting method implemented. Use the 'help' of **[ft_sourceplot](/reference/ft_sourceplot)** to find what other methods there are and plot the source level results. What are the benefits and drawbacks of these plotting routines?
-</div>
 
 #### Exercise: determining anatomical labels
 
-<div class="alert-info">
+{:.alert-info}
 If you were to name the anatomical label of the source of this motor beta, what you say? What plotting method is most appropriate for this?
-
+<br/>
+<br/>
 With the use of cfg.atlas you can specify a lookup atlas, which **[ft_sourceplot](/reference/ft_sourceplot)** will use to return appropriate anatomical labels. One for the MNI template is distributed with FieldTrip and can be found in 'fieldtrip/template/atlas/aal/ROI_MNI_V4.nii'. Be aware that for this to work you need to realign your anatomical and functional data into MNI coordinates. An example how to achieve this is to [align the leadfield grid of the individual subject to a leadfield grid in MNI space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
-</div>
 
 #### Exercise: regularization
 
-<div class="alert-info">
+{:.alert-info}
 The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?  
-</div>
 
 #### Exercise: covariance matrix computation
 
-<div class="alert-info">
+{:.alert-info}
 The covariance matrix was computed on the basis of the single trials. Compute the cov matrix on the basis of the mean over the trials and redo the steps above. Why and how is the source reconstructed power changed?
-</div>
 
 ## (MEG) Plotting sources of response related evoked field using statistical threshold
 
 In the previous step we applied an arbitrary chosen threshold for plotting the data. It is also possible to apply the permutation framework as extensively described in the statistic tutorials. It is strongly recommended to make yourself familiar with the framework and consult also the on-line lecture.
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
-
+<br/>
+<br/>
 {% include youtube.html id="x0hR-VsHZj8" %}
-</div>
 
 First we will repeat some of the previous steps. We will compute the covariance matrix on the basis of the data including the pre and post-response latencies. This is followed by averaging of the pre and post data segments separately, yet keeping the individual observations using the option **cfg.keeptrials = 'yes'**. Here it is important that we also calculate the single-trial covariance using the option **cfg.covariance = 'yes'** as this will later be used to calculate the source activity.
 
@@ -466,9 +463,8 @@ Finally, we plot the result. Instead of ratio the functional data is now represe
 
 #### Exercise: discuss and evaluate the spm map
 
-<div class="alert-info">
+{:.alert-info}
 Uncomment the option **cfg.maskparameter = 'mask';** and try to interpret what you see. Consider the scalp topography too. In the context of the present  question 'Whereare the generators of the MEP?' is there a favorable thresholding approach? If so, why?
-</div>
 
 ## (MEG) Reconstructing the time course of activity in the primary motor cortex
 
@@ -567,9 +563,8 @@ Now we can plot the result.
 
 #### Exercise: Evoked vs. induced activity
 
-<div class="alert-info">
+{:.alert-info}
 Take your time to verbalize what you see. Try to decompose the averaged response into the time-frequency domain. Plot the result with and without baseline correction. Why is there a difference?
-</div>
 
 ## (EEG) The forward model and lead field matrix
 
@@ -625,9 +620,8 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
 	[grid] = ft_prepare_leadfield(cfg);
 	save grid_eeg grid
 
-<div class="alert-info">
+{:.alert-info}
 Discuss the option **cfg.lcmv.reducerank = 3**
-</div>
 
 ## (EEG) Source analysis
 

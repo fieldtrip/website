@@ -25,9 +25,7 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc, MEG-visuomoto
 This tutorial consists of three part
 
 *  Simulated data with directed connections. In this part we are going to simulate some data and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model and we will use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** for this. Subsequently, we will estimate the multivariate autoregressive model and the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with  **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
-
 *  Simulated data with common pick-up and different noise levels. In this part we are going to simulate some data consisting of an instantaneous mixture of 3 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
-
 *  Connectivity between MEG virtual channels and EMG. In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between these virtual channels and EMG. The data used for this part are the same as in the [extended beamforming](/tutorial/beamformingextended) tutorial.
 
 ## Simulated data with directed connections
@@ -102,10 +100,8 @@ This computes the spectral decomposition and the coherence spectrum between all 
 
 The spectrum reveals a strong coherence peak around 20 Hz between the right motor cortex and the left EMG, as expected, and as we found in the beamforming tutorial as well, where we beamed the sensor-level coherence directly. Additionally, we also see a corticomuscular coherence peak in the gamma frequency range.
 
-<div class="alert-info">
+{:.alert-info}
 Rather than looking at undirected coherence, the virtual channel level data can now also easily be submitted to directed connectivity measures. Compute the spectrally resolved granger connectivity and try to assess whether the directionality is from cortex to EMG or vice versa.   
-</div>
 
-<div class="alert-info">
+{:.alert-info}
 Now that you have the virtual channel data, you can also use it to look at, for instance, power correlations across trials between visual gamma and motor beta. Do this! (Hint: this involves computing trial-specific estimates of power using ft_freqanalysis, extracting those estimates from the resulting freq structure, and using matlab's own corr function.)
-</div>

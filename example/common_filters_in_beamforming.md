@@ -36,7 +36,7 @@ FIXME Code for reconstruction of single trial data is incomplete
 In the following, scripts for both approaches are presented.
 Let’s say we have data for two conditions, condition A and B, and we assume that the same sources are active in both, but to a different extent.
 
-We have the preprocessed data for both conditions (//dataA// and *dataB*) and we precomputed the grid and the volume conduction model (//grid// and *vol*). For more information on how to do this, have a look at the [beamformer tutorial](/tutorial/beamformer) and the Fieldtrip functions **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** with method='singleshell'.
+We have the preprocessed data for both conditions (//dataA// and *dataB*) and we precomputed the grid and the volume conduction model (//grid// and *vol*). For more information on how to do this, have a look at the [beamformer tutorial](/tutorial/beamformer) and the FieldTrip functions **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** with method='singleshell'.
 
 ### PCC
 

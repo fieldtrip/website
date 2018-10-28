@@ -3,6 +3,8 @@ title: Inverse source parameter estimates from EEG/MEG data
 layout: default
 ---
 
+{% include shared/development/warning.md %}
+
 # Inverse source parameter estimates from EEG/MEG data
 
 FieldTrip has a consistent set of low-level functions for source reconstruction, i.e. estimating the location, strength and other parameters of the sources in the brain that underly the observed EEG and MEG data. The usual mathematical description of the sources is the equivalent current dipole, which is why in the subsequent documentation you will often see *source* and *dipole* used exchangeably.

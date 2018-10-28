@@ -3,12 +3,7 @@ title: Source-reconstruction using two dipoles
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as a scratch pad for the new version of the example script.
-
-There is no guarantee that this page is updated in the end to reflect the final state of the script.
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 ## Source-reconstruction using two dipoles
 
@@ -18,7 +13,7 @@ This example script shows you how to work with more advanced source models in ca
 
 It first creates some simulated channel-level MEG data with two dipoles with varying amounts of correlation.
 
-Subsequently it does a beamformer source reconstruction to localize the activity. For a large amount of correlation between the sources, the source reconstruction will fail to reconstruct the correct source locations. 
+Subsequently it does a beamformer source reconstruction to localize the activity. For a large amount of correlation between the sources, the source reconstruction will fail to reconstruct the correct source locations.
 
 A double-dipole source model in the beamformer scan can be used to circumvent the problem of correlated sources.
 
@@ -28,7 +23,7 @@ NOTE: the example below uses some low-level functions from the FieldTrip/private
 
 FIXME in the following section the simulated data should consist of two dipoles with more appropriate timecourses
 
-	
+
 	% create a gradiometer array with magnetometers at 12cm distance from the origin
 	[pnt, tri] = icosahedron162;
 	pnt        = pnt(pnt(:,3)>=0,:);
@@ -37,15 +32,15 @@ FIXME in the following section the simulated data should consist of two dipoles 
 	for i=1:length(pnt)
 	  grad.label{i} = sprintf('chan%03d', i);
 	end
-	
+
 	% create a spherical volume conductor with 10cm radius
 	vol.r = 9;
 	vol.o = [0 0 2.5];
-	
+
 	% note that beamformer scanning will be done with a 1cm grid, so you should
 	% not put the dipole on a position that will not be covered by a grid
 	% location later
-	
+
 	% create a dipole simulation with two dipoles and a custom timecourse
 	cfg      = [];
 	cfg.vol  = vol;      % see above
@@ -68,7 +63,7 @@ FIXME in the following section the simulated data should consist of two dipoles 
 
 FIXME the following code should do freqanalysis instead of timelockanalysis
 
-	
+
 	% compute the data covariance matrix, which will capture the activity of
 	% the simulated dipole
 	cfg = [];
@@ -81,7 +76,7 @@ The following code demonstrates how to do beamformer source reconstruction with 
 
 FIMXE insert figure at the end of the following block of code
 
-	
+
 	% do the beamformer source reconstuction on a 1 cm grid
 	cfg            = [];
 	cfg.vol        = vol;
@@ -89,13 +84,13 @@ FIMXE insert figure at the end of the following block of code
 	cfg.resolution = 1;
 	cfg.method     = 'lcmv';
 	source         = ft_sourceanalysis(cfg, timelock);
-	
+
 	% compute the neural activity index, i.e. projected power divided by
 	% projected noise
 	cfg = [];
 	cfg.powmethod = 'none'; % keep the power as estimated from the data covariance, i.e. the induced power
 	source = ft_sourcedescriptives(cfg, source);
-	
+
 	cfg = [];
 	cfg.method = 'ortho';
 	cfg.funparameter = 'nai';
@@ -111,4 +106,3 @@ FIMXE insert subsequent code, based on prepare_leadfield, sourceanalysis with me
 ### Beaming cortico-muscular coherence with a two-dipole source model
 
 FIXME extend with refchan, e.g. repeat dipolesimulation and add the timecourse of a nice signal to an additional channel in the data.
-

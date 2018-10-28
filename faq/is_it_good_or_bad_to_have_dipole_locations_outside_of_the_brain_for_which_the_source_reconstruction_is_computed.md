@@ -3,9 +3,8 @@ title: Is it good or bad to have dipole locations outside of the brain for which
 layout: default
 ---
 
-<div class="alert-warning">
+{:.alert-warning}
 This page is under construction/discussion
-</div>
 
 ##  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed? 
 

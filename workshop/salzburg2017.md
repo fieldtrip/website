@@ -16,9 +16,8 @@ More details are provided by the local organizers [here](https://samba.ccns.sbg.
 
 ## How should you prepare for the workshop?
 
-<div class="alert-warning">
+{:.alert-warning}
 In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
-</div>
 
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
 
@@ -41,17 +40,13 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
     addpath(pwd)
     ft_defaults
 
-<div class="alert-danger">
+{:.alert-danger}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
-
+<br/>
+<br/>
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
-</div>
 
-The restoredefaultpath command clears your path, keeping only the
-official MATLAB toolboxes. The addpath(pwd) statement adds the
-present working directory, i.e. the directory containing the fieldtrip
-main functions. The ft_defaults command ensures that all required
-subdirectories are added to the path.
+The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the fieldtrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
@@ -60,11 +55,11 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 ####  Tuesday
 
 *  morning
-    * 1h welcome and intro lecture {{ :workshop:salzburg_introduction.pdf | pdf }}
+    * 1h welcome and intro lecture - [slides](/static/pdf/workshop/salzburg_introduction.pdf)
     * 2h hands-on http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
 
 *  afternoon
-    * 1h neuronal oscillations lecture {{ :workshop:salzburg_frequency_analysis.pdf | pdf }}
+    * 1h neuronal oscillations lecture - [slides](/static/pdf/workshop/salzburg_frequency_analysis.pdf)
     * 2h hands-on http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
     * wrap up of the day
 
@@ -74,12 +69,12 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 #### Wednesday
 
 *  morning
-    * 1h forward and inverse modelling lecture {{ :workshop:salzburg_source_reconstruction.pdf | pdf }}
+    * 1h forward and inverse modelling lecture - [slides](/static/pdf/workshop/salzburg_source_reconstruction.pdf)
     * 2h hands on http://www.fieldtriptoolbox.org/tutorial/beamformer
 
 *  afternoon
-    * 1h non-parametric permutation statistics lecture {{ :workshop:salzburg_cluster_statistics.pdf | pdf }}
-    * 2h hands-o
+    * 1h non-parametric permutation statistics lecture - [slides](/static/pdf/workshop/salzburg_cluster_statistics.pdf)
+    * 2h hands-on
       * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
       * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
     * wrap up of the day

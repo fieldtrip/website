@@ -3,12 +3,7 @@ title: Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as a scratch pad for the new version of the example script.
-
-There is no guarantee that this page is updated in the end to reflect the final state of the script.
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 ## Use DSS to remove ECG/BCG artifacts within ft_componentanalysis
 
@@ -29,10 +24,10 @@ You can run the code below on your own data. Alternatively, try with the example
 
 To load this dataset into matlab and preprocess with FieldTrip, us
 
-	
+
 	% ft_preprocessing of example dataset
 	cfg = [];
-	cfg.dataset = 'ArtifactRemoval.ds'; 
+	cfg.dataset = 'ArtifactRemoval.ds';
 	cfg.trialdef.eventtype = 'trial';
 	cfg = ft_definetrial(cfg);
 
@@ -41,7 +36,7 @@ To load this dataset into matlab and preprocess with FieldTrip, us
 We can use ft_artifact_zvalue.  Apply preproc to the ECG channel, and use some cfg options to obtain the peak time point above threshold within a certain time range (rather than all values above threshold), and furthermore, set a fixed time-range around this peak.
 Filter the ECG channel to optimize separation of a single peak per heartbeat relative to other waves.  This will be different per subject.  One possible/recommended way for BCG is a combination of drift-removal (bandpass 5-30Hz) and then the Hilbert envelope of this.
 
-	
+
 	cfg=[];
 	cfg.artfctdef.zvalue.channel='ECG';
 	cfg.artfctdef.zvalue.cutoff=2;
@@ -55,16 +50,16 @@ Filter the ECG channel to optimize separation of a single peak per heartbeat rel
 
 The DSS code wants a 'params' structure which contains peak time points, as well as the range around the peak that you think is relevant.  Note that the subfield 'dssartifact' is different from 'artifact' in 2 ways: 1) beginning/end points based on cfg.artfctdef.zvalue.artfctpeakrange rather than where the channel exceeded the threshold, and 2) the sample counts between trial end to the start of next trial have been subtracted.
 
-	
+
 	params.tr=cfg.artfctdef.zvalue.peaks;
 	params.tr_begin=cfg.artfctdef.zvalue.dssartifact(:,1);
 	params.tr_end=cfg.artfctdef.zvalue.dssartifact(:,2);
 
 ### DSS component rejection
 
-	
+
 	addpath ~/mfiles/dss_1-0
-	
+
 	cfg                   = [];
 	cfg.method            = 'dss';
 	cfg.dss.denf.function = 'denoise_avgJM';
@@ -76,7 +71,7 @@ The DSS code wants a 'params' structure which contains peak time points, as well
 
 The output compdss contains the components to reject.  Use ft_databrowser to plot all components at once and decide if you have selected the correct scfg.numcomp to reject.  Iterate if needed until it appears that all components rejected are heartbeat related.   Usually 10-15 is the right range for 64 channel EEG data in the MRI.
 
-	
+
 	cfg = [];
 	cfg.layout = 'EEG1010.lay'; % specify the layout file that should be used for plotting
 	cfg.showcallinfo='no';
@@ -84,9 +79,8 @@ The output compdss contains the components to reject.  Use ft_databrowser to plo
 
 Once you are happy with the number of components to reject, then actually remove them from the data.
 
-	
+
 	cfg           = [];
 	cfg.component = 1:size(compdss.topo,2);
 	cfg.feedback  = 'textbar';
 	rawdssrej     = ft_rejectcomponent(cfg, compdss, rawcleanrere);
-

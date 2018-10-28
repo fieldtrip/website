@@ -57,15 +57,26 @@ As already said, FieldTrip is most efficiently used by calling its functions wit
 
 Make sure you save the filename identical as the function name, i.e. MyOwnFunction, and to save it in your personal folder dedicated to your own functions and scripts.
 
-<div class="alert-danger">
+{:.alert-danger}
 Do not save your own functions/scripts in the FieldTrip folder! This will not help you to organize your own functions - the number of functions will grow exponentially. Also, it makes it harder to update your FieldTrip folder.
-</div>
 
 Having saved your function in a folder of your MATLAB path you can, from within any script or from the command line, use your function. In our example ` MyOwnFunction(4) ` will give you the answer ` 2 ` To put the answer in a variable for storage or future use you need to call something like ` output = MyOwnFunction(4) `
 
 This is the way most FieldTrip functions work: you provide the parameters together with data as the input and the function will return the results as the output.
 
-It is often convenient to save intermediate results to disk. For instance you can type ` save('firstoutput','output'); ` to save the output to *firstoutput.mat* in the directory you are in. Let's say you defined an output folder as in the first paragraph ` subjectdata.subjectdir = 'Subject01'; ` you can program a generic solution to save all analysis steps of every subject in their own output folder: ` save([subjectdata.subjectdir filesep 'firstoutput'],'output'); ` In this way all your functions (i.e. analysis steps) can read the output of the previous step as .mat files based upon their subject number.
+It is often convenient to save intermediate results to disk. For instance you can type
+
+    save('firstoutput','output');
+
+to save the output to *firstoutput.mat* in the directory you are in. Let's say you defined an output folder as in the first paragraph
+
+    subjectdata.subjectdir = 'Subject01';
+
+you can program a generic solution to save all analysis steps of every subject in their own output folder:
+
+    save([subjectdata.subjectdir filesep 'firstoutput'],'output');
+
+In this way all your functions (i.e. analysis steps) can read the output of the previous step as .mat files based upon their subject number.
 
 We suggest that you store a single variable per file. This will in general make it possible to more easily only read what is necessary. Furthermore, if you give the files a clear and consistent name, you can easily delete the files (intermediate results) that are not needed anymore. Note that you can sort in the file manager on filename, as well as on creation date. The latter is convenient to quickly get an overview of the most recent files after you notice yet another bug in your analysis script :). For one subject a full analysis of the content of your data directory could then look something like thi
 

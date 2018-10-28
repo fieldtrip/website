@@ -79,11 +79,11 @@ The source reconstruction contains the estimated power and the source-level time
     gam_pow_data.trial{i} = beamformer_gam_pow * data_cmb.trial{i}(chansel,:);
     end
 
-<div class="alert-warning">
+{:.alert-warning}
 The LCMV spatial filter is computed here without applying any time-domain filters. Consequently, it will have to suppress all noise in the data in all frequency bands. The spatial filter derived from the  broadband data allows us to compute a broadband source level time-series.
-
+<br/>
+<br/>
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. *cfg.hpfilter=yes* and *cfg.hpfreq=30*) prior to computing the covariance and the spatial filter.  
-</div>
 
 The structures *coh_lft_data* and *gam_pow_data* resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)*
 

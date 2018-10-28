@@ -3,13 +3,7 @@ title: Introduction
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
-
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Introduction
 
@@ -22,21 +16,18 @@ Integrate the forward model part of FNS in FieldTrip.
 Q: What about the inverse modelling?
 
 A: All inverse methods in FieldTrip are independent from the forward model, i.e. there is a function that computes a leadfield and another function that uses it together with the data to make an estimate of the source. This allows the complete collection of inverse methods to be used either for MEG, MEG and ECoG data.  
+
 # Features
 
 1. FNS computes the forward solution starting from segmented volumes (does not require necessarily meshes as input, but uses FSL (if installed) to segment them)
-
 2. The output of FNS is a volumetric image representing the voltage in all points of the space
-
 3. FNS on a linux machine requires Matlab and [Bielectromagnetism Matlab toolbox](http://eeg.sourceforge.net/) (for time series visualization?)
-
 4. To run FNS forward solver a user need to have 1 GByte of memory available
 
 # How it works
 
 First create and store the system matrix in output file data.h
 
-	
 	# Example of linux shell comman
 	elecsfwd --img smri-seghead --electrodes electrodes.h5 --data data.h5 --contable  ../../data/conductivity/contable.csv --TOL 1e-8'
 
@@ -49,9 +40,7 @@ contable.csv is a comma saparated file which assigns a conductivity value for ea
 # Steps to be taken
 
 1. create the necessary interfaces (meshes, conductivities, sensors structures)
-
 2. create a wrapper to run the binaries
-
 3. The call to elecsfwd should be modified as follow
 
 __  * input arguments --img segfile and --electrodes elecs disappear
@@ -121,7 +110,7 @@ done ( new bins available linked with old libraries )
 4. Take the electrode rereferencing out of the main binary. Done
 
    * FNS does not do any referencing. 
-   * User need to specify the reference technique and Fieldtrip will handle this. 
+   * User need to specify the reference technique and FieldTrip will handle this. 
 5. System matrix has to be extracted from data.h5 output as previously calculated from 'elecs_fwd'.     
 
    * Create a matlab function with as input argument the tissue type and as output the correspondent system matrix. Done with the C version. Working on the MATLAB version now. 

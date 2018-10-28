@@ -8,16 +8,15 @@ tags: [example, statistics, cluster]
 
 The following code starts off with an ERP in two conditions, where it is slightly larger in condition 1 than 2. This simulation demonstrates a randomization test, correcting for multiple comparisons by using the largest cluster mass.
 
-<div class="alert-info"> See this paper for more details
-
+{:.alert-info}
+See this paper for more details
+<br/>
+<br/>
 Maris E., Oostenveld R. //[Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17517438)// J Neurosci Methods. 2007 Apr 10; 
-
+<br/>
+<br/>
 and look in the [reference](/references_to_implemented_methods) section for more literature pointers.
 
-</div>
-
-	
-	
 	%%
 	
 	tim = (0:1000)/1000;

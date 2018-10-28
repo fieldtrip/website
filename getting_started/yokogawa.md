@@ -17,25 +17,15 @@ FieldTrip includes reading functions for the Yokogawa MEG system in the fieldtri
 The following Yokogawa file formats are recognized by FieldTri
 
 *  yokogawa_sqd *Continuous data*
-
 *  yokogawa_con *Continuous data*
-
 *  yokogawa_ave *Averaged evoked fields*
-
 *  yokogawa_raw *Trial-based evoked fields*
-
 *  yokogawa_mri
-
 *  yokogawa_coregis
-
 *  yokogawa_calib
-
 *  yokogawa_channel
-
 *  yokogawa_property
-
 *  yokogawa_textdata
-
 *  yokogawa_fll
 
 Usually you will be starting your FieldTrip analysis with raw continuous data which is stored in files with the .con or the .sqd extention.
@@ -150,7 +140,7 @@ For exampl
 
 We can then proceed in the standard way of defining trials and reading data as follows. 
 Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc. 
-Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In Fieldtrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding ` cfg.trialdef.trigchannel = '162' `{matlab} into the trialfunctio
+Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding ` cfg.trialdef.trigchannel = '162' `{matlab} into the trialfunctio
 
 	cfg = [];
 	cfg.dataset                 = data.sqd;
@@ -489,7 +479,6 @@ Plot results
 
 ![image](/static/img/getting_started/beamformer_single_subject_lambda_0005perc_b.jpg@600)
 
-<div class="alert-info">
+{:.alert-info}
 Thanks to Akiko Ikkai for contributing her Yokogawa data to make this page
-</div>
 

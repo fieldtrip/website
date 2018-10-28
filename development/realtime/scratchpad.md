@@ -130,7 +130,7 @@ example, the gradiometer positions are not mentioned in that page.
 We are missing discussion on multi-platform (Windows+Linux+OSX) issues, due to
 different resolutions available on each platform
 (http://msdn.microsoft.com/en-us/library/ms724397). In the situation where
-application and Fieldtrip server are located on different PC's, how is the time
+application and FieldTrip server are located on different PC's, how is the time
 (roughly) synchronized? One solution could be to configure the NTP client on
 each PC to use the same (external) NTP server. In particular situations time
 information will certainly be useful. Regarding acquisition devices it remains
@@ -156,7 +156,7 @@ It would be possible to (optionally) add an explicit timestamp channel in the co
 
 Because TMSi frontend continuously samples all the channels, including the
 event channels, we suggest that an atomic put_dat and put_evt be made, in which
-in one call all data received from the frontend is stored in the Fieldtrip
+in one call all data received from the frontend is stored in the FieldTrip
 buffer.
 
 The proposed sequence of always first write events and then samples makes sense

@@ -30,11 +30,11 @@ This tutorial is focusing on how to build the **volume conduction model for the 
 
 {{page>:tutorial:shared:headmodel_background}}
 
-<div class="alert-info">
+{:.alert-info}
 If an anatomical MRI is not available for your EEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. See [here](/template/headmodel) for more info.
-
+<br/>
+<br/>
 If you do not have an MRI, but do have a measurement of the scalp surface or electrodes (e.g. with a Polhemus tracker), you can fit a concentric spheres volume conduction model to the scalp.
-</div>
 
 ## Procedure
 
@@ -88,9 +88,8 @@ The structure of your mri variable contains the following field
 
 You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system).
 
-<div class="alert-info">
+{:.alert-info}
 Later in this tutorial, we will segment the anatomical MRI. Segmentation works properly when the voxels of the anatomical images are homogenous (i.e. the size of the voxel is the same into each direction). If you do not have homogenous voxels (or you are not sure of), you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function on the anatomical data before segmentation. Read more about re-slicing [here](/faq/how_change_mri_orientation_size_fov).
-</div>
 
 ##  Align MRI to the head coordinate system
 
@@ -108,9 +107,8 @@ It is also possible to read in anatomical MRI data in [other formats](/dataforma
 
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the three different tissue types: scalp, skull and brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined).
 
-<div class="alert-warning">
+{:.alert-warning}
 Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/segmentedmri.mat) (segmentedmri.mat).
-</div>
 
 	cfg           = [];
 	cfg.output    = {'brain','skull','scalp'};
@@ -204,9 +202,9 @@ The vol data structure contains the following field
 
 The **bnd** field contains the same information as the mesh we created in the earlier step. But the vol also contains a conductivity value for each surface and a matrix used for the volume conduction model. Note that the unit of measurement used in the geometrical description of vol is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
 
-<div class="alert-danger">
+{:.alert-danger}
 The order in which different tissue types are represented in the output of ft_prepare_headmodel may depend on the volume conduction model you are using. Make sure to double-check which tissue type is represented where in vol.bnd.
-</div>
+
 ##  Visualization
 
 The head model (vol) contains three structures in the **bnd** field. These are the geometrical descriptions of the scalp, skull and brain surfaces. First, we will plot each of the surfaces using the **[ft_plot_mesh](/reference/ft_plot_mesh)** function. Then, all surfaces will be plot together on the same figure.
@@ -296,9 +294,8 @@ In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and '
 	    lpa: [29 145 155]
 	    rpa: [144 142 158]
 
-<div class="alert-warning">
+{:.alert-warning}
 If you do not have the position of the anatomical landmarks in your volume, you can use the **[ft_volumerealign](/reference/ft_volumerealign)** function to get those positions.
-</div>
 
 First, we get these positions in the ctf coordinate system using the transformation matrix of the mri and the ft_warp_apply function.
 
@@ -340,13 +337,14 @@ We can check the alignment by plotting together the scalp surface with the elect
 
 *Figure 6. Electrodes plotted together with the scalp surface.*
 
-<div class="alert-warning">
+{:.alert-warning}
 Some of the electrodes are below the skin in the front, while the electrodes in the back do not fit tightly to the head. This happened because there are [different conventions to define the fiducials](/faq/how_are_the_lpa_and_rpa_points_defined).
-
+<br/>
+<br/>
 The anatomical MRI is in CTF coordinates with the fiducials for the left and right ear [aligned with the ear canal](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format) according to DCCN convention.
-
+<br/>
+<br/>
 The description of the electrodes includes the position of the left and right pre-auriciular point proper, i.e. the point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus.
-</div>
 
 One way to fix the misalignment is to provide the location of consistent fiducial locations. In this case it could be implemented by specifying the LPA and RPA point in the anatomical MRI shifted approximately 20 mm more anterior.
 
@@ -369,19 +367,19 @@ This electrode structure can be used later when the leadfield is computed during
 
 ## Exercise 1
 
-<div class="alert-info">
-
-   * Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
-   * Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
-   * What is the difference between this head model and the BEM?
-</div>
+{:.alert-info}
+Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
+<br/>
+<br/>
+Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
+<br/>
+<br/>
+What is the difference between this head model and the BEM?
 
 ## Exercise 2
 
-<div class="alert-info">
-
-   * In exercise 1, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the  concentric spheres model and BEM model?
-</div>
+{:.alert-info}
+In exercise 1, you created a head model with method 'concentricspheres'. How is its geometrical description defined? What is the difference between the geometrical description of the  concentric spheres model and BEM model?
 
 ## Summary and further reading
 

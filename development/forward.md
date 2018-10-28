@@ -3,6 +3,8 @@ title: Forward computation of EEG/MEG source models
 layout: default
 ---
 
+{% include shared/development/warning.md %}
+
 # Forward computation of EEG/MEG source models
 
 FieldTrip has a consistent set of low-level functions for forward computations of the EEG potential or MEG field. The spatial distribution of a known source in a volume conductor is called a leadfield.
@@ -60,19 +62,12 @@ Normally, end-users of the FieldTrip toolbox would use the functions in the main
 Some high-level functions that are of relevance for forward modeling ar
 
 *  **[ft_read_mri](/reference/ft_read_mri)**
-
 *  **[ft_read_sens](/reference/ft_read_sens)**
-
 *  **[ft_volumerealign](/reference/ft_volumerealign)** and **[ft_volumereslice](/reference/ft_volumereslice)**
-
 *  **[ft_electroderealign](/reference/ft_electroderealign)**
-
 *  **[ft_volumesegment](/reference/ft_volumesegment)**
-
 *  **[ft_prepare_mesh](/reference/ft_prepare_mesh)**
-
 *  **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**, this calls ft_headmodel_xxx (see below)
-
 *  **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**, this calls ft_prepare_vol_sens and ft_compute_leadfield (see below)
 
 These are explained in more detail in the appropriate [tutorials](/tutorial).
@@ -159,15 +154,10 @@ The simbio implementation is kindly provided by [Carsten Wolters](http://www.uni
 MATLAB allows the representation of any data in arrays, but does not have an explicit mechanism for dealing with the representation of physical properties of the numbers in those arrays. The FieldTrip data structures provide slightly more information on the units of the numbers represented in the arrays and consider
 
 *  the geometrical properties of the volume conduction model
-
 *  the conductive properties of the volume conduction model
-
 *  the geometrical properties of the sensor description
-
 *  the geometrical properties of the source model
-
 *  the units of the channel level values (e.g. T, uV or fT/cm)
-
 *  the units of of dipole strength
 
 The forward module functions are written such that they operate correctly if all input data to the functions is specified according to the [International System of Units](http://en.wikipedia.org/wiki/International_System_of_Units), i.e. in meter, Volt, Tesla, Ohm, Ampere, etc. The high-level FieldTrip code or any other code that calls the forward module functions (e.g. EEGLAB) is responsible for data handling and bookkeeping and for converting MATLAB arrays and structures that represent units into SI units prior to passing the arrays and structures to the forward code.

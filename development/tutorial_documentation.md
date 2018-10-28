@@ -3,18 +3,11 @@ title: An overview on forward modeling
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
+{% include shared/development/warning.md %}
 
-After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
+FIXME This page is under construction
 
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
-
-FIXME
-This page is under construction
-
-Create again, when finished, in the initial page unde
+Create again, when finished, in the initial page under:
 
 *  [An overview on forward modeling](/tutorial/Forward)  
 
@@ -94,4 +87,3 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 ### ECoG forward models
 
 *  BEM
-

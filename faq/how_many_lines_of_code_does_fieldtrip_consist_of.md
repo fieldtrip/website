@@ -1,10 +1,10 @@
 ---
-title: How many lines of code does Fieldtrip consist of?
+title: How many lines of code does FieldTrip consist of?
 layout: default
 tags: [faq]
 ---
 
-## How many lines of code does Fieldtrip consist of?
+## How many lines of code does FieldTrip consist of?
 
 You can count that using the following commands
 

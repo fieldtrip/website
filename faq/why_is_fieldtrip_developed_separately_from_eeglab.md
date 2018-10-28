@@ -14,7 +14,7 @@ EEGLAB clearly has a different audience, i.e. it has a graphical interface and a
 
 *  EEGLAB does not allow for data segments/trials to have a variable length. That is an important feature built into FieldTrip, and we use it to study only data segments up to, but not including, an unpredictable stimulus change or response.
 
-*  In EEGLAB the whole dataset should be loaded into memory before it can be processed. This can complicate things when the epochs of interest are only small fraction of the whole recording. Fieldtrip allows selectively reading the raw data according to pre-defined trial borders. 
+*  In EEGLAB the whole dataset should be loaded into memory before it can be processed. This can complicate things when the epochs of interest are only small fraction of the whole recording. FieldTrip allows selectively reading the raw data according to pre-defined trial borders. 
 
 *  EEGLAB was built around the notion that data consists of matrices, whereas FieldTrip also allows for volume data (anatomical/functional) and other data types (geometry data for the head model and sensors).
 

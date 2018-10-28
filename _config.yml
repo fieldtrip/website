@@ -10,6 +10,7 @@ github_username:  fieldtrip
 # Build settings
 sass:
   sass_dir: ./static/css
+
 permalink: pretty
 markdown: kramdown
 theme: minima

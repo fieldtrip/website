@@ -86,7 +86,7 @@ Using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** on frequ
 	          dof: 600
 	          cfg: [1x1 struct]
 
-Note that this representation lacks a 'labelcmb' field, and that the 'dimord' is 'chan_chan_freq'. This means that the numeric data now implicitly contains both the combinations {'a' 'b'} (in coh.cohspctrm(1,2,:) ) , and the combination {'b' 'a'} (in coh.cohspctrm(2,1,:) ). For a quantity like the coherence spectrum the values across the diagonal are symmetric, but for complex-valued quantities, as well as for directional measures of interaction, the values at the entries across the diagonal are typically different. The convention used by Fieldtrip is that the row-channel 'causes' the column-channel.
+Note that this representation lacks a 'labelcmb' field, and that the 'dimord' is 'chan_chan_freq'. This means that the numeric data now implicitly contains both the combinations {'a' 'b'} (in coh.cohspctrm(1,2,:) ) , and the combination {'b' 'a'} (in coh.cohspctrm(2,1,:) ). For a quantity like the coherence spectrum the values across the diagonal are symmetric, but for complex-valued quantities, as well as for directional measures of interaction, the values at the entries across the diagonal are typically different. The convention used by FieldTrip is that the row-channel 'causes' the column-channel.
 
 ## Toggling between the different representations
 

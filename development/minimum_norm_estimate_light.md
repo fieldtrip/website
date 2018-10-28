@@ -4,12 +4,8 @@ layout: default
 tags:
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.
+{% include shared/development/warning.md %}
 
-There is no guarantee that this page is updated in the end to reflect the final state of the tutorial site.
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
 # Source reconstruction of event-related fields using minimum-norm estimate
 
 ## Introduction
@@ -100,11 +96,11 @@ The structure of your MRI variable contains the following field
 You can see that the **coordsys** field of anatomical data shows 'ctf'. The subject's MRI should be in [the CTF head coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system) because this is also how the locations of the MEG sensors are defined relative to the head. Hence, we the source model and head model that we create have to be expressed in the same CTF head coordinate system.
 
 
-<div class="alert-info">
+{:.alert-info}
 It is also possible to read in anatomical MRI data in [other formats](/dataformat) or from raw DICOM files. The different coordinate systems are explained in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). If your anatomical MRI is not aligned to the coordinate system in which your sensors are expressed, you can  [align](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) them using either **[ft_volumerealign](/reference/ft_volumerealign)** or **[ft_electroderealign](/reference/ft_electroderealign)**. This alignment or coregistration is commonly done using [fiducial points](/faq/how_are_the_lpa_and_rpa_points_defined) on the head.
 
 When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can visually inspect and determine the coordinate-system with **[ft_determine_coordsys](/reference/ft_determine_coordsys)**.
-</div>
+{% include endclass.html %}
 
 In the next step, we normalize the individual MRI using the MNI template anatomy from SPM. We do not explicitly have to give the MNI template to the function as it is used by default. In the subsequent step, we will also use a template MRI and a template cortical sheet. All templates we use are based on the same "colin27" anatomical MRI.
 
@@ -125,7 +121,7 @@ After the normalization, the MRI is aligned to the SPM/MNI coordinate system, in
 
 ### Exercise 1
 
-<div class="alert-info">
+{:.alert-info}
 What is the relation between the following transformation matrices?
 
 *  *mri.transform*
@@ -137,7 +133,7 @@ If you are not familiar with the concept of homogenous transformation matrices, 
 
 FIXME if I am correct then 1*3=2, please check. L: When we figured this out, may I need to rerun the entire analysis again.
 
-</div>
+{% include endclass.html %}
 
 ### Source model  
 
@@ -167,9 +163,9 @@ The brain surface is represented by points (vertices) that are connected into tr
 
 ### Exercise 2
 
-<div class="alert-info">
+{:.alert-info}
 What are the coordinates of the three points which define the first triangle (i.e the first row) of *temp_sheet_orig.tri*?
-</div>  
+{% include endclass.html %}  
 
 The template cortical sheet needs to be transformed from [MNI/SPM into CTF coordinates](/faq/ how_are_the_different_head_and_mri_coordinate_systems_defined ). For this, we use the inverse of the transformation matrix from the earlier sectio
 
@@ -178,7 +174,7 @@ The template cortical sheet needs to be transformed from [MNI/SPM into CTF coord
 
 ### Exercise 3
 
-<div class="alert-info">
+{:.alert-info}
 Plot the points of the transformed and the original template sheet using
 
 
@@ -203,7 +199,7 @@ Plot the points of the transformed and the original template sheet using
 	grid on;
 
 What is the difference in the location of the points between the original (temp_sheet_orig) and the individualized (ind_cortex) sheet?
-</div>
+{% include endclass.html %}
 
 The location of the vertices of the cortical sheet are now expressed in the CTF coordinate system relative to a point between the two ears. However, the sheet also needs to be in the same units as at the gradiometer positions. Therefore, we convert the units to 'cm'.
 
@@ -224,9 +220,9 @@ First, the template anatomical MRI is [segmented](/faq/how_is_the_segmentation_d
 	template_mri.coordsys = 'spm';  % we know that the template is in spm/mni coordinates
 	clear mri;                      % to avoid confusion between the template and subject's MRI
 
-<div class="alert-warning">
+{:.alert-warning}
 Note that the segmentation can be time consuming (~15 mins) and if you want, you can load the pre-computed result and skip ahead to the next step. The segmented MRI of this tutorial can be downloaded from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/mne) (template_seg.mat).
-</div>
+{% include endclass.html %}
 
 FIXME the naming of the tutorials and ftp directories has to be consistent (there is now minimumnormestimate, minimum_norm_estimate_light and mne)
 
@@ -333,9 +329,9 @@ The location of the MEG channels are defined in the .ds file of the tutorial dat
 
 ### Exercise 4
 
-<div class="alert-info">
+{:.alert-info}
 Plot also the sensor labels and check whether all anatomical information is defined in CTF head coordinates!
-</div>
+{% include endclass.html %}
 
 ## Processing of functional data
 
@@ -418,9 +414,9 @@ For beamformer source reconstructions we typically scan a regular 3-D grid that 
 
 For the cortical sheet source model the source points are all supposed to be inside the brain compartment. However, you can see that some points are marked as *outside* in the leadfield. These points stick out from the headmodel. We will use the **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** function to move these inward.
 
-<div class="alert-warning">
+{:.alert-warning}
 If you see that many points are marked *outside*, something seems to be wrong with the coregistrationYou can check by visual inspection.
-</div>  
+{% include endclass.html %}  
 
 
 	ind_cortex_orig = ind_cortex;
@@ -443,9 +439,9 @@ Now the field **outside** is empty, i.e. we do not have any sourcepoints outside
 
 ### Exercise 5
 
-<div class="alert-info">
+{:.alert-info}
 Which points have been moved in the cortical sheet? Compare the pos and pnt fields of the new and the original sheets. Plot all points with plot3, and use different colors for the points which are different in the two cortical sheets.
-</div>
+{% include endclass.html %}
 
 We compute the leadfield again with the modified cortical sheet.
 
@@ -537,9 +533,9 @@ The **pos**, **inside** and **outside** fields of the source contains specifies 
 
 ### Exercise 6
 
-<div class="alert-info">
+{:.alert-info}
 Compute the source estimate for the FIC condition using a filter where cfg.mne.lambda = 0 was specified. Plot the result at 500 ms (see the plotting in the next section) and compare it to the original result. What is the difference?
-</div>
+{% include endclass.html %}
 ## Visualization
 
 You can plot the estimated source strength at a specific time-point with the low-level **[ft_plot_mesh](/reference/ft_plot_mesh)** function.
@@ -559,9 +555,9 @@ You can plot the estimated source strength at a specific time-point with the low
 
 ### Exercise 7
 
-<div class="alert-info">
+{:.alert-info}
 Plot the source in MNI space together with a slice of the MNI template MRI (use ft_plot_slice).
-</div>
+{% include endclass.html %}
 
 ## Summary and suggested further reading
 

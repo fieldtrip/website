@@ -3,16 +3,18 @@ title: Deprecated functions and options
 layout: default
 ---
 
+{% include shared/development/warning.md %}
+
 # Deprecated functions and options
 
-<div class="alert-info">
+{:.alert-info}
 Definition of **[deprecation](http://en.wikipedia.org/wiki/Deprecated)**
 (//From Wikipedia, the free encyclopedia//)
 
 In computer software standards and documentation, deprecation is the gradual phasing-out of a software or programming language feature.
 
 A feature or method marked as deprecated is one which is considered obsolete, and whose use is discouraged. The feature still works in the current version of the software, although it may raise error messages as warnings. These serve to alert the user to the fact that the feature may be removed in future releases.
-</div>
+{% include endclass.html %}
 
 ## Introduction
 
@@ -20,14 +22,14 @@ FieldTrip is developed in a continuous fashion, i.e. there are no fixed releases
 
 Typically we will try to keep FieldTrip backward compatible whenever we replace a function or an option with something else. However, it is not possible to maintain backward compatibility for ever. That is why specific functionality is *deprecated*. This page tries to give an overview of deprecated functions and/or functionality.
 
-The [code development guidelines](/development/guidelines/code?&#document_deprecated_source_code) explain how you (as developer) should deal with deprecating functions, options or other pieces of functionality. 
+The [code development guidelines](/development/guidelines/code?&#document_deprecated_source_code) explain how you (as developer) should deal with deprecating functions, options or other pieces of functionality.
 ## Overview of deprecated functions
 
 February 201
 
 *  **ft_analysisprotocol** (ft_analysispipeline has replaced this function, see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2852)
 
-July 2013: 
+July 2013:
 
 *  **ft_freqcomparison** (ft_math can do the same and more, see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2222)
 
@@ -35,9 +37,9 @@ October 2011: the following functions were already deprecated and I moved them f
 
 *  **ft_sourcewrite**  (has been replaced by ft_volumewrite)
 
-*  **ft_databrowser_old** 
+*  **ft_databrowser_old**
 
-*  **ft_componentbrowser_old** 
+*  **ft_componentbrowser_old**
 
 September 2011: the following function should really not be used any more. Since I am updating some of the other ft_artifact_xxx functions, I decided to put this out of the way (i.e. moved it to compat).
 
@@ -103,7 +105,7 @@ January 2006: The *xxx*volume functions have all been renamed to volume//xxx// t
 
 *  **segmentvolume.m** has been renamed to volumesegment
 
-January 2006: Some of the artifact detection functions have been completely rewritten. Although the new functions should have the same behaviour, the exact same result cannot be guaranteed. To allow people to use the old implementations, they are stil available: 
+January 2006: Some of the artifact detection functions have been completely rewritten. Although the new functions should have the same behaviour, the exact same result cannot be guaranteed. To allow people to use the old implementations, they are stil available:
 
 *  **artifact_eog_old.m** is the old implementation of artifact_eog
 
@@ -143,7 +145,7 @@ Some miscellaneous functions that are deprecated ar
 
 *  **statistics_random.m** has been replaced by statistics_montecarlo
 
- 
+
 
 ## Overview of deprecated cfg options
 
@@ -219,11 +221,10 @@ Older
 
 *  **cfg.sgn** (in freqanalysis and some artifact functions) has been replaced by cfg.label for consistency with other functions
 
-*  **cfg.sgncomb** has been replaced by cfg.labelcmb for consistency with cfg.label 
+*  **cfg.sgncomb** has been replaced by cfg.labelcmb for consistency with cfg.label
 
 *  **cfg.rejectmuscle** (preprocessing and rejectartifact) has been replaced by cfg.artfctdef.muscle
 
 *  **cfg.rejectjump** (preprocessing and rejectartifact) has been replaced by cfg.artfctdef.jump
 
 *  **cfg.rejecteog** (preprocessing and rejectartifact) has been replaced by cfg.artfctdef.eog
-

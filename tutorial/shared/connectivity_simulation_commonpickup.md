@@ -5,8 +5,6 @@ layout: default
 
 When working with electrophysiological data (EEG/MEG/LFP) the signals that are picked up by the individual channels invariably consist of instantaneous mixtures of the underlying source signals. This mixing can severely affect the outcome of connectivity analysis, and thus affects the interpretation. We will demonstrate this by simulating data in 2 channels, where each of the channels consists of a weighted combination of temporally white noise unique to each of the channels, and a common input of a band-limited signal (filtered between 15 and 25 Hz). We will compute connectivity between these channels, and show that the common input can give rise to spurious estimates of connectivity.  
 
-	
-	
 	% create some instantaneously mixed data
 	
 	% define some variables locally
@@ -84,37 +82,31 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 
 #### Exercise 5
 
-<div class="alert-info">
+{:.alert-info}
 Simulate new data using the following mixing matrix: 
-
-	
-	
-	[0.9 0.1 0;0 0.2 0.8] 
-	
-
+<br/>
+<br/>
+  [0.9 0.1 0;0 0.2 0.8] 
+<br/>
+<br/>
 and recompute the connectivity measures. Discuss what you see.
-
-</div>
 
 #### Exercise 6
 
-<div class="alert-info">
+{:.alert-info}
 Play a bit with the parameters in the mixing matrix and see what is the effect on the estimated connectivity.
-</div>
 
 #### Exercise 7
 
-<div class="alert-info">
+{% include startclass.html class="note-info" %}
 Simulate new data where the 2 mixed signals are created from 4 underlying sources, and where two of these sources are common input to both signals, and where these two sources are temporally shifted copies of one another.
 
-Hint: the mixing matrix could look like thi
+Hint: the mixing matrix could look like this:
 
-	
 	[a b c 0; 0 d e f];
 
-and the trials could be created like thi
+and the trials could be created like this:
 
-	
 	for k = 1:nTrials
 	  dat = randn(4, nSamples+10);
 	  dat(2,:) = ft_preproc_bandpassfilter(dat(2,:), 1000, [15 25]);
@@ -126,4 +118,5 @@ and the trials could be created like thi
 	end
 
 Compute connectivity between the signals and discuss what you observe. In particular, also compute measures of directed interaction.
-</div>
+{% include endclass.html %}
+

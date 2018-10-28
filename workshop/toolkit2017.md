@@ -72,9 +72,8 @@ http://mibarrio.nl
 
 For the hands-on sessions we will use MATLAB R2012b, which you can start from the Desktop shortcut. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers and that we will bring on on a USB stick. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the computers and available on the USB stick.
 
-<div class="alert-danger">
+{:.alert-danger}
 Please do not use another MATLAB version than 2016b. It should be available on all hands-on computers.
-</div>
 
 A recent copy of FieldTrip and the data have been preinstalled on the computer and you do not have to download anything. Also, it should NOT be necessary to execute the following lines of code. These are only needed if you DO NOT start the MATLAB from the Desktop shortcut. In other words, you will probably always want to start MATLAB from the Desktop shortcut.
 
@@ -85,14 +84,11 @@ A recent copy of FieldTrip and the data have been preinstalled on the computer a
 
     cd D:\toolkit\data
 
-The restoredefaultpath command clears your path, keeping only the
-official MATLAB toolboxes. The addpath(pwd) statement adds the
-present working directory, i.e. the directory containing the fieldtrip
-main functions. The ft_defaults command ensures that all required
-subdirectories are added to the path.
+The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the fieldtrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 
-<div class="alert-danger">
+{:.alert-danger}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
-
+<br/>
+<br/>
 Furthermore, please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).
-</div>
+

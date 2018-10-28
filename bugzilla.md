@@ -17,9 +17,8 @@ To contribute a new issue to bugzilla or to add yourself to one of the existing 
 
 Note that the easier it is for one of the developers to reproduce the bug, the more likely it is that we can fix the problem.
 
-<div class="alert-info">
+{:.alert-info}
 You will have to register on the bugzilla server with your email address. Your address will not be visible to external visitors and will only be used to report back to you when the bug is resolved or to ask for additional information that we might need from you.
-</div>
 
 Good bug reports include a small test script and the data (i.e. mat file) required to reproduce the bug. Please create a test script and a piece of data that are both as small as possible to reproduce the problem. For example: a .mat file containing a data structure and a cfg structure, and an instruction like *"load the cfg and data from the mat file and run ft_freqanalysis(cfg, data)"*.
 

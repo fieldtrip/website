@@ -3,49 +3,48 @@ title: Integrate FieldTrip and MNE-Python
 layout: default
 ---
 
-<div class="alert-danger">
-This page is work in progress. Some code might be experimental and might not be included in the main repository. 
-</div>
-<div class="alert-danger">
+{% include shared/development/warning.md %}
+
 Not all the information contained in either Matlab or Python can be completely copied into the other format.
-</div>
-<div class="alert-danger">
+
 We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/bugzilla) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
-</div>
-<div class="alert-warning">
+
 Code under development, the mne-python community currently works on reader functions for fieldtrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
-</div>
-<div class="alert-info">
+
 More functions to work with files coming from MNE-python in Matlab are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
-</div>
+
 # Integrate FieldTrip and MNE-Python
 
 ## Introduction
-FieldTrip and MNE-Python offer tools to analyze electrophysiological activity. 
+
+FieldTrip and MNE-Python offer tools to analyze electrophysiological activity.
 [MNE-Python](http://martinos.org/mne/stable/index.html), with code available at [github.com](https://github.com/mne-tools/mne-python), facilitates the access to the FIFF files and integrates with the [MNE suite](http://martinos.org/mne/stable/index.html), written in C (FieldTrip can also use some of the functions in the MNE suite, as explained in the [minimum-norm estimate tutorial](/tutorial/minimumnormestimate)). In addition, MNE-Python allows for a variety of tools for the analysis of electrophysiological data, as demonstrated in the [example gallery](http://martinos.org/mne/stable/auto_examples/index.html).
 
 Primary use cases for the integration of FieldTrip and MNE-Python are
 
 *  the ability for MNE users do channel-level time-frequency analysis and sensor-level statistics in FieldTrip.
-
 *  the ability for FieldTrip users to do source reconstruction in MNE.
+
 ## Background
 
 FieldTrip and MNE-Python have similar but not identical processing pipelines. A common pipeline in FieldTrip is to create trials by reading the data directly from disk (in order to have a **[ft_datatype_raw](/reference/ft_datatype_raw)**) and then use this preprocessed data to create ERP (**[ft_datatype_timelock](/reference/ft_datatype_timelock)**). In MNE-Python, the whole continuous recording is imported (with the **Raw** class), then trials are extracted with the **Epochs** class and finally trials are averaged into the **Evoked** class. To recap, this is the correspondence between datatypes in the two package
 
- | Conceptual                                   | FieldTrip                                                          | MNE-Python                                                                  | 
- | ----------                                   | ---------                                                          | ----------                                                                  | 
- | one continuous segment of data               | [ft_datatype_raw](/reference/ft_datatype_raw)           | Raw                                                                         | 
- | multiple segments of data, e.g. trials       | [ft_datatype_raw](/reference/ft_datatype_raw)           | Epochs ((This datatype is not part of the original MNE Suite written in C)) | 
- | averaged ERFs for one or multiple conditions | [ft_datatype_timelock](/reference/ft_datatype_timelock) | Evoked                                                                      | 
+ | Conceptual                                   | FieldTrip                                                          | MNE-Python                                                                  |
+ | ----------                                   | ---------                                                          | ----------                                                                  |
+ | one continuous segment of data               | [ft_datatype_raw](/reference/ft_datatype_raw)           | Raw                                                                         |
+ | multiple segments of data, e.g. trials       | [ft_datatype_raw](/reference/ft_datatype_raw)           | Epochs ((This datatype is not part of the original MNE Suite written in C)) |
+ | averaged ERFs for one or multiple conditions | [ft_datatype_timelock](/reference/ft_datatype_timelock) | Evoked                                                                      |
 Therefore, we will need to import and export Raw, Epochs, and Evoked datatypes.
 
 The aim is to pass the channel=level data between FieldTrip and MNE. Reading is implemented through the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions. Writing is implemented through the ad-hoc **[fieldtrip2fiff](/reference/fieldtrip2fiff)** function.
+
 ## Procedure
 
 ### datatype_raw (one trial) `<->` Raw
+
 For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) and extract the ''.ds'' folder in a convenient location.
+
 #### Export to Raw
 
 First, we read the data, as usua
@@ -54,7 +53,7 @@ First, we read the data, as usua
 	cfg.dataset = 'MarkusBraille.ds';
 	cfg.trialdef.triallength = Inf;
 	cfg = ft_definetrial(cfg);
-	
+
 	cfg.continuous = 'yes';
 	cfg.channel = {'MEG', '-MLP31', '-MLO12'};
 	data = ft_preprocessing(cfg);
@@ -64,7 +63,7 @@ Then, we export them
 	fiff_file  = 'ctf_raw.fif';
 	fieldtrip2fiff(fiff_file, data)
 
-This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the Matlab files, events might be recoded using numbers. 
+This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the Matlab files, events might be recoded using numbers.
 
 You can then read the file into Python (MNE-Python 0.8
 
@@ -73,7 +72,7 @@ You can then read the file into Python (MNE-Python 0.8
 	raw = Raw('ctf_raw.fif')
 	print(raw)
 	print(raw.info)
-	
+
 	from mne import read_events
 	events = read_events('ctf_raw-eve.fif')
 	print(events)
@@ -88,24 +87,23 @@ Once you have the data in Python as Raw, you can use the ''save'' method.
 Then use FieldTrip to read the file
 
 	fiff_file = 'mne_python_raw.fif';
-	
+
 	cfg = []
 	cfg.dataset = fiff_file;
 	data1 = ft_preprocessing(cfg);
 	ft_datatype(data1)  % returns 'raw'
-	
+
 	event = mne_read_events('ctf_raw-eve.fif')
 
 So, ''data1'' is of type ''datatype_raw'' with one trial.
-<div class="alert-info">
+
 Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip.
-</div>
+
 ### datatype_raw (many trials) `<->` Epochs
 
 #### Export to Epochs
-<div class="alert-info">
+
 Currently, there is no export functionality to create mne-Epochs from fieldtrip. Feel free to add it on [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip).
-</div>
 
 And then in Python, you can read the ''Epochs'' wit
 
@@ -121,11 +119,11 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
 	:::python
 	from mne import read_events, Epochs
 	from mne.fiff import Raw
-	
+
 	raw = Raw('ctf_raw.fif')
 	events = read_events('ctf_raw-eve.fif')
 	print(events)
-	
+
 	# create events based on the index in the third column of events
 	event_ids = {'eventA': 4, 'eventB': 8}
 	tmin = -0.5
@@ -141,11 +139,11 @@ And then in Matla
 	cfg = [];
 	cfg.dataset = fiff_file;
 	data1 = ft_preprocessing(cfg);
-	
+
 	event_file = mne_read_events(events_file);
 	data1.trialinfo = event_file(:,3);
 	data1.cfg.trl(:,4) = event_file(:,3);
-	
+
 	ft_datatype(data1)  % returns 'raw'
 
 where ''data1'' contains the data organized in multiple trials.
@@ -156,7 +154,7 @@ Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_d
 	cfg = [];
 	cfg.dataset = fiff_file_epo;
 	cfg.trialdef.eventtype  = 'trial';               
-	cfg.trialfun = 'ft_trialfun_general'; 
+	cfg.trialfun = 'ft_trialfun_general';
 	cfg = ft_definetrial(cfg);
 
 where ''data1'' contains the data organized in multiple trials including condition labelling.
@@ -164,7 +162,8 @@ where ''data1'' contains the data organized in multiple trials including conditi
 ### datatype_timelock `<->` Evoked
 
 #### Export to Evoked
-Create evoked in FieldTri
+
+Create evoked in FieldTrip:
 
 	cfg = [];
 	cfg.dataset = 'MarkusBraille.ds';
@@ -175,7 +174,7 @@ Create evoked in FieldTri
 	cfg = ft_definetrial(cfg);
 	cfg.channel   = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
 	data = ft_preprocessing(cfg);
-	
+
 	cfg = [];
 	avg = ft_timelockanalysis(cfg, data);
 	fiff_file = 'ctf-ave.fif';
@@ -204,7 +203,7 @@ And then in Matlab, we can read the dat
 	cfg.dataset = fiff_file;
 	data1 = ft_preprocessing(cfg);
 	avg1 = ft_timelockanalysis([], data1);
-	
+
 	ft_datatype(avg1)  % returns 'timelock'
 
 In addition, we can read multiple conditions too, if there are present in the ''evoked'' fif fil
@@ -212,7 +211,7 @@ In addition, we can read multiple conditions too, if there are present in the ''
 	cfg = [];
 	cfg.dataset = fiff_file;
 	data1 = ft_preprocessing(cfg);  % E.g. with 3 conditions -> mapped to 3 trials
-	
+
 	cfg = [];
 	cfg.trials = 1;
 	avg1 = ft_timelockanalysis(cfg, data1);
@@ -220,4 +219,3 @@ In addition, we can read multiple conditions too, if there are present in the ''
 	avg2 = ft_timelockanalysis(cfg, data1);
 	cfg.trials = 3;
 	avg3 = ft_timelockanalysis(cfg, data1);
-

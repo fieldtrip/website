@@ -25,9 +25,8 @@ Simulus presentation was done using using [NBS Presentation](https://www.neurobs
 
 The shared data is organized according to [BIDS](http://bids.neuroimaging.io), the Brain Imaging Data Structure. This not only gives structure to the organization of the data files, but also helps to ensure that appropriate metadata and documentation are shared. We believe that this will facilitate reuse and increase the value of the shared data.
 
-<div class="alert-warning">
+{:.alert-warning}
 At this moment the data sharing has not been totally completed. Right now we are working on a publication that describes the details of this dataset, and the data is currently under review. Once completed, the data will be published on the [Donders Repository](https://www.ru.nl/donders/research/data/) with DOI http://hdl.handle.net/11633/di.dccn.DSC_3011020.09_236.
-</div>
 
 ##  Procedure
 
@@ -75,9 +74,8 @@ After each of the automated steps the results should be checked. For that I have
 
 It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
 
-<div class="alert-info">
+{:.alert-info}
 The scripts are included on this page for completeness. You can also download them from our ftp server at ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids
-</div>
 
 ### Step 1: create empty directory structure
 
@@ -199,8 +197,9 @@ In this step we are copying and renaming the CTF datasets to the target location
 	####################################################################################################
 	find $BIDS -name \*.res4 -exec $HOME/bids-tools/bin/remove_ctf_datetime -d {} \;
 
-<div class="alert-info">You can see a few exceptions, which reflect datasets that did not convert well automatically. The reason for this is the fact that during data acquisition, the data ended up in two different .ds datasets. According to BIDS, these are supposed to be represented by different 'runs'.
-</div>
+{:.alert-info}
+You can see a few exceptions, which reflect datasets that did not convert well automatically. The reason for this is the fact that during data acquisition, the data ended up in two different .ds datasets. According to BIDS, these are supposed to be represented by different 'runs'.
+
 ### Step 4: collect the NBS Presentation log files
 
 All Presentation log files are copied from their original location to the sourcedata folder. Although in step 6 the events in the log files will be used to construct the events.tsv files, we want to keep (and share) the Presentation log files, as those contain slightly more information than what can be represented in the events.tsv.
@@ -453,12 +452,15 @@ The CTF coregistered MRI gets the same json sidecar file as the one converted by
 	  end % for each dataset
 	end % for each subject
 
-<div class="alert-info"> This script here deals with some dataset specific exceptions. Indeed, given the fact that we are working with real data here, due to various reasons, automatic conversions (one-size-fits-all) are likely to occasionally fail.
-
+{:.alert-info}
+This script here deals with some dataset specific exceptions. Indeed, given the fact that we are working with real data here, due to various reasons, automatic conversions (one-size-fits-all) are likely to occasionally fail.
+<br/>
+<br/>
 In the current context, the tricky part happened to be the creation of the events.tsv files for the MEG task data. In order to create these files, data2bids attempts to align the experimental events, as extracted from the presentation software logfile, with the experimental events, as extracted from the digital trigger channel in the MEG data files. This only works well and unambiguously, if there's a one-to-one-mapping of the events (or a specific type of event) in the two representations.
-
+<br/>
+<br/>
 In the current example, there were occasional issues with the digital trigger channel, which precluded fully automatic processing of all files. The resulting example script above is therefore the result of several iterations to deal with the exceptions.
-</div>
+
 ### Step 7: create the general sidecar files
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.

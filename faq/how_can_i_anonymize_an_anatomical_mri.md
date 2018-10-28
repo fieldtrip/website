@@ -6,9 +6,8 @@ tags: [faq, mri, anonymize, sharing]
 
 # How can I anonymize or deidentify an anatomical MRI?
 
-<div class="alert-info">
+{:.alert-info}
 This is something that in general you will want to do **after** the coregistration of the anatomical MRI with the MEG data (using **[ft_volumerealign](/reference/ft_volumerealign)**), as the coregistration often relies on facial landmarks.
-</div>
 
 You can deface an anatomical MRI using the FieldTrip **[ft_defacevolume](/reference/ft_defacevolume)** function. The default is to show a graphical user interface that allows you to scale, rotate and translate a box, such that it overlaps with the facial details that you want to be removed. Alternatively, you can use the cfg.method='spm' option to use an automated defacing procedure.
 
@@ -40,10 +39,11 @@ Subsequently you can save it to a MATLAB file or to a NIFTI file usin
 
 See also this frequently asked question on [how to anonimize a CTF MEG dataset](/how_can_i_anonymize_a_ctf_dataset).
 
-<div class="alert-danger">
+{:.alert-danger}
 If you share your MATLAB files with others, note that there might also be identifying information in the [provenance](https://en.wikipedia.org/wiki/Provenance) information in the "cfg" field that is included in the FieldTrip data structure.
-
+<br/>
+<br/>
 In principle FieldTrip keeps full track of all analyses that you do. The consequence might be that the original file name (identifying the subject) is included in the provenance information. You can use the **[ft_anonimizedata](/reference/ft_anonimizedata)** function to scrub the provenance from unwanted information.
-
+<br/>
+<br/>
 Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better!   
-</div>

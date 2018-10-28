@@ -6,7 +6,7 @@ tags: [realtime]
 
 # Overview of the realtime buffer
 
-This page is part of the documentation series of the Fieldtrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, bein
+This page is part of the documentation series of the FieldTrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, bein
  1.  description and general [overview of the buffer](/development/realtime/buffer overview), 
  2.  definition of the [development:realtime:buffer protocol](/development/realtime/buffer protocol),
  3.  the [ reference implementation](/development/realtime/reference implementation ), and

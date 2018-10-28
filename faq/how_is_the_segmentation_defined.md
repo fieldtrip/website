@@ -55,11 +55,11 @@ Here is to code that creates this data-structure. It makes use of one of the MRI
 
 The output of this code can be seen in the introduction of this faq. 
 
-<div class="alert-info">
+{:.alert-info}
 Here, we used the **[ft_volumereslice](/reference/ft_volumereslice)** function prior to segmentation. It is not required to use this function , but we used it here to obtain a nicer orientation of the MRI images for visualization with **[ft_sourceplot](/reference/ft_sourceplot)**. 
-
+<br/>
+<br/>
 The reason for this is explained in more detail [here](/faq/how_change_mri_orientation_size_fov).
-</div>
 
 #### Binary representations of brain, skull and scalp
 

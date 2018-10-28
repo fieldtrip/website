@@ -41,18 +41,20 @@ The coil position was determined by finding the motor hotspot. The stimulation l
 
 **Event markers:** An event was placed at the onset of each TMS-pulse indicating the condition. 'S  1' represents the 'Relax' condition and 'S  3' represents the 'Contract' condition.
 
-<div class="alert-warning">
-
+{:.alert-warning}
 ** Memory Issues **
-
+<br/>
+<br/>
 In TMS-EEG research we are often dealing with large datasets due to high sampling rates and lengthy recording sessions. It is therefore quite common that data structures loaded into MATLAB's memory are multiple gigabytes in size.
-
+<br/>
+<br/>
 The maximum size a MATLAB array can be depends on the operating system, the MATLAB version and the amount of RAM. If you are running a 32-bit version of Windows, your arrays cannot be larger than 2 gigabytes. If you are running a 32-bit version of MATLAB on a 64-bit version of Windows your arrays can still not be larger than 4 gigabytes. Only when you are running both a 64-bit version of MATLAB and of Windows can you use the full extent of your RAM and are theoretically able to store arrays as large as 8 terabytes.
-
+<br/>
+<br/>
 We therefore advise you to run this tutorial on a 64-bit (Windows) operating system, running a 64-bit version of MATLAB and with at least 8GB RAM.
-
+<br/>
+<br/>
 Also see: [Resolving "Out of Memory" Errors](http://www.mathworks.nl/help/matlab/matlab_prog/resolving-out-of-memory-errors.html)
-</div>
 
 ## Pulses and recordings
 
@@ -62,9 +64,8 @@ Before starting your analysis, it helps to consider your experiment relative to 
 
 In many cases you will want to analyze your data with respect to some interesting event, e.g. a visual stimulus onset, the subjects response to a stimulus, or in this case the onset of a TMS pulse. It is, however, also possible to analyze your data in a continuous way. For example, you might be interested in resting-state EEG changes over time after participants have received theta-burst stimulation. In those cases you are not going to divide your data into experimentally defined trials but rather analyze the data in a continuous fashion.
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial is written with a trial-based analysis in mind and as such may not be directly applicable to continuous data. Furthermore, this tutorial uses EEG data recorded during a single-pulse TMS stimulation protocol.
-</div>
 
 It is also important to realize that between datasets the amount and spacing of the pulses will vary. In principle we can distinguish between one pulse per trial, two-pulses per trial, or repetitive stimulation. Although this tutorial was written for single-pulse studies, most of it also applies to multiple-pulse data.
 
@@ -102,14 +103,14 @@ It is likely that you will encounter an artifact that resembles an exponential d
 
 # Procedure
 
-<div class="alert-danger">
-It is important that you clean your data from TMS artifacts prior to any other preprocessing steps (e.g. filtering, detrending, downsampling) other than reading the data into memory. Especially filtering can produce long-lasting additional artifacts far outlasting the duration of the artifacts in the raw data, making subsequent analysis of the data troublesome.</div>
+{:.alert-danger}
+It is important that you clean your data from TMS artifacts prior to any other preprocessing steps (e.g. filtering, detrending, downsampling) other than reading the data into memory. Especially filtering can produce long-lasting additional artifacts far outlasting the duration of the artifacts in the raw data, making subsequent analysis of the data troublesome.
 
-<div class="alert-warning">
+{:.alert-warning}
 The procedures explained in this tutorial have been applied and described in the following pape
-
+<br/>
+<br/>
 Herring, J. D., Thut, G., Jensen, O., & Bergmann, T. O. (2015). [Attention Modulates TMS-Locked Alpha Oscillations in the Visual Cortex](http://www.jneurosci.org/content/35/43/14435). The Journal of Neuroscience, 35(43), 14435-14447.
-</div>
 
 We will use the following procedure to deal with TMS-EEG dat
 
@@ -222,9 +223,8 @@ The averaged data we want to plot is represented in the data_tms_avg structure. 
 
 Time is represented in the .time field, the amplitudes are stored in .avg. When inspecting this .avg field we can see that it has a dimension of 61x10000. In this case you may have guessed that the rows represent the channels and the columns the time-points within each channel. If you are uncertain about the order of the dimensions you can always look at the .dimord field. The .dimord field tells you what the dimensions in the data field represent. Here we see that the  dimord is chan_time. Therefore, our data field (.avg) is represented by channels X time. Channel labels can be found as strings located in the .label field.
 
-<div class="alert-warning">
+{:.alert-warning}
 In our case the electrode labels are equal to the channel numbers. Please be aware that this does not necessarily correspond to the row-numbers in the data matrices. For example, our reference electrode used in the recording is number 5 on the cap. This channel, however, is now represented in the last row (61) of the data matrix. Always check the .label field of your data structure which row of the data corresponds to which channel and electrode.
-</div>
 
 We will now plot the data for all channels in separate windows. You can use the following code to close all previous figure window
 `close all`{matlab}
@@ -298,9 +298,8 @@ In this channel we can find ringing/step response, cranial muscle, exponential d
 
 #### Exercise: find artifacts in other channels
 
-<div class="alert-info">
+{:.alert-info}
 Try to see if the artifacts are present in all channels and if there are differences in their extent in time.
-</div>
 
 ## Artifact exclusion
 
@@ -319,11 +318,11 @@ The function **[ft_rejectartifact](/reference/ft_rejectartifact)** can adjust th
 	cfg.trialdef.eventvalue     = trigger ;
 	cfg_ringing = ft_artifact_tms(cfg);     % Detect TMS artifacts
 
-<div class="alert-warning">
+{:.alert-warning}
 In **[ft_artifact_tms](/reference/ft_artifact_tms)** we use cfg.prestim and cfg.poststim to indicate the time range around the TMS pulse that should be removed. There is no restriction, however, that prevents both time points from being located after the pulse (in case of a recharging artefact, for example). It is therefore also possible to mark artifacts that have on- and offsets both after onset of the TMS pulse.
-
+<br/>
+<br/>
 In case you wish to specify an artifact onset that occurs after the TMS pulse (e.g. in case of a recharging artifact), cfg.prestim must be negative (e.g. -0.500 for 500 ms after pulse onset) as cfg.prestim refers to time **before** stimulus onset.
-</div>
 
 	% Here we use a negative value because the recharging artifact starts AFTER TMS-pulse onset
 	cfg.prestim   = -.499;
@@ -390,11 +389,11 @@ We now have our data segmented, removed ringing/step response and recharge artif
 
 Running an ICA can take quite some time depending on the size of the data. Depending on your system processing this dataset will take about 15-30 minutes. Furthermore, running an ICA requires quite a lot of memory. In this case it requires an estimated 4GB of additional system memory. We therefore advise you to download the output here: [comp_tms.mat](ftp//ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/comp_tms.mat). You can then skip the following segment of code.
 
-<div class="alert-warning">
+{:.alert-warning}
 As ICA is in fact a spatial filter, it relies on the artifacts having a stable topography in the data. If the topography changes during the experiment, your artifact may be captured in more than one, or two components and potentially cannot be captured in sufficient components at all. If you therefore know beforehand that the topography of your artifacts are different for parts of your data, you may have to apply the ICA separately for these parts. For example, if you are running an experiment where different locations are stimulated in different conditions, you could run the ICA separately for each location.
-
+<br/>
+<br/>
 A stable TMS coil position increases the spatial stability of the artifacts, which is beneficial for estimating the artifact as independent component.
-</div>
 
 If you have downloaded comp_tms.mat, you can load the data with the following cod
 
@@ -413,7 +412,7 @@ If you have downloaded comp_tms.mat, you can load the data with the following co
 
 	save('comp_tms','comp_tms','-v7.3');
 
-<div class="alert-warning">
+{% include startclass.html class="alert-warning" %}
 
 **Memory issues**
 
@@ -436,7 +435,7 @@ Now you can run the ICA. After you have run the ICA on the downsampled data, rel
 	clear data_tms_resampled;
 	load data_tms_segmented;
 
-</div>
+{% include endclass.html %}
 
 After having run the ICA we are left with a structure similar to our data_tms_segmented structure with a few fields added and some changed.
 
@@ -489,9 +488,9 @@ We can now browse the averaged data in the same way we browsed our channel data.
 
 #### Exercise: plotting components
 
-<div class="alert-info">
+{:.alert-info}
 Try to plot the components using MATLAB's built-in plot function. Which do you prefer to browse the components?
-</div>
+{% include endclass.html %}
 
 As ICA is in principle a spatial filter, we can inspect how each component loads spatially onto our original channel data. For this purpose we will use **[ft_topoplotIC](/reference/ft_topoplotIC)**.
 
@@ -508,9 +507,9 @@ Using **[ft_databrowser](/reference/ft_databrowser)**, or MATLAB's plotting func
 
 #### Exercise: find the components!
 
-<div class="alert-info">
+{:.alert-info}
 Try to find components reflecting the decay and/or muscle artifact. Which ones would you remove?
-</div>
+{% include endclass.html %}
 
 Due to various factors it is likely that you will not be able to fully capture both artifacts into one or two components. In this case, the decay artifact is captured pretty well by component numbers 41 and 56. The topographies of these components overlaps with the location of stimulation. These components also capture a large part of the cranial muscle artifact, but you can also see that almost every other component contains parts of cranial muscle artifacts. We can therefore conclude that the cranial muscle artifact cannot be fully removed by ICA in this dataset.
 
@@ -520,7 +519,7 @@ Due to various factors it is likely that you will not be able to fully capture b
 
 #### Exercise: removing other types of noise
 
-<div class="alert-info">
+{:.alert-info}
 At this stage you can also use your ICA data to remove other types of artifacts/noise. ICA is particularly well-suited to deal with eye-blinks and saccades, and can potentially remove other types of noise as well (also see the examples on [EOG artifacts](/example/use_independent_component_analysis_ica_to_remove_eog_artifacts) and [ECG artifacts](/example/use_independent_component_analysis_ica_to_remove_ecg_artifacts)).
 
 As these types of noise are not time-locked to onset of the TMS-pulse you can use **[ft_databrowser](/reference/ft_databrowser)** to browse through the trials in a component view. Be aware that in this case you are browsing the segments of the original trials.
@@ -531,7 +530,7 @@ As these types of noise are not time-locked to onset of the TMS-pulse you can us
 	ft_databrowser(cfg, comp_tms);
 
 Which components would you further suggest to remove?
-</div>
+{% include endclass.html %}
 
 We now have a list of component we would wish to remov
 
@@ -588,9 +587,9 @@ We can now have a look at the current status of our data.
 
 #### Exercise: how successful were we in removing TMS artifacts?
 
-<div class="alert-info">
+{:.alert-info}
 At the beginning we determined we had to deal with ringing/step response, cranial muscle, recharging and exponential decay artifacts. Have a look at the data, how successful were we in removing all of them? What is left and how could we deal with this?
-</div>
+{% include endclass.html %}
 ## Interpolation
 
 At this point we've removed the ringing/step response and discharge artifact by excluding it from our data. We've attenuated the exponential decay artifact using ICA. We've attenuated the muscle artifact a bit but have not succeeded as can be seen on the above plot of channel 17. Be aware that the ringing/step response artifact has been completely removed. The spiky part of the signal around 10ms, right after the gap, is purely a cranial muscle artifact. To prevent this artifact from interfering with our further processing steps we will also cut and interpolate the remainder of the muscle artifact.
@@ -621,9 +620,9 @@ We've now recreated the original trial structure and put all pieces of data back
 
 As you can see from the .trial field from both data structures we again have 300 trials. The cleaned dataset still contains the muscle artifact, we will therefore fill that segments with nans. The data (channel x time) for each trial is located in cells within the trial field in our data structure. We are now going to loop through each trial and replace the segment that contain the muscle artifact with nans. Browsing through the data it seems sufficient to replace up to 15ms after stimulation onset with nans.
 
-<div class="alert-warning">
+{:.alert-warning}
 When we want to know which data point corresponds to any given time point we often use the function **[nearest](/reference/nearest)**. This function finds the index number of a data point in a range of values that is closest to the point you request. For example, consider the vector [0 0.3 0.6 0.9 1.2]. If you would want to know the value closest to 0.5 the output **[nearest](/reference/nearest)** gives is 3, which stands for the third value in the vector: 0.6. This has advantages over MATLAB's standard way of finding values within vectors (e.g. a==0.5) because we often do not exactly know the exact value we are interested in.
-</div>
+{% include endclass.html %}
 
 	% Replacing muscle artifact with nans
 	muscle_window = [0.006 0.015]; % The window we would like to replace with nans
@@ -667,9 +666,9 @@ Using the following code we will compare the average TEP of the original data wi
 	    legend({'Raw' 'Cleaned'});
 	end;
 
-<div class="alert-warning">
+{:.alert-warning}
 After artifact removal, make sure to browse through your channels comparing the data prior and post correction to check if there are any residual artifacts left. It could be that you will have to interpolate a bit more or try to remove additional independent components.
-</div>
+{% include endclass.html %}
 
 ![image](/static/img/development/tms/clean.png)
 
@@ -690,9 +689,9 @@ Now that we have cleaned our data and applied our (post-)processing steps we con
 
 	save('data_tms_clean','data_tms_clean','-v7.3');
 
-<div class="alert-warning">
+{:.alert-warning}
 When saving data we always use the switch '-v7.3' as this allows datafiles to be larger than 4GB, which is often the case in TMS-EEG data.
-</div>
+{% include endclass.html %}
 # Analysis
 
 Now that we have cleaned our data we can continue with our analyses. Initially we started out with the question whether pre-contraction affects the TMS-evoked potential. To address this question we are going to compare the amplitudes of the TEPs, inspect the frequency content of the response to TMS, and look at Global Mean Field Power.
@@ -775,11 +774,11 @@ A nice feature of **[ft_singleplotER](/reference/ft_singleplotER)** is that you 
 
 ####  Exercise: Where are the differences?
 
-<div class="alert-info">
+{:.alert-info}
 Where can you find the largest differences? How does the topography of these differences look like? Does it make sense given that we know we stimulated left-M1?
-</div>
+{% include endclass.html %}
 
-<div class="alert-warning">
+{:.alert-warning}
 FieldTrip supports numerous ways of plotting your data. Each suited for a particular purpose. Most plotting functions can be subdivided into three categories, each category has a plotting function for a specific datatype. For us the following are the most useful
 
 *  ft_singleplotXXX for single channel data.
@@ -791,7 +790,7 @@ FieldTrip supports numerous ways of plotting your data. Each suited for a partic
 XXX can be ER, for event-related data or TFR for time-frequency data.
 
 Please also have a look at [Plotting data at the channel and source level](/tutorial/plotting) for a tutorial on plotting data
-</div>
+{% include endclass.html %}
 ## Global Mean Field Power
 
 Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](http://dx.doi.org/10.1016/0013-4694(80)90419-8), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
@@ -838,9 +837,9 @@ Now we can plot the GMFP of both conditions.
 	![image](/static/img/development/tms/gmfp-plot.png)
 
 	####  Exercise: GMFP vs TEPs
-	<div class="alert-info">
+	{:.alert-info}
 	Are there differences between the outcome of this analysis and the comparison between time-locked averages in the previous section? Can you see an advantage of using GMFP to compare conditions?
-	</div>
+	{% include endclass.html %}
 	##  Time-frequency analysis
 	We have so far analyzed responses to the TMS pulse which always occur at the same time. Anything that is not phase-locked to the onset of the TMS pulse is cancelled out due to averaging. It is, however, possible that the TMS pulse induces responses that are not necessarily phase-locked to the onset of the pulse, for example changes in spontaneous oscillatory activity. To look at these induced responses we are going to look at time-frequency representations of our data. We will decompose our signals into frequencies and look at the averages of the power of these frequencies. Contrasting to time-lock analyses we are then sensitive to oscillatory activity not phase-locked to onset of the pulse (also see: [[tutorial:timefrequencyanalysis|Time-frequency analysis using Hanning window, multitapers and wavelets]]).
 
@@ -924,15 +923,15 @@ This plot is fully interactive, click and drag to select one or more channels, c
 
 ####  Exercise: Additional information
 
-<div class="alert-info">
+{:.alert-info}
 What additional information can be gained by analyzing time-frequency data?
-</div>
+{% include endclass.html %}
 
 #### Exercise: Conclusion
 
-<div class="alert-info">
+{:.alert-info}
 Now that we have described three ways of looking at our data, can we conclude the conditions differ? If so, how do they differ specifically?
-</div>
+{% include endclass.html %}
 
 # Summary and suggested further reading
 

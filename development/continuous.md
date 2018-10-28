@@ -3,12 +3,7 @@ title: Handling of continuous data
 layout: default
 ---
 
-<div class="alert-danger">
-
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Handling of continuous data
 
@@ -29,29 +24,19 @@ but also like
 It is conceivable that similar changes can be made for other functions on the input side of fieldtrip. A list of functions to consider is
 
 *  definetrial
-
 *  artifact_eog/jump/muscle/xxx 
-
 *  preprocessing
-
 *  rejectartifact
-
 *  rejectvisual
-
 *  redefinetrial
-
 *  recodeevent
 
 ## To do
 
 *  Discuss the desired functionality and features
-
 *  Discuss the dependencies and consistency of the features
-
 *  Discuss the required modifications to the code
-
 *  Implement the changes
-
 *  Test and document the changes
 
 example

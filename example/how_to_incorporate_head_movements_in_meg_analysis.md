@@ -11,15 +11,15 @@ tags: [example, artifact, meg, regression, confound]
 Changes in head position during MEG sessions may cause a significant error in the source localization. Besides, the mixture of different head positions over time adds variance to the data that is not accounted for by the experimental manipulation. Thus head movements may deteriorate statistical sensitivity when analyzing MEG on both sensor and source levels. It is therefore recommended to incorporate head movements in the offline MEG analysis, see {{:faq:stolkneuroimage2013.pdf|Stolk et al., NeuroImage 2013}}.
 
 Continuous head localization information is stored in HLC channels (Head Localization Channels) in CTF MEG system. An example script here shows how to read these channels in FieldTrip and estimate the amount of movement offline. Information from these channels can also be used to [track the head position in real time.](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session)
-The data used in this example script  [can be obtained here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/regressconfound/TacStimRegressConfound.zip)
+The data used in this example script [can be obtained here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/regressconfound/TacStimRegressConfound.zip)
 
 In general there are multiple ways that you can use the continuous head localization information. 
- 1.  you can discard a subject or trial(s) from subsequent analysis if he/she moved too much
- 2.  you can regress out the movements from the processed data
- 3.  you can compensate the raw data for the movements 
- 4.  you can correct the forward model (i.e. the leadfield) for the spatial blurring that is due to the movements 
+1. you can discard a subject or trial(s) from subsequent analysis if he/she moved too much
+2. you can regress out the movements from the processed data
+3. you can compensate the raw data for the movements 
+4. you can correct the forward model (i.e. the leadfield) for the spatial blurring that is due to the movements 
 
-The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script. A more general description of the data, also containing information on the head movements, is made using **[ft_qualitycheck](/faq/how_can_i_check_the_quality_of_an_meeg_dataset?)**. At the donders, this function is run automatically on each new MEG dataset every night. The (visualized) output is stored in /home/common/meg_quality.  
+The first way of dealing with it requires that you visualize and decide on the movements. This is demonstrated in the first half of the example script. A more general description of the data, also containing information on the head movements, is made using **[ft_qualitycheck](/faq/how_can_i_check_the_quality_of_an_meeg_dataset?)**. At the donders, this function is run automatically on each new MEG dataset every night. The (visualized) output is stored in /home/common/meg_quality.
 
 The second way of dealing with the movements means that you perform **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** or **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with the option keeptrials=yes. This will give trial estimates of the ERF, the power or the source strength for each trial. The effect that the variable head position has on those single-trial estimates can be estimated and removed from the data using **[ft_regressconfound](/reference/ft_regressconfound)**. This method has been found to significantly improve statistical sensivity following head movements, {{:faq:stolkneuroimage2013.pdf|up to 30%}}, and is therefore demonstrated in the second half of the example script.
 
@@ -178,14 +178,12 @@ Second, the same trials in the headposition data have to be selected as those pr
  
 Finally, note that the circumcenter function is a helper function that calculates the position (geometrical center of the three localizer coils) and orientation of the head. This saves some **degrees of freedom** (df=6) as compared to taking into account the x,y,z-coordinates of each coil separately (n=3) as regressors (df=9). If you want to also use the squares, cubes, and derivatives as regressors (to account for non-linear effects of head motion on the MEG signal), this can save quite a bit of degrees. However, too large a number of covariates can reduce statistical efficiency for procedures. In that case, Matlab will produce the Warning 'Rank deficient'. A rule of thumb is to roughly have 10% of the sample size (based on chapter 8 of Tabachnick & Fidell (1996)).
 
-<div class="alert-warning">
+{:.alert-warning}
 Please cite {{:faq:stolkneuroimage2013.pdf|this paper}} when you have used the offline head movement compensation in your study.
+<br/>
+<br/>
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **Online and offline tools for head movement compensation in MEG.** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R.
-
-**Online and offline tools for head movement compensation in MEG.**
-Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
-</div>
 
 ## Appendix: circumcenter
 

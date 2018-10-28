@@ -8,7 +8,7 @@ tags:
 
 ## Introduction
 
-This tutorial will give you an introduction into how to use FieldTrip with Matlab and how to make an analysis protocol. You will read a few examples of analysis protocols of EEG/MEG data analysis. This introduction, however, does not give detailed information about each analysis steps. You will find those in other tutorials. You will find also useful information about how to use FieldTrip in the [Fieldtrip Walkthrough](/walkthrough).
+This tutorial will give you an introduction into how to use FieldTrip with Matlab and how to make an analysis protocol. You will read a few examples of analysis protocols of EEG/MEG data analysis. This introduction, however, does not give detailed information about each analysis steps. You will find those in other tutorials. You will find also useful information about how to use FieldTrip in the [FieldTrip Walkthrough](/walkthrough).
 
 ## Background
 

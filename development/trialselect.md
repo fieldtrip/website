@@ -3,12 +3,7 @@ title: Implement trial selection option
 layout: default
 ---
 
-<div class="alert-danger">
-
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Implement trial selection option
 
@@ -17,74 +12,51 @@ Consistent implementation of option for trial selection in all relevant function
 ## Objectives
 
 *  implement configuration option for doing trial selection in all relevant functions
-
 *  consistent implementation and documentation
 
 ## Step 1: get an overview of all functions for which this is relevant
 
 *  functions that use raw data
-
 *  functions that (could) use data with an 'rpt' dimension
-
 *  functions where this has already been implemented
 
 ----
 ##### Functions that use raw dat
 
 *  preprocessing.m (when called with preprocessed data) -done-
-
 *  combineplanar.m   -done-
-
 *  megplanar.m   -done-
-
 *  megrealign.m   -done-
-
 *  megrepair.m   -done-
-
 *  scalpcurrentdensity.m   -done-
-
 *  rejectvisual.m   -done-
-
 *  redefinetrial.m   -done-
-
 *  resampledata.m   -done-
-
 *  timelockanalysis.m   -done-
-
 *  freqanalysis.m   -done-
 
 ##### Functions that (could) use data with an 'rpt' dimensio
 
 *  freqdescriptives.m   -done-
-
 *  singleplotER.m   -done-
-
 *  singleplotTFR.m   -done-
-
 *  topoplotER.m   -done-
-
 *  topoplotTFR.m   -done-
-
 *  multiplotER.m   -done-
-
 *  multiplotTFR.m   -done-
 
 ##### Functions where this has already been implemente
 
 *  componentanalysis.m   -done-
-
 *  nonlinearassociation.m   -done-
 
 How it's currently implemented in these function
-
 	
 	%   cfg.trials       = 'all' or a selection like 1:10 (default = 'all')
 
-	
 	% set the defaults
 	if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
 
-	
 	% select trials of interest
 	if ~strcmp(cfg.trials, 'all')
 	  fprintf('selecting %d trials\n', length(cfg.trials));
@@ -95,9 +67,7 @@ How it's currently implemented in these function
 ## Step 2: develop and implement solution
 
 *  ensure consistency in solution
-
 *  relevant fields (trl) should be adjusted accordingly
-
 *  documentation
 
 ----

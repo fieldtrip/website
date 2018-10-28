@@ -4,6 +4,9 @@
 - name:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
 
+- name:  Dashboard
+  link:  /development/dashboard
+
 - name:  Project overview
   link:  /development/project
 

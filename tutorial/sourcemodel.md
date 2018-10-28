@@ -28,11 +28,8 @@ In general, one could construct a source model that defines positions of dipoles
 We will describe a few different ways to create a source model based on the anatomical mri of the [tutorial data set](/tutorial/shared/dataset) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Some of these procedures can be done entirely using high-level FieldTrip functions. Other procedures require the use of external software, in particular Freesurfer, or HCP-workbench.
 
 *  Construction of a source model based on a regular 3-dimensional grid of dipole positions;
-
 *  Construction of a source model based on a surface description of the cortical sheet;
-
 *  Performing group analysis on 3-dimensional source-reconstructed data.
-
 *  Performing group analysis on cortical-sheet based source-reconstructed data.
 
 ## Construction of a source model based on a regular 3-dimensional grid of dipole positions
@@ -105,9 +102,8 @@ For convenience, you can now save the transformation matrix.
 	cfg.parameter   = 'anatomy';
 	ft_volumewrite(cfg, mri_spm_rs);
 
-<div class="alert-danger">
+{:.alert-danger}
 Importantly, the mgz-filetype can **only** be used on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved nor read on a Windows PC. If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer.
-</div>
 
 #### 5. Preprocessing of the anatomical MRI: impose coordinate system according to M/EEG convention
 
@@ -394,9 +390,8 @@ As an alternative you can create a template grid yourself, like thi
 
 **fig 3: template grid in single-subject head coordinates, superimposed onto the headmodel**
 
-<div class="alert-danger">
+{:.alert-danger}
 Keep in mind that the .pos field in the source models are subject specific. When you want to do group analysis across subjects, which now in principle is allowed due to the equivalence of the dipole positions in normalized space, you need to replace the positions with the normalized positions of the template sourcemodel. Otherwise, FieldTrip will throw an error.
-</div>
 
 ## Performing group analysis on cortical-sheet based source-reconstructed data
 

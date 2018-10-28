@@ -3,17 +3,10 @@ title: Integration with NUTMEG
 layout: default
 ---
 
- <div class="alert-danger">
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
-
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Integration with NUTMEG
 
-    
     1) Identify pieces of code in common and avoid replication
     2) NUTMEG can call FieldTrip's fileio
     3) NUTMEG can call FieldTrip's forward (including the change to treating reference electrodes as separate)
@@ -30,22 +23,17 @@ See [/development/compat](/development/compat) for mydepfun example
 ### 2) fileio questions
 
 *  How is it recommended to deal with datasets larger than one's RAM? i.e. is there a recommended pipeline to follow? (e.g. load in trials individually, do separate filtering computations, then bring it all together to compute an inverse weight, apply weights to trials separately again, etc).
-
 *  BTi_UCSF support? (No)
-
 *  Can all data formats be read in as single?  
        * CTF can, not sure with other formats. (file bug if not true for all formats)
        * Would help if could be done at line ''data.trial = cutdat;'' in ft_preprocessing.
        * write a subfunction ft_single that loops over trials and singles each
-
 *  ft_chantype(data.label) 'unknown' in test case for neuromag.
-
 *  Issue of clearing a data variable in Matlab but it still takes up memory (with FT but not with NM).
 
 ### 3) Forward modelling
 
 *  ft_prepare_localspheres should not call 'clf' and 'cla' as this will mess with the Nutmeg figures. Can it instead call:  hfig=figure; and then use hfig handle for plotting?
-
 *  ft_volumesegment sufficient (which calls SPM), or prefer other software/method?
         * Can't do 'skull' yet.
 
@@ -54,28 +42,18 @@ See [/development/compat](/development/compat) for mydepfun example
 *  nut_filter2:  
        * 'firls' (rather than fir1) filter
        * demean time-domain filtering (in ft_preproc_*filter), do filter, then add mean back if it was non-zero.  (file bug)
-
 *  nut_results_viewer
-
 *  ft_sourceanalysis allow for multiple time and multiple frequency windows? (regardless of whether LCMV, DICS, or covariances from wavelet transform)
-
 *  nut_beamforming_gui
-
 *  rumour has it that some people prefer the interactive fiducial selection in NM over FT.
-
 *  simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to Matlab 
-
 *  single precision used as long as double not needed (e.g. initial loading single but covariance computation double)
-
 *  how does FT reduce/display data computed with vector inverse method and therefore the source data has 3 components per voxel?
        * Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g. in statistics)?
        * How is s_perp computed 'on the fly' after weights and/or leadfield not present anymore?
        * (see email correspondene with Sarang called '3-dim orientation' in 2008)
-
 *  option of when in pipeline to normalise leadfield (specific to scalar LCMV)
-
 *  Wilcoxon ranksum test in NM: uses single trial info per time-freq bin on the fly to compute Z/p values, but then only saves these averages, not save out single-trial info for each time-freq bin (assuming 20000 voxels, 100 time, 10 freq, that would be too large!)
-
 *  weight normalisation? (rather than leadfield norm)?  (could be better for EEG data, whereas leadfield norm better for MEG...just hearsay at the moment)
 
 #### 4a) overlap/comparison of functional connectivity metrics between NM and FT
@@ -100,17 +78,13 @@ The conversion from FieldTrip to NUTMEG is done with the following functions ins
 Please see: http://nutmeg.berkeley.edu/index.php?title=Reading_FieldTrip_processed_data
 
 *  nut_ft2nuts
-
 *  nut_ft2beam
-
 *  nut_ftgrid2nutsLpvox
-
 *  nut_ftmriN2coreg.m
 
 The conversion from NUTMEG to FieldTrip is done with the following functions inside FieldTrip sv
 
 *  nutmegBeam2fieldtripSource
-
 *  nutmegNuts2fieldtrip
 
 ### 9) Examples of why/how to switch between toolboxes

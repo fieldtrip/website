@@ -12,12 +12,11 @@ The toolbox offers advanced analysis methods of MEG, EEG, and invasive electroph
 
 The FieldTrip software is released free of charge as [open source software](http://en.wikipedia.org/wiki/Open_source) under the GNU [general public license](http://www.gnu.org/copyleft/gpl.html).
 
-<div class="alert-warning">
-<p>Please cite the <a href="http://www.hindawi.com/journals/cin/2011/156869">FieldTrip Reference Paper</a>
-when you have used FieldTrip for data analysis in your study.</p>
-
-<p>Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen, <strong>FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.</strong> Computational Intelligence and Neuroscience, vol. 2011, Article ID 156869, 9 pages, 2011. doi:10.1155/2011/156869</p>
-</div>
+{:.alert-warning}
+Please cite the FieldTrip reference paper when you have used FieldTrip in your study.
+<br/>
+<br/>
+Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen. **[FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.](http://www.hindawi.com/journals/cin/2011/156869)** Computational Intelligence and Neuroscience, vol. 2011, Article ID 156869, 9 pages, 2011. doi:10.1155/2011/156869.
 
 To get started with FieldTrip, please continue reading the [getting started](/getting started) documentation.
 
@@ -35,7 +34,7 @@ Eleven EU countries have decided that all scientific publications funded by thei
 
 ## 03 September, 2018
 
-Here are the slides of the topics that we presented and discussed in the Open Science Panel session at the [BIOMAG 2018](http://www.biomag2018.org) conference in Philadelphia last wee
+Here are the slides of the topics that we presented and discussed in the Open Science Panel session at the [BIOMAG 2018](http://www.biomag2018.org) conference in Philadelphia last week:
 
 *  [Robert Oostenveld - Introduction](https://www.slideshare.net/RobertOostenveld/biomag2018-robert-oostenveld-open-science-intro)
 *  [Guiomar Niso - BIDS and Omega](https://www.slideshare.net/RobertOostenveld/biomag2018-guiomar-niso-bids-and-omega)
@@ -53,7 +52,7 @@ On June 29th, Robert and Jan-Mathijs taught at the Human Connectome Project's wo
 
 ## 12 June, 2018
 
-On 17 June 2018 Maria Carla Piastra, Sophie Schrader and Simon Homölle will host a workshop the OHBM2018 conference. The course is aimed at researchers who want to learn how to do MEG and/or EEG source reconstruction. This intense one-day workshop will explain state-of-the-art MEG and EEG source reconstruction methods. Special emphasis will be given to new features available now in Fieldtrip to solve the EEG and MEG forward solution with advanced finite element methods. The workshop will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG, EEG and MRI data set using the FieldTrip toolbox. As the focus is on source reconstruction, topics that will NOT be covered in great detail are segmenting, artifact handling, averaging, frequency and time-frequency analysis, statistics. For the hands-on sessions you should bring a laptop with MATLAB installed. More information about the program can be found at the OHBM website or [here](/workshop/ohbm2018).
+On 17 June 2018 Maria Carla Piastra, Sophie Schrader and Simon Homölle will host a workshop the OHBM2018 conference. The course is aimed at researchers who want to learn how to do MEG and/or EEG source reconstruction. This intense one-day workshop will explain state-of-the-art MEG and EEG source reconstruction methods. Special emphasis will be given to new features available now in FieldTrip to solve the EEG and MEG forward solution with advanced finite element methods. The workshop will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG, EEG and MRI data set using the FieldTrip toolbox. As the focus is on source reconstruction, topics that will NOT be covered in great detail are segmenting, artifact handling, averaging, frequency and time-frequency analysis, statistics. For the hands-on sessions you should bring a laptop with MATLAB installed. More information about the program can be found at the OHBM website or [here](/workshop/ohbm2018).
 
 ## 6 March, 2018
 
@@ -62,5 +61,3 @@ Springer Nature has updated its policies - Nature journals now ask researchers w
 # Recent improvements to the code
 
 All changes to the code can be tracked on [Twitter](http://twitter.com/fieldtriptoolbx) and [Github](/development/git).
-
-{{rss>feed://github.com/fieldtrip/fieldtrip/commits/master.atom}}

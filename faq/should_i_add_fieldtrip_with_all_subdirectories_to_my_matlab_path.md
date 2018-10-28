@@ -8,11 +8,14 @@ tags: [faq, matlab, path, warning]
 
 In general you should **not** add FieldTrip with all subdirectories to your path. There are a number of external toolboxes (in fieldtrip/external) which are irrelevant for most users, and even can cause some problems if they overlap with other (custom) toolboxes on your path. Furthermore, there are some functions for backward compatibility in fieldtrip/compat, which should only be added to your path in case you use an older MATLAB release.
 
-<div class="alert-danger">
+{:.alert-danger}
 Please be aware that you should NOT do 
+<br/>
+<br/>
     addpath(genpath('/home/user/fieldtrip'))
+<br/>
+<br/>
 because that will add many toolbox directories to your path that you won't use. Furthermore, it potentially causes some toolboxes to be on your path twice (e.g. SPM).  
-</div>
 
 ### Step 1
 

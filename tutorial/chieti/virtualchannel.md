@@ -8,9 +8,8 @@ tags: [chieti, HCP-motort]
 
 ## Introduction
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
-</div>
 
 In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org). The experiment in which this data was acquired is described in detail [here](/tutorial/shared/hcp_motort).
 
@@ -60,11 +59,11 @@ Best is always to check the coordinate system of the MRI.
 
 ![image](/static/img/tutorial/chieti/screen_shot_2015-09-17_at_09.36.22.png@500)
 
-<div class="alert-info">
+{:.alert-info}
 Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_4dbti_coordinate_system).
-
+<br/>
+<br/>
 You can see that the orientation of the MRI is not as expected. Especially annoying is that it has a left-right flip. Note that each voxel's coordinates are technically OK, but the interpretation of the figure will be easier if the MRI is resliced on a voxel grid that is aligned along the axes of the 4D/BTi coordinate system.
-</div>
 
 You might also want to read this [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot) which explains that there can be a difference between what your see and how the computer interprets the coordinates. You can also search google for "radiological versus neurological" representations of data.
 
@@ -148,11 +147,8 @@ Each movement instruction is followed by a movement, which can be seen in the co
 
 ![image](/static/img/tutorial/chieti/screen_shot_2015-09-17_at_09.38.23.png@500)
 
-<div class="alert-info">
-
+{:.alert-info}
 Does the mapping of the trigger codes correspond to the sequence of EMG activity?
-
-</div>
 
 Having done this sanity check on the data, we will make subsets for the different conditions
 
@@ -239,9 +235,8 @@ We can also compute the difference between the power in the left and right-hand 
 
 ![image](/static/img/tutorial/chieti/screen_shot_2015-09-17_at_09.38.55.png@500)
 
-<div class="alert-info">
+{:.alert-info}
 You should use the interactive functionality of the **[ft_multiplotTFR](/reference/ft_multiplotTFR)** figures. Click in the figures to identify the time, frequency and channel selections that show interesting effects,
-</div>
 
 Another way of looking at the dynamics in this channel-time-frequency representation is by making a movi
 
@@ -312,9 +307,8 @@ Using the cross-spectral density matrix, we can do the beamformer estimate of th
     dics_rh = ft_sourceanalysis(cfg, tfr_rh_sel);
     dics_lh = ft_sourceanalysis(cfg, tfr_lh_sel);
 
-<div class="alert-info">
+{:.alert-info}
 The source reconstruction contains the power at each grid location, but also the noise. Explore the structure, especially "source.avg". Can you find the power and the noise estimate? Why is the estimate not computed for all grid locations?
-</div>
 
 The beamformer can be biassed to deep locations, since noise gets projected to locations with a very small lead field (deep inside the head). The neural activity index allows for compensating for the depth bias, as [explained here](/tutorial/beamformer#neural_activity_index).   
 
@@ -435,9 +429,8 @@ With the covariance and the forward model for the specific seed points, we can c
 
     lcmv_rh = ft_sourceanalysis(cfg, timelock_rh);
 
-<div class="alert-info">
+{:.alert-info}
 Look at the source structure, again in "source.avg". Can you find the representation of the spatial filter?
-</div>
 
 Using the spatial filters, we construct single-trial virtual channel time-series. This results in three channels. We can represent this data in the same fashion as the original raw data.
 
@@ -540,7 +533,6 @@ The virtual channel time-series seem to be consistent with what we expect to hap
 
 ![image](/static/img/tutorial/chieti/screen_shot_2015-09-17_at_09.42.01.png@500)
 
-<div class="excerise">
+{:.alert-info}
 There are many more connectivity methods available in **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Try out some of the others.
-</div>
 

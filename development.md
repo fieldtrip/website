@@ -23,4 +23,3 @@ For many of the tools (github, wiki, mailman, twitter, facebook) that we use we 
 
 All changes to the code can be tracked on [Twitter](http://twitter.com/fieldtriptoolbx) and [github](/development/git).
 
-{{rss>feed://github.com/fieldtrip/fieldtrip/commits/master.atom}}

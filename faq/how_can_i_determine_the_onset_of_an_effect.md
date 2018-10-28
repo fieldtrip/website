@@ -6,12 +6,14 @@ tags: [faq, statistics]
 
 # How can I determine the onset of an effect?
 
-<div class="alert-info">I received the following question: 
-
+{:.alert-info}
+I received the following question: 
+<br/>
+<br/>
 *"If I am interested at the onset of an effect that is present in one condition and not another can I use the start time of a cluster (cluster-based permutation test) to represent the onset time of the effect?"*. 
-
+<br/>
+<br/>
 The answer below starts from the idea of cluster-based statistics, but applies to determining onset in general. 
-</div>
 
 The cluster represents the thresholded uncorrected massive univariate statistics. The onset of where the uncorrected massive univariate statistics exceeds the threshold depends on the statistical sensitivity. E.g. consider that you use a [t-score](http://en.wikipedia.org/wiki/Student%27s_t-test) to quantify the condition difference
 

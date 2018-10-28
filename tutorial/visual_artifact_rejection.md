@@ -138,30 +138,37 @@ After quitting, the trials/channels will be rejected from the data set and the c
 
 This operation could be repeated for each of the metrics, by clicking on the different radio buttons 'var', 'min', 'max', etc.
 
-<div class="alert-info">
+{:.alert-info}
 The summary mode in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** has been primarily designed to visually screen for artefacts in channels of a consistent type, i.e. in this example only for the axial MEG gradiometers.
-
+<br/>
+<br/>
 If you have EEG data, the EOG channels have the same physical units and very similar amplitudes and therefore can be visualised simultaneously.
-
+<br/>
+<br/>
 If you have data from a 306-channel Neuromag system, you will have both magnetometers and planar gradiometers, which have different physical units and rather different numbers. Combining them in a single visualisation is likely to result in a biassed selection, either mainly relying on the magnetometers or the gradiometers being used to find artefacts.
-
+<br/>
+<br/>
 You can use the following options in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** to apply a scaling to the channels prior to visualisation: *cfg.eegscale, cfg.eogscale, cfg.ecgscale, cfg.emgscale, cfg.megscale, cfg.gradscale* and *cfg.magscale*.    
-
+<br/>
+<br/>
 You can also call **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** multiple times, once for every type of channels in your data. If you use *cfg.keepchannel='yes'*, channels will not be removed from the data on the subsequent calls. For exampl
-
+<br/>
+<br/>
     cfg = [];
     cfg.method = 'summary'
     cfg.keepchannel = 'yes';
-
+<br/>
+<br/>
     cfg.channel = 'MEGMAG';
     clean1  = ft_rejectvisual(cfg, orig);
-
+<br/>
+<br/>
     cfg.channel = 'MEGGRAD';
     clean2  = ft_rejectvisual(cfg, clean1);
-
+<br/>
+<br/>
     cfg.channel = 'EEG';
     clean3  = ft_rejectvisual(cfg, clean2);
-</div>
 
 ----
 

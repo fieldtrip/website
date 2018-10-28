@@ -3,28 +3,19 @@ title: Check the consistency between the documentation and the implementations
 layout: default
 ---
 
-<div class="alert-danger">
-
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Check the consistency between the documentation and the implementations
 
 ## Objectives
 
 *  the reference documentation should be included in the m-files (i.e. "help function_name")
-
 *  the documentation should be complete w.r.t. the underlying implementation
-
 *  the documentation should be up-to-date, and should be easily kept up-to-date
-
 *  the structure between the functions should become more transparent
 
 The help of any function could look like this
 
-	
 	% FUNNAME does something usefull
 	%
 	% Use as 

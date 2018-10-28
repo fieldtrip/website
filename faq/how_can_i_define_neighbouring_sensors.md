@@ -24,10 +24,12 @@ or by simply asking for feedback when calling ft_prepare_neighbours
     
 There are three methods how ft_neighbourselection can define the neighbour structure for your data: 'distance', 'triangulation' and 'template'. 
 
-<div class="alert-warning">
+{:.alert-warning}
 We recommend that you check with ft_neighbourplot whether the 'template' method looks suitable for you. 
-
+<br/>
+<br/>
 Note that we do not take responsibility for any wrongly drawn conclusions. The choice how to select neighbours has to be made by you!
-
+<br/>
+<br/>
 Also note that ft_prepare_neighbours will first try to deduce the neighbours from the config (e.g. from the optional cfg.layout field) before it will try searching your data for sensor position information
-</div>
+

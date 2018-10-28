@@ -3,13 +3,7 @@ title: How to deal with the forward model units?
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
-
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 ## How to deal with the forward model units?
 
@@ -20,11 +14,8 @@ This refere to a bug submitted by V.Litvak, suggesting to give the lead field a 
 The discussed issues regard, among others, the following topic
 
 *  Units can be estimated by looking at the raw datasets, does the 'units' field have to be attached from the beginning?
-
 *  In case of absence of units, they can be recovered by looking at the header
-
 *  Default units could be assigned in case of standard datasets (MEG: T or fT, EEG: uV or V)
-
 *  The user should dispose of function to convert to the wanted units: i.e. I dont know what the units are but i want my data in microvolts
 
 This topic is important and its implementation impacts both on FT and SPM users, so: BE CAREFUL!

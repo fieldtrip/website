@@ -1,7 +1,9 @@
 # FieldTrip website
 
-This repository hosts the content of http://www.fieldtriptoolbox.org
+This repository contains the content that is hosted on http://www.fieldtriptoolbox.org
 
-Technical notes
-* Pages that contain tags must have a title
-* Variables passed in an include must be specified in quotes
+## Technical notes
+- Pages that contain tags must have a title.
+- Variables passed in an include must be specified in quotes.
+- code blocks should have an empty line before and after them.
+- Shared pages should go in _include/shared.

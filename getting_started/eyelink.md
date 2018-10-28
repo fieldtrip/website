@@ -9,9 +9,8 @@ At the Donders we have an [Eyelink 1000 eyetracker](http://www.sr-research.com/e
 
 The eye tracker can be used on itself, or in combination with other data acquisition techniques (e.g. EEG, MEG, TMS or fMRI). FieldTrip allows you to analyse the eye tracker data in all of these situations. In the following I will provide the background of the data acquisition and present some examples on how to analyse eye tracker data. 
 
-<div class="alert-info">
+{:.alert-info}
 With your presentation script on the stimulus presentation computer you can also write "data" to disk in the form of behavioural log files. In the subsequent examples we will not consider integrating the physiological measurements with the "data" in these behavioural log files. We will only consider physiological data from the eye tracker, from the EEG system and from the MEG system.
-</div>
 
 ## Eye tracker recordings by themselves
 
@@ -178,15 +177,17 @@ Important to notice here is that the stimulus events in the EEG dataset largely 
       duration
       offset
 
-<div class="alert-info">
+{:.alert-info}
 There are 1400 triggers in one, and 2822 triggers in the other. This is mostly explained by each trigger onset **and** offset being represented in the Eyelink events, but only the onsets being represented in the CTF events. 
-
+<br/>
+<br/>
 There are 2 triggers in the CTF file, that are not specified anywhere and should not be there (with a value of 64). These are not present in other subjects' data sets from the same experiment. I have no clue where they would come from but suspect it to be a hardware glitch of the Bitsi box (which links the serial port of the presentation computer with the input of the CTF and Eyelink acquisition systems). The Eyelink and CTF system, might have different detection thresholds and different minimum durations of the TTL pulse, therefore it might show up in one dataaset and not the other.
-
+<br/>
+<br/>
 There are 9 triggers (without doubling) in the EDF explained by the fact that the recording of the EDF file, but not the MEG file, includes practice trials (because I usually start the recording of the EDF during practice to check whether the eye tracking looks okay).
-
+<br/>
+<br/>
 There are then still 2 surplus Triggers with a value of 0 in the EDF file, which appear at the start and the end of the EDF. These are software generated and hence not in the CTF dataset. 
-</div>
 
 Again using the **[ft_databrowser](/reference/ft_databrowser)** you can check the data relative to the events.
 
@@ -239,9 +240,8 @@ The Eyelink channels are connected to the MEG dataset channels UADC005, UADC006,
 
 Again, using the procedure as described for the EEG, you can combine the recordings of the Eyelink system and the MEG.
 
-<div class="alert-danger">
+{:.alert-danger}
 The DAC conversion in the Eyelink system takes some time, and therefore the UADC channels in the MEG recording have a small (but fixed) delay relative to the actual eye movements.
-</div> 
 
 Since both MEG and Eyelink get the same triggers, you can use FieldTrip **[ft_definetrial](/reference/ft_definetrial)** on both to read the same segments.
 

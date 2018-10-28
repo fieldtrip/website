@@ -11,23 +11,19 @@ The construction of a BEM volume conduction model is not always straight forward
 The strategy employed in FieldTrip for constructing the BEM model boils down to the manipulation of geometrical data. The following qualitatively different classes of data are distinguishe
 
 *  anatomical MRI, described as voxels in a regular 3-D lattice, grey values
-
 *  segmented MRI, described as voxels in a regular 3-D lattice, boolean or probabilistic values
-
 *  mesh, consisting of vertices and elements (triangles, tetraheders, hexaheders)
 
 In case of the BEM, the volume conduction model consists of one or multiple homogenous and isotropic compartments. The compartment boundaries are closed and non-intersecting surfaces that are described by triangulated meshes. Furthermore, each of the compartments is described by a conductivity.
 
 To make the highest quality BEM volume conduction model, FieldTrip offers a number of functions to manipulate these three classes of geometrical data. If we summarize the geometrical data as **anatomy**, **segmentation** and **mesh**, then we can consider functions that take one type of geometrical data as input, and return the same or another type.
 
-<div class="alert-info">
+{:.alert-info}
 We will refrain from using "head model" in the subsequent explanation, since each of the representations can be thought of as a "model describing the head". 
-</div>
 
 ##  Converting anatomy to anatomy
 
 *  **[ft_volumerealign](/reference/ft_volumerealign)**
-
 *  **[ft_volumereslice](/reference/ft_volumereslice)**
 
 ##  Converting anatomy to segmentation
@@ -39,7 +35,6 @@ We will refrain from using "head model" in the subsequent explanation, since eac
 Here it helps to distinguish the different representations. Examples of these are given in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**.
 
 *  probabilistic, also known as tissue probability map (tpm): there is a value between 0 and 1 for each tissue at each of the voxels. This requires each tissue to be described in a separate 3-D array.
-
 *  indexed: the segmentation serves as a look-up table, each voxel is assigned to one class of tissue. This requires a set of labels for each tissue type. 
 
 The probabilistic representation can also be used to make a binary or boolean representation, i.e. one in which the probability is either 0% (false) or 100% (true).

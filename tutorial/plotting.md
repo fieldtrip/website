@@ -174,7 +174,7 @@ All channels are squeezed in a circle and the nose and ears are indicated at the
 
 ![image](/static/img/tutorial/plotting/2017/fig12.png)
 
-Although many tutorials elsewhere on the Fieldtrip wiki are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
+Although many tutorials elsewhere on the FieldTrip wiki are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
 
     cfg = [];
     cfg.layout = 'CTF151_helmet.mat'; % note that it is a binary .mat file, not an ascii .lay file
@@ -202,7 +202,7 @@ You should zoom in on the figure to see the triplets for the three channels ar e
 
 ### Topoplot functions
 
-**[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** plot the topographic distribution of 2-Dimensional or 3-Dimensional datatypes as a 2-D circular view (looking down at the top of the head). The arrangement of the channels is again specified in the layout (see above in multiplot functions). The **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** functions first again select the data to be plotted from the 2D or 3D input data and subsequently plot the selected data using low-level Fieldtrip functions. Using one value for each channel and the x and y coordinates, the values between points are interpolated and plotted.
+**[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** plot the topographic distribution of 2-Dimensional or 3-Dimensional datatypes as a 2-D circular view (looking down at the top of the head). The arrangement of the channels is again specified in the layout (see above in multiplot functions). The **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)** functions first again select the data to be plotted from the 2D or 3D input data and subsequently plot the selected data using low-level FieldTrip functions. Using one value for each channel and the x and y coordinates, the values between points are interpolated and plotted.
 
     cfg = [];                            
     cfg.xlim = [0.3 0.5];                
@@ -353,9 +353,8 @@ The function automatically finds the clusters in the data which are smaller than
 
 Stat should be 2D, i.e. channels-by-time, or channels-by frequency. You cannot visualize channels-by-frequency-by-time, that case requires either averaging over time, or averaging over frequency.
 
-<div class="alert-danger">
+{:.alert-danger}
 Although the code below shows how to visualize clusters, you should be [cautious on how to interpret clusters](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
-</div>
 
 ##### Clusters in timelocked data
 

@@ -32,8 +32,8 @@ Actually, the intention of 'when?' is 'what should you have done before asking a
 
 The better you describe the problem or state the question, the more likely you will get help. Better hereby does not mean more information. As being concise is a key skill of a scientist, show off by staying concise (but complete) when writing to the mailing list. Completeness of the question and background information is equally important though. This counts for all kind of questions, be it directly FieldTrip related or about anything else. A useful tip: Before sending your mail, read the message thoroughly and think whether all necessary information for a person naive to your question is included. Does it make sense what you wrote? Is there too much information? Remember that many people are busy and won't like having (a) long conversations asking you to provide more information and (b) reading through much more than 10 sentences per mail.
 
-<div class="alert-warning">
-If it comes to asking questions about FieldTrip including the following is a mus
+{:.alert-warning}
+If it comes to asking questions about FieldTrip including the following is a must:
 
 *  The cfg you used
 *  The fields of your data structure
@@ -43,24 +43,24 @@ If it comes to asking questions about FieldTrip including the following is a mus
 The cfg and data can be displayed in MATLAB using the display(variable_name) command. Call display(cfg) and display(data) and copy the answer over to include it in your mail.
 
 If you have data to share and it exceeds 1 MB, use a file hoster!
-</div>
+{# FIXME class failure here #}
 
 ## Example message
 
-Here is an example of an inefficient questio
+Here is an example of an inefficient question:
 
-<div class="alert-info">
+{% include startclass.html class="alert-info" %}
 Subject: HELP
 
-**I am getting to load Eyetracking data from .EDF to .ASC then wish to have the image present on the screen in order t draw ROIs. As I follow the step from this link http://www.fieldtriptoolbox.org/getting_started/eyelink. The function of Fieldtrip called "dataset2file.m" cannot accept file type of structure in matlab**.  The error message show " Undefined function 'dataset2files' for input arguments of type 'struct'." How can I change the code so the function can read structure file.
+**I am getting to load Eyetracking data from .EDF to .ASC then wish to have the image present on the screen in order t draw ROIs. As I follow the step from this link http://www.fieldtriptoolbox.org/getting_started/eyelink. The function of FieldTrip called "dataset2file.m" cannot accept file type of structure in matlab**.  The error message show " Undefined function 'dataset2files' for input arguments of type 'struct'." How can I change the code so the function can read structure file.
 
  `<no name>`
 
-</div>
+{% include endclass.html %}
 
 If this is your first mail, please introduce yourself shortly.
 
-<div class="alert-info">
+{% include startclass.html class="alert-info" %}
 Subject: Improper matrix assignment in ft_functionname
 
 Dear community,
@@ -96,4 +96,4 @@ Best,
 
 MyName
 
-</div>
+{% include endclass.html %}

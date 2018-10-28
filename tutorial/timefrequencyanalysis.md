@@ -20,11 +20,11 @@ Here, we will work on the MEG-language-semantics dataset, you can click [here](/
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](/#Summary and suggested further reading)).
 
-<div class="alert-info">
-This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and is complemented by this lecture.  
-
+{:.alert-info}
+This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
+<br/>
+<br/>
 {% include youtube.html id="vwPpSglPJTE" %}
-</div>
 
 ## Background
 
@@ -153,19 +153,16 @@ From Figure 4 one can see that there is an increase in power around 15-20 Hz in 
 
 ##### Exercise 1
 
-<div class="alert-info">
-
-*  Plot the power with respect to a relative baseline (hint: use cfg.zlim = [0 2.0] and use the cfg.baselinetype option)
-
-*  How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline
-</div>
+{:.alert-info}
+Plot the power with respect to a relative baseline (hint: use cfg.zlim = [0 2.0] and use the cfg.baselinetype option)
+<br/>
+<br/>
+How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline
 
 ##### Exercise 2
 
-<div class="alert-info">
-
-*  Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms (hint: compare to ERFs)?  
-</div>
+{:.alert-info}
+Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms (hint: compare to ERFs)?  
 
 ## Time-frequency analysis II.
 
@@ -211,11 +208,10 @@ If you would like to learn more about plotting of time-frequency representations
 
 #### Exercise 3
 
-<div class="alert-info">
+{% include startclass.html class="alert-info" %}
+Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting.
 
-Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting
-
-4 cycles per time windo
+4 cycles per time window:
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -236,7 +232,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
 
     cfg.t_ftimwin    = 10./cfg.foi;  	
     TFRhann10 = ft_freqanalysis(cfg, dataFIC);
-</div>  
+{% include endclass.html %}  
 
 ##  Time-frequency analysis III.
 
@@ -247,11 +243,8 @@ Multitapers are typically used in order to achieve better control over the frequ
 Time-frequency analysis based on multitapers can be performed by the function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transformations the data are ‘tapered’. Several orthogonal tapers might be used for each time window. The power is calculated for each tapered data segment and then combined. In the example below we apply a time window which gradually becomes shorter for higher frequencies (similar to wavelet techniques). The arguments for the chosen parameters are as follows
 
 *  cfg.foi , the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased at the expense of computation time and redundancy.
-
 *  cfg.toi, the time-interval of interest. This vector determines the center times for the time windows for which the power values should be calculated. The setting cfg.toi = -0.5:0.05:1.5 results in power values from -0.5 to 1.5 s in steps of 50 ms. A finer time resolution will give redundant information and longer computation times, but a smoother graphical output.
-
 *  cfg.t_ftimwin is the length of the sliding time-window in seconds (= tw). We have chosen cfg.t_ftimwin = 5./cfg.foi, i.e. 5 cycles per time-window. When choosing this parameter it is important that a full number of cycles fit within the time-window for a given frequency.
-
 *  cfg.tapsmofrq determines the width of frequency smoothing in Hz (= fw). We have chosen cfg.tapsmofrq = cfg.foi*0.4, i.e. the smoothing will increase with frequency. Specifying larger values will result in more frequency smoothing. For less smoothing you can specify smaller values, however, the following relation (determined by the Shannon number) must hold (see Percival and Walden, 1993
 
     K = 2*tw*fw-1,  where K is required to be larger than 0.
@@ -323,12 +316,8 @@ Plot the result
 
 *Figure 9; Time-frequency representations of power calculated using Morlet wavelets.*
 
-<div class="alert-info">
-
-**Exercise 4**
-
-Adjust cfg.width and see how the TFRs change.
-</div>  
+{:.alert-info}
+**Exercise 4**: Adjust cfg.width and see how the TFRs change.
 
 If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](/#Visualization).
 ## Summary and suggested further reading

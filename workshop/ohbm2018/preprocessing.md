@@ -11,10 +11,8 @@ This tutorial describes how to define epochs-of-interest (trials) from your reco
 
 This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial contains the hands-on material of the [BACI workshop](/workshop/baci2017) and is complemented by this lecture.  
-
-</div>
 
 ## Background
 
@@ -23,14 +21,13 @@ In FieldTrip the preprocessing of data refers to the reading of the data, segmen
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. 
 
 *  The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. 
-
 *  The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. 
+
 The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done 
 
 *  according to a specific trigger channel
-
 *  according to your own criteria when you write your own trial function, e.g. for conditional trigger sequences, or by detecting EMG onset
 
 Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field *cfg.trl*. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.

@@ -22,9 +22,8 @@ Note that there is typically a one-to-one match between electrodes and channels,
 
 to tell FieldTrip how to combine the electrodes into channels. This array can be stored as a sparse array and it also allows to set the position of the reference electrode in unipolar recordings. In case elec.tra is not provided, the forward and inverse calculations will be performed assuming an average reference over all electrodes.
 
-<div class="alert-warning">
+{:.alert-warning}
 The EEG potential is in first instance computed on the locations in elec.elecpos, and when applicable combined using elec.tra. The elec.chanpos field is used e.g. for visualization and determining neighbours.  
-</div>
 
 ### The definition of MEG sensors
 
@@ -39,11 +38,11 @@ The gradiometer definition generally consists of multiple coils per channel, e.g
 
 The channel 'orientation' is needed for synthetic gradient computation for axial gradiometer or magnetometer systems. If you don't know what it means and need to construct your own grad structure, please set it to nan(N,3).
 
-<div class="alert-warning">
+{:.alert-warning}
 MEG forward computations are performed for each grad.coilpos and grad.coilori, and subsequently combined using grad.tra. Although they are called "coils", you can better think of them as "field digitization points".
-
+<br/>
+<br/>
 By default a first order gradiometer is described by 2 "coils", but you could use more digitization points to get a more accurate forward model.   
-</div>
 
 ### The old electrode and gradiometer structure
 

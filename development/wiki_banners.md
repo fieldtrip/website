@@ -5,7 +5,7 @@ layout: default
 
 # How to make Wiki banners
 
-As you will have noticed, there is a nice photo rotator at the top of the Fieldtrip website. This page explains how to create them using Adobe Photoshop, and how to add them to the wiki.
+As you will have noticed, there is a nice photo rotator at the top of the FieldTrip website. This page explains how to create them using Adobe Photoshop, and how to add them to the wiki.
 
 ## Making the file
 
@@ -20,7 +20,7 @@ As you will have noticed, there is a nice photo rotator at the top of the Fieldt
 
 ## Adding to the website
 
- 1.  Copy the file you just generated to `<dokuwiki root>`/lib/tpl/FieldtripV2/images/ and rename it "header-photo-N.jpg", where N should be replaced by an integer number, following the maximum M of the "header-photo-M.jpg" files already present in that folder.
- 2.  Edit `<dokuwiki root>`/lib/tpl/FieldtripV2/main.php, replace the Q in "; i < Q;" below the line that says "add slideshow slides" (currently this code is at lines 61-62) with one higher than the total number of slides.
+ 1.  Copy the file you just generated to `<dokuwiki root>`/lib/tpl/FieldTripV2/images/ and rename it "header-photo-N.jpg", where N should be replaced by an integer number, following the maximum M of the "header-photo-M.jpg" files already present in that folder.
+ 2.  Edit `<dokuwiki root>`/lib/tpl/FieldTripV2/main.php, replace the Q in "; i < Q;" below the line that says "add slideshow slides" (currently this code is at lines 61-62) with one higher than the total number of slides.
  3.  Done!
 

@@ -14,10 +14,11 @@ tags: [tutorial, artifact, preprocessing, eeg, meg]
 
 This tutorial explains the general approach on how to deal with artifacts in FieldTrip.
 
-<div class="alert-danger">
-<p>Since FieldTrip supports the data of many different acquisition systems, the particular artifacts in your data might behave very different from the artifata. Therefore you should be aware of the different approaches and of the variability of artifact rejection (automatic/manual) procedures described onwards.</p>
-<p>At the end of an automated procedure, consider always to visual inspect your data, after rejection.</p>
-</div>
+{:.alert-danger}
+Since FieldTrip supports the data of many different acquisition systems, the particular artifacts in your data might behave very different from the artifata. Therefore you should be aware of the different approaches and of the variability of artifact rejection (automatic/manual) procedures described onwards.
+<br/>
+<br/>
+At the end of an automated procedure, consider always to visual inspect your data, after rejection.
 
 # Background: what is an artifact?
 

@@ -3,14 +3,10 @@ title: Developing the documentation of the source-reconstruction methods
 layout: default
 ---
 
+{% include shared/development/warning.md %}
+
 ## Developing the documentation of the source-reconstruction methods
 
-<div class="alert-danger">
-The purpose of this page is just to serve as a scratch pad for developing the documentation.
-
-There is no guarantee that this page is updated or that is contains correct information. 
-So chances are that this page is considerably outdated, irrelevant or not correct. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
 ### Introduction
 
 This page contains questions that users could ask when they analyze their data with FieldTrip. If it is possible  the answers are also provided. If any documentation already exist on the FieldTrip wiki which gives an answer, the answer should point to those pages. In some cases, may we just want to point to relevant literature.
@@ -21,7 +17,7 @@ This page contains questions that users could ask when they analyze their data w
 
 The [Inverse source parameter estimates from EEG/MEG data](/development/inverse) page describes under the second point which are the supported methods.
 
- 1.  dipole fitting 
+ 1.  dipole fitting
     - simultaneous optimisation of position, orientation and strength
     -  symmetry constrains and/or fixed position, with free orientation and strength
  2.  dipole scanning
@@ -35,7 +31,7 @@ The [Inverse source parameter estimates from EEG/MEG data](/development/inverse)
 
 The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function refers to the following method
 
-	
+
 	cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
 	                     'sam'     synthetic aperture magnetometry
 	                     'dics'    dynamic imaging of coherent sources
@@ -89,7 +85,7 @@ none.
 
 *Why is this fixme?*
 
-[Source-reconstruction using two dipoles](/development/symmetric_dipoles) 
+[Source-reconstruction using two dipoles](/development/symmetric_dipoles)
 
 *This is under construction, but it is not really clear how this exactly relates to dipole fitting.*
 
@@ -117,7 +113,7 @@ Referenc
 *  The methods listed in the reference of ft_prepare_headmodel should be matched to the articles in [References to implemented methods](/references_to_implemented_methods).
 
 *  The references to implemented methods can be probably extended.
- 
+
 
 Method
 
@@ -131,7 +127,7 @@ Method
 
 *  reference in help of the lower-level function: **none** but it is probably not applicable
 
-*  **reading function** (reads in a certain type of volume conduction model) 
+*  **reading function** (reads in a certain type of volume conduction model)
 
 *  name in help of ft_prepare_headmodel: bemcp
 
@@ -140,7 +136,7 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **none** but the person's name who provided the code is mentioned
-    
+
 
 *  name in help of ft_prepare_headmodel: dipoli
 
@@ -149,20 +145,20 @@ Method
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: yes
-    
+
 
 *  name in help of ft_prepare_headmodel: openmeeg
 
-*  article in References to implemented methods: **none** 
+*  article in References to implemented methods: **none**
 
 *  explanation in help of the lower-level function: yes
 
 *  reference in help of the lower-level function: **yes**
-    
+
 
 *  name in help of ft_prepare_headmodel: concentricspheres
 
-*  article in References to implemented methods: yes (Cuffin, Cohen, 1979) 
+*  article in References to implemented methods: yes (Cuffin, Cohen, 1979)
 
 *  explanation in help of the lower-level function: yes
 
@@ -188,7 +184,7 @@ Method
 
 *  Does this methods apply also to EEG? It says so in [Refurbishing the FORWARD module](/development/fwdarch) but it is **not listed as method for EEG** in the reference of ft_prepare_headmodel.
 
-*  see it under MEG methods. 
+*  see it under MEG methods.
 
 *  name in help of ft_prepare_headmodel: singlesphere
 
@@ -200,15 +196,15 @@ Method
 
 *  name in help of ft_prepare_headmodel: **none**
 
-*  name in script of ft_prepare_headmodel: **slab_monopole** 
+*  name in script of ft_prepare_headmodel: **slab_monopole**
 
-*  article in References to implemented methods: **none** 
+*  article in References to implemented methods: **none**
 
 *  lower-level function name: **[ft_headmodel_slab](/reference/ft_headmodel_slab)**
 
 *  explanation in help of the lower-level function: yes
 
-*  reference in help of the lower-level function: **none** 
+*  reference in help of the lower-level function: **none**
 
 *  name in help of ft_prepare_headmodel: simbio
 
@@ -218,7 +214,7 @@ Method
 
 *  reference in help of the lower-level function: **none** but it is probably not applicable
 
-*  **reading function** (reads in a certain type of volume conduction model) 
+*  **reading function** (reads in a certain type of volume conduction model)
 
 *  name in help of ft_prepare_headmodel: fns
 
@@ -234,7 +230,7 @@ Method
 
 *  see it under EEG methods.
 
-*  name in help of ft_prepare_headmodel: **multispheres** FIXME rather not use multisphere because it is ambiguous 
+*  name in help of ft_prepare_headmodel: **multispheres** FIXME rather not use multisphere because it is ambiguous
 
 *  name in script of ft_prepare_headmodel: **localspheres**
 
@@ -262,5 +258,4 @@ Method
 
 *  Does this methods apply also to MEG? It says so in [Refurbishing the FORWARD module](/development/fwdarch) but it is **not listed as method for MEG** in the reference of ft_prepare_headmodel.
 
-*  see it under EEG methods. 
-
+*  see it under EEG methods.

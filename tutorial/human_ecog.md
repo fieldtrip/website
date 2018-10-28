@@ -20,9 +20,9 @@ Before we start, it is important to emphasize that human iEEG datasets are solel
 
 The tutorial demonstrates the analysis of task-related high-frequency-band activity (~70 to 150 Hz), a prominent neural signature in intracranial data that has been associated with neuron population level firing rate. Many other supported analyses such as event-related potential analysis, connectivity analysis, and statistical analysis have been described in detail elsewhere (Oostenveld et al., 2011; Maris & Oostenveld, 2007; Bastos & Schoffelen, 2016). You will need the iEEG data of SubjectUCI29, which can be obtained from [here](https://doi.org/10.5281/zenodo.1201560). If you are getting started with FieldTrip, download the most recent version from its homepage or GitHub and [set up your MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
-<div class="alert-warning">
+{:.alert-warning}
 The information on this page originates from the human intracranial data analysis protocol described in Stolk, Griffin et al., **[Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6)”**, Nature Protocols, 2018. Please cite that paper when you use the methods described here.
-</div>
+
 ## Background
 
 The example iEEG data set was acquired at the Medical Center of the University of California, Irvine. The Office for the Protection of Human Subjects of the University of California, Berkeley, approved the study and the subject gave informed consent. The data set includes a pre-implant MRI, a post-implant CT, a post-implant MRI, and neural recordings from 96 ECoG and 56 SEEG electrodes that were implanted as part of the preparation for the epilepsy surgery. The neural data were recorded in the context of an experiment that required the patient to press a button with the right hand when hearing a target tone. The original dataset (after defacing the imaging data with ft_defacevolume) and the processed results are available for download from [here](https://doi.org/10.5281/zenodo.1201560). Raw DICOM images and recording files are not shared to protect the subject's identity.

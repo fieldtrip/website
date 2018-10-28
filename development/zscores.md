@@ -3,13 +3,7 @@ title: What is the best way to homogenize data?
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
-
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # What is the best way to homogenize data?
 
@@ -40,10 +34,8 @@ What we want to accomplish is at the same time control the false alarm rate, and
 Ad 1)
 
 *  slow drifts in the data, independent of conditions: this increases variance/reduces the sensitivity (with respect to the effect one is interested in)
-
 *  different size of effect at different locations and/or frequencies (e.g. 1/f effect in power, or depth bias of beamed power)
 Ad 2)
-
 *  large individual differences
 
 ##### 3. Possible solution
@@ -51,23 +43,16 @@ Ad 2)
 Ad 1)
 
 *  baseline correction [to solve slow drifts]
-
 *  GLM-like solution (regressor for the slow drifts)
-
 *  multiply with f [to solve 1/f effect]
-
 *  NAI (neural activity index) [against depth bias of beamed power]
 
 Ad 2)
 
 *  baseline correction
-
 *  descriptive statistical measure
-
 *  ratio between conditions A and B
-
 *  log(power) [also helps against 1/f effect]
-
 *  zscores
 
 *--> Problem: these solutions may introduce additional noise!*
@@ -77,7 +62,6 @@ Ad 2)
 Properties of the dat
 
 *  behaviour of noise within subjects / trials (stationary or non-stationary)
-
 *  model of effect (additive or multiplicative)
 
 ## Step 2: simulate data
@@ -95,17 +79,14 @@ The simulated dataset should consist of two conditions, baseline and activation,
 
 The data should be of the for
 
-	
+
 	  baseline   = phys           + noise
 	  activation = phys * e1 + e2 + noise
 
 *  with for the additive effect model: e1 = 1, e2 > 0, and for the multiplicative effect model: e1 > 1, e2 = 0.
-
 *  phys is the physiological signal, consisting of a 'constant' (e.g. alpha oscillation) modulated by a slow drift
-
 *  noise is the 'real' external noise, which is random
 
-	
 	phys  = phys_constant + phys_noise * lambda_phys
 	noise = random_noise  * lambda_ext
 
@@ -114,18 +95,15 @@ The data should be of the for
 This gives us the following dimension
 
 *  effect (for this we will use the 'freq' dimension)
-
 *  noise (for this we will use the 'time' dimension)
-
 *  repetitions (subjects/trials, for this we will use the normal 'rpt' dimension)
-
 *  repetition of the statistical test (for this we will use the 'chan' dimension)
 
-This way we can vary the size/range of effect and noise, have multiple trials and at the same time repeat the statistical test several times, using freqstatistics. 
+This way we can vary the size/range of effect and noise, have multiple trials and at the same time repeat the statistical test several times, using freqstatistics.
 
 ##### 2. Find interesting rang
 
-We need a range of effect and noise size where at the edges the effect is always found (effect high, noise low) resp. never found (effect low, noise high). In the range in between, it will sometimes turn up, sometimes not. If we repeat the statistical test several times (using the chan dim) and average the results we have a nice measure of the statistical power. Now we can go to the next step and repeat this using the different homogenization methods and see whether they improve the statistical power. 
+We need a range of effect and noise size where at the edges the effect is always found (effect high, noise low) resp. never found (effect low, noise high). In the range in between, it will sometimes turn up, sometimes not. If we repeat the statistical test several times (using the chan dim) and average the results we have a nice measure of the statistical power. Now we can go to the next step and repeat this using the different homogenization methods and see whether they improve the statistical power.
 
 *To illustrate (using additive effect model)
 
@@ -155,12 +133,11 @@ To test the methods we will take the following step
 effect mode
 
 *  additive
-
 *  multiplicative
 
 noise mode
 
 *  random noise
-
 *  slow drift
+
 (of course also combinations of these models are possible)

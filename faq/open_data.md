@@ -6,9 +6,8 @@ tags: [faq, dataset]
 
 # Where can I find open access MEG/EEG data?
 
-<div class="alert-warning">
+{:.alert-warning}
 Feel free to hit the **edit** button to share links to other open access datasets here.
-</div>
 
 The FieldTrip tutorials include a lot of smaller datasets that are available for download. These datasets are listed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
 

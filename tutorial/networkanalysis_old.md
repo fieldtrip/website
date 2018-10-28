@@ -29,13 +29,12 @@ Towards this end we have to identify/define the nodal structure of the network w
 
 ## Procedure
 
-The data analyses in the context of networks follows the following step
+The data analyses in the context of networks follows the following steps:
 
    * Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
    * Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
    * Construct a forward model and lead field matrix using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** and **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**.
-
-*  Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
+   * Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
    * Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
    * Compute "all-to-all" phase relationship between voxels using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
    * Compute "node degree" using **[ft_networkanalysis](/reference/ft_networkanalysis)**.
@@ -199,9 +198,8 @@ In the following section we will compute the ingredients for accurate reconstruc
 
 *Figure 3: Sensors (green), head model (grey) and source model(blue) are properly aligned all in units of cm.*
 
-<div class="alert-danger">
+{:.alert-danger}
 The source model describes a regular 3D grid. Not all positions of the source model are inside the brain. This is represented in the "inside" field.
-</div>
 
 	%% compute sensor level Fourier spectra
 	cfg            = [];
@@ -270,7 +268,7 @@ The source model describes a regular 3D grid. Not all positions of the source mo
 
 *Figure 4: Reconstructed activity (neural activity index) with peak maxima in occipital but also sensorimotor and some deep brain areas.*
 
-<div class="alert-info">
+{% include startclass.html class="alert-info" %}
 The accurate judgment of the source reconstructed data is often not straight forward. However, you can make your judgment dependent on the comparison of sensor and source topography. In the present case the activation of the visual areas provide a good match to the observed scalp topography.
 
 	cfg               = [];
@@ -305,7 +303,7 @@ The accurate judgment of the source reconstructed data is often not straight for
 
 *Figure 5: Reconstructed activity (neural activity index) with peak maxima in occipital areas (top left) together with scalp topographic representation of the signal on the axial (top right) and planar (bottom left) gradients. Note that the presumably bilateral origin suggested by the scalp topography of the axial gradiometers is actually reflecting the in and out going fields of a summed dipolar activity located somewhere in between.*
 
-</div>
+{% include endclass.html %}
 
 Comparing source reconstruction results to scalp topography is more or less mandatory. However, a potential mismatch shouldn't prevent you to try out a different strategy. In the beamforming tutorial [here](/tutorial/beamformer) the reconstructed activity is represented as a ratio change from pre stimulus baseline. Although there isn't a baseline we can compare with here, still there is an alternative approach. In the next section we will compute the sensor level alpha power but keep the individual trials. Next we will determine the sensor with a maximum power and use a median split on the trials at that sensor. This would allow us to split the data into trials dominated by high and low alpha power respectively.
 
@@ -633,11 +631,12 @@ Of course one can use also phase locking value or some other metric for quantifi
 
 ##### Exercise 1
 
-<div class="alert-info">
+{:.alert-info}
+Compare both network configurations. Obiviously, they have little in common.
+</br>
+</br>
+Why? Discuss the difference between 'icoh' and 'plv'.
+</br>
+</br>
+What is the role of the spatial filter?
 
-*  Compare both network configurations. Obiviously, they have little in common.
-
-*  Why? Discuss the difference between 'icoh' and 'plv'.
-
-*  What is the role of the spatial filter?
-</div>

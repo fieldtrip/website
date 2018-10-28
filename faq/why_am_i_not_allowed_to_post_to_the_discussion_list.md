@@ -14,8 +14,7 @@ It might be due to you not having registered. Only people registered to the mail
 
 It might also be due to having sent the email from another email address than the one with you used when registering. The email list server cares about the details of the address, so your.name@fcdonders.ru.nl is considered to be a different person than your.name@donders.ru.nl. A similar situation that happened in the past was that the UCL system administrators decided to change somebody@ion.ucl.ac.uk into somebody@ucl.ac.uk. 
 
-<div class="alert-danger">
+{:.alert-danger}
 A common cause for confusion - especially in Germany - is that people sometimes seem to be using yourname@googlemail.com and yourname@gmail.com interchangeably. The mailing list server will consider these as two different addresses!
-</div>
 
 Please check very carefully on which email address you are receiving the postings from the fieldtrip list, and what you have configured as the "from" address in your email client. If that does not resolve it, please contact the list owner.

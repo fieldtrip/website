@@ -3,21 +3,14 @@ title: Redesign and implement a common statistical backend for various data type
 layout: default
 ---
 
-<div class="alert-danger">
-
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Redesign and implement a common statistical backend for various data types
 
 ## Objectives
 
 *  Add support for each major statistical method to each of the data objects (source, freq, timelock)
-
 *  Clarify the conceptial structure of the parametric and non-parametric statistical tests to the end-user
-
 *  Ensure that new statistical ideas can easily be implemented and made available to the end-user
 
 ## Step 1: verify the implementations on simulated data
@@ -31,9 +24,7 @@ Besides showing that the current implementations are correct, this also reveals 
 The current structure consists of a collection of stand-alone functions which do not fit into a common framework
 
 *  sourcestatistics_randomization, sourcestatistics_randcluster
-
 *  clusterrandanalysis, sourcestatistics_parametric, sourcestatistics_shiftpredict, freqstatistics_shiftpredict (*)
-
 *  timelockstatistics, freqstatistics, sourcestatistics
 
 The timelockstatistics, freqstatistics and sourcestatistics functions provide the user interface to the common statistics structure. Each of these functions calls the general statistics_wrapper, which subsequently dispatches teh computation to a dataformat independent statistics function. The functionality provided by the functions marked by (*) can be merged into the common framework. 

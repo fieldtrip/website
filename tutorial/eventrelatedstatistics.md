@@ -18,7 +18,7 @@ The goal of this tutorial is to provide a gentle introduction into the different
 
 This tutorial uses the same [ MEG language dataset](/tutorial/shared/dataset) as some of the other tutorials where analyses were done on the single subject level. However, here we will deal with (statistical) analyses on the group level. We will look at how to test statistical differences among conditions in a within-subjects design. The ERF dataset in this tutorial contains data from all 10 subjects that participated in the experiment. The ERF data was obtained using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.  For the purpose of inspecting your data visually, we also use **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average across participants, which can be used for subsequent visualization.
 
-You can download the   [averaged dataset for each subject](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat) from our Fieldtrip ftp server.
+You can download the   [averaged dataset for each subject](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat) from our FieldTrip ftp server.
 
 The tutorial assumes that the preprocessing and timelock-analysis steps are already clear for the reader. If this is not the case, you can read about those steps in other tutorials.
 
@@ -189,9 +189,9 @@ From the code above you can see that the statistical comparison is between condi
 
 ####  Exercise 1
 
-<div class="alert-info">
+{:.alert-info}
 Look at the temporal evolution of the effect by changing cfg.latency and cfg.avgovertime in **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. You can plot the t-value versus time, the probability versus time and the statistical mask versus time. Note that the output of the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function closely resembles the output of the **[ft_timelockanalysis](/reference/ft_timelockanalysis)** function.
-</div>
+
 ### Multiple comparisons
 
 In the previous paragraph we picked a channel and time window by hand after eyeballing the effect. If you would like to test the significance of the effect in all channels you could make a loop over channels.
@@ -267,7 +267,7 @@ Below you can see the means by which to implement a Bonferroni correction. Howev
 
 	stat = ft_timelockstatistics(cfg,allsubjFC{:},allsubjFIC{:});
 
-Fieldtrip also has other methods implemented for performing a multiple comparison correction, such as FDR. See the statistics_analytic function for the options to cfg.correctm when you want to do a parametric test.
+FieldTrip also has other methods implemented for performing a multiple comparison correction, such as FDR. See the statistics_analytic function for the options to cfg.correctm when you want to do a parametric test.
 
 ##  Non-parametric statistics
 
@@ -410,11 +410,12 @@ So far we predefined a time window over which the effect was averaged, and teste
 
 ![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
 
-<div class="alert-info">
+{:.alert-info}
 If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
-
+<br/>
+<br/>
 And be sure to cite the relevant papers (Robert Oostenveld's FieldTrip paper and the Eric Maris' cluster-based permutation paper) in your methods section!
-</div>
+
 ## Summary and suggested further reading
 
 This tutorial showed you how to perform parametric and non-parametric statistics in FieldTrip, as well as the the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to plot the sensors that show a significant effect.

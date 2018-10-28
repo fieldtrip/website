@@ -3,12 +3,7 @@ title: Introduction
 layout: default
 ---
 
-<div class="alert-danger">
-
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Introduction
 
@@ -22,27 +17,19 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
 # Steps to be taken
 
 *  schedule conference call (done)
-
 *  create accounts on cvs machine (done)
-
 *  commit skeleton (done)
-
 *  make licensing clear to users (persistent/1-time) (done)
-
 *  commit code for the glue functions (done)
-
 *  provide test scenario 
     * spherical model (done, only low-level sofar)
     * human subject MEG -> alexandre
     * human subject EEG -> cristiano
     * monkey ECoG -> cristiano
-
 *  testing
     * test in-house -> robert, cristiano
     * external test (selected users)
-
 *  add glue code and perhaps binaries to fieldtrip release -> robert
-
 *  communicate it and ensure that it gets used -> all
 
 # Steps to be taken (cristiano)

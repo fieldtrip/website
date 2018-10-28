@@ -1,10 +1,10 @@
 ---
-title: Fieldtrip Walkthrough
+title: FieldTrip Walkthrough
 layout: default
 tags: [meg, eeg, raw, freg, cfg, trialfun, trialdef]
 ---
 
-# Fieldtrip Walkthrough
+# FieldTrip Walkthrough
 
 ## Foreword
 
@@ -37,9 +37,8 @@ The representation of the data in terms of time is of course relative. In most c
  
 ## Trial structure
 
-<div class="alert-success">
+{:.alert-success}
 If you are not familiar with Matlab you might not know the difference between structure-arrays and cell-arrays since it is not very obvious. Superficially speaking, cell-arrays can contain almost anything and are just a convenient way of organizing, while structure-arrays are always numeric and of the same type. The benefits of structure-arrays are in the quick calculations you can do within them, while the benefit of cell-arrays is the easy way of indexing. Also in cell-arrays every entry can have different dimensions of the same field, for instance in our specific case of channels x time points. This is the reason it is implemented in the way since this give the opportunity to represent trials of different lengths.
-</div>
 
 Similar to how the inherent structure of the original data is represented in the first step described above, the trial structure is also implemented at the level of the data structure. This means that if you cut up your data into separate trials, the new structure of the data will reflect this. The added dimension of trials is represented in FieldTrip as a series of [channels x time] cell-array
     data.trial: {1x25 cell}
@@ -104,9 +103,8 @@ What makes ft_definetrial very flexible is that it uses a separate trial functio
 Within trialfun the trl is made according to specifications given through the cfg, as well as anything else you want to add. For instance, you might want to make trials dependent not only on the stimulus marker, but also on a correct response marker. This would be the place to do that. Also, sometimes you might be left with a rather awkward way of coding your conditions. This would also be the place to recode your trials and create a less ambiguous system.
 For the purpose of trial bookkeeping we only need to append one extra column (or more) to the standard three columns of the trl. Here we write information about the stimulus code, response time, condition numbers, etc. Next in ft_preprocessing (explained next) these extra columns will be put in an extra field of the data structure (trialinfo). This will enable us at any moment during our analysis to select trials based upon any arbitrary reason.  
 
-<div class="alert-warning">
+{:.alert-warning}
 You are not obliged to make all trials the same length. Be careful though as you might end up in a statistical snake-pit later.
-</div>
 
 # Preprocessing
 
@@ -161,9 +159,9 @@ Note that ft_databrowser does not do anything with your data. To remove the tria
     cfg.artfctdef.reject  = 'complete';
     cleandata = ft_rejectartifact(cfg,data);
 
-<div class="alert-success">
+{:.alert-success}
 You can extend the type of events you can mark by adding to cfg.selectvisual. You can also use the selection directly for something else by supplying an eval argument in cfg.selectmode. Use this to make topoplots or even movies!!!
-</div>
+
 ## Using ICA for eye artifact removal
 
 Severe contamination of EEG/MEG activity by eye movements, blinks, muscle, heart and line noise is a serious problem for its interpretation and analysis. Many methods exist to remove eye movement and blink artifacts. Simply rejecting contaminated epochs results in a considerable loss of collected information. Often regression in the time or frequency domain is performed on simultaneous electro-oculographic (EOG) recordings to derive parameters characterizing the appearance and spread of EOG artifacts in the other channels. However, EOG records also contain brain signals, so regressing out EOG activity inevitably involves subtracting a portion of the relevant brain-signal from each recording as well. Also, since many noise sources, include muscle noise, electrode noise and line noise, have no clear reference channels, regression methods cannot be used to removed them. ICA can effectively detect, separate and remove activity in EEG/MEG records from a wide variety of artifactual sources, with results comparing favorably to those obtained using regression- or PCA-based methods (http://sccn.ucsd.edu/~scott/tutorial/).
@@ -217,9 +215,8 @@ This brings us to a slightly different use of ft_preprocessing where we supply i
     cfg.lpfreq = [35];
     data_lp = ft_preprocessing(cfg,data_manual);
 
-<div class="alert-success">
+{:.alert-success}
 Want to know exactly how digital filters work? Want to intuitively grasp the FFT? You might enjoy reading the great “The Scientist and Engineers’s Guide to Digital Signal Processing”, free on www.dspguide.com
-</div>
 
 # Frequency analysis
 

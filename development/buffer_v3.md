@@ -3,6 +3,8 @@ title:
 layout: default
 ---
 
+{% include shared/development/warning.md %}
+
 The public interface should consist of
 
 *  ft_read_header
@@ -19,4 +21,3 @@ Stuff that is worth implementing in the next version of the buffer is
 
 *  Better error reporting, see proposed v2
 *  GET_HDR_WITHOUT_CHUNKS
-

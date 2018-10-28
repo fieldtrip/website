@@ -26,11 +26,11 @@ The current golden standard is to measure the head geometry with an MRI and sens
 
 In this tutorial we want to focus on creating a electrode  based on 3D surface scan of a human head. The 3D-scan device we are using in this tutorial is a [http://structure.io](http://structure.io) device. However, other devices are also feasible as long as the 3D-scan output is written in a FieldTrip supported [data format](/dataformat).
 
-<div class="alert-info">
+{:.alert-info}
 This youtube video shows the procedure that is explained in this tutorial
-
+<br/>
+<br/>
 {% include youtube.html id="d6FZlZTf-Hg" %}
-</div>
 
 ## Procedure
 

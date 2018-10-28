@@ -31,15 +31,13 @@ Finally, consider whether the stimulation contains
 
 ### Using time-domain analysis
 
-<div class="alert-danger">
+{:.alert-danger}
 This section is still to be written.
-</div>
 
 ### Using frequency analysis
 
-<div class="alert-danger">
+{:.alert-danger}
 This section should be made specific to the example dataset.
-</div>
 
 ## Create and analyze a simulated steady-state dataset
 

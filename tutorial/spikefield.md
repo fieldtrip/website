@@ -39,7 +39,7 @@ In this tutorial we will use the approach to compute a single phase per individu
 ### Preprocessing
 
 The data for this tutorial can be downloaded on [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex).
-Make sure you add the main Fieldtrip directory to your path and run **[ft_defaults](/reference/ft_defaults)**.
+Make sure you add the main FieldTrip directory to your path and run **[ft_defaults](/reference/ft_defaults)**.
 We first read in the spike data by **[ft_read_spike](/reference/ft_read_spike)** and select the following channels for analysis from the spike structure using **[ft_spike_select](/reference/ft_spike_select)** by
 
 	filename         = 'p029_sort_final_01.nex';
@@ -447,7 +447,7 @@ In statSts.labelcmb all the combinations between the unit and the different LFPs
 
 ## Summary
 
-We have shown how to compute measures of spike-LFP phase-coupling using the spike toolbox in Fieldtrip. Time-frequency representations of mean spike-LFP phase or the spike-LFP phase consistency can be obtained. We have shown examples of how to implement measures of spike-LFP phase consistency that are not affected by the number of available spikes.
+We have shown how to compute measures of spike-LFP phase-coupling using the spike toolbox in FieldTrip. Time-frequency representations of mean spike-LFP phase or the spike-LFP phase consistency can be obtained. We have shown examples of how to implement measures of spike-LFP phase consistency that are not affected by the number of available spikes.
 
 Further development of the functionality will be in the direction of computing inferential statistics on the phase consistency measures using permutation statistics.
 

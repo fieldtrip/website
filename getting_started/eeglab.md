@@ -17,7 +17,7 @@ Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design
 
 Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **fieldtrip2eeglab** and **eeglab2fieldtrip**. Please note that eeglab2fieldtrip is included in the FieldTrip release, and that fieldtrip2eeglab is included in the EEGLAB release. 
 
-## Using Fieldtrip with the DIPFIT plug-in
+## Using FieldTrip with the DIPFIT plug-in
 
 The old version 1.x of DIPFIT only fitted dipoles to EEG data using a 4-shell spherical head model. The new version 2.x of DIPFIT also supports realistic BEM volume conduction models for EEG. Currently, EEGLAB cannot support some critical informations about the MEG sensors (the orientations of the gradiometers, mainly) so DIPFIT cannot be use with MEG signal.
 
@@ -25,8 +25,8 @@ To prevent overlapping programming efforts, the DIPFIT version 2.0 plugin uses t
 
 ## Using other FieldTrip functions
 
-Besides using Fieldtrip as the underlying "engine" for the DIPFIT plug-in of EEGLAB, it is also possible to export various aspects of your EEGLAB data structure completely to FieldTrip. Subsequently, you can continue your analysis of the data using the command-line FieldTrip functions
+Besides using FieldTrip as the underlying "engine" for the DIPFIT plug-in of EEGLAB, it is also possible to export various aspects of your EEGLAB data structure completely to FieldTrip. Subsequently, you can continue your analysis of the data using the command-line FieldTrip functions
 
  
-Exporting data from EEGLAB to FieldTrip is done using the eeglab2fieldtrip function. That function takes an "EEG" Matlab structure as input, and will give a Matlab structure as output that is identical to the output format of one of the standard Fieldtrip functions (e.g. timelockanalysis or freqanalysis).
+Exporting data from EEGLAB to FieldTrip is done using the eeglab2fieldtrip function. That function takes an "EEG" Matlab structure as input, and will give a Matlab structure as output that is identical to the output format of one of the standard FieldTrip functions (e.g. timelockanalysis or freqanalysis).
 

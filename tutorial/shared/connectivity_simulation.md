@@ -26,9 +26,7 @@ After the identification of the network nodes and the characterization of the ed
 This tutorial consists of three part
 
 *  Simulated data with directed connections. In this part we are going to simulate some data and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model and we will use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** for this. Subsequently, we will estimate the multivariate autoregressive model and the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with  **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
-
 *  Simulated data with common pick-up and different noise levels. In this part we are going to simulate some data consisting of an instantaneous mixture of 3 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates. 
-
 *  Connectivity between MEG virtual channel and EMG. In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between this virtual channel and EMG. The data used for this part are the same as in the [Analysis of corticomuscular coherence](/tutorial/coherence) tutorial.
 
 ## Simulated data with directed connections
@@ -110,9 +108,8 @@ The resulting variable **mdata** contains a description of the data in terms of 
 
 #### Exercise 1
 
-<div class="alert-info">
+{:.alert-info}
 Compare the parameters specified for the simulation with the estimated coefficients and discuss.
-</div>
 
 ### Computation of the spectral transfer function
 
@@ -215,15 +212,13 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 
 #### Exercise 2
 
-<div class="alert-info">
+{:.alert-info}
 Discuss the differences between the granger causality spectra, and the coherence spectra.
-</div>
 
 #### Exercise 3
 
-<div class="alert-info">
+{:.alert-info}
 Compute the following connectivity measures from the **mfreq** data, and visualize and discuss the results: partial directed coherence (pdc), directed transfer function (dtf), phase slope index (psi)
-</div>
 
 ## Simulated data with common pick-up and different noise levels
 
@@ -310,37 +305,35 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 
 #### Exercise 4
 
-<div class="alert-info">
+{:.alert-info}
 Simulate new data using the following mixing matrix: 
-
-	
-	
+<br/>
+<br/>
 	[0.9 0.1 0;0 0.2 0.8] 
-	
-
+<br/>
+<br/>
 and recompute the connectivity measures. Discuss what you see.
-
-</div>
 
 #### Exercise 5
 
-<div class="alert-info">
+{:.alert-info}
 Play a bit with the parameters in the mixing matrix and see what is the effect on the estimated connectivity.
-</div>
 
 #### Exercise 6
 
-<div class="alert-info">
+{:.alert-info}
 Simulate new data where the 2 mixed signals are created from 4 underlying sources, and where two of these sources are common input to both signals, and where these two sources are temporally shifted copies of one another.
-
-Hint: the mixing matrix could look like thi
-
-	
+<br/>
+<br/>
+Hint: the mixing matrix could look like this
+<br/>
+<br/>
 	[a b c 0; 0 d e f];
-
-and the trials could be created like thi
-
-	
+<br/>
+<br/>
+and the trials could be created like this:
+<br/>
+<br/>
 	for k = 1:nTrials
 	  dat = randn(4, nSamples+10);
 	  dat(2,:) = ft_preproc_bandpassfilter(dat(2,:), 1000, [15 25]);
@@ -352,4 +345,3 @@ and the trials could be created like thi
 	end
 
 Compute connectivity between the signals and discuss what you observe. In particular, also compute measures of directed interaction.
-</div>

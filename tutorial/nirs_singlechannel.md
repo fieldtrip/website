@@ -74,9 +74,8 @@ As FieldTrip is an open-source toolbox, you can always have a look at the code d
 
     edit ft_preprocessing
 
-<div class="alert-info">
+{:.alert-info}
 If this is your first time using FieldTrip you might also want to have a look at the [introduction to the toolbox and matlab tutorial](/tutorial/introduction).
-</div>
 
 ### Read & trim data
 
@@ -98,10 +97,12 @@ FieldTrip is finished when you see something like this on the scree
 
     >> the call to "ft_preprocessing" took 9 seconds
 
-<div class="alert-info">
+{:.alert-info}
 There are more options to specify when reading in your data, such as cfg.padding, cfg.padtype and cfg.continuous. Those options have default values or are determined automatically, so we ignore them here but you can find all of them in the help documentation.
+<br/>
+<br/>
 Through the option cfg.trl you can specify which trials should be read in. For now we will read in all trials, but we will make a selection later on.
-</div>
+
 Let us take a look at what just happened. If you observed your workspace closely, you will have noticed that a new variable was added called 'data'. This is the same name that we put just in front of **[ft_preprocessing](/reference/ft_preprocessing)**. Had you written [something], then the variable 'something' would have been added to your workspace.
 If preprocessing was done as described, the data will have the following field
 
@@ -142,15 +143,14 @@ Additionally, we'll from here select just one channel, to reduce the complexity 
 
 #### Exercise 1
 
-<div class="alert-info">
+{:.alert-info}
 Take a moment to familiarize yourself with the user-interface. Change the horizontal and vertical scales until you can see the heartbeat signal in the selected channels. Tip: A time slice of something between 10 to 20 seconds is optimal. Picking up the heartbeat in the NIRS measurement is a sign of good data quality, if the heartbeat cannot be detected in the data, contact with the skin must have been poor.
-</div>
 
 ### Remove artifacts
 
 There are several ways to remove aspects of the data that are not of interest. That is, fNIRS data not only represents changes in oxyhemoglobin and deoxyhemoglobin concentrations, but contains, amongst others, also other physiological signals, random noise and variations stemming from the measurement environment. One prominent issue is motion artifacts, which are produced by temporary changes in the contact between optode and skin, often caused by movements of the head. Typically, one finds these motion artifacts in all channels simultaneously, but it could also be that just one channel or a few channels were affected, for instance if the participant moves the mouth. Short, unexpected peaks in the data are considered to stem from motion. You can detect and remove these artifacts for instance through **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)*
 
-You can specify a z-value cut-off like thi
+You can specify a z-value cut-off like this:
 
     cfg = [];
     cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
@@ -162,12 +162,12 @@ You will see that FieldTrip identified 8 artifacts through this procedure. These
 
 #### Exercise 2
 
-<div class="alert-info">
+{:.alert-info}
 Play around with the cut-off z-value. You can do this by running the artifact rejection in interactive mode by adding cfg.artfctdef.zvalue.interactive = 'yes'; before you run [cfg, artifact] = ft_artifact_zvalue(cfg, data);.
 In the interactive mode, you can change the threshold to see which parts of the data would be rejected, the rejected bits are marked in red.
-
+<br/>
+<br/>
 What is the optimal threshold to get rid off short lived peaks?
-</div>
 
 ### Transform to changes in oxyHB/deoxyHB
 
@@ -180,9 +180,9 @@ You might have noticed that you were looking at OD values (OD stands for optical
 
 #### Exercise 3
 
-<div class="alert-info">
+{:.alert-info}
 Check out the data again! As expected, the selected channel, in which you were able to see a clear heartbeat in the raw signal, also shows a clean signal once transformed to oxy- and deoxyHb values, right?
-</div>
+
 ### Separate functional from systemic responses
 
 Apart from motion artifacts, which appear as spikes in the data, fNIRS measurements also contain systemic responses, which, for functional NIRS, we want to filter out of our data. There are multiple ways of extracting the functional response (the fNIRS response) out of the data, but for now, we take a simple but relatively effective approach, namely by applying a bandpass filter. A bandpass filter eliminates data above and below a user-defined threshold frequency. We will filter our data in the frequency range of most
@@ -240,15 +240,13 @@ So we pulled our data out of the measurement. The data looks crisps and clear.
 
 #### Exercise 4
 
-<div class="alert-info">
+{:.alert-info}
 All signal values seem to be around the same values. Why could that be?
-</div>
 
 #### Exercise 5
 
-<div class="alert-info">
+{:.alert-info}
 You might want to perform an additional preprocessing step now. What  steps do you consider useful? Check out the options in **[ft_preprocessing](/reference/ft_preprocessing)**!
-</div>
 
 ### Timelockanalysis
 

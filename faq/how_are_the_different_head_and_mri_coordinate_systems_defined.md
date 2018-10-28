@@ -5,47 +5,59 @@ tags: [faq, headmodel, mri, source, coordinate]
 ---
 
 ## How are the different head and MRI coordinate systems defined?
-<div class="alert-warning">
+
+{:.alert-warning}
 For understanding the coordinate system, the following questions need to be addressed:
 *  What is the definition of the origin of the coordinate system, i.e. where is [0,0,0]?
 *  In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?
 *  In what units are coordinates expressed, i.e. does the number "1" mean 1 meter, 1 centimeter or 1 milimeter?
 *  Is the geometry scaled to some template or atlas, or does it still match the individual's head/brain size?     
-</div>
+{# FIXME this is not a complete alert block #}
+
 FieldTrip does not have a native coordinate system, but assumes that all geometrical data which are used together (i.e. mri, headmodel, electrodes, dipoles) are expressed in the same coordinate system and with the same physical units (e.g. mm or cm). In order to be able to compare these fundamental properties across data structures, FieldTrip defines two fields in the geometrical data mentioned above. These fields pertain to the interpretation of the physical **units**, XXX.unit, and to the interpretation of the **coordinate system** in which the coordinates are expressed, XXX.coordsys.
+
 If the unit-field is not present in the data, FieldTrip typically tries to estimate this from the magnitude and range of the values in the spatial coordinates (e.g. the position of the vertices in the boundaries that describe the volume conductor, or the positions of electrodes, assuming that a human head was used to attach the electrodes to).
+
 The real-world interpretation of the coordinate system can typically not be determined automatically, and for this FieldTrip uses a helper-function **[ft_determine_coordsys](/reference/ft_determine_coordsys)**, that requires some user-interaction for the specification of the orientation of the cardinal axes of the coordinate system, as well as the origin. The only thing that this function does, is to add a coordsys-field to the input data structure, specifying how the spatial coordinates in the data structure should be interpreted. Importantly, it does not change the values of the spatial coordinates that are present in the data structure.
+
 The remainder of this page describes the external conventions for the coordinate systems for a number of EEG and MEG systems. Of course it is always possible that a specific user of one of the systems uses a different coordinate system.
+
 The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](http://en.wikipedia.org/wiki/Nasion), [inion](http://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/how_are_the_lpa_and_rpa_points_defined ) for a discussion of the LPA and RPA.
+
 The coordinate systems used for imaging methods such as MRI, PET and CT are usually defined in terms of internal brain structures, such as the [anterior](http://en.wikipedia.org/wiki/Anterior_commissure) and [posterior](http://en.wikipedia.org/wiki/Posterior_commissure) commisure. Furthermore, imaging data is sometimes scaled to a uniform brain size, e.g. based on the [ Talairach-Tournoux atlas](http://en.wikipedia.org/wiki/Jean_Talairach) or one of the templates from the [Montreal Neurological Institute (MNI)](http://en.wikipedia.org/wiki/Montreal_Neurological_Institute). An elaborate discussion on the relation between the Talairach-Tournoux atlas and the MNI templates can be found [here](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach).
+
 Imaging methods such as MRI and CT result in 3-D volumetric representations of the data, e.g. with 256x256x256 voxels. You can think of this representation as having a "voxel" coordinate system, where voxel (1, 1, 1) is the first and (256, 256, 256) the last in the volume. The voxel coordinate system however does not specify the physical dimensions (e.g. mm or cm) and does not specify how the head (which is somewhere within the volume) relates to the voxel indices. Therefore a volumetric description of imaging data as a 3-D array has to be complemented with a description of the head coordinate system. This description is commonly implemented using a 4x4 homogenous coordinate transformation matrix, for which an excellent description is available [here](http://bishopw.loni.ucla.edu/air3/homogenous.html).
 
 ### Summary
- | system             | units | orientation | origin                                      | scaling                                                                                                   | notes                        |
- | ------             | ----- | ----------- | ------                                      | -------                                                                                                   | -----                        |
- | 4D/BTi             | m     | ALS         | between the ears                            | native                                                                                                    |                              |
- | ACPC               | mm    | RAS         | anterior commissure                         | individual brain, not normalized to a template                                                            |                              |
- | Allen Institute    | mm    | RAS         | Bregma point                                |                                                                                                           |                              |
- | Analyze            | mm    | LAS         |                                             | native                                                                                                    |                              |
- | CTF MRI            | mm    | ALS         | between the ears                            | native                                                                                                    | voxel order can be arbitrary |
- | CTF gradiometer    | cm    | ALS         | between the ears                            | native                                                                                                    |                              |
- | CapTrack           | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
- | Chieti ITAB        | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
- | DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
- | FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
- | MNI                | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
- | NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information".
- | Neuromag/Elekta    | m     | RAS         | between the ears                            | native                                                                                                    |                              |
- | Paxinos-Franklin   | mm    | RSP         | Bregma point                                |                                                                                                           |                              |
- | Talairach-Tournoux | mm    | RAS         | anterior commissure                         | scaled to match atlas                                                                                     |                              |
- | Yokogawa           |       | ALS         | center of device                            |                                                                                                           |                             
+
+| system             | units | orientation | origin                                      | scaling                                                                                                   | notes                        |
+| ------             | ----- | ----------- | ------                                      | -------                                                                                                   | -----                        |
+| 4D/BTi             | m     | ALS         | between the ears                            | native                                                                                                    |                              |
+| ACPC               | mm    | RAS         | anterior commissure                         | individual brain, not normalized to a template                                                            |                              |
+| Allen Institute    | mm    | RAS         | Bregma point                                |                                                                                                           |                              |
+| Analyze            | mm    | LAS         |                                             | native                                                                                                    |                              |
+| CTF MRI            | mm    | ALS         | between the ears                            | native                                                                                                    | voxel order can be arbitrary |
+| CTF gradiometer    | cm    | ALS         | between the ears                            | native                                                                                                    |                              |
+| CapTrack           | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
+| Chieti ITAB        | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
+| DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
+| FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
+| MNI                | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
+| NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information".
+| Neuromag/Elekta    | m     | RAS         | between the ears                            | native                                                                                                    |                              |
+| Paxinos-Franklin   | mm    | RSP         | Bregma point                                |                                                                                                           |                              |
+| Talairach-Tournoux | mm    | RAS         | anterior commissure                         | scaled to match atlas                                                                                     |                              |
+| Yokogawa           |       | ALS         | center of device                            |                                                                                                           |                             
+
 A/P means anterior/posterior
 L/R means left/right
 S/I means superior/inferior
+
 As an example: **RAS** means that the first dimension orients towards **R**ight, the second dimension orients towards **A**nterior, the third dimension orients towards **S**uperior.
 See also [this page](http://neuroimage.usc.edu/brainstorm/CoordinateSystems) from the BrainStorm documentation that also explains different MEG coordinate systems and [this page](http://www.grahamwideman.com/gw/brain/orientation/orientterms.htm) that discusses orientations in MRI.
 
 ### Details of the 4D/BTi coordinate system
+
 The **4D Neuroimaging** (also known as BTi) coordinate system is expressed in meter, with the principal (X, Y, Z) axes going through external landmarks (i.e. fiducials). The details are
 *  the origin is exactly between LPA and RPA
 *  the X-axis goes towards NAS

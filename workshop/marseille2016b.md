@@ -19,7 +19,7 @@ We will keep this page up to date and post new information here when available.
 
 *  Session I
     * 09:30 – 09:45		Opening remarks
-    * 09:45 - 10:45   Lecture: Connectivity basics, methods and issues. {{:workshop:marseille2016b_connectivity.pdf|slides}}
+    * 09:45 - 10:45   Lecture: Connectivity basics, methods and issues. -  [slides](/static/pdf/workshop/marseille2016b_connectivity.pdf)
     * 10:45 – 11:00		Coffee break
     * 11:00 – 12:30		Hands-on: Analysis of sensor- and source-level connectivity
           * http://www.fieldtriptoolbox.org/tutorial/connectivity
@@ -28,7 +28,7 @@ We will keep this page up to date and post new information here when available.
     * 12:30 – 13:30		Lunch
 
 *  Session II
-    * 13:30 - 14:30		Lecture: Connectivity basics, issues and how-to's. {{:workshop:marseille2016b_connectivity2.pdf|slides}}
+    * 13:30 - 14:30		Lecture: Connectivity basics, issues and how-to's. -  [slides](/static/pdf/workshop/marseille2016b_connectivity2.pdf)
     * 14:30 – 14:45		Coffee break
     * 14:45 – 16:15	  Hands-on: Analysis of source-level connectivity and networks
           * http://www.fieldtriptoolbox.org/tutorial/networkanalysis
@@ -46,7 +46,7 @@ We will keep this page up to date and post new information here when available.
 
 ## Tutorial preparation
 
-To maximally benefit from this course, we expect the users to have basic knowledge of MATLAB and Fieldtrip. To prepare for the hands-on sessions, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
+To maximally benefit from this course, we expect the users to have basic knowledge of MATLAB and FieldTrip. To prepare for the hands-on sessions, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
 *  [FieldTrip intro (video and hands-on)](/tutorial/introduction)
 *  [spectral analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
@@ -60,13 +60,8 @@ If you work on your own lapto
  2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Put Subject01.zip in a directory called 'tutorial'.
 
-<div class="alert-danger">
-Depending on the unzip program you are using (e.g. Winrar), the name
-of the zip file might also appear as directiory, resulting in
-path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the
-fieldtrip directory in a fieldtrip directory. Please fix that by
-moving all files one level up.
-</div>
+{:.alert-danger}
+Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
 
@@ -75,11 +70,11 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-<div class="alert-danger">
+{:.alert-danger}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
-
+<br/>
+<br/>
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).
-</div>
 
 The restoredefaultpath command clears your path, keeping only the
 official MATLAB toolboxes. The addpath(pwd) statement adds the

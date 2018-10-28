@@ -17,7 +17,7 @@ This will be a loosely organized workshop that comprises a series of lectures an
 
 ####  Wednesday morning
 
-*  1h - welcome and intro lecture - {{ :workshop:chengdu2017:introduction.pdf |slides}}
+*  1h - welcome and intro lecture - [slides](/static/pdf/workshop/chengdu2017/introduction.pdf)
 *  2h - hands-on on preprocessing of [EEG](/tutorial/preprocessing_erp) data.
 
 ####  Thursday morning
@@ -26,18 +26,18 @@ This will be a loosely organized workshop that comprises a series of lectures an
 
 ####  Friday morning
 
-*  1h - forward and inverse modeling lecture - {{ :workshop:chengdu2017:forward.pdf |slides}}
+*  1h - forward and inverse modeling lecture - [slides](/static/pdf/workshop/chengdu2017/forward.pdf)
 *  2h - anatomical processing and lead fields for Cuban EEG dataset
 
 Please note that the script for the Cuban EEG dataset is further down on this page.
 
 ## Getting started with the hands-on sessions
 
-<div class="alert-info">
+{:.alert-info}
 Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the FieldTrip toolbox design.
-
+<br/>
+<br/>
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the [MATLAB for psychologists](http://www.antoniahamilton.com/matlab.html) tutorial (which is also useful for non-psychologists).
-</div>
 
 For the hands-on sessions you have to start MATLAB. We will provide a recent FieldTrip copy and the hands-on data on a USB stick. Alternatively, you can get them from the FTP server (which will be slower).
 
@@ -48,11 +48,11 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
     addpath(pwd)
     ft_defaults
 
-<div class="alert-danger">
+{:.alert-danger}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
-
+<br/>
+<br/>
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
-</div>
 
 The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 

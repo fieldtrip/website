@@ -3,6 +3,8 @@ title: Dealing with the geometry of the forward model
 layout: default
 ---
 
+{% include shared/development/warning.md %}
+
 # Dealing with the geometry of the forward model
 
 This part overviews the available routines (and not yet availiable too!) to get an optimal description of the head geometry in order to build a forwaard model.
@@ -12,7 +14,7 @@ The functions' types available at the moment deal with different types of object
 - **anatomies**: from MRI or CT scans (for example). They are volumetric matrices
 - **segmentations**: they are volumetric binary masks of tissue compartments
 - **surfaces**: triangulations (faces and nodes) of anatomical surfaces. Normally from anatomies or segmentations
-- **meshes**: they are 3D meshes (nodes and elements) describing a wireframe structure. Used in FEM, FDM methods can be tetrahedrons, hexahedrons (cubes) or others 
+- **meshes**: they are 3D meshes (nodes and elements) describing a wireframe structure. Used in FEM, FDM methods can be tetrahedrons, hexahedrons (cubes) or others
 - **head models**: a structure containing the necessary information to run a forward model algorithm (geometry+conductivity+others)
 
 * The from (rows)-to (columns) matri
@@ -73,7 +75,7 @@ ft_headmodel_fem_simbio, used only for the available FEM method
 From mesh TO surf
 TBD
 Useful for example to extract a surface from the wireframe
-Implementation suggestion of mesh2surf.m: 
+Implementation suggestion of mesh2surf.m:
 for each triangle of the tetrahedron
 count the number of belonging tetrahedres
 end
@@ -141,4 +143,3 @@ Tetge software, interfaced by the external toolbox iso2mesh
 From ? TO ?
 TBD
 [Back](/#Dealing with the geometry of the forward model)
-

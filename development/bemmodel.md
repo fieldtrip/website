@@ -3,13 +3,7 @@ title: An alternative algorithm for constructing triangulated EEG-BEM head model
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
-
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # An alternative algorithm for constructing triangulated EEG-BEM head models
 
@@ -20,7 +14,6 @@ This page presents the outline of an algorithm (or set of algoritms) that allow 
 ## The skin
 
 *  Determine which voxels belong to head using simple thresholding, smoothing and region growing
-
 *  Project triangulated sphere at center of mass brain onto boundary
 
 ![image](/static/img/development/bemmodel/bemmodel2.png)
@@ -28,20 +21,18 @@ This page presents the outline of an algorithm (or set of algoritms) that allow 
 ## The brain
 
 *  Determine which voxels belong to brain using volumesegment
-
 *  Project triangulated sphere at center of mass brain onto boundary
-
 *  Optional: use laplacian smoothing on the triangulated surface
 
 ![image](/static/img/development/bemmodel/bemmodel1.png)
 
-## The skull 
+## The skull
 
 *  Draw lines from triangulated sphere at center of mass brain
 
 *  “Top half”: determine boundary along lines in MR images by trying several algorithms (see below)
 
-*  “Bottom half”: define vertices along lines based on average skull thickness 
+*  “Bottom half”: define vertices along lines based on average skull thickness
 
 A potential problem in the bottom half is that the skull and brain triangulation intersect. To avoid this one can use the same number of vertices for skull as in brain. An alternative solution is to base the lower half of the triangulation on an "imdilated" brain segmentation.
 
@@ -59,8 +50,7 @@ This requires the computation of the surface laplacial (i.e. smoothness) of the 
 
 ![image](/static/img/development/bemmodel/bemmodel5.png)
 
- 1.  Detect suspicious vertices in the skull triangulation 
-
+ 1.  Detect suspicious vertices in the skull triangulation
     * Any vertex less than 2.5 mm from the brain
     * Any vertex less than 3.5 mm from the scalp
     * Any vertex where the surface laplacian is not sufficiently smooth
@@ -74,5 +64,4 @@ This requires the computation of the surface laplacial (i.e. smoothness) of the 
 
 It is possible to use the skull laplacian smoothness criterium and interpolation also on the brain surface.
 
-It is possible to replace the initial triangulation of the brain surface using the intensity profiles by a triangulation of a segmentation resulting from an dilated brain and eroded skin (using XOR). 
-
+It is possible to replace the initial triangulation of the brain surface using the intensity profiles by a triangulation of a segmentation resulting from an dilated brain and eroded skin (using XOR).

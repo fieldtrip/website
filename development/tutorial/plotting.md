@@ -4,9 +4,9 @@ layout: default
 tags: [tutorial, plot, eeg, meg, timelock, freq, statistics, source, layout, MEG-language]
 ---
 
-<div class="alert-danger">
+{:.alert-danger}
 This page is under development, use with caution
-</div>
+{% include endclass.html %}
 
 # Plotting data at the channel and source level
 
@@ -83,9 +83,9 @@ If you specify multiple channels in cfg.channel both singleplot functions will p
 
 #### Exercise 1
 
-<div class="alert-info">
+{:.alert-info}
 Try to replicate [Figure 5 from the Event Related Averaging tutorial](/tutorial/eventrelatedaveraging#plotting_the_result) and [Figure 3 from the Time Frequency analysis tutorial](/tutorial/timefrequencyanalysis#plotting_the_results ) without using FieldTrip functions.
-</div>
+{% include endclass.html %}
 ### Multiplot functions
 
 The multiplot functions work similarly to the singleplot functions, again first by selecting the data and subsequently using the MATLAB functions PLOT.m and IMAGESC.m. But instead of one plot, multiple plots are made; one for each channel. These plots are arranged according to a specified layout in one pair of axes. In the subsequent figures you can see these axes that are normally set to "off".  Exemplar code for using ft_multiplotER/TFR is shown in the 'interative mode' section of this tutorial (further down).
@@ -105,7 +105,7 @@ For multiplotting planar gradient data from the Neuromag system it is especially
 
 ### Topoplot functions
 
-**[Ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** plot the topographic distribution of 2-Dimensional or 3-Dimensional datatypes as a 2-D circular view (looking down at the top of the head). The arrangement of the channels is again specified in the layout (see above in multiplot functions). The **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** functions first again select the data to be plotted from the 2D or 3D input data and subsequently plot the selected data using low-level Fieldtrip functions. Using one value for each channel and the x and y coordinates, the values between points are interpolated and plotted. In the help of **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** you can find many cfg options. For instance by specifying the cfg.xlim as a vector the **[ft_topoplotER](/reference/ft_topoplotER)**/**[TFR](/reference/ft_topoplotTFR)** makes selections of multiple time-windows and plots them as subplots.
+**[Ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** plot the topographic distribution of 2-Dimensional or 3-Dimensional datatypes as a 2-D circular view (looking down at the top of the head). The arrangement of the channels is again specified in the layout (see above in multiplot functions). The **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** functions first again select the data to be plotted from the 2D or 3D input data and subsequently plot the selected data using low-level FieldTrip functions. Using one value for each channel and the x and y coordinates, the values between points are interpolated and plotted. In the help of **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** you can find many cfg options. For instance by specifying the cfg.xlim as a vector the **[ft_topoplotER](/reference/ft_topoplotER)**/**[TFR](/reference/ft_topoplotTFR)** makes selections of multiple time-windows and plots them as subplots.
 
 The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/plotting/GA_FC.mat and ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/plotting/TFRhann.mat.
 
@@ -138,9 +138,9 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
 
 #### Exercise 2
 
-<div class="alert-info">
+{:.alert-info}
 The most left picture made with **[ft_topoplotER](/reference/ft_topoplotER)** is planar ERF data. Planar data can not have values lower than zero. Explain why you nevertheless see values in the plot that correspond to negative values.
-</div>
+{% include endclass.html %}
 ####  
 
 In **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)**, you can specify many options to fully control the appearance of the picture. Subsequently you can use the MATLAB print function to write the figure to a file. Preferred file formats are EPS for vector drawings that can be edited in Adobe Illustrator or in Canvas (using “print -depsc”) or .png for bitmaps (using “print -dpng”).

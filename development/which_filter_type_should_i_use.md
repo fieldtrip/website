@@ -3,11 +3,7 @@ title:
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is to serve as a placeholder for future documentation.
-
-Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation** until the page is promoted to actual documentation.
-</div>
+{% include shared/development/warning.md %}
 
 This is a placeholder for the 'Which filter type should I use?' FAQ. The documentation should probably be along the lines o
 

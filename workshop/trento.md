@@ -15,22 +15,15 @@ The local organizers of the workshop are Nathan Weisz and Angelika Lingnau.
 
 ## Using the tutorial data and the FieldTrip version provided
 
-For the hands-on sessions you have to start MATLAB. To ensure that
-everything runs smooth, we will work with a **clean and well-tested**
-version of fieldtrip that is distributed on the workstations and on a USB stick. You should **not** work with an old version you might already have installed in the past. Furthermore, the tutorial data **does not have to be downloaded** but will also be distributed on the workstations and on a USB stick.
+For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a **clean and well-tested** version of fieldtrip that is distributed on the workstations and on a USB stick. You should **not** work with an old version you might already have installed in the past. Furthermore, the tutorial data **does not have to be downloaded** but will also be distributed on the workstations and on a USB stick.
 
 If you work on your own laptop you need the USB stic
  1.  Copy the complete content from the USB stick to your computer
  2.  Unzip the fieldtrip-xxxxxxxx.zip file. 
  3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
-<div class="alert-danger">
-Depending on the unzip program you are using (e.g. Winrar), the name
-of the zip file might also appear as directiory, resulting in
-path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the
-fieldtrip directory in a fieldtrip directory. Please fix that by
-moving all files one level up.
-</div>
+{:.alert-danger}
+Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the **MATLAB command window**
 
@@ -41,32 +34,24 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     ft_defaults
 
 The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. 
-    
+
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and e.g. not in another subfolder. You should see a long list of ft_xxx.m functions.
-    
-The addpath(pwd) statement adds the
-present working directory, i.e. the directory containing the fieldtrip
-main funcctions. The ft_defaults command ensures that all required
-subdirectories are added to the path.
+
+The addpath(pwd) statement adds the present working directory, i.e. the directory containing the fieldtrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory. 
 
-<div class="alert-danger">
+{:.alert-danger}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
-
+<br/>
+<br/>
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
-</div>
 
 After installing fieldtrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
 
-In general the tutorials start by reading the raw data from
-"Subject01.ds", which is a data directory. You should **not** go into
-the Subject01.ds directory, but stay at the level of the tutorial
-directory. If a specific tutorial instructs you to load data (and
-if you want the skip the step just prior to that because of time
-limitations), you should go into the tutorial data directory.
+In general the tutorials start by reading the raw data from "Subject01.ds", which is a data directory. You should **not** go into the Subject01.ds directory, but stay at the level of the tutorial directory. If a specific tutorial instructs you to load data (and if you want the skip the step just prior to that because of time limitations), you should go into the tutorial data directory.
 
 ## Program
 
@@ -75,13 +60,11 @@ Each of the topics consists of a 1h lecture and a 2h hands-on session.
 ### Monday
 
 *  morning: [intro and ERFs](/tutorial/eventrelatedaveraging) 
-
 *  afternoon: [time-frequency analysis](/tutorial/timefrequencyanalysis)
 
 ### Tuesday
 
 *  morning: [beamforming](/tutorial/beamformer) 
-
 *  afternoon: [randomization stats](/tutorial/cluster_permutation_timelock)
 
 ### Wednesday
@@ -127,4 +110,3 @@ Each of the topics consists of a 1h lecture and a 2h hands-on session.
 	trl = [trialbeg trialend];
 	trl(:,3) = offset;
 
-    

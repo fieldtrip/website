@@ -27,9 +27,9 @@ Subsequently in another MATLAB session you can read from the FieldTrip buffer us
 
 The TCP/IP interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy)** function. 
 
-<div class="alert-info">
+{:.alert-info}
 The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less  system resources. 
-</div>
+{% include endclass.html %}
 
 ### Standalone interface with rda2ft
 

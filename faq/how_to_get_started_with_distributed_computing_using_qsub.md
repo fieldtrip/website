@@ -20,9 +20,8 @@ Try the followin
 
 	qsubfeval('rand', 100, 'timreq', 60, 'memreq', 1024)
 
-<div class="alert-info">
+{:.alert-info}
 Besides the memory requirements for your computation, MATLAB also requires memory for itself. The **[qsubfeval](/reference/qsubfeval)** and **[qsubcellfun](/reference/qsubcellfun)** functions have the option **memoverhead** for this, which is by default 1GB. The **memreq** option itself does not have a default value. The torque job is started with a memory reservation of **memreq+memoverhead**.
-</div>
 
 You will get the job ID as the outpu
 

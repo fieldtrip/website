@@ -3,12 +3,7 @@ title: Consistent flank detection for triggers
 layout: default
 ---
 
-<div class="alert-danger">
-
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-The code development project mentioned on this page has been finished by now. Chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 # Consistent flank detection for triggers
 
@@ -19,18 +14,10 @@ It is not yet used for biosemi, and it also has not yet replaced the read_ctf_tr
 Issues to be solved in the flank detectio
 
 *  multiple trigger channels (OK)
-
 *  downgoing flank also interesting (OK)
-
 *  triggers sitting on top of each other (OK)
-
 *  should be combined with read_data instead of using file format specific reading functions (OK)
-
 *  bitmasking of single channel for multiple meanings (bdf-status, ctf151-back/front)
-
 *  slow rise of flank, i.e. value should be detected a few samples later
-
 *  consistent naming of triggers, but also backward compatibility
-
- 
 

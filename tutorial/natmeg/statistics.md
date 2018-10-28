@@ -21,11 +21,11 @@ In this tutorial we will continue working on the dataset described in the [Prepr
 
 This tutorial is not covering group analysis. If you are interested in that, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
-
+<br/>
+<br/>
 {% include youtube.html id="vOSfabsDUNg" %}
-</div>
 
 ## Background
 
@@ -146,13 +146,13 @@ Let us compare the single-trial TFR with the averaged TFR.
          grad: [1x1 struct]
           cfg: [1x1 struct]
 
-<div class="alert-info">
+{% include startclass.html class="allert-info" %}
 Use the MATLAB [boxplot](http://www.mathworks.se/help/stats/boxplot.html) function to plot the power in channel 'MEG0431' at 18 Hz and around 700 ms following movement offset.
 
 Hint: you can make a selection of the data like
     TFR_all.powspctrm(:, 15, 4, 8)
 to give you a  vector with the power values in each trial, and you can use the *trialinfo* as the grouping variable.
-</div>
+{% include endclass.html %}
 
 ### Log-transform the single-trial power
 
@@ -292,14 +292,14 @@ We can compute the ERFs for the two experimental conditions by selecting the sta
     cfg.trials  = find(data_stimlocked.trialinfo(:,1) == 2);
     ERF_dev     = ft_timelockanalysis(cfg, data_stimlocked);
 
-<div class="alert-info">
+{% include startclass.html class="allert-info" %}
 The **[/reference/ft_selectdata](/reference/ft_selectdata)** function is a very handy general purpose function that allows making selections in any dimension of the data. Furthermore, it allows you to compute averages over any of the dimensions. In case you would need the ERF topography as a vector that is averaged over 80 to 110 ms, you could do
 
     cfg = [];
     cfg.latency = [0.08 0.11];
     cfg.avgovertime = 'yes';
     ERF_peak =  ft_selectdata(cfg, ERF_std)
-</div>
+{% include endclass.html %}
 
     cfg        = [];
     cfg.layout = 'neuromag306mag.lay';
@@ -398,9 +398,8 @@ Again we can visualize the results of the statistical comparison. Since we have 
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_stat_erfcluster.png@500)
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels.
-</div>
 
 ## Summary and conclusion
 

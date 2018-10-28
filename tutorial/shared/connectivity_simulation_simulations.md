@@ -80,9 +80,8 @@ The resulting variable **mdata** contains a description of the data in terms of 
 
 #### Exercise 1
 
-<div class="alert-info">
+{:.alert-info}
 Compare the parameters specified for the simulation with the estimated coefficients and discuss.
-</div>
 
 ### Computation of the spectral transfer function
 
@@ -170,12 +169,11 @@ The coherence measure is a symmetric measure, which means that it does not provi
 
 #### Exercise 2
 
-<div class="alert-info">
+{:.alert-info}
 Compute the granger output using instead the 'freq' data structure.  Plot them side-by-side using ft_connectivityplot.
-</div>
+
 Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivityplot)**, you can use the following low-level Matlab plotting code which gives a better understanding of the numerical representation of the results.
 
-	
 	figure
 	for row=1:3
 	for col=1:3
@@ -189,13 +187,11 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 
 #### Exercise 3
 
-<div class="alert-info">
+{:.alert-info}
 Discuss the differences between the granger causality spectra, and the coherence spectra.
-</div>
 
 #### Exercise 4
 
-<div class="alert-info">
+{:.alert-info}
 Compute the following connectivity measures from the **mfreq** data, and visualize and discuss the results: partial directed coherence (pdc), directed transfer function (dtf), phase slope index (psi). (Note that psi will require specifying cfg.bandwidth. What is the meaning of this parameter?)
-</div>
 

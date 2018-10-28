@@ -3,13 +3,7 @@ title: Goals
 layout: default
 ---
 
-<div class="alert-danger">
-The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas. 
-
-After making changes to the code and/or documentation, this page should remain on the wiki as a reminder of what was done and how it was done. However, there is no guarantee that this page is updated in the end to reflect the final state of the project
-
-So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
-</div>
+{% include shared/development/warning.md %}
 
 this involves ft_prepare_vol_sens and ft_compute_leadfield
 
@@ -64,7 +58,7 @@ A list of the typical scenarios for which you would like to use SIMBIO, written 
 
 # Steps to be taken (Johannes/Felix/Carsten)
 
-*  Get familiar with the Fieldtrip toolbox / data structures / code style.
+*  Get familiar with the FieldTrip toolbox / data structures / code style.
 
 *  Program all the needed readers/writers for EEG lead field computation with a given head model, electrode configuration and source space configuration.
 

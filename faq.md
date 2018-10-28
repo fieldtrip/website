@@ -175,7 +175,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 *  [How can I compile the mex files and command-line programs?](/faq/compile)
 *  [How can I compile the mex files on 64 bit Windows?](/faq/how_can_i_compile_the_mex_files_on_64_bit_windows)
 *  [How can I compile the mex files on OS X?](/faq/how_can_i_compile_the_mex_files_on_os_x)
-*  [How many lines of code does Fieldtrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
+*  [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
 *  [Should I add FieldTrip with all subdirectories to my MATLAB path?](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 *  [Can I prevent "external" toolboxes from being added to my MATLAB path?](/faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path)
 *  [What is the relation between "events" (such_as_triggers)_and_"trials"?](/faq/what_is_the_relation_between_events_such_as_triggers_and_trials)

@@ -18,11 +18,11 @@ This tutorial describes how to define epochs-of-interest (trials) from your reco
 
 This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-<div class="alert-info">
+{:.alert-info}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.
-
+<br/>
+<br/>
 {% include youtube.html id="zOxCqcYmIfA" %}
-</div>
 
 ## Background
 
@@ -55,9 +55,8 @@ The databrowser supports three viewmodes: butterfly, vertical or component. In '
 
 When the databrowser opens, you will see buttons to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with the automatic artifact detection methods will be displayed here, see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**. You can click on one of the artifact types, drag over a timewindow to select the start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
 
-<div class="alert-warning">
- The databrowser will **not** change your data in any way. If you specify a cfg as output, it will just store your selected or de-selected artifacts in your cfg.
-</div>
+{:.alert-warning}
+The databrowser will **not** change your data in any way. If you specify a cfg as output, it will just store your selected or de-selected artifacts in your cfg.
 
 ## Visualization
 
@@ -79,17 +78,15 @@ We will first start with the magnetometer
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng natmeg_databrowser1.png
 
-<div class="alert-warning">
+{:.alert-warning}
 If your recorded data is continuous, specify *cfg.continuous = 'yes'*, if you have recorded your data in trials, specify *cfg.continuous = 'no'*
-</div>
 
 {{tutorial:natmeg_temp:natmeg_databrowser1.png?650"}}
 
 *Figure A; Raw plot from magnetometers using ft_databrowser*
 
-<div class="alert-info">
+{:.alert-info}
 Try to get a feel of your data by browsing through the data. Do you see any obvious artifacts?
-</div>
 
 Now we will have a look at the gradiometer
 
@@ -120,9 +117,8 @@ Finally, we will look at the EEG channel
 
 *Figure; Raw plot from EEG channels using ft_databrowser*
 
-<div class="alert-info">
+{:.alert-info}
 At first glance, can you see any differences between the MEG and EEG data or artifacts?
-</div>
 
 # Preprocessing and averaging MEG
 
@@ -225,11 +221,11 @@ This demonstrate how to extract trials from a dataset based on trigger informati
 
 //Figure 3; An overview of the data using **[ft_rejectvisual](/reference/ft_rejectvisual)**//
 
-<div class="alert-warning">
+{:.alert-warning}
 Use the mouse to click and drag a selection box over the trials you wish to reject. You can see the trials that were marked for rejection on the right. If you wish to unmark a trial for rejection, type the number of the trial in the 'toggle trial' box and press enter. You can change from *zvalue* to another metrics to detect outliers.
-
+<br/>
+<br/>
 Please be aware that while *cfg.keepchannel='yes'* is specified, you can disable channels in the display but those will not be removed from the data.
-</div>
 
 After we have rejected trials with artifacts we will save our dat
 
@@ -366,9 +362,8 @@ To plot the topographic distribution of the data averaged over the time interval
 
 //Figure 6; A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)** //
 
-<div class="alert-info">
+{:.alert-info}
 Can you try to explain the topographical distribution in terms of a dipole?
-</div>
 
 ### Combining planar gradiometers
 
@@ -401,11 +396,10 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf4.png@650)
 
-*Figure 7; The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis** *
+//Figure 7; The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis** //
 
-<div class="alert-info">
+{:.alert-info}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
-</div>
 
 We will now zoom in on one combined channel, for instance in the combined channel ‘MEG0222+0223
 
@@ -460,13 +454,11 @@ Now we are going to look at the topographical spread of the field by usin
 
 *Figure 9; A topographic plot of the event related fields obtained using **ft_topoplotER***
 
-<div class="alert-info">
+{:.alert-info}
 Compare this distribution with those resulting from the magnetometers. Do you understand the differences?
-</div>
 
-<div class="alert-info">
+{:.alert-info}
 Which type of source configuration can explain the topography?
-</div>
 
 # Preprocessing and averaging EEG
 
@@ -518,10 +510,8 @@ We start by repeating the same preprocessing procedure as with the MEG. We start
 	data_EEG                    = ft_preprocessing(cfg);
 	save data_EEG data_EEG -v7.3
 
-
-<div class="alert-info">
+{:.alert-info}
 Notice what is different from loading MEG data.
-</div>
 
 The output of data_EEG is the structure data_EEG which has the following field
 
@@ -642,9 +632,8 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 //Figure 9; The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER) ** //
 
-<div class="alert-info">
+{:.alert-info}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
-</div>
 
 To plot the topographic distribution of the data averaged over the time interval from 0.08 to 0.15 seconds use to following command
 
@@ -680,9 +669,8 @@ To plot the topographic distribution of the data averaged over the time interval
 
 //Figure 10; A topographic plot of the event related potentials obtained using **[ft_topoplotER](/reference/ft_topoplotER)** //
 
-<div class="alert-info">
+{:.alert-info}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
-</div>
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf6.png@650)
 
@@ -741,13 +729,11 @@ Note that if you get plotting artifacts in these figures, such as colorbars that
 
 //Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)**//
 
-<div class="alert-info">
+{:.alert-info}
 Did calculating the scalp current density help in narrowing down the source of the EEG activity?
-</div>
 
-<div class="alert-info">
+{:.alert-info}
 How do these results compare to the MEG results?
-</div>
 
 ## Combining MEG and EEG
 

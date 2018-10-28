@@ -36,7 +36,7 @@ The ActiveTwo can send out 312 data channels in total, out of which there are 25
 	; empty lines are fine as well
 	
 	# Write n=label to select hardware channel number n (starting from 1)
-	# and attach a label to it. This will show up in the Fieldtrip buffer
+	# and attach a label to it. This will show up in the FieldTrip buffer
 	# and the GDF file.
 	# Currently, there is no check for double inclusion of channels.
 	# That is, if you define 1=FOO and 1=BAR, the first hardware channel
