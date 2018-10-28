@@ -1,6 +1,7 @@
 ---
-title: Toolkit of Cognitive Neuroscience: EEG/MEG
+title: Toolkit of Cognitive Neuroscience - EEG/MEG
 layout: default
+tags: [workshop]
 ---
 
 # Toolkit of Cognitive Neuroscience: EEG/MEG

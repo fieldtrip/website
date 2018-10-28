@@ -73,6 +73,6 @@
 - name:  Check the quality of the anatomical coregistration
   link:  /example/coregistration_quality_control
 
-- name: 
+- name:  Human ECoG
   link:  /getting_started/human_ecog
 

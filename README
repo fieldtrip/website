@@ -1,3 +1,7 @@
 # FieldTrip website
 
 This repository hosts the content of http://www.fieldtriptoolbox.org
+
+Technical notes
+* Pages that contain tags must have a title
+* Variables passed in an include must be specified in quotes

@@ -3,10 +3,10 @@
 <span class="tag">
   {% if page.tags != nill and page.tags != "" %}
     Tags:
-    {% for thistag in page.tags %}
-      <a href="/tag/{{ thistag }}/">{{ thistag }}</a>
+    {% for t in page.tags %}
+      <a href="/tag/{{ t }}/">{{ t }}</a>
     {% endfor %}
-    {% else %}
+  {% else %}
     &nbsp;
   {% endif %}
 </span>

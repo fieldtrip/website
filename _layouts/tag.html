@@ -5,13 +5,15 @@
     {% include navigation.html %}
     <h1>Pages tagged with "{{ page.tag }}"</h1>
 
-    <ul>
-      {% for item in site.data.tag.[page.tag] %}
-        <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-          {{ item.name }}
-        </a></li>
-      {% endfor %}
-    </ul>
+    {% if site.data.tag[page.tag] != nill %}
+      <ul>
+        {% for item in site.data.tag[page.tag] %}
+          <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
+            {{ item.name }}
+          </a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
 
     {% include footer.html %}
   </body>

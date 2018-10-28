@@ -1,5 +1,5 @@
 ---
-title: Workshop on analyzing intracranial data: spikes and fields
+title: Workshop on analyzing intracranial data - spikes and fields
 layout: default
 ---
 

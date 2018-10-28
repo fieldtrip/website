@@ -10,7 +10,7 @@
 - name:  How can I compile the mex files and command-line executables ?
   link:  /faq/compile
 
-- name: 
+- name:  MATLAB and external requirements
   link:  /faq/requirements
 
 - name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?

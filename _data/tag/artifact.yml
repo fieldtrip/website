@@ -4,11 +4,8 @@
 - name:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sleep
 
-- name:  Introduction in dealing with artifacts
+- name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
-
-- name: 
-  link:  /tutorial/sleep_analysis
 
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection

@@ -13,7 +13,7 @@
 - name:  Introduction
   link:  /development/introduction
 
-- name: 
+- name:  MATLAB and external requirements
   link:  /faq/requirements
 
 - name:  MATLAB version 7.3 (2006b) crashes when I try to do ...

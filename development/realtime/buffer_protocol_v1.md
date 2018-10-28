@@ -1,7 +1,7 @@
 ---
 title:
 layout: default
-tags: [purged]
+tags:
 ---
 
 This page has been [moved](/buffer protocol).

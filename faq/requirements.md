@@ -1,5 +1,5 @@
 ---
-title:
+title: MATLAB and external requirements
 layout: default
 tags: [faq, matlab, toolbox]
 ---

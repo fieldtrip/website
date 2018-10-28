@@ -10,6 +10,7 @@ After making changes to the code and/or documentation, this page should remain o
 
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 </div>
+
 At the moment the ft_mv_gridsearch class  produces the classifier of all
 candidate classifiers, which are defined in the input, with the best performance.
 The extension which is currently implemented and under investigation is a class that finds an ensemble of all candidate classifiers.

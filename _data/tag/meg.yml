@@ -58,7 +58,7 @@
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /tutorial/timefrequencyanalysis
 
-- name:  Introduction in dealing with artifacts
+- name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Event related averaging and MEG planar gradient

@@ -25,7 +25,7 @@
 - name:  Time-frequency analysis using Hanning window, multitapers and wavelets
   link:  /tutorial/timefrequencyanalysis
 
-- name:  Introduction in dealing with artifacts
+- name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
 - name:  Introduction to the FieldTrip toolbox
@@ -154,7 +154,7 @@
 - name:  Getting started with BioImage Suite
   link:  /getting_started/bioimage
 
-- name: 
+- name:  Human ECoG
   link:  /getting_started/human_ecog
 
 - name:  Getting started with Biosemi BDF data

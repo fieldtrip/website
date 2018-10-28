@@ -1,7 +1,7 @@
 ---
 title:
 layout: default
-tags: [tutorial, sleep, EDF, EEG, EMG, ECG, artifacts, continuous, sleep-spindles, slow-waves]
+tags:
 ---
 
 <div class="alert-danger">

@@ -16,11 +16,8 @@
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis
 
-- name:  Introduction in dealing with artifacts
+- name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
-
-- name: 
-  link:  /tutorial/sleep_analysis
 
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp
@@ -142,7 +139,7 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
-- name: 
+- name:  Human ECoG
   link:  /getting_started/human_ecog
 
 - name:  Getting started with CTF data

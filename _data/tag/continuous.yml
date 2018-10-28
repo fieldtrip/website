@@ -4,9 +4,6 @@
 - name:  Preprocessing - Reading continuous EEG data
   link:  /tutorial/continuous
 
-- name: 
-  link:  /tutorial/sleep_analysis
-
 - name:  How can I process continuous data without triggers?
   link:  /faq/how_can_i_process_continuous_data_without_triggers
 
