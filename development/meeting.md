@@ -14,5 +14,5 @@ We organize occasional meetings at the Donders to discuss topics related to the 
 You should add the tag "meeting" to a page to have it appear here.
 </div>
 
-{{topic>meeting &list}}
+{% include seealso.html tag1="meeting" %}
 

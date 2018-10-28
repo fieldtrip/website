@@ -408,9 +408,10 @@ In this tutorial, it was explained how to build a sourcemodel that can be used f
 
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-Here are the related [faqs](/faq
+Here are the related FAQs:
 
-{{topic>sourcemodel meg +faq &list}}
-and the related [example scripts](/example
+{% include seealso.html tag1="sourcemodel" tag2="meg" tag3="faq" %}
 
-{{topic>sourcemodel meg +example &list}}
+and the related examples:
+
+{% include seealso.html tag1="sourcemodel" tag2="meg" tag3="example" %}

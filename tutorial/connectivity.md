@@ -246,8 +246,11 @@ Let's say you wanted to look at cortico-cortical connectivity, e.g. interactions
 This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence](/tutorial/coherence) tutorial.
 
 FAQ
-{{topic>connectivity coherence granger +faq &list}}
+{% include seealso.html tag1="faq" tag2="connectivity" 	%}
+{% include seealso.html tag1="faq" tag2="coherence" 		%}
+{% include seealso.html tag1="faq" tag2="granger" 			%}
 
 Example script
-{{topic>connectivity coherence granger +example &list}}
-
+{% include seealso.html tag1="example" tag2="connectivity" 	%}
+{% include seealso.html tag1="example" tag2="coherence" 		%}
+{% include seealso.html tag1="example" tag2="granger" 			%}

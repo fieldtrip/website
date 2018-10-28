@@ -5,14 +5,14 @@ tags: [tutorial, plot, eeg, meg, timelock, freq, statistics, source, layout, MEG
 ---
 
 <div class="alert-danger">
-This page is under development, use with caution 
+This page is under development, use with caution
 </div>
 
 # Plotting data at the channel and source level
 
 ## Introduction
 
-To visualize your experimental data you can make use of FieldTrip's specialised plotting functions, which are optimised for the FT data structures. Alternatively, you can use the  standard MATLAB functions ('plot, 'image', 'imagesc'). 
+To visualize your experimental data you can make use of FieldTrip's specialised plotting functions, which are optimised for the FT data structures. Alternatively, you can use the  standard MATLAB functions ('plot, 'image', 'imagesc').
 
 ## Background
 
@@ -35,7 +35,7 @@ Plotting 2D data at the sensor level using:  ft_singleplotER (top left), ft_mult
 ![image](/static/img/tutorial/plotting/figure5era.png@250)
 ![image](/static/img/tutorial/plotting/figure5.jpg@250)
 
-Plotting 3D data at the sensor level: using ft_singleplotTFR (top left), ft_multiplotTFR (top right) and ft_topoplotTFR (bottom left) 
+Plotting 3D data at the sensor level: using ft_singleplotTFR (top left), ft_multiplotTFR (top right) and ft_topoplotTFR (bottom left)
 
 ![image](/static/img/tutorial/plotting/figure3.png@250)
 ![image](/static/img/tutorial/plotting/figure2.png@250)
@@ -62,15 +62,15 @@ The ft_singleplotER function first selects the data to be plotted, in this case 
 ![image](/static/img/utorial/plotting/singleploter_avgfc.png@400)
 ![image](/static/img/utorial/plotting/plot_avgfc.png@400)
 
-In **[ft_singleplotTFR](/reference/ft_singleplotTFR)** the channel, time bins and frequency bins are selected and subsequently plotted with the MATLAB IMAGESC.m function. 
+In **[ft_singleplotTFR](/reference/ft_singleplotTFR)** the channel, time bins and frequency bins are selected and subsequently plotted with the MATLAB IMAGESC.m function.
 
 The FieldTrip plotting functions have a lot of build in intelligence to make the plotting of the multidimensional data easier. It is for instance possible to do baseline correction before plotting, by specifying the baseline type and time limits. In the plotting functions either the FieldTrip function **[ft_timelockbaseline](/reference/ft_timelockbaseline)** or **[ft_freqbaseline](/reference/ft_freqbaseline)** is called.
 If you specify multiple channels in cfg.channel both singleplot functions will plot the mean over these channels. In the plotting functions the FieldTrip function **[ft_channelselection](/reference/ft_channelselection)** is called, which makes it straightforward to plot for instance the mean TFR (download [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/plotting/TFRhann.mat), see [time-frequency analysis tutorial](/timefrequencyanalysis#hanning_taper_fixed_window_length))of the left central channels.
 
     cfg = [];
-    cfg.baseline = [-0.5 -0.1]; 
+    cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'absolute'; 	
-    cfg.zlim = [-1.5e-27 1.5e-27];	
+    cfg.zlim = [-1.5e-27 1.5e-27];
     cfg.channelname   = 'MLC'; % top figure
     figure;ft_singleplotTFR(cfg, TFRhann);
 
@@ -98,7 +98,7 @@ Normally the axes of the figure are not visible, only the "axis" of each channel
 ![image](/static/img/tutorial/plotting/avgfic.png@400)
 ![image](/static/img/tutorial/plotting/tfrhannall.png@400)
 
-The layout is determined by the layout file. Read more on layout files 
+The layout is determined by the layout file. Read more on layout files
 [here](/tutorial/layout), and in the [frequently asked questions](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 
 For multiplotting planar gradient data from the Neuromag system it is especially relevant to work with layout files: the Neuromag system has two planar gradiometers (plus one axial magnetometer) at each sensor location. You do not want to plot those on top of each other. Hence the Neuromag layout files contain two (for 122 channel) or three (for 306 channel) seperate subplots for each channel location. Those two (or three) subplots hold the data for the two planar gradients (and for the magnetometer signal).
@@ -114,7 +114,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.zlim = [0 6e-14];                
     cfg.layout = 'CTF151.lay';            
     figure; ft_topoplotER(cfg,GA_FC); colorbar;
-    
+
 ![image](/static/img/utorial/plotting/tuto_topoer.png@250)
 
     cfg = [];
@@ -125,7 +125,7 @@ The data for plotting are available from ftp:/ftp.fieldtriptoolbox.org/pub/field
     cfg.baselinetype = 'absolute';
     cfg.layout = 'CTF151.lay';
     figure; ft_topoplotTFR(cfg,TFRhann);
-    
+
 ![image](/static/img/tutorial/plotting/tuto_topotfr.png@250)
 
     % for the multiple plots als
@@ -144,7 +144,7 @@ The most left picture made with **[ft_topoplotER](/reference/ft_topoplotER)** is
 ####  
 
 In **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)**, you can specify many options to fully control the appearance of the picture. Subsequently you can use the MATLAB print function to write the figure to a file. Preferred file formats are EPS for vector drawings that can be edited in Adobe Illustrator or in Canvas (using “print -depsc”) or .png for bitmaps (using “print -dpng”).
-To make the EPS-files optimally suitable for Adobe Illustrator, use the command “print -depsc -adobecs -painter”. 
+To make the EPS-files optimally suitable for Adobe Illustrator, use the command “print -depsc -adobecs -painter”.
 Since it seems MATLAB uses the 'painter' renderer to export in Illustrator format, with this method one can export quite complex figures that otherwise would be exported as bitmaps. Note, however, that the 'painter' renderer has many limitations  compared to the z-buffer and openGL renderers. (See also MATLAB help on selecting a renderer).
 
 Some examples of what you can d
@@ -164,19 +164,19 @@ Options specific for to using topoplot.m
     cfg.style = 'straight';               
     cfg.marker = 'labels';                
     figure; ft_topoplotTFR(cfg,TFRhann);
- 
+
 
 ![image](/static/img/tutorial/plotting/tuto_funcytopo3.png@250)
- 
+
 
     cfg.gridscale = 300;                
     cfg.contournum = 10;                
     cfg.colormap = gray(10);            
     figure; ft_topoplotTFR(cfg,TFRhann);
- 
+
 
 ![image](/static/img/tutorial/plotting/tuto_funcytopo2.png@250)
- 
+
 
     cfg.gridscale = 300;
     cfg.contournum = 4;
@@ -185,10 +185,10 @@ Options specific for to using topoplot.m
     cfg.markersize = 12;
     cfg.markercolor = [0 0.69 0.94];
     figure; ft_topoplotTFR(cfg,TFRhann);
- 
+
 
 ![image](/static/img/tutorial/plotting/tuto_funcytopo1.png@250)
- 
+
 
 ### Interactive mode
 
@@ -217,14 +217,14 @@ selected channels are averaged and displayed as one plot (ft_singleplotTFR is ca
 
 **[Ft_clusterplot](/reference/ft_clusterplot)** plots a series of topoplots with found clusters highlighted. The output "stat" is 2D data from **[ft_timelockstatistics](/reference/ft_timelockstatistics)** or **[ft_freqstatistics](/reference/ft_freqstatistics)** with 'cluster' as cfg.correctmc. Stat should be 2D, therefore stat from **[ft_timelockstatistics](/reference/ft_timelockstatistics)** data not averaged over time, or stat from **[ft_freqstatistics](/reference/ft_freqstatistics)** averaged over frequency not averaged over time.
 
-The function automatically finds the clusters in the data which are smaller than the pre-specified alpha (cfg.alpha) and plots a series of topoplots with the data in "stat" field (are for instance t-values) and the sensors which are part of the cluster highlighted. 
+The function automatically finds the clusters in the data which are smaller than the pre-specified alpha (cfg.alpha) and plots a series of topoplots with the data in "stat" field (are for instance t-values) and the sensors which are part of the cluster highlighted.
 
 ##### Timelockdata
 
-	
+
 	% load stat data
 	load statERF
-	
+
 	% clusterplot
 	cfg = [];
 	cfg.zlim = [-6 6]; %Tvalues
@@ -238,10 +238,10 @@ The function automatically finds the clusters in the data which are smaller than
 
 ##### Freqdata
 
-	
-	% load statistical output performed on freq data 
+
+	% load statistical output performed on freq data
 	% if code is of interest, please see tutorial on cluster_permutation_freq
-	
+
 	% clusterplot
 	cfg = [];
 	cfg.zlim = [-5 5];
@@ -259,19 +259,19 @@ Please see **[ft_connectivityplot](/reference/ft_connectivityplot)**, **[ft_mult
 To plot ICA, PCA or other decompositions that result from **[ft_componentanalysis](/reference/ft_componentanalysis)** you can use **[ft_topoplotIC](/reference/ft_topoplotIC)** for the topographies and **[ft_databrowser](/reference/ft_databrowser)** for the topographies combined with the time series.
 ## Plotting data at the source level
 
-With the **[ft_sourceplot](/reference/ft_sourceplot)** function you can plot functional source reconstructed data. Data structures can be source estimates from **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or **[ft_sourcegrandaverage](/reference/ft_sourcegrandaverage)** or statistical values from **[ft_sourcestatistics](/reference/ft_sourcestatistics)**. 
+With the **[ft_sourceplot](/reference/ft_sourceplot)** function you can plot functional source reconstructed data. Data structures can be source estimates from **[ft_sourceanalysis](/reference/ft_sourceanalysis)** or **[ft_sourcegrandaverage](/reference/ft_sourcegrandaverage)** or statistical values from **[ft_sourcestatistics](/reference/ft_sourcestatistics)**.
 
-At the source level, there are two main ways of representing functional data: 
- 1.  On a regular, 3-dimensional grid (volumetric data) 
+At the source level, there are two main ways of representing functional data:
+ 1.  On a regular, 3-dimensional grid (volumetric data)
  2.  On a surface geometry.
 
-### Volumetric data 
+### Volumetric data
 
 Volume data is characterized by source locations spaced as a 3D grid (like voxels in an MRI)
 
-You can visualize your data using **[ft_sourceplot](/reference/ft_sourceplot)**, which provides multiple plotting options. To specify the method of plotting, you can adjust the options in the  configuration structure (cfg) given as an input to ft_sourceplot. options for visualization are 
+You can visualize your data using **[ft_sourceplot](/reference/ft_sourceplot)**, which provides multiple plotting options. To specify the method of plotting, you can adjust the options in the  configuration structure (cfg) given as an input to ft_sourceplot. options for visualization are
 
-Example plotting methods include (1) multiple 2D slices (axial orientation as default) trhoughout the brain, (2) multiple slices in each of the three orthorgonal directions (axial, sagittal and coronal) with which you can use to click around the brain or (3) project the functional data onto a surface. The third option will be covered under 'surface data'. 
+Example plotting methods include (1) multiple 2D slices (axial orientation as default) trhoughout the brain, (2) multiple slices in each of the three orthorgonal directions (axial, sagittal and coronal) with which you can use to click around the brain or (3) project the functional data onto a surface. The third option will be covered under 'surface data'.
 
 Below, we will first provide the basic code for using **[ft_sourceplot](/reference/ft_sourceplot)**. Then, we will proceed with specifying the fields in the cfg structure in order to produce the visualisation you want when calling **[ft_sourceplot](/reference/ft_sourceplot)**.
 
@@ -279,17 +279,17 @@ Below, we will first provide the basic code for using **[ft_sourceplot](/referen
 
 Here we will plot axial slices of the brain
 
-	
+
 	% load data
-	load statsourceTFR 
-	
+	load statsourceTFR
+
 	% specify cfg parameters
 	cfg = [];
 	cfg.method        = 'slice';
 	cfg.funcolorlim   = 'maxabs';
 	cfg.funparameter  = 'stat';
 	ft_sourceplot(cfg,statsourceTFR);
-	
+
 	% note
 	To play around with the number of slices, and which slice to begin plotting, check the documentation for cfg.nslices, and cfg.slicerange, respectively.
 
@@ -299,7 +299,7 @@ Here we will plot axial slices of the brain
 
 For exploring your data, plotting the brain from 3 orthogonal orientations simultaneously can be helpful.  Below you can see that the parameters are similar as plotting slices, except for the method being specified.
 
-	
+
 	cfg = [];
 	cfg.method        = 'ortho';  %changed from slice
 	cfg.funcolorlim   = 'maxabs';
@@ -312,46 +312,46 @@ For exploring your data, plotting the brain from 3 orthogonal orientations simul
 
 This section uses the data from Subject01 in the [:tutorial:beamformer](/tutorial/beamformer) tutorial.
 
-	
+
 	% load contrast data
 	load sourceDiff
-	
+
 	% load MRI and interpolate functional source data to MRI
 	mri = ft_read_mri('Subject01.mri');  
 	mri = ft_volumereslice([], mri);
-	
+
 	cfg            = [];
 	cfg.downsample = 2;
 	cfg.parameter  = 'avg.pow';
 	sourceDiffInt  = ft_sourceinterpolate(cfg, sourceDiff , mri);
-	
+
 	% plot multiple 2D axial slices
 	cfg = [];
 	cfg.method        = 'slice';
 	cfg.funparameter  = 'avg.pow';
 	cfg.maskparameter = cfg.funparameter;
 	cfg.funcolorlim   = [0.0 1.2];
-	cfg.opacitylim    = [0.0 1.2]; 
+	cfg.opacitylim    = [0.0 1.2];
 	cfg.opacitymap    = 'rampup';  
 	ft_sourceplot(cfg, sourceDiffInt);
-	
+
 
 ![image](/static/img/tutorial/beamformer/figure4bf.png@500)
 
-####  Plotting on 3 orthogonal slices 
+####  Plotting on 3 orthogonal slices
 
-	
+
 	cfg = [];
 	cfg.nonlinear     = 'no';
 	sourceDiffIntNorm = ft_volumenormalise(cfg, sourceDiffInt);
-	
+
 	% plot ortho
 	cfg = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'avg.pow';
 	cfg.maskparameter = cfg.funparameter;
 	cfg.funcolorlim   = [0.0 1.2];
-	cfg.opacitylim    = [0.0 1.2]; 
+	cfg.opacitylim    = [0.0 1.2];
 	cfg.opacitymap    = 'rampup';  
 	figure; ft_sourceplot(cfg, sourceDiffIntNorm);
 
@@ -416,16 +416,16 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
 
 #### Project volumetric data to an MNI white-matter surface surface
 
-	
+
 	cfg = [];
 	cfg.method         = 'surface';
 	cfg.funparameter   = 'avg.pow';
 	cfg.maskparameter  = cfg.funparameter;
 	cfg.funcolorlim    = [0.0 1.2];
 	cfg.funcolormap    = 'jet';
-	cfg.opacitylim     = [0.0 1.2]; 
+	cfg.opacitylim     = [0.0 1.2];
 	cfg.opacitymap     = 'rampup';  
-	cfg.projmethod     = 'nearest'; 
+	cfg.projmethod     = 'nearest';
 	cfg.surffile       = 'surface_white_both.mat'; %Standard MNI brain
 	cfg.surfdownsample = 10;  % downsample to speed up processing
 	ft_sourceplot(cfg, sourceDiffIntNorm);
@@ -445,28 +445,28 @@ Let's select our data segment of interest, so we have scalar data, which we can 
 
 #### Make a data selection
 
-	
+
 	% Select data closest to the point-of-interest
-	freqSel = 70; 
-	timeSel = 0.2; 
+	freqSel = 70;
+	timeSel = 0.2;
 	[~, ixFreqSel] = min(abs(stat.freq - freqSel));
 	[~, ixTimeSel] = min(abs(stat.time - timeSel));
-	
+
 	%Copy all relevant fields to a new structure
 	statSubSel.inside   = stat.inside;
 	statSubSel.outside  = stat.outside;
 	statSubSel.dim      = stat.dim;
 	statSubSel.pos      = stat.pos;
-	
+
 	%Actually selecting the data; One can also apply averaging here, etc.
 	statSubSel.stat = stat.stat(:,ixFreqSel, ixTimeSel);
 	statSubSel.time = stat.time(ixTimeSel);
 	statSubSel.freq = stat.freq(ixFreqSel);
 
-The resulting statSubSel-structure can be processed by **[ft_sourceplot](/reference/ft_sourceplot)**. 
+The resulting statSubSel-structure can be processed by **[ft_sourceplot](/reference/ft_sourceplot)**.
 #### Plotting data selection to surface
 
-	
+
 	cfg = [];
 	cfg.surffile     = surffile;
 	cfg.funparameter = 'stat';
@@ -488,9 +488,8 @@ Although MATLAB is a very flexible development and analysis environment, it is n
 
 Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/layout) explains how this mapping is constructed.   
 
-FAQ
-{{topic>plot +faq &list}}
+See also these FAQs:
+{% include seealso.html tag1="faq" tag2="plot" %}
 
-Example script
-{{topic>plot +example &list}}
-
+See also these example scripts:
+{% include seealso.html tag1="example" tag2="plot" %}

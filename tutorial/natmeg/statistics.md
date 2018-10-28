@@ -408,11 +408,12 @@ This tutorial showed you how to perform parametric and non-parametric statistics
 
 ### Suggested further reading
 
-Tutorial
-{{topic>statistics +tutorial &list}}
+Tutorials:
+{% include seealso.html tag1="statistics" tag2="tutorial" %}
 
-FAQ
-{{topic>statistics +faq &list}}
+FAQs:
+{% include seealso.html tag1="statistics" tag2="faq" %}
 
-Example script
-{{topic>statistics +example &list}}
+Example scripts:
+{% include seealso.html tag1="statistics" tag2="example" %}
+

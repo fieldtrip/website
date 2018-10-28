@@ -13,7 +13,7 @@ distributes the work between them.
 
 The goal of this toolbox is to provide you with an easy MATLAB interface to
 distribute your jobs that is compatible with the MATLAB feval and cellfun
-functions. 
+functions.
 
 This FieldTrip-engine toolbox is compatible with the FieldTrip-qsub toolbox
 that allows you to distribute your computations to a distributed Linux cluster.
@@ -28,5 +28,4 @@ details on the qsub toolbox or see http://www.fieldtriptoolbox.org/faq for quest
 
 ## Frequently asked questions about distributed computing using this toolbox
 
-{{topic>engine +faq &list}}
-
+{% include seealso.html tag1="faq" tag2="engine" %}

@@ -21,4 +21,4 @@ You can go through the contributions to the FieldTrip discussion list [here](htt
 
 # Frequently Asked Questions
 
-{{topic>faq +email &list}}
+{% include seealso.html tag1="faq" tag2="email" %}

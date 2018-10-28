@@ -788,7 +788,7 @@ Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or freq
 If you are doing a group study where you want the grid points to be the same over all subjects, [ see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 FAQ
-{{topic>source +faq &list}}
+{% include seealso.html tag1="source" tag2="faq" %}
 
 Example script
-{{topic>source +example &list}}
+{% include seealso.html tag1="source" tag2="example" %}

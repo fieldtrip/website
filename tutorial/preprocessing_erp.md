@@ -361,9 +361,12 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 
 After having finished this tutorial on EEG data, you can look at the [event related averaging](/tutorial/eventrelatedaveraging) tutorial for MEG data or continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-If you have more questions about preprocessing or timelocked-analysis, you can also read the following faq-
-{{topic>preprocessing timelock +faq&list}}
+If you have more questions about preprocessing or timelocked-analysis, you can also read the following FAQs:
 
-Or you can also read the example script
-{{topic>preprocessing timelock +example &list}}
+{% include seealso.html tag1="faq" tag3="preprocessing" %}
+{% include seealso.html tag1="faq" tag3="timelock" %}
 
+Or you can also read the examples:
+
+{% include seealso.html tag1="example" tag3="preprocessing" %}
+{% include seealso.html tag1="example" tag3="timelock" %}

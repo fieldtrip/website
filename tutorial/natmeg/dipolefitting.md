@@ -945,10 +945,11 @@ More details on constructing volume conduction models of the head can be found [
 ### Suggested further reading
 
 Tutorials:
-{{topic>source headmodel +tutorial &list}}
+{% include seealso.html tag1="source" tag2="headmodel" tag3="tutorial" %}
 
 FAQs:
-{{topic>source headmodel +faq &list}}
+{% include seealso.html tag1="source" tag2="headmodel" tag3="faq" %}
 
 Example scripts:
-{{topic>source headmodel +example &list}}
+{% include seealso.html tag1="source" tag2="headmodel" tag3="example" %}
+

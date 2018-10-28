@@ -508,10 +508,9 @@ Details on head models can be found [here](/tutorial/headmodel_meg) or  [here](/
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). See [here for source statistics](/example/source_statistics). If you want to dive deeper into coherence, [take a look here](/tutorial/coherence). And in the appendix there is a way described how to [compute virtual MEG sensors](/tutorial/shared/virtual_sensors).
 
 FAQ
-{{topic>source connectivity coherence +faq &list}}
+{% include seealso.html tag1="faq" tag2="source" tag3="connectivity" %}
+{% include seealso.html tag1="faq" tag2="source" tag3="coherence" %}
 
 Example script
-{{topic>source connectivity coherence +example &list}}  
-
------
-This tutorial has last been tested by Jörn with version 20130220 of FieldTrip, using MATLAB 2011b on a 64-bit Windows platform and 64-bit Linux platform.
+{% include seealso.html tag1="example" tag2="source" tag3="connectivity" %}
+{% include seealso.html tag1="example" tag2="source" tag3="coherence" %}

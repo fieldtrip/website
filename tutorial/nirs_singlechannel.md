@@ -289,5 +289,6 @@ Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seco
 
 Here, we explained the pre-processing steps for a single channel in an fNIRS dataset using FieldTrip. If you would like to read further on how to pre-process an fNIRS dataset with multiple channels, you can continue with the [fNIRS multi-channel tutorial](//tutorial/nirs_multichannel). When you have more questions about the topic of any tutorial, do not forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
-Here is the other documentation on this wiki that relates to fNIR
-{{topic>nirs &list}}
+Here is the other documentation on this wiki that relates to fNIRS:
+
+{% include seealso.html tag1="nirs" %}

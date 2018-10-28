@@ -213,9 +213,10 @@ In this tutorial, it was explained how to build a volume conduction model of the
 
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-Here are the related [faqs](/faq
+Here are the related FAQs:
 
-{{topic>headmodel meg +faq &list}}
-and the related [example scripts](/example
+{% include seealso.html tag1="faq" tag2="headmodel" tag3="meg" %}
 
-{{topic>headmodel meg +example&list}}
+and the related examples:
+
+{% include seealso.html tag1="example" tag2="headmodel" tag3="meg" %}

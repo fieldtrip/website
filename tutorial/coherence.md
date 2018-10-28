@@ -324,10 +324,12 @@ Compare the results with figure 3. Pay special attention to the noise bias.
 This tutorial demonstrated how to compute one specific measure of connectivity. Using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** you can also compute other undirected and directed connectivity measures, such as Granger causality. This is explained in more detail in the [connectivity tutorial](/tutorial/connectivity).
 
 FAQ
-{{topic>connectivity coherence +faq &list}}
+{% include seealso.html tag1="faq" tag2="connectivity" %}
+{% include seealso.html tag1="faq" tag2="coherence"    %}
 
 Example script
-{{topic>connectivity coherence +example &list}}
+{% include seealso.html tag1="example" tag2="connectivity" %}
+{% include seealso.html tag1="example" tag2="coherence"    %}
 
 ## Appendix 1: Localisation of neuronal sources coherent with the EMG using beamformers
 
@@ -418,4 +420,3 @@ The trial function used to extract the trial
       trl        = [trl; trlok];
     end
     end
-

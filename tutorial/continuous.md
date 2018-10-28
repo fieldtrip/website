@@ -254,8 +254,10 @@ The following example shows how to read the data as a single continuous segment,
 
 After having finished this tutorial on preprocessing, you can continue with the tutorial on [Preprocessing of EEG data and compute ERPs](/tutorial/preprocessing_ERP), with the [event related averaging](/tutorial/eventrelatedaveraging) or with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-If you have more questions about preprocessing, you can also read the following faq-
-{{topic>faq +preprocessing &list}}
-Or you can also read the example script
-{{topic>example +preprocessing &list}}
+If you have more questions about preprocessing, you can also read the following FAQs:
 
+{% include seealso.html tag1="faq" tag2="preprocessing" %}
+
+Or you can also read the example scripts:
+
+{% include seealso.html tag1="example" tag2="preprocessing" %}

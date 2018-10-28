@@ -338,8 +338,7 @@ This tutorial showed how to do time-frequency analysis on a single's subject MEG
 After having finished this tutorial on time-frequency analysis, you can continue with the [beamformer source reconstruction](/tutorial/beamformer) tutorial if you are interested in the source-localization of the power changes or the [cluster-based permutation tests on time-frequency data](/tutorial//cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
 
 Frequently asked question
-{{topic>freq +faq &list}}
+{% include seealso.html tag1="faq" tag2="freq" %}
 
 Example script
-{{topic>freq +example &list}}
-
+{% include seealso.html tag1="example" tag2="freq" %}

@@ -167,7 +167,7 @@ In this tutorial we showed how to do MNE source reconstruction method on a singl
 Functions and tutorial pages that show how to average, and how to analyze statistically source-reconstructions across subjects or how to compare those to a template brain are still under development.
 
 FAQ
-{{topic>source +faq &list}}
+{% include seealso.html tag1="source" tag2="faq" %}
 
 Example script
-{{topic>source +example &list}}
+{% include seealso.html tag1="source" tag2="example" %}

@@ -285,5 +285,8 @@ This way you can distribute your custom function (e.g. see below) along with the
 
 This tutorial covered how to distribute your computations/workload over multiple computers in a cluster that uses the Torque or SGE batch queue system. In our example, we have performed a relatively simple timelock analysis (ERF) on MEG data, but one can imagine that it does not need many adjustments to distribute any other type of analysis. Using the configuration demonstrated in Example 2, one can distribute any form of analysis.
 
-FAQs related to issues in this tutoria
-{{topic>qsub peer distcomp +faq&list}}
+FAQs related to issues in this tutorial:
+{% include seealso.html tag1="faq" tag2="qsub" 			%}
+{% include seealso.html tag1="faq" tag2="peer" 			%}
+{% include seealso.html tag1="faq" tag2="engine" 		%}
+{% include seealso.html tag1="faq" tag2="distcomp" 	%}

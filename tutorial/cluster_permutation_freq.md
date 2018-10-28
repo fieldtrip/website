@@ -434,8 +434,11 @@ If you are interested in parametric tests in FieldTrip, you can read the [Parame
 If you would like to read more about issues related to statistical analysis, you can read the following as wel
 
 FAQ
-{{topic>statistics cluster neighbour +faq &list}}
+{% include seealso.html tag1="faq" tag2="statistics" %}
+{% include seealso.html tag1="faq" tag2="cluster"    %}
+{% include seealso.html tag1="faq" tag2="neighbour"  %}
 
 Example script
-{{topic>statistics cluster neighbour +example &list}}
-
+{% include seealso.html tag1="example" tag2="statistics" %}
+{% include seealso.html tag1="example" tag2="cluster"    %}
+{% include seealso.html tag1="example" tag2="neighbour"  %}

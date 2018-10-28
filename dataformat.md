@@ -84,4 +84,4 @@ The following surface and volume mesh formats are supported by **[ft_read_headsh
 
 # Frequently Asked Questions
 
-{{topic>faq +dataformat &list}}
+{% include seealso.html tag1="faq" tag2="dataformat" %}

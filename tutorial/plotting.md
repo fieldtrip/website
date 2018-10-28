@@ -579,7 +579,7 @@ Although MATLAB is a very flexible development and analysis environment, it is n
 Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/layout) explains how this mapping is constructed.   
 
 Frequently asked question
-{{topic>plot +faq &list}}
+{% include seealso.html tag1="plot" tag2="faq" %}
 
 Example script
-{{topic>plot +example &list}}
+{% include seealso.html tag1="plot" tag2="example" %}

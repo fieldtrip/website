@@ -535,12 +535,14 @@ In this tutorial, it was shown how to do non-parametric statistics on axial and 
 
 If you are interested in parametric tests in FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial. If you are interested in how to do the same statistics on time-frequency representations, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial.
 
-If you would like to read more about issues related to statistical analysis, you can read the following as wel
+If you would like to read more about issues related to statistical analysis, you can read the following as well:
+
 FAQ
-{{topic>statistics cluster neighbour +faq &list}}
+{% include seealso.html tag1="faq" tag2="statistics" %}
+{% include seealso.html tag1="faq" tag2="cluster"    %}
+{% include seealso.html tag1="faq" tag2="neighbour"  %}
 
 Example script
-{{topic>statistics cluster neighbour +example &list}}
-
------
-This tutorial was last revised by Nietzsche (June 18 2014) of FieldTrip using MATLAB 2011b on a 64-bit Linux platform.
+{% include seealso.html tag1="example" tag2="statistics" %}
+{% include seealso.html tag1="example" tag2="cluster"    %}
+{% include seealso.html tag1="example" tag2="neighbour"  %}

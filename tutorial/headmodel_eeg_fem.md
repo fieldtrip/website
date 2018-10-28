@@ -51,15 +51,10 @@ The anatomical mri of the [tutorial data set](/tutorial/shared/dataset) is avail
 *Figure 2. Pipeline for creating a FEM model*
 
 *  First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
-
 *  then we reslice the anatomical data with **[ft_volumereslice](/reference/ft_volumereslice)**;
-
 *  segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
-
 *  create a geometrical description of the head (mesh) with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**;
-
 *  create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
-
 *  and visualize the geometry of the head by **[ft_plot_mesh](/reference/ft_plot_mesh)**
 
 ## Reading in the anatomical  data
@@ -83,13 +78,9 @@ Then, you can read in the mri data.
 The structure of your mri variable contains the following field
 
 *  **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
-
 *  **anatomy**: This is a matrix (with the size and number of dimensions specified in **dim**) that contains the anatomical information represented by numbers.
-
 *  **hdr**: Header information of the anatomical images.
-
 *  **transform**: A homogenous [transformation matrix](/faq/how_change_mri_orientation_size_fov) that aligns the anatomical data (in field **anatomy**) to a certain coordinate system.
-
 *  **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
 
 You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system).
@@ -157,17 +148,11 @@ Note that the segmentation is quite time consuming (~15mins) and if you want you
 The segmentedmri data structure is similar to the mri data structure, but contains the new field
 
 *  **unit** :  unit of the head coordinate system
-
 *  **cfg**  : configuration information of the function which created segmentedmri
-
 *  **gray** : binary representation of the gray matter
-
 *  **white**: binary representation of the white matter
-
 *  **csf**  : binary representation of the csf (cerebro-spinal fluid)
-
 *  **skull**: binary representation of the skull
-
 *  **scalp**: binary representation of the scalp
 
 The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in fields **skull**, **scalp**... etc. to the coordinate system defined in the **coordsys** field.
@@ -249,13 +234,9 @@ The vol can also be downloaded here [ftp server](ftp://ftp.fieldtriptoolbox.org/
 The vol data structure contains the same information in the **pos** (**pnt** in mesh), **hex**, **tissue** and **tissulabel** fields than the mesh we created earlier. And it has also new field
 
 *  **cond**: conductivity of each tissue-type (in order of tissuelabel)
-
 *  **stiff**:  matrix
-
 *  **type**: describes the method that was used to create the headmodel.
-
 *  **unit**: the unit of measurement of the geometrical data in the pos field
-
 *  **cfg**:  configuration of the function that was used to create vol
 
 Note that the unit of measurement used in the geometrical description of vol is in 'mm'. The EEG sensors should be also defined in 'mm'. The units of all type of geometrical information should be the same when a leadfield is computed for source-reconstruction.
@@ -318,9 +299,7 @@ First, we will align the electrodes automatically to the anatomical landmarks (t
 For the automatic alignment, we need three informatio
 
 *  electrode positions
-
 *  position of fiducial landmarks relative to the electrodes
-
 *  position of fiducial landmarks in the anatomical mri
 
 In the template set of electrodes, the first three labels are: 'Nz', 'LPA' and 'RPA'. These labels show that the first three rows of the **elec.chanpos** field defines the position of the nasion, left and right PA (the landmarks of the CTF ) in *"electrode" coordinates*. We can use this information for the automatic alignment. But we also need to know the position of the same points in the anatomical mri. We use an anatomical mri which has been already aligned to these points, therefore we can find these coordinates in the header information.
@@ -414,9 +393,10 @@ In this tutorial, it was explained how to build a volume conduction model of the
 
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-Here are the related [faqs](/faq
+Here are the related FAQs:
 
-{{topic>faq +headmodel +eeg &list}}
-and the related [example scripts](/example
+{% include seealso.html tag1="faq" tag2="headmodel" tag3="eeg" %}
 
-{{topic>example +headmodel +eeg &list}}
+and the related examples:
+
+{% include seealso.html tag1="example" tag2="headmodel" tag3="eeg" %}

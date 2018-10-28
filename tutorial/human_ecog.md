@@ -543,18 +543,20 @@ Upon completion of this tutorial, one should obtain an integrated representation
 
 You can read more about intracranial EEG and other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the following documentation.
 
-{{topic>getting_started +bioimage &list}}
-{{topic>example +ecog &list}}
-{{topic>tutorial +animal &list}}
+{% include seealso.html tag1="getting_started" tag2="bioimage" %}
+{% include seealso.html tag1="example" tag2="ecog" %}
+{% include seealso.html tag1="tutorial" tag2="animal" %}
 
-Here is also a list of related documentatio
+Here is also a list of related documentation:
 
 ### FAQs on data formats
 
-{{topic>dataformat +faq &list}}
+{% include seealso.html tag1="dataformat" tag2="faq" %}
+
 ### FAQs on frequency analysis
 
-{{topic>freq +faq &list}}
+{% include seealso.html tag1="freq" tag2="faq" %}
+
 ### FAQs on connectivity
 
-{{topic>connectivity +faq &list}}
+{% include seealso.html tag1="connectivity" tag2="faq" %}

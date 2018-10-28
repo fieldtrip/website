@@ -12,15 +12,14 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 
 Note that this page has moved to [:tutorial:headmodel_meg](/tutorial/headmodel_meg)
 
-Here are the related [faqs](/faq
+See also these FAQs:
 
-{{topic>faq +headmodel &list}}
+{% include seealso.html tag1="faq" tag2="headmodel" %}
 
-and the related [example scripts](/example
+See also these examples:
 
-{{topic>example +headmodel &list}}
+{% include seealso.html tag1="example" tag2="headmodel" %}
 
-and the related [tutorials](/tutorial
+See also these tutorials:
 
-{{topic>tutorial +headmodel &list}}
-
+{% include seealso.html tag1="tutorial" tag2="headmodel" %}

@@ -16,12 +16,12 @@ The objective of supplying these low-level functions as a seperate module/toolbo
 The low-level functions are combined in the [development:forward](/development/forward) and the [development:inverse](/development/inverse) toolboxes, which are released together with FieldTrip but can also be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules) as separate toolboxes. In the past these functions were combined in one toolbox.
 
 Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably will want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
- 
+
 ## Module layout
 
 The [development:forward](/development/forward) module contains the methods to compute the solution to the volume conduction problem, i.e. "What is the potential or field distribution given a known source?".
 
-The [development:inverse](/development/inverse) module contains the methods to estimate the source parameters, i.e. to answer the question  "What are the unknown source parameters, given the observed EEG or MEG field distribution?". 
+The [development:inverse](/development/inverse) module contains the methods to estimate the source parameters, i.e. to answer the question  "What are the unknown source parameters, given the observed EEG or MEG field distribution?".
 
 It contains high-level functions that are publicly available for experienced end-user. The functionality of these functions within these modules depend on low-level functions which are not available to the end-user and combined in a private directory.
 
@@ -29,7 +29,7 @@ It contains high-level functions that are publicly available for experienced end
 
 The inverse methods for computing a source reconstruction can be divided into three categories: **dipole fitting** (using an overdetermined model with a few sources), **dipole scaning** (using a metric that can be computed independently on each point of a grid) and **distributed source modelling** (using an underdetermined distributed source model). The following source reconstruction methods are implemented
 
-*  dipole fitting 
+*  dipole fitting
     * simultaneous optimisation of position, orientation and strength
     * symmetry constrains and/or fixed position, with free orientation and strength
 
@@ -70,17 +70,14 @@ FIXME We are currently redesigning the interface to these functions, therefore t
 
 The literature references to the implemented methods are given [here](/references_to_implemented_methods).
 
-Frequently asked questions about forward and inverse modelin
+Frequently asked questions about forward and inverse modeling:
 
-{{topic>faq +source &list}}
+{% include seealso.html tag1="faq" tag2="source" %}
 
-Example material for forward and inverse modelingd
+Example material for forward and inverse modeling:
 
-{{topic>example +source &list}}
+{% include seealso.html tag1="example" tag2="source" %}
 
-Ttutorial material for forward and inverse modelin
+Tutorial material for forward and inverse modeling:
 
-{{topic>tutorial +source &list}}
-
- 
-
+{% include seealso.html tag1="tutorial" tag2="source" %}

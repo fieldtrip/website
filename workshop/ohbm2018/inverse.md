@@ -45,7 +45,7 @@ We start with a grid search. In our case, this should be enough. The resolution 
 
 	% Dipole fit
 	cfg = [];
-	cfg.numdipoles    = 1;                              %number of expected 
+	cfg.numdipoles    = 1;                              %number of expected
 	cfg.headmodel     = headmodel_fem_eeg_tr;           %the head model
 	cfg.grid          = leadfield_fem_eeg;              %the precomputed leadfield
 	cfg.nonlinear     = 'no';                           %only dipole scan
@@ -56,16 +56,16 @@ We start with a grid search. In our case, this should be enough. The resolution 
 A quick look dipfit_bem.dip gives us information about the dipole fit. Especially a low residual variance (rv) shows us that the fitted dipole quite well explains the data.
 
 	dipfit_fem_eeg.dip
-	
-	ans = 
-	
+
+	ans =
+
 	     pos: [10 26 90]       %dipole position
 	     mom: [3x1 double]     %dipole moment
 	     pot: [74x1 double]    %potential at the electrodes
 	     rv: 0.027147418310096 %residual variance
 	     unit: 'mm'
-	
-	     
+
+
 
 And we visualize the dipole and see where it was localized in the brain.
 
@@ -81,7 +81,7 @@ And we visualize the dipole and see where it was localized in the brain.
 
 ### MEG
 
-Now we do a grid search with MEG. 
+Now we do a grid search with MEG.
 
 <div class="alert-danger">
 Be aware that this step only works, if you can use Duneuro. Otherwise just load dipfit_fem_meg and skip ft_dipolefitting.
@@ -89,7 +89,7 @@ Be aware that this step only works, if you can use Duneuro. Otherwise just load 
 
 	% Dipole fit
 	cfg = [];
-	cfg.numdipoles    = 1;                              %number of expected 
+	cfg.numdipoles    = 1;                              %number of expected
 	cfg.headmodel     = headmodel_fem_meg_tr;           %the head model
 	cfg.grid          = leadfield_fem_meg;              %the precomputed leadfield
 	cfg.nonlinear     = 'no';                           %only dipole scan
@@ -100,15 +100,15 @@ Be aware that this step only works, if you can use Duneuro. Otherwise just load 
 Again we look at dipfit_bem.dip to see the information about the reconstructed dipole. The residual variance again is very low.
 
 	dipfit_fem_meg.dip
-	
-	ans = 
-	     
+
+	ans =
+
 	     pos: [14 52 90]         %dipole position
 	     mom: [3x1 double]       %dipole moment
 	     pot: [271x1 double]     %potential at the electrodes
 	     rv: 0.023526877979900  %residual variance
-	     unit: 'mm' 
-	     
+	     unit: 'mm'
+
 
 And we visualize the dipole and see where it was localized in the brain.
 
@@ -153,12 +153,12 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 	cfg.parameter  = 'avg.pow';
 	interpolate    = ft_sourceinterpolate(cfg, minimum_norm_eeg , mri_resliced);
 
-    
+
 
 	cfg = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
-	ft_sourceplot(cfg,interpolate); 
+	ft_sourceplot(cfg,interpolate);
 
 ![image](/static/img/workshop/ohbm2018/mne_eeg.png@700)
 
@@ -182,12 +182,12 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 	cfg.parameter  = 'avg.pow';
 	interpolate    = ft_sourceinterpolate(cfg, minimum_norm_meg , mri_resliced);
 
-    
+
 
 	cfg = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
-	ft_sourceplot(cfg,interpolate); 
+	ft_sourceplot(cfg,interpolate);
 
 ![image](/static/img/workshop/ohbm2018/mne_meg.png@700)
 
@@ -204,7 +204,7 @@ Can you think of reasons why the dipoles are at different locations?
 #### Exercise 2
 
 <div class="alert-info">
-You can play around with cfg.mne.lambda? Do you see the influence of different lambdas on the MNE solution? 
+You can play around with cfg.mne.lambda? Do you see the influence of different lambdas on the MNE solution?
 </div>
 
 #### Exercise 3
@@ -221,19 +221,19 @@ Changing parameters of the forward model influences the Inverse solutions. Play 
 
 ## Summary and suggested further reading
 
-In this tutorial, we learned how to solve the inverse problem. For this, we used the preprocessed functional data and the forward model. The inverse techniques we used in this tutorial were "Dipole Fit" and "Minimum Norm Estimation". We used both techniques with the different parameters for EEG and MEG. 
+In this tutorial, we learned how to solve the inverse problem. For this, we used the preprocessed functional data and the forward model. The inverse techniques we used in this tutorial were "Dipole Fit" and "Minimum Norm Estimation". We used both techniques with the different parameters for EEG and MEG.
 
-Here are some related [faqs](/faq
+Here are some related FAQs
 
-{{topic>faq +headmodel +eeg &list}}
-and the related [example scripts](/example
+{% include seealso.html tag1="faq" tag2="electrode" %}
+{% include seealso.html tag1="faq" tag2="headmodel" tag3="eeg" %}
 
-{{topic>example +headmodel +eeg &list}}
+and some related examples:
+
+{% include seealso.html tag1="example" tag2="electrode" %}
+{% include seealso.html tag1="example" tag2="headmodel" tag3="eeg" %}
 
 and other tutorials
 
-{{topic>tutorial +electrode &list}}
-{{topic>tutorial +headmodel +meg &list}}
-
------
-This tutorial was last tested on 14-06-2018 by Simon Homölle on OS X El Capitan 10.11.5, Matlab 2015b
+{% include seealso.html tag1="tutorial" tag2="electrode" %}
+{% include seealso.html tag1="tutorial" tag2="headmodel" tag3="eeg" %}

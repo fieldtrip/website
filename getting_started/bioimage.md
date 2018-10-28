@@ -6,7 +6,7 @@ tags: [getting_started, bioimagesuite, bioimage, ieeg, ecog, seeg, localization]
 
 # Getting started with BioImage Suite
 
-Viewing and localizing intracranial EEG (iEEG) electrodes from volumetric brain images (CT and/or MR images) can be accomplished using **[ft_electrodeplacement](/reference/ft_electrodeplacement)**, as demonstrated in the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog) tutorial. Alternatively, users may choose to localize electrodes using [BioImage Suite](http://bioimagesuite.yale.edu) and subsequently view them in MATLAB using FieldTrip. Finally, users may also choose to localize electrodes using **[ft_electrodeplacement](/reference/ft_electrodeplacement)** and subsequently view them in BioImage Suite. 
+Viewing and localizing intracranial EEG (iEEG) electrodes from volumetric brain images (CT and/or MR images) can be accomplished using **[ft_electrodeplacement](/reference/ft_electrodeplacement)**, as demonstrated in the [Analysis of human ECoG and sEEG recordings](/tutorial/human_ecog) tutorial. Alternatively, users may choose to localize electrodes using [BioImage Suite](http://bioimagesuite.yale.edu) and subsequently view them in MATLAB using FieldTrip. Finally, users may also choose to localize electrodes using **[ft_electrodeplacement](/reference/ft_electrodeplacement)** and subsequently view them in BioImage Suite.
 
 This page covers (1) how electrodes that have been localized in BioImage Suite (.mgrid files) can be loaded into MATLAB as a FieldTrip-compatible elec structure; and (2) how electrodes that have been localized in FieldTrip can be saved as BioImage Suite compatible .mgrid files.
 
@@ -26,13 +26,13 @@ Once the elec structure is created, check to make sure it contains a ‘unit’ 
 
     elec.unit = ‘mm’;
 
-Manually inputting the unit field does not affect the electrode coordinates, which are stored in the ‘elecpos’ and ‘chanpos’ fields, and these coordinates should still correspond to the head space of the brain volume. 
+Manually inputting the unit field does not affect the electrode coordinates, which are stored in the ‘elecpos’ and ‘chanpos’ fields, and these coordinates should still correspond to the head space of the brain volume.
 
 To sanity check that this is the case, you can view the electrode positions in the head volume using **[ft_electrodeplacement](/reference/ft_electrodeplacement)**.
 
     % First, load the brain volume corresponding to the .mgrid file
     ct = ft_read_mri(`<path to brain volume corresponding to .mgrid file>`);
-   
+
     cfg = [];
     cfg.elec = elec;
     ft_electrodeplacement(cfg, ct);
@@ -46,18 +46,18 @@ Once the CT and MRI are co-registered, warp the electrode coordinates in elec (c
     % First, warp the coordinates in elec from native head space to voxel space
     elec_vox = elec;
     elec_vox.elecpos = ft_warp_apply(inv(ct. transform), elec.elecpos);
-   
+
     % Then, warp the coordinates from voxel space to the fused CT-MRI head space
     elec_acpc_f = elec_vox;
     elec_acpc_f.elecpos = ft_warp_apply(ct_acpc_f.transform, elec_vox.elecpos);
-   
+
     % Lastly, copy the coordinates in the ‘elecpos’ field to the ‘chanpos’ field
     elec_acpc_f.chanpos = elec_acpc_f.elecpos;
-   
+
     % Check to make sure elec_acpc_f has all of the necessary fields
     elec_acpc_f
-   
-    elec_acpc_f = 
+
+    elec_acpc_f =
          chanpos: [170x3 double]
          elecpos: [170x3 double]
          label: {170x1 cell}
@@ -70,25 +70,25 @@ Because electrode labels are entered manually in BioImage Suite, they may not pe
 
     % first load the header of the electrophysiology data file
     header = ft_read_header(`<path to electrophysiology data>`);
-   
-    % Generate a list of indices of the labels in header.label 
+
+    % Generate a list of indices of the labels in header.label
     % that match labels in elec_acpc_f.label and vice versa
     [sel1, sel2] = match_str(header.label, elec_acpc_f.label);
-   
+
     % Check if all of the labels in elec_acpc_f are in the header
-    if length(i_label_match) == length(elec_acpc_f.label) 
+    if length(i_label_match) == length(elec_acpc_f.label)
       % do nothing
     else
       % create a list of the labels in elec that do not match those in header
       elec_nomatch = elec_acpc_f.label; % copy all of the labels in elec
       elec_nomatch(sel2) = []; % remove all labels in elec that have a match in header
-   
+
       % create a list of the labels in header that do not match those in elec
       header_nomatch = header.label; % copy all of the labels in header
       header_nomatch(sel1) = []; % remove all labels in header that have a match in elec
     end
 
-If there are labels in elec_acpc_f that do not match those in the electrophysiological data, the user should easily be able to determine what labels need to be changed and what they should be changed to by comparing the list of labels in elec_nomatch and header_nomatch. 
+If there are labels in elec_acpc_f that do not match those in the electrophysiological data, the user should easily be able to determine what labels need to be changed and what they should be changed to by comparing the list of labels in elec_nomatch and header_nomatch.
 
 #### Add the elec Structure to the data Structure
 
@@ -99,7 +99,7 @@ Once it is confirmed that all of the labels in elec_acpc_f match those in the el
     cfg.dataset    = `<path to electrophysiological recording file>`;]
     cfg.continuous = 'yes';
     data = ft_preprocessing(cfg);
-   
+
     % add the elec_acpc_f structure to the data
     data.elec = elec_acpc_f;
 
@@ -117,4 +117,4 @@ Once the .mgrid file is created, it can be loaded into the BioImage Suite Electr
 
 ## Suggested further reading
 
-{{topic>tutorial +ieeg &list}}
+{% include seealso.html tag1="tutorial" tag2="ieeg" %}

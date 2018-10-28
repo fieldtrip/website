@@ -261,5 +261,4 @@ If you are interested in a different analysis of your data that shows event rela
 
 Here you can find related FAQs:
 
-{{topic>preprocessing timelock +faq &list}}
-
+{% include seealso.html tag1="faq" tag2="preprocessing" tag3="timelock" %}
