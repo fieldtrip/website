@@ -10,7 +10,7 @@ FieldTrip relies on MATLABs plotting routines, which uses specific renderers. Un
     cfg.renderer = 'painters' 
 prior to the call to ft_databrowser. 
 
-`<note>`
+<div class="alert-info">
 This error and solution has been confirmed by the Mathworks. Thanks to Martine van Schouwenburg for contacting Mathworks and forwarding their response.
 
 EMAIL SUPPORT TEAM MATHWORK

@@ -6,7 +6,7 @@ tags: [faq, development, cvs, svn, git]
 
 ## Why was FieldTrip maintained in SVN and not in git?
 
-`<note>`
+<div class="alert-info">
 This question does not apply any more.
 </div>
 

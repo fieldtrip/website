@@ -6,7 +6,7 @@ tags: [faq, statistics]
 
 # How can I determine the onset of an effect?
 
-`<note>`I received the following question: 
+<div class="alert-info">I received the following question: 
 
 *"If I am interested at the onset of an effect that is present in one condition and not another can I use the start time of a cluster (cluster-based permutation test) to represent the onset time of the effect?"*. 
 

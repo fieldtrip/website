@@ -5,7 +5,7 @@ layout: default
 
 # Deprecated functions and options
 
-`<note>`
+<div class="alert-info">
 Definition of **[deprecation](http://en.wikipedia.org/wiki/Deprecated)**
 (//From Wikipedia, the free encyclopedia//)
 

@@ -94,7 +94,7 @@ A good start is the example script "openmeeg_eeg_leadfield_example.m" found in "
 
 ### If it does not seem to work
 
-`<note>`
+<div class="alert-info">
 Some of the pre-compiled packages could have issues running on a particular Linux OS (e.g. Fedora, CentOS), if you use the OpenMEEG 2 packages. Try then to download the OpenMEEG statically linked version (OpenMEEG-2.1.0-Linux.amd64-gcc-4.1.2-OpenMP-static.tar.gz or OpenMEEG-2.1.0-Linux.i386-gcc-4.1.2-static.tar.gz for Linux)
 </div>
 

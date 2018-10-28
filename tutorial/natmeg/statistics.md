@@ -292,7 +292,7 @@ We can compute the ERFs for the two experimental conditions by selecting the sta
     cfg.trials  = find(data_stimlocked.trialinfo(:,1) == 2);
     ERF_dev     = ft_timelockanalysis(cfg, data_stimlocked);
 
-`<note>`
+<div class="alert-info">
 The **[/reference/ft_selectdata](/reference/ft_selectdata)** function is a very handy general purpose function that allows making selections in any dimension of the data. Furthermore, it allows you to compute averages over any of the dimensions. In case you would need the ERF topography as a vector that is averaged over 80 to 110 ms, you could do
 
     cfg = [];

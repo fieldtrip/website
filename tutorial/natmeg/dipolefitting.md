@@ -234,7 +234,7 @@ These meshes are all relatively coarse and don’t look so nice in a visualisati
 
 {{tutorial:natmeg_temp:natmeg_dip_highres_scalp.png?400"}}
 
-`<note>`
+<div class="alert-info">
 You can type "camlight" multiple times, to get light from various directions.
 
 It is also convenient to switch on the “Camera Toolbar” (under the figure menu -> View).

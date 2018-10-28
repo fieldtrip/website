@@ -82,7 +82,7 @@ Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data se
 	cfg = [];  % use only default options                 
 	ft_databrowser(cfg, data);
 
-`<note>`
+<div class="alert-info">
 You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk.
 
 	cfg         = [];
@@ -243,7 +243,7 @@ The left lower box of Figure 4 shows the variance of the signal in each trial. B
 
 Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes it is not easy to decide if a trial has to be rejected or not. In this exercise we suggest that you remove 8 trials with the highest variance (trial numbers 22, 42, 89, 90, 92, 126, 136 and 150). As you see, the trials with blinks that we saw in the "Channel" mode are among them. To complete the rejection press "Quit" button. You get the data_clean variable that will be used for subsequent analyses.
 
-`<note>`
+<div class="alert-info">
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
 	cfg          = [];

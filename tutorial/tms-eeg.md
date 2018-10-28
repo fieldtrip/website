@@ -62,7 +62,7 @@ Before starting your analysis, it helps to consider your experiment relative to 
 
 In many cases you will want to analyze your data with respect to some interesting event, e.g. a visual stimulus onset, the subjects response to a stimulus, or in this case the onset of a TMS pulse. It is, however, also possible to analyze your data in a continuous way. For example, you might be interested in resting-state EEG changes over time after participants have received theta-burst stimulation. In those cases you are not going to divide your data into experimentally defined trials but rather analyze the data in a continuous fashion.
 
-`<note>`
+<div class="alert-info">
 This tutorial is written with a trial-based analysis in mind and as such may not be directly applicable to continuous data. Furthermore, this tutorial uses EEG data recorded during a single-pulse TMS stimulation protocol.
 </div>
 

@@ -10,7 +10,7 @@ tags: [fixme, tutorial, artifact, meg, raw, preprocessing, MEG-artifact]
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-`<note>` The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)**, that were used for automatic artifact rejection, will soon become obsolete. They are being replaced by the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function. This function is already called every time one of the three functions above is run, but users will soon need to set the various cfg parameters for the different types of artifacts themselves and then run only the zvalue function. Examples of these parameters are given in the last section of this page.
+<div class="alert-info"> The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)**, that were used for automatic artifact rejection, will soon become obsolete. They are being replaced by the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function. This function is already called every time one of the three functions above is run, but users will soon need to set the various cfg parameters for the different types of artifacts themselves and then run only the zvalue function. Examples of these parameters are given in the last section of this page.
 </div>
 
 # Automatic artifact rejection

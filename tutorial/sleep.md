@@ -141,7 +141,7 @@ To identify periods of wake (including brief arousals), non-REM and REM states d
 	  cfg.artfctdef.muscle.hilbert     = 'yes';
 	  cfg.artfctdef.muscle.boxcar      = 0.2;
 
-`<note>`
+<div class="alert-info">
 Please note that due to the reduced sample rate of 128 Hz we cannot use the typical frequency range to better detect EMG, however this should suffice for our case.
 </div>
 
@@ -592,7 +592,7 @@ Safe when (the samples of the R-waves occur for later
 
 	Rwave_peaks = cfg.artfctdef.zvalue.peaks;
 
-`<note>`
+<div class="alert-info">
 The R-peaks are difficult to see, since there are so many (>35000 heart beats during one night) use the MATLAB magnifying glass to zoom in.
 Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards).
 In this case the signal could be inverted by multiplying this channel's data with -1. For example: data_continuous.trial{1}(4,:) = -1*data_continuous.trial{1}(4,:)
@@ -783,7 +783,7 @@ View the event average signal timelocked to the trough.
 
 #### Sanity check
 
-`<note>`
+<div class="alert-info">
 Does the amplitude match to the definition of slow waves (minimum amplitude of 75 microVolts)? The signal before sleep spindles starts with a negative potential and at the end of spindles is more positive, what can this tell us of the temporal occurrence of sleep spindles with respect to slow waves?
 The polarity of the signal matters. Does the activity that we timelock give us confidence that the data was actually recroded or read in with the right polarity of the EEG channels, for example sometimes channels are unintentionally inverted, that is slow waves, spindles or epileptic spikes etc. would appear in the "wrong" direction because we then detect them here by the negative trough of the signal. This also depends on the referencing of the electrodes for used channel.
 </div>

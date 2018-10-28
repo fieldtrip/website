@@ -6,7 +6,7 @@ tags: [faq, mri, anonymize, sharing]
 
 # How can I anonymize or deidentify an anatomical MRI?
 
-`<note>`
+<div class="alert-info">
 This is something that in general you will want to do **after** the coregistration of the anatomical MRI with the MEG data (using **[ft_volumerealign](/reference/ft_volumerealign)**), as the coregistration often relies on facial landmarks.
 </div>
 

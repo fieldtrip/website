@@ -36,7 +36,7 @@ This tutorial is focusing on how to build the **FEM volume conduction model for 
 
 {{page>:tutorial:shared:headmodel_background}}
 
-`<note>`
+<div class="alert-info">
 If an anatomical MRI is not available for your EEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. If you do not have an MRI, but if you do have a measurement of the scalp surface (e.g. with a Polhemus tracker), you can use concentric spheres volume conduction model. If you do not want to (or cannot) use any realistic information about the brain-surface or the head-shape, you can resort to the single sphere volume conduction model.
 </div>
 
@@ -105,7 +105,7 @@ In the next step of this tutorial, we will segment the anatomical MRI. Segmentat
 	cfg.dim = mri.dim;
 	mri     = ft_volumereslice(cfg,mri);
 
-`<note>`
+<div class="alert-info">
 Reslicing will apply the coordinate transformation on your anatomical data. (While **[ft_volumerealign](/reference/ft_volumerealign)** does not change the anatomical data, but it adjusts the transformation matrix of the data, **[ft_volumereslice](/reference/ft_volumereslice)** will change the anatomical data, i.e. it will arrange data in field **anatomy** according to the coordinate system.) Do not use this function if later you need to recover the original orientation of the voxels.
 </div>
 

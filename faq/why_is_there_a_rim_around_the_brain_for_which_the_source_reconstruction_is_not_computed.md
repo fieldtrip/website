@@ -18,7 +18,7 @@ If you have a low grid resolution, the rim will apear to be wider (see figure be
 
 In the figures, the brain is indicated with the circle, the "inside" points are indicated with red dots and the yellow region indicates that part of the brain volume on which the functional data will be interpolated.
 
-`<note>`
+<div class="alert-info">
 In **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** you can give a **negative** value for cfg.inwardshift to compensate for this rim. 
 
 Note that this is only valid if you are working with MEG data and if you are using a singlesphere, localspheres or singleshell volume conduction model. You should **not** do this when you are working with EEG data, nor if you are using a BEM or FEM volume conduction models.

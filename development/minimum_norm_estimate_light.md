@@ -100,7 +100,7 @@ The structure of your MRI variable contains the following field
 You can see that the **coordsys** field of anatomical data shows 'ctf'. The subject's MRI should be in [the CTF head coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system) because this is also how the locations of the MEG sensors are defined relative to the head. Hence, we the source model and head model that we create have to be expressed in the same CTF head coordinate system.
 
 
-`<note>`
+<div class="alert-info">
 It is also possible to read in anatomical MRI data in [other formats](/dataformat) or from raw DICOM files. The different coordinate systems are explained in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). If your anatomical MRI is not aligned to the coordinate system in which your sensors are expressed, you can  [align](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) them using either **[ft_volumerealign](/reference/ft_volumerealign)** or **[ft_electroderealign](/reference/ft_electroderealign)**. This alignment or coregistration is commonly done using [fiducial points](/faq/how_are_the_lpa_and_rpa_points_defined) on the head.
 
 When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can visually inspect and determine the coordinate-system with **[ft_determine_coordsys](/reference/ft_determine_coordsys)**.

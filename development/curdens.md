@@ -11,7 +11,7 @@ After making changes to the code and/or documentation, this page should remain o
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 </div>
 
-`<note>`
+<div class="alert-info">
 Upon reviewing this page on the wiki, it seems to me that this project is not going to happen. Although the fieldtrip code base might be used (in combination with other code), the release code will not be extended to specifically facilitate this.
 </div>
 

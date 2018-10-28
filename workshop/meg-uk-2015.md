@@ -43,7 +43,7 @@ For FieldTrip (all taken from http://www.fieldtriptoolbox.org/video)
 
 The programme mixes short theoretical sessions with hands-on computer assignments. The day ends with a supervised computer session where people are free to work on their dataset of choice.
 
-`<note>`
+<div class="alert-info">
 Please look at the [general instructions](/workshop/meg-uk-2015/general) for the hands-on sessions to start MATLAB and navigate to the data directory on the Aston computer-lab machines.
 </div>
 

@@ -431,7 +431,7 @@ Important to remember is that for **[/reference/ft_multiplotER](/reference/ft_mu
 
 You can also generate a spatial representation of the signal at a certain time point, or averaged over a time window. To plot the response that was found during a specific time window, you will need to specify this by setting limitations to the time dimension. In this case, time is the first dimension, and therefore, the time window can be set by using 'cfg.xlim = [5 7];'. The third dimension here is the strength of the response. We set the scale here from -0.2 to 0.2, but this depends on your data: many fNIRS researchers use block designs, and depending on the block duration, the response may gain a larger amplitude. In the current data, the scale can be derived from the previous figure, which was generated without setting the response scale (zlim in this case).
 
-`<note>` Per default FieldTrip uses the minimum and the maximum in the selected part of the data for the zlim parameter. Setting the scale manually has the advantage that you can set zero as the middle point in the scale, which can be helpful for the interpretation of the color-coded graph.</div>
+<div class="alert-info"> Per default FieldTrip uses the minimum and the maximum in the selected part of the data for the zlim parameter. Setting the scale manually has the advantage that you can set zero as the middle point in the scale, which can be helpful for the interpretation of the color-coded graph.</div>
 
 	cfg          = [];
 	cfg.layout   = lay;

@@ -16,7 +16,7 @@ We cannot assure that the API in MNE-Python will remain the same in the future. 
 Code under development, the mne-python community currently works on reader functions for fieldtrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
 </div>
-`<note>`
+<div class="alert-info">
 More functions to work with files coming from MNE-python in Matlab are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
 </div>
 # Integrate FieldTrip and MNE-Python
@@ -97,13 +97,13 @@ Then use FieldTrip to read the file
 	event = mne_read_events('ctf_raw-eve.fif')
 
 So, ''data1'' is of type ''datatype_raw'' with one trial.
-`<note>`
+<div class="alert-info">
 Events are in Nx3 matrix, where the first column contains the samples and the third column the index of the events. You can use this information to create the trials in FieldTrip.
 </div>
 ### datatype_raw (many trials) `<->` Epochs
 
 #### Export to Epochs
-`<note>`
+<div class="alert-info">
 Currently, there is no export functionality to create mne-Epochs from fieldtrip. Feel free to add it on [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip).
 </div>
 

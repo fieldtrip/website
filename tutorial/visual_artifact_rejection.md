@@ -138,7 +138,7 @@ After quitting, the trials/channels will be rejected from the data set and the c
 
 This operation could be repeated for each of the metrics, by clicking on the different radio buttons 'var', 'min', 'max', etc.
 
-`<note>`
+<div class="alert-info">
 The summary mode in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** has been primarily designed to visually screen for artefacts in channels of a consistent type, i.e. in this example only for the axial MEG gradiometers.
 
 If you have EEG data, the EOG channels have the same physical units and very similar amplitudes and therefore can be visualised simultaneously.

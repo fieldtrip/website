@@ -410,7 +410,7 @@ So far we predefined a time window over which the effect was averaged, and teste
 
 ![image](/static/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png@400)
 
-`<note>`
+<div class="alert-info">
 If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 
 And be sure to cite the relevant papers (Robert Oostenveld's FieldTrip paper and the Eric Maris' cluster-based permutation paper) in your methods section!

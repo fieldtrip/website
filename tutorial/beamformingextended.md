@@ -116,7 +116,7 @@ You can check whether the segmentation was successful by callin
 
 If the yellow-greyish brain shows up in the subjects heads, everything went fine as shown in above Figure. Otherwise, it might be that you need to flip either of the three dimensions or that some unit conversion went wrong before segmenting the MRI (note to yourself: never blame FieldTrip, always blame yourself for not checking what you were doing!)
 
-`<note>`
+<div class="alert-info">
 You might wonder why the anatomical MRI shows upside down: this is a [frequently asked question](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
 </div>
 

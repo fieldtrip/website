@@ -30,7 +30,7 @@ This tutorial is focusing on how to build the **volume conduction model for the 
 
 {{page>:tutorial:shared:headmodel_background}}
 
-`<note>`
+<div class="alert-info">
 If an anatomical MRI is not available for your EEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. See [here](/template/headmodel) for more info.
 
 If you do not have an MRI, but do have a measurement of the scalp surface or electrodes (e.g. with a Polhemus tracker), you can fit a concentric spheres volume conduction model to the scalp.
@@ -88,7 +88,7 @@ The structure of your mri variable contains the following field
 
 You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system).
 
-`<note>`
+<div class="alert-info">
 Later in this tutorial, we will segment the anatomical MRI. Segmentation works properly when the voxels of the anatomical images are homogenous (i.e. the size of the voxel is the same into each direction). If you do not have homogenous voxels (or you are not sure of), you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function on the anatomical data before segmentation. Read more about re-slicing [here](/faq/how_change_mri_orientation_size_fov).
 </div>
 

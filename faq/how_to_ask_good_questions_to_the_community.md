@@ -49,7 +49,7 @@ If you have data to share and it exceeds 1 MB, use a file hoster!
 
 Here is an example of an inefficient questio
 
-`<note>`
+<div class="alert-info">
 Subject: HELP
 
 **I am getting to load Eyetracking data from .EDF to .ASC then wish to have the image present on the screen in order t draw ROIs. As I follow the step from this link http://www.fieldtriptoolbox.org/getting_started/eyelink. The function of Fieldtrip called "dataset2file.m" cannot accept file type of structure in matlab**.  The error message show " Undefined function 'dataset2files' for input arguments of type 'struct'." How can I change the code so the function can read structure file.
@@ -60,7 +60,7 @@ Subject: HELP
 
 If this is your first mail, please introduce yourself shortly.
 
-`<note>`
+<div class="alert-info">
 Subject: Improper matrix assignment in ft_functionname
 
 Dear community,
