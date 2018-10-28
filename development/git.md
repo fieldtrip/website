@@ -8,26 +8,26 @@ tags: [development, git]
 
 The FieldTrip code is accessible using [git](http://git-scm.com/) at [github](http://github.com/fieldtrip/fieldtrip).
 
-`<note>`
+<div class="alert-info">
 To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
 
-	
+
 	git clone https://github.com/fieldtrip/fieldtrip
 
 Note that all of this goes on a single line, but the link is slightly too long for it being properly displayed here.
 
 This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on github, fork FieldTrip to our own account and read on for a complete tutorial.
-
 </div>
 
 To keep an eye on the changes to the code, you can follow FieldTrip on [Twitter](http://twitter.com/fieldtriptoolbx).
+
 ## Development workflow
 
 We use git and github.com (see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for our development. We complement this with code reviews by the core team and quality control using running a set of test scripts. The general procedure is as follow
 
  1.  The contributor/developer makes the suggested changes in a branch, pushes that branch to his/her own fork (on github) and submits a pull request.
- 2.  The core team reviews the code in the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and should be documented. 
- 3.  The code in the pull request is tested by the core team to ensure that it does not break anything. 
+ 2.  The core team reviews the code in the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and should be documented.
+ 3.  The code in the pull request is tested by the core team to ensure that it does not break anything.
  4.  After successful reviewing and testing, the core team merges the pull request with the master branch.
 
 ## How to contribute with git and github.com
@@ -37,7 +37,7 @@ We welcome the contribution of external users, even if the changes consist of a 
 ### What is git?
 
 [git](http://git-scm.com/) is version control system to keep track of the changes to files and maintain a consistent repository, just like [svn](http://subversion.tigris.org/). While svn follows a linear approach to version, where each user makes some changes to the main code and then a second user can make some other changes, git allows for multiple users to work in parallel and then merge their code in the main repository. This approach scales very well, considering that, for example, the [Linux kernel](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git) and [ android](https://android.googlesource.com/) use git.
- 
+
 There are lots of resources available on the internet to learn more about git. The starting point is [this documentation](http://git-scm.com/documentation). If you have a question, it's most likely already being answered at [Stack Exchange](http://stackoverflow.com/questions/tagged/git). git is extremely powerful and flexible, so the following tutorial will give only the most basic ideas and tools to modify the FieldTrip code.
 #### Basic concepts
 
@@ -79,17 +79,17 @@ you will switch from a side branch into the main branch of your repository.
 
 ### What is github.com?
 
-[github.com](http://github.com) is a fast, intuitive and popular website to share code. The interface is clean and intuitive, and many projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip). 
+[github.com](http://github.com) is a fast, intuitive and popular website to share code. The interface is clean and intuitive, and many projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip).
 
 ### How to add a feature or fix a bug
 
 You only have read permission for the [FieldTrip](https://github.com/fieldtrip/fieldtrip), meaning that you cannot change directly the code of the FieldTrip repository. What you can do, and you will see how to do it here, i
  1.  Copy the FieldTrip repository under your private account on github.com (this is called **forking**).
- 2.  This new personal repository will become your __remote repository__. You will need __clone__ the remote repository onto your local machine. 
- 3.  You will create a new __branch__, edit some files, __commit__ them to the developmental branch of your __local repository__. 
- 4.  Then you can __push__ this developmental __branch__ to your __remote repository__. 
+ 2.  This new personal repository will become your __remote repository__. You will need __clone__ the remote repository onto your local machine.
+ 3.  You will create a new __branch__, edit some files, __commit__ them to the developmental branch of your __local repository__.
+ 4.  Then you can __push__ this developmental __branch__ to your __remote repository__.
  5.  You will then tell to the developers of FieldTrip to check these changes in your __remote repository__, using a **pull request**.
-All the __underlined__ words are the new concepts explained above. **Forking** and **pull request** are two main concepts when working with multiple remote repositories. I will use them throughout the tutorial and are the words that you will need to successfully google possible problems. If they are not clear, refer to the main [documentation](http://git-scm.com/documentation). 
+All the __underlined__ words are the new concepts explained above. **Forking** and **pull request** are two main concepts when working with multiple remote repositories. I will use them throughout the tutorial and are the words that you will need to successfully google possible problems. If they are not clear, refer to the main [documentation](http://git-scm.com/documentation).
 
 ## Tutorial
 
@@ -99,7 +99,7 @@ Now that the main concepts are explained, we will try to add a new feature to Fi
 
 Go with your web browser to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip) and click on the right-hand side, towards the top, on **fork**. This will create a new remote repository in your github account at the address: https://github.com/USERNAME/fieldtrip. The title of your repository will sa
 
-	
+
 	username / fieldtrip
 	forked from fieldtrip/fieldtrip
 
@@ -107,51 +107,51 @@ Go with your web browser to [https://github.com/fieldtrip/fieldtrip](https://git
 
 Now you can just clone your remote repository. There are two equivalent methods to connect to your remote repository: https (see [setup instructions](https://help.github.com/articles/set-up-git)) or ssh (see [setup instructions](https://help.github.com/articles/generating-ssh-keys)). If you're using https, the
 
-	
+
 	git clone https://github.com/USERNAME/fieldtrip.git
 
 If you're using SSH, us
 
-	
+
 	git clone git@github.com:USERNAME/fieldtrip.git
 
 Now you have a local repository of FieldTrip that you can work on. Then go into the just-created FieldTrip director
 
-	
+
 	cd fieldtrip
 
 ### 3. Create an experimental branch
 
 Before you start editing files, create a new branch. We will call our new branch *welcome*. Let's create i
 
-	
+
 	git checkout -b welcome
 
 and it'll tell yo
 
-	
+
 	Switched to a new branch 'welcome'
 
 If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch *bugXXXX* where XXXX is the number of the bug.
 
 ### 4. Add and edit files
 
-Now we need to create a function that says *Welcome to FieldTrip*. Let's call it *ft_welcome.m*, just as you'd create any new Matlab function. 
+Now we need to create a function that says *Welcome to FieldTrip*. Let's call it *ft_welcome.m*, just as you'd create any new Matlab function.
 <div class="alert-warning">
 When you create a new function or edit an existing one, follow the [code guidelines](/development/guidelines/code) for a consistent and readable code.
 </div>
-In addition to this function, we will also modify the function **[ft_defaults](/reference/ft_defaults)**. 
+In addition to this function, we will also modify the function **[ft_defaults](/reference/ft_defaults)**.
 
 ### 5. Commit your changes
 
 To see how git reacts to this changes, you can now typ
 
-	
+
 	git status
 
 It will tell yo
 
-	
+
 	# On branch welcome
 	# Changes not staged for commi
 	#   (use "git add `<file>`..." to update what will be committed)
@@ -167,17 +167,17 @@ It will tell yo
 
 If you want to review the changes you made, you can typ
 
-	
+
 	git diff
 
 Now we add our changes to the commi
 
-	
+
 	git add ft_welcome.m ft_defaults.m
 
 and now *git status* will tell yo
 
-	
+
 	# On branch welcome
 	# Changes to be committe
 	#   (use "git reset HEAD `<file>`..." to unstage)
@@ -188,7 +188,7 @@ and now *git status* will tell yo
 
 You can now commit these changes.
 
-	
+
 	git commit -m "print welcome message when executing ft_defaults"
 
 where the option -m allows you to add a log entry.
@@ -197,7 +197,7 @@ Follow these [guidelines](/development/guidelines/code#svn_log_messages) when wr
 </div>
 and git will retur
 
-	
+
 	 1 file changed, 1 insertion(+)
 	 create mode 100644 ft_welcome.m
 
@@ -205,17 +205,17 @@ and git will retur
 
 While you are working on the developmental branch called *welcome*, you might want to run some analysis on the main branch (called by default *master*). You can easily switch into the main branch wit
 
-	
+
 	git checkout master
 
 and then you go back to the developmental branch with
 
-	
+
 	git checkout welcome
 
 You see on which branch you are with
 
-	
+
 	git branch
 
 Switching between branches is really fast, so do not be afraid of doing it when necessary.
@@ -224,39 +224,39 @@ Switching between branches is really fast, so do not be afraid of doing it when 
 
 We modified our local repository but the remote repository has not changed. We need to push our commits to the personal remote repository. By default, the remote repository is called **origin**. You can rename it. If you want more information about remote repository, just typ
 
-	
+
 	git remote -v
 
 The code to push commits i
 
-	
+
 	git push origin welcome
 
 which means that we are pushing the commits in the branch called *welcome* to the remote repository called *origin*. This will create a new branch in your remote repository, as the last line of the output will kindly tell yo
 
-	
+
 	...
 
 	 * [new branch]      welcome -> welcome
 
 ### 7. Make a pull request
 
-Go to [github.com](https://github.com) to review the changes. By default on the webpage, you are shown the branch *master*, so you should switch to the newly created branch called *welcome*. Review the commits, by clicking on *commits*. Click on **pull request** in the top middle. The next page will show you the changes that are part of the pull request. 
+Go to [github.com](https://github.com) to review the changes. By default on the webpage, you are shown the branch *master*, so you should switch to the newly created branch called *welcome*. Review the commits, by clicking on *commits*. Click on **pull request** in the top middle. The next page will show you the changes that are part of the pull request.
 <div class="alert-warning">
-You are about to send the changes to the main developers of FieldTrip, so explain in the box what you did and why. Please, review the commits very carefully before sending the pull request. It happens that you have commits that you forgot about and you did not intend to share. 
+You are about to send the changes to the main developers of FieldTrip, so explain in the box what you did and why. Please, review the commits very carefully before sending the pull request. It happens that you have commits that you forgot about and you did not intend to share.
 </div>
 Do **not** click on **Send Pull Request** when finishing this tutorial.
 ### 8. Clean up
 
 When you are done, you can delete the branch *welcome* on the local and remote repository. To delete the branch on your local and remote repository, you can us
 
-	
+
 	git branch -D welcome
 	git push origin :welcome
 
 ### 9. Keeping up to date
 
-Your suggested contributions to FieldTrip will not be the only changes: the code on the master branch is constantly updated. This means that you should regularly synchronize to benefit from these updates and to ensure that you won't be making changes to an outdated copy of the code. 
+Your suggested contributions to FieldTrip will not be the only changes: the code on the master branch is constantly updated. This means that you should regularly synchronize to benefit from these updates and to ensure that you won't be making changes to an outdated copy of the code.
 
 <div class="alert-warning">
 It is important to first pull the changes from others before you start implementing your own changes, otherwise your (new) changes might conflict with already accepted changes to the code.

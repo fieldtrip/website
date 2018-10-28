@@ -112,12 +112,6 @@
 - name:  Plotting data at the channel and source level
   link:  /development/tutorial/plotting
 
-- name:  Cluster-based permutation tests on event related fields
-  link:  /development/cluster_permutation_timelock
-
-- name:  Introduction
-  link:  /development/introduction
-
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 

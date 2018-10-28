@@ -139,12 +139,6 @@
 - name:  Plotting data at the channel and source level
   link:  /development/tutorial/plotting
 
-- name:  Cluster-based permutation tests on event related fields
-  link:  /development/cluster_permutation_timelock
-
-- name:  Introduction
-  link:  /development/introduction
-
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 

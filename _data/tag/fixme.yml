@@ -10,9 +10,6 @@
 - name:  Localizing sources using beamformer techniques
   link:  /tutorial/beamformer_lcmv
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimate
-  link:  /development/minimum_norm_estimate_light
-
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 

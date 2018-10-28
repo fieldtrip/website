@@ -1,10 +1,8 @@
 ---
 title: Source reconstruction of event-related fields using minimum-norm estimate
 layout: default
-tags: [fixme]
+tags:
 ---
-
-FIXME add tags
 
 <div class="alert-danger">
 The purpose of this page is just to serve as a scratch pad for the new version of a tutorial site.

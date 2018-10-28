@@ -7,9 +7,6 @@
 - name:  Importing your data
   link:  /reading_data
 
-- name:  Introduction
-  link:  /development/introduction
-
 - name:  Supported data formats
   link:  /dataformat
 

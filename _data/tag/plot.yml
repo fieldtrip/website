@@ -43,9 +43,6 @@
 - name:  Plotting data at the channel and source level
   link:  /development/tutorial/plotting
 
-- name:  Cluster-based permutation tests on event related fields
-  link:  /development/cluster_permutation_timelock
-
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/plotting
 
