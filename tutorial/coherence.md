@@ -290,7 +290,7 @@ Which degree of smoothing do you consider optimal in the calculations above?
 
 ### Exercise 5
 
-{% include startclass.html class="alert-info" %}
+{% include markup/exercise %}
 Another question pertains to how the estimate of coherence is affected by the number of trials. We will compare the cortico-muscular coherence at two MEG sensors for different amount of data.
 
 Create the following configuration, and compute the coherence.
@@ -322,7 +322,7 @@ Plot the result
     figure; ft_singleplotER(cfg, fd, fd50);
 
 Compare the results with figure 3. Pay special attention to the noise bias.
-{% include endclass.html %}
+{% include markup/end %}
 
 ## Summary and further reading
 

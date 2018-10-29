@@ -12,9 +12,9 @@ The CTF system is one of most widely used MEG systems and one of the first on wh
 
 The acquisition software runs on a Linux computer. When prior to starting the acquisition software, shared memory with the appropriate details is initialized, the acquisition software will write a copy of the data to that shared memory. The shared memory is split over 600 packets, where each packet holding 28160 samples for older versions of the software or 40000 samples for newer versions of the software. With approximately 350 channels (MEG, EEG and status/trigger channels) in the typical MEG system, that amounts to approximately 80 (old) or 114 (new) samples per packet.
 
-{:.alert-success}
+{% include markup/success %}
 A specific application for the CTF real-time interface is to monitor and minimize movements of the subject's head during data acquisition. This makes use of the continuous head localization (CHL) channels and is described in detail [here](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session).
-{% include endclass.html %}
+{% include markup/end %}
 
 ## Interface with MATLAB and FieldTrip
 
@@ -76,9 +76,9 @@ On the command line, change to the ''realtime/acquisition/ctf'' directory and ty
 
 ## Original interface between MATLAB and shared memory
 
-{:.alert-danger}
+{% include markup/danger %} 
 This documentation is for historical purposes only, its use is not recommended. The **ctf2ft_v3** implementation has been extensively tested at the DCCN and is preferred.
-{% include endclass.html %} 
+{% include markup/end %} 
 
 In FieldTrip it is possible to use the fileio module to read from shared memory. Because the shared memory also has to be freed to ensure that the Acq software continues writing to it, the **ctf2ft_v1** application has to be running in the background. It constantly loops over the 600 packets in shared memory, and if there are less than 20 packets free, it memcpy's the "setup" packet (containing the name of the res4 file that has the full header details in it) to the next packet, thereby freeing the packet previously containing the setup. This procedure ensures that the content of the setup packet can always be read, even while it is being copied.
 
@@ -119,9 +119,9 @@ The new electronics comes with a new (beta) version of the acquisition software.
 
 Regardless whether you have the 3000-series electronics or not, the new version of the software (probably version 6.x and up) has the same shared-memory interface. 
 
-{:.alert-info}
+{% include markup/info %} 
 Whereas in the software version *6.1.5-el6_7.x86_64-20160720-3344* the ACQ_BUFFER_SIZE was changed from 28160 into 40000, and the scaling of the HLC channels seems to be off in this version, the more recent software version *6.1.14-beta-el6_8.x86_64-20180116-3847* writes the data to shared memory in the original format with 28160 samples per packet. Please look in the code **[ctf.h](https://github.com/fieldtrip/fieldtrip/blob/master/realtime/src/acquisition/ctf/ctf.h)** and adjust the ACQ_BUFFER_SIZE for your software version.
-{% include endclass.html %} 
+{% include markup/end %} 
 
 ### shmget: Invalid argument
 
@@ -131,13 +131,14 @@ It seems that the default linux/redhat configuratino of the shared memory does n
 
 There appears to be two ways of (re)defining the amount of shared memory in your system (tips thanks to Dave Glowacki of SSEC): 
 
-*  add this line to your /etc/rc.d/rc.local fil
+Add this line to your /etc/rc.d/rc.local file:
 
     echo shared_memory_size > /proc/sys/kernel/shmmax
 
 (where shared_memory_size is the amount of shared memory you want to declare in bytes) and reboot.
 
 A more permanent solution would be to change the value of SHMMAX in /usr/src/linux/include/asm/shmparam.h and rebuild your kernel.
+
 ### Number of channels
 
 There is a problem in the CTF acquisition software that sometimes causes the shared memory interface to fail. The diagnosis of the problem is that the Acq software runs and writes the data to the shared-memory buffer, where it is detected by AcqBuffer, and that after a certain random amount of time (around one minute) the AcqBuffer stops. The problem seems to be caused by a memory buffer overrun. The shared memory consists of 600 packets, each defined as

@@ -146,13 +146,13 @@ Let us compare the single-trial TFR with the averaged TFR.
          grad: [1x1 struct]
           cfg: [1x1 struct]
 
-{% include startclass.html class="allert-info" %}
+{% include markup/exercise %}
 Use the MATLAB [boxplot](http://www.mathworks.se/help/stats/boxplot.html) function to plot the power in channel 'MEG0431' at 18 Hz and around 700 ms following movement offset.
 
 Hint: you can make a selection of the data like
     TFR_all.powspctrm(:, 15, 4, 8)
 to give you a  vector with the power values in each trial, and you can use the *trialinfo* as the grouping variable.
-{% include endclass.html %}
+{% include markup/end %}
 
 ### Log-transform the single-trial power
 
@@ -292,14 +292,14 @@ We can compute the ERFs for the two experimental conditions by selecting the sta
     cfg.trials  = find(data_stimlocked.trialinfo(:,1) == 2);
     ERF_dev     = ft_timelockanalysis(cfg, data_stimlocked);
 
-{% include startclass.html class="allert-info" %}
+{% include markup/exercise %}
 The **[/reference/ft_selectdata](/reference/ft_selectdata)** function is a very handy general purpose function that allows making selections in any dimension of the data. Furthermore, it allows you to compute averages over any of the dimensions. In case you would need the ERF topography as a vector that is averaged over 80 to 110 ms, you could do
 
     cfg = [];
     cfg.latency = [0.08 0.11];
     cfg.avgovertime = 'yes';
     ERF_peak =  ft_selectdata(cfg, ERF_std)
-{% include endclass.html %}
+{% include markup/end %}
 
     cfg        = [];
     cfg.layout = 'neuromag306mag.lay';

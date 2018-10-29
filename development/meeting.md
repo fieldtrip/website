@@ -10,9 +10,9 @@ The core FieldTrip development team is located at the Donders Institute in Nijme
 
 We organize occasional meetings at the Donders to discuss topics related to the development. Although we don't want to put too much effort in the minutes and therefore might not be consistent with them, below you can find a list of meetings for which an agenda or notes were made. 
 
-{:.alert-info}
+{% include markup/info %}
 You should add the tag "meeting" to a page to have it appear here.
-{% include endclass.html %}
+{% include markup/end %}
 
 {% include seealso.html tag1="meeting" %}
 

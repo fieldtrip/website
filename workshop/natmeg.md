@@ -6,7 +6,7 @@ tags: [natmeg, MEG-audodd]
 
 # FieldTrip course at the NatMEG in Stockholm
 
-![image](/static/img/tutorial/natmeg_temp:natmeg_pos.png)
+![image](/static/img/tutorial/natmeg_temp/natmeg_pos.png@200)
 
 *  Where: NatMEG, Karolinska Institute, Stockholm, Sweden
 *  When: 29 Sept - 3 Oct 2014

@@ -29,27 +29,19 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 ## Procedure
 
-
 To localize the oscillatory sources for the example dataset we will perform the following step
 
 *  Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/ft_read_mri)**
-
 *  Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
-
 *  Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
 Next, we head out to investigate the response to the finger movement. We will localize the sources of the motor beta-band activity following the following step
 
 *  Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
-
 *  Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
-
 *  Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
-
 *  Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-
 *  Compute the condition difference
-
 *  Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
@@ -64,10 +56,9 @@ Note that some of the steps will be skipped in this tutorial as we have already 
 
 We will briefly explain the steps that allowed the generation of the epoched file in case you might want to generate the data structure yourself.
 
-The following steps had been performe
+The following steps had been performed:
 
 *  Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 1.5 seconds prior to trigger onset (i.e. baseline) and 2 second post trigger onset (i.e. response interval).
-
 *  Apply some preprocessing such as power line noise removal, demean and detrend using **[ft_preprocessing](/reference/ft_preprocessing)**
 
 To run the following section of code you need the original dataset and trial function:  [ download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif), [ download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/trialfun_oddball_responselocked.m)
@@ -97,32 +88,32 @@ To run the following section of code you need the original dataset and trial fun
 
 The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/data_meg_clean.mat).
 
-Load the data using the following comman
+Load the data using the following command:
 
 	load data_meg_clean
 
-Next, we perform the independent component analysis according to the following step
+Next, we perform the independent component analysis according to the following steps:
 
-*  Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**. Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency `< 10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity a sampling rate of >` 100 Hz will be appropriate for most of the cases.
-
+*  Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**.  Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency <10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity a sampling rate of >100 Hz will be appropriate for most of the cases.
 *  Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
-
 *  Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
 
-	%% project the cont data thru the components
-	cfg = [];
-	cfg.resamplefs = 140;
-	cfg.detrend    = 'no';
-	datads = ft_resampledata(cfg, data_meg_clean);
-	% perform the independent component analysis (i.e., decompose the data)
-	cfg        = [];
-	cfg.method = 'runica';
-	cfg.runica.maxsteps = 100;
-	comp = ft_componentanalysis(cfg, datads);
-	cfg           = [];
-	cfg.unmixing  = comp.unmixing;
-	cfg.topolabel = comp.topolabel;
-	comp_meg=ft_componentanalysis(cfg, data_meg_clean);
+    % project the cont data thru the components
+    cfg = [];
+    cfg.resamplefs = 140;
+    cfg.detrend    = 'no';
+    datads = ft_resampledata(cfg, data_meg_clean);
+    
+    % perform the independent component analysis (i.e., decompose the data)
+    cfg        = [];
+    cfg.method = 'runica';
+    cfg.runica.maxsteps = 100;
+    comp = ft_componentanalysis(cfg, datads);
+    
+    cfg           = [];
+    cfg.unmixing  = comp.unmixing;
+    cfg.topolabel = comp.topolabel;
+    comp_meg=ft_componentanalysis(cfg, data_meg_clean);
 
 Now we could explore the decomposed data by using **[ft_databrowser](/reference/ft_databrowser)**
 
@@ -145,10 +136,10 @@ In the first step we re-segment the data into left and right hand responses usin
 
 
 	cfg = [];
-	cfg.trials       = find(data_meg_clean_ica.trialinfo(:,1) == 256);
+	cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 256);
 	data_left     = ft_redefinetrial(cfg, data_meg_clean_ica);
 
-	cfg.trials       = find(data_meg_clean_ica.trialinfo(:,1) == 4096);
+	cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 4096);
 	data_right    = ft_redefinetrial(cfg, data_meg_clean_ica);
 	%%
 	tlk = ft_timelockanalysis([],data_right);
@@ -168,11 +159,11 @@ In the first step we re-segment the data into left and right hand responses usin
 
 *Figure 1: Topography and time course of the motor evoked response performed with the right hand.*
 
-{:.alert-info}
+{% include markup/exercise %}
 Use your knowledge about the distribution of the ingoing and outgoing field.
 - What is the orientation of the source?
 - Is this source likely located on a gyral bank or sylcus wall?
-{# FIXME this is probably not displayed correctly #}
+{% include markup/end %}
 
 ### Loading the headmodel
 

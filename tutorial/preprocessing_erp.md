@@ -242,7 +242,7 @@ The left lower box of Figure 4 shows the variance of the signal in each trial. B
 
 Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes it is not easy to decide if a trial has to be rejected or not. In this exercise we suggest that you remove 8 trials with the highest variance (trial numbers 22, 42, 89, 90, 92, 126, 136 and 150). As you see, the trials with blinks that we saw in the "Channel" mode are among them. To complete the rejection press "Quit" button. You get the data_clean variable that will be used for subsequent analyses.
 
-{% include startclass.html class="alert-info" %}
+{% include markup/info %}
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
 	cfg          = [];
@@ -250,7 +250,7 @@ After removing data segments that contain artifacts, you might want to do a last
 	ft_databrowser(cfg, data_clean);
 
 Note that you can also use the data browser to mark artifacts (instead of or in addition to ft_rejectvisual).
-{% include endclass.html %}
+{% include markup/end %}
 
 ### Computing and plotting the ERP's
 

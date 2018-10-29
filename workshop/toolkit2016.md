@@ -5,12 +5,12 @@ layout: default
 
 # Advanced analysis and source modeling of EEG and MEG data
 
-{:.alert-danger}
+{% include markup/danger %}
 The code in line 1604-1606 in ft_volumerealign.m should be commented out to work around the MATLAB 2012b error with the slider.
     % set(h1,'sortMethod','childorder')
     % set(h2,'sortMethod','childorder')
     % set(h3,'sortMethod','childorder')
-{# FIXME formatting might be wrong #}
+% include markup/end %}
 
 On April 18-21, 2016 we will host the "Toolkit of Cognitive Neuroscience: advanced data analysis and source modelling of EEG and MEG data" at the Donders Institute in Nijmegen.
 

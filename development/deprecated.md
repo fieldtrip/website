@@ -7,14 +7,14 @@ layout: default
 
 # Deprecated functions and options
 
-{:.alert-info}
+{% include markup/info %}
 Definition of **[deprecation](http://en.wikipedia.org/wiki/Deprecated)**
 (//From Wikipedia, the free encyclopedia//)
 
 In computer software standards and documentation, deprecation is the gradual phasing-out of a software or programming language feature.
 
 A feature or method marked as deprecated is one which is considered obsolete, and whose use is discouraged. The feature still works in the current version of the software, although it may raise error messages as warnings. These serve to alert the user to the fact that the feature may be removed in future releases.
-{% include endclass.html %}
+{% include markup/end %}
 
 ## Introduction
 

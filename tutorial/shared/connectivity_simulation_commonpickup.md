@@ -98,7 +98,7 @@ Play a bit with the parameters in the mixing matrix and see what is the effect o
 
 #### Exercise 7
 
-{% include startclass.html class="note-info" %}
+{% include markup/exercise %}
 Simulate new data where the 2 mixed signals are created from 4 underlying sources, and where two of these sources are common input to both signals, and where these two sources are temporally shifted copies of one another.
 
 Hint: the mixing matrix could look like this:
@@ -118,5 +118,5 @@ and the trials could be created like this:
 	end
 
 Compute connectivity between the signals and discuss what you observe. In particular, also compute measures of directed interaction.
-{% include endclass.html %}
+{% include markup/end %}
 

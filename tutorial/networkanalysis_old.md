@@ -268,7 +268,7 @@ The source model describes a regular 3D grid. Not all positions of the source mo
 
 *Figure 4: Reconstructed activity (neural activity index) with peak maxima in occipital but also sensorimotor and some deep brain areas.*
 
-{% include startclass.html class="alert-info" %}
+{% include markup/info %}
 The accurate judgment of the source reconstructed data is often not straight forward. However, you can make your judgment dependent on the comparison of sensor and source topography. In the present case the activation of the visual areas provide a good match to the observed scalp topography.
 
 	cfg               = [];
@@ -303,7 +303,7 @@ The accurate judgment of the source reconstructed data is often not straight for
 
 *Figure 5: Reconstructed activity (neural activity index) with peak maxima in occipital areas (top left) together with scalp topographic representation of the signal on the axial (top right) and planar (bottom left) gradients. Note that the presumably bilateral origin suggested by the scalp topography of the axial gradiometers is actually reflecting the in and out going fields of a summed dipolar activity located somewhere in between.*
 
-{% include endclass.html %}
+{% include markup/end %}
 
 Comparing source reconstruction results to scalp topography is more or less mandatory. However, a potential mismatch shouldn't prevent you to try out a different strategy. In the beamforming tutorial [here](/tutorial/beamformer) the reconstructed activity is represented as a ratio change from pre stimulus baseline. Although there isn't a baseline we can compare with here, still there is an alternative approach. In the next section we will compute the sensor level alpha power but keep the individual trials. Next we will determine the sensor with a maximum power and use a median split on the trials at that sensor. This would allow us to split the data into trials dominated by high and low alpha power respectively.
 

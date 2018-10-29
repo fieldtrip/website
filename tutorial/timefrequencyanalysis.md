@@ -208,7 +208,7 @@ If you would like to learn more about plotting of time-frequency representations
 
 #### Exercise 3
 
-{% include startclass.html class="alert-info" %}
+{% include markup/exercise %}
 Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results. Discuss the consequences of changing these setting.
 
 4 cycles per time window:
@@ -232,7 +232,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
 
     cfg.t_ftimwin    = 10./cfg.foi;  	
     TFRhann10 = ft_freqanalysis(cfg, dataFIC);
-{% include endclass.html %}  
+{% include markup/end %}  
 
 ##  Time-frequency analysis III.
 
