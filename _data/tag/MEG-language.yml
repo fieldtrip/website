@@ -37,6 +37,3 @@
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
 
-- name:  Plotting data at the channel and source level
-  link:  /development/tutorial/plotting
-

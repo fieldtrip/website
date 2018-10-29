@@ -34,9 +34,6 @@
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
-- name:  Plotting data at the channel and source level
-  link:  /development/tutorial/plotting
-
 - name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
   link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
 

@@ -25,9 +25,6 @@
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
 
-- name:  Plotting data at the channel and source level
-  link:  /development/tutorial/plotting
-
 - name:  What kind of filters can I apply to my data?
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
 

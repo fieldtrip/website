@@ -67,9 +67,6 @@
 - name:  Importing your data
   link:  /reading_data
 
-- name:  Plotting data at the channel and source level
-  link:  /development/tutorial/plotting
-
 - name:  Example script for leadfield based on FEM headmodel
   link:  /development/project/example_fem
 

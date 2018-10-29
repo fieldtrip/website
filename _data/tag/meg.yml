@@ -109,9 +109,6 @@
 - name:  Importing your data
   link:  /reading_data
 
-- name:  Plotting data at the channel and source level
-  link:  /development/tutorial/plotting
-
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 

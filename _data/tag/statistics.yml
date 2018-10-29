@@ -19,9 +19,6 @@
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics
 
-- name:  Plotting data at the channel and source level
-  link:  /development/tutorial/plotting
-
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
 
