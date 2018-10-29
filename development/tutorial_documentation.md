@@ -9,7 +9,7 @@ FIXME This page is under construction
 
 Create again, when finished, in the initial page under:
 
-*  [An overview on forward modeling](/tutorial/Forward)  
+*  [An overview on forward modeling](/tutorial/forward)  
 
 # An overview on forward modeling
 

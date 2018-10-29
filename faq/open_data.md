@@ -11,13 +11,13 @@ Feel free to hit the **edit** button to share links to other open access dataset
 
 The FieldTrip tutorials include a lot of smaller datasets that are available for download. These datasets are listed in [this frequently asked question](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
 
-Note that other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets. 
+Note that other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
 
 ## Other MEG datasets
 
 The [Human Connectome Project](http://www.humanconnectome.org) contains MEG data from close to 100 subjects, which were scanned on the 248-channel 4D/BTi MEG system at SLU, St Louis. The MEG data includes resting-state and three different experimental tasks, and anatomical, functional (1200 subjects, resting and task) and associated behavioral and demographic data is available. See also [doi: 10.1016/j.neuroimage.2013.05.056](http://dx.doi.org/10.1016/j.neuroimage.2013.05.056) and [doi: 10.1016/j.neuroimage.2015.04.046](http://dx.doi.org/10.1016/j.neuroimage.2015.04.046).
 
-The [Cambridge Centre for Ageing and Neuroscience](/ https://camcan-archive.mrc-cbu.cam.ac.uk/dataaccess/) released raw data from the Cam-CAN cohort, including MEG, MRI and cognitive data from approximately 650 males and females uniformly distributed from 18 to 88 years of age. The MEG data (in FIF format) include 3 runs of 1) rest, 2) a sensorimotor task, and 3) a passive sensory task (with separate visual and auditory stimuli). 
+The [Cambridge Centre for Ageing and Neuroscience](https://camcan-archive.mrc-cbu.cam.ac.uk/dataaccess/) released raw data from the Cam-CAN cohort, including MEG, MRI and cognitive data from approximately 650 males and females uniformly distributed from 18 to 88 years of age. The MEG data (in FIF format) include 3 runs of 1) rest, 2) a sensorimotor task, and 3) a passive sensory task (with separate visual and auditory stimuli). 
 
 The [Open MEG Archive (OMEGA)](https://omega.bic.mni.mcgill.ca) is a collaborative effort by the McConnell Brain Imaging Centre and the Université de Montréal. It consists of a open repository with MEG data. This continuously expanding repository also contains anatomical MRI volumes, demographic and questionnaire information, and eventually will feature other forms of electrophysiological data (e.g. EEG, field, and cell recordings). See also [doi: 10.1016/j.neuroimage.2015.04.028](http://dx.doi.org/10.1016/j.neuroimage.2015.04.028)
 

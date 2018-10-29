@@ -31,7 +31,7 @@ You don't have to use the CTF software to convert the DICOM images and to assign
 
 	% done!
 
-Following coregistration, you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function to reslice the MRI, i.e. to interpolate the anatomy onto a new 3D grid that is aligned with the axes of the coordinate system. This prevents problems such as described [here](/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
+Following coregistration, you can use the **[ft_volumereslice](/reference/ft_volumereslice)** function to reslice the MRI, i.e. to interpolate the anatomy onto a new 3D grid that is aligned with the axes of the coordinate system. This prevents problems such as described [here](/faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot).
 
 ## Doing it the old and difficult way
 
@@ -61,13 +61,9 @@ Where '$subjectcode' is the coded name of your subject data, for instance: subje
 Do the following before starting.the actual conversion procedur
 
 *  Create a directory ‘$subjectcode’
-
 *  Create the directory structure as depicted in the format outline.
-
 *  Copy MRI data set to ‘/$subjectcode/dicom’.
-
 *  Park localizer files (optional): An anatomical MRI data set consist of localizer files and the actual slices that we are interested in. If the localizer files are still present in the data set, please park them in a ‘misc’ directory that you should create in ‘$subjectcode/dicom’.
-
 *  Analyze files are only created when using older CTF software versions (e.g. 4.17)
 
 Now that you have prepared the directory structure for the subject data, you can start with the conversion procedure!

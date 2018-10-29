@@ -23,6 +23,7 @@ The bipolar EMG signal was recorded from the right extensor carpi radialis longu
 ## Background
 
 To study the oscillatory synchrony between two signals, one can compute the coherence. This is computed in the frequency domain by normalizing the magnitude of the summed cross-spectral density between two signals by their respective power. For each frequency bin the coherence value is a number between 0 and 1. The coherence values reflect the consistency of the phase difference between the two signals at a given frequency. In this session we will explore the concept of coherence by investigating a dataset from an experiment in which the subject was required to maintain an isometric contraction of a forearm muscle. The coherence between the MEG signals and the acquired EMG will be estimated. First we will explore the coherence between the EMG signal and all MEG channels. Secondly, we will investigate how the coherence estimate is influenced by the number of trials, and by the degree of spectral smoothing using multitaper spectral analysis. Even though the example in this session covers cortico-muscular coherence, coherence between sensors can be calculated in exactly the same way.
+
 ## Procedure
 
 To compute the coherence between the MEG and EMG signals for the example dataset we will perform the following step
@@ -200,7 +201,7 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
 
 ### Exercise 2
 
-{% include startclass.html class="alert-info" %}
+{% include markup/exercise %}
 a) What determines the frequency resolution of the spectrum, as displayed in figure 3? How can it be increased or decreased? Answer the same question for smoothing.
 
 b) Plot a topographical distribution of the coherence in the beta band. The variable cfg.xlim defines the edges of the frequency band.
@@ -214,21 +215,21 @@ b) Plot a topographical distribution of the coherence in the beta band. The vari
     figure; ft_topoplotER(cfg, fd)
 
 ![image](/static/img/tutorial/coherence/tutorial4b.png@400)
-*Figure 4; A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER.*
 
-{% include endclass.html %}
+*Figure 4; A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER.*
+{% include markup/end %}
 
 ### Exercise 3
 
-{:.alert-info}
+{% include markup/exercise %}
 Explain the pattern of activation in Figure 4.
-<br/>
-<br/>
+
 Plot the topographic representation for other frequencies that might be of interest.
+{% include markup/end %}
 
 ### Exercise 4
 
-{% include startclass.html class="alert-info" %}
+{% include markup/exercise %}
 Explore the consequence of changing the smoothing in the frequency domain. Do this by recomputing the cortico-muscular coherence between the EMG signal and MEG sensor MRC21 for different degrees of smoothing. Compute the powerspectra and the cross-spectra, and the corresponding coherence using different degrees of smoothing.
 
 a) 2 Hz smoothing (cfg.tapsmofrq = 2 Hz)
@@ -285,7 +286,7 @@ Plot the results of the 5, 2, and 10 Hz smoothin
     figure;ft_singleplotER(cfg, fd, fd2, fd10);
 
 Which degree of smoothing do you consider optimal in the calculations above?
-{% include endclass.html %}
+{% include markup/end %}
 
 ### Exercise 5
 

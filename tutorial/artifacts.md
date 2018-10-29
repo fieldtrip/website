@@ -54,7 +54,7 @@ The **[ft_databrowser](/reference/ft_databrowser)** function works both for cont
 
 Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function can also be used to visualise the timecourse of the ICA components and thus easily allows you to identify the components corresponding to eye blinks, heart beat and line noise. Note that a proper ICA unmixing of your data requires that the atypical artifacts (e.g. electrode movement, squid jumps) are removed **prior** to calling **[ft_componentanalysis](/reference/ft_componentanalysis)**. After you have determined what the bad components are, you can call **[ft_rejectcomponent](/reference/ft_rejectcomponent)** to project the data back to the sensor level, excluding the bad components.
 
-More information about manually dealing with artifacts is found in the [Visual artifact rejection](/Visual artifact rejection) tutorial.
+More information about manually dealing with artifacts is found in the [Visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial.
 
 ### Automatic detection
 
@@ -62,7 +62,7 @@ To speed up the processing of many or of very large datasets, and to facilitate 
 
 Most of the automatic artifact detection functions are based on filtering the data and subsequently  combining the data over channels. The relevant parameters for this are the various linear and non-linear filtering and the data padding options are set *a priori* for each of them via the configuration options. For example, in continuous datasets these might be the bandpass filter frequencies or the padding length.
 
-The available functions for automatic artifact detection ar
+The available functions for automatic artifact detection are:
 
 *  **[ft_artifact_clip](/reference/ft_artifact_clip)**
 *  **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
@@ -74,7 +74,7 @@ The available functions for automatic artifact detection ar
 
 Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** where the filter and padding options are set to reasonable defaults.
 
-More information about automatic detection of artifacts is found in the [Automatic artifact rejection](/Automatic artifact rejection) tutorial.
+More information about automatic detection of artifacts is found in the [Automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial.
 
 #### Removing artifacts from the data
 

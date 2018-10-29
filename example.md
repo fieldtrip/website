@@ -58,7 +58,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 ### Statistical analysis
 
 *  [Stratify the distribution of two variables](/example/stratify)
-*  [Source statistics](/example/Source_statistics)
+*  [Source statistics](/example/source_statistics)
 *  [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 *  [Use simulated ERPs to explore cluster statistics](/example/use_simulated_erps_to_explore_cluster_statistics)
 *  [How can I compute and report the effect size?](/example/effectsize)

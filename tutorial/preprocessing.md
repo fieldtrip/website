@@ -16,7 +16,8 @@ tags: [tutorial, meg, raw, preprocessing, MEG-language]
 
 This tutorial describes how to define epochs-of-interest (trials) from your recorded MEG-data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g. average) your data.
 
-If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial. There, you  can also find information about how to preprocess EEG data. If you want to learn how to segment EEG data into trials, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_ERP).
+If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial. There, you  can also find information about how to preprocess EEG data. If you want to learn how to segment EEG data into trials, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
+
 ## Background
 
 In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
@@ -31,8 +32,6 @@ Preprocessing involves several steps including identifying individual trials fro
 Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](/reference/ft_preprocessing)**.
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
-
-#
 
 {{page>:tutorial:shared:dataset}}
 

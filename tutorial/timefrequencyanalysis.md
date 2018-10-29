@@ -133,7 +133,7 @@ An interesting effect seems to be present in the TFR of sensor MRC15. To make a 
 
 *Figure 4; The time-frequency representation with respect to single sensor obtained using ft_singleplotTFR*
 
-If you see artifacts in your figure, see [faq:I am getting strange artifacts in figures that use opacity](/faq/I am getting strange artifacts in figures that use opacity).
+If you see artifacts in your figure, see [this question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
 From Figure 4 one can see that there is an increase in power around 15-20 Hz in the time interval 0.9 to 1.3 s after stimulus onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)*
 

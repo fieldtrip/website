@@ -7,3 +7,7 @@ This repository contains the content that is hosted on http://www.fieldtriptoolb
 - Variables passed in an include must be specified in quotes.
 - code blocks should have an empty line before and after them.
 - Shared pages should go in _include/shared.
+
+## Ideas
+- for image resizing we might consider a service like https://www.imgix.com
+- use code highlighting from https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting

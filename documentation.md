@@ -7,16 +7,17 @@ layout: default
 
 The documentation for FieldTrip is split into several parts:
 
-* [Tutorial documentation](/tutorial)
 * [Walkthrough](/walkthrough)
+* [Tutorial documentation](/tutorial)
+* [Frequently asked questions](/faq)
+* [Example matlab scripts](/example)
 * [Video lectures](/video)
 * [Workshop material](/workshop)
 * [Importing your data](/reading_data)
-* [Frequently asked questions](/faq)
-* [Reference documentation](/reference)
-* [Template models and data](/template)
-* [Example matlab scripts](/example)
 * [Supported data formats](/dataformat)
+* [Realtime BCI](/development/realtime)
+* [Template models and data](/template)
+* [Reference documentation](/reference)
 
 The [tutorials](/tutorial) will help you to get started by providing examples that you can copy-and-paste into Matlab. The [introduction tutorial](/tutorial/introduction) is the best place to start if you do not have any idea about the ideas behind the FieldTrip toolbox. Also, reading through the [Walkthrough](/walkthrough) will give you a good overview of the ideas behind the toolbox and analysis methods. Sometimes we prepare dedicated course material for [workshops](/workshop), which we also share.
 

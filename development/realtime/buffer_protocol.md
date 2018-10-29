@@ -68,7 +68,7 @@ but one of the more important issues is a strategy that allows for both flexibil
 ## Network protocol
 
 Every request and response starts with the following fixed-size 8 byte structure which
-corresponds to the definition of **messagedef_t** in ''message.h'' in the [reference implementation](/reference implementation).
+corresponds to the definition of **messagedef_t** in ''message.h'' in the [reference implementation](/revelopment/realtime/reference_implementation).
 
  | field       | type   | description                                                        |
  | -----       | ----   | -----------                                                        |
