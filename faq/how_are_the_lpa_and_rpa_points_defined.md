@@ -4,7 +4,7 @@ layout: default
 tags: [faq, fiducial, mri, ctf, source, coordinate]
 ---
 
-#  How are the Left and Right Pre-Auricular (LPA and RPA) points defined? 
+#  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
 
 The correct definition (taken from http://www.medilexicon.com) of the pre-auriciular point is *"a point of the posterior root of the zygomatic arch lying immediately in front of the upper end of the tragus"*. The [zygomatic arch](http://en.wikipedia.org/wiki/Zygomatic_arch) or cheek bone is the skull bone in front of the ear as depicted in this figure
 
@@ -18,8 +18,9 @@ The approximate position of the pre-auriciular point is indicated in the figure 
 
 The problem with using the LPA and RPA according to this definition is that it can be really difficult to localize them precisely on the anatomical MRI. Mislocalization of these points can lead to severe misregistration between the MRI and MEG/EEG, and consequently affect the accuracy of source localization.
 
-{:.alert-danger}
+{% include markup/danger %}
 Regardless of which convention you use for the points representing the left and right ear landmarks, you have to be aware of it and use it consistently throughout.
+{% include markup/end %}
 
 Because of the difficulty of localizing the LPA and RPA points in both EEG/MEG and in the anatomical MRI, various labs have adopted slightly different conventions for the fiducial points for the ears. Some labs use the junction between the tragus and the helix, marked with the red dot in the figure of the ear above, which can be located more precisely both anatomically and on the MRI slices. Other possibilities that are less frequently uses are the tip of the tragus, the ear lobe or the [mastoid](http://en.wikipedia.org/wiki/Mastoid).
 

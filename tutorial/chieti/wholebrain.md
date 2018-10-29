@@ -8,8 +8,9 @@ tags: [chieti, HCP-motort]
 
 ## Introduction
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
+{% include markup/end %}
 
 In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org). The experiment in which this data was acquired is described in detail [here](/tutorial/shared/hcp_motort). This tutorial follows on the [MEG virtual channels and seed-based connectivity](/tutorial/chieti/virtualchannel) tutorial and continues with the data that has already partially been computed there.
 
@@ -119,14 +120,15 @@ It will look nicer if we interpolate the connectivity map on the subject's indiv
     cfg.funparameter = 'cohspctrm';
     ft_sourceplot(cfg, source_coh_int);
 
-{:.alert-info}
+{% include markup/info %}
 Compute a full brain connectivity distribution with another connectivity metric.
+{% include markup/end %}
 
-{:.alert-info}
+{% include markup/info %}
 Compute the connectivity distribution in the left-hand movement data using the right hemisphere seed location.
-<br/>
-<br/>
+
 Subsequently, you can make a contrast between left-hand and right-hand connectivity results.
+{% include markup/end %}
 
 ### All-to-all connectivity
 

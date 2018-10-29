@@ -389,6 +389,6 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 
 ### Exercise
 
-{:.alert-info}
+{% include markup/info %}
 Change the phase spread factor (phsspreadfac) in the coherence analysis and see what the outcome is.
-
+{% include markup/end %}

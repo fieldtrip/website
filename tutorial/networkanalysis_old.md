@@ -198,8 +198,9 @@ In the following section we will compute the ingredients for accurate reconstruc
 
 *Figure 3: Sensors (green), head model (grey) and source model(blue) are properly aligned all in units of cm.*
 
-{:.alert-danger}
+{% include markup/danger %}
 The source model describes a regular 3D grid. Not all positions of the source model are inside the brain. This is represented in the "inside" field.
+{% include markup/end %}
 
 	%% compute sensor level Fourier spectra
 	cfg            = [];
@@ -631,12 +632,10 @@ Of course one can use also phase locking value or some other metric for quantifi
 
 ##### Exercise 1
 
-{:.alert-info}
+{% include markup/info %}
 Compare both network configurations. Obiviously, they have little in common.
-</br>
-</br>
-Why? Discuss the difference between 'icoh' and 'plv'.
-</br>
-</br>
-What is the role of the spatial filter?
 
+Why? Discuss the difference between 'icoh' and 'plv'.
+
+What is the role of the spatial filter?
+{% include markup/end %}

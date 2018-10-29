@@ -12,8 +12,9 @@ tags: [tutorial, nirs, preprocessing, nirs-multichannel]
 
 #  Preprocessing and averaging of multi-channel NIRS data
 
-{:.alert-warning}
+{% include markup/warning %}
 This tutorial is still under development.
+{% include markup/end %}
 
 ## Introduction
 
@@ -69,19 +70,13 @@ Trigger events were recorded in the ADC channels 1 (standards) and 2 (deviants).
 Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. In the [single channel](/tutorial/nirs_singlechannel) tutorial we introduced you to one order of analysis steps. The order of steps for this specific tutorial is as follows (see the figure below for an overview
 
 *  read data & downsample
-
 *  remove bad channels
-
 *  define epochs
-
 *  transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
-
 *  separate functional from systemic responses (signal conditioning)
-
 *  filter; i.e. temporal processing
     * subtract reference channel; i.e. spatial processing
     * anti-correlate oxyHb/deoxyHb-traces per channel
-
 *  plot results
 
 ![image](/static/img/tutorial/nirs_tut2_multichannel_analysis_steps.png@400)
@@ -109,8 +104,9 @@ You will see something like this in  the command windo
 
 The structure **data_raw** contains all data and information about the experiment, all stored in separate fields.
 
-{:.alert-info}
+{% include markup/info %}
 For information about FieldTrip data structures and their fields, see this [frequently asked question](/faq/how_are_the_various_data_structures_defined).
+{% include markup/end %}
 
 To retrieve the layout from the data file as shown above, you can use:
 
@@ -143,17 +139,19 @@ Plotting the data from ADC001 and ADC002 will yield the figure below, showing th
 
 **Figure 4; Oddball paradigm trigger. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants. You can see that there are four blocks of events.**
 
-{:.alert-info}
+{% include markup/info %}
 **Exercise 1**:
 Zoom in on 355 to 365 seconds to better see what is going on.  All stimuli onsets are indicated by the blue lines.  Red dotted lines indicate onsets of the deviants (the oddballs). Can you now better spot the oddball?
+{% include markup/end %}
 
 FieldTrip can detect the onset in the ADC channels automatically and represent the upward going flank in the ADC channels as “event”.
 
     event = ft_read_event('LR-01-2015-06-01-0002.oxy3')
 
-{:.alert-info}
+{% include markup/info %}
 **Exercise 2**:
 Explore the information in the event structure. How many stimuli were played and how many oddballs? As not all events are stimuli onsets, it might help to find the oddballs by running adc002 = find(strcmp({event.type}, 'ADC002'));
+{% include markup/end %}
 
 We will use these events later to define segments of interest and to cut the standard and deviant trials out of the continuous data.
 
@@ -167,11 +165,13 @@ Since the hemodynamic response takes about 5 to 10 s to reach peak (i.e. corresp
     cfg.resamplefs      	= 10;
     data_down           	= ft_resampledata(cfg, data_raw);
 
-{:.alert-info}
+{% include markup/info %}
 It is better to resample multiple times if the resampling factor is larger than 10, see [here](https://allsignalprocessing.com/very-low-frequency-filtering/)
+{% include markup/end %}
 
-{:.alert-info}
+{% include markup/info %}
 The resampling also includes low-pass filtering of the data. As the new sampling rate is 10 Hz, we will lose data with frequencies larger than 5 Hz. This means we will lose a lot of information from the standards in our experiment, as they are presented near 6.7 Hz, but we keep the deviant information, which is presented near 0.6 Hz. For the current analysis, we are only interested in the deviant data. Just remember: be wary of filtering!
+{% include markup/end %}
 
 We can now plot the data and see what it looks like. In cfg.preproc we can specify some options for on-the-fly preprocessing. Here, we will demean the data, i.e. subtract the mean value. The options you can specify in cfg.preproc are largely the same as the options for **[ft_preprocessing](/reference/ft_preprocessing)** with as a difference that in our current command, namely ft_databrowser, the demeaning is only applied for plotting, the data itself remains the same.   
 
@@ -297,9 +297,10 @@ Let’s take a look at what happens around the first deviant, by plotting the av
 
 The most obvious thing you should see, is the heartbeat. This is great! It means that your subject is alive and has some blood flowing through his/her brain (or skin). Importantly, this is an indicative sign of a good measurement. If you would not see this, you could throw this data in the bin (see next paragraph).
 
-{:.alert-info}
+{% include markup/info %}
 **Exercise 3**:
 Inspect the signal carefully! When does it increase/decrease, when does it peak? Could this be a functional response? We have to do a few more additional analysis steps, before we know for sure.
+{% include markup/end %}
 
 ### Remove bad channels
 
@@ -328,8 +329,9 @@ You can see that you throw away some channels in data_sci.label, where we now on
 
 We already removed major motion artefacts by epoching, thus removing the periods in between blocks, and by throwing away poorly coupled optodes. Therefore, this step can be ignored for this dataset.
 
-{:.alert-info}
+{% include markup/info %}
 **Exercise 4**: We just wrote "Therefore, this step can be ignored." Check this yourself, are there indeed no artifacts? Hint: you can use cfg.artfctdef.zvalue.interactive = 'yes'; and [cfg, artifact] = ft_artifact_zvalue(cfg, data_epoch); like in Exercise 2 of the single channel tutorial.
+{% include markup/end %}
 
 ### Transform optical densities to oxy- and deoxyhemoglobin concentration changes
 
@@ -418,8 +420,9 @@ Important to remember is that for **[/reference/ft_multiplotER](/reference/ft_mu
 
 You can also generate a spatial representation of the signal at a certain time point, or averaged over a time window. To plot the response that was found during a specific time window, you will need to specify this by setting limitations to the time dimension. In this case, time is the first dimension, and therefore, the time window can be set by using 'cfg.xlim = [5 7];'. The third dimension here is the strength of the response. We set the scale here from -0.2 to 0.2, but this depends on your data: many fNIRS researchers use block designs, and depending on the block duration, the response may gain a larger amplitude. In the current data, the scale can be derived from the previous figure, which was generated without setting the response scale (zlim in this case).
 
-{:.alert-info}
+{% include markup/info %}
 Per default FieldTrip uses the minimum and the maximum in the selected part of the data for the zlim parameter. Setting the scale manually has the advantage that you can set zero as the middle point in the scale, which can be helpful for the interpretation of the color-coded graph.
+{% include markup/end %}
 
 	cfg          = [];
 	cfg.layout   = lay;

@@ -124,8 +124,9 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
 
 #### Exercise 1
 
-{:.alert-info}
+{% include markup/info %}
 Explore the MEG and EMG in figure 1, e.g. by zooming in. How are the signals different from one another?
+{% include markup/end %}
 
 ## Computing the coherence
 

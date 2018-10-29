@@ -102,8 +102,9 @@ For convenience, you can now save the transformation matrix.
 	cfg.parameter   = 'anatomy';
 	ft_volumewrite(cfg, mri_spm_rs);
 
-{:.alert-danger}
+{% include markup/danger %}
 Importantly, the mgz-filetype can **only** be used on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved nor read on a Windows PC. If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer.
+{% include markup/end %}
 
 #### 5. Preprocessing of the anatomical MRI: impose coordinate system according to M/EEG convention
 
@@ -390,8 +391,9 @@ As an alternative you can create a template grid yourself, like thi
 
 **fig 3: template grid in single-subject head coordinates, superimposed onto the headmodel**
 
-{:.alert-danger}
+{% include markup/danger %}
 Keep in mind that the .pos field in the source models are subject specific. When you want to do group analysis across subjects, which now in principle is allowed due to the equivalence of the dipole positions in normalized space, you need to replace the positions with the normalized positions of the template sourcemodel. Otherwise, FieldTrip will throw an error.
+{% include markup/end %}
 
 ## Performing group analysis on cortical-sheet based source-reconstructed data
 

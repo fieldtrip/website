@@ -10,14 +10,13 @@ tags: [fixme]
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-{:.alert-danger}
+{% include markup/danger %}
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete.
-<br/>
-<br/>
+
 See http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718 for the progress.
-<br/>
-<br/>
+
 Once this tutorial is completed, it will be listed in the tutorial section in the menu. Also once complete, it will receive the tags *tutorial meg source headmodel mri lcmv beamformer* to link it to other pages.
+{% include markup/end %}
 
 # Localizing sources using beamformer techniques
 
@@ -167,14 +166,13 @@ Now prepare the head model from the segmented brain surfac
 	vol                = ft_prepare_headmodel(cfg, seg);
 	vol                = ft_convert_units(vol, 'cm'); % mm to cm, since the grid will also be expressed in cm
 
-{:.alert-warning}
+{% include markup/warning %}
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
-<br/>
-<br/>
+
 Prior to averaging the data with ft_timelockanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
-<br/>
-<br/>
+
 Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.   
+{% include markup/end %}
 
 ### Source model
 

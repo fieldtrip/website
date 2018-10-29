@@ -20,25 +20,25 @@ Subsequently you can use **[ft_definetrial](/reference/ft_definetrial)** and/or 
 
 ## Converting to another format
 
-A very simple and efficient file format supported by fieldtrip is labeled 'fcdc_matbin'. It is not an official file format, but was invented here at the FCDC. It consists of two files: a .mat matlab file that contains the header (and optionally the events) and a .bin binary file that contains the data. 
+A very simple and efficient file format supported by fieldtrip is labeled 'fcdc_matbin'. It is not an official file format, but was invented here at the FCDC. It consists of two files: a .mat matlab file that contains the header (and optionally the events) and a .bin binary file that contains the data.
 
-The mat file is just a standard matlab file and it contains the header (and optionally events) just like they are returned by the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_event](/reference/ft_read_event)** functions. So you don't lose any information in the mat file. 
+The mat file is just a standard matlab file and it contains the header (and optionally events) just like they are returned by the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_event](/reference/ft_read_event)** functions. So you don't lose any information in the mat file.
 
 The bin file contains the data samples as double precision floating point values, precisely the same as it is returned by the **[ft_read_data](/reference/ft_read_data)** function. The bin file is channel-multiplexed and little-endian. Reading from the data file is fast because the reading function can jump immediately to the desired location in the file with fseek and read the data, without any processing, conversion or calibration.
 
 Below is an example how you can convert an arbitrary file (here a BCI2000 file) to the fcdc_matbin format.
 
-	
+
 	hdr = ft_read_header('eeg1_2.dat');
 	dat = ft_read_data('eeg1_2.dat', 'header', hdr);
-	
+
 	>> whos dat hdr
 	  Name       Size                  Bytes  Class     Attributes
 	  dat       64x19696            10084352  double              
 	  hdr        1x1                  128768  struct   
-	
+
 	ft_write_data('test.bin', dat, 'header', hdr, 'dataformat', 'fcdc_matbin');
-	
+
 	>> ls test.*
 	test.bin	test.mat
 
@@ -49,13 +49,11 @@ You can read the fcdc_matbin file just like any other file format in FieldTrip, 
 
 and the **[ft_preprocessing](/reference/ft_preprocessing)** function (or any other function that needs to read from the file) will automatically figure out that the data is contained in the bin/mat pair.
 
-{:.alert-info}
-With the code above the events (e.g. trigger codes) are not stored in the output. Since the sample indexing remains exactly the same, you can simply do 
-<br/>
-<br/>
+{% include markup/info %}
+With the code above the events (e.g. trigger codes) are not stored in the output. Since the sample indexing remains exactly the same, you can simply do
+
     event = ft_read_event('eeg1_2.dat')
     save event.mat event
-<br/>
-<br/>
-i.e. and simply save the events to a MATLAB file for later reuse.
 
+i.e. and simply save the events to a MATLAB file for later reuse.
+{% include markup/end %}

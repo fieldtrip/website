@@ -12,8 +12,9 @@ Occasionally we also organize on-site FieldTrip workshops at partner institutes 
 
 You can also organize your own training event. That can be formatted on the basis of the [video](/video) lectures that we have online, i.e. you would watch them with a group, and discuss them among each other. This would be completed by hands-on sessions on the basis of selected [tutorials](/tutorial), in which also the informal group support is indispensable. We can support this by an interactive Q&A session (over Skype), by advice on the workshop program and by sharing the slides of the presentations for perusal.
 
-{:.alert-danger}
+{% include markup/danger %}
 If there is no information listed for a potential workshop below, then we don't have that information yet. Please don't bother asking. We will update the information here once details are known.
+{% include markup/end %}
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 

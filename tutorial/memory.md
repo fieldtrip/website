@@ -29,8 +29,9 @@ Neurophysiological data can become quite large with the result that disk space, 
 *  Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
 *  Within a script or function make sure you clear large variables that you don’t need anymore using the clear statement. Note that MATLAB’s memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
 
-{:.alert-warning}
-If you have any more suggestions please add them here
+{% include markup/warning %}
+If you have any more suggestions please add them here.
+{% include markup/end %}
 
 ##  Save your data to disk
 

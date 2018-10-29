@@ -22,11 +22,11 @@ In this tutorial we will continue working on the [dataset](/tutorial/shared/data
 
 This tutorial is not covering statistical test on event-related fields. If you are interested in that, you can read the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) tutorial. If you are interested how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.  
-<br/>
-<br/>
+
 {% include youtube.html id="x0hR-VsHZj8" %}
+{% include markup/end %}
 
 ## Background
 
@@ -421,8 +421,9 @@ Plot again with **[ft_clusterplot](/reference/ft_clusterplot)*
 
 #### Exercise
 
-{:.alert-info}
+{% include markup/info %}
 Try calling clusterplot with cfg.alpha = 0.05;
+{% include markup/end %}
 
 ## Summary and suggested further readings
 

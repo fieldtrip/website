@@ -8,11 +8,11 @@ tags: [references]
 
 FieldTrip is [Open Source software](http://www.opensource.org) and you can use it freely under the  [GPL license](http://www.gnu.org/copyleft/gpl.html) without other restrictions. However, we do appreciate getting acknowledged for the contribution of our project to your research. Please note that your references to FieldTrip also help us to ensure continued funding for the FieldTrip project, code development and support.
 
-{:.alert-warning}
+{% include markup/warning %}
 Please cite the FieldTrip reference paper when you have used FieldTrip in your study.
-<br/>
-<br/>
+
 Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen. **[FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.](http://www.hindawi.com/journals/cin/2011/156869)** Computational Intelligence and Neuroscience, vol. 2011, Article ID 156869, 9 pages, 2011. doi:10.1155/2011/156869.
+{% include markup/end %}
 
 The FieldTrip reference paper has been published in an [Open Access journal](http://en.wikipedia.org/wiki/Open_access_journal) and you can get the {{:oostenveld_et_al_2011_computational_intelligence_and_neuroscience.pdf|PDF version here}} or read  the [HTML version here](http://www.hindawi.com/journals/cin/2011/156869).
 

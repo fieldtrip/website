@@ -18,8 +18,9 @@ In case of the BEM, the volume conduction model consists of one or multiple homo
 
 To make the highest quality BEM volume conduction model, FieldTrip offers a number of functions to manipulate these three classes of geometrical data. If we summarize the geometrical data as **anatomy**, **segmentation** and **mesh**, then we can consider functions that take one type of geometrical data as input, and return the same or another type.
 
-{:.alert-info}
-We will refrain from using "head model" in the subsequent explanation, since each of the representations can be thought of as a "model describing the head". 
+{% include markup/info %}
+We will refrain from using "head model" in the subsequent explanation, since each of the representations can be thought of as a "model describing the head".
+{% include markup/end %}
 
 ##  Converting anatomy to anatomy
 
@@ -35,7 +36,7 @@ We will refrain from using "head model" in the subsequent explanation, since eac
 Here it helps to distinguish the different representations. Examples of these are given in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**.
 
 *  probabilistic, also known as tissue probability map (tpm): there is a value between 0 and 1 for each tissue at each of the voxels. This requires each tissue to be described in a separate 3-D array.
-*  indexed: the segmentation serves as a look-up table, each voxel is assigned to one class of tissue. This requires a set of labels for each tissue type. 
+*  indexed: the segmentation serves as a look-up table, each voxel is assigned to one class of tissue. This requires a set of labels for each tissue type.
 
 The probabilistic representation can also be used to make a binary or boolean representation, i.e. one in which the probability is either 0% (false) or 100% (true).
 
@@ -77,7 +78,7 @@ The iso2mesh method uses the vol2surf function from the [iso2mesh](http://iso2me
 
 ##  Converting mesh to mesh
 
-The [iso2mesh](http://iso2mesh.sourceforge.net) toolbox includes very useful functions for mesh manipulations. 
+The [iso2mesh](http://iso2mesh.sourceforge.net) toolbox includes very useful functions for mesh manipulations.
 
 Also SPM includes functions for triangular mesh manipulatio
 
@@ -103,8 +104,6 @@ Also SPM includes functions for triangular mesh manipulatio
 
 ##  Converting mesh to volume conduction model
 
-The **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix. 
+The **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** function can take a single or the combination of multiple meshes as input and make a volume conduction model out of it. This construction of the volume conduction model can for example consist of fitting spheres to the mesh for a concentric sphere model, or the computation of a BEM system matrix.
 
 After constructing the volume conduction model of the head, FieldTrip can compute leadfields and estimate sources by solving the inverse problem. Please see the tutorial documentation elsewhere on this website for complete examples.
-
- 

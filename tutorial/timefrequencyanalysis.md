@@ -20,11 +20,11 @@ Here, we will work on the MEG-language-semantics dataset, you can click [here](/
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](/#Summary and suggested further reading)).
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
-<br/>
-<br/>
+
 {% include youtube.html id="vwPpSglPJTE" %}
+{% include markup/end %}
 
 ## Background
 
@@ -153,16 +153,17 @@ From Figure 4 one can see that there is an increase in power around 15-20 Hz in 
 
 ##### Exercise 1
 
-{:.alert-info}
+{% include markup/info %}
 Plot the power with respect to a relative baseline (hint: use cfg.zlim = [0 2.0] and use the cfg.baselinetype option)
-<br/>
-<br/>
+
 How are the responses different? Discuss the assumptions behind choosing a relative or absolute baseline
+{% include markup/end %}
 
 ##### Exercise 2
 
-{:.alert-info}
+{% include markup/info %}
 Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms (hint: compare to ERFs)?  
+{% include markup/end %}
 
 ## Time-frequency analysis II.
 
@@ -316,10 +317,12 @@ Plot the result
 
 *Figure 9; Time-frequency representations of power calculated using Morlet wavelets.*
 
-{:.alert-info}
+{% include markup/info %}
 **Exercise 4**: Adjust cfg.width and see how the TFRs change.
+{% include markup/end %}
 
 If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](/#Visualization).
+
 ## Summary and suggested further reading
 
 This tutorial showed how to do time-frequency analysis on a single's subject MEG data and how to plot the time-frequency representations. There were 4 methods shown for calculating time-frequency representations and three functions for plotting the results.

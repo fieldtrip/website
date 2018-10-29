@@ -82,24 +82,23 @@ Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data se
 	cfg = [];  % use only default options                 
 	ft_databrowser(cfg, data);
 
-{:.alert-info}
+{% include markup/info %}
 You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk.
-<br/>
-<br/>
+
 	cfg         = [];
 	cfg.dataset = 's04.vhdr';
 	ft_databrowser(cfg);
+{% include markup/end %}
 
 #### Exercise 1
 
-{:.alert-info}
+{% include markup/info %}
 Why is there a vertical line with label S141 on the first call to ft_databrowser(cfg,data)?
-<br/>
-<br/>
+
 Can you find this line (or lines with other labels) on the second call to ft_databrowser(cfg)?
-<br/>
-<br/>
+
 Try setting cfg.viewmode = 'vertical' before the call to ft_databrowser.
+{% include markup/end %}
 
 FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memor
 
@@ -124,76 +123,77 @@ and note that, if you wanted to, you could plot a single trial with default Matl
 
 We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels 57 and 25 (see the plot of the layout and the figure below). For the vertical EOG we will use channel 53 and channel "LEOG" which was placed below the subjects' left eye (not pictured on the layout).
 
-{:.alert-success}
+{% include markup/success %}
 Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The re-referencing step to obtain the EOG is therefore not required when working with Biosemi or other bipolar data.
+{% include markup/end %}
 
 ![image](/static/img/example/example_eog.png@200)
 
-% EOGV channel
-cfg              = [];
-cfg.channel      = {'53' 'LEOG'};
-cfg.reref        = 'yes';
-cfg.implicitref  = []; % this is the default, we mention it here to be explicit
-cfg.refchannel   = {'53'};
-eogv             = ft_preprocessing(cfg, data);
+  % EOGV channel
+  cfg              = [];
+  cfg.channel      = {'53' 'LEOG'};
+  cfg.reref        = 'yes';
+  cfg.implicitref  = []; % this is the default, we mention it here to be explicit
+  cfg.refchannel   = {'53'};
+  eogv             = ft_preprocessing(cfg, data);
 
-% only keep one channel, and rename to eogv
-cfg              = [];
-cfg.channel      = 'LEOG';
-eogv             = ft_selectdata(cfg, eogv);
-eogv.label       = {'eogv'};
+  % only keep one channel, and rename to eogv
+  cfg              = [];
+  cfg.channel      = 'LEOG';
+  eogv             = ft_selectdata(cfg, eogv);
+  eogv.label       = {'eogv'};
 
-% EOGH channel
-cfg              = [];
-cfg.channel      = {'57' '25'};
-cfg.reref        = 'yes';
-cfg.implicitref  = []; % this is the default, we mention it here to be explicit
-cfg.refchannel   = {'57'};
-eogh             = ft_preprocessing(cfg, data);
+  % EOGH channel
+  cfg              = [];
+  cfg.channel      = {'57' '25'};
+  cfg.reref        = 'yes';
+  cfg.implicitref  = []; % this is the default, we mention it here to be explicit
+  cfg.refchannel   = {'57'};
+  eogh             = ft_preprocessing(cfg, data);
 
-% only keep one channel, and rename to eogh
-cfg              = [];
-cfg.channel      = '25';
-eogh             = ft_selectdata(cfg, eogh);
-eogh.label       = {'eogh'};
+  % only keep one channel, and rename to eogh
+  cfg              = [];
+  cfg.channel      = '25';
+  eogh             = ft_selectdata(cfg, eogh);
+  eogh.label       = {'eogh'};
 
 We now discard these extra channels that were used as EOG from the data and add the bipolar-referenced EOGv and EOGh channels that we have just create
 
-% only keep all non-EOG channels
-cfg         = [];
-cfg.channel = setdiff(1:60, [53, 57, 25]);              % you can use either strings or numbers as selection
-data        = ft_selectdata(cfg, data);
+  % only keep all non-EOG channels
+  cfg         = [];
+  cfg.channel = setdiff(1:60, [53, 57, 25]);              % you can use either strings or numbers as selection
+  data        = ft_selectdata(cfg, data);
 
-% append the EOGH and EOGV channel to the 60 selected EEG channels
-cfg = [];
-data = ft_appenddata(cfg, data, eogv, eogh);
+  % append the EOGH and EOGV channel to the 60 selected EEG channels
+  cfg = [];
+  data = ft_appenddata(cfg, data, eogv, eogh);
 
 You can check the channel labels that are now present in the data and use **[ft_databrowser](/reference/ft_databrowser)** to look at all data combined.
 
-disp(data.label')
-  Columns 1 through 12
+  disp(data.label')
+    Columns 1 through 12
 
-    '1'    '2'    '3'    '4'    '5'    '6'    '7'    '8'    '9'    '10'    '11'    '12'
+      '1'    '2'    '3'    '4'    '5'    '6'    '7'    '8'    '9'    '10'    '11'    '12'
 
-  Columns 13 through 23
+    Columns 13 through 23
 
-    '13'    '14'    '15'    '16'    '17'    '18'    '19'    '20'    '21'    '22'    '23'
+      '13'    '14'    '15'    '16'    '17'    '18'    '19'    '20'    '21'    '22'    '23'
 
-  Columns 24 through 34
+    Columns 24 through 34
 
-    '24'    '26'    '27'    '28'    '29'    '30'    '31'    'RM'    '33'    '34'    '35'
+      '24'    '26'    '27'    '28'    '29'    '30'    '31'    'RM'    '33'    '34'    '35'
 
-  Columns 35 through 45
+    Columns 35 through 45
 
-    '36'    '37'    '38'    '39'    '40'    '41'    '42'    '43'    '44'    '45'    '46'
+      '36'    '37'    '38'    '39'    '40'    '41'    '42'    '43'    '44'    '45'    '46'
 
-  Columns 46 through 56
+    Columns 46 through 56
 
-    '47'    '48'    '49'    '50'    '51'    '52'    '54'    '55'    '56'    '58'    '59'
+      '47'    '48'    '49'    '50'    '51'    '52'    '54'    '55'    '56'    '58'    '59'
 
-  Columns 57 through 59
+    Columns 57 through 59
 
-    '60'    'eogv'    'eogh'
+      '60'    'eogv'    'eogh'
 
 ### Channel layout
 
@@ -223,8 +223,9 @@ You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yo
 
 ![image](/static/img/example/example_script_artifacts1.png@600)
 
-{:.alert-info}
+{% include markup/info %}
 In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
+{% include markup/end %}
 
 #### Summary mode
 
@@ -310,8 +311,9 @@ The following code allows you to look at the ERP difference waves.
 	cfg.showoutline = 'yes';
 	ft_multiplotER(cfg, difference)
 
-{:.alert-info}
+{% include markup/info %}
 Explore the event-related potential by dragging boxes around (groups of) sensors and time points in the 'multiplot' and the resulting 'singleplots' and 'topoplots'.
+{% include markup/end %}
 
 ## Appendix: the trialfun used in this example
 

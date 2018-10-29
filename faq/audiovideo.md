@@ -52,5 +52,6 @@ In this case the EEG starts at timestamp 0, the audio (which was started a bit e
 
 When the databrowser window shows, you drag with your left-mouse button to select a data window. Subsequently you click with your right mouse-button in that window and select from the context-sensitive menu the option *browse_audiovideo*. Consequently a popup will show in which the audio and/or video corresponding to that selection will play.
 
-{:.alert-info}
+{% include markup/info %}
 This has been implemented specifically for the [VideoMEG](https://github.com/andreyzhd/VideoMEG) software, but also works with audio and video recordings stored in another format as demonstrated above. For the VideoMEG system the synchronization between audio/video and MEG is realized by triggers that are sent by the VideoMEG to the MEG data stream.
+{% include markup/end %}

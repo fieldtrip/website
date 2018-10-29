@@ -3,17 +3,18 @@ title: Is it good or bad to have dipole locations outside of the brain for which
 layout: default
 ---
 
-{:.alert-warning}
+{% include markup/warning %}
 This page is under construction/discussion
+{% include markup/end %}
 
-##  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed? 
+##  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
 
 This depends on the type of source reconstruction you are performing, and on the head model (also called volume conduction model) with which you create your source model (also called grid). Depending on this it is beneficial in some cases, but harmful in others. To determine whether it is harmful, one could ask the following question
  1.  is my source reconstruction of locations inside the brain affected by the source reconstruction of other locations? (e.g. as such with minimum norm estimate (MNE) based methods, but not beamformers)
  2.  can my head model create meaningful lead fields for dipole locations that fall outside  of the brain? (e.g. as such with 'singleshell/singlesphere/localsphere' models, but not with boundary element models (BEM))
 
-If the answer the first question is 'Yes', then it can be harmful. If the answer to the second question is 'No', the results are not meaningful at these locations. If the answer the first question is 'No', and the answer to the second question is 'Yes', then it can be beneficial. Below some examples. 
- 
+If the answer the first question is 'Yes', then it can be harmful. If the answer to the second question is 'No', the results are not meaningful at these locations. If the answer the first question is 'No', and the answer to the second question is 'Yes', then it can be beneficial. Below some examples.
+
 
 ###  Single shell head model used for a beamformer-type source reconstruction
 
@@ -30,9 +31,8 @@ In this example, a single sphere is used as a head model. The brain however, is 
 ![image](/static/img/faq/singlespheredipolelocations.png)
 
 *Dipole locations of a source model plotted with on top of a 'singlesphere' head model. Inside the sphere, the 'singleshell' head model in the above figure is plotted as well, to indicate the shape of the brain inside the sphere. Dipole locations marked as 'inside' are red, dipole locations marked as 'outside' are blue.*
- 
+
 
 ### Local spheres head model
 
-In this case, it ain't working! Robert, I forgot why specifically. Is this because of the lead fields not being meaningful for locations where there isn't a 'local sphere'? Or am I confusing this with BEM? Could you add something here? 
-
+In this case, it ain't working! Robert, I forgot why specifically. Is this because of the lead fields not being meaningful for locations where there isn't a 'local sphere'? Or am I confusing this with BEM? Could you add something here?

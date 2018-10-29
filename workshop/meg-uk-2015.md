@@ -43,14 +43,15 @@ For FieldTrip (all taken from http://www.fieldtriptoolbox.org/video)
 
 The programme mixes short theoretical sessions with hands-on computer assignments. The day ends with a supervised computer session where people are free to work on their dataset of choice.
 
-{:.alert-info}
+{% include markup/info %}
 Please look at the [general instructions](/workshop/meg-uk-2015/general) for the hands-on sessions to start MATLAB and navigate to the data directory on the Aston computer-lab machines.
+{% include markup/end %}
 
-{:.alert-warning}
+{% include markup/warning %}
 Following the workshop, the data has also been made available on the Donders [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/meg-uk-2015). You can download all example data that we used in Aston, except for the toolbox code itself. You should get the latest version of [FieldTrip](/download) and [SPM](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) from their respective download pages.
-<br/>
-<br/>
+
 Downloading the data to your own computer should allow you to go through the demonstrations once more, but now at your own pace.
+{% include markup/end %}
 
 | ----        | --------------------------------------------                  | --------------------                  | --------------------  | ---                   |
 | 9:30        | lecture {{:workshop:meg-uk-2015:lecture1.pdf}}                | General Linear Model                  | SPM                   | Vladimir Litvak       |

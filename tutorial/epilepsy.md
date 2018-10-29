@@ -12,8 +12,9 @@ tags: [tutorial, MEG-epilepsy]
 
 #  Virtual channel analysis of epilepsy MEG data
 
-{:.alert-info}
+{% include markup/info %}
 This documentation is under development and hence incomplete and perhaps incorrect.
+{% include markup/end %}
 
 {{page>:tutorial/shared/disclaimer}}
 

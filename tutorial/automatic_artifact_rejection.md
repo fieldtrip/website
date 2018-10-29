@@ -10,8 +10,9 @@ tags: [fixme, tutorial, artifact, meg, raw, preprocessing, MEG-artifact]
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-{:.alert-info}
+{% include markup/info %}
 The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)**, that were used for automatic artifact rejection, will soon become obsolete. They are being replaced by the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function. This function is already called every time one of the three functions above is run, but users will soon need to set the various cfg parameters for the different types of artifacts themselves and then run only the zvalue function. Examples of these parameters are given in the last section of this page.
+{% include markup/end %}
 
 # Automatic artifact rejection
 
@@ -296,4 +297,3 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
 *Typical eyeblink artifacts can be observed in trial 4. Note that the trial considers artifacts to precede and last longer than the threshold crossing, by padding data with 0.1 seconds on the left and 0.1 sec on the right*
 
 See also this [FAQ](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts) on the different types of padding.
-

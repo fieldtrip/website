@@ -25,7 +25,7 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
  6.  Create the headmodels (headmodel_bem and headmodel_fem) where geometrical and electrical information are merged together (**[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**);
  7.  Align the electrodes to the MRI (**[ft_electroderealign](/reference/ft_electroderealign)**);
  8.  The sourcemodel is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
- 9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**). 
+ 9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
 
 The first 3 steps are the same for BEM and FEM. Steps from 4 to 8 differ between BEM and FEM.
 A more detailed description of these steps is following.
@@ -39,7 +39,7 @@ A more detailed description of these steps is following.
 
 Visualize the MRI
 
-	cfg=[]; 
+	cfg=[];
 	ft_sourceplot(cfg,mri_orig);
 
 ![image](/static/img/workshop/baci2017/mri_orig.png)
@@ -56,7 +56,7 @@ In this step we will interactively align the MRI to the CTF space. We will be as
 
 We can visualize the realigned MRI
 
-	cfg = []; 
+	cfg = [];
 	ft_sourceplot(cfg, mri_realigned);
 
 ![image](/static/img/workshop/baci2017/mri_resliced.png)
@@ -68,7 +68,7 @@ We can visualize the realigned MRI
 
 We can visualize the resliced MRI
 
-	cfg = []; 
+	cfg = [];
 	ft_sourceplot(cfg, mri_resliced);
 
 ##  A. Boundary Element Method (BEM)
@@ -82,7 +82,7 @@ We can visualize the resliced MRI
 Visualize the segmentation
 
 	seg_i = ft_datatype_segmentation(mri_segmented_3_compartment,'segmentationstyle','indexed');
-	
+
 	cfg              = [];
 	cfg.funparameter = 'seg';
 	cfg.funcolormap  = gray(4); % distinct color per tissue
@@ -106,9 +106,9 @@ Visualize the mesh and the electrode
 	figure, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 	ft_plot_mesh(mesh_bem(2),'surfaceonly','yes','vertexcolor','none','facecolor',...
-	             'skin','facealpha',0.5,'edgealpha',0.1) 
+	             'skin','facealpha',0.5,'edgealpha',0.1)
 	ft_plot_mesh(mesh_bem(3),'surfaceonly','yes','vertexcolor','none','facecolor',...
-	             'skin','facealpha',0.5,'edgealpha',0.1) 
+	             'skin','facealpha',0.5,'edgealpha',0.1)
 	hold on, ft_plot_sens(elec, 'style', '*g');
 
 ![image](/static/img/workshop/baci2017/mesh_bem_elec.png)
@@ -120,8 +120,9 @@ Visualize the mesh and the electrode
 	cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
 	headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
 
-{:.alert-danger}
+{% include markup/danger %}
 In Windows the method 'dipoli' does not work. You can either load "headmodel_bem" and continue with this tutorial, or explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
+{% include markup/end %}
 
 ##  7A. Align the electrodes
 
@@ -135,13 +136,13 @@ If the electrodes are not well aligned with the mesh, we can realign them wit
 
 Check the alignment visually.
 
-	
+
 	figure;
 	ft_plot_axes(mesh_bem(1))
 	hold on;
 	ft_plot_mesh(mesh_bem,'surfaceonly','yes','vertexcolor','none','facecolor',...
 	             'skin','facealpha',0.5,'edgealpha',0.1)
-	ft_plot_sens(elec,'style', '.k'); 
+	ft_plot_sens(elec,'style', '.k');
 
 ![image](/static/img/workshop/baci2017/aligned.png)
 *Figure6: mesh, electrodes and axes.*
@@ -188,19 +189,19 @@ Save the sourcemode
 	cfg.scalpthreshold = 0.11;
 	cfg.skullthreshold = 0.15;
 	cfg.brainthreshold = 0.15;
-	mri_segmented_5_compartment = ft_volumesegment(cfg, mri_resliced); 
+	mri_segmented_5_compartment = ft_volumesegment(cfg, mri_resliced);
 
 Visualize the segmentation result
 
 	seg_i = ft_datatype_segmentation(mri_segmented_5_compartment,'segmentationstyle','indexed');
-	
+
 	cfg              = [];
 	cfg.funparameter = 'seg';
 	cfg.funcolormap  = gray(5); % distinct color per tissue
 	cfg.location     = 'center';
 	cfg.atlas        = seg_i;    % the segmentation can also be used as atlas
 	ft_sourceplot(cfg, seg_i);
-	
+
 
 ![image](/static/img/workshop/baci2017/mri_segmented_fem.png)
 *Figure8: 5 compartment segmentation output *
@@ -230,7 +231,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 	mesh2.hex = headmodel_fem.hex(headmodel_fem.tissue==ts,:); %mesh2.hex(1:size(mesh2.hex),:);
 	mesh2.pos =  headmodel_fem.pos;
 	mesh2.tissue =  headmodel_fem.tissue(headmodel_fem.tissue==ts,:);%mesh.tissue(1:size(mesh2.hex),:);
-	
+
 	mesh_ed = mesh2edge(mesh2);
 	patch('Faces',mesh_ed.poly,...
 	    'Vertices',mesh_ed.pos,...
@@ -238,13 +239,13 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 	    'LineStyle','none',...
 	    'FaceColor',[1 1 1],...
 	    'FaceLighting','gouraud');
-	
+
 	xlabel('coronal');
 	ylabel('sagital');
 	zlabel('axial')
-	camlight; 
+	camlight;
 	axis on;
-	
+
 	ft_plot_sens(elec, 'style', '*g');
 
 ![image](/static/img/workshop/baci2017/mesh_fem_elec.png)
@@ -262,17 +263,18 @@ If the electrodes are not well aligned with the mesh, we can realign them wit
 
 ##  8B. Create the sourcemodel
 
-We will use the sourcemodel already generated in 7A. 
+We will use the sourcemodel already generated in 7A.
 
 	load('sourcemodel.mat');
 
 ##  9B. Compute the leadfield
 
-{:.alert-danger}
+{% include markup/danger %}
 Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take too much time and memory. Load "headmodel_fem_tr".
+{% include markup/end %}
 
 	%% compute the transfer matrix
-	[headmodel_fem_tr, elec] = ft_prepare_vol_sens(headmodel_fem, elec); 
+	[headmodel_fem_tr, elec] = ft_prepare_vol_sens(headmodel_fem, elec);
 
 	%% compute the leadfield
 	cfg = [];
@@ -280,7 +282,7 @@ Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take t
 	cfg.vol= headmodel_fem_tr;
 	cfg.elec = elec;
 	cfg.reducerank = 3;
-	leadfield_fem = ft_prepare_leadfield(cfg); 
+	leadfield_fem = ft_prepare_leadfield(cfg);
 
 ## Summary and Comments
 

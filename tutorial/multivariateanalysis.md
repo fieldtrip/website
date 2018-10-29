@@ -84,7 +84,7 @@ when running **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. We c
     stat = ft_timelockstatistics(cfg,tleft,tright);
     stat.statistic.contingency
 
-We may also plot the parameters of the used classifier as if it were electrophysiological data. This is represented in the stat.model field. For each fold we have a model and each such model may contain different parameters. For example, for the default support vector machine ([SVM](http://en.wikipedia.org/wiki/Support_vector_machine)), we have a stat.model{i}.primal field for each fold i. The easiest way to plot one of the parameters is to assign it to a different field in the stat objec
+We may also plot the parameters of the used classifier as if it were electrophysiological data. This is represented in the stat.model field. For each fold we have a model and each such model may contain different parameters. For example, for the default support vector machine ([SVM](http://en.wikipedia.org/wiki/Support_vector_machine)), we have a stat.model{i}.primal field for each fold i. The easiest way to plot one of the parameters is to assign it to a different field in the stat object:
 
     stat.mymodel = stat.model{1}.primal;
 
@@ -104,17 +104,16 @@ In practice, we may want to average the parameters over folds to get an average 
 
 #### Exercise 1
 
-{:.alert-info}
+{% include markup/info %}
 Explain which information the contingency matrix gives you, which the accuracy does not.  
-<br/>
-<br/>
+{% include markup/end %}
+
 Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
-<br/>
-<br/>
+
 Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of *overfitting* and *generalization* in your explanation.
-<br/>
-<br/>
+
 Suppose you try multiple different classification procedures and find at some point that you reach a classification performance that is significantly better than chance at p=0.05. Should you trust this result? Why (not)?
+{% include markup/end %}
 
 ### Sensor level classification in the frequency domain
 
@@ -159,8 +158,9 @@ and we see a major improvement since we are focusing on the physiologically rele
 ![image](/static/img/tutorial/clf_2.png@200)
 #### Exercise 2
 
-{:.alert-info}
+{% include markup/info %}
 Rerun the previous cross-validation with 'cfg.nfolds=2'. Explain the difference and motivate why it is important to perform cross-validation instead of just dividing the data into one training and one test set.
+{% include markup/end %}
 
 ### Dimensionality reduction and feature selection
 
@@ -194,23 +194,19 @@ If we look at the weights then we find that just a very small number of features
 
 #### Exercise 3
 
-{:.alert-info}
+{% include markup/info %}
 Use MATLAB to compute the number of non-zero elements in stat.model{1}.weights.
-<br/>
-<br/>
+
 Why is it useful to have a representation in terms of a small number of non-zero elements?
-<br/>
-<br/>
+
 Repeat the above analysis with a different value for alpha. Explain the results.
-<br/>
-<br/>
+
 Alpha is a free parameter in our model. How would you determine the optimal setting for this parameter?
-<br/>
-<br/>
+
 If we use more and more features then classification performance will first go up but eventually starts to degrade. Explain why this may happen.
-<br/>
-<br/>
+
 Suppose we wish to select the optimal feature subset by testing all possible subsets. How many subsets do we need to test when we have *n* features in total?
+{% include markup/end %}
 
 ## Conclusion
 
@@ -219,4 +215,3 @@ In this tutorial we have touched on a number of important issues in the classifi
 To use some of the more advanced methods it is required to call lower level functions. We recommend looking at the tutorials which have been written for DMLT. These can be accessed through MATLAB's *doc* facility.
 
 To construct online experimental designs that make use of multivariate analysis, for example to build BCI or neurofeedback applications, we have developed the [development:realtime](/development/realtime) module.
-

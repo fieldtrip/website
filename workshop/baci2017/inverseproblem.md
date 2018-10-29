@@ -39,7 +39,7 @@ Then we do the dipole fit
 
 	% Dipole fit
 	cfg = [];
-	cfg.numdipoles    =  1;                             %number of expected 
+	cfg.numdipoles    =  1;                             %number of expected
 	cfg.headmodel     = headmodel_bem;                  %the head model
 	cfg.grid          = leadfield_bem;                  %the precomputed leadfield
 	cfg.elec          = elec;                           %the electrode model
@@ -47,9 +47,9 @@ Then we do the dipole fit
 	dipfit_bem        = ft_dipolefitting(cfg,EEG_avg);
 
 	dipfit_bem.dip
-	
-	ans = 
-	
+
+	ans =
+
 	     pos: [13.958237048680118 34.388465910583285 97.809684095994314] %dipole position
 	     mom: [3x1 double]                                               %dipole moment
 	     pot: [74x1 double]                                              %potential at the electrodes
@@ -87,20 +87,20 @@ For the purpose of visualisation we internet the MNE results onto the replaced a
 	cfg.parameter  = 'avg.pow';
 	interpolate    = ft_sourceinterpolate(cfg, minimum_norm_bem , mri_resliced);
 
-    
+
 
 	cfg = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
-	ft_sourceplot(cfg,interpolate); 
+	ft_sourceplot(cfg,interpolate);
 
 ![image](/static/img/workshop/baci2017/mne.png@900)
 *Figure 2. Minimum norm estimation with BEM model*
 
 #### Exercise 1
 
-{:.alert-info}
-You can play around with cfg.mne.lambda? Do you see the influence of different lambdas? 
+{% include markup/info %}
+You can play around with cfg.mne.lambda? Do you see the influence of different lambdas?
 
 ## FEM
 
@@ -148,7 +148,7 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	cfg = [];
 	cfg.funparameter = 'pow';
 	cfg.method        = 'ortho';
-	ft_sourceplot(cfg,interpolate); 
+	ft_sourceplot(cfg,interpolate);
 
 ![image](/static/img/workshop/baci2017/mne.png@900)
 *Figure 4. Minimum norm estimation with FEM model*
@@ -164,17 +164,16 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 
 #### Exercise 2
 
-{:.alert-info}
+{% include markup/info %}
 Can you think of reasons why the dipoles are at different locations?
+{% include markup/end %}
 
 #### Exercise 3
 
-{:.alert-info}
+{% include markup/info %}
 Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the BEM forward model (e.g. changing conductivity values) and redo the inverse solution. If you need more input for this please ask us!
+{% include markup/end %}
 
 ## Summary and suggested further reading
 
-In this tutorial we learned how solve the inverse problem. For this we used the preprocessed functional data and the forward model. The inverse techniques we used in this tutorial were "Dipole Fit" and "Minimum Norm Estimation". We used both techniques with the different choices of for the forward model BEM and FEM. 
-
------
-This tutorial was last tested on 27-08-2017 by Simon Homölle on MacOs, Matlab 2015b.
+In this tutorial we learned how solve the inverse problem. For this we used the preprocessed functional data and the forward model. The inverse techniques we used in this tutorial were "Dipole Fit" and "Minimum Norm Estimation". We used both techniques with the different choices of for the forward model BEM and FEM.

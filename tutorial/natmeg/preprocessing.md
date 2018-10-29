@@ -18,11 +18,11 @@ This tutorial describes how to define epochs-of-interest (trials) from your reco
 
 This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.
-<br/>
-<br/>
+
 {% include youtube.html id="zOxCqcYmIfA" %}
+{% include markup/end %}
 
 ## Background
 
@@ -39,8 +39,6 @@ Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of 
 
 If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the *trl* matrix. These will be added to the data in the *.trialinfo* field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.   
 
-#
-
 {{page>:tutorial:natmeg:dataset}}
 
 # Browsing the data prior to preprocessing
@@ -55,8 +53,9 @@ The databrowser supports three viewmodes: butterfly, vertical or component. In '
 
 When the databrowser opens, you will see buttons to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with the automatic artifact detection methods will be displayed here, see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**. You can click on one of the artifact types, drag over a timewindow to select the start and the end of the artifact and then double click into the selected area to mark this artifact. To remove such an artifact, simply repeat the same procedure.
 
-{:.alert-warning}
+{% include markup/warning %}
 The databrowser will **not** change your data in any way. If you specify a cfg as output, it will just store your selected or de-selected artifacts in your cfg.
+{% include markup/end %}
 
 ## Visualization
 
@@ -78,15 +77,17 @@ We will first start with the magnetometer
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng natmeg_databrowser1.png
 
-{:.alert-warning}
+{% include markup/warning %}
 If your recorded data is continuous, specify *cfg.continuous = 'yes'*, if you have recorded your data in trials, specify *cfg.continuous = 'no'*
+{% include markup/end %}
 
 {{tutorial:natmeg_temp:natmeg_databrowser1.png?650"}}
 
 *Figure A; Raw plot from magnetometers using ft_databrowser*
 
-{:.alert-info}
+{% include markup/info %}
 Try to get a feel of your data by browsing through the data. Do you see any obvious artifacts?
+{% include markup/end %}
 
 Now we will have a look at the gradiometer
 
@@ -117,8 +118,9 @@ Finally, we will look at the EEG channel
 
 *Figure; Raw plot from EEG channels using ft_databrowser*
 
-{:.alert-info}
+{% include markup/info %}
 At first glance, can you see any differences between the MEG and EEG data or artifacts?
+{% include markup/end %}
 
 # Preprocessing and averaging MEG
 
@@ -221,11 +223,11 @@ This demonstrate how to extract trials from a dataset based on trigger informati
 
 //Figure 3; An overview of the data using **[ft_rejectvisual](/reference/ft_rejectvisual)**//
 
-{:.alert-warning}
+{% include markup/warning %}
 Use the mouse to click and drag a selection box over the trials you wish to reject. You can see the trials that were marked for rejection on the right. If you wish to unmark a trial for rejection, type the number of the trial in the 'toggle trial' box and press enter. You can change from *zvalue* to another metrics to detect outliers.
-<br/>
-<br/>
+
 Please be aware that while *cfg.keepchannel='yes'* is specified, you can disable channels in the display but those will not be removed from the data.
+{% include markup/end %}
 
 After we have rejected trials with artifacts we will save our dat
 
@@ -362,8 +364,9 @@ To plot the topographic distribution of the data averaged over the time interval
 
 //Figure 6; A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)** //
 
-{:.alert-info}
+{% include markup/info %}
 Can you try to explain the topographical distribution in terms of a dipole?
+{% include markup/end %}
 
 ### Combining planar gradiometers
 
@@ -398,8 +401,9 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 //Figure 7; The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis** //
 
-{:.alert-info}
+{% include markup/info %}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
+{% include markup/end %}
 
 We will now zoom in on one combined channel, for instance in the combined channel ‘MEG0222+0223
 
@@ -454,11 +458,11 @@ Now we are going to look at the topographical spread of the field by usin
 
 *Figure 9; A topographic plot of the event related fields obtained using **ft_topoplotER***
 
-{:.alert-info}
+{% include markup/info %}
 Compare this distribution with those resulting from the magnetometers. Do you understand the differences?
 
-{:.alert-info}
 Which type of source configuration can explain the topography?
+{% include markup/end %}
 
 # Preprocessing and averaging EEG
 
@@ -510,8 +514,9 @@ We start by repeating the same preprocessing procedure as with the MEG. We start
 	data_EEG                    = ft_preprocessing(cfg);
 	save data_EEG data_EEG -v7.3
 
-{:.alert-info}
+{% include markup/info %}
 Notice what is different from loading MEG data.
+{% include markup/end %}
 
 The output of data_EEG is the structure data_EEG which has the following field
 
@@ -632,8 +637,9 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 //Figure 9; The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER) ** //
 
-{:.alert-info}
+{% include markup/info %}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
+{% include markup/end %}
 
 To plot the topographic distribution of the data averaged over the time interval from 0.08 to 0.15 seconds use to following command
 
@@ -669,8 +675,9 @@ To plot the topographic distribution of the data averaged over the time interval
 
 //Figure 10; A topographic plot of the event related potentials obtained using **[ft_topoplotER](/reference/ft_topoplotER)** //
 
-{:.alert-info}
+{% include markup/info %}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
+{% include markup/end %}
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf6.png@650)
 
@@ -729,11 +736,11 @@ Note that if you get plotting artifacts in these figures, such as colorbars that
 
 //Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)**//
 
-{:.alert-info}
+{% include markup/info %}
 Did calculating the scalp current density help in narrowing down the source of the EEG activity?
 
-{:.alert-info}
 How do these results compare to the MEG results?
+{% include markup/end %}
 
 ## Combining MEG and EEG
 
@@ -792,4 +799,3 @@ In this tutorial we learned how to look at raw MEG and EEG data, define trials b
 
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/tutorial/natmeg/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 If you are currently doing the local NatMEG analysis course, please let the teachers know you are ready.
-

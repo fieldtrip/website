@@ -36,14 +36,17 @@ You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. il
  5.  DataType should be 'TIMEDOMAIN'
  6.  BinaryFormat should be 'IEEE_FLOAT_32'
 
-{:.alert-danger}
+{% include markup/danger %}
  At this moment, FieldTrip has problems reading in .dat files, [see our Bugzilla page](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1567).
+ {% include markup/end %}
 
-{:.alert-info}
+{% include markup/info %}
 Manually renaming BrainVision datafiles will lead to an error because of not simulatenously updated header information. Paul Czienskowski from the MPI for Human Development in Berlin, Germany, has written a small program for renaming that we advise to use:  http://code.google.com/p/eeg-renamer/
+{% include markup/end %}
 
-{:.alert-info}
+{% include markup/info %}
 When comparing your preprocessed data to preprocessed data from BrainVision Analyzer you might notice subtle differences. This might be due to two reasons: First, the filtersettings of BVA are hard to mimic using FieldTrip, because FieldTrip is using different default settings than BVA. Also, the order of preprocessing steps is fixed in FieldTrip, whereas you have to perform them manually in any order in BVA. The effect of filters or the like will strongly depend on the order of the preprocessing steps.
+{% include markup/end %}
 
 ### Plotting
 

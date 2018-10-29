@@ -21,11 +21,11 @@ In this tutorial we will continue working on the dataset described in the [Prepr
 
 This tutorial is not covering group analysis. If you are interested in that, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
-<br/>
-<br/>
+
 {% include youtube.html id="vOSfabsDUNg" %}
+{% include markup/end %}
 
 ## Background
 
@@ -398,8 +398,9 @@ Again we can visualize the results of the statistical comparison. Since we have 
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_stat_erfcluster.png@500)
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels.
+{% include markup/end %}
 
 ## Summary and conclusion
 
@@ -415,4 +416,3 @@ FAQs:
 
 Example scripts:
 {% include seealso.html tag1="statistics" tag2="example" %}
-

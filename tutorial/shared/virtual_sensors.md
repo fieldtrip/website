@@ -12,28 +12,28 @@ layout: default
 After having done all steps in [ the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures and a headmodel (you can also download these from [FieldTrip ftp server (source_coh_lft.mat, source_diff.mat, hdm.mat, sourcemodel.mat, data_cmb.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/)
 
     data_cmb
-    
-    source_coh_lft
-    
-    source_diff
-    
-    hdm
-    
-    sourcemodel
-    
 
-We will now determine the positions on which the cortico-muscular coherence is the largest and the position where the induced visual gamma activity is largest: 
+    source_coh_lft
+
+    source_diff
+
+    hdm
+
+    sourcemodel
+
+
+We will now determine the positions on which the cortico-muscular coherence is the largest and the position where the induced visual gamma activity is largest:
 
     [maxval, maxcohindx] = max(source_coh_lft.avg.coh);
     source_coh_lft.pos(maxcohindx, :)
-    
-    ans = 
+
+    ans =
           3.2000   -0.6000   7.4000
-          
+
     [maxval, maxpowindx] = max(source_diff.avg.pow);
     source_diff.pos(maxpowindx, :)
-    
-    ans = 
+
+    ans =
           0.4000   -8.8000    2.6000
 
 The cortical position is expressed [in MNI space](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) according to the template brain we used for warping and in centimeter. Relative to the anterior commissure (AC) the coherence peak position is 3.2 cm towards the right side of the brain, -0.6 towards the front of the AC (i.e., 0.6 cm towards the back!) and 7.4 cm towards the vertex. The visual gamma peak is 0.4 cm towards the right of the brain , -8.8 cm to the front of the AC (i.e. 8.6 cm to the back) and 2.6 cm to the top.
@@ -79,11 +79,11 @@ The source reconstruction contains the estimated power and the source-level time
     gam_pow_data.trial{i} = beamformer_gam_pow * data_cmb.trial{i}(chansel,:);
     end
 
-{:.alert-warning}
+{% include markup/warning %}
 The LCMV spatial filter is computed here without applying any time-domain filters. Consequently, it will have to suppress all noise in the data in all frequency bands. The spatial filter derived from the  broadband data allows us to compute a broadband source level time-series.
-<br/>
-<br/>
+
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. *cfg.hpfilter=yes* and *cfg.hpfreq=30*) prior to computing the covariance and the spatial filter.  
+{% include markup/end %}
 
 The structures *coh_lft_data* and *gam_pow_data* resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)*
 
@@ -94,4 +94,3 @@ The structures *coh_lft_data* and *gam_pow_data* resemble the raw-data output of
 ![image](/static/img/tutorial/shared/virtualchannels_conn_extended.png@400)
 
 Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent current dipole source at the location of interest.
-

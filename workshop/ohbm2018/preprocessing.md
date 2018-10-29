@@ -11,21 +11,22 @@ This tutorial describes how to define epochs-of-interest (trials) from your reco
 
 This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial contains the hands-on material of the [BACI workshop](/workshop/baci2017) and is complemented by this lecture.  
+{% include markup/end %}
 
 ## Background
 
-In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options. 
+In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and (optionally) rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
-There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required. 
+There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 
-*  The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments. 
-*  The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only. 
+*  The first approach is to read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments.
+*  The second approach is to first identify the interesting segments, read those segments from the data file and apply the filters to those segments only.
 
 The remainder of this tutorial explains the second approach, as that is the most appropriate for large data sets such as the MEG data used in this tutorial. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
-Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done 
+Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done
 
 *  according to a specific trigger channel
 *  according to your own criteria when you write your own trial function, e.g. for conditional trigger sequences, or by detecting EMG onset
@@ -40,7 +41,7 @@ For the source reconstruction workshop we recorded a single subject to allow you
 
 ### Somatosensory Evoked Potentials/Fields (SEPs/SEFs)
 
-Primary somatosensory cortex (SI) is part of the postcentral gyrus of the human brain. SI consists of Brodmann areas 1, 2, and 3. 
+Primary somatosensory cortex (SI) is part of the postcentral gyrus of the human brain. SI consists of Brodmann areas 1, 2, and 3.
 
 Here, the response of interest is the well-known P20/N20 complex (or component) which is generated in area 3b (part of the Brodmann areas 3). The generators of this area are mainly focal not too deep and mainly tangentially oriented ([Allison et al. 1989](https://www.ncbi.nlm.nih.gov/pubmed/2769354)).
 
@@ -60,7 +61,7 @@ The EEG system records event-triggers in separate channels. These channels are r
 
 *  Data was sampled at 1200Hz.
 
-*  74 channel EEG. The reference was placed on the FCz channel. 
+*  74 channel EEG. The reference was placed on the FCz channel.
 
 *  Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
 
@@ -72,7 +73,7 @@ The EEG system records event-triggers in separate channels. These channels are r
 
 ## Procedure
 
-The following steps are taken in the EEG section of the tutorial: 
+The following steps are taken in the EEG section of the tutorial:
 
 *  Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
 
@@ -88,31 +89,31 @@ The following steps are taken in the EEG section of the tutorial:
 
 ## Reading and preprocessing the interesting trials
 
-We start with the trial definition using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**. 
+We start with the trial definition using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
 
 	data_name              = 'subject01.ds';        % define the data path and its name
-	
+
 	% Read events
 	cfg                    = [];                    
 	cfg.trialdef.prestim   = 0.1;                   % in seconds
 	cfg.trialdef.poststim  = 0.2;                   % in seconds
 	cfg.trialdef.eventtype = 'rightArm';            % get a list of the available types
 	cfg.dataset            = data_name;             % set the name of the dataset
-	cfg_tr_def             = ft_definetrial(cfg);   % read the list of the specific stimulus 
-	
+	cfg_tr_def             = ft_definetrial(cfg);   % read the list of the specific stimulus
+
 	% segment data according to the trial definition
 	cfg                    = [];
 	cfg.dataset            = data_name;      
 	cfg.channel            = 'eeg1010';             % define channel type
-	data_eeg               = ft_preprocessing(cfg); % read raw data 
-	data_eeg               = ft_redefinetrial(cfg_tr_def, data_eeg); 
-	
+	data_eeg               = ft_preprocessing(cfg); % read raw data
+	data_eeg               = ft_redefinetrial(cfg_tr_def, data_eeg);
+
 	cfg                    = [];
 	cfg.dataset            = data_name;      
 	cfg.channel            = 'MEG';             % define channel type
-	data_meg               = ft_preprocessing(cfg); % read raw data 
-	data_meg               = ft_redefinetrial(cfg_tr_def, data_meg); 
-	
+	data_meg               = ft_preprocessing(cfg); % read raw data
+	data_meg               = ft_redefinetrial(cfg_tr_def, data_meg);
+
 
 We will filter the data using **[ft_preprocessing](/reference/ft_preprocessing)** around the frequency spectrum of interest and eliminate the power line noise before calculating the SEP/SEFs with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
@@ -129,8 +130,8 @@ We will filter the data using **[ft_preprocessing](/reference/ft_preprocessing)*
 
 The output of data is the structure data which has the following field
 
-	data_eeg = 
-	
+	data_eeg =
+
 	           hdr: [1x1 struct]
 	          elec: [1x1 struct]
 	       fsample: 1200
@@ -139,9 +140,9 @@ The output of data is the structure data which has the following field
 	          time: {1x1198 cell}
 	         label: {74x1 cell}
 	           cfg: [1x1 struct]
-	           
-	data_meg = 
-	
+
+	data_meg =
+
 	           hdr: [1x1 struct]
 	         trial: {1x1198 cell}
 	          time: {1x1198 cell}
@@ -159,13 +160,13 @@ In the data structure of data_meg/data_eeg we see it still contains elec/grad. W
 
 We will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the data of bad trials (and perhaps channels). We use only the 'zvalue' criterion to eliminate bad trials (or channels). You can play around with other criterion where you can reject trial.
 
-	
+
 	cfg        = [];
 	cfg.metric = 'zvalue';  % use by default zvalue method
 	cfg.method = 'summary'; % use by default summary method
-	
+
 	data_eeg       = ft_rejectvisual(cfg,data_eeg);
-	
+
 	data_meg       = ft_rejectvisual(cfg,data_meg);
 
 ![image](/static/img/workshop/baci2017/artifactrejection.png@600)
@@ -216,42 +217,42 @@ FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/r
 	%global mean field power calculation for visualization purposes
 	cfg = [];
 	cfg.method = 'amplitude';
-	EEG_gmfp = ft_globalmeanfield(cfg, EEG_avg); 
-	MEG_gmfp = ft_globalmeanfield(cfg, MEG_avg); 
+	EEG_gmfp = ft_globalmeanfield(cfg, EEG_avg);
+	MEG_gmfp = ft_globalmeanfield(cfg, MEG_avg);
 
 ### Plotting the results of EEG and MEG
 
 Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft_multiplotER](/reference/ft_multiplotER)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
 
 	figure;
-	
+
 	pol = -1;     % correct polarity
-	scale = 10^6; % scale for eeg data micro volts 
-	
+	scale = 10^6; % scale for eeg data micro volts
+
 	signal_EEG = scale*pol*EEG_avg.avg; % add single trials in a new value
-	
+
 	% plot single trial together with global mean field power
 	h1 = plot(EEG_avg.time,signal_EEG,'color',[0,0,0.5]);
 	hold on;
 	h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
-	
+
 
 ![image](/static/img/workshop/baci2017/baci_sep_singleploter.png@600)
 
 *figure 2: Representation of single trial (blue) and the global mean field power of EEG (red).*
 
 	figure;
-	
+
 	pol = -1;     % correct polarity
-	scale = 10^6; % scale for eeg data micro volts 
-	
+	scale = 10^6; % scale for eeg data micro volts
+
 	signal_MEG = scale*pol*MEG_avg.avg; % add single trials in a new value
-	
+
 	% plot single trial together with global mean field power
 	h1 = plot(MEG_avg.time,signal_MEG,'color',[0,0,0.5]);
 	hold on;
 	h2 = plot(MEG_avg.time,scale*MEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
-	
+
 
 ![image](/static/img/workshop/baci2017/baci_sef_singleploter.png@600)
 
@@ -259,29 +260,29 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft
 
 We set up values to create the image you observe before for EEG.
 
-	
+
 	mx = max(max(signal_EEG));
 	mn = min(min(signal_EEG));
-	
+
 	% select time of interest for the source reconstruction later on
 	idx = find(EEG_avg.time>0.024 & EEG_avg.time<=0.026);
 	toi = EEG_avg.time(idx);
-	
+
 	[mxx,idxm] = max(max(abs(EEG_avg.avg(:,idx))));
 	EEG_toi_mean_trial = toi(idxm);
 
-Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure: 
+Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
 	cfg          = [];
-	cfg.fontsize = 6; 
+	cfg.fontsize = 6;
 	cfg.layout   = 'elec1010.lay';
 	cfg.fontsize = 14;
-	cfg.ylim     = [-5e-6 5e-6]; 
+	cfg.ylim     = [-5e-6 5e-6];
 	cfg.xlim     = [-0.1 0.2];
-	
+
 	figure;
-	ft_multiplotER(cfg, EEG_avg); 
-	
+	ft_multiplotER(cfg, EEG_avg);
+
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sep_multiplotER.png
 
@@ -291,29 +292,29 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 And now we create it for MEG
 
-	
+
 	mx = max(max(signal_MEG));
 	mn = min(min(signal_MEG));
-	
+
 	% select time of interest for the source reconstruction later on
 	idx = find(EEG_avg.time>0.024 & EEG_avg.time<=0.026);
 	toi = EEG_avg.time(idx);
-	
+
 	[mxx,idxm] = max(max(abs(EEG_avg.avg(:,idx))));
 	MEG_toi_mean_trial = toi(idxm);
 
-Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure: 
+Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
 	cfg          = [];
-	cfg.fontsize = 6; 
+	cfg.fontsize = 6;
 	cfg.layout   = 'CTF275.lay';
 	cfg.fontsize = 14;
-	cfg.ylim     = [-1e-13 1e-13]; 
+	cfg.ylim     = [-1e-13 1e-13];
 	cfg.xlim     = [-0.1 0.2];
-	
+
 	figure;
-	ft_multiplotER(cfg, MEG_avg); 
-	
+	ft_multiplotER(cfg, MEG_avg);
+
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sef_multiplotER.png
 
@@ -321,7 +322,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 *figure 5: Use of ft_multiplotER for representation of the single trial according to the EEG cap.*
 
-Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distribution over the head: 
+Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distribution over the head:
 
 	cfg            = [];
 	cfg.zlim       = 'maxmin';
@@ -330,19 +331,19 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 	cfg.xlim       = [EEG_toi_mean_trial EEG_toi_mean_trial+0.01*EEG_toi_mean_trial];
 	cfg.layout     = 'elec1010.lay';
 	cfg.fontsize   = 14;
-	
-	figure; 
+
+	figure;
 	ft_topoplotER(cfg, EEG_avg);
-	
+
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sep_topo.png
-	
+
 
 ![image](/static/img/workshop/baci2017/baci_sep_topo.png@400)
 
 *figure 6: Representation of the P20/N20 component using the function, ft_topoplotER.*
 
-Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distribution over the head: 
+Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distribution over the head:
 
 	cfg            = [];
 	cfg.zlim       = 'maxmin';
@@ -351,13 +352,13 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 	cfg.xlim       = [MEG_toi_mean_trial MEG_toi_mean_trial+0.01*MEG_toi_mean_trial];
 	cfg.layout     = 'CTF275.lay';
 	cfg.fontsize   = 14;
-	
-	figure; 
+
+	figure;
 	ft_topoplotER(cfg, MEG_avg);
-	
+
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sef_topo.png
-	
+
 
 ![image](/static/img/workshop/baci2017/baci_sef_topo.png@400)
 

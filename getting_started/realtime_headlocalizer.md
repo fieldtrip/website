@@ -8,11 +8,11 @@ tags: [realtime, meg]
 
 Using FieldTrip it is possible to [monitor](/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session) a subject's head position during a MEG recording session. This allows you as experimenter to reposition your subject within sessions, e.g. after each experimental block. It also allows you to reposition your subject at the start of a session to the same head position of a previous session.
 
-{:.alert-warning}
+{% include markup/warning %}
 Please cite {{:faq:stolkneuroimage2013.pdf|this paper}} when you have used the realtime head localizer in your study.
-<br/>
-<br/>
+
 Stolk A, Todorovic A, Schoffelen JM, Oostenveld R.  **Online and offline tools for head movement compensation in MEG.** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+{% include markup/end %}
 
 The following documentation describes how to set up the interface between the [CTF](/development/realtime/ctf) or [Neuromag](/development/realtime/neuromag) system and FieldTrip. The recommended implementation uses two separate computers, one for the acquisition (i.e. the one provided by CTF / Neuromag) and another one for the visualization towards the experimenter and the subject. The second computer can be the presentation computer that is commonly available, or another computer.
 

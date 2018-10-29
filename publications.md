@@ -10,8 +10,8 @@ On [Google Scholar](http://scholar.google.com/scholar?cites=3328911510682538425)
 
 If you are looking for the papers that describe the algorithms implemented in FieldTrip, please look at the [references to implemented methods](/references_to_implemented_methods).
 
-{:.alert-warning}
+{% include markup/warning %}
 Please cite the FieldTrip reference paper when you have used FieldTrip in your study.
-<br/>
-<br/>
+
 Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen. **[FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data.](http://www.hindawi.com/journals/cin/2011/156869)** Computational Intelligence and Neuroscience, vol. 2011, Article ID 156869, 9 pages, 2011. doi:10.1155/2011/156869.
+{% include markup/end %}

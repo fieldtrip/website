@@ -33,11 +33,11 @@ Please note that the script for the Cuban EEG dataset is further down on this pa
 
 ## Getting started with the hands-on sessions
 
-{:.alert-info}
+{% include markup/info %}
 Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the FieldTrip toolbox design.
-<br/>
-<br/>
+
 If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the [MATLAB for psychologists](http://www.antoniahamilton.com/matlab.html) tutorial (which is also useful for non-psychologists).
+{% include markup/end %}
 
 For the hands-on sessions you have to start MATLAB. We will provide a recent FieldTrip copy and the hands-on data on a USB stick. Alternatively, you can get them from the FTP server (which will be slower).
 
@@ -48,11 +48,11 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
     addpath(pwd)
     ft_defaults
 
-{:.alert-danger}
+{% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
-<br/>
-<br/>
+
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
+{% include markup/end %}
 
 The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 

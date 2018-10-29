@@ -102,8 +102,9 @@ It is likely that you will encounter an artifact that resembles an exponential d
 
 # Procedure
 
-{:.alert-danger}
+{% include markup/danger %}
 It is important that you clean your data from TMS artifacts prior to any other preprocessing steps (e.g. filtering, detrending, downsampling) other than reading the data into memory. Especially filtering can produce long-lasting additional artifacts far outlasting the duration of the artifacts in the raw data, making subsequent analysis of the data troublesome.
+{% include markup/end %}
 
 {% include markup/warning %}
 The procedures explained in this tutorial have been applied and described in the following paper:
@@ -221,8 +222,9 @@ The averaged data we want to plot is represented in the data_tms_avg structure. 
 
 Time is represented in the .time field, the amplitudes are stored in .avg. When inspecting this .avg field we can see that it has a dimension of 61x10000. In this case you may have guessed that the rows represent the channels and the columns the time-points within each channel. If you are uncertain about the order of the dimensions you can always look at the .dimord field. The .dimord field tells you what the dimensions in the data field represent. Here we see that the  dimord is chan_time. Therefore, our data field (.avg) is represented by channels X time. Channel labels can be found as strings located in the .label field.
 
-{:.alert-warning}
+{% include markup/warning %}
 In our case the electrode labels are equal to the channel numbers. Please be aware that this does not necessarily correspond to the row-numbers in the data matrices. For example, our reference electrode used in the recording is number 5 on the cap. This channel, however, is now represented in the last row (61) of the data matrix. Always check the .label field of your data structure which row of the data corresponds to which channel and electrode.
+{% include markup/end %}
 
 We will now plot the data for all channels in separate windows. You can use the following code to close all previous figure window
 
@@ -390,11 +392,11 @@ We now have our data segmented, removed ringing/step response and recharge artif
 
 Running an ICA can take quite some time depending on the size of the data. Depending on your system processing this dataset will take about 15-30 minutes. Furthermore, running an ICA requires quite a lot of memory. In this case it requires an estimated 4GB of additional system memory. We therefore advise you to download the output here: [comp_tms.mat](ftp//ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/comp_tms.mat). You can then skip the following segment of code.
 
-{:.alert-warning}
+{% include markup/warning %}
 As ICA is in fact a spatial filter, it relies on the artifacts having a stable topography in the data. If the topography changes during the experiment, your artifact may be captured in more than one, or two components and potentially cannot be captured in sufficient components at all. If you therefore know beforehand that the topography of your artifacts are different for parts of your data, you may have to apply the ICA separately for these parts. For example, if you are running an experiment where different locations are stimulated in different conditions, you could run the ICA separately for each location.
-<br/>
-<br/>
+
 A stable TMS coil position increases the spatial stability of the artifacts, which is beneficial for estimating the artifact as independent component.
+{% include markup/end %}
 
 If you have downloaded comp_tms.mat, you can load the data with the following cod
 

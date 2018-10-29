@@ -479,5 +479,6 @@ Plot results
 
 ![image](/static/img/getting_started/beamformer_single_subject_lambda_0005perc_b.jpg@600)
 
-{:.alert-info}
-Thanks to Akiko Ikkai for contributing her Yokogawa data to make this page
+{% include markup/info %}
+Thanks to Akiko Ikkai for contributing her Yokogawa data to make this page.
+{% include markup/end %}

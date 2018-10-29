@@ -270,8 +270,9 @@ In order to visualize source-reconstructed data, the function [ft_sourceplot](/r
 
 *Figure 4: Reconstructed activity (neural activity index) of resting state alpha power is not as instructive as one would hope.*
 
-{:.alert-info}
+{% include markup/info %}
 Compare the distribution of the neural activity index with the sensor topographies plotted earlier. How do they compare? Could you give an explanation of why the correspondence could be poor?
+{% include markup/end %}
 
 ### Creation of a 'pseudo-contrast' based on a median split of the epochs
 
@@ -394,8 +395,9 @@ We now create a fancy opacity mask for the functional data, and visualize the lo
 
 *Figure 6: Source reconstructed activity illustrating the relative difference in alpha power between the high and low alpha conditions.*
 
-{:.alert-info}
+{% include markup/info %}
 Compare this source reconstruction with the sensor topographies generated above. How do the two representations compare?
+{% include markup/end %}
 
 ### Connectivity analysis and parcellation
 
@@ -461,17 +463,15 @@ We can now explore the structure in the estimated connectivity matrices using gr
 
 *Figure 8: Node degree based on imaginary part of coherency, thresholded at a value of 0.1. Cold colors indicated few suptrathreshold connections, warm colors indicate many suprathreshold connections. Left panel: degree based on the thresholded full connectome. Right panel: degree based on the thresholded parcellated connectome.*
 
-{:.alert-info}
+{% include markup/info %}
 Compare the degree values for the parcellated and the full connectomes. Why are the values different? What determines the maximum value?
-<br/>
-<br/>
+
 Explore and compare both figures a bit more by 3D rotation. Identify the overlap and discrepancies. What could cause this?
-<br/>
-<br/>
+
 Re-compute the node degree based on some other threshold(s), and inspect the effect of threshold on the result.
-<br/>
-<br/>
+
 Re-compute the parcellated connectome using cfg.method = 'max', and inspect the effect of this parameter on the result.
+{% include markup/end %}
 
 ### Exploration of the connectomes in more detail
 
@@ -483,21 +483,22 @@ The graph-based analysis illustrated above allows for only a crude inspection of
 
 The first input argument is the data structure with the connectivity matrix you want to explore. The second input argument is a string that designates the name of the field to be visualized. The third input argument defines the limits of the color scale. When clicking on the cortical sheet in the figure, you will specify the seed location from which the spatial pattern of connectivity will be displayed.
 
-{:.alert-info}
-invoke the function and explore the data.
+{% include markup/info %}
+Invoke the function and explore the data.
+{% include markup/end %}
 
 ### Effect of occipital alpha power on the connectivity results
 
-{:.alert-info}
+{% include markup/info %}
 Compute the connectomes separately on the subsets of trials with low and high occipital alpha power, respectively and inspect the results.
+{% include markup/end %}
 
 ### Using other connectivity metrics
 
 Obviously, one can choose from a large amount of different connectivity measures, each of which has its advantages and disadvantages.
 
-{:.alert-info}
+{% include markup/info %}
 Compute the phase locking value between all pairs of dipoles, as well as a parcellated version. Explore the results, and compare them with the imaginary part of coherency.
-<br/>
-<br/>
-Compute the envelope correlations using the 'powcorr' method, as well as a parcellated version. Explore the results.
 
+Compute the envelope correlations using the 'powcorr' method, as well as a parcellated version. Explore the results.
+{% include markup/end %}

@@ -20,8 +20,9 @@ The volume conduction model of the head that will be constructed here is specifi
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-{:.alert-success}
+{% include markup/success %}
 The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG tutorial](/tutorial/headmodel_eeg).
+{% include markup/end %}
 
 ## Background
 
@@ -33,19 +34,17 @@ This tutorial is focusing on how to build the **volume conduction model for the 
 
 In this specific tutorial we will use a semi-realistic head model developed by Nolte (2003) that assumes a realistic information about the interface between the brain and the skull. This outer brain surface will be extracted from the anatomical MRI images of the subject. First, we will use anatomical MRI of the subject to extract the brain surface from the anatomical images, which is termed **segmentation**. Note that the segmentation procedure is quite time consuming. Following the segmentation of the anatomical images, a description of the surface using vertices and triangles is constructed. Finally, the single-shell head model will be computed.
 
-{:.alert-info}
+{% include markup/info %}
 If an anatomical MRI is not available for your MEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. If you do not have an MRI, but if you do have a measurement of the scalp surface (e.g. with a Polhemus tracker), you can use a local spheres volume conduction model. If you do not want to (or cannot) use any realistic information about the brain-surface or the head-shape, you can resort to the single sphere volume conduction model.
+{% include markup/end %}
 
 ## Procedure
 
 We will create a head model based on the anatomical mri of the [tutorial data set](/tutorial/shared/dataset) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). The pipeline is depicted in Figure 2.
 
 *  First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
-
 *  then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
-
 *  and create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
-
 *  Finally, we will check the geometry of the head model by plotting it with **[ft_plot_vol](/reference/ft_plot_vol)**.
 
 ![image](/static/img/tutorial/headmodel/headmodel-01.png@250)
@@ -74,30 +73,27 @@ Then, you can read in the mri data.
 The structure of your mri variable contains the following field
 
 *  **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
-
 *  **anatomy**: This is a matrix (with the size and number of dimensions specified in **dim**) that contains the anatomical information represented by numbers.
-
 *  **hdr**: Header information of the anatomical images.
-
 *  **transform**: A transformation matrix that aligns the anatomical data (in field **anatomy**) to a certain coordinate system.
-
 *  **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
 
 You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system). This can be done using the CTF specific MRIConverter and MRIViewer software as outlined [here](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) or using the **[/reference/ft_volumerealign](/reference/ft_volumerealign)** function.
 
-{:.alert-info}
+{% include markup/info %}
 It is also possible to read in anatomical MRI data in [other formats](/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined).  If your anatomical MRI is not aligned to the ctf coordinate system, it can be [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) using **[ft_volumerealign](/reference/ft_volumerealign)** function. For this, you will need to align your MRI to the [fiducial
  points](/faq/how_are_the_lpa_and_rpa_points_defined).
-<br/>
-<br/>
+
 When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/ft_determine_coordsys)** function.
+{% include markup/end %}
 
 ### Segmentation
 
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into [different tissue types](/faq/how_is_the_segmentation_defined) . By default, the gray matter, white matter and the cerebro-spinal fluid (csf) compartments are differentiated. Based on these compartments a so called brainmask is created, which is a binary mask of the content inside the skull. All voxels that are inside the skull (i.e. the complete brain) are represented by 1, all other voxels by 0. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output.
 
-{:.alert-warning}
+{% include markup/warning %}
 Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
+{% include markup/end %}
 
 	cfg           = [];
 	cfg.output    = 'brain';
@@ -159,17 +155,15 @@ The vol data structure contains the following field
 
 The **bnd** field describes a surface with vertices and triangles (in the **bnd.pnt** and **bnd.tri** fields) as the geometrical description of the volume conductor.
 
-{:.alert-info}
+{% include markup/info %}
 This tutorial does not intend to make a elaborative comparison of the different volume conduction models, nor to discuss their relative merits.
-<br/>
-<br/>
+
 The method used in this tutorial is based on [Nolte G. (2003) The magnetic lead field theorem in the quasi-static approximation and its use for magnetoencephalography forward calculation in realistic volume conductors](http://www.ncbi.nlm.nih.gov/pubmed/14680264). We recommend this method for most general MEG situations.
-<br/>
-<br/>
+
 The paper [Lalancette M, Quraan M, Cheyne D. (2011) Evaluation of multiple-sphere head models for MEG source localization](http://www.ncbi.nlm.nih.gov/pubmed/21828900) discusses another popular method for MEG forward modeling, which is based on fitting local spheres to the surface. This alternative method can be used by specifying 'localspheres' as method in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
-<br/>
-<br/>
+
 Alternatively, you can also create and use a multiple-layered head model with Openmeeg. For this you can follow the procedure described in the tutorial for [creating a volume conduction model for EEG data](/tutorial/headmodel_eeg_bem#head_model)
+{% include markup/end %}
 
 ### Visualization
 
@@ -192,19 +186,19 @@ When the figure is plotted, you can look at the figure from different views usin
 
 ### Exercise 1
 
-{:.alert-info}
+{% include markup/info %}
 Create a head model with method 'singlesphere' that you fit on the inside brain surface, i.e. using the output of the already made segmentation.
-<br/>
-<br/>
+
 Plot both head models in the same figure, check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the two head models together.
-<br/>
-<br/>
+
 What is the difference between the head models?
+{% include markup/end %}
 
 ### Exercise 2
 
-{:.alert-info}
+{% include markup/info %}
 In exercise 1, you created a head model with method 'singlesphere'. How is its geometrical description defined? What is the difference between the fields of the single sphere and single shell model which contain the geometrical description?
+{% include markup/end %}
 
 ## Summary and further reading
 

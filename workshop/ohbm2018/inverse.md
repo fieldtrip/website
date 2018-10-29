@@ -83,8 +83,9 @@ And we visualize the dipole and see where it was localized in the brain.
 
 Now we do a grid search with MEG.
 
-{:.alert-danger}
+{% include markup/danger %}
 Be aware that this step only works, if you can use Duneuro. Otherwise just load dipfit_fem_meg and skip ft_dipolefitting.
+{% include markup/end %}
 
 	% Dipole fit
 	cfg = [];
@@ -196,23 +197,27 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 
 #### Exercise 1
 
-{:.alert-info}
+{% include markup/info %}
 Can you think of reasons why the dipoles are at different locations?
+{% include markup/end %}
 
 #### Exercise 2
 
-{:.alert-info}
+{% include markup/info %}
 You can play around with cfg.mne.lambda? Do you see the influence of different lambdas on the MNE solution?
+{% include markup/end %}
 
 #### Exercise 3
 
-{:.alert-info}
+{% include markup/info %}
 You can also play around with other parameters for the MNE. To find out more about MNE just type "help minimumnormestimate" into MatLab
+{% include markup/end %}
 
 #### Exercise 4
 
-{:.alert-info}
+{% include markup/info %}
 Changing parameters of the forward model influences the Inverse solutions. Play around with different parameters of the FEM forward model (e.g. changing conductivity values, move electrodes or play around with the segmentation) and redo the inverse solution. If you need more input for this please ask us!
+{% include markup/end %}
 
 ## Summary and suggested further reading
 

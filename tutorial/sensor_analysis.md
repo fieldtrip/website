@@ -52,8 +52,9 @@ Plot the data for the first trial, 130th channe
 
     plot(data_left.time{1}, data_left.trial{1}(130,:));
 
-{:.alert-info}
+{% include markup/info %}
 Which channel is the 130th channel?
+{% include markup/end %}
 
 Time point 0 in all trials corresponds to the onset of the visual stimulation. Trials end when the visual stimulus changed its speed, which is when the subject had to move their wrist (so the data for the actual movement is not in the trials). The visual stimulus speed change happened at an unpredictable time after t=0, so not all trials are the same length. To see this, plot some trials like thi
 
@@ -126,14 +127,13 @@ Again, you can select a time range and click it to bring up a topographical plot
 
 *Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset.*
 
-{:.alert-info}
+{% include markup/info %}
 Given that the CTF system uses axial gradiometers (i.e. detecting the magnetic gradient orthogonal to the scalp), what electrical dipole configuration would explain the observed field pattern in the above figure?
-<br/>
-<br/>
+
 Feel free to click around a bit in the multi- and singleplots to explore the characteristics of the ERF.
-<br/>
-<br/>
+
 Use the cfg.baseline option in ft_multplotER to correct the ERF for the baseline in the pre-stimulus interval.
+{% include markup/end %}
 
 ### The planar gradient
 
@@ -167,11 +167,11 @@ Note that we create a 'neighbours' structure before calling **[ft_megplanar](/re
     cfg.layout          = 'CTF151_helmet.mat';
     ft_multiplotER(cfg, tl_plancmb);
 
-{:.alert-danger}
+{% include markup/danger %}
 The order in which you do the combining the planar channels and averaging **does** matter, since the combining consists of a non-linear transform.
-<br/>
-<br/>
+
 Please be advised that this might result in unexpected and undesirable effects due to different number of trials and/or due to baselining effects. In general we recommend to not use combined planar gradients for ERFs, unless you know what you are doing. See also this [example](/example/combineplanar_pipelineorder).
+{% include markup/end %}
 
 ## Time-frequency analysis
 
@@ -250,8 +250,9 @@ Note the baseline and baselinetype parameters. These govern what baseline correc
 
 This is an interactive plot, so just as with the event-related part you can select sensors and click to get an average TFR. With this, you can select a time and frequency range and plot a topography.
 
-{:.alert-info}
+{% include markup/info %}
 Click around the multiplot to explore the visual gamma response and its topography!
+{% include markup/end %}
 
 ###  Overview of the conducted analysis
 
@@ -324,11 +325,11 @@ Again, this is an interactive plot, so click around it to get a nice overview of
 
 *Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG.*
 
-{:.alert-info}
+{% include markup/info %}
 After exploring the coherence results when the reference channel is the left EMG, do the same for the right EMG (which is called 'EMGrgt'). What do you conclude?
-<br/>
-<br/>
+
 Try changing the cfg.tapsmofrq parameter in the **[ft_freqanalysis](/reference/ft_freqanalysis)** step. How does this affect the resulting coherence spectrum?
+{% include markup/end %}
 
 ## Summary and suggested further reading
 

@@ -29,8 +29,9 @@ downloaded but will also be distributed on the USB stick.
  2.  Unzip the fieldtrip-xxxxxxxx.zip file.
  3.  Unzip the "data.zip" and "spm atlas.zip" file, you should place the contents in the tutorial directory.
 
-{:.alert-danger}
+{% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
+{% include markup/end %}
 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
 
@@ -39,11 +40,11 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-{:.alert-danger}
+{% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
-<br/>
-<br/>
+
 Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
+{% include markup/end %}
 
 The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the fieldtrip main funcctions. The ft_defaults command ensures that all required subdirectories are added to the path.
 
@@ -67,7 +68,7 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
 *  evening
     * dinner
-    
+
 
 #### Thursday
 
