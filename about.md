@@ -20,3 +20,8 @@ University Nijmegen
 P.O. Box 9101  
 NL-6500 AH Nijmegen  
 The Netherlands  
+
+## Last update
+
+This website was last updated at {{ "now" | date: "%Y-%m-%d %H:%M" }}.
+
