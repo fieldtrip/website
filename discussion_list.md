@@ -17,8 +17,8 @@ We are always happy to try to help you with your questions. In general, note tha
 
 You can go through the contributions to the FieldTrip discussion list [here](http://mailman.science.ru.nl/pipermail/fieldtrip), or you can search through the discussion list.
 
-{% include searchlistarchive.html %}
+{% include searchlistarchive %}
 
 # Frequently Asked Questions
 
-{% include seealso.html tag1="faq" tag2="email" %}
+{% include seealso tag1="faq" tag2="email" %}

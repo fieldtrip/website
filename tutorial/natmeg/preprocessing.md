@@ -21,7 +21,7 @@ This tutorial does the preprocessing and segmenting in a single step. If you are
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.
 
-{% include youtube.html id="zOxCqcYmIfA" %}
+{% include youtube id="zOxCqcYmIfA" %}
 {% include markup/end %}
 
 ## Background

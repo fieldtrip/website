@@ -20,7 +20,7 @@ Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen. **[Fiel
 
 To get started with FieldTrip, please continue reading the [getting started](/getting_started) documentation.
 
-{% include facebook.html %}
+{% include facebook %}
 
 # News and announcements
 

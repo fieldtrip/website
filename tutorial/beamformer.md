@@ -25,7 +25,7 @@ This tutorial will not cover the time-domain option for LCMV/SAM beamformers (de
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.  
 
-{% include youtube.html id="Ez72OFjSABs" %}
+{% include youtube id="Ez72OFjSABs" %}
 {% include markup/end %}
 
 ## Background
@@ -405,7 +405,7 @@ Details on head models can be found [here](/tutorial/headmodel_meg) or  [here](/
 If you are doing a group study where you want the grid points to be the same over all subjects, [ see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 FAQ
-{% include seealso.html tag1="source" tag2="faq" %}
+{% include seealso tag1="source" tag2="faq" %}
 
 Example script
-{% include seealso.html tag1="source" tag2="example" %}
+{% include seealso tag1="source" tag2="example" %}

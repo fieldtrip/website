@@ -318,12 +318,12 @@ Here is also a list of related documentation:
 
 ### FAQs on connectivity
 
-{% include seealso.html tag1="connectivity" tag2="faq" %}
+{% include seealso tag1="connectivity" tag2="faq" %}
 
 ### FAQs on frequency analysis
 
-{% include seealso.html tag1="freq" tag2="faq" %}
+{% include seealso tag1="freq" tag2="faq" %}
 
 ### FAQs on data formats
 
-{% include seealso.html tag1="dataformat" tag2="faq" %}
+{% include seealso tag1="dataformat" tag2="faq" %}

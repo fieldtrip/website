@@ -208,8 +208,8 @@ You can read more about specific source-reconstruction methods in the [Localizin
 
 Here are the related FAQs:
 
-{% include seealso.html tag1="faq" tag2="headmodel" tag3="meg" %}
+{% include seealso tag1="faq" tag2="headmodel" tag3="meg" %}
 
 and the related examples:
 
-{% include seealso.html tag1="example" tag2="headmodel" tag3="meg" %}
+{% include seealso tag1="example" tag2="headmodel" tag3="meg" %}

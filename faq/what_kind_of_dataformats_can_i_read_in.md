@@ -10,4 +10,4 @@ FieldTrip provides support for CTF, Neuromag/Elekta, BTI/4D-Neuroimaging, Yokoga
 
 ## See also
 
-{% include seealso.html tag1="faq" tag2="dataformat" %}
+{% include seealso tag1="faq" tag2="dataformat" %}

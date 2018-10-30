@@ -25,7 +25,7 @@ This tutorial is not covering statistical test on event-related fields. If you a
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.  
 
-{% include youtube.html id="x0hR-VsHZj8" %}
+{% include youtube id="x0hR-VsHZj8" %}
 {% include markup/end %}
 
 ## Background
@@ -434,11 +434,11 @@ If you are interested in parametric tests in FieldTrip, you can read the [Parame
 If you would like to read more about issues related to statistical analysis, you can read the following as wel
 
 FAQ
-{% include seealso.html tag1="faq" tag2="statistics" %}
-{% include seealso.html tag1="faq" tag2="cluster"    %}
-{% include seealso.html tag1="faq" tag2="neighbour"  %}
+{% include seealso tag1="faq" tag2="statistics" %}
+{% include seealso tag1="faq" tag2="cluster"    %}
+{% include seealso tag1="faq" tag2="neighbour"  %}
 
 Example script
-{% include seealso.html tag1="example" tag2="statistics" %}
-{% include seealso.html tag1="example" tag2="cluster"    %}
-{% include seealso.html tag1="example" tag2="neighbour"  %}
+{% include seealso tag1="example" tag2="statistics" %}
+{% include seealso tag1="example" tag2="cluster"    %}
+{% include seealso tag1="example" tag2="neighbour"  %}

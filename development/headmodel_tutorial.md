@@ -9,12 +9,12 @@ Note that this page has moved to [:tutorial:headmodel_meg](/tutorial/headmodel_m
 
 See also these FAQs:
 
-{% include seealso.html tag1="faq" tag2="headmodel" %}
+{% include seealso tag1="faq" tag2="headmodel" %}
 
 See also these examples:
 
-{% include seealso.html tag1="example" tag2="headmodel" %}
+{% include seealso tag1="example" tag2="headmodel" %}
 
 See also these tutorials:
 
-{% include seealso.html tag1="tutorial" tag2="headmodel" %}
+{% include seealso tag1="tutorial" tag2="headmodel" %}

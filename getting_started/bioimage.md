@@ -117,4 +117,4 @@ Once the .mgrid file is created, it can be loaded into the BioImage Suite Electr
 
 ## Suggested further reading
 
-{% include seealso.html tag1="tutorial" tag2="ieeg" %}
+{% include seealso tag1="tutorial" tag2="ieeg" %}

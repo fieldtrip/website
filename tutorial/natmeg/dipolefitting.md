@@ -21,7 +21,7 @@ This tutorial will not show how to combine source-level data over multiple subje
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
-{% include youtube.html id="4pVaY6f25w0" %}
+{% include youtube id="4pVaY6f25w0" %}
 {% include markup/end %}
 
 ## Background
@@ -945,10 +945,10 @@ More details on constructing volume conduction models of the head can be found [
 ### Suggested further reading
 
 Tutorials:
-{% include seealso.html tag1="source" tag2="headmodel" tag3="tutorial" %}
+{% include seealso tag1="source" tag2="headmodel" tag3="tutorial" %}
 
 FAQs:
-{% include seealso.html tag1="source" tag2="headmodel" tag3="faq" %}
+{% include seealso tag1="source" tag2="headmodel" tag3="faq" %}
 
 Example scripts:
-{% include seealso.html tag1="source" tag2="headmodel" tag3="example" %}
+{% include seealso tag1="source" tag2="headmodel" tag3="example" %}

@@ -23,7 +23,7 @@ There is no information in this tutorial about how to compare conditions, how to
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
 
-{% include youtube.html id="vwPpSglPJTE" %}
+{% include youtube id="vwPpSglPJTE" %}
 {% include markup/end %}
 
 ## Background
@@ -330,7 +330,7 @@ This tutorial showed how to do time-frequency analysis on a single's subject MEG
 After having finished this tutorial on time-frequency analysis, you can continue with the [beamformer source reconstruction](/tutorial/beamformer) tutorial if you are interested in the source-localization of the power changes or the [cluster-based permutation tests on time-frequency data](/tutorial//cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
 
 Frequently asked question
-{% include seealso.html tag1="faq" tag2="freq" %}
+{% include seealso tag1="faq" tag2="freq" %}
 
 Example script
-{% include seealso.html tag1="example" tag2="freq" %}
+{% include seealso tag1="example" tag2="freq" %}

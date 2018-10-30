@@ -207,8 +207,8 @@ When you have more questions about the topic of any tutorial, don't forget to ch
 
 Here are the [frequently asked questions](/faq) that are MATLAB specific:
 
-{% include seealso.html tag1="matlab" tag2="faq" %}
+{% include seealso tag1="matlab" tag2="faq" %}
 
 Here are the [example scripts](/example) that are MATLAB specific:
 
-{% include seealso.html tag1="matlab" tag2="example" %}
+{% include seealso tag1="matlab" tag2="example" %}

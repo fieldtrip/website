@@ -19,7 +19,7 @@ In this tutorial you can find information about the time-frequency analysis of a
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
-{% include youtube.html id="QLvsa1r1Voc" %}
+{% include youtube id="QLvsa1r1Voc" %}
 {% include markup/end %}
 
 ## Background

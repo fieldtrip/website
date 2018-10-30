@@ -24,7 +24,7 @@ In this [frequently asked question](/faq/open_data) you can find links to other 
 *  Group results of this study (comprising 10 subjects) are used in the statistics tutorials.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-language" %}
+{% include seealso tag1="MEG-language" %}
 
 ## MEG-artifact
 
@@ -33,7 +33,7 @@ Tutorials using this dataset:
 *  Download the dataset[ArtifactMEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-artifact" %}
+{% include seealso tag1="MEG-artifact" %}
 
 ## MEG-visuomotor151
 
@@ -44,7 +44,7 @@ Tutorials using this dataset:
 *  Download the dataset [subjectK.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-visuomotor151" %}
+{% include seealso tag1="MEG-visuomotor151" %}
 
 ## MEG-visuomotor151_02
 
@@ -54,7 +54,7 @@ Tutorials using this dataset:
 *  Download the dataset [SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-visuomotor275" %}
+{% include seealso tag1="MEG-visuomotor275" %}
 
 ##  MEG-attention
 
@@ -64,7 +64,7 @@ Tutorials using this dataset:
 *  Link to the [publication](http://dx.doi.org/10.1016/j.neunet.2009.06.004) by van Gerven et al.(2009).
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-attention" %}
+{% include seealso tag1="MEG-attention" %}
 
 ## MEG-tactile
 
@@ -73,7 +73,7 @@ Tutorials using this dataset:
 *  Download the dataset[TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-tactile" %}
+{% include seealso tag1="MEG-tactile" %}
 
 ## MEG-audodd
 
@@ -83,7 +83,7 @@ Tutorials using this dataset:
 *  Download the dataset[ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg)
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-audodd" %}
+{% include seealso tag1="MEG-audodd" %}
 
 ##  EEG-language
 
@@ -93,7 +93,7 @@ Tutorials using this dataset:
 *  Download the dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) from our FTP server
 
 Tutorials using this dataset:
-{% include seealso.html tag1="EEG-language" %}
+{% include seealso tag1="EEG-language" %}
 
 ##  EEG-affective
 
@@ -102,7 +102,7 @@ Tutorials using this dataset:
 *  Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_eeg) from our FTP server
 
 Tutorials using this dataset:
-{% include seealso.html tag1="EEG-affective" %}
+{% include seealso tag1="EEG-affective" %}
 
 ##  EEG-TMS
 
@@ -112,7 +112,7 @@ Tutorials using this dataset:
 *  Download the dataset [sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="EEG-TMS" %}  
+{% include seealso tag1="EEG-TMS" %}  
 
 ## HCP-motort
 
@@ -123,7 +123,7 @@ Tutorials using this dataset:
 *  Details [HCP-motort](/tutorial/shared/hcp_motort)  
 
 Tutorials using this dataset:
-{% include seealso.html tag1="HCP-motort" %}
+{% include seealso tag1="HCP-motort" %}
 
 ## mmfaces
 
@@ -134,7 +134,7 @@ Tutorials using this dataset:
 *  Details [:tutorial:shared:mmfaces](/tutorial/shared/mmfaces)
 
 Tutorials using this dataset:
-{% include seealso.html tag1="mmfaces" %}
+{% include seealso tag1="mmfaces" %}
 
 ##  MEG-epilepsy
 
@@ -142,7 +142,7 @@ Tutorials using this dataset:
 *  The data is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy
 
 Tutorials using this dataset:
-{% include seealso.html tag1="MEG-epilepsy" %}
+{% include seealso tag1="MEG-epilepsy" %}
 
 ##  Spike-attention
 
@@ -151,7 +151,7 @@ Tutorials using this dataset:
 *  Download the dataset[p029_sort_final_01.nex.](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex.) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="Spike-attention" %}
+{% include seealso tag1="Spike-attention" %}
 
 ## Spike-placefield
 
@@ -159,7 +159,7 @@ Tutorials using this dataset:
 *  Download the dataset [tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="Spike-placefield" %}
+{% include seealso tag1="Spike-placefield" %}
 
 ## ECoG-visual
 
@@ -168,7 +168,7 @@ Tutorials using this dataset:
 *  Download the dataset [SubjectNY394.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectNY394.zip)
 
 Tutorials using this dataset:
-{% include seealso.html tag1="ecog-visual" %}
+{% include seealso tag1="ecog-visual" %}
 
 ## ECoG-protocol
 
@@ -176,7 +176,7 @@ Tutorials using this dataset:
 *  Download the dataset [SubjectUCI29.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectUCI29.zip)
 
 Tutorials using this dataset:
-{% include seealso.html tag1="ecog-protocol" %}
+{% include seealso tag1="ecog-protocol" %}
 
 ## NIRS single channel
 
@@ -184,7 +184,7 @@ Tutorials using this dataset:
 *  Download the data here ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel/motor_cortex.oxy3
 
 Tutorials using this dataset:
-{% include seealso.html tag1="nirs-singlechannel" %}
+{% include seealso tag1="nirs-singlechannel" %}
 
 ## NIRS multi channel
 
@@ -192,4 +192,4 @@ Tutorials using this dataset:
 * The fNIRS data was recorded using 4 connected Oxymon systems from Artinis to enable a 48 channel recording. Data was sampled at 250 Hz. Data was recorded during an event-related auditory oddball paradigm.
 
 Tutorials using this dataset:
-{% include seealso.html tag1="nirs-multichannel" %}
+{% include seealso tag1="nirs-multichannel" %}

@@ -29,4 +29,4 @@ Example data (e.g. your MATLAB workspace) that helps to pinpoint a specific issu
 
 ## See also
 
-{% include seealso.html tag=bugzilla %}
+{% include seealso tag=bugzilla %}

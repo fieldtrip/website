@@ -12,6 +12,6 @@ Please see our [github tutorial](/development/git) for details.
 
 ### Related documentation
 
-{% include seealso.html tag="git" %}
-{% include seealso.html tag="svn" %}
-{% include seealso.html tag="cvs" %}
+{% include seealso tag="git" %}
+{% include seealso tag="svn" %}
+{% include seealso tag="cvs" %}

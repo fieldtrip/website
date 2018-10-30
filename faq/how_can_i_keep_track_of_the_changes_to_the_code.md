@@ -21,7 +21,7 @@ You can also download the latest ("master") version as a [zip file](https://gith
 
 ### Related documentation
 
-{% include seealso.html tag="git" %}
-{% include seealso.html tag="svn" %}
-{% include seealso.html tag="cvs" %}
+{% include seealso tag="git" %}
+{% include seealso tag="svn" %}
+{% include seealso tag="cvs" %}
 

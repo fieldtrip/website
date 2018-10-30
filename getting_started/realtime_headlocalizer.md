@@ -86,5 +86,5 @@ For **Neuromag** systems, the real-time head localizer uses a rigidbody constrai
 
 ##  Related documentation on realtime MEG
 
-{% include seealso.html tag1="realtime" tag2="faq"     tag3="meg" %}
-{% include seealso.html tag1="realtime" tag2="example" tag3="meg" %}
+{% include seealso tag1="realtime" tag2="faq"     tag3="meg" %}
+{% include seealso tag1="realtime" tag2="example" tag3="meg" %}

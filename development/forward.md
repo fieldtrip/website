@@ -168,12 +168,12 @@ The literature references to the implemented methods are given [here](/reference
 
 Frequently asked questions about forward and inverse modeling:
 
-{% include seealso.html tag1="faq" tag2="source" %}
+{% include seealso tag1="faq" tag2="source" %}
 
 Example material for forward and inverse modeling:
 
-{% include seealso.html tag1="example" tag2="source" %}
+{% include seealso tag1="example" tag2="source" %}
 
 Tutorial material for forward and inverse modeling:
 
-{% include seealso.html tag1="tutorial" tag2="source" %}
+{% include seealso tag1="tutorial" tag2="source" %}

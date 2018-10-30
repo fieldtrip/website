@@ -19,7 +19,7 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.  
 
-{% include youtube.html id="ZBwh0Vm4fh4" %}
+{% include youtube id="ZBwh0Vm4fh4" %}
 {% include markup/end %}
 
 ## Background
@@ -245,11 +245,11 @@ Let's say you wanted to look at cortico-cortical connectivity, e.g. interactions
 This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence](/tutorial/coherence) tutorial.
 
 FAQ
-{% include seealso.html tag1="faq" tag2="connectivity" 	%}
-{% include seealso.html tag1="faq" tag2="coherence" 		%}
-{% include seealso.html tag1="faq" tag2="granger" 			%}
+{% include seealso tag1="faq" tag2="connectivity" 	%}
+{% include seealso tag1="faq" tag2="coherence" 		%}
+{% include seealso tag1="faq" tag2="granger" 			%}
 
 Example script
-{% include seealso.html tag1="example" tag2="connectivity" 	%}
-{% include seealso.html tag1="example" tag2="coherence" 		%}
-{% include seealso.html tag1="example" tag2="granger" 			%}
+{% include seealso tag1="example" tag2="connectivity" 	%}
+{% include seealso tag1="example" tag2="coherence" 		%}
+{% include seealso tag1="example" tag2="granger" 			%}

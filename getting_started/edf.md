@@ -179,4 +179,4 @@ Alternatively, when the event channel index is unknown, but its name, or a part 
 
 ## See also
 
-{% include seealso.html tag="edf" %}
+{% include seealso tag="edf" %}

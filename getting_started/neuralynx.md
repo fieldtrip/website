@@ -97,4 +97,4 @@ The events.nev file (which you probably use) only contains timestamps and not sa
 
 ## See also
 
-{% include seealso.html tag="neuralynx" %}
+{% include seealso tag="neuralynx" %}

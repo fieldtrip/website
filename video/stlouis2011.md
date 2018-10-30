@@ -12,16 +12,16 @@ The original online location is http://dev.humanconnectome.org/documentation/tut
 
 ## An introduction to MEG and the FieldTrip toolbox by Robert Oostenveld
 
-{% include vimeo.html id="21604990" %}
+{% include vimeo id="21604990" %}
 
 ## Fundamentals of the analysis of neuronal oscillations by Jan-mathijs Schoffelen
 
-{% include vimeo.html id="21701689" %}
+{% include vimeo id="21701689" %}
 
 ## Beamforming source reconstruction by Jan-Mathijs Schoffelen
 
-{% include vimeo.html id="21717754" %}
+{% include vimeo id="21717754" %}
 
 ## Non-parametric randomisation techniques by Robert Oostenveld
 
-{% include vimeo.html id="21724687" %}
+{% include vimeo id="21724687" %}

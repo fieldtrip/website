@@ -270,7 +270,7 @@ In this section we would demonstrate how to derive the time series of neuronal a
 {% include markup/info %}
 Before you continue it is recommended to make your self familiar with the relevant concepts by watching the following lecture.
 
-{% include youtube.html id="7eS11DtbIPw" %}
+{% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
 
 Furthermore the details around how to compute the ingredients needed herein (e.g. headmodel, leadfield) are not further explained here. All of the necessary steps in head modeling are explained here, and source modeling [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_brain_atlas_based_mni_space).
@@ -515,7 +515,7 @@ It is recommended to make yourself familiar with the permutation framework befor
 {% include markup/info %}
 This tutorial contains the hands-on material of the [Salzburg workshop](/workshop/salzburg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
-{% include youtube.html id="vOSfabsDUNg" %}
+{% include youtube id="vOSfabsDUNg" %}
 {% include markup/end %}
 
 First we keep single trial information and perform source analysis once again. It is important to estimate the spatial filter on the basis of all data and not the single trials. The latter is typically noisy and results in not very robust estimates.

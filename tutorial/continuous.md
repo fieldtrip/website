@@ -256,8 +256,8 @@ After having finished this tutorial on preprocessing, you can continue with the 
 
 If you have more questions about preprocessing, you can also read the following FAQs:
 
-{% include seealso.html tag1="faq" tag2="preprocessing" %}
+{% include seealso tag1="faq" tag2="preprocessing" %}
 
 Or you can also read the example scripts:
 
-{% include seealso.html tag1="example" tag2="preprocessing" %}
+{% include seealso tag1="example" tag2="preprocessing" %}

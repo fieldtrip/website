@@ -294,4 +294,4 @@ Here, we explained the pre-processing steps for a single channel in an fNIRS dat
 
 Here is the other documentation on this wiki that relates to fNIRS:
 
-{% include seealso.html tag1="nirs" %}
+{% include seealso tag1="nirs" %}

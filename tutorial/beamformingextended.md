@@ -507,5 +507,5 @@ Details on head models can be found [here](/tutorial/headmodel_meg) or  [here](/
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). See [here for source statistics](/example/source_statistics). If you want to dive deeper into coherence, [take a look here](/tutorial/coherence). And in the appendix there is a way described how to [compute virtual MEG sensors](/tutorial/shared/virtual_sensors).
 
 ## See also
-{% include seealso.html tag1="faq" source="connectivity" %}
-{% include seealso.html tag1="faq" source="coherence" %}
+{% include seealso tag1="faq" source="connectivity" %}
+{% include seealso tag1="faq" source="coherence" %}

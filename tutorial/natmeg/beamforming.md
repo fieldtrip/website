@@ -24,7 +24,7 @@ This tutorial will not cover the time-domain option for LCMV/SAM beamformers (de
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
-{% include youtube.html id="7eS11DtbIPw" %}
+{% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
 
 ## Background
@@ -459,5 +459,5 @@ Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCM
 If you are doing a group study where you want the grid points to be the same over all subjects, [ see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 Related documentation:
-{% include seealso.html tag1="source" tag2="faq" %}
-{% include seealso.html tag1="source" tag2="example" %}
+{% include seealso tag1="source" tag2="faq" %}
+{% include seealso tag1="source" tag2="example" %}

@@ -8,24 +8,24 @@ tags: [video]
 
 ## Introduction to MEG (vs. EEG) instrumentation by Stephen Whitmarsh
 
-{% include youtube.html id="15Qs4fuPpes" %}
+{% include youtube id="15Qs4fuPpes" %}
 
 ## Introducing FieldTrip by Robert Oostenveld
 
-{% include youtube.html id="zOxCqcYmIfA" %}
+{% include youtube id="zOxCqcYmIfA" %}
 
 ## Forward modelling in MEG and EEG by Robert Oostenveld
 
-{% include youtube.html id="4pVaY6f25w0" %}
+{% include youtube id="4pVaY6f25w0" %}
 
 ## Principles of frequency analysis by Robert Oostenveld
 
-{% include youtube.html id="QLvsa1r1Voc" %}
+{% include youtube id="QLvsa1r1Voc" %}
 
 ## Connectivity analysis in MEG and EEG: metrics and issues by Robert Oostenveld
 
-{% include youtube.html id="RpQklxbCsg" %}
+{% include youtube id="RpQklxbCsg" %}
 
 ## Beamforming EEG and MEG data by Robert Oostenveld
 
-{% include youtube.html id="7eS11DtbIPw" %}
+{% include youtube id="7eS11DtbIPw" %}

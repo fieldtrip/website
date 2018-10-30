@@ -145,8 +145,8 @@ If you would like to have an introduction about scripting in Matlab, it is sugge
 When you have more questions about the topic of any tutorial, don't forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
 FAQs related to issues with Matlab:
-{% include seealso.html tag1="faq" tag2="matlab" %}
+{% include seealso tag1="faq" tag2="matlab" %}
 
 You can find examples that specifically relate to Matlab here:
-{% include seealso.html tag1="example" tag2="matlab" %}
+{% include seealso tag1="example" tag2="matlab" %}
 

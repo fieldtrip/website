@@ -19,7 +19,7 @@ In this tutorial you will learn about applying beamformer techniques in the time
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
 
-{% include youtube.html id="7eS11DtbIPw" %}
+{% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
 
 ## Background
@@ -344,7 +344,7 @@ In the previous step we applied an arbitrary chosen threshold for plotting the d
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
 
-{% include youtube.html id="x0hR-VsHZj8" %}
+{% include youtube id="x0hR-VsHZj8" %}
 {% include markup/end %}
 
 First we will repeat some of the previous steps. We will compute the covariance matrix on the basis of the data including the pre and post-response latencies. This is followed by averaging of the pre and post data segments separately, yet keeping the individual observations using the option **cfg.keeptrials = 'yes'**. Here it is important that we also calculate the single-trial covariance using the option **cfg.covariance = 'yes'** as this will later be used to calculate the source activity.
@@ -780,7 +780,7 @@ Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or freq
 If you are doing a group study where you want the grid points to be the same over all subjects, [ see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 FAQ
-{% include seealso.html tag1="source" tag2="faq" %}
+{% include seealso tag1="source" tag2="faq" %}
 
 Example script
-{% include seealso.html tag1="source" tag2="example" %}
+{% include seealso tag1="source" tag2="example" %}

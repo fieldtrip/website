@@ -83,7 +83,7 @@ Elsewhere on this website you can find more examples on the use of the peer tool
 
 ## Frequently asked questions about distributed computing using this toolbox
 
-{% include seealso.html tag1="faq" tag2="peer" %}
+{% include seealso tag1="faq" tag2="peer" %}
 
 ## Technical appendix
 

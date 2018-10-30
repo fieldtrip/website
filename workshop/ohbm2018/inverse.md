@@ -225,15 +225,15 @@ In this tutorial, we learned how to solve the inverse problem. For this, we used
 
 Here are some related FAQs
 
-{% include seealso.html tag1="faq" tag2="electrode" %}
-{% include seealso.html tag1="faq" tag2="headmodel" tag3="eeg" %}
+{% include seealso tag1="faq" tag2="electrode" %}
+{% include seealso tag1="faq" tag2="headmodel" tag3="eeg" %}
 
 and some related examples:
 
-{% include seealso.html tag1="example" tag2="electrode" %}
-{% include seealso.html tag1="example" tag2="headmodel" tag3="eeg" %}
+{% include seealso tag1="example" tag2="electrode" %}
+{% include seealso tag1="example" tag2="headmodel" tag3="eeg" %}
 
 and other tutorials
 
-{% include seealso.html tag1="tutorial" tag2="electrode" %}
-{% include seealso.html tag1="tutorial" tag2="headmodel" tag3="eeg" %}
+{% include seealso tag1="tutorial" tag2="electrode" %}
+{% include seealso tag1="tutorial" tag2="headmodel" tag3="eeg" %}

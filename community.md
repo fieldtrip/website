@@ -10,7 +10,7 @@ FieldTrip's community is organised for a large part around its [discussion list]
 
 We also have a [Facebook page](https://www.facebook.com/fieldtriptoolbox/), which shows [photos](https://www.facebook.com/fieldtriptoolbox/photos/), for example of past workshops, and where [events](https://www.facebook.com/fieldtriptoolbox/events/) are announced occasionally. Of course, you can also 'like' us:
 
-{% include facebook.html %}
+{% include facebook %}
 
 ## The larger community
 

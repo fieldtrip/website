@@ -14,11 +14,11 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 ### Welcome message
 
-{% include youtube.html id="S8l8Cw7ysis" %}
+{% include youtube id="S8l8Cw7ysis" %}
 
 ### The basics of MEG measurement and instrumentation
 
-{% include youtube.html id="CPj4jJACeIs" %}
+{% include youtube id="CPj4jJACeIs" %}
 
 ## Advanced MEG/EEG data analysis toolkit course, Nijmegen (April 2018)
 

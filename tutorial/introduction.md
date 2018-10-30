@@ -19,7 +19,7 @@ This tutorial will give you an introduction into how to use FieldTrip with MATLA
 {% include markup/info %}
 This short tutorial introduces the design of the FieldTrip toolbox. If you have some more time, you watch a more elaborate introduction in this lecture.  
 
-{% include youtube.html id="eUVL_twWNdk" %}
+{% include youtube id="eUVL_twWNdk" %}
 {% include markup/end %}
 
 ## Background
@@ -158,8 +158,8 @@ When you have more questions about the topic of any tutorial, don't forget to ch
 
 Here are the [frequently asked questions](/faq) that are MATLAB specific:
 
-{% include seealso.html tag1="matlab" tag2="faq" %}
+{% include seealso tag1="matlab" tag2="faq" %}
 
 Here are the [example scripts](/example) that are MATLAB specific:
 
-{% include seealso.html tag1="matlab" tag2="example" %}
+{% include seealso tag1="matlab" tag2="example" %}

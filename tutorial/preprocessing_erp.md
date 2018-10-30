@@ -363,10 +363,10 @@ After having finished this tutorial on EEG data, you can look at the [event rela
 
 If you have more questions about preprocessing or timelocked-analysis, you can also read the following FAQs:
 
-{% include seealso.html tag1="faq" tag3="preprocessing" %}
-{% include seealso.html tag1="faq" tag3="timelock" %}
+{% include seealso tag1="faq" tag3="preprocessing" %}
+{% include seealso tag1="faq" tag3="timelock" %}
 
 Or you can also read the examples:
 
-{% include seealso.html tag1="example" tag3="preprocessing" %}
-{% include seealso.html tag1="example" tag3="timelock" %}
+{% include seealso tag1="example" tag3="preprocessing" %}
+{% include seealso tag1="example" tag3="timelock" %}

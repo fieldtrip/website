@@ -125,4 +125,4 @@ It is much advised to also read this [technical note](http://www.mathworks.com/s
 
 These are FAQs that are related to memory issues:
 
-{% include seealso.html tag1="faq" tag2="memory" %}
+{% include seealso tag1="faq" tag2="memory" %}

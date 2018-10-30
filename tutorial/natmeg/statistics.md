@@ -24,7 +24,7 @@ This tutorial is not covering group analysis. If you are interested in that, you
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
 
-{% include youtube.html id="vOSfabsDUNg" %}
+{% include youtube id="vOSfabsDUNg" %}
 {% include markup/end %}
 
 ## Background
@@ -409,10 +409,10 @@ This tutorial showed you how to perform parametric and non-parametric statistics
 ### Suggested further reading
 
 Tutorials:
-{% include seealso.html tag1="statistics" tag2="tutorial" %}
+{% include seealso tag1="statistics" tag2="tutorial" %}
 
 FAQs:
-{% include seealso.html tag1="statistics" tag2="faq" %}
+{% include seealso tag1="statistics" tag2="faq" %}
 
 Example scripts:
-{% include seealso.html tag1="statistics" tag2="example" %}
+{% include seealso tag1="statistics" tag2="example" %}

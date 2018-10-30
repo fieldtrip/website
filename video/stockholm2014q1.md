@@ -8,28 +8,28 @@ tags: [video]
 
 ## FieldTrip introduction by Robert Oostenveld
 
-{% include youtube.html id="I1lQumrWFKs" %}
+{% include youtube id="I1lQumrWFKs" %}
 
 ## Frequency analysis methods by Robert Oostenveld
 
-{% include youtube.html id="6EIBh5lHNSc" %}
+{% include youtube id="6EIBh5lHNSc" %}
 
 ## Frequency analysis applications in neuroscience by Matti Hamalainen
 
-{% include youtube.html id="7R5SmoG8pD0" %}
+{% include youtube id="7R5SmoG8pD0" %}
 
 ## Realtime MEG analysis by Robert Oostenveld
 
-{% include youtube.html id="nLaOcMMvcNI" %}
+{% include youtube id="nLaOcMMvcNI" %}
 
 ## Current dipole models in MEG by Matti Hamalainen
 
-{% include youtube.html id="pFdCWsqPEFg" %}
+{% include youtube id="pFdCWsqPEFg" %}
 
 ## Connectivity analysis of MEG data by Robert Oostenveld
 
-{% include youtube.html id="LKrxdrntWcQ" %}
+{% include youtube id="LKrxdrntWcQ" %}
 
 ## Decoding MEG data by Alexandre Gramfort
 
-{% include youtube.html id="f3yrVfVtCUE" %}
+{% include youtube id="f3yrVfVtCUE" %}

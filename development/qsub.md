@@ -28,4 +28,4 @@ details on the qsub toolbox or see http://www.fieldtriptoolbox.org/faq for quest
 
 ## Frequently asked questions about distributed computing using this toolbox
 
-{% include seealso.html tag1="faq" tag2="qsub" %}
+{% include seealso tag1="faq" tag2="qsub" %}

@@ -407,8 +407,8 @@ You can read more about specific source-reconstruction methods in the [Localizin
 
 Here are the related FAQs:
 
-{% include seealso.html tag1="sourcemodel" tag2="meg" tag3="faq" %}
+{% include seealso tag1="sourcemodel" tag2="meg" tag3="faq" %}
 
 and the related examples:
 
-{% include seealso.html tag1="sourcemodel" tag2="meg" tag3="example" %}
+{% include seealso tag1="sourcemodel" tag2="meg" tag3="example" %}

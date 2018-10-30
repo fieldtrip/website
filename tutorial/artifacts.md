@@ -100,8 +100,8 @@ Following this introduction on how you can deal with artifacts in FieldTrip, you
 
 #### Example scripts
 
-{% include seealso.html tag1="artifact" tag2="example" %}
+{% include seealso tag1="artifact" tag2="example" %}
 
 #### Frequently asked questions
 
-{% include seealso.html tag1="artifact" tag2="faq" %}
+{% include seealso tag1="artifact" tag2="faq" %}
