@@ -26,7 +26,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 ## Background
 
-{{page>:tutorial:shared:sourcelocalization_background}}
+{% include shared/tutorial/sourcelocalization_background.md %}
 
 In the [Preprocessing and event-related activity](/tutorial/natmeg/preprocessing) tutorial, time-locked averages of event related fields of the standard and deviant conditions were computed and it was shown that there is a difference between the conditions. The topographical distribution of the ERFs belonging to each condition to the difference have been plotted. The aim of this tutorial is to localise the sources of the underlying neuronal activity. For this we need a source model and a volume conduction model.
 
@@ -37,7 +37,7 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.
 
 ### Volume conduction model
 
-{{page>:tutorial:shared:headmodel_background}}
+{% include shared/tutorial/headmodel_background.md %}
 
 ## Procedure
 

@@ -1,9 +1,7 @@
 ---
-title: Contact
+title: About
 layout: default
 ---
-
-# About
 
 FieldTrip is being developed and maintained by a team of researchers at the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders) in collaboration with many researchers over the world.
 
@@ -22,7 +20,3 @@ University Nijmegen
 P.O. Box 9101  
 NL-6500 AH Nijmegen  
 The Netherlands  
-
-## Frequently Asked Questions
-
-{{page>faq:how_should_i_send_example_data_to_the_developers}}

@@ -379,7 +379,7 @@ Use these settings for 'surface' plotting
     cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat';
     cfg.surfdownsample = 10;
-    {% include markup/end %}
+{% include markup/end %}
 
 #### Exercise: determining anatomical labels
 
@@ -506,10 +506,6 @@ We demonstrated how to apply the DICS beamformer algorithm in the frequency doma
 Details on head models can be found [here](/tutorial/headmodel_meg) or  [here](/example/make_leadfields_using_different_headmodels). Another tutorial on beamforming that covers options without contrasting conditions [can be found here](/tutorial/beamformer#source_analysiswithout_contrasting_condition).
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). See [here for source statistics](/example/source_statistics). If you want to dive deeper into coherence, [take a look here](/tutorial/coherence). And in the appendix there is a way described how to [compute virtual MEG sensors](/tutorial/shared/virtual_sensors).
 
-FAQ
-{% include seealso.html tag1="faq" tag2="source" tag3="connectivity" %}
-{% include seealso.html tag1="faq" tag2="source" tag3="coherence" %}
-
-Example script
-{% include seealso.html tag1="example" tag2="source" tag3="connectivity" %}
-{% include seealso.html tag1="example" tag2="source" tag3="coherence" %}
+## See also
+{% include seealso.html tag1="faq" source="connectivity" %}
+{% include seealso.html tag1="faq" source="coherence" %}

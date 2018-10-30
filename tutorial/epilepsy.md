@@ -10,13 +10,17 @@ tags: [tutorial, MEG-epilepsy]
 * this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-#  Virtual channel analysis of epilepsy MEG data
-
 {% include markup/info %}
 This documentation is under development and hence incomplete and perhaps incorrect.
 {% include markup/end %}
 
-{{page>:tutorial/shared/disclaimer}}
+#  Virtual channel analysis of epilepsy MEG data
+
+{% include markup/danger %}
+The FieldTrip toolbox is designed for research purposes only. The FieldTrip project and development team make no representation that FieldTrip is a clinically approved medical device, and users understand and accept that any result or its display presented in whatever form obtained using FieldTrip must not be used for any purpose other than research.
+
+FieldTrip is released under the [GNU General Public License](http://www.gnu.org/copyleft/gpl.html) and you should review its terms and conditions.
+{% include markup/end %}
 
 The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy)
 

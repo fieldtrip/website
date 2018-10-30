@@ -1,12 +1,17 @@
 ---
-title: MATLAB and external requirements
+title: What are the MATLAB and external requirements?
 layout: default
 tags: [faq, matlab, toolbox]
 ---
 
-{{page>:faq:matlab_requirements}}
+# What are the MATLAB and external requirements?
 
-{{page>:faq:matlab_replacements}}
+{% include shared/faq/requirements.md %}
 
-{{page>:faq:external}}
+## External requirements
 
+{% include shared/faq/external.md %}
+
+## Replacements for functions from Mathworks toolboxes
+
+{% include shared/faq/replacements.md %}

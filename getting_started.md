@@ -5,7 +5,7 @@ layout: default
 
 # Getting Started
 
-FieldTrip is a toolbox that contains a set of separate (high-level) functions, it is not a program with a graphical user interface. The toolbox functions can be combined into an analysis pipeline, i.e. a MATLAB script containing all steps of your analysis. For this reason, if you are new to MATLAB or EEG/MEG analysis, FieldTrip might not be the way to go for you yet. If you are persistent and eager to learn, [references to review papers and teaching material](/references_to_review_papers_and_teaching_material) might help you on your way. 
+FieldTrip is a toolbox that contains a set of separate (high-level) functions, it is not a program with a graphical user interface. The toolbox functions can be combined into an analysis pipeline, i.e. a MATLAB script containing all steps of your analysis. For this reason, if you are new to MATLAB or EEG/MEG analysis, FieldTrip might not be the way to go for you yet. If you are persistent and eager to learn, [references to review papers and teaching material](/references_to_review_papers_and_teaching_material) might help you on your way.
 
 To get a general overview of how FieldTrip is designed, please have a look at the [reference paper](http://www.hindawi.com/journals/cin/2011/156869) and at the [modular development](/development/modules) page.
 
@@ -15,4 +15,4 @@ We organize [FieldTrip workshops](/workshop) and a yearly “Advanced EEG/MEG an
 
 If you are very eager to get started with your own data, please proceed to the user documentation section on [importing your own data](/reading_data).
 
-{{page>:getting_started:shared}}
+{% include shared/getting_started.md %}

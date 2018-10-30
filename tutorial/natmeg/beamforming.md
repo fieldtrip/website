@@ -1,7 +1,7 @@
 ---
 title: Beamforming oscillatory responses in combined MEG/EEG data
 layout: default
-tags: [tutorial, natmeg, meg+eeg, beamforming, MEG-audodd]
+tags: [tutorial, beamforming, natmeg, meg+eeg, MEG-audodd]
 ---
 
 # Table of contents

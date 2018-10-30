@@ -3,11 +3,12 @@ title: User Documentation
 layout: default
 ---
 
-# User Documentation
+# Documentation
 
 The documentation for FieldTrip is split into several parts:
 
 * [Walkthrough](/walkthrough)
+* [Getting started](/getting_started)
 * [Tutorial documentation](/tutorial)
 * [Frequently asked questions](/faq)
 * [Example matlab scripts](/example)

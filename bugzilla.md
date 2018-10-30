@@ -27,4 +27,6 @@ If there is a chance to the bug being platform dependent, please also specify th
 
 Example data (e.g. your MATLAB workspace) that helps to pinpoint a specific issue can be uploaded to the bugzilla server as attachment. This only works for relatively small files. If the data that you want to share is too large, please consider using one of the methods for sharing files that is listed in this frequently asked question:
 
-{{page>faq:how_should_i_send_example_data_to_the_developers}}
+## See also
+
+{% include seealso.html tag=bugzilla %}

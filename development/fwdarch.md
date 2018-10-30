@@ -78,7 +78,7 @@ The following paragraphs describe in synthesis the pipelines for the various met
 
 ## INF1 method
 From CT to Infinite space
-{{page>:development:shared:forwinf}}
+{% include shared/development/forwinf.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## HS1 method
@@ -87,24 +87,24 @@ FROM CT TO Infinite halfspace
 
 This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
 Method:
-{{page>:development:shared:forwsegm}}
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwsegm.md %}
+{% include shared/development/forwslab.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 ## SL1 method
 
 FROM CT TO Infinite slab
 
 This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
-{{page>:development:shared:forwsegm}}
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwsegm.md %}
+{% include shared/development/forwslab.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 ## SPH1 method
 
 FROM CT TO Single sphere
 
 This method applies to ECoG or iEEG and is normally not used for scalp EEG:
-{{page>:development:shared:forwsegm}}
-{{page>:development:shared:forwsphere}}
+{% include shared/development/forwsegm.md %}
+{% include shared/development/forwsphere.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  CS1 method
@@ -116,7 +116,7 @@ For a 3-sphere model the spheres represent the skin surface, the outside of the 
 Accordingly:
 
 **For 3 spheres:**
-{{page>:development:shared:forwsegm}}
+{% include shared/development/forwsegm.md %}
 5 - Extract the filled volume of the outer skull using morphological operators
 6 - Dilate the outer skull to estimate the scalp compartment
 7 - For each compartment fit a sphere (see [#SPH1 method](/#SPH1 method))
@@ -136,7 +136,7 @@ FROM CT TO FEM
 For a FEM model we have to represent as many different volumetric compartments as wanted. In the case of a CT scan we can identify the following tissue compartments:
 volume of the scalp, the skull, inside of the skull, inside of the CSF
 
-{{page>:development:shared:forwsegm}}
+{% include shared/development/forwsegm.md %}
 5 - Dilate the outer skull to estimate the scalp compartment
 6 - Erode the skull to obtain the inner CSF compartment
 7 - Check that each compartment does not contain holes, and fill them
@@ -165,7 +165,7 @@ FROM CT TO FDM
 This method is based on anatomical description obtained from the segmentation of the CT scan. Normally the 'elements' of the FDM (Finite Differences Method) are the voxels of each compartment (as for example for the FNS method). Consequently it is important to obtain the segmentation of as many compartments as possible from the CT scan. Typically we will try to obtain:
 the scalp, the skull, the inner skull, the inner CSF compartments
 
-{{page>:development:shared:forwsegm}}
+{% include shared/development/forwsegm.md %}
 5 - Dilate the skull to estimate the scalp compartment
 6 - Erode the skull to obtain the inner CSF compartment
 7 - Assign the conductivity value to each compartment (from literature)
@@ -178,7 +178,7 @@ the scalp, the skull, the inner skull, the inner CSF compartments
 ##  ASA1 method
 
 FROM CT TO ASA BEM
-{{page>:development:shared:forwasa}}
+{% include shared/development/forwasa.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  BEMCP1 method
@@ -186,8 +186,8 @@ FROM CT TO ASA BEM
 FROM CT TO BEMCP
 
 This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
-{{page>:development:shared:forwsegm}}
-{{page>:development:shared:fwdbemct}}
+{% include shared/development/forwsegm.md %}
+{% include shared/development/fwdbemct.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  Dipoli1 method
@@ -195,8 +195,8 @@ This method generates a 'vol' structure which contains the conductivities of eac
 FROM CT TO Dipoli
 
 This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
-{{page>:development:shared:forwsegm}}
-{{page>:development:shared:fwdbemct}}
+{% include shared/development/forwsegm.md %}
+{% include shared/development/fwdbemct.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  OpenMEEG1 method
@@ -204,8 +204,8 @@ This method generates a 'vol' structure which contains the conductivities of eac
 FROM CT TO OpenMEEG
 
 This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
-{{page>:development:shared:forwsegm}}
-{{page>:development:shared:fwdbemct}}
+{% include shared/development/forwsegm.md %}
+{% include shared/development/fwdbemct.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 # Having a MRI scan and EEG data
 
@@ -213,7 +213,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 
 From MRI to Infinite space
 
-{{page>:development:shared:forwinf}}
+{% include shared/development/forwinf.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -223,8 +223,8 @@ FROM MRI TO Infinite halfspace
 
 This applies for example when the set of electrodes is distributed on a very flat surface (e.g. Utah array)
 Method:
-{{page>:development:shared:forwsegmmri}}
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwsegmmri.md %}
+{% include shared/development/forwslab.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SL2 method
@@ -232,8 +232,8 @@ Method:
 FROM MRI TO Infinite slab
 
 This applies for example when the set of electrodes is distributed on a flat surface (e.g. Utah array)
-{{page>:development:shared:forwsegmmri}}
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwsegmmri.md %}
+{% include shared/development/forwslab.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SPH2 method
@@ -241,8 +241,8 @@ This applies for example when the set of electrodes is distributed on a flat sur
 FROM MRI TO Single sphere
 
 This method applies to ECoG or iEEG and is normally not used for scalp EEG:
-{{page>:development:shared:forwsegmmri}}
-{{page>:development:shared:forwsphere}}
+{% include shared/development/forwsegmmri.md %}
+{% include shared/development/forwsphere.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## CS2 method
@@ -266,7 +266,7 @@ FROM MRI TO FDM
 
 FROM MRI TO ASA BEM
 
-{{page>:development:shared:forwasa}}
+{% include shared/development/forwasa.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -275,8 +275,8 @@ FROM MRI TO ASA BEM
 FROM MRI TO BEMCP
 
 This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
-{{page>:development:shared:forwsegmmri}}
-{{page>:development:shared:fwdbemmri}}
+{% include shared/development/forwsegmmri.md %}
+{% include shared/development/fwdbemmri.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -285,16 +285,16 @@ This method generates a 'vol' structure which contains the conductivities of eac
 FROM MRI TO Dipoli
 
 This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
-{{page>:development:shared:forwsegmmri}}
-{{page>:development:shared:fwdbemmri}}
+{% include shared/development/forwsegmmri.md %}
+{% include shared/development/fwdbemmri.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  OpenMEEG2 method
 
 FROM MRI TO OpenMEEG
 This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
-{{page>:development:shared:forwsegmmri}}
-{{page>:development:shared:fwdbemmri}}
+{% include shared/development/forwsegmmri.md %}
+{% include shared/development/fwdbemmri.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 # Having headshape points and EEG data
@@ -303,7 +303,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 
 From Headshape points to Infinite space
 
-{{page>:development:shared:forwinf}}
+{% include shared/development/forwinf.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -315,7 +315,7 @@ Headshape points are the 3D electrodes positions in this case. This is the case,
 
 Method:
 -With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwslab.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -325,7 +325,7 @@ FROM Headshape points TO Infinite slab
 
 This case happens when I have a set of electrodes positions and an estimate of the average cortical thickness in the electrode's positions (i.e. Utah array)
 -With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwslab.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SPH3 method
@@ -349,25 +349,25 @@ FROM Headshape points TO Concentric spheres
 ## ASA3 method
 
 FROM Headshape points TO ASA
-{{page>:development:shared:forwasa}}
+{% include shared/development/forwasa.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## BEMCP3 method
 
 FROM Headshape points TO BEMCP
-{{page>:development:shared:fwdbemheadshape}}
+{% include shared/development/fwdbemheadshape.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## Dipoli3 method
 
 FROM Headshape points TO Dipoli
-{{page>:development:shared:fwdbemheadshape}}
+{% include shared/development/fwdbemheadshape.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## OpenMEEG3 method
 
 FROM Headshape points TO OpenMEEG
-{{page>:development:shared:fwdbemheadshape}}
+{% include shared/development/fwdbemheadshape.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 # Having a headshape triangulation and EEG data
@@ -375,7 +375,7 @@ FROM Headshape points TO OpenMEEG
 ## INF4 method
 
 FROM Headshape triangulation TO Infinite space
-{{page>:development:shared:forwinf}}
+{% include shared/development/forwinf.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## HS4 method
@@ -386,7 +386,7 @@ Headshape points are read from an external software file, in form of a closed tr
 
 Method:
 -With the available points consider if it is necessary to further process the inner skull surface. Avoid the next point if no further processing is necessary.
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwslab.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ## SL4 method
@@ -397,7 +397,7 @@ The user has a closed boundary, e.g. representing the brain, and an estimate of 
 
 Method:
 -With the available points consider if it is necessary to further process the inner skull/brain surface. Avoid the next point if no further processing is necessary.
-{{page>:development:shared:forwslab}}
+{% include shared/development/forwslab.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
@@ -425,33 +425,33 @@ FROM Headshape triangulation TO Concentric spheres
 
 FROM Headshape triangulation TO ASA BEM
 
-{{page>:development:shared:forwasa}}
+{% include shared/development/forwasa.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  BEMCP4 method
 
 FROM Headshape triangulation TO BEMCP
-{{page>:development:shared:fwdbemheadshape}}
+{% include shared/development/fwdbemheadshape.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  Dipoli4 method
 
 FROM Headshape triangulation TO Dipoli
-{{page>:development:shared:fwdbemheadshape}}
+{% include shared/development/fwdbemheadshape.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 ##  OpenMEEG4 method
 
 FROM Headshape triangulation TO OpenMEEG
-{{page>:development:shared:fwdbemheadshape}}
+{% include shared/development/fwdbemheadshape.md %}
 [Back](/#Architecture/ defining a table for the possible implementations)
 
 # Having nothing and EEG data
 
 ## INF5 method
 
-{{page>:development:shared:forwinf}}
+{% include shared/development/forwinf.md %}
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 

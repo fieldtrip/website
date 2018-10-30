@@ -26,11 +26,11 @@ The volume conduction model created here is MEG specific and cannot be used for 
 
 ## Background
 
-{{page>:tutorial:shared:sourcelocalization_background}}
+{% include shared/tutorial/sourcelocalization_background.md %}
 
 This tutorial is focusing on how to build the **volume conduction model for the head**.
 
-{{page>:tutorial:shared:headmodel_background}}
+{% include shared/tutorial/headmodel_background.md %}
 
 In this specific tutorial we will use a semi-realistic head model developed by Nolte (2003) that assumes a realistic information about the interface between the brain and the skull. This outer brain surface will be extracted from the anatomical MRI images of the subject. First, we will use anatomical MRI of the subject to extract the brain surface from the anatomical images, which is termed **segmentation**. Note that the segmentation procedure is quite time consuming. Following the segmentation of the anatomical images, a description of the surface using vertices and triangles is constructed. Finally, the single-shell head model will be computed.
 

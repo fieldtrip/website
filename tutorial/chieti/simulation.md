@@ -14,7 +14,7 @@ This tutorial contains hands-on material that we use for the [MEG connectivity w
 
 ## Background
 
-{{page>:tutorial:shared:connectivity_simulation_background}}
+{% include shared/tutorial/connectivity_simulation_background.md %}
 
 ## Procedure
 
@@ -22,4 +22,4 @@ We will simulate (virtual) channel-data and use it to compute various connectivi
 
 ## Simulated data with directed connections
 
-{{page>:tutorial:shared:connectivity_simulation_simulations}}
+{% include shared/tutorial/connectivity_simulation_simulations.md %}

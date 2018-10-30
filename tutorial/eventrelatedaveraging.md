@@ -46,7 +46,7 @@ To calculate the event related field / potential for the example dataset we will
 
 ## Preprocessing
 
-{{page>:tutorial:shared:preprocessing_fic_lp}}
+{% include shared/tutorial/preprocessing_fic_lp.md %}
 
 {% include markup/info %}
 A note about padding: The padding parameter (cfg.padding) defines the duration to which the data in the trial will be padded (i.e. data-padded, not zero-padded). The padding is removed from the trial after filtering. Padding the data is beneficial, since the edge artifacts that are typically seen after filtering will be in the padding and not in the part of interest. Padding can also be relevant for DFT filtering of the 50Hz line noise artifact: long padding ensures a higher frequency resolution for the DFT filter, causing a narrower notch to be removed from the data. Padding can only be done on data that is stored in continuous format, therefore it is not used here.
@@ -77,8 +77,8 @@ The most important fields are 'dataFIC_LP.trial' containing the individual trial
 
 To perform the preprocessing for the fully congruent (FC) and initiall congruent (IC) conditions, do the followin
 
-{{page>:tutorial:shared:preprocessing_fc_lp}}
-{{page>:tutorial:shared:preprocessing_ic_lp}}
+{% include shared/tutorial/preprocessing_fc_lp.md %}
+{% include shared/tutorial/preprocessing_ic_lp.md %}
 
 ## Timelockanalysis
 

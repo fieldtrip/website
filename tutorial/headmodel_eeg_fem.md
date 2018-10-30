@@ -30,11 +30,11 @@ Vorwerk, J., Oostenveld, R., Piastra, M.C., Magyari, L., & Wolters, C. H. **The 
 
 ## Background
 
-{{page>:tutorial:shared:sourcelocalization_background}}
+{% include shared/tutorial/sourcelocalization_background.md %}
 
 This tutorial is focusing on how to build the **FEM volume conduction model for the head**.
 
-{{page>:tutorial:shared:headmodel_background}}
+{% include shared/tutorial/headmodel_background.md %}
 
 {% include markup/info %}
 If an anatomical MRI is not available for your EEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. If you do not have an MRI, but if you do have a measurement of the scalp surface (e.g. with a Polhemus tracker), you can use concentric spheres volume conduction model. If you do not want to (or cannot) use any realistic information about the brain-surface or the head-shape, you can resort to the single sphere volume conduction model.

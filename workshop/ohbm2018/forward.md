@@ -11,7 +11,7 @@ The aim of this tutorial is to solve the EEG and MEG forward problems using the 
 
 ## Background
 
-{{page>:tutorial:shared:sourcelocalization_background}}
+{% include shared/tutorial/sourcelocalization_background.md %}
 
 ## Procedure
 

@@ -30,6 +30,6 @@ There are some low-level features of the FieldTrip code that are of interest to 
 
 Besides the Mathworks distributed computing toolbox, FieldTrip includes three options that you can use for distributed computing. These range from small to large scale distributed computing. Note that FieldTrip does not automatically distribute the workload, you have to implement the distributed computing in your own analysis scripts.
 
-*  [development:engine](/development/engine) distributed computing on a (massive) multi-core computer
-*  [development:peer](/development/peer) distributed computing on an ad-hoc multi-core and/or multi-node peer-to-peer  cluster
-*  [development:qsub](/development/qsub) distributed computing on a Torque or SGE cluster
+*  [engine](/development/engine) distributed computing on a (massive) multi-core computer
+*  [peer](/development/peer) distributed computing on an ad-hoc multi-core and/or multi-node peer-to-peer cluster
+*  [qsub](/development/qsub) distributed computing on a Torque or SGE cluster

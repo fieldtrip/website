@@ -6,7 +6,7 @@ tags: [dataformat, meg, eeg, lfp, spike, raw]
 
 # Supported data formats
 
-FieldTrip has a flexible way of supporting data formats. It uses a number of functions that provide a common interface to all electrophysiological (EEG/MEG) file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)*. Where needed, these functions will call the appropriate low-level functions for each file format. Some of the low-level functions are written by ourselves, others are supplied by the manufacturers and again others are obtained from other open source toolboxes. You can find more technical information on the reading functions on [this](/development/fileio) page.
+FieldTrip has a flexible way of supporting data formats. It uses a number of functions that provide a common interface to all electrophysiological (EEG/MEG) file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. Where needed, these functions will call the appropriate low-level functions for each file format. Some of the low-level functions are written by ourselves, others are supplied by the manufacturers and again others are obtained from other open source toolboxes. You can find more technical information on the reading functions on [this](/development/fileio) page.
 
 Here is a summary of the data formats that are supported by FieldTrip. Below you can find more details on some of the formats, especially regarding the MEG systems and their auxiliary files (e.g. MRI and volume conduction models). We regularly implement new data formats and this documentation may be out of date, so if yours is not listed here, please check the code.
 
@@ -82,6 +82,6 @@ The following surface and volume mesh formats are supported by **[ft_read_headsh
 *  BrainSuite
 *  Wavefront .obj
 
-# Frequently Asked Questions
+## See also
 
 {% include seealso.html tag1="faq" tag2="dataformat" %}

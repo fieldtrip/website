@@ -14,11 +14,11 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc, MEG-visuomoto
 
 ## Introduction
 
-{{page>:tutorial:shared:connectivity_simulation_intro}}
+{% include shared/tutorial/connectivity_simulation_intro.md %}
 
 ## Background
 
-{{page>:tutorial:shared:connectivity_simulation_background}}
+{% include shared/tutorial/connectivity_simulation_background.md %}
 
 ## Procedure
 
@@ -30,11 +30,11 @@ This tutorial consists of three part
 
 ## Simulated data with directed connections
 
-{{page>:tutorial:shared:connectivity_simulation_simulations}}
+{% include shared/tutorial/connectivity_simulation_simulations.md %}
 
 ## Source-level cortico-cortical connectivity in MEG data
 
-{{page>:tutorial:shared:virtual_sensors}}
+{% include shared/tutorial/virtual_sensors.md %}
 
 ### Project along the strongest dipole direction
 

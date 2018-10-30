@@ -48,7 +48,7 @@ To calculate the time-frequency analysis for the example dataset we will perform
 
 *Figure 2; Schematic overview of the steps in time-frequency analysis*
 
-{{page>:tutorial:natmeg:shared:preproc_response_meg}}
+{% include shared/tutorial/natmeg/preproc_response_meg.md %}
 
 ##  Time-frequency analysis with a Hanning taper and fixed window length
 

@@ -34,12 +34,6 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
-# Frequently Asked Questions
+## See also
 
-{{page>:faq:matlab_requirements}}
-
-{{page>:faq:external}}
-
-{{page>:faq:i_am_working_at_the_f.c._donders_should_i_also_download_fieldtrip}}
-
-{{page>:faq:i_am_having_problems_downloading_from_the_ftp_server}}
+{% include seealso.html tag="download" %}

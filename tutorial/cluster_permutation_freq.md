@@ -30,7 +30,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 ## Background
 
-{{page>:tutorial:shared:cluster_permutation_background}}
+{% include shared/tutorial/cluster_permutation_background.md %}
 
 ## Procedure
 
@@ -85,10 +85,10 @@ In a between-trials experiment, we analyze the data of a single subject. By mean
 ### Preprocessing
 
 We first extract the trials of the fully incongruent condition.
-{{page>:tutorial:shared:preprocessing_fic}}
+{% include shared/tutorial/preprocessing_fic.md %}
 
 Then we also extract the trails of the fully congruent condition.
-{{page>:tutorial:shared:preprocessing_fc}}
+{% include shared/tutorial/preprocessing_fc.md %}
 ### Calculation of the planar gradient and time-frequency analysis
 
 Before calculating the TFRs we calculate the planar gradient with **[ft_megplanar](/reference/ft_megplanar)**.

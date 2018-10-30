@@ -39,7 +39,7 @@ Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of 
 
 If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the *trl* matrix. These will be added to the data in the *.trialinfo* field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.   
 
-{{page>:tutorial:natmeg:dataset}}
+{% include shared/tutorial/natmeg/dataset.md %}
 
 # Browsing the data prior to preprocessing
 
@@ -59,7 +59,7 @@ The databrowser will **not** change your data in any way. If you specify a cfg a
 
 ## Visualization
 
-Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Elekta/Neuromag MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look at http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s
+Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Elekta/Neuromag MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look [here in this video](http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s).
 
 The MEG dataset that we use in this tutorial is available as   [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
 
@@ -81,9 +81,9 @@ We will first start with the magnetometer
 If your recorded data is continuous, specify *cfg.continuous = 'yes'*, if you have recorded your data in trials, specify *cfg.continuous = 'no'*
 {% include markup/end %}
 
-{{tutorial:natmeg_temp:natmeg_databrowser1.png?650"}}
+![image](/static/img/tutorial/natmeg_temp/natmeg_databrowser1.png@650)
 
-*Figure A; Raw plot from magnetometers using ft_databrowser*
+*Figure; Raw plot from magnetometers using ft_databrowser*
 
 {% include markup/info %}
 Try to get a feel of your data by browsing through the data. Do you see any obvious artifacts?
@@ -114,7 +114,7 @@ Finally, we will look at the EEG channel
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng natmeg_databrowser2.png
 
-{{tutorial:natmeg_temp:natmeg_databrowser2.png?650"}}
+![image](/static/img/tutorial/natmeg_temp/natmeg_databrowser2.png@650)
 
 *Figure; Raw plot from EEG channels using ft_databrowser*
 
@@ -138,7 +138,7 @@ The following steps are taken in the MEG section of the tutorial:
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_flowchart1.png@400)
 
-*Figure 1; A schematic overview of the steps in averaging of event related fields*
+*Figure; A schematic overview of the steps in averaging of event related fields*
 
 ## Reading and preprocessing the interesting trials
 
@@ -221,7 +221,7 @@ This demonstrate how to extract trials from a dataset based on trigger informati
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_rejectsummary.png@650)
 
-//Figure 3; An overview of the data using **[ft_rejectvisual](/reference/ft_rejectvisual)**//
+*Figure 3; An overview of the data using **[ft_rejectvisual](/reference/ft_rejectvisual)***
 
 {% include markup/warning %}
 Use the mouse to click and drag a selection box over the trials you wish to reject. You can see the trials that were marked for rejection on the right. If you wish to unmark a trial for rejection, type the number of the trial in the 'toggle trial' box and press enter. You can change from *zvalue* to another metrics to detect outliers.
@@ -286,7 +286,8 @@ The output is the data structure *ERF_standard* with the following field
 	      elec: [1x1 struct]
 	       cfg: [1x1 struct]
 
-The most important field is ERF_standard.//avg//, containing the average over all trials for each sensor.
+The most important field is ERF_standard.avg, containing the average over all trials for each sensor.
+
 ### Plotting the results using the magnetometers
 
 Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
@@ -308,7 +309,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf1.png@650)
 
-//Figure 4; A plot of the average of all conditions for all channels plotted using  **[ft_multiplotER](/reference/ft_multiplotER)**//
+*Figure 4; A plot of the average of all conditions for all channels plotted using  **[ft_multiplotER](/reference/ft_multiplotER)***
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
@@ -329,7 +330,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf2.png@650)
 
-//Figure 5; A plot of the average of all conditions for channel MEG0211 plotted using  **[ft_singleplotER](/reference/ft_singleplotER)**//
+*Figure 5; A plot of the average of all conditions for channel MEG0211 plotted using  **[ft_singleplotER](/reference/ft_singleplotER)***
 
 To plot the topographic distribution of the data averaged over the time interval from 0.08 to 0.15 seconds use to following command
 
@@ -362,7 +363,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 {{tutorial:natmeg_temp:natmeg_erf3.png?650"}}
 
-//Figure 6; A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)** //
+*Figure 6; A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)***
 
 {% include markup/info %}
 Can you try to explain the topographical distribution in terms of a dipole?
@@ -399,7 +400,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf4.png@650)
 
-//Figure 7; The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis** //
+*Figure 7; The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis***
 
 {% include markup/info %}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
@@ -631,11 +632,11 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erp2.png@650)
 
-//Figure 8; The event related potentials plotted for three conditions for channel EEG020 using **[ ft_singleplotER](/reference/ ft_singleplotER) ** //
+*Figure 8; The event related potentials plotted for three conditions for channel EEG020 using **[ ft_singleplotER](/reference/ft_singleplotER)***
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf2.png@650)
 
-//Figure 9; The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER) ** //
+*Figure 9; The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER)***
 
 {% include markup/info %}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
@@ -673,7 +674,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erp3.png@650)
 
-//Figure 10; A topographic plot of the event related potentials obtained using **[ft_topoplotER](/reference/ft_topoplotER)** //
+*Figure 10; A topographic plot of the event related potentials obtained using **[ft_topoplotER](/reference/ft_topoplotER)***
 
 {% include markup/info %}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
@@ -681,7 +682,7 @@ To which MEG channels can we best compare the topographical plots from the EEG d
 
 ![image](/static/img/tutorial/natmeg_temp/natmeg_erf6.png@650)
 
-//Figure 11; A topographic plot of the event related fields (gradiometer) obtained using **[ft_topoplotER](/reference/ft_topoplotER)**//
+*Figure 11; A topographic plot of the event related fields (gradiometer) obtained using **[ft_topoplotER](/reference/ft_topoplotER)***
 
 ###  Scalp current density
 
@@ -734,7 +735,7 @@ Note that if you get plotting artifacts in these figures, such as colorbars that
 
 {{tutorial:natmeg_temp:natmeg_scd1.png?650"}}
 
-//Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)**//
+*Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)***
 
 {% include markup/info %}
 Did calculating the scalp current density help in narrowing down the source of the EEG activity?

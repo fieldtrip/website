@@ -7,7 +7,7 @@ tags: [edf, eeg, dataformat]
 # Getting started with EDF (European Data Format) data
 
 {% include markup/info %}
-Please feel free to add information if you're using EDF data and want to share info with other FieldTrip users. Just click on "page tools, edit this page".
+Please feel free to add information here if you're using EDF data and want to share info with other FieldTrip users.  
 {% include markup/end %}
 
 ## Introduction
@@ -59,7 +59,6 @@ The annotation channel contains an ascii encoded representation of the time in s
 The detect flank option is explicitly disabled here, this indicates to the code that it should not try to read a continuously sampled TTL channel. With the following trialfun you can define trials (segments) for further processing.
 
 #### Trial function that uses the annotation channel
-
 
 	function [trl, event] = trialfun_annotation(cfg)
 
@@ -115,7 +114,7 @@ Note that filtering, re-referencing, etcetera can be performed at the preprocess
     cfg.viewmode   = 'vertical';
     ft_databrowser(cfg, data);
 
-#### Trial functions
+### Trial functions
 
 Hereunder are two examples of a trial function for parsing a continuously sampled TTL channel. See also [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
 
@@ -177,4 +176,7 @@ In this second example, we define a data segment as the time the trigger was 'on
 Alternatively, when the event channel index is unknown, but its name, or a part thereof (e.g., 'DC01'), is, one may us
     chanindx      = find(ismember(hdr.label, ft_channelselection('*DC01*', hdr.label)));
 
-{{page>:faq: how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates}}
+
+## See also
+
+{% include seealso.html tag="edf" %}

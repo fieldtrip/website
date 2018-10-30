@@ -1,8 +1,3 @@
----
-title: Getting started with particular MEG data types
-layout: default
----
-
 {% include markup/danger %}
 In general you should get started with the [tutorials](/tutorial). The subsequent pages listed below serve to explain system specific details, but lack the complete overview that the tutorials provide. If you have questions, please post them on the [email discussion list](/discussion_list).
 {% include markup/end %}
