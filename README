@@ -5,9 +5,11 @@ This repository contains the content that is hosted on http://www.fieldtriptoolb
 ## Technical notes
 - Pages that contain tags must have a title.
 - Variables passed in an include must be specified in quotes.
-- code blocks should have an empty line before and after them.
+- Code blocks should have an empty line before and after them.
 - Shared pages should go in _include/shared.
+- MarkDown documentation can be found on https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
+- Liquid documentation can be found on https://help.shopify.com/en/themes/liquid.
 
 ## Ideas
-- for image resizing we might consider a service like https://www.imgix.com or https://images.weserv.nl
-- use code highlighting from https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting
+- For image resizing we might consider a service like https://www.imgix.com or https://images.weserv.nl.
+- Use code highlighting from https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting.

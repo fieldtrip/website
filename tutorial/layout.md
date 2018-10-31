@@ -36,7 +36,7 @@ The **[standard layout files](/template/layout)** included in FieldTrip are base
 
 The **[ft_prepare_layout](/reference/ft_prepare_layout)** function can be used to make a custom layout. This can be especially convenient if you have a nice bitmap image for the channel arrangement, like this
 
-{{:tutorial:layout:easycap_m10_equidistant61chan.gif|}}
+{% include image src="/static/img/tutorial/layout/easycap_m10_equidistant61chan.gif" %}
 
 for the Easycap M10 electrodecap arrangement (see http://www.easycap.de/easycap/e/electrodes/13_M10.htm) for full details), or like this
 

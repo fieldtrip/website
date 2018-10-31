@@ -10,15 +10,16 @@ tags: [realtime, artinis]
 
 Artinis Medical Systems is a Dutch company manufacturing wired and wireless  NIRS devices for clinical and research purposes. Artinis is an independent manufacturer, allowing them to design NIRS products for specific customer purposes. Their multichannel NIRS devices are highly modular, allowing cumulative upgrading.
 
-{{http://www.artinis.com/static/img/images/Single_Oxymon.png}}
+{% include image src="/static/img/Single_Oxymon.png" %}
 
 ## Interface with FieldTrip
 
 Artinis has developed their own software Oxysoft for data collection and viewing, storage and analysis. Oxysoft features the ability to stream data directly to the FieldTrip buffer, which needs to be enable in the PortaSoft.ini located in ".../Public Documents/Artinis Medical Systems BV/common". you have to manually add these lines
+
     [FieldTrip]
     Enable = 1
     StartServer = 1
-    
+
 Oxysoft assumes the default buffer port to be 1972. Oxysoft will start an own shared memory segment that data will be buffered to.
 
 Once configured, you can read the streamed data from Matlab, e.g. with FieldTrip

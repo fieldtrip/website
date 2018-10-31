@@ -6,10 +6,7 @@ tags: [faq, logo]
 
 ## Can I use the FieldTrip logo on my poster?
 
-Yes, you can! Showing that you used FieldTrip in your analysis is much appreciated by the developers.
+Yes you can, and it is much appreciated by the developers! Below you can find the logo as a high-resolution bitmap, and in Encapsulated Postscript (eps) format.
 
-Below you can find the logo as a bitmap in high resolution, and in Encapsulated Postscript (eps) format.
-
-{{:faq:fieldtriplogo.eps|encapsulated postscript}}
-
-![image](/static/img/faq/fieldtriplogo.png)
+- [png](/static/img/faq/fieldtriplogo.png)
+- [eps](/static/img/faq/fieldtriplogo.eps)

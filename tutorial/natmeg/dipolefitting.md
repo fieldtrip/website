@@ -26,7 +26,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 ## Background
 
-{% include shared/tutorial/sourcelocalization_background.md %}
+{% include /shared/tutorial/sourcelocalization_background.md %}
 
 In the [Preprocessing and event-related activity](/tutorial/natmeg/preprocessing) tutorial, time-locked averages of event related fields of the standard and deviant conditions were computed and it was shown that there is a difference between the conditions. The topographical distribution of the ERFs belonging to each condition to the difference have been plotted. The aim of this tutorial is to localise the sources of the underlying neuronal activity. For this we need a source model and a volume conduction model.
 
@@ -89,7 +89,7 @@ It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/refe
 
     save mri_orig mri_orig
 
-{{tutorial:natmeg_temp:natmeg_dip_mri_orig.png?500"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_mri_orig.png" width="500" %}
 
 You can see that the MRI is displayed upside down. That in itself is not a problem, as long as the coordinate system correctly describes the MRI. This [frequently asked question](/faq/my_mri_is_upside_down_is_this_a_problem) explains why it is not a problem. However, if you click around in the MRI and look how the [x y z] position in the lower right panel is updated, you should recognize that the MRI is not coregistered with the [Neuromag head coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_neuromag_coordinate_system).
 
@@ -136,7 +136,7 @@ We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordin
     ft_sourceplot([], mri_resliced);
     print -dpng natmeg_dip_mri_resliced.png
 
-{{tutorial:natmeg_temp:natmeg_dip_mri_resliced.png?500"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_mri_resliced.png" width="500" %}
 
     % the low level plotting functions do not know how to deal with units,
     % so make sure we have the MRI expressed in cm as well
@@ -223,7 +223,7 @@ These meshes are all relatively coarse and don’t look so nice in a visualisati
     lighting phong
     print -dpng natmeg_dip_scalp.png
 
-{{tutorial:natmeg_temp:natmeg_dip_scalp.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_scalp.png" width="400" %}
 
     figure
     ft_plot_mesh(highres_scalp, 'edgecolor', 'none', 'facecolor', 'skin')
@@ -232,7 +232,7 @@ These meshes are all relatively coarse and don’t look so nice in a visualisati
     lighting phong
     print -dpng natmeg_dip_highres_scalp.png
 
-{{tutorial:natmeg_temp:natmeg_dip_highres_scalp.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_highres_scalp.png" width="400" %}
 
 {% include markup/info %}
 You can type "camlight" multiple times, to get light from various directions.
@@ -264,7 +264,7 @@ Now that we have the meshes, we use them to compute the volume conduction model.
     view([1 0 0])
     print -dpng natmeg_dip_geometry2.png
 
-{{tutorial:natmeg_temp:natmeg_dip_geometry2.png?500"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_geometry2.png" width="500" %}
 
 ### Process the MEG data
 
@@ -336,7 +336,7 @@ Using the *trialinfo* field, which contains the trigger code, the response code 
 
     print -dpng natmeg_dip_meg_multiplot.png
 
-{{tutorial:natmeg_temp:natmeg_dip_meg_multiplot.png?600"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_meg_multiplot.png" width="600" %}
 
 As before, we also compute the difference waveform, i.e. the [mismatch negativity](http://en.wikipedia.org/wiki/Mismatch_negativity).
 
@@ -386,7 +386,7 @@ We can use **[ft_sourceplot](/reference/ft_sourceplot)** to plot the cross-secti
 
     print -dpng natmeg_dip_planarortho.png
 
-{{tutorial:natmeg_temp:natmeg_dip_planarortho.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_planarortho.png" width="400" %}
 
 This does not offer much insight in the two dipoles. Hence we again resort to the low-level plotting functions to make a 3-D figure that includes both dipoles and some select slices of the anatomical MRI.
 
@@ -412,7 +412,7 @@ This does not offer much insight in the two dipoles. Hence we again resort to th
     view(12, -10)
     print -dpng natmeg_dip_symx.png
 
-{{tutorial:natmeg_temp:natmeg_dip_symx.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_symx.png" width="400" %}
 
 Use the rotate functionality to get a 3-D impression of the location of the dipoles relative to the brain. The cross-section in the MRI is made at the average position of the two (symmetric) dipoles and hence is precisely at x=0. Furthermore, both dipoles ly in the same y- and z-plane.
 
@@ -451,7 +451,7 @@ Now that we have a better starting point for the dipole fit, we can release the 
     view(12, -10)
     print -dpng natmeg_dip_nosym.png
 
-{{tutorial:natmeg_temp:natmeg_dip_nosym.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_nosym.png" width="400" %}
 
 You can see that the dipoles have moved a little bit from their original location and that they are not symmetric any more.
 
@@ -501,7 +501,7 @@ The orientation and strength of each dipole is represented as a 3*Ntime matrix, 
 
     print -dpng natmeg_dip_timeseries.png
 
-{{tutorial:natmeg_temp:natmeg_dip_timeseries.png?500"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_timeseries.png" width="500" %}
 
 Besides comparing the timecourse of the activity between the two conditions, we could also ask whether the activity is at a different location.  
 
@@ -552,7 +552,7 @@ We can plot the dipoles together in 3D. Note the color-coding that is used to di
 
     print -dpng natmeg_dip_sourcedif.png
 
-{{tutorial:natmeg_temp:natmeg_dip_sourcedif.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_sourcedif.png" width="400" %}
 
 {% include markup/info %}
 The dipole positions are not exactly the same. Explain the difference in the dipole position and how the MMN might contribute to the dipole position of the deviant being shifted inward.
@@ -596,7 +596,7 @@ Rather than assuming that the dipole position is fixed over a certain time-windo
 
     print -dpng natmeg_dip_moving.png
 
-{{tutorial:natmeg_temp:natmeg_dip_moving.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_moving.png" width="400" %}
 
 ### Construct the EEG volume conduction model
 
@@ -611,7 +611,7 @@ The EEG needs a different volume conduction model than the EEG. Previously we al
 
     print -dpng natmeg_dip_meshorig.png
 
-{{tutorial:natmeg_temp:natmeg_dip_meshorig.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_meshorig.png" width="400" %}
 
 If you look carefully, you can identify a problem with the mesh. The BEM requires that the meshes are closed and non-intersecting. The figure shows that over right temporal regions there are some vertices of the skull surface that stick out of the skull. This is due to an overestimation of the skull thickness over the temporal region.
 
@@ -629,7 +629,7 @@ One solution would be to inflate the scalp mesh a bit, i.e. to scale it a bit ou
 
     print -dpng natmeg_dip_meshinfl.png
 
-{{tutorial:natmeg_temp:natmeg_dip_meshinfl.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_meshinfl.png" width="400" %}
 
 This does address the problem, however also causes the skin to become thicker all-over.
 
@@ -895,7 +895,7 @@ Lets plot the dipoles and see how it compares to our fit of the MEG dat
     axis tight
     axis off
 
-{{tutorial:natmeg_temp:natmeg_dip_sourceeeg_symx.png?400"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_dip_sourceeeg_symx.png" width="400" %}
 
 The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to release the symmetry constraint and fit the 2-dipole mode, starting from the symmetric position as initial guess.
 

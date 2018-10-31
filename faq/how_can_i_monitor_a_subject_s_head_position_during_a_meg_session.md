@@ -62,7 +62,7 @@ To improve the real time head movement compensation, we can also specify a reali
 
 **Repositioning between a recording session** , i.e. to a previous recording session, can be achieved by specifying cfg.template. Either by pointing to another dataset; e.g. cfg.template = 'subject01xxx.ds' (CTF275 systems only), or by pointing to a textfile created by clicking the Update button during a previous recording session; e.g. cfg.template = '29-Apr-2013-xxx.txt' (CTF275 and Neuromag systems).
 
-{{:faq:anims1.gif?direct&600|}}
+{% include image src="/static/img/faq/anims1.gif" width="600" %} 
 
 _Figure 1; Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both aurical points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns lightblue (CTF only). Click on the image for the animation. _
 

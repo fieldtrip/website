@@ -201,9 +201,9 @@ The most important fields are data_MEG.trial containing the individual trials an
     plot(data_MEG.time{1}, data_MEG.trial{1}(130,:))
     print -dpng natmeg_preproc1.png
 
-{{tutorial:natmeg_temp:natmeg_erf0.png?600"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_erf0.png" width="600" %}
 
-*Figure 2; A plot of a single trial of one channel*
+*Figure; A plot of a single trial of one channel*
 
 This demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. The way we deal with artifacts is described in general in [another tutorial](/tutorial/artifacts) and visual artifact rejection is described in the [Visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. For efficiency in this hands-on tutorial, we will use a semi-automatic way of rejecting trials and channels containing artifacts using a summary view of all trials and channels transformed into z-scores. This allows you to get a quick overview of your data and enables you to easily detect and remove outliers.
 
@@ -361,7 +361,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 	print -dpng natmeg_erf3.png
 
-{{tutorial:natmeg_temp:natmeg_erf3.png?650"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_erf3.png" width="650" %}
 
 *Figure 6; A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)***
 
@@ -733,7 +733,7 @@ To plot the scalp current density results, use the following cod
 
 Note that if you get plotting artifacts in these figures, such as colorbars that do not show completely, you can have a look at this [frequently asked question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
-{{tutorial:natmeg_temp:natmeg_scd1.png?650"}}
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_scd1.png" width="650" %}
 
 *Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)***
 

@@ -295,17 +295,17 @@ This is the simplest method, but not the most accurate. You start with a single 
 
 The idea is to use a template grid that is defined in normalized space, e.g. based on a template anatomical MRI in MNI coordinates. Subsequently, each individual MRI is warped to this template MRI, and the inverse of this warp is applied to the template dipole grid. Hereby the individual subjects' grids are not regularly spaced anymore (meaning the distance between 2 grid points can vary), see figure 1. However, as a consequence of this warping procedure, homologous grid points across subjects are located at exactly the same location in normalized MNI space. As a consequence, the source-reconstructed activity can be directly averaged across subjects. You can either define a template grid yourself, or use one from a set of predefined template grids that are included in fieldtrip: fieldtrip/template/sourcemodel/standard_gridXmm.mat.
 
-{{:example:mnispace:brains.gif?500|figure1a}}
+{% include image src="/static/img/example/mnispace/brains.gif" width="500" %}
 
-**fig 1a: Example: the MNI template brain and the brains of 3 subjects**
+**Figure 1a: Example: the MNI template brain and the brains of 3 subjects**
 
-{{:example:mnispace:mni_grids2.gif?500|figure1b}}
+{% include image src="/static/img/example/mnispace/mni_grids2.gif" width="500" %}
 
-**fig 1b: Example: the MNI grid and the grid of 3 subjects, note that each grid point points to the same location in all brains, and that the subjects' grids are not regularly spaced**
+**Figure 1b: Example: the MNI grid and the grid of 3 subjects, note that each grid point points to the same location in all brains, and that the subjects' grids are not regularly spaced**
 
 In the figures above, the spatial deformation of the individual subjects' brains relative to the template brain is exemplified. However, there may be other relevant differences between the coordinate system used for the individual subjects' anatomy and the MNI coordinate system. For example, in MEG-datasets it is custom to use a coordinate system that is defined relative to the three coils that are placed on the nose and the ears, with a specific orientation of the coordinate axes, whereas the MNI/SPM coordinate system is defined in a different way.
 
-First, you need to define a template grid, as mentioned above, and the easiest thing to do so is to load in a pre-existing template grid, like thi
+First, you need to define a template grid, as mentioned above, and the easiest thing to do so is to load in a pre-existing template grid, like this:
 
 ##### Load a template_grid, recommended
 
@@ -405,10 +405,6 @@ In this tutorial, it was explained how to build a sourcemodel that can be used f
 
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-Here are the related FAQs:
+## See also
 
-{% include seealso tag1="sourcemodel" tag2="meg" tag3="faq" %}
-
-and the related examples:
-
-{% include seealso tag1="sourcemodel" tag2="meg" tag3="example" %}
+{% include seealso tag1="sourcemodel" tag2="meg" %}
