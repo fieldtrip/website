@@ -36,9 +36,9 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	set(findobj(gcf,'color',[0 0.5 0]), 'color', [1 0 0]);
 	title('mixed ''sources''');
 
-![image](/static/img/tutorial/connectivity/mixingmixed.png@300)
+{% include image src="/static/img/tutorial/connectivity/mixingmixed.png" width="300" %}
 
-![image](/static/img/tutorial/connectivity/mixingunmixed.png@300)
+{% include image src="/static/img/tutorial/connectivity/mixingunmixed.png" width="300" %}
 
 	% do spectral analysis
 	cfg = [];
@@ -53,7 +53,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	set(findobj(gcf,'color',[0 0.5 0]), 'color', [1 0 0]);
 	title('power spectrum');
 
-![image](/static/img/tutorial/connectivity/mixingpowerspectrum.png@300)
+{% include image src="/static/img/tutorial/connectivity/mixingpowerspectrum.png" width="300" %}
 
 	% compute connectivity
 	cfg = [];
@@ -71,9 +71,9 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	figure;ft_connectivityplot(cfg, c);
 
 
-![image](/static/img/tutorial/connectivity/mixinggranger.png@300)
+{% include image src="/static/img/tutorial/connectivity/mixinggranger.png" width="300" %}
 
-![image](/static/img/tutorial/connectivity/mixingcoherence.png@300)
+{% include image src="/static/img/tutorial/connectivity/mixingcoherence.png" width="300" %}
 
 #### Exercise 5
 

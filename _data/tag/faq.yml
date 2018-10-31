@@ -1,6 +1,9 @@
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
+- name:  What are the MATLAB requirements for using FieldTrip?
+  link:  /faq/matlab_requirements
+
 - name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
   link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
 
@@ -10,7 +13,7 @@
 - name:  How can I compile the mex files and command-line executables ?
   link:  /faq/compile
 
-- name:  MATLAB and external requirements
+- name:  What are the MATLAB and external requirements?
   link:  /faq/requirements
 
 - name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
@@ -502,7 +505,7 @@
 - name:  Can I restrict the source reconstruction to the grey matter?
   link:  /faq/can_i_restrict_the_source_reconstruction_to_the_grey_matter
 
-- name:  Can I get an offline version of the wiki documentation?
+- name:  Can I get an offline version of the documentation on the website?
   link:  /faq/can_i_get_an_offline_version_of_the_wiki_documentation
 
 - name:  How to get started with the MATLAB distributed computing toolbox?
@@ -532,7 +535,7 @@
 - name:  Why does my TFR look strange (part I, demeaning)?
   link:  /faq/why_does_my_tfr_look_strange
 
-- name:  How should I share example data with the developers or the email list?
+- name:  How should I share example data with the email list or developers?
   link:  /faq/how_should_i_send_example_data_to_the_developers
 
 - name:  Frequently Asked Questions

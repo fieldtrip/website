@@ -40,7 +40,7 @@ After translating the event table into an Nx3 trial definition (cfg.trl), the da
 
 For a better understanding of the relation between the event offset, trials (or data segments) and the time axis of trials, it helps to look at a number of samples in detail. In the picture below a sampling rate of 1000 Hz is used to allow a simple translation between samples and miliseconds. Remember that FieldTrip works with seconds and not with miliseconds.
 
-![image](/static/img/faq/offset.png@600)
+{% include image src="/static/img/faq/offset.png" width="600" %}
 
 The first row (A) in the figure above shows the samples and the sample numbers. The first sample of the recording (i.e. of the file as stored on disk) is sample 1. Here it is assumed that the sampling rate is 1000 Hz, i.e. one sample per milisecond.
 

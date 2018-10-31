@@ -79,7 +79,7 @@
 - name:  Why was FieldTrip maintained in SVN and not in git?
   link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
 
-- name:  How should I share example data with the developers or the email list?
+- name:  How should I share example data with the email list or developers?
   link:  /faq/how_should_i_send_example_data_to_the_developers
 
 - name:  Contribute

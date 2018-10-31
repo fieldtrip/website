@@ -115,7 +115,7 @@ Along the way, you will most likely expand on the subject-specific information. 
 
 In the end we’ll end up with a collection of several functions, either depending on the output of previous functions (e.g. preprocessing or artifact rejection) while others could in principle be called in parallel (e.g. averaging per condition or per subject). This could result in an analysis pipeline such as this (simplified) on
 
-![image](/static/img/pipeline.jpg@600)
+{% include image src="/static/img/pipeline.jpg" width="600" %}
 
 This will allow us to automate most of the steps that do not require manual labor (in this example that would be the visual inspection of the data to reject artifacts). This is called *batching*. Large datasets will often require quite some processing time and it will therefore often be the case that a batch will be run overnight.
 

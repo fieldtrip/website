@@ -24,9 +24,9 @@ The analysis protocol includes tools and/or algorithms used, and how they are us
 
 These tools can be combined in an analysis protocol that for example looks like Figure 1.
 
-![image](/static/img/development/introduction/introduction_anprotocol2.png)
+{% include image src="/static/img/development/introduction/introduction_anprotocol2.png" %}
 
-**//Figure 1; Analysis protocol for Event-Related Potentials (ERPs)//**
+*Figure: Analysis protocol for Event-Related Potentials (ERPs)*
 
 We will use the FieldTrip toolbox for EEG/MEG analysis that is developed within the Donders Centre for Cognitive Neuroimaging (DCCN). This software consists of a set of Matlab functions (a toolbox) that implement the different steps. Each of the FieldTrip functions implements one tool, and by linking them you can perform a complete analysis.
 
@@ -102,26 +102,26 @@ Some other standard analysis protocols are given also below. The figures indicat
 
 ERP/ERF analysis consists of preprocessing, averaging the data timelocked to the stimulus or response, optionally averaging over subjects and/or testing for significant effects and finally plotting the result.
 
-![image](/static/img/development/introduction/introduction_erpfnew2.png)
+{% include image src="/static/img/development/introduction/introduction_erpfnew2.png" %}
 
-**//Figure 3; An example analysis protocol for Event-Related Potentials (ERPs) using the FieldTrip functions//**
+*Figure: An example analysis protocol for Event-Related Potentials (ERPs) using the FieldTrip functions*
 
 ### Frequency and time-frequency analysis
 
 Frequency analysis consists of preprocessing, performing a Fourier or wavelet decomposition of the data, optionally averaging over subjects and/or testing for significant effects and finally plotting the result.
 
-![image](/static/img/development/introduction/introduction_tfr4.png)
+{% include image src="/static/img/development/introduction/introduction_tfr4.png" %}
 
-**//Figure 4; An example analysis protocol of (time-)frequency analysis in FieldTrip//**
+*Figure: An example analysis protocol of (time-)frequency analysis in FieldTrip.*
 
 ### Beamformer source analysis
 
 A schematic display of the analysis steps for source reconstruction using a beamformer approach is given below.
 Prior to any source reconstruction, you should have performed a complete timelock or frequency analysis of the data at the channel level.
 
-![image](/static/img/development/introduction/introduction_beamforming3.png)
+{% include image src="/static/img/development/introduction/introduction_beamforming3.png" %}
 
-**//Figure 5; An example analysis protocol of the source analysis using beamforming in FieldTrip//**
+*Figure: An example analysis protocol of the source analysis using beamforming in FieldTrip.*
 
 ### Source reconstruction for multiple subjects
 
@@ -131,9 +131,9 @@ The spatial normalisation towards a template brain is done in FieldTrip with the
 
 Below you can see the protocol that you would use for averaging the source reconstruction over subjects and for group statistics on the source level. If the statistical test involves two conditions, then you should do the source normalisation in both conditions for all subjects and feed the two grandaveraged source reconstructions into **[ft_sourcestatistics](/reference/ft_sourcestatistics)**.
 
-![image](/static/img/development/introduction/introduction_source_multiple2.png)
+{% include image src="/static/img/development/introduction/introduction_source_multiple2.png" %}
 
-**//Figure 6; An example analysis protocol of source reconstruction for multiple subjects in FieldTrip//**
+*Figure: An example analysis protocol of source reconstruction for multiple subjects in FieldTrip.*
 
 ## Summary and suggested further reading
 
@@ -149,4 +149,3 @@ FAQs related to issues with Matlab:
 
 You can find examples that specifically relate to Matlab here:
 {% include seealso tag1="example" tag2="matlab" %}
-

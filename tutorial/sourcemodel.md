@@ -211,7 +211,7 @@ This ends the part of the FreeSurfer pipeline concerned with volumetric processi
 	cfg.interactive = 'yes';
 	ft_sourceplot(cfg, mri);
 
-![image](/static/img/tutorial/minimumnormestimate/filled01new.png@550)
+{% include image src="/static/img/tutorial/minimumnormestimate/filled01new.png" width="550" %}
 
 *Figure 3. Filled mgz created by FreeSurfer. The two hemispheres have different colors (white and grey), cerebellum is not included.*
 
@@ -257,7 +257,7 @@ This step creates a bunch of files in `<Subject directory>`/Subject01/bem/**, co
 	figure
 	ft_plot_mesh(sourcespace);
 
-![image](/static/img/tutorial/minimumnormestimate/sspace01new.png@450)
+{% include image src="/static/img/tutorial/minimumnormestimate/sspace01new.png" width="450" %}
 
 *Figure 4. The source-space downsampled by MNE Suite*
 
@@ -295,11 +295,11 @@ This is the simplest method, but not the most accurate. You start with a single 
 
 The idea is to use a template grid that is defined in normalized space, e.g. based on a template anatomical MRI in MNI coordinates. Subsequently, each individual MRI is warped to this template MRI, and the inverse of this warp is applied to the template dipole grid. Hereby the individual subjects' grids are not regularly spaced anymore (meaning the distance between 2 grid points can vary), see figure 1. However, as a consequence of this warping procedure, homologous grid points across subjects are located at exactly the same location in normalized MNI space. As a consequence, the source-reconstructed activity can be directly averaged across subjects. You can either define a template grid yourself, or use one from a set of predefined template grids that are included in fieldtrip: fieldtrip/template/sourcemodel/standard_gridXmm.mat.
 
-{% include image src="/static/img/example/mnispace/brains.gif" width="500" %}
+{% include image src="/static/img/example/mnispace/brains.gif" width="500" %}--" %}
 
 **Figure 1a: Example: the MNI template brain and the brains of 3 subjects**
 
-{% include image src="/static/img/example/mnispace/mni_grids2.gif" width="500" %}
+{% include image src="/static/img/example/mnispace/mni_grids2.gif" width="500" %}--" %}
 
 **Figure 1b: Example: the MNI grid and the grid of 3 subjects, note that each grid point points to the same location in all brains, and that the subjects' grids are not regularly spaced**
 
@@ -349,7 +349,7 @@ As an alternative you can create a template grid yourself, like thi
 	ft_plot_vol(template_headmodel, 'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
 	ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
-![image](/static/img/example/mnispace/mni_fig1a.png@300)
+{% include image src="/static/img/example/mnispace/mni_fig1a.png" width="300" %}
 
 **fig 2: template grid and headmodel, top view**
 
@@ -387,7 +387,7 @@ As an alternative you can create a template grid yourself, like thi
 	ft_plot_vol(headmodel, 'edgecolor', 'none', 'facealpha', 0.4);
 	ft_plot_mesh(grid.pos(grid.inside,:));
 
-![image](/static/img/example/mnispace/mni_fig2b.png@300)
+{% include image src="/static/img/example/mnispace/mni_fig2b.png" width="300" %}
 
 **fig 3: template grid in single-subject head coordinates, superimposed onto the headmodel**
 

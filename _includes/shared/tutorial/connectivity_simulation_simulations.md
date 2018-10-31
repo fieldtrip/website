@@ -37,7 +37,7 @@ The simulated data consists of 3 channels in 500 trials. You can easily visualiz
     legend(data.label)
     xlabel('time (s)')
 
-![image](/static/img/tutorial/connectivity/data.png@400)
+{% include image src="/static/img/tutorial/connectivity/data.png" width="400" %}
 
 or browse through the complete data using
 
@@ -45,7 +45,7 @@ or browse through the complete data using
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
     ft_databrowser(cfg, data);
 
-![image](/static/img/tutorial/connectivity/databrowser.png@400)
+{% include image src="/static/img/tutorial/connectivity/databrowser.png" width="400" %}
 
 ### Computation of the multivariate autoregressive model
 
@@ -146,7 +146,7 @@ Subsequently, the data can be visualized using **[ft_connectivityplot](/referenc
 	cfg.zlim      = [0 1];
 	ft_connectivityplot(cfg, coh, cohm);
 
-![image](/static/img/tutorial/connectivity/connectivityplot.png@400)
+{% include image src="/static/img/tutorial/connectivity/connectivityplot.png" width="400" %}
 
 The coherence measure is a symmetric measure, which means that it does not provide information regarding the direction of information flow between any pair of signals. In order to analyze directionality in interactions, measures based on the concept of granger causality can be computed. These measures are based on an estimate of the spectral transfer matrix, which can be computed in a straightforward way from the multivariate autoregressive model fitted to the data.
 
@@ -161,7 +161,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
 	ft_connectivityplot(cfg, granger);
 
 
-![image](/static/img/tutorial/connectivity/grangerplot1.png@400)
+{% include image src="/static/img/tutorial/connectivity/grangerplot1.png" width="400" %}
 
 #### Exercise 2
 
@@ -180,7 +180,7 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 	end
 	end
 
-![image](/static/img/tutorial/connectivity/grangerplot2.png@400)
+{% include image src="/static/img/tutorial/connectivity/grangerplot2.png" width="400" %}
 
 #### Exercise 3
 

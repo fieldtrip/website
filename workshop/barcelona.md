@@ -7,7 +7,7 @@ layout: default
 
 The workshop is hosted by the Sociedad Española de Psicofisiología y Neurociencia cognitiva y afectiva (SEPNECA).
 
-![image](/static/img/workshop/campus_mundet.jpg@250)
+{% include image src="/static/img/workshop/campus_mundet.jpg" width="250" %}
 
 #### Where
 

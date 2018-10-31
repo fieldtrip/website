@@ -89,13 +89,13 @@ signals.
 	subplot(2,1,2);
 	plot(imag(fftcos),'r');
 
-![image](/static/img/tutorial/fourier/fft_sinwav2.png	)
+{% include image src="/static/img/tutorial/fourier/fft_sinwav2.png" %}
 
-*Figure 1; The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
+*Figure: The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
-![image](/static/img/tutorial/fourier/fft_coswav2.png	)
+{% include image src="/static/img/tutorial/fourier/fft_coswav2.png" %}
 
-*Figure 2; The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
+*Figure: The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
 	% calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
 	figure;
@@ -132,9 +132,9 @@ signals.
 	figure;
 	plot(wav);
 
-![image](/static/img/tutorial/fourier/cos45.png	)
+{% include image src="/static/img/tutorial/fourier/cos45.png" %}
 
-*Figure 3; A 20 Hz cosine wave shifted 45 degrees.*
+*Figure: A 20 Hz cosine wave shifted 45 degrees.*
 
 	% get the FFT of the wave
 	fftwav = fft(wav);
@@ -144,9 +144,9 @@ signals.
 	subplot(2,1,2);
 	plot(imag(fftwav),'r');
 
-![image](/static/img/tutorial/fourier/fft_cos45.png	)
+{% include image src="/static/img/tutorial/fourier/fft_cos45.png" %}
 
-*Figure 4; The FFT of a 20 Hz cosine wave shifted 45 degrees.*
+*Figure: The FFT of a 20 Hz cosine wave shifted 45 degrees.*
 
 	% calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
 	figure;
@@ -217,9 +217,9 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	hold on;
 	plot(coswav,'r');
 
-![image](/static/img/tutorial/fourier/sincos.png)
+{% include image src="/static/img/tutorial/fourier/sincos.png" %}
 
-*Figure 5; A sine (blue) and cosine wave (red) of equal frequency (10 Hz).*
+*Figure: A sine (blue) and cosine wave (red) of equal frequency (10 Hz).*
 
 	% get the FFT of the waves
 	fftsin = fft(sinwav);
@@ -244,9 +244,9 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	figure('name','power cos');
 	plot(psdcos);
 
-![image](/static/img/tutorial/fourier/powsin.png)
+{% include image src="/static/img/tutorial/fourier/powsin.png" %}
 
-*Figure 6; The power spectrum of a 10 Hz sine wave. The power spectrum of the 10 Hz cosine wave is identical.*
+*Figure: The power spectrum of a 10 Hz sine wave. The power spectrum of the 10 Hz cosine wave is identical.*
 
 ## The coherence spectrum
 
@@ -334,9 +334,9 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	figure;
 	plot(coh);
 
-![image](/static/img/tutorial/fourier/coh_randomphase.png	)
+{% include image src="/static/img/tutorial/fourier/coh_randomphase.png" %}
 
-*Figure 7; Coherence spectrum for two 10 Hz signals with a random phase difference.*
+*Figure: Coherence spectrum for two 10 Hz signals with a random phase difference.*
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% get many repetitions of two signals with somewhat consistent phase difference
@@ -383,9 +383,9 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	figure;
 	plot(coh);
 
-![image](/static/img/tutorial/fourier/coh_consphase.png	)
+{% include image src="/static/img/tutorial/fourier/coh_consphase.png" %}
 
-*Figure 8; Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference.*
+*Figure: Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference.*
 
 ### Exercise
 

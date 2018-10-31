@@ -8,7 +8,7 @@ tags: [example, cfg]
 
 The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input configuration (cfg) for the main fieldtrip functions. This is similar to what **[ft_checkdata](/reference/ft_checkdata)** does for the input data. **[Ft_checkconfig](/reference/Ft_checkconfig)** is automatically called when you use a fieldtrip function. You may not even notice this, unless it gives you feedback about your cfg (i.e., warning or error messages).
 
-**[Ft_checkconfig](/reference/Ft_checkconfig)** can also control the output cfg (i.e., the cfg that is given back by the function, usually data.cfg) and give more elaborate feedback to the user. This tutorial explains what **[ft_checkconfig](/reference/ft_checkconfig)** does, and importantly, how you can control it and use it to your advantage!
+**[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg (i.e., the cfg that is given back by the function, usually data.cfg) and give more elaborate feedback to the user. This tutorial explains what **[ft_checkconfig](/reference/ft_checkconfig)** does, and importantly, how you can control it and use it to your advantage!
 
 **WARNING: currently the full implementation of [ft_checkconfig](/reference/ft_checkconfig) as described here, is only available for internal users (at the Donders Centre). In time, these features (trackconfig) will also become available for external users!**
 
@@ -65,7 +65,7 @@ You will get the following feedbac
 
 In this case, you don't have to do anything: **[ft_checkconfig](/reference/ft_checkconfig)** will rename the field for you, and **[ft_freqdescriptives](/reference/ft_freqdescriptives)** can do its job. Of course the idea is, that you will use this feedback to improve your scripts!
 
-//Note: the feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives on your input cfg is not exhaustive, meaning that not all possible options you could come up with will be taken care of. It mainly ensures backward compatibility of old scripts, and checks some important required and forbidden fields.
+*Note: the feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives on your input cfg is not exhaustive, meaning that not all possible options you could come up with will be taken care of. It mainly ensures backward compatibility of old scripts, and checks some important required and forbidden fields.*
 
 *  **cfg.trackconfig: 'cleanup', 'report' or 'off'**
 **[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg. It tracks the cfg from the moment you put it into a function until it comes out again (usually as data.cfg). This can provide you with useful feedback: which of the options you specified were actually used? Which options have been added as defaults by the fieldtrip function? You can control the behaviour of configtracking: **'report'** will only give you a report, **'cleanup'** will give both a report and a cleaned output cfg. If you do not want to use configtracking at all, use **'off'**.

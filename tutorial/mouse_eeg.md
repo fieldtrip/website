@@ -79,7 +79,7 @@ In the study applied here, we used the transgenic mice (Thy1-ChR2-EYFP, B6 mice,
 
 For optogenetic stimulation, we used a semiconductor laser (USA & BCL-040-445; 445 nm wavelength and 40 mW/mm2 maximum output power; CrystaLaser LLC., Reno, NV, USA) that was gated using a pulse generator (575 digital delay, Berkeley Nucleonics Corp., Berkeley, CA, USA). Blue light from the laser was guided to the brain using an optic fiber with clad/core diameters of 125 mm and 3.4 mm, respectively (P1-405A-FC-5; Thorlabs Inc., Newton, NJ, USA). The light intensity from the tip of optical fiber was approximately 2 mW/mm2 measured by integrating sphere coupled to spectrometer (BLUE-Wave-VIS2/IC2/IRRAD-CAL, Stellar-Net Inc., Tampa, FL, USA). Various pulse trains with a 20 ms pulse width were delivered in four different cortical regions (somatosensory cortices, primary motor cortex, and sensory thalamus marked as S1, S2, M1, and VPM in below figure, respectively).
 
-![image](/static/img/tutorial/mouse_stimulation_2014-06-24-11-58-05.jpg@500)
+{% include image src="/static/img/tutorial/mouse_stimulation_2014-06-24-11-58-05.jpg" width="500" %}
 
 ##  Preprocessing
 
@@ -306,7 +306,7 @@ In order to make layout of high-density electrode array (HD-array) on mouse skul
 Let us give you the information how to make customized layout for HD-array by using FieldTrip.
 This figure indicates an electrode arrangement of HD-array (this example photo is taken from Lee et al. (2011) Journal of Visualized Experiments ([video](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), [pdf](http://www.jove.com/pdf/2562/jove-protocol-2562-high-density-eeg-recordings-freely-moving-mice-using-polyimide-based)).
 
-![image](/static/img/2014-06-18_4-27-59.jpg@400)
+{% include image src="/static/img/2014-06-18_4-27-59.jpg" width="400" %}
 
 You can specify cfg.image in ft_prepare_layout and subsequently click on the location of each electrode. After specifying each electrode location, you'll be asked to specify the outlines of the head (i.e. the circle around the head, the eyes, the nose and ears (dash lines) and optionally some lines representing other important landmarks: bold lines, bregma, and lambda) and to specify the mask for the topographic interpolation (green dash line).
 Find the bregma and lambda points on the skull, and record them with the stereotaxic ruler. The bregma and lambda points are located in the same anterio-posterior axis.
@@ -362,7 +362,7 @@ To confirm your calibration,
     cfg.layout      = lay_new;
     ft_layoutplot(cfg);
 
-![image](/static/img/2014-06-18_5-45-12.jpg@400)
+{% include image src="/static/img/2014-06-18_5-45-12.jpg" width="400" %}
 
 :!: This is discussed on http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2602
 

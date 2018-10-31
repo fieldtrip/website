@@ -45,15 +45,15 @@ To localize the oscillatory sources for the example dataset we will perform the 
 *  Compute a spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
    * Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-![image](/static/img/tutorial/bf_pipeline.jpg@650)
+{% include image src="/static/img/tutorial/bf_pipeline.jpg" width="650" %}
 
 ## Preprocessing
 
 The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
 
-![image](/static/img/tutorial/beamformer/tfrbmf.png@700)
+{% include image src="/static/img/tutorial/beamformer/tfrbmf.png" width="700" %}
 
-**//Figure 1; The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.//**
+*Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response..*
 
 {% include shared/tutorial/preprocessing_fic.md %}          
 
@@ -205,9 +205,9 @@ Plot the interpolated data:
     figure
     ft_sourceplot(cfg,sourcePostInt_nocon);
 
-![image](/static/img/tutorial/beamformer/figure1bf.png@500)
+{% include image src="/static/img/tutorial/beamformer/figure1bf.png" width="500" %}
 
-**//Figure 2; The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**.//**
+*Figure: The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**..*
 
 Notice that the power is strongest in the center of the brain. There are several ways of circumventing the noise bias towards the center of the head which we will show below.
 ### Exercise 3: center of head bias
@@ -240,9 +240,9 @@ Plot it:
     figure
     ft_sourceplot(cfg, sourceNAIInt);
 
-![image](/static/img/tutorial/beamformer/figure2bf.png@500)
+{% include image src="/static/img/tutorial/beamformer/figure2bf.png" width="500" %}
 
-**//Figure 3; The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate.//**
+*Figure: The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate..*
 ### Exercise 4: lead field normalization
 
 {% include markup/info %}
@@ -316,9 +316,9 @@ Now plot the power ratios:
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
-![image](/static/img/tutorial/beamformer/figure4bf.png@500)
+{% include image src="/static/img/tutorial/beamformer/figure4bf.png" width="500" %}
 
-**//Figure 4; sourceplot with method "slice" //**
+*Figure: sourceplot with method "slice" .*
 
 ### Exercise 5: comparing normalizations
 
@@ -345,9 +345,9 @@ To plot an 'orthogonal cut
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
-![image](/static/img/tutorial/beamformer/figure7bf.png@500)
+{% include image src="/static/img/tutorial/beamformer/figure7bf.png" width="500" %}
 
-**//Figure 5; sourceplot with method "ortho"//**
+*Figure: sourceplot with method "ortho".*
 
 The FieldTrip function **[ft_volumenormalise](/reference/ft_volumenormalise)** normalises anatomical and functional volume data to a template anatomical MRI. Spatially aligning the source structures for multiple subjects allows you to compute grandaverages and over subjects statistics. Here we will illustrate the use of volume normalisation for one subject.
 
@@ -367,9 +367,9 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
-![image](/static/img/tutorial/beamformer/figure8bf.png@500)
+{% include image src="/static/img/tutorial/beamformer/figure8bf.png" width="500" %}
 
-**//Figure 6; sourceplot with method "ortho" after volume normalisation//**
+*Figure: sourceplot with method "ortho" after volume normalisation.*
 
 You can also project the power onto a surface using **[ft_sourceplot](/reference/ft_sourceplot)**. FieldTrip has several surface .mat files available. The surface files are in MNI coordinates, so therefore the volume has to be normalized to match those coordinates. This can be done with the FieldTrip function **[ft_volumenormalise](/reference/ft_volumenormalise)** (see above, as well).
 
@@ -393,9 +393,9 @@ Now the data can be plotted
     ft_sourceplot(cfg, sourceDiffIntNorm);
     view ([90 0])
 
-![image](/static/img/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png@500)
+{% include image src="/static/img/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png" width="500" %}
 
-**//Figure 7; sourceplot with method "surface"//**
+*Figure: sourceplot with method "surface".*
 
 ## Summary and suggested further reading
 

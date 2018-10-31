@@ -28,9 +28,9 @@ The automatic artifacts detection functions (ft_artifact_xxx) make use of an art
 
 *  artifact padding (fig 2): data padding **with**, to extend the length of a detected artifact.
 
-![image](/static/img/tutorial/artifactdetect/padding_fig1.png)
+{% include image src="/static/img/tutorial/artifactdetect/padding_fig1.png" %}
 
-![image](/static/img/tutorial/artifactdetect/padding_fig2.png)
+{% include image src="/static/img/tutorial/artifactdetect/padding_fig2.png" %}
 
 See also the [automatic artifact rejection tutorial](http://fieldtrip.fcdonders.nl/tutorial/automatic_artifact_rejection) for more details on the different types of padding that can be used during data preprocessing (artifact padding, trial padding, filter padding). 
 

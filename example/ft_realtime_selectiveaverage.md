@@ -8,7 +8,7 @@ tags: [example, realtime]
 
 ## Flowchart
 
-![image](/static/img/example/realtime/realtime_selectiveaverage.png@400)
+{% include image src="/static/img/example/realtime/realtime_selectiveaverage.png" width="400" %}
 
 ## Matlab code
 

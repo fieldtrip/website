@@ -51,30 +51,30 @@ tags: [example, meg, ctf]
     figure; ft_multiplotER(cfg, avg151_151); 
     title('Interpolated from 151 to 151'); 
     orient portrait; print -dpng -r300 avg151_151.png
-![image](/static/img/example/megrealign/avg151_151.png@500)
+{% include image src="/static/img/example/megrealign/avg151_151.png" width="500" %}
 
     figure; ft_multiplotER(cfg, avg151_275); 
     title('Interpolated from 151 to 151'); 
     orient portrait; print -dpng -r300 avg151_275.png
-![image](/static/img/example/megrealign/avg151_275.png@500)
+{% include image src="/static/img/example/megrealign/avg151_275.png" width="500" %}
 
     figure; ft_multiplotER(cfg, avg275_151); 
     title('Interpolated from 151 to 151'); 
     orient portrait; print -dpng -r300 avg275_151.png
-![image](/static/img/example/megrealign/avg275_151.png@500)
+{% include image src="/static/img/example/megrealign/avg275_151.png" width="500" %}
 
     figure; ft_multiplotER(cfg, avg275_275); 
     title('Interpolated from 151 to 151'); 
     orient portrait; print -dpng -r300 avg275_275.png
-![image](/static/img/example/megrealign/avg275_275.png@500)
+{% include image src="/static/img/example/megrealign/avg275_275.png" width="500" %}
 
     % now plot them together
     cfg = [];
     figure; ft_multiplotER(cfg, avg151, avg151_151, avg275_151); 
     orient portrait; print -dpng -r300 compare151.png
-![image](/static/img/example/megrealign/compare151.png@500)
+{% include image src="/static/img/example/megrealign/compare151.png" width="500" %}
 
     figure; ft_multiplotER(cfg, avg275, avg275_275, avg151_275); 
     orient portrait; print -dpng -r300 compare275.png
-![image](/static/img/example/megrealign/compare275.png@500)
+{% include image src="/static/img/example/megrealign/compare275.png" width="500" %}
 

@@ -15,7 +15,7 @@ The signal analysis details are available [here](/static/pdf/example/gamma_anali
 Neurofeedback, as the word suggest, is feeding back to the subject it’s neuronal activity analyzed by it’s EEG activity in (almost) real time. In this training we give back to the subjest a visual stimulation (vertical bars) when it’s gamma phase synchronization between F3-P3 and F4-P4 increased over the baseline (bars up) or decreased (bars down).
 Here is the feedback
 
-![image](/static/img/example/picture_12.png@400)
+{% include image src="/static/img/example/picture_12.png" width="400" %}
 
 If you scroll the script you can see that this image is a particular point of view of a 3D visualization. I you change the POV you could see all the data from the last 3 minutes.
 

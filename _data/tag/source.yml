@@ -142,9 +142,6 @@
 - name:  Source statistics
   link:  /example/source_statistics
 
-- name:  Doing source-analysis with the created headmodel
-  link:  /example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
-
 - name:  Template models for source reconstruction
   link:  /template/sourcemodel
 

@@ -26,7 +26,7 @@ The second version (ctf2ft_v2, originally known as acq2ft) combines the access t
 
 The **ctf2ft_v2** application decodes header information from the **.res4** file pointed to by the *setup collection* packet, and thus knows by itself which channels contain triggers instead of relying on a 3rd application or Matlab script to write that information back to shared memory. On top of that, ** ctf2ft_v2** overallocates the shared memory by 1000 samples and is prepared to operate successfully even if the proprietary **Acq** application writes too much data into any slot. Instead of preparing the shared memory segment for access by a third application, it streams the data and events (decoded from the trigger channels) to a local or remote [FieldTrip buffer](/development/realtime/buffer), as depicted by the following diagra
 
-![image](/static/img/development/realtime/acq2ft_scheme_75.png)
+{% include image src="/static/img/development/realtime/acq2ft_scheme_75.png" %}
 
 You need to start **ctf2ft_v2** before starting **Acq** so that the shared memory interface can be detected and connected to by the latter.
 You have the option of spawning a [FieldTrip buffer](/development/realtime/buffer) server directly within **ctf2ft_v2**, using
@@ -88,7 +88,7 @@ The **[ft_realtime_ctfproxy](/reference/ft_realtime_ctfproxy)** function (part o
 
 Subsequently in another Matlab session you can read from the FieldTrip buffer using the **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions. 
 
-![image](/static/img/development/realtime/acq_nt_scheme.png)
+{% include image src="/static/img/development/realtime/acq_nt_scheme.png" %}
 
 Besides maintaining the copy of the setup packet and ensuring that there are always some packets free to receive the new data from Acq, the AcqBuffer application also performs trigger detection on indicated channels and stores these triggers in a convenient representation. This speeds up the trigger detection in the read_event function in MATLAB considerably.
 
@@ -107,7 +107,7 @@ where filename should be a string containing %%'ctf_shm://'%%, i.e. similar as a
 
 The (inter-)operation of the three involved software components, all running on the same machine can be summarised with the following diagram.
 
-![image](/static/img/development/realtime/acq_scheme_75.png)
+{% include image src="/static/img/development/realtime/acq_scheme_75.png" %}
 
 ## Known problems with CTF real-time acquisition
 

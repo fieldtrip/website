@@ -1,4 +1,7 @@
-- name:  MATLAB and external requirements
+- name:  What are the MATLAB requirements for using FieldTrip?
+  link:  /faq/matlab_requirements
+
+- name:  What are the MATLAB and external requirements?
   link:  /faq/requirements
 
 - name:  Which external toolboxes are used by FieldTrip?

@@ -15,4 +15,4 @@ The **[/reference/ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)**
 
 The **sine2ft** is a test application with a graphical user interface that allows you to set the number of channels, sampling rate, and the frequency and amplitude of the signals that are  written to the buffer. It combines well with the [viewer](/viewer) application.
 
-![image](/static/img/development/realtime/screen_shot_2015-05-06_at_21.41.03.png)
+{% include image src="/static/img/development/realtime/screen_shot_2015-05-06_at_21.41.03.png" %}

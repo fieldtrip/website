@@ -10,7 +10,7 @@ tags: [realtime, ant]
 
 Advanced Neuro Technologies is an Dutch company that provides EEG hardware and software for research and clinical applications. They provide complete and user-friendly EEG systems composed of well-integrated hardware and software for acquisition, analysis and stimulus presentation.
 
-{% include image src="/static/img/amp_72ch.jpg" width="197" %}
+{% include image src="/static/img/amp_72ch.jpg" width="197" %}--" %}
 
 The ANT NeuroSDK allows users to develop their own neurofeedback application, as created in Html/Jscript, C++, or Matlab. The acquisition can be performed through the ASA or Cognitrace recording modules, or using a direct connection to the EEG amplifier via a dedicated ActiveX control that handles the communication with the amplifiers driver.
 

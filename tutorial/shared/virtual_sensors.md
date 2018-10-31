@@ -91,6 +91,6 @@ The structures *coh_lft_data* and *gam_pow_data* resemble the raw-data output of
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
     ft_databrowser(cfg, gam_pow_data);
 
-![image](/static/img/tutorial/shared/virtualchannels_conn_extended.png@400)
+{% include image src="/static/img/tutorial/shared/virtualchannels_conn_extended.png" width="400" %}
 
 Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent current dipole source at the location of interest.

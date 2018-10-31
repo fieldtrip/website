@@ -10,7 +10,10 @@
 - name:  Creating a clean analysis script
   link:  /tutorial/scripting
 
-- name:  MATLAB and external requirements
+- name:  What are the MATLAB requirements for using FieldTrip?
+  link:  /faq/matlab_requirements
+
+- name:  What are the MATLAB and external requirements?
   link:  /faq/requirements
 
 - name:  MATLAB version 7.3 (2006b) crashes when I try to do ...

@@ -104,7 +104,7 @@ The MEG dataset that we use in this tutorial is available as   [oddball1_mc_down
     cfg.channel = 'MEG*1';
     figure; ft_multiplotTFR(cfg, TFR_diff);
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_stat_tfrdiff.png@500)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_stat_tfrdiff.png" width="500" %}
 
 ### Single-trial time-frequency responses
 
@@ -181,7 +181,7 @@ With time-frequency data we have three dimensions in which we can form clusters.
 
 The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as //[]//, i.e. empty.
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_stat_neighbours.png@500)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_stat_neighbours.png" width="500" %}
 
 ### Compute the statistics
 
@@ -246,7 +246,7 @@ We can visualize the results just like any other TFR structure. The *TFR_stat* s
     figure; ft_multiplotTFR(cfg, TFR_stat3);
     figure; ft_multiplotTFR(cfg, TFR_stat4);
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_stat_tfrcluster.png@500)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_stat_tfrcluster.png" width="500" %}
 
 ### Preprocessing the stimulus-locked data
 
@@ -305,7 +305,7 @@ The **[/reference/ft_selectdata](/reference/ft_selectdata)** function is a very 
     cfg.layout = 'neuromag306mag.lay';
     figure; ft_multiplotER(cfg, ERF_std, ERF_dev);
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_stat_erf.png@500)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_stat_erf.png" width="500" %}
 
 To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[/reference/ft_timelockanalysis](/reference/ft_timelockanalysis)** and manualy compute the [t-test](http://en.wikipedia.org/wiki/Student%27s_t-test).
 
@@ -396,7 +396,7 @@ Again we can visualize the results of the statistical comparison. Since we have 
     figure; ft_multiplotER(cfg, ERF_std, ERF_dev);
     title('cluster');
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_stat_erfcluster.png@500)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_stat_erfcluster.png" width="500" %}
 
 {% include markup/info %}
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels.

@@ -67,7 +67,7 @@ You can load and visualize the cortical sheets with
     camlight
     lighting gouraud
 
-![image](/static/img/template/screen_shot_2013-12-05_at_8.59.46.png@400)
+{% include image src="/static/img/template/screen_shot_2013-12-05_at_8.59.46.png" width="400" %}
 
 ## UPDATE: cortical meshes from SPM8 added on 17 May, 2013
 
@@ -124,19 +124,19 @@ Up until March 7, 2013 (svn revision number 7600) the sourcemodels were a bit ti
 The new set of sourcemodels are not compatible with the old set. If you were in the middle of an analysis, that relies on the template sourcemodels in FieldTrip, you should either stick to the old version of the sourcemodels, or recompute all results using the new version of the sourcemodels. The old version of the sourcemodels will not be kept in the release version of FieldTrip, but they are recoverable from FieldTrip version predating March 7, 2013.
 {% include markup/end %}
 
-![image](/static/img/template/sourcemodel1.png@300)
+{% include image src="/static/img/template/sourcemodel1.png" width="300" %}
 *Figure 1A: Template brain surface with template dipole locations (old version sourcemodel).*
 
-![image](/static/img/template/sourcemodel3.png@300)
+{% include image src="/static/img/template/sourcemodel3.png" width="300" %}
 *Figure 1B: Warped dipole locations (linear warp only) on top of an individual brain surface.*
 
-![image](/static/img/template/sourcemodel2.png@300)
+{% include image src="/static/img/template/sourcemodel2.png" width="300" %}
 *Figure 1C: Warped dipole locations (nonlinear warp) on top of an individual brain surface.*
 
-![image](/static/img/template/sourcemodel4.png@400)
+{% include image src="/static/img/template/sourcemodel4.png" width="400" %}
 *Figure 2: The brain surface extracted from the blurred template brain warped to, and projected onto an individual MRI (yellow), and the brain surface extracted from the individual MRI (red).*
 
-![image](/static/img/template/sourcemodel5.png@300)
+{% include image src="/static/img/template/sourcemodel5.png" width="300" %}
 ** Figure 3: Updated sourcemodel with template dipole locations (linearly warped) on top of an individual brain surface.**
 
 ## UPDATE: updated 3D source models uploaded on February 19, 2016

@@ -60,8 +60,8 @@ The idea is to make a graphical user interface that allows the user to step thro
 
 Using the wizard on this analalysis protocol would result in a graphical user interface like thi
 
-![image](/static/img/development/wizard/wizard1.png)
-![image](/static/img/development/wizard/wizard2.png)
+{% include image src="/static/img/development/wizard/wizard1.png" %}
+{% include image src="/static/img/development/wizard/wizard2.png" %}
 
 Pressing the "next" button would result in the snippet of matlab code inside the edit box to be executed, pressing the "previous" button results in going one step back. The code would be executed in the main Matlab workspace as if it were a normal script, which means that the variable names are also defined in the wizard. Loading and saving data from/to files would also be easy to implement using the standard Matlab "uigetfile" function.
 

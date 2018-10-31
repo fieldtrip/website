@@ -33,7 +33,7 @@ A successful analysis of EEG signals requires clean data. That is non-trivial fo
 **Measurement:**
 The data were recorded using two 32-channel TMS-compatible BrainAmp DC Amplifiers (BrainProducts) connected to a 61 channel TMS-compatible EEG cap (EasyCap). Sampling was done at 5kHz with a 1kHz cut-off frequency and with 0.1 microvolt/bit resolution. Please click on the image below for an enlarged image of the [equidistant 61-channel arrangement](/template/layout#triangulated_equidistant_arrangements).
 
-![image](/static/img/development/tms/layout.png)
+{% include image src="/static/img/development/tms/layout.png" %}
 
 **TMS:** Single pulses were applied at 60% maximum stimulator output using a C-B60 butterfly coil connected to a MagPro X100 (Magventure) stimulator. In total 300 pulses were applied with an inter-pulse-interval of 3 seconds (20% jitter).
 
@@ -57,7 +57,7 @@ Also see: [Resolving "Out of Memory" Errors](http://www.mathworks.nl/help/matlab
 
 Before starting your analysis, it helps to consider your experiment relative to two dimensions: 1) the TMS protocol and 2) the experimental manipulation of the brain state (i.e. the task for the subject, or the absence thereof).
 
-![image](/static/img/development/tms/design_table.png)
+{% include image src="/static/img/development/tms/design_table.png" %}
 
 In many cases you will want to analyze your data with respect to some interesting event, e.g. a visual stimulus onset, the subjects response to a stimulus, or in this case the onset of a TMS pulse. It is, however, also possible to analyze your data in a continuous way. For example, you might be interested in resting-state EEG changes over time after participants have received theta-burst stimulation. In those cases you are not going to divide your data into experimentally defined trials but rather analyze the data in a continuous fashion.
 
@@ -71,7 +71,7 @@ It is also important to realize that between datasets the amount and spacing of 
 
 The figure below shows the EEG on channel 17 (see the layout of electrodes above) during the application of the TMS.
 
-![image](/static/img/development/tms/tep_chan_17.png)
+{% include image src="/static/img/development/tms/tep_chan_17.png" %}
 
 We will now shortly describe and display the TMS-related artifacts you can come across in your data. It is important to understand that there is not just a single type of artifact, different artifacts may occur simultaneously. Depending on the characteristics of EEG and TMS equipment and experimental design, not all types of artifacts may be observed in your data.
 
@@ -82,23 +82,23 @@ The data during the pulse can be considered to be lost.
 ### Ringing/Step response artifact
 
 Depending on the range of your amplifier the signal may initially go out of range causing a clipping of the signal as can be seen by a flat line in your signal. Once the potential falls within range of the amplifier a prominent filter 'ringing' can be observed lasting up to around 7ms depending on your setup caused by a step-response due to the high gradient of the TMS-pulse. Many consider this period lost. In the figure below the signal in red reflects a combination of the pulse and the ringing/step response.
-![image](/static/img/development/tms/art_ringing.png)
+{% include image src="/static/img/development/tms/art_ringing.png" %}
 
 ### Cranial Muscle artifact
 
 The TMS pulse may cause cranial (scalp) muscle twitches. These twitches are not to be confused with responses due to stimulation of the motor cortex but are purely twitches due to stimulation of scalp muscles. Usually they last around 10ms and are orders of magnitude larger than brain signals. Using close visual inspection of the EEG electrodes underneath the TMS coil during the actual experiment, you may observe these twitches as small movements of the electrodes.
 
-![image](/static/img/development/tms/art_cranial_muscle.png)
+{% include image src="/static/img/development/tms/art_cranial_muscle.png" %}
 
 ### Recharging artifact
 
 Depending on your TMS machine you may observe a spike in your data reflecting the recharging of your machine's capacitors. Some stimulators allow you to specify the exact time the machine recharges its capacitors. In the case of this dataset we used a MagPro X100 (Magventure) stimulator with the recharge delay set to 500ms after stimulation onset.
-![image](/static/img/development/tms/art_recharge_2.png)
+{% include image src="/static/img/development/tms/art_recharge_2.png" %}
 
 ### Decay artifact
 
 It is likely that you will encounter an artifact that resembles an exponential decay in some channels. The nature of this artifact is not well understood and its presence is rather unpredictable. We believe that it arises due to an interaction between magneto-electric induction of TMS-induced currents in the electrode leads, electrode-electrolyte-skin interface polarization, movement of the electrodes and head/neck/face muscle twitches. In worst cases, this artifact can last up to 1 second, but more commonly it lasts between 50-150 ms.
-![image](/static/img/development/tms/art_decay.png)
+{% include image src="/static/img/development/tms/art_decay.png" %}
 
 # Procedure
 
@@ -186,7 +186,7 @@ We will now visually inspect the data using **[ft_databrowser](/reference/ft_dat
 	cfg.preproc.baselinewindow = [-0.1 -0.001];
 	ft_databrowser(cfg, data_tms_raw);
 
-![image](/static/img/development/tms/databrowser-2.png)
+{% include image src="/static/img/development/tms/databrowser-2.png" %}
 
 It is important to get a feeling for the quality of your recording prior to your analysis. You will have to adjust the scaling, as the amplitude of the TMS pulse is enormous compared to the actual EEG signal. Using the + and - next to the 'vertical' and 'horizontal' button (marked in blue) you can adjust the scaling on both axes. Take a moment to browse through the trials with the arrow buttons next to the trial button.
 
@@ -255,14 +255,14 @@ We will have a closer look at channel 17, which is close to the site of stimulat
 	ylabel('Amplitude (uV)')
 	xlabel('Time (s)');
 
-![image](/static/img/development/tms/tep_chan_17.png)
+{% include image src="/static/img/development/tms/tep_chan_17.png" %}
 
 If we adjust the plotting limits a bit, we can easily distinguish the ringing/step response (~0-0.0045) from the cranial muscle (~0.0045 - 0.015). You can also do this manually using the zoom button or with
 
 	xlim([-0 0.020]);
 	ylim([-60 100]);
 
-![image](/static/img/development/tms/tep_chan_17_zoom.png)
+{% include image src="/static/img/development/tms/tep_chan_17_zoom.png" %}
 
 In this channel we can find ringing/step response, cranial muscle, exponential decay, and recharging artifacts. The following code highlights these artifacts in this channel.
 
@@ -295,7 +295,7 @@ In this channel we can find ringing/step response, cranial muscle, exponential d
 	end;
 	legend(['raw data', labels]);
 
-![image](/static/img/development/tms/tep_highlighted.png)
+{% include image src="/static/img/development/tms/tep_highlighted.png" %}
 
 #### Exercise: find artifacts in other channels
 
@@ -374,7 +374,7 @@ Using **[ft_databrowser](/reference/ft_databrowser)** we can browse through both
 	cfg.continuous = 'yes'; % Setting this to yes forces ft_databrowser to represent our segmented data as one continuous signal
 	ft_databrowser(cfg, data_tms_segmented);
 
-![image](/static/img/development/tms/databrowser_segmented.png)
+{% include image src="/static/img/development/tms/databrowser_segmented.png" %}
 
 Using the arrow-buttons beneath the 'ringing' and 'recharge' buttons we can browse to the marked artifacts.
 
@@ -384,7 +384,7 @@ Using the arrow-buttons beneath the 'ringing' and 'recharge' buttons we can brow
 	cfg.dataset = 'jimher_toolkit_demo_dataset_.eeg';
 	ft_databrowser(cfg);
 
-![image](/static/img/development/tms/databrowser_raw.png)
+{% include image src="/static/img/development/tms/databrowser_raw.png" %}
 
 ## Independent Component Analysis
 
@@ -484,7 +484,7 @@ We can now browse the averaged data in the same way we browsed our channel data.
 	cfg.viewmode = 'butterfly';
 	ft_databrowser(cfg, comp_tms_avg);
 
-![image](/static/img/development/tms/databrowser-ica2.png)
+{% include image src="/static/img/development/tms/databrowser-ica2.png" %}
 
 #### Exercise: plotting components
 
@@ -501,7 +501,7 @@ As ICA is in principle a spatial filter, we can inspect how each component loads
 	cfg.layout    = 'easycapM10'; % If you use a function that requires plotting of topographical information you need to supply the function with the location of your channels
 	ft_topoplotIC(cfg, comp_tms);
 
-![image](/static/img/development/tms/topoplotic-comps.png)
+{% include image src="/static/img/development/tms/topoplotic-comps.png" %}
 
 Using **[ft_databrowser](/reference/ft_databrowser)**, or MATLAB's plotting function, together with the output from **[ft_topoplotic](/reference/ft_topoplotic)** should be able to find one or two components that capture the decay artifact and/or the cranial muscle if the ICA was successful.
 
@@ -513,9 +513,9 @@ Try to find components reflecting the decay and/or muscle artifact. Which ones w
 
 Due to various factors it is likely that you will not be able to fully capture both artifacts into one or two components. In this case, the decay artifact is captured pretty well by component numbers 41 and 56. The topographies of these components overlaps with the location of stimulation. These components also capture a large part of the cranial muscle artifact, but you can also see that almost every other component contains parts of cranial muscle artifacts. We can therefore conclude that the cranial muscle artifact cannot be fully removed by ICA in this dataset.
 
-![image](/static/img/development/tms/ica-components.png)
+{% include image src="/static/img/development/tms/ica-components.png" %}
 
-![image](/static/img/development/tms/ica-components-topo.png)
+{% include image src="/static/img/development/tms/ica-components-topo.png" %}
 
 #### Exercise: removing other types of noise
 
@@ -583,7 +583,7 @@ We can now have a look at the current status of our data.
 	    xlabel('Time (s)');
 	end;
 
-![image](/static/img/development/tms/pre-clean.png)
+{% include image src="/static/img/development/tms/pre-clean.png" %}
 
 #### Exercise: how successful were we in removing TMS artifacts?
 
@@ -671,7 +671,7 @@ Using the following code we will compare the average TEP of the original data wi
 After artifact removal, make sure to browse through your channels comparing the data prior and post correction to check if there are any residual artifacts left. It could be that you will have to interpolate a bit more or try to remove additional independent components.
 {% include markup/end %}
 
-![image](/static/img/development/tms/clean.png)
+{% include image src="/static/img/development/tms/clean.png" %}
 
 At this point we've sufficiently cleaned our data of TMS artifacts so we can continue with the rest of our analysis. Only after this artifact removal is it safe to perform (post-)processing steps such as filtering, demeaning, detrending, and downsampling.
 ## Post-processing
@@ -760,7 +760,7 @@ We will now plot both conditions and their difference using **[ft_singleplotER](
 	title('Relax vs Contract');
 	legend({'relax' 'contract' 'contract-relax'});
 
-![image](/static/img/development/tms/tep_compare.png)
+{% include image src="/static/img/development/tms/tep_compare.png" %}
 
 A nice feature of **[ft_singleplotER](/reference/ft_singleplotER)** is that you can select a time range in your plotting window and click on it to produce a topographical representation of your amplitudes at that time point if you've specified a layout. You can also use the function **[ft_topoplotER](/reference/ft_topoplotER)** for this.
 
@@ -772,7 +772,7 @@ A nice feature of **[ft_singleplotER](/reference/ft_singleplotER)** is that you 
 	cfg.zlim = [-2 2]; % Here you can specify the limit of the values corresponding to the colors. If you do not specify this the limits will be estimated automatically for each plot making it difficult to compare subsequent plots.
 	ft_topoplotER(cfg, difference_avg);
 
-![image](/static/img/development/tms/topos-difference.png)
+{% include image src="/static/img/development/tms/topos-difference.png" %}
 
 ####  Exercise: Where are the differences?
 
@@ -797,7 +797,7 @@ Please also have a look at [Plotting data at the channel and source level](/tuto
 Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](http://dx.doi.org/10.1016/0013-4694(80)90419-8), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
 
 GMFP can be calculated using the following formula (from [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003))
-![image](/static/img/development/tms/gmfp.png)
+{% include image src="/static/img/development/tms/gmfp.png" %}
 
 , where t is time, V is the voltage at channel i and K is the number of channels. In [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) the GMFP is calculated on the average over all subjects. As we only have one subject, we will only calculate the GMFP within this subject. If you, however, have multiple subjects you can apply the same method but on the grand average (see for examples on handling multiple subjects: [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics)). Basically, the GMFP is the standard deviation over channels.
 
@@ -835,7 +835,7 @@ Now we can plot the GMFP of both conditions.
 	xlim([-0.1 0.6]);
 	ylim([0 3]); `</code>`
 
-	![image](/static/img/development/tms/gmfp-plot.png)
+	{% include image src="/static/img/development/tms/gmfp-plot.png" %}
 
 ####  Exercise: GMFP vs TEPs
 
@@ -891,7 +891,7 @@ Now that we've calculated the TFRs for both conditions and their differences we 
 
 	ft_multiplotTFR(cfg, difference_freq);
 
-![image](/static/img/development/tms/multi-tfr-relchange.png)
+{% include image src="/static/img/development/tms/multi-tfr-relchange.png" %}
 
 This plot is fully interactive, click and drag to select one or more channels, click on them to view an averaged representation of the selected channels. You can also plot single (or multiple) channels in a single view using **[ft_singleplotTFR](/reference/ft_singleplottfr)**.
 
@@ -921,7 +921,7 @@ This plot is fully interactive, click and drag to select one or more channels, c
 	ylabel('Frequency (Hz)');
 	xlabel('time (s)');
 
-![image](/static/img/development/tms/tfr-difference.png)
+{% include image src="/static/img/development/tms/tfr-difference.png" %}
 
 ####  Exercise: Additional information
 

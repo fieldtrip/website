@@ -9,7 +9,7 @@ layout: default
 
 The University of Salzburg, with support from the [TINNET-COST Action](http://tinnet.tinnitusresearch.net)
 
-![image](/static/img/workshop/usalzburg.png@200)    ![image](/static/img/workshop/tinnetcost.png@100)
+{% include image src="/static/img/workshop/usalzburg.png" width="200" %}    {% include image src="/static/img/workshop/tinnetcost.png" width="100" %}
 
 #### When
 

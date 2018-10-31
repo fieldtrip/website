@@ -97,6 +97,6 @@ Make a plot of the ''imp'' structure containing the impedance values using a cus
 	%figure
 	ft_topoplotER(cfg, imp)
 
-![image](/static/img/faq/impedance.png)
+{% include image src="/static/img/faq/impedance.png" %}
 
 Mark Noordenbos (2016)

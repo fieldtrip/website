@@ -160,9 +160,6 @@
 - name:  Cross Frequency analysis
   link:  /example/cross_frequency_analysis
 
-- name:  Doing source-analysis with the created headmodel
-  link:  /example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
-
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
 

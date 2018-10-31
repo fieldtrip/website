@@ -52,9 +52,9 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-![image](/static/img/tutorial/bf_pipeline.jpg@650)
+{% include image src="/static/img/tutorial/bf_pipeline.jpg" width="650" %}
 
-*Figure 1; An example of a pipeline to locate oscillatory sources.*
+*Figure: An example of a pipeline to locate oscillatory sources.*
 
 ## Preparing the data and the forward and inverse model
 
@@ -79,9 +79,9 @@ Load the forward model using the following cod
 
 The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation between the response with the left finger to the activation in response to the right finger. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_beam5.png@500)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam5.png" width="500" %}
 
-*Figure 2; The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming.*
+*Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming.*
 
 Now we select the time windows of interest, the post-response window using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 
@@ -271,9 +271,9 @@ Now, we can plot the interpolated data:
 
 	ft_sourceplot(cfg, source_left_int);
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_beam1.png@650)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam1.png" width="650" %}
 
-*Figure 3; A source plot of the beta response in the left-hand condition.*
+*Figure: A source plot of the beta response in the left-hand condition.*
 
 {% include markup/info %}
 As you can see the strongest motor response is located in the center of the head. Can you explain this finding?
@@ -282,9 +282,9 @@ As you can see the strongest motor response is located in the center of the head
 	cfg.location = [35 -13 76];
 	ft_sourceplot(cfg, source_diff_int);
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_beam2.png@650)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam2.png" width="650" %}
 
-*Figure 4; A source plot of the beta response ratio between the left- and right-hand conditions.*
+*Figure: A source plot of the beta response ratio between the left- and right-hand conditions.*
 
 {% include markup/info %}
 Try to explain the location of the red and blue blobs.
@@ -422,24 +422,24 @@ Finally, we can plot the dat
 
 	ft_sourceplot(cfg, source_left_int);
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_beam3.png@650)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam3.png" width="650" %}
 
-*Figure 5; An EEG-source plot of the beta response in the left-hand condition.*
+*Figure: An EEG-source plot of the beta response in the left-hand condition.*
 
 	cfg.location = [-19.5 -18.5 70.5];
 	ft_sourceplot(cfg, source_diff_int);
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_beam4.png@650)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam4.png" width="650" %}
 
-*Figure 6; An EEG-source plot of ratio of the beta response in the left versus the right hand condition.*
+*Figure: An EEG-source plot of ratio of the beta response in the left versus the right hand condition.*
 
 {% include markup/info %}
 How well can you identify the source of the beta-response ration in the EEG source reconstruction? The image seems quite noisy, could you think of a way to enhance the image?
 {% include markup/end %}
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_beam2.png@650)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam2.png" width="650" %}
 
-*Figure 7; A MEG-source plot of the beta response in the left versus the right hand condition.*
+*Figure: A MEG-source plot of the beta response in the left versus the right hand condition.*
 
 {% include markup/info %}
 How do the EEG and MEG source plots compare?
@@ -448,7 +448,7 @@ How do the EEG and MEG source plots compare?
 {% include markup/info %}
 If you've made it this far, perhaps you could try beamforming a different time window. Looking at the time-frequency plot you might be interested in trying to localise the less obvious beta-band response between 0.75 and 1.25 seconds after response.
 
-![image](/static/img/tutorial/natmeg_temp/natmeg_beam5.png@400)
+{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam5.png" width="400" %}
 {% include markup/end %}
 
 ## Summary and suggested further reading

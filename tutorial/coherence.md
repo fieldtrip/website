@@ -118,9 +118,9 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
     axis tight;
     legend(data.label(152:153));
 
-![image](/static/img/tutorial/coherence/figure1c.png@400)
+{% include image src="/static/img/tutorial/coherence/figure1c.png" width="400" %}
 
-*Figure 1; An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG.*
+*Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG.*
 
 #### Exercise 1
 
@@ -187,18 +187,18 @@ Visualize the coherence between the EMG and all the MEG sensor
     cfg.showlabels       = 'yes';
     figure; ft_multiplotER(cfg, fd)
 
-![image](/static/img/tutorial/coherence/figure2.png@400)
+{% include image src="/static/img/tutorial/coherence/figure2.png" width="400" %}
 
-*Figure 2; The coherence between the left EMG and all the MEG sensors calculated using ft_freqanalysis and ft_connectivityanalysis. Plotting was done with ft_multiplotER.*
+*Figure: The coherence between the left EMG and all the MEG sensors calculated using ft_freqanalysis and ft_connectivityanalysis. Plotting was done with ft_multiplotER.*
 
 Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multiplotER](/reference/ft_multiplotER)**
 
     cfg.channel = 'MRC21';
     figure; ft_singleplotER(cfg, fd);
 
-![image](/static/img/tutorial/coherence/figure3b.png@400)
+{% include image src="/static/img/tutorial/coherence/figure3b.png" width="400" %}
 
-*Figure 3; The coherence spectrum between the EMG and sensor MRC21.*
+*Figure: The coherence spectrum between the EMG and sensor MRC21.*
 
 ### Exercise 2
 
@@ -215,9 +215,9 @@ b) Plot a topographical distribution of the coherence in the beta band. The vari
     cfg.layout           = 'CTF151_helmet.mat';
     figure; ft_topoplotER(cfg, fd)
 
-![image](/static/img/tutorial/coherence/tutorial4b.png@400)
+{% include image src="/static/img/tutorial/coherence/tutorial4b.png" width="400" %}
 
-*Figure 4; A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER.*
+*Figure: A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER.*
 {% include markup/end %}
 
 ### Exercise 3
@@ -392,7 +392,7 @@ There are various ways to visualise the volumetric interpolated data. The most s
     cfg.funparameter = 'coh';
     figure; ft_sourceplot(cfg, interp);
 
-![image](/static/img/tutorial/coherence/figure5.png)
+{% include image src="/static/img/tutorial/coherence/figure5.png" %}
 
 //Figure 5; The neuronal source showing maximum coherence with the left EMG at 18 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**//.
 

@@ -40,9 +40,9 @@ To calculate the event related field / potential for the example dataset we will
    * Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
    *Grandaverage and realignment (optional). When you have data from more than one subject you can make a grand average of the ERPs / ERFs with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. **[ft_megrealign](/reference/ft_megrealign)** can be used to realign each subjects data to standard sensor positions before computing the grand average.
 
-![image](/static/img/tutorial/eventrelatedaveraging/figure1.png)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/figure1.png" %}
 
-**//Figure 1; A schematic overview of the steps in averaging of event related fields//**
+*Figure: A schematic overview of the steps in averaging of event related fields.*
 
 ## Preprocessing
 
@@ -71,9 +71,9 @@ The most important fields are 'dataFIC_LP.trial' containing the individual trial
 
     plot(dataFIC_LP.time{1}, dataFIC_LP.trial{1}(130,:))
 
-![image](/static/img/tutorial/eventrelatedaveraging/trial1_3feb09_ERF.png@400)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/trial1_3feb09_ERF.png" width="400" %}
 
-**//Figure 2; The MEG data from a single trial in a single sensor obtained after FT_PREPROCESSING//**
+*Figure: The MEG data from a single trial in a single sensor obtained after FT_PREPROCESSING.*
 
 To perform the preprocessing for the fully congruent (FC) and initiall congruent (IC) conditions, do the followin
 
@@ -122,9 +122,9 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim = [-3e-13 3e-13];
     ft_multiplotER(cfg, avgFIC);
 
-![image](/static/img/tutorial/eventrelatedaveraging/multiplot_1cond_3feb09_erf.png@700)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/multiplot_1cond_3feb09_erf.png" width="700" %}
 
-**//Figure 3; The event related fields plotted using ft_multiplotER. The event related fields were calculated using FT_PREPROCESSING followed by FT_TIMELOCKANALYSIS//**
+*Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using FT_PREPROCESSING followed by FT_TIMELOCKANALYSIS.*
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure. To plot all conditions list them as multiple variable
 
@@ -137,9 +137,9 @@ This plots the event related fields for all sensors arranged topographically acc
     cfg.ylim = [-3e-13 3e-13];
     ft_multiplotER(cfg, avgFC, avgIC, avgFIC);
 
-![image](/static/img/tutorial/eventrelatedaveraging/multiplot_allcond_3feb09_erf.png@700)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/multiplot_allcond_3feb09_erf.png" width="700" %}
 
-**//Figure 4; The event related fields for three conditions plotted simultaneously using ft_multiplotER//**
+*Figure: The event related fields for three conditions plotted simultaneously using ft_multiplotER.*
 
 To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** and specify the name of the channel you are interested in, for instance MLC2
 
@@ -149,9 +149,9 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
     clf;
     ft_singleplotER(cfg,avgFC, avgIC, avgFIC);
 
-![image](/static/img/tutorial/eventrelatedaveraging/singleplot_mlc24_3feb09_erf.png@400)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/singleplot_mlc24_3feb09_erf.png" width="400" %}
 
-**//Figure 5; The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER//**
+*Figure: The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER.*
 
 To plot the topographic distribution of the data averaged over the time interval from 0.3 to 0.5 seconds use to following command
 
@@ -160,9 +160,9 @@ To plot the topographic distribution of the data averaged over the time interval
     cfg.colorbar = 'yes';
     ft_topoplotER(cfg,avgFIC);
 
-![image](/static/img/tutorial/eventrelatedaveraging/topoplot_FIC_3feb09_erf.png@400)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/topoplot_FIC_3feb09_erf.png" width="400" %}
 
-**//Figure 6; A topographic plot of the event related fields obtained using ft_topoplotER//**
+*Figure: A topographic plot of the event related fields obtained using ft_topoplotER.*
 
 To plot a sequence of topographic plots define the time intervals in cfg.xli
 
@@ -172,9 +172,9 @@ To plot a sequence of topographic plots define the time intervals in cfg.xli
     clf;
     ft_topoplotER(cfg,avgFIC);
 
-![image](/static/img/tutorial/eventrelatedaveraging/topoplot_timeserie_3feb09_erf.png@700)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/topoplot_timeserie_3feb09_erf.png" width="700" %}
 
-**//Figure 7; The topography of event related fields over time obtained using ft_topoplotER//**
+*Figure: The topography of event related fields over time obtained using ft_topoplotER.*
 
 #### Exercise 1
 
@@ -231,9 +231,9 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
     cfg.layout = 'CTF151_helmet.mat';
     ft_topoplotER(cfg,avgFICplanarComb);
 
-![image](/static/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png@500)
+{% include image src="/static/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png" width="500" %}
 
-**//Figure 8; A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using FT_MEGPLANAR and FT_COMBINEPLANAR.//**
+*Figure: A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using FT_MEGPLANAR and FT_COMBINEPLANAR..*
 
 #### Exercise 3
 
@@ -260,6 +260,7 @@ This tutorial covered how to do event-related averaging on EEG/MEG data, and on 
 
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 
-Here you can find related FAQs:
+## See also
 
-{% include seealso tag1="faq" tag2="preprocessing" tag3="timelock" %}
+{% include seealso tag1="timelock" tag2="faq" %}
+{% include seealso tag1="timelock" tag2="example" %}

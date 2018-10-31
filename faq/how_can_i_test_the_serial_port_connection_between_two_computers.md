@@ -82,7 +82,7 @@ This is what I did on my office PC using fieldtrip commands **[ft_read_event](/r
 
 What I got looks like thi
 
-![image](/static/img/faq/serial_connect_write_read_event.jpg@400)
+{% include image src="/static/img/faq/serial_connect_write_read_event.jpg" width="400" %}
 
 Alternatively, one can simply use matlab serial objects and low level reading function fread or fscan
 
@@ -160,5 +160,5 @@ Alternatively, one can simply use matlab serial objects and low level reading fu
 
 The picture looks similar, only slightly faster.
 
-![image](/static/img/faq/serial_connect_write_read_matlab_serial.jpg@400)
+{% include image src="/static/img/faq/serial_connect_write_read_matlab_serial.jpg" width="400" %}
 

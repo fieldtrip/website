@@ -8,7 +8,7 @@ tags: [faq, discussion, list, question, ask, question, help]
 
 The FieldTrip community is represented in the [email discussion list](/discussion_list). You can freely sign up and ask for help if you are stuck in using FieldTrip. Asking good questions there (and giving useful answers) is the key to a successful community. However, please do some research yourself on them before approaching all people on the discussion list. Keep in mind that several hundreds of researchers around the world will get note of your question will spend valuable time on reading your question. In addition, also keep career perspectives into mind. By asking your first question on the mailinglist (which could be before you wrote your first paper), they will get a first impression of you and may start to form a picture of you, be it as a prospective colleague or collaborator. Many of the members are senior researchers and might have a job opening and are looking for you! But, don't be afraid to ask questions, we really appreciate if you approach us and we will try to help, even if your question turns out to be a trivial one :)
 
-![image](/static/img/faq/peanutsediting.jpg@400)
+{% include image src="/static/img/faq/peanutsediting.jpg" width="400" %}
 
 In order to facilitate you in asking good quality questions, this FAQ serves as a guide for
 

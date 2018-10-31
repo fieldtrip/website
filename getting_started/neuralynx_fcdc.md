@@ -29,7 +29,7 @@ Here, we will briefly explain how we use FieldTrip to obtain these representatio
 
 The overall flow of datafile formats transformations that we currently use in our recording setup, looks as follow
 
-![image](/static/img/getting_started/slide1.png)
+{% include image src="/static/img/getting_started/slide1.png" %}
 
 ### Data splitting
 
@@ -198,11 +198,11 @@ For example, a schematic layout of the 256 electrode grid might be obtained usin
 	ft_layoutplot(cfg)
 
 To obtain something like this: 
-![image](/static/img/getting_started:/chematic_common3.png)
+{% include image src="/static/img/getting_started:/chematic_common3.png" %}
 
 An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:
 
-![image](/static/img/getting_started/ku_039_256elec.png@571x367)
+{% include image src="/static/img/getting_started/ku_039_256elec.png" width="571" %}--x367)
 
  
  

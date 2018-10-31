@@ -16,7 +16,7 @@ You can download the tutorial data [here](ftp://ftp.fieldtriptoolbox.org/pub/fie
 
 # Copyrights
 
-Copyright (C) 2008-2018, Donders Institute for Brain, Cognition and Behaviour, Radboud University, The Netherlands (DCCN, DCC, DCN)  
+Copyright (C) 2008-2018, Donders Institute, Radboud University, The Netherlands (DCCN, DCC, DCN)  
 Copyright (C) 2014-2018, Karolinska Institute, Stockholm, Sweden (NatMEG)  
 Copyright (C) 2012-2016, Max Planck Institute for Psycholinguistics, The Netherlands (MPI)  
 Copyright (C) 2010-2013, Swammerdam Institute for Life Sciences, University of Amsterdam (SILS)  

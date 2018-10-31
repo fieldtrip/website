@@ -94,7 +94,7 @@ The ''MarkerGUI'' class can be used to insert events into a FieldTrip buffer by 
 
 If you leave out the optional argument, ''localhost:1972'' will be used as the default. However, you *need* to connect to the buffer server, and can disconnect, change the address, and re-connect at any time, using the GUI. The ''Address'' input field will have a light green background as long as the application is connected to the buffer server. In case of errors during writing events, the connection will be closed automatically.
 
-![image](/static/img/development/realtime/markergui.png)
+{% include image src="/static/img/development/realtime/markergui.png" %}
 
 ### Compilation
 

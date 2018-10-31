@@ -16,7 +16,7 @@ This page presents the outline of an algorithm (or set of algoritms) that allow 
 *  Determine which voxels belong to head using simple thresholding, smoothing and region growing
 *  Project triangulated sphere at center of mass brain onto boundary
 
-![image](/static/img/development/bemmodel/bemmodel2.png)
+{% include image src="/static/img/development/bemmodel/bemmodel2.png" %}
 
 ## The brain
 
@@ -24,7 +24,7 @@ This page presents the outline of an algorithm (or set of algoritms) that allow 
 *  Project triangulated sphere at center of mass brain onto boundary
 *  Optional: use laplacian smoothing on the triangulated surface
 
-![image](/static/img/development/bemmodel/bemmodel1.png)
+{% include image src="/static/img/development/bemmodel/bemmodel1.png" %}
 
 ## The skull
 
@@ -38,17 +38,17 @@ A potential problem in the bottom half is that the skull and brain triangulation
 
 A known problem in the top half is that the algorithms for determining the skull-skin boundary are not 100% robust. They are based on the MRI intensity countour along the radial lines through the skull and skin.
 
-![image](/static/img/development/bemmodel/bemmodel3.png)
+{% include image src="/static/img/development/bemmodel/bemmodel3.png" %}
 
 This results in outliers.
 
-![image](/static/img/development/bemmodel/bemmodel4.png)
+{% include image src="/static/img/development/bemmodel/bemmodel4.png" %}
 
 ## Optimizing the skull triangulation
 
 This requires the computation of the surface laplacial (i.e. smoothness) of the radius of the skull surface. Subsequently the following steps are take
 
-![image](/static/img/development/bemmodel/bemmodel5.png)
+{% include image src="/static/img/development/bemmodel/bemmodel5.png" %}
 
  1.  Detect suspicious vertices in the skull triangulation
     * Any vertex less than 2.5 mm from the brain
@@ -58,7 +58,7 @@ This requires the computation of the surface laplacial (i.e. smoothness) of the 
  3.  Check that the 2.5 and 3.5 criteria are optimally met
  4.  Go back to step 1 and repeat untill it converges
 
-![image](/static/img/development/bemmodel/bemmodel6.png)
+{% include image src="/static/img/development/bemmodel/bemmodel6.png" %}
 
 # Additional ideas
 

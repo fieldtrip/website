@@ -48,19 +48,19 @@ Here the original field distributions in both conditions are dominated by the st
 
 In this experiment, MEG was recorded during stimulation of the affected/painfull hand prior to, and after application of a pain blocker. These correspond to the conditions A and B as explained above. First the MEG topography of the M24 event-related field is given for both conditions seperately.
 
-![image](/static/img/example/difference_erf_pain.png)
+{% include image src="/static/img/example/difference_erf_pain.png" %}
 
-*Figure 1; A16/SV-med-R (i.e. pain)*
+*Figure: A16/SV-med-R (i.e. pain)*
 
-![image](/static/img/example/difference_erf_nopain.png)
+{% include image src="/static/img/example/difference_erf_nopain.png" %}
 
-*Figure 2; A16/SV-med-R-block (i.e. no pain)*
+*Figure: A16/SV-med-R-block (i.e. no pain)*
 
 Looking at these two topographies, a single dipole seems sufficient to explain the field distribution. It is also not clear that the dipole would be at a different location, although there is a small change in the global field strength. A dipole that corresponds with the dipolar field is schematically drawn in the two topographies as a yellow arrow. Subsequently we can look at the difference map (see below). 
 
-![image](/static/img/example/difference_erf_result.png@300)
+{% include image src="/static/img/example/difference_erf_result.png" width="300" %}
 
-*Figure 3; difference =  block - pain*
+*Figure: difference =  block - pain*
 
 The difference map shows two dipolar patterns with opposing directions. The negativity (ingoing field) of the two dipolar fields is approximately at the same sensor location. The first dipolar field resembles the distribution in the two separate conditions above. In the difference topography that is (again) schematically indicated with a yellow arrow. The source corresponding with the yellow arrow has a smaller amplitude in the block condition than in the pain condition, which can be derived from the opposite direction of the arrow (note the subtration is block-pain). 
 

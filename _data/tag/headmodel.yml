@@ -76,6 +76,3 @@
 - name:  Make leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
 
-- name:  Doing source-analysis with the created headmodel
-  link:  /example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
-

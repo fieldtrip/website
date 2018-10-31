@@ -25,7 +25,7 @@ In order to compute leadfields, there are five main steps that have to be follow
 
 The first step is the same for solving both the EEG and MEG forward problem, the other four have to be executed separately for EEG and MEG. See Figure1.
 
-![image](/static/img/workshop/ohbm2018/scheme_fem.png)
+{% include image src="/static/img/workshop/ohbm2018/scheme_fem.png" %}
 *Figure1: pipeline for forward computation using FEM, in the orange box there are the steps which differ between EEG and MEG*
 
 In particular, the EEG forward solution is computed via the method so-called *simbio* which relies on the code that you can find [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome), while the MEG forward solution calls the *duneuro* method, which makes use of the code developed in the University of Münster, visit [this](http://duneuro.org/) for further details.
@@ -49,7 +49,7 @@ Visualize the MRI
 	cfg = [];
 	ft_sourceplot(cfg,mri_orig);
 
-![image](/static/img/workshop/baci2017/mri_orig.png)
+{% include image src="/static/img/workshop/baci2017/mri_orig.png" %}
 *Figure2: visualization of the MRI*
 
 ###  b. realign the MRI
@@ -76,7 +76,7 @@ We can visualize the resliced MRI
 	cfg = [];
 	ft_sourceplot(cfg, mri_resliced);
 
-![image](/static/img/workshop/baci2017/mri_resliced.png)
+{% include image src="/static/img/workshop/baci2017/mri_resliced.png" %}
 *Figure3: visualization of the replaced MRI*
 
 ###  d. create surface meshes
@@ -98,7 +98,7 @@ Visualize the segmentation
 	cfg.atlas        = seg_i;   
 	ft_sourceplot(cfg, seg_i);
 
-![image](/static/img/workshop/baci2017/mri_segmented_bem.png)
+{% include image src="/static/img/workshop/baci2017/mri_segmented_bem.png" %}
 *Figure4: 3 compartment segmentation output*
 
 Once the segmentation is completed, the three surface meshes can be computed.
@@ -135,8 +135,8 @@ Visualize the segmentation result
 	ft_sourceplot(cfg, seg_i);
 
 
-![image](/static/img/workshop/ohbm2018/ohbm_segmentation5.png)
-*Figure8: 5 compartment segmentation output *
+{% include image src="/static/img/workshop/ohbm2018/ohbm_segmentation5.png" %}
+*Figure 8: 5 compartment segmentation output.*
 
 ###  f. create the mesh
 
@@ -193,7 +193,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 
 	ft_plot_sens(elec, 'style', '*g');
 
-![image](/static/img/workshop/baci2017/mesh_fem_elec.png)
+{% include image src="/static/img/workshop/baci2017/mesh_fem_elec.png" %}
 *Figure9: visualization of headmodel_fem_eeg and electrodes*
 
 ## 3(EEG). Create the source-model
@@ -213,7 +213,7 @@ We can visualize the sources and the scalp surface mes
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 
 
-![image](/static/img/workshop/ohbm2018/sourcemodel_inside_head.png)
+{% include image src="/static/img/workshop/ohbm2018/sourcemodel_inside_head.png" %}
 
 *Figure9: visualization of the source model*
 ##  4(EEG). Handle the sensors
@@ -226,7 +226,7 @@ In case the electrodes are not aligned to the MRI (i.e., CTF space), we can use 
 	cfg.headshape = mesh_surf(1);
 	elec  = ft_electroderealign(cfg);
 
-![image](/static/img/workshop/ohbm2018/ft_electroderealign_figure.png)
+{% include image src="/static/img/workshop/ohbm2018/ft_electroderealign_figure.png" %}
 *Figure9: visualization of headmodel_fem_eeg and electrodes*
 ##  5(EEG). Compute the leadfield
 
