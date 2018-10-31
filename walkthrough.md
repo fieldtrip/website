@@ -266,13 +266,13 @@ Want to know exactly how digital filters work? Want to intuitively grasp the FFT
 
 Ft_freqanalysis supports many approaches to spectral calculations. You might be going back and forth between using different methods, what, when and how many tapers to use, choosing different time-frequency windows, etc. We’ll discuss two main approaches: doing a FFT on the whole trial at once and using a sliding time-window. After that the most common features will be explained one by one. At worst you will have heard about them once more again. At best you’ll have a little bit more grip and overview on their use.
 Let’s begin with the catch: every signal in the time domain can be described in the frequency domain and vice-versa - although doing so does not always make much sense.
-The translation from one domain to the other is done using a variation of the (inverse) Fourier transform. FieldTrip combines all its calculations from the time to the frequency domain in the function ft_freqanalysis. It will result in a data structure that has to be able to contain not just channels x time for every trial, but now also has to add frequency as a dimensio
+The translation from one domain to the other is done using a variation of the (inverse) Fourier transform. FieldTrip combines all its calculations from the time to the frequency domain in the function ft_freqanalysis. It will result in a data structure that has to be able to contain not just channels x time for every trial, but now also has to add frequency as a dimension:
 
 {% include image src="/static/img/wt_fig9.png" width="600" %}
 
 ## Power per trial
 
-In the simplest case you are interested in the power of certain frequencies (frequencies of interest: cfg.foi)  of the whole trial. This is done by using 'mtmfft' as the metho
+In the simplest case you are interested in the power of certain frequencies (frequencies of interest: cfg.foi)  of the whole trial. This is done by using 'mtmfft' as the method:
 
     cfg = [];
     cfg.method = 'mtmfft';
@@ -285,7 +285,7 @@ Note that in cfg.foi we are now specifying a list of frequencies with steps of 1
 
 ## Power changes over time
 
-The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is ''mtmconvol''. There are two main differences between the two. First, ''mtmfft'' gives the average frequency-content of your trial, whereas ''mtmconvol'' gives the time-frequency representation of your trial, i.e. how the frequency content of your trial changes over time. Second, they differ in their implementation. Below a short descriptio
+The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is ''mtmconvol''. There are two main differences between the two. First, ''mtmfft'' gives the average frequency-content of your trial, whereas ''mtmconvol'' gives the time-frequency representation of your trial, i.e. how the frequency content of your trial changes over time. Second, they differ in their implementation. Below a short description:
 
 ''Mtmfft'' consists of 2 main steps.
 
@@ -298,17 +298,18 @@ The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is '
 2.  Wavelet is windowed/tapered similarly as step 1 in ''mtmfft''.
 3.  The Fast-Fourier-Transform is taken of both your raw data and your wavelet and multiplied with each other (for each frequency).
 4.  The inverse Fourier-transform is taken, and parts of this are selected as output. 
-    #### Sliding time windows
+
+#### Sliding time windows
 
 If you are interested in the development of the power (or other frequency information beyond the scope of this document) over time, you need to cut up the time course into pieces and calculate the power for every piece separatel
 
 {% include image src="/static/img/wt_fig10.png" width="600" %}
 
-However, because of the straight edges of the time window spectral leakage will occur (something you do not want). It is therefore recommended make the edges of the time window taper off to zero by for instance multiplying the time course with an inverted cosine function. This is called a Hanning windo
+However, because of the straight edges of the time window spectral leakage will occur (something you do not want). It is therefore recommended make the edges of the time window taper off to zero by for instance multiplying the time course with an inverted cosine function. This is called a Hanning window:
 
 {% include image src="/static/img/wt_fig11.png" width="600" %}
 
-As you can see using such a taper will make you lose data between the time windows. This is compensated by using an overlapping time window, providing the average power of the time-window centered at multiple time-points. Note that although you sample in much smaller steps, the value for every window is still calculated for the whole time windo
+As you can see using such a taper will make you lose data between the time windows. This is compensated by using an overlapping time window, providing the average power of the time-window centered at multiple time-points. Note that although you sample in much smaller steps, the value for every window is still calculated for the whole time window:
 
 {% include image src="/static/img/wt_fig12.png" width="600" %}
 
@@ -343,24 +344,25 @@ We can now add the following line to the cfg:
 
     cfg.trials = trialsA;
 
-However, if you want to save trials separately you can specify the following optio
+However, if you want to save trials separately you can specify the following option:
 
     cfg.keeptrials = 'yes'; 		                        % default = 'no'
 
-#### ft_freqanalysis output
+#### Output of ft_freqanalysis
 
-We might go further into the output of ft_freqanalysis in a future release of this document but for now it suffices to say it gives a datastructure as output similar as the input structure but now with the field ''.powspctrm'' instead of ''.trial'' or ''.avg.trial''. For further information see [tutorial:timefrequencyanalysis](/tutorial/timefrequencyanalysis) and [tutorial::plotting](/tutorial//plotting). 
+We might go further into the output of ft_freqanalysis in a future release of this document but for now it suffices to say it gives a datastructure as output similar as the input structure but now with the field ''.powspctrm'' instead of ''.trial'' or ''.avg.trial''. For further information see [timefrequencyanalysis](/tutorial/timefrequencyanalysis) and [plotting](/tutorial//plotting). 
 
 # Statistics
 
-FieldTrip distinguishes itself perhaps most in its flexibility in statistical approaches. In a similar way as with ft_definetrial and ft_freqanalysis, ft_timelockedstatistics and ft_freqstatistics call auxiliary functions to calculate the different statistics. Don’t be afraid though – most users won’t need to go nitty-gritty and go through those functions. As an end user needs to understand most of all i
+FieldTrip distinguishes itself perhaps most in its flexibility in statistical approaches. In a similar way as with ft_definetrial and ft_freqanalysis, ft_timelockedstatistics and ft_freqstatistics call auxiliary functions to calculate the different statistics. Don’t be afraid though – most users won’t need to go nitty-gritty and go through those functions. As an end user needs to understand most of all it:
 
-1\.  The difference between descriptive and inferential statistic.
-2\.  The common structure for the input to - and output from - ft_freqstatistics.
+1. The difference between descriptive and inferential statistics
+2. The common structure for the input to - and output from - ft_freqstatistics
 
 ## Descriptive & inferential statistic
 
 The difference between descriptive and inferential statistic is often implicit in neuroimaging analysis packages, or in research articles for that matter. It really pays off to consider them separately here and to entertain the many possibilities of combining descriptive statistics with statistical methods. It is paramount in understanding the philosophy and appreciating the full statistical potential of FieldTrip.
+
 So what do we mean with descriptive statistic? It’s the single value you end up with after reducing your data(set) and representing an aspect of its distribution which you would want to use for statistical comparison. Think for instance about “average alpha power over trials”, “variance of the P300 amplitude” or “the latency of maximal mu-rhythm suppression”. You might calculate a descriptive statistic for every subject, e.g. the difference between conditions (which you want to compare over subjects). Conversely, you might want to use one descriptive for every trial (which you will compare within a subject). A descriptive statistic is not limited to averages of power or amplitude but can be any output of a statistical procedure itself, such as a Z-value, t-value, variance, mean-difference or Beta-value.
 The inferential statistic is what you get when you test your descriptive statistics against the null-hypothesis, e.g. is your p-value. Again, there are many ways to do your null-hypothesis testing, e.g. using a (paired) t-test or Montecarlo approach.
 
@@ -376,11 +378,11 @@ Also when it comes to your statistical analysis FieldTrip doesn’t let you down
 
 ## Input - data and your designmatrix
 
-It should be obvious that besides feeding data we need to specify how the separate data entries should be treated – which belong to the same condition for instance. What is common to all designs is that data entries are always assumed to be in a row. In the simplest case we only need to specify a code corresponding to the independent variable for every data entry. Note the use of the parameters ivar and uvar. They denote nothing more than the rownumber in the designmatrix to find either your independent variables (ivar) or units of observation (uvar).
+It should be obvious that besides feeding data we need to specify how the separate data entries should be treated – which belong to the same condition for instance. What is common to all designs is that data entries are always assumed to be in a row. In the simplest case we only need to specify a code corresponding to the independent variable for every data entry. Note the use of the parameters ivar and uvar. They denote nothing more than the row-number in the design-matrix to find either your independent variables (ivar) or units of observation (uvar).
 
 ### Non-paired comparison
 
-This could be simply the condition number as we have in the case of a (non-paired) comparison of two series of data entries. Note that this is the same regardless if we are dealing with a within-subject (e.g. condition A versus B) or a between-subject design (e.g. group A versus B, session A versus B
+This could be simply the condition number as we have in the case of a (non-paired) comparison of two series of data entries. Note that this is the same regardless if we are dealing with a within-subject (e.g. condition A versus B) or a between-subject design (e.g. group A versus B, session A versus B):
 
 {% include image src="/static/img/wt_fig15.png" width="300" %}
 
