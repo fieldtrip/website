@@ -1,6 +1,5 @@
-<!-- This shows the site navigation -->
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
   <a class="navbar-brand" href="/">
     <img src="/static/img/fieldtriplogo-75.png" width="75" alt="">
   </a>
@@ -8,19 +7,16 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       {% for item in site.data.navigation %}
-      <li class="nav-item active">
-        <a class="nav-link active" href="{{ item.link }}">{{ item.name }}</a>
-      </li>
+        <li class="nav-item active">
+          <a class="nav-link active" href="{{ item.link }}">{{ item.name }}</a>
+        </li>
       {% endfor %}
-
-      <!--
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
--->
-
+    </ul>
   </div>
-</nav>
+
+  <form class="form-inline my-2 my-lg-0" method="get" action="http://www.google.com/search" target="_blank">
+    <input type="hidden" name="sitesearch" value="www.fieldtriptoolbox.org" />
+    <input type="text" name="q" maxlength="255" placeholder="Search using Google" />
+  </form>
 
 </nav>
