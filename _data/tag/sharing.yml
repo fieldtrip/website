@@ -13,6 +13,9 @@
 - name:  How can I anonymize data processed in FieldTrip?
   link:  /faq/how_can_i_anonymize_fieldtrip_data
 
+- name:  How should I specify the coordinate systems in a BIDS dataset?
+  link:  /faq/bids_coordsystem
+
 - name:  Preparing a combined MEG/fMRI dataset for sharing
   link:  /example/bids
 

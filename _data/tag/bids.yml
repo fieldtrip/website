@@ -1,3 +1,6 @@
+- name:  How should I specify the coordinate systems in a BIDS dataset?
+  link:  /faq/bids_coordsystem
+
 - name:  Preparing a combined MEG/fMRI dataset for sharing
   link:  /example/bids
 

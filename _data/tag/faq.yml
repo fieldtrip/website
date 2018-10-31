@@ -352,6 +352,9 @@
 - name:  How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?
   link:  /faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables
 
+- name:  How should I specify the coordinate systems in a BIDS dataset?
+  link:  /faq/bids_coordsystem
+
 - name:  How does MTMCONVOL work?
   link:  /faq/mtmconvol
 

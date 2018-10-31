@@ -19,6 +19,7 @@ If there is no information listed for a potential workshop below, then we don't 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
 *  2019, MEG/EEG toolkit - Nijmegen, NL
+* 2018, [Mannheim, Germany](/workshop/mannheim2018)
 
 Previous FieldTrip workshops took place at
 

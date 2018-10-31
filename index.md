@@ -24,6 +24,10 @@ To get started with FieldTrip, please continue reading the [getting started](/ge
 
 # News and announcements
 
+## 09 October, 2018
+
+Tzvetan has published a new paper, entitled [FieldTrip made easy: An Analysis Protocol for Group Analysis of the Auditory Steady State Brain Response in Time, Frequency, and Space](https://www.frontiersin.org/articles/10.3389/fnins.2018.00711/full). Go and check it out!
+
 ## 10 September, 2018
 
 This website has been migrated to a new server.
@@ -36,17 +40,17 @@ Eleven EU countries have decided that all scientific publications funded by thei
 
 Here are the slides of the topics that we presented and discussed in the Open Science Panel session at the [BIOMAG 2018](http://www.biomag2018.org) conference in Philadelphia last week:
 
-*  [Robert Oostenveld - Introduction](https://www.slideshare.net/RobertOostenveld/biomag2018-robert-oostenveld-open-science-intro)
-*  [Guiomar Niso - BIDS and Omega](https://www.slideshare.net/RobertOostenveld/biomag2018-guiomar-niso-bids-and-omega)
-*  [Darren Price - CamCAN](https://www.slideshare.net/RobertOostenveld/biomag2018-darren-price-camcan)
-*  [Jan-Mathijs Schoffelen - COBIDAS](https://www.slideshare.net/RobertOostenveld/biomag2018-janmathijs-schoffelen-cobidas)
-*  [Vladimir Litvak - Group Analyses in Frontiers](https://www.slideshare.net/RobertOostenveld/biomag2018-vladimir-litvak-frontiers)
-*  [Tzvetan Popov - HCP User's Perspective](https://www.slideshare.net/RobertOostenveld/biomag2018-tzvetan-popov-hcp-from-a-users-perspective)
-*  [Dennis Engemann - MNE-HCP](https://www.slideshare.net/RobertOostenveld/biomag2018-denis-engemann-mnehcp)
+-   [Robert Oostenveld - Introduction](https://www.slideshare.net/RobertOostenveld/biomag2018-robert-oostenveld-open-science-intro)
+-   [Guiomar Niso - BIDS and Omega](https://www.slideshare.net/JuliaGuiomarNisoGaln/guiomar-niso-biomag-2018-open-science-meg)
+-   [Darren Price - CamCAN](https://www.slideshare.net/RobertOostenveld/biomag2018-darren-price-camcan)
+-   [Jan-Mathijs Schoffelen - COBIDAS](https://www.slideshare.net/RobertOostenveld/biomag2018-janmathijs-schoffelen-cobidas)
+-   [Vladimir Litvak - Group Analyses in Frontiers](https://www.slideshare.net/RobertOostenveld/biomag2018-vladimir-litvak-frontiers)
+-   [Tzvetan Popov - HCP User's Perspective](https://www.slideshare.net/RobertOostenveld/biomag2018-tzvetan-popov-hcp-from-a-users-perspective)
+-   [Dennis Engemann - MNE-HCP](https://www.slideshare.net/RobertOostenveld/biomag2018-denis-engemann-mnehcp)
 
 ## 01 July, 2018
 
-On June 29th, Robert and Jan-Mathijs taught at the Human Connectome Project's workshop, which this year took place in Oxford. During an intense one-week program, 105 participants learnt about the ins and outs of the Human Connectome Project (HCP). Did you know that the HCP consortium also collected (and partially analysed) MEG data from about 100 participants? And that this data is freely available for download? And that the analysis pipelines and software are also available to the community? Check it out on [https://www.humanconnectome.org](https://www.humanconnectome.org).
+On June 29th, Robert and Jan-Mathijs taught at the Human Connectome Project's workshop, which this year took place in Oxford. During an intense one-week program, 105 participants learnt about the ins and outs of the Human Connectome Project (HCP). Did you know that the HCP consortium also collected (and partially analysed) MEG data from about 100 participants? And that this data is freely available for download? And that the analysis pipelines and software are also available to the community? Check it out on <https://www.humanconnectome.org>.
 
 {% include image src="/static/img/ft_in_oxford.jpg" %}
 
