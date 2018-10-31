@@ -4,18 +4,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<footer>
-  <small class="text-muted">
+{% comment %}
+<span class="text-muted small">
+</span>
+{% endcomment %}
+
+<footer class="footer">
+  <div class="container">
+    <span class="text-muted small">
+
     <div class="row">
       <div class="col-md-4" align="center">
         {{ site.time }}
       </div>
       <div class="col-md-4" align="center">
-        Copyright (C) 2003-2018 FieldTrip project
+        Copyright (C) 2003-2018
       </div>
       <div class="col-md-4" align="center">
-        <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC Attribution-Share Alike 4.0 International</a>
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC Attribution-Share Alike</a>
       </div>
     </div>
-  </small>
+    </span>
+
+  </div>
 </footer>
