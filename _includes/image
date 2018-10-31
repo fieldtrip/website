@@ -1,0 +1,6 @@
+{% if include.width != nill and include.width != "" %}
+{% assign width = include.width %}
+{% else %}
+{% assign width = 500 %}
+{% endif %}
+<a href="{{ include.src }}"><img src="{{ include.src }}" width="{{ width }}"></a>
