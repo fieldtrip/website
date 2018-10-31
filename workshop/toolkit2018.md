@@ -15,68 +15,61 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
 
 ### Monday April 9, 2018
 
- | 09:00-09:30 | Registration, handouts and coffee                                                                            |           
- | ----------- | ---------------------------------                                                                            |           
- | 09:30-09:45 | Welcome                                                                                                      |           
- | 09:45-10:45 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox ({{ :workshop:toolkit2018_introduction.pdf | Lecture}}) |
- | 10:45-11:00 | Coffee Break                                                                                                 |           
- | 11:00-12:00 | Data acquisition demonstration in the EEG and MEG labs                                                       |           
- | 12:00-13:00 | Lunch                                                                                                        |           
- | 13:00-15:00 | Pre-processing ([Hands-on](/tutorial/eventrelatedaveraging))                                                 |           
- | 15:00-15:15 | Tea Break                                                                                                    |           
- | 15:15-16:30 | Time frequency analysis of power ({{ :workshop:toolkit2018_frequency.pdf                                     | Lecture}}) |
- | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                               |           
+| 09:00-09:30 | Registration, handouts and coffee                                                                                       |
+| 09:30-09:45 | Welcome                                                                                                                 |
+| 09:45-10:45 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/static/pdf/workshop/toolkit2018/introduction.pdf) |
+| 10:45-11:00 | Coffee Break                                                                                                            |
+| 11:00-12:00 | Data acquisition demonstration in the EEG and MEG labs                                                                  |
+| 12:00-13:00 | Lunch                                                                                                                   |
+| 13:00-15:00 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)                                                           |
+| 15:00-15:15 | Tea Break                                                                                                               |
+| 15:15-16:30 | Time frequency analysis of power - [lecture](/static/pdf/workshop/toolkit2018/frequency.pdf) |
+| 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                                          |
 
 ### Tuesday April 10, 2018
 
- | 09:00-11:00                              | Time-frequency analysis of power ([Hands-on](/tutorial/timefrequencyanalysis)) |           
- | -----------                              | ------------------------------------------------------------------------------ |           
- | 11:00-11:15                              | Coffee Break                                                                   |           
- | 11:15-12:15                              | Spontaneous EEG and sleep ({{ :workshop:toolkit2018_sleep.pdf                  | Lecture}}) |
- | 12:15-13:15                              | Lunch                                                                          |           
- | 13:15-15:15                              | Analysis of continuous EEG data ([Hands-on](/tutorial/sleep))                  |           
- | 15:15-15:30                              | Tea break                                                                      |           
- | 15:30-16:30                              | Forward and inverse ({{ :workshop:toolkit2018_forward_inverse.pdf              | Lecture}}) |
- | 16:30-17:15                              | Wrap-up-the-day: special topics, general questions and answers                 |           
- |                                          |                                                                                |           
- | 18:30-22:00	Drinks & dinner at Mi Barrio |                                                                               
+| 09:00-11:00 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis)             |
+| 11:00-11:15 | Coffee Break                                                                               |
+| 11:15-12:15 | Spontaneous EEG and sleep - [lecture](/static/pdf/workshop/toolkit2018/sleep.pdf)          |
+| 12:15-13:15 | Lunch                                                                                      |
+| 13:15-15:15 | Analysis of continuous EEG data - [hands-on](/tutorial/sleep)                             |
+| 15:15-15:30 | Tea break                                                                                  |
+| 15:30-16:30 | Forward and inverse - [lecture](/static/pdf/workshop/toolkit2018/forward_inverse.pdf)      |
+| 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                             |
+| 18:30-22:00 | Drinks & dinner at Mi Barrio                                                               |
 
 ### Wednesday April 11, 2018
 
-
- | 09:00-10:00 | Connectivity analysis in MEG and EEG data ({{ :workshop:toolkit2018_connectivity.pdf   | Lecture}}) |
- | ----------- | ------------------------------------------------------------------------------------   | ---------- |
- | 10:00-10:45 | Analysis of sensor- and source-level connectivity ([Hands-on](/tutorial/connectivity)) |           
- | 10:45-11:00 | Coffee Break                                                                           |           
- | 11:00-12:15 | Analysis of sensor- and source-level connectivity ([Hands-on](/tutorial/connectivity)) |           
- | 12:15-13:00 | Lunch                                                                                  |           
- | 13:00-14:15 | Source reconstruction using beamformers ({{ :workshop:toolkit2018_beamforming.pdf      | Lecture}}) |
- | 14:15-15:00 | Beamforming ([Hands-on](/tutorial/beamformer))                                         |           
- | 15:00-15:15 | Tea Break                                                                              |           
- | 15:30-16:30 | Beamforming ([Hands-on](/tutorial/beamformer))                                         |           
- | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                         |           
+| 09:00-10:00 | Connectivity analysis in MEG and EEG data - [lecture](/static/pdf/workshop/toolkit2018/connectivity.pdf) |
+| 10:00-10:45 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity)             |
+| 10:45-11:00 | Coffee Break                                                                                       |
+| 11:00-12:15 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity)             |
+| 12:15-13:00 | Lunch                                                                                              |
+| 13:00-14:15 | Source reconstruction using beamformers - [lecture](/static/pdf/workshop/toolkit2018/beamforming.pdf) |
+| 14:15-15:00 | Beamforming - [hands-on](/tutorial/beamformer)                                                     |
+| 15:00-15:15 | Tea Break                                                                                          |
+| 15:30-16:30 | Beamforming - [hands-on](/tutorial/beamformer)                                                     |
+| 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                     |
 
 ### Thursday April 12, 2018
 
- | 09:00-10:30 | Statistics using non-parametric randomization techniques ({{ :workshop:toolkit2018_statistics.pdf             | Lecture}})          |
- | ----------- | -------------------------------------------------------------------------------------------------             | ----------          |
- | 10:30-10:45 | Coffee break                                                                                                  |                    
- | 10:45-12:00 | Statistics using non-parametric randomization techniques ([Hands-on](/tutorial/cluster_permutation_timelock)) |                    
- | 12:00-13:00 | Lunch                                                                                                         |                    
- | 13:00-14:00 | Statistics using non-parametric randomization techniques ([Hands-on](/tutorial/cluster_permutation_timelock)) |                    
- | 14:00-15:00 | Large scale analyses and open science ({{ :workshop:toolkit2018_open_science.pdf                              | Lecture and demo}}) |
- | 15:00-15:15 | Tea break                                                                                                     |                    
- | 15:15-17:15 | FieldTrip playground part 1                                                                                   |                    
- | 17:15-18:00 | Wrap-up-the-day: special topics, general questions and answers                                                |                    
- |             |                                                                                                               |                    
- | 18:00-23:00 | Pizza, drinks, joint projects and hacking (optional)                                                          |                    
+| 09:00-10:30 | Statistics using non-parametric randomization techniques - [lecture](/static/pdf/workshop/toolkit2018/statistics.pdf)              |
+| 10:30-10:45 | Coffee break                                                                                                                       |
+| 10:45-12:00 | Statistics using non-parametric randomization techniques -[hands-on](/tutorial/cluster_permutation_timelock)                      |
+| 12:00-13:00 | Lunch                                                                                                                              |
+| 13:00-14:00 | Statistics using non-parametric randomization techniques - [hands-on](/tutorial/cluster_permutation_timelock)                     |
+| 14:00-15:00 | Large scale analyses and open science - [lecture and demo](/static/pdf/workshop/toolkit2018/open_science.pdf)                      |
+| 15:00-15:15 | Tea break                                                                                                                          |
+| 15:15-17:15 | FieldTrip playground part 1                                                                                                        |
+| 17:15-18:00 | Wrap-up-the-day: special topics, general questions and answers                                                                     |
+| 18:00-23:00 | Pizza, drinks, joint projects and hacking (optional)                                                                               |
+
 ### Friday April 13, 2018
 
- | 09:30-12:00 | FieldTrip playground part 2         |
- | ----------- | ---------------------------         |
- | 12:00-13:00 | Lunch                               |
- | 13:00-14:30 | FieldTrip playground part 3         |
- | 14:30-14:45 | Tea break, testimonials, evaluation |
+| 09:30-12:00 | FieldTrip playground part 2         |
+| 12:00-13:00 | Lunch                               |
+| 13:00-14:30 | FieldTrip playground part 3         |
+| 14:30-14:45 | Tea break, testimonials, evaluation |
 
 ## Getting started with the hands-on sessions
 
@@ -99,5 +92,5 @@ The restoredefaultpath command clears your path, keeping only the official MATLA
 {% include markup/danger %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Furthermore, please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).
+Furthermore, please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 {% include markup/end %}
