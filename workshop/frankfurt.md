@@ -3,7 +3,7 @@ title: FieldTrip workshop at ESI/MPI Frankfurt, Germany
 layout: default
 ---
 
-#  FieldTrip workshop at ESI/MPI Frankfurt, Germany
+# FieldTrip workshop at ESI/MPI Frankfurt, Germany
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
@@ -11,9 +11,9 @@ version of fieldtrip that is distributed on a USB stcik, rather than the version
 have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
- 1.  Copy the complete Frankfurt directory from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
+1.  Copy the complete Frankfurt directory from the USB stick to your computer
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

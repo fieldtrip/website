@@ -9,7 +9,7 @@ layout: default
 
 Monday 22 October - Wednesday 24 October 2012
 
-http://www.unitn.it/en/cimec
+<http://www.unitn.it/en/cimec>
 
 The local organizers of the workshop are Nathan Weisz and Angelika Lingnau.
 
@@ -17,10 +17,11 @@ The local organizers of the workshop are Nathan Weisz and Angelika Lingnau.
 
 For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a **clean and well-tested** version of fieldtrip that is distributed on the workstations and on a USB stick. You should **not** work with an old version you might already have installed in the past. Furthermore, the tutorial data **does not have to be downloaded** but will also be distributed on the workstations and on a USB stick.
 
-If you work on your own laptop you need the USB stic
- 1.  Copy the complete content from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
+If you work on your own laptop you need the USB stick:
+
+1.  Copy the complete content from the USB stick to your computer
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
@@ -60,53 +61,52 @@ Each of the topics consists of a 1h lecture and a 2h hands-on session.
 
 ### Monday
 
-*  morning: [intro and ERFs](/tutorial/eventrelatedaveraging)
-*  afternoon: [time-frequency analysis](/tutorial/timefrequencyanalysis)
+-   morning: [intro and ERFs](/tutorial/eventrelatedaveraging)
+-   afternoon: [time-frequency analysis](/tutorial/timefrequencyanalysis)
 
 ### Tuesday
 
-*  morning: [beamforming](/tutorial/beamformer)
-*  afternoon: [randomization stats](/tutorial/cluster_permutation_timelock)
+-   morning: [beamforming](/tutorial/beamformer)
+-   afternoon: [randomization stats](/tutorial/cluster_permutation_timelock)
 
 ### Wednesday
 
-*  playground, analyzing your own data
+-   playground, analyzing your own data
 
-##  Trial function for TMS data
+## Trial function for TMS data
+
+    function trl = trialfun_tms(cfg)
+
+    % TRIALFUN_TMS does a flank detection on one of the EEG channels
+    % in a combined EEG-TMS recording
+    %
+    % Required fields in the configuration ar
+    %   cfg.dataset             = 'elli_test2_tms2.vhdr'
+    %   cfg.trialdef.tmschannel = 'POz'
+    %   cfg.trialdef.threshold  = -12000;
+    %   cfg.trialdef.pre        = 0.3
+    %   cfg.trialdef.post       = 0.7
+
+    hdr = ft_read_header(cfg.dataset);
+    indx = find(strcmp(hdr.label, cfg.trialdef.tmschannel));
+    dat = ft_read_data(cfg.dataset, 'chanindx', indx);
+
+    if cfg.trialdef.threshold<0
+      trig = (dat<cfg.trialdef.threshold);
+    elseif cfg.trialdef.threshold>0
+      trig = (dat>cfg.trialdef.threshold);
+    end
+
+    % find the onset and offset of the thresholded signal
+    trig = [diff(trig) 0];
+
+    % the TMS pulse happens at the onset
+    tms_sample = find(trig==1);
 
 
-	function trl = trialfun_tms(cfg)
+    trialbeg = tms_sample(:) - hdr.Fs*cfg.trialdef.pre;
+    trialend = tms_sample(:) + hdr.Fs*cfg.trialdef.post;
+    offset   = -hdr.Fs*cfg.trialdef.pre;
 
-	% TRIALFUN_TMS does a flank detection on one of the EEG channels
-	% in a combined EEG-TMS recording
-	%
-	% Required fields in the configuration ar
-	%   cfg.dataset             = 'elli_test2_tms2.vhdr'
-	%   cfg.trialdef.tmschannel = 'POz'
-	%   cfg.trialdef.threshold  = -12000;
-	%   cfg.trialdef.pre        = 0.3
-	%   cfg.trialdef.post       = 0.7
-
-	hdr = ft_read_header(cfg.dataset);
-	indx = find(strcmp(hdr.label, cfg.trialdef.tmschannel));
-	dat = ft_read_data(cfg.dataset, 'chanindx', indx);
-
-	if cfg.trialdef.threshold<0
-	  trig = (dat<cfg.trialdef.threshold);
-	elseif cfg.trialdef.threshold>0
-	  trig = (dat>cfg.trialdef.threshold);
-	end
-
-	% find the onset and offset of the thresholded signal
-	trig = [diff(trig) 0];
-
-	% the TMS pulse happens at the onset
-	tms_sample = find(trig==1);
-
-
-	trialbeg = tms_sample(:) - hdr.Fs*cfg.trialdef.pre;
-	trialend = tms_sample(:) + hdr.Fs*cfg.trialdef.post;
-	offset   = -hdr.Fs*cfg.trialdef.pre;
-
-	trl = [trialbeg trialend];
-	trl(:,3) = offset;
+    trl = [trialbeg trialend];
+    trl(:,3) = offset;

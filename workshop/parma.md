@@ -21,47 +21,46 @@ Sebo Uithol is the host and local organizer
 
 ## Tentative Program
 
-####  Monday April 28
+#### Monday April 28
 
-*  Session I
-    * 9:45			Registration, coffee, opening remarks
-    * 10:05 - 11:00		Lecture: An introduction to the MEG and the FieldTrip toolbox
-    * 11:00 - 11:15		Coffee Break
-    * 11:15 - 12:45 Hands-on: Getting started with event-related fields
-          * http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
-    * 12:45 - 13:45		Lunch
+-   Session I
+    -   9:45			Registration, coffee, opening remarks
+    -   10:05 - 11:00		Lecture: An introduction to the MEG and the FieldTrip toolbox
+    -   11:00 - 11:15		Coffee Break
+    -   11:15 - 12:45 Hands-on: Getting started with event-related fields
+        -   <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+    -   12:45 - 13:45		Lunch
 
-*  Session II
-    * 13:45 - 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
-    * 14:45 - 15:00   	Coffee Break
-    * 15:00 - 16:45		Hands-on: Time-frequency analysis of power       
-          * http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
-    * 16:45 - 17:30		Wrap-up-the-day: Ask the experts session
+-   Session II
+    -   13:45 - 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
+    -   14:45 - 15:00   	Coffee Break
+    -   15:00 - 16:45		Hands-on: Time-frequency analysis of power  
+        -   <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+    -   16:45 - 17:30		Wrap-up-the-day: Ask the experts session
 
-####  Tuesday April 29
+#### Tuesday April 29
 
-*  Session III
-    * 10:00 - 11:00		Lecture: Beamformer techniques for source reconstruction
-    * 11:00 - 11:15		Coffee break
-    * 11:15 - 13:00		Hands-on: Identifying oscillatory sources using beamformer techniques
-          * http://www.fieldtriptoolbox.org/tutorial/beamformer
+-   Session III
+    -   10:00 - 11:00		Lecture: Beamformer techniques for source reconstruction
+    -   11:00 - 11:15		Coffee break
+    -   11:15 - 13:00		Hands-on: Identifying oscillatory sources using beamformer techniques
+        -   <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+    -   13:00 - 14:00		Lunch
 
-    * 13:00 - 14:00		Lunch
+-   Session IV
+    -   14:00 - 15:15		Lecture: Non-parametric randomization techniques
+    -   15:15 - 15:30		Coffee break
+    -   15:30 - 17:15	Hands-on: Parametric and non-parametric statistics on event related fields
+        -   <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
+        -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+    -   17:15 - 18:00		Wrap-up-the-day: Ask the experts session
 
-*  Session IV
-    * 14:00 - 15:15		Lecture: Non-parametric randomization techniques
-    * 15:15 - 15:30		Coffee break
-    * 15:30 - 17:15	Hands-on: Parametric and non-parametric statistics on event related fields
-          * http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics
-          * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
-    * 17:15 - 18:00		Wrap-up-the-day: Ask the experts session
+    -   20:00			Workshop Dinner @ ???
 
-    * 20:00			Workshop Dinner @ ???
+#### Wednesday April 30
 
-####  Wednesday April 30
-
-*  Session V
-    * 10:00 - 13:00		FieldTrip playground
+-   Session V
+    -   10:00 - 13:00		FieldTrip playground
 
 ## Installing FieldTrip and Tutorial preparation
 
@@ -71,9 +70,9 @@ version of fieldtrip that is distributed on a USB stick, rather than the version
 have installed. (If you have a FieldTrip version dating from sometime in the last few weeks, that should be fine.) Importantly, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
- 1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
+1.  Copy the complete contents of the USB stick to your computer.
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

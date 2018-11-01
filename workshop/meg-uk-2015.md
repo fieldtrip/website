@@ -10,15 +10,11 @@ The workshop highlights complementary analysis methods offered by FieldTrip and 
 
 ## Organizational details
 
-When: Wednesday 7th January 2015 ([workshop](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015/workshop))
-
-When: Thursday 8th and Friday 9th January 2015 ([meeting](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015))
-
-Where: Aston University, Birmingham, UK.
-
-Who: Klaus Kessler is the local organiser and host.
-
-Faculty: Vladimir Litvak, Robert Oostenveld, Bernadette van Wijk, Gareth Barnes, Guillaume Flandin, Saskia Helbling, Ryszard Auksztulewicz, Johanna Zumer, Stephen Whitmarsh, Hongfang Wang.
+- When: Wednesday 7th January 2015 ([workshop](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015/workshop))
+- When: Thursday 8th and Friday 9th January 2015 ([meeting](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/meg-uk-2015))
+- Where: Aston University, Birmingham, UK.
+- Who: Klaus Kessler is the local organiser and host.
+- Faculty: Vladimir Litvak, Robert Oostenveld, Bernadette van Wijk, Gareth Barnes, Guillaume Flandin, Saskia Helbling, Ryszard Auksztulewicz, Johanna Zumer, Stephen Whitmarsh, Hongfang Wang.
 
 ## How should participants prepare for the workshop?
 
@@ -28,20 +24,20 @@ Some familiarity with FieldTrip and SPM is required. Please read the [SPM EEG/ME
 
 As time is limited for the lectures, we strongly recommend to watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
-For SPM (all taken from http://www.fil.ion.ucl.ac.uk/spm/course/video)
+For SPM (all taken from <http://www.fil.ion.ucl.ac.uk/spm/course/video>)
 
-*  [The general linear model](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_GLM)
-*  [Multiple comparisons problem and solutions](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_MCP)
-*  [M/EEG source analysis in SPM](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_Source)
-*  [Principles of Dynamic Causal Modelling](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_PrincipleDCM)
-*  [DCM for evoked responses](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_DCM_ERP)
+-   [The general linear model](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_GLM)
+-   [Multiple comparisons problem and solutions](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_MCP)
+-   [M/EEG source analysis in SPM](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_Source)
+-   [Principles of Dynamic Causal Modelling](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_PrincipleDCM)
+-   [DCM for evoked responses](http://www.fil.ion.ucl.ac.uk/spm/course/video/#MEEG_DCM_ERP)
 
-For FieldTrip (all taken from http://www.fieldtriptoolbox.org/video)
+For FieldTrip (all taken from <http://www.fieldtriptoolbox.org/video>)
 
-*  [FieldTrip toolbox introduction](https://www.youtube.com/watch?v=zOxCqcYmIfA)
-*  [Beamformer source reconstruction](https://www.youtube.com/watch?v=7eS11DtbIPw)
-*  [Measures of Connectivity](https://www.youtube.com/watch?v=LKrxdrntWcQ)
-*  [Cluster based randomisation statistics](https://www.youtube.com/watch?v=vOSfabsDUNg)
+-   [FieldTrip toolbox introduction](https://www.youtube.com/watch?v=zOxCqcYmIfA)
+-   [Beamformer source reconstruction](https://www.youtube.com/watch?v=7eS11DtbIPw)
+-   [Measures of Connectivity](https://www.youtube.com/watch?v=LKrxdrntWcQ)
+-   [Cluster based randomisation statistics](https://www.youtube.com/watch?v=vOSfabsDUNg)
 
 ## Programme
 
@@ -61,18 +57,17 @@ Downloading the data to your own computer should allow you to go through the dem
 | 10:00       | [hands-on](/workshop/meg-uk-2015/spm_stats)                   | General Linear Model                  | SPM                   | Guillaume Flandin     |
 | 10:30       | [lecture](/static/pdf/workshop/meg-uk-2015/lecture2.pdf)      | Non-Parametric Statistics             | FieldTrip             | Robert Oostenveld     |
 | 10:45       | [hands-on](/workshop/meg-uk-2015/fieldtrip-stats-demo)        | Non-Parametric Statistics             | FieldTrip             |                       |
-| 11:15       |                                                               | **Coffee**                            |                       |                       |
+| 11:15       |                                                               | **Coffee**                            \|                       \|                       \|
 | 11:45       | [lecture](/static/pdf/workshop/meg-uk-2015/lecture3.pdf)      | Source analysis: Bayesian perspective | SPM                   | Gareth Barnes         |
 | 12:00       | [hands-on](/workshop/meg-uk-2015/spm_source)                  | Source analysis: Bayesian perspective | SPM                   | Saskia Helbling       |
 | 12:45       | [lecture](/static/pdf/workshop/meg-uk-2015/lecture4.pdf)      | Source analysis: beamforming          | FieldTrip             | Robert Oostenveld     |
 | 13:00       | [hands-on](/workshop/meg-uk-2015/fieldtrip-beamformer-demo)   | Source analysis: beamforming          | FieldTrip             |                       |
-| 13:30       |                                                               | **Lunch**                             |                       |                       |
+| 13:30       |                                                               | **Lunch**                             \|                       \|                       \|
 | 14:30       | [lecture](/static/pdf/workshop/meg-uk-2015/lecture5.pdf)      | Connectivity measures                 | FieldTrip             | Robert Oostenveld     |
 | 14:45       | [hands-on](/workshop/meg-uk-2015/fieldtrip-connectivity-demo) | Connectivity measures                 | FieldTrip             |                       |
 | 15:30       | [lecture](/static/pdf/workshop/meg-uk-2015/lecture6.pdf)      | Dynamic causal modeling               | SPM                   | Bernadette van Wijk   |
 | 16:00       | [hands-on](/workshop/meg-uk-2015/dcm_tutorial)                | Dynamic causal modeling               | SPM                   | Ryszard Auksztulewicz |
-| 16:30       |                                                               | **Tea**                               |                       |                       |
+| 16:30       |                                                               | **Tea**                               \|                       \|                       \|
 | 17:00-18:30 | hands-on                                                      | Playground                            | FieldTrip/SPM         |                       |
-
 
 All demonstrations will be using the same [/workshop/meg-uk-2015/dataset](/workshop/meg-uk-2015/dataset).

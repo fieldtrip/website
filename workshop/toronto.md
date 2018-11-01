@@ -3,7 +3,7 @@ title: Workshop on analyzing intracranial data - spikes and fields
 layout: default
 ---
 
-#  Workshop on analyzing intracranial data: spikes and fields
+# Workshop on analyzing intracranial data: spikes and fields
 
 ## Where
 
@@ -19,54 +19,55 @@ Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Ni
 
 ## Program
 
-###  Saturday
+### Saturday
 
-*  morning
-    * 1h lecture - Introduction to FieldTrip and LFP/EEG analysis (Robert Oostenveld)
-    * 2h handson http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
+-   morning
+    -   1h lecture - Introduction to FieldTrip and LFP/EEG analysis (Robert Oostenveld)
+    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
-*  afternoon
-    * 1h lecture - Spike, and Spike-LFP Analysis (Martin Vinck)
-    * 1h handson http://www.fieldtriptoolbox.org/tutorial/spike
-    * 1h people work on own data with ERFs and/or spikes
+-   afternoon
+    -   1h lecture - Spike, and Spike-LFP Analysis (Martin Vinck)
+    -   1h handson <http://www.fieldtriptoolbox.org/tutorial/spike>
+    -   1h people work on own data with ERFs and/or spikes
 
-*  evening - special interest lectures on decoding methods
-    * Use of entropy and mutual information measures for neuroscience applications (Martin)
-    * A hands-on introduction to Bayesian decoding of multiple spike train data (Matthijs van der Meer; e-mail to get the data)
-    * open discussion
+-   evening - special interest lectures on decoding methods
+    -   Use of entropy and mutual information measures for neuroscience applications (Martin)
+    -   A hands-on introduction to Bayesian decoding of multiple spike train data (Matthijs van der Meer; e-mail to get the data)
+    -   open discussion
 
-###  Sunday
+### Sunday
 
-*  morning
-    * 1h lecture - Frequency analysis of power and coherence (Robert)
-    * 2h handson http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
+-   morning
+    -   1h lecture - Frequency analysis of power and coherence (Robert)
+    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
 
-*  afternoon
-    * 1h lecture - Connectivity analysis (Martin)
-    * 1h handson http://www.fieldtriptoolbox.org/tutorial/spikefield
-    * 1h handson http://www.fieldtriptoolbox.org/tutorial/connectivity
+-   afternoon
+    -   1h lecture - Connectivity analysis (Martin)
+    -   1h handson <http://www.fieldtriptoolbox.org/tutorial/spikefield>
+    -   1h handson <http://www.fieldtriptoolbox.org/tutorial/connectivity>
 
-*  evening
-    * short project presentations from participants
+-   evening
+    -   short project presentations from participants
 
-###  Monday
+### Monday
 
-*  morning
-    * 1h lecture - Randomization and Cluster statistics (Robert)
-    * 2h people work on own data on laptops
+-   morning
+    -   1h lecture - Randomization and Cluster statistics (Robert)
+    -   2h people work on own data on laptops
 
 ## Preparing for the hands-on sessions
 
-Please copy the data and the fieldtrip version that we will use from http://storage.aml.yorku.ca. This will take some time.
+Please copy the data and the fieldtrip version that we will use from <http://storage.aml.yorku.ca>. This will take some time.
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a **clean and well-tested**
 version of fieldtrip that is distributed on the workstations and on a USB stick. You should **not** work with an old version you might already have installed in the past. Furthermore, the tutorial data **does not have to be downloaded** but will also be distributed on the workstations and on a USB stick.
 
-If you work on your own laptop you need the USB stic
- 1.  Copy the complete content from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
+If you work on your own laptop you need the USB stick:
+
+1.  Copy the complete content from the USB stick to your computer
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

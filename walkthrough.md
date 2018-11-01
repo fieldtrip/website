@@ -289,8 +289,8 @@ The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is '
 
 ''Mtmfft'' consists of 2 main steps.
 
- 1\.  Your raw data is windowed/tapered by a taper you selected in cfg.taper (e.g. hanning, dpss, etc.). This is important for various reasons explained in the next section.
- 2\.  the Fast-Fourier-Fransform (FFT) of your data is taken, and parts of this are selected as output.
+1.  Your raw data is windowed/tapered by a taper you selected in cfg.taper (e.g. hanning, dpss, etc.). This is important for various reasons explained in the next section.
+2.  the Fast-Fourier-Fransform (FFT) of your data is taken, and parts of this are selected as output.
 
 ''Mtmconvol'' works a little differently. One of several methods to get a time-frequency representation of your data is by using wavelet-convolution, where a wavelet is 'sliding' over your raw data, at each time-point taking the average of a element-wise multiplication of all the data that 'lies under' your wavelet. ''Mtmconvol'' does exactly this, but then by multiplication in the frequency domain (which is much faster than convolution in the time-domain).
 
@@ -356,8 +356,8 @@ We might go further into the output of ft_freqanalysis in a future release of th
 
 FieldTrip distinguishes itself perhaps most in its flexibility in statistical approaches. In a similar way as with ft_definetrial and ft_freqanalysis, ft_timelockedstatistics and ft_freqstatistics call auxiliary functions to calculate the different statistics. Don’t be afraid though – most users won’t need to go nitty-gritty and go through those functions. As an end user needs to understand most of all it:
 
-1. The difference between descriptive and inferential statistics
-2. The common structure for the input to - and output from - ft_freqstatistics
+1.  The difference between descriptive and inferential statistics
+2.  The common structure for the input to - and output from - ft_freqstatistics
 
 ## Descriptive & inferential statistic
 
@@ -370,9 +370,9 @@ The inferential statistic is what you get when you test your descriptive statist
 
 Also when it comes to your statistical analysis FieldTrip doesn’t let you down: The structure of its output is consistent with the datastructure of its input. We will revisit the following figure a couple of times, but for now please notice:
 
- 1\.  Unless you specify otherwise through averaging on a certain dimension, the structure of the output will have the same structure as the input
- 2\.  Those values of the output – the descriptive statistics, the inferential statistics and the decisions (to reject your null-hypothesis), are dependent on cfg.statistic, cfg.method and cfg.alpha, respectively.
- 3\.  That we need to specify a design matrix – our next topic
+ 1.  Unless you specify otherwise through averaging on a certain dimension, the structure of the output will have the same structure as the input
+ 2.  Those values of the output – the descriptive statistics, the inferential statistics and the decisions (to reject your null-hypothesis), are dependent on cfg.statistic, cfg.method and cfg.alpha, respectively.
+ 3.  That we need to specify a design matrix – our next topic
 
 {% include image src="/static/img/wt_fig14.png" width="600" %}
 

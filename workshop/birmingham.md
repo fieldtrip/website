@@ -5,7 +5,7 @@ layout: default
 
 # MRC Partnership Grant FieldTrip workshop in Birmingham
 
-The official page for this workshop is hosted at http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/fieldtrip-workshop-birmingham. Some details are copied here for reference and easier maintenance.
+The official page for this workshop is hosted at <http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/fieldtrip-workshop-birmingham>. Some details are copied here for reference and easier maintenance.
 
 ### Where
 
@@ -40,7 +40,7 @@ Session I
 Session II
 9:15 – 10:15		Lecture: Fundamentals of neuronal oscillations and  synchrony
 10:15 – 10:30   Coffee Break
-10:30 – 12:30		Hands-on: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis )
+10:30 – 12:30		Hands-on: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis)
 
 Session III
 13:45 – 14:45		Lecture: Beamformer techniques for source reconstruction
@@ -63,4 +63,4 @@ Session V
 
 ### Extra playground material
 
-*  The Elekta/Neuromag data is described in detail on http://natmeg.se/wp/activities/data-analysis-workshop/
+-   The Elekta/Neuromag data is described in detail on <http://natmeg.se/wp/activities/data-analysis-workshop/>

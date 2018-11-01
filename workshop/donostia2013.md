@@ -3,7 +3,7 @@ title: FieldTrip workshop Donostia
 layout: default
 ---
 
-##  FieldTrip workshop Donostia
+## FieldTrip workshop Donostia
 
 ### Where
 
@@ -25,9 +25,9 @@ version of fieldtrip that is distributed on a USB stick, rather than the version
 have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
- 1.  Copy the contents from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Unzip the "data.zip" file, you should place the contents in the same directory, e.g. in a newly created directory called 'toolkit'.
+1.  Copy the contents from the USB stick to your computer
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Unzip the "data.zip" file, you should place the contents in the same directory, e.g. in a newly created directory called 'toolkit'.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
@@ -60,34 +60,38 @@ After installing fieldtrip to your path, you change into the data directory
 
 ### Program
 
-####  Monday
+#### Monday
 
-*  morning
-    * 1h intro lecture
-    * 2h handson http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging
+-   morning
 
-*  afternoon
-    * 1h spectral analysis lecture
-    * 2h handson http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
+    -   1h intro lecture
+    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
-*  evening
-    * food and drinks
+-   afternoon
+
+    -   1h spectral analysis lecture
+    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+
+-   evening
+    -   food and drinks
 
 #### Tuesday
 
-*  morning
-    * 1h beamforming lecture
-    * 2h hands on http://www.fieldtriptoolbox.org/tutorial/beamformer
+-   morning
 
-*  afternoon
-    * 1h nonparametric statistics lecture
-    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
-    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
+    -   1h beamforming lecture
+    -   2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
 
-*  evening
-    * food and drinks
+-   afternoon
+
+    -   1h nonparametric statistics lecture
+    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+
+-   evening
+    -   food and drinks
 
 #### Wednesday
 
-*  morning
-    * playground (working on own data)
+-   morning
+    -   playground (working on own data)

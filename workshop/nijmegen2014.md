@@ -70,6 +70,7 @@ A [PDF with the detailed program](/static/pdf/workshop/nijmegen2014/program.pdf)
 ### Thursday 8 May
 
 -   morning
+
     -   1h non-parametric permutation statistics lecture
     -   2h hands-on
         -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>

@@ -5,65 +5,68 @@ layout: default
 
 # FieldTrip workshop in Coimbra, Portugal
 
-*  Who: Diego Soldevilla and Cristiano Micheli
-*  When: June 6th-8th
-*  Institute for Biomedical Imaging and Life Sciences, Universidade de Coimbra, Portugal
+-   Who: Diego Soldevilla and Cristiano Micheli
+-   When: June 6th-8th
+-   Institute for Biomedical Imaging and Life Sciences, Universidade de Coimbra, Portugal
 
 ## Workshop Program
 
-####  Monday June 6th
+#### Monday June 6th
 
-*  Session I
-    * 9:45			Registration, coffee, opening remarks
-    * 10:05 – 11:00		Lecture: An introduction to the EEG/MEG and the FieldTrip toolbox
-    * 11:00 – 11:15		Coffee Break
-    * 11:15 – 12:45 Hands-on: Getting started with event-related potentials
-          * http://www.fieldtriptoolbox.org/tutorial/preprocessing_erp
-    * 12:45 – 13:45		Lunch
+-   Session I
 
-*  Session II
-    * 13:45 – 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
-    * 14:45 – 15:00   	Coffee Break
-    * 15:00 – 16:45		Hands-on: Time-frequency analysis of power       
-          * http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis
-    * 16:45 – 17:30		Wrap-up-the-day: “Ask the experts” session
+    -   9:45			Registration, coffee, opening remarks
+    -   10:05 – 11:00		Lecture: An introduction to the EEG/MEG and the FieldTrip toolbox
+    -   11:00 – 11:15		Coffee Break
+    -   11:15 – 12:45 Hands-on: Getting started with event-related potentials
+            \* <http://www.fieldtriptoolbox.org/tutorial/preprocessing_erp>
+    -   12:45 – 13:45		Lunch
 
-*  20:00			Workshop Dinner @ ???
+-   Session II
+
+    -   13:45 – 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
+    -   14:45 – 15:00   	Coffee Break
+    -   15:00 – 16:45		Hands-on: Time-frequency analysis of power  
+            \* <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+    -   16:45 – 17:30		Wrap-up-the-day: “Ask the experts” session
+
+-   20:00			Workshop Dinner @ ???
 
 #### Tuesday June 7th
 
-*  Session III
-    * 10:00 – 11:00		Lecture: Beamformer techniques for source reconstruction
-    * 11:00 – 11:15		Coffee break
-    * 11:15 – 13:00		Hands-on: Identifying oscillatory sources using beamformer techniques
-          * http://www.fieldtriptoolbox.org/tutorial/beamformer
-          * http://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem
+-   Session III
 
-    * 13:00 – 14:00		Lunch
+    -   10:00 – 11:00		Lecture: Beamformer techniques for source reconstruction
+    -   11:00 – 11:15		Coffee break
+    -   11:15 – 13:00		Hands-on: Identifying oscillatory sources using beamformer techniques
+            _ <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+            _ <http://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem>
 
-*  Session IV
-    * 14:00 – 15:15		Lecture: Non-parametric randomization techniques
-    * 15:15 – 15:30		Coffee break
-    * 15:30 – 17:15	Hands-on: Parametric and non-parametric statistics on event related fields
-          * http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics
-          * http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
-    * 17:15 – 18:00		Wrap-up-the-day: “Ask the experts” session
+    -   13:00 – 14:00		Lunch
+
+-   Session IV
+    -   14:00 – 15:15		Lecture: Non-parametric randomization techniques
+    -   15:15 – 15:30		Coffee break
+    -   15:30 – 17:15	Hands-on: Parametric and non-parametric statistics on event related fields
+            _ <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
+            _ <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+    -   17:15 – 18:00		Wrap-up-the-day: “Ask the experts” session
 
 #### Wednesday June 8th
 
-*  Session V
-    * 10:00 – 13:00		FieldTrip playground
+-   Session V
+    -   10:00 – 13:00		FieldTrip playground
 
 ## Installing FieldTrip and Tutorial preparation
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
-version of fieldtrip that you can download [ here](https://www.dropbox.com/sh/4kvs5hvwkjqp07v/AAApX5HS-iilo5xvyH9y9IpTa?dl=0 )). Importantly, the tutorial data does not have to be
+version of fieldtrip that you can download [ here](https://www.dropbox.com/sh/4kvs5hvwkjqp07v/AAApX5HS-iilo5xvyH9y9IpTa?dl=0)). Importantly, the tutorial data does not have to be
 downloaded but we strongly recommend to download before the workshop  at ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/fieldtrip-20160531.zip
 
- 1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-20160531.zip file.
- 3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
+1.  Copy the complete contents of the USB stick to your computer.
+2.  Unzip the fieldtrip-20160531.zip file.
+3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-20160531/fieldtrip-20160531, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

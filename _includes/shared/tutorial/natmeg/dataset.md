@@ -12,7 +12,7 @@ In our version, an oddball occurs after every 3 to 7 standard tones. The interva
 ### Mismatch negativity
 
 The auditory MMN then occurs as a fronto-central negative EEG potential (relative to the response to the standard tone), with sources in the primary and non-primary auditory cortex and a typical latency of 150-250 ms after the onset of the deviant tone. Not only is the MMN an indicator or auditory functioning, it has also been shown to be under influence of cognitive factors and indicative of cognitive and psychiatric impairments.
-For a recent and comprehensive overview (by the discoverer or the MMN), please see http://www.sciencedirect.com/science/article/pii/S1388245707001939.
+For a recent and comprehensive overview (by the discoverer or the MMN), please see <http://www.sciencedirect.com/science/article/pii/S1388245707001939>.
 
 ### Cued motor preparation
 
@@ -22,7 +22,7 @@ For the purpose of analysing oscillatory dynamics we wanted the oddball paradigm
 
 It is well known that power in the beta band (15–30 Hz) decreases prior to movement onset but showed a marked sudden increase beginning approximately 300 to 400 ms after termination of EMG activity and lasting for over 500 ms. This post-movement beta rebound (PMBR) is localized to bilateral regions of the precentral gyrus, but with greater lateralization to the contralateral hemisphere. Contrasting left versus right responses should therefor give us a nice lateralized beta rebound in the precentral gyrus.
 
-For a recent overview of sensorimotor rhythms, including the beta rebound, please see http://www.sciencedirect.com/science/article/pii/S0014488612003391
+For a recent overview of sensorimotor rhythms, including the beta rebound, please see <http://www.sciencedirect.com/science/article/pii/S0014488612003391>
 
 ### Training with feedback and blink trials
 
@@ -37,16 +37,16 @@ The standard tones were 400ms 1000Hz sine-waves, with a short 50ms ramping up- a
 
 The MEG system records event-triggers in a separate channels, called STI101 and STI102. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset (or offset) can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the worksho
 
--  Onset of standard stimulus: 1
--  Onset of oddball stimulus: 2
--  Button-press onset of left hand: 256
--  Button-press onset of right hand: 4096
+-   Onset of standard stimulus: 1
+-   Onset of oddball stimulus: 2
+-   Button-press onset of left hand: 256
+-   Button-press onset of right hand: 4096
 
 ### Data
 
--  Data was sampled at 1000Hz.
--  306 channels MEG of which 102 are magnetometers, and 204 are planar gradiometers.
--  128 electrode EEG. The reference was placed on the right mastoid, the ground on the left mastoid. The locations of the electrodes are placed according to the 5% rule, which is an extension of the standard 10-20 system for high-density EEG caps. You can find details here: http://www.biosemi.com/publications/pdf/Oostenveld2001b.pdf). In addition, the locations of the EEG electrodes was measured in 3D using the Polhemus system and recorded in the data.
--  Horizontal EOG(1) electrodes were placed just outside the left and right eye. Vertical EOG(2) were placed above and below the left eye.
--  Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
--  Electromyography of the lower arm flexors of the left(1) and right(2) arm were recorded.
+-   Data was sampled at 1000Hz.
+-   306 channels MEG of which 102 are magnetometers, and 204 are planar gradiometers.
+-   128 electrode EEG. The reference was placed on the right mastoid, the ground on the left mastoid. The locations of the electrodes are placed according to the 5% rule, which is an extension of the standard 10-20 system for high-density EEG caps. You can find details here: <http://www.biosemi.com/publications/pdf/Oostenveld2001b.pdf>). In addition, the locations of the EEG electrodes was measured in 3D using the Polhemus system and recorded in the data.
+-   Horizontal EOG(1) electrodes were placed just outside the left and right eye. Vertical EOG(2) were placed above and below the left eye.
+-   Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
+-   Electromyography of the lower arm flexors of the left(1) and right(2) arm were recorded.

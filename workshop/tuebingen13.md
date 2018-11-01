@@ -3,7 +3,7 @@ title: Workshop on FieldTrip, nonparametric statistics and connectivity
 layout: default
 ---
 
-##  Workshop on FieldTrip, nonparametric statistics and connectivity
+## Workshop on FieldTrip, nonparametric statistics and connectivity
 
 ### Where
 
@@ -25,9 +25,9 @@ version of fieldtrip that is distributed on a USB stcik, rather than the version
 have installed. Furthermore, the tutorial data does not have to be
 downloaded but will also be distributed on the USB stick.
 
- 1.  Copy the complete Tuebingen directory from the USB stick to your computer
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Unzip the "data.zip" and "spm atlas.zip" file, you should place the contents in the tutorial directory.
+1.  Copy the complete Tuebingen directory from the USB stick to your computer
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Unzip the "data.zip" and "spm atlas.zip" file, you should place the contents in the tutorial directory.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
@@ -56,35 +56,34 @@ After installing fieldtrip to your path, you change into the tutorial directory
 
 ### Tentative program
 
-####  Wednesday
+#### Wednesday
 
-*  morning
-    * 1h intro lecture
-    * 2h handson http://www.fieldtriptoolbox.org/tutorial/sensor_analysis
+-   morning
+    -   1h intro lecture
+    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/sensor_analysis>
 
-*  afternoon
-    * 1h beamforming lecture
-    * 2h handson http://www.fieldtriptoolbox.org/tutorial/beamformingextended
+-   afternoon
+    -   1h beamforming lecture
+    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/beamformingextended>
 
-*  evening
-    * dinner
-
+-   evening
+    -   dinner
 
 #### Thursday
 
-*  morning
-    * 1h connectivity lecture
-    * 2h hands on http://www.fieldtriptoolbox.org/tutorial/connectivityextended
+-   morning
+    -   1h connectivity lecture
+    -   2h hands on <http://www.fieldtriptoolbox.org/tutorial/connectivityextended>
 
-*  afternoon
-    * 1h nonparametric statistics lecture
-    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock
-    * 1h hands on http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq
+-   afternoon
+    -   1h nonparametric statistics lecture
+    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
 
-*  evening
-    * pub?
+-   evening
+    -   pub?
 
 #### Friday
 
-*  morning
-    * 3h playground (working on own data)
+-   morning
+    -   3h playground (working on own data)

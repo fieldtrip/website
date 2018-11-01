@@ -24,7 +24,7 @@ The local organizers are Danai Theodosopoulou and Carsten Schmidt
 
 ## Course program
 
-*Saturday 8th February*
+_Saturday 8th February_
 
 Session I
 
@@ -41,7 +41,7 @@ Session II
 16:00 - 18:00	Hands-on: Time-frequency analysis of power
 18:00 - 18:30	Wrap-up-the-day and Summary
 
-*Sunday 9th February*
+_Sunday 9th February_
 
 Session III
 
@@ -65,9 +65,9 @@ version of fieldtrip that is distributed on a USB stick, rather than the older v
 
 If you want to download it in advance, please go to ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip and get
 
-*  fieldtrip-20130906.zip
-*  Subject01.zip
-*  all files in the tutorial/eventrelatedaveraging directory
+-   fieldtrip-20130906.zip
+-   Subject01.zip
+-   all files in the tutorial/eventrelatedaveraging directory
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

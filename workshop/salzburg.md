@@ -3,7 +3,7 @@ title: FieldTrip workshop in Salzburg
 layout: default
 ---
 
-#  FieldTrip workshop in Salzburg
+# FieldTrip workshop in Salzburg
 
 #### Where
 
@@ -29,54 +29,60 @@ Applications for this workshop are now closed. Please check out our other upcomi
 ### Wednesday 09 December 2015
 
 Session I
-*  **10:00 - 10:15**   Registration, welcome and coffee
-*  **10:15 - 11:15**   Lecture: Introduction to MEG and the FieldTrip Toolbox | *Nietzsche Lam*
-*  **11:15 - 11:30**   Coffee break
-*  **11:30 - 13:30**   Hands-on: Initiation to FieldTrip; Analyzing MEG data (event-related fields)
+
+-   **10:00 - 10:15**   Registration, welcome and coffee
+-   **10:15 - 11:15**   Lecture: Introduction to MEG and the FieldTrip Toolbox | _Nietzsche Lam_
+-   **11:15 - 11:30**   Coffee break
+-   **11:30 - 13:30**   Hands-on: Initiation to FieldTrip; Analyzing MEG data (event-related fields)
 
 Session II
-*  **13:30 - 14:45**   Lunch
-*  **14:45 - 15:45**   Lecture: Introduction to EEG; Comparing EEG with MEG | *Nietzsche Lam*
-*  **15:45 - 16:00**   Coffee break
-*  **16:00 - 18:00**   Hands-on: Analyzing EEG data
-*  **18:00 - 18:30**   Wrap-up-the-day and Summary
+
+-   **13:30 - 14:45**   Lunch
+-   **14:45 - 15:45**   Lecture: Introduction to EEG; Comparing EEG with MEG | _Nietzsche Lam_
+-   **15:45 - 16:00**   Coffee break
+-   **16:00 - 18:00**   Hands-on: Analyzing EEG data
+-   **18:00 - 18:30**   Wrap-up-the-day and Summary
 
 ### Thursday 10 December 2015
 
 Session III
-*  **9:00 - 10:15**    Lecture: Fundamentals of neuronal oscillations and synchrony | *Nietzsche Lam*
-*  **10:15- 10:30**    Coffee break
-*  **10:30- 12:30**    Hands-On: Time-frequency Analysis of Power
-*  **12:30- 13:45**    Lunch
+
+-   **9:00 - 10:15**    Lecture: Fundamentals of neuronal oscillations and synchrony | _Nietzsche Lam_
+-   **10:15- 10:30**    Coffee break
+-   **10:30- 12:30**    Hands-On: Time-frequency Analysis of Power
+-   **12:30- 13:45**    Lunch
 
 Session IV
-*  **13:45 - 14:45**   Lecture: Source reconstruction in FieldTrip | *Tzvetan Popov*
-*  **14:45 - 15:00**   Coffee break
-*  **15:00 - 17:00**   Hands-on: Source Reconstruction on Oscillatory data (beamformer)
-*  **17:00 - 17:30**   Wrap-up-the-day and Summary
-*  **19:00 - 23:00**   Social Event
+
+-   **13:45 - 14:45**   Lecture: Source reconstruction in FieldTrip | _Tzvetan Popov_
+-   **14:45 - 15:00**   Coffee break
+-   **15:00 - 17:00**   Hands-on: Source Reconstruction on Oscillatory data (beamformer)
+-   **17:00 - 17:30**   Wrap-up-the-day and Summary
+-   **19:00 - 23:00**   Social Event
 
 ### Friday 11 December 2015
 
 Session V
-*  **9:00 - 10:15**    Lecture: Non-parametric permutation techniques | *Tzvetan Popov*
-*  **10:15- 10:30**    Coffee break
-*  **10:30- 12:30**    Hands-On: Statistical Analyses
-*  **12:30- 13:45**    Lunch
+
+-   **9:00 - 10:15**    Lecture: Non-parametric permutation techniques | _Tzvetan Popov_
+-   **10:15- 10:30**    Coffee break
+-   **10:30- 12:30**    Hands-On: Statistical Analyses
+-   **12:30- 13:45**    Lunch
 
 Session VI
-*  **13:45 - 14:45**   FieldTrip Playground (bring your own data) | *Tzvetan Popov and Nietzsche Lam*
-*  **14:45 - 15:00**   Coffee break
-*  **15:00 - 17:00**   FieldTrip Playground (bring your own data)
-*  **17:00 - 17:30**   Wrap-up-the-day and Closing remarks
+
+-   **13:45 - 14:45**   FieldTrip Playground (bring your own data) | _Tzvetan Popov and Nietzsche Lam_
+-   **14:45 - 15:00**   Coffee break
+-   **15:00 - 17:00**   FieldTrip Playground (bring your own data)
+-   **17:00 - 17:30**   Wrap-up-the-day and Closing remarks
 
 ## Getting started with the hands-on sessions
 
 For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that is distributed on a USB stick, rather than the version you might already have installed. (If you have a FieldTrip version dating from sometime in the last few weeks, that should be fine.) Importantly, the tutorial data does not have to be downloaded but will also be distributed on the USB stick.
 
- 1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Put Subject01.zip in a directory called 'tutorial'.
+1.  Copy the complete contents of the USB stick to your computer.
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Put Subject01.zip in a directory called 'tutorial'.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

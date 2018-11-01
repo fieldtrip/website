@@ -7,17 +7,16 @@ layout: default
 
 The Central Institute of Mental Health (CIMH) in Mannheim Germany will be hosting a FieldTrip Course on MEG Analysis with Tzvetan Popov and Gianpaolo Dimarchi from 10 to 12 of December 2018.
 
-
 ### Where
 
-https://www.zi-mannheim.de/en.html
+<https://www.zi-mannheim.de/en.html>
 
 Central Institute for Mental Health  
 J 5  
 68159 Mannheim  
 Germany  
 
-{% include image src="/static/img/zi-logo.png" width="304" link="https://www.zi-mannheim.de/en.html" %}
+{% include image src="/static/img/zi-logo.png" width="304" link="<https://www.zi-mannheim.de/en.html>" %}
 
 ### When
 
@@ -32,44 +31,49 @@ Tzvetan Popov and Gianpaolo Dimarchi.
 ### Monday 10 December 2018
 
 Session I
-  * **10:00 - 10:15**   Registration, welcome and coffee
-  * **10:15 - 11:15**   Lecture: Introduction to MEG and the FieldTrip Toolbox | //Tzvetan Popov//
-  * **11:15 - 11:30**   Coffee break
-  * **11:30 - 13:30**   Hands-on: Initiation to FieldTrip; Analyzing MEG data (event-related fields)
+
+-   **10:00 - 10:15**   Registration, welcome and coffee
+-   **10:15 - 11:15**   Lecture: Introduction to MEG and the FieldTrip Toolbox   _Tzvetan Popov_
+-   **11:15 - 11:30**   Coffee break
+-   **11:30 - 13:30**   Hands-on: Initiation to FieldTrip; Analyzing MEG data (event-related fields)
 
 Session II
-  * **13:30 - 14:45**   Lunch
-  * **14:45 - 15:45**   Lecture: Fundamentals of neuronal oscillations and synchrony | //Tzvetan Popov//
-  * **15:45 - 16:00**   Coffee break
-  * **16:00 - 18:00**   Hands-on: Time-frequency Analysis of Power
-  * **18:00 - 18:30**   Wrap-up-the-day and Summary
+
+-   **13:30 - 14:45**   Lunch
+-   **14:45 - 15:45**   Lecture: Fundamentals of neuronal oscillations and synchrony   _Tzvetan Popov_
+-   **15:45 - 16:00**   Coffee break
+-   **16:00 - 18:00**   Hands-on: Time-frequency Analysis of Power
+-   **18:00 - 18:30**   Wrap-up-the-day and Summary
 
 ### Tuesday  11 December 2018
 
 Session III
-  * **9:00 - 10:15**    Lecture: Non-parametric permutation techniques | //Tzvetan Popov//
-  * **10:15- 10:30**    Coffee break
-  * **10:30- 12:30**    Hands-On: Statistical Analyses
-  * **12:30- 13:45**    Lunch
+
+-   **9:00 - 10:15**    Lecture: Non-parametric permutation techniques  _Tzvetan Popov_
+-   **10:15- 10:30**    Coffee break
+-   **10:30- 12:30**    Hands-On: Statistical Analyses
+-   **12:30- 13:45**    Lunch
 
 Session IV
-  * **13:45 - 14:45**   Lecture: Source reconstruction in FieldTrip | //Tzvetan Popov//
-  * **14:45 - 15:00**   Coffee break
-  * **15:00 - 17:00**   Hands-on: Source Reconstruction on Oscillatory data (beamformer)
-  * **17:00 - 17:30**   Wrap-up-the-day and Summary
-  * **19:00 - 23:00**   Social Event
+
+-   **13:45 - 14:45**   Lecture: Source reconstruction in FieldTrip   _Tzvetan Popov_
+-   **14:45 - 15:00**   Coffee break
+-   **15:00 - 17:00**   Hands-on: Source Reconstruction on Oscillatory data (beamformer)
+-   **17:00 - 17:30**   Wrap-up-the-day and Summary
+-   **19:00 - 23:00**   Social Event
 
 ### Wednesday  12 December 2018
 
 Session V
-  * **9:00 - 10:15**   FieldTrip Playground (bring your own data) | //Tzvetan Popov and Gianpaolo Dimarchi//
-  * **10:15- 10:30**   Coffee break
-  * **10:30- 12:30**   FieldTrip Playground (bring your own data)
-  * **12:30- 13:45**   Wrap-up-the-day and Closing remarks
+
+-   **9:00 - 10:15**   FieldTrip Playground (bring your own data)   _Tzvetan Popov and Gianpaolo Dimarchi_
+-   **10:15- 10:30**   Coffee break
+-   **10:30- 12:30**   FieldTrip Playground (bring your own data)
+-   **12:30- 13:45**   Wrap-up-the-day and Closing remarks
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions you have to start MATLAB. Make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/mannheim2018).
+For the hands-on sessions you have to start MATLAB. Make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](ftp: _ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/mannheim2018).
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

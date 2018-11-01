@@ -3,13 +3,13 @@ title: FieldTrip workshop in Hamburg
 layout: default
 ---
 
-#  FieldTrip workshop in Hamburg
+# FieldTrip workshop in Hamburg
 
 ## When
 
 Wednesday 11 to Friday 13 September 2013.
 
-##  Where
+## Where
 
 Dept. of Neurophysiology and Pathophysiology
 University Medical Center Hamburg-Eppendorf
@@ -21,40 +21,40 @@ N55,Campus Lehre,room 210/11
 
 ### Wednesday 11 September (day 1)
 
-*  Lecture 1: Introduction into FieldTrip - Laura
-*  Coffee break
-*  Lecture 2: Generation and propagation of signals - Guido
-*  Lunch break
-*  Hands-on 1: [data preprocessing and artifact detection](/tutorial/eventrelatedaveraging) (data provided, see below)
-*  Tea break
-*  Hands-on 2: processing own data, event-related potentials (own data)
-*  Wrap-up of the day
+-   Lecture 1: Introduction into FieldTrip - Laura
+-   Coffee break
+-   Lecture 2: Generation and propagation of signals - Guido
+-   Lunch break
+-   Hands-on 1: [data preprocessing and artifact detection](/tutorial/eventrelatedaveraging) (data provided, see below)
+-   Tea break
+-   Hands-on 2: processing own data, event-related potentials (own data)
+-   Wrap-up of the day
 
-*The first hands-on can be skipped by people that already have been using FieldTrip. It is meant to get everyone at the same level and to make sure that everyone is comfortable with processing their own data.*
+_The first hands-on can be skipped by people that already have been using FieldTrip. It is meant to get everyone at the same level and to make sure that everyone is comfortable with processing their own data._
 
 ### Thursday 12 September (day 2)
 
-*  Lecture 3:  Frequency analysis - Jan-Mathijs
-*  Coffee break
-*  Hands-on 3: [Frequency and time-frequency analysis](/tutorial/timefrequencyanalysis) (own data)
-*  Lunch break
-*  Lecture 4: Inverse modeling of EEG and MEG - Robert
-*  Tea break
-*  Hands-on 4: [Beamforming](/tutorial/beamformer) and [Minimum-norm estimation](/tutorial/minimumnormestimate) (own data, bring the MRI)
-*  Wrap-up of the day
+-   Lecture 3:  Frequency analysis - Jan-Mathijs
+-   Coffee break
+-   Hands-on 3: [Frequency and time-frequency analysis](/tutorial/timefrequencyanalysis) (own data)
+-   Lunch break
+-   Lecture 4: Inverse modeling of EEG and MEG - Robert
+-   Tea break
+-   Hands-on 4: [Beamforming](/tutorial/beamformer) and [Minimum-norm estimation](/tutorial/minimumnormestimate) (own data, bring the MRI)
+-   Wrap-up of the day
 
-*We will use the online tutorials on the wiki, but in principle you will be working on your own data.*
+_We will use the online tutorials on the wiki, but in principle you will be working on your own data._
 
 ### Friday 13 September (day 3)
 
-*  Lecture 5: Connectivity analysis - Jan-Mathijs
-*  Coffee break
-*  Hands-on 5: Connectivity and network analysis
-*  Lunch break
-*  Lecture: Non-parametric statistics
-*  Tea break
-*  Hands-on: Experimental design and statistics
-*  Wrap-up of the day
+-   Lecture 5: Connectivity analysis - Jan-Mathijs
+-   Coffee break
+-   Hands-on 5: Connectivity and network analysis
+-   Lunch break
+-   Lecture: Non-parametric statistics
+-   Tea break
+-   Hands-on: Experimental design and statistics
+-   Wrap-up of the day
 
 ## Installing FieldTrip and preparing for the hands-on sessions
 
@@ -64,9 +64,9 @@ version of fieldtrip that is distributed on a USB stick, rather than the older v
 
 If you want to download it in advance, please go to ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip and get
 
-*  fieldtrip-20130906.zip
-*  Subject01.zip
-*  all files in the tutorial/eventrelatedaveraging directory
+-   fieldtrip-20130906.zip
+-   Subject01.zip
+-   all files in the tutorial/eventrelatedaveraging directory
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

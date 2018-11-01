@@ -1,10 +1,11 @@
 The EEG/MEG signals measured on the scalp do not directly reflect the location of the activated neurons. To reconstruct the location and the time-course or spectral content of a source in the brain, various source-localization methods are available. You can read more about the different methods in review papers suggested [here](/references_to_implemented_methods#references_to_review_papers).   
 
 The level of the activity at a source location is estimated from
-1\.  the EEG/MEG activity measured on (around) the scalp
-2\.  the spatial arrangement of the electrodes/sensors (**channel positions**),
-3\.  the geometrical and electrical/magnetic properties of the head (**head model**)
-4\.  the location of the source (**source model**)
+
+1.  the EEG/MEG activity measured on (around) the scalp
+2.  the spatial arrangement of the electrodes/sensors (**channel positions**),
+3.  the geometrical and electrical/magnetic properties of the head (**head model**)
+4.  the location of the source (**source model**)
 
 Using this information, source estimation comprises two major steps: (1) Estimation of the potential or field distribution for a known source and for a known model of the head is referred to as **forward modeling**. (2) Estimation of the unknown sources corresponding to the measured EEG or MEG is referred to as **inverse modeling**.
 

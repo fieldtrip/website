@@ -3,13 +3,13 @@ title: FieldTrip Workshop in Marseille
 layout: default
 ---
 
-#  FieldTrip Workshop in Marseille
+# FieldTrip Workshop in Marseille
 
 Together with Jean-Michel Badier and Christian Benar from the [MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page), we will run a FieldTrip workshop.
 
-*  Who: Robert Oostenveld with help from local staff
-*  When: 11-13 January 2016
-*  Where: You should have received detailed instructions on the venue at INSERM Marseille. If you have questions, please contact [demat-form.dr-marseille@inserm.fr](/demat-form.dr-marseille@inserm.fr).
+-   Who: Robert Oostenveld with help from local staff
+-   When: 11-13 January 2016
+-   Where: You should have received detailed instructions on the venue at INSERM Marseille. If you have questions, please contact [demat-form.dr-marseille@inserm.fr](/demat-form.dr-marseille@inserm.fr).
 
 We will keep this page up to date and post new information here when available.
 
@@ -23,14 +23,14 @@ Please download the ft_connectivitysimulation data from ftp://ftp.fieldtriptoolb
 In this workshop we will have a steep learning curve. We will move from basic preprocessing to channel and source-level connectivity. Given the limited amount of time, it is **important** that you come well prepared.
 {% include markup/end %}
 
-If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on http://www.antoniahamilton.com/matlab.html
+If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the "MATLAB for psychologists" tutorial on <http://www.antoniahamilton.com/matlab.html>
 
 Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/2011/156869/) to understand the toolbox design.
 
 Furthermore, we recommend you to watch the following online videos prior to the workshop. Note that these video lectures cannot be quickly glanced over. You should **plan ahead and take your time** to go through them.
 
-*  [FieldTrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
-*  [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
+-   [FieldTrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
+-   [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
 
 The content of the shorter second lecture is also covered in the first, but presented differently and therefore possibly useful to get a good understanding of the signals that we deal with.
 
@@ -42,40 +42,44 @@ So over all there is about 2 to 5 hours of preparation required from you prior t
 
 ## Program
 
-*We will start each day at 9:00 sharp and will finish around 17:00 on Monday and Tuesday, and around 12:30 on Wednesday.*
+_We will start each day at 9:00 sharp and will finish around 17:00 on Monday and Tuesday, and around 12:30 on Wednesday._
 
-####  Monday
+#### Monday
 
-*  morning
-    * 1h Lecture on frequency analysis - [slides](/static/pdf/workshop/marseille_frequency.pdf)
-    * 2h handson [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
+-   morning
 
-*  afternoon
-    * 1h Lecture on source reconstruction using beamforming - [slides](/static/pdf/workshop/marseille_beamforming.pdf)
-    * 2h handson [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
-    * wrap up of the day
+    -   1h Lecture on frequency analysis - [slides](/static/pdf/workshop/marseille_frequency.pdf)
+    -   2h handson [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
 
-*  evening
-    * dinner (not included, i.e. on own costs)
+-   afternoon
+
+    -   1h Lecture on source reconstruction using beamforming - [slides](/static/pdf/workshop/marseille_beamforming.pdf)
+    -   2h handson [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
+    -   wrap up of the day
+
+-   evening
+    -   dinner (not included, i.e. on own costs)
 
 #### Tuesday
 
-*  morning
-    * 1h Lecture on connectivity analysis - [slides](/static/pdf/workshop/marseille_connectivity.pdf)
-    * 2h hands on [Analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
+-   morning
 
-*  afternoon
-    * 1h Lecture on nonparametric statistics using clustering - [slides](/static/pdf/workshop/marseille_statistics.pdf)
-    * 2h hands on [Cluster-based permutation tests on ERFs](/tutorial/cluster_permutation_timelock) or on [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
-    * wrap up of the day
+    -   1h Lecture on connectivity analysis - [slides](/static/pdf/workshop/marseille_connectivity.pdf)
+    -   2h hands on [Analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
 
-*  evening
-    * pub (not included, i.e. on own costs)
+-   afternoon
+
+    -   1h Lecture on nonparametric statistics using clustering - [slides](/static/pdf/workshop/marseille_statistics.pdf)
+    -   2h hands on [Cluster-based permutation tests on ERFs](/tutorial/cluster_permutation_timelock) or on [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
+    -   wrap up of the day
+
+-   evening
+    -   pub (not included, i.e. on own costs)
 
 #### Wednesday
 
-*  Playground in which you will be working on own data (under supervision)
-*  Wrap up of the workshop
+-   Playground in which you will be working on own data (under supervision)
+-   Wrap up of the workshop
 
 For the playground you should bring your own data. In case you don't have a suitable dataset for analysis (yet), we will provide you with a dataset and details on the experiment and analysis options.
 
@@ -91,10 +95,11 @@ The data and FieldTrip have been installed on the computers at the workshop venu
 
 For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a clean and well-tested version of FieldTrip that we have installed on all computers and that we will bring on on a USB stick. Importantly, the tutorial data does not have to be downloaded but will also be distributed on the computers and available on the USB stick.
 
-If you work on your own lapto
- 1.  Copy the complete contents of the USB stick to your computer.
- 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
- 3.  Put Subject01.zip in a directory called 'tutorial'.
+If you work on your own laptop:
+
+1.  Copy the complete contents of the USB stick to your computer.
+2.  Unzip the fieldtrip-xxxxxxxx.zip file.
+3.  Put Subject01.zip in a directory called 'tutorial'.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.

@@ -5,11 +5,9 @@ layout: default
 
 # Advanced analysis and source modeling of EEG and MEG data
 
-When: April 20-23, 2015
-
-Where: Trainee room 01.160, Donders Centre for Cognitive Neuroimaging, Kapittelweg 29, Nijmegen, The Netherlands.
-
-Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many DCCN colleagues.  
+- When: April 20-23, 2015
+- Where: Trainee room 01.160, Donders Centre for Cognitive Neuroimaging, Kapittelweg 29, Nijmegen, The Netherlands.
+- Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many DCCN colleagues.  
 
 ## Lectures as video on YouTube
 
@@ -25,7 +23,7 @@ Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many 
 ### Monday April 20, 2015
 
  | 09:00-09:30 | Registration, handouts and coffee                                 |                                                        |                                                   
- | 09.30-09:45 | Welcome                                                           |                                                        | 
+ | 09.30-09:45 | Welcome                                                           |                                                        |
  | 09:45-10:45 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox | [Lecture](https://www.youtube.com/watch?v=eUVL_twWNdk) [Slides](/workshop/toolkit2015/robert_introduction.pdf) |
  | 10:45-11:00 | Coffee Break                                                      |                                                        |                                                   
  | 11:00-12:00 | Data acquisition demonstration in the EEG and MEG labs            |                                                        |                                                   
@@ -55,7 +53,7 @@ http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen
 
 ### Wednesday April 22, 2015
 
- | 09:00-10:00 | Statistics using non-parametric randomization techniques       | [Lecture](https://www.youtube.com/watch?v=x0hR-VsHZj8) [Slides](/workshop/toolkit2015/eric_statistics.pdf) | 
+ | 09:00-10:00 | Statistics using non-parametric randomization techniques       | [Lecture](https://www.youtube.com/watch?v=x0hR-VsHZj8) [Slides](/workshop/toolkit2015/eric_statistics.pdf) |
  | 10:00-10:15 | Coffee Break                                                   |                                                        |                                                     
  | 10:15-12:15 | Statistics using non-parametric randomization techniques       | [Hands-on](/tutorial/cluster_permutation_timelock)     |                                                     
  | 12:15-13:00 | Lunch                                                          |                                                        |                                                     
@@ -67,8 +65,8 @@ http://www.humphreys.nl/onze-restaurants/humphreys-nijmegen
 
 ### Thursday April 23, 2015
 
- | 9:00-14:00  | FieldTrip playground, bring your own data!    | Hands-on | 
- | 12:30-13:00 | Lunch                                         |          | 
- | 13:00-14:00 | FieldTrip playground continued                | Hands-on | 
- | 14:00-14:15 | Tea break                                     |          | 
- | 14:15-15.00 | Testimonial & evaluation                      |          | 
+ | 9:00-14:00  | FieldTrip playground, bring your own data!    | Hands-on |
+ | 12:30-13:00 | Lunch                                         |          |
+ | 13:00-14:00 | FieldTrip playground continued                | Hands-on |
+ | 14:00-14:15 | Tea break                                     |          |
+ | 14:15-15.00 | Testimonial & evaluation                      |          |

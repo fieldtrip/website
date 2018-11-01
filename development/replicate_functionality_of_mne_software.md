@@ -71,9 +71,9 @@ environmental variables have to be set up:
     sourcing F
     source $FREESURFER_HOME/SetUpFreeSurfer.sh  
     importing dat
-    recon-all -i<path to direcotry of xxx.ima files>/<name of first xxx.ima file>.IMA -s<subject's name>\
+    recon-all -i<path to direcotry of xxx.ima files>/<name of first xxx.ima file>.IMA -s&lt;subject's name>\\
 
-This code will recognize the first xxx.ima file in the directory of the anatomical data, and it will find the other files automatically. It will create a directory under $SUBJECTS_DIR with the given subject's name. It will also create more directories. One created directory is named orig under $SUBJECTS_DIR/<subject's name>/mri where there will be a 001.mgz file (containing all anatomical data) that will be used as input for further processing. If there were more scanning runs of the same subject, other .mgz files will be created (001, 002... etc.) But I do  not know if more scans of the same subjects are automatically recognized.  :
+This code will recognize the first xxx.ima file in the directory of the anatomical data, and it will find the other files automatically. It will create a directory under $SUBJECTS_DIR with the given subject's name. It will also create more directories. One created directory is named orig under $SUBJECTS_DIR/&lt;subject's name>/mri where there will be a 001.mgz file (containing all anatomical data) that will be used as input for further processing. If there were more scanning runs of the same subject, other .mgz files will be created (001, 002... etc.) But I do  not know if more scans of the same subjects are automatically recognized.  :
 
 ##### autorecon 1
 
@@ -85,13 +85,13 @@ This figure shows the processing steps done by -autorecon1 when there is only on
 
 This first processing step takes around 1,5 hour.
 
-First, it is averaging the multiple scanning runs together if they exist (output: $SUBJECTS_DIR/<subject's name>/mri/**rawavg**.mgz), corrects small motions between them and conforms the data to 256 voxels (1mm size) for all directions (output: $SUBJECTS_DIR/<subject's name>/mri/**orig**.mgz).
+First, it is averaging the multiple scanning runs together if they exist (output: $SUBJECTS_DIR/&lt;subject's name>/mri/**rawavg**.mgz), corrects small motions between them and conforms the data to 256 voxels (1mm size) for all directions (output: $SUBJECTS_DIR/&lt;subject's name>/mri/**orig**.mgz).
 
-Then, a non-parametric non-uniform intensity normalization (N3) corrects for intensity non-uniformities (output: $SUBJECTS_DIR/<subject's name>/mri/**nu**.mgz). Next, talairach transformation is computed (from nu.mgz) using MNI305 atlas, and outputs the transformation into $SUBJECTS_DIR/<subject's name>/mri/transforms/talairach.auto.xfm and **talairach**.xfm.
+Then, a non-parametric non-uniform intensity normalization (N3) corrects for intensity non-uniformities (output: $SUBJECTS_DIR/&lt;subject's name>/mri/**nu**.mgz). Next, talairach transformation is computed (from nu.mgz) using MNI305 atlas, and outputs the transformation into $SUBJECTS_DIR/&lt;subject's name>/mri/transforms/talairach.auto.xfm and **talairach**.xfm.
 
-Then, it performs an intensity normalization (intensity of all voxels are scaled) and gives the output $SUBJECTS_DIR/<subject's name>/mri/**T1**.mgz. This is the volume that is used by the interactive analysis tool of MNE, mne_analyze where the MRI Viewer is using the T1.mgz volume together with the Freesurfer tkmedit user interface. The tkmedit shows the MRI volume index and the Talairach coordinates. T1.mgz is also used as input for MNE for creating BEM meshes.
+Then, it performs an intensity normalization (intensity of all voxels are scaled) and gives the output $SUBJECTS_DIR/&lt;subject's name>/mri/**T1**.mgz. This is the volume that is used by the interactive analysis tool of MNE, mne_analyze where the MRI Viewer is using the T1.mgz volume together with the Freesurfer tkmedit user interface. The tkmedit shows the MRI volume index and the Talairach coordinates. T1.mgz is also used as input for MNE for creating BEM meshes.
 
-Last, the mri_watershed program is running that finds the boundary between the brain and the skull (output: $SUBJECTS_DIR/<subject's name>/mri/brainmask.auto.mgz and $SUBJECTS_DIR/<subject's name>/mri/**brainmask**.mgz).
+Last, the mri_watershed program is running that finds the boundary between the brain and the skull (output: $SUBJECTS_DIR/&lt;subject's name>/mri/brainmask.auto.mgz and $SUBJECTS_DIR/&lt;subject's name>/mri/**brainmask**.mgz).
 
 When this step is ready, it is possible to check if the Talairach transformation and the skull stripping are correct.
 
@@ -127,7 +127,7 @@ Next (**tessellation**), the surface is created by covering the filled hemispher
 Finally, the pial, white and inflated **surfaces** are created. The white surface is created that so that it follows the white-gray intensity gradient as found in the T1 volume. The pial surface is created by expanding the white surface so that it follows the gray-CSF intensity gradient. (for a bit more detailed description, see <http://surfer.nmr.mgh.harvard.edu/fswiki/recon-all>)
 
 In order to run the last processing stage of the figure (spherical inflation) one should run the third automatic reconstruction step of FS.
-recon-all -autorecon3 -subjid<subject's name>\
+recon-all -autorecon3 -subjid&lt;subject's name>\\
 This step requires also quite much time (around 8-10 hours). It inflates the surface into sphere. But it does more than only the **spherical inflation**. However, as far as I know, MNE is using only the output of this first procccessing stage of -autorecon3. Therefore, maybe it would be useful to run only this stage instead of the entire -autorecon3. It takes around 3-4 hours. :
 
     mris_sphere rh.inflated rh.sphere
@@ -198,7 +198,7 @@ This program creates the BEM model geometry specifications (as **output**
 
 In this section, I will go through the steps of preprocessing CTF MEG data.
 
-The following can be done in the preprocessin
+The following can be done in the preprocessing:
 
 1.  gradient compensation of CTF MEG data
 2.  filtering
@@ -208,16 +208,17 @@ The following can be done in the preprocessin
 6.  averaging
 7.  noise-covariance estimation
 
-The following files are useful for doing thes
- 1\.  event file
- 2\.  channel names
- 3\.  layout file
- 4\.  averaging script
- 5\.  script for covariance estimation
+The following files are useful for doing these:
+
+1.  event file
+2.  channel names
+3.  layout file
+4.  averaging script
+5.  script for covariance estimation
 
 There are two options for processing the dat
- 1\.  in interactive mode
- 2\.  in batch mode
+ 1.  in interactive mode
+ 2.  in batch mode
 
 #### Data conversion
 
@@ -372,15 +373,16 @@ Here are the outputs of ft_volumesegment on data from a .mgz volume, plotted wit
 
 {% include image src="/static/img/development/mgz_csf.jpg" width="400" %}
 
-This segmentation is not the same what MNE does with the help of FS. In order to make BEM meshes, one should create a volume that contains the brain, the brain with (or until) the skull and the entire head until the skin. For creating BEM meshes, I have followed this script: [[example:create_bem_headmodel_for_eeg|Create BEM headmodel for EEG]]. This script needs a proper documentation because it is difficult to figure out to what one should attend during creating the brain, skin, skull volumes. :
+This segmentation is not the same what MNE does with the help of FS. In order to make BEM meshes, one should create a volume that contains the brain, the brain with (or until) the skull and the entire head until the skin. For creating BEM meshes, I have followed this script: \[[example:create_bem_headmodel_for_eeg|Create BEM headmodel for EEG]]. This script needs a proper documentation because it is difficult to figure out to what one should attend during creating the brain, skin, skull volumes. :
 There are no FT functions for creating meshes, but the matlab image processing toolbox is used. It takes time to create the meshes.
 
 #### Comparing BEM meshes
 
 I have created BEM meshes in three way
-  - I have the BEM meshes created by FreeSurfer
-  - I have created BEM meshes with FieldTrip, using the same T1.mgz volume that FS used for creating meshes. (It is a conformed (256x256x256) volume with intensity normalization.)
-  - I have created BEM meshes with FieldTrip, using a .mnc volume (downloaded from internet). This sort of volume was used also in the tutorial example script of FieldTrip.
+
+-   I have the BEM meshes created by FreeSurfer
+-   I have created BEM meshes with FieldTrip, using the same T1.mgz volume that FS used for creating meshes. (It is a conformed (256x256x256) volume with intensity normalization.)
+-   I have created BEM meshes with FieldTrip, using a .mnc volume (downloaded from internet). This sort of volume was used also in the tutorial example script of FieldTrip.
 
 I could read in the FS/MNE BEM meshes in F
 
@@ -398,14 +400,15 @@ The following picture show the BEM meshe
 
 {% include image src="/static/img/development/meshes2.jpg" width="500" %}
 
-###  Preprocessing MEG data
-####  Preprocessing
+### Preprocessing MEG data
+
+#### Preprocessing
 
 For more information in how to read in MEG data into Matlab, how to segment the data and how to do artifact-rejection see the other tutorials.
 
 :!: One big difference between FT and MNE is that MNE is doing only automatic artifact-rejection.
 
-####  Averaging and noise-covariance estimation
+#### Averaging and noise-covariance estimation
 
 Both calculation can be done with ft_timelockanalysis function on the preprocessed, segmented and artifact-free data.
 
