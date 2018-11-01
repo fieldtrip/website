@@ -37,7 +37,7 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.
 
 ### Volume conduction model
 
-{% include shared/tutorial/headmodel_background.md %}
+{% include /shared/tutorial/headmodel_background.md %}
 
 ## Procedure
 

@@ -3,7 +3,7 @@ title: Integrate FieldTrip and MNE-Python
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 Not all the information contained in either Matlab or Python can be completely copied into the other format.
 

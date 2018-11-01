@@ -3,7 +3,7 @@ title: Check the consistency between the documentation and the implementations
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Check the consistency between the documentation and the implementations
 

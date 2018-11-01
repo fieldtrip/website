@@ -3,7 +3,7 @@ title: Forward computation of EEG/MEG source models
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Forward computation of EEG/MEG source models
 

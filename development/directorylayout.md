@@ -3,7 +3,7 @@ title: Restructure the directory layout
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Restructure the directory layout
 

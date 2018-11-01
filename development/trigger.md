@@ -3,7 +3,7 @@ title: Consistent flank detection for triggers
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Consistent flank detection for triggers
 

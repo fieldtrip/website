@@ -28,7 +28,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 ## Background
 
-{% include shared/tutorial/cluster_permutation_background.md %}
+{% include /shared/tutorial/cluster_permutation_background.md %}
 
 ## Procedure
 
@@ -73,10 +73,10 @@ In a between-trials experiment, we analyze the data of a single subject. By mean
 ### Preprocessing and time-locked analysis
 
 We first extract the trials of the fully incongruent condition
-{% include shared/tutorial/preprocessing_fic_lp.md %}
+{% include /shared/tutorial/preprocessing_fic_lp.md %}
 
 Then we also extract the trials of the fully congruent condition.
-{% include shared/tutorial/preprocessing_fc_lp.md %}
+{% include /shared/tutorial/preprocessing_fc_lp.md %}
 
 Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
 

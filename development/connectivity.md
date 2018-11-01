@@ -3,7 +3,7 @@ title: Connectivity estimates for EEG/MEG time series data
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Connectivity estimates for EEG/MEG time series data
 

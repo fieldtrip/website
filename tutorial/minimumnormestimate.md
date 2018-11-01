@@ -60,9 +60,9 @@ For both preprocessing and averaging, we will follow the steps that have been wr
 
 ### Preprocessing of MEG data
 
-{% include shared/tutorial/preprocessing_fc_lp.md %}
+{% include /shared/tutorial/preprocessing_fc_lp.md %}
 
-{% include shared/tutorial/preprocessing_fic_lp.md %}
+{% include /shared/tutorial/preprocessing_fic_lp.md %}
 ### Averaging and noise-covariance estimation
 
 The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes averages of all the trials in a data structure and also estimates the noise-covariance. For a correct noise-covariance estimation it is important that you used the cfg.demean = 'yes' option when the function **[ft_preprocessing](/reference/ft_preprocessing)** was applied.

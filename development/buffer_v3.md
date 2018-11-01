@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 The public interface should consist of
 

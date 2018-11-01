@@ -3,7 +3,7 @@ title: An alternative algorithm for constructing triangulated EEG-BEM head model
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # An alternative algorithm for constructing triangulated EEG-BEM head models
 

@@ -3,7 +3,7 @@ title: Source-reconstruction using two dipoles
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 ## Source-reconstruction using two dipoles
 

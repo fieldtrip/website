@@ -13,4 +13,4 @@ tags: [meg, eeg, lfp, spike, raw, dataformat]
 
 Finally, you might have data already analyzed using other software, and would like to start by reading their output. Or the other way around, and process FieldTrip data further. For some common software packages we provide functions and examples.
 
-{% include shared/getting_started.md %}
+{% include /shared/getting_started.md %}

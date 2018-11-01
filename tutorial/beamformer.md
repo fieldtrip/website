@@ -55,7 +55,7 @@ The aim is to identify the sources of oscillatory activity in the beta band. Fro
 
 *Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response..*
 
-{% include shared/tutorial/preprocessing_fic.md %}          
+{% include /shared/tutorial/preprocessing_fic.md %}          
 
 ### Time windows of interest
 

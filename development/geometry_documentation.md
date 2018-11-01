@@ -3,7 +3,7 @@ title: Clean up the documentation on head modeling, anatomical processing, etc.
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 ##  Clean up the documentation on head modeling, anatomical processing, etc. 
 

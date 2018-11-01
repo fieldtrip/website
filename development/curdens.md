@@ -3,7 +3,7 @@ title: How to create a volumetric current density
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 {% include markup/info %}
 Upon reviewing this page on the wiki, it seems to me that this project is not going to happen. Although the fieldtrip code base might be used (in combination with other code), the release code will not be extended to specifically facilitate this.

@@ -3,7 +3,7 @@ title: An overview on forward modeling
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 FIXME This page is under construction
 

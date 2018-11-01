@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 Martin Vinck has developed a nice set of functions for spike data. These should be integrated into fieldtrip.
 

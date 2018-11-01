@@ -14,7 +14,7 @@ tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc]
 
 ## Introduction
 
-{% include shared/tutorial/connectivity_simulation_intro.md %}
+{% include /shared/tutorial/connectivity_simulation_intro.md %}
 
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.  
@@ -24,7 +24,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 ## Background
 
-{% include shared/tutorial/connectivity_simulation_background.md %}
+{% include /shared/tutorial/connectivity_simulation_background.md %}
 
 ## Procedure
 
@@ -38,11 +38,11 @@ This tutorial consists of three part
 
 ## Simulated data with directed connections
 
-{% include shared/tutorial/connectivity_simulation_simulations.md %}
+{% include /shared/tutorial/connectivity_simulation_simulations.md %}
 
 ## Simulated data with common pick-up and different noise levels
 
-{% include shared/tutorial/connectivity_simulation_commonpickup.md %}
+{% include /shared/tutorial/connectivity_simulation_commonpickup.md %}
 
 ## Connectivity between MEG virtual channel and EMG
 

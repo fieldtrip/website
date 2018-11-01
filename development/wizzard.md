@@ -3,7 +3,7 @@ title: Implement a graphical user interface as a "wizzard" for certain analysis 
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Implement a graphical user interface as a "wizzard" for certain analysis protocols
 

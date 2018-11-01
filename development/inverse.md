@@ -3,7 +3,7 @@ title: Inverse source parameter estimates from EEG/MEG data
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Inverse source parameter estimates from EEG/MEG data
 

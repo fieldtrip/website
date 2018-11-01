@@ -3,7 +3,7 @@ title: Restructure and rework all visualization functions
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 ## Restructure and rework all visualization functions
 

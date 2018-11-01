@@ -3,7 +3,7 @@ title: Implement a graphical user interface as a "wizard" for certain analysis p
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Implement a graphical user interface as a "wizard" for certain analysis protocols
 

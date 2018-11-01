@@ -3,7 +3,7 @@ title: Integration with SPM8
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Integration with SPM8
 

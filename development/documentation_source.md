@@ -3,7 +3,7 @@ title: Developing the documentation of the source-reconstruction methods
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 ## Developing the documentation of the source-reconstruction methods
 

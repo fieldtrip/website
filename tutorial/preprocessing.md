@@ -33,7 +33,7 @@ Examples for both ways are described in this tutorial, and both ways depend on *
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
-{% include shared/tutorial/dataset.md %}
+{% include /shared/tutorial/dataset.md %}
 
 ## Procedure
 

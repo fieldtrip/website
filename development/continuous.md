@@ -3,7 +3,7 @@ title: Handling of continuous data
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Handling of continuous data
 

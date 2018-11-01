@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 Note that this page has moved to [:tutorial:headmodel_meg](/tutorial/headmodel_meg)
 

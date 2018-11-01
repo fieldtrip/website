@@ -3,7 +3,7 @@ title: Implement online data processing and classification for BCI
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Implement online data processing and classification for BCI
 

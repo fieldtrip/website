@@ -3,7 +3,7 @@ title: Resolution - see faq
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Resolution: see faq
 

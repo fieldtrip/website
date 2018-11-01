@@ -11,7 +11,7 @@ The aim of this tutorial is to solve the EEG forward problem using two different
 
 ## Background
 
-{% include shared/tutorial/sourcelocalization_background.md %}
+{% include /shared/tutorial/sourcelocalization_background.md %}
 
 ## Procedure
 

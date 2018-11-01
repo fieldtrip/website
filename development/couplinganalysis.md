@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 Status: the connectivityanalysis and connectivitysimulation function have been implemented.
 

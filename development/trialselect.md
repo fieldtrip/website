@@ -3,7 +3,7 @@ title: Implement trial selection option
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Implement trial selection option
 

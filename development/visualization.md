@@ -3,7 +3,7 @@ title: Visualization Concept for 4D Bivariate data
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Visualization Concept for 4D Bivariate data
 

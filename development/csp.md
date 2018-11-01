@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 * Create CSP patterns and filters based on testdata (done)
 * Plot the patterns (done)

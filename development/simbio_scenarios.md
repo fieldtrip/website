@@ -3,6 +3,8 @@ title: SIMBIO scenarios
 layout: default
 ---
 
+{% include /shared/development/warning.md %}
+
 #  SIMBIO scenarios
 
 This page describe the experimental situations in which some typical users find themselves in need of a tool like SIMBIO to calculate a FEM forward model.
@@ -23,7 +25,6 @@ Gomez is a physicist working in team with psychologists on resting state data ac
 He is trying to answer some crucial cognitive questions such as 
 
 *  What are the effects of sleep (or sleep deprivation) in learning and memory?
-
 *  What are the neural correlates of chronic insomnia?
 
 For that purpose he wants to run connectivity analysis at the source level and for that he needs a tool for localizing the sources and to reconstruct their time courses. The goal is to apply inverse solution methods like beamformer and MNE to the raw data.
@@ -34,12 +35,10 @@ How does his pipeline look like?
 
 ##  Scenario #3
 
-Carsten is a mathematician working in the area of Bioelectromagnetism. His main interests ar
+Carsten is a mathematician working in the area of Bioelectromagnetism. His main interests are
 
 *  Building realistic models of the human head for modeling bioelectromagnetic phenomena such as the electric potential and the magnetic field evoked by a current distribution originating from brain activity. This way, EEG, MEG and ECoG recordings can be simulated (forward computation) which can be used by methods to infer brain activity from real recordings of the former modalities. Building a head model for these purposes essentially consists of defining volumes of different electrical conductivity which represent the different brain tissues. The information needed to do that has to be inferred from anatomical imaging techniques, such as MRI which have to be registered and segmented. Carsten is especially interested in the question which tissues have the most impact on the forward computation and should thus be modeled as accurate as possible.      
-
 *  Comparing different numerical approaches the forward computation such as different finite element methods (FEM) or boundary element methods (BEM).
-
 *  Apply the above methods to applications such as presurgical epilepsy diagnosis with the aim to improve the reliability of EEG and MEG recordings, making long-term invasive ECoG recordings less necessary. 
 
 He disposes of MRI T1/T2 scans, DW-MRI (diffusion weighted) scans (a modality that allows for the estimation of the electrical conductivity of the head tissue. In that context it is often called DTI for diffusion tensor imaging) and EEG, MEG and possibly also ECoG recordings. 

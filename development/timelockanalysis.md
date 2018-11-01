@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
   cfg.output     = trial, cov
   cfg.keeptrials = yes, no

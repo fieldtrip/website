@@ -3,7 +3,7 @@ title: Ensure consistent trial definition
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Ensure consistent trial definition
 

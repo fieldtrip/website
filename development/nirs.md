@@ -3,7 +3,7 @@ title: Header
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2753
 

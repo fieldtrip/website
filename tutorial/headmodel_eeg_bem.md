@@ -24,11 +24,11 @@ Furthermore, if you are interested in MEG head models, you can go to the corresp
 
 ## Background
 
-{% include shared/tutorial/sourcelocalization_background.md %}
+{% include /shared/tutorial/sourcelocalization_background.md %}
 
 This tutorial is focusing on how to build the **volume conduction model for the head**.
 
-{% include shared/tutorial/headmodel_background.md %}
+{% include /shared/tutorial/headmodel_background.md %}
 
 {% include markup/info %}
 If an anatomical MRI is not available for your EEG subject, you can consider to use a template MRI or a template head model that is located in the FieldTrip template directory. See [here](/template/headmodel) for more info.

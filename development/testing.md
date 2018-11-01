@@ -3,7 +3,7 @@ title: Testing code quality
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 FIXME See also [/development/infrastructure_for_testing](/development/infrastructure_for_testing)
 

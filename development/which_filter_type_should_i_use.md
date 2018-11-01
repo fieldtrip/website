@@ -3,7 +3,7 @@ title:
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 This is a placeholder for the 'Which filter type should I use?' FAQ. The documentation should probably be along the lines o
 

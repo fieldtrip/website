@@ -3,7 +3,7 @@ title: Dealing with the geometry of the forward model
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Dealing with the geometry of the forward model
 

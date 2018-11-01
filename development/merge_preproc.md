@@ -3,7 +3,7 @@ title: Switch to using the preproc functions and phase out the old preprocessing
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Switch to using the preproc functions and phase out the old preprocessing code
 

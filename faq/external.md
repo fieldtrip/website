@@ -6,4 +6,4 @@ tags: [faq, matlab, toolbox]
 
 ##  Which external toolboxes are used by FieldTrip?
 
-{% include shared/faq/external.md %}
+{% include /shared/faq/external.md %}

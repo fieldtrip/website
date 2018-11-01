@@ -3,7 +3,7 @@ title: What is the best way to homogenize data?
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # What is the best way to homogenize data?
 

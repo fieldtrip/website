@@ -39,7 +39,7 @@ Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of 
 
 If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the *trl* matrix. These will be added to the data in the *.trialinfo* field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.   
 
-{% include shared/tutorial/natmeg/dataset.md %}
+{% include /shared/tutorial/natmeg/dataset.md %}
 
 # Browsing the data prior to preprocessing
 

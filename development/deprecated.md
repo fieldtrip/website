@@ -3,7 +3,7 @@ title: Deprecated functions and options
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Deprecated functions and options
 

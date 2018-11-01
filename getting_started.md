@@ -15,4 +15,4 @@ We organize [FieldTrip workshops](/workshop) and a yearly “Advanced EEG/MEG an
 
 If you are very eager to get started with your own data, please proceed to the user documentation section on [importing your own data](/reading_data).
 
-{% include shared/getting_started.md %}
+{% include /shared/getting_started.md %}

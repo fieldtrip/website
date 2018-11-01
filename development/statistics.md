@@ -3,7 +3,7 @@ title: Redesign and implement a common statistical backend for various data type
 layout: default
 ---
 
-{% include shared/development/warning.md %}
+{% include /shared/development/warning.md %}
 
 # Redesign and implement a common statistical backend for various data types
 
