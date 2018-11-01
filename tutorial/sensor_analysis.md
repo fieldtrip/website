@@ -17,7 +17,7 @@ tags: [tutorial, meg, freq, timelock, preprocessing, plot, MEG-visuomotor151]
 In this tutorial, we will provide an overview of several sensor-level analyses to help you get started working with FieldTrip. We will work on a dataset((Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective
 Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758)) collected during an experiment where subjects were instructed to fixate on a screen. Each trial started with the presentation of a cue pointing either rightward or leftward. This cue indicated which hand the subject had to use for the trial's response. Next, the subjects were instructed to extend both their wrists. After a baseline interval of 1s, an inward drifting grating was visually presented. Then, after an unpredictable delay, the stimulus changed speed, after which the subjects had to increase their wrist extension on the one cued side only. This experimental design is illustrated in Figure 1. Magneto-encephalography (MEG) data was collected using a 151-channel CTF system. Also, electromyography (EMG) data was collected from electrodes attached to the bilateral musculus extensor carpi radialis longus.
 
-{% include image src="/static/img/tutorial/sensor_analysis/design.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/design.png" %}
 
 *Figure 1: illustration of the experimental paradigm.*
 
@@ -69,7 +69,7 @@ Time point 0 in all trials corresponds to the onset of the visual stimulation. T
     ylabel('trial number');
     xlabel('time (s)');
 
-{% include image src="/static/img/tutorial/sensor_analysis/multipletrials.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/multipletrials.png" %}
 
 *Figure 1a: Some example trials, with time t=0 marked.*
 
@@ -103,7 +103,7 @@ FieldTrip provides several options for visualizing the results of event-related 
 
 Note that we request channel labels and head outline showing, and with a particular template layout corresponding to our MEG acquisition system. The output should look like thi
 
-{% include image src="/static/img/tutorial/sensor_analysis/multiploter.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/multiploter.png" %}
 
 *Figure 2: event-related field for each MEG sensor.*
 
@@ -111,19 +111,19 @@ As you can see, the event-related field for each MEG sensor is displayed at a lo
 
 The nice thing about this multiplot is that it is interactive: it is possible to select sensors and view an average plot (corresponding to an **[ft_singleplotER](/reference/ft_singleplotER)**) of those sensors. There seems to be an interesting deflection in the ERF around the left occipitoparietal sensors. Go ahead and select those, and click the selection box that comes up.
 
-{% include image src="/static/img/tutorial/sensor_analysis/multiploter_interactive.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/multiploter_interactive.png" %}
 
 *Figure 3: click the box to show the average of the selected sensors.*
 
 The plot that comes up shows a major deflection around 300m
 
-{% include image src="/static/img/tutorial/sensor_analysis/singleploter.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/singleploter.png" %}
 
 *Figure 4: average ERF for some left posterior sensors.*
 
 Again, you can select a time range and click it to bring up a topographical plot (**[ft_topoplotER](/reference/ft_topoplotER)**) of the ERF averaged over the selected time window. Select the peak around 300ms and click i
 
-{% include image src="/static/img/tutorial/sensor_analysis/topoploter.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/topoploter.png" %}
 
 *Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset.*
 
@@ -182,7 +182,7 @@ Biophys J. 76(2):691-708))((Percival and Walden, 1993 Spectral analysis for phys
 
 Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfrtiles.png" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrtiles.png" %}
 
 *Figure 6: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases.*
 
@@ -244,7 +244,7 @@ Then we can plot the results using **[ft_multiplotTFR](/reference/ft_multiplotTF
 
 Note the baseline and baselinetype parameters. These govern what baseline correction is applied to the data before plotting. In this case, we want to plot the relative change of our power data with respect to the interval between -0.8s and 0s (corresponding to the no-stimulation baseline interval in the experimental design).
 
-{% include image src="/static/img/tutorial/sensor_analysis/multiplottfr.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/multiplottfr.png" %}
 
 *Figure 7: Time-frequency representation using a Hanning taper with a fixed window length.*
 
@@ -258,7 +258,7 @@ Click around the multiplot to explore the visual gamma response and its topograp
 
 In a next step, you can get an overview of your analyses by clicking on the FieldTrip menu item and selecting "Show pipeline
 
-{% include image src="/static/img/tutorial/figurepipeline.png" %}
+{% include image src="/assets/img/tutorial/figurepipeline.png" %}
 
 Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_analysispipeline)** as follow
 
@@ -267,7 +267,7 @@ Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_ana
 
 The function ft_analysispipeline puts all conducted analysis steps into perspective and visualizes them in a flowchar
 
-{% include image src="/static/img/tutorial/sensor_analysis/analysispipeline_sensor_analysis.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/analysispipeline_sensor_analysis.png" %}
 
 By clicking on one of the boxes (in MATLAB), a new figure will appear that shows all cfg-options that were used to in the respective function.
 ## Cortico-muscular coherence
@@ -321,7 +321,7 @@ Non-time-resolved spectra (such as our coherence spectrum) can be visualized usi
 
 Again, this is an interactive plot, so click around it to get a nice overview of the exact spectrum and the topography of the peak (which is in the beta frequency range).
 
-{% include image src="/static/img/tutorial/sensor_analysis/cmc.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/cmc.png" %}
 
 *Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG.*
 

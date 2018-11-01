@@ -32,7 +32,7 @@ You can find the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutori
 
 In the following, we will work our way through the time- and frequency-domain analysis pipelines as shown in the figure.
 
-{% include image src="/static/img/tutorial/pipeline_tutorial.png" width="400" %}
+{% include image src="/assets/img/tutorial/pipeline_tutorial.png" width="400" %}
 
 ### Sensor level classification in the time domain
 
@@ -98,7 +98,7 @@ and subsequently to treat the stat object as if it were data. The *parameter* fi
     cfg.colorbar    = 'yes';
     cfg.interplimits= 'electrodes';
     ft_topoplotER(cfg,stat);
-{% include image src="/static/img/tutorial/clf_1.png" width="200" %}
+{% include image src="/assets/img/tutorial/clf_1.png" width="200" %}
 
 In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using *imagesc(stat.mymodel)* then it will be found that all features are used due to the way classifier operates. One way to solve this is to use *dimensionality reduction* or *feature selection*. We will see examples later in this tutorial.
 
@@ -155,7 +155,7 @@ and we see a major improvement since we are focusing on the physiologically rele
     cfg.colorbar     = 'yes';
     cfg.interplimits = 'electrodes';
     ft_topoplotTFR(cfg,stat);
-{% include image src="/static/img/tutorial/clf_2.png" width="200" %}
+{% include image src="/assets/img/tutorial/clf_2.png" width="200" %}
 #### Exercise 2
 
 {% include markup/info %}
@@ -190,7 +190,7 @@ If we look at the weights then we find that just a very small number of features
     cfg.colorbar     = 'yes';
     cfg.interplimits = 'electrodes';
     ft_topoplotTFR(cfg,stat);
-{% include image src="/static/img/tutorial/clf_3.png" width="200" %}
+{% include image src="/assets/img/tutorial/clf_3.png" width="200" %}
 
 #### Exercise 3
 

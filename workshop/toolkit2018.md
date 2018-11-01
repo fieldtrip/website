@@ -17,35 +17,35 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
 
 | 09:00-09:30 | Registration, handouts and coffee                                                                                       |
 | 09:30-09:45 | Welcome                                                                                                                 |
-| 09:45-10:45 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/static/pdf/workshop/toolkit2018/introduction.pdf) |
+| 09:45-10:45 | Introduction to EEG/MEG and introduction to the FieldTrip toolbox - [lecture](/assets/pdf/workshop/toolkit2018/introduction.pdf) |
 | 10:45-11:00 | Coffee Break                                                                                                            |
 | 11:00-12:00 | Data acquisition demonstration in the EEG and MEG labs                                                                  |
 | 12:00-13:00 | Lunch                                                                                                                   |
 | 13:00-15:00 | Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)                                                           |
 | 15:00-15:15 | Tea Break                                                                                                               |
-| 15:15-16:30 | Time frequency analysis of power - [lecture](/static/pdf/workshop/toolkit2018/frequency.pdf) |
+| 15:15-16:30 | Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2018/frequency.pdf) |
 | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                                                          |
 
 ### Tuesday April 10, 2018
 
 | 09:00-11:00 | Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis)             |
 | 11:00-11:15 | Coffee Break                                                                               |
-| 11:15-12:15 | Spontaneous EEG and sleep - [lecture](/static/pdf/workshop/toolkit2018/sleep.pdf)          |
+| 11:15-12:15 | Spontaneous EEG and sleep - [lecture](/assets/pdf/workshop/toolkit2018/sleep.pdf)          |
 | 12:15-13:15 | Lunch                                                                                      |
 | 13:15-15:15 | Analysis of continuous EEG data - [hands-on](/tutorial/sleep)                             |
 | 15:15-15:30 | Tea break                                                                                  |
-| 15:30-16:30 | Forward and inverse - [lecture](/static/pdf/workshop/toolkit2018/forward_inverse.pdf)      |
+| 15:30-16:30 | Forward and inverse - [lecture](/assets/pdf/workshop/toolkit2018/forward_inverse.pdf)      |
 | 16:30-17:15 | Wrap-up-the-day: special topics, general questions and answers                             |
 | 18:30-22:00 | Drinks & dinner at Mi Barrio                                                               |
 
 ### Wednesday April 11, 2018
 
-| 09:00-10:00 | Connectivity analysis in MEG and EEG data - [lecture](/static/pdf/workshop/toolkit2018/connectivity.pdf) |
+| 09:00-10:00 | Connectivity analysis in MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2018/connectivity.pdf) |
 | 10:00-10:45 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity)             |
 | 10:45-11:00 | Coffee Break                                                                                       |
 | 11:00-12:15 | Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity)             |
 | 12:15-13:00 | Lunch                                                                                              |
-| 13:00-14:15 | Source reconstruction using beamformers - [lecture](/static/pdf/workshop/toolkit2018/beamforming.pdf) |
+| 13:00-14:15 | Source reconstruction using beamformers - [lecture](/assets/pdf/workshop/toolkit2018/beamforming.pdf) |
 | 14:15-15:00 | Beamforming - [hands-on](/tutorial/beamformer)                                                     |
 | 15:00-15:15 | Tea Break                                                                                          |
 | 15:30-16:30 | Beamforming - [hands-on](/tutorial/beamformer)                                                     |
@@ -53,12 +53,12 @@ Organizer: Robert Oostenveld, with the help of many colleagues.
 
 ### Thursday April 12, 2018
 
-| 09:00-10:30 | Statistics using non-parametric randomization techniques - [lecture](/static/pdf/workshop/toolkit2018/statistics.pdf)              |
+| 09:00-10:30 | Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2018/statistics.pdf)              |
 | 10:30-10:45 | Coffee break                                                                                                                       |
 | 10:45-12:00 | Statistics using non-parametric randomization techniques -[hands-on](/tutorial/cluster_permutation_timelock)                      |
 | 12:00-13:00 | Lunch                                                                                                                              |
 | 13:00-14:00 | Statistics using non-parametric randomization techniques - [hands-on](/tutorial/cluster_permutation_timelock)                     |
-| 14:00-15:00 | Large scale analyses and open science - [lecture and demo](/static/pdf/workshop/toolkit2018/open_science.pdf)                      |
+| 14:00-15:00 | Large scale analyses and open science - [lecture and demo](/assets/pdf/workshop/toolkit2018/open_science.pdf)                      |
 | 15:00-15:15 | Tea break                                                                                                                          |
 | 15:15-17:15 | FieldTrip playground part 1                                                                                                        |
 | 17:15-18:00 | Wrap-up-the-day: special topics, general questions and answers                                                                     |

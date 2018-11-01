@@ -169,7 +169,7 @@ We will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the d
 
 	data_meg       = ft_rejectvisual(cfg,data_meg);
 
-{% include image src="/static/img/workshop/baci2017/artifactrejection.png" width="600" %}
+{% include image src="/assets/img/workshop/baci2017/artifactrejection.png" width="600" %}
 
 *figure 1: Example of visual rejection.*
 
@@ -208,7 +208,7 @@ Don't forget to save the time locked data.
 Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](http://dx.doi.org/10.1016/0013-4694(80)90419-8), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
 
 GMFP can be calculated using the following formula (from [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003))
-{% include image src="/static/img/development/tms/gmfp.png" %}
+{% include image src="/assets/img/development/tms/gmfp.png" %}
 
 where t is time, V is the voltage at channel i and K is the number of channels.
 
@@ -237,7 +237,7 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft
 	h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 
 
-{% include image src="/static/img/workshop/baci2017/baci_sep_singleploter.png" width="600" %}
+{% include image src="/assets/img/workshop/baci2017/baci_sep_singleploter.png" width="600" %}
 
 *figure 2: Representation of single trial (blue) and the global mean field power of EEG (red).*
 
@@ -254,7 +254,7 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft
 	h2 = plot(MEG_avg.time,scale*MEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 
 
-{% include image src="/static/img/workshop/baci2017/baci_sef_singleploter.png" width="600" %}
+{% include image src="/assets/img/workshop/baci2017/baci_sef_singleploter.png" width="600" %}
 
 *figure 3: Representation of single trial (blue) and the global mean field power of MEG (red).*
 
@@ -286,7 +286,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sep_multiplotER.png
 
-{% include image src="/static/img/workshop/baci2017/baci_sep_multiploter.png" width="600" %}
+{% include image src="/assets/img/workshop/baci2017/baci_sep_multiploter.png" width="600" %}
 
 *figure 4: Use of ft_multiplotER for representation of the single trial according to the EEG cap.*
 
@@ -318,7 +318,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 	set(gcf, 'Position',[1 1 1200 800])
 	print -dpng baci_sef_multiplotER.png
 
-{% include image src="/static/img/workshop/baci2017/baci_sef_multiploter.png" width="600" %}
+{% include image src="/assets/img/workshop/baci2017/baci_sef_multiploter.png" width="600" %}
 
 *figure 5: Use of ft_multiplotER for representation of the single trial according to the EEG cap.*
 
@@ -339,7 +339,7 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 	print -dpng baci_sep_topo.png
 
 
-{% include image src="/static/img/workshop/baci2017/baci_sep_topo.png" width="400" %}
+{% include image src="/assets/img/workshop/baci2017/baci_sep_topo.png" width="400" %}
 
 *figure 6: Representation of the P20/N20 component using the function, ft_topoplotER.*
 
@@ -360,7 +360,7 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 	print -dpng baci_sef_topo.png
 
 
-{% include image src="/static/img/workshop/baci2017/baci_sef_topo.png" width="400" %}
+{% include image src="/assets/img/workshop/baci2017/baci_sef_topo.png" width="400" %}
 
 *figure 7: Representation of the P20/N20 component using the function, ft_topoplotER.*
 ## Summary and suggested further reading

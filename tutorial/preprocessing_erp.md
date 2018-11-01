@@ -127,7 +127,7 @@ We now continue with re-referencing to extract the bipolar EOG signal from the d
 Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The re-referencing step to obtain the EOG is therefore not required when working with Biosemi or other bipolar data.
 {% include markup/end %}
 
-{% include image src="/static/img/example/example_eog.png" width="200" %}
+{% include image src="/assets/img/example/example_eog.png" width="200" %}
 
   % EOGV channel
   cfg              = [];
@@ -199,7 +199,7 @@ You can check the channel labels that are now present in the data and use **[ft_
 
 For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was use
 
-{% include image src="/static/img/example/layoutacticapmpi.png" width="200" %}
+{% include image src="/assets/img/example/layoutacticapmpi.png" width="200" %}
 
 The channel positions are not stored in the EEG dataset. You have to use a layout file; this is a .mat file that contains the 2-D positions of the channels. FieldTrip provides a number of default layouts for BrainVision EEG caps in the fieldtrip/template/layout directory. It is also possible to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)). In this example we will use an existing layout file that is included with the example data.
 
@@ -221,7 +221,7 @@ An next important step of EEG preprocessing is detection (and rejection) of arti
 
 You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yourself that trials 22, 42, 126, 136 and 150 contain blinks. You can exclude a trial from the data by clicking on it. Note, however, that in this example we do not assign any output to the function. MATLAB will create the default output "ans" variable. All the changes (rejections) that you make will be applied to the "ans". The "data" will remain the same, no trials will be removed!  
 
-{% include image src="/static/img/example/example_script_artifacts1.png" width="600" %}
+{% include image src="/assets/img/example/example_script_artifacts1.png" width="600" %}
 
 {% include markup/info %}
 In **[ft_rejectvisual](/reference/ft_rejectvisual)** with cfg.method='channel' you can go to channel '43' (note that the channel name is '43' and its number is also 43). There you will see that in trials 138 to 149 this channel is a bit more noisy, suggesting that the electrode contact on this side of the cap was temporarily bad. Neighboring channels also suggest that at trial 138 something happened, perhaps a movement of the electrode cap. We are not going to deal with this now, but it is something that you might want to keep in mind for optional cleaning of the data with **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
@@ -237,7 +237,7 @@ The data can be also displayed in a "summary" mode, in which case the variance (
 	cfg.channel  = [1:60];    % do not show EOG channels
 	data_clean   = ft_rejectvisual(cfg, data);
 
-{% include image src="/static/img/example/example_script_artifacts.png" %}
+{% include image src="/assets/img/example/example_script_artifacts.png" %}
 
 The left lower box of Figure 4 shows the variance of the signal in each trial. By dragging the mouse over the trials in this box you can remove them from the plot and reject them from the data. You will see the numbers of the rejected trials in the box on the right. You can undo the rejection by typing the trial's number in "Toggle trial" box. You can also plot the signal in a specific trial with "Plot trial" box. Here, we have plotted the trial 90 - the one with the highest variance. On the topoplot you can see a drift in the channel 48. You can zoom in to this channel by dragging the mouse over it.
 
@@ -291,7 +291,7 @@ We now select the trials with conditions 1 and 2 and compute ERP's.
 
 Note, that we use the layout file for plotting the results. With the cfg.interactive = 'yes' option you can select channels and zoom in.
 
-{% include image src="/static/img/example/preprocessing_eeg_multiploter.png" width="400" %}
+{% include image src="/assets/img/example/preprocessing_eeg_multiploter.png" width="400" %}
 
 The following code allows you to look at the ERP difference waves.
 

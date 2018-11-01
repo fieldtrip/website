@@ -23,7 +23,7 @@ There are 3 visualization path
 2) Go directly to ft_multiplotER representations in time or frequency space.
 3) Go directly to ft_singleplotER representations in time or frequency space.
 
-{% include image src="/static/img/development/4d_plotting_flow.jpg" %}
+{% include image src="/assets/img/development/4d_plotting_flow.jpg" %}
 
 #### Sample Data For Development
 

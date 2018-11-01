@@ -20,7 +20,7 @@ We will keep this page up to date and post new information here when available.
 -   Session I
 
     -   09:30 – 09:45		Opening remarks
-    -   09:45 - 10:45   Lecture: Connectivity basics, methods and issues. -  [slides](/static/pdf/workshop/marseille2016b_connectivity.pdf)
+    -   09:45 - 10:45   Lecture: Connectivity basics, methods and issues. -  [slides](/assets/pdf/workshop/marseille2016b_connectivity.pdf)
     -   10:45 – 11:00		Coffee break
     -   11:00 – 12:30		Hands-on: Analysis of sensor- and source-level connectivity
         -   <http://www.fieldtriptoolbox.org/tutorial/connectivity>
@@ -29,7 +29,7 @@ We will keep this page up to date and post new information here when available.
     -   12:30 – 13:30		Lunch
 
 -   Session II
-    -   13:30 - 14:30		Lecture: Connectivity basics, issues and how-to's. -  [slides](/static/pdf/workshop/marseille2016b_connectivity2.pdf)
+    -   13:30 - 14:30		Lecture: Connectivity basics, issues and how-to's. -  [slides](/assets/pdf/workshop/marseille2016b_connectivity2.pdf)
     -   14:30 – 14:45		Coffee break
     -   14:45 – 16:15	  Hands-on: Analysis of source-level connectivity and networks
         -   <http://www.fieldtriptoolbox.org/tutorial/networkanalysis>

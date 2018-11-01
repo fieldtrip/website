@@ -36,11 +36,11 @@ The **[standard layout files](/template/layout)** included in FieldTrip are base
 
 The **[ft_prepare_layout](/reference/ft_prepare_layout)** function can be used to make a custom layout. This can be especially convenient if you have a nice bitmap image for the channel arrangement, like this
 
-{% include image src="/static/img/tutorial/layout/easycap_m10_equidistant61chan.gif" %}
+{% include image src="/assets/img/tutorial/layout/easycap_m10_equidistant61chan.gif" %}
 
 for the Easycap M10 electrodecap arrangement (see http://www.easycap.de/easycap/e/electrodes/13_M10.htm) for full details), or like this
 
-{% include image src="/static/img/tutorial/layout/dalal_ecog.png" width="450" %}
+{% include image src="/assets/img/tutorial/layout/dalal_ecog.png" width="450" %}
 
 for an ECoG electrode arrangement (this example photo is taken from [Dalal et al. in Journal of Neuroscience Methods 174 (2008) 106–115)](http://www.ncbi.nlm.nih.gov/pubmed/18657573).
 
@@ -50,7 +50,7 @@ You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)
     cfg.image = 'dalal_ecog.png';
     lay = ft_prepare_layout(cfg);
 
-{% include image src="/static/img/tutorial/layout/fig1.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/fig1.png" width="400" %}
 
 After creating the layout, you should manually assign the correct name of the channel labels in the lay.label cell-array. Furthermore, you probably should place the SCALE and COMNT locations at a convenient place in the figure and modify the width and height of the boxes used for multiplotting. You can use **[ft_layoutplot](/reference/ft_layoutplot)** for a visual inspection of the complete layout
 
@@ -58,7 +58,7 @@ After creating the layout, you should manually assign the correct name of the ch
     cfg.layout = lay;   % this is the layout structure that you created with ft_prepare_layout
     ft_layoutplot(cfg);
 
-{% include image src="/static/img/tutorial/layout/fig2.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/fig2.png" width="400" %}
 
 or including the original image as black-and-white background like this
 
@@ -67,7 +67,7 @@ or including the original image as black-and-white background like this
     cfg.layout = lay;                 % this is the layout structure that you created with ft_prepare_layout
     ft_layoutplot(cfg);
 
-{% include image src="/static/img/tutorial/layout/fig3.png" width="400" %}
+{% include image src="/assets/img/tutorial/layout/fig3.png" width="400" %}
 
 Once you are happy with the result, you can save it to a MATLAB fil
 

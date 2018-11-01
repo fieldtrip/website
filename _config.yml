@@ -9,7 +9,7 @@ github_username:  fieldtrip
 
 # Build settings
 sass:
-  sass_dir: ./static/css
+  sass_dir: ./assets/css
 
 permalink: pretty
 markdown: kramdown

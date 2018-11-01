@@ -55,7 +55,7 @@ Neurons often fire in synchrony, meaning that action potentials from different n
 *  Compute cross-correlation function between neurons using **[ ft_spike_xcorr](/reference/ ft_spike_xcorr)**
 *  Compute joint peri-stimulus time histograms, and their visualization, using  **[ ft_spike_jpsth](/reference/ ft_spike_jpsth)** and **[ ft_spike_plot_jpsth](/reference/ ft_spike_plot_jpsth)**.
 
-{% include image src="/static/img/tutorial/flowchart.png" %}
+{% include image src="/assets/img/tutorial/flowchart.png" %}
 
 ###  Reading in spike data
 
@@ -150,9 +150,9 @@ Plotting the mean waveform and variance for two units by
 
 shows that one unit has the structure of a fast spiking cell (as its waveform is narrow), and one unit of a broad spiking cell (as its waveform is broad
 
-{% include image src="/static/img/tutorial/waveform_sig002a_wf.png" %}
+{% include image src="/assets/img/tutorial/waveform_sig002a_wf.png" %}
 
-{% include image src="/static/img/tutorial/waveform_sig003a_wf.png" %}
+{% include image src="/assets/img/tutorial/waveform_sig003a_wf.png" %}
 
 ### Adding trigger event information to spike structure
 
@@ -242,7 +242,7 @@ The structure now contains the spike times in seconds (spikeTrials.time) and in 
 We have created three new fields in the spike structure, namely spikeTrials.time, spikeTrials.trial and spikeTrials.trialtime.
 Together, these three fields fully identify the structure of the spiketrain relative to the event trigger. The relationship between spikeTrials.time{1} and spikeTrials.timestamp{1} is shown for the first 8 trials. All spikes that fall in the same trial have the same value in spikeTrials.trial{1}.
 
-{% include image src="/static/img/tutorial/timestampsvstime.png" %}
+{% include image src="/assets/img/tutorial/timestampsvstime.png" %}
 
 In this example, unit 'sig002a_wf' fired in total 83613 spikes in the selected trial periods. For every spike, we indicate in trial the spike was fired (spikeTrials.trial) and at which time (in seconds) the spike was fired (spikeTrials.time). Thus, spikeTrials.time{i}(j), spikeTrials.trial{i}(j), spikeTrials.timestamp{i}(j), and spikeTrials.waveform{i}(:,:,j) all contain information about the j-th spike from the i-th neuron.
 The spikeTrials.trialtime field fully specifies the structure of the spike trains, as it conveys in which trials no spike was fired, and what the borders of the trials were. The first and second column of spikeTrials.trialtime tell us what the start and end of the trial was relative to the event trigger.
@@ -365,9 +365,9 @@ The field isih.isi contains the isi per spike (w.r.t the previous spike) and con
 
 This gives two figures, one with a longer refractory period (the narrow spiking cell; top), and one with a bursting pattern (the broad spiking cell; bottom)
 
-{% include image src="/static/img/tutorial/isi_sig002a_wf.png" width="300" %}
+{% include image src="/assets/img/tutorial/isi_sig002a_wf.png" width="300" %}
 
-{% include image src="/static/img/tutorial/isi_sig003a_wf.png" width="300" %}
+{% include image src="/assets/img/tutorial/isi_sig003a_wf.png" width="300" %}
 
 We also read in an additional dataset consisting of an M-clust .t file, that can be found at
 [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t)
@@ -398,7 +398,7 @@ We also read in an additional dataset consisting of an M-clust .t file, that can
 	cfg.colormap    = jet(300);
 	figure, ft_spike_plot_isireturn(cfg,isih)
 
-{% include image src="/static/img/tutorial/isica1_example.png" width="300" %}
+{% include image src="/assets/img/tutorial/isica1_example.png" width="300" %}
 
 This plot shows that after a burst, either a new burst follows, or a long waiting period on the order of a theta cycle (100 ms).
 
@@ -449,7 +449,7 @@ A raster plot with psth is obtained by running
 	cfg.interactive  = 'no'; % toggle off interactive mode
 	figure, ft_spike_plot_raster(cfg,spikeTrials, psth)
 
-{% include image src="/static/img/tutorial/psth_example3.png" width="300" %}
+{% include image src="/assets/img/tutorial/psth_example3.png" width="300" %}
 
 The yellow lines in the raster plot indicate the trial borders. Configuration options are available to control spike length and width, and size of the raster relative to the summarizing PSTH / spike density data. Also, multiple neurons are plotted with different colors. This can also be used to plot multiple conditions at the same time.
 
@@ -468,7 +468,7 @@ We then run spike-density functions on the spike trains, to obtain spike density
 	cfg.interactive  = 'no'; % toggle off interactive mode
 	figure, ft_spike_plot_raster(cfg,spikeTrials, sdf)
 
-{% include image src="/static/img/tutorial/sdf_example.png" width="300" %}
+{% include image src="/assets/img/tutorial/sdf_example.png" width="300" %}
 
 The output from **[ft_spikedensity](/reference/ft_spikedensity)** is again a timelock structure. A second output can be obtained from **[ft_spikedensity](/reference/ft_spikedensity)**, containing the estimated spike densities per trial in a continuous raw data structure. To this end, do
 
@@ -596,7 +596,7 @@ For example, the computed cross-correlogram reveals strong zero-lag and alpha-ba
 	title([Xc.label{iCmb} Xc.label{jCmb}])
 	axis tight
 
-{% include image src="/static/img/tutorial/xcorr34.png" %}
+{% include image src="/assets/img/tutorial/xcorr34.png" %}
 ###  The joint peri stimulus time histogram
 
 Cross-correlations are computed over the complete trial period. To gain insight into the temporal evolution of spike-spike correlations, the JPSTH tool can be used.
@@ -635,11 +635,11 @@ We then plot the JPSTH using **[ ft_spike_plot_jpsth](/reference/ ft_spike_plot_
 
 giving the normalized jpsth, the shuffle corrected normalized jpsth, and the difference between the two, revealing an increase in synchronization between spike trains that is not due to evoked, joint fluctuations in the firing rate.
 
-{% include image src="/static/img/tutorial/jpsthraw44.png" width="300" %}
+{% include image src="/assets/img/tutorial/jpsthraw44.png" width="300" %}
 
-{% include image src="/static/img/tutorial/jpsthshuff44.png" width="300" %}
+{% include image src="/assets/img/tutorial/jpsthshuff44.png" width="300" %}
 
-{% include image src="/static/img/tutorial/jpsthsubtr44.png" width="300" %}
+{% include image src="/assets/img/tutorial/jpsthsubtr44.png" width="300" %}
 
 ## Summary
 

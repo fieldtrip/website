@@ -52,7 +52,7 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-{% include image src="/static/img/tutorial/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/tutorial/bf_pipeline.jpg" width="650" %}
 
 *Figure: An example of a pipeline to locate oscillatory sources.*
 
@@ -79,7 +79,7 @@ Load the forward model using the following cod
 
 The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation between the response with the left finger to the activation in response to the right finger. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
 
-{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam5.png" width="500" %}
+{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_beam5.png" width="500" %}
 
 *Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming.*
 
@@ -271,7 +271,7 @@ Now, we can plot the interpolated data:
 
 	ft_sourceplot(cfg, source_left_int);
 
-{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam1.png" width="650" %}
+{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_beam1.png" width="650" %}
 
 *Figure: A source plot of the beta response in the left-hand condition.*
 
@@ -282,7 +282,7 @@ As you can see the strongest motor response is located in the center of the head
 	cfg.location = [35 -13 76];
 	ft_sourceplot(cfg, source_diff_int);
 
-{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam2.png" width="650" %}
+{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_beam2.png" width="650" %}
 
 *Figure: A source plot of the beta response ratio between the left- and right-hand conditions.*
 
@@ -422,14 +422,14 @@ Finally, we can plot the dat
 
 	ft_sourceplot(cfg, source_left_int);
 
-{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam3.png" width="650" %}
+{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_beam3.png" width="650" %}
 
 *Figure: An EEG-source plot of the beta response in the left-hand condition.*
 
 	cfg.location = [-19.5 -18.5 70.5];
 	ft_sourceplot(cfg, source_diff_int);
 
-{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam4.png" width="650" %}
+{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_beam4.png" width="650" %}
 
 *Figure: An EEG-source plot of ratio of the beta response in the left versus the right hand condition.*
 
@@ -437,7 +437,7 @@ Finally, we can plot the dat
 How well can you identify the source of the beta-response ration in the EEG source reconstruction? The image seems quite noisy, could you think of a way to enhance the image?
 {% include markup/end %}
 
-{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam2.png" width="650" %}
+{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_beam2.png" width="650" %}
 
 *Figure: A MEG-source plot of the beta response in the left versus the right hand condition.*
 
@@ -448,7 +448,7 @@ How do the EEG and MEG source plots compare?
 {% include markup/info %}
 If you've made it this far, perhaps you could try beamforming a different time window. Looking at the time-frequency plot you might be interested in trying to localise the less obvious beta-band response between 0.75 and 1.25 seconds after response.
 
-{% include image src="/static/img/tutorial/natmeg_temp/natmeg_beam5.png" width="400" %}
+{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_beam5.png" width="400" %}
 {% include markup/end %}
 
 ## Summary and suggested further reading

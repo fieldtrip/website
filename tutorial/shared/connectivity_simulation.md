@@ -70,7 +70,7 @@ The simulated data consists of 3 channels in 500 trials. You can easily visualiz
     legend(data.label)
     xlabel('time (s)')
 
-{% include image src="/static/img/tutorial/connectivity/data.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity/data.png" width="400" %}
 
 or browse through the complete data using
 
@@ -78,7 +78,7 @@ or browse through the complete data using
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
     ft_databrowser(cfg, data);
 
-{% include image src="/static/img/tutorial/connectivity/databrowser.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity/databrowser.png" width="400" %}
 
 ### Computation of the multivariate autoregressive model
 
@@ -177,7 +177,7 @@ Subsequently, the data can be visualized using **[ft_connectivityplot](/referenc
 	cfg.zlim      = [0 1];
 	ft_connectivityplot(cfg, coh, cohm);
 
-{% include image src="/static/img/tutorial/connectivity/connectivityplot.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity/connectivityplot.png" width="400" %}
 
 The coherence measure is a symmetric measure, which means that it does not provide information regarding the direction of information flow between any pair of signals. In order to analyze directionality in interactions, measures based on the concept of granger causality can be computed. These measures are based on an estimate of the spectral transfer matrix, which can be computed in a straightforward way from the multivariate autoregressive model fitted to the data.
 
@@ -192,7 +192,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
 	ft_connectivityplot(cfg, granger);
 
 
-{% include image src="/static/img/tutorial/connectivity/grangerplot1.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity/grangerplot1.png" width="400" %}
 
 Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivityplot)**, you can use the following low-level Matlab plotting code which gives a better understanding of the numerical representation of the results.
 
@@ -206,7 +206,7 @@ Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivitypl
 	end
 	end
 
-{% include image src="/static/img/tutorial/connectivity/grangerplot2.png" width="400" %}
+{% include image src="/assets/img/tutorial/connectivity/grangerplot2.png" width="400" %}
 
 #### Exercise 2
 
@@ -259,8 +259,8 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	set(findobj(gcf,'color',[0 0.5 0]), 'color', [1 0 0]);
 	title('mixed ''sources''');
 
-{% include image src="/static/img/tutorial/connectivity/mixingmixed.png" width="300" %}
-{% include image src="/static/img/tutorial/connectivity/mixingunmixed.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/mixingmixed.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/mixingunmixed.png" width="300" %}
 
 
 
@@ -278,7 +278,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	title('powerpectrum');
 
 
-{% include image src="/static/img/tutorial/connectivity/mixingpowerspectrum.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/mixingpowerspectrum.png" width="300" %}
 
 
 
@@ -300,8 +300,8 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
 	figure;ft_connectivityplot(cfg, c);
 
 
-{% include image src="/static/img/tutorial/connectivity/mixinggranger.png" width="300" %}
-{% include image src="/static/img/tutorial/connectivity/mixingcoherence.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/mixinggranger.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/mixingcoherence.png" width="300" %}
 
 #### Exercise 4
 

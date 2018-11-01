@@ -79,7 +79,7 @@ Analyses can be conducted in many different ways and in different orders, depend
     * anti-correlate oxyHb/deoxyHb-traces per channel
 *  plot results
 
-{% include image src="/static/img/tutorial/nirs_tut2_multichannel_analysis_steps.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_multichannel_analysis_steps.png" width="400" %}
 
 **Figure2; Overview of the fNIRS analysis procedure for the data set of this tutorial.**
 
@@ -114,7 +114,7 @@ To retrieve the layout from the data file as shown above, you can use:
     cfg.optofile  = 'LR-01-2015-06-01-0002.oxy3';
     ft_layoutplot(cfg);
 
-{% include image src="/static/img/tutorial/nirs_tut2_optodepositions.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_optodepositions.png" width="400" %}
 
 **Figure: Layout of the optode positions.**
 
@@ -135,7 +135,7 @@ Plotting the data from ADC001 and ADC002 will yield the figure below, showing th
 	plot(data_raw.time{1}, data_raw.trial{1}(97,:)*1.0, 'b-')
 	plot(data_raw.time{1}, data_raw.trial{1}(98,:)*1.1, 'r:')
 
-{% include image src="/static/img/tutorial/nirs_tut2_datatrigger.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_datatrigger.png" width="400" %}
 
 **Figure: Oddball paradigm trigger. All stimuli onsets are indicated by the blue lines. Red dotted lines indicate onsets of the deviants. You can see that there are four blocks of events.**
 
@@ -183,7 +183,7 @@ We can now plot the data and see what it looks like. In cfg.preproc we can speci
 	cfg.channel        = 'Rx*'; % only show channels starting with Rx
 	ft_databrowser(cfg, data_down);
 
-{% include image src="/static/img/tutorial/nirs_tut2_fig5_databrowser.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_fig5_databrowser.png" width="400" %}
 
 **Figure: Optical density traces for down-sampled data before high-pass filtering.**
 
@@ -206,7 +206,7 @@ This step has removed some of the variability in the hemodynamic response betwee
 	cfg.channel        = 'Rx*'; % only show channels starting with Rx
 	ft_databrowser(cfg, data_flt);
 
-{% include image src="/static/img/tutorial/nirs_tut2_opticaldensitytracesafterhighpass.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_opticaldensitytracesafterhighpass.png" width="400" %}
 
 **Figure: Optical density traces for down-sampled data after high-pass filtering. Note that the DC (offset) has been largely removed by this step (cf. Fig. 5).**
 
@@ -291,7 +291,7 @@ Let’s take a look at what happens around the first deviant, by plotting the av
 	cfg.baseline = 'yes';
 	ft_singleplotER(cfg, data_epoch)
 
-{% include image src="/static/img/tutorial/nirs_tut2_epocheddata.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_epocheddata.png" width="400" %}
 
 **Figure: Epoched optical density data around the first deviant stimulus.**
 
@@ -344,7 +344,7 @@ Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now
 
 Check the data again using **[/reference/ft_singleplotER](/reference/ft_singleplotER)**. You should see a clear heartbeat in the signal.
 
-{% include image src="/static/img/tutorial/nirs_tut2_hemoglobinovertime.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_hemoglobinovertime.png" width="400" %}
 
 **Figure: Hemoglobin concentration as a function of time, averaged over all channels for the epoch around the first deviant
 **
@@ -362,7 +362,7 @@ The heartbeat is not a signal that we are currently interested in, although you 
 
 The changes in average concentration now reveals a perfect example of the hemodynamic response. No heartbeat, the signal starts to rise at stimulus onset, peaks at around 4 s, and then drops again. Note that the absolute values also make sense (0.37 for the peak).
 
-{% include image src="/static/img/tutorial/nirs_tut2_hemoglobinovertimeafterlowpass.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_hemoglobinovertimeafterlowpass.png" width="400" %}
 
 **Figure: Low-pass filtered hemoglobin concentrations (cf. two previous figs.).**
 
@@ -414,7 +414,7 @@ Important to remember is that for **[/reference/ft_multiplotER](/reference/ft_mu
     cfg.graphcolor        = 'r';
     ft_multiplotER(cfg, timelockDEV);
 
-{% include image src="/static/img/tutorial/nirs_tut2_multiploter.png" width="800" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_multiploter.png" width="800" %}
 
 **Figure 10; A so-called multiplot of the data: the average time course displayed per channel.**
 
@@ -433,7 +433,7 @@ Per default FieldTrip uses the minimum and the maximum in the selected part of t
 	ft_topoplotER(cfg, timelockDEV);
 	title('[functional]');
 
-{% include image src="/static/img/tutorial/nirs_tut2_fig11_topoplot.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_tut2_fig11_topoplot.png" width="400" %}
 
 **Figure 11; Topographical representation of the measured signal.**
 

@@ -6,7 +6,7 @@ tags: [example, mne, source]
 
 # How to import data from MNE-Python and FreeSurfer
 
-{% include image src="/static/img/example/import_mne.png" width="400" %}
+{% include image src="/assets/img/example/import_mne.png" width="400" %}
 
 	
 	

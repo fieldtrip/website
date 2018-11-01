@@ -33,7 +33,7 @@ Biophys J. 76(2):691-708))((Percival and Walden, 1993 Spectral analysis for phys
 
 Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfrtiles.png" width="600" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrtiles.png" width="600" %}
 
 *Figure: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases.*
 
@@ -47,7 +47,7 @@ To calculate the time-frequency analysis for the example dataset we will perform
    * Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
    * Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfr_pipelinenew.png" width="200" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfr_pipelinenew.png" width="200" %}
 
 *Figure: Schematic overview of the steps in time-frequency analysis*
 
@@ -112,7 +112,7 @@ To plot the TFRs from all the sensors use the function **[ft_multiplotTFR](/refe
     figure
     ft_multiplotTFR(cfg, TFRhann);
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfrhannmult.png" width="650" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrhannmult.png" width="650" %}
 
 *Figure: Time-frequency representations calculated using ft_freqanalysis. Plotting was done with ft_multiplotTFR)*
 
@@ -129,7 +129,7 @@ An interesting effect seems to be present in the TFR of sensor MRC15. To make a 
     figure
     ft_singleplotTFR(cfg, TFRhann);
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfr_mrc15_1_feb_2012.png" width="400" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfr_mrc15_1_feb_2012.png" width="400" %}
 
 *Figure: The time-frequency representation with respect to single sensor obtained using ft_singleplotTFR*
 
@@ -147,7 +147,7 @@ From Figure 4 one can see that there is an increase in power around 15-20 Hz in 
     figure
     ft_topoplotTFR(cfg, TFRhann);
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfrhanntopoplot.png" width="400" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrhanntopoplot.png" width="400" %}
 
 *Figure: A topographic representation of the time-frequency representations (15 - 20 Hz, 0.9 - 1.3 s post stimulus) obtained using ft_topoplotTFR*
 
@@ -197,7 +197,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)*
     figure
     ft_singleplotTFR(cfg, TFRhann7);
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfrhann7_1_feb_2012.png" width="400" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrhann7_1_feb_2012.png" width="400" %}
 
 *Figure: A time-frequency representation of channel MRC15 obtained using ft_singleplotTFR*
 
@@ -254,7 +254,7 @@ K is the number of multitapers applied; the more tapers the greater the smoothin
 
 These settings result in the following characteristics as a function of the frequencies of interes
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/figure1ab.png" width="400" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/figure1ab.png" width="400" %}
 
 *Figure: a) The characteristics of the TFRs settings using multitapers in terms of time and frequency resolution of the settings applied in the example. b) Examples of the time-frequency tiles resulting from the settings.*
 
@@ -279,7 +279,7 @@ Plot the result
     figure
     ft_multiplotTFR(cfg, TFRmult)
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfrmultimult.png" width="650" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrmultimult.png" width="650" %}
 
 *Figure: Time-frequency representations of power calculated using multitapers.*
 
@@ -313,7 +313,7 @@ Plot the result
     figure
     ft_multiplotTFR(cfg, TFRwave)
 
-{% include image src="/static/img/tutorial/timefrequencyanalysis/tfrwavemult.png" width="650" %}
+{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrwavemult.png" width="650" %}
 
 *Figure: Time-frequency representations of power calculated using Morlet wavelets.*
 

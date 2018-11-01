@@ -38,7 +38,7 @@ The second workflow focuses on improving the signal-to-noise ratio and extractin
 
 The two workflows become intrinsically connected for the first time during the electrode placement activity (Step 17), which offers the opportunity to directly link anatomical locations to electrode labels corresponding to the neural recordings. This activity involves a graphical user interface designed for efficient yet precise identification of electrodes in even the most challenging cases. The integration of the two workflows culminates in an interactive and anatomically informed data exploration tool and the ability to represent functional and epileptiform neural activity overlaid on cortical and subcortical surface models, in figure or video format (Steps 47-57).
 
-{% include image src="/static/img/tutorial/ieeg_pipeline.png" width="600" %}
+{% include image src="/assets/img/tutorial/ieeg_pipeline.png" width="600" %}
 ## Anatomical workflow
 
 **1|** Specify the subject ID. This ID will be used in the file naming, in addition to information about the type of data (e.g., MRI, CT), the coordinate system it is in (e.g., ACPC, MNI), and the process(es) that were applied to it (e.g., f for fusion). For example, a CT scan that is aligned to the ACPC coordinate system and that has just been fused with the anatomical MRI is written out to file as subjID_CT_acpc_f.nii.
@@ -157,7 +157,7 @@ CRITICAL STEP Accuracy of the fusion operation is important for correctly placin
 	cfg.channel = hdr.label;
 	elec_acpc_f = ft_electrodeplacement(cfg, ct_acpc_f, fsmri_acpc);
 
-{% include image src="/static/img/tutorial/elecplace.png" width="800" %}
+{% include image src="/assets/img/tutorial/elecplace.png" width="800" %}
 
 **18|** Examine whether the variables in resulting electrode structure elec_acpc_f match the recording parameters, e.g., the number of channels stored in the label field. The electrode and channel positions are stored in the elecpos and chanpos fields, respectively. The elecpos field contains the original electrode positions. With exception of possible brain shift compensation, this field is not adjusted. The channel positions in the chanpos field are initially identical to the electrode positions but may be updated to accommodate offline adjustments in channel combinations, i.e. during re-montaging. For bipolar iEEG data, the best considered channel position is in between the two corresponding electrode positions. The chanpos field is used for overlaying the neural data on (sub-)cortical models during data visualization. The tra field is a matrix with the weight of each electrode into each channel, which at this stage merely is an identity matrix reflecting one-to-one mappings between electrodes and channels.
 
@@ -223,7 +223,7 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
 	lighting gouraud;
 	camlight;
 
-{% include image src="/static/img/tutorial/elecrealign.png" width="800" %}
+{% include image src="/assets/img/tutorial/elecrealign.png" width="800" %}
 
 ?TROUBLESHOOTING
 
@@ -291,7 +291,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 	lighting gouraud;
 	camlight;
 
-{% include image src="/static/img/tutorial/elecnormalize.png" width="500" %}
+{% include image src="/assets/img/tutorial/elecnormalize.png" width="500" %}
 
 **32|** Save the normalized electrode information to file.
 
@@ -451,7 +451,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	cfg.showoutline = 'yes';
 	ft_multiplotTFR(cfg, freq_blc);
 
-{% include image src="/static/img/tutorial/interactiveplotting_ecog.png" width="700" %}
+{% include image src="/assets/img/tutorial/interactiveplotting_ecog.png" width="700" %}
 
 ### ECoG data representation
 
@@ -483,7 +483,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 	ft_plot_sens(elec_acpc_fr);
 
-{% include image src="/static/img/tutorial/ecogrepresentation.png" width="400" %}
+{% include image src="/assets/img/tutorial/ecogrepresentation.png" width="400" %}
 
 ### SEEG data representation
 
@@ -535,7 +535,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	cfg.slice        = '2d';
 	ft_sourceplot(cfg, freq_sel2, mesh_rha);
 
-{% include image src="/static/img/tutorial/seegrepresentation.png" width="600" %}
+{% include image src="/assets/img/tutorial/seegrepresentation.png" width="600" %}
 
 ## Summary and conclusion
 

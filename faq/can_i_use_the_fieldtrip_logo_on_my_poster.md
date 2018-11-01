@@ -8,5 +8,5 @@ tags: [faq, logo]
 
 Yes you can, and it is much appreciated by the developers! Below you can find the logo as a high-resolution bitmap, and in Encapsulated Postscript (eps) format.
 
-- [png](/static/img/faq/fieldtriplogo.png)
-- [eps](/static/img/faq/fieldtriplogo.eps)
+- [png](/assets/img/faq/fieldtriplogo.png)
+- [eps](/assets/img/faq/fieldtriplogo.eps)

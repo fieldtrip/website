@@ -42,7 +42,7 @@ This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was 
 
 	>> imagesc(afni.brick0(:,:,70))
 
-{% include image src="/static/img/template/afni.png" width="400" %}
+{% include image src="/assets/img/template/afni.png" width="400" %}
 
 ## The AAL atlas
 
@@ -63,7 +63,7 @@ N. Tzourio-Mazoyer, B. Landeau, D. Papathanassiou, F. Crivello, O. Etard, N. Del
 
 	>> imagesc(aal.tissue(:,:,45))
 
-{% include image src="/static/img/template/aal.png" width="400" %}
+{% include image src="/assets/img/template/aal.png" width="400" %}
 
 ## The BrainWeb Dataset
 
@@ -155,7 +155,7 @@ Cortex. Cerebral Cortex. 25: 3911-3931
 	subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))
 	subplot(2,2,4);imagesc(vtpm.tissue(:,:,100))
 
-{% include image src="/static/img/template/vtpm.png" width="400" %}
+{% include image src="/assets/img/template/vtpm.png" width="400" %}
 
 ## The Brainnetome Atlas
 
@@ -182,7 +182,7 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
 
 	imagesc(brainnetome.tissue(:,:,68))
 
-{% include image src="/static/img/template/brainnetome_atlas2.png" width="400" %}
+{% include image src="/assets/img/template/brainnetome_atlas2.png" width="400" %}
 
 ## References
 

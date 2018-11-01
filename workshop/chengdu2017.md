@@ -17,7 +17,7 @@ This will be a loosely organized workshop that comprises a series of lectures an
 
 #### Wednesday morning
 
--   1h - welcome and intro lecture - [slides](/static/pdf/workshop/chengdu2017/introduction.pdf)
+-   1h - welcome and intro lecture - [slides](/assets/pdf/workshop/chengdu2017/introduction.pdf)
 -   2h - hands-on on preprocessing of [EEG](/tutorial/preprocessing_erp) data.
 
 #### Thursday morning
@@ -26,7 +26,7 @@ This will be a loosely organized workshop that comprises a series of lectures an
 
 #### Friday morning
 
--   1h - forward and inverse modeling lecture - [slides](/static/pdf/workshop/chengdu2017/forward.pdf)
+-   1h - forward and inverse modeling lecture - [slides](/assets/pdf/workshop/chengdu2017/forward.pdf)
 -   2h - anatomical processing and lead fields for Cuban EEG dataset
 
 Please note that the script for the Cuban EEG dataset is further down on this page.

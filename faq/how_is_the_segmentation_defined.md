@@ -27,9 +27,9 @@ The tissue type of each voxel can be represented in the FieldTrip structure in t
 
 The default output of the ft_volumesegment function (see above) is a segmentation data-type structure with probabilistic tissue maps. The **gray**, **white** and **csf** fields contain *probabilistic values* for representing the gray, white matter and the cerebrospinal fluid. This means, for example, that at the field **white** everything that is not the white matter represented by 0, and voxels which belong to the white matter have a value between 0 and 1.
 
-{% include image src="/static/img/faq/segmentation/gray.png" width="186" %}
-{% include image src="/static/img/faq/segmentation/white.png" width="186" %}
-{% include image src="/static/img/faq/segmentation/csf.png" width="186" %}
+{% include image src="/assets/img/faq/segmentation/gray.png" width="186" %}
+{% include image src="/assets/img/faq/segmentation/white.png" width="186" %}
+{% include image src="/assets/img/faq/segmentation/csf.png" width="186" %}
 
 *Figure 1. Probabilistic maps of the gray (left), white (middle) and cerebrospinal fluid (right). The colors represent probabilities ranging from 0 to 1.*
 
@@ -65,9 +65,9 @@ The reason for this is explained in more detail [here](/faq/how_change_mri_orien
 
 When the brain, skull and scalp tissues are requested as outputs from ft_volumesegment, the output also represents the probabilistic representation. However, in this case each fields contain a binary or boolean value, i.e. a probability of 0 (false) or 1 (true). Hence, the binary representation is a special case of the probabilistic representation.
 
-{% include image src="/static/img/faq/segmentation/brain.png" width="186" %}
-{% include image src="/static/img/faq/segmentation/skull.png" width="186" %}
-{% include image src="/static/img/faq/segmentation/scalp.png" width="186" %}
+{% include image src="/assets/img/faq/segmentation/brain.png" width="186" %}
+{% include image src="/assets/img/faq/segmentation/skull.png" width="186" %}
+{% include image src="/assets/img/faq/segmentation/scalp.png" width="186" %}
 
 *Figure 2. The brain (left), the skull (middle) and scalp (right). The colors represent only zeros and ones.*
 
@@ -110,7 +110,7 @@ Regardless of whether the probabilities are crisp (i.e. either exactly 0 or 1) o
 
 When only the scalp as output is required from the segmentation, the scalp-mask includes also the brain and skull tissues.
 
-{% include image src="/static/img/faq/segmentation/scalponly.png" width="200" %}
+{% include image src="/assets/img/faq/segmentation/scalponly.png" width="200" %}
 
 *Figure 3. The binary representation of the outside surface of the scalp. The colors represent only zeros and ones.*
 
@@ -152,7 +152,7 @@ In this structure, the **brick0** and **brick1** field contains two different in
 
 An indexed representation can also be plotted to inspect the different tissues in an image (see below).
 
-{% include image src="/static/img/development/afni_atlas.png" width="300" %}
+{% include image src="/assets/img/development/afni_atlas.png" width="300" %}
 
 *Figure 4. Plot of the integer values that are represented in the indexed "brick0" representation of the AFNI atlas. The figure was made with "colormap lines".*
 
@@ -178,7 +178,7 @@ The following code demonstrates how to create an indexed representation from the
 
 	colormap(map);
 
-{% include image src="/static/img/faq/segmentation/seg_indexed.png" width="350" %}
+{% include image src="/assets/img/faq/segmentation/seg_indexed.png" width="350" %}
 
 *Figure 5. The brain (blue), skull (green) and scalp (red) after segmentation with indexing. The colors represent integers from zero to three.*
 
@@ -188,6 +188,6 @@ An indexed segmentation can represent only non-overlapping tissues/brain areas, 
 
 When a non-binary probabilistic segmentation is used and when the binary representations of the different tissue types partially overlap, the conversion to an indexed representation would involve a disambiguation of each voxel to which tissue/brain area it belongs to and the more fine-grade information of the probability values would disappear.
 
-{% include image src="/static/img/faq/segmentation/tissue_representation.png" width="500" %}
+{% include image src="/assets/img/faq/segmentation/tissue_representation.png" width="500" %}
 
 *Figure 6. Schematic figure of conversion between different representation of the segmentation. Binary probabilistic representation of non-overlapping tissue-types can be directly converted to an indexed representation (A). When an overlapping or/and non-binary probabilistic representation is converted to indexed, the representations are not equivalent (B)*

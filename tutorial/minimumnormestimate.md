@@ -28,7 +28,7 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 Figure 1 shows a schematic of the steps needed for the calculation of the minimum-norm estimate. It shows that the computation of the inverse solution is based on the outputs of two independent processing steps: the processing of the anatomical images that leads to a forward model and the processing of the MEG data. To create a useable source model, additional software is needed, for example FreeSurfer (for the creation of a model of the cortical sheet), and MNE Suite or HCP workbench (to get a minimally distorted low-resultion version of the cortical sheet).
 
-{% include image src="/static/img/development/replicate_functionality_of_mne_software:pipeline_mne.png" width="550" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software:pipeline_mne.png" width="550" %}
 
 *Figure 1. A schematic overview of the steps needed for the calculation of the minimum-norm estimate*
 
@@ -135,7 +135,7 @@ You can plot the inverse solution onto the source-space at a specific time-point
 	                         % 500 ms after the zero time-point
 	ft_plot_mesh(bnd, 'vertexcolor', m);
 
-{% include image src="/static/img/tutorial/minimumnormestimate/plotmeshsourceic01new.png" width="450" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/plotmeshsourceic01new.png" width="450" %}
 
 //Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point
 //
@@ -157,7 +157,7 @@ But we would like to know where the difference between the conditions can be loc
 	cfg.mask = 'avg.pow';
 	ft_sourcemovie(cfg,sdDIFF);
 
-{% include image src="/static/img/tutorial/minimumnormestimate/sourcemovie01new.png" width="500" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/sourcemovie01new.png" width="500" %}
 *Figure 7. One frame from the movie that shows the differences of the two source-reconstructions*
 
 ## Summary and further readings

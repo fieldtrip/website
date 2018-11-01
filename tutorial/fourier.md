@@ -89,11 +89,11 @@ signals.
 	subplot(2,1,2);
 	plot(imag(fftcos),'r');
 
-{% include image src="/static/img/tutorial/fourier/fft_sinwav2.png" %}
+{% include image src="/assets/img/tutorial/fourier/fft_sinwav2.png" %}
 
 *Figure: The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
-{% include image src="/static/img/tutorial/fourier/fft_coswav2.png" %}
+{% include image src="/assets/img/tutorial/fourier/fft_coswav2.png" %}
 
 *Figure: The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
 
@@ -132,7 +132,7 @@ signals.
 	figure;
 	plot(wav);
 
-{% include image src="/static/img/tutorial/fourier/cos45.png" %}
+{% include image src="/assets/img/tutorial/fourier/cos45.png" %}
 
 *Figure: A 20 Hz cosine wave shifted 45 degrees.*
 
@@ -144,7 +144,7 @@ signals.
 	subplot(2,1,2);
 	plot(imag(fftwav),'r');
 
-{% include image src="/static/img/tutorial/fourier/fft_cos45.png" %}
+{% include image src="/assets/img/tutorial/fourier/fft_cos45.png" %}
 
 *Figure: The FFT of a 20 Hz cosine wave shifted 45 degrees.*
 
@@ -217,7 +217,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	hold on;
 	plot(coswav,'r');
 
-{% include image src="/static/img/tutorial/fourier/sincos.png" %}
+{% include image src="/assets/img/tutorial/fourier/sincos.png" %}
 
 *Figure: A sine (blue) and cosine wave (red) of equal frequency (10 Hz).*
 
@@ -244,7 +244,7 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 	figure('name','power cos');
 	plot(psdcos);
 
-{% include image src="/static/img/tutorial/fourier/powsin.png" %}
+{% include image src="/assets/img/tutorial/fourier/powsin.png" %}
 
 *Figure: The power spectrum of a 10 Hz sine wave. The power spectrum of the 10 Hz cosine wave is identical.*
 
@@ -334,7 +334,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	figure;
 	plot(coh);
 
-{% include image src="/static/img/tutorial/fourier/coh_randomphase.png" %}
+{% include image src="/assets/img/tutorial/fourier/coh_randomphase.png" %}
 
 *Figure: Coherence spectrum for two 10 Hz signals with a random phase difference.*
 
@@ -383,7 +383,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	figure;
 	plot(coh);
 
-{% include image src="/static/img/tutorial/fourier/coh_consphase.png" %}
+{% include image src="/assets/img/tutorial/fourier/coh_consphase.png" %}
 
 *Figure: Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference.*
 

@@ -8,7 +8,7 @@ tags: [realtime, openbci]
 
 This page describes the interface between the 8-channel [OpenBCI](http://www.openbci.com) microcontroller board and the FieldTrip buffer. The OpenBCI Board is a versatile and affordable bio-sensing microcontroller that can be used to sample electrical brain activity (EEG), muscle activity (EMG), heart rate (EKG), and more. Besides the 8 ExG channels, it includes an accelerometer, resulting in a total of 11 channels.
 
-{% include image src="/static/img/development/realtime/8_perspective_1024x1024.jpg" width="400" %}
+{% include image src="/assets/img/development/realtime/8_perspective_1024x1024.jpg" width="400" %}
 
 The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you’ve worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
 ## Standalone interface with openbci2ft

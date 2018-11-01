@@ -95,7 +95,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, avg_Faces, avg_Scrambled);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.23.37.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.23.37.png" %}
 
 	
 	%% compute the difference between faces and
@@ -111,7 +111,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, avg_Faces_vs_Scrambled);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.25.12.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.25.12.png" %}
 
 	
 	cfg           = [];
@@ -120,7 +120,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_movieplotER(cfg, avg_Faces_vs_Scrambled);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.26.09.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.26.09.png" %}
 
 	
 	% for saving to disk
@@ -143,7 +143,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_analysispipeline(cfg, avg_Faces_vs_Scrambled);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.27.48.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.27.48.png" %}
 
 ## Part 2 - use a custom statfun
 
@@ -179,7 +179,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	colorbar
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.23.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.23.png" %}
 
 	
 	cfg = [];
@@ -201,7 +201,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, analytic);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.26.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.26.png" %}
 
 	
 	%% use montecarlo and correctm=max
@@ -226,7 +226,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.28.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.28.png" %}
 
 	
 	%% compare the observed statistical values to the distributions
@@ -252,7 +252,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	xlim([-10 10]);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.30.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.30.png" %}
 
 	
 	%% use your own trialfunction, e.g. spearman rank correlation
@@ -282,7 +282,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	line([montecarlo2.time(1) montecarlo2.time(end)], [1.3 1.3])
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.33.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.34.33.png" %}
 
 	
 	save analytic2 analytic2
