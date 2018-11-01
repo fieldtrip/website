@@ -6,7 +6,7 @@ tags: [download]
 
 # Download the FieldTrip toolbox
 
-You can download the FieldTrip toolbox [here](http://www.fieldtriptoolbox.org/download.php).
+You can download the FieldTrip toolbox [here](/download.php).
 
 Prior to downloading, you might want to check whether your computer meets the [MATLAB requirements](/faq/requirements).
 

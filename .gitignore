@@ -1,7 +1,10 @@
-static/img
-static/pdf
 .DS_Store
-_site/
-.sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+.sass-cache/
+_site
+_site/
+commit.md
+static/img
+static/pdf
+static/root
