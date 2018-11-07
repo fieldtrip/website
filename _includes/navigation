@@ -4,7 +4,11 @@
     <img src="/static/img/fieldtriplogo-75.png" width="75" alt="">
   </a>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto">
       {% for item in site.data.navigation %}
         <li class="nav-item active">
