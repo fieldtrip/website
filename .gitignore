@@ -5,6 +5,6 @@
 _site
 _site/
 commit.md
-static/img
-static/pdf
-static/root
+assets/img
+assets/pdf
+assets/root
