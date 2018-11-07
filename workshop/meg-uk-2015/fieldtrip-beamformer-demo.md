@@ -49,7 +49,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot3(mri_fids(3,1), mri_fids(3,2), mri_fids(3,3), 'm*');
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.11.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.11.png" %}
 
 	
 	%% validate the positions of the fiducials that were provided by Rik
@@ -67,9 +67,9 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, mri_orig);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.20.png" width="180" %}
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.26.png" width="180" %}
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.33.png" width="180" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.20.png" width="180" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.26.png" width="180" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.33.png" width="180" %}
 
 	
 	%%
@@ -94,7 +94,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_headshape(headshape);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.38.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.38.png" %}
 
 	
 	
@@ -137,7 +137,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_vol(ft_convert_units(vol, 'mm'));
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.42.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.42.png" %}
 
 	
 	figure
@@ -147,7 +147,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_plot_vol(ft_convert_units(vol, 'mm'));
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.46.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.46.png" %}
 
 	
 	figure
@@ -156,7 +156,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	alpha 0.5
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.49.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_10.43.49.png" %}
 
 ## Part 2 - reconstruct beta-band power
 
@@ -225,7 +225,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_multiplotTFR(cfg, wavelet)
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.11.55.png" width="630" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.11.55.png" width="630" %}
 
 	
 	%%
@@ -285,7 +285,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, sourceR);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.30.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.30.png" %}
 
 	
 	
@@ -300,7 +300,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_sourceplot(cfg, sourceI);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.53.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.12.53.png" %}
 
 ## Part 3 - reconstruct single-trial cortical responses
 
@@ -349,7 +349,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(timelock2.time, timelock2.avg)
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.11.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.11.png" %}
 
 	
 	cfg = [];
@@ -357,7 +357,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	figure; ft_multiplotER(cfg, timelock2);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.13.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.13.png" %}
 
 	
 	%%
@@ -380,7 +380,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(source.time, source.avg.mom{1})
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.16.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.16.png" %}
 
 	
 	%% construct single-trial virtual channel data
@@ -412,7 +412,7 @@ Please use the [general MATLAB instructions](/general) to get started.
 	plot(virtualchannel_avg.time, virtualchannel_avg.avg);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.19.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.19.png" %}
 
 	
 	figure
@@ -420,14 +420,14 @@ Please use the [general MATLAB instructions](/general) to get started.
 	legend({'1-Famous', '2-Unfamiliar', '3-Scrambled'})
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.26.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.26.png" %}
 
 	
 	figure
 	imagesc(squeeze(virtualchannel_avg.trial))
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.28.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.28.png" %}
 
 	
 	%% investigate the virtual channel spectrally
@@ -446,4 +446,4 @@ Please use the [general MATLAB instructions](/general) to get started.
 	ft_singleplotTFR(cfg, virtualchannel_wavelet);
 	
 
-{% include image src="/static/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.32.png" %}
+{% include image src="/assets/img/workshop/meg-uk-2015/screen_shot_2015-01-05_at_11.23.32.png" %}

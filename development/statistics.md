@@ -31,7 +31,7 @@ The timelockstatistics, freqstatistics and sourcestatistics functions provide th
 
 The suggested structure is 
 
-{% include image src="/static/img/development/statistics/statistics_structure.png" %}
+{% include image src="/assets/img/development/statistics/statistics_structure.png" %}
 
 An alternative to this structure with a more clear separation between the massive univariate single-sample (time-freq-channel element, or voxel) is given below
 
@@ -49,15 +49,15 @@ Without optimization it is approximately a factor of 2x slower than clusterranda
 
 ### Supported and allowed permutations of the design matrix
 
-{% include image src="/static/img/development/statistics/perm1.png" %}
+{% include image src="/assets/img/development/statistics/perm1.png" %}
 Independent samples design, ivar=A
 
-{% include image src="/static/img/development/statistics/perm2.png" %}
+{% include image src="/assets/img/development/statistics/perm2.png" %}
 Dependent samples design, uvar=A, ivar=B
 
-{% include image src="/static/img/development/statistics/perm3.png" %}
+{% include image src="/assets/img/development/statistics/perm3.png" %}
 Independent samples design with a control variable, ivar=A, cvar=B
 
-{% include image src="/static/img/development/statistics/perm4.png" %}
+{% include image src="/assets/img/development/statistics/perm4.png" %}
 Mixed design, uvar=A, ivar=B, cvar=C
 

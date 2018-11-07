@@ -11,7 +11,7 @@ Sensory-motor processing is assessed using a task in which participants are pres
 
 In the Motor task, participants executed a simple hand or foot movement. The limb and the side were instructed by a visual cue, and the timing of each movement was controlled by a pacing arrow presented on the center of the screen (A, right). The paradigm included movement and rest blocks (B, right).
 
-{% include image src="/static/img/tutorial/shared/screen_shot_2015-09-15_at_14.21.52.png" width="200" %}
+{% include image src="/assets/img/tutorial/shared/screen_shot_2015-09-15_at_14.21.52.png" width="200" %}
 
 *Figure Caption: A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements.*
 
@@ -29,11 +29,11 @@ In addition to the recorded MEG channels, EMG activity was recorded from each li
 The signal on the trigger channel consists of 2 superimposed trigger sequences. One from the Stimulus PC running the E-Prime protocol and one from a photodiode placed on the stimulus presentation screen. The trigger channel for one Motor task run is shown, top right.
 The photodiode was activated whenever a cueing stimulus or pacing arrow was presented on the display. It was deactivated when the display was black. The trigger value for on is 255 and the trigger value for off is 0. The photodiode trigger sequence extracted from the trigger channel of one Motor task run is shown, bottom right.
 
-{% include image src="/static/img/tutorial/shared/screen_shot_2015-09-15_at_14.22.40.png" width="200" %}
+{% include image src="/assets/img/tutorial/shared/screen_shot_2015-09-15_at_14.22.40.png" width="200" %}
 
 *Figure Caption: Original Trigger channel sequence from one run of Motor Task. E-Prime and Photodiode triggers are superimposed.*
 
-{% include image src="/static/img/tutorial/shared/screen_shot_2015-09-15_at_14.22.49.png" width="200" %}
+{% include image src="/assets/img/tutorial/shared/screen_shot_2015-09-15_at_14.22.49.png" width="200" %}
 
 *Figure Caption: Photodiode trigger sequence extracted from the Trigger channel of one Motor Task run.*
 

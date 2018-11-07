@@ -14,7 +14,7 @@ Aarhus University (IMC and Cfin) will be hosting a FieldTrip Course on EEG/MEG A
 
 Interacting Minds Centre, Aarhus University, Nobelparken, building 1483, 3rd floor, 8000 Aarhus C
 
-{% include image src="/static/img/workshop/aulogo.jpg" width="300" %}
+{% include image src="/assets/img/workshop/aulogo.jpg" width="300" %}
 
 ### When
 

@@ -8,14 +8,14 @@ tags: [example, realtime]
 
 This page describes the neurofeedback application that was developed by Marco Rotonda for his MSc thesis **"Controllo volontario della sincronizzazione di fase intraemisferica nella banda gamma eeg mediante neurofeedback"** (Voluntary control of intrahemispheric phase sychronization in the EEG gamma band using neurofeedback).
 
-The thesis (in Italian) which describes all details and the results is available [here](/static/pdf/example/rt_hilbert/rotonda_thesis_msc.pdf).
+The thesis (in Italian) which describes all details and the results is available [here](/assets/pdf/example/rt_hilbert/rotonda_thesis_msc.pdf).
 
-The signal analysis details are available [here](/static/pdf/example/gamma_analisys.pdf).
+The signal analysis details are available [here](/assets/pdf/example/gamma_analisys.pdf).
 
 Neurofeedback, as the word suggest, is feeding back to the subject it’s neuronal activity analyzed by it’s EEG activity in (almost) real time. In this training we give back to the subjest a visual stimulation (vertical bars) when it’s gamma phase synchronization between F3-P3 and F4-P4 increased over the baseline (bars up) or decreased (bars down).
 Here is the feedback
 
-{% include image src="/static/img/example/picture_12.png" width="400" %}
+{% include image src="/assets/img/example/picture_12.png" width="400" %}
 
 If you scroll the script you can see that this image is a particular point of view of a 3D visualization. I you change the POV you could see all the data from the last 3 minutes.
 

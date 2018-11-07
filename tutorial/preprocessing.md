@@ -89,7 +89,7 @@ The most important fields are dataFIC.trial containing the individual trials and
 
     plot(dataFIC.time{1}, dataFIC.trial{1}(130,:))
 
-{% include image src="/static/img/tutorial/preprocessing/preprocess1.png" %}
+{% include image src="/assets/img/tutorial/preprocessing/preprocess1.png" %}
 
 The preprocessing steps will be repeated for the other conditions as well.
 

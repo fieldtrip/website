@@ -16,7 +16,7 @@ J 5
 68159 Mannheim  
 Germany  
 
-{% include image src="/static/img/zi-logo.png" width="304" link="<https://www.zi-mannheim.de/en.html>" %}
+{% include image src="/assets/img/zi-logo.png" width="304" link="<https://www.zi-mannheim.de/en.html>" %}
 
 ### When
 

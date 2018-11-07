@@ -23,7 +23,7 @@ For MEG specific material, please refer also to: [MEG community site](http://meg
 
 During a neural discharge two contributions to biological currents can be distinguished in the surrounding of the neuron: 1. an axonal current (also called primary), 2. an extracellular ionic current (also called secondary).
 
-{% include image src="/static/img/tutorial/forward/baillet.jpg" %}
+{% include image src="/assets/img/tutorial/forward/baillet.jpg" %}
 *Pattern of primary and secondary neural currents (from Baillet et al)*
 
 The two currents (intra and extra-cellular) contribute differently to the signal of MEG and EEG/ECoG.

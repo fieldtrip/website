@@ -64,7 +64,7 @@ Compute two simulated datasets, each with the same channels.
 	subplot(2,2,3); plot(data2.time{1}, data2.trial{1}(1,:)); title(sprintf('dataset 2, channel %s', data2.label{1}));
 	subplot(2,2,4); plot(data2.time{1}, data2.trial{1}(2,:)); title(sprintf('dataset 2, channel %s', data2.label{2}));
 
-{% include image src="/static/img/example/example_coherence_snr_1.png" width="500" %}
+{% include image src="/assets/img/example/example_coherence_snr_1.png" width="500" %}
 
 Next we compute the spectral decomposition of the raw data and subsequently compute the coherence with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Note that for coherence (or other measures of phase synchrony) we need to specify either 'powandcsd' or 'fourier' as cfg.output to **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 
@@ -87,7 +87,7 @@ Next we compute the spectral decomposition of the raw data and subsequently comp
 	plot(conn2.freq, conn2.cohspctrm, 'r');
 	legend({sprintf('snr = %f', snr1), sprintf('snr = %f', snr2)});
 
-{% include image src="/static/img/example/example_coherence_snr_2.png" width="500" %}
+{% include image src="/assets/img/example/example_coherence_snr_2.png" width="500" %}
 
 Plotting the coherence for the two datasets is easy, as there are only two channels and therefore one estimate of coherence (as function of frequency) per dataset. For more realistic numbers of channels you may want to look at **[ft_connectivityplot](/reference/ft_connectivityplot)** and **[ ft_multiplotCC](/reference/ ft_multiplotCC)**.
 

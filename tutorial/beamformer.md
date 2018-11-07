@@ -45,13 +45,13 @@ To localize the oscillatory sources for the example dataset we will perform the 
 *  Compute a spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
    * Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-{% include image src="/static/img/tutorial/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/tutorial/bf_pipeline.jpg" width="650" %}
 
 ## Preprocessing
 
 The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
 
-{% include image src="/static/img/tutorial/beamformer/tfrbmf.png" width="700" %}
+{% include image src="/assets/img/tutorial/beamformer/tfrbmf.png" width="700" %}
 
 *Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response..*
 
@@ -205,7 +205,7 @@ Plot the interpolated data:
     figure
     ft_sourceplot(cfg,sourcePostInt_nocon);
 
-{% include image src="/static/img/tutorial/beamformer/figure1bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure1bf.png" width="500" %}
 
 *Figure: The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**..*
 
@@ -240,7 +240,7 @@ Plot it:
     figure
     ft_sourceplot(cfg, sourceNAIInt);
 
-{% include image src="/static/img/tutorial/beamformer/figure2bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure2bf.png" width="500" %}
 
 *Figure: The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate..*
 ### Exercise 4: lead field normalization
@@ -316,7 +316,7 @@ Now plot the power ratios:
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
-{% include image src="/static/img/tutorial/beamformer/figure4bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure4bf.png" width="500" %}
 
 *Figure: sourceplot with method "slice" .*
 
@@ -345,7 +345,7 @@ To plot an 'orthogonal cut
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
-{% include image src="/static/img/tutorial/beamformer/figure7bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure7bf.png" width="500" %}
 
 *Figure: sourceplot with method "ortho".*
 
@@ -367,7 +367,7 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
-{% include image src="/static/img/tutorial/beamformer/figure8bf.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/figure8bf.png" width="500" %}
 
 *Figure: sourceplot with method "ortho" after volume normalisation.*
 
@@ -393,7 +393,7 @@ Now the data can be plotted
     ft_sourceplot(cfg, sourceDiffIntNorm);
     view ([90 0])
 
-{% include image src="/static/img/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png" width="500" %}
+{% include image src="/assets/img/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png" width="500" %}
 
 *Figure: sourceplot with method "surface".*
 

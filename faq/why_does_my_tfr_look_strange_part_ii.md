@@ -8,7 +8,7 @@ tags: [faq, mtmconvol, freq, preprocessing, artifact, filter]
 
 If you use 'mtmconvol' as a method for frequency analysis it could happen that the Time-Frequency Representation of your data looks like thi
 
-{% include image src="/static/img/faq/strangetfr3.png" width="400" %}
+{% include image src="/assets/img/faq/strangetfr3.png" width="400" %}
 This phenomenon is caused by the time domain data having a slow low-frequency drift. This low-frequency component leaks into the estimates of all time-frequency points in a variable (but patterned) way. The reason why this actually happens is related to the fact that none of the tapered basis functions (i.e. windowed sine and cosine waves of increasing frequency) are exactly orthogonal to this slow drift.
 The solution to this problem is to detrend or high-pass filter your data prior to calling ft_freqanalysi
 
@@ -46,8 +46,8 @@ The following code shows the effect of a large amplitude low-frequency drift on 
 
 ##### -Figure: Example data with a large amplitude low-frequency drift (1st) and its TFR (2nd)
 
-{% include image src="/static/img/faq/strangetfr4.png" width="300" %}
-{% include image src="/static/img/faq/strangetfr3.png" width="300" %}
+{% include image src="/assets/img/faq/strangetfr4.png" width="300" %}
+{% include image src="/assets/img/faq/strangetfr3.png" width="300" %}
 
 ##### cfg.polyremoval
 
