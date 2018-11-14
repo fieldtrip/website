@@ -3,6 +3,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FieldTrip toolbox</title>
-  <link rel="stylesheet" href="/static/css/main.css">
-  <link rel="shortcut icon" href="/static/icon/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" href="/assets/icon/favicon.ico">
 </head>
