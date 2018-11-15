@@ -3,21 +3,47 @@ title: FieldTrip workshop Madrid
 layout: default
 ---
 
-## FieldTrip workshop Madrid
+# FieldTrip workshop in Madrid
 
-### Where
+## Where
 
 Universidad Autonoma de Madrid (UAM), Madrid, Spain.
 
-### When
+## When
 
-Thrusday Jan 24th - Friday Jan 25th.
+Thursday Jan 24th - Friday Jan 25th.
 
-### Who
+## Who
 
-Paula Pazo-Álvarez is the host and local organizer. Sophie Arana (Donders Institute, Nijmegen, NL) and Diego Lozano-Soldevilla (CIBERER, Madrid; IDIBAPS, Barcelona) are the main tutors.
+Paula Pazo-Alvarez is the host and local organizer. Sophie Arana (Donders Institute, Nijmegen) and Diego Lozano-Soldevilla (CIBERER, Madrid; IDIBAPS, Barcelona) are the lecturers.
 
-### Installing FieldTrip and Tutorial preparation
+## Preliminary program
+
+
+### Thursday
+
+-   morning
+    -   1h intro lecture
+    -   2h Dealing with artifacts and ICA
+
+-   afternoon
+    -   Hands-on: auditory ERPs and resting state datasets <here URL>
+
+-   evening
+    -   food and drinks
+
+### Friday
+
+-   morning
+    -   1h spectral analysis lecture
+    -   2h handson: auditory ERPs and resting state datasets <here URL>
+
+-   afternoon
+    -   1h nonparametric statistics lecture
+    -   2h hands on <here URL>
+
+
+## Installing FieldTrip and Tutorial preparation
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
@@ -57,32 +83,3 @@ If you get the error "can't find the command ft_defaults" you should check the p
 After installing fieldtrip to your path, you change into the data directory
 
     cd path_to_directory/data
-
-### Program
-
-#### Thrusday
-
--   morning
-
-    -   1h intro lecture
-    -   2h Dealing with artifacts and ICA
-
--   afternoon
-
-    -   Hands-on: auditory ERPs and resting state datasets <here <here URL>
-
--   evening
-    -   food and drinks
-
-#### Friday
-
--   morning
-
-    -   1h spectral analysis lecture
-    -   2h handson: auditory ERPs and resting state datasets <here URL>
-
--   afternoon
-
-    -   1h nonparametric statistics lecture
-    -   2h hands on 
-<here URL>
