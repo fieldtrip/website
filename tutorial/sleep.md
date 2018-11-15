@@ -797,7 +797,8 @@ The polarity of the signal matters. Does the activity that we timelock give us c
 	cfg.title  = 'Non-REM event ERP time-locked to down-peak';
 	ft_singleplotER(cfg,timelock)
 
-{% include image src="/assets/img/tutorial/sleep_slow-wave_erp.png" width="400" %} {% include image src="/assets/img/tutorial/sleep_spindle_erp.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep_slow-wave_erp.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep_spindle_erp.png" width="400" %}
 
 Calculate the Event related Time-Frequency (ERF) around the event timelocked to the trough.
 
@@ -821,7 +822,8 @@ Visualize the event related time-frequency around the event timelocked to the tr
 	cfg.title          = 'Event, time-frequency';
 	ft_singleplotTFR(cfg,event_freq);
 
-{% include image src="/assets/img/tutorial/sleep_slow-wave_tfr.png" width="400" %} {% include image src="/assets/img/tutorial/sleep_spindle_tfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep_slow-wave_tfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep_spindle_tfr.png" width="400" %}
 
 View the detected events in the orginal data.
 
@@ -838,7 +840,8 @@ View the detected events in the orginal data.
 	cfg.plotevents                      = 'yes';             
 	ft_databrowser(cfg, data_continuous_nonREM);
 
-{% include image src="/assets/img/tutorial/sleep_slow-wave_browser.png" width="400" %} {% include image src="/assets/img/tutorial/sleep_spindle_browser.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep_slow-wave_browser.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep_spindle_browser.png" width="400" %}
 
 #### Exercise 6
 

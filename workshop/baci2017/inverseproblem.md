@@ -158,7 +158,8 @@ You can play around with cfg.mne.lambda? Do you see the influence of different l
 	ft_plot_dipole(dipfit_fem.dip.pos(1,:), mean(dipfit_fem.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 	ft_plot_dipole(dipfit_bem.dip.pos(1,:), mean(dipfit_bem.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 
-{% include image src="/assets/img/workshop/baci2017/bem_fem1.png" width="500" %} {% include image src="/assets/img/workshop/baci2017/bem_fem2.png" width="500" %}
+{% include image src="/assets/img/workshop/baci2017/bem_fem1.png" width="500" %}
+{% include image src="/assets/img/workshop/baci2017/bem_fem2.png" width="500" %}
 
 *Figure 5. Comparison of a BEM and FEM dipole fit*
 

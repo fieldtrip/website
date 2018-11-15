@@ -81,7 +81,8 @@ layout: default
 	figure; ft_singleplotER([],fft_data);
 	print -dpng amplow_amphigh_fig2.png
 
-{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig1.png" width="400" %} {% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig2b.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig1.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig2b.png" width="400" %}
 
 ## Analysis Methods
 
@@ -113,7 +114,8 @@ layout: default
 	print -dpng amplow_amphigh_fig4.png
 	
 
-{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig3.png" width="400" %} {% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig4.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig3.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig4.png" width="400" %}
 
 	
 	% calculate covariance with ft_timelockanalysis
@@ -140,7 +142,8 @@ layout: default
 	print -dpng amplow_amphigh_fig6.png
 	
 
-{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig5b.png" width="400" %} {% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig6.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig5b.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig6.png" width="400" %}
 
 ### Coherence between amplitude envelopes (by Hilbert transform) 
 
@@ -187,5 +190,6 @@ layout: default
 	xlim([0 10]);
 	print -dpng amplow_amphigh_fig9.png
 
-{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig8.png" width="400" %} {% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig9.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig8.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig9.png" width="400" %}
 

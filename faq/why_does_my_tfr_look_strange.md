@@ -44,7 +44,8 @@ The following code shows the effect of a non-zero DC component on the TF
 
 ##### TFR of chan02 with large DC component (left) and chan01 without DC component (right) after ft_freqanalysis without demeaning
 
-{% include image src="/assets/img/faq/strangetfr1.png" width="400" %} {% include image src="/assets/img/faq/strangetfr2.png" width="400" %} 
+{% include image src="/assets/img/faq/strangetfr1.png" width="400" %}
+{% include image src="/assets/img/faq/strangetfr2.png" width="400" %} 
 
 ##### cfg.polyremoval
 

@@ -57,7 +57,8 @@ layout: default
 	figure;plot(diff(data.trial{1}(7,:))); title('diff inst phase, should not be less than or close to zero')
 	print -dpng phalow_freqhigh_fig2.png
 
-{% include image src="/assets/img/example/crossfreq/phalow_freqhigh_fig1.png" width="400" %} {% include image src="/assets/img/example/crossfreq/phalow_freqhigh_fig2.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_freqhigh_fig1.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_freqhigh_fig2.png" width="400" %}
 
 	
 	% show powerspectrum simulated data

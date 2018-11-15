@@ -70,7 +70,8 @@ layout: default
 	figure; ft_singleplotER([],fft_data);
 	print -dpng phalow_amphigh_fig2.png
 
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig1.png" width="400" %} {% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig2.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig1.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig2.png" width="400" %}
 
 ## Analysis Methods
 
