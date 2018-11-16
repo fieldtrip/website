@@ -1,26 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="/">
     <img src="/assets/img/fieldtriplogo-75.png" width="75" alt="">
   </a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       {% for item in site.data.navigation %}
-        <li class="nav-item active">
-          <a class="nav-link active" href="{{ item.link }}">{{ item.name }}</a>
+        <li class="nav-item {% if item.link == page.url %} active {% endif %}">
+          <a class="nav-link {% if item.link == page.url %} active {% endif %}" href="{{ item.link }}">{{ item.name }}</a>
         </li>
       {% endfor %}
-    </ul>
-  </div>
 
+    </ul>
+    <gcse:searchbox-only resultsUrl="/search_results"></gcse:searchbox-only>
+  </div>
+</nav>
+
+
+<!--
   <form class="form-inline my-2 my-lg-0" method="get" action="http://www.google.com/search" target="_blank">
     <input type="hidden" name="sitesearch" value="www.fieldtriptoolbox.org" />
     <input type="text" name="q" maxlength="255" placeholder="Search using Google" />
   </form>
-
-</nav>
+-->
