@@ -2,10 +2,4 @@
 ---
 
 @import 'bootstrap/bootstrap';
-
-.gs-result:hover {
-	@extend .bg-light;
-}
-.gsc-search-box {
-	min-width: 30em;
-}
+@import 'custom/customstyles';
