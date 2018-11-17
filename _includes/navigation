@@ -15,6 +15,11 @@
         </li>
       {% endfor %}
 
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/fieldtrip/fieldtrip">
+          <span class="fab fa-github"></span>
+        </a>
+      </li>
     </ul>
     <gcse:searchbox-only resultsUrl="/search_results"></gcse:searchbox-only>
   </div>
