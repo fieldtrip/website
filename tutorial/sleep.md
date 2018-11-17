@@ -2,13 +2,8 @@
 title: Extracting the brain state and events from continuous sleep EEG
 layout: default
 tags: [tutorial, sleep, EDF, EEG, EMG, ECG, artifacts, continuous]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Extracting the brain state and events from continuous sleep EEG
 

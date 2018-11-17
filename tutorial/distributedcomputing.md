@@ -2,13 +2,8 @@
 title: Speeding up your analysis with distributed computing
 layout: default
 tags: [tutorial, qsub, peer, distcomp, matlab, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Speeding up your analysis with distributed computing
 

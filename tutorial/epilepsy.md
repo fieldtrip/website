@@ -2,13 +2,8 @@
 title: Virtual channel analysis of epilepsy MEG data
 layout: default
 tags: [tutorial, MEG-epilepsy]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 {% include markup/info %}
 This documentation is under development and hence incomplete and perhaps incorrect.

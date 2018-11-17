@@ -2,13 +2,8 @@
 title: Preprocessing and averaging of multi-channel NIRS data
 layout: default
 tags: [tutorial, nirs, preprocessing, nirs-multichannel]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 #  Preprocessing and averaging of multi-channel NIRS data
 

@@ -2,13 +2,8 @@
 title: Localizing oscillatory sources using beamformer techniques
 layout: default
 tags: [tutorial, meg, freq, source, headmodel, mri, plot, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Localizing oscillatory sources using beamformer techniques
 

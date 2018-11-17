@@ -2,13 +2,8 @@
 title: Preprocessing of EEG data and computing ERPs
 layout: default
 tags: [tutorial, eeg, brainvision, preprocessing, trialfun, timelock, EEG-affective]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Preprocessing of EEG data and computing ERPs
 

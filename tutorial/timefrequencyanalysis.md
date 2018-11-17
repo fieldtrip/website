@@ -2,13 +2,8 @@
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
 layout: default
 tags: [tutorial, freq, meg, eeg, plot, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets
 

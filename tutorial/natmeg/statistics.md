@@ -2,13 +2,8 @@
 title: Preprocessing and event-related activity in combined MEG/EEG data
 layout: default
 tags: [tutorial, natmeg, meg+eeg, statistics]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Statistical analysis and multiple comparison correction for combined MEG/EEG data
 

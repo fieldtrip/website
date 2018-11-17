@@ -2,13 +2,8 @@
 title: Localizing visual gamma and cortico-muscular coherence using DICS
 layout: default
 tags: [tutorial, meg, source, coherence, MEG-visuomotor151]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Localizing visual gamma and cortico-muscular coherence using DICS
 

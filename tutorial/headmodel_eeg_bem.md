@@ -2,13 +2,8 @@
 title: Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
 layout: default
 tags: [tutorial, eeg, source, headmodel, mri, plot, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
 

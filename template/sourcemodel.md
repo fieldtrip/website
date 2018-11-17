@@ -2,13 +2,8 @@
 title: Template models for source reconstruction
 layout: default
 tags: [template, sourcemodel, grid]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 ## Template models for source reconstruction
 

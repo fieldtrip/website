@@ -8,6 +8,14 @@
 }
 
 /* -------------------------------------------------- */
+/* Main page content */
+
+.main-page-content p {
+  text-align: justify;
+}
+
+
+/* -------------------------------------------------- */
 /* Code blocks */
 
 pre {
@@ -15,6 +23,19 @@ pre {
   padding: 0.8em;
   border-radius: 0.3em;
 }
+
+/* -------------------------------------------------- */
+/* Page Table of Contents */
+
+.page-toc {
+    position: fixed;
+    font-size: 80%;
+    padding-top: 2em;
+}
+.page-toc a {
+    @extend .text-muted;
+}
+
 
 /* -------------------------------------------------- */
 /* Sticky footer styles */

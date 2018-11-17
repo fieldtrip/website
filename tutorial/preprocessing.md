@@ -2,13 +2,8 @@
 title: Trigger-based trial selection
 layout: default
 tags: [tutorial, meg, raw, preprocessing, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Trigger-based trial selection
 

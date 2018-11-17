@@ -2,13 +2,8 @@
 title: Whole brain connectivity and network analysis
 layout: default
 tags: [tutorial, connectivity]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Whole brain connectivity and network analysis
 

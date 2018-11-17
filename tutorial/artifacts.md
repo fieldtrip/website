@@ -2,13 +2,8 @@
 title: Introduction - dealing with artifacts
 layout: default
 tags: [tutorial, artifact, preprocessing, eeg, meg]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Introduction: dealing with artifacts
 

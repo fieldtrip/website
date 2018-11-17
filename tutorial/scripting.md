@@ -2,13 +2,8 @@
 title: Creating a clean analysis script
 layout: default
 tags: [tutorial, example, script, matlab, beginner, batching]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Creating a clean analysis script
 

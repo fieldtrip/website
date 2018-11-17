@@ -2,13 +2,8 @@
 title: Sensor-level ERF, TFR and connectivity analyses
 layout: default
 tags: [tutorial, meg, freq, timelock, preprocessing, plot, MEG-visuomotor151]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Sensor-level ERF, TFR and connectivity analyses
 
