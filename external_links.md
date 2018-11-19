@@ -7,7 +7,11 @@ layout: default
 
 Feel free to edit this page and add links that you think are appropriate.
 
-FieldTrip development has received support from the [Human Connectome](http://humanconnectome.org), [BrainGain](http://www.braingain.nu) and [ChildBrain](http://www.childbrain.eu) projects.
+## Funding
+
+* [Human Connectome Project](http://humanconnectome.org)
+* [BrainGain](http://www.braingain.nu)
+* [ChildBrain](http://www.childbrain.eu)
 
 ## Collaborating institutes
 *  The Donders Centre for Cognitive Neuroimaging (DCCN), Donders Centre for Cognition (DCC) and Donders Centre for Neuroscience (DCN) are all part of the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders) at the [Radboud University](http://www.ru.nl), Nijmegen, The Netherlands.
@@ -37,7 +41,7 @@ FieldTrip development has received support from the [Human Connectome](http://hu
 *  [Advanced Neuro Technology](http://www.ant-software.nl) (ASA)
 *  [Source Signal Imaging](http://www.sourcesignal.com) (EMSE)
 
-## EEG/MEG hardware companies
+## EEG/MEG hardware
 *  [CTF Systems](http://www.ctf.com) (VSM MedTech)
 *  [Neuromag](http://www.neuromag.com) (Elekta)
 *  [4D Neuroimaging](http://www.4dneuroimaging.com) (formerly BTi)
@@ -57,11 +61,8 @@ FieldTrip development has received support from the [Human Connectome](http://hu
 *  [FreeSurfer](http://surfer.nmr.mgh.harvard.edu)
 *  [FSL](http://www.fmrib.ox.ac.uk/fsl)
 
-## Other related links
-*  [International MEG community website](http://megcommunity.org/)
-*  here is a map with all [MEG systems](http://tinyurl.com/megsystems) over the whole world
-*  [International Society for Bioelectromagnetism](http://www.isbem.org)
-*  [MEGSIM](http://portal.mind.unm.edu/megsim) provides realistic simulated data sets in formats used by each of the 3 major MEG manufacturers that will be directly tested using five algorithms which include multidipole, spatiotemporal modeling, current reconstruction and beamforming methods
+## Conferences
+
 *  [BIOMAG 2004: International Conference on Biomagnetism - Boston](http://www.biomag2004.net)
 *  [BIOMAG 2006: International Conference on Biomagnetism - Vancouver](http://www.biomag2006.ca)
 *  [BIOMAG 2008: International Conference on Biomagnetism - Sapporo](http://www.biomag2008.org)
@@ -71,3 +72,10 @@ FieldTrip development has received support from the [Human Connectome](http://hu
 *  [BIOMAG 2016: International Conference on Biomagnetism - Seoul](http://www.biomag2016.org)
 *  [BIOMAG 2018: International Conference on Biomagnetism - Philadelphia](http://www.biomag2018.org)
 *  [BIOMAG 2020: International Conference on Biomagnetism - Birmingham](http://www.biomag2020.org)
+
+## Other related links
+*  [International MEG community website](http://megcommunity.org/)
+*  here is a map with all [MEG systems](http://tinyurl.com/megsystems) over the whole world
+*  [International Society for Bioelectromagnetism](http://www.isbem.org)
+*  [MEGSIM](http://portal.mind.unm.edu/megsim) provides realistic simulated data sets in formats used by each of the 3 major MEG manufacturers that will be directly tested using five algorithms which include multidipole, spatiotemporal modeling, current reconstruction and beamforming methods
+
