@@ -21,7 +21,7 @@ Z-scores are being used as a means to 'normalize' the data before doing over-sub
  4.  what are the underlying assumptions?
 
 ----
-##### 1. Goa
+##### 1. Goal
 
 To homogenize the data on two level
  1.  within a dataset (MCP dim)
@@ -101,7 +101,7 @@ This gives us the following dimension
 
 This way we can vary the size/range of effect and noise, have multiple trials and at the same time repeat the statistical test several times, using freqstatistics.
 
-##### 2. Find interesting rang
+##### 2. Find interesting range
 
 We need a range of effect and noise size where at the edges the effect is always found (effect high, noise low) resp. never found (effect low, noise high). In the range in between, it will sometimes turn up, sometimes not. If we repeat the statistical test several times (using the chan dim) and average the results we have a nice measure of the statistical power. Now we can go to the next step and repeat this using the different homogenization methods and see whether they improve the statistical power.
 

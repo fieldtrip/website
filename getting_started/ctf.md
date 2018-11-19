@@ -14,9 +14,9 @@ Initially, reading functions for CTF files were implemented from scratch by the 
 
 These low-level functions are written by Dr. Harold Wilson and courtesy of MISL. These are not used for clinical studies and the user assumes all risk with their use. Although the functions originate from MISL, these are included in in FieldTrip under the explicit agreement that MISL does not support these functions. If you find bugs or have suggestions for improvements, please contact the FieldTrip developers and not MISL.
 
-An alternative ("old") implementation for reading the CTF data is available in the read_ctf_xxx functions, which can be used by specifying 'ctf_old' as headerformat and dataformat. 
+An alternative ("old") implementation for reading the CTF data is available in the read_ctf_xxx functions, which can be used by specifying 'ctf_old' as headerformat and dataformat.
 
-The following types of CTF data can be read and used in FieldTrip: 
+The following types of CTF data can be read and used in FieldTrip:
 
 *  MEG/EEG and AUX data: .res4, .meg4, .1_meg4, .2_meg4, etc.
 
@@ -30,9 +30,9 @@ This page explains how to get started reading and using each of these file types
 
 ## Background
 
-The CTF system records all data in a file format that consists of epochs or trials. These epochs can be linked to a trigger that was specified prior to acquisition, in which case there is a time gap between the epochs in which no data is present in the file. Another option is to specify that the epochs are to be continuously recorded. The file still represents the epochs, but triggers are not located at a specific sample in each epochs and there are no time gaps in between epochs. When there are no time-gaps between the epochs in the file, the data in the file is pseudo-continuous. 
+The CTF system records all data in a file format that consists of epochs or trials. These epochs can be linked to a trigger that was specified prior to acquisition, in which case there is a time gap between the epochs in which no data is present in the file. Another option is to specify that the epochs are to be continuously recorded. The file still represents the epochs, but triggers are not located at a specific sample in each epochs and there are no time gaps in between epochs. When there are no time-gaps between the epochs in the file, the data in the file is pseudo-continuous.
 
-Besides the main CTF recording modus in epoched files (with or without gaps between trials), the CTF acquisition software also allows for additionally writing the data to an auxiliary file that represents the data in a proper continuous representation. Although the representation in the AUX file is conceptually more convenient than the pseudo-continuous format, the disadvantage is that acquisition takes 2x more space on disk. Hence, in many labs only the pseudo-continuous format is stored to disk. 
+Besides the main CTF recording modus in epoched files (with or without gaps between trials), the CTF acquisition software also allows for additionally writing the data to an auxiliary file that represents the data in a proper continuous representation. Although the representation in the AUX file is conceptually more convenient than the pseudo-continuous format, the disadvantage is that acquisition takes 2x more space on disk. Hence, in many labs only the pseudo-continuous format is stored to disk.
 
 MEG datasets recorded with CTF acquisition software are written in a xxx.ds folder (with xxx the name of your dataset). This folder contains, among others, the xxx.meg4 file which contains the data of your recording, and the xxx.res4 file which contains the header information.
 
@@ -44,7 +44,7 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
-	
+
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
 
@@ -64,19 +64,19 @@ format. It takes the dataset filename as input. Alternatively, you can directly 
 
 To read the header from the tutorial dataset, use
 
-	
+
 	hdr = ft_read_header('Subject01.ds')
 
 or
 
-	
+
 	hdr = ft_read_header('Subject01.ds/Subject01.res4')
 
 This should return a header structure with the following element
 
-	
-	hdr = 
-	
+
+	hdr =
+
 	             Fs: 300           % sampling frequency
 	         nChans: 187           % number of channels
 	       nSamples: 900           % number of samples per trial
@@ -93,41 +93,41 @@ The **[ft_read_data](/reference/ft_read_data)** function reads the CTF MEG data 
 
 To read the data from the tutorial dataset, use
 
-	
+
 	dat = ft_read_data('Subject01.ds');
 
 or
 
-	
+
 	dat = ft_read_data('Subject01.ds/Subject01.meg4');
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 187x900x266 in case of the tutorial data, which is a trial-based dataset. In case of continuous data, this function returns a 2-D matrix of size Nchans*Nsamples.
 Additional options should be specified in key-value pairs (see **[ft_read_data](/reference/ft_read_data)**). When only the filename is specified, all data in the dataset will be read. To only read the first 3 trials from channels 5-9, us
 
-	
+
 	dat = ft_read_data('Subject01.ds', 'begtrial', 1, 'endtrial', 3, 'chanindx', [5:9]);
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 5x900x3.
 
 You can explicitly specify the data format (also [see below](/#Specifying the low-level reading functions)), e.g.
 
-	
+
 	dat = ft_read_data('Subject01.ds', 'dataformat', 'ctf_ds');
 
 ### Preprocessing
 
 After checking that the low-level reading functions successfully read your CTF dataset, you are ready to start working with the high-level FieldTrip functions, such as **[ft_preprocessing](/reference/ft_preprocessing)**. To preprocess the tutorial data, us
 
-	
+
 	cfg=[];
 	cfg.dataset = 'Subject01.ds';
 	data = ft_preprocessing(cfg)
 
 This should return the following data structur
 
-	
-	data = 
-	
+
+	data =
+
 	        hdr: [1x1 struct]    % header information
 	      label: {187x1 cell}    % channel labels
 	      trial: {1x266 cell}    % data (Nchans*Nsamples) for each trial
@@ -135,7 +135,7 @@ This should return the following data structur
 	    fsample: 300             % sampling frequency
 	       grad: [1x1 struct]    % gradiometer structure
 	        cfg: [1x1 struct]    % the configuration used for processing the data
-	
+
 
 With cfg.continuous = 'yes' or 'no' you can specify whether the file contains continuous data. The default is determined automatically. Data that is measured pseudo-continuously should be treated as cfg.continuous = 'yes'.
 
@@ -143,7 +143,7 @@ For more preprocessing options and information on how to define trials, see the 
 
 ### Specifying the low-level reading functions
 
-The default low-level reading functions for the MEG data are the functions supplied by CTF, which are located in the  fieldtrip/external/ctf directory. There is also an old implementation of the reading functions, which will be used if you specify 
+The default low-level reading functions for the MEG data are the functions supplied by CTF, which are located in the  fieldtrip/external/ctf directory. There is also an old implementation of the reading functions, which will be used if you specify
 
     cfg.headerformat = 'ctf_old'
     cfg.dataformat   = 'ctf_old'
@@ -166,9 +166,9 @@ To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/f
 
 This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structur
 
-	
-	event = 
-	
+
+	event =
+
 	1343x1 struct array with field
 	    type
 	    sample
@@ -178,10 +178,10 @@ This automatically reads the events from the trigger channels, from the class fi
 
 To access the first event, use
 
-	
+
 	>> event(1)
-	
-	ans = 
+
+	ans =
 	        type: 'trial'
 	      sample: 1
 	       value: []
@@ -190,7 +190,7 @@ To access the first event, use
 
 ### Frontpanel and Backpanel triggers
 
-The 151 channel MEG system we started off with at the Donders in 2002 had an electronics rack which   was placed such that there was a clear front and back side. Each side of the rack exposed 16 binary inputs (i.e. bits) for connecting external triggers. To the front we connected the button boxes, to the back we connected the stimulus presentation computer. The 16 bits from the front and from the back were combined in the 32 bit STIM channel. 
+The 151 channel MEG system we started off with at the Donders in 2002 had an electronics rack which   was placed such that there was a clear front and back side. Each side of the rack exposed 16 binary inputs (i.e. bits) for connecting external triggers. To the front we connected the button boxes, to the back we connected the stimulus presentation computer. The 16 bits from the front and from the back were combined in the 32 bit STIM channel.
 
 Given the connections of the button boxes and stimulus computers, in the analysis the 32 bit STIM channel values did not match the users' expectations with respect to button box and presentation trigger codes. Therefore the FieldTrip reading software back then was implemented to split the 32 bits into the 16 frontpanel and the 16 backpanel bits. This also shifts the bits to recover the trigger codes that were used in the presentation software by the users. This situation from early '2000 at the Donders in Nijmegen is still supported by FieldTrip. The "Subject01.ds" tutorial dataset is from that time, so that is why you still see it in the tutorials.
 
@@ -200,27 +200,27 @@ So please be aware that "frontpanel" and "backpanel" are Donders conventions tha
 
 ## Reading headmodels
 
-Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a .hdm file. The .hdm headmodel files can be read using **[ft_read_vol](/reference/ft_read_vol)** and visualized using **[ft_headmodelplot](/reference/ft_headmodelplot)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create MEG headmodels.
+Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a .hdm file. The .hdm headmodel files can be read using **[ft_read_vol](/reference/ft_read_vol)** and visualized using **[ft_plot_vol](/reference/ft_plot_vol)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create MEG headmodels.
 
 For example, to read and plot the single sphere model produced with CTF software for the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
-	
+
 	% read in the single sphere model produced with CTF software
 	ctf_ss = ft_read_vol('Subject01.hdm');
-	 
+
 	% plotting the headmodel
 	hdr = ft_read_header('Subject01.ds');
-	
+
 	cfg             = [];
 	cfg.grad        = hdr.grad;
 	cfg.headshape   = 'Subject01.shape';
 	cfg.vol         = ctf_ss;
 	cfg.inwardshift = [];
-	
+
 	figure
 	ft_headmodelplot(cfg);
 
-For more information on reading, creating and plotting headmodels refer to 
+For more information on reading, creating and plotting headmodels refer to
 [this page](/example/make_leadfields_using_different_headmodels).
 
 ## Reading MRI files
@@ -257,4 +257,3 @@ To enter interactive mode (i.e, to browse through the volume), use
     ft_sourceplot(cfg, mri)
 
 The mri file can subsequently be used for e.g. plotting source localization results (see the [plotting tutorial](/tutorial/plotting#plotting_data_at_the_source_level)) or for preparing a headmodel (see the [beamformer tutorial](/tutorial/beamformer#the_forward_model_and_lead_field_matrix)).
-

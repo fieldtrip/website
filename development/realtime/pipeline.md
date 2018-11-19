@@ -53,7 +53,7 @@ be passed on, although they are not used by the slice time correction PE).
 
 Further to that, most PEs need an internal state representation that can be updated during **process**.
 
-Optionally, it might be useful to have a **finalize** method for all PEs, in which their internal state can be written to a file (e.g., for saving the estimated head movement after an experiment). 
+Optionally, it might be useful to have a **finalize** method for all PEs, in which their internal state can be written to a file (e.g., for saving the estimated head movement after an experiment).
 
 ## Possible implementations
 
@@ -72,17 +72,17 @@ We'd like the flexibility to compose pipelines in any order and with any number 
     output = tmp;
 
 In order to avoid a clash of fieldnames for the ''tmp'' structure passed from one PE to the next, output fields other than the data itself
-should be written to uniquely names subfields, e.g., the motion correction PE could write its output as 
+should be written to uniquely names subfields, e.g., the motion correction PE could write its output as
     tmp_out.data = aligned_volume;
     tmp_out.motion_correction.rotation;    % estimated rotation parameters
     tmp_out.motion_correction.translation; % estimated translation parameters
-    
+
 We could add a pre-flight run similar to BCI2000 where each PE does some pseudo-processing and then writes its output fields,
 so that the pipeline can check itself for consistency: For example, the quality display PE needs to be placed behind the motion correction PE,
 and thus it should check for the existence of the ''motion_correction'' sub-structure. Or we just keep it simple and leave a sensible
 composition of pipelines to the user ;-)
 
-### OOP solution 
+### OOP solution
 
 It seems natural to represent each PE by an object of a specific class, where all classes inherit from a common superclass (describing only the **init** and **process** interface). If we go for OOP, we need to decide on whether to use a) old style classes, b) new style classes, or c) new style handle classes. This has consequences for the organization of the code, the way PEs are invoked, and last but not least on the compatibility with different Matlab versions.
 
@@ -115,13 +115,13 @@ Each type of PE would get one class definition file, containing all code. Invoki
     in.data = rawScan;
     ...
     out = MCPE.process(in);
-    
+
 Here, MCPE does not need to be copied.
 
 ### Pseudo-OOP solution
 
 We could also write normal imperative code with different processing functions such as **motion_correction_process**, and then, during initialisation,
-set a function handle to the right function. 
+set a function handle to the right function.
 
     MCPE = motion_correction_init(refVolume, flags);
     MCPE.process = @motion_correction_process; % will usually happen within the *_init call
@@ -140,5 +140,4 @@ As long as we only have one **process** functions, we can also build a simple ta
      [PE{k}, tmp_out] = feval(procFunc{k}, PE{k}, tmp_in);
     end
 
-If you like tables, please consider [brainstream](/brainstream).
-
+If you like tables, please consider [brainstream](/development/realtime/brainstream).

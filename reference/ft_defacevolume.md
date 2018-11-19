@@ -30,6 +30,6 @@ Note that this reference documentation is identical to the help that is displaye
     specify a certain amount of smoothing (in voxels FWHM), the selected area will
     be replaced by a smoothed version of the data.
  
-    See also `<a href=/reference/ft_anonimizedata>``<font color=green>`FT_ANONIMIZEDATA`</font>``</a>`, `<a href=/reference/ft_defacemesh>``<font color=green>`FT_DEFACEMESH`</font>``</a>`, `<a href=/reference/ft_analysispipeline>``<font color=green>`FT_ANALYSISPIPELINE`</font>``</a>`, `<a href=/reference/ft_sourceplot>``<font color=green>`FT_SOURCEPLOT`</font>``</a>`
+    See also `<a href=/reference/ft_anonymizedata>``<font color=green>`FT_anonymIZEDATA`</font>``</a>`, `<a href=/reference/ft_defacemesh>``<font color=green>`FT_DEFACEMESH`</font>``</a>`, `<a href=/reference/ft_analysispipeline>``<font color=green>`FT_ANALYSISPIPELINE`</font>``</a>`, `<a href=/reference/ft_sourceplot>``<font color=green>`FT_SOURCEPLOT`</font>``</a>`
 `</pre>``</html>`
 

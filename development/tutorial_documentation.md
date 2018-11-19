@@ -1,5 +1,5 @@
 ---
-title: An overview on forward modeling
+title: A tutorial on forward modeling
 layout: default
 ---
 
@@ -7,11 +7,7 @@ layout: default
 
 FIXME This page is under construction
 
-Create again, when finished, in the initial page under:
-
-*  [An overview on forward modeling](/tutorial/forward)  
-
-# An overview on forward modeling
+# A tutorial on forward modeling
 
 ## Introduction
 
@@ -56,12 +52,9 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 
 *  volume conductor geometry
 
-*  Specific Maxwell equation into play (e.g. electric or magnetic field)
-
+  Specific Maxwell equation into play (e.g. electric or magnetic field)
 *  Type of source (simple/distributed)
-
 *  Matter properties (conductivity)
-
 *  Lead field algorithm
 
 ## Examples in FieldTrip
@@ -69,19 +62,14 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 ### MEG forward models
 
 *  single sphere
-
 *  multiple spheres
-
 *  BEM
-
 *  Nolte
 
 ### EEG forward models
 
 *  single sphere
-
 *  concentric spheres
-
 *  BEM
 
 ### ECoG forward models

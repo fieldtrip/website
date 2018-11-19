@@ -35,7 +35,7 @@ a list of event structures. Since we target real-time usage, both the data matri
 list of events will usually be implemented as a **ring buffer**, which means that after a time,
 old data samples and events will not be accessible anymore.
 
-The binary TCP/IP network protocol allows client applications to be developed in an arbitrary programming language, e.g. C, Matlab, Java or Python. The [network protocol](/buffer_protocol) documents the low-level protocol used for serializing requests and responses.
+The binary TCP/IP network protocol allows client applications to be developed in an arbitrary programming language, e.g. C, Matlab, Java or Python. The [network protocol](/development/realtime/buffer_protocol) documents the low-level protocol used for serializing requests and responses.
 
 ### Outside our scope
 
@@ -68,7 +68,7 @@ but one of the more important issues is a strategy that allows for both flexibil
 ## Network protocol
 
 Every request and response starts with the following fixed-size 8 byte structure which
-corresponds to the definition of **messagedef_t** in ''message.h'' in the [reference implementation](/revelopment/realtime/reference_implementation).
+corresponds to the definition of **messagedef_t** in ''message.h'' in the [reference implementation](/development/realtime/reference_implementation).
 
  | field       | type   | description                                                        |
  | -----       | ----   | -----------                                                        |
@@ -516,10 +516,8 @@ These chunks contain .fif files as written by the neuromag2ft realtime interface
 
 ## See also
 
-*  [draft header chunks](/draft header chunks)
-
-*  [draft network](/draft network)
-
-*  [draft compatability](/draft compatability)
-
-*  [draft implementation](/draft implementation)
+*  [draft network](/development/realtime/draft_network)
+*  [draft implementation](/development/realtime/draft_implementation)
+*  [draft header chunks](/development/realtime/draft_header_chunks)
+*  [draft compatability](/development/realtime/draft_compatability)
+*  [scratchpad](/development/realtime/scratchpad)

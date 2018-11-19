@@ -58,7 +58,7 @@ In the third part we shift our attention to the motor task in this dataset. We w
 
    * Define a suitable time window without interfering stimulation **[ft_redefinetrial](/reference/ft_redefinetrial)**
    * Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](/reference/ft_freqanalysis)**
-   * Use the source- and headmodel as computed above using  **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_singleshell)**
+   * Use the source- and headmodel as computed above using  **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
    * Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
 
 *  Visualize the cortico-muscular coherence with **[ft_sourceplot](/reference/ft_sourceplot)**
@@ -425,7 +425,7 @@ Compute the cross-spectral density matrix for 20 H
 
 ### Source analysis
 
-Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration.
+Once we computed this, we can use **[ft_sourceanalysis](/reference/ft_sourceanalysis)** using the following configuration.
 This step requires the subject's head- and sourcemodel that we both computed above.
 
     % if not yet in memory
@@ -441,7 +441,7 @@ This step requires the subject's head- and sourcemodel that we both computed abo
     source_coh_lft      = ft_sourceanalysis(cfg, freq_csd);
 
 {% include markup/info %}
-When you input the sourcemodel on which you have **not** already computed the leadfield matrices, **[ft_sourceanalysis](/reference/sourceanalysis)** will compute the leadfield matrices itself first.
+When you input the sourcemodel on which you have **not** already computed the leadfield matrices, **[ft_sourceanalysis](/reference/ft_sourceanalysis)** will compute the leadfield matrices itself first.
 {% include markup/end %}
 
 ### Plotting cortico-muscular coherent sources

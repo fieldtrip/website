@@ -44,22 +44,22 @@ Neurons often fire in synchrony, meaning that action potentials from different n
 ## Procedure
 
 *  Read the spike data into MATLAB using **[ft_read_spike](/reference/ft_read_spike)**
-*  Create a trial structure for the spike trains using using **[ft_read_event](/reference/ft_read_event)** and **[ ft_spike_maketrials](/reference/ ft_spike_maketrials)**.
-*  Converting spike structure into continuous raw structure, and back, using **[ ft_checkdata](/reference/ ft_checkdata)**
-*  Computation of inter spike interval distribution, and its visualization, using **[ ft_spike_isi](/reference/ ft_spike_isi)** and **[ ft_spike_plot_isireturn](/reference/ ft_spike_plot_isireturn)**.
-*  Computation of the mean and variance of the action potential waveform, using **[ ft_spike_waveform](/reference/ ft_spike_waveform)**.
-*  Computation of peri stimulus time histogram, using **[ ft_spike_psth](/reference/ ft_spike_psth)**.
-*  Computation of spike-densities, using **[ ft_spikedensity](/reference/ ft_spikedensity)**.
-*  Visualization of spike trains, using **[ ft_spike_plot_raster](/reference/ ft_spike_plot_raster)**.
-*  Computing average firing rates and correlations between neuronal firing rates, using **[ ft_spike_rate](/reference/ ft_spike_rate)**.
-*  Compute cross-correlation function between neurons using **[ ft_spike_xcorr](/reference/ ft_spike_xcorr)**
-*  Compute joint peri-stimulus time histograms, and their visualization, using  **[ ft_spike_jpsth](/reference/ ft_spike_jpsth)** and **[ ft_spike_plot_jpsth](/reference/ ft_spike_plot_jpsth)**.
+*  Create a trial structure for the spike trains using using **[ft_read_event](/reference/ft_read_event)** and **[ ft_spike_maketrials](/reference/ft_spike_maketrials)**.
+*  Converting spike structure into continuous raw structure, and back, using **[ ft_checkdata](/reference/ft_checkdata)**
+*  Computation of inter spike interval distribution, and its visualization, using **[ ft_spike_isi](/reference/ft_spike_isi)** and **[ ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn)**.
+*  Computation of the mean and variance of the action potential waveform, using **[ ft_spike_waveform](/reference/ft_spike_waveform)**.
+*  Computation of peri stimulus time histogram, using **[ ft_spike_psth](/reference/ft_spike_psth)**.
+*  Computation of spike-densities, using **[ ft_spikedensity](/reference/ft_spikedensity)**.
+*  Visualization of spike trains, using **[ ft_spike_plot_raster](/reference/ft_spike_plot_raster)**.
+*  Computing average firing rates and correlations between neuronal firing rates, using **[ ft_spike_rate](/reference/ft_spike_rate)**.
+*  Compute cross-correlation function between neurons using **[ ft_spike_xcorr](/reference/ft_spike_xcorr)**
+*  Compute joint peri-stimulus time histograms, and their visualization, using  **[ ft_spike_jpsth](/reference/ft_spike_jpsth)** and **[ ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)**.
 
 {% include image src="/assets/img/tutorial/spike/flowchart.png" %}
 
 ###  Reading in spike data
 
-Make sure you run **[ ft_defaults](/reference/ ft_defaults)**
+Make sure you run **[ ft_defaults](/reference/ft_defaults)**
 after having added the main FieldTrip path (e.g. addpath('path_to_fieldtrip')), ensuring that the required functions are in your MATLAB path.
 For spike analysis there is spike toolbox that is located in fieldtrip/contrib/spike.
 
@@ -350,7 +350,7 @@ The resulting structure isih has the following content
 	    coeffvar: [1.6898 1.1453]
 	         cfg: [1x1 struct]
 
-The field isih.isi contains the isi per spike (w.r.t the previous spike) and contains NaNs at the beginning of the trials. The field isih.avg contains the average isi histogram per unit, and isih.coeffvar the computed parameter summarizing the statistics of the isi histogram (e.g. see Shinomoto et al., 2009) .We then plot the isi histogram (which can be plotted alone using **[ ft_spike_plot_isi](/reference/ ft_spike_plot_isi)**) together with the isi (Poincare) return plot, which plots the current isi(n) against the next isi(n+1), thereby giving insight into the second order statistics of the isi distributio
+The field isih.isi contains the isi per spike (w.r.t the previous spike) and contains NaNs at the beginning of the trials. The field isih.avg contains the average isi histogram per unit, and isih.coeffvar the computed parameter summarizing the statistics of the isi histogram (e.g. see Shinomoto et al., 2009) .We then plot the isi histogram (which can be plotted alone using **[ ft_spike_plot_isi](/reference/ft_spike_plot_isi)**) together with the isi (Poincare) return plot, which plots the current isi(n) against the next isi(n+1), thereby giving insight into the second order statistics of the isi distributio
 
 	for k = [1 2] % only do for the single units
 	  cfg              = [];
@@ -432,7 +432,7 @@ gives us the output
 	    sampleinfo: [600x2 double]
 	           cfg: [1x1 struct]
 
-The PSTH structure is a so called 'timelock' data structure (**[ft_datatype_timelock](/reference/ft_datatype_timelock)**, and can as such be used in all functions taking timelock structures as an input. The field psth.avg contains the average firing rates per bin per unit, and psth.trial contains the average firing rate per trial per unit per time-bin. It is also possible (but less computationally efficient) to enter the binary spike trains that are stored in a continuous raw format. The data is then automatically converted to a spike structure within **[ ft_spike_psth](/reference/ ft_spike_psth)**.
+The PSTH structure is a so called 'timelock' data structure (**[ft_datatype_timelock](/reference/ft_datatype_timelock)**, and can as such be used in all functions taking timelock structures as an input. The field psth.avg contains the average firing rates per bin per unit, and psth.trial contains the average firing rate per trial per unit per time-bin. It is also possible (but less computationally efficient) to enter the binary spike trains that are stored in a continuous raw format. The data is then automatically converted to a spike structure within **[ ft_spike_psth](/reference/ft_spike_psth)**.
 
 A raster plot with psth is obtained by running
 
@@ -534,8 +534,8 @@ One can compute noise correlations between units by doing
 
 ###  Computing cross-correlations between spike trains
 
-Auto- and cross-correlations between spike trains are computed using **[ ft_spike_xcorr](/reference/ ft_spike_xcorr)**.
-The cross-correlogram is one of the classic techniques to show rhythmic synchronization between different neurons (e.g. see Gray et al., 1989) but also to identify synaptic connections between recorded neurons (e.g. see Bartho et al., 2004). The auto-correlogram typically offers a more sensitive measure of the degree to which a single neuronal source displays rhythmic firing than the ISI distribution, especially if firing rates are high. For this analysis we select the unsorted multi-units from the same data-set, as they give more reliable cross-correlations. The observed cross-correlogram should always be compared against a cross-correlogram obtained by shuffling the trials. Cross-correlations between neurons can either arise because of common, time-locked fluctuations in the firing rate (Brody et al., 1999). These correlations are invariant to a change in the order of trials. The shuffling of trials in **[ ft_spike_xcorr](/reference/ ft_spike_xcorr)** always pertains to two subsequent trials, in order to avoid an influence of slow changes in the firing rate across trials. We refer to this cross-correlogram that is obtained under a permutation of subsequent trials as the 'shift-predictor' cross-correlogram. If the observed features of the cross-correlogram that are not present in the shift-predictor cross-correlogram, then this indicates that they arise because of induced synchronous activity. Note that for the shift-predictor, it is required that the trials cover the full latency window that is specified by cfg.latency. For example, if the first trial has a duration of 3 sec. and the second of 2 sec., we can only compute the contribution to the shift-predictor based on the spikes from the first 2 seconds. Hence, cfg.vartriallen must be specified to 'no'.
+Auto- and cross-correlations between spike trains are computed using **[ ft_spike_xcorr](/reference/ft_spike_xcorr)**.
+The cross-correlogram is one of the classic techniques to show rhythmic synchronization between different neurons (e.g. see Gray et al., 1989) but also to identify synaptic connections between recorded neurons (e.g. see Bartho et al., 2004). The auto-correlogram typically offers a more sensitive measure of the degree to which a single neuronal source displays rhythmic firing than the ISI distribution, especially if firing rates are high. For this analysis we select the unsorted multi-units from the same data-set, as they give more reliable cross-correlations. The observed cross-correlogram should always be compared against a cross-correlogram obtained by shuffling the trials. Cross-correlations between neurons can either arise because of common, time-locked fluctuations in the firing rate (Brody et al., 1999). These correlations are invariant to a change in the order of trials. The shuffling of trials in **[ ft_spike_xcorr](/reference/ft_spike_xcorr)** always pertains to two subsequent trials, in order to avoid an influence of slow changes in the firing rate across trials. We refer to this cross-correlogram that is obtained under a permutation of subsequent trials as the 'shift-predictor' cross-correlogram. If the observed features of the cross-correlogram that are not present in the shift-predictor cross-correlogram, then this indicates that they arise because of induced synchronous activity. Note that for the shift-predictor, it is required that the trials cover the full latency window that is specified by cfg.latency. For example, if the first trial has a duration of 3 sec. and the second of 2 sec., we can only compute the contribution to the shift-predictor based on the spikes from the first 2 seconds. Hence, cfg.vartriallen must be specified to 'no'.
 
 We run
 
@@ -600,7 +600,7 @@ For example, the computed cross-correlogram reveals strong zero-lag and alpha-ba
 ###  The joint peri stimulus time histogram
 
 Cross-correlations are computed over the complete trial period. To gain insight into the temporal evolution of spike-spike correlations, the JPSTH tool can be used.
-We compute the JPSTH using **[ ft_spike_jpsth](/reference/ ft_spike_jpsth)** and visualize it using **[ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)**.
+We compute the JPSTH using **[ ft_spike_jpsth](/reference/ft_spike_jpsth)** and visualize it using **[ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)**.
 
 	% compute the spike densities
 	cfg         = [];
@@ -623,7 +623,7 @@ We compute the JPSTH using **[ ft_spike_jpsth](/reference/ ft_spike_jpsth)** and
 	jpsthSubtr = jpsth;
 	jpsthSubtr.jpsth = jpsth.jpsth-jpsthShuff.shiftpredictor;
 
-We then plot the JPSTH using **[ ft_spike_plot_jpsth](/reference/ ft_spike_plot_jpsth)**
+We then plot the JPSTH using **[ ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)**
 
 	cfg        = [];
 	figure
@@ -643,5 +643,5 @@ giving the normalized jpsth, the shuffle corrected normalized jpsth, and the dif
 
 ## Summary
 
-We have shown how to perform several common spike train analyses. As the outputs from many functions are standard FieldTrip functions (e.g. the output from **[ ft_spikedensity](/reference/ ft_spikedensity)**), the powerful statistical methods available in FieldTrip can be readily applied on them. Also not discussed was the joint analysis of LFP and spike data. but this is dealt with in the [spikefield](/tutorial/spikefield) tutorial.
+We have shown how to perform several common spike train analyses. As the outputs from many functions are standard FieldTrip functions (e.g. the output from **[ ft_spikedensity](/reference/ft_spikedensity)**), the powerful statistical methods available in FieldTrip can be readily applied on them. Also not discussed was the joint analysis of LFP and spike data. but this is dealt with in the [spikefield](/tutorial/spikefield) tutorial.
 

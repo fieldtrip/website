@@ -14,10 +14,10 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 ## Getting started with particular EEG data types
 
 *  [Getting started with Philips/EGI data](/getting_started/egi)
-*  [Getting started with Biosemi BDF data](/getting_started/bdf)
+*  [Getting started with Biosemi BDF data](/getting_started/biosemi)
 *  [Getting started with 20%, 10% and 5% electrode arrangements](/getting_started/1020)   
 *  [Getting started with BrainVision Analyzer and Easycap](/getting_started/brainvision)
-*  [Getting started with ASA and EEProbe data](/getting_started/eeprobe)
+*  [Getting started with ASA and EEProbe data](/getting_started/antneuro)
 *  [Getting started with EDF data](/getting_started/edf)
 *  [Getting started with BESA data](/getting_started/besa)
 *  [Getting started with Advanced Brain Monitoring (ABM)'s B-Alert EEG data](/getting_started/b_alert)
@@ -32,7 +32,6 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 *  [Getting started with animal electrophysiology data, including spikes](/getting_started/animal)
 *  [Getting started with SR-Research EyeLink eye-tracker data](/getting_started/eyelink)
 *  [Getting started with Artinis NIRS data](/getting_started/artinis)
-*  [Getting started with iMotions data](/getting_started/imotions)
 
 ## Getting started with data from other software
 

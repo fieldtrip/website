@@ -7,6 +7,7 @@ tags: [faq, headmodel, mri, source, coordinate]
 ## How are the different head and MRI coordinate systems defined?
 
 {% include markup/warning %}
+
 For understanding the coordinate system, the following questions need to be addressed:
 *  What is the definition of the origin of the coordinate system, i.e. where is [0,0,0]?
 *  In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?
@@ -22,7 +23,7 @@ The real-world interpretation of the coordinate system can typically not be dete
 
 The remainder of this page describes the external conventions for the coordinate systems for a number of EEG and MEG systems. Of course it is always possible that a specific user of one of the systems uses a different coordinate system.
 
-The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](http://en.wikipedia.org/wiki/Nasion), [inion](http://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/how_are_the_lpa_and_rpa_points_defined ) for a discussion of the LPA and RPA.
+The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](http://en.wikipedia.org/wiki/Nasion), [inion](http://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/faq/how_are_the_lpa_and_rpa_points_defined ) for a discussion of the LPA and RPA.
 
 The coordinate systems used for imaging methods such as MRI, PET and CT are usually defined in terms of internal brain structures, such as the [anterior](http://en.wikipedia.org/wiki/Anterior_commissure) and [posterior](http://en.wikipedia.org/wiki/Posterior_commissure) commisure. Furthermore, imaging data is sometimes scaled to a uniform brain size, e.g. based on the [ Talairach-Tournoux atlas](http://en.wikipedia.org/wiki/Jean_Talairach) or one of the templates from the [Montreal Neurological Institute (MNI)](http://en.wikipedia.org/wiki/Montreal_Neurological_Institute). An elaborate discussion on the relation between the Talairach-Tournoux atlas and the MNI templates can be found [here](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach).
 

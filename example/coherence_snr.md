@@ -89,7 +89,7 @@ Next we compute the spectral decomposition of the raw data and subsequently comp
 
 {% include image src="/assets/img/example/coherence_snr/example_coherence_snr_2.png" width="500" %}
 
-Plotting the coherence for the two datasets is easy, as there are only two channels and therefore one estimate of coherence (as function of frequency) per dataset. For more realistic numbers of channels you may want to look at **[ft_connectivityplot](/reference/ft_connectivityplot)** and **[ ft_multiplotCC](/reference/ ft_multiplotCC)**.
+Plotting the coherence for the two datasets is easy, as there are only two channels and therefore one estimate of coherence (as function of frequency) per dataset. For more realistic numbers of channels you may want to look at **[ft_connectivityplot](/reference/ft_connectivityplot)** and **[ ft_multiplotCC](/reference/ft_multiplotCC)**.
 
 ## Exercise 1
 

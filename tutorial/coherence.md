@@ -356,7 +356,7 @@ Compute the cross-spectral density matrix for 18 H
     cfg.channelcmb = {'MEG' 'MEG';'MEG' 'EMGlft'};
     freq           = ft_freqanalysis(cfg, data);
 
-Once we computed this, we can use **[ft_sourceanalysis](/reference/sourceanalysis)** using the following configuration.
+Once we computed this, we can use **[ft_sourceanalysis](/reference/ft_sourceanalysis)** using the following configuration.
 This step requires the subject's headmodel, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
     cfg                 = [];
@@ -384,7 +384,7 @@ Next, we can proceed with the interpolation.
     cfg.downsample = 2;
     interp         = ft_sourceinterpolate(cfg, source, mri);
 
-There are various ways to visualise the volumetric interpolated data. The most straightforward way is using **[ft_sourceplot](/reference/sourceplot)**.
+There are various ways to visualise the volumetric interpolated data. The most straightforward way is using **[ft_sourceplot](/reference/ft_sourceplot)**.
 
     cfg              = [];
     cfg.method       = 'ortho';

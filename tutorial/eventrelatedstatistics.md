@@ -440,4 +440,3 @@ Or you can look also at the following example script
 *  [Apply clusterrandanalysis on TFRs of power that were computed with BESA](/example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa)
 *  [Source statistics](/example/source_statistics)
 *  [Stratify the distribution of one variable that differs in two conditions](/example/stratify)
-*  [Using the MATLAB statistics toolbox](/example/statistics_toolbox)

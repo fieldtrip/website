@@ -250,7 +250,7 @@ Next, we call **[ft_sourceanalysis](/reference/ft_sourceanalysis)** with 'pcc' a
 
 ### Visualization of the neural-activity-index
 
-In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
+In order to visualize source-reconstructed data, the function [ft_sourceplot](/reference/ft_sourceplot) can be used. If the input data contains the dipole positions defined on a triangulated mesh (i.e. it contains both a 'pos' and a 'tri' field), one should use the 'surface' method.
 
 	%% plot the neural activity index (power/noise)
 	cfg               = [];
@@ -295,7 +295,7 @@ Typically, in an experimental context, it is useful to visualize activity contra
 	indlow  = find(tmp(:,chanind)<=median(tmp(:,chanind)));
 	indhigh = find(tmp(:,chanind)>=median(tmp(:,chanind)));
 
-Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescriptives](/reference/freqdescriptives)** and compute the difference with **[ft_math](/reference/ft_math)**
+Now, we can compute the spectra for the two sets of epochs using **[ft_freqdescriptives](/reference/ft_freqdescriptives)** and compute the difference with **[ft_math](/reference/ft_math)**
 
 	%% compute the power spectrum for the median splitted data
 	cfg              = [];

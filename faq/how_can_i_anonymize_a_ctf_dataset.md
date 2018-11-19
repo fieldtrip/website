@@ -38,4 +38,4 @@ An example use is (note that this should all be on a single line)
     rm ~/anon/Subject01.ds/hz.ds/defaults.de
     rm ~/anon/Subject01.ds/hz2.ds/defaults.de
 
-See also this frequently asked question on [how to anonimize an anatomical MRI](/faq/how_can_i_anonymize_an_anatomical_mri ).
+See also this frequently asked question on [how to anonymize an anatomical MRI](/faq/how_can_i_anonymize_an_anatomical_mri ).

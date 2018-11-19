@@ -6,7 +6,7 @@ tags: [realtime, development]
 
 # Suggested improvements for compatibility across versions
 
-This section pertains to the implementation of backward compatibility in the C language reference implementation. 
+This section pertains to the implementation of backward compatibility in the C language reference implementation.
 
 The formal description of the communication protocol should independent of the implementation also specify how to deal with network messages (e.g. requests and responses) that are not known.  
 
@@ -16,7 +16,7 @@ This section discusses an alternative approach, where the TCP server can handle 
 of the ''dmarequest'' function in a switch statement based on the incoming version number. This would make it possible to connect older clients
 to a more recent server.
 
-On the client side (MATLAB), the different protocol versions would be handled by different MEX files (old versions frozen) and glue code in Matlab. 
+On the client side (MATLAB), the different protocol versions would be handled by different MEX files (old versions frozen) and glue code in Matlab.
 This would make it possible to connect a client from a recent FieldTrip version (say, talking protocol version 3 natively) to an older server (V1).
 The logic would involve detecting the server version by sending requests with decreasing client versions (using different MEX-files) until a call succeeds.
 
@@ -37,7 +37,7 @@ The logic would involve detecting the server version by sending requests with de
 *  Existing users (providers of acquisition clients) have little incentive to upgrade to a more recent, more powerful protocol, since new users can already connect. This makes the point mentioned above more severe.
 
 *  How to add new language bindings (e.g., Python / Java)? Should a language binding initiated at V4 include support for V1-V3 as well?
- 
+
 #### Practical notes
 
 *  Old versions of the ''dmarequest'' function should be kept, starting with V2 it should get a version number suffix. Protocol data structures, when modified, should also be duplicated and renamed to get a version number suffix, so the old functions (based on old data structures) still compile.
@@ -51,24 +51,15 @@ Instead of providing compatibility at the level of the server or the client or b
 #### Advantages and disadvantages
 
 *  Yet another tool needs to be maintained (but the tool is relatively simple)
-
 *  The main FieldTrip buffer code (C) can be kept clean (one version only)
-
 *  The language binding code can be kept clean (one version only)
-
 *  A second buffer adds a bit more latency (but the 2nd connection can always be local TCP), and complicates the setup
-
-*  Existing users (with older protocol version) can still be talked to, but there is clear incentive to upgrade 
+*  Existing users (with older protocol version) can still be talked to, but there is clear incentive to upgrade
 
 ## See also
 
-*  [draft network](/draft network)
-
-*  [draft implementation](/draft implementation)
-
-*  [draft header chunks](/draft header chunks)
-
-*  [draft compatability](/draft compatability)
-
-*  [scratchpad](/scratchpad)
-
+*  [draft network](/development/realtime/draft_network)
+*  [draft implementation](/development/realtime/draft_implementation)
+*  [draft header chunks](/development/realtime/draft_header_chunks)
+*  [draft compatability](/development/realtime/draft_compatability)
+*  [scratchpad](/development/realtime/scratchpad)

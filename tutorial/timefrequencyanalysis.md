@@ -201,7 +201,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)*
 
 *Figure: A time-frequency representation of channel MRC15 obtained using ft_singleplotTFR*
 
-If you see artifacts in your figure, see [faq:I am getting strange artifacts in figures that use opacity](/faq/I am getting strange artifacts in figures that use opacity).
+If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
 Note the boundary effects for lower frequencies (the white time frequency points in the plot). There is no power value calculated for these time frequency points. The power value is assigned to the middle time point in the time window. For example for 2 Hz the time window has a length of 3.5 sec (1/2 * 7 cycles = 3.5 sec), this does not fit in the 3 sec window that is preprocessed and therefore there is no data point here. For 5 Hz the window has a length of 1.4 sec (1/5 * 7 cycles = 1.4 sec). We preprocessed data between t = -1 sec and t = 2 sec so the first power value is assigned to t= -0.3 (since -1 + (0.5 * 1.4) = -0.3). Because of these boundary effects it is important to apply **[ft_freqanalysis ](/reference/ft_freqanalysis )** to a larger time window to get all the time frequency points for your time window of interest.
 

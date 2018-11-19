@@ -198,7 +198,7 @@ The neighbourhood structure contains for each channel a list of other channels t
     cfg.correctm  = 'no';
     TFR_stat1     = ft_freqstatistics(cfg, TFR_logpow);
 
-The result of **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a *dimord* field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[/reference/ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[/reference/singleplotTFR](/reference/singleplotTFR)** or **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**.
+The result of **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a *dimord* field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[/reference/ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[/reference/ft_singleplotTFR](/reference/ft_singleplotTFR)** or **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
     disp(TFR_stat1)
 

@@ -214,4 +214,4 @@ In this tutorial we have touched on a number of important issues in the classifi
 
 To use some of the more advanced methods it is required to call lower level functions. We recommend looking at the tutorials which have been written for DMLT. These can be accessed through MATLAB's *doc* facility.
 
-To construct online experimental designs that make use of multivariate analysis, for example to build BCI or neurofeedback applications, we have developed the [development:realtime](/development/realtime) module.
+To construct online experimental designs that make use of multivariate analysis, for example to build BCI or neurofeedback applications, we have developed the [realtime](/development/realtime) module.

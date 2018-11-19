@@ -17,7 +17,7 @@ In this tutorial we will apply beaforming techniques to event-realted fields. Th
 In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as   computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/tutorial/natmeg/beamforming).
 
 {% include markup/info %}
-This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
+This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
@@ -342,7 +342,7 @@ The covariance matrix was computed on the basis of the single trials. Compute th
 In the previous step we applied an arbitrary chosen threshold for plotting the data. It is also possible to apply the permutation framework as extensively described in the statistic tutorials. It is strongly recommended to make yourself familiar with the framework and consult also the on-line lecture.
 
 {% include markup/info %}
-This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
+This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {% include youtube id="x0hR-VsHZj8" %}
 {% include markup/end %}
@@ -403,7 +403,7 @@ The source structure now contains the single trial estimates in the field **sour
 	        df: 50
 	       cfg: [1x1 struct]
 
-Now we can statistically compare the difference between the pre and post response source power using **[ft_sourcestatistics](/reference/ ft_sourcestatistics)** and plot the output after interpolating onto the anatomical image with **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
+Now we can statistically compare the difference between the pre and post response source power using **[ft_sourcestatistics](/reference/ft_sourcestatistics)** and plot the output after interpolating onto the anatomical image with **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
 
 	:::matab
 	cfg = [];
@@ -464,7 +464,7 @@ Uncomment the option **cfg.maskparameter = 'mask';** and try to interpret what y
 
 ## (MEG) Reconstructing the time course of activity in the primary motor cortex
 
-The ultimate motivation of source analysis of MEEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g. M1 identified in the previous steps) using **[ft_prepare_leadfield](/reference/ ft_prepare_leadfield)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](/reference/ ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ ft_sourceanalysis)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [ the virtual sensors tutorial](/tutorial/shared/virtual_sensors) in the context of different task demands.   
+The ultimate motivation of source analysis of MEEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g. M1 identified in the previous steps) using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [ the virtual sensors tutorial](/tutorial/shared/virtual_sensors) in the context of different task demands.   
 
 ##### Compute leadfield at desired location
 
@@ -506,7 +506,7 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 	virtsens.fsample=data_right.fsample;
 	virtsens.label={'M1'}';
 
-Now we will use **[ ft_timelockanalysis](/reference/ ft_timelockanalysis )** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ ft_singleplotER)** and **[ft_singleplotTFR](/reference/ ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [ the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [ the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
+Now we will use **[ ft_timelockanalysis](/reference/ft_timelockanalysis )** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [ the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [ the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
 
 	%% compute the event related average at location M1
 	cfg=[];
