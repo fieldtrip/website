@@ -54,7 +54,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **CTF headmodel, single sphere:**
 
-{% include image src="/assets/img/example/headmodels/singlesphere.png" %}
+{% include image src="/assets/img/example/make_leadfields_using_different_headmodels/singlesphere.png" %}
 
 ## Local spheres model from CTF
 
@@ -80,7 +80,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **CTF headmodel, local spheres:**
 
-{% include image src="/assets/img/example/headmodels/localspheresctf.png" %}
+{% include image src="/assets/img/example/make_leadfields_using_different_headmodels/localspheresctf.png" %}
 
 ## Local spheres model from FieldTrip, using the CTF headshape
 
@@ -112,7 +112,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **FieldTrip headmodel, local spheres with CTF headshape:**
 
-{% include image src="/assets/img/example/headmodels/localspheresfths.png" %}
+{% include image src="/assets/img/example/make_leadfields_using_different_headmodels/localspheresfths.png" %}
 
 ## Local spheres model from FieldTrip, using brain surface from segmented mri
 
@@ -163,7 +163,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **FieldTrip headmodel, local spheres based on segmented mri:**
 
-{% include image src="/assets/img/example/headmodels/localspheresftsegment.png" %}
+{% include image src="/assets/img/example/make_leadfields_using_different_headmodels/localspheresftsegment.png" %}
 
 ## Realistic single-shell model, using brain surface from segmented mri
 
@@ -195,11 +195,11 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **Single-shell headmodel, realistic geometry:**
 
-{% include image src="/assets/img/example/headmodels/nolttsegment.png" %}
+{% include image src="/assets/img/example/make_leadfields_using_different_headmodels/nolttsegment.png" %}
 
 **Single-shell headmodel, displayed without headshape and rotated:**
 
-{% include image src="/assets/img/example/headmodels/noltesegment.png" %}
+{% include image src="/assets/img/example/make_leadfields_using_different_headmodels/noltesegment.png" %}
 
 ## Comparing the forward models
 
@@ -296,7 +296,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
 **Correlations between the leadfields computed based on the FieldTrip localspheres model based on the CTF headshape and the realistic single-shell headmodel**
 
-{% include image src="/assets/img/example/headmodels/correlations.png" %}
+{% include image src="/assets/img/example/make_leadfields_using_different_headmodels/correlations.png" %}
 
 ## Appendix: creating a segmentation of the mri
 

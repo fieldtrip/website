@@ -9,14 +9,13 @@ The Central Institute of Mental Health (CIMH) in Mannheim Germany will be hostin
 
 ### Where
 
-<https://www.zi-mannheim.de/en.html>
-
+[ZI Mannheim](https://www.zi-mannheim.de/en.html)  
 Central Institute for Mental Health  
 J 5  
 68159 Mannheim  
 Germany  
 
-{% include image src="/assets/img/zi-logo.png" width="304" link="<https://www.zi-mannheim.de/en.html>" %}
+{% include image src="/assets/img/workshop/mannheim2018/zi-logo.png" width="304" link="https://www.zi-mannheim.de/en.html" %}
 
 ### When
 

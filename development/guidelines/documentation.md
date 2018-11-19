@@ -64,7 +64,7 @@ Figures from MATLAB should preferably be exported in the .png format. If you thi
 
 Making schematic figures in SVG is easy in Office Word or Office Powerpoint using their default shapes under the _insert_ ta
 
-{% include image src="/assets/img/excel-drawing-tools-2007-2010.jpg" width="200" %}
+{% include image src="/assets/img/development/guidelines/documentation/excel-drawing-tools-2007-2010.jpg" width="200" %}
 
 When you are done making the figure just select all text and images and copy-paste them it in Adobe Illustrator to save as SVG.
 
@@ -72,7 +72,7 @@ When you are done making the figure just select all text and images and copy-pas
 
 If you make schematic figures yourself we suggest the default Office 2007 color scheme. The lighter (pastel) colors are made by making the images 50% transparent (//right-button// click on figure, then change transparency under _format shape_), or by using the RGB values in the boxes below. Also, we suggest using the Calibri or Arial font in figures. Here you can download Adobe Illustrator swatch (palette) and an example.
 
-{% include image src="/assets/img/fieltrip_palette.png" %}
+{% include image src="/assets/img/development/guidelines/documentation/fieltrip_palette.png" %}
 
 ## How to make the banners for this Wiki?
 

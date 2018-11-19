@@ -51,7 +51,7 @@ Previous FieldTrip workshops took place at
 *  2014, [Parma, Italy](/workshop/parma)
 *  2014, [Zurich, Switzerland](/workshop/zurich)
 *  2014, [Göttingen, Germany](/workshop/goettingen)
-*  2014, [Stockholm, Sweden](/workshop/stockholm) - combined FieldTrip and MNE workshop at NatMEG
+*  2014, [Stockholm, Sweden](/workshop/stockholm2014) - combined FieldTrip and MNE workshop at NatMEG
 *  2014, [MEG/EEG toolkit](/workshop/nijmegen2014) - Nijmegen, NL
 *  2013, [Groesbeek, Netherlands](/workshop/groesbeek2013) - DCCN summerschool on brain networks
 *  2013, [Hamburg, Germany](/workshop/hamburg2013)

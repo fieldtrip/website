@@ -9,11 +9,11 @@ tags: [realtime, arduino]
 The following is a scratch pad for a demo that I (=Robert) have prepared for the [BrainGain public showcase event](https://twitter.com/intent/user?screen_name=BrainGain_NL). It consists of three Arduino devices, a Raspberry Pi and and a number of laptops. The flow of the data is as follow
 
  1.  arduino1: read data from a gravity sensor, write to bluetooth just like ModEEG
- 2.  laptop computer runs the FieldTrip buffer, the modeeg2ft application, and the [viewer](/viewer) application for the visualization of the 3 sensor channels
+ 2.  laptop computer runs the FieldTrip buffer, the modeeg2ft application, and the [viewer](/development/realtime/viewer) application for the visualization of the 3 sensor channels
  3.  arduino2: connects to the network, read data from FieldTrip buffer, write to RFM12b
  4.  arduino3: read data from RFM12b, blink leds
 
-Other laptop computers and a Raspberry Pi were connected simultaneously to show (using the [viewer](/viewer) realtime visualization) that the FieldTrip realtime EEG interface runs on various operating systems (Windows, Linux, OS X) and on various hardware architectures (Intel, PPC, ARM).  
+Other laptop computers and a Raspberry Pi were connected simultaneously to show (using the [viewer](/development/realtime/viewer) realtime visualization) that the FieldTrip realtime EEG interface runs on various operating systems (Windows, Linux, OS X) and on various hardware architectures (Intel, PPC, ARM).  
 ## Arduino 1: simulate EEG recording
 
 The purpose of this device is to simulate an online data stream using a gravity sensor. By shaking the box, the (x, y, z) signals will fluctuate. This is sent over bluetooth to a computer, which can visualize and/or process the continuously sampled signal as if it were normal EEG.
@@ -97,7 +97,7 @@ It is based on a `<del>`[3V3 Arduino Pro Mini](http://arduino.cc/en/Main/Arduino
 
 Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/products/9582) module and uses this [library](http://jeelabs.net/pub/docs/jeelib/RF12_8cpp.html).
 
-{% include image src="/assets/img/development/realtime/rfm12b.png" width="200" %}
+{% include image src="/assets/img/development/realtime/arduino/rfm12b.png" width="200" %}
 
 ## See also
 

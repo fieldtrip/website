@@ -40,17 +40,17 @@ This page deals with specific implemenations of the FieldTrip buffer protocol. T
 
 *  [Java](/development/realtime/buffer_java) client-side implementation
 *  [Python](/development/realtime/buffer_python) client-side implementation
-*  [development:realtime:Arduino](/development/realtime/Arduino) client-side implementation
+*  [Arduino](/development/realtime/Arduino) client-side implementation
 *  [BCI2000](/development/realtime/bci2000) includes the FieldTripBuffer and the FieldTripBufferSource modules
 *  [BrainVision RDA interface](/development/realtime/rda) allows streaming data in the RDA format
-*  [development:realtime:BrainStream](/development/realtime/BrainStream) is directly supported through shared MATLAB code
+*  [BrainStream](/development/realtime/brainstream) is directly supported through shared MATLAB code
 
 ## Additional useful tools
 
-*  [development:realtime:serial_event](/development/realtime/serial_event) is a C application that turns incoming characters from a serial port into FieldTrip buffer events (used for translating TTL pulses in [realtime fMRI](/development/realtime/fmri))
-*  [development:realtime:buffer_java#MidiToBuffer](/development/realtime/buffer_java#MidiToBuffer) is a Java application that turns MIDI messages into FieldTrip buffer events
-*  [development:realtime:buffer_java#MarkerGUI](/development/realtime/buffer_java#MarkerGUI) is a graphical Java application that allows to write FieldTrip buffer events with a freely chosen *type* and *value* string.
-*  [development:realtime:viewer](/development/realtime/viewer) is a graphical C++ application to visualize online signals from the FieldTrip buffer
+*  [serial_event](/development/realtime/serial_event) is a C application that turns incoming characters from a serial port into FieldTrip buffer events (used for translating TTL pulses in [realtime fMRI](/development/realtime/fmri))
+*  [buffer_java#MidiToBuffer](/development/realtime/buffer_java#MidiToBuffer) is a Java application that turns MIDI messages into FieldTrip buffer events
+*  [buffer_java#MarkerGUI](/development/realtime/buffer_java#MarkerGUI) is a graphical Java application that allows to write FieldTrip buffer events with a freely chosen *type* and *value* string.
+*  [viewer](/development/realtime/viewer) is a graphical C++ application to visualize online signals from the FieldTrip buffer
 *  [Testing with sine waves and pre-recorded EEG data](/development/realtime/eeg)
 *  [Testing with pre-recorded fMRI data](/development/realtime/fmri#testing_with_pre-recorded_fmri_data)
 
@@ -84,6 +84,6 @@ To create a new buffer you can call this from MATLAB using ft_create_buffer
 
 ## Closing the loop
 
-For a real-time BCI system, it is important that a control signal somehow can be used to close the loop towards the subject. [Here](/development/realtime/closing_the_loop) you can find a description on the options that you have for [development:realtime:closing the loop](/development/realtime/closing the loop) from within your Matlab-based BCI application.
+For a real-time BCI system, it is important that a control signal somehow can be used to close the loop towards the subject. [Here](/development/realtime/closing_the_loop) you can find a description on the options that you have for [closing the loop](/development/realtime/closing_the_loop) from within your Matlab-based BCI application.
 
 Current plans and design considerations for building a general pipeline architecture can be found [here](/development/realtime/pipeline).

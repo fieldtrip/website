@@ -37,7 +37,7 @@ For the simplest case, the BEM and the theoretical solutions for EEG lead field 
 
 **BEM model, single sphere:**
 
-{% include image src="/assets/img/example/bemtesting1.png" width="400" %}
+{% include image src="/assets/img/example/testing_bem_created_leadfields/bemtesting1.png" width="400" %}
 
 ## Building the geometrical head model with BEM
 
@@ -84,6 +84,6 @@ The following steps generate the lead fields with 1) the BEM model integrated in
 
 **Result:**
 
-{% include image src="/assets/img/example/bemtesting2.png" %}
+{% include image src="/assets/img/example/testing_bem_created_leadfields/bemtesting2.png" %}
 
 The pinky arrow describes the correlation curves of meshes with increasing number of triangles. The last mesh (2000 vertices) has a flat correlation curve at value y=1.

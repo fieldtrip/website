@@ -20,7 +20,7 @@ If the answer the first question is 'Yes', then it can be harmful. If the answer
 
 In this case, the head and source models are created with the intent of using a beamformer-type source reconstruction. As indicated by the red dots in the figure below, there are many dipoles for which the source reconstruction will be performed (i.e. they are labeled as 'inside'), but which do not fall inside the head. The source estimate at these location is interesting, because they can be used to identify e.g. muscle activity. Muscle activity in muscles at the back of the head would show increasing power towards the back of the brain, and will continue to increase in power passed the skull boundary. If power at these out-of-brain locations is not reconstructed, then it (muscle activity) could mistakingly be interpreted as activity in primary visual areas.
 
-{% include image src="/assets/img/faq/singleshelldipolelocations.png" width="400" %}--" %}
+{% include image src="/assets/img/faq/is_it_good_or_bad_to_have_dipole_locations_outside_of_the_brain_for_which_the_source_reconstruction_is_computed/singleshelldipolelocations.png" width="400" %}--" %}
 
 _Dipole locations of a source model plotted with on top of a singleshell head model. Dipole locations marked as 'inside' are red, dipole locations marked as 'outside' are blue._
 
@@ -28,7 +28,7 @@ _Dipole locations of a source model plotted with on top of a singleshell head mo
 
 In this example, a single sphere is used as a head model. The brain however, is not spherical. If we want to prevent brain areas to be missed in source reconstruction, a sphere is needed with a radius that is at least equal to the longest distance between any two points in the brain. Such a situation is depicted in the figure below. Here, the sphere is large enough to encompass the entire brain, and will therefore have many dipole locations which are not inside the brain (e.g. near temporal cortex).
 
-{% include image src="/assets/img/faq/singlespheredipolelocations.png" %}
+{% include image src="/assets/img/faq/is_it_good_or_bad_to_have_dipole_locations_outside_of_the_brain_for_which_the_source_reconstruction_is_computed/singlespheredipolelocations.png" %}
 
 _Dipole locations of a source model plotted with on top of a 'singlesphere' head model. Inside the sphere, the 'singleshell' head model in the above figure is plotted as well, to indicate the shape of the brain inside the sphere. Dipole locations marked as 'inside' are red, dipole locations marked as 'outside' are blue._
 

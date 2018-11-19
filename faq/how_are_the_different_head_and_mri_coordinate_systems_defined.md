@@ -7,6 +7,7 @@ tags: [faq, headmodel, mri, source, coordinate]
 ## How are the different head and MRI coordinate systems defined?
 
 {% include markup/warning %}
+
 For understanding the coordinate system, the following questions need to be addressed:
 *  What is the definition of the origin of the coordinate system, i.e. where is [0,0,0]?
 *  In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?
@@ -22,7 +23,7 @@ The real-world interpretation of the coordinate system can typically not be dete
 
 The remainder of this page describes the external conventions for the coordinate systems for a number of EEG and MEG systems. Of course it is always possible that a specific user of one of the systems uses a different coordinate system.
 
-The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](http://en.wikipedia.org/wiki/Nasion), [inion](http://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/how_are_the_lpa_and_rpa_points_defined ) for a discussion of the LPA and RPA.
+The coordinate systems used in EEG and MEG measurements are usually defined in terms of anatomical landmarks on the outside of the head, such as the [nasion](http://en.wikipedia.org/wiki/Nasion), [inion](http://en.wikipedia.org/wiki/Inion) and the left and right pre-auricular points. Please see [this FAQ](/faq/how_are_the_lpa_and_rpa_points_defined ) for a discussion of the LPA and RPA.
 
 The coordinate systems used for imaging methods such as MRI, PET and CT are usually defined in terms of internal brain structures, such as the [anterior](http://en.wikipedia.org/wiki/Anterior_commissure) and [posterior](http://en.wikipedia.org/wiki/Posterior_commissure) commisure. Furthermore, imaging data is sometimes scaled to a uniform brain size, e.g. based on the [ Talairach-Tournoux atlas](http://en.wikipedia.org/wiki/Jean_Talairach) or one of the templates from the [Montreal Neurological Institute (MNI)](http://en.wikipedia.org/wiki/Montreal_Neurological_Institute). An elaborate discussion on the relation between the Talairach-Tournoux atlas and the MNI templates can be found [here](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach).
 
@@ -63,7 +64,7 @@ The **4D Neuroimaging** (also known as BTi) coordinate system is expressed in me
 *  the X-axis goes towards NAS
 *  the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 *  the Z-axis goes approximately towards the vertex, orthogonal to X and Y
-{% include image src="/assets/img/faq/coordinatesystem_bti.png" width="200" %}
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_bti.png" width="200" %}
 
 ### Details on the ACPC coordinate system
 The ACPC coordinate system corresponds to that used in the Talairach atlas, but without the piecewise linear scaling applied to the brain, i.e. a brain in ACPC coordinates retains the individual shape and size. The landmarks used in the ACPC coordinate system are the anterior and posterior commisura (AC and PC) and the coordinate axes are defined according to
@@ -104,7 +105,7 @@ The coordinates of each electrode are defined in millimeters x,y,z with respect 
 *  the Z-axis goes orthogonally to the X-Y-plane towards the vertex
 If the ears are not symmetric, the origin will not be precisely between the ears but shifted to one side. E.g., if the right ear is more to the front, the origin will be shifted to the right.
 See below a visualization of the coordinate system.
-{% include image src="/assets/img/faq/captrack.png" width="300" %}
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrack.png" width="300" %}
 
 ### Details of the Chieti ITAB coordinate system
 The **ITAB** coordinate system is expressed in meter, with the principal (X, Y, Z) axes going through external landmarks (i.e. fiducials). The details are
@@ -119,7 +120,7 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI which i
 *  the X-axis goes towards NAS
 *  the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 *  the Z-axis goes approximately towards the vertex, orthogonal to X and Y
-{% include image src="/assets/img/faq/coordinatesystem_ctf.png" width="200" %}
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_ctf.png" width="200" %}
 
 ### Details of the DICOM coordinate system
 **DICOM** is a standard for handling digital imaging in medicine, and as such uses a radiological coordinate system, defined as
@@ -147,7 +148,7 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 *  Y-axis from the origin towards the nasion (exactly through)
 *  Z-axis from the origin upwards orthogonal to the XY-plane
 *  Origin: Intersection of the line through LPA and RPA and a line orthogonal to L passing through the nasion.
-{% include image src="/assets/img/faq/coordinatesystem_neuromag.png" width="200" %}
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_neuromag.png" width="200" %}
 
 ### Details of the NIfTI coordinate system
 **NIfTI** is adapted from the Analyze 7.5 format (see [this page](http://nifti.nimh.nih.gov/)  for more information). It allows two coordinate systems: one related to the scanner coordinate system (qform) and one related to a standard coordinate system (sform) such as MNI or Talairach-Tournoux (see below). The default scanner coordinate system is defined as

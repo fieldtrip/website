@@ -10,7 +10,7 @@ The simplest example for continuous data without any events or triggers is a sim
 
 ## Flowchart
 
-{% include image src="/assets/img/example/realtime/realtime_signalviewer.png" width="300" %}
+{% include image src="/assets/img/example/ft_realtime_signalviewer/realtime_signalviewer.png" width="300" %}
 ## Example use
 
 The easiest way to try out the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** example is by starting two Matlab sessions. In the first session you create some random signal and write it to the buffe

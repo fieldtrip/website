@@ -10,11 +10,11 @@ The sourceanalysis function starts by determining a regular 3-D grid, and for ea
 
 Depending on the resolution of your 3-D grid, there will be points in the grid that *just* ly outside the brain, i.e. close to those points there will be no points inside the brain that are included in the source reconstruction (see figure below). This results in a rim around the brain in which the source reconstruction is not performed, and hence no functional source data will be displayed in that rim after interpolating the source data onto the anatomical MRI.
 
-{% include image src="/assets/img/faq/grid_resolution_high.png" %}
+{% include image src="/assets/img/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed/grid_resolution_high.png" %}
 
 If you have a low grid resolution, the rim will apear to be wider (see figure below).
 
-{% include image src="/assets/img/faq/grid_resolution_low.png" %}
+{% include image src="/assets/img/faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed/grid_resolution_low.png" %}
 
 In the figures, the brain is indicated with the circle, the "inside" points are indicated with red dots and the yellow region indicates that part of the brain volume on which the functional data will be interpolated.
 

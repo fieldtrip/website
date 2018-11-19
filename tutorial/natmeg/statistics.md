@@ -104,7 +104,7 @@ The MEG dataset that we use in this tutorial is available as   [oddball1_mc_down
     cfg.channel = 'MEG*1';
     figure; ft_multiplotTFR(cfg, TFR_diff);
 
-{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_stat_tfrdiff.png" width="500" %}
+{% include image src="/assets/img/tutorial/natmeg/statistics/natmeg_stat_tfrdiff.png" width="500" %}
 
 ### Single-trial time-frequency responses
 
@@ -181,7 +181,7 @@ With time-frequency data we have three dimensions in which we can form clusters.
 
 The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as //[]//, i.e. empty.
 
-{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_stat_neighbours.png" width="500" %}
+{% include image src="/assets/img/tutorial/natmeg/statistics/natmeg_stat_neighbours.png" width="500" %}
 
 ### Compute the statistics
 
@@ -198,7 +198,7 @@ The neighbourhood structure contains for each channel a list of other channels t
     cfg.correctm  = 'no';
     TFR_stat1     = ft_freqstatistics(cfg, TFR_logpow);
 
-The result of **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a *dimord* field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[/reference/ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[/reference/singleplotTFR](/reference/singleplotTFR)** or **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**.
+The result of **[/reference/ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a *dimord* field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[/reference/ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[/reference/ft_singleplotTFR](/reference/ft_singleplotTFR)** or **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
     disp(TFR_stat1)
 
@@ -246,7 +246,7 @@ We can visualize the results just like any other TFR structure. The *TFR_stat* s
     figure; ft_multiplotTFR(cfg, TFR_stat3);
     figure; ft_multiplotTFR(cfg, TFR_stat4);
 
-{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_stat_tfrcluster.png" width="500" %}
+{% include image src="/assets/img/tutorial/natmeg/statistics/natmeg_stat_tfrcluster.png" width="500" %}
 
 ### Preprocessing the stimulus-locked data
 
@@ -305,7 +305,7 @@ The **[/reference/ft_selectdata](/reference/ft_selectdata)** function is a very 
     cfg.layout = 'neuromag306mag.lay';
     figure; ft_multiplotER(cfg, ERF_std, ERF_dev);
 
-{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_stat_erf.png" width="500" %}
+{% include image src="/assets/img/tutorial/natmeg/statistics/natmeg_stat_erf.png" width="500" %}
 
 To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[/reference/ft_timelockanalysis](/reference/ft_timelockanalysis)** and manualy compute the [t-test](http://en.wikipedia.org/wiki/Student%27s_t-test).
 
@@ -396,7 +396,7 @@ Again we can visualize the results of the statistical comparison. Since we have 
     figure; ft_multiplotER(cfg, ERF_std, ERF_dev);
     title('cluster');
 
-{% include image src="/assets/img/tutorial/natmeg_temp/natmeg_stat_erfcluster.png" width="500" %}
+{% include image src="/assets/img/tutorial/natmeg/statistics/natmeg_stat_erfcluster.png" width="500" %}
 
 {% include markup/info %}
 This tutorial demonstrated how to do the statistical analysis on the MEG channels that are present in the dataset. You can repeat the similar procedure for the EEG channels.

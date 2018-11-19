@@ -32,4 +32,4 @@ The buffer is compiled into a MATLAB mex file, which means that you can read fro
 
 *  instantiate a local buffer, linked to the MATLAB process as a seperate thread
 
-Besides the native C/C++ and the MATLAB implementation, we also provide implementations for [Java](/buffer_java) and [Python](/buffer_python).
+Besides the native C/C++ and the MATLAB implementation, we also provide implementations for [Java](/development/realtime/buffer_java) and [Python](/development/realtime/buffer_python).

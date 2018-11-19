@@ -18,21 +18,21 @@ The help of any function could look like this
 
 	% FUNNAME does something usefull
 	%
-	% Use as 
+	% Use as
 	%    output = funname(cfg, input)
 	% where the input is the result from OTHER_FUNNAME
 	%
 	% The cfg contains
-	%   cfg.xxx = 
-	%   cfg.xxx = 
-	%   cfg.xxx = 
-	%   cfg.xxx = 
+	%   cfg.xxx =
+	%   cfg.xxx =
+	%   cfg.xxx =
+	%   cfg.xxx =
 	%
 	% See also OTHER_FUNNAME, and other related functions
 
 The second commented block in each file (i.e. which is not visible when you type help, but which is visible if you edit the file) can contain the more advanced and obscure options. Furthermore, it can contain a description of the dependencies of the reference documentation of this function on the documentation in other (private) functions.
 
-	
+
 	% Undocumented local options
 	%   cfg.yyy
 	%   cfg.yyy
@@ -56,7 +56,7 @@ The second commented block in each file (i.e. which is not visible when you type
 
 ## Step 1: get an overview of all undocumented options
 
-All 0th order (local options) and 1st order (direct dependency on a private function) dependencies are now included in the "undocumented options" section in each m-file. Status: done. 
+All 0th order (local options) and 1st order (direct dependency on a private function) dependencies are now included in the "undocumented options" section in each m-file. Status: done.
 
 ## Step 2: ensure consistency between the documentation of cfg options in different functions
 
@@ -64,7 +64,7 @@ Status: done.
 
 ## Step 3: automize the creation of the html documentation for the fieldtrip site
 
-The documentation should consist of an overview of the main commands with the complete help similar as in Matlab ([:reference](/reference)) and an index with all cfg options ([index](/reference/index)). Status: done. 
+The documentation should consist of an overview of the main commands with the complete help similar as in Matlab ([reference](/reference)) and an index with all cfg options ([index](/reference/index)). Status: done. 
 
 These should be cross-linked. Status: no attempts yet.
 ## Appendix: some usefull unix commands
@@ -78,10 +78,9 @@ Finding all configuration option
 Getting the Nth paragraps of a text file (the N below should be changed into a number
     cat function_name.m | awk "BEGIN {t=1}; /^$/ {t=t+1}; !/^$/ {if ((t-N)==0) print}"
 
-Get a set of files that describe all config options in the help and in the code, and determine the config options that are missing from either the help or the code: 
+Get a set of files that describe all config options in the help and in the code, and determine the config options that are missing from either the help or the code:
     for file in *.m ; do grep -v '^%' $file | grep -o 'cfg\.[a-zA-Z0-9]*' | sort | uniq > $file.cfg_code ; done
     for file in *.m ; do grep    '^%' $file | grep -o 'cfg\.[a-zA-Z0-9]*' | sort | uniq > $file.cfg_help ; done
     for file in *.m ; do diff $file.cfg_* > $file.diff ; done
     for file in *.diff ; do grep '^`<' $file | tr '<' '%' >` $file.missing_help ; done
     for file in *.diff ; do grep '^>' $file | tr '>' '%' > $file.missing_code ; done
-

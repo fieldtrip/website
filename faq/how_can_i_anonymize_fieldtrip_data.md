@@ -10,11 +10,11 @@ If you share your MATLAB files with others, you should be aware that the [proven
 
 FieldTrip keeps track of the analyses in the *data.cfg.previous.previous...* field. This is something you can exploit using **[ft_analysispipeline](/reference/ft_analysispipeline)** to look up details of the processing that you might not be able to find in your analysis scripts any more.
 
-However, the consequence might also be that original file name are present which might identify the subject. You can use the **[ft_anonimizedata](/reference/ft_anonimizedata)** function to scrub the provenance from unwanted information.
+However, the consequence might also be that original file name are present which might identify the subject. You can use the **[ft_anonymizedata](/reference/ft_anonymizedata)** function to scrub the provenance from unwanted information.
 
-Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonimize a CTF dataset](/faq/how_can_i_anonimize_a_ctf_dataset), i.e. the **.ds* directory with all files in it.
+Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonymize a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset), i.e. the **.ds* directory with all files in it.
 
-Another concern for subject confidentiality is the anatomical MRI, which might include facial details. Please see this frequently asked question on [how to anonimize an anatomical MRI](/faq/how_can_i_anonimize_an_anatomical_mri).
+Another concern for subject confidentiality is the anatomical MRI, which might include facial details. Please see this frequently asked question on [how to anonymize an anatomical MRI](/faq/how_can_i_anonymize_an_anatomical_mri).
 
 Furthermore, depending on how strict you want to be, the date at which a subject is recorded or the data at which a subject's data was processed might also contain clues about identifying the subject.
 

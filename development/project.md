@@ -6,7 +6,7 @@ tags: [development]
 
 # Project overview
 
-This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpad for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [:bugzilla](/bugzilla) to track projects.
+This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpad for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [bugzilla](/bugzilla) to track projects.
 
 ## Open projects
 
@@ -39,7 +39,7 @@ This section of the website lists information aimed at developers of FieldTrip a
 ### Projects dealing with forward and inverse modeling
 *  [How to deal with forward model UNITS?](/development/fwdunits) (see [686](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=686))
 *  [Source-reconstruction using two dipoles - example script under construction](/development/symmetric_dipoles) (see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1559))
-*  [Source reconstruction of event-related fields using minimum-norm estimate - tutorial under construction](/development/minimum_norm_estimate_new)
+*  Source reconstruction of event-related fields using minimum-norm estimate - (done and moved into place)
 *  [Developing the documentation of the source reconstruction methods](/development/documentation_source)
 *  [Example use of DSS for BCG removal](/development/dss)
 *  [the rat beamformer](/development/rat)

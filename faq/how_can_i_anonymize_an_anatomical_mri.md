@@ -17,11 +17,11 @@ You can deface an anatomical MRI using the FieldTrip **[ft_defacevolume](/refere
     cfg = [];
     mri_anon = ft_defacevolume(cfg, mri);
 
-{% include image src="/assets/img/faq/defacevolume2.png" width="400" %}
+{% include image src="/assets/img/faq/how_can_i_anonymize_an_anatomical_mri/defacevolume2.png" width="400" %}
 
 You can use the standard MATLAB figure rotate button to look at the MRI from different angles.
 
-{% include image src="/assets/img/faq/defacevolume1.png" width="400" %}
+{% include image src="/assets/img/faq/how_can_i_anonymize_an_anatomical_mri/defacevolume1.png" width="400" %}
 
 Once you are happy with the size and position of the box, you close the figure and the function returns the defaced anatomical MRI.
 
@@ -32,18 +32,18 @@ It is good practice to review the result of the defacing procedure using
     cfg = [];
     ft_sourceplot(cfg, mri_anon);
 
-{% include image src="/assets/img/faq/defacevolume3.png" width="400" %}
+{% include image src="/assets/img/faq/how_can_i_anonymize_an_anatomical_mri/defacevolume3.png" width="400" %}
 
 Subsequently you can save it to a MATLAB file or to a NIFTI file usin
 
     ft_write_mri('subjectXX_anon.nii', mri_anon.anatomy, 'transform', mri_anon.transform, 'dataformat', 'nifti');
 
-See also this frequently asked question on [how to anonimize a CTF MEG dataset](/how_can_i_anonymize_a_ctf_dataset).
+See also this frequently asked question on [how to anonymize a CTF MEG dataset](/faq/how_can_i_anonymize_a_ctf_dataset).
 
 {% include markup/danger %}
 If you share your MATLAB files with others, note that there might also be identifying information in the [provenance](https://en.wikipedia.org/wiki/Provenance) information in the "cfg" field that is included in the FieldTrip data structure.
 
-In principle FieldTrip keeps full track of all analyses that you do. The consequence might be that the original file name (identifying the subject) is included in the provenance information. You can use the **[ft_anonimizedata](/reference/ft_anonimizedata)** function to scrub the provenance from unwanted information.
+In principle FieldTrip keeps full track of all analyses that you do. The consequence might be that the original file name (identifying the subject) is included in the provenance information. You can use the **[ft_anonymizedata](/reference/ft_anonymizedata)** function to scrub the provenance from unwanted information.
 
 Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better!   
 {% include markup/end %}

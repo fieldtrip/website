@@ -14,7 +14,7 @@ M is variable length.  Along with cfg.design, the other options cfg.ivar, cfg.uv
 
 Not all are needed: see statistics_*.m for what vectors it may include.
 
-See http://fieldtrip.fcdonders.nl/walkthrough#non-paired_comparison and http://fieldtrip.fcdonders.nl/walkthrough#paired_comparison for examples on ivar and uvar. 
+See http://fieldtrip.fcdonders.nl/walkthrough#non-paired_comparison and http://fieldtrip.fcdonders.nl/walkthrough#paired_comparison for examples on ivar and uvar.
 and http://fieldtrip.fcdonders.nl/development/statistics  for uvar.
 
 Is there any explanation on the wiki for more on uvar and wvar?   (Seems it is all on the email discussion list specific to people's questions).
@@ -22,7 +22,7 @@ Is there any explanation on the wiki for more on uvar and wvar?   (Seems it is a
 #####  links to already existing pages with some mention of design matrix
 
 *  http://fieldtrip.fcdonders.nl/walkthrough
-*  http://fieldtrip.fcdonders.nl/getting_started/bdf
+*  http://fieldtrip.fcdonders.nl/getting_started/biosemi
 *  http://fieldtrip.fcdonders.nl/tutorial/eventrelatedstatistics
 *  http://fieldtrip.fcdonders.nl/tutorial/shared/cluster_permutation_background
 *  http://fieldtrip.fcdonders.nl/tutorial/multivariateanalysis
@@ -47,4 +47,3 @@ however, in ft_sourcestatistics, instead sourcestatistics_(cfg.method) is called
 statistics_montecarlo.m (only) calls resampledesign.m
 
 statistics_stat.m (deprecated: see http://fieldtrip.fcdonders.nl/example/statistics_toolbox )
-

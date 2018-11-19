@@ -2,18 +2,18 @@
 layout: default
 ---
 
-##  FT_ANONIMIZEDATA
+##  FT_anonymIZEDATA
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_anonimizedata".
+Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_anonymizedata".
 
 `<html>``<pre>`
-    `<a href=/reference/ft_anonimizedata>``<font color=green>`FT_ANONIMIZEDATA`</font>``</a>` clears the value of potentially identifying fields in
+    `<a href=/reference/ft_anonymizedata>``<font color=green>`FT_anonymIZEDATA`</font>``</a>` clears the value of potentially identifying fields in
     the data and in the provenance information, i.e., it updates the data and
     the configuration structure and history that is maintained by FieldTrip
     in the cfg field.
  
     Use as
-    output = ft_anonimizedata(cfg, data)
+    output = ft_anonymizedata(cfg, data)
     where data is any FieldTrip data structure and cfg is a configuration
     structure that should contain
     cfg.keepnumeric = 'yes' or 'no', keep numeric fields (default = 'yes')

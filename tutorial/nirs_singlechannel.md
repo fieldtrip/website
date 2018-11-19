@@ -55,7 +55,7 @@ The following order of steps provide a good standard approach for analysing fNIR
 *  define epochs; in some experiments, this step could be taken earlier (e.g. if you have a long recording with a very short piece of relevant data)
 *  average over conditions and visualize the data
 
-{% include image src="/assets/img/tutorial/nirs_tut1_fig1.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1.png" width="400" %}
 
 *Figure: Overview of fNIRS analysis procedure.*
 
@@ -125,7 +125,7 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
     cfg.ylim = 'maxmin'
     ft_databrowser(cfg, data);
 
-{% include image src="/assets/img/tutorial/nirs_tut1_fig1_ft_databrowser_readin.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1_ft_databrowser_readin.png" width="400" %}
 
 *Figure: Databrowser read-in.*
 
@@ -138,7 +138,7 @@ Additionally, we'll from here select just one channel, to reduce the complexity 
 	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
 	ft_databrowser(cfg, data);
 
-{% include image src="/assets/img/tutorial/nirs_tut1_fig3_databrowser_one_chan.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_databrowser_one_chan.png" width="400" %}
 
 *Figure: Databrowser with one channel selected.*
 
@@ -173,7 +173,7 @@ What is the optimal threshold to get rid off short lived peaks?
 
 ### Transform to changes in oxyHB/deoxyHB
 
-You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather  than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using  **[ft__nirs_transform_ODs](/reference/ft__nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analysing changes in blood oxygenation in muscles
+You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather  than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using  **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analysing changes in blood oxygenation in muscles
 
 	cfg = [];
 	cfg.dpf = 5.9;
@@ -235,7 +235,7 @@ Note that we left out the brackets around the output variable as we have a singl
     cfg.viewmode = 'vertical';
     ft_databrowser(cfg, data_epoch);
 
-{% include image src="/assets/img/tutorial/nirs_tut1_fig3_ft_define_trial_v2.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_ft_define_trial_v2.png" width="400" %}
 
 *Figure: Databrowser for 12 trials.*
 
@@ -284,7 +284,7 @@ Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seco
 	plot(time,HHb,'b');
 	legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
 
-{% include image src="/assets/img/tutorial/nirs_tut1_fig4_ft_average_hem_respons.png" width="400" %}
+{% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig4_ft_average_hem_respons.png" width="400" %}
 
 *Figure: Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941).*
 

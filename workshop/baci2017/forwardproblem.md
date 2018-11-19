@@ -30,7 +30,7 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
 The first 3 steps are the same for BEM and FEM. Steps from 4 to 8 differ between BEM and FEM.
 A more detailed description of these steps is following.
 
-{% include image src="/assets/img/workshop/baci2017/scheme.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" %}
 *Figure1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM*
 
 ##  1. Read the MRI
@@ -42,7 +42,7 @@ Visualize the MRI
 	cfg=[];
 	ft_sourceplot(cfg,mri_orig);
 
-{% include image src="/assets/img/workshop/baci2017/mri_orig.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_orig.png" %}
 *Figure2: visualization of the MRI*
 
 ##  2. Realign the MRI
@@ -59,7 +59,7 @@ We can visualize the realigned MRI
 	cfg = [];
 	ft_sourceplot(cfg, mri_realigned);
 
-{% include image src="/assets/img/workshop/baci2017/mri_resliced.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_resliced.png" %}
 *Figure3: visualization of the realigned MRI*
 ##  3. Reslice the MRI
 
@@ -90,7 +90,7 @@ Visualize the segmentation
 	cfg.atlas        = seg_i;   
 	ft_sourceplot(cfg, seg_i);
 
-{% include image src="/assets/img/workshop/baci2017/mri_segmented_bem.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_segmented_bem.png" %}
 *Figure4: 3 compartment segmentation output*
 
 ##  5A. Create the mesh
@@ -111,7 +111,7 @@ Visualize the mesh and the electrode
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 	hold on, ft_plot_sens(elec, 'style', '*g');
 
-{% include image src="/assets/img/workshop/baci2017/mesh_bem_elec.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/mesh_bem_elec.png" %}
 *Figure5: 3 compartment mesh with electrodes*
 
 ##  6A. Create the headmodel
@@ -144,7 +144,7 @@ Check the alignment visually.
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 	ft_plot_sens(elec,'style', '.k');
 
-{% include image src="/assets/img/workshop/baci2017/aligned.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/aligned.png" %}
 *Figure6: mesh, electrodes and axes.*
 
 ##  8A. Create the sourcemodel
@@ -163,7 +163,7 @@ Visualize the sourcemodel
 	hold on, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 
-{% include image src="/assets/img/workshop/baci2017/sourcemodel_all.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/sourcemodel_all.png" %}
 *Figure7: sourcemodel on the brain compartment*
 
 Save the sourcemode
@@ -203,7 +203,7 @@ Visualize the segmentation result
 	ft_sourceplot(cfg, seg_i);
 
 
-{% include image src="/assets/img/workshop/baci2017/mri_segmented_fem.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_segmented_fem.png" %}
 *Figure8: 5 compartment segmentation output *
 
 ##  5B. Create the mesh
@@ -248,7 +248,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 
 	ft_plot_sens(elec, 'style', '*g');
 
-{% include image src="/assets/img/workshop/baci2017/mesh_fem_elec.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/mesh_fem_elec.png" %}
 *Figure9: visualization of headmodel_fem and electrodes*
 
 ## 7B. Align the electrodes

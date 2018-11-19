@@ -133,7 +133,7 @@ This example script demonstrates how to run basic FieldTrip functions in paralle
 	cfg.channel = {'MLC33', 'MLC43', 'MLP11', 'MLP12', 'MLP13', 'MLP33', 'MLP34', 'MLT14', 'MLT15', 'MLT25'}
 	ft_singleplotER(cfg, avgFC, avgFIC, avgIC);
 
-{% include image src="/assets/img/example/singleplot_fig1.png" width="400" %}
+{% include image src="/assets/img/tutorial/distributedcomputing/singleplot_fig1.png" width="400" %}
 
 In the code above all data is processed by the distributed computers and subsequently returned to the workspace of your desktop computer. The data can take quite a lot of RAM, which you can check like this.
 

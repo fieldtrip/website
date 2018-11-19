@@ -89,7 +89,7 @@ Tutorials using this dataset:
 
 *  Dutch words presented in visual form, auditory form, and picture form. Multivariate pattern analysis used to decode conceptual representations from event-related data
 *  64 channel ActiCap system (Brain Products GmbH)
-*  Link to [publication](/ http://dx.plos.org/10.1371/journal.pone.0014465) by Simanova et al.(2010).
+*  Link to [publication](http://dx.plos.org/10.1371/journal.pone.0014465) by Simanova et al.(2010).
 *  Download the dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) from our FTP server
 
 Tutorials using this dataset:
@@ -131,7 +131,7 @@ Tutorials using this dataset:
 *  Recorded by Rik Hanson and colleagues in Cambridge, using 306-channel Elekta/Neuromag system
 *  Subjects watch familiar, unfamiliar and scrambled faces
 *  Download the dataset from the [MRC-CBU](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn) FTP server.
-*  Details [:tutorial:shared:mmfaces](/tutorial/shared/mmfaces)
+*  Details [mmfaces](/tutorial/shared/mmfaces)
 
 Tutorials using this dataset:
 {% include seealso tag1="mmfaces" %}

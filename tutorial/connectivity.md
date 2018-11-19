@@ -120,7 +120,7 @@ The *sourcedata* structure resembles the raw-data output of **[ft_preprocessing]
 	cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
 	ft_databrowser(cfg, sourcedata);
 
-{% include image src="/assets/img/tutorial/virtualchan.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/virtualchan.png" width="300" %}
 
 Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent cu
 rrent dipole source at the location of interest.

@@ -47,13 +47,13 @@ The pipeline of the MNE analysis can be divided into 5 bigger step
 
 The last three steps are using the outputs from processing of anatomical and electrophysiological data.
 
-{% include image src="/assets/img/development/mne_step1_biggersteps.png" width="250" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/mne_step1_biggersteps.png" width="250" %}
 
 ### 1. Anatomical processing
 
 The first part of anatomical processing of the MRI data is done by the Freesurfer program. MNE is using the output of this program and one of the FS functions to create head shapes with the boundary element method (BEM) and to set up the source space for the forward solution. The next figure shows the filenames (with red) that were created by FS and MNE is using them for input. When MNE is creating the BEM model meshes it is using a function (mri_watershed) from FS. Therefore, the FS has to be set up before running this MNE function.
 
-{% include image src="/assets/img/development/anatomical_processing_2.png" width="650" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/anatomical_processing_2.png" width="650" %}
 
 First, one should run FS for creating the input files for MNE.
 
@@ -81,7 +81,7 @@ This code will recognize the first xxx.ima file in the directory of the anatomic
 
 This figure shows the processing steps done by -autorecon1 when there is only one scanning run of one subject is available. The input and output file names are shown also for each step.
 
-{% include image src="/assets/img/development/fs_autorecon1.png" width="350" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/fs_autorecon1.png" width="350" %}
 
 This first processing step takes around 1,5 hour.
 
@@ -112,7 +112,7 @@ For further instructions, read <http://surfer.nmr.mgh.harvard.edu/fswiki/Recomme
 
 This figure shows the processing steps that happens when -autorecon2 is running. Not all of the output files are shown, and many of the processing stages could be divided into more individual FS functions. But I tried to add those output files that are used as input of later processing stages. The red file names are used later by MNE. The last step (green) belongs to -autorecon3.
 
-{% include image src="/assets/img/development/fs_autorecon23.png" width="500" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/fs_autorecon23.png" width="500" %}
 
 In the first stage (**automatic subcortical segmentation**) the volume is further normalized based on a GCA (gaussian filter array) model.
 
@@ -276,13 +276,13 @@ Before calculating the forward solution, the MRI and the MEG data has to be alig
 
 This is a general pipeline about how to do source analysis based on minimum-norm estimate.
 
-{% include image src="/assets/img/development/gen_pipeline2.png" width="600" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/gen_pipeline2.png" width="600" %}
 
 ### Anatomical processing:MEG
 
 The following figure shows the MNE and FS and FT pipeline of anatomical processing.
 
-{% include image src="/assets/img/development/anatomical_processing_fs_ft_mne.png" width="100" %}--0)
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/anatomical_processing_fs_ft_mne.png" width="100" %}--0)
 
 :!: Creating source space in FieldTrip has been tested only on MRI data with .mri extension.
 
@@ -295,25 +295,25 @@ In MNE Suite, the alignment and the coordinate transformation happens only just 
     innerskull = ft_read_headshape(<path to directory>/subjects/<subject's name>/bem/<subject's name>-inner_skull-5120.surf');
     ft_plot_mesh(innerskull);
 
-{% include image src="/assets/img/development/innerskull_5120.jpg" width="300" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/innerskull_5120.jpg" width="300" %}
 
 #### Innerskull in tkmedit
 
 I could load in only the sub10_inner_skull_surface file (output of mne_watershed_bem) in tkmedit overlayed on the T1.mgz.
 
-{% include image src="/assets/img/development/sub10_inner_skull_surface.jpg" width="350" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/sub10_inner_skull_surface.jpg" width="350" %}
 
 #### Plotting vol from FT
 
     ft_plot_mesh(vol.bnd);
 
-{% include image src="/assets/img/development/plot_vol.jpg" width="300" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/plot_vol.jpg" width="300" %}
 
 #### Plotting bnd3 from FT
 
     ft_plot_mesh(bnd3);
 
-{% include image src="/assets/img/development/plot_bnd3.jpg" width="300" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/plot_bnd3.jpg" width="300" %}
 
 ### Anatomical processing: EEG
 
@@ -363,15 +363,15 @@ Here are the outputs of ft_volumesegment on data from a .mgz volume, plotted wit
 
     seg.gray
 
-{% include image src="/assets/img/development/mgz_gray.jpg" width="400" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/mgz_gray.jpg" width="400" %}
 
     seg.white
 
-{% include image src="/assets/img/development/mgz_white.jpg" width="400" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/mgz_white.jpg" width="400" %}
 
     seg.csf
 
-{% include image src="/assets/img/development/mgz_csf.jpg" width="400" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/mgz_csf.jpg" width="400" %}
 
 This segmentation is not the same what MNE does with the help of FS. In order to make BEM meshes, one should create a volume that contains the brain, the brain with (or until) the skull and the entire head until the skin. For creating BEM meshes, I have followed this script: \[[example:create_bem_headmodel_for_eeg|Create BEM headmodel for EEG]]. This script needs a proper documentation because it is difficult to figure out to what one should attend during creating the brain, skin, skull volumes. :
 There are no FT functions for creating meshes, but the matlab image processing toolbox is used. It takes time to create the meshes.
@@ -398,7 +398,7 @@ And this is for plotting a mesh (inner skull) created by F
 
 The following picture show the BEM meshe
 
-{% include image src="/assets/img/development/meshes2.jpg" width="500" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/meshes2.jpg" width="500" %}
 
 ### Preprocessing MEG data
 
@@ -482,9 +482,9 @@ Test on phantom data
 
  Plot inverse solution at max (in time):
 
-[1] {% include image src="/assets/img/development/ftplotmesh_mne_phantom_at284.jpg" width="200" %}--" %}
-[2] {% include image src="/assets/img/development/ftplotmesh_ft_phantom_at198.jpg" width="200" %}--" %}
-[3] {% include image src="/assets/img/development/phantom_ft_sameleadfield.jpg" width="200" %}--" %}
+[1] {% include image src="/assets/img/development/replicate_functionality_of_mne_software/ftplotmesh_mne_phantom_at284.jpg" width="200" %}--" %}
+[2] {% include image src="/assets/img/development/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at198.jpg" width="200" %}--" %}
+[3] {% include image src="/assets/img/development/replicate_functionality_of_mne_software/phantom_ft_sameleadfield.jpg" width="200" %}--" %}
 
 ### Comparing source spaces
 
@@ -505,7 +505,7 @@ In Matlab:
     figure;
     ft_plot_mesh(bnd_mne)
 
-{% include image src="/assets/img/development/mesh_bnd_ts_mne.jpg" width="750" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/mesh_bnd_ts_mne.jpg" width="750" %}
 
 And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the matlab reducepatch functio
 
@@ -514,7 +514,7 @@ And the source space of the same volume created in FieldTrip, and reduced to the
 
     ft_plot_mesh(bnd2_ft);
 
-{% include image src="/assets/img/development/mesh_bnd5_ts_ft.jpg" width="650" %}
+{% include image src="/assets/img/development/replicate_functionality_of_mne_software/mesh_bnd5_ts_ft.jpg" width="650" %}
 
 ## Step 3: Tutorial
 

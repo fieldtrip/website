@@ -8,13 +8,13 @@ tags: [realtime, jinga-hi, jaga16]
 
 This page describes the interface between the Jinga-Hi JAGA16 device and the FieldTrip buffer.
 
-{% include image src="/assets/img/development/realtime/jaga16.jpg" width="120" %}--" %}
+{% include image src="/assets/img/development/realtime/jinga-hi/jaga16.jpg" width="120" %}--" %}
 
 The [Jinga-Hi](http://www.jinga-hi.com) JAGA16 is a miniaturised stand-alone device includes amplifier, digitizer, signal processor and transmitter. The device has 16 channels. Although the JAGA16 has been primarily designed for electrophysiological recordings (spikes and LFPs) in small animals, its specifications also make it very applicable to wireless EEG-BCI systems.  
 
 The packaged version that is depicted above includes a micro-USB interface at the side that can be used to power the device, although for normal operation it should be battery powered. Below is the device (wrapped in protective foil) besides a 500mAh battery.
 
-{% include image src="/assets/img/development/realtime/jaga16b.jpg" width="300" %}
+{% include image src="/assets/img/development/realtime/jinga-hi/jaga16b.jpg" width="300" %}
 
 Jinga-Hi [releases](https://github.com/Jinga-hi) MATLAB (mex-based) and Python code to interface with the device. Since the device dumps the data in a well-defined format over a UDP connection, it is not hard to implement your own software to access the data.
 

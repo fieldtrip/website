@@ -54,7 +54,7 @@ The **[/reference/ft_singleplotER](/reference/ft_singleplotER)** function first 
     cfg.channel = 'MLC24';
     figure; ft_singleplotER(cfg,avgFC);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig1.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig1.png" %}
 
 You could make the same plot by the following cod
 
@@ -65,7 +65,7 @@ You could make the same plot by the following cod
     xlim([-0.2 1.0])
     ylim([-1e-13 3e-13])
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig2.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig2.png" %}
 
 The advantage of **[/reference/ft_singleplotER](/reference/ft_singleplotER)** is that it does the bookeeping for you. E.g. you can plot the mean over all MLC channels, which are MEG channels over left-central region
 
@@ -75,7 +75,7 @@ The advantage of **[/reference/ft_singleplotER](/reference/ft_singleplotER)** is
     cfg.channel = 'MLC*';
     figure; ft_singleplotER(cfg,avgFC);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig3.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig3.png" %}
 
 and change the line width or colo
 
@@ -87,7 +87,7 @@ and change the line width or colo
     cfg.graphcolor = 'g';
     figure; ft_singleplotER(cfg,avgFC);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig4.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig4.png" %}
 
 The **[/reference/ft_singleplotER](/reference/ft_singleplotER)** function might not look so impressive compared to standard plot; that is because the ERF data representation is quite simple.
 
@@ -102,21 +102,21 @@ The FieldTrip plotting functions have a lot of built-in intelligence to make plo
     cfg.channel = 'MLC24'; % top figure
     figure; ft_singleplotTFR(cfg, TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig5.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig5.png" %}
 
 or with the average over a group of channel
 
     cfg.channel  = 'MLC*' % bottom figure
     figure; ft_singleplotTFR(cfg,TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig6.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig6.png" %}
 
 You can again make very similar figures using standard MATLAB plotting functions.
 
     chanindx = find(strcmp(TFRhann.label, 'MLC24'));
     figure; imagesc(squeeze(TFRhann.powspctrm(chanindx,:,:)));
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig7.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig7.png" %}
 
 The default MATLAB image is shown upside down compared to usual MEG/EEG conventions. Along the axes you can see the number of time and frequency bins, but not the acqual time and frequency. This can be fixed of course.
 
@@ -124,7 +124,7 @@ The default MATLAB image is shown upside down compared to usual MEG/EEG conventi
     axis xy % flip vertically
     colorbar
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig8.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig8.png" %}
 
 Still, the power is more difficult to interpret due to it being larger for low frequencies and smaller for high frequencies. This 1/f characteristic is removed from the figure by baseline correction. See also **[/reference/ft_freqbaseline](/reference/ft_freqbaseline)**.
 
@@ -137,7 +137,7 @@ The multiplot functions work similarly to the singleplot functions, again first 
     figure; ft_multiplotER(cfg, avgFC);
     axis on % this shows the actual MATLAB axes
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig9.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig9.png" %}
 
 Normally the axes of the figure are not visible, only the “axis” of each channel, but remember these are not real axes on which you can use MATLAB axis commands, the are just lines drawn by the function. Of course you can set the limits of the channel “axis” by the cfg structure (cfg.xlim, cfg.ylim).
 
@@ -148,7 +148,7 @@ Normally the axes of the figure are not visible, only the “axis” of each cha
     cfg.layout = 'CTF151.lay';
     figure; ft_multiplotTFR(cfg,TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig10.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig10.png" %}
 
 In the upper left corner you see the "COMMENT" element and in the upper right cornier you see the "SCALE" element. The scale contains the average of all channels.
 
@@ -161,7 +161,7 @@ The location of all channels and the COMMENT and SCALE placeholder can be visual
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 1 MB
     figure; ft_plot_lay(cfg.layout);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig11.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig11.png" %}
 
 Note that the layout contains all 151 MEG channels; the one channel missing in the data is automatically excluded from the plots.
 
@@ -172,7 +172,7 @@ All channels are squeezed in a circle and the nose and ears are indicated at the
     ft_plot_axes(avgFC.grad)
     view(-90, 90) % you should rotate the figure to get a good 3-D feel of the channel locations.
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig12.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig12.png" %}
 
 Although many tutorials elsewhere on the FieldTrip wiki are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
 
@@ -183,7 +183,7 @@ Although many tutorials elsewhere on the FieldTrip wiki are using the standard C
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 4 MB
     figure; ft_plot_lay(cfg.layout);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig13.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig13.png" %}
 
 The layout is determined by the layout file. Read more on layout files [here](/tutorial/layout), and in the [frequently asked questions](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 
@@ -196,7 +196,7 @@ For multiplotting planar gradient data from the Elekta Neuromag system it is esp
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 7 MB
     figure; ft_plot_lay(cfg.layout);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig14.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig14.png" %}
 
 You should zoom in on the figure to see the triplets for the three channels ar each sensor locations. There are also template layouts available that only contain the magnetometer channels at the correct location (i.e. not shifted) and that contain the combined planar channels. The latter one can be used after applying ft_combineplanar on your data.
 
@@ -211,7 +211,7 @@ You should zoom in on the figure to see the triplets for the three channels ar e
     cfg.parameter = 'individual'; % the default 'avg' is not present in the data
     figure; ft_topoplotER(cfg,GA_FC); colorbar
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig15.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig15.png" %}
 
     cfg = [];
     cfg.xlim = [0.9 1.3];                
@@ -222,7 +222,7 @@ You should zoom in on the figure to see the triplets for the three channels ar e
     cfg.layout = 'CTF151.lay';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig16.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig16.png" %}
 
 You can compare this to the more realistic helmet-style layout, which better acknowledges the fact that the MEG channels extend below the ears and that the helmet has sort of an opening at the face.
 
@@ -235,7 +235,7 @@ You can compare this to the more realistic helmet-style layout, which better ack
     cfg.layout = 'CTF151_helmet';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig17.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig17.png" %}
 
 The baseline correction computes the power difference compared to the pre-stimuls baseline. We can also look at the power ratio
 
@@ -248,7 +248,7 @@ The baseline correction computes the power difference compared to the pre-stimul
     cfg.layout = 'CTF151_helmet';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig18.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig18.png" %}
 
 The interpretation becomes more clear with
 
@@ -265,7 +265,7 @@ The interpretation becomes more clear with
     ft_hastoolbox('brewermap', 1);         % ensure this toolbox is on the path
     colormap(flipud(brewermap(64,'RdBu'))) % change the colormap
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig19.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig19.png" %}
 
 See http://colorbrewer2.org for more details.
 
@@ -283,7 +283,7 @@ In the help of **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/
     cfg.commentpos = 'title';
     figure; ft_topoplotTFR(cfg,TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig20.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig20.png" %}
 
 In **[/reference/ft_topoplotER](/reference/ft_topoplotER)** and **[/reference/ft_topoplotTFR](/reference/ft_topoplotTFR)**, you can specify many options to fully control the appearance of the picture. Subsequently you can use the MATLAB print function to write the figure to a file. Preferred file formats are EPS for vector drawings that can be edited in Adobe Illustrator or in Canvas (using “print -depsc”) or .png for bitmaps (using “print -dpng”).
 
@@ -309,14 +309,14 @@ Options specific to the topoplot
     cfg.marker = 'labels';                
     figure; ft_topoplotTFR(cfg,TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig21.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig21.png" %}
 
     cfg.gridscale = 300;                
     cfg.contournum = 10;                
     cfg.colormap = gray(10);            
     figure; ft_topoplotTFR(cfg,TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig22.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig22.png" %}
 
     cfg.gridscale = 300;
     cfg.contournum = 4;
@@ -326,7 +326,7 @@ Options specific to the topoplot
     cfg.markercolor = [0 0.69 0.94];
     figure; ft_topoplotTFR(cfg,TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig23.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig23.png" %}
 
 ### Interactive mode
 
@@ -341,7 +341,7 @@ During the phase of the analysis in which you do a lot of data inspection, you c
     cfg.interactive = 'yes';
     figure; ft_multiplotTFR(cfg,TFRhann);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig24.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig24.png" %}
 
 You should select channels using the mouse and click, then you get a singleplot average over those channels. You should select a time-frequency window and click, then you get topoplot average over that time-frequency window.
 
@@ -366,10 +366,10 @@ Although the code below shows how to visualize clusters, you should be [cautious
     cfg.layout = 'CTF151.lay';
     ft_clusterplot(cfg,statERF);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig25.png" %}
-{% include image src="/assets/img/tutorial/plotting/2017/fig26.png" %}
-{% include image src="/assets/img/tutorial/plotting/2017/fig27.png" %}
-{% include image src="/assets/img/tutorial/plotting/2017/fig28.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig25.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig26.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig27.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig28.png" %}
 
 ##### Clusters in time-frequency data
 
@@ -380,7 +380,7 @@ Although the code below shows how to visualize clusters, you should be [cautious
     cfg.layout = 'CTF151.lay';
     ft_clusterplot(cfg,statTFR);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig29.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig29.png" %}
 
 ### Plotting channel-level connectivity
 
@@ -438,12 +438,12 @@ Let us first provide the basic code to use one of these plotting methods, using 
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig30.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig30.png" %}
 
     % idem, in MNI (or SPM) coordinates
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig31.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig31.png" %}
 
     % plot 3 orthogonal slices
     cfg = [];
@@ -455,12 +455,12 @@ Let us first provide the basic code to use one of these plotting methods, using 
     cfg.opacitymap    = 'rampup';  
     ft_sourceplot(cfg, sourceDiffInt);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig32.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig32.png" %}
 
     % idem, in MNI (or SPM) coordinates
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig33.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig33.png" %}
 
 The three essential cfg parameters ar
 
@@ -533,7 +533,7 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
     ft_sourceplot(cfg, sourceDiffIntNorm);
     view ([90 0])             % rotate the object in the view
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig34.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig34.png" %}
 
 If you enable the camera toolbar (menu option "view", "camera toolbar") you have more options for controlling the 3-dimensional rendering, e.g. change perspective, change the position of the light (used for relection and shadows).
 
@@ -542,17 +542,17 @@ As with the channel-level multiplots, you can change the colormap that maps the 
     ft_sourceplot(cfg, sourceDiffIntNorm);
     colormap jet
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig35.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig35.png" %}
 
     ft_sourceplot(cfg, sourceDiffIntNorm);
     colormap hot
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig36.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig36.png" %}
 
     ft_sourceplot(cfg, sourceDiffIntNorm);
     colormap cool
 
-{% include image src="/assets/img/tutorial/plotting/2017/fig37.png" %}
+{% include image src="/assets/img/tutorial/plotting/fig37.png" %}
 
 If you right-click with the mouse on the colorbar in the figure, you can also do this interactively.
 
@@ -576,7 +576,7 @@ Although MATLAB is a very flexible development and analysis environment, it is n
 
 ## Suggested further reading
 
-Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/layout) explains how this mapping is constructed.   
+Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/tutorial/layout) explains how this mapping is constructed.   
 
 Frequently asked question
 {% include seealso tag1="plot" tag2="faq" %}

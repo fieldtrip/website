@@ -22,6 +22,6 @@ Note that this reference documentation is identical to the help that is displaye
     cfg.translate  = initial rotation of the box (default = [0 0 0])
     cfg.selection  = which voxels to keep, can be 'inside' or 'outside' (default = 'outside')
  
-    See also `<a href=/reference/ft_anonimizedata>``<font color=green>`FT_ANONIMIZEDATA`</font>``</a>`, FT_DEFACEVCOLUME, `<a href=/reference/ft_analysispipeline>``<font color=green>`FT_ANALYSISPIPELINE`</font>``</a>`, `<a href=/reference/ft_plot_mesh>``<font color=green>`FT_PLOT_MESH`</font>``</a>`
+    See also `<a href=/reference/ft_anonymizedata>``<font color=green>`FT_anonymIZEDATA`</font>``</a>`, FT_DEFACEVCOLUME, `<a href=/reference/ft_analysispipeline>``<font color=green>`FT_ANALYSISPIPELINE`</font>``</a>`, `<a href=/reference/ft_plot_mesh>``<font color=green>`FT_PLOT_MESH`</font>``</a>`
 `</pre>``</html>`
 

@@ -12,4 +12,4 @@ This common FieldTrip version on our network is automatically updated with each 
 
 If you want to do your computations on your laptop or at home, i.e. if you cannot access the h: drive, you can use the ftp or git version.
 
-See also this FAQ on [how to setup your FieldTrip path in MATLAB](/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+See also this FAQ on [how to setup your FieldTrip path in MATLAB](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).

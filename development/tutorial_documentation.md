@@ -1,5 +1,5 @@
 ---
-title: An overview on forward modeling
+title: A tutorial on forward modeling
 layout: default
 ---
 
@@ -7,11 +7,7 @@ layout: default
 
 FIXME This page is under construction
 
-Create again, when finished, in the initial page under:
-
-*  [An overview on forward modeling](/tutorial/forward)  
-
-# An overview on forward modeling
+# A tutorial on forward modeling
 
 ## Introduction
 
@@ -23,7 +19,7 @@ For MEG specific material, please refer also to: [MEG community site](http://meg
 
 During a neural discharge two contributions to biological currents can be distinguished in the surrounding of the neuron: 1. an axonal current (also called primary), 2. an extracellular ionic current (also called secondary).
 
-{% include image src="/assets/img/tutorial/forward/baillet.jpg" %}
+{% include image src="/assets/img/development/tutorial_documentation/baillet.jpg" %}
 *Pattern of primary and secondary neural currents (from Baillet et al)*
 
 The two currents (intra and extra-cellular) contribute differently to the signal of MEG and EEG/ECoG.
@@ -56,12 +52,9 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 
 *  volume conductor geometry
 
-*  Specific Maxwell equation into play (e.g. electric or magnetic field)
-
+  Specific Maxwell equation into play (e.g. electric or magnetic field)
 *  Type of source (simple/distributed)
-
 *  Matter properties (conductivity)
-
 *  Lead field algorithm
 
 ## Examples in FieldTrip
@@ -69,19 +62,14 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 ### MEG forward models
 
 *  single sphere
-
 *  multiple spheres
-
 *  BEM
-
 *  Nolte
 
 ### EEG forward models
 
 *  single sphere
-
 *  concentric spheres
-
 *  BEM
 
 ### ECoG forward models

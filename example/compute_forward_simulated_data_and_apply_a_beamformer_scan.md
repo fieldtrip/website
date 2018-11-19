@@ -67,4 +67,4 @@ tags: [example, meg, source]
 	cfg.funcolorlim = [1.5 2];  % the voxel in the center of the volume conductor messes up the autoscaling
 	ft_sourceplot(cfg, source);
 
-{% include image src="/assets/img/example/beamformer/example_beamforming.png" %}
+{% include image src="/assets/img/example/compute_forward_simulated_data_and_apply_a_beamformer_scan/example_beamforming.png" %}

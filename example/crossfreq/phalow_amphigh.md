@@ -70,7 +70,8 @@ layout: default
 	figure; ft_singleplotER([],fft_data);
 	print -dpng phalow_amphigh_fig2.png
 
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig1.png" width="400" %} {% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig2.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig1.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig2.png" width="400" %}
 
 ## Analysis Methods
 
@@ -110,8 +111,8 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig4.png
 
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig3.png" width="400" %}
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig4.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig3.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig4.png" width="400" %}
 
 ### Calculate coherence between power and raw 
 
@@ -159,7 +160,7 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig5.png
 
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig5.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig5.png" width="400" %}
 
 	
 	% mtmfft output cross-spectral-density between s1 (AM)(raw) and freq1
@@ -181,7 +182,7 @@ layout: default
 	axis xy
 	print -dpng phalow_amphigh_fig6.png
 
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig6.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig6.png" width="400" %}
 
 ### Power spectrum of amplitude envelope (by Hilbert transform)
 
@@ -217,6 +218,6 @@ layout: default
 	figure; ft_singleplotER(cfg,fft_hilbert);
 	print -dpng phalow_amphigh_fig8.png
 
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig7.png" width="400" %}
-{% include image src="/assets/img/example/crossfreq/phalow_amphigh_fig8.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig7.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/phalow_amphigh/phalow_amphigh_fig8.png" width="400" %}
 

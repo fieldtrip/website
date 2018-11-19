@@ -17,7 +17,7 @@ In this tutorial we will apply beaforming techniques to event-realted fields. Th
 In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as   computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/tutorial/natmeg/beamforming).
 
 {% include markup/info %}
-This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
+This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {% include youtube id="7eS11DtbIPw" %}
 {% include markup/end %}
@@ -46,7 +46,7 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-{% include image src="/assets/img/tutorial/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/bf_pipeline.jpg" width="650" %}
 
 *Figure: An example of a pipeline to locate sources associated with evoked fields.*
 
@@ -155,7 +155,7 @@ In the first step we re-segment the data into left and right hand responses usin
 	cfg.xlim    = [-.2 1];
 	subplot(2,2,2);ft_singleplotER(cfg,tlk);
 
-{% include image src="/assets/img/tutorial/aarhus/topographyandtimecourseERF.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/topographyandtimecourseERF.png" width="600" %}
 
 *Figure 1: Topography and time course of the motor evoked response performed with the right hand.*
 
@@ -309,7 +309,7 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aarhus/sourceplotm1_meg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplotm1_meg.png" width="600" %}
 
 *Figure 2: A source plot of the motor evoked field- ratio between the pre- and post-response conditions.*
 
@@ -342,7 +342,7 @@ The covariance matrix was computed on the basis of the single trials. Compute th
 In the previous step we applied an arbitrary chosen threshold for plotting the data. It is also possible to apply the permutation framework as extensively described in the statistic tutorials. It is strongly recommended to make yourself familiar with the framework and consult also the on-line lecture.
 
 {% include markup/info %}
-This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/stockholm2014q3) and is complemented by this lecture.  
+This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
 
 {% include youtube id="x0hR-VsHZj8" %}
 {% include markup/end %}
@@ -403,7 +403,7 @@ The source structure now contains the single trial estimates in the field **sour
 	        df: 50
 	       cfg: [1x1 struct]
 
-Now we can statistically compare the difference between the pre and post response source power using **[ft_sourcestatistics](/reference/ ft_sourcestatistics)** and plot the output after interpolating onto the anatomical image with **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
+Now we can statistically compare the difference between the pre and post response source power using **[ft_sourcestatistics](/reference/ft_sourcestatistics)** and plot the output after interpolating onto the anatomical image with **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
 
 	:::matab
 	cfg = [];
@@ -452,7 +452,7 @@ Finally, we plot the result. Instead of ratio the functional data is now represe
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,statint);
 
-{% include image src="/assets/img/tutorial/aarhus/sourceplottstatunmasked.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplottstatunmasked.png" width="600" %}
 
 *Figure 3: A source plot of the difference between the pre- and post-response conditions expressed in t-values.*
 
@@ -464,7 +464,7 @@ Uncomment the option **cfg.maskparameter = 'mask';** and try to interpret what y
 
 ## (MEG) Reconstructing the time course of activity in the primary motor cortex
 
-The ultimate motivation of source analysis of MEEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g. M1 identified in the previous steps) using **[ft_prepare_leadfield](/reference/ ft_prepare_leadfield)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](/reference/ ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ ft_sourceanalysis)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [ the virtual sensors tutorial](/tutorial/shared/virtual_sensors) in the context of different task demands.   
+The ultimate motivation of source analysis of MEEG data is the reconstruction of the time course of the neural activity at a particular location. The following section will demonstrate how to achieve this. First we have to compute a leadfield at the desired location (e.g. M1 identified in the previous steps) using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**. The only difference to the previous leadfield computation is that instead of discretizing the brain into multiple grid locations we now focus only on the location within the primary motor cortex. Next, we repeat the above steps, i.e. covariance matrix computation using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. Finally, we will multiply the data consisting the single trial observations with the spatial filters at the desired location. This is commonly known as virtual sensor computation and has been also covered in [ the virtual sensors tutorial](/tutorial/shared/virtual_sensors) in the context of different task demands.   
 
 ##### Compute leadfield at desired location
 
@@ -506,7 +506,7 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 	virtsens.fsample=data_right.fsample;
 	virtsens.label={'M1'}';
 
-Now we will use **[ ft_timelockanalysis](/reference/ ft_timelockanalysis )** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ ft_singleplotER)** and **[ft_singleplotTFR](/reference/ ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [ the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [ the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
+Now we will use **[ ft_timelockanalysis](/reference/ft_timelockanalysis )** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [ the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [ the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
 
 	%% compute the event related average at location M1
 	cfg=[];
@@ -553,7 +553,7 @@ Now we can plot the result.
 	    subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
 	end;
 
-{% include image src="/assets/img/tutorial/aarhus/timecourseatm1_meg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
 
 *Figure 4: Time course of activity in the primary motor cortex averaged across trials (left) and its single trial time-frequency decomposition right.*
 
@@ -674,7 +674,7 @@ Finally, we can plot the result using the same masking strategy as in the MEG se
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aarhus/sourceplotm1_eeg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplotm1_eeg.png" width="600" %}
 
 *Figure 5: Source plot of reconstructed activity using EEG.*
 
@@ -766,10 +766,10 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	    subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
 	end;
 
-{% include image src="/assets/img/tutorial/aarhus/timecourseatm1_eeg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_eeg.png" width="600" %}
 *Figure 6: Time course of activity in the primary motor cortex reconstructed with EEG.*
 
-{% include image src="/assets/img/tutorial/aarhus/timecourseatm1_topeeg_bottommeg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_topeeg_bottommeg.png" width="600" %}
 *Figure 6: Comparison of time course reconstruction of activity in the primary motor cortex using EEG (top row) and MEG (bottom row).*
 
 ## Summary and suggested further reading

@@ -33,9 +33,9 @@ According to the different anatomy acquisition techniques it is possible to dist
 
 All the routines which create a forward model need a description of the volume conductor model as input. This model is represented in a vol structure which contains a set of fields, among which vol.method (e.g. vol.method = 'dipoli'). All other fields are specific for the various methods and are generated in a pipeline which can be summarized in the following pictur
 
-{% include image src="/assets/img/development/wikie_scheme2.jpg" width="600" %})
+{% include image src="/assets/img/development/fwdarch/wikie_scheme2.jpg" width="600" %})
 
-The leftmost box indicates a set of functions (Matlab/external toolboxes, FieldTrip) that deal with anatomical volumes (a 3D matrix filled with intensity values - a set of voxels). 
+The leftmost box indicates a set of functions (Matlab/external toolboxes, FieldTrip) that deal with anatomical volumes (a 3D matrix filled with intensity values - a set of voxels).
 This step manages the volumetric information (MRI/CT scans) and transforms the anatomy into a processed anatomy ('ana2ana' functions), transforms the anatomy into a binary segmentation ('ana2seg' functions) or manipulates segmented images ('seg2seg' functions, i.e. morphology operators).
 
 The content of the central box is a set of functions which refines the geometrical description derived from the volumetric analysis. Any visual quality control is processed in this section, including interactions with the operator. The input can be a segmented volume, a triangulated set of points or a cloud of points. The output is a geometry (geom), defined as a geometrical description other than volumetric, like for example a triangulated mesh, a cloud of points representing the head, a 3D lattice of tetrahedrons/hexahedrons, etc.
@@ -65,7 +65,7 @@ The tables are different for EEG and ME
  | ^ Infinite  ^ Single sphere ^ Local spheres ^ Single shell ^ FEM ^ OpenMEEG BEM ^                                                               
  | ---------------------------------------------------------------------------------                                                               
  | 1.CT           |[INF](/#INF1 method )|[SPH1](/#SPH1 method )|[LS1](/#LS1 method)|[SH1](/#SH1 method)| [FEM1](/#FEM1 method)|[OM1](/#OpenMEEG1 method)|
- | 2.MRI          |[INF](/#INF2 method)|[SPH2](/#SPH2 method )|[LS2](/#LS2 method)|[SH2](/#SH2 method)| [FEM2](/#FEM2 method)|[OM2](/#OpenMEEG2 method)| 
+ | 2.MRI          |[INF](/#INF2 method)|[SPH2](/#SPH2 method )|[LS2](/#LS2 method)|[SH2](/#SH2 method)| [FEM2](/#FEM2 method)|[OM2](/#OpenMEEG2 method)|
  | 3.Headshape points    |[INF](/#INF3 method )|[SPH3](/#SPH3 method)|[LS3](/#LS3 method)|[SH3](/#SH3 method)|n.a.|[OM3](/#OpenMEEG3 method)|           
  | 4.Headshape triangulation|[INF](/#INF4 method )|[SPH4](/#SPH4 method)|[LS4](/#LS4 method)|[SH4](/#SH4 method)|n.a.|[OM4](/#OpenMEEG4 method)|        
  | 5.Nothing      |[INF](/#INF5 method )|[SPH5](/#SPH5 method)|n.a.|n.a.| n.a.|n.a.|                                                                 
@@ -146,7 +146,7 @@ volume of the scalp, the skull, inside of the skull, inside of the CSF
  3. - skull-CSF interface
 
 9a - Check the triangulations for intersections
-10a - Using Tetgen to generate a set of tetrahedrons for: 
+10a - Using Tetgen to generate a set of tetrahedrons for:
    --the inner CSF compartment
    --the inner skull compartment
    --the skull
@@ -170,7 +170,7 @@ the scalp, the skull, the inner skull, the inner CSF compartments
 6 - Erode the skull to obtain the inner CSF compartment
 7 - Assign the conductivity value to each compartment (from literature)
 8 - Define the points in which the solution has to be calculated as:
- 1.  Deep brain points, OR 
+ 1.  Deep brain points, OR
  2.  The vertices of a previously defined surface (i.e. the scalp)
 
 [Back](/#Architecture/ defining a table for the possible implementations)
@@ -590,7 +590,7 @@ become
 
 # Triangulation methods
 
-The triangulation methods are generally applied to pre-processed volumetric objects (e.g. segmented brain compartments) to generate a geometrical description expressed in terms of points and edges (a connectivity matrix). 
+The triangulation methods are generally applied to pre-processed volumetric objects (e.g. segmented brain compartments) to generate a geometrical description expressed in terms of points and edges (a connectivity matrix).
 
 These methods are commonly used in FieldTri
 
@@ -610,7 +610,7 @@ Some of the most common operators are **imfill**, **imdilate**, **bwlabeln**, et
 In particular **imdilate** can be used to augment the volume of a closed surface (e.g. the inner skull) in order to render the other surrounding tissues (e.g. the outer skull).
 An example is reported belo
 
-{% include image src="/assets/img/development/wiki12.png" %}
+{% include image src="/assets/img/development/fwdarch/wiki12.png" %}
 
 The code used to generate the figure is:
 
@@ -619,7 +619,7 @@ The code used to generate the figure is:
 
 An example of the **imfill** function is given below. This is the case, for example, in which we want to fill the volume so that it constitutes a single entity. It results in being useful for [triangulation](/#Triangulation methods), as explained in one of the techniques to obtain the outer-most surface (i.e. the skin).
 
-{% include image src="/assets/img/development/wiki34.png" %}
+{% include image src="/assets/img/development/fwdarch/wiki34.png" %}
 
 The code used to generate the figure is:
 
@@ -628,11 +628,11 @@ The code used to generate the figure is:
 
 The same effect can be reached with the use of another morphology function: **bwlabeln**.
 This function classifies the cluster of neighboring voxels and attaches a label to them, so that different objects can be easily distinguished (and processed) in the successive steps.
- 
+
 
 [Back](/#Architecture/ defining a table for the possible implementations)
 
-# A list of the headmodel functions 
+# A list of the headmodel functions
 
 **[ft_headmodel_asa](/reference/ft_headmodel_asa)**
 **[ft_headmodel_dipoli](/reference/ft_headmodel_dipoli)**
@@ -655,10 +655,10 @@ This function classifies the cluster of neighboring voxels and attaches a label 
 This functions are responsible to generate the lead fields for the different available methods. They are contained in the Forwrd/private folder.
 
 eeg_halfspace_medium_leadfield.m  
-leadfield_simbio.m 
+leadfield_simbio.m
 eeg_leadfield1.m	 
-eeg_leadfield4.m 
-meg_leadfield1.mexXXX 
+eeg_leadfield4.m
+meg_leadfield1.mexXXX
 eeg_leadfield4_prepare.m	  
 eeg_leadfieldb.m	 
 halfspace_medium_leadfield.m	 
@@ -676,14 +676,14 @@ fitsphere.m
 headcoordinates.m
 transfer_elec.m
 
-Examples of volumetric functions are: 
+Examples of volumetric functions are:
 
 **ana2ana functions:**
 **[ft_read_mri](/reference/ft_read_mri)**
 **[ft_volumereslice](/reference/ft_volumereslice)**
 **[ft_volumerealign](/reference/ft_volumerealign)**
 **[ft_volumenormalise](/reference/ft_volumenormalise)**
-**[ft_volumesmooth](/reference/ft_volumesmooth)**
+**ft_volumesmooth**
 
 **ana2seg functions:**
 **[ft_volumesegment](/reference/ft_volumesegment)**
@@ -703,12 +703,11 @@ e.g. the functions from the image processing toolbox
 **[ft_electroderealign](/reference/ft_electroderealign)**
 **[ft_prepare_mesh](/reference/ft_prepare_mesh)** gone into:
 
-**[ft_surfaceextract](/reference/ft_surfaceextract)**
-**[ft_surfacerefine](/reference/ft_surfacerefine)**
-**[ft_surfacedownsample](/reference/ft_surfacedownsample)**
-
-**[ft_surfacesmooth](/reference/ft_surfacesmooth)**
-**[ft_surfacecheck](/reference/ft_surfacecheck)**, like closed? outward pointing? etc
+**ft_surfaceextract**
+**ft_surfacerefine**
+**ft_surfacedownsample**
+**ft_surfacesmooth**
+**ft_surfacecheck**, like closed? outward pointing? etc
 
 **mesh2vol functions:**
 **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
@@ -747,4 +746,3 @@ Alternatively the routines that deal with geometric information other that voxel
 
 All routines that create head models must allow the transition from all objects to all others (if possible), and from voxel based images to geometrical objects.
 For example the routine prepare_mesh_manual segments boundaries directly from the MRI scans and generates connected lines (if goes from ana to 1d objects).
-

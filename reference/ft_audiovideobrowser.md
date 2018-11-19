@@ -23,7 +23,7 @@ Note that this reference documentation is identical to the help that is displaye
     cfg.audiofile   = string with the filename
     cfg.videofile   = string with the filename
     cfg.trl         = Nx3 matrix, see `<a href=/reference/ft_definetrial>``<font color=green>`FT_DEFINETRIAL`</font>``</a>`
-    cfg.anonimize   = [x1 x2 y1 y2], range in pixels for placing a bar over the eyes (default = [])
+    cfg.anonymize   = [x1 x2 y1 y2], range in pixels for placing a bar over the eyes (default = [])
     cfg.interactive = 'yes' or 'no' (default = 'yes')
  
     If you do NOT specify cfg.datahdr, the header must be present in the input data.

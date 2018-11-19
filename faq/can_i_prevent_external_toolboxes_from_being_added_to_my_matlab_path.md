@@ -6,7 +6,7 @@ tags: [faq, matlab, toolbox, path]
 
 ## Can I prevent "external" toolboxes from being added to my MATLAB path?
 
-The recommended FieldTrip path settings are explained in this [frequently asked question](/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+The recommended FieldTrip path settings are explained in this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
 The code in the **[ft_defaults](/reference/ft_defaults)** function will execute only once and preferably should be called by you in your startup.m file. The main FieldTrip functions will also call **[ft_defaults](/reference/ft_defaults)** to ensure that the subdirectories with teh code that they rely on are added to the path.
 

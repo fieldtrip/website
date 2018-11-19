@@ -121,7 +121,7 @@ Let's plot the results and see if there's a differenc
 	subplot(324);ft_singleplotTFR(cfg, freq_combined_avg1);title('combined-then-average');colorbar;
 	subplot(326);ft_singleplotTFR(cfg, freq_combined_avg2);title('average-then-combined');colorbar;
 
-{% include image src="/assets/img/example/example/tfr.png" width="700" %}
+{% include image src="/assets/img/example/combineplanar_pipelineorder/tfr.png" width="700" %}
 
 We can see that the second and the third row indicates that the other of the ft_combineplanar does not influence the power output (same topo and power scale). This is because with the induced TFR each single trial is squared (power estimate) and ft_combineplanar cfg.combinemethod='sum' on freq datatype [sums](http://mathworld.wolfram.com/VectorAddition.html) the vertical and the horizontal components. As the single trial estimates are positive (power estimates), the order of the operation does not influence the output. You can now guess whether the same logic is going to hold for the Event-Related Fields.
 
@@ -187,6 +187,6 @@ Let's visualize and compare the result
 	subplot(426);ft_singleplotER(cfg, data_combined_avg2);title('average axial then planar+combined');
 	subplot(428);ft_singleplotER(cfg, data_combined_avg3);title('average planar then combined');
 
-{% include image src="/assets/img/example/example/erf.png" width="700" %}
+{% include image src="/assets/img/example/combineplanar_pipelineorder/erf.png" width="700" %}
 
 We can see that the second row (ft_combineplanar single trials and then average single trials) it's very different (and way higher on amplitude) than the third and fourth rows. It's very difficult to appreciate the alpha desynchronization effect (compare it with the axial representation, first row). This is because the ft_combineplanar cfg.combinemethod='sum' for raw and timelock data, squares the vertical and the horizontal planar components (non-linear transformation). Then, as ERF is a linear transformation (mean), the order of the non-linear transformation is going to influence the output. You can also see that if the average is computed on the axial and the planar level (both data representations preserve the positive and negatives parts of the signal), and then we combine the planar, the output is almost identical in time and space (topographies).

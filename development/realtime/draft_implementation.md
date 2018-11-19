@@ -8,7 +8,7 @@ tags: [realtime, development]
 
 ### Provide a unified open_connection call
 
-Currently, Matlab users type %%'buffer://somehost:port'%% for talking to a buffer, and thanks to some intelligence in 
+Currently, Matlab users type %%'buffer://somehost:port'%% for talking to a buffer, and thanks to some intelligence in
 the MEX file, this translates into either opening a new TCP connection, reusing a connection, or talking directly to
 a buffer embedded in the MEX file.
 
@@ -25,7 +25,7 @@ One small difficulty remains: Currently there is always only one buffer per proc
 to support having multiple buffers in the same process, we need some way to distinguish between them, and do so by using a string (as above).
 However, the most natural way would be to encapsulate all variables of an embedded buffer in one C struct, and refer to that struct
 by a pointer. How should we turn this into a string in a sensible way? Have a static array of pointers and use an index into that array?
-Use the address of the pointer as a hex-string? 
+Use the address of the pointer as a hex-string?
 
 ### Add prefixes to all C API functions and data structures
 
@@ -35,19 +35,14 @@ to other libraries at the same time. ''ft_'' or ''ftb_'' looks like a reasonable
 ### Add higher-level C API calls for standard requests
 
 Currently every C program using the FieldTrip buffer needs to do the same steps (fill request data structure, check response data
-structure, clean up) over and over again. At least some of this could be made easier. This will also make it less painful to migrate 
-to newer protocol versions. C++ users can already use wrapper classes in FtBuffer.h for handling requests and responses, 
+structure, clean up) over and over again. At least some of this could be made easier. This will also make it less painful to migrate
+to newer protocol versions. C++ users can already use wrapper classes in FtBuffer.h for handling requests and responses,
 which provide automatic cleanup.
 
 ## See also
 
-*  [draft network](/draft network)
-
-*  [draft implementation](/draft implementation)
-
-*  [draft header chunks](/draft header chunks)
-
-*  [draft compatability](/draft compatability)
-
-*  [scratchpad](/scratchpad)
-
+*  [draft network](/development/realtime/draft_network)
+*  [draft implementation](/development/realtime/draft_implementation)
+*  [draft header chunks](/development/realtime/draft_header_chunks)
+*  [draft compatability](/development/realtime/draft_compatability)
+*  [scratchpad](/development/realtime/scratchpad)
