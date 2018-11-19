@@ -30,13 +30,13 @@ The buffer application does not show anything, it only starts the buffer, which 
 
 The sine2ft and viewer initially looks like thi
 
-{% include image src="/assets/img/faq/sine2ft.png" width="300" %}
-{% include image src="/assets/img/faq/bufferviewer.png" width="400" %}
+{% include image src="/assets/img/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer/sine2ft.png" width="300" %}
+{% include image src="/assets/img/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer/bufferviewer.png" width="400" %}
 
 If you click "start" in the sine2ft window, and subsequently "connect" in the viewer window, you will see that data starts streaming from sine2ft->buffer->viewer.
 
-{% include image src="/assets/img/faq/sine2ft_running.png" width="300" %}
-{% include image src="/assets/img/faq/bufferviewer_running.png" width="400" %}
+{% include image src="/assets/img/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer/sine2ft_running.png" width="300" %}
+{% include image src="/assets/img/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer/bufferviewer_running.png" width="400" %}
 
 ## Connect from MATLAB
 
@@ -72,7 +72,7 @@ Subsequently you could do
 
 to see the amount of data in the buffer steadily increasing over time. Note that all channels have exactly the same value, hence you will only see a single sine wave. 
 
-{% include image src="/assets/img/faq/screen_shot_2013-11-12_at_17.05.01.png" width="400" %}
+{% include image src="/assets/img/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer/screen_shot_2013-11-12_at_17.05.01.png" width="400" %}
 
 After a certain amount of time, the [ring buffer](http://en.wikipedia.org/wiki/Circular_buffer) will fill up and start wrapping around. From that point onward you will not be able to read the data all the way back from sample 1. 
 

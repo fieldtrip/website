@@ -45,7 +45,7 @@ To localize the oscillatory sources for the example dataset we will perform the 
 *  Compute a spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
    * Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
-{% include image src="/assets/img/tutorial/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/tutorial/beamformer/bf_pipeline.jpg" width="650" %}
 
 ## Preprocessing
 

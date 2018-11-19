@@ -18,14 +18,14 @@ The following benchmarks have been run using the **rt_benchmark** script in the 
 
 The first name in the legend always refers to the machine where the **rt_benchmark** script was run from, whereas the other name behind the dash refers to the machine that contained the buffer, with the exception of **dma**, which means that the buffer was kept in the same Matlab instance, thus involving no TCP/IP communication.
 
-{% include image src="/assets/img/faq/benchmark_w.png" %}
-{% include image src="/assets/img/faq/benchmark_r.png" %}
+{% include image src="/assets/img/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming/benchmark_w.png" %}
+{% include image src="/assets/img/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming/benchmark_r.png" %}
 
 The dramatic dip for the mentat2xx-localhost connections needs further investigation.
 
 Update 19-08-2010: After implementing an alternative communication channel using local UNIX domain sockets, here is an updated figure for a single 64-bit Linux machine. Communication over local domain sockets is generally faster, but most importantly, it is more consistent across blocksizes and scales linearly like the DMA throughput.
 
-{% include image src="/assets/img/faq/mentat201_tcp_vs_unix.png" %}
+{% include image src="/assets/img/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming/mentat201_tcp_vs_unix.png" %}
 
 # Older comparisons involving Apple computers
 

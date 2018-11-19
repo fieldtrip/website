@@ -26,7 +26,7 @@ Finally, this example page shows how you can very simply stratify with the Field
 	figure; hist(s, 100)
 	
 
-{% include image src="/assets/img/example/twodistributions.png" width="500" %}
+{% include image src="/assets/img/example/stratify/twodistributions.png" width="500" %}
 
 **Figure 1** Two distributions with different means
 
@@ -51,7 +51,7 @@ Finally, this example page shows how you can very simply stratify with the Field
 	figure; hist(s, 100)
 	
 
-{% include image src="/assets/img/example/rmextremes.png" width="500" %}
+{% include image src="/assets/img/example/stratify/rmextremes.png" width="500" %}
 
 **Figure 2** Here we have made the means of the two distributions approximately the same by removing the extreme values of the tails of the two distributions
 
@@ -103,7 +103,7 @@ Finally, this example page shows how you can very simply stratify with the Field
 	figure; hist(s, 100)
 	
 
-{% include image src="/assets/img/example/align_distib.png" width="500" %}
+{% include image src="/assets/img/example/stratify/align_distib.png" width="500" %}
 
 **Figure 3** Now we have taken only the part of the two distributions that overlap. Note that this method preserves fewer trials than trimming the extremes.
 

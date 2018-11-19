@@ -56,32 +56,32 @@ Frequency Analysis progres
       - tested mtmfft and mtmwelch for the same timewindow (cfg.t_ftimwin=10 for mtmwelch and mtmconvol). Amplitudes are now close to eachother. (5.6039 e -8 (mtmfft) and 5.6051 e -8 (mtmwelch and mtmconvol)).
 
 **freq002_a**
-{% include image src="/assets/img/wiki/averagesfreq.png" %}
+{% include image src="/assets/img/development/correctness/averagesfreq.png" %}
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_b**
-{% include image src="/assets/img/wiki/freq002_b.png" %}
+{% include image src="/assets/img/development/correctness/freq002_b.png" %}
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_c**
-{% include image src="/assets/img/wiki/freq002_c.png" %}
+{% include image src="/assets/img/development/correctness/freq002_c.png" %}
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_d**
-{% include image src="/assets/img/wiki/freq002_d.png" %}
+{% include image src="/assets/img/development/correctness/freq002_d.png" %}
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_e**
-{% include image src="/assets/img/wiki/tapsmo.png" %}
+{% include image src="/assets/img/development/correctness/tapsmo.png" %}
 
 **freq002_f**
-{% include image src="/assets/img/wiki/delta_freqs.png" %}
+{% include image src="/assets/img/development/correctness/delta_freqs.png" %}
 
 **freq002_g**
-{% include image src="/assets/img/wiki/tjirptfr.png" %}
+{% include image src="/assets/img/development/correctness/tjirptfr.png" %}
 
-{% include image src="/assets/img/wiki/tjirp.png" %}
+{% include image src="/assets/img/development/correctness/tjirp.png" %}
 legend: blue = mtmfft; red = mtmconvol; cyaan = wltconvol; black = tfr; green = mtmwelch;
 
 **freq002_h**
-{% include image src="/assets/img/wiki/waveletstfrdelta.png" %}
+{% include image src="/assets/img/development/correctness/waveletstfrdelta.png" %}

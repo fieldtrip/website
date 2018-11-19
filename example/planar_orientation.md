@@ -35,4 +35,4 @@ The following code demonstrates how you can determine the orientation of the two
 	axis equal
 	axis vis3d
 
-{% include image src="/assets/img/example/planar_orientation.png" %}
+{% include image src="/assets/img/example/planar_orientation/planar_orientation.png" %}

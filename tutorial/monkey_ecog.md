@@ -175,7 +175,7 @@ After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectc
 
 *Figure 5: Time-frequency representation of power using ft_multiplotTFR and the layout designed in the steps above. Highlighted area of electrodes is used for the illustration in figure 6.*
 
-{% include image src="/assets/img/tutorial/sensorimotortfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/sensorimotortfr.png" width="400" %}
 
 *Figure 6: Time-frequency representation of power averaged across the electrodes highlighted in the previous figure. Note the initial evoked power in the low frequency range followed by induced depression of oscillatory power in the alpha frequency range.*
 
@@ -213,7 +213,7 @@ Typically, visual grating tasks reliably elicit sustained gamma band response ~6
 	cfg.ylim=[40 120];
 	subplot(2,2,2); ft_singleplotTFR(cfg,tfrhfbl);
 
-{% include image src="/assets/img/tutorial/gammatopotfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/monkey_ecog/gammatopotfr.png" width="400" %}
 
 *Figure 7: Left- topography of the induced gamma band response centered around ~60 Hz. Right-Time-frequency representation of power for a single electrode located over the occipital cortex.*
 

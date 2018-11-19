@@ -22,7 +22,7 @@ The CTF / Neuromag acquisition computer only runs a small program in the backgro
 
 The second (visualization / real-time analysis) computer runs MATLAB, reads the data over the network from the buffer and does the plotting using **[ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)**.
 
-{% include image src="/assets/img/getting_started/headloc_flowchart.png" width="600" %}
+{% include image src="/assets/img/getting_started/realtime_headlocalizer/headloc_flowchart.png" width="600" %}
 
 ## Step by step description for the CTF acquisition computer
 
@@ -76,7 +76,7 @@ The hostname address should points to the location where the buffer is run - i.e
 
 It is recommended to install a 'vga switch' or 'video matrix' in the lab that can overwrite the signal from the stimulus presentation computer by that of the realtime visualization computer. This way the visualization can also be presented to the subject in the magnetically shielded room, allowing the subject to reposition himself/herself.
 
-{% include image src="/assets/img/getting_started/switch-box-hd15-2-way-bestlink.jpg" %}
+{% include image src="/assets/img/getting_started/realtime_headlocalizer/switch-box-hd15-2-way-bestlink.jpg" %}
 
 For **Neuromag** systems, the real-time head localizer uses a rigidbody constraint to optimally dipole fit the real time positions of the head position indicator (HPI) coils, and thus of the subject's head. This means a hypothetical magnetic field distribution of all coils combined, is generated, based on their relative digitized positions. The actual positions and orientations of the coils making up this rigid body are then approximated by fitting the resulting hypothetical field distribution to the actually recorded magnetic field distribution. It is, thus, important that all coils are working optimally. This can be [checked offline](/faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils?), using an already recorded dataset.
 

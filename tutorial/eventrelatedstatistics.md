@@ -51,7 +51,7 @@ We will perform the following steps to do a statistical test in FieldTrip:
 
 * We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoploter)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
 
-{% include image src="/assets/img/development/project/tutorial_stat/ft_stat_tutorial2.png" %}
+{% include image src="/assets/img/tutorial/eventrelatedstatistics/ft_stat_tutorial2.png" %}
 
 *Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes have been done already.*
 

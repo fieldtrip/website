@@ -96,7 +96,7 @@ This computes the spectral decomposition and the coherence spectrum between all 
 	figure
 	ft_connectivityplot(cfg, coherence);
 
-{% include image src="/assets/img/tutorial/virtualchannels_emg_coherence.png" width="500" %}
+{% include image src="/assets/img/tutorial/connectivityextended/virtualchannels_emg_coherence.png" width="500" %}
 
 The spectrum reveals a strong coherence peak around 20 Hz between the right motor cortex and the left EMG, as expected, and as we found in the beamforming tutorial as well, where we beamed the sensor-level coherence directly. Additionally, we also see a corticomuscular coherence peak in the gamma frequency range.
 

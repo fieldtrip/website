@@ -106,8 +106,8 @@ Please also skip through several epochs in the data and zoom out in the time axi
 	  cfg.blocksize   = 30;         % view the continous data in 30-s blocks
 	  ft_databrowser(cfg, data_continuous);
 
-{% include image src="/assets/img/tutorial/sleep_figure_1.png" width="400" %}
-{% include image src="/assets/img/tutorial/sleep_figure_1_2.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_figure_1.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_figure_1_2.png" width="400" %}
 
 *Figure 2: **[ft_databrowser](/reference/ft_databrowser)** of the original data with renamed channels. The data can be horizontally (time axis) and vertically (y-axis/signal amplitude) zoomed in and out to view the data in smaller or larger segments. And data can be viewed segment by segment..*
 
@@ -240,7 +240,7 @@ Let us view the data in 2-hour blocks again after excluding the parts with EMG o
 	  cfg.blocksize   = 60*60*2; % view the data in blocks
 	  ft_databrowser(cfg, data_continuous_clean);
 
-{% include image src="/assets/img/tutorial/sleep_figure_emg_and_eog_artifact_databrowser.png" width="800" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_figure_emg_and_eog_artifact_databrowser.png" width="800" %}
 
 ## Estimating frequency-represtation over sleep
 
@@ -297,7 +297,7 @@ Now we can view the final time-frequency over the whole night
 	cfg.zlim           = [-0.5 0.5];
 	ft_singleplotTFR(cfg, freq_continuous);
 
-{% include image src="/assets/img/tutorial/sleep_tfr_30sec-segments.png" width="600" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_tfr_30sec-segments.png" width="600" %}
 
 What we need in the end is time-frequency spectra over specific frequency bands. So for each frequency band we select and average from the previous time-frequency structure computed over a wider range of bands.
 
@@ -379,7 +379,7 @@ View the whole sleep data in frequency band power
 	  cfg.blocksize   = 60*60*2; %view the whole data in blocks
 	  ft_databrowser(cfg, data_continuous_perband);
 
-{% include image src="/assets/img/tutorial/sleep_freq_bands_over_sleep.png" width="600" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_freq_bands_over_sleep.png" width="600" %}
 ## Identify non-REM sleep
 
 We will now focus on non-REM EEG activity. This will help us to better identify non-REM events within the data by ignoring Wake and REM and artifactual epochs. We take use of the previous information about artifactual epochs we identified with EMG and epochs free of EOG activtiy (that are typical for Wake or REM sleep).
@@ -409,7 +409,7 @@ View the whole sleep data in frequency band power now including the combinded sl
 	cfg.blocksize   = 60*60*2; % view the whole data in blocks
 	ft_databrowser(cfg, data_continuous_perband_sum);
 
-{% include image src="/assets/img/tutorial/sleep_freq_bands_over_sleep_non-rem_estimation.png" width="600" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_freq_bands_over_sleep_non-rem_estimation.png" width="600" %}
 
 As an estimate to find epochs that are very likely to be non-REM we identify every epoch where the SWA+Spindle signal is above a certain threshold. For example the the average of the signal is used here as a threshold and we then keep the information of when those periods begin and end.
 
@@ -480,7 +480,7 @@ Lets load a prescored hypnogram as the reference
 	lab(strcmp(lab, '-1')) = {'?'};
 	yticklabels(lab); %set(gca,'YTickLabel',lab) ;%prior to Matlab 2016b use this
 
-{% include image src="/assets/img/tutorial/sleep_hypongram_estimated_vs_prescored.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_hypongram_estimated_vs_prescored.png" width="400" %}
 
 Now we want to view either the prescored or the estimated hypnogram information in with **[ft_databrowser](/reference/ft_databrowser)** using the feature to mark artifactual epochs to highlight epochs according to their sleep state. For simplicity, here we want to focus only on Wake, REM and non-REM because those sleep stages are the ones we get both from the prescored and our estimated hypnogram. However the prescored hypnogram can also give us a more detailed view on the non-REM sleep stages that we can take a look at in the browser
 
@@ -517,7 +517,7 @@ View it in the time-resolved spectral estimate each sample corresponding to a 30
 	cfg.artifactalpha = 0.7; % this make the colors less transparent and thus more vibrant
 	ft_databrowser(cfg, data_continuous_perband_sum);
 
-{% include image src="/assets/img/tutorial/sleep_databrowser_hypnogarm_annotation.png" width="600" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_databrowser_hypnogarm_annotation.png" width="600" %}
 #### Exercise 4
 
 {% include markup/info %}
@@ -544,7 +544,7 @@ View it then together with the original data after adjusting the hypnograms from
 	cfg.artifactalpha = 0.7;
 	ft_databrowser(cfg, data_continuous);
 
-{% include image src="/assets/img/tutorial/sleep_databrowser_hypnogarm_annotation_original_data.png" width="600" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_databrowser_hypnogarm_annotation_original_data.png" width="600" %}
 
 Store the hypnogram in the epoched data as "trialinfo". In a cognitive experiment the epochs/trials would be ~1 second and each would have a condition code. Here the epochs/trials are 30 seconds and each has the sleep stage as code.
 
@@ -611,7 +611,7 @@ Check if the detected peaks are good estimates of the R-wave in the **[ft_databr
 	cfg.artifactalpha = 0.7;
 	ft_databrowser(cfg, data_continuous);
 
-{% include image src="/assets/img/tutorial/sleep_r-wave_browser.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_r-wave_browser.png" width="400" %}
 
 From this R-wave samples we can also compute a continuous heart rate signal.
 
@@ -628,7 +628,7 @@ From this R-wave samples we can also compute a continuous heart rate signal.
 	xlabel('time (s)');
 	ylabel('heart rate (bpm)');
 
-{% include image src="/assets/img/tutorial/sleep_heart_rate_signal.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_heart_rate_signal.png" width="400" %}
 
 ### Sleep spindles and slow waves in EEG
 
@@ -662,7 +662,7 @@ Lets view the prepared non-REM data
 	cfg.viewmode   = 'vertical';
 	ft_databrowser(cfg, data_continuous_nonREM);
 
-{% include image src="/assets/img/tutorial/sleep_non-rem_cleaned_browser.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_non-rem_cleaned_browser.png" width="400" %}
 
 #### Slow-wave or sleep spindle detection in EEG
 
@@ -698,8 +698,8 @@ Candidates for slow waves or sleep spindle events can be detected using **[ft_ar
 
 	[cfg, ] = ft_artifact_zvalue(cfg,data_continuous_nonREM);
 
-{% include image src="/assets/img/tutorial/sleep_slow-wave_artifact.png" width="400" %}
-{% include image src="/assets/img/tutorial/sleep_spindle_artifact.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_slow-wave_artifact.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_spindle_artifact.png" width="400" %}
 
 #### Exercise 5
 
@@ -797,8 +797,8 @@ The polarity of the signal matters. Does the activity that we timelock give us c
 	cfg.title  = 'Non-REM event ERP time-locked to down-peak';
 	ft_singleplotER(cfg,timelock)
 
-{% include image src="/assets/img/tutorial/sleep_slow-wave_erp.png" width="400" %}
-{% include image src="/assets/img/tutorial/sleep_spindle_erp.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_slow-wave_erp.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_spindle_erp.png" width="400" %}
 
 Calculate the Event related Time-Frequency (ERF) around the event timelocked to the trough.
 
@@ -822,8 +822,8 @@ Visualize the event related time-frequency around the event timelocked to the tr
 	cfg.title          = 'Event, time-frequency';
 	ft_singleplotTFR(cfg,event_freq);
 
-{% include image src="/assets/img/tutorial/sleep_slow-wave_tfr.png" width="400" %}
-{% include image src="/assets/img/tutorial/sleep_spindle_tfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_slow-wave_tfr.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_spindle_tfr.png" width="400" %}
 
 View the detected events in the orginal data.
 
@@ -840,8 +840,8 @@ View the detected events in the orginal data.
 	cfg.plotevents                      = 'yes';             
 	ft_databrowser(cfg, data_continuous_nonREM);
 
-{% include image src="/assets/img/tutorial/sleep_slow-wave_browser.png" width="400" %}
-{% include image src="/assets/img/tutorial/sleep_spindle_browser.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_slow-wave_browser.png" width="400" %}
+{% include image src="/assets/img/tutorial/sleep/sleep_spindle_browser.png" width="400" %}
 
 #### Exercise 6
 

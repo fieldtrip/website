@@ -46,7 +46,7 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-{% include image src="/assets/img/tutorial/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/bf_pipeline.jpg" width="650" %}
 
 *Figure: An example of a pipeline to locate sources associated with evoked fields.*
 
@@ -155,7 +155,7 @@ In the first step we re-segment the data into left and right hand responses usin
 	cfg.xlim    = [-.2 1];
 	subplot(2,2,2);ft_singleplotER(cfg,tlk);
 
-{% include image src="/assets/img/tutorial/aarhus/topographyandtimecourseERF.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/topographyandtimecourseERF.png" width="600" %}
 
 *Figure 1: Topography and time course of the motor evoked response performed with the right hand.*
 
@@ -309,7 +309,7 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aarhus/sourceplotm1_meg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplotm1_meg.png" width="600" %}
 
 *Figure 2: A source plot of the motor evoked field- ratio between the pre- and post-response conditions.*
 
@@ -452,7 +452,7 @@ Finally, we plot the result. Instead of ratio the functional data is now represe
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,statint);
 
-{% include image src="/assets/img/tutorial/aarhus/sourceplottstatunmasked.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplottstatunmasked.png" width="600" %}
 
 *Figure 3: A source plot of the difference between the pre- and post-response conditions expressed in t-values.*
 
@@ -553,7 +553,7 @@ Now we can plot the result.
 	    subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
 	end;
 
-{% include image src="/assets/img/tutorial/aarhus/timecourseatm1_meg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
 
 *Figure 4: Time course of activity in the primary motor cortex averaged across trials (left) and its single trial time-frequency decomposition right.*
 
@@ -674,7 +674,7 @@ Finally, we can plot the result using the same masking strategy as in the MEG se
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aarhus/sourceplotm1_eeg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplotm1_eeg.png" width="600" %}
 
 *Figure 5: Source plot of reconstructed activity using EEG.*
 
@@ -766,10 +766,10 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	    subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
 	end;
 
-{% include image src="/assets/img/tutorial/aarhus/timecourseatm1_eeg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_eeg.png" width="600" %}
 *Figure 6: Time course of activity in the primary motor cortex reconstructed with EEG.*
 
-{% include image src="/assets/img/tutorial/aarhus/timecourseatm1_topeeg_bottommeg.png" width="600" %}
+{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_topeeg_bottommeg.png" width="600" %}
 *Figure 6: Comparison of time course reconstruction of activity in the primary motor cortex using EEG (top row) and MEG (bottom row).*
 
 ## Summary and suggested further reading

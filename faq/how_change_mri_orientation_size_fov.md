@@ -37,7 +37,7 @@ When the anatomical data is plotted, the default behavior is to plot the anatomi
 	cfg = [];
 	ft_sourceplot(cfg,mri)
 
-{% include image src="/assets/img/faq/mri_orinetation/mri.png" width="400" %}
+{% include image src="/assets/img/faq/how_change_mri_orientation_size_fov/mri.png" width="400" %}
 
 *Figure 1. Anatomical mri plotted **without** using ft_volumereslice before plotting*
 
@@ -52,7 +52,7 @@ Plotting the resliced anatomical MRI results in a figure with the usually desire
 	cfg = [];
 	ft_sourceplot(cfg,mrirs); 
 
-{% include image src="/assets/img/faq/mri_orinetation/mrirs.png" %}
+{% include image src="/assets/img/faq/how_change_mri_orientation_size_fov/mrirs.png" %}
 
 *Figure 2. Plot of the anatomical mri after using ft_volumereslice*  
 
@@ -72,7 +72,7 @@ In the figures above you can appreciate the change in the FOV by considering the
 
 The ft_volumereslice operations, such as changing the orientation of the anatomy and changing the resolution of the voxels can be conceptually understood by looking at the figure belo
 
-{% include image src="/assets/img/tutorial/reslice2.jpg" width="500" %}
+{% include image src="/assets/img/faq/how_change_mri_orientation_size_fov/reslice2.jpg" width="500" %}
 
 The figure shows the original volumetric slices (dotted black lines) and the desired slices (bold red). Note that the distance between the original slices is 2 cm, whereas the pixel distance within the same slice is 1 cm (black). After re-slicing (red) the voxel's dimensions are the same. You can also see that the voxels are aligned with the axes of the coordinate system to which the image was re-aligned earlier (see the black vs. red axes at the bottom of the figures). 
 

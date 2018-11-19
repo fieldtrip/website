@@ -182,7 +182,7 @@ Biophys J. 76(2):691-708))((Percival and Walden, 1993 Spectral analysis for phys
 
 Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
-{% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrtiles.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/tfrtiles.png" %}
 
 *Figure 6: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases.*
 
@@ -258,7 +258,7 @@ Click around the multiplot to explore the visual gamma response and its topograp
 
 In a next step, you can get an overview of your analyses by clicking on the FieldTrip menu item and selecting "Show pipeline
 
-{% include image src="/assets/img/tutorial/figurepipeline.png" %}
+{% include image src="/assets/img/tutorial/sensor_analysis/figurepipeline.png" %}
 
 Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_analysispipeline)** as follow
 

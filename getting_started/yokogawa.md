@@ -91,21 +91,21 @@ We can make a plot of one of the trigger channels
 	figure;
 	plot(data(161,1:100000);
 
-{% include image src="/assets/img/getting_started/triggers1.png" width="300" %}
+{% include image src="/assets/img/getting_started/yokogawa/triggers1.png" width="300" %}
 
 zooming in a bi
 
 	figure;
 	plot(data(161,1:10000);
 
-{% include image src="/assets/img/getting_started/triggers2.png" width="300" %}
+{% include image src="/assets/img/getting_started/yokogawa/triggers2.png" width="300" %}
 
 zooming in even more using the matlab figure magnifying glass on the top left corner of one trigger even
 
 	figure;
 	plot(data(161,1:10000,'.-');
 
-{% include image src="/assets/img/getting_started/triggers3.png" width="300" %}
+{% include image src="/assets/img/getting_started/yokogawa/triggers3.png" width="300" %}
 
 We can no clearly see that a single trigger is composed of several samples of a 'high' signal, and that its 'noisy' due to the fact that it is a digitized analogue signal. Its important to make sure one has a minimal and consistent duration of the trigger signal so it can be sampled reliable for the detection of events.
 
@@ -173,7 +173,7 @@ In general MEG analyses are performed in a ["head coordinate system"](/faq/how_a
 
 Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the  Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehea
 
-{% include image src="/assets/img/getting_started/coordinate_systems.png" %}
+{% include image src="/assets/img/getting_started/yokogawa/coordinate_systems.png" %}
 
 In the frequently asked questions you can find an overview of the conventions for the [coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that are used by various MEG and MRI systems/software.
 
@@ -181,7 +181,7 @@ In the frequently asked questions you can find an overview of the conventions fo
 
 Unlike other systems, the Yokogawa system software does not automatically analyze its sensorlocations relative to fiducial coils. Instead the positions of the fiducial points are saved in an external textfile - in the helmet's own coordinate system - using the property menu of the YOKOGAWA MEG-VISION software. Origin of the coordinate system is at the center of the helmet, where Z+ is towards the top of the head, X+ is towards the nose, Y+ is towards the left.
 
-{% include image src="/assets/img/getting_started/yokogawa_coord.png" %}
+{% include image src="/assets/img/getting_started/yokogawa/yokogawa_coord.png" %}
 
 ## Coregistration using forehead coils/markers
 
@@ -222,7 +222,7 @@ The location of the crosshair is expressed in voxel indices and in mm units rela
 
 You now have to find the three forehead markers in the MRI and write down the coordinates of these three fiducials in the head coordinate system.
 
-{% include image src="/assets/img/getting_started/forehead_coil.jpg" width="600" %}
+{% include image src="/assets/img/getting_started/yokogawa/forehead_coil.jpg" width="600" %}
 
 Using the three fiducial points expressed both in head coordinates and in MEG dewar coordinates, we can transform all other spatial locations (i.e. the sensors) from dewar coordinates to head coordinates. We have determined the positions relative to the head coordinate system using the MRI, so we now need the fiducial positions that were recorded relative to the MEG dewar coordinate system.
 
@@ -306,7 +306,7 @@ Plot sensors, fiducials and headmodel to doublecheck
 	camlight left
 	camlight left
 
-{% include image src="/assets/img/getting_started/headmodel_and_sensors_and_fiducials.png" width="400" %}
+{% include image src="/assets/img/getting_started/yokogawa/headmodel_and_sensors_and_fiducials.png" width="400" %}
 
 ### Freqanalysis
 
@@ -392,7 +392,7 @@ Lets check out the sensor level first
 	% figure; ft_topoplotTFR(cfg, freq_l_bl);
 
 
-{% include image src="/assets/img/getting_started/cuer_versus_bl.jpg" width="400" %}
+{% include image src="/assets/img/getting_started/yokogawa/cuer_versus_bl.jpg" width="400" %}
 
 not too bad...
 
@@ -477,7 +477,7 @@ Plot results
 	cfg.colorbar        = 'yes';
 	ft_sourceplot(cfg,source_right_bl_int);
 
-{% include image src="/assets/img/getting_started/beamformer_single_subject_lambda_0005perc_b.jpg" width="600" %}
+{% include image src="/assets/img/getting_started/yokogawa/beamformer_single_subject_lambda_0005perc_b.jpg" width="600" %}
 
 {% include markup/info %}
 Thanks to Akiko Ikkai for contributing her Yokogawa data to make this page.
