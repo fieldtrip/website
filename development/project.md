@@ -51,7 +51,7 @@ This section of the website lists information aimed at developers of FieldTrip a
 *  [Support for NIRS data](/development/nirs) (done)
 *  [integration with SPM8](/development/spm8) (done)
 *  [integration with SPM12](/development/spm12) (done)
-*  [support for loading neighbour structure from templates, constructing your own templates and faq: how to use neighbourselection in general](/development/neighbourtemplates) (done)
+*  [support for loading neighbour structure from templates, constructing your own templates and FAQ on how to use neighbourselection in general](/development/neighbourtemplates) (done)
 *  [How to create a volumetric CURRENT density](/development/curdens)  (will not be done)
 *  [provide an interface to the FNS software for FDM modelling](/development/fns) (done)
 *  [dealing with the GEOMETRY of the forward model](/development/fwdarch2) (done)
