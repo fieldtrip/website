@@ -8,7 +8,7 @@ tags: [dataformat, meg, ctf, neuromag, 4d, yokogawa]
 
 ## Support for CTF and/or VSM MedTech MEG data.
 
-Initially the reading functions for CTF files are implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in  the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
+Initially the reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in  the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
 
 The following data files can be read and used in FieldTrip: .meg4, .res4, .mri, .hdm, ClassFile.cls, MarkerFile.mrk. All required CTF reading functions are supplied with the FieldTrip toolbox.
 
