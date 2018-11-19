@@ -3,9 +3,9 @@ title: About
 layout: default
 ---
 
-FieldTrip is being developed and maintained by a team of researchers at the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders) in collaboration with many researchers over the world.
-
 ## Contact
+
+FieldTrip is being developed and maintained by a team of researchers at the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders), led by Robert Oostenveld and Jan-Mathijs Schoffelen, in collaboration with many researchers over the world.
 
 If you have questions about the **use of FieldTrip**, you should post them on the [email discussion list](/discussion_list).
 
