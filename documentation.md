@@ -10,15 +10,21 @@ The documentation for FieldTrip is split into several parts:
 * [Walkthrough](/walkthrough)
 * [Getting started](/getting_started)
 * [Tutorial documentation](/tutorial)
+* [Reference documentation](/reference)
 * [Frequently asked questions](/faq)
 * [Example matlab scripts](/example)
-* [Video lectures](/video)
-* [Workshop material](/workshop)
-* [Importing your data](/reading_data)
-* [Supported data formats](/dataformat)
-* [Realtime BCI](/development/realtime)
 * [Template models and data](/template)
-* [Reference documentation](/reference)
+
+* [Video lectures](/video)
+
+* [Publications using FieldTrip](/publications)
+* [Method references](/references_to_implemented_methods)
+* [Review and teaching material](/references_to_review_papers_and_teaching_material)
+
+* [Supported data formats](/dataformat)
+* [Importing your data](/reading_data)
+* [Workshop material](/workshop)
+* [Realtime BCI](/development/realtime)
 
 The [tutorials](/tutorial) will help you to get started by providing examples that you can copy-and-paste into Matlab. The [introduction tutorial](/tutorial/introduction) is the best place to start if you do not have any idea about the ideas behind the FieldTrip toolbox. Also, reading through the [Walkthrough](/walkthrough) will give you a good overview of the ideas behind the toolbox and analysis methods. Sometimes we prepare dedicated course material for [workshops](/workshop), which we also share.
 
@@ -28,8 +34,3 @@ If you are very eager to get started with your specific data, please proceed to 
 
 In the [reference documentation](/reference/) you find an overview of all main functions in FieldTrip and the [configuration index](/reference/configuration) has a list of their configuration options.
 
-## Literature
-
-* [Publications using FieldTrip](/publications)
-* [Method references](/references_to_implemented_methods)
-* [Review and teaching material](/references_to_review_papers_and_teaching_material)
