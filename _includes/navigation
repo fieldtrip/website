@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="/">
-    <img src="/assets/img/fieldtriplogo-75.png" width="75" alt="">
+    <img src="/assets/img/fieldtriplogo-75.png" width="75" alt="FieldTrip logo">
   </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,8 +25,13 @@
   </div>
 </nav>
 
-
 <!--
+  <div class="collapse navbar-collapse" id="EditOnGithub">
+    <a href="https://github.com/fieldtrip/website/blob/master/{{ page.path }}">
+      Edit this page on <img src="/assets/img/GitHub-Mark-32px.png" alt="GitHub logo">
+    </a>
+  </div>
+
   <form class="form-inline my-2 my-lg-0" method="get" action="http://www.google.com/search" target="_blank">
     <input type="hidden" name="sitesearch" value="www.fieldtriptoolbox.org" />
     <input type="text" name="q" maxlength="255" placeholder="Search using Google" />
