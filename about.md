@@ -16,7 +16,7 @@ For questions that are **not suitable** for the public email list, e.g. discussi
 If you like FieldTrip, you can show your appreciation by sending a postcard to:
 
 Donders Centre for Cognitive Neuroimaging, c/o Robert Oostenveld  
-University Nijmegen  
+Radboud University  
 P.O. Box 9101  
 NL-6500 AH Nijmegen  
 The Netherlands  
