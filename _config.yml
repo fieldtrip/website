@@ -17,6 +17,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-toc
+  - jekyll-last-modified-at
 
 exclude:
    - README
