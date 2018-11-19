@@ -20,18 +20,22 @@
 
 <footer class="footer">
   <div class="container">
-    <span class="text-muted small">
 
     <div class="row">
-      <div class="col-sm-1" align="center">
+      <div class="col-sm-1">
+        
       </div>
-      <div class="col-md-8" align="center">
-        Edit <a href="https://github.com/fieldtrip/website/blob/master/{{ page.path }}">this page on GitHub</a>
+      <div class="footer-content col-md-4 text-muted small">
+        <p>Edit <a href="https://github.com/fieldtrip/website/blob/master/{{ page.path }}">this page on GitHub</a>.</p>
+        <p>This page last modified: {{ page.last_modified_at | date: "%Y-%m-%d %H:%M %z" }}</p>
+        <p>Copyright (C) 1999-{{ "now" | date: "%Y" }}; <a href="https://creativecommons.org/licenses/by-sa/4.0/"><span class="fab fa-creative-commons"></span> CC-BY-SA license</a></p>
       </div>
-      <div class="col-sm-3" align="center">
+      <div class="footer-content col-md-4 text-muted small">
+        <!-- further footer content can go here -->
+      </div>
+      <div class="col-sm-3">
       </div>
     </div>
-    </span>
 
   </div>
 </footer>

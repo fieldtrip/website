@@ -24,16 +24,3 @@
     <gcse:searchbox-only resultsUrl="/search_results"></gcse:searchbox-only>
   </div>
 </nav>
-
-<!--
-  <div class="collapse navbar-collapse" id="EditOnGithub">
-    <a href="https://github.com/fieldtrip/website/blob/master/{{ page.path }}">
-      Edit this page on <img src="/assets/img/GitHub-Mark-32px.png" alt="GitHub logo">
-    </a>
-  </div>
-
-  <form class="form-inline my-2 my-lg-0" method="get" action="http://www.google.com/search" target="_blank">
-    <input type="hidden" name="sitesearch" value="www.fieldtriptoolbox.org" />
-    <input type="text" name="q" maxlength="255" placeholder="Search using Google" />
-  </form>
--->
