@@ -23,12 +23,12 @@
     <span class="text-muted small">
 
     <div class="row">
-      <div class="col-md-4" align="center">
+      <div class="col-sm-1" align="center">
       </div>
-      <div class="col-md-4" align="center">
-        Find and improve <a href="https://github.com/fieldtrip/website">this website on GitHub</a>!
+      <div class="col-md-8" align="center">
+        Edit <a href="https://github.com/fieldtrip/website/blob/master/{{ page.path }}">this page on GitHub</a>
       </div>
-      <div class="col-md-4" align="center">
+      <div class="col-sm-3" align="center">
       </div>
     </div>
     </span>
