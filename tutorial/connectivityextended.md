@@ -2,13 +2,8 @@
 title: Extended analysis of sensor- and source-level connectivity
 layout: default
 tags: [tutorial, freq, connectivity, coherence, granger, dtf, pdc, MEG-visuomotor151]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Extended analysis of sensor- and source-level connectivity
 

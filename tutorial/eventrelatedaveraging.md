@@ -2,13 +2,8 @@
 title: Event related averaging and MEG planar gradient
 layout: default
 tags: [tutorial, meg, timelock, preprocessing, plot, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Event related averaging and MEG planar gradient
 

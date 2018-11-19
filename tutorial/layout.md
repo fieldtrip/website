@@ -2,13 +2,8 @@
 title: Specifying the channel layout for plotting
 layout: default
 tags: [tutorial, plot, eeg, meg, ecog, layout]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Specifying the channel layout for plotting
 

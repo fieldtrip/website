@@ -2,13 +2,8 @@
 title: Parametric and non-parametric statistics on event-related fields
 layout: default
 tags: [tutorial, statistics, meg, eeg, timelock, freq]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 #  Parametric and non-parametric statistics on event-related fields
 

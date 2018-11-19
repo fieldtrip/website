@@ -1,13 +1,8 @@
 ---
 title: Mouse EEG - channel and source analysis
 layout: default
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 {% include markup/danger %}
 The purpose of this page is just to serve as todo or scratch pad for the development project and to list and share some ideas.

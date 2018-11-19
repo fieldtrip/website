@@ -2,13 +2,8 @@
 title: Creating a sourcemodel for source-reconstruction of MEG or EEG data
 layout: default
 tags: [tutorial, source, meg, sourcemodel, mri, plot, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Creating a sourcemodel for source-reconstruction of MEG or EEG data
 

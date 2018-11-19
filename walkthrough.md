@@ -2,6 +2,7 @@
 title: FieldTrip Walkthrough
 layout: default
 tags: [meg, eeg, raw, freg, cfg, trialfun, trialdef]
+toc: true
 ---
 
 # FieldTrip Walkthrough

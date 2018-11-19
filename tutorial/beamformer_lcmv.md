@@ -2,13 +2,8 @@
 title: Localizing sources using beamformer techniques
 layout: default
 tags: [fixme]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 {% include markup/danger %}
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete.

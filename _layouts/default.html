@@ -4,20 +4,21 @@
   <body>
     {% include navigation %}
 
-    <span class="content">
+    <div class="container">
      <div class="row">
-        <div class="col-sm-2">
+
+        <div class="col-sm-1">
           {% include left %}
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-8 main-page-content">
           {% include tags %}
           {{ content }}
         </div>
-        <div class="col-md-2">
+        <div class="col-sm-3">
           {% include right %}
         </div>
       </div>
-    </span>
+    </div>
 
     {% include footer %}
   </body>

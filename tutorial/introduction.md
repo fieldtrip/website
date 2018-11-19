@@ -2,13 +2,8 @@
 title: Introduction to the FieldTrip toolbox
 layout: default
 tags: [tutorial, meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, cfg, matlab]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Introduction to the FieldTrip toolbox
 

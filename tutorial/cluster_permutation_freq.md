@@ -2,13 +2,8 @@
 title: Cluster-based permutation tests on time-frequency data
 layout: default
 tags: [tutorial, statistics, eeg, meg, raw, freq, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Cluster-based permutation tests on time-frequency data
 

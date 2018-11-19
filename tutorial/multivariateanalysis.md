@@ -2,13 +2,8 @@
 title: Multivariate analysis of electrophysiological data
 layout: default
 tags: [tutorial, eeg, meg, multivariate, timelock, freq, attention, MEG-attention]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Multivariate analysis of electrophysiological data
 

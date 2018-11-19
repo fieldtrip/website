@@ -2,13 +2,8 @@
 title: Preprocessing and analysis of spike and local field potential data
 layout: default
 tags: [tutorial, spike, animal, Spike-attention]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Preprocessing and analysis of spike and local field potential data
 

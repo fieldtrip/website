@@ -2,13 +2,8 @@
 title: Analysis of human ECoG and sEEG recordings
 layout: default
 tags: [tutorial, ieeg, ecog, seeg, anatomy, human, localization, mri, ct, freesurfer, ecog-protocol]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Analysis of human ECoG and sEEG recordings
 

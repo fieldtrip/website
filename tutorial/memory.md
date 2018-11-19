@@ -2,13 +2,8 @@
 title: Making a memory efficient analysis script
 layout: default
 tags: [tutorial, example, memory, matlab, script]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Making a memory efficient analysis script
 

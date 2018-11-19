@@ -2,13 +2,8 @@
 title: Source reconstruction of event-related fields using minimum-norm estimation
 layout: default
 tags: [tutorial, timelock, source, meg, headmodel, mri, plot, MEG-language]
+toc: true
 ---
-
-# Table of contents
-{:.no_toc}
-
-* this is a markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
-{:toc}
 
 # Source reconstruction of event-related fields using minimum-norm estimation
 
