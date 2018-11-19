@@ -1,5 +1,6 @@
 /* -------------------------------------------------- */
 /* Google custom search box and results */
+
 .gs-result:hover {
 	@extend .bg-light;
 }
@@ -63,4 +64,14 @@ html {
 .footer-content p {
   margin: 0;
   padding: 0;
+}
+
+/* -------------------------------------------------- */
+/* Padding on target element to avoid navbar overlapping content */
+
+:target:before {
+    content: "";
+    display: block;
+    height: 70px;
+    margin: -70px 0 0;
 }
