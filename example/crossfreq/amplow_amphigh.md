@@ -165,7 +165,7 @@ layout: default
 	plot(data_bp.time{1}, data_bp.trial{1}); legend(data_bp.label)
 	print -dpng amplow_amphigh_fig7.png
 
-{% include image src="/assets/img/example/crossfreq:amplow_amphigh_fig7.png" width="400" %}
+{% include image src="/assets/img/example/crossfreq/amplow_amphigh_fig7.png" width="400" %}
 
 	
 	cfg = [];

@@ -17,6 +17,6 @@ The forward solution can be computed when the head model, the channel positions 
 
 A prerequisite of forward modeling is that the geometrical description of all elements (channel positions, head model and source model) is registered in the same coordination system with the same units. There are different "conventions" how to define a coordinate system, but the precise coordinate system is not relevant, as long as all data is expressed in it consistently (i.e. in the same coordinate system). [Here](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) read more about how the different head and mri coordinate systems are defined. The MEG sensors by default are defined relative to anatomical landmarks of the head (the fiducial coils), therefore when the anatomical images are also aligned to these landmarks, the MEG sensors do not need to be re-aligned. EEG data is typically not aligned to the head, therefore, the electrodes have to  be re-aligned prior to source-reconstruction (see also [this faq](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) and [this example](/example/align_eeg_electrode_positions_to_bem_headmodel)).
 
-{% include image src="/assets/img/tutorial/minimumnormestimate:source_analysis-03.png" width="500" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/source_analysis-03.png" width="500" %}
  
 *Figure 1. Major steps in source reconstruction*
