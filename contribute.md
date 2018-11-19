@@ -16,11 +16,11 @@ The FieldTrip community is organised around the [email discussion list](/discuss
 
 ## Contribute documentation
 
-This FieldTrip website is a [Wiki](http://en.wikipedia.org/wiki/Wiki) (just like [Wikipedia](http://en.wikipedia.org/)), which allows anyone visiting the site to add, remove, or otherwise edit all content, very quickly and easily, without the need for registration. The IP addresses of people that make changes are logged, and they can be blocked if needed. Please act responsibly and make changes that improve this site.
+You are invited to add your own tutorials, example scripts or answers to frequently asked questions. Every time you type an email explaining something about FieldTrip, please consider whether you could add it to this website for others to learn from as well.
 
-We invite you to add your own example scripts or frequently asked questions on the wiki. Also tutorials can be added. Every time you explain somebody something about FieldTrip, please consider whether you could use the wiki for this so others can learn from it as well.
+You can contribute directly to the documentation on this website by going to [github](https://github.com/fieldtrip/website), edit or add a page there and send your suggestion as a "pull request". All contributions are reviewed by the maintainers, so if you are not sure about the quality of your contribution, just submit it to us and we will check, improve and/or provide feedback if needed.
 
-When you add documentation, please consider the [documentation guidelines](/development/guidelines/documentation) to keep it consistent with other documentation and to facilitate cross-linking.
+When you add documentation, please consider the [documentation guidelines](/development/guidelines/documentation) to keep it consistent with other documentation and to facilitate cross-linking. 
 
 ## Request enhancements
 
