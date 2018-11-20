@@ -7,9 +7,6 @@
 - name:  Importing your data
   link:  /reading_data
 
-- name:  Supported data formats
-  link:  /dataformat
-
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 

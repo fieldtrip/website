@@ -18,7 +18,6 @@ tags: [obsolete]
     * [Example matlab scripts](/example)
 *  [Development](/development)
     * [How to contribute](/contribute)
-    * [Supported data formats](/dataformat)
     * [Realtime BCI](/development/realtime)
     * [Guidelines](/development/guidelines)
     * [Modules](/development/modules)

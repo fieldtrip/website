@@ -189,7 +189,7 @@ Now we can read it in MNE-Pytho
 
 #### Import Evoked
 
-We just continue using the instance ''epochs'' that was defined [before](/#datatype_raw_many_trials_-_epochs). We then create an instance of class ''Evoked'' using the method ''average'
+We just continue using the instance ''epochs'' that was defined [before](#datatype_raw_many_trials_-_epochs). We then create an instance of class ''Evoked'' using the method ''average'
 
 	:::python
 	evoked = epochs.average()

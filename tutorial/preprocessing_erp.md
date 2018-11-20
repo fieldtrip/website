@@ -31,7 +31,7 @@ For memory efficiency (especially relevant for large datasets), with FieldTrip w
 
 Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
-The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](/#appendixthe_trialfun_used_in_this_example ) of this example script. Please save it to a local file with the name **trialfun_affcog.m**.
+The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendixthe_trialfun_used_in_this_example ) of this example script. Please save it to a local file with the name **trialfun_affcog.m**.
 
 	cfg = [];
 	cfg.trialfun     = 'trialfun_affcog';

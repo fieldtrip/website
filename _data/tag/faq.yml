@@ -151,9 +151,6 @@
 - name:  Are the FieldTrip lectures available on video?
   link:  /faq/video
 
-- name:  What kind of dataformats can I read in?
-  link:  /faq/what_kind_of_dataformats_can_i_read_in
-
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable
 
@@ -342,6 +339,9 @@
 
 - name:  How can I import my own dataformat?
   link:  /faq/how_can_i_import_my_own_dataformat
+
+- name:  What dataformats are supported?
+  link:  /faq/dataformat
 
 - name:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file

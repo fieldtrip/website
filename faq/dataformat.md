@@ -1,10 +1,10 @@
 ---
-title: Supported data formats
+title: What dataformats are supported?
 layout: default
-tags: [dataformat, meg, eeg, lfp, spike, raw]
+tags: [faq, dataformat, preprocessing, raw]
 ---
 
-# Supported data formats
+# What dataformats are supported?
 
 FieldTrip has a flexible way of supporting data formats. It uses a number of functions that provide a common interface to all electrophysiological (EEG/MEG) file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. Where needed, these functions will call the appropriate low-level functions for each file format. Some of the low-level functions are written by ourselves, others are supplied by the manufacturers and again others are obtained from other open source toolboxes. You can find more technical information on the reading functions on [this](/development/fileio) page.
 
@@ -85,3 +85,4 @@ The following surface and volume mesh formats are supported by **[ft_read_headsh
 ## See also
 
 {% include seealso tag1="faq" tag2="dataformat" %}
+

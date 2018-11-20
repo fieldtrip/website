@@ -36,7 +36,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 -   [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline)
 -   [Reading is slow, can I write my raw data to a more efficient file format?](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format)
 -   [The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?](/faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this)
--   [What kind of dataformats can I read in?](/faq/what_kind_of_dataformats_can_i_read_in)
+-   [What dataformats are supported?](/faq/dataformat)
 -   [What kind of filters can I apply to my data?](/faq/what_kind_of_filters_can_i_apply_to_my_data)
 -   [Why are the fileio functions stateless, does the fseek not make them very slow?](/faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow)
 -   [Why is there a residual 50Hz line-noise component after applying a DFT filter?](/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter)

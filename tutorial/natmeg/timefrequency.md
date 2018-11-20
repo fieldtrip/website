@@ -488,4 +488,4 @@ This tutorial showed how to do time-frequency analysis on a single's subject MEG
 
 As we noted in the introduction, there are more ways of doing a frequency analysis. If you want to know more about how to do wavelet analysis, adaptive time-windows and multitapers, please take a look at standard (MEG only) [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis), starting at part II. You can copy-paste parts of it into your own script and use them on our dataset.
 
-If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](/#Visualization).
+If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](#Visualization).

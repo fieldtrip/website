@@ -23,7 +23,7 @@ To deal with the tremendous amounts of data recorded each session (approximately
 
 The downsampling of the original 32 kHz data into the LFP and MUA data is done using the **[ft_spikedownsample](/reference/ft_spikedownsample)** function.
 
-Here, we will briefly explain how we use FieldTrip to obtain these representations of the data. In addition, we will describe some basic preprocessing steps (i.e., relabeling channels and using a montage configuration to re-reference the data). To known more about the characteristics of the fileformats used in our recording and analysis setup, please check **[Spike and LFP dataformats](/dataformat/spike)** for a description of Neuralynx and Plexon data formats supported by FieldTrip. For general information about getting started with Plexon and Neuralynx using FieldTrip, please refer to the getting started with **[getting_started:neuralynx](/getting_started/neuralynx)** and **[getting_started:plexon](/getting_started/plexon)** sections.
+Here, we will briefly explain how we use FieldTrip to obtain these representations of the data. In addition, we will describe some basic preprocessing steps (i.e., relabeling channels and using a montage configuration to re-reference the data). To known more about the characteristics of the fileformats used in our recording and analysis setup, please check **[Spike and LFP dataformats](/faq/dataformat/spike)** for a description of Neuralynx and Plexon data formats supported by FieldTrip. For general information about getting started with Plexon and Neuralynx using FieldTrip, please refer to the getting started with **[getting_started:neuralynx](/getting_started/neuralynx)** and **[getting_started:plexon](/getting_started/plexon)** sections.
 
 ## Data format conversions
 

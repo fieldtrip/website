@@ -252,7 +252,7 @@ An example of your own trial function, ''yourowntrialfun'' is
 
 ## MRI-MEG Co-registration
 
-The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/dataformat), anatomical MRI data are assumed to be saved as NIfTI (.nii) or DICOM files in this page. 
+The registration between MRI and MEG is essential for source-space analysis on MEG data. The goal of the co-registration is to transform the positions of the MRI voxel and the sensor array into a common head coordinate. This part describes how to co-register MRI and MEG data recorded by Ricoh system, showing its examples. Although FieldTrip supports various anatomical MRI data formats as presented [here](/faq/dataformat), anatomical MRI data are assumed to be saved as NIfTI (.nii) or DICOM files in this page. 
 
 The co-registration is usually done in two steps; the first step is an approximate alignment that is based on fiducial points, and the second step is a refinement with additional head-shape digitized points. You practically have two possible cases regarding to the first ste
  1.  To use HPIs (marker coils) as the fiducial points

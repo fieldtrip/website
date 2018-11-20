@@ -33,13 +33,13 @@ We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us t
 
 ### Github
 
-We use Git and Github for version control of the software and for managing external contributions.  More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](/#bitbucket).
+We use Git and Github for version control of the software and for managing external contributions.  More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
 
 Following a push to github, a web hook is triggered. The code for that is at http://github.com/fieldtrip/webhook and is running on a dedicated (Raspberry Pi) server.
 
 ### Bitbucket
 
-A copy of the git repository of the FieldTrip software is maintained on BitBucket, although the primary site is on [#Github](/#Github).
+A copy of the git repository of the FieldTrip software is maintained on BitBucket, although the primary site is on [#Github](#Github).
 
 ### SVN - obsolete
 
@@ -66,10 +66,10 @@ We use the DCCN ftp server to distribute a daily updated copy of the software.
 
 ### Central storage
 
-Inside the DCCN we have a central storage system (i.e. a large and shared network drive) on which an up-to-date copy of the software is maintained. Also the test data used for development and for regression testing with the [#dashboard](/#dashboard) is on central storage.
+Inside the DCCN we have a central storage system (i.e. a large and shared network drive) on which an up-to-date copy of the software is maintained. Also the test data used for development and for regression testing with the [#dashboard](#dashboard) is on central storage.
 ### Google
 
-We use Google to complement the internal [#Dokuwiki](/#Dokuwiki) search engine. If you start searching on the wiki, you'll get an initial results page that provides a Google search box for the wiki and for the discussion list archives.
+We use Google to complement the internal [#Dokuwiki](#Dokuwiki) search engine. If you start searching on the wiki, you'll get an initial results page that provides a Google search box for the wiki and for the discussion list archives.
 
 ### Dashboard
 

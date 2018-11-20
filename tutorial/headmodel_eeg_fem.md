@@ -90,7 +90,7 @@ When you prepare a head model for EEG, the head model should be in the same coor
 
 The anatomical MRI that we use in this tutorial is already aligned to the [ CTF head coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system). We also have information (see later) how the EEG electrodes are positioned relative to the fiducials. Therefore, there is no reason to align the anatomical MRI to any other coordinate system.
 
-It is also possible to read in anatomical MRI data in [other formats](/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined).  When you read in your own anatomical data, it may does not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no transformation matrix specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/ft_determine_coordsys)** function.
+It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined).  When you read in your own anatomical data, it may does not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no transformation matrix specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/ft_determine_coordsys)** function.
 
 ##  Reslice the volume
 

@@ -10,9 +10,6 @@
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
   link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
-- name:  What kind of dataformats can I read in?
-  link:  /faq/what_kind_of_dataformats_can_i_read_in
-
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
 
@@ -33,6 +30,9 @@
 
 - name:  How can I import my own dataformat?
   link:  /faq/how_can_i_import_my_own_dataformat
+
+- name:  What dataformats are supported?
+  link:  /faq/dataformat
 
 - name:  The databrowser crashes and destroys the whole matlab session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
@@ -61,9 +61,6 @@
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
-- name:  Supported data formats
-  link:  /dataformat
-
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
@@ -82,7 +79,7 @@
 - name:  Getting started with Biosemi BDF data
   link:  /getting_started/biosemi
 
-- name:  Getting started with asa and eeprobe data
+- name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
 
 - name:  Getting started with BabySQUID data

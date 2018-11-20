@@ -109,7 +109,7 @@ Additional options should be specified in key-value pairs (see **[ft_read_data](
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 5x900x3.
 
-You can explicitly specify the data format (also [see below](/#Specifying the low-level reading functions)), e.g.
+You can explicitly specify the data format (also [see below](#Specifying the low-level reading functions)), e.g.
 
 
 	dat = ft_read_data('Subject01.ds', 'dataformat', 'ctf_ds');

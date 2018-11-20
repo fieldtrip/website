@@ -169,9 +169,6 @@
 - name:  Source statistics
   link:  /example/source_statistics
 
-- name:  Supported data formats
-  link:  /dataformat
-
 - name:  FieldTrip Walkthrough
   link:  /walkthrough
 

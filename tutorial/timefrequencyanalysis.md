@@ -13,7 +13,7 @@ In this tutorial you can find information about the time-frequency analysis of a
 
 Here, we will work on the MEG-language-semantics dataset, you can click [here](/tutorial/shared/dataset) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([ trigger based trial selection](/tutorial/Preprocessing), [artifact rejection](/tutorial/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
 
-There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](/#Summary and suggested further reading)).
+There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see [#Summary and suggested further reading](#Summary and suggested further reading)).
 
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
@@ -200,7 +200,7 @@ If you see artifacts in your figure, see [this FAQ](/faq/i_am_getting_strange_ar
 
 Note the boundary effects for lower frequencies (the white time frequency points in the plot). There is no power value calculated for these time frequency points. The power value is assigned to the middle time point in the time window. For example for 2 Hz the time window has a length of 3.5 sec (1/2 * 7 cycles = 3.5 sec), this does not fit in the 3 sec window that is preprocessed and therefore there is no data point here. For 5 Hz the window has a length of 1.4 sec (1/5 * 7 cycles = 1.4 sec). We preprocessed data between t = -1 sec and t = 2 sec so the first power value is assigned to t= -0.3 (since -1 + (0.5 * 1.4) = -0.3). Because of these boundary effects it is important to apply **[ft_freqanalysis ](/reference/ft_freqanalysis )** to a larger time window to get all the time frequency points for your time window of interest.
 
-If you would like to learn more about plotting of time-frequency representations,  please see the [#Visualization](/#Visualization) section.
+If you would like to learn more about plotting of time-frequency representations,  please see the [#Visualization](#Visualization) section.
 
 #### Exercise 3
 
@@ -278,7 +278,7 @@ Plot the result
 
 *Figure: Time-frequency representations of power calculated using multitapers.*
 
-If you would like to learn more about plotting of time-frequency representations, please see the [#Visualization](/#Visualization) section.
+If you would like to learn more about plotting of time-frequency representations, please see the [#Visualization](#Visualization) section.
 
 ##  Time-frequency analysis IV.
 
@@ -316,7 +316,7 @@ Plot the result
 **Exercise 4**: Adjust cfg.width and see how the TFRs change.
 {% include markup/end %}
 
-If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](/#Visualization).
+If you would like to learn more about plotting of time-frequency representations, please see [#Visualization](#Visualization).
 
 ## Summary and suggested further reading
 

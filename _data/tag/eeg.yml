@@ -133,9 +133,6 @@
 - name:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
 
-- name:  Supported data formats
-  link:  /dataformat
-
 - name:  FieldTrip Walkthrough
   link:  /walkthrough
 
@@ -154,7 +151,7 @@
 - name:  Getting started with Biosemi BDF data
   link:  /getting_started/biosemi
 
-- name:  Getting started with asa and eeprobe data
+- name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
 
 - name:  Getting started with Philips/EGI data

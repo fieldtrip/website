@@ -49,9 +49,6 @@
 - name:  How can I read corrupted (unsaved) CTF data?
   link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
 
-- name:  What kind of dataformats can I read in?
-  link:  /faq/what_kind_of_dataformats_can_i_read_in
-
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
 
@@ -69,6 +66,9 @@
 
 - name:  How can I import my own dataformat?
   link:  /faq/how_can_i_import_my_own_dataformat
+
+- name:  What dataformats are supported?
+  link:  /faq/dataformat
 
 - name:  How can I deal with a discontinuous Neuralynx recording
   link:  /faq/discontinuous_neuralynx
