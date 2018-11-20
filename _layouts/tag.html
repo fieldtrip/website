@@ -8,7 +8,8 @@
 
     {% if site.data.tag[page.tag] != nill %}
       <ul>
-        {% for item in site.data.tag[page.tag] %}
+        {% assign list = site.data.tag[page.tag] | sort_natural: "name" %}
+        {% for item in list %}
           <li><a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
             {{ item.name }}
           </a></li>

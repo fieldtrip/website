@@ -8,7 +8,7 @@ This repository contains the content that is hosted on http://www.fieldtriptoolb
 - Code blocks should have an empty line before and after them.
 - Shared pages should go in _include/shared.
 - MarkDown documentation can be found on https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
-- Liquid documentation can be found on https://help.shopify.com/en/themes/liquid.
+- Liquid documentation can be found on https://help.shopify.com/en/themes/liquid and https://shopify.github.io/liquid.
 
 ## Checking for broken links and missing images
 
