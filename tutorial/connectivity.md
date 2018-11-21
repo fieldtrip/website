@@ -75,7 +75,6 @@ Rather than doing all the preprocessing again, you can download the preprocessed
 	cfg                   = [];
 	cfg.covariance        = 'yes';
 	cfg.channel           = 'MEG';
-	cfg.vartrllength      = 2;
 	cfg.covariancewindow  = 'all';
 	timelock              = ft_timelockanalysis(cfg, data);
 
