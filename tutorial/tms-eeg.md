@@ -469,7 +469,6 @@ Instead of channels by time matrices, our data is now represented in component b
 We are now going to have a look at the timecourse of the components to identify the ones to be rejected. We will also look at a topographical representation of the components to see if they reflect spatial distributions indicating them to be an artifact (dipole, close to the site of stimulation). As we know that all our TMS-EEG artifacts are time-locked to the onset of the TMS-pulse, we can simplify the visual inspection by looking at the time-locked average representation of the components.
 
 	cfg = [];
-	cfg.vartrllength  = 2; % This is necessary as our trials are in fact segments of our original trials. This option tells the function to reconstruct the original trials based on the sample-information stored in the data
 	comp_tms_avg = ft_timelockanalysis(cfg, comp_tms);
 
 We can now browse the averaged data in the same way we browsed our channel data. The segments that we have excluded will be plotted as gaps. As with our channel data, you can either browse through the channels with **[ft_databrowser](/reference/ft_databrowser)** but also with MATLAB's built-in plotting functions. Please be aware that if we are using **[ft_databrowser](/reference/ft_databrowser)** do browse averaged data (i.e. output from **[ft_timelockanalysis](/reference/ft_timelockanalysis)**) we can only browse through channels as there are no trials.
