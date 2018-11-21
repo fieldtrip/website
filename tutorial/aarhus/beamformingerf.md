@@ -232,7 +232,6 @@ We compute the covariance matrix during the call to **[ft_timelockanalysis](/ref
 	cfg = [];
 	cfg.covariance='yes';
 	cfg.covariancewindow = [-.15 .15];
-	cfg.vartrllength = 2;
 	avg = ft_timelockanalysis(cfg,data_right);
 	cfg = [];
 	cfg.covariance='yes';
@@ -356,7 +355,6 @@ If this is where you started in the tutorial, make sure you have downloaded and 
 	cfg = [];
 	cfg.covariance='yes';
 	cfg.covariancewindow = [-.15 .15];
-	cfg.vartrllength = 2;
 	avg = ft_timelockanalysis(cfg,data_right);
 
 	cfg = [];
@@ -582,7 +580,6 @@ We will continue to analyse the EEG data according to a series of steps similar 
 	cfg = [];
 	cfg.covariance='yes';
 	cfg.covariancewindow = [-.15 .15];
-	cfg.vartrllength = 2;
 	avg = ft_timelockanalysis(cfg,data_eeg_right);
 	cfg = [];
 	cfg.covariance='yes';
