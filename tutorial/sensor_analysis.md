@@ -81,10 +81,8 @@ Next, proceed to compute the ER
 
     cfg                 = [];
     cfg.channel         = 'MEG';
-    cfg.vartrllength    = 1;
     tl                  = ft_timelockanalysis(cfg, data);
 
-Note the vartrllength parameter. This instructs **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to accept variable length trials and average over the whole duration of the trial, including missing data.
 
 ### Plotting the results
 
@@ -148,7 +146,6 @@ We can compute the planar magnetic gradient using **[ft_megplanar](/reference/ft
 
     cfg                 = [];
     cfg.channel         = 'MEG';
-    cfg.vartrllength    = 1;
     tl_planar           = ft_timelockanalysis(cfg, data_planar);
 
     cfg                 = [];
