@@ -76,7 +76,6 @@ Note that we have not yet cleaned the data from artifacts. For your own dataset,
 	cfg                  = [];
 	cfg.covariance       = 'yes';
 	cfg.covariancewindow = 'all';
-	cfg.vartrllength     = 2;
 	timelock             = ft_timelockanalysis(cfg, data);
 
 ### Visualize the sensor level results (axial gradients)
