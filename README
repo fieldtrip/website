@@ -1,8 +1,9 @@
 # FieldTrip website
 
-This repository contains the content that is hosted on http://www.fieldtriptoolbox.org
+This repository contains the content that is hosted on http://new.fieldtriptoolbox.org
 
 ## Technical notes
+
 - Pages that contain tags must have a title.
 - Variables passed in an include must be specified in quotes.
 - Code blocks should have an empty line before and after them.
@@ -17,5 +18,6 @@ This repository contains the content that is hosted on http://www.fieldtriptoolb
 
 
 ## Ideas
+
 - For image resizing we might consider a service like https://www.imgix.com or https://images.weserv.nl.
 - Use code highlighting from https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting.
