@@ -6,6 +6,7 @@ tags: [development]
 
 # Development
 
+* [Contribute](/contribute)
 * [Guidelines](/development/guidelines)
 * [Modules](/development/modules)
 * [Projects](/development/project)

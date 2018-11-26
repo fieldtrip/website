@@ -1,11 +1,11 @@
+- name: Getting&nbsp;started
+  link: /getting_started
+
 - name: Documentation
   link: /documentation
 
-- name: Support
-  link: /support
-
-- name: Contribute
-  link: /contribute
+- name: Community
+  link: /community
 
 - name: Development
   link: /development
@@ -14,4 +14,4 @@
   link: /download
 
 - name: About
-  link: /about
+  link: /contact

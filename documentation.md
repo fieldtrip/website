@@ -7,7 +7,6 @@ layout: default
 
 The documentation for FieldTrip is split into several parts:
 
-* [Getting started](/getting_started)
 * [Tutorial documentation](/tutorial)
 * [Walkthrough](/walkthrough)
 * [Reference documentation](/reference)
