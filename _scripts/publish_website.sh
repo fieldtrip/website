@@ -40,6 +40,7 @@ tags: development
 [$LATEST](https://github.com/fieldtrip/website/commit/$LATEST)
 EOF
 
+$BUNDLE install           > /dev/null 2>&1
 $BUNDLE exec jekyll build > /dev/null 2>&1
 
 # copy some static assets over to the root directory
