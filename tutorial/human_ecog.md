@@ -9,7 +9,7 @@ toc: true
 
 ## Introduction
 
-Intracranial EEG (iEEG) allows simultaneous recordings from tens to hundreds of electrodes placed directly on the neocortex (electrocorticography, ECoG), or intracortically (stereoelectroencephalography, SEEG). These recordings are known for known for their high spatiotemporal precision. In humans, the most common implementation of iEEG is when non-invasive techniques such as scalp-EEG and MRI do not provide sufficient information to guide surgery in medication refractory epilepsy patients. This tutorial illustrates how to deal with the multitude of raw anatomical and electrophysiological data files in order to get to integrated neural observations.
+Intracranial EEG (iEEG) allows simFultaneous recordings from tens to hundreds of electrodes placed directly on the neocortex (electrocorticography, ECoG), or intracortically (stereoelectroencephalography, SEEG). These recordings are known for known for their high spatiotemporal precision. In humans, the most common implementation of iEEG is when non-invasive techniques such as scalp-EEG and MRI do not provide sufficient information to guide surgery in medication refractory epilepsy patients. This tutorial illustrates how to deal with the multitude of raw anatomical and electrophysiological data files in order to get to integrated neural observations.
 
 Before we start, it is important to emphasize that human iEEG datasets are solely acquired for clinical purposes and come in different shapes and sizes. Some medical institutes use photography or X-ray (e.g., see [Analysis of monkey ECoG recordings)](/tutorial/monkey_ecog) for including anatomy in the analysis of the functional recordings, whilst others use CT (3D image from a series of X-rays) and/or MR, or combinations thereof. The example iEEG dataset used in this tutorial is not representative for all the datasets obtained in the field but it is meant to serve as a platform for thinking and dealing with the challenges associated with analyzing this type of data.
 
@@ -42,7 +42,7 @@ The two workflows become intrinsically connected for the first time during the e
 
 ### Preprocessing of the anatomical MRI
 
-**2**) Import the anatomical MRI into the MATLAB workspace using ft_read_mri. The MRI comes in the format of a single file with an .img or .nii extension, or a folder containing a series of files with a .dcm or .ima extension (DICOM; Supplementary File 2 of the original paper may aid in the search and visualization of a DICOM series).
+**2**) Import the anatomical MRI into the MATLAB workspace using ft_read_mri. The MRI comes in the format of a single file with an .img or .nii extension, or a folder containing a series of files with a .dcm or .ima extension (DICOM; [Supplementary File 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM4_ESM.pdf) of the original paper may aid in the search and visualization of a DICOM series).
 
 	mri = ft_read_mri(`<path to MRI file>`);
 
@@ -50,7 +50,7 @@ The two workflows become intrinsically connected for the first time during the e
 
 CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy in demarcating the right hemisphere landmark in the following step is important for avoiding an otherwise hard to detect flip of the scan's left and right orientation.
 
-**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain’s right hemisphere. If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart (Supplementary Video 2).
+**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain’s right hemisphere. If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart ([Supplementary Video 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM7_ESM.mp4)).
 
 	cfg           = [];
 	cfg.method    = 'interactive';
@@ -96,15 +96,15 @@ PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of
 
 ### Preprocessing of the anatomical CT
 
-**9**) Import the anatomical CT into the MATLAB workspace. Similar to the MRI, the CT scan comes in the format of a single file with an .img or .nii extension, or a folder containing a series of files with a .dcm or .ima extension (Supplementary File 2 may aid in the search and visualization of a DICOM series).
+**9**) Import the anatomical CT into the MATLAB workspace. Similar to the MRI, the CT scan comes in the format of a single file with an .img or .nii extension, or a folder containing a series of files with a .dcm or .ima extension ([Supplementary File 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM4_ESM.pdf) may aid in the search and visualization of a DICOM series).
 
 	ct = ft_read_mri(`<path to CT file>`);
 
-**10**) In case this cannot be done on the basis of knowledge of the laterality of electrode implantation, determine the native orientation of the anatomical CT's left- right axis using ft_determine_coordsys, similarly to how it was done with the anatomical MRI in Step 3 (Box 2 and Supplementary Video 1).
+**10**) In case this cannot be done on the basis of knowledge of the laterality of electrode implantation, determine the native orientation of the anatomical CT's left- right axis using ft_determine_coordsys, similarly to how it was done with the anatomical MRI in Step 3 (Box 2 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4)).
 
 CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy in demarcating the right and left preauricular landmark in the following step is important for avoiding an otherwise hard to detect flip of the scan's left and right orientation.
 
-**11**) Align the anatomical CT to the CTF head surface coordinate system by specifying the nasion (at the root of the nose), left and right preauricular points (just in front of the ear canals), and an interhemispheric location along the midline at the top of the brain (Supplementary Video 3). The CT scan is initially aligned to the CTF head surface coordinate system given that the ACPC coordinate system used for the MRI relies on neuroanatomical landmarks that are not visible in the CT.
+**11**) Align the anatomical CT to the CTF head surface coordinate system by specifying the nasion (at the root of the nose), left and right preauricular points (just in front of the ear canals), and an interhemispheric location along the midline at the top of the brain ([Supplementary Video 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM8_ESM.mp4)). The CT scan is initially aligned to the CTF head surface coordinate system given that the ACPC coordinate system used for the MRI relies on neuroanatomical landmarks that are not visible in the CT.
 
 	cfg           = [];
 	cfg.method    = 'interactive';
@@ -146,7 +146,7 @@ CRITICAL STEP Accuracy of the fusion operation is important for correctly placin
 
 	hdr = ft_read_header(`<path to recording file>`);
 
-**17**) Localize the electrodes in the post-implant CT with ft_electrodeplacement, shown in the figure below. Clicking an electrode label in the list will directly assign that label to the current crosshair location (Supplementary Video 4). Several in-app features facilitate efficient yet precise navigation of the anatomical image, such as a zoom mode, a magnet option that transports the crosshair to the nearest weighted maximum with subvoxel accuracy (or minimum in case of a post-implant MRI), and an interactive three-dimensional scatter figure that is linked to the two-dimensional volume representations. Furthermore, passing on the pre-implant MRI, fsmri_acpc, to ft_electrodeplacement allows toggling between CT and MRI views for the identification of specific electrodes based on their anatomical location. Generally, electrode #1 is the electrode farthest away from the craniotomy or burr hole in case of depths and single-row strips. Careful notes taken during surgery and recording are critical for determining the numbering of grid and multi-row strip electrodes.
+**17**) Localize the electrodes in the post-implant CT with ft_electrodeplacement, shown in the figure below. Clicking an electrode label in the list will directly assign that label to the current crosshair location ([Supplementary Video 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM9_ESM.mp4)). Several in-app features facilitate efficient yet precise navigation of the anatomical image, such as a zoom mode, a magnet option that transports the crosshair to the nearest weighted maximum with subvoxel accuracy (or minimum in case of a post-implant MRI), and an interactive three-dimensional scatter figure that is linked to the two-dimensional volume representations. Furthermore, passing on the pre-implant MRI, fsmri_acpc, to ft_electrodeplacement allows toggling between CT and MRI views for the identification of specific electrodes based on their anatomical location. Generally, electrode #1 is the electrode farthest away from the craniotomy or burr hole in case of depths and single-row strips. Careful notes taken during surgery and recording are critical for determining the numbering of grid and multi-row strip electrodes.
 
 	cfg         = [];
 	cfg.channel = hdr.label;
@@ -298,7 +298,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
 	atlas = ft_read_atlas(`<path to fieldtrip/template/atlas/aal/ROI_MNI_V4.nii>`);
 
-**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere’s hippocampus. Supplementary File 3 represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file).
+**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere’s hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file).
 
 	cfg            = [];
 	cfg.roi        = elec_mni_frv.chanpos(match_str(elec_mni_frv.label,'LHH1'),:);
@@ -439,7 +439,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	cfg.baselinetype = 'relchange';
 	freq_blc = ft_freqbaseline(cfg, freq);
 
-**49**) Visualize the time-frequency representations overlaid on the two-dimensional layout. The generated figure is interactive, so that selecting a group of channels will launch another figure representing the average time-frequency representation over those channels (figure below). Selecting a certain frequency and time range in that time-frequency representation will launch yet another figure showing the topographical distribution of activity in the selected interval, and so on (Supplementary Video 5).
+**49**) Visualize the time-frequency representations overlaid on the two-dimensional layout. The generated figure is interactive, so that selecting a group of channels will launch another figure representing the average time-frequency representation over those channels (figure below). Selecting a certain frequency and time range in that time-frequency representation will launch yet another figure showing the topographical distribution of activity in the selected interval, and so on ([Supplementary Video 5](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM10_ESM.mp4)).
 
 	cfg             = [];
 	cfg.layout      = lay;
@@ -474,7 +474,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	lighting gouraud;
 	camlight;
 
-**52**) Add the electrodes to the figure (shown below). By looping around Steps 50 and 51 while breaking down the time interval of interest specified with cfg.latency in consecutive steps, it becomes feasible to observe the spatiotemporal dynamics of neural activity occurring in relation to known experimental structure and behavior (Supplementary Video 6). See help getframe for capturing and assembling time-lapse movies.
+**52**) Add the electrodes to the figure (shown below). By looping around Steps 50 and 51 while breaking down the time interval of interest specified with cfg.latency in consecutive steps, it becomes feasible to observe the spatiotemporal dynamics of neural activity occurring in relation to known experimental structure and behavior ([Supplementary Video 6](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM11_ESM.mp4)). See help getframe for capturing and assembling time-lapse movies.
 
 	ft_plot_sens(elec_acpc_fr);
 
@@ -511,7 +511,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 	cfg.channel = {'RAM*', 'RTH*', 'RHH*'};
 	freq_sel2 = ft_selectdata(cfg, freq_sel);
 
-**56**) Interpolate the high-frequency-band activity in the bipolar channels on a spherical cloud around the channel positions, while overlaying the neural activity with the above mesh (Supplementary File 4 highlights the currently available cloud types for plotting). By repeating the current step for neural data corresponding to consecutive time intervals, similarly to the process outlined in Step 52, it becomes feasible to create time-lapse movies of the spatiotemporal dynamics of deep-brain activity (Supplementary Video 7 shows the spatiotemporal evolution of epileptiform activity in a separate subject).
+**56**) Interpolate the high-frequency-band activity in the bipolar channels on a spherical cloud around the channel positions, while overlaying the neural activity with the above mesh ([Supplementary File 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM1_ESM.pdf) highlights the currently available cloud types for plotting). By repeating the current step for neural data corresponding to consecutive time intervals, similarly to the process outlined in Step 52, it becomes feasible to create time-lapse movies of the spatiotemporal dynamics of deep-brain activity ([Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4) shows the spatiotemporal evolution of epileptiform activity in a separate subject).
 
 	cfg              = [];
 	cfg.funparameter = 'powspctrm';
@@ -534,7 +534,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ## Summary and conclusion
 
-Upon completion of this tutorial, one should obtain an integrated representation of neural and anatomical data. The exact results depend ultimately on the clinical or research question at hand, contingencies in the experimental paradigm, and decisions made during the execution of the protocol. This tutorial demonstrated the analysis of spatiotemporal neural dynamics occurring in relation to known experimental structure and relatively simple behavior, namely the pressing of a button with the right hand when hearing a target tone. However, with small adaptations of the protocol it is feasible to track the spatiotemporal evolution of epileptiform activity with high precision (e.g., Supplementary Video 7 of the original paper), or to perform group-level investigations of fine-grained emotion- or language-related neural dynamics in human hippocampus. A precise fusion of the anatomical images with the electrophysiological data is key to reproducible analyses and findings. Hence, it is important to examine the outcome of any critical step, as we have done above.
+Upon completion of this tutorial, one should obtain an integrated representation of neural and anatomical data. The exact results depend ultimately on the clinical or research question at hand, contingencies in the experimental paradigm, and decisions made during the execution of the protocol. This tutorial demonstrated the analysis of spatiotemporal neural dynamics occurring in relation to known experimental structure and relatively simple behavior, namely the pressing of a button with the right hand when hearing a target tone. However, with small adaptations of the protocol it is feasible to track the spatiotemporal evolution of epileptiform activity with high precision (e.g., [Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4) of the original paper), or to perform group-level investigations of fine-grained emotion- or language-related neural dynamics in human hippocampus. A precise fusion of the anatomical images with the electrophysiological data is key to reproducible analyses and findings. Hence, it is important to examine the outcome of any critical step, as we have done above.
 ## Suggested further reading
 
 You can read more about intracranial EEG and other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the following documentation.
