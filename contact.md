@@ -1,9 +1,9 @@
 ---
-title: Contact
+title: About
 layout: default
 ---
 
-## Contact
+## About
 
 FieldTrip is being developed and maintained by a team of researchers at the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders), led by Robert Oostenveld and Jan-Mathijs Schoffelen, in collaboration with many researchers over the world.
 
