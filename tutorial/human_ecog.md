@@ -44,7 +44,7 @@ The two workflows become intrinsically connected for the first time during the e
 
 **2**) Import the anatomical MRI into the MATLAB workspace using ft_read_mri. The MRI comes in the format of a single file with an .img or .nii extension, or a folder containing a series of files with a .dcm or .ima extension (DICOM; [Supplementary File 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM4_ESM.pdf) of the original paper may aid in the search and visualization of a DICOM series).
 
-	mri = ft_read_mri(`<path to MRI file>`);
+	mri = ft_read_mri(<path to MRI file>);
 
 **3**) Determine the native orientation of the anatomical MRI's left-right axis using ft_determine_coordsys (Box 2 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4) of the original paper).
 
@@ -69,9 +69,9 @@ CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy i
 
 **6**) Execute FreeSurfer's recon-all functionality from the Linux or MacOS terminal (Windows via VirtualBox), or from the MATLAB command window as below. This set of commands will create a folder named ‘freesurfer’ in the subject directory, with subdirectories containing a multitude of FreeSurfer-generated files.
 
-	fshome     = `<path to freesurfer home directory>`;
-	subdir     = `<path to subject directory>`;
-	mrfile     = `<path to subject MR_acpc.nii>`;
+	fshome     = <path to freesurfer home directory>;
+	subdir     = <path to subject directory>;
+	mrfile     = <path to subject MR_acpc.nii>;
 	system(['export FREESURFER_HOME=' fshome '; ' ...
 	'source $FREESURFER_HOME/SetUpFreeSurfer.sh; ' ...
 	'mri_convert -c -oc 0 0 0 ' mrfile ' ' [subdir '/tmp.nii'] '; ' ...
@@ -81,24 +81,24 @@ PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of
 
 **7**) Import the extracted cortical surfaces into the MATLAB workspace and examine their quality. Repeat the following code using rh.pial to visualize the pial surface of the right hemisphere.
 
-	pial_lh = ft_read_headshape(`<path to freesurfer/surf/lh.pial>`);
+	pial_lh = ft_read_headshape(<path to freesurfer/surf/lh.pial>);
 	pial_lh.coordsys = 'acpc';
 	ft_plot_mesh(pial_lh);
 	lighting gouraud;
 	camlight;
 
-?TROUBLESHOOTING: see the troubleshooting table in the original paper
+?TROUBLESHOOTING See the troubleshooting table in the original paper
 
 **8**) Import the FreeSurfer-processed MRI into the MATLAB workspace for the purpose of fusing with the CT scan at a later step, and specify the coordinate system to which it was aligned in Step 4.
 
-	fsmri_acpc = ft_read_mri(`<path to freesurfer/mri/T1.mgz>`);
+	fsmri_acpc = ft_read_mri(<path to freesurfer/mri/T1.mgz>);
 	fsmri_acpc.coordsys = 'acpc';
 
 ### Preprocessing of the anatomical CT
 
 **9**) Import the anatomical CT into the MATLAB workspace. Similar to the MRI, the CT scan comes in the format of a single file with an .img or .nii extension, or a folder containing a series of files with a .dcm or .ima extension ([Supplementary File 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM4_ESM.pdf) may aid in the search and visualization of a DICOM series).
 
-	ct = ft_read_mri(`<path to CT file>`);
+	ct = ft_read_mri(<path to CT file>);
 
 **10**) In case this cannot be done on the basis of knowledge of the laterality of electrode implantation, determine the native orientation of the anatomical CT's left- right axis using ft_determine_coordsys, similarly to how it was done with the anatomical MRI in Step 3 (Box 2 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4)).
 
@@ -144,7 +144,7 @@ CRITICAL STEP Accuracy of the fusion operation is important for correctly placin
 
 **16**) Import the header information from the recording file, if possible. By giving the electrode labels originating from the header as input to ft_electrodeplacement in the next step, the labels will appear as a to-do list during the interactive electrode placement activity. A second benefit is that the electrode locations can be directly assigned to labels collected from the recording file, obviating the need to sort and rename electrodes to match the electrophysiological data.
 
-	hdr = ft_read_header(`<path to recording file>`);
+	hdr = ft_read_header(<path to recording file>);
 
 **17**) Localize the electrodes in the post-implant CT with ft_electrodeplacement, shown in the figure below. Clicking an electrode label in the list will directly assign that label to the current crosshair location ([Supplementary Video 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM9_ESM.mp4)). Several in-app features facilitate efficient yet precise navigation of the anatomical image, such as a zoom mode, a magnet option that transports the crosshair to the nearest weighted maximum with subvoxel accuracy (or minimum in case of a post-implant MRI), and an interactive three-dimensional scatter figure that is linked to the two-dimensional volume representations. Furthermore, passing on the pre-implant MRI, fsmri_acpc, to ft_electrodeplacement allows toggling between CT and MRI views for the identification of specific electrodes based on their anatomical location. Generally, electrode #1 is the electrode farthest away from the craniotomy or burr hole in case of depths and single-row strips. Careful notes taken during surgery and recording are critical for determining the numbering of grid and multi-row strip electrodes.
 
@@ -183,8 +183,8 @@ CRITICAL STEP Accuracy of the fusion operation is important for correctly placin
 
 	cfg           = [];
 	cfg.method    = 'cortexhull';
-	cfg.headshape = `<path to freesurfer/surf/lh.pial>`;
-	cfg.fshome    = `<path to freesurfer home directory>`;
+	cfg.headshape = <path to freesurfer/surf/lh.pial>;
+	cfg.fshome    = <path to freesurfer home directory>;
 	hull_lh = ft_prepare_mesh(cfg);
 
 **22**) Save the hull to file.
@@ -246,7 +246,7 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
 
 CRITICAL STEP Accuracy of the spatial normalization step is important for correctly overlaying the electrode positions with a brain atlas in a following step.
 
-	load(`<path to fieldtrip/template/anatomy/surface_pial_left.mat>`);
+	load(<path to fieldtrip/template/anatomy/surface_pial_left.mat>);
 	ft_plot_mesh(mesh);
 	ft_plot_sens(elec_mni_frv);
 	view([-90 20]);
@@ -268,16 +268,16 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 	cfg.channel   = {'LPG*', 'LTG*'};
 	cfg.elec      = elec_acpc_fr;
 	cfg.method    = 'headshape';
-	cfg.headshape = `<path to freesurfer/surf/lh.pial>`;
+	cfg.headshape = <path to freesurfer/surf/lh.pial>;
 	cfg.warp      = 'fsaverage';
-	cfg.fshome    = `<path to freesurfer home directory>`;
+	cfg.fshome    = <path to freesurfer home directory>;
 	elec_fsavg_frs = ft_electroderealign(cfg);
 
 **31**) Visualize FreeSurfer's fsaverage brain along with the spatially normalized electrodes and examine whether they show expected behavior (bottom right in the figure below).
 
 CRITICAL STEP Accuracy of the spatial normalization step is important for correctly overlaying the electrode positions with a brain atlas in a following step.
 
-	fspial_lh = ft_read_headshape(`<path to fshome/subjects/fsaverage/surf/lh.pial>`);
+	fspial_lh = ft_read_headshape(<path to fshome/subjects/fsaverage/surf/lh.pial>);
 	fspial_lh.coordsys = 'fsaverage';
 	ft_plot_mesh(fspial_lh);
 	ft_plot_sens(elec_fsavg_frs);
@@ -296,7 +296,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
 **33**) FieldTrip supports looking up the anatomical or functional labels corresponding to the electrodes in a number of atlases, including the AFNI Talairach Tournoux atlas, the AAL atlas, the BrainWeb data set, the JuBrain cytoarchitectonic atlas, the VTPM atlas, and the Brainnetome atlas, in addition to the subject- tailored Desikan-Killiany and Destrieux atlases produced by FreeSurfer. Given that no two electrodes end up in the exact same location across subjects due to inter-individual variability in electrode coverage and brain anatomy, atlases are particularly useful for the systematic combination of neural activity from different subjects in a so-called region of interest (ROI) analysis. With exception of the above FreeSurfer-based atlases, the atlases are in MNI coordinate space and require the electrodes to be spatially normalized (Steps 26 through 27). First, import an atlas of interest, e.g., the AAL atlas, into the MATLAB workspace.
 
-	atlas = ft_read_atlas(`<path to fieldtrip/template/atlas/aal/ROI_MNI_V4.nii>`);
+	atlas = ft_read_atlas(<path to fieldtrip/template/atlas/aal/ROI_MNI_V4.nii>);
 
 **34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere’s hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file).
 
@@ -318,11 +318,11 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
 ### Preprocessing of the neural recordings
 
-** 35**) Define the trials, that is, the segments of data that will be used for further processing and analysis. This step produces a matrix cfg.trl containing for each segment the begin and end sample in the recording file. In the case of the example provided in the shared data, the segments of interest begin 400 ms before tone onset, are marked with a ‘4’ in the trigger channel, and end 900 ms thereafter.
+**35**) Define the trials, that is, the segments of data that will be used for further processing and analysis. This step produces a matrix cfg.trl containing for each segment the begin and end sample in the recording file. In the case of the example provided in the shared data, the segments of interest begin 400 ms before tone onset, are marked with a ‘4’ in the trigger channel, and end 900 ms thereafter.
 
 	cfg                     = [];
-	cfg.dataset             = `<path to recording file>`;
-	cfg.trialdef.eventtype  = ‘TRIGGER′;
+	cfg.dataset             = <path to recording file>;
+	cfg.trialdef.eventtype  = 'TRIGGER';
 	cfg.trialdef.eventvalue = 4;
 	cfg.trialdef.prestim    = 0.4;
 	cfg.trialdef.poststim   = 0.9;
@@ -421,7 +421,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ### Interactive plotting
 
-**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two- dimensional medium offered by paper or a computer screen. The layout is complemented by an automatic outline of the cortical sheet that is specified in cfg.headshape. The cfg.boxchannel option allows selecting channels whose two-dimensional distances are used to determine the plotting box sizes in the following step.
+**47**) For an anatomically informed exploration of the multidimensional outcome of an analysis, create a layout based on the three-dimensional electrode locations. This layout is a symbolic representation in which the channels are projected on the two-dimensional medium offered by paper or a computer screen. The layout is complemented by an automatic outline of the cortical sheet that is specified in cfg.headshape. The cfg.boxchannel option allows selecting channels whose two-dimensional distances are used to determine the plotting box sizes in the following step.
 
 	cfg            = [];
 	cfg.headshape  = pial_lh;
@@ -534,7 +534,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ## Summary and conclusion
 
-Upon completion of this tutorial, one should obtain an integrated representation of neural and anatomical data. The exact results depend ultimately on the clinical or research question at hand, contingencies in the experimental paradigm, and decisions made during the execution of the protocol. This tutorial demonstrated the analysis of spatiotemporal neural dynamics occurring in relation to known experimental structure and relatively simple behavior, namely the pressing of a button with the right hand when hearing a target tone. However, with small adaptations of the protocol it is feasible to track the spatiotemporal evolution of epileptiform activity with high precision (e.g., [Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4) of the original paper), or to perform group-level investigations of fine-grained emotion- or language-related neural dynamics in human hippocampus. A precise fusion of the anatomical images with the electrophysiological data is key to reproducible analyses and findings. Hence, it is important to examine the outcome of any critical step, as we have done above.
+Upon completion of this tutorial, one should obtain an integrated representation of neural and anatomical data. The exact results depend ultimately on the clinical or research question at hand, contingencies in the experimental paradigm, and decisions made during the execution of the protocol. This tutorial demonstrated the analysis of spatiotemporal neural dynamics occurring in relation to known experimental structure and relatively simple behavior, namely the pressing of a button with the right hand when hearing a target tone. However, with small adaptations of the protocol it is feasible to track the spatiotemporal evolution of epileptiform activity with high precision (e.g., [Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4)), or to perform group-level investigations of fine-grained emotion- or language-related neural dynamics in human hippocampus. A precise fusion of the anatomical images with the electrophysiological data is key to reproducible analyses and findings. Hence, it is important to examine the outcome of any critical step, as we have done above.
 ## Suggested further reading
 
 You can read more about intracranial EEG and other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the following documentation.
