@@ -1,36 +1,32 @@
 ---
+title: ft_examplefunction
 layout: default
+tags: 
 ---
+```
+ FT_EXAMPLEFUNCTION demonstrates to new developers how a FieldTrip function should look like
 
-##  FT_EXAMPLEFUNCTION
+ Use as
+   outdata = ft_examplefunction(cfg, indata)
+ where indata is <<describe the type of data or where it comes from>>
+ and cfg is a configuration structure that should contain
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_examplefunction".
+ <<note that the cfg list should be indented with two spaces
 
-`<html>``<pre>`
-    `<a href=/reference/ft_examplefunction>``<font color=green>`FT_EXAMPLEFUNCTION`</font>``</a>` demonstrates to new developers how a FieldTrip function should look like
- 
-    Use as
-    outdata = ft_examplefunction(cfg, indata)
-    where indata is &lt;&lt;describe the type of data or where it comes from&gt;&gt;
-    and cfg is a configuration structure that should contain
- 
-    &lt;&lt;note that the cfg list should be indented with two spaces
- 
-   cfg.option1    = value, explain the value here (default = something)
-   cfg.option2    = value, describe the value here and if needed
-                    continue here to allow automatic parsing of the help
- 
-    The configuration can optionally contain
-    cfg.option3   = value, explain it here (default is automatic)
- 
-    To facilitate data-handling and distributed computing you can use
-    cfg.inputfile   =  ...
-    cfg.outputfile  =  ...
-    If you specify one of these (or both) the input data will be read from a *.mat
-    file on disk and/or the output data will be written to a *.mat file. These mat
-    files should contain only a single variable, corresponding with the
-    input/output structure.
- 
-    See also &lt;&lt;give a list of function names, all in capitals&gt;&gt;
-`</pre>``</html>`
+  cfg.option1    = value, explain the value here (default = something)
+  cfg.option2    = value, describe the value here and if needed
+                   continue here to allow automatic parsing of the help
 
+ The configuration can optionally contain
+   cfg.option3   = value, explain it here (default is automatic)
+
+ To facilitate data-handling and distributed computing you can use
+   cfg.inputfile   =  ...
+   cfg.outputfile  =  ...
+ If you specify one of these (or both) the input data will be read from a *.mat
+ file on disk and/or the output data will be written to a *.mat file. These mat
+ files should contain only a single variable, corresponding with the
+ input/output structure.
+
+ See also <<give a list of function names, all in capitals>>
+```

@@ -1,18 +1,14 @@
 ---
+title: ft_documentationindex
 layout: default
+tags: 
 ---
+```
+ FT_DOCUMENTATIONINDEX is a helper function to maintain the online documentation.
 
-##  FT_DOCUMENTATIONINDEX
+ Normal users will not be calling this function, but will rather look at
+ http://www.fieldtriptoolboxorg/reference/index where the output of this
+ function can be found.
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_documentationindex".
-
-`<html>``<pre>`
-    `<a href=/reference/ft_documentationindex>``<font color=green>`FT_DOCUMENTATIONINDEX`</font>``</a>` is a helper function to maintain the online documentation.
- 
-    Normal users will not be calling this function, but will rather look at
-    http://www.fieldtriptoolboxorg/reference/index where the output of this
-    function can be found.
- 
-    See also `<a href=/reference/ft_documentationreference>``<font color=green>`FT_DOCUMENTATIONREFERENCE`</font>``</a>`
-`</pre>``</html>`
-
+ See also FT_DOCUMENTATIONREFERENCE
+```

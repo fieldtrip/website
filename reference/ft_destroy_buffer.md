@@ -1,18 +1,14 @@
 ---
+title: ft_destroy_buffer
 layout: default
+tags: 
 ---
+```
+ FT_DESTROY_BUFFER stops the thread with the TCP server attached to
+ the local MATLAB instance and removes all data from memory.
 
-##  FT_DESTROY_BUFFER
+ Use as
+   ft_destroy_buffer
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_destroy_buffer".
-
-`<html>``<pre>`
-    `<a href=/reference/ft_destroy_buffer>``<font color=green>`FT_DESTROY_BUFFER`</font>``</a>` stops the thread with the TCP server attached to
-    the local MATLAB instance and removes all data from memory.
- 
-    Use as
-    ft_destroy_buffer
- 
-    See also `<a href=/reference/ft_create_buffer>``<font color=green>`FT_CREATE_BUFFER`</font>``</a>`
-`</pre>``</html>`
-
+ See also FT_CREATE_BUFFER
+```

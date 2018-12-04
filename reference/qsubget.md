@@ -1,26 +1,22 @@
 ---
+title: qsubget
 layout: default
+tags: 
 ---
+```
+ QSUBGET get the output arguments after the remote job has been executed
+ on the Torque, SGE, PBS or SLURM batch queue system.
 
-##  QSUBGET
+ Use as
+   jobid  = qsubfeval(fname, arg1, arg2, ...)
+   argout = qsubget(jobid, ...)
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help qsubget".
+ Optional arguments can be specified in key-value pairs and can include
+   StopOnError    = boolean (default = true)
+   timeout        = number, in seconds (default = 0; return immediately if output cannot be gotten)
+   sleep          = number, in seconds (default = 0.01)
+   output         = string, 'varargout' or 'cell' (default = 'varargout')
+   diary          = string, can be 'always', 'warning', 'error' (default = 'error')
 
-`<html>``<pre>`
-    `<a href=/reference/qsubget>``<font color=green>`QSUBGET`</font>``</a>` get the output arguments after the remote job has been executed
-    on the Torque, SGE, PBS or SLURM batch queue system.
- 
-    Use as
-    jobid  = qsubfeval(fname, arg1, arg2, ...)
-    argout = qsubget(jobid, ...)
- 
-    Optional arguments can be specified in key-value pairs and can include
-    StopOnError    = boolean (default = true)
-    timeout        = number, in seconds (default = 0; return immediately if output cannot be gotten)
-    sleep          = number, in seconds (default = 0.01)
-    output         = string, 'varargout' or 'cell' (default = 'varargout')
-    diary          = string, can be 'always', 'warning', 'error' (default = 'error')
- 
-    See also `<a href=/reference/qsubfeval>``<font color=green>`QSUBFEVAL`</font>``</a>`, `<a href=/reference/qsubcellfun>``<font color=green>`QSUBCELLFUN`</font>``</a>`
-`</pre>``</html>`
-
+ See also QSUBFEVAL, QSUBCELLFUN
+```

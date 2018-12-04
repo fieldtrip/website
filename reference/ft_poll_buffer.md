@@ -1,15 +1,11 @@
 ---
+title: ft_poll_buffer
 layout: default
+tags: 
 ---
+```
+ FT_POLL_BUFFER is deprecated.
 
-##  FT_POLL_BUFFER
-
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_poll_buffer".
-
-`<html>``<pre>`
-    `<a href=/reference/ft_poll_buffer>``<font color=green>`FT_POLL_BUFFER`</font>``</a>` is deprecated.
- 
-    Please use `<a href=/reference/ft_read_data>``<font color=green>`FT_READ_DATA`</font>``</a>` and `<a href=/reference/ft_read_event>``<font color=green>`FT_READ_EVENT`</font>``</a>` with the  'blocking' and
-    the 'timeout' options.
-`</pre>``</html>`
-
+ Please use FT_READ_DATA and FT_READ_EVENT with the  'blocking' and
+ the 'timeout' options.
+```

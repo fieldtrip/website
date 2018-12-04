@@ -1,18 +1,14 @@
 ---
+title: ft_flush_header
 layout: default
+tags: 
 ---
+```
+ FT_FLUSH_HEADER removes the header information from the data queue
+ this also removes all data associated with the specific header.
 
-##  FT_FLUSH_HEADER
+ Use as
+   ft_flush_header(filename, ...)
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_flush_header".
-
-`<html>``<pre>`
-    `<a href=/reference/ft_flush_header>``<font color=green>`FT_FLUSH_HEADER`</font>``</a>` removes the header information from the data queue
-    this also removes all data associated with the specific header.
- 
-    Use as
-    ft_flush_header(filename, ...)
- 
-    See also `<a href=/reference/ft_flush_data>``<font color=green>`FT_FLUSH_DATA`</font>``</a>`, `<a href=/reference/ft_flush_event>``<font color=green>`FT_FLUSH_EVENT`</font>``</a>`
-`</pre>``</html>`
-
+ See also FT_FLUSH_DATA, FT_FLUSH_EVENT
+```

@@ -1,63 +1,59 @@
 ---
+title: ft_datatype_source
 layout: default
+tags: 
 ---
+```
+ FT_DATATYPE_SOURCE describes the FieldTrip MATLAB structure for data that is
+ represented at the source level. This is typically obtained with a beamformer of
+ minimum-norm source reconstruction using FT_SOURCEANALYSIS.
 
-##  FT_DATATYPE_SOURCE
+ An example of a source structure obtained after performing DICS (a frequency
+ domain beamformer scanning method) is shown here
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_datatype_source".
+           pos: [6732x3 double]       positions at which the source activity could have been estimated
+        inside: [6732x1 logical]      boolean vector that indicates at which positions the source activity was estimated
+           dim: [xdim ydim zdim]      if the positions can be described as a 3D regular grid, this contains the
+                                       dimensionality of the 3D volume
+     cumtapcnt: [120x1 double]        information about the number of tapers per original trial
+          time: 0.100                 the latency at which the activity is estimated (in seconds)
+          freq: 30                    the frequency at which the activity is estimated (in Hz)
+           pow: [6732x120 double]     the estimated power at each source position
+     powdimord: 'pos_rpt'             defines how the numeric data has to be interpreted,
+                                       in this case 6732 dipole positions x 120 repetitions (i.e. trials)
+           cfg: [1x1 struct]          the configuration used by the function that generated this data structure
 
-`<html>``<pre>`
-    `<a href=/reference/ft_datatype_source>``<font color=green>`FT_DATATYPE_SOURCE`</font>``</a>` describes the FieldTrip MATLAB structure for data that is
-    represented at the source level. This is typically obtained with a beamformer of
-    minimum-norm source reconstruction using `<a href=/reference/ft_sourceanalysis>``<font color=green>`FT_SOURCEANALYSIS`</font>``</a>`.
- 
-    An example of a source structure obtained after performing DICS (a frequency
-    domain beamformer scanning method) is shown here
- 
-            pos: [6732x3 double]       positions at which the source activity could have been estimated
-         inside: [6732x1 logical]      boolean vector that indicates at which positions the source activity was estimated
-            dim: [xdim ydim zdim]      if the positions can be described as a 3D regular grid, this contains the
-                                        dimensionality of the 3D volume
-      cumtapcnt: [120x1 double]        information about the number of tapers per original trial
-           time: 0.100                 the latency at which the activity is estimated (in seconds)
-           freq: 30                    the frequency at which the activity is estimated (in Hz)
-            pow: [6732x120 double]     the estimated power at each source position
-      powdimord: 'pos_rpt'             defines how the numeric data has to be interpreted,
-                                        in this case 6732 dipole positions x 120 repetitions (i.e. trials)
-            cfg: [1x1 struct]          the configuration used by the function that generated this data structure
- 
-    Required field
-    - pos
- 
-    Optional field
-    - time, freq, pow, coh, eta, mom, ori, cumtapcnt, dim, transform, inside, cfg, dimord, other fields with a dimord
- 
-    Deprecated field
-    - method, outside
- 
-    Obsoleted field
-    - xgrid, ygrid, zgrid, transform, latency, frequency
- 
-    Revision histor
- 
-    (2014) The subfields in the avg and trial fields are now present in the
-    main structure, e.g. source.avg.pow is now source.pow. Furthermore, the
-    inside is always represented as logical vector.
- 
-    (2011) The source representation should always be irregular, i.e. not
-    a 3-D volume, contain a "pos" field and not contain a "transform".
- 
-    (2010) The source structure should contain a general "dimord" or specific
-    dimords for each of the fields. The source reconstruction in the avg and
-    trial substructures has been moved to the toplevel.
- 
-    (2007) The xgrid/ygrid/zgrid fields have been removed, because they are
-    redundant.
- 
-    (2003) The initial version was defined
- 
-    See also `<a href=/reference/ft_datatype>``<font color=green>`FT_DATATYPE`</font>``</a>`, `<a href=/reference/ft_datatype_comp>``<font color=green>`FT_DATATYPE_COMP`</font>``</a>`, `<a href=/reference/ft_datatype_dip>``<font color=green>`FT_DATATYPE_DIP`</font>``</a>`, `<a href=/reference/ft_datatype_freq>``<font color=green>`FT_DATATYPE_FREQ`</font>``</a>`,
-    `<a href=/reference/ft_datatype_mvar>``<font color=green>`FT_DATATYPE_MVAR`</font>``</a>`, `<a href=/reference/ft_datatype_raw>``<font color=green>`FT_DATATYPE_RAW`</font>``</a>`, `<a href=/reference/ft_datatype_source>``<font color=green>`FT_DATATYPE_SOURCE`</font>``</a>`, `<a href=/reference/ft_datatype_spike>``<font color=green>`FT_DATATYPE_SPIKE`</font>``</a>`,
-    `<a href=/reference/ft_datatype_timelock>``<font color=green>`FT_DATATYPE_TIMELOCK`</font>``</a>`, `<a href=/reference/ft_datatype_volume>``<font color=green>`FT_DATATYPE_VOLUME`</font>``</a>`
-`</pre>``</html>`
+ Required fields:
+   - pos
 
+ Optional fields:
+   - time, freq, pow, coh, eta, mom, ori, cumtapcnt, dim, transform, inside, cfg, dimord, other fields with a dimord
+
+ Deprecated fields:
+   - method, outside
+
+ Obsoleted fields:
+   - xgrid, ygrid, zgrid, transform, latency, frequency
+
+ Revision history:
+
+ (2014) The subfields in the avg and trial fields are now present in the
+ main structure, e.g. source.avg.pow is now source.pow. Furthermore, the
+ inside is always represented as logical vector.
+
+ (2011) The source representation should always be irregular, i.e. not
+ a 3-D volume, contain a "pos" field and not contain a "transform".
+
+ (2010) The source structure should contain a general "dimord" or specific
+ dimords for each of the fields. The source reconstruction in the avg and
+ trial substructures has been moved to the toplevel.
+
+ (2007) The xgrid/ygrid/zgrid fields have been removed, because they are
+ redundant.
+
+ (2003) The initial version was defined
+
+ See also FT_DATATYPE, FT_DATATYPE_COMP, FT_DATATYPE_DIP, FT_DATATYPE_FREQ,
+ FT_DATATYPE_MVAR, FT_DATATYPE_RAW, FT_DATATYPE_SOURCE, FT_DATATYPE_SPIKE,
+ FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME
+```

@@ -1,24 +1,20 @@
 ---
+title: ft_sourcedepth
 layout: default
+tags: 
 ---
+```
+ FT_SOURCEDEPTH computes the distance from the source to the surface of
+ the source compartment (usually the brain) in the volume conduction model.
 
-##  FT_SOURCEDEPTH
+ Use as
+   depth = ft_sourcedepth(dippos, headmodel);
+ where
+   dippos    =  Nx3 matrix with the position of N sources
+   headmodel =  structure describing volume condition model
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_sourcedepth".
+ A negative depth indicates that the source is inside the source
+ compartment, positive indicates outside.
 
-`<html>``<pre>`
-    `<a href=/reference/ft_sourcedepth>``<font color=green>`FT_SOURCEDEPTH`</font>``</a>` computes the distance from the source to the surface of
-    the source compartment (usually the brain) in the volume conduction model.
- 
-    Use as
-    depth = ft_sourcedepth(dippos, headmodel);
-    where
-    dippos    =  Nx3 matrix with the position of N sources
-    headmodel =  structure describing volume condition model
- 
-    A negative depth indicates that the source is inside the source
-    compartment, positive indicates outside.
- 
-    See also FIND_INSIDE_VOL
-`</pre>``</html>`
-
+ See also FIND_INSIDE_VOL
+```

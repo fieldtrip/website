@@ -1,59 +1,55 @@
 ---
+title: ft_recodeevent
 layout: default
+tags: 
 ---
+```
+ FT_RECODEEVENT will recode the event structure, given the trial
+ definition that was analyzed
 
-##  FT_RECODEEVENT
+ In FieldTrip, you always start with defining a "trl" field containing
+ the samples in the raw datafile that you want to analyze. That "trl"
+ is based on the events in the dataset. After artifact rejection, it may
+ be the case that trials have been removed completely, or that trials
+ have been cut into pieces. This complicates finding a match between the
+ original events and the pieces of data that are analyzed. This functino
+ restores that match.
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_recodeevent".
+ Use as
+   [ev] = ft_recodeevent(cfg, data)
+ where cfg is a structure with configuration settings and data contains the
+ (nested) configuration that describes the original trial definition and
+ event structure.
 
-`<html>``<pre>`
-    `<a href=/reference/ft_recodeevent>``<font color=green>`FT_RECODEEVENT`</font>``</a>` will recode the event structure, given the trial
-    definition that was analyzed
- 
-    In FieldTrip, you always start with defining a "trl" field containing
-    the samples in the raw datafile that you want to analyze. That "trl"
-    is based on the events in the dataset. After artifact rejection, it may
-    be the case that trials have been removed completely, or that trials
-    have been cut into pieces. This complicates finding a match between the
-    original events and the pieces of data that are analyzed. This functino
-    restores that match.
- 
-    Use as
-    [ev] = ft_recodeevent(cfg, data)
-    where cfg is a structure with configuration settings and data contains the
-    (nested) configuration that describes the original trial definition and
-    event structure.
- 
-    Alternatively, you can also specify the event structure and trial definition
-    yourself with
-    [ev] = ft_recodeevent(cfg, event, trl)
- 
-    the configuration can contain
-    cfg.eventtype   = empty, 'string' or cell-array with multiple strings
-    cfg.eventvalue  = empty or a list of event values (can be numeric or string)
- 
-    cfg.searchrange = 'anywhere'      search anywhere for the event, (default)
-                      'insidetrial'   only search inside
-                      'outsidetrial'  only search outside
-                      'beforetrial'   only search before the trial
-                      'aftertrial'    only search after  the trial
-                      'beforezero'    only search before time t=0 of each trial
-                      'afterzero'     only search after  time t=0 of each trial
- 
-    cfg.nearestto   = 'trialzero'     compare with time t=0 for each trial (default)
-                      'trialbegin'    compare with the begin of each trial
-                      'trialend'      compare with the end of each trial
- 
-    cfg.match       = 'exact' or 'nearest'
- 
-    cfg.output      = 'event'             the event itself
-                      'eventvalue'        the value of the event
-                      'eventnumber'       the number of the event
-                      'samplenumber'      the sample at which the event is located
-                      'samplefromoffset'  number of samples from t=0 (c.f. response time)
-                      'samplefrombegin'   number of samples from the begin of the trial
-                      'samplefromend'     number of samples from the end   of the trial
- 
-    See also `<a href=/reference/ft_definetrial>``<font color=green>`FT_DEFINETRIAL`</font>``</a>`, `<a href=/reference/ft_redefinetrial>``<font color=green>`FT_REDEFINETRIAL`</font>``</a>`, `<a href=/reference/ft_preprocessing>``<font color=green>`FT_PREPROCESSING`</font>``</a>`
-`</pre>``</html>`
+ Alternatively, you can also specify the event structure and trial definition
+ yourself with
+   [ev] = ft_recodeevent(cfg, event, trl)
 
+ the configuration can contain
+   cfg.eventtype   = empty, 'string' or cell-array with multiple strings
+   cfg.eventvalue  = empty or a list of event values (can be numeric or string)
+
+   cfg.searchrange = 'anywhere'      search anywhere for the event, (default)
+                     'insidetrial'   only search inside
+                     'outsidetrial'  only search outside
+                     'beforetrial'   only search before the trial
+                     'aftertrial'    only search after  the trial
+                     'beforezero'    only search before time t=0 of each trial
+                     'afterzero'     only search after  time t=0 of each trial
+
+   cfg.nearestto   = 'trialzero'     compare with time t=0 for each trial (default)
+                     'trialbegin'    compare with the begin of each trial
+                     'trialend'      compare with the end of each trial
+
+   cfg.match       = 'exact' or 'nearest'
+
+   cfg.output      = 'event'             the event itself
+                     'eventvalue'        the value of the event
+                     'eventnumber'       the number of the event
+                     'samplenumber'      the sample at which the event is located
+                     'samplefromoffset'  number of samples from t=0 (c.f. response time)
+                     'samplefrombegin'   number of samples from the begin of the trial
+                     'samplefromend'     number of samples from the end   of the trial
+
+ See also FT_DEFINETRIAL, FT_REDEFINETRIAL, FT_PREPROCESSING
+```

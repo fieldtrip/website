@@ -1,17 +1,13 @@
 ---
+title: ft_flush_event
 layout: default
+tags: 
 ---
+```
+ FT_FLUSH_EVENT removes all events from the event queue
 
-##  FT_FLUSH_EVENT
+ Use as
+   ft_flush_event(filename, ...)
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_flush_event".
-
-`<html>``<pre>`
-    `<a href=/reference/ft_flush_event>``<font color=green>`FT_FLUSH_EVENT`</font>``</a>` removes all events from the event queue
- 
-    Use as
-    ft_flush_event(filename, ...)
- 
-    See also `<a href=/reference/ft_flush_header>``<font color=green>`FT_FLUSH_HEADER`</font>``</a>`, `<a href=/reference/ft_flush_data>``<font color=green>`FT_FLUSH_DATA`</font>``</a>`
-`</pre>``</html>`
-
+ See also FT_FLUSH_HEADER, FT_FLUSH_DATA
+```

@@ -1,39 +1,35 @@
 ---
+title: ft_channelnormalise
 layout: default
+tags: 
 ---
+```
+ FT_CHANNELNORMALISE shifts and scales all channels of the the input data.
+ The default behavior is to subtract each channel's mean, and scale to a
+ standard deviation of 1, for each channel individually.
 
-##  FT_CHANNELNORMALISE
+ Use as
+   [dataout] = ft_channelnormalise(cfg, data)
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_channelnormalise".
+ The configuration can contain
+   cfg.channel = 'all', or a selection of channels
+   cfg.trials  = 'all' or a selection given as a 1xN vector (default = 'all')
+   cfg.demean  = 'yes' or 'no' (or boolean value) (default = 'yes')
+   cfg.scale   = scalar value used for scaling (default = 1)
+   cfg.method  = 'perchannel', or 'acrosschannel', computes the
+                   standard deviation per channel, or across all channels.
+                   The latter method leads to the same scaling across
+                   channels and preserves topographical distributions
 
-`<html>``<pre>`
-    `<a href=/reference/ft_channelnormalise>``<font color=green>`FT_CHANNELNORMALISE`</font>``</a>` shifts and scales all channels of the the input data.
-    The default behavior is to subtract each channel's mean, and scale to a
-    standard deviation of 1, for each channel individually.
- 
-    Use as
-    [dataout] = ft_channelnormalise(cfg, data)
- 
-    The configuration can contain
-    cfg.channel = 'all', or a selection of channels
-    cfg.trials  = 'all' or a selection given as a 1xN vector (default = 'all')
-    cfg.demean  = 'yes' or 'no' (or boolean value) (default = 'yes')
-    cfg.scale   = scalar value used for scaling (default = 1)
-    cfg.method  = 'perchannel', or 'acrosschannel', computes the
-                    standard deviation per channel, or across all channels.
-                    The latter method leads to the same scaling across
-                    channels and preserves topographical distributions
- 
-    To facilitate data-handling and distributed computing you can use
-    cfg.inputfile   =  ...
-    cfg.outputfile  =  ...
-    If you specify one of these (or both) the input data will be read from a *.mat
-    file on disk and/or the output data will be written to a *.mat file. These mat
-    files should contain only a single variable, corresponding with the
-    input/output structure.
- 
-    See also `<a href=/reference/ft_componentanalysis>``<font color=green>`FT_COMPONENTANALYSIS`</font>``</a>`, `<a href=/reference/ft_freqbaseline>``<font color=green>`FT_FREQBASELINE`</font>``</a>`, `<a href=/reference/ft_timelockbaseline>``<font color=green>`FT_TIMELOCKBASELINE`</font>``</a>`
- 
-    Copyright (C) 2010, Jan-Mathijs Schoffelen
-`</pre>``</html>`
+ To facilitate data-handling and distributed computing you can use
+   cfg.inputfile   =  ...
+   cfg.outputfile  =  ...
+ If you specify one of these (or both) the input data will be read from a *.mat
+ file on disk and/or the output data will be written to a *.mat file. These mat
+ files should contain only a single variable, corresponding with the
+ input/output structure.
 
+ See also FT_COMPONENTANALYSIS, FT_FREQBASELINE, FT_TIMELOCKBASELINE
+
+ Copyright (C) 2010, Jan-Mathijs Schoffelen
+```

@@ -1,47 +1,43 @@
 ---
+title: ft_read_data
 layout: default
+tags: 
 ---
+```
+ FT_READ_DATA reads electrophysiological data from a variety of EEG, MEG and LFP
+ files and represents it in a common data-independent format. The supported formats
+ are listed in the accompanying FT_READ_HEADER function.
 
-##  FT_READ_DATA
+ Use as
+   dat = ft_read_data(filename, ...)
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_read_data".
+ Additional options should be specified in key-value pairs and can be
+   'header'         header structure, see FT_READ_HEADER
+   'begsample'      first sample to read
+   'endsample'      last sample to read
+   'begtrial'       first trial to read, mutually exclusive with begsample+endsample
+   'endtrial'       last trial to read, mutually exclusive with begsample+endsample
+   'chanindx'       list with channel indices to read
+   'chanunit'       cell-array with strings, the desired unit of each channel
+   'checkboundary'  boolean, whether to check for reading segments over a trial boundary
+   'checkmaxfilter' boolean, whether to check that maxfilter has been correctly applied (default = true)
+   'cache'          boolean, whether to use caching for multiple reads
+   'dataformat'     string
+   'headerformat'   string
+   'fallback'       can be empty or 'biosig' (default = [])
+   'blocking'       wait for the selected number of events (default = 'no')
+   'timeout'        amount of time in seconds to wait when blocking (default = 5)
 
-`<html>``<pre>`
-    `<a href=/reference/ft_read_data>``<font color=green>`FT_READ_DATA`</font>``</a>` reads electrophysiological data from a variety of EEG, MEG and LFP
-    files and represents it in a common data-independent format. The supported formats
-    are listed in the accompanying `<a href=/reference/ft_read_header>``<font color=green>`FT_READ_HEADER`</font>``</a>` function.
- 
-    Use as
-    dat = ft_read_data(filename, ...)
- 
-    Additional options should be specified in key-value pairs and can be
-    'header'         header structure, see `<a href=/reference/ft_read_header>``<font color=green>`FT_READ_HEADER`</font>``</a>`
-    'begsample'      first sample to read
-    'endsample'      last sample to read
-    'begtrial'       first trial to read, mutually exclusive with begsample+endsample
-    'endtrial'       last trial to read, mutually exclusive with begsample+endsample
-    'chanindx'       list with channel indices to read
-    'chanunit'       cell-array with strings, the desired unit of each channel
-    'checkboundary'  boolean, whether to check for reading segments over a trial boundary
-    'checkmaxfilter' boolean, whether to check that maxfilter has been correctly applied (default = true)
-    'cache'          boolean, whether to use caching for multiple reads
-    'dataformat'     string
-    'headerformat'   string
-    'fallback'       can be empty or 'biosig' (default = [])
-    'blocking'       wait for the selected number of events (default = 'no')
-    'timeout'        amount of time in seconds to wait when blocking (default = 5)
- 
-    This function returns a 2-D matrix of size Nchans*Nsamples for continuous
-    data when begevent and endevent are specified, or a 3-D matrix of size
-    Nchans*Nsamples*Ntrials for epoched or trial-based data when begtrial
-    and endtrial are specified.
- 
-    The list of supported file formats can be found in `<a href=/reference/ft_read_header>``<font color=green>`FT_READ_HEADER`</font>``</a>`.
- 
-    To use an external reading function, you can specify the function name as argument
-    to 'dataformat'. The function needs to be on the path, and should take as inpu
-    filename, hdr, begsample, endsample, chanindx.
- 
-    See also `<a href=/reference/ft_read_header>``<font color=green>`FT_READ_HEADER`</font>``</a>`, `<a href=/reference/ft_read_event>``<font color=green>`FT_READ_EVENT`</font>``</a>`, `<a href=/reference/ft_write_data>``<font color=green>`FT_WRITE_DATA`</font>``</a>`, `<a href=/reference/ft_write_event>``<font color=green>`FT_WRITE_EVENT`</font>``</a>`
-`</pre>``</html>`
+ This function returns a 2-D matrix of size Nchans*Nsamples for continuous
+ data when begevent and endevent are specified, or a 3-D matrix of size
+ Nchans*Nsamples*Ntrials for epoched or trial-based data when begtrial
+ and endtrial are specified.
 
+ The list of supported file formats can be found in FT_READ_HEADER.
+
+ To use an external reading function, you can specify the function name as argument
+ to 'dataformat'. The function needs to be on the path, and should take as input:
+ filename, hdr, begsample, endsample, chanindx.
+
+ See also FT_READ_HEADER, FT_READ_EVENT, FT_WRITE_DATA, FT_WRITE_EVENT
+```

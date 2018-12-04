@@ -1,37 +1,33 @@
 ---
+title: ft_wizard
 layout: default
+tags: 
 ---
+```
+ FT_WIZARD is a graphical user interface to evaluate a FieldTrip analysis
+ script one step at a time, allowing you to go to the next step if you are
+ content with the data so far, or to the previous step if you want to repeat it
+ with different configuration settings.
 
-##  FT_WIZARD
+ Use as
+   ft_wizard scriptname
+ or 
+   ft_wizard('scriptname')
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_wizard".
-
-`<html>``<pre>`
-    `<a href=/reference/ft_wizard>``<font color=green>`FT_WIZARD`</font>``</a>` is a graphical user interface to evaluate a FieldTrip analysis
-    script one step at a time, allowing you to go to the next step if you are
-    content with the data so far, or to the previous step if you want to repeat it
-    with different configuration settings.
+ Use the functional form of FT_WIZARD, such as FT_WIZARD('scriptname'), when
+ the name of the script is stored in a string, when an output argument is
+ requested, or if the name of the script contains spaces. If you do not
+ specify an output argument, the results will be stored as variables in
+ the main MATLAB workspace. 
  
-    Use as
-    ft_wizard scriptname
-    or 
-    ft_wizard('scriptname')
+ Besides the buttons, you can use the following key combinations
+   Ctrl-O        load a new script from a file
+   Ctrl-S        save the script to a new file
+   Ctrl-E        open the current script in editor
+   Ctrl-P        go to previous step
+   Ctrl-N        go to next step
+   Ctrl-Q        quit, do not save the variables
+   Ctrl-X        exit, save the variables to the workspace
  
-    Use the functional form of `<a href=/reference/ft_wizard>``<font color=green>`FT_WIZARD`</font>``</a>`, such as `<a href=/reference/ft_wizard>``<font color=green>`FT_WIZARD`</font>``</a>`('scriptname'), when
-    the name of the script is stored in a string, when an output argument is
-    requested, or if the name of the script contains spaces. If you do not
-    specify an output argument, the results will be stored as variables in
-    the main MATLAB workspace. 
-    
-    Besides the buttons, you can use the following key combinations
-    Ctrl-O        load a new script from a file
-    Ctrl-S        save the script to a new file
-    Ctrl-E        open the current script in editor
-    Ctrl-P        go to previous step
-    Ctrl-N        go to next step
-    Ctrl-Q        quit, do not save the variables
-    Ctrl-X        exit, save the variables to the workspace
-    
-    See also FT_ANALYSISPROTOCOL
-`</pre>``</html>`
-
+ See also FT_ANALYSISPROTOCOL
+```

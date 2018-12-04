@@ -1,21 +1,17 @@
 ---
+title: ft_source2full
 layout: default
+tags: 
 ---
+```
+ FT_SOURCE2FULL recreates the grid locations outside the brain in the source 
+ reconstruction, so that the source volume again describes the full grid.
+ This undoes the memory savings that can be achieved using FT_SOURCE2SPARSE
+ and makes it possible again to plot  the source volume and save it to an
+ external file.
 
-##  FT_SOURCE2FULL
+ Use as
+   [source] = ft_source2full(source)
 
-Note that this reference documentation is identical to the help that is displayed in MATLAB when you type "help ft_source2full".
-
-`<html>``<pre>`
-    `<a href=/reference/ft_source2full>``<font color=green>`FT_SOURCE2FULL`</font>``</a>` recreates the grid locations outside the brain in the source 
-    reconstruction, so that the source volume again describes the full grid.
-    This undoes the memory savings that can be achieved using `<a href=/reference/ft_source2sparse>``<font color=green>`FT_SOURCE2SPARSE`</font>``</a>`
-    and makes it possible again to plot  the source volume and save it to an
-    external file.
- 
-    Use as
-    [source] = ft_source2full(source)
- 
-    See also `<a href=/reference/ft_source2sparse>``<font color=green>`FT_SOURCE2SPARSE`</font>``</a>`
-`</pre>``</html>`
-
+ See also FT_SOURCE2SPARSE
+```
