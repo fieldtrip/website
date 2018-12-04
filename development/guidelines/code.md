@@ -117,7 +117,7 @@ To determine the dimord, you should use the **fieldtrip/private/getdimord** func
 
 Any new configuration option should have a default set at the beginning of the function. If you don't know a good default value, you should specify the default value as empty, i.e. cfg.newoption = \[].
 
-If you add a configuration option, you should check in the [configuration index](/configuration_index) whether a cfg option with similar functionality already exist in another function. Use identical names for identical functionality and try to keep the help similar if possible.
+If you add a configuration option, you should check in the [configuration index](/reference/configuration_index) whether a cfg option with similar functionality already exist in another function. Use identical names for identical functionality and try to keep the help similar if possible.
 
 ## Renaming configuration options or values
 
