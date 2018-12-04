@@ -1,8 +1,13 @@
-# Index of configuration options 
+---
+title: Index of all configuration options
+layout: default
+---
+
+# Index of all configuration options
 
 A detailed description of each function is available in the [reference documentation](/reference).
 
-## A 
+## A
 
 ** cfg.absdiff ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'no' or 'yes', computes absolute derivative (i.e. first derivative then rectify)
@@ -403,7 +408,7 @@ number, fontsize along the axes (default = 10)
 ** cfg.axisfontunits ** - [ft_databrowser](/reference/ft_databrowser)  
 string, can be 'normalized', 'points', 'pixels', 'inches' or 'centimeters' (default = 'points')
 
-## B 
+## B
 
 ** cfg.backproject ** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
 'yes' or 'no' (default = 'yes') determines when reducerank is applied whether the lower rank leadfield is projected back onto the original linear subspace, or not.
@@ -627,7 +632,7 @@ whether to start on the 'first or 'last' data that is available (default = 'last
 ** cfg.bw ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 'yes' or 'no', if an image is used and this option is true, the image is transformed in black and white (default = 'no', i.e. do not transform)
 
-## C 
+## C
 
 ** cfg.calibration ** - [ft_spikedownsample](/reference/ft_spikedownsample)  
 optional scaling factor to apply to the data to convert it in uV, see below
@@ -941,7 +946,7 @@ the number of spatial filters to use (default: 6).
 ** cfg.cvar ** - [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)  
 number or list with indices, control variable(s)
 
-## D 
+## D
 
 ** cfg.datafile ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
 string
@@ -1138,7 +1143,7 @@ resolution of the 2-D histogram, or of the kernel plot in seconds. Since we have
 ** cfg.duration ** - [ft_steadystatesimulation](/reference/ft_steadystatesimulation)  
 scalar, trial length in seconds (default = 4.56)
 
-## E 
+## E
 
 ** cfg.ecgscale ** - [ft_databrowser](/reference/ft_databrowser), [ft_rejectvisual](/reference/ft_rejectvisual)  
 number, scaling to apply to the ECG channels prior to display
@@ -1215,7 +1220,7 @@ empty, 'string' or cell-array with multiple strings
 ** cfg.eventvalue ** - [ft_recodeevent](/reference/ft_recodeevent)  
 empty or a list of event values (can be numeric or string)
 
-## F 
+## F
 
 ** cfg.facecolor ** - [ft_sourceplot](/reference/ft_sourceplot)  
 [r g b] values or string, for example 'brain', 'cortex', 'skin', 'black', 'red', 'r', or an Nx3 or Nx1 array where N is the number of faces
@@ -1586,7 +1591,7 @@ string, field in data with the functional parameter of interest (default = [])
 ** cfg.funparameter ** - [ft_sourcemovie](/reference/ft_sourcemovie)  
 string, functional parameter that is color coded (default = 'avg.pow')
 
-## G 
+## G
 
 ** cfg.gaussvar ** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
 variance (default = 1/16 of window length in sec).
@@ -1714,7 +1719,7 @@ scaling grid size (default = 67) determines resolution of figure
 ** cfg.gwidth ** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis)  
 determines the length of the used wavelets in standard deviations of the implicit Gaussian kernel and should be choosen >= 3; (default = 3)
 
-## H 
+## H
 
 ** cfg.hdr ** - [ft_spike_maketrials](/reference/ft_spike_maketrials)  
 struct, should be specified if cfg.trlunit = 'samples'. This should be specified as cfg.hdr = data.hdr where data.hdr contains the subfields data.hdr.Fs (sampling frequency of the LFP), data.hdr.FirstTimeStamp, and data.hdr.TimeStampPerSecond.
@@ -1863,7 +1868,7 @@ highpass frequency in Hz
 ** cfg.hpinstabilityfix ** - [ft_preprocessing](/reference/ft_preprocessing)  
 deal with filter instability, 'no', 'reduce', 'split' (default = 'no')
 
-## I 
+## I
 
 ** cfg.icasso.Niter ** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 
@@ -1982,7 +1987,7 @@ scalar, inter-trial interval in seconds (default = 1)
 ** cfg.ivar ** - [ft_statistics_analytic](/reference/ft_statistics_analytic), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)  
 number or list with indices, independent variable(s)
 
-## J 
+## J
 
 ** cfg.jackknife ** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
 'no' (default) or 'yes' specifies whether the coefficients are estimated for all leave-one-out sets of trials
@@ -1999,7 +2004,7 @@ causes the realtime function to jump to the end
 ** cfg.jumptoeof ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer)  
 whether to skip to the end of the stream/file at startup (default = 'yes')
 
-## K 
+## K
 
 ** cfg.keepbrain ** - [ft_defacevolume](/reference/ft_defacevolume)  
 'no' or 'yes', segment and retain the brain (default = 'no')
@@ -2100,7 +2105,7 @@ substructure with additional low-level options for this method
 ** cfg.kurtosis ** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
 'yes' or 'no' (default = 'no')
 
-## L 
+## L
 
 ** cfg.lambda ** - [ft_omri_quality](/reference/ft_omri_quality)  
 forgetting factor for the variaton plot (default=0.9)
@@ -2279,7 +2284,7 @@ lowpass frequency in Hz
 ** cfg.lpinstabilityfix ** - [ft_preprocessing](/reference/ft_preprocessing)  
 deal with filter instability, 'no', 'reduce', 'split' (default = 'no')
 
-## M 
+## M
 
 ** cfg.magradius ** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 number representing the radius for the cfg.magtype based search (default = 3)
@@ -2632,7 +2637,7 @@ Nx1 cell-array with selection of channels
 ** cfg.mychanscale ** - [ft_databrowser](/reference/ft_databrowser)  
 number, scaling to apply to the channels specified in cfg.mychan
 
-## N 
+## N
 
 ** cfg.n1.ampl ** - [ft_freqsimulation](/reference/ft_freqsimulation)  
 root-mean-square amplitude of wide-band signal prior to filtering
@@ -2787,7 +2792,7 @@ number of simulated trials (default = 10)
 ** cfg.numvertices ** - [ft_prepare_mesh](/reference/ft_prepare_mesh)  
 numeric vector, should have same number of elements as cfg.tissue
 
-## O 
+## O
 
 ** cfg.offset ** - [ft_nonlinearassociation](/reference/ft_nonlinearassociation)  
 0
@@ -2948,7 +2953,7 @@ single number (between 0 and 1 (exclusive)) specifying the fraction of overlap b
 ** cfg.overlap ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 string, how to deal with overlapping channels when the layout is constructed from a sensor configuration structure. This can be 'shift' - shift the positions in 2D space to remove the overlap (default) 'keep' - do not shift, retain the overlap 'no' - throw an error when overlap is present
 
-## P 
+## P
 
 ** cfg.pad ** - [ft_freqanalysis](/reference/ft_freqanalysis)  
 number, 'nextpow2', or 'maxperlen' (default), length in seconds to which the data can be padded out. The padding will determine your spectral resolution. If you want to compare spectra from data pieces of different lengths, you should use the same cfg.pad for both, in order to spectrally interpolate them to the same spectral resolution. The new option 'nextpow2' rounds the maximum trial length up to the next power of 2. By using that amount of padding, the FFT can be computed more efficiently in case 'maxperlen' has a large prime factor sum.
@@ -3286,7 +3291,7 @@ for singular values, default is 1e-3
 ** cfg.psth ** - [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
 'yes' (default) or 'no'. Plot PSTH with JPSTH if 'yes';
 
-## Q 
+## Q
 
 ** cfg.querymethod ** - [ft_volumelookup](/reference/ft_volumelookup)  
 'sphere' searches voxels around the ROI in a sphere (default) = 'cube' searches voxels around the ROI in a cube
@@ -3294,7 +3299,7 @@ for singular values, default is 1e-3
 ** cfg.queryrange ** - [ft_sourceplot](/reference/ft_sourceplot)  
 number, in atlas voxels (default 3)
 
-## R 
+## R
 
 ** cfg.radius ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 (optional)
@@ -3479,7 +3484,7 @@ number, rotation around the z-axis in degrees (default = [], which means automat
 ** cfg.runica.weights ** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 
 
-## S 
+## S
 
 ** cfg.s1.ampl ** - [ft_freqsimulation](/reference/ft_freqsimulation)  
 amplitude of signal 1
@@ -3892,7 +3897,7 @@ string, file that contains the inflated surface (default = []) may require speci
 ** cfg.symmetry ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 'x', 'y' or 'z' symmetry for two dipoles, can be empty (default = [])
 
-## T 
+## T
 
 ** cfg.t_ftimwin ** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
 the width of the sliding window on which the coefficients are estimated
@@ -4200,7 +4205,7 @@ length of simulated trials in seconds (default = 1)
 ** cfg.truncate ** - [ft_denoise_pca](/reference/ft_denoise_pca)  
 optional truncation of the singular value spectrum (default = 'no')
 
-## U 
+## U
 
 ** cfg.unit ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 
@@ -4220,7 +4225,7 @@ string, 'yes' or 'no' (default = 'yes')
 ** cfg.uvar ** - [ft_statistics_analytic](/reference/ft_statistics_analytic), [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)  
 number or list with indices, unit variable(s)
 
-## V 
+## V
 
 ** cfg.variance ** - [ft_freqdescriptives](/reference/ft_freqdescriptives)  
 'yes' or 'no', estimate standard error in the standard way (default = 'no')
@@ -4282,7 +4287,7 @@ string, 'yes' or 'no' to visualize the analysis (default = 'yes')
 ** cfg.vmpversion ** - [ft_volumewrite](/reference/ft_volumewrite)  
 1 or 2 (default) version of the vmp-format to use
 
-## W 
+## W
 
 ** cfg.ward ** - [ft_spikesorting](/reference/ft_spikesorting)  
 substructure with additional low-level options for this method
@@ -4344,7 +4349,7 @@ number or list with indices, within-block variable(s)
 ** cfg.wvar ** - [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)  
 number or list with indices, within-cell variable(s)
 
-## X 
+## X
 
 ** cfg.xlim ** - [ft_movieplotER](/reference/ft_movieplotER), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
 'maxmin' or [xmin xmax] (default = 'maxmin')
@@ -4364,7 +4369,7 @@ selection boundaries over first dimension in data (e.g., time) 'maxmin' or [xmin
 ** cfg.xrange ** - [ft_volumereslice](/reference/ft_volumereslice)  
 [min max], in physical units
 
-## Y 
+## Y
 
 ** cfg.ylim ** - [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
 'maxmin' or [ymin ymax] (default = 'maxmin')
@@ -4396,7 +4401,7 @@ vertical scaling, can be 'maxmin', 'maxabs' or [ymin ymax] (default = 'maxabs')
 ** cfg.yrange ** - [ft_volumereslice](/reference/ft_volumereslice)  
 [min max], in physical units
 
-## Z 
+## Z
 
 ** cfg.zlim ** - [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)  
 [min max], range in cm to plot (default is automatic)
@@ -4433,4 +4438,3 @@ number of samples before peak (default = 16)
 
 ** cfg.zthresh.pos ** - [ft_spikedetection](/reference/ft_spikedetection)  
 positive threshold, e.g. 3
-

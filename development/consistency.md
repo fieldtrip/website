@@ -64,7 +64,7 @@ Status: done.
 
 ## Step 3: automize the creation of the html documentation for the fieldtrip site
 
-The documentation should consist of an overview of the main commands with the complete help similar as in Matlab ([reference](/reference)) and an index with all cfg options ([index](/reference/index)). Status: done. 
+The documentation should consist of an overview of the main commands with the complete help similar as in Matlab ([reference](/reference)) and an index with all cfg options ([index](/configuration_index)). Status: done. 
 
 These should be cross-linked. Status: no attempts yet.
 ## Appendix: some usefull unix commands
