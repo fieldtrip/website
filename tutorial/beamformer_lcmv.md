@@ -2,7 +2,6 @@
 title: Localizing sources using beamformer techniques
 layout: default
 tags: [fixme]
-toc: true
 ---
 
 {% include markup/danger %}

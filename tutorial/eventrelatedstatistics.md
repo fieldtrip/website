@@ -2,7 +2,6 @@
 title: Parametric and non-parametric statistics on event-related fields
 layout: default
 tags: [tutorial, statistics, meg, eeg, timelock, freq]
-toc: true
 ---
 
 #  Parametric and non-parametric statistics on event-related fields

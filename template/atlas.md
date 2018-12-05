@@ -2,7 +2,6 @@
 title: Template anatomical atlases and parcellation schemes
 layout: default
 tags: [template]
-toc: true
 ---
 
 # Template anatomical atlases and parcellation schemes

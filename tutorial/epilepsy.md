@@ -2,7 +2,6 @@
 title: Virtual channel analysis of epilepsy MEG data
 layout: default
 tags: [tutorial, MEG-epilepsy]
-toc: true
 ---
 
 {% include markup/info %}

@@ -2,7 +2,6 @@
 title: Dipole fitting of combined MEG/EEG data
 layout: default
 tags: [tutorial, natmeg, meg+eeg, dipole, MEG-audodd]
-toc: true
 ---
 
 # Dipole fitting of combined MEG/EEG data

@@ -2,7 +2,6 @@
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
 layout: default
 tags: [tutorial, freq, meg, eeg, plot, MEG-language]
-toc: true
 ---
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets

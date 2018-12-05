@@ -2,7 +2,6 @@
 title: Preprocessing and event-related activity in combined MEG/EEG data
 layout: default
 tags: [tutorial, natmeg, meg+eeg, statistics]
-toc: true
 ---
 
 # Statistical analysis and multiple comparison correction for combined MEG/EEG data

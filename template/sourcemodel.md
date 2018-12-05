@@ -2,7 +2,6 @@
 title: Template models for source reconstruction
 layout: default
 tags: [template, sourcemodel, grid]
-toc: true
 ---
 
 ## Template models for source reconstruction

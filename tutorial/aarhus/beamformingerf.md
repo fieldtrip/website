@@ -2,7 +2,6 @@
 title: Beamforming evoked fields and potentials in combined MEG/EEG data
 layout: default
 tags: [tutorial, aarhus, meg+eeg, beamforming, ERF, lcmv, MEG-audodd]
-toc: true
 ---
 
 # Beamforming evoked fields and potentials in combined MEG/EEG data

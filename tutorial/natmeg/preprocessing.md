@@ -2,7 +2,6 @@
 title: Preprocessing and event-related activity in combined MEG/EEG data
 layout: default
 tags: [tutorial, natmeg, meg+eeg, raw, preprocessing, MEG-audodd]
-toc: true
 ---
 
 # Preprocessing and event-related activity in combined MEG/EEG data

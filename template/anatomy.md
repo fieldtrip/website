@@ -2,7 +2,6 @@
 title: Anatomical templates for visualizing source reconstructed activity
 layout: default
 tags: [template]
-toc: true
 ---
 
 # Anatomical templates for visualizing source reconstructed activity

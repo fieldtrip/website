@@ -1,7 +1,6 @@
 ---
 title: Analysis of auditory evoked fields in sensor and source space
 layout: default
-toc: true
 ---
 
 # Analysis of auditory evoked fields in sensor and source space

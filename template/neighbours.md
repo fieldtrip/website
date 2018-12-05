@@ -2,7 +2,6 @@
 title: Templates for defining neighbouring channels
 layout: default
 tags: [template]
-toc: true
 ---
 
 # Templates for defining neighbouring channels

@@ -2,7 +2,6 @@
 title: Template 3-D electrode sets
 layout: default
 tags: [template]
-toc: true
 ---
 
 # Template 3-D electrode sets

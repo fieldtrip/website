@@ -2,14 +2,23 @@ title: FieldTrip toolbox
 email: fieldtriptoolbox@gmail.com
 description: FieldTrip - the toolbox for MEG, EEG and iEEG
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: ""     # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"                                # the subpath of your site, e.g. /blog
+url: "http://www.fieldtriptoolbox.org"      # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fieldtriptoolbx
 github_username:  fieldtrip
 
 # Build settings
 sass:
   sass_dir: ./assets/css
+
+# see https://jekyllrb.com/docs/configuration/front-matter-defaults/
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      toc: true
 
 permalink: pretty
 markdown: kramdown

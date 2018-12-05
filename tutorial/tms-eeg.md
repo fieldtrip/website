@@ -2,7 +2,6 @@
 title: Dealing with TMS-EEG datasets
 layout: default
 tags: [tutorial, tms, eeg, preprocesing, plot, EEG-TMS]
-toc: true
 ---
 
 # Dealing with TMS-EEG datasets

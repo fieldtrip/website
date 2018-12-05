@@ -2,7 +2,6 @@
 title: Whole brain connectivity and network analysis
 layout: default
 tags: [tutorial, connectivity]
-toc: true
 ---
 
 # Whole brain connectivity and network analysis

@@ -2,7 +2,6 @@
 title: Template 2D layouts for plotting
 layout: default
 tags: [template, layout]
-toc: true
 ---
 
 # Template 2D layouts for plotting

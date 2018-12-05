@@ -2,7 +2,6 @@
 title: Event related averaging and MEG planar gradient
 layout: default
 tags: [tutorial, meg, timelock, preprocessing, plot, MEG-language]
-toc: true
 ---
 
 # Event related averaging and MEG planar gradient

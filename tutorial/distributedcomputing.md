@@ -2,7 +2,6 @@
 title: Speeding up your analysis with distributed computing
 layout: default
 tags: [tutorial, qsub, peer, distcomp, matlab, MEG-language]
-toc: true
 ---
 
 # Speeding up your analysis with distributed computing

@@ -2,7 +2,6 @@
 title: Preprocessing and analysis of spike-train data
 layout: default
 tag: tutorial spike animal spike-placefield spike-attention
-toc: true
 ---
 
 # Preprocessing and analysis of spike-train data

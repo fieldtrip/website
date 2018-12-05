@@ -2,7 +2,6 @@
 title: Creating a sourcemodel for source-reconstruction of MEG or EEG data
 layout: default
 tags: [tutorial, source, meg, sourcemodel, mri, plot, MEG-language]
-toc: true
 ---
 
 # Creating a sourcemodel for source-reconstruction of MEG or EEG data

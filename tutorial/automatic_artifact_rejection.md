@@ -2,7 +2,6 @@
 title: Automatic artifact rejection
 layout: default
 tags: [fixme, tutorial, artifact, meg, raw, preprocessing, MEG-artifact]
-toc: true
 ---
 
 {% include markup/info %}

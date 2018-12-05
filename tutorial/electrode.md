@@ -2,7 +2,6 @@
 title: Localizing electrodes using a 3D-scanner
 layout: default
 tags: [tutorial, source, electrode]
-toc: true
 ---
 
 # Localizing electrodes using a 3D-scanner
