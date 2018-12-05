@@ -22,6 +22,9 @@ cd $HOME/website
 # ensure that we have the latest version of the repository
 $GIT pull > /dev/null 2>&1
 
+# integrate updates to the reference documentation, these get copied to the web server
+$GIT commit -m "updated reference documentation" reference && $GIT push > /dev/null 2>&1
+
 # compare the latest to the previous version
 PREVIOUS=$(cat $LOGFILE)
 LATEST=$(git log -1 --format=%H)
