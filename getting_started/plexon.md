@@ -21,7 +21,7 @@ There are some constraints related to the way that FieldTrip represents continuo
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
-	
+
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
 
@@ -29,12 +29,12 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 The .ddt format is a Plexon continuous data file optimized for continuous (streaming) recording where every channel is continuously recorded without gaps and the recording includes any dead time between spikes. You can test the .ddt file by trying to read the header and some data from i
 
-	
+
 	>> hdr = ft_read_header('test1.ddt')
 	Warning: creating fake channel names
 	> In ft_read_header at 1273
-	
-	hdr = 
+
+	hdr =
 	         nChans: 2
 	             Fs: 40000
 	       nSamples: 534400
@@ -42,7 +42,7 @@ The .ddt format is a Plexon continuous data file optimized for continuous (strea
 	        nTrials: 1
 	          label: {'1'  '2'}
 	           orig: [1x1 struct]
-	
+
 	>> dat = ft_read_data('test1.ddt');
 	>> plot(dat');
 
@@ -50,10 +50,10 @@ The .ddt format is a Plexon continuous data file optimized for continuous (strea
 
 The .nex file format can contain continuous and spike data. To test the reading of continuous data, you can use the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions.
 
-	
+
 	>> hdr = ft_read_header('p021parall.nex')
-	
-	hdr = 
+
+	hdr =
 	                nChans: 15
 	                    Fs: 1000
 	              nSamples: 9463587
@@ -63,11 +63,11 @@ The .nex file format can contain continuous and spike data. To test the reading 
 	        FirstTimeStamp: 0
 	    TimeStampPerSample: 40
 	                  orig: [1x1 struct]
-	
+
 	% read and plot the first 10 seconds of the first channel
 	>> dat = ft_read_data('p021parall.nex', 'chanindx', 1, 'begsample', 1, 'endsample', 10000);
 	>> plot(dat);   
-	% read the events a.k.a. the triggers 
+	% read the events a.k.a. the triggers
 	>> event = ft_read_event('p021parall.nex')                                  
 
 After having tested the reading of continuous data, you can use the **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions as explained in the [tutorial documentation](/tutorial).
@@ -76,10 +76,10 @@ After having tested the reading of continuous data, you can use the **[ft_define
 
 To read the spike data, you should use the **[ft_read_spike](/reference/ft_read_spike)** function. Since spikes take very little memory, all spikes in all spike channels will be read at once.
 
-	
+
 	>> spike = ft_read_spike('p021parall.nex')
-	
-	spike = 
+
+	spike =
 	        label: {'sig001a'  'sig002a'  'sig003a'  'sig004a'}
 	     waveform: {1x4 cell}
 	         unit: {1x4 cell}
@@ -92,7 +92,7 @@ If you have read the continuous data using the standard FieldTrip **[ft_preproce
 
 The low-level functions ft_read_header and ft_read_data also work on .plx files, which means that you can use the standard FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. However, the .plx format is a very inefficient format, which makes the reading of subsequent trials rather slow. Instead of reading individual trials, it is recommended that you use the approach that is explained [here](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format).
 
-The FieldTrip **[ft_read_spike](/reference/ft_read_spike)** function works fine on .plx files. However, note that the .plx files only contain the unsorted spikes. 
+The FieldTrip **[ft_read_spike](/reference/ft_read_spike)** function works fine on .plx files. However, note that the .plx files only contain the unsorted spikes.
 
 ## Reading triggers and other events
 
@@ -105,6 +105,4 @@ If you use the [plexon V2 patch (filetype = plexon_plx_v2)](http://bugzilla.fiel
 ## External links
 
 *  http://www.plexoninc.com
-
 *  http://www.neuroexplorer.com
-

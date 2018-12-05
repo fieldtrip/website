@@ -73,11 +73,7 @@ There are various options for closing the loop documented [here](/development/re
 ## Overview of all examples used here
 
 *  [example:ft_realtime_signalviewer](/example/ft_realtime_signalviewer)
-
 *  [example:ft_realtime_powerestimate](/example/ft_realtime_powerestimate)
-
 *  [example:ft_realtime_average](/example/ft_realtime_average)
-
 *  [example:ft_realtime_selectiveaverage](/example/ft_realtime_selectiveaverage)
-
 *  [example:ft_realtime_classification](/example/ft_realtime_classification)

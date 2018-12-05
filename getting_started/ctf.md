@@ -18,11 +18,8 @@ An alternative ("old") implementation for reading the CTF data is available in t
 The following types of CTF data can be read and used in FieldTrip:
 
 *  MEG/EEG and AUX data: .res4, .meg4, .1_meg4, .2_meg4, etc.
-
 *  event information: .meg4, ClassFile.cls, MarkerFile.mrk
-
 *  single sphere and multi-sphere volume conduction models: .hdm
-
 *  anatomical MRI: .mri
 
 This page explains how to get started reading and using each of these file types in FieldTrip.
@@ -39,6 +36,7 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
  1.  a folder with the raw recorded data (i.e., containing your xxx.ds dataset)
  2.  a folder that contains your MATLAB scripts
  3.  a folder that contains the MATLAB/FieldTrip data that you want to save
+
 ## Set path
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
@@ -165,7 +163,6 @@ To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/f
 
 This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structur
 
-
 	event =
 
 	1343x1 struct array with field
@@ -176,7 +173,6 @@ This automatically reads the events from the trigger channels, from the class fi
 	    duration
 
 To access the first event, use
-
 
 	>> event(1)
 
@@ -227,15 +223,10 @@ For more information on reading, creating and plotting headmodels refer to
 Anatomical MRI files can be converted into CTF compatible data using the CTF software MRIConverter and MRIViewer. After this process, a .mri file is saved which can be used in FieldTrip.
 
 *  Open the original MRI data in MRIConverter
-
 *  Make sure that the View Direction and Image Orientation are correctly set
-
 *  Save the file in the .mri format
-
 *  Open the newly created .mri file in MRIViewer
-
 *  Mark the fiducials: left and right ear and nasion; they should reflect the location of the MEG coils
-
 *  Save the changes in the .mri file
 
 The .mri file can be read into FieldTrip using **[ft_read_mri](/reference/ft_read_mri)**. To read the mri file of the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use

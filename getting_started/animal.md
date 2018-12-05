@@ -18,9 +18,7 @@ Many animal neurophysiology experiments also allow the recording of spiking acti
 Another difference between human electrophysiology data and animal electrophysiology data is the representation of that data on disk. Whereas human EEG or MEG data is typically stored in a single (large) file, the data from a single animal recording session are sometimes stored in a large number of seperate files with different file formats. For example,
 
 *  The signal recorded at different sites (e.g., single wire electrodes, tetrodes, subdural grid electrodes) is often saved into separate files, one per recording site.
-
 *  Different aspects of the signal recorded at one site (e.g., spiking activity and local field potential) are often saved into separate files.
-
 *  The stimulus and event information is often stored in a separate file.
 
 Reading data into FieldTrip usually requires that all these files can be accessed. It is good practice to keep all these files in a single directory and also to keep this directory clean (that is, to save the output of the analyses to another directory). With this practice, the directory name can be used as an argument for FieldTrip functions like **[ft_read_header](/reference/ft_read_header)**, that operate at the level of the complete data set (instead of separate files).

@@ -3,7 +3,7 @@ title: Getting started with the Neuralynx data recorded at the Donders Institute
 tags: [neuralynx, lfp, dataformat]
 ---
 
-# Getting started with the Neuralynx data recorded at the Donders Institute 
+# Getting started with the Neuralynx data recorded at the Donders Institute
 
 ## Introduction
 
@@ -11,12 +11,12 @@ In the following, we will describe our procedure to preprocess high-density elec
 
 ## Background
 
-At the Donders Institute, we record brain activity using an ECoG electrode grid with 252 electrodes. The signal is amplified by a factor of 20 using a headstage amplifier (Headstage 32V-G20, Plexon Inc., Dallas, TX, USA), and subsequently low-pass filtered at 8 kHz and digitized at ~32 kHz sampling frequency using a Neuralynx amplifier (Digital Lynx, 256 channels, Neuralynx Tucson, AZ, USA). 
+At the Donders Institute, we record brain activity using an ECoG electrode grid with 252 electrodes. The signal is amplified by a factor of 20 using a headstage amplifier (Headstage 32V-G20, Plexon Inc., Dallas, TX, USA), and subsequently low-pass filtered at 8 kHz and digitized at ~32 kHz sampling frequency using a Neuralynx amplifier (Digital Lynx, 256 channels, Neuralynx Tucson, AZ, USA).
 
 To deal with the tremendous amounts of data recorded each session (approximately 1.5 Gb/min), we develop a recording procedure that allows us t
  1.  Ensure the correct recording and storage of a particular session (using the .nrd Neuralynx dataformat).
  2.  Use a format that allows us to keep long-term storages copies of the original datasets (using the **[ft_spikesplitting](/reference/ft_spikesplitting)** function to split the original file and store it in the .sdma file format).
- 3.  Obtain a 1 kHz downsampled working copy of the LFP data that can be conveniently used by the **[ft_preprocessing](/reference/ft_preprocessing)** and other FieldTrip functions. 
+ 3.  Obtain a 1 kHz downsampled working copy of the LFP data that can be conveniently used by the **[ft_preprocessing](/reference/ft_preprocessing)** and other FieldTrip functions.
  4.  Obtain a 1 kHz downsampled estimate of the multi-unit activity (MUA).
  5.  Eventually obtain an estimate of single-unit activity (SUA), depending on the electrode grid configuration.
 
@@ -36,18 +36,18 @@ The Neuralynx acquisition system provides the data in a format containing the ra
 
 An example of the configuration for spikesplitting is provided belo
 
-	
+
 	cfg         = [];
 	cfg.dataset = 'recording.nrd';
-	cfg.output  = 'recording.sdma'; % output directory 
+	cfg.output  = 'recording.sdma'; % output directory
 	cfg.latency = [0 inf];          % define the segment of the original data to split
-	cfg.format  = 'int32'; 
+	cfg.format  = 'int32';
 	cfg.channel = 'all';
 	cfg         = ft_spikesplitting(cfg);
 
-It is also important to note that: 
+It is also important to note that:
 
-*  The information extracted from a single .nrd file also contains the timestamps, trigger and event information (see below for details). 
+*  The information extracted from a single .nrd file also contains the timestamps, trigger and event information (see below for details).
 
 *  The new version of Neuralynx software also reserves an initial segment of the recorded file to write a header. The FieldTrip function **[ft_spikesplitting](/reference/ft_spikesplitting)** could extract this information and write it in a .txt file in the dataset directory. According to Neuralynx, this header will be operative in future releases.
 
@@ -63,16 +63,16 @@ An example of the configuration for **[ft_spikedownsample](/reference/ft_spikedo
 
     cfg             = [];
     cfg.dataset     = inputDirectory;   % i.e. the *.sdma directory
-    cfg.output      = outputDirectory;  % use the suffix _ds 
+    cfg.output      = outputDirectory;  % use the suffix _ds
     cfg.channel     = 'all';
     cfg.latency     = [0 inf];
     cfg.dataformat  = 'plexon_nex';
     cfg.calibration = 1/(64*20);
     cfg.fsample     = 1000;      
     cfg.method      = 'resample';
-    cfg.timestampdefinition = 'sample'; 
+    cfg.timestampdefinition = 'sample';
     % ... to be continued below
-    
+
 This basic configuration structure is necessary to downsample the data. Optionally, we can add other preprocessing options that allow us to obtain the LFP. E.g., to implement a 250 Hz low-pass filter for the LFP signal
 
     cfg.preproc.lpfilter   = 'yes';
@@ -96,7 +96,7 @@ In contrast, the timestamp clock in the Plexon acquisition hardware ticks at the
 In FieldTrip the relation between the timestamps and the samples is represented in the header. If you call **[ft_read_header](/reference/ft_read_header)** on your datafile, you'll see something like this
 
     >> hdr = ft_read_header('256_noev_DigitaLynx_DMA.nrd')
-    hdr = 
+    hdr =
               Fs: 32556
                 nChans: 274
               nSamples: 461502
@@ -110,7 +110,7 @@ In FieldTrip the relation between the timestamps and the samples is represented 
 or this
 
     >> hdr = ft_read_header('p021parall.nex')
-    hdr = 
+    hdr =
                 nChans: 15
                     Fs: 1000
               nSamples: 9463587
@@ -121,7 +121,7 @@ or this
     TimeStampPerSample: 40
                   orig: [1x1 struct]
 
-The hdr.TimeStampPerSample represents the increment of the clockticks per sample of the LFP recording. Another thing to notice is that the timestamp clock starts ticking at the start of the acquisition (when you switch the system on), not on the start of the recording (when you start writing to disk). This means that there is a positive offset in the timestamps (see hdr.FirstTimeStamp). 
+The hdr.TimeStampPerSample represents the increment of the clockticks per sample of the LFP recording. Another thing to notice is that the timestamp clock starts ticking at the start of the acquisition (when you switch the system on), not on the start of the recording (when you start writing to disk). This means that there is a positive offset in the timestamps (see hdr.FirstTimeStamp).
 
 Samples and timestamps are related to each other according to
 
@@ -133,15 +133,15 @@ Note that timestamps start counting at zero, whereas in Matlab/FieldTrip convent
 
 During acquisition the 16 bit trigger channel is sampled with 32kHz, just like all other channels. Consequently in the .ndr DMA log file there is a "ttl" channel that represents the triggers. The ttl channel is a 32 bit channel, although only 16 of those bits are connected to the trigger input.
 
-After spikesplitting, there is a .ttl file containing the same 32kHz representation of the trigger channel as in the DMA log file. There are also two files (.tsl and .tsh) that represent the lowest and highest 32 bits of the 64 bit timestamp channel. The Neuralynx timestamp channel has a clock rate of 1MHz, i.e. 1e6 timestamps per second, or approximately 32 timestamps per data sample at 32kHz (1e6/32556). 
+After spikesplitting, there is a .ttl file containing the same 32kHz representation of the trigger channel as in the DMA log file. There are also two files (.tsl and .tsh) that represent the lowest and highest 32 bits of the 64 bit timestamp channel. The Neuralynx timestamp channel has a clock rate of 1MHz, i.e. 1e6 timestamps per second, or approximately 32 timestamps per data sample at 32kHz (1e6/32556).
 
 After spikedownsampling, the continuous sampled LFP channels are not represented at 32kHz any more, but typically at 1000 Hz. That means that the samples at which the triggers occur in the .ttl channel cannot directly be mapped onto the samples in the LFP channels. The method to link the original triggers to the downsampled data is by means of the timestamps. The **[ft_spikedownsample](/reference/ft_spikedownsample)** function has the option *cfg.timestampdefinition* which can be *'orig'* or *'sample'*. If you specify it as *cfg.timestampdefinition='sample'*, the timestamps in the downsampled LFP channels will correspond to the original samples, i.e. there will be 32566 timestamps per second in the downsampled data. The first downsampled sample will be at timestamp 17, because the first 32 original samples are all compressed into the first downsampled sample. If you specify *cfg.timestampdefinition='orig'*, the downsampled LFP data will be written to disk with the original timestamp definition with 1e6 timestamps per second.
 ### Data preprocessing
 
 Data sessions that had been subsequently split, downsampled and stored in Plexon .nex format are suitable to be preprocessed for further analysis. To get a general idea of how to proceed, we recommend to read the documentation of the FieldTrip  **[ft_preprocessing](/reference/ft_preprocessing)** function and the preprocessing tutorials in the [tutorial documentation](/tutorial) .
-Here, we will focused on how to read the Plexon dataset directories (//_ds//) which contain multiple .nex files. A basic configuration structure is provided belo
+Here, we will focused on how to read the Plexon dataset directories (*_ds*) which contain multiple .nex files. A basic configuration structure is provided belo
 
-	
+
 	cfg = [];
 	cfg.dataset          = dataset;      % "_ds" dataset directory
 	cfg.dataformat       = 'plexon_ds';  % this is optional, and will be auto-detected
@@ -150,24 +150,24 @@ Here, we will focused on how to read the Plexon dataset directories (//_ds//) wh
 
 The specification of the dataformat and headerformat options as *combined_ds* ensures that the appropriate low-level FieldTrip reading function will be called to read the multiple single-channel Plexon .nex files contained in the dataset directory. After preprocessing, we can obtain a data structure like thi
 
-	
-	data = 
-	
+
+	data =
+
 	        hdr: [1x1 struct]
 	      label: {254x1 cell}
 	      trial: {[254x3001 double]  [254x3001 double]  [254x3001 double]}
 	       time: {[1x3001 double]  [1x3001 double]  [1x3001 double]}
 	    fsample: 1000
-	
+
 	        cfg: [1x1 struct]
 
 ### Dealing with changing of channel labels
 
-Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g. *010*) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that  changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**, with the montage as a part of the cfg option **montage**, channel labels can be modified. 
+Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in addition with a number (e.g. *010*) to label the channels. This labels are different from the names assigned to the electrodes in the electrode array. To keep consistency on the labels (this is especially important for plotting the channels), we apply a **montage structure** that consist of a matrix of correspondences that  changes the original labels by the new ones. By using the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**, with the montage as a part of the cfg option **montage**, channel labels can be modified.
 
 All montage files for our particular experiment are available upon request. An example of changing the channel labels is provided belo
 
-	
+
 	load kurt_montage_rename_plx2elec.mat
 	cfg = [];
 	cfg.montage = montage;
@@ -177,7 +177,7 @@ It is important to note that to change labels in our recordings on Kurt, we use 
 
 ### Dealing with data re-referencing
 
-Similar to what we described in the last section, re-reference of the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request. 
+Similar to what we described in the last section, re-reference of the signal to a particular electrode or electrode group could be performed using a montage structure and the FieldTrip **[ft_preprocessing](/reference/ft_preprocessing)** function. We implemented 2 montage structures to be used together with our datasets recording. These files are also available upon request.
 
 ## Plotting Options
 
@@ -185,25 +185,20 @@ To visualize the data, we take advantage of the several specialized plotting fun
 
 ### Dealing with layouts
 
-Datasets obtained from electrocortigraphic (ECoG) grids might be particular for each recording. Number, position and relation with anatomical number of the electrodes used in a grid might differ completely to the same parameters in another ECoG grid.  The FieldTrip function **[ft_prepare_layout](/reference/ft_prepare_layout)** allows the possibility to create a particular layout structures of a electrode grid from an image of the grid. 
+Datasets obtained from electrocortigraphic (ECoG) grids might be particular for each recording. Number, position and relation with anatomical number of the electrodes used in a grid might differ completely to the same parameters in another ECoG grid.  The FieldTrip function **[ft_prepare_layout](/reference/ft_prepare_layout)** allows the possibility to create a particular layout structures of a electrode grid from an image of the grid.
 In the following, we will show the layout structures that are currently used in our datasets. These layouts are avalaible upon request.
 
 For example, a schematic layout of the 256 electrode grid might be obtained using the following the function **[ft_layoutplot](/reference/ft_layoutplot)*
 
-	
 	load kurt_layout_schematic_common
 	cfg = [];
 	cfg.layout = ft_layout;
 	ft_layoutplot(cfg)
 
-To obtain something like this: 
+To obtain something like this:
+
 {% include image src="/assets/img/getting_started/neuralynx_fcdc/schematic_common3.png" %}
 
 An example of the same layout, containing time-frequency charts at the site of each electrode (obtaining with the FieldTrip function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**) is provided below:
 
 {% include image src="/assets/img/getting_started/neuralynx_fcdc/ku_039_256elec.png" width="571" %}--x367)
-
- 
- 
-
- 
