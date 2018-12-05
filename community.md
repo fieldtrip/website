@@ -12,7 +12,7 @@ Please note that we are not actively providing support for the use of the toolbo
 
 {% include facebook %}
 
-# Support
+## Support
 
 The best way to get support is to ask your questions to the community of users and developers on the [discussion list](/discussion_list).
 
@@ -20,4 +20,4 @@ Another way is by attending one of the upcoming [workshops](/workshop).
 
 ## The larger community
 
-FieldTrip is not the only MEG/EEG analysis toolbox. We collaborate with many other [research groups and various companies](/external_links).
+FieldTrip is not the only MEG/EEG analysis toolbox. We collaborate with other methods research groups, software developpers and  various companies. See the page with [external links](/external_links).
