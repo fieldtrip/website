@@ -5,14 +5,12 @@ tags: [development, git]
 
 # Accessing the FieldTrip source code through Git
 
-The FieldTrip code is accessible using [git](http://git-scm.com/) at [github](http://github.com/fieldtrip/fieldtrip).
+The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](http://github.com/fieldtrip).
 
 {% include markup/info %}
 To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
 
-  git clone https://github.com/fieldtrip/fieldtrip
-
-Note that all of this goes on a single line, but the link is slightly too long for it being properly displayed here.
+    git clone https://github.com/fieldtrip/fieldtrip.git
 
 This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on github, fork FieldTrip to our own account and read on for a complete tutorial.
 {% include markup/end %}
@@ -21,7 +19,7 @@ To keep an eye on the changes to the code, you can follow FieldTrip on [Twitter]
 
 ## Development workflow
 
-We use git and github.com (see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for our development. We complement this with code reviews by the core team and quality control using running a set of test scripts. The general procedure is as follow
+We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for our code development. We complement this with code reviews by the core team and quality control using running a set of test scripts. The general procedure is as follow
 
 1. The contributor/developer makes the suggested changes in a branch, pushes that branch to his/her own fork (on github) and submits a pull request.
 2. The core team reviews the code in the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and should be documented.
@@ -96,9 +94,9 @@ Now that the main concepts are explained, we will try to add a new feature to Fi
 
 ### 1. Fork the main FieldTrip
 
-Go with your web browser to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip) and click on the right-hand side, towards the top, on **fork**. This will create a new remote repository in your github account at the address: https://github.com/USERNAME/fieldtrip. The title of your repository will say:
+Go with your web browser to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip) and click on the right-hand side, towards the top, on **fork**. This will create a new remote repository in your github account at the address: `https://github.com/USERNAME/fieldtrip`. The title of your repository will say:
 
-	username / fieldtrip
+	USERNAME/fieldtrip
 	forked from fieldtrip/fieldtrip
 
 ### 2. Clone your remote repository
@@ -125,7 +123,7 @@ and it'll tell you:
 
 	Switched to a new branch 'welcome'
 
-If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch *bugXXXX* where XXXX is the number of the bug.
+If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch *bugXXXX* where XXXX is the number of the bug. If you have filed an issue on Github, you could name your new branch *issueXXXX* with the number. This helps linking the code suggestions to the discussion on the issue.
 
 ### 4. Add and edit files
 
