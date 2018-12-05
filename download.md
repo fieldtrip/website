@@ -13,7 +13,7 @@ After downloading the toolbox, you unzip it and add the directory in which all t
 
 You can download the tutorial data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial).
 
-# Copyrights
+## Copyrights
 
 {% include shared/copyright.md %}
 
