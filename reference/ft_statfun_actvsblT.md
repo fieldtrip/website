@@ -1,7 +1,6 @@
 ---
 title: ft_statfun_actvsblT
-layout: default
-tags: 
+tags:
 ---
 ```
  FT_STATFUN_ACTVSBLT calculates the activation-versus-baseline T-statistic on the

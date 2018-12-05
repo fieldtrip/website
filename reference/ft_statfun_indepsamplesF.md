@@ -1,7 +1,6 @@
 ---
 title: ft_statfun_indepsamplesF
-layout: default
-tags: 
+tags:
 ---
 ```
  FT_STATFUN_INDEPSAMPLESF calculates the independent samples F-statistic on the
@@ -31,7 +30,7 @@ tags:
                quantile (1-cfg.alpha) (with cfg.tail=1).
 
  Design specification
-   cfg.ivar  = row number of the design that contains the labels of the conditions that must be 
+   cfg.ivar  = row number of the design that contains the labels of the conditions that must be
                compared (default=1). The labels range from 1 to the number of conditions.
 
  See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS

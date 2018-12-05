@@ -1,7 +1,6 @@
 ---
 title: ft_statfun_depsamplesFmultivariate
-layout: default
-tags: 
+tags:
 ---
 ```
  FT_STATFUN_DEPSAMPLESFMULTIVARIATE calculates the MANOVA dependent samples
@@ -18,10 +17,10 @@ tags:
  Configuration options
    cfg.contrastcoefs  = matrix of contrast coefficients determining the
                         effect being tested. The number of columns of this
-                        matrix has to be equal to the number of conditions. 
+                        matrix has to be equal to the number of conditions.
                         The default is a matrix that specifies the
                         main effect of the independent variable. This matrix
-                        has size [(ncond-1),ncond]. 
+                        has size [(ncond-1),ncond].
    cfg.computestat    = 'yes' or 'no', calculate the statistic (default='yes')
    cfg.computecritval = 'yes' or 'no', calculate the critical values of the test statistics (default='no')
    cfg.computeprob    = 'yes' or 'no', calculate the p-values (default='no')
@@ -37,10 +36,10 @@ tags:
                quantile (1-cfg.alpha) (with cfg.tail=1).
 
  Design specification
-   cfg.ivar  = row number of the design that contains the labels of the conditions that must be 
+   cfg.ivar  = row number of the design that contains the labels of the conditions that must be
                compared (default=1). The labels range from 1 to the number of conditions.
    cfg.uvar  = row number of design that contains the labels of the units-of-observation (subjects or trials)
-               (default=2). The labels are assumed to be integers ranging from 1 to 
+               (default=2). The labels are assumed to be integers ranging from 1 to
                the number of units-of-observation.
 
  See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS
