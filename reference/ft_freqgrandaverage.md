@@ -1,6 +1,5 @@
 ---
 title: ft_freqgrandaverage
-layout: default
 tags: 
 ---
 ```

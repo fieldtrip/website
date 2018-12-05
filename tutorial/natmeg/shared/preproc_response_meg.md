@@ -1,6 +1,5 @@
 ---
 title: Preprocessing MEG
-layout: default
 ---
 
 ## Preprocessing MEG

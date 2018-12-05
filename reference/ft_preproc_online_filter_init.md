@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_online_filter_init
-layout: default
 tags: 
 ---
 ```

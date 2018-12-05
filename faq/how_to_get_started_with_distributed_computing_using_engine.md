@@ -1,6 +1,5 @@
 ---
 title: How to get started with distributed computing using engine?
-layout: default
 tags: [faq, engine]
 ---
 

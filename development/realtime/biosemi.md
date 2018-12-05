@@ -1,6 +1,5 @@
 ---
 title: Biosemi ActiveTwo EEG amplifier
-layout: default
 tags: [realtime, biosemi]
 ---
 

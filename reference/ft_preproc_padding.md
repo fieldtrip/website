@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_padding
-layout: default
 tags: 
 ---
 ```

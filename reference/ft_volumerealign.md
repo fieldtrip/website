@@ -1,6 +1,5 @@
 ---
 title: ft_volumerealign
-layout: default
 tags: 
 ---
 ```

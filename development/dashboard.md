@@ -1,6 +1,5 @@
 ---
 title: Dashboard
-layout: default
 tags: [development]
 ---
 

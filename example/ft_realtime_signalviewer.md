@@ -1,6 +1,5 @@
 ---
 title: Example real-time signal viewer
-layout: default
 tags: [example, realtime]
 ---
 

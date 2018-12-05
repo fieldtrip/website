@@ -1,6 +1,5 @@
 ---
 title: ft_select_point
-layout: default
 tags: 
 ---
 ```

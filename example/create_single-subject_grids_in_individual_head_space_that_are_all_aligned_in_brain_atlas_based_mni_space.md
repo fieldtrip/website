@@ -1,6 +1,5 @@
 ---
 title: Create brain atlas based MNI-aligned grids in individual head-space
-layout: default
 ---
 
 ## Create brain atlas based MNI-aligned grids in individual head-space

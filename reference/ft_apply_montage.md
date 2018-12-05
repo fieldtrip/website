@@ -1,6 +1,5 @@
 ---
 title: ft_apply_montage
-layout: default
 tags: 
 ---
 ```

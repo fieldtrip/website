@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_online_downsample_apply
-layout: default
 tags: 
 ---
 ```

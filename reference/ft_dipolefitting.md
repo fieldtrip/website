@@ -1,6 +1,5 @@
 ---
 title: ft_dipolefitting
-layout: default
 tags: 
 ---
 ```

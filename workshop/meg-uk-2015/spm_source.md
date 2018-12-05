@@ -1,6 +1,5 @@
 ---
 title: SPM Source reconstruction demo
-layout: default
 tags: [meg-uk-2015]
 ---
 

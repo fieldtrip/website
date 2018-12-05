@@ -1,6 +1,5 @@
 ---
 title: nmt_svdtrunc
-layout: default
 tags: 
 ---
 ```

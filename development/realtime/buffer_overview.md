@@ -1,6 +1,5 @@
 ---
 title: Overview of the realtime buffer
-layout: default
 tags: [realtime]
 ---
 

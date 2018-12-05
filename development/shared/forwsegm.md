@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 - Assign a transformation matrix (voxels to mm/cm) and units to the volumetric images. This step is necessary to link the units in which the head sources are defined (for example expressed in cm and head coordinates) to the voxel based coordinate system.

@@ -1,6 +1,5 @@
 ---
 title: nutmeg2fieldtrip
-layout: default
 tags: 
 ---
 ```

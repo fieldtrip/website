@@ -1,6 +1,5 @@
 ---
 title: Solving the EEG forward problem using BEM and FEM
-layout: default
 ---
 
 ## Solving the EEG forward problem using BEM and FEM

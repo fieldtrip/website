@@ -1,6 +1,5 @@
 ---
 title: nmt_polaritytweak
-layout: default
 tags: 
 ---
 ```

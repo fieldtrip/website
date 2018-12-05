@@ -1,6 +1,5 @@
 ---
 title: ft_struct2double
-layout: default
 tags: 
 ---
 ```

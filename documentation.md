@@ -1,6 +1,5 @@
 ---
 title: User Documentation
-layout: default
 ---
 
 # Documentation

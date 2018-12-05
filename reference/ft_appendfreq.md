@@ -1,6 +1,5 @@
 ---
 title: ft_appendfreq
-layout: default
 tags: 
 ---
 ```

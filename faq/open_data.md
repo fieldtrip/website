@@ -1,6 +1,5 @@
 ---
 title: Where can I find open access MEG/EEG data?
-layout: default
 tags: [faq, dataset]
 ---
 

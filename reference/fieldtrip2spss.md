@@ -1,6 +1,5 @@
 ---
 title: fieldtrip2spss
-layout: default
 tags: 
 ---
 ```

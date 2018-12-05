@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 This method reads directly a 'vol' structure which is loaded from an external 'ASA' format file.

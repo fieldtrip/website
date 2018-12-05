@@ -1,6 +1,5 @@
 ---
 title: ft_chanunit
-layout: default
 tags: 
 ---
 ```

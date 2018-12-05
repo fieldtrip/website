@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Kiel, Germany
-layout: default
 ---
 
 # FieldTrip workshop in Kiel, Germany

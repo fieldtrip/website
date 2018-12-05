@@ -1,6 +1,5 @@
 ---
 title: Getting started with ASA and EEProbe
-layout: default
 tags: [dataformat, eeg, ant, asa, eeprobe]
 ---
 

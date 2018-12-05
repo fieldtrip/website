@@ -1,6 +1,5 @@
 ---
 title: ft_multiplotTFR
-layout: default
 tags: 
 ---
 ```

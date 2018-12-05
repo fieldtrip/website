@@ -1,6 +1,5 @@
 ---
 title: Contribute
-layout: default
 tags: [development]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ft_volumesegment
-layout: default
 tags: 
 ---
 ```

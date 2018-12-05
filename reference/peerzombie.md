@@ -1,6 +1,5 @@
 ---
 title: peerzombie
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_read_atlas
-layout: default
 tags: 
 ---
 ```

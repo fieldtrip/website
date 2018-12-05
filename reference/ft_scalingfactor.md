@@ -1,6 +1,5 @@
 ---
 title: ft_scalingfactor
-layout: default
 tags: 
 ---
 ```

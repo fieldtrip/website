@@ -1,6 +1,5 @@
 ---
 title: ft_volumebiascorrect
-layout: default
 tags: 
 ---
 ```

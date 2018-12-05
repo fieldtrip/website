@@ -1,6 +1,5 @@
 ---
 title: ft_flush_data
-layout: default
 tags: 
 ---
 ```

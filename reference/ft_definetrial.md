@@ -1,6 +1,5 @@
 ---
 title: ft_definetrial
-layout: default
 tags: 
 ---
 ```

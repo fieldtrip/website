@@ -1,6 +1,5 @@
 ---
 title: Source statistics
-layout: default
 tags: [example, meg, source, statistics]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Can I use the FieldTrip logo on my poster?
-layout: default
 tags: [faq, logo]
 ---
 

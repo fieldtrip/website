@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 - Extract the filled volume of the outer skull using morphological operators

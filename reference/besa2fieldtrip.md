@@ -1,6 +1,5 @@
 ---
 title: besa2fieldtrip
-layout: default
 tags: 
 ---
 ```

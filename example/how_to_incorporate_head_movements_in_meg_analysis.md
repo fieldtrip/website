@@ -1,6 +1,5 @@
 ---
 title: How to incorporate head movements in MEG analysis
-layout: default
 tags: [example, artifact, meg, regression, confound]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ft_headcoordinates
-layout: default
 tags: 
 ---
 ```

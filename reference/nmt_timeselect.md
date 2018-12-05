@@ -1,6 +1,5 @@
 ---
 title: nmt_timeselect
-layout: default
 tags: 
 ---
 ```

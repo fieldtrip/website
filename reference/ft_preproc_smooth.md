@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_smooth
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Implement a graphical user interface as a "wizard" for certain analysis protocols
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

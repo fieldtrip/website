@@ -1,6 +1,5 @@
 ---
 title: ft_inside_vol
-layout: default
 tags: 
 ---
 ```

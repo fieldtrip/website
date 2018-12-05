@@ -1,6 +1,5 @@
 ---
 title: ft_meshrealign
-layout: default
 tags: 
 ---
 ```

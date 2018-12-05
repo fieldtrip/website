@@ -1,6 +1,5 @@
 ---
 title: renamefields
-layout: default
 tags: 
 ---
 ```

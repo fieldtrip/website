@@ -1,6 +1,5 @@
 ---
 title: Search results
-layout: default
 ---
 
 # Search results

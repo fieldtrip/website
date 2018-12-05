@@ -1,6 +1,5 @@
 ---
 title: Computing and using estimates of effect size
-layout: default
 tags: [example, statistics]
 ---
 

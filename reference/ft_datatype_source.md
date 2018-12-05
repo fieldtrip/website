@@ -1,6 +1,5 @@
 ---
 title: ft_datatype_source
-layout: default
 tags: 
 ---
 ```

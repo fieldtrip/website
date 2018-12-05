@@ -1,6 +1,5 @@
 ---
 title: How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?
-layout: default
 tags: [faq, peer]
 ---
 

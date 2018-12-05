@@ -1,6 +1,5 @@
 ---
 title: ft_spiketriggeredaverage
-layout: default
 tags: 
 ---
 ```

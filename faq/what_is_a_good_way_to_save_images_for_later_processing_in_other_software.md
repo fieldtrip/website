@@ -1,6 +1,5 @@
 ---
 title: What is a good way to save images for later processing in other software?
-layout: default
 ---
 
 ## What is a good way to save images for later processing in other software?

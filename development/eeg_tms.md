@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 {% include markup/warning %}

@@ -1,6 +1,5 @@
 ---
 title: ft_freqanalysis
-layout: default
 tags: 
 ---
 ```

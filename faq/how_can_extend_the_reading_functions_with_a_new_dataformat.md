@@ -1,6 +1,5 @@
 ---
 title: How can I extend the reading functions with a new dataformat?
-layout: default
 tags: [faq, dataformat, preprocessing]
 ---
 

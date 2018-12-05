@@ -1,6 +1,5 @@
 ---
 title: ft_plot_sens
-layout: default
 tags: 
 ---
 ```

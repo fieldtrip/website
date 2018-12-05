@@ -1,6 +1,5 @@
 ---
 title: ft_spike_maketrials
-layout: default
 tags: 
 ---
 ```

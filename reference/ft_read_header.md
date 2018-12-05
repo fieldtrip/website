@@ -1,6 +1,5 @@
 ---
 title: ft_read_header
-layout: default
 tags: 
 ---
 ```

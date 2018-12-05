@@ -1,6 +1,5 @@
 ---
 title: Reading the IC data
-layout: default
 ---
 
 ### Reading the IC data

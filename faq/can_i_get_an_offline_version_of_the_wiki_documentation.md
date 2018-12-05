@@ -1,6 +1,5 @@
 ---
 title: Can I get an offline version of the documentation on the website?
-layout: default
 tags: [faq, documentation]
 ---
 

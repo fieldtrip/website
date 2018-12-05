@@ -1,6 +1,5 @@
 ---
 title: Why does peercellfun resubmit jobs that take too long to get started?
-layout: default
 tags: [faq, peer]
 ---
 

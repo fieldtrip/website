@@ -1,6 +1,5 @@
 ---
 title: ft_compile_standalone
-layout: default
 tags: 
 ---
 ```

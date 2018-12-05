@@ -1,6 +1,5 @@
 ---
 title: nmt_close
-layout: default
 tags: 
 ---
 ```

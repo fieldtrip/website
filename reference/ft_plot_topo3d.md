@@ -1,6 +1,5 @@
 ---
 title: ft_plot_topo3d
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 the IKEA beamforming manual points to internal FCDC intranet pages, which should be moved to the wiki.

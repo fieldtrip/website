@@ -1,6 +1,5 @@
 ---
 title: ft_statistics_analytic
-layout: default
 tags: 
 ---
 ```

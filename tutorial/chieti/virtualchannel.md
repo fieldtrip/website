@@ -1,6 +1,5 @@
 ---
 title: MEG virtual channels and seed-based connectivity
-layout: default
 tags: [chieti, HCP-motort]
 ---
 

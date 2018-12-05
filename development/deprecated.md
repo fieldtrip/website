@@ -1,6 +1,5 @@
 ---
 title: Deprecated functions and options
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

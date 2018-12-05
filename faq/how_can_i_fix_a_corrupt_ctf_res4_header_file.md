@@ -1,6 +1,5 @@
 ---
 title: How can I fix a corrupt CTF res4 header file?
-layout: default
 tags: [faq, corrupt, ctf, raw]
 ---
 

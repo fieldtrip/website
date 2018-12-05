@@ -1,6 +1,5 @@
 ---
 title: ft_plot_axes
-layout: default
 tags: 
 ---
 ```

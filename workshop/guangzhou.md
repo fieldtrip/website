@@ -1,6 +1,5 @@
 ---
 title: FieldTrip Workshop in Guangzhou, China
-layout: default
 ---
 
 # FieldTrip Workshop in Guangzhou, China

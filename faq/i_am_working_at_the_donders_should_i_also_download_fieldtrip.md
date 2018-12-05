@@ -1,6 +1,5 @@
 ---
 title: I am working at the Donders, should I also download FieldTrip?
-layout: default
 tags: [faq, path, download]
 ---
 

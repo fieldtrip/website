@@ -1,6 +1,5 @@
 ---
 title: Why does my TFR look strange (part I, demeaning)?
-layout: default
 tags: [faq, mtmconvol, freq, preprocessing, artifact]
 ---
 

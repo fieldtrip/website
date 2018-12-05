@@ -1,6 +1,5 @@
 ---
 title: Redesign the interface to the read_fcdc_xxx functions
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

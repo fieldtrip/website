@@ -1,6 +1,5 @@
 ---
 title: ft_rejectvisual
-layout: default
 tags: 
 ---
 ```

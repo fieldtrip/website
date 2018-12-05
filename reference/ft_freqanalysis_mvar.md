@@ -1,6 +1,5 @@
 ---
 title: ft_freqanalysis_mvar
-layout: default
 tags: 
 ---
 ```

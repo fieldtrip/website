@@ -1,6 +1,5 @@
 ---
 title: How to create a volumetric current density
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

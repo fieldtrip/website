@@ -1,6 +1,5 @@
 ---
 title: ft_globalmeanfield
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_heartrate
-layout: default
 tags: 
 ---
 ```

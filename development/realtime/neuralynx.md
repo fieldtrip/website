@@ -1,6 +1,5 @@
 ---
 title: Neuralynx
-layout: default
 tags: [realtime, neuralynx]
 ---
 

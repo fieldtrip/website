@@ -1,6 +1,5 @@
 ---
 title: ft_artifact_clip
-layout: default
 tags: 
 ---
 ```

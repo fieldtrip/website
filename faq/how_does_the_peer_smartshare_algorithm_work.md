@@ -1,6 +1,5 @@
 ---
 title: How does the peer smartshare algorithm work?
-layout: default
 tags: [faq, peer]
 ---
 

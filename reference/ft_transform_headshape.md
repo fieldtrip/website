@@ -1,6 +1,5 @@
 ---
 title: ft_transform_headshape
-layout: default
 tags: 
 ---
 ```

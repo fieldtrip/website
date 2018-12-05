@@ -1,6 +1,5 @@
 ---
 title: Template models and data
-layout: default
 tags: [template]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Preparing a combined MEG/fMRI dataset for sharing
-layout: default
 tags: [example, bids, sharing, anonymize]
 ---
 

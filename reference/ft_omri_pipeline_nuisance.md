@@ -1,6 +1,5 @@
 ---
 title: ft_omri_pipeline_nuisance
-layout: default
 tags: 
 ---
 ```

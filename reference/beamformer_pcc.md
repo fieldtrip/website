@@ -1,6 +1,5 @@
 ---
 title: beamformer_pcc
-layout: default
 tags: 
 ---
 ```

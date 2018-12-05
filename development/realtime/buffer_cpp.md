@@ -1,6 +1,5 @@
 ---
 title: FieldTrip buffer C++ implementation
-layout: default
 tags: [realtime, development]
 ---
 

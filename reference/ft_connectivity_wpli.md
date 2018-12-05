@@ -1,6 +1,5 @@
 ---
 title: ft_connectivity_wpli
-layout: default
 tags: 
 ---
 ```

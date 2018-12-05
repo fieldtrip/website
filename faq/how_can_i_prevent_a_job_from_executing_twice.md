@@ -1,6 +1,5 @@
 ---
 title: How can I prevent a job from executing twice?
-layout: default
 tags: [faq, peer]
 ---
 

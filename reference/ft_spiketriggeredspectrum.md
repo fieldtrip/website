@@ -1,6 +1,5 @@
 ---
 title: ft_spiketriggeredspectrum
-layout: default
 tags: 
 ---
 ```

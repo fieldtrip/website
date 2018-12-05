@@ -1,6 +1,5 @@
 ---
 title: ft_freqstatistics
-layout: default
 tags: 
 ---
 ```

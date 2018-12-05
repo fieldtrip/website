@@ -1,6 +1,5 @@
 ---
 title: Phalow_freqhigh
-layout: default
 ---
 
 # Phalow_freqhigh

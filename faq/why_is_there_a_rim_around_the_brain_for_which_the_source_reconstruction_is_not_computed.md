@@ -1,6 +1,5 @@
 ---
 title: Why is there a rim around the brain for which the source reconstruction is not computed?
-layout: default
 tags: [faq, source]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Spike and LFP dataformats
-layout: default
 tags: [dataformat, spike, lfp]
 ---
 

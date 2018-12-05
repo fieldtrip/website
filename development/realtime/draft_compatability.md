@@ -1,6 +1,5 @@
 ---
 title: Suggested improvements for compatibility across versions
-layout: default
 tags: [realtime, development]
 ---
 

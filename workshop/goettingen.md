@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Göttingen
-layout: default
 ---
 
 # FieldTrip workshop in Göttingen

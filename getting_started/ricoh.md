@@ -1,6 +1,5 @@
 ---
 title: Getting started with Ricoh data
-layout: default
 ---
 
 # Getting started with Ricoh data

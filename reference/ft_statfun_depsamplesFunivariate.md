@@ -1,6 +1,5 @@
 ---
 title: ft_statfun_depsamplesFunivariate
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_datatype_timelock
-layout: default
 tags: 
 ---
 ```

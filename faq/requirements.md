@@ -1,6 +1,5 @@
 ---
 title: What are the MATLAB and external requirements?
-layout: default
 tags: [faq, matlab, toolbox]
 ---
 

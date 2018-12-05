@@ -1,6 +1,5 @@
 ---
 title: ft_realtime_coillocalizer
-layout: default
 tags: 
 ---
 ```

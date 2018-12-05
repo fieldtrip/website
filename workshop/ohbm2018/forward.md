@@ -1,6 +1,5 @@
 ---
 title: Solving the EEG and MEG forward problem using the finite element method
-layout: default
 ---
 
 ## Solving the EEG and MEG forward problem using the finite element method

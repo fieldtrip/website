@@ -1,6 +1,5 @@
 ---
 title: Template models for source reconstruction
-layout: default
 tags: [template, sourcemodel, grid]
 ---
 

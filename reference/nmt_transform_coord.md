@@ -1,6 +1,5 @@
 ---
 title: nmt_transform_coord
-layout: default
 tags: 
 ---
 ```

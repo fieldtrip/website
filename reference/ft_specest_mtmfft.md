@@ -1,6 +1,5 @@
 ---
 title: ft_specest_mtmfft
-layout: default
 tags: 
 ---
 ```

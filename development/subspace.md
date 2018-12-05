@@ -1,6 +1,5 @@
 ---
 title: Implement support for a seperation of data into a signal and noise subspace
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

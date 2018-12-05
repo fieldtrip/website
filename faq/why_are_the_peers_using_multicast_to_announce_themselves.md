@@ -1,6 +1,5 @@
 ---
 title: Why are the peers using multicast to announce themselves?
-layout: default
 tags: [faq, peer]
 ---
 

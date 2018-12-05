@@ -1,6 +1,5 @@
 ---
 title: Reference documentation
-layout: default
 tags: [cfg, timelock, freq, source, headmodel, statistics, plot]
 ---
 

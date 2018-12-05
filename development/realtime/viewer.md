@@ -1,6 +1,5 @@
 ---
 title: Realtime visualization of data from the FieldTrip buffer
-layout: default
 ---
 
 #  Realtime visualization of data from the FieldTrip buffer 

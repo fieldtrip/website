@@ -1,6 +1,5 @@
 ---
 title: Inverse problem
-layout: default
 ---
 
 # Inverse problem

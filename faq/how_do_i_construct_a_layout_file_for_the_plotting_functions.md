@@ -1,6 +1,5 @@
 ---
 title: How do I construct a layout file for the plotting functions?
-layout: default
 tags: [faq, layout, plot]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ft_connectivityanalysis
-layout: default
 tags: 
 ---
 ```

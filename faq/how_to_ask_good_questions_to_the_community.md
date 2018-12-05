@@ -1,6 +1,5 @@
 ---
 title: How to ask good questions to the community?
-layout: default
 tags: [faq, discussion, list, question, ask, question, help]
 ---
 

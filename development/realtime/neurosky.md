@@ -1,6 +1,5 @@
 ---
 title: Neurosky ThinkCap
-layout: default
 tags: [realtime, neurosky]
 ---
 

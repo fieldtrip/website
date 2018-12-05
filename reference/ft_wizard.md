@@ -1,6 +1,5 @@
 ---
 title: ft_wizard
-layout: default
 tags: 
 ---
 ```

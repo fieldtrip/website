@@ -1,6 +1,5 @@
 ---
 title: How can I define neighbouring sensors?
-layout: default
 tags: [faq, statistics, cluster, plot]
 ---
 

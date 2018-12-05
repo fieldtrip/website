@@ -1,6 +1,5 @@
 ---
 title: ft_sourcegrandaverage
-layout: default
 tags: 
 ---
 ```

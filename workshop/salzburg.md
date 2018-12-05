@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Salzburg
-layout: default
 ---
 
 # FieldTrip workshop in Salzburg

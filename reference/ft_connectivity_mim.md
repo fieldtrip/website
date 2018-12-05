@@ -1,6 +1,5 @@
 ---
 title: ft_connectivity_mim
-layout: default
 tags: 
 ---
 ```

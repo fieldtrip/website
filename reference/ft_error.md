@@ -1,6 +1,5 @@
 ---
 title: ft_error
-layout: default
 tags: 
 ---
 ```

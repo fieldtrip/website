@@ -1,6 +1,5 @@
 ---
 title: Summerschool on brain networks
-layout: default
 ---
 
 ## Summerschool on brain networks

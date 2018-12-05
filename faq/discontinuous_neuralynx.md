@@ -1,6 +1,5 @@
 ---
 title: How can I deal with a discontinuous Neuralynx recording
-layout: default
 tags: [faq, neuralynx, corrupt, preprocessing]
 ---
 

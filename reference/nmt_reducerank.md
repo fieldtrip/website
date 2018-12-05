@@ -1,6 +1,5 @@
 ---
 title: nmt_reducerank
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: enginecellfun
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Integration between tools
-layout: default
 ---
 
 # Integration between tools

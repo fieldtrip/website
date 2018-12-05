@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Hamburg
-layout: default
 ---
 
 # FieldTrip workshop in Hamburg

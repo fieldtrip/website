@@ -1,6 +1,5 @@
 ---
 title: ft_appendtimelock
-layout: default
 tags: 
 ---
 ```

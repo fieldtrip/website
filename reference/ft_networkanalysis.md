@@ -1,6 +1,5 @@
 ---
 title: ft_networkanalysis
-layout: default
 tags: 
 ---
 ```

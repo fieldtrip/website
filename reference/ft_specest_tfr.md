@@ -1,6 +1,5 @@
 ---
 title: ft_specest_tfr
-layout: default
 tags: 
 ---
 ```

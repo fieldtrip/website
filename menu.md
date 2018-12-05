@@ -1,6 +1,5 @@
 ---
 title: Menu
-layout: default
 tags: [obsolete]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: How can I merge two datasets that were acquired simultaneously with different amplifiers?
-layout: default
 tags: [faq, preprocessing, raw, dataformat, eeg, meg]
 ---
 

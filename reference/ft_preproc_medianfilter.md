@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_medianfilter
-layout: default
 tags: 
 ---
 ```

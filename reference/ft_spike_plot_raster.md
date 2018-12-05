@@ -1,6 +1,5 @@
 ---
 title: ft_spike_plot_raster
-layout: default
 tags: 
 ---
 ```

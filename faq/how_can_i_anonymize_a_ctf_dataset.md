@@ -1,6 +1,5 @@
 ---
 title: How can I anonymize or deidentify a CTF dataset?
-layout: default
 tags: [faq, ctf, raw, anonymize, sharing]
 ---
 

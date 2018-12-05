@@ -1,6 +1,5 @@
 ---
 title: Getting started with Neuralynx data
-layout: default
 tags: [neuralynx, lfp, spike, dataformat]
 ---
 

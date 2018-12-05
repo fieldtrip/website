@@ -1,6 +1,5 @@
 ---
 title: Which datasets are used in the documentation and where are they used?
-layout: default
 tags: [faq, tutorial, dataset]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Discussion List
-layout: default
 ---
 
 # Discussion List

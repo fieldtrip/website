@@ -1,6 +1,5 @@
 ---
 title: ft_freqdescriptives
-layout: default
 tags: 
 ---
 ```

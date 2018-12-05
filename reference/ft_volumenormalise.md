@@ -1,6 +1,5 @@
 ---
 title: ft_volumenormalise
-layout: default
 tags: 
 ---
 ```

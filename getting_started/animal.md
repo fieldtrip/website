@@ -1,6 +1,5 @@
 ---
 title: Working with animal electrophysiology data
-layout: default
 tags: [spike, lfp]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Overview of all tutorials
-layout: default
 tags: [tutorial]
 ---
 

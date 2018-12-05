@@ -1,6 +1,5 @@
 ---
 title: dipole_fit
-layout: default
 tags: 
 ---
 ```

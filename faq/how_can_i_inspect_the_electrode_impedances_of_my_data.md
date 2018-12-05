@@ -1,6 +1,5 @@
 ---
 title: How can I inspect the electrode impedances of my data?
-layout: default
 ---
 
 ## How can I inspect the electrode impedances of my data?

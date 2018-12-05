@@ -1,6 +1,5 @@
 ---
 title: ft_artifact_nan
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: edf2fieldtrip
-layout: default
 tags: 
 ---
 ```

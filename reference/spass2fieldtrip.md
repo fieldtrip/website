@@ -1,6 +1,5 @@
 ---
 title: spass2fieldtrip
-layout: default
 tags: 
 ---
 ```

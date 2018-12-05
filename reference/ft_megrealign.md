@@ -1,6 +1,5 @@
 ---
 title: ft_megrealign
-layout: default
 tags: 
 ---
 ```

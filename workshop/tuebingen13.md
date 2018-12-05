@@ -1,6 +1,5 @@
 ---
 title: Workshop on FieldTrip, nonparametric statistics and connectivity
-layout: default
 ---
 
 ## Workshop on FieldTrip, nonparametric statistics and connectivity

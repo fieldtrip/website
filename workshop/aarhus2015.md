@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Aarhus
-layout: default
 tags: [Aarhus, MEG-audodd]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ft_scalpcurrentdensity
-layout: default
 tags: 
 ---
 ```

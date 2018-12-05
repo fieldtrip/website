@@ -1,6 +1,5 @@
 ---
 title: FieldTrip Workshop in London, UK
-layout: default
 ---
 
 # FieldTrip Workshop in London, UK

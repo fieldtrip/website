@@ -1,6 +1,5 @@
 ---
 title: Implement support for CTF synthetic gradiometers
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

@@ -1,6 +1,5 @@
 ---
 title: ft_poll_buffer
-layout: default
 tags: 
 ---
 ```

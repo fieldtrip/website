@@ -1,6 +1,5 @@
 ---
 title: ft_omri_slice_time_init
-layout: default
 tags: 
 ---
 ```

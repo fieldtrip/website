@@ -1,6 +1,5 @@
 ---
 title: What dataformats are supported?
-layout: default
 tags: [faq, dataformat, preprocessing, raw]
 ---
 

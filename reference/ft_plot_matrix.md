@@ -1,6 +1,5 @@
 ---
 title: ft_plot_matrix
-layout: default
 tags: 
 ---
 ```

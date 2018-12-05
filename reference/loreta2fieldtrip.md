@@ -1,6 +1,5 @@
 ---
 title: loreta2fieldtrip
-layout: default
 tags: 
 ---
 ```

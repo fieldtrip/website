@@ -1,6 +1,5 @@
 ---
 title: ft_plot_montage
-layout: default
 tags: 
 ---
 ```

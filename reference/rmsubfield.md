@@ -1,6 +1,5 @@
 ---
 title: rmsubfield
-layout: default
 tags: 
 ---
 ```

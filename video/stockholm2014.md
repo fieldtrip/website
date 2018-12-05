@@ -1,6 +1,5 @@
 ---
 title: FieldTrip/MNE workshop at NatMEG, Stockholm (January 2014)
-layout: default
 tags: [video]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ft_plot_text
-layout: default
 tags: 
 ---
 ```

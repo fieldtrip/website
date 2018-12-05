@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 In case the anatomy description is available, it is not used to generate the infinite forward solution. 

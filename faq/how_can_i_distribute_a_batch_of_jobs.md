@@ -1,6 +1,5 @@
 ---
 title: How can I distribute a batch of jobs?
-layout: default
 ---
 
 ## How can I distribute a batch of jobs?

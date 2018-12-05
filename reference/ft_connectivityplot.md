@@ -1,6 +1,5 @@
 ---
 title: ft_connectivityplot
-layout: default
 tags: 
 ---
 ```

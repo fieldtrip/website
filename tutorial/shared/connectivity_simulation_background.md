@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 The brain is organized in functional units, which at the smallest level consists of neurons, and at higher levels consists of larger neuronal populations. Functional localization studies consider the brain to be organized in specialized neuronal modules corresponding to specific areas in the brain. These functionally specialized brain areas (e.g. visual cortex area V1, V2, V4, MT, ...) have to pass information back and forth along anatomical connections. The identification of these functional connections and determining their functional relevance comprises connectivity analysis and can be done using the **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and associated functions.

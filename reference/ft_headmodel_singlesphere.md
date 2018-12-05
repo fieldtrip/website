@@ -1,6 +1,5 @@
 ---
 title: ft_headmodel_singlesphere
-layout: default
 tags: 
 ---
 ```

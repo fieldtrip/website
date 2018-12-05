@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_detrend
-layout: default
 tags: 
 ---
 ```

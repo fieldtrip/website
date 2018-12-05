@@ -1,6 +1,5 @@
 ---
 title: Bugzilla bug tracking system
-layout: default
 ---
 
 # Bugzilla bug tracking system

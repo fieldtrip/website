@@ -1,6 +1,5 @@
 ---
 title: What are the different Neuromag and Yokogawa layouts good for?
-layout: default
 tags: [faq]
 ---
 

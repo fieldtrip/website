@@ -1,6 +1,5 @@
 ---
 title: What are the different approaches I can take for distributed computing?
-layout: default
 tags: [faq, qsub, peer, engine, distcomp, matlab]
 ---
 

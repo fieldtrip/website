@@ -1,6 +1,5 @@
 ---
 title: ft_spikedensity
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: How can I anonymize data processed in FieldTrip?
-layout: default
 tags: [faq, sharing, anonymize]
 ---
 

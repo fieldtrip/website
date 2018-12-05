@@ -1,6 +1,5 @@
 ---
 title: How does MTMCONVOL work?
-layout: default
 tags: [faq, freq]
 ---
 

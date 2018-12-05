@@ -1,6 +1,5 @@
 ---
 title: Specifying the channel layout for plotting
-layout: default
 tags: [tutorial, plot, eeg, meg, ecog, layout]
 ---
 

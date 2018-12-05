@@ -1,6 +1,5 @@
 ---
-title: Welcome to the FieldTrip wiki
-layout: default
+title: Welcome to the FieldTrip website
 ---
 
 # Welcome to the FieldTrip website

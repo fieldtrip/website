@@ -1,6 +1,5 @@
 ---
 title: Introduction to the FieldTrip toolbox
-layout: default
 tags: [tutorial, meg, eeg, raw, timelock, freq, source, statistics, lfp, spike, cfg, matlab]
 ---
 

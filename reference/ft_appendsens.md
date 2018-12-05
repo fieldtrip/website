@@ -1,6 +1,5 @@
 ---
 title: ft_appendsens
-layout: default
 tags: 
 ---
 ```

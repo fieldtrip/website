@@ -1,6 +1,5 @@
 ---
 title: ft_trackusage
-layout: default
 tags: 
 ---
 ```

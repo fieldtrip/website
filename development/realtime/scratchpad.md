@@ -1,6 +1,5 @@
 ---
 title: Scratchpad for the realtime buffer interface
-layout: default
 tags: [realtime, development]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Reading the FC data
-layout: default
 ---
 
 ### Reading the FC data

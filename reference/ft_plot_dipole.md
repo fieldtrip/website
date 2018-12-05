@@ -1,6 +1,5 @@
 ---
 title: ft_plot_dipole
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Integrate FieldTrip and MNE-Python
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

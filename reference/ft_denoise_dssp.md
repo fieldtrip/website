@@ -1,6 +1,5 @@
 ---
 title: ft_denoise_dssp
-layout: default
 tags: 
 ---
 ```

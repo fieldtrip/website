@@ -1,6 +1,5 @@
 ---
 title: ft_steadystatesimulation
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Guidelines
-layout: default
 tags: [guidelines]
 ---
 

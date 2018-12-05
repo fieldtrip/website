@@ -1,6 +1,5 @@
 ---
 title: Why is my message rejected from the email discussion list?
-layout: default
 tags: [faq, email]
 ---
 

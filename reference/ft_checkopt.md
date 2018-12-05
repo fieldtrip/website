@@ -1,6 +1,5 @@
 ---
 title: ft_checkopt
-layout: default
 tags: 
 ---
 ```

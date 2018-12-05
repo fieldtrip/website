@@ -1,6 +1,5 @@
 ---
 title: OpenBCI
-layout: default
 tags: [realtime, openbci]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Is it possible to keep track of trial-specific information in my analysis pipeline?
-layout: default
 tags: [faq, trialinfo, trialdef, trialfun]
 ---
 

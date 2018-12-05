@@ -1,6 +1,5 @@
 ---
 title: ft_warp_optim
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_debug
-layout: default
 tags: 
 ---
 ```

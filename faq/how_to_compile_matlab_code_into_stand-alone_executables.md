@@ -1,6 +1,5 @@
 ---
 title: How to compile MATLAB code into stand-alone executables?
-layout: default
 tags: [faq, qsub]
 ---
 

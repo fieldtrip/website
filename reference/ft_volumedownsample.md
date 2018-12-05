@@ -1,6 +1,5 @@
 ---
 title: ft_volumedownsample
-layout: default
 tags: 
 ---
 ```

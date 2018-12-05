@@ -1,6 +1,5 @@
 ---
 title: ft_spike_rate_orituning
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_math
-layout: default
 tags: 
 ---
 ```

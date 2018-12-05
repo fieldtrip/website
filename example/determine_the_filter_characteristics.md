@@ -1,6 +1,5 @@
 ---
 title: Determine the filter characteristics
-layout: default
 tags: [example, preprocessing, filter]
 ---
 

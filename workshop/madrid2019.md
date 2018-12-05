@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop Madrid
-layout: default
 ---
 
 # FieldTrip workshop in Madrid

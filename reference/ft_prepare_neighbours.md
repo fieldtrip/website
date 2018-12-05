@@ -1,6 +1,5 @@
 ---
 title: ft_prepare_neighbours
-layout: default
 tags: 
 ---
 ```

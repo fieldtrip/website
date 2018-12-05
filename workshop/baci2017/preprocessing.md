@@ -1,6 +1,5 @@
 ---
 title: Preprocessing in EEG
-layout: default
 ---
 
 ## Preprocessing in EEG

@@ -1,6 +1,5 @@
 ---
 title: ft_omri_info_from_header
-layout: default
 tags: 
 ---
 ```

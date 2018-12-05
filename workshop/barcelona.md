@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Barcelona
-layout: default
 ---
 
 # FieldTrip workshop in Barcelona

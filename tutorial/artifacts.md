@@ -1,6 +1,5 @@
 ---
 title: Introduction - dealing with artifacts
-layout: default
 tags: [tutorial, artifact, preprocessing, eeg, meg]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Example script for leadfield based on FEM headmodel
-layout: default
 tags: [example, eeg, fem, leadfield, headmodel]
 ---
 

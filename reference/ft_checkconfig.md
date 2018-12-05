@@ -1,6 +1,5 @@
 ---
 title: ft_checkconfig
-layout: default
 tags: 
 ---
 ```

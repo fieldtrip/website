@@ -1,6 +1,5 @@
 ---
 title: Testing with sine waves and pre-recorded EEG data
-layout: default
 ---
 
 # Testing with sine waves and pre-recorded EEG data

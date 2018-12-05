@@ -1,6 +1,5 @@
 ---
 title: The multiple comparisons problem
-layout: default
 ---
 
 ### The multiple comparisons problem

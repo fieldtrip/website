@@ -1,6 +1,5 @@
 ---
 title: Organization of the source code
-layout: default
 tags: [development]
 ---
 

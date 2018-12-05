@@ -1,6 +1,5 @@
 ---
 title: ft_detect_movement
-layout: default
 tags: 
 ---
 ```

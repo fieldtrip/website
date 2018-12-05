@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop Donostia
-layout: default
 ---
 
 ## FieldTrip workshop Donostia

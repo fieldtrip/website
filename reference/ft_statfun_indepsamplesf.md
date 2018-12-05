@@ -1,6 +1,5 @@
 ---
 title: ft_statfun_indepsamplesF
-layout: default
 tags: 
 ---
 ```

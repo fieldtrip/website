@@ -1,6 +1,5 @@
 ---
 title: nmt_peaksearch_helper
-layout: default
 tags: 
 ---
 ```

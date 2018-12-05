@@ -1,6 +1,5 @@
 ---
 title: ft_channelrepair
-layout: default
 tags: 
 ---
 ```

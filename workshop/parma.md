@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Parma
-layout: default
 ---
 
 # FieldTrip workshop in Parma

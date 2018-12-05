@@ -1,6 +1,5 @@
 ---
 title: ft_read_vol
-layout: default
 tags: 
 ---
 ```

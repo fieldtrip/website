@@ -1,6 +1,5 @@
 ---
 title: Video lectures and tutorials
-layout: default
 tags: [video]
 ---
 

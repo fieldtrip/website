@@ -1,6 +1,5 @@
 ---
 title: How do I install the OpenMEEG binaries?
-layout: default
 ---
 
 # How do I install the OpenMEEG binaries?

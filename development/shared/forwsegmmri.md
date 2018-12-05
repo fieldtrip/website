@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 - Reslice the MRI volume in order to obtain homogeneous voxels (cubic)

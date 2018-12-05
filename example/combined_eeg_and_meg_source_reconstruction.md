@@ -1,6 +1,5 @@
 ---
 title: Combined EEG and MEG source reconstruction
-layout: default
 tags: [example, eeg, meg, headmodel, source]
 ---
 

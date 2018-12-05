@@ -1,6 +1,5 @@
 ---
 title: Publications using FieldTrip
-layout: default
 tags: [references]
 ---
 

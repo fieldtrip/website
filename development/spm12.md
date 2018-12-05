@@ -1,6 +1,5 @@
 ---
 title: Integration with SPM12
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

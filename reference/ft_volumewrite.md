@@ -1,6 +1,5 @@
 ---
 title: ft_volumewrite
-layout: default
 tags: 
 ---
 ```

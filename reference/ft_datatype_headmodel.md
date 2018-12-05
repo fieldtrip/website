@@ -1,6 +1,5 @@
 ---
 title: ft_datatype_headmodel
-layout: default
 tags: 
 ---
 ```

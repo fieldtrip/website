@@ -1,6 +1,5 @@
 ---
 title: Infrastructure for testing
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

@@ -1,6 +1,5 @@
 ---
 title: How can I fix a corrupt CTF meg4 file?
-layout: default
 tags: [faq, corrupt, ctf, raw]
 ---
 

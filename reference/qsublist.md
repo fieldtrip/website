@@ -1,6 +1,5 @@
 ---
 title: qsublist
-layout: default
 tags: 
 ---
 ```

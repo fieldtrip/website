@@ -1,6 +1,5 @@
 ---
 title: Realtime fMRI from Siemens scanners
-layout: default
 tags: [realtime, siemens, fmri]
 ---
 

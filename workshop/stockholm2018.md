@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Stockholm
-layout: default
 ---
 
 # FieldTrip workshop in Stockholm

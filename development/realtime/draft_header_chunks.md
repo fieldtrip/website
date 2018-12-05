@@ -1,6 +1,5 @@
 ---
 title: Suggested improvements for handling header and chunks
-layout: default
 tags: [realtime, development]
 ---
 

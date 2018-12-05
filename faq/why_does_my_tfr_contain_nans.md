@@ -1,6 +1,5 @@
 ---
 title: Why does my TFR contain NaNs?
-layout: default
 tags: [faq, freq]
 ---
 

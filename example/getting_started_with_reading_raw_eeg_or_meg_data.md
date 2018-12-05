@@ -1,6 +1,5 @@
 ---
 title: Getting started with reading raw EEG or MEG data
-layout: default
 tags: [example, eeg, meg, raw, preprocessing, trialdef]
 ---
 

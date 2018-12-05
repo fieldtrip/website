@@ -1,6 +1,5 @@
 ---
 title: Example use of the compute_leadfield function
-layout: default
 tags: [example, headmodel, source]
 ---
 

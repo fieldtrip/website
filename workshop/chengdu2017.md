@@ -1,6 +1,5 @@
 ---
 title: Chengdu, China
-layout: default
 ---
 
 # Chengdu, China

@@ -1,6 +1,5 @@
 ---
 title: Templates for defining neighbouring channels
-layout: default
 tags: [template]
 ---
 

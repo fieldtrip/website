@@ -1,6 +1,5 @@
 ---
 title: ft_spike_waveform
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Why was FieldTrip maintained in SVN and not in git?
-layout: default
 tags: [faq, development, cvs, svn, git]
 ---
 

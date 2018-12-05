@@ -1,6 +1,5 @@
 ---
 title: How is anatomical, functional or statistical "volume data" described?
-layout: default
 tags: [faq, volume, datatype]
 ---
 

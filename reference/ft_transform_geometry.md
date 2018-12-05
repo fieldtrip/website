@@ -1,6 +1,5 @@
 ---
 title: ft_transform_geometry
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Getting started with EEGLAB
-layout: default
 ---
 
 # Getting started with EEGLAB

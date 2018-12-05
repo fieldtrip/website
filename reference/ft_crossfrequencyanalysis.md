@@ -1,6 +1,5 @@
 ---
 title: ft_crossfrequencyanalysis
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: How can I read and write files if I use other people's peers?
-layout: default
 tags: [faq, peer]
 ---
 

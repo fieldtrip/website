@@ -1,6 +1,5 @@
 ---
 title: How can I do time-frequency analysis on continuous data?
-layout: default
 tags: [faq, continuous, freq]
 ---
 

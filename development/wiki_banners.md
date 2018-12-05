@@ -1,6 +1,5 @@
 ---
 title: How to make Wiki banners
-layout: default
 ---
 
 # How to make Wiki banners

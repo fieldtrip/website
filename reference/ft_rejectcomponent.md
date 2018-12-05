@@ -1,6 +1,5 @@
 ---
 title: ft_rejectcomponent
-layout: default
 tags: 
 ---
 ```

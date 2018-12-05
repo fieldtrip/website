@@ -1,6 +1,5 @@
 ---
 title: Check the correctness of the implementation of the algorithms
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

@@ -1,6 +1,5 @@
 ---
 title: Getting started with BESA data
-layout: default
 ---
 
 # Getting started with BESA data

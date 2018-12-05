@@ -1,6 +1,5 @@
 ---
 title: ft_cfg2keyval
-layout: default
 tags: 
 ---
 ```

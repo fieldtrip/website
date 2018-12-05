@@ -1,6 +1,5 @@
 ---
 title: ft_compute_leadfield
-layout: default
 tags: 
 ---
 ```

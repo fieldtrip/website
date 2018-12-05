@@ -1,6 +1,5 @@
 ---
 title: ft_warning
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_regressconfound
-layout: default
 tags: 
 ---
 ```

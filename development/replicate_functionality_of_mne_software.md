@@ -1,6 +1,5 @@
 ---
 title: Replicate functionality of MNE software
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

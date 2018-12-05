@@ -1,6 +1,5 @@
 ---
 title: Jyväskylä, Finland
-layout: default
 ---
 
 # Jyväskylä, Finland

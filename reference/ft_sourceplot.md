@@ -1,6 +1,5 @@
 ---
 title: ft_sourceplot
-layout: default
 tags: 
 ---
 ```

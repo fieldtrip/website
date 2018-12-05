@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_dftfilter
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_datatype_sens
-layout: default
 tags: 
 ---
 ```

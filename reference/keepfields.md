@@ -1,6 +1,5 @@
 ---
 title: keepfields
-layout: default
 tags: 
 ---
 ```

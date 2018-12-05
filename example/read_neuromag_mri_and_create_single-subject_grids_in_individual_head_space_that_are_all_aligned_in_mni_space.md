@@ -1,6 +1,5 @@
 ---
 title: Doing source-analysis with the created headmodel
-layout: default
 tags:
 ---
 

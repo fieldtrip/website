@@ -1,6 +1,5 @@
 ---
 title: ft_documentationindex
-layout: default
 tags: 
 ---
 ```

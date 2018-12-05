@@ -1,6 +1,5 @@
 ---
 title: ft_checkdata
-layout: default
 tags: 
 ---
 ```

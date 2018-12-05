@@ -1,6 +1,5 @@
 ---
 title: ft_fetch_data
-layout: default
 tags: 
 ---
 ```

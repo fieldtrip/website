@@ -1,6 +1,5 @@
 ---
 title: ft_hastoolbox
-layout: default
 tags: 
 ---
 ```

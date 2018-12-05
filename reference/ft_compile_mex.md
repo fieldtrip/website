@@ -1,6 +1,5 @@
 ---
 title: ft_compile_mex
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_plot_mesh
-layout: default
 tags: 
 ---
 ```

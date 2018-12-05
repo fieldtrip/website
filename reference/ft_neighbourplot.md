@@ -1,6 +1,5 @@
 ---
 title: ft_neighbourplot
-layout: default
 tags: 
 ---
 ```

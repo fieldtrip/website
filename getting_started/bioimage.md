@@ -1,6 +1,5 @@
 ---
 title: Getting started with BioImage Suite
-layout: default
 tags: [getting_started, bioimagesuite, bioimage, ieeg, ecog, seeg, localization]
 ---
 

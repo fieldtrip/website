@@ -1,6 +1,5 @@
 ---
 title: ft_transform_sens
-layout: default
 tags: 
 ---
 ```

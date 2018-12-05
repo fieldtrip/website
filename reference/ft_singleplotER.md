@@ -1,6 +1,5 @@
 ---
 title: ft_singleplotER
-layout: default
 tags: 
 ---
 ```

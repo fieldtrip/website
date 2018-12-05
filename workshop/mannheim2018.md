@@ -1,6 +1,5 @@
 ---
 title: FieldTrip Workshop in Mannheim
-layout: default
 ---
 
 # FieldTrip workshop in Mannheim

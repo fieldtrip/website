@@ -1,6 +1,5 @@
 ---
 title: ft_create_buffer
-layout: default
 tags: 
 ---
 ```

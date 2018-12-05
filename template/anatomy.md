@@ -1,6 +1,5 @@
 ---
 title: Anatomical templates for visualizing source reconstructed activity
-layout: default
 tags: [template]
 ---
 

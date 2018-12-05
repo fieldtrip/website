@@ -1,6 +1,5 @@
 ---
 title: How should I prepare for the upcoming FieldTrip workshop?
-layout: default
 tags: [faq, workshop]
 ---
 

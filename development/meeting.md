@@ -1,6 +1,5 @@
 ---
 title: Meetings
-layout: default
 tags: [development, meeting]
 ---
 

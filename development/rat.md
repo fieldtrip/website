@@ -1,6 +1,5 @@
 ---
 title: The rat beamformer
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

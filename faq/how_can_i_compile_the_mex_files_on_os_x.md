@@ -1,6 +1,5 @@
 ---
 title: How can I compile the mex files on OS X?
-layout: default
 tags: [faq, mex]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: ft_statfun_diff
-layout: default
 tags: 
 ---
 ```

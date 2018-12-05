@@ -1,6 +1,5 @@
 ---
 title: nmt_mni2mri
-layout: default
 tags: 
 ---
 ```

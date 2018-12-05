@@ -1,6 +1,5 @@
 ---
 title: Resolution - see faq
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

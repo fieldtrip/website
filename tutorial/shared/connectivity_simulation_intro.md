@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 In this tutorial we will explore different measures of connectivity, using simulated data and using source-level MEG data. You will learn how to compute various connectivity measures and how these measures can be interpreted. Furthermore, a number of interpretational problems will be addressed.

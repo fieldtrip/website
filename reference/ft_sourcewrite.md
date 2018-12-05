@@ -1,6 +1,5 @@
 ---
 title: ft_sourcewrite
-layout: default
 tags: 
 ---
 ```

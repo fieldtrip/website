@@ -1,6 +1,5 @@
 ---
 title: harmony
-layout: default
 tags: 
 ---
 ```

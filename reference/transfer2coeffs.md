@@ -1,6 +1,5 @@
 ---
 title: transfer2coeffs
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: How can I use the command-line peerslave and optimize the MATLAB licenses?
-layout: default
 tags: [faq, peer]
 ---
 

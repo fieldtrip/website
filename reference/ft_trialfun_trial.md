@@ -1,6 +1,5 @@
 ---
 title: ft_trialfun_trial
-layout: default
 tags: 
 ---
 ```

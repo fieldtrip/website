@@ -1,6 +1,5 @@
 ---
 title: fieldtrip2ctf
-layout: default
 tags: 
 ---
 ```

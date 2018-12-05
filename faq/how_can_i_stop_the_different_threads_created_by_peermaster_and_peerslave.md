@@ -1,6 +1,5 @@
 ---
 title: How can I stop the different threads created by peermaster and peerslave?
-layout: default
 tags: [faq, peer]
 ---
 

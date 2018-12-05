@@ -1,6 +1,5 @@
 ---
 title: ft_connectivity_mutualinformation
-layout: default
 tags: 
 ---
 ```

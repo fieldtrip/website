@@ -1,6 +1,5 @@
 ---
 title: ft_artifact_jump
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Krakow, Poland
-layout: default
 ---
 
 # FieldTrip workshop in Krakow, Poland

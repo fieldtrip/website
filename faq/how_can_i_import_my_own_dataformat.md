@@ -1,6 +1,5 @@
 ---
 title: How can I import my own dataformat?
-layout: default
 tags: [faq, dataformat, preprocessing]
 ---
 

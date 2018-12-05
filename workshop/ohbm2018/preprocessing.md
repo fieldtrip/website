@@ -1,6 +1,5 @@
 ---
 title: Preprocessing EEG & MEG
-layout: default
 ---
 
 ## Preprocessing EEG & MEG

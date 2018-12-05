@@ -1,6 +1,5 @@
 ---
 title: nmt_image
-layout: default
 tags: 
 ---
 ```

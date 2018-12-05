@@ -1,6 +1,5 @@
 ---
 title: ft_layoutplot
-layout: default
 tags: 
 ---
 ```

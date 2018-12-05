@@ -1,6 +1,5 @@
 ---
 title: Refurbishing the FORWARD module
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

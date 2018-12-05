@@ -1,6 +1,5 @@
 ---
 title: ft_combineplanar
-layout: default
 tags: 
 ---
 ```

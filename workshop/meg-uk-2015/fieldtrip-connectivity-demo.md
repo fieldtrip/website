@@ -1,6 +1,5 @@
 ---
 title: FieldTrip connectivity demo
-layout: default
 tags: [meg-uk-2015, mmfaces, connectivity]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Mouse EEG - channel and source analysis
-layout: default
 ---
 
 {% include markup/danger %}

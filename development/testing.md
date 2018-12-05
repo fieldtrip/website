@@ -1,6 +1,5 @@
 ---
 title: Testing code quality
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

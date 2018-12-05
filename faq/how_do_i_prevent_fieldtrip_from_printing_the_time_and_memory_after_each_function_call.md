@@ -1,6 +1,5 @@
 ---
 title: How do I prevent FieldTrip from printing the time and memory after each function call?
-layout: default
 tags: [faq]
 ---
 

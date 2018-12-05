@@ -1,6 +1,5 @@
 ---
 title: Details of the tMEG Motor task
-layout: default
 ---
 
 ### Details of the tMEG Motor task

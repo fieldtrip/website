@@ -1,6 +1,5 @@
 ---
 title: Recent improvements to the code
-layout: default
 tags: [development]
 ---
 

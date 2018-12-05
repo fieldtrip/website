@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 - With the diverse [triangulation techniques](#Triangulation methods) obtain the points of the triangulated surface around the inner skull volume

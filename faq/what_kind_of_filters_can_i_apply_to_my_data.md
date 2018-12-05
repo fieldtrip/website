@@ -1,6 +1,5 @@
 ---
 title: What kind of filters can I apply to my data?
-layout: default
 tags: [faq, preprocessing, timelock, freq, artifact, filter]
 ---
 

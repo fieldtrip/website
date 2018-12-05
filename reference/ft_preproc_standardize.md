@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_standardize
-layout: default
 tags: 
 ---
 ```

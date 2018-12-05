@@ -1,6 +1,5 @@
 ---
 title: Analysis of human ECoG and sEEG recordings
-layout: default
 tags: [tutorial, ieeg, ecog, seeg, anatomy, human, localization, mri, ct, freesurfer, ecog-protocol]
 ---
 

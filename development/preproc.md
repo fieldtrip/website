@@ -1,6 +1,5 @@
 ---
 title: Preprocessing of EEG/MEG time series data
-layout: default
 ---
 
 # Preprocessing of EEG/MEG time series data

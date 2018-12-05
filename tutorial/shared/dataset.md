@@ -1,6 +1,5 @@
 ---
 title: Dataset - MEG-language-semantics
-layout: default
 ---
 
 ## Dataset: MEG-language-semantics 

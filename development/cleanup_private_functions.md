@@ -1,6 +1,5 @@
 ---
 title: cleanup the functions in the private folders
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

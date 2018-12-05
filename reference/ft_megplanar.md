@@ -1,6 +1,5 @@
 ---
 title: ft_megplanar
-layout: default
 tags: 
 ---
 ```

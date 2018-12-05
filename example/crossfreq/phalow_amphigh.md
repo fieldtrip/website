@@ -1,6 +1,5 @@
 ---
 title: Phalow_amphigh
-layout: default
 ---
 
 # Phalow_amphigh

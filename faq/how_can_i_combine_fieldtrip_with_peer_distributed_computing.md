@@ -1,6 +1,5 @@
 ---
 title: How can I combine FieldTrip with peer distributed computing?
-layout: default
 tags: [faq, peer]
 ---
 

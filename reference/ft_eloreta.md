@@ -1,6 +1,5 @@
 ---
 title: ft_eloreta
-layout: default
 tags: 
 ---
 ```

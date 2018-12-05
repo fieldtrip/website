@@ -1,6 +1,5 @@
 ---
 title: ft_examplefunction
-layout: default
 tags: 
 ---
 ```

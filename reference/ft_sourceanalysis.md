@@ -1,6 +1,5 @@
 ---
 title: ft_sourceanalysis
-layout: default
 tags: 
 ---
 ```

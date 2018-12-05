@@ -1,6 +1,5 @@
 ---
 title: ft_sourcedescriptives
-layout: default
 tags: 
 ---
 ```

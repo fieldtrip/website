@@ -1,6 +1,5 @@
 ---
 title: ft_select_voxel
-layout: default
 tags: 
 ---
 ```

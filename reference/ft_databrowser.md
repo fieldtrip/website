@@ -1,6 +1,5 @@
 ---
 title: ft_databrowser
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: imotions2fieldtrip
-layout: default
 tags: 
 ---
 ```

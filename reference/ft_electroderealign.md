@@ -1,6 +1,5 @@
 ---
 title: ft_electroderealign
-layout: default
 tags: 
 ---
 ```

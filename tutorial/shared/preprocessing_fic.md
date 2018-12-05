@@ -1,6 +1,5 @@
 ---
 title: Reading the FIC data
-layout: default
 ---
 
 ### Reading the FIC data

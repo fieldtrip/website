@@ -1,6 +1,5 @@
 ---
 title: Core idea
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

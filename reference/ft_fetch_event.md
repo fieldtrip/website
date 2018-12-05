@@ -1,6 +1,5 @@
 ---
 title: ft_fetch_event
-layout: default
 tags: 
 ---
 ```

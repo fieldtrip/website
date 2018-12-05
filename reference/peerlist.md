@@ -1,6 +1,5 @@
 ---
 title: peerlist
-layout: default
 tags: 
 ---
 ```

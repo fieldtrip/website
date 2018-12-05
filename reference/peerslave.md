@@ -1,6 +1,5 @@
 ---
 title: peerslave
-layout: default
 tags: 
 ---
 ```

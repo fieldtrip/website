@@ -1,6 +1,5 @@
 ---
 title: removefields
-layout: default
 tags: 
 ---
 ```

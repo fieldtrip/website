@@ -1,6 +1,5 @@
 ---
 title: Workshop at BRAMS Institute, Montreal (2012)
-layout: default
 tags: [video]
 ---
 

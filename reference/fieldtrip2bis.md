@@ -1,6 +1,5 @@
 ---
 title: fieldtrip2bis
-layout: default
 tags: 
 ---
 ```

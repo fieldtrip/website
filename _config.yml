@@ -16,8 +16,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
+      type: "pages"
     values:
+      layout: "default"
       toc: true
 
 permalink: pretty

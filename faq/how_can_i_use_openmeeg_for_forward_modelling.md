@@ -1,6 +1,5 @@
 ---
 title: How can I use OpenMEEG for forward modeling?
-layout: default
 tags: [faq, headmodel, source]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 - load in the points corresponding to each head compartment

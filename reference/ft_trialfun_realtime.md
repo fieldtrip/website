@@ -1,6 +1,5 @@
 ---
 title: ft_trialfun_realtime
-layout: default
 tags: 
 ---
 ```

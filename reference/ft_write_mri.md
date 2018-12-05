@@ -1,6 +1,5 @@
 ---
 title: ft_write_mri
-layout: default
 tags: 
 ---
 ```

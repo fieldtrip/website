@@ -1,6 +1,5 @@
 ---
 title: ft_prepare_vol_sens
-layout: default
 tags: 
 ---
 ```

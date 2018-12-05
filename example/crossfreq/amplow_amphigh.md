@@ -1,6 +1,5 @@
 ---
 title: Amplow_amphigh
-layout: default
 ---
 
 # Amplow_amphigh

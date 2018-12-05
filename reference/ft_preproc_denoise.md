@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_denoise
-layout: default
 tags: 
 ---
 ```

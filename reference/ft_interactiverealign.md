@@ -1,6 +1,5 @@
 ---
 title: ft_interactiverealign
-layout: default
 tags: 
 ---
 ```

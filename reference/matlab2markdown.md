@@ -1,6 +1,5 @@
 ---
 title: matlab2markdown
-layout: default
 tags: 
 ---
 ```

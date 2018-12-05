@@ -1,6 +1,5 @@
 ---
 title: match_str
-layout: default
 tags: 
 ---
 ```

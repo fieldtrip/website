@@ -1,6 +1,5 @@
 ---
 title: Code guidelines
-layout: default
 tags: [guidelines, development]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Index of all configuration options
-layout: default
 ---
 
 # Index of all configuration options 

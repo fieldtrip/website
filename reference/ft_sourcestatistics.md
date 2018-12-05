@@ -1,6 +1,5 @@
 ---
 title: ft_sourcestatistics
-layout: default
 tags: 
 ---
 ```

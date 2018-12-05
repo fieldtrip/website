@@ -1,6 +1,5 @@
 ---
 title: nearest
-layout: default
 tags: 
 ---
 ```

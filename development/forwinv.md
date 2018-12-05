@@ -1,6 +1,5 @@
 ---
 title: Functions for forward and inverse computation of EEG/MEG data
-layout: default
 ---
 
 # Functions for forward and inverse computation of EEG/MEG data

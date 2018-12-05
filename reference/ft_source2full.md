@@ -1,6 +1,5 @@
 ---
 title: ft_source2full
-layout: default
 tags: 
 ---
 ```

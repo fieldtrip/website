@@ -1,6 +1,5 @@
 ---
 title: qsubexec
-layout: default
 tags: 
 ---
 ```

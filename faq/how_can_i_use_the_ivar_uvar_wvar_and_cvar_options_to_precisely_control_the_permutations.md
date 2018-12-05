@@ -1,6 +1,5 @@
 ---
 title: How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
-layout: default
 tags: [faq, statistics]
 ---
 

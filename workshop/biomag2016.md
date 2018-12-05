@@ -1,6 +1,5 @@
 ---
 title: Biomag 2016 satellite meeting - Seoul, Korea
-layout: default
 ---
 
 # Biomag 2016 satellite meeting - Seoul, Korea

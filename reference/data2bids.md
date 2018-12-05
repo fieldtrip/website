@@ -1,6 +1,5 @@
 ---
 title: data2bids
-layout: default
 tags: 
 ---
 ```

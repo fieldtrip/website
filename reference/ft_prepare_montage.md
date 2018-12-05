@@ -1,6 +1,5 @@
 ---
 title: ft_prepare_montage
-layout: default
 tags: 
 ---
 ```

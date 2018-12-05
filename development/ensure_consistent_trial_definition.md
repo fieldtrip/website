@@ -1,6 +1,5 @@
 ---
 title: Ensure consistent trial definition
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

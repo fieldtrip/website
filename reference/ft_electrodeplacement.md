@@ -1,6 +1,5 @@
 ---
 title: ft_electrodeplacement
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: How can I share my MEG data?
-layout: default
 tags: [faq, dataset, sharing]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: Specific software implementations for realtime EEG/MEG/fMRI/NIRS
-layout: default
 tags: [realtime, development]
 ---
 

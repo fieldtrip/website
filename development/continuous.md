@@ -1,6 +1,5 @@
 ---
 title: Handling of continuous data
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

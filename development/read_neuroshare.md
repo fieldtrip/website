@@ -1,6 +1,5 @@
 ---
 title: Function to read data from any file format supported by neuroshare
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

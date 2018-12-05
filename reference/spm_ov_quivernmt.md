@@ -1,6 +1,5 @@
 ---
 title: spm_ov_quivernmt
-layout: default
 tags: 
 ---
 ```

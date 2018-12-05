@@ -1,6 +1,5 @@
 ---
 title: ft_write_spike
-layout: default
 tags: 
 ---
 ```

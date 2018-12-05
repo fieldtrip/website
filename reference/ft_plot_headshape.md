@@ -1,6 +1,5 @@
 ---
 title: ft_plot_headshape
-layout: default
 tags: 
 ---
 ```

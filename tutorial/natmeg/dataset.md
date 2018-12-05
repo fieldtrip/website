@@ -1,6 +1,5 @@
 ---
 title: Description of the NatMEG dataset
-layout: default
 tags: [natmeg, meg+eeg, MEG-audodd]
 ---
 

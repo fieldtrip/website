@@ -1,6 +1,5 @@
 ---
 title: What usage information is FieldTrip tracking?
-layout: default
 tags: [faq]
 ---
 

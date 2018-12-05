@@ -1,6 +1,5 @@
 ---
 title: nmt_sourceoriplot
-layout: default
 tags: 
 ---
 ```

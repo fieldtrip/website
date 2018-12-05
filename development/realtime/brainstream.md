@@ -1,6 +1,5 @@
 ---
 title: BrainStream
-layout: default
 tags: [realtime]
 ---
 

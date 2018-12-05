@@ -1,6 +1,5 @@
 ---
 title: FieldTrip courses and workshops
-layout: default
 tags: [workshop]
 ---
 

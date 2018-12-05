@@ -1,6 +1,5 @@
 ---
 title: ft_multiplotCC
-layout: default
 tags: 
 ---
 ```

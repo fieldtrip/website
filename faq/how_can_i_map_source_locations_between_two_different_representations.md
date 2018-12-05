@@ -1,6 +1,5 @@
 ---
 title: How can I map source locations onto an anatomical label in an atlas?
-layout: default
 tags: [source, interpolate, atlas, label]
 ---
 

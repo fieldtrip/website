@@ -1,6 +1,5 @@
 ---
 title: How can I set up the peer distributed computing on a large Linux cluster?
-layout: default
 tags: [faq, peer]
 ---
 

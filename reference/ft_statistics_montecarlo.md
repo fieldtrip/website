@@ -1,6 +1,5 @@
 ---
 title: ft_statistics_montecarlo
-layout: default
 tags: 
 ---
 ```

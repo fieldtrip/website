@@ -1,6 +1,5 @@
 ---
 title: ft_freqbaseline
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Create MNI-aligned grids in individual head-space
-layout: default
 tags: [example, meg, mri, headmodel, source]
 ---
 

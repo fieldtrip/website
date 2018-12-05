@@ -1,6 +1,5 @@
 ---
 title: SPM Sensor-level stats demo
-layout: default
 tags: [meg-uk-2015]
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: peerschedule
-layout: default
 tags: 
 ---
 ```

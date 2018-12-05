@@ -1,6 +1,5 @@
 ---
 title: Fixing a missing sensor
-layout: default
 tags: [example, meg, preprocessing, ctf]
 ---
 

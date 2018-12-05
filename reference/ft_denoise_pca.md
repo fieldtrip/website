@@ -1,6 +1,5 @@
 ---
 title: ft_denoise_pca
-layout: default
 tags: 
 ---
 ```

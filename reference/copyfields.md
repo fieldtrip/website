@@ -1,6 +1,5 @@
 ---
 title: copyfields
-layout: default
 tags: 
 ---
 ```

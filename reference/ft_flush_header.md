@@ -1,6 +1,5 @@
 ---
 title: ft_flush_header
-layout: default
 tags: 
 ---
 ```

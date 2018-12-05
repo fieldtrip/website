@@ -1,6 +1,5 @@
 ---
 title: Checking your segmented volumes
-layout: default
 ---
 
 ### Checking your segmented volumes

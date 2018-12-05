@@ -1,6 +1,5 @@
 ---
 title: ft_plot_ortho
-layout: default
 tags: 
 ---
 ```

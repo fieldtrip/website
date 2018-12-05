@@ -1,6 +1,5 @@
 ---
 title: ft_mvaranalysis
-layout: default
 tags: 
 ---
 ```

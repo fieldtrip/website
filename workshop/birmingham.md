@@ -1,6 +1,5 @@
 ---
 title: MRC Partnership Grant FieldTrip workshop in Birmingham
-layout: default
 ---
 
 # MRC Partnership Grant FieldTrip workshop in Birmingham

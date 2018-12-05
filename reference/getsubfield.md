@@ -1,6 +1,5 @@
 ---
 title: getsubfield
-layout: default
 tags: 
 ---
 ```

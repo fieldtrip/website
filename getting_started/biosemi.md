@@ -1,6 +1,5 @@
 ---
 title: Getting started with Biosemi BDF data
-layout: default
 tags: [eeg, dataformat, biosemi, bdf]
 ---
 

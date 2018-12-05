@@ -1,6 +1,5 @@
 ---
 title: ft_read_data
-layout: default
 tags: 
 ---
 ```

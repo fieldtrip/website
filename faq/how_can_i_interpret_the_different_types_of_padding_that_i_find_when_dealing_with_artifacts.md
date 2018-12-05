@@ -1,6 +1,5 @@
 ---
 title: How can I interpret the different types of padding in FieldTrip?
-layout: default
 tags: [faq, preprocessing, artifact, filter]
 ---
 

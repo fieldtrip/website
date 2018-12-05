@@ -1,6 +1,5 @@
 ---
 title: ft_statfun_depsamplesFmultivariate
-layout: default
 tags: 
 ---
 ```

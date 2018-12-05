@@ -1,6 +1,5 @@
 ---
 title: Plotting the result of source reconstructing on a cortical mesh
-layout: default
 tags: [example, plot, source]
 ---
 

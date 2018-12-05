@@ -1,6 +1,5 @@
 ---
 title: beamformer_lcmv
-layout: default
 tags: 
 ---
 ```

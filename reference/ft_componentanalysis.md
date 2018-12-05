@@ -1,6 +1,5 @@
 ---
 title: ft_componentanalysis
-layout: default
 tags: 
 ---
 ```

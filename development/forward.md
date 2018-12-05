@@ -1,6 +1,5 @@
 ---
 title: Forward computation of EEG/MEG source models
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

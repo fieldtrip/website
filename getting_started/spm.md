@@ -1,6 +1,5 @@
 ---
 title: Integrating with SPM8
-layout: default
 ---
 
 # Integrating with SPM8

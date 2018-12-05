@@ -1,6 +1,5 @@
 ---
 title: Why should I use an average reference for EEG source reconstruction?
-layout: default
 tags: [faq, eeg, reference, source]
 ---
 

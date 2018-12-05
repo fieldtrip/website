@@ -1,6 +1,5 @@
 ---
 title: Localizing visual gamma and cortico-muscular coherence using DICS
-layout: default
 tags: [tutorial, meg, source, coherence, MEG-visuomotor151]
 ---
 

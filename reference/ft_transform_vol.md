@@ -1,6 +1,5 @@
 ---
 title: ft_transform_vol
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop for the Human Connectome project at Washington University, St. Louis (2011)
-layout: default
 tags: [video]
 ---
 

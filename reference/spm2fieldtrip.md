@@ -1,6 +1,5 @@
 ---
 title: spm2fieldtrip
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: Why am I not getting integer frequencies?
-layout: default
 tags: [faq, preprocessing, freq]
 ---
 

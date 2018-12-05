@@ -1,6 +1,5 @@
 ---
 title: Creating a clean analysis script
-layout: default
 tags: [tutorial, example, script, matlab, beginner, batching]
 ---
 

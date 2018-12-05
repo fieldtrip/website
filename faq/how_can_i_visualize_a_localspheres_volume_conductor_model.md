@@ -1,6 +1,5 @@
 ---
 title: How can I visualize a localspheres volume conductor model?
-layout: default
 tags: [faq, headmodel, localspheres]
 ---
 

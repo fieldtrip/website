@@ -1,6 +1,5 @@
 ---
 title: ft_topoplotTFR
-layout: default
 tags: 
 ---
 ```

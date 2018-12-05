@@ -1,6 +1,5 @@
 ---
 title: Cross Frequency analysis
-layout: default
 tags: [example, freq]
 ---
 

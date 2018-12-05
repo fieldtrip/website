@@ -1,6 +1,5 @@
 ---
 title: Getting started with SR-Research EyeLink eye tracker data
-layout: default
 ---
 
 # Getting started with SR-Research EyeLink eye tracker data

@@ -1,6 +1,5 @@
 ---
 title: ft_singleplotTFR
-layout: default
 tags: 
 ---
 ```

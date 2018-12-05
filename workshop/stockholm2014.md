@@ -1,6 +1,5 @@
 ---
 title: Joint FieldTrip/MNE course at the NatMEG in Stockholm
-layout: default
 ---
 
 # Joint FieldTrip/MNE course at the NatMEG in Stockholm

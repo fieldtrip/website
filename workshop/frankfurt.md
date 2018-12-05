@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop at ESI/MPI Frankfurt, Germany
-layout: default
 ---
 
 # FieldTrip workshop at ESI/MPI Frankfurt, Germany

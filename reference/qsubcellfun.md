@@ -1,6 +1,5 @@
 ---
 title: qsubcellfun
-layout: default
 tags: 
 ---
 ```

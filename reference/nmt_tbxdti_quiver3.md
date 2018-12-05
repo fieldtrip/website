@@ -1,6 +1,5 @@
 ---
 title: nmt_tbxdti_quiver3
-layout: default
 tags: 
 ---
 ```

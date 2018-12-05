@@ -1,6 +1,5 @@
 ---
 title: ft_artifact_threshold
-layout: default
 tags: 
 ---
 ```

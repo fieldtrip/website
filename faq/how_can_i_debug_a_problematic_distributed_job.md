@@ -1,6 +1,5 @@
 ---
 title: How can I debug a problematic distributed job?
-layout: default
 tags: [faq, peer, debug]
 ---
 

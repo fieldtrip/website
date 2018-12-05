@@ -1,6 +1,5 @@
 ---
 title: Pipeline architecture
-layout: default
 ---
 
 # Pipeline architecture

@@ -1,6 +1,5 @@
 ---
 title: ft_plot_vol
-layout: default
 tags: 
 ---
 ```

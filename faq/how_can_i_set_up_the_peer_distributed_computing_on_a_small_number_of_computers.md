@@ -1,6 +1,5 @@
 ---
 title: How can I set up the peer distributed computing on a small number of computers?
-layout: default
 tags: [faq, peer]
 ---
 

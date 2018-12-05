@@ -1,6 +1,5 @@
 ---
 title: Reading and writing of EEG/MEG time series data
-layout: default
 tags: [development]
 ---
 

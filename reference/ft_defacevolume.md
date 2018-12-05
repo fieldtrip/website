@@ -1,6 +1,5 @@
 ---
 title: ft_defacevolume
-layout: default
 tags: 
 ---
 ```

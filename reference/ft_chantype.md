@@ -1,6 +1,5 @@
 ---
 title: ft_chantype
-layout: default
 tags: 
 ---
 ```

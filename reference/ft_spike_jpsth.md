@@ -1,6 +1,5 @@
 ---
 title: ft_spike_jpsth
-layout: default
 tags: 
 ---
 ```

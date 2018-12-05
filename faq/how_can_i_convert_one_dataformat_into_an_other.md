@@ -1,6 +1,5 @@
 ---
 title: How can I convert one dataformat into an other?
-layout: default
 tags: [faq, dataformat, preprocessing]
 ---
 

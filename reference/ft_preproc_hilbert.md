@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_hilbert
-layout: default
 tags: 
 ---
 ```

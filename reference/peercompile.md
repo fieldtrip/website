@@ -1,6 +1,5 @@
 ---
 title: peercompile
-layout: default
 tags: 
 ---
 ```

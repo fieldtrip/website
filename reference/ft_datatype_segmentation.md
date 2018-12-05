@@ -1,6 +1,5 @@
 ---
 title: ft_datatype_segmentation
-layout: default
 tags: 
 ---
 ```

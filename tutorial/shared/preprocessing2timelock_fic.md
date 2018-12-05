@@ -1,6 +1,5 @@
 ---
 title: Reading the data
-layout: default
 ---
 
 ### Reading the data

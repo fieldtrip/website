@@ -1,6 +1,5 @@
 ---
 title: ft_voltype
-layout: default
 tags: 
 ---
 ```

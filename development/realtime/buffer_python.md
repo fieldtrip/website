@@ -1,6 +1,5 @@
 ---
 title: FieldTrip buffer Python interface
-layout: default
 tags: [realtime, development]
 ---
 

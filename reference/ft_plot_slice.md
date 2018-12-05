@@ -1,6 +1,5 @@
 ---
 title: ft_plot_slice
-layout: default
 tags: 
 ---
 ```

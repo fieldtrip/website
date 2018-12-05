@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_bandstopfilter
-layout: default
 tags: 
 ---
 ```

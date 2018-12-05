@@ -1,6 +1,5 @@
 ---
 title: Developing the documentation of the source-reconstruction methods
-layout: default
 ---
 
 {% include /shared/development/warning.md %}

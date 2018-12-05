@@ -1,6 +1,5 @@
 ---
 title: Accessing the FieldTrip source code through SVN
-layout: default
 tags: [development, cvs, svn, git]
 ---
 

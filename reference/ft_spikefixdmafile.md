@@ -1,6 +1,5 @@
 ---
 title: ft_spikefixdmafile
-layout: default
 tags: 
 ---
 ```

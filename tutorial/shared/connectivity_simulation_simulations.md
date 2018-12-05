@@ -1,6 +1,5 @@
 ---
 title: Computation of the multivariate autoregressive model
-layout: default
 ---
 
 We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.

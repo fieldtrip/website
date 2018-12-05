@@ -1,6 +1,5 @@
 ---
 title: Getting started with Plexon data
-layout: default
 tags: [plexon, lfp, spike, dataformat]
 ---
 

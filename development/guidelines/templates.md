@@ -1,6 +1,5 @@
 ---
 title: Template guidelines
-layout: default
 tags: [guidelines, development]
 ---
 

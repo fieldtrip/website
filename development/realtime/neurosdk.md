@@ -1,6 +1,5 @@
 ---
 title: ANT NeuroSDK
-layout: default
 tags: [realtime, ant]
 ---
 

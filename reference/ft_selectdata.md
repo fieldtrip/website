@@ -1,6 +1,5 @@
 ---
 title: ft_selectdata
-layout: default
 tags: 
 ---
 ```

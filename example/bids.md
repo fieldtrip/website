@@ -1,6 +1,5 @@
 ---
 title: BIDS - the brain imaging data structure
-layout: default
 tags: [bids, sharing]
 ---
 

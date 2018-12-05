@@ -1,6 +1,5 @@
 ---
 title: ft_analysispipeline
-layout: default
 tags: 
 ---
 ```

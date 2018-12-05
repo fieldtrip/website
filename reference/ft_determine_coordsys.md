@@ -1,6 +1,5 @@
 ---
 title: ft_determine_coordsys
-layout: default
 tags: 
 ---
 ```

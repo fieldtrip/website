@@ -1,6 +1,5 @@
 ---
 title: ft_datatype_freq
-layout: default
 tags: 
 ---
 ```

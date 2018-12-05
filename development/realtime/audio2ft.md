@@ -1,6 +1,5 @@
 ---
 title: Soundcard input using PortAudio
-layout: default
 tags: [realtime, audio]
 ---
 

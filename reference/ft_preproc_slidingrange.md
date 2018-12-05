@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_slidingrange
-layout: default
 tags: 
 ---
 ```

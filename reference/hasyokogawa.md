@@ -1,6 +1,5 @@
 ---
 title: hasyokogawa
-layout: default
 tags: 
 ---
 ```

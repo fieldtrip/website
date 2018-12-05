@@ -1,6 +1,5 @@
 ---
 title: ft_volumereslice
-layout: default
 tags: 
 ---
 ```

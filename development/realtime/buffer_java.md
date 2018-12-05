@@ -1,6 +1,5 @@
 ---
 title: FieldTrip buffer Java interface
-layout: default
 tags: [java, realtime, development]
 ---
 

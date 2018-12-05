@@ -1,6 +1,5 @@
 ---
 title: Distributed computing using the MATLAB engine system
-layout: default
 tags: [distributed]
 ---
 

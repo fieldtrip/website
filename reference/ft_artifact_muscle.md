@@ -1,6 +1,5 @@
 ---
 title: ft_artifact_muscle
-layout: default
 tags: 
 ---
 ```

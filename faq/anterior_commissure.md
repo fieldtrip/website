@@ -1,6 +1,5 @@
 ---
 title: Where is the anterior commissure?
-layout: default
 tags: [faq, source, fiducial]
 ---
 

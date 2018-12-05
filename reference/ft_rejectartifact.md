@@ -1,6 +1,5 @@
 ---
 title: ft_rejectartifact
-layout: default
 tags: 
 ---
 ```

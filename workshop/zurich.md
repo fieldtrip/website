@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Zürich
-layout: default
 ---
 
 # FieldTrip workshop in Zürich

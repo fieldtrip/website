@@ -1,6 +1,5 @@
 ---
 title: appendstruct
-layout: default
 tags: 
 ---
 ```

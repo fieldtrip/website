@@ -1,6 +1,5 @@
 ---
 title: ft_freqinterpolate
-layout: default
 tags: 
 ---
 ```

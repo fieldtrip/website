@@ -1,6 +1,5 @@
 ---
 title: FieldTrip workshop in Trento, Italy
-layout: default
 ---
 
 # FieldTrip workshop in Trento, Italy

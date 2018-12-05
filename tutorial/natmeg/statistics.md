@@ -1,6 +1,5 @@
 ---
 title: Preprocessing and event-related activity in combined MEG/EEG data
-layout: default
 tags: [tutorial, natmeg, meg+eeg, statistics]
 ---
 

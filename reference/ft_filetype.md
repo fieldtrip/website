@@ -1,6 +1,5 @@
 ---
 title: ft_filetype
-layout: default
 tags: 
 ---
 ```

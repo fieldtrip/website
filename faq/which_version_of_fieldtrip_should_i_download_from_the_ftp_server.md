@@ -1,6 +1,5 @@
 ---
 title: Which version of FieldTrip should I download from the ftp server?
-layout: default
 tags: [faq, download]
 ---
 

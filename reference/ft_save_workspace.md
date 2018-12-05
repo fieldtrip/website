@@ -1,6 +1,5 @@
 ---
 title: ft_save_workspace
-layout: default
 tags: 
 ---
 ```

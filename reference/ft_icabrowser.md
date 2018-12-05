@@ -1,6 +1,5 @@
 ---
 title: ft_icabrowser
-layout: default
 tags: 
 ---
 ```

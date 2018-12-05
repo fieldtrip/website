@@ -1,6 +1,5 @@
 ---
 title: ft_spikesplitting
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: My MRI is upside down, is this a problem?
-layout: default
 tags: [faq, mri, volume, coordinate]
 ---
 

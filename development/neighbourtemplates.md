@@ -1,6 +1,5 @@
 ---
 title: Neighbour templates
-layout: default
 ---
 
 This project has been completed and it's result can be found here:

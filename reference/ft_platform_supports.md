@@ -1,6 +1,5 @@
 ---
 title: ft_platform_supports
-layout: default
 tags: 
 ---
 ```

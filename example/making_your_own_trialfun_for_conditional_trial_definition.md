@@ -1,6 +1,5 @@
 ---
 title: Making your own trialfun for conditional trial definition
-layout: default
 tags: [example, raw, preprocessing, trialfun, trialdef]
 ---
 

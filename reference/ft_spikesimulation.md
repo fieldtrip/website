@@ -1,6 +1,5 @@
 ---
 title: ft_spikesimulation
-layout: default
 tags: 
 ---
 ```

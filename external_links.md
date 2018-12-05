@@ -1,6 +1,5 @@
 ---
 title: External links
-layout: default
 ---
 
 # External links

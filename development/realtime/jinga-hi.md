@@ -1,6 +1,5 @@
 ---
 title: Jinga-Hi
-layout: default
 tags: [realtime, jinga-hi, jaga16]
 ---
 

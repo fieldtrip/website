@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 The EEG/MEG signals measured on the scalp do not directly reflect the location of the activated neurons. To reconstruct the location and the time-course or spectral content of a source in the brain, various source-localization methods are available. You can read more about the different methods in review papers suggested [here](/references_to_implemented_methods#references_to_review_papers).   

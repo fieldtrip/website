@@ -1,6 +1,5 @@
 ---
 title: Visual artifact rejection
-layout: default
 tags: [fixme, tutorial, artifact, meg, raw, preprocessing, MEG-language]
 ---
 

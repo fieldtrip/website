@@ -1,6 +1,5 @@
 ---
 title: ft_movieplotER
-layout: default
 tags: 
 ---
 ```

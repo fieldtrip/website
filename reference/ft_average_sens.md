@@ -1,6 +1,5 @@
 ---
 title: ft_average_sens
-layout: default
 tags: 
 ---
 ```

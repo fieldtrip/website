@@ -1,6 +1,5 @@
 ---
 title: beamformer_dics
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_sloreta
-layout: default
 tags: 
 ---
 ```

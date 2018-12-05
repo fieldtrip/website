@@ -1,6 +1,5 @@
 ---
 title: Getting started with CTF data
-layout: default
 tags: [ctf, meg, dataformat]
 ---
 

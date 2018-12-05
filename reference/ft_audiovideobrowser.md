@@ -1,6 +1,5 @@
 ---
 title: ft_audiovideobrowser
-layout: default
 tags: 
 ---
 ```

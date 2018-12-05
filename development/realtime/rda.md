@@ -1,6 +1,5 @@
 ---
 title: BrainVision Recorder Remote Data Access (RDA)
-layout: default
 tags: [realtime, brainvision]
 ---
 

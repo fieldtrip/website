@@ -1,6 +1,5 @@
 ---
 title: ft_interpolatenan
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: MEG-UK 2015 meeting
-layout: default
 tags: [meg-uk-2015, mmfaces]
 ---
 

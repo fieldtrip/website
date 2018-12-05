@@ -1,6 +1,5 @@
 ---
 title: Compute forward simulated data and apply a dipole fit
-layout: default
 tags: [example, eeg, source, dipole]
 ---
 

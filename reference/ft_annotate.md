@@ -1,6 +1,5 @@
 ---
 title: ft_annotate
-layout: default
 tags: 
 ---
 ```

@@ -1,6 +1,5 @@
 ---
 title: ft_statfun_pooledT
-layout: default
 tags: 
 ---
 ```

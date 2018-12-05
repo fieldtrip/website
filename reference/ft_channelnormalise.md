@@ -1,6 +1,5 @@
 ---
 title: ft_channelnormalise
-layout: default
 tags: 
 ---
 ```

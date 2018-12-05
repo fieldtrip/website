@@ -1,6 +1,5 @@
 ---
 title: ft_defaults
-layout: default
 tags: 
 ---
 ```

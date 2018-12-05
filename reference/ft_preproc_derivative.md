@@ -1,6 +1,5 @@
 ---
 title: ft_preproc_derivative
-layout: default
 tags: 
 ---
 ```

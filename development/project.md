@@ -1,6 +1,5 @@
 ---
 title: Project overview
-layout: default
 tags: [development]
 ---
 

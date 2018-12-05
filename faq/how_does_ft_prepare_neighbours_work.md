@@ -1,6 +1,5 @@
 ---
 title: How does ft_prepare_neighbours work?
-layout: default
 ---
 
 ## How does ft_prepare_neighbours work?

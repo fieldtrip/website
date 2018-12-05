@@ -1,6 +1,5 @@
 ---
 title: ft_progress
-layout: default
 tags: 
 ---
 ```

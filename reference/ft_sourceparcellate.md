@@ -1,6 +1,5 @@
 ---
 title: ft_sourceparcellate
-layout: default
 tags: 
 ---
 ```

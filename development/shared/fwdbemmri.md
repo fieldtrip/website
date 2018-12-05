@@ -1,6 +1,5 @@
 ---
 title:
-layout: default
 ---
 
 - Create a boundary for all the filled volumes with one of [these methods](#Triangulation methods)

@@ -1,6 +1,5 @@
 ---
 title: ft_postamble
-layout: default
 tags: 
 ---
 ```

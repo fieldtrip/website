@@ -1,6 +1,5 @@
 ---
 title: ft_statfun_indepsamplesZcoh
-layout: default
 tags: 
 ---
 ```
