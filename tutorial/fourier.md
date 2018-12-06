@@ -3,6 +3,8 @@ title: Fourier analysis of neuronal oscillations and synchronization
 tags: [example, freq, coherence, eeg, meg, fixme]
 ---
 
+{% include markup/danger %} This tutorial is not part of the "main" FieldTrip tutorials and is potentially outdated. Perhaps you're looking for [the primary tutorial on time-frequency analysis?](/tutorial/timefrequencyanalysis) {% include markup/end %}
+
 # Fourier analysis of neuronal oscillations and synchronization
 
 ## Background

@@ -20,7 +20,12 @@ CP=/usr/bin/cp
 cd $HOME/website
 
 # ensure that we have the latest version of the repository
+# let's hope there are no conflicts with th ereference documentation
 $GIT pull > /dev/null 2>&1
+
+# integrate updates to the reference documentation, these get copied from elsewhere to the web server
+$GIT commit -m "updated reference documentation" reference > /dev/null 2>&1
+$GIT push > /dev/null 2>&1
 
 # compare the latest to the previous version
 PREVIOUS=$(cat $LOGFILE)
