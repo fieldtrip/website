@@ -3,26 +3,29 @@ title: Fourier analysis of neuronal oscillations and synchronization
 tags: [example, freq, coherence, eeg, meg, fixme]
 ---
 
-{% include markup/danger %} This tutorial is not part of the "main" FieldTrip tutorials and is potentially outdated. Perhaps you're looking for [the primary tutorial on time-frequency analysis?](/tutorial/timefrequencyanalysis) {% include markup/end %}
+{% include markup/danger %}
+This tutorial is not part of the "main" FieldTrip tutorials and is potentially outdated.
+Perhaps you are looking for the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis)?
+{% include markup/end %}
+
 
 # Fourier analysis of neuronal oscillations and synchronization
 
 ## Background
 
-EEG and MEG measure brain activity as a so called time series, i.e. they measure voltage
-of field strength as a function of time. In those time series, there are often clearly
-visible oscillations like the alpha oscillations over occipital cortex or the beta
-oscillations over sensorimotor cortex during rest. However, in the time series, the
-information about those oscillations is distributed over many samples: We observe an
-oscillation through the fact that there are peaks in the time series that recur at
-regular intervals. Since the information about the oscillations is distributed over many
-samples, it cannot be used immediately. We can e.g. not tell directly the main frequency
-of such an oscillation. In order to concentrate all information about an oscillation, we
-use spectral analysis. Any signal that is measured as a function of time can also be
-expressed as a function of frequency. The transformation from the so-called time-domain
-into the frequency-domain is the Fourier transform. This part of the course tries to give
-an easy-to-understand, but nevertheless correct, explanation of what the Fourier transform
-does and how we can use its outputs to compute power-spectra and cross-spectral densities.
+EEG and MEG measure brain activity as a so called time series, i.e. they measure electric voltage or
+magnetic field strength as a function of time. In those time series, there are often clearly visible
+oscillations like the alpha oscillations over occipital cortex or the beta oscillations over
+sensorimotor cortex during rest. However, in the time series, the information about those
+oscillations is distributed over many samples: We observe an oscillation through the fact that there
+are peaks in the time series that recur at regular intervals. Since the information about the
+oscillations is distributed over many samples, it cannot be used immediately. We can e.g. not tell
+directly the main frequency of such an oscillation. In order to concentrate all information about an
+oscillation, we use spectral analysis. Any signal that is measured as a function of time can also be
+expressed as a function of frequency. The transformation from the so-called time-domain into the
+frequency-domain is the Fourier transform. This part of the course tries to give an
+easy-to-understand, but nevertheless correct, explanation of what the Fourier transform does and how
+we can use its outputs to compute power-spectra and cross-spectral densities.
 
 ## Procedure
 
@@ -34,21 +37,19 @@ In this tutorial the following steps will be demonstrate
 
 ## The concept of spectral analysis using the Fourier Transform
 
-To get to the concept of spectral analysis, we first construct a sine-wave and a cosine
-wave of known frequency. (While in this course, we will use sine waves for reasons of
-simplicity and clarity, please bear in mind that biological signals are never sine waves
-but extend over a frequency range. This is important for the appropriate way of analysing
-them.) We then calculate the Fourier transform of those signals using the Fast Fourier
-Transform (FFT) function of Matlab. The Fourier transform decomposes the time series
-signals into the cosine and sine components at all frequencies. The result of the Fourier
-transform is complex, containing, for each frequency, the cosine component of the signal
-as the real component and the sine component of the signal as the imaginary component. It
-is straightforward to compute those components by hand. For any given frequency, one can
-therefore think of a vector, representing the signal component at that frequency. This
-vector has an amplitude and a phase (phase relative to the begin of the time series). The
-amplitude is of interest when we later compute the power spectrum of a signal and the
-phase is particularly important when we later compute the coherence spectrum between two
-signals.
+To get to the concept of spectral analysis, we first construct a sine-wave and a cosine wave of
+known frequency. (While in this course, we will use sine waves for reasons of simplicity and
+clarity, please bear in mind that biological signals are never sine waves but extend over a
+frequency range. This is important for the appropriate way of analysing them.) We then calculate the
+Fourier transform of those signals using the Fast Fourier Transform (FFT) function of Matlab. The
+Fourier transform decomposes the time series signals into the cosine and sine components at all
+frequencies. The result of the Fourier transform is complex, containing, for each frequency, the
+cosine component of the signal as the real component and the sine component of the signal as the
+imaginary component. It is straightforward to compute those components by hand. For any given
+frequency, one can therefore think of a vector, representing the signal component at that frequency.
+This vector has an amplitude and a phase (phase relative to the begin of the time series). The
+amplitude is of interest when we later compute the power spectrum of a signal and the phase is
+particularly important when we later compute the coherence spectrum between two signals.
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% The Fourier Transform
@@ -245,42 +246,38 @@ information. Thus, the power spectra of our sine and cosine waves are identical!
 
 ## The coherence spectrum
 
-When we have two signals, we might want to know whether they are related. One way of
-addressing this is to quantify whether there is a consistent phase relation between two signals.
-We have learned that the Fourier transform gives, for each frequency component, the
-amplitude and the phase of the signal. Thus, in order to determine whether there is a
-consistent phase relationship between two signal, we could e.g. analyze the difference in
-phases between two signals.
+When we have two signals, we might want to know whether they are related. One way of addressing this
+is to quantify whether there is a consistent phase relation between two signals. We have learned
+that the Fourier transform gives, for each frequency component, the amplitude and the phase of the
+signal. Thus, in order to determine whether there is a consistent phase relationship between two
+signal, we could e.g. analyze the difference in phases between two signals.
 
-If two signals are related, there should be a consistent phase
-difference between them – or in other words, the phase difference should not be random. It
-turns out that the phase difference between two signals is easily obtained if one has the
-Fourier transform of the two signals. The product of the Fourier transform of one signal with
-the conjugate of the Fourier Transform of the signal gives the Cross-Spectral density (CSD).
-We will not go into the detail what the conjugate actually is and why this multiplication gives
-this particular results. Let’s simply accept this for now as a fact.
+If two signals are related, there should be a consistent phase difference between them – or in other
+words, the phase difference should not be random. It turns out that the phase difference between two
+signals is easily obtained if one has the Fourier transform of the two signals. The product of the
+Fourier transform of one signal with the conjugate of the Fourier Transform of the signal gives the
+Cross-Spectral density (CSD). We will not go into the detail what the conjugate actually is and why
+this multiplication gives this particular results. Let’s simply accept this for now as a fact.
 
-The CSD is complex and a
-function of frequency, just like the Fourier Transforms. The amplitude of the CSD is the
-product of the amplitudes of the Fourier Transforms of the two signals. The interesting
-component is the phase of the CSD: It corresponds to the difference in the phase of the two
-Fourier transforms of the two signals. Just like the Fourier Transform itself, we can think of the
-CSD at one frequency as a vector. If we have multiple measurements from two signals and
-the CSD for each of those measurements, then we can analyze the distribution of those
-vectors. If there is some consistency in the phase difference, those vectors should not be
-pointing in random directions, but they should be bundled around one main direction.
+The CSD is complex and a function of frequency, just like the Fourier Transforms. The amplitude of
+the CSD is the product of the amplitudes of the Fourier Transforms of the two signals. The
+interesting component is the phase of the CSD: It corresponds to the difference in the phase of the
+two Fourier transforms of the two signals. Just like the Fourier Transform itself, we can think of
+the CSD at one frequency as a vector. If we have multiple measurements from two signals and the CSD
+for each of those measurements, then we can analyze the distribution of those vectors. If there is
+some consistency in the phase difference, those vectors should not be pointing in random directions,
+but they should be bundled around one main direction.
 
-In order
-to quantify how much those vectors are bundled, one simply sums up all the vectors. Vector
-summation works by simply appending one vector to the end of the other. If the CSD vectors
-from multiple measurements point into random directions, the sum of those vectors will
-approximate a vector of no length. If however, the CSD vectors all point into one and the
-same direction, then they will optimally add up and form the longest possible sum vector.
-"Coherence" as a measure of signal relatedness uses this fact. It is a ratio of two sums: The
-numerator is the sum of the CSDs of multiple measurements. The denominator is the sum of
-the products of the power spectra. This denominator is necessary in order to make direct
-comparisons possible between signal pairs of very different amplitudes. Coherence is then
-normalized between 0 – random phase difference – and 1 – constant phase difference.
+In order to quantify how much those vectors are bundled, one simply sums up all the vectors. Vector
+summation works by simply appending one vector to the end of the other. If the CSD vectors from
+multiple measurements point into random directions, the sum of those vectors will approximate a
+vector of no length. If however, the CSD vectors all point into one and the same direction, then
+they will optimally add up and form the longest possible sum vector. "Coherence" as a measure of
+signal relatedness uses this fact. It is a ratio of two sums: The numerator is the sum of the CSDs
+of multiple measurements. The denominator is the sum of the products of the power spectra. This
+denominator is necessary in order to make direct comparisons possible between signal pairs of very
+different amplitudes. Coherence is then normalized between 0 – random phase difference – and 1 –
+constant phase difference.
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% The Coherence spectrum
@@ -336,7 +333,7 @@ normalized between 0 – random phase difference – and 1 – constant phase di
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% get many repetitions of two signals with somewhat consistent phase difference
 	clear all
-	%close all
+	close all
 
 	frq = 10; % Hz
 	len = 1; % seconds
