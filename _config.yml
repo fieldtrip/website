@@ -20,6 +20,15 @@ defaults:
     values:
       layout: "default"
       toc: true
+  -
+    scope:
+      path: "development/project"
+      path: "development/meeting"
+      path: "tag"
+      type: "pages"
+    values:
+      sitemap: false
+
 toc:
   min_level: 2 # default: 1
   max_level: 4 # default: 6
@@ -29,12 +38,11 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-toc
   - jekyll-last-modified-at
+  - jekyll-toc          # https://github.com/toshimaru/jekyll-toc
+  - jekyll-sitemap      # https://github.com/jekyll/jekyll-sitemap
 
 exclude:
-   - README
-   - CHANGES
-   - TODO
+   - README.md
+   - COPYING.md
    - Gemfile*
-   - bin

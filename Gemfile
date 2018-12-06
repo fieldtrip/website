@@ -22,6 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-toc'
   gem "jekyll-feed", "~> 0.6"
   gem 'jekyll-last-modified-at'
+  gem 'jekyll-sitemap' 
 end
 
 

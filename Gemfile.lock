@@ -36,6 +36,8 @@ GEM
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
+    jekyll-sitemap (1.2.0)
+      jekyll (~> 3.3)
     jekyll-toc (0.9.1)
       nokogiri (~> 1.8)
     jekyll-watch (2.1.2)
@@ -77,6 +79,7 @@ DEPENDENCIES
   jekyll (~> 3.8.4)
   jekyll-feed (~> 0.6)
   jekyll-last-modified-at
+  jekyll-sitemap
   jekyll-toc
   minima (~> 2.0)
   tzinfo-data
