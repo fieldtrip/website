@@ -12,19 +12,19 @@ vgrid - geometric cube meshes will be discussed in the next meeting 18th of Apri
 
 The goal is to integrate the SIMBIO FEM model into FieldTrip.
 
-# Scenarios
+## Scenarios
 
 Here is a [list of the typical scenarios](/development/simbio_scenarios) for which you would like to use SIMBIO, written from the user's perspective.
 
-# Background Materials
+## Background Materials
 
 Here are the [background materials](/development/simbio_materials) for the initial integration plan.
 
-# Steps to be taken (Cristiano)
+## Steps to be taken (Cristiano)
 
 *  Make a good example script to show the FieldTrip pipeline in generating BEM models lead fields
     * this requires an anatomical MRI and location of the electrodes to be shared: use standard_BEM mri (convert to nii) and elc files
-    * how to read the elc and the nii 
+    * how to read the elc and the nii
     * how to check the coregistration and if needed fix it
     * how to make the segmentation (based on the T1)
     * Subsequently for BEM the questions would be
@@ -37,7 +37,6 @@ Here are the [background materials](/development/simbio_materials) for the initi
       * how to make the FEM leadfield (based on the vol model and the electrodes), done by SimBio
       * how to read the FEM leadfield back into MATLAB, done by read_msr.m
     * how to plot the leadfield in MATLAB (using the 3d electrode positions)
-
 *  read simbio documentation, done
 *  how to write the fieldtrip/matlab data structures to files that SIMBIO understands, done
 *  how to read the SIMBIO output files back into matlab, done
@@ -49,7 +48,7 @@ Here are the [background materials](/development/simbio_materials) for the initi
 *  understand how to call SimBio for MEG
 *  unerstand how to import a volume and generate a mesh for SimBio
 
-# Steps to be taken (Johannes/Felix/Carsten)
+## Steps to be taken (Johannes/Felix/Carsten)
 
 *  Get familiar with the FieldTrip toolbox / data structures / code style.
 *  Program all the needed readers/writers for EEG lead field computation with a given head model, electrode configuration and source space configuration.
@@ -58,20 +57,16 @@ Here are the [background materials](/development/simbio_materials) for the initi
     * Integrate functions to construct a source space for a given model in vista format.
     * Integrate vgrid to  produce a model in vista format from a given labeled MRI image.
 
-*  MEG will be integrated at a later stage. We would need functions that produce FEM-models of the given MEG sensors automatically. This is not trivial and will need some time, care and testing (Somebody should be paid for doing it, it is nothing that can be done besides the normal work). 
+*  MEG will be integrated at a later stage. We would need functions that produce FEM-models of the given MEG sensors automatically. This is not trivial and will need some time, care and testing (Somebody should be paid for doing it, it is nothing that can be done besides the normal work).
 
-# Applications
+## Applications
 
 to be discussed
 
-# External links
+## External links
 
 - https://www.mrt.uni-jena.de/simbio/index.php/Main_Page
 - http://www.rheinahrcampus.de/~medsim/vgrid/index.html
 - http://www.ant-neuro.com/products/asa
 - http://www.sci.utah.edu/cibc/software/106-scirun.html
-
-# FieldTrip FTP link
-
 - ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/
-

@@ -12,7 +12,7 @@ Done, all the code works (9 dec 2008)
 
 **Preprocessing - manual artifact detection based on visual inspection**
 
-The code gives no errors but this tutorial has to be rewritten. The scaling options for rejectvisial changed. Now the eog / ecg channels can be scaled seperately so you can reject trials based on the artifact channels. Because of these changes the data is not scaled properly and old cfg options are used. 
+The code gives no errors but this tutorial has to be rewritten. The scaling options for rejectvisial changed. Now the eog / ecg channels can be scaled separately so you can reject trials based on the artifact channels. Because of these changes the data is not scaled properly and old cfg options are used. 
 There is also another fixme that has to be fixed. (9 dec 2008)
 
 **Preprocessing - automatic artifact identification**

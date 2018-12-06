@@ -20,6 +20,9 @@ defaults:
     values:
       layout: "default"
       toc: true
+toc:
+  min_level: 2 # default: 1
+  max_level: 4 # default: 6
 
 permalink: pretty
 markdown: kramdown

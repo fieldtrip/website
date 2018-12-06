@@ -18,6 +18,6 @@ You can go through the contributions to the FieldTrip discussion list [here](htt
 
 {% include searchlistarchive %}
 
-# Frequently Asked Questions
+## See also
 
 {% include seealso tag1="faq" tag2="email" %}

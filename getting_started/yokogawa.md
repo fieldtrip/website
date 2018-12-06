@@ -36,7 +36,7 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 	addpath `<full_path_to_fieldtrip>`
 	ft_defaults
 
-# Testing that the reading into MATLAB works
+## Testing that the reading into MATLAB works
 
 To test that the reading of the continuous data works on your computer, you can try something like the following on your own data fil
 
@@ -75,7 +75,7 @@ The third toolbox contains the completely renewed import functions from the Yoko
 
 Due to possible differences in e.g. calibration it is strictly recommended to use one codebase consistently for all your analysis.
 
-# Reading triggers into an event-structure
+## Reading triggers into an event-structure
 
 Yokogawa uses analogue channels as trigger channels, often in a binary way. Which is to say that e.g. a 5 volt signal is transiently put on the channel when a stimulus is presented. Often several channels are used to be able to encode several trigger 'codes'.
 
@@ -92,14 +92,14 @@ We can make a plot of one of the trigger channels
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers1.png" width="300" %}
 
-zooming in a bi
+zooming in a bit
 
 	figure;
 	plot(data(161,1:10000);
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers2.png" width="300" %}
 
-zooming in even more using the matlab figure magnifying glass on the top left corner of one trigger even
+zooming in even more using the matlab figure magnifying glass on the top left corner of one trigger event
 
 	figure;
 	plot(data(161,1:10000,'.-');
@@ -115,7 +115,7 @@ According to the example here we can now determine
 
 Together with our knowledge of the experimental design and stimulus equipment we also know that the stimulus is presented at the moment of up-flank of the trigger channel. Lets say the same turned out to be the case in trigger channels 162 to 166, we can make a trialfunction to read in the events.
 
-For exampl
+For example
 
 	function [trl, event] = mytrialfun(cfg)
 
@@ -158,7 +158,7 @@ Also realize that how the Yokogawa system is recording events through individual
 	preproc                     = ft_preprocessing(cfg);
 
 
-# Coordinate system coregistration
+## Coordinate system coregistration
 
 Each of the scanners used in neuroimaging research in principle has its own hardware-based coordinate system: the MRI has a coordinate system that relates to the bore, the MEG has a coordinate system that relates to the dewar, and the polhemus tracker has a coordinate system relative to the transmitter (the two-inch gray cube). Using a combination of the three systems (MRI, MEG, Polhemus) we try to relate the neuronal activity in the MEG to an anatomical location in the MRI.
 
@@ -176,20 +176,19 @@ Alternative to anatomically defined landmarks, it is also possible to use fiduci
 
 In the frequently asked questions you can find an overview of the conventions for the [coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that are used by various MEG and MRI systems/software.
 
-## MEG Dewar Coordinate System
+### MEG Dewar Coordinate System
 
 Unlike other systems, the Yokogawa system software does not automatically analyze its sensorlocations relative to fiducial coils. Instead the positions of the fiducial points are saved in an external textfile - in the helmet's own coordinate system - using the property menu of the YOKOGAWA MEG-VISION software. Origin of the coordinate system is at the center of the helmet, where Z+ is towards the top of the head, X+ is towards the nose, Y+ is towards the left.
 
 {% include image src="/assets/img/getting_started/yokogawa/yokogawa_coord.png" %}
 
-## Coregistration using forehead coils/markers
+### Coregistration using forehead coils/markers
 
 If you used standard fiducial locations (nasion, left/right ear) for the MEG coils as well as during MR scanning (using e.g. vitamin pill) the procedure of co-registration is relatively standard after this. However, in the following example dataset, co-registration points on the forehead were used.
 
 ### Aligning the MRI with the head coordinate system
 
 Read subject MRI
-
 
 	ft_hastoolbox('spm8',1);
 	mri = ft_read_mri('Structural.hdr');
@@ -479,5 +478,5 @@ Plot results
 {% include image src="/assets/img/getting_started/yokogawa/beamformer_single_subject_lambda_0005perc_b.jpg" width="600" %}
 
 {% include markup/info %}
-Thanks to Akiko Ikkai for contributing her Yokogawa data to make this page.
+Thanks to Akiko Ikkai for contributing her data for making this page.
 {% include markup/end %}

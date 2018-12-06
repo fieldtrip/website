@@ -34,11 +34,11 @@ If you do not specify your own triallfunction, the 4th column will by default co
 
 {% include /shared/tutorial/natmeg/dataset.md %}
 
-# Browsing the data prior to preprocessing
+## Browsing the data prior to preprocessing
 
 Before we start preprocessing our data and calculating event-related fields and potentials, we will first have a look at our data while it unprocessed and not yet cut-up into trials (in FieldTrip parlour: *raw*-data). To do this, we  use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data in memory - only the part that it displays.
 
-## How can I use the databrowser?
+### How can I use the databrowser?
 
 The databrowser can be used to look at your raw or preprocessed data and annotate time periods at which specific events happen. Originally designed to identify sleep spindles, it's current main purpose is to do quality checks and visual artifact detection.
 
@@ -50,7 +50,7 @@ When the databrowser opens, you will see buttons to navigate along the bottom of
 The databrowser will **not** change your data in any way. If you specify a cfg as output, it will just store your selected or de-selected artifacts in your cfg.
 {% include markup/end %}
 
-## Visualization
+### Visualization combined data
 
 Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Elekta/Neuromag MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look [here in this video](http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s).
 
@@ -115,9 +115,9 @@ Finally, we will look at the EEG channel
 At first glance, can you see any differences between the MEG and EEG data or artifacts?
 {% include markup/end %}
 
-# Preprocessing and averaging MEG
+## Preprocessing and averaging MEG
 
-## Procedure
+### Procedure
 
 The following steps are taken in the MEG section of the tutorial:
 
@@ -133,7 +133,7 @@ The following steps are taken in the MEG section of the tutorial:
 
 *Figure; A schematic overview of the steps in averaging of event related fields*
 
-## Reading and preprocessing the interesting trials
+### Reading and preprocessing the interesting trials
 
 Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the segments of data that will be read in for preprocessing. Trials are defined by their *begin* and *end*-sample in the data file and each trial has an *offset* that defines where the relative t=0 point (usually the moment of stimulus onset, i.e. on the stimulus-trigger) is for that trial.
 
@@ -226,11 +226,11 @@ After we have rejected trials with artifacts we will save our dat
 
 	save data_MEG_clean data_MEG_clean -v7.3
 
-## Event-related fields (ERFs)
+### Event-related fields (ERFs)
 
 We analyze EEG or MEG signals to investigate the modulation of the measured brain signals with respect to a certain event/stimulus. However, due to intrinsic and extrinsic noise in the signals - which in single trials is often higher than the signal evoked by the brain - it is typically required to average data from several trials to increase the signal-to-noise ratio (SNR). One approach is to repeat a given event/stimulus in your experiment and average the corresponding EEG or MEG signals. The assumption that we rely on here is that the noise is independent of the events and thus reduced when averaging, while the effect of interest is present in each trial and time-locked to the event. The approach results in Event Related Potentials (ERPs) or Event Related Fields (ERFs) for EEG and MEG, respectively.
 
-### Timelockanalysis
+#### Timelockanalysis
 
 The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an average over all the trials in a segmented raw data structure. It requires preprocessed data, i.e. what we just did.
 
@@ -281,7 +281,7 @@ The output is the data structure *ERF_standard* with the following field
 
 The most important field is ERF_standard.avg, containing the average over all trials for each sensor.
 
-### Plotting the results using the magnetometers
+#### Plotting the results using the magnetometers
 
 Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
@@ -362,7 +362,7 @@ To plot the topographic distribution of the data averaged over the time interval
 Can you try to explain the topographical distribution in terms of a dipole?
 {% include markup/end %}
 
-### Combining planar gradiometers
+#### Combining planar gradiometers
 
 As you could see in the previous section, the magnetometers may give a topographical distribution which can be difficult to interpret. To help with identifying underlying sources we should make use of the other channels in the data. The planar gradiometers are often more easily interpreted, because they are most sensitive right above a source. However, the gradiometers are composed of two (8-shaped) coils at the same location, oriented in two different directions with respect to the surface of the helmet. They can thereby pick up both radial orientations of the magnetic fields. To use them properly for the purpose of plotting, we should therefor combine them first, adding their fields.
 
@@ -372,7 +372,7 @@ As you could see in the previous section, the magnetometers may give a topograph
 	ERF_oddball_cmb     = ft_combineplanar(cfg, ERF_oddball);
 	ERF_diff_cmb        = ft_combineplanar(cfg, ERF_diff);
 
-### Plotting the results of planar gradients
+#### Plotting the results of planar gradients
 
 We are now going to create the same plots as before, but for the combined planar gradiometers.
 
@@ -458,11 +458,11 @@ Compare this distribution with those resulting from the magnetometers. Do you un
 Which type of source configuration can explain the topography?
 {% include markup/end %}
 
-# Preprocessing and averaging EEG
+## Preprocessing and averaging EEG
 
 Now that you have looked at the data using the MEG sensors we are going to switch to the EEG sensors. During the following steps we will look back and compare our EEG results to the MEG results. See if you can point out differences and similarities.
 
-## Procedure
+### Procedure
 
 The EEG section of this tutorial resembles the MEG section. We will take the following steps:
 
@@ -477,7 +477,7 @@ The EEG section of this tutorial resembles the MEG section. We will take the fol
 
 *A schematic overview of the steps in averaging of event related potentials*
 
-## Reading and preprocessing the interesting trials
+### Reading and preprocessing the interesting trials
 
 We start by repeating the same preprocessing procedure as with the MEG. We start with the trial definition for the standard and oddball trials using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
 
@@ -533,11 +533,11 @@ As before, we will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to 
 	cfg.layout        = 'neuromag306eeg1005_natmeg.lay';
 	data_EEG_clean    = ft_rejectvisual(cfg,data_EEG);
 
-## Event-related potentials (ERPs)
+### Event-related potentials (ERPs)
 
 The EEG equivalent of the Event-Related Field (ERF) is the Event-Related Potential (ERP). As with the MEG data we will first filter the data using **[ft_preprocessing](/reference/ft_preprocessing)** before calculating the ERP with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 
-### Timelockanalysis
+#### Timelockanalysis
 
 The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an average over all the trials in a segmented raw data structure. It requires preprocessed data, i.e. what we just did.
 
@@ -583,7 +583,8 @@ The output are data structures with the following field
 	       cfg: [1x1 struct]
 
 The most important field is *ERP_oddball.avg*, containing the average over all trials for each sensor.
-### Plotting the results of EEG
+
+#### Plotting the results of EEG
 
 Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
@@ -677,7 +678,7 @@ To which MEG channels can we best compare the topographical plots from the EEG d
 
 *Figure 11; A topographic plot of the event related fields (gradiometer) obtained using **[ft_topoplotER](/reference/ft_topoplotER)***
 
-###  Scalp current density
+####  Scalp current density (SCD)
 
 When comparing the EEG topoplots to the MEG topoplots we notice that the spread of the EEG activity measured on the scalp has a wider distribution than when looking at the MEG sensors. Due to volume conduction, most of the focal current generated in the brain spreads over the scalp and it becomes more difficult to localize activity. One method to compensate for this is to calculate scalp current density (SCD), which in its most basic form is the second spatial derivative of the EEG. SCD maps help with localizing the source of activity in the EEG. Furthermore, SCD maps are independent of the choice of reference electrode.
 
@@ -692,10 +693,9 @@ So let's calculate the SCD on the averaged data.
 	scd_ERP_diff        = ft_scalpcurrentdensity(cfg, ERP_diff);
 
 
-### Plotting the results using SCD
+#### Plotting the results of the SCD
 
-To plot the scalp current density results, use the following cod
-
+To plot the scalp current density results, use the following code
 
 	cfg                 = [];
 	cfg.layout          = 'neuromag306eeg1005_natmeg.lay'; % name will change
@@ -764,7 +764,7 @@ As we can see, the new dataset contains all 434 channels (128 EEG + 306 MEG) aga
 	       fsample: 250
 	           cfg: [1x1 struct]
 
-Early on we used **[ft_rejectvisual](/reference/ft_rejectvisual)** to reject trials for the EEG and MEG data separately. The consequence of this is that it is likely that we rejected different trials in the EEG and in the MEG data subset. To avoid this we can run **[ft_rejectvisual](/reference/ft_rejectvisual)** on the complete dataset while still only using a subset of channels for visualization. We can iteratively clean the dataset while looking at a seperate subset of channels on each iteration.
+Early on we used **[ft_rejectvisual](/reference/ft_rejectvisual)** to reject trials for the EEG and MEG data separately. The consequence of this is that it is likely that we rejected different trials in the EEG and in the MEG data subset. To avoid this we can run **[ft_rejectvisual](/reference/ft_rejectvisual)** on the complete dataset while still only using a subset of channels for visualization. We can iteratively clean the dataset while looking at a separate subset of channels on each iteration.
 
 First we will clean the dataset based on the EEG channel
 
@@ -792,4 +792,3 @@ We now have the same amount of trials for each type of sensor.
 In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and re-referencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their timecourses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.  
 
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/tutorial/natmeg/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
-If you are currently doing the local NatMEG analysis course, please let the teachers know you are ready.

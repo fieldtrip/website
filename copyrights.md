@@ -6,7 +6,7 @@ title: Copyrights
 
 {% include shared/copyright.md %}
 
-# GNU GENERAL PUBLIC LICENSE
+## GNU GENERAL PUBLIC LICENSE
 
 Version 2, June 1991
 

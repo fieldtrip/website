@@ -88,7 +88,7 @@ Elsewhere on this website you can find more examples on the use of the peer tool
 
 ### How it works in detail
 
-The idea is loosely based on the [FieldTrip buffer](/development/realtime/buffer), which is a multithreaded TCP server implemented as a mex file. The TCP server runs in a seperate thread attached to Matlab, but not blocked by Matlab command execution. Let's refer to this as the **"peer server"**.  The peer server has the following responsibilitie
+The idea is loosely based on the [FieldTrip buffer](/development/realtime/buffer), which is a multithreaded TCP server implemented as a mex file. The TCP server runs in a separate thread attached to Matlab, but not blocked by Matlab command execution. Let's refer to this as the **"peer server"**.  The peer server has the following responsibilitie
 
  1.  announce itself on the network
  2.  discover the other peers

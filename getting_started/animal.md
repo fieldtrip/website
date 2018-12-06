@@ -15,7 +15,7 @@ FieldTrip is mainly developed for the analysis of continuous electrophysiologica
 
 Many animal neurophysiology experiments also allow the recording of spiking activity of small groups of neurons. Spiking activity is fully characterized by the set of time points at which the spikes occur. These data are inherently discrete and represents events (spikes) that happen at irregular moments in time. The inherently discrete and irregular nature of spiking activity requires a some effort to combine it with the simultaneously recorded LFPs.
 
-Another difference between human electrophysiology data and animal electrophysiology data is the representation of that data on disk. Whereas human EEG or MEG data is typically stored in a single (large) file, the data from a single animal recording session are sometimes stored in a large number of seperate files with different file formats. For example,
+Another difference between human electrophysiology data and animal electrophysiology data is the representation of that data on disk. Whereas human EEG or MEG data is typically stored in a single (large) file, the data from a single animal recording session are sometimes stored in a large number of separate files with different file formats. For example,
 
 *  The signal recorded at different sites (e.g., single wire electrodes, tetrodes, subdural grid electrodes) is often saved into separate files, one per recording site.
 *  Different aspects of the signal recorded at one site (e.g., spiking activity and local field potential) are often saved into separate files.

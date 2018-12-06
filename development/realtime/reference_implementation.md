@@ -47,7 +47,7 @@ The leftmost box represents the application that is writing data into the buffer
 
 The box in the middle represents the actual buffer, with the actual data being stored in computer memory/RAM represented by the blue cloud at the bottom. The header, data and event information is managed by the dmarequest function, where dma refers to direct memory access. The tcpserver function at the top waits for incoming connections. If a connection comes in, it is handed over to the tcpsocket function which reads the incoming request from the network, hands it over to dmarequest, and subsequently writes the response to the client back onto the network.
 
-Given the symmetry in the design, it is possible to have a standalone buffer, i.e. have the tcpserver run in its own application with its own memory. It is also possible to link the tcpserver with the associated buffer memory (the middle box) to the acquisition software. Finally it is also possible to link the tcpserver with the associated buffer memory to the application that is doing the processing. The MATLAB mex file includes the tcpserver, which can optionally be started as a seperate thread.
+Given the symmetry in the design, it is possible to have a standalone buffer, i.e. have the tcpserver run in its own application with its own memory. It is also possible to link the tcpserver with the associated buffer memory (the middle box) to the acquisition software. Finally it is also possible to link the tcpserver with the associated buffer memory to the application that is doing the processing. The MATLAB mex file includes the tcpserver, which can optionally be started as a separate thread.
 
 ## Compiling the code
 

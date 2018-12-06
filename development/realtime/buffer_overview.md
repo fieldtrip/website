@@ -29,6 +29,6 @@ The buffer is compiled into a MATLAB mex file, which means that you can read fro
 
 *  access a remote buffer linked to the acquisition software, which runs as a separate program and possibly even on a separate computer
 
-*  instantiate a local buffer, linked to the MATLAB process as a seperate thread
+*  instantiate a local buffer, linked to the MATLAB process as a separate thread
 
 Besides the native C/C++ and the MATLAB implementation, we also provide implementations for [Java](/development/realtime/buffer_java) and [Python](/development/realtime/buffer_python).

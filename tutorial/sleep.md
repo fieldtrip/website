@@ -95,7 +95,7 @@ Please also skip through several epochs in the data and zoom out in the time axi
 
 	  cfg             = [];
 	  cfg.continuous  = 'yes';     
-	  cfg.viewmode    = 'vertical'; % all channels seperate
+	  cfg.viewmode    = 'vertical'; % all channels separate
 	  cfg.blocksize   = 30;         % view the continous data in 30-s blocks
 	  ft_databrowser(cfg, data_continuous);
 

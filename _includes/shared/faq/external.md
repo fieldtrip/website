@@ -25,7 +25,7 @@ Although we distribute these toolboxes along with FieldTrip to facilitate their 
 
 ### Optional toolboxes
 
-The following toolboxes are also used for specific computations, but are not included in the default FieldTrip release. You can download them seperately and place then in the "fieldtrip/external" directory (where they will be automatically found) or anywhere else on your path.
+The following toolboxes are also used for specific computations, but are not included in the default FieldTrip release. You can download them separately and place then in the "fieldtrip/external" directory (where they will be automatically found) or anywhere else on your path.
 
 *  nlxnetcom
 *  meg-pd

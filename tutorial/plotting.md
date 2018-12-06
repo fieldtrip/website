@@ -180,7 +180,7 @@ Although many tutorials elsewhere on the FieldTrip wiki are using the standard C
 
 The layout is determined by the layout file. Read more on layout files [here](/tutorial/layout), and in the [frequently asked questions](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 
-For multiplotting planar gradient data from the Elekta Neuromag system it is especially relevant to understand the layout files. The Neuromag system has two planar gradiometers and one axial magnetometer at each sensor location. You do not want to plot those on top of each other. Hence the Neuromag layout files contain two (for the old 122 channel system) or three (for the recent 306 channel systems) seperate subplots for each channel location. Those two (or three) subplots hold the data for the two planar gradients and for the magnetometer signal.
+For multiplotting planar gradient data from the Elekta Neuromag system it is especially relevant to understand the layout files. The Neuromag system has two planar gradiometers and one axial magnetometer at each sensor location. You do not want to plot those on top of each other. Hence the Neuromag layout files contain two (for the old 122 channel system) or three (for the recent 306 channel systems) separate subplots for each channel location. Those two (or three) subplots hold the data for the two planar gradients and for the magnetometer signal.
 
     cfg = [];
     cfg.layout = 'neuromag306all.lay';

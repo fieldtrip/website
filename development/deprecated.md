@@ -114,7 +114,7 @@ January 2006: Some of the artifact detection functions have been completely rewr
 
 September 2005: The list of trial functions below all predate the generic event handling that has been implemented using read_fcdc_event. These trial functions are file-format specific, and therefore deprecated.
 
-The idea underlying the new implementation for trialfuns is to seperate the "hardware knowledge" for getting trigger information out of the file (in *read_fcdc_event.m*) from the "experiment knowledge" in determining the sequence of trigger events that is interesting (in the trialfun). There is one general trial function *trialfun_general.m* that can be used for selecting a segment around a trigger. A more elaborate explanation and example code is given [here](/example/making_your_own_trialfun_for_conditional_trial_definition).
+The idea underlying the new implementation for trialfuns is to separate the "hardware knowledge" for getting trigger information out of the file (in *read_fcdc_event.m*) from the "experiment knowledge" in determining the sequence of trigger events that is interesting (in the trialfun). There is one general trial function *trialfun_general.m* that can be used for selecting a segment around a trigger. A more elaborate explanation and example code is given [here](/example/making_your_own_trialfun_for_conditional_trial_definition).
 
 *  **trialfun_brainvision.m**
 

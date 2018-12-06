@@ -10,13 +10,13 @@ FieldTrip has a consistent set of low-level functions for forward computations o
 
 The forward module comprises a complete toolbox of high-quality forward methods, i.e. it contains all functions to set up the volume conduction models of the head and to compute the leadfields. Using the high-level FieldTrip functions and the inverse module, these can be used for reconstructing the sources given real experimental MEG and EEG data.
 
-The objective of supplying these low-level functions as a seperate module/toolbox are to
+The objective of supplying these low-level functions as a separate module/toolbox are to
 
  1.  facilitate the reuse of these functions in other open-source projects (e.g. EEGLAB, SPM)
  2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
  3.  facilitate the implementation of advanced features
 
-The low-level functions for source estimation/reconstruction are contained in the [development:forward](/development/forward) and [development:inverse](/development/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them seperately from the FieldTrip main functions, you can also download them separately  [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
+The low-level functions for source estimation/reconstruction are contained in the [development:forward](/development/forward) and [development:inverse](/development/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them separately from the FieldTrip main functions, you can also download them separately  [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
 
 Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 
@@ -35,23 +35,16 @@ Instead of implementing all forward methods completely from scratch, the FieldTr
 The following forward methods are implemented for computing the electric potential (EEG
 
 *  single sphere
-
 *  multiple concentric spheres with up to 4 shells
-
 *  boundary element model (BEM)
-
 *  leadfield interpolation using a precomputed grid
-
 *  all forward models supported by the Neuromag meg-calc toolbox
 
 The following forward methods are implemented for computing the magnetic field (MEG
 
 *  single sphere (Cuffin and Cohen, 1977)
-
 *  multiple spheres with one sphere per channel (Huang et al, 1999)
-
 *  realistic single-shell model based on leadfield expansion (Nolte, 2003)
-
 *  leadfield interpolation using a precomputed grid
 
 ## Definition of the high-level function-calls (user interface)
@@ -161,18 +154,18 @@ MATLAB allows the representation of any data in arrays, but does not have an exp
 
 The forward module functions are written such that they operate correctly if all input data to the functions is specified according to the [International System of Units](http://en.wikipedia.org/wiki/International_System_of_Units), i.e. in meter, Volt, Tesla, Ohm, Ampere, etc. The high-level FieldTrip code or any other code that calls the forward module functions (e.g. EEGLAB) is responsible for data handling and bookkeeping and for converting MATLAB arrays and structures that represent units into SI units prior to passing the arrays and structures to the forward code.
 
-# Related documentation
+## Related documentation
 
 The literature references to the implemented methods are given [here](/references_to_implemented_methods).
 
-Frequently asked questions about forward and inverse modeling:
+### Frequently asked questions about forward and inverse modeling:
 
 {% include seealso tag1="faq" tag2="source" %}
 
-Example material for forward and inverse modeling:
+### Example material for forward and inverse modeling:
 
 {% include seealso tag1="example" tag2="source" %}
 
-Tutorial material for forward and inverse modeling:
+### Tutorial material for forward and inverse modeling:
 
 {% include seealso tag1="tutorial" tag2="source" %}

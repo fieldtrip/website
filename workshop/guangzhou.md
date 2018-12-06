@@ -10,7 +10,7 @@ title: FieldTrip Workshop in Guangzhou, China
 
 REGISTRATION CLOSED: NO PLACES AVAILABLE
 
-# Program
+## Program
 
 #### Tuesday August 23rd
 

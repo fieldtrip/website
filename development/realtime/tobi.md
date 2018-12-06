@@ -11,32 +11,32 @@ Interoperability between on streams provided with the TiA and the FieldTrip buff
 
 Note that only homogeneous signal streams (i.e. with a sampling rate and block size that is consistent between channels) are supported at the moment.
 
-# License
+## License
 
 Tia2ft is available under the 3-clause BSD license (see LICENSE.txt). This
 license permits commercial use, and is compatible with the GPL license. The
 licences of the libraries used in tia2ft are available in their respective
 directories.
 
-# Usage
+## Usage
 
 Without command line arguments, tia2ft attempts to connect to a TiA server and
 a FieldTrip buffer both served on the same computer. The following options are
 supporte
 
-	
+
 	  -h [ --help ]                     Show help message.
 	  -v [ --verbose ]                  Print more info.
 	  --tia-host arg (=localhost)       Set host name of TiA server.
 	  --tia-port arg (=9000)            Set port of TiA server.
 	  --fieldtrip-host arg (=localhost) Set host name of FieldTrip buffer server.
 	  --fieldtrip-port arg (=1972)      Set port of FieldTrip buffer server.
-	  --serve-ft-buffer                 Start a new FieldTrip buffer instead of 
+	  --serve-ft-buffer                 Start a new FieldTrip buffer instead of
 	                                    connecting to an existing one.
 
-# Compiling
+## Compiling
 
-## Linux
+### Linux
 To recompile tia2ft, a C++ compiler with the STL and Boost libraries is
 required.
 
@@ -51,15 +51,15 @@ Then, it can simply be run wit
 The shell script adds the TiA library to the search path, and starts the
 executable ''tia2ft''.
 
-## Windows
+### Windows
 
 Compiling on windows is not yet supported.
 
-##  OS X
+###  OS X
 
 Compiling on OS X is not yet supported.
 
-# Testing tia2ft
+## Testing tia2ft
 
 To test tia2ft, one can use the TOBI signal server to generate artificial
 signals. With the TOBI signal servers version 8ea1376, a TiA serving
@@ -69,11 +69,11 @@ sine-waves can be started as follow
 
 When this sever is running, ''tia2ft'' can connect to this server.
 
-# References
+## References
 
  1.  IEEE Trans Biomed Eng. 2012 Mar;59(3):852-9. Epub 2011 Dec 21. Proposing a standardized protocol for raw biosignal transmission. Breitwieser C, Daly I, Neuper C, Müller-Putz GR.
 
-# Related links
+## Related links
 
 *  http://www.ncbi.nlm.nih.gov/pubmed/22194230
 *  http://dx.doi.org/10.1109/TBME.2011.2174637

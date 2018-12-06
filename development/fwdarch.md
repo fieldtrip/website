@@ -4,7 +4,7 @@ title: Refurbishing the FORWARD module
 
 {% include /shared/development/warning.md %}
 
-## Refurbishing the FORWARD module
+# Refurbishing the FORWARD module
 
 The forward module routines generate leadfields which are used used in different contexts (e.g. beamformer). To build the forward model we make use of various methods and we start from very different geometrical descriptions, generally representing the head shape.
 
@@ -47,9 +47,9 @@ As a general rule all volumetric geometry descriptions should not contain holes 
 
 The table contains the cells that indicate **FROM** which kind of input **TO** which kind of method I want to go. The content is a set of programmatic steps which leads from a specific anatomical information (see the first column) to the costruction of the 'vol' structure for a forward model method (see the first row of the table).
 
-The tables are different for EEG and ME
+The tables are different for EEG and MEG:
 
-* For EE
+For EEG
 
  | ^ Infinite  ^ Halfspace  ^ Slab ^ Single sphere  ^ Concentric spheres ^ FEM ^ FDM ^ ASA BEM ^ Bemcp ^ Dipoli BEM ^ OpenMEEG BEM ^                                                                                                                      
  | ---------------------------------------------------------------------------------------------------------------------------------                                                                                                                      
@@ -59,7 +59,7 @@ The tables are different for EEG and ME
  | 4.Headshape triangulation|[INF](#INF4 method)|[HS4](#HS4 method)|[SL4](#SL4 method) |[SPH4](#SPH4 method)|[CS4](#CS4 method)|n.a.|n.a.|[ASA](#ASA4 method)|[BEMCP4](#BEMCP4 method)|[DIP4](#Dipoli4 method)|[OM4](#OpenMEEG4 method)|                  
  | 5.Nothing      |[INF](#INF5 method) |[HS5](#HS5 method)|[SL5](#SL5 method)|[SPH5](#SPH5 method)|n.a.|n.a.|n.a.|n.a. |n.a. |n.a. |n.a. |                                                                                                                
 
-* For ME
+For MEG
 
  | ^ Infinite  ^ Single sphere ^ Local spheres ^ Single shell ^ FEM ^ OpenMEEG BEM ^                                                               
  | ---------------------------------------------------------------------------------                                                               
@@ -69,18 +69,18 @@ The tables are different for EEG and ME
  | 4.Headshape triangulation|[INF](#INF4 method )|[SPH4](#SPH4 method)|[LS4](#LS4 method)|[SH4](#SH4 method)|n.a.|[OM4](#OpenMEEG4 method)|        
  | 5.Nothing      |[INF](#INF5 method )|[SPH5](#SPH5 method)|n.a.|n.a.| n.a.|n.a.|                                                                 
 
-# Overview on the methods
+## Overview on the methods
 
 The following paragraphs describe in synthesis the pipelines for the various methods sketched in the tables. The methods are ordered according to the input type (e.g. CT scans) they use to generate the 'vol' structure.
 
-# Having a CT scan and EEG data
+## Having a CT scan and EEG data
 
-## INF1 method
+### INF1 method
 From CT to Infinite space
 {% include /shared/development/forwinf.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## HS1 method
+### HS1 method
 
 FROM CT TO Infinite halfspace
 
@@ -89,7 +89,7 @@ Method:
 {% include /shared/development/forwsegm.md %}
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
-## SL1 method
+### SL1 method
 
 FROM CT TO Infinite slab
 
@@ -97,7 +97,7 @@ This applies for example when the set of electrodes is distributed on a flat sur
 {% include /shared/development/forwsegm.md %}
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
-## SPH1 method
+### SPH1 method
 
 FROM CT TO Single sphere
 
@@ -106,7 +106,7 @@ This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 {% include /shared/development/forwsphere.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  CS1 method
+###  CS1 method
 
 FROM CT TO Concentric spheres
 
@@ -128,7 +128,7 @@ Accordingly:
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  FEM1 method
+###  FEM1 method
 
 FROM CT TO FEM
 
@@ -157,7 +157,7 @@ OR
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  FDM1 method
+###  FDM1 method
 
 FROM CT TO FDM
 
@@ -174,13 +174,13 @@ the scalp, the skull, the inner skull, the inner CSF compartments
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  ASA1 method
+###  ASA1 method
 
 FROM CT TO ASA BEM
 {% include /shared/development/forwasa.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  BEMCP1 method
+###  BEMCP1 method
 
 FROM CT TO BEMCP
 
@@ -189,7 +189,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 {% include /shared/development/fwdbemct.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  Dipoli1 method
+###  Dipoli1 method
 
 FROM CT TO Dipoli
 
@@ -198,7 +198,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 {% include /shared/development/fwdbemct.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  OpenMEEG1 method
+###  OpenMEEG1 method
 
 FROM CT TO OpenMEEG
 
@@ -206,9 +206,9 @@ This method generates a 'vol' structure which contains the conductivities of eac
 {% include /shared/development/forwsegm.md %}
 {% include /shared/development/fwdbemct.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
-# Having a MRI scan and EEG data
+## Having a MRI scan and EEG data
 
-## INF2 method
+### INF2 method
 
 From MRI to Infinite space
 
@@ -216,7 +216,7 @@ From MRI to Infinite space
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## HS2 method
+### HS2 method
 
 FROM MRI TO Infinite halfspace
 
@@ -226,7 +226,7 @@ Method:
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SL2 method
+### SL2 method
 
 FROM MRI TO Infinite slab
 
@@ -235,7 +235,7 @@ This applies for example when the set of electrodes is distributed on a flat sur
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SPH2 method
+### SPH2 method
 
 FROM MRI TO Single sphere
 
@@ -244,24 +244,24 @@ This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 {% include /shared/development/forwsphere.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## CS2 method
+### CS2 method
 
 FROM MRI TO Concentric spheres
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## FEM2 method
+### FEM2 method
 
 FROM MRI TO FEM
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## FDM2 method
+### FDM2 method
 
 FROM MRI TO FDM
 
 [Back](#Architecture/ defining a table for the possible implementations)
-##  ASA2 method
+###  ASA2 method
 
 FROM MRI TO ASA BEM
 
@@ -269,7 +269,7 @@ FROM MRI TO ASA BEM
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  BEMCP2 method
+###  BEMCP2 method
 
 FROM MRI TO BEMCP
 
@@ -279,7 +279,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  Dipoli2 method
+###  Dipoli2 method
 
 FROM MRI TO Dipoli
 
@@ -288,7 +288,7 @@ This method generates a 'vol' structure which contains the conductivities of eac
 {% include /shared/development/fwdbemmri.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  OpenMEEG2 method
+###  OpenMEEG2 method
 
 FROM MRI TO OpenMEEG
 This method generates a 'vol' structure which contains the conductivities of each compartment, the description of the triangulated surfaces and the system matrix (also called Head matrix), which accounts for the geometry of the head shape in the calculation of the lead fields.
@@ -296,9 +296,9 @@ This method generates a 'vol' structure which contains the conductivities of eac
 {% include /shared/development/fwdbemmri.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# Having headshape points and EEG data
+## Having headshape points and EEG data
 
-## INF3 method
+### INF3 method
 
 From Headshape points to Infinite space
 
@@ -306,7 +306,7 @@ From Headshape points to Infinite space
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## HS3 method
+### HS3 method
 
 FROM Headshape points TO Infinite halfspace
 
@@ -318,7 +318,7 @@ Method:
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SL3 method
+### SL3 method
 
 FROM Headshape points TO Infinite slab
 
@@ -327,7 +327,7 @@ This case happens when I have a set of electrodes positions and an estimate of t
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SPH3 method
+### SPH3 method
 
 FROM Headshape points TO Single sphere
 
@@ -337,7 +337,7 @@ This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 - Fit a sphere to the points
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## CS3 method
+### CS3 method
 
 FROM Headshape points TO Concentric spheres
 
@@ -345,39 +345,39 @@ FROM Headshape points TO Concentric spheres
 - Fit a sphere to each shape
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## ASA3 method
+### ASA3 method
 
 FROM Headshape points TO ASA
 {% include /shared/development/forwasa.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## BEMCP3 method
+### BEMCP3 method
 
 FROM Headshape points TO BEMCP
 {% include /shared/development/fwdbemheadshape.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## Dipoli3 method
+### Dipoli3 method
 
 FROM Headshape points TO Dipoli
 {% include /shared/development/fwdbemheadshape.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## OpenMEEG3 method
+### OpenMEEG3 method
 
 FROM Headshape points TO OpenMEEG
 {% include /shared/development/fwdbemheadshape.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# Having a headshape triangulation and EEG data
+## Having a headshape triangulation and EEG data
 
-## INF4 method
+### INF4 method
 
 FROM Headshape triangulation TO Infinite space
 {% include /shared/development/forwinf.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## HS4 method
+### HS4 method
 
 FROM Headshape triangulation TO Infinite halfspace
 
@@ -388,7 +388,7 @@ Method:
 {% include /shared/development/forwslab.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SL4 method
+### SL4 method
 
 FROM Headshape triangulation TO Slab
 
@@ -400,7 +400,7 @@ Method:
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SPH4 method
+### SPH4 method
 
 FROM Headshape triangulation TO Single sphere
 
@@ -411,7 +411,7 @@ This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 3 - Fit a sphere to the points
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  CS4 method
+###  CS4 method
 
 FROM Headshape triangulation TO Concentric spheres
 
@@ -420,7 +420,7 @@ FROM Headshape triangulation TO Concentric spheres
 - For each compartment fit a sphere
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  ASA4 method
+###  ASA4 method
 
 FROM Headshape triangulation TO ASA BEM
 
@@ -428,33 +428,33 @@ FROM Headshape triangulation TO ASA BEM
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  BEMCP4 method
+###  BEMCP4 method
 
 FROM Headshape triangulation TO BEMCP
 {% include /shared/development/fwdbemheadshape.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  Dipoli4 method
+###  Dipoli4 method
 
 FROM Headshape triangulation TO Dipoli
 {% include /shared/development/fwdbemheadshape.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  OpenMEEG4 method
+###  OpenMEEG4 method
 
 FROM Headshape triangulation TO OpenMEEG
 {% include /shared/development/fwdbemheadshape.md %}
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# Having nothing and EEG data
+## Having nothing and EEG data
 
-## INF5 method
+### INF5 method
 
 {% include /shared/development/forwinf.md %}
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## HS5 method
+### HS5 method
 
 FROM Nothing TO Infinite halfspace
 
@@ -464,7 +464,7 @@ FROM Nothing TO Infinite halfspace
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SL5 method
+### SL5 method
 
 FROM Nothing TO Infinite slab
 
@@ -474,7 +474,7 @@ FROM Nothing TO Infinite slab
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## SPH5 method
+### SPH5 method
 
 FROM Nothing TO Single sphere
 
@@ -484,10 +484,10 @@ This method applies to ECoG or iEEG and is normally not used for scalp EEG:
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# Having MEG data
+## Having MEG data
 
 For all inputs we consider the same approaches of EEG to be valid. A couple of methods described below are typical for MEG only (single shell Nolte method and the local spheres method).
-##  SH1 method
+###  SH1 method
 
 FROM CT TO Single shell (MEG only)
 
@@ -504,7 +504,7 @@ OR
 3 - Project lines out of a inner icosaedron onto the outer skull to determine the mesh
 
 [Back](#Architecture/ defining a table for the possible implementations)
-##  LS1 method
+###  LS1 method
 
 FROM CT TO Local spheres (MEG only)
 
@@ -517,7 +517,7 @@ become
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  SH2 method
+###  SH2 method
 
 FROM MRI TO Single shell (MEG only)
 
@@ -530,7 +530,7 @@ The single shell method is also know as the Nolte method and consists in creatin
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  LS2 method
+###  LS2 method
 
 FROM MRI TO Local spheres (MEG only)
 
@@ -543,7 +543,7 @@ become
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  SH3 method
+###  SH3 method
 
 FROM Headshape points TO Single shell (MEG only)
 
@@ -552,7 +552,7 @@ FROM Headshape points TO Single shell (MEG only)
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  LS3 method
+###  LS3 method
 
 FROM Headshape points TO Local spheres (MEG only)
 
@@ -565,7 +565,7 @@ become
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  SH4 method
+###  SH4 method
 
 FROM Headshape boundary TO Single shell (MEG only)
 
@@ -574,7 +574,7 @@ FROM Headshape boundary TO Single shell (MEG only)
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-##  LS4 method
+###  LS4 method
 
 FROM Headshape boundary TO Local spheres (MEG only)
 
@@ -587,7 +587,7 @@ become
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# Triangulation methods
+## Triangulation methods
 
 The triangulation methods are generally applied to pre-processed volumetric objects (e.g. segmented brain compartments) to generate a geometrical description expressed in terms of points and edges (a connectivity matrix).
 
@@ -601,7 +601,7 @@ The second method is more stable in case of noise in the volumetric compartment
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# Morphology operators
+## Morphology operators
 
 The morphology operators are a set of functions which manipulates volumetric data.
 Some of the most common operators are **imfill**, **imdilate**, **bwlabeln**, etc.
@@ -631,93 +631,93 @@ This function classifies the cluster of neighboring voxels and attaches a label 
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# A list of the headmodel functions
+## A list of the headmodel functions
 
-**[ft_headmodel_asa](/reference/ft_headmodel_asa)**
-**[ft_headmodel_dipoli](/reference/ft_headmodel_dipoli)**
-**[ft_headmodel_openmeeg](/reference/ft_headmodel_openmeeg)**
-**[ft_headmodel_bemcp](/reference/ft_headmodel_bemcp)**
-**[ft_headmodel_concentricspheres](/reference/ft_headmodel_concentricspheres)**
-**[ft_headmodel_fns](/reference/ft_headmodel_fns)**
-**[ft_headmodel_simbio](/reference/ft_headmodel_simbio)**
-**[ft_headmodel_halfspace](/reference/ft_headmodel_halfspace)**
-**[ft_headmodel_infinite](/reference/ft_headmodel_infinite)**
-**[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**
-**[ft_headmodel_singleshell](/reference/ft_headmodel_singleshell)**
-**[ft_headmodel_singlesphere](/reference/ft_headmodel_singlesphere)**
-**[ft_headmodel_strip](/reference/ft_headmodel_strip)**
+- ft_headmodel_asa
+- ft_headmodel_dipoli
+- ft_headmodel_openmeeg
+- ft_headmodel_bemcp
+- ft_headmodel_concentricspheres
+- ft_headmodel_fns
+- ft_headmodel_simbio
+- ft_headmodel_halfspace
+- ft_headmodel_infinite
+- ft_headmodel_localspheres
+- ft_headmodel_singleshell
+- ft_headmodel_singlesphere
+- ft_headmodel_strip
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-# The functions in Forward module
+## The functions in Forward module
 
 This functions are responsible to generate the lead fields for the different available methods. They are contained in the Forwrd/private folder.
 
-eeg_halfspace_medium_leadfield.m  
-leadfield_simbio.m
-eeg_leadfield1.m	 
-eeg_leadfield4.m
-meg_leadfield1.mexXXX
-eeg_leadfield4_prepare.m	  
-eeg_leadfieldb.m	 
-halfspace_medium_leadfield.m	 
-inf_medium_leadfield.m		
-leadfield_fns.m			
-eeg_strip_monopole.m	  
-inf_medium_leadfield.m
-meg_forward.m			
-meg_ini.m
+- eeg_halfspace_medium_leadfield.m  
+- leadfield_simbio.m
+- eeg_leadfield1.m	 
+- eeg_leadfield4.m
+- meg_leadfield1.mexXXX
+- eeg_leadfield4_prepare.m	  
+- eeg_leadfieldb.m	 
+- halfspace_medium_leadfield.m	 
+- inf_medium_leadfield.m		
+- leadfield_fns.m			
+- eeg_strip_monopole.m	  
+- inf_medium_leadfield.m
+- meg_forward.m			
+- meg_ini.m
 
-#### Functions that maybe should not be here
+### Functions that maybe should not be here
 
-ama2vol.m
-fitsphere.m
-headcoordinates.m
-transfer_elec.m
+- ama2vol.m
+- fitsphere.m
+- headcoordinates.m
+- transfer_elec.m
 
 Examples of volumetric functions are:
 
 **ana2ana functions:**
-**[ft_read_mri](/reference/ft_read_mri)**
-**[ft_volumereslice](/reference/ft_volumereslice)**
-**[ft_volumerealign](/reference/ft_volumerealign)**
-**[ft_volumenormalise](/reference/ft_volumenormalise)**
-**ft_volumesmooth**
+- ft_read_mri
+- ft_volumereslice
+- ft_volumerealign
+- ft_volumenormalise
+- **ft_volumesmooth**
 
 **ana2seg functions:**
-**[ft_volumesegment](/reference/ft_volumesegment)**
-**[ft_volumethreshold](/reference/ft_volumesegment)**
-**[#Morphology operators](#Morphology operators)**
+- ft_volumesegment
+- ft_volumethreshold
+
+### Morphology operators
 
 **seg2seg functions:**
-e.g. the functions from the image processing toolbox
+- e.g. the functions from the image processing toolbox
 
 **seg2mesh functions:**
-**[ft_prepare_mesh](/reference/ft_prepare_mesh)**
-**[ft_surface_extract](#Triangulation methods)**
+- ft_prepare_mesh
+- ft_surface_extract](#Triangulation methods)**
 
 **mesh2mesh functions:**
-**[ft_read_headshape](/reference/ft_read_headshape)**
-**[ft_read_sens](/reference/ft_read_sens)**
-**[ft_electroderealign](/reference/ft_electroderealign)**
-**[ft_prepare_mesh](/reference/ft_prepare_mesh)** gone into:
-
-**ft_surfaceextract**
-**ft_surfacerefine**
-**ft_surfacedownsample**
-**ft_surfacesmooth**
-**ft_surfacecheck**, like closed? outward pointing? etc
+- ft_read_headshape
+- ft_read_sens
+- ft_electroderealign
+- ft_prepare_mesh
+- ft_surfaceextract
+- ft_surfacerefine
+- ft_surfacedownsample
+- ft_surfacesmooth
+- ft_surfacecheck, like closed? outward pointing? etc
 
 **mesh2vol functions:**
-**[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+- ft_prepare_headmodel
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
-## The ft_check_surface function
+### The ft_check_surface function
 
 This function performs a set of sanity checks on the triangulated surfaces which allow to generate quantitative indexes.
 
-We want to chec
+We want to check
 
 1. the area of the entire surface
 2. the intersection of two surfaces
@@ -729,7 +729,7 @@ We want to chec
 The reason for this function to exist is to understand if the mesh represents a regular and correct triangulation (e.g. the area is in cm2 and not km2).
 These checks are required in order to generate a correct forward model and are model dependent. Some of the steps might require direct interaction with the operator for a further visual inspection.
 
-## The implementation of the volume and mesh routines
+### The implementation of the volume and mesh routines
 
 The routines that handle voxel based volumes can be described as functions that go from an anatomical input to segmented binary images (**ana2seg** routines), from anatomy to processed anatomy (**ana2ana** routines) and from segmented volumes into segmented volumes (**seg2seg** routines).
 The characteristic of voxel based routines is that the volumes are regular (cubic voxels upon reslicing).

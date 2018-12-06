@@ -5,51 +5,35 @@ title: Preprocessing of EEG/MEG time series data
 # Preprocessing of EEG/MEG time series data
 
 FieldTrip has a consistent set of low-level functions for reprocessing of EEG and MEG data, such as filtering, baseline
-correction and re-referencing. This allows other projects to re-use the implemented methods seperate from FieldTrip (e.g. for realtime analysis of EEG and MEG data) and perhaps also to contribute to FieldTrip.
+correction and re-referencing. This allows other projects to re-use the implemented methods separate from FieldTrip (e.g. for realtime analysis of EEG and MEG data) and perhaps also to contribute to FieldTrip.
 
 The low-level functions are combined in the **preproc** toolbox, which is available for download [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/).
 
-# Interface to the preprocessing functions
+## Interface to the preprocessing functions
 
 Note that the FieldTrip toolbox comes with a user-friendly **[ft_preprocessing](/reference/ft_preprocessing)** function, which reads data from disk and applies preprocessing to that data. Regular users mainly interested in analyzing their data should be using that function. The functions described here are for people that are developing their own code and/or contributing to the development of FieldTrip.
 
 All of the low-level preprocessing functions require data to be represented as a 2D matrix (Nchans X Nsamples). The following functions are implemented in the preproc modul
 
 *  **[ft_preproc_bandpassfilter](/reference/ft_preproc_bandpassfilter)**         - applies a band-pass filter to the data
-
 *  **[ft_preproc_bandstopfilter](/reference/ft_preproc_bandstopfilter)**         - applies a band-stop filter to the data
-
 *  **[ft_preproc_highpassfilter](/reference/ft_preproc_highpassfilter)**         - applies a high-pass filter to the data
-
 *  **[ft_preproc_lowpassfilter](/reference/ft_preproc_lowpassfilter)**          - applies a low-pass filter to the data
-
 *  **[ft_preproc_medianfilter](/reference/ft_preproc_medianfilter)**           - applies a median filter, i.e. a jump-preserving smoothing kernel
-
 *  **[ft_preproc_dftfilter](/reference/ft_preproc_dftfilter)**              - applies a narrow-band notch filter to the data to remove the 50Hz noise
-
 *  **[ft_preproc_baselinecorrect](/reference/ft_preproc_baselinecorrect)**        - performs a baseline correction
-
 *  **[ft_preproc_detrend](/reference/ft_preproc_detrend)**                - removes linear or higher order polynomial trends
-
 *  **[ft_preproc_polyremoval](/reference/ft_preproc_polyremoval)**            - removes polynomial trends
-
 *  **[ft_preproc_denoise](/reference/ft_preproc_denoise)**                - regresses out noise with a known timecourse
-
 *  **[ft_preproc_derivative](/reference/ft_preproc_derivative)**             - computes the temporal Nth order derivative
-
 *  **[ft_preproc_hilbert](/reference/ft_preproc_hilbert)**                - computes the Hilbert transpose of the data
-
 *  **[ft_preproc_rectify](/reference/ft_preproc_rectify)**                - rectifies the data, usefull for EMG
-
 *  **[ft_preproc_rereference](/reference/ft_preproc_rereference)**            - rereferences EEG data using the average over all channels or selected channels
-
 *  **[ft_preproc_resample](/reference/ft_preproc_resample)**               - resamples the data
-
 *  **[ft_preproc_slidingrange](/reference/ft_preproc_slidingrange)**           - computes the range of the data in a sliding time window
-
 *  **[ft_preproc_standardize](/reference/ft_preproc_standardize)**            - performs a z-transformation of the data
 
-# Benchmarking
+## Benchmarking
 
 For real-time use of the functions in this module it is relevant to know how much time each function takes. The execution time depends on the number of channels and on the number of samples in the data block. Assuming that multiple functions are called as part of a larger processing pipeline, the time of the functions that are called has to be summed up.
 

@@ -13,11 +13,11 @@ Since FieldTrip supports the data of many different acquisition systems, the par
 At the end of an automated procedure, consider always to visual inspect your data, after rejection.
 {% include markup/end %}
 
-# Background: what is an artifact?
+## Background: what is an artifact?
 
 Generally speaking, an artifact (or artefact) is some unexpected or unwanted feature in the data. More specifically, it can be referred to as an undesired contribution to the brain signals that we acquired with our EEG or MEG system. Artifacts can be physiological or non-physiological in origin.
 
-# How does FieldTrip manage artifacts?
+## How does FieldTrip manage artifacts?
 
 FieldTrip deals with artifacts by first identifying them, and subsequently removing them. Detection of artifacts can be done visually, or using automatic routines (or a combination of both). After you know what the artifacts are, they are removed by
 
@@ -69,7 +69,7 @@ Note that the eog, jump and muscle detection functions are all just wrappers aro
 
 More information about automatic detection of artifacts is found in the [Automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial.
 
-#### Removing artifacts from the data
+### Removing artifacts from the data
 
 If you use manual or automatic detection of time segments that contain an artifact, you usually would proceed to reject those segments from subsequent analysis with **[ft_rejectartifact](/reference/ft_rejectartifact)**. FieldTrip supports variable trial length data, which allows you to reject only those pieces of data containing the artifact, keeping the rest of the trial. This is especially useful if your experiment consists of very long trials.
 
@@ -81,7 +81,7 @@ In this type of artifact detection and rejection, spatial/temporal/spectral aspe
 
 Another commonly used approach is to make a linear decomposition of the data using methods such as ICA (independent component analysis) or PCA (principal component analysis). These methods consist of applying a set of spatial filters to the data, after which the data is no longer represented at the level of recorded (scalp) channels, but as a set of virtual channels or components. In the case of ICA decomposition, the filters are chosen to produce the maximally temporally independent signals available in the channel-level data. Certain artifacts, such as those caused by eye blinks, are often reflected by a few components which are, with some experience, fairly easy to identify. These visually identified components can then be removed from the data and the remaining components can be projected back to the sensor level.
 
-#### Removing artifacts from the data
+### Removing artifacts from the data
 
 If you use ICA to detect artifacts, you usually would proceed with projecting the decomposed data (excluding the artifact components) back to the sensor level. This is done with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 

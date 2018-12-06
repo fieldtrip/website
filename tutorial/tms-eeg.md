@@ -5,7 +5,7 @@ tags: [tutorial, tms, eeg, preprocesing, plot, EEG-TMS]
 
 # Dealing with TMS-EEG datasets
 
-# Introduction
+## Introduction
 
 This tutorial shows how to process EEG that was recorded together with transcranial magnetic stimulation (TMS) that was applied to the primary motor cortex (M1), while subjects either contracted, or relaxed their contra-lateral hand. The application of TMS pulses during the EEG acquisition poses some specific challenges that will be addressed.
 
@@ -21,10 +21,9 @@ The research question that we will address in this tutorial is whether pre-contr
 
 A successful analysis of EEG signals requires clean data. That is non-trivial for EEG in general, but the TMS induced artifacts make it an even bigger challenge. As with all other artifacts, prevention is better than cure. In combined TMS-EEG experiments it is however unavoidable that some TMS artifacts appear in your data. The use of proper equipment (amplifiers, electrodes, etc) and fine-tuning of acquisition settings can help reduce the artifacts and facilitate the analysis. However, optimizing the acquisition is not the topic of this tutorial; please see the 'suggested reading' section at the end for more information on this.
 
-## Dataset Information
+### Dataset Information
 
-**Measurement:**
-The data were recorded using two 32-channel TMS-compatible BrainAmp DC Amplifiers (BrainProducts) connected to a 61 channel TMS-compatible EEG cap (EasyCap). Sampling was done at 5kHz with a 1kHz cut-off frequency and with 0.1 microvolt/bit resolution. Please click on the image below for an enlarged image of the [equidistant 61-channel arrangement](/template/layout#triangulated_equidistant_arrangements).
+**Measurement:** The data were recorded using two 32-channel TMS-compatible BrainAmp DC Amplifiers (BrainProducts) connected to a 61 channel TMS-compatible EEG cap (EasyCap). Sampling was done at 5kHz with a 1kHz cut-off frequency and with 0.1 microvolt/bit resolution. Please click on the image below for an enlarged image of the [equidistant 61-channel arrangement](/template/layout#triangulated_equidistant_arrangements).
 
 {% include image src="/assets/img/tutorial/tms-eeg/layout.png" %}
 
@@ -46,7 +45,7 @@ We therefore advise you to run this tutorial on a 64-bit (Windows) operating sys
 Also see: [Resolving "Out of Memory" Errors](http://www.mathworks.nl/help/matlab/matlab_prog/resolving-out-of-memory-errors.html)
 {% include markup/end %}
 
-## Pulses and recordings
+### Pulses and recordings
 
 Before starting your analysis, it helps to consider your experiment relative to two dimensions: 1) the TMS protocol and 2) the experimental manipulation of the brain state (i.e. the task for the subject, or the absence thereof).
 
@@ -60,7 +59,7 @@ This tutorial is written with a trial-based analysis in mind and as such may not
 
 It is also important to realize that between datasets the amount and spacing of the pulses will vary. In principle we can distinguish between one pulse per trial, two-pulses per trial, or repetitive stimulation. Although this tutorial was written for single-pulse studies, most of it also applies to multiple-pulse data.
 
-## Artifacts
+### Artifacts
 
 The figure below shows the EEG on channel 17 (see the layout of electrodes above) during the application of the TMS.
 
@@ -68,32 +67,32 @@ The figure below shows the EEG on channel 17 (see the layout of electrodes above
 
 We will now shortly describe and display the TMS-related artifacts you can come across in your data. It is important to understand that there is not just a single type of artifact, different artifacts may occur simultaneously. Depending on the characteristics of EEG and TMS equipment and experimental design, not all types of artifacts may be observed in your data.
 
-### Pulse artifact
+#### Pulse artifact
 
 The data during the pulse can be considered to be lost.
 
-### Ringing/Step response artifact
+#### Ringing/Step response artifact
 
 Depending on the range of your amplifier the signal may initially go out of range causing a clipping of the signal as can be seen by a flat line in your signal. Once the potential falls within range of the amplifier a prominent filter 'ringing' can be observed lasting up to around 7ms depending on your setup caused by a step-response due to the high gradient of the TMS-pulse. Many consider this period lost. In the figure below the signal in red reflects a combination of the pulse and the ringing/step response.
 {% include image src="/assets/img/tutorial/tms-eeg/art_ringing.png" %}
 
-### Cranial Muscle artifact
+#### Cranial Muscle artifact
 
 The TMS pulse may cause cranial (scalp) muscle twitches. These twitches are not to be confused with responses due to stimulation of the motor cortex but are purely twitches due to stimulation of scalp muscles. Usually they last around 10ms and are orders of magnitude larger than brain signals. Using close visual inspection of the EEG electrodes underneath the TMS coil during the actual experiment, you may observe these twitches as small movements of the electrodes.
 
 {% include image src="/assets/img/tutorial/tms-eeg/art_cranial_muscle.png" %}
 
-### Recharging artifact
+#### Recharging artifact
 
 Depending on your TMS machine you may observe a spike in your data reflecting the recharging of your machine's capacitors. Some stimulators allow you to specify the exact time the machine recharges its capacitors. In the case of this dataset we used a MagPro X100 (Magventure) stimulator with the recharge delay set to 500ms after stimulation onset.
 {% include image src="/assets/img/tutorial/tms-eeg/art_recharge_2.png" %}
 
-### Decay artifact
+#### Decay artifact
 
 It is likely that you will encounter an artifact that resembles an exponential decay in some channels. The nature of this artifact is not well understood and its presence is rather unpredictable. We believe that it arises due to an interaction between magneto-electric induction of TMS-induced currents in the electrode leads, electrode-electrolyte-skin interface polarization, movement of the electrodes and head/neck/face muscle twitches. In worst cases, this artifact can last up to 1 second, but more commonly it lasts between 50-150 ms.
 {% include image src="/assets/img/tutorial/tms-eeg/art_decay.png" %}
 
-# Procedure
+## Procedure
 
 {% include markup/danger %}
 It is important that you clean your data from TMS artifacts prior to any other preprocessing steps (e.g. filtering, detrending, downsampling) other than reading the data into memory. Especially filtering can produce long-lasting additional artifacts far outlasting the duration of the artifacts in the raw data, making subsequent analysis of the data troublesome.
@@ -105,9 +104,10 @@ The procedures explained in this tutorial have been applied and described in the
 Herring, J. D., Thut, G., Jensen, O., & Bergmann, T. O. (2015). [Attention Modulates TMS-Locked Alpha Oscillations in the Visual Cortex](http://www.jneurosci.org/content/35/43/14435). The Journal of Neuroscience, 35(43), 14435-14447.
 {% include markup/end %}
 
-We will use the following procedure to deal with TMS-EEG dat
-
 **Preprocessing**
+
+We will use the following procedure to deal with TMS-EEG data:
+
  1.  Create a trial-structure using **[ft_definetrial](/reference/ft_definetrial)**
  2.  Indicate the onset of TMS-pulses with **[ft_artifact_tms](/reference/ft_artifact_tms)**
  3.  Visually determine which artifacts are present using **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, and **[ft_databrowser](/reference/ft_databrowser)**.
@@ -120,15 +120,15 @@ We will use the following procedure to deal with TMS-EEG dat
 
 **Analysis**
 
-After having cleaned the data, we will perform the following analyse
+After having cleaned the data, we will perform the following analyses:
 
 *  Calculate time-locked averages using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 *  Time-frequency analysis using **[ft_freqanalysis](/reference/ft_freqanalysis)**
 *  Calculate the global mean field power
 
-# Preprocessing
+## Preprocessing
 
-## Visual data inspection
+### Visual data inspection
 
 We start with the original dataset which is available from  [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
 
@@ -296,7 +296,7 @@ In this channel we can find ringing/step response, cranial muscle, exponential d
 Try to see if the artifacts are present in all channels and if there are differences in their extent in time.
 {% include markup/end %}
 
-## Artifact exclusion
+### Artifact exclusion
 
 In this part of the tutorial we are going to exclude artifactual data segments that cannot be attenuated by other methods. We will exclude the segments that contain the ringing/step response artifact and the recharging artifact. We will adjust the trial structure of our data, containing the information which samples correspond to which trials, so that it does not include these artifacts and we will then read-in the data without these artifactual parts. Later on we will interpolate gaps which are produced by excluding these segments. The interpolation of the missing data segments is postponed until after applying independent component analysis in the next part of the tutorial.
 
@@ -379,7 +379,7 @@ Using the arrow-buttons beneath the 'ringing' and 'recharge' buttons we can brow
 
 {% include image src="/assets/img/tutorial/tms-eeg/databrowser_raw.png" %}
 
-## Independent Component Analysis
+### Independent Component Analysis
 
 We now have our data segmented, removed ringing/step response and recharge artifacts. Our data still contains the exponential decay and the cranial muscle artifacts. We will attempt to attenuate these artifacts following an approach based on work by Korhonen et al. [Removal of large muscle artifacts from transcranial magnetic stimulation-evoked EEG by independent component analysis](http://dx.doi.org/10.1007/s11517-011-0748-9). We will use a slightly adapted version of their manual artifact rejection approach. To this end we will decompose our data into independent components and reject components that capture artifacts we wish to attenuate, while taking care we do not remove non-artifactual data.
 
@@ -497,7 +497,7 @@ As ICA is in principle a spatial filter, we can inspect how each component loads
 
 Using **[ft_databrowser](/reference/ft_databrowser)**, or MATLAB's plotting function, together with the output from **[ft_topoplotic](/reference/ft_topoplotic)** should be able to find one or two components that capture the decay artifact and/or the cranial muscle if the ICA was successful.
 
-#### Exercise: find the components!
+#### Exercise: find the components
 
 {% include markup/exercise %}
 Try to find components reflecting the decay and/or muscle artifact. Which ones would you remove?
@@ -583,7 +583,7 @@ We can now have a look at the current status of our data.
 At the beginning we determined we had to deal with ringing/step response, cranial muscle, recharging and exponential decay artifacts. Have a look at the data, how successful were we in removing all of them? What is left and how could we deal with this?
 {% include markup/end %}
 
-## Interpolation
+### Interpolation
 
 At this point we've removed the ringing/step response and discharge artifact by excluding it from our data. We've attenuated the exponential decay artifact using ICA. We've attenuated the muscle artifact a bit but have not succeeded as can be seen on the above plot of channel 17. Be aware that the ringing/step response artifact has been completely removed. The spiky part of the signal around 10ms, right after the gap, is purely a cranial muscle artifact. To prevent this artifact from interfering with our further processing steps we will also cut and interpolate the remainder of the muscle artifact.
 
@@ -666,7 +666,8 @@ After artifact removal, make sure to browse through your channels comparing the 
 {% include image src="/assets/img/tutorial/tms-eeg/clean.png" %}
 
 At this point we've sufficiently cleaned our data of TMS artifacts so we can continue with the rest of our analysis. Only after this artifact removal is it safe to perform (post-)processing steps such as filtering, demeaning, detrending, and downsampling.
-## Post-processing
+
+### Post-processing
 
 Now that we have cleaned the data we could apply some (post-)processing steps such as filtering, detrending, demeaning, and downsampling. At this point we are only going to downsample our data. Depending on your further analysis you may wish to apply other processing steps as well. It might be worth to note that some analysis steps may require different processing. For example, when looking at TMS evoked potentials (TEPs), you may want to filter your data to remove high-frequency noise. For performing time-frequency analysis this is not necessary but you would perhaps want to detrend your data, which is again not advised for analyzing TEPs. In short, different analysis methods may require different processing steps. Luckily the functions used to produce these analysis (e.g. **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**) allow you to apply the same preprocessing steps to your input data as you can apply with **[ft_preprocessing](/reference/ft_preprocessing)**. This allows you to apply separate processing steps suited for each analysis without having to create additional data structures.
 
@@ -686,12 +687,13 @@ Now that we have cleaned our data and applied our (post-)processing steps we con
 When saving data we always use the switch '-v7.3' as this allows files to be larger than 4GB, which is often the case in TMS-EEG data.
 {% include markup/end %}
 
-# Analysis
+## Analysis
 
 Now that we have cleaned our data we can continue with our analyses. Initially we started out with the question whether pre-contraction affects the TMS-evoked potential. To address this question we are going to compare the amplitudes of the TEPs, inspect the frequency content of the response to TMS, and look at Global Mean Field Power.
 
 If you do not have the output from the previous cleaning steps you can download the cleaned dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_clean.mat).
-## Time-locked averaging
+
+### Time-locked averaging
 
 Remember that we have two conditions to compare in the current dataset: 'relax' & 'contract'. The condition was indicated in the dataset by markers placed in the EEG. When we read-in our data we based the trials on these markers, the information to which condition each trial belongs can therefore be found in the .trialinfo field of our data structure. In this field the 'relax' condition is indicated by the number 1 and the 'contract' condition by the number 3.
 
@@ -784,7 +786,7 @@ XXX can be ER, for event-related data or TFR for time-frequency data.
 Please also have a look at [Plotting data at the channel and source level](/tutorial/plotting) for a tutorial on plotting data
 {% include markup/end %}
 
-## Global Mean Field Power
+### Global Mean Field Power
 
 Global Mean Field Power (GMFP) is a measure first introduced by [Lehmann and Skandries (1979)](http://dx.doi.org/10.1016/0013-4694(80)90419-8), used by, for example, [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003) as a measure to characterize global EEG activity.
 
@@ -835,7 +837,8 @@ Now we can plot the GMFP of both conditions.
 Are there differences between the outcome of this analysis and the comparison between time-locked verages in the previous section? Can you see an advantage of using GMFP to compare conditions?
 {% include markup/end %}
 
-##  Time-frequency analysis
+###  Time-frequency analysis
+
 We have so far analyzed responses to the TMS pulse which always occur at the same time. Anything that is not phase-locked to the onset of the TMS pulse is cancelled out due to averaging. It is, however, possible that the TMS pulse induces responses that are not necessarily phase-locked to the onset of the pulse, for example changes in spontaneous oscillatory activity. To look at these induced responses we are going to look at time-frequency representations of our data. We will decompose our signals into frequencies and look at the averages of the power of these frequencies. Contrasting to time-lock analyses we are then sensitive to oscillatory activity not phase-locked to onset of the pulse (also see: [[tutorial:timefrequencyanalysis|Time-frequency analysis using Hanning window, multitapers and wavelets]]).
 
 We will first decompose our signal into different frequencies using **[[ft_freqanalysis|ft_freqanalysis]]**. When doing spectral analyses it is important to detrend and demean your data prior to decomposing into frequencies to avoid strange looking powerspectra (see: [[faq:why_does_my_tfr_look_strange|Why does my TFR look strange (part I, demeaning)?]] and [[faq:why_does_my_tfr_look_strange_part_ii|Why does my TFR look strange (part II, detrending)?]]). We will therefore detrend and demean our data using the .preproc option.
@@ -927,7 +930,7 @@ What additional information can be gained by analyzing time-frequency data?
 Now that we have described three ways of looking at our data, can we conclude the conditions differ? If so, how do they differ specifically?
 {% include markup/end %}
 
-# Summary and suggested further reading
+## Summary and suggested further reading
 
 This tutorial covered how to deal with TMS artifacts in EEG in a single-pulse study. Furthermore, the tutorial showed three examples of how to further analyze this data with a certain research question in mind. In all examples two conditions were compared with each other. A next step would be to test whether differences between these conditions are statistically significant. To see how you can do this please have a look at the following tutorial
 

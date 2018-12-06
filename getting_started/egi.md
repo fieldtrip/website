@@ -3,11 +3,11 @@ title: Getting started with Philips/EGI data
 tags: [egi, eeg, dataformat]
 ---
 
-# Getting started with Philips/EGI data
+# Getting started with EGI/Philips data
 
-Please add information if you're using Philips/EGI data and want to share info with other FieldTrip users.
+Please add information if you're using EGI/Philips data and want to share info with other FieldTrip users.
 
-# Introduction for the EGI file formats
+## Introduction to the EGI file formats
 
 Net Station can export data to several data formats that FieldTrip can read in.
 

@@ -7,7 +7,7 @@ tags: [example, source, erf]
 
 ## Background
 
-Activity of neuronal sources can be measured with EEG or MEG as event related potentials or fields. A general principle for EEG and MEG source analysis is that of superposition. The channel-level spatial distribution of the activity of one source and that of another source will be different. That difference is easy to recognize if one source is active in one experimental condition and the other source in another condition. The superposition principle states that if two sources are simultaneously active, the resulting channel-level spatial distribution is equal to the sum of the channel-level spatial distribution of the two sources seperately. 
+Activity of neuronal sources can be measured with EEG or MEG as event related potentials or fields. A general principle for EEG and MEG source analysis is that of superposition. The channel-level spatial distribution of the activity of one source and that of another source will be different. That difference is easy to recognize if one source is active in one experimental condition and the other source in another condition. The superposition principle states that if two sources are simultaneously active, the resulting channel-level spatial distribution is equal to the sum of the channel-level spatial distribution of the two sources separately. 
 
 Reconstructing the source location in case of simultaneous activity of multiple sources is more difficult than localizing a single source. However, the superposition principle can effectively be used in source lozalization if two experimental conditions differentiate the strenth of the two sources. 
 
@@ -45,7 +45,7 @@ Here the original field distributions in both conditions are dominated by the st
 
 ## Applied to the experimental data
 
-In this experiment, MEG was recorded during stimulation of the affected/painfull hand prior to, and after application of a pain blocker. These correspond to the conditions A and B as explained above. First the MEG topography of the M24 event-related field is given for both conditions seperately.
+In this experiment, MEG was recorded during stimulation of the affected/painfull hand prior to, and after application of a pain blocker. These correspond to the conditions A and B as explained above. First the MEG topography of the M24 event-related field is given for both conditions separately.
 
 {% include image src="/assets/img/example/difference_erf/difference_erf_pain.png" %}
 

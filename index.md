@@ -20,27 +20,27 @@ To get started with FieldTrip, please continue reading the [getting started](/ge
 
 {% include facebook %}
 
-# News and announcements
+## News and announcements
 
-## 5 December, 2018
+### 5 December, 2018
 
 We have completed the move to the new website which you are now seeing. See this [message on the mailing list](https://mailman.science.ru.nl/pipermail/fieldtrip/2018-December/012579.html) for details. The [old website](http://old.fieldtriptoolbox.org) is still available in case you want to look up something there.
 
 If you want to edit any page on this website, please click the "Edit this page on GitHub" link at the bottom of each page. This brings you to [github](https://github.com/fieldtrip/website) where you can click the "pen" symbol in the upper right corner. Or have a look at our [git and github](/development/git/) tutorial.
 
-## 09 October, 2018
+### 09 October, 2018
 
 Tzvetan has published a new paper, entitled [FieldTrip made easy: An Analysis Protocol for Group Analysis of the Auditory Steady State Brain Response in Time, Frequency, and Space](https://www.frontiersin.org/articles/10.3389/fnins.2018.00711/full). Go and check it out!
 
-## 10 September, 2018
+### 10 September, 2018
 
 This website has been migrated to a new server.
 
-## 04 September, 2018
+### 04 September, 2018
 
 Eleven EU countries have decided that all scientific publications funded by their respective national science councils should be full Open Access immediately upon publication. See this [blog post from PLOS](https://blogs.plos.org/plos/2018/09/open-access-publishing-forges-ahead-in-europe/), there is more news to follow in the coming days.
 
-## 03 September, 2018
+### 03 September, 2018
 
 Here are the slides of the topics that we presented and discussed in the Open Science Panel session at the [BIOMAG 2018](http://www.biomag2018.org) conference in Philadelphia last week:
 
@@ -52,20 +52,20 @@ Here are the slides of the topics that we presented and discussed in the Open Sc
 -   [Tzvetan Popov - HCP User's Perspective](https://www.slideshare.net/RobertOostenveld/biomag2018-tzvetan-popov-hcp-from-a-users-perspective)
 -   [Dennis Engemann - MNE-HCP](https://www.slideshare.net/RobertOostenveld/biomag2018-denis-engemann-mnehcp)
 
-## 01 July, 2018
+### 01 July, 2018
 
 On June 29th, Robert and Jan-Mathijs taught at the Human Connectome Project's workshop, which this year took place in Oxford. During an intense one-week program, 105 participants learnt about the ins and outs of the Human Connectome Project (HCP). Did you know that the HCP consortium also collected (and partially analysed) MEG data from about 100 participants? And that this data is freely available for download? And that the analysis pipelines and software are also available to the community? Check it out on <https://www.humanconnectome.org>.
 
 {% include image src="/assets/img/index/ft_in_oxford.jpg" %}
 
-## 12 June, 2018
+### 12 June, 2018
 
 On 17 June 2018 Maria Carla Piastra, Sophie Schrader and Simon Homölle will host a workshop the OHBM2018 conference. The course is aimed at researchers who want to learn how to do MEG and/or EEG source reconstruction. This intense one-day workshop will explain state-of-the-art MEG and EEG source reconstruction methods. Special emphasis will be given to new features available now in FieldTrip to solve the EEG and MEG forward solution with advanced finite element methods. The workshop will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG, EEG and MRI data set using the FieldTrip toolbox. As the focus is on source reconstruction, topics that will NOT be covered in great detail are segmenting, artifact handling, averaging, frequency and time-frequency analysis, statistics. For the hands-on sessions you should bring a laptop with MATLAB installed. More information about the program can be found at the OHBM website or [here](/workshop/ohbm2018).
 
-## 6 March, 2018
+### 6 March, 2018
 
 Springer Nature has updated its policies - Nature journals now ask researchers who submit papers that rely on bespoke software to provide the programs for peer review. More details are in [this editorial](https://www.nature.com/articles/d41586-018-02741-4), the [guidelines to authors](https://www.nature.com/authors/policies/availability.html#code) have been updated and a [code and software submission checklist](http://www.nature.com/documents/GuidelinesCodePublication.pdf) is available.
 
-# Recent improvements to the code
+## Recent improvements to the code
 
 All changes to the code can be tracked on [Twitter](http://twitter.com/fieldtriptoolbx) and [Github](/development/git).

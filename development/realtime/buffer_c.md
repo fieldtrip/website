@@ -23,7 +23,7 @@ The best way to get started with incorporating the FieldTrip buffer in your own 
 
 ### The buffer will be attached to your local application
 
-Your application is responsible for starting up the tcpserver. The tcpserver is a multithreaded function, which will spawn a seperate tcpsocket thread for every incoming connection. The tcpsocket thread reads a request from the network, processes the request, and returns a response. Possible requests that the buffer can process are PUT_HDR, PUT_DAT, PUT_EVT, GET_HRD, GET_DAT, GET_EVT, FLUSH_HDR, FLUSH_DAT, FLUSH_EVT. The tcpserver is instantiated using the following pseudo-cod
+Your application is responsible for starting up the tcpserver. The tcpserver is a multithreaded function, which will spawn a separate tcpsocket thread for every incoming connection. The tcpsocket thread reads a request from the network, processes the request, and returns a response. Possible requests that the buffer can process are PUT_HDR, PUT_DAT, PUT_EVT, GET_HRD, GET_DAT, GET_EVT, FLUSH_HDR, FLUSH_DAT, FLUSH_EVT. The tcpserver is instantiated using the following pseudo-cod
 
     ... start the multithreading...
     tcpserver((void *)(&host));

@@ -15,7 +15,7 @@ All high-level functions within the FieldTrip directories may call functions wit
 
 ## Modules that act as sub-toolboxes
 
-There are some low-level features of the FieldTrip code that are of interest to other Open Source software developers. To facilitate the re-use of those functions, we have split them off into seperate modules. You can download these modules as stand-alone code from our ftp server, and use them in your own projects. It would be nice if you attribute this to our work, e.g. by providing a link to our FieldTrip website.
+There are some low-level features of the FieldTrip code that are of interest to other Open Source software developers. To facilitate the re-use of those functions, we have split them off into separate modules. You can download these modules as stand-alone code from our ftp server, and use them in your own projects. It would be nice if you attribute this to our work, e.g. by providing a link to our FieldTrip website.
 
 *  [fileio](/development/fileio) import various EEG/MEG file formats into MATLAB
 *  [preproc](/development/preproc) preprocessing of EEG/MEG data, such as filtering and detrending

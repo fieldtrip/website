@@ -3,10 +3,6 @@ title: Automatic artifact rejection
 tags: [fixme, tutorial, artifact, meg, raw, preprocessing, MEG-artifact]
 ---
 
-{% include markup/info %}
-The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)**, that were used for automatic artifact rejection, will soon become obsolete. They are being replaced by the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function. This function is already called every time one of the three functions above is run, but users will soon need to set the various cfg parameters for the different types of artifacts themselves and then run only the zvalue function. Examples of these parameters are given in the last section of this page.
-{% include markup/end %}
-
 # Automatic artifact rejection
 
 *Automatic* artifact rejection in FieldTrip is a sophisticated and complicated approach to artifact rejection, that without full understanding of *all* the steps involved will unavoidably lead to more harm than good. Only when you fully understand your data and the artifacts you will be dealing with, will you be able to set appropriate parameters for automatic artifact rejection. We therefore advise to first deal with artifacts manually, using either ft_databrowser or ft_rejectvisual. If what follows below is unclear at any point ask your colleagues or post a question on the mailinglist.
@@ -22,6 +18,10 @@ For a successful analysis of EEG or MEG signals, “clean” data is required. T
 Of course it is best to try to avoid those artifacts in the first place. For instance, you might give your test-subjects some well-defined time interval between the trials in which they are allowed to blink, but ask them to withold blinks in the time intervals of interest. Sooner or later, however, you would like to go through the data and make sure artifacts are detected, removed or corrected.
 
 ## Procedure
+
+{% include markup/info %}
+The functions **[ft_artifact_eog](/reference/ft_artifact_eog)**, **[ft_artifact_muscle](/reference/ft_artifact_muscle)** and **[ft_artifact_jump](/reference/ft_artifact_jump)** are just wrappers around the **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** function with some default parameters set. Please look at that function if you want to know in detail how it works.
+{% include markup/end %}
 
 The following steps are used to detect artifacts in FieldTrip's automatic artifact rejection (see figure below
 
@@ -128,7 +128,7 @@ Negative trialpadding is an option included in automatic artifact rejection beca
 
 *Negative trialpadding excluded the edges of trials for artifact detection*
 
-# Artifact rejection
+## Artifact rejection
 
 After you are satisfied with the detection of artifacts you can either reject the complete trial containing any artifact, or reject only the part with the artifact. The latter option leads to partial trials with variable trial lengths, something that has to be considered especially in anticipation of any trial-based, or average-based statistics.
 
@@ -145,7 +145,7 @@ The output of ft_rejectartifact will contain the cfg.trl, which is the cleaned t
 
 If you call ft_artifact_zvalue with cfg as *output* (''cfg = ft_artifact_zvalue(cfg)''), you can directly feed that output into ft_rejectartifact. Examples of this will be given below.
 
-# Examples for getting started
+## Examples for getting started
 
 What follows are some case examples of artifacts that you might encounter and some basic settings to start with. You will need to adjust these for your own datasets. The data used in this example is the MEG dataset *ArtifactMEG.ds* (available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip)). This dataset was acquired continuously (in contrast with other tutorial data) with trials of 10 seconds.
 
@@ -159,7 +159,7 @@ First we need to define our trial
     cfg                    = ft_definetrial(cfg);
     trl                    = cfg.trl(1:50,:); % we'll only use the first 50 trials for this example
 
-## Jump artifact detection
+### Jump artifact detection
 
 For detecting jump artifacts, begin with the following parameter
 
@@ -219,7 +219,7 @@ you will return to the MATLAB command-line, and the output variable of
 **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** contains the
 definition of the artifacts in cfg.artfctdef.zvalue.artifact.
 
-##  Detection of muscle artifacts
+### Detection of muscle artifacts
 
 The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts,it can be used to detect muscle artifacts.
 
@@ -254,7 +254,7 @@ The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used 
 
 *A typical muscle artifact can be observed on channel MRT12, trial 32.*
 
-## Detection of EOG artifacts
+### Detection of EOG artifacts
 
 The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts,it can be used to detect eye blinks artifacts (EOG).
 Note that only the EOG is scanned in the eye artifacts case, which will take less time than scanning all MEG channels, which was needed for jump and muscle artifacts.

@@ -8,7 +8,7 @@ title: Inverse source parameter estimates from EEG/MEG data
 
 FieldTrip has a consistent set of low-level functions for source reconstruction, i.e. estimating the location, strength and other parameters of the sources in the brain that underly the observed EEG and MEG data. The usual mathematical description of the sources is the equivalent current dipole, which is why in the subsequent documentation you will often see *source* and *dipole* used exchangeably.
 
-The objective of supplying these low-level functions as a seperate module/toolbox are to
+The objective of supplying these low-level functions as a separate module/toolbox are to
 
  1.  facilitate the reuse of these functions in other open-source projects (e.g. EEGLAB, SPM)
  2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
@@ -67,7 +67,7 @@ Most functions have additional optional input arguments that are specified as ke
 
 FIXME We are currently redesigning the interface to these functions, therefore the documentation is a bit sparse at the moment.
 
-# Related documentation
+## Related documentation
 
 The literature references to the implemented methods are given [here](/references_to_implemented_methods).
 

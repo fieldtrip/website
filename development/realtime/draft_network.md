@@ -139,7 +139,7 @@ Chunks have been introduced recently in version 1 to enable transmitting meta in
 The current (V1) way of handling those is simple: they are always written and retrieved together with the header. In fact, the buffer server does not
 care at all about the contents and types of the chunks. As a downside, GET_HDR requests get slow if large chunks are present (e.g., CTF system).
 
-Robert has proposed adding seperate requests for adding and reading chunks. Issues to think abou
+Robert has proposed adding separate requests for adding and reading chunks. Issues to think abou
 
 *  Clients need a way to determine which chunks are present - this is easy.
 *  Uniqueness of chunks: Do we allow multiple chunks of the same type (e.g., for representing different general purpose key/value pairs)?

@@ -68,7 +68,7 @@ The wizard would have to read and parse the matlab script that contains the docu
 
 ## Ideas for further refinement
 
-When the wizard has reached the end of the script, it would have to show that it is finished. Perhaps the code execution can be done in a seperate workspace and all variables copied to the main workspace when finished.
+When the wizard has reached the end of the script, it would have to show that it is finished. Perhaps the code execution can be done in a separate workspace and all variables copied to the main workspace when finished.
 
 Using a key combination (e.g. Ctrl-R) the script can be reloaded.
 
