@@ -23,7 +23,17 @@ defaults:
   -
     scope:
       path: "development/project"
+      type: "pages"
+    values:
+      sitemap: false
+  -
+    scope:
       path: "development/meeting"
+      type: "pages"
+    values:
+      sitemap: false
+  -
+    scope:
       path: "tag"
       type: "pages"
     values:
