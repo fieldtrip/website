@@ -1,10 +1,10 @@
 ---
-title: About
+title: About the FieldTrip project
 ---
 
-## About
+# About the FieldTrip project
 
-FieldTrip is being developed and maintained by a team of researchers at the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders), led by Robert Oostenveld and Jan-Mathijs Schoffelen, in collaboration with many researchers over the world.
+FieldTrip is being developed and maintained by a team of researchers at the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders), led by Robert Oostenveld and Jan-Mathijs Schoffelen, in collaboration with past and present colleagues and many contributors over the world.
 
 If you have questions about the **use of FieldTrip**, you should post them on the [email discussion list](/discussion_list).
 
@@ -19,3 +19,10 @@ Radboud University
 P.O. Box 9101  
 NL-6500 AH Nijmegen  
 The Netherlands  
+
+## Funding
+
+* [Human Connectome Project](http://humanconnectome.org)
+* [BrainGain](http://www.braingain.nu)
+* [NWO](http://www.nwo.nl)
+* [ChildBrain](http://www.childbrain.eu)
