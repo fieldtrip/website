@@ -32,7 +32,7 @@ tags:
                     'stats'         use a parametric test from the MATLAB statistics toolbox,
                     'crossvalidate' use crossvalidation to compute predictive performance
 
-   cfg.design       = Nxnumobservations: design matrix (for examples/advice, please see the Fieldtrip wiki,
+   cfg.design       = Nxnumobservations: design matrix (for examples/advice, please see the FieldTrip wiki,
                       especially cluster-permutation tutorial and the 'walkthrough' design-matrix section)
 
  The other cfg options depend on the method that you select. You

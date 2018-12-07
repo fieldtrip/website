@@ -125,7 +125,7 @@ tags: [example, realtime]
 	    time = offset2time(offset, hdr.Fs, endsample-begsample+1);
 	    plot(time, avg);
 	
-	    % force matlab to redraw the figure
+	    % force MATLAB to redraw the figure
 	    drawnow
 	
 	  end % looping over new trials

@@ -78,13 +78,13 @@ Note that we have not yet cleaned the data from artifacts. For your own dataset,
 
 ### Visualize the sensor level results (axial gradients)
 
-We can plot the results with the matlab plot command to get a first impressio
+We can plot the results with the MATLAB plot command to get a first impressio
 
 	plot(timelock.time, timelock.avg)
 
 {% include image src="/assets/img/tutorial/beamformer_lcmv/subjectseftimelock.png" width="400" %}
 
-We can additionally explore the spatiotemporal dynamics using fieldtrip interactive plotting function
+We can additionally explore the spatiotemporal dynamics using FieldTrip interactive plotting function
 
 	% view the results
 	cfg                    = [];

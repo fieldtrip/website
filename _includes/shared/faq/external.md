@@ -4,7 +4,7 @@ Besides the non-free Mathworks toolboxes that are used by some functions, FieldT
 
 A considerable number of external toolboxes is included in the FieldTrip release zip file inside the "fieldtrip/external" subdirectory. These include
 
-*  [afni](http://afni.nimh.nih.gov/afni/matlab) matlab functions (to read AFNI data)
+*  [afni](http://afni.nimh.nih.gov/afni/matlab) MATLAB functions (to read AFNI data)
 *  [bci2000](http://bci2000.org/)
 *  [besa](http://besa.de/)
 *  [biosig](http://biosig.sourceforge.net/) (to read various EEG file formats)

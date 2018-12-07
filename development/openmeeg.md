@@ -28,7 +28,7 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
 *  testing
     * test in-house -> robert, cristiano
     * external test (selected users)
-*  add glue code and perhaps binaries to fieldtrip release -> robert
+*  add glue code and perhaps binaries to FieldTrip release -> robert
 *  communicate it and ensure that it gets used -> all
 
 ## Steps to be taken (cristiano)

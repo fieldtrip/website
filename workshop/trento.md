@@ -14,7 +14,7 @@ The local organizers of the workshop are Nathan Weisz and Angelika Lingnau.
 
 ## Using the tutorial data and the FieldTrip version provided
 
-For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a **clean and well-tested** version of fieldtrip that is distributed on the workstations and on a USB stick. You should **not** work with an old version you might already have installed in the past. Furthermore, the tutorial data **does not have to be downloaded** but will also be distributed on the workstations and on a USB stick.
+For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we will work with a **clean and well-tested** version of FieldTrip that is distributed on the workstations and on a USB stick. You should **not** work with an old version you might already have installed in the past. Furthermore, the tutorial data **does not have to be downloaded** but will also be distributed on the workstations and on a USB stick.
 
 If you work on your own laptop you need the USB stick:
 
@@ -23,10 +23,10 @@ If you work on your own laptop you need the USB stick:
 3.  Unzip the Subject01.zip file, you should place the contents in the tutorial directory.
 
 {% include markup/danger %}
-Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
+Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
 {% include markup/end %}
 
-After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the **MATLAB command window**
+After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the **MATLAB command window**
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-xxxxxxxx
@@ -38,17 +38,17 @@ The restoredefaultpath command clears your path, keeping only the official MATLA
 
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and e.g. not in another subfolder. You should see a long list of ft_xxx.m functions.
 
-The addpath(pwd) statement adds the present working directory, i.e. the directory containing the fieldtrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
+The addpath(pwd) statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
 {% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
 {% include markup/end %}
 
-After installing fieldtrip to your path, you change into the tutorial directory
+After installing FieldTrip to your path, you change into the tutorial directory
 
     cd path_to_directory/tutorial
 

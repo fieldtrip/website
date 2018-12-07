@@ -12,7 +12,7 @@ We use [dokuwiki](http://dokuwiki.org/) as the CMS system on which our website i
 
 ### Mailman
 
-We use this for a number of email discussion lists. It is hosted by C&CZ at http://mailman.science.ru.nl. Upon an email to the main fieldtrip mailing list, a tweet is send to http://twitter.com/fieldtriptoolbx.
+We use this for a number of email discussion lists. It is hosted by C&CZ at http://mailman.science.ru.nl. Upon an email to the main FieldTrip mailing list, a tweet is send to http://twitter.com/fieldtriptoolbx.
 
 ### Facebook
 

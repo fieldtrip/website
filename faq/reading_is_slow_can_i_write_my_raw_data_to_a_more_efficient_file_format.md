@@ -19,9 +19,9 @@ Subsequently you can use **[ft_definetrial](/reference/ft_definetrial)** and/or 
 
 ## Converting to another format
 
-A very simple and efficient file format supported by fieldtrip is labeled 'fcdc_matbin'. It is not an official file format, but was invented here at the FCDC. It consists of two files: a .mat matlab file that contains the header (and optionally the events) and a .bin binary file that contains the data.
+A very simple and efficient file format supported by FieldTrip is labeled 'fcdc_matbin'. It is not an official file format, but was invented here at the FCDC. It consists of two files: a .mat MATLAB file that contains the header (and optionally the events) and a .bin binary file that contains the data.
 
-The mat file is just a standard matlab file and it contains the header (and optionally events) just like they are returned by the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_event](/reference/ft_read_event)** functions. So you don't lose any information in the mat file.
+The mat file is just a standard MATLAB file and it contains the header (and optionally events) just like they are returned by the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_event](/reference/ft_read_event)** functions. So you don't lose any information in the mat file.
 
 The bin file contains the data samples as double precision floating point values, precisely the same as it is returned by the **[ft_read_data](/reference/ft_read_data)** function. The bin file is channel-multiplexed and little-endian. Reading from the data file is fast because the reading function can jump immediately to the desired location in the file with fseek and read the data, without any processing, conversion or calibration.
 

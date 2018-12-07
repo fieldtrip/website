@@ -226,7 +226,7 @@ The tcpserver of a peer that runs as zombie does not allow any incoming connecti
 
 The following is a list with details that are already implemented and/or supported.
 
-*  each matlab session is either master (i.e. sending/receiving jobs) or slave (performing jobs)
+*  each MATLAB session is either master (i.e. sending/receiving jobs) or slave (performing jobs)
 *  there can be multiple masters and multiple slaves on the same network (preferably many more slaves than masters)
 *  at the end of the day people would keep Matlab running, and type "peerslave", resulting in the while-loop mentioned above
 *  the next morning people return to their computer and do ctrl-c

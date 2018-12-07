@@ -15,6 +15,6 @@ Some ftp clients may have problems with specific firewall configurations. This c
 
 ### Github as alternative to the ftp download 
 
-The FieldTrip source code repository is also available from http://github.com/fieldtrip/fieldtrip. You can use github to keep up to date with the latest updates of the source code, to revert to older versions, and to track all individual changes to the files. Furthermore, you can suggest improvements to the code by forking the fieldtrip project on github, making the change in your clone and ny sending us a pull request.
+The FieldTrip source code repository is also available from http://github.com/fieldtrip/fieldtrip. You can use github to keep up to date with the latest updates of the source code, to revert to older versions, and to track all individual changes to the files. Furthermore, you can suggest improvements to the code by forking the FieldTrip project on github, making the change in your clone and ny sending us a pull request.
 
 Using the Github version is the easiest if you install a git client on your computer. However, it is also possible to download the latest version of the code as a [zip file](https://github.com/fieldtrip/fieldtrip/archive/master.zip). 

@@ -11,7 +11,7 @@ tags: [workshop]
 
 ## Installing FieldTrip and Tutorial preparation
 
-For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we have prepareda clean and well-tested version of fieldtrip that is pre-installed on the hands-on computers. Importantly, you also do _not_ need to download the tutorial data, these are already available on your computer.
+For the hands-on sessions you have to start MATLAB. To ensure that everything runs smooth, we have prepareda clean and well-tested version of FieldTrip that is pre-installed on the hands-on computers. Importantly, you also do _not_ need to download the tutorial data, these are already available on your computer.
 
 After starting MATLAB, please ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB). Type in the MATLAB command window
 
@@ -27,14 +27,14 @@ If you see that ft_defaults is found by MATLAB, you are all set. Otherwise (e.g.
 {% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
 {% include markup/end %}
 
 The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
-After installing fieldtrip to your path, you change into the tutorial directory
+After installing FieldTrip to your path, you change into the tutorial directory
 
     cd d:/toolkit
 

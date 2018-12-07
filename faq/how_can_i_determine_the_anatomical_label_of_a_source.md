@@ -16,7 +16,7 @@ The function **[ft_prepare_atlas](/reference/ft_prepare_atlas)** reads in a spec
     cfg.funcolormap  ='jet';
     ft_sourceplot(cfg, atlas)
 
-Atlases can be used in several fieldtrip functions. For instance in the **[ft_sourceplot](/reference/ft_sourceplot)** function if you specify cfg.atlas and cfg.atlascoordinates you can click on a voxel in the interactive mode (cfg.method = ‘ortho’) and the label of that voxel according to the specified atlas is given.
+Atlases can be used in several FieldTrip functions. For instance in the **[ft_sourceplot](/reference/ft_sourceplot)** function if you specify cfg.atlas and cfg.atlascoordinates you can click on a voxel in the interactive mode (cfg.method = ‘ortho’) and the label of that voxel according to the specified atlas is given.
 
 The most important function for using an atlas is **[ft_volumelookup](/reference/ft_volumelookup)**. It can be used in two approaches. 
 

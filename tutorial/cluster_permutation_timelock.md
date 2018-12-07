@@ -220,7 +220,7 @@ In plotting significant clusters, we must of course first determine which cluste
 
     % Then, find which clusters are significant, outputting their indices as held in stat.posclusters
     % In case you have downloaded and loaded the data, ensure stat.cfg.alpha exist
-    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional fieldtrip function to anonymize the data.
+    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional FieldTrip function to anonymize the data.
 
     pos_signif_clust = find(pos_cluster_pvals < stat.cfg.alpha);
     % (stat.cfg.alpha is the alpha level we specified earlier for cluster comparisons; In this case, 0.025)
@@ -358,7 +358,7 @@ Using the following configuration for **[ft_topoplotER](/reference/ft_topoploter
     pos_cluster_pvals = [stat.posclusters(:).prob];
 
     % In case you have downloaded and loaded the data, ensure stat.cfg.alpha exist
-    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional fieldtrip function to anonymize the data.
+    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional FieldTrip function to anonymize the data.
 
     pos_signif_clust = find(pos_cluster_pvals < stat.cfg.alpha);
     pos = ismember(stat.posclusterslabelmat, pos_signif_clust);
@@ -494,7 +494,7 @@ With the output, we can now create the plots
     pos_cluster_pvals = [stat.posclusters(:).prob];
 
     % In case you have downloaded and loaded the data, ensure stat.cfg.alpha exist
-    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional fieldtrip function to anonymize the data.
+    if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional FieldTrip function to anonymize the data.
 
     pos_signif_clust = find(pos_cluster_pvals < stat.cfg.alpha);
     pos = ismember(stat.posclusterslabelmat, pos_signif_clust);

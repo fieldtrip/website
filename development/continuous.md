@@ -8,7 +8,7 @@ title: Handling of continuous data
 
 ## Introduction
 
-At the moment most of the fieldtrip functions work with segmented data in memory. The segments or trials are specified by DEFINETRIAL and the segments are read with PREPROCESSING. This also affects artifact detection, which is largely done prior to preprocessing, using data that still resides on disk. 
+At the moment most of the FieldTrip functions work with segmented data in memory. The segments or trials are specified by DEFINETRIAL and the segments are read with PREPROCESSING. This also affects artifact detection, which is largely done prior to preprocessing, using data that still resides on disk. 
 
 This data handling scheme was designed for large MEG data sets at the time where computer memory was often too small. Memory is less of a concern nowadays. Furthermore, a lot of people work with much smaller EEG datasets. Therefore we should reconsider this data handling.
 

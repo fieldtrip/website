@@ -10,7 +10,7 @@ tags:
  For general help about
  spm_orthviews and plugins type
              help spm_orthviews
- at the matlab prompt.
+ at the MATLAB prompt.
 _______________________________________________________________________
 
  adapted from spm_ov_quiver.m disributed with SPM Tools / tbxDiffusion:

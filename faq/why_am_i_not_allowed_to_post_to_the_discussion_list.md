@@ -17,4 +17,4 @@ It might also be due to having sent the email from another email address than th
 A common cause for confusion - especially in Germany - is that people sometimes seem to be using yourname@googlemail.com and yourname@gmail.com interchangeably. The mailing list server will consider these as two different addresses!
 {% include markup/end %}
 
-Please check very carefully on which email address you are receiving the postings from the fieldtrip list, and what you have configured as the "from" address in your email client. If that does not resolve it, please contact the list owner.
+Please check very carefully on which email address you are receiving the postings from the FieldTrip list, and what you have configured as the "from" address in your email client. If that does not resolve it, please contact the list owner.

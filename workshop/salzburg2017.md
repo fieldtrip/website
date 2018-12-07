@@ -43,10 +43,10 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
 {% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
-Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
 {% include markup/end %}
 
-The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the fieldtrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
+The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath(pwd) statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 

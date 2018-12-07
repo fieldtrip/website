@@ -4,7 +4,7 @@ title: Matlab does not see the functions in the "private" directory
 
 ## Matlab does not see the functions in the "private" directory
 
-The functions in the fieldtrip/private directory are only available for functions that are located in fieldtrip. You cannot call them from the command line, and you cannot call them from functions (or scripts) that are located outside the fieldtrip directory.
+The functions in the fieldtrip/private directory are only available for functions that are located in fieldtrip. You cannot call them from the command line, and you cannot call them from functions (or scripts) that are located outside the FieldTrip directory.
 
 See http://www.mathworks.nl/help/techdoc/matlab_prog/f4-70335.html for more general information. 
 

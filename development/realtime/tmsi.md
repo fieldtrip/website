@@ -17,7 +17,7 @@ Note that the PORTI amplifier is in real life much smaller than it seems to be o
 
 Bart Niehuis has contributed an acquisition interface and tested it for the TMSI Refa amplifier. 
 
-A parameter.txt file lets you edit the sample frequency and the (relative) block size of the data packages that are sent to the fieldtrip buffer. At the moment all channels are sent to the buffer. The first one indicates the sample number. Start the buffer by executing the tmsidriver.exe which will start a cmd window showing the sample frequency and block size. Now you can read the buffer with the fieldtrip buffer functions. Closing the cmd window will stop the tmsi driver.
+A parameter.txt file lets you edit the sample frequency and the (relative) block size of the data packages that are sent to the FieldTrip buffer. At the moment all channels are sent to the buffer. The first one indicates the sample number. Start the buffer by executing the tmsidriver.exe which will start a cmd window showing the sample frequency and block size. Now you can read the buffer with the FieldTrip buffer functions. Closing the cmd window will stop the tmsi driver.
 
 The interface also saves the data to a text file, which is named after the date and time of the data recording, and will be saved in the same folder as the tmsi-buffer executable file. 
 

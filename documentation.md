@@ -10,7 +10,7 @@ The documentation for FieldTrip is split into several parts:
 * [Walkthrough](/walkthrough)
 * [Reference documentation](/reference)
 * [Frequently asked questions](/faq)
-* [Example matlab scripts](/example)
+* [Example MATLAB scripts](/example)
 
 * [Workshop material](/workshop)
 * [Video lectures](/video)

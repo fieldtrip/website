@@ -48,7 +48,7 @@ also the low-level [development:fileio](/development/fileio) functions will use 
 
 The egi_mff_v2 implementation in MATLAB depends on a generic Java implementation of the reading functions.
 
-To ensure that MATLAB can find the .jar file, you have to add a path to the MFF-1.0.jar (java) file by typing the following on your matlab prompt
+To ensure that MATLAB can find the .jar file, you have to add a path to the MFF-1.0.jar (java) file by typing the following on your MATLAB prompt
 
     javaaddpath path/to/fieldtrip/external/egi_mff/java/MFF-1.2.jar
 

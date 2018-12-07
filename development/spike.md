@@ -18,6 +18,6 @@ The following steps have been don
 
 The following steps still need some wor
 
-*  write documentation on fieldtrip wiki, e.g. tutorial
+*  write documentation on FieldTrip wiki, e.g. tutorial
 *  announce on mailing list
  

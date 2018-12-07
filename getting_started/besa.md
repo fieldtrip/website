@@ -28,7 +28,7 @@ FieldTrip directly supports the following BESA file format
 	.tfc contains a time-frequency representation of power or coherence
   .dat contains multiple source beamformer output on a regular 3D grid
 
-It is possible to use the low-level functions in FieldTrip to read in the BESA data into Matlab, but it is preferred to use the high-level besa2fieldtrip function. That function will read the data and format it into a structure that is compatible with fieldtrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the fieldtrip function
+It is possible to use the low-level functions in FieldTrip to read in the BESA data into Matlab, but it is preferred to use the high-level besa2fieldtrip function. That function will read the data and format it into a structure that is compatible with fieldtrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
 
 	.avr converted to ft_timelockanalysis
 	.mul converted to ft_timelockanalysis
@@ -47,7 +47,7 @@ The BESA toolbox is maintained by BESA (www.besa.de) and included in the FieldTr
 
 ## Electrode information
 
-BESA electrode files can also be read into Matlab, using the **[ft_read_sens](/reference/ft_read_sens)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any fieldtrip data structure according to thi
+BESA electrode files can also be read into Matlab, using the **[ft_read_sens](/reference/ft_read_sens)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to thi
     data = besa2fieldtrip(‘yourbesafile.avr’);
     data.elec = ft_read_sens(‘yourelectrodes.sfp’);
 
@@ -90,7 +90,7 @@ where 'trialfun_besa' is a self-specified Matlab function for conditional select
     cfg.channel    = 'all';
     data           = ft_preprocessing(cfg);
 
-Note that filtering, re-referencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the matlab environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this wiki page](/tutorial/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
+Note that filtering, re-referencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the MATLAB environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this wiki page](/tutorial/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
 
     % visually inspect the data
     cfg            = [];
@@ -99,7 +99,7 @@ Note that filtering, re-referencing, etcetera can be performed at the preprocess
 
 ### Trial functions
 
-Hereunder are two examples of a trial function. See also [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the matlab path for it to be found by Matlab and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
+Hereunder are two examples of a trial function. See also [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by Matlab and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
 
 The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:   
 

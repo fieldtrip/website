@@ -6,7 +6,7 @@ title: Restructure the directory layout
 
 # Restructure the directory layout
 
-The directory layout has been changed per 23 September 2008. The new layout makes the fieldtrip modules explicit (i.e. fileio, forwinv, preproc) and allows external toolboxes to be included in the release/zipfile without confusion about the different licenses and/or contributors to the external code.
+The directory layout has been changed per 23 September 2008. The new layout makes the FieldTrip modules explicit (i.e. fileio, forwinv, preproc) and allows external toolboxes to be included in the release/zipfile without confusion about the different licenses and/or contributors to the external code.
 
 The new layout also makes the use of templates (for layout and cortical surfaces), statfuns and trialfuns explicit by putting them in their own directories.
 
@@ -28,7 +28,7 @@ The new layout also makes the use of templates (for layout and cortical surfaces
 	fieldtrip/external/toolbox2/…
 	fieldtrip/external/toolbox3/…
 
-All changes have been made with backward compatibility in mind. This is achieved through "hastoolbox" and the use of a "fixpath" module, where for the time being most code that used to be in fieldtrip/private still can be found. Furthermore, there is a "ft_defaults" script which is now included in all fieldtrip main functions.
+All changes have been made with backward compatibility in mind. This is achieved through "hastoolbox" and the use of a "fixpath" module, where for the time being most code that used to be in fieldtrip/private still can be found. Furthermore, there is a "ft_defaults" script which is now included in all FieldTrip main functions.
 
 ## What still needs to be done is
 
@@ -40,7 +40,7 @@ All changes have been made with backward compatibility in mind. This is achieved
 
 ## Known problems that should be fixed
 
-using the matlab "depfun" functio
+using the MATLAB "depfun" functio
  
 
 	

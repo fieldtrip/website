@@ -40,7 +40,7 @@ You can check the status of your submitted job with qstat command in Linux termi
 	bash-3.2$ qstat
 	Job id                    Name             User            Time Use S Queue
 	------------------------- ---------------- --------------- -------- - -----  
-	1066196.dccn-l014          ...23910_b1_j001 username          00:00:00 C matlab   
+	1066196.dccn-l014          ...23910_b1_j001 username          00:00:00 C MATLAB   
 
 For detailed information on the submitted job use qstat -f JobI
 
@@ -108,7 +108,7 @@ The help of **[qsubcellfun](/reference/qsubcellfun)** lists some suggestions on 
 The execution of each job involves writing the input arguments to a file, submitting the job, to Torque, starting MATLAB, reading the file, evaluate the function, writing the output arguments to file and at the end collecting all output arguments of all jobs and rearranging them. Starting MATLAB for each job imposes quite some overhead on the jobs if they are small, that is why **[qsubcellfun](/reference/qsubcellfun)** implements "stacking" to combine multiple MATLAB jobs into one job for the Linux cluster. If the jobs that you pass to **[qsubcellfun](/reference/qsubcellfun)** are small (less than 180 seconds) they will be stacked automatically. You can control it in detail with the "stack" option in **[qsubcellfun](/reference/qsubcellfun)**. For example
 
 	>> qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60, 'stack', 4);
-	stacking 4 matlab jobs in each qsub job
+	stacking 4 MATLAB jobs in each qsub job
 	submitting job irisim_mentat284_p7284_b7_j001... qstat job id 25677.dccn-l014.dccn.nl
 	...
 

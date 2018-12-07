@@ -70,7 +70,7 @@ in particula
 6. libguide.so is not available as seems to be again an intel thingie
 7. Ask for references papers (Hung Dang and Kwong Ng) -> done
 8. New statically linked binaries work with libc 2.7 onwards (my system is not compatible), document the feature and test it on a higher system -> done ( new bins available linked with old libraries )
-9. Ask for a downgrade of GPL licensing from "3 or higher" to "2 or higher" (more code compatible with fieldtrip license). Done -> Hung: I have changed from 3.0 to 2.0 version.
+9. Ask for a downgrade of GPL licensing from "3 or higher" to "2 or higher" (more code compatible with FieldTrip license). Done -> Hung: I have changed from 3.0 to 2.0 version.
 
 ## Steps to be taken (Hung)
 
@@ -87,7 +87,7 @@ in particula
    * User need to specify the reference technique and FieldTrip will handle this.
 
 5. System matrix has to be extracted from data.h5 output as previously calculated from 'elecs_fwd'.     
-   * Create a matlab function with as input argument the tissue type and as output the correspondent system matrix. Done with the C version. Working on the MATLAB version now.
+   * Create a MATLAB function with as input argument the tissue type and as output the correspondent system matrix. Done with the C version. Working on the MATLAB version now.
 
 6. Add usage and other information to all binaries. Updating.
 

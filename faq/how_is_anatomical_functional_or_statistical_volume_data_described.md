@@ -31,7 +31,7 @@ If the volume describes statistical data, it can contain
     volume.tscore
     volume.zscore
 
-Volume data is most easily represented as a Nx*Ny*Nz matrix, but can also be represented as a single vector of length Nx*Ny*Nz, in which case the matlab command
+Volume data is most easily represented as a Nx*Ny*Nz matrix, but can also be represented as a single vector of length Nx*Ny*Nz, in which case the MATLAB command
 
     volume.param = reshape(volume.param, volume.dim)
 

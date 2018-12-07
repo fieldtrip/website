@@ -21,7 +21,7 @@ An overview of Matlab versions is available on the [Mathworks site](http://www.m
  | Macintosh Intel  | n.a.       | n.a.       | n.a.       | n.a.       | n.a.       |            |            | 
  | Windows 64 bit   | n.a.       | n.a.       | n.a.       | n.a.       | n.a.       |            |            | 
 
-n.a. = matlab version is not available for this OS
+n.a. = MATLAB version is not available for this OS
 
 XX = does not work
 
@@ -38,69 +38,69 @@ mv libgcc_s.so.1 libgcc_s.so.1.BAK
 
 Windows 32 bit
 
-*  matlab 6.1
+*  MATLAB 6.1
 
-*  matlab 6.5
+*  MATLAB 6.5
 
-*  matlab 7.0
+*  MATLAB 7.0
 
-*  matlab 7.1
+*  MATLAB 7.1
 
-*  matlab 7.2
+*  MATLAB 7.2
 
-*  matlab 7.3
+*  MATLAB 7.3
 
-*  matlab 7.4
+*  MATLAB 7.4
 
 Windows 64 bit
 
-*  matlab 7.3
+*  MATLAB 7.3
 
-*  matlab 7.4
+*  MATLAB 7.4
 
 Linux 32 bit
 
-*  matlab 6.1
+*  MATLAB 6.1
 
-*  matlab 6.5
+*  MATLAB 6.5
 
-*  matlab 7.0
+*  MATLAB 7.0
 
-*  matlab 7.1
+*  MATLAB 7.1
 
-*  matlab 7.2
+*  MATLAB 7.2
 
-*  matlab 7.4 (?)
+*  MATLAB 7.4 (?)
 
 Linux 64 bit
 
-*  matlab 7.0
+*  MATLAB 7.0
 
-*  matlab 7.1
+*  MATLAB 7.1
 
-*  matlab 7.2
+*  MATLAB 7.2
 
-*  matlab 7.3
+*  MATLAB 7.3
 
-*  matlab 7.4
+*  MATLAB 7.4
 
 Macintosh PPC
 
-*  matlab 6.5
+*  MATLAB 6.5
 
-*  matlab 7.0
+*  MATLAB 7.0
 
-*  matlab 7.1
+*  MATLAB 7.1
 
-*  matlab 7.2
+*  MATLAB 7.2
 
-*  matlab 7.3
+*  MATLAB 7.3
 
-*  matlab 7.4
+*  MATLAB 7.4
 
 Macintosh Intel
 
-*  matlab 7.3
+*  MATLAB 7.3
 
-*  matlab 7.4
+*  MATLAB 7.4
 

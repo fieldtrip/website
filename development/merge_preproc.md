@@ -8,7 +8,7 @@ title: Switch to using the preproc functions and phase out the old preprocessing
 
 FieldTrip is being modularized to facilitate further development of the toolbox itself, and to facilitate reuse of the code in other projects (such as realtime analysis for BrainGain, or in EEGLAB or SPM8).
 
-A "preproc" module has been made that contains all low-level functionality that is used in the fieldtrip/preprocessing function. The existing functions in fieldtrip that still use the old code have to be converted to using the new module. Subsequently, the old version of the functions should be removed from the FieldTrip release. This pertains to 
+A "preproc" module has been made that contains all low-level functionality that is used in the fieldtrip/preprocessing function. The existing functions in FieldTrip that still use the old code have to be converted to using the new module. Subsequently, the old version of the functions should be removed from the FieldTrip release. This pertains to 
 
 *  avgref.m
 *  blc.m
@@ -21,7 +21,7 @@ A "preproc" module has been made that contains all low-level functionality that 
 
 Also all use of other low-level code for preprocessing (e.g. detrending or median filtering) should be changed to use the respective preproc_xxx function. 
 
-The most obvious function to start in is fieldtrip/private/preproc, but other fieldtrip functions are also affected (a.o. freqsimulation->bandpassfilter and probably the older artifact detection functions).
+The most obvious function to start in is fieldtrip/private/preproc, but other FieldTrip functions are also affected (a.o. freqsimulation->bandpassfilter and probably the older artifact detection functions).
 
 ## To do
 

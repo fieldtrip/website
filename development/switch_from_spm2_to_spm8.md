@@ -6,7 +6,7 @@ title: Switch from SPM2 to SPM8
 
 # Switch from SPM2 to SPM8
 
-It would be nice to get rid of the spm2 dependency and switch to spm8 instead. The following fieldtrip functions depend on spm
+It would be nice to get rid of the spm2 dependency and switch to spm8 instead. The following FieldTrip functions depend on spm
 
     jansch@mentat001> grep -l spm_ *.m private/*.m fileio/*.m forward/*.m inverse/*.m
     ft_volumedownsample.m

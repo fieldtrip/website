@@ -53,7 +53,7 @@ Because I didn't do source analysis myself until now I don't now the best way to
 
 **How to use checkconfig**
 
-__**Example matlab scripts:**__
+__**Example MATLAB scripts:**__
 
 **Align EEG electrode positions to BEM headmodel**
 

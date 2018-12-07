@@ -63,7 +63,7 @@ This section of the website lists information aimed at developers of FieldTrip a
 *  [How is the segmentation defined?](/faq/how_is_the_segmentation_defined) (done, made faq)
 *  [How to change the MRI orientation, the voxel size or the field-of-view?](/faq/how_change_mri_orientation_size_fov) (done, made faq)
 *  [Creating a volume conduction model of the head for source-reconstruction of EEG data](/development/headmodel_tutorial_eeg) (done)
-*  [ensure that the compat directories are NOT called by fieldtrip itself](/development/compat) (done)
+*  [ensure that the compat directories are NOT called by FieldTrip itself](/development/compat) (done)
 *  [infrastructure for testing](/development/infrastructure_for_testing) (done)
 *  [Implement a framework for regression testing](/development/testing) (done)
 *  [modularise ft_connectivityanalysis](/development/modularise_ft_connectivityanalysis) (done)

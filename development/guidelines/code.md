@@ -356,7 +356,7 @@ In case the mex file is used in multiple modules and hence represented (by means
 
 If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the source code for the mex file source code should be present in that specific directory and should include instructions and a compile script in that directory.
 
-For Unix-like platforms (Linux and OSX), it it also possible to compile all mex files from the Unix shell command line interface (on OSX called ''Terminal.app'')  using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the matlab or octave binary. For example,
+For Unix-like platforms (Linux and OSX), it it also possible to compile all mex files from the Unix shell command line interface (on OSX called ''Terminal.app'')  using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
 
     make mex MATLAB=/usr/bin/matlab
 

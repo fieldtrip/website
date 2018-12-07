@@ -74,10 +74,10 @@ Session V
 For the hands-on sessions you have to start MATLAB. Make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](ftp: _ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/mannheim2018).
 
 {% include markup/danger %}
-Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the fieldtrip directory in a fieldtrip directory. Please fix that by moving all files one level up.
+Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
 {% include markup/end %}
 
-After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of fieldtrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
+After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
 
     restoredefaultpath
     cd path_to_directory/fieldtrip-xxxxxxxx
@@ -87,7 +87,7 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
 {% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using a startup.m file than the path GUI.
 
-Please do NOT add fieldtrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
+Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, but only when needed.
 {% include markup/end %}
 
 The restoredefaultpath command clears your path, keeping only the
@@ -98,6 +98,6 @@ subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
-After installing fieldtrip to your path, you change into the data directory
+After installing FieldTrip to your path, you change into the data directory
 
     cd path_to_directory/data

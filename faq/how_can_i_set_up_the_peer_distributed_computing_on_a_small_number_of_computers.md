@@ -7,7 +7,7 @@ tags: [faq, peer]
 
 It is common for researchers to share their office with multiple people, each one with a workstation computer under their desk. In the evening, when everyone has gone home, those computers just stand around, unused. The peer distributed computing toolbox allows you to easily make use of them! 
 
-In the evening, when your colleagues are gone, you log in on their computer. Subsequently you start MATLAB and start **[peerslave](/reference/peerslave)** on the matlab command line. For a computer with a multicore CPU the best is to start multiple MATLAB sessions as peerslave, one per CPU core.
+In the evening, when your colleagues are gone, you log in on their computer. Subsequently you start MATLAB and start **[peerslave](/reference/peerslave)** on the MATLAB command line. For a computer with a multicore CPU the best is to start multiple MATLAB sessions as peerslave, one per CPU core.
 
 After starting the slaves on your colleagues computer, you go to your own computer, start a MATLAB session and type **[peerlist](/reference/peerlist)**.
 

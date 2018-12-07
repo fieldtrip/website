@@ -6,7 +6,7 @@ title: Introduction
 
 # Introduction
 
-Some fieldtrip functions use spm2, spm5 and eeglab for the actual computations. From these external toolboxes only limited functionality is used. Therefore it makes sense to copy those functions into a stripped-down version that can then be included in the release version of fieldtrip. E.g.
+Some FieldTrip functions use spm2, spm5 and eeglab for the actual computations. From these external toolboxes only limited functionality is used. Therefore it makes sense to copy those functions into a stripped-down version that can then be included in the release version of fieldtrip. E.g.
 
 *  fieldtrip/external/spm2 -> containing smoothing and segmentation
 *  fieldtrip/external/spm5 -> containing reading of niftii

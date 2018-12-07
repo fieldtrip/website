@@ -7,7 +7,7 @@ tags: [example, realtime]
 
 ## Timing of a closed loop system
 
-The idea is to make a trigger-echo application. Triggers are sent (e.g. via matlab and a serial port) to a trigger channel (e.g. a PPT of the MEG system). Then we can read from that trigger channel (sampled along with the data) and once the trigger is detected, we can either write to another trigger channel, or write to the same channel but use different value for the trigger. The example below was used to measure trigger echo delays in the MEG system at FCDC. I was sending triggers (pulses of height 4), that were then recorded on trigger channel UPPT001. I then read this channel data online from shared memory and did a flank detection -of flanks with height 4- on the fly. Once, the flank was detected, I wrote another pulse (of a different height) on the same channel. The difference between the two flanks (the one sent and the one received) is a measure of the delay in the loop.The data was then saved on disk and the delays between the sent and received triggers were analyzed offline.
+The idea is to make a trigger-echo application. Triggers are sent (e.g. via MATLAB and a serial port) to a trigger channel (e.g. a PPT of the MEG system). Then we can read from that trigger channel (sampled along with the data) and once the trigger is detected, we can either write to another trigger channel, or write to the same channel but use different value for the trigger. The example below was used to measure trigger echo delays in the MEG system at FCDC. I was sending triggers (pulses of height 4), that were then recorded on trigger channel UPPT001. I then read this channel data online from shared memory and did a flank detection -of flanks with height 4- on the fly. Once, the flank was detected, I wrote another pulse (of a different height) on the same channel. The difference between the two flanks (the one sent and the one received) is a measure of the delay in the loop.The data was then saved on disk and the delays between the sent and received triggers were analyzed offline.
 
 
 	matlab1 --> trig1  --> acquisition  --> buffer --> matlab2 --> trig2
@@ -17,7 +17,7 @@ The idea is to make a trigger-echo application. Triggers are sent (e.g. via matl
 
 On the trigger sending side, the code looks something like this:
 
-	%% create matlab serial object related to the port, where the triggers are to be sent
+	%% create MATLAB serial object related to the port, where the triggers are to be sent
 	%% make sure all instruments/serial objects are closed
 	delete(instrfind);
 	fclose('all');
@@ -144,7 +144,7 @@ On the receiving side (the machine, that reads the data online from shared memor
 
 	            if~isempty(smp) %% if there is such an incoming event(in_event)
 	                smp = smp + begsample; %% get sample number with respect to the beginning of the recording;
-	                %% get it in fieldtrip event format
+	                %% get it in FieldTrip event format
 	                in_event = [];
 	                in_event.type   = 'flank';
 	                in_event.sample = smp;
@@ -241,7 +241,7 @@ This means set up a buffer on the localhost (or other machine, whose name needs 
 
 2) We now start the MEG data acquistion, on Acq.
 
-3)Again using a separate matlab session we repeatedly send trigger codes of value 4 to a serial port, which -after serial to parallel conversion- in this case was connected the the MEG console via Parallel Port 1. The triggers then get recorded on disk (channel UPPT01).
+3)Again using a separate MATLAB session we repeatedly send trigger codes of value 4 to a serial port, which -after serial to parallel conversion- in this case was connected the the MEG console via Parallel Port 1. The triggers then get recorded on disk (channel UPPT01).
 
 
 	clear all;
@@ -279,7 +279,7 @@ This means set up a buffer on the localhost (or other machine, whose name needs 
 	n
 	end
 
-4) Now using a different matlab sessiosn we access the FT buffer on the localhos
+4) Now using a different MATLAB sessiosn we access the FT buffer on the localhos
 
 
 	cfg=[];
@@ -495,7 +495,7 @@ Here we increase the sampel rate to Fs=4000Hz
 
 Comparing Figure 3 to Figure 1a, we see that the delays have decreased.
 
-We now use the 2nd option for detecting events: using ft_read_event. Note that this now does not read from the shared memory buffer but directly from the fieldtrip buffer. Previously some events may have gone undetected , therefore we also need to check the matching of trigger to echo
+We now use the 2nd option for detecting events: using ft_read_event. Note that this now does not read from the shared memory buffer but directly from the FieldTrip buffer. Previously some events may have gone undetected , therefore we also need to check the matching of trigger to echo
 
 ### CHL on, Fs=4KHz
 
@@ -571,7 +571,7 @@ To test the timing of the detection of new data in the buffer, without actually 
     cfg.blocksize = 0.040;  % in seconds
     ft_realtime_signalproxy(cfg)
 
-You can read the data in another matlab session on the same computer. In this case we'll just look at how much data is available in the buffe
+You can read the data in another MATLAB session on the same computer. In this case we'll just look at how much data is available in the buffe
 
     for i=1:inf,
     hdr = ft_read_header('buffer://localhost:1972');

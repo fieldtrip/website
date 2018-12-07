@@ -1038,7 +1038,7 @@ string, 'yes' or 'no', whether or not to make reference data zero mean prior to 
 'no' or 'yes', computes the first order derivative of the data (default = 'no')
 
 ** cfg.design ** - [ft_freqstatistics](/reference/ft_freqstatistics)  
-Nxnumobservations: design matrix (for examples/advice, please see the Fieldtrip wiki, especially cluster-permutation tutorial and the 'walkthrough' design-matrix section)
+Nxnumobservations: design matrix (for examples/advice, please see the FieldTrip wiki, especially cluster-permutation tutorial and the 'walkthrough' design-matrix section)
 
 ** cfg.detrend ** - [ft_resampledata](/reference/ft_resampledata)  
 'no' or 'yes', detrend the data prior to resampling (no default specified, see below)

@@ -337,7 +337,7 @@ To confirm your calibration,
 
 FIXME insert figure (7 layout plot)
 
-If you are satisfy with the result, you can save it to a matlab fil
+If you are satisfy with the result, you can save it to a MATLAB fil
 
     save mouse_eeg.mat lay
 

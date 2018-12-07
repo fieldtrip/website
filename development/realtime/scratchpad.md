@@ -87,7 +87,7 @@ and it should be clarified that it is a (large) ring-buffer.
 
 A PUT_HDR reinitializes the buffer, similar to a FLUSH_HDR, FLUSH_DAT. Should be documented.
 
-What is referred to as the "header" in the fieldtrip buffer can be thought of
+What is referred to as the "header" in the FieldTrip buffer can be thought of
 as all the fixed meta data. What is referred to as "events" in the fieldtrip
 buffer is can be thought of as time-varying meta-data. What remains is the
 data, which is the representation of a physical property that was measured (or
@@ -139,7 +139,7 @@ simultaneous recordings?
 > You should timestamp every event and data, but I would not use machine
 > specific timing, but a global time. Otherwise it will be difficult to combine
 > different modalities. Maybe you have two time stamp fields: one for the
-> machine generating the data and one where the fieldtrip buffer is running.
+> machine generating the data and one where the FieldTrip buffer is running.
 
 We introduced the timestamp field, but sofar have not started using it. The
 time synchronisation of different computers is challenging. At the moment the

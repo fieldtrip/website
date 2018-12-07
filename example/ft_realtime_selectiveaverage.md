@@ -156,7 +156,7 @@ tags: [example, realtime]
 	    plot(timelock{condition}.time, tscore);
 	    title(sprintf('condition %d, ntrials = %d', condition, timelock{condition}.n));
 	
-	    % force matlab to redraw the figure
+	    % force MATLAB to redraw the figure
 	    drawnow
 	
 	  end % looping over new trials

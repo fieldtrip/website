@@ -69,7 +69,7 @@ The historical development and continuous push for improvements causes FieldTrip
  2.  *external\sqdproject* by Shantanu Ray, ISR, University of Maryland
  3.  *externalyokogawa_meg_reader* by the Yokogawa company, latest version
 
-The initial implementation was based on the first external toolbox. It turned out that especially on windows computers it was too slow to work efficiently, that is why we looked into an alternative. The second Sqdproject toolbox is more memory and time efficient for reading the data and it can be used in conjunction to the first (for reading the header and meta information) by also adding sqdproject to the matlab path.
+The initial implementation was based on the first external toolbox. It turned out that especially on windows computers it was too slow to work efficiently, that is why we looked into an alternative. The second Sqdproject toolbox is more memory and time efficient for reading the data and it can be used in conjunction to the first (for reading the header and meta information) by also adding sqdproject to the MATLAB path.
 
 The third toolbox contains the completely renewed import functions from the Yokogawa company, which they released to us end 2011. This is the one which probably works the best and most (memory and speed) efficient in most cases, that is why this is the default. If you don't want to use it, please delete it from the fieldtrip/external directory or change its name into "yokogawa_meg_reader_unused" or something similar.
 
@@ -99,7 +99,7 @@ zooming in a bit
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers2.png" width="300" %}
 
-zooming in even more using the matlab figure magnifying glass on the top left corner of one trigger event
+zooming in even more using the MATLAB figure magnifying glass on the top left corner of one trigger event
 
 	figure;
 	plot(data(161,1:10000,'.-');

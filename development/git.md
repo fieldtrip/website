@@ -268,7 +268,7 @@ which will show you
     origin	git@github.com/USERNAME/fieldtrip.git (push)
 or the corresponding URL with https instead of git.
 
-To synchronize with the official fieldtrip repository on github, you should also add it as a remote. Best practice is to call it the *upstream* repository. You add it with
+To synchronize with the official FieldTrip repository on github, you should also add it as a remote. Best practice is to call it the *upstream* repository. You add it with
 
     git remote add upstream https://github.com/fieldtrip/fieldtrip.git
     git remote -v

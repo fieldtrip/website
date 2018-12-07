@@ -318,7 +318,7 @@ I could load in only the sub10_inner_skull_surface file (output of mne_watershed
 
 #### Reading in data
 
-FieldTrip is Matlab based processing tool. Therefore, Matlab is needed to run its functions. The preparation before starting FieldTrip is that the downloaded FieldTrip has to be added to the matlab path.
+FieldTrip is Matlab based processing tool. Therefore, Matlab is needed to run its functions. The preparation before starting FieldTrip is that the downloaded FieldTrip has to be added to the MATLAB path.
 
 Function ft_read_mri can read in MRI data in many formats. Look at [Supported data formats](/faq/dataformat). The .mgz files (freesurfer) format is not listed yet, but the function can read in also that volume.
 
@@ -338,7 +338,7 @@ mri images.
 
 #### Segmentation
 
-In FT, the segmentation happens with the help of SPM. The necessary spm functions are contained by FT (in ...external/spm2). But these functions rely on an earlier version of SPM (SPM2). The function ft_volumesegment is looking for the SPM8 as default. Therefore, either SPM8 should be installed and added to the matlab path or it has to be specified in the cfg that SPM2 is used. If the mri volume had to be realigned, than it is also possible to specify the coordinate system (ctf).
+In FT, the segmentation happens with the help of SPM. The necessary spm functions are contained by FT (in ...external/spm2). But these functions rely on an earlier version of SPM (SPM2). The function ft_volumesegment is looking for the SPM8 as default. Therefore, either SPM8 should be installed and added to the MATLAB path or it has to be specified in the cfg that SPM2 is used. If the mri volume had to be realigned, than it is also possible to specify the coordinate system (ctf).
 
     cfg=\[];
     cfg = \[];
@@ -373,7 +373,7 @@ Here are the outputs of ft_volumesegment on data from a .mgz volume, plotted wit
 {% include image src="/assets/img/development/replicate_functionality_of_mne_software/mgz_csf.jpg" width="400" %}
 
 This segmentation is not the same what MNE does with the help of FS. In order to make BEM meshes, one should create a volume that contains the brain, the brain with (or until) the skull and the entire head until the skin. For creating BEM meshes, I have followed this script: \[[example:create_bem_headmodel_for_eeg|Create BEM headmodel for EEG]]. This script needs a proper documentation because it is difficult to figure out to what one should attend during creating the brain, skin, skull volumes. :
-There are no FT functions for creating meshes, but the matlab image processing toolbox is used. It takes time to create the meshes.
+There are no FT functions for creating meshes, but the MATLAB image processing toolbox is used. It takes time to create the meshes.
 
 #### Comparing BEM meshes
 
@@ -506,7 +506,7 @@ In Matlab:
 
 {% include image src="/assets/img/development/replicate_functionality_of_mne_software/mesh_bnd_ts_mne.jpg" width="750" %}
 
-And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the matlab reducepatch functio
+And the source space of the same volume created in FieldTrip, and reduced to the same number of vertices with the MATLAB reducepatch functio
 
     bnd2_ft = bnd_ft;
     [bnd2_ft.tri, bnd2_ft.pnt]=reducepatch(bnd_ft.tri, bnd_ft.pnt, 16384);

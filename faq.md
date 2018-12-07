@@ -30,7 +30,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 -   [How does the CTF higher-order gradiometer work?](/faq/how_does_the_ctf_higher-order_gradiometer_work)
 -   [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
 -   [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this)
--   [I used ICA on my MEG data from before 2012 and now fieldtrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
+-   [I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?](/faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that)
 -   [I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?](/faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore)
 -   [Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline)
 -   [Reading is slow, can I write my raw data to a more efficient file format?](/faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format)

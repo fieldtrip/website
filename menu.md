@@ -14,7 +14,7 @@ tags: [obsolete]
     * [Frequently asked questions](/faq)
     * [Reference documentation](/reference)
     * [Template models and data](/template)
-    * [Example matlab scripts](/example)
+    * [Example MATLAB scripts](/example)
 *  [Development](/development)
     * [How to contribute](/contribute)
     * [Realtime BCI](/development/realtime)

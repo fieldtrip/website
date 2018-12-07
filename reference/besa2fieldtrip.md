@@ -5,7 +5,7 @@ tags:
 ```
  BESA2FIELDTRIP reads and converts various BESA datafiles into a FieldTrip
  data structure, which subsequently can be used for statistical analysis
- or other analysis methods implemented in Fieldtrip.
+ or other analysis methods implemented in FieldTrip.
 
  Use as
    [data] = besa2fieldtrip(filename)

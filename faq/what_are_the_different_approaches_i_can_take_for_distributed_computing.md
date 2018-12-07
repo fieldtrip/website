@@ -24,7 +24,7 @@ The [parallel computing toolbox](http://www.mathworks.nl/products/parallel-compu
     rawdata{i}  = ft_preprocessing(cfg);
     end
 
-This will keep 4 matlab workers on your own computer busy with preprocessing. Note that this example is probably not so efficient to distribute: presumably your local hard disk speed is the bottleneck, not the CPU speed.
+This will keep 4 MATLAB workers on your own computer busy with preprocessing. Note that this example is probably not so efficient to distribute: presumably your local hard disk speed is the bottleneck, not the CPU speed.
 
 An other way to distribute jobs is using DFEVAL like thi
 

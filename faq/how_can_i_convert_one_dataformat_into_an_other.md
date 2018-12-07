@@ -33,4 +33,4 @@ Note that in the additional options to ft_write_data you should specify the file
 *  fcdc_matbin
 *  fcdc_mysql
 *  fcdc_buffer
-*  matlab  
+*  MATLAB  

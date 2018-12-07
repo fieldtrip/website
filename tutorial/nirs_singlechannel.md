@@ -68,7 +68,7 @@ As FieldTrip is an open-source toolbox, you can always have a look at the code d
     edit ft_preprocessing
 
 {% include markup/info %}
-If this is your first time using FieldTrip you might also want to have a look at the [introduction to the toolbox and matlab tutorial](/tutorial/introduction).
+If this is your first time using FieldTrip you might also want to have a look at the [introduction to the toolbox and MATLAB tutorial](/tutorial/introduction).
 {% include markup/end %}
 
 ### Read & trim data

@@ -10,7 +10,7 @@ done
 *  rename all functions
 *  fix the internal help
 *  fix the wiki documentation
-*  fix fieldtrip functions calling each other
+*  fix FieldTrip functions calling each other
 
 to do
 
