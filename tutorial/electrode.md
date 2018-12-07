@@ -93,7 +93,8 @@ Again we visualise the head surface, but we also plot the axes along with it.
 	ft_plot_axes(head_surface)
 	ft_plot_mesh(head_surface)
 
-{% include image src="/assets/img/tutorial/electrode/structure_realigned.jpg" width="100" %}--0)
+{% include image src="/assets/img/tutorial/electrode/structure_realigned.jpg" width="300" %}
+
 *Figure: Realigned head surface*
 
 ### Identify electrode locations
