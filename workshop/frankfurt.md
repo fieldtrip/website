@@ -21,7 +21,7 @@ Depending on the unzip program you are using (e.g. Winrar), the name of the zip 
 After copying all files to your computer and unzipping then, you start MATLAB. To ensure that the right version of FieldTrip is used, and not another version (such as the one included in SPM or EEGLAB), you type in the MATLAB command window
 
     restoredefaultpath
-    cd path_to_directory/FieldTrip-xxxxxxxx
+    cd path_to_directory/fieldtrip-xxxxxxxx
     addpath(pwd)
     ft_defaults
 
