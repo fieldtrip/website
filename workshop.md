@@ -39,6 +39,7 @@ Previous FieldTrip workshops took place at
 *  2016, [Kiel, Germany](/workshop/kiel)
 *  2016, [MEG/EEG toolkit](/workshop/toolkit2016) - Nijmegen, NL
 *  2016, [Marseille, France](/workshop/marseille)
+*  2015, [Nijmegen](/workshop/realtime) - realtime analysis of MEG in AI course
 *  2015, [Salzburg, Austria](/workshop/salzburg)
 *  2015, [Aarhus, Denmark](/workshop/aarhus2015)
 *  2015, [Chieti, Italy](/workshop/chieti2015)
