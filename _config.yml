@@ -45,14 +45,12 @@ toc:
 
 permalink: pretty
 markdown: kramdown
-theme: minima
 plugins:
-  - jekyll-feed
   - jekyll-last-modified-at
   - jekyll-toc          # https://github.com/toshimaru/jekyll-toc
   - jekyll-sitemap      # https://github.com/jekyll/jekyll-sitemap
 
 exclude:
-   - README.md
-   - COPYING.md
-   - Gemfile*
+  - README.md
+  - COPYING.md
+  - Gemfile*
