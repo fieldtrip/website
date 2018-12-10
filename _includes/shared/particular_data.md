@@ -22,7 +22,7 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 *  [Getting started with BESA data](/getting_started/besa)
 *  [Getting started with Advanced Brain Monitoring (ABM)'s B-Alert EEG data](/getting_started/b_alert)
 
-## Getting started with other data
+## Getting started with other types of data
 
 *  [Getting started with Plexon data](/getting_started/plexon)
 *  [Getting started with Blackrock data](/getting_started/blackrock)

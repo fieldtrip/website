@@ -7,8 +7,10 @@ tags: [example, bids, sharing, anonymize]
 
 This example describes how to prepare an EEG dataset for sharing in the BIDS format. The example starts from a single publicly available EEG recording of a single subject, which is copied multiple times to simulate a dataset comprising data from ten subjects.
 
+On this page you can find two versions of the preparation of a BIDS EEG dataset. The first version copies the existing data without changing its format, since the format is BIDS compliant. The second version also converts the data to (another) BIDS-compliant data format, which is what you would do in case your original data is in a format that is not directly supported by BIDS.
+
 {% include markup/warning %}
-If you want to share data, there are multiple things to consider. For example the file format of the data, the access mechanism for the data (ftphttp/sftp), the data use agreement, whether all data or some part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
+If you want to share data, there are multiple things to consider. For example the file format of the data, the access mechanism for the data (ftp/http/sftp), the data use agreement, whether all data or some part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
 
 In this example we will only be dealing with the format in which the data is organized (over directories) and stored (in files), for which we use the [Brain Imaging Data Structure](http://bids.neuroimaging.io).
 {% include markup/end %}
@@ -29,7 +31,8 @@ We will describe two alternative approaches: in the first one the files are kept
 After each of the automated steps the results should be checked. For that I have been using the command line applications like "find DIR -name PATTERN | wc -l" to count the number of files, but also a graphical databrowser to check the directory structure and a text editor to check the content of the JSON and TSV sidecar files.
 
 It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
-## Copying data to the BIDS organization
+
+## Organize EEG data as BIDS dataset - keep the files in the same format
 
 ### Step 1a: create empty directory structure
 
@@ -139,7 +142,7 @@ I also manually renamed the subdirectories with the presentation log files in th
 
 Throughout the development of the scripts and and after having completed the conversion I used the [bids-validator](http://github.com/INCF/bids-validator/) to check compliance with BIDS.
 
-## Converting the data to a BIDS supported format
+## Organize EEG data as BIDS dataset - converting the files along the way
 
 ### Step 1b: create empty directory structure
 
@@ -155,7 +158,7 @@ Throughout the development of the scripts and and after having completed the con
 
 ### Step 2b: copy the EEG data for all participants
 
-This would normally not be needed, since you would already have the original data somewhere in some structure.
+Here I am copying the single example file to each of the subjects. This would normally not be needed, since you would already have the original data somewhere in some structure. The original format data can be shared in BIDS in the *sourcedata* directory.
 
 	BIDSROOT=$HOME/example
 	SOURCEDATA=$BIDSROOT/sourcedata
