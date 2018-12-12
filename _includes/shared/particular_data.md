@@ -39,6 +39,7 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 *  [Getting started with data from EEGLAB](/getting_started/eeglab)
 *  [Getting started with data from LORETA](/getting_started/loreta)
 *  [Getting started with data from the BIOIMAGE suite](/getting_started/bioimage)
+*  [Getting started with data from AnyWave](/getting_started/anywave)
 
 ## Getting started with real-time data analysis
 
