@@ -1,6 +1,8 @@
 # FieldTrip website
 
-This repository contains the content that is hosted on http://new.fieldtriptoolbox.org
+This repository contains the content that is hosted on http://www.fieldtriptoolbox.org
+
+Feel free to contribute to the Fieldtrip documentation by doing edits here and sending a pull request.
 
 ## Technical notes
 
