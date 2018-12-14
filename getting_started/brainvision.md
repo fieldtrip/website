@@ -7,11 +7,11 @@ tags: [dataformat, brainvision, eeg, layout]
 
 ### Introduction
 
-[BrainProducts](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz. Brain Products also provides EEG caps with the electrodes distributed over the head according to some standard schemes. Most of the caps provided by BrainProducts are actually fabricated by [EasyCap](http://www.easycap.de), on whose website you can also find more information. Although it is possible to use a BrainAmp amplifier with another type of cap, or to use an Easycap with an different amplifier, the most common case is to use them together and that is why we describe them jointly on this page.
+[Brain Products GmbH](http://www.brainproducts.com) provides technical and software solutions for neurophysiological and psychophysiological research and clinical applications. Their BrainAmp ExG amplifier allows to record signals with a sampling rate up to 5000 Hz and a broad hardware bandwidth ranging from DC to 1000 Hz. Brain Products also provides EEG caps with the electrodes distributed over the head according to some standard schemes. Most of the caps provided by BrainProducts are actually fabricated by [EasyCap](http://www.easycap.de), on whose website you can also find more information. Although it is possible to use a BrainAmp amplifier with another type of cap, or to use an Easycap with an different amplifier, the most common case is to use them together and that is why we describe them jointly on this page.
 
+The BrainVision data format
 
-Further information on the BrainVision file format
-The BrainVision file format consists of three separate files:
+The BrainVision data format consists of three separate files:
 
 1. A text header file (`.vhdr`) containing meta data
 2. A text marker file (`.vmrk`) containing information about events in the data
@@ -24,7 +24,7 @@ Both text files are based on the Microsoft Windows INI format consisting of:
 - key-value pairs marked as `key=value`
 
 {% include markup/info %}
-The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g. FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the file format are available from the [Brain Products website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
+The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g. FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the BrainVision data format are available from the [Brain Products website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
 {% include markup/end %}
 
 For example, see this excerpt from a BrainVision header file (.vhdr):
