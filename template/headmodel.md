@@ -7,6 +7,10 @@ tags: [template]
 
 Volume conduction models of the head are a necessary ingredient for source reconstruction. Sources are typically modelled as equivalent current dipoles (ECDs), i.e. point sources with a location and orientation. These sources produce an electrical current that flows through all surrounding tissue. The geometrical and conductive aspects of the tissue influence how the source becomes visible in the EEG or MEG.
 
+{% include markup/warning %}
+You can find the template head models included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/headmodel).
+{% include markup/end %}
+
 ### standard_bem
 
 This file contains a standard Boundary Element Method volume conduction model of the head that can be used for EEG forward and inverse computations. The geometry is based on the "colin27" template that is described further down. The BEM model is expressed in MNI coordinates in mm.

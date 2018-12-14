@@ -1,9 +1,9 @@
 ---
-title: Template 2D layouts for plotting
+title: Template 2-D layouts for plotting
 tags: [template, layout]
 ---
 
-# Template 2D layouts for plotting
+# Template 2-D layouts for plotting
 
 Electrode positions in the layouts are represented as points in 2-D Carthesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ascii .lay files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 
@@ -24,6 +24,10 @@ You can use the following snippet of code to get a quick overview of the templat
 	  [p, f, x] = fileparts(filename{i});
 	  print([lower(f) '.png'], '-dpng');
 	end
+
+{% include markup/warning %}
+You can find the template 2-D layouts for plotting included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout).
+{% include markup/end %}
 
 ## EASY CAP
 

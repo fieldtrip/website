@@ -10,6 +10,12 @@ An atlas is a volumetric or surface based description of the geometry of the bra
 In general an atlas can be read with **[ft_read_atlas](/reference/ft_read_atlas)**. It is represented as a volumetric segmentation as in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**, or as a surface-based parcellation as in **[ft_datatype_parcellation](/reference/ft_datatype_parcellation)**. The volume based representation can be used with **[ft_volumelookup](/reference/ft_volumelookup)** or with the cfg.atlas option in **[ft_sourceplot](/reference/ft_sourceplot)**.
 
 In the FieldTrip release, you can find the volumetric or surface based atlases in the fieldtrip/template/xxx directory, with XXX being the specific template (e.g. "aal" or "afni").
+
+{% include markup/warning %}
+You can find the template anatomical atlases and parcellation schemes included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/atlas).
+{% include markup/end %}
+
+
 ## The AFNI TTatlas+tlrc Dataset
 
 This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was digitized for the Talairach Daemon [ref 2] and converted into AFNI format. It is described in some detail on the [AFNI website](http://afni.nimh.nih.gov/afni/doc/misc/afni_ttatlas/). Note that the website seems to be unstable and relatively often unresponsive.

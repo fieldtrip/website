@@ -21,6 +21,10 @@ You can use the following snippet of code to get a quick overview of the templat
 	  rotate3d
 	end
 
+{% include markup/warning %}
+You can find the template 3-D electrode sets included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/electrode).
+{% include markup/end %}
+
 ### The 10-20, 10-10 and 10-5 system for electrode placement
 
 The following template electrode sets describe the 10-20 EEG electrodes and were constructed by Robert Oostenveld as part of the study described in *Robert Oostenveld and Peter Praamstra. **The five percent electrode system for high-resolution EEG and ERP measurements.** Clin Neurophysiol. 2001 Apr;112(4):713-9.* More details on the electrode positioning and the different naming schemes can be found in the paper (link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed/11275545), [sciencedirect](http://www.sciencedirect.com/science/article/pii/S1388245700005277)) and on Robert's [personal blog](http://robertoostenveld.nl/?p=5).
