@@ -8,7 +8,7 @@ Feel free to edit this page and add links that you think are appropriate.
 
 ## Collaborating institutes
 
-* The Donders Centre for Cognitive Neuroimaging (DCCN), Donders Centre for Cognition (DCC) and Donders Centre for Neuroscience (DCN) are all part of the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders) at the [Radboud University](http://www.ru.nl), Nijmegen, The Netherlands.
+* The Donders Centre for Cognitive Neuroimaging (DCCN), Donders Centre for Cognition (DCC), Donders Centre for Neuroscience (DCN) and Donders Centre for Medical Neuroscience (DCMN) are all part of the [Donders Institute for Brain, Cognition and Behaviour](http://www.ru.nl/donders) at the [Radboud University](http://www.ru.nl), Nijmegen, The Netherlands.
 * [Max Planck Institute for Psycholinguistics](http://www.mpi.nl), Nijmegen, The Netherlands
 * [NatMEG](http://www.natmeg.se), the Swedish National Facility for Magnetoencephalograpy, hosted at the [Karolinska Institute](http://www.ki.se) in Stockholm, Sweden.
 * [Swartz Center for Computational Neuroscience](http://sccn.ucsd.edu), Institute for Neural Computation, University of California, San Diego, USA
@@ -20,14 +20,14 @@ Feel free to edit this page and add links that you think are appropriate.
 * [EEGLAB](http://www.sccn.ucsd.edu/eeglab)
 * [SPM](http://www.fil.ion.ucl.ac.uk/spm/)
 * [BrainStorm](http://neuroimage.usc.edu/brainstorm)
-* [EEG-toolbox](http://eeg.sourceforge.net)
+* [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/sofMNE.php)
+* [OpenMEEG](http://www-sop.inria.fr/odyssee/software/OpenMEEG/)
 * [BIOSIG](http://biosig.sourceforge.net)
 * [NUTMEG](http://nutmeg.berkeley.edu)
+* [EEG-toolbox](http://eeg.sourceforge.net)
 * [BEAST](http://www.columbia.edu/~cs2028/beast/beast.htm)
 * [ERP PCA Toolbox/ICA Blink Toolbox/Robust ADF Test](http://homepage.mac.com/jdien07/)
 * [The Neuroimaging Informatics Tools and Resources Clearinghouse](http://www.nitrc.org/)
-* [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/sofMNE.php)
-* [OpenMEEG](http://www-sop.inria.fr/odyssee/software/OpenMEEG/)
 * [LibEEGTools](http://libeegtools.sf.net)
 
 ## EEG/MEG software (commercial)
@@ -50,6 +50,12 @@ Feel free to edit this page and add links that you think are appropriate.
 * [Biosemi](http://www.biosemi.com)
 * [EGI](http://www.egi.com)
 * [Compumedics Neuroscan](https://compumedicsneuroscan.com/) (also MEG)
+
+## NIRS hardware companies
+
+* [Artinis](https://www.artinis.com)
+* [NIRx](https://nirx.net)
+* [Hitachi](http://www.hitachimed.com/products/OpticalTopography)
 
 ## Animal electrophysiology hardware companies
 
