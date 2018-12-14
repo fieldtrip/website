@@ -24,7 +24,7 @@ Both text files are based on the Microsoft Windows INI format consisting of:
 - key-value pairs marked as `key=value`
 
 {% include markup/info %}
-The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g. FieldTrip, EEGLAB, SPM, MNE-Python). The details of the file format are available in [this specification](/assets/pdf/BrainVisionCoreFileFormat_1.0_2018-08-02.pdf).
+The BrainVision Recorded and Analyzer software packages use a well-defined file format that is supported by many software packages (e.g. FieldTrip, EEGLAB, SPM, MNE-Python) and that is used in [BIDS for EEG](https://psyarxiv.com/63a4y). The details of the file format are available from the [Brain Products website](https://www.brainproducts.com/productdetails.php?id=21&tab=5).
 {% include markup/end %}
 
 For example, see this excerpt from a BrainVision header file (.vhdr):
