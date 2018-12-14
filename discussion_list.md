@@ -14,7 +14,9 @@ If you get the message <em>"You are not allowed to post to this mailing list, an
 
 We are always happy to try to help you with your questions. In general, note that it always help if you ask the question in a to-the-point way and provide as much (necessary) information as possible. You may want to consider to read our FAQ on [how to ask questions to the FieldTrip community](/faq/how_to_ask_good_questions_to_the_community) and please consider these [Ten Simple Rules for Getting Help from Online Scientific Communities](http://www.ploscompbiol.org/article/info:doi%2F10.1371%2Fjournal.pcbi.1002202).
 
-You can go through the contributions to the FieldTrip discussion list [here](http://mailman.science.ru.nl/pipermail/fieldtrip), or you can search through the discussion list.
+## Archive
+
+You can go through the archived contributions to the FieldTrip discussion list [here](http://mailman.science.ru.nl/pipermail/fieldtrip), or you can search through the discussion list.
 
 {% include searchlistarchive %}
 
