@@ -11,7 +11,7 @@ Prior to downloading, you might want to check whether your computer meets the [M
 
 After downloading the toolbox, you unzip it and add the directory in which all the .m files are located to your path. See also [this question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) about setting up the MATLAB path.
 
-You can download the tutorial data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial).
+You can download the tutorial data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/).
 
 ## Copyrights
 
