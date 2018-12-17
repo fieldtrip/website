@@ -5,8 +5,8 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 ## Getting started with particular MEG data types
 
 *  [Getting started with CTF data](/getting_started/ctf)
-*  [Getting started with 4D/BTi data](/getting_started/bti)
-*  [Getting started with Elekta/Neuromag data](/getting_started/neuromag)
+*  [Getting started with BTi/4D data](/getting_started/bti)
+*  [Getting started with Neuromag/Elekta/Megin data](/getting_started/neuromag)
 *  [Getting started with BabySQUID data](/getting_started/babysquid)
 *  [Getting started with Yokogawa data](/getting_started/yokogawa)
 *  [Getting started with Ricoh data](/getting_started/ricoh)
@@ -20,7 +20,7 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 *  [Getting started with BESA data](/getting_started/besa)
 *  [Getting started with Biosemi BDF data](/getting_started/biosemi)
 *  [Getting started with EDF data](/getting_started/edf)
-*  [Getting started with Philips/EGI data](/getting_started/egi)
+*  [Getting started with EGI/Philips data](/getting_started/egi)
 
 ## Getting started with other types of data
 
