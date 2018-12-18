@@ -55,9 +55,6 @@
 - name:  What kind of volume conduction models of the head (head models) are implemented?
   link:  /faq/what_kind_of_volume_conduction_models_are_implemented
 
-- name:  What is the plotting convention for anatomical MRIs?
-  link:  /faq/what_is_the_plotting_convention_for_anatomical_mris
-
 - name:  How are the different head and MRI coordinate systems defined?
   link:  /faq/how_are_the_different_head_and_mri_coordinate_systems_defined
 
@@ -78,9 +75,6 @@
 
 - name:  Where is the anterior commissure?
   link:  /faq/anterior_commissure
-
-- name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-  link:  /faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot
 
 - name:  Why is there a rim around the brain for which the source reconstruction is not computed?
   link:  /faq/why_is_there_a_rim_around_the_brain_for_which_the_source_reconstruction_is_not_computed

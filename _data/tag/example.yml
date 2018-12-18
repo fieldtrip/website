@@ -25,6 +25,9 @@
 - name:  Detect the muscle activity in an EMG channel and use that as trial definition
   link:  /example/detect_the_muscle_activity_in_an_emg_channel_and_use_that_as_trial_definition
 
+- name:  Preparing a combined MEG/fMRI dataset for sharing
+  link:  /example/bids_mous
+
 - name:  Computing and using estimates of effect size
   link:  /example/effectsize
 
@@ -91,9 +94,6 @@
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
-- name:  Preparing a combined MEG/fMRI dataset for sharing
-  link:  /example/bids
-
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
@@ -157,8 +157,8 @@
 - name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
   link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
 
-- name:  Cross Frequency analysis
-  link:  /example/cross_frequency_analysis
+- name:  Cross-frequency analysis
+  link:  /example/crossfreq
 
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime

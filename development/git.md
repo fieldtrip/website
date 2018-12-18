@@ -32,7 +32,7 @@ We welcome the contribution of external users, even if the changes consist of a 
 
 ### What is git?
 
-[git](http://git-scm.com/) is version control system to keep track of the changes to files and maintain a consistent repository, just like [svn](http://subversion.tigris.org/). While svn follows a linear approach to version, where each user makes some changes to the main code and then a second user can make some other changes, git allows for multiple users to work in parallel and then merge their code in the main repository. This approach scales very well, considering that, for example, the [Linux kernel](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git) and [ android](https://android.googlesource.com/) use git.
+[Git](http://git-scm.com/) is version control system to keep track of the changes to files and maintain a consistent repository, just like [svn](http://subversion.tigris.org/). While svn follows a linear approach to version, where each user makes some changes to the main code and then a second user can make the next change, git allows for multiple users to work in parallel and then merge their code in the main repository. This approach scales very well, considering that, for example, the [Linux kernel](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git) and [ android](https://android.googlesource.com/) use git.
 
 There are lots of resources available on the internet to learn more about git. The starting point is [this documentation](http://git-scm.com/documentation). If you have a question, it's most likely already being answered at [Stack Exchange](http://stackoverflow.com/questions/tagged/git). git is extremely powerful and flexible, so the following tutorial will give only the most basic ideas and tools to modify the FieldTrip code.
 
@@ -75,7 +75,7 @@ you will switch from a side branch into the main branch of your repository.
 
 ### What is github.com?
 
-[github.com](http://github.com) is a fast, intuitive and popular website to share code. The interface is clean and intuitive, and many projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip).
+[github.com](http://github.com) is a popular website for sharing code and collaborating. It has a clean and intuitive website interface. Many large projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip).
 
 ### How to add a feature or fix a bug
 
@@ -130,7 +130,7 @@ If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch
 Now we need to create a function that says *Welcome to FieldTrip*. Let's call it *ft_welcome.m*, just as you'd create any new Matlab function.
 
 {% include markup/warning %}
-When you create a new function or edit an existing one, follow the [code guidelines](/development/guidelines/code) for a consistent and readable code.
+When you create a new function or edit an existing one, follow the [code guidelines](/development/guideline/code) for a consistent and readable code.
 {% include markup/end %}
 
 In addition to this function, we will also modify the function **[ft_defaults](/reference/ft_defaults)**.
@@ -187,7 +187,7 @@ You can now commit these changes.
 where the option -m allows you to add a log entry.
 
 {% include markup/warning %}
-Follow these [guidelines](/development/guidelines/code#svn_log_messages) when writing a log entry.
+Follow these [guidelines](/development/guideline/code#svn_log_messages) when writing a log entry.
 {% include markup/end %}
 
 and git will return:

@@ -4,7 +4,7 @@
 - name:  What is the plotting convention for anatomical MRIs?
   link:  /faq/what_is_the_plotting_convention_for_anatomical_mris
 
-- name:  The databrowser crashes and destroys the whole matlab session, how can I resolve this?
+- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
 
 - name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?

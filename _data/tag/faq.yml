@@ -178,9 +178,6 @@
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
 
-- name:  How does ft_prepare_neighbours work?
-  link:  /faq/how_does_ft_neighbourselection_work
-
 - name:  My MRI is upside down, is this a problem?
   link:  /faq/my_mri_is_upside_down_is_this_a_problem
 
@@ -358,7 +355,7 @@
 - name:  How does MTMCONVOL work?
   link:  /faq/mtmconvol
 
-- name:  The databrowser crashes and destroys the whole matlab session, how can I resolve this?
+- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
 
 - name:  Should I add FieldTrip with all subdirectories to my MATLAB path?

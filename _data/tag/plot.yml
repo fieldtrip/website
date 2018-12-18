@@ -41,7 +41,7 @@
   link:  /tutorial/coherence
 
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
-  link:  /development/plotting
+  link:  /development/module/plotting
 
 - name:  I am getting strange artifacts in figures that use opacity
   link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
@@ -55,20 +55,14 @@
 - name:  How do I construct a layout file for the plotting functions?
   link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
 
-- name:  What is the plotting convention for anatomical MRIs?
-  link:  /faq/what_is_the_plotting_convention_for_anatomical_mris
-
 - name:  I am having problems printing figures that use opacity
   link:  /faq/i_am_having_problems_printing_figures_that_use_opacity
 
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
 
-- name:  The databrowser crashes and destroys the whole matlab session, how can I resolve this?
+- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
-
-- name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?
-  link:  /faq/why_does_my_anatomical_mri_show_upside-down_when_plotting_it_with_ft_sourceplot
 
 - name:  Plotting the result of source reconstructing on a cortical mesh
   link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh

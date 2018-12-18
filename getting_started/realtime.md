@@ -50,19 +50,19 @@ There are two approaches for processing data in real-time. It might be that you 
 
 ### Asynchronous/continuous
 
-The basic idea behind continuous data processing is a loop in which you check for new data. You wait until there is new data, and if there is new data you process it. The simplest example for this data is a simple data viewer that lets the data scroll by while being streamed from the acquisition system. This example is implemented in the [example:ft_realtime_signalviewer](/example/ft_realtime_signalviewer) function.
+The basic idea behind continuous data processing is a loop in which you check for new data. You wait until there is new data, and if there is new data you process it. The simplest example for this data is a simple data viewer that lets the data scroll by while being streamed from the acquisition system. This example is implemented in the [ft_realtime_signalviewer](/example/ft_realtime_signalviewer) function.
 
-It gets slightly more complex if you not only want to visualize the data, but also want to do computations on it. The [example:ft_realtime_powerestimate](/example/ft_realtime_powerestimate) function reads data in small chunks and continuously performs a spectral estimation. The output of this function is a figure with the powers spectrum, averaged over all selected channels, which is constantly being updated.
+It gets slightly more complex if you not only want to visualize the data, but also want to do computations on it. The [ft_realtime_powerestimate](/example/ft_realtime_powerestimate) function reads data in small chunks and continuously performs a spectral estimation. The output of this function is a figure with the powers spectrum, averaged over all selected channels, which is constantly being updated.
 
-For a real BCI or neurofeedback application you probably would want to do online feature extraction (e.g. the ratio between the Mu-power over left and right motor areas) and link that to a classifier which makes a decision to control an external device. Starting from the [example:ft_realtime_signalviewer](/example/ft_realtime_signalviewer) example and then moving on to the [example:ft_realtime_powerestimate](/example/ft_realtime_powerestimate) example you'll quickly recognize where in the code you can insert your own ideas for the analysis of the data.
+For a real BCI or neurofeedback application you probably would want to do online feature extraction (e.g. the ratio between the Mu-power over left and right motor areas) and link that to a classifier which makes a decision to control an external device. Starting from the [ft_realtime_signalviewer](/example/ft_realtime_signalviewer) example and then moving on to the [ft_realtime_powerestimate](/example/ft_realtime_powerestimate) example you'll quickly recognize where in the code you can insert your own ideas for the analysis of the data.
 
 ### Synchronous/triggered
 
-If the data that you want to analyze is synchronous to some external trigger event, you should keep an eye on the external event. If a new trigger event is present, the corresponding data can be read and processed. A simple example for this is the [example:ft_realtime_average](/example/ft_realtime_average) function.
+If the data that you want to analyze is synchronous to some external trigger event, you should keep an eye on the external event. If a new trigger event is present, the corresponding data can be read and processed. A simple example for this is the [ft_realtime_average](/example/ft_realtime_average) function.
 
-A slightly more elaborate example is the [example:ft_realtime_selectiveaverage](/example/ft_realtime_selectiveaverage) function. It not only checks for events, but it also splits the incoming data over multiple conditions based on the trigger value. Furthermore, this example shows how you can compute some simple t-statistics in real time. The idea behind this example it is that you continue with your experiment until enough "evidence" has been accumulated to distinguish the data in the two conditions.
+A slightly more elaborate example is the [ft_realtime_selectiveaverage](/example/ft_realtime_selectiveaverage) function. It not only checks for events, but it also splits the incoming data over multiple conditions based on the trigger value. Furthermore, this example shows how you can compute some simple t-statistics in real time. The idea behind this example it is that you continue with your experiment until enough "evidence" has been accumulated to distinguish the data in the two conditions.
 
-The third example synchronous processing of data is the [example:ft_realtime_classification](/example/ft_realtime_classification) function. It reads the data following a trigger and depending on whether that data is marked as "training" data or "test" data, it trains a classifier or it uses the previously trained classifier for single trial classification of the test data. The idea behind this example is that in the first part of the experiment data is available for which the true class is known. In the second part of the experiment, the class is not known any more and the classifier should estimate to which class each trial belongs.
+The third example synchronous processing of data is the [ft_realtime_classification](/example/ft_realtime_classification) function. It reads the data following a trigger and depending on whether that data is marked as "training" data or "test" data, it trains a classifier or it uses the previously trained classifier for single trial classification of the test data. The idea behind this example is that in the first part of the experiment data is available for which the true class is known. In the second part of the experiment, the class is not known any more and the classifier should estimate to which class each trial belongs.
 
 ## Closing the loop in a real-time BCI application
 
@@ -72,8 +72,8 @@ There are various options for closing the loop documented [here](/development/re
 
 ## Overview of all examples used here
 
-*  [example:ft_realtime_signalviewer](/example/ft_realtime_signalviewer)
-*  [example:ft_realtime_powerestimate](/example/ft_realtime_powerestimate)
-*  [example:ft_realtime_average](/example/ft_realtime_average)
-*  [example:ft_realtime_selectiveaverage](/example/ft_realtime_selectiveaverage)
-*  [example:ft_realtime_classification](/example/ft_realtime_classification)
+*  [ft_realtime_signalviewer](/example/ft_realtime_signalviewer)
+*  [ft_realtime_powerestimate](/example/ft_realtime_powerestimate)
+*  [ft_realtime_average](/example/ft_realtime_average)
+*  [ft_realtime_selectiveaverage](/example/ft_realtime_selectiveaverage)
+*  [ft_realtime_classification](/example/ft_realtime_classification)

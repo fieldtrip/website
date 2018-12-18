@@ -28,7 +28,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 * [Analysis of high-gamma band signals in human ECoG](/example/ecog_ny)
 * [Analyze Steady-State Visual Evoked Potentials (SSVEPs)](/example/ssvep)
-* [Cross-frequency analysis](/example/cross_frequency_analysis)
+* [Cross-frequency analysis](/example/crossfreq)
 * [Effect of Signal-to-Noise Ratio on Coherence](/example/coherence_snr)
 * [Effects of tapering for power estimates](/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain)
 * [Fourier analysis of oscillatory power and coherence](/tutorial/fourier)

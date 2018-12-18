@@ -22,14 +22,14 @@
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
 
+- name:  How does ft_prepare_neighbours work?
+  link:  /faq/how_does_ft_prepare_neighbours_work
+
 - name:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
   link:  /faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations
 
 - name:  How NOT to interpret results from a cluster-based permutation test
   link:  /faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test
-
-- name:  How does ft_prepare_neighbours work?
-  link:  /faq/how_does_ft_neighbourselection_work
 
 - name:  What is the idea behind statistical inference at the second-level?
   link:  /faq/what_is_the_idea_behind_statistical_inference_at_the_second-level

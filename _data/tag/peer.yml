@@ -2,7 +2,7 @@
   link:  /tutorial/distributedcomputing
 
 - name:  Distributed computing using a peer-to-peer cluster
-  link:  /development/peer
+  link:  /development/module/peer
 
 - name:  Why are the peers using multicast to announce themselves?
   link:  /faq/why_are_the_peers_using_multicast_to_announce_themselves

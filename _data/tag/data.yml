@@ -34,7 +34,7 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  The databrowser crashes and destroys the whole matlab session, how can I resolve this?
+- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
 
 - name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?

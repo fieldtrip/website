@@ -36,13 +36,9 @@ Here, we will work towards a  volume conduction model of the head based on the b
 The anatomical mri of the [tutorial data set](/tutorial/shared/dataset) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Although we did not record EEG in this particular language study, we will nevertheless use it as example MRI to make an EEG volume conduction model.  
 
 *  First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
-
 *  then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
-
 *  triangulate the surfaces with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**;
-
 *  and create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
-
 *  Finally, we will check the geometry of the head model by plotting it with **[ft_plot_mesh](/reference/ft_plot_vol)**.
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/hedmodel_eeg-01.png" %}
@@ -70,13 +66,9 @@ Then, you can read in the mri data.
 The structure of your mri variable contains the following field
 
 *  **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
-
 *  **anatomy**: This is a matrix (with the size and number of dimensions specified in **dim**) that contains the anatomical information represented by numbers.
-
 *  **hdr**: Header information of the anatomical images.
-
 *  **transform**: A homogenous [transformation matrix](/faq/how_change_mri_orientation_size_fov) that aligns the anatomical data (in field **anatomy**) to a certain coordinate system.
-
 *  **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
 
 You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system).
@@ -124,13 +116,9 @@ Note that the segmentation is quite time consuming (~15mins) and if you want you
 The segmentedmri data structure is similar to the mri data structure, but contains the new field
 
 *  **unit**: unit of the head coordinate system
-
 *  **brain**: binary representation of the brain
-
 *  **skull**: binary representation of the skull
-
 *  **scalp**: binary representation of the scalp
-
 *  **cfg**: configuration information of the function which created segmentedmri
 
 The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain**, **skull** and **scalp** to the coordinate system defined in the **coordsys** field.
@@ -154,9 +142,7 @@ In this step, surfaces are created at the borders of the different tissue-types 
 The bnd contains the following field
 
 *  **pnt** :   The coordinates of the vertices of the surface.
-
 *  **tri** :   Each row defines three vertices (row numbers of the **pnt** field) from a triangle.
-
 *  **unit**:   Units in which the points are expressed.
 
 It is a structure array which describes the geometry of three surfaces in these fields. The first structures represents the triangulation of the brain surface, the second the outside surface of the skull and so on.

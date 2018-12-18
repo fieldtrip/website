@@ -11,7 +11,7 @@ Some of these tutorials are also used during the "Advanced EEG/MEG analysis" [to
 
 For information on what types of datasets we have here on FieldTrip, and which datasets are used in which tutorials see this overview of the [datasets used in the tutorials](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip).
 
-When adding or contributing to the tutorials please consider the [documentation guidelines](/development/guidelines/documentation).
+When adding or contributing to the tutorials please consider the [documentation guidelines](/development/guideline/documentation).
 
 ## Introduction to FieldTrip and MATLAB
 

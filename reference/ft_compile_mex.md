@@ -12,7 +12,7 @@ tags:
  your compiler settings
 
  The standards procedure for compiling mex files is detailled on
- http://www.fieldtriptoolbox.org/development/guidelines/code#compiling_mex_files
+ http://www.fieldtriptoolbox.org/development/guideline/code#compiling_mex_files
 
  Please note that this script does NOT set up your MEX environment for you, so in
  case you haven't selected the C compiler on Windows yet, you need to type 'mex

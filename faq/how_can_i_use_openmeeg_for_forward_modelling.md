@@ -24,17 +24,16 @@ OpenMEEG can be downloaded fro
 
 https://gforge.inria.fr/frs/?group_id=435
 
-Installation procedur
+Installation procedure:
 
 #### For Linux
 
     * check your local version of gcc compiler (type 'gcc -v' in a terminal).
-        Exampl
-        $ gcc -v
-        gcc version 4.3.2 (GCC)
 
-    * If your version of gcc is superior to 4.2 download OpenMEEG for gcc 4. Otherwise download OpenMEEG for gcc 3.
-    The OpenMEEG version for gcc 4 provides support of OpenMP for parallel and faster computation.
+    $ gcc -v
+    gcc version 4.3.2 (GCC)
+
+    * If your version of gcc is superior to 4.2 download OpenMEEG for gcc 4. Otherwise download OpenMEEG for gcc 3. The OpenMEEG version for gcc 4 provides support of OpenMP for parallel and faster computation.
 
 ##### Install from the tar.gz file
 
@@ -48,9 +47,7 @@ Installation procedur
 
 *  open the RPM file with 'rpm' from command line in Linux or with an alternative front-end program (e.g. 'up2date' (CentOS) or 'yum' for Fedora/Red Hat)
 
-
-	#example using RPM command (from Linux shell)
-	rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
+    $ rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
 
 
 #### For Windows

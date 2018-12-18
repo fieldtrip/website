@@ -1,6 +1,6 @@
 ---
 title: FieldTrip Walkthrough
-tags: [meg, eeg, raw, freg, cfg, trialfun, trialdef]
+tags: [meg, eeg, raw, freq, cfg, trialfun, trialdef]
 ---
 
 # FieldTrip Walkthrough

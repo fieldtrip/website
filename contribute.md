@@ -19,7 +19,7 @@ You are invited to add your own tutorials, example scripts or answers to frequen
 
 You can contribute directly to the documentation on this website by going to [github](https://github.com/fieldtrip/website), edit or add a page there and send your suggestion as a "pull request". All contributions are reviewed by the maintainers, so if you are not sure about the quality of your contribution, just submit it to us and we will check, improve and/or provide feedback if needed.
 
-When you add documentation, please consider the [documentation guidelines](/development/guidelines/documentation) to keep it consistent with other documentation and to facilitate cross-linking. 
+When you add documentation, please consider the [documentation guidelines](/development/guideline/documentation) to keep it consistent with other documentation and to facilitate cross-linking. 
 
 ## Request enhancements
 
@@ -33,4 +33,4 @@ You can [provide us with detailed bug reports](/bugzilla). The easier it is for 
 
 You can contribute by sharing your MATLAB source code with us and help us integrate it into the FieldTrip toolbox. To get direct access to the code, please refer to the [git and github](/development/git) documentation.
 
-On the [development section of this wiki](/development) you can find more details on how the development is organized. You can of course also [ask](/contact). When you want to contribute code, please consider the [code guidelines](/development/guidelines/code) to keep it consistent and compatible with the existing implementation. Also try to adhere to the existing representation of the data in the [data structures](/faq/how_are_the_various_data_structures_defined).
+On the [development section of this wiki](/development) you can find more details on how the development is organized. You can of course also [ask](/contact). When you want to contribute code, please consider the [code guidelines](/development/guideline/code) to keep it consistent and compatible with the existing implementation. Also try to adhere to the existing representation of the data in the [data structures](/faq/how_are_the_various_data_structures_defined).

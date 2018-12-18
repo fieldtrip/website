@@ -17,6 +17,9 @@
   link:  /faq/bids_coordsystem
 
 - name:  Preparing a combined MEG/fMRI dataset for sharing
+  link:  /example/bids_mous
+
+- name:  BIDS - the brain imaging data structure
   link:  /example/bids
 
 - name:  Preparing an EEG dataset for sharing

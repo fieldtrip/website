@@ -1,6 +1,6 @@
 - name:  Distributed computing using a Linux compute cluster
-  link:  /development/qsub
+  link:  /development/module/qsub
 
 - name:  Distributed computing using the MATLAB engine system
-  link:  /development/engine
+  link:  /development/module/engine
 

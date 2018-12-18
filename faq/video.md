@@ -11,4 +11,4 @@ We are planning to record more future lectures on camera. However, that does not
 
 So it is part of our ongoing efforts to improve the dissemination of FieldTrip and the methods implemented in it, and we do hope that we will get the hang of making it available as [MOOC](http://en.wikipedia.org/wiki/Massive_open_online_course). 
 
-In case you want to know more about how we perform the recordings, please have a look [here](/development/guidelines/video). 
+In case you want to know more about how we perform the recordings, please have a look [here](/development/guideline/video). 

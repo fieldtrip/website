@@ -38,7 +38,7 @@ If you also have the [distributed computing engines](http://www.mathworks.nl/pro
 
 ### FieldTrip qsub toolbox
 
-At the Donders we have a Linux compute cluster that is managed with a batch queueing system that allows users to submit large batches of jobs to run in parallel. The Donders cluster runs Torque/Maui, but other PBS systems, SLURM, LSF, Sun Grid Engine and Oracle Grid Engine are also supported. More documentation on the qsub toolbox is found [here](/development/qsub).
+At the Donders we have a Linux compute cluster that is managed with a batch queueing system that allows users to submit large batches of jobs to run in parallel. The Donders cluster runs Torque/Maui, but other PBS systems, SLURM, LSF, Sun Grid Engine and Oracle Grid Engine are also supported. More documentation on the qsub toolbox is found [here](/development/module/qsub).
 
 To facilitate distributed computing on the compute cluster, we have implemented a qsub wrapper function within MATLAB, which for the end-user works similar to DFEVAL and PEERCELLFUN.
 
@@ -52,7 +52,7 @@ See **[/reference/qsubcellfun](/reference/qsubcellfun)**, **[/reference/qsubfeva
 
 ### FieldTrip peer computing toolbox
 
-The FieldTrip peer computing toolbox was developed to harness the computational resources in an unorganized organization, e.g. to use the computers of your office mates during the night, or to use multiple linux computers that are not clustered. More documentation on the peer toolbox can be found [here](/development/peer).
+The FieldTrip peer computing toolbox was developed to harness the computational resources in an unorganized organization, e.g. to use the computers of your office mates during the night, or to use multiple linux computers that are not clustered. More documentation on the peer toolbox can be found [here](/development/module/peer).
 
 {% include markup/danger %}
 Please note that this requires compilation of some mex files. At this moment it is not actively supported.
@@ -70,7 +70,7 @@ See **[/reference/peercellfun](/reference/peercellfun)**, **[/reference/peerfeva
 
 ### FieldTrip engine toolbox
 
-The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development/engine).
+The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development//module/engine).
 
 {% include markup/danger %}
 Please note that this requires compilation of some mex files. At this moment it is not actively supported.

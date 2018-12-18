@@ -24,7 +24,7 @@ The documentation for FieldTrip is split into several parts:
 
  The [tutorials](/tutorial) will help you to get started by providing examples that you can copy-and-paste into Matlab. The [introduction tutorial](/tutorial/introduction) is the best place to start if you do not have any idea about the ideas behind the FieldTrip toolbox. The [Walkthrough](/walkthrough) will give you a good overview of the conceptual ideas behind the toolbox and analysis methods.
 
-In the [reference documentation](/reference/) you find an overview of all main functions in FieldTrip and the [configuration index](/reference/configuration) has a list of their configuration options.
+In the [reference documentation](/reference/) you find an overview of all main functions in FieldTrip and the [configuration index](/reference/configuration_index) has a list of their configuration options.
 
 The [frequently asked questions](/faq) section provides a lot of practical information. Furthermore, the [example MATLAB scripts](/example) contains pieces of documentation that are often not so elaborate as the tutorials, but that go in more detail into specific aspects of the data, code or analysis.
 
