@@ -15,8 +15,8 @@ Feel free to contribute to the Fieldtrip documentation by doing edits here and s
 
 ## Checking for broken links and missing images
 
-  wget --spider -r -nd -nv -o spider.log http://localhost:4000
-  grep -B1 'broken link!' spider.log  | grep http > broken.log
+    wget --spider -r -nd -nv -o spider.log http://localhost:4000
+    grep -B1 'broken link!' spider.log  | grep http > broken.log
 
 ## Ideas
 
