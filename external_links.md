@@ -89,4 +89,3 @@ Feel free to edit this page and add links that you think are appropriate.
 * [International MEG community website](http://megcommunity.org/)
 * here is a map with all [MEG systems](http://tinyurl.com/megsystems) over the whole world
 * [International Society for Bioelectromagnetism](http://www.isbem.org)
-* [MEGSIM](http://portal.mind.unm.edu/megsim) provides realistic simulated data sets in formats used by each of the 3 major MEG manufacturers that will be directly tested using five algorithms which include multidipole, spatiotemporal modeling, current reconstruction and beamforming methods
