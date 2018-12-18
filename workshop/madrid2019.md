@@ -14,7 +14,7 @@ Thursday Jan 24th - Friday Jan 25th.
 
 ## Who
 
-Paula Pazo-Alvarez is the host and local organizer. Sophie Arana (Donders Institute, Nijmegen) and Diego Lozano-Soldevilla (CIBERER, Madrid; IDIBAPS, Barcelona) are the lecturers.
+The "Sociedad Española de Psicofisiología y Neurociencia Cognitiva y Afectiva" (SEPNECA) is the local organizer. Sophie Arana (Donders Institute, Nijmegen) and Diego Lozano-Soldevilla (CIBERER, Madrid; IDIBAPS, Barcelona) are the lecturers.
 
 ## Preliminary program
 
