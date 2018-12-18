@@ -4,6 +4,8 @@ This repository contains the content that is hosted on http://www.fieldtriptoolb
 
 Feel free to contribute to the Fieldtrip documentation by doing edits here and sending a pull request.
 
+Please note that the markdown documents that are nicely displayed here on github will not have the hyperlinks pointing to the correct pages. The hyperlinks will be conrrect when compiled and deployed on our web server.
+
 ## Technical notes
 
 * Pages that contain tags must have a title.
