@@ -21,11 +21,10 @@ To study the oscillatory synchrony between two signals, one can compute the cohe
 
 To compute the coherence between the MEG and EMG signals for the example dataset we will perform the following step
 
-   * Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
-   * Compute the power spectra and cross-spectral densities using the function **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute the coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**
-   * Visualize the results using **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
-
-*  Subsequently it is possible to localise the neuronal sources coherent with the EMG, using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+* Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
+* Compute the power spectra and cross-spectral densities using the function **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute the coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**
+* Visualize the results using **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
+* Subsequently it is possible to localise the neuronal sources coherent with the EMG, using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
 
 ## Preprocessing
 
@@ -413,7 +412,7 @@ The trial function used to extract the trial
     for j = 1:length(trig)-1
     trg1 = trig(j);
     trg2 = trig(j+1);
-    if trg1<=100 & trg2==2080,
+    if trg1<=100 & trg2==2080
       trlok      = [[indx(j)+1:1200:indx(j+1)-1200]' [indx(j)+1200:1200:indx(j+1)]'];
       trlok(:,3) = [0:-1200:-1200*(size(trlok,1)-1)]';
       trl        = [trl; trlok];

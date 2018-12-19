@@ -50,7 +50,7 @@ Alternatively, if you already are able to read the data into MATLAB somehow, you
                   % reaction times, correct responses etc. The dimensionality 
                   % is Ntrial*M, where M is an arbitrary number of columns
 
-Each trial can have a different number of samples (i.e. variable length), that is why each trial needs an individual time axis. If your data consists of trials with a fixed length, then each vector data.time{i} is equal to data.time{1}. If your data consists of a single trial, e.g. when it is a continuous recording, there is only a single data.time{1} and single data.trial{1}. The data format is described in more detail in **[/reference/ft_datatype_raw](/reference/ft_datatype_raw)**. The main FieldTrip data structures are jointly described in [this FAQ](/faq/how_are_the_various_data_structures_defined).  
+Each trial can have a different number of samples (i.e. variable length), that is why each trial needs an individual time axis. If your data consists of trials with a fixed length, then each vector data.time{i} is equal to data.time{1}. If your data consists of a single trial, e.g. when it is a continuous recording, there is only a single data.time{1} and single data.trial{1}. The data format is described in more detail in **[ft_datatype_raw](/reference/ft_datatype_raw)**. The main FieldTrip data structures are jointly described in [this FAQ](/faq/how_are_the_various_data_structures_defined).  
 
 If your data represents a continuous recording, you can also consider taking a simple two-step approach by first representing your data into *one long trial* as described above, and then cutting it up into individual trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 

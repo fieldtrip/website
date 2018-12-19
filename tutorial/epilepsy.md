@@ -59,7 +59,7 @@ The coregistration procedure starts with a coarse manual coregistration, followe
 
 {% include image src="/assets/img/tutorial/epilepsy/case1a-coreg-manual.png" width="400" %}
 
-The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface of the **[/reference/ft_defacevolume](/reference/ft_defacevolume)** function.
+The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface of the **[ft_defacevolume](/reference/ft_defacevolume)** function.
 
     cfg = [];
     cfg.translate = [100 0 -60];

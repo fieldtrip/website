@@ -28,9 +28,7 @@ Figure 1 shows a schematic of the steps needed for the calculation of the minimu
 The forward model requires three geometric object
 
 *  A volume conduction model of the head, also known as headmodel.
-
 *  A sourcemodel, we advocate a minimally distorted low-resolution description of the cortical sheet.
-
 *  A geometric description of the sensor-array (electrode positions + referencing information for EEG, coil positions/orientation and balancing information for MEG).
 
 The sourcemodel and headmodel are ideally generated from a subject-specific MRI image. The description of the sensor-array typically is represented in the data (MEG), or needs to be constructed, for example with a Polhemus device (EEG). The construction of the head- and sourcemodels that are needed for the remainder of this tutorial is described in the following tutorial
@@ -56,6 +54,7 @@ For both preprocessing and averaging, we will follow the steps that have been wr
 {% include /shared/tutorial/preprocessing_fc_lp.md %}
 
 {% include /shared/tutorial/preprocessing_fic_lp.md %}
+
 ### Averaging and noise-covariance estimation
 
 The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes averages of all the trials in a data structure and also estimates the noise-covariance. For a correct noise-covariance estimation it is important that you used the cfg.demean = 'yes' option when the function **[ft_preprocessing](/reference/ft_preprocessing)** was applied.

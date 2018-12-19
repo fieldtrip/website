@@ -7,7 +7,7 @@ tags: [faq, audio, video]
 
 In epilepsy recordings it is common to record video along with the EEG. Also for some cognitive tasks, e.g. involving communicative expressions or spoken feedback, it is possible to record video and/or audio along with the EEG or MEG.
 
-FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[/reference/ft_databrowser](/reference/ft_databrowser)** and **[/reference/ft_audiovideobrowser](/reference/ft_audiovideobrowser)**.
+FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[ft_databrowser](/reference/ft_databrowser)** and **[ft_audiovideobrowser](/reference/ft_audiovideobrowser)**.
 
 For both functions you should consider that
 
@@ -26,7 +26,7 @@ This function puts the focus on the audio/video data and allows you to segment i
 
 ### Example
 
-The following code demonstrates the use of **[/reference/ft_databrowser](/reference/ft_databrowser)**. You first specify the EEG dataset and the function that is to be executed upon selecting a piece of EEG data. The *browse_audiovideo* is a small helper function located in fieldtrip/private directory; similar functions exist for a quick spectral analysis or topographic plotting of a selected piece of EEG data.
+The following code demonstrates the use of **[ft_databrowser](/reference/ft_databrowser)**. You first specify the EEG dataset and the function that is to be executed upon selecting a piece of EEG data. The *browse_audiovideo* is a small helper function located in fieldtrip/private directory; similar functions exist for a quick spectral analysis or topographic plotting of a selected piece of EEG data.
 
 In cfg.selcfg you specify the configuration that is needed by *browse_audiovideo*: it contains the audio file, and the header of both data and audio. The header of the data and the audio are extended with the **FirstTimeStamp** and **TimeStampPerSample** fields. The timestamps should be defined the same for synchronous samples in both recordings.
 

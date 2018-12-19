@@ -28,11 +28,8 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 In this tutorial we will consider a **between-trials** experiment, in which we analyze the data of a single subject. The statistical analysis for this experiment we perform both on *axial* and *planar* ERFs. The steps we perform are as follow
 
 *  Preprocessing and time-locked analysis with the **[ft_definetrial](/reference/ft_definetrial)**, **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** functions
-
 *  (Calculation of the planar gradient with the **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions)
-
 *  Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-
 *  Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/bwtrial_stat_procedure_axial.png" %}
@@ -46,13 +43,9 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 Subsequently, we consider a **within-subjects** experiment, in which we compare differences between (planar gradient) ERFs over all subjects. The steps we perform are as follow
 
 *  Preprocessing and time-locked analysis with **[ft_definetrial](/reference/ft_definetrial)**, **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** functions
-
 *  Calculation of the planar gradient with the **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-
 *  Make grandaverage with the **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** function
-
 *  Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-
 *  Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/ft_stat_tutorial2.png" width="550" %}

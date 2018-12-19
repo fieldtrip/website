@@ -106,7 +106,7 @@ The LCMV spatial filter is computed using data in the time domain. However, no t
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. *cfg.hpfilter=yes* and *cfg.hpfreq=30*) prior to computing the covariance and the spatial filter.  
 {% include markup/end %}
 
-The *sourcedata* structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)*
+The *sourcedata* structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)**:
 
 	cfg = [];
 	cfg.viewmode = 'vertical';  % you can also specify 'butterfly'

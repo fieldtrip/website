@@ -13,8 +13,9 @@ So chances are that this page is considerably outdated and irrelevant. The notes
 # Mouse EEG - channel and source analysis
 
 ## Introduction
+
 This tutorial describes how to deal with mouse EEG in the aspect of preprocessing, time-frequency analysis, and visualization layout and how to apply the coregistration steps for making volume conduction model.
-If you are interested in how to measure mouse EEG prior to main process, you can check the nice video tutorial[http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based). You can also find information about how to stimulate mouse brain by optical fiber `<link*>`. If you want to learn how to process EEG data conventionally, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
+If you are interested in how to measure mouse EEG prior to main process, you can check the nice [video tutorial](http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based), which also includes links to information how to stimulate the mouse brain by optical fiber. If you want to learn how to process EEG data conventionally, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
 
 ##  Goals
 
@@ -940,7 +941,7 @@ An more pragmatic solution is to keep the head size the same, but rather to inve
 
 ##  Links to background material
 
-*  video http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based
+*  video: http://www.jove.com/video/2562/high-density-eeg-recordings-freely-moving-mice-using-polyimide-based
 *  mouse EEG PLoS ONE 2013: http://www.ncbi.nlm.nih.gov/pubmed/24244506
 *  monkey ECoG: http://www.ncbi.nlm.nih.gov/pubmed/19436080
 *  rat ECoG part 1: http://www.ncbi.nlm.nih.gov/pubmed/24820913

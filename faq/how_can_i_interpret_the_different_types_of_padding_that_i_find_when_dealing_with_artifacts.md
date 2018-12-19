@@ -29,4 +29,4 @@ The automatic artifacts detection functions (ft_artifact_xxx) make use of an art
 
 See also the [automatic artifact rejection tutorial](http://fieldtrip.fcdonders.nl/tutorial/automatic_artifact_rejection) for more details on the different types of padding that can be used during data preprocessing (artifact padding, trial padding, filter padding).
 
-And see this [FAQ](/faq/how_does_the_filter_padding_in_preprocessing_work) on filter padding in **[/reference/ft_preprocessing](/reference/ft_preprocessing)** when reading data from disk.
+And see this [FAQ](/faq/how_does_the_filter_padding_in_preprocessing_work) on filter padding in **[ft_preprocessing](/reference/ft_preprocessing)** when reading data from disk.

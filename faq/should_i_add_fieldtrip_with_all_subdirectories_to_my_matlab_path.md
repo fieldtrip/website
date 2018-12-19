@@ -49,7 +49,7 @@ If you want to ensure that you have a clean version of the FieldTrip toolbox on 
 All other dependencies will subsequently be added automatically when needed.
 ## How to deal with toolboxes that FieldTrip uses?
 
-In case FieldTrip function needs additional functions (e.g. for reading a specific data format such as CTF, or for performing a specific computation such as runica), it uses the **[/reference/ft_hastoolbox](/reference/ft_hastoolbox)** helper function to determine whether a toolbox is present. If the toolbox is present on your path, it will not add it once more. If the toolbox "xxx" is not yet present, but the directory seems to be present in fieldtrip/external/xxx, then it will add that directory to your path.
+In case FieldTrip function needs additional functions (e.g. for reading a specific data format such as CTF, or for performing a specific computation such as runica), it uses the **[ft_hastoolbox](/reference/ft_hastoolbox)** helper function to determine whether a toolbox is present. If the toolbox is present on your path, it will not add it once more. If the toolbox "xxx" is not yet present, but the directory seems to be present in fieldtrip/external/xxx, then it will add that directory to your path.
 
 The main FieldTrip functions such as **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_freqanalysis](/reference/ft_freqanalysis)** all call the **[ft_defaults](/reference/ft_defaults)** function at the beginning. The **[ft_defaults](/reference/ft_defaults)** function ensures that the required subdirectories such as fieldtrip/preproc and fieldtrip/fileio are added. All other toolboxes in fieldtrip/external will only be added upon request, i.e. only when a function from one of those toolboxes is really needed.
 

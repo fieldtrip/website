@@ -21,10 +21,9 @@ FIXME add list when completed
 
 In the following section we will read and epoch the data. Subsequently we will apply some processing steps, e.g. rejecting bad trials by visual inspection and decomposing the data by means of independent component analysis. The late step will allow us to disregard data components likely reflective for cardiac and ocular activity.
 
-The following steps had been performe
+The following steps had been performed:
 
 *  Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
-
 *  Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
 To run the following section of code you need the original dataset and trial function:  [ download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[ download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [ download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating)
@@ -58,11 +57,11 @@ First we will visual inspection of the data in order to reject trials contaminat
 
 Next, we perform the independent component analysis according to the following step
 
-*  Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**. Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency `< 10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity a sampling rate of >` 100 Hz will be appropriate for most of the cases.
-
+*  Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**.
 *  Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
-
 *  Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
+
+Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency < 10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity, a sampling rate of >100 Hz will be appropriate for most of the cases.
 
 	cfg = [];
 	cfg.resamplefs = 140;

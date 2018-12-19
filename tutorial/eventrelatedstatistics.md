@@ -39,9 +39,7 @@ To do parametric or non-parametric statistics on event-related fields in a withi
 We will perform the following steps to do a statistical test in FieldTrip:
 
 * We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiploter)**, the **[ft_singleplotER](/reference/ft_singleploter)** and the MATLAB plot functions. This step is optional for this tutorial, but in general it is of course good practice to have a feel of what is going on in your data before you decide to do a statistical test.
-
 * To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-
 * We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoploter)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/ft_stat_tutorial2.png" %}
@@ -322,7 +320,9 @@ This method requires you to define neighbouring sensors. FieldTrip has a functio
 	cfg.feedback    = 'yes';                             % show a neighbour plot
 	neighbours      = ft_prepare_neighbours(cfg, GA_FC); % define neighbouring channels
 
-	%*note that the layout and template fields have to be entered because at the earlier stage when ft_timelockgrandaverage is called the field 'grad' is removed. It is this field that holds information about the (layout of the) sensors.
+	% note that the layout and template fields have to be entered because at the earlier stage
+  % when ft_timelockgrandaverage is called the field 'grad' is removed. It is this field that holds
+  % information about the (layout of the) sensors.
 
 	cfg = [];
 	cfg.channel     = 'MEG';

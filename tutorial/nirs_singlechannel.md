@@ -16,6 +16,7 @@ You will also learn how to create basic visualizations of the data such as plott
 Finally, in this tutorial you will compute time-locked averages from the segmented data.
 
 This tutorial does not show how to deal with bad channels as it only operates on single channel data. You can find more information about [how to remove bad channels](/tutorial/nirs_multichannel#remove_bad_channels) and generally how to analyise multiple channels in the [Preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs_multichannel) tutorial.
+
 ## Background
 
 NIRS is an abbreviation of Near-InfraRed Spectroscopy, which is a method to measure the level of oxygenation in the blood flowing through the tissue on which the sensors are placed. It relies on the fact that oxygenated hemoglobin has a different light absorption spectrum than de-oxygenated hemoglobin and hence it has a different colour so you will. Most NIRS systems emit light of 2 wavelengths, typically around 700 and 850 nm, at every source optode and some systems use three wavelengths.
@@ -25,6 +26,7 @@ The detector optode is placed a few centimeters away from the source optode. Tog
 The concentration of oxy- and deoxygenated hemoglobin can not be assessed in absolute terms, which means that all measures will reflect relative changes. Hence, like EEG and MEG, a baseline period is required. This can either be time-locked to the events that are provided to the participant (trial-by-trial baselines) which implies functional NIRS (fNIRS) or measured in a somewhat longer period prior or after the recording of interest (NIRS).
 
 The recorded and later processed fNIRS signal is comparable to fMRI in that sense that a hemodynamic response function (HRF) can be obtained, but with a higher temporal resolution. It is therefore, at least in theory, possible to measure the initial dip in the curve. In contrast to fMRI, the spatial resolution however is much poorer, and typically, we mainly record from the surface of the brain. As a result, plotting will often resemble EEG. The temporal resolution of EEG is of course much higher, but, the positive side of fNIRS is that the measured signal can only stem from the region in-between the source and detector, which need not be the case in EEG due to smearing. As such, fNIRS is a promising method for measuring brain activity in populations that cannot be tested in an fMRI scanner (think of young infants or people with cochlear implants who would otherwise display larger artifacts in regions that might be of critical interest), and/or for tasks that require more movements than the scanner would allow. Do keep in mind though that blood pressure can change with your task and thereby affects the measured signal as well.
+
 ## The dataset used in this tutorial
 
 In this dataset the motor cortex was probed using an Oxymon MK III system of Artinis Medical Systems. The system was placed over the motor cortex, and subsequently the subject was asked to perform finger tapping. Alongside the recordings from the brain, we recorded when the participant was doing what in a so-called event channel. In that channel, an 'A' was recorded at the moment the participant started with the motor task, and a 'B' was recorded whenever the participant stopped tapping. This motor task was repeated for a total of 12 times and all data was saved, including the event channel, in an .oxy3 file.
@@ -212,7 +214,7 @@ The question mark indicates that we are not sure about the event triggers, and t
 In the command window, you will see that 24 events were found, and two types of events were used, namely event 'A' and event 'B'. In case you recorded your files with the Artinis Oxymon system, and you
 did not add events during the measurement, you can include them here, see FAQ.
 
-Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event ‘A’) and ending 35 seconds after ‘A’ (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)*
+Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event ‘A’) and ending 35 seconds after ‘A’ (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)**:
 
 	cfg.trialdef.eventtype  = 'event';
 	cfg.trialdef.eventvalue = 'A';
@@ -285,6 +287,6 @@ Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seco
 
 Here, we explained the pre-processing steps for a single channel in an fNIRS dataset using FieldTrip. If you would like to read further on how to pre-process an fNIRS dataset with multiple channels, you can continue with the [fNIRS multi-channel tutorial](/tutorial/nirs_multichannel). When you have more questions about the topic of any tutorial, do not forget to check the [frequently asked questions](/faq) and the [example scripts](/example).
 
-Here is the other documentation on this wiki that relates to fNIRS:
+See also the other documentation that relates to fNIRS:
 
 {% include seealso tag1="nirs" %}

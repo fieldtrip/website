@@ -24,8 +24,8 @@ In visual artifact detection, the user visually inspects the data and identifies
 
 The functions that are available for visual artifact detection are
 
-    * **[ft_rejectvisual](/reference/ft_rejectvisual)**
-    * **[ft_databrowser](/reference/ft_databrowser)**
+* **[ft_rejectvisual](/reference/ft_rejectvisual)**
+* **[ft_databrowser](/reference/ft_databrowser)**
 
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by either showing all channels at once (per trial) or showing all trials at once (per channel) or by showing a summary of all channels and trials. Using the mouse, you can select trials and/or channels that should be removed from the data. This function directly returns the data with the noise parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
@@ -132,15 +132,15 @@ After quitting, the trials/channels will be rejected from the data set and the c
 This operation could be repeated for each of the metrics, by clicking on the different radio buttons 'var', 'min', 'max', etc.
 
 {% include markup/info %}
-The summary mode in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** has been primarily designed to visually screen for artefacts in channels of a consistent type, i.e. in this example only for the axial MEG gradiometers.
+The summary mode in **[ft_rejectvisual](/reference/ft_rejectvisual)** has been primarily designed to visually screen for artefacts in channels of a consistent type, i.e. in this example only for the axial MEG gradiometers.
 
 If you have EEG data, the EOG channels have the same physical units and very similar amplitudes and therefore can be visualised simultaneously.
 
 If you have data from a 306-channel Neuromag system, you will have both magnetometers and planar gradiometers, which have different physical units and rather different numbers. Combining them in a single visualisation is likely to result in a biassed selection, either mainly relying on the magnetometers or the gradiometers being used to find artefacts.
 
-You can use the following options in **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** to apply a scaling to the channels prior to visualisation: *cfg.eegscale, cfg.eogscale, cfg.ecgscale, cfg.emgscale, cfg.megscale, cfg.gradscale* and *cfg.magscale*.    
+You can use the following options in **[ft_rejectvisual](/reference/ft_rejectvisual)** to apply a scaling to the channels prior to visualisation: *cfg.eegscale, cfg.eogscale, cfg.ecgscale, cfg.emgscale, cfg.megscale, cfg.gradscale* and *cfg.magscale*.    
 
-You can also call **[/reference/ft_rejectvisual](/reference/ft_rejectvisual)** multiple times, once for every type of channels in your data. If you use *cfg.keepchannel='yes'*, channels will not be removed from the data on the subsequent calls. For example:
+You can also call **[ft_rejectvisual](/reference/ft_rejectvisual)** multiple times, once for every type of channels in your data. If you use *cfg.keepchannel='yes'*, channels will not be removed from the data on the subsequent calls. For example:
 
     cfg = [];
     cfg.method = 'summary'

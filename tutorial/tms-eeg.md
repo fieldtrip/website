@@ -409,6 +409,7 @@ If you have downloaded comp_tms.mat, you can load the data with the following co
 	save('comp_tms','comp_tms','-v7.3');
 
 {% include markup/warning %}
+
 **Memory issues**
 
 If you are having memory issues running the ICA you can downsample your data beforehand. Please be aware that prior to down sampling your data is filtered using a low pass FIR filter at roughly half the target sampling frequency (for example, if you downsample to 1000Hz, your data will be lowpass filtered at 500Hz). Use the following code to downsample your dat

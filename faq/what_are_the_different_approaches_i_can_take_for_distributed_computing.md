@@ -48,7 +48,7 @@ To facilitate distributed computing on the compute cluster, we have implemented 
     end
     rawdata = qsubcellfun(@ft_preprocessing, cfg);
 
-See **[/reference/qsubcellfun](/reference/qsubcellfun)**, **[/reference/qsubfeval](/reference/qsubfeval)** and **[/reference/qsubget](/reference/qsubget)** for details.
+See **[qsubcellfun](/reference/qsubcellfun)**, **[qsubfeval](/reference/qsubfeval)** and **[qsubget](/reference/qsubget)** for details.
 
 ### FieldTrip peer computing toolbox
 
@@ -66,7 +66,7 @@ The syntax you would use to distribute jobs with the peer system is identitcal t
     end
     rawdata = peercellfun(@ft_preprocessing, cfg);
 
-See **[/reference/peercellfun](/reference/peercellfun)**, **[/reference/peerfeval](/reference/peerfeval)** and **[/reference/peerget](/reference/peerget)** for details.
+See **[peercellfun](/reference/peercellfun)**, **[peerfeval](/reference/peerfeval)** and **[peerget](/reference/peerget)** for details.
 
 ### FieldTrip engine toolbox
 

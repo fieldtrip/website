@@ -21,17 +21,17 @@ Also, we will explore the connectomes in more detail, and investigate how the sp
 
 ## Procedure
 
-The data analyses will follow the following step
+The data analyses will follow the following steps:
 
-   * Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and cut into overlapping segments with **[ft_redefinetrial](/reference/ft_redefinetrial)**.
-   * Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
-   * Construct a forward model using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
-   * Compute spatial filters and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
-   * Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
-   * Compute "all-to-all" connectivity between dipole locations using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
-   * Reduce the size of the connectivity matrix using a parcellation-approach, with **[ft_sourceparcellate](/reference/ft_sourceparcellate)**.
-   * Compute "node degree" using **[ft_networkanalysis](/reference/ft_networkanalysis)**.
-   * Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
+ * Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and cut into overlapping segments with **[ft_redefinetrial](/reference/ft_redefinetrial)**.
+ * Compute sensor level power spectra and determine peak frequency using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotER](/reference/ft_multiplotER)**.
+ * Construct a forward model using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
+ * Compute spatial filters and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**.
+ * Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
+ * Compute "all-to-all" connectivity between dipole locations using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
+ * Reduce the size of the connectivity matrix using a parcellation-approach, with **[ft_sourceparcellate](/reference/ft_sourceparcellate)**.
+ * Compute "node degree" using **[ft_networkanalysis](/reference/ft_networkanalysis)**.
+ * Visualize the results, with **[ft_sourceplot](/reference/ft_sourceplot)**.
 
 ## Preprocessing
 

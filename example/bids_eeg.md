@@ -73,7 +73,7 @@ In this case it is not needed to convert the data, since the EEGLAB .set format 
 
 ### Step 3a: create the sidecar files for each subject
 
-The **[/reference/data2bids](/reference/data2bids)** function will read each EEG recording and determine the metadata that is available in the file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
+The **[data2bids](/reference/data2bids)** function will read each EEG recording and determine the metadata that is available in the file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
 
 	%% this is an example that starts with data in a supported format
 
@@ -180,7 +180,7 @@ Here I am copying the single example file to each of the subjects. This would no
 
 ### Step 3b: convert the data and create the sidecar files for each subject
 
-The **[/reference/data2bids](/reference/data2bids)** function will get the metadata that is available from the original file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
+The **[data2bids](/reference/data2bids)** function will get the metadata that is available from the original file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
 
 Besides creating the sidecar files with the metadata, in this step we are also converting the data from EEGLAB .set format into BrainVision format. This is (along with EDF) the preferred format for EEG data in BIDS, since it is widely supported by many EEG analysis software packages.
 

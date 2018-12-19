@@ -18,15 +18,15 @@ This particular experiment deals with an yet frequently exploited experimental d
 
 ## Procedure
 
-The tutorial will follow the step
+The tutorial will follow the steps:
 
-   * prepare a 2D electrode layout for visualisation that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
-   * load data into MATLAB and assemble it into a format FieldTrip can deal with
-   * define a trial sturcture and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
-   * append the data into a common dataset **[ft_appenddata](/reference/ft_appenddata)** apply an independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)** after which we will plot and explore some components using **[ft_databrowser](/reference/ft_databrowser)**
-   * Compute time-frequency representaions of power and plot using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)** respectively.
-   * Compute coherence between reference electrode and the remaining electrodes using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
-   * Perform networkanalysis using **[ft_networkanalysis](/reference/ft_networkanalysis)**
+ * prepare a 2D electrode layout for visualisation that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
+ * load data into MATLAB and assemble it into a format FieldTrip can deal with
+ * define a trial sturcture and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
+ * append the data into a common dataset **[ft_appenddata](/reference/ft_appenddata)** apply an independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)** after which we will plot and explore some components using **[ft_databrowser](/reference/ft_databrowser)**
+ * Compute time-frequency representaions of power and plot using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)** respectively.
+ * Compute coherence between reference electrode and the remaining electrodes using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
+ * Perform networkanalysis using **[ft_networkanalysis](/reference/ft_networkanalysis)**
 
 ### Preprocessing
 

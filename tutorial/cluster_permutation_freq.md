@@ -30,11 +30,8 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 In this tutorial we will consider a **between-trials** experiment, in which we analyze the data of a single subject. For the statistical analysis for this experiment we calculate the planar TFRs. The steps we perform are as follow
 
 *  Preprocessing with the **[ft_definetrial](/reference/ft_definetrial)** and with the **[ft_preprocessing](/reference/ft_preprocessing)** functions
-
 *  Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-
 *  Permutation test with the **[ft_freqstatistics](/reference/ft_freqstatistics)** function
-
 *  Plotting the result using the **[ft_freqdescriptives](/reference/ft_freqdescriptives)** and the **[ft_clusterplot](/reference/ft_clusterplot)** functions
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planar_ficvsfc.png" %}
@@ -44,11 +41,8 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 Subsequently we will consider a **within-trials** experiment, in which we compare the pre-stimulus baseline to the post-stimulus activity time window. The steps we perform are as follows
 
 *  Preprocessing with **[ft_definetrial](/reference/ft_definetrial)** and with **[ft_preprocessing](/reference/ft_preprocessing)** and selecting the appropriate time windows with the **[ft_redefinetrial](/reference/ft_redefinetrial)** function
-
 *  Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-
 *  Permutation test with the **[ft_freqstatistics](/reference/ft_freqstatistics)** function
-
 *  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planarfic_actvsbl2.png" %}
@@ -58,13 +52,9 @@ Subsequently we will consider a **within-trials** experiment, in which we compar
 Finally we will consider a **within-subjects** experiment with the following step
 
 *  Preprocessing with **[ft_definetrial](/reference/ft_definetrial)** and with **[ft_preprocessing](/reference/ft_preprocessing)**
-
 *  Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-
 *  Calculation of the grandaverage with the **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)** function
-
 *  Permutation test with **[ft_freqstatistics](/reference/ft_freqstatistics)**
-
 *  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_ga_planar_ficvsfc.png" %}
@@ -399,7 +389,7 @@ From inspection of stat.posclusters and stat.negclusters, we observe that there 
 
 ### Plotting the results
 
-Plot again with **[ft_clusterplot](/reference/ft_clusterplot)*
+Plot again with **[ft_clusterplot](/reference/ft_clusterplot)**:
 
     cfg = [];
     cfg.alpha  = 0.025;
@@ -424,7 +414,7 @@ In this tutorial, we showed how to do non-parametric statistical test, cluster-b
 
 If you are interested in parametric tests in FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial. If you are interested in how to do the same statistics on event-related fields, you can read the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) tutorial.
 
-If you would like to read more about issues related to statistical analysis, you can read the following as wel
+If you would like to read more about issues related to statistical analysis, you can read the following as well:
 
 FAQ
 {% include seealso tag1="faq" tag2="statistics" %}

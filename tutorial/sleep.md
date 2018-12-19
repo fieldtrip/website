@@ -873,7 +873,7 @@ This should give you a basis of also recognizing other data and see that recordi
 Interesting to continue the analyis if you want to go further:
 
 *  do the analyis on data with multiple EEG channels and topographic plots (e.g. [Time-frequency analysis of combined MEG/EEG](/tutorial/natmeg/timefrequency))
-*  using **[/reference/ft_freqgrandaverage](/reference/ft_freqgrandaverage)** and **[/reference/ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to average the results of different recordings/subjects
+*  using **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)** and **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to average the results of different recordings/subjects
 *  Practicing or trying to automatically find different kind of events, e.g. rapid eye movements and blinks (in the first derivative of a filtered EOG signal), epileptic spikes have similar properties to slow waves (but have different amplitudes and shapes) ...
 *  find the timelocking/co-occurrence between different events (e.g. spindles that occur at the same time as slow waves.) and only look at the ones that occur together or the ones that do not.
 

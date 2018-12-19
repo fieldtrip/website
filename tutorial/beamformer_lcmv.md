@@ -150,7 +150,7 @@ The first step in constructing the forward model is to find the brain surface fr
 	cfg.funparameter       = 'brain';
 	ft_sourceplot(cfg, segmentedmri);
 
-Now prepare the head model from the segmented brain surfac
+Now prepare the head model from the segmented brain surface:
 
 	% compute the subject's headmodel/volume conductor model
 	cfg                = [];
@@ -168,7 +168,7 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 
 ### Source model
 
-Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). In this tutorial, we continue with non-normalized grid point
+Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). In this tutorial, we continue with non-normalized grid points:
 
 	% create the subject specific grid
 	hdr                 = ft_read_header('SubjectSEF.ds');
@@ -188,7 +188,7 @@ Now prepare the source model. Here one has the option to make a 'normalized grid
 
 ### Leadfield
 
-Combine all the information into the leadfield matri
+Combine all the information into the leadfield matrix:
 
 	% create leadfield
 	hdr                  = ft_read_header('SubjectSEF.ds');
