@@ -59,17 +59,17 @@ Trigger events were recorded in the ADC channels 1 (standards) and 2 (deviants).
 
 ## Procedure
 
-Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. In the [single channel](/tutorial/nirs_singlechannel) tutorial we introduced you to one order of analysis steps. The order of steps for this specific tutorial is as follows (see the figure below for an overview
+Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. In the [single channel](/tutorial/nirs_singlechannel) tutorial we introduced you to one order of analysis steps. The order of steps for this specific tutorial is as follows (see the figure below for an overview):
 
-*  read data & downsample
-*  remove bad channels
-*  define epochs
-*  transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
-*  separate functional from systemic responses (signal conditioning)
-*  filter; i.e. temporal processing
-    * subtract reference channel; i.e. spatial processing
-    * anti-correlate oxyHb/deoxyHb-traces per channel
-*  plot results
+* read data & downsample
+* remove bad channels
+* define epochs
+* transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
+* separate functional from systemic responses (signal conditioning)
+* filter; i.e. temporal processing
+* subtract reference channel; i.e. spatial processing
+* anti-correlate oxyHb/deoxyHb-traces per channel
+* plot results
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_multichannel_analysis_steps.png" width="400" %}
 
@@ -332,7 +332,7 @@ Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now
 	cfg                 = [];
 	cfg.target          = {'O2Hb', 'HHb'};
 	cfg.channel         = 'nirs'; % e.g. one channel incl. wildcards, you can also use ?all? to select all nirs channels
-	data_trans          = ft_nirs_transform_ODs(cfg, data_sci);
+	data_conc           = ft_nirs_transform_ODs(cfg, data_sci);
 
 Check the data again using **[ft_singleplotER](/reference/ft_singleplotER)**. You should see a clear heartbeat in the signal.
 
@@ -348,8 +348,8 @@ The heartbeat is not a signal that we are currently interested in, although you 
 	cfg                 	= [];
 	cfg.lpfilter        	= 'yes';
 	cfg.lpfreq          	= 0.8;
-	cfg.bpfilttype          = 'fir';
-	data_lpf            	= ft_preprocessing(cfg,data_trans);
+	cfg.bpfilttype        = 'fir';
+	data_lpf            	= ft_preprocessing(cfg, data_conc);
 
 The changes in average concentration now reveals a perfect example of the hemodynamic response. No heartbeat, the signal starts to rise at stimulus onset, peaks at around 4 s, and then drops again. Note that the absolute values also make sense (0.37 for the peak).
 
