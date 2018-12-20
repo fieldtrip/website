@@ -6,13 +6,14 @@ tags: [tutorial, beamforming, natmeg, meg+eeg, MEG-audodd]
 # Beamforming oscillatory responses in combined MEG/EEG data
 
 ## Introduction
-In this tutorial we will continue working on the [dataset](/tutorial/natmeg/dataset) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
+
+In this tutorial we will continue working on the [dataset](/tutorial/natmeg/meg_audodd) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
 
 In this tutorial you will learn about applying beamformer techniques in the frequency domain.  You will learn how to compute appropriate time-frequency windows, an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline.  Finally, you will be shown several options for plotting the results overlaid on a structural MRI.
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful.
 
-This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/shared/virtual_sensors) for an example of this).
+This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
@@ -448,8 +449,8 @@ If you've made it this far, perhaps you could try beamforming a different time w
 
 Beamforming source analysis in the frequency domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as CSD matrix regularization.  Finally, the results were plotted on an orthogonal view.
 
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/shared/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
-If you are doing a group study where you want the grid points to be the same over all subjects, [ see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
+Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
+If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 Related documentation:
 {% include seealso tag1="source" tag2="faq" %}

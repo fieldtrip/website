@@ -189,7 +189,7 @@ The trials belonging to one condition will now be averaged with the onset of the
 
 ### Data rereferencing
 
-We should rereference the averaged EEG data for later use in the inverse problem,  [ inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem ).
+We should re-reference the averaged EEG data for later use in the inverse problem, [inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem ).
 
 	cfg               = [];
 	cfg.reref         = 'yes';
@@ -364,10 +364,10 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 *figure 7: Representation of the P20/N20 component using the function, ft_topoplotER.*
 ## Summary and suggested further reading
 
-In this tutorial we learned how to look at EEG data, define trials based on trigger codes, preprocess the data (including filtering, artifact rejection, re-referencing, and average the data to SEPs). We then learned how to display the results in terms of their timecourses as well as their corresponding topographies.  
+In this tutorial we learned how to look at EEG data, define trials based on trigger codes, preprocess the data (including filtering, artifact rejection, re-referencing, and average the data to SEPs). We then learned how to display the results in terms of their time courses as well as their corresponding topographies.  
 
-The next step of workshop will be the source reconstruction among different head models and different inverse methods with [ forward problem](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem ) and
-[ inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem ).
+The next step of workshop will be the source reconstruction among different head models and different inverse methods with [forward problem](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem ) and
+[inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem ).
 
 -----
 This tutorial was last tested on 12-06-2018 by Simon Homölle on OS X El Capitan 10.11.5, Matlab 2015b.

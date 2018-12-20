@@ -32,7 +32,7 @@ Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of 
 
 If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the *trl* matrix. These will be added to the data in the *.trialinfo* field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.   
 
-{% include /shared/tutorial/natmeg/dataset.md %}
+{% include /shared/tutorial/natmeg/meg_audodd.md %}
 
 ## Browsing the data prior to preprocessing
 
@@ -137,7 +137,7 @@ The following steps are taken in the MEG section of the tutorial:
 
 Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the segments of data that will be read in for preprocessing. Trials are defined by their *begin* and *end*-sample in the data file and each trial has an *offset* that defines where the relative t=0 point (usually the moment of stimulus onset, i.e. on the stimulus-trigger) is for that trial.
 
-The MEG dataset that we use in this tutorial is available as   [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [ trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/trialfun_oddball_stimlocked.m) to a directory that is on your MATLAB path.
+The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/trialfun_oddball_stimlocked.m) to a directory that is on your MATLAB path.
 
 We will now do the trial definition for both the standard and deviant trial
 
@@ -626,7 +626,7 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 {% include image src="/assets/img/tutorial/natmeg/preprocessing/natmeg_erp2.png" width="650" %}
 
-*Figure: The event related potentials plotted for three conditions for channel EEG020 using **[ ft_singleplotER](/reference/ft_singleplotER)***
+*Figure: The event related potentials plotted for three conditions for channel EEG020 using **[ft_singleplotER](/reference/ft_singleplotER)***
 
 {% include image src="/assets/img/tutorial/natmeg/preprocessing/natmeg_erf2.png" width="650" %}
 

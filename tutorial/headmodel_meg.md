@@ -33,7 +33,7 @@ If an anatomical MRI is not available for your MEG subject, you can consider to 
 
 ## Procedure
 
-We will create a head model based on the anatomical mri of the [tutorial data set](/tutorial/shared/dataset) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). The pipeline is depicted in Figure 2.
+We will create a head model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). The pipeline is depicted in Figure 2.
 
 *  First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
 *  then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;

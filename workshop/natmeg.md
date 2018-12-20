@@ -21,7 +21,7 @@ You can watch all lectures on NatMEG's [online lectures page](http://natmeg.se/w
 
 The following tutorials will be covered in the hands-on sessions during the MEG-EEG FieldTrip workshop at NatMEG in Stockholm, Sweden (September 29th - October 3rd, 2014).
 
-We will use the same dataset throughout the workshop. Please familiarize yourself with the [experiment](/tutorial/natmeg/dataset) we recorded.
+We will use the same dataset throughout the workshop. Please familiarize yourself with the [experiment](/tutorial/natmeg/meg_audodd) we recorded.
 
 You can download the dataset from our [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg).
 

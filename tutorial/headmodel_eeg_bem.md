@@ -33,7 +33,7 @@ If you do not have an MRI, but do have a measurement of the scalp surface or ele
 
 Here, we will work towards a  volume conduction model of the head based on the boundary element method (BEM). The BEM model assumes realistic information (of a certain degree) about the interface between the skin, skull and brain surfaces. First, we will use an anatomical MRI to extract these surfaces. This procedure is termed **segmentation**. Following the segmentation, a description of each surface using vertices and triangles is constructed. Finally, the BEM model will be computed.
 
-The anatomical mri of the [tutorial data set](/tutorial/shared/dataset) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Although we did not record EEG in this particular language study, we will nevertheless use it as example MRI to make an EEG volume conduction model.  
+The anatomical mri of the [tutorial data set](/tutorial/meg_language) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Although we did not record EEG in this particular language study, we will nevertheless use it as example MRI to make an EEG volume conduction model.  
 
 *  First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
 *  then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;

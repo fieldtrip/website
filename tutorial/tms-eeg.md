@@ -641,7 +641,7 @@ Now that everything we would like to interpolate has been replaced by nans we ca
 
 	data_tms_clean_avg = ft_timelockanalysis(cfg, data_tms_clean);
 
-We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it [ here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_avg.mat) and load it wit
+We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_avg.mat) and load it wit
 
 	load data_tms_avg;
 

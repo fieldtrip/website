@@ -14,7 +14,7 @@ The aim of this tutorial is to solve the EEG and MEG forward problems using the 
 
 ## Procedure
 
-As already mentioned, the goal of this session is to solve the EEG and MEG forward problem, more precisely we want to compute EEG and MEG leadfields so that the inverse problem can be solved in the next session ([ inverse problem](http://www.fieldtriptoolbox.org/workshop/ohbm2018/inverse )).
+As already mentioned, the goal of this session is to solve the EEG and MEG forward problem, more precisely we want to compute EEG and MEG leadfields so that the inverse problem can be solved in the next session ([inverse problem](http://www.fieldtriptoolbox.org/workshop/ohbm2018/inverse )).
 In order to compute leadfields, there are five main steps that have to be followed.
  1.  **create the __mesh__**: in this step the MRI is loaded and processed, the segmentation is performed and finally the mesh is generated;
  2.  **create the __head-model__**: in this step the geometrical (mesh) and electrical (tissue conductivities) features are merged together;
@@ -324,7 +324,7 @@ Realign the electrodes in the file *elec_shifted.mat* to the head-model you crea
 #### Exercise 3
 
 {% include markup/info %}
-Compute the EEG and MEG forward solution using the Boundary Element Method (BEM), e.g., following  [ this tutorial](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem ).
+Compute the EEG and MEG forward solution using the Boundary Element Method (BEM), e.g., following  [this tutorial](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem ).
 {% include markup/end %}
 
 ## Summary and Comments

@@ -4,3 +4,6 @@
 - name:  MEG virtual channels and seed-based connectivity
   link:  /tutorial/chieti/virtualchannel
 
+- name:  Details of the tMEG Motor task dataset
+  link:  /tutorial/hcp_motort
+

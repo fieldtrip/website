@@ -79,7 +79,7 @@ MEG neighbour templates are based on [automatic, symmetric triangulation](http:/
 *  Neuromag306, only magnetometer (neuromag306mag_neighb.mat)
 
 {% include markup/info %}
-Please see our FAQ for [ why there are multiple neighbour templates for the neuromag306 system](http://fieldtrip.fcdonders.nl/faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system)
+Please see our FAQ for [why there are multiple neighbour templates for the neuromag306 system](http://fieldtrip.fcdonders.nl/faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system)
 {% include markup/end %}
 
 ### Yokogawa systems

@@ -1,10 +1,10 @@
 ## Computation of virtual MEG channels in source-space
 
-[In the extended beamformer tutorial](/tutorial/beamformingextended) we identified two potentially interesting regions, one which produces visual gamma-band activity and the other which is coherent with the EMG sensors. If you want to continue analysing those two regions it is pretty unhandy to juggle around with the two source structures all the time. Also, using the DICS method you do not get a time-resolved signal of these sources. In the following example we will show how you can create virtual channels out of these two sources, which can then be used for further analysis, for example connectivity analysis.
+[In the extended beamformer tutorial](/tutorial/beamformingextended) we identified two potentially interesting regions, one which produces visual gamma-band activity and the other which is coherent with the EMG sensors. If you want to continue analyzing those two regions it is pretty unhandy to juggle around with the two source structures all the time. Also, using the DICS method you do not get a time-resolved signal of these sources. In the following example we will show how you can create virtual channels out of these two sources, which can then be used for further analysis, for example connectivity analysis.
 
 ### Compute the spatial filter for the region of interest
 
-After having done all steps in [ the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures and a headmodel (you can also download these from [FieldTrip ftp server (source_coh_lft.mat, source_diff.mat, hdm.mat, sourcemodel.mat, data_cmb.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/)
+After having done all steps in [the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures and a headmodel (you can also download these from [FieldTrip ftp server (source_coh_lft.mat, source_diff.mat, hdm.mat, sourcemodel.mat, data_cmb.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/)
 
     data_cmb
 

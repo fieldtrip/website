@@ -9,7 +9,7 @@ This page is part of the documentation series of the FieldTrip buffer for realti
 
  1.  description and general [overview of the buffer](/development/realtime/buffer_overview),
  2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
- 3.  the [ reference implementation](/development/realtime/reference_implementation), and
+ 3.  the [reference implementation](/development/realtime/reference_implementation), and
  4.  specific [implementations](/development/realtime/implementation) that interface with acquisition software, or software platforms.
  5.  the [getting started](/getting_started/realtime) takes you through the first steps of real-time data streaming and analysis.
 

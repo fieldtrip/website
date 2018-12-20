@@ -13,8 +13,8 @@
 - name:  Dipole fitting of combined MEG/EEG data
   link:  /tutorial/natmeg/dipolefitting
 
-- name:  Description of the NatMEG dataset
-  link:  /tutorial/natmeg/dataset
+- name:  Details of the auditory oddball MEG dataset
+  link:  /tutorial/natmeg/meg_audodd
 
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/natmeg/timefrequency

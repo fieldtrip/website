@@ -52,7 +52,7 @@ To prepare for the hands-on sessions, you should watch the following online vide
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
-version of fieldtrip. The tutorial data together with the FieldTrip version can be downloaded [ here](https://depot.uni-konstanz.de/cgi-bin/exchange.pl?g=s38xv3f76w)).
+version of fieldtrip. The tutorial data together with the FieldTrip version can be downloaded [here](https://depot.uni-konstanz.de/cgi-bin/exchange.pl?g=s38xv3f76w)).
 
 1.  Unzip the FieldTrip-Tutorial-Tübingen.zip file.
 2.  Unzip the fieldtrip-master.zip file.
