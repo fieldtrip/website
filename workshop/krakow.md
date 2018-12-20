@@ -62,7 +62,7 @@ i.e. tutorial/eventreltedaveraging.
 
 The tutorials that we will use during this toolkit are
 
-**Tuesday morning:**  Please begin with [Event related averaging](/tutorial/eventrelatedaveraging) going up to and including the axial gradiometer section only. It is helpful to read [The data set used in this tutorial](/tutorial/shared/dataset) prior to running the tutorial.  When you reach the section on planar gradiometer, switch then to this EEG example: [EEG data: reading-in trials and pre-processing](/tutorial/preprocessing_erp). For this EEG example, you will also need the BrainVision data provided on the USB sticks.
+**Tuesday morning:**  Please begin with [Event related averaging](/tutorial/eventrelatedaveraging) going up to and including the axial gradiometer section only. It is helpful to read [The data set used in this tutorial](/tutorial/meg_language) prior to running the tutorial.  When you reach the section on planar gradiometer, switch then to this EEG example: [EEG data: reading-in trials and pre-processing](/tutorial/preprocessing_erp). For this EEG example, you will also need the BrainVision data provided on the USB sticks.
 
 **Tuesday afternoon:** [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
 

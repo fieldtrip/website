@@ -50,7 +50,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 * [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
 * [Source reconstruction of event-related fields using minimum-norm estimation](/tutorial/minimumnormestimate)
 * [Dipole fitting of combined MEG/EEG data](/tutorial/natmeg/dipolefitting)
-* [Computation of virtual MEG channels in source-space](/tutorial/shared/virtual_sensors)
+* [Computation of virtual MEG channels in source-space](/tutorial/virtual_sensors)
 
 ## Analysis of intracranial electrophysiological recordings
 

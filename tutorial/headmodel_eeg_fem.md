@@ -37,7 +37,7 @@ If an anatomical MRI is not available for your EEG subject, you can consider to 
 
 Here, we will work towards a  volume conduction model of the head based on the finite element method (FEM). The FEM model assumes realistic information where the skin, skull, csf, gray and white matter is in the head. First, we will use an anatomical MRI to extract these tissue. This procedure is termed **segmentation**. Following the segmentation, a geometrical description of the head will be created using hexahedrons. Finally, the FEM model will be computed.
 
-The anatomical mri of the [tutorial data set](/tutorial/shared/dataset) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+The anatomical mri of the [tutorial data set](/tutorial/meg_language) is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_fem/hedmodel_fem2.png" width="200" %}
 

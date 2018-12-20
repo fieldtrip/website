@@ -22,6 +22,9 @@
 - name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
+- name:  Details of the MEG language semantics dataset
+  link:  /tutorial/meg_language
+
 - name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 

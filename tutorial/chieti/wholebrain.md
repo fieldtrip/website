@@ -8,10 +8,14 @@ tags: [chieti, HCP-motort]
 ## Introduction
 
 {% include markup/info %}
-This tutorial contains hands-on material that we use for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
+This tutorial contains hands-on material that we used for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 {% include markup/end %}
 
-In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org). The experiment in which this data was acquired is described in detail [here](/tutorial/shared/hcp_motort). This tutorial follows on the [MEG virtual channels and seed-based connectivity](/tutorial/chieti/virtualchannel) tutorial and continues with the data that has already partially been computed there.
+In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org).
+
+{% include /shared/tutorial/hcp_motort.md %}
+
+This tutorial follows on the [MEG virtual channels and seed-based connectivity](/tutorial/chieti/virtualchannel) tutorial and continues with the data that has already partially been computed there.
 
 ## Procedure
 

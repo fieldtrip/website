@@ -7,13 +7,13 @@ tags: [tutorial, meg, freq, source, headmodel, mri, plot, MEG-language]
 
 ## Introduction
 
-In this tutorial we will continue working on the [dataset](/tutorial/shared/dataset) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
+In this tutorial we will continue working on the [dataset](/tutorial/meg_language) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
 
 In this tutorial you will learn about applying beamformer techniques in the frequency domain.  You will learn how to compute appropriate time-frequency windows, an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline.  Finally, you will be shown several options for plotting the results overlaid on a structural MRI.
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful.
 
-This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/shared/virtual_sensors) for an example of this).
+This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.  

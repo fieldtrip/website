@@ -1,3 +1,5 @@
+## Details on the multimodal faces dataset
+
 The "mmfaces" dataset contains EEG, MEG, functional MRI and structural MRI data from 16 subjects who undertook multiple runs of a simple task performed on a large number of Famous, Unfamiliar and Scrambled faces. It is described in more detail in [doi:10.3389/fnhum.2011.00076](http://journal.frontiersin.org/Journal/10.3389/fnhum.2011.00076/abstract).
 
 The complete dataset is available from the [MRC-CBU ftp server](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/).

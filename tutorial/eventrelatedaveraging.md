@@ -7,7 +7,7 @@ tags: [tutorial, meg, timelock, preprocessing, plot, MEG-language]
 
 ## Introduction
 
-This tutorial works on the MEG-language-semantics dataset, you can click [here](/tutorial/shared/dataset) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([ trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)).
+This tutorial works on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([ trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)).
 
 In this tutorial you can find information about how to compute an event related potential (ERP)/ event related field (ERF) and how to calculate the planar gradient (in case the MEG data was acquired by axial-gradiometer sensors). You can find also information in this tutorial about how to visualize the results of the ERP/ERF analysis, and about how to average the results across subjects.
 

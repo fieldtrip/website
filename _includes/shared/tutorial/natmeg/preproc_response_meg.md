@@ -4,7 +4,7 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 As with the previous preprocessing tutorial, we will preprocess the MEG and EEG data separately. We will start with MEG magnetometers, then move to EEG before looking at the planar gradiometers in MEG.
 
-The MEG dataset that we use in this tutorial is available as   [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [ trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
+The MEG dataset that we use in this tutorial is available as  [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
 
 ### Read trials
 
