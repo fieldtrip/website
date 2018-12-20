@@ -1,5 +1,5 @@
 ---
-title: Details of the MEG language semantics dataset
+title: Details of the MEG language dataset
 tags: [MEG-language]
 ---
 
