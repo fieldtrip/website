@@ -9,7 +9,7 @@ Together with Jean-Michel Badier, Christian Benar ([MEG laboratory in Marseille]
 -   Who: Jan-Mathijs Schoffelen and Cristiano Micheli, with help from local staff
 -   When: 21-22 November 2016
 -   For whom: The number of places at this workshop is limited, and reserved for researchers associated with Inserm or CNRS. Inserm people can apply through [this link](https://www.sirene.inserm.fr). CNRS people need to fill in some paperwork. For more information, please contact: demat-form.dr-marseille@inserm.fr
--   Also see [ this link](http://meg.univ-amu.fr/images/Fiche_annonce_-_Connectivité_en_MEG_et_EEG_-_2016.pdf) for more information (in French).
+-   Also see [this link](http://meg.univ-amu.fr/images/Fiche_annonce_-_Connectivité_en_MEG_et_EEG_-_2016.pdf) for more information (in French).
 -   Where: GLM CNRS Joseph Aiguier - Marseille.
 
 We will keep this page up to date and post new information here when available.

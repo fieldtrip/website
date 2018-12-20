@@ -204,7 +204,7 @@ Note that the layout should contain correct channel labels that match the channe
 
 ### Artifacts
 
-An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [ visual artifact removal tutorial](/tutorial/visual_artifact_rejection ) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts.  We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
+An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [visual artifact removal tutorial](/tutorial/visual_artifact_rejection ) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts.  We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
 
 #### Channel mode
 

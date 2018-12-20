@@ -7,7 +7,7 @@ tags: [tutorial, meg, timelock, preprocessing, plot, MEG-language]
 
 ## Introduction
 
-This tutorial works on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([ trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)).
+This tutorial works on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)).
 
 In this tutorial you can find information about how to compute an event related potential (ERP)/ event related field (ERF) and how to calculate the planar gradient (in case the MEG data was acquired by axial-gradiometer sensors). You can find also information in this tutorial about how to visualize the results of the ERP/ERF analysis, and about how to average the results across subjects.
 
@@ -249,7 +249,7 @@ For more information about this type the following commands in the MATLAB comman
 
 ## Summary and suggested further reading
 
-This tutorial covered how to do event-related averaging on EEG/MEG data, and on how to plot the results. The tutorial gave also information about how to average the results across subjects. After calculating the ERPs/ERFs for each subject and for each condition in an experiment, it is a relevant next step to see if there are statistically significant differences in the amplitude of the ERPs/ERFs between the conditions. If you are interested in this, you can continue with the [ event-related statistics](/tutorial/eventrelatedstatistics) tutorial.
+This tutorial covered how to do event-related averaging on EEG/MEG data, and on how to plot the results. The tutorial gave also information about how to average the results across subjects. After calculating the ERPs/ERFs for each subject and for each condition in an experiment, it is a relevant next step to see if there are statistically significant differences in the amplitude of the ERPs/ERFs between the conditions. If you are interested in this, you can continue with the [event-related statistics](/tutorial/eventrelatedstatistics) tutorial.
 
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.
 

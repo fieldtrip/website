@@ -17,6 +17,7 @@ The data in this tutorial has been acquired with 148 sensor magnetometer system 
 ## Procedure
 
 FIXME add list when completed
+
 ### Loading the data
 
 In the following section we will read and epoch the data. Subsequently we will apply some processing steps, e.g. rejecting bad trials by visual inspection and decomposing the data by means of independent component analysis. The late step will allow us to disregard data components likely reflective for cardiac and ocular activity.
@@ -26,7 +27,7 @@ The following steps had been performed:
 *  Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
 *  Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
-To run the following section of code you need the original dataset and trial function:  [ download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[ download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [ download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating)
+To run the following section of code you need the original dataset and trial function: [download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating)
 
 	clear all
 	close all

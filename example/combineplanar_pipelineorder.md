@@ -48,7 +48,7 @@ The following code creates a single dipole that projects brain activity on poste
 ## Time-Frequency analysis
 
 Now let's simulate how ft_combineplanar can or cannot influence the power output as a function of pipeline order.
-But first, it's important to remind the logic behind the induced Time-Frequency Representation (TFR). What the induced TFR archives is the computation of the power estimates (non-linear transformation) for each single trial. As a consequence, the grand-mean (single-trials) of the induced TFR will add phase-locked PLUS non-phase-locked (time jittered) components. This is fundamentally different from the evoked TFR: first single-trials are averaged and then a TFR is computed. With the latter approach, non-phase-locked components wont be efficiently added because they'll average out. More info in [ Tallon-Baudry et al 1996 J Neurosci](http://www.ncbi.nlm.nih.gov/pubmed/8753885)
+But first, it's important to remind the logic behind the induced Time-Frequency Representation (TFR). What the induced TFR archives is the computation of the power estimates (non-linear transformation) for each single trial. As a consequence, the grand-mean (single-trials) of the induced TFR will add phase-locked PLUS non-phase-locked (time jittered) components. This is fundamentally different from the evoked TFR: first single-trials are averaged and then a TFR is computed. With the latter approach, non-phase-locked components wont be efficiently added because they'll average out. More info in [Tallon-Baudry et al 1996 J Neurosci](http://www.ncbi.nlm.nih.gov/pubmed/8753885)
 
 	%% synthetic planar computation
 	cfg              = [];

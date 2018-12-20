@@ -4,7 +4,7 @@
 
 ### Compute the spatial filter for the region of interest
 
-After having done all steps in [ the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures and a headmodel (you can also download these from [FieldTrip ftp server (source_coh_lft.mat, source_diff.mat, hdm.mat, sourcemodel.mat, data_cmb.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/)
+After having done all steps in [the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures and a headmodel (you can also download these from [FieldTrip ftp server (source_coh_lft.mat, source_diff.mat, hdm.mat, sourcemodel.mat, data_cmb.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/)
 
     data_cmb
 

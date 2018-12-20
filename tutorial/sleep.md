@@ -138,7 +138,7 @@ To identify periods of wake (including brief arousals), non-REM and REM states d
 Please note that due to the reduced sample rate of 128 Hz we cannot use the typical frequency range to better detect EMG, however this should suffice for our case.
 {% include markup/end %}
 
-We now use  **[ft_artifact_muscle](/reference/ft_artifact_muscle)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [ automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection )).
+We now use  **[ft_artifact_muscle](/reference/ft_artifact_muscle)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection )).
 
 We want to be very cautious with excluding and exclude more than we must since EMG artifacts point towards movement or wake periods have happened probably some seconds earlier and later.
 

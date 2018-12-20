@@ -199,7 +199,7 @@ It is good practice in FieldTrip to name a figure according to the function that
 
     set(gcf, 'Name', sprintf('%d: %s: %s', double(gcf), funcname, dataname));
 
-gcf refers to the current figure handle. There are number of additional consequences of HG2, which are too numerous to list here. See [ Bugzilla bug 2461](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2461) for FieldTrip relevant issues. While this bug is being solved, the most prominent issues and their fixes will be listed here.
+gcf refers to the current figure handle. There are number of additional consequences of HG2, which are too numerous to list here. See [Bugzilla bug 2461](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2461) for FieldTrip relevant issues. While this bug is being solved, the most prominent issues and their fixes will be listed here.
 
 ## SVN log messages
 

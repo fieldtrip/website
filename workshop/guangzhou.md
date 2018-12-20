@@ -63,8 +63,8 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
 
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
-version of FieldTrip that you can download [ here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/fieldtrip-20160818.zip)). Importantly, the tutorial data does not have to be
-downloaded but we strongly recommend to download before the workshop clicking at this  [ link](https://www.dropbox.com/s/0sqv44taxhjbsqk/data_tutorials.rar?dl=0))
+version of FieldTrip that you can download [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/fieldtrip-20160818.zip)). Importantly, the tutorial data does not have to be
+downloaded but we strongly recommend to download before the workshop clicking at this [link](https://www.dropbox.com/s/0sqv44taxhjbsqk/data_tutorials.rar?dl=0))
  1.  Copy the complete contents of the USB stick to your computer.
  2.  Unzip the fieldtrip-20160818.zip file.
  3.  Put all the data files in a directory called 'tutorial' (or something else you'll remember).

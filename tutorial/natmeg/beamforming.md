@@ -450,7 +450,7 @@ If you've made it this far, perhaps you could try beamforming a different time w
 Beamforming source analysis in the frequency domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as CSD matrix regularization.  Finally, the results were plotted on an orthogonal view.
 
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/virtual_sensors) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
-If you are doing a group study where you want the grid points to be the same over all subjects, [ see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
+If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 Related documentation:
 {% include seealso tag1="source" tag2="faq" %}

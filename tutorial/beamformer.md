@@ -395,7 +395,7 @@ Now the data can be plotted
 Beamforming source analysis in the frequency domain with DICS has been demonstrated.  An example of how to compute a head model (single shell) and forward lead field was shown.  Various options for contrasting the time-frequency window of interest against a control was shown, including against 'noise' (NAI: minimum eigenvalue of the CSD) and against the pre-stimulus window using a 'common filter'.  Options at each stage and their influence on the results were discussed, such as lead field normalization and CSD matrix regularization.  Finally, options for plotting on slices, orthogonal views, or on the surface were shown.
 
 Details on head models can be found [here](/tutorial/headmodel_meg) or  [here](/example/make_leadfields_using_different_headmodels).  Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
-If you are doing a group study where you want the grid points to be the same over all subjects, [ see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
+If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 FAQ
 {% include seealso tag1="source" tag2="faq" %}
