@@ -12,7 +12,9 @@ In the Motor task, participants executed a simple hand or foot movement. The lim
 
 #### Block/Trial Overview
 
-Each block started with an instruction screen, indicating the side (left, right) and the limb (hand, foot) to be used by the subject in the current block. Then, 10 pacing stimuli were presented in sequence, each one instructing the participant to make a brisk movement. The pacing stimulus consisted of a small arrow in the center of the screen pointing to the side of the limb movement (left or right, above). The interval between consecutive stimuli was fixed to 1200 msec. The arrow stayed on the screen for 150 msec and for the remaining 1050 msec the screen was black. In addition to the blocks of limb movements there were 10 interleaved resting blocks, each one of 15 sec duration. During these blocks the screen remained black. The last block was always a resting block after the last limb movement block.
+Each block started with an instruction screen, indicating the side (left, right) and the limb (hand, foot) to be used by the subject in the current block. Then, 10 pacing stimuli were presented in sequence, each one instructing the participant to make a brisk movement. The pacing stimulus consisted of a small arrow in the center of the screen pointing to the side of the limb movement (left or right, above). The interval between consecutive stimuli was fixed to 1200 msec. The arrow stayed on the screen for 150 msec and for the remaining 1050 msec the screen was black. 
+
+In addition to the blocks of limb movements there were 10 interleaved resting blocks, each one of 15 sec duration. During these blocks the screen remained black. The last block was always a resting block after the last limb movement block.
 
 The experiment was performed in 2 runs with a small break between them. The block/trial breakdown was identical in both runs. Each of the runs consisted of 42 blocks. 10 of these blocks were resting blocks, and there were 8 blocks of movement per motor effector. This yielded in total 80 movements per motor effector.
 
