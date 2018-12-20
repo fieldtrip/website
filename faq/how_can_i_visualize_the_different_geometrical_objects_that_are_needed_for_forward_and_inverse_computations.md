@@ -5,10 +5,10 @@ tags: [faq, source, forward, inverse, warning]
 
 ## How can I visualize the different geometrical objects that are needed for forward and inverse computations?
 
-For forward and inverse computations several geometrical objects need to be correctly coregistered. It's good practice to verify this coregistration before proceeding with the next steps of the analysis. The simplest way of verification is obviously visual inspection. FieldTrip allows for the plotting of various geometrical objects by means of the functions in the [plotting module](/development/module/plotting). Earlier versions of FieldTrip contained **[ft_headmodelplot](/reference/ft_headmodelplot)**, a high-level function. This function is now deprecated and the code is not anymore supported by the FieldTrip team. The function has been moved to fieldtrip/compat. If you still want to use it, you need to move it back to your main FieldTrip path because the function depends on low-level private functions in the private directory. The following describes how you can use the lower-level plotting functions for the visualization.
+For forward and inverse computations several geometrical objects need to be correctly coregistered. It's good practice to verify this coregistration before proceeding with the next steps of the analysis. The simplest way of verification is obviously visual inspection. FieldTrip allows for the plotting of various geometrical objects by means of the functions in the [plotting module](/development/module/plotting). The following describes how you can use the lower-level plotting functions for the visualization.
 
 {% include markup/danger %}
-The visualization of multisphere volume conductor models for MEG is not supported by the low-level plotting functions. Should you want to use that, you need to resort to ft_headmodelplot.
+Nice visualization of MEG multisphere volume conductor models is not supported by the low-level plotting functions.
 {% include markup/end %}
 
 {% include markup/danger %}

@@ -327,11 +327,11 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 
 ### Statistics
 
-	cfg=[];
-	cfg.layout = 'biosemi160lay.mat'; %in meters
-	%cfg.layout        = 'elec160.mat'; %in mm
+	cfg               = [];
+	cfg.layout        = 'biosemi160lay.mat'; %in meters
+	%cfg.layout       = 'elec160.mat'; %in mm
 	cfg.neighbourdist = .1;
-	cfg.neighbours    = ft_neighbourselection(cfg,timelock_pitch{1});
+	cfg.neighbours    = ft_prepare_neighbours(cfg,timelock_pitch{1});
 
 	cfg.latency       = [0 1];
 	cfg.parameter     = 'trial';

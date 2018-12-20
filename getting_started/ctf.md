@@ -199,21 +199,19 @@ Single sphere and multi sphere headmodels can be prepared using the CTF software
 
 For example, to read and plot the single sphere model produced with CTF software for the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
+    % read and plot the  head shape
+    headshape = ft_read_headshape('Subject01.shape');
+    ft_plot_headshape(headshape)
 
-	% read in the single sphere model produced with CTF software
-	ctf_ss = ft_read_vol('Subject01.hdm');
+    % read and plot the single sphere head model that was constructed with the CTF software
+    headmodel = ft_read_vol('Subject01.hdm');
+    ft_plot_vol(headmodel)
+    alpha 0.8
+    camlight
 
-	% plotting the headmodel
-	hdr = ft_read_header('Subject01.ds');
-
-	cfg             = [];
-	cfg.grad        = hdr.grad;
-	cfg.headshape   = 'Subject01.shape';
-	cfg.vol         = ctf_ss;
-	cfg.inwardshift = [];
-
-	figure
-	ft_headmodelplot(cfg);
+    % read and plot the gradiometers
+    grad = ft_read_sens('Subject01.ds', 'senstype', 'meg');
+    ft_plot_sens(grad, 'chantype', 'meggrad') % not the reference channels
 
 For more information on reading, creating and plotting headmodels refer to
 [this page](/example/make_leadfields_using_different_headmodels).

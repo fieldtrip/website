@@ -1,6 +1,6 @@
 ---
 title: Getting started with ABM's B-Alert EEG data
-tags: [eeg, b-alert, balert, abm, advanced, brain, monitoring, X10, X-10, X24, X-24, fixme]
+tags: [b-alert, balert, abm, X10, X-10, X24, X-24]
 ---
 
 # Getting started with ABM's B-Alert EEG data
@@ -67,9 +67,9 @@ Nb. At the moment, **[ft_definetrial](/reference/ft_definetrial)** is not used f
 
 The data is structured and we have a configuration containing a cfg.trl, which is necessary to segment the data. The final step that needs to be taken is to redefine the trials one last time with **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 
-    dataSeg = ft_redefinetrial(cfg,data);
+    dataSeg = ft_redefinetrial(cfg, data);
 
-With these two snippets of code, and the new **[ft_trialfun_balert](/reference/ft_trialfun_balert)** your data is ready to be preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. Afterwards, when you are going to use **[ft_databrowser](/reference/ft_databrowser)**, you need to specify cfg.channel and cfg.headerfile, as defined in ''data.hdr'' earlier o
+With these two snippets of code, and **[ft_trialfun_balert](/reference/ft_trialfun_balert)** your data is ready to be preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. Afterwards, when you are going to use **[ft_databrowser](/reference/ft_databrowser)**, you need to specify cfg.channel and cfg.headerfile, as defined in ''data.hdr'' earlier o
 
     cfg = [];
     cfg.channel = {'Fz','POz','Cz','F3','F4','PO3','PO4','C3','C4'}; % All 9 EEG channels of the B-Alert X-10

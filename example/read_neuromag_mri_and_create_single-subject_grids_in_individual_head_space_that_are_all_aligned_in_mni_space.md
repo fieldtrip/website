@@ -4,14 +4,13 @@ tags:
 ---
 
 {% include markup/danger %}
-The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif mri, please look at [this](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space) example script.
+The below example code is hopelessly outdated (thus deprecated) and will probably not work anymore. This page is kept in place just for reference. If you ended up on this page because you are curious to learn about the creation of dipole grids from .fif MRI, please look at [this](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space) example script.
 {% include markup/end %}
 
-This example script relies on the example script [Create mni-aligned grids in individual head_space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). But for Neuromag data there are some differences. First make a mni template as is done in the above mentioned example script.
+This example script relies on the example script [Create MNI-aligned grids in individual head_space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). But for Neuromag data there are some differences. First make a MNI template as is done in the above mentioned example script.
 
-    %%batch create_headmodel_neuromag
     %==================================================================
-    %Loading mri of single subject and make a single shell head model
+    % Load the MRI of a single subject and make a single shell head model
     %==================================================================
 
     filename_mri       = 'mri.fif';
@@ -22,7 +21,7 @@ This example script relies on the example script [Create mni-aligned grids in in
     hdr                = ft_read_header(filename_hdr);
 
     %--------------
-    %Neuromag specific
+    % Neuromag specific
     %--------------
     %voxel coordinates of fiducials. can be  taken from the Neuromag GUI for MRI-MEG Integration
     %but x and y coordinates need to be swapped!
@@ -40,10 +39,10 @@ This example script relies on the example script [Create mni-aligned grids in in
     cfg.fiducial.lpa   = lpa;
     cfg.coordsys       = 'neuromag';
     cfg.method         = 'fiducial';
-    mri_real           = ft_volumerealign(cfg,mri);
+    mri_real           = ft_volumerealign(cfg, mri);
 
-    %segment the brain into gray, white and csf matter to later make a single
-    %shell model.
+    % segment the brain into gray, white and csf matter to later make a single
+    % shell model.
     cfg                = [];
     cfg.template       = 'T1.nii'; %spm8
     cfg.coordsys       = 'neuromag';
@@ -51,23 +50,23 @@ This example script relies on the example script [Create mni-aligned grids in in
     cfg.name           = 'temp';
     [segmentedmri]     = ft_volumesegment(cfg, mri_real)
 
-    %check how it looks; does the segmented mri fit into the mri? Probably not
-    %because of neuromag coordinates (x and y are swapped) and a bug in volume
-    %segment.
+    % check how it looks; does the segmented mri fit into the mri? Probably not
+    % because of neuromag coordinates (x and y are swapped) and a bug in volume
+    % segment.
     cfg                = [];
     test               = segmentedmri;
     test.avg.pow       = test.gray+test.white;
     test.anatomy       = mri_real.anatomy;
     cfg.funparameter   = 'avg.pow';
     cfg.interactive    = 'yes';
-    ft_sourceplot(cfg,test);
+    ft_sourceplot(cfg, test);
 
 ** Figure 1 The segmented mri**
 {% include image src="/assets/img/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/segmri.jpg" %}
 
     %make the single_shell headmodel
     cfg                = [];
-    hdm                = ft_prepare_singleshell(cfg,segmentedmri);
+    headmodel          = ft_prepare_singleshell(cfg, segmentedmri);
 
     %make the leadfield normalised to the mni template
     %normalise the mri first
@@ -91,14 +90,13 @@ This example script relies on the example script [Create mni-aligned grids in in
     % also remember the normalization transformation matrix
     grid.transform     = norm.cfg.final;
 
-    %to see if everything has worke
-    %make a figure of the single subject headmodel, sensor positions and grid positions
-    cfg                = [];
-    cfg.vol            = hdm;
-    cfg.grid           = grid;
-    cfg.gradfile       = 'grad.mat';
-    figure;
-    ft_headmodelplot(cfg);
+    % to see if everything has worke
+    % make a figure of the single subject head model, sensor positions and grid positions
+
+    figure
+    ft_plot_mesh(grid.pos(grid.inside,:))
+    ft_plot_sens(hdr.grad)
+    ft_plot_vol(headmodel)
 
 {% include image src="/assets/img/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/headmodel.png" %}
 
@@ -112,7 +110,7 @@ When you have then estimated the sources which happens in NM or CTF space, you h
     cfg                = [];
     cfg.grid           = grid;
     cfg.frequency      = 10;
-    cfg.vol            = hdm;
+    cfg.vol            = headmodel;
     cfg.gradfile       = 'grad.mat';
     cfg.projectnoise   = 'yes';
     cfg.keeptrials     = 'no';
@@ -122,18 +120,18 @@ When you have then estimated the sources which happens in NM or CTF space, you h
     cfg.lambda         = 0.1 * mean(f.powspctrm(:,nearest(cfg.frequency)),1);
     cfg.method         = 'dics';
     cfg.feedback       = 'textbar';
-    source             = ft_sourceanalysis(cfg,f);
+    source             = ft_sourceanalysis(cfg, f);
 
     save source source
 
     load grid
     cfg                = [];
     source.dim         = grid.dim;
-    sd                 = ft_sourcedescriptives(cfg,source);
+    sd                 = ft_sourcedescriptives(cfg, source);
+
     %-----MNI SPECIFIC
-    %Because sourceanalysis worked in NM coordinates and the interpolation goes
-    %in MNI coordinates, we have to replace the sd.pos by the
-    %template_grid.pos
+    % Because sourceanalysis worked in NM coordinates and the interpolation goes
+    % in MNI coordinates, we have to replace the sd.pos by the template_grid.pos
     load Template_brain/template_grid
     sd.pos             = template_grid.pos;
     %-----END
@@ -155,4 +153,4 @@ When you have then estimated the sources which happens in NM or CTF space, you h
     cfg.method         = 'ortho';
 
     figure;
-    ft_sourceplot(cfg,sdint)
+    ft_sourceplot(cfg, sdint)
