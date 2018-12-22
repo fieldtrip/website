@@ -1,86 +1,56 @@
-- name:  References to implemented methods
-  link:  /references_to_implemented_methods
-
-- name:  Multivariate analysis of electrophysiological data
-  link:  /tutorial/multivariateanalysis
-
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_bem
-
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
-
-- name:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/cluster_permutation_freq
-
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /tutorial/aarhus/beamformingerf
-
-- name:  Cluster-based permutation tests on event related fields
-  link:  /tutorial/cluster_permutation_timelock
-
-- name:  Fourier analysis of neuronal oscillations and synchronization
-  link:  /tutorial/fourier
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
-
-- name:  Introduction - dealing with artifacts
-  link:  /tutorial/artifacts
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
-
-- name:  Preprocessing - Reading continuous EEG data
-  link:  /tutorial/continuous
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/preprocessing
-
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/natmeg/dipolefitting
-
-- name:  Details of the auditory oddball MEG dataset
-  link:  /tutorial/natmeg/meg_audodd
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/statistics
-
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/natmeg/timefrequency
-
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/natmeg/beamforming
-
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
-
-- name:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms-eeg
-
-- name:  Specifying the channel layout for plotting
-  link:  /tutorial/layout
-
-- name:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/eventrelatedstatistics
-
-- name:  Importing your data
-  link:  /reading_data
-
 - name:  Example script for leadfield based on FEM headmodel
   link:  /development/project/example_fem
 
 - name:  Modular EEG, OpenEEG
   link:  /development/realtime/modulareeg
 
+- name:  References to implemented methods
+  link:  /references_to_implemented_methods
+
+- name:  FieldTrip Walkthrough
+  link:  /walkthrough
+
+- name:  Example analysis pipeline for Biosemi data
+  link:  /example/biosemi
+
+- name:  Use your own forward leadfield model in an inverse beamformer computation
+  link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
+
+- name:  Analysis of high-gamma band signals in human ECoG
+  link:  /example/ecog_ny
+
+- name:  Getting started with reading raw EEG or MEG data
+  link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
+
+- name:  Testing BEM created EEG lead fields
+  link:  /example/testing_bem_created_leadfields
+
+- name:  Compute forward simulated data and apply a dipole fit
+  link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
+
+- name:  Combined EEG and MEG source reconstruction
+  link:  /example/combined_eeg_and_meg_source_reconstruction
+
+- name:  Align EEG electrode positions to BEM headmodel
+  link:  /example/align_eeg_electrode_positions_to_bem_headmodel
+
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
-- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
-  link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
+- name:  How is the segmentation defined?
+  link:  /faq/how_is_the_segmentation_defined
+
+- name:  Can I compare EEG channels between different electrode caps?
+  link:  /faq/capmapping
+
+- name:  Why should I use an average reference for EEG source reconstruction?
+  link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
+
+- name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
+  link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
+
+- name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
+  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
 
 - name:  Can I do combined EEG and MEG source reconstruction?
   link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
@@ -91,75 +61,102 @@
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
   link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
+- name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
+  link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
+
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
-
-- name:  Why should I use an average reference for EEG source reconstruction?
-  link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
-
-- name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
-  link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
-
-- name:  How is the segmentation defined?
-  link:  /faq/how_is_the_segmentation_defined
-
-- name:  Can I compare EEG channels between different electrode caps?
-  link:  /faq/capmapping
-
-- name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-
-- name:  Getting started with reading raw EEG or MEG data
-  link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
-
-- name:  Example analysis pipeline for Biosemi data
-  link:  /example/biosemi
-
-- name:  Compute forward simulated data and apply a dipole fit
-  link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
-
-- name:  Analysis of high-gamma band signals in human ECoG
-  link:  /example/ecog_ny
-
-- name:  Testing BEM created EEG lead fields
-  link:  /example/testing_bem_created_leadfields
-
-- name:  Combined EEG and MEG source reconstruction
-  link:  /example/combined_eeg_and_meg_source_reconstruction
-
-- name:  Align EEG electrode positions to BEM headmodel
-  link:  /example/align_eeg_electrode_positions_to_bem_headmodel
-
-- name:  Use your own forward leadfield model in an inverse beamformer computation
-  link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
-
-- name:  FieldTrip Walkthrough
-  link:  /walkthrough
-
-- name:  Getting started with ABM's B-Alert EEG data
-  link:  /getting_started/b_alert
-
-- name:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /getting_started/1020
-
-- name:  Getting started with BioImage Suite
-  link:  /getting_started/bioimage
-
-- name:  Human ECoG
-  link:  /getting_started/human_ecog
 
 - name:  Getting started with Biosemi BDF data
   link:  /getting_started/biosemi
 
-- name:  Getting started with ASA and EEProbe
-  link:  /getting_started/antneuro
+- name:  Getting started with BioImage Suite
+  link:  /getting_started/bioimage
 
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 
+- name:  Getting started with ASA and EEProbe
+  link:  /getting_started/antneuro
+
+- name:  Getting started with 20%, 10% and 5% electrode arrangements
+  link:  /getting_started/1020
+
 - name:  Getting started with EDF (European Data Format) data
   link:  /getting_started/edf
 
+- name:  Human ECoG
+  link:  /getting_started/human_ecog
+
 - name:  Getting started with BrainVision Analyzer and Easycap
   link:  /getting_started/brainvision
+
+- name:  Importing your data
+  link:  /reading_data
+
+- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_bem
+
+- name:  Cluster-based permutation tests on time-frequency data
+  link:  /tutorial/cluster_permutation_freq
+
+- name:  Specifying the channel layout for plotting
+  link:  /tutorial/layout
+
+- name:  Details of the auditory oddball MEG dataset
+  link:  /tutorial/natmeg/meg_audodd
+
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /tutorial/natmeg/beamforming
+
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /tutorial/natmeg/dipolefitting
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /tutorial/natmeg/preprocessing
+
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /tutorial/natmeg/timefrequency
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /tutorial/natmeg/statistics
+
+- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_fem
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
+- name:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/eventrelatedstatistics
+
+- name:  Introduction - dealing with artifacts
+  link:  /tutorial/artifacts
+
+- name:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/human_ecog
+
+- name:  Fourier analysis of neuronal oscillations and synchronization
+  link:  /tutorial/fourier
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/timefrequencyanalysis
+
+- name:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms-eeg
+
+- name:  Preprocessing - Reading continuous EEG data
+  link:  /tutorial/continuous
+
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /tutorial/aarhus/beamformingerf
+
+- name:  Cluster-based permutation tests on event related fields
+  link:  /tutorial/cluster_permutation_timelock
+
+- name:  Multivariate analysis of electrophysiological data
+  link:  /tutorial/multivariateanalysis
+
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
 
