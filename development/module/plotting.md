@@ -33,6 +33,7 @@ For data objects with a 2D representation, i.e. for a flat screen or pape
 
 For data objects with a 3D geometrical representatio
 
+*  ft_plot_cloud                  - visualizes 3-D data as spherical clouds of points 
 *  ft_plot_crosshair              - plots a crosshair in two or three dimensions
 *  ft_plot_dipole                 - makes a 3-D representation of a dipole using a sphere and a stick
 *  ft_plot_headshape              - visualizes the shape of a head from a variety of
