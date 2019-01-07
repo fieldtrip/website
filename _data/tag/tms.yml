@@ -1,6 +1,6 @@
-- name:  TMSI EEG amplifiers
-  link:  /development/realtime/tmsi
-
 - name:  Dealing with TMS-EEG datasets
   link:  /tutorial/tms-eeg
+
+- name:  TMSI EEG amplifiers
+  link:  /development/realtime/tmsi
 

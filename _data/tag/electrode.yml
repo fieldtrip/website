@@ -1,6 +1,6 @@
-- name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
-  link:  /faq/structuresensor
-
 - name:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/electrode
+
+- name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
+  link:  /faq/structuresensor
 

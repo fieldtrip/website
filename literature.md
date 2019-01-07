@@ -15,6 +15,6 @@ Robert Oostenveld, Pascal Fries, Eric Maris, and Jan-Mathijs Schoffelen. **[Fiel
 
 The FieldTrip reference paper has been published in an [Open Access journal](http://en.wikipedia.org/wiki/Open_access_journal) and you can get the [PDF version here](http://downloads.hindawi.com/journals/cin/2011/156869.pdf) or read the [HTML version here](http://www.hindawi.com/journals/cin/2011/156869).
 
-Publications that are referring to FieldTrip are listed [here](/publications).
-
 Publications that describe (some of) methods that are implemented are listed [here](/references_to_implemented_methods).
+
+You can find publications that refer to FieldTrip on [Google Scholar](https://scholar.google.com/scholar?cites=3328911510682538425).

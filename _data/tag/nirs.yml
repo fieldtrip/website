@@ -1,9 +1,9 @@
-- name:  Getting started with Artinis NIRS data
-  link:  /getting_started/artinis
+- name:  Preprocessing and averaging of single-channel NIRS data
+  link:  /tutorial/nirs_singlechannel
 
 - name:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs_multichannel
 
-- name:  Preprocessing and averaging of single-channel NIRS data
-  link:  /tutorial/nirs_singlechannel
+- name:  Getting started with Artinis NIRS data
+  link:  /getting_started/artinis
 

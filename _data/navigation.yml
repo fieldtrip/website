@@ -7,6 +7,9 @@
 - name: Community
   link: /community
 
+- name: Workshops
+  link: /workshop
+
 - name: Development
   link: /development
 

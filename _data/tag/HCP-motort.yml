@@ -1,9 +1,9 @@
-- name:  Details of the tMEG Motor task dataset
-  link:  /tutorial/hcp_motort
+- name:  MEG whole-brain connectivity
+  link:  /tutorial/chieti/wholebrain
 
 - name:  MEG virtual channels and seed-based connectivity
   link:  /tutorial/chieti/virtualchannel
 
-- name:  MEG whole-brain connectivity
-  link:  /tutorial/chieti/wholebrain
+- name:  Details of the tMEG Motor task dataset
+  link:  /tutorial/hcp_motort
 

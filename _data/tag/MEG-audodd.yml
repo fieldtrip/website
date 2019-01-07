@@ -1,24 +1,24 @@
-- name:  FieldTrip workshop in Aarhus
-  link:  /workshop/aarhus2015
-
 - name:  FieldTrip course at the NatMEG in Stockholm
   link:  /workshop/natmeg
 
-- name:  Details of the auditory oddball MEG dataset
-  link:  /tutorial/natmeg/meg_audodd
+- name:  FieldTrip workshop in Aarhus
+  link:  /workshop/aarhus2015
 
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/natmeg/beamforming
-
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/natmeg/dipolefitting
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /tutorial/aarhus/beamformingerf
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /tutorial/natmeg/dipolefitting
+
+- name:  Details of the auditory oddball MEG dataset
+  link:  /tutorial/natmeg/meg_audodd
+
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/natmeg/timefrequency
 
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /tutorial/aarhus/beamformingerf
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /tutorial/natmeg/beamforming
 

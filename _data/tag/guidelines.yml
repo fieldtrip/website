@@ -1,8 +1,8 @@
 - name:  Guidelines
   link:  /development/guidelines
 
-- name:  Code guidelines
-  link:  /development/guideline/code
+- name:  Template guidelines
+  link:  /development/guideline/templates
 
 - name:  Guidelines for audio and video material
   link:  /development/guideline/video
@@ -10,6 +10,6 @@
 - name:  Documentation guidelines
   link:  /development/guideline/documentation
 
-- name:  Template guidelines
-  link:  /development/guideline/templates
+- name:  Code guidelines
+  link:  /development/guideline/code
 

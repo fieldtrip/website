@@ -1,21 +1,21 @@
-- name:  Details of the auditory oddball MEG dataset
-  link:  /tutorial/natmeg/meg_audodd
-
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/natmeg/beamforming
-
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/natmeg/dipolefitting
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /tutorial/aarhus/beamformingerf
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/natmeg/timefrequency
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /tutorial/natmeg/dipolefitting
+
+- name:  Details of the auditory oddball MEG dataset
+  link:  /tutorial/natmeg/meg_audodd
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/statistics
 
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /tutorial/aarhus/beamformingerf
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /tutorial/natmeg/timefrequency
+
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /tutorial/natmeg/beamforming
 

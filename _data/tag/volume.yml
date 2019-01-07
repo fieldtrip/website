@@ -1,8 +1,8 @@
-- name:  My MRI is upside down, is this a problem?
-  link:  /faq/my_mri_is_upside_down_is_this_a_problem
-
 - name:  How is anatomical, functional or statistical "volume data" described?
   link:  /faq/how_is_anatomical_functional_or_statistical_volume_data_described
+
+- name:  My MRI is upside down, is this a problem?
+  link:  /faq/my_mri_is_upside_down_is_this_a_problem
 
 - name:  How to change the MRI orientation, the voxel size or the field-of-view?
   link:  /faq/how_change_mri_orientation_size_fov
