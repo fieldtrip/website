@@ -1,53 +1,20 @@
-- name:  Speeding up your analysis with distributed computing
-  link:  /tutorial/distributedcomputing
-
 - name:  Distributed computing using a peer-to-peer cluster
   link:  /development/module/peer
 
-- name:  Why are the peers using multicast to announce themselves?
-  link:  /faq/why_are_the_peers_using_multicast_to_announce_themselves
-
-- name:  How can I use the command-line peerslave and optimize the MATLAB licenses?
-  link:  /faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses
-
-- name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
-  link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
-
-- name:  How can I set up the peer distributed computing on a single multicore computer?
-  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_single_multicore_computer
+- name:  Why does peercellfun resubmit jobs that take too long to get started?
+  link:  /faq/why_does_peercellfun_resubmit_jobs_that_take_too_long_to_get_started
 
 - name:  How should I call peercellfun when a function requires many inputs (e.g. key-value pairs)?
   link:  /faq/how_should_i_call_peercellfun_when_a_function_requires_many_inputs_e.g._key-value_pairs
 
-- name:  How does the peer smartshare algorithm work?
-  link:  /faq/how_does_the_peer_smartshare_algorithm_work
-
-- name:  How can I prevent a job from executing twice?
-  link:  /faq/how_can_i_prevent_a_job_from_executing_twice
-
-- name:  How does the smartmem algorithm work?
-  link:  /faq/how_does_the_peer_smartmem_algorithm_work
-
-- name:  How can I read and write files if I use other people's peers?
-  link:  /faq/how_can_i_read_and_write_files_if_i_use_other_people_s_peers
-
 - name:  Does a firewall affect the communication between peers?
   link:  /faq/does_a_firewall_affect_the_communication_between_peers
 
+- name:  Why are the peers using multicast to announce themselves?
+  link:  /faq/why_are_the_peers_using_multicast_to_announce_themselves
+
 - name:  How can I combine FieldTrip with peer distributed computing?
   link:  /faq/how_can_i_combine_fieldtrip_with_peer_distributed_computing
-
-- name:  How can I determine the number of threads that MATLAB uses?
-  link:  /faq/how_can_i_determine_the_number_of_threads_that_matlab_uses
-
-- name:  How can I set up the peer distributed computing on a large Linux cluster?
-  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_large_linux_cluster
-
-- name:  How can I debug a problematic distributed job?
-  link:  /faq/how_can_i_debug_a_problematic_distributed_job
-
-- name:  What happens if a job fails to execute properly?
-  link:  /faq/what_happens_if_a_job_fails_to_execute_properly
 
 - name:  How can I stop the different threads created by peermaster and peerslave?
   link:  /faq/how_can_i_stop_the_different_threads_created_by_peermaster_and_peerslave
@@ -55,15 +22,48 @@
 - name:  What are the different approaches I can take for distributed computing?
   link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
 
-- name:  How can I set up the peer distributed computing on a small number of computers?
-  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers
-
-- name:  Why does peercellfun resubmit jobs that take too long to get started?
-  link:  /faq/why_does_peercellfun_resubmit_jobs_that_take_too_long_to_get_started
-
 - name:  What happens with a job that has an error on the slave?
   link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_slave
 
+- name:  How does the smartmem algorithm work?
+  link:  /faq/how_does_the_peer_smartmem_algorithm_work
+
+- name:  How can I read and write files if I use other people's peers?
+  link:  /faq/how_can_i_read_and_write_files_if_i_use_other_people_s_peers
+
+- name:  What happens if a job fails to execute properly?
+  link:  /faq/what_happens_if_a_job_fails_to_execute_properly
+
+- name:  How can I debug a problematic distributed job?
+  link:  /faq/how_can_i_debug_a_problematic_distributed_job
+
+- name:  How can I use the command-line peerslave and optimize the MATLAB licenses?
+  link:  /faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses
+
+- name:  How can I determine the number of threads that MATLAB uses?
+  link:  /faq/how_can_i_determine_the_number_of_threads_that_matlab_uses
+
+- name:  How can I set up the peer distributed computing on a single multicore computer?
+  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_single_multicore_computer
+
 - name:  How to get started with peer distributed computing on my own desktop computer?
   link:  /faq/how_to_get_started_with_peer_distributed_computing_on_my_own_desktop_computer
+
+- name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
+  link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
+
+- name:  How can I set up the peer distributed computing on a large Linux cluster?
+  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_large_linux_cluster
+
+- name:  How does the peer smartshare algorithm work?
+  link:  /faq/how_does_the_peer_smartshare_algorithm_work
+
+- name:  How can I prevent a job from executing twice?
+  link:  /faq/how_can_i_prevent_a_job_from_executing_twice
+
+- name:  How can I set up the peer distributed computing on a small number of computers?
+  link:  /faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers
+
+- name:  Speeding up your analysis with distributed computing
+  link:  /tutorial/distributedcomputing
 

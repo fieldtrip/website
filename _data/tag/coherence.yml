@@ -1,23 +1,11 @@
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
+- name:  Correlation analysis in fMRI data
+  link:  /example/correlation_analysis_in_fmri_data
 
-- name:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/beamformingextended
-
-- name:  Fourier analysis of neuronal oscillations and synchronization
-  link:  /tutorial/fourier
-
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
-
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
-
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
+- name:  Effect of SNR on Coherence
+  link:  /example/coherence_snr
 
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
@@ -25,9 +13,21 @@
 - name:  What is the difference between coherence and coherency?
   link:  /faq/what_is_the_difference_between_coherence_and_coherency
 
-- name:  Correlation analysis in fMRI data
-  link:  /example/correlation_analysis_in_fmri_data
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
 
-- name:  Effect of SNR on Coherence
-  link:  /example/coherence_snr
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
+
+- name:  Fourier analysis of neuronal oscillations and synchronization
+  link:  /tutorial/fourier
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /tutorial/chieti/simulation
+
+- name:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/beamformingextended
+
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
 

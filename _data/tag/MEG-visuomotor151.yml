@@ -1,9 +1,9 @@
-- name:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/beamformingextended
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
 
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
+- name:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/beamformingextended
 

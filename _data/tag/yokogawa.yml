@@ -1,6 +1,6 @@
-- name:  MEG dataformats
-  link:  /dataformat/meg
-
 - name:  Getting started with Yokogawa data
   link:  /getting_started/yokogawa
+
+- name:  MEG dataformats
+  link:  /dataformat/meg
 
