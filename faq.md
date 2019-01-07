@@ -227,6 +227,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 * [Are the FieldTrip lectures available on video?](/faq/video)
 * [Can I map different Electrode position layouts?](/faq/capmapping)
+* [Can I organize my own FieldTrip workshop?](/faq/can_i_organize_my_own_workshop)
 * [How can I anonymize DICOM files?](/faq/how_can_i_anonymize_dicom_files)
 * [How can I anonymize a CTF dataset?](/faq/how_can_i_anonymize_a_ctf_dataset)
 * [How can I anonymize data processed in FieldTrip?](/faq/how_can_i_anonymize_fieldtrip_data)
