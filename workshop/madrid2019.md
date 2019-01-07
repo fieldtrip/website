@@ -1,4 +1,4 @@
----
+﻿---
 title: FieldTrip workshop Madrid
 ---
 
@@ -6,40 +6,56 @@ title: FieldTrip workshop Madrid
 
 ## Where
 
-Universidad Autonoma de Madrid (UAM), Madrid, Spain.
+Facultad de Psicología, Universidad Autonoma de Madrid, Calle Iván Pavlov, 6, 28049 Madrid, Spain.
 
 ## When
 
-Thursday Jan 24th - Friday Jan 25th.
+Monday January 21st - Tuesday January 22nd.
 
 ## Who
 
 The "Sociedad Española de Psicofisiología y Neurociencia Cognitiva y Afectiva" (SEPNECA) is the local organizer. Sophie Arana (Donders Institute, Nijmegen) and Diego Lozano-Soldevilla (CIBERER, Madrid; IDIBAPS, Barcelona) are the lecturers.
 
-## Preliminary program
+## PROGRAM
 
 
-### Thursday
+### Monday Jan 21st
 
--   morning
-    -   1h intro lecture
-    -   2h Dealing with artifacts and ICA
+- 09:30-10:00 	Registration, handouts and coffee
 
--   afternoon
-    -   Hands-on: auditory ERPs and resting state datasets <here URL>
+- 10:00-11:00	Introduction to MATLAB and the FieldTrip toolbox (Lecture) 
 
--   evening
-    -   food and drinks
+- 11:00-11:15	Coffee Break
 
-### Friday
+- 11:15-12:45	Getting started with EEG data, quality checks and ERPs (Hands-on)
 
--   morning
-    -   1h spectral analysis lecture
-    -   2h handson: auditory ERPs and resting state datasets <here URL>
+- 13:00-14:00 	Lunch
 
--   afternoon
-    -   1h nonparametric statistics lecture
-    -   2h hands on <here URL>
+- 14:00-15:00	EEG acquisition, pre-processing, ICA, artifact rejection (Lecture)
+
+- 15:00-15:15 	Tea Break 
+
+- 15:30-17:30	    Cleaning and processing resting state EEG (Hands-on)
+
+- 17:30-18:00 	Wrap-up-the-day: special topics, general questions and answers
+
+### Tuesday Jan 22nd
+
+- 10:00-11:00	Frequency and Time-frequency analysis (Lecture) 
+
+- 11:00-11:15	Coffee Break
+
+- 11:15-12:45	Frequency analysis of task and resting state EEG (Hands-on)
+
+- 13:00-14:00 	Lunch
+
+- 14:00-15:00	Cluster-based statistical testing of EEG data (Lecture)
+
+- 15:00-15:15 	Tea Break 
+
+- 15:30-17:30	    Cluster-based statistical testing on resting state EEG (Hands-on)
+
+- 17:30-18:00 	Wrap-up-the-day and testimonial evaluation
 
 
 ## Installing FieldTrip and Tutorial preparation
