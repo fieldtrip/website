@@ -1,6 +1,3 @@
-- name:  MEG-UK 2015 meeting
-  link:  /workshop/meg-uk-2015
-
 - name:  FieldTrip stats demo
   link:  /workshop/meg-uk-2015/fieldtrip-stats-demo
 
@@ -9,6 +6,9 @@
 
 - name:  FieldTrip connectivity demo
   link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
+
+- name:  MEG-UK 2015 meeting
+  link:  /workshop/meg-uk-2015
 
 - name:  Details on the multimodal faces dataset
   link:  /tutorial/mmfaces

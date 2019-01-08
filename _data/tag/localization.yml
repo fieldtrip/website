@@ -1,6 +1,3 @@
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
-
 - name:  How can I visualize the neuromag head position indicator coils?
   link:  /faq/how_can_i_visualize_the_neuromag_head_position_indicator_coils
 
@@ -9,4 +6,7 @@
 
 - name:  Human ECoG
   link:  /getting_started/human_ecog
+
+- name:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/human_ecog
 

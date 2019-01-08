@@ -1,9 +1,9 @@
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
-
 - name:  Getting started with BioImage Suite
   link:  /getting_started/bioimage
 
 - name:  Human ECoG
   link:  /getting_started/human_ecog
+
+- name:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/human_ecog
 
