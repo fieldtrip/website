@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: Spike-attention
+tag: spike-attention
 ---

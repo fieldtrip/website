@@ -1,6 +1,6 @@
 ---
 title: Extracting the brain state and events from continuous sleep EEG
-tags: [tutorial, sleep, EDF, EEG, EMG, ECG, artifacts, continuous]
+tags: [tutorial, sleep, edf, eeg, emg, ecg, artifacts, continuous]
 ---
 
 # Extracting the brain state and events from continuous sleep EEG

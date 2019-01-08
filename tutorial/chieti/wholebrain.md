@@ -1,6 +1,6 @@
 ---
 title: MEG whole-brain connectivity
-tags: [chieti, HCP-motort]
+tags: [chieti, hcp-motort]
 ---
 
 # MEG whole-brain connectivity

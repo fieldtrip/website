@@ -1,6 +1,12 @@
 - name:  FieldTrip course at the NatMEG in Stockholm
   link:  /workshop/natmeg
 
+- name:  FieldTrip workshop in Aarhus
+  link:  /workshop/aarhus2015
+
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /tutorial/aarhus/beamformingerf
+
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
@@ -9,9 +15,6 @@
 
 - name:  Details of the auditory oddball MEG dataset
   link:  /tutorial/natmeg/meg_audodd
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/statistics
 
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/natmeg/timefrequency

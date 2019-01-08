@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: MEG-language
+tag: meg-language
 ---

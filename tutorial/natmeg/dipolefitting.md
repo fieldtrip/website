@@ -1,6 +1,6 @@
 ---
 title: Dipole fitting of combined MEG/EEG data
-tags: [tutorial, natmeg, meg+eeg, dipole, MEG-audodd]
+tags: [tutorial, natmeg, meg+eeg, dipole, meg-audodd]
 ---
 
 # Dipole fitting of combined MEG/EEG data

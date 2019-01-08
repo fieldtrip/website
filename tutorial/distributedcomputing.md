@@ -1,6 +1,6 @@
 ---
 title: Speeding up your analysis with distributed computing
-tags: [tutorial, qsub, peer, distcomp, matlab, MEG-language]
+tags: [tutorial, qsub, peer, distcomp, matlab, meg-language]
 ---
 
 # Speeding up your analysis with distributed computing

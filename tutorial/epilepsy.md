@@ -1,6 +1,6 @@
 ---
 title: Virtual channel analysis of epilepsy MEG data
-tags: [tutorial, MEG-epilepsy]
+tags: [tutorial, meg-epilepsy]
 ---
 
 {% include markup/info %}

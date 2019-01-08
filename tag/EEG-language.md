@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: EEG-language
+tag: eeg-language
 ---

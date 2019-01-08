@@ -9,6 +9,7 @@ Please note that the markdown documents that are nicely displayed here on github
 ## Technical notes
 
 * Pages that contain tags must have a title.
+* Tags should be in lower case.
 * Variables passed in an include must be specified in quotes.
 * Code blocks should have an empty line before and after them.
 * Shared pages should go in _include/shared.

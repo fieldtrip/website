@@ -1,6 +1,6 @@
 ---
 title: Multivariate analysis of electrophysiological data
-tags: [tutorial, eeg, meg, multivariate, timelock, freq, attention, MEG-attention]
+tags: [tutorial, eeg, meg, multivariate, timelock, freq, attention, meg-attention]
 ---
 
 # Multivariate analysis of electrophysiological data

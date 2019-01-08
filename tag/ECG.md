@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: ECG
+tag: ecg
 ---

@@ -1,27 +1,27 @@
-- name:  BIDS - the brain imaging data structure
-  link:  /example/bids
-
-- name:  Preparing a combined MEG/fMRI dataset for sharing
-  link:  /example/bids_mous
-
-- name:  Preparing an EEG dataset for sharing
-  link:  /example/bids_eeg
-
-- name:  How can I share my MEG data?
-  link:  /faq/data_sharing
-
-- name:  How can I anonymize DICOM files?
-  link:  /faq/how_can_i_anonymize_dicom_files
+- name:  How can I anonymize or deidentify a CTF dataset?
+  link:  /faq/how_can_i_anonymize_a_ctf_dataset
 
 - name:  How can I anonymize or deidentify an anatomical MRI?
   link:  /faq/how_can_i_anonymize_an_anatomical_mri
 
-- name:  How should I specify the coordinate systems in a BIDS dataset?
-  link:  /faq/bids_coordsystem
+- name:  How can I anonymize DICOM files?
+  link:  /faq/how_can_i_anonymize_dicom_files
 
-- name:  How can I anonymize or deidentify a CTF dataset?
-  link:  /faq/how_can_i_anonymize_a_ctf_dataset
+- name:  How can I share my MEG data?
+  link:  /faq/data_sharing
 
 - name:  How can I anonymize data processed in FieldTrip?
   link:  /faq/how_can_i_anonymize_fieldtrip_data
+
+- name:  How should I specify the coordinate systems in a BIDS dataset?
+  link:  /faq/bids_coordsystem
+
+- name:  Preparing a combined MEG/fMRI dataset for sharing
+  link:  /example/bids_mous
+
+- name:  BIDS - the brain imaging data structure
+  link:  /example/bids
+
+- name:  Preparing an EEG dataset for sharing
+  link:  /example/bids_eeg
 

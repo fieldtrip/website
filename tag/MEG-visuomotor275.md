@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: MEG-visuomotor275
+tag: meg-visuomotor275
 ---

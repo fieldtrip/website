@@ -5,7 +5,7 @@ tags: [faq, tutorial, dataset]
 
 # Which datasets are used in the documentation and where are they used?
 
-The FieldTrip website and ftp server include a variety of datasets. Some of these are used in the [tutorials](/tutorial), while others are used in [example MATLAB scripts](/example). All of these datasets were recorded from humans, unless otherwise specified.
+The FieldTrip website and ftp server include a variety of datasets. some of these are used in the [tutorials](/tutorial), while others are used in [example MATLAB scripts](/example). All of these datasets were recorded from humans, unless otherwise specified.
 
 In this [frequently asked question](/faq/open_data) you can find links to other open access datasets.
 
@@ -21,7 +21,7 @@ In this [frequently asked question](/faq/open_data) you can find links to other 
 * Group results of this study (comprising 10 subjects) are used in the statistics tutorials.
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-language" %}
+{% include seealso tag1="meg-language" %}
 
 ## MEG-artifact
 
@@ -30,7 +30,7 @@ Tutorials using this dataset:
 * Download the dataset[ArtifactMEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-artifact" %}
+{% include seealso tag1="meg-artifact" %}
 
 ## MEG-visuomotor151
 
@@ -41,7 +41,7 @@ Tutorials using this dataset:
 * Download the dataset [subjectK.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-visuomotor151" %}
+{% include seealso tag1="meg-visuomotor151" %}
 
 ## MEG-visuomotor151_02
 
@@ -51,7 +51,7 @@ Tutorials using this dataset:
 * Download the dataset [SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-visuomotor275" %}
+{% include seealso tag1="meg-visuomotor275" %}
 
 ## MEG-attention
 
@@ -61,7 +61,7 @@ Tutorials using this dataset:
 * Link to the [publication](http://dx.doi.org/10.1016/j.neunet.2009.06.004) by van Gerven et al.(2009).
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-attention" %}
+{% include seealso tag1="meg-attention" %}
 
 ## MEG-tactile
 
@@ -70,7 +70,7 @@ Tutorials using this dataset:
 * Download the dataset[TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-tactile" %}
+{% include seealso tag1="meg-tactile" %}
 
 ## MEG-audodd
 
@@ -80,7 +80,7 @@ Tutorials using this dataset:
 * Download the dataset[ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg)
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-audodd" %}
+{% include seealso tag1="meg-audodd" %}
 
 ## EEG-language
 
@@ -90,7 +90,7 @@ Tutorials using this dataset:
 * Download the dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) from our FTP server
 
 Tutorials using this dataset:
-{% include seealso tag1="EEG-language" %}
+{% include seealso tag1="eeg-language" %}
 
 ## EEG-affective
 
@@ -99,7 +99,7 @@ Tutorials using this dataset:
 * Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_eeg) from our FTP server
 
 Tutorials using this dataset:
-{% include seealso tag1="EEG-affective" %}
+{% include seealso tag1="eeg-affective" %}
 
 ## EEG-TMS
 
@@ -109,7 +109,7 @@ Tutorials using this dataset:
 * Download the dataset [sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso tag1="EEG-TMS" %}
+{% include seealso tag1="eeg-tms" %}
 
 ## HCP-motort
 
@@ -120,7 +120,7 @@ Tutorials using this dataset:
 * Download the dataset from the [HCP website](http://db.humanconnectome.org).
 
 Tutorials using this dataset:
-{% include seealso tag1="HCP-motort" %}
+{% include seealso tag1="hcp-motort" %}
 
 ## mmfaces
 
@@ -139,7 +139,7 @@ Tutorials using this dataset:
 * The data is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy
 
 Tutorials using this dataset:
-{% include seealso tag1="MEG-epilepsy" %}
+{% include seealso tag1="meg-epilepsy" %}
 
 ## Spike-attention
 
@@ -148,7 +148,7 @@ Tutorials using this dataset:
 * Download the dataset[p029_sort_final_01.nex.](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex.) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso tag1="Spike-attention" %}
+{% include seealso tag1="spike-attention" %}
 
 ## Spike-placefield
 
@@ -156,12 +156,12 @@ Tutorials using this dataset:
 * Download the dataset [tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t) from our FTP server.
 
 Tutorials using this dataset:
-{% include seealso tag1="Spike-placefield" %}
+{% include seealso tag1="spike-placefield" %}
 
 ## ECoG-visual
 
 * ECoG data recorded at the Comprehensive Epilepsy Center of the New York University School of Medicine and processed in collaboration with members of the Multisensory Integration Research Group (Charité - University Medicine Berlin).
-* The data was recorded from an epilepsy patient implanted with a subdural grid for pre-surgical evaluation and includes a visual localizer task. Different types of visual stimuli were presented.
+* The data was recorded from an epilepsy patient implanted with a subdural grid for pre-surgical evaluation and includes a visual localizer task. different types of visual stimuli were presented.
 * Download the dataset [SubjectNY394.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectNY394.zip)
 
 Tutorials using this dataset:

@@ -1,3 +1,6 @@
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /tutorial/aarhus/beamformingerf
+
 - name:  Localizing the sources underlying the difference in event related fields
   link:  /example/difference_erf
 

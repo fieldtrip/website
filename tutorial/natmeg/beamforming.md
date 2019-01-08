@@ -1,6 +1,6 @@
 ---
 title: Beamforming oscillatory responses in combined MEG/EEG data
-tags: [tutorial, beamforming, natmeg, meg+eeg, MEG-audodd]
+tags: [tutorial, beamforming, natmeg, meg+eeg, meg-audodd]
 ---
 
 # Beamforming oscillatory responses in combined MEG/EEG data

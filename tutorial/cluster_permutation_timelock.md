@@ -1,6 +1,6 @@
 ---
 title: Cluster-based permutation tests on event related fields
-tags: [tutorial, statistics, eeg, meg, timelock, plot, MEG-language]
+tags: [tutorial, statistics, eeg, meg, timelock, plot, meg-language]
 ---
 
 # Cluster-based permutation tests on event related fields

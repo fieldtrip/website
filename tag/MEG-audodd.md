@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: MEG-audodd
+tag: meg-audodd
 ---

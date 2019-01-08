@@ -1,17 +1,8 @@
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
 
-- name:  Getting started with Cyberkinetics data
-  link:  /getting_started/cyberkinetics
-
-- name:  Working with animal electrophysiology data
-  link:  /getting_started/animal
-
-- name:  Getting started with Plexon data
-  link:  /getting_started/plexon
-
-- name:  Getting started with Blackrock data
-  link:  /getting_started/blackrock
+- name:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/spikefield
 
 - name:  Importing your data
   link:  /reading_data
@@ -19,9 +10,18 @@
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
+- name:  Getting started with Neuralynx data
+  link:  /getting_started/neuralynx
 
-- name:  Preprocessing and analysis of spike and local field potential data
-  link:  /tutorial/spikefield
+- name:  Getting started with Blackrock data
+  link:  /getting_started/blackrock
+
+- name:  Working with animal electrophysiology data
+  link:  /getting_started/animal
+
+- name:  Getting started with Cyberkinetics data
+  link:  /getting_started/cyberkinetics
+
+- name:  Getting started with Plexon data
+  link:  /getting_started/plexon
 

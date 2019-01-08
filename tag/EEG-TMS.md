@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: EEG-TMS
+tag: eeg-tms
 ---

@@ -1,6 +1,6 @@
 ---
 title: Trigger-based trial selection
-tags: [tutorial, meg, raw, preprocessing, MEG-language]
+tags: [tutorial, meg, raw, preprocessing, meg-language]
 ---
 
 # Trigger-based trial selection

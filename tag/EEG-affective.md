@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: EEG-affective
+tag: eeg-affective
 ---

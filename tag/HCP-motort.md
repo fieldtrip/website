@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: HCP-motort
+tag: hcp-motort
 ---

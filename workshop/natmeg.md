@@ -1,6 +1,6 @@
 ---
 title: FieldTrip course at the NatMEG in Stockholm
-tags: [natmeg, MEG-audodd]
+tags: [natmeg, meg-audodd]
 ---
 
 # FieldTrip course at the NatMEG in Stockholm

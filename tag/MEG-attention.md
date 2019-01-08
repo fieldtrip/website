@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: MEG-attention
+tag: meg-attention
 ---

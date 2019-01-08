@@ -1,6 +1,6 @@
-- name:  Human ECoG
-  link:  /getting_started/human_ecog
-
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
+
+- name:  Human ECoG
+  link:  /getting_started/human_ecog
 
