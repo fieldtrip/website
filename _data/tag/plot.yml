@@ -1,56 +1,17 @@
-- name:  Reference documentation
-  link:  /reference
-
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_bem
-
-- name:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor_analysis
-
-- name:  Cluster-based permutation tests on event related fields
-  link:  /tutorial/cluster_permutation_timelock
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
-
-- name:  Event related averaging and MEG planar gradient
-  link:  /tutorial/eventrelatedaveraging
-
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
-
-- name:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms-eeg
-
-- name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
-  link:  /tutorial/sourcemodel
-
-- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
-  link:  /tutorial/headmodel_meg
-
-- name:  Specifying the channel layout for plotting
-  link:  /tutorial/layout
-
-- name:  Localizing oscillatory sources using beamformer techniques
-  link:  /tutorial/beamformer
-
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
-
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
-
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/module/plotting
 
+- name:  Check the quality of the anatomical coregistration
+  link:  /example/coregistration_quality_control
+
+- name:  Plotting the result of source reconstructing on a cortical mesh
+  link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
+
+- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
+  link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
+
 - name:  I am getting strange artifacts in figures that use opacity
   link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
-
-- name:  How can I define neighbouring sensors?
-  link:  /faq/how_can_i_define_neighbouring_sensors
-
-- name:  What is the format of the layout file which is used for plotting?
-  link:  /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting
 
 - name:  How do I construct a layout file for the plotting functions?
   link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
@@ -58,15 +19,54 @@
 - name:  I am having problems printing figures that use opacity
   link:  /faq/i_am_having_problems_printing_figures_that_use_opacity
 
+- name:  What is the format of the layout file which is used for plotting?
+  link:  /faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting
+
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
 
-- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
-  link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
+- name:  How can I define neighbouring sensors?
+  link:  /faq/how_can_i_define_neighbouring_sensors
 
-- name:  Plotting the result of source reconstructing on a cortical mesh
-  link:  /example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh
+- name:  Reference documentation
+  link:  /reference
 
-- name:  Check the quality of the anatomical coregistration
-  link:  /example/coregistration_quality_control
+- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_bem
+
+- name:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/beamformer
+
+- name:  Specifying the channel layout for plotting
+  link:  /tutorial/layout
+
+- name:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/minimumnormestimate
+
+- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_fem
+
+- name:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor_analysis
+
+- name:  Event related averaging and MEG planar gradient
+  link:  /tutorial/eventrelatedaveraging
+
+- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
+  link:  /tutorial/headmodel_meg
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/timefrequencyanalysis
+
+- name:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms-eeg
+
+- name:  Cluster-based permutation tests on event related fields
+  link:  /tutorial/cluster_permutation_timelock
+
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
+- name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
+  link:  /tutorial/sourcemodel
 

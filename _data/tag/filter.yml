@@ -1,18 +1,18 @@
-- name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
-  link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
-
-- name:  How does the filter padding in preprocessing work?
-  link:  /faq/how_does_the_filter_padding_in_preprocessing_work
+- name:  Determine the filter characteristics
+  link:  /example/determine_the_filter_characteristics
 
 - name:  What kind of filters can I apply to my data?
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
 
-- name:  Why does my TFR look strange (part II, detrending)?
-  link:  /faq/why_does_my_tfr_look_strange_part_ii
-
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
 
-- name:  Determine the filter characteristics
-  link:  /example/determine_the_filter_characteristics
+- name:  How does the filter padding in preprocessing work?
+  link:  /faq/how_does_the_filter_padding_in_preprocessing_work
+
+- name:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/why_does_my_tfr_look_strange_part_ii
+
+- name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
+  link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
 

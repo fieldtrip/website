@@ -1,26 +1,62 @@
-- name:  Meetings
-  link:  /development/meeting
-
-- name:  Accessing the FieldTrip source code through CVS
-  link:  /development/cvs
-
-- name:  Dashboard
-  link:  /development/dashboard
-
-- name:  Reading and writing of EEG/MEG time series data
-  link:  /development/module/fileio
-
-- name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
-  link:  /development/module/plotting
+- name:  Modular organization of the source code
+  link:  /development/module
 
 - name:  Project overview
   link:  /development/project
 
-- name:  Modular organization of the source code
-  link:  /development/module
+- name:  Meetings
+  link:  /development/meeting
 
-- name:  Template guidelines
-  link:  /development/guideline/templates
+- name:  Accessing the FieldTrip source code through Git
+  link:  /development/git
+
+- name:  Accessing the FieldTrip source code through SVN
+  link:  /development/svn
+
+- name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
+  link:  /development/module/plotting
+
+- name:  Reading and writing of EEG/MEG time series data
+  link:  /development/module/fileio
+
+- name:  FieldTrip buffer Java interface
+  link:  /development/realtime/buffer_java
+
+- name:  Suggested improvements for handling header and chunks
+  link:  /development/realtime/draft_header_chunks
+
+- name:  Suggested changes to the network protocol
+  link:  /development/realtime/draft_network
+
+- name:  FieldTrip buffer reference implementation
+  link:  /development/realtime/reference_implementation
+
+- name:  FieldTrip buffer C implementation
+  link:  /development/realtime/buffer_c
+
+- name:  Suggested improvements for compatibility across versions
+  link:  /development/realtime/draft_compatability
+
+- name:  Suggested changes to the reference implementation
+  link:  /development/realtime/draft_implementation
+
+- name:  FieldTrip buffer Python interface
+  link:  /development/realtime/buffer_python
+
+- name:  FieldTrip buffer C++ implementation
+  link:  /development/realtime/buffer_cpp
+
+- name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+  link:  /development/realtime/implementation
+
+- name:  Scratchpad for the realtime buffer interface
+  link:  /development/realtime/scratchpad
+
+- name:  FieldTrip buffer MATLAB interface
+  link:  /development/realtime/buffer_matlab
+
+- name:  Code guidelines
+  link:  /development/guideline/code
 
 - name:  Guidelines for audio and video material
   link:  /development/guideline/video
@@ -28,59 +64,26 @@
 - name:  Documentation guidelines
   link:  /development/guideline/documentation
 
-- name:  Code guidelines
-  link:  /development/guideline/code
+- name:  Template guidelines
+  link:  /development/guideline/templates
 
-- name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
-  link:  /development/realtime/implementation
+- name:  Dashboard
+  link:  /development/dashboard
 
-- name:  FieldTrip buffer reference implementation
-  link:  /development/realtime/reference_implementation
+- name:  Accessing the FieldTrip source code through CVS
+  link:  /development/cvs
 
-- name:  Suggested improvements for handling header and chunks
-  link:  /development/realtime/draft_header_chunks
-
-- name:  FieldTrip buffer Python interface
-  link:  /development/realtime/buffer_python
-
-- name:  Suggested improvements for compatibility across versions
-  link:  /development/realtime/draft_compatability
-
-- name:  Suggested changes to the network protocol
-  link:  /development/realtime/draft_network
-
-- name:  FieldTrip buffer Java interface
-  link:  /development/realtime/buffer_java
-
-- name:  FieldTrip buffer C++ implementation
-  link:  /development/realtime/buffer_cpp
-
-- name:  Scratchpad for the realtime buffer interface
-  link:  /development/realtime/scratchpad
-
-- name:  Suggested changes to the reference implementation
-  link:  /development/realtime/draft_implementation
-
-- name:  FieldTrip buffer C implementation
-  link:  /development/realtime/buffer_c
-
-- name:  FieldTrip buffer MATLAB interface
-  link:  /development/realtime/buffer_matlab
-
-- name:  Accessing the FieldTrip source code through SVN
-  link:  /development/svn
-
-- name:  Accessing the FieldTrip source code through Git
-  link:  /development/git
+- name:  Latest documentation commit
+  link:  /commit
 
 - name:  How can I keep track of changes to the code?
   link:  /faq/how_can_i_keep_track_of_the_changes_to_the_code
 
-- name:  Why was FieldTrip maintained in SVN and not in git?
-  link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
-
 - name:  How should I share example data with the email list or developers?
   link:  /faq/how_should_i_send_example_data_to_the_developers
+
+- name:  Why was FieldTrip maintained in SVN and not in git?
+  link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
 
 - name:  Contribute
   link:  /contribute
