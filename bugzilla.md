@@ -1,26 +1,24 @@
 ---
-title: Bugzilla bug tracking system
+title: Bugzilla and Github issue tracking
 ---
 
-# Bugzilla bug tracking system
+# Bugzilla and Github issue tracking
 
-For the FieldTrip project we are using the [bugzilla](http://www.bugzilla.org) bug tracking system. Bugzilla is open source software that helps to manage the workflow related to bug reports, code enhancements and feature requests. It works by storing all these requests as a TODO list in a database, which allows all collaborators to assign and distribute the responsibilities and keep track of everything.
+For a long time we used own own [bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking issues, but recently we started moving over to [Github issues](http://github.com/fieldtrip/fieldtrip/issues). Both Bugzilla and Github help us to manage the workflow: by having all bugs/issues/requests in a sort of TODO list, we can more easily collaborate,  distribute the responsibilities and keep track of things.
 
-Our bugzilla server is located at [http://bugzilla.fieldtriptoolbox.org](http://bugzilla.fieldtriptoolbox.org).
+## Use github to report an issue (recommended)
 
-{% include image src="/assets/img/bugzilla/buggie.png" %}
+To report an issue on Github you have to [sign up for an account](https://github.com/join).  This allows us to follow up on reported issues and keep you automatically updated on the status. I.e., you will get an automatic mail whenever someone works on your request.
 
-## Use bugzilla to report or to get updates
+## Use bugzilla to report an issue (old)
 
-To contribute a new issue to bugzilla or to add yourself to one of the existing bugs, you have to create a bugzilla account with your email address as user name. Your email address will not be visible to external visitors, but only to other contributors to the FieldTrip project after they have logged in. The reason for using the email address as login is that bugzilla uses it to keep you automatically updated on the status of your request. I.e., you get an automatic mail whenever someone works on your request.
+To report an issue on Bugzilla or to add yourself to one of the existing bugs, you have to create a bugzilla account with your email address as user name. You will have to register on the bugzilla server with your email address. Your address will not be visible to external visitors and will only be used to report back to you when the bug is resolved or to ask for additional information that we might need from you.
 
-Note that the easier it is for one of the developers to reproduce the bug, the more likely it is that we can fix the problem.
+## Provide informative reports of your issue
 
-{% include markup/info %}
-You will have to register on the bugzilla server with your email address. Your address will not be visible to external visitors and will only be used to report back to you when the bug is resolved or to ask for additional information that we might need from you.
-{% include markup/end %}
+The easier it is for one of the developers to reproduce your bug, the more likely it is that we'll fix the problem.
 
-Good bug reports include a small test script and the data (i.e. mat file) required to reproduce the bug. Please create a test script and a piece of data that are both as small as possible to reproduce the problem. For example: a .mat file containing a data structure and a cfg structure, and an instruction like *"load the cfg and data from the mat file and run ft_freqanalysis(cfg, data)"*.
+Good bug reports include a small test script and the data (i.e. mat file) required to reproduce the bug. Please create a test script and a piece of data that are both as small and simple as possible to reproduce the problem. For example: a .mat file containing a data structure and a cfg structure, and an instruction like *"load the cfg and data from the mat file and run ft_freqanalysis(cfg, data)"*.
 
 If there is a chance to the bug being platform dependent, please also specify the platform (Windows, OS X, Linux), the version of your operating system (WinXP, Vista, Redhat 7.2, ...), the version of MATLAB that you are using and whether you are using a 32 bit or 64 bit operating system and MATLAB.
 

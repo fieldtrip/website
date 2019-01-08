@@ -1,5 +1,5 @@
 ---
-title: Recent improvements to the code
+title: Development
 tags: [development]
 ---
 
@@ -12,6 +12,8 @@ tags: [development]
 * [Meetings](/development/meeting)
 * [Dashboard](/development/dashboard)
 * [Realtime](/development/realtime)
+
+To get direct access to the code, please refer to the [git and github](/development/git) documentation.
 
 The source code in the FieldTrip toolbox is split over multiple directories reflecting the [modular organization](/development/module). The modular organization facilitates a separation between end-user functions that also do data bookkeeping, and low level functions that focus on the algorithms.
 
