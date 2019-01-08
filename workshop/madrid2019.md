@@ -6,7 +6,7 @@ title: FieldTrip workshop Madrid
 
 ## Where
 
-Facultad de Psicología, Universidad Autonoma de Madrid, Calle Iván Pavlov, 6, 28049 Madrid, Spain.
+Facultad de Psicologia, Universidad Autonoma de Madrid, Calle Iván Pavlov, 6, 28049 Madrid, Spain.
 
 ## When
 
@@ -14,7 +14,7 @@ Monday January 21st - Tuesday January 22nd.
 
 ## Who
 
-The "Sociedad Española de Psicofisiología y Neurociencia Cognitiva y Afectiva" (SEPNECA) is the local organizer. Sophie Arana (Donders Institute, Nijmegen) and Diego Lozano-Soldevilla (CIBERER, Madrid; IDIBAPS, Barcelona) are the lecturers.
+The "Sociedad Espanola de Psicofisiologia y Neurociencia Cognitiva y Afectiva" (SEPNECA) is the local organizer. Sophie Arana (Donders Institute, Nijmegen) and Diego Lozano-Soldevilla (CIBERER, Madrid; IDIBAPS, Barcelona) are the lecturers.
 
 ## PROGRAM
 
