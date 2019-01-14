@@ -1,4 +1,8 @@
----
+----
+title:
+tags:
+----
+
 # Overview of the tutorial
 
 In this example script we are going to learn how the normalization of the **Power Spectral Density (PSD)** affects the statistics strength and sensitivity. To archive that we will use the **cluster-based nonparametric permutation test** to:
