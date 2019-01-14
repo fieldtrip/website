@@ -83,13 +83,13 @@ Set-up paths and define important variables
 
 **1. Normalize the PSD relative to the mean taken over freq_norm during the SAME sedative state**
 
-     - Pros: you become sensitive to power difference within each sedative
-state
+     - Pros: you become sensitive to power difference within each sedative state
 
      - Cons: denominator is different across sedative states which
 difficult the interpretation of results. Are differences in PSD
 because the numerator or the denominator?
-    ~~~~
+
+~~~~
     freq_oi   = [8 12]; % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
     foi      = nearest(base_sedation.freq,freq_oi);
@@ -99,13 +99,12 @@ because the numerator or the denominator?
     mild_sedation.powspctrm_w = bsxfun(@rdivide, mild_sedation.powspctrm, mean(mild_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
     mode_sedation.powspctrm_w = bsxfun(@rdivide, mode_sedation.powspctrm, mean(mode_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
     reco_sedation.powspctrm_w = bsxfun(@rdivide, reco_sedation.powspctrm, mean(reco_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));'
-    ~~~~
+~~~~
 
 **2. Normalize the PSD to the mean taken over freq_norm during BASELINE sedative state**
+  - **Pros**: the demonimator is the same for all sessions which facilitates comparisons
 
-     - Pros: the **demonimator** is the same for all sessions which facilitates comparisons
-
-     - Cons: if baseline is biased, all our estimates will be biased
+  - **Cons**: if baseline is biased, all our estimates will be biased
 
 ~~~~
     common_denominator = mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3);
