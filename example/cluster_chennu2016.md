@@ -6,7 +6,7 @@ In this example script we are going to learn how the normalization of the **Powe
 1. Compute a **Multivariate ANOVA**  to test the effect of the
 (drug) intervention on the entire EEG spectrum.
 
-2. Compute **within ** -participant contrasts
+2. Compute **within** -participant contrasts
 
 3. Compute **between** -participant contrasts
 
@@ -81,8 +81,7 @@ Set-up paths and define important variables
 
 # Normalization of the Power Spectral Density (PSD)
 
-1. Normalize the PSD relative to the mean taken over freq_norm during the
-SAME sedative state
+1. **Normalize the PSD relative to the mean taken over freq_norm during the SAME sedative state**
 
      - Pros: you become sensitive to power difference within each sedative
 state
@@ -90,9 +89,8 @@ state
      - Cons: denominator is different across sedative states which
 difficult the interpretation of results. Are differences in PSD
 because the numerator or the denominator?
-
-
-    freq_oi   = [8 12];   % frequency range to display averages
+    ~~~~
+    freq_oi   = [8 12]; % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
     foi      = nearest(base_sedation.freq,freq_oi);
     foi_norm = nearest(base_sedation.freq,freq_norm);
@@ -100,8 +98,9 @@ because the numerator or the denominator?
     base_sedation.powspctrm_w = bsxfun(@rdivide, base_sedation.powspctrm, mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
     mild_sedation.powspctrm_w = bsxfun(@rdivide, mild_sedation.powspctrm, mean(mild_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
     mode_sedation.powspctrm_w = bsxfun(@rdivide, mode_sedation.powspctrm, mean(mode_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
-    reco_sedation.powspctrm_w = bsxfun(@rdivide, reco_sedation.powspctrm, mean(reco_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
-
+    reco_sedation.powspctrm_w = bsxfun(@rdivide, reco_sedation.powspctrm, mean(reco_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));'
+    ~~~~
+    
 2. Normalize the PSD to the mean taken over freq_norm during BASELINE sedative state
 
      - Pros: the demonimator is the same for all sessions which facilitates comparisons
