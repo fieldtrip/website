@@ -76,24 +76,23 @@ using ft_databrowser (i.e. topoplots)
 If preprocessing was done as described, the data will have the following
 fields
 
-eeg =
-
-hdr: [1×1 struct]
-label: {91×1 cell}
-time: {[1×102500 double]}
-trial: {[91×102500 double]}
-fsample: 250
-sampleinfo: [1 102500]
-cfg: [1×1 struct]
-
+	eeg =
+		hdr: [1×1 struct]
+	  label: {91×1 cell}
+	   time: {[1×102500 double]}
+	  trial: {[91×102500 double]}
+	fsample: 250
+ sampleinfo: [1 102500]
+	    cfg: [1×1 struct]
 
 add the electrode description
+
     data.elec = prepare_elec_chennu2016(data.label);
 
 Using the ft_databrowser we will now visually inspect our data and mark
 samples as either blink, bad channel or muscle artifacts. If you haven't
 used the databrowser before, read here how to use it
-red:faq/how_can_i_use_the_databrowser
+ref:faq/how_can_i_use_the_databrowser
 
     cfg = [];
     cfg.channel       = 'all';
@@ -105,6 +104,8 @@ red:faq/how_can_i_use_the_databrowser
     cfg.artfctdef.badchannel.artifact = [];
     cfg.artfctdef.muscle.artifact     = [];
     artif = ft_databrowser(cfg,data);
+	
+{Figure of databrowser}
 
 We manually add to the artifact structure the names of those channels that
 we have identified as bad or missing throughout the entire recording.
@@ -126,17 +127,21 @@ save the artifacts we identified but not the cleaned eeg data
     load neighbours
 
 1.- interpolate channels with artifacts during the whole experiment
+
     cfg = [];
     cfg.badchannel     = artif.badchannel;
     cfg.method         = 'weighted';
     cfg.neighbours     = neighbours;
     data = ft_channelrepair(cfg,data);
 
-exercise: plot the broken channel before and after interpolation to see
+{% include markup/info %}
+Exercise 1: plot the broken channel before and after interpolation to see
 how ft_channelrepair affects the data! Tip: Find the index of the channel
 in the eeg.label field and match it to the data in the eeg.trial field.
+{% include markup/end %}
 
 2.- select EEG artifacted manual selections with ft_redefinetrial
+
     artpadding  = 0.1;
     begart      = artif.artfctdef.badchannel.artifact(:,1)-round(artpadding.*data.fsample);
     endart      = artif.artfctdef.badchannel.artifact(:,2)+round(artpadding.*data.fsample);
@@ -152,23 +157,24 @@ you have identified as artifact in the trial field. Each trial will be of
 different length. Inspect the fields in your datastructure and compare to
 the data structure after reading in with ft_preprocessing.
 
-data_bad =
-
-hdr: [1×1 struct]
-trial: {[91×151 double]  [91×132 double]  [91×135 double]  [91×116 double]  [91×139 double]  [91×230 double]}
-time: {[1×151 double]  [1×132 double]  [1×135 double]  [1×116 double]  [1×139 double]  [1×230 double]}
-elec: [1×1 struct]
-fsample: 250
-label: {91×1 cell}
-sampleinfo: [6×2 double]
-cfg: [1×1 struct]
+	data_bad =
+		hdr: [1×1 struct]
+	  trial: {[91×151 double]  [91×132 double]  [91×135 double]  [91×116 double]  [91×139 double]  [91×230 double]}
+	   time: {[1×151 double]  [1×132 double]  [1×135 double]  [1×116 double]  [1×139 double]  [1×230 double]}
+	   elec: [1×1 struct]
+	fsample: 250
+	  label: {91×1 cell}
+ sampleinfo: [6×2 double]
+	    cfg: [1×1 struct]
 
 3.- identify the channels with the artifacts
 
 parameters to detect artifacts
-    proportion = 0.4; % criterion proportion of bad samples
-    thresh1 = 3; % threshold in units of median absolute value over all data
-    data_fixed = {};
+
+    proportion	= 0.4; 	% criterion proportion of bad samples
+    thresh1		= 3; 		% threshold in units of median absolute value over all data
+    
+	data_fixed  = {};
     for k=1:size(data_bad.trial,2)
         % This is de Cheveigne algorithm to detect bad channels. See nt_find_bad_channels.m in Noisetools
         w       = ones(size(data_bad.trial{1,k}));
@@ -190,30 +196,39 @@ parameters to detect artifacts
         data_fixed{1,k} = ft_channelrepair(cfg,data_bad);
     end
     clear data_bad
-After correcting each artifactual trial we can use ft_appenddata to
-combine trials into one structure again.
-    data_fixed = ft_appenddata([],data_fixed{:});
-Exercise: Visualize the selected artifacts in data_bad with ft_databrowser
+	
+After correcting each artifactual trial we can use ft_appenddata to combine trials into one structure again.
+    
+	data_fixed = ft_appenddata([],data_fixed{:});
+
+{% include markup/info %}
+Exercise 2: Visualize the selected artifacts in data_bad with ft_databrowser
 and compare to data_fixed.
+{% include markup/end %}
 
 now delete the badchannel artifacts and append the interpolated data
-    cfg5                               = [];
-    cfg5.artfctdef.minaccepttim        = 0.010;
-    cfg5.artfctdef.reject              = 'partial';
-    cfg5.artfctdef.badchannel.artifact = [begart endart];
-    data_clean = ft_rejectartifact(cfg5,data);
+    
+	cfg                               = [];
+    cfg.artfctdef.minaccepttim        = 0.010;
+    cfg.artfctdef.reject              = 'partial';
+    cfg.artfctdef.badchannel.artifact = [begart endart];
+    data_clean = ft_rejectartifact(cfg,data);
 
     data = ft_appenddata([],data_clean,data_fixed);
     clear data_clean data_fixed;
-Exercise: inspect the new data structure. What has changed?
 
-In order keep the data as one continous trial we use ft_redefinetrial and
-the sample information
+{% include markup/info %}	
+Exercise 3: inspect the new data structure. What has changed?
+{% include markup/end %}
+
+In order keep the data as one continous trial we use ft_redefinetrial and the sample information
+
     cfg = [];
     cfg.trl = [min(data.sampleinfo(:,1)) max(data.sampleinfo(:,2)) 0];
     data = ft_redefinetrial(cfg,data);
 
 5.- check the interpolation results using ft_databrowser
+
     cfg = [];
     cfg.viewmode      = 'vertical';
     cfg.artifactalpha = 0.8;
@@ -233,6 +248,7 @@ the sample information
 # Reject the muscular and visual artifacts
 note we do not want to reject blinks because we want to model them
 using independent component analysis
+
     cfg = [];
     cfg.artfctdef.minaccepttim = 0.010;
     cfg.artfctdef.reject       = 'partial';
@@ -244,9 +260,13 @@ using independent component analysis
     end
     data = ft_rejectartifact(cfg,data);
 
-Exercise: Could be to compare different modes of rejecting artifacts like
-partial vs nan etc
+{% include markup/info %}
+Exercise 4: Could be to compare different modes of rejecting artifacts like
+partial vs nan etc .
+{% include markup/end %}
+
 once all is cleaned, we can reference the data
+
     cfg            = [];
     cfg.channel    = 'all';
     cfg.demean     = 'yes';
@@ -285,7 +305,7 @@ update the neighbours representation accordingly
     cfg.neighbours = cfg_neigh.neighbours;
     data = ft_channelrepair(cfg,data);
 
-# eye blink removal with ICA
+# Eye blink removal with ICA
 For the ICA it is best to use as much data as possible. We will therefore
 combine data from all tasks/different sedation levels. To save time, we
 have preprocessed the remaining data segments for you.
@@ -294,6 +314,7 @@ have preprocessed the remaining data segments for you.
     data = alldata;
 concatenate all trials to compute the rank of the data and constrain
 the number of independent components
+
     dat = [];
     for k=1:size(data.trial,2)
         dat = [dat data.trial{1,k}];
@@ -310,14 +331,17 @@ Because computing the independent components can be time consuming, it is
 efficient to save the result. In order to reduce disk space we delete
 trial 'time','trial' fields because with the topo and unmixing matrix we
 can reconstruct everything
+
     comp = rmfield(comp,{'time','trial'});
     save([subj '_comp.mat'],'-struct','comp');
 
 If you want to skip the ICA, simply load in the pre-computed components
 and apply to data
+
     comp = load('sub-28_comp');
 
 small fix: tell fieldtrip that these are different blocks updating sampleinfo
+
     nsmp = data.sampleinfo(:,2);
     begsample = cat(1, 0, cumsum(nsmp(1:end-1))) + 1;
     endsample = begsample + nsmp - 1;
@@ -331,6 +355,7 @@ small fix: tell fieldtrip that these are different blocks updating sampleinfo
 
 we add the visually indentified artifacts to check which ICs are
 sensitive to them
+
     cfg = [];
     cfg.layout        = ft_prepare_layout([],data);
     cfg.viewmode      = 'component';
@@ -352,6 +377,7 @@ sensitive to them
 
 # Frequency analysis
 First we segment our continuous data into 2 second segments.
+
     cfg = [];
     cfg.length  = 2;
     cfg.overlap = 0;
@@ -367,6 +393,7 @@ First we segment our continuous data into 2 second segments.
     end
 
 Welch PSD on clean EEG and selected ICs
+
     cfg = [];
     cfg.output  = 'pow';
     cfg.channel = 'all';
@@ -377,7 +404,8 @@ Welch PSD on clean EEG and selected ICs
     FreqDat.cfg = [];
     FreqComp = ft_freqanalysis(cfg, comp_rpt);
 
-visualize IC features
+Visualize IC features
+
     cfg = [];
     cfg.elec = prepare_elec_chennu2016(data.label);
     layout = ft_prepare_layout(cfg);
