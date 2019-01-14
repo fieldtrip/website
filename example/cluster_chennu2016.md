@@ -6,7 +6,7 @@ how the normalization of the ** * Power Spectral Density (PSD)* **
 affects the statistics strength and sensitivity. To archive that we will
 use the ** *cluster-based nonparametric permutation test* ** to:
 
-1. Compute a ** *Multivariate ANOVA* **  to test the effect of the
+1. Compute a * **Multivariate ANOVA** *  to test the effect of the
 (drug) intervention on the entire EEG spectrum.
 
 2. Compute ** * within * ** -participant contrasts
