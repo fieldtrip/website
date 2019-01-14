@@ -1,20 +1,21 @@
+---
 # Overview of the tutorial
 
 In this example script we are going to learn
-how the normalization of the **** * Power Spectral Density (PSD)* ****
+how the normalization of the ** * Power Spectral Density (PSD)* **
 affects the statistics strength and sensitivity. To archive that we will
-use the **** *cluster-based nonparametric permutation test* **** to:
+use the ** *cluster-based nonparametric permutation test* ** to:
 
-1. Compute a **** *Multivariate ANOVA* ****  to test the effect of the
+1. Compute a ** *Multivariate ANOVA* **  to test the effect of the
 (drug) intervention on the entire EEG spectrum.
 
-2. Compute **** * within * **** -participant contrasts
+2. Compute ** * within * ** -participant contrasts
 
-3. Compute **** * between * **** -participant contrasts
+3. Compute ** * between * ** -participant contrasts
 
-4. Compute a **** * 2x2 interaction * ****
+4. Compute a ** * 2x2 interaction * **
 
-5. Compute a **** * correlation * **** between a variable and the EEG
+5. Compute a ** * correlation * ** between a variable and the EEG
 spectrum
 
 Set-up paths and define important variables
@@ -79,6 +80,7 @@ Set-up paths and define important variables
     sel_fROI = match_str(base_sedation.label,frontal_ROI);
 
     elec = prepare_elec_chennu2016(base_sedation.label);
+
 
 # Normalization of the Power Spectral Density (PSD)
 
@@ -668,8 +670,7 @@ Finally we compute the interaction:
     cfg.elec = elec;
     ft_clusterplot(cfg,stat5);
 
-
-Now select the significant sensors and frequencies and plot the interaction
+Now select the significant sensors and frequencies and  plot the interaction
 
     % get the 1st positive and negative cluster
     signegmask = (stat4.negclusterslabelmat==1) & stat4.mask;
@@ -736,7 +737,8 @@ Now select the significant sensors and frequencies and plot the interaction
     set(gca,'XTickLabel',{'','','baseline','','moderate','',''});
 
 
-# HOMEWORK: INTERACTION between GROUP (RESPONSIVE vs DROWSY) and ROI (Frontal vs Occipital)
+# HOMEWORK:
+INTERACTION between GROUP (RESPONSIVE vs DROWSY) and ROI (Frontal vs Occipital)
 
 Here the fists steps. Prepare the data
 
