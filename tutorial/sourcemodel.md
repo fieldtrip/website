@@ -3,7 +3,7 @@ title: Creating a sourcemodel for source-reconstruction of MEG or EEG data
 tags: [tutorial, source, meg, sourcemodel, mri, plot, meg-language]
 ---
 
-# Creating a sourcemodel for source-reconstruction of MEG or EEG data
+# Creating a source model for source-reconstruction of MEG or EEG data
 
 ## Introduction
 
@@ -33,20 +33,16 @@ Content is coming soon!
 
 ### Preprocessing of the anatomical MRI, reslicing and coregistration
 
-The anatomical preprocessing is done in MATLAB with FieldTrip. The goal of this step is to create a file with a T1w anatomical image that can be used for the creation of two 'geometric objects': a volume conduction model, and a cortical sheet based source model. Moreover, this image will be used to create coregistration information to the different coordinate systems involved. One annoying thing to be aware of, and to think about in advance, is the fact that typically different parts of the pipeline assume (or require) different conventions of coordinate systems. Specifically, geometric information (sensor locations) in MEG/EEG data is typically expressed in a coordinate system that is defined based on external anatomical landmarks, whereas software used for processing of structural data usually requires coordinates to be expressed according to brain-anatomy related landmarks, such as the anterior and posterior commissures. More information about coordinate systems can be found at the [frequently asked question about coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). To make a long story short, for now it suffices to know that you're safe if you know how to convert back and forth between the different relevant coordinate systems. The least error-prone and most convenient way to do this, is to create a well-defined reference anatomical image, which will be created with the following step
+The anatomical preprocessing is done in MATLAB with FieldTrip. The goal of this step is to create a file with a T1w anatomical image that can be used for the creation of two 'geometric objects': a volume conduction model of the head (not covered in this tutorial), and a cortical sheet based source model. Moreover, this image will be used to create coregistration information to the different coordinate systems involved. One annoying thing to be aware of, and to think about in advance, is the fact that typically different parts of the pipeline assume (or require) different conventions of coordinate systems. Specifically, geometric information (sensor locations) in MEG/EEG data is typically expressed in a coordinate system that is defined based on external anatomical landmarks, whereas software used for processing of structural data usually requires coordinates to be expressed according to brain-anatomy related landmarks, such as the anterior and posterior commissures. More information about coordinate systems can be found at the [frequently asked question about coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). To make a long story short, for now it suffices to know that you're safe if you know how to convert back and forth between the different relevant coordinate systems. The least error-prone and most convenient way to do this, is to create a well-defined reference anatomical image, which will be created with the following step
 
 *  read in the anatomical images into MATLAB with **[ft_read_mri](/reference/ft_read_mri)**
-*  ensure that the coordinate system is according to MNI's RAS convention, which can be checked with **[ft_determine_coordsys](/reference/ft_determine_coordsys)** and imposed with **[ft_volumerealign](/reference/ft_volumerealign)**.
-*  reslice the volume with **[ft_volumereslice](/reference/ft_volumereslice)** in order to have a uniform thickness for each slice, and to have the axes of the coordinate system lined up with the 'voxel axes'.
-*  save the coregistration matrix that defines the transformation from voxels to MNI-RAS.
-*  save the resliced anatomy in FreeSurfer compatible format, using **[ft_volumewrite](/reference/ft_volumewrite)**. This anatomical image will serve as starting point for the creation of the cortical sheet based source model.
+*  ensure that the coordinate system is according to MEEG device's coordinate system, which can be checked with **[ft_determine_coordsys](/reference/ft_determine_coordsys)** and imposed with **[ft_volumerealign](/reference/ft_volumerealign)**.
+*  optionally reslice the volume with **[ft_volumereslice](/reference/ft_volumereslice)** in order to have a uniform thickness for each slice, and to have the axes of the coordinate system lined up with the 'voxel axes'.
+*  save the coregistration matrix that defines the transformation from voxels to the MEEG coordinate system, and the MEEG-aligned volume (the latter to be used for headmodel creation).
+*  coregister the same volumetric image to an acpc-based coordinate system, which allows the anatomical image to serve as in input image to freesurfer's automatic surface extraction pipeline.
+*  save the acpc-aligned anatomy in FreeSurfer compatible format, using **[ft_volumewrite](/reference/ft_volumewrite)**. This anatomical image will serve as starting point for the creation of the cortical sheet based source model.
 
-Then we may need to also create coregistration information to the coordinate system used in the MEG/EEG data.
-
-*  realign the resliced anatomical data to the MEG/EEG based coordinate system with **[ft_volumerealign](/reference/ft_volumerealign)**.
-*  save the coregistration matrix that defines the transormation from voxels to the MEG/EEG coordinate system.
-
-Thus, the input of the preprocessing is the anatomical MRI. The output is a realigned and resliced anatomical image, as well as a set of transformation matrices.
+Thus, the input of the preprocessing is the anatomical MRI. The output is two anatomical images, as well as a set of transformation matrices.
 
 #### 1. Preprocessing of the anatomical MRI: read in MRI data
 
