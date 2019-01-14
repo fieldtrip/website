@@ -1,10 +1,10 @@
-# Overview of the tutorial
-Markdown | Less | Pretty
---- | --- | ---
-**Still** | `renders` | ****nicely****
-1 | 2 | 3
+---
+title:
+tags:
+---
 
-LET'S LOAD AND PREPARE THE DATA
+Let us load and prepare the data
+
     if ispc;
       wrkpath = 'C:\Users\diegolozano\Dropbox\wc_chennu\Chennu2016BIDS\';
       addpath(fullfile(wrkpath,'code','pipelines'));
@@ -31,6 +31,7 @@ create dummy variables to fill participants and sedative conditions
 
 here we'll add covariates to take into account during stats such as drug
 concentration, reaction time, correct responses
+
     cov_labels = {'drug concentration' 'reaction time' 'correct responses'};
     covariates = zeros(size(folder_dir,1),size(exp_cond,1),size(cov_labels,2));
 
@@ -63,6 +64,7 @@ concentration, reaction time, correct responses
     reco_sedation = ft_freqgrandaverage(cfg,reco_sedation{:});
 
 get the numerical indices to compute averages
+
     sel_oROI = match_str(base_sedation.label,occipital_ROI);
     sel_fROI = match_str(base_sedation.label,frontal_ROI);
 
