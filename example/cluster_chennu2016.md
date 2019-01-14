@@ -81,7 +81,7 @@ Set-up paths and define important variables
 
 # Normalization of the Power Spectral Density (PSD)
 
-1. **Normalize the PSD relative to the mean taken over freq_norm during the SAME sedative state**
+**1. Normalize the PSD relative to the mean taken over freq_norm during the SAME sedative state**
 
      - Pros: you become sensitive to power difference within each sedative
 state
@@ -100,14 +100,14 @@ because the numerator or the denominator?
     mode_sedation.powspctrm_w = bsxfun(@rdivide, mode_sedation.powspctrm, mean(mode_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
     reco_sedation.powspctrm_w = bsxfun(@rdivide, reco_sedation.powspctrm, mean(reco_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));'
     ~~~~
-    
-2. Normalize the PSD to the mean taken over freq_norm during BASELINE sedative state
 
-     - Pros: the demonimator is the same for all sessions which facilitates comparisons
+**2. Normalize the PSD to the mean taken over freq_norm during BASELINE sedative state**
+
+     - Pros: the **demonimator** is the same for all sessions which facilitates comparisons
 
      - Cons: if baseline is biased, all our estimates will be biased
 
-
+~~~~
     common_denominator = mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3);
     base_sedation.powspctrm_b = bsxfun(@rdivide, base_sedation.powspctrm, common_denominator); %repmat(mean(base_sedation.powspctrm,3),1,1,90);
     mild_sedation.powspctrm_b = bsxfun(@rdivide, mild_sedation.powspctrm, common_denominator);
@@ -186,7 +186,9 @@ because the numerator or the denominator?
     set(h6{1},'LineWidth',1,'Marker', '.','Color','k','MarkerFaceColor','k')
 
     {% include markup/warning %}
-    QUESTION 1: why in the between session normalization all participants are clustered around value 1? Lead: if you plot the alpha power as a function of the total spectrum power, what type of relationship do you see?
+    **QUESTION 1**:
+    why in the between session normalization all participants are clustered around value 1?
+    Lead: if you plot the alpha power as a function of the total spectrum power, what type of relationship do you see?
     {% include markup/end %}
 
     % let's make topoplots and the PSD for each ROI for each sedative condition (similar to Fig 5A in Chennu et al.,)
@@ -246,12 +248,13 @@ because the numerator or the denominator?
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
     title('recovery');
+~~~~
 
-{% include markup/warning %}
-# QUESTION 2: there's a participant in the dataset with an extreme power value: Can you find it?
-{% include markup/end %}
+<div class="note"></div>   
+**QUESTION 2**: There's a participant in the dataset with an extreme power value: Can you find it?
 
-    figure; plot(base_sedation.freq,...
+~~~~
+figure; plot(base_sedation.freq,...
     [squeeze(base_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
     squeeze(mild_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
     squeeze(mode_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
@@ -266,9 +269,10 @@ because the numerator or the denominator?
     mild_sedation_out = ft_selectdata(cfg,mild_sedation);
     mode_sedation_out = ft_selectdata(cfg,mode_sedation);
     reco_sedation_out = ft_selectdata(cfg,reco_sedation);
-
+~~~~
 
 # CONTRAST 1: main effect of drug
+
     foi_contrast = [0.5 30];
 
     cfg = [];
@@ -352,6 +356,7 @@ because the numerator or the denominator?
 
 
 # CONTRAST 2: within-participant BASELINE vs MODERATE sedation comparison
+
     cfg = [];
     cfg.channel          = 'all';
     cfg.frequency        = foi_contrast;
