@@ -1,4 +1,10 @@
-# LET'S LOAD AND PREPARE THE DATA
+# Overview of the tutorial
+Markdown | Less | Pretty
+--- | --- | ---
+**Still** | `renders` | ****nicely****
+1 | 2 | 3
+
+LET'S LOAD AND PREPARE THE DATA
     if ispc;
       wrkpath = 'C:\Users\diegolozano\Dropbox\wc_chennu\Chennu2016BIDS\';
       addpath(fullfile(wrkpath,'code','pipelines'));
@@ -171,7 +177,7 @@ Lead: if you plot the alpha power as a function of the total spectrum power, wha
     cfg = [];
     cfg.elec             = elec;
     cfg.parameter        = 'powspctrm_b'; % you can test any of the subfields: powspctrm, powspctrm_w, powspctrm_b
-    cfg.xlim             = [8 12]; % frequency range to make the topoplot
+    cfg.xlim             = [8 15]; % frequency range to make the topoplot
     cfg.highlight        = 'on';
 here the figure cosmetics
     cfg.highlightchannel = {frontal_ROI occipital_ROI};
@@ -182,7 +188,7 @@ here the figure cosmetics
     cfg.comment          = 'no';
     cfg.colormap         = 'jet';
 
-    figure;
+    figure('position',[680 240 1039 420]);
     subplot(241);ft_topoplotER(cfg,base_sedation);colorbar;title('baseline');
     subplot(242);ft_topoplotER(cfg,mild_sedation);colorbar;title('mild');
     subplot(243);ft_topoplotER(cfg,mode_sedation);colorbar;title('moderate');
@@ -191,7 +197,7 @@ here the figure cosmetics
     subplot(245);loglog(base_sedation.freq,...
       [squeeze(mean(mean(base_sedation.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(base_sedation.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     legend('Front ROI','Occip ROI','Location','southwest');
     xlabel('Frequency (Hz)');
@@ -201,7 +207,7 @@ here the figure cosmetics
     subplot(246);loglog(mild_sedation.freq,...
       [squeeze(mean(mean(mild_sedation.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(mild_sedation.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -210,7 +216,7 @@ here the figure cosmetics
     subplot(247);loglog(mode_sedation.freq,...
       [squeeze(mean(mean(mode_sedation.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(mode_sedation.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -219,7 +225,7 @@ here the figure cosmetics
     subplot(248);loglog(reco_sedation.freq,...
       [squeeze(mean(mean(reco_sedation.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(reco_sedation.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -228,7 +234,7 @@ here the figure cosmetics
 
 # QUESTION 2: there's a participant in the dataset with an extreme power value: Can you find it?
 outlier_chans = [59]; 
-participant_outlier=7;
+    participant_outlier=7;
 figure; plot(base_sedation.freq,...
 [squeeze(base_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
 squeeze(mild_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
@@ -469,23 +475,23 @@ cfg.zlim = [1.5 3];
     cfg.colormap = 'jet';
     cfg.colorbar = 'no';
 
-    figure;
-    subplot(241);ft_topoplotER(cfg,base_sedation_respon);colorbar;
-    subplot(242);ft_topoplotER(cfg,mild_sedation_respon);colorbar;
-    subplot(243);ft_topoplotER(cfg,mode_sedation_respon);colorbar;
-    subplot(244);ft_topoplotER(cfg,reco_sedation_respon);colorbar;
+    figure('position',[680 240 1039 420]);
+    subplot(241);ft_topoplotER(cfg,base_sedation_respon);colorbar;title('base Responsive');
+    subplot(242);ft_topoplotER(cfg,mild_sedation_respon);colorbar;title('mild Responsive');
+    subplot(243);ft_topoplotER(cfg,mode_sedation_respon);colorbar;title('mode Responsive');
+    subplot(244);ft_topoplotER(cfg,reco_sedation_respon);colorbar;title('reco Responsive');
 
-    subplot(245);ft_topoplotER(cfg,base_sedation_drowsy);colorbar;
-    subplot(246);ft_topoplotER(cfg,mild_sedation_drowsy);colorbar;
-    subplot(247);ft_topoplotER(cfg,mode_sedation_drowsy);colorbar;
-    subplot(248);ft_topoplotER(cfg,reco_sedation_drowsy);colorbar;
+    subplot(245);ft_topoplotER(cfg,base_sedation_drowsy);colorbar;title('base Drowsy');
+    subplot(246);ft_topoplotER(cfg,mild_sedation_drowsy);colorbar;title('mild Drowsy');
+    subplot(247);ft_topoplotER(cfg,mode_sedation_drowsy);colorbar;title('mode Drowsy');
+    subplot(248);ft_topoplotER(cfg,reco_sedation_drowsy);colorbar;title('reco Drowsy');
 
 PSDs for each group separately as a function of sedative state
-    figure;
+    figure('position',[680 240 1039 420]);
     subplot(241);loglog(base_sedation_respon.freq,...
       [squeeze(mean(mean(base_sedation_respon.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(base_sedation_drowsy.(cfg.parameter)(:,sel_fROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     legend('Front ROI resp','Front ROI drow','Location','southwest');
     xlabel('Frequency (Hz)');
@@ -495,7 +501,7 @@ PSDs for each group separately as a function of sedative state
     subplot(242);loglog(mild_sedation_respon.freq,...
       [squeeze(mean(mean(mild_sedation_respon.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(mild_sedation_drowsy.(cfg.parameter)(:,sel_fROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -504,7 +510,7 @@ PSDs for each group separately as a function of sedative state
     subplot(243);loglog(mode_sedation_respon.freq,...
       [squeeze(mean(mean(mode_sedation_respon.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(mode_sedation_drowsy.(cfg.parameter)(:,sel_fROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -513,7 +519,7 @@ PSDs for each group separately as a function of sedative state
     subplot(244);loglog(reco_sedation_respon.freq,...
       [squeeze(mean(mean(reco_sedation_respon.(cfg.parameter)(:,sel_fROI,:),2),1))...
        squeeze(mean(mean(reco_sedation_drowsy.(cfg.parameter)(:,sel_fROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -523,7 +529,7 @@ PSDs from occipital ROI
     subplot(245);loglog(base_sedation_respon.freq,...
       [squeeze(mean(mean(base_sedation_respon.(cfg.parameter)(:,sel_oROI,:),2),1))...
        squeeze(mean(mean(base_sedation_drowsy.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -532,7 +538,7 @@ PSDs from occipital ROI
     subplot(246);loglog(mild_sedation_respon.freq,...
       [squeeze(mean(mean(mild_sedation_respon.(cfg.parameter)(:,sel_oROI,:),2),1))...
        squeeze(mean(mean(mild_sedation_drowsy.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -540,7 +546,7 @@ PSDs from occipital ROI
     subplot(247);loglog(mode_sedation_respon.freq,...
       [squeeze(mean(mean(mode_sedation_respon.(cfg.parameter)(:,sel_oROI,:),2),1))...
        squeeze(mean(mean(mode_sedation_drowsy.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -548,7 +554,7 @@ PSDs from occipital ROI
     subplot(248);loglog(reco_sedation_respon.freq,...
       [squeeze(mean(mean(reco_sedation_respon.(cfg.parameter)(:,sel_oROI,:),2),1))...
        squeeze(mean(mean(reco_sedation_drowsy.(cfg.parameter)(:,sel_oROI,:),2),1))]);
-    xlim([0.5 45]);grid on;
+    xlim([0.5 45]);grid on;hold on;plot([10,10],[10^-3 10^2],'--k')
     ylim([10^-3 10^2]);
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
@@ -567,7 +573,6 @@ ROI contrast in RESPONSIVE group
     sedation_drowsy_d = ft_math(cfg,base_sedation_drowsy,mode_sedation_drowsy);
 
 
-# 
     cfg = [];
     cfg.channel          = 'all';
     cfg.frequency        = foi_contrast;
@@ -600,8 +605,9 @@ ROI contrast in RESPONSIVE group
     cfg = [];
     cfg.alpha  = stat4.cfg.alpha;
     cfg.parameter = 'stat';
-cfg.zlim   = [-3 3];
+    cfg.zlim   = [-4 4];
     cfg.elec = elec;
+    figure('position',[680 245 874 730]);
     ft_clusterplot(cfg, stat4);
 
 
