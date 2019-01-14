@@ -56,11 +56,11 @@ Here is what NOT to write:
 {% include markup/end %}
 
 {% include markup/info %}
-Here are some examples of what you CAN writ
+Here are some examples of what you CAN write
 
 "After selecting the a-priori time and region of interest in our data, the cluster-based permutation tests revealed a difference between the fully congruent and fully incongruent condition."
 
-or if you would only select a latency rang
+or if you would only select a latency range
 
 "Testing for an N400 effect in the latency range from 350 to 500 ms post-stimulus, the cluster-based permutation test revealed a significant difference between the fully congruent and fully incongruent condition (p<0.05). In this latency range, the difference was most pronounced over left frontotemporal sensors."
 {% include markup/end %}
