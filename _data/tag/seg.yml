@@ -1,6 +1,6 @@
-- name:  How is the segmentation defined?
-  link:  /faq/how_is_the_segmentation_defined
-
 - name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
   link:  /faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer
+
+- name:  How is the segmentation defined?
+  link:  /faq/how_is_the_segmentation_defined
 

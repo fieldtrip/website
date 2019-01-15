@@ -7,27 +7,27 @@
 - name:  Reference documentation
   link:  /reference
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
-
-- name:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor_analysis
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
-
-- name:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/eventrelatedstatistics
+- name:  Cluster-based permutation tests on event related fields
+  link:  /tutorial/cluster_permutation_timelock
 
 - name:  Event related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
-- name:  Cluster-based permutation tests on event related fields
-  link:  /tutorial/cluster_permutation_timelock
+- name:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/eventrelatedstatistics
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
+- name:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/minimumnormestimate
 
 - name:  Multivariate analysis of electrophysiological data
   link:  /tutorial/multivariateanalysis
 
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp
+
+- name:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor_analysis
 

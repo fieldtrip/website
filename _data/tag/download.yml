@@ -1,8 +1,5 @@
-- name:  I am working at the Donders, should I also download FieldTrip?
-  link:  /faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip
-
-- name:  Which version of FieldTrip should I download from the ftp server?
-  link:  /faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server
+- name:  Download the FieldTrip toolbox
+  link:  /download
 
 - name:  How can I keep track of changes to the code?
   link:  /faq/how_can_i_keep_track_of_the_changes_to_the_code
@@ -10,6 +7,9 @@
 - name:  I am having problems downloading from the FTP server
   link:  /faq/i_am_having_problems_downloading_from_the_ftp_server
 
-- name:  Download the FieldTrip toolbox
-  link:  /download
+- name:  I am working at the Donders, should I also download FieldTrip?
+  link:  /faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip
+
+- name:  Which version of FieldTrip should I download from the ftp server?
+  link:  /faq/which_version_of_fieldtrip_should_i_download_from_the_ftp_server
 
