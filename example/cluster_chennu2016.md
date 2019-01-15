@@ -186,9 +186,9 @@ Set-up paths and define important variables
     set(h6{1},'LineWidth',1,'Marker', '.','Color','k','MarkerFaceColor','k')
 ~~~~
 
-{% include image src="/assets/img/example/cluster_chennu2016/fig1_spreadplot.png" width="400" %}
+![alt text](/assets/img/example/cluster_chennu2016/fig1_spreadplot.png)
 
-**QUESTION 1**:
+  **QUESTION 1**:
 
 Why in the between session normalization all participants are clustered around value 1?
 
