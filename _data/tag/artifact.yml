@@ -1,14 +1,11 @@
+- name:  How to incorporate head movements in MEG analysis
+  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
-
-- name:  How to incorporate head movements in MEG analysis
-  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
-
-- name:  What kind of filters can I apply to my data?
-  link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
 
 - name:  How can I check the quality of an EEG or MEG recording ?
   link:  /faq/how_can_i_check_the_quality_of_an_meeg_dataset
@@ -19,17 +16,20 @@
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
 
-- name:  I am getting strange artifacts in figures that use opacity
-  link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
-
-- name:  Why does my TFR look strange (part I, demeaning)?
-  link:  /faq/why_does_my_tfr_look_strange
-
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
 
 - name:  How does the filter padding in preprocessing work?
   link:  /faq/how_does_the_filter_padding_in_preprocessing_work
+
+- name:  I am getting strange artifacts in figures that use opacity
+  link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
+
+- name:  What kind of filters can I apply to my data?
+  link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
+
+- name:  Why does my TFR look strange (part I, demeaning)?
+  link:  /faq/why_does_my_tfr_look_strange
 
 - name:  Why does my TFR look strange (part II, detrending)?
   link:  /faq/why_does_my_tfr_look_strange_part_ii
@@ -40,12 +40,12 @@
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
-- name:  Visual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
+- name:  Automatic artifact rejection
+  link:  /tutorial/automatic_artifact_rejection
 
 - name:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sleep
 
-- name:  Automatic artifact rejection
-  link:  /tutorial/automatic_artifact_rejection
+- name:  Visual artifact rejection
+  link:  /tutorial/visual_artifact_rejection
 

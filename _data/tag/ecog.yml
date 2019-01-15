@@ -7,11 +7,11 @@
 - name:  Human ECoG
   link:  /getting_started/human_ecog
 
-- name:  Specifying the channel layout for plotting
-  link:  /tutorial/layout
-
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
+
+- name:  Specifying the channel layout for plotting
+  link:  /tutorial/layout
 
 - name:  Analysis of monkey ECoG recordings
   link:  /tutorial/monkey_ecog

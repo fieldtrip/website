@@ -1,26 +1,92 @@
-- name:  Overview of all tutorials
-  link:  /tutorial
-
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
 
-- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_bem
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /tutorial/aarhus/beamformingerf
+
+- name:  Introduction - dealing with artifacts
+  link:  /tutorial/artifacts
+
+- name:  Automatic artifact rejection
+  link:  /tutorial/automatic_artifact_rejection
 
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
+- name:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/beamformingextended
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /tutorial/chieti/simulation
+
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
+
+- name:  Cluster-based permutation tests on event related fields
+  link:  /tutorial/cluster_permutation_timelock
+
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
 
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
+
+- name:  Preprocessing - Reading continuous EEG data
+  link:  /tutorial/continuous
+
+- name:  Speeding up your analysis with distributed computing
+  link:  /tutorial/distributedcomputing
+
+- name:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/electrode
+
+- name:  Virtual channel analysis of epilepsy MEG data
+  link:  /tutorial/epilepsy
+
+- name:  Event related averaging and MEG planar gradient
+  link:  /tutorial/eventrelatedaveraging
+
+- name:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/eventrelatedstatistics
+
+- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_bem
+
+- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_fem
+
+- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
+  link:  /tutorial/headmodel_meg
+
+- name:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/human_ecog
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
+
+- name:  Overview of all tutorials
+  link:  /tutorial
+
+- name:  Making a memory efficient analysis script
+  link:  /tutorial/memory
+
+- name:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/minimumnormestimate
+
+- name:  Analysis of monkey ECoG recordings
+  link:  /tutorial/monkey_ecog
+
+- name:  Multivariate analysis of electrophysiological data
+  link:  /tutorial/multivariateanalysis
 
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /tutorial/natmeg/beamforming
@@ -31,47 +97,14 @@
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/preprocessing
 
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/natmeg/timefrequency
-
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /tutorial/natmeg/statistics
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /tutorial/natmeg/timefrequency
 
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
-
-- name:  Trigger-based trial selection
-  link:  /tutorial/preprocessing
-
-- name:  Sensor-level ERF, TFR and connectivity analyses
-  link:  /tutorial/sensor_analysis
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
-
-- name:  Parametric and non-parametric statistics on event-related fields
-  link:  /tutorial/eventrelatedstatistics
-
-- name:  Virtual channel analysis of epilepsy MEG data
-  link:  /tutorial/epilepsy
-
-- name:  Event related averaging and MEG planar gradient
-  link:  /tutorial/eventrelatedaveraging
-
-- name:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/electrode
-
-- name:  Introduction - dealing with artifacts
-  link:  /tutorial/artifacts
-
-- name:  Making a memory efficient analysis script
-  link:  /tutorial/memory
-
-- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
-  link:  /tutorial/headmodel_meg
+- name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
@@ -79,69 +112,36 @@
 - name:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs_multichannel
 
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
+- name:  Preprocessing and averaging of single-channel NIRS data
+  link:  /tutorial/nirs_singlechannel
 
-- name:  Visual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
 
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
-
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
-
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
-
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
-
-- name:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms-eeg
+- name:  Trigger-based trial selection
+  link:  /tutorial/preprocessing
 
 - name:  Creating a clean analysis script
   link:  /tutorial/scripting
 
-- name:  Localizing visual gamma and cortico-muscular coherence using DICS
-  link:  /tutorial/beamformingextended
+- name:  Sensor-level ERF, TFR and connectivity analyses
+  link:  /tutorial/sensor_analysis
 
-- name:  Preprocessing - Reading continuous EEG data
-  link:  /tutorial/continuous
-
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /tutorial/aarhus/beamformingerf
-
-- name:  Analysis of monkey ECoG recordings
-  link:  /tutorial/monkey_ecog
-
-- name:  Automatic artifact rejection
-  link:  /tutorial/automatic_artifact_rejection
-
-- name:  Cluster-based permutation tests on event related fields
-  link:  /tutorial/cluster_permutation_timelock
-
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
-
-- name:  Multivariate analysis of electrophysiological data
-  link:  /tutorial/multivariateanalysis
-
-- name:  Preprocessing and averaging of single-channel NIRS data
-  link:  /tutorial/nirs_singlechannel
-
-- name:  Preprocessing and analysis of spike and local field potential data
-  link:  /tutorial/spikefield
-
-- name:  Speeding up your analysis with distributed computing
-  link:  /tutorial/distributedcomputing
+- name:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sleep
 
 - name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
+- name:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/spikefield
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/timefrequencyanalysis
+
+- name:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms-eeg
+
+- name:  Visual artifact rejection
+  link:  /tutorial/visual_artifact_rejection
 

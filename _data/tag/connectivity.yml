@@ -1,14 +1,14 @@
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
-- name:  FieldTrip connectivity demo
-  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /tutorial/chieti/simulation
+
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
 
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
-
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_old
 
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
@@ -16,9 +16,9 @@
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
+- name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis_old
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
+- name:  FieldTrip connectivity demo
+  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
 

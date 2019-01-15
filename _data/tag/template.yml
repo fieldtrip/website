@@ -1,14 +1,14 @@
 - name:  Why are there multiple neighbour templates for the NeuroMag306 system?
   link:  /faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system
 
-- name:  Template 2-D layouts for plotting
-  link:  /template/layout
+- name:  Anatomical templates for visualizing source reconstructed activity
+  link:  /template/anatomy
+
+- name:  Template anatomical atlases and parcellation schemes
+  link:  /template/atlas
 
 - name:  Template MEG dewar shapes
   link:  /template/dewar
-
-- name:  Anatomical templates for visualizing source reconstructed activity
-  link:  /template/anatomy
 
 - name:  Template 3-D electrode sets
   link:  /template/electrode
@@ -16,15 +16,15 @@
 - name:  Template head models for forward volume conduction modeling
   link:  /template/headmodel
 
-- name:  Template anatomical atlases and parcellation schemes
-  link:  /template/atlas
+- name:  Template 2-D layouts for plotting
+  link:  /template/layout
 
-- name:  Template models for source reconstruction
-  link:  /template/sourcemodel
+- name:  Template models and data
+  link:  /template
 
 - name:  Templates for defining neighbouring channels
   link:  /template/neighbours
 
-- name:  Template models and data
-  link:  /template
+- name:  Template models for source reconstruction
+  link:  /template/sourcemodel
 

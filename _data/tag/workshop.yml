@@ -4,12 +4,12 @@
 - name:  How should I prepare for the upcoming FieldTrip workshop?
   link:  /faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop
 
-- name:  Realtime MEG BCI hands-on session in Nijmegen
-  link:  /workshop/realtime
+- name:  FieldTrip courses and workshops
+  link:  /workshop
 
 - name:  Toolkit of Cognitive Neuroscience - EEG/MEG
   link:  /workshop/nijmegen2014
 
-- name:  FieldTrip courses and workshops
-  link:  /workshop
+- name:  Realtime MEG BCI hands-on session in Nijmegen
+  link:  /workshop/realtime
 

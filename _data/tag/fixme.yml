@@ -4,15 +4,15 @@
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
 
-- name:  Visual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
-
-- name:  Fourier analysis of neuronal oscillations and synchronization
-  link:  /tutorial/fourier
+- name:  Automatic artifact rejection
+  link:  /tutorial/automatic_artifact_rejection
 
 - name:  Localizing sources using beamformer techniques
   link:  /tutorial/beamformer_lcmv
 
-- name:  Automatic artifact rejection
-  link:  /tutorial/automatic_artifact_rejection
+- name:  Fourier analysis of neuronal oscillations and synchronization
+  link:  /tutorial/fourier
+
+- name:  Visual artifact rejection
+  link:  /tutorial/visual_artifact_rejection
 
