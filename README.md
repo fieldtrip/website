@@ -16,6 +16,15 @@ Please note that the markdown documents that are nicely displayed here on github
 * MarkDown documentation can be found on https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
 * Liquid documentation can be found on https://help.shopify.com/en/themes/liquid and https://shopify.github.io/liquid.
 
+## Evaluating the website locally
+
+If you make changes that you want to evaluate prior to publishing them, you have to install Ruby, Bundler, Jekyll, etc. Subsequently you can do
+
+    bundle exec jekyll serve --incremental --livereload
+
+which will convert the markdown into html and serve the complete website on http://localhost:4000.
+
+
 ## Checking for broken links and missing images
 
     wget --spider -r -nd -nv -o spider.log http://localhost:4000
@@ -25,3 +34,4 @@ Please note that the markdown documents that are nicely displayed here on github
 
 * For image resizing we might consider a service like https://www.imgix.com or https://images.weserv.nl.
 * Use code highlighting from https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting.
+
