@@ -41,7 +41,11 @@ The "Sociedad Espanola de Psicofisiologia y Neurociencia Cognitiva y Afectiva" (
 - 15:30-17:30	[Cluster-based statistical testing on resting state EEG](/workshop/madrid2019/tutorial_stats) (Hands-on)
 - 17:30-18:00 Wrap-up-the-day and testimonial evaluation
 
-## Installing FieldTrip and Tutorial preparation
+## Download the data
+
+The data that will be used in the hands-on sessions in the workshop will be provided on a USB stick. You can also download the data from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/).
+
+## Installing FieldTrip and setting up MATLAB
 
 For the hands-on sessions you have to start MATLAB. To ensure that everything
 runs smooth, we will work with a clean and well-tested version of FieldTrip that
@@ -77,6 +81,3 @@ main funcctions. The ft_defaults command ensures that all required
 subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
-
-
-The data for the workshop will be provided on a USB stick. You can also download the data from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/)
