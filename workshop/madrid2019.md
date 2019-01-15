@@ -43,11 +43,11 @@ The "Sociedad Espanola de Psicofisiologia y Neurociencia Cognitiva y Afectiva" (
 
 ## Installing FieldTrip and Tutorial preparation
 
-For the hands-on sessions you have to start MATLAB. To ensure that
-everything runs smooth, we will work with a clean and well-tested
-version of FieldTrip that is distributed on a USB stick, rather than the version you might already
-have installed. Furthermore, the tutorial data does not have to be
-downloaded but will also be distributed on the USB stick.
+For the hands-on sessions you have to start MATLAB. To ensure that everything
+runs smooth, we will work with a clean and well-tested version of FieldTrip that
+is distributed on a USB stick, rather than the version you might already have
+installed. Furthermore, the tutorial data does not have to be downloaded but
+will also be distributed on the USB stick.
 
 1.  Copy the contents from the USB stick to your computer
 2.  Unzip the fieldtrip-xxxxxxxx.zip file.
@@ -78,6 +78,5 @@ subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
-After installing FieldTrip to your path, you change into the data directory
 
-    cd path_to_directory/data
+The data for the workshop will be provided on a USB stick. You can also download the data from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/)

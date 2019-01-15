@@ -77,7 +77,7 @@ Tutorials using this dataset:
 * Combined MEG/EEG dataset recorded at the NatMEG on the Elekta Triux MEG scanner
 * Aditory stimulus presentation with a standard and an oddball, motor responses on the oddball, response hand was cued left or right at the start of each block
 * Dataset [details](/tutorial/natmeg/meg_audodd)
-* Download the dataset[ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg)
+* Download the dataset from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/)
 
 Tutorials using this dataset:
 {% include seealso tag1="meg-audodd" %}
@@ -96,7 +96,7 @@ Tutorials using this dataset:
 
 * Dutch words presented in visual form, subjects made positive/negative or animal/human judgments on the nouns.
 * 64 channel ActiCap system (Brain Products GmbH)
-* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_eeg) from our FTP server
+* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_eeg/) from our FTP server
 
 Tutorials using this dataset:
 {% include seealso tag1="eeg-affective" %}
@@ -127,7 +127,7 @@ Tutorials using this dataset:
 * EEG, MEG, fMRI and structural MRI data from 16 subjects, also used in SPM8 and SPM12 documentation
 * Recorded by Rik Hanson and colleagues in Cambridge, using 306-channel Elekta/Neuromag system
 * Subjects watch familiar, unfamiliar and scrambled faces
-* Download the dataset from the [MRC-CBU](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn) FTP server.
+* Download the dataset from the [MRC-CBU](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/) FTP server.
 * Details [mmfaces](/tutorial/mmfaces)
 
 Tutorials using this dataset:

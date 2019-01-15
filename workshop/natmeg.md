@@ -23,7 +23,7 @@ The following tutorials will be covered in the hands-on sessions during the MEG-
 
 We will use the same dataset throughout the workshop. Please familiarize yourself with the [experiment](/tutorial/natmeg/meg_audodd) we recorded.
 
-You can download the dataset from our [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg).
+You can download the dataset from our [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/).
 
 -   Tuesday: [Preprocessing and event related activity in MEG and EEG](/tutorial/natmeg/preprocessing)
 -   Wednesday: [Time-frequency analysis](/tutorial/natmeg/timefrequency) and [Dipole fitting](/tutorial/natmeg/dipolefitting)

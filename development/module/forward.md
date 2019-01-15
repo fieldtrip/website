@@ -16,7 +16,7 @@ The objective of supplying these low-level functions as a separate module/toolbo
  2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
  3.  facilitate the implementation of advanced features
 
-The low-level functions for source estimation/reconstruction are contained in the [development:forward](/development/module/forward) and [development:inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them separately from the FieldTrip main functions, you can also download them separately  [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
+The low-level functions for source estimation/reconstruction are contained in the [development:forward](/development/module/forward) and [development:inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them separately from the FieldTrip main functions, you can also download them separately  [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
 
 Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 

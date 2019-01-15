@@ -76,7 +76,7 @@ As soon as you want to execute a MATLAB function that you wrote yourself, you ha
 
 The peer toolbox has been developed as part of the [BrainGain](http://www.braingain.nu) project and is released as open source under the General Public License (GPLv2).
 
-The **peer** toolbox is released along with FieldTrip, our toolbox for MEG/EEG data analysis. If you are not interested in EEG/MEG analysis, but ended up on this page because of a general MATLAB interest, you probably don't want to download the complete FieldTrip toolbox. The peer module can also be downloaded [from our ftp site](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules) as separate and stand-alone toolbox.
+The **peer** toolbox is released along with FieldTrip, our toolbox for MEG/EEG data analysis. If you are not interested in EEG/MEG analysis, but ended up on this page because of a general MATLAB interest, you probably don't want to download the complete FieldTrip toolbox. The peer module can also be downloaded [from our ftp site](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/) as separate and stand-alone toolbox.
 
 Elsewhere on this website you can find more examples on the use of the peer toolbox in the list of  [frequently asked questions](/faq#distributed_computing_in_matlab_using_the_peer-to-peer_toolbox).
 
