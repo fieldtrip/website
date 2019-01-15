@@ -5,7 +5,6 @@ tags: [chennu2016, madrid2019]
 
 # Cluster-based statistical testing on resting state EEG
 
-
 In this example script we are going to learn how the normalization of the **Power Spectral Density (PSD)** affects the statistics strength and sensitivity. To archive that we will use the **cluster-based nonparametric permutation test** to:
 
 1. Compute a **Multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.

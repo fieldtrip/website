@@ -21,7 +21,7 @@ done
 
 # this constructs a list of pages that have a certain tag
 for TAG in `cat ${TAGFILE}` ; do
-  FILELIST=`find . -name \*.md | xargs grep -l tags:.*${TAG} `
+  FILELIST=`find . -name \*.md | xargs grep -l tags:.*${TAG} | sort `
   rm -f _data/tag/$TAG.yml
   for FILE in ${FILELIST}; do
     NAME=`grep title: $FILE | cut -d : -f 2 | cut -b 2-`
