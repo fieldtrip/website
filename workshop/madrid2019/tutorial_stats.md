@@ -1,9 +1,20 @@
 ---
-title:
-tags:
+title: Cluster-based statistical testing on resting state EEG]
+tags: [chennu2016, madrid2019]
 ---
 
-Let us load and prepare the data
+# Cluster-based statistical testing on resting state EEG
+
+
+In this example script we are going to learn how the normalization of the **Power Spectral Density (PSD)** affects the statistics strength and sensitivity. To archive that we will use the **cluster-based nonparametric permutation test** to:
+
+1. Compute a **Multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
+2. Compute **within** -participant contrasts
+3. Compute **between** -participant contrasts
+4. Compute a **2x2 interaction**
+5. Compute a **correlation** between a variable and the EEG spectrum
+
+Set-up paths and define important variables
 
     if ispc;
       wrkpath = 'C:\Users\diegolozano\Dropbox\wc_chennu\Chennu2016BIDS\';
@@ -13,7 +24,6 @@ Let us load and prepare the data
       addpath(fullfile(wrkpath,'code','pipelines'));
     end
 
-Defining of regions of interest
     occipital_ROI = {'E50','T5','E59','E60','Pz','E65','E66','E67','O1','E71','E72','Oz','E76','E77','O2','E84','E85','E90','E91','T6','E101','E51','E97'};
     frontal_ROI   = {'E3','E4','E5','E6','E7','Fp2','E10','Fz','E12','E13','E15','E16','E18','E19','E20','Fp1','E23','F3','E27','E28','E29','E30','E105','E106','E111','E112','E117','E118','E123','F4'};
 
@@ -23,15 +33,12 @@ Defining of regions of interest
       '*task-rest_run-3_eeg_freq.mat';...% moderate sedation
       '*task-rest_run-4_eeg_freq.mat'};  % recovery
     cfg_neigh = load(fullfile(wrkpath,'code','neighbours','cfg_neighbours.mat'));
-
     folder_dir = dir(fullfile(wrkpath,'derivatives_v2_freq','sub*'));
 
-create dummy variables to fill participants and sedative conditions
+    % create dummy variables to fill participants and sedative conditions
     [base_sedation,mild_sedation,mode_sedation,reco_sedation]=deal(cell(size(folder_dir,1),1));
 
-here we'll add covariates to take into account during stats such as drug
-concentration, reaction time, correct responses
-
+    % here we'll add covariates to take into account during stats such as drug concentration, reaction time, correct responses
     cov_labels = {'drug concentration' 'reaction time' 'correct responses'};
     covariates = zeros(size(folder_dir,1),size(exp_cond,1),size(cov_labels,2));
 
@@ -39,7 +46,7 @@ concentration, reaction time, correct responses
       dtsv = dir(fullfile(wrkpath,'raw_bids',folder_dir(subj,1).name,'*.tsv'));
       tsv_table = readtable(fullfile(dtsv.folder,dtsv.name), 'FileType', 'text', 'Delimiter', '\t',...
         'ReadVariableNames',1,'ReadRowNames',1,'Format','%s%s%s%f%f%f');
-      
+
       covariates(subj,:,:)=tsv_table{:,3:5};
       clear tsv_table;
       for f = 1:size(exp_cond,1);
@@ -56,6 +63,7 @@ concentration, reaction time, correct responses
       end
     end
 
+    % here we arrange the data of each condition in a 3D matrix consisting of subj_chan_freq
     cfg = [];
     cfg.keepindividual = 'yes';
     base_sedation = ft_freqgrandaverage(cfg,base_sedation{:});
@@ -63,47 +71,49 @@ concentration, reaction time, correct responses
     mode_sedation = ft_freqgrandaverage(cfg,mode_sedation{:});
     reco_sedation = ft_freqgrandaverage(cfg,reco_sedation{:});
 
-get the numerical indices to compute averages
-
+    % get the numerical indices to compute averages later
     sel_oROI = match_str(base_sedation.label,occipital_ROI);
     sel_fROI = match_str(base_sedation.label,frontal_ROI);
 
     elec = prepare_elec_chennu2016(base_sedation.label);
 
-# Power Spectral Density (PSD) normalization
-    freq_oi   = [8 12];   % frequency range to display averages
+
+# Normalization of the Power Spectral Density (PSD)
+
+**1. Normalize the PSD relative to the mean taken over freq_norm during the SAME sedative state**
+
+  - **Pros**: you become sensitive to power difference within each sedative state
+
+  - **Cons**: denominator is different across sedative states which difficult the interpretation of results. Are differences in PSD because the numerator or the denominator?
+
+~~~~
+    freq_oi   = [8 15]; % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
-    foi      = nearest(base_sedation.freq,freq_oi);
     foi_norm = nearest(base_sedation.freq,freq_norm);
 
-normalize the PSD relative to the mean taken over freq_norm during the
-SAME sedative state 
-- pros: you become sensitive to power difference within
-each sedative state 
-- cons: denominator is different across sedative states which difficult 
-the interpretation of results. Are differences in PSD because the 
-numerator or the denominator? 
     base_sedation.powspctrm_w = bsxfun(@rdivide, base_sedation.powspctrm, mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
     mild_sedation.powspctrm_w = bsxfun(@rdivide, mild_sedation.powspctrm, mean(mild_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
     mode_sedation.powspctrm_w = bsxfun(@rdivide, mode_sedation.powspctrm, mean(mode_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
-    reco_sedation.powspctrm_w = bsxfun(@rdivide, reco_sedation.powspctrm, mean(reco_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
+    reco_sedation.powspctrm_w = bsxfun(@rdivide, reco_sedation.powspctrm, mean(reco_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));'
+~~~~
 
+**2. Normalize the PSD to the mean taken over freq_norm during BASELINE sedative state**
+  - **Pros**: the demonimator is the same for all sessions which facilitates comparisons
 
-normalize the PSD to the mean taken over freq_norm during BASELINE sedative state
-- pros: the demonimator is the same for all sessions which facilitates comparisons
-- cons: if baseline is biased, all our estimates will be biased
+  - **Cons**: if baseline is biased, all our estimates will be biased
+
+~~~~
     common_denominator = mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3);
     base_sedation.powspctrm_b = bsxfun(@rdivide, base_sedation.powspctrm, common_denominator); %repmat(mean(base_sedation.powspctrm,3),1,1,90);
     mild_sedation.powspctrm_b = bsxfun(@rdivide, mild_sedation.powspctrm, common_denominator);
     mode_sedation.powspctrm_b = bsxfun(@rdivide, mode_sedation.powspctrm, common_denominator);
     reco_sedation.powspctrm_b = bsxfun(@rdivide, reco_sedation.powspctrm, common_denominator);
 
-to simplify the results, let's collapse the data using the ROIs and
-frequency ranges defined in the paper
+    % To simplify the results, let's collapse the data using the ROIs and frequency ranges defined in the paper
     cfg = [];
     cfg.channel     = frontal_ROI;
     cfg.avgoverchan = 'yes';
-    cfg.foi         = freq_oi;
+    cfg.frequency   = freq_oi;
     cfg.avgoverfreq = 'yes';
     cfg.parameter   = {'powspctrm','powspctrm_w','powspctrm_b'};
     base_sedation_fROI = ft_selectdata(cfg,base_sedation);
@@ -117,7 +127,7 @@ frequency ranges defined in the paper
     mode_sedation_oROI = ft_selectdata(cfg,mode_sedation);
     reco_sedation_oROI = ft_selectdata(cfg,reco_sedation);
 
-collect the data to plot it using plotSpread
+    % collect the data to plot it using plotSpread
     data_raw_fROI    = {base_sedation_fROI.powspctrm...
                         mild_sedation_fROI.powspctrm...
                         mode_sedation_fROI.powspctrm...
@@ -126,7 +136,7 @@ collect the data to plot it using plotSpread
                         mild_sedation_oROI.powspctrm...
                         mode_sedation_oROI.powspctrm...
                         reco_sedation_oROI.powspctrm};
-                      
+
     data_within_fROI = {base_sedation_fROI.powspctrm_w...
                         mild_sedation_fROI.powspctrm_w...
                         mode_sedation_fROI.powspctrm_w...
@@ -135,7 +145,7 @@ collect the data to plot it using plotSpread
                         mild_sedation_oROI.powspctrm_w...
                         mode_sedation_oROI.powspctrm_w...
                         reco_sedation_oROI.powspctrm_w};
-                      
+
     data_between_fROI ={base_sedation_fROI.powspctrm_b...
                         mild_sedation_fROI.powspctrm_b...
                         mode_sedation_fROI.powspctrm_b...
@@ -144,7 +154,7 @@ collect the data to plot it using plotSpread
                         mild_sedation_oROI.powspctrm_b...
                         mode_sedation_oROI.powspctrm_b...
                         reco_sedation_oROI.powspctrm_b};
-                
+
     figure('Position',[30 197 1281 420]);
     subplot(231);
     plotSpread(data_raw_fROI,[],[],{'baseline','mild','moderate','recovery'});ylabel('abs. power (V^2)');
@@ -169,19 +179,24 @@ collect the data to plot it using plotSpread
     h6 = plotSpread(data_between_oROI,[],[],{'baseline','mild','moderate','recovery'});ylabel('rel. power');
     title('between PSD Occip');
     set(h6{1},'LineWidth',1,'Marker', '.','Color','k','MarkerFaceColor','k')
+~~~~
 
 
-# QUESTION 1: why in the between session normalization all participants are clustered around value 1?
+{% include image src="/assets/img/workshop/madrid2019/fig1_spreadplot.png" %}
+
+  **QUESTION 1**:
+
+Why in the between session normalization all participants are clustered around value 1?
+
 Lead: if you plot the alpha power as a function of the total spectrum power, what type of relationship do you see?
-
-
-# let's make topoplots and the PSD for each ROI for each sedative condition (similar to Fig 5A in Chennu et al.,)
+~~~~
+    % let's make topoplots and the PSD for each ROI for each sedative condition (similar to Fig 5A in Chennu et al.,)
     cfg = [];
     cfg.elec             = elec;
     cfg.parameter        = 'powspctrm_b'; % you can test any of the subfields: powspctrm, powspctrm_w, powspctrm_b
     cfg.xlim             = [8 15]; % frequency range to make the topoplot
     cfg.highlight        = 'on';
-here the figure cosmetics
+    % here the figure cosmetics
     cfg.highlightchannel = {frontal_ROI occipital_ROI};
     cfg.highlightsymbol  = {'o','*'};
     cfg.highlightcolor   = [0 0 0];
@@ -232,16 +247,18 @@ here the figure cosmetics
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
     title('recovery');
+~~~~
 
+**QUESTION 2**:
 
-# QUESTION 2: there's a participant in the dataset with an extreme power value: Can you find it?
-outlier_chans = [59]; 
-    participant_outlier=7;
+There's a participant in the dataset with an extreme power value: Can you find it?
+
+~~~~
 figure; plot(base_sedation.freq,...
-[squeeze(base_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
-squeeze(mild_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
-squeeze(mode_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
-squeeze(reco_sedation.powspctrm_b(subj,outlier_chans,:))]);
+    [squeeze(base_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
+    squeeze(mild_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
+    squeeze(mode_sedation.powspctrm_b(participant_outlier,outlier_chans,:))...
+    squeeze(reco_sedation.powspctrm_b(subj,outlier_chans,:))]);
     participants = [1:20];
     participants(participant_outlier) = [];
 
@@ -252,9 +269,10 @@ squeeze(reco_sedation.powspctrm_b(subj,outlier_chans,:))]);
     mild_sedation_out = ft_selectdata(cfg,mild_sedation);
     mode_sedation_out = ft_selectdata(cfg,mode_sedation);
     reco_sedation_out = ft_selectdata(cfg,reco_sedation);
-
+~~~~
 
 # CONTRAST 1: main effect of drug
+
     foi_contrast = [0.5 30];
 
     cfg = [];
@@ -276,7 +294,7 @@ squeeze(reco_sedation.powspctrm_b(subj,outlier_chans,:))]);
     cfg.numrandomization = 500;
     cfg.neighbours       = cfg_neigh.neighbours;
 
-outlier included
+    % outlier included
     subj = size(folder_dir,1);
     design = zeros(2,4*subj);
     design(1,1:subj)          = 1;
@@ -290,7 +308,7 @@ outlier included
     cfg.uvar   = 2;
     stat1a = ft_freqstatistics(cfg, base_sedation,mild_sedation,mode_sedation,reco_sedation);
 
-outlier excluded
+    % outlier excluded
     subj = size(participants,2);
     design = zeros(2,4*subj);
     design(1,1:subj)          = 1;
@@ -302,9 +320,9 @@ outlier excluded
 
     stat1b = ft_freqstatistics(cfg, base_sedation_out,mild_sedation_out,mode_sedation_out,reco_sedation_out);
 
-run averages
+    % run averages
     cfg = [];
-    cfg.foilim     = foi_contrast;
+    cfg.frequency  = foi_contrast;
     cfg.avgoverrpt = 'yes';
     cfg.parameter  = {'powspctrm','powspctrm_w','powspctrm_b'};
     base_sedation_avg = ft_selectdata(cfg,base_sedation);
@@ -326,7 +344,7 @@ run averages
     reco_sedation_out_avg.mask = stat1b.mask;
 
     cfg = [];
-cfg.zlim        = [0 90];
+    cfg.zlim        = [0 90];
     cfg.elec          = elec;
     cfg.colorbar      = 'no';
     cfg.maskparameter = 'mask';  % use the thresholded probability to mask the data
@@ -338,6 +356,7 @@ cfg.zlim        = [0 90];
 
 
 # CONTRAST 2: within-participant BASELINE vs MODERATE sedation comparison
+
     cfg = [];
     cfg.channel          = 'all';
     cfg.frequency        = foi_contrast;
@@ -369,11 +388,11 @@ cfg.zlim        = [0 90];
     cfg.uvar     = 2;
     stat2 = ft_freqstatistics(cfg, base_sedation, mode_sedation);
 
-get the 1st positive and negative cluster
+    % get the 1st positive and negative cluster
     sigposmask = (stat2.posclusterslabelmat==1) & stat2.mask;
     signegmask = (stat2.negclusterslabelmat==1) & stat2.mask;
 
-choose the cluster you want to see: POSITIVE or NEGATIVE
+    % choose the cluster you want to see: POSITIVE or NEGATIVE
     base_sedation_avg.mask = signegmask;
     mode_sedation_avg.mask = signegmask;
 
@@ -392,11 +411,12 @@ choose the cluster you want to see: POSITIVE or NEGATIVE
 first we compute the hit rate of each participant and condition knowing
 that the number of correct responses in that task is 40. See point 5) in
 https://www.repository.cam.ac.uk/handle/1810/252736
+
     hit_rate = (covariates(:,:,3)./40).*100;
 
 Chennu et al 2016 made a proper behavioral analysis to detect the drowsy
-group. Here we just used to select arbitrarily 70% threshold to match
-Figure 1B
+group. Here we just used to select arbitrarily 70% threshold to match Figure 1B
+
     drowsy_group = find(hit_rate(:,3)<70);
     respon_group = setxor(1:size(folder_dir,1),drowsy_group);
 
@@ -408,7 +428,7 @@ Figure 1B
     ylabel('Perceptual hit rate (%)');
     set(gca,'XTickLabel',{'baseline','','mild','','moderate','','recovery'});
 
-copy the datasets and select the relevant subgroups
+    % copy the datasets and select the relevant subgroups
     [base_sedation_respon base_sedation_drowsy]=deal(base_sedation);
     [mild_sedation_respon mild_sedation_drowsy]=deal(mild_sedation);
     [mode_sedation_respon mode_sedation_drowsy]=deal(mode_sedation);
@@ -427,8 +447,6 @@ copy the datasets and select the relevant subgroups
     mild_sedation_drowsy = ft_selectdata(cfg,mild_sedation_drowsy);
     mode_sedation_drowsy = ft_selectdata(cfg,mode_sedation_drowsy);
     reco_sedation_drowsy = ft_selectdata(cfg,reco_sedation_drowsy);
-
-# 
     cfg = [];
     cfg.channel          = 'all';
     cfg.frequency        = foi_contrast;
@@ -461,15 +479,14 @@ copy the datasets and select the relevant subgroups
     cfg = [];
     cfg.alpha  = stat3.cfg.alpha;
     cfg.parameter = 'stat';
-cfg.zlim   = [-3 3];
+    cfg.zlim   = [-3 3];
     cfg.elec = elec;
     ft_clusterplot(cfg, stat3);
 
 
-# 
     cfg = [];
     cfg.elec = elec;
-cfg.zlim = [1.5 3];
+    cfg.zlim = [1.5 3];
     cfg.xlim = [8 15];
     cfg.parameter = 'powspctrm_w';
     cfg.markersymbol = '.';
@@ -489,6 +506,7 @@ cfg.zlim = [1.5 3];
     subplot(248);ft_topoplotER(cfg,reco_sedation_drowsy);colorbar;title('reco Drowsy');
 
 PSDs for each group separately as a function of sedative state
+
     figure('position',[680 240 1039 420]);
     subplot(241);loglog(base_sedation_respon.freq,...
       [squeeze(mean(mean(base_sedation_respon.(cfg.parameter)(:,sel_fROI,:),2),1))...
@@ -527,7 +545,7 @@ PSDs for each group separately as a function of sedative state
     ylabel(cfg.parameter);
     title('recover');
 
-PSDs from occipital ROI
+    % PSDs from occipital ROI
     subplot(245);loglog(base_sedation_respon.freq,...
       [squeeze(mean(mean(base_sedation_respon.(cfg.parameter)(:,sel_oROI,:),2),1))...
        squeeze(mean(mean(base_sedation_drowsy.(cfg.parameter)(:,sel_oROI,:),2),1))]);
@@ -563,17 +581,16 @@ PSDs from occipital ROI
 
 
 # CONTRAST 4: 2x2 INTERACTION between SEDATION (baseline vs moderate) and GROUP (responsive vs drowsy)
-First we need to prepare the data
 
-Now we compute the within-participant contrast: frontral vs occipital ROI
-for each participant in each group
+Now we compute the within-participant contrast: baseline vs moderate sedative state for each participant in each group
+
     cfg = [];
     cfg.parameter = {'powspctrm','powspctrm_w','powspctrm_b'};
     cfg.operation = 'subtract';
-ROI contrast in RESPONSIVE group
     sedation_respon_d = ft_math(cfg,base_sedation_respon,mode_sedation_respon);
     sedation_drowsy_d = ft_math(cfg,base_sedation_drowsy,mode_sedation_drowsy);
 
+Finally we compute the interaction:
 
     cfg = [];
     cfg.channel          = 'all';
@@ -613,21 +630,62 @@ ROI contrast in RESPONSIVE group
     ft_clusterplot(cfg, stat4);
 
 
-# Now select the significant sensors and frequencies and plot the interaction
-get the 1st positive and negative cluster
-    signegmask = (stat4.negclusterslabelmat==1) & stat4.mask;
+# CONTRAST 5: correlation between a covariate (drug dosage) and brain activity
 
-pool all channels and frequencies that in the cluster
+    cfg = [];
+    cfg.channel          = 'all';
+    cfg.frequency        = [8 30]; % let's test alpha and low beta bands
+    cfg.avgoverfreq      = 'no';
+    cfg.avgoverchan      = 'no';
+    cfg.parameter        = 'powspctrm_b';
+    cfg.method           = 'ft_statistics_montecarlo';
+    cfg.statistic        = 'ft_statfun_correlationT';
+    cfg.type             = 'spearman'; % type of the correlation (see help corr to know other types)
+    cfg.correctm         = 'cluster';
+    cfg.clusteralpha     = 0.05;
+    cfg.clusterstatistic = 'maxsize';
+    cfg.clusterthreshold = 'nonparametric_individual';
+    cfg.minnbchan        = 2;
+    cfg.tail             = 0;
+    cfg.clustertail      = 0;
+    cfg.alpha            = 0.05;
+    cfg.correcttail      = 'alpha';
+    cfg.computeprob      = 'yes';
+    cfg.numrandomization = 1000;
+    cfg.neighbours       = cfg_neigh.neighbours;
+
+    subj = size(mode_sedation.powspctrm,1);
+    design = zeros(1,subj);
+
+    % {'drug concentration' 'reaction time' 'correct responses'};
+    design(1,:) = covariates(:,3,1)./1000;
+    cfg.design = design;
+    cfg.ivar     = 1;
+
+    stat5 = ft_freqstatistics(cfg,mode_sedation);
+
+    cfg = [];
+    cfg.alpha  = stat5.cfg.alpha;
+    cfg.parameter = 'stat';
+    cfg.zlim   = [-3 3];
+    cfg.elec = elec;
+    ft_clusterplot(cfg,stat5);
+
+Now select the significant sensors and frequencies and  plot the interaction
+
+    % get the 1st positive and negative cluster
+    signegmask = (stat4.negclusterslabelmat==1) & stat4.mask;
+    % pool all channels and frequencies that in the cluster
     chanoineg = match_str(stat4.label,stat4.label(sum(signegmask,2) > 0));
     foilimneg = stat4.freq(sum(signegmask,1) > 0);
     foilim = [min(foilimneg) max(foilimneg)];
 
-choose the cluster you want to see
+    % choose the cluster you want to see
     base_sedation_avg.mask = signegmask;
     mode_sedation_avg.mask = signegmask;
 
     cfg = [];
-    cfg.foilim      = foilim;
+    cfg.frequency   = foilim;
     cfg.avgoverfreq = 'yes';
     cfg.channel     = chanoineg;
     cfg.avgoverchan = 'yes';
@@ -637,18 +695,20 @@ choose the cluster you want to see
     b_d = ft_selectdata(cfg,base_sedation_drowsy);
     m_d = ft_selectdata(cfg,mode_sedation_drowsy);
 
-compute confidence intervals
+    % compute confidence intervals:
     parameter = 'powspctrm_w';%make sure this 'parameter' is the same as the one you used in cfg.parameter in ft_freqstatistics
     ci_b_r = bootci(1000,{@mean b_r.(parameter)},'alpha',0.05);
     ci_m_r = bootci(1000,{@mean,m_r.(parameter)},'alpha',0.05);
     ci_b_d = bootci(1000,{@mean,b_d.(parameter)},'alpha',0.05);
     ci_m_d = bootci(1000,{@mean,m_d.(parameter)},'alpha',0.05);
-compute means
+
+    % compute means
     x_b_r = mean(b_r.(parameter),1);
     x_m_r = mean(m_r.(parameter),1);
     x_b_d = mean(b_d.(parameter),1);
     x_m_d = mean(m_d.(parameter),1);
 
+    % and the standard error of the mean
     sem_b_r = sem(b_r.(parameter),1);
     sem_m_r = sem(m_r.(parameter),1);
     sem_b_d = sem(b_d.(parameter),1);
@@ -678,51 +738,70 @@ compute means
     set(gca,'XTickLabel',{'','','baseline','','moderate','',''});
 
 
-# HOMEWORK: INTERACTION between GROUP (RESPONSIVE vs DROWSY) and ROI (Frontal vs Occipital)
-First we need to prepare the data
+# HOMEWORK:
+INTERACTION between GROUP (RESPONSIVE vs DROWSY) and ROI (Frontal vs Occipital)
+
+Here the fists steps. Prepare the data
+
     cfg = [];
     cfg.channel     = frontal_ROI;
     cfg.avgoverchan = 'yes';
     cfg.parameter   = {'powspctrm','powspctrm_w','powspctrm_b'};
+
 select FRONTAL ROI in RESPONSIVE group
+
     base_sedation_respon_fROI = ft_selectdata(cfg,base_sedation_respon);
     mild_sedation_respon_fROI = ft_selectdata(cfg,mild_sedation_respon);
     mode_sedation_respon_fROI = ft_selectdata(cfg,mode_sedation_respon);
     reco_sedation_respon_fROI = ft_selectdata(cfg,reco_sedation_respon);
+
 select FRONTAL ROI in DROWSY group
+
     base_sedation_drowsy_fROI = ft_selectdata(cfg,base_sedation_drowsy);
     mild_sedation_drowsy_fROI = ft_selectdata(cfg,mild_sedation_drowsy);
     mode_sedation_drowsy_fROI = ft_selectdata(cfg,mode_sedation_drowsy);
     reco_sedation_drowsy_fROI = ft_selectdata(cfg,reco_sedation_drowsy);
 
     cfg.channel     = occipital_ROI;
-select OCCIPITAL ROI in RESPONSIVE group                          % here we just delete the channel names to avoid problems using ft_math below
+
+select OCCIPITAL ROI in RESPONSIVE group
+
+    % here we just delete the channel names to avoid  problems using ft_math below
     base_sedation_respon_oROI = ft_selectdata(cfg,base_sedation_respon);base_sedation_respon_oROI.label=base_sedation_respon_fROI.label;
     mild_sedation_respon_oROI = ft_selectdata(cfg,mild_sedation_respon);mild_sedation_respon_oROI.label=base_sedation_respon_fROI.label;
     mode_sedation_respon_oROI = ft_selectdata(cfg,mode_sedation_respon);mode_sedation_respon_oROI.label=base_sedation_respon_fROI.label;
     reco_sedation_respon_oROI = ft_selectdata(cfg,reco_sedation_respon);reco_sedation_respon_oROI.label=base_sedation_respon_fROI.label;
+
+
 select frontal ROI in DROWSY group
+
     base_sedation_drowsy_oROI = ft_selectdata(cfg,base_sedation_drowsy);base_sedation_drowsy_oROI.label=base_sedation_respon_fROI.label;
     mild_sedation_drowsy_oROI = ft_selectdata(cfg,mild_sedation_drowsy);mild_sedation_drowsy_oROI.label=base_sedation_respon_fROI.label;
     mode_sedation_drowsy_oROI = ft_selectdata(cfg,mode_sedation_drowsy);mode_sedation_drowsy_oROI.label=base_sedation_respon_fROI.label;
     reco_sedation_drowsy_oROI = ft_selectdata(cfg,reco_sedation_drowsy);reco_sedation_drowsy_oROI.label=base_sedation_respon_fROI.label;
 
 
-Now we compute the within-participant contrast: frontral vs occipital ROI
-for each participant in each group
+Now we compute the within-participant contrast: frontral vs occipital ROI for each participant in each group
+
     cfg = [];
     cfg.parameter = {'powspctrm','powspctrm_w','powspctrm_b'};
     cfg.operation = 'subtract';
+
 ROI contrast in RESPONSIVE group
+
     base_sedation_respon_dROI = ft_math(cfg,base_sedation_respon_fROI,base_sedation_respon_oROI);
     mild_sedation_respon_dROI = ft_math(cfg,mild_sedation_respon_fROI,mild_sedation_respon_oROI);
     mode_sedation_respon_dROI = ft_math(cfg,mode_sedation_respon_fROI,mode_sedation_respon_oROI);
     reco_sedation_respon_dROI = ft_math(cfg,reco_sedation_respon_fROI,reco_sedation_respon_oROI);
+
 ROI contrast in DROWSY group
+
     base_sedation_drowsy_dROI = ft_math(cfg,base_sedation_drowsy_fROI,base_sedation_drowsy_oROI);
     mild_sedation_drowsy_dROI = ft_math(cfg,mild_sedation_drowsy_fROI,mild_sedation_drowsy_oROI);
     mode_sedation_drowsy_dROI = ft_math(cfg,mode_sedation_drowsy_fROI,mode_sedation_drowsy_oROI);
     reco_sedation_drowsy_dROI = ft_math(cfg,reco_sedation_drowsy_fROI,reco_sedation_drowsy_oROI);
 
+From here on it's your duty...
 
-# HOMEWORK: does the INTERACTION correlate with any of the covariates?
+# Extra POINT:
+Does the INTERACTION correlate with any of the covariates?

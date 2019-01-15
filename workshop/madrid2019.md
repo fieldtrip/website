@@ -23,22 +23,22 @@ The "Sociedad Espanola de Psicofisiologia y Neurociencia Cognitiva y Afectiva" (
 - 09:30-10:00 Registration, handouts and coffee
 - 10:00-11:00	Introduction to MATLAB and the FieldTrip toolbox (Lecture)
 - 11:00-11:15	Coffee Break
-- 11:15-12:45	Getting started with EEG data, quality checks and ERPs (Hands-on)
+- 11:15-12:45	[Getting started with EEG data, quality checks and ERPs](/workshop/madrid2019/tutorial_erp) (Hands-on)
 - 13:00-14:00 Lunch
 - 14:00-15:00	EEG acquisition, pre-processing, ICA, artifact rejection (Lecture)
 - 15:00-15:15 Tea Break
-- 15:30-17:30	Cleaning and processing resting state EEG (Hands-on)
+- 15:30-17:30	[Cleaning and processing resting state EEG](/workshop/madrid2019/tutorial_cleaning) (Hands-on)
 - 17:30-18:00 Wrap-up-the-day: special topics, general questions and answers
 
 ### Tuesday Jan 22nd
 
 - 10:00-11:00	Frequency and Time-frequency analysis (Lecture)
 - 11:00-11:15	Coffee Break
-- 11:15-12:45	Frequency analysis of task and resting state EEG (Hands-on)
+- 11:15-12:45	[Frequency analysis of task and resting state EEG](/workshop/madrid2019/tutorial_freq) (Hands-on)
 - 13:00-14:00 Lunch
 - 14:00-15:00	Cluster-based statistical testing of EEG data (Lecture)
 - 15:00-15:15 Tea Break
-- 15:30-17:30	Cluster-based statistical testing on resting state EEG (Hands-on)
+- 15:30-17:30	[Cluster-based statistical testing on resting state EEG](/workshop/madrid2019/tutorial_stats) (Hands-on)
 - 17:30-18:00 Wrap-up-the-day and testimonial evaluation
 
 ## Installing FieldTrip and Tutorial preparation
