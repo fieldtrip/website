@@ -92,9 +92,8 @@ Set-up paths and define important variables
   - **Cons**: denominator is different across sedative states which difficult the interpretation of results. Are differences in PSD because the numerator or the denominator?
 
 ~~~~
-    freq_oi   = [8 12]; % frequency range to display averages
+    freq_oi   = [8 15]; % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
-    foi      = nearest(base_sedation.freq,freq_oi);
     foi_norm = nearest(base_sedation.freq,freq_norm);
 
     base_sedation.powspctrm_w = bsxfun(@rdivide, base_sedation.powspctrm, mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3));
@@ -119,7 +118,7 @@ Set-up paths and define important variables
     cfg = [];
     cfg.channel     = frontal_ROI;
     cfg.avgoverchan = 'yes';
-    cfg.foi         = freq_oi;
+    cfg.frequency   = freq_oi;
     cfg.avgoverfreq = 'yes';
     cfg.parameter   = {'powspctrm','powspctrm_w','powspctrm_b'};
     base_sedation_fROI = ft_selectdata(cfg,base_sedation);
@@ -185,13 +184,16 @@ Set-up paths and define important variables
     h6 = plotSpread(data_between_oROI,[],[],{'baseline','mild','moderate','recovery'});ylabel('rel. power');
     title('between PSD Occip');
     set(h6{1},'LineWidth',1,'Marker', '.','Color','k','MarkerFaceColor','k')
+~~~~
 
-    {% include markup/warning %}
-    **QUESTION 1**:
-    why in the between session normalization all participants are clustered around value 1?
-    Lead: if you plot the alpha power as a function of the total spectrum power, what type of relationship do you see?
-    {% include markup/end %}
+{% include image src="/assets/img/example/cluster_chennu2016/fig1_spreadplot.png" width="400" %}
 
+**QUESTION 1**:
+
+Why in the between session normalization all participants are clustered around value 1?
+
+Lead: if you plot the alpha power as a function of the total spectrum power, what type of relationship do you see?
+~~~~
     % let's make topoplots and the PSD for each ROI for each sedative condition (similar to Fig 5A in Chennu et al.,)
     cfg = [];
     cfg.elec             = elec;
@@ -251,8 +253,9 @@ Set-up paths and define important variables
     title('recovery');
 ~~~~
 
-<div class="note"></div>   
-**QUESTION 2**: There's a participant in the dataset with an extreme power value: Can you find it?
+**QUESTION 2**:
+
+There's a participant in the dataset with an extreme power value: Can you find it?
 
 ~~~~
 figure; plot(base_sedation.freq,...
@@ -323,7 +326,7 @@ figure; plot(base_sedation.freq,...
 
     % run averages
     cfg = [];
-    cfg.foilim     = foi_contrast;
+    cfg.frequency  = foi_contrast;
     cfg.avgoverrpt = 'yes';
     cfg.parameter  = {'powspctrm','powspctrm_w','powspctrm_b'};
     base_sedation_avg = ft_selectdata(cfg,base_sedation);
@@ -686,7 +689,7 @@ Now select the significant sensors and frequencies and  plot the interaction
     mode_sedation_avg.mask = signegmask;
 
     cfg = [];
-    cfg.foilim      = foilim;
+    cfg.frequency   = foilim;
     cfg.avgoverfreq = 'yes';
     cfg.channel     = chanoineg;
     cfg.avgoverchan = 'yes';
