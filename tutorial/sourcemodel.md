@@ -181,34 +181,32 @@ After these steps (which may take quite a while) you end up with a bunch of file
 
 #### 2. Source model: Creation of the mesh using HCP-workbench
 
-Just like with FreeSurfer, you have to first take care that HCP-workbench is installed. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP-workbench documentation to set up the software [link]https://www.humanconnectome.org/software/connectome-workbench. In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you'd need to get the standard_mesh_atlases directory from https://github.com/Washington-University/HCPpipelines, which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your filesystem. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.*.gii.
+Just like with FreeSurfer, you have to first take care that HCP-workbench is installed. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP-workbench documentation to set up the software [link]https://www.humanconnectome.org/software/connectome-workbench. In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you'd need to get the standard_mesh_atlases directory from https://github.com/Washington-University/HCPpipelines, which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your filesystem. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.*.gii. Once all files are in place, we can run the **[fieldtrip/bin/ft_postfreesurferscript.sh]** from the linux command line, in the following way:
 
+	ft_postfreesurferscript.sh <OUTPUTDIRECTORY> <SUBJECTNAME> <TEMPLATEDIRECTORY>
 
-	
-
-	sourcespace = ft_read_headshape('Subject01-oct-6-src.fif', 'format', 'mne_source');
-
-	figure
-	ft_plot_mesh(sourcespace);
-
-{% include image src="/assets/img/tutorial/sourcemodel/sspace01new.png" width="450" %}
-
-*Figure 4. The source-space downsampled by MNE Suite*
+Where the <OUTPUTDIRECTORY> is the path to where the FreeSurfer results are located, <SUBJECTNAME> is, in this case Subject01, and <TEMPLATEDIRECTORY> is the path to where the templates are stored. If the script runs without error you will find in the Subject01 directory a folder, called workbench, which contains a bunch of files. These files are left and right hemispheric cortical meshes at for different resolutions, with 164/32/8/4 vertices per hemisphere. Most practically for MEEG source reconsturction purposes, we typically use the 8k or 4k meshes for further processing. It's up to you to keep the 32k and 164k resolution images. 
 
 #### 3. Source model: Co-registration of the source space to the sensor-based head coordinate system
 
-We have the source locations co-registered to the MNI coordinate system, so now we need to co-register the source space to the sensor-array (i.e., we have to express the positions of the sources in the same coordinate system as the sensors). For this, we will use the transformation matrices computed in earlier in this tutorial. Specifically, using the resliced anatomical data in the mrirs-structure, we obtained a set of 2 transformation matrices, that describe the mapping of anatomical volumetric voxel indices into the sensor-based coordinate system **transform_vox2ctf** and into the MNI coordinate system **transform_vox2spm**. These two matrices can be combined in the following way, to yield a transformation matrix that transforms from MNI coordinates to sensor-based coordinates:
+We now have the cortical meshes as a pair of gifti files, one for each hemisphere, where the coordinates of the vertices are expressed in the acpc-based coordinate system. The meshes can be loaded into MATLAB using the following code:
 
-	T = transform_vox2ctf/transform_vox2acpc;
+	datapath = fullfile(mripath,subjectname,'workbench');
+	filename = fullfile(datapath,[subjectname,'.L.midthickness.8k_fs_LR.surf.gii']);
+	sourcemodel = ft_read_headshape({filename, strrep(filename, '.L.', '.R.')});
 
-Now we can use this transformation matrix, to get it in the correct coordinate system.
+As a final step for these meshes to be used for MEEG forward and inverse modelling, we need to co-register the source space to the sensor-array (i.e., we have to express the positions of the sources in the same coordinate system as the sensors). For this, we will use the transformation matrices computed in earlier in this tutorial. Specifically, using a single anatomical volume, we obtained a 2 transformation matrices, that describe the mapping of voxel indices to the sensor-based coordinate system **transform_vox2ctf** and to the acpc-based coordinate system **transform_vox2acpc**. These two matrices can be combined to yield a transformation matrix that transforms from acpc-based coordinates to sensor-based coordinates:
 
-	% go to the Subject01/bem directory
-	sourcespace = ft_read_headshape('Subject01-oct-6-src.fif', 'format', 'mne_source');
-	sourcespace = ft_convert_units(sourcespace, 'mm');
-	sourcespace = ft_transform_geometry(T, sourcespace);
+	load(fullfile(mripath,[subjectname,'_transform_vox2acpc']));
+	load(fullfile(mripath,[subjectname,'_transform_vox2ctf']));
+	transform_acpc2ctf = transform_vox2ctf/transform_vox2acpc;        
 
-	save sourcespace sourcespace
+Then, this transformation can be applied to the vertex-positions in the source model, and with some additional small adjustments the source model can be saved to file, which ends this part of the tutorial.
+
+	sourcemodel = ft_transform_geometry(transform_acpc2ctf, sourcemodel);
+	sourcemodel.inside = sourcemodel.atlasroi>0;
+	sourcemodel = rmfield(sourcemodel, 'atlasroi');
+	save(fullfile(mripath,sprintf('%s_sourcemodel_surf_8k',subjectname)), 'sourcemodel');
 
 ## Performing group analysis on 3-dimensional source-reconstructed data
 
