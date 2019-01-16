@@ -118,22 +118,23 @@ Also save the acpc-coregistered anatomical image, this file will be the input fi
 	cfg.parameter = 'anatomy';
 	ft_volumewrite(cfg, mri);
 
-The MATLAB-based preprocessing of the anatomical data is now finished. We created an .mgz files that can be used for the creation of a cortical-sheet based source model and a volume conduction model. Moreover, 2 coregistration matrices have been constructed that allow to switch between coordinate systems.
+The MATLAB-based preparation of the anatomical data is now finished. We created two .mgz files, one that can be used for the creation of a cortical-sheet based source model (Subject01.mgz), and one that can be used for the creation of a volume conduction model of the head (Subject01ctf.mgz). Moreover, 2 coregistration matrices have been constructed that allow to switch between coordinate systems.
 
-###  Creation of cortical sheet with Freesurfer and downsampling with MNE suite
+###  Creation of cortical sheet with Freesurfer and resampling with HCP workbench
 
 #### Source model: Introduction
 
-We will use FreeSurfer to create a source model that is based on a description of the cortical sheet. Essentially, we will construct a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere for each of the cerebral hemispheres. The latter property is required to create an inflated cortex and to do intersubject realignment. FreeSurfer generates meshes with > 100000 vertices per hemisphere, which is too much for a workable M/EEG source reconstruction. Therefore, we use the MNE-suite to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, MATLAB's reducepatch function breaks the topology and leads to a bigger variance in triangle size.
-The creation process of the source-space can be divided into 4 stages (after the preprocessing steps
- 1.  Volumetric processing in FreeSurfer.
+We will use FreeSurfer to create a source model that is based on a description of the cortical sheet. Essentially, we will construct a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere for each of the cerebral hemispheres. FreeSurfer generates meshes with > 100000 vertices per hemisphere, which is too much for a workable M/EEG source reconstruction. Therefore, we use HCP workbench to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, MATLAB's reducepatch function breaks the topology and leads to a bigger variance in triangle size. A convenient byproduct of the proposed HCP-workbench based processing is that the resulting cortical meshes are surface-registered to a common template, which allows for direct comparison of dipole locations with the same index across subjects. 
+
+The creation process of the source-space can be divided into 3 stages:
+ 1.  Volumetric and Surface-based processing in FreeSurfer.
  2.  Surface based processing in FreeSurfer.
- 3.  Creation of the mesh using MNE-suite.
- 4.  Coregistration of the source space to the sensor-based coordinate system with FieldTrip.
+ 3.  Creation of the mesh using HCP workbench.
+ 4.  Coregistration of the source model to the MEEG-based coordinate system with FieldTrip.
 
-The volumetric and surface based processing (first and the second steps) can be together 10 hours long. These steps will run on the computer from themselves. There is only one checkpoint between the volume and the surface based processing when an intermediate result can be checked interactively.
+The volumetric and surface based processing (first and the second steps) typically take a long time (on the order of 10 hours). These steps will run automatically, and most of the time don't require user intervention. Sometimes, however, the automatic procedure fails, which requires inspection of the logs and/or inspection of the files created by FreeSurfer. In our experience, the most likely causes are a mismatch of input coordinate system (which can be resolved by checking and fixing the MATLAB-based coregistration steps), or an otherwise suboptimal white matter segmentation. This is mostly due to slabs of dura being attached to the white matter volumes. This needs to be corrected manually. Please refer to the FreeSurfer documentation for more information. In practice this would mean that parts of the FreeSurfer pipeline needs to be redone after correction of the relevant volumes.
 
-The input of the creation process of the source-space are mgz files that were created in the preprocessing. The output is the source model that is a MATLAB structure called 'sourcespace' in this tutorial.
+The input of the creation process of the meshes is the acpc-coregistered mgz file that was created previously. The output is the source model that is a MATLAB structure called 'sourcemodel' in this tutorial.
 
 The instructions about how to install and run FreeSurfer and MNE Suite are aimed at users at the Center of Neuroimaging of the Donders Institute and at the MPI for Psycholinguistics in Nijmegen.
 
