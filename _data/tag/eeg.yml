@@ -166,7 +166,7 @@
 - name:  FieldTrip Walkthrough
   link:  /walkthrough
 
-- name:  Details on the resting state EEG dataset recorded with different sedation levels
+- name:  Details on the resting-state EEG dataset recorded with different sedation levels
   link:  /workshop/madrid2019/eeg_chennu
 
 - name:  Details on the EEG language dataset
