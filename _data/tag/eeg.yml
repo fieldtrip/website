@@ -172,3 +172,6 @@
 - name:  Details on the EEG language dataset
   link:  /workshop/madrid2019/eeg_language
 
+- name:  Cluster-based permutation tests on resting-state Power Spectral Density
+  link:  /workshop/madrid2019/tutorial_stats
+

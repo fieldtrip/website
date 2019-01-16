@@ -137,7 +137,7 @@ The input of the creation process of the meshes is the acpc-coregistered mgz fil
 
 The exact specifics of how to run FreeSurfer and HCP-workbench may depend on your local computing infrastructure. The code below has been tested to work for users that work with the compute cluster ot the Centre for Cognitive Neuroimaging of the Donders Institute in Nijmegen.
 
-#### 1. Source model: Volumetric processing in FreeSurfer
+#### 1. Source model: Volumetric and surface-based processing in FreeSurfer
 
 FreeSurfer's anatomical processing pipeline consists of a series of automated steps, which essentially consist o
  1.  processing steps on a volumetric anatomical MRI (image intensity normalization, co-registration with Talairach space, skull stripping, automatic segmentation of sub-cortical structures, and finally segmentation)
@@ -177,15 +177,15 @@ Now, we are ready to start using FreeSurfer. As a first step, we have to 'conver
 	recon-all -autorecon2 -subjid $SUBJECTNAME
 	recon-all -autorecon3 -subjid $SUBJECTNAME
 
-After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. The commands referenced above are also available as a shell-script in **[fieldtrip/bin/ft_freesurferscript.sh]**, for instance to be used in a batch processing mode.
+After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. The commands referenced above are also available as a shell-script in fieldtrip/bin/ft_freesurferscript.sh, for instance to be used in a batch processing mode.
 
 #### 2. Source model: Creation of the mesh using HCP-workbench
 
-Just like with FreeSurfer, you have to first take care that HCP-workbench is installed. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP-workbench documentation to set up the software [link]https://www.humanconnectome.org/software/connectome-workbench. In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you'd need to get the standard_mesh_atlases directory from https://github.com/Washington-University/HCPpipelines, which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your filesystem. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.*.gii. Once all files are in place, we can run the **[fieldtrip/bin/ft_postfreesurferscript.sh]** from the linux command line, in the following way:
+Just like with FreeSurfer, you have to first take care that HCP-workbench is installed. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP-workbench documentation to set up the software [link]https://www.humanconnectome.org/software/connectome-workbench. In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you'd need to get the standard_mesh_atlases directory from https://github.com/Washington-University/HCPpipelines, which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your filesystem. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.*.gii. Once all files are in place, we can run the fieldtrip/bin/ft_postfreesurferscript.sh from the linux command line, in the following way:
 
 	ft_postfreesurferscript.sh <OUTPUTDIRECTORY> <SUBJECTNAME> <TEMPLATEDIRECTORY>
 
-Where the <OUTPUTDIRECTORY> is the path to where the FreeSurfer results are located, <SUBJECTNAME> is, in this case Subject01, and <TEMPLATEDIRECTORY> is the path to where the templates are stored. If the script runs without error you will find in the Subject01 directory a folder, called workbench, which contains a bunch of files. These files are left and right hemispheric cortical meshes at for different resolutions, with 164/32/8/4 vertices per hemisphere. Most practically for MEEG source reconsturction purposes, we typically use the 8k or 4k meshes for further processing. It's up to you to keep the 32k and 164k resolution images. 
+Where the <OUTPUTDIRECTORY> is the path to where the FreeSurfer results are located, <SUBJECTNAME> is, in this case Subject01, and <TEMPLATEDIRECTORY> is the path to where the templates are stored. If the script runs without error you will find in the Subject01 directory a folder, called workbench, which contains a bunch of files. These files are left and right hemispheric cortical meshes at for different resolutions, with 164/32/8/4 vertices per hemisphere. Most practically for MEEG source reconstruction purposes, we typically use the 8k or 4k meshes for further processing. It's up to you to keep the 32k and 164k resolution images. 
 
 #### 3. Source model: Co-registration of the source space to the sensor-based head coordinate system
 
