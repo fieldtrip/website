@@ -13,14 +13,14 @@ In this [frequently asked question](/faq/open_data) you can find links to other 
 
 * Dutch sentences presented auditory. Investigated the effects of semantic (in)congruency on sentence processing.
 * 151-channel CTF system
-* The headshape and the anatomical MRI is included for Subject01 and used for the headmodel tutorials.
+* The head shape and the anatomical MRI is included for Subject01 and used for the headmodel tutorials.
 * There are some additional single-subject raw datasets from this study, which were in the past used to show the effect of the planar gradient transform but which are not used at the moment. These are available from our FTP server as Subject02.zip, Subject03.zip and Subject04.zip. These additional subjects are also used to explain batch processing and distributed computing.
 * Group results of this study (comprising 10 subjects) are used in the statistics tutorials.
 * Details [MEG-language](/tutorial/meg_language)
 * Link to the [publication](http://dx.doi.org/10.1002/hbm.21410) by Wang et al.(2011)
 * Download the dataset [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-language" %}
 
 ## MEG-artifact
@@ -30,7 +30,7 @@ Tutorials using this dataset:
 * The continuous data is composed of 10s segments with no gaps between segments.
 * Download the dataset [ArtifactMEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactMEG.zip) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-artifact" %}
 
 ## MEG-visuomotor151
@@ -40,7 +40,7 @@ Tutorials using this dataset:
 * Link to the [publication](http://dx.doi.org/10.1126/science.1107027) by Schoffelen et al.(2005)
 * Download the dataset [subjectK.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-visuomotor151" %}
 
 ## MEG-visuomotor151_02
@@ -50,7 +50,7 @@ Tutorials using this dataset:
 * Link to the [publication](http://dx.doi.org/10.1523/JNEUROSCI.4882-10.2011) by Schoffelen et al.(2011).
 * Download the dataset [SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-visuomotor275" %}
 
 ## MEG-attention
@@ -60,7 +60,7 @@ Tutorials using this dataset:
 * Link to the [publication](http://dx.doi.org/10.1016/j.neunet.2009.06.004) by van Gerven et al.(2009).
 * Download the dataset [covatt.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/classification/covatt.mat) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-attention" %}
 
 ## MEG-tactile
@@ -69,7 +69,7 @@ Tutorials using this dataset:
 * Different forms of mechanical tactile stimulation are applied to right index finger.
 * Download the dataset[TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-tactile" %}
 
 ## MEG-audodd
@@ -80,7 +80,7 @@ Tutorials using this dataset:
 * Dataset [details](/tutorial/natmeg/meg_audodd)
 * Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-audodd" %}
 
 ## EEG-language
@@ -90,7 +90,7 @@ Tutorials using this dataset:
 * Link to [publication](http://dx.plos.org/10.1371/journal.pone.0014465) by Simanova et al.(2010).
 * Download the dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) from our FTP server
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="eeg-language" %}
 
 ## EEG-affective
@@ -99,7 +99,7 @@ Tutorials using this dataset:
 * 64-channel ActiCap system (Brain Products GmbH)
 * Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_eeg/) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="eeg-affective" %}
 
 ##  EEG-chennu
@@ -110,7 +110,7 @@ Tutorials using this dataset:
 *  Link to [publication](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004669) by Chennu et al.(2016)
 *  Download the dataset here [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="eeg-chennu" %}
 
 ## EEG-TMS
@@ -121,7 +121,7 @@ Tutorials using this dataset:
 * C-B60 butterfly coil connected to a MagPro X100 (Magventure) stimulator
 * Download the dataset [sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="eeg-tms" %}
 
 ## HCP-motort
@@ -132,7 +132,7 @@ Tutorials using this dataset:
 * Details [HCP-motort](/tutorial/hcp_motort)
 * Download the dataset from the [HCP website](http://db.humanconnectome.org).
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="hcp-motort" %}
 
 ## mmfaces
@@ -143,7 +143,7 @@ Tutorials using this dataset:
 * Download the dataset from the [MRC-CBU](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/) FTP server.
 * Details [mmfaces](/tutorial/mmfaces)
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="mmfaces" %}
 
 ## MEG-epilepsy
@@ -151,7 +151,7 @@ Tutorials using this dataset:
 * This dataset contains MEG data from two patients. The data was recorded at Aston Brain Centre (ABC) using a 275-channel CTF system and using an Elekta 306-channel system, i.e. for both patients there are the recordings with the two MEG systems. This clinical data was kindly provided by Professor Stefano Seri.
 * Download the dataset [here](ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="meg-epilepsy" %}
 
 ## Spike-attention
@@ -160,7 +160,7 @@ Tutorials using this dataset:
 * Link to the [publication](http://dx.doi.org/10.1126/science.1055465) by Fries et al.(2001).
 * Download the dataset [p029_sort_final_01.nex.](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex.) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="spike-attention" %}
 
 ## Spike-placefield
@@ -168,7 +168,7 @@ Tutorials using this dataset:
 * Rat CA1 hippocampal activity measured during exploration of maze.
 * Download the dataset [tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="spike-placefield" %}
 
 ## ECoG-visual
@@ -177,7 +177,7 @@ Tutorials using this dataset:
 * The data was recorded from an epilepsy patient implanted with a subdural grid for pre-surgical evaluation and includes a visual localizer task. different types of visual stimuli were presented.
 * Download the dataset [SubjectNY394.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectNY394.zip) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="ecog-visual" %}
 
 ## ECoG-protocol
@@ -185,7 +185,7 @@ Tutorials using this dataset:
 * Intracranial EEG data (ECoG and Stereo EEG) obtained at the UC Irvine Medical Center. Includes a pre-implantation MR and a post-implantation CT, the latter showing the recording electrodes.
 * Download the dataset [SubjectUCI29.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectUCI29.zip) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="ecog-protocol" %}
 
 ## NIRS single channel
@@ -194,7 +194,7 @@ Tutorials using this dataset:
 * Artinis Oxymon MK III system
 * Download the dataset [here](ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="nirs-singlechannel" %}
 
 ## NIRS multi channel
@@ -203,5 +203,5 @@ Tutorials using this dataset:
 * Data was sampled at 250 Hz using 4 connected Artinis Oxymon systems to enable a 48 channel recording.
 * Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_multichannel) from our FTP server.
 
-Tutorials using this dataset:
+Documentation referring to this dataset:
 {% include seealso tag1="nirs-multichannel" %}
