@@ -137,7 +137,7 @@ The input of the creation process of the meshes is the acpc-coregistered mgz fil
 
 The exact specifics of how to run FreeSurfer and HCP-workbench may depend on your local computing infrastructure. The code below has been tested to work for users that work with the compute cluster ot the Centre for Cognitive Neuroimaging of the Donders Institute in Nijmegen.
 
-#### 1. Source model: Volumetric processing in FreeSurfer
+#### 1. Source model: Volumetric and surface-based processing in FreeSurfer
 
 FreeSurfer's anatomical processing pipeline consists of a series of automated steps, which essentially consist o
  1.  processing steps on a volumetric anatomical MRI (image intensity normalization, co-registration with Talairach space, skull stripping, automatic segmentation of sub-cortical structures, and finally segmentation)
