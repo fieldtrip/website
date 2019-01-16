@@ -44,47 +44,49 @@ The anatomical preprocessing is done in MATLAB with FieldTrip. The goal of this 
 
 Thus, the input of the preprocessing is the anatomical MRI. The output is two anatomical images, as well as a set of transformation matrices.
 
-#### 1. Preprocessing of the anatomical MRI: read in MRI data
+#### 1. Preparation of the anatomical MRI: read in MRI data
+        
+	mripath     = <directory-where-the-inputimage-is-located-and-where-the-output-will-be-stored>;
+	subjectname = 'Subject01';
+	mri         = ft_read_mri(fullfile(mripath,sprintf('%s.mri',subjectname)));
 
-	mri = ft_read_mri('Subject01.mri');
+#### 2. Preparation of the anatomical MRI: impose coordinate system according to the MEEG coordinates
 
-#### 2. Preprocessing of the anatomical MRI: impose coordinate system according to MNI convention
+In this example, we are using an MRI which has been processed to contain a transformation matrix that corresponds to the CTF convention. Thus, the coordinate system coincides with the coordinates in which the MEG sensors are expressed, and a coincidence between coordinate systems is a necessary prerequisite for a meaningful source reconstruction. Often, however, the anatomical image is expressed in an arbitrary coordinate system, and it needs to be coregistered to the MEEG-based coordinate system.  
 
-In this example, we are using an MRI which has been processed to contain a transformation matrix that corresponds to the CTF convention. As outlined above, life will be much easier if the coordinate system is in accordance with the MNI convention. Therefore, it needs to be 'realigned'. In general, it may be not clear what coordinate system is attached to the anatomical image.  
-
-To find out about the coordinate system of your mri, you can use the following function to check i
+To find out about the coordinate system of your mri, you can use the following function to check it.
 
 	mri = ft_determine_coordsys(mri, 'interactive', 'yes');
 
-If it worked well, you will see the coordinate system specified in the mri structure in the mri.coordsys field. If 'coordsys' is not 'spm', you will need to align your mri to the anatomical landmarks (anterior commissure, posterior commissure, and a point that defines the postive z-direction) with the **[ft_volumerealign](/reference/ft_volumerealign)** function. The mnemonic 'spm' for the coordsys is used to indicate this MNI-based convention. Ft_volumerealign does not change the anatomical data, instead it creates a transformation matrix that aligns the anatomical data to the intended coordinate system.
+If it worked well, you will see the coordinate system specified in the mri structure in the mri.coordsys field. If 'coordsys' is not 'ctf' (in this example), or according to the mnemonic that is used to designate the coordinate system in which the MEEG sensor/electrodes are expressed, you will need to align your mri, e.g. using anatomical landmarks (typically nasion, and left/right pre auricular points) with the **[ft_volumerealign](/reference/ft_volumerealign)** function. The mnemonic 'ctf' for the coordsys is used to indicate the coordinate system used here. Ft_volumerealign does not change the anatomical data, instead it creates a transformation matrix that aligns the anatomical data to the intended coordinate system. Note that the following step can be skipped for the example MRI image used here.
 
-	cfg = [];
-	cfg.method = 'interactive';
-	cfg.coordsys = 'spm';
-	mri_spm    = ft_volumerealign(cfg, mri);
+	cfg          = [];
+	cfg.method   = 'interactive';
+	cfg.coordsys = 'ctf';
+	mri          = ft_volumerealign(cfg, mri);
 
 #### 3. Preprocessing of the anatomical MRI: reslicing
 
-This step reslices the anatomical volume in a way that each slice will be equally thick. We use 1 mm thick slices and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with.
+This step reslices the anatomical volume in a way that voxels will be isotropic. We use 1 mm resolution and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with. 
 
 	cfg            = [];
 	cfg.resolution = 1;
 	cfg.dim        = [256 256 256];
-	mri_spm_rs     = ft_volumereslice(cfg, mri_spm);
-	transform_vox2spm = mri_spm_rs.transform;
+	mri            = ft_volumereslice(cfg, mri);
+	
+For later use, we also save the transformation matrix.
 
-For convenience, you can now save the transformation matrix.
-
-	save('Subject01_transform_vox2spm', 'transform_vox2spm');
+        transform_vox2ctf = mri.transform;
+	save(fullfile(mripath,sprintf('%s_transform_vox2ctf',subjectname)), 'transform_vox2ctf');
 
 #### 4. Preprocessing of the anatomical MRI: save to disk
 
 	% save the resliced anatomy in a FreeSurfer compatible format
 	cfg             = [];
-	cfg.filename    = 'Subject01';
+	cfg.filename    = fullfile(mripath,sprintf('%sctf.mgz',subjectname));
 	cfg.filetype    = 'mgz';
 	cfg.parameter   = 'anatomy';
-	ft_volumewrite(cfg, mri_spm_rs);
+	ft_volumewrite(cfg, mri);
 
 {% include markup/danger %}
 Importantly, the mgz-filetype can **only** be used on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved nor read on a Windows PC. If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer.
