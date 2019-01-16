@@ -41,9 +41,11 @@ The "Sociedad Espanola de Psicofisiologia y Neurociencia Cognitiva y Afectiva" (
 - 15:30-17:30	[Cluster-based statistical testing on resting state EEG](/workshop/madrid2019/tutorial_stats) (Hands-on)
 - 17:30-18:00 Wrap-up-the-day and testimonial evaluation
 
-## Download the data
+## The data used for the hands-on sessions
 
-The data that will be used in the hands-on sessions in the workshop will be provided on a USB stick. You can also download the data from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/).
+During the hands-on sessions we will use EEG data recorded in a [language experiment](/workshop/madrid2019/eeg_language), and resting-state EEG data recorded during [sedation with Propofol](/workshop/madrid2019/eeg_chennu).
+
+The data will be provided on a USB stick during the hands-on sessions. You can also download the data from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/).
 
 ## Installing FieldTrip and setting up MATLAB
 
