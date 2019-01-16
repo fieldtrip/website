@@ -76,7 +76,7 @@ This step reslices the anatomical volume in a way that voxels will be isotropic.
 	
 For later use, we also save the transformation matrix.
 
-        transform_vox2ctf = mri.transform;
+ 	transform_vox2ctf = mri.transform;
 	save(fullfile(mripath,sprintf('%s_transform_vox2ctf',subjectname)), 'transform_vox2ctf');
 
 #### 4. Preprocessing of the anatomical MRI: save to disk
