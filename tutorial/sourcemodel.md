@@ -3,7 +3,7 @@ title: Creating a sourcemodel for source-reconstruction of MEG or EEG data
 tags: [tutorial, source, meg, sourcemodel, mri, plot, meg-language]
 ---
 
-# Creating a sourcemodel for source-reconstruction of MEG or EEG data
+# Creating a source model for source-reconstruction of MEG or EEG data
 
 ## Introduction
 
@@ -33,99 +33,109 @@ Content is coming soon!
 
 ### Preprocessing of the anatomical MRI, reslicing and coregistration
 
-The anatomical preprocessing is done in MATLAB with FieldTrip. The goal of this step is to create a file with a T1w anatomical image that can be used for the creation of two 'geometric objects': a volume conduction model, and a cortical sheet based source model. Moreover, this image will be used to create coregistration information to the different coordinate systems involved. One annoying thing to be aware of, and to think about in advance, is the fact that typically different parts of the pipeline assume (or require) different conventions of coordinate systems. Specifically, geometric information (sensor locations) in MEG/EEG data is typically expressed in a coordinate system that is defined based on external anatomical landmarks, whereas software used for processing of structural data usually requires coordinates to be expressed according to brain-anatomy related landmarks, such as the anterior and posterior commissures. More information about coordinate systems can be found at the [frequently asked question about coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). To make a long story short, for now it suffices to know that you're safe if you know how to convert back and forth between the different relevant coordinate systems. The least error-prone and most convenient way to do this, is to create a well-defined reference anatomical image, which will be created with the following step
+The anatomical preprocessing is done in MATLAB with FieldTrip. The goal of this step is to create a file with a T1w anatomical image that can be used for the creation of two 'geometric objects': a volume conduction model of the head (not covered in this tutorial), and a cortical sheet based source model. Moreover, this image will be used to create coregistration information to the different coordinate systems involved. One annoying thing to be aware of, and to think about in advance, is the fact that typically different parts of the pipeline assume (or require) different conventions of coordinate systems. Specifically, geometric information (sensor locations) in MEG/EEG data is typically expressed in a coordinate system that is defined based on external anatomical landmarks, whereas software used for processing of structural data usually requires coordinates to be expressed according to brain-anatomy related landmarks, such as the anterior and posterior commissures. More information about coordinate systems can be found at the [frequently asked question about coordinate systems](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). To make a long story short, for now it suffices to know that you're safe if you know how to convert back and forth between the different relevant coordinate systems. The least error-prone and most convenient way to do this, is to create a well-defined reference anatomical image, which will be created with the following step
 
 *  read in the anatomical images into MATLAB with **[ft_read_mri](/reference/ft_read_mri)**
-*  ensure that the coordinate system is according to MNI's RAS convention, which can be checked with **[ft_determine_coordsys](/reference/ft_determine_coordsys)** and imposed with **[ft_volumerealign](/reference/ft_volumerealign)**.
-*  reslice the volume with **[ft_volumereslice](/reference/ft_volumereslice)** in order to have a uniform thickness for each slice, and to have the axes of the coordinate system lined up with the 'voxel axes'.
-*  save the coregistration matrix that defines the transformation from voxels to MNI-RAS.
-*  save the resliced anatomy in FreeSurfer compatible format, using **[ft_volumewrite](/reference/ft_volumewrite)**. This anatomical image will serve as starting point for the creation of the cortical sheet based source model.
+*  ensure that the coordinate system is according to MEEG device's coordinate system, which can be checked with **[ft_determine_coordsys](/reference/ft_determine_coordsys)** and imposed with **[ft_volumerealign](/reference/ft_volumerealign)**.
+*  optionally reslice the volume with **[ft_volumereslice](/reference/ft_volumereslice)** in order to have a uniform thickness for each slice, and to have the axes of the coordinate system lined up with the 'voxel axes'.
+*  save the coregistration matrix that defines the transformation from voxels to the MEEG coordinate system, and the MEEG-aligned volume (the latter to be used for headmodel creation).
+*  coregister the same volumetric image to an acpc-based coordinate system, which allows the anatomical image to serve as in input image to freesurfer's automatic surface extraction pipeline.
+*  save the acpc-aligned anatomy in FreeSurfer compatible format, using **[ft_volumewrite](/reference/ft_volumewrite)**. This anatomical image will serve as starting point for the creation of the cortical sheet based source model.
 
-Then we may need to also create coregistration information to the coordinate system used in the MEG/EEG data.
+Thus, the input of the preprocessing is the anatomical MRI. The output is two anatomical images, as well as a set of transformation matrices.
 
-*  realign the resliced anatomical data to the MEG/EEG based coordinate system with **[ft_volumerealign](/reference/ft_volumerealign)**.
-*  save the coregistration matrix that defines the transormation from voxels to the MEG/EEG coordinate system.
+#### 0. Preamble
 
-Thus, the input of the preprocessing is the anatomical MRI. The output is a realigned and resliced anatomical image, as well as a set of transformation matrices.
+For this part of the tutorial you need a working copy of freesurfer (the below works for version 6.0), and of HCP-workbench. 
 
-#### 1. Preprocessing of the anatomical MRI: read in MRI data
+#### 1. Preparation of the anatomical MRI: read in MRI data
+        
+	mripath     = <directory-where-the-inputimage-is-located-and-where-the-output-will-be-stored>;
+	subjectname = 'Subject01';
+	mri         = ft_read_mri(fullfile(mripath,sprintf('%s.mri',subjectname)));
 
-	mri = ft_read_mri('Subject01.mri');
+#### 2. Preparation of the anatomical MRI: impose coordinate system according to the MEEG coordinates
 
-#### 2. Preprocessing of the anatomical MRI: impose coordinate system according to MNI convention
+In this example, we are using an MRI which has been processed to contain a transformation matrix that corresponds to the CTF convention. Thus, the coordinate system coincides with the coordinates in which the MEG sensors are expressed, and a coincidence between coordinate systems is a necessary prerequisite for a meaningful source reconstruction. Often, however, the anatomical image is expressed in an arbitrary coordinate system, and it needs to be coregistered to the MEEG-based coordinate system.  
 
-In this example, we are using an MRI which has been processed to contain a transformation matrix that corresponds to the CTF convention. As outlined above, life will be much easier if the coordinate system is in accordance with the MNI convention. Therefore, it needs to be 'realigned'. In general, it may be not clear what coordinate system is attached to the anatomical image.  
-
-To find out about the coordinate system of your mri, you can use the following function to check i
+To find out about the coordinate system of your mri, you can use the following function to check it.
 
 	mri = ft_determine_coordsys(mri, 'interactive', 'yes');
 
-If it worked well, you will see the coordinate system specified in the mri structure in the mri.coordsys field. If 'coordsys' is not 'spm', you will need to align your mri to the anatomical landmarks (anterior commissure, posterior commissure, and a point that defines the postive z-direction) with the **[ft_volumerealign](/reference/ft_volumerealign)** function. The mnemonic 'spm' for the coordsys is used to indicate this MNI-based convention. Ft_volumerealign does not change the anatomical data, instead it creates a transformation matrix that aligns the anatomical data to the intended coordinate system.
+If it worked well, you will see the coordinate system specified in the mri structure in the mri.coordsys field. If 'coordsys' is not 'ctf' (in this example), or according to the mnemonic that is used to designate the coordinate system in which the MEEG sensor/electrodes are expressed, you will need to align your mri, e.g. using anatomical landmarks (typically nasion, and left/right pre auricular points) with the **[ft_volumerealign](/reference/ft_volumerealign)** function. The mnemonic 'ctf' for the coordsys is used to indicate the coordinate system used here. Ft_volumerealign does not change the anatomical data, instead it creates a transformation matrix that aligns the anatomical data to the intended coordinate system. Note that the following step can be skipped for the example MRI image used here.
 
-	cfg = [];
-	cfg.method = 'interactive';
-	cfg.coordsys = 'spm';
-	mri_spm    = ft_volumerealign(cfg, mri);
+	cfg          = [];
+	cfg.method   = 'interactive';
+	cfg.coordsys = 'ctf';
+	mri          = ft_volumerealign(cfg, mri);
 
-#### 3. Preprocessing of the anatomical MRI: reslicing
+#### 3. Preparation of the anatomical MRI: reslicing
 
-This step reslices the anatomical volume in a way that each slice will be equally thick. We use 1 mm thick slices and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with.
+This step reslices the anatomical volume in a way that voxels will be isotropic. We use 1 mm resolution and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with. 
 
 	cfg            = [];
 	cfg.resolution = 1;
 	cfg.dim        = [256 256 256];
-	mri_spm_rs     = ft_volumereslice(cfg, mri_spm);
-	transform_vox2spm = mri_spm_rs.transform;
+	mri            = ft_volumereslice(cfg, mri);
+	
+For later use, we also save the transformation matrix.
 
-For convenience, you can now save the transformation matrix.
+ 	transform_vox2ctf = mri.transform;
+	save(fullfile(mripath,sprintf('%s_transform_vox2ctf',subjectname)), 'transform_vox2ctf');
 
-	save('Subject01_transform_vox2spm', 'transform_vox2spm');
-
-#### 4. Preprocessing of the anatomical MRI: save to disk
+#### 4. Preparation of the anatomical MRI: save to disk
 
 	% save the resliced anatomy in a FreeSurfer compatible format
 	cfg             = [];
-	cfg.filename    = 'Subject01';
+	cfg.filename    = fullfile(mripath,sprintf('%sctf.mgz',subjectname));
 	cfg.filetype    = 'mgz';
 	cfg.parameter   = 'anatomy';
-	ft_volumewrite(cfg, mri_spm_rs);
+	ft_volumewrite(cfg, mri);
 
 {% include markup/danger %}
 Importantly, the mgz-filetype can **only** be used on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved nor read on a Windows PC. If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer.
 {% include markup/end %}
 
-#### 5. Preprocessing of the anatomical MRI: impose coordinate system according to M/EEG convention
+#### 5. Preparation of the anatomical MRI: coregister to coordinate system according to the 'acpc' convention
 
-Since this example is concerned with CTF-MEG data, we will need to get coregistration information that expresses anatomical information in coordinates according to the CTF-convention. To this end, we do a second realignment, now using the resliced anatomical image.
+In order for the freesurfer pipeline to work, the anatomical image needs to be also be coregistered to the 'acpc' coordinate system, otherwise freesurfer does not know where to start. 'acpc' stands for anterior commissure and posterior commissure, and refers to the origin of the coordinate system, as well as the line that defines the posterior-anterior (Y) axis of the coordinate system. It is a RAS-based coordinate system.
 
 	cfg          = [];
 	cfg.method   = 'interactive';
-	cfg.coordsys = 'ctf';
-	mri_ctf_rs   = ft_volumerealign(cfg, mri_spm_rs);
-	transform_vox2ctf = mri_ctf_rs.transform;
+	cfg.coordsys = 'acpc';
+	mri          = ft_volumerealign(cfg, mri);
+	
+For later use, we save the transformation matrix. Combined with the transformation matrix saved earlier, we can now toggle back and forth between the acpc-based coordinates, and the ctf-based coordinates.
 
-For convenience, you can now save the transformation matrix.
+ 	transform_vox2acpc = mri.transform;
+	save(fullfile(mripath,sprintf('%s_transform_vox2acpc',subjectname)), 'transform_vox2acpc');
 
-	save('Subject01_transform_vox2ctf', 'transform_vox2ctf');
+Also save the acpc-coregistered anatomical image, this file will be the input file for the freesurfer processing pipeline:
 
-The MATLAB-based preprocessing of the anatomical data is now finished. We created an .mgz files that can be used for the creation of a cortical-sheet based source model and a volume conduction model. Moreover, 2 coregistration matrices have been constructed that allow to switch between coordinate systems.
+	cfg          = [];
+	cfg.filename = fullfile(mripath,sprintf('%s.mgz',subjectname));
+	cfg.filetype = 'mgz';
+	cfg.parameter = 'anatomy';
+	ft_volumewrite(cfg, mri);
 
-###  Creation of cortical sheet with Freesurfer and downsampling with MNE suite
+The MATLAB-based preparation of the anatomical data is now finished. We created two .mgz files, one that can be used for the creation of a cortical-sheet based source model (Subject01.mgz), and one that can be used for the creation of a volume conduction model of the head (Subject01ctf.mgz). Moreover, 2 coregistration matrices have been constructed that allow to switch between coordinate systems.
+
+###  Creation of cortical sheet with Freesurfer and resampling with HCP workbench
 
 #### Source model: Introduction
 
-We will use FreeSurfer to create a source model that is based on a description of the cortical sheet. Essentially, we will construct a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere for each of the cerebral hemispheres. The latter property is required to create an inflated cortex and to do intersubject realignment. FreeSurfer generates meshes with > 100000 vertices per hemisphere, which is too much for a workable M/EEG source reconstruction. Therefore, we use the MNE-suite to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, MATLAB's reducepatch function breaks the topology and leads to a bigger variance in triangle size.
-The creation process of the source-space can be divided into 4 stages (after the preprocessing steps
- 1.  Volumetric processing in FreeSurfer.
- 2.  Surface based processing in FreeSurfer.
- 3.  Creation of the mesh using MNE-suite.
- 4.  Coregistration of the source space to the sensor-based coordinate system with FieldTrip.
+We will use FreeSurfer to create a source model that is based on a description of the cortical sheet. Essentially, we will construct a triangulated cortical mesh, ideally consisting of a number of approximately equally sized triangles that form a topological sphere for each of the cerebral hemispheres. FreeSurfer generates meshes with > 100000 vertices per hemisphere, which is too much for a workable M/EEG source reconstruction. Therefore, we use HCP workbench to downsample the triangulated meshes. This step serves the purpose of retaining a topologically correct description of the surface, and keeping the variance in triangle size low. In contrast, MATLAB's reducepatch function breaks the topology and leads to a bigger variance in triangle size. A convenient byproduct of the proposed HCP-workbench based processing is that the resulting cortical meshes are surface-registered to a common template, which allows for direct comparison of dipole locations with the same index across subjects. 
 
-The volumetric and surface based processing (first and the second steps) can be together 10 hours long. These steps will run on the computer from themselves. There is only one checkpoint between the volume and the surface based processing when an intermediate result can be checked interactively.
+The creation process of the source-space can be divided into 3 stages:
+ 1.  Volumetric and surface-based processing in FreeSurfer.
+ 2.  Creation of the mesh using HCP workbench.
+ 3.  Coregistration of the source model to the MEEG-based coordinate system with FieldTrip.
 
-The input of the creation process of the source-space are mgz files that were created in the preprocessing. The output is the source model that is a MATLAB structure called 'sourcespace' in this tutorial.
+The volumetric and surface based processing typically take a long time (on the order of 10 hours). These steps will run automatically, and most of the time don't require user intervention. Sometimes, however, the automatic procedure fails, which requires inspection of the logs and/or inspection of the files created by FreeSurfer. In our experience, the most likely causes are a mismatch of input coordinate system (which can be resolved by checking and fixing the MATLAB-based coregistration steps), or an otherwise suboptimal white matter segmentation, or skullstripping. This is mostly due to slabs of dura being attached to the white matter volumes. This needs to be corrected manually. Please refer to the FreeSurfer documentation for more information. In practice this would mean that parts of the FreeSurfer pipeline needs to be redone after correction of the relevant volumes.
 
-The instructions about how to install and run FreeSurfer and MNE Suite are aimed at users at the Center of Neuroimaging of the Donders Institute and at the MPI for Psycholinguistics in Nijmegen.
+The input of the creation process of the meshes is the acpc-coregistered mgz file that was created previously. The output is the source model that is a MATLAB structure called 'sourcemodel' in this tutorial.
+
+The exact specifics of how to run FreeSurfer and HCP-workbench may depend on your local computing infrastructure. The code below has been tested to work for users that work with the compute cluster ot the Centre for Cognitive Neuroimaging of the Donders Institute in Nijmegen.
 
 #### 1. Source model: Volumetric processing in FreeSurfer
 
@@ -135,134 +145,68 @@ FreeSurfer's anatomical processing pipeline consists of a series of automated st
  3.  processing of the surface meshes (smoothing, topology fixing, inflation, co-registration with a spherical template)
 
 Here is a [link](http://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllDevTable) to the different processing steps. Although the FreeSurfer procedure can be invoked using only a few FreeSurfer commands, below we will describe the (sub)commands that will achieve the same. These commands sequentially generate a series of files (volumetric, surface and transformation matrices). Each of the output files serves as input to the sequential analysis steps. A table of file dependencies can be found [here](http://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllFilesVsSteps).
-There are a few analysis steps in FreeSurfer which are not guaranteed to give a nice result, and require some user interaction to get it right. Moreover, FreeSurfer can be quite picky with respect to the exact format of the MRI-volumes. One step which in our experience is notorious for not being very robust is automatic skull-stripping. Therefore, we advocate a hybrid approach that uses SPM for an initial segmentation of the anatomical MRI during the preprocessing. With this segmentation, we can create a skull-stripped image, which is a prerequisite for a correct segmentation in FreeSurfer. Although this approach may seem a bit convoluted (you may rightfully ask why we need to redo the segmentation in FreeSurfer if we already did it in SPM), the interdependencies between different files generated along the FreeSurfer pipeline make tapping into this pipeline at a random point quite complicated. For this reason a large part of the volumetric processing in FreeSurfer needs to be done as well.
+There are a few analysis steps in FreeSurfer which are not guaranteed to give a nice result, and may require some user interaction to get it right. Moreover, FreeSurfer can be quite picky with respect to the exact format of the MRI-volumes. One step which in our experience is notorious for not being very robust in older versions is automatic skull-stripping. Therefore, we used to advocate a hybrid approach that uses SPM or FSL for an initial segmentation of the anatomical MRI during the preparation. With this segmentation, we can create a skull-stripped image, which is a prerequisite for a correct segmentation in FreeSurfer. Since this approach is a bit convoluted (because it required the skullstripped image to be copied into the FreeSurfer directory in a specific format), and given the interdependencies between different files generated along the FreeSurfer pipeline (which moreover are FreeSurfer version specific), tapping into this pipeline at a random point is quite complicated. For this reason we discontinue the dissemination of this hybrid approach, and hope for the better that more recent versions of FreeSurfer work more robustly.
 
-To create a skullstripped anatomical image, you can do the following. We assume that you have executed all steps that are described in the section about preprocessing of the anatomical MRI, and that you have a file that contains the resliced anatomical image, expressed in the MNI-RAS coordinate system.
-
-	mri = ft_read_mri('Subject01.mgz');
-	mri.coordsys = 'spm';
-
-	cfg = [];
-	cfg.output = 'brain';
-	seg = ft_volumesegment(cfg, mri);
-	mri.anatomy = mri.anatomy.*double(seg.brain);
-
-	cfg             = [];
-	cfg.filename    = 'Subject01masked';
-	cfg.filetype    = 'mgz';
-	cfg.parameter   = 'anatomy';
-	ft_volumewrite(cfg, mri);
-
-In order to be able to use FreeSurfer, you need to have a working installation of the package. It can be downloaded from [here](http://surfer.nmr.mgh.harvard.edu/fswiki). If you are working at the Center of Neuroimaging of the Donders Institute you can find more versions of FreeSurfer under the /opt/FreeSurferXXX directories. (If you are working at the MPI for Psycholinguistics, you should install the software yourself in your directory.) We recommend to use FreeSurfer 5.3. You can run the commands just copying and pasting them into the terminal window of the Linux system (from where you used also MATLAB).
+In order to be able to use FreeSurfer, you need to have a working installation of the package. It can be downloaded from [here](http://surfer.nmr.mgh.harvard.edu/fswiki). If you are working at the Donders Centre for Cognitive Neuroimaging, FreeSurfer is available at the compute cluster, and you can find more versions of FreeSurfer under the /opt/FreeSurferXXX directories. (If you are working at the MPI for Psycholinguistics, you should install the software yourself in your directory.) We recommend to use FreeSurfer 6.0. You can run the commands just copying and pasting them into the terminal window of the Linux system.
 
 To get started, you need to set up your environment variables. Please pay close attention to the spaces in the following commands, or the lack thereof.
 
-	export FREESURFER_HOME=`<path to FreeSurfer>`
-	export SUBJECTS_DIR=`<Subject directory>`
+	export FREESURFER_HOME=<path to FreeSurfer>
+	export SUBJECTS_DIR=<Subject directory>
+	export SUBJECTNAME=<Subject name>
 
-SUBJECTS_DIR is the directory where you will store all the FreeSurfer-processed anatomical data of all your subjects. Then, type this command to set up FreeSurfe
+SUBJECTS_DIR is the directory where you will store all the FreeSurfer-processed anatomical data of all your subjects. Then, type this command to set up FreeSurfer
 
 	source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
-The following populates an empty subject-specific directory with subdirectorie
+The following populates an empty subject-specific directory with empty subdirectories
 
-	mksubjdirs $SUBJECTS_DIR/Subject01
+	mksubjdirs $SUBJECTS_DIR/$SUBJECTNAME
 
-Now, we are ready to start using FreeSurfer. As a first step in the volumetric pipeline, we have to 'convert' the anatomical MRI once more, but now using a FreeSurfer command. You start by making a new folder in the subject directory called "mri" into which you will copy both the masked and the original mgz files you created in the previous preprocessing steps in FieldTrip. All subsequent FreeSurfer commands will be called from the "mri" directory.
+Now, we are ready to start using FreeSurfer. As a first step, we have to 'convert' the anatomical MRI once more, but now using a FreeSurfer command. You start by putting the prepared acpc-registered MRI file which you created during the preparation steps in  the subject specific "mri" directory. Subsequently, this image is once more converted (adjusting the image orientation), using the mri_convert function from FreeSurfer.
 
-	cp Subject01masked.mgz $SUBJECTS_DIR/Subject01/mri/Subject01masked.mgz
-	cp Subject01.mgz       $SUBJECTS_DIR/Subject01/mri/Subject01.mgz
-	cd $SUBJECTS_DIR/Subject01/mri
+	cp $SUBJECTNAME.mgz $SUBJECTS_DIR/$SUBJECTNAME/mri/$SUBJECTNAME.mgz
+	
+	cd $SUBJECTS_DIR/$SUBJECTNAME/mri
+	mri_convert -c -oc 0 0 0 $SUBJECTNAME.mgz orig.mgz
+	cp orig.mgz orig/001.mgz 
+	# This last step is needed in version 6.0, not needed in 5.3
+        
+	# Now run the automatic processing
+	recon-all -autorecon1 -subjid $SUBJECTNAME
+	recon-all -autorecon2 -subjid $SUBJECTNAME
+	recon-all -autorecon3 -subjid $SUBJECTNAME
 
-	mri_convert -c -oc 0 0 0 Subject01masked.mgz brainmask.mgz
-	mri_convert -c -oc 0 0 0 Subject01.mgz       orig.mgz
+After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. The commands referenced above are also available as a shell-script in **[fieldtrip/bin/ft_freesurferscript.sh]**, for instance to be used in a batch processing mode.
 
-	recon-all -talairach      -subjid Subject01
-	recon-all -nuintensitycor -subjid Subject01
-	recon-all -normalization  -subjid Subject01
-	recon-all -gcareg         -subjid Subject01
-	recon-all -canorm         -subjid Subject01
-	recon-all -careg          -subjid Subject01
-	recon-all -careginv       -subjid Subject01
-	recon-all -calabel        -subjid Subject01
-	recon-all -normalization2 -subjid Subject01
-	recon-all -maskbfs        -subjid Subject01
-	recon-all -segmentation   -subjid Subject01
-	recon-all -fill           -subjid Subject01
+#### 2. Source model: Creation of the mesh using HCP-workbench
 
-This ends the part of the FreeSurfer pipeline concerned with volumetric processing. At this stage you should have a file **filled.mgz** containing the segmentation of the cortical white matter (cerebellum is not included!). You can check how this looks using FieldTrip, by doing the followin
+Just like with FreeSurfer, you have to first take care that HCP-workbench is installed. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP-workbench documentation to set up the software [link]https://www.humanconnectome.org/software/connectome-workbench. In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you'd need to get the standard_mesh_atlases directory from https://github.com/Washington-University/HCPpipelines, which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your filesystem. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.*.gii. Once all files are in place, we can run the **[fieldtrip/bin/ft_postfreesurferscript.sh]** from the linux command line, in the following way:
 
-	cd `<Subject directory>`/Subject01/mri
-	mri = ft_read_mri('filled.mgz');
+	ft_postfreesurferscript.sh <OUTPUTDIRECTORY> <SUBJECTNAME> <TEMPLATEDIRECTORY>
 
-	cfg = [];
-	cfg.interactive = 'yes';
-	ft_sourceplot(cfg, mri);
+Where the <OUTPUTDIRECTORY> is the path to where the FreeSurfer results are located, <SUBJECTNAME> is, in this case Subject01, and <TEMPLATEDIRECTORY> is the path to where the templates are stored. If the script runs without error you will find in the Subject01 directory a folder, called workbench, which contains a bunch of files. These files are left and right hemispheric cortical meshes at for different resolutions, with 164/32/8/4 vertices per hemisphere. Most practically for MEEG source reconsturction purposes, we typically use the 8k or 4k meshes for further processing. It's up to you to keep the 32k and 164k resolution images. 
 
-{% include image src="/assets/img/tutorial/sourcemodel/filled01new.png" width="550" %}
+#### 3. Source model: Co-registration of the source space to the sensor-based head coordinate system
 
-*Figure 3. Filled mgz created by FreeSurfer. The two hemispheres have different colors (white and grey), cerebellum is not included.*
+We now have the cortical meshes as a pair of gifti files, one for each hemisphere, where the coordinates of the vertices are expressed in the acpc-based coordinate system. The meshes can be loaded into MATLAB using the following code (here we use the 8k resolution meshes):
 
-#### 2. Source model: Surface based processing in FreeSurfer
+	datapath = fullfile(mripath,subjectname,'workbench');
+	filename = fullfile(datapath,[subjectname,'.L.midthickness.8k_fs_LR.surf.gii']);
+	sourcemodel = ft_read_headshape({filename, strrep(filename, '.L.', '.R.')});
 
-The surface construction is done by the following sequence of commands (from the Subject01/mri directory
+As a final step for these meshes to be used for MEEG forward and inverse modelling, we need to co-register the source space to the sensor-array (i.e., we have to express the positions of the sources in the same coordinate system as the sensors). For this, we will use the transformation matrices computed in earlier in this tutorial. Specifically, using a single anatomical volume, we obtained a 2 transformation matrices, that describe the mapping of voxel indices to the sensor-based coordinate system **transform_vox2ctf** and to the acpc-based coordinate system **transform_vox2acpc**. These two matrices can be combined to yield a transformation matrix that transforms from acpc-based coordinates to sensor-based coordinates:
 
-	recon-all -fill       -subjid Subject01
-	recon-all -tessellate -subjid Subject01
-	recon-all -smooth1    -subjid Subject01
-	recon-all -inflate1   -subjid Subject01
-	recon-all -qsphere    -subjid Subject01
-	recon-all -fix        -subjid Subject01
-	recon-all -white      -subjid Subject01
-	recon-all -finalsurfs -subjid Subject01
-	recon-all -smooth2    -subjid Subject01
-	recon-all -inflate2   -subjid Subject01
+	load(fullfile(mripath,[subjectname,'_transform_vox2acpc']));
+	load(fullfile(mripath,[subjectname,'_transform_vox2ctf']));
+	transform_acpc2ctf = transform_vox2ctf/transform_vox2acpc;        
 
-	# then use a shortcut command to do the rest, but we need the rawavg.mgz file to exist
-	cp $SUBJECTS_DIR/Subject01/mri/Subject01.mgz $SUBJECTS_DIR/Subject01/mri/rawavg.mgz
-	recon-all -autorecon3 -subjid Subject01
+Then, this transformation can be applied to the vertex-positions in the source model, and with some additional small adjustments the source model can be saved to file, which ends this part of the tutorial.
 
-After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. We are going to use **lh.white** and **rh.white** to create the source space in the next step.
-
-#### 3. Source model: Creation of the mesh using MNE Suite
-
-Just like with FreeSurfer, we have to first take care that MNE-suite is installed, and that some environmental variables are correctly specified. If you are working in Nijmegen at the DCCN, you can find the MNE suite under the /opt/mne directory. At the MPI, the MNE suite is installed under the /mnt/data1/mne directory.
-
-	export MNE_ROOT=`<path to MNE>`
-	source $MNE_ROOT/bin/mne_setup.sh
-
-	export SUBJECTS_DIR=`<Subject directory>`
-	export SUBJECT=Subject01
-
-Now we can create the source space
-
-	mne_setup_source_space --ico -6
-
-This step creates a bunch of files in `<Subject directory>`/Subject01/bem/**, containing different representations of the source space. In subsequent steps, FieldTrip will use the **Subject01-oct-6-src.fif** file. We can already have a look in MATLAB at how the source space looks.
-
-	sourcespace = ft_read_headshape('Subject01-oct-6-src.fif', 'format', 'mne_source');
-
-	figure
-	ft_plot_mesh(sourcespace);
-
-{% include image src="/assets/img/tutorial/sourcemodel/sspace01new.png" width="450" %}
-
-*Figure 4. The source-space downsampled by MNE Suite*
-
-#### 4. Source model: Co-registration of the source space to the sensor-based head coordinate system
-
-We have the source locations co-registered to the MNI coordinate system, so now we need to co-register the source space to the sensor-array (i.e., we have to express the positions of the sources in the same coordinate system as the sensors). For this, we will use the transformation matrices computed in earlier in this tutorial. Specifically, using the resliced anatomical data in the mrirs-structure, we obtained a set of 2 transformation matrices, that describe the mapping of anatomical volumetric voxel indices into the sensor-based coordinate system **transform_vox2ctf** and into the MNI coordinate system **transform_vox2spm**. These two matrices can be combined in the following way, to yield a transformation matrix that transforms from MNI coordinates to sensor-based coordinates:
-
-	T = transform_vox2ctf/transform_vox2spm;
-
-Now we can use this transformation matrix, to get it in the correct coordinate system.
-
-	% go to the Subject01/bem directory
-	sourcespace = ft_read_headshape('Subject01-oct-6-src.fif', 'format', 'mne_source');
-	sourcespace = ft_convert_units(sourcespace, 'mm');
-	sourcespace = ft_transform_geometry(T, sourcespace);
-
-	save sourcespace sourcespace
+	sourcemodel = ft_transform_geometry(transform_acpc2ctf, sourcemodel);
+	sourcemodel.inside = sourcemodel.atlasroi>0;
+	sourcemodel = rmfield(sourcemodel, 'atlasroi');
+	save(fullfile(mripath,sprintf('%s_sourcemodel_surf_8k',subjectname)), 'sourcemodel');
 
 ## Performing group analysis on 3-dimensional source-reconstructed data
 
