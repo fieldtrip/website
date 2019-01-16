@@ -172,6 +172,9 @@
 - name:  Details on the EEG language dataset
   link:  /workshop/madrid2019/eeg_language
 
+- name:  Cleaning and processing resting-state EEG
+  link:  /workshop/madrid2019/tutorial_cleaning
+
 - name:  Cluster-based permutation tests on resting-state Power Spectral Density
   link:  /workshop/madrid2019/tutorial_stats
 
