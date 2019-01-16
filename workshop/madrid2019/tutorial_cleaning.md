@@ -1,15 +1,16 @@
 ---
-title: Cleaning and processing resting state EEG
-tags: [chennu2016, madrid2019]
+title: Cleaning and processing resting-state EEG
+tags: [eeg-chennu, madrid2019]
 ---
 
-# Cleaning and processing resting state EEG
+# Cleaning and processing resting-state EEG
 
 # Introduction
 This tutorial has been created for the FieldTrip workshop in Madrid 2019.
 It shows how to preprocess and analyse resting state EEG data using the
 example of an open access dataset shared by University of Cambridge. You
 can click here for details on the dataset.
+
 In this tutorial you will learn how to load and inspect this dataset
 using FieldTrip. You will perform some basic preprocessing and finally
 you will do a time frequency analysis on the resting state data including
@@ -19,13 +20,16 @@ group-level statistics
 Here we will adapt the pipeline described in de Cheveigne & Arzounian
 (2018). In there they propose different algorithms to preprocess MEEG
 data and importantly they propose rules of thumb on the order of the
-application of the algorithms. Taken from the paper:
+application of the algorithms. The following section is taken literally
+from the paper:
 
-" As a rule of thumb, if algorithm B is sensitive to an artifact that
-algorithm A can remove, then A should be applied before B. A difficulty
-arises of course if A is also sensitive to artifacts that B can remove."
+As a rule of thumb, if algorithm B is sensitive to an artifact that
+algorithm A can remove, then A should be applied before B.
 
-"A likely sequence might be:
+A difficulty arises of course if A is also sensitive to artifacts
+that B can remove.
+
+A likely sequence might be:
 (a) discard pathological channels for which there is no useful signal,
 (b) apply robust detrending to each channel,
 (c) detect and interpolate temporally-local channel-specific glitches,
@@ -37,22 +41,21 @@ arises of course if A is also sensitive to artifacts that B can remove."
 activity of interest."
 
 Reference:
-Cheveigne & Arzounian(2018)Robust detrending, rereferencing, outlier
+Cheveigne & Arzounian(2018) Robust detrending, rereferencing, outlier
 detection, and inpainting for multichannel data. Neuroimage 172 (2018)
-903�912 https://doi.org/10.1016/j.neuroimage.2018.01.035
+903-912 https://doi.org/10.1016/j.neuroimage.2018.01.035
 
 # Procedure
+
 In this tutorial the following steps will be taken:
- - Read the data into MATLAB using ft_preprocessing and visualize the data
-in between processsing steps with ft_databrowser
- - Interpolate broken channels or noisy data segments with
-ft_channelrepair, removing artifacts with ft_rejectartifact
- - Select relevant segments of data using ft_redefinetrial as well as
-concatenating data using ft_appenddata
- - Once all data is cleaned, correct for eye movement artifacts by running
-independent component analysis using ft_componentanalysis
+
+- Read the data into MATLAB using ft_preprocessing and visualize the data in between processsing steps with ft_databrowser
+- Interpolate broken channels or noisy data segments with ft_channelrepair, removing artifacts with ft_rejectartifact
+- Select relevant segments of data using ft_redefinetrial as well as concatenating data using ft_appenddata
+- Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using ft_componentanalysis
 
 # Reading in data
+
 For this tutorial you will require the original open dataset, which you
 can download here. Furthermore, some intermediate steps have been
 computed for you already, for efficiency. You can download both original
@@ -82,13 +85,13 @@ If preprocessing was done as described, the data will have the following
 fields
 
 	eeg =
-		hdr: [1�1 struct]
-	  label: {91�1 cell}
-	   time: {[1�102500 double]}
-	  trial: {[91�102500 double]}
+		hdr: [1ÔøΩ1 struct]
+	  label: {91ÔøΩ1 cell}
+	   time: {[1ÔøΩ102500 double]}
+	  trial: {[91ÔøΩ102500 double]}
 	fsample: 250
  sampleinfo: [1 102500]
-	    cfg: [1�1 struct]
+	    cfg: [1ÔøΩ1 struct]
 
 add the electrode description
 
@@ -114,7 +117,7 @@ ref:faq/how_can_i_use_the_databrowser
 
 We manually add to the artifact structure the names of those channels that
 we have identified as bad or missing throughout the entire recording.
-Many Fieldtrip functions, ie ft_channelselection or ft_channelrepair,
+Many FieldTrip functions, ie ft_channelselection or ft_channelrepair,
 which we will use further down take channel names input. For this specify
 channel names as strings in a cell array such as {'E7';'Oz'}
 
@@ -163,14 +166,14 @@ different length. Inspect the fields in your datastructure and compare to
 the data structure after reading in with ft_preprocessing.
 
 	data_bad =
-		hdr: [1�1 struct]
-	  trial: {[91�151 double]  [91�132 double]  [91�135 double]  [91�116 double]  [91�139 double]  [91�230 double]}
-	   time: {[1�151 double]  [1�132 double]  [1�135 double]  [1�116 double]  [1�139 double]  [1�230 double]}
-	   elec: [1�1 struct]
+		hdr: [1ÔøΩ1 struct]
+	  trial: {[91ÔøΩ151 double]  [91ÔøΩ132 double]  [91ÔøΩ135 double]  [91ÔøΩ116 double]  [91ÔøΩ139 double]  [91ÔøΩ230 double]}
+	   time: {[1ÔøΩ151 double]  [1ÔøΩ132 double]  [1ÔøΩ135 double]  [1ÔøΩ116 double]  [1ÔøΩ139 double]  [1ÔøΩ230 double]}
+	   elec: [1ÔøΩ1 struct]
 	fsample: 250
-	  label: {91�1 cell}
- sampleinfo: [6�2 double]
-	    cfg: [1�1 struct]
+	  label: {91ÔøΩ1 cell}
+ sampleinfo: [6ÔøΩ2 double]
+	    cfg: [1ÔøΩ1 struct]
 
 3.- identify the channels with the artifacts
 
@@ -345,7 +348,7 @@ and apply to data
 
     comp = load('sub-28_comp');
 
-small fix: tell fieldtrip that these are different blocks updating sampleinfo
+small fix: tell FieldTrip that these are different blocks updating sampleinfo
 
     nsmp = data.sampleinfo(:,2);
     begsample = cat(1, 0, cumsum(nsmp(1:end-1))) + 1;
@@ -379,62 +382,3 @@ sensitive to them
     cfg = [];
     cfg.component = ic.artifact;
     data = ft_rejectcomponent(cfg,comp,data);
-
-# Frequency analysis
-First we segment our continuous data into 2 second segments.
-
-    cfg = [];
-    cfg.length  = 2;
-    cfg.overlap = 0;
-    data_rpt  = ft_redefinetrial(cfg,data);
-    comp_rpt = ft_redefinetrial(cfg,comp);
-
-    if scdflag;
-        cfg = [];
-        cfg.method     = 'hjorth';
-        cfg.elec       = data.elec;
-        cfg.neighbours = cfg_neigh.neighbours;
-        [scd] = ft_scalpcurrentdensity(cfg, data_rpt);
-    end
-
-Welch PSD on clean EEG and selected ICs
-
-    cfg = [];
-    cfg.output  = 'pow';
-    cfg.channel = 'all';
-    cfg.method  = 'mtmfft';
-    cfg.taper   = 'hanning';
-    cfg.foi     = 0.5:0.5:45;
-    FreqDat  = ft_freqanalysis(cfg, data_rpt);
-    FreqDat.cfg = [];
-    FreqComp = ft_freqanalysis(cfg, comp_rpt);
-
-Visualize IC features
-
-    cfg = [];
-    cfg.elec = prepare_elec_chennu2016(data.label);
-    layout = ft_prepare_layout(cfg);
-
-    figure;
-    cfg = [];
-    cfg.component = ic.selected;
-    cfg.compscale = 'local';
-    cfg.layout    = layout;
-    cfg.zlim      = 'maxabs';
-    cfg.comment   = 'no';
-    cfg.marker    = 'off';
-    ft_topoplotIC(cfg, FreqComp);
-
-    figure;
-    for c=1:size(ic.selected,2);
-        subplot(4,5,c);loglog(FreqComp.freq,FreqComp.powspctrm(ic.selected(c),:));
-        xlim([0.5 45]);grid on;
-        title(['PSD comp ' num2str(ic.selected(c))]);
-    end
-    xlabel('log frequency (Hz)');
-    ylabel('log power (uV)');
-
-    figure;
-    cfg = [];
-    cfg.layout = layout;
-    ft_multiplotER(cfg,FreqDat);
