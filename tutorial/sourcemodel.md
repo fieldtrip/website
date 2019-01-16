@@ -189,7 +189,7 @@ Where the <OUTPUTDIRECTORY> is the path to where the FreeSurfer results are loca
 
 #### 3. Source model: Co-registration of the source space to the sensor-based head coordinate system
 
-We now have the cortical meshes as a pair of gifti files, one for each hemisphere, where the coordinates of the vertices are expressed in the acpc-based coordinate system. The meshes can be loaded into MATLAB using the following code:
+We now have the cortical meshes as a pair of gifti files, one for each hemisphere, where the coordinates of the vertices are expressed in the acpc-based coordinate system. The meshes can be loaded into MATLAB using the following code (here we use the 8k resolution meshes):
 
 	datapath = fullfile(mripath,subjectname,'workbench');
 	filename = fullfile(datapath,[subjectname,'.L.midthickness.8k_fs_LR.surf.gii']);
