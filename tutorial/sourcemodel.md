@@ -44,6 +44,10 @@ The anatomical preprocessing is done in MATLAB with FieldTrip. The goal of this 
 
 Thus, the input of the preprocessing is the anatomical MRI. The output is two anatomical images, as well as a set of transformation matrices.
 
+#### 0. Preamble
+
+For this part of the tutorial you need a working copy of freesurfer (the below works for version 6.0), and of HCP-workbench. 
+
 #### 1. Preparation of the anatomical MRI: read in MRI data
         
 	mripath     = <directory-where-the-inputimage-is-located-and-where-the-output-will-be-stored>;
@@ -65,7 +69,7 @@ If it worked well, you will see the coordinate system specified in the mri struc
 	cfg.coordsys = 'ctf';
 	mri          = ft_volumerealign(cfg, mri);
 
-#### 3. Preprocessing of the anatomical MRI: reslicing
+#### 3. Preparation of the anatomical MRI: reslicing
 
 This step reslices the anatomical volume in a way that voxels will be isotropic. We use 1 mm resolution and we specify the dimension as 256X256X256, because this is the format which FreeSurfer works with. 
 
@@ -79,7 +83,7 @@ For later use, we also save the transformation matrix.
  	transform_vox2ctf = mri.transform;
 	save(fullfile(mripath,sprintf('%s_transform_vox2ctf',subjectname)), 'transform_vox2ctf');
 
-#### 4. Preprocessing of the anatomical MRI: save to disk
+#### 4. Preparation of the anatomical MRI: save to disk
 
 	% save the resliced anatomy in a FreeSurfer compatible format
 	cfg             = [];
@@ -92,19 +96,27 @@ For later use, we also save the transformation matrix.
 Importantly, the mgz-filetype can **only** be used on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved nor read on a Windows PC. If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer.
 {% include markup/end %}
 
-#### 5. Preprocessing of the anatomical MRI: impose coordinate system according to M/EEG convention
+#### 5. Preparation of the anatomical MRI: coregister to coordinate system according to the 'acpc' convention
 
-Since this example is concerned with CTF-MEG data, we will need to get coregistration information that expresses anatomical information in coordinates according to the CTF-convention. To this end, we do a second realignment, now using the resliced anatomical image.
+In order for the freesurfer pipeline to work, the anatomical image needs to be also be coregistered to the 'acpc' coordinate system, otherwise freesurfer does not know where to start. 'acpc' stands for anterior commissure and posterior commissure, and refers to the origin of the coordinate system, as well as the line that defines the posterior-anterior (Y) axis of the coordinate system. It is a RAS-based coordinate system.
 
 	cfg          = [];
 	cfg.method   = 'interactive';
-	cfg.coordsys = 'ctf';
-	mri_ctf_rs   = ft_volumerealign(cfg, mri_spm_rs);
-	transform_vox2ctf = mri_ctf_rs.transform;
+	cfg.coordsys = 'acpc';
+	mri          = ft_volumerealign(cfg, mri);
+	
+For later use, we save the transformation matrix. Combined with the transformation matrix saved earlier, we can now toggle back and forth between the acpc-based coordinates, and the ctf-based coordinates.
 
-For convenience, you can now save the transformation matrix.
+ 	transform_vox2acpc = mri.transform;
+	save(fullfile(mripath,sprintf('%s_transform_vox2acpc',subjectname)), 'transform_vox2acpc');
 
-	save('Subject01_transform_vox2ctf', 'transform_vox2ctf');
+Also save the acpc-coregistered anatomical image, this file will be the input file for the freesurfer processing pipeline:
+
+	cfg          = [];
+	cfg.filename = fullfile(mripath,sprintf('%s.mgz',subjectname));
+	cfg.filetype = 'mgz';
+	cfg.parameter = 'anatomy';
+	ft_volumewrite(cfg, mri);
 
 The MATLAB-based preprocessing of the anatomical data is now finished. We created an .mgz files that can be used for the creation of a cortical-sheet based source model and a volume conduction model. Moreover, 2 coregistration matrices have been constructed that allow to switch between coordinate systems.
 
