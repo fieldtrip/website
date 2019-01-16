@@ -4,3 +4,6 @@
 - name:  Preprocessing - Reading continuous EEG data
   link:  /tutorial/continuous
 
+- name:  Details on the EEG language dataset
+  link:  /workshop/madrid2019/eeg_language
+
