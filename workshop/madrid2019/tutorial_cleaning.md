@@ -5,17 +5,17 @@ tags: [eeg-chennu, madrid2019]
 
 # Cleaning and processing resting-state EEG
 
-# Introduction
+## Introduction
 This tutorial has been created for the FieldTrip workshop in Madrid 2019.
 It shows how to preprocess and analyse resting state EEG data using the
 example of an open access dataset shared by University of Cambridge. You
-can click here TODO ENTER LINK for details on the dataset.
+can click [here for details on the dataset](/workshop/madrid2019/eeg_chennu).
 In this tutorial you will learn how to load and inspect this dataset
 using FieldTrip. You will perform some basic preprocessing such as
 repairing broken channels, visual artifact rejection and artifact
 correction using ICA
 
-# Background
+## Background
 Here we will adapt the pipeline described in de Cheveigne & Arzounian
 (2018). In there they propose different algorithms to preprocess MEEG
 data and importantly they propose rules of thumb on the order of the
@@ -40,22 +40,17 @@ Reference:
 Cheveigne & Arzounian(2018)Robust detrending, rereferencing, outlier
 detection, and inpainting for multichannel data. Neuroimage 172 (2018).
 
-# Procedure
+## Procedure
 In this tutorial the following steps will be taken:
- - Read the data into MATLAB using ft_preprocessing and visualize the data
-in between processsing steps with ft_databrowser
- - Interpolate broken channels or noisy data segments with
-ft_channelrepair, removing artifacts with ft_rejectartifact
- - Select relevant segments of data using ft_redefinetrial as well as
-concatenating data using ft_appenddata
- - Once all data is cleaned, correct for eye movement artifacts by running
-independent component analysis using ft_componentanalysis
+	* Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
+	* Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
+	* Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
+	* Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
 
-# Reading in data
-For this tutorial you will require the original open dataset, which you
-can download here TODO ADD LINK TO CHENNU. Furthermore, some intermediate steps have been
-computed for you already, for efficiency. You can download both original
-and processed data here: TODO ADD LINK TO FTP SERVER
+## Reading in data
+For this tutorial you will require data from one examplar subject. Furthermore the original open dataset, some intermediate steps have been 
+computed for you already, for efficiency. You can download both raw and processed data [ here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_cleaning).
+If you are interested in the full open access dataset, you can also download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data). 
 
 For this tutorial we will lead you through the preprocessing pipelne with
 the example of one subject and on one acquisition run (sedation level).
@@ -65,7 +60,7 @@ the example of one subject and on one acquisition run (sedation level).
 We will start with minimal preprocessing. Be aware that using
 the average reference on data with artifacts can spread contamination
 but it definitely enhances the interpretability of the data when
-using ft_databrowser (i.e. topoplots)
+using **[ft_databrowser](/reference/ft_databrowser)** (i.e. topoplots)
 
     cfg = [];
     cfg.dataset    = [subj '_task-rest_run-3_eeg.vhdr'];
@@ -80,29 +75,24 @@ using ft_databrowser (i.e. topoplots)
 If preprocessing was done as described, the data will have the following
 fields
 
-data =
+	data =
 
-hdr: [1x1 struct]
-label: {91x1 cell}
-time: {[1x90000 double]}
-trial: {[91x90000 double]}
-fsample: 250
-sampleinfo: [1 90000]
-cfg: [1x1 struct]
+		hdr: [1x1 struct]
+	  label: {91x1 cell}
+	   time: {[1x90000 double]}
+	  trial: {[91x90000 double]}
+	fsample: 250
+ sampleinfo: [1 90000]
+		cfg: [1x1 struct]
 
 
-add the electrode description
-
-TODO explanatio why custom function is used
-here?
+add the electrode description. For this we will use a custom script which was included in the downloads folder with the data.
 
     data.elec = prepare_elec_chennu2016(data.label);
 
-Using the ft_databrowser we will now visually inspect our data and mark
+Using the **[ft_databrowser](/reference/ft_databrowser)** we will now visually inspect our data and mark
 samples as either blink, bad channel or muscle artifacts. If you haven't
-used the databrowser before, read here how to use it
-red:faq/how_can_i_use_the_databrowser
-TODO add link to fieldtrippage
+used the databrowser before, read [here how to use it](/faq/how_can_i_use_the_databrowser).
 
     cfg = [];
     cfg.channel       = 'all';
@@ -115,20 +105,20 @@ TODO add link to fieldtrippage
     cfg.artfctdef.muscle.artifact     = [];
     artif = ft_databrowser(cfg,data);
 
-TODO add figure fig1_databrowser_init
+{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig1_databrowser_init.png" width="400" %}
 
-TODO add exercise box
+{% include markup/info %}
 Exercise 1: Browse through the segments to get a feel for the data. Do you
 see any obvious artifacts? There is one channel carrying several artifacts throughout
 the recording, can you find it? Use the identify button to see the channel
 name
+{% include markup/end %}
 
-TODO add figure fig2_databrowser_badchan
-figure caption: Example of a bad channel artifact
+{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig2_databrowser_badchan.png" width="400" %}
 
 We manually add to the artifact structure the names of those channels that
 we have identified as bad or missing throughout the entire recording.
-Many Fieldtrip functions, ie ft_channelselection or ft_channelrepair,
+Many FieldTrip functions, ie **[ft_channelselection](/reference/ft_channelselection)** or **[ft_channelrepair](/reference/ft_channelrepair)**,
 which we will use further down take channel names input. For this specify
 channel names as strings in a cell array such as {'E7';'Oz'}
 
@@ -138,21 +128,20 @@ channel names as strings in a cell array such as {'E7';'Oz'}
 to save disk space, it is advisable to save the minimal information
 and run again the pipeline to reconstruct the data. Here we have already
 saved the artifacts we identified but not the cleaned eeg data. You can
-either load the preselected artifact file 'sub-22_run-03_eeg_artif' or with your own
+either load the preselected artifact file 'sub-22_run-03_eeg_artif' or continue with your own
 selection.
 
     load('sub-22_run-03_eeg_artif')
 
-# Interpolating bad channels
+## Interpolating bad channels
 We will now see two different ways of dealing with noisy channels. One is
 to interpolate entire channels. The other way is to interpolate only
 segments that contain artifacts.
 
 A definition of neighbouring channels is needed when repairing missing
 channels (they will be reconstructed by a weighted average of the
-neighbours). FieldTrip already comes with a variety of templates for
-defining neighbouring channels. Read here if you wnat to know more TODO
-LINK TO page. For this dataset we provide this information for you.
+neighbours). FieldTrip already comes with a variety of **[templates for
+defining neighbouring channels](/template/neighbours)**. For this dataset we provide this information for you.
 
     load('cfg_neighbours','neighbours');
 
@@ -168,7 +157,7 @@ For this subject the noisy channel only has a handful of artifacts, so
 instead of interpolating an entire channel, we will only interpolate the
 noisy segments.
 
-2.- select EEG artifacted manual selections with ft_redefinetrial
+2.- select EEG artifacted manual selections with **[ft_redefinetrial](/reference/ft_redefinetrial)**
 
     artpadding  = 0.1;
     begart      = artif.artfctdef.badchannel.artifact(:,1)-round(artpadding.*data.fsample);
@@ -183,18 +172,18 @@ noisy segments.
 You should now have a data structure data_bad, that contains the segments of data
 you have identified as artifact in the trial field. Each trial will be of
 different length. Inspect the fields in your datastructure and compare to
-the data structure after reading in with ft_preprocessing.
+the data structure after reading in with **[ft_preprocessing](/reference/ft_preprocessing)**.
 
-data_bad =
+	data_bad =
 
-hdr: [11 struct]
-trial: {[91395 double]  [91333 double]}
-time: {[1395 double]  [1333 double]}
-elec: [11 struct]
-fsample: 250
-label: {911 cell}
-sampleinfo: [22 double]
-cfg: [11 struct]
+		hdr: [1x1 struct]
+	  trial: {[91x395 double]  [91x333 double]}
+	   time: {[1x395 double]  [1x333 double]}
+	   elec: [1x1 struct]
+	fsample: 250
+	  label: {91x1 cell}
+ sampleinfo: [2x2 double]
+		cfg: [1x1 struct]
 
 3.- identify the channels with the artifacts
 
@@ -215,7 +204,7 @@ parameters to detect artifacts
             warning(['decreasing threshold to: ' num2str(max(mean(1-w,2)))]);
         end
 
-        % 4.- use ft_channelrepair to interpolate these brief selected artifacts
+        % 4.- use **[ft_channelrepair](/reference/ft_channelrepair)** to interpolate these brief selected artifacts
         cfg = [];
         cfg.badchannel = data_bad.label([iBad;iBad_a]);
         cfg.method = 'weighted';
@@ -223,19 +212,21 @@ parameters to detect artifacts
         cfg.trials = k;
         data_fixed{1,k} = ft_channelrepair(cfg,data_bad);
     end
-After correcting each artifactual trial we can use ft_appenddata to
+After correcting each artifactual trial we can use **[ft_appenddata](/reference/ft_appenddata)** to
 combine trials into one structure again.
 
     data_fixed = ft_appenddata([],data_fixed{:});
 
-TODO ADD BOX
-Exercise 2: Visualize the selected artifacts in data_bad with ft_databrowser
+{% include markup/info %}
+Exercise 2: Visualize the selected artifacts in data_bad with **[ft_databrowser](/reference/ft_databrowser)**
 and compare to data_fixed. You can also just plot the bad channel by
 specifying its name in cfg.channel. Or you can use the matlab plot
 function. For this you need to find the index of the channel using the
 data.label field. Try it!
+{% include markup/end %}
 
     clear data_bad
+	
 now delete the badchannel artifacts and append the interpolated data
 
     cfg                               = [];
@@ -246,17 +237,19 @@ now delete the badchannel artifacts and append the interpolated data
 
     data = ft_appenddata([],data_clean,data_fixed);
     clear data_clean data_fixed;
-TODO ADD BOX
-Exercise 3: inspect the new data structure. What has changed?
 
-In order keep the data as one continous trial we use ft_redefinetrial and
+{% include markup/info %}
+Exercise 3: inspect the new data structure. What has changed?
+{% include markup/end %}
+
+In order keep the data as one continous trial we use **[ft_redefinetrial](/reference/ft_redefinetrial)** and
 the sample information
 
     cfg = [];
     cfg.trl = [min(data.sampleinfo(:,1)) max(data.sampleinfo(:,2)) 0];
     data = ft_redefinetrial(cfg,data);
 
-5.- check the interpolation results using ft_databrowser
+5.- check the interpolation results using **[ft_databrowser](/reference/ft_databrowser)**
 
     cfg = [];
     cfg.viewmode      = 'vertical';
@@ -274,7 +267,7 @@ the sample information
     end
     ft_databrowser(cfg,data);
 
-# Reject the muscular and visual artifacts
+## Reject the muscular and visual artifacts
 note we do not want to reject blinks because we want to model them
 using independent component analysis
 If you have marked muscular or visual artifacts, you can cut the noisy
@@ -291,7 +284,7 @@ segments out like this:
     end
     data = ft_rejectartifact(cfg,data);
 
-once all is cleaned, we can reference the data
+once all is cleaned, we can re-reference the data
 
     cfg            = [];
     cfg.channel    = 'all';
@@ -301,7 +294,7 @@ once all is cleaned, we can reference the data
     cfg.refmethod  = 'avg';
     data = ft_preprocessing(cfg,data);
 
-# Eye blink removal with ICA
+## Eye blink removal with ICA
 For the ICA it is best to use as much data as possible. Therefore at this stage
 you should combine data from different runs/conditions etc.
 
@@ -354,7 +347,8 @@ sensitive to them
     cfg.artfctdef     = artif.artfctdef;
     ft_databrowser(cfg,comp);
 
-TODO ADD FIGURE fig3_ica.png
+{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig3_ica.png" width="400" %}
+
 
     ic.selected = input('ICs to keep (i.e. [1 5]): ');
     ic.artifact = input('ICs to reject (i.e. [8]): ');
@@ -365,6 +359,7 @@ TODO ADD FIGURE fig3_ica.png
     cfg.component = ic.artifact;
     data = ft_rejectcomponent(cfg,comp,data);
 
-TODO add BOX
-Exercise 4: Use ft_databrowser one last time to view the cleaned data. Did
+{% include markup/info %}
+Exercise 4: Use **[ft_databrowser](/reference/ft_databrowser)** one last time to view the cleaned data. Did
 the ICA successfully correct all eye blinks?
+{% include markup/end %}
