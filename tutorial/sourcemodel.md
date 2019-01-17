@@ -206,11 +206,11 @@ Then, this transformation can be applied to the vertex-positions in the source m
 	sourcemodel = ft_transform_geometry(transform_acpc2ctf, sourcemodel);
 	sourcemodel.inside = sourcemodel.atlasroi>0;
 	sourcemodel = rmfield(sourcemodel, 'atlasroi');
-	save(fullfile(mripath,sprintf('%s_sourcemodel_surf_8k',subjectname)), 'sourcemodel');
+	save(fullfile(mripath,sprintf('%s_sourcemodel_15684',subjectname)), 'sourcemodel');
 
 ## Performing group analysis on 3-dimensional source-reconstructed data
 
-When you are doing a group study, where you want to combine the source-reconstructed data across multiple subjects, you can do in several way
+When you are doing a group study, where you want to combine the source-reconstructed data across multiple subjects, you can do this in two ways:
 
  1.  Interpolation of functional data followed by volumetric spatial normalization;
  2.  Anticipate the spatial normalization, and perform source-reconstruction for each subject on a subject-specific grid, that maps onto a template grid in spatially normalized space.
@@ -329,7 +329,7 @@ Keep in mind that the .pos field in the source models are subject specific. When
 
 ## Performing group analysis on cortical-sheet based source-reconstructed data
 
-Content is coming soon!
+If you performed source reconstruction on the cortical surface, and you used the recipe explained earlier in this tutorial, single-subject data can be directly compared across subjects, because the dipole locations are surface-registered to a template.
 
 ## Summary and further reading
 
