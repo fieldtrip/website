@@ -143,7 +143,7 @@ collect the data to plot it using plotSpread
     title('between PSD Occip');
     set(h6{1},'LineWidth',1,'Marker', '.','Color','k','MarkerFaceColor','k')
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig1_spreadplot.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig1_spreadplot.png" width="600" %}
 
 ## Plotting of results
 
@@ -208,7 +208,7 @@ here the figure cosmetics
     ylabel(cfg.parameter);
     title('recovery');
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig2_topo_psd.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig2_topo_psd.png" width="600" %}
 
 # CONTRAST 1: within-participant BASELINE vs MODERATE sedation comparison
 
@@ -517,7 +517,7 @@ choose the cluster you want to see: POSITIVE or NEGATIVE
     figure;ft_multiplotER(cfg,base_sedation_avg,mode_sedation_avg);
     title('within-participant BASELINE vs MODERATE');
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig3_stats_with.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig3_stats_with.png" width="600" %}
 
 # CONTRAST 2: between-participants RESPONSIVE vs DROWSY comparison
 
@@ -555,7 +555,7 @@ selection is orthogonal to the EEG contrast we will test.
     ylabel('Perceptual hit rate (%)');
     set(gca,'XTickLabel',{'baseline','','mild','','moderate','','recovery'});
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig4_behav_performance.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig4_behav_performance.png" width="600" %}
 
 copy the datasets and select the relevant subgroups
 
@@ -744,9 +744,9 @@ PSDs from occipital ROI
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig5_topo.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig5_topo.png" width="600" %}
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig5_psd.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig5_psd.png" width="600" %}
 
 
 # CHALLENGING EXERCISES!!!
@@ -835,7 +835,7 @@ the same as in the within-UO design
     cfg.maskfacealpha = 0.1;
     figure;ft_multiplotER(cfg,base_sedation_avg,mild_sedation_avg,mode_sedation_avg,reco_sedation_avg);
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig6_manova.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig6_manova.png" width="600" %}
 
 # CONTRAST 4: 2x2 INTERACTION
 
@@ -950,7 +950,7 @@ compute means
     set(gca,'XTickLabel',{'','','baseline','','moderate','',''});
     legend('Responsive','Drowsy','Location','northwest');
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig7_interaction.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig7_interaction.png" width="600" %}
 
 # CONTRAST 5: correlation between a covariate (drug dosage) and brain activity
 
@@ -1055,4 +1055,4 @@ Now, it is time to prepare the data as follows:
     cfg.elec       = elec;
     ft_clusterplot(cfg,stat5);
 
-{% include image src="/assets/img/workshop/madrid2019/stats/fig8_corr.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig8_corr.png" width="600" %}
