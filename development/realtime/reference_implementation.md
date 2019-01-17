@@ -19,7 +19,7 @@ The MATLAB implementation (i.e. the mex file) is by default included in the norm
 
 ## License
 
-The FieldTrip buffer source code is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/modules.
+The FieldTrip buffer source code is available from ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules.
 
 The FieldTrip buffer source code is licensed under both the GNU General Public
 License (GPL) and the Berkeley Software Distribution License (BSD).

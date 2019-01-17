@@ -14,7 +14,7 @@ permutation tests.
 The tutorial starts with a long background section that sketches the
 background of permutation tests. The next sections are more
 tutorial-like. They deal with the analysis of an actual EEG dataset
-ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat FIXME.
+ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat FIXME.
 
 In a step-by-step fashion, this tutorial will show:
 
@@ -48,7 +48,7 @@ condition-specific power averages is identical for all sedative states
 
 To test the difference between the average PSDs for baseline and moderate
 sedative states. To load the data structures containing the frequency data
-averages of all 20 participants are [available](ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat)
+averages of all 20 participants are [available](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat)
 
     % averages for each individual subject, for each condition
     load resting_freq.mat

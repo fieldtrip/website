@@ -57,7 +57,7 @@ after having added the main FieldTrip path (e.g. addpath('path_to_fieldtrip')), 
 For spike analysis there is spike toolbox that is located in fieldtrip/contrib/spike.
 
 Spike data can be read out using the function **[ft_read_spike](/reference/ft_read_spike)**. At the time of writing this tutorial the supported formats are neurosim, mclust t files, neuralynx (nse, nst, ntt, nts) and plexon (nex and plx) files..
-The original data can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex).
+The original data can be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/p029_sort_final_01.nex).
 After reading out the spike data, we select the spike channels of interest.
 
 	spike = ft_read_spike('p029_sort_final_01.nex');
@@ -363,7 +363,7 @@ This gives two figures, one with a longer refractory period (the narrow spiking 
 {% include image src="/assets/img/tutorial/spike/isi_sig003a_wf.png" width="300" %}
 
 We also read in an additional dataset consisting of an M-clust .t file, that can be found at
-[ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t)
+[ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/tt6_7.t)
 
 	% read in the .t file
 	filename    = 'tt6_7.t'

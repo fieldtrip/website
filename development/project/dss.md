@@ -19,7 +19,7 @@ How does DSS work to find the components to remove?  You give it the time points
 
 ### Example dataset
 
-You can run the code below on your own data. Alternatively, try with the example EEG dataset [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/callmesomething.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/callmesomething.zip). All figures in this example script are based on these data.   (Note*** just a placeholder at the moment, this data does not exist yet.***)
+You can run the code below on your own data. Alternatively, try with the example EEG dataset [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/callmesomething.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/callmesomething.zip). All figures in this example script are based on these data.   (Note*** just a placeholder at the moment, this data does not exist yet.***)
 
 To load this dataset into MATLAB and preprocess with FieldTrip, us
 

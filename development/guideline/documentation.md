@@ -17,7 +17,7 @@ When you add documentation, please consider the following documentation guidelin
 
 ## Where to add documentation on the website?
 
-There are several places where you are especially encouraged to add your own input to the FieldTrip wiki. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the ftp-server (ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/).
+There are several places where you are especially encouraged to add your own input to the FieldTrip wiki. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the ftp-server (ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/).
 
 ## How to structure a tutorial?
 
@@ -45,7 +45,7 @@ For an example of a well-structured tutorial see the [tutorial on event related 
 
 Some computations in the tutorials may take a (too) long time, or take more memory than available in the  computers of the people that want to walk through the tutorial. To allow people in these cases to follow through the whole tutorial, we provide the intermediate data and final results at important stages in the tutorial. This data is stored in \*.mat files. See below for the recommended file and variable naming scheme.
 
-The tutorial mat files are made available on ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip and are distributed to all computers whenever we have a toolkit course or workshop. To get new files on the FTP server, or update existing files, you should copy them on the DCCN central storage system to the directory /home/common/matlab/fieldtrip/dataftp. That directory is automatically synchronized with the FTP server.
+The tutorial mat files are made available on ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip and are distributed to all computers whenever we have a toolkit course or workshop. To get new files on the FTP server, or update existing files, you should copy them on the DCCN central storage system to the directory /home/common/matlab/fieldtrip/dataftp. That directory is automatically synchronized with the FTP server.
 
 ## How to name example data?
 

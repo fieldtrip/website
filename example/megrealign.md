@@ -7,7 +7,7 @@ tags: [example, meg, ctf]
 
 	
 	% the two example files with the 151 and 275 channel CTF specifications are available from
-	% ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/example/megrealign
+	% ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/megrealign
 	
 	grad151 = ft_read_sens('ctf151.mat');
 	grad275 = ft_read_sens('ctf275.mat');

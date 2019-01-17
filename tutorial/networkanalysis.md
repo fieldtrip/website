@@ -41,7 +41,7 @@ The aim is to identify the frequency and topography of an 10Hz oscillation. We f
 
 **[ft_redefinetrial](/reference/ft_redefinetrial)** to segment it into epochs of 2 seconds length.
 
-The ft_redefinetrial and ft_preprocessing functions require the original MEG dataset, which is available from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip. Alternatively, you can skip this step and directly load the preprocessed data from ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis. This latter folder contains a few files that we will need later in this tutorial as well, so it's recommended to download its contents.
+The ft_redefinetrial and ft_preprocessing functions require the original MEG dataset, which is available from ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip. Alternatively, you can skip this step and directly load the preprocessed data from ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/networkanalysis. This latter folder contains a few files that we will need later in this tutorial as well, so it's recommended to download its contents.
 
 	%% read the continuous data and segment into 2 seconds epochs
 	cfg            = [];

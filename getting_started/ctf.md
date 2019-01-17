@@ -52,7 +52,7 @@ The header and data are in different files, and the data itself can be split ove
    cfg.dataset = 'Subject01.ds';
 FieldTrip automatically figures out what the actual header and datafiles are.
 
-To get started with reading your CTF MEG data into FieldTrip, it might be a good check to call the low-level reading functions directly. As an example for the code below, we will use the tutorial dataset, which can be downloaded from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+To get started with reading your CTF MEG data into FieldTrip, it might be a good check to call the low-level reading functions directly. As an example for the code below, we will use the tutorial dataset, which can be downloaded from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 
 ### Read header
 

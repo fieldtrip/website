@@ -30,7 +30,7 @@ In this tutorial we will be using an EEG data set that was acquired by Irina Sim
 
 Furthermore, the standard CTF MEG tutorial dataset (Subject01.ds) will be used for one of the examples.
 
-The EEG data used below is available from our FTP server at [SubjectEEG.zip](ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) and the MEG data from [Subject01.zip](ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+The EEG data used below is available from our FTP server at [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) and the MEG data from [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 
 ## Reading continuous data into memory
 

@@ -29,9 +29,9 @@ To compute the coherence between the MEG and EMG signals for the example dataset
 ## Preprocessing
 
 We will calculate the coherence between the MEG and the EMG when the subject extended her LEFT wrist, while keeping the right forearm muscle relaxed.
-The first step is to read the data. In this section we will apply automatic artifact rejection. Preprocessing requires the original MEG dataset, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
+The first step is to read the data. In this section we will apply automatic artifact rejection. Preprocessing requires the original MEG dataset, which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
-The epochs of interest have to be defined according to a custom-written function called trialfun_left.m. Note that this function is not part of the FieldTrip toolbox: see [appendix 2](/tutorial/coherence#appendix_2trialfun_left), or download it from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m). This function uses the information provided by the triggers which were recorded simultaneously with the data. In this experiment each trigger corresponds with the start or the end of a contraction. The epochs which correspond to a contraction of the left forearm muscle are selected. Subsequently these 10-second pieces are cut into ten 1-second epochs.
+The epochs of interest have to be defined according to a custom-written function called trialfun_left.m. Note that this function is not part of the FieldTrip toolbox: see [appendix 2](/tutorial/coherence#appendix_2trialfun_left), or download it from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m). This function uses the information provided by the triggers which were recorded simultaneously with the data. In this experiment each trigger corresponds with the start or the end of a contraction. The epochs which correspond to a contraction of the left forearm muscle are selected. Subsequently these 10-second pieces are cut into ten 1-second epochs.
 
 	% find the interesting epochs of data
 	cfg = [];
@@ -122,7 +122,7 @@ Explore the MEG and EMG in figure 1, e.g. by zooming in. How are the signals dif
 
 ## Computing the coherence
 
-Using **[ft_freqanalysis](/reference/ft_freqanalysis)**, the characteristics in the frequency domain will be computed. This step requires the preprocessed MEG and EMG data (see above or download from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat)). Load the data wit
+Using **[ft_freqanalysis](/reference/ft_freqanalysis)**, the characteristics in the frequency domain will be computed. This step requires the preprocessed MEG and EMG data (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat)). Load the data wit
 
     load data
 
@@ -333,7 +333,7 @@ Example script
 
 In order to localise the neuronal sources which are coherent with the EMG, we can apply beamformers to the data. For a more extensive background in beamforming, in particular beamforming with frequency-domain data, please consult the beamformer tutorial.
 In this example, we are going to use an algorithm, known as DICS, to estimate the activity of the neuronal sources and to subsequently estimate the coherence with the EMG. In order to achieve this, we first need an estimate of the cross-spectral density between all MEG-channel combinations, and between the MEG-channels and the EMG, at a frequency of interest.
-This requires the preprocessed data, see above, or download from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat). Load wit
+This requires the preprocessed data, see above, or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat). Load wit
 
     load data
 
@@ -349,7 +349,7 @@ Compute the cross-spectral density matrix for 18 H
     freq           = ft_freqanalysis(cfg, data);
 
 Once we computed this, we can use **[ft_sourceanalysis](/reference/ft_sourceanalysis)** using the following configuration.
-This step requires the subject's headmodel, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
+This step requires the subject's headmodel, which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
     cfg                 = [];
     cfg.method          = 'dics';
@@ -362,7 +362,7 @@ This step requires the subject's headmodel, which is available from [ftp:/ftp.fi
     source              = ft_sourceanalysis(cfg, freq);
 
 The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI.
-For this, we need the subject's MRI, which is available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). After reading the anatomical MRI, we reslice it along the axes of the head coordinate system for improved visualization.
+For this, we need the subject's MRI, which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). After reading the anatomical MRI, we reslice it along the axes of the head coordinate system for improved visualization.
 
     mri = ft_read_mri('SubjectCMC.mri');
 

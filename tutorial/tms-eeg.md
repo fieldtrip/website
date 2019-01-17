@@ -130,7 +130,7 @@ After having cleaned the data, we will perform the following analyses:
 
 ### Visual data inspection
 
-We start with the original dataset which is available from  [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
+We start with the original dataset which is available from  [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/sp_motor.zip). Please be aware that the file is rather large (472 MB) due to the EEG being sampled at 5kHz.
 
 We are interested in what happens in response to the TMS pulse. The TMS pulses are therefore our events of interest and our trials are defined by the pulses. As stated in the background information, event markers are present at the onset of each pulse. We will first have a look at our trials using **[ft_databrowser](/reference/ft_databrowser)**, a convenient tool to browse data directly from disk or in memory (also see this [frequently asked question](/faq/how_can_i_use_the_databrowser)).
 

@@ -61,7 +61,7 @@ title: FieldTrip workshop in Coimbra, Portugal
 For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
 version of FieldTrip that you can download [here](https://www.dropbox.com/sh/4kvs5hvwkjqp07v/AAApX5HS-iilo5xvyH9y9IpTa?dl=0)). Importantly, the tutorial data does not have to be
-downloaded but we strongly recommend to download before the workshop  at ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/fieldtrip-20160531.zip
+downloaded but we strongly recommend to download before the workshop  at ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/fieldtrip-20160531.zip
 
 1.  Copy the complete contents of the USB stick to your computer.
 2.  Unzip the fieldtrip-20160531.zip file.

@@ -149,7 +149,7 @@ Documentation referring to this dataset:
 ## MEG-epilepsy
 
 * This dataset contains MEG data from two patients. The data was recorded at Aston Brain Centre (ABC) using a 275-channel CTF system and using an Elekta 306-channel system, i.e. for both patients there are the recordings with the two MEG systems. This clinical data was kindly provided by Professor Stefano Seri.
-* Download the dataset [here](ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy) from our FTP server.
+* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="meg-epilepsy" %}

@@ -61,7 +61,7 @@ For the hands-on sessions you have to start MATLAB. To ensure that
 everything runs smooth, we will work with a clean and well-tested
 version of FieldTrip that is distributed on a USB stick, rather than the older version you might already have installed. Furthermore, the tutorial data will also be distributed on the USB stick.
 
-If you want to download it in advance, please go to ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip and get
+If you want to download it in advance, please go to ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip and get
 
 -   fieldtrip-20130906.zip
 -   Subject01.zip

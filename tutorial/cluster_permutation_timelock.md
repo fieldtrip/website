@@ -320,7 +320,7 @@ Having calculated synthetic planar gradient data, one can use the same configura
 
     save stat_ERF_planar_FICvsFC stat
 
-The output can also be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, us
+The output can also be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, us
 
     load stat_ERF_planar_FICvsFC
 

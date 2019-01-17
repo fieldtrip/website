@@ -46,7 +46,7 @@ Once we have the headmodel and sourcemodel, we perform the following step
 
 ## Processing of functional data
 
-The following will use the MEG data belonging to Subject01. The file can be obtained from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+The following will use the MEG data belonging to Subject01. The file can be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 For both preprocessing and averaging, we will follow the steps that have been written in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. We will use trials belonging to two conditions (FC and FIC) and we will calculate their difference.
 
 ### Preprocessing of MEG data

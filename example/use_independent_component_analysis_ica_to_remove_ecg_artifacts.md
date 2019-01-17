@@ -15,7 +15,7 @@ This script demonstrates how you can use ICA for cleaning the ECG artifacts from
 
 ## Example dataset
 
-You can run the code below on your own data. Alternatively, try with the example MEG dataset [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip). This dataset was acquired continuously with trials of 10 seconds. All figures in this example script are based on these data.
+You can run the code below on your own data. Alternatively, try with the example MEG dataset [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ArtifactRemoval.zip). This dataset was acquired continuously with trials of 10 seconds. All figures in this example script are based on these data.
 
 To load this dataset into MATLAB and preprocess with FieldTrip, us
 

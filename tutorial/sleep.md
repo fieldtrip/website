@@ -31,7 +31,7 @@ Sleep states can only be reliably identified by using combined EEG, EOG and EMG.
 
 ## Dataset: CAP Sleep DB
 
-For this tutorial we will use recordings from the healthy sample of the CAP Sleep Database that are openly available in PhysioNet  ([https://www.physionet.org/physiobank/database/capslpdb/](https://www.physionet.org/physiobank/database/capslpdb/)). The number of channels has been reduced and the data has been sampled down to 128 Hz for convenience. The data is stored in EDF format and two subjects can be downloaded from the FTP server at [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep).
+For this tutorial we will use recordings from the healthy sample of the CAP Sleep Database that are openly available in PhysioNet  ([https://www.physionet.org/physiobank/database/capslpdb/](https://www.physionet.org/physiobank/database/capslpdb/)). The number of channels has been reduced and the data has been sampled down to 128 Hz for convenience. The data is stored in EDF format and two subjects can be downloaded from the FTP server at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep).
 
 The EEG channels are called “C4-A1” and “C3-A2”, according to derivations based on the 10-20 system system. These correspond to the potential at C4 referenced to A1 (behind the left ear) and the same for C3 and the right ear. The EOG channel is called “ROC-LOC” for a bipolar derivation between electrodes on the right and left of the eyes. The EMG is “EMG1-EMG2” for a bipolar derivation between two electrodes on the muscles of the chin. The ECG channel is called “ECG1-ECG2”. In the original data already all channels were notch filtered at 50 Hz and the  EEG, ECG and EOG was filtered with a high-pass of 0.3 Hz and a low-pass of 30 Hz; the EMG with was already high-pass filtered at 10 Hz and low-pass filtered at 100 Hz.
 
@@ -48,7 +48,7 @@ To explore the sleep data, we will perform the following step
 
 ## Preprocessing
 
-The **[ft_preprocessing](/reference/ft_preprocessing)** function requires the modified sleep datasets and Subject loading code (e.g. Subject05.m), which is available at [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep)
+The **[ft_preprocessing](/reference/ft_preprocessing)** function requires the modified sleep datasets and Subject loading code (e.g. Subject05.m), which is available at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep)
 
 Load the subject specific information. Then read and preprocess the continuous sleep data
 

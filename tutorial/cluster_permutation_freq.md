@@ -201,7 +201,7 @@ It must be stressed that the time windows we choose to compare are **nonoverlapp
 
 We first select equal-length non-overlapping time intervals in the baseline and the activation period. For the baseline period we choose [-1 0], the time interval from 1 to 0 seconds before stimulus onset. And for the activation period we choose [0.6 1.6], the time interval from 0.6 to 1.6 seconds after stimulus onset. We will again focus on the power in the beta band (around 20 Hz).
 
-We now calculate the TFRs for the baseline and the activation period. We use again the preprocessed dataFIC (see above or download from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat)).
+We now calculate the TFRs for the baseline and the activation period. We use again the preprocessed dataFIC (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat)).
 
     load dataFIC
 
@@ -333,7 +333,7 @@ In this paragraph we describe permutation testing for TFRs obtained in experimen
 
 ### Preprocessing, planar gradient and grandaverage
 
-To test the difference between the average TFRs for fully incongruent (FIC) and fully congruent (FC) sentence endings we use planar gradient data. To load the data structures containing time frequency grand averages of all ten subjects (available from [ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat)), use:
+To test the difference between the average TFRs for fully incongruent (FIC) and fully congruent (FC) sentence endings we use planar gradient data. To load the data structures containing time frequency grand averages of all ten subjects (available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat)), use:
 
     load GA_TFR_orig;
 
