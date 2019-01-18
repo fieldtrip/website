@@ -42,7 +42,7 @@ In this tutorial the following steps will be taken:
 Let's first look at the different trigger codes present in the dataset
 
     cfg = [];
-    cfg.dataset             = 'subj2.vhdr';
+    cfg.dataset             = 'single_subject_task/raw/subj2.vhdr';
     cfg.trialdef.eventtype = '?';
     dummy                   = ft_definetrial(cfg);
 
@@ -50,11 +50,12 @@ This will display the event types and values on screen.
 The trigger codes S112, S122, S132, S142 (animals) S152, S162, S172, S182 (tools) correspond to the presented visual stimuli. 
 The trigger codes S113, S123, S133, S143 (animals) S153, S163, S173, S183 (tools) correspond to the presented auditory stimuli.
 These are the triggers we will select for now
+    
     trigVIS = {'S112', 'S122', 'S132', 'S142', 'S152', 'S162', 'S172', 'S182'}; 
     trigAUD = {'S113', 'S123', 'S133','S143' , 'S153', 'S163', 'S173', 'S183'};
 
     cfg = [];
-    cfg.dataset             = 'subj2.vhdr';
+    cfg.dataset             = 'single_subject_task/raw/subj2.vhdr';
     cfg.trialdef.eventtype  = 'Stimulus';
     cfg.trialdef.eventvalue = [trigVIS trigAUD];
     cfg.trialdef.prestim    = 0.5;
