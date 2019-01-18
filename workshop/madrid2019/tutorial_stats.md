@@ -27,9 +27,7 @@ In a step-by-step fashion, this tutorial will show:
 4. Compute a **2x2 interaction**
 5. Compute a **correlation** between a variable and the EEG spectrum
 
-## Background
-
-## 1. Compute **within**-participant contrasts
+## Overview
 
 In this paragraph we describe permutation testing for PSD data obtained
 in **[Chennu et al., 2016](https://doi.org/10.1371/journal.pcbi.1004669)**
@@ -46,6 +44,8 @@ the following null hypothesis: the probability distribution of the
 condition-specific power averages is identical for all sedative states
 (baseline vs moderate).
 
+## Preparing the dataset
+
 To test the difference between the average PSDs for baseline and moderate
 sedative states. The data structures containing the frequency data
 averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats.mat)
@@ -53,7 +53,7 @@ averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.
     % averages for each individual subject, for each condition
     load resting_freq.mat
 
-# Defining of regions of interest
+Defining of regions of interest
 
     occipital_ROI = {'E50','T5','E59','E60','Pz','E65','E66','E67','O1','E71','E72','Oz','E76','E77','O2','E84','E85','E90','E91','T6','E101','E51','E97'};
     frontal_ROI   = {'E3','E4','E5','E6','E7','Fp2','E10','Fz','E12','E13','E15','E16','E18','E19','E20','Fp1','E23','F3','E27','E28','E29','E30','E105','E106','E111','E112','E117','E118','E123','F4'};
@@ -145,8 +145,6 @@ collect the data to plot it using plotSpread
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig1_spreadplot.png" width="800" %}
 
-### Plotting of results
-
  Let us make topoplots and the PSD for each ROI for each sedative condition (similar to Fig 5A in Chennu et al.,)
 
     cfg = [];
@@ -210,7 +208,7 @@ here the figure cosmetics
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig2_topo_psd.png" width="600" %}
 
-# CONTRAST 1: within-participant BASELINE vs MODERATE sedation comparison
+## 1. Compute **within**-participant contrasts
 
 We now consider experiments involving multiple subjects that are each
 observed in multiple experimental conditions. Typically, every subject is
@@ -421,7 +419,7 @@ above.
 
     stat1 = ft_freqstatistics(cfg, base_sedation, mode_sedation);
 
-#### The format of the output
+### The format of the output
 
 The output of **[ft_freqstatistics](/reference/ft_freqstatistics)** has
 separate fields for positive and negative clusters. For the positive
@@ -520,7 +518,7 @@ cluster-level statistics is larger than stat.posclusters(k).clusterstat.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig3_stats_with.png" width="600" %}
 
-# CONTRAST 2: between-participants RESPONSIVE vs DROWSY comparison
+# 2. Compute  **between**-participants contrasts
 
 In a between-participatn experiment, we analyze the data of multiple
 participants observed during different experimental conditions. By means
@@ -751,7 +749,7 @@ PSDs from occipital ROI
 
 
 # CHALLENGING EXERCISES!!!
-## CONTRAST 3: main effect of drug
+## 3. Compute a **multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
 
 Present Chennu et al., dataset is very rich and it will allow us to ask
 more complex contrasts. Let's now consider not only two but the 4
@@ -839,7 +837,7 @@ the same as in the within-UO design
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig6_manova.png" width="600" %}
 
-# CONTRAST 4: 2x2 INTERACTION
+## 4. Compute a **2x2 interaction**
 
 A very important contrast is the interaction. In this dataset we will
 compute the interaction using the within-participant factor SEDATION
@@ -954,7 +952,7 @@ compute means
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig7_interaction.png" width="300" %}
 
-# CONTRAST 5: correlation between a covariate (drug dosage) and brain activity
+## 5. Compute a **correlation** between a variable and the EEG spectrum
 
 Here we will test for correlations between EEG data and quantitative
 variables, the drug dosage
