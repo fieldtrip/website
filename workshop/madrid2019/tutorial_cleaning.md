@@ -106,7 +106,7 @@ used the databrowser before, read [here how to use it](/faq/how_can_i_use_the_da
     cfg.artfctdef.muscle.artifact     = [];
     artif = ft_databrowser(cfg,data);
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig1_databrowser_init.png" width="400" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig1_databrowser_init.png" width="800" %}
 
 {% include markup/info %}
 Exercise 1: Browse through the segments to get a feel for the data. Do you
@@ -213,6 +213,7 @@ parameters to detect artifacts
         cfg.trials = k;
         data_fixed{1,k} = ft_channelrepair(cfg,data_bad);
     end
+
 After correcting each artifactual trial we can use **[ft_appenddata](/reference/ft_appenddata)** to
 combine trials into one structure again.
 
@@ -348,7 +349,7 @@ sensitive to them
     cfg.artfctdef     = artif.artfctdef;
     ft_databrowser(cfg,comp);
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig3_ica.png" width="400" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig3_ica.png" width="800" %}
 
 
     ic.selected = input('ICs to keep (i.e. [1 5]): ');
