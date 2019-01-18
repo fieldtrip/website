@@ -1,6 +1,6 @@
 ---
 title: Getting started with EEG data, quality checks and ERPs
-tags: [chennu2016, madrid2019]
+tags: [madrid2019, tutorial, eeg, preprocessing, timelock, eeg-language]
 ---
 
 # Getting started with EEG data, quality checks and ERPs
@@ -30,11 +30,11 @@ or according to your own criteria when you write your own trial function.
 
 ## Procedure
 In this tutorial the following steps will be taken:
-	* Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-	* Extract bipolar EOG channels with **[ft_preprocessing](/reference/ft_preprocessing)** and get rid of reference channels with **[ft_selectdata](/reference/ft_selectdata)**. Combine EOG and data channels with **[ft_appenddata](/reference/ft_appenddata)**.
-	* Visual artifact rejection with **[ft_databrowser](/reference/ft_databrowser)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**.
-	* Computing trial averages with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
-	* Plotting ERPs with **[ft_topoplotER](/reference/ft_topoplotER)**
+   * Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+   * Extract bipolar EOG channels with **[ft_preprocessing](/reference/ft_preprocessing)** and get rid of reference channels with **[ft_selectdata](/reference/ft_selectdata)**. Combine EOG and data channels with **[ft_appenddata](/reference/ft_appenddata)**.
+   * Visual artifact rejection with **[ft_databrowser](/reference/ft_databrowser)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**.
+   * Computing trial averages with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
+   * Plotting ERPs with **[ft_topoplotER](/reference/ft_topoplotER)**
 
 ## Reading & Preprocessing
 
@@ -172,7 +172,7 @@ and note that, if you wanted to, you could plot a single trial with default Matl
 
     plot(data.time{1}, data.trial{1});
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/fig1_plottrl.png" width="400" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/fig1_plottrl.png" width="800" %}
 
 However, a better way to quickly visualize and scroll through your data
 is to use **[ft_databrowser](/reference/ft_databrowser)**. There you can also easily mark artifacts.
@@ -199,6 +199,7 @@ blinks or cap movement.
     artfct       = ft_databrowser(cfg,data)
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_databrowser.png" width="400" %}
+
 
 {% include markup/info %}
 Exercise 1: Skip through a couple of data segments and see if you can
@@ -261,7 +262,7 @@ us identify eye blinks.
 
 ### Display a summary
 Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more time in 'summary' mode. This
-option is best to identify trials or channels that are noisies overall
+option is best to identify trials or channels that are noisy overall
 
     cfg          = [];
     cfg.method   = 'summary';
@@ -269,7 +270,7 @@ option is best to identify trials or channels that are noisies overall
     cfg.trials   = ~blinks;
     data_clean   = ft_rejectvisual(cfg,data);
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_rejectsummary.png" width="200" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_rejectsummary.png" width="700" %}
 
 {% include markup/info %}
 Exercise 3: Which channels show the most variance and why is that?
@@ -288,7 +289,8 @@ approaches, we will use **[ft_databrowser](/reference/ft_databrowser)** again to
 bad trials marked as such For this we first compare the sample info with the
 original data structure.
 
-    bad_trl = data.sampleinfo(ismember(data.sampleinfo(:,1),setdiff(data.sampleinfo(:,1),data_clean.sampleinfo(:,1))),:);
+    bad_trl = data.sampleinfo(ismember(data.sampleinfo(:,1),setdiff(data.sampleinfo(:,1)...
+    	,data_clean.sampleinfo(:,1))),:);
 
     cfg = [];
     cfg.viewmode = 'vertical';
@@ -321,7 +323,7 @@ to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout
     cfg.layout = 'easycapM10.mat';
     ft_layoutplot(cfg)
 
-## Computing and plotting the ERP?s
+## Computing and plotting the ERP's
 
 We will now compute the ERP's for two conditions: auditory and visual stimulus presentation.
 For each trial, the condition information is kept with the data structure in data.trialinfo.
@@ -355,7 +357,7 @@ forth between topoplot- and time representation of the data.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_topoVIS.png" width="200" %} {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_topoAUD.png" width="200" %}
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_avgtime.png" width="200" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_avgtime.png" width="400" %}
 
 {% include markup/info %}
 Exercise 5: Select the time window where the conditions differ the most,
@@ -385,3 +387,14 @@ note that the following appears to do the same
 	
 however that will not keep provenance information, whereas ft_math will
 {% include markup/end %}
+
+## See also
+
+FAQs:
+{% include seealso tag1="faq" tag3="preprocessing" %}
+{% include seealso tag1="faq" tag3="timelock" %}
+
+Examples:
+
+{% include seealso tag1="example" tag3="preprocessing" %}
+{% include seealso tag1="example" tag3="timelock" %}
