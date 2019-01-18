@@ -72,9 +72,9 @@ get the numerical indices to compute averages
 
     elec = prepare_elec_chennu2016(base_sedation.label);
 
-Now we are going to normalize the PSD using the mean taken over a frequency range defined in **freq_norm**. In the **[resting state frequency analysis](/workshop/madrid2019/tutorial_freq)**.
+Now we are going to normalize the PSD using the mean taken over a frequency range defined in **freq_norm**.
 
-We learnt different ways to normalize the PSD and here we can employed one of them
+In the **[resting state frequency analysis](/workshop/madrid2019/tutorial_freq)** we learnt different ways to normalize the PSD and here we can employ one of them
 
     freq_oi   = [8 15];   % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
@@ -225,7 +225,7 @@ independent of the experimental conditions.
 
 Cluster-level permutation tests for PSD data are performed by the function
 **[ft_freqstatistics](/reference/ft_freqstatistics)**. This
-function takes as its input arguments a configuration structure(cfg) and
+function takes as its input arguments a configuration structure (cfg) and
 two or more data structures. These data structures must be produced by
 **[ft_freqanalysis](/reference/ft_freqanalysis)** or
 **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)**, which
@@ -239,10 +239,10 @@ comparing the data structures base_sedation and mode_sedation, you must call
 #### The configuration settings
 
 Some fields of the configuration (cfg), such as channel and latency, are
-not specific for
+not unique to
 **[ft_freqstatistics](/reference/ft_freqstatistics)**; their role
 is similar in other FieldTrip functions. We first concentrate on the
-fields that are specific for
+fields that are unique to
 **[ft_freqstatistics](/reference/ft_freqstatistics)**.
 
 
@@ -353,11 +353,16 @@ be compared with the positive critical value.
 permutation test (the probability of falsely rejecting the null
 hypothesis). The value of cfg.alpha determines the critical values with
 which we must compare the test statistic (i.e., the maximum and the
-minimum cluster-level statistic). *Note that if you want to run a
+minimum cluster-level statistic). 
+
+{% include markup/danger %}
+*Note that if you want to run a
 two-sided test, you have to split the critical alpha value by setting
 cfg.correcttail = 'alpha'; i.e. this sets cfg.alpha = 0.025,
-corresponding to a false alarm rate of 0.05 in a two-sided test.* The
-field cfg.alpha is not crucial. This is because the output of
+corresponding to a false alarm rate of 0.05 in a two-sided test.* 
+{% include markup/end %}
+
+The field cfg.alpha is not crucial. This is because the output of
 **[ft_timelockstatistics](/reference/ft_timelockstatistics)** (see
 further) contains a p-value for every cluster (calculated under the
 permutation distribution of the maximum/minimum cluster-level statistic).
@@ -518,7 +523,7 @@ cluster-level statistics is larger than stat.posclusters(k).clusterstat.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig3_stats_with.png" width="600" %}
 
-# 2. Compute  **between**-participants contrasts
+## 2. Compute  **between**-participants contrasts
 
 In a between-participatn experiment, we analyze the data of multiple
 participants observed during different experimental conditions. By means
@@ -582,9 +587,9 @@ We now perform the permutation test using
 configuration settings for this analysis differ from the previous
 settings in several fields:
 
-1.  We have to select a different measure to evaluate the effect at sample level (in cfg.statistic)
-2.  The design matrix is different (i.c., it now contains only one line instead of two)
-3.  The so-called *unit variable* has to be defined.
+ 1.  We have to select a different measure to evaluate the effect at sample level (in cfg.statistic)
+ 2.  The design matrix is different (i.c., it now contains only one line instead of two)
+ 3.  The so-called *unit variable* has to be defined.
 
 The configuration looks as follow:
 
@@ -751,7 +756,7 @@ PSDs from occipital ROI
 # CHALLENGING EXERCISES!!!
 ## 3. Compute a **multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
 
-Present Chennu et al., dataset is very rich and it will allow us to ask
+Present Chennu et al. dataset is very rich and it will allow us to ask
 more complex contrasts. Let's now consider not only two but the 4
 sedative states involving multiple subjects. Every subject is summarized in 4 arrays
 of condition-specific averages. The permutation test that is described in
@@ -1012,8 +1017,8 @@ independence.
 
 Now, it is time to prepare the data as follows:
 
--   1. Compute the within-participant contrast for each group: baseline vs moderate
--   2. Compute the between-participant contrast of the differences computed in step 1
+   1. Compute the within-participant contrast for each group: baseline vs moderate
+   2. Compute the between-participant contrast of the differences computed in step 1
 
 
     cfg = [];
