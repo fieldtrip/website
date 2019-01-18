@@ -10,3 +10,6 @@
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp
 
+- name:  Time-frequency and spectral analysis
+  link:  /workshop/madrid2019/tutorial_freq
+
