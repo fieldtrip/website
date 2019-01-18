@@ -16,29 +16,30 @@ repairing broken channels, visual artifact rejection and artifact
 correction using ICA
 
 ## Background
+
 Here we will adapt the pipeline described in de Cheveigne & Arzounian
-(2018). In there they propose different algorithms to preprocess MEEG
+(2018). They propose different algorithms to preprocess MEG or EEG
 data and importantly they propose rules of thumb on the order of the
-application of the algorithms. Taken from the paper:
+application of the algorithms. 
 
-" As a rule of thumb, if algorithm B is sensitive to an artifact that
+The following is taken from the paper *Cheveigne & Arzounian (2018) [Robust detrending, rereferencing, outlier
+detection, and inpainting for multichannel data](https://doi.org/10.1016/j.neuroimage.2018.01.035). Neuroimage 172 (2018)*.
+
+*As a rule of thumb, if algorithm B is sensitive to an artifact that
 algorithm A can remove, then A should be applied before B. A difficulty
-arises of course if A is also sensitive to artifacts that B can remove."
+arises of course if A is also sensitive to artifacts that B can remove.*
 
-"A likely sequence might be:
-(a) discard pathological channels for which there is no useful signal,
-(b) apply robust detrending to each channel,
-(c) detect and interpolate temporally-local channel-specific glitches,
-(d) robust re-reference,
-(e) project out eye artifacts (e.g. using ICA or DSS),
-(f) fit and remove, or project out, 50 Hz and harmonics,
-(g) project out alpha activity, etc.,
-(f) apply linear analysis techniques (ICA, CSP, etc.) to further isolate
-activity of interest."
+A likely sequence might be:
 
-Reference:
-Cheveigne & Arzounian(2018)Robust detrending, rereferencing, outlier
-detection, and inpainting for multichannel data. Neuroimage 172 (2018).
+1. discard pathological channels for which there is no useful signal,
+2. apply robust detrending to each channel,
+3. detect and interpolate temporally-local channel-specific glitches,
+4. robust re-reference,
+5. project out eye artifacts (e.g. using ICA or DSS),
+6. fit and remove, or project out, 50 Hz and harmonics,
+7. project out alpha activity, etc.,
+8. apply linear analysis techniques (ICA, CSP, etc.) to further isolate activity of interest.
+
 
 ## Procedure
 In this tutorial the following steps will be taken:
