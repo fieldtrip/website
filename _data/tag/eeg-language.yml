@@ -7,3 +7,6 @@
 - name:  Details on the EEG language dataset
   link:  /workshop/madrid2019/eeg_language
 
+- name:  Getting started with EEG data, quality checks and ERPs
+  link:  /workshop/madrid2019/tutorial_erp
+

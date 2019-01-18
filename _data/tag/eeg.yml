@@ -175,6 +175,9 @@
 - name:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning
 
+- name:  Getting started with EEG data, quality checks and ERPs
+  link:  /workshop/madrid2019/tutorial_erp
+
 - name:  Cluster-based permutation tests on resting-state Power Spectral Density
   link:  /workshop/madrid2019/tutorial_stats
 
