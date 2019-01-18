@@ -8,11 +8,12 @@ tags: [madrid2019, tutorial, eeg, brainvision, timelock, eeg-language]
 
 In this tutorial you can find information about how to analyze the
 spectral content in two different EEG datasets. The datasets consist
-on a multi-sensory object categorization task and a resting state
-experiment (description below). The idea behind this approach is to show
+on a **[multi-sensory object categorization task](/workshop/madrid2019/eeg_language)** and a **[resting state
+experiment](/workshop/madrid2019/eeg_chennu)**. The idea behind this approach is to show
 the user, in a single tutorial, how to explore the spectral dimension of
 the EEG activity and to adapt the analysis pipeline to the nature of each
-experimental situation to get the most of the data.
+experimental situation to get the most of the data. Before continuing with 
+this tutorial read through the linked descriptions of the datasets.
 
 First of all, we'll provide a brief introduction on important concepts
 about frequency analysis and how to use the relevant FieldTrip functions.
@@ -25,68 +26,6 @@ For the resting state dataset the tutorial will show how to cut
 continuous data into shorter epochs and how to perform spectral analysis
 varying the window length and using different tapers. In the two datasets
 it'll be shown how to visualize the results.
-
-## Description of the datasets
-
-### EEG task data: Object categorization task.
-
-Here, we will work on a [EEG dataset](https://doi.org/10.1371/journal.pone.0014465)
-that was acquired by Irina Siminova in a study investigating semantic
-processing of stimuli presented as pictures, visually displayed text or
-as auditorily presented words:
-
-{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/simanova_fig1.png" width="800" %}
-*Figure 1. Experimental stimuli and conditions*
-
-The EEG data was acquired with a 64-channel BrainProducts Brainamp EEG
-amplifier from 60 scalp electrodes placed in an [equidistant electrode
-cap](http://www.fieldtriptoolbox.org/assets/img/template/layout/easycapm10.png),
-as follows:
-
-{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/simanova_fig2.png" width="800" %}
-
-One electrode was placed under the right eye to compute bipolar signals
-("vectical EOG" and "horizontal EOG"). During acquisition the reference
-at the right mastoid; an additional electrode measured the voltage on the
-left mastoid, Channels 1-60 correspond to electrodes that are located on
-the head, except for channel 53 which is located at the right mastoid.
-Channels 61, 62, 63 are not connected to an electrode at all. Channel 64
-is connected to an electrode placed below the left eye. Hence we have 62
-channels of interest: 60 from the head + eogh + eogv. For infomation
-about this dataset can found [here](workshop/madrid2019/eeg_language)
-
-### EEG resting state.
-
-The EEG resting state dataset was acquired by Srivas Chennu and
-collaborators in a [study](https://doi.org/10.1371/journal.pcbi.1004669)
-investigating reliable brain measures to track the loss of reportable
-consciousness during propofol sedation. They made entire dataset is
-available under the [CC BY 2.0 UK](https://creativecommons.org/licenses/by/2.0/uk/) license from the
-[University of Cambridge Data Repository](https://www.repository.cam.ac.uk/handle/1810/252736).
-
-The experimental design is displayed in the figure below.
-
-{% include image
-src="/assets/img/workshop/madrid2019/tutorial_freq/chennu_fig1.PNG" width="800" %}
-
-*Figure 1. Experimental manipulation and measurement of behaviour and
-propofol concentration in blood plasma.*
-
-Briefly, participants remained with the eyes closed while the EEG were
-acquired during periods around ~7 minutes. They recorded 4 experimental
-conditions:
-1. Baseline
-2. Bild sedation
-3. Moderate sedation
-4. Recovery.
-
-In the baseline condition no drug was given. Later they injected
-participants controlled dosages of propofol to produce from mild
-(0.6ug/ml) to moderate sedation (1.2ug/ml). After each EEG resting state
-acquisition was followed by a two-choice speeded response task to assess
-behavioural responsiveness. The information about the hit rate, reaction
-time and drug dosage will be used in the [statistics tutorial](workshop/madrid2019/tutorial_stats)
-to investigate whether these variables correlate with EEG activity.
 
 ## A background on spectral analysis
 
@@ -240,7 +179,7 @@ adjusted in the cfg structure. For exampl
         figure;ft_multiplotTFR(cfg, TFRhann_visc);
 
 {% include image
-src="/assets/img/workshop/madrid2019/fig1_multiplotTFR_absolute.png"
+src="/assets/img/workshop/madrid2019/tutorial_freq/fig1_multiplotTFR_absolute.png"
 width="800" %}
 
 *Figure: Time-frequency representations calculated using ft_freqanalysis.
@@ -273,7 +212,7 @@ make a plot of a single channel use the function
         subplot(212);ft_singleplotTFR(cfg, TFRhann_audc);title('auditory stim');
 
 {% include image
-src="/assets/img/workshop/madrid2019/fig2_singleTFR_absolute.png"
+src="/assets/img/workshop/madrid2019/tutorial_freq/fig2_singleTFR_absolute.png"
 width="800" %}
 
 *Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.*
@@ -299,7 +238,7 @@ topography of the beta increase use the function
         subplot(212);ft_topoplotTFR(cfg, TFRhann_audc);title('auditory stim');
 
 {% include image
-src="/assets/img/workshop/madrid2019/fig3_topoTFR_absolute.png"
+src="/assets/img/workshop/madrid2019/tutorial_freq/fig3_topoTFR_absolute.png"
 width="400" %}
 
 *Figure: A topographic representation of the time-frequency
@@ -369,7 +308,7 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**
         subplot(212);ft_singleplotTFR(cfg, TFRhann_audc7);title('auditory stim');
 
 {% include image
-src="/assets/img/workshop/madrid2019/fig4_singleTFR7_absolute.png" width="800" %}
+src="/assets/img/workshop/madrid2019/tutorial_freq/fig4_singleTFR7_absolute.png" width="800" %}
 
 *Figure: A time-frequency representation of channel 1 obtained using
 ft_singleplotTFR*
@@ -480,7 +419,7 @@ These settings result in the following characteristics as a function of
 the frequencies of interes
 
 {% include image
-src="/assets/img/workshop/madrid2019/figure1ab.png"
+src="/assets/img/workshop/madrid2019/tutorial_freq/figure1ab.png"
 width="800" %}
 
 *Figure: a) The characteristics of the TFRs settings using multitapers in
@@ -511,7 +450,7 @@ Plot the result
         subplot(211);ft_singleplotTFR(cfg, TFRmult_visc);
         subplot(212);ft_singleplotTFR(cfg, TFRmult_audc);
 
-{% include image src="/assets/img/workshop/madrid2019/fig5_singleTFRmult_absolute.png" width="800" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig5_singleTFRmult_absolute.png" width="800" %}
 
 *Figure: Time-frequency representations of power calculated using multitapers.*
 
@@ -558,7 +497,7 @@ Plot the result
         subplot(211);ft_singleplotTFR(cfg, TFRwave_visc);title('visual stim');
         subplot(212);ft_singleplotTFR(cfg, TFRwave_audc);title('auditory stim');
 
-{% include image src="/assets/img/workshop/madrid2019/fig6_singleTFRwave_absolute.png"
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig6_singleTFRwave_absolute.png"
 width="800" %}
 
 *Figure: Time-frequency representations of power calculated using Morlet
@@ -629,7 +568,7 @@ Plotting data
     xlabel('Frequency (Hz)');
     ylabel('absolute power (uV^2)');
 
-{% include image src="/assets/img/workshop/madrid2019/fig7_FFT1channel.png" width="800" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig7_FFT1channel.png" width="800" %}
 
 Note the differences in amplitude and frequency resolution for each
 window length. Can you explain why the amplitude of the PSD decrease
@@ -670,7 +609,7 @@ prolate spheroidal sequences (dpss; multitapers).
     ylabel('absolute power (uV^2)');
 
 
-{% include image src="/assets/img/workshop/madrid2019/fig8_taper1channel.png" width="800" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig8_taper1channel.png" width="800" %}
 
 Note the differences in amplitude and frequency resolution for each
 taper, specially the dpss. Can you explain why the amplitude of the PSD
