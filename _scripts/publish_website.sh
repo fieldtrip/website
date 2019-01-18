@@ -26,7 +26,7 @@ $GIT pull > /dev/null 2>&1
 $GIT commit -m "updated reference documentation" reference > /dev/null 2>&1
 # update the tags using a bash script
 _scripts/collect_tags.sh
-$GIT commit -m "updated tags" _data tag > /dev/null 2>&1
+$GIT commit -m "updated tags" _data/tag tag > /dev/null 2>&1
 # push the updates back to the repository
 $GIT push > /dev/null 2>&1
 
