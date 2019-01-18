@@ -79,11 +79,11 @@ fields
 	data =
 
 		hdr: [1x1 struct]
-	  label: {91x1 cell}
-	   time: {[1x90000 double]}
-	  trial: {[91x90000 double]}
-	fsample: 250
- sampleinfo: [1 90000]
+	      label: {91x1 cell}
+	       time: {[1x90000 double]}
+	      trial: {[91x90000 double]}
+	    fsample: 250
+         sampleinfo: [1 90000]
 		cfg: [1x1 struct]
 
 
@@ -115,7 +115,7 @@ the recording, can you find it? Use the identify button to see the channel
 name
 {% include markup/end %}
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig2_databrowser_badchan.png" width="400" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_cleaning/fig2_databrowser_badchan.png" width="800" %}
 
 We manually add to the artifact structure the names of those channels that
 we have identified as bad or missing throughout the entire recording.
@@ -178,12 +178,12 @@ the data structure after reading in with **[ft_preprocessing](/reference/ft_prep
 	data_bad =
 
 		hdr: [1x1 struct]
-	  trial: {[91x395 double]  [91x333 double]}
-	   time: {[1x395 double]  [1x333 double]}
-	   elec: [1x1 struct]
-	fsample: 250
-	  label: {91x1 cell}
- sampleinfo: [2x2 double]
+	      trial: {[91x395 double]  [91x333 double]}
+	       time: {[1x395 double]  [1x333 double]}
+	       elec: [1x1 struct]
+	    fsample: 250
+	      label: {91x1 cell}
+         sampleinfo: [2x2 double]
 		cfg: [1x1 struct]
 
 3.- identify the channels with the artifacts
