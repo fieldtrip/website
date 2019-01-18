@@ -14,7 +14,7 @@ permutation tests.
 The tutorial starts with a long background section that sketches the
 background of permutation tests. The next sections are more
 tutorial-like. They deal with the analysis of an actual EEG dataset
-ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat FIXME.
+[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/complete_resting_data).
 
 In a step-by-step fashion, this tutorial will show:
 
@@ -27,33 +27,33 @@ In a step-by-step fashion, this tutorial will show:
 4. Compute a **2x2 interaction**
 5. Compute a **correlation** between a variable and the EEG spectrum
 
-## Background
-
-## 1. Compute **within**-participant contrasts
+## Overview
 
 In this paragraph we describe permutation testing for PSD data obtained
-in [Chennu et al., 2016](https://doi.org/10.1371/journal.pcbi.1004669)
+in **[Chennu et al., 2016](https://doi.org/10.1371/journal.pcbi.1004669)**
 involving multiple participants that are each observed in multiple
 experimental conditions (sedative states). Every participant is observed
 during a period of 10 mins, where they received an amount of anesthetic
 drug aimed to produce a relaxed but still responsive behavioural state.
 For every subject, averages are computed over all segments of data
-belonging to each sedative state. Thus, for every subject, the data are
-summarized in an array of condition-specific averages of power obtained
-in the ["frequency resting state" tutorial](/example/freq_resting). The
-permutation test that will be described in the following informs us about
+belonging to each sedative state. (For more details on the dataset 
+[click here](/workshop/madrid2019/eeg_chennu)). Thus, for every subject, the data are
+summarized in an array of condition-specific averages of power. 
+The permutation test that will be described in the following informs us about
 the following null hypothesis: the probability distribution of the
 condition-specific power averages is identical for all sedative states
 (baseline vs moderate).
 
+## Preparing the dataset
+
 To test the difference between the average PSDs for baseline and moderate
-sedative states. To load the data structures containing the frequency data
-averages of all 20 participants are [available](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat)
+sedative states. The data structures containing the frequency data
+averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats.mat)
 
     % averages for each individual subject, for each condition
     load resting_freq.mat
 
-# Defining of regions of interest
+Defining of regions of interest
 
     occipital_ROI = {'E50','T5','E59','E60','Pz','E65','E66','E67','O1','E71','E72','Oz','E76','E77','O2','E84','E85','E90','E91','T6','E101','E51','E97'};
     frontal_ROI   = {'E3','E4','E5','E6','E7','Fp2','E10','Fz','E12','E13','E15','E16','E18','E19','E20','Fp1','E23','F3','E27','E28','E29','E30','E105','E106','E111','E112','E117','E118','E123','F4'};
@@ -72,9 +72,9 @@ get the numerical indices to compute averages
 
     elec = prepare_elec_chennu2016(base_sedation.label);
 
-Now we are going to normalize the PSD using the mean taken over a frequency range defined in **freq_norm**. In the [resting state frequency analysis](/workshop/madrid2019/tutorial_freq).
+Now we are going to normalize the PSD using the mean taken over a frequency range defined in **freq_norm**.
 
-We learnt different ways to normalize the PSD and here we can employed one of them
+In the **[resting state frequency analysis](/workshop/madrid2019/tutorial_freq)** we learnt different ways to normalize the PSD and here we can employ one of them
 
     freq_oi   = [8 15];   % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
@@ -143,9 +143,7 @@ collect the data to plot it using plotSpread
     title('between PSD Occip');
     set(h6{1},'LineWidth',1,'Marker', '.','Color','k','MarkerFaceColor','k')
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig1_spreadplot.png" width="600" %}
-
-## Plotting of results
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig1_spreadplot.png" width="800" %}
 
  Let us make topoplots and the PSD for each ROI for each sedative condition (similar to Fig 5A in Chennu et al.,)
 
@@ -210,7 +208,7 @@ here the figure cosmetics
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig2_topo_psd.png" width="600" %}
 
-# CONTRAST 1: within-participant BASELINE vs MODERATE sedation comparison
+## 1. Compute **within**-participant contrasts
 
 We now consider experiments involving multiple subjects that are each
 observed in multiple experimental conditions. Typically, every subject is
@@ -227,7 +225,7 @@ independent of the experimental conditions.
 
 Cluster-level permutation tests for PSD data are performed by the function
 **[ft_freqstatistics](/reference/ft_freqstatistics)**. This
-function takes as its input arguments a configuration structure(cfg) and
+function takes as its input arguments a configuration structure (cfg) and
 two or more data structures. These data structures must be produced by
 **[ft_freqanalysis](/reference/ft_freqanalysis)** or
 **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)**, which
@@ -241,10 +239,10 @@ comparing the data structures base_sedation and mode_sedation, you must call
 #### The configuration settings
 
 Some fields of the configuration (cfg), such as channel and latency, are
-not specific for
+not unique to
 **[ft_freqstatistics](/reference/ft_freqstatistics)**; their role
 is similar in other FieldTrip functions. We first concentrate on the
-fields that are specific for
+fields that are unique to
 **[ft_freqstatistics](/reference/ft_freqstatistics)**.
 
 
@@ -282,21 +280,21 @@ fields that are specific for
 
 # We now describe these options one-by-one.
 
--  With **cfg.method** = 'ft_statistics_montecarlo' we choose the Monte Carlo method
+-  With **cfg.method** = **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)** we choose the Monte Carlo method
 for calculating the significance probability. This significance
 probability is a Monte Carlo estimate of the p-value under the
 permutation distribution.
 
--  With **cfg.statistic** = 'ft_statfun_depsamplesT', we choose the
+-  With **cfg.statistic** = **[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**, we choose the
 dependent samples T-statistic to evaluate the effect (the difference
 between the baseline and the moderate condition) at the sample level. In
 cfg.statistic, many other test statistics can be specified. Which test
 statistic is appropriate depends on your research question and your
 experimental design. For instance, in a within-UO design (present one),
 one must use the dependent samples T-statistic
-('ft_statfun_depsamplesT'). And if you want to compare more than two
+(**[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**). And if you want to compare more than two
 experimental conditions, you should choose an F-statistic
-('ft_statfun_indepsamplesF' or 'ft_statfun_depsamplesFmultivariate'; you
+(**[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)** or **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)**; you
 can give a try in the Challenging exercise section below).
 
 -  We use **cfg.clusteralpha** to choose the critical value that will be
@@ -337,7 +335,7 @@ that were also selected. This minimum number is assigned to
 cfg.minnbchan. This number must be chosen independently of the data.
 
 -  **cfg.neighbours** is a structure that you need to have previously
-created using [ft_prepare_neighbours](/reference/ft_prepare_neighbours).
+created using **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**.
 
 -  We use **cfg.tail** to choose between a one-sided and a two-sided
 statistical test. Choosing cfg.tail = 0 affects the calculations in three
@@ -355,11 +353,16 @@ be compared with the positive critical value.
 permutation test (the probability of falsely rejecting the null
 hypothesis). The value of cfg.alpha determines the critical values with
 which we must compare the test statistic (i.e., the maximum and the
-minimum cluster-level statistic). *Note that if you want to run a
+minimum cluster-level statistic). 
+
+{% include markup/danger %}
+*Note that if you want to run a
 two-sided test, you have to split the critical alpha value by setting
 cfg.correcttail = 'alpha'; i.e. this sets cfg.alpha = 0.025,
-corresponding to a false alarm rate of 0.05 in a two-sided test.* The
-field cfg.alpha is not crucial. This is because the output of
+corresponding to a false alarm rate of 0.05 in a two-sided test.* 
+{% include markup/end %}
+
+The field cfg.alpha is not crucial. This is because the output of
 **[ft_timelockstatistics](/reference/ft_timelockstatistics)** (see
 further) contains a p-value for every cluster (calculated under the
 permutation distribution of the maximum/minimum cluster-level statistic).
@@ -421,12 +424,12 @@ above.
 
     stat1 = ft_freqstatistics(cfg, base_sedation, mode_sedation);
 
-#### The format of the output
+### The format of the output
 
 The output of **[ft_freqstatistics](/reference/ft_freqstatistics)** has
 separate fields for positive and negative clusters. For the positive
 clusters, the output is given in the following pair of fields:
-stat.posclusters and stat.posclusterslabelmat. The field
+stat1.posclusters and stat1.posclusterslabelmat. The field
 **stat.posclusters** is an array that provides the following information
 for every cluste
 
@@ -451,18 +454,18 @@ the number 3. As will be shown in the following, this information can be
 used to visualize the topography of the clusters.
 
 For the negative clusters, the output is given in the following pair of
-fields: stat.negclusters and stat.negclusterslabelmat. These fields
+fields: stat1.negclusters and stat1.negclusterslabelmat. These fields
 contain the same type of information as stat.posclusters and
-stat.posclusterslabelmat, but now for the negative clusters.
+stat1.posclusterslabelmat, but now for the negative clusters.
 
-By inspecting stat.posclusters and stat.negclusters, it can be seen that
+By inspecting stat1.posclusters and stat1.negclusters, it can be seen that
 only the first positive and the first negative cluster have a p-value
 less than the critical alpha-level of 0.025. This critical alpha-level
 corresponds to a false alarm rate of 0.05 in a two-sided test. By typing
-stat.posclusters(1) on the MATLAB command line, you should obtain the
+stat1.posclusters(1) on the MATLAB command line, you should obtain the
 following:
 
-    stat.posclusters(1)
+    stat1.posclusters(1)
 
     ans =
     prob: 0.2136
@@ -472,7 +475,7 @@ following:
 
 And by typing stat.negclusters(1), you should obtain the following:
 
-    stat.negclusters(1)
+    stat1.negclusters(1)
 
     ans =
     prob: 0.0020
@@ -490,7 +493,7 @@ cluster-level statistics is larger than stat.posclusters(k).clusterstat.
 
 ### Plotting the results
 
-get the 1st positive and negative cluster
+    get the 1st positive and negative cluster
     sigposmask = (stat1.posclusterslabelmat==1) & stat1.mask;
     signegmask = (stat1.negclusterslabelmat==1) & stat1.mask;
 
@@ -503,7 +506,8 @@ get the 1st positive and negative cluster
     mode_sedation_avg = ft_selectdata(cfg,mode_sedation);
     reco_sedation_avg = ft_selectdata(cfg,reco_sedation);
 
-choose the cluster you want to see: POSITIVE or NEGATIVE
+  choose the cluster you want to see: POSITIVE or NEGATIVE
+
     base_sedation_avg.mask = signegmask;
     mode_sedation_avg.mask = signegmask;
 
@@ -519,7 +523,7 @@ choose the cluster you want to see: POSITIVE or NEGATIVE
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig3_stats_with.png" width="600" %}
 
-# CONTRAST 2: between-participants RESPONSIVE vs DROWSY comparison
+## 2. Compute  **between**-participants contrasts
 
 In a between-participatn experiment, we analyze the data of multiple
 participants observed during different experimental conditions. By means
@@ -555,7 +559,7 @@ selection is orthogonal to the EEG contrast we will test.
     ylabel('Perceptual hit rate (%)');
     set(gca,'XTickLabel',{'baseline','','mild','','moderate','','recovery'});
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig4_behav_performance.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig4_behav_performance.png" width="300" %}
 
 copy the datasets and select the relevant subgroups
 
@@ -583,9 +587,9 @@ We now perform the permutation test using
 configuration settings for this analysis differ from the previous
 settings in several fields:
 
-1.  We have to select a different measure to evaluate the effect at sample level (in cfg.statistic)
-2.  The design matrix is different (i.c., it now contains only one line instead of two)
-3.  The so-called *unit variable* has to be defined.
+ 1.  We have to select a different measure to evaluate the effect at sample level (in cfg.statistic)
+ 2.  The design matrix is different (i.c., it now contains only one line instead of two)
+ 3.  The so-called *unit variable* has to be defined.
 
 The configuration looks as follow:
 
@@ -622,7 +626,7 @@ configuration for a within-trials experiment.
 
 -  Instead of an dependent samples T-statistic, we use the **independent
 samples T-statistic** to evaluate the effect at the sample level
-(cfg.statistic = 'ft_statfun_indepsamplesT'). This is because we are
+(cfg.statistic = **[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)**). This is because we are
 dealing with a between-UO instead of a within-UO design.
 
 -  The **design matrix** in a between-UO design is different from the
@@ -744,15 +748,15 @@ PSDs from occipital ROI
     xlabel('Frequency (Hz)');
     ylabel(cfg.parameter);
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig5_topo.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig5_topo.png" width="800" %}
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig5_psd.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig5_psd.png" width="800" %}
 
 
 # CHALLENGING EXERCISES!!!
-## CONTRAST 3: main effect of drug
+## 3. Compute a **multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
 
-Present Chennu et al., dataset is very rich and it will allow us to ask
+Present Chennu et al. dataset is very rich and it will allow us to ask
 more complex contrasts. Let's now consider not only two but the 4
 sedative states involving multiple subjects. Every subject is summarized in 4 arrays
 of condition-specific averages. The permutation test that is described in
@@ -801,11 +805,12 @@ outlier included
     cfg.ivar   = 1;
     cfg.uvar   = 2;
 
--  We use the **ft_statfun_depsamplesFmultivariate** to evaluate
+-  We use the **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)** to evaluate
 calculates the MANOVA dependent samples to test
 
 -  The **design matrix**, the **cfg.ivar** and the **cfg.uvar** will be
 the same as in the within-UO design
+
 
     stat3 = ft_freqstatistics(cfg, base_sedation, mild_sedation, mode_sedation, reco_sedation);
 
@@ -837,12 +842,12 @@ the same as in the within-UO design
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig6_manova.png" width="600" %}
 
-# CONTRAST 4: 2x2 INTERACTION
+## 4. Compute a **2x2 interaction**
 
 A very important contrast is the interaction. In this dataset we will
 compute the interaction using the within-participant factor SEDATION
 (baseline vs moderate) and the between-subject factor GROUP (responsive vs drowsy)
-Based on this ["FAQ"](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)
+Based on this **["FAQ: how can I test an interaction effect using cluster-based permutation tests"](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)**
 
 Let us prepare the data
 -   1. Compute the within-participant contrast for each group: baseline vs moderate
@@ -950,9 +955,9 @@ compute means
     set(gca,'XTickLabel',{'','','baseline','','moderate','',''});
     legend('Responsive','Drowsy','Location','northwest');
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig7_interaction.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig7_interaction.png" width="300" %}
 
-# CONTRAST 5: correlation between a covariate (drug dosage) and brain activity
+## 5. Compute a **correlation** between a variable and the EEG spectrum
 
 Here we will test for correlations between EEG data and quantitative
 variables, the drug dosage
@@ -977,7 +982,7 @@ independent and the neurobiological signal the role of dependent
 variable. In fact, accuracy is represented by a single number, whereas
 the neurobiological signal often has a spatial (the channels) and a
 spectral (the frequencies) dimension. More information can be found in
-this [frequently asked question](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables)
+this **[FAQ: how can I test for correlations between neuronal data and quantitative stimulus and behavioural variables](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables)**
 
 ### The Permutation Distribution Results From Breaking the Association Between Dependent and Independent Variable
 
@@ -1012,8 +1017,9 @@ independence.
 
 Now, it is time to prepare the data as follows:
 
--   1. Compute the within-participant contrast for each group: baseline vs moderate
--   2. Compute the between-participant contrast of the differences computed in step 1
+   1. Compute the within-participant contrast for each group: baseline vs moderate
+   2. Compute the between-participant contrast of the differences computed in step 1
+
 
     cfg = [];
     cfg.channel          = 'all';
@@ -1040,8 +1046,7 @@ Now, it is time to prepare the data as follows:
     subj = size(mode_sedation.powspctrm,1);
     design = zeros(1,subj);
 
-{'drug concentration' 'reaction time' 'correct responses'};
-
+    {'drug concentration' 'reaction time' 'correct responses'};
     design(1,:)  = covariates(:,3,1)./1000;
     cfg.design   = design;
     cfg.ivar     = 1;
@@ -1055,4 +1060,4 @@ Now, it is time to prepare the data as follows:
     cfg.elec       = elec;
     ft_clusterplot(cfg,stat5);
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig8_corr.png" width="600" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig8_corr.png" width="800" %}
