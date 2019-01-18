@@ -181,7 +181,7 @@ After these steps (which may take quite a while) you end up with a bunch of file
 
 #### 2. Source model: Creation of the mesh using HCP-workbench
 
-Just like with FreeSurfer, you have to first take care that HCP-workbench is installed. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP-workbench documentation to set up the software [link]https://www.humanconnectome.org/software/connectome-workbench. In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you'd need to get the standard_mesh_atlases directory from https://github.com/Washington-University/HCPpipelines, which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your filesystem. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.*.gii. Once all files are in place, we can run the fieldtrip/bin/ft_postfreesurferscript.sh from the linux command line, in the following way:
+Just like with FreeSurfer, you have to first take care that HCP-workbench is installed. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP-workbench documentation to set up the software [link]https://www.humanconnectome.org/software/connectome-workbench. In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you'd need to get the standard_mesh_atlases directory from [link]https://github.com/Washington-University/HCPpipelines, which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your filesystem. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.*.gii. Once all files are in place, we can run the fieldtrip/bin/ft_postfreesurferscript.sh from the linux command line, in the following way:
 
 	ft_postfreesurferscript.sh <OUTPUTDIRECTORY> <SUBJECTNAME> <TEMPLATEDIRECTORY>
 
@@ -219,7 +219,7 @@ We recommend the second strategy, but for completeness we also describe the firs
 
 ### Interpolation, followed by spatial normalization
 
-This is the simplest method, but not the most accurate. You start with a single subject source estimation on a 3D grid that is constructed individually for each subject. After computing the source estimate (i.e. the "functional data"), you interpolate the functional data onto the anatomical data using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**. Subsequently you spatially transform the anatomical and the functional data for each subject to the MNI template using **[ft_volumenormalise](/reference/ft_volumenormalise)**. Having done that for every subject, all data is expressed in MNI coordinates and can be statistically compared between conditions over all subjects.
+This is the simplest method, but not the most efficient. You start with a single subject source estimation on a 3D grid that is constructed individually for each subject (see above). After computing the source estimate (i.e. the "functional data"), you interpolate the functional data onto the anatomical data using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**. Subsequently you spatially transform the anatomical and the functional data for each subject to a template image using **[ft_volumenormalise](/reference/ft_volumenormalise)**. Having done that for every subject, and having used the same template image for each of the subjects, all grid points are expressed in normalized MNI coordinates and can be statistically compared between conditions over all subjects.
 
 ###  Subject-specific grids that are equivalent across subjects in normalized space
 
@@ -237,7 +237,7 @@ The idea is to use a template grid that is defined in normalized space, e.g. bas
 
 In the figures above, the spatial deformation of the individual subjects' brains relative to the template brain is exemplified. However, there may be other relevant differences between the coordinate system used for the individual subjects' anatomy and the MNI coordinate system. For example, in MEG-datasets it is custom to use a coordinate system that is defined relative to the three coils that are placed on the nose and the ears, with a specific orientation of the coordinate axes, whereas the MNI/SPM coordinate system is defined in a different way.
 
-First, you need to define a template grid, as mentioned above, and the easiest thing to do so is to load in a pre-existing template grid, like this:
+First, you need to define a template grid, as mentioned above, and the easiest thing to do so is to load in a pre-existing template grid. These template grids are in fieldtrip/template/sourcemodel, and are called standard_sourcemodel3dXmm, where X denotes the dipole spacing in mm. Below, we use a 10 mm grid. See [Template models for source reconstruction](/template/sourcemodel) for more information.
 
 ##### Load a template_grid, recommended
 
@@ -247,7 +247,7 @@ First, you need to define a template grid, as mentioned above, and the easiest t
 	template_grid = sourcemodel;
 	clear sourcemodel;
 
-As an alternative you can create a template grid yourself, like thi
+As an alternative you can create a template grid yourself, like this:
 
 ##### Make a template_grid, only if you really want to
 
@@ -286,6 +286,8 @@ As an alternative you can create a template grid yourself, like thi
 **fig 2: template grid and headmodel, top view**
 
 ##### Make the individual subjects' volume conduction model
+
+It is not required to create a volume conduction model of the head in order to create the source model. We do it here in order to use it later for visualization.
 
 	% read the single subject anatomical MRI, this should be aligned to MEG head coordinates
 	% if the MRI is not aligned, you should use ft_volumerealign
