@@ -14,7 +14,7 @@ permutation tests.
 The tutorial starts with a long background section that sketches the
 background of permutation tests. The next sections are more
 tutorial-like. They deal with the analysis of an actual EEG dataset
-[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/complete_resting_data).
+[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/).
 
 In a step-by-step fashion, this tutorial will show:
 
@@ -51,7 +51,7 @@ sedative states. The data structures containing the frequency data
 averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats.mat)
 
     % averages for each individual subject, for each condition
-    load resting_freq.mat
+    load freq_resting.mat
 
 Defining of regions of interest
 
@@ -791,8 +791,6 @@ data) of all ten subjects.
     cfg.numrandomization = 500;
     cfg.neighbours       = cfg_neigh.neighbours;
 
-outlier included
-
     subj = size(covariates,1);
     design = zeros(2,4*subj);
     design(1,1:subj)          = 1;
@@ -812,8 +810,9 @@ calculates the MANOVA dependent samples to test
 the same as in the within-UO design
 
 
-
+~~~~
     stat3 = ft_freqstatistics(cfg, base_sedation, mild_sedation, mode_sedation, reco_sedation);
+~~~~
 
 ### Plotting the results
 
