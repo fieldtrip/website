@@ -12,7 +12,7 @@ on a **[multi-sensory object categorization task](/workshop/madrid2019/eeg_langu
 experiment](/workshop/madrid2019/eeg_chennu)**. The idea behind this approach is to show
 the user, in a single tutorial, how to explore the spectral dimension of
 the EEG activity and to adapt the analysis pipeline to the nature of each
-experimental situation to get the most of the data. Before continuing with 
+experimental situation to get the most of the data. Before continuing with
 this tutorial read through the linked descriptions of the datasets.
 
 First of all, we'll provide a brief introduction on important concepts
@@ -180,7 +180,7 @@ adjusted in the cfg structure. For exampl
 
 {% include image
 src="/assets/img/workshop/madrid2019/tutorial_freq/fig1_multiplotTFR_absolute.png"
-width="800" %}
+width="600" %}
 
 *Figure: Time-frequency representations calculated using ft_freqanalysis.
 Plotting was done with ft_multiplotTFR)*
@@ -213,7 +213,7 @@ make a plot of a single channel use the function
 
 {% include image
 src="/assets/img/workshop/madrid2019/tutorial_freq/fig2_singleTFR_absolute.png"
-width="800" %}
+width="600" %}
 
 *Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.*
 
@@ -239,7 +239,7 @@ topography of the beta increase use the function
 
 {% include image
 src="/assets/img/workshop/madrid2019/tutorial_freq/fig3_topoTFR_absolute.png"
-width="400" %}
+width="300" %}
 
 *Figure: A topographic representation of the time-frequency
 representations (3 - 8 Hz, 0.1 - 0.3 s post stimulus) obtained using
@@ -252,7 +252,8 @@ baseline (hint: use cfg.zlim = [-0.7 -0.7] and use the cfg.baselinetype
 option)
 
 How are the responses different? Discuss the assumptions behind choosing
-a relative or absolute baseline {% include markup/end %}
+a relative or absolute baseline
+{% include markup/end %}
 
 ##### Exercise 2
 
@@ -308,10 +309,11 @@ To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**
         subplot(212);ft_singleplotTFR(cfg, TFRhann_audc7);title('auditory stim');
 
 {% include image
-src="/assets/img/workshop/madrid2019/tutorial_freq/fig4_singleTFR7_absolute.png" width="800" %}
+src="/assets/img/workshop/madrid2019/tutorial_freq/fig4_singleTFR7_absolute.png" width="600" %}
 
 *Figure: A time-frequency representation of channel 1 obtained using
 ft_singleplotTFR*
+
 
 If you see artifacts in your figure, see [this
 FAQ](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
@@ -332,6 +334,7 @@ time frequency points for your time window of interest.
 If you would like to learn more about plotting of time-frequency
 representations,  please see the [#Visualization](#Visualization)
 section.
+
 
 ##### Exercise 3
 
@@ -420,7 +423,7 @@ the frequencies of interes
 
 {% include image
 src="/assets/img/workshop/madrid2019/tutorial_freq/figure1ab.png"
-width="800" %}
+width="600" %}
 
 *Figure: a) The characteristics of the TFRs settings using multitapers in
 terms of time and frequency resolution of the settings applied in the
@@ -450,7 +453,7 @@ Plot the result
         subplot(211);ft_singleplotTFR(cfg, TFRmult_visc);
         subplot(212);ft_singleplotTFR(cfg, TFRmult_audc);
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig5_singleTFRmult_absolute.png" width="800" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig5_singleTFRmult_absolute.png" width="600" %}
 
 *Figure: Time-frequency representations of power calculated using multitapers.*
 
@@ -498,7 +501,7 @@ Plot the result
         subplot(212);ft_singleplotTFR(cfg, TFRwave_audc);title('auditory stim');
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig6_singleTFRwave_absolute.png"
-width="800" %}
+width="600" %}
 
 *Figure: Time-frequency representations of power calculated using Morlet
 wavelets.*
@@ -568,7 +571,7 @@ Plotting data
     xlabel('Frequency (Hz)');
     ylabel('absolute power (uV^2)');
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig7_FFT1channel.png" width="800" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig7_FFT1channel.png" width="600" %}
 
 Note the differences in amplitude and frequency resolution for each
 window length. Can you explain why the amplitude of the PSD decrease
@@ -609,7 +612,7 @@ prolate spheroidal sequences (dpss; multitapers).
     ylabel('absolute power (uV^2)');
 
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig8_taper1channel.png" width="800" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig8_taper1channel.png" width="600" %}
 
 Note the differences in amplitude and frequency resolution for each
 taper, specially the dpss. Can you explain why the amplitude of the PSD

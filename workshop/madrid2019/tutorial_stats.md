@@ -36,9 +36,9 @@ experimental conditions (sedative states). Every participant is observed
 during a period of 10 mins, where they received an amount of anesthetic
 drug aimed to produce a relaxed but still responsive behavioural state.
 For every subject, averages are computed over all segments of data
-belonging to each sedative state. (For more details on the dataset 
+belonging to each sedative state. (For more details on the dataset
 [click here](/workshop/madrid2019/eeg_chennu)). Thus, for every subject, the data are
-summarized in an array of condition-specific averages of power. 
+summarized in an array of condition-specific averages of power.
 The permutation test that will be described in the following informs us about
 the following null hypothesis: the probability distribution of the
 condition-specific power averages is identical for all sedative states
@@ -353,13 +353,13 @@ be compared with the positive critical value.
 permutation test (the probability of falsely rejecting the null
 hypothesis). The value of cfg.alpha determines the critical values with
 which we must compare the test statistic (i.e., the maximum and the
-minimum cluster-level statistic). 
+minimum cluster-level statistic).
 
 {% include markup/danger %}
 *Note that if you want to run a
 two-sided test, you have to split the critical alpha value by setting
 cfg.correcttail = 'alpha'; i.e. this sets cfg.alpha = 0.025,
-corresponding to a false alarm rate of 0.05 in a two-sided test.* 
+corresponding to a false alarm rate of 0.05 in a two-sided test.*
 {% include markup/end %}
 
 The field cfg.alpha is not crucial. This is because the output of
@@ -812,6 +812,7 @@ calculates the MANOVA dependent samples to test
 the same as in the within-UO design
 
 
+
     stat3 = ft_freqstatistics(cfg, base_sedation, mild_sedation, mode_sedation, reco_sedation);
 
 ### Plotting the results
@@ -955,7 +956,7 @@ compute means
     set(gca,'XTickLabel',{'','','baseline','','moderate','',''});
     legend('Responsive','Drowsy','Location','northwest');
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig7_interaction.png" width="300" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig7_interaction.png" width="600" %}
 
 ## 5. Compute a **correlation** between a variable and the EEG spectrum
 

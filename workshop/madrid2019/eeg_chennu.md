@@ -7,7 +7,7 @@ tags: [eeg-chennu]
 
 The EEG resting state dataset was acquired by Srivas Chennu and
 collaborators in a study investigating reliable brain measures to track the loss of reportable
-consciousness during propofol sedation. You can find full details in their 
+consciousness during propofol sedation. You can find full details in their
 [publication](https://doi.org/10.1371/journal.pcbi.1004669). They also made the entire dataset
 available under the [CC BY 2.0 UK](https://creativecommons.org/licenses/by/2.0/uk/) license from the
 [University of Cambridge Data Repository](https://www.repository.cam.ac.uk/handle/1810/252736).
@@ -15,7 +15,7 @@ available under the [CC BY 2.0 UK](https://creativecommons.org/licenses/by/2.0/u
 The experimental design is displayed in the figure below.
 
 {% include image
-src="/assets/img/workshop/madrid2019/datasets/chennu_fig1.PNG" width="800" %}
+src="/assets/img/workshop/madrid2019/datasets/chennu_fig1.PNG" width="600" %}
 
 *Figure 1. Experimental manipulation and measurement of behaviour and
 propofol concentration in blood plasma.*
