@@ -1,12 +1,13 @@
 ---
 title: Time-frequency and spectral analysis
-tags: [tutorial, eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
+tags: [madrid2019, tutorial, eeg, brainvision, timelock, eeg-language]
 ---
+# Frequency analysis of task and resting state EEG
 
-# General introduction
+## General introduction
 
 In this tutorial you can find information about how to analyze the
-spectral content of in two different EEG datasets. The datasets consist
+spectral content in two different EEG datasets. The datasets consist
 on a multi-sensory object categorization task and a resting state
 experiment (description below). The idea behind this approach is to show
 the user, in a single tutorial, how to explore the spectral dimension of
@@ -25,9 +26,9 @@ continuous data into shorter epochs and how to perform spectral analysis
 varying the window length and using different tapers. In the two datasets
 it'll be shown how to visualize the results.
 
-# Description of the datasets
+## Description of the datasets
 
-## EEG task data: Object categorization task.
+### EEG task data: Object categorization task.
 
 Here, we will work on a [EEG dataset](https://doi.org/10.1371/journal.pone.0014465)
 that was acquired by Irina Siminova in a study investigating semantic
@@ -54,7 +55,7 @@ is connected to an electrode placed below the left eye. Hence we have 62
 channels of interest: 60 from the head + eogh + eogv. For infomation
 about this dataset can found [here](workshop/madrid2019/eeg_language)
 
-## EEG resting state.
+### EEG resting state.
 
 The EEG resting state dataset was acquired by Srivas Chennu and
 collaborators in a [study](https://doi.org/10.1371/journal.pcbi.1004669)
@@ -134,16 +135,16 @@ also a wikipedia site about multitapers, to take a look at it click
 To calculate the time-frequency analysis for the example dataset we will
 perform the following steps:
 
-  - Read the data into MATLAB using
-****[ft_definetrial](/reference/ft_definetrial)**** and
-****[ft_preprocessing](/reference/ft_preprocessing)****
-  - Compute the power values for each frequency bin and each time bin
-using the function ****[ft_freqanalysis](/reference/ft_freqanalysis)****
-  - Visualize the results. This can be done by creating time-frequency
-plots for one (****[ft_singleplotTFR](/reference/ft_singleplotTFR)****) or
-several channels (****[ft_multiplotTFR](/reference/ft_multiplotTFR)****), or
+   * Read the data into MATLAB using
+**[ft_definetrial](/reference/ft_definetrial)** and
+**[ft_preprocessing](/reference/ft_preprocessing)**
+   * Compute the power values for each frequency bin and each time bin
+using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
+   * Visualize the results. This can be done by creating time-frequency
+plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or
+several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or
 by creating a topographic plot for a specified time- and frequency
-interval (****[ft_topoplotTFR](/reference/ft_topoplotTFR)****).
+interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
 
 {% include image
 src="/assets/img/tutorial/timefrequencyanalysis/tfr_pipelinenew.png"
@@ -157,7 +158,7 @@ analysis I., II. ... and so on. If you are interested in a detailed
 description about how to visualize the results, look at the Visualization
 part.
 
-## EEG time-frequency on task data
+## Part I: EEG time-frequency on task data
 
 ### Time-frequency analysis I: Hanning taper, fixed window length
 
@@ -170,9 +171,8 @@ window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning
 that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc.  An integer number
 of cycles must fit in the time window.
 
-****[Ft_freqanalysis](/reference/ft_freqanalysis)**** requires preprocessed
-data (see above), which is available from
-ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_task.mat.
+**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires preprocessed
+data (see above), which is available from the [FTP server](ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_task.mat).
 
         load data_task.mat
 
@@ -229,7 +229,7 @@ channels), 3) topographical 2-D map of the power changes in a specified
 time-frequency interval.
 
 To plot the TFRs from all the sensors use the function
-****[ft_multiplotTFR](/reference/ft_multiplotTFR)****. Settings can be
+**[ft_multiplotTFR](/reference/ft_multiplotTFR)**. Settings can be
 adjusted in the cfg structure. For exampl
 
         cfg = [];
@@ -249,12 +249,12 @@ Plotting was done with ft_multiplotTFR)*
 Note that by using the options cfg.baseline and cfg.baselinetype when
 calling plotting functions, baseline correction can be applied to the
 data. Baseline correction can also be applied directly by calling
-****[ft_freqbaseline](/reference/ft_freqbaseline)****. You can combine the
+**[ft_freqbaseline](/reference/ft_freqbaseline)**. You can combine the
 various visualisation options/functions interactively to explore your
 data. Currently, this is the default ploting behavior because the
 configuration option cfg.interactive='yes' is activated unless you
 explicitly select cfg.interactive='no' before calling
-****[ft_multiplotTFR](/reference/ft_multiplotTFR)**** to deactivate it. See
+**[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See
 also the [plotting tutorial](/tutorial/plotting) for more details.
 
 An interesting effect seems to be present in the TFR of sensor 1. To
@@ -276,7 +276,7 @@ make a plot of a single channel use the function
 src="/assets/img/workshop/madrid2019/fig2_singleTFR_absolute.png"
 width="800" %}
 
-*Figure: The time-frequency representation with respect to single sensor obtained using [ft_singleplotTFR](/reference/ft_singleplotTFR)*
+*Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.*
 
 If you see artifacts in your figure, see [this
 question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
@@ -398,7 +398,7 @@ section.
 
 {% include markup/exercise %} Adjust the length of the time-window and
 thereby degree of smoothing. Use
-****[ft_singleplotTFR](/reference/ft_singleplotTFR)**** to show the results.
+**[ft_singleplotTFR](/reference/ft_singleplotTFR)** to show the results.
 Discuss the consequences of changing these setting.
 
 3 cycles per time window:
@@ -441,10 +441,10 @@ multitapers are used to analyze low frequencies because there are no
 effects in the gamma band in this dataset).
 
 Time-frequency analysis based on multitapers can be performed by the
-function ****[ft_freqanalysis](/reference/ft_freqanalysis)****. The function
+function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function
 uses a sliding time window for which the power is calculated for a given
 frequency. Prior to calculating the power by discrete Fourier
-transformations the data are �tapered�. Several orthogonal tapers might
+transformations the data are "tapered". Several orthogonal tapers might
 be used for each time window. The power is calculated for each tapered
 data segment and then combined. In the example below we apply a time
 window which gradually becomes shorter for higher frequencies (similar to
@@ -456,16 +456,16 @@ steps of 2 Hz. The step size could be decreased at the expense of
 computation time and redundancy.
  -  cfg.toi, the time-interval of interest. This vector determines the
 center times for the time windows for which the power values should be
-calculated. The setting cfg.toi = -1:0.05:1 results in power values
+calculated. The setting `cfg.toi = -1:0.05:1` results in power values
 from -1 to 1 s in steps of 50 ms. A finer time resolution will give
 redundant information and longer computation times, but a smoother
 graphical output.
  -  cfg.t_ftimwin is the length of the sliding time-window in seconds (=
-tw). We have chosen cfg.t_ftimwin = 5./cfg.foi, i.e. 5 cycles per
+tw). We have chosen `cfg.t_ftimwin = 5./cfg.foi`, i.e. 5 cycles per
 time-window. When choosing this parameter it is important that a full
 number of cycles fit within the time-window for a given frequency.
  -  cfg.tapsmofrq determines the width of frequency smoothing in Hz (=
-fw). We have chosen cfg.tapsmofrq = cfg.foi*0.4, i.e. the smoothing will
+fw). We have chosen `cfg.tapsmofrq = cfg.foi*0.4`, i.e. the smoothing will
 increase with frequency. Specifying larger values will result in more
 frequency smoothing. For less smoothing you can specify smaller values,
 however, the following relation (determined by the Shannon number) must
@@ -564,15 +564,14 @@ width="800" %}
 *Figure: Time-frequency representations of power calculated using Morlet
 wavelets.*
 
-{% include markup/info %} ****Exercise 4****: Adjust cfg.width and see how
+{% include markup/info %} ***Exercise 4***: Adjust cfg.width and see how
 the TFRs change. {% include markup/end %}
 
 If you would like to learn more about plotting of time-frequency
 representations, please see [#Visualization](#Visualization).
 
 
-
-## EEG resting state data: Spectral analysis
+## Part II: Spectral analysis on EEG resting state data
 
 In this tutorial we will be using an EEG data set from the Chennu et al.,
 dataset, specifically the baseline experimental session from participant 22. At this point of the tutorial, you should know all the tricks behind
@@ -585,11 +584,11 @@ in the spectral domain so we'll simplify things.
 
 ### Effect of windown length into frequency and power estimates
 
-We loaded the dataset of participant 22 (baseline sedation session) and we
-are we'll use ****[ft_redefinetrial](/reference/ft_redefinetrial)**** to cut
+We loaded the dataset of participant 22 (baseline sedation session) and
+we'll use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut
 these trials out of the continuous data segment. Specifically, we'll cut
 the very long time series into non-overlapping trials of various lengths
-(1 sec, 2 secs and 4 secs) and we will compute the ****power spectrum**** of
+(1 sec, 2 secs and 4 secs) and we will compute the ***power spectrum*** of
 each single trials and we'll average them.
 
 
@@ -604,7 +603,7 @@ each single trials and we'll average them.
     cfg1.length  = 4;
     base_rpt4 = ft_redefinetrial(cfg1,base);
 
-Now we move on to using ****[ft_freqanalysis](/reference/ft_freqanalysis)****
+Now we move on to using **[ft_freqanalysis](/reference/ft_freqanalysis)**
 to compute our PSD using a boxcar window
 
     cfg2 = [];
@@ -642,7 +641,7 @@ in FFT
 Finally, we're going to learn what different tapers do on this resting
 state dataset. To enhance the effects of the tapers, we will use the
 epochs chopped in windows of 4 seconds because is the condition with the
-highest frequency resolution. So let's run again ****[ft_freqanalysis](/reference/ft_freqanalysis)****
+highest frequency resolution. So let's run again **[ft_freqanalysis](/reference/ft_freqanalysis)**
 but this time using different tapers: boxcar, hanning and discrete
 prolate spheroidal sequences (dpss; multitapers).
 
@@ -681,7 +680,7 @@ data is the same across tapers?
 Finally, we will apply what we just learn to study of propofol modulated
 the power spectrum.
 
-****Question****: Which set of parameters are more sensitive to detect the
+***Question***: Which set of parameters are more sensitive to detect the
 spectrum shift (increase of low beta power)?
 
 
