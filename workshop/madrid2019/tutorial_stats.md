@@ -14,7 +14,7 @@ permutation tests.
 The tutorial starts with a long background section that sketches the
 background of permutation tests. The next sections are more
 tutorial-like. They deal with the analysis of an actual EEG dataset
-ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat FIXME.
+[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/complete_resting_data).
 
 In a step-by-step fashion, this tutorial will show:
 
@@ -38,15 +38,17 @@ experimental conditions (sedative states). Every participant is observed
 during a period of 10 mins, where they received an amount of anesthetic
 drug aimed to produce a relaxed but still responsive behavioural state.
 For every subject, averages are computed over all segments of data
-belonging to each sedative state. Thus, for every subject, the data are
-summarized in an array of condition-specific averages of power. The permutation test that will be described in the following informs us about
+belonging to each sedative state. (For more details on the dataset 
+[click here](/workshop/madrid2019/eeg_chennu)). Thus, for every subject, the data are
+summarized in an array of condition-specific averages of power. 
+The permutation test that will be described in the following informs us about
 the following null hypothesis: the probability distribution of the
 condition-specific power averages is identical for all sedative states
 (baseline vs moderate).
 
 To test the difference between the average PSDs for baseline and moderate
-sedative states. To load the data structures containing the frequency data
-averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/freq_resting.mat)
+sedative states. The data structures containing the frequency data
+averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats.mat)
 
     % averages for each individual subject, for each condition
     load resting_freq.mat
