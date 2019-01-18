@@ -64,7 +64,7 @@ but it definitely enhances the interpretability of the data when
 using **[ft_databrowser](/reference/ft_databrowser)** (i.e. topoplots)
 
     cfg = [];
-    cfg.dataset    = [subj '_task-rest_run-3_eeg.vhdr'];
+    cfg.dataset    = ['single_subject_resting/' subj '_task-rest_run-3_eeg.vhdr'];
     cfg.channel    = 'all';
     cfg.demean     = 'yes';
     cfg.detrend    = 'no';
