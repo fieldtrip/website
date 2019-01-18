@@ -112,6 +112,7 @@ not required when working with Biosemi or other bipolar data.
 {% include image src="/assets/img/tutorial/preprocessing_erp/example_eog.png" width="200" %}
 
 EOGV channel
+
     cfg              = [];
     cfg.channel      = {'50' '64'};
     cfg.reref        = 'yes';
@@ -121,12 +122,14 @@ EOGV channel
 
 
 only keep one channel, and rename to eogv
+
     cfg              = [];
     cfg.channel      = '64';
     eogv             = ft_selectdata(cfg, eogv);
     eogv.label       = {'eogv'};
 
 EOGH channel
+
     cfg              = [];
     cfg.channel      = {'51' '60'};
     cfg.reref        = 'yes';
@@ -135,6 +138,7 @@ EOGH channel
     eogh             = ft_preprocessing(cfg, data);
 
 only keep one channel, and rename to eogh
+
     cfg              = [];
     cfg.channel      = '60';
     eogh             = ft_selectdata(cfg, eogh);
@@ -145,11 +149,13 @@ and add the bipolar-referenced EOGv and EOGh channels that we have just
 created.
 
 only keep all non-EOG channels
+
     cfg         = [];
     cfg.channel = setdiff(1:60, [50, 51, 60, 64]);% you can use either strings or numbers as selection
     data        = ft_selectdata(cfg, data);
 
 append the EOGH and EOGV channel to the 60 selected EEG channels
+
     cfg  = [];
     data = ft_appenddata(cfg, data, eogv, eogh);
 
@@ -200,7 +206,7 @@ blinks or cap movement.
     cfg.viewmode = 'vertical';
     artfct       = ft_databrowser(cfg,data)
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_databrowser.png" width="400" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_databrowser.png" width="800" %}
 
 
 {% include markup/info %}
