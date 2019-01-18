@@ -36,8 +36,9 @@ In this tutorial the following steps will be taken:
    * Computing trial averages with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
    * Plotting ERPs with **[ft_topoplotER](/reference/ft_topoplotER)**
 
-## Reading & Preprocessing
+## Preprocessing
 
+### Reading trials
 Let's first look at the different trigger codes present in the dataset
 
     cfg = [];
@@ -94,7 +95,7 @@ For consistency we will rename the channel with the name 53 located at the right
     chanindx = find(strcmp(data.label, '53'));
     data.label{chanindx} = 'M2';
 
-## Extracting EOG channel
+### Extracting EOG channel
 
 We now continue with re-referencing to extract the bipolar EOG signal from the data. 
 For the vertical EOG we will use channel 50 and channel 64.
@@ -160,19 +161,19 @@ at the data as you read it into memory
 	data =
 
 		hdr: [1x1 struct]
-	  label: {1x65 cell}
-	   time: {1x400 cell}
-	  trial: {1x400 cell}
-	fsample: 500
- sampleinfo: [400x2 double]
-  trialinfo: [400x1 double]
+	      label: {1x65 cell}
+	       time: {1x400 cell}
+	      trial: {1x400 cell}
+ 	    fsample: 500
+ 	 sampleinfo: [400x2 double]
+  	  trialinfo: [400x1 double]
 		cfg: [1x1 struct]
 
 and note that, if you wanted to, you could plot a single trial with default Matlab function
 
     plot(data.time{1}, data.trial{1});
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/fig1_plottrl.png" width="800" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_plottrl.png" width="800" %}
 
 However, a better way to quickly visualize and scroll through your data
 is to use **[ft_databrowser](/reference/ft_databrowser)**. There you can also easily mark artifacts.
@@ -303,7 +304,9 @@ continue to mark trials or data segments as artifacts within
 you can then reject those artifacts using **[ft_rejectartifact](/reference/ft_rejectartifact)**. You will see
 an example of this in the [resting-state cleaning EEG tutorial](/workshop/madrid2019/tutorial_cleaning)
 
-## Channel layout
+## Computing and plotting the ERP's
+
+### Channel layout
 For topoplotting and sometimes for analysis it is necessary to know how 
 the electrodes were positioned on the scalp. In contrast to the sensor 
 arrangement from a given MEG manufacturer, the topographical arrangement 
@@ -323,7 +326,7 @@ to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout
     cfg.layout = 'easycapM10.mat';
     ft_layoutplot(cfg)
 
-## Computing and plotting the ERP's
+### Trial-average
 
 We will now compute the ERP's for two conditions: auditory and visual stimulus presentation.
 For each trial, the condition information is kept with the data structure in data.trialinfo.
