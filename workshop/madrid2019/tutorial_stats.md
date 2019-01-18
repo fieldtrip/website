@@ -14,7 +14,7 @@ permutation tests.
 The tutorial starts with a long background section that sketches the
 background of permutation tests. The next sections are more
 tutorial-like. They deal with the analysis of an actual EEG dataset
-[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/complete_resting_data).
+[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/).
 
 In a step-by-step fashion, this tutorial will show:
 
