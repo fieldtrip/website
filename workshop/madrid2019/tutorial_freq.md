@@ -258,8 +258,8 @@ a relative or absolute baseline
 ##### Exercise 2
 
 {% include markup/info %} Plot the TFR of sensor 1. How do you
-account for the increased power at ~200 ms in the visual vs auditory contidion (hint: compare to ERPs)? {%
-include markup/end %}
+account for the increased power at ~200 ms in the visual vs auditory contidion (hint: compare to ERPs)?
+{% include markup/end %}
 
 ### Time-frequency analysis II: Hanning taper, frequency dependent window length
 
