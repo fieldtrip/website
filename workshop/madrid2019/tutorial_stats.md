@@ -15,14 +15,14 @@ We will sketch the background of permutation tests and apply it to different exp
 
 In a step-by-step fashion, this tutorial will show:
 
-1. Compute **within**-participant contrasts
-2. Compute **between**-participant contrasts
+  1. Compute **within**-participant contrasts
+  2. Compute **between**-participant contrasts
 
- Toward the end of the tutorial there are some more challenging exercises:
+Toward the end of the tutorial there are some more challenging exercises:
 
-3. Compute a **multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
-4. Compute a **2x2 interaction**
-5. Compute a **correlation** between a variable and the EEG spectrum
+  3. Compute a **multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
+  4. Compute a **2x2 interaction**
+  5. Compute a **correlation** between a variable and the EEG spectrum
 
 ## Overview
 

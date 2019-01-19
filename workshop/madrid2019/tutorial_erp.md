@@ -31,11 +31,12 @@ or according to your own criteria when you write your own trial function.
 ## Procedure
 
 In this tutorial the following steps will be taken:
-   * Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-   * Extract bipolar EOG channels with **[ft_preprocessing](/reference/ft_preprocessing)** and get rid of reference channels with **[ft_selectdata](/reference/ft_selectdata)**. Combine EOG and data channels with **[ft_appenddata](/reference/ft_appenddata)**.
-   * Visual artifact rejection with **[ft_databrowser](/reference/ft_databrowser)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**.
-   * Computing trial averages with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
-   * Plotting ERPs with **[ft_topoplotER](/reference/ft_topoplotER)**
+
+- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Extract bipolar EOG channels with **[ft_preprocessing](/reference/ft_preprocessing)** and get rid of reference channels with **[ft_selectdata](/reference/ft_selectdata)**. Combine EOG and data channels with **[ft_appenddata](/reference/ft_appenddata)**.
+- Visual artifact rejection with **[ft_databrowser](/reference/ft_databrowser)** and **[ft_rejectvisual](/reference/ft_rejectvisual)**.
+- Computing trial averages with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
+- Plotting ERPs with **[ft_topoplotER](/reference/ft_topoplotER)**
 
 ## Preprocessing
 
