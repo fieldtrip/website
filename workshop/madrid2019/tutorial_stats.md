@@ -11,10 +11,7 @@ The objective of this tutorial is to give an introduction to the
 statistical analysis of resting state EEG data by means of cluster-based
 permutation tests.
 
-The tutorial starts with a long background section that sketches the
-background of permutation tests. The next sections are more
-tutorial-like. They deal with the analysis of an actual EEG dataset
-[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/).
+We will sketch the background of permutation tests and apply it to different experimental questions. In this tutorial we will continue with the Chennu et al. dataset. We will use data that has already been preprocessed, but if you are interested in the raw data from all subjects, you can download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
 
 In a step-by-step fashion, this tutorial will show:
 
@@ -31,8 +28,8 @@ In a step-by-step fashion, this tutorial will show:
 
 In this paragraph we describe permutation testing for PSD data obtained
 in **[Chennu et al., 2016](https://doi.org/10.1371/journal.pcbi.1004669)**
-involving multiple participants that are each observed in multiple
-experimental conditions (sedative states). Every participant is observed
+involving multiple participants. EEG was recorded in multiple
+experimental conditions, i.e. levels of sedation. Every participant is observed
 during a period of 10 mins, where they received an amount of anesthetic
 drug aimed to produce a relaxed but still responsive behavioural state.
 For every subject, averages are computed over all segments of data
@@ -46,9 +43,9 @@ condition-specific power averages is identical for all sedative states
 
 ## Preparing the dataset
 
-To test the difference between the average PSDs for baseline and moderate
-sedative states. The data structures containing the frequency data
-averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats.mat)
+To test the difference between the baseline and moderate
+sedative states, we use data for all subjects that has been preprocessed and for which the PSD has been computed.
+You can download [freq_resting.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats/freq_resting.mat) from our FTP server. The MATLAB file contains four data structures, one for each sedation level.
 
     % averages for each individual subject, for each condition
     load freq_resting.mat
@@ -78,7 +75,7 @@ In the **[resting state frequency analysis](/workshop/madrid2019/tutorial_freq)*
 
     freq_oi   = [8 15];   % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
-    foi_norm = nearest(base_sedation.freq,freq_norm);
+    foi_norm  = nearest(base_sedation.freq,freq_norm);
 
     common_denominator = mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3);
     base_sedation.powspctrm_b = bsxfun(@rdivide, base_sedation.powspctrm, common_denominator); %repmat(mean(base_sedation.powspctrm,3),1,1,90);

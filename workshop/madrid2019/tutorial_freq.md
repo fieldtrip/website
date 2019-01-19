@@ -62,11 +62,11 @@ the time and frequency smoothing remains fixed. (b) For time windows that
 decrease with frequency, the temporal smoothing decreases and the
 frequency smoothing increases.*
 
-If you want to know more about tapers/ window functions you can have a
-look at this [wikipedia
-site](http://en.wikipedia.org/wiki/Window_function). Note that Hann
+If you want to know more about *tapers* or *window functions* you can have a
+look at this [Wikipedia
+page](http://en.wikipedia.org/wiki/Window_function). Note that Hann
 window is another name for Hanning window used in this tutorial. There is
-also a wikipedia site about multitapers, to take a look at it click
+also a Wikipedia page about multitapers, to take a look at it click
 [here](http://en.wikipedia.org/wiki/Multitaper).
 
 ## Procedure
@@ -110,8 +110,8 @@ window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning
 that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc.  An integer number
 of cycles must fit in the time window.
 
-**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires preprocessed
-data (see above), which is available from the [FTP server](ftp:/ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_task.mat).
+We will skip the preprocessing and start directly with the preprocessed
+data. You can download [data_task.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_task.mat) from our FTP server.
 
         load data_task.mat
 
@@ -515,16 +515,19 @@ representations, please see [#Visualization](#Visualization).
 
 ## Part II: Spectral analysis on EEG resting state data
 
-In this tutorial we will be using an EEG data set from the Chennu et al.,
-dataset, specifically the baseline experimental session from participant 22. At this point of the tutorial, you should know all the tricks behind
-the Time-Frequency. To analyze the resting state data, we'll focus only
-in the spectral domain so we'll simplify things.
+In this tutorial we will be using an single subject from the Chennu et al.
+dataset, specifically the baseline session from participant 22. We assume
+that the power spectrum is stationary (i.e. constant) over time, hence for
+the resting state data we will only look at the spectrum in the frequency
+domain, not how it changes over times.
 
+We will skip the preprocessing and start directly with the preprocessed
+data. You can download [data_rest.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_rest.mat) from our FTP server.
 
     clear all, close all, clc
     load data_rest.mat
 
-### Effect of windown length into frequency and power estimates
+### Effect of the window length on frequency and power estimates
 
 We loaded the dataset of participant 22 (baseline sedation session) and
 we'll use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut
