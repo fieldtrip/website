@@ -458,7 +458,7 @@ Plot the result
 *Figure: Time-frequency representations of power calculated using multitapers.*
 
 If you would like to learn more about plotting of time-frequency
-representations, please see the [#Visualization](#Visualization) section.
+representations, please see the [visualization](#Visualization) section.
 
 ### Time-frequency analysis IV: Morlet wavelets
 
@@ -506,8 +506,11 @@ width="600" %}
 *Figure: Time-frequency representations of power calculated using Morlet
 wavelets.*
 
-{% include markup/info %} ***Exercise 4***: Adjust cfg.width and see how
-the TFRs change. {% include markup/end %}
+
+##### Exercise 4
+{% include markup/info %}
+Adjust `cfg.width` and see how the TFRs change.
+{% include markup/end %}
 
 If you would like to learn more about plotting of time-frequency
 representations, please see [#Visualization](#Visualization).
