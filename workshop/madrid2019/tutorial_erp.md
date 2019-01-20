@@ -297,7 +297,7 @@ identify trials that have eye blinks or eye movements.
 
     cfg          = [];
     cfg.method   = 'channel';
-    cfg.channel  = [bad_chan,'eogv','eogh'];
+    cfg.channel  = {bad_chan{:},'eogv','eogh'};
     data_clean   = ft_rejectvisual(cfg, data);
 
 Since we removed some bad trials, the cleaned data will have fewer trials than
