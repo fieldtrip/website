@@ -181,8 +181,8 @@ noisy segments.
 Following de Cheveigne & Arzounian (2018) third step we are going to *detect and interpolate temporally-local channel-specific glitches,*
 
 {% include markup/danger %}
-Note we deliberately skip step *2. apply robust detrending to each channel,* for later because it is necessary to find first the pieces of data with artifacts and to exclude them. De Cheveigne & Arzounian detrending algorith
-has the possibility to exclude outliers so this is the main reason for us to change the order (check their *nt_detrend.m* function). 
+Note we deliberately skip step *2. apply robust detrending to each channel* for later because it is necessary to find first the pieces of data with artifacts and to exclude them. De Cheveigne & Arzounian detrending algorith
+has the possibility to exclude outliers so this is the main reason for us to change the order (check their *nt_detrend.m* function).
 {% include markup/end %}
  
  We can make a selection of the segments in which one of the channels was bad.
@@ -221,7 +221,7 @@ Subsequently we identify the channels with the artifacts using the algorithm by 
 The following (rather complicated) piece of code is a mix of regular MATLAB code
 with FieldTrip functions. If it is useful, we might add it to one of the
 FieldTrip functions later to make it easier to use.
-{}% include markup/end %}
+{% include markup/end %}
 
     % The parameters to detect artifacts are:
     proportion  = 0.4; % criterion proportion of bad samples
