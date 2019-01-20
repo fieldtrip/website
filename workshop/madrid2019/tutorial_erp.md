@@ -21,7 +21,7 @@ segments, only read those segments from the data file and apply the filters each
 segment. The remainder of this tutorial explains the second approach; it is in
 general more memory efficient also works for large data sets.
 
-{% include markup/info %}
+{% include markup/warning %}
 Please note that the dataset used in this tutorial is not particularly large; we
 could also have used the first approach. But we want to demonstrate how to work
 in general with large data (or with computers that have a small memory). You can
@@ -116,7 +116,7 @@ data. For the vertical EOG we will use channel 50 and channel 64. For the
 horizontal EOG we will compute the difference between the potential recorded in
 channels 51 and 60.
 
-{% include markup/info %}
+{% include markup/warning %}
 Some acquisition systems, such as the CTF system or the Biosemi system, allow
 for direct bipolar recording of ECG, EOG and EMG. The re-referencing step to
 obtain the EOG is therefore not required when working with Biosemi or other

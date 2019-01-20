@@ -113,7 +113,7 @@ used the databrowser before, read [here how to use it](/faq/how_can_i_use_the_da
 
 ##### Exercise 1
 
-{% include markup/info %}
+{% include markup/exercise %}
 Browse through the segments to get a feel for the data. Do you see any obvious
 artifacts? There is one channel carrying several artifacts throughout the
 recording, can you find it? Use the identify button to see the channel name.
@@ -238,7 +238,7 @@ combine trials into one structure again.
 
 ##### Exercise 2
 
-{% include markup/info %}
+{% include markup/exercise %}
 Visualize the selected artifacts in data_bad with
 **[ft_databrowser](/reference/ft_databrowser)** and compare it to data_fixed.
 You can also just plot the bad channel by specifying its name in cfg.channel. Or
@@ -264,7 +264,7 @@ artifacts and append the fixed data.
 
 ##### Exercise 3
 
-{% include markup/info %}
+{% include markup/exercise %}
 Inspect the new data structure. What has changed?
 {% include markup/end %}
 
@@ -400,7 +400,7 @@ them.
 
 ##### Exercise 4
 
-{% include markup/info %}
+{% include markup/exercise %}
 Use **[ft_databrowser](/reference/ft_databrowser)** one last time to view the
 cleaned data. Did the ICA successfully correct all eye blinks?
 {% include markup/end %}
