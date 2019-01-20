@@ -121,6 +121,3 @@
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
-- name:  Getting started with EEG data, quality checks and ERPs
-  link:  /workshop/madrid2019/tutorial_erp
-

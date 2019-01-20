@@ -4,9 +4,15 @@
 - name:  Details on the resting-state EEG dataset recorded with different sedation levels
   link:  /workshop/madrid2019/eeg_chennu
 
+- name:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
+
 - name:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning
 
-- name:  Cluster-based permutation tests on resting-state Power Spectral Density
+- name:  Time-frequency and spectral analysis
+  link:  /workshop/madrid2019/tutorial_freq
+
+- name:  Cluster-based permutation tests on resting-state power spectra
   link:  /workshop/madrid2019/tutorial_stats
 
