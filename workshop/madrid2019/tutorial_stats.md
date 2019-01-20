@@ -884,8 +884,6 @@ one we used in between-participant contrast
     cfg.parameter = {'powspctrm','powspctrm_b'};
     cfg.operation = 'subtract';
 
-ROI contrast in RESPONSIVE group
-
     sedation_respon_d = ft_math(cfg, base_sedation_respon, mode_sedation_respon);
     sedation_drowsy_d = ft_math(cfg, base_sedation_drowsy, mode_sedation_drowsy);
 
@@ -1038,7 +1036,7 @@ Now, it is time to prepare the data as follows:
 1. Compute the within-participant contrast for each group: baseline vs moderate
 2. Compute the between-participant contrast of the differences computed in step 1
 
-
+~~~~
     cfg = [];
     cfg.channel          = 'all';
     cfg.frequency        = [8 20]; % let us test alpha and low beta bands
@@ -1081,5 +1079,5 @@ Now, it is time to prepare the data as follows:
     cfg.zlim       = [-3 3];
     cfg.elec       = elec;
     ft_clusterplot(cfg, stat5);
-
+~~~~
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig8_corr.png" width="800" %}
