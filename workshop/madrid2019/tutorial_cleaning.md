@@ -291,7 +291,7 @@ the sample information
     cfg.trl = [min(data.sampleinfo(:,1)) max(data.sampleinfo(:,2)) 0];
     data = ft_redefinetrial(cfg,data);
 
-# Visualize the results of channel interpolation
+## Visualize the results of channel interpolation
 
 We can use **[ft_databrowser](/reference/ft_databrowser)** to check the results of the interpolation.
 
