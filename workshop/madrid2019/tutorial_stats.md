@@ -11,28 +11,25 @@ The objective of this tutorial is to give an introduction to the
 statistical analysis of resting state EEG data by means of cluster-based
 permutation tests.
 
-The tutorial starts with a long background section that sketches the
-background of permutation tests. The next sections are more
-tutorial-like. They deal with the analysis of an actual EEG dataset
-[(Download full dataset here)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/extra/).
+We will sketch the background of permutation tests and apply it to different experimental questions. In this tutorial we will continue with the Chennu et al. dataset. We will use data that has already been preprocessed, but if you are interested in the raw data from all subjects, you can download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
 
 In a step-by-step fashion, this tutorial will show:
 
-1. Compute **within**-participant contrasts
-2. Compute **between**-participant contrasts
+  1. Compute **within**-participant contrasts
+  2. Compute **between**-participant contrasts
 
- Toward the end of the tutorial there are some more challenging exercises:
+Toward the end of the tutorial there are some more challenging exercises:
 
-3. Compute a **multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
-4. Compute a **2x2 interaction**
-5. Compute a **correlation** between a variable and the EEG spectrum
+  3. Compute a **multivariate ANOVA**  to test the effect of the (drug) intervention on the entire EEG spectrum.
+  4. Compute a **2x2 interaction**
+  5. Compute a **correlation** between a variable and the EEG spectrum
 
 ## Overview
 
 In this paragraph we describe permutation testing for PSD data obtained
 in **[Chennu et al., 2016](https://doi.org/10.1371/journal.pcbi.1004669)**
-involving multiple participants that are each observed in multiple
-experimental conditions (sedative states). Every participant is observed
+involving multiple participants. EEG was recorded in multiple
+experimental conditions, i.e. levels of sedation. Every participant is observed
 during a period of 10 mins, where they received an amount of anesthetic
 drug aimed to produce a relaxed but still responsive behavioural state.
 For every subject, averages are computed over all segments of data
@@ -46,9 +43,9 @@ condition-specific power averages is identical for all sedative states
 
 ## Preparing the dataset
 
-To test the difference between the average PSDs for baseline and moderate
-sedative states. The data structures containing the frequency data
-averages of all 20 participants are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats.mat)
+To test the difference between the baseline and moderate
+sedative states, we use data for all subjects that has been preprocessed and for which the PSD has been computed.
+You can download [freq_resting.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/madrid19/tutorial_stats/freq_resting.mat) from our FTP server. The MATLAB file contains four data structures, one for each sedation level.
 
     % averages for each individual subject, for each condition
     load freq_resting.mat
@@ -78,7 +75,7 @@ In the **[resting state frequency analysis](/workshop/madrid2019/tutorial_freq)*
 
     freq_oi   = [8 15];   % frequency range to display averages
     freq_norm = [0.7 40]; % frequency range used to normalize the spectrum
-    foi_norm = nearest(base_sedation.freq,freq_norm);
+    foi_norm  = nearest(base_sedation.freq,freq_norm);
 
     common_denominator = mean(base_sedation.powspctrm(:,:,foi_norm(1):foi_norm(2)),3);
     base_sedation.powspctrm_b = bsxfun(@rdivide, base_sedation.powspctrm, common_denominator); %repmat(mean(base_sedation.powspctrm,3),1,1,90);
@@ -245,7 +242,6 @@ is similar in other FieldTrip functions. We first concentrate on the
 fields that are unique to
 **[ft_freqstatistics](/reference/ft_freqstatistics)**.
 
-
     foi_contrast = [0.5 30];
 
     cfg = [];
@@ -278,7 +274,7 @@ fields that are unique to
     cfg.ivar     = 1;% number or list with indices indicating the independent variable(s)
     cfg.uvar     = 2;% number or list with indices indicating the dependent variable(s)
 
-# We now describe these options one-by-one.
+In the following section we will describe the various options one-by-one.
 
 -  With **cfg.method** = **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)** we choose the Monte Carlo method
 for calculating the significance probability. This significance
@@ -454,11 +450,11 @@ the number 3. As will be shown in the following, this information can be
 used to visualize the topography of the clusters.
 
 For the negative clusters, the output is given in the following pair of
-fields: stat1.negclusters and stat1.negclusterslabelmat. These fields
-contain the same type of information as stat.posclusters and
-stat1.posclusterslabelmat, but now for the negative clusters.
+fields: `stat1.negclusters` and `stat1.negclusterslabelmat`. These fields
+contain the same type of information as `stat.posclusters` and
+`stat1.posclusterslabelmat`, but now for the negative clusters.
 
-By inspecting stat1.posclusters and stat1.negclusters, it can be seen that
+By inspecting `stat1.posclusters` and `stat1.negclusters`, it can be seen that
 only the first positive and the first negative cluster have a p-value
 less than the critical alpha-level of 0.025. This critical alpha-level
 corresponds to a false alarm rate of 0.05 in a two-sided test. By typing
@@ -483,17 +479,17 @@ And by typing stat.negclusters(1), you should obtain the following:
     stddev: 0.0020
     cirange: 0.0039
 
-It is possible that the p-values in your output are a little bit
-different from 0. This is because
+It is possible that the p-values in your output are a bit different. This is because
 **[ft_freqstatistics](/reference/ft_freqstatistics)** calculated
-as a Monte Carlo approximation of the permutation p-values: the p-value
+a Monte Carlo approximation of the permutation p-values: the p-value
 for the k-th positive cluster is calculated as the proportion of random
 draws from the permutation distribution in which the maximum of the
-cluster-level statistics is larger than stat.posclusters(k).clusterstat.
+cluster-level statistics is larger than `stat.posclusters(k).clusterstat`. The random draws will be different every time you execute the code, hence the distribution can also be slightly different.
 
 ### Plotting the results
 
-    get the 1st positive and negative cluster
+Get the 1st positive and negative cluster
+
     sigposmask = (stat1.posclusterslabelmat==1) & stat1.mask;
     signegmask = (stat1.negclusterslabelmat==1) & stat1.mask;
 
@@ -506,7 +502,7 @@ cluster-level statistics is larger than stat.posclusters(k).clusterstat.
     mode_sedation_avg = ft_selectdata(cfg,mode_sedation);
     reco_sedation_avg = ft_selectdata(cfg,reco_sedation);
 
-  choose the cluster you want to see: POSITIVE or NEGATIVE
+Choose the cluster you want to see: POSITIVE or NEGATIVE
 
     base_sedation_avg.mask = signegmask;
     mode_sedation_avg.mask = signegmask;
@@ -531,7 +527,7 @@ of a statistical test, we want to answer the question whether there is a
 systematic difference in the EEG recorded on responsive and drowsy groups
 
 First we compute the hit rate of each participant and condition knowing
-that the number of correct responses in that task is 40. See [point 5)](https://www.repository.cam.ac.uk/handle/1810/252736).
+that the number of correct responses in that task is 40. See [point 5](https://www.repository.cam.ac.uk/handle/1810/252736).
 
     hit_rate = (covariates(:,:,3)./40).*100;
 
@@ -541,8 +537,8 @@ Figure 1B of the [paper](https://journals.plos.org/ploscompbiol/article?id=10.13
 
 We now describe how we can statistically test the difference between the
 PSD averages for the responsive and the drowsy groups. The format for
-these variables, are a prime example of how you should organise your data
-to be suitable for ft_XXXstatistics. Specifically, each variable is a
+these variables, are a prime example of how you should organize your data
+to be suitable for **[ft_freqstatistics](/reference/ft_freqstatistics)**. Specifically, each variable is a
 structure, with each subject's averaged stored in one cell. To create
 this data structure we will make copies and we will select the subgroups
 based on the behavioral performance (see below). Note that this subgroup
@@ -764,14 +760,6 @@ this section informs us about the following **null hypothesis**: the
 probability distribution of the condition-specific averages is
 independent of the experimental conditions.
 
-We now describe how we can statistically test the difference between the
-event-related averages for fully incongruent (FIC) and the fully
-congruent (FC) sentence endings. For this analysis we use planar gradient
-data. For convenience we will not do the reading-in and preprocessing
-steps on all subjects. Instead we begin by loading the timelock
-structures containing the event-related averages (of the planar gradient
-data) of all ten subjects.
-
     cfg = [];
     cfg.channel          = 'all';
     cfg.frequency        = foi_contrast;
@@ -809,7 +797,6 @@ calculates the MANOVA dependent samples to test
 -  The **design matrix**, the **cfg.ivar** and the **cfg.uvar** will be
 the same as in the within-UO design
 
-
 ~~~~
     stat3 = ft_freqstatistics(cfg, base_sedation, mild_sedation, mode_sedation, reco_sedation);
 ~~~~
@@ -844,14 +831,14 @@ the same as in the within-UO design
 
 ## 4. Compute a **2x2 interaction**
 
-A very important contrast is the interaction. In this dataset we will
+In a multifactorial design the interaction effects are usually the most interesting. In this dataset we will
 compute the interaction using the within-participant factor SEDATION
-(baseline vs moderate) and the between-subject factor GROUP (responsive vs drowsy)
-Based on this **["FAQ: how can I test an interaction effect using cluster-based permutation tests"](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests)**
+(baseline vs moderate) and the between-subject factor GROUP (responsive vs drowsy) based on the strategy outlined in this [frequently asked question](/faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests).
 
 Let us prepare the data
--   1. Compute the within-participant contrast for each group: baseline vs moderate
--   2. Compute the between-participant contrast of the differences computed in step 1
+
+1. Compute the within-participant contrast for each group: baseline vs moderate
+2. Compute the between-participant contrast of the differences computed in step 1
 
 The complexity here is that we are dealing with a between-within
 participants design but the design matrix and statistical pipeline is the
@@ -895,23 +882,24 @@ ROI contrast in RESPONSIVE group
 
     stat4 = ft_freqstatistics(cfg, sedation_respon_d, sedation_drowsy_d);
 
-Now select the significant sensors and frequencies and plot the interaction
-get the 1st positive and negative cluster
+Now select the significant sensors and frequencies and plot the interaction.
+
+Get the 1st positive and negative cluster
 
     signegmask = (stat4.negclusterslabelmat==1) & stat4.mask;
 
-pool all channels and frequencies that in the cluster
+Pool all channels and frequencies that in the cluster
 
     chanoineg = match_str(stat4.label,stat4.label(sum(signegmask,2) > 0));
     foilimneg = stat4.freq(sum(signegmask,1) > 0);
     foilim = [min(foilimneg) max(foilimneg)];
 
-choose the cluster you want to see
+Choose the cluster you want to see
 
     base_sedation_avg.mask = signegmask;
     mode_sedation_avg.mask = signegmask;
 
-choose the cluster you want to see: POSITIVE or NEGATIVE
+Choose the cluster you want to see: POSITIVE or NEGATIVE
 
     base_sedation_avg.mask = signegmask;
     mode_sedation_avg.mask = signegmask;
@@ -927,11 +915,11 @@ choose the cluster you want to see: POSITIVE or NEGATIVE
     b_d = ft_selectdata(cfg,base_sedation_drowsy);
     m_d = ft_selectdata(cfg,mode_sedation_drowsy);
 
-compute confidence intervals
+Compute confidence intervals
 
     parameter = 'powspctrm_b';%make sure this 'parameter' is the same as the one you used in cfg.parameter in ft_freqstatistics
 
-compute means
+Compute means
 
     x_b_r = mean(b_r.(parameter),1);
     x_m_r = mean(m_r.(parameter),1);
@@ -982,7 +970,7 @@ independent and the neurobiological signal the role of dependent
 variable. In fact, accuracy is represented by a single number, whereas
 the neurobiological signal often has a spatial (the channels) and a
 spectral (the frequencies) dimension. More information can be found in
-this **[FAQ: how can I test for correlations between neuronal data and quantitative stimulus and behavioural variables](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables)**
+this [frequently asked question](/faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables).
 
 ### The Permutation Distribution Results From Breaking the Association Between Dependent and Independent Variable
 
@@ -1017,8 +1005,8 @@ independence.
 
 Now, it is time to prepare the data as follows:
 
-   1. Compute the within-participant contrast for each group: baseline vs moderate
-   2. Compute the between-participant contrast of the differences computed in step 1
+1. Compute the within-participant contrast for each group: baseline vs moderate
+2. Compute the between-participant contrast of the differences computed in step 1
 
 
     cfg = [];
@@ -1046,8 +1034,12 @@ Now, it is time to prepare the data as follows:
     subj = size(mode_sedation.powspctrm,1);
     design = zeros(1,subj);
 
-    {'drug concentration' 'reaction time' 'correct responses'};
-    design(1,:)  = covariates(:,3,1)./1000;
+    % The three columns of the covariates are
+    %  - drug concentration
+    %  - reaction time
+    %  - correct responses
+
+    design(1,:)  = covariates(:,3,1)./1000; % select the column with concentrations
     cfg.design   = design;
     cfg.ivar     = 1;
 

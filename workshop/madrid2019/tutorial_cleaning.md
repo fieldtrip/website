@@ -20,10 +20,10 @@ correction using ICA
 Here we will adapt the pipeline described in de Cheveigne & Arzounian
 (2018). They propose different algorithms to preprocess MEG or EEG
 data and importantly they propose rules of thumb on the order of the
-application of the algorithms. 
+application of the algorithms.
 
-The following is taken from the paper *Cheveigne & Arzounian (2018) [Robust detrending, rereferencing, outlier
-detection, and inpainting for multichannel data](https://doi.org/10.1016/j.neuroimage.2018.01.035). Neuroimage 172 (2018)*.
+The following is taken from the paper Cheveigne & Arzounian (2018) [Robust detrending, rereferencing, outlier
+detection, and inpainting for multichannel data](https://doi.org/10.1016/j.neuroimage.2018.01.035).
 
 *As a rule of thumb, if algorithm B is sensitive to an artifact that
 algorithm A can remove, then A should be applied before B. A difficulty
@@ -42,18 +42,21 @@ A likely sequence might be:
 
 
 ## Procedure
+
 In this tutorial the following steps will be taken:
-	* Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
-	* Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
-	* Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
-	* Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
+
+- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)** and visualize the data in between processsing steps with **[ft_databrowser](/reference/ft_databrowser)**
+- Interpolate broken channels or noisy data segments with **[ft_channelrepair](/reference/ft_channelrepair)**, removing artifacts with **[ft_rejectartifact](/reference/ft_rejectartifact)**
+- Select relevant segments of data using **[ft_redefinetrial](/reference/ft_redefinetrial)** as well as concatenating data using **[ft_appenddata](/reference/ft_appenddata)**
+- Once all data is cleaned, correct for eye movement artifacts by running independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)**
 
 ## Reading in data
-For this tutorial you will require data from one examplar subject. Furthermore the original open dataset, some intermediate steps have been 
-computed for you already, for efficiency. You can download both raw and processed data [ here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_cleaning).
-If you are interested in the full open access dataset, you can also download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data). 
 
-For this tutorial we will lead you through the preprocessing pipelne with
+For this tutorial you will require data from one example subject. Furthermore the original open dataset, some intermediate steps have been
+computed for you already, for efficiency. You can download both raw and processed data of the example subject [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_cleaning/).
+If you are interested in the raw data from all subjects, you can download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
+
+For this tutorial we will lead you through the preprocessing pipeline with
 the example of one subject and on one acquisition run (sedation level).
 
     subj = 'sub-22';
@@ -228,7 +231,7 @@ data.label field. Try it!
 {% include markup/end %}
 
     clear data_bad
-	
+
 now delete the badchannel artifacts and append the interpolated data
 
     cfg                               = [];
