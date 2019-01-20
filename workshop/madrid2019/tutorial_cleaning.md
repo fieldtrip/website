@@ -13,7 +13,7 @@ can click [here for details on the dataset](/workshop/madrid2019/eeg_chennu).
 In this tutorial you will learn how to load and inspect this dataset
 using FieldTrip. You will perform some basic preprocessing such as
 repairing broken channels, visual artifact rejection and artifact
-correction using ICA
+correction using ICA.
 
 ## Background
 

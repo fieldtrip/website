@@ -1,5 +1,6 @@
 ---
 title: FieldTrip workshop in Madrid
+tags: [madrid2019, eeg-chennu, eeg-language]
 ---
 
 # FieldTrip workshop in Madrid
