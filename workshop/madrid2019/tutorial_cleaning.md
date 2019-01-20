@@ -3,7 +3,7 @@ title: Cleaning and processing resting-state EEG
 tags: [madrid2019, eeg-chennu]
 ---
 
-# Cleaning and processing resting-state EEG
+# **Cleaning and processing resting-state EEG**
 
 ## Introduction
 
@@ -19,28 +19,35 @@ using ICA.
 
 We will adapt the pipeline described in de Cheveigne & Arzounian (2018). They
 discuss different algorithms to preprocess MEG or EEG data and - importantly -
-they propose rules of thumb regarding the order which which these preprocessing
-steps are applied.
+they propose rules of thumb regarding the order on which these preprocessing steps should be applied. Please, bear in mind that present pipeline is quite general and, as such, may not apply to particular cases. Please read de Cheveigne & Arzounian (2018) thoroughly and follow this tutorial with critical mind.
 
-The following is taken directly from the paper Cheveigne & Arzounian (2018)
+Let us begin straight to the rule of thumb that Cheveigne & Arzounian (2018)
 [Robust detrending, rereferencing, outlier detection, and inpainting for
-multichannel data](https://doi.org/10.1016/j.neuroimage.2018.01.035).
+multichannel data](https://doi.org/10.1016/j.neuroimage.2018.01.035) propose:
 
 *As a rule of thumb, if algorithm B is sensitive to an artifact that
 algorithm A can remove, then A should be applied before B. A difficulty
 arises of course if A is also sensitive to artifacts that B can remove.*
 
-A likely sequence might be:
+*A likely sequence might be:*
 
-1. discard pathological channels for which there is no useful signal,
-2. apply robust detrending to each channel,
-3. detect and interpolate temporally-local channel-specific glitches,
-4. robust re-reference,
-5. project out eye artifacts (e.g. using ICA or DSS),
-6. fit and remove, or project out, 50 Hz and harmonics,
-7. project out alpha activity, etc.,
-8. apply linear analysis techniques (ICA, CSP, etc.) to further isolate activity of interest.
+*1. discard pathological channels for which there is no useful signal,*
 
+*2. apply robust detrending to each channel,*
+
+*3. detect and interpolate temporally-local channel-specific glitches,*
+
+*4. robust re-reference,*
+
+*5. project out eye artifacts (e.g. using ICA or DSS),*
+
+*6. fit and remove, or project out, 50 Hz and harmonics,*
+
+*7. project out alpha activity, etc.,*
+
+*8. apply linear analysis techniques (ICA, CSP, etc.) to further isolate activity of interest.*
+
+With these guidelines in mind, let's load [Chennu et al., data](/workshop/madrid2019/eeg_chennu) and begin with the cleaning!
 
 ## Procedure
 
@@ -53,19 +60,19 @@ In this tutorial the following steps will be taken:
 
 ## Reading in data
 
-For this tutorial we will use data from one example subject. The dataset that has been shared does not consist of the original recordings; the data has been imported and some preprocessing steps have been performed already. You can download both raw and processed data of the example subject [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_cleaning/).
-If you are interested in the raw data from all subjects, you can download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
+For this tutorial we will use the EEG data from one example subject (subj22). The dataset that has been shared does not consist of the original recordings; the data has been imported and some preprocessing steps have been performed already (EEG channels were demeaned and band-pass filtered between 0.5 Hz - 45 Hz, some channels were interpolated using spherical spline algorithms and the data were re-ferenced to the average taken over all channels; see [Materials and Methods'](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004669#sec008) section). You can download both raw and processed data of the example subject [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_cleaning/).
+If you are interested in the raw data from all subjects transformed into [BIDS format](/example/bids), you can download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
 
-For this tutorial we will lead you through the preprocessing pipeline with
-the example of one subject and for one experimental block (i.e. level of sedation).
+Now, we will guide you through the preprocessing pipeline with the example of one subject and for one experimental block (i.e. level of sedation).
 
     subj = 'sub-22';
 
-We will start with some minimal preprocessing. Be aware that using the average
-reference on data that still has artifactual channels can spread the
-contamination of those channels to all other channels. The average reference
-does enhance the interpretability of the data when using
-**[ft_databrowser](/reference/ft_databrowser)** (i.e. topoplots)
+We will start with some minimal preprocessing. First we will use the average reference. You will realize that  here the break de Cheveigne & Arzounian guidelines but we do it becuase the average reference does enhance the interpretability of the data when using
+**[ft_databrowser](/reference/ft_databrowser)** . For example, interpreting topoplots to identify both artifacts and interesting electrophysiological phenomena is always easier with an average reference. But our mission at this point is to:
+
+*1. discard pathological channels for which there is no useful signal*
+
+Keep in mind although that on EEG channels with noisy periods can spread the contamination to all other channels. As explained in the cleaning leacture, we will indentify this noisy periods plus potential eye movements, blinks, muscular artifacts and any other channel specific abnormal behavior.
 
     cfg = [];
     cfg.dataset    = ['single_subject_resting/' subj '_task-rest_run-3_eeg.vhdr'];
@@ -90,7 +97,7 @@ Following preprocessing, the data will have the following fields
            cfg: [1x1 struct]
 
 
-Subsequently we will add the electrode description. For this we will use a custom script which is included with the data on the FTP server.
+Subsequently we will add the electrode description. For this we will use a custom script which is included with the data on the FTP server. The main reason to use this costum  function is because the EEG cap Chennu et al., used contain Electrical Geodesics Inc. specific nomenclature and 10-10 standard system. If you are curious about the equivalence between the two systems, take a look the custom function and [here](https://www.researchgate.net/publication/266609828_Determination_of_the_Geodesic_Sensor_Nets'_Average_Electrode_Positions_and_Their_10_-_10_International_Equivalents)
 
     data.elec = prepare_elec_chennu2016(data.label);
 
@@ -102,7 +109,7 @@ used the databrowser before, read [here how to use it](/faq/how_can_i_use_the_da
     cfg.channel       = 'all';
     cfg.layout        = ft_prepare_layout([],data);
     cfg.viewmode      = 'vertical';
-    cfg.blocksize     = 5;
+    cfg.blocksize     = 5; % time window to browse
     cfg.artifactalpha = 0.8;  % this make the colors less transparent and thus more vibrant
     cfg.artfctdef.blinks.artifact     = [];
     cfg.artfctdef.badchannel.artifact = [];
@@ -113,7 +120,7 @@ used the databrowser before, read [here how to use it](/faq/how_can_i_use_the_da
 
 ##### Exercise 1
 
-{% include markup/exercise %}
+{% include markup/info %}
 Browse through the segments to get a feel for the data. Do you see any obvious
 artifacts? There is one channel carrying several artifacts throughout the
 recording, can you find it? Use the identify button to see the channel name.
@@ -162,7 +169,7 @@ your own neighbours structure. See also the
     cfg.badchannel     = artif.badchannel;
     cfg.method         = 'weighted';
     cfg.neighbours     = neighbours;
-    data_fixed = ft_channelrepair(cfg, data);
+    data_fixed = ft_channelrepair(cfg,data);
 
 For this subject the noisy channel only has a handful of artifacts, so
 instead of interpolating an entire channel, we will only interpolate the
@@ -170,7 +177,12 @@ noisy segments.
 
 ### Interpolate bad channels for for specific segments
 
-We can make a selection of the segments in which one of the channels was bad.
+Following de Cheveigne & Arzounian (2018) we are going to
+
+*3. detect and interpolate temporally-local channel-specific glitches,*
+
+Note we deliberately skip step *2. apply robust detrending to each channel,* for later because it is necessary to find first the pieces of data with artifacts and to exclude them. De Cheveigne & Arzounian detrending algorith
+ has the possibility to exclude outliers so this is the main reason for us to change the order (check their *nt_detrend.m* function). We can make a selection of the segments in which one of the channels was bad.
 
     artpadding  = 0.1;
     begart      = artif.artfctdef.badchannel.artifact(:,1)-round(artpadding.*data.fsample);
@@ -238,7 +250,7 @@ combine trials into one structure again.
 
 ##### Exercise 2
 
-{% include markup/exercise %}
+{% include markup/info %}
 Visualize the selected artifacts in data_bad with
 **[ft_databrowser](/reference/ft_databrowser)** and compare it to data_fixed.
 You can also just plot the bad channel by specifying its name in cfg.channel. Or
@@ -264,7 +276,7 @@ artifacts and append the fixed data.
 
 ##### Exercise 3
 
-{% include markup/exercise %}
+{% include markup/info %}
 Inspect the new data structure. What has changed?
 {% include markup/end %}
 
@@ -273,7 +285,7 @@ the sample information
 
     cfg = [];
     cfg.trl = [min(data.sampleinfo(:,1)) max(data.sampleinfo(:,2)) 0];
-    data = ft_redefinetrial(cfg, data);
+    data = ft_redefinetrial(cfg,data);
 
 # Visualize the results of channel interpolation
 
@@ -293,7 +305,7 @@ We can use **[ft_databrowser](/reference/ft_databrowser)** to check the results 
     if isfield(artif.artfctdef,'muscle')
         cfg.artfctdef.muscle.artifact     = artif.artfctdef.muscle.artifact;
     end
-    ft_databrowser(cfg, data);
+    ft_databrowser(cfg,data);
 
 ## Reject the muscular and visual artifacts
 
@@ -314,7 +326,24 @@ can cut the noisy segments out like this:
     end
     data = ft_rejectartifact(cfg, data);
 
-Once all is cleaned, we can re-reference the data
+
+## Detrending the dataset
+
+At this point, given that we already excluded or interpolated the pieces of EEG data containing artifacts, it is safer to detrend the data. As mentioned above, the robust detrending de Cheveigne & Arzounian (2018) proposed in their paper is a single function (*nt_detrend.m*) that detects outliers and do not take them into account during the detrend operation. In FieldTrip we do not have a dedicated function to do this but we have developed this pipeline (see above) to exclude artifacts and be able to perform the deterending as follows:
+
+    cfg             = [];
+    cfg.channel     = 'all';
+    cfg.demean      = 'yes';
+    cfg.polyremoval = 'yes':
+    cfg.polyorder   = 1; % with cfg.polyorder = 1 is equivalent to cfg.detrend = 'yes'
+    data = ft_preprocessing(cfg, data);
+
+
+So now we just finished *2. apply robust detrending to each channel,*. You can play with the cfg.polyorder parameter and check what happens with the data.
+
+## Robust re-reference
+
+All the data has been cleaned and now we can archive a more robust re-reference, so step 4 can be done as follows:
 
     cfg            = [];
     cfg.channel    = 'all';
@@ -324,13 +353,15 @@ Once all is cleaned, we can re-reference the data
     cfg.refmethod  = 'avg';
     data = ft_preprocessing(cfg, data);
 
+
 ## Eye artifact removal with ICA
 
-For estimating the ICA components it is best to use as much data as possible.
-Also, the spatial distribution of the eye artifacts will not be different in the
+And we are already in step *5. project out eye artifacts (e.g. using ICA or DSS)*. A reliable ICA decomposition requires as much data as possible. Also, the spatial distribution of the eye artifacts will not be different in the
 different experimental conditions. To improve the estimate and to make sure that
 you are removing the same eye activity in all conditions,  you should combine
 data from the different runs/conditions.
+
+As a rule of thumb, [Groppe et al., 2009](https://doi.org/10.1016/j.neuroimage.2008.12.038) empirically found that only 50% of the IC were found as reliable when the number of time points per EEG channel^2 was around 0.2.
 
 We concatenate all trials into one matrix to compute the rank of the data, this
 helps to constrain the number of independent components.
@@ -338,6 +369,9 @@ helps to constrain the number of independent components.
     dat = cat(2, data.trial{:});
     dat(isnan(dat)) = 0;
     n_ic = rank(dat);
+
+    % Groppe et al reliability estimate
+    size(dat,2)/(91^2)
 
     cfg = [];
     cfg.method       = 'runica';
@@ -400,10 +434,24 @@ them.
 
 ##### Exercise 4
 
-{% include markup/exercise %}
+{% include markup/info %}
 Use **[ft_databrowser](/reference/ft_databrowser)** one last time to view the
 cleaned data. Did the ICA successfully correct all eye blinks?
 {% include markup/end %}
+
+
+%% Remove 50 Hz line noise
+Step *6. fit and remove, or project out, 50 Hz and harmonics,* does not make sense for Chennu et al data because it was banpass filtered (0.5 Hz - 45 Hz). In case you are interest, the line noise cleaning can be perform by fitting sine waves (cfg.dftfilter) of frequency specified in cfg.dftfreq or using a band stop filter (cfg.bpfilter):
+
+    cfg = [];
+    cfg.channel    = 'all';
+    cfg.demean     = 'yes';
+    cfg.dftfilter  = 'yes';
+    cfg.dftfreq    = [50];
+    % cfg.bsfilter  = 'no'; % band-stop method
+    % cfg.bsfreq    = [48 52];
+    data = ft_preprocessing(cfg,data);
+
 
 ## See also
 
