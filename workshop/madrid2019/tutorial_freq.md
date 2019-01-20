@@ -397,13 +397,11 @@ the following parameters:
    have chosen `cfg.tapsmofrq = 4`, which assumes a bandwidth of 8Hz smoothing
    (±4). For less smoothing you can specify smaller values, however, the
    following relation (determined by the Shannon number) must hold (see Percival
-   and Walden, 1993).
+   and Walden, 1993):
 
-K = 2 * tw * fw-1
+   K = 2*tw*fw-1,  where K is required to be larger than 0.
 
-where K (the number of multitapers) is required to be larger than 0. The more
-tapers are used, the greater the smoothing.
-
+K is the number of multitapers applied; the more tapers the greater the smoothing.
 
     cfg2 = [];
     cfg2.output    = 'pow';
