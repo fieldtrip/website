@@ -1,6 +1,6 @@
 ---
 title: Cleaning and processing resting-state EEG
-tags: [eeg-chennu, madrid2019]
+tags: [madrid2019, eeg-chennu]
 ---
 
 # Cleaning and processing resting-state EEG

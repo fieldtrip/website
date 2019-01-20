@@ -1,6 +1,6 @@
 ---
 title: Getting started with EEG data, quality checks and ERPs
-tags: [madrid2019, tutorial, eeg, preprocessing, timelock, eeg-language]
+tags: [madrid2019, eeg-language]
 ---
 
 # Getting started with EEG data, quality checks and ERPs

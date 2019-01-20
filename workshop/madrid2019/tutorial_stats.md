@@ -1,17 +1,21 @@
 ---
 title: Cluster-based permutation tests on resting-state Power Spectral Density
-tags: [eeg-chennu, madrid2019]
+tags: [madrid2019, eeg-chennu]
 ---
 
 # Cluster-based permutation tests on resting-state Power Spectral Density (PSD)
 
 ## Introduction
 
-The objective of this tutorial is to give an introduction to the
-statistical analysis of resting state EEG data by means of cluster-based
-permutation tests.
+The objective of this tutorial is to give an introduction to the statistical
+analysis of resting state EEG data by means of cluster-based permutation tests.
 
-We will sketch the background of permutation tests and apply it to different experimental questions. In this tutorial we will continue with the Chennu et al. dataset. We will use data that has already been preprocessed, but if you are interested in the raw data from all subjects, you can download it from our [FTP Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/). Please note that you **do not** have to download all subjects for this tutorial.
+We will sketch the background of permutation tests and apply it to different
+experimental questions. In this tutorial we will continue with the Chennu et al.
+dataset. We will use data that has already been preprocessed, but if you are
+interested in the raw data from all subjects, you can download it from our [FTP
+Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/).
+Please note that you **do not** have to download all subjects for this tutorial.
 
 In a step-by-step fashion, this tutorial will show:
 
