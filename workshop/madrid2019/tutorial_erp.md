@@ -1,6 +1,6 @@
 ---
 title: Getting started with EEG data, quality checks and ERPs
-tags: [madrid2019, tutorial, eeg, preprocessing, timelock, eeg-language]
+tags: [madrid2019, eeg-language]
 ---
 
 # Getting started with EEG data, quality checks and ERPs
@@ -10,17 +10,24 @@ tags: [madrid2019, tutorial, eeg, preprocessing, timelock, eeg-language]
 In FieldTrip the preprocessing of data refers to the reading of the data,
 segmenting the data around interesting events such as triggers, temporal
 filtering, artifact rejection and optionally rereferencing. The
-**[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads
-the data and applies the preprocessing options.
+**[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all
+these steps, i.e., it reads the data and applies the preprocessing options.
 
-There are largely two alternative approaches for preprocessing, which
-especially differ in the amount of memory required. The first approach is
-to read all data from the file into memory, apply filters, and
-subsequently cut the data into interesting segments. The second approach
-is to first identify the interesting segments, read those segments from
-the data file and apply the filters to those segments only. The remainder
-of this tutorial explains the second approach, as that is the most
-appropriate for large data sets such as the EEG data used in this tutorial.
+There are largely two alternative approaches for preprocessing, which especially
+differ in the amount of memory required. The first approach is to read all data
+from the file into memory, apply filters, and subsequently cut the data into
+interesting segments. The second approach is to first identify the interesting
+segments, only read those segments from the data file and apply the filters each
+segment. The remainder of this tutorial explains the second approach; it is in
+general more memory efficient also works for large data sets.
+
+{% include markup/info %}
+Please note that the dataset used in this tutorial is not particularly large; we
+could also have used the first approach. But we want to demonstrate how to work
+in general with large data (or with computers that have a small memory). You can
+see the first approach used in the tutorial on [reading continuous
+EEG](/tutorial/continuous).
+{% include markup/end %}
 
 Preprocessing involves several steps including identifying individual
 trials from the dataset, filtering and artifact rejections. This tutorial
@@ -43,6 +50,7 @@ In this tutorial the following steps will be taken:
 You can download the single-subject task dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_erp/) from our FTP server.
 
 ### Reading trials
+
 Let us first look at the different trigger codes present in the dataset
 
     cfg = [];
@@ -50,9 +58,10 @@ Let us first look at the different trigger codes present in the dataset
     cfg.trialdef.eventtype = '?';
     dummy                   = ft_definetrial(cfg);
 
-This will display the event types and values on screen.
-The trigger codes S112, S122, S132, S142 (animals) S152, S162, S172, S182 (tools) correspond to the presented visual stimuli.
-The trigger codes S113, S123, S133, S143 (animals) S153, S163, S173, S183 (tools) correspond to the presented auditory stimuli.
+This will display the event types and values on screen. The trigger codes S112,
+S122, S132, S142 (animals) S152, S162, S172, S182 (tools) correspond to the
+presented visual stimuli. The trigger codes S113, S123, S133, S143 (animals)
+S153, S163, S173, S183 (tools) correspond to the presented auditory stimuli.
 These are the triggers we will select for now
 
     trigVIS = {'S112', 'S122', 'S132', 'S142', 'S152', 'S162', 'S172', 'S182'};
@@ -84,8 +93,8 @@ a linked-mastoid reference (also known as an average-mastoid reference).
 
     cfg.reref       = 'yes';
     cfg.channel     = 'all';
-    cfg.implicitref = 'M1';         % the implicit (non-recorded) reference channel is added to the data representation
-    cfg.refchannel  = {'M1', '53'}; % the average of these channels is used as the new reference, note that channel '53' corresponds to the right mastoid (M2)
+    cfg.implicitref = 'M1';         % the implicit (non-recorded) reference channel is added to the data
+    cfg.refchannel  = {'M1', '53'}; % the average of these will be the new reference, note that '53' corresponds to the right mastoid (M2)
 
 Filtering options
 
@@ -100,22 +109,23 @@ For consistency we will rename the channel with the name 53 located at the right
     chanindx = find(strcmp(data.label, '53'));
     data.label{chanindx} = 'M2';
 
-### Extracting EOG channel
+### Extracting EOG channels
 
-We now continue with re-referencing to extract the bipolar EOG signal from the data.
-For the vertical EOG we will use channel 50 and channel 64.
-For the horizontal EOG we will compute the potential difference between
+We now continue with re-referencing to extract the bipolar EOG signal from the
+data. For the vertical EOG we will use channel 50 and channel 64. For the
+horizontal EOG we will compute the difference between the potential recorded in
 channels 51 and 60.
 
-{% include markup/success %}
-Some acquisition systems, such as Biosemi, allow for direct bipolar
-recording of EOG. The re-referencing step to obtain the EOG is therefore
-not required when working with Biosemi or other bipolar data.
+{% include markup/info %}
+Some acquisition systems, such as the CTF system or the Biosemi system, allow
+for direct bipolar recording of ECG, EOG and EMG. The re-referencing step to
+obtain the EOG is therefore not required when working with Biosemi or other
+bipolar data.
 {% include markup/end %}
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/example_eog.png" width="200" %}
 
-EOGV channel
+Select the channels that we need for the vertical EOG
 
     cfg              = [];
     cfg.channel      = {'50' '64'};
@@ -124,15 +134,14 @@ EOGV channel
     cfg.refchannel   = {'50'};
     eogv             = ft_preprocessing(cfg, data);
 
-
-only keep one channel, and rename to eogv
+only keep one channel, and rename it to EOGV
 
     cfg              = [];
     cfg.channel      = '64';
     eogv             = ft_selectdata(cfg, eogv);
     eogv.label       = {'eogv'};
 
-EOGH channel
+Select the channels that we need for the horizontal EOG
 
     cfg              = [];
     cfg.channel      = {'51' '60'};
@@ -141,70 +150,81 @@ EOGH channel
     cfg.refchannel   = {'51'};
     eogh             = ft_preprocessing(cfg, data);
 
-only keep one channel, and rename to eogh
+only keep one channel, and rename to it eogh
 
     cfg              = [];
     cfg.channel      = '60';
     eogh             = ft_selectdata(cfg, eogh);
     eogh.label       = {'eogh'};
 
-We now discard these extra channels that were used as EOG from the data
-and add the bipolar-referenced EOGv and EOGh channels that we have just
-created.
+We can now discard the extra channels from the original recording that were used
+to pick up the EOG and add the bipolar-referenced EOGv and EOGh channels that we
+have just created.
 
-only keep all non-EOG channels
+Keep only the EEG channels
 
     cfg         = [];
-    cfg.channel = setdiff(1:60, [50, 51, 60, 64]);% you can use either strings or numbers as selection
+    cfg.channel = setdiff(1:60, [50, 51, 60, 64]); % you can use either strings or numbers as selection
     data        = ft_selectdata(cfg, data);
 
-append the EOGH and EOGV channel to the 60 selected EEG channels
+Append the EOGH and EOGV channel to the selected EEG channels
 
     cfg  = [];
     data = ft_appenddata(cfg, data, eogv, eogh);
 
 FieldTrip data structures are intended to be "lightweight", in the sense
-that the internal Matlab arrays can be transparently accessed. Have a look
+that the internal MATLAB arrays can be transparently accessed. Have a look
 at the data as you read it into memory
 
 	>> data
 
 	data =
 
-		hdr: [1x1 struct]
-	      label: {1x65 cell}
-	       time: {1x400 cell}
-	      trial: {1x400 cell}
- 	    fsample: 500
- 	 sampleinfo: [400x2 double]
-  	  trialinfo: [400x1 double]
-		cfg: [1x1 struct]
+           hdr: [1x1 struct]
+         label: {1x65 cell}
+          time: {1x400 cell}
+         trial: {1x400 cell}
+       fsample: 500
+    sampleinfo: [400x2 double]
+     trialinfo: [400x1 double]
+           cfg: [1x1 struct]
 
-and note that, if you wanted to, you could plot a single trial with default Matlab function
+The fields in the raw data structure are explained in more detail in
+**[ft_dataype_raw](/reference/ft_datatype_raw)**. You can use the default MATLAB
+plot functions to show the EEG data for all channels in for example the first
+trial:
 
     plot(data.time{1}, data.trial{1});
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_plottrl.png" width="800" %}
 
-However, a better way to quickly visualize and scroll through your data
-is to use **[ft_databrowser](/reference/ft_databrowser)**. There you can also easily mark artifacts.
+However, a more efficient way to quickly visualize and scroll through your data
+is to use **[ft_databrowser](/reference/ft_databrowser)**. That function also
+allows you to mark the time windows in  which artifacts are present.
 
 ## Visual artifacts detection
 
-While detecting artifacts by visual inspection, keep in mind that it is a
-subjective decision to reject certain trials and keep other trial. Which
-type of artifacts should be rejected depends on the analysis you would
-like to do on the clean data. If you would like to do a time-frequency
-analysis of power in the gamma band it is important to reject all trials
-with muscle artifacts, but for a ERF analysis it is more important to
-reject trials with drifts and eye artifacts.
+When using visual inspection to detect and reject artifacts, keep in mind that
+it is often a subjective decision to reject certain trials and to keep others.
+The type of artifacts to reject depends on the follow-up analysis you would like
+to do. For frequency analysis of power in the gamma band it is important to
+reject all trials with (high frequency) muscle artifacts, but for a ERF analysis
+it is more important to reject trials with (low frequency) drifts and eye
+artifacts.
 
-For us to get a first impression of our data quality we will use
-**[ft_databrowser](/reference/ft_databrowser)** to look at our individual trials. **[Ft_databrowser](/reference/ft_databrowser)** is a
-great general option if you want to quickly browse your data as it takes
-both continuous and segmented data as inputs. With **[ft_databrowser](/reference/ft_databrowser)** you can
-display all channels at the same time to inspect  non-systematic artifacts such as
-blinks or cap movement.
+{% include markup/danger %}
+It is important that you make your selection of trials *blind* to the experimental manipulation. E.g. in an oddball experiment when you have many standards and few oddballs, you might be tempted to be more strict on the standards and more lenient on the oddballs. This would result in more remaining artifacts in your oddball condition, which could cause a trivial difference in the ERP waveforms.
+
+So you should apply the same criteria for artifact rejection to all your experimental conditions.
+{% include markup/end %}
+
+To get a first impression of our data quality we will use
+**[ft_databrowser](/reference/ft_databrowser)** to look at our individual
+trials. This is a good option if you want to quickly browse your data, as it
+takes both continuous and segmented data as inputs. With
+**[ft_databrowser](/reference/ft_databrowser)** you can display all channels at
+the same time to inspect non-systematic artifacts such as blinks or electrode
+movement.
 
     cfg = [];
     cfg.viewmode = 'vertical';
@@ -212,126 +232,155 @@ blinks or cap movement.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_databrowser.png" width="800" %}
 
+##### Exercise 1
 
-{% include markup/info %}
-Exercise 1: Skip through a couple of data segments and see if you can
-already spot some artifacts. Use the buttons to mark an artifact. Are
-there any bad channels in this dataset?
+{% include markup/exercise %}
+Skip through a couple of data segments and see if you can already spot some
+artifacts. Use the buttons to mark an artifact. Are there any bad channels in
+this dataset?
 {% include markup/end %}
 
-As you might have noticed it is easy to mark segments with **[ft_databrowser](/reference/ft_databrowser)**
-but it is not possible to mark channels as bad and looking at each trial
-individually is not always very efficient.
+As you might have noticed it is easy to mark segments with
+**[ft_databrowser](/reference/ft_databrowser)**, but it is not possible to mark
+channels as bad; also looking at each trial individually and then clicking with
+the mouse to go to the next is not always very efficient.
 
 ### Display one trial at a time
 
-Another option for visual artifact detection is **[ft_rejectvisual](/reference/ft_rejectvisual)**. Wit this
-function you can visually inspects previously segmented
-data and identify the trials or the channels that are affected and that
-should be removed. The visual inspection results in a list of noisy data
-segments and channels. **[Ft_rejectvisual](/reference/ft_rejectvisual)** allows you to browse through the
-large amounts of data in a MATLAB figure by either showing all channels
-at once (per trial) or showing all trials at once (per channel) or by
-showing a summary of all channels and trials, which we will do now.
+Another option for visual artifact detection is
+**[ft_rejectvisual](/reference/ft_rejectvisual)**. This function allows you to
+inspect data that has been segmented into trials and identify either bad trials
+or  bad channels. It allows you to browse through large amounts of data in a
+single figure by either showing all channels at once (per trial), or showing all trials
+at once (per channel), or by showing a summary of all channels and trials.
 
-We will first call **[ft_rejectvisual](/reference/ft_rejectvisual)** with all channels at once, which
-corresponds more or less to using **[ft_databrowser](/reference/ft_databrowser)**, but now we can mark bad
-channels and reject them from further processing.
+We will first call **[ft_rejectvisual](/reference/ft_rejectvisual)** with all
+channels at once. This corresponds more or less to the way that
+**[ft_databrowser](/reference/ft_databrowser)** displays the data (one trial at
+the time), but now we can see individual channels better and can mark channels that are bad.
+
 
     cfg          = [];
     cfg.method   = 'trial';
-    data_clean     = ft_rejectvisual(cfg,data);
+    data_clean   = ft_rejectvisual(cfg, data);
 
-Click through the trials using the > button to inspect each trial.
+To mark a channel that is bad, you have to click in the figure on that specific
+channel. Clicking the channel once more toggles it back to good. To mark the
+whole trial as bad, you have to click on the "bad" button at the bottom of the
+figure. Click through the trials using the `>` button to inspect each trial.
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_rejecttrl.png" width="400" %}
 
-{% include markup/info %}
-Exercise 2: Can you spot which channels are noisier than others? Using
-the mouse, you can select channels that should be removed from the data.
+##### Exercise 2
+
+{% include markup/exercise %}
+Can you spot which channels are noisier than others? Using
+the mouse, you can select channels that you want to remove from the data.
 {% include markup/end %}
 
-**[Ft_rejectvisual](/reference/ft_rejectvisual)** directly returns the data with the noise parts removed
-and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
-We could continue working with the cleaned data, but for now we will
-simply save the bad channel name and continue our data inspection.
+The **[ft_rejectvisual](/reference/ft_rejectvisual)** function directly returns
+the clean data with the bad channels and trials removed and you do not have to call
+**[ft_rejectartifact](/reference/ft_rejectartifact)** or
+**[ft_rejectcomponent](/reference/ft_rejectcomponent)**. We could continue
+working with the cleaned data, but for now we will only save the list of channel
+names of the the bad channels and continue with our data inspection.
 
-    bad_chan = setdiff(data.label,data_clean.label);
+    bad_chan = setdiff(data.label, data_clean.label);
 
 ### Display one channel at a time
-Next we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** to display all trials for this channel,
-this is helpful in order to identify whether the channel is noisy in
-general, becomes bad at a certain time during the experiment or only has
-some glitches. We will also inspect the eog channels, as they will help
-us identify eye blinks.
+
+Next we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** to display
+all trials for a single channel; this is helpful to identify whether the channel
+is noisy in general, or becomes bad at a certain time during the experiment, or
+only has some glitches. It is also helpful to inspect the EOG channels to
+identify trials that have eye blinks or eye movements.
 
     cfg          = [];
     cfg.method   = 'channel';
     cfg.channel  = [bad_chan,'eogv','eogh'];
     data_clean   = ft_rejectvisual(cfg,data);
 
-    blinks       = ismember(data.sampleinfo(:,1),setdiff(data. sampleinfo(:,1),data_clean.sampleinfo(:,1)));
+Since we removed some bad trials, the cleaned data will have fewer trials than
+the original. Let us identify and store the trial numbers that have blinks. We
+are using the `trialinfo` field for this, which contains the begin and end
+sample relative to the original data file.
+
+    bad_trial = ismember(data.sampleinfo(:,1), setdiff(data. sampleinfo(:,1), data_clean.sampleinfo(:,1)));
 
 ### Display a summary
-Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more time in 'summary' mode. This
-option is best to identify trials or channels that are noisy overall
+
+Finally we will call **[ft_rejectvisual](/reference/ft_rejectvisual)** one more
+time in 'summary' mode. This option is the fastest to identify either trials or
+channels that are noisy.
 
     cfg          = [];
     cfg.method   = 'summary';
     cfg.channel  = 'all';
-    cfg.trials   = ~blinks;
+    cfg.trials   = ~bad_trial; % exclude the trials that we already identified as bad
     data_clean   = ft_rejectvisual(cfg,data);
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_rejectsummary.png" width="700" %}
 
-{% include markup/info %}
-Exercise 3: Which channels show the most variance and why is that?
+##### Exercise 3
+
+{% include markup/exercise %}
+Which channels show the most variance? Why is that?
 {% include markup/end %}
 
 {% include markup/danger %}
-If you would like to keep track of which trials you reject, keep in mind
-that the trialnumbers change when you call **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once
-or with the option cfg.trials. If you would like to know which trials you
-rejected, it is best to call rejectvisual only once.
+If you would like to keep track of which trials you reject, keep in mind that
+the trial numbers change when you call
+**[ft_rejectvisual](/reference/ft_rejectvisual)** more than once, or if you use
+the `cfg.trials` option for selection. If you want to keep track which data you
+rejected, it is best look at the sample numbers in the `trialinfo` field. These
+sample numbers always refer to the original EEG data file.
 {% include markup/end %}
 
 ### Inspect cleaned data
-Now that we have identified artifacts using different visual inspection
-approaches, we will use **[ft_databrowser](/reference/ft_databrowser)** again to inspect the data with
-bad trials marked as such For this we first compare the sample info with the
-original data structure.
 
-    bad_trl = data.sampleinfo(ismember(data.sampleinfo(:,1),setdiff(data.sampleinfo(:,1)...
+Now that we have identified artifacts using different visual inspection
+approaches, we will use **[ft_databrowser](/reference/ft_databrowser)** again to
+inspect the data with bad trials marked as such. For this we first compare the
+`sampleinfo` between the original and the clean data structure.
+
+    bad_samples = data.sampleinfo(ismember(data.sampleinfo(:,1), setdiff(data.sampleinfo(:,1)...
     	,data_clean.sampleinfo(:,1))),:);
 
     cfg = [];
-    cfg.viewmode = 'vertical';
-    cfg.artfctdef.visual.artifact = bad_trl;
-    artif = ft_databrowser(cfg,data);
+    cfg.viewmode                  = 'vertical';
+    cfg.artfctdef.visual.artifact = bad_samples;
+    cfg_artif = ft_databrowser(cfg, data);
 
-In case the cleaning with **[ft_rejectvisual](/reference/ft_rejectvisual)** was not sufficient yet, you can
-continue to mark trials or data segments as artifacts within
-**[ft_databrowser](/reference/ft_databrowser)**. The artifact definition will be saved in the output and
-you can then reject those artifacts using **[ft_rejectartifact](/reference/ft_rejectartifact)**. You will see
-an example of this in the [resting-state cleaning EEG tutorial](/workshop/madrid2019/tutorial_cleaning)
+If the cleaning with **[ft_rejectvisual](/reference/ft_rejectvisual)** was not
+sufficient yet, you can continue to mark trials or data segments as artifacts
+within **[ft_databrowser](/reference/ft_databrowser)**. The updated artifact
+definition will be saved in the `cfg_artif` output and you can subsequently
+reject those artifacts using
+**[ft_rejectartifact](/reference/ft_rejectartifact)**. You can see an example of
+this in the [resting-state cleaning EEG
+tutorial](/workshop/madrid2019/tutorial_cleaning)
 
 ## Computing and plotting the ERP's
 
 ### Channel layout
-For topoplotting and sometimes for analysis it is necessary to know how
-the electrodes were positioned on the scalp. In contrast to the sensor
-arrangement from a given MEG manufacturer, the topographical arrangement
-of the channels in EEG is not fixed. Different acquisition systems are
-designed for different electrode montages, and the number and position of
-electrodes can be adjusted depending on the experimental goal. In the
-current experiment, so-called 64-electrodes equidistant montage (ActiCap,
-BrainVision) was used.
 
-The channel positions are not stored in the EEG dataset. You have to use
-a layout file; this is a .mat file that contains the 2-D positions of the
-channels. FieldTrip provides a number of default layouts for BrainVision
-EEG caps in the fieldtrip/template/layout directory. It is also possible
-to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout tutorial](/tutorial/layout)).
+For topographic plotting and sometimes for analysis it is necessary to know
+precisely where the electrodes were positioned on the scalp. In contrast to the
+sensor arrangement in the helmet from a given MEG manufacturer, the
+topographical arrangement of the channels in an EEG system is not fixed. You can
+use the acquisition system with different caps, and the number and position of
+electrodes can be adjusted depending on the experimental question. In the
+current data, a cap with a so-called equidistant electrode layout was used for a
+64-channel active electrode system (BrainVision ActiCap).
+
+The channel positions are in general not recorded during EEG measurements
+(although, see [this](/tutorial/electrode) tutorial) and are hence not stored in
+the EEG dataset. For plotting you have to use a layout file; this is a .mat file
+that contains the 2-D positions of the channels. FieldTrip provides a number of
+template layouts for different EEG caps in the `fieldtrip/template/layout`
+directory. It is also possible to create custom layouts for your own EEG cap,
+see **[ft_prepare_layout](/reference/ft_prepare_layout)** and the [layout
+tutorial](/tutorial/layout).
 
     cfg        = [];
     cfg.layout = 'easycapM10.mat';
@@ -339,29 +388,31 @@ to create custom layouts (see **[ft_prepare_layout](/reference/ft_prepare_layout
 
 ### Trial-average
 
-We will now compute the ERP's for two conditions: auditory and visual stimulus presentation.
-For each trial, the condition information is kept with the data structure in data.trialinfo.
+We will now compute the ERP's for two conditions: visual and auditory stimulus presentation.
 
-use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to compute the ERPs
+For each trial, the condition information is kept with the data structure in `data.trialinfo`. We use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to compute the ERPs and average only those trials in which the trigger code corresponds to the condition of interest (i.e. visual or auditory).
 
     cfg = [];
-    cfg.trials = ismember(data_clean.trialinfo,[112, 122, 132, 142]);
+    cfg.trials = ismember(data_clean.trialinfo, [112, 122, 132, 142]);
     dataVIS = ft_timelockanalysis(cfg, data_clean);
 
     cfg = [];
-    cfg.trials = ismember(data_clean.trialinfo,[113, 123, 133, 143]);
+    cfg.trials = ismember(data_clean.trialinfo, [113, 123, 133, 143]);
     dataAUD = ft_timelockanalysis(cfg, data_clean);
 
-{% include markup/info %}
-Exercise 4: Inspect the resulting data structure after
-**[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Which fields have been added and what information do
-they contain?
+##### Exercise 4
+
+{% include markup/exercise %}
+Inspect the resulting data structure after
+**[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
+
+Which fields have been added and what information do they contain? The fields in the data structure are explained in more detail in **[ft_datatype_timelock](/reference/ft_dataype_timelock)**.
 {% include markup/end %}
 
-We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both conditions at the same time.
-By setting the option interactive = 'yes' you can interact with the
-figure by selecting certain electrodes / time points and going back and
-forth between topoplot- and time representation of the data.
+We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both
+conditions. By setting the option `cfg.interactive='yes'` you can
+interact with the figure by selecting certain channels or time windows and going
+back and forth between the topographic and time representation of the data.
 
     cfg = [];
     cfg.layout      = 'easycapM10.mat';
@@ -369,42 +420,56 @@ forth between topoplot- and time representation of the data.
     cfg.baseline    =[-0.2 0];
     ft_topoplotER(cfg, dataAUD, dataVIS)
 
-{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_topoVIS.png" width="200" %} {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_topoAUD.png" width="200" %}
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_topoVIS.png" width="200" %}
+
+{% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_topoAUD.png" width="200" %}
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_avgtime.png" width="400" %}
 
-{% include markup/info %}
-Exercise 5: Select the time window where the conditions differ the most,
-do the topographies look as you would expect?
+##### Exercise 5
+
+{% include markup/exercise %}
+Select the time window where the conditions differ the most. Do the topographies
+look as you would expect?
 {% include markup/end %}
 
 ## Next steps
 
-After computing your ERPs FieldTrip offers many more functions to
-continue analysing your data. You can use **[ft_math](/reference/ft_math)** to compute difference
-waves, **[ft_timelockstatistics](reference/ft_timelockstatistics)** to run statistics on your ERP effect, compute group
-level averages with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**
-or explore different ways of visualizing, i.e. **[ft_multiplotER](/reference/ft_multiplotER)** etc.
+Following the computation of ERPs, FieldTrip offers many more functions to
+continue analyzing your data. You can use **[ft_math](/reference/ft_math)** to
+compute difference waves,
+**[ft_timelockstatistics](reference/ft_timelockstatistics)** to run statistics
+on your ERP effect, compute group level averages with
+**[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** or explore
+different ways of visualizing, i.e.
+**[ft_multiplotER](/reference/ft_multiplotER)** etc.
 
-{% include markup/info %}
-The following code allows you to look at the ERP difference waves.
+
+##### Exercise 6
+
+{% include markup/exercise %}
+The following code allows you to compute at the ERP difference waves.
 
     cfg = [];
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
     difference = ft_math(cfg, dataAUD, dataVIS);
 
-note that the following appears to do the same
+This in principle does the same as
 
     difference     = dataAUD;                   % copy one of the structures
     difference.avg = dataAUD.avg - dataVIS.avg;   % compute the difference ERP
 
-however that will not keep provenance information, whereas ft_math will
+but **[ft_math](/reference/ft_math)** will keep provenance (i.e. historical
+information) in the `cfg` structure, whereas if you do it by hand you will loose
+the information, which might make it more difficult later in your analysis to
+figure out what you exactly did to your data.
 {% include markup/end %}
 
 ## See also
 
-FAQs:
+Frequently asked questions:
+
 {% include seealso tag1="faq" tag3="preprocessing" %}
 {% include seealso tag1="faq" tag3="timelock" %}
 

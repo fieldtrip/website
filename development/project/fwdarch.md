@@ -118,12 +118,12 @@ Accordingly:
 {% include /shared/development/forwsegm.md %}
 5 - Extract the filled volume of the outer skull using morphological operators
 6 - Dilate the outer skull to estimate the scalp compartment
-7 - For each compartment fit a sphere (see [#SPH1 method](#SPH1 method))
+7 - For each compartment fit a sphere (see [SPH1 method](#SPH1 method))
 8 - Assign the conductivity to each compartment (from literature)
 
 **For 4 spheres:**
 7 - Erode the inner skull to estimate the inside of the CSF compartment
-8 - For each compartment fit a sphere (see [#SPH1 method](#SPH1 method))
+8 - For each compartment fit a sphere (see [SPH1 method](#SPH1 method))
 9 - Assign the conductivity to each compartment (from literature)
 
 [Back](#Architecture/ defining a table for the possible implementations)
@@ -526,7 +526,7 @@ The single shell method is also know as the Nolte method and consists in creatin
 - Segment the brain using SPM/Freesurfer
 - Obtain the inner skull compartment by using csf+white+gray
 - smooth and threshold the obtained volume
-- Use one of the known [#Triangulation methods](#Triangulation methods) to obtain a surface
+- Use one of the known [triangulation methods](#Triangulation methods) to obtain a surface
 
 [Back](#Architecture/ defining a table for the possible implementations)
 
