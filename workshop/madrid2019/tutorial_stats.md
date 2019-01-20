@@ -1,19 +1,20 @@
-Behavioral---
-title: Cluster-based permutation tests on resting-state power spectra
+---
+title: Cluster-based permutation tests on resting-state EEG power spectra
 tags: [madrid2019, eeg-chennu]
 ---
 
-# Cluster-based permutation tests on resting-state power spectra
+# Cluster-based permutation tests on resting-state EEG power spectra
 
 ## Introduction
 
 This tutorial gives an introduction to the statistical analysis of resting state
-EEG data by means of cluster-based permutation tests.
+EEG power spectra by means of cluster-based permutation tests.
 
 We will sketch the background of permutation tests and apply it to different
 experimental questions. In this tutorial we will continue with the Chennu et al.
-dataset. We will use data that has already been preprocessed, but if you are
-interested in the raw data from all subjects, you can download it from our [FTP
+dataset. We will use data that has already been preprocessed and spectrally
+analyzed, but if you are interested in the raw data from all subjects, you can
+download it from our [FTP
 Server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/).
 Please note that you **do not** have to download all subjects for this tutorial.
 

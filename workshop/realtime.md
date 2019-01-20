@@ -1,6 +1,6 @@
 ---
 title: Realtime MEG BCI hands-on session in Nijmegen
-tags: [realtime, workshop]
+tags: [realtime]
 ---
 
 # Realtime MEG BCI hands-on session in Nijmegen
