@@ -62,7 +62,7 @@ This will display the event types and values on screen. The trigger codes S112,
 S122, S132, S142 (animals) S152, S162, S172, S182 (tools) correspond to the
 presented visual stimuli. The trigger codes S113, S123, S133, S143 (animals)
 S153, S163, S173, S183 (tools) correspond to the presented auditory stimuli.
-These are the triggers we will select for now
+These are the triggers we will select for now.
 
     trigVIS = {'S112', 'S122', 'S132', 'S142', 'S152', 'S162', 'S172', 'S182'};
     trigAUD = {'S113', 'S123', 'S133','S143' , 'S153', 'S163', 'S173', 'S183'};
@@ -76,16 +76,16 @@ These are the triggers we will select for now
     cfg                     = ft_definetrial(cfg);
 
 After the call to **[ft_definetrial](/reference/ft_definetrial)**, the configuration structure cfg now not
-only stores the dataset name, but also contains a field cfg.trl with the
+only stores the dataset name, but also contains a field `cfg.trl` with the
 definition of the segments of data that will be used for further
 processing and analysis. Each row in the trl-matrix represents a single
 epoch-of-interest, and the trl-matrix has at least 3 columns. The first
-column defines (in samples) the beginpoint of each epoch with respect to
+column defines (in samples) the begin sample of each epoch with respect to
 how the data are stored in the raw datafile. The second column defines
-the endpoint of each epoch, and the third column specifies the offset of
-the first sample within each epoch with respect to timepoint 0 within that epoch.
+the end sample of each epoch, and the third column specifies the offset of
+the first sample within each epoch with respect to time 0 within that epoch.
 
-We will now read in the trials defined in the cfg structure. For
+We will now read in the trials that were defined in the cfg structure. For
 preprocessing this EEG data set, the choice of the reference has to be
 considered. During acquisition the reference channel of the EEG amplifier
 was attached to the left mastoid. We would like to analyze this data with
@@ -228,7 +228,7 @@ movement.
 
     cfg = [];
     cfg.viewmode = 'vertical';
-    artfct       = ft_databrowser(cfg,data)
+    artfct       = ft_databrowser(cfg, data)
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_databrowser.png" width="800" %}
 
@@ -298,7 +298,7 @@ identify trials that have eye blinks or eye movements.
     cfg          = [];
     cfg.method   = 'channel';
     cfg.channel  = [bad_chan,'eogv','eogh'];
-    data_clean   = ft_rejectvisual(cfg,data);
+    data_clean   = ft_rejectvisual(cfg, data);
 
 Since we removed some bad trials, the cleaned data will have fewer trials than
 the original. Let us identify and store the trial numbers that have blinks. We
@@ -317,7 +317,7 @@ channels that are noisy.
     cfg.method   = 'summary';
     cfg.channel  = 'all';
     cfg.trials   = ~bad_trial; % exclude the trials that we already identified as bad
-    data_clean   = ft_rejectvisual(cfg,data);
+    data_clean   = ft_rejectvisual(cfg, data);
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_rejectsummary.png" width="700" %}
 

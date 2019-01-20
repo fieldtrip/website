@@ -71,13 +71,13 @@ In trial 15 notice the slower drift observed over a larger group of sensors. Thi
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/untitled.jpg" %}
 
-Trial 84 shows an artifact which is caused by the electronics. Notice the jump in sensor MLT4
+Trial 84 shows an artifact which is caused by the electronics. Notice the jump in sensor MLT41.
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/untitled-1.jpg" width="530" %}
 
 By browsing through the trials, related artifacts become evident (trial 15, 36, 39, 42, 43, 45 ,49, 50, 81, 82 and 84). They should be marked as 'bad'. After pressing the 'quit' button the trials marked 'bad' are now removed from the data structure.
 
-If you would like to keep track of which trials you reject, keep in mind that the trialnumbers change when you call **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once. An example: There are 87 trials in your data and first you reject trial 15, 36 and 39. Then trial number 87 becomes trial number 84. Later when you also want to reject trials 42, 43, 45 ,49, 50, 81, 82 and 84 you should be very careful and subtract 3 from all the old trial numbers. If you would like to know which trials you rejected, it is best to call rejectvisual only once.
+If you would like to keep track of which trials you reject, keep in mind that the trial numbers change when you call **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once. An example: There are 87 trials in your data and first you reject trial 15, 36 and 39. Then trial number 87 becomes trial number 84. Later when you also want to reject trials 42, 43, 45 ,49, 50, 81, 82 and 84 you should be very careful and subtract 3 from all the old trial numbers. If you would like to know which trials you rejected, it is best to call ft_rejectvisual only once.
 
 ### Manual artifact rejection - display one channel at a time
 

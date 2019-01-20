@@ -162,7 +162,7 @@ your own neighbours structure. See also the
     cfg.badchannel     = artif.badchannel;
     cfg.method         = 'weighted';
     cfg.neighbours     = neighbours;
-    data_fixed = ft_channelrepair(cfg,data);
+    data_fixed = ft_channelrepair(cfg, data);
 
 For this subject the noisy channel only has a handful of artifacts, so
 instead of interpolating an entire channel, we will only interpolate the
@@ -273,7 +273,7 @@ the sample information
 
     cfg = [];
     cfg.trl = [min(data.sampleinfo(:,1)) max(data.sampleinfo(:,2)) 0];
-    data = ft_redefinetrial(cfg,data);
+    data = ft_redefinetrial(cfg, data);
 
 # Visualize the results of channel interpolation
 
@@ -293,7 +293,7 @@ We can use **[ft_databrowser](/reference/ft_databrowser)** to check the results 
     if isfield(artif.artfctdef,'muscle')
         cfg.artfctdef.muscle.artifact     = artif.artfctdef.muscle.artifact;
     end
-    ft_databrowser(cfg,data);
+    ft_databrowser(cfg, data);
 
 ## Reject the muscular and visual artifacts
 

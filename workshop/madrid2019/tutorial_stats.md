@@ -180,10 +180,10 @@ We can use some options to improve the figure cosmetics.
     cfg.colormap         = 'jet';
 
     figure('position',[680 240 1039 420]);
-    subplot(2,4,1); ft_topoplotER(cfg,base_sedation); colorbar; title('baseline');
-    subplot(2,4,2); ft_topoplotER(cfg,mild_sedation); colorbar; title('mild');
-    subplot(2,4,3); ft_topoplotER(cfg,mode_sedation); colorbar; title('moderate');
-    subplot(2,4,4); ft_topoplotER(cfg,reco_sedation); colorbar; title('recovery');
+    subplot(2,4,1); ft_topoplotER(cfg, base_sedation); colorbar; title('baseline');
+    subplot(2,4,2); ft_topoplotER(cfg, mild_sedation); colorbar; title('mild');
+    subplot(2,4,3); ft_topoplotER(cfg, mode_sedation); colorbar; title('moderate');
+    subplot(2,4,4); ft_topoplotER(cfg, reco_sedation); colorbar; title('recovery');
 
     subplot(2,4,5);loglog(base_sedation.freq,...
       [squeeze(mean(mean(base_sedation.(cfg.parameter)(:,sel_fROI,:),2),1))...
@@ -885,8 +885,8 @@ one we used in between-participant contrast
 
 ROI contrast in RESPONSIVE group
 
-    sedation_respon_d = ft_math(cfg,base_sedation_respon,mode_sedation_respon);
-    sedation_drowsy_d = ft_math(cfg,base_sedation_drowsy,mode_sedation_drowsy);
+    sedation_respon_d = ft_math(cfg, base_sedation_respon, mode_sedation_respon);
+    sedation_drowsy_d = ft_math(cfg, base_sedation_drowsy, mode_sedation_drowsy);
 
     cfg = [];
     cfg.channel          = 'all';
@@ -945,10 +945,10 @@ Choose the cluster you want to see: positive or negative
     cfg.channel     = chanoineg;
     cfg.avgoverchan = 'yes';
     cfg.parameter   = {'powspctrm','powspctrm_b'};
-    b_r = ft_selectdata(cfg,base_sedation_respon);
-    m_r = ft_selectdata(cfg,mode_sedation_respon);
-    b_d = ft_selectdata(cfg,base_sedation_drowsy);
-    m_d = ft_selectdata(cfg,mode_sedation_drowsy);
+    b_r = ft_selectdata(cfg, base_sedation_respon);
+    m_r = ft_selectdata(cfg, mode_sedation_respon);
+    b_d = ft_selectdata(cfg, base_sedation_drowsy);
+    m_d = ft_selectdata(cfg, mode_sedation_drowsy);
 
 Compute the confidence intervals
 
@@ -1072,13 +1072,13 @@ Now, it is time to prepare the data as follows:
     cfg.design   = design;
     cfg.ivar     = 1;
 
-    stat5 = ft_freqstatistics(cfg,mode_sedation);
+    stat5 = ft_freqstatistics(cfg, mode_sedation);
 
     cfg            = [];
     cfg.alpha      = stat5.cfg.alpha;
     cfg.parameter  = 'stat';
     cfg.zlim       = [-3 3];
     cfg.elec       = elec;
-    ft_clusterplot(cfg,stat5);
+    ft_clusterplot(cfg, stat5);
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig8_corr.png" width="800" %}
