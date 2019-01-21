@@ -84,7 +84,7 @@ of cycles must fit in the time window.
 We will skip the preprocessing and start directly with the preprocessed
 data. You can download [data_task.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/tutorial_freq/data_task.mat) from our FTP server.
 
-    load data_task.mat
+    load('/madrid2019/tutorial_freq/data_task.mat')
 
 In this tutorial we will pool all stimuli belonging to the visual and
 auditory categories, forming two datasets: data_visc and data_audc. In

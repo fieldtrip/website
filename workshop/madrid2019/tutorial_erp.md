@@ -54,7 +54,7 @@ You can download the single-subject task dataset [here](ftp://ftp.fieldtriptoolb
 Let us first look at the different trigger codes present in the dataset
 
     cfg = [];
-    cfg.dataset             = 'single_subject_task/raw/subj2.vhdr';
+    cfg.dataset             = 'madrid2019/tutorial_erp/single_subject_task/raw/subj2.vhdr';
     cfg.trialdef.eventtype = '?';
     dummy                   = ft_definetrial(cfg);
 
