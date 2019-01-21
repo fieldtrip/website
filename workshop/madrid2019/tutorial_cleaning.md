@@ -70,7 +70,7 @@ Our goal now is to identify these noisy periods plus potential eye movements, bl
 We will start with some minimal preprocessing:  
 
     cfg = [];
-    cfg.dataset    = ['single_subject_resting/' subj '_task-rest_run-3_eeg.vhdr'];
+    cfg.dataset    = ['/madrid2019/tutorial_cleaning/single_subject_resting/' subj '_task-rest_run-3_eeg.vhdr'];
     cfg.channel    = 'all';
     cfg.demean     = 'yes';
     cfg.detrend    = 'no';
@@ -138,14 +138,13 @@ cell array such as {'E7';'Oz'}
     artif.badchannel  = input('write badchannels: ');
     artif.misschannel = input('write missed channels: ');
 
-
 to save disk space and to prevent doing the same interactive work twice, it is
 advisable to save the minimal information and run the pipeline again to
 reconstruct the data. Here, we have already saved the artifacts we identified but
 not the cleaned EEG data. You can either load the preselected artifact file
 'sub-22_run-03_eeg_artif' or continue with your own selection.
 
-    load('sub-22_run-03_eeg_artif')
+    load('/madrid2019/tutorial_cleaning/sub-22_run-03_eeg_artif')
 
 ## Interpolating bad channels
 
@@ -162,7 +161,7 @@ own EEG system and your own data  best and you should therefore think about
 your own neighbours structure. See also the
 **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function.
 
-    load('cfg_neighbours', 'neighbours');
+    load('/madrid2019/tutorial_cleaning/cfg_neighbours', 'neighbours');
 
 ### Interpolate channels that are bad during the whole experiment
 
@@ -400,7 +399,7 @@ wait for the ICA to finish. Those have been computed on all four runs (sedation
 levels) combined. Using the pre-computed topo and unmixing matrix, we can
 quickly reconstruct the effect of the ICA unmixing.
 
-    comp = load([subj,'_comp']);
+    comp = load(['/madrid2019/tutorial_cleaning/,subj,'_comp']);
 
     cfg = [];
     cfg.demean    = 'no';           % This has to be explicitly stated, as the default is to demean.
