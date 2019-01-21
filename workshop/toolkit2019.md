@@ -10,7 +10,7 @@ This intense 5-day toolkit course will teach you advanced MEG and EEG data analy
 
 Organizer: Robert Oostenveld, with the help of many colleagues.
 
-Preregistration is open until 1 March 2019. Please go to [this page](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/) for registration information. 
+Preregistration is open until 1 March 2019. Please go to [this page](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/) for registration information.
 
 ## Detailed Program
 
