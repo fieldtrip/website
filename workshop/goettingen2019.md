@@ -25,13 +25,13 @@ Tzvetan Popov and Mats van Es.
 
 -   **19:00 - 09:15**   Registration, welcome and coffee
 -   **09:15 - 10:15**   Lecture I: Introduction to EEG/MEG and introduction to the FieldTrip toolbox _Mats van Es_
--   **10:15 - 12:00**   Hands-On I: Introduction to Event-Related Fields - “Preprocessing” [hands-on](/tutorial/eventrelatedaveraging)
+-   **10:15 - 12:00**   Hands-On I: [Introduction to Event-Related Fields](/tutorial/eventrelatedaveraging) - “Preprocessing”
 -   **12:00 - 13:15**   Lunch
 
 -   **13:15 - 14:30**   Lecture II: Fundamentals of neuronal oscillations and synchrony - “Time-Frequency Analysis” _Mats van Es_
 -   **14:30 - 14:45**   Q&A so far
 -   **14:45 - 15:15**   Coffee break
--   **15:15 - 17:00**   Hands On II: Time-frequency analysis of power - “Time-Frequency Analysis” [hands-on](/tutorial/timefrequencyanalysis)
+-   **15:15 - 17:00**   Hands On II: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis) - “Time-Frequency Analysis”
 -   **17:00 - 17:30**   Wrap-up-the-day and questions
 
 
@@ -43,10 +43,10 @@ Tzvetan Popov and Mats van Es.
 -   **11:30 - 12:00**    Q&A so far
 -   **12:00 - 13:00**    Lunch
 
--   **13:00 - 14:00**   Hands On III: Identifying oscillatory sources using Beamformers – “Source Analysis” [hands-on](/tutorial/beamformer)
+-   **13:00 - 14:00**   Hands On III: [Identifying oscillatory sources using Beamformers](/tutorial/beamformer) – “Source Analysis” 
 -   **14:00 - 14:15**   Coffee break
 -   **14:15 - 15:15**   Lecture V: Connectivity analysis in MEG and EEG data - “Connectivity” _Tzvetan Popov_
--   **15:15 - 16:15**   Hands On IV: Analysis of sensor- and source-level connectivity – “Connectivity” [hands-on](/tutorial/connectivity)
+-   **15:15 - 16:15**   Hands On IV: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity) – “Connectivity”
 -   **16:15 - 16:45**   Wrap-up-the-day and questions
 -   **19:00 - 23:00**   Social Event
 
@@ -55,14 +55,14 @@ Tzvetan Popov and Mats van Es.
 
 -   **9:00 - 10:00**   Lecture VI: Statistics using non-parametric randomization techniques - “Statistical Testing/Methods” _Tzvetan Popov_
 -   **10:00- 10:15**   Coffee break
--   **10:15- 11:00**   Hands On V: Statistics using non-parametric randomization techniques - “Statistical Testing/Methods” [hands-on](/tutorial/cluster_permutation_timelock)
+-   **10:15- 11:00**   Hands On V: [Statistics using non-parametric randomization techniques](/tutorial/cluster_permutation_timelock) - “Statistical Testing/Methods”
 -   **11:00- 13:00**   FieldTrip Playground (bring your own data)
 -   **13:00- 13:45**   Wrap-up-the-day and Closing remarks
 
 
 ## Getting started with the hands-on sessions
 
-For the hands-on sessions you have to start MATLAB. Make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download. All the required data and a recent version of FieldTrip can be downloaded [here](ftp: _ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/mannheim2018).
+For the hands-on sessions you have to start MATLAB. Make sure you have downloaded the hands-on data prior to the start of the workshop as it is quite a large download.
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.
