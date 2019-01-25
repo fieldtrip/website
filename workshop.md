@@ -17,7 +17,7 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
-* 2019, Göttingen, Germany
+* 2019, [Göttingen, Germany](/workshop/goettingen2019)
 * 2019, educational session at HBM conference in Rome, Italy
 * 2019, ECoG/SEEG toolkit - Davis, California
 * 2019, [MEG/EEG toolkit](/workshop/toolkit2019) - Nijmegen, NL
