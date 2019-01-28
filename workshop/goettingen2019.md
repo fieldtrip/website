@@ -18,6 +18,7 @@ Mon 4 Feb - Wed 6 Feb, 2019.
 ### Who
 
 Tzvetan Popov and Mats van Es.
+Local organizer: Daniel van de Velden.
 
 ## Program
 
