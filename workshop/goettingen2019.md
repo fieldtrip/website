@@ -23,7 +23,7 @@ Tzvetan Popov and Mats van Es.
 
 ### Monday 4 February
 
--   **19:00 - 09:15**   Registration, welcome and coffee
+-   **09:00 - 09:15**   Registration, welcome and coffee
 -   **09:15 - 10:15**   Lecture I: Introduction to EEG/MEG and introduction to the FieldTrip toolbox _Mats van Es_
 -   **10:15 - 12:00**   Hands-On I: [Introduction to Event-Related Fields](/tutorial/eventrelatedaveraging) - “Preprocessing”
 -   **12:00 - 13:15**   Lunch
