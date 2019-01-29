@@ -44,7 +44,7 @@ The "Sociedad Espanola de Psicofisiologia y Neurociencia Cognitiva y Afectiva" (
 
 ## The data used for the hands-on sessions
 
-During the hands-on sessions we will use EEG data recorded in a [language experiment](/workshop/madrid2019/eeg_language), and resting-state EEG data recorded during [sedation with Propofol](/workshop/madrid2019/eeg_chennu).
+During the hands-on sessions we will use EEG data recorded in a [language experiment](/workshop/madrid2019/eeg_language), and resting-state EEG data recorded during [sedation with Propofol](/workshop/madrid2019/eeg_chennu). The data has been reorganized/reformatted from its original format into BIDS as described in [this script](/workshop/madrid2019/convert_bids).
 
 The data will be provided on a USB stick during the hands-on sessions. You can also download the data from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/).
 
