@@ -32,11 +32,14 @@ h3, h4, h5, h6 {
 /* -------------------------------------------------- */
 /* Code blocks */
 
-pre {
-  background-color: #eeeeee;
+div.highlight {
   padding: 0.8em;
   border-radius: 0.3em;
+  margin-bottom: 0.5rem;
+}
+pre {
   font-size: 82.5%;
+  margin-bottom: 0;
 }
 
 /* -------------------------------------------------- */
