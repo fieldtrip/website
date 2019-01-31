@@ -14,27 +14,20 @@ title: ChildBrain pre-conference workshop in Leuven, Belgium
 For the hands on session, we kindly require you to bring a functional laptop with MATLAB and FieldTrip installed. This session will be divided in a theoretical introduction, followed by the practical session, for which we ask you to read the points below:
 -   We expect that you know the basics of MATLAB and that you already have experience with MEG/EEG preprocessing and analysis.
 -   As the focus is on source reconstruction, topics that will NOT be covered in great detail are segmenting, artifact handling, averaging, frequency and time-frequency analysis, statistics.
--   If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the “MATLAB for psychologists” tutorial on http://www.antoniahamilton.com/matlab.html
--   To understand the FieldTrip toolbox design please read the FieldTrip reference paper.
+-   If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the “MATLAB for psychologists” tutorial on http://www.antoniahamilton.com/matlab.html to understand the FieldTrip toolbox design please read the FieldTrip reference paper.
 -   We will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this introduction tutorial.
 
 In the first workshop hands-on session we will start with preprocessing EEG data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
-_We will start at 9:00 sharp and will finish around 17:30._
+_We will start at 9:00 sharp and will finish around 12:00._
 
 #### Tuesday
 
-| 09:00-09:30 | Welcome                                                                                                                            |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 09:30-10:30 | Lecture [Preprocessing](http:/ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/baci2017/antonakakis_preprocessing_29_08_2017.pptx) |
-| 10:30-10:45 | Coffee break                                                                                                                       |
-| 10:45-11:30 | Hands on - [Preprocessing](/workshop/baci2017/preprocessing)                                                                       |
-| 11:30-12:30 | Lecture - Forward problem                                                                                                          |
-| 12:30-14:00 | Lunch break                                                                                                                        |
-| 14:00-15:00 | Hands on - [Forward problem](/workshop/baci2017/forwardproblem)                                                                    |
-| 15:00-15:45 | Lecture - Inverse problem                                                                                                          |
-| 15:45-16:00 | Coffee break                                                                                                                       |
-| 16:00-17:00 | Hands on - [Inverse problem](/workshop/baci2017/inverseproblem)                                                                    |
-| 17:00-17:30 | Wrap-up-the-day: special topics, general questions and answers                                                                     |
+| 09:00-09:15 | Welcome       |
+| 09:15-10:15 | Lecture       |
+| 10:15-10:30 | Coffee break  |
+| 10:45-12:00 | Hands on      |
+
+First of all we have to download the pediatric head model from https://www.pedeheadmod.net.
 
 To get going, you need to start MATLAB. Then, you need to issue the following command
 
@@ -57,4 +50,4 @@ subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
-After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session. These folders are located in C:\\FieldTrip_workshop\\baci2017\\data.
+After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session. These folders are located in C:\\FieldTrip_workshop\\.
