@@ -5,9 +5,16 @@ title: ChildBrain pre-conference workshop in Leuven, Belgium
 # ChildBrain pre-conference workshop in Leuven, Belgium
 
 -   By whom: Raul Granados, Simon Homölle
--   When: 5 February 2019
+-   When: Tuesday 5 February 2019
 -   Where: Pre-conference training courses at the ChildBrain conference in Leuven <http://www.baci-conference.com>
 -   Local organization: Raul Granados.
+
+## Program
+
+| 09:00-09:15 | Welcome       |
+| 09:15-10:15 | Lecture       |
+| 10:15-10:30 | Coffee break  |
+| 10:45-12:00 | Hands on      |
 
 ## How should you prepare for the workshop?
 
@@ -20,12 +27,8 @@ For the hands on session, we kindly require you to bring a functional laptop wit
 In the hands-on session we will start with preprocessing structral MRI data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
 _We will start at 9:00 sharp and will finish around 12:00._
 
-#### Tuesday
 
-| 09:00-09:15 | Welcome       |
-| 09:15-10:15 | Lecture       |
-| 10:15-10:30 | Coffee break  |
-| 10:45-12:00 | Hands on      |
+## Setting up for the hands-on session
 
 To get going, you need to start MATLAB. Then, you need to issue the following command
 
@@ -51,12 +54,9 @@ If you get the error "can't find the command ft_defaults" you should check the p
 After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session. These folders are located in C:\\FieldTrip_workshop\\.
 
 
+## Introduction - Solving the EEG forward problem
 
-## Solving the EEG forward problem
-
-## Introduction
-
-The aim of this tutorial is to solve the EEG forward problem using the numerical methods the Boundary Element Method (BEM).
+The aim of this tutorial is to solve the EEG forward problem using the Boundary Element Method (BEM).
 
 ## Background
 
@@ -79,7 +79,7 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" %}
 *Figure1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM*
 
-##  1. Read the MRI
+###  1. Read the MRI
 
 	mri_orig = ft_read_mri('ANTS14-0Years3T_head_bias_corrected.nii.gz');
 
@@ -91,7 +91,7 @@ Visualize the MRI
 {% include image src="/assets/img/workshop/leuven2019/mri_orig.png" %}
 *Figure2: visualization of the MRI*
 
-##  2. Realign the MRI
+###  2. Realign the MRI
 
 In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI.
 
@@ -108,7 +108,7 @@ We can visualize the realigned MRI
   {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" %}
   *Figure3: visualization of the realigned MRI*
 
-##  3. Reslice the MRI
+###  3. Reslice the MRI
 
 	cfg = [];
 	mri_resliced = ft_volumereslice(cfg, mri_realigned);
@@ -122,7 +122,7 @@ We can visualize the resliced MRI
 {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" %}
 *Figure3: visualization of the realigned MRI*
 
-##  5. Segment the MRI
+###  5. Segment the MRI
 
 	cfg           = [];
 	cfg.output    = {'brain','skull', 'scalp'};
@@ -142,7 +142,7 @@ Visualize the segmentation
 {% include image src="/assets/img/workshop/leuven2019/mri_segmented_bem.png" %}
 *Figure4: 3 compartment segmentation output*
 
-##  6. Create the mesh
+###  6. Create the mesh
 
 	cfg=[];
 	cfg.tissue={'brain','skull','scalp'};
@@ -161,7 +161,7 @@ Visualize the mesh
 {% include image src="/assets/img/workshop/leuven2019/mesh_bem.png" %}
 *Figure5: 3 compartment mesh with electrodes*
 
-##  7. Create the headmodel
+###  7. Create the headmodel
 
 	cfg        = [];
 	cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
@@ -171,7 +171,7 @@ Visualize the mesh
 In Windows the method 'dipoli' does not work. You can explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
 {% include markup/end %}
 
-##  8. Align the electrodes
+###  8. Align the electrodes
 
 First we have to load a suitable electrode set. For this tutorial we will load a template dataset and transform it in such a way that it will fit the head surface.
 
@@ -197,7 +197,7 @@ Check the alignment visually.
 {% include image src="/assets/img/workshop/leuven2019/aligned.png" %}
 *Figure6: mesh, electrodes and axes.*
 
-##  9. Create the sourcemodel
+###  9. Create the sourcemodel
 
 	cfg = [];
 	cfg.grid.resolution = 7.5;
@@ -220,7 +220,7 @@ Save the sourcemodel
 
 	save sourcemodel sourcemodel;
 
-##  10. Compute the leadfield
+###  10. Compute the leadfield
 
 	cfg = [];
 	cfg.grid = sourcemodel;
@@ -229,8 +229,6 @@ Save the sourcemodel
 	leadfield_bem = ft_prepare_leadfield(cfg);
 
 ## 11. Further tasks
-
-
 
 #### Exercise 1
 
@@ -258,7 +256,4 @@ You can also find the file 'AVG14-0Years3T_segmented_BEM3.mat'. This a segmentat
 
 ## Summary and Comments
 
-This tutorial was about the computation of leadfields that could be feed into the inverse problem.
-
------
-This tutorial was last tested on 27-08-2017 by Maria Carla Piastra on Ubuntu, Matlab 2015b.
+This tutorial explained how to compute leadfields, which can be used for source estimation and localization.
