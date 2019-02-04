@@ -28,7 +28,6 @@ This section of the website lists information aimed at developers of FieldTrip a
 *  [Implement support for a separation of data into a signal and noise subspace](/development/project/subspace)
 *  [Check the correctness of the implementation of the algorithms](/development/project/correctness)
 *  [Document the deprecated functions and configuration options](/development/deprecated)
-*  [Reimplement the avg/cov/trial handling](/development/project/timelockanalysis)
 *  [improve interactive and non-interactive plotting of 4D bivariate data](/development/project/visualization)  
 *  [Ensemblemethods](/development/project/ensemblemethods)
 *  [Restructure and rework all visualization functions](/development/project/restructure_and_rework_all_visualization_functions)
@@ -89,3 +88,5 @@ This section of the website lists information aimed at developers of FieldTrip a
 *  [Redesign the interface to the read_fcdc_xxx functions](/development/project/read_fcdc_xxx) (done)
 *  [Check the consistency between the documentation and the implementations](/development/project/consistency) (done)
 *  [Redesign and implement a common statistical backend for various data types](/development/project/statistics) (done)
+*  [Reimplement the avg/cov/trial handling](/development/project/timelockanalysis) (done)
+
