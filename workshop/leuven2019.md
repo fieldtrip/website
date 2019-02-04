@@ -54,10 +54,6 @@ If you get the error "can't find the command ft_defaults" you should check the p
 After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session. These folders are located in C:\\FieldTrip_workshop\\.
 
 
-## Introduction - Solving the EEG forward problem
-
-#Creating a head model
-
 ## Introduction
 
 The aim of this tutorial is to create a head model of an adolescent with the numerical method of the Boundary Element Method (BEM), and if as an additional task with the Finite Element Method (FEM). The
@@ -81,7 +77,7 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
  8.  The source model is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
  9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
 
-{% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" %}
+{% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" width="365" %}
 *Figure 1: Pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM*
 
 ###  1. Read the MRI
@@ -95,7 +91,7 @@ Visualize the MRI
 	cfg=[];
 	ft_sourceplot(cfg,mri_orig);
 
-{% include image src="/assets/img/workshop/leuven2019/mri_orig.png" %}
+{% include image src="/assets/img/workshop/leuven2019/mri_orig.png" width="700" %}
 *Figure 2: Visualization of the MRI*
 
 ###  2. Realign the MRI
@@ -112,7 +108,7 @@ We can visualize the realigned MRI
 	cfg = [];
 	ft_sourceplot(cfg, mri_realigned);
 
-  {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" %}
+  {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" width="700" %}
   *Figure 3: Visualization of the realigned MRI*
 
 ###  3. Reslice the MRI
@@ -128,7 +124,7 @@ We can visualize the resliced MRI
 	ft_sourceplot(cfg, mri_resliced);
 
 
-{% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" %}
+{% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" width="700" %}
 *Figure 3: Visualization of the realigned MRI*
 
 ###  4. Segment the MRI
@@ -151,7 +147,7 @@ Visualize the segmentation
 	cfg.atlas        = seg_i;   
 	ft_sourceplot(cfg, seg_i);
 
-{% include image src="/assets/img/workshop/leuven2019/mri_segmented_bem.png" %}
+{% include image src="/assets/img/workshop/leuven2019/mri_segmented_bem.png" width="700" %}
 *Figure 4: 3 compartment segmentation output*
 
 ###  5. Create the mesh
@@ -171,7 +167,7 @@ Visualize the mesh
 	ft_plot_mesh(mesh_bem(3),'surfaceonly','yes','vertexcolor','none','facecolor',...
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 
-{% include image src="/assets/img/workshop/leuven2019/mesh_bem.png" %}
+{% include image src="/assets/img/workshop/leuven2019/mesh_bem.png" width="700" %}
 *Figure 5: 3 compartment mesh with electrodes*
 
 ###  6. Create the head model
@@ -209,7 +205,7 @@ Check the alignment visually.
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 	ft_plot_sens(elec,'style', '.k');
 
-{% include image src="/assets/img/workshop/leuven2019/aligned.png" %}
+{% include image src="/assets/img/workshop/leuven2019/aligned.png" width="700" %}
 
 *Figure 6: Mesh, electrodes and axes.*
 
@@ -230,7 +226,7 @@ Visualize the source model
 	hold on, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
 	             'skin','facealpha',0.5,'edgealpha',0.1)
 
-{% include image src="/assets/img/workshop/leuven2019/sourcemodel_all.png" %}
+{% include image src="/assets/img/workshop/leuven2019/sourcemodel_all.png" width="700" %}
 *Figure 7: Sourcemodel on the brain compartment*
 
 Save the source model
@@ -294,4 +290,3 @@ For source model creation we also suggest following tutorials:
 
 -----
 This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10, Matlab 2018a.
-
