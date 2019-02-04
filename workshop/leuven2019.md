@@ -68,7 +68,7 @@ The aim of this tutorial is to create a head model of an adolescent with the num
 As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved.
 In order to compute leadfields, there are 9 main steps that have to be followed.
  1.  Load and read the anatomical data (**[ft_read_mri](/reference/ft_read_mri)**);
- 2.  Align the MRI to the electrodes. As the electrodes are expressed in the CTF coordinate system, we translate the MRI in the CTF coordinate system (**[ft_volumerealign](/reference/ft_volumerealign)**);
+ 2.  Align the MRI to the CTF coordinates. (**[ft_volumerealign](/reference/ft_volumerealign)**);
  3.  Reslice the MRI image so that the voxels of the anatomical data are homogeneous (i.e. the size of the voxel is the same into each direction). This step will facilitate the segmentation step. (**[ft_volumereslice](/reference/ft_volumereslice)**)
  4.  Segment the MRI: 3 compartments (scalp, skull, brain) (**[ft_volumesegment](/reference/ft_volumesegment)**);
  5.  then we create the mesh: triangulated surface mesh for BEM and hexahedral volume mesh for FEM (**[ft_prepare_mesh](/reference/ft_prepare_mesh)**).
@@ -84,7 +84,7 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
 
 First of all we have to load the data
 
-	mri_orig = ft_read_mri('ANTS14-0Years3T_head_bias_corrected.nii.gz');
+	mri_orig = ft_read_mri('ANTS14-0Years3T_head_bias_corrected.nii');
 
 Visualize the MRI
 
@@ -96,7 +96,7 @@ Visualize the MRI
 
 ##  2. Realign the MRI
 
-In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI. This step is important as later on when we load the electrodes, these electrodes are expressed in CTF coordinates.
+In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks + zpoint (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI. The zpoint is a point in the upper part of the head, it only serves to make sure that coordinate system is not upside down. It is important that all geometrical is expressed in the same coordinate system. This helps for coregistration of these data.
 
 	cfg = [];
 	cfg.method = 'interactive';
@@ -133,6 +133,8 @@ Now we can segment the 3 different tissues we are interested in for our head mod
 	cfg           = [];
 	cfg.output    = {'brain','skull', 'scalp'};
 	mri_segmented_3_compartment = ft_volumesegment(cfg, mri_resliced);
+
+	save mri_segmented_3_compartment mri_segmented_3_compartment
 
 Visualize the segmentation
 
@@ -231,12 +233,15 @@ Save the source model
 save sourcemodel sourcemodel;
 
 ##  9. Compute the leadfield
+We will now compute the lead field for every source in the source model.
 
 	cfg = [];
 	cfg.grid = sourcemodel;
 	cfg.vol= headmodel_bem;
 	cfg.elec = elec;
 	leadfield_bem = ft_prepare_leadfield(cfg);
+
+  This is the step for creating a forward model. We could now use the lead fields of each source to do the inverse modeling!
 
 ## 10. Further tasks
 
@@ -282,4 +287,4 @@ For source model creation we also suggest following tutorials:
 
 
 -----
-This tutorial was last tested on 04-01-2019 by Simon Homölle on Windows 10, Matlab 2018a.
+This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10, Matlab 2018a.
