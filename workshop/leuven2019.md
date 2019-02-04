@@ -6,7 +6,7 @@ title: ChildBrain pre-conference workshop in Leuven, Belgium
 
 -   By whom: Raul Granados, Simon Homölle
 -   When: Tuesday 5 February 2019
--   Where: Pre-conference training courses at the ChildBrain conference in Leuven <http://www.baci-conference.com>
+-   Where: Pre-conference training courses at the ChildBrain conference in Leuven
 -   Local organization: Raul Granados.
 
 ## Program
