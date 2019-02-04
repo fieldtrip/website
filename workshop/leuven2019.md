@@ -96,7 +96,7 @@ Visualize the MRI
 
 ##  2. Realign the MRI
 
-In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI.
+In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI. This step is important as later on when we load the electrodes, these electrodes are expressed in CTF coordinates.
 
 	cfg = [];
 	cfg.method = 'interactive';
@@ -113,6 +113,8 @@ We can visualize the realigned MRI
 
 ##  3. Reslice the MRI
 
+Before we segment the MRI, we will first reslice the MRI. The reason why is that a segmentation works properly when the voxels of the anatomical images are homogenous.
+
 	cfg = [];
 	mri_resliced = ft_volumereslice(cfg, mri_realigned);
 
@@ -126,6 +128,7 @@ We can visualize the resliced MRI
 *Figure 3: Visualization of the realigned MRI*
 
 ##  4. Segment the MRI
+Now we can segment the 3 different tissues we are interested in for our head model
 
 	cfg           = [];
 	cfg.output    = {'brain','skull', 'scalp'};
@@ -146,6 +149,8 @@ Visualize the segmentation
 *Figure 4: 3 compartment segmentation output*
 
 ##  5. Create the mesh
+On the basis of the segmentation we can now create a geometrical description of the head as a mesh
+
 
 	cfg=[];
 	cfg.tissue={'brain','skull','scalp'};
@@ -166,6 +171,8 @@ Visualize the mesh
 
 ##  6. Create the head model
 
+Now we are ready and to create the a head model on the basis of the mesh.
+
 	cfg        = [];
 	cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
 	headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
@@ -178,7 +185,7 @@ In Windows the method 'dipoli' does not work. You can explore other BEM method l
 
 First we have to load a suitable electrode set. For this tutorial we will load a template dataset and transform it in such a way that it will fit the head surface.
 
-  elec = ft_read_sens('standard_1020.elc');
+	elec = ft_read_sens('standard_1020.elc');
 
 And now we will fit it to the head surface.
 
@@ -201,7 +208,7 @@ Check the alignment visually.
 *Figure 6: Mesh, electrodes and axes.*
 
 ##  8. Create the source model
-
+Before we are able to create the leadfields
 	cfg = [];
 	cfg.grid.resolution = 7.5;
 	cfg.threshold = 0.1;
@@ -233,8 +240,6 @@ save sourcemodel sourcemodel;
 
 ## 10. Further tasks
 
-
-
 #### Exercise 1
 
 {% include markup/info %}
@@ -261,7 +266,7 @@ You can also find the segmentation 'AVG14-0Years3T_segmented_BEM3.mat' to create
 
 ## Summary and Comments
 
-This tutorial was about the computation of leadfields that could be feed into the inverse problem.
+This tutorial was about the creation of a volume conduction model on the basis of averaged MRIs of 14 year old subjects, creation of a source model, and computation of the lead fields. This head model could subsequently be used for source level analysis.
 
 ## Further reading
 Another interesting data base to consider for volume conduction modeling for infants is the [Pediatric Head Modeling Project]((https://www.pedeheadmod.net/)).
@@ -271,6 +276,9 @@ For acquisition of electrode positions we can also suggest:
 
 For head model creation we also suggest following tutorials:
 {% include seealso tag1="headmodel" %}
+
+For source model creation we also suggest following tutorials:
+{% include seealso tag1="sourcemodel" %}
 
 
 -----
