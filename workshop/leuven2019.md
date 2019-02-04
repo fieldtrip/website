@@ -5,9 +5,16 @@ title: ChildBrain pre-conference workshop in Leuven, Belgium
 # ChildBrain pre-conference workshop in Leuven, Belgium
 
 -   By whom: Raul Granados, Simon Homölle
--   When: 5 February 2019
+-   When: Tuesday 5 February 2019
 -   Where: Pre-conference training courses at the ChildBrain conference in Leuven <http://www.baci-conference.com>
 -   Local organization: Raul Granados.
+
+## Program
+
+| 09:00-09:15 | Welcome       |
+| 09:15-10:15 | Lecture       |
+| 10:15-10:30 | Coffee break  |
+| 10:45-12:00 | Hands on      |
 
 ## How should you prepare for the workshop?
 
@@ -20,12 +27,8 @@ For the hands on session, we kindly require you to bring a functional laptop wit
 In the hands-on session we will start with preprocessing structral MRI data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
 _We will start at 9:00 sharp and will finish around 12:00._
 
-#### Tuesday
 
-| 09:00-09:15 | Welcome       |
-| 09:15-10:15 | Lecture       |
-| 10:15-10:30 | Coffee break  |
-| 10:45-12:00 | Hands on      |
+## Setting up for the hands-on session
 
 To get going, you need to start MATLAB. Then, you need to issue the following command
 
@@ -51,6 +54,7 @@ If you get the error "can't find the command ft_defaults" you should check the p
 After installing FieldTrip to your path, you need to change into the hands-on specific directory, containing the data that is necessary to run the specific hands-on session. These folders are located in C:\\FieldTrip_workshop\\.
 
 
+## Introduction - Solving the EEG forward problem
 
 #Creating a head model
 
@@ -80,7 +84,7 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" %}
 *Figure 1: Pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM*
 
-##  1. Read the MRI
+###  1. Read the MRI
 
 First of all we have to load the data
 
@@ -94,7 +98,7 @@ Visualize the MRI
 {% include image src="/assets/img/workshop/leuven2019/mri_orig.png" %}
 *Figure 2: Visualization of the MRI*
 
-##  2. Realign the MRI
+###  2. Realign the MRI
 
 In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks + zpoint (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI. The zpoint is a point in the upper part of the head, it only serves to make sure that coordinate system is not upside down. It is important that all geometrical is expressed in the same coordinate system. This helps for coregistration of these data.
 
@@ -111,7 +115,7 @@ We can visualize the realigned MRI
   {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" %}
   *Figure 3: Visualization of the realigned MRI*
 
-##  3. Reslice the MRI
+###  3. Reslice the MRI
 
 Before we segment the MRI, we will first reslice the MRI. The reason why is that a segmentation works properly when the voxels of the anatomical images are homogenous.
 
@@ -127,7 +131,7 @@ We can visualize the resliced MRI
 {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" %}
 *Figure 3: Visualization of the realigned MRI*
 
-##  4. Segment the MRI
+###  4. Segment the MRI
 Now we can segment the 3 different tissues we are interested in for our head model
 
 	cfg           = [];
@@ -150,9 +154,8 @@ Visualize the segmentation
 {% include image src="/assets/img/workshop/leuven2019/mri_segmented_bem.png" %}
 *Figure 4: 3 compartment segmentation output*
 
-##  5. Create the mesh
+###  5. Create the mesh
 On the basis of the segmentation we can now create a geometrical description of the head as a mesh
-
 
 	cfg=[];
 	cfg.tissue={'brain','skull','scalp'};
@@ -171,7 +174,7 @@ Visualize the mesh
 {% include image src="/assets/img/workshop/leuven2019/mesh_bem.png" %}
 *Figure 5: 3 compartment mesh with electrodes*
 
-##  6. Create the head model
+###  6. Create the head model
 
 Now we are ready and to create the a head model on the basis of the mesh.
 
@@ -183,7 +186,7 @@ Now we are ready and to create the a head model on the basis of the mesh.
 In Windows the method 'dipoli' does not work. You can explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
 {% include markup/end %}
 
-##  7. Align the electrodes
+###  7. Align the electrodes
 
 First we have to load a suitable electrode set. For this tutorial we will load a template dataset and transform it in such a way that it will fit the head surface.
 
@@ -207,9 +210,11 @@ Check the alignment visually.
 	ft_plot_sens(elec,'style', '.k');
 
 {% include image src="/assets/img/workshop/leuven2019/aligned.png" %}
+
 *Figure 6: Mesh, electrodes and axes.*
 
-##  8. Create the source model
+
+###  8. Create the source model
 Before we are able to create the leadfields
 	cfg = [];
 	cfg.grid.resolution = 7.5;
@@ -232,8 +237,9 @@ Save the source model
 
 save sourcemodel sourcemodel;
 
-##  9. Compute the leadfield
+###  9. Compute the leadfield
 We will now compute the lead field for every source in the source model.
+
 
 	cfg = [];
 	cfg.grid = sourcemodel;
@@ -241,9 +247,9 @@ We will now compute the lead field for every source in the source model.
 	cfg.elec = elec;
 	leadfield_bem = ft_prepare_leadfield(cfg);
 
-  This is the step for creating a forward model. We could now use the lead fields of each source to do the inverse modeling!
+  This is the last step for creating a forward model. We could now use the lead fields of each source to do the inverse modeling!
 
-## 10. Further tasks
+### 10. Further tasks
 
 #### Exercise 1
 
@@ -288,3 +294,4 @@ For source model creation we also suggest following tutorials:
 
 -----
 This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10, Matlab 2018a.
+
