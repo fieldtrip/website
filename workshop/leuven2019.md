@@ -212,6 +212,7 @@ Check the alignment visually.
 
 ###  8. Create the source model
 Before we are able to create the leadfields
+
 	cfg = [];
 	cfg.grid.resolution = 7.5;
 	cfg.threshold = 0.1;
@@ -254,16 +255,16 @@ Thus far we only created a BEM volume conduction model. To create a FEM volume c
 {% include markup/end %}
 Change Step 5 into
 
-  cfg=[];
-  cfg.tissue={'brain','skull','scalp'};
-  cfg.method='hexahedral';
-  mesh_fem=ft_prepare_mesh(cfg,mri_segmented_3_compartment);
+	cfg=[];
+	cfg.tissue={'brain','skull','scalp'};
+	cfg.method='hexahedral';
+	mesh_fem=ft_prepare_mesh(cfg,mri_segmented_3_compartment);
 
 and Step 6 into
 
-  cfg        = [];
-  cfg.method ='simbio'; % Unfortunately this is not available on Windows.
-  headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
+	cfg        = [];
+	cfg.method ='simbio'; % Unfortunately this is not available on Windows.
+	headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
 
 #### Exercise 2
 
