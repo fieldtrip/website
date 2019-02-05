@@ -34,11 +34,11 @@ After copying all files to your computer and unzipping then, you start MATLAB. T
     addpath(pwd)
     ft_defaults
 
-The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes.
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes.
 
 The ls statement shows the list of files in the present directory, and you can visually check that the contents are correct and e.g. not in another subfolder. You should see a long list of ft_xxx.m functions.
 
-The addpath(pwd) statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
+The `addpath(pwd)` statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 

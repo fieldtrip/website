@@ -58,13 +58,13 @@ Further reading on connectivity and its pitfalls (Bastos and Schoffelen, 2016): 
 
 All the code (correct FieldTrip version) and data for the tutorials are already downloaded on your workshop computer (thus no need to install FieldTrip, nor to download the data when the tutorial indicates this).
 
--   Change directory to the location of the FieldTrip package (here: M:\\kcl-london).  Note the subfolders present.
+-   Change directory to the location of the FieldTrip package (here: M:\kcl-london).  Note the subfolders present.
 -   Add the FieldTrip folder to the path
 
-     addpath('M:/kcl-london/fieldtrip-20151216');
+     addpath('M:\kcl-london\fieldtrip-20151216');
 
 (Note: **do not** add the folder recursively; i.e. do not use addpath(genpath()))
 
--   Run 'ft_defaults' in Matlab.
+-   Run 'ft_defaults' in MATLAB.
 -   Then change directory to the one specifically holding the data for the particular tutorial, e.g. the first is preprocessing_erp.
 -   Confirm that FT has been successfully added to your path, for example by typing 'which ft_preprocessing' in Matlab; the correct path should be displayed.

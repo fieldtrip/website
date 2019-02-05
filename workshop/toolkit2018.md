@@ -86,7 +86,7 @@ A recent copy of FieldTrip and the data have been preinstalled on the computer a
 
     cd D:\toolkit2018
 
-The restoredefaultpath command clears your path, keeping only the official MATLAB toolboxes. The addpath statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The ft_defaults command ensures that all required subdirectories are added to the path.
+The `restoredefaultpath` command clears your path, keeping only the official MATLAB toolboxes. The addpath statement adds the present working directory, i.e. the directory containing the FieldTrip main functions. The `ft_defaults` command ensures that all required subdirectories are added to the path.
 
 {% include markup/danger %}
 In general, please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.

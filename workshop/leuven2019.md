@@ -38,17 +38,22 @@ To get going, you need to start MATLAB. Then, you need to issue the following co
     addpath(pwd)
     ft_defaults
 
+    global ft_default
+    ft_default.spmversion = 'spm12';
+
 {% include markup/danger %}
 Please do NOT use the graphical path management tool from MATLAB. In this hands-on session we'll manage the path from the command line, but in general you are much better off using the startup.m file than the path GUI.
 
 Please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed.
 {% include markup/end %}
 
-The restoredefaultpath command clears your path, keeping only the
-official MATLAB toolboxes. The addpath(pwd) statement adds the
+The `restoredefaultpath` command clears your path, keeping only the
+official MATLAB toolboxes. The `addpath(pwd)` statement adds the
 present working directory, i.e. the directory containing the fieldtrip
-main functions. The ft_defaults command ensures that all required
-subdirectories are added to the path.
+main functions. The `ft_defaults` command ensures that all required
+subdirectories are added to the path. Setting the `spmversion` in the global
+ft_default variable ensures that all FieldTrip functions will use SPM12 rather
+than an older SPM version which sometimes causes issues with the mex files.
 
 If you get the error "can't find the command ft_defaults" you should check the present working directory.
 
