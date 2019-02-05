@@ -2,7 +2,7 @@
 title: Create brain atlas based MNI-aligned grids in individual head-space
 ---
 
-## Create brain atlas based MNI-aligned grids in individual head-space
+# Create brain atlas based MNI-aligned grids in individual head-space
 
 When combining the source-level data of multiple subjects this data is typically first interpolated (e.g. using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**) and then spatially normalized to a template brain (e.g. using **[ft_volumenormalise](/reference/ft_volumenormalise)**). However it is also possible to define the source-reconstruction grid for each individual subject in such a way that all these grids are already aligned in MNI-space. The combination or statistic of source-level data across subjects can then directly be computed within the source-structure without the need to interpolate and normalize each volume. In addition, the position of the grid points can be chosen in a way that only locations corresponding to particular brain areas (parcels) are included.
 

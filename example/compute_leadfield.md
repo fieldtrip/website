@@ -1,9 +1,9 @@
 ---
-title: Example use of the compute_leadfield function
+title: Example use of the ft_compute_leadfield function
 tags: [example, headmodel, source]
 ---
 
-## Example use of the compute_leadfield function
+# Example use of the ft_compute_leadfield function
 
 	% create a set of electrodes, randomly placed on a sphere
 	elec = [];
@@ -23,7 +23,7 @@ tags: [example, headmodel, source]
 
 	% compute the leadfield for a dipole at position [0 0 0.5]
 	pos = [0 0 0.5];
-	lf = compute_leadfield(pos, elec, vol);
+	lf = ft_compute_leadfield(pos, elec, vol);
 
 	% compute the potential distribution for a dipole with x-orientation
 	mom = [1 0 0]';

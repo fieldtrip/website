@@ -3,7 +3,7 @@ title: Example analysis pipeline for Biosemi data
 tags: [example, eeg, dataformat, biosemi, bdf]
 ---
 
-## Example analysis pipeline for Biosemi data
+# Example analysis pipeline for Biosemi data
 
 The following is an example analysis pipeline that was used for the FieldTrip workshop at [CUNY, New York](http://www.cuny.edu) by Stephen and Saskia in 2011.
 
