@@ -109,7 +109,7 @@ We can visualize the realigned MRI
 	cfg = [];
 	ft_sourceplot(cfg, mri_realigned);
 
-  {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" width="700" %}
+  {% include image src="/assets/img/workshop/leuven2019/mri_realigned.png" width="700" %}
   *Figure 3: Visualization of the realigned MRI*
 
 ###  3. Reslice the MRI
