@@ -77,18 +77,18 @@ The trials belonging to one condition will now be averaged with the onset of the
 The source space, the volume conduction model  and the position of the sensors are necessary inputs for creating the leadfield (forward solution) with the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function. The sensor positions are contained in the grad field of the averaged data. However, the grad field contains the positions of all channels, therefore, the used channels have to be also specified.  
 
 	load tlck;
-	load sourcespace;
-	load vol;
+	load Subject01_sourcemodel_15684;
+	load Subject01_headmodel;
 
-	cfg = [];
-	cfg.grad = tlckFC.grad;                      % sensor positions
-	cfg.channel = {'MEG', '-MLP31', '-MLO12'};   % the used channels
-	cfg.grid.pos = sourcespace.pnt;              % source points
-	cfg.grid.inside = 1:size(sourcespace.pnt,1); % all source points are inside of the brain
-	cfg.headmodel = vol;                               % volume conduction model
-	leadfield = ft_prepare_leadfield(cfg);
+	cfg         = [];
+	cfg.grad    = tlckFC.grad;   % sensor information
+	cfg.channel = tlckFC.label;  % the used channels
+	cfg.grid    = sourcemodel;   % source points
+	cfg.headmodel = headmodel;   % volume conduction model
+	cfg.singleshell.batchsize = 5000; % speeds up the computation
+	leadfield   = ft_prepare_leadfield(cfg);
 
-	save leadfield leadfield;
+	save Subject01_leadfield leadfield;
 
 ## Inverse solution
 
@@ -99,18 +99,18 @@ The lambda value is a scaling factor that is responsible for scaling the noise-c
 You do not have to specify of the noise-covariance matrix separatly, because it is in the tlckFC.cov and in the tlckFIC.cov fields, and ft_sourceanalysis will take it into account automatically.
 
 	load tlck;
-	load leadfield;
-	load vol;
+	load Subject01_leadfield;
+	load Subject01_headmodel;
 
-	cfg        = [];
-	cfg.method = 'mne';
-	cfg.grid   = leadfield;
-	cfg.headmodel     = vol;
+	cfg               = [];
+	cfg.method        = 'mne';
+	cfg.grid          = leadfield;
+	cfg.headmodel     = headmodel;
 	cfg.mne.prewhiten = 'yes';
 	cfg.mne.lambda    = 3;
 	cfg.mne.scalesourcecov = 'yes';
-	sourceFC  = ft_sourceanalysis(cfg,tlckFC);
-	sourceFIC = ft_sourceanalysis(cfg, tlckFIC);
+	sourceFC          = ft_sourceanalysis(cfg,tlckFC);
+	sourceFIC         = ft_sourceanalysis(cfg, tlckFIC);
 
 	save source sourceFC sourceFIC;
 
@@ -119,13 +119,11 @@ You do not have to specify of the noise-covariance matrix separatly, because it 
 You can plot the inverse solution onto the source-space at a specific time-point with the **[ft_plot_mesh](/reference/ft_plot_mesh)** function.
 
 	load source;
-	load sourcespace;
-
-	bnd.pnt = sourcespace.pnt;
-	bnd.tri = sourcespace.tri;
+	
 	m=sourceFIC.avg.pow(:,450); % plotting the result at the 450th time-point that is
 	                         % 500 ms after the zero time-point
-	ft_plot_mesh(bnd, 'vertexcolor', m);
+	ft_plot_mesh(sourceFIC, 'vertexcolor', m);
+	view([180 0]); h = light; set(h, 'position', [0 1 0.2]); lighting gouraud; material dull
 
 {% include image src="/assets/img/tutorial/minimumnormestimate/plotmeshsourceic01new.png" width="450" %}
 
@@ -136,17 +134,16 @@ But we would like to know where the difference between the conditions can be loc
 
 	cfg = [];
 	cfg.projectmom = 'yes';
-	sdFC = ft_sourcedescriptives(cfg,sourceFC);
+	sdFC  = ft_sourcedescriptives(cfg,sourceFC);
 	sdFIC = ft_sourcedescriptives(cfg, sourceFIC);
 
-	sdDIFF = sdFIC;
+	sdDIFF         = sdFIC;
 	sdDIFF.avg.pow = sdFIC.avg.pow - sdFC.avg.pow;
-	sdDIFF.tri = sourcespace.tri;
-
-	save sd sdFC sdFIC sdDIFF;
+	
+	save sd sdDIFF;
 
 	cfg = [];
-	cfg.mask = 'avg.pow';
+	cfg.funparameter = 'pow';
 	ft_sourcemovie(cfg,sdDIFF);
 
 {% include image src="/assets/img/tutorial/minimumnormestimate/sourcemovie01new.png" width="500" %}
