@@ -38,26 +38,24 @@ Local organizer: Daniel van de Velden.
 
 ### Tuesday  5 February 2019
 
--   **09:00 - 10:15**    Lecture III - Forward and inverse modelling  - “Source Analysis” _Tzvetan Popov_
+-   **09:00 - 10:15**    Lecture IV: Source reconstruction using beamformers - “Source Analysis” _Tzvetan Popov_
 -   **10:15 - 10:30**    Coffee break
--   **10:30 - 11:30**    Lecture IV: Source reconstruction using beamformers - “Source Analysis” _Tzvetan Popov_
--   **11:30 - 12:00**    Q&A so far
+-   **10:30 - 12:00**    Hands On III: [Identifying oscillatory sources using Beamformers](/tutorial/beamformer) – “Source Analysis” 
 -   **12:00 - 13:00**    Lunch
 
--   **13:00 - 14:00**   Hands On III: [Identifying oscillatory sources using Beamformers](/tutorial/beamformer) – “Source Analysis” 
+-   **13:00 - 14:00**   Lecture IV: Connectivity analysis in MEG and EEG data - “Connectivity” _Tzvetan Popov_
 -   **14:00 - 14:15**   Coffee break
--   **14:15 - 15:15**   Lecture V: Connectivity analysis in MEG and EEG data - “Connectivity” _Tzvetan Popov_
--   **15:15 - 16:15**   Hands On IV: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity) – “Connectivity”
+-   **14:15 - 15:15**   Hands On IV: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity) – “Connectivity”
+-   **15:15 - 16:15**   Lecture V: Statistics using non-parametric randomization techniques - “Statistical Testing/Methods” _Tzvetan Popov_
 -   **16:15 - 16:45**   Wrap-up-the-day and questions
 -   **19:00 - 23:00**   Social Event
 
 
 ### Wednesday  6 February 2019
 
--   **9:00 - 10:00**   Lecture VI: Statistics using non-parametric randomization techniques - “Statistical Testing/Methods” _Tzvetan Popov_
+-   **9:00 - 10:00**   Hands On V: [Statistics using non-parametric randomization techniques](/tutorial/cluster_permutation_timelock) - “Statistical Testing/Methods”
 -   **10:00- 10:15**   Coffee break
--   **10:15- 11:00**   Hands On V: [Statistics using non-parametric randomization techniques](/tutorial/cluster_permutation_timelock) - “Statistical Testing/Methods”
--   **11:00- 13:00**   FieldTrip Playground (bring your own data)
+-   **10:15- 13:00**   FieldTrip Playground (bring your own data)
 -   **13:00- 13:45**   Wrap-up-the-day and Closing remarks
 
 
