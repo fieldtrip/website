@@ -125,7 +125,7 @@ You can plot the inverse solution onto the source-space at a specific time-point
 	ft_plot_mesh(sourceFIC, 'vertexcolor', m);
 	view([180 0]); h = light; set(h, 'position', [0 1 0.2]); lighting gouraud; material dull
 
-{% include image src="/assets/img/tutorial/minimumnormestimate/plotmeshsourceic01new.png" width="450" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/plotmeshsourceic01newest.png" width="450" %}
 
 //Figure 6. The result of the source-reconstruction of the FIC condition plotted onto the source-space at 500 ms after the 0 time-point
 //
@@ -146,7 +146,7 @@ But we would like to know where the difference between the conditions can be loc
 	cfg.funparameter = 'pow';
 	ft_sourcemovie(cfg,sdDIFF);
 
-{% include image src="/assets/img/tutorial/minimumnormestimate/sourcemovie01new.png" width="500" %}
+{% include image src="/assets/img/tutorial/minimumnormestimate/sourcemovie01newest.png" width="500" %}
 *Figure 7. One frame from the movie that shows the differences of the two source-reconstructions*
 
 ## Summary and further readings
