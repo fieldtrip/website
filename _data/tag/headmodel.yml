@@ -7,7 +7,7 @@
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
-- name:  Example use of the compute_leadfield function
+- name:  Example use of the ft_compute_leadfield function
   link:  /example/compute_leadfield
 
 - name:  Create MNI-aligned grids in individual head-space

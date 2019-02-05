@@ -37,7 +37,7 @@
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
 
-- name:  Example use of the compute_leadfield function
+- name:  Example use of the ft_compute_leadfield function
   link:  /example/compute_leadfield
 
 - name:  Check the quality of the anatomical coregistration
