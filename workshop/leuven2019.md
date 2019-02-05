@@ -21,7 +21,8 @@ title: ChildBrain pre-conference workshop in Leuven, Belgium
 For the hands on session, we kindly require you to bring a functional laptop with MATLAB and FieldTrip installed. This session will be divided in a theoretical introduction, followed by the practical session, for which we ask you to read the points below:
 -   We expect that you know the basics of MATLAB and that you already have experience with MEG/EEG preprocessing and analysis.
 -   As the focus is on source reconstruction, topics that will NOT be covered in great detail are segmenting, artifact handling, averaging, frequency and time-frequency analysis, statistics.
--   If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the “MATLAB for psychologists” tutorial on http://www.antoniahamilton.com/matlab.html to understand the FieldTrip toolbox design please read the FieldTrip reference paper.
+-   If you are not familiar with MATLAB or are not certain about your MATLAB skills, please go through the “MATLAB for psychologists” tutorial on <http://www.antoniahamilton.com/matlab.html>.
+-   To understand the FieldTrip toolbox design, please read the FieldTrip reference paper.
 -   We will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this introduction tutorial.
 
 In the hands-on session we will start with preprocessing structral MRI data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
@@ -57,7 +58,7 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 ## Introduction
 
 The aim of this tutorial is to create a head model of an adolescent with the numerical method of the Boundary Element Method (BEM), and if as an additional task with the Finite Element Method (FEM). The
-[John E. Richards Lab]((https://jerlab.sc.edu)) provided us with an example MRI which is based of the averaged of several MRIs from 14 year old subjects.
+[John E. Richards Lab]((https://jerlab.sc.edu)) provided us with an example MRI which consists of the averaged MRI of several 14 year old subjects.
 
 ## Background
 
@@ -88,7 +89,7 @@ First of all we have to load the data
 
 Visualize the MRI
 
-	cfg=[];
+	cfg = [];
 	ft_sourceplot(cfg,mri_orig);
 
 {% include image src="/assets/img/workshop/leuven2019/mri_orig.png" width="700" %}
@@ -99,7 +100,7 @@ Visualize the MRI
 In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks + zpoint (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI. The zpoint is a point in the upper part of the head, it only serves to make sure that coordinate system is not upside down. It is important that all geometrical is expressed in the same coordinate system. This helps for coregistration of these data.
 
 	cfg = [];
-	cfg.method = 'interactive';
+	cfg.method   = 'interactive';
 	cfg.coordsys = 'ctf';
 	mri_realigned = ft_volumerealign(cfg, mri_orig);
 
@@ -130,8 +131,8 @@ We can visualize the resliced MRI
 ###  4. Segment the MRI
 Now we can segment the 3 different tissues we are interested in for our head model
 
-	cfg           = [];
-	cfg.output    = {'brain','skull', 'scalp'};
+	cfg = [];
+	cfg.output = {'brain','skull', 'scalp'};
 	mri_segmented_3_compartment = ft_volumesegment(cfg, mri_resliced);
 
 	save mri_segmented_3_compartment mri_segmented_3_compartment
@@ -140,7 +141,7 @@ Visualize the segmentation
 
 	seg_i = ft_datatype_segmentation(mri_segmented_3_compartment,'segmentationstyle','indexed');
 
-	cfg              = [];
+	cfg = [];
 	cfg.funparameter = 'seg';
 	cfg.funcolormap  = gray(4); % distinct color per tissue
 	cfg.location     = 'center';
@@ -153,10 +154,10 @@ Visualize the segmentation
 ###  5. Create the mesh
 On the basis of the segmentation we can now create a geometrical description of the head as a mesh
 
-	cfg=[];
-	cfg.tissue={'brain','skull','scalp'};
+	cfg = [];
+	cfg.tissue      = {'brain','skull','scalp'};
 	cfg.numvertices = [3000 2000 1000];
-	mesh_bem=ft_prepare_mesh(cfg,mri_segmented_3_compartment);
+	mesh_bem = ft_prepare_mesh(cfg,mri_segmented_3_compartment);
 
 Visualize the mesh
 
@@ -174,9 +175,9 @@ Visualize the mesh
 
 Now we are ready and to create the a head model on the basis of the mesh.
 
-	cfg        = [];
-	cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
-	headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
+	cfg = [];
+	cfg.method = 'dipoli'; % You can also specify 'bemcp', or another method.
+	headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
 
 {% include markup/danger %}
 In Windows the method 'dipoli' does not work. You can explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
@@ -190,9 +191,9 @@ First we have to load a suitable electrode set. For this tutorial we will load a
 
 And now we will fit it to the head surface.
 
-	cfg          = [];
-	cfg.method   = 'interactive';
-	cfg.elec     = elec;
+	cfg = [];
+	cfg.method    = 'interactive';
+	cfg.elec      = elec;
 	cfg.headshape = headmodel_bem.bnd(3);
 	elec = ft_electroderealign(cfg);
 
@@ -215,10 +216,10 @@ Before we are able to create the leadfields
 
 	cfg = [];
 	cfg.grid.resolution = 7.5;
-	cfg.threshold = 0.1;
-	cfg.smooth = 5;
-	cfg.vol = headmodel_bem;
-	cfg.inwardshift = 1; %shifts dipoles away from surfaces
+	cfg.threshold       = 0.1;
+	cfg.smooth          = 5;
+	cfg.vol             = headmodel_bem;
+	cfg.inwardshift     = 1; % shifts dipoles away from surfaces
 	sourcemodel = ft_prepare_sourcemodel(cfg, headmodel_bem);
 
 Visualize the source model
@@ -240,7 +241,7 @@ We will now compute the lead field for every source in the source model.
 
 	cfg = [];
 	cfg.grid = sourcemodel;
-	cfg.vol= headmodel_bem;
+	cfg.vol  = headmodel_bem;
 	cfg.elec = elec;
 	leadfield_bem = ft_prepare_leadfield(cfg);
 
@@ -255,15 +256,15 @@ Thus far we only created a BEM volume conduction model. To create a FEM volume c
 {% include markup/end %}
 Change Step 5 into
 
-	cfg=[];
-	cfg.tissue={'brain','skull','scalp'};
-	cfg.method='hexahedral';
-	mesh_fem=ft_prepare_mesh(cfg,mri_segmented_3_compartment);
+	cfg = [];
+	cfg.tissue = {'brain','skull','scalp'};
+	cfg.method = 'hexahedral';
+	mesh_fem = ft_prepare_mesh(cfg,mri_segmented_3_compartment);
 
 and Step 6 into
 
-	cfg        = [];
-	cfg.method ='simbio'; % Unfortunately this is not available on Windows.
+	cfg = [];
+	cfg.method = 'simbio'; % Unfortunately this is not available on Windows.
 	headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
 
 #### Exercise 2
@@ -290,4 +291,4 @@ For source model creation we also suggest following tutorials:
 
 
 -----
-This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10, Matlab 2018a.
+This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10 and MATLAB 2018a.
