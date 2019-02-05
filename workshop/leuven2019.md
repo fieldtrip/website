@@ -58,7 +58,7 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 ## Introduction
 
 The aim of this tutorial is to create a head model of an adolescent with the numerical method of the Boundary Element Method (BEM), and if as an additional task with the Finite Element Method (FEM). The
-[John E. Richards Lab]((https://jerlab.sc.edu)) provided us with an example MRI which consists of the averaged MRI of several 14 year old subjects.
+[John E. Richards Lab](https://jerlab.sc.edu) provided us with an example MRI which consists of the averaged MRI of several 14 year old subjects.
 
 ## Background
 
