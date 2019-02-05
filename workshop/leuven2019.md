@@ -78,7 +78,7 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
  8.  The source model is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
  9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
 
-{% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" width="365" %}
+{% include image src="/assets/img/workshop/leuven2019/scheme.png" width="365" %}
 *Figure 1: Pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM*
 
 ###  1. Read the MRI
