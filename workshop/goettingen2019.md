@@ -53,7 +53,7 @@ Local organizer: Daniel van de Velden.
 
 ### Wednesday  6 February 2019
 
--   **9:00 - 10:00**   Hands On V: [Statistics using non-parametric randomization techniques](/tutorial/cluster_permutation_timelock) - “Statistical Testing/Methods”
+-   **9:00 - 10:00**   Hands On V: [Statistics using non-parametric randomization techniques](/tutorial/cluster_permutation_freq) - “Statistical Testing/Methods”
 -   **10:00- 10:15**   Coffee break
 -   **10:15- 13:00**   FieldTrip Playground (bring your own data)
 -   **13:00- 13:45**   Wrap-up-the-day and Closing remarks
