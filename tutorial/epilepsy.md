@@ -15,7 +15,7 @@ The FieldTrip toolbox is designed for research purposes only. The FieldTrip proj
 FieldTrip is released under the [GNU General Public License](http://www.gnu.org/copyleft/gpl.html) and you should review its terms and conditions.
 {% include markup/end %}
 
-The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy)
+The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy/)
 
 ## Case 1
 
