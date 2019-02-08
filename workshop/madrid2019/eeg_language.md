@@ -5,13 +5,13 @@ tags: [eeg-language]
 
 # Details on the EEG language dataset
 
-This EEG dataset was acquired by [Irina Siminova et al.]
-(https://doi.org/10.1371/journal.pone.0014465) in a study investigating semantic
-processing of stimuli presented as pictures (black line drawings on
-white background), visually displayed text or as auditorily presented
-words. Stimuli consisted of concepts from three semantic categories:
-two relevant categories (animals, tools) and a task category that varied
-across subjects, either clothing or vegetables.
+This EEG dataset was acquired by [Irina Siminova et al.](https://doi.org/10.1371/journal.pone.0014465)
+in a study investigating semantic processing of stimuli presented
+as pictures (black line drawings on white background), visually
+displayed text or as auditorily presented words. Stimuli consisted
+of concepts from three semantic categories: two relevant categories
+(animals, tools) and a task category that varied across subjects,
+either clothing or vegetables.
 
 All main stimuli were coded with 3-digits, i.e. as 'Sxxx':
 
