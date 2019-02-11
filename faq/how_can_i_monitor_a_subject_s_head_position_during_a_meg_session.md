@@ -3,7 +3,7 @@ title: How can I monitor a subject's head position during a MEG session?
 tags: [faq, meg, realtime]
 ---
 
-## How can I monitor a subject's head position during a MEG session?
+# How can I monitor a subject's head position during a MEG session?
 
 The CTF/Neuromag acquisition software provides a shared memory in which the the data from the MEG channels and all auxiliary channels are available in real-time. The acq2ftx/neuromag2ft application transfers this data from the shared memory to a [FieldTrip buffer](/development/realtime/buffer) on the acquisition computer. Matlab software running on another computer can then be used to analyze the real-time data. See the [getting started](/getting_started/realtime_headlocalizer) page for setting up this interface on your MEG system.
 
@@ -13,15 +13,15 @@ Please cite this paper when you use the realtime head localizer in your research
 Stolk A, Todorovic A, Schoffelen JM, Oostenveld R.  **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
-### Acquiring head shape for visualisation
+## Acquiring head shape for visualisation
 
 Monitoring the head position can be done by visualizing the head shape in 3 different ways: As a sphere, Polhemus acquired points representing the head shape or with a realistic head shape acquired with a 3D-Scanner. While the sphere needs no further action, the latter two need to be recorded in advance to the MEG measurement.
 
-#### Polhemus
+### Polhemus
 
 During the preparation for the MEG measurement the fiducials and additional points of the head surface are measured with the Polhemus. We suggest to acquire the additional points on the brow ridge, cheekbone and along the nose, this will help in visualizing the head shape more realistic. In a case of EEG/MEG also the locations of the electrode locations can also be measured and used for the visualization. All these points together can be used for visualizing the head shape during the on- and offline visualization of the head movements.
 
-#### 3D-Scanner
+### 3D-Scanner
 
 The head shape can also be measured with a 3D-Scanner (i.e. structure.io) to acquire a realistic representation of the subject. But before we can use the measured head shape we have to preprocess the data. The structure.io stores the head shape in its own device coordinate system and therefore needs to realigned to the respective coordinate system. So in the first step we localize the fiducials on the head shape:
 
@@ -41,7 +41,7 @@ After the localization of the fiducials we realign the head shape to the respect
 
 Now we have the head shape in the correct coordinate system and can use it for on- and offline head localization.
 
-### Monitor a subject's head position during a MEG session
+## Monitor a subject's head position during a MEG session
 
 After initializing the MEG system, one starts the **acq2ftx/neuromag2ft application**. When subsequently starting Acquisition, the data is transferred in realtime to the FieldTrip buffer which can be read from any computer connected through a network. Point to the location of the buffer by correctly specifying cfg.datase
 
@@ -61,7 +61,7 @@ To improve the real time head movement compensation, we can also specify a reali
 
 **Repositioning between a recording session** , i.e. to a previous recording session, can be achieved by specifying cfg.template. Either by pointing to another dataset; e.g. cfg.template = 'subject01xxx.ds' (CTF275 systems only), or by pointing to a textfile created by clicking the Update button during a previous recording session; e.g. cfg.template = '29-Apr-2013-xxx.txt' (CTF275 and Neuromag systems).
 
-{% include image src="/assets/img/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/anims1.gif" width="600" %}--" %} 
+{% include image src="/assets/img/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/anims1.gif" width="600" %}--" %}
 
 _Figure 1; Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both aurical points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns lightblue (CTF only). Click on the image for the animation. _
 

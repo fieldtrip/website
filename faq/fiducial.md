@@ -3,7 +3,7 @@ title: How should I specify the fiducials for electrode realignment?
 tags: [faq, eeg, fiducial]
 ---
 
-##  How should I specify the fiducials for electrode realignment?
+#  How should I specify the fiducials for electrode realignment?
 
 Sensor locations are described by the elec structure and it can contain fewer or more channels that present in the data. Depending on the system we use, fiducials are digitized and represented just like electrodes, and in other systems the fiducials are represented separately from the sensors.
 

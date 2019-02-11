@@ -3,7 +3,7 @@ title: How does ft_prepare_neighbours work?
 tags: [statistics, cluster]
 ---
 
-## How does ft_prepare_neighbours work?
+# How does ft_prepare_neighbours work?
 
 There are three methods how **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** can define the neighbour structure for your data: '**distance**', '**triangulation**' and '**template**'.
 

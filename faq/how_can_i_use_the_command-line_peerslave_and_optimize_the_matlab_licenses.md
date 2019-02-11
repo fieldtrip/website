@@ -3,7 +3,7 @@ title: How can I use the command-line peerslave and optimize the MATLAB licenses
 tags: [faq, peer]
 ---
 
-## How can I use the command-line peerslave and optimize the MATLAB licenses?
+# How can I use the command-line peerslave and optimize the MATLAB licenses?
 
 Most of the examples on the wiki demonstrate for simplicity how you can start the peerslave within a MATLAB session. The disadvantage of that is that the peerslaves are always using a MATLAB license, even if they are not doing any computations. Furthermore the MATLAB process takes a lot of your system memory. To solve these inefficiency we have implemented a command-line peerslave executable.
 
@@ -11,8 +11,7 @@ The command-line peerslave executable runs the peer network maintenance threads 
 
 To start the command-line peerslave, you type
     peerslave.xxx
-where xxx is your computer architecture (glnx86, glnxa64, maci, maci64). 
+where xxx is your computer architecture (glnx86, glnxa64, maci, maci64).
 
 If you want to start multiple peerslaves at once, for example because you have a quad-core CPU, you can do
     peerslave.xxx --number 4
-

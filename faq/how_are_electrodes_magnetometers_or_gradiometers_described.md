@@ -3,11 +3,11 @@ title: How are electrodes, magnetometers or gradiometers described?
 tags: [faq, eeg, meg, layout]
 ---
 
-## How are electrodes, magnetometers or gradiometers described?
+# How are electrodes, magnetometers or gradiometers described?
 
 Sensor locations are described by the elec or grad field in the data object. These definitions of the sensors can contain fewer or more channels that present in the data, i.e., you can have bipolar EOG channels that do not have a unique position on the scalp, but you can also have reference gradiometers in the MEG system that do not have a signal attached to them.
 
-### The definition of EEG, ECoG and iEEG electrodes
+## The definition of EEG, ECoG and iEEG electrodes
 
 As of September 23, 2011 we updated the description of how the sensors are defined in FieldTrip. The electrode definition contains the following field
 
@@ -25,7 +25,7 @@ to tell FieldTrip how to combine the electrodes into channels. This array can be
 The EEG potential is in first instance computed on the locations in elec.elecpos, and when applicable combined using elec.tra. The elec.chanpos field is used e.g. for visualization and determining neighbours.  
 {% include markup/end %}
 
-### The definition of MEG sensors
+## The definition of MEG sensors
 
 The gradiometer definition generally consists of multiple coils per channel, e.g. two coils for a 1st order axial gradiometer, in which the orientation of the coils is opposite. Each coil is described separately and one large matrix (grad.tra: can be sparse) has to be given that defines how the forward computed field is combined over the coils to generate the output of each channel. The gradiometer definition consists of the following fields as of September 23, 201
 
@@ -44,7 +44,7 @@ MEG forward computations are performed for each grad.coilpos and grad.coilori, a
 By default a first order gradiometer is described by 2 "coils", but you could use more digitization points to get a more accurate forward model.   
 {% include markup/end %}
 
-### The old electrode and gradiometer structure
+## The old electrode and gradiometer structure
 
 The old electrode definition contained the following field
 
@@ -67,7 +67,7 @@ The upgrade from this to the current representation is motivated by the fact tha
 Originally, FieldTrip relied on the fact that the channel positions can be recovered from the electrode/coil positions by looking into the tra-matrix, because the tra-matrix specifies which electrode/coil contributes to which channel. However, FieldTrip supports increasingly complicated tra-matrices that for example include balancing coefficients (obtained through ft_denoise_synthetic, or ft_denoise_pca), projected-out spatial topographies (obtained through a sequence of ft_componentanalysis and ft_rejectcomponent), or synthetic planar gradients (obtained through ft_megplanar). With these increasingly complicated tra-matrices, recovery of the channel positions from the coil/electrode positions is not straightforward and sometimes impossible.
 We decided to make the distinction between channels on the one hand, and electrodes/coils on the other hand explicit in the code.
 
-### Some additional notes on the 'tra'-matrix
+## Some additional notes on the 'tra'-matrix
 
 The tra-matrix is a very important piece of information that needs to be taken into account when building forward models (leadfields) for the sensor data in a given data structure. When building a forward model, we compute the magnetic/electric field distribution at the described sensors/electrodes in the data, given a known dipolar source. If the sensor data has been manipulated in any way - e.g. by creating higher order synthetic gradients by using additional information from the reference coils (as can be done with CTF MEG data with **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**, or with the custom CTF software), by using adaptive weights estimated from the data (as can be done with 4D-data, using custom software or **[ft_denoise_pca](/reference/ft_denoise_pca)**), or also when removing spatial topographies from the sensor data (using a combination of **[ft_componentanalysis](/reference/ft_componentanalysis)** and **[ft_rejectcomponent](/reference/ft_rejectcomponent)**) - the corresponding leadfields need to be manipulated in the same way, to keep the forward model consistent with the data. In FieldTrip this is achieved with the tra-matrix.
 

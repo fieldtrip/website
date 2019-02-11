@@ -3,9 +3,9 @@ title: How can I read and write files if I use other people's peers?
 tags: [faq, peer]
 ---
 
-## How can I read and write files if I use other people's peers?
+# How can I read and write files if I use other people's peers?
 
-If you want to use peerslaves that have been started by another person, you have to realize that the corresponding MATLAB sessions in which your computations will be evaluated under the account of **that other person**. 
+If you want to use peerslaves that have been started by another person, you have to realize that the corresponding MATLAB sessions in which your computations will be evaluated under the account of **that other person**.
 
 The first consequence is that the functions you wish to evaluate on the peerslave have to readable by the other person's account. That involves giving the other person read-only access to the relevant directories and files. If the job that you want to evaluate also entails reading data from disk, then those data files should be accessible as well.
 
@@ -30,9 +30,7 @@ and evaluate this function using
     fullfile(getenv('HOME'), 'public', 'testfile3.mat')
     fullfile(getenv('HOME'), 'public', 'testfile4.mat')
     };
-    
+
     peercellfun(@testwrite, filename);
 
 See also the FAQ on [debugging problematic jobs](/faq/how_can_i_debug_a_problematic_distributed_job).
-
- 

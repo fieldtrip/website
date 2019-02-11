@@ -3,7 +3,7 @@ title: How can I consistently represent artifacts in my data?
 tags: [faq, preprocessing, artifact]
 ---
 
-## How can I consistently represent artifacts in my data?
+# How can I consistently represent artifacts in my data?
 
 FieldTrip includes functions for automatic artifact detection. These detect time segments in the data in which an artifact is present by the begin and end sample of that artifact. If there are N artifacts, that results in a Nx2 matrix.
 

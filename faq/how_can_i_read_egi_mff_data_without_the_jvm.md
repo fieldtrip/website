@@ -3,7 +3,7 @@ title: How can I read EGI mff data without the JVM?
 tags: [faq, egi]
 ---
 
-## How can I read EGI mff data without the JVM?
+# How can I read EGI mff data without the JVM?
 
 FieldTrip implements two methods for reading data from EGI .mff datasets. The first was implemented to get started with the existing data that was being recorded in some labs. Subsequently EGI offered support to make a new MATLAB implementation based on their reference toolbox (which is implemented in Java).
 

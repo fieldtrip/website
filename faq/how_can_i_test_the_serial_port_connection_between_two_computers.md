@@ -3,7 +3,7 @@ title: What kind of cable do I need for a serial port connection between two com
 tags: [faq, realtime]
 ---
 
-## What kind of cable do I need for a serial port connection between two computers?
+# What kind of cable do I need for a serial port connection between two computers?
 
 For the type of connection we are talking about here, you need a so called 'null modem cable'. [A null modem cable is an RS-232 serial cable where the transmit and receive lines are crosslinked.](http://en.wikipedia.org/wiki/Null_modem)
 
@@ -15,7 +15,7 @@ To check that the serial connection between a linux computer and a windows compu
 *  On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baudrate is the same as on the linux machine(i.e. 115200).
 *  Then once the connection is established you can type in the windows putty display and can then read it from the linux putty display and vice versa. If this doesn't work just check the hardware connections.
 
-### Measure delays of sending and receiving a control command using a serial port connection
+## How to measure the delays of sending and receiving using a serial port connection
 
 Here we need a computer with two serial ports(or two computers). We can send commands on one serial port and receive them on the other and then estimate the delay.
 

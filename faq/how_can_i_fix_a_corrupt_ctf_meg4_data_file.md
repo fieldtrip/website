@@ -3,7 +3,7 @@ title: How can I fix a corrupt CTF meg4 file?
 tags: [faq, corrupt, ctf, raw]
 ---
 
-## How can I fix a corrupt CTF meg4 file?
+# How can I fix a corrupt CTF meg4 file?
 
 A corrupt .meg4 file can occur if your recording did not end properly. In this case, the size of your .meg4 file will not obey the demands of a regular .meg4 file. The CTF system records 'trials' of pre-specified length, usually 10s chunks of data. Note that this triallength has nothing to do with your experiment, it is just a convention! Any .meg4 file must contain a full number of trials, and the corresponding headerfile must contain these number of trials as well.
 

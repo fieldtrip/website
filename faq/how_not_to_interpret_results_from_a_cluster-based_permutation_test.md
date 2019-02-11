@@ -3,9 +3,9 @@ title: How NOT to interpret results from a cluster-based permutation test
 tags: [faq, statistics]
 ---
 
-##  How NOT to interpret results from a cluster-based permutation test
+#  How NOT to interpret results from a cluster-based permutation test
 
-### The correct interpretation
+## The correct interpretation
 
 The permutation test as implemented in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)** serves to test  the null hypothesis (H0) that the data in the experimental conditions come from (are drawn from) the same probability distribution. In specialised statistics books, one sometimes reads the technical term that the probability distributions are **exchangeable**. Getting a significant result means that we can reject the null hypothesis (H0) that the data come from the same probability distribution in favour of the alternative hypothesis (H1) that the data come from different distributions. Based on a significant test result, you therefore can report that **"there is a significant difference between condition A and condition B"**.
 
@@ -15,7 +15,7 @@ H0: The data in the experimental conditions come from the same probability distr
 H1: The data in the experimental conditions do **not** come from the same probability distributions, i.e. the data are different.
 {% include markup/end %}
 
-### What the test DOES NOT show
+## What the test DOES NOT show
 
 However, you cannot report a significant outcome of a permutation test as **"there is a significant cluster ..."**.  This is because the significance in the test only speaks to the null hypothesis and not to the "where" or "when" of this difference. The binary test result (H0 is rejected: yes or no) by itself does not provide information on the exact spatial or temporal extent of the effect.
 
@@ -29,7 +29,7 @@ However, from this result, one cannot conclude that men and women have different
 Finding **a significant effect** using some test statistic (with some sensitivity profile) does **not mean that it tells the complete story**. Making a decision of H1 over H0 still requires that you interpret the result using your understanding of the (processed) data and the sensitivity profile of the test statistic (i.e., which between-condition differences will be reflected by the statistic). The decision and the interpretation are two separate steps.
 {% include markup/end %}
 
-### The extent of a cluster depends on multiple factors
+## The extent of a cluster depends on multiple factors
 
 Keep in mind that the extent of the cluster depends on multiple factor
 
@@ -43,7 +43,7 @@ You could imagine that with a dipolar scalp topography, one of the poles of the 
 
 You could also imagine that the moment at which you can distinguish an ERP from the zero-baseline depends on the number of trials. The more trials, the more sensitive you will be in deciding that it starts to be different from the baseline. That does not mean that the ERP starts earlier if you have more trials, only that you are able to detect the effect earlier.
 
-###  What if I preselect a latency range and a spatial region?
+##  What if I preselect a latency range and a spatial region?
 
 If you a-priori select a certain time window and some scalp location in which to do the cluster-based permutation test, then you can say that there is a difference in the specific latency range and specific area.
 
@@ -65,6 +65,6 @@ or if you would only select a latency range
 "Testing for an N400 effect in the latency range from 350 to 500 ms post-stimulus, the cluster-based permutation test revealed a significant difference between the fully congruent and fully incongruent condition (p<0.05). In this latency range, the difference was most pronounced over left frontotemporal sensors."
 {% include markup/end %}
 
-###  Is there a paper on this topic?
+##  Is there a paper on this topic?
 
 Yes, a paper has been written by Maris E., Oostenveld R. //[Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/pubmed/17517438)// J Neurosci Methods, 2007. Furthermore, we recommend you to read  //[Statistical testing in electrophysiological studies](http://www.ncbi.nlm.nih.gov/pubmed/22176204)// Maris E, Psychophysiology, 2011. An additional worthwile read is //[Cluster‐based permutation tests of MEG/EEG data do not establish significance of effect latency or location](https://doi.org/10.1111/psyp.13335)// Sassenhagen J, Psychophysiology 2019.

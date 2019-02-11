@@ -11,13 +11,13 @@ After making changes to the code and/or documentation, this page should remain o
 So chances are that this page is considerably outdated and irrelevant. The notes here might not reflect the current state of the code, and you should **not use this as serious documentation**.
 {% include markup/end %}
 
-##  How does a difference in trial numbers per condition affect my statistical test
+#  How does a difference in trial numbers per condition affect my statistical test
 
-### The problem
+## The problem
 
 When comparing conditions in an analysis, you often run into the situation that amount of trials for one condition is different than the other. If the amount differs by a few trials this might not be problematic, but are there cases in which it becomes problematic? What could happen if there is a systematic bias in the amount of trials per condition?
 
-### Simulating biased data
+## Simulating biased data
 
 The easiest way to see whether a difference in the number of trials can be a problem for you is to simulate such a scenario and run the same statistical tests you are planning to use in your study. In the following example we will consider a within-subjects design with 20 subjects and two conditions. We will generate the data with [ft_freqsimulation](/reference/ft_freqsimulation), average the data with [ft_timelockaverage](/reference/ft_timelockanalysis) and [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) followed by running statistical tests with [ft_timelockstatistics](/reference/ft_timelockstatistics).
 
@@ -79,10 +79,9 @@ Now that we have simulated the data for all subjects we are going to divide the 
 	end;
 
 
+## Assumptions of statistical tests
 
-### Assumptions of statistical tests
-
-### Skewed distributions
+## Skewed distributions
 
 {% include markup/danger %}
 H0: The data are exchangeable between the conditions, i.e. the data in the conditions cannot be distinguished.

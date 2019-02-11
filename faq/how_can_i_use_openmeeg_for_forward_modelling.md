@@ -7,7 +7,7 @@ tags: [faq, headmodel, source]
 This documentation is outdated, the latest version is available from http://openmeeg.github.io.
 {% include markup/end %}
 
-## How can I use OpenMEEG for forward modeling?
+# How can I use OpenMEEG for forward modeling?
 
 OpenMEEG is a package that solves the MEG and EEG forward problems.
 It implements a Boundary Element Method (BEM) and provides accurate solutions
@@ -15,7 +15,7 @@ when dealing with realistic head models (1, 2 or 3 nested layers)
 
 The OpenMEEG binaries are **not** included in the FieldTrip release, but the OpenMEEG MATLAB wrapper functions are.
 
-### Installing OpenMEEG
+## Installing OpenMEEG
 
 OpenMEEG is available on Linux, Mac OS X and Windows.
 A 64bit machine is preferred due to the computational load of M/EEG forward modeling using the BEM.
@@ -26,7 +26,7 @@ https://gforge.inria.fr/frs/?group_id=435
 
 Installation procedure:
 
-#### For Linux
+### For Linux
 
     * check your local version of gcc compiler (type 'gcc -v' in a terminal).
 
@@ -35,7 +35,7 @@ Installation procedure:
 
     * If your version of gcc is superior to 4.2 download OpenMEEG for gcc 4. Otherwise download OpenMEEG for gcc 3. The OpenMEEG version for gcc 4 provides support of OpenMP for parallel and faster computation.
 
-##### Install from the tar.gz file
+#### Install from the tar.gz file
 
        * untar the .tar file
        * Set the PATH environment variable in the appropriate .rc configuration file (e.g. .bashrc or .bash_profile)
@@ -43,25 +43,25 @@ Installation procedure:
        * Set the LIB environment variable
        * Example (for a Bash shell): export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:openmeeg_folder/lib
 
-##### Install from the RPM
+#### Install from the RPM
 
 *  open the RPM file with 'rpm' from command line in Linux or with an alternative front-end program (e.g. 'up2date' (CentOS) or 'yum' for Fedora/Red Hat)
 
     $ rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
 
 
-#### For Windows
+### For Windows
 
     * Run the installer
     * Choose to agree the license terms
     * Select option to add OpenMEEG to the Windows path
 
-#### For Mac OS X
+### For Mac OS X
 
     * Run the installer
     * Choose to agree the license terms
 
-#### From source
+### From source
 
 The source code of OpenMEEG can be accessed by SVN
 
@@ -71,7 +71,7 @@ OpenMEEG is build with CMake on all platforms.
 
 It only depends on blas/lapack or atlas on Linux and Mac OS X and the Intel MKL on Windows.
 
-### Make sure that it works
+## Make sure that it works
 
 After installing, you should check on the Matlab command line that the OpenMEEG command-line executable can be found. This is done by typing in your MATLAB promp
 
@@ -88,7 +88,7 @@ If the system call prints the correct version information, then you are all done
 
 A good start is the example script "openmeeg_eeg_leadfield_example.m" found in "external/openmeeg"
 
-### If it does not seem to work
+## If it does not seem to work
 
 {% include markup/info %}
 Some of the pre-compiled packages could have issues running on a particular Linux OS (e.g. Fedora, CentOS), if you use the OpenMEEG 2 packages. Try then to download the OpenMEEG statically linked version (OpenMEEG-2.1.0-Linux.amd64-gcc-4.1.2-OpenMP-static.tar.gz or OpenMEEG-2.1.0-Linux.i386-gcc-4.1.2-static.tar.gz for Linux)

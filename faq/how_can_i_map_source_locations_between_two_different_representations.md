@@ -3,7 +3,7 @@ title: How can I map source locations onto an anatomical label in an atlas?
 tags: [source, interpolate, atlas, label]
 ---
 
-## How can I map source locations onto an anatomical label in an atlas?
+# How can I map source locations onto an anatomical label in an atlas?
 
 After doing your source reconstruction, you may want to interpolate an atlas onto your sourcemodel, for example to be able to find peaks of activity within an anatomical ROI.
 
@@ -23,7 +23,7 @@ Then, you can interpolate the atlas of your choice onto this sourcemodel using *
 	cfg.parameter = 'tissue';
 	sourcemodel2 = ft_sourceinterpolate(cfg, atlas, sourcemodel);
 
-*Some useful tips:* 
+*Some useful tips:*
 - Ensure that the units are consistent in atlas and sourcemodel. If that's not the case, use **[ft_convert_units](/reference/ft_convert_units)**.
 - When using **[ft_read_atlas](/reference/ft_read_atlas)**, it is better to use an atlas defined in MNI space, like the AAL atlas, in order to avoid too much distortion when converting between MNI and Talairach space. The figure below exemplifies this issue.
 {% include image src="/assets/img/faq/how_can_i_map_source_locations_between_two_different_representations/atlas_afni_brainweb_sourcespace.png" width="600" %}

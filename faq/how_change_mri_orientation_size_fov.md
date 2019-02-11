@@ -3,7 +3,7 @@ title: How to change the MRI orientation, the voxel size or the field-of-view?
 tags: [faq, mri, volume, coordinate]
 ---
 
-## How to change the MRI orientation, the voxel size or the field-of-view?
+# How to change the MRI orientation, the voxel size or the field-of-view?
 
 The function **[ft_volumereslice](/reference/ft_volumereslice)** allows you to
  1.  align the anatomical MRI or functional volume along the x,y,z axis, i.e. put it right side up
@@ -55,19 +55,19 @@ Plotting the resliced anatomical MRI results in a figure with the usually desire
 
 *Figure 2. Plot of the anatomical mri after using ft_volumereslice*  
 
-### Make the voxels isotropic
+## Make the voxels isotropic
 
 The **[ft_volumereslice](/reference/ft_volumereslice)** function also ensures that the voxels are isotropic (i.e. of equal distance in all three directions). Voxels of an MRI scan are not isotropic when there is a different voxel resolution within the MRI slices than the gap size between the slices. This means that the size of a voxel is not equal in all three directions.
 
-Isotropic voxels are necessary if we want to apply morphological operators to the anatomical volume (e.g. dilating, opening, etc.). These operations occur for example when the skull tissue is segmented in an anatomical volume (e.g. see [this tutorial](/tutorial/natmeg/dipolefitting)). 
+Isotropic voxels are necessary if we want to apply morphological operators to the anatomical volume (e.g. dilating, opening, etc.). These operations occur for example when the skull tissue is segmented in an anatomical volume (e.g. see [this tutorial](/tutorial/natmeg/dipolefitting)).
 
-### Change the field-of-view (FOV)
+## Change the field-of-view (FOV)
 
 The **[ft_volumereslice](/reference/ft_volumereslice)** function is also able to change the number of voxels along each direction. This can be useful for example, when the preprocessing of the anatomical images requires a specific image size (e.g. see [this tutorial](/tutorial/minimumnormestimate)).
 
 In the figures above you can appreciate the change in the FOV by considering the MRI in the original representation not being in the centre of the picture, whereas after reslicing it is in the centre and better fills the available space.
 
-### General principle of reslicing as a 3D interpolation
+## General principle of reslicing as a 3D interpolation
 
 The ft_volumereslice operations, such as changing the orientation of the anatomy and changing the resolution of the voxels can be conceptually understood by looking at the figure belo
 

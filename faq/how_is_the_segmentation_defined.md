@@ -3,7 +3,7 @@ title: How is the segmentation defined?
 tags: [faq, datatype, segmentation, eeg, meg, headmodel]
 ---
 
-## How is the segmentation defined?
+# How is the segmentation defined?
 
 The MATLAB structure that FieldTrip uses to describe a **[segmentation](/reference/ft_datatype_segmentation)** represents different tissue-types in the anatomical MRI typically after obtained calling **[ft_volumesegment](/reference/ft_volumesegment)** or **[ft_read_atlas](/reference/ft_read_atlas)**. The segmentation is a special kind of a **[volumetric](/reference/ft_datatype_volume)** structure that contains additional fields describing for each voxel to which tissue type or brain area it belongs.
 
@@ -20,9 +20,9 @@ An example segmentation obtained after ft_volumesegment with the default segment
 
 The tissue type of each voxel can be represented in the FieldTrip structure in two different ways, which are mutually exclusive. The representation can be either *"probablistic"* or *"indexed"*. The remainder of this page explains the difference between the two representations.
 
-### Probabilistic representation
+## Probabilistic representation
 
-#### Tissue probability maps
+### Tissue probability maps
 
 The default output of the ft_volumesegment function (see above) is a segmentation data-type structure with probabilistic tissue maps. The **gray**, **white** and **csf** fields contain *probabilistic values* for representing the gray, white matter and the cerebrospinal fluid. This means, for example, that at the field **white** everything that is not the white matter represented by 0, and voxels which belong to the white matter have a value between 0 and 1.
 
@@ -60,7 +60,7 @@ Here, we used the **[ft_volumereslice](/reference/ft_volumereslice)** function p
 The reason for this is explained in more detail [here](/faq/how_change_mri_orientation_size_fov).
 {% include markup/end %}
 
-#### Binary representations of brain, skull and scalp
+### Binary representations of brain, skull and scalp
 
 When the brain, skull and scalp tissues are requested as outputs from ft_volumesegment, the output also represents the probabilistic representation. However, in this case each fields contain a binary or boolean value, i.e. a probability of 0 (false) or 1 (true). Hence, the binary representation is a special case of the probabilistic representation.
 
@@ -125,7 +125,6 @@ This representation differentiates the boarder of the outer skin, but not the in
 	cfg.location     = 'center';
 	ft_sourceplot(cfg, scalp);
 
-
 ### Indexed representation
 
 Another way of representing tissue types is done by *indexing*. When indexing, one field structure can represent multiple non-overlapping tissues or brain areas with integer numbers. Everything that doesn't belong to any tissue types is represented by 0 and the voxels which belong to different tissues are represented by different numbers (Figure 3). The index-numbers must start with 1 and should increased one-by-one for each subsequent tissue type.
@@ -155,7 +154,7 @@ An indexed representation can also be plotted to inspect the different tissues i
 
 *Figure 4. Plot of the integer values that are represented in the indexed "brick0" representation of the AFNI atlas. The figure was made with "colormap lines".*
 
-### Conversion between probabilistic and indexed representations
+## Conversion between probabilistic and indexed representations
 
 The following code demonstrates how to create an indexed representation from the earlier obtained probabilistic/boolean brain, skull and scalp tissues.
 

@@ -3,7 +3,7 @@ title: Can I use Octave instead of MATLAB?
 tags: [faq, octave]
 ---
 
-## Can I use Octave instead of MATLAB?
+# Can I use Octave instead of MATLAB?
 
 From the [Octave](http://www.gnu.org/software/octave) website: *"GNU Octave is a high-level interpreted language, primarily intended for numerical computations... The Octave language is quite similar to Matlab so that most programs are easily portable."*
 

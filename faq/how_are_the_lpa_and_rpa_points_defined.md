@@ -38,5 +38,4 @@ Note that for the [nasion](http://en.wikipedia.org/wiki/Nasion), where at the Do
 ## See also
 
 *  BrainStorm documentation on [coordinate systems](http://neuroimage.usc.edu/brainstorm/CoordinateSystems)
-
 *  http://www.proplugs.com for the ear molds we use at the Donders Centre

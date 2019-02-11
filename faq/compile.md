@@ -3,13 +3,13 @@ title: How can I compile the mex files and command-line executables ?
 tags: [faq, mex, compile]
 ---
 
-##  How can I compile the mex files and command-line executables ?
+#  How can I compile the mex files and command-line executables ?
 
 We try to provide FieldTrip with all the mex files compiled for the most common platforms. However, sometimes specific MATLAB versions and/or specific operating systems require that you (re)compile the mex files. FieldTrip also includes a number of (command-line) executable programs. These are also provided in a compiled form that allows you to use them directly. Sometimes it is also required to recompile those. This FAQ describes the compilation procedure for the various components.
 
 Note that for compiling the mex files and/or executables you will need to have write access to the installation directory. If you are using a shared version that is installed on a network drive, that might not be the case.
 
-### General compilation of most mex files
+## General compilation of most mex files
 
 Compiling mex files in MATLAB requires that you have run
 
@@ -27,25 +27,25 @@ where the "true" argument tells the function to force a new compile for all mex 
 
 Note that there are certain mex files that are not compiled with this function. ALso the command-line executables are not compiled with this function.
 
-### Autocompile
+## Autocompile
 
 Some of the simple mex files come with a corresponding m-file that automatically tries to compile the mex file if it detects that the mex file is missing for your platform.
 
-### Config object
+## Config object
 
 The config object is used by ft_checkconfig to keep track of cfg options that are used and changed. By default this is *not* enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do
 
     cd @config/private
     compile
 
-### Uint64 object
+## Uint64 object
 
 The uint64 object is used for reading some particular file formats (a.o. Neuralynx). The mex files in the object are compiled with
 
     cd fileio/@uint64
     compile
 
-### Realtime buffer library
+## Realtime buffer library
 
 The realtime buffer mex file is compiled on the MATLAB command line with
 
@@ -61,7 +61,7 @@ The command line utilities and the library can be compiled on the Unix command l
 
 Please see [this page](/development/realtime/buffer#compiling_the_code) for more detailed instructions.
 
-### Peer distributed computing
+## Peer distributed computing
 
 The peer distributed computing toolbox has a number of mex files that are compiled on the MATLAB command line with
 
@@ -93,11 +93,11 @@ If you want to compile a 32 bit version on a 64 bit platform, e.g. if you are us
     # override the architecture defaults
     CFLAGS += -arch i386
 
-###  Stand-alone executables in realtime directory
+##  Stand-alone executables in realtime directory
 
 We generally only provide a ''Makefile'' for the GNU toolchain. This should be enough to compile the code using GCC on Linux/Mac OS X and using MinGW and Cygwin on Windows. Please note that not all tools will compile on all platforms, and that you might need additional libraries or vendor-specific SDKs which we can't distribute (e.g., you can only compile the [emotiv2ft](/development/realtime/Emotiv) application on Windows, and you need the Emotiv EDK).
 
-###  Fixing MEX-compilation with 32-bit variants of MATLAB running under 64-bit Linux
+##  Fixing MEX-compilation with 32-bit variants of MATLAB running under 64-bit Linux
 
 In this situation you could encounter errors like the followin
 
@@ -120,11 +120,11 @@ In this situation you could encounter errors like the followin
 
 	??? Error using ==> tprod at 132 unable to compile MEX version of '/mnt/data/FieldTrip/bin/fieldtrip-read-only/multivariate/external/farquhar/tprod/tprod', please make sure your MEX compiler is set up correctly (try 'mex -setup')."
 
-##### Problem
+### Problem
 
 This error is caused by the unrobust MATLAB design. The problem is that even when the 'architecture' of the computer is explicitly specified to MATLAB (like by starting MATLAB with a command of the form: ''matlab -glnx86''), in some cases MATLAB does not conform to that specified architecture, but to the architecture that the Linux operating system on your computer reports (in our case, 64-bit named "amd64" in Linux and "GLNXA64" in MATLAB terminology) like it normally does.
 
-##### Solution for Ubuntu Linux (10.10)
+### Solution for Ubuntu Linux (10.10)
 
 *  Install the package "ia32-libs", for example with the easy-to-use *Synaptic Package Manager*.
 
@@ -141,7 +141,7 @@ to:
 *  Start MATLAB again, and be sure to explicity specify the architecture to MATLAB.
  * If this solution is inadequate or fails for you, have a look at more extensive approaches presented in the original sources for this solution.
 
-##### Source references
+### Source references
 
 [http://saravananthirumuruganathan.wordpress.com/2010/02/10/installingrunning-matlab-and-compiling-matlab-extensions-in-a-64-bit-ubuntu-system/](http://saravananthirumuruganathan.wordpress.com/2010/02/10/installingrunning-matlab-and-compiling-matlab-extensions-in-a-64-bit-ubuntu-system/)
 

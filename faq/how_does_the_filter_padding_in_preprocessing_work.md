@@ -3,7 +3,7 @@ title: How does the filter padding in preprocessing work?
 tags: [faq, preprocessing, artifact, filter]
 ---
 
-## How does the filter padding in preprocessing work?
+# How does the filter padding in preprocessing work?
 
 The preprocessing parameter *cfg.padding* defines the duration to which the data in the trial will be padded: not only the segment of data that corresponds to the trial is read from the file, but also some extra data around it. After filtering this padding is removed from the data and preprocessing only returns the segment of interest.
 

@@ -9,11 +9,11 @@ Different EEG caps use different labels and especially different electrode place
 
 Here is a schematic layout of the easycapM10 and easycapM11 electrode caps.
 
-#### easycapM10 - Equidistant 61-Channel-Arrangement
+## easycapM10 - Equidistant 61-Channel-Arrangement
 
 {% include image src="/assets/img/faq/capmapping/easycapm10.png" width="200" %}
 
-#### easycapM11 - 61-Channel-Arrangement ("10%-System") (used in BrainCap64)
+## easycapM11 - 61-Channel-Arrangement ("10%-System") (used in BrainCap64)
 
 {% include image src="/assets/img/faq/capmapping/easycapm11.png" width="200" %}
 

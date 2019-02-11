@@ -3,7 +3,7 @@ title: How can I use the ivar, uvar, wvar and cvar options to precisely control 
 tags: [faq, statistics]
 ---
 
-## How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
+# How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
 
 In **[ft_timelockstatistics](/reference/ft_timelockstatistics)**, **[ft_freqstatistics](/reference/ft_freqstatistics)**, and **[ft_sourcestatistics](/reference/ft_sourcestatistics)** you can specify cfg.method='montecarlo' to use the permutation framework to get an estimate of the probability of the null-hypothesis that the data can be exchanged over the conditions. If that probability is low, you usually reject the null-hypothesis (H0) in favor of the alternative hypothesis (H1).
 
@@ -39,4 +39,3 @@ The "Control variable" allows you to specify blocks within which the permutation
 be done, while controlling that repetitions are not permuted *between* different control blocks. Specifying a control variable is an excellent way to control for a potentially confounding variable that associated with your independent variable.
 
 If you want to understand in detail what the consequences are of specifying these options, I suggest you do  "cd fieldtrip/private" and "edit resampledesign". That is the low-level function used for the permutations and other resamplings.
-

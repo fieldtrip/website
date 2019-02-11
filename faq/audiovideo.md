@@ -3,7 +3,7 @@ title: How can I play back EEG/MEG and synchronous audio or video?
 tags: [faq, audio, video]
 ---
 
-## How can I play back EEG/MEG and synchronous audio or video?
+# How can I play back EEG/MEG and synchronous audio or video?
 
 In epilepsy recordings it is common to record video along with the EEG. Also for some cognitive tasks, e.g. involving communicative expressions or spoken feedback, it is possible to record video and/or audio along with the EEG or MEG.
 
@@ -16,15 +16,15 @@ For both functions you should consider that
 
 The synchronization between the two recordings is realized by specifying both in **timestamps** that are expressed relative a common temporal reference (e.g. the time on an external clock) using the offset and slope, where timestamp=offset+slope*sample.
 
-### ft_databrowser
+## ft_databrowser
 
 This function puts the focus on the EEG/MEG data and allows you to select a fragment of the EEG/MEG and playback the corresponding audio and/or video.
 
-### ft_audiovideobrowser
+## ft_audiovideobrowser
 
 This function puts the focus on the audio/video data and allows you to segment it in trials in the same way that the EEG/MEG data is segmented. This allows you to review the audio/video in the experimental trials. The trial definition that is based on the triggers/events coded in the EEG/MEG file are used to read the corresponding audio/video fragments.
 
-### Example
+## Example
 
 The following code demonstrates the use of **[ft_databrowser](/reference/ft_databrowser)**. You first specify the EEG dataset and the function that is to be executed upon selecting a piece of EEG data. The *browse_audiovideo* is a small helper function located in fieldtrip/private directory; similar functions exist for a quick spectral analysis or topographic plotting of a selected piece of EEG data.
 

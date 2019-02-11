@@ -3,7 +3,7 @@ title: How does the peer smartshare algorithm work?
 tags: [faq, peer]
 ---
 
-## How does the peer smartshare algorithm work?
+# How does the peer smartshare algorithm work?
 
 If multiple end-users are simultaneously distributing their computational jobs, a problem can arise in distributing the limited resources to these users. One limited resource is cpu time, another is memory. A fair-sharing algorithm has been implemented to improve the distribution of resources over multiple concurrent users.
 
@@ -21,9 +21,8 @@ Fair sharing of CPU time is currently implemented by manipulating the likelihood
 
 Both the efficient memory planning and the fair sharing of CPU time require that an estimate of the memory and CPU time need to be present. A fixed initial estimate is used, which is refined once the single job results are returned to the master.
 
-### Optimizing memory use
+## Optimizing memory use
 
 Peers that run in slave mode announce their host details, including the available memory. The optimization of jobs with respect to memory is currently implemented in peerfeval, which selects the slave that has the best fit. It first selects all slave with sufficient memory, and from those it selects the one with the least memory available.
 
 The first job that is evaluated by peercellfun will have a default (large) memory requirement. The slave that evaluated the job will try to estimate the real memory requirements (using memprofile) and send those back with the job results. The peercellfun function collects the memory requirements of all incoming jobs, and will commit new jobs with a setting of the memory requirement corresponding with that of the largest job that has returned.
-

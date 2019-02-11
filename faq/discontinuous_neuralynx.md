@@ -3,7 +3,7 @@ title: How can I deal with a discontinuous Neuralynx recording
 tags: [faq, neuralynx, corrupt, preprocessing]
 ---
 
-## How can I deal with a discontinuous Neuralynx recording
+# How can I deal with a discontinuous Neuralynx recording
 
 It may occur that there are gaps in the Neuralynx recording traces, e.g. when the experimenter stops and re-starts the recording in the Cheetah software. The consequence is that the data samples do not form a continuous data representation any more. This can be detected offline, since the time-stamps that are stored along with the data will show gaps.
 

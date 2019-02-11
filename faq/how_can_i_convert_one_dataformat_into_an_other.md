@@ -3,7 +3,7 @@ title: How can I convert one dataformat into an other?
 tags: [faq, dataformat, preprocessing]
 ---
 
-## How can I convert one dataformat into an other?
+# How can I convert one dataformat into an other?
 
 You can read in the data from the original data format using **[ft_preprocessing](/reference/ft_preprocessing)** and subsequently use the **[ft_write_data](/reference/ft_write_data)** function to write the data to another  format that you can specify.
 

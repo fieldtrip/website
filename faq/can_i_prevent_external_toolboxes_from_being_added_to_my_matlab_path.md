@@ -3,7 +3,7 @@ title: Can I prevent "external" toolboxes from being added to my MATLAB path?
 tags: [faq, matlab, toolbox, path]
 ---
 
-## Can I prevent "external" toolboxes from being added to my MATLAB path?
+# Can I prevent "external" toolboxes from being added to my MATLAB path?
 
 The recommended FieldTrip path settings are explained in this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 

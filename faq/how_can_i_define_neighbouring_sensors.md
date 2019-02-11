@@ -3,7 +3,7 @@ title: How can I define neighbouring sensors?
 tags: [faq, statistics, cluster, plot]
 ---
 
-## How can I define neighbouring sensors?
+# How can I define neighbouring sensors?
 
 Certain functions require knowledge what sensors are near other sensors and should be considered as neighbours. As an example, any cluster-statistic needs to be informed which sensors are allowed to form a cluster. From August 2011 on, you as the user are obliged to define and verify the neighbours manually rather than relying on FieldTrip's internal standard. In the following will be explained what possibilities there are to achieve this.
 
@@ -19,7 +19,6 @@ or by simply asking for feedback when calling ft_prepare_neighbours
 
 	  cfg.feedback = 'yes';
 	  cfg.neighbours = ft_prepare_neighbours(cfg, data);
-
 
 There are three methods how ft_prepare_neighbours can define the neighbour structure for your data: 'distance', 'triangulation' and 'template'.
 

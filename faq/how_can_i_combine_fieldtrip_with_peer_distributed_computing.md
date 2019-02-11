@@ -3,7 +3,7 @@ title: How can I combine FieldTrip with peer distributed computing?
 tags: [faq, peer]
 ---
 
-## How can I combine FieldTrip with peer distributed computing?
+# How can I combine FieldTrip with peer distributed computing?
 
 The peer distributed computing toolbox was implemented with FieldTrip (and SPM) in mind. At the moment however, FieldTrip itself does not yet make use of the peer toolbox, i.e. FieldTrip functions do not automatically distribute the workload. We are of course planning to make that possible, i.e. that a single cfg.parallel='yes' option will automatically distribute the computational load over all available nodes.
 
@@ -42,7 +42,7 @@ and
 
 Note that when specifying the cfg.inputfile and/or cfg.outputfile options, that you should not specify an input and/or output variable.
 
-### Example: processing the MEG data for all tutorial subjects
+## Example: processing the MEG data for all tutorial subjects
 
 The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/>. There is data for four subjects, which can be processed in parallel as follows.
 
@@ -90,7 +90,7 @@ Please note that file permissions can be problematic if you use peers that are r
     chmod 777 ~/public
 for the cfg.outputfile and cfg.inputfile options, you should be fine.
 
-### Bundling multiple functions in a single distributed job
+## Bundling multiple functions in a single distributed job
 
 If you don't want each function to read/write the intermediate files from/to disk, you can also bundle them into a function that executes them in sequence. For example
 
@@ -121,7 +121,7 @@ And then you would call it in parallel for many subjects and conditions like thi
 
 Here all the source reconstructions will be returned to the master MATLAB session. Of course you can also save them to disk using unique filenames for each subject and condition. Alternatively you can use the cfg.inputfile option for the first step in your bundle of FieldTrip functions, and cfg.outputfile in the last step.
 
-### Effective distribution of jobs
+## Effective distribution of jobs
 
 If one can make an estimation of the jobs to be distributed, one could distribute the jobs without obstructing the jobs of others. For example, say you have a job that takes half an hour to finish, it would be recommended to send that job to machines that are suitable for these kind of jobs. The limited amount of 'heavy' machines would then still be available to users with larger jobs (for example 2 hours). Id est, you don't recruit a team of strong persons to move just a chair (in stead of a heavy couch).
 
