@@ -207,6 +207,7 @@ The following template layouts are for a sensor array of the CTF MEG system.
 
 The following template layouts are for a sensor array of the Neuromag MEG system. The major difference between the neuromag306 and the NM306 layouts is the labelling of the sensors (e.g. 'MEG1431' and '1431' respectively). In a similar vein, NM122.lay and NM122_combined.lay contain the lengthier labels (e.g. 'MEG 008'), whereas NM122all.lay has the shorter labels ('008').
 
+*  {% include image src="/assets/img/template/layout/neuromag306mag_helmet.png" %} - includes only the magnetometers
 *  {% include image src="/assets/img/template/layout/neuromag306all.lay.png" %}
 *  {% include image src="/assets/img/template/layout/neuromag306cmb.lay.png" %} - includes the combined planar gradiometers
 *  {% include image src="/assets/img/template/layout/neuromag306mag.lay.png" %} - includes only the magnetometers
