@@ -175,11 +175,11 @@ The next step is to discretize the brain volume into a grid. For each grid point
 Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
 {% include markup/end %}
 
-We first prepare the magnetometer and electrode position information that can be also downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/) and [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/elec).
+We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/).
 
 	dataset = 'oddball1_mc_downsampled.fif';
-	grad    = ft_read_sens(dataset,'senstype','meg');
-	elec    = ft_read_sens(dataset,'senstype','eeg');
+	grad    = ft_read_sens(dataset, 'senstype', 'meg');
+	elec    = ft_read_sens(dataset, 'senstype', 'eeg');
 
 If you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.  
 

@@ -14,7 +14,7 @@ We will keep this page up to date and post new information here when available.
 
 ## Dealing with the missing stats toolbox
 
-Please download the ft_connectivitysimulation data from ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/marseille.
+Please download the ft_connectivitysimulation data from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/marseille/>.
 
 ## How should you prepare for the workshop?
 

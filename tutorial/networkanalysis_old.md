@@ -39,7 +39,7 @@ The data analyses in the context of networks follows the following steps:
 
 The aim is to identify the frequency and topography of an 10Hz oscillation. We first use **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** to read the continuous data and segment it into epochs of 2 seconds length.
 
-The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip.
+The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectRest.zip>.
 
 	%% read the continuous data and segment into 2 seconds epochs
 	cfg = [];

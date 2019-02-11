@@ -27,32 +27,32 @@ The following steps had been performed:
 *  Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
 *  Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
-To run the following section of code you need the original dataset and trial function: [download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating)
+To run the following section of code you need the original dataset and trial function: [download c,rfhp0.1Hz dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [download ft_trialfun_sensorygating.m trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating.m)
 
 	clear all
 	close all
 
-	cfg=[];
-	cfg.dataset=['c,rfhp0.1Hz'];
-	cfg.trialfun  = 'ft_trialfun_sensorygating';
-	cfg.trialdef.prestim= 2;%sec
-	cfg.trialdef.poststim=2;%sec
-	cfg.channel= {'MEG' '-A28' '-A148' };
-	cfg=ft_definetrial(cfg);
-	data= ft_preprocessing(cfg);
+	cfg = [];
+	cfg.dataset = 'c,rfhp0.1Hz';
+	cfg.trialfun = 'ft_trialfun_sensorygating';
+	cfg.trialdef.prestim = 2; %sec
+	cfg.trialdef.poststim = 2; %sec
+	cfg.channel = {'MEG' '-A28' '-A148' };
+	cfg = ft_definetrial(cfg);
+	data = ft_preprocessing(cfg);
 
 The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/dataclean.mat).
 
-Load the data using the following comman
+Load the data using the following command:
 
 	load dataclean
 
 First we will visual inspection of the data in order to reject trials contaminated by movements and/or other artifacts such as SQUID jumps. We will use **[ft_rejectvisual](/reference/ft_rejectvisual)** where we want a summary of the activity over trials and sensors, i.e. *cfg.method* = 'summary';. It is recommended to explore the topography and time course of data that will be classified as artificial. The configuration option *cfg.layout* = '4D148.lay'; allows us to do so.
 
-	cfg=[];
+	cfg = [];
 	cfg.fontsize = 12;
-	cfg.method='summary';
-	cfg.layout= '4D148.lay';
+	cfg.method = 'summary';
+	cfg.layout = '4D148.lay';
 	dataclean = ft_rejectvisual(cfg, data);
 	save dataclean dataclean
 

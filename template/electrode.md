@@ -45,7 +45,7 @@ The electrodes are stored in an ASA .elc file  which can be read with **[ft_read
 
 ### The EGI geodesic sensor net
 
-The following template electrode sets are for the [EGI](http://www.egi.com) geodesic sensor net and were downloaded from the EGI [ftp server](ftp://www.egi.com).
+The following template electrode sets are for the [EGI](http://www.egi.com) geodesic sensor net and were downloaded from the EGI [ftp server](ftp://www.egi.com/).
 
 *  GSN-HydroCel-128.sfp
 

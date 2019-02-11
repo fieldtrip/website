@@ -130,7 +130,7 @@ Documentation referring to this dataset:
 * Recorded at 2000Hz with 248-channel 4D/BTi MEG scanner in St. Louis, USA.
 * Subjects do a movement with either left hand, right hand, left foot or right foot.
 * Details [HCP-motort](/tutorial/hcp_motort)
-* Download the dataset from the [HCP website](http://db.humanconnectome.org).
+* Download the dataset from the [HCP website](http://db.humanconnectome.org/).
 
 Documentation referring to this dataset:
 {% include seealso tag1="hcp-motort" %}
@@ -149,7 +149,7 @@ Documentation referring to this dataset:
 ## MEG-epilepsy
 
 * This dataset contains MEG data from two patients. The data was recorded at Aston Brain Centre (ABC) using a 275-channel CTF system and using an Elekta 306-channel system, i.e. for both patients there are the recordings with the two MEG systems. This clinical data was kindly provided by Professor Stefano Seri.
-* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy) from our FTP server.
+* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="meg-epilepsy" %}
@@ -158,7 +158,7 @@ Documentation referring to this dataset:
 
 * Monkeys attended to relevant the stimulus while ignoring distracters. Activity is recorded in V4 and analyzed as a function of whether neurons were activated by stimulus or distractors.
 * Link to the [publication](http://dx.doi.org/10.1126/science.1055465) by Fries et al.(2001).
-* Download the dataset [p029_sort_final_01.nex.](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex.) from our FTP server.
+* Download the dataset [p029_sort_final_01.nex](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spikefield/p029_sort_final_01.nex) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="spike-attention" %}
@@ -192,7 +192,7 @@ Documentation referring to this dataset:
 
 * Single-channel fNIRS recording over motor cortex during finger tapping task.
 * Artinis Oxymon MK III system
-* Download the dataset [here](ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel) from our FTP server.
+* Download the dataset [here](ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="nirs-singlechannel" %}
@@ -201,7 +201,7 @@ Documentation referring to this dataset:
 
 * Multi-channel fNIRS data recorded during an event-related auditory oddball paradigm.
 * Data was sampled at 250 Hz using 4 connected Artinis Oxymon systems to enable a 48 channel recording.
-* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_multichannel) from our FTP server.
+* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_multichannel/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="nirs-multichannel" %}

@@ -56,7 +56,7 @@ In the third part we shift our attention to the motor task in this dataset. We w
 
 ### Loading of the data
 
-First, we will load the already preprocessed data (see above), which is available from the [FieldTrip ftp server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Load the data with the following comman
+First, we will load the already preprocessed data (see above), which is available from the [FieldTrip ftp server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Load the data with the following command:
 
     load subjectK
 

@@ -45,7 +45,7 @@ For an example of a well-structured tutorial see the [tutorial on event related 
 
 Some computations in the tutorials may take a (too) long time, or take more memory than available in the  computers of the people that want to walk through the tutorial. To allow people in these cases to follow through the whole tutorial, we provide the intermediate data and final results at important stages in the tutorial. This data is stored in \*.mat files. See below for the recommended file and variable naming scheme.
 
-The tutorial mat files are made available on ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip and are distributed to all computers whenever we have a toolkit course or workshop. To get new files on the FTP server, or update existing files, you should copy them on the DCCN central storage system to the directory /home/common/matlab/fieldtrip/dataftp. That directory is automatically synchronized with the FTP server.
+The tutorial mat files are made available on <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/> and are distributed to all computers whenever we have a toolkit course or workshop. To get new files on the FTP server, or update existing files, you should copy them on the DCCN central storage system to the directory /home/common/matlab/fieldtrip/data/ftp. That directory is automatically synchronized with the FTP server.
 
 ## How to name example data?
 
