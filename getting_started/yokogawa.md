@@ -475,7 +475,7 @@ Plot results
 	cfg.colorbar        = 'yes';
 	ft_sourceplot(cfg,source_right_bl_int);
 
-{% include image src="/assets/img/getting_started/yokogawa/beamformer_single_subject_lambda_0005perc_b.jpg" width="600" %}
+{% include image src="/assets/img/getting_started/yokogawa/beamformer_single_subject_lambda_0005perc_b.png" width="600" %}
 
 {% include markup/info %}
 Thanks to Akiko Ikkai for contributing her data for making this page.
