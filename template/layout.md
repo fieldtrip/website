@@ -35,7 +35,7 @@ The following series of template layouts is for the electrode caps from [EASY CA
 
 ###  10%-Arrangements
 
-The following template layout sets are provide
+The following template layout sets are provided
 
 *  easycapM25.mat
 *  easycapM3.mat
@@ -87,7 +87,7 @@ The following template layout sets are provide
 {% include image src="/assets/img/template/layout/easycapm15.mat.png" width="200" %}
 ### Triangulated Equidistant Arrangements
 
-The following template layout sets are provide
+The following template layout sets are provided
 
 *  easycapM7.mat
 *  easycapM10.mat
@@ -116,7 +116,7 @@ The following template layout sets are provide
 
 ### Miscellaneous Arrangements
 
-The following template layout sets are provide
+The following template layout sets are provided
 
 *  easycapM20.mat
 *  easycapM17.mat
