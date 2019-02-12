@@ -26,12 +26,12 @@ You can use the following snippet of code to get a quick overview of the templat
 	end
 
 {% include markup/warning %}
-You can find the template 2-D layouts for plotting included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout).
+You can find the template 2-D layouts for plotting that are included in FieldTrip [here on Github](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout/).
 {% include markup/end %}
 
-## EASY CAP
+## EASYCAP
 
-The following series of template layouts is for the electrode caps from [EASY CAP](http://www.easycap.de). They are sorted based on their electrode montages. FieldTrip provides .mat files (since r5201 - feb 2012) that are based on the bitmap images obtained from the easycap website and shown below. The layout structure stored in those .mat files contains fields that describe the position (.pos), the width (.width), and the height (.height), and the naming (.label) of the electrodes. Furthermore, it contains fields that describe the topographic interpolation boundaries (.mask) and the outlines of the 'head' (.outline).  
+The following series of template layouts is for the electrode caps from [EASYCAP](http://www.easycap.de). They are sorted based on their electrode montages. FieldTrip provides .mat files (since r5201 - feb 2012) that are based on the bitmap images obtained from the easycap website and shown below. The layout structure stored in those .mat files contains fields that describe the position (.pos), the width (.width), and the height (.height), and the naming (.label) of the electrodes. Furthermore, it contains fields that describe the topographic interpolation boundaries (.mask) and the outlines of the 'head' (.outline).  
 
 ###  10%-Arrangements
 
@@ -132,15 +132,15 @@ The following template layout sets are provided
 {% include image src="/assets/img/template/layout/easycapm17.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm17.mat.png" width="200" %}
 
-## actiCAP
+## BrainProducts actiCAP
 
-The following template layouts are for electrode caps from [actiCAP](http://www.brainproducts.com). FieldTrip provides .mat files (since r6121 - june 2012) that are based on the bitmap images shown below. Note that these layouts were created for the DCCN and the MPI specifically and may differ from other actiCAP layouts. For a standard actiCap layout, see: acticap-64ch-standard2.mat.
+The following template layouts are for electrode caps from [Brain Products actiCAP](http://www.brainproducts.com). FieldTrip provides .mat files (since r6121 - june 2012) that are based on the bitmap images shown below. Note that these layouts were created for the DCCN and the MPI specifically and may differ from other actiCAP layouts. For a standard actiCap layout, see: acticap-64ch-standard2.mat.
 
 #### dccn_customized_acticap64.mat
 
 This is a custom 64-Channel-Arrangement for the DCCN. The 32 channels from the 1st amplifier are located central, the 32 channels from the 2nd amplifier are along the rim.
 
-{% include image src="/assets/img/template/layout/dccn_customized_acticap64.png" width="250" %}
+{% include image src="/assets/img/template/layout/dccn_customized_acticap64.png" width="200" %}
 {% include image src="/assets/img/template/layout/dccn_customized_acticap64.mat.png" width="200" %}
 
 #### mpi_customized_acticap64.mat
@@ -152,79 +152,86 @@ This is a custom 64-Channel-Arrangement for the MPI. Note that the electrode pos
 
 #### acticap-64ch-standard2.mat
 
-This is the standard 64-channel-Arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the easycap electrode caps. This particular layout was created using the [easycapM1 layout](http://www.fieldtriptoolbox.org/_media/template/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two eletrodes (AFz, FCz) were renamed to their purpose of being Ground( Gnd) and Reference (Ref) electrode.
+This is the standard 64-channel-Arrangement from [Brain Products](http://www.brainproducts.com/files/public/downloads/actiCAP-64-channel-Standard-2_1201.pdf). It is based on the same coordinates as the easycap electrode caps. This particular layout was created using the [easycapM1 layout](http://www.fieldtriptoolbox.org/_media/template/easycapm1.png) and then removing eight electrodes (FPz, Iz, F9, F10, P9, P10, O9, O10) which are not present in the cap. Furthermore, two eletrodes (AFz, FCz) were renamed to their purpose of being Ground (Gnd) and Reference (Ref) electrode.
 
-{% include image src="/assets/img/template/layout/acticap-64-channel-standard-2_original.jpg" width="200" %}
-{% include image src="/assets/img/template/layout/acticap-64-channel-standard-2_fieldtrip.jpg" width="200" %}
+{% include image src="/assets/img/template/layout/acticap-64-channel-standard-2.jpg" width="200" %}
+{% include image src="/assets/img/template/layout/acticap-64-channel-standard-2.mat.jpg" width="200" %}
 
-## NeuroScan Quick-cap
+## NeuroScan Quick-Cap
 
-The following template layout set is for an electrode cap from [NeuroScan](http://www.neuroscan.com). The origin and construction is described on http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=679. The QuikCap_NSL_128 layout has been provided by Andre Cravo.  
+The following template layout sets are for electrode caps from [NeuroScan](http://www.neuroscan.com). The origin and construction is described on <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=679>. The quikcap_nsl_128 layout has been kindly provided by Andre Cravo.
 
-*  {% include image src="/assets/img/template/layout/quickcap64.mat.png" %} (since june 2012 - r6055)
-*  {% include image src="/assets/img/template/layout/quikcap_nsl_128.mat.png" %} (since nov 2012 - r6915)
+{% include image src="/assets/img/template/layout/quickcap64.mat.png" width="200" %} (since june 2012 - r6055)
+{% include image src="/assets/img/template/layout/quikcap_nsl_128.mat.png" width="200" %} (since nov 2012 - r6915)
 
 ## BioSemi cap
 
 The following template layouts are for an electrode cap from [BioSemi](http://www.biosemi.com).  
 
-*  {% include image src="/assets/img/template/layout/biosemi16.lay.png" %}
-*  {% include image src="/assets/img/template/layout/biosemi32.lay.png" %}
-*  {% include image src="/assets/img/template/layout/biosemi64.lay.png" %}
-*  {% include image src="/assets/img/template/layout/biosemi128.lay.png" %}
-*  {% include image src="/assets/img/template/layout/biosemi160.lay.png" %}
-*  {% include image src="/assets/img/template/layout/biosemi256.lay.png" %}
+{% include image src="/assets/img/template/layout/biosemi16.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/biosemi32.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/biosemi64.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/biosemi128.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/biosemi160.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/biosemi256.lay.png" width="200" %}
 
 ## Standard 10-XX cap
 
 The following template layouts are for an electrode cap based on a standard 10-XX montage.
 
-*  {% include image src="/assets/img/template/layout/EEG1005.lay.png" %}
-*  {% include image src="/assets/img/template/layout/EEG1010.lay.png" %}
-*  {% include image src="/assets/img/template/layout/EEG1020.lay.png" %}
-*  {% include image src="/assets/img/template/layout/elec1005.lay.png" %}
-*  {% include image src="/assets/img/template/layout/elec1010.lay.png" %}
-*  {% include image src="/assets/img/template/layout/elec1020.lay.png" %}
+{% include image src="/assets/img/template/layout/EEG1005.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/EEG1010.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/EEG1020.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/elec1005.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/elec1010.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/elec1020.lay.png" width="200" %}
 
-## 4D/BTI array
+## BTi/4D system
 
-The following template layouts are for a sensor array of the 4D/BTI MEG system.
+The following template layouts are for a sensor array of the BTi/4D MEG system.
 
-*  {% include image src="/assets/img/template/layout/4D148.lay.png" %}
-*  {% include image src="/assets/img/template/layout/4D248.lay.png" %}
-*  {% include image src="/assets/img/template/layout/4D248_helmet.png" %} - realistic display of temporal sensors
+{% include image src="/assets/img/template/layout/4D148.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/4D248.lay.png" width="200" %}
 
-## CTF array
+### With a realistic display of temporal sensors
+
+{% include image src="/assets/img/template/layout/4D248_helmet.png" width="200" %}
+
+## CTF system
 
 The following template layouts are for a sensor array of the CTF MEG system.
 
-*  {% include image src="/assets/img/template/layout/CTF151.lay.png" %}
-*  {% include image src="/assets/img/template/layout/CTF151_helmet.png" %} - realistic display of temporal sensors
-*  {% include image src="/assets/img/template/layout/CTF275.lay.png" %}
-*  {% include image src="/assets/img/template/layout/CTF275_helmet.png" %} - realistic display of temporal sensors
+{% include image src="/assets/img/template/layout/CTF151.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/CTF275.lay.png" width="200" %}
 
-## Neuromag array
+### With a realistic display of temporal sensors
 
-The following template layouts are for a sensor array of the Neuromag MEG system. The major difference between the neuromag306 and the NM306 layouts is the labelling of the sensors (e.g. 'MEG1431' and '1431' respectively). In a similar vein, NM122.lay and NM122_combined.lay contain the lengthier labels (e.g. 'MEG 008'), whereas NM122all.lay has the shorter labels ('008').
+{% include image src="/assets/img/template/layout/CTF151_helmet.png" width="200" %}
+{% include image src="/assets/img/template/layout/CTF275_helmet.png" width="200" %}
 
-*  {% include image src="/assets/img/template/layout/neuromag306mag_helmet.png" %} - includes only the magnetometers
-*  {% include image src="/assets/img/template/layout/neuromag306all.lay.png" %}
-*  {% include image src="/assets/img/template/layout/neuromag306cmb.lay.png" %} - includes the combined planar gradiometers
-*  {% include image src="/assets/img/template/layout/neuromag306mag.lay.png" %} - includes only the magnetometers
-*  {% include image src="/assets/img/template/layout/neuromag306planar.lay.png" %} - includes only the planar gradiometers
-*  {% include image src="/assets/img/template/layout/NM122.lay.png" %}
-*  {% include image src="/assets/img/template/layout/NM122all.lay.png" %}
-*  {% include image src="/assets/img/template/layout/NM122combined.lay.png" %} - includes the combined planar gradiometers
-*  {% include image src="/assets/img/template/layout/NM306all.lay.png" %}
-*  {% include image src="/assets/img/template/layout/NM306mag.lay.png" %} - includes only the magnetometers
-*  {% include image src="/assets/img/template/layout/NM306planar.lay.png" %} - includes only the planar gradiometers
+## Neuromag/Elekta/Megin system
 
-## Yokogawa array
+The following template layouts are for a sensor array of the Neuromag/Elekta/Megin MEG system. The major difference between the neuromag306 and the NM306 layouts is the labelling of the sensors (e.g. 'MEG1431' and '1431' respectively). In a similar vein, NM122.lay and NM122_combined.lay contain the lengthier labels (e.g. 'MEG 008'), whereas NM122all.lay has the shorter labels ('008').
 
-The following template layouts are for a sensor array of the Yokogawa MEG system. The labels in these layouts, except for the old variant, are prefixed to indicate the gradiometer type ('PG*' - planar gradiometer, 'AG*' - axial gradiometer).
+{% include image src="/assets/img/template/layout/neuromag306all.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/neuromag306cmb.lay.png" width="200" %} with the combined planar gradiometers
+{% include image src="/assets/img/template/layout/neuromag306mag.lay.png" width="200" %} with only the magnetometers
+{% include image src="/assets/img/template/layout/neuromag306planar.lay.png" width="200" %} with only the planar gradiometers
 
-*  {% include image src="/assets/img/template/layout/yokogawa440.lay.png" %}
-*  {% include image src="/assets/img/template/layout/yokogawa440_old.lay.png" %}
-*  {% include image src="/assets/img/template/layout/yokogawa440ag.lay.png" %} - includes only the axial gradiometers
-*  {% include image src="/assets/img/template/layout/yokogawa440all.lay.png" %}
-*  {% include image src="/assets/img/template/layout/yokogawa440pg.lay.png" %}  - includes only the planar gradiometers
+{% include image src="/assets/img/template/layout/NM122.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/NM122all.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/NM122combined.lay.png" width="200" %} with the combined planar gradiometers
+
+{% include image src="/assets/img/template/layout/NM306all.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/NM306mag.lay.png" width="200" %} with only the magnetometers
+{% include image src="/assets/img/template/layout/NM306planar.lay.png" width="200" %} with only the planar gradiometers
+
+## Yokogawa system
+
+The following template layouts are for a sensor array of the Yokogawa MEG system. The labels in these layouts, except for the old variant, are prefixed to indicate the gradiometer type (`PG` - planar gradiometer, `AG` - axial gradiometer).
+
+{% include image src="/assets/img/template/layout/yokogawa440.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/yokogawa440_old.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/yokogawa440all.lay.png" width="200" %}
+{% include image src="/assets/img/template/layout/yokogawa440ag.lay.png" width="200" %} with only the axial gradiometers
+{% include image src="/assets/img/template/layout/yokogawa440pg.lay.png" width="200" %} with only the planar gradiometers
