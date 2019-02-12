@@ -530,7 +530,7 @@ As before, we will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to 
 
 	cfg               = [];
 	cfg.metric        = 'zvalue';
-	cfg.layout        = 'neuromag306eeg1005_natmeg.lay';
+	cfg.layout        = 'natmeg_customized_eeg1005.lay';
 	data_EEG_clean    = ft_rejectvisual(cfg,data_EEG);
 
 ### Event-related potentials (ERPs)
@@ -592,7 +592,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 	cfg          = [];
 	cfg.fontsize = 6;
-	cfg.layout   = 'neuromag306eeg1005_natmeg.lay';
+	cfg.layout   = 'natmeg_customized_eeg1005.lay';
 	cfg.ylim     = [-3e-6 3e-6];
 	cfg.xlim     = [-0.2 0.6];
 
@@ -613,7 +613,7 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 	cfg            = [];
 	cfg.showlabels = 'yes';
 	cfg.fontsize   = 6;
-	cfg.layout     = 'neuromag306eeg1005_natmeg.lay';
+	cfg.layout     = 'natmeg_customized_eeg1005.lay';
 	cfg.xlim       = [-0.2 0.6];
 	cfg.ylim       = [-8e-6 8e-6];
 	cfg.channel    = 'EEG020';
@@ -640,7 +640,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 	% Topo
 	cfg                 = [];
-	cfg.layout          = 'neuromag306eeg1005_natmeg.lay';
+	cfg.layout          = 'natmeg_customized_eeg1005.lay';
 	cfg.zlim            = [-3e-6 3e-6];
 	cfg.xlim            = [0.08 0.15];
 	cfg.style           = 'straight';
@@ -698,7 +698,7 @@ So let's calculate the SCD on the averaged data.
 To plot the scalp current density results, use the following code
 
 	cfg                 = [];
-	cfg.layout          = 'neuromag306eeg1005_natmeg.lay'; % name will change
+	cfg.layout          = 'natmeg_customized_eeg1005.lay'; % name will change
 	cfg.zlim            = 'maxabs';
 	cfg.xlim            = [0.08 0.15];
 	cfg.style           = 'straight';

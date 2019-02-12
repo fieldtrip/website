@@ -829,7 +829,7 @@ We will now calculate the ERPs on which we are going to fit the dipole
 Before continuing lets just have a quick look whether we processed our data correctly, the following code should produce a familiar imag
 
     cfg = [];
-    cfg.layout = 'neuromag306eeg1005_natmeg.lay';
+    cfg.layout = 'natmeg_customized_eeg1005.lay';
     ft_multiplotER(cfg, timelock_eeg_std, timelock_eeg_dev);
 
     print -dpng natmeg_dip_meg_multiplot.png
@@ -840,7 +840,7 @@ Before continuing lets just have a quick look whether we processed our data corr
     timelock_eeg_dif = ft_math(cfg, timelock_eeg_dev, timelock_eeg_std);
 
     cfg = [];
-    cfg.layout = 'neuromag306eeg1005_natmeg.lay';
+    cfg.layout = 'natmeg_customized_eeg1005.lay';
     ft_multiplotER(cfg, timelock_eeg_dif);
 
 ### Compare the EEG and MEG dipole fits

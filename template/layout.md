@@ -188,12 +188,12 @@ The following template layouts are for an electrode cap based on a standard 10-X
 
 ## BTi/4D system
 
-The following template layouts are for a sensor array of the BTi/4D MEG system.
+The following template layouts are for the sensor arrays of the BTi/4D MEG system.
 
 {% include image src="/assets/img/template/layout/4D148.lay.png" width="200" %}
 {% include image src="/assets/img/template/layout/4D248.lay.png" width="200" %}
 
-### With a realistic display of temporal sensors
+### With a more realistic display of temporal sensors
 
 {% include image src="/assets/img/template/layout/4D248_helmet.png" width="200" %}
 
@@ -204,27 +204,37 @@ The following template layouts are for a sensor array of the CTF MEG system.
 {% include image src="/assets/img/template/layout/CTF151.lay.png" width="200" %}
 {% include image src="/assets/img/template/layout/CTF275.lay.png" width="200" %}
 
-### With a realistic display of temporal sensors
+### With a more realistic display of temporal sensors
 
 {% include image src="/assets/img/template/layout/CTF151_helmet.png" width="200" %}
 {% include image src="/assets/img/template/layout/CTF275_helmet.png" width="200" %}
 
 ## Neuromag/Elekta/Megin system
 
-The following template layouts are for a sensor array of the Neuromag/Elekta/Megin MEG system. The major difference between the neuromag306 and the NM306 layouts is the labelling of the sensors (e.g. 'MEG1431' and '1431' respectively). In a similar vein, NM122.lay and NM122_combined.lay contain the lengthier labels (e.g. 'MEG 008'), whereas NM122all.lay has the shorter labels ('008').
+### 306-channel system
 
+#### with all channels
 {% include image src="/assets/img/template/layout/neuromag306all.lay.png" width="200" %}
-{% include image src="/assets/img/template/layout/neuromag306cmb.lay.png" width="200" %} with the combined planar gradiometers
-{% include image src="/assets/img/template/layout/neuromag306mag.lay.png" width="200" %} with only the magnetometers
-{% include image src="/assets/img/template/layout/neuromag306planar.lay.png" width="200" %} with only the planar gradiometers
 
-{% include image src="/assets/img/template/layout/NM122.lay.png" width="200" %}
-{% include image src="/assets/img/template/layout/NM122all.lay.png" width="200" %}
-{% include image src="/assets/img/template/layout/NM122combined.lay.png" width="200" %} with the combined planar gradiometers
+#### with only the magnetometers
+{% include image src="/assets/img/template/layout/neuromag306mag.lay.png" width="200" %}
 
-{% include image src="/assets/img/template/layout/NM306all.lay.png" width="200" %}
-{% include image src="/assets/img/template/layout/NM306mag.lay.png" width="200" %} with only the magnetometers
-{% include image src="/assets/img/template/layout/NM306planar.lay.png" width="200" %} with only the planar gradiometers
+#### with only the planar gradiometers
+{% include image src="/assets/img/template/layout/neuromag306planar.lay.png" width="200" %}
+
+#### with the combined planar gradiometers
+{% include image src="/assets/img/template/layout/neuromag306cmb.lay.png" width="200" %}
+
+#### with a more realistic display of temporal sensors
+{% include image src="/assets/img/template/layout/neuromag306mag_helmet.png" width="200" %}
+
+### 122-channel system
+
+#### with the planar gradiometers
+{% include image src="/assets/img/template/layout/neuromag122planar.lay.png" width="200" %}
+
+#### with the combined planar gradiometers
+{% include image src="/assets/img/template/layout/neuromag122cmb.lay.png" width="200" %}
 
 ## Yokogawa system
 
@@ -233,5 +243,9 @@ The following template layouts are for a sensor array of the Yokogawa MEG system
 {% include image src="/assets/img/template/layout/yokogawa440.lay.png" width="200" %}
 {% include image src="/assets/img/template/layout/yokogawa440_old.lay.png" width="200" %}
 {% include image src="/assets/img/template/layout/yokogawa440all.lay.png" width="200" %}
-{% include image src="/assets/img/template/layout/yokogawa440ag.lay.png" width="200" %} with only the axial gradiometers
-{% include image src="/assets/img/template/layout/yokogawa440pg.lay.png" width="200" %} with only the planar gradiometers
+
+#### with only the axial gradiometers
+{% include image src="/assets/img/template/layout/yokogawa440ag.lay.png" width="200" %}
+
+#### with only the planar gradiometers
+{% include image src="/assets/img/template/layout/yokogawa440pg.lay.png" width="200" %}
