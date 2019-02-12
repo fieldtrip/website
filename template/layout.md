@@ -225,7 +225,16 @@ The following template layouts are for a sensor array of the CTF MEG system.
 #### with the combined planar gradiometers
 {% include image src="/assets/img/template/layout/neuromag306cmb.lay.png" width="200" %}
 
-#### with a more realistic display of temporal sensors
+#### with a more realistic display of temporal sensors, all channels
+{% include image src="/assets/img/template/layout/neuromag306all_helmet.png" width="200" %}
+
+#### with a more realistic display of temporal sensors, planar gradiometers only
+{% include image src="/assets/img/template/layout/neuromag306planar_helmet.png" width="200" %}
+
+#### with a more realistic display of temporal sensors, planar gradiometers combined
+{% include image src="/assets/img/template/layout/neuromag306cmb_helmet.png" width="200" %}
+
+#### with a more realistic display of temporal sensors, magnetometers only
 {% include image src="/assets/img/template/layout/neuromag306mag_helmet.png" width="200" %}
 
 ### 122-channel system
