@@ -4,7 +4,7 @@
 - name:  Getting started with BrainVision Analyzer and Easycap
   link:  /getting_started/brainvision
 
-- name:  Preprocessing - Reading continuous EEG data
+- name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
 - name:  Preprocessing of EEG data and computing ERPs

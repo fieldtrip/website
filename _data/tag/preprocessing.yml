@@ -94,7 +94,7 @@
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
 
-- name:  Preprocessing - Reading continuous EEG data
+- name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
 - name:  Event related averaging and MEG planar gradient

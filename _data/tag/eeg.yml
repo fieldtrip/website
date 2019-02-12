@@ -106,7 +106,7 @@
 - name:  Cluster-based permutation tests on event related fields
   link:  /tutorial/cluster_permutation_timelock
 
-- name:  Preprocessing - Reading continuous EEG data
+- name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
 - name:  Parametric and non-parametric statistics on event-related fields

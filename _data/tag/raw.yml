@@ -49,7 +49,7 @@
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
-- name:  Preprocessing - Reading continuous EEG data
+- name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
 
 - name:  Introduction to the FieldTrip toolbox
