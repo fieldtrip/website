@@ -1,9 +1,9 @@
 ---
-title: Preprocessing - Reading continuous EEG data
-tags: [tutorial, preprocessing, continuous, eeg, raw, brainvision, memory, eeg-language]
+title: Preprocessing - Reading continuous EEG and MEG data
+tags: [tutorial, preprocessing, continuous, eeg, raw, brainvision, memory, meg-language, eeg-language]
 ---
 
-# Preprocessing - Reading continuous EEG data
+# Preprocessing - Reading continuous EEG and MEG data
 
 ## Introduction
 
@@ -26,22 +26,22 @@ The following steps are taken to read data, to apply filters and to reference th
 
 ## The data set used in this tutorial
 
-In this tutorial we will be using an EEG data set that was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditorily presented words. Data was acquired with a 64-channel BrainProducts Brainamp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv.
+In this tutorial we will be using two datasets, one with EEG data and one with MEG data.
 
-Furthermore, the standard CTF MEG tutorial dataset (Subject01.ds) will be used for one of the examples.
+The EEG dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts Brainamp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv.
 
-The EEG data used below is available from our FTP server at [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) and the MEG data from [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+The MEG dataset [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) was acquired by Lin Wang in language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences were added.
 
-## Reading continuous data into memory
+## Reading continuous EEG data into memory
 
 The simplest method for preprocessing and reading the data into memory is by calling the **[ft_preprocessing](/reference/ft_preprocessing)** function with only the dataset as configuration argument.
 
     cfg = [];
     cfg.dataset     = 'subj2.vhdr';
-    data_org        = ft_preprocessing(cfg)
+    data_eeg        = ft_preprocessing(cfg)
 
-    >> data_org                             
-    data_org =
+    >> data_eeg                             
+    data_eeg =
         hdr: [1x1 struct]
       label: {64x1 cell}
       trial: {[64x1974550 double]}
@@ -52,10 +52,12 @@ The simplest method for preprocessing and reading the data into memory is by cal
 This reads the data from file as one long continuous segment without any additional filtering. The resulting data is represented as one very long trial. To plot the potential in one of the channels, you can simply use the MATLAB plot function.
 
 	chansel  = 1;
-	plot(data_org.time{1}, data_org.trial{1}(chansel, :))
+	plot(data_eeg.time{1}, data_eeg.trial{1}(chansel, :))
 	xlabel('time (s)')
 	ylabel('channel amplitude (uV)')
-	legend(data_org.label(chansel))
+	legend(data_eeg.label(chansel))
+
+## Reading continuous MEG data into memory
 
 If the data on disk is stored in a segmented or epoched format, i.e. where the file format already reflects the trials in the experiment, a call to **[ft_preprocessing](/reference/ft_preprocessing)** will return in the data being read and segmented into the original trials.
 
@@ -84,17 +86,19 @@ This segmented MEG data dataset contains 266 trials. The following example shows
 	  title(sprintf('trial %d', trialsel));
 	end
 
-If you want to force epoched data to be interpreted as continuous data, you can use the cfg.continuous option, like thi
+If you want to force epoched data to be interpreted as continuous data, you can use the cfg.continuous option, like this:
 
 	cfg = [];
 	cfg.dataset     = 'Subject01.ds';
-	cfg.continuous  = 'yes';
+	cfg.continuous  = 'yes';             % force it to be continuous
 	data_meg        = ft_preprocessing(cfg);
 
 	chansel = 1;
 	plot(data_meg.time{1}, data_meg.trial{1}(chansel, :))
 	xlabel('time (s)')
 	ylabel('channel amplitude (a.u.)')
+
+If you look in detail at one of the MEG channels in the continuous data, you can see that there are small jumps every 3 seconds. These are due to the data being discontinuous on disk, i.e. only the 3 second segments around each stimulus are stored on disk, the data in between the trials is not stored on disk. Consequently, this particular dataset should **not be interpreted** as a continuous recording. Many other CTF recordings are stored on disk with data segments of 10 seconds each, these can be interpreted as continuous as there are no gaps between the long segments.
 
 ## Preprocessing, filtering and re-referencing
 
@@ -106,8 +110,8 @@ The channel names that were configured in the Brainamp Recorder software corresp
     cfg.dataset     = 'subj2.vhdr';
     cfg.reref       = 'yes';
     cfg.channel     = 'all';
-    cfg.implicitref = 'M1';            % the implicit (non-recorded) reference channel is added to the data representation
-    cfg.refchannel     = {'M1', '53'}; % the average of these channels is used as the new reference, note that channel '53' corresponds to the right mastoid (M2)
+    cfg.implicitref = 'M1';         % the implicit (non-recorded) reference channel is added to the data representation
+    cfg.refchannel  = {'M1', '53'}; % the average of these two is used as the new reference, channel '53' corresponds to the right mastoid (M2)
     data_eeg        = ft_preprocessing(cfg);
 
 For consistency we will rename the channel with the name '53' located at the right mastoid to 'M2'
@@ -171,7 +175,7 @@ Now that we have the EEG data rereferenced to linked mastoids and the horizontal
     cfg = [];
     data_all = ft_appenddata(cfg, data_eeg, data_eogh, data_eogv);
 
-In the example above, no filters were applied to the data. It is possible to apply filters to the data during the initial preprocessing/reading. It is also possible to apply filters afterwards by calling the **[ft_preprocessing](/reference/ft_preprocessing)** function with the data as second input argument. If you want to apply different preprocessing options (such as filters for EEG channels, rectification of EMG channels, rereferencing) to different channels, you should call **[ft_preprocessing](/reference/ft_preprocessing)** with the desired options for each of the channel types and subsequently append the data for the different channels types into one raw data structure.
+In the example above, no filters were applied to the data. It is possible to apply filters to the data during the initial preprocessing/reading. It is also possible to apply filters afterwards by calling the **[ft_preprocessing](/reference/ft_preprocessing)** function with the data as second input argument. If you want to apply different preprocessing options (such as filters for EEG channels, rectification of EMG channels, re-referencing) to different channels, you should call **[ft_preprocessing](/reference/ft_preprocessing)** with the desired options for each of the channel types and subsequently append the data for the different channels types into one raw data structure.
 
 ## Segmenting continuous data into trials
 
@@ -229,19 +233,19 @@ The following example shows how to read and segment the data in one go.
     cfg                      = ft_definetrial(cfg);
 
     % read the data from disk and segment it into 1-second pieces
-    data_seg                 = ft_preprocessing(cfg);
+    data_segmented           = ft_preprocessing(cfg);
 
-The following example shows how to read the data as a single continuous segment, and subsequently cut it into one second pieces.
+The following example shows how to first read the data as a single continuous segment, and subsequently cut it into one second pieces or segments.
 
     % read it from disk as a single continuous segment
     cfg = [];
     cfg.dataset              = 'subj2.vhdr';
-    data_org                 = ft_preprocessing(cfg);
+    data_cont                = ft_preprocessing(cfg);
 
     % segment it into 1-second pieces
     cfg = [];
     cfg.length               = 1;
-    data_ref                 = ft_redefinetrial(cfg, data_org);
+    data_segmented           = ft_redefinetrial(cfg, data_cont);
 
 ## Suggested further reading
 
