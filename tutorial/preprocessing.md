@@ -41,7 +41,7 @@ Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you
 
 The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions require the original MEG dataset, which is available at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)
 
-Do the trial definition for the fully incongruent (FIC) conditio
+Do the trial definition for the fully incongruent (FIC) condition:
 
 	  cfg                         = [];
 	  cfg.dataset                 = 'Subject01.ds';
@@ -65,7 +65,7 @@ Save the preprocessed data to dis
 
     save PreprocData dataFIC
 
-The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure dataFIC which has the following field
+The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure dataFIC which has the following fields:
 
 	dataFIC =
 	           hdr: [1x1 struct]
@@ -78,7 +78,7 @@ The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structu
 	          grad: [1x1 struct]
 	           cfg: [1x1 struct]
 
-The most important fields are dataFIC.trial containing the individual trials and dataFIC.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
+The most important fields are dataFIC.trial containing the individual trials and dataFIC.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following:
 
     plot(dataFIC.time{1}, dataFIC.trial{1}(130,:))
 
@@ -101,11 +101,11 @@ The initially congruent (IC) conditio
     cfg.continuous = 'yes';
     dataIC = ft_preprocessing(cfg);
 
-Save the preprocessed data to dis
+Save the preprocessed data to disk:
 
     save PreprocData dataIC -append
 
-And the fully congruent (FC) conditio
+And the fully congruent (FC) condition:
 
     cfg                         = [];
     cfg.dataset                 = 'Subject01.ds';
@@ -120,7 +120,7 @@ And the fully congruent (FC) conditio
     cfg.continuous = 'yes';
     dataFC = ft_preprocessing(cfg);
 
-Save the preprocessed data to dis
+Save the preprocessed data to disk:
 
     save PreprocData dataFC -append
 

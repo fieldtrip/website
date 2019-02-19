@@ -41,10 +41,10 @@ We now perform a timelock analysis in order to make the data suitable as input t
 
     cfg             = [];
     cfg.parameter   = 'trial';
-    cfg.keeptrials  = 'yes'; % classifiers operate on individual trials
+    cfg.keeptrials  = 'yes';         % classifiers operate on individual trials
     cfg.channel     = {'MLO' 'MRO'}; % occipital channels only
-    tleft   = ft_timelockanalysis(cfg,left);
-    tright  = ft_timelockanalysis(cfg,right);
+    tleft   = ft_timelockanalysis(cfg, left);
+    tright  = ft_timelockanalysis(cfg, right);
 
 Now we specify cross-validation as a method for timelock statistics. This ensures that we will perform a classification of our data based on five-fold cross-validation. This splits up the data into five partitions or folds and attempts to build five different classifiers using the remaining four folds. The end result is then averaged over folds.
 
@@ -58,11 +58,11 @@ We also need to specify a design matrix; this is simply a vector with labels *1*
 
 Let's focus on the last segment of the data
 
-    cfg.latency     = [2.0 2.5]; % final bit of the attention period
+    cfg.latency = [2.0 2.5]; % final bit of the attention period
 
 Finally, we call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** which uses the default classification procedure; namely a standardization of the data (subtraction of the mean and division by the standard deviation), followed by applying a linear support vector machin
 
-    stat = ft_timelockstatistics(cfg,tleft,tright);
+    stat = ft_timelockstatistics(cfg, tleft, tright);
 
 The stat.statistic field now contains some useful statistics. By default it contains stat.accuracy (proportion of correctly classified trials) and a binomial significance test
 
@@ -83,14 +83,15 @@ We may also plot the parameters of the used classifier as if it were electrophys
 
 and subsequently to treat the stat object as if it were data. The *parameter* field is then used to determine what to plo
 
-    cfg             = [];
-    cfg.parameter   = 'mymodel';
-    cfg.layout      = 'CTF275.lay';
-    cfg.xlim        = [2.0 2.5];
-    cfg.comments    = '';
-    cfg.colorbar    = 'yes';
-    cfg.interplimits= 'electrodes';
-    ft_topoplotER(cfg,stat);
+    cfg              = [];
+    cfg.parameter    = 'mymodel';
+    cfg.layout       = 'CTF275.lay';
+    cfg.xlim         = [2.0 2.5];
+    cfg.comments     = '';
+    cfg.colorbar     = 'yes';
+    cfg.interplimits = 'electrodes';
+    ft_topoplotER(cfg, stat);
+
 {% include image src="/assets/img/tutorial/multivariateanalysis/clf_1.png" width="200" %}
 
 In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using *imagesc(stat.mymodel)* then it will be found that all features are used due to the way classifier operates. One way to solve this is to use *dimensionality reduction* or *feature selection*. We will see examples later in this tutorial.
@@ -147,8 +148,10 @@ and we see a major improvement since we are focusing on the physiologically rele
     cfg.comment      = '';
     cfg.colorbar     = 'yes';
     cfg.interplimits = 'electrodes';
-    ft_topoplotTFR(cfg,stat);
+    ft_topoplotTFR(cfg, stat);
+
 {% include image src="/assets/img/tutorial/multivariateanalysis/clf_2.png" width="200" %}
+
 #### Exercise 2
 
 {% include markup/info %}
@@ -158,7 +161,7 @@ Rerun the previous cross-validation with 'cfg.nfolds=2'. Explain the difference 
 ### Dimensionality reduction and feature selection
 
 One important thing to consider when classifying electrophysiological data is that we wish to reduce as much as possible the number of features used to classify the data. There are two ways to achieve this: either we map the input data to another space with a smaller number of dimensions or we select a number of dimensions from the original space.
-Going back to our analysis of timelocked data, we could for instance use common spatial patterns (see this [paper](http://dx.doi.org/10.1016/j.neuroimage.2010.06.048) for an explanation) to map our data to a different space. Here, instead, we perform a feature selection in the original space using a regularized classification approach. This is done by overriding the default classification procedure using the *cfg.mva* fiel
+Going back to our analysis of timelocked data, we could for instance use common spatial patterns (see this [paper](http://dx.doi.org/10.1016/j.neuroimage.2010.06.048) for an explanation) to map our data to a different space. Here, instead, we perform a feature selection in the original space using a regularized classification approach. This is done by overriding the default classification procedure using the *cfg.mva* field:
 
     cfg         = [];
     cfg.layout  = 'CTF275.lay';
@@ -168,7 +171,7 @@ Going back to our analysis of timelocked data, we could for instance use common 
 
 This multivariate analysis standardizes the data and subsequently calls an elastic net logistic regression with regularization parameter alpha equal to 0.2. This parameter influences how many features will be selected for classification. The larger the parameter, the fewer features will be used. For a description of the used algorithm, you may consult the following [paper](http://www.jstatsoft.org/v33/i01/). The elastic net algorithm gives the following result
 
-    stat = ft_freqstatistics(cfg,tfrleft,tfrright);
+    stat = ft_freqstatistics(cfg, tfrleft, tfrright);
     stat.statistic
 
 If we inspect stat.model{1} then we find that a different set of parameters is estimated (weights and bias). The weights are the regression coefficients of interest and bias is just an offset term.
@@ -182,7 +185,8 @@ If we look at the weights then we find that just a very small number of features
     cfg.comment      = '';
     cfg.colorbar     = 'yes';
     cfg.interplimits = 'electrodes';
-    ft_topoplotTFR(cfg,stat);
+    ft_topoplotTFR(cfg, stat);
+
 {% include image src="/assets/img/tutorial/multivariateanalysis/clf_3.png" width="200" %}
 
 #### Exercise 3
