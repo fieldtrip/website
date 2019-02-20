@@ -10,7 +10,9 @@ The FieldTrip code and website are both maintained on [https://github.com/fieldt
 {% include markup/info %}
 To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
 
-    git clone https://github.com/fieldtrip/fieldtrip.git
+```` bash
+git clone https://github.com/fieldtrip/fieldtrip.git
+````
 
 This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on github, fork FieldTrip to our own account and read on for a complete tutorial.
 {% include markup/end %}
@@ -38,24 +40,26 @@ There are lots of resources available on the internet to learn more about git. T
 
 #### Basic concepts
 
-##### push, pull, clone
-git lives on two level
+git usually lives on two levels:
+
 1. on your local computer
 2. on a remote server
 
-Both contain a full repository of the whole code. The basic idea is that you make some changes on your local copy and then send them to the remote server. Sending changes to a remote repository is called [pushing](http://git-scm.com/docs/git-push) and receiving changes from a remote repository to your local machine is called [pulling](http://git-scm.com/docs/git-pull). The first time that you want to copy a complete repository from a remote server to your local machine, you need to [clone](http://git-scm.com/docs/git-clone) the repository.
+#### push, pull, clone
 
-##### commit
+Both your local computer and the remote server contain a full copy of the whole repository. The basic idea is that you make some changes on your local copy and then send them to the remote server. Sending changes to a remote repository is called [pushing](http://git-scm.com/docs/git-push) and receiving changes from a remote repository to your local machine is called [pulling](http://git-scm.com/docs/git-pull). The first time that you want to copy a complete repository from a remote server to your local machine, you need to [clone](http://git-scm.com/docs/git-clone) the repository.
+
+#### commit
 
 Your local repository is a complete repository of the whole source code. As such, you can modify some files (or even adding some files) and then include these changes to the local repository. This procedure is called [commit](http://git-scm.com/docs/git-commit). The changes that are committed to your local repository are called **commits**.
 
-##### branch, merge
+#### branch, merge
 
 One of the most powerful features of git is the idea of [branching](http://git-scm.com/book/en/Git-Branching): *Branching means you diverge from the main line of development and continue to do work without messing with that main line*. So, from your local repository, you can create a new branch, make some changes, commit them. If you are happy with the changes, you can [merge](http://git-scm.com/docs/git-merge) your new branch with the main development line. Branches are very flexible because they allow you to develop new features without compromising the main repository. You can easily switch between the main branch (often called **master**) and experimental branches.
 
-##### Main commands
+#### Summary of the main commands
 
-To recap, the main commands that you'll need here ar
+To recap, the main commands that you'll need are:
 
 * **clone** to create a new local repository based on a remote repository
 * **push** to send your local changes to the remote repository
@@ -66,11 +70,18 @@ To recap, the main commands that you'll need here ar
 * **checkout -b** to create a new branch
 * **merge** to merge a branch with your main local repository.
 
-You can use any of these commands on the command line, in Linux and Mac, by doin
-  git name_of_the_command
+You can use any of these commands on the command line, in Linux and Mac, by doing:
 
-For example, using
-  git checkout master
+```` bash
+git name_of_the_command
+````
+
+For example, using:
+
+```` bash
+git checkout master
+````
+
 you will switch from a side branch into the main branch of your repository.
 
 ### What is github.com?
@@ -79,7 +90,8 @@ you will switch from a side branch into the main branch of your repository.
 
 ### How to add a feature or fix a bug
 
-You only have read permission for the [FieldTrip](https://github.com/fieldtrip/fieldtrip), meaning that you cannot change directly the code of the FieldTrip repository. What you can do, and you will see how to do it here, i
+You only have read permission for the [FieldTrip](https://github.com/fieldtrip/fieldtrip), meaning that you cannot change directly the code of the FieldTrip repository. What you can do, and you will see how to do it here, is:
+
 1. Copy the FieldTrip repository under your private account on github.com (this is called **forking**).
 2. This new personal repository will become your __remote repository__. You will need __clone__ the remote repository onto your local machine.
 3. You will create a new __branch__, edit some files, __commit__ them to the developmental branch of your __local repository__.
@@ -96,32 +108,44 @@ Now that the main concepts are explained, we will try to add a new feature to Fi
 
 Go with your web browser to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip) and click on the right-hand side, towards the top, on **fork**. This will create a new remote repository in your github account at the address: `https://github.com/USERNAME/fieldtrip`. The title of your repository will say:
 
-	USERNAME/fieldtrip
-	forked from fieldtrip/fieldtrip
+```` bash
+USERNAME/fieldtrip
+forked from fieldtrip/fieldtrip
+````
 
 ### 2. Clone your remote repository
 
 Now you can just clone your remote repository. There are two equivalent methods to connect to your remote repository: https (see [setup instructions](https://help.github.com/articles/set-up-git)) or ssh (see [setup instructions](https://help.github.com/articles/generating-ssh-keys)). If you're using https, then:
 
-	git clone https://github.com/USERNAME/fieldtrip.git
+```` bash
+git clone https://github.com/USERNAME/fieldtrip.git
+````
 
 If you're using SSH, use:
 
-	git clone git@github.com:USERNAME/fieldtrip.git
+```` bash
+git clone git@github.com:USERNAME/fieldtrip.git
+````
 
 Now you have a local repository of FieldTrip that you can work on. Then go into the just-created FieldTrip directory:
 
-	cd fieldtrip
+```` bash
+cd fieldtrip
+````
 
 ### 3. Create an experimental branch
 
 Before you start editing files, create a new branch. We will call our new branch *welcome*. Let's create it:
 
-	git checkout -b welcome
+```` bash
+git checkout -b welcome
+````
 
 and it'll tell you:
 
-	Switched to a new branch 'welcome'
+```` bash
+Switched to a new branch 'welcome'
+````
 
 If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch *bugXXXX* where XXXX is the number of the bug. If you have filed an issue on Github, you could name your new branch *issueXXXX* with the number. This helps linking the code suggestions to the discussion on the issue.
 
@@ -137,52 +161,58 @@ In addition to this function, we will also modify the function **[ft_defaults](/
 
 ### 5. Commit your changes
 
-To see how git reacts to this changes, you can now typ
+To see how git reacts to this changes, you can now type:
 
+```` bash
+git status
+````
 
-	git status
+It will tell you:
 
-It will tell yo
+```` bash
+# On branch welcome
+# Changes not staged for commi
+#   (use "git add `<file>`..." to update what will be committed)
+#   (use "git checkout -- `<file>`..." to discard changes in working directory)
+#
+#	modified:   ft_defaults.m
+#
+# Untracked file
+#   (use "git add `<file>`..." to include in what will be committed)
+#
+#	ft_welcome.m
+no changes added to commit (use "git add" and/or "git commit -a")
+`````
 
+If you want to review the changes you made, you can type:
 
-	# On branch welcome
-	# Changes not staged for commi
-	#   (use "git add `<file>`..." to update what will be committed)
-	#   (use "git checkout -- `<file>`..." to discard changes in working directory)
-	#
-	#	modified:   ft_defaults.m
-	#
-	# Untracked file
-	#   (use "git add `<file>`..." to include in what will be committed)
-	#
-	#	ft_welcome.m
-	no changes added to commit (use "git add" and/or "git commit -a")
+```` bash
+git diff
+````
 
-If you want to review the changes you made, you can typ
+Now we add our changes to the commit:
 
+```` bash
+git add ft_welcome.m ft_defaults.m
+````
 
-	git diff
+and now `git status` will tell you:
 
-Now we add our changes to the commi
-
-
-	git add ft_welcome.m ft_defaults.m
-
-and now *git status* will tell yo
-
-
-	# On branch welcome
-	# Changes to be committe
-	#   (use "git reset HEAD `<file>`..." to unstage)
-	#
-	#	modified:   ft_defaults.m
-	#	new file:   ft_welcome.m
-	#
+```` bash
+# On branch welcome
+# Changes to be committe
+#   (use "git reset HEAD `<file>`..." to unstage)
+#
+#	modified:   ft_defaults.m
+#	new file:   ft_welcome.m
+#
+````
 
 You can now commit these changes.
 
-
-	git commit -m "print welcome message when executing ft_defaults"
+```` bash
+git commit -m "print welcome message when executing ft_defaults"
+````
 
 where the option -m allows you to add a log entry.
 
@@ -192,25 +222,30 @@ Follow these [guidelines](/development/guideline/code#svn_log_messages) when wri
 
 and git will return:
 
-	 1 file changed, 1 insertion(+)
-	 create mode 100644 ft_welcome.m
+```` bash
+1 file changed, 1 insertion(+)
+create mode 100644 ft_welcome.m
+````
 
 #### Switch to master
 
 While you are working on the developmental branch called *welcome*, you might want to run some analysis on the main branch (called by default *master*). You can easily switch into the main branch wit
 
+```` bash
+git checkout master
+````
 
-	git checkout master
+and then you go back to the developmental branch with:
 
-and then you go back to the developmental branch with
-
-
-	git checkout welcome
+```` bash
+git checkout welcome
+````
 
 You see on which branch you are with
 
-
-	git branch
+```` bash
+git branch
+````
 
 Switching between branches is really fast, so do not be afraid of doing it when necessary.
 
@@ -218,20 +253,24 @@ Switching between branches is really fast, so do not be afraid of doing it when 
 
 We modified our local repository but the remote repository has not changed. We need to push our commits to the personal remote repository. By default, the remote repository is called **origin**. You can rename it. If you want more information about remote repository, just typ
 
+```` bash
+git remote -v
+````
 
-	git remote -v
+The code to push commits is:
 
-The code to push commits i
+```` bash
+git push origin welcome
+````
+
+which means that we are pushing the commits in the branch called *welcome* to the remote repository called *origin*. This will create a new branch in your remote repository, as the last line of the output will kindly tell you:
 
 
-	git push origin welcome
+```` bash
+...
 
-which means that we are pushing the commits in the branch called *welcome* to the remote repository called *origin*. This will create a new branch in your remote repository, as the last line of the output will kindly tell yo
-
-
-	...
-
-	 * [new branch]      welcome -> welcome
+* [new branch]      welcome -> welcome
+````
 
 ### 7. Make a pull request
 
@@ -245,11 +284,12 @@ Do **not** click on **Send Pull Request** when finishing this tutorial.
 
 ### 8. Clean up
 
-When you are done, you can delete the branch *welcome* on the local and remote repository. To delete the branch on your local and remote repository, you can us
+When you are done, you can delete the branch *welcome* on the local and remote repository. To delete the branch on your local and remote repository, you can use:
 
-
-	git branch -D welcome
-	git push origin :welcome
+```` bash
+git branch -D welcome
+git push origin :welcome
+````
 
 ### 9. Keeping up to date
 
@@ -259,37 +299,51 @@ Your suggested contributions to FieldTrip will not be the only changes: the code
 It is important to first pull the changes from others before you start implementing your own changes, otherwise your (new) changes might conflict with already accepted changes to the code.
 {% include markup/end %}
 
-Synchronizing between the different repositories is done by using your local (i.e. hard disk) copy as intermediary. By default your personal copy of the repository on github will be called the *origin*. You can check this with
+Synchronizing between the different repositories is done by using your local (i.e. hard disk) copy as intermediary. By default your personal copy of the repository on github will be called the *origin*. You can check this with:
 
-    git remote -v
+```` bash
+git remote -v
+````
 
 which will show you
-    origin	git@github.com/USERNAME/fieldtrip.git (fetch)
-    origin	git@github.com/USERNAME/fieldtrip.git (push)
+
+```` bash
+origin	git@github.com/USERNAME/fieldtrip.git (fetch)
+origin	git@github.com/USERNAME/fieldtrip.git (push)
+````
+
 or the corresponding URL with https instead of git.
 
-To synchronize with the official FieldTrip repository on github, you should also add it as a remote. Best practice is to call it the *upstream* repository. You add it with
+To synchronize with the official FieldTrip repository on github, you should also add it as a remote. Best practice is to call it the *upstream* repository. You add it with:
 
-    git remote add upstream https://github.com/fieldtrip/fieldtrip.git
-    git remote -v
+```` bash
+git remote add upstream https://github.com/fieldtrip/fieldtrip.git
+git remote -v
+````
 
-will now show you both remotes
+will now show you both remotes:
 
-    origin	git@github.com/robertoostenveld/fieldtrip.git (fetch)
-    origin	git@github.com/robertoostenveld/fieldtrip.git (push)
-    upstream	https://github.com/fieldtrip/fieldtrip.git (fetch)
-    upstream	https://github.com/fieldtrip/fieldtrip.git (push)
+```` bash
+origin	git@github.com/robertoostenveld/fieldtrip.git (fetch)
+origin	git@github.com/robertoostenveld/fieldtrip.git (push)
+upstream	https://github.com/fieldtrip/fieldtrip.git (fetch)
+upstream	https://github.com/fieldtrip/fieldtrip.git (push)
+````
 
 You can pull (download) from the *upstream* repository and push (upload) to your own *origin* repository.
 
 To pull the changes from the master branch of the (official) *upstream* FieldTrip repository, you would do
 
-    git checkout master
-    git pull upstream master
+```` bash
+git checkout master
+git pull upstream master
+````
 
-This may (or may not) show changes to files and new files that were added. Subsequently, you can push those changes to the master branch of your *origin* personal github repository with
+This may (or may not) show changes to files and new files that were added. Subsequently, you can push those changes to the master branch of your *origin* personal github repository with:
 
-    git push origin master
+```` bash
+git push origin master
+````
 
 After this, both the local copy on your hard drive and your copy on [github.com](http://github.com) will be up to date with the official release.
 
