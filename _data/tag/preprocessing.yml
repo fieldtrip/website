@@ -101,7 +101,7 @@
   link:  /tutorial/eventrelatedaveraging
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/preprocessing
+  link:  /workshop/natmeg/preprocessing
 
 - name:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs_multichannel

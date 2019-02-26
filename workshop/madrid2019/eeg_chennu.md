@@ -33,7 +33,7 @@ participants controlled dosages of propofol to produce from mild
 (0.6ug/ml) to moderate sedation (1.2ug/ml). After each EEG resting state
 acquisition was followed by a two-choice speeded response task to assess
 behavioural responsiveness. The information about the hit rate, reaction
-time and drug dosage will be used in the [statistics tutorial](workshop/madrid2019/tutorial_stats)
+time and drug dosage will be used in the [statistics tutorial](/workshop/madrid2019/tutorial_stats)
 to investigate whether these variables correlate with EEG activity.
 
 128-channel high-density EEG data were collected at each level of sedation. EEG was sampled at 250Hz and referenced to the vertex, using the EGI NetAmps 300 amplifier.Raw data was preprocessed using EEGLAB and data from 91 channels over the scalp surface were retained for further analysis. Channels on the neck, cheeks and forehead were excluded. The data was filtered between 0.5–45 Hz, and segmented into 10-second long epochs. Each epoch thus generated was baseline-corrected relative to the mean voltage over the entire epoch.

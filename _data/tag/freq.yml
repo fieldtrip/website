@@ -80,7 +80,7 @@
   link:  /tutorial/beamformer
 
 - name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
+  link:  /workshop/chieti/simulation
 
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
@@ -104,7 +104,7 @@
   link:  /tutorial/multivariateanalysis
 
 - name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/natmeg/timefrequency
+  link:  /workshop/natmeg/timefrequency
 
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis

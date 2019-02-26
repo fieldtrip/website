@@ -7,9 +7,8 @@ tags: [madrid2019, eeg-language, eeg-chennu]
 ## General introduction
 
 In this tutorial we will analyze the power spectra for two different EEG
-datasets. The first dataset is recorded in a **[multi-sensory object
-categorization task](/workshop/madrid2019/eeg_language)**, the second dataset is
-recorded in a **[resting state experiment](/workshop/madrid2019/eeg_chennu)**.
+datasets. The first dataset is recorded in a **[language task](/tutorial/eeg_language)**,
+the second dataset is recorded in a **[resting-state experiment](/workshop/madrid2019/eeg_chennu)**.
 Before starting with this tutorial, please read through the linked descriptions
 of the two datasets.
 
@@ -17,7 +16,7 @@ of the two datasets.
 
 Oscillatory components contained in the ongoing EEG or MEG signal often change
 relative to experimental manipulations, such as stimulus events. These
-oscilatory signals are not necessarily phase-locked to the event and will not be
+oscillatory signals are not necessarily phase-locked to the event and will not be
 represented as event related fields (ERFs) in MEG or event related potentials
 (ERPs) in EEG (see e.g. Tallon-Baudry and Bertrand (1999) [Oscillatory gamma
 activity in humans and its role in object

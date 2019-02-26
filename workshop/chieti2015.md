@@ -40,8 +40,8 @@ To prepare for the hands-on session, you should watch the following online video
 ### Friday 18 September 2015
 
 -   8:30 - 9:30 MEG connectivity: concepts, metrics and implementation (lecture)
--   9:30 - 10:15 Hands-on: [Seed-based connectivity](/tutorial/chieti/virtualchannel)
+-   9:30 - 10:15 Hands-on: [Seed-based connectivity](/workshop/chieti/virtualchannel)
 -   10:15 - 10:45 Coffee break
--   10:45 - 11:30 Hands-on: [Simulating and estimating, what about model (mis)match?](/tutorial/chieti/simulation)
--   11:30 - 12:15 Hands-on: [Whole-brain connectivity](/tutorial/chieti/wholebrain)
+-   10:45 - 11:30 Hands-on: [Simulating and estimating, what about model (mis)match?](/workshop/chieti/simulation)
+-   11:30 - 12:15 Hands-on: [Whole-brain connectivity](/workshop/chieti/wholebrain)
 -   12:15 - 12:30 Review of MEG connectivity, challenges and opportunities (lecture)

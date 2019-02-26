@@ -9,7 +9,7 @@ Every year we organize the "Advanced MEG/EEG analysis toolkit course" at the Don
 
 We also organize occasional FieldTrip workshops at conferences or upon invitation by other research institutes. These usually last 2-3 days and the content and format is determined together with the local organizers. If you are interested in hosting a FieldTrip workshop at your university, you can [contact us](/contact) for details.
 
-We have [video lectures](/video) from previous FieldTrip training events. You can also use these to [organize your own](faq/can_i_organize_my_own_workshop) training events.
+We have [video lectures](/video) from previous FieldTrip training events. You can also use these to [organize your own](/faq/can_i_organize_my_own_workshop) training events.
 
 {% include markup/danger %}
 If there is no information listed for a potential workshop below, then we don't have that information yet. Please don't bother asking. We will update the information here once details are known.

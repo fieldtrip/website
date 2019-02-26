@@ -49,9 +49,8 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 
 ### Ingredients to build the forward model
 
-*  volume conductor geometry
-
-  Specific Maxwell equation into play (e.g. electric or magnetic field)
+*  Volume conductor geometry
+*  Specific Maxwell equations  (e.g. electric or magnetic field)
 *  Type of source (simple/distributed)
 *  Matter properties (conductivity)
 *  Lead field algorithm

@@ -2,7 +2,7 @@
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
 - name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
+  link:  /workshop/chieti/simulation
 
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence

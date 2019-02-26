@@ -2,10 +2,10 @@
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  MEG virtual channels and seed-based connectivity
-  link:  /tutorial/chieti/virtualchannel
+  link:  /workshop/chieti/virtualchannel
 
 - name:  MEG whole-brain connectivity
-  link:  /tutorial/chieti/wholebrain
+  link:  /workshop/chieti/wholebrain
 
 - name:  Details of the tMEG Motor task dataset
   link:  /tutorial/hcp_motort

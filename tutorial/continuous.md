@@ -28,7 +28,7 @@ The following steps are taken to read data, to apply filters and to reference th
 
 In this tutorial we will be using two datasets, one with EEG data and one with MEG data.
 
-The EEG dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts Brainamp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv.
+The EEG dataset [SubjectEEG.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectEEG.zip) was acquired by Irina Siminova in a study investigating semantic processing of stimuli presented as pictures, visually displayed text or as auditory presented words. Data was acquired with a 64-channel BrainProducts BrainAmp EEG amplifier from 60 scalp electrodes placed in an electrode cap, one electrode placed under the right eye; signals "EOGv" and "EOGh" are computed after acquisition using re-referencing. During acquisition all channels were referenced to the left mastoid and an electrode placed at the earlobe was used as the ground. Channels 1-60 correspond to electrodes that are located on the head, except for channel 53 which is located at the right mastoid. Channels 61, 62, 63 are not connected to an electrode at all. Channel 64 is connected to an electrode placed below the left eye. Hence we have 62 channels of interest: 60 from the head + eogh + eogv.
 
 The MEG dataset [Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) was acquired by Lin Wang in language study on semantically congruent and incongruent sentences. Three types of sentences were used in the experiment: fully congruent (FC), fully incongruent (FIC), and initially congruent (IC). There were 87 trials per condition for each of the three conditions, and a set of 87 filler sentences were added.
 
@@ -88,23 +88,23 @@ This segmented MEG data dataset contains 266 trials. The following example shows
 
 If you want to force epoched data to be interpreted as continuous data, you can use the cfg.continuous option, like this:
 
-	cfg = [];
-	cfg.dataset     = 'Subject01.ds';
-	cfg.continuous  = 'yes';             % force it to be continuous
-	data_meg        = ft_preprocessing(cfg);
+    cfg = [];
+    cfg.dataset     = 'Subject01.ds';
+    cfg.continuous  = 'yes';              % force it to be continuous
+    data_meg        = ft_preprocessing(cfg);
 
-	chansel = 1;
-	plot(data_meg.time{1}, data_meg.trial{1}(chansel, :))
-	xlabel('time (s)')
-	ylabel('channel amplitude (a.u.)')
+    chansel = 2;                          % this is SCLK01
+    plot(data_meg.time{1}, data_meg.trial{1}(chansel, :))
+    xlabel('time (s)')
+    ylabel(data_meg.label{chansel})
 
-If you look in detail at one of the MEG channels in the continuous data, you can see that there are small jumps every 3 seconds. These are due to the data being discontinuous on disk, i.e. only the 3 second segments around each stimulus are stored on disk, the data in between the trials is not stored on disk. Consequently, this particular dataset should **not be interpreted** as a continuous recording. Many other CTF recordings are stored on disk with data segments of 10 seconds each, these can be interpreted as continuous as there are no gaps between the long segments.
+If you zoom in and look in detail at the SCLK01 channel, you can see that there are small jumps every 3 seconds. These are due to the data being discontinuous on disk, i.e. only the 3 second segments around each stimulus are stored on disk and the data in-between the trials is not stored. Consequently the MEG channels will also have small jumps every 3 seconds and hence this particular dataset should **not be interpreted** as a continuous recording. Many other CTF recordings are stored on disk with data segments of 10 seconds each; these can be interpreted as continuous as there are no gaps between the long segments.
 
 ## Preprocessing, filtering and re-referencing
 
 For preprocessing this EEG data set, the choice of the reference has to be considered. During acquisition the reference channel of the EEG amplifier was attached to the left mastoid. We would like to analyze this data with a linked-mastoid reference (also known as an average-mastoid reference). Furthermore, the detection of eye movement and blink artifacts is facilitated by computing bipolar derivation for the electrodes that were placed horizontally and vertically around the eyes.
 
-The channel names that were configured in the Brainamp Recorder software correspond to the labels of the locations in the electrode cap. These electrode locations are numbered 1 to 60, and the corresponding channel names as ascii strings are '1', '2', ... '60'. Channel 53 correspond to the right mastoid. Since the left mastoid was used as reference in the acquisition, it is not represented in the data file (because the Voltage at that electrode is zero by definition).
+The channel names that were configured in the BrainAmp Recorder software correspond to the labels of the locations in the electrode cap. These electrode locations are numbered 1 to 60, and the corresponding channel names as ascii strings are '1', '2', ... '60'. Channel 53 correspond to the right mastoid. Since the left mastoid was used as reference in the acquisition, it is not represented in the data file (because the Voltage at that electrode is zero by definition).
 
     cfg = [];
     cfg.dataset     = 'subj2.vhdr';
@@ -170,7 +170,7 @@ The processing of the vertical EOG is done similar, using the difference between
     cfg.channel = 'EOGV';
     data_eogv   = ft_preprocessing(cfg, data_eogv); % nothing will be done, only the selection of the interesting channel
 
-Now that we have the EEG data rereferenced to linked mastoids and the horizontal and vertical bipolar EOG, we can combine the three raw data structures into a single representation of using
+Now that we have the EEG data rereferenced to linked mastoids and the horizontal and vertical bipolar EOG, we can combine the three raw data structures into a single representation using:
 
     cfg = [];
     data_all = ft_appenddata(cfg, data_eeg, data_eogh, data_eogv);

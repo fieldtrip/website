@@ -153,9 +153,13 @@ For this tutorial we downsample the mesh to 2mm resolution, in order to reduce t
 Once the volumetric mesh has been created, the forward solution can be computed. In the following, steps 2-5 are described for EEG and MEG separately.
 
 {% include markup/warning %}
-Currently, the pipeline for computing the MEG forward problem solution has been tested on Ubuntu systems, where Matlab should be started with the following command:
+Currently, the pipeline for computing the MEG forward problem solution has been tested on Ubuntu systems, where MATLAB should be started with the following command:
 
-  BLAS_VERSION=/usr/lib/libblas.so LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 ./matlab
+```` bash
+BLAS_VERSION=/usr/lib/libblas.so
+LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+./matlab
+````
 {% include markup/end %}
 
 ##  2(EEG). Create the head-model

@@ -27,14 +27,14 @@ When adding or contributing to the tutorials please consider the [documentation 
 * [Automatic artifact detection](/tutorial/automatic_artifact_rejection)
 * [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
 * [Preprocessing - Reading continuous EEG data](/tutorial/continuous)
-* [Preprocessing and event-related activity in combined MEG/EEG data](/tutorial/natmeg/preprocessing)
+* [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 
 ## Sensor-level analyses of MEG and EEG data
 
 * [Event related fields and MEG planar gradient](/tutorial/eventrelatedaveraging)
 * [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp)
 * [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)
-* [Time-frequency analysis of combined MEG/EEG](/tutorial/natmeg/timefrequency)
+* [Time-frequency analysis of combined MEG/EEG](/workshop/natmeg/timefrequency)
 * [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
 * [Extracting the brain state and events from continuous sleep EEG](/tutorial/sleep)
 
@@ -46,10 +46,10 @@ When adding or contributing to the tutorials please consider the [documentation 
 * [Construct a sourcemodel for MEG or EEG source analysis](/tutorial/sourcemodel)
 * [Localizing electrodes using a 3D-scanner](/tutorial/electrode)
 * [Localizing oscillatory sources in MEG data using a beamformer](/tutorial/beamformer)
-* [Beamforming oscillatory responses in combined MEG/EEG data](/tutorial/natmeg/beamforming)
+* [Beamforming oscillatory responses in combined MEG/EEG data](/workshop/natmeg/beamforming)
 * [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
 * [Source reconstruction of event-related fields using minimum-norm estimation](/tutorial/minimumnormestimate)
-* [Dipole fitting of combined MEG/EEG data](/tutorial/natmeg/dipolefitting)
+* [Dipole fitting of combined MEG/EEG data](/workshop/natmeg/dipolefitting)
 * [Computation of virtual MEG channels in source-space](/tutorial/virtual_sensors)
 
 ## Analysis of intracranial electrophysiological recordings
@@ -80,7 +80,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 * [Parametric and non-parametric statistics on event related fields](/tutorial/eventrelatedstatistics)
 * [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
 * [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
-* [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/tutorial/natmeg/statistics)
+* [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/workshop/natmeg/statistics)
 * [Multivariate analysis of MEG/EEG data](/tutorial/multivariateanalysis)
 
 ## Visualizing the results of an analysis

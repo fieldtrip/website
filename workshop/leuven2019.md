@@ -28,7 +28,6 @@ For the hands on session, we kindly require you to bring a functional laptop wit
 In the hands-on session we will start with preprocessing structral MRI data, but will not spend too much time on understanding how MATLAB works and how FieldTrip organizes the data. Therefore if you have never done any FieldTrip analysis in MATLAB before, you should read this [introduction tutorial](/tutorial/introduction).
 _We will start at 9:00 sharp and will finish around 12:00._
 
-
 ## Setting up for the hands-on session
 
 To get going, you need to start MATLAB. Then, you need to issue the following command
@@ -250,15 +249,16 @@ We will now compute the lead field for every source in the source model.
 	cfg.elec = elec;
 	leadfield_bem = ft_prepare_leadfield(cfg);
 
-  This is the last step for creating a forward model. We could now use the lead fields of each source to do the inverse modeling!
+This is the last step for creating a forward model. We could now use the lead fields of each source to do the inverse modeling!
 
 ### 10. Further tasks
 
 #### Exercise 1
 
 {% include markup/info %}
-Thus far we only created a BEM volume conduction model. To create a FEM volume conduction model use the same steps as beforehand.
+So far we only created a BEM volume conduction model. To create a FEM volume conduction model use the same steps as beforehand.
 {% include markup/end %}
+
 Change Step 5 into
 
 	cfg = [];
@@ -275,7 +275,7 @@ and Step 6 into
 #### Exercise 2
 
 {% include markup/info %}
-You can also find the segmentation 'AVG14-0Years3T_segmented_BEM3.mat' to create a head model. This a segmentation is processed version of a segmentation provided by alongside the MRI in the Neurodevelopmental MRI Database from the [John E. Richards Lab]((https://jerlab.sc.edu)). The segmentation was already preprocessed with the Steps 1-4.
+You can also find the segmentation 'AVG14-0Years3T_segmented_BEM3.mat' to create a head model. This a segmentation is processed version of a segmentation provided by alongside the MRI in the Neurodevelopmental MRI Database from the [John E. Richards Lab](https://jerlab.sc.edu). The segmentation was already preprocessed with the Steps 1-4.
 {% include markup/end %}
 
 ## Summary and Comments
@@ -283,7 +283,8 @@ You can also find the segmentation 'AVG14-0Years3T_segmented_BEM3.mat' to create
 This tutorial was about the creation of a volume conduction model on the basis of averaged MRIs of 14 year old subjects, creation of a source model, and computation of the lead fields. This head model could subsequently be used for source level analysis.
 
 ## Further reading
-Another interesting data base to consider for volume conduction modeling for infants is the [Pediatric Head Modeling Project]((https://www.pedeheadmod.net/)).
+
+Another interesting database to consider for volume conduction modeling for infants is the [Pediatric Head Modeling Project](https://www.pedeheadmod.net/).
 
 For acquisition of electrode positions we can also suggest:
 {% include seealso tag1="electrode" %}
@@ -293,7 +294,6 @@ For head model creation we also suggest following tutorials:
 
 For source model creation we also suggest following tutorials:
 {% include seealso tag1="sourcemodel" %}
-
 
 -----
 This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10 and MATLAB 2018a.

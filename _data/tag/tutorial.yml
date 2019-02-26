@@ -5,7 +5,7 @@
   link:  /getting_started/realtime
 
 - name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /tutorial/aarhus/beamformingerf
+  link:  /workshop/aarhus/beamformingerf
 
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
@@ -20,7 +20,7 @@
   link:  /tutorial/beamformingextended
 
 - name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
+  link:  /workshop/chieti/simulation
 
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
@@ -89,19 +89,19 @@
   link:  /tutorial/multivariateanalysis
 
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/natmeg/beamforming
+  link:  /workshop/natmeg/beamforming
 
 - name:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/natmeg/dipolefitting
+  link:  /workshop/natmeg/dipolefitting
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/preprocessing
+  link:  /workshop/natmeg/preprocessing
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/statistics
+  link:  /workshop/natmeg/statistics
 
 - name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/natmeg/timefrequency
+  link:  /workshop/natmeg/timefrequency
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis
