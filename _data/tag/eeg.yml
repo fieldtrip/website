@@ -94,9 +94,6 @@
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus/beamformingerf
-
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
@@ -108,6 +105,9 @@
 
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
+
+- name:  Details on the EEG language dataset
+  link:  /tutorial/eeg_language
 
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics
@@ -133,6 +133,45 @@
 - name:  Multivariate analysis of electrophysiological data
   link:  /tutorial/multivariateanalysis
 
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
+
+- name:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sleep
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/timefrequencyanalysis
+
+- name:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms-eeg
+
+- name:  FieldTrip Walkthrough
+  link:  /walkthrough
+
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus/beamformingerf
+
+- name:  Convert to BIDS
+  link:  /workshop/madrid2019/convert_bids
+
+- name:  Details on the resting-state EEG dataset recorded with different sedation levels
+  link:  /workshop/madrid2019/eeg_chennu
+
+- name:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
+
+- name:  Cleaning and processing resting-state EEG
+  link:  /workshop/madrid2019/tutorial_cleaning
+
+- name:  Getting started with EEG data, quality checks and ERPs
+  link:  /workshop/madrid2019/tutorial_erp
+
+- name:  Time-frequency and spectral analysis
+  link:  /workshop/madrid2019/tutorial_freq
+
+- name:  Cluster-based permutation tests on resting-state EEG power spectra
+  link:  /workshop/madrid2019/tutorial_stats
+
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /workshop/natmeg/beamforming
 
@@ -150,45 +189,6 @@
 
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
-
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
-
-- name:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms-eeg
-
-- name:  FieldTrip Walkthrough
-  link:  /walkthrough
-
-- name:  Convert to BIDS
-  link:  /workshop/madrid2019/convert_bids
-
-- name:  Details on the resting-state EEG dataset recorded with different sedation levels
-  link:  /workshop/madrid2019/eeg_chennu
-
-- name:  Details on the EEG language dataset
-  link:  /workshop/madrid2019/eeg_language
-
-- name:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
-
-- name:  Cleaning and processing resting-state EEG
-  link:  /workshop/madrid2019/tutorial_cleaning
-
-- name:  Getting started with EEG data, quality checks and ERPs
-  link:  /workshop/madrid2019/tutorial_erp
-
-- name:  Time-frequency and spectral analysis
-  link:  /workshop/madrid2019/tutorial_freq
-
-- name:  Cluster-based permutation tests on resting-state EEG power spectra
-  link:  /workshop/madrid2019/tutorial_stats
 
 - name:  FieldTrip workshop in Oslo
   link:  /workshop/oslo2019

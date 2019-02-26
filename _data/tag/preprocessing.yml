@@ -100,9 +100,6 @@
 - name:  Event related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
-
 - name:  Preprocessing and averaging of multi-channel NIRS data
   link:  /tutorial/nirs_multichannel
 
@@ -120,4 +117,7 @@
 
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/preprocessing
 

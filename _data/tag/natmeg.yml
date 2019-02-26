@@ -4,6 +4,9 @@
 - name:  Dipole fitting of combined MEG/EEG data
   link:  /workshop/natmeg/dipolefitting
 
+- name:  FieldTrip course at the NatMEG in Stockholm
+  link:  /workshop/natmeg
+
 - name:  Details of the auditory oddball MEG dataset
   link:  /workshop/natmeg/meg_audodd
 
@@ -15,7 +18,4 @@
 
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
-
-- name:  FieldTrip course at the NatMEG in Stockholm
-  link:  /workshop/natmeg
 

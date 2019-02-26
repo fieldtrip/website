@@ -55,9 +55,6 @@
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
-
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing
 
@@ -66,4 +63,7 @@
 
 - name:  FieldTrip Walkthrough
   link:  /walkthrough
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/preprocessing
 

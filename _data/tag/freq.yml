@@ -79,9 +79,6 @@
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
-
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
@@ -103,9 +100,6 @@
 - name:  Multivariate analysis of electrophysiological data
   link:  /tutorial/multivariateanalysis
 
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg/timefrequency
-
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
@@ -114,4 +108,10 @@
 
 - name:  FieldTrip Walkthrough
   link:  /walkthrough
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
+
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /workshop/natmeg/timefrequency
 
