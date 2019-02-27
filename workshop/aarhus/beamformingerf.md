@@ -185,9 +185,9 @@ If you are not contrasting the activity of interest against another condition or
 
 	% Create leadfield grid
 	cfg                 = [];
-	cfg.channel         = data_right.label;% ensure that rejected sensors are not present
+	cfg.channel         = data_right.label; % ensure that rejected sensors are not present
 	cfg.grad            = grad;
-	cfg.vol             = headmodel_meg;
+	cfg.headmodel       = headmodel_meg;
 	cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
 	cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -242,7 +242,7 @@ Now using the headmodel and the precomputed leadfield we make three subsequent c
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid=grid;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.lambda = '5%';
 	cfg.channel         = {'MEG'};
@@ -253,7 +253,7 @@ Now using the headmodel and the precomputed leadfield we make three subsequent c
 	cfg.method='lcmv';
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	sourcepreM1=ft_sourceanalysis(cfg, avgpre);
 	sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
@@ -292,7 +292,7 @@ Subsequently, we interpolate the source power onto the individual MRI.
 
 After which, we can plot the interpolated data. In order to emphasize "the hill" of activity we are interested in, we create a mask that in the present case highlights 30 % of the total activity. Note, that this threshold is arbitrary and is mainly used for illustrative purposes. An alternative to this is provided below.  
 
-	source_int.mask = source_int.pow > max(source_int.pow(:))*.3;% 30 % of maximum
+	source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 30 % of maximum
 	cfg               = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
@@ -366,7 +366,7 @@ Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/f
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid=grid;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.lambda = '5%';
 	cfg.channel         = {'MEG'};
@@ -376,7 +376,7 @@ Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/f
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
 	cfg.rawtrial = 'yes';
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	sourcepreM1=ft_sourceanalysis(cfg, avgpre);
 	sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
@@ -460,9 +460,9 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 ##### Compute leadfield at desired location
 
 	cfg=[];
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.channel=data_right.label;  
-	cfg.grid.pos=[-42 -18 67]./10;% units of cm
+	cfg.grid.pos=[-42 -18 67]./10; % units of cm
 	cfg.grad=grad;
 	cfg.unit = 'cm';
 	sourcemodel_virt=ft_prepare_leadfield(cfg);
@@ -480,7 +480,7 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid = sourcemodel_virt;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.lcmv.keepfilter='yes'; % keep filters in the output, which are later multiplied with the data
 	cfg.lcmv.fixedori='yes'; % consider only the dominant orientation
 	cfg.lcmv.lamda='5%';
@@ -599,7 +599,7 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
 	cfg                 = [];
 	cfg.elec         = elec;
 	cfg.channel           = data_eeg_reref_ica.label;
-	cfg.vol             = headmodel_eeg;
+	cfg.headmodel       = headmodel_eeg;
 	cfg.dics.reducerank = 3; % default for MEG is 2, for EEG is 3
 	cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -619,7 +619,7 @@ Now that we have everything prepared we can start to calculate the spatial filte
 	cfg.method='lcmv';
 	cfg.grid=grid;
 	cfg.elec = elec;
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.lambda = '5%';
 	cfg.channel           = data_eeg_reref_ica.label;
@@ -632,7 +632,7 @@ Now that we have everything prepared we can start to calculate the spatial filte
 	cfg.elec = elec;
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.lcmv.lambda = '5%';
 	cfg.channel           = data_eeg_reref_ica.label;
 	cfg.senstype = 'EEG';
@@ -654,7 +654,7 @@ And interpolate the result onto the anatomical MRI.
 
 Finally, we can plot the result using the same masking strategy as in the MEG sectio
 
-	source_int.mask = source_int.pow > max(source_int.pow(:))*.3;% 50 % of maximum
+	source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 50 % of maximum
 	cfg               = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
@@ -673,9 +673,9 @@ We would like to compare the time course of activity reconstructed with MEG and 
 ##### Compute leadfield at location M1
 
 	cfg=[];
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.channel           = data_eeg_reref_ica.label;
-	cfg.grid.pos=[-28 -17 67]./10;% units of cm
+	cfg.grid.pos=[-28 -17 67]./10; % units of cm
 	cfg.elec = elec;
 	cfg.unit = 'cm';
 	sourcemodel_virt=ft_prepare_leadfield(cfg);
@@ -694,7 +694,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	cfg.channel=data_eeg_right.label;
 	cfg.elec = elec;
 	cfg.grid = sourcemodel_virt;
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.fixedori='yes';
 	cfg.lcmv.lamda='5%';

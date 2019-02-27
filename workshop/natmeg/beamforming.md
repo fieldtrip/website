@@ -161,7 +161,7 @@ As mentioned earlier on, if you are not contrasting the activity of interest aga
 	cfg                 = [];
 	cfg.channel         = {'MEG*2', 'MEG*3'};
 	cfg.grad            = powcsd_all.grad;
-	cfg.vol             = headmodel_meg;
+	cfg.headmodel       = headmodel_meg;
 	cfg.dics.reducerank = 2; % default for MEG is 2, for EEG is 3
 	cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -192,7 +192,7 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
 	cfg.method       = 'dics';
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
-	cfg.vol          = headmodel_meg;
+	cfg.headmodel    = headmodel_meg;
 	cfg.senstype     = 'MEG'; % Must me 'MEG', although we only kept MEG channels, information on EEG channels is still present in data
 	cfg.dics.keepfilter   = 'yes'; % We wish to use the calculated filter later on
 	cfg.dics.projectnoise = 'yes';
@@ -226,7 +226,7 @@ Remember that we intended to contrast the left hand to the right hand responses.
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
 	cfg.grid.filter  = source_all.avg.filter;
-	cfg.vol          = headmodel_meg;
+	cfg.headmodel    = headmodel_meg;
 	cfg.senstype     ='MEG';
 
 	source_left = ft_sourceanalysis(cfg, powcsd_left);
@@ -353,7 +353,7 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
 	% common grid/filter
 	cfg                 = [];
 	cfg.elec            = powcsd_all.elec;
-	cfg.vol             = headmodel_eeg;
+	cfg.headmodel       = headmodel_eeg;
 	cfg.reducerank      = 3; % default is 3 for EEG, 2 for MEG
 	cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -369,7 +369,7 @@ Now that we have everything prepared we can start to calculate the common filter
 	cfg.method       = 'dics';
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
-	cfg.vol          = headmodel_eeg;
+	cfg.headmodel    = headmodel_eeg;
 	cfg.senstype     = 'EEG'; % Remember this must be specified as either EEG, or MEG
 	cfg.dics.keepfilter   = 'yes';
 	cfg.dics.lambda       = '15%';
@@ -387,7 +387,7 @@ Finally, we can apply source analysis on the separate conditions using the commo
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
 	cfg.grid.filter  = source_all.avg.filter; % Use the common filter
-	cfg.vol          = headmodel_eeg;
+	cfg.headmodel    = headmodel_eeg;
 	cfg.senstype     = 'EEG';
 
 	source_left = ft_sourceanalysis(cfg, powcsd_left);

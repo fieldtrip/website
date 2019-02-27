@@ -21,11 +21,11 @@ and the back area (where the spine comes out) are not closed in reality
 so I had to close them manually. They are not too large holes and they
 are far from where we collect data so I hope this won't interfere with
 the model.
-The 0,0,0 is the bregma point. I did my best to keep the triangles as isoskeles 
+The 0,0,0 is the bregma point. I did my best to keep the triangles as isoskeles
 as possible.
-(...) So I have to take the original extruded object and put it through a 
-smoothing process that I do by eye. The resulting surface is much closer to 
-the real bone structure but the splines are not any more fully coincident 
+(...) So I have to take the original extruded object and put it through a
+smoothing process that I do by eye. The resulting surface is much closer to
+the real bone structure but the splines are not any more fully coincident
 with this surface.
 (...) I would use the stl file which is a very good overall fit to reality and
 forget about the splines.
@@ -70,7 +70,7 @@ where 'shape' is a structure defining the boundary for the Boundary Element mode
 The electrodes are also given as a matrix of NX3 elements. They have to be put in a FieldTrip 'sensor' structure (see ). Given the electrodes and the volume conductor we are already able to generate the forward solution by means of the general purpose function 'ft_prepare_leadfield'.
 
 	% check for uniqueness of triangles and remove the nearest ones...
-	
+
 	%initialize the elec structure
 	elec = [];
 	elec.chanpos = elecmat;
@@ -82,32 +82,32 @@ The electrodes are also given as a matrix of NX3 elements. They have to be put i
 The real labels are then assigned using the routine ft_apply_montage (a manual operations to be done by the experimenter).
 The next step is the calculation of the lead field
 
-	
+
 	% Option 1. Calculate the lead fields (example with only one point)
 	cfg = [];
 	cfg.elec = elec;
-	cfg.vol = vol;
+	cfg.headmodel = vol;
 	cfg.grid.pos = point; % this can be done manually by clicking
 	lf = ft_prepare_leadfield(cfg);
-	
+
 	% Option 2. Alternatively use a grid of equally spaced points
 	res  =  1; % 1 mm spacing
 	xlim = [-8 8]; 
-	ylim = [-15 15]; 
-	zlim = [0 12]; 
-	
-	cfg = []; 
+	ylim = [-15 15];
+	zlim = [0 12];
+
+	cfg = [];
 	cfg.grid.xgrid  = xlim(1):res:xlim(2);
 	cfg.grid.ygrid  = ylim(1):res:ylim(2);
 	cfg.grid.zgrid  = zlim(2):res:zlim(1);
 	gridd = ft_prepare_sourcemodel(cfg, vol, elec);
-	
+
 	cfg = [];
 	cfg.elec = elec;
-	cfg.vol = vol;
+	cfg.headmodel = vol;
 	cfg.grid = gridd;
 	lf = ft_prepare_leadfield(cfg);
-	
+
 
 ### Visualize the leadfields
 
@@ -116,4 +116,3 @@ Uses the function ft_plot_topo3d.m
 ### Solve the inverse problem, finally ...
 
 See [/tutorial/beamformer](/tutorial/beamformer), look for 'Scanning the brain volume'
-

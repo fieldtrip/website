@@ -359,7 +359,7 @@ Having constructed the volume conduction model and completed the processing of t
     cfg.grid.resolution = 1;
     cfg.grid.unit = 'cm';
     cfg.gridsearch = 'yes';
-    cfg.vol = headmodel_meg;
+    cfg.headmodel = headmodel_meg;
     cfg.senstype = 'meg';
     cfg.channel = {'MEG*2', 'MEG*3'};
     source_planar = ft_dipolefitting(cfg, timelock_all);
@@ -417,7 +417,7 @@ Now that we have a better starting point for the dipole fit, we can release the 
     cfg.symmetry = [];
     cfg.gridsearch = 'no';
     cfg.dip.pos = source_planar.dip.pos;
-    cfg.vol = headmodel_meg;
+    cfg.headmodel = headmodel_meg;
     cfg.channel = {'MEG*2', 'MEG*3'};
     cfg.senstype = 'meg';
     source_planar_nosym = ft_dipolefitting(cfg, timelock_all);
@@ -457,7 +457,7 @@ Using the dipole locations that we fitted to the rather short time window of the
     cfg.nonlinear = 'no';  % use a fixed position
     cfg.gridsearch = 'no';
     cfg.dip.pos = source_planar.dip.pos;
-    cfg.vol = headmodel_meg;
+    cfg.headmodel = headmodel_meg;
     cfg.channel = {'MEG*2', 'MEG*3'};
     cfg.senstype = 'meg';
     source_all = ft_dipolefitting(cfg, timelock_all); % estimate the amplitude and orientation
@@ -503,7 +503,7 @@ Besides comparing the timecourse of the activity between the two conditions, we 
     cfg.symmetry = 'x';
     cfg.gridsearch = 'no';
     cfg.dip.pos = source_planar.dip.pos;
-    cfg.vol = headmodel_meg;
+    cfg.headmodel = headmodel_meg;
     cfg.channel = {'MEG*2', 'MEG*3'};
     cfg.senstype = 'meg';
     cfg.latency = [0.080 0.100];
@@ -559,7 +559,7 @@ Rather than assuming that the dipole position is fixed over a certain time-windo
     cfg.numdipoles = 2;
     cfg.gridsearch = 'no';
     cfg.dip.pos = source_planar.dip.pos;
-    cfg.vol = headmodel_meg;
+    cfg.headmodel = headmodel_meg;
     cfg.channel = {'MEG*2', 'MEG*3'};
     cfg.senstype = 'meg';
     source = ft_dipolefitting(cfg, timelock_std);
@@ -854,7 +854,7 @@ Now we are actually able to do the dipole fitting on the EEG dat
     cfg.grid.resolution = 1;
     cfg.grid.unit = 'cm';
     cfg.gridsearch = 'yes';
-    cfg.vol = headmodel_eeg;
+    cfg.headmodel = headmodel_eeg;
     cfg.senstype = 'eeg';
     cfg.channel = 'all';
     source_eeg = ft_dipolefitting(cfg, timelock_eeg_all);
@@ -898,7 +898,7 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
     cfg.dip.pos = source_eeg.dip.pos;
     cfg.gridsearch = 'no';
     cfg.nonlinear = 'yes';
-    cfg.vol = headmodel_eeg;
+    cfg.headmodel = headmodel_eeg;
     cfg.senstype = 'eeg';
     cfg.channel = 'all';
     source_eeg2 = ft_dipolefitting(cfg, timelock_eeg_all);

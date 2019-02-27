@@ -233,7 +233,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 	cfg.grid.resolution = 7;
 	% cfg.inwardshift = -7; % allow dipoles 10mm outside the brain, this improves interpolation at the edges
 	cfg.grid.unit = 'mm';
-	cfg.vol  = vol;  % from FT
+	cfg.headmodel = vol;  % from FT
 	cfg.grad = sens; % from FT
 	cfg.senstype = 'meg';
 	cfg.normalize = 'yes';
@@ -245,7 +245,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 	%% perform whole-brain source reconstruction
 
 	cfg = [];
-	cfg.vol       = vol;  % from FT
+	cfg.headmodel = vol;  % from FT
 	cfg.grad      = sens; % from FT
 	cfg.senstype  = 'meg';
 	cfg.grid      = grid;
@@ -367,7 +367,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 	cfg.grid.pos = pos;
 	cfg.grid.unit = 'mm';
 	% cfg.grid = grid;
-	cfg.vol  = vol;
+	cfg.headmodel = vol;
 	cfg.grad = sens;
 	cfg.senstype = 'meg';
 	cfg.method = 'lcmv';

@@ -334,10 +334,10 @@ using a boxcar window
     cfg2.foi     = 0.5:1:45; % 1/cfg1.length  = 1;
     base_freq1   = ft_freqanalysis(cfg2, base_rpt1);
 
-    cfg2.foi     = 0.5:0.5:45;% 1/cfg1.length  = 2;
+    cfg2.foi     = 0.5:0.5:45; % 1/cfg1.length  = 2;
     base_freq2   = ft_freqanalysis(cfg2, base_rpt2);
 
-    cfg2.foi     = 0.5:0.25:45;% 1/cfg1.length  = 4;
+    cfg2.foi     = 0.5:0.25:45; % 1/cfg1.length  = 4;
     base_freq4   = ft_freqanalysis(cfg2, base_rpt4);
 
 Let us plot the power spectra of channel 61 using the standard MATLAB plot function.

@@ -439,26 +439,26 @@ First, the units of the source space should be converted because all units shoul
     bnd3 = ft_convert_units(bnd3, 'cm');
 
 
-    cfg             = [];
-    cfg.grad        = data.grad;
-    cfg.vol         = vol;
-    cfg.grid.pos    = bnd3.pnt;
+    cfg = [];
+    cfg.grad = data.grad;
+    cfg.headmodel = vol;
+    cfg.grid.pos = bnd3.pnt;
     cfg.grid.inside = 1:size(bnd3.pnt,1);
-    cfg.channel     = 'MEG';
-    grid            = ft_prepare_leadfield(cfg);
+    cfg.channel = 'MEG';
+    grid = ft_prepare_leadfield(cfg);
 
 ### Inverse solution
 
 This code shows how to calculate the inverse solution in FieldTrip. It needs the volume conductor model (vol), the leadfield (grid), the noise-covariance estimation (that is an average of the covariances), the source-covariance (that is an identity matrix here) and the data.
 
-    cfg        = [];
+    cfg = [];
     cfg.method = 'mne';
-    cfg.grid   = grid;
-    cfg.vol    = vol;
-    cfg.mne.noisecov  = squeeze(mean(tlckb.cov));
+    cfg.grid = grid;
+    cfg.headmodel = vol;
+    cfg.mne.noisecov = squeeze(mean(tlckb.cov));
     cfg.mne.sourcecov = speye(numel(grid.leadfield)*3);
-    cfg.mne.lambda   = 1e13;
-    source     = ft_sourceanalysis(cfg, tlck);
+    cfg.mne.lambda  = 1e13;
+    source = ft_sourceanalysis(cfg, tlck);
 
 ### Visualization
 

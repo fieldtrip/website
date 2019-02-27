@@ -27,8 +27,8 @@ tags: [example, eeg, source, dipole]
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a dipole simulation with one dipole and a 10Hz sine wave
-	cfg      = [];
-	cfg.vol  = vol;             % see above
+	cfg = [];
+	cfg.headmodel = vol;        % see above
 	cfg.elec = elec;            % see above
 	cfg.dip.pos = [0 0.5 0.3];
 	cfg.dip.mom = [1 0 0]';     % note, it should be transposed
@@ -43,7 +43,7 @@ tags: [example, eeg, source, dipole]
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a dipole simulation with one dipole and a custom timecourse
 	cfg      = [];
-	cfg.vol  = vol;               % see above
+  cfg.headmodel = vol;          % see above
 	cfg.elec = elec;              % see above
 	cfg.dip.pos = [0 0.5 0.3];
 	cfg.dip.mom = [1 0 0]';       % note, it should be transposed
@@ -58,11 +58,11 @@ tags: [example, eeg, source, dipole]
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% create a dipole simulation with two dipoles and a custom timecourse
 	cfg      = [];
-	cfg.vol  = vol;      % see above
-	cfg.elec = elec;     % see above
+  cfg.headmodel = vol;   % see above
+	cfg.elec = elec;       % see above
 	cfg.dip.pos = [
-	   0  0.5 0.3        % dipole 1
-	   0 -0.5 0.3        % dipole 2
+	   0  0.5 0.3          % dipole 1
+	   0 -0.5 0.3          % dipole 2
 	   ];
 	cfg.dip.mom = ...       % the vector represents [qx1 qy1 qz1 qx2 qy2 qz2]
 	  [ 1 0 0 0 0 0 ]' + ...% this is how signal1 contributes to the 6 dipole components
@@ -79,7 +79,7 @@ tags: [example, eeg, source, dipole]
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% do a dipole fit of the first simulated dataset
 	cfg      = [];
-	cfg.vol  = vol;         % see above
+  cfg.headmodel = vol;    % see above
 	cfg.elec = elec;        % see above
 	cfg.dip.pos = [0 0 0];  % initial search position
 	cfg.gridsearch = 'no';
@@ -88,7 +88,7 @@ tags: [example, eeg, source, dipole]
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	% or alternatively start with an exhaustive search on a coarse grid
 	cfg = [];
-	cfg.vol  = vol;         % see above
+  cfg.headmodel = vol;    % see above
 	cfg.elec = elec;        % see above
 	cfg.gridsearch = 'yes';
 	cfg.xgrid = linspace(-1,1,5);

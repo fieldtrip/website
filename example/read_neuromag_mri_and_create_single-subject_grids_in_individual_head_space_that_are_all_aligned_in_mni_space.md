@@ -110,7 +110,7 @@ When you have then estimated the sources which happens in NM or CTF space, you h
     cfg                = [];
     cfg.grid           = grid;
     cfg.frequency      = 10;
-    cfg.vol            = headmodel;
+    cfg.headmodel      = headmodel;
     cfg.gradfile       = 'grad.mat';
     cfg.projectnoise   = 'yes';
     cfg.keeptrials     = 'no';

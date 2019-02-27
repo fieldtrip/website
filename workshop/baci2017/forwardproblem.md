@@ -152,7 +152,7 @@ Check the alignment visually.
 	cfg.grid.resolution = 7.5;
 	cfg.threshold = 0.1;
 	cfg.smooth = 5;
-	cfg.vol = headmodel_bem;
+	cfg.headmodel = headmodel_bem;
 	cfg.inwardshift = 1; %shifts dipoles away from surfaces
 	sourcemodel = ft_prepare_sourcemodel(cfg, headmodel_bem);
 
@@ -173,7 +173,7 @@ Save the sourcemode
 
 	cfg = [];
 	cfg.grid = sourcemodel;
-	cfg.vol= headmodel_bem;
+	cfg.headmodel= headmodel_bem;
 	cfg.elec = elec;
 	cfg.reducerank = 3;
 	leadfield_bem = ft_prepare_leadfield(cfg);
@@ -229,7 +229,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 	mesh2 =[];
 	mesh2.hex = headmodel_fem.hex(headmodel_fem.tissue==ts,:); %mesh2.hex(1:size(mesh2.hex),:);
 	mesh2.pos =  headmodel_fem.pos;
-	mesh2.tissue =  headmodel_fem.tissue(headmodel_fem.tissue==ts,:);%mesh.tissue(1:size(mesh2.hex),:);
+	mesh2.tissue =  headmodel_fem.tissue(headmodel_fem.tissue==ts,:); %mesh.tissue(1:size(mesh2.hex),:);
 
 	mesh_ed = mesh2edge(mesh2);
 	patch('Faces',mesh_ed.poly,...
@@ -278,7 +278,7 @@ Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take t
 	%% compute the leadfield
 	cfg = [];
 	cfg.grid = sourcemodel;
-	cfg.vol= headmodel_fem_tr;
+	cfg.headmodel= headmodel_fem_tr;
 	cfg.elec = elec;
 	cfg.reducerank = 3;
 	leadfield_fem = ft_prepare_leadfield(cfg);
