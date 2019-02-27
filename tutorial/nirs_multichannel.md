@@ -343,12 +343,12 @@ Check the data again using **[ft_singleplotER](/reference/ft_singleplotER)**. Yo
 ### Separate functional from systemic responses
 
 #### Low-pass filtering
+
 The heartbeat is not a signal that we are currently interested in, although you might be if you are interested in effort or exertion. To suppress the heartbeat, we will low-pass filter our data below the frequency of the heart beat (around 1 Hz).
 
 	cfg                 	= [];
 	cfg.lpfilter        	= 'yes';
 	cfg.lpfreq          	= 0.8;
-	cfg.bpfilttype        = 'fir';
 	data_lpf            	= ft_preprocessing(cfg, data_conc);
 
 The changes in average concentration now reveals a perfect example of the hemodynamic response. No heartbeat, the signal starts to rise at stimulus onset, peaks at around 4 s, and then drops again. Note that the absolute values also make sense (0.37 for the peak).
@@ -430,11 +430,7 @@ Per default FieldTrip uses the minimum and the maximum in the selected part of t
 
 ## Summary and conclusion
 
-FIXME
-
-*  What has been covered?
-*  What has not been covered but is relevant in the context of the tutorial?
-*  Provide links to suggested further reading, related FAQ's and example scripts.
+In this tutorial we have processed a functional near-infrared spectroscopy (fNIRS) data set consisting of multiple channels.
 
 See also the other documentation that relates to fNIRS:
 
