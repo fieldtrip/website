@@ -467,7 +467,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 
 	% dipole fitting
 	cfg = [];
-	cfg.vol = vol;
+	cfg.headmodel = vol;
 	cfg.elec = elec;
 	cfg.model = 'regional';
 	cfg.numdipoles = 2;
@@ -510,7 +510,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 	cfg.gridsearch = 'no';
 	cfg.nonlinear = 'no';
 	cfg.latency = [-inf inf];
-	cfg.vol = vol;
+	cfg.headmodel = vol;
 	cfg.elec = elec;
 	source2 = ft_dipolefitting(cfg, before);
 

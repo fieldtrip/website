@@ -222,7 +222,7 @@ Before we are able to create the leadfields
 	cfg.grid.resolution = 7.5;
 	cfg.threshold       = 0.1;
 	cfg.smooth          = 5;
-	cfg.vol             = headmodel_bem;
+	cfg.headmodel       = headmodel_bem;
 	cfg.inwardshift     = 1; % shifts dipoles away from surfaces
 	sourcemodel = ft_prepare_sourcemodel(cfg, headmodel_bem);
 
@@ -245,7 +245,7 @@ We will now compute the lead field for every source in the source model.
 
 	cfg = [];
 	cfg.grid = sourcemodel;
-	cfg.vol  = headmodel_bem;
+	cfg.headmodel  = headmodel_bem;
 	cfg.elec = elec;
 	leadfield_bem = ft_prepare_leadfield(cfg);
 

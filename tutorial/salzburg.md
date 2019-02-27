@@ -295,7 +295,7 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
 
 	atlas = ft_read_atlas('~/fieldtrip/template/atlas/aal/ROI_MNI_V4.nii');
 
-	atlas = ft_convert_units(atlas,'cm');% assure that atlas and template_grid are expressed in the %same units
+	atlas = ft_convert_units(atlas,'cm'); % assure that atlas and template_grid are expressed in the %same units
 
 	cfg = []
 	cfg.atlas = atlas;
@@ -339,9 +339,9 @@ For this step the individual volume is required, which can be downloaded [here](
 	ft_plot_vol(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; %camlight;
 	alpha 0.4           % make the surface transparent
 
-	ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));% plot only locations inside the volume
+	ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:)); % plot only locations inside the volume
 
-	ft_plot_sens(dataica.grad,'style','*r');% plot the sensor array
+	ft_plot_sens(dataica.grad,'style','*r'); % plot the sensor array
 	view ([0 -90 0])
 
 {% include image src="/assets/img/tutorial/salzburg/sourcemodelwarpedinatlasbasedspace.png" %}
@@ -351,9 +351,9 @@ For this step the individual volume is required, which can be downloaded [here](
 We first create the leadfield using [**reference: ft_prepare_leadfield](/**reference/ ft_prepare_leadfield) using the individual head model from the previous step, the sensor array and the sourcemodel.
 
 	cfg                 = [];
-	cfg.channel         = dataica.label;% ensure that rejected sensors are not present
+	cfg.channel         = dataica.label; % ensure that rejected sensors are not present
 	cfg.grad            = dataica.grad;
-	cfg.vol             = hdm;
+	cfg.headmodel       = hdm;
 	cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
 	cfg.grid = sourcemodel;
 	[grid] = ft_prepare_leadfield(cfg);
@@ -385,7 +385,7 @@ Now we make a first call to [** reference: ft_sourceanalysis](/** reference/ ft_
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid=grid;
-	cfg.vol=hdm;
+	cfg.headmodel=hdm;
 	cfg.lcmv.keepfilter='yes';
 	cfg.channel = dataica.label;
 	sourceavg=ft_sourceanalysis(cfg, avg);
@@ -398,7 +398,7 @@ Subsequently we reconstruct the activity in the pre and post stimulus intervals 
 	cfg.method='lcmv';
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
-	cfg.vol=hdm;
+	cfg.headmodel=hdm;
 	sourcepreS1=ft_sourceanalysis(cfg, avgpre);
 	sourcepstS1=ft_sourceanalysis(cfg, avgpst);
 
@@ -522,7 +522,7 @@ First we keep single trial information and perform source analysis once again. I
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid=grid;
-	cfg.vol=hdm;
+	cfg.headmodel=hdm;
 	cfg.lcmv.keepfilter='yes';
 	cfg.channel = dataica.label;
 	sourceavg=ft_sourceanalysis(cfg, avg);
@@ -531,7 +531,7 @@ First we keep single trial information and perform source analysis once again. I
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
 	cfg.rawtrial = 'yes';
-	cfg.vol=hdm;
+	cfg.headmodel=hdm;
 	sourcepreS1=ft_sourceanalysis(cfg, avgpre);
 	sourcepstS1=ft_sourceanalysis(cfg, avgpst);
 
@@ -561,7 +561,7 @@ Now statistical analysis can be performed.
 	cfg.ivar     = 1;
 	cfg.uvar     = 2;
 	stat = ft_sourcestatistics(cfg,sourcepstS1,sourcepreS1);
-	stat.pos=template_grid.pos;% keep positions for plotting later
+	stat.pos=template_grid.pos; % keep positions for plotting later
 
 Subsequently we interpolate the result and the binary mask containing information of significant deferences per voxel.
 
@@ -663,28 +663,28 @@ These steps can be repeated for all desired parcels. In the present case the ram
 
 Next, we normalise the individual MRI to derive parameters allowing to convert the mni- coordinates of the desired parcels into individual coordinates. For this we use **[ft_warp_apply](/reference/ft_warp_apply)**.
 
-	template_grid=ft_convert_units(template_grid,'mm');% ensure no unit mismatch
+	template_grid=ft_convert_units(template_grid,'mm'); % ensure no unit mismatch
 	norm=ft_volumenormalise([],mri);
 
-	posCML=template_grid.pos(indxCML,:);% xyz positions in mni coordinates
-	posHGL=template_grid.pos(indxHGL,:);% xyz positions in mni coordinates
-	posHGR=template_grid.pos(indxHGR,:);% xyz positions in mni coordinates
+	posCML=template_grid.pos(indxCML,:); % xyz positions in mni coordinates
+	posHGL=template_grid.pos(indxHGL,:); % xyz positions in mni coordinates
+	posHGR=template_grid.pos(indxHGR,:); % xyz positions in mni coordinates
 
 	posback=ft_warp_apply(norm.params,posCML,'sn2individual');
-	btiposCML= ft_warp_apply(pinv(norm.initial),posback);% xyz positions in individual coordinates
+	btiposCML= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
 
 	posback=ft_warp_apply(norm.params,posHGL,'sn2individual');
-	btiposHGL= ft_warp_apply(pinv(norm.initial),posback);% xyz positions in individual coordinates
+	btiposHGL= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
 
 	posback=ft_warp_apply(norm.params,posHGR,'sn2individual');
-	btiposHGR= ft_warp_apply(pinv(norm.initial),posback);% xyz positions in individual coordinates
+	btiposHGR= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
 
 Now we create a source model for these particular locations only.
 
 	cfg=[];
-	cfg.vol=hdm;
+	cfg.headmodel=hdm;
 	cfg.channel=dataica.label;  
-	cfg.grid.pos=[btiposCML;btiposHGL;btiposHGR]./1000;% units of m
+	cfg.grid.pos=[btiposCML;btiposHGL;btiposHGR]./1000; % units of m
 	cfg.grad=dataica.grad;
 	sourcemodel_virt=ft_prepare_leadfield(cfg);
 
@@ -701,7 +701,7 @@ And repeat the source analysis steps for above but now for 3 parcels represented
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid = sourcemodel_virt;
-	cfg.vol=hdm;
+	cfg.headmodel=hdm;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.fixedori='yes';
 	cfg.lcmv.lamda='5%';
@@ -725,7 +725,7 @@ On the basis of the computed filters, kept in the output, it is now possible to 
 Since our main interest is the time courses common to a given parcel we can average over within parcel locations.
 
 	cfg = [];
-	cfg.channel = virtsens.label(1:16);% cingulum is prepresented by 16 locations
+	cfg.channel = virtsens.label(1:16); % cingulum is prepresented by 16 locations
 	cfg.avgoverchan = 'yes';
 	virtsensCML = ft_selectdata(cfg,virtsens);
 	virtsensCML.label = {'CML'};
@@ -821,7 +821,7 @@ A property of volume conduction is instantaneousness. As a consequence a given p
 
 	cfg = [];
 	cfg.method = 'coh';
-	cfg.complex = 'imag';% ensure only imaginary parts kept in the output
+	cfg.complex = 'imag'; % ensure only imaginary parts kept in the output
 	coherence = ft_connectivityanalysis(cfg, tfr);
 
 	%% reorganize the data and take the absolute value

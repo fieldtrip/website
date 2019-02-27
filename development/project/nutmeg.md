@@ -1,4 +1,4 @@
----
+cfg.headmodel---
 title: Integration with NUTMEG
 ---
 
@@ -10,7 +10,7 @@ title: Integration with NUTMEG
     2) NUTMEG can call FieldTrip's fileio
     3) NUTMEG can call FieldTrip's forward (including the change to treating reference electrodes as separate)
     4) What does NM do that does not exist (or done well) in FT? place in fieldtrip/external/nutmeg
-    5) What does FT do that does not exist (or done well) in NM? 
+    5) What does FT do that does not exist (or done well) in NM?
     6) create nutmeg/external/fieldtrip for functions other than fileio or forward (call to sites.google for this code)
     7) changes to FieldTrip to be compatible with running in Nutmeg
     8) conversion functions
@@ -45,7 +45,7 @@ See [/development/compat](/development/project/compat) for mydepfun example
 *  ft_sourceanalysis allow for multiple time and multiple frequency windows? (regardless of whether LCMV, DICS, or covariances from wavelet transform)
 *  nut_beamforming_gui
 *  rumour has it that some people prefer the interactive fiducial selection in NM over FT.
-*  simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to Matlab 
+*  simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to Matlab
 *  single precision used as long as double not needed (e.g. initial loading single but covariance computation double)
 *  how does FT reduce/display data computed with vector inverse method and therefore the source data has 3 components per voxel?
        * Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g. in statistics)?
@@ -62,14 +62,14 @@ See [/development/compat](/development/project/compat) for mydepfun example
 ###  5) FT ideas missing from NM
 
  1.  NM directly call FT artifact reject, databrowser, topoplots, etc.  Remove this from nut_beamforming_gui
- 2.  NM can call ft_freqanalysis and ft_sourceanalysis(DICS) 
+ 2.  NM can call ft_freqanalysis and ft_sourceanalysis(DICS)
  3.  How are continuous head-tracking coils dealt with?  Ideally separate leadfield per trial?
  4.  Units setting (default should be fT for MEG not T to avoid numerical issues)
 
 ### 7) Changes to FT for compatibility with NM
 
 *  any function/tool that plots should 'play nice' with Nutmeg figures concurrently open
-       *  Specifically, can FT plotting tools call 'figure' prior to the plot, to avoid plotting over an existing open figure (e.g. Nutmeg GUI figures) 
+       *  Specifically, can FT plotting tools call 'figure' prior to the plot, to avoid plotting over an existing open figure (e.g. Nutmeg GUI figures)
 
 ### 8) Conversion functions
 
@@ -110,7 +110,7 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
     cfg=[];
     cfg.method='dics';
     cfg.grid=grid;
-    cfg.vol=raw.vol;
+    cfg.headmodel=raw.vol;
     cfg.grad=raw.grad;
     cfg.keepfilter='yes';
     cfg.latency=.1;
@@ -124,7 +124,7 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
     cfg.method='dics';
     cfg.grid=grid;
     cfg.grid.filter=filter;
-    cfg.vol=raw.vol;
+    cfg.headmodel=raw.vol;
     cfg.grad=raw.grad;
     cfg.keepfilter='no';
     cfg.latency=.3;
@@ -169,4 +169,3 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
     cfg.design(5,:)=ones(1,size(tmp,2));
     cfg.ivar=1:5;
     stat=ft_sourcestatistics(cfg,source{1});
-

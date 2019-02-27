@@ -178,7 +178,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 	mesh2 =[];
 	mesh2.hex = headmodel_fem_eeg.hex(headmodel_fem_eeg.tissue==ts,:); %mesh2.hex(1:size(mesh2.hex),:);
 	mesh2.pos =  headmodel_fem_eeg.pos;
-	mesh2.tissue =  headmodel_fem_eeg.tissue(headmodel_fem_eeg.tissue==ts,:);%mesh.tissue(1:size(mesh2.hex),:);
+	mesh2.tissue =  headmodel_fem_eeg.tissue(headmodel_fem_eeg.tissue==ts,:); %mesh.tissue(1:size(mesh2.hex),:);
 
 	mesh_ed = mesh2edge(mesh2);
 	patch('Faces',mesh_ed.poly,...
@@ -205,7 +205,7 @@ In this phase, source locations are selected within the gray matter compartment.
 
 	cfg                 = [];
 	cfg.grid.resolution = 5; %in mm
-	cfg.vol             = headmodel_fem_eeg;
+	cfg.headmodel       = headmodel_fem_eeg;
 	cfg.inwardshift     = 1; %shifts dipoles away from surfaces
 	sourcemodel         = ft_prepare_sourcemodel(cfg, headmodel_fem_eeg);
 
@@ -243,7 +243,7 @@ Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take t
 	%% compute the leadfield
 	cfg               = [];
 	cfg.grid          = sourcemodel;
-	cfg.vol           = headmodel_fem_eeg_tr;
+	cfg.headmodel     = headmodel_fem_eeg_tr;
 	cfg.elec          = elec;
 	cfg.reducerank    = 3;
 	leadfield_fem_eeg = ft_prepare_leadfield(cfg);
@@ -261,7 +261,7 @@ If the source-model was already created at the step 3(EEG), it can be simply loa
 
 	cfg                 = [];
 	cfg.grid.resolution = 5; %in mm
-	cfg.vol             = headmodel_fem_meg;
+	cfg.headmodel       = headmodel_fem_meg;
 	cfg.inwardshift     = 1; %shifts dipoles away from surfaces
 	sourcemodel         = ft_prepare_sourcemodel(cfg, headmodel_fem_meg);
 

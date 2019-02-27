@@ -128,7 +128,7 @@ To identify periods of wake (including brief arousals), non-REM and REM states d
 
 	  % algorithmic parameters
 	  cfg.artfctdef.muscle.bpfilter    = 'yes';
-	  cfg.artfctdef.muscle.bpfreq      = [20 45];% typicall [110 140] but sampling rate is too low for that
+	  cfg.artfctdef.muscle.bpfreq      = [20 45]; % typicall [110 140] but sampling rate is too low for that
 	  cfg.artfctdef.muscle.bpfiltord   = 4;
 	  cfg.artfctdef.muscle.bpfilttype  = 'but';
 	  cfg.artfctdef.muscle.hilbert     = 'yes';
@@ -471,7 +471,7 @@ Lets load a prescored hypnogram as the reference
 	lab(strcmp(lab, '4'))  = {'SWS'};
 	lab(strcmp(lab, '5'))  = {'REM'};
 	lab(strcmp(lab, '-1')) = {'?'};
-	yticklabels(lab); %set(gca,'YTickLabel',lab) ;%prior to Matlab 2016b use this
+	yticklabels(lab); %set(gca,'YTickLabel',lab) ; %prior to Matlab 2016b use this
 
 {% include image src="/assets/img/tutorial/sleep/sleep_hypongram_estimated_vs_prescored.png" width="400" %}
 

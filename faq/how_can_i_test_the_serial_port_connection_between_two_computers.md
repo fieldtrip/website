@@ -134,7 +134,7 @@ Alternatively, one can simply use MATLAB serial objects and low level reading fu
 	            end
 	        end
 	    end
-	      pause(0.15);%% give serial a break
+	      pause(0.15); %% give serial a break
 	end
 	figure
 	plot(tlop*1000,'.');

@@ -111,12 +111,12 @@ This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger 
 
 	trl = [];
 
-	stim_duration = cfg.trialdef.prestim  * hdr.Fs;% number of samples
-	rest_duration = cfg.trialdef.poststim * hdr.Fs;% number of samples
+	stim_duration = cfg.trialdef.prestim  * hdr.Fs; % number of samples
+	rest_duration = cfg.trialdef.poststim * hdr.Fs; % number of samples
 
 	% extracts, trigger timing ------------------------------------------------
-	data1 = find(abs(trigger_data) > trigger_threshold);% exceed threshold
-	data2 = find(data1-[0,data1(1,1:end-1)] > rest_duration);% exceed 'rest_duration'
+	data1 = find(abs(trigger_data) > trigger_threshold); % exceed threshold
+	data2 = find(data1-[0,data1(1,1:end-1)] > rest_duration); % exceed 'rest_duration'
 	idx = data1(data2);
 	clear data1 data2
 
@@ -819,7 +819,7 @@ By using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can get 
 
 	cfg                 = [];
 	cfg.elec            = ft_convert_units(sens, 'mm');
-	cfg.vol             = ft_convert_units(vol, 'mm');
+	cfg.headmodel       = ft_convert_units(vol, 'mm');
 	cfg.reducerank      = 3;
 	cfg.normalize       = 'yes';
 	cfg.channel         = sens.label;
@@ -895,7 +895,7 @@ Using the covariance matrices and the leadfield matrices a spatial filtering is 
 	cfg.method          = 'dics';
 	cfg.frequency       = 10;
 	cfg.grid            = leadfieldM;
-	cfg.vol             = vol;
+	cfg.headmodel       = vol;
 	cfg.channel         = sens.label;
 	cfg.dics.projectnoise = 'yes';
 	cfg.dics.lambda       = '5%';

@@ -227,7 +227,7 @@ Now we can analysis the connectivity patterns that may arise due to coherence in
 	% then compute connectivity
 	cfg=[];
 	cfg.method='coh';
-	cfg.complex = 'absimag';% check absimag solves the abs on line 161
+	cfg.complex = 'absimag'; % check absimag solves the abs on line 161
 	conn=ft_connectivityanalysis(cfg,freq);
 
 Now we plot the coherence of a reference electrode with maximal gamma power relative to the remaining electrodes. In this case the electrode is 'chan123' with an index number 119.
