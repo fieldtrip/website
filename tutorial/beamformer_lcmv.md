@@ -73,14 +73,13 @@ Note that we have not yet cleaned the data from artifacts. For your own dataset,
 
 	cfg                  = [];
 	cfg.covariance       = 'yes';
-	cfg.covariancewindow = 'all';
 	timelock             = ft_timelockanalysis(cfg, data);
 
 ### Visualize the sensor level results (axial gradients)
 
-We can plot the results with the MATLAB plot command to get a first impressio
+We can plot the results with the MATLAB plot command to get a first impression
 
-	plot(timelock.time, timelock.avg)
+	figure; plot(timelock.time, timelock.avg)
 
 {% include image src="/assets/img/tutorial/beamformer_lcmv/subjectseftimelock.png" width="400" %}
 
