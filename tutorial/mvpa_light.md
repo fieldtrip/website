@@ -14,10 +14,6 @@ and the [MVPA-Light readme file](https://github.com/treder/MVPA-Light/blob/maste
 This tutorial builds on skills acquired in the [preprocessing](/tutorial/preprocessing), [event related averaging](/tutorial/eventrelatedaveraging) and [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorials.
 
 
-Statistics are called *metrics* in MVPA-Light.
-See [classifier performance metrics](https://github.com/treder/MVPA-Light/blob/master/README.md#classifier-performance-metrics) for a full overview over the currently available statistics.
-
-
 ## Procedure
 
 We will use classifiers to analyze the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip) which
@@ -25,203 +21,122 @@ features one subject with three types of trials: fully incongruent (FIC), fully 
 initially congruent (IC). These three classes are stored in different files available here:
  [dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat).
 
-Now load the data into MATLAB using
+The data can be loaded into MATLAB using
 
     load dataFIC_LP
     load dataFC_LP
     load dataIC_LP
 
-* Can we discriminate between the three classes using the average activity in the 300-500 ms interval?
+To get started, we will address the question whether we discriminate between the three classes
+FIC, FC, and IC, using the average activity in the 300-500 ms interval. We will then focus
+on two out of the three classes, FIC vs FC, and we will investigate the following questions:
 
-We will then focus on two out of the three classes, FIC vs FC, and we will investigate the following questions:
+* At *what times* ('when') in a trial can one discriminate between FIC and FC?
+* At *which sensor locations* ('where') can one discriminate between FIC and FC?
+* Which representations that discriminate between FIC and FC *generalise across time*?
 
-* At what times in a trial can we discriminate between FIC and FC?
-* At which sensor locations can we discriminate between FIC and FC?
-* At which sensor locations can we discriminate between FIC and FC?
+To make sure that the MVPA-Light functions are in the MATLAB path, call
+
+    startup_MVPA_Light
 
 
-### Sensor level classification in the time domain
+## Classification in the 0.5-0.7 s interval
 
-Make sure that the multivariate toolbox at /fieldtrip_xxx/external/dmlt/ is in your MATLAB path.
+First, we classify between ...  
 
-    addpath(genpath('/your-path-to-fieldtrip/external/dmlt'))
+    cfg = [] ;
+    cfg.method      = 'mvpa';
+    cfg.classifier  = 'lda';
+    cfg.statistic   = {'accuracy' 'auc'};
+    cfg.k = 3;
 
-We will start by analyzing the data in the time domain for our subject.
+cfg.design      = clabel_FC_FIC;
 
-    load covatt;
+% select time
+cfg.avgovertime = 'yes';
+cfg.latency = [0.5, 0.7];
 
-We now perform a timelock analysis in order to make the data suitable as input to **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. That is, we are going to predict attention direction from temporal data. For the purpose of demonstration we will focus on occipital channels only.
+stat = ft_timelockstatistics(cfg, dataFC_LP, dataFIC_LP)
+% stat = ft_timelockstatistics(cfg, dat)
 
-    cfg             = [];
-    cfg.parameter   = 'trial';
-    cfg.keeptrials  = 'yes';         % classifiers operate on individual trials
-    cfg.channel     = {'MLO' 'MRO'}; % occipital channels only
-    tleft   = ft_timelockanalysis(cfg, left);
-    tright  = ft_timelockanalysis(cfg, right);
 
-Now we specify cross-validation as a method for timelock statistics. This ensures that we will perform a classification of our data based on five-fold cross-validation. This splits up the data into five partitions or folds and attempts to build five different classifiers using the remaining four folds. The end result is then averaged over folds.
+To get a realistic estimate of classification performance, we perform
+10-fold (`cfg.k = 10`) cross-validation with 2 repetitions (`cfg.repeat = 10`).
 
-    cfg         = [];
-    cfg.layout  = 'CTF275.lay';
-    cfg.method  = 'crossvalidate';
+    cfg = [];
+    cfg.classifier      = 'lda';
+    cfg.metric          = 'auc';
+    cfg.cv              = 'kfold';
+    cfg.k               = 10;
+    cfg.repeat          = 2;
 
-We also need to specify a design matrix; this is simply a vector with labels *1* for the trials belonging to data for the first condition and labels *2* for trials belonging to data for the second condition
 
-    cfg.design  = [ones(size(tleft.trial,1),1); 2*ones(size(tright.trial,1),1)]';
+Statistics are called *metrics* in MVPA-Light.
+See [classifier performance metrics](https://github.com/treder/MVPA-Light/blob/master/README.md#classifier-performance-metrics) for a full overview over the currently available statistics.
 
-Let's focus on the last segment of the data
 
-    cfg.latency = [2.0 2.5]; % final bit of the attention period
+We also need to specify a design matrix containing class labels. The class labels specify which trials belong to
+which class (experimental condition). The task of the classifier will be to predict
+these class labels. To this end, we create a vector with *1*'s
+for the trials belonging to data for the first condition, *2*'s for trials
+belonging to data for the second condition, and so on. For the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
+we have three classes, namely FIC (class 1), FC (class 2), and IC (class 3):
 
-Finally, we call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** which uses the default classification procedure; namely a standardization of the data (subtraction of the mean and division by the standard deviation), followed by applying a linear support vector machin
 
-    stat = ft_timelockstatistics(cfg, tleft, tright);
+    cfg.design = [ones(numel(dataFC_LP.trial),1); 2 * ones(numel(dataFIC_LP.trial),1); 3 * ones(numel(dataIC_LP.trial),1)];
 
-The stat.statistic field now contains some useful statistics. By default it contains stat.accuracy (proportion of correctly classified trials) and a binomial significance test
 
-    stat.statistic
 
-Here, it indicates that classification performance is above chance level (0.5) and it is significant according to the binomial test (p<0.05). Note that we may be interested in other representations of classification performance such as the contingency matrix with true classes in rows and predicted classes in columns. Statistics may be specified as follow
+The `param` substruct contains the hyperparameters for the classifier.
+Here, we only set `lambda = 'auto'`. This is the default, so in general
+setting param is not required unless one wants to change the default
+settings.
 
-    cfg.statistic = {'accuracy' 'binomial' 'contingency'};
+    cfg.param           = [];
+    cfg.param.lambda    = 'auto';
 
-when running **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. We can now, in addition, look at the contingency matri
+### Cross-validation
 
-    stat = ft_timelockstatistics(cfg,tleft,tright);
-    stat.statistic.contingency
+To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training. This is repeated until every fold has been used as test set once. See [Lemm2011](https://www.sciencedirect.com/science/article/pii/S1053811910014163) for a discussion of cross-validation and potential pitfalls. Cross-validation is controlled by the following parameters:
 
-We may also plot the parameters of the used classifier as if it were electrophysiological data. This is represented in the stat.model field. For each fold we have a model and each such model may contain different parameters. For example, for the default support vector machine ([SVM](http://en.wikipedia.org/wiki/Support_vector_machine)), we have a stat.model{i}.primal field for each fold i. The easiest way to plot one of the parameters is to assign it to a different field in the stat object:
+    `cfg.cv`: cross-validation type, either 'kfold', 'leaveout' or 'holdout' (default 'kfold')
+    `cfg.k`: number of folds in k-fold cross-validation (default 5)
+    `cfg.repeat`: number of times the cross-validation is repeated with new randomly assigned folds (default 5)
+    `cfg.p`: if `cfg.cv` is 'holdout', `p` is the fraction of test samples (default 0.1)
+    `cfg.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
 
-    stat.mymodel = stat.model{1}.primal;
 
-and subsequently to treat the stat object as if it were data. The *parameter* field is then used to determine what to plo
+## Classification across time ('when')
 
-    cfg              = [];
-    cfg.parameter    = 'mymodel';
-    cfg.layout       = 'CTF275.lay';
-    cfg.xlim         = [2.0 2.5];
-    cfg.comments     = '';
-    cfg.colorbar     = 'yes';
-    cfg.interplimits = 'electrodes';
-    ft_topoplotER(cfg, stat);
+Many neuroimaging datasets have a 3-D structure (trials x channels x time). The start of the trial (t=0) typically corresponds to stimulus or response onset. Classification across time can help identify at which time point in a trial discriminative information shows up. To this end, classification is performed across trials, for each time point separately. The resulting statistic (e.g. classification accuracy) can then be plotted as a function of time.
+The only thing we need to do to perform classification across time is to prevent averaging of the
+voltage by *not* setting `cfg.avgovertime = 'yes'`. The default value is `'no'`, so
+we can simply omit the parameter. Likewise, we want to classify across the whole length
+of the trial. Hence, we also omit setting the `cfg.latency` parameter.
 
-{% include image src="/assets/img/tutorial/multivariateanalysis/clf_1.png" width="200" %}
+    cfg = [] ;  
+    cfg.method      = 'mvpa';
+    cfg.classifier  = 'lda';
+    cfg.statistic   = 'auc';
+    cfg.design      = clabel_FC_FIC;
 
-In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using *imagesc(stat.mymodel)* then it will be found that all features are used due to the way classifier operates. One way to solve this is to use *dimensionality reduction* or *feature selection*. We will see examples later in this tutorial.
+
 
 #### Exercise 1
 
 {% include markup/info %}
-Explain which information the contingency matrix gives you, which the accuracy does not.  
+Perform classification across time using all three classes FIC, FC, and IC.
+You need to change the design matrix
+You can use the classifier `multiclass_lda` for this purpose.
 {% include markup/end %}
 
-Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
 
-Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of *overfitting* and *generalization* in your explanation.
+## Searchlight analysis ('where')
 
-Suppose you try multiple different classification procedures and find at some point that you reach a classification performance that is significantly better than chance at p=0.05. Should you trust this result? Why (not)?
-{% include markup/end %}
+Which spatial features contribute most to classification performance? The answer to this question can be used to better interpret the data or to perform feature selection. To this end, we will perform classification for each feature separately. Since our features are the MEG channels with a spatial structure (e.g. neighbouring channels), groups of features rather than single features can be considered. The result of the searchlight analysis is a classification performance measure for each channel.
 
-### Sensor level classification in the frequency domain
 
-We now try to classify the same data in the frequency domain. Therefore, we need to perform a frequency analysis. Let's focus on the alpha band at the end of the attention period.
 
-    cfg              = [];
-    cfg.output       = 'pow';
-    cfg.method       = 'mtmconvol';
-    cfg.taper        = 'hanning';
-    cfg.foi          = 8:2:14;
-    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
-    cfg.channel      = {'MLO' 'MRO'};
-    cfg.toi          = 2.0:0.1:2.5;
-    cfg.keeptrials   = 'yes'; % classifiers operate on individual trials
+## Time generalisation (time x time classification)
 
-    tfrleft          = ft_freqanalysis(cfg, left);
-    tfrright         = ft_freqanalysis(cfg, right);
-
-Now we call freqstatistics with crossvalidate as our method.
-
-    cfg         = [];
-    cfg.layout  = 'CTF275.lay';
-    cfg.method  = 'crossvalidate';
-    cfg.design  = [ones(size(tfrleft.powspctrm,1),1); 2*ones(size(tfrright.powspctrm,1),1)]';
-    stat        = ft_freqstatistics(cfg,tfrleft,tfrright);
-
-We can compare classification performance with the previous results
-
-    stat.statistic
-
-and we see a major improvement since we are focusing on the physiologically relevant alpha band. Again, we may plot the classifier parameters to obtain a so-called importance map
-
-    stat.mymodel = stat.model{1}.primal;
-
-    cfg              = [];
-    cfg.layout       = 'CTF275.lay';
-    cfg.parameter    = 'mymodel';
-    cfg.comment      = '';
-    cfg.colorbar     = 'yes';
-    cfg.interplimits = 'electrodes';
-    ft_topoplotTFR(cfg, stat);
-
-{% include image src="/assets/img/tutorial/multivariateanalysis/clf_2.png" width="200" %}
-
-#### Exercise 2
-
-{% include markup/info %}
-Rerun the previous cross-validation with 'cfg.nfolds=2'. Explain the difference and motivate why it is important to perform cross-validation instead of just dividing the data into one training and one test set.
-{% include markup/end %}
-
-### Dimensionality reduction and feature selection
-
-One important thing to consider when classifying electrophysiological data is that we wish to reduce as much as possible the number of features used to classify the data. There are two ways to achieve this: either we map the input data to another space with a smaller number of dimensions or we select a number of dimensions from the original space.
-Going back to our analysis of timelocked data, we could for instance use common spatial patterns (see this [paper](http://dx.doi.org/10.1016/j.neuroimage.2010.06.048) for an explanation) to map our data to a different space. Here, instead, we perform a feature selection in the original space using a regularized classification approach. This is done by overriding the default classification procedure using the *cfg.mva* field:
-
-    cfg         = [];
-    cfg.layout  = 'CTF275.lay';
-    cfg.method  = 'crossvalidate';
-    cfg.design  = [ones(size(tfrleft.powspctrm,1),1); 2*ones(size(tfrright.powspctrm,1),1)]';
-    cfg.mva     = {dml.standardizer dml.enet('family','binomial','alpha',0.2)};
-
-This multivariate analysis standardizes the data and subsequently calls an elastic net logistic regression with regularization parameter alpha equal to 0.2. This parameter influences how many features will be selected for classification. The larger the parameter, the fewer features will be used. For a description of the used algorithm, you may consult the following [paper](http://www.jstatsoft.org/v33/i01/). The elastic net algorithm gives the following result
-
-    stat = ft_freqstatistics(cfg, tfrleft, tfrright);
-    stat.statistic
-
-If we inspect stat.model{1} then we find that a different set of parameters is estimated (weights and bias). The weights are the regression coefficients of interest and bias is just an offset term.
-If we look at the weights then we find that just a very small number of features from the total of 912 possible features are used. This is also reflected in the topoplot.
-
-    stat.mymodel     = stat.model{1}.weights;
-
-    cfg              = [];
-    cfg.layout       = 'CTF275.lay';
-    cfg.parameter    = 'mymodel';
-    cfg.comment      = '';
-    cfg.colorbar     = 'yes';
-    cfg.interplimits = 'electrodes';
-    ft_topoplotTFR(cfg, stat);
-
-{% include image src="/assets/img/tutorial/multivariateanalysis/clf_3.png" width="200" %}
-
-#### Exercise 3
-
-{% include markup/info %}
-Use MATLAB to compute the number of non-zero elements in stat.model{1}.weights.
-
-Why is it useful to have a representation in terms of a small number of non-zero elements?
-
-Repeat the above analysis with a different value for alpha. Explain the results.
-
-Alpha is a free parameter in our model. How would you determine the optimal setting for this parameter?
-
-If we use more and more features then classification performance will first go up but eventually starts to degrade. Explain why this may happen.
-
-Suppose we wish to select the optimal feature subset by testing all possible subsets. How many subsets do we need to test when we have *n* features in total?
-{% include markup/end %}
-
-## Conclusion
-
-In this tutorial we have touched on a number of important issues in the classification of electrophysiological data. However, we barely scratched the surface of this field since there are many more possibilities to explore. First, many different procedures can be devised that use different forms of preprocessing, feature selection  and/or prediction. For example, we may want to deal with continuous instead of discrete outputs (regression versus classification), we may want to perform a Bayesian analysis which also gives error bars on the predictions, or we may want to use timeseries analysis in order to predict changes in ongoing activity.
-
-To use some of the more advanced methods it is required to call lower level functions. We recommend looking at the tutorials which have been written for DMLT. These can be accessed through MATLAB's *doc* facility.
-
-To construct online experimental designs that make use of multivariate analysis, for example to build BCI or neurofeedback applications, we have developed the [realtime](/development/realtime) module.
+Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalisation, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial [King and Dehaene (2014)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/). mv_classify_timextime implements time generalisation. It returns a 2D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. mv_plot_result can be used to plot the result.
