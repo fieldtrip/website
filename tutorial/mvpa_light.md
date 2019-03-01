@@ -93,7 +93,7 @@ proportion of samples of class i that have been classified as class j.
 Looking at the diagonal of the matrix tells us that the classifier is doing better
 at predicting classes 1 (0.51) and 2 (0.55) than it is at correctly predicting class 3 (0.32).
 For a simple visualisation of this result, we can use a plotting function from [MVPA-Light](https://github.com/treder/MVPA-Light)
-called [`mv_plot_result`](https://github.com/treder/MVPA-Light/plot/mv_plot_result.m).
+called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m).
 It takes the result structure returned in `stat.mvpa_result` which contains the
 classification results in a format required by the function. As an additional parameter,
 we can pass the values for the time axis.
