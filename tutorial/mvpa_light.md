@@ -27,13 +27,14 @@ The data can be loaded into MATLAB using
     load dataFC_LP
     load dataIC_LP
 
-To get started, we will address the question whether we can discriminate between the three classes
-FIC, FC, and IC, using the average activity in the 0.5-0.7 s interval. We will then focus
-on two out of the three classes, FIC vs FC, and we will investigate the following questions:
+To get started, we investigate whether we can discriminate between the three classes
+FIC, FC, and IC, using the average activity in the 0.5-0.7 s interval.
+
+After this, we will focus on two out of the three classes, namely FIC vs FC, and we will investigate the following questions:
 
 * At *what times* ('when') in a trial can one discriminate between FIC and FC?
 * At *which sensor locations* ('where') can one discriminate between FIC and FC?
-* Which representations that discriminate between FIC and FC *generalise across time*?
+* Which representations that discriminate between FIC and FC [*generalise across time*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/))?
 
 Note that the classification is performed for a single subject using single trials. To make sure that the MVPA-Light functions are in the MATLAB path, call
 
@@ -42,13 +43,13 @@ Note that the classification is performed for a single subject using single tria
 
 ## Classification in the 0.5-0.7 s interval
 
-We will use `ft_timelockstatistics` to determine the classification accuracy between the three classes FIC, FC, and IC. As features, we will use the average activity in the 0.5-0.7 s interval. This yields XXX features for the classifier, one for each MEG channel, to try to differentiate between FIC, FC, and IC trials. Let us first determine the number of trials in each class:
+We will use `ft_timelockstatistics` to determine the classification accuracy between the three classes FIC, FC, and IC. As features, we will use the average activity in the 0.5-0.7 s interval. This yields 149 features for the classifier, one for each MEG channel, to try to differentiate between FIC, FC, and IC trials. Let us first determine the number of trials in each class:
 
     nFIC = numel(dataFIC_LP.trial);
     nFC = numel(dataFC_LP.trial);
     nIC = numel(dataIC_LP.trial);
 
-Now we need to define the configuration struct
+Define the configuration struct
 
     cfg = [] ;
     cfg.method      = 'mvpa';
@@ -64,26 +65,27 @@ Let us unpack this a bit:
 - `cfg.classifier` indicates which classifier we want to use. Here, we use multi-class Linear Discriminant Analysis (LDA).  [Click here](https://github.com/treder/MVPA-Light#classifiers-for-two-classes) for a full list of available classifiers.
 - `cfg.metric` indicates the metric we use to measure classifier performance. Here, *classification accuracy* is used. Other metrics such as AUC and F1-score are available. [Click here](https://github.com/treder/MVPA-Light#classifier-performance-metrics) for a full list of available metrics.
 - `cfg.k` specifies the number of folds used to calculate the cross-validated performance. Cross-validation is explained in more detail in the next section.
-- `cfg.latency` restrict the classification analysis to a specific time window (here 0.5-0.7s).
-- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section Classification across time).
+- `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
+- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section *Classification across time*).
 - `cfg.design` specifies the vector of *class labels*. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with *1*'s
 for the trials belonging to class 1, *2*'s for trials
-belonging to class 2, and so on. Note that the order of the classes does not usually matter (i.e., if you swap the class labels the classification performance does not change). For the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
+belonging to class 2, and so on. For the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
 there is three classes, namely FIC (class 1), FC (class 2), and IC (class 3).
 
 Now we can call
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
-to perform the analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the data is passed in to `ft_timelockstatistics`. Let us print the resulting classification
+to perform the analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the datasets are passed in to `ft_timelockstatistics`. Let us print the resulting classification
 accuracy
 
     fprintf('Classification accuracy: %0.2f\n', stat.metric.accuracy)
 
 For multi-class problems, the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is
-a useful metric. In a confusion matrix, rows corresponds to the true class labels,
+a useful metric. In a confusion matrix, rows correspond to the true class labels,
 columns correspond to predicted class labels. The (i,j)-th element gives the
-proportion of samples of class i that have been classified as class j.
+proportion of samples of class i that have been classified as class j. Consequently,
+the diagonal of the confusion matrix contains the proportion of correct classifications. Off-diagonal elements specify the misclassifications.
 
     cfg.metric      = 'confusion';
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
@@ -91,12 +93,11 @@ proportion of samples of class i that have been classified as class j.
     stat.metric.confusion
 
 Looking at the diagonal of the matrix tells us that the classifier is doing better
-at predicting classes 1 (0.51) and 2 (0.55) than it is at correctly predicting class 3 (0.32).
-For a simple visualisation of this result, we can use a plotting function from [MVPA-Light](https://github.com/treder/MVPA-Light)
+at predicting classes 1 and 2 than it is at correctly predicting class 3.
+For a simple visualisation of this result, we can use a plotting function in  [MVPA-Light](https://github.com/treder/MVPA-Light)
 called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m).
 It takes the result structure returned in `stat.mvpa_result` which contains the
-classification results in a format required by the function. As an additional parameter,
-we can pass the values for the time axis.
+classification results in a format required by the function.
 
     mv_plot_result(stat.mvpa_result)
 
@@ -113,12 +114,19 @@ To obtain a realistic estimate of classifier performance and control for overfit
 - `cfg.p`: if `cfg.cv` is 'holdout', `p` is the fraction of test samples (default 0.1)
 - `cfg.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
 
-The total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is an average of the metrics calculated for each test set.
+The total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is an average
+across the test folds.
+
+#### Exercise 1
+
+{% include markup/info %}
+What is the effect of setting k to a very large vs very small value? Why is it
+useful to repeat the cross-validation multiple times?
+{% include markup/end %}
 
 ## Classification across time ('when')
 
-Many neuroimaging datasets have a 3-D structure (trials x channels x time). Classification across time can help identify at which time point in a trial ('when') discriminative information shows up. To this end, classification is performed across trials, for each time point separately. The resulting metric (e.g. classification accuracy) can then be plotted as a function of time.
-To perform classification across time, we need to make sure that the time dimension preserved by not averaging the data over time. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can also simply omit this parameter.
+Many neuroimaging datasets have a 3-D structure (trials x channels x time). Classification across time can help identify at which time point in a trial ('when') discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
 
     cfg = [] ;  
     cfg.method      = 'mvpa';
@@ -132,20 +140,20 @@ For simplicity, we will limit ourselves to comparing only FIC and FC. As classif
 we use Linear Discriminant Analysis (LDA). As metric, we use area under the ROC curve (AUC).
 It is calculated using 10-fold cross-validation with 2 repetitions.
 
-    stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
+    stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
 Note that the metric is now a vector with 900 values, one for each time point.
-It can be plotted using
+It can be plotted as a function of time using
 
     plot(stat.metric.auc)
 
 For a slightly nicer plot, we can again use `mv_plot_result`. As an additional parameter,
-we can pass the values for the time axis. This makes sure that the x-axis is scaled
+we can pass the values for the time axis. This makes sure that the x-axis is formatted
 correctly.
 
     mv_plot_result(stat.mvpa_result, dataFC_LP.time{1})
 
-The resultant plot shows the AUC across time in the trial. The shaded area
+The resultant plot shows AUC across time in the trial. The shaded area
 is the standard deviation of the AUC metric across the different test sets in the
 cross-validation.
 
@@ -154,7 +162,7 @@ cross-validation.
 
 
 
-#### Exercise 1
+#### Exercise 2
 
 {% include markup/info %}
 Perform classification across time using all three classes FIC, FC, and IC. As
@@ -180,7 +188,7 @@ features, for each channel separately. Set `cfg.latency` to restrict the analysi
 a specific time window, and set `cfg.avgovertime='yes'` if you want the values in the time
 window to be averaged.
 
-Since we receive one value for each channel we can plot the classification accuracy
+Since we obtained a classification result for each channel we can plot the classification accuracy
 as a topography. To achieve this, we first need to set `accuracy` as a field of `stat`.
 Then we can call `ft_topoplotER` to do the plotting.
 
@@ -213,8 +221,8 @@ a distance matrix that specifies which channels are neighbours of each other.
     %%% Get distance matrix
     nb_mat = squareform(pdist(lay.pos));
 
-We are now ready to re-run the searchlight analysis. We pass the distance matrix
-via the parameter `cfg.nb`. We set `cfg.size = 3` which means that in iteration,
+We are now ready to re-run the searchlight analysis. We pass the neighbourhood distance matrix
+via the parameter `cfg.nb`. By setting `cfg.size = 3`  in every iteration
 the target channel is considered together with its 3 closest neighbouring channels.
 
       cfg = [] ;  
@@ -229,7 +237,7 @@ the target channel is considered together with its 3 closest neighbouring channe
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-As expected, the resultant topography is slightly more smeared out. Classification accuracy is higher which is due to the classifier now combining information across neighbouring channels.
+As expected, the resultant topography is slightly more smeared out. Peak classification accuracy is higher which is due to the classifier now combining information across neighbouring channels.
 
       {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo2.png" width="200" %}
 
@@ -247,15 +255,14 @@ time x time classification, we need to set
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
-It returns a 2D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. We plot the
-result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and one parameter
-for the x-axis and another parameter specifying the y-axis.
+It returns a 2-D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. We plot the
+result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and two additional parameters specifying the x-axis and y-axis.
 
     mv_plot_result(stat.mvpa_result, dataFC_LP.time{1}, dataFC_LP.time{1})
 
-The resulting plot is a 2-D matrix. Each point on the y-axis corresponds to the
+In the resultant plot, each row (corresponding to a value of on the y-axis)  corresponds to the
 time point at which the classifier was trained. Each point on the x-axis corresponds
-to a time point at which the respective classifier was tested. Clearly, the classifier attains peak performance roughly in the 4.3-6.5s period.
+to a time point at which the respective classifier was tested. Clearly, the classifier attains peak performance roughly in the 0.45-0.65s period.
 
 
 {% include image src="/assets/img/tutorial/mvpa_light/timextime.png" width="200" %}
@@ -308,8 +315,15 @@ TODO
 
 ## Summary
 
-We used classification across time, searchlight analysis, and time generalisation
-(time x time classification) to identify *where* and *when* there is discriminative
-information within MEG trials. In a way, searchlight analysis is orthogonal to classification across time: in searchlight analysis,
+In this tutorial, classification across time, searchlight analysis, and time generalisation
+(time x time classification) were used to pinpoint *where* and *when* there is discriminative
+information within MEG trials. It is worth stressing that searchlight analysis and classification across time yield complementary information: in searchlight analysis,
 the time points serve as features and classification is performed for each channel separately.
 In classification across time, the channels serve as features and classification is performed for each time point separately.
+
+<!--
+TODO:
+advanced topics
+statistical analysis
+
+-->
