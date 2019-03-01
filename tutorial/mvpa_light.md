@@ -213,7 +213,9 @@ a distance matrix that specifies which channels are neighbours of each other.
     %%% Get distance matrix
     nb_mat = squareform(pdist(lay.pos));
 
-We are now ready to re-run the searchlight analysis
+We are now ready to re-run the searchlight analysis. We pass the distance matrix
+via the parameter `cfg.nb`. We set `cfg.size = 3` which means that in iteration,
+the target channel is considered together with its 3 closest neighbouring channels.
 
       cfg = [] ;  
       cfg.method      = 'mvpa';
@@ -227,40 +229,87 @@ We are now ready to re-run the searchlight analysis
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-As expected, the resultant topography is slightly more smeared out. Also the
-maximum classification accuracy is higher which is due to the classifier now
-being able to combine information across neighbouring channels.
+As expected, the resultant topography is slightly more smeared out. Classification accuracy is higher which is due to the classifier now combining information across neighbouring channels.
 
       {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo2.png" width="200" %}
 
 
 ## Time generalisation (time x time classification)
 
-Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalisation, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial [King and Dehaene (2014)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/). mv_classify_timextime implements time generalisation. It returns a 2D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. mv_plot_result can be used to plot the result.
+Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalisation, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene (2014)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). To perform
+time x time classification, we need to set
 
 
+    cfg = [] ;  
+    cfg.method      = 'mvpa';
+    cfg.timextime   = 'yes';
+    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
+
+    stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
+
+It returns a 2D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. We plot the
+result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and one parameter
+for the x-axis and another parameter specifying the y-axis.
+
+    mv_plot_result(stat.mvpa_result, dataFC_LP.time{1}, dataFC_LP.time{1})
+
+The resulting plot is a 2-D matrix. Each point on the y-axis corresponds to the
+time point at which the classifier was trained. Each point on the x-axis corresponds
+to a time point at which the respective classifier was tested. Clearly, the classifier attains peak performance roughly in the 4.3-6.5s period.
+
+
+{% include image src="/assets/img/tutorial/mvpa_light/timextime.png" width="200" %}
+
+
+<!--
 
 ## Advanced topics
 
+In this section we address slightly more advanced topics that might become important
+once you start using MVPA on a regular basis.
+
 ### Hyperparameters
 
-The `param` substruct contains the hyperparameters for the classifier.
-Here, we only set `lambda = 'auto'`. This is the default, so in general
-setting param is not required unless one wants to change the default
-settings.
+Many classifiers have parameters that control their properties and need to
+be set by the user, so-called *hyperparameters*. For a list of hyperparameters for each classifier, see the respective train_
+functions in the [classifier folder](https://github.com/treder/MVPA-Light/tree/master/classifier).
+Hyperparameters can be set using the `param` substruct. For instance, in Support
+Vector Machines (SVM) the kernel is a hyperparameter and `gamma` controls the
+kernel width for an RBF kernel.
+
+
+    cfg.param           = [];
+    cfg.param.kernel    = 'rbf';
+    cfg.param.gamma     = 1;
+
+See [train_svm](https://github.com/treder/MVPA-Light/blob/master/classifier/train_svm.m)) for a list of SVM hyperparameters and their default values.
+To give another example, in LDA the `lambda` parameter controls the amount of regularisation of the covariance matrix.
 
     cfg.param           = [];
     cfg.param.lambda    = 'auto';
 
+See [train_lda](https://github.com/treder/MVPA-Light/blob/master/classifier/train_svm.m)) for a list of LDA hyperparameters and their default values.
+In many cases the default values suffice.
+
+
 ### Unbalanced classes
+
+Classes are unbalanced when one class contains more instances than another class.
+Unbalanced classes can distort some of the classification metrics. For instance,
+if 90\% of the metrics
 
 
 ### Classifier weights vs activation patterns
 
+TODO
+
+-->
+
 
 ## Summary
 
-In a way, searchlight analysis is orthogonal to classification across time: in searchlight analysis,
+We used classification across time, searchlight analysis, and time generalisation
+(time x time classification) to identify *where* and *when* there is discriminative
+information within MEG trials. In a way, searchlight analysis is orthogonal to classification across time: in searchlight analysis,
 the time points serve as features and classification is performed for each channel separately.
-In classification across time, the channels serve as features and classification is performed for each
-time point separately.
+In classification across time, the channels serve as features and classification is performed for each time point separately.
