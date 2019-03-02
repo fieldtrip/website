@@ -50,7 +50,7 @@ Leaving out the last two arguments spawns a local buffer on the default port 197
 
 #### Compilation
 
-On the command line, change to the ''realtime/datasource/brainamp'' directory and type ''make''. The Makefile will also work with the MinGW compiler on
+On the command line, change to the ''realtime/datasource/BrainAmp'' directory and type ''make''. The Makefile will also work with the MinGW compiler on
 Windows. You will need to  [compile](/development/realtime/reference_implementation#compiling_the_code) the **libbuffer** library first.
 
 ### Alternative interface using BCI2000

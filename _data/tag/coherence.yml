@@ -16,9 +16,6 @@
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
-
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
@@ -30,4 +27,7 @@
 
 - name:  Fourier analysis of neuronal oscillations and synchronization
   link:  /tutorial/fourier
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
 

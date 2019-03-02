@@ -7,9 +7,8 @@ tags: [madrid2019, eeg-language, eeg-chennu]
 ## General introduction
 
 In this tutorial we will analyze the power spectra for two different EEG
-datasets. The first dataset is recorded in a **[multi-sensory object
-categorization task](/workshop/madrid2019/eeg_language)**, the second dataset is
-recorded in a **[resting state experiment](/workshop/madrid2019/eeg_chennu)**.
+datasets. The first dataset is recorded in a **[language task](/tutorial/eeg_language)**,
+the second dataset is recorded in a **[resting-state experiment](/workshop/madrid2019/eeg_chennu)**.
 Before starting with this tutorial, please read through the linked descriptions
 of the two datasets.
 
@@ -17,7 +16,7 @@ of the two datasets.
 
 Oscillatory components contained in the ongoing EEG or MEG signal often change
 relative to experimental manipulations, such as stimulus events. These
-oscilatory signals are not necessarily phase-locked to the event and will not be
+oscillatory signals are not necessarily phase-locked to the event and will not be
 represented as event related fields (ERFs) in MEG or event related potentials
 (ERPs) in EEG (see e.g. Tallon-Baudry and Bertrand (1999) [Oscillatory gamma
 activity in humans and its role in object
@@ -335,10 +334,10 @@ using a boxcar window
     cfg2.foi     = 0.5:1:45; % 1/cfg1.length  = 1;
     base_freq1   = ft_freqanalysis(cfg2, base_rpt1);
 
-    cfg2.foi     = 0.5:0.5:45;% 1/cfg1.length  = 2;
+    cfg2.foi     = 0.5:0.5:45; % 1/cfg1.length  = 2;
     base_freq2   = ft_freqanalysis(cfg2, base_rpt2);
 
-    cfg2.foi     = 0.5:0.25:45;% 1/cfg1.length  = 4;
+    cfg2.foi     = 0.5:0.25:45; % 1/cfg1.length  = 4;
     base_freq4   = ft_freqanalysis(cfg2, base_rpt4);
 
 Let us plot the power spectra of channel 61 using the standard MATLAB plot function.

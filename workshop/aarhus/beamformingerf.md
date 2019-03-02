@@ -6,8 +6,8 @@ tags: [tutorial, aarhus, meg+eeg, beamforming, erf, lcmv, meg-audodd]
 # Beamforming evoked fields and potentials in combined MEG/EEG data
 
 ## Introduction
-In this tutorial we will apply beaforming techniques to event-realted fields. The data used herein has been used and preprocessing procedures have been extensively explained in the Natmeg tutorial [dataset](/tutorial/natmeg/meg_audodd). Below we will focus on motor evoked fields associated with right hand button press.We will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)). Except, we will focus on motor responses rather than the preceding stimuli. Further we will compare the measured topography and the corresponding source reconstruction. The quality of the topography often depends on the presence of super-positioned activity of no interest, i.e. ocular and cardiac artifacts. Thus, we will apply ICA in order to identify and subsequently remove such activity.
-In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as   computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/tutorial/natmeg/beamforming).
+In this tutorial we will apply beaforming techniques to event-realted fields. The data used herein has been used and preprocessing procedures have been extensively explained in the Natmeg tutorial [dataset](/workshop/natmeg/meg_audodd). Below we will focus on motor evoked fields associated with right hand button press.We will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)). Except, we will focus on motor responses rather than the preceding stimuli. Further we will compare the measured topography and the corresponding source reconstruction. The quality of the topography often depends on the presence of super-positioned activity of no interest, i.e. ocular and cardiac artifacts. Thus, we will apply ICA in order to identify and subsequently remove such activity.
+In this tutorial you will learn about applying beamformer techniques in the time domain. This tutorial further assumes that you made yourself familiar with all the necessary steps such as   computing an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline. It is important that you understand the basics of these previous steps explained in the [tutorial:natmeg:beamforming](/workshop/natmeg/beamforming).
 
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
@@ -39,7 +39,7 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/bf_pipeline.jpg" width="650" %}
 
 *Figure: An example of a pipeline to locate sources associated with evoked fields.*
 
@@ -54,7 +54,7 @@ The following steps had been performed:
 *  Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 1.5 seconds prior to trigger onset (i.e. baseline) and 2 second post trigger onset (i.e. response interval).
 *  Apply some preprocessing such as power line noise removal, demean and detrend using **[ft_preprocessing](/reference/ft_preprocessing)**
 
-To run the following section of code you need the original dataset and trial function:  [download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/oddball1_mc_downsampled.fif), [download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/trialfun_oddball_responselocked.m)
+To run the following section of code you need the original dataset and trial function:  [download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif), [download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m)
 
 	clear all
 	close all
@@ -79,7 +79,7 @@ To run the following section of code you need the original dataset and trial fun
 
 	data_meg_clean    = ft_preprocessing(cfg);
 
-The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/data_meg_clean.mat).
+The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/data_meg_clean.mat).
 
 Load the data using the following command:
 
@@ -148,7 +148,7 @@ In the first step we re-segment the data into left and right hand responses usin
 	cfg.xlim    = [-.2 1];
 	subplot(2,2,2);ft_singleplotER(cfg,tlk);
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/topographyandtimecourseERF.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/topographyandtimecourseERF.png" width="600" %}
 
 *Figure 1: Topography and time course of the motor evoked response performed with the right hand.*
 
@@ -161,7 +161,7 @@ Use your knowledge about the distribution of the ingoing and outgoing field.
 ### Loading the headmodel
 
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
-We are going to use the forward model that was calculated in the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting) which you can download to your working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/headmodel_meg.mat).
+We are going to use the forward model that was calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which you can download to your working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/headmodel_meg.mat).
 
 Load the forward model using the following cod
 
@@ -175,7 +175,7 @@ The next step is to discretize the brain volume into a grid. For each grid point
 Sensors that were previously removed from the data set should also be removed when calculating the leadfield.
 {% include markup/end %}
 
-We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/).
+We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/).
 
 	dataset = 'oddball1_mc_downsampled.fif';
 	grad    = ft_read_sens(dataset, 'senstype', 'meg');
@@ -185,9 +185,9 @@ If you are not contrasting the activity of interest against another condition or
 
 	% Create leadfield grid
 	cfg                 = [];
-	cfg.channel         = data_right.label;% ensure that rejected sensors are not present
+	cfg.channel         = data_right.label; % ensure that rejected sensors are not present
 	cfg.grad            = grad;
-	cfg.vol             = headmodel_meg;
+	cfg.headmodel       = headmodel_meg;
 	cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
 	cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -242,7 +242,7 @@ Now using the headmodel and the precomputed leadfield we make three subsequent c
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid=grid;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.lambda = '5%';
 	cfg.channel         = {'MEG'};
@@ -253,7 +253,7 @@ Now using the headmodel and the precomputed leadfield we make three subsequent c
 	cfg.method='lcmv';
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	sourcepreM1=ft_sourceanalysis(cfg, avgpre);
 	sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
@@ -271,14 +271,14 @@ The source data structure has the following field
 
 ### Plotting sources of response related evoked field
 
-The strategy around circumventing the noise bias towards the center of the head has been addressed and the bias itself has been illustrated [here](/tutorial/natmeg/beamforming#plotting_sources_of_oscillatory_beta-band_activity). Here we will contrast the estimated source power of the response interval against the one from the pre-response.
+The strategy around circumventing the noise bias towards the center of the head has been addressed and the bias itself has been illustrated [here](/workshop/natmeg/beamforming#plotting_sources_of_oscillatory_beta-band_activity). Here we will contrast the estimated source power of the response interval against the one from the pre-response.
 
 	M1=sourcepstM1;
 	M1.avg.pow=(sourcepstM1.avg.pow-sourcepreM1.avg.pow)./sourcepreM1.avg.pow;
 
 The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
-First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting) which can be downloaded to the working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/mri_segmented.mat).
+First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which can be downloaded to the working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
 
 	load mri_segmented.mat
 
@@ -292,7 +292,7 @@ Subsequently, we interpolate the source power onto the individual MRI.
 
 After which, we can plot the interpolated data. In order to emphasize "the hill" of activity we are interested in, we create a mask that in the present case highlights 30 % of the total activity. Note, that this threshold is arbitrary and is mainly used for illustrative purposes. An alternative to this is provided below.  
 
-	source_int.mask = source_int.pow > max(source_int.pow(:))*.3;% 30 % of maximum
+	source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 30 % of maximum
 	cfg               = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
@@ -301,7 +301,7 @@ After which, we can plot the interpolated data. In order to emphasize "the hill"
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplotm1_meg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplotm1_meg.png" width="600" %}
 
 *Figure 2: A source plot of the motor evoked field- ratio between the pre- and post-response conditions.*
 
@@ -341,7 +341,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 First we will repeat some of the previous steps. We will compute the covariance matrix on the basis of the data including the pre and post-response latencies. This is followed by averaging of the pre and post data segments separately, yet keeping the individual observations using the option **cfg.keeptrials = 'yes'**. Here it is important that we also calculate the single-trial covariance using the option **cfg.covariance = 'yes'** as this will later be used to calculate the source activity.
 
-If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/headmodel_meg.mat),[datapre](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/datapre.mat),[datapost](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/datapost.mat),[grid](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/grid.mat),[data_right](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/data_right.mat)
+If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/headmodel_meg.mat),[datapre](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/datapre.mat),[datapost](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/datapost.mat),[grid](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/grid.mat),[data_right](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/data_right.mat)
 
 	% load the data
 	load headmodel_meg
@@ -366,7 +366,7 @@ Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/f
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid=grid;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.lambda = '5%';
 	cfg.channel         = {'MEG'};
@@ -376,7 +376,7 @@ Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/f
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
 	cfg.rawtrial = 'yes';
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	sourcepreM1=ft_sourceanalysis(cfg, avgpre);
 	sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
@@ -443,7 +443,7 @@ Finally, we plot the result. Instead of ratio the functional data is now represe
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,statint);
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplottstatunmasked.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplottstatunmasked.png" width="600" %}
 
 *Figure 3: A source plot of the difference between the pre- and post-response conditions expressed in t-values.*
 
@@ -460,9 +460,9 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 ##### Compute leadfield at desired location
 
 	cfg=[];
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.channel=data_right.label;  
-	cfg.grid.pos=[-42 -18 67]./10;% units of cm
+	cfg.grid.pos=[-42 -18 67]./10; % units of cm
 	cfg.grad=grad;
 	cfg.unit = 'cm';
 	sourcemodel_virt=ft_prepare_leadfield(cfg);
@@ -480,7 +480,7 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 	cfg=[];
 	cfg.method='lcmv';
 	cfg.grid = sourcemodel_virt;
-	cfg.vol=headmodel_meg;
+	cfg.headmodel=headmodel_meg;
 	cfg.lcmv.keepfilter='yes'; % keep filters in the output, which are later multiplied with the data
 	cfg.lcmv.fixedori='yes'; % consider only the dominant orientation
 	cfg.lcmv.lamda='5%';
@@ -544,7 +544,7 @@ Now we can plot the result.
 	    subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
 	end;
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
 
 *Figure 4: Time course of activity in the primary motor cortex averaged across trials (left) and its single trial time-frequency decomposition right.*
 
@@ -556,7 +556,7 @@ Take your time to verbalize what you see. Try to decompose the averaged response
 
 ## (EEG) The forward model and lead field matrix
 
-We will continue to analyse the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/aarhus/mri_segmented.mat).
+We will continue to analyse the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
 
 	load data_eeg_reref_ica
 	%% sort into left and right hand response
@@ -586,7 +586,7 @@ We will continue to analyse the EEG data according to a series of steps similar 
 
 ### EEG Head model & data
 
-As before, we will use the head model calculated in the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting) and the preprocessed data in order to compute the leadfield.
+As before, we will use the head model calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) and the preprocessed data in order to compute the leadfield.
 
 Load the EEG head model using the following cod
 
@@ -599,7 +599,7 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
 	cfg                 = [];
 	cfg.elec         = elec;
 	cfg.channel           = data_eeg_reref_ica.label;
-	cfg.vol             = headmodel_eeg;
+	cfg.headmodel       = headmodel_eeg;
 	cfg.dics.reducerank = 3; % default for MEG is 2, for EEG is 3
 	cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -619,7 +619,7 @@ Now that we have everything prepared we can start to calculate the spatial filte
 	cfg.method='lcmv';
 	cfg.grid=grid;
 	cfg.elec = elec;
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.lambda = '5%';
 	cfg.channel           = data_eeg_reref_ica.label;
@@ -632,7 +632,7 @@ Now that we have everything prepared we can start to calculate the spatial filte
 	cfg.elec = elec;
 	cfg.grid=grid;
 	cfg.grid.filter=sourceavg.avg.filter;
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.lcmv.lambda = '5%';
 	cfg.channel           = data_eeg_reref_ica.label;
 	cfg.senstype = 'EEG';
@@ -654,7 +654,7 @@ And interpolate the result onto the anatomical MRI.
 
 Finally, we can plot the result using the same masking strategy as in the MEG sectio
 
-	source_int.mask = source_int.pow > max(source_int.pow(:))*.3;% 50 % of maximum
+	source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 50 % of maximum
 	cfg               = [];
 	cfg.method        = 'ortho';
 	cfg.funparameter  = 'pow';
@@ -664,7 +664,7 @@ Finally, we can plot the result using the same masking strategy as in the MEG se
 	cfg.funcolormap = 'jet';
 	ft_sourceplot(cfg,source_int);
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/sourceplotm1_eeg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplotm1_eeg.png" width="600" %}
 
 *Figure 5: Source plot of reconstructed activity using EEG.*
 
@@ -673,9 +673,9 @@ We would like to compare the time course of activity reconstructed with MEG and 
 ##### Compute leadfield at location M1
 
 	cfg=[];
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.channel           = data_eeg_reref_ica.label;
-	cfg.grid.pos=[-28 -17 67]./10;% units of cm
+	cfg.grid.pos=[-28 -17 67]./10; % units of cm
 	cfg.elec = elec;
 	cfg.unit = 'cm';
 	sourcemodel_virt=ft_prepare_leadfield(cfg);
@@ -694,7 +694,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	cfg.channel=data_eeg_right.label;
 	cfg.elec = elec;
 	cfg.grid = sourcemodel_virt;
-	cfg.vol=headmodel_eeg;
+	cfg.headmodel=headmodel_eeg;
 	cfg.lcmv.keepfilter='yes';
 	cfg.lcmv.fixedori='yes';
 	cfg.lcmv.lamda='5%';
@@ -756,17 +756,17 @@ We would like to compare the time course of activity reconstructed with MEG and 
 	    subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
 	end;
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_eeg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_eeg.png" width="600" %}
 *Figure 6: Time course of activity in the primary motor cortex reconstructed with EEG.*
 
-{% include image src="/assets/img/tutorial/aarhus/beamformingerf/timecourseatm1_topeeg_bottommeg.png" width="600" %}
+{% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_topeeg_bottommeg.png" width="600" %}
 *Figure 6: Comparison of time course reconstruction of activity in the primary motor cortex using EEG (top row) and MEG (bottom row).*
 
 ## Summary and suggested further reading
 
 Beamforming source analysis in the time domain with DICS on EEG and MEG data has been demonstrated. Options at each stage and their influence on the results were discussed, such as computing the covariance matrix on the basis of single trials vs. ERF/ERP.  The results were plotted on an orthogonal view. Thresholding of the source maps was demonstrated on the basis of an arbitrary and statistical threshold. Finally, virtual sensor time-courses were extracted and compared between the imaging modalities.
 
-Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/tutorial/natmeg/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
+Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or frequency domain beamformer [DICS](/workshop/natmeg/beamforming) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
 If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
 FAQ

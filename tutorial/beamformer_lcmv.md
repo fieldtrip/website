@@ -73,14 +73,13 @@ Note that we have not yet cleaned the data from artifacts. For your own dataset,
 
 	cfg                  = [];
 	cfg.covariance       = 'yes';
-	cfg.covariancewindow = 'all';
 	timelock             = ft_timelockanalysis(cfg, data);
 
 ### Visualize the sensor level results (axial gradients)
 
-We can plot the results with the MATLAB plot command to get a first impressio
+We can plot the results with the MATLAB plot command to get a first impression
 
-	plot(timelock.time, timelock.avg)
+	figure; plot(timelock.time, timelock.avg)
 
 {% include image src="/assets/img/tutorial/beamformer_lcmv/subjectseftimelock.png" width="400" %}
 
@@ -174,7 +173,7 @@ Now prepare the source model. Here one has the option to make a 'normalized grid
 	hdr                 = ft_read_header('SubjectSEF.ds');
 	cfg                 = [];
 	cfg.grad            = hdr.grad;
-	cfg.vol             = vol;
+	cfg.headmodel       = vol;
 	cfg.grid.resolution = 1;
 	cfg.grid.unit       = 'cm';
 	cfg.inwardshift     = -1.5;
@@ -194,7 +193,7 @@ Combine all the information into the leadfield matrix:
 	hdr                  = ft_read_header('SubjectSEF.ds');
 	cfg                  = [];
 	cfg.grad             = hdr.grad;  % gradiometer distances
-	cfg.vol              = vol;   % volume conduction headmodel
+	cfg.headmodel        = vol;   % volume conduction headmodel
 	cfg.grid             = grid;  % normalized grid positions
 	cfg.channel          = {'MEG'};
 	cfg.normalize        = 'yes'; % to remove depth bias (Q in eq. 27 of van Veen et al, 1997)
@@ -206,7 +205,7 @@ Combine all the information into the leadfield matrix:
 	cfg                  = [];
 	cfg.method           = 'lcmv';
 	cfg.grid             = lf; % leadfield, which has the grid information
-	cfg.vol              = vol; % volume conduction model (headmodel)
+	cfg.headmodel        = vol; % volume conduction model (headmodel)
 	cfg.keepfilter       = 'yes';
 	cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
 	source_avg           = ft_sourceanalysis(cfg, timelock);

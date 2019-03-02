@@ -29,7 +29,7 @@ For memory efficiency (especially relevant for large datasets), with FieldTrip w
 
 Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
-The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendixthe_trialfun_used_in_this_example ) of this example script. Please save it to a local file with the name `trialfun_affcog.m`.
+The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendix-the-trialfun-used-in-this-example) of this example script. Please save it to a local file with the name `trialfun_affcog.m`.
 
     cfg              = [];
     cfg.trialfun     = 'trialfun_affcog';
@@ -93,7 +93,7 @@ Can you find this line (or lines with other labels) on the second call to ft_dat
 Try setting `cfg.viewmode = 'vertical'` before the call to ft_databrowser.
 {% include markup/end %}
 
-FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memor
+FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memory:
 
     >> data
 
@@ -185,7 +185,7 @@ You can check the channel labels that are now present in the data and use **[ft_
 
 ### Channel layout
 
-For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was use
+For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was used.
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/layoutacticapmpi.png" width="200" %}
 

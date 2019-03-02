@@ -77,8 +77,8 @@ Documentation referring to this dataset:
 * Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
 * 306-channel Elekta Triux MEG system
 * Auditory stimulus presentation with a standard and an oddball, motor responses on the oddball, visual cue for the response hand (left or right) at the start of each block.
-* Dataset [details](/tutorial/natmeg/meg_audodd)
-* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/natmeg/) from our FTP server.
+* Dataset [details](/workshop/natmeg/meg_audodd)
+* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="meg-audodd" %}
@@ -192,7 +192,7 @@ Documentation referring to this dataset:
 
 * Single-channel fNIRS recording over motor cortex during finger tapping task.
 * Artinis Oxymon MK III system
-* Download the dataset [here](ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel/) from our FTP server.
+* Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/nirs_singlechannel/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="nirs-singlechannel" %}

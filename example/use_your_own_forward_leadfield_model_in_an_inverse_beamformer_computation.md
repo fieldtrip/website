@@ -17,8 +17,8 @@ That can be demonstrated using the following code
     for i=1:128
      elec.label{i} = sprintf('%03d', i);
     end
- 
-I suggest that you do not use these electrodes, but instead that 
+
+I suggest that you do not use these electrodes, but instead that
 you get more meaningfull electrode locations. See for example http://robertoostenveld.nl/?p=5
 
     % create a concentric 3-sphere volume conductor, the radius is the same as for the electrodes
@@ -30,12 +30,11 @@ you get more meaningfull electrode locations. See for example http://robertooste
 Using the geometrical description of the sensor locations and the geometrical description of the volume conductor model, you now can compute the leadfield for the locations of interest. By default we scan with the beamformer on a regularly spaced 3D grid of approximately 1 cm resolution. Here is an example for computing the leadfields.
 
     % compute the leadfields that can be used for the beamforming
-    cfg            = [];
-    cfg.elec       = elec;
-    cfg.vol        = vol;
+    cfg                 = [];
+    cfg.elec            = elec;
+    cfg.headmodel       = vol;
     cfg.grid.resolution = 2;  
-    cfg.grid.unit       = 'cm';% same unit as above, i.e. in cm
+    cfg.grid.unit       = 'cm';   % same unit as above, i.e. in cm
     grid = ft_prepare_leadfield(cfg);
 
 The idea now is that, using your own forward model, you construct a "grid" structure with the same elements. Note that the channel numbering should correspond with the channels in the data, and that the EEG leadfields should be averaged referenced.
-

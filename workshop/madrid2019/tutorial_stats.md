@@ -803,7 +803,7 @@ experimental conditions.
     cfg.statistic        = 'ft_statfun_depsamplesFmultivariate';
     cfg.correctm         = 'cluster';
     cfg.clusteralpha     = 0.05;
-    cfg.clusterstatistic = 'maxsum';%'maxsum', 'maxsize', 'wcm'
+    cfg.clusterstatistic = 'maxsum'; %'maxsum', 'maxsize', 'wcm'
     cfg.clusterthreshold = 'nonparametric_common';
     cfg.minnbchan        = 2;
     cfg.tail             = 1; % For a F-statistic, it only make sense to calculate the right tail

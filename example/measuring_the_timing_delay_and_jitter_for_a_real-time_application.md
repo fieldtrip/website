@@ -54,7 +54,7 @@ On the receiving side (the machine, that reads the data online from shared memor
 	cfg.channel = 'UPPT001';
 
 	%% below follows the destination for ft_write_event (i.e. for closing the loop), this in this case is a serial port connected to trigger channel UPPT001 on the MEG ACQ console
-	outstream = 'serial:/dev/ttyS0';%% syntax outstream = 'serial:`<port>`?key1=value1&key2=value2&...';
+	outstream = 'serial:/dev/ttyS0'; %% syntax outstream = 'serial:`<port>`?key1=value1&key2=value2&...';
 
 	% translate dataset into datafile+headerfile
 	cfg = ft_checkconfig(cfg, 'dataset2files', 'yes');

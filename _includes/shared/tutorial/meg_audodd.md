@@ -1,13 +1,12 @@
 ## Details of the auditory oddball MEG dataset
 
-For the EEG-MEG workshop we recorded a dataset of a single subject to allow you to work through all the different steps involved in EEG-MEG analysis: from event related averaging to frequency analysis, source modeling and statistics.
+For the EEG-MEG workshop at NatMEG we recorded a dataset of a single subject to allow you to work through all the different steps involved in EEG-MEG analysis: from event related averaging to frequency analysis, source modeling and statistics.
 
 ### The oddball paradigm
 
-The experiment that the subject performed is a slight adaptation of the classical oddball experiment. Using the oddball paradigm one can study the well-known EEG component called the mismatch-negativity (MMN). The classical auditory oddball experiment involves the presentation of a continuous series of identical tones at a relatively slow rate, say between one every two seconds to two every second. Every so often, say one out of ten, the tone is slightly different in pitch, duration or loudness.
-In our version, an oddball occurs after every 3 to 7 standard tones. The interval between each tone is jittered between 700 to 900 ms.
+The experiment that the subject performed is a slight adaptation of the classical oddball experiment. Using the oddball paradigm one can study the well-known EEG component called the mismatch-negativity (MMN). The classical auditory oddball experiment involves the presentation of a continuous series of identical tones at a relatively slow rate, say between one every two seconds to two every second. Every so often, say one out of ten, the tone is slightly different in pitch, duration or loudness. In our version, an oddball occurs after every 3 to 7 standard tones. The interval between each tone is jittered between 700 to 900 ms.
 
-{% include image src="/assets/img/shared/tutorial/natmeg/meg_audodd/paradigm.png" width="600" %}
+{% include image src="/assets/img/shared/workshop/natmeg/meg_audodd/paradigm.png" width="600" %}
 
 ### Mismatch negativity
 
@@ -35,7 +34,7 @@ The standard tones were 400ms 1000Hz sine-waves, with a short 50ms ramping up- a
 
 ### Triggers
 
-The MEG system records event-triggers in a separate channels, called STI101 and STI102. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset (or offset) can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the worksho
+The MEG system records event-triggers in a separate channels, called STI101 and STI102. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset (or offset) can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the workshop:
 
 -   Onset of standard stimulus: 1
 -   Onset of oddball stimulus: 2

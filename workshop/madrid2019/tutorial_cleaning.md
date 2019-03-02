@@ -19,7 +19,7 @@ using ICA.
 
 We will adapt the pipeline described in de Cheveigne & Arzounian (2018) [Robust
 detrending, rereferencing, outlier detection, and inpainting for multichannel
-data]((https://doi.org/10.1016/j.neuroimage.2018.01.035)). They discuss
+data](https://doi.org/10.1016/j.neuroimage.2018.01.035). They discuss
 different algorithms to preprocess MEG or EEG data and - importantly - they
 propose rules of thumb regarding the order on which these preprocessing steps
 should be applied. Please, bear in mind that the present pipeline is quite

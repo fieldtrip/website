@@ -404,7 +404,7 @@ compute common spatial filter
 	cfg.grid.ygrid      = -15:0.5:15;
 	cfg.grid.zgrid      = -15:0.5:15;
 	cfg.inwardshift     = -2;
-	cfg.vol             = vol_cm;
+	cfg.headmodel       = vol_cm;
 	cfg.channel         = {'all'}; % also MEGREF channels
 	cfg.reducerank      = 2;
 	cfg.frequency       = 10;
@@ -422,7 +422,7 @@ Project cue condition through common spatial filter
 	cfg.grad            = data_concat.grad;
 	cfg.grid.pos        = source_common.pos;
 	cfg.grid.filter     = source_common.avg.filter;
-	cfg.vol             = vol_cm;
+	cfg.headmodel       = vol_cm;
 	cfg.channel         = {'all'};
 	cfg.reducerank      = 2;
 	cfg.frequency       = 10;
