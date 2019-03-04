@@ -50,7 +50,7 @@ The egi_mff_v2 implementation in MATLAB depends on a generic Java implementation
 
 To ensure that MATLAB can find the .jar file, you have to add a path to the MFF-1.0.jar (java) file by typing the following on your MATLAB prompt
 
-    javaaddpath path/to/fieldtrip/external/egi_mff/java/MFF-1.2.jar
+    javaaddpath path/to/fieldtrip/external/egi_mff_v2/java/MFF-1.2.jar
 
 For more information have a look at [javaaddpath](http://www.mathworks.nl/help/techdoc/ref/javaaddpath.html) and [javaclasspath](http://www.mathworks.nl/help/techdoc/ref/javaclasspath.html).
 
