@@ -62,6 +62,10 @@ Here are the slides of the topics that we presented and discussed in the Open Sc
 * [Tzvetan Popov - HCP User's Perspective](https://www.slideshare.net/RobertOostenveld/biomag2018-tzvetan-popov-hcp-from-a-users-perspective)
 * [Dennis Engemann - MNE-HCP](https://www.slideshare.net/RobertOostenveld/biomag2018-denis-engemann-mnehcp)
 
+### 09 July, 2018
+
+Arjen has published a new paper, entitled [Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6). Go and check it out!
+
 ## Recent improvements to the code
 
 All changes to the code can be tracked on [Twitter](http://twitter.com/fieldtriptoolbx) and [Github](/development/git).

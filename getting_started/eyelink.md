@@ -332,8 +332,8 @@ This is an example how to convert the horizontal and vertical traces from the UA
     voltageH=data_meg.trial{trln}(find(strcmp(data_meg.label,'UADC005')),:);
     voltageV=data_meg.trial{trln}(find(strcmp(data_meg.label,'UADC006')),:);
 
-    R_h = (voltageH-minvoltage)./(maxvoltage-minvoltage);%voltage range proportion
-    S_h = R_h.*(maxrange-minrange)+minrange;%proportion of screen width or height
+    R_h = (voltageH-minvoltage)./(maxvoltage-minvoltage); %voltage range proportion
+    S_h = R_h.*(maxrange-minrange)+minrange; %proportion of screen width or height
 
     R_v = (voltageV-minvoltage)./(maxvoltage-minvoltage);
     S_v = R_v.*(maxrange-minrange)+minrange;

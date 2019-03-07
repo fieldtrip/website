@@ -112,9 +112,6 @@
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
-
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
@@ -144,6 +141,9 @@
 
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
 
 - name:  FieldTrip connectivity demo
   link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo

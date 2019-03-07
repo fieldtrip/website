@@ -59,7 +59,7 @@ Best is always to check the coordinate system of the MRI.
 
     ft_sourceplot([], individual_mri);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.22.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.22.png" width="500" %}
 
 {% include markup/info %}
 Click around in the figure and look at the "bti" head coordinates that are printed in the screen. Subsequently look up the definition of the 4D/BTi head coordinate system in this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_4dbti_coordinate_system).
@@ -80,7 +80,7 @@ Check it once more.
 
     ft_sourceplot([], individual_mri);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.34.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.34.png" width="500" %}
 
     % load these from fieldtrip/template
     template_mri = ft_read_mri('single_subj_T1_1mm.nii');
@@ -102,21 +102,21 @@ We want to visualise the various geometrical objects that we read into memory. F
     ft_plot_sens(data.grad, 'coil', 'yes', 'coildiameter', 10);
     ft_plot_vol(headmodel);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.45.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.45.png" width="500" %}
 
     figure
     hold on
     ft_plot_vol(headmodel, 'facecolor', 'cortex', 'edgecolor', 'none'); alpha 0.5; camlight;
     ft_plot_mesh(individual_sourcemodel3d.pos(individual_sourcemodel3d.inside, :));
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.52.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.52.png" width="500" %}
 
     ft_determine_coordsys(individual_mri, 'interactive', false); title('individual_mri')
     hold on
     ft_plot_sens(data.grad, 'coil', 'yes', 'coildiameter', 10);
     ft_plot_mesh(individual_sourcemodel3d.pos(individual_sourcemodel3d.inside, :));
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.37.41.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.37.41.png" width="500" %}
 
 You can see that the grid locations of the source model are not exactly aligned with the axes of the coordinate systems. This is because the grid positions have been defines in MNI space and subsequently non-linearly transformed into the individual's space according to the [procedure described here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space).
 
@@ -125,7 +125,7 @@ You can see that the grid locations of the source model are not exactly aligned 
     hold on
     ft_plot_mesh(template_sourcemodel3d.pos(template_sourcemodel3d.inside, :));
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.37.33.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.37.33.png" width="500" %}
 
 Each of the grid positions in the single-subject coordinate systems maps onto a corresponding position in the MNI coordinate system. This means that the results of this subject (and all other HCP subjects) can be directly mapped into MNI space for group comparison without the need for interpolation.
 
@@ -136,7 +136,7 @@ First we look at the different movements that are coded in the triggers, i.e. th
     figure
     plot(data.trialinfo(:, 2), '.')
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.37.47.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.37.47.png" width="500" %}
 
 Each movement instruction is followed by a movement, which can be seen in the corresponding EMG channel. You can use ft_databrowser to browse through the subsequent trials. Each block contains multiple movements of the same hand or foot.
 
@@ -147,7 +147,7 @@ Each movement instruction is followed by a movement, which can be seen in the co
     cfg.preproc.hpfreq = 30;
     ft_databrowser(cfg, data);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.23.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.23.png" width="500" %}
 
 {% include markup/info %}
 Does the mapping of the trigger codes correspond to the sequence of EMG activity?
@@ -184,7 +184,7 @@ Having done this sanity check on the data, we will make subsets for the differen
     cfg.preproc.hpfreq = 30;
     ft_databrowser(cfg, data_lh);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.35.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.35.png" width="500" %}
 
 ### Time-frequency analysis of the MEG sensor level data
 
@@ -215,12 +215,12 @@ Having computed the TFR, we want to visualise it. However, we computed the singl
     figure('name', 'LEFT HAND')
     ft_multiplotTFR(cfg, tfr_lh_pow);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.43.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.43.png" width="500" %}
 
     figure('name', 'RIGHT HAND')
     ft_multiplotTFR(cfg, tfr_rh_pow);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.49.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.49.png" width="500" %}
 
 We can also compute the difference between the power in the left and right-hand condition.
 
@@ -236,7 +236,7 @@ We can also compute the difference between the power in the left and right-hand 
     figure('name', 'DIFFERENCE')
     ft_multiplotTFR(cfg, tfr_diff);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.55.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.38.55.png" width="500" %}
 
 {% include markup/info %}
 You should use the interactive functionality of the **[ft_multiplotTFR](/reference/ft_multiplotTFR)** figures. Click in the figures to identify the time, frequency and channel selections that show interesting effects.
@@ -250,7 +250,7 @@ Another way of looking at the dynamics in this channel-time-frequency representa
     cfg.layout = '4D248.lay';
     ft_movieplotTFR(cfg, tfr_diff);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.27.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.27.png" width="500" %}
 
 ### Localize the beta band activity
 
@@ -278,7 +278,7 @@ Usually we would not look at the forward solution, i.e. the lead fields. But the
     subplot(1,3,2); ft_plot_topo3d(data_rh.grad.chanpos(selchan,:), leadfield.leadfield{selpos}(:,2));
     subplot(1,3,3); ft_plot_topo3d(data_rh.grad.chanpos(selchan,:), leadfield.leadfield{selpos}(:,3));
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.33.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.33.png" width="500" %}
 
 Rather than doing the source reconstruction on the wavelet decomposed data, we can zoom in and concentrate the spectral estimation in the exact time-frequency window of interest (following movement, around 20 Hz).
 
@@ -344,8 +344,8 @@ Following interpolation of the (non-uniform grid) source reconstructed data onto
     ft_sourceplot(cfg, dics_lh_int);
     ft_sourceplot(cfg, dics_rh_int);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.40.png" width="500" %}
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.48.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.40.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.48.png" width="500" %}
 
     cfg = [];
     cfg.funparameter = 'pow';
@@ -385,9 +385,9 @@ Let's check that the seed locations match with the regions that we have identifi
     cfg.location = ml_seed_pos;
     ft_sourceplot(cfg, dics_diff_int);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.56.png" width="200" %}
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.05.png" width="200" %}
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.11.png" width="200" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.39.56.png" width="200" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.05.png" width="200" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.11.png" width="200" %}
 
 ### Perform timelock analysis
 
@@ -412,7 +412,7 @@ Let's look at the distribution of the movement-locked ER
     figure
     ft_multiplotER(cfg, timelock_rh);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.33.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.33.png" width="500" %}
 
 With the covariance and the forward model for the specific seed points, we can compute the spatial filter. Since there are only three locations now, there is no need to pre-compute the lead field.
 
@@ -461,7 +461,7 @@ Just like MEG channel level data, we can plot the time courses of the virtual ch
     cfg.viewmode = 'vertical';
     ft_databrowser(cfg, virtualchannel_raw);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.43.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.43.png" width="500" %}
 
 We can also compute the source-level ERF
 
@@ -474,7 +474,7 @@ We can also compute the source-level ERF
     plot(virtualchannel_avg.time, virtualchannel_avg.avg)
     legend(virtualchannel_avg.label);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.44.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.44.png" width="500" %}
 
 and we can compute the source-level time-frequency representation of the virtual channel data
 
@@ -502,9 +502,9 @@ and we can compute the source-level time-frequency representation of the virtual
     cfg.channel = {'midline seed'};
     figure; ft_singleplotTFR(cfg, virtualchannel_wavelet);
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.50.png" width="200" %}
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.56.png" width="200" %}
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.41.06.png" width="200" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.50.png" width="200" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.40.56.png" width="200" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.41.06.png" width="200" %}
 
 ### Virtual channel connectivity
 
@@ -521,7 +521,7 @@ The virtual channel time-series seem to be consistent with what we expect to hap
     colorbar
     axis xy
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.41.51.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.41.51.png" width="500" %}
 
     figure
     imagesc(coherence.time, coherence.freq, squeeze(coherence.cohspctrm(2, :, :)));
@@ -529,7 +529,7 @@ The virtual channel time-series seem to be consistent with what we expect to hap
     colorbar
     axis xy
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.41.56.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.41.56.png" width="500" %}
 
     figure
     imagesc(coherence.time, coherence.freq, squeeze(coherence.cohspctrm(3, :, :)));
@@ -537,7 +537,7 @@ The virtual channel time-series seem to be consistent with what we expect to hap
     colorbar
     axis xy
 
-{% include image src="/assets/img/tutorial/chieti/virtualchannel/screen_shot_2015-09-17_at_09.42.01.png" width="500" %}
+{% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.42.01.png" width="500" %}
 
 {% include markup/info %}
 There are many more connectivity methods available in **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. Try out some of the others.

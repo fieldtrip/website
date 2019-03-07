@@ -4,9 +4,6 @@
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
 
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /tutorial/aarhus/beamformingerf
-
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
@@ -18,9 +15,6 @@
 
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended
-
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /tutorial/chieti/simulation
 
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
@@ -88,21 +82,6 @@
 - name:  Multivariate analysis of electrophysiological data
   link:  /tutorial/multivariateanalysis
 
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/natmeg/beamforming
-
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/natmeg/dipolefitting
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/preprocessing
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/statistics
-
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/natmeg/timefrequency
-
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis
 
@@ -144,4 +123,25 @@
 
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
+
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus/beamformingerf
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
+
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /workshop/natmeg/beamforming
+
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /workshop/natmeg/dipolefitting
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/preprocessing
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/statistics
+
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /workshop/natmeg/timefrequency
 

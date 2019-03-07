@@ -73,7 +73,7 @@ with: N = the total number of time samples.
 
 In the code this formula is formed such as to optimize the calculation of the channel means and standard deviations.
 
-The summation is performed lik
+The summation is performed in the following way:
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/eq4.png" width="120" %}
 
@@ -132,7 +132,7 @@ Negative trialpadding is an option included in automatic artifact rejection beca
 
 After you are satisfied with the detection of artifacts you can either reject the complete trial containing any artifact, or reject only the part with the artifact. The latter option leads to partial trials with variable trial lengths, something that has to be considered especially in anticipation of any trial-based, or average-based statistics.
 
-To remove the detected artifacts from the trial definition (trl) you can add your artifact definition as any field (e.g. ''.eog'', ''.jump'' or ''.zvalue'') to the ''cfg.artfctdef'' field. For instanc
+To remove the detected artifacts from the trial definition (trl) you can add your artifact definition as any field (e.g. ''.eog'', ''.jump'' or ''.zvalue'') to the ''cfg.artfctdef'' field. For instance:
 
     cfg=[];
     cfg.artfctdef.reject = 'complete'; % this rejects complete trials, use 'partial' if you want to do partial artifact rejection
@@ -195,18 +195,18 @@ z-value cutoff values.
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/artifactjump.png" width="600" %}
 
-//Interactive figure of ft_artifact_zvalue. The left panel shows the
+*Interactive figure of ft_artifact_zvalue. The left panel shows the
 z-score of the processed data, along with the threshold. Suprathreshold
 data points are marked in red. The lower right panel shows the z-score
 of the processed data for a particular trial, and the upper right panel
 shows the unprocessed data of the channel that contributed most to the
 (cumulated) z-score. You can browse through the trials using the buttons
  at the bottom of the figure. Also, you can adjust the threshold, and
-manually keep/reject trials.
+manually keep/reject trials.*
 
 In this example data set, a lot of data points are detected to be a
 'jump' artifact, although they seem more often 'muscular' in nature. A
-typical jump artifact can be seen belo
+typical jump artifact can be seen below:
 
 {% include image src="/assets/img/tutorial/automatic_artifact_rejection/artifactjump2.png" width="600" %}
 
@@ -215,13 +215,12 @@ typical jump artifact can be seen belo
 In this example you can easily increase the threshold for the artifact
 detection to a value of 150. If you subsequently hit the 'stop' button
 you will return to the MATLAB command-line, and the output variable of
-
 **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** contains the
 definition of the artifacts in cfg.artfctdef.zvalue.artifact.
 
 ### Detection of muscle artifacts
 
-The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts,it can be used to detect muscle artifacts.
+The same way as **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** is used to detect jump artifacts, it can be used to detect muscle artifacts.
 
 	  % muscle
 	  cfg            = [];
@@ -276,7 +275,7 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
 	   % algorithmic parameters
 	   cfg.artfctdef.zvalue.bpfilter   = 'yes';
 	   cfg.artfctdef.zvalue.bpfilttype = 'but';
-	   cfg.artfctdef.zvalue.bpfreq     = [1 15];
+	   cfg.artfctdef.zvalue.bpfreq     = [2 15];
 	   cfg.artfctdef.zvalue.bpfiltord  = 4;
 	   cfg.artfctdef.zvalue.hilbert    = 'yes';
 

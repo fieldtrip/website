@@ -85,9 +85,6 @@
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /tutorial/aarhus/beamformingerf
-
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
@@ -154,24 +151,6 @@
 - name:  Multivariate analysis of electrophysiological data
   link:  /tutorial/multivariateanalysis
 
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /tutorial/natmeg/beamforming
-
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /tutorial/natmeg/dipolefitting
-
-- name:  Details of the auditory oddball MEG dataset
-  link:  /tutorial/natmeg/meg_audodd
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/preprocessing
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /tutorial/natmeg/statistics
-
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /tutorial/natmeg/timefrequency
-
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing
 
@@ -192,6 +171,9 @@
 
 - name:  FieldTrip workshop in Aarhus
   link:  /workshop/aarhus2015
+
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus/beamformingerf
 
 - name:  Face recognition dataset
   link:  /workshop/meg-uk-2015/dataset
@@ -217,6 +199,24 @@
 - name:  SPM Sensor-level stats demo
   link:  /workshop/meg-uk-2015/spm_stats
 
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /workshop/natmeg/beamforming
+
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /workshop/natmeg/dipolefitting
+
 - name:  FieldTrip course at the NatMEG in Stockholm
   link:  /workshop/natmeg
+
+- name:  Details of the auditory oddball MEG dataset
+  link:  /workshop/natmeg/meg_audodd
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/preprocessing
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/statistics
+
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /workshop/natmeg/timefrequency
 

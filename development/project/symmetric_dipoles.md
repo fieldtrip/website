@@ -42,7 +42,7 @@ FIXME in the following section the simulated data should consist of two dipoles 
 
 	% create a dipole simulation with two dipoles and a custom timecourse
 	cfg      = [];
-	cfg.vol  = vol;      % see above
+	cfg.headmodel = vol; % see above
 	cfg.grad = grad;     % see above
 	cfg.dip.pos = [
 	   0  6  3        % dipole 1
@@ -78,7 +78,7 @@ FIMXE insert figure at the end of the following block of code
 
 	% do the beamformer source reconstuction on a 1 cm grid
 	cfg            = [];
-	cfg.vol        = vol;
+	cfg.headmodel  = vol;
 	cfg.grad       = grad;
 	cfg.resolution = 1;
 	cfg.method     = 'lcmv';

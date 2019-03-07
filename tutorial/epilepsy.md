@@ -154,7 +154,7 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     cfg = [];
     cfg.grid.resolution = 7;
     cfg.grid.unit = 'mm';
-    cfg.vol = headmodel;
+    cfg.headmodel = headmodel;
     cfg.grad = data.grad; % this being needed here is a silly historical artifact
     sourcemodel = ft_prepare_sourcemodel(cfg);
 
@@ -184,7 +184,7 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
 
     cfg = [];
     cfg.channel = 'MEG';
-    cfg.vol  = headmodel;
+    cfg.headmodel  = headmodel;
     cfg.grid = sourcemodel;
     cfg.normalize = 'yes';
     sourcemodel = ft_prepare_leadfield(cfg, timelock);
@@ -192,7 +192,7 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     % save sourcemodel sourcemodel
 
     cfg = [];
-    cfg.vol  = headmodel;
+    cfg.headmodel  = headmodel;
     cfg.grid = sourcemodel;
     cfg.method = 'lcmv';
     cfg.lcmv.projectmom = 'yes';

@@ -153,9 +153,13 @@ For this tutorial we downsample the mesh to 2mm resolution, in order to reduce t
 Once the volumetric mesh has been created, the forward solution can be computed. In the following, steps 2-5 are described for EEG and MEG separately.
 
 {% include markup/warning %}
-Currently, the pipeline for computing the MEG forward problem solution has been tested on Ubuntu systems, where Matlab should be started with the following command:
+Currently, the pipeline for computing the MEG forward problem solution has been tested on Ubuntu systems, where MATLAB should be started with the following command:
 
-  BLAS_VERSION=/usr/lib/libblas.so LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 ./matlab
+```` bash
+BLAS_VERSION=/usr/lib/libblas.so
+LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
+./matlab
+````
 {% include markup/end %}
 
 ##  2(EEG). Create the head-model
@@ -174,7 +178,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
 	mesh2 =[];
 	mesh2.hex = headmodel_fem_eeg.hex(headmodel_fem_eeg.tissue==ts,:); %mesh2.hex(1:size(mesh2.hex),:);
 	mesh2.pos =  headmodel_fem_eeg.pos;
-	mesh2.tissue =  headmodel_fem_eeg.tissue(headmodel_fem_eeg.tissue==ts,:);%mesh.tissue(1:size(mesh2.hex),:);
+	mesh2.tissue =  headmodel_fem_eeg.tissue(headmodel_fem_eeg.tissue==ts,:); %mesh.tissue(1:size(mesh2.hex),:);
 
 	mesh_ed = mesh2edge(mesh2);
 	patch('Faces',mesh_ed.poly,...
@@ -201,7 +205,7 @@ In this phase, source locations are selected within the gray matter compartment.
 
 	cfg                 = [];
 	cfg.grid.resolution = 5; %in mm
-	cfg.vol             = headmodel_fem_eeg;
+	cfg.headmodel       = headmodel_fem_eeg;
 	cfg.inwardshift     = 1; %shifts dipoles away from surfaces
 	sourcemodel         = ft_prepare_sourcemodel(cfg, headmodel_fem_eeg);
 
@@ -239,7 +243,7 @@ Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take t
 	%% compute the leadfield
 	cfg               = [];
 	cfg.grid          = sourcemodel;
-	cfg.vol           = headmodel_fem_eeg_tr;
+	cfg.headmodel     = headmodel_fem_eeg_tr;
 	cfg.elec          = elec;
 	cfg.reducerank    = 3;
 	leadfield_fem_eeg = ft_prepare_leadfield(cfg);
@@ -257,7 +261,7 @@ If the source-model was already created at the step 3(EEG), it can be simply loa
 
 	cfg                 = [];
 	cfg.grid.resolution = 5; %in mm
-	cfg.vol             = headmodel_fem_meg;
+	cfg.headmodel       = headmodel_fem_meg;
 	cfg.inwardshift     = 1; %shifts dipoles away from surfaces
 	sourcemodel         = ft_prepare_sourcemodel(cfg, headmodel_fem_meg);
 

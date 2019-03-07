@@ -291,7 +291,7 @@ If you download this data into a folder named 'testdata', the directory should l
 	figure;
 	ft_sliceinterp(cfg, sourceinterp{1, 2});
 	figure;
-	ft_sliceinterp(cfg, sourceinterp{2, 3});% etcetera...
+	ft_sliceinterp(cfg, sourceinterp{2, 3}); % etcetera...
 
 **Correlations between the leadfields computed based on the FieldTrip localspheres model based on the CTF headshape and the realistic single-shell headmodel**
 

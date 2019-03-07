@@ -28,10 +28,9 @@ Here is the script that I use
 	% created 0 trials
 
 
-
-	cfg=[];
-	cfg.dataset='/`<path>`/MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
-	cfg.trialdef.eventtype='trial';
+	cfg = [];
+	cfg.dataset = '/`<path>`/MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
+	cfg.trialdef.eventtype = 'trial';
 	cfg=ft_definetrial(cfg);
 
 	% cfg =
@@ -77,7 +76,7 @@ The data looks like this when I plot i
 
 
 	cfg=[];
-	topoplotER(cfg,data)
+	topoplotER(cfg, data)
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/phantom_topoploter.jpg" width="400" %}
 
@@ -97,13 +96,13 @@ It is evaluated to 1.
 And I used this code for noise-covariance estimation. I defined the entire length as covariance window. I haven't defined a baseline.
 
 
-	cfg         = [];
+	cfg = [];
 	cfg.latency = 'maxperlength';
 	cfg.keeptrials = 'yes';
 	cfg.covariance = 'yes';
 	cfg.channel = 'MEG';
 	cfg.covariancewindow = cfg.latency;
-	covariance      = ft_timelockanalysis(cfg, data);
+	covariance = ft_timelockanalysis(cfg, data);
 
 	% covariance =
 	%
@@ -158,7 +157,7 @@ The source space is a 2D surface.
 
 	cfg             = [];
 	cfg.grad        = data.grad;
-	cfg.vol         = vol_ph;
+	cfg.headmodel   = vol_ph;
 	cfg.grid.pos    = pos;
 	cfg.channel     = 'MEG';
 	grid            = ft_prepare_leadfield(cfg);
@@ -178,7 +177,7 @@ It is not clear for me when you have to define the option grid.inside and grid.o
 
 
 	cfg=[];
-	cfg.vol = vol_ph;
+	cfg.headmodel = vol_ph;
 	cfg.grid = grid;
 	cfg.method = 'mne';
 	mne1 = ft_sourceanalysis(cfg,average);
@@ -210,7 +209,7 @@ Trying to understand the results above, we looked at the phantom data in detail.
 	ft_plot_mesh(grid.pos);
 
 	cfg = [];
-	cfg.vol  = vol;
+	cfg.headmodel  = vol;
 	cfg.grad = grad;
 	cfg.channel = 'MEG';
 	cfg.dip.pos = [0 0 7];
@@ -225,7 +224,7 @@ Trying to understand the results above, we looked at the phantom data in detail.
 
 	cfg = [];
 	cfg.grid = grid;
-	cfg.vol  = vol;
+	cfg.headmodel  = vol;
 	cfg.grad = grad;
 	cfg.channel = 'MEG';
 	cfg.normalize = 'yes'; %depth normalization
@@ -233,7 +232,7 @@ Trying to understand the results above, we looked at the phantom data in detail.
 
 	cfg = [];
 	cfg.method = 'mne';
-	cfg.vol    = vol;
+	cfg.headmodel    = vol;
 	cfg.grid   = grid;
 	source = ft_sourceanalysis(cfg, tlck);
 	cfg.mne.noisecov = eye(151);
@@ -284,7 +283,7 @@ This involves specifying cfg.mne.noisecov, cfg.mne.sourcecov, cfg.mne.lambda pri
 	% compute leadfields
 	cfg      = [];
 	cfg.grid = grid;
-	cfg.vol  = vol;
+	cfg.headmodel  = vol;
 	cfg.grad = data.grad;
 	cfg.channel = 'MEG';
 	%cfg.normalize = 'yes';
@@ -307,7 +306,7 @@ This involves specifying cfg.mne.noisecov, cfg.mne.sourcecov, cfg.mne.lambda pri
 	% compute MNE
 	cfg        = [];
 	cfg.method = 'mne';
-	cfg.vol    = vol;
+	cfg.headmodel    = vol;
 	cfg.grid   = grid;
 	cfg.mne.lambda    = 1e-4; % trial and error
 	cfg.mne.noisecov  = eye(151);
@@ -385,7 +384,7 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	% compute leadfields
 	cfg      = [];
 	cfg.grid = grid;
-	cfg.vol  = vol;
+	cfg.headmodel  = vol;
 	cfg.grad = data.grad;
 	cfg.channel = 'MEG';
 	%cfg.normalize = 'yes';
@@ -408,7 +407,7 @@ Now, I do the same as above (part 1.) but I use the same volume conductor and gr
 	% compute MNE
 	cfg        = [];
 	cfg.method = 'mne';
-	cfg.vol    = vol;
+	cfg.headmodel    = vol;
 	cfg.grid   = grid;
 	cfg.mne.lambda    = 1e-4; % trial and error
 	cfg.mne.noisecov  = eye(151);
@@ -597,7 +596,7 @@ FIXME I should match the positions of the source points with each other.
 	% compute MNE
 	cfg        = [];
 	cfg.method = 'mne';
-	cfg.vol    = vol;
+	cfg.headmodel    = vol;
 	cfg.grid   = grid2;
 	%cfg.mne.lambda    = 1e-4; % trial and error
 	cfg.mne.lambda    = 0.01; %1e-4^2=0.01

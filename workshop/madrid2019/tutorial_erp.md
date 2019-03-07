@@ -343,8 +343,7 @@ approaches, we will use **[ft_databrowser](/reference/ft_databrowser)** again to
 inspect the data with bad trials marked as such. For this we first compare the
 `sampleinfo` between the original and the clean data structure.
 
-    bad_samples = data.sampleinfo(ismember(data.sampleinfo(:,1), setdiff(data.sampleinfo(:,1)...
-    	,data_clean.sampleinfo(:,1))),:);
+    bad_samples = data.sampleinfo(ismember(data.sampleinfo(:,1), setdiff(data.sampleinfo(:,1), data_clean.sampleinfo(:,1))),:);
 
     cfg = [];
     cfg.viewmode                  = 'vertical';

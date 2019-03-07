@@ -59,7 +59,7 @@ Plotting the resliced anatomical MRI results in a figure with the usually desire
 
 The **[ft_volumereslice](/reference/ft_volumereslice)** function also ensures that the voxels are isotropic (i.e. of equal distance in all three directions). Voxels of an MRI scan are not isotropic when there is a different voxel resolution within the MRI slices than the gap size between the slices. This means that the size of a voxel is not equal in all three directions.
 
-Isotropic voxels are necessary if we want to apply morphological operators to the anatomical volume (e.g. dilating, opening, etc.). These operations occur for example when the skull tissue is segmented in an anatomical volume (e.g. see [this tutorial](/tutorial/natmeg/dipolefitting)).
+Isotropic voxels are necessary if we want to apply morphological operators to the anatomical volume (e.g. dilating, opening, etc.). These operations occur for example when the skull tissue is segmented in an anatomical volume (e.g. see [this tutorial](/workshop/natmeg/dipolefitting)).
 
 ## Change the field-of-view (FOV)
 

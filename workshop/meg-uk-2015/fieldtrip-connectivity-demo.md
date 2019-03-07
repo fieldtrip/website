@@ -59,7 +59,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 	% timelock2 was computed in http://fieldtrip.fcdonders.nl/workshop/meg-uk-2015/fieldtrip-beamformer-demo#part_3_-_reconstruct_single-trial_cortical_responses
 
 	cfg             = [];
-	cfg.vol         = vol;
+	cfg.headmodel   = vol;
 	cfg.grad        = sens;
 	cfg.senstype    = 'meg';
 	cfg.method      = 'lcmv';
@@ -183,7 +183,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 	cfg.grid.resolution = 7;
 	% cfg.inwardshift = -7; % allow dipoles 10mm outside the brain, this improves interpolation at the edges
 	cfg.grid.unit = 'mm';
-	cfg.vol       = vol;  % from FT
+	cfg.headmodel = vol;  % from FT
 	cfg.grad      = sens; % from FT
 	cfg.senstype  = 'meg';
 	cfg.normalize = 'yes';
@@ -195,7 +195,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
 	%%
 
 	cfg           = [];
-	cfg.vol       = vol;  % from FT
+	cfg.headmodel = vol;  % from FT
 	cfg.grad      = sens; % from FT
 	cfg.senstype  = 'meg';
 	cfg.grid      = grid;

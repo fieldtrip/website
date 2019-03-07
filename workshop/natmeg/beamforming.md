@@ -7,7 +7,7 @@ tags: [tutorial, beamforming, natmeg, meg+eeg, meg-audodd]
 
 ## Introduction
 
-In this tutorial we will continue working on the [dataset](/tutorial/natmeg/meg_audodd) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
+In this tutorial we will continue working on the [dataset](/workshop/natmeg/meg_audodd) described in the preprocessing tutorials. Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [visual artifact rejection](/tutorial/visual_artifact_rejection)).
 
 In this tutorial you will learn about applying beamformer techniques in the frequency domain.  You will learn how to compute appropriate time-frequency windows, an appropriate head model and lead field matrix, and various options for contrasting the effect of interest against some control/baseline.  Finally, you will be shown several options for plotting the results overlaid on a structural MRI.
 
@@ -23,7 +23,7 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 ## Background
 
-In the [Time-Frequency Analysis tutorial](/tutorial/natmeg/timefrequency) we identified strong oscillations in the beta band in a motor response paradigm. The goal of this section is to identify the sources responsible for producing this oscillatory activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'.  This latter part means that, if a source had power of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct power of amplitude 1 at that location.  Beamforming assumes that sources in different parts of the brain are not temporally correlated.
+In the [Time-Frequency Analysis tutorial](/workshop/natmeg/timefrequency) we identified strong oscillations in the beta band in a motor response paradigm. The goal of this section is to identify the sources responsible for producing this oscillatory activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'.  This latter part means that, if a source had power of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct power of amplitude 1 at that location.  Beamforming assumes that sources in different parts of the brain are not temporally correlated.
 
 The brain is divided in a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross et al. 2001). Other beamformer methods rely on sources estimates calculated in the time domain, e.g. the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source power can be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
 
@@ -46,7 +46,7 @@ Next, we head out to investigate the response to the finger movement. We will lo
 
 Note that some of the steps will be skipped in this tutorial as we have already done them in the previous days of the workshop.
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/bf_pipeline.jpg" width="650" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/bf_pipeline.jpg" width="650" %}
 
 *Figure: An example of a pipeline to locate oscillatory sources.*
 
@@ -54,7 +54,7 @@ Note that some of the steps will be skipped in this tutorial as we have already 
 
 ### Loading the data
 
-First, we are going to load the data already preprocessed during the [Time-frequency analysis tutorial](/tutorial/natmeg/timefrequency).
+First, we are going to load the data already preprocessed during the [Time-frequency analysis tutorial](/workshop/natmeg/timefrequency).
 
 Load the data using the following comman
 
@@ -63,7 +63,7 @@ Load the data using the following comman
 ### Loading the headmodel
 
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
-We are going to use the forward model that was calculated in the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting).
+We are going to use the forward model that was calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting).
 
 Load the forward model using the following cod
 
@@ -73,7 +73,7 @@ Load the forward model using the following cod
 
 The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation between the response with the left finger to the activation in response to the right finger. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/natmeg_beam5.png" width="500" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam5.png" width="500" %}
 
 *Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming.*
 
@@ -161,7 +161,7 @@ As mentioned earlier on, if you are not contrasting the activity of interest aga
 	cfg                 = [];
 	cfg.channel         = {'MEG*2', 'MEG*3'};
 	cfg.grad            = powcsd_all.grad;
-	cfg.vol             = headmodel_meg;
+	cfg.headmodel       = headmodel_meg;
 	cfg.dics.reducerank = 2; % default for MEG is 2, for EEG is 3
 	cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -192,7 +192,7 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
 	cfg.method       = 'dics';
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
-	cfg.vol          = headmodel_meg;
+	cfg.headmodel    = headmodel_meg;
 	cfg.senstype     = 'MEG'; % Must me 'MEG', although we only kept MEG channels, information on EEG channels is still present in data
 	cfg.dics.keepfilter   = 'yes'; % We wish to use the calculated filter later on
 	cfg.dics.projectnoise = 'yes';
@@ -226,7 +226,7 @@ Remember that we intended to contrast the left hand to the right hand responses.
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
 	cfg.grid.filter  = source_all.avg.filter;
-	cfg.vol          = headmodel_meg;
+	cfg.headmodel    = headmodel_meg;
 	cfg.senstype     ='MEG';
 
 	source_left = ft_sourceanalysis(cfg, powcsd_left);
@@ -234,7 +234,7 @@ Remember that we intended to contrast the left hand to the right hand responses.
 
 After successfully applying the above steps, we obtained an estimate of the beta-band suppression in both experimental conditions at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
-First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting).
+First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting).
 
 	load mri_realigned2.mat
 
@@ -265,7 +265,7 @@ Now, we can plot the interpolated data:
 
 	ft_sourceplot(cfg, source_left_int);
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/natmeg_beam1.png" width="650" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam1.png" width="650" %}
 
 *Figure: A source plot of the beta response in the left-hand condition.*
 
@@ -276,7 +276,7 @@ As you can see the strongest motor response is located in the center of the head
 	cfg.location = [35 -13 76];
 	ft_sourceplot(cfg, source_diff_int);
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/natmeg_beam2.png" width="650" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam2.png" width="650" %}
 
 *Figure: A source plot of the beta response ratio between the left- and right-hand conditions.*
 
@@ -310,7 +310,7 @@ We will continue to analyse the EEG data according to a series of steps similar 
 
 ### EEG Head model & data
 
-As before, we will use the head model calculated in the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting) and the preprocessed data from the [time-frequency analysis tutorial](/tutorial/natmeg/timefrequency).
+As before, we will use the head model calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) and the preprocessed data from the [time-frequency analysis tutorial](/workshop/natmeg/timefrequency).
 
 Load the EEG head model and preprocessed data using the following cod
 
@@ -353,7 +353,7 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
 	% common grid/filter
 	cfg                 = [];
 	cfg.elec            = powcsd_all.elec;
-	cfg.vol             = headmodel_eeg;
+	cfg.headmodel       = headmodel_eeg;
 	cfg.reducerank      = 3; % default is 3 for EEG, 2 for MEG
 	cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
 	cfg.grid.unit       = 'cm';
@@ -369,7 +369,7 @@ Now that we have everything prepared we can start to calculate the common filter
 	cfg.method       = 'dics';
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
-	cfg.vol          = headmodel_eeg;
+	cfg.headmodel    = headmodel_eeg;
 	cfg.senstype     = 'EEG'; % Remember this must be specified as either EEG, or MEG
 	cfg.dics.keepfilter   = 'yes';
 	cfg.dics.lambda       = '15%';
@@ -387,13 +387,13 @@ Finally, we can apply source analysis on the separate conditions using the commo
 	cfg.frequency    = 18;  
 	cfg.grid         = grid;
 	cfg.grid.filter  = source_all.avg.filter; % Use the common filter
-	cfg.vol          = headmodel_eeg;
+	cfg.headmodel    = headmodel_eeg;
 	cfg.senstype     = 'EEG';
 
 	source_left = ft_sourceanalysis(cfg, powcsd_left);
 	source_right = ft_sourceanalysis(cfg, powcsd_right);
 
-Let's now see how our sources look like. We will again have to realign our functional data to our anatomical data. We will therefore use the realigned mri from the [dipole fitting tutorial](/tutorial/natmeg/dipolefitting) which we already loaded and resliced during the MEG section of this tutorial.
+Let's now see how our sources look like. We will again have to realign our functional data to our anatomical data. We will therefore use the realigned mri from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which we already loaded and resliced during the MEG section of this tutorial.
 
 The realignment is done using the following cod
 
@@ -416,14 +416,14 @@ Finally, we can plot the dat
 
 	ft_sourceplot(cfg, source_left_int);
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/natmeg_beam3.png" width="650" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam3.png" width="650" %}
 
 *Figure: An EEG-source plot of the beta response in the left-hand condition.*
 
 	cfg.location = [-19.5 -18.5 70.5];
 	ft_sourceplot(cfg, source_diff_int);
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/natmeg_beam4.png" width="650" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam4.png" width="650" %}
 
 *Figure: An EEG-source plot of ratio of the beta response in the left versus the right hand condition.*
 
@@ -431,7 +431,7 @@ Finally, we can plot the dat
 How well can you identify the source of the beta-response ration in the EEG source reconstruction? The image seems quite noisy, could you think of a way to enhance the image?
 {% include markup/end %}
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/natmeg_beam2.png" width="650" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam2.png" width="650" %}
 
 *Figure: A MEG-source plot of the beta response in the left versus the right hand condition.*
 
@@ -442,7 +442,7 @@ How do the EEG and MEG source plots compare?
 {% include markup/info %}
 If you've made it this far, perhaps you could try beamforming a different time window. Looking at the time-frequency plot you might be interested in trying to localise the less obvious beta-band response between 0.75 and 1.25 seconds after response.
 
-{% include image src="/assets/img/tutorial/natmeg/beamforming/natmeg_beam5.png" width="400" %}
+{% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam5.png" width="400" %}
 {% include markup/end %}
 
 ## Summary and suggested further reading
