@@ -17,10 +17,6 @@ The FieldTrip community is organized around the [email discussion list](/discuss
 
 You can [provide us with detailed bug reports](/bugzilla). The easier it is for one of us to reproduce the bug, the more likely it is that we can fix the problem. You can use the same approach to request new functionality. We cannot guarantee that we have time to implement it, but it is good to know what people are trying to do or would like to do with FieldTrip.
 
-{% include markup/info %}
-The easier it is for one of the developers to reproduce your bug, the more likely it is that we'll fix the problem. Good bug reports include a small test script and the data (i.e. mat file) required to reproduce the bug.
-{% include markup/end %}
-
 ## Contribute code
 
 You can contribute by directly sharing your MATLAB code with us and help us integrate it into the FieldTrip toolbox. On the [development section of this wiki](/development) you can find more details on how the development is organized. You can of course also [ask](/contact).
