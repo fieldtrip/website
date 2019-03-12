@@ -199,10 +199,9 @@ Then call `ft_topoplotER` to do the plotting.
 
     cfg              = [];
     cfg.parameter    = 'accuracy';
-    cfg.layout       = 'CTF151.lay';            
+    cfg.layout       = 'CTF151_helmet.mat';            
     cfg.xlim         = [0, 0];
     cfg.colorbar     = 'yes';
-    cfg.interplimits = 'electrodes';
     ft_topoplotER(cfg, stat);
 
 
@@ -215,7 +214,7 @@ a distance matrix that specifies which channels are neighbours of each other.
 
     %%% Get layout
     cfg = [];
-    cfg.layout      = 'CTF151.lay';
+    cfg.layout      = 'CTF151_helmet.mat';
     cfg.skipscale   = 'yes';
     cfg.skipcomnt   = 'yes';
     cfg.channel     = dataFIC_LP.label;
@@ -239,6 +238,15 @@ the target channel is considered together with its 3 closest neighbouring channe
       cfg.mvpa.size        = 3;
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
+
+      stat.accuracy = stat.metric.accuracy;
+
+      cfg              = [];
+      cfg.parameter    = 'accuracy';
+      cfg.layout       = 'CTF151_helmet.mat';            
+      cfg.xlim         = [0, 0];
+      cfg.colorbar     = 'yes';
+      ft_topoplotER(cfg, stat);
 
 As expected, the resultant topography is slightly more smeared out. Peak classification accuracy is higher which is due to the classifier now combining information across neighbouring channels.
 
