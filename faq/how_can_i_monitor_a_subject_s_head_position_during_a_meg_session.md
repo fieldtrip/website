@@ -13,17 +13,23 @@ Please cite this paper when you use the realtime head localizer in your research
 Stolk A, Todorovic A, Schoffelen JM, Oostenveld R.  **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
-## Acquiring head shape for visualisation
+## Acquiring the head shape for more realistic visualisation
 
-Monitoring the head position can be done by visualizing the head shape in 3 different ways: As a sphere, Polhemus acquired points representing the head shape or with a realistic head shape acquired with a 3D-Scanner. While the sphere needs no further action, the latter two need to be recorded in advance to the MEG measurement.
+Monitoring the head position can be done by visualizing the head shape in 3 different ways: as a sphere, using head shape points acquired with the Polhemus (mostly from the upper part of the head) or with a realistic head shape including facial details acquired with a 3D-Scanner like [this](https://structure.io/structure-sensor).
+
+### Sphere
+
+Visualizing the head as a sphere requires no further action.
 
 ### Polhemus
 
-During the preparation for the MEG measurement the fiducials and additional points of the head surface are measured with the Polhemus. We suggest to acquire the additional points on the brow ridge, cheekbone and along the nose, this will help in visualizing the head shape more realistic. In a case of EEG/MEG also the locations of the electrode locations can also be measured and used for the visualization. All these points together can be used for visualizing the head shape during the on- and offline visualization of the head movements.
+During the preparation for the MEG measurement the fiducials and additional points of the head surface are digitized with the Polhemus. We recommend to acquire additional points on the brow ridge, cheekbone and along the nose; this will help not only in coregistration but also in visualizing the head shape. In a case of EEG/MEG the locations of the electrode locations can also be measured and used for the visualization. All these points together can be used for visualizing the head shape during the on- and offline visualization of the head movements.
 
 ### 3D-Scanner
 
-The head shape can also be measured with a 3D-Scanner (i.e. structure.io) to acquire a realistic representation of the subject. But before we can use the measured head shape we have to preprocess the data. The structure.io stores the head shape in its own device coordinate system and therefore needs to realigned to the respective coordinate system. So in the first step we localize the fiducials on the head shape:
+The head shape can also be measured with a 3D-Scanner like [this one](https://structure.io/structure-sensor) to acquire a realistic representation of the subject. Prior to using the scanned head shape, it has to be preprocessed. The 3D-Scanner stores the head shape in its own device coordinate system and therefore needs to realigned to the respective coordinate system.
+
+In the first step we localize the fiducials on the head shape:
 
     headshape = ft_read_headshape('Model.obj');
     cfg = [];
@@ -33,37 +39,44 @@ The head shape can also be measured with a 3D-Scanner (i.e. structure.io) to acq
 After the localization of the fiducials we realign the head shape to the respective coordinate system:
 
     cfg = [];
-    cfg.coordsys        = 'ctf'; % or 'neuromag'
-    cfg.fiducial.nas    = fid.elec(1,:); % position of nasion
-    cfg.fiducial.lpa    = fid.elec(2,:); % position of LPA
-    cfg.fiducial.rpa    = fid.elec(3,:); % position of RPA
-    headshape_ctf = ft_meshrealign(headshape)
+    cfg.coordsys     = 'ctf';           % or neuromag
+    cfg.fiducial.nas = fid.elec(1,:);   % position of nasion
+    cfg.fiducial.lpa = fid.elec(2,:);   % position of LPA
+    cfg.fiducial.rpa = fid.elec(3,:);   % position of RPA
+    headshape_coreg  = ft_meshrealign(headshape)
 
 Now we have the head shape in the correct coordinate system and can use it for on- and offline head localization.
 
 ## Monitor a subject's head position during a MEG session
 
-After initializing the MEG system, one starts the **acq2ftx/neuromag2ft application**. When subsequently starting Acquisition, the data is transferred in realtime to the FieldTrip buffer which can be read from any computer connected through a network. Point to the location of the buffer by correctly specifying cfg.datase
+After initializing the MEG system, one starts the **acq2ft/neuromag2ft application**. When subsequently starting Acquisition, the data is transferred in realtime to the FieldTrip buffer which can be read from any computer connected through a network. Point to the location of the buffer by correctly specifying cfg.dataset like this:
 
       cfg = [];
       cfg.dataset = 'buffer://hostname:1972';     % get data from buffer
       ft_realtime_headlocalizer(cfg)
 
-To improve the real time head movement compensation, we can also specify a realistic head shape and a realistic model of the dewa
+To improve the real time head movement compensation, we can also specify a realistic head shape and a realistic model of the dewar:
+
+    cd <path_to_fieldtrip/template/dewar
+    load ctf                                    % or neuromag
 
     cfg = [];
     cfg.dataset = 'buffer://hostname:1972';     % get data from buffer
-    cfg.dewar       = ctf_dewar;
-    cfg.head        = headshape_ctf;
+    cfg.dewar   = ctf_dewar;
+    cfg.head    = headshape_ctf;
     ft_realtime_headlocalizer(cfg)
 
-**Repositioning within a recording session** can be achieved by marking the head position indicator (HPI) coil positions at an arbitrary point in time, operationalized through clicking the 'Update' button. Black unfilled markers should appear which indicate the positions of the coils at the moment of buttonpress. Distance to these marked positions then become colorcoded.
+### Repositioning within a single recording session
 
-**Repositioning between a recording session** , i.e. to a previous recording session, can be achieved by specifying cfg.template. Either by pointing to another dataset; e.g. cfg.template = 'subject01xxx.ds' (CTF275 systems only), or by pointing to a textfile created by clicking the Update button during a previous recording session; e.g. cfg.template = '29-Apr-2013-xxx.txt' (CTF275 and Neuromag systems).
+This can be achieved by marking the head position indicator (HPI) coil positions at an arbitrary point in time, operationalized through clicking the 'Update' button. Black unfilled markers should appear which indicate the positions of the coils at the moment of buttonpress. Distance to these marked positions then become colorcoded.
 
-{% include image src="/assets/img/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/anims1.gif" width="600" %}--" %}
+### Repositioning between multiple recording sessions
 
-_Figure 1; Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both aurical points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns lightblue (CTF only). Click on the image for the animation. _
+You can reposition to i.e. to a previous recording session by specifying cfg.template. Either by pointing to another dataset; e.g. cfg.template = 'subject01xxx.ds' (CTF275 systems only), or by pointing to a text file created by clicking the Update button during a previous recording session; e.g. cfg.template = '29-Apr-2013-xxx.txt' (CTF275 and Neuromag systems).
+
+{% include image src="/assets/img/faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session/anims1.gif" width="600" %}
+
+*Figure 1; Top (left plot) and back view (right plot) of the subject's head. Nasion is represented by a triangular marker and both aurical points by circular markers. To aid the subject with repositioning, the real-time fiducial positions are color coded to indicate the distances to the targets (green `< 1.5 mm, orange < 3 mm, and red >` 3 mm). If all three markers are within limits, the head turns light blue (CTF only). Click on the image for the animation.*
 
 ### Replaying a subject's recorded head position
 
@@ -123,7 +136,7 @@ Currently the option for online monitoring is only available for the CTF system.
       cfg.dataset = 'buffer://server:port'
       ft_realtime_headlocalizer(cfg)
 
-### Further reading
+## Further reading
 
 For further reading of real time head localizer please read [this paper](https://doi.org/10.1016/j.neuroimage.2012.11.047).
 
