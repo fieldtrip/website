@@ -83,7 +83,7 @@ Now call
 to perform the classification analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the datasets are passed in to `ft_timelockstatistics`. Let us print the resulting classification
 accuracy
 
-    fprintf('Classification accuracy: %0.2f\n', stat.metric.accuracy)
+    fprintf('Classification accuracy: %0.2f\n', stat.accuracy)
 
 For multi-class problems, the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) is
 a useful metric. In a confusion matrix, rows correspond to the true class labels,
@@ -104,7 +104,7 @@ called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/
 It takes the result structure returned in `stat.mvpa_result` which contains the
 classification results in a format required by the function.
 
-    mv_plot_result(stat.mvpa_result)
+    mv_plot_result(stat.mvpa)
 
     {% include image src="/assets/img/tutorial/mvpa_light/confusion_matrix.png" width="300" %}
 
@@ -150,13 +150,13 @@ It is calculated using 10-fold cross-validation with 2 repetitions.
 Note that the metric is now a vector with 900 values, one AUC value for each time point in the trial.
 It can be plotted as a function of time using
 
-    plot(stat.metric.auc)
+    plot(stat.auc)
 
 For a slightly nicer plot, one can again use `mv_plot_result`. As an additional parameter,
 we can pass the values for the time axis. This makes sure that the x-axis is formatted
 correctly.
 
-    mv_plot_result(stat.mvpa_result, dataFC_LP.time{1})
+    mv_plot_result(stat.mvpa, dataFC_LP.time{1})
 
 The resultant plot shows AUC across time in the trial. The shaded area
 is the standard deviation of the AUC metric across the different test sets in the
@@ -192,10 +192,8 @@ are used. In searchlight analysis, the *time points* in a trial are used as
 features, for each channel separately. Set `cfg.latency` to restrict the analysis to
 a specific time window. Set `cfg.avgovertime='yes'` if you prefer to average the values in the time window to a single feature.
 
-Since a classification result is obtained for each channel, classification accuracy can be plotted as a topography. To achieve this, we first need to set `accuracy` as a field of `stat`.
-Then call `ft_topoplotER` to do the plotting.
-
-    stat.accuracy = stat.metric.accuracy;
+Since a classification result is obtained for each channel, classification accuracy can be plotted as a topography. 
+We call `ft_topoplotER` to do the plotting.
 
     cfg              = [];
     cfg.parameter    = 'accuracy';
@@ -239,8 +237,6 @@ the target channel is considered together with its 3 closest neighbouring channe
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-      stat.accuracy = stat.metric.accuracy;
-
       cfg              = [];
       cfg.parameter    = 'accuracy';
       cfg.layout       = 'CTF151_helmet.mat';            
@@ -269,7 +265,7 @@ time x time classification, we only need to set the `cfg.timextime` parameter:
 It returns a 2-D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. We plot the
 result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and two additional parameters specifying the x-axis and y-axis.
 
-    mv_plot_result(stat.mvpa_result, dataFC_LP.time{1}, dataFC_LP.time{1})
+    mv_plot_result(stat.mvpa, dataFC_LP.time{1}, dataFC_LP.time{1})
 
 In the resultant plot, each row (corresponding to a value of on the y-axis)  corresponds to the
 time point at which the classifier was trained. Each point on the x-axis corresponds
