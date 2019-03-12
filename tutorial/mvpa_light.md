@@ -57,18 +57,18 @@ Define the configuration struct
 
     cfg = [] ;
     cfg.method      = 'mvpa';
-    cfg.classifier  = 'multiclass_lda';
-    cfg.metric      = 'accuracy';
-    cfg.k           = 3;
+    cfg.mvpa.classifier  = 'multiclass_lda';
+    cfg.mvpa.metric      = 'accuracy';
+    cfg.mvpa.k           = 3;
     cfg.latency     = [0.5, 0.7];
     cfg.avgovertime = 'yes';
     cfg.design      = [ones(nFIC,1); 2*ones(nFC,1); 3*ones(nIC,1)];
 
 Let us unpack this:
 
-- `cfg.classifier` indicates which classifier we want to use. Here, we use multi-class Linear Discriminant Analysis (LDA).  [Click here](https://github.com/treder/MVPA-Light#classifiers-for-two-classes) for a full list of available classifiers.
+- `cfg.mvpa.classifier` indicates which classifier we want to use. Here, we use multi-class Linear Discriminant Analysis (LDA).  [Click here](https://github.com/treder/MVPA-Light#classifiers-for-two-classes) for a full list of available classifiers.
 - `cfg.metric` indicates the metric we use to measure classifier performance. Here, *classification accuracy* is used. Other metrics such as AUC and F1-score are available. [Click here](https://github.com/treder/MVPA-Light#classifier-performance-metrics) for a full list of available metrics.
-- `cfg.k` specifies the number of folds used to calculate the cross-validated performance. Cross-validation is explained in more detail in the next section.
+- `cfg.mvpa.k` specifies the number of folds used to calculate the cross-validated performance. Cross-validation is explained in more detail in the next section.
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
 - `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section *Classification across time*).
 - `cfg.design` specifies the vector of *class labels*. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with *1*'s
@@ -92,7 +92,7 @@ proportion of samples of class i that have been classified as class j. Consequen
 the diagonal of the confusion matrix contains the proportion of correct classifications. Off-diagonal elements specify the misclassifications. To obtain
 the confusion matrix, all we need to do is to change the `metric` field:
 
-    cfg.metric      = 'confusion';
+    cfg.mvpa.metric      = 'confusion';
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
     stat.metric.confusion
@@ -113,11 +113,11 @@ classification results in a format required by the function.
 
 To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training the model. This process is repeated until every fold has been used as test set once. Cross-validation is controlled by the following parameters:
 
-- `cfg.cv`: cross-validation type, either 'kfold', 'leaveout' or 'holdout' (default 'kfold')
-- `cfg.k`: number of folds or partitions in k-fold cross-validation (default 5)
-- `cfg.repeat`: number of times the whole cross-validation analysis is repeated with new randomly assigned folds (default 5)
-- `cfg.p`: if `cfg.cv` is 'holdout', `p` is the fraction of test samples (default 0.1)
-- `cfg.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
+- `cfg.mvpa.cv`: cross-validation type, either 'kfold', 'leaveout' or 'holdout' (default 'kfold')
+- `cfg.mvpa.k`: number of folds or partitions in k-fold cross-validation (default 5)
+- `cfg.mvpa.repeat`: number of times the whole cross-validation analysis is repeated with new randomly assigned folds (default 5)
+- `cfg.mvpa.p`: if `cfg.mvpa.cv` is 'holdout', `p` is the fraction of test samples (default 0.1)
+- `cfg.mvpa.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
 
 The total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is an average
 across the test folds.
@@ -134,13 +134,13 @@ useful to repeat the cross-validation multiple times?
 Many neuroimaging datasets have a 3-D structure (trials x channels x time). Classification across time can help identify the time points in a trial *when* discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
 
     cfg = [] ;  
-    cfg.method      = 'mvpa';
-    cfg.classifier  = 'lda';
-    cfg.metric      = 'auc';
-    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
-    cfg.k           = 10;
-    cfg.repeat      = 2;
-
+    cfg.method           = 'mvpa';
+    cfg.mvpa.classifier  = 'lda';
+    cfg.mvpa.metric      = 'auc';
+    cfg.mvpa.k           = 10;
+    cfg.mvpa.repeat      = 2;
+    cfg.design           = [ones(nFIC,1); 2*ones(nFC,1)];
+    
 For simplicity, we will limit ourselves to comparing only FIC and FC. As classifier,
 we use Linear Discriminant Analysis (LDA). As metric, we use area under the ROC curve (AUC).
 It is calculated using 10-fold cross-validation with 2 repetitions.
@@ -199,10 +199,9 @@ Then call `ft_topoplotER` to do the plotting.
 
     cfg              = [];
     cfg.parameter    = 'accuracy';
-    cfg.layout       = 'CTF151.lay';            
+    cfg.layout       = 'CTF151_helmet.mat';            
     cfg.xlim         = [0, 0];
     cfg.colorbar     = 'yes';
-    cfg.interplimits = 'electrodes';
     ft_topoplotER(cfg, stat);
 
 
@@ -215,7 +214,7 @@ a distance matrix that specifies which channels are neighbours of each other.
 
     %%% Get layout
     cfg = [];
-    cfg.layout      = 'CTF151.lay';
+    cfg.layout      = 'CTF151_helmet.mat';
     cfg.skipscale   = 'yes';
     cfg.skipcomnt   = 'yes';
     cfg.channel     = dataFIC_LP.label;
@@ -235,10 +234,19 @@ the target channel is considered together with its 3 closest neighbouring channe
       cfg.latency     = [0.3, 0.7];
       cfg.avgovertime = 'yes';
 
-      cfg.nb          = nb_mat;
-      cfg.size        = 3;
+      cfg.mvpa.nb          = nb_mat;
+      cfg.mvpa.size        = 3;
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
+
+      stat.accuracy = stat.metric.accuracy;
+
+      cfg              = [];
+      cfg.parameter    = 'accuracy';
+      cfg.layout       = 'CTF151_helmet.mat';            
+      cfg.xlim         = [0, 0];
+      cfg.colorbar     = 'yes';
+      ft_topoplotER(cfg, stat);
 
 As expected, the resultant topography is slightly more smeared out. Peak classification accuracy is higher which is due to the classifier now combining information across neighbouring channels.
 
@@ -288,9 +296,9 @@ Vector Machines (SVM) the kernel is a hyperparameter and `gamma` controls the
 kernel width for an RBF kernel.
 
 
-    cfg.param           = [];
-    cfg.param.kernel    = 'rbf';
-    cfg.param.gamma     = 1;
+    cfg.mvpa.param           = [];
+    cfg.mvpa.param.kernel    = 'rbf';
+    cfg.mvpa.param.gamma     = 1;
 
 See [train_svm](https://github.com/treder/MVPA-Light/blob/master/classifier/train_svm.m)) for a list of SVM hyperparameters and their default values.
 To give another example, in LDA the `lambda` parameter controls the amount of regularisation of the covariance matrix.
