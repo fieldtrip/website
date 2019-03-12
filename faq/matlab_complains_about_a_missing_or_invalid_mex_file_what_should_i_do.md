@@ -3,7 +3,7 @@ title: MATLAB complains about a missing or invalid MEX file, what should I do?
 tags: [faq, matlab, mex]
 ---
 
-## MATLAB complains about a missing or invalid MEX file, what should I do?
+# MATLAB complains about a missing or invalid MEX file, what should I do?
 
 The FieldTrip version that we release includes compiled mex files for the most common platforms (Windows, Linux, macOS). However, it might be that you have a combination of operating system and MATLAB on which the precompiled mex files are not included or on which they do not work. In that case you have to (re)compile them yourself.
 
@@ -12,14 +12,14 @@ Note that in general the toolboxes in fieldtrip/external are **not** maintained 
 
 If you run into problems with mex files from SPM, i.e. the ones included in fieldtrip/external/spmX, you should have a look at https://en.wikibooks.org/wiki/SPM/MATLAB. See also further down on this page.
 {% include markup/end %}
- 
+
 The source code for the mex files is mostly contained in the fieldtrip/src directory. Some mex files are contained in fieldtrip/external, for example for SPM. Those are not the responsibility of the FieldTrip team.
 
-### Recommended way of recompiling
+## Recommended way of recompiling
 
 To (re)compile all mex files at once, you can use the **[ft_compile_mex](/reference/ft_compile_mex)** function.
 
-### Alternative way of recompiling
+## Alternative way of recompiling
 
 You can recompile individual mex files for your platform using the following command
 
@@ -65,11 +65,11 @@ If, after the install of libtdc++5, the lstdc++ error persists, just do a symbol
 
 and it should work.
 
-## Known issues with SPM MEX files and workarounds
+# Known issues with SPM MEX files and workarounds
 
 Some MEX files have been recompiled but have not been tested on all platform combinations with FieldTrip, and hence are not yet included in the current release. Examples thereof are the MEX files provided by external software packages. Below is a list of currently known issues (January, 2018) and their workarounds, other than recompiling the incompatible MEX files yourself.
 
-#### SPM8 mexmaci64 MEX files fail on MATLAB 2017 and up
+### SPM8 mexmaci64 MEX files fail on MATLAB 2017 and up
 
 Producing the following error
     Invalid MEX-file '/Users/roboos/matlab/fieldtrip/external/spm8/spm_conv_vol.mexmaci64
@@ -89,7 +89,7 @@ Producing the following error
    ft_default.spmversion = 'spm12'
    ft_defaults % this loads the rest of the defaults
 
-#### GIFTI mexmaci64 MEX file on MATLAB 2017 and up
+### GIFTI mexmaci64 MEX file on MATLAB 2017 and up
 
 Producing the following error
 

@@ -3,7 +3,7 @@ title: Should I use a Polhemus or a Structure Sensor to record electrode positio
 tags: [faq, electrode, polhemus, structure-sensor]
 ---
 
-## Should I use a Polhemus or a Structure Sensor to record electrode positions?
+# Should I use a Polhemus or a Structure Sensor to record electrode positions?
 
 This is a quick note with opinions regarding the [Structure Sensor](http://structure.io/) to record the head shape and/or electrode locations, as described in detail in [this tutorial](/tutorial/electrode).
 

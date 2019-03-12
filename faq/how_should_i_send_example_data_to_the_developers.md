@@ -3,7 +3,7 @@ title: How should I share example data with the email list or developers?
 tags: [faq, email, development, bugzilla]
 ---
 
-## How should I share example data with the email list or developers?
+# How should I share example data with the email list or developers?
 
 In general it is not a good idea to send data as email attachment to the email discussion list. You should consider that your data file will end up in ~1000 email inboxes of all other people that are subscribed. I.e. your 10 MB attachment would result in 10 GB of storage requirements. Also when sending example data to one of the developers, you should not send large data files as email attachment.
 

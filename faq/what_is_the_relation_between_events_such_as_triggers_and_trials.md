@@ -3,7 +3,7 @@ title: What is the relation between "events" (such as triggers) and "trials"?
 tags: [faq, preprocessing, trialfun]
 ---
 
-## What is the relation between "events" (such as triggers) and "trials"?
+# What is the relation between "events" (such as triggers) and "trials"?
 
 FieldTrip can work both with epoched and with continuously recorded data files (both are treated as continuous). However, FieldTrip does assume that in the stream of data, some pieces are of interest. Those are the "trials". In contrast with other software packages, trials in FieldTrip can have a variable duration. For example, you want to analyze the data in a time window between a stimulus and the subject's response, and the subject responds faster in one trial than in the next.
 
@@ -11,20 +11,20 @@ To support variable length trials, a generic way of handling those datapieces of
 
 The event table contains all events in the data. **[Ft_definetrial](/reference/ft_definetrial)** will select pieces of data around those events that interest you, either using a generic definition or using your own "trialfun". After calling **[ft_definetrial](/reference/ft_definetrial)** you can call the **[ft_preprocessing](/reference/ft_preprocessing)** function, which will read the actual data from disk and apply filtering on the fly.
 
-An example output of the **[ft_read_event](/reference/ft_read_event)** function can be an event that represents a complete trial 
+An example output of the **[ft_read_event](/reference/ft_read_event)** function can be an event that represents a complete trial
 
     >> event(1)
-    ans = 
+    ans =
           type: 'trial'
         sample: 1
          value: []
         offset: -300
       duration: 900
 
-and/or it can return events that represent a single individual trigger 
+and/or it can return events that represent a single individual trigger
 
     >> event(2)
-    ans = 
+    ans =
           type: 'backpanel trigger'
         sample: 301
          value: 1
@@ -57,5 +57,4 @@ So for the trial event, the first sample of the trial is at (1-1-300)/1000 = -0.
 
 You can also define trials based on the trigger event. If we don't define a baseline period, then the 1st sample of the time-axis based on the trigger event is at (1-1-0)/1000 = 0 s = 0 ms. Relative to the trigger, the trigger happens at time zero. If we include a baseline of 300 samples, the first sample in the baseline corresponds to the first sample of therecording. That first sample is then at time t = -300 ms.
 
-In this example (the Subject01.ds dataset used in the tutorials), the events in the data are represented twice. The individual  triggers are represented in a trigger channel and in the "backpanel trigger" event, but the triggers also caused the file to be written to disk in epochs. These epochs are represented as the "trial" events. 
-
+In this example (the Subject01.ds dataset used in the tutorials), the events in the data are represented twice. The individual  triggers are represented in a trigger channel and in the "backpanel trigger" event, but the triggers also caused the file to be written to disk in epochs. These epochs are represented as the "trial" events.

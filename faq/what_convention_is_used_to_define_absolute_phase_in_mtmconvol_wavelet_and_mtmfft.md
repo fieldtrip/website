@@ -3,7 +3,7 @@ title: What convention is used to define absolute phase in 'mtmconvol', 'wavelet
 tags: [faq, freq, mtmconvol, wavelet, mtmfft, phase]
 ---
 
-## What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
+# What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
 
 *  In **mtmconvol** and **wavelet** an angle of 0 of any fourier-coefficient means a peak of an oscillation in the data, and an angle of pi/-pi will always mean the trough of an oscillation (wavelet wise angle = 0 is implemented as cosine at peak, and sine in up-going flank)
 

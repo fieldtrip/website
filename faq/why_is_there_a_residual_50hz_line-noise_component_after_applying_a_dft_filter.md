@@ -3,9 +3,9 @@ title: Why is there a residual 50Hz line-noise component after applying a DFT fi
 tags: [faq, artifact, filter, noise, preprocessing]
 ---
 
-## Why is there a residual 50Hz line-noise component after applying a DFT filter?
+# Why is there a residual 50Hz line-noise component after applying a DFT filter?
 
-It is due to the non-stationarity of the line noise component in the data. Imagine a trial in which the 50Hz line noise increases in amplitude over time (e.g. trial #3 in the first figure). 
+It is due to the non-stationarity of the line noise component in the data. Imagine a trial in which the 50Hz line noise increases in amplitude over time (e.g. trial #3 in the first figure).
 
 {% include image src="/assets/img/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter/linenoise.png" width="600" %}
 
@@ -35,9 +35,9 @@ Then imagine subtracting the estimated 5 Hz component. At the begin you subtract
 
     % subtract the 5 Hz fit
     s3 = s1-s2;
-    figure; plot(t, s3, 'k'); 
+    figure; plot(t, s3, 'k');
 
-    % bandstopfilter: remove 4.9 to 5.1 Hz 
+    % bandstopfilter: remove 4.9 to 5.1 Hz
     s4 = ft_preproc_bandpstopfilter(s1, fs, [4.9 5.1], 2);
     hold on; plot(t, s4, 'm');  
 

@@ -3,7 +3,7 @@ title: Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft
 tags: [faq, freq, mtmconvol]
 ---
 
-## Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?
+# Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?
 
 Conceptually, a time frequency analysis is a time domain convolution of a signal with a set of wavelets, each of these being designed to capture some feature in the data. The 'mtmconvol'-method uses sine/cosine waves, tapered with multitapers, which are designed to capture band-limited oscillations in the data. When doing a spectral decomposition, the goal typically is to assign the fluctuations in the signal to distinct frequency bands. Importantly, the (implicitly) required behavior of the spectral transformation is, that the power estimated at X Hz truly comes from signal fluctuations at X Hz., and not from signal fluctuations at Y Hz. (and Z Hz etc). This is the issue of spectral leakage, and a few signal processing tricks are needed to optimally control for this.
 In the context of wavelet analysis in FieldTrip and in order to minimize detrimental effects of (unpredictable spectral leakage), you need to keep 2 things in min
@@ -15,7 +15,6 @@ In the context of wavelet analysis in FieldTrip and in order to minimize detrime
 So, to make a long story short: in order to protect the user against him/herself the new implementation in the specest-module checks for potential discrepancies, and corrects the cfg.foi, if needed. Therefore, if you wish for particular frequencies in your TFR, you need to think twic
 
 *  Do the cfg.t_ftimwins yield an integer number of cycles for each requested frequency?
-
-*  Is the length of my data such, that the frequency resolution 1/T can capture all cfg.foi? This means, in other words, that (cfg.foi * T) should be integer numbers. 
+*  Is the length of my data such, that the frequency resolution 1/T can capture all cfg.foi? This means, in other words, that (cfg.foi * T) should be integer numbers.
 
 Hint: The length of the data can be influenced with the cfg.pad parameter.

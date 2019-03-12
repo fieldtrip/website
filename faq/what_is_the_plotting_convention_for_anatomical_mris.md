@@ -3,7 +3,7 @@ title: What is the plotting convention for anatomical MRIs?
 tags: [faq, anatomical, mri]
 ---
 
-## What is the plotting convention for anatomical MRIs?
+# What is the plotting convention for anatomical MRIs?
 
 The convention used in FieldTrip for the plotting of anatomical MRI data in **[ft_sourceplot ](/reference/ft_sourceplot)** (when using cfg.method = 'ortho', or 'slice'), and in **[ft_volumerealign](/reference/ft_volumerealign)** is to plot the data along the voxel-indices' axes, rather than along the world coordinate system's axes. Statements such as 'the image appears flipped', or 'the image is presented in neurological/radiological convention' are basically dependent on the anatomical data. The question now of course is how it is possible to determine whether the data at hand is plotted in neurological/radiological convention, or otherwise stated: 'whether left is left, or left is right'.
 
