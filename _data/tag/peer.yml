@@ -52,10 +52,10 @@
 - name:  What are the different approaches I can take for distributed computing?
   link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
 
-- name:  What happens if a job fails to execute properly?
+- name:  What happens if a peer distributed job fails to execute properly?
   link:  /faq/what_happens_if_a_job_fails_to_execute_properly
 
-- name:  What happens with a job that has an error on the slave?
+- name:  What happens with a peer distributed job that has an error on the slave?
   link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_slave
 
 - name:  Why are the peers using multicast to announce themselves?
