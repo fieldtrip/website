@@ -81,7 +81,8 @@ When adding or contributing to the tutorials please consider the [documentation 
 * [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
 * [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
 * [Statistical analysis and multiple comparison correction for combined MEG/EEG data](/workshop/natmeg/statistics)
-* [Multivariate analysis of MEG/EEG data](/tutorial/multivariateanalysis)
+* [Multivariate analysis of MEG/EEG data](/tutorial/multivariateanalysis) (based on the Donders Machine Learning Toolbox)
+* [Multivariate analysis of MEG/EEG data](/tutorial/mvpa_light) (based on the MVPA light toolbox)
 
 ## Visualizing the results of an analysis
 
