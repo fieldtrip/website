@@ -95,7 +95,7 @@ the confusion matrix, all we need to do is to change the `metric` field:
     cfg.mvpa.metric      = 'confusion';
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
-    stat.metric.confusion
+    stat.confusion
 
 Looking at the diagonal of the matrix tells us that the classifier is doing better
 at predicting classes 1 and 2 than it is at correctly predicting class 3.
