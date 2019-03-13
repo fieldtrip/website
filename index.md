@@ -22,6 +22,10 @@ To get started with FieldTrip, please continue reading the [getting started](/ge
 
 ## News and announcements
 
+### 13 March, 2019
+
+Check it out! Matthias Treder has kindly contributed a tutorial and some code (streamlined a bit by yours truly) that now allows you to perform MVPA analysis in FieldTrip, using his awesome [MVPA-light toolbox](https://github.com/treder/MVPA-Light) ! For now it is well supported, documented and tested for channel level time domain data, but in the near future (and with your help) we will also ensure support for frequency domain and source level data. For now you can just use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** with cfg.method='mvpa'. The tutorial can be found in the [tutorial section](/tutorial/mvpa_light)
+
 ### 11 January, 2019
 
 All the best wishes for the new year to all of you on behalf of the FieldTrip team! According to Google Scholar, the FieldTrip paper has now been cited more than 3000 times. We are happy that the project provides so many of you with helpful tools that facilitate you to contribute to the scientific community.
