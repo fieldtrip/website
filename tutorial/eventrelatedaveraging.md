@@ -157,7 +157,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 *Figure: A topographic plot of the event related fields obtained using ft_topoplotER.*
 
-To plot a sequence of topographic plots define the time intervals in cfg.xli
+To plot a sequence of topographic plots define the time intervals in cfg.xlim
 
     cfg = [];
     cfg.xlim = [-0.2 : 0.1 : 1.0];  % Define 12 time intervals
