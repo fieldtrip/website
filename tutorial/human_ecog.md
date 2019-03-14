@@ -70,7 +70,7 @@ CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy i
 **6**) Execute FreeSurfer's recon-all functionality from the Linux or MacOS terminal (Windows via VirtualBox), or from the MATLAB command window as below. This set of commands will create a folder named ‘freesurfer’ in the subject directory, with subdirectories containing a multitude of FreeSurfer-generated files.
 
 {% include markup/warning %}
-For tutorial purposes, the example dataset contains the output from FreeSurfer, a folder named 'freesurfer', for continuation with the protocol.
+For tutorial purposes, the example dataset contains the output from FreeSurfer, a folder named 'freesurfer', for continuation with the protocol. You can therefore skip this time-consuming computation and continue with step 7.
 {% include markup/end %}
 
 	fshome     = <path to freesurfer home directory>;
