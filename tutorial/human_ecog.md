@@ -75,7 +75,11 @@ CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy i
 	'mri_convert -c -oc 0 0 0 ' mrfile ' ' [subdir '/tmp.nii'] '; ' ...
 	'recon-all -i ' [subdir '/tmp.nii'] ' -s ' 'freesurfer' ' -sd ' subdir ' -all'])
 
-PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of the anatomical MRI currently may take up 10 hours or more. For tutorial purposes, the example dataset contains the output from FreeSurfer, a folder named 'freesurfer', for continuation with the protocol.
+PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of the anatomical MRI currently may take up 10 hours or more. 
+
+{% include markup/warning %}
+For tutorial purposes, the example dataset contains the output from FreeSurfer, a folder named 'freesurfer', for continuation with the protocol.
+{% include markup/end %}
 
 **7**) Import the extracted cortical surfaces into the MATLAB workspace and examine their quality. Repeat the following code using rh.pial to visualize the pial surface of the right hemisphere.
 
