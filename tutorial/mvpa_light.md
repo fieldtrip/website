@@ -73,15 +73,21 @@ Let us unpack this:
 - `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section *Classification across time*).
 - `cfg.design` specifies the vector of *class labels*. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with *1*'s
 for the trials belonging to class 1, *2*'s for trials
-belonging to class 2, and so on. For the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
-there is three classes, namely FIC (class 1), FC (class 2), and IC (class 3).
+belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
+comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3).
 
 Now call
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
-to perform the classification analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the datasets are passed in to `ft_timelockstatistics`. Let us print the resulting classification
-accuracy
+to perform the classification analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the datasets are passed in to `ft_timelockstatistics`. It is not required that each class
+corresponds to a separate dataset. The same result can be achieved when all classes are part of one
+dataset `dat`. To illustrate this, append the data and then pass it to `ft_timelockstatistics`:
+
+    dat = ft_appenddata([], dataFIC_LP, dataFC_LP, dataIC_LP);
+    stat = ft_timelockstatistics(cfg, dat);
+
+Let us print the resulting classification accuracy
 
     fprintf('Classification accuracy: %0.2f\n', stat.accuracy)
 
@@ -109,7 +115,7 @@ classification results in a format required by the function.
     {% include image src="/assets/img/tutorial/mvpa_light/confusion_matrix.png" width="300" %}
 
 
-### Cross-validation
+## Cross-validation
 
 To obtain a realistic estimate of classifier performance and control for overfitting, a classifier should be tested on an independent dataset that has not been used for training. In most neuroimaging experiments, there is only one dataset with a restricted number of trials. K-fold [cross-validation](https://en.wikipedia.org/wiki/Cross-validation) makes efficient use of this data by splitting it into k different folds. In each iteration, one of the k folds is held out and used as test set, whereas all other folds are used for training the model. This process is repeated until every fold has been used as test set once. Cross-validation is controlled by the following parameters:
 
@@ -119,10 +125,9 @@ To obtain a realistic estimate of classifier performance and control for overfit
 - `cfg.mvpa.p`: if `cfg.mvpa.cv` is 'holdout', `p` is the fraction of test samples (default 0.1)
 - `cfg.mvpa.stratify`: if 1, the class proportions are approximately preserved in each test fold (default 1)
 
-The total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is an average
-across the test folds.
+The total number of training and testing iterations is equal to `cfg.k * cfg.repeat`. The result returned by `ft_timelockstatistics` is an average across the test folds.
 
-#### Exercise 1
+### Exercise 1
 
 {% include markup/info %}
 What is the effect of setting k to a very large vs very small value? Why is it
@@ -140,7 +145,7 @@ Many neuroimaging datasets have a 3-D structure (trials x channels x time). Clas
     cfg.mvpa.k           = 10;
     cfg.mvpa.repeat      = 2;
     cfg.design           = [ones(nFIC,1); 2*ones(nFC,1)];
-    
+
 For simplicity, we will limit ourselves to comparing only FIC and FC. As classifier,
 we use Linear Discriminant Analysis (LDA). As metric, we use area under the ROC curve (AUC).
 It is calculated using 10-fold cross-validation with 2 repetitions.
@@ -163,7 +168,7 @@ is the standard deviation of the AUC metric across the different test sets in th
 cross-validation.
 
 
-    {% include image src="/assets/img/tutorial/mvpa_light/classify_across_time1.png" width="200" %}
+    {% include image src="/assets/img/tutorial/mvpa_light/classify_across_time1.png" width="300" %}
 
 
 
@@ -192,7 +197,7 @@ are used. In searchlight analysis, the *time points* in a trial are used as
 features, for each channel separately. Set `cfg.latency` to restrict the analysis to
 a specific time window. Set `cfg.avgovertime='yes'` if you prefer to average the values in the time window to a single feature.
 
-Since a classification result is obtained for each channel, classification accuracy can be plotted as a topography. 
+Since a classification result is obtained for each channel, classification accuracy can be plotted as a topography.
 We call `ft_topoplotER` to do the plotting.
 
     cfg              = [];
@@ -252,7 +257,7 @@ As expected, the resultant topography is slightly more smeared out. Peak classif
 ## Time generalisation (time x time classification)
 
 Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalisation, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). To perform
-time x time classification, we only need to set the `cfg.timextime` parameter: 
+time x time classification, we only need to set the `cfg.timextime` parameter:
 
 
     cfg = [] ;  
@@ -263,16 +268,16 @@ time x time classification, we only need to set the `cfg.timextime` parameter:
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
 It returns a 2-D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. We plot the
-result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and two additional parameters specifying the x-axis and y-axis.
+result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and an additional parameter specifying the time axis.
 
-    mv_plot_result(stat.mvpa, dataFC_LP.time{1}, dataFC_LP.time{1})
+    mv_plot_result(stat.mvpa, dataFC_LP.time{1})
 
 In the resultant plot, each row (corresponding to a value of on the y-axis)  corresponds to the
 time point at which the classifier was trained. Each point on the x-axis corresponds
 to a time point at which the respective classifier was tested. Clearly, the classifier attains peak performance roughly in the 0.45-0.65s period.
 
 
-{% include image src="/assets/img/tutorial/mvpa_light/timextime.png" width="200" %}
+{% include image src="/assets/img/tutorial/mvpa_light/timextime.png" width="300" %}
 
 
 <!--
