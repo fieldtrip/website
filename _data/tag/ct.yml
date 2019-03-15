@@ -112,9 +112,6 @@
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 

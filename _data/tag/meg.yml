@@ -103,9 +103,6 @@
 - name:  Cluster-based permutation tests on event related fields
   link:  /tutorial/cluster_permutation_timelock
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 

@@ -10,3 +10,6 @@
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
 
+- name:  Analysis of monkey ECoG recordings
+  link:  /tutorial/monkey_ecog
+

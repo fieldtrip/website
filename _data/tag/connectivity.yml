@@ -1,9 +1,6 @@
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 
