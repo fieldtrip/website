@@ -158,9 +158,8 @@ It can be plotted as a function of time using
 
     plot(stat.auc)
 
-For a slightly nicer plot, one can again use `mv_plot_result`. As an additional parameter,
-we can pass the values for the time axis. This makes sure that the x-axis is formatted
-correctly.
+For a slightly nicer plot, one can again use `mv_plot_result`. As a second parameter,
+we pass the time values to make sure that the x-axis is formatted correctly.
 
     mv_plot_result(stat.mvpa, dataFC_LP.time{1})
 
@@ -215,6 +214,7 @@ In the previous analysis, classification has been performed for each channel ind
 However, since the MEG channels have a spatial structure,
 one can also consider groups of neighbouring channels in the searchlight. To do this, we must provide
 a distance matrix that specifies which channels are neighbours of each other.
+['ft_prepare_neighbours'](http://www.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work/)
 
     cfg = [];
     cfg.method      = 'triangulation'
