@@ -4,7 +4,7 @@
 - name:  Determine the filter characteristics
   link:  /example/determine_the_filter_characteristics
 
-- name:  Fixing a missing sensor
+- name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
 - name:  Getting started with reading raw EEG or MEG data
