@@ -10,11 +10,11 @@
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
-- name:  What dataformats are supported?
-  link:  /faq/dataformat
-
 - name:  How can I share my MEG data?
   link:  /faq/data_sharing
+
+- name:  What dataformats are supported?
+  link:  /faq/dataformat
 
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
@@ -61,9 +61,6 @@
 - name:  What does a typical call to a FieldTrip function look like?
   link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
 
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
-
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/1020
 
@@ -97,11 +94,11 @@
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 
-- name:  Getting started with the Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
-
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
+
+- name:  Getting started with the Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/neuralynx_fcdc
 
 - name:  Getting started with Elekta/Neuromag data
   link:  /getting_started/neuromag

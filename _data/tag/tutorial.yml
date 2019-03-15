@@ -1,8 +1,8 @@
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
-
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
+
+- name:  Overview of all tutorials
+  link:  /tutorial
 
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
@@ -22,14 +22,8 @@
 - name:  Cluster-based permutation tests on event related fields
   link:  /tutorial/cluster_permutation_timelock
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
-
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
-
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
 
 - name:  Speeding up your analysis with distributed computing
   link:  /tutorial/distributedcomputing
@@ -55,17 +49,8 @@
 - name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
   link:  /tutorial/headmodel_meg
 
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
-
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
-
-- name:  Overview of all tutorials
-  link:  /tutorial
 
 - name:  Making a memory efficient analysis script
   link:  /tutorial/memory
@@ -75,9 +60,6 @@
 
 - name:  Analysis of monkey ECoG recordings
   link:  /tutorial/monkey_ecog
-
-- name:  Multivariate analysis of electrophysiological data
-  link:  /tutorial/multivariateanalysis
 
 - name:  Classification of event related MEG data using MVPA-Light
   link:  /tutorial/mvpa_light
@@ -93,9 +75,6 @@
 
 - name:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs_singlechannel
-
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
 
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing

@@ -49,9 +49,6 @@
 - name:  Speeding up your analysis with distributed computing
   link:  /tutorial/distributedcomputing
 
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
-
 - name:  Making a memory efficient analysis script
   link:  /tutorial/memory
 

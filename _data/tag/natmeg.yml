@@ -1,11 +1,11 @@
+- name:  FieldTrip course at the NatMEG in Stockholm
+  link:  /workshop/natmeg
+
 - name:  Beamforming oscillatory responses in combined MEG/EEG data
   link:  /workshop/natmeg/beamforming
 
 - name:  Dipole fitting of combined MEG/EEG data
   link:  /workshop/natmeg/dipolefitting
-
-- name:  FieldTrip course at the NatMEG in Stockholm
-  link:  /workshop/natmeg
 
 - name:  Details of the auditory oddball MEG dataset
   link:  /workshop/natmeg/meg_audodd

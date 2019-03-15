@@ -130,9 +130,6 @@
 - name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
   link:  /tutorial/headmodel_meg
 
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
-
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
 

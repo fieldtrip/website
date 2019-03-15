@@ -1,6 +1,3 @@
-- name:  FieldTrip workshop in Chieti
-  link:  /workshop/chieti2015
-
 - name:  Simulating and estimating, what about model (mis)match?
   link:  /workshop/chieti/simulation
 
@@ -9,4 +6,7 @@
 
 - name:  MEG whole-brain connectivity
   link:  /workshop/chieti/wholebrain
+
+- name:  FieldTrip workshop in Chieti
+  link:  /workshop/chieti2015
 

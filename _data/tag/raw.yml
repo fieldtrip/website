@@ -13,9 +13,6 @@
 - name:  How can I anonymize or deidentify a CTF dataset?
   link:  /faq/how_can_i_anonymize_a_ctf_dataset
 
-- name:  How can I find out what eventvalues and eventtypes there are in my data?
-  link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
-
 - name:  How can I fix a corrupt CTF meg4 file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file
 
@@ -48,12 +45,6 @@
 
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
-
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
 
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing

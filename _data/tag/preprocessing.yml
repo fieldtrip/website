@@ -34,9 +34,6 @@
 - name:  How can I convert one dataformat into an other?
   link:  /faq/how_can_i_convert_one_dataformat_into_an_other
 
-- name:  How can I find out what eventvalues and eventtypes there are in my data?
-  link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
-
 - name:  How can I import my own dataformat?
   link:  /faq/how_can_i_import_my_own_dataformat
 
@@ -94,9 +91,6 @@
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
 
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
-
 - name:  Event related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
@@ -105,9 +99,6 @@
 
 - name:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs_singlechannel
-
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
 
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing
