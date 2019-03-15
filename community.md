@@ -1,6 +1,5 @@
 ---
 title: FieldTrip Community
-tags:
 ---
 
 # Community
