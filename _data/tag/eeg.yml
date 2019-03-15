@@ -130,6 +130,9 @@
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 
+- name:  Analysis of monkey ECoG recordings
+  link:  /tutorial/monkey_ecog
+
 - name:  Multivariate analysis of electrophysiological data
   link:  /tutorial/multivariateanalysis
 
