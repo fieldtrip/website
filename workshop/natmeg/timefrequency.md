@@ -84,24 +84,24 @@ We will here describe how to calculate time frequency representations using Hann
 
 Since we have two conditions (responses with left and right index finger), we will calculate the data separately for both so that we can compare them. We select the trials based on the .trialinfo field. We created this field when we called *trialfun_oddball_responselocked* in ft_definetrial. In addition to the three colums in the .trl, it also added a column with response side based on the response trigger (256 and 2048 for left and right, respectively). After preprocessing, this column is added in the data structure as the field .trailinfo. This is a good example of keeping your own internal bookkeeping. You can e.g. also add response times, or accuracy. This info will travel with you throughout your analysis as long as it represents separate trials (and not averages).
 
-  cfg              = [];
-  cfg.output       = 'pow';
-  cfg.channel      = 'all';
-  cfg.method       = 'mtmconvol';
-  cfg.taper        = 'hanning';
-  cfg.toi          = [-1 : 0.10 : 1.5];
-  cfg.foi          = 1:40;
-  cfg.t_ftimwin    = ones(size(cfg.foi)) * 0.5;
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.channel      = 'all';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.toi          = [-1 : 0.10 : 1.5];
+    cfg.foi          = 1:40;
+    cfg.t_ftimwin    = ones(size(cfg.foi)) * 0.5;
 
-  cfg.trials       = find(data_MEG_responselocked.trialinfo(:,1) == 256);
+    cfg.trials       = find(data_MEG_responselocked.trialinfo(:,1) == 256);
   TFR_left_MEG     = ft_freqanalysis(cfg, data_MEG_responselocked);
 
-  cfg.trials       = find(data_MEG_responselocked.trialinfo(:,1) == 4096);
+    cfg.trials       = find(data_MEG_responselocked.trialinfo(:,1) == 4096);
   TFR_right_MEG    = ft_freqanalysis(cfg, data_MEG_responselocked);
 
   % save data
-  save TFR_left_MEG TFR_left_MEG
-  save TFR_right_MEG TFR_right_MEG
+    save TFR_left_MEG TFR_left_MEG
+    save TFR_right_MEG TFR_right_MEG
 
 
 Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following element
@@ -129,17 +129,17 @@ To visualize the event-related power changes, a normalization with respect to a 
 
 There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel, 3) topographical 2-D map of the power changes in a specified time-frequency interval.
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';
-  cfg.zlim         = [-2e-26 2e-26];          
-  cfg.showlabels   = 'yes';
-  cfg.layout       = 'neuromag306mag.lay';
-  cfg.channel      = 'MEG*1';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.zlim         = [-2e-26 2e-26];          
+    cfg.showlabels   = 'yes';
+    cfg.layout       = 'neuromag306mag.lay';
+    cfg.channel      = 'MEG*1';
 
-  figure;
-  ft_multiplotTFR(cfg, TFR_left_MEG);
-  print -dpng natmeg_freq3.png
+    figure;
+    ft_multiplotTFR(cfg, TFR_left_MEG);
+    print -dpng natmeg_freq3.png
 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq3.png" %}
@@ -151,16 +151,16 @@ Note that by using the options cfg.baseline and cfg.baselinetype when calling pl
 Something interesting seems to happen at channel MEG1041. To make a plot of a single channel use the function **[ft_singleplotTFR](/reference/ft_singleplotTFR)*
 
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';  
-  cfg.maskstyle    = 'saturation';
-  cfg.zlim         = [-1e-26 1e-26];          
-  cfg.channel      = 'MEG1041';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';  
+    cfg.maskstyle    = 'saturation';
+    cfg.zlim         = [-1e-26 1e-26];          
+    cfg.channel      = 'MEG1041';
 
-  figure;
-  ft_singleplotTFR(cfg, TFR_left_MEG);
-  print -dpng natmeg_freq4.png
+    figure;
+    ft_singleplotTFR(cfg, TFR_left_MEG);
+    print -dpng natmeg_freq4.png
 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq4.png" %}
@@ -169,19 +169,19 @@ Something interesting seems to happen at channel MEG1041. To make a plot of a si
 
 From Figure 4 one can see that there is an increase in power around 15-25 Hz in the time interval 0.4 to about 0.8 s after response onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)*
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';
-  cfg.xlim         = [0.4 0.8];   
-  cfg.zlim         = [-4e-27 4e-27];          
-  cfg.ylim         = [15 25];
-  cfg.marker       = 'on';
-  cfg.layout       = 'neuromag306mag.lay';
-  cfg.channel      = 'MEG*1';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.xlim         = [0.4 0.8];   
+    cfg.zlim         = [-4e-27 4e-27];          
+    cfg.ylim         = [15 25];
+    cfg.marker       = 'on';
+    cfg.layout       = 'neuromag306mag.lay';
+    cfg.channel      = 'MEG*1';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_left_MEG);
-  print -dpng natmeg_freq5.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_left_MEG);
+    print -dpng natmeg_freq5.png
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq5.png" %}
 
@@ -193,19 +193,19 @@ So what do you think we are looking at? I guess the introduction gave it away, b
 
 Perhaps we should now also look at the beta-rebound after a response of the other (right) hand? We can use the same parameters to make them comparabl
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';
-  cfg.xlim         = [0.4 0.8];   
-  cfg.zlim         = [-4e-27 4e-27];          
-  cfg.ylim         = [15 25];
-  cfg.marker       = 'on';
-  cfg.layout       = 'neuromag306mag.lay';
-  cfg.channel      = 'MEG*1';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.xlim         = [0.4 0.8];   
+    cfg.zlim         = [-4e-27 4e-27];          
+    cfg.ylim         = [15 25];
+    cfg.marker       = 'on';
+    cfg.layout       = 'neuromag306mag.lay';
+    cfg.channel      = 'MEG*1';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_right_MEG);
-  print -dpng natmeg_freq6.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_right_MEG);
+    print -dpng natmeg_freq6.png
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq6.png" %}
 
@@ -213,23 +213,23 @@ Perhaps we should now also look at the beta-rebound after a response of the othe
 
 Until now we have been using an (absolute) baseline. However, because we have two conditions with an - assumed - similar baseline, we can also compare the two conditions directly by subtracting and then dividing the two powerspectra by there sum, thereby normalizing by their common activity using **[ft_math](/reference/ft_math)**.
 
-  cfg = [];
-  cfg.parameter = 'powspctrm';
-  cfg.operation = '(x1-x2)/(x1+x2)';
+    cfg = [];
+    cfg.parameter = 'powspctrm';
+    cfg.operation = '(x1-x2)/(x1+x2)';
 
   TFR_diff_MEG = ft_math(cfg, TFR_right_MEG, TFR_left_MEG);
 
-  cfg = [];
-  cfg.xlim         = [0.4 0.8];   
-  cfg.zlim         = [-0.4 0.4];
-  cfg.ylim         = [15 25];
-  cfg.marker       = 'on';
-  cfg.layout       = 'neuromag306mag.lay';
-  cfg.channel      = 'MEG*1';
+    cfg = [];
+    cfg.xlim         = [0.4 0.8];   
+    cfg.zlim         = [-0.4 0.4];
+    cfg.ylim         = [15 25];
+    cfg.marker       = 'on';
+    cfg.layout       = 'neuromag306mag.lay';
+    cfg.channel      = 'MEG*1';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_diff_MEG);
-  print -dpng natmeg_freq7.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_diff_MEG);
+    print -dpng natmeg_freq7.png
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq7.png" %}
 
@@ -246,28 +246,28 @@ Keep an eye open for the differences in processing and visualizing EEG.
 ### Read-in trials
 
 
-  cfg = [];
-  cfg.dataset = 'oddball1_mc_downsampled.fif';
+    cfg = [];
+    cfg.dataset = 'oddball1_mc_downsampled.fif';
 
   % define trials based on responses
-  cfg.trialdef.prestim       = 1.5;
-  cfg.trialdef.poststim      = 2.0;
-  cfg.trialdef.stim_triggers = [1 2];
-  cfg.trialdef.rsp_triggers  = [256 4096];
-  cfg.trialfun               = 'trialfun_oddball_responselocked';
-  cfg                        = ft_definetrial(cfg);
+    cfg.trialdef.prestim       = 1.5;
+    cfg.trialdef.poststim      = 2.0;
+    cfg.trialdef.stim_triggers = [1 2];
+    cfg.trialdef.rsp_triggers  = [256 4096];
+    cfg.trialfun               = 'trialfun_oddball_responselocked';
+    cfg                        = ft_definetrial(cfg);
 
   % preprocess EEG data
-  cfg.channel                = 'EEG';
-  cfg.continuous             = 'yes';
-  cfg.demean                 = 'yes';
-  cfg.dftfilter              = 'yes';
-  cfg.dftfreq                = [50 100];
+    cfg.channel                = 'EEG';
+    cfg.continuous             = 'yes';
+    cfg.demean                 = 'yes';
+    cfg.dftfilter              = 'yes';
+    cfg.dftfreq                = [50 100];
 
-  data_EEG_responselocked    = ft_preprocessing(cfg);
+    data_EEG_responselocked    = ft_preprocessing(cfg);
 
   % save the data
-  save data_EEG_responselocked data_EEG_responselocked -v7.3
+    save data_EEG_responselocked data_EEG_responselocked -v7.3
 
 
 ### Clean data
@@ -278,30 +278,30 @@ Especially EEG records can contain bad channels due to various reasons such as b
 
 
   % select bad channels
-  cfg = [];
-  cfg.metric  = 'var';
-  temp        = ft_rejectvisual(cfg, data_EEG_responselocked);
+    cfg = [];
+    cfg.metric  = 'var';
+    temp        = ft_rejectvisual(cfg, data_EEG_responselocked);
 
   % with this little trick we get the names of the selected channels
-  badchannels = setdiff(data_EEG_responselocked.label,temp.label);
+    badchannels = setdiff(data_EEG_responselocked.label,temp.label);
 
-  clear temp
+    clear temp
 
 
 Fixing bad channels is usually done by interpolating between neighbouring channels. Therefore we have to determine which channels are neighbours. Using the information of the position of the electrodes and some mathematics we can calculate which channels are neighbours of each othe
 
   % determine neighbours structure
-  cfg            = [];
-  cfg.method     = 'triangulation';
-  cfg.senstype   = 'EEG'; % Our data still contains information from the MEG channels, we want to make sure ft_prepare_neighbours does not get confused
-  neighbours_EEG = ft_prepare_neighbours(cfg, data_EEG_responselocked);
+    cfg            = [];
+    cfg.method     = 'triangulation';
+    cfg.senstype   = 'EEG'; % Our data still contains information from the MEG channels, we want to make sure ft_prepare_neighbours does not get confused
+    neighbours_EEG = ft_prepare_neighbours(cfg, data_EEG_responselocked);
 
   % plotting neighbours
-  cfg            = [];
-  cfg.neighbours = neighbours_EEG;
-  cfg.senstype   = 'EEG';
-  ft_neighbourplot(cfg, data_EEG_responselocked);
-  print -dpng natmeg_freq8.png
+    cfg            = [];
+    cfg.neighbours = neighbours_EEG;
+    cfg.senstype   = 'EEG';
+    ft_neighbourplot(cfg, data_EEG_responselocked);
+    print -dpng natmeg_freq8.png
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq8.png" %}
 
@@ -311,65 +311,65 @@ We can then use this neighborhood structure to fix our bad channels with **[ft_c
 
 
   % fix channels
-  cfg = [];
-  cfg.method                    = 'spline';
-  cfg.neighbours                = neighbours_EEG;
-  cfg.badchannel                = badchannels;
-  cfg.senstype                  = 'EEG';
-  data_clean_EEG_responselocked = ft_channelrepair(cfg, data_EEG_responselocked);
+    cfg = [];
+    cfg.method                    = 'spline';
+    cfg.neighbours                = neighbours_EEG;
+    cfg.badchannel                = badchannels;
+    cfg.senstype                  = 'EEG';
+    data_clean_EEG_responselocked = ft_channelrepair(cfg, data_EEG_responselocked);
 
   % save the data
-  save data_clean_EEG_responselocked data_clean_EEG_responselocked
+    save data_clean_EEG_responselocked data_clean_EEG_responselocked
 
 
 Now that we have repaired our bad channels we can re-reference our data to the common average.
 
-  cfg = [];
-  cfg.reref                  = 'yes';
-  cfg.refchannel             = 'all';
+    cfg = [];
+    cfg.reref                  = 'yes';
+    cfg.refchannel             = 'all';
 
-  data_clean_EEG_responselocked = ft_preprocessing(cfg, data_clean_EEG_responselocked);
+    data_clean_EEG_responselocked = ft_preprocessing(cfg, data_clean_EEG_responselocked);
 
 ## Time-frequency analysis with a Hanning taper and fixed window length
 
 We are now ready to do the same frequency analysis on EEG as we did on MEG. Again, separately for left and right response.
 
 
-  cfg              = [];
-  cfg.output       = 'pow';
-  cfg.channel      = 'all';
-  cfg.method       = 'mtmconvol';
-  cfg.taper        = 'hanning';
-  cfg.toi          = [-1 : 0.10 : 1.5];
-  cfg.foi          = 1:40;
-  cfg.t_ftimwin    = ones(size(cfg.foi)) * 0.5;
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.channel      = 'all';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.toi          = [-1 : 0.10 : 1.5];
+    cfg.foi          = 1:40;
+    cfg.t_ftimwin    = ones(size(cfg.foi)) * 0.5;
 
-  cfg.trials       = find(data_clean_EEG_responselocked .trialinfo(:,1) == 256);
+    cfg.trials       = find(data_clean_EEG_responselocked .trialinfo(:,1) == 256);
   TFR_left_EEG     = ft_freqanalysis(cfg, data_clean_EEG_responselocked );
 
-  cfg.trials       = find(data_clean_EEG_responselocked .trialinfo(:,1) == 4096);
+    cfg.trials       = find(data_clean_EEG_responselocked .trialinfo(:,1) == 4096);
   TFR_right_EEG    = ft_freqanalysis(cfg, data_clean_EEG_responselocked );
 
   % save data
-  save TFR_left_EEG TFR_left_EEG
-  save TFR_right_EEG TFR_right_EEG
+    save TFR_left_EEG TFR_left_EEG
+    save TFR_right_EEG TFR_right_EEG
 
 
 Great! Now lets plot the EEG and see what we get.
 
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';
-  cfg.xlim         = [0.5 1.0];   
-  cfg.zlim         = [-4e-12 4e-12];          
-  cfg.ylim         = [15 25];
-  cfg.marker       = 'on';
-  cfg.layout       = 'natmeg_customized_eeg1005.lay';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.xlim         = [0.5 1.0];   
+    cfg.zlim         = [-4e-12 4e-12];          
+    cfg.ylim         = [15 25];
+    cfg.marker       = 'on';
+    cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_left_EEG);
-  print -dpng natmeg_freq9.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_left_EEG);
+    print -dpng natmeg_freq9.png
 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq9.png" %}
@@ -382,17 +382,17 @@ Hmmm... What do you think? A bit strange, right? Is this real, or perhaps an art
 
 In fact, we are now encountering an aspect of EEG recordings we haven't seen in MEG before. Take a look what happens when instead of an absolute baseline we use a relative baseline.
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'relchange';
-  cfg.ylim         = [15 25];
-  cfg.xlim         = [0.5 1.0];
-  cfg.zlim         = [-1.2 1.2];    
-  cfg.layout       = 'natmeg_customized_eeg1005.lay';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'relchange';
+    cfg.ylim         = [15 25];
+    cfg.xlim         = [0.5 1.0];
+    cfg.zlim         = [-1.2 1.2];    
+    cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_left_EEG);
-  print -dpng natmeg_freq10.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_left_EEG);
+    print -dpng natmeg_freq10.png
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq10.png" %}
 
@@ -406,9 +406,9 @@ To round up our comparison between EEG and MEG, lets plot the difference between
 This will at the same time solved the above problem. Can you say why?
 {% include markup/end %}
 
-  cfg = [];
-  cfg.parameter    = 'powspctrm';
-  cfg.operation    = '(x1-x2)/(x1+x2)';
+    cfg = [];
+    cfg.parameter    = 'powspctrm';
+    cfg.operation    = '(x1-x2)/(x1+x2)';
 
   TFR_diff_EEG = ft_math(cfg, TFR_right_EEG, TFR_left_EEG);
 
@@ -416,16 +416,16 @@ This will at the same time solved the above problem. Can you say why?
   TFR_diff_EEG = TFR_right_EEG;
   TFR_diff_EEG.powspctrm = (TFR_right_EEG.powspctrm - TFR_left_EEG.powspctrm) ./ (TFR_right_EEG.powspctrm + TFR_left_EEG.powspctrm);
 
-  cfg = [];
-  cfg.xlim         = [0.4 0.8];
-  cfg.ylim         = [15 25];
-  cfg.zlim         = [-0.2 0.2];
-  cfg.marker       = 'on';
-  cfg.layout       = 'natmeg_customized_eeg1005.lay';
+    cfg = [];
+    cfg.xlim         = [0.4 0.8];
+    cfg.ylim         = [15 25];
+    cfg.zlim         = [-0.2 0.2];
+    cfg.marker       = 'on';
+    cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_diff_EEG);
-  print -dpng natmeg_freq11.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_diff_EEG);
+    print -dpng natmeg_freq11.png
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq11.png" %}
 
@@ -436,18 +436,18 @@ This will at the same time solved the above problem. Can you say why?
 Finally, lets take a look at how the topography looks when we use the MEG planar gradiometers.
 
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';
-  cfg.xlim         = [0.4 0.8];
-  cfg.ylim         = [15 25];
-  cfg.zlim         = [-1e-24 1e-24];          
-  cfg.marker       = 'on';
-  cfg.layout       = 'neuromag306planar.lay';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.xlim         = [0.4 0.8];
+    cfg.ylim         = [15 25];
+    cfg.zlim         = [-1e-24 1e-24];          
+    cfg.marker       = 'on';
+    cfg.layout       = 'neuromag306planar.lay';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_left_MEG);
-  print -dpng natmeg_freq12.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_left_MEG);
+    print -dpng natmeg_freq12.png
 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq12.png" %}
@@ -464,18 +464,18 @@ In fact, we are now plotting the two different gradiometers together. You can se
   TFR_left_MEG_comb  = ft_combineplanar([],TFR_left_MEG);
   TFR_right_MEG_comb = ft_combineplanar([],TFR_right_MEG);
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';
-  cfg.xlim         = [0.4 0.8];   
-  cfg.ylim         = [15 25];
-  cfg.zlim         = [-4e-24 4e-24];          
-  cfg.marker       = 'on';
-  cfg.layout       = 'neuromag306cmb.lay';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.xlim         = [0.4 0.8];   
+    cfg.ylim         = [15 25];
+    cfg.zlim         = [-4e-24 4e-24];          
+    cfg.marker       = 'on';
+    cfg.layout       = 'neuromag306cmb.lay';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_left_MEG_comb);
-  print -dpng natmeg_freq13.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_left_MEG_comb);
+    print -dpng natmeg_freq13.png
 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq13.png" %}
@@ -485,24 +485,24 @@ In fact, we are now plotting the two different gradiometers together. You can se
 Now that looks much better!
 Finally, let's plot the difference between conditions using the combined gradiometers. Should we calculate the combination before or after we do the comparison (i.e. (left-right) / (left+right))? Why?
 
-  cfg = [];
-  cfg.parameter = 'powspctrm';
-  cfg.operation = '(x1-x2)/(x1+x2)';
+    cfg = [];
+    cfg.parameter = 'powspctrm';
+    cfg.operation = '(x1-x2)/(x1+x2)';
 
   TFR_diff_MEG_comb = ft_math(cfg, TFR_right_MEG_comb, TFR_left_MEG_comb);
 
-  cfg = [];
-  cfg.baseline     = [-0.5 -0.1];
-  cfg.baselinetype = 'absolute';
-  cfg.xlim         = [0.4 0.8];   
-  cfg.ylim         = [15 25];
-  cfg.zlim         = [-0.3 0.3];          
-  cfg.marker       = 'on';
-  cfg.layout       = 'neuromag306cmb.lay';
+    cfg = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.xlim         = [0.4 0.8];   
+    cfg.ylim         = [15 25];
+    cfg.zlim         = [-0.3 0.3];          
+    cfg.marker       = 'on';
+    cfg.layout       = 'neuromag306cmb.lay';
 
-  figure;
-  ft_topoplotTFR(cfg, TFR_diff_MEG_comb);
-  print -dpng natmeg_freq14.png
+    figure;
+    ft_topoplotTFR(cfg, TFR_diff_MEG_comb);
+    print -dpng natmeg_freq14.png
 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq14.png" %}

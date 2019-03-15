@@ -36,7 +36,7 @@ and hence
 so for example
     data1 = T01 * inv(T03) * data3;
 
-TODO: This requires testing on real data using the CTF software as gold standard, i.e. use the newDs command to construct a 1st, 2nd and 3rd order dataset from an original 0th order dataset (only one trial required, e.g. average). Regarding Matlab code, fieldtrip/syntheticgradient.m performs the conversions of the data.
+TODO: This requires testing on real data using the CTF software as gold standard, i.e. use the newDs command to construct a 1st, 2nd and 3rd order dataset from an original 0th order dataset (only one trial required, e.g. average). Regarding MATLAB code, fieldtrip/syntheticgradient.m performs the conversions of the data.
 
 ## Step 3: apply the coefficients to the gradiometer array
 

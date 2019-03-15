@@ -48,51 +48,51 @@ For these examples, we'll use the example data of [dataset 10](/faq/what_types_o
 
 First, we read the data, as usua
 
-  cfg = [];
-  cfg.dataset = 'MarkusBraille.ds';
-  cfg.trialdef.triallength = Inf;
-  cfg = ft_definetrial(cfg);
+    cfg = [];
+    cfg.dataset = 'MarkusBraille.ds';
+    cfg.trialdef.triallength = Inf;
+    cfg = ft_definetrial(cfg);
 
-  cfg.continuous = 'yes';
-  cfg.channel = {'MEG', '-MLP31', '-MLO12'};
-  data = ft_preprocessing(cfg);
+    cfg.continuous = 'yes';
+    cfg.channel = {'MEG', '-MLP31', '-MLO12'};
+    data = ft_preprocessing(cfg);
 
 Then, we export them
 
-  fiff_file  = 'ctf_raw.fif';
-  fieldtrip2fiff(fiff_file, data)
+    fiff_file  = 'ctf_raw.fif';
+    fieldtrip2fiff(fiff_file, data)
 
 This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the Matlab files, events might be recoded using numbers.
 
 You can then read the file into Python (MNE-Python 0.8
 
   :::python
-  from mne.io import Raw
-  raw = Raw('ctf_raw.fif')
-  print(raw)
-  print(raw.info)
+    from mne.io import Raw
+    raw = Raw('ctf_raw.fif')
+    print(raw)
+    print(raw.info)
 
-  from mne import read_events
-  events = read_events('ctf_raw-eve.fif')
-  print(events)
+    from mne import read_events
+    events = read_events('ctf_raw-eve.fif')
+    print(events)
 
 #### Import Raw
 
 Once you have the data in Python as Raw, you can use the ''save'' method.
 
   :::python
-  raw.save('mne_python_raw.fif')
+    raw.save('mne_python_raw.fif')
 
 Then use FieldTrip to read the file
 
-  fiff_file = 'mne_python_raw.fif';
+    fiff_file = 'mne_python_raw.fif';
 
-  cfg = []
-  cfg.dataset = fiff_file;
-  data1 = ft_preprocessing(cfg);
-  ft_datatype(data1)  % returns 'raw'
+    cfg = []
+    cfg.dataset = fiff_file;
+    data1 = ft_preprocessing(cfg);
+    ft_datatype(data1)  % returns 'raw'
 
-  event = mne_read_events('ctf_raw-eve.fif')
+    event = mne_read_events('ctf_raw-eve.fif')
 
 So, ''data1'' is of type ''datatype_raw'' with one trial.
 
@@ -107,54 +107,54 @@ Currently, there is no export functionality to create mne-Epochs from fieldtrip.
 And then in Python, you can read the ''Epochs'' wit
 
   :::python
-  from mne import read_epochs
-  epochs = read_epochs('ctf-epo.fif')
-  print(type(epochs))
+    from mne import read_epochs
+    epochs = read_epochs('ctf-epo.fif')
+    print(type(epochs))
 
 #### Import Epochs
 
 If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''Epochs'' clas
 
   :::python
-  from mne import read_events, Epochs
-  from mne.fiff import Raw
+    from mne import read_events, Epochs
+    from mne.fiff import Raw
 
-  raw = Raw('ctf_raw.fif')
-  events = read_events('ctf_raw-eve.fif')
-  print(events)
+    raw = Raw('ctf_raw.fif')
+    events = read_events('ctf_raw-eve.fif')
+    print(events)
 
   # create events based on the index in the third column of events
-  event_ids = {'eventA': 4, 'eventB': 8}
-  tmin = -0.5
-  tmax = 1
-  epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=(None, 0))
-  epochs.save('mne_python-epo.fif')
-  mne.write_events('mne_python-eve.fif', epochs.events)
+    event_ids = {'eventA': 4, 'eventB': 8}
+    tmin = -0.5
+    tmax = 1
+    epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=(None, 0))
+    epochs.save('mne_python-epo.fif')
+    mne.write_events('mne_python-eve.fif', epochs.events)
 
 And then in Matla
 
-  fiff_file = 'mne_python-epo.fif';
-  events_file = 'mne_python-eve.fif';
-  cfg = [];
-  cfg.dataset = fiff_file;
-  data1 = ft_preprocessing(cfg);
+    fiff_file = 'mne_python-epo.fif';
+    events_file = 'mne_python-eve.fif';
+    cfg = [];
+    cfg.dataset = fiff_file;
+    data1 = ft_preprocessing(cfg);
 
-  event_file = mne_read_events(events_file);
-  data1.trialinfo = event_file(:,3);
-  data1.cfg.trl(:,4) = event_file(:,3);
+    event_file = mne_read_events(events_file);
+    data1.trialinfo = event_file(:,3);
+    data1.cfg.trl(:,4) = event_file(:,3);
 
-  ft_datatype(data1)  % returns 'raw'
+    ft_datatype(data1)  % returns 'raw'
 
 where ''data1'' contains the data organized in multiple trials.
 
 Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_definetrial
 
-  fiff_file = 'mne_python-epo.fif';
-  cfg = [];
-  cfg.dataset = fiff_file_epo;
-  cfg.trialdef.eventtype  = 'trial';               
-  cfg.trialfun = 'ft_trialfun_general';
-  cfg = ft_definetrial(cfg);
+    fiff_file = 'mne_python-epo.fif';
+    cfg = [];
+    cfg.dataset = fiff_file_epo;
+    cfg.trialdef.eventtype  = 'trial';               
+    cfg.trialfun = 'ft_trialfun_general';
+    cfg = ft_definetrial(cfg);
 
 where ''data1'' contains the data organized in multiple trials including condition labelling.
 
@@ -164,57 +164,57 @@ where ''data1'' contains the data organized in multiple trials including conditi
 
 Create evoked in FieldTrip:
 
-  cfg = [];
-  cfg.dataset = 'MarkusBraille.ds';
-  cfg.trialdef.eventtype      = 'backpanel trigger';
-  cfg.trialdef.prestim        = 1;
-  cfg.trialdef.poststim       = 2;
-  cfg.trialdef.eventvalue     = 3;                    % event value of FIC
-  cfg = ft_definetrial(cfg);
-  cfg.channel   = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
-  data = ft_preprocessing(cfg);
+    cfg = [];
+    cfg.dataset = 'MarkusBraille.ds';
+    cfg.trialdef.eventtype      = 'backpanel trigger';
+    cfg.trialdef.prestim        = 1;
+    cfg.trialdef.poststim       = 2;
+    cfg.trialdef.eventvalue     = 3;                    % event value of FIC
+    cfg = ft_definetrial(cfg);
+    cfg.channel   = {'MEG', '-MLP31', '-MLO12'};        % read all MEG channels except MLP31 and MLO12
+    data = ft_preprocessing(cfg);
 
-  cfg = [];
-  avg = ft_timelockanalysis(cfg, data);
-  fiff_file = 'ctf-ave.fif';
-  fieldtrip2fiff(fiff_file, avg)
+    cfg = [];
+    avg = ft_timelockanalysis(cfg, data);
+    fiff_file = 'ctf-ave.fif';
+    fieldtrip2fiff(fiff_file, avg)
 
 Now we can read it in MNE-Pytho
 
   :::python
-  from mne.fiff import read_evoked
-  evoked = read_evoked('ctf-ave.fif')
-  print(type(evoked))
+    from mne.fiff import read_evoked
+    evoked = read_evoked('ctf-ave.fif')
+    print(type(evoked))
 
 #### Import Evoked
 
 We just continue using the instance ''epochs'' that was defined [before](#datatype_raw_many_trials_-_epochs). We then create an instance of class ''Evoked'' using the method ''average'
 
   :::python
-  evoked = epochs.average()
-  print(type(evoked))  # returns mne.fiff.evoked.Evoked
-  evoked.save('mne_python-ave.fif')
+    evoked = epochs.average()
+    print(type(evoked))  # returns mne.fiff.evoked.Evoked
+    evoked.save('mne_python-ave.fif')
 
 And then in Matlab, we can read the dat
 
-  fiff_file = 'mne_python-ave.fif';
-  cfg = [];
-  cfg.dataset = fiff_file;
-  data1 = ft_preprocessing(cfg);
-  avg1 = ft_timelockanalysis([], data1);
+    fiff_file = 'mne_python-ave.fif';
+    cfg = [];
+    cfg.dataset = fiff_file;
+    data1 = ft_preprocessing(cfg);
+    avg1 = ft_timelockanalysis([], data1);
 
-  ft_datatype(avg1)  % returns 'timelock'
+    ft_datatype(avg1)  % returns 'timelock'
 
 In addition, we can read multiple conditions too, if there are present in the ''evoked'' fif fil
 
-  cfg = [];
-  cfg.dataset = fiff_file;
-  data1 = ft_preprocessing(cfg);  % E.g. with 3 conditions -> mapped to 3 trials
+    cfg = [];
+    cfg.dataset = fiff_file;
+    data1 = ft_preprocessing(cfg);  % E.g. with 3 conditions -> mapped to 3 trials
 
-  cfg = [];
-  cfg.trials = 1;
-  avg1 = ft_timelockanalysis(cfg, data1);
-  cfg.trials = 2;
-  avg2 = ft_timelockanalysis(cfg, data1);
-  cfg.trials = 3;
-  avg3 = ft_timelockanalysis(cfg, data1);
+    cfg = [];
+    cfg.trials = 1;
+    avg1 = ft_timelockanalysis(cfg, data1);
+    cfg.trials = 2;
+    avg2 = ft_timelockanalysis(cfg, data1);
+    cfg.trials = 3;
+    avg3 = ft_timelockanalysis(cfg, data1);

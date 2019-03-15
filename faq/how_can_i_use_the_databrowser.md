@@ -14,7 +14,7 @@ Note that the second argument, data, is optional. You can also read in data from
 {% include markup/warning %}
 If you call the databrowser without an output argument like this:
 
-  ft_databrowser(cfg, data)
+    ft_databrowser(cfg, data)
 
 then whatever you do, it will **not** be saved! Be sure to specify an output argument if you want it to be saved!
 {% include markup/end %}

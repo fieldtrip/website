@@ -10,12 +10,12 @@ tags: [faq, freq, connectivity, coherence]
 When computing the frequency domain representation of your data using **[ft_freqanalysis](/reference/ft_freqanalysis)**, you can specify the cfg-option 'output'. This option determines the representation of your dat
 
   
-  cfg.output = 'pow';
+    cfg.output = 'pow';
 
 The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like thi
 
   
-  freq = 
+    freq = 
   
           label: {2x1 cell}
          dimord: 'chan_freq'
@@ -27,12 +27,12 @@ The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like t
 The numeric data will be stored in the field called 'powspctrm', containing the (real-valued) power per channel and frequency bin (and time bin, depending on cfg.method). As per request, using the cfg.keeptrials and cfg.keeptapers options, you can get an estimate for each single trial / taper. 
 
   
-  cfg.output = 'powandcsd';
+    cfg.output = 'powandcsd';
 
 The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like thi
 
   
-  freq = 
+    freq = 
   
           label: {2x1 cell}
          dimord: 'chan_freq'
@@ -46,12 +46,12 @@ The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like t
 The numeric data will now be stored in two fields: the 'powspctrm' and the 'crsspctrm'. The 'powspctrm' is the same as above, and the 'crsspctrm' contains the (complex-valued) cross-spectral density between channel pairs, as indicated by the 'labelcmb' field. The cross-spectral density is the frequency domain analogue of the cross-covariance function. The default behavior of ft_freqanalysis is to return the cross-spectral density between all possible channel pairs, treating the channel pair {'a' 'b'} the same as channel pair {'b' 'a'}. This can be done because the cross-spectrum is a conjugate symmetric quantity. A subset of channel pairs can be specified by the cfg.channelcmb option. If the default number of channel pairs is created (cfg.channelcmb = {'all' 'all'}) the total number of cross-spectra will be n(n-1)/2 (n being the number of channels in the data). As per request, using the cfg.keeptrials and cfg.keeptapers options, you can get an estimate for each single trial / taper. The convention used in FieldTrip to obtain the cross-spectrum in relation to the labeled combination of channels is the following: C = Fa * conj(Fb), where Fa and Fb are the Fourier transforms of channel a and channel b, and conj means the conjugate. The corresponding labelcmb will in this case be {'a' 'b'}, so the second column always represents the channel from which the conjugate was taken.
 
   
-  cfg.output = 'fourier';
+    cfg.output = 'fourier';
 
 The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like thi
 
   
-  freq = 
+    freq = 
   
               label: {2x1 cell}
              dimord: 'rpttap_chan_freq'
@@ -76,7 +76,7 @@ Note that the 'powspctrm' is actually nothing else than the cross-spectrum betwe
 Using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** on frequency domain data containing fourier-spectra, without specifying cfg.channelcmb will result in yet another representation of (bivariate) frequency domain data.
 
   
-  coh = 
+    coh = 
   
           label: {2x1 cell}
          dimord: 'chan_chan_freq'
@@ -92,7 +92,7 @@ Note that this representation lacks a 'labelcmb' field, and that the 'dimord' is
 It is possible (but not recommended for non-expert users) to toggle between the different representations using **[ft_checkdata](/reference/ft_checkdata)** in combination with the key 'cmbrepresentation'. For exampl
 
   
-  freq = 
+    freq = 
   
               label: {2x1 cell}
              dimord: 'rpttap_chan_freq'
@@ -105,7 +105,7 @@ It is possible (but not recommended for non-expert users) to toggle between the 
   >> freqnew=ft_checkdata(freq,'cmbrepresentation','full');
   >> freqnew
   
-  freqnew = 
+    freqnew = 
   
           label: {2x1 cell}
          dimord: 'rpt_chan_chan_freq'
@@ -121,7 +121,7 @@ or
   >> freqnew=ft_checkdata(freq,'cmbrepresentation','sparsewithpow');
   >> freqnew
   
-  freqnew = 
+    freqnew = 
   
           label: {2x1 cell}
          dimord: 'rpt_chan_freq'
@@ -137,7 +137,7 @@ or
   >> freqnew=ft_checkdata(freq,'cmbrepresentation','sparsewithpow','channelcmb',{'signal001' 'signal002'});
   >> freqnew
   
-  freqnew = 
+    freqnew = 
   
           label: {2x1 cell}
          dimord: 'rpt_chan_freq'

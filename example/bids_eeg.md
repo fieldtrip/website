@@ -36,15 +36,15 @@ It is important that you use appropriate tools. Command line utilities are very 
 
 ### Step 1a: create empty directory structure
 
-  BIDSROOT=$HOME/example
+    BIDSROOT=$HOME/example
 
-  mkdir -p $BIDSROOT/code
-  mkdir -p $BIDSROOT/stimuli
-  mkdir -p $BIDSROOT/sourcedata
+    mkdir -p $BIDSROOT/code
+    mkdir -p $BIDSROOT/stimuli
+    mkdir -p $BIDSROOT/sourcedata
 
-  for SUB in 01 02 03 04 05 06 07 08 09 10; do
-  mkdir -p $BIDSROOT/sub-$SUB/eeg
-  done
+    for SUB in 01 02 03 04 05 06 07 08 09 10; do
+    mkdir -p $BIDSROOT/sub-$SUB/eeg
+    done
 
 ### Step 2a: copy the EEG data to the BIDS organization
 
@@ -52,24 +52,24 @@ The original data gets copied and renamed to the location in the BIDS structure.
 
 In this case it is not needed to convert the data, since the EEGLAB .set format is explicitly allowed according to the BIDS standard (although BrainVision and EDF are preferred).  
 
-  BIDSROOT=$HOME/example
-  SOURCEDATA=$BIDSROOT/sourcedata
+    BIDSROOT=$HOME/example
+    SOURCEDATA=$BIDSROOT/sourcedata
 
-  cd $SOURCEDATA
-  wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
+    cd $SOURCEDATA
+    wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
 
-  TASK=something
+    TASK=something
 
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-01/eeg/sub-01_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-02/eeg/sub-02_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-03/eeg/sub-03_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-04/eeg/sub-04_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-05/eeg/sub-05_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-06/eeg/sub-06_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-07/eeg/sub-07_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-08/eeg/sub-08_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
-  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-01/eeg/sub-01_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-02/eeg/sub-02_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-03/eeg/sub-03_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-04/eeg/sub-04_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-05/eeg/sub-05_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-06/eeg/sub-06_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-07/eeg/sub-07_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-08/eeg/sub-08_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
+    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
 
 ### Step 3a: create the sidecar files for each subject
 
@@ -77,11 +77,11 @@ The **[data2bids](/reference/data2bids)** function will read each EEG recording 
 
   %% this is an example that starts with data in a supported format
 
-  bidsroot = fullfile(getenv('HOME'), 'example');
-  subject  = dir(fullfile(bidsroot, 'sub-*'));
-  subject  = {subject.name};
+    bidsroot = fullfile(getenv('HOME'), 'example');
+    subject  = dir(fullfile(bidsroot, 'sub-*'));
+    subject  = {subject.name};
 
-  for i=1:numel(subject)
+    for i=1:numel(subject)
 
     anat = dir(fullfile(bidsroot, subject{i}, 'anat', '*.nii'));
     func = dir(fullfile(bidsroot, subject{i}, 'func', '*.nii'));
@@ -121,7 +121,7 @@ The **[data2bids](/reference/data2bids)** function will read each EEG recording 
       data2bids(cfg)
 
     end % for each dataset
-  end % for each subject
+    end % for each subject
 
 ### Step 4a: create the general sidecar files
 
@@ -148,13 +148,13 @@ Throughout the development of the scripts and and after having completed the con
 
   BIDSROOT=$HOME/example
 
-  mkdir -p $BIDSROOT/code
-  mkdir -p $BIDSROOT/stimuli
-  mkdir -p $BIDSROOT/sourcedata
+    mkdir -p $BIDSROOT/code
+    mkdir -p $BIDSROOT/stimuli
+    mkdir -p $BIDSROOT/sourcedata
 
-  for SUB in 01 02 03 04 05 06 07 08 09 10; do
-  mkdir -p $BIDSROOT/sub-$SUB/eeg
-  done
+    for SUB in 01 02 03 04 05 06 07 08 09 10; do
+    mkdir -p $BIDSROOT/sub-$SUB/eeg
+    done
 
 ### Step 2b: copy the EEG data for all participants
 
@@ -163,20 +163,20 @@ Here I am copying the single example file to each of the subjects. This would no
   BIDSROOT=$HOME/example
   SOURCEDATA=$BIDSROOT/sourcedata
 
-  cd $SOURCEDATA
-  wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
+    cd $SOURCEDATA
+    wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
 
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant01.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant02.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant03.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant04.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant05.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant06.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant07.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant08.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant09.set
-  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
-  rm $SOURCEDATA/Eeglab_data.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant01.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant02.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant03.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant04.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant05.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant06.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant07.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant08.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant09.set
+    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
+    rm $SOURCEDATA/Eeglab_data.set
 
 ### Step 3b: convert the data and create the sidecar files for each subject
 
@@ -188,10 +188,10 @@ In principle converting the data is not needed, since EEGLAB .set is also one of
 
   %% this is an example that converts the EEG data to BrainVision format
 
-  bidsroot   = fullfile(getenv('HOME'), 'example');
-  sourcedata = fullfile(bidsroot, 'sourcedata');
+    bidsroot   = fullfile(getenv('HOME'), 'example');
+    sourcedata = fullfile(bidsroot, 'sourcedata');
 
-  dataset = {
+    dataset = {
     fullfile(sourcedata, 'participant01.set')
     fullfile(sourcedata, 'participant02.set')
     fullfile(sourcedata, 'participant03.set')
@@ -204,10 +204,10 @@ In principle converting the data is not needed, since EEGLAB .set is also one of
     fullfile(sourcedata, 'participant10.set')
     };
 
-  nsubj = 10;
-  task = 'something';
+    nsubj = 10;
+    task = 'something';
 
-  for i=1:nsubj
+    for i=1:nsubj
 
     cfg = [];
     cfg.dataset                     = dataset{i};
@@ -230,7 +230,7 @@ In principle converting the data is not needed, since EEGLAB .set is also one of
 
     data2bids(cfg)
 
-  end % for each dataset
+    end % for each dataset
 
 ### Step 4b: create the general sidecar files
 

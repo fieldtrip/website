@@ -27,14 +27,14 @@ The "colin27" anatomical MRI and its relation to the TT and MNI template atlas i
 
 
   One of the MNI lab members, Colin Holmes, was scanned 27 times, and
-  the scans were coregistered and averaged to create a very high
-  detail MRI dataset of one brain. This average was also matched to
-  the MNI305, to create the image known as "colin27". colin27 is used
-  in the MNI brainweb simulator. SPM96 used colin27 as its standard
-  template. [...] SPM96 and later contains a 2mm resolution copy of
-  the same image, in the canonical directory of the SPM distribution.
+    the scans were coregistered and averaged to create a very high
+    detail MRI dataset of one brain. This average was also matched to
+    the MNI305, to create the image known as "colin27". colin27 is used
+    in the MNI brainweb simulator. SPM96 used colin27 as its standard
+    template. [...] SPM96 and later contains a 2mm resolution copy of
+    the same image, in the canonical directory of the SPM distribution.
   In SPM96 this is called T1 in later distributions it is called
-  single_subj_T1.
+    single_subj_T1.
 
 The original construction of the averaged MRI is detailed in
 [[http://www.ncbi.nlm.nih.gov/pubmed/9530404|
@@ -57,7 +57,7 @@ You can visualize it with
 
   >> skin = ft_read_headshape('standard_skin_14038.vol')
 
-  skin =
+    skin =
        pnt: [14038x3 double]
        fid: [1x1 struct]
        tri: [28072x3 double]

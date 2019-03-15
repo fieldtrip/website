@@ -28,18 +28,18 @@ The bin file contains the data samples as double precision floating point values
 Below is an example how you can convert an arbitrary file (here a BCI2000 file) to the fcdc_matbin format.
 
 
-  hdr = ft_read_header('eeg1_2.dat');
-  dat = ft_read_data('eeg1_2.dat', 'header', hdr);
+    hdr = ft_read_header('eeg1_2.dat');
+    dat = ft_read_data('eeg1_2.dat', 'header', hdr);
 
   >> whos dat hdr
     Name       Size                  Bytes  Class     Attributes
     dat       64x19696            10084352  double              
     hdr        1x1                  128768  struct   
 
-  ft_write_data('test.bin', dat, 'header', hdr, 'dataformat', 'fcdc_matbin');
+    ft_write_data('test.bin', dat, 'header', hdr, 'dataformat', 'fcdc_matbin');
 
   >> ls test.*
-  test.bin  test.mat
+    test.bin  test.mat
 
 You can read the fcdc_matbin file just like any other file format in FieldTrip, i.e. by using the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** function. For **[ft_preprocessing](/reference/ft_preprocessing)** you can specify the name of the dataset like this
 

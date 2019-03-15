@@ -245,25 +245,25 @@ The DAC conversion in the Eyelink system takes some time, and therefore the UADC
 Since both MEG and Eyelink get the same triggers, you can use FieldTrip **[ft_definetrial](/reference/ft_definetrial)** on both to read the same segments.
 
 
-  cfg = [];
-  cfg.dataset = filename_meg;
-  cfg.trialdef.eventtype      = 'UPPT001';
-  cfg.channel = {'UADC*', 'MEG', 'EEG'}; % read all relevant channels
-  cfg.trialdef.eventvalue     = 104;
-  cfg.trialdef.prestim        = .5;
-  cfg.trialdef.poststim       = 1;
-  cfg.continuous  = 'yes';
-  cfg = ft_definetrial(cfg);
-  data_meg = ft_preprocessing(cfg);
+    cfg = [];
+    cfg.dataset = filename_meg;
+    cfg.trialdef.eventtype      = 'UPPT001';
+    cfg.channel = {'UADC*', 'MEG', 'EEG'}; % read all relevant channels
+    cfg.trialdef.eventvalue     = 104;
+    cfg.trialdef.prestim        = .5;
+    cfg.trialdef.poststim       = 1;
+    cfg.continuous  = 'yes';
+    cfg = ft_definetrial(cfg);
+    data_meg = ft_preprocessing(cfg);
 
-  cfg = [];
-  cfg.dataset = filename_eye;
-  cfg.trialdef.eventtype      = 'INPUT';
-  cfg.trialdef.eventvalue     = 104;
-  cfg.trialdef.prestim        = .5;
-  cfg.trialdef.poststim       = 1;
-  cfg = ft_definetrial(cfg);
-  data_eye = ft_preprocessing(cfg);
+    cfg = [];
+    cfg.dataset = filename_eye;
+    cfg.trialdef.eventtype      = 'INPUT';
+    cfg.trialdef.eventvalue     = 104;
+    cfg.trialdef.prestim        = .5;
+    cfg.trialdef.poststim       = 1;
+    cfg = ft_definetrial(cfg);
+    data_eye = ft_preprocessing(cfg);
 
 
 and plot them side by side

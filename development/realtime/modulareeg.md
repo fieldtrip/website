@@ -19,7 +19,7 @@ We provide two standalone tools (see ''realtime/src/acquisition/modeeg'' and ''r
 You would then call the application like thi
 
   
-  modeeg2ft COM5: config.txt  nameOfGDF  localhost  1972
+    modeeg2ft COM5: config.txt  nameOfGDF  localhost  1972
 
 where ''COM5:'' is the serial port on which the amplifier is connected (use something like ''/dev/ttyS0'' on Linux), ''config.txt'' is the name of the configuration file, ''nameOfGDF'' is the name of the GDF file where data should be saved to (extension ''.gdf'' will be added automatically), and ''localhost'' and ''1972'' are the address and port number of the buffer server (actually, these are the defaults for the last two arguments, so you can leave them out). In case you want to have the buffer server
 inside this application, replace the hostname by a minus (-).
@@ -27,7 +27,7 @@ inside this application, replace the hostname by a minus (-).
 The second tool is called **modeeg2ft_2chn** and is basically a simplication of **modeeg2ft**: For this, always two channels are read, and there is no need for a configuration file. Just call for example
 
   
-  modeeg2ft_2chn COM5:  nameOfGDF  localhost  1972
+    modeeg2ft_2chn COM5:  nameOfGDF  localhost  1972
 
 If you don't want to save data to GDF, you can replace the second argument (''nameOfGdf'') by a minus (-).
 
@@ -76,7 +76,7 @@ The page <http://openeeg.sourceforge.net/doc/modeeg/firmware/modeeg-p2.c> descri
   // using 1 start bit, 8 data bits, 1 stop bit, no parity, 57600 bits per second.
   // Minimial transmission speed is 256Hz * sizeof(modeeg_packet) * 10 = 43520 bps.
   
-  struct modeeg_packet
+    struct modeeg_packet
   {
     uint8_t   sync0;     // = 0xA5
     uint8_t   sync1;     // = 0x5A

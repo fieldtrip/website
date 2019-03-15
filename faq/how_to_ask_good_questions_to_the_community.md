@@ -68,7 +68,7 @@ My name is MyName MyLastname and I am working in the BigBoss lab in MyCity on in
 I tried using ft_functionname to assess spatio-temporal aspects of my data. When I call ft_functionname, I expect to get a structure with several fields, which I can subsequently plot using ft_XXXplot. However, I receive the following error messag
 
   ??? In an assignment  A(:) = B, the number of elements in A and B
-  must be the same.
+    must be the same.
   Error in ==> ft_functionname at 23
       data.time(cfg.time) = time;
 

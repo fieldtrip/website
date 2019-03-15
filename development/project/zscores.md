@@ -86,8 +86,8 @@ The data should be of the for
 *  phys is the physiological signal, consisting of a 'constant' (e.g. alpha oscillation) modulated by a slow drift
 *  noise is the 'real' external noise, which is random
 
-  phys  = phys_constant + phys_noise * lambda_phys
-  noise = random_noise  * lambda_ext
+    phys  = phys_constant + phys_noise * lambda_phys
+    noise = random_noise  * lambda_ext
 
 *  lambda_phys and lambda_ext are scaling factors for the physiological and external noise, resp.
 

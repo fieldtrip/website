@@ -28,7 +28,7 @@ A: All inverse methods in FieldTrip are independent from the forward model, i.e.
 First create and store the system matrix in output file data.h
 
   # Example of linux shell comman
-  elecsfwd --img smri-seghead --electrodes electrodes.h5 --data data.h5 --contable  ../../data/conductivity/contable.csv --TOL 1e-8'
+    elecsfwd --img smri-seghead --electrodes electrodes.h5 --data data.h5 --contable  ../../data/conductivity/contable.csv --TOL 1e-8'
 
 The smri-seghead file is the name of a analyze format file (.hdr, .img) which contains the segmentations with the assigned tissue values (e.g. gray matter = 1, white matter =2, or single sphere = 1).
 

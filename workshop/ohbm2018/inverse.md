@@ -26,37 +26,37 @@ To calculate distributed neuronal activation we will use the minimum-norm estima
 
 For this tutorial you should have already computed everything need in advance.
 
-  load elec
-  load headmodel_fem_eeg_tr
-  load leadfield_fem_eeg
-  load mri_resliced
-  load EEG_avg
-  load MEG_avg
-  load mesh_surf
+    load elec
+    load headmodel_fem_eeg_tr
+    load leadfield_fem_eeg
+    load mri_resliced
+    load EEG_avg
+    load MEG_avg
+    load mesh_surf
 
 If you can use duneuro you should already computed this files. If not you can load them here.
 
-  load leadfield_fem_meg
+    load leadfield_fem_meg
 
 ### EEG
 
 We start with a grid search. In our case, this should be enough. The resolution of the source model is fine enough so that a further nonlinear fitting is not necessary.
 
   % Dipole fit
-  cfg = [];
-  cfg.numdipoles    = 1;                              %number of expected
-  cfg.headmodel     = headmodel_fem_eeg_tr;           %the head model
-  cfg.grid          = leadfield_fem_eeg;              %the precomputed leadfield
-  cfg.nonlinear     = 'no';                           %only dipole scan
-  cfg.elec          = elec;                           %the electrode model
-  cfg.latency       = 0.025;                          %the latency of interest
-  dipfit_fem_eeg    = ft_dipolefitting(cfg,EEG_avg);
+    cfg = [];
+    cfg.numdipoles    = 1;                              %number of expected
+    cfg.headmodel     = headmodel_fem_eeg_tr;           %the head model
+    cfg.grid          = leadfield_fem_eeg;              %the precomputed leadfield
+    cfg.nonlinear     = 'no';                           %only dipole scan
+    cfg.elec          = elec;                           %the electrode model
+    cfg.latency       = 0.025;                          %the latency of interest
+    dipfit_fem_eeg    = ft_dipolefitting(cfg,EEG_avg);
 
 A quick look dipfit_bem.dip gives us information about the dipole fit. Especially a low residual variance (rv) shows us that the fitted dipole quite well explains the data.
 
-  dipfit_fem_eeg.dip
+    dipfit_fem_eeg.dip
 
-  ans =
+    ans =
 
        pos: [10 26 90]       %dipole position
        mom: [3x1 double]     %dipole moment
@@ -69,9 +69,9 @@ A quick look dipfit_bem.dip gives us information about the dipole fit. Especiall
 And we visualize the dipole and see where it was localized in the brain.
 
   %Visualise dipole fit
-  ft_plot_mesh(mesh_surf(3));
-  alpha 0.7;
-  ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
+    ft_plot_mesh(mesh_surf(3));
+    alpha 0.7;
+    ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
 
 {% include image src="/assets/img/workshop/ohbm2018/inverse/ohbm_sep_dipfit_simbio_top.png" width="500" %}
 {% include image src="/assets/img/workshop/ohbm2018/inverse/ohbm_sep_dipfit_simbio_side.png" width="500" %}
@@ -87,20 +87,20 @@ Be aware that this step only works, if you can use Duneuro. Otherwise just load 
 {% include markup/end %}
 
   % Dipole fit
-  cfg = [];
-  cfg.numdipoles    = 1;                              %number of expected
-  cfg.headmodel     = headmodel_fem_meg_tr;           %the head model
-  cfg.grid          = leadfield_fem_meg;              %the precomputed leadfield
-  cfg.nonlinear     = 'no';                           %only dipole scan
-  cfg.grad          = grad;                           %the electrode model
-  cfg.latency       = 0.025;                          %the latency of interest
-  dipfit_fem_meg    = ft_dipolefitting(cfg,MEG_avg);
+    cfg = [];
+    cfg.numdipoles    = 1;                              %number of expected
+    cfg.headmodel     = headmodel_fem_meg_tr;           %the head model
+    cfg.grid          = leadfield_fem_meg;              %the precomputed leadfield
+    cfg.nonlinear     = 'no';                           %only dipole scan
+    cfg.grad          = grad;                           %the electrode model
+    cfg.latency       = 0.025;                          %the latency of interest
+    dipfit_fem_meg    = ft_dipolefitting(cfg,MEG_avg);
 
 Again we look at dipfit_bem.dip to see the information about the reconstructed dipole. The residual variance again is very low.
 
-  dipfit_fem_meg.dip
+    dipfit_fem_meg.dip
 
-  ans =
+    ans =
 
        pos: [14 52 90]         %dipole position
        mom: [3x1 double]       %dipole moment
@@ -112,9 +112,9 @@ Again we look at dipfit_bem.dip to see the information about the reconstructed d
 And we visualize the dipole and see where it was localized in the brain.
 
   %Visualise dipole fit
-  ft_plot_mesh(mesh_surf(3));
-  alpha 0.7;
-  ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
+    ft_plot_mesh(mesh_surf(3));
+    alpha 0.7;
+    ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
 {% include image src="/assets/img/workshop/ohbm2018/inverse/ohbm_sep_dipfit_duneuro_top.png" width="500" %}
 {% include image src="/assets/img/workshop/ohbm2018/inverse/ohbm_sep_dipfit_duneuro_side.png" width="500" %}
@@ -123,9 +123,9 @@ And we visualize the dipole and see where it was localized in the brain.
 
 ### Comparison of EEG and MEG
 
-  ft_plot_mesh(mesh_surf(3));alpha 0.7;
-  ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
-  ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
+    ft_plot_mesh(mesh_surf(3));alpha 0.7;
+    ft_plot_dipole(dipfit_fem_eeg.dip.pos(1,:), mean(dipfit_fem_eeg.dip.mom(1:3,:),2), 'color', 'b','unit','mm')
+    ft_plot_dipole(dipfit_fem_meg.dip.pos(1,:), mean(dipfit_fem_meg.dip.mom(1:3,:),2), 'color', 'r','unit','mm')
 
 {% include image src="/assets/img/workshop/ohbm2018/inverse/ohbm_sep_combined_top.png" width="500" %}
 {% include image src="/assets/img/workshop/ohbm2018/inverse/ohbm_sep_combined_side.png" width="500" %}
@@ -136,28 +136,28 @@ And we visualize the dipole and see where it was localized in the brain.
 
 We now start with a MNE in EEG.
 
-  cfg                     = [];
-  cfg.method              = 'mne';                    %specify minimum norm estimate as method
-  cfg.latency             = 0.025;                    %latency of interest
-  cfg.grid                = leadfield_fem_eeg;        %the precomputed leadfield
-  cfg.headmodel           = headmodel_fem_eeg_tr;     %the head model
-  cfg.mne.prewhiten       = 'yes';                    %prewhiten data
-  cfg.mne.lambda          = 0.1;                      %regularisation parameter
-  cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
-  minimum_norm_eeg        = ft_sourceanalysis(cfg,EEG_avg);
+    cfg                     = [];
+    cfg.method              = 'mne';                    %specify minimum norm estimate as method
+    cfg.latency             = 0.025;                    %latency of interest
+    cfg.grid                = leadfield_fem_eeg;        %the precomputed leadfield
+    cfg.headmodel           = headmodel_fem_eeg_tr;     %the head model
+    cfg.mne.prewhiten       = 'yes';                    %prewhiten data
+    cfg.mne.lambda          = 0.1;                      %regularisation parameter
+    cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
+    minimum_norm_eeg        = ft_sourceanalysis(cfg,EEG_avg);
 
 For the purpose of visualization, we interpolate the MNE results onto the replaced anatomical MRI.
 
-  cfg            = [];
-  cfg.parameter  = 'avg.pow';
-  interpolate    = ft_sourceinterpolate(cfg, minimum_norm_eeg , mri_resliced);
+    cfg            = [];
+    cfg.parameter  = 'avg.pow';
+    interpolate    = ft_sourceinterpolate(cfg, minimum_norm_eeg , mri_resliced);
 
 
 
-  cfg = [];
-  cfg.method        = 'ortho';
-  cfg.funparameter  = 'pow';
-  ft_sourceplot(cfg,interpolate);
+    cfg = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'pow';
+    ft_sourceplot(cfg,interpolate);
 
 {% include image src="/assets/img/workshop/ohbm2018/inverse/mne_eeg.png" width="700" %}
 
@@ -165,28 +165,28 @@ For the purpose of visualization, we interpolate the MNE results onto the replac
 
 #### MEG
 
-  cfg                     = [];
-  cfg.method              = 'mne';                    %specify minimum norm estimate as method
-  cfg.latency             = 0.025;                    %latency of interest
-  cfg.grid                = leadfield_fem_meg;        %the precomputed leadfield
-  cfg.headmodel           = headmodel_fem_meg_tr;     %the head model
-  cfg.mne.prewhiten       = 'yes';                    %prewhiten data
-  cfg.mne.lambda          = 0.1;                      %regularisation parameter
-  cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
-  minimum_norm_meg        = ft_sourceanalysis(cfg,MEG_avg);
+    cfg                     = [];
+    cfg.method              = 'mne';                    %specify minimum norm estimate as method
+    cfg.latency             = 0.025;                    %latency of interest
+    cfg.grid                = leadfield_fem_meg;        %the precomputed leadfield
+    cfg.headmodel           = headmodel_fem_meg_tr;     %the head model
+    cfg.mne.prewhiten       = 'yes';                    %prewhiten data
+    cfg.mne.lambda          = 0.1;                      %regularisation parameter
+    cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
+    minimum_norm_meg        = ft_sourceanalysis(cfg,MEG_avg);
 
 For the purpose of visualization, we interpolate the MNE results onto the replaced anatomical MRI.
 
-  cfg            = [];
-  cfg.parameter  = 'avg.pow';
-  interpolate    = ft_sourceinterpolate(cfg, minimum_norm_meg , mri_resliced);
+    cfg            = [];
+    cfg.parameter  = 'avg.pow';
+    interpolate    = ft_sourceinterpolate(cfg, minimum_norm_meg , mri_resliced);
 
 
 
-  cfg = [];
-  cfg.method        = 'ortho';
-  cfg.funparameter  = 'pow';
-  ft_sourceplot(cfg,interpolate);
+    cfg = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'pow';
+    ft_sourceplot(cfg,interpolate);
 
 {% include image src="/assets/img/workshop/ohbm2018/inverse/mne_meg.png" width="700" %}
 

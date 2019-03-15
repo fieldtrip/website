@@ -17,9 +17,9 @@ An example volume structure is
 
 
   % read in the tutorial MRI data
-  mri = ft_read_mri('Subject01.mri');
+    mri = ft_read_mri('Subject01.mri');
 
-  disp(mri)
+    disp(mri)
 
          dim: [256 256 256]            % the size of the 3D volume in voxels
      anatomy: [256x256x256 int16]      % the numeric data, in this case anatomical information
@@ -33,8 +33,8 @@ This volume is already aligned to the 'ctf' head [coordinate system](/faq/how_ar
 When the anatomical data is plotted, the default behavior is to plot the anatomical data as it is in the **anatomy** field (without changing its orientation according to the transformation matrix). This is the reason why anatomical data is sometimes plotted with the top of the head pointing downwards (figure 1).
 
 
-  cfg = [];
-  ft_sourceplot(cfg,mri)
+    cfg = [];
+    ft_sourceplot(cfg,mri)
 
 {% include image src="/assets/img/faq/how_change_mri_orientation_size_fov/mri.png" width="400" %}
 
@@ -45,11 +45,11 @@ When you call the **[ft_volumereslice](/reference/ft_volumereslice)** function o
 Plotting the resliced anatomical MRI results in a figure with the usually desired orientation of the head (Figure 2).
 
 
-  cfg  = [];
-  mrirs = ft_volumereslice(cfg,mri);
+    cfg  = [];
+    mrirs = ft_volumereslice(cfg,mri);
 
-  cfg = [];
-  ft_sourceplot(cfg,mrirs);
+    cfg = [];
+    ft_sourceplot(cfg,mrirs);
 
 {% include image src="/assets/img/faq/how_change_mri_orientation_size_fov/mrirs.png" %}
 

@@ -67,20 +67,20 @@ level = {
 for isub=1:numel(subject)
 
   % find the 4 datasets for this subject
-  sel = find(startsWith(datainfo(:,1), subject{isub}));
-  num = numel(sel);
+    sel = find(startsWith(datainfo(:,1), subject{isub}));
+    num = numel(sel);
 
-  dataset           = datainfo(sel,1);    % keep this as cell-array with strings
-  sedation          = [datainfo{sel,2}];  % convert this to a numeric array
-  concentration     = [datainfo{sel,3}];
-  reactiontime      = [datainfo{sel,4}];
-  correctresponses  = [datainfo{sel,5}];
+    dataset           = datainfo(sel,1);    % keep this as cell-array with strings
+    sedation          = [datainfo{sel,2}];  % convert this to a numeric array
+    concentration     = [datainfo{sel,3}];
+    reactiontime      = [datainfo{sel,4}];
+    correctresponses  = [datainfo{sel,5}];
 
-  if num~=4
+    if num~=4
     error('inconsistent number of datasets for subject %s', subject{isub});
-  end
+    end
 
-  for i=1:4
+    for i=1:4
 
     % construct the output file name
     sub       = sprintf('sub-%s', subject{isub});
@@ -120,7 +120,7 @@ for isub=1:numel(subject)
 
     data2bids(cfg)
 
-  end % for 1 to 4
+    end % for 1 to 4
 
 end
 
@@ -137,27 +137,27 @@ end
 for isub=1:numel(subject)
 
   % find the 4 datasets for this subject
-  sel = find(startsWith(datainfo(:,1), subject{isub}));
-  num = numel(sel);
+    sel = find(startsWith(datainfo(:,1), subject{isub}));
+    num = numel(sel);
 
-  dataset           = datainfo(sel,1);    % keep this as cell-array with strings
-  sedation          = [datainfo{sel,2}];  % convert this to a numeric array
-  concentration     = [datainfo{sel,3}];
-  reactiontime      = [datainfo{sel,4}];
-  correctresponses  = [datainfo{sel,5}];
+    dataset           = datainfo(sel,1);    % keep this as cell-array with strings
+    sedation          = [datainfo{sel,2}];  % convert this to a numeric array
+    concentration     = [datainfo{sel,3}];
+    reactiontime      = [datainfo{sel,4}];
+    correctresponses  = [datainfo{sel,5}];
 
-  sub       = sprintf('sub-%s', subject{isub});
-  filename = fullfile(bidsroot, sub, [sub '_scans.tsv']);
+    sub       = sprintf('sub-%s', subject{isub});
+    filename = fullfile(bidsroot, sub, [sub '_scans.tsv']);
 
-  t = readtable(filename, 'FileType', 'text', 'Delimiter', '\t');
+    t = readtable(filename, 'FileType', 'text', 'Delimiter', '\t');
 
   % add the subject-specific information
-  t.sedation       = level(sedation);
-  t.concentration  = concentration(:);
-  t.reactiontime  = reactiontime(:);
-  t.correctresponses = correctresponses(:);
+    t.sedation       = level(sedation);
+    t.concentration  = concentration(:);
+    t.reactiontime  = reactiontime(:);
+    t.correctresponses = correctresponses(:);
 
-  writetable(t, filename, 'FileType', 'text', 'Delimiter', '\t');
+    writetable(t, filename, 'FileType', 'text', 'Delimiter', '\t');
 
 end
 

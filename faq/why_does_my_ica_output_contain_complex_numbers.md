@@ -11,15 +11,15 @@ This might occur when you have EEG data which is re-referenced using the common 
 
 The following shows how to exclude the reference channel, before calling ft_componentanalysis:
 
-  cfg = [];
-  cfg.channel = {'all', '-refchan'};
-  test = ft_componentanalysis(cfg, data);
+    cfg = [];
+    cfg.channel = {'all', '-refchan'};
+    test = ft_componentanalysis(cfg, data);
 
 Or, alternatively, if you want to keep all the channels:
 
-  cfg = [];
-  cfg.runica.pca = 99;     % channel number minus the number of dependent channels, in case of the example above 100-1=99
-  test = ft_componentanalysis(cfg, data);
+    cfg = [];
+    cfg.runica.pca = 99;     % channel number minus the number of dependent channels, in case of the example above 100-1=99
+    test = ft_componentanalysis(cfg, data);
 
 This returns 99 components, and after back projection gives you again your 100 channels, which can be useful for plotting/interpretation purposes. The last snippet of code can in general be applied. So, when having Neuromag MaxFiltered data with a rank of 60, the `cfg.runica.pca` argument should be set to 60 (or less).
 

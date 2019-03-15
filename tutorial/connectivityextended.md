@@ -31,7 +31,7 @@ This tutorial consists of three part
 
 ### Project along the strongest dipole direction
 
-The virtual channel data just computed has three channels per location. These correspond to the three orientations of the dipole in a single voxel. The interpretation of connectivity is facilitated if we can compute it between plain channels rather than between triplets of channels. Therefore we will project the time-series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
+The virtual channel data just computed has three channels per location. These correspond to the three orientations of the dipole in a single voxel. The interpretation of connectivity is facilitated if we can compute it between plain channels rather than between triplets of channels. Therefore we will project the time series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
 
     visualTimeseries = cat(2, gam_pow_data.trial{:});
     motorTimeseries = cat(2, coh_lft_data.trial{:});
@@ -40,7 +40,7 @@ The virtual channel data just computed has three channels per location. These co
 
 Matrices u1 and u2 contain the spatial decomposition, matrices v1 and v2 the temporal and on the diagonal of matrices s1 and s2 you can find the eigenvalues. See "help svd" for more details.
 
-We now recompute the virtual channel time-series, but now only for the dipole direction that has the most power.
+We now recompute the virtual channel time series, but now only for the dipole direction that has the most power.
 
     virtualchanneldata = [];
     virtualchanneldata.label = {'visual', 'motor'};

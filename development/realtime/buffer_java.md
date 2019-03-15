@@ -18,11 +18,11 @@ The directory ''realtime/src/buffer/java'' contains a couple of Java classes tha
 The following Java code example demonstrates how to use the interfac
 
   :::java
-  import java.io.*;
-  import java.nio.*;
-  import nl.fcdonders.fieldtrip.*;
+    import java.io.*;
+    import java.nio.*;
+    import nl.fcdonders.fieldtrip.*;
   
-  class testclient {
+    class testclient {
      public static void main(String[] args) throws IOException {
         String hostname = "localhost";
         int port = 1972;

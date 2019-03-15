@@ -14,20 +14,20 @@ This page describes how we do the conversion at the Donders Centre for Cognitive
 You don't have to use the CTF software to convert the DICOM images and to assign the coordinate system.  Please do refer to the pictures below for the definition of the fiducial locations, which have not changed.
 
   % read the DICOM files
-  mri = ft_read_mri('single_file_of_DICOM_series.IMA');
+    mri = ft_read_mri('single_file_of_DICOM_series.IMA');
 
   % or use a graphical file selection
   [f, p] = uigetfile('*');
-  mri = ft_read_mri(fullfile(p, f));
+    mri = ft_read_mri(fullfile(p, f));
 
   % Making sure you know which side is the right side (e.g. using the vitamin E marker),
   % assign the nasion (pressing "n"), left ("l") and right ("r") with the crosshairs on
   % the ear markers. Then finish with "q".
 
-  cfg = [];
-  cfg.method = 'interactive';
-  cfg.coordsys = 'ctf';
-  mri_realigned = ft_volumerealign(cfg,mri);
+    cfg = [];
+    cfg.method = 'interactive';
+    cfg.coordsys = 'ctf';
+    mri_realigned = ft_volumerealign(cfg,mri);
 
   % done!
 

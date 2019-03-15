@@ -40,12 +40,12 @@ Please note that if you are an end-user interested in analyzing experimental EEG
 The functions should be called as
 
 
-  outputdata = ft_connectivity_bct (inputdata, 'key1', value1, 'key2', value2, ....);
-  outputdata = ft_connectivity_corr(inputdata, 'key1', value1, 'key2', value2, ....);
-  outputdata = ft_connectivity_dtf (inputdata, 'key1', value1, 'key2', value2, ....);
-  outputdata = ft_connectivity_ppc (inputdata, 'key1', value1, 'key2', value2, ....);
-  outputdata = ft_connectivity_psi (inputdata, 'key1', value1, 'key2', value2, ....);
-  outputdata = ft_connectivity_wpli(inputdata, 'key1', value1, 'key2', value2, ....);
+    outputdata = ft_connectivity_bct (inputdata, 'key1', value1, 'key2', value2, ....);
+    outputdata = ft_connectivity_corr(inputdata, 'key1', value1, 'key2', value2, ....);
+    outputdata = ft_connectivity_dtf (inputdata, 'key1', value1, 'key2', value2, ....);
+    outputdata = ft_connectivity_ppc (inputdata, 'key1', value1, 'key2', value2, ....);
+    outputdata = ft_connectivity_psi (inputdata, 'key1', value1, 'key2', value2, ....);
+    outputdata = ft_connectivity_wpli(inputdata, 'key1', value1, 'key2', value2, ....);
 
 The inputdata consists of a matrix of one of the following dimensionalitie
 
@@ -57,7 +57,7 @@ where Nrpt can be singleton. Additional arguments come in key-value pairs and de
 One exception to the API described above i
 
 
-  outputdata = ft_connectivity_granger(H, Z, S, key1, value1, ...);
+    outputdata = ft_connectivity_granger(H, Z, S, key1, value1, ...);
 
 Spectrally resolved granger causality is a function of both the spectral transfer function (H) and the covariance of the noise (Z). For computational reasons, the cross-spectral density is also a required input argument for the function.
 

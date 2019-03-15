@@ -28,7 +28,7 @@ This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was 
 
   >> afni = ft_read_atlas('fieldtrip/template/atlas/afni/TTatlas+tlrc.HEAD')
 
-  afni =
+    afni =
               dim: [161 191 141]
               hdr: [1x1 struct]
         transform: [4x4 double]
@@ -52,7 +52,7 @@ N. Tzourio-Mazoyer, B. Landeau, D. Papathanassiou, F. Crivello, O. Etard, N. Del
 
   >> aal = ft_read_atlas('fieldtrip/template/atlas/aal/ROI_MNI_V4.nii')
 
-  aal =
+    aal =
               dim: [91 109 91]
               hdr: [1x1 struct]
         transform: [4x4 double]
@@ -74,7 +74,7 @@ The discrete model is represented in a MATLAB .mat file as
 
   >> load brainweb_discrete
   >> disp(segmentation)
-  segmentation =
+    segmentation =
               dim: [181 217 181]
         transform: [4x4 double]
              unit: 'mm'
@@ -86,7 +86,7 @@ The fuzzy model is represented in a MATLAB .mat file as
   >> load brainweb_fuzzy
   >> disp(segmentation)
 
-  segmentation =
+    segmentation =
                   dim: [181 217 181]
             transform: [4x4 double]
                  unit: 'mm'
@@ -114,7 +114,7 @@ S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Z
 
   >> atlas = ft_read_atlas('fieldtrip/template/atlas/spm_anatomy/AllAreas_v17_MPM')
 
-  atlas =
+    atlas =
               dim: [151 188 154]
               hdr: [1x1 struct]
         transform: [4x4 double]
@@ -138,7 +138,7 @@ Cortex. Cerebral Cortex. 25: 3911-3931
 
   >> load ('fieldtrip/template/atlas/vtpm.mat')
 
-  vtpm =
+    vtpm =
 
               dim: [182 218 182]
               hdr: [1x1 struct]
@@ -148,11 +148,11 @@ Cortex. Cerebral Cortex. 25: 3911-3931
            tissue: [182x218x182 double]
          coordsys: 'mni'    
 
-  figure;
-  subplot(2,2,1);imagesc(vtpm.tissue(:,:,70))
-  subplot(2,2,2);imagesc(vtpm.tissue(:,:,80))
-  subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))
-  subplot(2,2,4);imagesc(vtpm.tissue(:,:,100))
+    figure;
+    subplot(2,2,1);imagesc(vtpm.tissue(:,:,70))
+    subplot(2,2,2);imagesc(vtpm.tissue(:,:,80))
+    subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))
+    subplot(2,2,4);imagesc(vtpm.tissue(:,:,100))
 
 {% include image src="/assets/img/template/atlas/vtpm.png" width="400" %}
 
@@ -167,9 +167,9 @@ Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., Yang, Z., Chu, C., Xie
 In FieldTrip, the atlas is included as a nifti file, complemented with a text file with the tissue labels. You can read it like thi
 
 
-  brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
+    brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
 
-  brainnetome =
+    brainnetome =
 
               dim: [145 173 145]
               hdr: [1x1 struct]
@@ -179,7 +179,7 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
          coordsys: 'mni'
       tissuelabel: {1x246 cell}
 
-  imagesc(brainnetome.tissue(:,:,68))
+    imagesc(brainnetome.tissue(:,:,68))
 
 {% include image src="/assets/img/template/atlas/brainnetome_atlas2.png" width="400" %}
 

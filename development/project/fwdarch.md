@@ -613,8 +613,8 @@ An example is reported belo
 
 The code used to generate the figure is:
 
-  seg = imdilate(seg,strel_bol(3));
-  figure,volplot(seg);
+    seg = imdilate(seg,strel_bol(3));
+    figure,volplot(seg);
 
 An example of the **imfill** function is given below. This is the case, for example, in which we want to fill the volume so that it constitutes a single entity. It results in being useful for [triangulation](#Triangulation methods), as explained in one of the techniques to obtain the outer-most surface (i.e. the skin).
 
@@ -622,8 +622,8 @@ An example of the **imfill** function is given below. This is the case, for exam
 
 The code used to generate the figure is:
 
-  seg = imfill(seg,'holes');
-  figure,volplot(seg);
+    seg = imfill(seg,'holes');
+    figure,volplot(seg);
 
 The same effect can be reached with the use of another morphology function: **bwlabeln**.
 This function classifies the cluster of neighboring voxels and attaches a label to them, so that different objects can be easily distinguished (and processed) in the successive steps.

@@ -37,13 +37,13 @@ The Neuralynx acquisition system provides the data in a format containing the ra
 An example of the configuration for spikesplitting is provided belo
 
 
-  cfg         = [];
-  cfg.dataset = 'recording.nrd';
-  cfg.output  = 'recording.sdma'; % output directory
-  cfg.latency = [0 inf];          % define the segment of the original data to split
-  cfg.format  = 'int32';
-  cfg.channel = 'all';
-  cfg         = ft_spikesplitting(cfg);
+    cfg         = [];
+    cfg.dataset = 'recording.nrd';
+    cfg.output  = 'recording.sdma'; % output directory
+    cfg.latency = [0 inf];          % define the segment of the original data to split
+    cfg.format  = 'int32';
+    cfg.channel = 'all';
+    cfg         = ft_spikesplitting(cfg);
 
 It is also important to note that:
 
@@ -142,16 +142,16 @@ Data sessions that had been subsequently split, downsampled and stored in Plexon
 Here, we will focused on how to read the Plexon dataset directories (*_ds*) which contain multiple .nex files. A basic configuration structure is provided belo
 
 
-  cfg = [];
-  cfg.dataset          = dataset;      % "_ds" dataset directory
-  cfg.dataformat       = 'plexon_ds';  % this is optional, and will be auto-detected
-  cfg.headerformat     = 'plexon_ds';  % this is optional, and will be auto-detected
-  cfg = ft_preprocessing(cfg)
+    cfg = [];
+    cfg.dataset          = dataset;      % "_ds" dataset directory
+    cfg.dataformat       = 'plexon_ds';  % this is optional, and will be auto-detected
+    cfg.headerformat     = 'plexon_ds';  % this is optional, and will be auto-detected
+    cfg = ft_preprocessing(cfg)
 
 The specification of the dataformat and headerformat options as *combined_ds* ensures that the appropriate low-level FieldTrip reading function will be called to read the multiple single-channel Plexon .nex files contained in the dataset directory. After preprocessing, we can obtain a data structure like thi
 
 
-  data =
+    data =
 
           hdr: [1x1 struct]
         label: {254x1 cell}
@@ -168,10 +168,10 @@ Neuralynx uses the expression **csc** (from *c*ontinuous *s*ampled *c*hannel) in
 All montage files for our particular experiment are available upon request. An example of changing the channel labels is provided belo
 
 
-  load kurt_montage_rename_plx2elec.mat
-  cfg = [];
-  cfg.montage = montage;
-  data = ft_preprocessing(cfg,data);
+    load kurt_montage_rename_plx2elec.mat
+    cfg = [];
+    cfg.montage = montage;
+    data = ft_preprocessing(cfg,data);
 
 It is important to note that to change labels in our recordings on Kurt, we use two montages structures. This is because recordings between sessions 17 and 60 headstages were inversely connected to the electrode connectors. In this case, the correct montage file to use is *kurt_montage_rename_plx2elec_17_60.mat*. After session number 60, headstages were correctly positioned. For later sessions therefore the montage file *kurt_montage_rename_plx2elec.mat* should be used. These files are available upon request.
 
@@ -190,10 +190,10 @@ In the following, we will show the layout structures that are currently used in 
 
 For example, a schematic layout of the 256 electrode grid might be obtained using the following the function **[ft_layoutplot](/reference/ft_layoutplot)*
 
-  load kurt_layout_schematic_common
-  cfg = [];
-  cfg.layout = ft_layout;
-  ft_layoutplot(cfg)
+    load kurt_layout_schematic_common
+    cfg = [];
+    cfg.layout = ft_layout;
+    ft_layoutplot(cfg)
 
 To obtain something like this:
 

@@ -18,8 +18,8 @@ Note that the MEG-PD toolbox will only function on 32-bit machines, and requires
 To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. In respect to FiedlTrip, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 
-  addpath `<full_path_to_fieldtrip>`
-  ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
 ## Reading MEG data
 
@@ -29,7 +29,7 @@ The first step is to see if you can read in the data using both the toolboxes by
   >> hdr = ft_read_header(filename); %your fif-filename
   >> hdr
 
-  hdr =
+    hdr =
 
             label: {317x1 cell}
            nChans: 317
@@ -47,7 +47,7 @@ The header contains a lot of information about the measurement parameters. In th
   >> dat = ft_read_data(filename);
   >> size(dat)
 
-  ans =
+    ans =
 
            317      396000
 

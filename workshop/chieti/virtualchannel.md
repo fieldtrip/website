@@ -438,7 +438,7 @@ With the covariance and the forward model for the specific seed points, we can c
 Look at the source structure, again in "source.avg". Can you find the representation of the spatial filter?
 {% include markup/end %}
 
-Using the spatial filters, we construct single-trial virtual channel time-series. This results in three channels. We can represent this data in the same fashion as the original raw data.
+Using the spatial filters, we construct single-trial virtual channel time series. This results in three channels. We can represent this data in the same fashion as the original raw data.
 
     cfg = [];
     cfg.channel = 'meg';
@@ -508,7 +508,7 @@ and we can compute the source-level time-frequency representation of the virtual
 
 ### Virtual channel connectivity
 
-The virtual channel time-series seem to be consistent with what we expect to happen in motor cortex around a movement. Using the time-frequency estimate, we can compute the imaginary coherence between the three seed region
+The virtual channel time series seem to be consistent with what we expect to happen in motor cortex around a movement. Using the time-frequency estimate, we can compute the imaginary coherence between the three seed region
 
     cfg = [];
     cfg.method = 'coh';

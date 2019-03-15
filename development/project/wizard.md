@@ -19,15 +19,15 @@ The idea is to make a graphical user interface that allows the user to step thro
   % In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time
   % of stimulus); however, the script reads the data from -1 s to 2.0
 
-  cfg                     = [];
-  cfg.dataset             = 'Subject01.ds';  
-  cfg.trialdef.eventtype  = 'backpanel trigger';
-  cfg.trialdef.prestim    = 1;
-  cfg.trialdef.poststim   = 2;
-  cfg.trialdef.eventvalue = 3;                     
-  cfg                     = definetrial(cfg);      
-  cfg.channel             = {'MEG'};
-  dataFIC                 = preprocessing(cfg);
+    cfg                     = [];
+    cfg.dataset             = 'Subject01.ds';  
+    cfg.trialdef.eventtype  = 'backpanel trigger';
+    cfg.trialdef.prestim    = 1;
+    cfg.trialdef.poststim   = 2;
+    cfg.trialdef.eventvalue = 3;                     
+    cfg                     = definetrial(cfg);      
+    cfg.channel             = {'MEG'};
+    dataFIC                 = preprocessing(cfg);
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   % Step 2: do the time-frequency analysis
@@ -40,22 +40,22 @@ The idea is to make a graphical user interface that allows the user to step thro
   % In the following step of the analysis a hanning window with length 500 ms is applied.
   % After that the result is plotted.
 
-  cfg              = [];
-  cfg.output       = 'pow';
-  cfg.channel      = 'MEG';
-  cfg.method       = 'mtmconvol';
-  cfg.taper        = 'hanning';
-  cfg.foi          = 2:2:30;
-  cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
-  cfg.toi          = -0.5:0.05:1.5;
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.channel      = 'MEG';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.foi          = 2:2:30;
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
+    cfg.toi          = -0.5:0.05:1.5;
   TFRhann          = freqanalysis(cfg, dataFIC);
 
-  cfg = [];
-  cfg.baseline    = [-0.5 -0.1];   
-  cfg.zlim        = [-3e-27 3e-27];          
-  cfg.showlabels  = 'yes';
-  cfg.layout      = 'CTF151.lay';
-  multiplotTFR(cfg, TFRhann);
+    cfg = [];
+    cfg.baseline    = [-0.5 -0.1];   
+    cfg.zlim        = [-3e-27 3e-27];          
+    cfg.showlabels  = 'yes';
+    cfg.layout      = 'CTF151.lay';
+    multiplotTFR(cfg, TFRhann);
 
 Using the wizard on this analalysis protocol would result in a graphical user interface like thi
 

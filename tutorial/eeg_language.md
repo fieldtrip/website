@@ -16,10 +16,10 @@ either clothing or vegetables.
 All main stimuli were coded with 3-digits, i.e. as 'Sxxx':
 
 - The first digit codes task/no task: _1_ for the non-target semantic categories: animals, tools and _2_ for the target semantic category:
-  clothing. The subjects' task was to press the button in response to clothing items, these targets were not analyzed in the main study.
+    clothing. The subjects' task was to press the button in response to clothing items, these targets were not analyzed in the main study.
 
 - The second digit codes the items, _1 to 4_ for animals (cow, bear, lion,
-  ape) and _5 to 8_ for tools (ax, scissors, comb, pen). There were also
+    ape) and _5 to 8_ for tools (ax, scissors, comb, pen). There were also
   4 target items (clothing).
 
 - The third digit codes the stimulus modality: _1_ for written words,

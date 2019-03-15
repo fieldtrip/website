@@ -22,8 +22,8 @@ There are some constraints related to the way that FieldTrip represents continuo
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 
-  addpath `<full_path_to_fieldtrip>`
-  ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
 ## Reading continuous data from a .ddt file
 
@@ -34,7 +34,7 @@ The .ddt format is a Plexon continuous data file optimized for continuous (strea
   Warning: creating fake channel names
   > In ft_read_header at 1273
 
-  hdr =
+    hdr =
            nChans: 2
                Fs: 40000
          nSamples: 534400
@@ -53,7 +53,7 @@ The .nex file format can contain continuous and spike data. To test the reading 
 
   >> hdr = ft_read_header('p021parall.nex')
 
-  hdr =
+    hdr =
                   nChans: 15
                       Fs: 1000
                 nSamples: 9463587
@@ -79,7 +79,7 @@ To read the spike data, you should use the **[ft_read_spike](/reference/ft_read_
 
   >> spike = ft_read_spike('p021parall.nex')
 
-  spike =
+    spike =
           label: {'sig001a'  'sig002a'  'sig003a'  'sig004a'}
        waveform: {1x4 cell}
            unit: {1x4 cell}

@@ -89,12 +89,12 @@ In order to compute leadfields, there are 9 main steps that have to be followed.
 
 First of all we have to load the data
 
-  mri_orig = ft_read_mri('ANTS14-0Years3T_head_bias_corrected.nii');
+    mri_orig = ft_read_mri('ANTS14-0Years3T_head_bias_corrected.nii');
 
 Visualize the MRI
 
-  cfg = [];
-  ft_sourceplot(cfg,mri_orig);
+    cfg = [];
+    ft_sourceplot(cfg,mri_orig);
 
 {% include image src="/assets/img/workshop/leuven2019/mri_orig.png" width="700" %}
 *Figure 2: Visualization of the MRI*
@@ -103,15 +103,15 @@ Visualize the MRI
 
 In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks + zpoint (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI. The zpoint is a point in the upper part of the head, it only serves to make sure that coordinate system is not upside down. It is important that all geometrical is expressed in the same coordinate system. This helps for coregistration of these data.
 
-  cfg = [];
-  cfg.method   = 'interactive';
-  cfg.coordsys = 'ctf';
-  mri_realigned = ft_volumerealign(cfg, mri_orig);
+    cfg = [];
+    cfg.method   = 'interactive';
+    cfg.coordsys = 'ctf';
+    mri_realigned = ft_volumerealign(cfg, mri_orig);
 
 We can visualize the realigned MRI
 
-  cfg = [];
-  ft_sourceplot(cfg, mri_realigned);
+    cfg = [];
+    ft_sourceplot(cfg, mri_realigned);
 
   {% include image src="/assets/img/workshop/leuven2019/mri_realigned.png" width="700" %}
   *Figure 3: Visualization of the realigned MRI*
@@ -120,13 +120,13 @@ We can visualize the realigned MRI
 
 Before we segment the MRI, we will first reslice the MRI. The reason why is that a segmentation works properly when the voxels of the anatomical images are homogenous.
 
-  cfg = [];
-  mri_resliced = ft_volumereslice(cfg, mri_realigned);
+    cfg = [];
+    mri_resliced = ft_volumereslice(cfg, mri_realigned);
 
 We can visualize the resliced MRI
 
-  cfg = [];
-  ft_sourceplot(cfg, mri_resliced);
+    cfg = [];
+    ft_sourceplot(cfg, mri_resliced);
 
 
 {% include image src="/assets/img/workshop/leuven2019/mri_resliced.png" width="700" %}
@@ -135,22 +135,22 @@ We can visualize the resliced MRI
 ###  4. Segment the MRI
 Now we can segment the 3 different tissues we are interested in for our head model
 
-  cfg = [];
-  cfg.output = {'brain','skull', 'scalp'};
-  mri_segmented_3_compartment = ft_volumesegment(cfg, mri_resliced);
+    cfg = [];
+    cfg.output = {'brain','skull', 'scalp'};
+    mri_segmented_3_compartment = ft_volumesegment(cfg, mri_resliced);
 
-  save mri_segmented_3_compartment mri_segmented_3_compartment
+    save mri_segmented_3_compartment mri_segmented_3_compartment
 
 Visualize the segmentation
 
-  seg_i = ft_datatype_segmentation(mri_segmented_3_compartment,'segmentationstyle','indexed');
+    seg_i = ft_datatype_segmentation(mri_segmented_3_compartment,'segmentationstyle','indexed');
 
-  cfg = [];
-  cfg.funparameter = 'seg';
-  cfg.funcolormap  = gray(4); % distinct color per tissue
-  cfg.location     = 'center';
-  cfg.atlas        = seg_i;   
-  ft_sourceplot(cfg, seg_i);
+    cfg = [];
+    cfg.funparameter = 'seg';
+    cfg.funcolormap  = gray(4); % distinct color per tissue
+    cfg.location     = 'center';
+    cfg.atlas        = seg_i;   
+    ft_sourceplot(cfg, seg_i);
 
 {% include image src="/assets/img/workshop/leuven2019/mri_segmented_bem.png" width="700" %}
 *Figure 4: 3 compartment segmentation output*
@@ -158,18 +158,18 @@ Visualize the segmentation
 ###  5. Create the mesh
 On the basis of the segmentation we can now create a geometrical description of the head as a mesh
 
-  cfg = [];
-  cfg.tissue      = {'brain','skull','scalp'};
-  cfg.numvertices = [3000 2000 1000];
-  mesh_bem = ft_prepare_mesh(cfg,mri_segmented_3_compartment);
+    cfg = [];
+    cfg.tissue      = {'brain','skull','scalp'};
+    cfg.numvertices = [3000 2000 1000];
+    mesh_bem = ft_prepare_mesh(cfg,mri_segmented_3_compartment);
 
 Visualize the mesh
 
-  figure, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
+    figure, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
-  ft_plot_mesh(mesh_bem(2),'surfaceonly','yes','vertexcolor','none','facecolor',...
+    ft_plot_mesh(mesh_bem(2),'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
-  ft_plot_mesh(mesh_bem(3),'surfaceonly','yes','vertexcolor','none','facecolor',...
+    ft_plot_mesh(mesh_bem(3),'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
 
 {% include image src="/assets/img/workshop/leuven2019/mesh_bem.png" width="700" %}
@@ -179,9 +179,9 @@ Visualize the mesh
 
 Now we are ready and to create the a head model on the basis of the mesh.
 
-  cfg = [];
-  cfg.method = 'dipoli'; % You can also specify 'bemcp', or another method.
-  headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
+    cfg = [];
+    cfg.method = 'dipoli'; % You can also specify 'bemcp', or another method.
+    headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
 
 {% include markup/danger %}
 In Windows the method 'dipoli' does not work. You can explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
@@ -191,24 +191,24 @@ In Windows the method 'dipoli' does not work. You can explore other BEM method l
 
 First we have to load a suitable electrode set. For this tutorial we will load a template dataset and transform it in such a way that it will fit the head surface.
 
-  elec = ft_read_sens('standard_1020.elc');
+    elec = ft_read_sens('standard_1020.elc');
 
 And now we will fit it to the head surface.
 
-  cfg = [];
-  cfg.method    = 'interactive';
-  cfg.elec      = elec;
-  cfg.headshape = headmodel_bem.bnd(3);
-  elec = ft_electroderealign(cfg);
+    cfg = [];
+    cfg.method    = 'interactive';
+    cfg.elec      = elec;
+    cfg.headshape = headmodel_bem.bnd(3);
+    elec = ft_electroderealign(cfg);
 
 Check the alignment visually.
 
-  figure;
-  ft_plot_axes(mesh_bem(1))
-  hold on;
-  ft_plot_mesh(mesh_bem,'surfaceonly','yes','vertexcolor','none','facecolor',...
+    figure;
+    ft_plot_axes(mesh_bem(1))
+    hold on;
+    ft_plot_mesh(mesh_bem,'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
-  ft_plot_sens(elec,'style', '.k');
+    ft_plot_sens(elec,'style', '.k');
 
 {% include image src="/assets/img/workshop/leuven2019/aligned.png" width="700" %}
 
@@ -218,18 +218,18 @@ Check the alignment visually.
 ###  8. Create the source model
 Before we are able to create the leadfields
 
-  cfg = [];
-  cfg.grid.resolution = 7.5;
-  cfg.threshold       = 0.1;
-  cfg.smooth          = 5;
-  cfg.headmodel       = headmodel_bem;
-  cfg.inwardshift     = 1; % shifts dipoles away from surfaces
-  sourcemodel = ft_prepare_sourcemodel(cfg, headmodel_bem);
+    cfg = [];
+    cfg.grid.resolution = 7.5;
+    cfg.threshold       = 0.1;
+    cfg.smooth          = 5;
+    cfg.headmodel       = headmodel_bem;
+    cfg.inwardshift     = 1; % shifts dipoles away from surfaces
+    sourcemodel = ft_prepare_sourcemodel(cfg, headmodel_bem);
 
 Visualize the source model
 
-  figure, ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:))
-  hold on, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
+    figure, ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:))
+    hold on, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
 
 {% include image src="/assets/img/workshop/leuven2019/sourcemodel_all.png" width="700" %}
@@ -243,11 +243,11 @@ save sourcemodel sourcemodel;
 We will now compute the lead field for every source in the source model.
 
 
-  cfg = [];
-  cfg.grid = sourcemodel;
-  cfg.headmodel  = headmodel_bem;
-  cfg.elec = elec;
-  leadfield_bem = ft_prepare_leadfield(cfg);
+    cfg = [];
+    cfg.grid = sourcemodel;
+    cfg.headmodel  = headmodel_bem;
+    cfg.elec = elec;
+    leadfield_bem = ft_prepare_leadfield(cfg);
 
 This is the last step for creating a forward model. We could now use the lead fields of each source to do the inverse modeling!
 
@@ -261,16 +261,16 @@ So far we only created a BEM volume conduction model. To create a FEM volume con
 
 Change Step 5 into
 
-  cfg = [];
-  cfg.tissue = {'brain','skull','scalp'};
-  cfg.method = 'hexahedral';
-  mesh_fem = ft_prepare_mesh(cfg,mri_segmented_3_compartment);
+    cfg = [];
+    cfg.tissue = {'brain','skull','scalp'};
+    cfg.method = 'hexahedral';
+    mesh_fem = ft_prepare_mesh(cfg,mri_segmented_3_compartment);
 
 and Step 6 into
 
-  cfg = [];
-  cfg.method = 'simbio'; % Unfortunately this is not available on Windows.
-  headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
+    cfg = [];
+    cfg.method = 'simbio'; % Unfortunately this is not available on Windows.
+    headmodel_bem = ft_prepare_headmodel(cfg, mesh_bem);
 
 #### Exercise 2
 

@@ -31,17 +31,17 @@ You need to start **ctf2ft_v2** before starting **Acq** so that the shared memor
 You have the option of spawning a [FieldTrip buffer](/development/realtime/buffer) server directly within **ctf2ft_v2**, using
 
 
-  ctf2ft_v2
+    ctf2ft_v2
 
 to use the default port 1972, or using (note the minus)
 
 
-  ctf2ft_v2 - port
+    ctf2ft_v2 - port
 
 to spawn at server at the given ''port''. You can also tell **ctf2ft_v2** to stream the data to a buffer provided by another application (possibly on another machine), using
 
 
-  ctf2ft_v2 hostname port
+    ctf2ft_v2 hostname port
 
 Please note that for this to work, you will need to start up the remote buffer *before* **ctf2ft_v2**.
 Once **ctf2ft_v2** is happily up and running, you can start **Acq** from a different command line or using existing GUI tools.
@@ -54,18 +54,18 @@ for up to 10 data packets and a simple (socket pair) mechanism to synchronize be
 The most recent interface, called **ctf2ft_v3**, does everything that version 2 does but has the additional ability to downsample the incoming CTF data, apply the correct sensor gains, and write out only selected channels. This application is started like thi
 
 
-  ctf2ft_v3 hostname:port:flags:decimation:channels
+    ctf2ft_v3 hostname:port:flags:decimation:channels
 
 where ''flags'' can be any combination of **R**, which enables writing the ''.res4'' file into the FieldTrip buffer header, **E** which enables sending events as decoded from the trigger channels, and **G** which enables multiplying the samples by the correct gain values, and consequently writing out single precision floating point numbers instead of the default 32bit integers. ''Decimation'' needs to be a positive integer number, and ''channels'' is a comma-separated list of channel labels, or a star (*) for sending all channels. However, it is important to note that *no* lowpass filtering is applied before decimation, that is, you have to use the hardware filters (setup in Acq) to use this option.
 
 
-  ctf2ft_v3 -:1972:RE:1:*
+    ctf2ft_v3 -:1972:RE:1:*
 
 Actually you can have multiple definitions and stream different parts of the data to different buffers. For example, the following call will spawn a local FieldTrip buffer on port 1972, which will receive all channels, the ''.res4'' header, and events (but data is kept at 32 bit integers), and in addition stream out 4x downsampled and scaled head-localization channels to a buffer on the lab-meg001 computer (also port=1972
 
 
-  ctf2ft_v3 -:1972:RE:1:*
-  lab-meg001:1972:G:4:HLC0011,HLC0012,HLC0013,HLC0021,HLC0022,HLC0023,HLC0031,HLC0032,HLC0033
+    ctf2ft_v3 -:1972:RE:1:*
+    lab-meg001:1972:G:4:HLC0011,HLC0012,HLC0013,HLC0021,HLC0022,HLC0023,HLC0031,HLC0032,HLC0033
 
 Note that the previous command should all be on a single line.
 
@@ -143,7 +143,7 @@ A more permanent solution would be to change the value of SHMMAX in /usr/src/lin
 There is a problem in the CTF acquisition software that sometimes causes the shared memory interface to fail. The diagnosis of the problem is that the Acq software runs and writes the data to the shared-memory buffer, where it is detected by AcqBuffer, and that after a certain random amount of time (around one minute) the AcqBuffer stops. The problem seems to be caused by a memory buffer overrun. The shared memory consists of 600 packets, each defined as
 
 
-  typedef struct {
+    typedef struct {
    ACQ_MessageType message_type; % this is 4 bytes long
    int messageId;
    int sampleNumber;
@@ -162,12 +162,12 @@ where it should be
  sampleNumber = floor(28160/numChannels)
 i.e. rounding off to the bottom. To solve this, we can look at
 
-  for chancount=1:500
-  success(chancount) = ((round(28160/chancount).*chancount)<=28160);
-  end
+    for chancount=1:500
+    success(chancount) = ((round(28160/chancount).*chancount)<=28160);
+    end
 
   >> find(success)
-  ans =
+    ans =
       1     2     4     5     6     8    10    11    13    14    15    16    17    18    19    20    22    23    24    25    26    29   31    32    33    34    36    37    38    39    40    42    44    46    47    50    51    53    54    55    57    59    60    62    64    65    67    68    69    70    72    75    78    79    80    82    83    84    85    86    88    89    91    92    95    96    97    98    99   102   103   105   107   109   110   112   113   114   124   125   126   128   129   132   134   136   138   140   142   145   148   151   152   153   157   158   159   160   176   177   178   179   180   184   185   186   190   191   194   195   198   201   202   204   205   207   208   210   211   213   216   218   220   221   223   225   227   230   232   234   236   238   240   242   244   246   247   249   251   253   255   256   258   260   262   263   265   267   268   270   273   275   276   278   281   284   286   287   289   290   292   293   295   296   298   299   302   305   306   308   309   312   315   316   319   320   322   323   326   327   330   331   334   335   338   339   342   343   346   347   350   351   352   355   356   359   360   361   364   365   369   370   373   374   375   378   379   380   384   385   389   390   391   394   395   396   400   401   402   406   407   408   412   413   414   418   419   420   424   425   426   430   431   432   433   437   438   439   440   444   445   446   451   452   453   454   458   459   460   461   466   467   468   469   474   475   476   477   482   483   484   485   490   491   492   493   494   499   500
 
 Update: This calculation seems not to be 100% correct. For example, 359 channels do NOT work. 360 seems to be okay.

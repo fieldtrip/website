@@ -54,14 +54,14 @@ How it's currently implemented in these function
   %   cfg.trials       = 'all' or a selection like 1:10 (default = 'all')
 
   % set the defaults
-  if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
+    if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
 
   % select trials of interest
-  if ~strcmp(cfg.trials, 'all')
+    if ~strcmp(cfg.trials, 'all')
     fprintf('selecting %d trials\n', length(cfg.trials));
     data.trial  = data.trial(cfg.trials);
     data.time   = data.time(cfg.trials);
-  end
+    end
 
 ## Step 2: develop and implement solution
 
@@ -76,26 +76,26 @@ __For raw data input functions (implement before 'Ntrials=...' or equivalent):__
 
   
   % set the defaults
-  if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
+    if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
 
   
   % select trials of interest
-  if ~strcmp(cfg.trials, 'all')
+    if ~strcmp(cfg.trials, 'all')
       fprintf('selecting %d trials\n', length(cfg.trials));
       data.trial  = data.trial(cfg.trials);
       data.time   = data.time(cfg.trials);
-  end
+    end
 
 __For rpt data input functions:__
 
   
   % set the defaults
-  if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
+    if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
 
 *  for topoplotE
 
   
-  elseif strcmp(data.dimord, 'rpt_chan_time')
+    elseif strcmp(data.dimord, 'rpt_chan_time')
       tmpcfg = [];
       tmpcfg.trials = cfg.trials;
       data = timelockanalysis(tmpcfg, data);
@@ -118,7 +118,7 @@ __For rpt data input functions:__
 *  for topoplotER, singleplotTFR, multiplotTF
 
   
-  elseif strcmp(data.dimord, 'rpt_chan_freq_time')
+    elseif strcmp(data.dimord, 'rpt_chan_freq_time')
       tmpcfg = [];
       tmpcfg.trials = cfg.trials;
       tmpcfg.jackknife= 'no';
@@ -156,9 +156,9 @@ adjusting the tr
 
   
   % adjust the trial definition (trl)
-  if ~isempty(trl) && ~strcmp(cfg.trials, 'all')
+    if ~isempty(trl) && ~strcmp(cfg.trials, 'all')
     cfg.trl=trl(cfg.trials,:);
-  end
+    end
 
 ##### Documentatio
 
@@ -170,10 +170,10 @@ adjusting the tr
 Find functions that use raw dat
 
   
-  grep -n datatype.*raw *.m
+    grep -n datatype.*raw *.m
 
 Find functions that already have cfg.trials optio
 
   
-  grep -n cfg.trials *.m
+    grep -n cfg.trials *.m
 

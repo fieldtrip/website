@@ -12,19 +12,19 @@ Typically, one would use **[ft_plot_vol](/reference/ft_plot_vol)** for the visua
   % get the corresponding elements from both data structures
   R     = headmodel.r(a);
   O     = headmodel.o(a,:);
-  chanpos = grad.chanpos(b,:);
+    chanpos = grad.chanpos(b,:);
 
-  vec = chanpos-O;
-  for k = 1:size(vec,1)
+    vec = chanpos-O;
+    for k = 1:size(vec,1)
     vec(k,:) = vec(k,:)./norm(vec(k,:));
-  end
-  headshape.pnt = O+diag(R)*vec;
+    end
+    headshape.pnt = O+diag(R)*vec;
 
-  cfg = [];
-  cfg.method = 'headshape';
-  cfg.headshape = headshape;
-  bnd = ft_prepare_mesh(cfg);
+    cfg = [];
+    cfg.method = 'headshape';
+    cfg.headshape = headshape;
+    bnd = ft_prepare_mesh(cfg);
 
-  figure;hold on;
-  ft_plot_sens(grad);
-  ft_plot_mesh(bnd, 'facecolor', 'w');
+    figure;hold on;
+    ft_plot_sens(grad);
+    ft_plot_mesh(bnd, 'facecolor', 'w');

@@ -32,22 +32,22 @@ In cfg.selcfg you specify the configuration that is needed by *browse_audiovideo
 
 In this case the EEG starts at timestamp 0, the audio (which was started a bit earlier) starts at timestamp -19.865. In both recordings the timestamps correspond to seconds, but the number of timestamps per second is different for both recordings due to the different sampling frequency. Both for the EEG and for the audio the relation **timestamp=FirstTimeStamp+TimeStampPerSample*sample** holds, not only for the first sample in the respective recording, but also for all subsequent samples.
 
-  cfg = [];
-  cfg.dataset = 'bitalino_2018.05.27_09.46.14.edf';
+    cfg = [];
+    cfg.dataset = 'bitalino_2018.05.27_09.46.14.edf';
 
-  cfg.selfun = 'browse_audiovideo';
+    cfg.selfun = 'browse_audiovideo';
 
-  cfg.selcfg.audiofile = 'bitalino_2018.05.27_09.46.14_log.m4a';
+    cfg.selcfg.audiofile = 'bitalino_2018.05.27_09.46.14_log.m4a';
 
-  cfg.selcfg.audiohdr = ft_read_header(cfg.selcfg.audiofile);
-  cfg.selcfg.audiohdr.FirstTimeStamp = -19.865;
-  cfg.selcfg.audiohdr.TimeStampPerSample = 1/cfg.selcfg.audiohdr.Fs;
+    cfg.selcfg.audiohdr = ft_read_header(cfg.selcfg.audiofile);
+    cfg.selcfg.audiohdr.FirstTimeStamp = -19.865;
+    cfg.selcfg.audiohdr.TimeStampPerSample = 1/cfg.selcfg.audiohdr.Fs;
 
-  cfg.selcfg.datahdr = ft_read_header(cfg.dataset);
-  cfg.selcfg.datahdr.FirstTimeStamp = 0;
-  cfg.selcfg.datahdr.TimeStampPerSample = 1/cfg.selcfg.datahdr.Fs;
+    cfg.selcfg.datahdr = ft_read_header(cfg.dataset);
+    cfg.selcfg.datahdr.FirstTimeStamp = 0;
+    cfg.selcfg.datahdr.TimeStampPerSample = 1/cfg.selcfg.datahdr.Fs;
 
-  ft_databrowser(cfg);
+    ft_databrowser(cfg);
 
 When the databrowser window shows, you drag with your left-mouse button to select a data window. Subsequently you click with your right mouse-button in that window and select from the context-sensitive menu the option *browse_audiovideo*. Consequently a popup will show in which the audio and/or video corresponding to that selection will play.
 

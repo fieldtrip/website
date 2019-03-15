@@ -53,9 +53,9 @@ The LCMV beamformer spatial filter for the location of interest will pass the ac
     cfg.lcmv.keepfilter = 'yes';
     source_idx       = ft_sourceanalysis(cfg, tlock);
 
-The source reconstruction contains the estimated power and the source-level time-series of the averaged ERF, but here we are not interested in those. The *cfg.keepfilter* option results in the spatial filter being kept in the output source structure. That spatial filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
+The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The *cfg.keepfilter* option results in the spatial filter being kept in the output source structure. That spatial filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
-### Extract the virtual channel time-series
+### Extract the virtual channel time series
 
     beamformer_lft_coh = source_idx.avg.filter{1};
     beamformer_gam_pow = source_idx.avg.filter{2};
@@ -75,12 +75,12 @@ The source reconstruction contains the estimated power and the source-level time
     end
 
 {% include markup/warning %}
-The LCMV spatial filter is computed here without applying any time-domain filters. Consequently, it will have to suppress all noise in the data in all frequency bands. The spatial filter derived from the  broadband data allows us to compute a broadband source level time-series.
+The LCMV spatial filter is computed here without applying any time-domain filters. Consequently, it will have to suppress all noise in the data in all frequency bands. The spatial filter derived from the  broadband data allows us to compute a broadband source level time series.
 
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. *cfg.hpfilter=yes* and *cfg.hpfreq=30*) prior to computing the covariance and the spatial filter.  
 {% include markup/end %}
 
-The structures *coh_lft_data* and *gam_pow_data* resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)*
+The structures *coh_lft_data* and *gam_pow_data* resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](/reference/ft_databrowser)*
 
     cfg = [];
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'

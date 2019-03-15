@@ -56,34 +56,34 @@ The following steps had been performed:
 
 To run the following section of code you need the original dataset and trial function:  [download dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif), [download trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m)
 
-  clear all
-  close all
+    clear all
+    close all
 
-  cfg = [];
-  cfg.dataset = 'oddball1_mc_downsampled.fif';
-  cfg.channel = 'MEG';
+    cfg = [];
+    cfg.dataset = 'oddball1_mc_downsampled.fif';
+    cfg.channel = 'MEG';
 
   % define trials based on responses
-  cfg.trialdef.prestim       = 1.5;
-  cfg.trialdef.poststim      = 2.0;
-  cfg.trialdef.stim_triggers = [1 2];
-  cfg.trialdef.rsp_triggers  = [256 4096];
-  cfg.trialfun               = 'trialfun_oddball_responselocked';
-  cfg                        = ft_definetrial(cfg);
+    cfg.trialdef.prestim       = 1.5;
+    cfg.trialdef.poststim      = 2.0;
+    cfg.trialdef.stim_triggers = [1 2];
+    cfg.trialdef.rsp_triggers  = [256 4096];
+    cfg.trialfun               = 'trialfun_oddball_responselocked';
+    cfg                        = ft_definetrial(cfg);
 
   % preprocess MEG data
-  cfg.continuous             = 'yes';
-  cfg.demean                 = 'yes';
-  cfg.dftfilter              = 'yes';
-  cfg.dftfreq                = [50 100];
+    cfg.continuous             = 'yes';
+    cfg.demean                 = 'yes';
+    cfg.dftfilter              = 'yes';
+    cfg.dftfreq                = [50 100];
 
-  data_meg_clean    = ft_preprocessing(cfg);
+    data_meg_clean    = ft_preprocessing(cfg);
 
 The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/data_meg_clean.mat).
 
 Load the data using the following command:
 
-  load data_meg_clean
+    load data_meg_clean
 
 Next, we perform the independent component analysis according to the following steps:
 
@@ -110,43 +110,43 @@ Next, we perform the independent component analysis according to the following s
 
 Now we could explore the decomposed data by using **[ft_databrowser](/reference/ft_databrowser)**
 
-  cfg = [];
-  cfg.channel = {comp_meg.label{1:5}}; % components to be plotted
-  cfg.layout = 'neuromag306mag.lay'; % specify the layout file that should be used for plotting
-  cfg.compscale = 'local';
+    cfg = [];
+    cfg.channel = {comp_meg.label{1:5}}; % components to be plotted
+    cfg.layout = 'neuromag306mag.lay'; % specify the layout file that should be used for plotting
+    cfg.compscale = 'local';
 
-  ft_databrowser(cfg, comp_meg);
+    ft_databrowser(cfg, comp_meg);
 
 Take your time to browse and evaluate the topographies and the corresponding time courses. We will reject several of these with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 
-  cfg = [];
-  cfg.component = [1:6 10 11 15];
-  data_meg_clean_ica = ft_rejectcomponent(cfg, comp_meg);
+    cfg = [];
+    cfg.component = [1:6 10 11 15];
+    data_meg_clean_ica = ft_rejectcomponent(cfg, comp_meg);
 
 ### Averaging and plotting the response related field
 
 In the first step we re-segment the data into left and right hand responses using the information orgnized in the trialinfo substructure. We use **[ft_redefinetrial](/reference/ft_redefinetrial)**. After this we'll focus on right hand responses for simplicity and average over repetitions using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Finally, we use **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_singleplotER](/reference/ft_singleplotER)** with a predefined latency window to plot the topography and time course of the early motor evoked field.
 
 
-  cfg = [];
-  cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 256);
-  data_left     = ft_redefinetrial(cfg, data_meg_clean_ica);
+    cfg = [];
+    cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 256);
+    data_left     = ft_redefinetrial(cfg, data_meg_clean_ica);
 
-  cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 4096);
-  data_right    = ft_redefinetrial(cfg, data_meg_clean_ica);
+    cfg.trials    = find(data_meg_clean_ica.trialinfo(:,1) == 4096);
+    data_right    = ft_redefinetrial(cfg, data_meg_clean_ica);
   %%
-  tlk = ft_timelockanalysis([],data_right);
+    tlk = ft_timelockanalysis([],data_right);
   %%
-  cfg = [];
-  cfg.fontsize = 6;
-  cfg.layout = 'neuromag306mag.lay';
-  cfg.xlim = [0.040553 0.062673];
-  figure;
-  subplot(2,2,1);ft_topoplotER(cfg, tlk);
+    cfg = [];
+    cfg.fontsize = 6;
+    cfg.layout = 'neuromag306mag.lay';
+    cfg.xlim = [0.040553 0.062673];
+    figure;
+    subplot(2,2,1);ft_topoplotER(cfg, tlk);
 
-  cfg.channel = {'MEG0431'}
-  cfg.xlim    = [-.2 1];
-  subplot(2,2,2);ft_singleplotER(cfg,tlk);
+    cfg.channel = {'MEG0431'}
+    cfg.xlim    = [-.2 1];
+    subplot(2,2,2);ft_singleplotER(cfg,tlk);
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/topographyandtimecourseERF.png" width="600" %}
 
@@ -165,7 +165,7 @@ We are going to use the forward model that was calculated in the [dipole fitting
 
 Load the forward model using the following cod
 
-  load headmodel_meg.mat
+    load headmodel_meg.mat
 
 ## Computing the leadfield
 
@@ -177,30 +177,30 @@ Sensors that were previously removed from the data set should also be removed wh
 
 We first prepare the magnetometer and electrode position information from the dataset that can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/).
 
-  dataset = 'oddball1_mc_downsampled.fif';
-  grad    = ft_read_sens(dataset, 'senstype', 'meg');
-  elec    = ft_read_sens(dataset, 'senstype', 'eeg');
+    dataset = 'oddball1_mc_downsampled.fif';
+    grad    = ft_read_sens(dataset, 'senstype', 'meg');
+    elec    = ft_read_sens(dataset, 'senstype', 'eeg');
 
 If you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.  
 
   % Create leadfield grid
-  cfg                 = [];
-  cfg.channel         = data_right.label; % ensure that rejected sensors are not present
-  cfg.grad            = grad;
-  cfg.headmodel       = headmodel_meg;
-  cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
-  cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
-  cfg.grid.unit       = 'cm';
-  cfg.grid.tight      = 'yes';
+    cfg                 = [];
+    cfg.channel         = data_right.label; % ensure that rejected sensors are not present
+    cfg.grad            = grad;
+    cfg.headmodel       = headmodel_meg;
+    cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
+    cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
+    cfg.grid.unit       = 'cm';
+    cfg.grid.tight      = 'yes';
   [grid] = ft_prepare_leadfield(cfg);
 
 Save the gri
 
-  save grid grid
+    save grid grid
 
 The grid data structure has the following field
 
-  grid =
+    grid =
 
                 xgrid: [-6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7]% X-axsis grid
                 ygrid: [-8 -7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9]% Y-axis grid
@@ -219,47 +219,47 @@ The grid data structure has the following field
 Using the data covariance matrix and the lead field matrices a spatial filter is calculated for each grid point. By applying the filter to the time-domain data we can then estimate the power for the pre- and post-response activity. This results in a power estimate for each grid point.
 We will focus on right hand responses. First, we select the latencies of the early evoked field and the pre response baselin
 
-  cfg = [];            
-  cfg.toilim = [-.15 -.05];
-  datapre = ft_redefinetrial(cfg, data_right);
-  cfg.toilim = [.05 .15];
-  datapost = ft_redefinetrial(cfg, data_right);          
+    cfg = [];            
+    cfg.toilim = [-.15 -.05];
+    datapre = ft_redefinetrial(cfg, data_right);
+    cfg.toilim = [.05 .15];
+    datapost = ft_redefinetrial(cfg, data_right);          
 
 We compute the covariance matrix during the call to **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Note that the data covariance matrix is computed on the entire interval including the pre and post-response latencies. This approach is similar to the common filter minimizing the influence of different spatial leakage profiles of the pre and post-response spatial filters.
 
-  cfg = [];
-  cfg.covariance='yes';
-  cfg.covariancewindow = [-.15 .15];
-  avg = ft_timelockanalysis(cfg,data_right);
-  cfg = [];
-  cfg.covariance='yes';
-  avgpre = ft_timelockanalysis(cfg,datapre);
-  avgpst = ft_timelockanalysis(cfg,datapost);
+    cfg = [];
+    cfg.covariance='yes';
+    cfg.covariancewindow = [-.15 .15];
+    avg = ft_timelockanalysis(cfg,data_right);
+    cfg = [];
+    cfg.covariance='yes';
+    avgpre = ft_timelockanalysis(cfg,datapre);
+    avgpst = ft_timelockanalysis(cfg,datapost);
 
 Now using the headmodel and the precomputed leadfield we make three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. First we compute one spatial filter per location (e.g. voxel) on the basis of the entire latency interval of pre and post-response data. Specifying the **cfg.keepfilter = 'yes';** allows for a subsequent application of the spatial filters on the pre and post-response data separately. The purpose of lambda is discussed in Exercise 6. By using cfg.keepfilter = 'yes', we let **[ft_sourceanalysis](/reference/ft_sourceanalysis)** return the filter matrix in the source structure.
 
   %% first call to ft_sourceanalysis keeping the spatial filters
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.grid=grid;
-  cfg.headmodel=headmodel_meg;
-  cfg.lcmv.keepfilter='yes';
-  cfg.lcmv.lambda = '5%';
-  cfg.channel         = {'MEG'};
-  cfg.senstype    = 'MEG';
-  sourceavg=ft_sourceanalysis(cfg, avg);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.headmodel=headmodel_meg;
+    cfg.lcmv.keepfilter='yes';
+    cfg.lcmv.lambda = '5%';
+    cfg.channel         = {'MEG'};
+    cfg.senstype    = 'MEG';
+    sourceavg=ft_sourceanalysis(cfg, avg);
   %% second and third call to ft_sourceanalysis now applying the precomputed filters to pre and %post intervals
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.grid=grid;
-  cfg.grid.filter=sourceavg.avg.filter;
-  cfg.headmodel=headmodel_meg;
-  sourcepreM1=ft_sourceanalysis(cfg, avgpre);
-  sourcepstM1=ft_sourceanalysis(cfg, avgpst);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.headmodel=headmodel_meg;
+    sourcepreM1=ft_sourceanalysis(cfg, avgpre);
+    sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
 The source data structure has the following field
 
-  sourceavg =
+    sourceavg =
 
         time: [1x876 double]   % time dimension of the input data
          dim: [14 18 14]       % 3D dimensions of the scanned space
@@ -280,26 +280,26 @@ The grid of estimated power values can be plotted superimposed on the anatomical
 
 First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which can be downloaded to the working directory [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
 
-  load mri_segmented.mat
+    load mri_segmented.mat
 
 Subsequently, we interpolate the source power onto the individual MRI.
 
-  cfg              = [];
-  cfg.voxelcoord   = 'no';
-  cfg.parameter    = 'avg.pow';
-  cfg.interpmethod = 'nearest';
-  source_int  = ft_sourceinterpolate(cfg, M1, mri_segmented);
+    cfg              = [];
+    cfg.voxelcoord   = 'no';
+    cfg.parameter    = 'avg.pow';
+    cfg.interpmethod = 'nearest';
+    source_int  = ft_sourceinterpolate(cfg, M1, mri_segmented);
 
 After which, we can plot the interpolated data. In order to emphasize "the hill" of activity we are interested in, we create a mask that in the present case highlights 30 % of the total activity. Note, that this threshold is arbitrary and is mainly used for illustrative purposes. An alternative to this is provided below.  
 
-  source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 30 % of maximum
-  cfg               = [];
-  cfg.method        = 'ortho';
-  cfg.funparameter  = 'pow';
-  cfg.maskparameter = 'mask';
-  cfg.location = [-42 -18 67];
-  cfg.funcolormap = 'jet';
-  ft_sourceplot(cfg,source_int);
+    source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 30 % of maximum
+    cfg               = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'pow';
+    cfg.maskparameter = 'mask';
+    cfg.location = [-42 -18 67];
+    cfg.funcolormap = 'jet';
+    ft_sourceplot(cfg,source_int);
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplotm1_meg.png" width="600" %}
 
@@ -344,45 +344,45 @@ First we will repeat some of the previous steps. We will compute the covariance 
 If this is where you started in the tutorial, make sure you have downloaded and loaded the necessary data: [headmodel_meg](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/headmodel_meg.mat),[datapre](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/datapre.mat),[datapost](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/datapost.mat),[grid](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/grid.mat),[data_right](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/data_right.mat)
 
   % load the data
-  load headmodel_meg
-  load datapre
-  load datapost
-  load data_right
-  load grid
+    load headmodel_meg
+    load datapre
+    load datapost
+    load data_right
+    load grid
 
-  cfg = [];
-  cfg.covariance='yes';
-  cfg.covariancewindow = [-.15 .15];
-  avg = ft_timelockanalysis(cfg,data_right);
+    cfg = [];
+    cfg.covariance='yes';
+    cfg.covariancewindow = [-.15 .15];
+    avg = ft_timelockanalysis(cfg,data_right);
 
-  cfg = [];
-  cfg.keeptrials = 'yes';
-  cfg.covariance = 'yes'; % This is important as the single-trial source activity is calculated based on the covariance matrix
-  avgpre = ft_timelockanalysis(cfg,datapre);
-  avgpst = ft_timelockanalysis(cfg,datapost);
+    cfg = [];
+    cfg.keeptrials = 'yes';
+    cfg.covariance = 'yes'; % This is important as the single-trial source activity is calculated based on the covariance matrix
+    avgpre = ft_timelockanalysis(cfg,datapre);
+    avgpst = ft_timelockanalysis(cfg,datapost);
 
 Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/ft_sourceanalysis)**. The first computes the spatial filters much in the same way demonstrated above. Because of low signal-to-noise ratio on single trial level it is not recommended to compute them on individual trials. Subsequently, single trial source power estimates are kept in the output structure by specifying **cfg.rawtrial = 'yes';**.
 
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.grid=grid;
-  cfg.headmodel=headmodel_meg;
-  cfg.lcmv.keepfilter='yes';
-  cfg.lcmv.lambda = '5%';
-  cfg.channel         = {'MEG'};
-  sourceavg=ft_sourceanalysis(cfg, avg);
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.grid=grid;
-  cfg.grid.filter=sourceavg.avg.filter;
-  cfg.rawtrial = 'yes';
-  cfg.headmodel=headmodel_meg;
-  sourcepreM1=ft_sourceanalysis(cfg, avgpre);
-  sourcepstM1=ft_sourceanalysis(cfg, avgpst);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.headmodel=headmodel_meg;
+    cfg.lcmv.keepfilter='yes';
+    cfg.lcmv.lambda = '5%';
+    cfg.channel         = {'MEG'};
+    sourceavg=ft_sourceanalysis(cfg, avg);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.rawtrial = 'yes';
+    cfg.headmodel=headmodel_meg;
+    sourcepreM1=ft_sourceanalysis(cfg, avgpre);
+    sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
 The source structure now contains the single trial estimates in the field **sourcepstM1.trial**
 
-  sourcepstM1 =
+    sourcepstM1 =
 
         time: [1x26 double]
          dim: [14 18 14]
@@ -397,51 +397,51 @@ The source structure now contains the single trial estimates in the field **sour
 Now we can statistically compare the difference between the pre and post response source power using **[ft_sourcestatistics](/reference/ft_sourcestatistics)** and plot the output after interpolating onto the anatomical image with **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**.
 
   :::matab
-  cfg = [];
-  cfg.parameter    = 'pow';
-  cfg.dim          = grid.dim;
-  cfg.method           = 'montecarlo';
-  cfg.statistic        = 'ft_statfun_depsamplesT';
-  cfg.correctm         = 'cluster';
-  cfg.clusteralpha     = 0.05;
-  cfg.clusterstatistic = 'maxsum';
-  cfg.tail             = 0;
-  cfg.clustertail      = 0;
-  cfg.alpha            = 0.025;
-  cfg.numrandomization = 10000;
+    cfg = [];
+    cfg.parameter    = 'pow';
+    cfg.dim          = grid.dim;
+    cfg.method           = 'montecarlo';
+    cfg.statistic        = 'ft_statfun_depsamplesT';
+    cfg.correctm         = 'cluster';
+    cfg.clusteralpha     = 0.05;
+    cfg.clusterstatistic = 'maxsum';
+    cfg.tail             = 0;
+    cfg.clustertail      = 0;
+    cfg.alpha            = 0.025;
+    cfg.numrandomization = 10000;
 
-  ntrials = numel(sourcepreM1.trial);
-  design  = zeros(2,2*ntrials);
-  design(1,1:ntrials) = 1;
-  design(1,ntrials+1:2*ntrials) = 2;
-  design(2,1:ntrials) = [1:ntrials];
-  design(2,ntrials+1:2*ntrials) = [1:ntrials];
+    ntrials = numel(sourcepreM1.trial);
+    design  = zeros(2,2*ntrials);
+    design(1,1:ntrials) = 1;
+    design(1,ntrials+1:2*ntrials) = 2;
+    design(2,1:ntrials) = [1:ntrials];
+    design(2,ntrials+1:2*ntrials) = [1:ntrials];
 
-  cfg.design   = design;
-  cfg.ivar     = 1;
-  cfg.uvar     = 2;
-  stat = ft_sourcestatistics(cfg,sourcepstM1,sourcepreM1);
+    cfg.design   = design;
+    cfg.ivar     = 1;
+    cfg.uvar     = 2;
+    stat = ft_sourcestatistics(cfg,sourcepstM1,sourcepreM1);
 
 Note, we make two subsequent calls to **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**. One for the functional data (e.g. t-value distribution) and the other for a binary mask of 0 and 1 indexing voxels of significant condition differences.
 
-  cfg              = [];
-  cfg.voxelcoord   = 'no';
-  cfg.parameter    = 'stat';
-  cfg.interpmethod = 'nearest';
-  statint  = ft_sourceinterpolate(cfg, stat, mri_segmented);
-  cfg.parameter    = 'mask';
-  maskint  = ft_sourceinterpolate(cfg, stat, mri_segmented);
-  statint.mask = maskint.mask;
+    cfg              = [];
+    cfg.voxelcoord   = 'no';
+    cfg.parameter    = 'stat';
+    cfg.interpmethod = 'nearest';
+    statint  = ft_sourceinterpolate(cfg, stat, mri_segmented);
+    cfg.parameter    = 'mask';
+    maskint  = ft_sourceinterpolate(cfg, stat, mri_segmented);
+    statint.mask = maskint.mask;
 
 Finally, we plot the result. Instead of ratio the functional data is now represented in t-values.
 
-  cfg               = [];
-  cfg.method        = 'ortho';
-  cfg.funparameter  = 'stat';
+    cfg               = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'stat';
   % cfg.maskparameter = 'mask';
-  cfg.location = [-42 -18 67];
-  cfg.funcolormap = 'jet';
-  ft_sourceplot(cfg,statint);
+    cfg.location = [-42 -18 67];
+    cfg.funcolormap = 'jet';
+    ft_sourceplot(cfg,statint);
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplottstatunmasked.png" width="600" %}
 
@@ -459,90 +459,90 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
 
 ##### Compute leadfield at desired location
 
-  cfg=[];
-  cfg.headmodel=headmodel_meg;
-  cfg.channel=data_right.label;  
-  cfg.grid.pos=[-42 -18 67]./10; % units of cm
-  cfg.grad=grad;
-  cfg.unit = 'cm';
-  sourcemodel_virt=ft_prepare_leadfield(cfg);
+    cfg=[];
+    cfg.headmodel=headmodel_meg;
+    cfg.channel=data_right.label;  
+    cfg.grid.pos=[-42 -18 67]./10; % units of cm
+    cfg.grad=grad;
+    cfg.unit = 'cm';
+    sourcemodel_virt=ft_prepare_leadfield(cfg);
 
 ##### Compute the covariance matrix
 
-  cfg = [];
-  cfg.channel=data_right.label;
-  cfg.covariance='yes';
-  cfg.covariancewindow=[.05 .18];
-  avg = ft_timelockanalysis(cfg,data_right);
+    cfg = [];
+    cfg.channel=data_right.label;
+    cfg.covariance='yes';
+    cfg.covariancewindow=[.05 .18];
+    avg = ft_timelockanalysis(cfg,data_right);
 
 ##### Perform source analysis
 
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.grid = sourcemodel_virt;
-  cfg.headmodel=headmodel_meg;
-  cfg.lcmv.keepfilter='yes'; % keep filters in the output, which are later multiplied with the data
-  cfg.lcmv.fixedori='yes'; % consider only the dominant orientation
-  cfg.lcmv.lamda='5%';
-  source=ft_sourceanalysis(cfg, avg);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid = sourcemodel_virt;
+    cfg.headmodel=headmodel_meg;
+    cfg.lcmv.keepfilter='yes'; % keep filters in the output, which are later multiplied with the data
+    cfg.lcmv.fixedori='yes'; % consider only the dominant orientation
+    cfg.lcmv.lamda='5%';
+    source=ft_sourceanalysis(cfg, avg);
 
 ##### Multiply filters with the data and organize into FieldTrip sensable data structure
 
-  spatialfilter=cat(1,source.avg.filter{:});
-  virtsens=[];
-  for i=1:length(data_right.trial)
+    spatialfilter=cat(1,source.avg.filter{:});
+    virtsens=[];
+    for i=1:length(data_right.trial)
       virtsens.trial{i}=spatialfilter*data_right.trial{i};
-  end
-  virtsens.time=data_right.time;
-  virtsens.fsample=data_right.fsample;
-  virtsens.label={'M1'}';
+    end
+    virtsens.time=data_right.time;
+    virtsens.fsample=data_right.fsample;
+    virtsens.label={'M1'}';
 
 Now we will use **[ft_timelockanalysis](/reference/ft_timelockanalysis )** and **[ft_freqanalysis](/reference/ft_freqanalysis)** in order to evaluate the result by plotting it with **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** respectively. Note, all the details around event-related averaging and time-frequency analysis are covered by the [the event-related fields tutorial](/tutorial/eventrelatedaveraging) and [the time-frequency tutorial](/tutorial/timefrequencyanalysis). It is recommended that you are familiar with these before you continue.
 
   %% compute the event related average at location M1
-  cfg=[];
-  cfg.preproc.hpfilter='yes';
-  cfg.preproc.hpfreq=1;
-  cfg.preproc.lpfilter='yes';
-  cfg.preproc.lpfreq=40;
-  tlkvc=ft_timelockanalysis(cfg, virtsens);
+    cfg=[];
+    cfg.preproc.hpfilter='yes';
+    cfg.preproc.hpfreq=1;
+    cfg.preproc.lpfilter='yes';
+    cfg.preproc.lpfreq=40;
+    tlkvc=ft_timelockanalysis(cfg, virtsens);
 
   %% compute the time-frequency representation of power (TFR)at location M1
-  cfg              = [];
-  cfg.output       = 'pow';
-  cfg.method       = 'mtmconvol';
-  cfg.taper        = 'hanning';
-  cfg.foi          = 1:1:40;                          
-  cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
-  cfg.toi          = -.5:0.05:1.75;               
-  cfg.keeptrials ='no';
-  tfrvc= ft_freqanalysis(cfg,virtsens);
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.foi          = 1:1:40;                          
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
+    cfg.toi          = -.5:0.05:1.75;               
+    cfg.keeptrials ='no';
+    tfrvc= ft_freqanalysis(cfg,virtsens);
 
   % baseline correction
-  cfg=[];
-  cfg.baseline=[-.5 0];
-  cfg.baselinetype='db';
-  tfrvcbl = ft_freqbaseline(cfg, tfrvc);
+    cfg=[];
+    cfg.baseline=[-.5 0];
+    cfg.baselinetype='db';
+    tfrvcbl = ft_freqbaseline(cfg, tfrvc);
 
 Now we can plot the result.
 
-  figure;
-  for i=1:length(tlkvc.label)
+    figure;
+    for i=1:length(tlkvc.label)
       cfg=[];
       cfg.channel = tlkvc.label{i};
       cfg.parameter = 'avg';
       cfg.xlim    = [-.3 1.75];
 
       subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
-  end;
-  for i=1:length(tfrvc.label)
+    end;
+    for i=1:length(tfrvc.label)
       cfg=[];
       cfg.channel = tfrvc.label{i};
       cfg.zlim    = [-3 3];
       cfg.xlim    = [-.5 2];
       cfg.ylim    = [1 40];
       subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
-  end;
+    end;
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
 
@@ -558,31 +558,31 @@ Take your time to verbalize what you see. Try to decompose the averaged response
 
 We will continue to analyse the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
 
-  load data_eeg_reref_ica
+    load data_eeg_reref_ica
   %% sort into left and right hand response
-  cfg = [];
-  cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 256);
-  data_eeg_left     = ft_redefinetrial(cfg, data_eeg_reref_ica);
+    cfg = [];
+    cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 256);
+    data_eeg_left     = ft_redefinetrial(cfg, data_eeg_reref_ica);
 
-  cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 4096);
-  data_eeg_right    = ft_redefinetrial(cfg, data_eeg_reref_ica);
+    cfg.trials       = find(data_eeg_reref_ica.trialinfo(:,1) == 4096);
+    data_eeg_right    = ft_redefinetrial(cfg, data_eeg_reref_ica);
 
 ##### Prepare data for source analysis
 
-  cfg = [];            
-  cfg.toilim = [-.15 -.05];
-  datapre = ft_redefinetrial(cfg, data_eeg_right);
-  cfg.toilim = [.05 .15];
-  datapost = ft_redefinetrial(cfg, data_eeg_right);          
+    cfg = [];            
+    cfg.toilim = [-.15 -.05];
+    datapre = ft_redefinetrial(cfg, data_eeg_right);
+    cfg.toilim = [.05 .15];
+    datapost = ft_redefinetrial(cfg, data_eeg_right);          
   %% output cov matrix of the entire interval
-  cfg = [];
-  cfg.covariance='yes';
-  cfg.covariancewindow = [-.15 .15];
-  avg = ft_timelockanalysis(cfg,data_eeg_right);
-  cfg = [];
-  cfg.covariance='yes';
-  avgpre = ft_timelockanalysis(cfg,datapre);
-  avgpst = ft_timelockanalysis(cfg,datapost);
+    cfg = [];
+    cfg.covariance='yes';
+    cfg.covariancewindow = [-.15 .15];
+    avg = ft_timelockanalysis(cfg,data_eeg_right);
+    cfg = [];
+    cfg.covariance='yes';
+    avgpre = ft_timelockanalysis(cfg,datapre);
+    avgpst = ft_timelockanalysis(cfg,datapost);
 
 ### EEG Head model & data
 
@@ -590,22 +590,22 @@ As before, we will use the head model calculated in the [dipole fitting tutorial
 
 Load the EEG head model using the following cod
 
-  load headmodel_eeg.mat
+    load headmodel_eeg.mat
 
 ## (EEG) Lead field calculation
 
 The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
-  cfg                 = [];
-  cfg.elec         = elec;
-  cfg.channel           = data_eeg_reref_ica.label;
-  cfg.headmodel       = headmodel_eeg;
-  cfg.dics.reducerank = 3; % default for MEG is 2, for EEG is 3
-  cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
-  cfg.grid.unit       = 'cm';
-  cfg.grid.tight      = 'yes';
+    cfg                 = [];
+    cfg.elec         = elec;
+    cfg.channel           = data_eeg_reref_ica.label;
+    cfg.headmodel       = headmodel_eeg;
+    cfg.dics.reducerank = 3; % default for MEG is 2, for EEG is 3
+    cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
+    cfg.grid.unit       = 'cm';
+    cfg.grid.tight      = 'yes';
   [grid] = ft_prepare_leadfield(cfg);
-  save grid_eeg grid
+    save grid_eeg grid
 
 {% include markup/info %}
 Discuss the option **cfg.lcmv.reducerank = 3**
@@ -615,29 +615,29 @@ Discuss the option **cfg.lcmv.reducerank = 3**
 
 Now that we have everything prepared we can start to calculate the spatial filter through which we we project the data from both conditions.
 
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.grid=grid;
-  cfg.elec = elec;
-  cfg.headmodel=headmodel_eeg;
-  cfg.lcmv.keepfilter='yes';
-  cfg.lcmv.lambda = '5%';
-  cfg.channel           = data_eeg_reref_ica.label;
-  cfg.senstype = 'EEG';
-  sourceavg=ft_sourceanalysis(cfg, avg);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.elec = elec;
+    cfg.headmodel=headmodel_eeg;
+    cfg.lcmv.keepfilter='yes';
+    cfg.lcmv.lambda = '5%';
+    cfg.channel           = data_eeg_reref_ica.label;
+    cfg.senstype = 'EEG';
+    sourceavg=ft_sourceanalysis(cfg, avg);
 
   %%
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.elec = elec;
-  cfg.grid=grid;
-  cfg.grid.filter=sourceavg.avg.filter;
-  cfg.headmodel=headmodel_eeg;
-  cfg.lcmv.lambda = '5%';
-  cfg.channel           = data_eeg_reref_ica.label;
-  cfg.senstype = 'EEG';
-  sourcepreM1=ft_sourceanalysis(cfg, avgpre);
-  sourcepstM1=ft_sourceanalysis(cfg, avgpst);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.elec = elec;
+    cfg.grid=grid;
+    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.headmodel=headmodel_eeg;
+    cfg.lcmv.lambda = '5%';
+    cfg.channel           = data_eeg_reref_ica.label;
+    cfg.senstype = 'EEG';
+    sourcepreM1=ft_sourceanalysis(cfg, avgpre);
+    sourcepstM1=ft_sourceanalysis(cfg, avgpst);
 
 Again we express the source power as relative change to the pre response interva
 
@@ -646,23 +646,23 @@ Again we express the source power as relative change to the pre response interva
 
 And interpolate the result onto the anatomical MRI.
 
-  cfg              = [];
-  cfg.voxelcoord   = 'no';
-  cfg.parameter    = 'pow';
-  cfg.interpmethod = 'nearest';
-  source_int  = ft_sourceinterpolate(cfg, M1eeg, mri_segmented);
+    cfg              = [];
+    cfg.voxelcoord   = 'no';
+    cfg.parameter    = 'pow';
+    cfg.interpmethod = 'nearest';
+    source_int  = ft_sourceinterpolate(cfg, M1eeg, mri_segmented);
 
 Finally, we can plot the result using the same masking strategy as in the MEG sectio
 
-  source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 50 % of maximum
-  cfg               = [];
-  cfg.method        = 'ortho';
-  cfg.funparameter  = 'pow';
-  cfg.maskparameter = 'mask';
-  cfg.location = [-28 -17 67];
-  cfg.funcolorlim = [-.2 .2];
-  cfg.funcolormap = 'jet';
-  ft_sourceplot(cfg,source_int);
+    source_int.mask = source_int.pow > max(source_int.pow(:))*.3; % 50 % of maximum
+    cfg               = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'pow';
+    cfg.maskparameter = 'mask';
+    cfg.location = [-28 -17 67];
+    cfg.funcolorlim = [-.2 .2];
+    cfg.funcolormap = 'jet';
+    ft_sourceplot(cfg,source_int);
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/sourceplotm1_eeg.png" width="600" %}
 
@@ -672,89 +672,89 @@ We would like to compare the time course of activity reconstructed with MEG and 
 
 ##### Compute leadfield at location M1
 
-  cfg=[];
-  cfg.headmodel=headmodel_eeg;
-  cfg.channel           = data_eeg_reref_ica.label;
-  cfg.grid.pos=[-28 -17 67]./10; % units of cm
-  cfg.elec = elec;
-  cfg.unit = 'cm';
-  sourcemodel_virt=ft_prepare_leadfield(cfg);
+    cfg=[];
+    cfg.headmodel=headmodel_eeg;
+    cfg.channel           = data_eeg_reref_ica.label;
+    cfg.grid.pos=[-28 -17 67]./10; % units of cm
+    cfg.elec = elec;
+    cfg.unit = 'cm';
+    sourcemodel_virt=ft_prepare_leadfield(cfg);
 
 ##### Source reconstruction
 
-  cfg = [];
-  cfg.channel=data_eeg_right.label;
-  cfg.covariance='yes';
-  cfg.covariancewindow=[.05 .18];
-  avg = ft_timelockanalysis(cfg,data_eeg_right);
+    cfg = [];
+    cfg.channel=data_eeg_right.label;
+    cfg.covariance='yes';
+    cfg.covariancewindow=[.05 .18];
+    avg = ft_timelockanalysis(cfg,data_eeg_right);
 
-  cfg=[];
-  cfg.method='lcmv';
-  cfg.senstype = 'EEG';
-  cfg.channel=data_eeg_right.label;
-  cfg.elec = elec;
-  cfg.grid = sourcemodel_virt;
-  cfg.headmodel=headmodel_eeg;
-  cfg.lcmv.keepfilter='yes';
-  cfg.lcmv.fixedori='yes';
-  cfg.lcmv.lamda='5%';
-  source=ft_sourceanalysis(cfg, avg);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.senstype = 'EEG';
+    cfg.channel=data_eeg_right.label;
+    cfg.elec = elec;
+    cfg.grid = sourcemodel_virt;
+    cfg.headmodel=headmodel_eeg;
+    cfg.lcmv.keepfilter='yes';
+    cfg.lcmv.fixedori='yes';
+    cfg.lcmv.lamda='5%';
+    source=ft_sourceanalysis(cfg, avg);
 
 ##### Multiply filters with data
 
-  spatialfilter=cat(1,source.avg.filter{:});
-  virtsens=[];
-  for i=1:length(data_eeg_right.trial)
+    spatialfilter=cat(1,source.avg.filter{:});
+    virtsens=[];
+    for i=1:length(data_eeg_right.trial)
       virtsens.trial{i}=spatialfilter*data_eeg_right.trial{i};
-  end
-  virtsens.time=data_eeg_right.time;
-  virtsens.fsample=data_eeg_right.fsample;
-  virtsens.label={'M1'}';
+    end
+    virtsens.time=data_eeg_right.time;
+    virtsens.fsample=data_eeg_right.fsample;
+    virtsens.label={'M1'}';
 
 ##### Perform event related averaging and time-frequency analysis
 
-  cfg=[];
-  cfg.preproc.hpfilter='yes';
-  cfg.preproc.hpfreq=1;
-  cfg.preproc.lpfilter='yes';
-  cfg.preproc.lpfreq=40;
-  tlkvc=ft_timelockanalysis(cfg, virtsens);
+    cfg=[];
+    cfg.preproc.hpfilter='yes';
+    cfg.preproc.hpfreq=1;
+    cfg.preproc.lpfilter='yes';
+    cfg.preproc.lpfreq=40;
+    tlkvc=ft_timelockanalysis(cfg, virtsens);
 
-  cfg              = [];
-  cfg.output       = 'pow';
-  cfg.method       = 'mtmconvol';
-  cfg.taper        = 'hanning';
-  cfg.foi          = 1:1:40;                          
-  cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
-  cfg.toi          = -.5:0.05:1.75;               
-  cfg.keeptrials ='no';
-  tfrvc= ft_freqanalysis(cfg,virtsens);
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.foi          = 1:1:40;                          
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
+    cfg.toi          = -.5:0.05:1.75;               
+    cfg.keeptrials ='no';
+    tfrvc= ft_freqanalysis(cfg,virtsens);
 
   %% baseline correction
-  cfg=[];
-  cfg.baseline=[-.5 0];
-  cfg.baselinetype='db';
-  tfrvcbl = ft_freqbaseline(cfg, tfrvc);
+    cfg=[];
+    cfg.baseline=[-.5 0];
+    cfg.baselinetype='db';
+    tfrvcbl = ft_freqbaseline(cfg, tfrvc);
 
 ##### Plot the result
 
-  figure;
-  for i=1:length(tlkvc.label)
+    figure;
+    for i=1:length(tlkvc.label)
       cfg=[];
       cfg.channel = tlkvc.label{i};
       cfg.parameter = 'avg';
       cfg.xlim    = [-.3 1.75];
 
       subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
-  end;
-  for i=1:length(tfrvc.label)
+    end;
+    for i=1:length(tfrvc.label)
       cfg=[];
       cfg.channel = tfrvc.label{i};
       cfg.zlim    = [-3 3];
       cfg.xlim    = [-.5 1.75];
       cfg.ylim    = [1 40];
       subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
-  end;
+    end;
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_eeg.png" width="600" %}
 *Figure 6: Time course of activity in the primary motor cortex reconstructed with EEG.*

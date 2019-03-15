@@ -83,9 +83,9 @@ Rather than doing all the preprocessing again, you can download the preprocessed
     cfg.keepfilter  = 'yes';
     source          = ft_sourceanalysis(cfg, timelock);
 
-The source reconstruction contains the estimated power and the source-level time-series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
+The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
-### Extract the virtual channel time-series
+### Extract the virtual channel time series
 
     %% construct the 3-D virtual channel at the location of interest
     beamformer = source.avg.filter{1};
@@ -101,12 +101,12 @@ The source reconstruction contains the estimated power and the source-level time
     end
 
 {% include markup/warning %}
-The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the broadband data allows us to compute a broadband source level time-series.
+The LCMV spatial filter is computed using data in the time domain. However, no time-domain spatial filters (during preprocessing e.g., low-pass or high-pass filters) have been applied before hand. Consequently, the filter will suppress all noise in the data in all frequency bands. The spatial filter derived from the broadband data allows us to compute a broadband source level time series.
 
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
 {% include markup/end %}
 
-The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time-series using **[ft_databrowser](/reference/ft_databrowser)**:
+The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](/reference/ft_databrowser)**:
 
     cfg = [];
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
@@ -119,7 +119,7 @@ rrent dipole source at the location of interest.
 
 ### Project along the strongest dipole direction
 
-The interpretation of connectivity is facilitated if we can compute it between two plain channels rather than between one channel versus a triplet of channels. Therefore we will project the time-series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
+The interpretation of connectivity is facilitated if we can compute it between two plain channels rather than between one channel versus a triplet of channels. Therefore we will project the time series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
 
     %% construct a single virtual channel in the maximum power orientation
     timeseries = cat(2, sourcedata.trial{:});
@@ -135,7 +135,7 @@ The interpretation of connectivity is facilitated if we can compute it between t
 
 Matrix u contains the spatial decomposition, matrix v the temporal and on the diagonal of matrix s you can find the eigenvalues. See "help svd" for more details.
 
-We now recompute the virtual channel time-series, but now only for the dipole direction that has the most power.
+We now recompute the virtual channel time series, but now only for the dipole direction that has the most power.
 
     % this is equal to the first column of matrix V, apart from the scaling with s(1,1)
     timeseriesmaxproj = u(:,1)' * timeseries;
@@ -152,9 +152,9 @@ We now recompute the virtual channel time-series, but now only for the dipole di
 {% include markup/info %}
 Rather than using a sourcemodel in the beamformer that consists of all three (x, y, z) directions, you can also have the beamformer compute the filter for only the optimal source orientation. This is implemented using the _cfg.lcmv.fixedori='yes'_ option.
 
-Recompute the spatial filter for the optimal source orientation and using that spatial filter (a 1x151 vector) recompute the time-series.
+Recompute the spatial filter for the optimal source orientation and using that spatial filter (a 1x151 vector) recompute the time series.
 
-Investigate and describe the difference between the two time-series. What is the difference between the two dipole orientations?
+Investigate and describe the difference between the two time series. What is the difference between the two dipole orientations?
 
 Note that one orientation is represented in the SVD matrix "u" and the other is in the source.avg.ori field.
 {% include markup/end %}

@@ -11,18 +11,18 @@ Finally, this example page shows how you can very simply stratify with the Field
 
   
   
-  s1_orig = randn(1,10000);
-  s2_orig = randn(1,10000) + 1;
+    s1_orig = randn(1,10000);
+    s2_orig = randn(1,10000) + 1;
   
   
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-  s1 = s1_orig;
-  s2 = s2_orig;
+    s1 = s1_orig;
+    s2 = s2_orig;
   
-  s = [s1(:) s2(:)];
-  figure; hist(s, 100)
+    s = [s1(:) s2(:)];
+    figure; hist(s, 100)
   
 
 {% include image src="/assets/img/example/stratify/twodistributions.png" width="500" %}
@@ -31,23 +31,23 @@ Finally, this example page shows how you can very simply stratify with the Field
 
   
   % trim the extremes
-  s1 = sort(s1);
-  s2 = sort(s2);
+    s1 = sort(s1);
+    s2 = sort(s2);
   
-  m1 = mean(s1);
-  m2 = mean(s2);
+    m1 = mean(s1);
+    m2 = mean(s2);
   
-  while (m2>m1)
+    while (m2>m1)
    s1 = s1(2:end);
    s2 = s2(1:end-1);
   
    % recompute the means
    m1 = mean(s1);
    m2 = mean(s2);
-  end
+    end
   
-  s = [s1(:) s2(:)];
-  figure; hist(s, 100)
+    s = [s1(:) s2(:)];
+    figure; hist(s, 100)
   
 
 {% include image src="/assets/img/example/stratify/rmextremes.png" width="500" %}
@@ -58,23 +58,23 @@ Finally, this example page shows how you can very simply stratify with the Field
   
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-  s1 = s1_orig;
-  s2 = s2_orig;
+    s1 = s1_orig;
+    s2 = s2_orig;
   
-  s = [s1(:) s2(:)];
-  figure; hist(s, 100)
+    s = [s1(:) s2(:)];
+    figure; hist(s, 100)
   
   % joint extremes
-  minval = min([s1 s2]);
-  maxval = max([s1 s2]);
+    minval = min([s1 s2]);
+    maxval = max([s1 s2]);
   
   % create a set of bins
-  binval = linspace(minval, maxval, 100);
+    binval = linspace(minval, maxval, 100);
   
-  keep1 = false(size(s1));
-  keep2 = false(size(s2));
+    keep1 = false(size(s1));
+    keep2 = false(size(s2));
   
-  for i=1:(length(binval)-1)
+    for i=1:(length(binval)-1)
    binbeg = binval(i);
    binend = binval(i+1);
    sel1 = find(s1>binbeg & s1<binend);
@@ -94,12 +94,12 @@ Finally, this example page shows how you can very simply stratify with the Field
    else
      % it is the same number, nothing to do
    end
-  end
-  s1 = s1(keep1);
-  s2 = s2(keep2);
+    end
+    s1 = s1(keep1);
+    s2 = s2(keep2);
   
-  s = [s1(:) s2(:)];
-  figure; hist(s, 100)
+    s = [s1(:) s2(:)];
+    figure; hist(s, 100)
   
 
 {% include image src="/assets/img/example/stratify/align_distib.png" width="500" %}
@@ -109,21 +109,21 @@ Finally, this example page shows how you can very simply stratify with the Field
 Note that this easily can be achieved with the FieldTrip **[ft_stratify](/reference/ft_stratify)** function like this
 
   
-  cfg = [];
-  cfg.method      = 'histogram'
-  cfg.equalbinavg = 'no';  % 'yes' is more optimal: it also removes the small within-bin bias due to the distributions being shifted
-  cfg.numbin      = 100;
+    cfg = [];
+    cfg.method      = 'histogram'
+    cfg.equalbinavg = 'no';  % 'yes' is more optimal: it also removes the small within-bin bias due to the distributions being shifted
+    cfg.numbin      = 100;
   [strat] = ft_stratify(cfg, s1_orig, s2_orig)
   
-  s1    = strat{1};
-  s2    = strat{2};
+    s1    = strat{1};
+    s2    = strat{2};
   % determine which trials to remove from both conditions
-  keep1 = ~isnan(s1);
-  keep2 = ~isnan(s2);
-  s1    = s1(keep1);
-  s2    = s2(keep2);
+    keep1 = ~isnan(s1);
+    keep2 = ~isnan(s2);
+    s1    = s1(keep1);
+    s2    = s2(keep2);
   
   % make the same figure as above
-  s = [s1(:) s2(:)];
-  figure; hist(s, 100)
+    s = [s1(:) s2(:)];
+    figure; hist(s, 100)
 

@@ -8,7 +8,7 @@ title: cleanup the functions in the private folders
 
 functions that according to *mydepfun* are not called by any other functio
 
-  nonused = 
+    nonused = 
   
       '/home/electromag/sashae/matlab/fieldtrip/private/LoadSpikes.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/ama2vol.m'

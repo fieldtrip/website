@@ -24,8 +24,8 @@ Neuralynx also writes a raw data file (.nrd) in which all the channels are sampl
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
-  addpath `<full_path_to_fieldtrip>`
-  ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
 ## Low-level reading functions
 
@@ -64,7 +64,7 @@ The LFP files are used for setting the sample "time" axis. If you only have spik
 
   >> hdr = ft_read_header('dataset')
 
-  hdr =
+    hdr =
                   nChans: 5
                    label: {'csc028'  'csc028'  'csc028'  'Sc1'  'Sc1'}
                 filename: {'dataset/csc01.ncs'  'dataset/csc02.ncs'  'dataset/csc03.ncs'  'dataset/sc1.nse'  'dataset/sc2.nse'}

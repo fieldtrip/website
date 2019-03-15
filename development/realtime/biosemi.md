@@ -62,28 +62,28 @@ The ActiveTwo can send out 312 data channels in total, out of which there are 25
   
   # Write "downsample X" with a positive number X to set the downsampling
   # factor for streaming. The GDF file will receive full-rate data.
-  downsample 8
+    downsample 8
   
   # Write "bandwidth X" with a positive real number X to set the cutoff frequency
   # of a Butterworth low-pass filter.
-  bandwidth 50
+    bandwidth 50
   
   # Write "bworder N" to set the order of the lowpass Butterworth filter for downsampling
-  bworder 4
+    bworder 4
   
   # Refresh period (in seconds) for inserting extra events. 
   # Battery events are sent out in a fixed interval (set 0 to disable).
   # Status events are sent out when the status changes, OR when the specified
   # time has elapsed after the last event was sent out.
-  statusrefresh 4
-  batteryrefresh 20
+    statusrefresh 4
+    batteryrefresh 20
   
   # Triggers will be written as FieldTrip buffer events with type="TRIGGER" and a
   # value corresponding to the 16-bit trigger signal.
   # With the keyword splittrigger, you can opt to split the 16-bit trigger signal
   # into two 8-bit signals, and give names to the events that are sent out for the
   # low and high byte of the original signal, respectively.
-  splittrigger stimulus response
+    splittrigger stimulus response
 
 ### Compilation
 

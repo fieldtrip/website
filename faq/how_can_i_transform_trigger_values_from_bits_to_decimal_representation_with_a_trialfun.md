@@ -9,7 +9,7 @@ Some EEG acquisition systems allow users to represent trigger values in bits (se
 
 The following code transforms bits to decimal numbers in a *.RAW fileformat from NETSTATION EEG system whos trigger channels are named as "DIN". For example the number 11 is represented with the following trigger sequence: DIN1 + DIN8 + DIN2. The trigger channel name can be changed and it is then LAB SPECIFIC. However you can follow the logic of the code and try to adapt it to a specific syste
 
-  function trl = trialfun_bit2dec(cfg)
+    function trl = trialfun_bit2dec(cfg)
   
   % TRIALFUN_BIT2DEC is a trialfun example function that illustrates how to
   % convert trigger values from bits to decimal representation.
@@ -23,11 +23,11 @@ The following code transforms bits to decimal numbers in a *.RAW fileformat from
   % cfg.trialdef.prestim cfg.trialdef.poststim
   
   %%
-  hdr   = ft_read_header(cfg.dataset);
-  event = ft_read_event(cfg.dataset);
+    hdr   = ft_read_header(cfg.dataset);
+    event = ft_read_event(cfg.dataset);
   
   % bit to decimal conversion
-  for i=1:length(event);
+    for i=1:length(event);
     switch event(i).value
       case 'DIN1'
         bit = 1;
@@ -44,22 +44,22 @@ The following code transforms bits to decimal numbers in a *.RAW fileformat from
     end % switch
     
     binarydata(bit, event(i).sample) = 1;
-  end
+    end
   
-  decimaldata = zeros(1,size(binarydata,2));
-  for i=1:size(binarydata,1)
+    decimaldata = zeros(1,size(binarydata,2));
+    for i=1:size(binarydata,1)
     decimaldata = decimaldata + binarydata(i,:) *(i-1)^2;
-  end
+    end
   
   % reinsert them as decimal values
-  for i=1:length(event)
+    for i=1:length(event)
     event(i).value = decimaldata(event(i).sample);
-  end
+    end
    
   % define trials
-  trl = [];
+    trl = [];
   
-  for i=1:length(event)
+    for i=1:length(event)
     if strcmp(event(i).type, cfg.trialdef.eventtype)
       % it is a trigger, see whether it has the right value
       if ismember(event(i).value, cfg.trialdef.eventvalue)
@@ -71,9 +71,9 @@ The following code transforms bits to decimal numbers in a *.RAW fileformat from
         trl(end+1, :) = [round([begsample endsample offset])  trigger]; 
       end
     end
-  end
+    end
   
   % discard the repeated values
-  idx = any(diff(trl(:,1),1,1),2);
-  trl = trl(idx,:);
+    idx = any(diff(trl(:,1),1,1),2);
+    trl = trl(idx,:);
 

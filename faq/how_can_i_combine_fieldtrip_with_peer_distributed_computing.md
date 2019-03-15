@@ -46,11 +46,11 @@ Note that when specifying the cfg.inputfile and/or cfg.outputfile options, that 
 
 The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/>. There is data for four subjects, which can be processed in parallel as follows.
 
-  subj  = [1 2 3 4];
+    subj  = [1 2 3 4];
 
-  cfg = {};
+    cfg = {};
   % create a cell-array of configurations, one per subject
-  for i=1:length(subj)
+    for i=1:length(subj)
 
     % just like in the scripting tutorial, you may want to evaluate a
     % subject specific script that contains details such as the filename
@@ -65,25 +65,25 @@ The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldt
     cfg{i}.trialdef.prestim    = 0.2;
     cfg{i}.trialdef.poststim   = 0.2;
     cfg{i}.outputfile = sprintf('subj%02d_raw.mat', i);
-  end
+    end
 
   % define the trials, this returns an updated cfg
   % this does not take long and does not have to be done in parallel
-  cfg = cellfun(@ft_definetrial, cfg, 'UniformOutput', 0);
+    cfg = cellfun(@ft_definetrial, cfg, 'UniformOutput', 0);
 
   % read the raw data, preprocess it and save the result to disk
-  peercellfun(@ft_preprocessing, cfg);
+    peercellfun(@ft_preprocessing, cfg);
 
-  cfg = {};
+    cfg = {};
   % create a cell-array of configurations, one per subject
-  for i=1:length(subj)
+    for i=1:length(subj)
     cfg{i} = [];
     cfg{i}.inputfile  = sprintf('subj%02d_raw.mat', i);
     cfg{i}.outputfile = sprintf('subj%02d_avg.mat', i);
-  end
+    end
 
   % load the raw data from disk, average it and save the result
-  peercellfun(@ft_timelockanalysis, cfg);
+    peercellfun(@ft_timelockanalysis, cfg);
 
 Please note that file permissions can be problematic if you use peers that are running under another user (e.g. public). If you use a publicly writeable directory, e.g. in linux
     mkdir ~/public
@@ -94,30 +94,30 @@ for the cfg.outputfile and cfg.inputfile options, you should be fine.
 
 If you don't want each function to read/write the intermediate files from/to disk, you can also bundle them into a function that executes them in sequence. For example
 
-  function [source] = preproc_freq_source(cfg1, cfg2, cfg3)
-  data = ft_preprocessing(cfg1);
-  freq = ft_freqanalysis(cfg2, data);
-  clear data % remove it from memory as soon as it is not needed any more
-  source = ft_sourceanalysis(cfg3, freq);
-  clear freq % remove it from memory as soon as it is not needed any more
+    function [source] = preproc_freq_source(cfg1, cfg2, cfg3)
+    data = ft_preprocessing(cfg1);
+    freq = ft_freqanalysis(cfg2, data);
+    clear data % remove it from memory as soon as it is not needed any more
+    source = ft_sourceanalysis(cfg3, freq);
+    clear freq % remove it from memory as soon as it is not needed any more
 
 And then you would call it in parallel for many subjects and conditions like this
 
-  for subj=1:10
-  for cond=1:4
+    for subj=1:10
+    for cond=1:4
 
   % here you would specify a different dataset for each subject
   % and perhaps a different trigger code
-  cfg1{subj, cond} = ...  
+    cfg1{subj, cond} = ...  
 
-  cfg2{subj, cond} = ...
+    cfg2{subj, cond} = ...
 
-  cfg3{subj, cond} = ...
+    cfg3{subj, cond} = ...
 
-  end % cond
-  end % subj
+    end % cond
+    end % subj
 
-  sourceall = peercellfun(@preproc_freq_source, cfg1, cfg2, cfg3);
+    sourceall = peercellfun(@preproc_freq_source, cfg1, cfg2, cfg3);
 
 Here all the source reconstructions will be returned to the master MATLAB session. Of course you can also save them to disk using unique filenames for each subject and condition. Alternatively you can use the cfg.inputfile option for the first step in your bundle of FieldTrip functions, and cfg.outputfile in the last step.
 

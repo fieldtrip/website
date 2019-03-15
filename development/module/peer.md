@@ -23,17 +23,17 @@ Assume that you have started one peer on your own computer and three peers on th
 
   >> peercellfun(@rand, {10, 20, 30}, 'UniformOutput', false)
 
-  submitted 3/3, collected 3/3, busy 0, speedup 0.1
-  computational time = 0.0 sec, elapsed = 0.2 sec, speedup 0.0 x (memreq = 8.0 KB, timreq = 0 seconds)
+    submitted 3/3, collected 3/3, busy 0, speedup 0.1
+    computational time = 0.0 sec, elapsed = 0.2 sec, speedup 0.0 x (memreq = 8.0 KB, timreq = 0 seconds)
 
-  ans =
+    ans =
       [10x10 double]    [20x20 double]    [30x30 double]
 
 which will compute a random matrix on each of the three slaves. You can compare this to the standard MATLAB [cellfun](http://www.mathworks.nl/help/techdoc/ref/cellfun.html) function, which works almost identical but that executes the funcion locall
 
   >> cellfun(@rand, {10, 20, 30}, 'UniformOutput', false)
 
-  ans =
+    ans =
       [10x10 double]    [20x20 double]    [30x30 double]
 
 What happened in the peercellfun call is that each of the sets of input arguments {'rand', 10},  {'rand', 20} and {'rand', 30} was sent to one of the available slaves. The slave peer is waiting for something to arrive, and as soon as a job arrives, the slave executes rand(10), rand(20) or rand(30) and the output arguments are sent back to the master.
@@ -44,7 +44,7 @@ The example above demonstrates how you can use **[peercellfun](/reference/peerce
 
 On your own computer you start a MATLAB session and type
 
-  peermaster
+    peermaster
 
 The **[peermaster](/reference/peermaster)** command will start the network buffer and the peer discovery threads in the background and signal the other peers on the network that you are not willing to execute jobs for them.
 
@@ -54,7 +54,7 @@ In case you have a computer with a multi-core CPU (as most computers have nowada
 
 You start multiple MATLAB instances, one per available core. Within each MATLAB instance you type
 
-  peerslave
+    peerslave
 
 The **[peerslave](/reference/peerslave)** command will start the network buffer and the peer discovery threads in the background, switch to slave mode to signal the other peers that it is willing to execute a job and wait until a request for execution comes in.
 

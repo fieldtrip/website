@@ -20,8 +20,8 @@ as the internally used data type to hold the filter states. For example, you can
 
   :::cpp
   MultiChannelFilter`<int,double>` *filter = new MultiChannelFilter`<int,double>`(10, 4);  // 4th-order filter
-  filter->setButterLP(0.1);  // normalised frequency, 1=Nyquist
-  filter->process(out, in);  // out and in point to 10 integers each (=one sample)
+    filter->setButterLP(0.1);  // normalised frequency, 1=Nyquist
+    filter->process(out, in);  // out and in point to 10 integers each (=one sample)
 
 ### TemplateVectorMath
 
@@ -35,16 +35,16 @@ integers, you would call something like
 
   :::cpp
   GDF_Writer gdfWriter = new GDF_Writer(1+10, 500, GDF_INT32);
-  gdfWriter->setLabel(0, "Status");
-  for (int i=0;i<10;i++) {
+    gdfWriter->setLabel(0, "Status");
+    for (int i=0;i<10;i++) {
      gdfWriter->setLabel(1+i, yourLabel[i]);   // e.g. yourLabel[0] is label of first cont. channel
      gdfWriter->setPhysicalLimits(1+i, -262144.0, 262144.0);   // maximum physical value = 262144 ...
      gdfWriter->setPhysDimCode(1+i, GDF_MICRO + GDF_VOLT);     // ... in units of microVolt
   }
   ...
-  gdfWriter->createAndWriteHeader(filename);
+    gdfWriter->createAndWriteHeader(filename);
   ...
-  gdfWriter->addSamples(num, data);      // data must point to 11*num integer values 
+    gdfWriter->addSamples(num, data);      // data must point to 11*num integer values 
 
 ### ChannelSelection & SignalConfiguration
 

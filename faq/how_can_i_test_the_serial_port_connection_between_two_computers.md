@@ -21,58 +21,58 @@ Here we need a computer with two serial ports(or two computers). We can send com
 
 This is what I did on my office PC using FieldTrip commands **[ft_read_event](/reference/ft_read_event)** and **[ft_write_event](/reference/ft_write_event)**.
 
-  delete(instrfind);
-  fclose('all');
-  clear all;
-  close all;
+    delete(instrfind);
+    fclose('all');
+    clear all;
+    close all;
 
-  addpath('H:\common\matlab\fieldtrip\');
+    addpath('H:\common\matlab\fieldtrip\');
   % addpath('H:\common\matlab\fieldtrip\private\');
   %% filetype_check_uri and ft_filter_event need to be in the path
   %% Note the syntax: serial:`<port>`?key1=value1&key2=value2&...
   %% here key1 is BaudRate and value1 is 115200
 
   %% write something to serial port 4
-  cfg.istream ='serial:COM4?BaudRate=115200';
+    cfg.istream ='serial:COM4?BaudRate=115200';
   %% and receive it on serial port 1 (serila ports are physically connected)
-  cfg.ostream ='serial:COM1?BaudRate=115200';
-  event.value=5; %% This can be a string or an integer, e.g. 1 or 'Rock_n_Roll_will_never_dye', however longer strings will take longer to be communicated
-  count=0;
-  tlop=[];
-  while true
-  count=count+1;
+    cfg.ostream ='serial:COM1?BaudRate=115200';
+    event.value=5; %% This can be a string or an integer, e.g. 1 or 'Rock_n_Roll_will_never_dye', however longer strings will take longer to be communicated
+    count=0;
+    tlop=[];
+    while true
+    count=count+1;
   %% write
-  ft_write_event(cfg.istream,event,'eventformat','fcdc_serial');
-  tic
+    ft_write_event(cfg.istream,event,'eventformat','fcdc_serial');
+    tic
   %% read
-  ww=ft_read_event(cfg.ostream,'eventformat','fcdc_serial');
+    ww=ft_read_event(cfg.ostream,'eventformat','fcdc_serial');
   %% measure time
-  t1=toc;
-  tlop=[tlop,t1];
+    t1=toc;
+    tlop=[tlop,t1];
   %% disp received event
-  disp(ww);
-  pause(0.15); %% give serial port a break
-  if count>1000
+    disp(ww);
+    pause(0.15); %% give serial port a break
+    if count>1000
       break
-  end
-  end;
+    end
+    end;
 
 
-  figure
-  plot(tlop*1000,'.');
-  xlabel('function calls');
-  ylabel('delay read write event [ms]');
+    figure
+    plot(tlop*1000,'.');
+    xlabel('function calls');
+    ylabel('delay read write event [ms]');
 
-  modal_val=mode(tlop(2:end)*1000)
-  median_val=median(tlop(2:end)*1000)
-  range_val=range(tlop(2:end)*1000)
+    modal_val=mode(tlop(2:end)*1000)
+    median_val=median(tlop(2:end)*1000)
+    range_val=range(tlop(2:end)*1000)
 
-  gtext({'mode :';'median :';'range:'});
-  gtext(num2str(modal_val));
-  gtext(num2str(median_val));
-  gtext(num2str(range_val));
+    gtext({'mode :';'median :';'range:'});
+    gtext(num2str(modal_val));
+    gtext(num2str(median_val));
+    gtext(num2str(range_val));
   %% close what we have opened
-  fclose('all');
+    fclose('all');
 
 
 What I got looks like thi
@@ -83,38 +83,38 @@ Alternatively, one can simply use MATLAB serial objects and low level reading fu
 
 
   %% objects are cleared
-  clear all;
-  delete(instrfind);
-  fclose('all');
+    clear all;
+    delete(instrfind);
+    fclose('all');
 
   %% define 1st serial port on COM1
-  serobjw = serial('COM1');              % Creating serial port object now its connected to COM7
-  serobjw.Baudrate = 115200;             % Set the baud rate at the specific value
-  set(serobjw, 'Parity', 'none');        % Set parity as none
-  set(serobjw, 'Databits', 8);           % set the number of data bits
-  set(serobjw, 'StopBits', 1);           % set number of stop bits as 1
-  set(serobjw, 'Terminator', 10);        % set the terminator value to newline
-  set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
-  get(serobjw) ;
+    serobjw = serial('COM1');              % Creating serial port object now its connected to COM7
+    serobjw.Baudrate = 115200;             % Set the baud rate at the specific value
+    set(serobjw, 'Parity', 'none');        % Set parity as none
+    set(serobjw, 'Databits', 8);           % set the number of data bits
+    set(serobjw, 'StopBits', 1);           % set number of stop bits as 1
+    set(serobjw, 'Terminator', 10);        % set the terminator value to newline
+    set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
+    get(serobjw) ;
   %% open it
-  fopen(serobjw);
+    fopen(serobjw);
 
   %% define 2nd serial port on COM4
-  serobjw2 = serial('COM4');             % Creating serial port object now its connected to COM7
-  serobjw2.Baudrate = 115200;            % Set the baud rate at the specific value
-  set(serobjw2, 'Parity', 'none');       % Set parity as none
-  set(serobjw, 'Databits', 8);           % set the number of data bits
-  set(serobjw, 'StopBits', 1);           % set number of stop bits as 1
-  set(serobjw, 'Terminator', 10);        % set the terminator value to newline
-  set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
-  get(serobjw) ;
+    serobjw2 = serial('COM4');             % Creating serial port object now its connected to COM7
+    serobjw2.Baudrate = 115200;            % Set the baud rate at the specific value
+    set(serobjw2, 'Parity', 'none');       % Set parity as none
+    set(serobjw, 'Databits', 8);           % set the number of data bits
+    set(serobjw, 'StopBits', 1);           % set number of stop bits as 1
+    set(serobjw, 'Terminator', 10);        % set the terminator value to newline
+    set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
+    get(serobjw) ;
 
   %% open it
-  fopen(serobjw2);
+    fopen(serobjw2);
 
-  count=0
-  tlop=[];
-  while 1
+    count=0
+    tlop=[];
+    while 1
       count=count+1;
       %% write to COM1
       fwrite(serobjw,5); %% can be numeric or a string
@@ -135,23 +135,23 @@ Alternatively, one can simply use MATLAB serial objects and low level reading fu
           end
       end
         pause(0.15); %% give serial a break
-  end
-  figure
-  plot(tlop*1000,'.');
-  xlabel('function calls');
-  ylabel('delay read write, MATLAB serial [ms]');
+    end
+    figure
+    plot(tlop*1000,'.');
+    xlabel('function calls');
+    ylabel('delay read write, MATLAB serial [ms]');
 
-  modal_val=mode(tlop(2:end)*1000)
-  median_val=median(tlop(2:end)*1000)
-  range_val=range(tlop(2:end)*1000)
+    modal_val=mode(tlop(2:end)*1000)
+    median_val=median(tlop(2:end)*1000)
+    range_val=range(tlop(2:end)*1000)
 
-  gtext({'mode :';'median :';'range:'});
-  gtext(num2str(modal_val));
-  gtext(num2str(median_val));
-  gtext(num2str(range_val));
+    gtext({'mode :';'median :';'range:'});
+    gtext(num2str(modal_val));
+    gtext(num2str(median_val));
+    gtext(num2str(range_val));
   %% close what we have opened
-  fclose('all');
-  delete(instrfind);
+    fclose('all');
+    delete(instrfind);
 
 The picture looks similar, only slightly faster.
 

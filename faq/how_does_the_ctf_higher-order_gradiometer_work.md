@@ -15,13 +15,13 @@ The data set on disk contains in the header the parameters that are used to conv
 
 To get an intuition about what "balancing" means in terms of computation, let's run the following code. First, download a CTF data set which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) and use **[ft_read_sens](/reference/ft_read_sens)** to access the sensor position information of the MEG data, in this case CTF15
 
-  grad = ft_read_sens('Subject01.ds')
+    grad = ft_read_sens('Subject01.ds')
 
 The grad structure included in the FieldTrip representation (i.e. hdr.grad or data.grad) should be consistent with the data, hence it contain
 
-  grad.balance
+    grad.balance
   
-  ans = 
+    ans = 
   
          G1BR: [1x1 struct]
          G2BR: [1x1 struct]
@@ -32,16 +32,16 @@ and potentially other "balancing" schemes. The grad.balance.current describes wh
 
 We can explore the different higher order synthetic gradiometer forward solution as follow
 
-  figure;
-  subplot(2,2,[1 3]);imagesc(grad.balance.G1BR.tra);
-  title('First order gradiometer forward solution');
-  xlim([0 175]);colorbar;
+    figure;
+    subplot(2,2,[1 3]);imagesc(grad.balance.G1BR.tra);
+    title('First order gradiometer forward solution');
+    xlim([0 175]);colorbar;
   
   %example forward solution for the second MEG sensor
-  colorcode = (grad.balance.G1BR.tra(2,:)~=0)+1;
-  subplot(2,2,[2 4]);scatter(1:size(grad.balance.G1BR.tra,2),grad.balance.G1BR.tra(2,:),9,colorcode,'filled');
-  title(['First order gradiometer forward solution for sensor ' grad.balance.G1BR.labelnew{2}]);
-  xlim([0 175]);ylim([-1.2 1.2]);
+    colorcode = (grad.balance.G1BR.tra(2,:)~=0)+1;
+    subplot(2,2,[2 4]);scatter(1:size(grad.balance.G1BR.tra,2),grad.balance.G1BR.tra(2,:),9,colorcode,'filled');
+    title(['First order gradiometer forward solution for sensor ' grad.balance.G1BR.labelnew{2}]);
+    xlim([0 175]);ylim([-1.2 1.2]);
 
 {% include image src="/assets/img/faq/how_does_the_ctf_higher-order_gradiometer_work/g1brv.png" %}
 
@@ -49,29 +49,29 @@ The left part of the figure shows how the first order gradiometer forward soluti
 
 If we explore the second and the third synthetic gradiometers, things become very interestin
 
-  figure;
-  subplot(2,2,[1 3]);imagesc(grad.balance.G2BR.tra);
-  title('Second order gradiometer forward solution');
-  xlim([0 175]);colorbar;
+    figure;
+    subplot(2,2,[1 3]);imagesc(grad.balance.G2BR.tra);
+    title('Second order gradiometer forward solution');
+    xlim([0 175]);colorbar;
   
   %example forward solution for the second MEG sensor
-  colorcode = (grad.balance.G2BR.tra(2,:)~=0)+1;
-  subplot(2,2,[2 4]);scatter(1:size(grad.balance.G2BR.tra,2),grad.balance.G2BR.tra(2,:),9,colorcode,'filled');
-  title(['Second order gradiometer forward solution for sensor ' grad.balance.G2BR.labelnew{2}]);
-  xlim([0 175]);ylim([-1.2 1.2]);
+    colorcode = (grad.balance.G2BR.tra(2,:)~=0)+1;
+    subplot(2,2,[2 4]);scatter(1:size(grad.balance.G2BR.tra,2),grad.balance.G2BR.tra(2,:),9,colorcode,'filled');
+    title(['Second order gradiometer forward solution for sensor ' grad.balance.G2BR.labelnew{2}]);
+    xlim([0 175]);ylim([-1.2 1.2]);
 
 {% include image src="/assets/img/faq/how_does_the_ctf_higher-order_gradiometer_work/g2brv.png" %}
 
-  figure;
-  subplot(2,2,[1 3]);imagesc(grad.balance.G3BR.tra);
-  title('Third order gradiometer forward solution');
-  xlim([0 175]);colorbar;
+    figure;
+    subplot(2,2,[1 3]);imagesc(grad.balance.G3BR.tra);
+    title('Third order gradiometer forward solution');
+    xlim([0 175]);colorbar;
   
   %example forward solution for the second MEG sensor
-  colorcode = (grad.balance.G3BR.tra(2,:)~=0)+1;
-  subplot(2,2,[2 4]);scatter(1:size(grad.balance.G3BR.tra,2),grad.balance.G3BR.tra(2,:),9,colorcode,'filled');
-  title(['Third order gradiometer forward solution for sensor ' grad.balance.G3BR.labelnew{2}]);
-  xlim([0 175]);ylim([-1.2 1.2]);
+    colorcode = (grad.balance.G3BR.tra(2,:)~=0)+1;
+    subplot(2,2,[2 4]);scatter(1:size(grad.balance.G3BR.tra,2),grad.balance.G3BR.tra(2,:),9,colorcode,'filled');
+    title(['Third order gradiometer forward solution for sensor ' grad.balance.G3BR.labelnew{2}]);
+    xlim([0 175]);ylim([-1.2 1.2]);
 
 {% include image src="/assets/img/faq/how_does_the_ctf_higher-order_gradiometer_work/g3brv.png" %}
 

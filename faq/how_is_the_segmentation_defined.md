@@ -36,21 +36,21 @@ Here is to code that creates this data-structure. It makes use of one of the MRI
 
 
   % read in the anatomical data
-  mri  = ft_read_mri('Subject01.mri');
+    mri  = ft_read_mri('Subject01.mri');
 
   % use the ft_volumereslice function to be able to plot the MRI with the top of the head upwards
-  cfg              = [];   
-  cfg.dim          = [256 256 256];                 % original dimension
-  mri              = ft_volumereslice(cfg,mri);
+    cfg              = [];   
+    cfg.dim          = [256 256 256];                 % original dimension
+    mri              = ft_volumereslice(cfg,mri);
 
   % obtain the gray, white and csf tissue probability maps (tpm)
-  cfg              = [];
-  tpm              = ft_volumesegment(cfg,mri);
+    cfg              = [];
+    tpm              = ft_volumesegment(cfg,mri);
 
   % plot the gray matter
-  cfg              = [];
-  cfg.funparameter = 'gray';
-  ft_sourceplot(cfg, tpm);
+    cfg              = [];
+    cfg.funparameter = 'gray';
+    ft_sourceplot(cfg, tpm);
 
 The output of this code can be seen in the introduction of this faq.
 
@@ -74,14 +74,14 @@ The brain, scalp and skull segmentations are used for creating **volume conducti
 
 
   % obtain the brain, skull and scalp tissues
-  cfg              = [];
-  cfg.output       = {'brain','skull','scalp'};
-  bss              = ft_volumesegment(cfg, mri);     % the mri is the same as in the code before
+    cfg              = [];
+    cfg.output       = {'brain','skull','scalp'};
+    bss              = ft_volumesegment(cfg, mri);     % the mri is the same as in the code before
 
-  cfg              = [];
-  cfg.funparameter = 'brain';
-  cfg.location     = 'center';
-  ft_sourceplot(cfg, bss);
+    cfg              = [];
+    cfg.funparameter = 'brain';
+    cfg.location     = 'center';
+    ft_sourceplot(cfg, bss);
 
 This segmentation data structure looks similar to the structure above (in the introduction), but here, the fields representing the different tissue types contain binary matrices.
 
@@ -116,14 +116,14 @@ When only the scalp as output is required from the segmentation, the scalp-mask 
 This representation differentiates the boarder of the outer skin, but not the inside skin surface. The advantage of such a representation is that it is created faster.    
 
 
-  cfg=[];
-  cfg.output='scalp';
-  scalp=ft_volumesegment(cfg,mri);
+    cfg=[];
+    cfg.output='scalp';
+    scalp=ft_volumesegment(cfg,mri);
 
-  cfg              = [];
-  cfg.funparameter = 'scalp';
-  cfg.location     = 'center';
-  ft_sourceplot(cfg, scalp);
+    cfg              = [];
+    cfg.funparameter = 'scalp';
+    cfg.location     = 'center';
+    ft_sourceplot(cfg, scalp);
 
 ### Indexed representation
 
@@ -134,9 +134,9 @@ An additional field in the structure contains the labels that describe the names
 An example of an indexed segmentation data-structure (the AFNI TTatlas+tlrc segmented brain atlas
 
 
-  atlas            =   ft_read_atlas('TTatlas+tlrc.BRICK');
+    atlas            =   ft_read_atlas('TTatlas+tlrc.BRICK');
 
-  disp(atlas)
+    disp(atlas)
                  dim: [161 191 141]        
            transform: [4x4 double]        
                coord: 'tal'               
@@ -160,21 +160,21 @@ The following code demonstrates how to create an indexed representation from the
 
 
   % convert to indexed representation
-  bss_i                = bss;
-  bss_i.seg            = double(bss.scalp);         % scalp is logical but seg will contain: 0,1,2,3
-  bss_i.seg(bss.skull) = 2;                         % skull is represented by index 2
-  bss_i.seg(bss.brain) = 3;                         % brain is represented by index 3
-  bss_i.seglabel       = {'scalp','skull','brain'}; % label-order corresponds to index from 1 to 3
+    bss_i                = bss;
+    bss_i.seg            = double(bss.scalp);         % scalp is logical but seg will contain: 0,1,2,3
+    bss_i.seg(bss.skull) = 2;                         % skull is represented by index 2
+    bss_i.seg(bss.brain) = 3;                         % brain is represented by index 3
+    bss_i.seglabel       = {'scalp','skull','brain'}; % label-order corresponds to index from 1 to 3
 
-  cfg                  = [];
-  cfg.funparameter     = 'seg';
-  cfg.location         = 'center';
-  ft_sourceplot(cfg,bss_i);
+    cfg                  = [];
+    cfg.funparameter     = 'seg';
+    cfg.location         = 'center';
+    ft_sourceplot(cfg,bss_i);
 
   % change the colormap
-  map = [0 0 0; 1 0 0; 0 1 0; 0 0 1];
+    map = [0 0 0; 1 0 0; 0 1 0; 0 0 1];
 
-  colormap(map);
+    colormap(map);
 
 {% include image src="/assets/img/faq/how_is_the_segmentation_defined/seg_indexed.png" width="350" %}
 

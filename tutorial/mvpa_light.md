@@ -71,9 +71,9 @@ Let us unpack this:
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
 - `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section _Classification across time_).
 - `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s
-  for the trials belonging to class 1, _2_'s for trials
-  belonging to class 2, and so on. For the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
-  there is three classes, namely FIC (class 1), FC (class 2), and IC (class 3).
+    for the trials belonging to class 1, _2_'s for trials
+    belonging to class 2, and so on. For the [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
+    there is three classes, namely FIC (class 1), FC (class 2), and IC (class 3).
 
 Now call
 

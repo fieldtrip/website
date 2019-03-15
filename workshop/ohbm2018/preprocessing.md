@@ -90,46 +90,46 @@ The following steps are taken in the EEG section of the tutorial:
 
 We start with the trial definition using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**.
 
-  data_name              = 'subject01.ds';        % define the data path and its name
+    data_name              = 'subject01.ds';        % define the data path and its name
 
   % Read events
-  cfg                    = [];                    
-  cfg.trialdef.prestim   = 0.1;                   % in seconds
-  cfg.trialdef.poststim  = 0.2;                   % in seconds
-  cfg.trialdef.eventtype = 'rightArm';            % get a list of the available types
-  cfg.dataset            = data_name;             % set the name of the dataset
-  cfg_tr_def             = ft_definetrial(cfg);   % read the list of the specific stimulus
+    cfg                    = [];                    
+    cfg.trialdef.prestim   = 0.1;                   % in seconds
+    cfg.trialdef.poststim  = 0.2;                   % in seconds
+    cfg.trialdef.eventtype = 'rightArm';            % get a list of the available types
+    cfg.dataset            = data_name;             % set the name of the dataset
+    cfg_tr_def             = ft_definetrial(cfg);   % read the list of the specific stimulus
 
   % segment data according to the trial definition
-  cfg                    = [];
-  cfg.dataset            = data_name;      
-  cfg.channel            = 'eeg1010';             % define channel type
-  data_eeg               = ft_preprocessing(cfg); % read raw data
-  data_eeg               = ft_redefinetrial(cfg_tr_def, data_eeg);
+    cfg                    = [];
+    cfg.dataset            = data_name;      
+    cfg.channel            = 'eeg1010';             % define channel type
+    data_eeg               = ft_preprocessing(cfg); % read raw data
+    data_eeg               = ft_redefinetrial(cfg_tr_def, data_eeg);
 
-  cfg                    = [];
-  cfg.dataset            = data_name;      
-  cfg.channel            = 'MEG';             % define channel type
-  data_meg               = ft_preprocessing(cfg); % read raw data
-  data_meg               = ft_redefinetrial(cfg_tr_def, data_meg);
+    cfg                    = [];
+    cfg.dataset            = data_name;      
+    cfg.channel            = 'MEG';             % define channel type
+    data_meg               = ft_preprocessing(cfg); % read raw data
+    data_meg               = ft_redefinetrial(cfg_tr_def, data_meg);
 
 
 We will filter the data using **[ft_preprocessing](/reference/ft_preprocessing)** around the frequency spectrum of interest and eliminate the power line noise before calculating the SEP/SEFs with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-  cfg                = [];                
-  cfg.hpfilter       = 'yes';        % enable high-pass filtering
-  cfg.lpfilter       = 'yes';        % enable low-pass filtering
-  cfg.hpfreq         = 20;           % set up the frequency for high-pass filter
-  cfg.lpfreq         = 250;          % set up the frequency for low-pass filter
-  cfg.dftfilter      = 'yes';        % enable notch filtering to eliminate power line noise
-  cfg.dftfreq        = [50 100 150]; % set up the frequencies for notch filtering
-  cfg.baselinewindow = [-0.1 -0.02];    % define the baseline window
-  data_eeg           = ft_preprocessing(cfg,data_eeg);
-  data_meg           = ft_preprocessing(cfg,data_meg);
+    cfg                = [];                
+    cfg.hpfilter       = 'yes';        % enable high-pass filtering
+    cfg.lpfilter       = 'yes';        % enable low-pass filtering
+    cfg.hpfreq         = 20;           % set up the frequency for high-pass filter
+    cfg.lpfreq         = 250;          % set up the frequency for low-pass filter
+    cfg.dftfilter      = 'yes';        % enable notch filtering to eliminate power line noise
+    cfg.dftfreq        = [50 100 150]; % set up the frequencies for notch filtering
+    cfg.baselinewindow = [-0.1 -0.02];    % define the baseline window
+    data_eeg           = ft_preprocessing(cfg,data_eeg);
+    data_meg           = ft_preprocessing(cfg,data_meg);
 
 The output of data is the structure data which has the following field
 
-  data_eeg =
+    data_eeg =
 
              hdr: [1x1 struct]
             elec: [1x1 struct]
@@ -140,7 +140,7 @@ The output of data is the structure data which has the following field
            label: {74x1 cell}
              cfg: [1x1 struct]
 
-  data_meg =
+    data_meg =
 
              hdr: [1x1 struct]
            trial: {1x1198 cell}
@@ -154,19 +154,19 @@ The output of data is the structure data which has the following field
 
 In the data structure of data_meg/data_eeg we see it still contains elec/grad. With the following code we remove elec/grad from the structure, otherwise we encounter problems in the later step of processing.
 
-  data_meg = rmfield(data_meg, 'elec')
-  data_eeg = rmfield(data_eeg, 'grad')
+    data_meg = rmfield(data_meg, 'elec')
+    data_eeg = rmfield(data_eeg, 'grad')
 
 We will use **[ft_rejectartifact](/reference/ft_rejectartifact)** to clean the data of bad trials (and perhaps channels). We use only the 'zvalue' criterion to eliminate bad trials (or channels). You can play around with other criterion where you can reject trial.
 
 
-  cfg        = [];
-  cfg.metric = 'zvalue';  % use by default zvalue method
-  cfg.method = 'summary'; % use by default summary method
+    cfg        = [];
+    cfg.metric = 'zvalue';  % use by default zvalue method
+    cfg.method = 'summary'; % use by default summary method
 
-  data_eeg       = ft_rejectvisual(cfg,data_eeg);
+    data_eeg       = ft_rejectvisual(cfg,data_eeg);
 
-  data_meg       = ft_rejectvisual(cfg,data_meg);
+    data_meg       = ft_rejectvisual(cfg,data_meg);
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/artifactrejection.png" width="600" %}
 
@@ -180,10 +180,10 @@ The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** averages 
 
 The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point. This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the data structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**.
 
-  cfg                   = [];
-  cfg.preproc.demean    = 'yes';    % enable demean to remove mean value from each single trial
-  cfg.covariance        = 'yes';    % calculate covariance matrix of the data
-  cfg.covariancewindow  = [-0.1 0]; % calculate the covariance matrix for a specific time window
+    cfg                   = [];
+    cfg.preproc.demean    = 'yes';    % enable demean to remove mean value from each single trial
+    cfg.covariance        = 'yes';    % calculate covariance matrix of the data
+    cfg.covariancewindow  = [-0.1 0]; % calculate the covariance matrix for a specific time window
   EEG_avg               = ft_timelockanalysis(cfg, data_eeg);
   MEG_avg               = ft_timelockanalysis(cfg, data_meg);
 
@@ -191,16 +191,16 @@ The trials belonging to one condition will now be averaged with the onset of the
 
 We should re-reference the averaged EEG data for later use in the inverse problem, [inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem ).
 
-  cfg               = [];
-  cfg.reref         = 'yes';
-  cfg.refchannel    = 'all';
-  cfg.refmethod     = 'avg';
+    cfg               = [];
+    cfg.reref         = 'yes';
+    cfg.refchannel    = 'all';
+    cfg.refmethod     = 'avg';
   EEG_avg           = ft_preprocessing(cfg,EEG_avg);
 
 Don't forget to save the time locked data.
 
-  save MEG_avg MEG_avg
-  save EEG_avg EEG_avg
+    save MEG_avg MEG_avg
+    save EEG_avg EEG_avg
 
 ### Global Mean Field Power
 
@@ -214,8 +214,8 @@ where t is time, V is the voltage at channel i and K is the number of channels.
 FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/reference/ft_globalmeanfield). This function requires timelocked data as input. We will use similar preprocessing as applied in [Esser et al. (2006)](http://dx.doi.org/10.1016/j.brainresbull.2005.11.003).
 
   %global mean field power calculation for visualization purposes
-  cfg = [];
-  cfg.method = 'amplitude';
+    cfg = [];
+    cfg.method = 'amplitude';
   EEG_gmfp = ft_globalmeanfield(cfg, EEG_avg);
   MEG_gmfp = ft_globalmeanfield(cfg, MEG_avg);
 
@@ -223,34 +223,34 @@ FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/r
 
 Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft_multiplotER](/reference/ft_multiplotER)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
 
-  figure;
+    figure;
 
-  pol = -1;     % correct polarity
-  scale = 10^6; % scale for eeg data micro volts
+    pol = -1;     % correct polarity
+    scale = 10^6; % scale for eeg data micro volts
 
-  signal_EEG = scale*pol*EEG_avg.avg; % add single trials in a new value
+    signal_EEG = scale*pol*EEG_avg.avg; % add single trials in a new value
 
   % plot single trial together with global mean field power
-  h1 = plot(EEG_avg.time,signal_EEG,'color',[0,0,0.5]);
-  hold on;
-  h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
+    h1 = plot(EEG_avg.time,signal_EEG,'color',[0,0,0.5]);
+    hold on;
+    h2 = plot(EEG_avg.time,scale*EEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sep_singleploter.png" width="600" %}
 
 *figure 2: Representation of single trial (blue) and the global mean field power of EEG (red).*
 
-  figure;
+    figure;
 
-  pol = -1;     % correct polarity
-  scale = 10^6; % scale for eeg data micro volts
+    pol = -1;     % correct polarity
+    scale = 10^6; % scale for eeg data micro volts
 
-  signal_MEG = scale*pol*MEG_avg.avg; % add single trials in a new value
+    signal_MEG = scale*pol*MEG_avg.avg; % add single trials in a new value
 
   % plot single trial together with global mean field power
-  h1 = plot(MEG_avg.time,signal_MEG,'color',[0,0,0.5]);
-  hold on;
-  h2 = plot(MEG_avg.time,scale*MEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
+    h1 = plot(MEG_avg.time,signal_MEG,'color',[0,0,0.5]);
+    hold on;
+    h2 = plot(MEG_avg.time,scale*MEG_gmfp.avg,'color',[1,0,0],'linewidth',1);
 
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sef_singleploter.png" width="600" %}
@@ -260,30 +260,30 @@ Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft
 We set up values to create the image you observe before for EEG.
 
 
-  mx = max(max(signal_EEG));
-  mn = min(min(signal_EEG));
+    mx = max(max(signal_EEG));
+    mn = min(min(signal_EEG));
 
   % select time of interest for the source reconstruction later on
-  idx = find(EEG_avg.time>0.024 & EEG_avg.time<=0.026);
-  toi = EEG_avg.time(idx);
+    idx = find(EEG_avg.time>0.024 & EEG_avg.time<=0.026);
+    toi = EEG_avg.time(idx);
 
   [mxx,idxm] = max(max(abs(EEG_avg.avg(:,idx))));
   EEG_toi_mean_trial = toi(idxm);
 
 Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
-  cfg          = [];
-  cfg.fontsize = 6;
-  cfg.layout   = 'elec1010.lay';
-  cfg.fontsize = 14;
-  cfg.ylim     = [-5e-6 5e-6];
-  cfg.xlim     = [-0.1 0.2];
+    cfg          = [];
+    cfg.fontsize = 6;
+    cfg.layout   = 'elec1010.lay';
+    cfg.fontsize = 14;
+    cfg.ylim     = [-5e-6 5e-6];
+    cfg.xlim     = [-0.1 0.2];
 
-  figure;
-  ft_multiplotER(cfg, EEG_avg);
+    figure;
+    ft_multiplotER(cfg, EEG_avg);
 
-  set(gcf, 'Position',[1 1 1200 800])
-  print -dpng baci_sep_multiplotER.png
+    set(gcf, 'Position',[1 1 1200 800])
+    print -dpng baci_sep_multiplotER.png
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sep_multiploter.png" width="600" %}
 
@@ -292,30 +292,30 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 And now we create it for MEG
 
 
-  mx = max(max(signal_MEG));
-  mn = min(min(signal_MEG));
+    mx = max(max(signal_MEG));
+    mn = min(min(signal_MEG));
 
   % select time of interest for the source reconstruction later on
-  idx = find(EEG_avg.time>0.024 & EEG_avg.time<=0.026);
-  toi = EEG_avg.time(idx);
+    idx = find(EEG_avg.time>0.024 & EEG_avg.time<=0.026);
+    toi = EEG_avg.time(idx);
 
   [mxx,idxm] = max(max(abs(EEG_avg.avg(:,idx))));
   MEG_toi_mean_trial = toi(idxm);
 
 Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
-  cfg          = [];
-  cfg.fontsize = 6;
-  cfg.layout   = 'CTF275.lay';
-  cfg.fontsize = 14;
-  cfg.ylim     = [-1e-13 1e-13];
-  cfg.xlim     = [-0.1 0.2];
+    cfg          = [];
+    cfg.fontsize = 6;
+    cfg.layout   = 'CTF275.lay';
+    cfg.fontsize = 14;
+    cfg.ylim     = [-1e-13 1e-13];
+    cfg.xlim     = [-0.1 0.2];
 
-  figure;
-  ft_multiplotER(cfg, MEG_avg);
+    figure;
+    ft_multiplotER(cfg, MEG_avg);
 
-  set(gcf, 'Position',[1 1 1200 800])
-  print -dpng baci_sef_multiplotER.png
+    set(gcf, 'Position',[1 1 1200 800])
+    print -dpng baci_sef_multiplotER.png
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sef_multiploter.png" width="600" %}
 
@@ -323,19 +323,19 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distribution over the head:
 
-  cfg            = [];
-  cfg.zlim       = 'maxmin';
-  cfg.comment    = 'xlim';
-  cfg.commentpos = 'title';
-  cfg.xlim       = [EEG_toi_mean_trial EEG_toi_mean_trial+0.01*EEG_toi_mean_trial];
-  cfg.layout     = 'elec1010.lay';
-  cfg.fontsize   = 14;
+    cfg            = [];
+    cfg.zlim       = 'maxmin';
+    cfg.comment    = 'xlim';
+    cfg.commentpos = 'title';
+    cfg.xlim       = [EEG_toi_mean_trial EEG_toi_mean_trial+0.01*EEG_toi_mean_trial];
+    cfg.layout     = 'elec1010.lay';
+    cfg.fontsize   = 14;
 
-  figure;
-  ft_topoplotER(cfg, EEG_avg);
+    figure;
+    ft_topoplotER(cfg, EEG_avg);
 
-  set(gcf, 'Position',[1 1 1200 800])
-  print -dpng baci_sep_topo.png
+    set(gcf, 'Position',[1 1 1200 800])
+    print -dpng baci_sep_topo.png
 
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sep_topo.png" width="400" %}
@@ -344,19 +344,19 @@ Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distri
 
 Use **[ft_topoplotER](/reference/ft_topoplotER)** to plot the topographic distribution over the head:
 
-  cfg            = [];
-  cfg.zlim       = 'maxmin';
-  cfg.comment    = 'xlim';
-  cfg.commentpos = 'title';
-  cfg.xlim       = [MEG_toi_mean_trial MEG_toi_mean_trial+0.01*MEG_toi_mean_trial];
-  cfg.layout     = 'CTF275.lay';
-  cfg.fontsize   = 14;
+    cfg            = [];
+    cfg.zlim       = 'maxmin';
+    cfg.comment    = 'xlim';
+    cfg.commentpos = 'title';
+    cfg.xlim       = [MEG_toi_mean_trial MEG_toi_mean_trial+0.01*MEG_toi_mean_trial];
+    cfg.layout     = 'CTF275.lay';
+    cfg.fontsize   = 14;
 
-  figure;
-  ft_topoplotER(cfg, MEG_avg);
+    figure;
+    ft_topoplotER(cfg, MEG_avg);
 
-  set(gcf, 'Position',[1 1 1200 800])
-  print -dpng baci_sef_topo.png
+    set(gcf, 'Position',[1 1 1200 800])
+    print -dpng baci_sef_topo.png
 
 
 {% include image src="/assets/img/workshop/ohbm2018/preprocessing/baci_sef_topo.png" width="400" %}

@@ -31,7 +31,7 @@ The [Inverse source parameter estimates from EEG/MEG data](/development/module/i
 The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function refers to the following method
 
 
-  cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
+    cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
                        'sam'     synthetic aperture magnetometry
                        'dics'    dynamic imaging of coherent sources
                        'pcc'     partial cannonical correlation/coherence

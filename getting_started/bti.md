@@ -34,8 +34,8 @@ FieldTrip knows how to deal with raw, i.e. unprocessed, data files. Data files w
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 
-  addpath `<full_path_to_fieldtrip>`
-  ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
 ## Reading MEG data
 
@@ -71,15 +71,15 @@ COH (or COH1) refer to the short recording to obtain the positions of the Coils 
 The 4D software also uses a directory structure to organize the data in line with its patient/subject database. The directory structure looks like
 
 
-  p0/s0/n0/r0
-  p0/s1/n0/r0
-  p0/s2/n0/r0
-  p0/s2/n0/r1
-  p0/s2/n0/r2
-  p0/s2/n0/r3
-  p0/s3/n0/r0
-  p0/s4/n0/r0
-  p0/s4/n0/r1
+    p0/s0/n0/r0
+    p0/s1/n0/r0
+    p0/s2/n0/r0
+    p0/s2/n0/r1
+    p0/s2/n0/r2
+    p0/s2/n0/r3
+    p0/s3/n0/r0
+    p0/s4/n0/r0
+    p0/s4/n0/r1
 
 where the numbers (here 0, 1, 2, ...) can be different.
 
@@ -97,12 +97,12 @@ The **[ft_read_header](/reference/ft_read_header)** function reads header inform
 To read the header from one of your datasets, use
 
 
-  hdr = ft_read_header('c,rfDC')
+    hdr = ft_read_header('c,rfDC')
 
 when your current directory is where the data can be seen, or
 
 
-  hdr = ft_read_header('/basepath/subjid/scanname/sessionname/runname/c,rfDC')
+    hdr = ft_read_header('/basepath/subjid/scanname/sessionname/runname/c,rfDC')
 
 {% include markup/danger %}
 Make sure that the run config file is in the same directory as the data-file, otherwise the relevant header information cannot be extracted.

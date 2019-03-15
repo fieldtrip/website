@@ -33,20 +33,20 @@ The functions in FieldTrip that allows you to execute the pre-processing and co-
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)). You also need to set the path to your data files.
 
 
-  addpath `<full_path_to_fieldtrip>`
-  ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
-  addpath `<full_path_to_fieldtrip>`
-  ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
   %% MEG data
-  meg_path = `<full_path_to_meg_data_file>`;
-  meg_file = 'continuous_data_export.con';  % your exported con-filename
-  dataset = fullfile(meg_path, meg_file);
+    meg_path = `<full_path_to_meg_data_file>`;
+    meg_file = 'continuous_data_export.con';  % your exported con-filename
+    dataset = fullfile(meg_path, meg_file);
 
   %% MRI data
-  mri_path = `<full_path_to_meg_data>`;
-  mri_file = 'mri_data.nii';  % your NIfTI filename or the first DICOM file
+    mri_path = `<full_path_to_meg_data>`;
+    mri_file = 'mri_data.nii';  % your NIfTI filename or the first DICOM file
 
 ## Read MEG data
 
@@ -59,7 +59,7 @@ To check if you can read in the data, you try the FieldTrip functions, **[ft_rea
 
   >> hdr = ft_read_header(dataset)
 
-  hdr =
+    hdr =
              orig: [1×1 struct]
                Fs: 2000
            nChans: 251
@@ -87,23 +87,23 @@ The channel labels can be found in 'hdr.label'. In this example, the labels are 
 The signal time course of the axial gradiometers can be checked by using **[ft_preprocessing](/reference/ft_preprocessing)**:  
 
 
-  cfg =[];
-  cfg.dataset = dataset;
-  cfg.channel = 'AG*';
-  cfg.hpfilter = 'yes'; % HPF is applied to remove slow drift
-  cfg.hpfreq   = 1;
-  cfg.hpfiltord = 5;
-  data = ft_preprocessing(cfg);
+    cfg =[];
+    cfg.dataset = dataset;
+    cfg.channel = 'AG*';
+    cfg.hpfilter = 'yes'; % HPF is applied to remove slow drift
+    cfg.hpfreq   = 1;
+    cfg.hpfiltord = 5;
+    data = ft_preprocessing(cfg);
 
   %% Display waveforms using ft_databrowser
-  cfg = [];
-  cfg.blocksize = 10;
-  cfg = ft_databrowser(cfg, data);
+    cfg = [];
+    cfg.blocksize = 10;
+    cfg = ft_databrowser(cfg, data);
 
 If you use the option ''cfg.chanel = 'TRIG*';'', you can check the waveform of the trigger signals. You can also check the data by calling a low-level function, **[ft_read_data](/reference/ft_read_data)**. For example,
 
 
-  dat = ft_read_data(dataset, 'begsample', 100000, 'endsample', 120000, 'chanindx', 12);
+    dat = ft_read_data(dataset, 'begsample', 100000, 'endsample', 120000, 'chanindx', 12);
 
 The options such as 'chanindx' should be specified in key-value pairs (see [ft_read_data](/reference/ft_read_data)). When only the filename is specified, all time-course data of every channels with large amount of memory will be read. To avoid to load such large amount of data, you should specify channel index when you directly use the low-level read function.
 
@@ -114,7 +114,7 @@ In order to select pieces of data around the events in which you are interest, y
 
   >> event = ft_read_event(dataset,'threshold', 1.6)
 
-  event =
+    event =
 
     204×1 struct array with field
 
@@ -143,7 +143,7 @@ The first 14 components of the event structure in the above example ar
   >> table = struct2table(event);
   >> table(1:14,:)
 
-  ans =
+    ans =
 
     14×5 table
 
@@ -171,54 +171,54 @@ As the same way as that in the tutorial, [Trigger-based trial selection](/tutori
 
 
   %% Define trials
-  cfg = [];
-  cfg.dataset          = dataset;
-  cfg.trialfun  = 'ft_trialfun_general';
-  cfg.trialdef.eventtype  = 'triginfo';
-  cfg.trialdef.eventvalue = 'AEF';
-  cfg.trialdef.prestim    = 0.1; %sec
-  cfg.trialdef.poststim   = 0.5; %sec
-  cfg = ft_definetrial(cfg);
-  trl = cfg.trl;
+    cfg = [];
+    cfg.dataset          = dataset;
+    cfg.trialfun  = 'ft_trialfun_general';
+    cfg.trialdef.eventtype  = 'triginfo';
+    cfg.trialdef.eventvalue = 'AEF';
+    cfg.trialdef.prestim    = 0.1; %sec
+    cfg.trialdef.poststim   = 0.5; %sec
+    cfg = ft_definetrial(cfg);
+    trl = cfg.trl;
 
   %% Segment data into pieces
-  cfg = [];
-  cfg.trl = trl;
-  data = ft_redefinetrial(cfg, data);
+    cfg = [];
+    cfg.trl = trl;
+    data = ft_redefinetrial(cfg, data);
 
 If you change the options for ''eventtype'' and ''eventvalue'' as
 
 
-  cfg.trialdef.eventtype  = 'annotations';
-  cfg.trialdef.eventvalue = [30 40];
+    cfg.trialdef.eventtype  = 'annotations';
+    cfg.trialdef.eventvalue = [30 40];
 
 you can select the events that were annotated as 'noise' and 'text'. Alternatively, if you use the options  
 
 
-  cfg.trialdef.eventtype  = 'analogtrig';
-  cfg.trialdef.eventvalue = 'TRIG162';
+    cfg.trialdef.eventtype  = 'analogtrig';
+    cfg.trialdef.eventvalue = 'TRIG162';
 
 you can select the trials based on the triggers signals of the channel 'TRIG162'. This trigger-based trial selection can also be achieved by using your own trial functio
 
 
   %% Define trials
-  cfg = [];
-  cfg.dataset          = dataset;
-  cfg.trialfun  = 'yourowntrialfun';
-  cfg.trialdef.eventtype  = 'analogtrig'; % use 'trial' for Yokogawa data
-  cfg.trialdef.eventvalue = 'TRIG162';
-  cfg.trialdef.trigchannel = cfg.trialdef.eventvalue;
-  cfg.trialdef.threshold = 1.6; %default
-  cfg.trialdef.detectflank = 'up'; %default
-  cfg.trialdef.prestim    = 0.1; %sec
-  cfg.trialdef.poststim   = 0.5; %sec
-  cfg = ft_definetrial(cfg);
-  trl = cfg.trl;
+    cfg = [];
+    cfg.dataset          = dataset;
+    cfg.trialfun  = 'yourowntrialfun';
+    cfg.trialdef.eventtype  = 'analogtrig'; % use 'trial' for Yokogawa data
+    cfg.trialdef.eventvalue = 'TRIG162';
+    cfg.trialdef.trigchannel = cfg.trialdef.eventvalue;
+    cfg.trialdef.threshold = 1.6; %default
+    cfg.trialdef.detectflank = 'up'; %default
+    cfg.trialdef.prestim    = 0.1; %sec
+    cfg.trialdef.poststim   = 0.5; %sec
+    cfg = ft_definetrial(cfg);
+    trl = cfg.trl;
 
 An example of your own trial function, ''yourowntrialfun'' is  
 
 
-  function [trl, event] = yourowntrialfun(cfg)
+    function [trl, event] = yourowntrialfun(cfg)
     % read the header information and the events from the data
     hdr = ft_read_header(cfg.dataset);
     nSamples = hdr.nSamples * hdr.nTrials;
@@ -244,7 +244,7 @@ An example of your own trial function, ''yourowntrialfun'' is
       end
     end
 
-  end
+    end
 
 ## MRI-MEG Co-registration
 
@@ -272,21 +272,21 @@ Load MRI and rescale i
 
 
   %% Load MRI
-  mri = ft_read_mri(fullfile(mri_path, mri_file));
-  mri = ft_convert_units(mri, 'mm');
+    mri = ft_read_mri(fullfile(mri_path, mri_file));
+    mri = ft_convert_units(mri, 'mm');
 
   %% Rescale MRI
-  cfg = [];
-  mri = ft_volumereslice(cfg, mri)
+    cfg = [];
+    mri = ft_volumereslice(cfg, mri)
 
 If your MRI has HPI positions, e.g., represented by vitamin E capsules, load their positions [otherwise skip the code below
 
 
   %% Load HPIs from .txt file (vitamin E capsule positions in MRI)
-  hpi_mri = load(fullfile(fid_path, fid_file)) % The unit is needed to be in mm
+    hpi_mri = load(fullfile(fid_path, fid_file)) % The unit is needed to be in mm
 
   %% Derive the voxel locations
-  hpi_vox = ft_warp_apply(inv(mri.transform), hpi_mri);
+    hpi_vox = ft_warp_apply(inv(mri.transform), hpi_mri);
 
 Below is a schematic of five HPI positions and an example of a text file you should load
 
@@ -309,17 +309,17 @@ Define a head coordinate system by manually taking up the anatomical landmarks, 
 
 
   %% Define manually the fiducials and define a head coordinate system
-  cfg = [];
-  cfg.method = 'interactive';
-  cfg.coordsys = 'ctf';
-  mri = ft_volumerealign(cfg, mri);
+    cfg = [];
+    cfg.method = 'interactive';
+    cfg.coordsys = 'ctf';
+    mri = ft_volumerealign(cfg, mri);
 
   %% Fiducials on MRI
-  fid_pnt = mri.cfg.fiducial
-  fid_vox = [fid_pnt.nas; fid_pnt.lpa; fid_pnt.rpa];
+    fid_pnt = mri.cfg.fiducial
+    fid_vox = [fid_pnt.nas; fid_pnt.lpa; fid_pnt.rpa];
 
   %% Represent fiducial points and HPIs in the head coordinate system for MRI
-  fid_mri = ft_warp_apply(mri.transform, fid_vox, 'homogeneous');
+    fid_mri = ft_warp_apply(mri.transform, fid_vox, 'homogeneous');
 
 ### Read HPIs and anatomical landmarks that are represented in MEG coordinate
 
@@ -327,22 +327,22 @@ Read the HPIs and anatomical landmarks by calling ft_read_headshap
 
 
   %% Read HPIs & anatomical landmarks in MEG coordinate system from .con, .ave, or .mrk files
-  headshape = ft_read_headshape(fullfile(meg_path, meg_file));
-  headshape = ft_convert_units(headshape, 'mm');
+    headshape = ft_read_headshape(fullfile(meg_path, meg_file));
+    headshape = ft_convert_units(headshape, 'mm');
 
   %% HPIs (marker coils)
-  coil_pos = headshape.fid.pos(end-4:end,:);
-  coil_label = headshape.fid.label(end-4:end,:);
+    coil_pos = headshape.fid.pos(end-4:end,:);
+    coil_label = headshape.fid.label(end-4:end,:);
 
   %% Anatomical landmarks
-  fid_pos = headshape.fid.pos(1:3,:);
-  fid_label = headshape.fid.label(1:3,:);
+    fid_pos = headshape.fid.pos(1:3,:);
+    fid_label = headshape.fid.label(1:3,:);
 
 For an exported .con file that contains the information of digitized points, ''headshape'' provides the full of the digitized-point information. Furthermore, ''headshape.fid'' provides the list of the anatomical fiducial points and HPIs measured by using the digitizer. An example is as follows:
 
 
   >> headshape = ft_read_headshape(fullfile(meg_path, meg_file))
-  headshape =
+    headshape =
     struct with field
         pos: [106×3 double]
       label: {106×1 cell}
@@ -350,7 +350,7 @@ For an exported .con file that contains the information of digitized points, ''h
        unit: 'cm'
 
   >> headshape.fid.label
-  ans =
+    ans =
     13×1 cell array
       'nas'
       'lpa'
@@ -372,14 +372,14 @@ On contrary to an exported .con file, an original (not-exported) data file (.con
 
 
   >> headshape = ft_read_headshape(fullfile(meg_path, meg_file))
-  headshape =
+    headshape =
     struct with field
        pos: []
        fid: [1×1 struct]
       unit: 'cm'
 
   >> headshape.fid.label
-  ans =
+    ans =
     5×1 cell array
       'nas'
       'lpa'
@@ -398,21 +398,21 @@ Now you conduct the alignment to derive the transformation matrix from the MEG t
 
    %% Get the transformation matrix from MEG to Head
   [TR, TT, ER, t, info] = icp(hpi_mri',coil_pos');
-  meg2ctf = [[TR TT]; 0 0 0 1];
+    meg2ctf = [[TR TT]; 0 0 0 1];
 
 #### Case 2: Using anatomical landmarks
 
 
   %% Define a head coordinate for MEG
-  meg2head = ft_headcoordinates(fid_pos(1,:), fid_pos(2,:), fid_pos(3,:), 'ctf');
-  fid_pos = ft_warp_apply(meg2head, fid_pos, 'homogeneous');
+    meg2head = ft_headcoordinates(fid_pos(1,:), fid_pos(2,:), fid_pos(3,:), 'ctf');
+    fid_pos = ft_warp_apply(meg2head, fid_pos, 'homogeneous');
 
   %% Derive the transformation matrix between head coordinates for MRI and MRI
   [TR, TT, ER, t, info] = icp(fid_mri',fid_pos');
-  head2head = [[TR TT]; 0 0 0 1];
+    head2head = [[TR TT]; 0 0 0 1];
 
   %% Get the transformation matrix from MEG to Head
-  meg2ctf = meg2head*head2head;
+    meg2ctf = meg2head*head2head;
 
 For both cases, the iterative closest point (ICP) algorithm, in which ''[TR, TT] = icp(q,p)'' returns the rotation matrix TR and translation vector TT that minimizes the distances from (TR * p + TT) to q, can be employed to derive the transformation matrix.  
 
@@ -422,20 +422,20 @@ This is the last part of the first step. Load the gradiometer positions and tran
 
 
   %% Read gradiometer definition in MEG coordinate system
-  grad = ft_read_sens(fullfile(meg_path, meg_file));
-  grad = ft_convert_units(grad, 'mm');
+    grad = ft_read_sens(fullfile(meg_path, meg_file));
+    grad = ft_convert_units(grad, 'mm');
 
   %% Co-registration
-  mri_coreg = mri;
-  realignedgrad = ft_transform_geometry(meg2ctf, grad);
+    mri_coreg = mri;
+    realignedgrad = ft_transform_geometry(meg2ctf, grad);
 
   %% Save data
-  save(fullfile(output_path, 'realignedgrad'), '-struct', 'realignedgrad');
+    save(fullfile(output_path, 'realignedgrad'), '-struct', 'realignedgrad');
 
   %% Represent realigned HPIs & anatomical landmarks using the head coordinat
-  headshape = ft_transform_geometry(meg2ctf, headshape);
-  coil_pos = headshape.fid.pos(end-4:end,:);
-  fid_pos = headshape.fid.pos(1:3,:);
+    headshape = ft_transform_geometry(meg2ctf, headshape);
+    coil_pos = headshape.fid.pos(end-4:end,:);
+    fid_pos = headshape.fid.pos(1:3,:);
 
 Now the MEG, MRI, and digitizer are all living in the common head coordinate system.
 
@@ -445,46 +445,46 @@ To refine the above fiducial-points based registration, it is recommended to uti
 
 
   %% volumerealign with IC
-  cfg = [];
-  cfg.method = 'headshape';
-  cfg.headshape.interactive = 'yes';
-  cfg.headshape.icp = 'yes';
-  cfg.headshape.headshape = headshape;
-  cfg.coordsys = 'ctf';
-  mri_coreg = ft_volumerealign(cfg, mri_coreg);
+    cfg = [];
+    cfg.method = 'headshape';
+    cfg.headshape.interactive = 'yes';
+    cfg.headshape.icp = 'yes';
+    cfg.headshape.headshape = headshape;
+    cfg.coordsys = 'ctf';
+    mri_coreg = ft_volumerealign(cfg, mri_coreg);
 
   %% For representing anatomical landmarks and HPIs in the head coordinate syste
-  fid_mri = ft_warp_apply(mri_coreg.transform, fid_vox, 'homogeneous');
-  hpi_mri = ft_warp_apply(mri_coreg.transform, hpi_vox, 'homogeneous');
+    fid_mri = ft_warp_apply(mri_coreg.transform, fid_vox, 'homogeneous');
+    hpi_mri = ft_warp_apply(mri_coreg.transform, hpi_vox, 'homogeneous');
 
   %% Save data
-  save(fullfile(output_path, 'mri_coreg'), '-struct', 'mri_coreg')
+    save(fullfile(output_path, 'mri_coreg'), '-struct', 'mri_coreg')
 
 ### Check the result
 
 
   %% Plot head model and sensor array
-  figure
-  ft_plot_sens(realignedgrad, 'style','*b')
-  hold on
-  ft_plot_mesh(mesh_scalp, 'edgecolor','none','facealpha',0.6,'facecolor',[0.6 0.6 0.8]);
-  ft_plot_vol(headmodel,'edgecolor','b')
-  ft_plot_headshape(headshape)
-  ft_plot_axes([], 'unit', 'mm');
+    figure
+    ft_plot_sens(realignedgrad, 'style','*b')
+    hold on
+    ft_plot_mesh(mesh_scalp, 'edgecolor','none','facealpha',0.6,'facecolor',[0.6 0.6 0.8]);
+    ft_plot_vol(headmodel,'edgecolor','b')
+    ft_plot_headshape(headshape)
+    ft_plot_axes([], 'unit', 'mm');
   % plot fiducial points
-  plot3(coil_pos(1,1), coil_pos(1,2), coil_pos(1,3),'r.','MarkerSize',25);
-  plot3(coil_pos(2,1), coil_pos(2,2), coil_pos(2,3),'r.','MarkerSize',25);
-  plot3(coil_pos(3,1), coil_pos(3,2), coil_pos(3,3),'r.','MarkerSize',25);
-  plot3(coil_pos(4,1), coil_pos(4,2), coil_pos(4,3),'r.','MarkerSize',25);
-  plot3(coil_pos(5,1), coil_pos(5,2), coil_pos(5,3),'r.','MarkerSize',25);
-  plot3(fid_pos(1,1), fid_pos(1,2), fid_pos(1,3),'k.','MarkerSize',25);
-  plot3(fid_pos(2,1), fid_pos(2,2), fid_pos(2,3),'k.','MarkerSize',25);
-  plot3(fid_pos(3,1), fid_pos(3,2), fid_pos(3,3),'k.','MarkerSize',25);
-  plot3(fid_mri(1,1), fid_mri(1,2), fid_mri(1,3), 'y.','MarkerSize',30);
-  plot3(fid_mri(2,1), fid_mri(2,2), fid_mri(2,3), 'y.','MarkerSize',30);
-  plot3(fid_mri(3,1), fid_mri(3,2), fid_mri(3,3), 'y.','MarkerSize',30);
-  plot3(hpi_mri(1,1), hpi_mri(1,2), hpi_mri(1,3),'g.','MarkerSize',25);
-  plot3(hpi_mri(2,1), hpi_mri(2,2), hpi_mri(2,3),'g.','MarkerSize',25);
-  plot3(hpi_mri(3,1), hpi_mri(3,2), hpi_mri(3,3),'g.','MarkerSize',25);
-  plot3(hpi_mri(4,1), hpi_mri(4,2), hpi_mri(4,3),'g.','MarkerSize',25);
-  plot3(hpi_mri(5,1), hpi_mri(5,2), hpi_mri(5,3),'g.','MarkerSize',25);
+    plot3(coil_pos(1,1), coil_pos(1,2), coil_pos(1,3),'r.','MarkerSize',25);
+    plot3(coil_pos(2,1), coil_pos(2,2), coil_pos(2,3),'r.','MarkerSize',25);
+    plot3(coil_pos(3,1), coil_pos(3,2), coil_pos(3,3),'r.','MarkerSize',25);
+    plot3(coil_pos(4,1), coil_pos(4,2), coil_pos(4,3),'r.','MarkerSize',25);
+    plot3(coil_pos(5,1), coil_pos(5,2), coil_pos(5,3),'r.','MarkerSize',25);
+    plot3(fid_pos(1,1), fid_pos(1,2), fid_pos(1,3),'k.','MarkerSize',25);
+    plot3(fid_pos(2,1), fid_pos(2,2), fid_pos(2,3),'k.','MarkerSize',25);
+    plot3(fid_pos(3,1), fid_pos(3,2), fid_pos(3,3),'k.','MarkerSize',25);
+    plot3(fid_mri(1,1), fid_mri(1,2), fid_mri(1,3), 'y.','MarkerSize',30);
+    plot3(fid_mri(2,1), fid_mri(2,2), fid_mri(2,3), 'y.','MarkerSize',30);
+    plot3(fid_mri(3,1), fid_mri(3,2), fid_mri(3,3), 'y.','MarkerSize',30);
+    plot3(hpi_mri(1,1), hpi_mri(1,2), hpi_mri(1,3),'g.','MarkerSize',25);
+    plot3(hpi_mri(2,1), hpi_mri(2,2), hpi_mri(2,3),'g.','MarkerSize',25);
+    plot3(hpi_mri(3,1), hpi_mri(3,2), hpi_mri(3,3),'g.','MarkerSize',25);
+    plot3(hpi_mri(4,1), hpi_mri(4,2), hpi_mri(4,3),'g.','MarkerSize',25);
+    plot3(hpi_mri(5,1), hpi_mri(5,2), hpi_mri(5,3),'g.','MarkerSize',25);

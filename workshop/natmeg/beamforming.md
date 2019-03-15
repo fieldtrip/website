@@ -58,7 +58,7 @@ First, we are going to load the data already preprocessed during the [Time-frequ
 
 Load the data using the following comman
 
-  load data_clean_MEG_responselocked.mat
+    load data_clean_MEG_responselocked.mat
 
 ### Loading the headmodel
 
@@ -67,7 +67,7 @@ We are going to use the forward model that was calculated in the [dipole fitting
 
 Load the forward model using the following cod
 
-  load headmodel_meg.mat
+    load headmodel_meg.mat
 
 ## Identifying a time window of interest
 
@@ -80,9 +80,9 @@ The aim is to identify the sources of oscillatory activity in the beta band. Fro
 Now we select the time windows of interest, the post-response window using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 
   % Select time window of interest
-  cfg = [];
-  cfg.toilim = [0.35 0.85];
-  data_timewindow = ft_redefinetrial(cfg,data_clean_MEG_responselocked);
+    cfg = [];
+    cfg.toilim = [0.35 0.85];
+    data_timewindow = ft_redefinetrial(cfg,data_clean_MEG_responselocked);
 
 As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
  1.  Suitable control windows are, for exampl
@@ -111,27 +111,27 @@ Why shouldn't we calculate a spatial filter for both conditions separately in th
 The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd'. The frequency of interest is 18 Hz and the smoothing window is +/- 4 Hz:
 
   % Freqanalysis for beamformer
-  cfg = [];
-  cfg.channel      = {'MEG*2', 'MEG*3'};
-  cfg.method       = 'mtmfft';
-  cfg.taper        = 'dpss';
-  cfg.output       = 'powandcsd';
-  cfg.keeptrials   = 'no';
-  cfg.foi          = 18;
-  cfg.tapsmofrq    = 4;
+    cfg = [];
+    cfg.channel      = {'MEG*2', 'MEG*3'};
+    cfg.method       = 'mtmfft';
+    cfg.taper        = 'dpss';
+    cfg.output       = 'powandcsd';
+    cfg.keeptrials   = 'no';
+    cfg.foi          = 18;
+    cfg.tapsmofrq    = 4;
 
   % for common filter over conditions
-  powcsd_all      = ft_freqanalysis(cfg, data_timewindow);
+    powcsd_all      = ft_freqanalysis(cfg, data_timewindow);
 
   % for conditions
-  cfg.trials       = find(data_timewindow.trialinfo(:,1) == 256);
-  powcsd_left      = ft_freqanalysis(cfg, data_timewindow);
-  cfg.trials       = find(data_timewindow.trialinfo(:,1) == 4096);
-  powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
+    cfg.trials       = find(data_timewindow.trialinfo(:,1) == 256);
+    powcsd_left      = ft_freqanalysis(cfg, data_timewindow);
+    cfg.trials       = find(data_timewindow.trialinfo(:,1) == 4096);
+    powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
 
 The cross-spectral density data structure has a similar data structure as other output out of [ft_freqanalysis](/reference/ft_freqanalysis):
 
-  powcsd_all =
+    powcsd_all =
 
           label: {204x1 cell}     % Channel labels
          dimord: 'chan_freq'      % Dimensions in the data
@@ -158,19 +158,19 @@ Sensors that were previously removed from the data set should also be removed wh
 As mentioned earlier on, if you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.  
 
   % Create leadfield grid
-  cfg                 = [];
-  cfg.channel         = {'MEG*2', 'MEG*3'};
-  cfg.grad            = powcsd_all.grad;
-  cfg.headmodel       = headmodel_meg;
-  cfg.dics.reducerank = 2; % default for MEG is 2, for EEG is 3
-  cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
-  cfg.grid.unit       = 'cm';
-  cfg.grid.tight      = 'yes';
+    cfg                 = [];
+    cfg.channel         = {'MEG*2', 'MEG*3'};
+    cfg.grad            = powcsd_all.grad;
+    cfg.headmodel       = headmodel_meg;
+    cfg.dics.reducerank = 2; % default for MEG is 2, for EEG is 3
+    cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
+    cfg.grid.unit       = 'cm';
+    cfg.grid.tight      = 'yes';
   [grid] = ft_prepare_leadfield(cfg);
 
 The grid data structure has the following field
 
-  grid =
+    grid =
 
           xgrid: [1x26 double]     % X-axis grid
           ygrid: [1x36 double]     % Y-axis grid
@@ -187,21 +187,21 @@ The grid data structure has the following field
 
 Using the cross-spectral density and the lead field matrices a spatial filter is calculated for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for the pre- and post-stimulus activity. This results in a power estimate for each grid point. Since we want to use a common filter, we first need to input data from all condition
 
-  cfg              = [];
-  cfg.channel      = {'MEG*2', 'MEG*3'};
-  cfg.method       = 'dics';
-  cfg.frequency    = 18;  
-  cfg.grid         = grid;
-  cfg.headmodel    = headmodel_meg;
-  cfg.senstype     = 'MEG'; % Must me 'MEG', although we only kept MEG channels, information on EEG channels is still present in data
-  cfg.dics.keepfilter   = 'yes'; % We wish to use the calculated filter later on
-  cfg.dics.projectnoise = 'yes';
-  cfg.dics.lambda  = '5%';
-  source_all = ft_sourceanalysis(cfg, powcsd_all);
+    cfg              = [];
+    cfg.channel      = {'MEG*2', 'MEG*3'};
+    cfg.method       = 'dics';
+    cfg.frequency    = 18;  
+    cfg.grid         = grid;
+    cfg.headmodel    = headmodel_meg;
+    cfg.senstype     = 'MEG'; % Must me 'MEG', although we only kept MEG channels, information on EEG channels is still present in data
+    cfg.dics.keepfilter   = 'yes'; % We wish to use the calculated filter later on
+    cfg.dics.projectnoise = 'yes';
+    cfg.dics.lambda  = '5%';
+    source_all = ft_sourceanalysis(cfg, powcsd_all);
 
 The source data structure has the following field
 
-  source_all =
+    source_all =
 
           dim: [26 36 28]       % Dimensions of the data
          freq: 18.1159          % Target frequency
@@ -220,50 +220,50 @@ When plotting the source-level power now, you would realize that the power is st
 
 Remember that we intended to contrast the left hand to the right hand responses. Therefore, we need to estimate activity on the source level for the experiment data using the filter obtained from beaming data from both conditions ('common filter'):
 
-  cfg              = [];
-  cfg.channel      = {'MEG*2', 'MEG*3'};
-  cfg.method       = 'dics';
-  cfg.frequency    = 18;  
-  cfg.grid         = grid;
-  cfg.grid.filter  = source_all.avg.filter;
-  cfg.headmodel    = headmodel_meg;
-  cfg.senstype     ='MEG';
+    cfg              = [];
+    cfg.channel      = {'MEG*2', 'MEG*3'};
+    cfg.method       = 'dics';
+    cfg.frequency    = 18;  
+    cfg.grid         = grid;
+    cfg.grid.filter  = source_all.avg.filter;
+    cfg.headmodel    = headmodel_meg;
+    cfg.senstype     ='MEG';
 
-  source_left = ft_sourceanalysis(cfg, powcsd_left);
-  source_right = ft_sourceanalysis(cfg, powcsd_right);
+    source_left = ft_sourceanalysis(cfg, powcsd_left);
+    source_right = ft_sourceanalysis(cfg, powcsd_right);
 
 After successfully applying the above steps, we obtained an estimate of the beta-band suppression in both experimental conditions at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
 
 First we will load the MRI. It is important that you use the MRI realigned with the sensor or your source activity data will not match the anatomical data. We will load the realigned MRI from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting).
 
-  load mri_realigned2.mat
+    load mri_realigned2.mat
 
 Before aligning the source activity to the MRI we will reslice the MRI using [ft_volumereslice](/reference/ft_volumereslice). The consequence of this reslicing is that the size of the MRI is decreased (it is rather large now) and the axis are adjusted so that the image is plotted correctly. If your MRI image is plotted upside-down, try using [ft_volumereslice](/reference/ft_volumereslice).
 
-  mri_resliced = ft_volumereslice([], mri_realigned2);
+    mri_resliced = ft_volumereslice([], mri_realigned2);
 
 Now we will align the source activity to the MR
 
-  cfg            = [];
-  cfg.parameter = 'pow';
-  source_left_int  = ft_sourceinterpolate(cfg, source_left, mri_resliced);
-  source_right_int  = ft_sourceinterpolate(cfg, source_right, mri_resliced);
+    cfg            = [];
+    cfg.parameter = 'pow';
+    source_left_int  = ft_sourceinterpolate(cfg, source_left, mri_resliced);
+    source_right_int  = ft_sourceinterpolate(cfg, source_right, mri_resliced);
 
 Now we can finally compute the difference between the two conditions. Here we take the ratio between the two conditions normalised by the sum. In this operation we assume that the noise bias is the same for both experimental conditions and it will thus cancel out when contrasting.
 
-  source_diff_int  = source_left_int;
-  source_diff_int.pow  = (source_left_int.pow - source_right_int.pow) ./ (source_left_int.pow + source_right_int.pow);
+    source_diff_int  = source_left_int;
+    source_diff_int.pow  = (source_left_int.pow - source_right_int.pow) ./ (source_left_int.pow + source_right_int.pow);
 
 Now, we can plot the interpolated data:
 
-  cfg = [];
-  cfg.method        = 'ortho';
-  cfg.funparameter  = 'pow';
-  cfg.funcolorlim   = 'maxabs';
-  cfg.opacitylim    = [0 1e-4];
-  cfg.opacitymap    = 'rampup';  
+    cfg = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'pow';
+    cfg.funcolorlim   = 'maxabs';
+    cfg.opacitylim    = [0 1e-4];
+    cfg.opacitymap    = 'rampup';  
 
-  ft_sourceplot(cfg, source_left_int);
+    ft_sourceplot(cfg, source_left_int);
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam1.png" width="650" %}
 
@@ -273,8 +273,8 @@ Now, we can plot the interpolated data:
 As you can see the strongest motor response is located in the center of the head. Can you explain this finding?
 {% include markup/end %}
 
-  cfg.location = [35 -13 76];
-  ft_sourceplot(cfg, source_diff_int);
+    cfg.location = [35 -13 76];
+    ft_sourceplot(cfg, source_diff_int);
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam2.png" width="650" %}
 
@@ -314,50 +314,50 @@ As before, we will use the head model calculated in the [dipole fitting tutorial
 
 Load the EEG head model and preprocessed data using the following cod
 
-  load headmodel_eeg.mat
-  load data_clean_EEG_responselocked.mat
+    load headmodel_eeg.mat
+    load data_clean_EEG_responselocked.mat
 
 ## (EEG) Calculating the cross spectral density matrix
 
 As before, we are first going to extract a time window that we are interested in using **[ft_definetrial](/reference/ft_definetrial)**. Remember that we should extract a window that is a full-length of cycles of our frequency of interest.
 
   % select time window
-  cfg = [];
-  cfg.toilim = [0.35 0.85];
-  data_timewindow = ft_redefinetrial(cfg,data_clean_EEG_responselocked);
+    cfg = [];
+    cfg.toilim = [0.35 0.85];
+    data_timewindow = ft_redefinetrial(cfg,data_clean_EEG_responselocked);
 
 Now that we have extracted the time window of interest we can continue with calculating the cross-spectral density matri
 
   % Freqanalysis for beamformer
-  cfg = [];
-  cfg.method       = 'mtmfft';
-  cfg.taper        = 'dpss';
-  cfg.output       = 'powandcsd';
-  cfg.keeptrials   = 'no';
-  cfg.foi          = 18;
-  cfg.tapsmofrq    = 4;
+    cfg = [];
+    cfg.method       = 'mtmfft';
+    cfg.taper        = 'dpss';
+    cfg.output       = 'powandcsd';
+    cfg.keeptrials   = 'no';
+    cfg.foi          = 18;
+    cfg.tapsmofrq    = 4;
 
   % for common filter over conditions and full duration
-  powcsd_all      = ft_freqanalysis(cfg, data_timewindow);
+    powcsd_all      = ft_freqanalysis(cfg, data_timewindow);
 
   % for conditions
-  cfg.trials       = find(data_timewindow.trialinfo(:,1) == 256);
-  powcsd_left      = ft_freqanalysis(cfg, data_timewindow);
-  cfg.trials       = find(data_timewindow.trialinfo(:,1) == 4096);
-  powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
+    cfg.trials       = find(data_timewindow.trialinfo(:,1) == 256);
+    powcsd_left      = ft_freqanalysis(cfg, data_timewindow);
+    cfg.trials       = find(data_timewindow.trialinfo(:,1) == 4096);
+    powcsd_right     = ft_freqanalysis(cfg, data_timewindow);
 
 ## (EEG) Lead field calculation
 
 The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
   % common grid/filter
-  cfg                 = [];
-  cfg.elec            = powcsd_all.elec;
-  cfg.headmodel       = headmodel_eeg;
-  cfg.reducerank      = 3; % default is 3 for EEG, 2 for MEG
-  cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
-  cfg.grid.unit       = 'cm';
-  cfg.grid.tight      = 'yes';
+    cfg                 = [];
+    cfg.elec            = powcsd_all.elec;
+    cfg.headmodel       = headmodel_eeg;
+    cfg.reducerank      = 3; % default is 3 for EEG, 2 for MEG
+    cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
+    cfg.grid.unit       = 'cm';
+    cfg.grid.tight      = 'yes';
   [grid] = ft_prepare_leadfield(cfg);
 
 ## (EEG) Source analysis
@@ -365,15 +365,15 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
 Now that we have everything prepared we can start to calculate the common filter through which we we project the data from both conditions.
 
   % beamform common filter
-  cfg              = [];
-  cfg.method       = 'dics';
-  cfg.frequency    = 18;  
-  cfg.grid         = grid;
-  cfg.headmodel    = headmodel_eeg;
-  cfg.senstype     = 'EEG'; % Remember this must be specified as either EEG, or MEG
-  cfg.dics.keepfilter   = 'yes';
-  cfg.dics.lambda       = '15%';
-  source_all = ft_sourceanalysis(cfg, powcsd_all);
+    cfg              = [];
+    cfg.method       = 'dics';
+    cfg.frequency    = 18;  
+    cfg.grid         = grid;
+    cfg.headmodel    = headmodel_eeg;
+    cfg.senstype     = 'EEG'; % Remember this must be specified as either EEG, or MEG
+    cfg.dics.keepfilter   = 'yes';
+    cfg.dics.lambda       = '15%';
+    source_all = ft_sourceanalysis(cfg, powcsd_all);
 
 {% include markup/info %}
 How does the value for lambda set here compare to the one for the MEG dataset? Why do you think it is different?
@@ -382,46 +382,46 @@ How does the value for lambda set here compare to the one for the MEG dataset? W
 Finally, we can apply source analysis on the separate conditions using the common filter calculated previously.
 
   % beamform conditions
-  cfg              = [];
-  cfg.method       = 'dics';
-  cfg.frequency    = 18;  
-  cfg.grid         = grid;
-  cfg.grid.filter  = source_all.avg.filter; % Use the common filter
-  cfg.headmodel    = headmodel_eeg;
-  cfg.senstype     = 'EEG';
+    cfg              = [];
+    cfg.method       = 'dics';
+    cfg.frequency    = 18;  
+    cfg.grid         = grid;
+    cfg.grid.filter  = source_all.avg.filter; % Use the common filter
+    cfg.headmodel    = headmodel_eeg;
+    cfg.senstype     = 'EEG';
 
-  source_left = ft_sourceanalysis(cfg, powcsd_left);
-  source_right = ft_sourceanalysis(cfg, powcsd_right);
+    source_left = ft_sourceanalysis(cfg, powcsd_left);
+    source_right = ft_sourceanalysis(cfg, powcsd_right);
 
 Let's now see how our sources look like. We will again have to realign our functional data to our anatomical data. We will therefore use the realigned mri from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which we already loaded and resliced during the MEG section of this tutorial.
 
 The realignment is done using the following cod
 
-  cfg            = [];
-  cfg.parameter = 'pow';
-  source_left_int  = ft_sourceinterpolate(cfg, source_left, mri_resliced);
-  source_right_int  = ft_sourceinterpolate(cfg, source_right, mri_resliced);
+    cfg            = [];
+    cfg.parameter = 'pow';
+    source_left_int  = ft_sourceinterpolate(cfg, source_left, mri_resliced);
+    source_right_int  = ft_sourceinterpolate(cfg, source_right, mri_resliced);
 
 Next we will calculate the ratio between the left- and right-hand response
 
-  source_diff_int  = source_left_int;
-  source_diff_int.pow  = (source_left_int.pow - source_right_int.pow) ./ (source_left_int.pow + source_right_int.pow);
+    source_diff_int  = source_left_int;
+    source_diff_int.pow  = (source_left_int.pow - source_right_int.pow) ./ (source_left_int.pow + source_right_int.pow);
 
 Finally, we can plot the dat
 
-  cfg = [];
-  cfg.method        = 'ortho';
-  cfg.funparameter  = 'pow';
-  cfg.funcolorlim   = 'maxabs';
+    cfg = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'pow';
+    cfg.funcolorlim   = 'maxabs';
 
-  ft_sourceplot(cfg, source_left_int);
+    ft_sourceplot(cfg, source_left_int);
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam3.png" width="650" %}
 
 *Figure: An EEG-source plot of the beta response in the left-hand condition.*
 
-  cfg.location = [-19.5 -18.5 70.5];
-  ft_sourceplot(cfg, source_diff_int);
+    cfg.location = [-19.5 -18.5 70.5];
+    ft_sourceplot(cfg, source_diff_int);
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam4.png" width="650" %}
 
