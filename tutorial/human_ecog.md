@@ -388,7 +388,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
     data = ft_rejectartifact(cfg, data);
 
-**41**) Re-montage the cortical grids to a common average reference in order to remove noise that is shared across all channels. Box 3 provides a background on re- montaging. Bad channels identified in Step 39 can be excluded from this step by adding those channels to cfg.channel with a minus prefix. That is, cfg.channel = {'LPG*', 'LTG*', '-LPG1'} if one were to exclude the LPG1 channel from the list of LPG and LTG channels.
+**41**) Re-montage the cortical grids to a common average reference in order to remove noise that is shared across all channels. Box 4 provides a background on re- montaging. Bad channels identified in Step 39 can be excluded from this step by adding those channels to cfg.channel with a minus prefix. That is, cfg.channel = {'LPG*', 'LTG*', '-LPG1'} if one were to exclude the LPG1 channel from the list of LPG and LTG channels.
 
     cfg             = [];
     cfg.channel     = {'LPG*', 'LTG*'};
