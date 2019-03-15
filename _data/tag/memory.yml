@@ -10,6 +10,9 @@
 - name:  Why are the fileio functions stateless, does the fseek not make them very slow?
   link:  /faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow
 
+- name:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/continuous
+
 - name:  Making a memory efficient analysis script
   link:  /tutorial/memory
 

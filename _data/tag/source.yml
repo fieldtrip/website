@@ -118,6 +118,9 @@
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended
 
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
 - name:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/electrode
 
@@ -129,6 +132,9 @@
 
 - name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
   link:  /tutorial/headmodel_meg
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
 
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate

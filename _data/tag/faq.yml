@@ -139,6 +139,9 @@
 - name:  How can I do time-frequency analysis on continuous data?
   link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
 
+- name:  How can I find out what eventvalues and eventtypes there are in my data?
+  link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
+
 - name:  How can I fine-tune my BEM volume conduction model?
   link:  /faq/how_can_i_fine-tune_my_bem_volume_conduction_model
 
@@ -459,6 +462,9 @@
 
 - name:  What kind of volume conduction models of the head (head models) are implemented?
   link:  /faq/what_kind_of_volume_conduction_models_are_implemented
+
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Where can I find the dipoli command-line executable?
   link:  /faq/where_can_i_find_the_dipoli_command-line_executable

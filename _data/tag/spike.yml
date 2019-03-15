@@ -1,6 +1,9 @@
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+
 - name:  Working with animal electrophysiology data
   link:  /getting_started/animal
 
@@ -18,6 +21,9 @@
 
 - name:  Importing your data
   link:  /reading_data
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
 
 - name:  Preprocessing and analysis of spike and local field potential data
   link:  /tutorial/spikefield

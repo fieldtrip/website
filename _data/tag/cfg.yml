@@ -4,6 +4,9 @@
 - name:  Reference documentation
   link:  /reference
 
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
 - name:  FieldTrip Walkthrough
   link:  /walkthrough
 

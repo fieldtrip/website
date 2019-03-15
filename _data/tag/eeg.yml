@@ -55,6 +55,9 @@
 - name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
   link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+
 - name:  Why is FieldTrip developed separately from EEGLAB?
   link:  /faq/why_is_fieldtrip_developed_separately_from_eeglab
 
@@ -100,6 +103,9 @@
 - name:  Cluster-based permutation tests on event related fields
   link:  /tutorial/cluster_permutation_timelock
 
+- name:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/continuous
+
 - name:  Details on the EEG language dataset
   link:  /tutorial/eeg_language
 
@@ -115,14 +121,26 @@
 - name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_fem
 
+- name:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/human_ecog
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 
 - name:  Analysis of monkey ECoG recordings
   link:  /tutorial/monkey_ecog
 
+- name:  Multivariate analysis of electrophysiological data
+  link:  /tutorial/multivariateanalysis
+
 - name:  Classification of event related MEG data using MVPA-Light
   link:  /tutorial/mvpa_light
+
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
 
 - name:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sleep

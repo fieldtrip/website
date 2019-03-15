@@ -67,6 +67,9 @@
 - name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
   link:  /tutorial/headmodel_meg
 
+- name:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/human_ecog
+
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
 
