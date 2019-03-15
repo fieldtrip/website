@@ -45,7 +45,7 @@ The two workflows become intrinsically connected for the first time during the e
 
     mri = ft_read_mri([subjID '_MR_acpc.nii']); % we used the dcm series
 
-**3**) Determine the native orientation of the anatomical MRI's left-right axis using ft_determine_coordsys (Box 2 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4) of the original paper).
+**3**) Determine the native orientation of the anatomical MRI's left-right axis using ft_determine_coordsys (Box 3 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4) of the original paper).
 
     ft_determine_coordsys(mri);
 
@@ -105,7 +105,7 @@ PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of
 
     ct = ft_read_mri([subjID '_CT_acpc_f.nii']); % we used the dcm series
 
-**10**) In case this cannot be done on the basis of knowledge of the laterality of electrode implantation, determine the native orientation of the anatomical CT's left- right axis using ft_determine_coordsys, similarly to how it was done with the anatomical MRI in Step 3 (Box 2 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4)).
+**10**) In case this cannot be done on the basis of knowledge of the laterality of electrode implantation, determine the native orientation of the anatomical CT's left- right axis using ft_determine_coordsys, similarly to how it was done with the anatomical MRI in Step 3 (Box 3 and [Supplementary Video 1](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM6_ESM.mp4)).
 
 CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy in demarcating the right and left preauricular landmark in the following step is important for avoiding an otherwise hard to detect flip of the scan's left and right orientation.
 
