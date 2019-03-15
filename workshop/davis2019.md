@@ -38,17 +38,17 @@ iEEG data for the hands-on sessions are available [here](https://doi.org/10.5281
 
 ### Session III
 
-- 9:00 – 10:15 Lecture III: Anatomical reconstruction of intracranial data (Arjen Stolk)
+- 9:00 – 10:15 Lecture IV: Anatomical reconstruction of intracranial data (Arjen Stolk)
 - 10:15 – 10:30 Coffee break
 - 10:30 – 12:30 Hands-on III: [Analysis of human ECoG and SEEG](/tutorial/human_ecog)
 
 ### Session IV
 
-- 13:45 – 14:45 Lecture IV: Insights into Human Cognition from Intracranial Recordings (Robert T. Knight)
-- 14:45 – 15:45 Lecture V: Connectivity analysis (Robert Oostenveld)
+- 13:45 – 14:45 Lecture V: Insights into Human Cognition from Intracranial Recordings (Robert T. Knight)
+- 14:45 – 15:45 Lecture VI: Connectivity analysis (Robert Oostenveld)
 - 15:45 – 16:00 Coffee break
 - 16:00 – 17:00 Hands-on IV: [Coherence analysis](/tutorial/coherence)
-- 17:00 – 18:30 Lecture VI: Statistical testing/methods (Robert Oostenveld & Arjen Stolk)
+- 17:00 – 18:30 Lecture VII: Statistical testing/methods (Robert Oostenveld & Arjen Stolk)
 
 ## Friday March 22nd 2019
 
