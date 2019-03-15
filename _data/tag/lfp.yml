@@ -22,3 +22,6 @@
 - name:  Importing your data
   link:  /reading_data
 
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+

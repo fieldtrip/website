@@ -37,6 +37,9 @@
 - name:  Cluster-based permutation tests on event related fields
   link:  /tutorial/cluster_permutation_timelock
 
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
 - name:  Event related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 

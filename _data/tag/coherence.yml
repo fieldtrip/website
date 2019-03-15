@@ -16,6 +16,12 @@
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended
 
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
+
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
 

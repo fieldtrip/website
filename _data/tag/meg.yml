@@ -58,6 +58,9 @@
 - name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
   link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+
 - name:  Getting started with BabySQUID data
   link:  /getting_started/babysquid
 
@@ -100,6 +103,15 @@
 - name:  Cluster-based permutation tests on event related fields
   link:  /tutorial/cluster_permutation_timelock
 
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
+
+- name:  Preprocessing - Reading continuous EEG and MEG data
+  link:  /tutorial/continuous
+
 - name:  Speeding up your analysis with distributed computing
   link:  /tutorial/distributedcomputing
 
@@ -124,6 +136,9 @@
 - name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
   link:  /tutorial/headmodel_meg
 
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 
@@ -132,6 +147,9 @@
 
 - name:  Source reconstruction of event-related fields using minimum-norm estimation
   link:  /tutorial/minimumnormestimate
+
+- name:  Multivariate analysis of electrophysiological data
+  link:  /tutorial/multivariateanalysis
 
 - name:  Classification of event related MEG data using MVPA-Light
   link:  /tutorial/mvpa_light

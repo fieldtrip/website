@@ -61,6 +61,9 @@
 - name:  What does a typical call to a FieldTrip function look like?
   link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
 
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/1020
 

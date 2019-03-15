@@ -61,6 +61,9 @@
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics
 
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /workshop/natmeg/statistics
 
