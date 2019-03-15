@@ -35,47 +35,47 @@ If an anatomical MRI is not available for your MEG subject, you can consider to 
 
 We will create a head model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). The pipeline is depicted in Figure 2.
 
-*  First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
-*  then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
-*  and create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
-*  Finally, we will check the geometry of the head model by plotting it with **[ft_plot_vol](/reference/ft_plot_vol)**.
+- First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
+- then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
+- and create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
+- Finally, we will check the geometry of the head model by plotting it with **[ft_plot_vol](/reference/ft_plot_vol)**.
 
 {% include image src="/assets/img/tutorial/headmodel_meg/headmodel-01.png" width="250" %}
 
-*Figure 2. Pipeline of creating and visualizing a head model*
+_Figure 2. Pipeline of creating and visualizing a head model_
 
 ### Reading in the anatomical data
 
 Before starting to use FieldTrip, it is important that you set up your MATLAB path properly. You can read about how to set up your MATLAB path [here](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
-	cd PATH_TO_FIELDTRIP
-	ft_defaults
+    cd PATH_TO_FIELDTRIP
+    ft_defaults
 
 Then, you can read in the mri data.
 
-	mri = ft_read_mri('Subject01.mri');
+    mri = ft_read_mri('Subject01.mri');
 
-	disp(mri)
-	          dim: [256 256 256]
-	      anatomy: [256x256x256 int16]
-	          hdr: [1x1 struct]
-	    transform: [4x4 double]
-	         unit: 'mm'
-	     coordsys: 'ctf'
+    disp(mri)
+              dim: [256 256 256]
+          anatomy: [256x256x256 int16]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
+             unit: 'mm'
+         coordsys: 'ctf'
 
 The structure of your mri variable contains the following field
 
-*  **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
-*  **anatomy**: This is a matrix (with the size and number of dimensions specified in **dim**) that contains the anatomical information represented by numbers.
-*  **hdr**: Header information of the anatomical images.
-*  **transform**: A transformation matrix that aligns the anatomical data (in field **anatomy**) to a certain coordinate system.
-*  **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
+- **dim**: This field gives information on the size (i.e. the number of voxels) of the anatomical volume into each direction.
+- **anatomy**: This is a matrix (with the size and number of dimensions specified in **dim**) that contains the anatomical information represented by numbers.
+- **hdr**: Header information of the anatomical images.
+- **transform**: A transformation matrix that aligns the anatomical data (in field **anatomy**) to a certain coordinate system.
+- **coordsys**: The description of the coordinate system which the anatomical data is aligned to.
 
 You can see that the **coordsys** field of anatomical data that we read in is already aligned to the [ctf coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined#details_of_the_ctf_coordinate_system). This can be done using the CTF specific MRIConverter and MRIViewer software as outlined [here](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) or using the **[ft_volumerealign](/reference/ft_volumerealign)** function.
 
 {% include markup/info %}
-It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined).  If your anatomical MRI is not aligned to the ctf coordinate system, it can be [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) using **[ft_volumerealign](/reference/ft_volumerealign)** function. For this, you will need to align your MRI to the [fiducial
- points](/faq/how_are_the_lpa_and_rpa_points_defined).
+It is also possible to read in anatomical MRI data in [other formats](/faq/dataformat), which are defined in [a different coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). If your anatomical MRI is not aligned to the ctf coordinate system, it can be [aligned](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) using **[ft_volumerealign](/reference/ft_volumerealign)** function. For this, you will need to align your MRI to the [fiducial
+points](/faq/how_are_the_lpa_and_rpa_points_defined).
 
 When you read in your own anatomical data, it may not give information on the coordinate system in which the anatomical data is expressed and/or maybe there is no [transformation matrix](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions) specified. In this case, you can check the coordinate-system with the **[ft_determine_coordsys](/reference/ft_determine_coordsys)** function.
 {% include markup/end %}
@@ -88,33 +88,33 @@ In this step, the voxels of the anatomical MRI are segmented (i.e. separated) in
 Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
-	cfg           = [];
-	cfg.output    = 'brain';
-	segmentedmri  = ft_volumesegment(cfg, mri);
+    cfg           = [];
+    cfg.output    = 'brain';
+    segmentedmri  = ft_volumesegment(cfg, mri);
 
-	save segmentedmri segmentedmri
+    save segmentedmri segmentedmri
 
-	disp(segmentedmri)
-	        dim: [256 256 256]
-	    transform: [4x4 double]
-	     coordsys: 'ctf'
-	         unit: 'mm'
-	        brain: [256x256x256 logical]
-	          cfg: [1x1 struct]
+    disp(segmentedmri)
+            dim: [256 256 256]
+        transform: [4x4 double]
+         coordsys: 'ctf'
+             unit: 'mm'
+            brain: [256x256x256 logical]
+              cfg: [1x1 struct]
 
 The segmentedmri data structure contains the following field
 
-*  **dim**
+- **dim**
 
-*  **transform**
+- **transform**
 
-*  **coordsys**
+- **coordsys**
 
-*  **unit**: unit of measurement of the voxels
+- **unit**: unit of measurement of the voxels
 
-*  **brain**: binary brainmask
+- **brain**: binary brainmask
 
-*  **cfg**: configuration information of the function which created segmentedmri
+- **cfg**: configuration information of the function which created segmentedmri
 
 The segmentation does not change the coordinate system, nor the size of the volume. You can see this in the first three fields (dim, transform and coordsys) which are the same as the corresponding fields of the input mri data structure. But now, the field **transform** aligns the matrix in field **brain** (which contains the brainmask) to the coordinate system defined in the **coordsys** field.
 
@@ -124,27 +124,27 @@ Alternatively, you can also leave out the definition of the cfg.output. In this 
 
 Once the brain mask is segmented out of the anatomical MRI, a surface description of the brain is constructed and the volume conduction model . We will specify method 'singleshell' to build the head model in the cfg.method field using **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
 
-	cfg = [];
-	cfg.method='singleshell';
-	vol = ft_prepare_headmodel(cfg, segmentedmri);
+    cfg = [];
+    cfg.method='singleshell';
+    vol = ft_prepare_headmodel(cfg, segmentedmri);
 
-	save vol vol
+    save vol vol
 
-	disp(vol)
-	     bnd: [1x1 struct]
-	    type: 'singleshell'
-	    unit: 'mm'
-	     cfg: [1x1 struct]
+    disp(vol)
+         bnd: [1x1 struct]
+        type: 'singleshell'
+        unit: 'mm'
+         cfg: [1x1 struct]
 
 The vol data structure contains the following field
 
-*  **bnd**: contains the geometrical description of the head model.
+- **bnd**: contains the geometrical description of the head model.
 
-*  **type**: describes the method that was used to create the headmodel.
+- **type**: describes the method that was used to create the headmodel.
 
-*  **unit**: the unit of measurement of the geometrical data in the bnd field
+- **unit**: the unit of measurement of the geometrical data in the bnd field
 
-*  **cfg**: configuration of the function that was used to create vol
+- **cfg**: configuration of the function that was used to create vol
 
 The **bnd** field describes a surface with vertices and triangles (in the **bnd.pnt** and **bnd.tri** fields) as the geometrical description of the volume conductor.
 
@@ -162,18 +162,18 @@ Alternatively, you can also create and use a multiple-layered head model with Op
 
 The head model (vol) contains the brain-skull boundary as the geometrical description of the head. You can visualize this using the following code. First, we will plot the sensors (MEG channels) with the **[ft_plot_sens](/reference/ft_plot_sens)** function. Second, we will plot the head model with **[ft_plot_vol](/reference/ft_plot_vol)** in the same figure with the sensors. In order to plot also the location of the MEG channels, we read in the location of the channels using the .ds file from the tutorial data and the **[ft_read_sens](/reference/ft_read_sens)** function. (The .zip file that can be downloaded from the [FieldTrip ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) also contains the .ds file.) The units of the headmodel are defined in 'mm', while the units of the sensors are in 'cm'. When we plot the headmodel together with the sensors, they need to have the same units. Therefore, the units of the headmodel will be converted to 'cm' with the **[ft_convert_units](/reference/ft_convert_units)** function.
 
-	vol = ft_convert_units(vol,'cm');
-	sens = ft_read_sens('Subject01.ds');
+    vol = ft_convert_units(vol,'cm');
+    sens = ft_read_sens('Subject01.ds');
 
-	figure
-	ft_plot_sens(sens, 'style', '*b');
+    figure
+    ft_plot_sens(sens, 'style', '*b');
 
-	hold on
-	ft_plot_vol(vol);
+    hold on
+    ft_plot_vol(vol);
 
 {% include image src="/assets/img/tutorial/headmodel_meg/vol1_sens.png" width="300" %}
 
-*Figure 3. The geometry of the volume conduction  model of the head using method "singleshell"*
+_Figure 3. The geometry of the volume conduction model of the head using method "singleshell"_
 
 When the figure is plotted, you can look at the figure from different views using the curved arrow in the MATLAB figure menu. Note that there are 4 channels hovering above the normal channels; those are the MEG reference channels that can be used for environmental noise suppression.
 

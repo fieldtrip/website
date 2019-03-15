@@ -10,17 +10,17 @@ FIXME See also [/development/testing](/development/project/testing)
 
 suggested directory layout
 
-	
-	/home/common/matlab/fieldtrip/testdata/original/...
-	/home/common/matlab/fieldtrip/testdata/raw/monkey256_pele.mat
-	/home/common/matlab/fieldtrip/testdata/raw/ctf151.mat
-	/home/common/matlab/fieldtrip/testdata/comp/...
-	/home/common/matlab/fieldtrip/testdata/bug42/...
-	
-	/home/common/matlab/fieldtrip/testcode/test_preproc_bandpassfilter.m
-	/home/common/matlab/fieldtrip/testcode/test_public_keyval.m
-	/home/common/matlab/fieldtrip/testcode/test_private_whatever.m
-	/home/common/matlab/fieldtrip/testcode/test_bug42.m
+  
+  /home/common/matlab/fieldtrip/testdata/original/...
+  /home/common/matlab/fieldtrip/testdata/raw/monkey256_pele.mat
+  /home/common/matlab/fieldtrip/testdata/raw/ctf151.mat
+  /home/common/matlab/fieldtrip/testdata/comp/...
+  /home/common/matlab/fieldtrip/testdata/bug42/...
+  
+  /home/common/matlab/fieldtrip/testcode/test_preproc_bandpassfilter.m
+  /home/common/matlab/fieldtrip/testcode/test_public_keyval.m
+  /home/common/matlab/fieldtrip/testcode/test_private_whatever.m
+  /home/common/matlab/fieldtrip/testcode/test_bug42.m
 
 *  Needed fo
 - code stability testing in general 

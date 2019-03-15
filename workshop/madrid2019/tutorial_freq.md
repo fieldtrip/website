@@ -105,12 +105,12 @@ is identical. It is a structure with the following element
 
     TFRhann_visc =
 
-	        label: {64x1 cell}                 % Channel names
-	       dimord: 'chan_freq_time'            % Dimensions contained in powspctrm, channels X frequencies X time
-	         freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30]  % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
-	         time: [1x41 double]               % Array of time points considered
-	    powspctrm: [64x15x41 double]           % 3-D matrix containing the power values
-	          cfg: [1x1 struct]                % Settings used in computing this frequency decomposition
+          label: {64x1 cell}                 % Channel names
+         dimord: 'chan_freq_time'            % Dimensions contained in powspctrm, channels X frequencies X time
+           freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30]  % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
+           time: [1x41 double]               % Array of time points considered
+      powspctrm: [64x15x41 double]           % 3-D matrix containing the power values
+            cfg: [1x1 struct]                % Settings used in computing this frequency decomposition
 
 The field `TFRhann_visc.powspctrm` contains the power for each channel, for each
 frequency and for each time point.

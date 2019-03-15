@@ -34,8 +34,8 @@ See whether you can find the correct number of trials.
      readCTFds: This dataset has multiple meg4 files.
 
      readCTFds: Data set error : size of meg4 file(s)
-		1298676928 bytes (from dir command)
-		1.708800e+10 bytes (from res4 file)
+    1298676928 bytes (from dir command)
+    1.708800e+10 bytes (from res4 file)
 
       ans = 
              Fs: 1200

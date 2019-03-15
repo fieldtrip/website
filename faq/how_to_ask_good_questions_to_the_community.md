@@ -5,7 +5,7 @@ tags: [faq, discussion, list, question, ask, question, help]
 
 # How to ask good questions to the community?
 
-The FieldTrip community is represented in the [email discussion list](/discussion_list). You can freely sign up and ask for help if you are stuck in using FieldTrip. Asking good questions there (and giving useful answers) is the key to a successful community. However, please do some research yourself on them before approaching all people on the discussion list. Keep in mind that several hundreds of researchers around the world will get note of your question will spend valuable time on reading your question. In addition, also keep career perspectives into mind. By asking your first question on the mailinglist (which could be before you wrote your first paper), they will get a first impression of you and may start to form a picture of you, be it as a prospective colleague or collaborator. Many of the members are senior researchers and might have a job opening and are looking for you! But, don't be afraid to ask questions, we really appreciate if you approach us and we will try to help, even if your question turns out to be a trivial one :)
+The FieldTrip community is represented in the [email discussion list](/discussion_list). You can freely sign up and ask for help if you are stuck in using FieldTrip. Asking good questions there (and giving useful answers) is the key to a successful community. However, please do some research yourself on them before approaching all people on the discussion list. Keep in mind that several hundreds of researchers around the world will get note of your question will spend valuable time on reading your question. In addition, also keep career perspectives into mind. By asking your first question on the mailing list (which could be before you wrote your first paper), they will get a first impression of you and may start to form a picture of you, be it as a prospective colleague or collaborator. Many of the members are senior researchers and might have a job opening and are looking for you! But, don't be afraid to ask questions, we really appreciate if you approach us and we will try to help, even if your question turns out to be a trivial one :)
 
 {% include image src="/assets/img/faq/how_to_ask_good_questions_to_the_community/peanutsediting.jpg" width="400" %}
 
@@ -67,23 +67,23 @@ My name is MyName MyLastname and I am working in the BigBoss lab in MyCity on in
 
 I tried using ft_functionname to assess spatio-temporal aspects of my data. When I call ft_functionname, I expect to get a structure with several fields, which I can subsequently plot using ft_XXXplot. However, I receive the following error messag
 
-	??? In an assignment  A(:) = B, the number of elements in A and B
-	must be the same.
-	Error in ==> ft_functionname at 23
-	    data.time(cfg.time) = time;
+  ??? In an assignment  A(:) = B, the number of elements in A and B
+  must be the same.
+  Error in ==> ft_functionname at 23
+      data.time(cfg.time) = time;
 
 sThe cfg and data I use are as follow
 
-	>> display(cfg)
+  >> display(cfg)
 
-	 cfg.time = -1:0.25:0;
-	 cfg.freq = 1:32;
-	 ...
+   cfg.time = -1:0.25:0;
+   cfg.freq = 1:32;
+   ...
 
-	>> display(data)
-	 data.freq = [1 2 3 ... 32]
-	 data.time = `<1x321 cell>`
-	 ...
+  >> display(data)
+   data.freq = [1 2 3 ... 32]
+   data.time = `<1x321 cell>`
+   ...
 
 I uploaded my cfg and data on a file hoster such as rapidshare.com as it exceeds the critical file size of 1 MB. Here is the lin
 http://www...
@@ -94,4 +94,3 @@ Best,
 
 MyName
 {% include markup/end %}
-

@@ -43,46 +43,46 @@ This section should be made specific to the example dataset.
 ## Create and analyze a simulated steady-state dataset
 
 
-	fsample = 1000;
-	nsample = 100*fsample;
+  fsample = 1000;
+  nsample = 100*fsample;
 
-	% start with a continuous representation of 100 seconds of data
-	data.label = {'trigger', 'eeg'};
-	data.time = {(1:nsample)/fsample};
-	data.trial = {zeros(length(data.label), nsample)};
+  % start with a continuous representation of 100 seconds of data
+  data.label = {'trigger', 'eeg'};
+  data.time = {(1:nsample)/fsample};
+  data.trial = {zeros(length(data.label), nsample)};
 
-	% add a trigger every 100ms
-	i = 100;
-	while i<nsample
-	  data.trial{1}(1,i) = 1;
-	  i = i + 100;
-	end
+  % add a trigger every 100ms
+  i = 100;
+  while i<nsample
+    data.trial{1}(1,i) = 1;
+    i = i + 100;
+  end
 
-	% create some sort of SSVEP signal
-	data.trial{1}(2,:) = ft_preproc_bandpassfilter(data.trial{1}(1,:), fsample, [3 18], [], [], 'onepass');
-	data.trial{1}(2,:) = data.trial{1}(2,:) + 0.02*randn(size(data.trial{1}(2,:)));
+  % create some sort of SSVEP signal
+  data.trial{1}(2,:) = ft_preproc_bandpassfilter(data.trial{1}(1,:), fsample, [3 18], [], [], 'onepass');
+  data.trial{1}(2,:) = data.trial{1}(2,:) + 0.02*randn(size(data.trial{1}(2,:)));
 
-	% cut into one-second snippets
-	cfg = [];
-	cfg.length = 1;
-	data = ft_redefinetrial(cfg, data);
+  % cut into one-second snippets
+  cfg = [];
+  cfg.length = 1;
+  data = ft_redefinetrial(cfg, data);
 
-	plot(data.time{1}, data.trial{1})
-	legend(data.label)
+  plot(data.time{1}, data.trial{1})
+  legend(data.label)
 
-	cfg = [];
-	cfg.method = 'mtmfft';
-	cfg.taper = 'hanning';
-	cfg.output = 'powandcsd';
-	cfg.foilim = [1 100];
-	freq = ft_freqanalysis(cfg, data);
+  cfg = [];
+  cfg.method = 'mtmfft';
+  cfg.taper = 'hanning';
+  cfg.output = 'powandcsd';
+  cfg.foilim = [1 100];
+  freq = ft_freqanalysis(cfg, data);
 
-	plot(freq.freq, freq.powspctrm);
-	legend(freq.label)
+  plot(freq.freq, freq.powspctrm);
+  legend(freq.label)
 
-	% normalize the CSD for the power in the trigger sequence
-	freq.crsspctrm = freq.crsspctrm ./ freq.powspctrm(1,:);
+  % normalize the CSD for the power in the trigger sequence
+  freq.crsspctrm = freq.crsspctrm ./ freq.powspctrm(1,:);
 
-	plot(freq.freq, abs(freq.crsspctrm));
-	xlabel('frequency (Hz)')
-	ylabel('phase-locked amplitude (a.u.)')
+  plot(freq.freq, abs(freq.crsspctrm));
+  xlabel('frequency (Hz)')
+  ylabel('phase-locked amplitude (a.u.)')

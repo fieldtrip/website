@@ -40,40 +40,40 @@ We are working on a new representation of source data that is more consistent wi
 
 An example of a source structure obtained after performing a frequency domain source reconstruction using **[ft_sourceanalysis](/reference/ft_sourceanalysis)** is shown here:
 
-	          pos: [6732x3 double]           positions at which the source activity could have been estimated
-	       inside: [1x3415 double]           indices to the positions at which the source activity is actually estimated
-	      outside: [1x3317 double]           indices to the positions at which the source activity has not been estimated
+            pos: [6732x3 double]           positions at which the source activity could have been estimated
+         inside: [1x3415 double]           indices to the positions at which the source activity is actually estimated
+        outside: [1x3317 double]           indices to the positions at which the source activity has not been estimated
 
-	          dim: [xdim ydim zdim]          if the positions are described as a 3D regular grid, this contains the
-	                                           dimensionality of the 3D volume
-	          vol: [1x1 struct]              volume conductor model
-	    cumtapcnt: [10x1 double]             information about the number of tapers per original trial
-	         freq: 6,                        the frequency of the oscillations at which the activity is estimated
-	       method: 'singletrial'             specifies how the data is represented
-	          cfg: [1x1 struct]              configuration structure used by the invoking FieldTrip function
-	        trial: [10x1 struct]             contain the numeric data, each structure source.trial(x) can look like thi
+            dim: [xdim ydim zdim]          if the positions are described as a 3D regular grid, this contains the
+                                             dimensionality of the 3D volume
+            vol: [1x1 struct]              volume conductor model
+      cumtapcnt: [10x1 double]             information about the number of tapers per original trial
+           freq: 6,                        the frequency of the oscillations at which the activity is estimated
+         method: 'singletrial'             specifies how the data is represented
+            cfg: [1x1 struct]              configuration structure used by the invoking FieldTrip function
+          trial: [10x1 struct]             contain the numeric data, each structure source.trial(x) can look like thi
 
-	               source.trial(1)
+                 source.trial(1)
 
-	                 pow: [6732x1 double]    Npositions x 1 array containing the power at each source location for the given trial
-	               noise: [6732x1 double]    Npositions x 1 array containing an estimate of the noise at each source location
-	                 csd: {6732x1 cell}      Npositions x 1 cell-array containing the source cross-spectral density
-	                                           at each source location  
+                   pow: [6732x1 double]    Npositions x 1 array containing the power at each source location for the given trial
+                 noise: [6732x1 double]    Npositions x 1 array containing an estimate of the noise at each source location
+                   csd: {6732x1 cell}      Npositions x 1 cell-array containing the source cross-spectral density
+                                             at each source location  
 
 ### New style
 
 This is the new definition of a data structure that represents data corresponding to locations in 3-D space. In the future this will replace the 'old style' definition. It has been designed to be more flexible and more easy to manage. Also, exchange with other software toolboxes and code development should be facilitated by this. An example of such a source structure obtained after performing a frequency domain source reconstruction is shown here:
 
-	          pos: [6732x3 double]       positions at which the source activity could have been estimated
-	       inside: [6732x1 logical]      logical vector of positions at which the source activity is actually estimated
+            pos: [6732x3 double]       positions at which the source activity could have been estimated
+         inside: [6732x1 logical]      logical vector of positions at which the source activity is actually estimated
 
-	          dim: [xdim ydim zdim]      if the positions can be described as a 3D regular grid, this contains the
-	                                       dimensionality of the 3D volume
-	          vol: [1x1 struct]          volume conductor model
-	    cumtapcnt: [120x1 double]        information about the number of tapers per original trial
-	         freq: 6                     the frequency of the oscillations at which the activity is estimated
-	       method: 'singletrial'         specifies how the data is represented
-	          cfg: [1x1 struct]          configuration structure used by the invoking FieldTrip function
-	          pow: [6732x120 double]     the numeric data
-	    powdimord: 'pos_rpt'             defines how the numeric data has to be interpreted, in this case
-	                                       6732 dipole positions x 120 observations
+            dim: [xdim ydim zdim]      if the positions can be described as a 3D regular grid, this contains the
+                                         dimensionality of the 3D volume
+            vol: [1x1 struct]          volume conductor model
+      cumtapcnt: [120x1 double]        information about the number of tapers per original trial
+           freq: 6                     the frequency of the oscillations at which the activity is estimated
+         method: 'singletrial'         specifies how the data is represented
+            cfg: [1x1 struct]          configuration structure used by the invoking FieldTrip function
+            pow: [6732x120 double]     the numeric data
+      powdimord: 'pos_rpt'             defines how the numeric data has to be interpreted, in this case
+                                         6732 dipole positions x 120 observations

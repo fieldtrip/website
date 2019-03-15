@@ -7,16 +7,18 @@ tags: [realtime, development]
 
 ### Provide a unified open_connection call
 
-Currently, Matlab users type %%'buffer://somehost:port'%% for talking to a buffer, and thanks to some intelligence in
+Currently, Matlab users type 'buffer://hostname:port' for talking to a buffer, and thanks to some intelligence in
 the MEX file, this translates into either opening a new TCP connection, reusing a connection, or talking directly to
 a buffer embedded in the MEX file.
 
 The C interface, however, is less consistent. For example, a TCP connection is opened using ''open_connection(hostname, port)'',
 a connection using the new UNIX sockets facility is opened using ''open_unix_connection(pathname)'', and for direct memory access,
 no such call is made. Robert proposed to provide a unified API also on the C level, that is, we would have one function that is called like
+
     con = open_connection("localhost:1972");   // open a TCP connection
     con = open_connection("/some/unix/path");  // open a UNIX/local domain connection
-    con = open_connection("`<dma>`");            // "open" a direct memory "connection"
+    con = open_connection("`<dma>`");          // "open" a direct memory "connection"
+
 and that returns a data structure with information about the type of connection instead of a simple integer (or socket identifier).
 This would naturally extend to future implementations (e.g., Windows pipes).
 

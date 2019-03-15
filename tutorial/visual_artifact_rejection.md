@@ -24,8 +24,8 @@ In visual artifact detection, the user visually inspects the data and identifies
 
 The functions that are available for visual artifact detection are
 
-* **[ft_rejectvisual](/reference/ft_rejectvisual)**
-* **[ft_databrowser](/reference/ft_databrowser)**
+- **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- **[ft_databrowser](/reference/ft_databrowser)**
 
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by either showing all channels at once (per trial) or showing all trials at once (per channel) or by showing a summary of all channels and trials. Using the mouse, you can select trials and/or channels that should be removed from the data. This function directly returns the data with the noise parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
@@ -37,9 +37,9 @@ Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function 
 
 The following steps are taken to do visual artifact rejectio
 
-   * Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**, as explained in the [previous tutorial](/tutorial/preprocessing)
-   * Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
-   * Alternatively: use **[ft_databrowser](/reference/ft_databrowser)** and mark the artifacts manually by interactively paging trial by trial
+- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**, as explained in the [previous tutorial](/tutorial/preprocessing)
+- Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- Alternatively: use **[ft_databrowser](/reference/ft_databrowser)** and mark the artifacts manually by interactively paging trial by trial
 
 ### Manual artifact rejection - display one trial at a time
 
@@ -138,9 +138,9 @@ If you have EEG data, the EOG channels have the same physical units and very sim
 
 If you have data from a 306-channel Neuromag system, you will have both magnetometers and planar gradiometers, which have different physical units and rather different numbers. Combining them in a single visualisation is likely to result in a biassed selection, either mainly relying on the magnetometers or the gradiometers being used to find artefacts.
 
-You can use the following options in **[ft_rejectvisual](/reference/ft_rejectvisual)** to apply a scaling to the channels prior to visualisation: *cfg.eegscale, cfg.eogscale, cfg.ecgscale, cfg.emgscale, cfg.megscale, cfg.gradscale* and *cfg.magscale*.    
+You can use the following options in **[ft_rejectvisual](/reference/ft_rejectvisual)** to apply a scaling to the channels prior to visualisation: _cfg.eegscale, cfg.eogscale, cfg.ecgscale, cfg.emgscale, cfg.megscale, cfg.gradscale_ and _cfg.magscale_.
 
-You can also call **[ft_rejectvisual](/reference/ft_rejectvisual)** multiple times, once for every type of channels in your data. If you use *cfg.keepchannel='yes'*, channels will not be removed from the data on the subsequent calls. For example:
+You can also call **[ft_rejectvisual](/reference/ft_rejectvisual)** multiple times, once for every type of channels in your data. If you use _cfg.keepchannel='yes'_, channels will not be removed from the data on the subsequent calls. For example:
 
     cfg = [];
     cfg.method = 'summary'
@@ -157,7 +157,7 @@ You can also call **[ft_rejectvisual](/reference/ft_rejectvisual)** multiple tim
 
 {% include markup/end %}
 
-----
+---
 
 You can repeat this for the initially congruent (IC) condition. To detect all the artifacts use **[ft_rejectvisual](/reference/ft_rejectvisual)** with all 3 methods (trial, channel and summary) like in the examples above.
 
@@ -171,9 +171,10 @@ You can repeat this for the initially congruent (IC) condition. To detect all th
     cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataIC);
 
- Trials 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86 contain various artifacts, classify these as 'BAD'. Also reject the channels MLO12 and MLP31.
+Trials 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86 contain various artifacts, classify these as 'BAD'. Also reject the channels MLO12 and MLP31.
 
-----
+---
+
 Repeat the procedure for the fully congruent condition (FC
 
     clear all
@@ -193,16 +194,16 @@ Trials 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85 contain various a
 An alternative way to remove artifacts is to page through the butterfly plots of the single trials, by using the ft_databrowser function.
 Call the function like
 
-	% first select only the MEG channels
-	cfg = [];
-	cfg.channel = 'MEG';
-	data = ft_preprocessing(cfg,dataFIC);
-	% open the browser and page through the trials
-	cfg=[];
-	cfg.channel = 'MEG';
-	artf=ft_databrowser(cfg,dataFIC);
+    % first select only the MEG channels
+    cfg = [];
+    cfg.channel = 'MEG';
+    data = ft_preprocessing(cfg,dataFIC);
+    % open the browser and page through the trials
+    cfg=[];
+    cfg.channel = 'MEG';
+    artf=ft_databrowser(cfg,dataFIC);
 
-In the image below are two figures for the same trial (trial 75). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image).  Then, as in the right figure click within the dotted line
+In the image below are two figures for the same trial (trial 75). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image). Then, as in the right figure click within the dotted line
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/fig4.png" width="600" %}
 
@@ -216,8 +217,8 @@ with the beginning and ending sample for all marked sections.
 
 Per condition, the following trials contain artifacts:
 
-*  FIC: 15, 36, 39, 42, 43, 49, 50, 81, 82, 84
-*  IC:  1,  2,  3,  4,  14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86
-*  FC:  2,  3,  4,  30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85
+- FIC: 15, 36, 39, 42, 43, 49, 50, 81, 82, 84
+- IC: 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86
+- FC: 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85
 
 Channels MLO12 and MLP31 are removed because of artifacts.

@@ -36,15 +36,15 @@ It is important that you use appropriate tools. Command line utilities are very 
 
 ### Step 1a: create empty directory structure
 
-	BIDSROOT=$HOME/example
+  BIDSROOT=$HOME/example
 
-	mkdir -p $BIDSROOT/code
-	mkdir -p $BIDSROOT/stimuli
-	mkdir -p $BIDSROOT/sourcedata
+  mkdir -p $BIDSROOT/code
+  mkdir -p $BIDSROOT/stimuli
+  mkdir -p $BIDSROOT/sourcedata
 
-	for SUB in 01 02 03 04 05 06 07 08 09 10; do
-	mkdir -p $BIDSROOT/sub-$SUB/eeg
-	done
+  for SUB in 01 02 03 04 05 06 07 08 09 10; do
+  mkdir -p $BIDSROOT/sub-$SUB/eeg
+  done
 
 ### Step 2a: copy the EEG data to the BIDS organization
 
@@ -52,87 +52,87 @@ The original data gets copied and renamed to the location in the BIDS structure.
 
 In this case it is not needed to convert the data, since the EEGLAB .set format is explicitly allowed according to the BIDS standard (although BrainVision and EDF are preferred).  
 
-	BIDSROOT=$HOME/example
-	SOURCEDATA=$BIDSROOT/sourcedata
+  BIDSROOT=$HOME/example
+  SOURCEDATA=$BIDSROOT/sourcedata
 
-	cd $SOURCEDATA
-	wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
+  cd $SOURCEDATA
+  wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
 
-	TASK=something
+  TASK=something
 
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-01/eeg/sub-01_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-02/eeg/sub-02_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-03/eeg/sub-03_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-04/eeg/sub-04_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-05/eeg/sub-05_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-06/eeg/sub-06_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-07/eeg/sub-07_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-08/eeg/sub-08_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
-	cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-01/eeg/sub-01_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-02/eeg/sub-02_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-03/eeg/sub-03_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-04/eeg/sub-04_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-05/eeg/sub-05_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-06/eeg/sub-06_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-07/eeg/sub-07_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-08/eeg/sub-08_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
+  cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
 
 ### Step 3a: create the sidecar files for each subject
 
 The **[data2bids](/reference/data2bids)** function will read each EEG recording and determine the metadata that is available in the file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
 
-	%% this is an example that starts with data in a supported format
+  %% this is an example that starts with data in a supported format
 
-	bidsroot = fullfile(getenv('HOME'), 'example');
-	subject  = dir(fullfile(bidsroot, 'sub-*'));
-	subject  = {subject.name};
+  bidsroot = fullfile(getenv('HOME'), 'example');
+  subject  = dir(fullfile(bidsroot, 'sub-*'));
+  subject  = {subject.name};
 
-	for i=1:numel(subject)
+  for i=1:numel(subject)
 
-	  anat = dir(fullfile(bidsroot, subject{i}, 'anat', '*.nii'));
-	  func = dir(fullfile(bidsroot, subject{i}, 'func', '*.nii'));
-	  dwi  = dir(fullfile(bidsroot, subject{i}, 'dwi',  '*.nii'));
-	  meg  = dir(fullfile(bidsroot, subject{i}, 'meg',  '*.ds'));
-	  eeg  = dir(fullfile(bidsroot, subject{i}, 'eeg',  '*.set'));
+    anat = dir(fullfile(bidsroot, subject{i}, 'anat', '*.nii'));
+    func = dir(fullfile(bidsroot, subject{i}, 'func', '*.nii'));
+    dwi  = dir(fullfile(bidsroot, subject{i}, 'dwi',  '*.nii'));
+    meg  = dir(fullfile(bidsroot, subject{i}, 'meg',  '*.ds'));
+    eeg  = dir(fullfile(bidsroot, subject{i}, 'eeg',  '*.set'));
 
-	  catfile = @(p, f) fullfile(p, f);
+    catfile = @(p, f) fullfile(p, f);
 
-	  anat = cellfun(catfile, {anat.folder}, {anat.name}, 'UniformOutput', 0);
-	  func = cellfun(catfile, {func.folder}, {func.name}, 'UniformOutput', 0);
-	  dwi  = cellfun(catfile, {dwi.folder},  {dwi.name},  'UniformOutput', 0);
-	  meg  = cellfun(catfile, {meg.folder},  {meg.name},  'UniformOutput', 0);
-	  eeg  = cellfun(catfile, {eeg.folder},  {eeg.name},  'UniformOutput', 0);
+    anat = cellfun(catfile, {anat.folder}, {anat.name}, 'UniformOutput', 0);
+    func = cellfun(catfile, {func.folder}, {func.name}, 'UniformOutput', 0);
+    dwi  = cellfun(catfile, {dwi.folder},  {dwi.name},  'UniformOutput', 0);
+    meg  = cellfun(catfile, {meg.folder},  {meg.name},  'UniformOutput', 0);
+    eeg  = cellfun(catfile, {eeg.folder},  {eeg.name},  'UniformOutput', 0);
 
-	  dataset = cat(1, anat(:), func(:), dwi(:), meg(:), eeg(:));
+    dataset = cat(1, anat(:), func(:), dwi(:), meg(:), eeg(:));
 
-	  for j=1:numel(dataset)
-	    cfg = [];
-	    cfg.dataset                     = dataset{j};
+    for j=1:numel(dataset)
+      cfg = [];
+      cfg.dataset                     = dataset{j};
 
-	    cfg.eeg.writesidecar            = 'replace';
-	    cfg.channels.writesidecar       = 'replace';
-	    cfg.events.writesidecar         = 'replace';
+      cfg.eeg.writesidecar            = 'replace';
+      cfg.channels.writesidecar       = 'replace';
+      cfg.events.writesidecar         = 'replace';
 
-	    cfg.InstitutionName             = 'University of California San Diego';
-	    cfg.InstitutionalDepartmentName = 'Schwartz Center for Computational Neuroscience';
-	    cfg.InstitutionAddress          = '9500 Gilman Drive # 0559; La Jolla CA 92093, USA';
+      cfg.InstitutionName             = 'University of California San Diego';
+      cfg.InstitutionalDepartmentName = 'Schwartz Center for Computational Neuroscience';
+      cfg.InstitutionAddress          = '9500 Gilman Drive # 0559; La Jolla CA 92093, USA';
 
-	    % provide the long rescription of the task
-	    cfg.TaskName = 'Subjects were doing something.';
+      % provide the long rescription of the task
+      cfg.TaskName = 'Subjects were doing something.';
 
-	    % these are EEG specific
-	    cfg.eeg.PowerLineFrequency      = 60;  % recorded in the USA
-	    cfg.eeg.EEGReference            ='M1'; % actually I do not know, but let's assume it was left mastoid
+      % these are EEG specific
+      cfg.eeg.PowerLineFrequency      = 60;  % recorded in the USA
+      cfg.eeg.EEGReference            ='M1'; % actually I do not know, but let's assume it was left mastoid
 
-	    data2bids(cfg)
+      data2bids(cfg)
 
-	  end % for each dataset
-	end % for each subject
+    end % for each dataset
+  end % for each subject
 
 ### Step 4a: create the general sidecar files
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-	BIDSROOT=$HOME/example
-	BIDSTOOLS=$HOME/bids-tools/bin
+  BIDSROOT=$HOME/example
+  BIDSTOOLS=$HOME/bids-tools/bin
 
-	$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
-	$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
-	$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
+  $BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
+  $BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
+  $BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
 
 ### Step 5a: finalize
 
@@ -146,37 +146,37 @@ Throughout the development of the scripts and and after having completed the con
 
 ### Step 1b: create empty directory structure
 
-	BIDSROOT=$HOME/example
+  BIDSROOT=$HOME/example
 
-	mkdir -p $BIDSROOT/code
-	mkdir -p $BIDSROOT/stimuli
-	mkdir -p $BIDSROOT/sourcedata
+  mkdir -p $BIDSROOT/code
+  mkdir -p $BIDSROOT/stimuli
+  mkdir -p $BIDSROOT/sourcedata
 
-	for SUB in 01 02 03 04 05 06 07 08 09 10; do
-	mkdir -p $BIDSROOT/sub-$SUB/eeg
-	done
+  for SUB in 01 02 03 04 05 06 07 08 09 10; do
+  mkdir -p $BIDSROOT/sub-$SUB/eeg
+  done
 
 ### Step 2b: copy the EEG data for all participants
 
 Here I am copying the single example file to each of the subjects. This would normally not be needed, since you would already have the original data somewhere in some structure. The original format data can be shared in BIDS in the *sourcedata* directory.
 
-	BIDSROOT=$HOME/example
-	SOURCEDATA=$BIDSROOT/sourcedata
+  BIDSROOT=$HOME/example
+  SOURCEDATA=$BIDSROOT/sourcedata
 
-	cd $SOURCEDATA
-	wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
+  cd $SOURCEDATA
+  wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
 
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant01.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant02.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant03.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant04.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant05.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant06.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant07.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant08.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant09.set
-	cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
-	rm $SOURCEDATA/Eeglab_data.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant01.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant02.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant03.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant04.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant05.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant06.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant07.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant08.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant09.set
+  cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
+  rm $SOURCEDATA/Eeglab_data.set
 
 ### Step 3b: convert the data and create the sidecar files for each subject
 
@@ -186,62 +186,62 @@ Besides creating the sidecar files with the metadata, in this step we are also c
 
 In principle converting the data is not needed, since EEGLAB .set is also one of the (non-preferred) formats allowed for EEG data in BIDS.
 
-	%% this is an example that converts the EEG data to BrainVision format
+  %% this is an example that converts the EEG data to BrainVision format
 
-	bidsroot   = fullfile(getenv('HOME'), 'example');
-	sourcedata = fullfile(bidsroot, 'sourcedata');
+  bidsroot   = fullfile(getenv('HOME'), 'example');
+  sourcedata = fullfile(bidsroot, 'sourcedata');
 
-	dataset = {
-	  fullfile(sourcedata, 'participant01.set')
-	  fullfile(sourcedata, 'participant02.set')
-	  fullfile(sourcedata, 'participant03.set')
-	  fullfile(sourcedata, 'participant04.set')
-	  fullfile(sourcedata, 'participant05.set')
-	  fullfile(sourcedata, 'participant06.set')
-	  fullfile(sourcedata, 'participant07.set')
-	  fullfile(sourcedata, 'participant08.set')
-	  fullfile(sourcedata, 'participant09.set')
-	  fullfile(sourcedata, 'participant10.set')
-	  };
+  dataset = {
+    fullfile(sourcedata, 'participant01.set')
+    fullfile(sourcedata, 'participant02.set')
+    fullfile(sourcedata, 'participant03.set')
+    fullfile(sourcedata, 'participant04.set')
+    fullfile(sourcedata, 'participant05.set')
+    fullfile(sourcedata, 'participant06.set')
+    fullfile(sourcedata, 'participant07.set')
+    fullfile(sourcedata, 'participant08.set')
+    fullfile(sourcedata, 'participant09.set')
+    fullfile(sourcedata, 'participant10.set')
+    };
 
-	nsubj = 10;
-	task = 'something';
+  nsubj = 10;
+  task = 'something';
 
-	for i=1:nsubj
+  for i=1:nsubj
 
-	  cfg = [];
-	  cfg.dataset                     = dataset{i};
-	  cfg.outputfile                  = fullfile(bidsroot, sprintf('sub-%02d', i), 'eeg', sprintf('sub-%02d_task-%s_eeg.vhdr', i, task));
+    cfg = [];
+    cfg.dataset                     = dataset{i};
+    cfg.outputfile                  = fullfile(bidsroot, sprintf('sub-%02d', i), 'eeg', sprintf('sub-%02d_task-%s_eeg.vhdr', i, task));
 
-	  cfg.eeg.writesidecar            = 'replace';
-	  cfg.channels.writesidecar       = 'replace';
-	  cfg.events.writesidecar         = 'replace';
+    cfg.eeg.writesidecar            = 'replace';
+    cfg.channels.writesidecar       = 'replace';
+    cfg.events.writesidecar         = 'replace';
 
-	  cfg.InstitutionName             = 'University of California San Diego';
-	  cfg.InstitutionalDepartmentName = 'Schwartz Center for Computational Neuroscience';
-	  cfg.InstitutionAddress          = '9500 Gilman Drive # 0559; La Jolla CA 92093, USA';
+    cfg.InstitutionName             = 'University of California San Diego';
+    cfg.InstitutionalDepartmentName = 'Schwartz Center for Computational Neuroscience';
+    cfg.InstitutionAddress          = '9500 Gilman Drive # 0559; La Jolla CA 92093, USA';
 
-	  % provide the long rescription of the task
-	  cfg.TaskName = 'Subjects were doing something.';
+    % provide the long rescription of the task
+    cfg.TaskName = 'Subjects were doing something.';
 
-	  % these are EEG specific
-	  cfg.eeg.PowerLineFrequency      = 60;  % recorded in the USA
-	  cfg.eeg.EEGReference            ='M1'; % actually I do not know, but let's assume it was left mastoid
+    % these are EEG specific
+    cfg.eeg.PowerLineFrequency      = 60;  % recorded in the USA
+    cfg.eeg.EEGReference            ='M1'; % actually I do not know, but let's assume it was left mastoid
 
-	  data2bids(cfg)
+    data2bids(cfg)
 
-	end % for each dataset
+  end % for each dataset
 
 ### Step 4b: create the general sidecar files
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-	BIDSROOT=$HOME/example
-	BIDSTOOLS=$HOME/bids-tools/bin
+  BIDSROOT=$HOME/example
+  BIDSTOOLS=$HOME/bids-tools/bin
 
-	$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
-	$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
-	$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
+  $BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
+  $BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
+  $BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
 
 ### Step 5b: finalize
 

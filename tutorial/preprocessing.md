@@ -9,7 +9,7 @@ tags: [tutorial, meg, raw, preprocessing, meg-language]
 
 This tutorial describes how to define epochs-of-interest (trials) from your recorded MEG-data, and how to apply the different preprocessing steps. This tutorial does not show yet how to analyze (e.g. average) your data.
 
-If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial. There, you  can also find information about how to preprocess EEG data. If you want to learn how to segment EEG data into trials, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
+If you are interested in how to do preprocessing on your data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial. There, you can also find information about how to preprocess EEG data. If you want to learn how to segment EEG data into trials, check the tutorial on [Preprocessing of EEG data and computing ERPs](/tutorial/preprocessing_erp).
 
 ## Background
 
@@ -19,8 +19,8 @@ There are largely two alternative approaches for preprocessing, which especially
 
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done
 
-*  according to a specified trigger channel
-*  according to your own criteria when you write your own trial function
+- according to a specified trigger channel
+- according to your own criteria when you write your own trial function
 
 Examples for both ways are described in this tutorial, and both ways depend on **[ft_definetrial](/reference/ft_preprocessing)**.
 
@@ -32,8 +32,8 @@ The output of ft_definetrial is a configuration structure containing the field c
 
 The following steps are taken in this tutorial:
 
-*  Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-*  Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
+- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
 
 ## Reading and preprocessing the interesting trials
 
@@ -43,15 +43,15 @@ The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/re
 
 Do the trial definition for the fully incongruent (FIC) condition:
 
-	  cfg                         = [];
-	  cfg.dataset                 = 'Subject01.ds';
-	  cfg.trialfun                = 'ft_trialfun_general'; % this is the default
-	  cfg.trialdef.eventtype      = 'backpanel trigger';
-	  cfg.trialdef.eventvalue     = 3; % the value of the stimulus trigger for fully incongruent (FIC).
-	  cfg.trialdef.prestim        = 1; % in seconds
-	  cfg.trialdef.poststim       = 2; % in seconds
+      cfg                         = [];
+      cfg.dataset                 = 'Subject01.ds';
+      cfg.trialfun                = 'ft_trialfun_general'; % this is the default
+      cfg.trialdef.eventtype      = 'backpanel trigger';
+      cfg.trialdef.eventvalue     = 3; % the value of the stimulus trigger for fully incongruent (FIC).
+      cfg.trialdef.prestim        = 1; % in seconds
+      cfg.trialdef.poststim       = 2; % in seconds
 
-	  cfg = ft_definetrial(cfg);
+      cfg = ft_definetrial(cfg);
 
 This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined.
 
@@ -67,16 +67,16 @@ Save the preprocessed data to dis
 
 The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure dataFIC which has the following fields:
 
-	dataFIC =
-	           hdr: [1x1 struct]
-	         label: {152x1 cell}
-	          time: {1x87 cell}
-	         trial: {1x87 cell}
-	       fsample: 300
-	    sampleinfo: [87x2 double]
-	     trialinfo: [87x1 double]
-	          grad: [1x1 struct]
-	           cfg: [1x1 struct]
+    dataFIC =
+               hdr: [1x1 struct]
+             label: {152x1 cell}
+              time: {1x87 cell}
+             trial: {1x87 cell}
+           fsample: 300
+        sampleinfo: [87x2 double]
+         trialinfo: [87x1 double]
+              grad: [1x1 struct]
+               cfg: [1x1 struct]
 
 The most important fields are dataFIC.trial containing the individual trials and dataFIC.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following:
 
@@ -90,7 +90,7 @@ The initially congruent (IC) conditio
 
     cfg                         = [];
     cfg.dataset                 = 'Subject01.ds';
-    cfg.trialdef.eventtype      = 'backpanel trigger';  
+    cfg.trialdef.eventtype      = 'backpanel trigger';
     cfg.trialdef.eventvalue     = 5; % the value of the stimulus trigger for initially congruent (IC).
     cfg.trialdef.prestim        = 1; % in seconds
     cfg.trialdef.poststim       = 2; % in seconds
@@ -151,7 +151,7 @@ There are often cases in which it is not sufficient to define a trial only accor
         % add this to the trl definition
         begsample     = event(i).sample - cfg.trialdef.prestim*hdr.Fs;
         endsample     = event(i).sample + cfg.trialdef.poststim*hdr.Fs - 1;
-        offset        = -cfg.trialdef.prestim*hdr.Fs;  
+        offset        = -cfg.trialdef.prestim*hdr.Fs;
         trigger       = event(i).value; % remember the trigger (=condition) for each trial
         trl(end+1, :) = [round([begsample endsample offset])  trigger];
       end
@@ -161,10 +161,10 @@ There are often cases in which it is not sufficient to define a trial only accor
 Save the trial function together with your other scripts as mytrialfun.m. To ensure that **[ft_preprocessing](/reference/ft_preprocessing)** is making use of the new trial function use the commands
 
     cfg = [];
-    cfg.dataset  						= 'Subject01.ds';
-    cfg.trialfun 						= 'mytrialfun'; 		% it will call your function and pass the cfg
+    cfg.dataset              = 'Subject01.ds';
+    cfg.trialfun             = 'mytrialfun';     % it will call your function and pass the cfg
     cfg.trialdef.eventtype  = 'backpanel trigger';
-    cfg.trialdef.eventvalue = [3 5 9]; 					% read all conditions at once
+    cfg.trialdef.eventvalue = [3 5 9];           % read all conditions at once
     cfg.trialdef.prestim    = 1; % in seconds
     cfg.trialdef.poststim   = 2; % in seconds
 
@@ -177,17 +177,17 @@ When you do not specify cfg.trialfun, **[ft_definetrial](/reference/ft_definetri
 
 The output dataMytrialfun now contains all of the trials of the three conditions (since we specified all three triggers values: 3, 5 and 9). It also contains a field dataMytrialfun.trialinfo, which contains the 4th column of the trl (trial definition) which contains the trigger values, i.e., it tells you to which condition each trial belong
 
-	dataMytrialfun =
+    dataMytrialfun =
 
-	           hdr: [1x1 struct]
-	         label: {152x1 cell}
-	          time: {1x261 cell}
-	         trial: {1x261 cell}
-	       fsample: 300
-	    sampleinfo: [261x2 double]
-	     trialinfo: [261x1 double]
-	          grad: [1x1 struct]
-	           cfg: [1x1 struct]
+               hdr: [1x1 struct]
+             label: {152x1 cell}
+              time: {1x261 cell}
+             trial: {1x261 cell}
+           fsample: 300
+        sampleinfo: [261x2 double]
+         trialinfo: [261x1 double]
+              grad: [1x1 struct]
+               cfg: [1x1 struct]
 
 More on the trialinfo field can be found in the [faq](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline).
 

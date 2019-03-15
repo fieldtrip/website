@@ -18,38 +18,38 @@ Note that the MEG-PD toolbox will only function on 32-bit machines, and requires
 To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. In respect to FiedlTrip, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 
-	addpath `<full_path_to_fieldtrip>`
-	ft_defaults
+  addpath `<full_path_to_fieldtrip>`
+  ft_defaults
 
 ## Reading MEG data
 
 The first step is to see if you can read in the data using both the toolboxes by typing the following in the command windo
 
 
-	>> hdr = ft_read_header(filename); %your fif-filename
-	>> hdr
+  >> hdr = ft_read_header(filename); %your fif-filename
+  >> hdr
 
-	hdr =
+  hdr =
 
-	          label: {317x1 cell}
-	         nChans: 317
-	             Fs: 1000
-	           grad: [1x1 struct]
-	           unit: {1x317 cell}
-	       nSamples: 396000
-	    nSamplesPre: 0
-	        nTrials: 1
-	           orig: [1x1 struct]
+            label: {317x1 cell}
+           nChans: 317
+               Fs: 1000
+             grad: [1x1 struct]
+             unit: {1x317 cell}
+         nSamples: 396000
+      nSamplesPre: 0
+          nTrials: 1
+             orig: [1x1 struct]
 
 The header contains a lot of information about the measurement parameters. In this example 317 channels were recorded, the sampling frequency was a 1000 Hz and in the field hdr.grad you can find information about the sensor-locations, for example. The field 'hdr.orig' contains all the original header information.
 
 
-	>> dat = ft_read_data(filename);
-	>> size(dat)
+  >> dat = ft_read_data(filename);
+  >> size(dat)
 
-	ans =
+  ans =
 
-	         317      396000
+           317      396000
 
 The variable 'dat' contains all the data for 317 channels for all samples. This is a recording of 396 seconds sampled at 1000 Hz.
 

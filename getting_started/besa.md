@@ -20,19 +20,19 @@ BESA has its own file formats for storing various aspects of the data. Most of t
 
 FieldTrip directly supports the following BESA file format
 
-	.avr contains an averaged ERP/ERF
-	.mul contains an averaged ERP/ERF stored in a multiplexed format
-	.elp contains electrode labels
-	.sfp contains electrode labels and positions
-	.pdg contains the settings of an analysis paradigm
-	.tfc contains a time-frequency representation of power or coherence
+  .avr contains an averaged ERP/ERF
+  .mul contains an averaged ERP/ERF stored in a multiplexed format
+  .elp contains electrode labels
+  .sfp contains electrode labels and positions
+  .pdg contains the settings of an analysis paradigm
+  .tfc contains a time-frequency representation of power or coherence
   .dat contains multiple source beamformer output on a regular 3D grid
 
 It is possible to use the low-level functions in FieldTrip to read in the BESA data into Matlab, but it is preferred to use the high-level besa2fieldtrip function. That function will read the data and format it into a structure that is compatible with fieldtrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
 
-	.avr converted to ft_timelockanalysis
-	.mul converted to ft_timelockanalysis
-	.tfc converted to ft_freqanalysis
+  .avr converted to ft_timelockanalysis
+  .mul converted to ft_timelockanalysis
+  .tfc converted to ft_freqanalysis
 
 For example, you can read in event-related potential data using
     timelock = besa2fieldtrip('filename.avr');
@@ -43,7 +43,7 @@ or a time-frequency estimate of power using
 
 For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using BESA2FIELDTRIP is to download  the BESA toolbox and to add it to your Matlab path. The conversion function will automatically detect and use it when available on your path.
 
-The BESA toolbox is maintained by BESA (www.besa.de) and included in the FieldTrip release as **//fieldtrip/external/besa.* for your convenience.
+The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the FieldTrip release as **fieldtrip/external/besa.* for your convenience.
 
 ## Electrode information
 

@@ -29,12 +29,12 @@ The low-level functions are combined in the **specest** toolbox which is self-co
 
 The functions should be called as
 
-	
-	[spectrum, ntaper, freqoi, timeoi] = ft_specest_mtmconvol(dat, time, key1, value1, ...)
-	        [spectrum, ntaper, freqoi] = ft_specest_mtmfft   (dat, time, key1, value1, ...)
-	        [spectrum, freqoi, timeoi] = ft_specest_hilbert  (dat, time, key1, value1, ...)
-	        [spectrum, freqoi, timeoi] = ft_specest_wavelet  (dat, time, key1, value1, ...)
-	        [spectrum, freqoi, timeoi] = ft_specest_tfr      (dat, time, key1, value1, ...)
+  
+  [spectrum, ntaper, freqoi, timeoi] = ft_specest_mtmconvol(dat, time, key1, value1, ...)
+          [spectrum, ntaper, freqoi] = ft_specest_mtmfft   (dat, time, key1, value1, ...)
+          [spectrum, freqoi, timeoi] = ft_specest_hilbert  (dat, time, key1, value1, ...)
+          [spectrum, freqoi, timeoi] = ft_specest_wavelet  (dat, time, key1, value1, ...)
+          [spectrum, freqoi, timeoi] = ft_specest_tfr      (dat, time, key1, value1, ...)
 
 Where *dat* consists of a matrix of dimensionality Nchan x Ntime, and *time* is a 1xNtime vector containing the time indices in seconds. The time vector is used to compute the sampling rate, and to determine, in the case of mtmfft, where t=0 resides with respect to *dat*. 
 

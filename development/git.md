@@ -175,12 +175,12 @@ It will tell you:
 #   (use "git add `<file>`..." to update what will be committed)
 #   (use "git checkout -- `<file>`..." to discard changes in working directory)
 #
-#	modified:   ft_defaults.m
+#  modified:   ft_defaults.m
 #
 # Untracked file
 #   (use "git add `<file>`..." to include in what will be committed)
 #
-#	ft_welcome.m
+#  ft_welcome.m
 no changes added to commit (use "git add" and/or "git commit -a")
 `````
 
@@ -203,8 +203,8 @@ and now `git status` will tell you:
 # Changes to be committe
 #   (use "git reset HEAD `<file>`..." to unstage)
 #
-#	modified:   ft_defaults.m
-#	new file:   ft_welcome.m
+#  modified:   ft_defaults.m
+#  new file:   ft_welcome.m
 #
 ````
 
@@ -308,8 +308,8 @@ git remote -v
 which will show you
 
 ```` bash
-origin	git@github.com/USERNAME/fieldtrip.git (fetch)
-origin	git@github.com/USERNAME/fieldtrip.git (push)
+origin  git@github.com/USERNAME/fieldtrip.git (fetch)
+origin  git@github.com/USERNAME/fieldtrip.git (push)
 ````
 
 or the corresponding URL with https instead of git.
@@ -324,10 +324,10 @@ git remote -v
 will now show you both remotes:
 
 ```` bash
-origin	git@github.com/robertoostenveld/fieldtrip.git (fetch)
-origin	git@github.com/robertoostenveld/fieldtrip.git (push)
-upstream	https://github.com/fieldtrip/fieldtrip.git (fetch)
-upstream	https://github.com/fieldtrip/fieldtrip.git (push)
+origin  git@github.com/robertoostenveld/fieldtrip.git (fetch)
+origin  git@github.com/robertoostenveld/fieldtrip.git (push)
+upstream  https://github.com/fieldtrip/fieldtrip.git (fetch)
+upstream  https://github.com/fieldtrip/fieldtrip.git (push)
 ````
 
 You can pull (download) from the *upstream* repository and push (upload) to your own *origin* repository.

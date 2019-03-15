@@ -33,32 +33,32 @@ Usually you will be starting your FieldTrip analysis with raw continuous data wh
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
-	addpath `<full_path_to_fieldtrip>`
-	ft_defaults
+  addpath `<full_path_to_fieldtrip>`
+  ft_defaults
 
 ## Testing that the reading into MATLAB works
 
 To test that the reading of the continuous data works on your computer, you can try something like the following on your own data fil
 
 
-	>> hdr = ft_read_header('Continuous1.con')
+  >> hdr = ft_read_header('Continuous1.con')
 
-	hdr =
-	             Fs: 500
-	         nChans: 224
-	       nSamples: 2500
-	    nSamplesPre: 0
-	        nTrials: 1
-	          label: {1x224 cell}
-	           grad: [1x1 struct]
-	           orig: [1x1 struct]
+  hdr =
+               Fs: 500
+           nChans: 224
+         nSamples: 2500
+      nSamplesPre: 0
+          nTrials: 1
+            label: {1x224 cell}
+             grad: [1x1 struct]
+             orig: [1x1 struct]
 
 In hdr.label you can find the channel labels (as strings). In hdr.grad you can find the magnetometer and gradiometer definition (i.e. the position of each coil and how the coils are combined into channels).
 
 Subsequently you can read the data from one of the channels (here the first) and simply plot i
 
-	>> dat = ft_read_data('Continuous1.con', 'chanindx', 1);
-	>> plot(dat)
+  >> dat = ft_read_data('Continuous1.con', 'chanindx', 1);
+  >> plot(dat)
 
 Instead of using the low-level reading functions for reading and handling the data manually, normally you would use the  **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**. Please read through the tutorials to learn how to do a complete analysis.
 
@@ -83,26 +83,26 @@ This means that the user (you!) needs to know exactly which channels are used, w
 
 After reading the data wit
 
-	data = ft_read_data('test.sqd');
+  data = ft_read_data('test.sqd');
 
 We can make a plot of one of the trigger channels
 
-	figure;
-	plot(data(161,1:100000);
+  figure;
+  plot(data(161,1:100000);
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers1.png" width="300" %}
 
 zooming in a bit
 
-	figure;
-	plot(data(161,1:10000);
+  figure;
+  plot(data(161,1:10000);
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers2.png" width="300" %}
 
 zooming in even more using the MATLAB figure magnifying glass on the top left corner of one trigger event
 
-	figure;
-	plot(data(161,1:10000,'.-');
+  figure;
+  plot(data(161,1:10000,'.-');
 
 {% include image src="/assets/img/getting_started/yokogawa/triggers3.png" width="300" %}
 
@@ -117,45 +117,45 @@ Together with our knowledge of the experimental design and stimulus equipment we
 
 For example
 
-	function [trl, event] = mytrialfun(cfg)
+  function [trl, event] = mytrialfun(cfg)
 
-	% read the header information and the events from the data
-	hdr   = ft_read_header(cfg.dataset);
-	event = ft_read_event(cfg.dataset,'trigindx',161:166,'threshold',1e4,'detectflank','up');
+  % read the header information and the events from the data
+  hdr   = ft_read_header(cfg.dataset);
+  event = ft_read_event(cfg.dataset,'trigindx',161:166,'threshold',1e4,'detectflank','up');
 
-	% search for "trigger" events according to 'trigchannel' defined outside the function
-	value  = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).value]';
-	sample = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).sample]';
+  % search for "trigger" events according to 'trigchannel' defined outside the function
+  value  = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).value]';
+  sample = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).sample]';
 
-	% creating your own trialdefinition based upon the events
-	for j = 1:length(value);
-	    trlbegin = sample(j) + pretrig;
-	    trlend   = sample(j) + posttrig;
-	    offset   = pretrig;
-	    newtrl   = [ trlbegin trlend offset];
-	    trl      = [ trl; newtrl];  
-	end
+  % creating your own trialdefinition based upon the events
+  for j = 1:length(value);
+      trlbegin = sample(j) + pretrig;
+      trlend   = sample(j) + posttrig;
+      offset   = pretrig;
+      newtrl   = [ trlbegin trlend offset];
+      trl      = [ trl; newtrl];  
+  end
 
 
 We can then proceed in the standard way of defining trials and reading data as follows.
 Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc.
 Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding ` cfg.trialdef.trigchannel = '162' `{matlab} into the trialfunctio
 
-	cfg = [];
-	cfg.dataset                 = data.sqd;
-	cfg.hpfilter                = 'yes';
-	cfg.hpfreq                  = 1;
-	cfg.continuous              = 'yes';
-	cfg.trialdef.prestim        = 1;
-	cfg.trialdef.poststim       = 1;
-	cfg.trialdef.trigchannel    = '161';
-	cfg.trialfun                = 'mytrialfun';   
+  cfg = [];
+  cfg.dataset                 = data.sqd;
+  cfg.hpfilter                = 'yes';
+  cfg.hpfreq                  = 1;
+  cfg.continuous              = 'yes';
+  cfg.trialdef.prestim        = 1;
+  cfg.trialdef.poststim       = 1;
+  cfg.trialdef.trigchannel    = '161';
+  cfg.trialfun                = 'mytrialfun';   
 
-	% enter trl in cfg
-	cfg 			    = ft_definetrial(cfg);
+  % enter trl in cfg
+  cfg           = ft_definetrial(cfg);
 
-	% read data   
-	preproc                     = ft_preprocessing(cfg);
+  % read data   
+  preproc                     = ft_preprocessing(cfg);
 
 
 ## Coordinate system coregistration
@@ -190,31 +190,31 @@ If you used standard fiducial locations (nasion, left/right ear) for the MEG coi
 
 Read subject MRI
 
-	ft_hastoolbox('spm8',1);
-	mri = ft_read_mri('Structural.hdr');
+  ft_hastoolbox('spm8',1);
+  mri = ft_read_mri('Structural.hdr');
 
 First we use **[ft_volumerealign](/reference/ft_volumerealign)** to locate the nasion and the auricular points (using the n/l/r keyboard input). This will return the anatomical MRI in head coordinates.
 
-	cfg             = [];
-	cfg.method      = 'interactive';
-	cfg.coordsys    = 'ctf';
-	mri_aligned     = ft_volumerealign(cfg,mri);
+  cfg             = [];
+  cfg.method      = 'interactive';
+  cfg.coordsys    = 'ctf';
+  mri_aligned     = ft_volumerealign(cfg,mri);
 
 ### Aligning the MEG with the head coordinate system
 
 With the MEG we have determined the position of the forehead marker coils relative to the MEG dewar. Using **[ft_sourceplot](/reference/ft_sourceplot)** we can determine the coordinates of the forehead markers in the anatomical MRI.
 
-	cfg             = [];
-	cfg.method      = 'ortho';
-	cfg.interactive = 'yes';
-	ft_sourceplot(cfg,mri_aligned);
+  cfg             = [];
+  cfg.method      = 'ortho';
+  cfg.interactive = 'yes';
+  ft_sourceplot(cfg,mri_aligned);
 
 By clicking in one of the panels of the figure, the position of the crosshair will be updated and the three orthogonal slices will be redrawn. If you look in the MATLAB command-line window, you will also see that the current position of the crosshair is displayed. You should see something like this every time you clic
 
-	click with mouse button to reposition the cursor
-	press n/l/r on keyboard to record a fiducial position
-	press q on keyboard to quit interactive mode
-	voxel 2152181, indices [91 173 55], ctf coordinates [0.0 47.0 -18.0] mm
+  click with mouse button to reposition the cursor
+  press n/l/r on keyboard to record a fiducial position
+  press q on keyboard to quit interactive mode
+  voxel 2152181, indices [91 173 55], ctf coordinates [0.0 47.0 -18.0] mm
 
 The location of the crosshair is expressed in voxel indices and in mm units relative to the head coordinate system that you determined previously with **[ft_volumerealign](/reference/ft_volumerealign)**
 
@@ -226,39 +226,39 @@ Using the three fiducial points expressed both in head coordinates and in MEG de
 
 The MEG fiducial positions are stored in an ascii text file that you can open in the MATLAB editor.
 
-	edit  marker-coregis.txt
+  edit  marker-coregis.txt
 
 Using the MRI fiducial positions expressed in [head coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), and the MEG fiducial positions expressed in dewar coordinates, we can transform the MEG sensor positions from dewar into head coordinates.
 
-	% read the gradiometer definition from file, this is in dewar coordinates
-	grad = ft_read_sens('Continuous.con');
+  % read the gradiometer definition from file, this is in dewar coordinates
+  grad = ft_read_sens('Continuous.con');
 
 Alternative to reading the gradiometer definition from the raw data file, you can also obtain the gradiometer definition after **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_freqanalysis](/reference/ft_freqanalysis)**: the data structures resulting from those functions contain the "grad" field which corresponds to the gradiometer definition from the original raw file.
 
-	% add the fiducials (expressed in dewar coordinates) to the gradiometer definition
-	grad.fid.pnt(1,:) = fid1_dewarcoordinates;
-	grad.fid.pnt(2,:) = fid2_dewarcoordinates;
-	grad.fid.pnt(3,:) = fid3_dewarcoordinates;
+  % add the fiducials (expressed in dewar coordinates) to the gradiometer definition
+  grad.fid.pnt(1,:) = fid1_dewarcoordinates;
+  grad.fid.pnt(2,:) = fid2_dewarcoordinates;
+  grad.fid.pnt(3,:) = fid3_dewarcoordinates;
 
-	grad.fid.label{1} = 'fid1_label';
-	grad.fid.label{2} = 'fid2_label';
-	grad.fid.label{3} = 'fid3_label';
+  grad.fid.label{1} = 'fid1_label';
+  grad.fid.label{2} = 'fid2_label';
+  grad.fid.label{3} = 'fid3_label';
 
-	% the configuration for FT_SENSORREALIGN should specify the three fiducials in
-	% head coordinates as obtained from the aligned MRI using FT_SOURCEPLOT
-	cfg = [];
-	cfg.method = 'fiducial';
-	cfg.template.pnt = [
-	    fid1_headcoordinates
-	    fid2_headcoordinates
-	    fid3_headcoordinates
-	    ];
-	cfg.template.label = {
-	    'fid1_label'
-	    'fid2_label'
-	    'fid3_label'
-	    };
-	grad_aligned = ft_sensorrealign(cfg, grad);
+  % the configuration for FT_SENSORREALIGN should specify the three fiducials in
+  % head coordinates as obtained from the aligned MRI using FT_SOURCEPLOT
+  cfg = [];
+  cfg.method = 'fiducial';
+  cfg.template.pnt = [
+      fid1_headcoordinates
+      fid2_headcoordinates
+      fid3_headcoordinates
+      ];
+  cfg.template.label = {
+      'fid1_label'
+      'fid2_label'
+      'fid3_label'
+      };
+  grad_aligned = ft_sensorrealign(cfg, grad);
 
 ## Example: Sourceanalysis
 
@@ -266,43 +266,43 @@ Alternative to reading the gradiometer definition from the raw data file, you ca
 
 The realigned anatomical MRI can be segmented to aid in the construction of the volume conduction model can be made.
 
-	cfg           = [];
-	mri_segmented = ft_volumesegment(cfg, mri_aligned);
-	% it is convenient to keep the original anatomical MRI with the segmentation
-	mri_segmented.anatomy = mri_aligned.anatomy;
+  cfg           = [];
+  mri_segmented = ft_volumesegment(cfg, mri_aligned);
+  % it is convenient to keep the original anatomical MRI with the segmentation
+  mri_segmented.anatomy = mri_aligned.anatomy;
 
 We can now make the headmodel
 
-	cfg             = [];
-	cfg.sourceunits = 'mm'; %this option will be depricated
-	cfg.mriunits    = 'mm'; %this option will be depricated
-	vol             = ft_prepare_singleshell(cfg, seg);
+  cfg             = [];
+  cfg.sourceunits = 'mm'; %this option will be depricated
+  cfg.mriunits    = 'mm'; %this option will be depricated
+  vol             = ft_prepare_singleshell(cfg, seg);
 
 Because the gradiometer coordinates are in cm, and the MRI derived geometrical objects in mm, we have to put those in cm also.
 
-	vol_cm          = ft_convert_units(vol,'cm');
-	coil_cm         = ft_convert_units(coil_sens, 'cm');
+  vol_cm          = ft_convert_units(vol,'cm');
+  coil_cm         = ft_convert_units(coil_sens, 'cm');
 
 Plot sensors, fiducials and headmodel to doublecheck
 
-	figure;
-	plot3(coil_cm.pnt(:,1), ...
-	      coil_cm.pnt(:,2), ....
-	      coil_cm.pnt(:,3),'r.','MarkerSize',25);
-	hold on
-	nr_chan = size(data.grad.coilpos,1)/2;
-	plot3(data.grad.coilpos(1:nr_chan,1), ...
-	      data.grad.coilpos(1:nr_chan,2), ...
-	      data.grad.coilpos(1:nr_chan,3),'bo','MarkerSize',5)
-	xlim([-15,15]);
-	zlim([-15,15]);
-	ylim([-15,15]);
-	xlabel('X');
-	ylabel('Y');
-	zlabel('Z');
-	ft_plot_vol(vol_cm,'facecolor','skin','edgecolor','none','facealpha',0.5);
-	camlight left
-	camlight left
+  figure;
+  plot3(coil_cm.pnt(:,1), ...
+        coil_cm.pnt(:,2), ....
+        coil_cm.pnt(:,3),'r.','MarkerSize',25);
+  hold on
+  nr_chan = size(data.grad.coilpos,1)/2;
+  plot3(data.grad.coilpos(1:nr_chan,1), ...
+        data.grad.coilpos(1:nr_chan,2), ...
+        data.grad.coilpos(1:nr_chan,3),'bo','MarkerSize',5)
+  xlim([-15,15]);
+  zlim([-15,15]);
+  ylim([-15,15]);
+  xlabel('X');
+  ylabel('Y');
+  zlabel('Z');
+  ft_plot_vol(vol_cm,'facecolor','skin','edgecolor','none','facealpha',0.5);
+  camlight left
+  camlight left
 
 {% include image src="/assets/img/getting_started/yokogawa/headmodel_and_sensors_and_fiducials.png" width="400" %}
 
@@ -312,82 +312,82 @@ Now we're at it, lets make a start using the above frequency data / geometrical 
 
 Redefine trials to make baseline estimate
 
-	cfg             = [];
-	cfg.toilim      = [-.8 -.3];
-	data_BL         = ft_redefinetrial(cfg,ft_data);
+  cfg             = [];
+  cfg.toilim      = [-.8 -.3];
+  data_BL         = ft_redefinetrial(cfg,ft_data);
 
-	cfg             = [];
-	cfg.method      = 'mtmfft';
-	cfg.output      = 'powandcsd';
-	cfg.foi         = 1:20;
-	cfg.taper       = 'dpss';
-	cfg.tapsmofrq   = 2;
-	freq_BL         = ft_freqanalysis(cfg,data_BL);
+  cfg             = [];
+  cfg.method      = 'mtmfft';
+  cfg.output      = 'powandcsd';
+  cfg.foi         = 1:20;
+  cfg.taper       = 'dpss';
+  cfg.tapsmofrq   = 2;
+  freq_BL         = ft_freqanalysis(cfg,data_BL);
 
 Do freqanalysis on left/right cue conditions
 
-	cfg             = [];
-	cfg.toilim      = [.5 1];
-	cfg.trials      = find(ft_data.trialinfo(:,1) == 3 | ft_data.trialinfo(:,1) == 4);
-	data_stiml      = ft_redefinetrial(cfg,ft_data);
+  cfg             = [];
+  cfg.toilim      = [.5 1];
+  cfg.trials      = find(ft_data.trialinfo(:,1) == 3 | ft_data.trialinfo(:,1) == 4);
+  data_stiml      = ft_redefinetrial(cfg,ft_data);
 
-	cfg             = [];
-	cfg.method      = 'mtmfft';
-	cfg.output      = 'powandcsd';
-	cfg.foi         = 1:20;
-	cfg.taper       = 'dpss';
-	cfg.tapsmofrq   = 2;
-	freq_stiml      = ft_freqanalysis(cfg,data_stiml);
+  cfg             = [];
+  cfg.method      = 'mtmfft';
+  cfg.output      = 'powandcsd';
+  cfg.foi         = 1:20;
+  cfg.taper       = 'dpss';
+  cfg.tapsmofrq   = 2;
+  freq_stiml      = ft_freqanalysis(cfg,data_stiml);
 
-	% same for right-cue
-	cfg             = [];
-	cfg.toilim      = [.5 1];
-	cfg.trials      = find(ft_data.trialinfo(:,1) == 1 | ft_data.trialinfo(:,1) == 2);
-	data_stimr      = ft_redefinetrial(cfg,ft_data);
+  % same for right-cue
+  cfg             = [];
+  cfg.toilim      = [.5 1];
+  cfg.trials      = find(ft_data.trialinfo(:,1) == 1 | ft_data.trialinfo(:,1) == 2);
+  data_stimr      = ft_redefinetrial(cfg,ft_data);
 
-	cfg             = [];
-	cfg.method      = 'mtmfft';
-	cfg.output      = 'powandcsd';
-	cfg.foi         = 1:20;
-	cfg.taper       = 'dpss';
-	cfg.tapsmofrq   = 2;
-	freq_stimr      = ft_freqanalysis(cfg,data_stimr);
+  cfg             = [];
+  cfg.method      = 'mtmfft';
+  cfg.output      = 'powandcsd';
+  cfg.foi         = 1:20;
+  cfg.taper       = 'dpss';
+  cfg.tapsmofrq   = 2;
+  freq_stimr      = ft_freqanalysis(cfg,data_stimr);
 
 Its always good to use as much data as possible for your common filter
 
-	data_common     = ft_appenddata([], data_BL, data_stimr, data_stiml);
+  data_common     = ft_appenddata([], data_BL, data_stimr, data_stiml);
 
-	cfg             = [];
-	cfg.method      = 'mtmfft';
-	cfg.output      = 'powandcsd';
-	cfg.foi         = 1:20;
-	cfg.taper       = 'dpss';
-	cfg.tapsmofrq   = 2;
-	freq_common     = ft_freqanalysis(cfg,data_common);
+  cfg             = [];
+  cfg.method      = 'mtmfft';
+  cfg.output      = 'powandcsd';
+  cfg.foi         = 1:20;
+  cfg.taper       = 'dpss';
+  cfg.tapsmofrq   = 2;
+  freq_common     = ft_freqanalysis(cfg,data_common);
 
 Lets check out the sensor level first
 
-	freq_diff = freq_stimr;
-	freq_diff.powspctrm = (freq_stimr.powspctrm - freq_stiml.powspctrm) ./ (freq_stimr.powspctrm + freq_stiml.powspctrm) ;
+  freq_diff = freq_stimr;
+  freq_diff.powspctrm = (freq_stimr.powspctrm - freq_stiml.powspctrm) ./ (freq_stimr.powspctrm + freq_stiml.powspctrm) ;
 
-	freq_r_bl = freq_stimr;
-	freq_r_bl.powspctrm = (freq_stimr.powspctrm ./ freq_common.powspctrm)  ;
+  freq_r_bl = freq_stimr;
+  freq_r_bl.powspctrm = (freq_stimr.powspctrm ./ freq_common.powspctrm)  ;
 
-	freq_l_bl = freq_stiml;
-	freq_l_bl.powspctrm = (freq_stiml.powspctrm ./ freq_common.powspctrm)  ;
+  freq_l_bl = freq_stiml;
+  freq_l_bl.powspctrm = (freq_stiml.powspctrm ./ freq_common.powspctrm)  ;
 
-	cfg             = [];
-	cfg.grad        = data_common.grad;
-	lay             = ft_prepare_layout(cfg, data_common);
+  cfg             = [];
+  cfg.grad        = data_common.grad;
+  lay             = ft_prepare_layout(cfg, data_common);
 
-	cfg             = [];
-	cfg.layout      = lay;
-	cfg.xlim        = [10 10];
-	cfg.zparam      = 'powspctrm';
+  cfg             = [];
+  cfg.layout      = lay;
+  cfg.xlim        = [10 10];
+  cfg.zparam      = 'powspctrm';
 
-	figure; ft_topoplotTFR(cfg, freq_r_bl);
-	% figure; ft_topoplotTFR(cfg, freq_diff);
-	% figure; ft_topoplotTFR(cfg, freq_l_bl);
+  figure; ft_topoplotTFR(cfg, freq_r_bl);
+  % figure; ft_topoplotTFR(cfg, freq_diff);
+  % figure; ft_topoplotTFR(cfg, freq_l_bl);
 
 
 {% include image src="/assets/img/getting_started/yokogawa/cuer_versus_bl.jpg" width="400" %}
@@ -398,82 +398,82 @@ not too bad...
 
 compute common spatial filter
 
-	cfg = [];
-	cfg.grad            = data_concat.grad;
-	cfg.grid.xgrid      = -15:0.5:15;
-	cfg.grid.ygrid      = -15:0.5:15;
-	cfg.grid.zgrid      = -15:0.5:15;
-	cfg.inwardshift     = -2;
-	cfg.headmodel       = vol_cm;
-	cfg.channel         = {'all'}; % also MEGREF channels
-	cfg.reducerank      = 2;
-	cfg.frequency       = 10;
-	cfg.method          = 'dics';
-	cfg.projectnoise    = 'yes';
-	cfg.keepfilter      = 'yes';
-	cfg.feedback        = 'no';
-	cfg.realfilter      = 'yes';
-	cfg.lambda          = '0.005%';
-	source_common       = ft_sourceanalysis(cfg, freq_common);
+  cfg = [];
+  cfg.grad            = data_concat.grad;
+  cfg.grid.xgrid      = -15:0.5:15;
+  cfg.grid.ygrid      = -15:0.5:15;
+  cfg.grid.zgrid      = -15:0.5:15;
+  cfg.inwardshift     = -2;
+  cfg.headmodel       = vol_cm;
+  cfg.channel         = {'all'}; % also MEGREF channels
+  cfg.reducerank      = 2;
+  cfg.frequency       = 10;
+  cfg.method          = 'dics';
+  cfg.projectnoise    = 'yes';
+  cfg.keepfilter      = 'yes';
+  cfg.feedback        = 'no';
+  cfg.realfilter      = 'yes';
+  cfg.lambda          = '0.005%';
+  source_common       = ft_sourceanalysis(cfg, freq_common);
 
 Project cue condition through common spatial filter
 
-	cfg = [];
-	cfg.grad            = data_concat.grad;
-	cfg.grid.pos        = source_common.pos;
-	cfg.grid.filter     = source_common.avg.filter;
-	cfg.headmodel       = vol_cm;
-	cfg.channel         = {'all'};
-	cfg.reducerank      = 2;
-	cfg.frequency       = 10;
-	cfg.method          = 'dics';
-	cfg.projectnoise    = 'yes';
-	cfg.keepfilter      = 'no';
-	cfg.feedback        = 'no';
-	cfg.realfilter      = 'yes';
-	cfg.lambda          = '0.005%';
+  cfg = [];
+  cfg.grad            = data_concat.grad;
+  cfg.grid.pos        = source_common.pos;
+  cfg.grid.filter     = source_common.avg.filter;
+  cfg.headmodel       = vol_cm;
+  cfg.channel         = {'all'};
+  cfg.reducerank      = 2;
+  cfg.frequency       = 10;
+  cfg.method          = 'dics';
+  cfg.projectnoise    = 'yes';
+  cfg.keepfilter      = 'no';
+  cfg.feedback        = 'no';
+  cfg.realfilter      = 'yes';
+  cfg.lambda          = '0.005%';
 
-	source_left         = ft_sourceanalysis(cfg, freq_stiml);
-	source_left.unit    = 'cm';
-	source_left.dim     = source_common.dim;
+  source_left         = ft_sourceanalysis(cfg, freq_stiml);
+  source_left.unit    = 'cm';
+  source_left.dim     = source_common.dim;
 
-	source_right        = ft_sourceanalysis(cfg, freq_stimr);
-	source_right.unit   = 'cm';
-	source_right.dim    = source_common.dim; %zou ook niet hoeve he?!?
+  source_right        = ft_sourceanalysis(cfg, freq_stimr);
+  source_right.unit   = 'cm';
+  source_right.dim    = source_common.dim; %zou ook niet hoeve he?!?
 
-	source_diff         = source_right;
-	source_diff.avg.pow = (source_left.avg.pow - source_right.avg.pow) ./  (source_left.avg.pow + source_right.avg.pow) ;
+  source_diff         = source_right;
+  source_diff.avg.pow = (source_left.avg.pow - source_right.avg.pow) ./  (source_left.avg.pow + source_right.avg.pow) ;
 
-	source_left_bl          = source_left;
-	source_left_bl.avg.pow  = source_left_bl.avg.pow ./ source_common.avg.pow;
+  source_left_bl          = source_left;
+  source_left_bl.avg.pow  = source_left_bl.avg.pow ./ source_common.avg.pow;
 
-	source_right_bl         = source_right;
-	source_right_bl.avg.pow = source_right_bl.avg.pow ./ source_common.avg.pow;
+  source_right_bl         = source_right;
+  source_right_bl.avg.pow = source_right_bl.avg.pow ./ source_common.avg.pow;
 
 ### Plotting results
 
 Interpolate for plotting on MRI
 
-	cfg                 = [];
-	cfg.method          = 'linear';
-	% source_left_int     = ft_sourceinterpolate(cfg,source_left,mri_aligned);
-	% source_right_int    = ft_sourceinterpolate(cfg,source_right,mri_aligned);
-	% source_diff_int     = ft_sourceinterpolate(cfg,source_diff,mri_aligned);
-	% source_left_bl_int  = ft_sourceinterpolate(cfg,source_left_bl,mri_aligned);
-	source_right_bl_int = ft_sourceinterpolate(cfg,source_right_bl,mri_aligned);
+  cfg                 = [];
+  cfg.method          = 'linear';
+  % source_left_int     = ft_sourceinterpolate(cfg,source_left,mri_aligned);
+  % source_right_int    = ft_sourceinterpolate(cfg,source_right,mri_aligned);
+  % source_diff_int     = ft_sourceinterpolate(cfg,source_diff,mri_aligned);
+  % source_left_bl_int  = ft_sourceinterpolate(cfg,source_left_bl,mri_aligned);
+  source_right_bl_int = ft_sourceinterpolate(cfg,source_right_bl,mri_aligned);
 
 Plot results
 
-	figure;
-	cfg                 = [];
-	cfg.method          = 'ortho';
-	cfg.interactive     = 'yes';
-	cfg.projmethod      = 'nearest';
-	cfg.anaparameter    = 'anatomy';
-	cfg.funparameter    = 'avg.pow';
-	cfg.funcolorlim     = [0 2];
-	cfg.colorbar        = 'yes';
-	ft_sourceplot(cfg,source_right_bl_int);
+  figure;
+  cfg                 = [];
+  cfg.method          = 'ortho';
+  cfg.interactive     = 'yes';
+  cfg.projmethod      = 'nearest';
+  cfg.anaparameter    = 'anatomy';
+  cfg.funparameter    = 'avg.pow';
+  cfg.funcolorlim     = [0 2];
+  cfg.colorbar        = 'yes';
+  ft_sourceplot(cfg,source_right_bl_int);
 
 {% include image src="/assets/img/getting_started/yokogawa/beamformer_single_subject_lambda_0005perc_b.png" width="600" %}
 

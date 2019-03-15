@@ -34,7 +34,7 @@ As stated before, by making our own function around FieldTrip functions we can i
     % more information can be added to this script when needed
     ...
 
-Save this as *Subject01.m* in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling ` Subject01 ` or from any script by using ` eval(‘Subject01’) `. This will return the structure ` subjectdata ` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as ` % subject made a mistake on the first trial `
+Save this as _Subject01.m_ in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval(‘Subject01’)`. This will return the structure `subjectdata` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`
 
 ## Making your own analysis functions
 
@@ -54,7 +54,7 @@ Make sure you save the filename identical as the function name, i.e. MyOwnFuncti
 Do not save your own functions/scripts in the FieldTrip folder! This will not help you to organize your own functions - the number of functions will grow exponentially. Also, it makes it harder to update your FieldTrip folder.
 {% include markup/end %}
 
-Having saved your function in a folder of your MATLAB path you can, from within any script or from the command line, use your function. In our example ` MyOwnFunction(4) ` will give you the answer ` 2 ` To put the answer in a variable for storage or future use you need to call something like ` output = MyOwnFunction(4) `
+Having saved your function in a folder of your MATLAB path you can, from within any script or from the command line, use your function. In our example `MyOwnFunction(4)` will give you the answer `2` To put the answer in a variable for storage or future use you need to call something like `output = MyOwnFunction(4)`
 
 This is the way most FieldTrip functions work: you provide the parameters together with data as the input and the function will return the results as the output.
 
@@ -62,7 +62,7 @@ It is often convenient to save intermediate results to disk. For instance you ca
 
     save('firstoutput','output');
 
-to save the output to *firstoutput.mat* in the directory you are in. Let's say you defined an output folder as in the first paragraph
+to save the output to _firstoutput.mat_ in the directory you are in. Let's say you defined an output folder as in the first paragraph
 
     subjectdata.subjectdir = 'Subject01';
 
@@ -104,95 +104,95 @@ Along the way, you will most likely expand on the subject-specific information. 
     959974,972785
     1096344,1099772 ];
 
-##  Batching
+## Batching
 
 In the end we’ll end up with a collection of several functions, either depending on the output of previous functions (e.g. preprocessing or artifact rejection) while others could in principle be called in parallel (e.g. averaging per condition or per subject). This could result in an analysis pipeline such as this (simplified) on
 
 {% include image src="/assets/img/tutorial/scripting/pipeline.jpg" width="600" %}
 
-This will allow us to automate most of the steps that do not require manual labor (in this example that would be the visual inspection of the data to reject artifacts). This is called *batching*. Large datasets will often require quite some processing time and it will therefore often be the case that a batch will be run overnight.
+This will allow us to automate most of the steps that do not require manual labor (in this example that would be the visual inspection of the data to reject artifacts). This is called _batching_. Large datasets will often require quite some processing time and it will therefore often be the case that a batch will be run overnight.
 
-The worst that can happen is that the next morning you’ll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the ` try-catch ` option in MATLAB. Whenever something goes wrong between the ` try ` and ` catch ` it will jump to the catch after which it will just continue. E.g
+The worst that can happen is that the next morning you’ll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the `try-catch` option in MATLAB. Whenever something goes wrong between the `try` and `catch` it will jump to the catch after which it will just continue. E.g
 
     for i = 1:number_of_subjects
     try
-	        my_preprocessing_function(i)
-	        % my_old_freqanalysis_function(i)
-	        my_freqanalysis_function(i)
-	        my_sourceanalysis_function(i)
-	  catch
-		disp([‘Something was wrong with Subject’ int2str(i) ‘! Continuing with next in line’]);
-	  end
+            my_preprocessing_function(i)
+            % my_old_freqanalysis_function(i)
+            my_freqanalysis_function(i)
+            my_sourceanalysis_function(i)
+      catch
+      disp([‘Something was wrong with Subject’ int2str(i) ‘! Continuing with next in line’]);
+      end
     end
 
 ## Example batches
 
 The following function will load the data as specified in Subject01.m, uses the databrowser for visual inspection of artifacts, rejects those trials containing artifacts and then saves the data in a separate folder as “01_preproc_dataM.mat”. You can simply call it by “do_preprocess_MM(‘Subject01’);”
 
-	function do_preproces_MM(Subjectm)
+    function do_preproces_MM(Subjectm)
 
-	cfg = [];
-	if nargin == 0
-		disp('Not enough input arguments');
-		return;
-	end	  
-	eval(Subjectm);
-	outputdir = 'AnalysisM';
+    cfg = [];
+    if nargin == 0
+      disp('Not enough input arguments');
+      return;
+    end
+    eval(Subjectm);
+    outputdir = 'AnalysisM';
 
-	%%% define trials
-	cfg.dataset             = [subjectdata.subjectdir filesep subjectdata.datadir];
-	cfg.trialdef.eventtype	= 'frontpanel trigger';
-	cfg.trialdef.prestim	= 1.5;
-	cfg.trialdef.poststim	= 1.5;
-	%cfg.continuous		= 'no';
-	cfg.lpfilter		= 'no';   
-	cfg.continuous		= 'yes';
-	cfg.trialfun		= 'motormirror_trialfun';   % located in \Scripts
-	cfg.channel		= 'MEG';                                
-	cfg.layout		= 'EEG1020.lay';
-	cfg 			= ft_definetrial(cfg);
+    %%% define trials
+    cfg.dataset             = [subjectdata.subjectdir filesep subjectdata.datadir];
+    cfg.trialdef.eventtype  = 'frontpanel trigger';
+    cfg.trialdef.prestim  = 1.5;
+    cfg.trialdef.poststim  = 1.5;
+    %cfg.continuous    = 'no';
+    cfg.lpfilter    = 'no';
+    cfg.continuous    = 'yes';
+    cfg.trialfun    = 'motormirror_trialfun';   % located in \Scripts
+    cfg.channel    = 'MEG';
+    cfg.layout    = 'EEG1020.lay';
+    cfg       = ft_definetrial(cfg);
 
-	%%% if there are visual artifacts already in subject m-file use those. They will show up in databrowser
-	try
-		cfg.artfctdef.eog.artifact = subjectdata.visualartifacts;
-	catch
-	end
+    %%% if there are visual artifacts already in subject m-file use those. They will show up in databrowser
+    try
+      cfg.artfctdef.eog.artifact = subjectdata.visualartifacts;
+    catch
+    end
 
-	%%% visual detection of jumps etc
-	cfg.continuous 	= 'yes';
-	cfg.blocksize 	= 20;
-	cfg.eventfile 	= [];
-	cfg.viewmode 	= 'butterfly';
-	cfg 		= ft_databrowser(cfg);
+    %%% visual detection of jumps etc
+    cfg.continuous   = 'yes';
+    cfg.blocksize   = 20;
+    cfg.eventfile   = [];
+    cfg.viewmode   = 'butterfly';
+    cfg     = ft_databrowser(cfg);
 
-	%%% enter visually detected artifacts in subject m-file;
-	fid = fopen([subjectdata.mfiledir filesep Subjectm '.m'],'At');
-	fprintf(fid,'\n%s\n',['%%% Entered @ ' datestr(now)]);
-	fprintf(fid,'%s',['subjectdata.visualartifacts = [ ' ]);
-	if isempty(cfg.artfctdef.visual.artifact) == 0
-		for i = 1 : size(cfg.artfctdef.visual.artifact,1)
-			fprintf(fid,'%u%s%u%s',cfg.artfctdef.visual.artifact(i,1),' ',cfg.artfctdef.visual.artifact(i,2),';');
-		end
-	end
+    %%% enter visually detected artifacts in subject m-file;
+    fid = fopen([subjectdata.mfiledir filesep Subjectm '.m'],'At');
+    fprintf(fid,'\n%s\n',['%%% Entered @ ' datestr(now)]);
+    fprintf(fid,'%s',['subjectdata.visualartifacts = [ ' ]);
+    if isempty(cfg.artfctdef.visual.artifact) == 0
+      for i = 1 : size(cfg.artfctdef.visual.artifact,1)
+        fprintf(fid,'%u%s%u%s',cfg.artfctdef.visual.artifact(i,1),' ',cfg.artfctdef.visual.artifact(i,2),';');
+      end
+    end
 
-	fprintf(fid,'%s\n',[ ' ]; ']);
-	fclose all;	 
+    fprintf(fid,'%s\n',[ ' ]; ']);
+    fclose all;
 
-	%%% reject artifacts
-	cfg.artfctdef.reject = 'complete';
-	cfg = ft_rejectartifact(cfg);
+    %%% reject artifacts
+    cfg.artfctdef.reject = 'complete';
+    cfg = ft_rejectartifact(cfg);
 
-	%%% make directory, if needed, to save all analysis data
-	if exist(outputdir) == 0
-		mkdir(outputdir)
-	end
+    %%% make directory, if needed, to save all analysis data
+    if exist(outputdir) == 0
+      mkdir(outputdir)
+    end
 
-	%%% Preprocess and SAVE
-	dataM = ft_preprocessing(cfg);
-	save([outputdir filesep subjectdata.subjectnr '_preproc_dataM'],'dataM','-V7.3')
-	clear all;
+    %%% Preprocess and SAVE
+    dataM = ft_preprocessing(cfg);
+    save([outputdir filesep subjectdata.subjectnr '_preproc_dataM'],'dataM','-V7.3')
+    clear all;
 
-##  Summary and suggested further readings
+## Summary and suggested further readings
 
 This tutorial explained how to write your own functions and how to do batching in order to increase the efficiency of your analysis. If you are interested in further issues on memory usage and speed of the analysis, you can check [this](/tutorial/memory) and [this](/tutorial/distributedcomputing) tutorials.
 

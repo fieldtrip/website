@@ -15,43 +15,43 @@ title: Check the consistency between the documentation and the implementations
 
 The help of any function could look like this
 
-	% FUNNAME does something usefull
-	%
-	% Use as
-	%    output = funname(cfg, input)
-	% where the input is the result from OTHER_FUNNAME
-	%
-	% The cfg contains
-	%   cfg.xxx =
-	%   cfg.xxx =
-	%   cfg.xxx =
-	%   cfg.xxx =
-	%
-	% See also OTHER_FUNNAME, and other related functions
+  % FUNNAME does something usefull
+  %
+  % Use as
+  %    output = funname(cfg, input)
+  % where the input is the result from OTHER_FUNNAME
+  %
+  % The cfg contains
+  %   cfg.xxx =
+  %   cfg.xxx =
+  %   cfg.xxx =
+  %   cfg.xxx =
+  %
+  % See also OTHER_FUNNAME, and other related functions
 
 The second commented block in each file (i.e. which is not visible when you type help, but which is visible if you edit the file) can contain the more advanced and obscure options. Furthermore, it can contain a description of the dependencies of the reference documentation of this function on the documentation in other (private) functions.
 
 
-	% Undocumented local options
-	%   cfg.yyy
-	%   cfg.yyy
-	%   cfg.yyy
-	%   cfg.yyy
-	%   cfg.yyy
-	%
-	% This function depends on prepare_zzz, which has the following options
-	%   cfg.zzz
-	%   cfg.zzz
-	%   cfg.zzz
-	%   cfg.zzz
-	%   cfg.zzz
-	%
-	% This function depends on prepare_aaa, which has the following options
-	%   cfg.aaa
-	%   cfg.aaa
-	%   cfg.aaa
-	%
-	% ...
+  % Undocumented local options
+  %   cfg.yyy
+  %   cfg.yyy
+  %   cfg.yyy
+  %   cfg.yyy
+  %   cfg.yyy
+  %
+  % This function depends on prepare_zzz, which has the following options
+  %   cfg.zzz
+  %   cfg.zzz
+  %   cfg.zzz
+  %   cfg.zzz
+  %   cfg.zzz
+  %
+  % This function depends on prepare_aaa, which has the following options
+  %   cfg.aaa
+  %   cfg.aaa
+  %   cfg.aaa
+  %
+  % ...
 
 ## Step 1: get an overview of all undocumented options
 

@@ -14,43 +14,43 @@ We will keep this page up to date and post new information here when available.
 
 #### Day 1 (Thursday 3 March, 2016)
 
--   15:00 - 15:30		Registration, with coffee/tea
--   15:30 - 16:00		Introduction ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/0_overview_Eelke.pptx))
--   16:00 - 17:00		Lecture 1: Overview of the FieldTrip toolbox and event-related averaging ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/1_Intro_preprocessingEEG_Johanna_KCLondon.pptx))
+-   15:00 - 15:30    Registration, with coffee/tea
+-   15:30 - 16:00    Introduction ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/0_overview_Eelke.pptx))
+-   16:00 - 17:00    Lecture 1: Overview of the FieldTrip toolbox and event-related averaging ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/1_Intro_preprocessingEEG_Johanna_KCLondon.pptx))
 
--   Evening		Pub? (at own expense)
+-   Evening    Pub? (at own expense)
 
 #### Day 2 (Friday 4 March, 2016)
 
--   9:00 - 11:00		Hands-on 1: [Preprocessing EEG data and event-related potentials](/tutorial/preprocessing_erp)
+-   9:00 - 11:00    Hands-on 1: [Preprocessing EEG data and event-related potentials](/tutorial/preprocessing_erp)
     -   If you finish early, feel free to look at [Event related Averaging and MEG Planar Gradient](/tutorial/eventrelatedaveraging) but only the first half (stop when you get to the planar gradient)
--   11:00 - 11:30		Coffee break
--   11:30 - 12:30		Lecture 2: Fundamentals of neuronal oscillations and synchrony ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/2_frequency_oscillations_johanna_KCLondon.pptx))
--   12:30 - 13:30		Lunch
--   13:30 - 15:30		Hands-on 2: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis)
+-   11:00 - 11:30    Coffee break
+-   11:30 - 12:30    Lecture 2: Fundamentals of neuronal oscillations and synchrony ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/2_frequency_oscillations_johanna_KCLondon.pptx))
+-   12:30 - 13:30    Lunch
+-   13:30 - 15:30    Hands-on 2: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis)
     -   Note: read through the Preprocessing section, but do not execute the code, as you have been given only dataFIC.mat, which is the output of preprocessing
--   15:30 - 16:00		Tea break
--   16:00 - 17:00		Lecture 3: Statistical inference using non-parametric permutation techniques ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/3.%20cluster%20statistics%20%28Eelke%29.pptx))
--   17:00 - 17:30		wrap-up / Q&A
--   18:30			Dinner (at own expense)
+-   15:30 - 16:00    Tea break
+-   16:00 - 17:00    Lecture 3: Statistical inference using non-parametric permutation techniques ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/3.%20cluster%20statistics%20%28Eelke%29.pptx))
+-   17:00 - 17:30    wrap-up / Q&A
+-   18:30      Dinner (at own expense)
 
 #### Day 3 (Saturday 5 March, 2016)
 
--   9:00 - 11:00		Hands-on 3: [Parametric and non-parametric statistics on event related fields](/tutorial/eventrelatedstatistics)
+-   9:00 - 11:00    Hands-on 3: [Parametric and non-parametric statistics on event related fields](/tutorial/eventrelatedstatistics)
 
     -   If you finish the above early and time permits (or you want to do something more in-depth immediately; feel free!), you may want to try eithe
         -   [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) and/or
         -   [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
 
--   11:00 - 11:30		Coffee break
+-   11:00 - 11:30    Coffee break
 
--   11:30 - 12:30		Lecture 4: Connectivity analysis in electrophysiological data ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/4.%20connectivity%20analysis%20%28Eelke%29.pptx))
+-   11:30 - 12:30    Lecture 4: Connectivity analysis in electrophysiological data ([slides](https://dl.dropboxusercontent.com/u/4023322/kcl-london-slides/4.%20connectivity%20analysis%20%28Eelke%29.pptx))
 
--   12:30 - 13:15		Lunch
--   13:15 - 15:15		Hands-on 4: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity)
--   15:15 - 15:30		Tea break
--   15:30 - 17:30		FieldTrip playground: work on your own data
--   17:30 - 18:00		wrap-up / Q&A
+-   12:30 - 13:15    Lunch
+-   13:15 - 15:15    Hands-on 4: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity)
+-   15:15 - 15:30    Tea break
+-   15:30 - 17:30    FieldTrip playground: work on your own data
+-   17:30 - 18:00    wrap-up / Q&A
 
 Further reading on connectivity and its pitfalls (Bastos and Schoffelen, 2016):  <http://journal.frontiersin.org/article/10.3389/fnsys.2015.00175/full>
 

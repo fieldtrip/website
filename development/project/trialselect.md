@@ -50,18 +50,18 @@ Consistent implementation of option for trial selection in all relevant function
 *  nonlinearassociation.m   -done-
 
 How it's currently implemented in these function
-	
-	%   cfg.trials       = 'all' or a selection like 1:10 (default = 'all')
+  
+  %   cfg.trials       = 'all' or a selection like 1:10 (default = 'all')
 
-	% set the defaults
-	if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
+  % set the defaults
+  if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
 
-	% select trials of interest
-	if ~strcmp(cfg.trials, 'all')
-	  fprintf('selecting %d trials\n', length(cfg.trials));
-	  data.trial  = data.trial(cfg.trials);
-	  data.time   = data.time(cfg.trials);
-	end
+  % select trials of interest
+  if ~strcmp(cfg.trials, 'all')
+    fprintf('selecting %d trials\n', length(cfg.trials));
+    data.trial  = data.trial(cfg.trials);
+    data.time   = data.time(cfg.trials);
+  end
 
 ## Step 2: develop and implement solution
 
@@ -74,58 +74,58 @@ How it's currently implemented in these function
 
 __For raw data input functions (implement before 'Ntrials=...' or equivalent):__
 
-	
-	% set the defaults
-	if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
+  
+  % set the defaults
+  if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
 
-	
-	% select trials of interest
-	if ~strcmp(cfg.trials, 'all')
-	    fprintf('selecting %d trials\n', length(cfg.trials));
-	    data.trial  = data.trial(cfg.trials);
-	    data.time   = data.time(cfg.trials);
-	end
+  
+  % select trials of interest
+  if ~strcmp(cfg.trials, 'all')
+      fprintf('selecting %d trials\n', length(cfg.trials));
+      data.trial  = data.trial(cfg.trials);
+      data.time   = data.time(cfg.trials);
+  end
 
 __For rpt data input functions:__
 
-	
-	% set the defaults
-	if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
+  
+  % set the defaults
+  if ~isfield(cfg, 'trials'),   cfg.trials = 'all';  end
 
 *  for topoplotE
 
-	
-	elseif strcmp(data.dimord, 'rpt_chan_time')
-	    tmpcfg = [];
-	    tmpcfg.trials = cfg.trials;
-	    data = timelockanalysis(tmpcfg, data);
-	  if ~isfield(cfg, 'xparam'),      cfg.xparam='time';         end
-	  if ~isfield(cfg, 'yparam'),      cfg.yparam='';             end
-	  if ~isfield(cfg, 'zparam'),      cfg.zparam='avg';          end
+  
+  elseif strcmp(data.dimord, 'rpt_chan_time')
+      tmpcfg = [];
+      tmpcfg.trials = cfg.trials;
+      data = timelockanalysis(tmpcfg, data);
+    if ~isfield(cfg, 'xparam'),      cfg.xparam='time';         end
+    if ~isfield(cfg, 'yparam'),      cfg.yparam='';             end
+    if ~isfield(cfg, 'zparam'),      cfg.zparam='avg';          end
 
 *  for singleplotER, multiplotER (varargin
 
-	
-	  elseif strcmp(varargin{1}.dimord, 'rpt_chan_time')
-	      tmpcfg = [];
-	      tmpcfg.trials = cfg.trials;
-	    for i=1:(nargin-1)
-	      varargin{i} = timelockanalysis(tmpcfg, varargin{i});
-	    end
-	    if ~isfield(cfg, 'xparam'),      cfg.xparam='time';         end
-	    if ~isfield(cfg, 'zparam'),      cfg.zparam='avg';          end
+  
+    elseif strcmp(varargin{1}.dimord, 'rpt_chan_time')
+        tmpcfg = [];
+        tmpcfg.trials = cfg.trials;
+      for i=1:(nargin-1)
+        varargin{i} = timelockanalysis(tmpcfg, varargin{i});
+      end
+      if ~isfield(cfg, 'xparam'),      cfg.xparam='time';         end
+      if ~isfield(cfg, 'zparam'),      cfg.zparam='avg';          end
 
 *  for topoplotER, singleplotTFR, multiplotTF
 
-	
-	elseif strcmp(data.dimord, 'rpt_chan_freq_time')
-	    tmpcfg = [];
-	    tmpcfg.trials = cfg.trials;
-	    tmpcfg.jackknife= 'no';
-	    data = freqdescriptives(tmpcfg, data);
-	  if ~isfield(cfg, 'xparam'),      cfg.xparam='time';                  end
-	  if ~isfield(cfg, 'yparam'),      cfg.yparam='freq';                  end
-	  if ~isfield(cfg, 'zparam'),      cfg.zparam='powspctrm';             end
+  
+  elseif strcmp(data.dimord, 'rpt_chan_freq_time')
+      tmpcfg = [];
+      tmpcfg.trials = cfg.trials;
+      tmpcfg.jackknife= 'no';
+      data = freqdescriptives(tmpcfg, data);
+    if ~isfield(cfg, 'xparam'),      cfg.xparam='time';                  end
+    if ~isfield(cfg, 'yparam'),      cfg.yparam='freq';                  end
+    if ~isfield(cfg, 'zparam'),      cfg.zparam='powspctrm';             end
 
 ##### Relevant fields (trl) should be adjusted accordingl
 
@@ -135,45 +135,45 @@ the code for adjusting the trl should look something like thi
 
 finding the trl (see e.g. appenddata.m
 
-	
-	% adjust the trial definition (trl) in case of trial selection
-	  if ~strcmp(cfg.trials, 'all')
-	    % try to locate the trial definition (trl) in the nested configuration
-	    if isfield(data, 'cfg')
-	      trl = findcfg(data.cfg, 'trl');
-	    else
-	      trl = [];
-	    end
-	    if isempty(trl)
-	      % a trial definition is expected in each continuous data set
-	      warning('could not locate the trial definition ''trl'' in the data structure');
-	    else
-	      cfg.trl=trl(cfg.trials,:);
-	    end
-	  end
+  
+  % adjust the trial definition (trl) in case of trial selection
+    if ~strcmp(cfg.trials, 'all')
+      % try to locate the trial definition (trl) in the nested configuration
+      if isfield(data, 'cfg')
+        trl = findcfg(data.cfg, 'trl');
+      else
+        trl = [];
+      end
+      if isempty(trl)
+        % a trial definition is expected in each continuous data set
+        warning('could not locate the trial definition ''trl'' in the data structure');
+      else
+        cfg.trl=trl(cfg.trials,:);
+      end
+    end
 
 adjusting the tr
 
-	
-	% adjust the trial definition (trl)
-	if ~isempty(trl) && ~strcmp(cfg.trials, 'all')
-	  cfg.trl=trl(cfg.trials,:);
-	end
+  
+  % adjust the trial definition (trl)
+  if ~isempty(trl) && ~strcmp(cfg.trials, 'all')
+    cfg.trl=trl(cfg.trials,:);
+  end
 
 ##### Documentatio
 
-	
-	%   cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
+  
+  %   cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
 
 ## Appendix: useful linux commands
 
 Find functions that use raw dat
 
-	
-	grep -n datatype.*raw *.m
+  
+  grep -n datatype.*raw *.m
 
 Find functions that already have cfg.trials optio
 
-	
-	grep -n cfg.trials *.m
+  
+  grep -n cfg.trials *.m
 

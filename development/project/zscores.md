@@ -79,15 +79,15 @@ The simulated dataset should consist of two conditions, baseline and activation,
 The data should be of the for
 
 
-	  baseline   = phys           + noise
-	  activation = phys * e1 + e2 + noise
+    baseline   = phys           + noise
+    activation = phys * e1 + e2 + noise
 
 *  with for the additive effect model: e1 = 1, e2 > 0, and for the multiplicative effect model: e1 > 1, e2 = 0.
 *  phys is the physiological signal, consisting of a 'constant' (e.g. alpha oscillation) modulated by a slow drift
 *  noise is the 'real' external noise, which is random
 
-	phys  = phys_constant + phys_noise * lambda_phys
-	noise = random_noise  * lambda_ext
+  phys  = phys_constant + phys_noise * lambda_phys
+  noise = random_noise  * lambda_ext
 
 *  lambda_phys and lambda_ext are scaling factors for the physiological and external noise, resp.
 

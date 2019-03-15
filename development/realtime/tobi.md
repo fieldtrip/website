@@ -25,14 +25,14 @@ a FieldTrip buffer both served on the same computer. The following options are
 supporte
 
 
-	  -h [ --help ]                     Show help message.
-	  -v [ --verbose ]                  Print more info.
-	  --tia-host arg (=localhost)       Set host name of TiA server.
-	  --tia-port arg (=9000)            Set port of TiA server.
-	  --fieldtrip-host arg (=localhost) Set host name of FieldTrip buffer server.
-	  --fieldtrip-port arg (=1972)      Set port of FieldTrip buffer server.
-	  --serve-ft-buffer                 Start a new FieldTrip buffer instead of
-	                                    connecting to an existing one.
+    -h [ --help ]                     Show help message.
+    -v [ --verbose ]                  Print more info.
+    --tia-host arg (=localhost)       Set host name of TiA server.
+    --tia-port arg (=9000)            Set port of TiA server.
+    --fieldtrip-host arg (=localhost) Set host name of FieldTrip buffer server.
+    --fieldtrip-port arg (=1972)      Set port of FieldTrip buffer server.
+    --serve-ft-buffer                 Start a new FieldTrip buffer instead of
+                                      connecting to an existing one.
 
 ## Compiling
 

@@ -18,10 +18,10 @@ This is a template class that allows arbitrary data types to be used for the inp
 as the internally used data type to hold the filter states. For example, you can lowpass-filter 10 channels of 
 32-bit integer signals and use a double-precision floating point representation internally by calling
 
-	:::cpp
-	MultiChannelFilter`<int,double>` *filter = new MultiChannelFilter`<int,double>`(10, 4);  // 4th-order filter
-	filter->setButterLP(0.1);  // normalised frequency, 1=Nyquist
-	filter->process(out, in);  // out and in point to 10 integers each (=one sample)
+  :::cpp
+  MultiChannelFilter`<int,double>` *filter = new MultiChannelFilter`<int,double>`(10, 4);  // 4th-order filter
+  filter->setButterLP(0.1);  // normalised frequency, 1=Nyquist
+  filter->process(out, in);  // out and in point to 10 integers each (=one sample)
 
 ### TemplateVectorMath
 
@@ -33,18 +33,18 @@ A class that allows to create GDF files (v2.20). It provides helper functions fo
 and adding blocks of data to the file. For example, to write 1 status + 10 continuous channels as 32-bit
 integers, you would call something like
 
-	:::cpp
-	GDF_Writer gdfWriter = new GDF_Writer(1+10, 500, GDF_INT32);
-	gdfWriter->setLabel(0, "Status");
-	for (int i=0;i<10;i++) {
-	   gdfWriter->setLabel(1+i, yourLabel[i]);   // e.g. yourLabel[0] is label of first cont. channel
-	   gdfWriter->setPhysicalLimits(1+i, -262144.0, 262144.0);   // maximum physical value = 262144 ...
-	   gdfWriter->setPhysDimCode(1+i, GDF_MICRO + GDF_VOLT);     // ... in units of microVolt
-	}
-	...
-	gdfWriter->createAndWriteHeader(filename);
-	...
-	gdfWriter->addSamples(num, data);      // data must point to 11*num integer values 
+  :::cpp
+  GDF_Writer gdfWriter = new GDF_Writer(1+10, 500, GDF_INT32);
+  gdfWriter->setLabel(0, "Status");
+  for (int i=0;i<10;i++) {
+     gdfWriter->setLabel(1+i, yourLabel[i]);   // e.g. yourLabel[0] is label of first cont. channel
+     gdfWriter->setPhysicalLimits(1+i, -262144.0, 262144.0);   // maximum physical value = 262144 ...
+     gdfWriter->setPhysDimCode(1+i, GDF_MICRO + GDF_VOLT);     // ... in units of microVolt
+  }
+  ...
+  gdfWriter->createAndWriteHeader(filename);
+  ...
+  gdfWriter->addSamples(num, data);      // data must point to 11*num integer values 
 
 ### ChannelSelection & SignalConfiguration
 
@@ -70,20 +70,20 @@ ASCII strings in the same way. This is used to control the runtime behaviour of 
 This class will eventually wrap up all the generic parts of streaming data to a FieldTrip buffer
 and saving it to a GDF file at the same time. The general scheme looks like this
 
-	
-	Setup HW device
-	Setup OnlineDataManager (ODM)
-	   (read configuration file from disk)
-	LOOP
-	   Check ODM status (in particular requests from the StringServer)
-	   Poll hardware (=> yields n new samples)
-	   Let ODM provide a new empty block (n samples)
-	   Fill samples (all HW channels) into that block
-	   Add events to ODM's event list
-	   Let ODM handle this block
-	      (stream out selected channels)
-	      (write selected channels to disk)
-	ENDLOOP
+  
+  Setup HW device
+  Setup OnlineDataManager (ODM)
+     (read configuration file from disk)
+  LOOP
+     Check ODM status (in particular requests from the StringServer)
+     Poll hardware (=> yields n new samples)
+     Let ODM provide a new empty block (n samples)
+     Fill samples (all HW channels) into that block
+     Add events to ODM's event list
+     Let ODM handle this block
+        (stream out selected channels)
+        (write selected channels to disk)
+  ENDLOOP
 
 Saving to disk will be handled in a separate thread to allow for smallest possible latencies + jitter.
 

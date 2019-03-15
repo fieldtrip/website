@@ -8,13 +8,13 @@ title: Plotting data at the channel and source level
 
 To visualize your data you can use FieldTrip's high-level plotting functions, which are optimized for the FT data structures. Like other high-level functions they take a cfg as first input argument, followed by the data. These functions take care of all bookkeeping and some of the functions allow you to interact with the data by clicking in the figure.
 
-Alternatively, you can use the low-level FieldTrip plotting functions. These are located in the plotting sub-directory and are named ft_plot_xxx. You can find them by typing in the command window “help ft_plot_” and then press the Tab key.
+Alternatively, you can use the low-level FieldTrip plotting functions. These are located in the plotting sub-directory and are named ft*plot_xxx. You can find them by typing in the command window “help ft_plot*” and then press the Tab key.
 
 Of course you can use the standard MATLAB functions ('plot, 'image', 'images', 'patch').
 
 ## Background
 
-The goal of the plotting functions in FieldTrip is to ease the visualization of complex data structures with multiple dimensions and with data that is not trivial to interpret spatially. This is accomplished with high-level functions (e.g. **[ft_topoplotER](/reference/ft_topoplotER)** or **[ft_multiplotTFR](/reference/ft_multiplotTFR)**) and low-level functions (with prefixes 'ft_plot_' and 'ft_select_', e.g. ft_plot_matrix or ft_select_box). For more simple data, such as a set of reaction times of the subject, we expect you to use the standard MATLAB plotting functions.
+The goal of the plotting functions in FieldTrip is to ease the visualization of complex data structures with multiple dimensions and with data that is not trivial to interpret spatially. This is accomplished with high-level functions (e.g. **[ft_topoplotER](/reference/ft_topoplotER)** or **[ft_multiplotTFR](/reference/ft_multiplotTFR)**) and low-level functions (with prefixes 'ft*plot*' and 'ft*select*', e.g. ft_plot_matrix or ft_select_box). For more simple data, such as a set of reaction times of the subject, we expect you to use the standard MATLAB plotting functions.
 
 The high-level functions take care of the data bookkeeping and call the low-level function. If you want to make more complex figures or tweak all options, you can bypass the high-level functions and call the low-level functions instead. This is especially useful if there is no data selection and bookkeeping involved, e.g. when you want to plot multiple geometrical objects (like sensors, source model, head surface, etc).
 
@@ -90,7 +90,7 @@ The FieldTrip plotting functions have a lot of built-in intelligence to make plo
 
     cfg = [];
     cfg.baseline = [-0.5 -0.1];
-    cfg.baselinetype = 'absolute'; 	
+    cfg.baselinetype = 'absolute';
     cfg.zlim = [-1.5e-27 1.5e-27];
     cfg.channel = 'MLC24'; % top figure
     figure; ft_singleplotTFR(cfg, TFRhann);
@@ -158,7 +158,7 @@ The location of all channels and the COMMENT and SCALE placeholder can be visual
 
 Note that the layout contains all 151 MEG channels; the one channel missing in the data is automatically excluded from the plots.
 
-All channels are squeezed in a circle and the nose and ears are indicated at the top and sides. The actual 3-D layout of the MEG channels in the CTF system is more complex than the circular arrangement suggested by the flat 2-D layout. This is a generic challenge for projections onto a 2-D plane and also applies to cartography. We can plot the bottom coil of the CTF gradiometer channels with  
+All channels are squeezed in a circle and the nose and ears are indicated at the top and sides. The actual 3-D layout of the MEG channels in the CTF system is more complex than the circular arrangement suggested by the flat 2-D layout. This is a generic challenge for projections onto a 2-D plane and also applies to cartography. We can plot the bottom coil of the CTF gradiometer channels with
 
     figure;
     ft_plot_sens(avgFC.grad, 'chantype', 'meggrad')
@@ -197,20 +197,20 @@ You should zoom in on the figure to see the triplets for the three channels ar e
 
 **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** plot the topographic distribution of 2-Dimensional or 3-Dimensional datatypes as a 2-D circular view (looking down at the top of the head). The arrangement of the channels is again specified in the layout (see above in multiplot functions). The **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)** functions first again select the data to be plotted from the 2D or 3D input data and subsequently plot the selected data using low-level FieldTrip functions. Using one value for each channel and the x and y coordinates, the values between points are interpolated and plotted.
 
-    cfg = [];                            
-    cfg.xlim = [0.3 0.5];                
-    cfg.zlim = [0 6e-14];                
-    cfg.layout = 'CTF151.lay';            
+    cfg = [];
+    cfg.xlim = [0.3 0.5];
+    cfg.zlim = [0 6e-14];
+    cfg.layout = 'CTF151.lay';
     cfg.parameter = 'individual'; % the default 'avg' is not present in the data
     figure; ft_topoplotER(cfg,GA_FC); colorbar
 
 {% include image src="/assets/img/tutorial/plotting/fig15.png" %}
 
     cfg = [];
-    cfg.xlim = [0.9 1.3];                
-    cfg.ylim = [15 20];                  
-    cfg.zlim = [-1e-27 1e-27];           
-    cfg.baseline = [-0.5 -0.1];          
+    cfg.xlim = [0.9 1.3];
+    cfg.ylim = [15 20];
+    cfg.zlim = [-1e-27 1e-27];
+    cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
     cfg.layout = 'CTF151.lay';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
@@ -220,10 +220,10 @@ You should zoom in on the figure to see the triplets for the three channels ar e
 You can compare this to the more realistic helmet-style layout, which better acknowledges the fact that the MEG channels extend below the ears and that the helmet has sort of an opening at the face.
 
     cfg = [];
-    cfg.xlim = [0.9 1.3];                
-    cfg.ylim = [15 20];                  
-    cfg.zlim = [-1e-27 1e-27]; % this is in T^2           
-    cfg.baseline = [-0.5 -0.1];          
+    cfg.xlim = [0.9 1.3];
+    cfg.ylim = [15 20];
+    cfg.zlim = [-1e-27 1e-27]; % this is in T^2
+    cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
     cfg.layout = 'CTF151_helmet';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
@@ -233,10 +233,10 @@ You can compare this to the more realistic helmet-style layout, which better ack
 The baseline correction computes the power difference compared to the pre-stimuls baseline. We can also look at the power ratio
 
     cfg = [];
-    cfg.xlim = [0.9 1.3];                
-    cfg.ylim = [15 20];                  
+    cfg.xlim = [0.9 1.3];
+    cfg.ylim = [15 20];
     cfg.zlim = [0.6 1.4]; % the value 1 means 100%, so this ranges from 60% to 140% of the baseline power
-    cfg.baseline = [-0.5 -0.1];          
+    cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'relative';
     cfg.layout = 'CTF151_helmet';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
@@ -246,10 +246,10 @@ The baseline correction computes the power difference compared to the pre-stimul
 The interpretation becomes more clear with
 
     cfg = [];
-    cfg.xlim = [0.9 1.3];                
-    cfg.ylim = [15 20];                  
+    cfg.xlim = [0.9 1.3];
+    cfg.ylim = [15 20];
     cfg.zlim = [0.6 1.4]; % the value 1 means 100%, so this ranges from 60% to 140% of the baseline power
-    cfg.baseline = [-0.5 -0.1];          
+    cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'relative';
     cfg.layout = 'CTF151_helmet';
     figure; ft_topoplotTFR(cfg,TFRhann); colorbar
@@ -267,9 +267,9 @@ In the help of **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_topoplotT
     % for the multiple plots also
     cfg = [];
     cfg.xlim = [-0.4:0.2:1.4];
-    cfg.ylim = [15 20];                  
-    cfg.zlim = [-1e-27 1e-27];            
-    cfg.baseline = [-0.5 -0.1];          
+    cfg.ylim = [15 20];
+    cfg.zlim = [-1e-27 1e-27];
+    cfg.baseline = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
     cfg.layout = 'CTF151_helmet.mat';
     cfg.comment = 'xlim';
@@ -297,16 +297,16 @@ Some examples of what you can d
 
 Options specific to the topoplot
 
-    cfg.gridscale = 300;                  
-    cfg.style = 'straight';               
-    cfg.marker = 'labels';                
+    cfg.gridscale = 300;
+    cfg.style = 'straight';
+    cfg.marker = 'labels';
     figure; ft_topoplotTFR(cfg,TFRhann);
 
 {% include image src="/assets/img/tutorial/plotting/fig21.png" %}
 
-    cfg.gridscale = 300;                
-    cfg.contournum = 10;                
-    cfg.colormap = gray(10);            
+    cfg.gridscale = 300;
+    cfg.contournum = 10;
+    cfg.colormap = gray(10);
     figure; ft_topoplotTFR(cfg,TFRhann);
 
 {% include image src="/assets/img/tutorial/plotting/fig22.png" %}
@@ -379,7 +379,7 @@ Although the code below shows how to visualize clusters, you should be [cautious
 
 This is possible using **[ft_connectivityplot](/reference/ft_connectivityplot)**, **[ft_multiplotCC](/reference/ft_multiplotCC)** and **[ft_topoplotCC](/reference/ft_topoplotCC)**.
 
-###  Plotting Principal or Independent Components (PCA/ICA)
+### Plotting Principal or Independent Components (PCA/ICA)
 
 To plot PCA, ICA or other decompositions that result from **[ft_componentanalysis](/reference/ft_componentanalysis)** you can use ft_topoplotIC for the topographies and ft_databrowser for the topographies combined with the time series. For a viewer that displays the power spectrum, topography and variance over time of each component, see [https://github.com/fieldtrip/fieldtrip/blob/master/contrib/misc/ft_icabrowser.m](https://github.com/fieldtrip/fieldtrip/blob/master/contrib/misc/ft_icabrowser.m).
 
@@ -387,11 +387,11 @@ To plot PCA, ICA or other decompositions that result from **[ft_componentanalysi
 
 With the **[ft_sourceplot](/reference/ft_sourceplot)** function you can plot functional source reconstructed data. Data structures can be source estimates from ft_sourceanalysis or ft_sourcegrandaverage or statistical values from **[ft_sourcestatistics](/reference/ft_sourcestatistics)**. The following sections will present the available options for source-level plotting, following the same structure as previous sections.
 
-In visualising source reconstructed data, you should consider that  there are two principled ways of representing the spatial dimension of source reconstructed data:
+In visualising source reconstructed data, you should consider that there are two principled ways of representing the spatial dimension of source reconstructed data:
 
-*  On a regular, 3-dimensional grid, i.e. volumetric data like an MRI scan
+- On a regular, 3-dimensional grid, i.e. volumetric data like an MRI scan
 
-*  On a surface geometry, i.e. a cortical sheet.
+- On a surface geometry, i.e. a cortical sheet.
 
 Besides the three dimensions that describe the spatial or geometrical aspect of source reconstructed brain activity, the data can have additional dimensions for time and/or frequency.
 
@@ -401,12 +401,12 @@ Source level data is considered volumetric if the locations at which activity is
 
 You can (1) make multiple 2D axials slices throughout the brain on which the functional data is plotted, (2) create three slices in each of the three orthogonal directions (axial, sagittal and coronal) on which you can click around to navigate the whole the brain (3) project the functional data onto a surface and make a 3-D rendering of that.
 
-Let us first provide the basic code to use one of these plotting methods, using the data from Subject01 from the beamformer tutorial.  Later on, we will give more details on the configuration options for **[ft_sourceplot](/reference/ft_sourceplot)**.
+Let us first provide the basic code to use one of these plotting methods, using the data from Subject01 from the beamformer tutorial. Later on, we will give more details on the configuration options for **[ft_sourceplot](/reference/ft_sourceplot)**.
 
 #### Individual anatomical MRI (prior to spatial normalization)
 
     % load MRI, reslice it and interpolate the low-res functional data onto the high-res anatomy
-    mri = ft_read_mri('Subject01.mri');  
+    mri = ft_read_mri('Subject01.mri');
 
     cfg = [];
     mri = ft_volumereslice(cfg, mri);
@@ -428,7 +428,7 @@ Let us first provide the basic code to use one of these plotting methods, using 
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
     cfg.opacitylim    = [0.0 1.2];
-    cfg.opacitymap    = 'rampup';  
+    cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffInt);
 
 {% include image src="/assets/img/tutorial/plotting/fig30.png" %}
@@ -445,7 +445,7 @@ Let us first provide the basic code to use one of these plotting methods, using 
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
     cfg.opacitylim    = [0.0 1.2];
-    cfg.opacitymap    = 'rampup';  
+    cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffInt);
 
 {% include image src="/assets/img/tutorial/plotting/fig32.png" %}
@@ -457,11 +457,11 @@ Let us first provide the basic code to use one of these plotting methods, using 
 
 The three essential cfg parameters ar
 
-*  cfg.anaparameter the anatomy parameter, specifying the anatomy to be plotted
+- cfg.anaparameter the anatomy parameter, specifying the anatomy to be plotted
 
-*  cfg.funparameter the functional parameter, specifying the functional data to be plotted
+- cfg.funparameter the functional parameter, specifying the functional data to be plotted
 
-*  cfg.maskparameter the mask parameter, specifying the parameter to be used to mask the functional data
+- cfg.maskparameter the mask parameter, specifying the parameter to be used to mask the functional data
 
 All data that is used in the figure (anatomical, functional, mask) must be interpolated and represented onto the same grid. See ft_sourceinterpolate and ft_volumenormalise.
 
@@ -475,7 +475,7 @@ The functional data is plotted in color optionally on top of the anatomy. The co
 
 #### the masking parameter
 
-You can control the opacity of the functional data by the mask parameter. Which values are plotted opaque and which transparent is determined by cfg.opacitymap and cfg.opacitylim (see MATLAB function ALPHA and ALPHAMAP). The opacity map determines the degree of opacity of the functional data going from opaque to transparent.  There are multiple ways to determine your opacity scale, as a user you can determine the opacity values for each and every single voxel (and as such, region of interest).  As such, the opacity limits determine how the opacity map is assigned to the values of the mask parameter.  
+You can control the opacity of the functional data by the mask parameter. Which values are plotted opaque and which transparent is determined by cfg.opacitymap and cfg.opacitylim (see MATLAB function ALPHA and ALPHAMAP). The opacity map determines the degree of opacity of the functional data going from opaque to transparent. There are multiple ways to determine your opacity scale, as a user you can determine the opacity values for each and every single voxel (and as such, region of interest). As such, the opacity limits determine how the opacity map is assigned to the values of the mask parameter.
 
 #### Example 1: Plotting only positive values
 
@@ -519,7 +519,7 @@ Scalar data (e.g., time-averaged activity, frequency-specific power estimates, s
     cfg.funcolorlim    = [0.0 1.2];
     cfg.funcolormap    = 'jet';
     cfg.opacitylim     = [0.0 1.2];
-    cfg.opacitymap     = 'rampup';  
+    cfg.opacitymap     = 'rampup';
     cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat'; % Cortical sheet from canonical MNI brain
     cfg.surfdownsample = 10;  % downsample to speed up processing
@@ -549,7 +549,7 @@ As with the channel-level multiplots, you can change the colormap that maps the 
 
 If you right-click with the mouse on the colorbar in the figure, you can also do this interactively.
 
-To  interactively explore higher-dimensional data (such as TFR data) on the surface, **[ft_sourceplot](/reference/ft_sourceplot)** cannot be used. You can make selections of a specific time and/or frequency and make a series of sublplots.
+To interactively explore higher-dimensional data (such as TFR data) on the surface, **[ft_sourceplot](/reference/ft_sourceplot)** cannot be used. You can make selections of a specific time and/or frequency and make a series of sublplots.
 
 #### Higher dimensional source-level data
 
@@ -559,14 +559,14 @@ Since source-level function data requires three dimensions for "space" and uses 
 
 Although MATLAB is a very flexible development and analysis environment, it is not super-fast in visualisation. Hence external visualisation tools are sometimes more useful for exploring your data. Volumetric and surface based data can be exported to standard file formats using **[ft_sourcewrite](/reference/ft_sourcewrite)**. Subsequently, you can use external tools such as
 
-*  [MRIcron](http://www.mccauslandcenter.sc.edu/mricro/mricron/index.html)
-*  [OpenWallnut](http://www.openwalnut.org)
-*  [Connectome Workbench](http://www.humanconnectome.org/software/connectome-workbench.html)
-*  [gramm](https://github.com/piermorel/gramm)
+- [MRIcron](http://www.mccauslandcenter.sc.edu/mricro/mricron/index.html)
+- [OpenWallnut](http://www.openwalnut.org)
+- [Connectome Workbench](http://www.humanconnectome.org/software/connectome-workbench.html)
+- [gramm](https://github.com/piermorel/gramm)
 
 ## Suggested further reading
 
-Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/tutorial/layout) explains how this mapping is constructed.   
+Plotting channel-level data in a 2-dimensional representation on your flat computer screen or on paper requires that the 3-dimensional channel positions are mapped or projected onto the 2-dimensional plane. The tutorial on [specifying the channel layout for plotting](/tutorial/layout) explains how this mapping is constructed.
 
 Frequently asked question
 {% include seealso tag1="plot" tag2="faq" %}

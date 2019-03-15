@@ -46,36 +46,36 @@ Now you can **specify one DCM model** for this subject’s dat
 
 *  In terms of the A (baseline connectivity), B (modulatory connectivity) and C (input) matrices, this model can be decomposed into the connections listed below. You can also turn to the last page of this instruction sheet to see if you have correctly defined the model.
 
-	
-	A{1} - Forwar
-	(3,1) rOFA -> rFFA
-	(4,2) lOFA -> lFFA
-	(5,1) rOFA -> rSTS
-	(5,3) rFFA -> rSTS
-	
-	A{2} - Backwar
-	(1,3) rFFA -> rOFA
-	(2,4) lFFA -> lOFA
-	(1,5) rSTS -> rOFA
-	(3,5) rSTS -> rFFA
-	
-	A{3} - Latera
-	(2,1) rOFA -> lOFA
-	(1,2) lOFA -> rOFA
-	(4,3) rFFA -> lFFA
-	(3,4) lFFA -> rFFA
-	
-	B{1} – Modulatory: 
-	(3,1) rOFA -> rFFA
-	(4,2) lOFA -> lFFA
-	(5,1) rOFA -> rSTS
-	(1,3) rFFA -> rOFA
-	(2,4) lFFA -> lOFA
-	(1,5) rSTS -> rOFA
-	
-	C – Inpu
-	(1) rOFA
-	(2) lOFA
+  
+  A{1} - Forwar
+  (3,1) rOFA -> rFFA
+  (4,2) lOFA -> lFFA
+  (5,1) rOFA -> rSTS
+  (5,3) rFFA -> rSTS
+  
+  A{2} - Backwar
+  (1,3) rFFA -> rOFA
+  (2,4) lFFA -> lOFA
+  (1,5) rSTS -> rOFA
+  (3,5) rSTS -> rFFA
+  
+  A{3} - Latera
+  (2,1) rOFA -> lOFA
+  (1,2) lOFA -> rOFA
+  (4,3) rFFA -> lFFA
+  (3,4) lFFA -> rFFA
+  
+  B{1} – Modulatory: 
+  (3,1) rOFA -> rFFA
+  (4,2) lOFA -> lFFA
+  (5,1) rOFA -> rSTS
+  (1,3) rFFA -> rOFA
+  (2,4) lFFA -> lOFA
+  (1,5) rSTS -> rOFA
+  
+  C – Inpu
+  (1) rOFA
+  (2) lOFA
 
 *  Finally, we do not impose constraints on dipolar symmetry, optimise source location, lock trial-specific effects or assume trial-specific inputs. You can ignore the wavelet options – these are used when modelling spectral responses (e.g. with CSD or IND models).
 

@@ -30,7 +30,7 @@ You can recompile individual mex files for your platform using the following com
 
 The following files all depend on some shared code in geometry.c and geometry.h, hence the compilation process is slighty different for thes
 
-    mex -I. -c geometry.c		
+    mex -I. -c geometry.c    
     mex -I. -c solid_angle.c ; mex -o solid_angle solid_angle.o geometry.o
     mex -I. -c lmoutr.c      ; mex -o lmoutr      lmoutr.o      geometry.o
     mex -I. -c ptriproj.c    ; mex -o ptriproj    ptriproj.o    geometry.o

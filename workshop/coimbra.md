@@ -14,47 +14,47 @@ title: FieldTrip workshop in Coimbra, Portugal
 
 -   Session I
 
-    -   9:45			Registration, coffee, opening remarks
-    -   10:05 – 11:00		Lecture: An introduction to the EEG/MEG and the FieldTrip toolbox
-    -   11:00 – 11:15		Coffee Break
+    -   9:45      Registration, coffee, opening remarks
+    -   10:05 – 11:00    Lecture: An introduction to the EEG/MEG and the FieldTrip toolbox
+    -   11:00 – 11:15    Coffee Break
     -   11:15 – 12:45 Hands-on: Getting started with event-related potentials
             \* <http://www.fieldtriptoolbox.org/tutorial/preprocessing_erp>
-    -   12:45 – 13:45		Lunch
+    -   12:45 – 13:45    Lunch
 
 -   Session II
 
-    -   13:45 – 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
-    -   14:45 – 15:00   	Coffee Break
-    -   15:00 – 16:45		Hands-on: Time-frequency analysis of power  
+    -   13:45 – 14:45    Lecture: Fundamentals of neuronal oscillations and  synchrony
+    -   14:45 – 15:00     Coffee Break
+    -   15:00 – 16:45    Hands-on: Time-frequency analysis of power  
             \* <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
-    -   16:45 – 17:30		Wrap-up-the-day: “Ask the experts” session
+    -   16:45 – 17:30    Wrap-up-the-day: “Ask the experts” session
 
--   20:00			Workshop Dinner @ ???
+-   20:00      Workshop Dinner @ ???
 
 #### Tuesday June 7th
 
 -   Session III
 
-    -   10:00 – 11:00		Lecture: Beamformer techniques for source reconstruction
-    -   11:00 – 11:15		Coffee break
-    -   11:15 – 13:00		Hands-on: Identifying oscillatory sources using beamformer techniques
+    -   10:00 – 11:00    Lecture: Beamformer techniques for source reconstruction
+    -   11:00 – 11:15    Coffee break
+    -   11:15 – 13:00    Hands-on: Identifying oscillatory sources using beamformer techniques
             _ <http://www.fieldtriptoolbox.org/tutorial/beamformer>
             _ <http://www.fieldtriptoolbox.org/tutorial/headmodel_eeg_bem>
 
-    -   13:00 – 14:00		Lunch
+    -   13:00 – 14:00    Lunch
 
 -   Session IV
-    -   14:00 – 15:15		Lecture: Non-parametric randomization techniques
-    -   15:15 – 15:30		Coffee break
-    -   15:30 – 17:15	Hands-on: Parametric and non-parametric statistics on event related fields
+    -   14:00 – 15:15    Lecture: Non-parametric randomization techniques
+    -   15:15 – 15:30    Coffee break
+    -   15:30 – 17:15  Hands-on: Parametric and non-parametric statistics on event related fields
             _ <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
             _ <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
-    -   17:15 – 18:00		Wrap-up-the-day: “Ask the experts” session
+    -   17:15 – 18:00    Wrap-up-the-day: “Ask the experts” session
 
 #### Wednesday June 8th
 
 -   Session V
-    -   10:00 – 13:00		FieldTrip playground
+    -   10:00 – 13:00    FieldTrip playground
 
 ## Installing FieldTrip and Tutorial preparation
 

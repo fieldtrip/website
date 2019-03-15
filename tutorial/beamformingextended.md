@@ -463,7 +463,7 @@ Again there are various ways to visualise the volumetric interpolated data. The 
 
 {% include image src="/assets/img/tutorial/beamformingextended/fig5_beamedcoh2.png" %}
 
-//Figure: The neuronal source showing maximum coherence with the left EMG at 20 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**//.
+_Figure: The neuronal source showing maximum coherence with the left EMG at 20 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**._
 
 Since the data is expressed in MNI coordinates, you can also make a surface rendering of the coherence displayed on the cortical shee
 

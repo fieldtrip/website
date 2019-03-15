@@ -10,16 +10,16 @@ Electrodes are represented as points in 3-D Carthesian space, i.e. with an X, Y 
 You can use the following snippet of code to get a quick overview of the template electrode sets.
 
 
-	dirlist  = dir('template/electrode/*');
-	filename = {dirlist(~[dirlist.isdir]).name}'
-	for i=1:length(filename)
-	  elec = ft_read_sens(filename{i});
-	  figure
-	  ft_plot_sens(elec);
-	  title(filename{i});
-	  grid on
-	  rotate3d
-	end
+  dirlist  = dir('template/electrode/*');
+  filename = {dirlist(~[dirlist.isdir]).name}'
+  for i=1:length(filename)
+    elec = ft_read_sens(filename{i});
+    figure
+    ft_plot_sens(elec);
+    title(filename{i});
+    grid on
+    rotate3d
+  end
 
 {% include markup/warning %}
 You can find the template 3-D electrode sets included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/electrode).

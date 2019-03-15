@@ -31,15 +31,15 @@ The [Inverse source parameter estimates from EEG/MEG data](/development/module/i
 The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function refers to the following method
 
 
-	cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
-	                     'sam'     synthetic aperture magnetometry
-	                     'dics'    dynamic imaging of coherent sources
-	                     'pcc'     partial cannonical correlation/coherence
-	                     'mne'     minimum norm estimation
-	                     'loreta'  minimum norm estimation with smoothness constraint
-	                     'rv'      scan residual variance with single dipole
-	                     'music'   multiple signal classification
-	                     'mvl'   multivariate Laplace source localization
+  cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
+                       'sam'     synthetic aperture magnetometry
+                       'dics'    dynamic imaging of coherent sources
+                       'pcc'     partial cannonical correlation/coherence
+                       'mne'     minimum norm estimation
+                       'loreta'  minimum norm estimation with smoothness constraint
+                       'rv'      scan residual variance with single dipole
+                       'music'   multiple signal classification
+                       'mvl'   multivariate Laplace source localization
 
 ### What is the difference between the methods?
 

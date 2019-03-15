@@ -47,11 +47,11 @@ Read the data with the following HLC channels:
 
 -   HLC00n3 Z coordinate relative to the dewar (in meters) of the nth head localization coil
 
-        	cfg.channel                 = {'HLC0011','HLC0012','HLC0013', ...
-        	                              'HLC0021','HLC0022','HLC0023', ...
-        	                              'HLC0031','HLC0032','HLC0033'};
+          cfg.channel                 = {'HLC0011','HLC0012','HLC0013', ...
+                                        'HLC0021','HLC0022','HLC0023', ...
+                                        'HLC0031','HLC0032','HLC0033'};
 
-        	headpos = ft_preprocessing(cfg);
+          headpos = ft_preprocessing(cfg);
 
 Determine the mean (per trial) circumcenter (the center of the circumscribed circle) of the three headcoils and its orientation (see subfunction at the bottom of this page)
 

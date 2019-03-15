@@ -14,11 +14,11 @@ We will keep this page up to date and post new information here when available.
 
 #### Day 1 (Thursday 13 October, 2016)
 
--   09:00 - 09:30		Registration, welcome and coffee
--   09:30 - 10:45		Lecture 1: Fundamentals of neuronal oscillations and synchrony (**Britta Westner**)
+-   09:00 - 09:30    Registration, welcome and coffee
+-   09:30 - 10:45    Lecture 1: Fundamentals of neuronal oscillations and synchrony (**Britta Westner**)
 -   11:00 - 12:45   Hands-on 1:
     - [Time-frequency analysis of power](/tutorial/timefrequencyanalysis)
--   12:45 - 13:00		Lunch
+-   12:45 - 13:00    Lunch
 -   13:30 - 15:00   Lecture 2: Statistics using non-parametric randomization techniques (**Tzvetan Popov**)
 -   15:00 - 15:15   Coffee Break
 -   15:15 - 16:15   Hands-on 2:
@@ -30,12 +30,12 @@ We will keep this page up to date and post new information here when available.
 
 #### Day 2 (Friday 14 October, 2016)
 
--   9:00 - 10:30		Lecture 3: Source reconstruction using beamformers (**Britta Westner**)    
--   10:30 - 10:45		Coffee break
+-   9:00 - 10:30    Lecture 3: Source reconstruction using beamformers (**Britta Westner**)    
+-   10:30 - 10:45    Coffee break
 -   10:35 - 12:15   Hands-on 3:
     - [Identifying oscillatory sources using beamformers ](/tutorial/beamformer)
--   12:15 - 13:00		Lunch
--   13:00 - 14:30		Hands-on 4:
+-   12:15 - 13:00    Lunch
+-   13:00 - 14:30    Hands-on 4:
     - [Source level statistics within the permutation framework](/workshop/aarhus/beamformingerf#meg_plotting_sources_of_response_related_evoked_field_using_statistical_threshold)
 -   14:30 - 14:45    Coffee break
 -   14:45 - 17:00    FieldTrip playground (bring your own data!)

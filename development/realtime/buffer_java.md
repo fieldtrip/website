@@ -17,53 +17,53 @@ The directory ''realtime/src/buffer/java'' contains a couple of Java classes tha
 
 The following Java code example demonstrates how to use the interfac
 
-	:::java
-	import java.io.*;
-	import java.nio.*;
-	import nl.fcdonders.fieldtrip.*;
-	
-	class testclient {
-	   public static void main(String[] args) throws IOException {
-	      String hostname = "localhost";
-	      int port = 1972;
-	      
-	      BufferClient C = new BufferClient();    // might throw IOException
-	      C.connect(hostname, port);  // might throw IOException
-	      
-	      Header hdr = C.getHeader(); // might throw IOException
-	
-	      System.out.println("#channels....: "+hdr.nChans);
-	      System.out.println("#samples.....: "+hdr.nSamples);
-	      System.out.println("#events......: "+hdr.nEvents);
-	      System.out.println("sampling freq: "+hdr.fSample);
-	      System.out.println("data type....: "+hdr.dataType);
-	
-	      // print channel names, if existing (non-null)
-	      for (int n=0;n<hdr.nChans;n++) {
-		 if (hdr.labels[n] != null) {
-		    System.out.println("Ch. " + n + ": " + hdr.labels[n]);
-	         }
-	      }
-	      
-	      // try to read all data, auto-convert to floats if necessary
-	      float[][] data = C.getFloatData(0, hdr.nSamples-1);
-	      // access samples like data[sampleIndex][channelIndex] !
-	      
-	      // get raw data into a ByteBuffer without conversion
-	      DataDescription descr = new DataDescription();
-	      ByteBuffer rawBuf = C.getRawData(0, hdr.nSamples-1, descr);
-	      // inspect descr.nSamples, descr.nChans, descr.dataType for info on data
-	      
-	      // read events, if any	
-	      if (hdr.nEvents > 0) {
-		 BufferEvent[] evs = C.getEvents(0,hdr.nEvents-1);
-		 for (int n=0;n<evs.length;n++) {
-		    System.out.println("Event: "+n+" Type="+evs[n].getTypeString()+" Value="+evs[n].getValueString());
-		 }
-	      }
-	      C.disconnect();
-	   }
-	}
+  :::java
+  import java.io.*;
+  import java.nio.*;
+  import nl.fcdonders.fieldtrip.*;
+  
+  class testclient {
+     public static void main(String[] args) throws IOException {
+        String hostname = "localhost";
+        int port = 1972;
+        
+        BufferClient C = new BufferClient();    // might throw IOException
+        C.connect(hostname, port);  // might throw IOException
+        
+        Header hdr = C.getHeader(); // might throw IOException
+  
+        System.out.println("#channels....: "+hdr.nChans);
+        System.out.println("#samples.....: "+hdr.nSamples);
+        System.out.println("#events......: "+hdr.nEvents);
+        System.out.println("sampling freq: "+hdr.fSample);
+        System.out.println("data type....: "+hdr.dataType);
+  
+        // print channel names, if existing (non-null)
+        for (int n=0;n<hdr.nChans;n++) {
+     if (hdr.labels[n] != null) {
+        System.out.println("Ch. " + n + ": " + hdr.labels[n]);
+           }
+        }
+        
+        // try to read all data, auto-convert to floats if necessary
+        float[][] data = C.getFloatData(0, hdr.nSamples-1);
+        // access samples like data[sampleIndex][channelIndex] !
+        
+        // get raw data into a ByteBuffer without conversion
+        DataDescription descr = new DataDescription();
+        ByteBuffer rawBuf = C.getRawData(0, hdr.nSamples-1, descr);
+        // inspect descr.nSamples, descr.nChans, descr.dataType for info on data
+        
+        // read events, if any  
+        if (hdr.nEvents > 0) {
+     BufferEvent[] evs = C.getEvents(0,hdr.nEvents-1);
+     for (int n=0;n<evs.length;n++) {
+        System.out.println("Event: "+n+" Type="+evs[n].getTypeString()+" Value="+evs[n].getValueString());
+     }
+        }
+        C.disconnect();
+     }
+  }
 
 ## Writing FieldTrip buffer events
 

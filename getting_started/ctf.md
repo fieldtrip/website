@@ -42,8 +42,8 @@ You should not store any scripts or mat files in the xxx.ds folder. When analyzi
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
 
-	addpath `<full_path_to_fieldtrip>`
-	ft_defaults
+  addpath `<full_path_to_fieldtrip>`
+  ft_defaults
 
 ## Reading MEG data
 
@@ -62,26 +62,26 @@ format. It takes the dataset filename as input. Alternatively, you can directly 
 To read the header from the tutorial dataset, use
 
 
-	hdr = ft_read_header('Subject01.ds')
+  hdr = ft_read_header('Subject01.ds')
 
 or
 
 
-	hdr = ft_read_header('Subject01.ds/Subject01.res4')
+  hdr = ft_read_header('Subject01.ds/Subject01.res4')
 
 This should return a header structure with the following element
 
 
-	hdr =
+  hdr =
 
-	             Fs: 300           % sampling frequency
-	         nChans: 187           % number of channels
-	       nSamples: 900           % number of samples per trial
-	    nSamplesPre: 300           % number of pre-trigger samples in each trial
-	        nTrials: 266           % number of trials
-	          label: {187x1 cell}  % cell-array with labels of each channel
-	           grad: [1x1 struct]  % gradiometer structure
-	           orig: [1x1 struct]  % additional header information
+               Fs: 300           % sampling frequency
+           nChans: 187           % number of channels
+         nSamples: 900           % number of samples per trial
+      nSamplesPre: 300           % number of pre-trigger samples in each trial
+          nTrials: 266           % number of trials
+            label: {187x1 cell}  % cell-array with labels of each channel
+             grad: [1x1 struct]  % gradiometer structure
+             orig: [1x1 struct]  % additional header information
 
 Make sure that the header information is correctly read.
 ### Read data
@@ -91,47 +91,47 @@ The **[ft_read_data](/reference/ft_read_data)** function reads the CTF MEG data 
 To read the data from the tutorial dataset, use
 
 
-	dat = ft_read_data('Subject01.ds');
+  dat = ft_read_data('Subject01.ds');
 
 or
 
 
-	dat = ft_read_data('Subject01.ds/Subject01.meg4');
+  dat = ft_read_data('Subject01.ds/Subject01.meg4');
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 187x900x266 in case of the tutorial data, which is a trial-based dataset. In case of continuous data, this function returns a 2-D matrix of size Nchans*Nsamples.
 Additional options should be specified in key-value pairs (see **[ft_read_data](/reference/ft_read_data)**). When only the filename is specified, all data in the dataset will be read. To only read the first 3 trials from channels 5-9, us
 
 
-	dat = ft_read_data('Subject01.ds', 'begtrial', 1, 'endtrial', 3, 'chanindx', [5:9]);
+  dat = ft_read_data('Subject01.ds', 'begtrial', 1, 'endtrial', 3, 'chanindx', [5:9]);
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 5x900x3.
 
 You can explicitly specify the data format (also [see below](#Specifying the low-level reading functions)), e.g.
 
 
-	dat = ft_read_data('Subject01.ds', 'dataformat', 'ctf_ds');
+  dat = ft_read_data('Subject01.ds', 'dataformat', 'ctf_ds');
 
 ### Preprocessing
 
 After checking that the low-level reading functions successfully read your CTF dataset, you are ready to start working with the high-level FieldTrip functions, such as **[ft_preprocessing](/reference/ft_preprocessing)**. To preprocess the tutorial data, us
 
 
-	cfg=[];
-	cfg.dataset = 'Subject01.ds';
-	data = ft_preprocessing(cfg)
+  cfg=[];
+  cfg.dataset = 'Subject01.ds';
+  data = ft_preprocessing(cfg)
 
 This should return the following data structur
 
 
-	data =
+  data =
 
-	        hdr: [1x1 struct]    % header information
-	      label: {187x1 cell}    % channel labels
-	      trial: {1x266 cell}    % data (Nchans*Nsamples) for each trial
-	       time: {1x266 cell}    % time axis for each trial
-	    fsample: 300             % sampling frequency
-	       grad: [1x1 struct]    % gradiometer structure
-	        cfg: [1x1 struct]    % the configuration used for processing the data
+          hdr: [1x1 struct]    % header information
+        label: {187x1 cell}    % channel labels
+        trial: {1x266 cell}    % data (Nchans*Nsamples) for each trial
+         time: {1x266 cell}    % time axis for each trial
+      fsample: 300             % sampling frequency
+         grad: [1x1 struct]    % gradiometer structure
+          cfg: [1x1 struct]    % the configuration used for processing the data
 
 
 With cfg.continuous = 'yes' or 'no' you can specify whether the file contains continuous data. The default is determined automatically. Data that is measured pseudo-continuously should be treated as cfg.continuous = 'yes'.
@@ -163,25 +163,25 @@ To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/f
 
 This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structur
 
-	event =
+  event =
 
-	1343x1 struct array with field
-	    type
-	    sample
-	    value
-	    offset
-	    duration
+  1343x1 struct array with field
+      type
+      sample
+      value
+      offset
+      duration
 
 To access the first event, use
 
-	>> event(1)
+  >> event(1)
 
-	ans =
-	        type: 'trial'
-	      sample: 1
-	       value: []
-	      offset: -300
-	    duration: 900
+  ans =
+          type: 'trial'
+        sample: 1
+         value: []
+        offset: -300
+      duration: 900
 
 ### Frontpanel and Backpanel triggers
 

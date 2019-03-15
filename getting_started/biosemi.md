@@ -119,7 +119,7 @@ Each BDF/EDF file starts with a header followed by the number of Data records in
 **Bold Text**
 Number of samples in each data record
 (Sample-rate if Duration of data record = "1")
-N x 32 bytes 	
+N x 32 bytes   
 (ASCII)
 
 {% include markup/info %}

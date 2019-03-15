@@ -3,13 +3,13 @@ title: Preprocessing and averaging of single-channel NIRS data
 tags: [tutorial, nirs, preprocessing, nirs-singlechannel]
 ---
 
-#  Preprocessing and averaging of single-channel NIRS data
+# Preprocessing and averaging of single-channel NIRS data
 
 ## Introduction
 
 This tutorial demonstrates how to analyse a functional near-infrared spectroscopy (fNIRS) dataset focussing on one single channel.
 The goal is to introduce the basic fNIRS analysis features of FieldTrip on Artinis NIRS data.
-You can find details on the Artinis recording and analysis software  [here](http://www.fieldtriptoolbox.org/getting_started/artinis).
+You can find details on the Artinis recording and analysis software [here](http://www.fieldtriptoolbox.org/getting_started/artinis).
 
 By the end of this tutorial, you will be able to read in fNIRS data, segment it and apply different pre-processing steps. This tutorial thus also serves as a kind of general introduction into the basic fundamentals of FieldTrip.
 You will also learn how to create basic visualizations of the data such as plotting single traces or topographic mapping.
@@ -39,20 +39,20 @@ Analyses can be conducted in many different ways and in different orders, depend
 
 The following order of steps provide a good standard approach for analysing fNIRS data (see Fig 1 for an overview
 
-*  read data & trim off non-experimental time windows
-*  remove bad channels (not covered in this tutorial, because we focus on one channel only)
-*  remove artifacts within channels; segments of data within channels that will be excluded from the analysis, e.g. motion artifacts
-*  transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
-*  separate functional from systemic responses (signal conditioning); this step in itself is necessary, people choose one or more of the steps below
-    * filter; i.e. temporal processing
-    * subtract reference channel; i.e. spatial processing
-    * anti-correlate oxyHb/deoxyHb-traces per channel
-*  define epochs; in some experiments, this step could be taken earlier (e.g. if you have a long recording with a very short piece of relevant data)
-*  average over conditions and visualize the data
+- read data & trim off non-experimental time windows
+- remove bad channels (not covered in this tutorial, because we focus on one channel only)
+- remove artifacts within channels; segments of data within channels that will be excluded from the analysis, e.g. motion artifacts
+- transform optical densities to changes in oxyhemoglobin (oxyHb) and deoxyhemoglobin (deoxyHb) concentration
+- separate functional from systemic responses (signal conditioning); this step in itself is necessary, people choose one or more of the steps below
+  - filter; i.e. temporal processing
+  - subtract reference channel; i.e. spatial processing
+  - anti-correlate oxyHb/deoxyHb-traces per channel
+- define epochs; in some experiments, this step could be taken earlier (e.g. if you have a long recording with a very short piece of relevant data)
+- average over conditions and visualize the data
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1.png" width="400" %}
 
-*Figure: Overview of fNIRS analysis procedure.*
+_Figure: Overview of fNIRS analysis procedure._
 
 ### Getting Started
 
@@ -81,7 +81,7 @@ So, it seems that **[ft_preprocessing](/reference/ft_preprocessing)** would like
     cfg = [];
     cfg.dataset = 'motor_cortex.oxy3';
 
-Normally you would specify  the full path, including the drive  (for instance: C:\). This makes sure that your code will execute independent from your current MATLAB location. It is good practice to keep your original raw data, your processed data and your scripts in three separate locations. In this case we will work with the data in the present working directory.
+Normally you would specify the full path, including the drive (for instance: C:\). This makes sure that your code will execute independent from your current MATLAB location. It is good practice to keep your original raw data, your processed data and your scripts in three separate locations. In this case we will work with the data in the present working directory.
 
 Let us try to execute **[ft_preprocessing](/reference/ft_preprocessing)** now as was specified in the hel
 
@@ -112,7 +112,7 @@ If preprocessing was done as described, the data will have the following field
           opto: [1×1 struct]
            cfg: [1×1 struct]
 
-Let us go through these one-by-one. The field 'hdr' contain all top-level information about your data, like for example the original sample rate, the number of channels etc. So all information that was potentially available at the  time you read in the dataset. The field 'label' lists the name of all channels that you decided to read in. Note that you have told **[ft_preprocessing](/reference/ft_preprocessing)** to just read-in, by default, all channels as you haven't specified a subset. As you can see, there are 48 labels, and as the measurement consisted of 2 wavelengths per channel, this represents 24 channels. You also read in a set of ADC-channels, these will be ignored for now (these contain the triggers of the oxymon file, hence, this is NIRS acquisition hardware specific). The next field is called 'time' and represents the time axis of the dataset. The field 'trial' contains the data of all your channels. It is called 'trial' because usually, data is separated into different trials. To start off, we however have now read in all available data. The field 'fsample' describes the current sample rate of the data in the 'trial'-field. The field 'sampleinfo' describes the sample numbers of each trial with respect to the original measurement. The field 'opto' contains all high-level information about the composition of the channels and optodes, such as what wavelengths were used, the position of the optodes, what optodes formed which channels, etc. Finally, the field 'cfg' is the same cfg that we have just used, extended by some default values. This way, we can always trace back what has actually happened to our data. But more about that later.
+Let us go through these one-by-one. The field 'hdr' contain all top-level information about your data, like for example the original sample rate, the number of channels etc. So all information that was potentially available at the time you read in the dataset. The field 'label' lists the name of all channels that you decided to read in. Note that you have told **[ft_preprocessing](/reference/ft_preprocessing)** to just read-in, by default, all channels as you haven't specified a subset. As you can see, there are 48 labels, and as the measurement consisted of 2 wavelengths per channel, this represents 24 channels. You also read in a set of ADC-channels, these will be ignored for now (these contain the triggers of the oxymon file, hence, this is NIRS acquisition hardware specific). The next field is called 'time' and represents the time axis of the dataset. The field 'trial' contains the data of all your channels. It is called 'trial' because usually, data is separated into different trials. To start off, we however have now read in all available data. The field 'fsample' describes the current sample rate of the data in the 'trial'-field. The field 'sampleinfo' describes the sample numbers of each trial with respect to the original measurement. The field 'opto' contains all high-level information about the composition of the channels and optodes, such as what wavelengths were used, the position of the optodes, what optodes formed which channels, etc. Finally, the field 'cfg' is the same cfg that we have just used, extended by some default values. This way, we can always trace back what has actually happened to our data. But more about that later.
 
 Let us dive deeper into our data for now. For having a quick look at our data, we can use the function **[ft_databrowser](/reference/ft_databrowser)** . The databrowser is much more than a simple 'data browser', but we will utilize this functionality for our purpose at the moment. Of course, we could have a look at how to call the databrowser (help **[ft_databrowser](/reference/ft_databrowser)**), but a good guess is always to use FieldTrip functions as ft_functionname(cfg, data). We can keep the cfg empty to start with, and then see if this works. We add 'ylim = 'maxmin'' to the configuration to adjust the y-axis such that the lowest values in the graph are determining the lowest point on the y-axis, and the largest values in the graph determine the highest point on the y-axis.
 
@@ -122,20 +122,20 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig1_ft_databrowser_readin.png" width="400" %}
 
-*Figure: Databrowser read-in.*
+_Figure: Databrowser read-in._
 
 Using **[ft_databrowser](/reference/ft_databrowser)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don’t need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
 
 Additionally, we'll from here select just one channel, to reduce the complexity for those new to fNIRS analyses.
 
-	cfg = [];
-	cfg.ylim = 'maxmin'
-	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
-	ft_databrowser(cfg, data);
+    cfg = [];
+    cfg.ylim = 'maxmin'
+    cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
+    ft_databrowser(cfg, data);
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_databrowser_one_chan.png" width="400" %}
 
-*Figure: Databrowser with one channel selected.*
+_Figure: Databrowser with one channel selected._
 
 #### Exercise 1
 
@@ -145,7 +145,7 @@ Take a moment to familiarize yourself with the user-interface. Change the horizo
 
 ### Remove artifacts
 
-There are several ways to remove aspects of the data that are not of interest. That is, fNIRS data not only represents changes in oxyhemoglobin and deoxyhemoglobin concentrations, but contains, amongst others, also other physiological signals, random noise and variations stemming from the measurement environment. One prominent issue is motion artifacts, which are produced by temporary changes in the contact between optode and skin, often caused by movements of the head. Typically, one finds these motion artifacts in all channels simultaneously, but it could also be that just one channel or a few channels were affected, for instance if the participant moves the mouth. Short, unexpected peaks in the data are considered to stem from motion. You can detect and remove these artifacts for instance through **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)*
+There are several ways to remove aspects of the data that are not of interest. That is, fNIRS data not only represents changes in oxyhemoglobin and deoxyhemoglobin concentrations, but contains, amongst others, also other physiological signals, random noise and variations stemming from the measurement environment. One prominent issue is motion artifacts, which are produced by temporary changes in the contact between optode and skin, often caused by movements of the head. Typically, one finds these motion artifacts in all channels simultaneously, but it could also be that just one channel or a few channels were affected, for instance if the participant moves the mouth. Short, unexpected peaks in the data are considered to stem from motion. You can detect and remove these artifacts for instance through \*_[ft_artifact_zvalue](/reference/ft_artifact_zvalue)_
 
 You can specify a z-value cut-off like this:
 
@@ -168,12 +168,12 @@ What is the optimal threshold to get rid off short lived peaks?
 
 ### Transform to changes in oxyHB/deoxyHB
 
-You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather  than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using  **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analysing changes in blood oxygenation in muscles
+You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analysing changes in blood oxygenation in muscles
 
-	cfg = [];
-	cfg.dpf = 5.9;
-	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
-	data_conc = ft_nirs_transform_ODs(cfg, data);
+    cfg = [];
+    cfg.dpf = 5.9;
+    cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
+    data_conc = ft_nirs_transform_ODs(cfg, data);
 
 #### Exercise 3
 
@@ -201,11 +201,11 @@ Earlier, we have read in all epochs by not specifying cfg.trl during our previou
 
 Let us assume for now that we have no clue about the triggers in the data. We will thus now utilize a more-or-less hidden functionality to retrieve this information.
 
-	cfg = [];
-	cfg.dataset = 'motor_cortex.oxy3';
-	cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
-	cfg.trialdef = [];
-	cfg.trialdef.eventtype = '?';
+    cfg = [];
+    cfg.dataset = 'motor_cortex.oxy3';
+    cfg.channel = {'Rx4b-Tx5 [860nm]', 'Rx4b-Tx5 [764nm]'};
+    cfg.trialdef = [];
+    cfg.trialdef.eventtype = '?';
 
 The question mark indicates that we are not sure about the event triggers, and the function **[ft_trialfun_general](/reference/ft_trialfun_general)** will thus output all events that are found in the dataset. Now, we can call **[ft_definetrial](/reference/ft_definetrial)**
 
@@ -216,12 +216,12 @@ did not add events during the measurement, you can include them here, see FAQ.
 
 Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event ‘A’) and ending 35 seconds after ‘A’ (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)**:
 
-	cfg.trialdef.eventtype  = 'event';
-	cfg.trialdef.eventvalue = 'A';
-	cfg.trialdef.prestim    = 10;
-	cfg.trialdef.poststim   = 35;
-	cfg = ft_definetrial(cfg);
-	data_epoch = ft_redefinetrial(cfg,data_filtered);
+    cfg.trialdef.eventtype  = 'event';
+    cfg.trialdef.eventvalue = 'A';
+    cfg.trialdef.prestim    = 10;
+    cfg.trialdef.poststim   = 35;
+    cfg = ft_definetrial(cfg);
+    data_epoch = ft_redefinetrial(cfg,data_filtered);
 
 Note that we left out the brackets around the output variable as we have a single output variable here. Great, we have 12 trials now! Check them out using the databrowser, but let us use some settings to make the plots look neate
 
@@ -232,7 +232,7 @@ Note that we left out the brackets around the output variable as we have a singl
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig3_ft_define_trial_v2.png" width="400" %}
 
-*Figure: Databrowser for 12 trials.*
+_Figure: Databrowser for 12 trials._
 
 So we pulled our data out of the measurement. The data looks crisps and clear.
 
@@ -245,15 +245,15 @@ All signal values seem to be around the same values. Why could that be?
 #### Exercise 5
 
 {% include markup/info %}
-You might want to perform an additional preprocessing step now. What  steps do you consider useful? Check out the options in **[ft_preprocessing](/reference/ft_preprocessing)**!
+You might want to perform an additional preprocessing step now. What steps do you consider useful? Check out the options in **[ft_preprocessing](/reference/ft_preprocessing)**!
 {% include markup/end %}
 
 ### Timelockanalysis
 
 We would like to compute the average of our data and have a look at the average response. We can use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** for computing the average and the various available plotting function for plotting.
 
-	cfg = [];
-	data_timelock = ft_timelockanalysis(cfg, data_epoch);
+    cfg = [];
+    data_timelock = ft_timelockanalysis(cfg, data_epoch);
 
 The output is the data structure data_timelock with the following field
 
@@ -271,17 +271,17 @@ The most important field is data.timelock.avg, containing the average over all t
 
 Below we plotted the averaged O2Hb and HHb traces from A-10 seconds to A+35 seconds. To follow fNIRS convention, O2Hb is coloured red and HHb is coloured blue.
 
-	time = data_timelock.time;
-	O2Hb = data_timelock.avg(1,:);
-	HHb  = data_timelock.avg(2,:);
-	figure;
-	plot(time,O2Hb,'r'); hold on;
-	plot(time,HHb,'b');
-	legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
+    time = data_timelock.time;
+    O2Hb = data_timelock.avg(1,:);
+    HHb  = data_timelock.avg(2,:);
+    figure;
+    plot(time,O2Hb,'r'); hold on;
+    plot(time,HHb,'b');
+    legend('O2Hb','HHb'); ylabel('\DeltaHb (\muM)'); xlabel('time (s)');
 
 {% include image src="/assets/img/tutorial/nirs_singlechannel/nirs_tut1_fig4_ft_average_hem_respons.png" width="400" %}
 
-*Figure: Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941).*
+_Figure: Averaged O2Hb and HHb traces. This figure closely resembles the text-book fNIRS model of cortical activation, which describes an increase in oxygen demand from the tissue instigating an increase in O2Hb due to neuro-vascular coupling as depicted by Scholkmann et al. in figure 5 of their 2014 review article (http://www.sciencedirect.com/science/article/pii/S1053811913004941)._
 
 ## Summary and conclusion
 

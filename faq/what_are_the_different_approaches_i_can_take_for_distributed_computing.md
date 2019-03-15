@@ -70,7 +70,7 @@ See **[peercellfun](/reference/peercellfun)**, **[peerfeval](/reference/peerfeva
 
 ### FieldTrip engine toolbox
 
-The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development//module/engine).
+The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development/module/engine).
 
 {% include markup/danger %}
 Please note that this requires compilation of some mex files. At this moment it is not actively supported.

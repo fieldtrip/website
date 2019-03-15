@@ -23,60 +23,60 @@ The easiest way to see whether a difference in the number of trials can be a pro
 
 First we will start with simulating the data for all subject
 
-	n_subjects = 20;
-	data = cell(1,n_subjects);
+  n_subjects = 20;
+  data = cell(1,n_subjects);
 
-	cfg = [];
-	cfg.method = 'broadband';
-	cfg.output = 'mixed';
-	cfg.fsample = 1200;
-	cfg.trllen = 1;
-	cfg.numtrl = 100;
-	for i=1:n_subjects
-	  data{i} = ft_freqsimulation(cfg);
-	end;
+  cfg = [];
+  cfg.method = 'broadband';
+  cfg.output = 'mixed';
+  cfg.fsample = 1200;
+  cfg.trllen = 1;
+  cfg.numtrl = 100;
+  for i=1:n_subjects
+    data{i} = ft_freqsimulation(cfg);
+  end;
 
 Now that we have simulated the data for all subjects we are going to divide the data into conditions A and B. Note that the assignment into one or the other condition is random and there should be no difference between conditions! After we have divided the data into two conditions, we will average the data per condition and test the difference on the group level. We will repeat this process 100 times and check the distribution of p-values for this particular test and ratio of trials. We will start out with an equal amount of trials in both condition
 
-	% Divide the data 1. case, equal amount of trial
+  % Divide the data 1. case, equal amount of trial
 
-	nA = 50; % amont of trials in condition A
-	nB = 50; % amount of trials in condition B
-	design = [ones(1,nA) 2.*ones(1,nB)];
+  nA = 50; % amont of trials in condition A
+  nB = 50; % amount of trials in condition B
+  design = [ones(1,nA) 2.*ones(1,nB)];
 
-	% Set the parameters for the statistical comparison
-	cfg_stats = [];
-	cfg_stats.channel     = 'mix';
-	cfg_stats.parameter   = 'avg';
-	cfg_stats.method      = 'analytic';
-	cfg_stats.statistic   = 'ft_statfun_depsamplesT';
-	cfg_stats.alpha       = 0.05;
-	cfg_stats.correctm    = 'no';
+  % Set the parameters for the statistical comparison
+  cfg_stats = [];
+  cfg_stats.channel     = 'mix';
+  cfg_stats.parameter   = 'avg';
+  cfg_stats.method      = 'analytic';
+  cfg_stats.statistic   = 'ft_statfun_depsamplesT';
+  cfg_stats.alpha       = 0.05;
+  cfg_stats.correctm    = 'no';
 
-	cfg_stats.design(1,1:2*n_subjects)  = [ones(1,n_subjects) 2*ones(1,n_subjects)];
-	cfg_stats.design(2,1:2*n_subjects)  = [1:n_subjects 1:n_subjects];
-	cfg_stats.ivar                = 1; % the 1st row in cfg.design contains the independent variable
-	cfg_stats.uvar                = 2; % the 2nd row in cfg.design contains the subject number
+  cfg_stats.design(1,1:2*n_subjects)  = [ones(1,n_subjects) 2*ones(1,n_subjects)];
+  cfg_stats.design(2,1:2*n_subjects)  = [1:n_subjects 1:n_subjects];
+  cfg_stats.ivar                = 1; % the 1st row in cfg.design contains the independent variable
+  cfg_stats.uvar                = 2; % the 2nd row in cfg.design contains the subject number
 
-	cfg = [];
+  cfg = [];
 
 
-	n_tests = 100;
+  n_tests = 100;
 
-	% Run all the tests.
-	h = zeros(1,n_tests);
-	for j = 1:n_tests
-	  for i = 1:n_subjects
-	    temp_design = design(randperm(numel(design)));
-	    cfg.trials = find(temp_design==1);
-	    avg_A{i} = ft_timelockanalysis(cfg, data{i});
+  % Run all the tests.
+  h = zeros(1,n_tests);
+  for j = 1:n_tests
+    for i = 1:n_subjects
+      temp_design = design(randperm(numel(design)));
+      cfg.trials = find(temp_design==1);
+      avg_A{i} = ft_timelockanalysis(cfg, data{i});
 
-	    cfg.trials = find(temp_design==2);
-	    avg_B{i} = ft_timelockanalysis(cfg, data{i});
-	  end;
-	  stat = ft_timelockstatistics(cfg_stats, avg_A{:},avg_B{:});   % don't forget the {:}!
-	  h(j) = sum(stat.mask)/numel(stat.mask); % calculate proportion of significant tests
-	end;
+      cfg.trials = find(temp_design==2);
+      avg_B{i} = ft_timelockanalysis(cfg, data{i});
+    end;
+    stat = ft_timelockstatistics(cfg_stats, avg_A{:},avg_B{:});   % don't forget the {:}!
+    h(j) = sum(stat.mask)/numel(stat.mask); % calculate proportion of significant tests
+  end;
 
 
 ## Assumptions of statistical tests

@@ -9,21 +9,21 @@ Electrode positions in the layouts are represented as points in 2-D Carthesian s
 
 You can use the following snippet of code to get a quick overview of the template layout sets.
 
-	dirlist  = dir('template/layout/*');
-	filename = {dirlist(~[dirlist.isdir]).name}'
-	for i=1:length(filename)
-	  cfg = [];
-	  cfg.layout = filename{i};
-	  layout = ft_prepare_layout(cfg);
+  dirlist  = dir('template/layout/*');
+  filename = {dirlist(~[dirlist.isdir]).name}'
+  for i=1:length(filename)
+    cfg = [];
+    cfg.layout = filename{i};
+    layout = ft_prepare_layout(cfg);
 
-	  figure
-	  ft_plot_lay(layout);
-	  h = title(filename{i});
-	  set(h, 'Interpreter', 'none');
+    figure
+    ft_plot_lay(layout);
+    h = title(filename{i});
+    set(h, 'Interpreter', 'none');
 
-	  [p, f, x] = fileparts(filename{i});
-	  print([lower(f) '.png'], '-dpng');
-	end
+    [p, f, x] = fileparts(filename{i});
+    print([lower(f) '.png'], '-dpng');
+  end
 
 {% include markup/warning %}
 You can find the template 2-D layouts for plotting that are included in FieldTrip [here on Github](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout/).

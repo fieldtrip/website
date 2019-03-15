@@ -19,7 +19,7 @@ parallel ports, network ports, and special digital I/O boxes.
 The **[ft_write_event](/reference/ft_write_event)** function includes "serial:%%//%%`<port>`?key1=value1&key2=value2&..." as a target stream.
 ## Communicating to a serial port using a TCP network connection
 
-[HW VSP](http://www.hw-group.com/products/hw_vsp/index_en.html) is a software driver that adds a virtual serial port (e.g. COM5) to the operating system and redirects the data from this port via a TCP/IP network to another hardware interface, which is specified by its IP address and port number. Alternative products are listed here http://en.wikipedia.org/wiki/COM_port_redirector.
+[HW VSP](http://www.hw-group.com/products/hw_vsp/index_en.html) is a software driver that adds a virtual serial port (e.g. COM5) to the operating system and redirects the data from this port via a TCP/IP network to another hardware interface, which is specified by its IP address and port number. Alternative products are listed here <http://en.wikipedia.org/wiki/COM_port_redirector>.
 
 ## Communicating over a parallel port connection
 

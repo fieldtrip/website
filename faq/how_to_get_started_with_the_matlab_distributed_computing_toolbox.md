@@ -21,41 +21,41 @@ The distributed computing toolbox requires that you begin by starting up the "wo
 
 which starts 4 workers with the "local" configuration. Subsequently you can use parfor instead of the normal for to iterate over a number of computations, as in
 
-	
-	dataset = {
-	'Subject01.ds'
-	'Subject02.ds'
-	'Subject03.ds'
-	};
-	
-	parfor i=1:3
-	  cfg = [];
-	  cfg.dataset = dataset{i}
-	  data{i} = ft_preprocessing(cfg);
-	end
+  
+  dataset = {
+  'Subject01.ds'
+  'Subject02.ds'
+  'Subject03.ds'
+  };
+  
+  parfor i=1:3
+    cfg = [];
+    cfg.dataset = dataset{i}
+    data{i} = ft_preprocessing(cfg);
+  end
 
    
 Alternatively you can use the dfeval function like this
 
-	
-	for i=1:3
-	  cfg{i} = [];
-	  cfg{i}.dataset = dataset{i};
-	end
-	
-	data = dfeval(@ft_preprocessing, cfg, 'Configuration', 'local');
+  
+  for i=1:3
+    cfg{i} = [];
+    cfg{i}.dataset = dataset{i};
+  end
+  
+  data = dfeval(@ft_preprocessing, cfg, 'Configuration', 'local');
 
 The dfeval function works similar to the standard MATLAB cellfun function, and thereby to the FieldTrip **[qsubcellfun](/reference/qsubcellfun)** and **[peercellfun](/reference/peercellfun)** functions. 
 
 A third approach that is available in the distributed computing toolbox is to use the spmd construct. Given the same definition of the dataset as a cell-array with three strings as above, this would look like
 
-	
-	matlabpool local 3
-	spmd 3
-	  cfg = [];
-	  cfg.dataset = dataset{labindex};
-	  data{labindex} = ft_preprocessing(cfg);
-	end
+  
+  matlabpool local 3
+  spmd 3
+    cfg = [];
+    cfg.dataset = dataset{labindex};
+    data{labindex} = ft_preprocessing(cfg);
+  end
 
 The labindex variable is automatically replaced by the number of the worker. Note that this only works if your matlabpool is greater than or equal to the number of jobs.
 

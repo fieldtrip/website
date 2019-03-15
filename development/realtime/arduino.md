@@ -23,17 +23,17 @@ The Bluetooth module was configured with the following settings. See http://www.
 
 
 
-	***Settings***
-	BTA=00066649542F
-	BTName=RN42-542F
-	Baudrt=57.6
-	Parity=None
-	Mode  =Slav
-	Authen=0
-	Encryp=0
-	PinCod=1234
-	Bonded=0
-	Rem=000666495493
+  ***Settings***
+  BTA=00066649542F
+  BTName=RN42-542F
+  Baudrt=57.6
+  Parity=None
+  Mode  =Slav
+  Authen=0
+  Encryp=0
+  PinCod=1234
+  Bonded=0
+  Rem=000666495493
 
 The modeeg synchronization code is 0xA5 0x5A, or 165 90 in decimal.
 

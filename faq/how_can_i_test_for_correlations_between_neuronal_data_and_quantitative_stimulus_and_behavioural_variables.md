@@ -56,35 +56,35 @@ In the following example we will consider a design in which we want to test if t
 First, we will consider testing if there is a relationship between our **independent** and **dependent** variable using the **ft_statfun_indepsamplesregrT** function.
 
 
-	% compute statistics with ft_statfun_indepsamplesregrT
-	cfg = [];
-	cfg.statistic        = 'ft_statfun_indepsamplesregrT';
-	cfg.method           = 'montecarlo';
-	cfg.numrandomization = 1000;
+  % compute statistics with ft_statfun_indepsamplesregrT
+  cfg = [];
+  cfg.statistic        = 'ft_statfun_indepsamplesregrT';
+  cfg.method           = 'montecarlo';
+  cfg.numrandomization = 1000;
 
-	n1 = 3;    % n1 is the number of subjects
-	design(1,1:n1)       = [0.6 0.9 0.1]; %here we insert our independent variable (behavioral data) in the cfg.design matrix, in this case reaction times of 3 subjects.
+  n1 = 3;    % n1 is the number of subjects
+  design(1,1:n1)       = [0.6 0.9 0.1]; %here we insert our independent variable (behavioral data) in the cfg.design matrix, in this case reaction times of 3 subjects.
 
-	cfg.design           = design;
-	cfg.ivar             = 1;
+  cfg.design           = design;
+  cfg.ivar             = 1;
 
-	stat = ft_freqstatistics(cfg, data_brain{:});
+  stat = ft_freqstatistics(cfg, data_brain{:});
 
 In order to test for a correlation between the **independent** and **dependent** variable using Pearson we can use the **ft_statfun_correlationT**  function.
 
-	% compute statistics with correlationT
-	cfg = [];
-	cfg.statistic        = 'ft_statfun_correlationT';
-	cfg.method           = 'montecarlo';
-	cfg.numrandomization = 1000;
+  % compute statistics with correlationT
+  cfg = [];
+  cfg.statistic        = 'ft_statfun_correlationT';
+  cfg.method           = 'montecarlo';
+  cfg.numrandomization = 1000;
 
-	n1 = 3;    % n1 is the number of subjects
-	design(1,1:n1)       = [0.6 0.9 0.1]; %here we insert our independent variable (behavioral data) in the cfg.design matrix, in this case reaction times of 3 subjects.
+  n1 = 3;    % n1 is the number of subjects
+  design(1,1:n1)       = [0.6 0.9 0.1]; %here we insert our independent variable (behavioral data) in the cfg.design matrix, in this case reaction times of 3 subjects.
 
-	cfg.design           = design;
-	cfg.ivar             = 1;
+  cfg.design           = design;
+  cfg.ivar             = 1;
 
-	stat = ft_freqstatistics(cfg, data_brain{:});
+  stat = ft_freqstatistics(cfg, data_brain{:});
 
 ### Categorical Independent Variable
 
@@ -92,16 +92,16 @@ In the next example we will consider a design in which we want to test if there 
 
 We will consider testing if there is a relationship between our **independent** and **dependent** variable using the **ft_statfun_indepsamplesT** function.
 
-	% compute statistics with ft_statfun_indepsamleT
-	cfg = [];
-	cfg.statistic        = 'ft_statfun_indepsamplesT';
-	cfg.method           = 'montecarlo';
-	cfg.numrandomization = 1000;
+  % compute statistics with ft_statfun_indepsamleT
+  cfg = [];
+  cfg.statistic        = 'ft_statfun_indepsamplesT';
+  cfg.method           = 'montecarlo';
+  cfg.numrandomization = 1000;
 
-	n1 = 20;    % n1 is the number of trials
-	design(1,1:n1)       = [1;2;2;1;1;1;1;1;2;1;1;1;2;2;2;1;2;1;2;2]; %here we insert our independent variable (behavioral data) in the cfg.design matrix, in this case accuracy per trial of 1 subject.
+  n1 = 20;    % n1 is the number of trials
+  design(1,1:n1)       = [1;2;2;1;1;1;1;1;2;1;1;1;2;2;2;1;2;1;2;2]; %here we insert our independent variable (behavioral data) in the cfg.design matrix, in this case accuracy per trial of 1 subject.
 
-	cfg.design           = design;
-	cfg.ivar             = 1;
+  cfg.design           = design;
+  cfg.ivar             = 1;
 
-	stat = ft_freqstatistics(cfg, data_brain);
+  stat = ft_freqstatistics(cfg, data_brain);

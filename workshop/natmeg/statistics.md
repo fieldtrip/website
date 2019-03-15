@@ -26,7 +26,7 @@ The topic of this tutorial is the statistical analysis of multi-channel MEG data
 
 An important feature of the MEG and EEG data is that it has a spatial temporal structure, i.e. the data is sampled at multiple time-points and sensors. The nature of the data influences which kind of statistics is the most suitable for comparing conditions. If the experimenter is interested in a difference in the signal at a certain time-point and sensor, then the more widely used parametric tests are also sufficient. If it is not possible to predict where the differences are, then many statistical comparisons are necessary which lead to the *multiple comparisons problem* (MCP). The MCP arises from the fact that the effect of interest (i.e., a difference between experimental conditions) is evaluated at an extremely large number of (channel,time)-pairs. This number is usually in the order of several thousands. Now, the MCP involves that, due to the large number of statistical comparisons (one per (channel,time)-pair), it is not possible to control the so called *family-wise error rate* (FWER) by means of the standard statistical procedures that operate at the level of single (channel,time)-pairs. The FWER is the probability, under the hypothesis of no effect, of falsely concluding that there is a difference between the experimental conditions at one or more (channel,time)-pairs. A solution of the MCP requires a procedure that controls the FWER at some critical alpha-level (typically, 0.05 or 0.01). The FWER is also called the *false alarm rate*.
 
-When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting *n* number of statistical tests then each of the individual tests should be tested under a significance level that is divided by *n*. The Bonferroni correction was derived from the observation that if *n* tests are performed with an *alpha* significance level then the probability that one comes out significantly is =< *n**//alpha// (Boole's inequality). In order to keep this probability lower, we can use an *alpha* that is divided by *n* for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.   
+When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting *n* number of statistical tests then each of the individual tests should be tested under a significance level that is divided by *n*. The Bonferroni correction was derived from the observation that if *n* tests are performed with an *alpha* significance level then the probability that one comes out significantly is smaller than or equal to *n* times *alpha* (Boole's inequality). In order to keep this probability lower, we can use an *alpha* that is divided by *n* for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.   
 
 In constrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
@@ -35,6 +35,7 @@ In constrast to the familiar parametric statistical framework, it is straightfor
 The preprocessing and time-frequency computation is similar to how it is done in the previous tutorials, and hence not explained in further detail.
 
 The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
+
 ### Preprocessing the response-locked data
 
     cfg = [];
@@ -172,7 +173,7 @@ With time-frequency data we have three dimensions in which we can form clusters.
           label: 'MEG0111'
     neighblabel: {3x1 cell}
 
-The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as //[]//, i.e. empty.
+The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as '[]', i.e. empty.
 
 {% include image src="/assets/img/workshop/natmeg/statistics/natmeg_stat_neighbours.png" width="500" %}
 

@@ -9,16 +9,16 @@ Certain functions require knowledge what sensors are near other sensors and shou
 
 In FieldTrip, the function **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** is computing information about what sensors are neighbours of which other sensors. Neighbourhood should be a symmetric property (if A is a neighbour of B, then B is a neighbour of A). You can get neighbours from your data as followin
 
-	  cfg.neighbours = ft_prepare_neighbours(cfg, data);
+    cfg.neighbours = ft_prepare_neighbours(cfg, data);
 
 You can verify the neighbourselection by calling **[ft_neighbourplot](/reference/ft_neighbourplot)**
 
-	  ft_neighbourplot(cfg, data);
+    ft_neighbourplot(cfg, data);
 
 or by simply asking for feedback when calling ft_prepare_neighbours
 
-	  cfg.feedback = 'yes';
-	  cfg.neighbours = ft_prepare_neighbours(cfg, data);
+    cfg.feedback = 'yes';
+    cfg.neighbours = ft_prepare_neighbours(cfg, data);
 
 There are three methods how ft_prepare_neighbours can define the neighbour structure for your data: 'distance', 'triangulation' and 'template'.
 

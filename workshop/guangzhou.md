@@ -16,21 +16,21 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
 
 -   Session I
 
-    -   9:45			Registration, coffee, opening remarks
-    -   10:05 – 11:00		Lecture: Introduction to EEG (vs MEG) and the FieldTrip toolbox
-    -   11:00 – 11:15		Coffee Break
+    -   9:45      Registration, coffee, opening remarks
+    -   10:05 – 11:00    Lecture: Introduction to EEG (vs MEG) and the FieldTrip toolbox
+    -   11:00 – 11:15    Coffee Break
     -   11:15 – 12:45             Hands-on: Preprocessing EEG and event-related averaging, design your own sensory ECoG electrode montage
         -   <http://www.fieldtriptoolbox.org/tutorial/preprocessing_erp>
         -   <http://www.fieldtriptoolbox.org/tutorial/layout>
-    -   12:45 – 13:45		Lunch
+    -   12:45 – 13:45    Lunch
 
 -   Session II
 
-    -   13:45 – 14:45		Lecture: Fundamentals of neuronal oscillations and  synchrony
-    -   14:45 – 15:00   	        Coffee Break
-    -   15:00 – 16:45		Hands-on: Time-frequency analysis of power  
+    -   13:45 – 14:45    Lecture: Fundamentals of neuronal oscillations and  synchrony
+    -   14:45 – 15:00             Coffee Break
+    -   15:00 – 16:45    Hands-on: Time-frequency analysis of power  
         -   <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>     
-    -   16:45 – 17:30		Wrap-up-the-day: “Ask the experts” session
+    -   16:45 – 17:30    Wrap-up-the-day: “Ask the experts” session
 
 -   dinner (not included, i.e. on own costs)
 
@@ -38,24 +38,24 @@ REGISTRATION CLOSED: NO PLACES AVAILABLE
 
 -   Session III
 
-    -   10:00 – 11:00		Lecture: Connectivity analysis on sensor data
-    -   11:00 – 11:15		Coffee break
-    -   11:15 – 13:00		Hands-on: Connectivity analysis on sensor data
+    -   10:00 – 11:00    Lecture: Connectivity analysis on sensor data
+    -   11:00 – 11:15    Coffee break
+    -   11:15 – 13:00    Hands-on: Connectivity analysis on sensor data
         -   <http://www.fieldtriptoolbox.org/tutorial/connectivity>
-    -   13:00 – 14:00		Lunch
+    -   13:00 – 14:00    Lunch
 
 -   Session IV
-    -   14:00 – 15:15		Lecture: Non-parametric randomization techniques
-    -   15:15 – 15:30		Coffee break
-    -   15:30 – 17:15	        Hands-on: Parametric and non-parametric statistics on sensor data
+    -   14:00 – 15:15    Lecture: Non-parametric randomization techniques
+    -   15:15 – 15:30    Coffee break
+    -   15:30 – 17:15          Hands-on: Parametric and non-parametric statistics on sensor data
         -   <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
         -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
-    -   17:15 – 18:00		Wrap-up-the-day: “Ask the experts” session
+    -   17:15 – 18:00    Wrap-up-the-day: “Ask the experts” session
 
 #### Thursday August 25th
 
 -   Session V
-    -   10:00 – 13:00		FieldTrip playground: bring your own data
+    -   10:00 – 13:00    FieldTrip playground: bring your own data
         -   <http://www.fieldtriptoolbox.org/tutorial/monkey_ecog>
     -   Wrap up of the workshop
 

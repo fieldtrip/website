@@ -12,24 +12,24 @@ This is further detailed in the Elekta System Hardware Users' Guide and on [this
 The following code demonstrates how you can determine the orientation of the two planar channels at each location.
 
 
-	grad = ft_read_sens(filename, 'senstype', 'meg');
+  grad = ft_read_sens(filename, 'senstype', 'meg');
 
-	sel = find(strcmp(grad.chantype, 'megplanar'));
+  sel = find(strcmp(grad.chantype, 'megplanar'));
 
-	for i=1:numel(sel)
-	  j = sel(i);
-	  clear coilindex*
-	  coilindex1 = find(grad.tra(j,:)>0)
-	  coilindex2 = find(grad.tra(j,:)<0)
-	  pos(i,:) = (grad.coilpos(coilindex2,:) + grad.coilpos(coilindex1,:))/2;
-	  ori(i,:) = grad.coilpos(coilindex2,:) - grad.coilpos(coilindex1,:);
-	  ori(i,:) = ori(i,:)/norm(ori(i,:));
+  for i=1:numel(sel)
+    j = sel(i);
+    clear coilindex*
+    coilindex1 = find(grad.tra(j,:)>0)
+    coilindex2 = find(grad.tra(j,:)<0)
+    pos(i,:) = (grad.coilpos(coilindex2,:) + grad.coilpos(coilindex1,:))/2;
+    ori(i,:) = grad.coilpos(coilindex2,:) - grad.coilpos(coilindex1,:);
+    ori(i,:) = ori(i,:)/norm(ori(i,:));
 
-	end
+  end
 
-	figure
-	quiver3(pos(:,1), pos(:,2), pos(:,3), ori(:,1), ori(:,2), ori(:,3))
-	axis equal
-	axis vis3d
+  figure
+  quiver3(pos(:,1), pos(:,2), pos(:,3), ori(:,1), ori(:,2), ori(:,3))
+  axis equal
+  axis vis3d
 
 {% include image src="/assets/img/example/planar_orientation/planar_orientation.png" %}

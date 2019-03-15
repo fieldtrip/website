@@ -52,7 +52,7 @@ Now we specify cross-validation as a method for timelock statistics. This ensure
     cfg.layout  = 'CTF275.lay';
     cfg.method  = 'crossvalidate';
 
-We also need to specify a design matrix; this is simply a vector with labels *1* for the trials belonging to data for the first condition and labels *2* for trials belonging to data for the second condition
+We also need to specify a design matrix; this is simply a vector with labels _1_ for the trials belonging to data for the first condition and labels _2_ for trials belonging to data for the second condition
 
     cfg.design  = [ones(size(tleft.trial,1),1); 2*ones(size(tright.trial,1),1)]';
 
@@ -81,7 +81,7 @@ We may also plot the parameters of the used classifier as if it were electrophys
 
     stat.mymodel = stat.model{1}.primal;
 
-and subsequently to treat the stat object as if it were data. The *parameter* field is then used to determine what to plo
+and subsequently to treat the stat object as if it were data. The _parameter_ field is then used to determine what to plo
 
     cfg              = [];
     cfg.parameter    = 'mymodel';
@@ -94,7 +94,7 @@ and subsequently to treat the stat object as if it were data. The *parameter* fi
 
 {% include image src="/assets/img/tutorial/multivariateanalysis/clf_1.png" width="200" %}
 
-In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using *imagesc(stat.mymodel)* then it will be found that all features are used due to the way classifier operates. One way to solve this is to use *dimensionality reduction* or *feature selection*. We will see examples later in this tutorial.
+In practice, we may want to average the parameters over folds to get an average estimate of the parameters. Note further that the plot is hard to interpret. The fact that contributions extend beyond the selected channels is due to interpolation artifacts. If we look at individual features using _imagesc(stat.mymodel)_ then it will be found that all features are used due to the way classifier operates. One way to solve this is to use _dimensionality reduction_ or _feature selection_. We will see examples later in this tutorial.
 
 #### Exercise 1
 
@@ -104,7 +104,7 @@ Explain which information the contingency matrix gives you, which the accuracy d
 
 Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
 
-Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of *overfitting* and *generalization* in your explanation.
+Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of _overfitting_ and _generalization_ in your explanation.
 
 Suppose you try multiple different classification procedures and find at some point that you reach a classification performance that is significantly better than chance at p=0.05. Should you trust this result? Why (not)?
 {% include markup/end %}
@@ -161,7 +161,7 @@ Rerun the previous cross-validation with 'cfg.nfolds=2'. Explain the difference 
 ### Dimensionality reduction and feature selection
 
 One important thing to consider when classifying electrophysiological data is that we wish to reduce as much as possible the number of features used to classify the data. There are two ways to achieve this: either we map the input data to another space with a smaller number of dimensions or we select a number of dimensions from the original space.
-Going back to our analysis of timelocked data, we could for instance use common spatial patterns (see this [paper](http://dx.doi.org/10.1016/j.neuroimage.2010.06.048) for an explanation) to map our data to a different space. Here, instead, we perform a feature selection in the original space using a regularized classification approach. This is done by overriding the default classification procedure using the *cfg.mva* field:
+Going back to our analysis of timelocked data, we could for instance use common spatial patterns (see this [paper](http://dx.doi.org/10.1016/j.neuroimage.2010.06.048) for an explanation) to map our data to a different space. Here, instead, we perform a feature selection in the original space using a regularized classification approach. This is done by overriding the default classification procedure using the _cfg.mva_ field:
 
     cfg         = [];
     cfg.layout  = 'CTF275.lay';
@@ -202,13 +202,13 @@ Alpha is a free parameter in our model. How would you determine the optimal sett
 
 If we use more and more features then classification performance will first go up but eventually starts to degrade. Explain why this may happen.
 
-Suppose we wish to select the optimal feature subset by testing all possible subsets. How many subsets do we need to test when we have *n* features in total?
+Suppose we wish to select the optimal feature subset by testing all possible subsets. How many subsets do we need to test when we have _n_ features in total?
 {% include markup/end %}
 
 ## Conclusion
 
-In this tutorial we have touched on a number of important issues in the classification of electrophysiological data. However, we barely scratched the surface of this field since there are many more possibilities to explore. First, many different procedures can be devised that use different forms of preprocessing, feature selection  and/or prediction. For example, we may want to deal with continuous instead of discrete outputs (regression versus classification), we may want to perform a Bayesian analysis which also gives error bars on the predictions, or we may want to use timeseries analysis in order to predict changes in ongoing activity.
+In this tutorial we have touched on a number of important issues in the classification of electrophysiological data. However, we barely scratched the surface of this field since there are many more possibilities to explore. First, many different procedures can be devised that use different forms of preprocessing, feature selection and/or prediction. For example, we may want to deal with continuous instead of discrete outputs (regression versus classification), we may want to perform a Bayesian analysis which also gives error bars on the predictions, or we may want to use timeseries analysis in order to predict changes in ongoing activity.
 
-To use some of the more advanced methods it is required to call lower level functions. We recommend looking at the tutorials which have been written for DMLT. These can be accessed through MATLAB's *doc* facility.
+To use some of the more advanced methods it is required to call lower level functions. We recommend looking at the tutorials which have been written for DMLT. These can be accessed through MATLAB's _doc_ facility.
 
 To construct online experimental designs that make use of multivariate analysis, for example to build BCI or neurofeedback applications, we have developed the [realtime](/development/realtime) module.

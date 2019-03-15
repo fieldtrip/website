@@ -17,52 +17,52 @@ To deal with the first case (resubmission because "job takes too long"), you can
 If you also want to prevent case two, you can modify your jobs such that they are guaranteed to run only once. Given that your job reads and writes files, it will probably look something like the following.
 
 
-	function jobfunction(id)
-	switch id
-	case 1
-	  infile  = 'subject01.mat'
-	  outfile = 'subject01.mat'
-	case 2
-	  infile  = 'subject02.mat'
-	  outfile = 'subject02.mat'
-	case 3
-	   ...
-	otherwise
-	  error('unknown subject ID');
-	end
+  function jobfunction(id)
+  switch id
+  case 1
+    infile  = 'subject01.mat'
+    outfile = 'subject01.mat'
+  case 2
+    infile  = 'subject02.mat'
+    outfile = 'subject02.mat'
+  case 3
+     ...
+  otherwise
+    error('unknown subject ID');
+  end
 
-	load(infile);
-	% do computation
-	...
-	save(outfile);
+  load(infile);
+  % do computation
+  ...
+  save(outfile);
 
 Prior to reading the data, starting the computations and writing the results to disk, you can use a lockfile to prevent the job from being executed twice, e.g. change the job into
 
 
-	function jobfunction(id)
-	switch id
-	case 1
-	  infile  = 'subject01.mat'
-	  outfile = 'subject01.mat'
-	case 2
-	  infile  = 'subject02.mat'
-	  outfile = 'subject02.mat'
-	case 3
-	   ...
-	otherwise
-	  error('unknown subject ID');
-	end
+  function jobfunction(id)
+  switch id
+  case 1
+    infile  = 'subject01.mat'
+    outfile = 'subject01.mat'
+  case 2
+    infile  = 'subject02.mat'
+    outfile = 'subject02.mat'
+  case 3
+     ...
+  otherwise
+    error('unknown subject ID');
+  end
 
-	lockfile = [outfile '.lock'];
-	if ~exist(lockfile, 'file')
-	  % create the lockfile
-	  fclose(fopen(lockfile, 'wb'));
-	else
-	  warning('lockfile %s exists, not starting the job a second time', lockfile);
-	  return
-	end
+  lockfile = [outfile '.lock'];
+  if ~exist(lockfile, 'file')
+    % create the lockfile
+    fclose(fopen(lockfile, 'wb'));
+  else
+    warning('lockfile %s exists, not starting the job a second time', lockfile);
+    return
+  end
 
-	load(infile);
-	% do computation
-	...
-	save(outfile);
+  load(infile);
+  % do computation
+  ...
+  save(outfile);

@@ -22,7 +22,7 @@ It is possible to use the eye tracker in combination with a behavioural task tha
 The Eyelink 1000 output is an *.EDF file (eyelink data file). There are several ways to read (directly or indirectly) this data into MATLAB. To use FieldTrip for data analysis, you have to convert the EDF file to an ASCII text format using the Eyelink executable EDF2ASC.EXE. You need to run the EDF2ASC.EXE that can be downloaded [here](https://www.sr-support.com/showthread.php?17-EDF2ASC-Conversion-Utility) under MSDOS on the Eyelink computer and find your *.EDF recording as follow
 
 
-	EDF2ASC filename.edf
+  EDF2ASC filename.edf
 
 You can type DIR to see if your *.EDF file is located in the current working directory. When the conversion is finished, you need to reboot the Eyelink PC to windows to read your data, because in MSDOS you cannot use USB memory stick.
 
@@ -245,25 +245,25 @@ The DAC conversion in the Eyelink system takes some time, and therefore the UADC
 Since both MEG and Eyelink get the same triggers, you can use FieldTrip **[ft_definetrial](/reference/ft_definetrial)** on both to read the same segments.
 
 
-	cfg = [];
-	cfg.dataset = filename_meg;
-	cfg.trialdef.eventtype      = 'UPPT001';
-	cfg.channel = {'UADC*', 'MEG', 'EEG'}; % read all relevant channels
-	cfg.trialdef.eventvalue     = 104;
-	cfg.trialdef.prestim        = .5;
-	cfg.trialdef.poststim       = 1;
-	cfg.continuous  = 'yes';
-	cfg = ft_definetrial(cfg);
-	data_meg = ft_preprocessing(cfg);
+  cfg = [];
+  cfg.dataset = filename_meg;
+  cfg.trialdef.eventtype      = 'UPPT001';
+  cfg.channel = {'UADC*', 'MEG', 'EEG'}; % read all relevant channels
+  cfg.trialdef.eventvalue     = 104;
+  cfg.trialdef.prestim        = .5;
+  cfg.trialdef.poststim       = 1;
+  cfg.continuous  = 'yes';
+  cfg = ft_definetrial(cfg);
+  data_meg = ft_preprocessing(cfg);
 
-	cfg = [];
-	cfg.dataset = filename_eye;
-	cfg.trialdef.eventtype      = 'INPUT';
-	cfg.trialdef.eventvalue     = 104;
-	cfg.trialdef.prestim        = .5;
-	cfg.trialdef.poststim       = 1;
-	cfg = ft_definetrial(cfg);
-	data_eye = ft_preprocessing(cfg);
+  cfg = [];
+  cfg.dataset = filename_eye;
+  cfg.trialdef.eventtype      = 'INPUT';
+  cfg.trialdef.eventvalue     = 104;
+  cfg.trialdef.prestim        = .5;
+  cfg.trialdef.poststim       = 1;
+  cfg = ft_definetrial(cfg);
+  data_eye = ft_preprocessing(cfg);
 
 
 and plot them side by side

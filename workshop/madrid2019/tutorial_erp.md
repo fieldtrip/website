@@ -176,9 +176,9 @@ FieldTrip data structures are intended to be "lightweight", in the sense
 that the internal MATLAB arrays can be transparently accessed. Have a look
 at the data as you read it into memory
 
-	>> data
+  >> data
 
-	data =
+  data =
 
            hdr: [1x1 struct]
          label: {1x65 cell}
