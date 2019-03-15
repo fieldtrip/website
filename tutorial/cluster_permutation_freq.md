@@ -123,7 +123,7 @@ To save:
 
 ### Permutation test
 
-Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to compare freqFIC_planar_cmb and freqFC_planar_cmb. Except for the field cfg.latency, the following configuration is identical to the configuration that was used for comparing event-related averages in the [cluster-based permutation tests on event related fields tutorial](/tutorial/cluster_permutation_timelock). Also see [this tutorial](/tutorial/cluster_permutation_timelock) for a detailed explanation of all the configuration settings. You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQ's](/faq/how_does_ft_prepare_neighbours_work).
+Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to compare freqFIC_planar_cmb and freqFC_planar_cmb. Except for the field cfg.latency, the following configuration is identical to the configuration that was used for comparing event-related averages in the [cluster-based permutation tests on event related fields tutorial](/tutorial/cluster_permutation_timelock). Also see [this tutorial](/tutorial/cluster_permutation_timelock) for a detailed explanation of all the configuration settings. You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
 
 To load the planar gradient TFRs (also available on the FieldTrip FTP servers, [freqFIC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_planar_cmb.mat) and [freqFC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFC_planar_cmb.mat)), us
 
@@ -297,7 +297,7 @@ To compare freqFIC_baseline_planar_cmb and freqFIC_activation_planar_cmb by mean
 
 This configuration for a within-trials experiment is very similar to the configuration for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments) in which we compared the evoked responses to fully incongruent and fully congruent sentence endings. The main difference is the measure that we use to evaluate the effect at the sample level (cfg.statistic = 'ft_statfun_actvsblT' instead of cfg.statistic = 'ft_statfun_depsamplesT'). With cfg.statistic = 'ft_statfun_actvsblT', we choose the so-called _activation-versus-baseline T-statistic_. This statistic compares the power in every sample (i.e., a (channel,frequency,time)-triplet) in the activation period with the corresponding time-averaged power (i.e., the average over the temporal dimension) in the baseline period. The comparison of the activation and the time-averaged baseline power is performed by means of a dependent samples T-statistic.
 
-You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQ's](/faq/how_does_ft_prepare_neighbours_work).
+You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
 
 We can now run **[ft_freqstatistics](/reference/ft_freqstatistics)**
 
@@ -342,7 +342,7 @@ The averages of the TFRs for the fully incongruent and the fully congruent sente
 
 ### Permutation test
 
-We now perform the permutation test using **[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration setting for this analysis are almost identical to the settings for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments). The only difference is a small change in the latency window (cfg.latency). You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQ's](/faq/how_does_ft_prepare_neighbours_work).
+We now perform the permutation test using **[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration setting for this analysis are almost identical to the settings for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments). The only difference is a small change in the latency window (cfg.latency). You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
 
     cfg = [];
     cfg.channel          = {'MEG'};

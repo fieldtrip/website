@@ -35,7 +35,7 @@ For consistency the tutorials should preferably be structured in the following w
 - **Summary and conclusion:**
   - What has been covered?
   - What has not been covered but is relevant in the context of the tutorial?
-  - Provide links to suggested further reading, related FAQ's and example scripts.
+  - Provide links to suggested further reading, related FAQs and example scripts.
 
 To check that the tutorial meets the expected didactical qualities, the introduction should spell out what the reader will learn, what is expected from him (e.g. that he already has done another tutorial) and what will not be covered. The summary should link to follow up documentation and to the more advanced topics that relate to the tutorial.
 

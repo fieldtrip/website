@@ -15,14 +15,14 @@ Note that the MEG-PD toolbox will only function on 32-bit machines, and requires
 
 ## Set Path
 
-To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. In respect to FiedlTrip, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
+To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. In respect to FiedlTrip, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     addpath `<full_path_to_fieldtrip>`
     ft_defaults
 
 ## Reading MEG data
 
-The first step is to see if you can read in the data using both the toolboxes by typing the following in the command windo
+The first step is to see if you can read in the data using both the toolboxes by typing the following in the command window:
 
     >> hdr = ft_read_header(filename); %your fif-filename
     >> hdr

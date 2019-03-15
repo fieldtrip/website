@@ -30,7 +30,7 @@ The functions in FieldTrip that allows you to execute the pre-processing and co-
 
 ## Set path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)). You also need to set the path to your data files.
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path). You also need to set the path to your data files.
 
     addpath `<full_path_to_fieldtrip>`
     ft_defaults
@@ -104,7 +104,7 @@ The options such as 'chanindx' should be specified in key-value pairs (see [ft_r
 
 ### Read events
 
-In order to select pieces of data around the events in which you are interest, you can call the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**, either using a generic definition or using your own ''trialfun''. The trialfunction calls the low-level reading function, **[ft_read_event](/reference/ft_read_event)**. The function reads event information and represents it in a common data-independent format. This event-reading function works for an exported .con file as follow
+In order to select pieces of data around the events in which you are interest, you can call the FieldTrip function, **[ft_definetrial](/reference/ft_definetrial)**, either using a generic definition or using your own ''trialfun''. The trialfunction calls the low-level reading function, **[ft_read_event](/reference/ft_read_event)**. The function reads event information and represents it in a common data-independent format. This event-reading function works for an exported .con file as follows:
 
     >> event = ft_read_event(dataset,'threshold', 1.6)
 
@@ -242,18 +242,17 @@ The co-registration is usually done in two steps; the first step is an approxima
 
 1.  To use HPIs (marker coils) as the fiducial points
 2.  To use three anatomical landmarks (Nasion, left, and right pre-auricular points) as the fiducial points
-    For the case 1, the positions corresponding to the HPIs are needed to be displayed on the MRI (by vitamin-drug dot images in most cases). For the case 2, it is necessary that the three landmarks, NAS, LPA, and RPA, were picked by a 3D scanner (digitizer) and already have been co-registered with HPIs (i.e., MEG). For Ricoh and Yokogawa data (.con, .ave, .mrk), the HPI positions, the anatomical landmarks, and the additional digitized points can be elicited by the FieldTrip function, 'ft_read_headshape'.
 
-In the Ricoh and Yokogawa system, the coordinate system is defined a
+For the case 1, the positions corresponding to the HPIs are needed to be displayed on the MRI (by vitamin-drug dot images in most cases). For the case 2, it is necessary that the three landmarks, NAS, LPA, and RPA, were picked by a 3D scanner (digitizer) and already have been co-registered with HPIs (i.e., MEG). For Ricoh and Yokogawa data (.con, .ave, .mrk), the HPI positions, the anatomical landmarks, and the additional digitized points can be elicited by the FieldTrip function, 'ft_read_headshape'.
+
+In the Ricoh and Yokogawa system, the coordinate system is defined as:
 
 - Origin is at the center of the helmet
-
 - X-axis goes towards the nose
-
 - Y-axis goes towards the left
-
 - Z-axis goes towards the top of the head
-  This coordinate system is same as the CTF coordinate system (see the [faq](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)). It is therefore convenient to introduce the CTF coordinate system for defining a head coordinate system. In the co-registration procedure described below, there is a step of defining a head coordinate system with the CTF convention.
+
+This coordinate system is same as the CTF coordinate system (see the [faq](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)). It is therefore convenient to introduce the CTF coordinate system for defining a head coordinate system. In the co-registration procedure described below, there is a step of defining a head coordinate system with the CTF convention.
 
 ### Read MRI
 

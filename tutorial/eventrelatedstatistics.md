@@ -418,7 +418,7 @@ This tutorial showed you how to perform parametric and non-parametric statistics
 After this gentle introduction in statistics with FieldTrip, you can continue with the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
 and the [cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorials. These give a more detailed description of non-parametric statistical testing with a cluster-based approach.
 
-If you would like to read more about issues related to statistical analysis, you can read the following FAQ's as well:
+If you would like to read more about issues related to statistical analysis, you can read the following FAQs as well:
 
 - [Why should I use the cfg.correcttail option when using statistics_montecarlo?](/faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo)
 - [What is the idea behind statistical inference at the second-level?](/faq/what_is_the_idea_behind_statistical_inference_at_the_second-level)
