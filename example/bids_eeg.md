@@ -18,13 +18,14 @@ In this example we will only be dealing with the format in which the data is org
 Prior to conversion the data comprises 10 files (one file per subject). After conversion there are 52 or 72 files (for the two options described below), which includes the sidecar files with metadata.
 
 The procedure for converting the original data consists of a number of steps
- 1.  Create empty directory structure according to BIDS
- 2.  Collect the EEG data
- 3.  Create the sidecar files for each dataset
- 4.  Create the general sidecar files
- 5.  Finalize
 
-Step 1, 2 and step 4 are implemented using [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) scripts. The construction of the sidecar files in step 3 is implemented using the **[data2bids](/reference/data2bids)** function that is part of FieldTrip. The final step is not automated, but consists of some manual work.
+1.  Create empty directory structure according to BIDS
+2.  Collect the EEG data
+3.  Create the sidecar files for each dataset
+4.  Create the general sidecar files
+5.  Finalize
+
+Step 1, 2 and step 4 are implemented using [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>) scripts. The construction of the sidecar files in step 3 is implemented using the **[data2bids](/reference/data2bids)** function that is part of FieldTrip. The final step is not automated, but consists of some manual work.
 
 We will describe two alternative approaches: in the first one the files are kept in their original file format, in the second one the files are explicitly converted to the recommended format for BIDS.
 
@@ -50,7 +51,7 @@ It is important that you use appropriate tools. Command line utilities are very 
 
 The original data gets copied and renamed to the location in the BIDS structure. In reality we would of course copy the data of each individual subject, rather than copying the same data 10 times.
 
-In this case it is not needed to convert the data, since the EEGLAB .set format is explicitly allowed according to the BIDS standard (although BrainVision and EDF are preferred).  
+In this case it is not needed to convert the data, since the EEGLAB .set format is explicitly allowed according to the BIDS standard (although BrainVision and EDF are preferred).
 
     BIDSROOT=$HOME/example
     SOURCEDATA=$BIDSROOT/sourcedata
@@ -75,7 +76,7 @@ In this case it is not needed to convert the data, since the EEGLAB .set format 
 
 The **[data2bids](/reference/data2bids)** function will read each EEG recording and determine the metadata that is available in the file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
 
-  %% this is an example that starts with data in a supported format
+    %% this is an example that starts with data in a supported format
 
     bidsroot = fullfile(getenv('HOME'), 'example');
     subject  = dir(fullfile(bidsroot, 'sub-*'));
@@ -127,18 +128,18 @@ The **[data2bids](/reference/data2bids)** function will read each EEG recording 
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-  BIDSROOT=$HOME/example
-  BIDSTOOLS=$HOME/bids-tools/bin
+    BIDSROOT=$HOME/example
+    BIDSTOOLS=$HOME/bids-tools/bin
 
-  $BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
-  $BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
-  $BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
+$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT # create the dataset_description.json file
+$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT # create the participants.tsv file
+$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT # create the scans.tsv files (per subject and session)
 
 ### Step 5a: finalize
 
-There are some things which are not implemented as a script, for example filling out the details in the top-level *dataset_description.json* file, adding a *README* file, updating the *CHANGES* file.
+There are some things which are not implemented as a script, for example filling out the details in the top-level _dataset_description.json_ file, adding a _README_ file, updating the _CHANGES_ file.
 
-I also manually renamed the subdirectories with the presentation log files in the *sourcedata* directory, and added the presentation source code and stimulus material in the *stimuli* directory.
+I also manually renamed the subdirectories with the presentation log files in the _sourcedata_ directory, and added the presentation source code and stimulus material in the _stimuli_ directory.
 
 Throughout the development of the scripts and and after having completed the conversion I used the [bids-validator](http://github.com/INCF/bids-validator/) to check compliance with BIDS.
 
@@ -146,7 +147,7 @@ Throughout the development of the scripts and and after having completed the con
 
 ### Step 1b: create empty directory structure
 
-  BIDSROOT=$HOME/example
+    BIDSROOT=$HOME/example
 
     mkdir -p $BIDSROOT/code
     mkdir -p $BIDSROOT/stimuli
@@ -158,10 +159,10 @@ Throughout the development of the scripts and and after having completed the con
 
 ### Step 2b: copy the EEG data for all participants
 
-Here I am copying the single example file to each of the subjects. This would normally not be needed, since you would already have the original data somewhere in some structure. The original format data can be shared in BIDS in the *sourcedata* directory.
+Here I am copying the single example file to each of the subjects. This would normally not be needed, since you would already have the original data somewhere in some structure. The original format data can be shared in BIDS in the _sourcedata_ directory.
 
-  BIDSROOT=$HOME/example
-  SOURCEDATA=$BIDSROOT/sourcedata
+    BIDSROOT=$HOME/example
+    SOURCEDATA=$BIDSROOT/sourcedata
 
     cd $SOURCEDATA
     wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
@@ -186,7 +187,7 @@ Besides creating the sidecar files with the metadata, in this step we are also c
 
 In principle converting the data is not needed, since EEGLAB .set is also one of the (non-preferred) formats allowed for EEG data in BIDS.
 
-  %% this is an example that converts the EEG data to BrainVision format
+    %% this is an example that converts the EEG data to BrainVision format
 
     bidsroot   = fullfile(getenv('HOME'), 'example');
     sourcedata = fullfile(bidsroot, 'sourcedata');
@@ -236,18 +237,18 @@ In principle converting the data is not needed, since EEGLAB .set is also one of
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-  BIDSROOT=$HOME/example
-  BIDSTOOLS=$HOME/bids-tools/bin
+    BIDSROOT=$HOME/example
+    BIDSTOOLS=$HOME/bids-tools/bin
 
-  $BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT   # create the dataset_description.json file
-  $BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT   # create the participants.tsv file
-  $BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT   # create the scans.tsv files (per subject and session)
+$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT # create the dataset_description.json file
+$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT # create the participants.tsv file
+$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT # create the scans.tsv files (per subject and session)
 
 ### Step 5b: finalize
 
-There are some things which are not implemented as a script, for example filling out the details in the top-level *dataset_description.json* file, adding a *README* file, updating the *CHANGES* file.
+There are some things which are not implemented as a script, for example filling out the details in the top-level _dataset_description.json_ file, adding a _README_ file, updating the _CHANGES_ file.
 
-I also manually renamed the subdirectories with the presentation log files in the *sourcedata* directory, and added the presentation source code and stimulus material in the *stimuli* directory.
+I also manually renamed the subdirectories with the presentation log files in the _sourcedata_ directory, and added the presentation source code and stimulus material in the _stimuli_ directory.
 
 Throughout the development of the scripts and and after having completed the conversion I used the [bids-validator](http://github.com/INCF/bids-validator/) to check compliance with BIDS.
 
@@ -255,12 +256,12 @@ Throughout the development of the scripts and and after having completed the con
 
 In this example it all looks very simple, which is partially because the data is not only more-or-less the same, but actually perfectly identical. Usually the challenge in organizing the data arise due to inconsistencies between the different recordings. Although the inconsistencies will not be part of the experimental protocol, stuff happens and not all lab recordings can be guaranteed to be exactly according to the same protocol. For example
 
-*  one subject was recorded with different acquisition settings
-*  one subject was recorded with another EEG cap
-*  for one subject some channels were swapped around
-*  for one subject the experiment was paused, resulting in two recording files
-*  for one subject the triggers were recorded incorrectly
-*  etc.
+- one subject was recorded with different acquisition settings
+- one subject was recorded with another EEG cap
+- for one subject some channels were swapped around
+- for one subject the experiment was paused, resulting in two recording files
+- for one subject the triggers were recorded incorrectly
+- etc.
 
 {% include markup/warning %}
 As a rule of thumb: if you have few exceptions, better don't try to make the scripts above too complex, but deal with them manually. If you have many exceptions of the same or similar type, it is worthwhile to invest into making these scripts smarter to automate the exception handling.

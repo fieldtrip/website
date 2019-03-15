@@ -1,5 +1,6 @@
 cfg.headmodel---
 title: Integration with NUTMEG
+
 ---
 
 {% include /shared/development/warning.md %}
@@ -21,74 +22,71 @@ See [/development/compat](/development/project/compat) for mydepfun example
 
 ### 2) fileio questions
 
-*  How is it recommended to deal with datasets larger than one's RAM? i.e. is there a recommended pipeline to follow? (e.g. load in trials individually, do separate filtering computations, then bring it all together to compute an inverse weight, apply weights to trials separately again, etc).
-*  BTi_UCSF support? (No)
-*  Can all data formats be read in as single?  
-       * CTF can, not sure with other formats. (file bug if not true for all formats)
-       * Would help if could be done at line ''data.trial = cutdat;'' in ft_preprocessing.
-       * write a subfunction ft_single that loops over trials and singles each
-*  ft_chantype(data.label) 'unknown' in test case for neuromag.
-*  Issue of clearing a data variable in Matlab but it still takes up memory (with FT but not with NM).
+- How is it recommended to deal with datasets larger than one's RAM? i.e. is there a recommended pipeline to follow? (e.g. load in trials individually, do separate filtering computations, then bring it all together to compute an inverse weight, apply weights to trials separately again, etc).
+- BTi_UCSF support? (No)
+- Can all data formats be read in as single?  
+   _ CTF can, not sure with other formats. (file bug if not true for all formats)
+  _ Would help if could be done at line ''data.trial = cutdat;'' in ft_preprocessing. \* write a subfunction ft_single that loops over trials and singles each
+- ft_chantype(data.label) 'unknown' in test case for neuromag.
+- Issue of clearing a data variable in Matlab but it still takes up memory (with FT but not with NM).
 
 ### 3) Forward modelling
 
-*  ft_prepare_localspheres should not call 'clf' and 'cla' as this will mess with the Nutmeg figures. Can it instead call:  hfig=figure; and then use hfig handle for plotting?
-*  ft_volumesegment sufficient (which calls SPM), or prefer other software/method?
-        * Can't do 'skull' yet.
+- ft_prepare_localspheres should not call 'clf' and 'cla' as this will mess with the Nutmeg figures. Can it instead call: hfig=figure; and then use hfig handle for plotting?
+- ft_volumesegment sufficient (which calls SPM), or prefer other software/method? \* Can't do 'skull' yet.
 
 ### 4) NM ideas missing from FT
 
-*  nut_filter2:  
-       * 'firls' (rather than fir1) filter
-       * demean time-domain filtering (in ft_preproc_*filter), do filter, then add mean back if it was non-zero.  (file bug)
-*  nut_results_viewer
-*  ft_sourceanalysis allow for multiple time and multiple frequency windows? (regardless of whether LCMV, DICS, or covariances from wavelet transform)
-*  nut_beamforming_gui
-*  rumour has it that some people prefer the interactive fiducial selection in NM over FT.
-*  simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to Matlab
-*  single precision used as long as double not needed (e.g. initial loading single but covariance computation double)
-*  how does FT reduce/display data computed with vector inverse method and therefore the source data has 3 components per voxel?
-       * Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g. in statistics)?
-       * How is s_perp computed 'on the fly' after weights and/or leadfield not present anymore?
-       * (see email correspondene with Sarang called '3-dim orientation' in 2008)
-*  option of when in pipeline to normalise leadfield (specific to scalar LCMV)
-*  Wilcoxon ranksum test in NM: uses single trial info per time-freq bin on the fly to compute Z/p values, but then only saves these averages, not save out single-trial info for each time-freq bin (assuming 20000 voxels, 100 time, 10 freq, that would be too large!)
-*  weight normalisation? (rather than leadfield norm)?  (could be better for EEG data, whereas leadfield norm better for MEG...just hearsay at the moment)
+- nut*filter2:  
+   * 'firls' (rather than fir1) filter
+  * demean time-domain filtering (in ft_preproc*\*filter), do filter, then add mean back if it was non-zero. (file bug)
+- nut_results_viewer
+- ft_sourceanalysis allow for multiple time and multiple frequency windows? (regardless of whether LCMV, DICS, or covariances from wavelet transform)
+- nut_beamforming_gui
+- rumour has it that some people prefer the interactive fiducial selection in NM over FT.
+- simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to Matlab
+- single precision used as long as double not needed (e.g. initial loading single but covariance computation double)
+- how does FT reduce/display data computed with vector inverse method and therefore the source data has 3 components per voxel?
+  _ Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g. in statistics)?
+  _ How is s_perp computed 'on the fly' after weights and/or leadfield not present anymore? \* (see email correspondene with Sarang called '3-dim orientation' in 2008)
+- option of when in pipeline to normalise leadfield (specific to scalar LCMV)
+- Wilcoxon ranksum test in NM: uses single trial info per time-freq bin on the fly to compute Z/p values, but then only saves these averages, not save out single-trial info for each time-freq bin (assuming 20000 voxels, 100 time, 10 freq, that would be too large!)
+- weight normalisation? (rather than leadfield norm)? (could be better for EEG data, whereas leadfield norm better for MEG...just hearsay at the moment)
 
 #### 4a) overlap/comparison of functional connectivity metrics between NM and FT
 
-*  [Nutmeg page comparison of FC metrics and options in both NM and FT](http://nutmeg.berkeley.edu/index.php?title=Comparison_of_connectivity_options)  (especially Adrian's FCM toolbox)
+- [Nutmeg page comparison of FC metrics and options in both NM and FT](http://nutmeg.berkeley.edu/index.php?title=Comparison_of_connectivity_options) (especially Adrian's FCM toolbox)
 
-###  5) FT ideas missing from NM
+### 5) FT ideas missing from NM
 
- 1.  NM directly call FT artifact reject, databrowser, topoplots, etc.  Remove this from nut_beamforming_gui
- 2.  NM can call ft_freqanalysis and ft_sourceanalysis(DICS)
- 3.  How are continuous head-tracking coils dealt with?  Ideally separate leadfield per trial?
- 4.  Units setting (default should be fT for MEG not T to avoid numerical issues)
+1.  NM directly call FT artifact reject, databrowser, topoplots, etc. Remove this from nut_beamforming_gui
+2.  NM can call ft_freqanalysis and ft_sourceanalysis(DICS)
+3.  How are continuous head-tracking coils dealt with? Ideally separate leadfield per trial?
+4.  Units setting (default should be fT for MEG not T to avoid numerical issues)
 
 ### 7) Changes to FT for compatibility with NM
 
-*  any function/tool that plots should 'play nice' with Nutmeg figures concurrently open
-       *  Specifically, can FT plotting tools call 'figure' prior to the plot, to avoid plotting over an existing open figure (e.g. Nutmeg GUI figures)
+- any function/tool that plots should 'play nice' with Nutmeg figures concurrently open \* Specifically, can FT plotting tools call 'figure' prior to the plot, to avoid plotting over an existing open figure (e.g. Nutmeg GUI figures)
 
 ### 8) Conversion functions
 
 The conversion from FieldTrip to NUTMEG is done with the following functions inside NUTMEG sv
 Please see: http://nutmeg.berkeley.edu/index.php?title=Reading_FieldTrip_processed_data
 
-*  nut_ft2nuts
-*  nut_ft2beam
-*  nut_ftgrid2nutsLpvox
-*  nut_ftmriN2coreg.m
+- nut_ft2nuts
+- nut_ft2beam
+- nut_ftgrid2nutsLpvox
+- nut_ftmriN2coreg.m
 
 The conversion from NUTMEG to FieldTrip is done with the following functions inside FieldTrip sv
 
-*  nutmegBeam2fieldtripSource
-*  nutmegNuts2fieldtrip
+- nutmegBeam2fieldtripSource
+- nutmegNuts2fieldtrip
 
 ### 9) Examples of why/how to switch between toolboxes
 
 ##### 9.1 Load data not supported by NM (e.g. Yokogawa), then do source-loc in NM
+
 ##### 9.2 Preprocess data in FT (e.g. ft_rejectvisual) then do source-loc in NM
 
 ##### 9.3 ft_freqanalysis and DICS in FT, then view results in NM

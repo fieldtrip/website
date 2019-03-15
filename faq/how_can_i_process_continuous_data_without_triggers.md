@@ -30,10 +30,9 @@ For some analyses, e.g. spectral power estimation, it is better to have the data
     ...                                             % further specification of filter settings etc.
     data = ft_preprocessing(cfg);
 
-This uses the **ft_trialfun_general** function to segment the data. This function is included in FieldTrip, type *help trialfun_general* for more details.
+This uses the **ft_trialfun_general** function to segment the data. This function is included in FieldTrip, type _help trialfun_general_ for more details.
 
-##  An example for making overlapping segments
-
+## An example for making overlapping segments
 
     cfg = [];
     cfg.dataset     = 'yourfile.ext';

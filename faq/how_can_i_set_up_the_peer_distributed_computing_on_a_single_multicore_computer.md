@@ -16,17 +16,17 @@ Subsequently you start one more MATLAB session which will be the master session 
 In the end you should have N+1 peers, with N slaves and one master.
 
 As example and proof-of concept, you should try
-    peercellfun(@pause, {5, 5, 5, 5})
+peercellfun(@pause, {5, 5, 5, 5})
 which should result in each slave pausing for 5 seconds.
 
 Another example is
-    peercellfun(@plot, {randn(1, 10), randn(1, 10), randn(1, 10), randn(1, 10)}, {'b.', 'r.', 'g.', 'm.'})
+peercellfun(@plot, {randn(1, 10), randn(1, 10), randn(1, 10), randn(1, 10)}, {'b.', 'r.', 'g.', 'm.'})
 which will make a plot in each peerslave with different colored random points. After creating the figure and drawing the points, the slave should close the figure again.
 
 You can type
-    peerinfo
+peerinfo
 to get information about the peer itself (i.e. in the MATLAB session where you type it) and
-    peerlist
+peerlist
 to get information on all visible peers on the network.
 
 Starting N+1 instances of MATLAB on a single computer as a single user will only result in a single (network) license being used. Since the slaves are running within the MATLAB session, the license will also be claimed it the slaves are waiting.
@@ -37,12 +37,12 @@ A disadvantage of starting the peerslaves within an interactive MATLAB session i
 
 The command line peerslave is currently implemented for Linux (32 and 64 bit) and Mac OSX (32 bit Intel only). The command-line executable is included in the release version for the different architectures and is started with one of the following commands:
 
-*  peerslave.glnx86
-*  peerslave.glna64
-*  peerslave.maci
+- peerslave.glnx86
+- peerslave.glna64
+- peerslave.maci
 
 There is also a Linux shell script with the name peerslave, which is designed to be used at the DCCN to start up a large number of slaves on our mentat Linux cluster. The release version of the peerslave command-line startup script is not useful for most end-users, although you may want to have a look inside the bash-script and make your own version.
 
 Please type on the unix command line
-    peerslave.arch --help
+peerslave.arch --help
 (where arch is glnx86, glnxa64 or maci) to get an overview of all the options. In principle most of the options have the same behaviour as the MATLAB **[peerslave](/reference/peerslave)** function.

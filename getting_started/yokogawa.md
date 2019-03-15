@@ -15,17 +15,17 @@ FieldTrip includes reading functions for the Yokogawa MEG system in the fieldtri
 
 The following Yokogawa file formats are recognized by FieldTri
 
-*  yokogawa_sqd *Continuous data*
-*  yokogawa_con *Continuous data*
-*  yokogawa_ave *Averaged evoked fields*
-*  yokogawa_raw *Trial-based evoked fields*
-*  yokogawa_mri
-*  yokogawa_coregis
-*  yokogawa_calib
-*  yokogawa_channel
-*  yokogawa_property
-*  yokogawa_textdata
-*  yokogawa_fll
+- yokogawa_sqd _Continuous data_
+- yokogawa_con _Continuous data_
+- yokogawa_ave _Averaged evoked fields_
+- yokogawa_raw _Trial-based evoked fields_
+- yokogawa_mri
+- yokogawa_coregis
+- yokogawa_calib
+- yokogawa_channel
+- yokogawa_property
+- yokogawa_textdata
+- yokogawa_fll
 
 Usually you will be starting your FieldTrip analysis with raw continuous data which is stored in files with the .con or the .sqd extention.
 
@@ -40,8 +40,7 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 To test that the reading of the continuous data works on your computer, you can try something like the following on your own data fil
 
-
-  >> hdr = ft_read_header('Continuous1.con')
+    >> hdr = ft_read_header('Continuous1.con')
 
     hdr =
                Fs: 500
@@ -57,17 +56,18 @@ In hdr.label you can find the channel labels (as strings). In hdr.grad you can f
 
 Subsequently you can read the data from one of the channels (here the first) and simply plot i
 
-  >> dat = ft_read_data('Continuous1.con', 'chanindx', 1);
-  >> plot(dat)
+    >> dat = ft_read_data('Continuous1.con', 'chanindx', 1);
+    >> plot(dat)
 
-Instead of using the low-level reading functions for reading and handling the data manually, normally you would use the  **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**. Please read through the tutorials to learn how to do a complete analysis.
+Instead of using the low-level reading functions for reading and handling the data manually, normally you would use the **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**. Please read through the tutorials to learn how to do a complete analysis.
 
 ## Reading functions
 
 The historical development and continuous push for improvements causes FieldTrip to supports three different codebases to read in Yokogawa file
- 1.  *external\yokogawa* by the Yokogawa company, old version
- 2.  *external\sqdproject* by Shantanu Ray, ISR, University of Maryland
- 3.  *externalyokogawa_meg_reader* by the Yokogawa company, latest version
+
+1.  _external\yokogawa_ by the Yokogawa company, old version
+2.  _external\sqdproject_ by Shantanu Ray, ISR, University of Maryland
+3.  _externalyokogawa_meg_reader_ by the Yokogawa company, latest version
 
 The initial implementation was based on the first external toolbox. It turned out that especially on windows computers it was too slow to work efficiently, that is why we looked into an alternative. The second Sqdproject toolbox is more memory and time efficient for reading the data and it can be used in conjunction to the first (for reading the header and meta information) by also adding sqdproject to the MATLAB path.
 
@@ -109,9 +109,10 @@ zooming in even more using the MATLAB figure magnifying glass on the top left co
 We can no clearly see that a single trigger is composed of several samples of a 'high' signal, and that its 'noisy' due to the fact that it is a digitized analogue signal. Its important to make sure one has a minimal and consistent duration of the trigger signal so it can be sampled reliable for the detection of events.
 
 According to the example here we can now determine
- 1.  trigger 161 is indeed a trigger channel
- 2.  the up-state around 2.5^10 units is the trigger-on state
- 3.  halfway between 0 and 2.5^10 would therefor be a good threshold for flank detection.
+
+1.  trigger 161 is indeed a trigger channel
+2.  the up-state around 2.5^10 units is the trigger-on state
+3.  halfway between 0 and 2.5^10 would therefor be a good threshold for flank detection.
 
 Together with our knowledge of the experimental design and stimulus equipment we also know that the stimulus is presented at the moment of up-flank of the trigger channel. Lets say the same turned out to be the case in trigger channels 162 to 166, we can make a trialfunction to read in the events.
 
@@ -119,27 +120,26 @@ For example
 
     function [trl, event] = mytrialfun(cfg)
 
-  % read the header information and the events from the data
+    % read the header information and the events from the data
     hdr   = ft_read_header(cfg.dataset);
     event = ft_read_event(cfg.dataset,'trigindx',161:166,'threshold',1e4,'detectflank','up');
 
-  % search for "trigger" events according to 'trigchannel' defined outside the function
+    % search for "trigger" events according to 'trigchannel' defined outside the function
     value  = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).value]';
     sample = [event(find(strcmp(cfg.trialdef.trigchannel, {event.type}))).sample]';
 
-  % creating your own trialdefinition based upon the events
+    % creating your own trialdefinition based upon the events
     for j = 1:length(value);
       trlbegin = sample(j) + pretrig;
       trlend   = sample(j) + posttrig;
       offset   = pretrig;
       newtrl   = [ trlbegin trlend offset];
-      trl      = [ trl; newtrl];  
+      trl      = [ trl; newtrl];
     end
-
 
 We can then proceed in the standard way of defining trials and reading data as follows.
 Note that except for the MEG channels which are prefixed by 'AG', the labels of the channels are just a string representation of the index number of the channel (starting with 1). The labels of our trigger channels are therefor '161', '162' and '163', etc.
-Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding ` cfg.trialdef.trigchannel = '162' `{matlab} into the trialfunctio
+Also realize that how the Yokogawa system is recording events through individual (analogue) channels, one is in most cases limited to one event 'type' per channel. In FieldTrip the channel label (which is a string of the index number) is given in the .type field of every event. In this example this is used by feeding `cfg.trialdef.trigchannel = '162'`{matlab} into the trialfunctio
 
     cfg = [];
     cfg.dataset                 = data.sqd;
@@ -149,14 +149,13 @@ Also realize that how the Yokogawa system is recording events through individual
     cfg.trialdef.prestim        = 1;
     cfg.trialdef.poststim       = 1;
     cfg.trialdef.trigchannel    = '161';
-    cfg.trialfun                = 'mytrialfun';   
+    cfg.trialfun                = 'mytrialfun';
 
-  % enter trl in cfg
+    % enter trl in cfg
     cfg           = ft_definetrial(cfg);
 
-  % read data   
+    % read data
     preproc                     = ft_preprocessing(cfg);
-
 
 ## Coordinate system coregistration
 
@@ -164,13 +163,13 @@ Each of the scanners used in neuroimaging research in principle has its own hard
 
 The general principle of coordinate system coregistration is to measure the same fiducial locations as points of reference with the different systems. Often, but not always, the fiducial locations are chosen to match clearly defined anatomical landmarks, such as the nasion (the bridge of the nose) and points that relate to the ear (e.g. pre-auricular points, mastoids, the ear canal). To ensure that the same points can be recorded with the different types of scanners, the points are marke
 
- 1.  MRI using vitamine E capsules or another oily substance that has a large MR contrast
- 2.  MEG using coils through which an alternating electrical current can be passed, resulting in a small but well-localized magnetic field
- 3.  Polhemus using a felt-tip pen
+1.  MRI using vitamine E capsules or another oily substance that has a large MR contrast
+2.  MEG using coils through which an alternating electrical current can be passed, resulting in a small but well-localized magnetic field
+3.  Polhemus using a felt-tip pen
 
-In general MEG analyses are performed in a ["head coordinate system"](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that relates to the anatomical landmarks. To get a clear picture of the head coordinate system, you should consider how the location of the origin (i.e. the point [0 0 0]) and the direction of the axes of the coordinate system (i.e. the x-, y- and z-axis) are defined in relation to the anatomical landmarks. For example, the origin of the coordinate system can be defined exactly between the two ears and the x-axis (or the y-axis) can be defined to point towards the nasion. Note that different hardware manufacturers and software packages use [different conventions](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined ), e.g. the x-axis can point either to the nose (CTF) or to the right ear (Neuromag), and that different labs also use slightly different conventions for the "ear" landmarks.
+In general MEG analyses are performed in a ["head coordinate system"](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that relates to the anatomical landmarks. To get a clear picture of the head coordinate system, you should consider how the location of the origin (i.e. the point [0 0 0]) and the direction of the axes of the coordinate system (i.e. the x-, y- and z-axis) are defined in relation to the anatomical landmarks. For example, the origin of the coordinate system can be defined exactly between the two ears and the x-axis (or the y-axis) can be defined to point towards the nasion. Note that different hardware manufacturers and software packages use [different conventions](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), e.g. the x-axis can point either to the nose (CTF) or to the right ear (Neuromag), and that different labs also use slightly different conventions for the "ear" landmarks.
 
-Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the  Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehea
+Alternative to anatomically defined landmarks, it is also possible to use fiducials on other locations, as long as the position of the same fiducials can be detected with the different scanners. For the Yokogawa system three coils (MEG) or three vitamine capsules (MRI) can used that are placed on the forehea
 
 {% include image src="/assets/img/getting_started/yokogawa/coordinate_systems.png" %}
 
@@ -230,12 +229,12 @@ The MEG fiducial positions are stored in an ascii text file that you can open in
 
 Using the MRI fiducial positions expressed in [head coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), and the MEG fiducial positions expressed in dewar coordinates, we can transform the MEG sensor positions from dewar into head coordinates.
 
-  % read the gradiometer definition from file, this is in dewar coordinates
+    % read the gradiometer definition from file, this is in dewar coordinates
     grad = ft_read_sens('Continuous.con');
 
 Alternative to reading the gradiometer definition from the raw data file, you can also obtain the gradiometer definition after **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_freqanalysis](/reference/ft_freqanalysis)**: the data structures resulting from those functions contain the "grad" field which corresponds to the gradiometer definition from the original raw file.
 
-  % add the fiducials (expressed in dewar coordinates) to the gradiometer definition
+    % add the fiducials (expressed in dewar coordinates) to the gradiometer definition
     grad.fid.pnt(1,:) = fid1_dewarcoordinates;
     grad.fid.pnt(2,:) = fid2_dewarcoordinates;
     grad.fid.pnt(3,:) = fid3_dewarcoordinates;
@@ -244,8 +243,8 @@ Alternative to reading the gradiometer definition from the raw data file, you ca
     grad.fid.label{2} = 'fid2_label';
     grad.fid.label{3} = 'fid3_label';
 
-  % the configuration for FT_SENSORREALIGN should specify the three fiducials in
-  % head coordinates as obtained from the aligned MRI using FT_SOURCEPLOT
+    % the configuration for FT_SENSORREALIGN should specify the three fiducials in
+    % head coordinates as obtained from the aligned MRI using FT_SOURCEPLOT
     cfg = [];
     cfg.method = 'fiducial';
     cfg.template.pnt = [
@@ -268,7 +267,7 @@ The realigned anatomical MRI can be segmented to aid in the construction of the 
 
     cfg           = [];
     mri_segmented = ft_volumesegment(cfg, mri_aligned);
-  % it is convenient to keep the original anatomical MRI with the segmentation
+    % it is convenient to keep the original anatomical MRI with the segmentation
     mri_segmented.anatomy = mri_aligned.anatomy;
 
 We can now make the headmodel
@@ -339,7 +338,7 @@ Do freqanalysis on left/right cue conditions
     cfg.tapsmofrq   = 2;
     freq_stiml      = ft_freqanalysis(cfg,data_stiml);
 
-  % same for right-cue
+    % same for right-cue
     cfg             = [];
     cfg.toilim      = [.5 1];
     cfg.trials      = find(ft_data.trialinfo(:,1) == 1 | ft_data.trialinfo(:,1) == 2);
@@ -386,9 +385,8 @@ Lets check out the sensor level first
     cfg.zparam      = 'powspctrm';
 
     figure; ft_topoplotTFR(cfg, freq_r_bl);
-  % figure; ft_topoplotTFR(cfg, freq_diff);
-  % figure; ft_topoplotTFR(cfg, freq_l_bl);
-
+    % figure; ft_topoplotTFR(cfg, freq_diff);
+    % figure; ft_topoplotTFR(cfg, freq_l_bl);
 
 {% include image src="/assets/img/getting_started/yokogawa/cuer_versus_bl.jpg" width="400" %}
 
@@ -456,10 +454,10 @@ Interpolate for plotting on MRI
 
     cfg                 = [];
     cfg.method          = 'linear';
-  % source_left_int     = ft_sourceinterpolate(cfg,source_left,mri_aligned);
-  % source_right_int    = ft_sourceinterpolate(cfg,source_right,mri_aligned);
-  % source_diff_int     = ft_sourceinterpolate(cfg,source_diff,mri_aligned);
-  % source_left_bl_int  = ft_sourceinterpolate(cfg,source_left_bl,mri_aligned);
+    % source_left_int     = ft_sourceinterpolate(cfg,source_left,mri_aligned);
+    % source_right_int    = ft_sourceinterpolate(cfg,source_right,mri_aligned);
+    % source_diff_int     = ft_sourceinterpolate(cfg,source_diff,mri_aligned);
+    % source_left_bl_int  = ft_sourceinterpolate(cfg,source_left_bl,mri_aligned);
     source_right_bl_int = ft_sourceinterpolate(cfg,source_right_bl,mri_aligned);
 
 Plot results

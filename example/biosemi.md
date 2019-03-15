@@ -214,7 +214,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
 
     load('analysis/data_clean', 'data')
 
-    for icond = 1:4 % loop over the 4 conditions    
+    for icond = 1:4 % loop over the 4 conditions
       for istim = 1:3 % loop over standard-before, deviant, standard-after
 
         % compute timelocked averages for each condition
@@ -228,7 +228,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
         cfg=[];
         cfg.baseline = [-0.2 0];
         timelock{icond,istim} = ft_timelockbaseline(cfg, timelock{icond,istim});
-      end  
+      end
     end
 
     save('analysis/timelock/timelock_all','timelock');

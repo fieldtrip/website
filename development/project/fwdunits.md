@@ -12,20 +12,20 @@ This refere to a bug submitted by V.Litvak, suggesting to give the lead field a 
 
 The discussed issues regard, among others, the following topic
 
-*  Units can be estimated by looking at the raw datasets, does the 'units' field have to be attached from the beginning?
-*  In case of absence of units, they can be recovered by looking at the header
-*  Default units could be assigned in case of standard datasets (MEG: T or fT, EEG: uV or V)
-*  The user should dispose of function to convert to the wanted units: i.e. I dont know what the units are but i want my data in microvolts
+- Units can be estimated by looking at the raw datasets, does the 'units' field have to be attached from the beginning?
+- In case of absence of units, they can be recovered by looking at the header
+- Default units could be assigned in case of standard datasets (MEG: T or fT, EEG: uV or V)
+- The user should dispose of function to convert to the wanted units: i.e. I dont know what the units are but i want my data in microvolts
 
 This topic is important and its implementation impacts both on FT and SPM users, so: BE CAREFUL!
 
 ## Some actions to take (Cristiano)
 
-Here is the list of the functions in the module Forward (folders: _fieldtrip/forward and _fieldtrip/forwar/private) that need the units to be documented in their help (this is necessary also for other modules, like e.g. the fileio module
+Here is the list of the functions in the module Forward (folders: \_fieldtrip/forward and \_fieldtrip/forwar/private) that need the units to be documented in their help (this is necessary also for other modules, like e.g. the fileio module
 
-### _fieldtrip/forward 
+### \_fieldtrip/forward
 
-__UNITS are required for:__
+**UNITS are required for:**
 
 ft_compute_leadfield.m
 ft_convert_units.m
@@ -48,18 +48,18 @@ ft_transform_headshape.m
 ft_transform_sens.m
 ft_transform_vol.m
 
-__UNITS are NOT required for__
+**UNITS are NOT required for**
 
-ft_apply_montage.m 
-ft_inside_vol.m 
-ft_voltype.m 
-ft_senstype.m 
+ft_apply_montage.m
+ft_inside_vol.m
+ft_voltype.m
+ft_senstype.m
 ft_senslabel.m
 ft_sourcedepth.m (?)
 
-### _fieldtrip/forward/private 
+### \_fieldtrip/forward/private
 
-__UNITS are required for:__
+**UNITS are required for:**
 
 ama2vol.m
 eeg_halfspace_medium_leadfield.m
@@ -82,7 +82,7 @@ monopole_leadfield.m
 project_elec.m
 transfer_elec.m
 
-__UNITS are NOT required for:__
+**UNITS are NOT required for:**
 
 add_mex_source.m
 bounding_mesh.m
@@ -113,4 +113,3 @@ warp_apply.m
 
 meg_leadfield1.mexa64
 routlm.mexa64
-

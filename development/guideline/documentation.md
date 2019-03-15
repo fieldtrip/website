@@ -7,13 +7,13 @@ tags: [guidelines, development]
 
 When you add documentation, please consider the following documentation guidelines to keep it consistent with other documentation and to facilitate cross-linking.
 
--   FieldTrip should be written with capital "F" and capital "T"
--   All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to reference documentation: i.e. **[ft_preprocessing](/reference/ft_preprocessing)**
--   When you add a new page, please give it relevant [tags](#how_to_add_tags).
--   If you see something that needs to be fixed in the documentation, add a FIXME comment (write fixme in capital letters), and also [add the tag](#how_to_add_tags) 'fixme' at the top of the page.
--   Please structure new tutorials [in the following way](#how_to_structure_a_tutorial).
--   Please give clear [names for example data](</#How to name example data>).
--   If you refer to file formats using the extension, please do it like .txt, .dat or .ext in general.
+- FieldTrip should be written with capital "F" and capital "T"
+- All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to reference documentation: i.e. **[ft_preprocessing](/reference/ft_preprocessing)**
+- When you add a new page, please give it relevant [tags](#how_to_add_tags).
+- If you see something that needs to be fixed in the documentation, add a FIXME comment (write fixme in capital letters), and also [add the tag](#how_to_add_tags) 'fixme' at the top of the page.
+- Please structure new tutorials [in the following way](#how_to_structure_a_tutorial).
+- Please give clear [names for example data](</#How to name example data>).
+- If you refer to file formats using the extension, please do it like .txt, .dat or .ext in general.
 
 ## Where to add documentation on the website?
 
@@ -25,17 +25,17 @@ The tutorials should be written with a clear audience in mind: the reader of the
 
 For consistency the tutorials should preferably be structured in the following way:
 
--   **Introduction:** introduction to the tutorial and dataset. This should include
-    -   What will you learn from this tutorial?
-    -   What does this tutorial expect as background understanding or skills?
-    -   Which topics are not covered in this tutorial?
--   **Background:** some background on the methods used
--   **Procedure:** summarize which analysis steps are performed in the tutorial, this should include a picture of the analysis protocol (please use SVG).
--   All steps in the procedure are **subsequent headings**.
--   **Summary and conclusion:**
-    -   What has been covered?
-    -   What has not been covered but is relevant in the context of the tutorial?
-    -   Provide links to suggested further reading, related FAQ's and example scripts.
+- **Introduction:** introduction to the tutorial and dataset. This should include
+  - What will you learn from this tutorial?
+  - What does this tutorial expect as background understanding or skills?
+  - Which topics are not covered in this tutorial?
+- **Background:** some background on the methods used
+- **Procedure:** summarize which analysis steps are performed in the tutorial, this should include a picture of the analysis protocol (please use SVG).
+- All steps in the procedure are **subsequent headings**.
+- **Summary and conclusion:**
+  - What has been covered?
+  - What has not been covered but is relevant in the context of the tutorial?
+  - Provide links to suggested further reading, related FAQ's and example scripts.
 
 To check that the tutorial meets the expected didactical qualities, the introduction should spell out what the reader will learn, what is expected from him (e.g. that he already has done another tutorial) and what will not be covered. The summary should link to follow up documentation and to the more advanced topics that relate to the tutorial.
 
@@ -43,7 +43,7 @@ For an example of a well-structured tutorial see the [tutorial on event related 
 
 ## How to update the tutorial data on the FTP?
 
-Some computations in the tutorials may take a (too) long time, or take more memory than available in the  computers of the people that want to walk through the tutorial. To allow people in these cases to follow through the whole tutorial, we provide the intermediate data and final results at important stages in the tutorial. This data is stored in \*.mat files. See below for the recommended file and variable naming scheme.
+Some computations in the tutorials may take a (too) long time, or take more memory than available in the computers of the people that want to walk through the tutorial. To allow people in these cases to follow through the whole tutorial, we provide the intermediate data and final results at important stages in the tutorial. This data is stored in \*.mat files. See below for the recommended file and variable naming scheme.
 
 The tutorial mat files are made available on <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/> and are distributed to all computers whenever we have a toolkit course or workshop. To get new files on the FTP server, or update existing files, you should copy them on the DCCN central storage system to the directory /home/common/matlab/fieldtrip/data/ftp. That directory is automatically synchronized with the FTP server.
 
@@ -51,9 +51,9 @@ The tutorial mat files are made available on <ftp://ftp.fieldtriptoolbox.org/pub
 
 When using example data in tutorials, please use consistent naming. That i
 
--   add a prefix to the data-name that shows what kind of data it is. Prefixes are: data (for raw/preprocessed data), timelock, freq, stat and source. Example: if you have timelocked data (ERP/ERF) of condition FIC, you can call it timelockFIC. So do not use 'data' for everything.
+- add a prefix to the data-name that shows what kind of data it is. Prefixes are: data (for raw/preprocessed data), timelock, freq, stat and source. Example: if you have timelocked data (ERP/ERF) of condition FIC, you can call it timelockFIC. So do not use 'data' for everything.
 
--   save the data as a mat-file with the same name (e.g. save the variable freqFIC to the file freqFIC.mat)
+- save the data as a mat-file with the same name (e.g. save the variable freqFIC to the file freqFIC.mat)
 
 ## How to add figures?
 

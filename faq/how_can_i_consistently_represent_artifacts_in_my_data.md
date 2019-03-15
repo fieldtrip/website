@@ -43,7 +43,7 @@ and use the following code to merge the bad channels into a single list
     sel(strmatch(hdr.label, emg.badchannel{i}) = true;
     end
 
-  % combine them into one list
+    % combine them into one list
     badchannel  = hdr.label(sel);
     goodchannel = setdiff(hdr.label, badchannel);
 

@@ -65,14 +65,14 @@ The recommended workflow of FS has three automatized processing steps. But first
 Codes are included that works on Linux (with bash type of shell) and on Siemens DICOM data (raw data files with .ima extension).
 
 environmental variables have to be set up:
-    export FREESURFER_HOME=<path to freesurfer>
-    export SUBJECTS_DIR=<path to an existing directory where FS output should go>  
-    sourcing F
-    source $FREESURFER_HOME/SetUpFreeSurfer.sh  
-    importing dat
-    recon-all -i<path to direcotry of xxx.ima files>/<name of first xxx.ima file>.IMA -s&lt;subject's name>\\
+export FREESURFER_HOME=<path to freesurfer>
+export SUBJECTS_DIR=<path to an existing directory where FS output should go>  
+ sourcing F
+source \$FREESURFER_HOME/SetUpFreeSurfer.sh  
+ importing dat
+recon-all -i<path to direcotry of xxx.ima files>/<name of first xxx.ima file>.IMA -s&lt;subject's name>\\
 
-This code will recognize the first xxx.ima file in the directory of the anatomical data, and it will find the other files automatically. It will create a directory under $SUBJECTS_DIR with the given subject's name. It will also create more directories. One created directory is named orig under $SUBJECTS_DIR/&lt;subject's name>/mri where there will be a 001.mgz file (containing all anatomical data) that will be used as input for further processing. If there were more scanning runs of the same subject, other .mgz files will be created (001, 002... etc.) But I do  not know if more scans of the same subjects are automatically recognized.  :
+This code will recognize the first xxx.ima file in the directory of the anatomical data, and it will find the other files automatically. It will create a directory under $SUBJECTS_DIR with the given subject's name. It will also create more directories. One created directory is named orig under $SUBJECTS_DIR/&lt;subject's name>/mri where there will be a 001.mgz file (containing all anatomical data) that will be used as input for further processing. If there were more scanning runs of the same subject, other .mgz files will be created (001, 002... etc.) But I do not know if more scans of the same subjects are automatically recognized. :
 
 ##### autorecon 1
 
@@ -88,7 +88,7 @@ First, it is averaging the multiple scanning runs together if they exist (output
 
 Then, a non-parametric non-uniform intensity normalization (N3) corrects for intensity non-uniformities (output: $SUBJECTS_DIR/&lt;subject's name>/mri/**nu**.mgz). Next, talairach transformation is computed (from nu.mgz) using MNI305 atlas, and outputs the transformation into $SUBJECTS_DIR/&lt;subject's name>/mri/transforms/talairach.auto.xfm and **talairach**.xfm.
 
-Then, it performs an intensity normalization (intensity of all voxels are scaled) and gives the output $SUBJECTS_DIR/&lt;subject's name>/mri/**T1**.mgz. This is the volume that is used by the interactive analysis tool of MNE, mne_analyze where the MRI Viewer is using the T1.mgz volume together with the Freesurfer tkmedit user interface. The tkmedit shows the MRI volume index and the Talairach coordinates. T1.mgz is also used as input for MNE for creating BEM meshes.
+Then, it performs an intensity normalization (intensity of all voxels are scaled) and gives the output \$SUBJECTS_DIR/&lt;subject's name>/mri/**T1**.mgz. This is the volume that is used by the interactive analysis tool of MNE, mne_analyze where the MRI Viewer is using the T1.mgz volume together with the Freesurfer tkmedit user interface. The tkmedit shows the MRI volume index and the Talairach coordinates. T1.mgz is also used as input for MNE for creating BEM meshes.
 
 Last, the mri_watershed program is running that finds the boundary between the brain and the skull (output: $SUBJECTS_DIR/&lt;subject's name>/mri/brainmask.auto.mgz and $SUBJECTS_DIR/&lt;subject's name>/mri/**brainmask**.mgz).
 
@@ -169,7 +169,7 @@ In MNE, the calculation of the forward solution is using the boundary-element mo
 
 mne_watershed_bem
 
-It calculates the segmentation of the MRI data and the triangulation of the relevant surfaces. This code is facilitating the use of watershed algorithm that is part of FS. The program is called mri_watershed. During the processing of MRI data with FS, this program finds the boundary between the brain and the skull. Now, it creates the brain surface triangulation, the inner skull triangulation, the outer skull triangulation and the scalp triangulation.  
+It calculates the segmentation of the MRI data and the triangulation of the relevant surfaces. This code is facilitating the use of watershed algorithm that is part of FS. The program is called mri_watershed. During the processing of MRI data with FS, this program finds the boundary between the brain and the skull. Now, it creates the brain surface triangulation, the inner skull triangulation, the outer skull triangulation and the scalp triangulation.
 
 The **input** file is in $SUBJECTS_DIR/$SUBJECT/mri/T1.mgz. Here, the surface RAS coordinates system is used, and also the output contains the same. The **outputs** are: $SUBJECTS_DIR/$SUBJECT/bem/$SUBJECT_brain_surface, $SUBJECT_inner_skull_surface, $SUBJECT_outer_skin_surface, $SUBJECT_outer_skull_surface. However, the next step in MNE will look for these files on a slightly different name: $SUBJECT-inner_skull.surf, $SUBJECT-outer_skin.surf...etc. Therefore, these files have to be renamed. :
 
@@ -183,13 +183,13 @@ This step assigns **conductivity values to the BEM meshes**. The conductivity va
 
     mne_setup_forward_model --homog --surf --ico 4
 
-The --surf option indicates that FS surface files should be used. If --surf is used, --ico is also relevant. It specifies the decimation of the triangulation (and therefore, it is saving computation time). --ico 4 is recommended, it yields to 5120 triangles per surface. --homog species if a single compartment model instead of a three layer model should be used. When --homog is used the **input** is only the $SUBJECT-inner_skull.surf. This option is recommended when MEG data is analyzed.
+The --surf option indicates that FS surface files should be used. If --surf is used, --ico is also relevant. It specifies the decimation of the triangulation (and therefore, it is saving computation time). --ico 4 is recommended, it yields to 5120 triangles per surface. --homog species if a single compartment model instead of a three layer model should be used. When --homog is used the **input** is only the \$SUBJECT-inner_skull.surf. This option is recommended when MEG data is analyzed.
 
 This program creates the BEM model geometry specifications (as **output**
 
--   /bem/$SUBJECT-<number of triangles-inner_skull>-bem.fif (if --homog option is specified)
--   $SUBJECT-<surface name>-<number of triangles>.surf for each surface. This can be loaded to tkmedit (FS) to check if the surfaces are correct.
--   /bem/$SUBJECT-<number of triangles-inner_skull>-bem-sol.fif containing the geometry dependent solution data (optional)
+- /bem/\$SUBJECT-<number of triangles-inner_skull>-bem.fif (if --homog option is specified)
+- \$SUBJECT-<surface name>-<number of triangles>.surf for each surface. This can be loaded to tkmedit (FS) to check if the surfaces are correct.
+- /bem/\$SUBJECT-<number of triangles-inner_skull>-bem-sol.fif containing the geometry dependent solution data (optional)
 
 ### 2. Preprocessing of EEG/MEG data
 
@@ -216,12 +216,13 @@ The following files are useful for doing these:
 5.  script for covariance estimation
 
 There are two options for processing the dat
- 1.  in interactive mode
- 2.  in batch mode
+
+1.  in interactive mode
+2.  in batch mode
 
 #### Data conversion
 
-The EEG/MEG data has to  be converted to .fif format.
+The EEG/MEG data has to be converted to .fif format.
 
     mne_cft2fiff --ds /<path to the ds directory>/xxx.ds --fif<subject's name>_raw
 
@@ -380,9 +381,9 @@ There are no FT functions for creating meshes, but the MATLAB image processing t
 
 I have created BEM meshes in three way
 
--   I have the BEM meshes created by FreeSurfer
--   I have created BEM meshes with FieldTrip, using the same T1.mgz volume that FS used for creating meshes. (It is a conformed (256x256x256) volume with intensity normalization.)
--   I have created BEM meshes with FieldTrip, using a .mnc volume (downloaded from internet). This sort of volume was used also in the tutorial example script of FieldTrip.
+- I have the BEM meshes created by FreeSurfer
+- I have created BEM meshes with FieldTrip, using the same T1.mgz volume that FS used for creating meshes. (It is a conformed (256x256x256) volume with intensity normalization.)
+- I have created BEM meshes with FieldTrip, using a .mnc volume (downloaded from internet). This sort of volume was used also in the tutorial example script of FieldTrip.
 
 I could read in the FS/MNE BEM meshes in F
 
@@ -480,7 +481,7 @@ Test on phantom data
 | noise-covariance matrix                | eye(186)               | eye(151)             |                      |
 | source-covariance                      | ? no depth weightening | depth weightening    |                      |
 
- Plot inverse solution at max (in time):
+Plot inverse solution at max (in time):
 
 [1] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/ftplotmesh_mne_phantom_at284.jpg" width="200" %}--" %}
 [2] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at198.jpg" width="200" %}--" %}

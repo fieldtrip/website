@@ -24,7 +24,6 @@ Without command line arguments, tia2ft attempts to connect to a TiA server and
 a FieldTrip buffer both served on the same computer. The following options are
 supporte
 
-
     -h [ --help ]                     Show help message.
     -v [ --verbose ]                  Print more info.
     --tia-host arg (=localhost)       Set host name of TiA server.
@@ -37,16 +36,17 @@ supporte
 ## Compiling
 
 ### Linux
+
 To recompile tia2ft, a C++ compiler with the STL and Boost libraries is
 required.
 
 To compile tia2ft, you can do the followin
 
- 1.  build ''libbuffer.a'' in ''/realtime/buffer/src'' by issuing ''make'',
- 2.  build ''tia2ft'' by issuing ''make'' in ''/realtime/acquisition/tobi/''.
+1.  build ''libbuffer.a'' in ''/realtime/buffer/src'' by issuing ''make'',
+2.  build ''tia2ft'' by issuing ''make'' in ''/realtime/acquisition/tobi/''.
 
 Then, it can simply be run wit
-    $ ./tia2ft.sh --serve-ft-buffer
+\$ ./tia2ft.sh --serve-ft-buffer
 
 The shell script adds the TiA library to the search path, and starts the
 executable ''tia2ft''.
@@ -55,7 +55,7 @@ executable ''tia2ft''.
 
 Compiling on windows is not yet supported.
 
-###  OS X
+### OS X
 
 Compiling on OS X is not yet supported.
 
@@ -71,11 +71,11 @@ When this sever is running, ''tia2ft'' can connect to this server.
 
 ## References
 
- 1.  IEEE Trans Biomed Eng. 2012 Mar;59(3):852-9. Epub 2011 Dec 21. Proposing a standardized protocol for raw biosignal transmission. Breitwieser C, Daly I, Neuper C, Müller-Putz GR.
+1.  IEEE Trans Biomed Eng. 2012 Mar;59(3):852-9. Epub 2011 Dec 21. Proposing a standardized protocol for raw biosignal transmission. Breitwieser C, Daly I, Neuper C, Müller-Putz GR.
 
 ## Related links
 
-*  http://www.ncbi.nlm.nih.gov/pubmed/22194230
-*  http://dx.doi.org/10.1109/TBME.2011.2174637
-*  http://www.bcistandards.org/
-*  http://arxiv.org/pdf/1103.4717.pdf
+- http://www.ncbi.nlm.nih.gov/pubmed/22194230
+- http://dx.doi.org/10.1109/TBME.2011.2174637
+- http://www.bcistandards.org/
+- http://arxiv.org/pdf/1103.4717.pdf

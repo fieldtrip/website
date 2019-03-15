@@ -9,7 +9,7 @@ tags: [tutorial, natmeg, meg+eeg, raw, preprocessing, meg-audodd]
 
 This tutorial describes how to define epochs-of-interest (trials) from your recorded EEG-MEG-data, and how to apply the different preprocessing steps. This tutorial also shows you how to average your data and compare conditions (standard versus deviant tones).
 
-This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check  the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
+This tutorial does the preprocessing and segmenting in a single step. If you are interested in how to do preprocessing on your continuous data prior to segmenting it into trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.
@@ -25,18 +25,18 @@ There are largely two alternative approaches for preprocessing, which especially
 
 Preprocessing involves several steps including identifying individual trials from the dataset, filtering and artifact rejections. This tutorial covers how to identify trials using the trigger signal. Defining data segments of interest can be done
 
-* according to a specific trigger channel
-* according to your own criteria when you write your own trial function, e.g. for conditional trigger sequences, or by detecting EMG onset
+- according to a specific trigger channel
+- according to your own criteria when you write your own trial function, e.g. for conditional trigger sequences, or by detecting EMG onset
 
-Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field *cfg.trl*. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
+Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
 
-If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the *trl* matrix. These will be added to the data in the *.trialinfo* field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.   
+If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the _trl_ matrix. These will be added to the data in the _.trialinfo_ field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.
 
 {% include /shared/tutorial/meg_audodd.md %}
 
 ## Browsing the data prior to preprocessing
 
-Before we start preprocessing our data and calculating event-related fields and potentials, we will first have a look at our data while it unprocessed and not yet cut-up into trials (in FieldTrip parlour: *raw*-data). To do this, we  use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data in memory - only the part that it displays.
+Before we start preprocessing our data and calculating event-related fields and potentials, we will first have a look at our data while it unprocessed and not yet cut-up into trials (in FieldTrip parlour: _raw_-data). To do this, we use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data in memory - only the part that it displays.
 
 ### How can I use the databrowser?
 
@@ -54,7 +54,7 @@ The databrowser will **not** change your data in any way. If you specify a cfg a
 
 Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Elekta/Neuromag MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look [here in this video](http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s).
 
-The MEG dataset that we use in this tutorial is available as   [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
+The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
 
 We will first start with the magnetometer
 
@@ -71,12 +71,12 @@ We will first start with the magnetometer
     print -dpng natmeg_databrowser1.png
 
 {% include markup/warning %}
-If your recorded data is continuous, specify *cfg.continuous = 'yes'*, if you have recorded your data in trials, specify *cfg.continuous = 'no'*
+If your recorded data is continuous, specify _cfg.continuous = 'yes'_, if you have recorded your data in trials, specify _cfg.continuous = 'no'_
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_databrowser1.png" width="650" %}
 
-*Figure; Raw plot from magnetometers using ft_databrowser*
+_Figure; Raw plot from magnetometers using ft_databrowser_
 
 {% include markup/info %}
 Try to get a feel of your data by browsing through the data. Do you see any obvious artifacts?
@@ -109,7 +109,7 @@ Finally, we will look at the EEG channel
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_databrowser2.png" width="650" %}
 
-*Figure; Raw plot from EEG channels using ft_databrowser*
+_Figure; Raw plot from EEG channels using ft_databrowser_
 
 {% include markup/info %}
 At first glance, can you see any differences between the MEG and EEG data or artifacts?
@@ -121,21 +121,21 @@ At first glance, can you see any differences between the MEG and EEG data or art
 
 The following steps are taken in the MEG section of the tutorial:
 
-*  Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-*  Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
-*  Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
-*  Compute event-related fields using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-*  Visualize the magnetometer results. You can plot the ERF of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
-*  Combine horizontal and vertical planar gradiometers with **[ft_combineplanar](/reference/ft_combineplanar)**
-*  Plot the gradiometer data using **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)**, and **[ft_topoplotER](/reference/ft_topoploter)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
+- Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- Compute event-related fields using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Visualize the magnetometer results. You can plot the ERF of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
+- Combine horizontal and vertical planar gradiometers with **[ft_combineplanar](/reference/ft_combineplanar)**
+- Plot the gradiometer data using **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)**, and **[ft_topoplotER](/reference/ft_topoploter)**
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart1.png" width="400" %}
 
-*Figure; A schematic overview of the steps in averaging of event related fields*
+_Figure; A schematic overview of the steps in averaging of event related fields_
 
 ### Reading and preprocessing the interesting trials
 
-Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the segments of data that will be read in for preprocessing. Trials are defined by their *begin* and *end*-sample in the data file and each trial has an *offset* that defines where the relative t=0 point (usually the moment of stimulus onset, i.e. on the stimulus-trigger) is for that trial.
+Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the segments of data that will be read in for preprocessing. Trials are defined by their _begin_ and _end_-sample in the data file and each trial has an _offset_ that defines where the relative t=0 point (usually the moment of stimulus onset, i.e. on the stimulus-trigger) is for that trial.
 
 The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_stimlocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_stimlocked.m) to a directory that is on your MATLAB path.
 
@@ -153,10 +153,9 @@ We will now do the trial definition for both the standard and deviant trial
     cfg.trialfun                = 'trialfun_oddball_stimlocked';
     cfg                         = ft_definetrial(cfg);
 
+This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. In addition, we've added an extra column in the _.trl_ that describing whether the trial consist of a normal tone (1) or deviant (2). We will use this later to separately average these conditions. You can find more details about the trialinfo field in the [FAQ: Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline) and [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition).
 
-This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. In addition, we've added an extra column in the *.trl* that describing whether the trial consist of a normal tone (1) or deviant (2). We will use this later to separately average these conditions. You can find more details about the trialinfo field in the [FAQ: Is it possible to keep track of trial-specific information in my FieldTrip analysis pipeline?](/faq/is_it_possible_to_keep_track_of_trial-specific_information_in_my_fieldtrip_analysis_pipeline) and [Making your own trialfun for conditional trial definition](/example/making_your_own_trialfun_for_conditional_trial_definition).
-
-The output of **[ft_definetrial](/reference/ft_definetrial)** is an updated *cfg* strucure that can be used for **[ft_preprocessing](/reference/ft_preprocessing)**, which uses the information about the start-sample, end-sample and offset to cut it up in separate trials and to align the segments to each other.
+The output of **[ft_definetrial](/reference/ft_definetrial)** is an updated _cfg_ strucure that can be used for **[ft_preprocessing](/reference/ft_preprocessing)**, which uses the information about the start-sample, end-sample and offset to cut it up in separate trials and to align the segments to each other.
 
     cfg.continuous              = 'yes';
     cfg.hpfilter                = 'no';
@@ -188,7 +187,6 @@ The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structu
             elec: [1x1 struct]    % Electrode positions etc
              cfg: [1x1 struct]    % Settings used in computing this time-locked analysis
 
-
 The most important fields are data_MEG.trial containing the individual trials and data_MEG.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
 
     plot(data_MEG.time{1}, data_MEG.trial{1}(130,:))
@@ -196,11 +194,11 @@ The most important fields are data_MEG.trial containing the individual trials an
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf0.png" width="600" %}--" %}
 
-*Figure; A plot of a single trial of one channel*
+_Figure; A plot of a single trial of one channel_
 
 This demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. The way we deal with artifacts is described in general in [another tutorial](/tutorial/artifacts) and visual artifact rejection is described in the [Visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. For efficiency in this hands-on tutorial, we will use a semi-automatic way of rejecting trials and channels containing artifacts using a summary view of all trials and channels transformed into z-scores. This allows you to get a quick overview of your data and enables you to easily detect and remove outliers.
 
-  % separately for magnetometers
+    % separately for magnetometers
     cfg               = [];
     cfg.metric        = 'zvalue';
     cfg.layout        = 'neuromag306all.lay';
@@ -208,18 +206,18 @@ This demonstrate how to extract trials from a dataset based on trigger informati
     cfg.keepchannel   = 'yes';  % This keeps those channels that are not displayed in the data
     data_MEG_clean    = ft_rejectvisual(cfg,data_MEG);
 
-  % separately for gradiometers
+    % separately for gradiometers
     cfg.channel = {'MEG*2','MEG*3'};
     data_MEG_clean    = ft_rejectvisual(cfg,data_MEG_clean);
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_rejectsummary.png" width="650" %}
 
-*Figure: An overview of the data using **[ft_rejectvisual](/reference/ft_rejectvisual)***
+\*Figure: An overview of the data using **[ft_rejectvisual](/reference/ft_rejectvisual)\***
 
 {% include markup/warning %}
-Use the mouse to click and drag a selection box over the trials you wish to reject. You can see the trials that were marked for rejection on the right. If you wish to unmark a trial for rejection, type the number of the trial in the 'toggle trial' box and press enter. You can change from *zvalue* to another metrics to detect outliers.
+Use the mouse to click and drag a selection box over the trials you wish to reject. You can see the trials that were marked for rejection on the right. If you wish to unmark a trial for rejection, type the number of the trial in the 'toggle trial' box and press enter. You can change from _zvalue_ to another metrics to detect outliers.
 
-Please be aware that while *cfg.keepchannel='yes'* is specified, you can disable channels in the display but those will not be removed from the data.
+Please be aware that while _cfg.keepchannel='yes'_ is specified, you can disable channels in the display but those will not be removed from the data.
 {% include markup/end %}
 
 After we have rejected trials with artifacts we will save our dat
@@ -245,17 +243,16 @@ We will first apply some additional filters for visualization purposes using **[
     cfg.baselinewindow  = [-0.5 0];
     data_MEG_filt       = ft_preprocessing(cfg,data_MEG_clean);
 
-
 The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the data_EEG structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**.
 
 We will use cfg.trials to specify which trials should go into the average. We will use this to split the data into the oddball and standard trials. The cfg.trials field is simply a vector with the trial indices of the trials we want to average. Since the trigger core is in data.trialinfo, we can use that to select the trials of interest.
 
     cfg = [];
     cfg.trials          = find(data_MEG_filt.trialinfo(:,1) == 1);
-  ERF_standard        = ft_timelockanalysis(cfg,data_MEG_filt);
+    ERF_standard        = ft_timelockanalysis(cfg,data_MEG_filt);
 
     cfg.trials          = find(data_MEG_filt.trialinfo(:,1) == 2);
-  ERF_oddball         = ft_timelockanalysis(cfg,data_MEG_filt);
+    ERF_oddball         = ft_timelockanalysis(cfg,data_MEG_filt);
 
 We will also calculate the difference between both conditions using **[ft_math](/reference/ft_math)**.
 
@@ -263,9 +260,9 @@ We will also calculate the difference between both conditions using **[ft_math](
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
 
-  ERF_diff = ft_math(cfg, ERF_oddball, ERF_standard);
+    ERF_diff = ft_math(cfg, ERF_oddball, ERF_standard);
 
-The output is the data structure *ERF_standard* with the following field
+The output is the data structure _ERF_standard_ with the following field
 
     ERF_standard =
 
@@ -302,7 +299,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf1.png" width="650" %}
 
-*Figure: A plot of the average of all conditions for all channels plotted using  **[ft_multiplotER](/reference/ft_multiplotER)***
+\*Figure: A plot of the average of all conditions for all channels plotted using **[ft_multiplotER](/reference/ft_multiplotER)\***
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
@@ -323,7 +320,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf2.png" width="650" %}
 
-*Figure: A plot of the average of all conditions for channel MEG0211 plotted using  **[ft_singleplotER](/reference/ft_singleplotER)***
+\*Figure: A plot of the average of all conditions for channel MEG0211 plotted using **[ft_singleplotER](/reference/ft_singleplotER)\***
 
 To plot the topographic distribution of the data averaged over the time interval from 0.08 to 0.15 seconds use to following command
 
@@ -356,7 +353,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf3.png" width="650" %}--" %}
 
-*Figure: A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)***
+\*Figure: A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)\***
 
 {% include markup/info %}
 Can you try to explain the topographical distribution in terms of a dipole?
@@ -366,11 +363,11 @@ Can you try to explain the topographical distribution in terms of a dipole?
 
 As you could see in the previous section, the magnetometers may give a topographical distribution which can be difficult to interpret. To help with identifying underlying sources we should make use of the other channels in the data. The planar gradiometers are often more easily interpreted, because they are most sensitive right above a source. However, the gradiometers are composed of two (8-shaped) coils at the same location, oriented in two different directions with respect to the surface of the helmet. They can thereby pick up both radial orientations of the magnetic fields. To use them properly for the purpose of plotting, we should therefor combine them first, adding their fields.
 
-  % Combine planar
+    % Combine planar
     cfg = [];
-  ERF_standard_cmb    = ft_combineplanar(cfg, ERF_standard);
-  ERF_oddball_cmb     = ft_combineplanar(cfg, ERF_oddball);
-  ERF_diff_cmb        = ft_combineplanar(cfg, ERF_diff);
+    ERF_standard_cmb    = ft_combineplanar(cfg, ERF_standard);
+    ERF_oddball_cmb     = ft_combineplanar(cfg, ERF_oddball);
+    ERF_diff_cmb        = ft_combineplanar(cfg, ERF_diff);
 
 #### Plotting the results of planar gradients
 
@@ -393,7 +390,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf4.png" width="650" %}
 
-*Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis***
+\*Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis\***
 
 {% include markup/info %}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
@@ -417,7 +414,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf5.png" width="650" %}
 
-*Figure: The event related field plotted using ft_singleplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis***
+\*Figure: The event related field plotted using ft_singleplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis\***
 
 Now we are going to look at the topographical spread of the field by usin
 
@@ -450,7 +447,7 @@ Now we are going to look at the topographical spread of the field by usin
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf6.png" width="650" %}
 
-*Figure: A topographic plot of the event related fields obtained using **ft_topoplotER***
+\*Figure: A topographic plot of the event related fields obtained using **ft_topoplotER\***
 
 {% include markup/info %}
 Compare this distribution with those resulting from the magnetometers. Do you understand the differences?
@@ -466,16 +463,16 @@ Now that you have looked at the data using the MEG sensors we are going to switc
 
 The EEG section of this tutorial resembles the MEG section. We will take the following steps:
 
-*  Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
-*  Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
-*  Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
-*  Calculate event-related potentials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-*  Visualize the results using **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)**, and **[ft_topoplotER](/reference/ft_topoploter)**
-*  Calculate scalp-current density with **[ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)**
+- Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
+- Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- Calculate event-related potentials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Visualize the results using **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)**, and **[ft_topoplotER](/reference/ft_topoploter)**
+- Calculate scalp-current density with **[ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)**
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart2.png" width="400" %}
 
-*A schematic overview of the steps in averaging of event related potentials*
+_A schematic overview of the steps in averaging of event related potentials_
 
 ### Reading and preprocessing the interesting trials
 
@@ -550,15 +547,14 @@ We will first apply some additional filters for visualization purposes using **[
     cfg.baselinewindow  = [-0.5 0];
     data_EEG_filt       = ft_preprocessing(cfg,data_EEG_clean);
 
-
-The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the data_EEG structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**. We will use *cfg.trials* to specify which trials should go into the average and thereby split between the  oddball and standard trials.
+The trials belonging to one condition will now be averaged with the onset of the stimulus time aligned to the zero-time point (the onset of the last word in the sentence). This is done with the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The input to this procedure is the data_EEG structure generated by **[ft_preprocessing](/reference/ft_preprocessing)**. We will use _cfg.trials_ to specify which trials should go into the average and thereby split between the oddball and standard trials.
 
     cfg = [];
     cfg.trials          = find(data_EEG_filt.trialinfo(:,1) == 1);
-  ERP_standard        = ft_timelockanalysis(cfg, data_EEG_filt);
+    ERP_standard        = ft_timelockanalysis(cfg, data_EEG_filt);
 
     cfg.trials          = find(data_EEG_filt.trialinfo(:,1) == 2);
-  ERP_oddball         = ft_timelockanalysis(cfg, data_EEG_filt);
+    ERP_oddball         = ft_timelockanalysis(cfg, data_EEG_filt);
 
 We will also calculate the difference between both conditions using **[ft_math](/reference/ft_math)**.
 
@@ -566,7 +562,7 @@ We will also calculate the difference between both conditions using **[ft_math](
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
 
-  ERP_diff = ft_math(cfg, ERP_oddball, ERP_standard);
+    ERP_diff = ft_math(cfg, ERP_oddball, ERP_standard);
 
 The output are data structures with the following field
 
@@ -582,7 +578,7 @@ The output are data structures with the following field
         elec: [1x1 struct]
          cfg: [1x1 struct]
 
-The most important field is *ERP_oddball.avg*, containing the average over all trials for each sensor.
+The most important field is _ERP_oddball.avg_, containing the average over all trials for each sensor.
 
 #### Plotting the results of EEG
 
@@ -604,7 +600,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp1.png" width="650" %}
 
-*Figure: The event related potentials plotted using ft_multiplotER. The event related potentials were calculated using **ft_preprocessing** followed by **ft_timelockanalysis***
+\*Figure: The event related potentials plotted using ft_multiplotER. The event related potentials were calculated using **ft_preprocessing** followed by **ft_timelockanalysis\***
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
@@ -626,11 +622,11 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp2.png" width="650" %}
 
-*Figure: The event related potentials plotted for three conditions for channel EEG020 using **[ft_singleplotER](/reference/ft_singleplotER)***
+\*Figure: The event related potentials plotted for three conditions for channel EEG020 using **[ft_singleplotER](/reference/ft_singleplotER)\***
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf2.png" width="650" %}
 
-*Figure: The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER)***
+\*Figure: The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER)\***
 
 {% include markup/info %}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
@@ -638,7 +634,7 @@ Compare this plot to the single-channel ERFs obtained from the magnetometer data
 
 To plot the topographic distribution of the data averaged over the time interval from 0.08 to 0.15 seconds use to following command
 
-  % Topo
+    % Topo
     cfg                 = [];
     cfg.layout          = 'natmeg_customized_eeg1005.lay';
     cfg.zlim            = [-3e-6 3e-6];
@@ -668,7 +664,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp3.png" width="650" %}
 
-*Figure 10; A topographic plot of the event related potentials obtained using **[ft_topoplotER](/reference/ft_topoplotER)***
+\*Figure 10; A topographic plot of the event related potentials obtained using **[ft_topoplotER](/reference/ft_topoplotER)\***
 
 {% include markup/info %}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
@@ -676,9 +672,9 @@ To which MEG channels can we best compare the topographical plots from the EEG d
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf6.png" width="650" %}
 
-*Figure 11; A topographic plot of the event related fields (gradiometer) obtained using **[ft_topoplotER](/reference/ft_topoplotER)***
+\*Figure 11; A topographic plot of the event related fields (gradiometer) obtained using **[ft_topoplotER](/reference/ft_topoplotER)\***
 
-####  Scalp current density (SCD)
+#### Scalp current density (SCD)
 
 When comparing the EEG topoplots to the MEG topoplots we notice that the spread of the EEG activity measured on the scalp has a wider distribution than when looking at the MEG sensors. Due to volume conduction, most of the focal current generated in the brain spreads over the scalp and it becomes more difficult to localize activity. One method to compensate for this is to calculate scalp current density (SCD), which in its most basic form is the second spatial derivative of the EEG. SCD maps help with localizing the source of activity in the EEG. Furthermore, SCD maps are independent of the choice of reference electrode.
 
@@ -691,7 +687,6 @@ So let's calculate the SCD on the averaged data.
     scd_ERP_standard    = ft_scalpcurrentdensity(cfg, ERP_standard);
     scd_ERP_oddball     = ft_scalpcurrentdensity(cfg, ERP_oddball);
     scd_ERP_diff        = ft_scalpcurrentdensity(cfg, ERP_diff);
-
 
 #### Plotting the results of the SCD
 
@@ -728,7 +723,7 @@ Note that if you get plotting artifacts in these figures, such as colorbars that
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_scd1.png" width="650" %}--" %}
 
-*Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)***
+\*Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)\***
 
 {% include markup/info %}
 Did calculating the scalp current density help in narrowing down the source of the EEG activity?
@@ -789,6 +784,6 @@ We now have the same amount of trials for each type of sensor.
 
 ## Summary and suggested further reading
 
-In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and re-referencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their timecourses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.  
+In this tutorial we learned how to look at raw MEG and EEG data, define trials based on trigger codes, preprocess the data - including filtering and re-referencing, and average the data to ERPs and ERFs. We then learned how to display the results in terms of their timecourses as well as their corresponding topographies. We also got a good sense of the differences in topographies of fields and potentials when we compared MEG magnetometers with gradiometers and EEG. Finally, we also showed you how you are able to combine EEG and MEG if you would like to do analysis on them simultaneously.
 
 If you are interested in a different analysis of your data that shows event related changes in the oscillatory components of the signal, you can continue with the [combined EEG-MEG timefrequency tutorial](/workshop/natmeg/timefrequency) or the standard [time-frequency analysis](/tutorial/timefrequencyanalysis) tutorial.

@@ -13,7 +13,7 @@ You can find the template models for source reconstruction included in FieldTrip
 
 ### Grid search in dipole fitting
 
-When you do source reconstruction with dipole fit methods (as implemented in **[ft_dipolefitting](/reference/ft_dipolefitting)**), you usually assume a source model that consists of a single or a small number of equivalent current dipoles and you fit the source location, orientation and strength to the data. In this case you might start with an exhaustive grid search on a pre-defined grid, which in general is then followed by a non-linear optimization of the location of the dipoles. The initial grid on which the search is performed is not that important and is usually constructed on the fly as 3d grid  with a reasonable resolution. The resolution should not be too high, otherwise the grid search will take too long, but should also not be too low, otherwise the non-lienar search will have to start from a grid location that is still far of from the minimum. Both a too low and a too high grid resolution will cause the dipole fitting procedure to take more time.
+When you do source reconstruction with dipole fit methods (as implemented in **[ft_dipolefitting](/reference/ft_dipolefitting)**), you usually assume a source model that consists of a single or a small number of equivalent current dipoles and you fit the source location, orientation and strength to the data. In this case you might start with an exhaustive grid search on a pre-defined grid, which in general is then followed by a non-linear optimization of the location of the dipoles. The initial grid on which the search is performed is not that important and is usually constructed on the fly as 3d grid with a reasonable resolution. The resolution should not be too high, otherwise the grid search will take too long, but should also not be too low, otherwise the non-lienar search will have to start from a grid location that is still far of from the minimum. Both a too low and a too high grid resolution will cause the dipole fitting procedure to take more time.
 
 ### Scanning with a beamformer
 
@@ -22,12 +22,12 @@ The FieldTrip template directory provides a set of sourcemodels defined on regul
 
 Template source models with the varying dipole spacing (4, 5, 6, 7.5, 8 and 10 mm) on a regular 3-D grid are available in fieldtrip/template/sourcemodel director
 
-*  standard_sourcemodel3d10mm.mat
-*  standard_sourcemodel3d4mm.mat
-*  standard_sourcemodel3d5mm.mat
-*  standard_sourcemodel3d6mm.mat
-*  standard_sourcemodel3d7point5mm.mat
-*  standard_sourcemodel3d8mm.mat
+- standard_sourcemodel3d10mm.mat
+- standard_sourcemodel3d4mm.mat
+- standard_sourcemodel3d5mm.mat
+- standard_sourcemodel3d6mm.mat
+- standard_sourcemodel3d7point5mm.mat
+- standard_sourcemodel3d8mm.mat
 
 To load and visualize the 3D regular grids, you can do for example
 
@@ -52,9 +52,9 @@ When doing source reconstruction using minimum norm estimation (MNE, also known 
 
 A canonical cortical sheet is available in fieldtrip/template/sourcemodel with different numbers of vertices (20484, 8192 and 5124 vertices). These files were taken from the SPM8 release version; they refer to the canonical T1 anatomical MRI and are expressed in MNI coordinates.
 
-*  cortex_20484.surf.gii
-*  cortex_8196.surf.gii
-*  cortex_5124.surf.gii
+- cortex_20484.surf.gii
+- cortex_8196.surf.gii
+- cortex_5124.surf.gii
 
 You can load and visualize the cortical sheets with
 
@@ -68,24 +68,24 @@ You can load and visualize the cortical sheets with
 
 ## UPDATE: cortical meshes from SPM8 added on 17 May, 2013
 
-The following documentation is a verbatim copy of *spm_mesh.man* in [SPM8](http://www.fil.ion.ucl.ac.uk/spm) and describes the details of
+The following documentation is a verbatim copy of _spm_mesh.man_ in [SPM8](http://www.fil.ion.ucl.ac.uk/spm) and describes the details of
 
-*  cortex_20484.surf.gii
-*  cortex_5124.surf.gii
-*  cortex_8196.surf.gii
+- cortex_20484.surf.gii
+- cortex_5124.surf.gii
+- cortex_8196.surf.gii
 
 The cortical mesh surfaces here were created using Freesurfer version
 4.0.1 (Dale et al. 1999, Fischl et al. 2001, Fischl et al. 1999) from
 an average of 27 T1 scans of the same subject (see spm_templates.man and
-Tzourio-Mazoyer et al. 2002  for more details).
+Tzourio-Mazoyer et al. 2002 for more details).
 The surfaces were inflated to a sphere and down-sampled using an
 octahedron (8,196 vertices) or an icosahedron (5,124 and 20,464 vertices)
 equally subdivided to achieve the highly tessellated surfaces provided.
 
 The boundary element model surfaces were created using the watershed
-algorithm (Segonne et al. 2004).  These surfaces were created
+algorithm (Segonne et al. 2004). These surfaces were created
 utilizing an icosahedron equally subdivided to create a highly
-tessellated surface.  Some manual editing was applied to the T1 images
+tessellated surface. Some manual editing was applied to the T1 images
 in order to optimize the performance of the watershed algorithm.
 
 The meshes were subsequenlty warped using the deformation field created
@@ -96,22 +96,22 @@ They are saved in the GIfTI file format, with GZipBase64Binary encoding.
 
 ### References
 
-* Dale, A.M., Fischl, B., Sereno, M.I., 1999. Cortical surface-based
-analysis. I. Segmentation and surface reconstruction. Neuroimage 9,
-179-194.
-* Fischl, B., Liu, A., Dale, A.M., 2001. Automated manifold surger
-constructing geometrically accurate and topologically correct models
-of the human cerebral cortex. IEEE Trans Med Imaging 20, 70-80.
-* Fischl, B., Sereno, M.I., Dale, A.M., 1999. Cortical surface-based
-analysis. II: Inflation, flattening, and a surface-based coordinate
-system. Neuroimage 9, 195-207.
-* Segonne, F., Dale, A.M., Busa, E., Glessner, M., Salat, D., Hahn,
-H.K., Fischl, B., 2004. A hybrid approach to the skull stripping
-problem in MRI. Neuroimage 22, 1060-1075.
-* Tzourio-Mazoyer, N., Landeau, B., Papathanassiou, D., Crivello, F.,
-Etard, O., Delcroix, N., et al, 2002. Automated anatomical labelling of
-activations in spm using a macroscopic anatomical parcellation of the MNI
-MRI single subject brain. Neuroimage 15, 273-289.
+- Dale, A.M., Fischl, B., Sereno, M.I., 1999. Cortical surface-based
+  analysis. I. Segmentation and surface reconstruction. Neuroimage 9,
+  179-194.
+- Fischl, B., Liu, A., Dale, A.M., 2001. Automated manifold surger
+  constructing geometrically accurate and topologically correct models
+  of the human cerebral cortex. IEEE Trans Med Imaging 20, 70-80.
+- Fischl, B., Sereno, M.I., Dale, A.M., 1999. Cortical surface-based
+  analysis. II: Inflation, flattening, and a surface-based coordinate
+  system. Neuroimage 9, 195-207.
+- Segonne, F., Dale, A.M., Busa, E., Glessner, M., Salat, D., Hahn,
+  H.K., Fischl, B., 2004. A hybrid approach to the skull stripping
+  problem in MRI. Neuroimage 22, 1060-1075.
+- Tzourio-Mazoyer, N., Landeau, B., Papathanassiou, D., Crivello, F.,
+  Etard, O., Delcroix, N., et al, 2002. Automated anatomical labelling of
+  activations in spm using a macroscopic anatomical parcellation of the MNI
+  MRI single subject brain. Neuroimage 15, 273-289.
 
 ## UPDATE: new 3D source models uploaded on March 7, 2013
 
@@ -122,16 +122,16 @@ The new set of sourcemodels are not compatible with the old set. If you were in 
 {% include markup/end %}
 
 {% include image src="/assets/img/template/sourcemodel/sourcemodel1.png" width="300" %}
-*Figure 1A: Template brain surface with template dipole locations (old version sourcemodel).*
+_Figure 1A: Template brain surface with template dipole locations (old version sourcemodel)._
 
 {% include image src="/assets/img/template/sourcemodel/sourcemodel3.png" width="300" %}
-*Figure 1B: Warped dipole locations (linear warp only) on top of an individual brain surface.*
+_Figure 1B: Warped dipole locations (linear warp only) on top of an individual brain surface._
 
 {% include image src="/assets/img/template/sourcemodel/sourcemodel2.png" width="300" %}
-*Figure 1C: Warped dipole locations (nonlinear warp) on top of an individual brain surface.*
+_Figure 1C: Warped dipole locations (nonlinear warp) on top of an individual brain surface._
 
 {% include image src="/assets/img/template/sourcemodel/sourcemodel4.png" width="400" %}
-*Figure 2: The brain surface extracted from the blurred template brain warped to, and projected onto an individual MRI (yellow), and the brain surface extracted from the individual MRI (red).*
+_Figure 2: The brain surface extracted from the blurred template brain warped to, and projected onto an individual MRI (yellow), and the brain surface extracted from the individual MRI (red)._
 
 {% include image src="/assets/img/template/sourcemodel/sourcemodel5.png" width="300" %}
 ** Figure 3: Updated sourcemodel with template dipole locations (linearly warped) on top of an individual brain surface.**

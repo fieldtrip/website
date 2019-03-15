@@ -14,7 +14,7 @@ Integrate the forward model part of FNS in FieldTrip.
 
 Q: What about the inverse modelling?
 
-A: All inverse methods in FieldTrip are independent from the forward model, i.e. there is a function that computes a leadfield and another function that uses it together with the data to make an estimate of the source. This allows the complete collection of inverse methods to be used either for MEG, MEG and ECoG data.  
+A: All inverse methods in FieldTrip are independent from the forward model, i.e. there is a function that computes a leadfield and another function that uses it together with the data to make an estimate of the source. This allows the complete collection of inverse methods to be used either for MEG, MEG and ECoG data.
 
 ## Features
 
@@ -27,7 +27,7 @@ A: All inverse methods in FieldTrip are independent from the forward model, i.e.
 
 First create and store the system matrix in output file data.h
 
-  # Example of linux shell comman
+    # Example of linux shell command
     elecsfwd --img smri-seghead --electrodes electrodes.h5 --data data.h5 --contable  ../../data/conductivity/contable.csv --TOL 1e-8'
 
 The smri-seghead file is the name of a analyze format file (.hdr, .img) which contains the segmentations with the assigned tissue values (e.g. gray matter = 1, white matter =2, or single sphere = 1).
@@ -42,26 +42,26 @@ contable.csv is a comma saparated file which assigns a conductivity value for ea
 2. create a wrapper to run the binaries
 3. The call to elecsfwd should be modified as follow
 
-* input arguments --img segfile and --electrodes elecs disappear, they are substituted by two other arguments called --dim and --3dmesh
-* the input argument --3dmesh contains the coordinates of the voxels' centers (all and only voxels belonging to the head) and an additional columns with the tissue label of each voxel. The resulting matrix V has dimensions [N (head voxels) X 4]
-* the input argument dim contains the dimensions of the MRI (e.g. 256X256X256] in order to be able to build the box around the head
-* output argument --data datafile now contains only a matrix M of dimensions [skinXbrain voxels], no additional fields
-* provide Hung with 2 files: one semgmented labelled MRI, one text file with the output voxels, containing the positions of the solutions in voxels coordinates
+- input arguments --img segfile and --electrodes elecs disappear, they are substituted by two other arguments called --dim and --3dmesh
+- the input argument --3dmesh contains the coordinates of the voxels' centers (all and only voxels belonging to the head) and an additional columns with the tissue label of each voxel. The resulting matrix V has dimensions [N (head voxels) X 4]
+- the input argument dim contains the dimensions of the MRI (e.g. 256X256X256] in order to be able to build the box around the head
+- output argument --data datafile now contains only a matrix M of dimensions [skinXbrain voxels], no additional fields
+- provide Hung with 2 files: one semgmented labelled MRI, one text file with the output voxels, containing the positions of the solutions in voxels coordinates
 
 ## Steps to be taken (Cristiano)
 
 1. Understand how to initialize all the elements used by elecsfwd function to calculate the leadfield
-in particula
+   in particular:
 
-  - smri-seghead: the segmentation mesh file format (can it be a .mat file?)
-  - electrodes.h5: the electrodes positions file (in head coordinates?)
-     how do we read/plot elecs if we have h5 file?
-  - data.h5: time courses of the electrodes (?), no output
-     how do we read/interpret its content? (contains lf?)
-     how to determine if h5 file is elecs or lf...?
-  - contable.csv: conductivity table (do not understande really the organization of this)
-  - tolerance: of what?
-  - what is the format h5? done
+- smri-seghead: the segmentation mesh file format (can it be a .mat file?)
+- electrodes.h5: the electrodes positions file (in head coordinates?)
+  - how do we read/plot elecs if we have h5 file?
+- data.h5: time courses of the electrodes (?), no output
+  - how do we read/interpret its content? (contains lf?)
+  - how to determine if h5 file is elecs or lf...?
+- contable.csv: conductivity table (do not understande really the organization of this)
+- tolerance: of what?
+- what is the format h5? done
 
 2. Understand how to retrieve them (from disk? in memory?) done
 3. Discuss the integration of MKL no commercial libraries in the frame of GPL license of Linux (and Windows), try without any intel libraries, try libraries of octave (is modular)
@@ -77,37 +77,45 @@ in particula
 1. Update load the test data for FNS. Done
 
 2. Clean update FNS code
-   * Rename all FNS routine prefix to 'fns_'
+
+   - Rename all FNS routine prefix to 'fns\_'
 
 3. Update notes about the beamforming algorithms
-   * Will upload papers and posters
+
+   - Will upload papers and posters
 
 4. Take the electrode rereferencing out of the main binary. Done
-   * FNS does not do any referencing.
-   * User need to specify the reference technique and FieldTrip will handle this.
 
-5. System matrix has to be extracted from data.h5 output as previously calculated from 'elecs_fwd'.     
-   * Create a MATLAB function with as input argument the tissue type and as output the correspondent system matrix. Done with the C version. Working on the MATLAB version now.
+   - FNS does not do any referencing.
+   - User need to specify the reference technique and FieldTrip will handle this.
+
+5. System matrix has to be extracted from data.h5 output as previously calculated from 'elecs_fwd'.
+
+   - Create a MATLAB function with as input argument the tissue type and as output the correspondent system matrix. Done with the C version. Working on the MATLAB version now.
 
 6. Add usage and other information to all binaries. Updating.
 
 7. Redesign FNS
-   * Forward solver will have
+
+   - Forward solver will have
+
      - Inputs
-       + The segmented volume image
-       + Fitted electrode grid locations (in MRI coordinate)
-       + Dipole locations
+
+       - The segmented volume image
+       - Fitted electrode grid locations (in MRI coordinate)
+       - Dipole locations
 
      - Output
-       + All computed forward solvers
-       + Some other information to extract the lead field matrices including model sizes, voxel sizes (optional), mapping vector (internal usage only it will be used only when user want to reduce the memory).
+       - All computed forward solvers
+       - Some other information to extract the lead field matrices including model sizes, voxel sizes (optional), mapping vector (internal usage only it will be used only when user want to reduce the memory).
 
 8. Current version
-  * Compute all forward solutions and save to a file.
-    + This routine could be threaded using OpenMP, however, the required memory may growing substantially then just disable it for now.
-    + Will add a better parallelism technique later for the next release.
-  * Either C or MATLAB routine could be used to compute the lead field matrix (NELECx3*NDIPOLE matrix) of a given set of dipoles (3xNDIPOLE matrix)
-  * Need to do referencing before using the lead field matrix   
+
+- Compute all forward solutions and save to a file.
+  - This routine could be threaded using OpenMP, however, the required memory may growing substantially then just disable it for now.
+  - Will add a better parallelism technique later for the next release.
+- Either C or MATLAB routine could be used to compute the lead field matrix (NELECx3\*NDIPOLE matrix) of a given set of dipoles (3xNDIPOLE matrix)
+- Need to do referencing before using the lead field matrix
 
 ## External links
 

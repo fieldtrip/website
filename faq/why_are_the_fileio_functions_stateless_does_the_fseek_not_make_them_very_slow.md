@@ -9,7 +9,6 @@ The **[ft_read_data](/reference/ft_read_data)** function in the fileio module is
 
 This belief that fopen and fseek are slow certainly applied to old-fashioned file systems, such as FAT16, which was used in the MS-DOS era. The reason for that was that on every fseek the File Allocation Table (FAT) had to be read from disk to determine the physical block on disk to which the fseek should be made. Modern file systems don't seem to have this problem any more, and there are only small differences in stateless versus stateful read operations. The MATLAB code below demonstrates this.
 
-
     filename = 'test.bin';
 
     nchan    = 256;

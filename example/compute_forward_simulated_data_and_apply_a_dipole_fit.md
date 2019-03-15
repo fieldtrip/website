@@ -16,7 +16,7 @@ tags: [example, eeg, source, dipole]
     end
 
     % Note: I suggest that you do not use these electrodes, but instead that
-    % you get more meaningful electrode locations. See for example  
+    % you get more meaningful electrode locations. See for example
     % the template electrode locations included in fieldtrip
 
     % create a concentric 3-sphere volume conductor, the radius is the same as for the electrodes

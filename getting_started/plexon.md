@@ -11,16 +11,15 @@ The Plexon acquisition system writes data to .plx files, and more recent systems
 
 FieldTrip can read Plexon data from the following file formats.
 
-*  .ddt
-*  .nex
-*  .plx
+- .ddt
+- .nex
+- .plx
 
 The .plx files contain the multiplexed raw acquisition data. During acquisition the data arrives in random order from the different continuous and spike channels. The .plx file therefore contains data in many small fragments, which causes the reading of plx files to be slow. The newer plexon .pl2 file recording format doesn't have this limitation. One option for the slow .plx format is to convert the data to the .nex file format. These .nex files also contain the continuous and spike data, but in a orderer format that allows much faster read-access. Using the newer plexon_plx_v2 filetype also greatly speeds up .plx file reading by using the official Plexon SDK (see below).
 
 There are some constraints related to the way that FieldTrip represents continuous and spike data. All main FieldTrip functions read continuous data using the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions. These functions require the continuous data in all channels contained in the file to have the same sampling frequency. This can be a problem because Plexon file formats often contain both 40kHz spike data and 1kHz sampled LFP data in the same file. One solution is to resave all source files into two separate files. The other is to modify the fileio fuctions to select the correct sampling frequency and channels.
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
-
 
     addpath `<full_path_to_fieldtrip>`
     ft_defaults
@@ -29,10 +28,9 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 The .ddt format is a Plexon continuous data file optimized for continuous (streaming) recording where every channel is continuously recorded without gaps and the recording includes any dead time between spikes. You can test the .ddt file by trying to read the header and some data from i
 
-
-  >> hdr = ft_read_header('test1.ddt')
-  Warning: creating fake channel names
-  > In ft_read_header at 1273
+    >> hdr = ft_read_header('test1.ddt')
+    Warning: creating fake channel names
+    > In ft_read_header at 1273
 
     hdr =
            nChans: 2
@@ -43,15 +41,14 @@ The .ddt format is a Plexon continuous data file optimized for continuous (strea
             label: {'1'  '2'}
              orig: [1x1 struct]
 
-  >> dat = ft_read_data('test1.ddt');
-  >> plot(dat');
+    >> dat = ft_read_data('test1.ddt');
+    >> plot(dat');
 
 ## Reading continuous data from a .nex file
 
 The .nex file format can contain continuous and spike data. To test the reading of continuous data, you can use the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions.
 
-
-  >> hdr = ft_read_header('p021parall.nex')
+    >> hdr = ft_read_header('p021parall.nex')
 
     hdr =
                   nChans: 15
@@ -64,11 +61,11 @@ The .nex file format can contain continuous and spike data. To test the reading 
       TimeStampPerSample: 40
                     orig: [1x1 struct]
 
-  % read and plot the first 10 seconds of the first channel
-  >> dat = ft_read_data('p021parall.nex', 'chanindx', 1, 'begsample', 1, 'endsample', 10000);
-  >> plot(dat);   
-  % read the events a.k.a. the triggers
-  >> event = ft_read_event('p021parall.nex')                                  
+    % read and plot the first 10 seconds of the first channel
+    >> dat = ft_read_data('p021parall.nex', 'chanindx', 1, 'begsample', 1, 'endsample', 10000);
+    >> plot(dat);
+    % read the events a.k.a. the triggers
+    >> event = ft_read_event('p021parall.nex')
 
 After having tested the reading of continuous data, you can use the **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions as explained in the [tutorial documentation](/tutorial).
 
@@ -76,8 +73,7 @@ After having tested the reading of continuous data, you can use the **[ft_define
 
 To read the spike data, you should use the **[ft_read_spike](/reference/ft_read_spike)** function. Since spikes take very little memory, all spikes in all spike channels will be read at once.
 
-
-  >> spike = ft_read_spike('p021parall.nex')
+    >> spike = ft_read_spike('p021parall.nex')
 
     spike =
           label: {'sig001a'  'sig002a'  'sig003a'  'sig004a'}
@@ -104,5 +100,5 @@ If you use the [plexon V2 patch (filetype = plexon_plx_v2)](http://bugzilla.fiel
 
 ## External links
 
-*  http://www.plexoninc.com
-*  http://www.neuroexplorer.com
+- http://www.plexoninc.com
+- http://www.neuroexplorer.com

@@ -6,23 +6,21 @@ title: Phalow_freqhigh
 
 ## Help freqsimulation
 
-  
-  % method 'phalow_freqhigh' creates a frequency modulated signal
-  %   signal is build up of 3 components; s1, s2 and noise.
-  %     s1: represents the base signal that will be modulated
-  %     s2: signal that will be used for the frequency modulation
-  % and the output consists of the following channel
-  %     1st channel: mixed signal = s1.ampl * cos(ins_pha) + noise
-  %     2nd channel: s1
-  %     3rd channel: s2
-  %     4th channel: noise
-  %     5th channel: inst_pha_base   instantaneous phase of the high (=base) frequency signal s1
-  %     6th channel: inst_pha_mod    low frequency phase modulation, this is equal to s2
-  %     7th channel: inst_pha        instantaneous phase, i.e. inst_pha_base + inst_pha_mod
+    % method 'phalow_freqhigh' creates a frequency modulated signal
+    %   signal is build up of 3 components; s1, s2 and noise.
+    %     s1: represents the base signal that will be modulated
+    %     s2: signal that will be used for the frequency modulation
+    % and the output consists of the following channel
+    %     1st channel: mixed signal = s1.ampl * cos(ins_pha) + noise
+    %     2nd channel: s1
+    %     3rd channel: s2
+    %     4th channel: noise
+    %     5th channel: inst_pha_base   instantaneous phase of the high (=base) frequency signal s1
+    %     6th channel: inst_pha_mod    low frequency phase modulation, this is equal to s2
+    %     7th channel: inst_pha        instantaneous phase, i.e. inst_pha_base + inst_pha_mod
 
 ## Simulating the data
 
-  
     cfg = [];
     cfg.fsample   = 1000;
     cfg.method    = 'phalow_freqhigh';
@@ -36,12 +34,11 @@ title: Phalow_freqhigh
     cfg.s2.ampl   = pi; % should not be too high, then diff inst phase becomes negative or very close to zero and time stops or reverses
     cfg.noise.ampl = 0;
     cfg.output = 'all';
-  
+
     data = ft_freqsimulation(cfg);
 
 ## What does the signal look like?
 
-  
     figure;
     sel = 1:1000;
     subplot(3,3,1); plot(data.trial{1}(1,sel)); title(data.label{1})
@@ -52,22 +49,21 @@ title: Phalow_freqhigh
     subplot(3,3,6); plot(data.trial{1}(6,sel)); title(data.label{6})
     subplot(3,3,7); plot(data.trial{1}(7,sel)); title(data.label{7})
     print -dpng phalow_freqhigh_fig1.png
-  
+
     figure;plot(diff(data.trial{1}(7,:))); title('diff inst phase, should not be less than or close to zero')
     print -dpng phalow_freqhigh_fig2.png
 
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig1.png" width="400" %}
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig2.png" width="400" %}
 
-  
-  % show powerspectrum simulated data
+    % show powerspectrum simulated data
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.channel   = 'mix';
     cfg.output    = 'pow';
     cfg.taper     = 'hanning';
     cfg.foilim    = [2 60];
-  
+
     fft_data = ft_freqanalysis(cfg,data);
     figure; ft_singleplotER([],fft_data);
     print -dpng phalow_freqhigh_fig3.png
@@ -78,8 +74,7 @@ title: Phalow_freqhigh
 
 ### Calculate power of power
 
-  
-  % mtmconvol 1ex
+    % mtmconvol 1ex
     cfg = [];
     cfg.method    = 'mtmconvol';
     cfg.channel   = 'mix';
@@ -89,13 +84,13 @@ title: Phalow_freqhigh
     cfg.toi       = data.time{1}(3001:7000);
     cfg.t_ftimwin = 4./cfg.foi;
     cfg.keeptrials = 'yes';
-  
+
     freq1 = ft_freqanalysis(cfg,data);
     figure; imagesc(freq1.time(1:1000), freq1.freq, squeeze(freq1.powspctrm(1,1,:,1:1000)))
     axis xy
     print -dpng phalow_freqhigh_fig4.png
-  
-  % plot power at different frequencies
+
+    % plot power at different frequencies
     pow_10Hz = squeeze(freq1.powspctrm(1,1,5,:));
     pow_12Hz = squeeze(freq1.powspctrm(1,1,6,:));
     pow_14Hz = squeeze(freq1.powspctrm(1,1,7,:));
@@ -124,27 +119,26 @@ title: Phalow_freqhigh
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig4b.png" width="400" %}
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig5.png" width="400" %}
 
-  
-  % mtmfft on freq1 with output power
+    % mtmfft on freq1 with output power
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.output    = 'pow';
     cfg.taper     = 'hanning';
     cfg.foilim    = [2 60];
     cfg.keeptrials = 'no';
-  
-    freq2 = ft_freqanalysis(cfg,freq1); %FieldTrip automatically converts the freq1 data to raw data. 
+
+    freq2 = ft_freqanalysis(cfg,freq1); %FieldTrip automatically converts the freq1 data to raw data.
                                    %Every frequency in the powerspectrum is converted to a a channel labeled mix@xxHz
-  
+
     freq2.freq2 = [2:2:60];
-  
-  %plot
+
+    %plot
     figure; imagesc(freq2.freq, freq2.freq2, freq2.powspctrm)
     axis xy
     print -dpng phalow_freqhigh_fig6.png
-  
-  
-  %zoom in
+
+
+    %zoom in
     figure; imagesc(freq2.freq(1:33), freq2.freq2(5:15), freq2.powspctrm(5:15,1:33))
     axis xy
     print -dpng phalow_freqhigh_fig7.png
@@ -152,38 +146,37 @@ title: Phalow_freqhigh
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig6.png" width="400" %}
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig7.png" width="400" %}
 
-In figure 7 you can see that most frequencies are modulated at 2 Hz, which was indeed the frequency of the modulation (s2 in data). Harmonics are seen at 4 and 6 Hz. The base frequency (20 Hz, s1 in data) is the only frequency that shows the strongest correlation with the modulation frequency (s2.freq = 2Hz) * 2 = 4Hz.
+In figure 7 you can see that most frequencies are modulated at 2 Hz, which was indeed the frequency of the modulation (s2 in data). Harmonics are seen at 4 and 6 Hz. The base frequency (20 Hz, s1 in data) is the only frequency that shows the strongest correlation with the modulation frequency (s2.freq = 2Hz) \* 2 = 4Hz.
 
 ### Calculate power of derivative of estimated instanteneous phase
 
-  
-  % bandpass
+    % bandpass
     cfg = [];
     cfg.channel = 'mix';
     cfg.bpfilter = 'yes';
     cfg.bpfreq = [10 40];
     data_bp = ft_preprocessing(cfg,data);
-  
-  % check
+
+    % check
     figure;
     sel = 1:1000;
     plot(data.trial{1}(1,sel))
-    hold on 
+    hold on
     plot(data_bp.trial{1}(1,sel),'r')
     legend('original data','bandpassed data','location','Best')
     print -dpng phalow_freqhigh_fig8.png
-  
-  % estimate instantaneous phase by angle Hilbert
+
+    % estimate instantaneous phase by angle Hilbert
     cfg = [];
     cfg.channel = 'mix';
     cfg.hilbert = 'angle';
     data_H = ft_preprocessing(cfg,data_bp);
-  
-  % check
+
+    % check
     figure;
     sel = 1:1000;
     plot(data.trial{1}(7,sel));
-    hold on 
+    hold on
     plot(data_H.trial{1}(1,sel),'r')
     legend(data.label{7},'estimated ins phase','location','Best')
     print -dpng phalow_freqhigh_fig9.png
@@ -191,30 +184,28 @@ In figure 7 you can see that most frequencies are modulated at 2 Hz, which was i
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig8.png" width="400" %}
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig9.png" width="400" %}
 
-  
-  % calculate derivative of instantaneous phase
+    % calculate derivative of instantaneous phase
     cfg = [];
     cfg.channel = 'mix';
     cfg.absdiff = 'yes'
     data_diff = ft_preprocessing(cfg,data_H);
-  
-  % check
+
+    % check
     figure;
     sel = 1:3000;
     plot(data_diff.trial{1}(1,sel),'r')
     print -dpng phalow_freqhigh_fig10.png
-  
+
     cfg = [];
     cfg.method    = 'mtmfft';
     cfg.output    = 'pow';
     cfg.taper     = 'hanning';
     cfg.foilim    = [1 20];
     cfg.keeptrials = 'no';
-  
+
     fft_data_diff = ft_freqanalysis(cfg, data_diff);
     figure; ft_singleplotER([],fft_data_diff);
     print -dpng phalow_freqhigh_fig11.png
 
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig10.png" width="400" %}
 {% include image src="/assets/img/example/crossfreq/phalow_freqhigh/phalow_freqhigh_fig11.png" width="400" %}
-

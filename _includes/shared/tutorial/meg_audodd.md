@@ -36,16 +36,16 @@ The standard tones were 400ms 1000Hz sine-waves, with a short 50ms ramping up- a
 
 The MEG system records event-triggers in a separate channels, called STI101 and STI102. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset (or offset) can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the workshop:
 
--   Onset of standard stimulus: 1
--   Onset of oddball stimulus: 2
--   Button-press onset of left hand: 256
--   Button-press onset of right hand: 4096
+- Onset of standard stimulus: 1
+- Onset of oddball stimulus: 2
+- Button-press onset of left hand: 256
+- Button-press onset of right hand: 4096
 
 ### Data
 
--   Data was sampled at 1000Hz.
--   306 channels MEG of which 102 are magnetometers, and 204 are planar gradiometers.
--   128 electrode EEG. The reference was placed on the right mastoid, the ground on the left mastoid. The locations of the electrodes are placed according to the 5% rule, which is an extension of the standard 10-20 system for high-density EEG caps. You can find details here: <http://www.biosemi.com/publications/pdf/Oostenveld2001b.pdf>). In addition, the locations of the EEG electrodes was measured in 3D using the Polhemus system and recorded in the data.
--   Horizontal EOG(1) electrodes were placed just outside the left and right eye. Vertical EOG(2) were placed above and below the left eye.
--   Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
--   Electromyography of the lower arm flexors of the left(1) and right(2) arm were recorded.
+- Data was sampled at 1000Hz.
+- 306 channels MEG of which 102 are magnetometers, and 204 are planar gradiometers.
+- 128 electrode EEG. The reference was placed on the right mastoid, the ground on the left mastoid. The locations of the electrodes are placed according to the 5% rule, which is an extension of the standard 10-20 system for high-density EEG caps. You can find details here: <http://www.biosemi.com/publications/pdf/Oostenveld2001b.pdf>). In addition, the locations of the EEG electrodes was measured in 3D using the Polhemus system and recorded in the data.
+- Horizontal EOG(1) electrodes were placed just outside the left and right eye. Vertical EOG(2) were placed above and below the left eye.
+- Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
+- Electromyography of the lower arm flexors of the left(1) and right(2) arm were recorded.

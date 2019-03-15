@@ -66,7 +66,7 @@ level = {
 
 for isub=1:numel(subject)
 
-  % find the 4 datasets for this subject
+    % find the 4 datasets for this subject
     sel = find(startsWith(datainfo(:,1), subject{isub}));
     num = numel(sel);
 
@@ -136,7 +136,7 @@ end
 
 for isub=1:numel(subject)
 
-  % find the 4 datasets for this subject
+    % find the 4 datasets for this subject
     sel = find(startsWith(datainfo(:,1), subject{isub}));
     num = numel(sel);
 
@@ -151,7 +151,7 @@ for isub=1:numel(subject)
 
     t = readtable(filename, 'FileType', 'text', 'Delimiter', '\t');
 
-  % add the subject-specific information
+    % add the subject-specific information
     t.sedation       = level(sedation);
     t.concentration  = concentration(:);
     t.reactiontime  = reactiontime(:);

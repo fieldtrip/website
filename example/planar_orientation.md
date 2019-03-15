@@ -11,7 +11,6 @@ This is further detailed in the Elekta System Hardware Users' Guide and on [this
 
 The following code demonstrates how you can determine the orientation of the two planar channels at each location.
 
-
     grad = ft_read_sens(filename, 'senstype', 'meg');
 
     sel = find(strcmp(grad.chantype, 'megplanar'));

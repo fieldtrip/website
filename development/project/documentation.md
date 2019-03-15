@@ -4,7 +4,7 @@ title:
 
 {% include /shared/development/warning.md %}
 
-__**Tutorials:**__
+****Tutorials:****
 
 **Preprocessing - trigger based trial selection**
 
@@ -12,7 +12,7 @@ Done, all the code works (9 dec 2008)
 
 **Preprocessing - manual artifact detection based on visual inspection**
 
-The code gives no errors but this tutorial has to be rewritten. The scaling options for rejectvisial changed. Now the eog / ecg channels can be scaled separately so you can reject trials based on the artifact channels. Because of these changes the data is not scaled properly and old cfg options are used. 
+The code gives no errors but this tutorial has to be rewritten. The scaling options for rejectvisial changed. Now the eog / ecg channels can be scaled separately so you can reject trials based on the artifact channels. Because of these changes the data is not scaled properly and old cfg options are used.
 There is also another fixme that has to be fixed. (9 dec 2008)
 
 **Preprocessing - automatic artifact identification**
@@ -21,7 +21,7 @@ There is also another fixme that has to be fixed. (9 dec 2008)
 
 **Parametric and non-parametric statistics on event related fields**
 
-**Fourier analysis of oscillatory power and coherence** 
+**Fourier analysis of oscillatory power and coherence**
 
 **Time-frequency Analysis Using Multitapers and Wavelets**
 
@@ -33,7 +33,7 @@ In volumesegment you get 2 warning
 
 - FINITE is obsolete and will be removed in future versions. Use ISFINITE instead.
 
-- Can't get default analyze orientation -  assuming flipped
+- Can't get default analyze orientation - assuming flipped
 
 sourceplot(cfg,sourceDiffIntNorm) gives a plot with MRI but witout sources. (15 dec 2008)
 
@@ -41,7 +41,7 @@ sourceDiffIntN has no 'inside' field so it cannot be removed. Making the plot wi
 
 In the source statistics part there is cfg.grid=grid but grid is never defined. So there is an error there. Because of this error you cannot make sourceSTAT and therefore it is not possible to do the rest of the tutorial.
 
-In this tutorial there are ofter lines with load .... (for any reason) but these files are not in the tutorial data that people download. Maybe they should be there because if a certain part doesn't work anymore they can load the results and work further. We could also include lines to save the results like in the first tutorial. 
+In this tutorial there are ofter lines with load .... (for any reason) but these files are not in the tutorial data that people download. Maybe they should be there because if a certain part doesn't work anymore they can load the results and work further. We could also include lines to save the results like in the first tutorial.
 
 Because I didn't do source analysis myself until now I don't now the best way to sovle these problems.(16 dec 2008)
 
@@ -53,7 +53,7 @@ Because I didn't do source analysis myself until now I don't now the best way to
 
 **How to use checkconfig**
 
-__**Example MATLAB scripts:**__
+****Example MATLAB scripts:****
 
 **Align EEG electrode positions to BEM headmodel**
 
@@ -96,4 +96,3 @@ __**Example MATLAB scripts:**__
 **Using 3rd order gradients for CTF data**
 
 **Source reconstruction using symmetric dipole pairs**
-

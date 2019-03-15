@@ -22,44 +22,47 @@ Sebo Uithol is the host and local organizer
 
 #### Monday April 28
 
--   Session I
-    -   9:45      Registration, coffee, opening remarks
-    -   10:05 - 11:00    Lecture: An introduction to the MEG and the FieldTrip toolbox
-    -   11:00 - 11:15    Coffee Break
-    -   11:15 - 12:45 Hands-on: Getting started with event-related fields
-        -   <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
-    -   12:45 - 13:45    Lunch
+- Session I
 
--   Session II
-    -   13:45 - 14:45    Lecture: Fundamentals of neuronal oscillations and  synchrony
-    -   14:45 - 15:00     Coffee Break
-    -   15:00 - 16:45    Hands-on: Time-frequency analysis of power  
-        -   <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
-    -   16:45 - 17:30    Wrap-up-the-day: Ask the experts session
+  - 9:45 Registration, coffee, opening remarks
+  - 10:05 - 11:00 Lecture: An introduction to the MEG and the FieldTrip toolbox
+  - 11:00 - 11:15 Coffee Break
+  - 11:15 - 12:45 Hands-on: Getting started with event-related fields
+    - <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 12:45 - 13:45 Lunch
+
+- Session II
+  - 13:45 - 14:45 Lecture: Fundamentals of neuronal oscillations and synchrony
+  - 14:45 - 15:00 Coffee Break
+  - 15:00 - 16:45 Hands-on: Time-frequency analysis of power
+    - <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 16:45 - 17:30 Wrap-up-the-day: Ask the experts session
 
 #### Tuesday April 29
 
--   Session III
-    -   10:00 - 11:00    Lecture: Beamformer techniques for source reconstruction
-    -   11:00 - 11:15    Coffee break
-    -   11:15 - 13:00    Hands-on: Identifying oscillatory sources using beamformer techniques
-        -   <http://www.fieldtriptoolbox.org/tutorial/beamformer>
-    -   13:00 - 14:00    Lunch
+- Session III
 
--   Session IV
-    -   14:00 - 15:15    Lecture: Non-parametric randomization techniques
-    -   15:15 - 15:30    Coffee break
-    -   15:30 - 17:15  Hands-on: Parametric and non-parametric statistics on event related fields
-        -   <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
-        -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
-    -   17:15 - 18:00    Wrap-up-the-day: Ask the experts session
+  - 10:00 - 11:00 Lecture: Beamformer techniques for source reconstruction
+  - 11:00 - 11:15 Coffee break
+  - 11:15 - 13:00 Hands-on: Identifying oscillatory sources using beamformer techniques
+    - <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+  - 13:00 - 14:00 Lunch
 
-    -   20:00      Workshop Dinner @ ???
+- Session IV
+
+  - 14:00 - 15:15 Lecture: Non-parametric randomization techniques
+  - 15:15 - 15:30 Coffee break
+  - 15:30 - 17:15 Hands-on: Parametric and non-parametric statistics on event related fields
+    - <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
+    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+  - 17:15 - 18:00 Wrap-up-the-day: Ask the experts session
+
+  - 20:00 Workshop Dinner @ ???
 
 #### Wednesday April 30
 
--   Session V
-    -   10:00 - 13:00    FieldTrip playground
+- Session V
+  - 10:00 - 13:00 FieldTrip playground
 
 ## Installing FieldTrip and Tutorial preparation
 

@@ -12,7 +12,7 @@ The installation procedure for the compiler is described by MathWorks at http://
 Note that during installation of MSVC the following warning was issued.
 
     Warning: MEX-files generated using Microsoft Visual C++ 2008 require
-           that Microsoft Visual Studio 2008 run-time libraries be  
+           that Microsoft Visual Studio 2008 run-time libraries be
            available on the computer they are run on.
            If you plan to redistribute your MEX-files to other MATLAB
            users, be sure that they have the run-time libraries.

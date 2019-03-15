@@ -484,7 +484,7 @@ This shows no events missing and no accumulative delays.The delay distribution i
 
 {% include image src="/assets/img/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application/delay_hist_hl_on_fs_4khz_detection_read_ev.jpg" %}
 
-Although, here we only have 200 delays (compared to 2000 before), we see that the detection of triggers with read_event is not faster than with the online flank detection, although we might be able to squeeze out a bit more performance (reduce latency) once we use a clever scheme for only reading _new_ events. This also depends on whether **acq2ftx** first writes the events or the samples to the buffer.
+Although, here we only have 200 delays (compared to 2000 before), we see that the detection of triggers with read*event is not faster than with the online flank detection, although we might be able to squeeze out a bit more performance (reduce latency) once we use a clever scheme for only reading \_new* events. This also depends on whether **acq2ftx** first writes the events or the samples to the buffer.
 
 ## Timing of data blocks with and without head localization
 

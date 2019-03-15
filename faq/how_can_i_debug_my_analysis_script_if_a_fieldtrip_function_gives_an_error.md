@@ -25,33 +25,37 @@ to your high-level FieldTrip function calls, the function that detects the error
 
 For example, the following will result in an error because of the invalid input data structur
 
-  >> cfg = [];
-  >> cfg.debug = 'saveonerror'
-  >> ft_timelockanalysis(cfg, [])
-  -----------------------------------------------------------------------
-  An error was detected while executing ft_timelockanalysis
-  Saving debug information to /private/tmp/ft_timelockanalysis_20140719T103549.mat
-  -----------------------------------------------------------------------
-  Error using ft_checkdata (line 442)
-  This function requires raw+comp or raw data as input.
+    >> cfg = [];
+    >> cfg.debug = 'saveonerror'
+    >> ft_timelockanalysis(cfg, [])
 
-  Error in ft_timelockanalysis (line 105)
+---
+
+    An error was detected while executing ft_timelockanalysis
+    Saving debug information to /private/tmp/ft_timelockanalysis_20140719T103549.mat
+
+---
+
+    Error using ft_checkdata (line 442)
+    This function requires raw+comp or raw data as input.
+
+    Error in ft_timelockanalysis (line 105)
     data = ft_checkdata(data, 'datatype', {'raw+comp', 'raw'}, 'feedback', 'yes', 'hassampleinfo', 'yes');
 
 Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the FieldTrip code (see [bugzilla](/bugzilla)).
 
 You can load the input variables to the function (and some extra information from the file).
 
-  >> load /private/tmp/ft_timelockanalysis_20140719T103549.mat
-  >> whos
+    >> load /private/tmp/ft_timelockanalysis_20140719T103549.mat
+    >> whos
     Name              Size            Bytes  Class     Attributes
 
-    cfg               1x1             17670  struct              
-    data              0x0                 0  double              
-    funname           1x19               38  char                
-    last_err          1x89              178  char                
-    last_error        1x1              2396  struct              
-    last_warning      0x0                 0  char          
+    cfg               1x1             17670  struct
+    data              0x0                 0  double
+    funname           1x19               38  char
+    last_err          1x89              178  char
+    last_error        1x1              2396  struct
+    last_warning      0x0                 0  char
 
 This allows you to replicate the same error very quickly, but now with "dbstop on error" to look into the details of the problem. Even without knowing the function name, you can do
 

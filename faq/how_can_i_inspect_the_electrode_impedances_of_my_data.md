@@ -14,25 +14,25 @@ This example reads the impedance values from an EEG dataset recorded with [Brain
 
 ## Read impedance values
 
-  % Read header file
+    % Read header file
     fid = fopen('PP01.vhdr', 'r');
-  C = textscan(fid, '%s', 'Delimiter', '\n');
+    C = textscan(fid, '%s', 'Delimiter', '\n');
     fclose(fid);
 
-  C=C{1,1};
+    C=C{1,1};
 
-  %F ind the line containing 'Impedance'
-  D = strfind(C, 'Impedance');
+    %F ind the line containing 'Impedance'
+    D = strfind(C, 'Impedance');
     rows = find(~cellfun('isempty', D));
 
-  %Read channelnames and impedance
+    %Read channelnames and impedance
     temp = {};
     for i = rows+1:length(C)-1
       temp = [temp; textscan(char(C(i)),'%d%s%d')];
     end
     temp = [temp; [cell(1) textscan(char(C(length(C))),'%s%d')]];
 
-  % Remove colon from channel name
+    % Remove colon from channel name
     chantemp = temp(:,2);
     for j = 1:length(chantemp)
       chan = char(chantemp{j});
@@ -54,8 +54,8 @@ Make a plot of the ''imp'' structure containing the impedance values using a cus
     cfg.layout      = 'EEG1010.lay';
     cfg.max_imp     = 20;
 
-  % Create a custom colormap
-  T = [  0, 255,   0        % green
+    % Create a custom colormap
+    T = [  0, 255,   0        % green
        255, 255,   0        % yellow
        255,   0,   0]./255; % red
 
@@ -93,7 +93,7 @@ Make a plot of the ''imp'' structure containing the impedance values using a cus
     cfg.colormap            = map;
     cfg.zlim                = [0 cfg.max_imp];
 
-  % figure
+    % figure
     ft_topoplotER(cfg, imp)
 
 {% include image src="/assets/img/faq/how_can_i_inspect_the_electrode_impedances_of_my_data/impedance.png" %}

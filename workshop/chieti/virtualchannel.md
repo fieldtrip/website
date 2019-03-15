@@ -175,7 +175,7 @@ Having done this sanity check on the data, we will make subsets for the differen
     data_lh = ft_redefinetrial(cfg, data_lh);
     data_rh = ft_redefinetrial(cfg, data_rh);
 
- We should now only have movements of a single type, and only see a single movement in each data segment.
+We should now only have movements of a single type, and only see a single movement in each data segment.
 
     cfg = [];
     cfg.viewmode = 'vertical';
@@ -256,7 +256,7 @@ Another way of looking at the dynamics in this channel-time-frequency representa
 
 Around the movement there is a clear differential beta-band effect over bilateral sensory-motor areas. We can zoom in on this effect using DICS as frequency domain source reconstruction.
 
-####  Create the lead field, i.e. the forward model
+#### Create the lead field, i.e. the forward model
 
     cfg = [];
     cfg.grid = individual_sourcemodel3d;
@@ -315,7 +315,7 @@ Using the cross-spectral density matrix, we can do the beamformer estimate of th
 The source reconstruction contains the power at each grid location, but also the noise. Explore the structure, especially "source.avg". Can you find the power and the noise estimate? Why is the estimate not computed for all grid locations?
 {% include markup/end %}
 
-The beamformer can be biassed to deep locations, since noise gets projected to locations with a very small lead field (deep inside the head). The neural activity index allows for compensating for the depth bias, as [explained here](/tutorial/beamformer#neural_activity_index).   
+The beamformer can be biassed to deep locations, since noise gets projected to locations with a very small lead field (deep inside the head). The neural activity index allows for compensating for the depth bias, as [explained here](/tutorial/beamformer#neural_activity_index).
 
 Using ft_sourcedescriptives we compute the neural activity index, i.e. the ratio between power and the projected noise estimate.
 
@@ -323,7 +323,7 @@ Using ft_sourcedescriptives we compute the neural activity index, i.e. the ratio
     dics_lh = ft_sourcedescriptives(cfg, dics_lh);
     dics_rh = ft_sourcedescriptives(cfg, dics_rh);
 
-Since we have the left- and right-hand  conditions, which have the same depth bias, we can also compute a contrast (i.e. difference) between the conditions.
+Since we have the left- and right-hand conditions, which have the same depth bias, we can also compute a contrast (i.e. difference) between the conditions.
 
     cfg = [];
     cfg.parameter = 'pow';
@@ -356,7 +356,7 @@ Following interpolation of the (non-uniform grid) source reconstructed data onto
 
 ### Estimate seed based connectivity
 
-The left/right source-level contrast image gives us a suggestion of the left and right motor cortices. Using the interactive option of **[ft_sourceplot](/reference/ft_sourceplot)**, we can click around in the figure and identify the voxel coordinates of the peak in both hemispheres.  
+The left/right source-level contrast image gives us a suggestion of the left and right motor cortices. Using the interactive option of **[ft_sourceplot](/reference/ft_sourceplot)**, we can click around in the figure and identify the voxel coordinates of the peak in both hemispheres.
 
 We can define the seeds, expressed in voxels. Subsequently we have to convert these from voxel to BTi coordinates.
 

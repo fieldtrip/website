@@ -14,25 +14,26 @@ The aim of this tutorial is to solve the EEG forward problem using two different
 
 ## Procedure
 
-As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved in the next session ([inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem )).
+As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved in the next session ([inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem)).
 In order to compute leadfields, there are 9 main steps that have to be followed.
- 1.  Load and read the anatomical data, namely a T1-MRI (**[ft_read_mri](/reference/ft_read_mri)**);
- 2.  Align the MRI to the electrodes. As the electrodes are expressed in the CTF coordinate system, we translate the MRI in the CTF coordinate system (**[ft_volumerealign](/reference/ft_volumerealign)**);
- 3.  Reslice the MRI image so that the voxels of the anatonical data are homogeneous (i.e. the size of the voxel is the same into each direction). This step will facilitate the segmentation step. (**[ft_volumereslice](/reference/ft_volumereslice)**)
- 4.  Segment the MRI: 3 compartments for BEM (scalp, skull, brain) and 5 compartments for FEM (scalp, skull, CSF, grey matter and white matter) (**[ft_volumesegment](/reference/ft_volumesegment)**);
- 5.  then we create the mesh: triangulated surface mesh for BEM and hexahedral volume mesh for FEM (**[ft_prepare_mesh](/reference/ft_prepare_mesh)**).
- 6.  Create the headmodels (headmodel_bem and headmodel_fem) where geometrical and electrical information are merged together (**[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**);
- 7.  Align the electrodes to the MRI (**[ft_electroderealign](/reference/ft_electroderealign)**);
- 8.  The sourcemodel is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
- 9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
+
+1.  Load and read the anatomical data, namely a T1-MRI (**[ft_read_mri](/reference/ft_read_mri)**);
+2.  Align the MRI to the electrodes. As the electrodes are expressed in the CTF coordinate system, we translate the MRI in the CTF coordinate system (**[ft_volumerealign](/reference/ft_volumerealign)**);
+3.  Reslice the MRI image so that the voxels of the anatonical data are homogeneous (i.e. the size of the voxel is the same into each direction). This step will facilitate the segmentation step. (**[ft_volumereslice](/reference/ft_volumereslice)**)
+4.  Segment the MRI: 3 compartments for BEM (scalp, skull, brain) and 5 compartments for FEM (scalp, skull, CSF, grey matter and white matter) (**[ft_volumesegment](/reference/ft_volumesegment)**);
+5.  then we create the mesh: triangulated surface mesh for BEM and hexahedral volume mesh for FEM (**[ft_prepare_mesh](/reference/ft_prepare_mesh)**).
+6.  Create the headmodels (headmodel_bem and headmodel_fem) where geometrical and electrical information are merged together (**[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**);
+7.  Align the electrodes to the MRI (**[ft_electroderealign](/reference/ft_electroderealign)**);
+8.  The sourcemodel is created, where the location of the sources is restrained to the brain compartment (from the BEM mesh) (**[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**);
+9.  Leadfields can be computed (**[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**).
 
 The first 3 steps are the same for BEM and FEM. Steps from 4 to 8 differ between BEM and FEM.
 A more detailed description of these steps is following.
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/scheme.png" %}
-*Figure1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM*
+_Figure1: pipeline for forward computation, in the blue box there are the steps which differ between BEM and FEM_
 
-##  1. Read the MRI
+## 1. Read the MRI
 
     mri_orig = ft_read_mri('subject01.nii');
 
@@ -42,9 +43,9 @@ Visualize the MRI
     ft_sourceplot(cfg,mri_orig);
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_orig.png" %}
-*Figure2: visualization of the MRI*
+_Figure2: visualization of the MRI_
 
-##  2. Realign the MRI
+## 2. Realign the MRI
 
 In this step we will interactively align the MRI to the CTF space. We will be asked to identify the three CTF landmarks (nasion, NAS; right pre-auricular point, RPA; left pre-auricular point, LPA) in the MRI.
 
@@ -59,8 +60,9 @@ We can visualize the realigned MRI
     ft_sourceplot(cfg, mri_realigned);
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_resliced.png" %}
-*Figure3: visualization of the realigned MRI*
-##  3. Reslice the MRI
+_Figure3: visualization of the realigned MRI_
+
+## 3. Reslice the MRI
 
     cfg = [];
     mri_resliced = ft_volumereslice(cfg, mri_realigned);
@@ -70,9 +72,9 @@ We can visualize the resliced MRI
     cfg = [];
     ft_sourceplot(cfg, mri_resliced);
 
-##  A. Boundary Element Method (BEM)
+## A. Boundary Element Method (BEM)
 
-##  4A. Segment the MRI
+## 4A. Segment the MRI
 
     cfg           = [];
     cfg.output    = {'brain','skull', 'scalp'};
@@ -86,13 +88,13 @@ Visualize the segmentation
     cfg.funparameter = 'seg';
     cfg.funcolormap  = gray(4); % distinct color per tissue
     cfg.location     = 'center';
-    cfg.atlas        = seg_i;   
+    cfg.atlas        = seg_i;
     ft_sourceplot(cfg, seg_i);
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_segmented_bem.png" %}
-*Figure4: 3 compartment segmentation output*
+_Figure4: 3 compartment segmentation output_
 
-##  5A. Create the mesh
+## 5A. Create the mesh
 
     cfg=[];
     cfg.tissue={'brain','skull','scalp'};
@@ -111,9 +113,9 @@ Visualize the mesh and the electrode
     hold on, ft_plot_sens(elec, 'style', '*g');
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mesh_bem_elec.png" %}
-*Figure5: 3 compartment mesh with electrodes*
+_Figure5: 3 compartment mesh with electrodes_
 
-##  6A. Create the headmodel
+## 6A. Create the headmodel
 
     cfg        = [];
     cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
@@ -123,7 +125,7 @@ Visualize the mesh and the electrode
 In Windows the method 'dipoli' does not work. You can either load "headmodel_bem" and continue with this tutorial, or explore other BEM method like 'bemcp'. If you use 'bemcp', the conductivity field has a different order: {'brain', 'skull', 'skin'}.
 {% include markup/end %}
 
-##  7A. Align the electrodes
+## 7A. Align the electrodes
 
 If the electrodes are not well aligned with the mesh, we can realign them wit
 
@@ -135,7 +137,6 @@ If the electrodes are not well aligned with the mesh, we can realign them wit
 
 Check the alignment visually.
 
-
     figure;
     ft_plot_axes(mesh_bem(1))
     hold on;
@@ -144,9 +145,9 @@ Check the alignment visually.
     ft_plot_sens(elec,'style', '.k');
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/aligned.png" %}
-*Figure6: mesh, electrodes and axes.*
+_Figure6: mesh, electrodes and axes._
 
-##  8A. Create the sourcemodel
+## 8A. Create the sourcemodel
 
     cfg = [];
     cfg.grid.resolution = 7.5;
@@ -163,13 +164,13 @@ Visualize the sourcemodel
                'skin','facealpha',0.5,'edgealpha',0.1)
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/sourcemodel_all.png" %}
-*Figure7: sourcemodel on the brain compartment*
+_Figure7: sourcemodel on the brain compartment_
 
 Save the sourcemode
 
     save sourcemodel sourcemodel;
 
-##  9A. Compute the leadfield
+## 9A. Compute the leadfield
 
     cfg = [];
     cfg.grid = sourcemodel;
@@ -178,9 +179,9 @@ Save the sourcemode
     cfg.reducerank = 3;
     leadfield_bem = ft_prepare_leadfield(cfg);
 
-##  B. Finite Element Method (FEM)
+## B. Finite Element Method (FEM)
 
-##  4B. Segment the MRI
+## 4B. Segment the MRI
 
     cfg           = [];
     cfg.output    = {'scalp','skull','csf','gray','white'};
@@ -201,11 +202,10 @@ Visualize the segmentation result
     cfg.atlas        = seg_i;    % the segmentation can also be used as atlas
     ft_sourceplot(cfg, seg_i);
 
-
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mri_segmented_fem.png" %}
-*Figure8: 5 compartment segmentation output *
+_Figure8: 5 compartment segmentation output _
 
-##  5B. Create the mesh
+## 5B. Create the mesh
 
     cfg        = [];
     cfg.shift  = 0.3;
@@ -213,7 +213,7 @@ Visualize the segmentation result
     cfg.resolution = 1; % this is in mm
     mesh_fem = ft_prepare_mesh(cfg,mri_segmented_5_compartment);
 
-##  6B. Create the headmodel
+## 6B. Create the headmodel
 
     cfg = [];
     cfg.method = 'simbio';
@@ -223,7 +223,7 @@ Visualize the segmentation result
 
 Visualize the headmodel and the electrodes (it might take time and memory)
 
-  % csf: 1, gm: 2, scalp: 3, skull: 4, wm: 5
+    % csf: 1, gm: 2, scalp: 3, skull: 4, wm: 5
     ts = 3;
     figure
     mesh2 =[];
@@ -248,7 +248,7 @@ Visualize the headmodel and the electrodes (it might take time and memory)
     ft_plot_sens(elec, 'style', '*g');
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/mesh_fem_elec.png" %}
-*Figure9: visualization of headmodel_fem and electrodes*
+_Figure9: visualization of headmodel_fem and electrodes_
 
 ## 7B. Align the electrodes
 
@@ -260,22 +260,22 @@ If the electrodes are not well aligned with the mesh, we can realign them wit
     cfg.headshape = headmodel_fem;
     elec = ft_electroderealign(cfg);
 
-##  8B. Create the sourcemodel
+## 8B. Create the sourcemodel
 
 We will use the sourcemodel already generated in 7A.
 
     load('sourcemodel.mat');
 
-##  9B. Compute the leadfield
+## 9B. Compute the leadfield
 
 {% include markup/danger %}
-Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take too much time and memory. Load "headmodel_fem_tr".
+Please DO NOT run _ft_prepare_vol_sens_ in this tutorial session! It will take too much time and memory. Load "headmodel_fem_tr".
 {% include markup/end %}
 
-  %% compute the transfer matrix
-  [headmodel_fem_tr, elec] = ft_prepare_vol_sens(headmodel_fem, elec);
+    %% compute the transfer matrix
+    [headmodel_fem_tr, elec] = ft_prepare_vol_sens(headmodel_fem, elec);
 
-  %% compute the leadfield
+    %% compute the leadfield
     cfg = [];
     cfg.grid = sourcemodel;
     cfg.headmodel= headmodel_fem_tr;
@@ -286,7 +286,8 @@ Please DO NOT run *ft_prepare_vol_sens* in this tutorial session! It will take t
 ## Summary and Comments
 
 This tutorial was about the computation of leadfields that could be feed into the inverse problem which will be explain i
- [Inverse problem](/workshop/baci2017/inverseproblem).
+[Inverse problem](/workshop/baci2017/inverseproblem).
 
------
+---
+
 This tutorial was last tested on 27-08-2017 by Maria Carla Piastra on Ubuntu, Matlab 2015b.

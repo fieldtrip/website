@@ -9,11 +9,12 @@ This page describes the interface between the 7 channel wireless ThinkCap of Neu
 
 We provide a standalone tool (see ''realtime/aquisition/neurosky'') to grab raw data packets from the serial port (via bluetooth), and stream it to a FieldTrip buffer. The application is called **thinkgear2ft** and allows to specify which channels to stream and save in a configuration file like this:
 
-  [select]
-  1=Ns1
-  2=Ns2
-  ...
-  7=Ns7
+    [select]
+
+1=Ns1
+2=Ns2
+...
+7=Ns7
 
 You would then call the application like this:
 
@@ -28,4 +29,4 @@ On the command line, change to the ''realtime/datasource/neurosky'' directory an
 
 ## External links
 
-*  http://www.neurosky.com/
+- http://www.neurosky.com/

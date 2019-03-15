@@ -6,51 +6,51 @@ title: FieldTrip Workshop in Marseille
 
 Together with Jean-Michel Badier, Christian Benar ([MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page)), and Marie-Laure Olive (Inserm - Trainings office), we will run a FieldTrip workshop.
 
--   Who: Jan-Mathijs Schoffelen and Cristiano Micheli, with help from local staff
--   When: 21-22 November 2016
--   For whom: The number of places at this workshop is limited, and reserved for researchers associated with Inserm or CNRS. Inserm people can apply through [this link](https://www.sirene.inserm.fr). CNRS people need to fill in some paperwork. For more information, please contact: demat-form.dr-marseille@inserm.fr
--   Also see [this link](http://meg.univ-amu.fr/images/Fiche_annonce_-_Connectivité_en_MEG_et_EEG_-_2016.pdf) for more information (in French).
--   Where: GLM CNRS Joseph Aiguier - Marseille.
+- Who: Jan-Mathijs Schoffelen and Cristiano Micheli, with help from local staff
+- When: 21-22 November 2016
+- For whom: The number of places at this workshop is limited, and reserved for researchers associated with Inserm or CNRS. Inserm people can apply through [this link](https://www.sirene.inserm.fr). CNRS people need to fill in some paperwork. For more information, please contact: demat-form.dr-marseille@inserm.fr
+- Also see [this link](http://meg.univ-amu.fr/images/Fiche_annonce_-_Connectivité_en_MEG_et_EEG_-_2016.pdf) for more information (in French).
+- Where: GLM CNRS Joseph Aiguier - Marseille.
 
 We will keep this page up to date and post new information here when available.
 
 #### Monday November 21
 
--   Session I
+- Session I
 
-    -   09:30 – 09:45    Opening remarks
-    -   09:45 - 10:45   Lecture: Connectivity basics, methods and issues. -  [slides](/assets/pdf/workshop/marseille2016b_connectivity.pdf)
-    -   10:45 – 11:00    Coffee break
-    -   11:00 – 12:30    Hands-on: Analysis of sensor- and source-level connectivity
-        -   <http://www.fieldtriptoolbox.org/tutorial/connectivity>
-        -   <http://www.fieldtriptoolbox.org/tutorial/connectivityextended>
-        -   <http://www.fieldtriptoolbox.org/tutorial/coherence>
-    -   12:30 – 13:30    Lunch
+  - 09:30 – 09:45 Opening remarks
+  - 09:45 - 10:45 Lecture: Connectivity basics, methods and issues. - [slides](/assets/pdf/workshop/marseille2016b_connectivity.pdf)
+  - 10:45 – 11:00 Coffee break
+  - 11:00 – 12:30 Hands-on: Analysis of sensor- and source-level connectivity
+    - <http://www.fieldtriptoolbox.org/tutorial/connectivity>
+    - <http://www.fieldtriptoolbox.org/tutorial/connectivityextended>
+    - <http://www.fieldtriptoolbox.org/tutorial/coherence>
+  - 12:30 – 13:30 Lunch
 
--   Session II
-    -   13:30 - 14:30    Lecture: Connectivity basics, issues and how-to's. -  [slides](/assets/pdf/workshop/marseille2016b_connectivity2.pdf)
-    -   14:30 – 14:45    Coffee break
-    -   14:45 – 16:15    Hands-on: Analysis of source-level connectivity and networks
-        -   <http://www.fieldtriptoolbox.org/tutorial/networkanalysis>
-    -   16:15 – 17:00    Wrap-up-the-day: “Ask the expert” session
+- Session II
+  - 13:30 - 14:30 Lecture: Connectivity basics, issues and how-to's. - [slides](/assets/pdf/workshop/marseille2016b_connectivity2.pdf)
+  - 14:30 – 14:45 Coffee break
+  - 14:45 – 16:15 Hands-on: Analysis of source-level connectivity and networks
+    - <http://www.fieldtriptoolbox.org/tutorial/networkanalysis>
+  - 16:15 – 17:00 Wrap-up-the-day: “Ask the expert” session
 
 #### Tuesday November 22
 
--   Session III
+- Session III
 
-    -   09:00 – 12:00    FieldTrip playground
-    -   12:00 – 13:00    Lunch
+  - 09:00 – 12:00 FieldTrip playground
+  - 12:00 – 13:00 Lunch
 
--   Session IV
-    -   13:00 – 16:00    FieldTrip playground
-    -   16:00 – 17:00    Wrap-up-the-day: “Ask the expert” session
+- Session IV
+  - 13:00 – 16:00 FieldTrip playground
+  - 16:00 – 17:00 Wrap-up-the-day: “Ask the expert” session
 
 ## Tutorial preparation
 
 To maximally benefit from this course, we expect the users to have basic knowledge of MATLAB and FieldTrip. To prepare for the hands-on sessions, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
--   [FieldTrip intro (video and hands-on)](/tutorial/introduction)
--   [spectral analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
+- [FieldTrip intro (video and hands-on)](/tutorial/introduction)
+- [spectral analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
 
 ## Getting started with the hands-on sessions
 

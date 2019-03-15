@@ -41,7 +41,7 @@ tags: [example, mne, source]
     % mkdir (savemrito);
 
     % It is important that you use T1.mgz instead of orig.mgz as T1.mgz is normalized to [255,255,255] dimension
-    mridata     = fullfile(fs_subject_dir, sub, '/mri/T1.mgz');                 
+    mridata     = fullfile(fs_subject_dir, sub, '/mri/T1.mgz');
     transfname  = fullfile(dirs.transDir, sub, [sub, '-trans.fif']);
     dataset     = fullfile(meg_path, [sub, '_tap_1-ica_raw.fif']);    % for sensor location and definition
     src_fname   = fullfile(src_path,[sub, '-ico4-src.fif']);
@@ -58,7 +58,7 @@ tags: [example, mne, source]
     %% Read transformation (head -> MRI)
     trans_orig = fiff_read_coord_trans(transfname);
     % In FieldTrip every thing is in head cordinate therefore in next line we are inverting the transformation
-    trans.trans=inv(trans_orig.trans);                                         
+    trans.trans=inv(trans_orig.trans);
 
     %% Read MRI (does not work on Win PC)
     mri_orig = ft_read_mri(mridata );

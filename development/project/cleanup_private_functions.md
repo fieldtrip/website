@@ -6,10 +6,10 @@ title: cleanup the functions in the private folders
 
 # cleanup the functions in the private folders
 
-functions that according to *mydepfun* are not called by any other functio
+functions that according to _mydepfun_ are not called by any other functio
 
-    nonused = 
-  
+    nonused =
+
       '/home/electromag/sashae/matlab/fieldtrip/private/LoadSpikes.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/ama2vol.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/appendevent.m'
@@ -33,7 +33,7 @@ functions that according to *mydepfun* are not called by any other functio
       '/home/electromag/sashae/matlab/fieldtrip/private/dimassign.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/expand_orthogonal.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/fif2grad.m'
-      '/home/electromag/sashae/matlab/fieldtrip/private/filetype_check_extension.m'      
+      '/home/electromag/sashae/matlab/fieldtrip/private/filetype_check_extension.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/filetype_check_header.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/filetype_check_uri.m'
       '/home/electromag/sashae/matlab/fieldtrip/private/find_inside_vol.m'
@@ -112,7 +112,7 @@ functions that according to *mydepfun* are not called by any other functio
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/buffer.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/mxDeserialize.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/mxSerialize.m'
-      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/neuralynx_numrecords.m'   
+      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/neuralynx_numrecords.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_asa_dip.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_asa_msr.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_besa_mul.m'
@@ -122,7 +122,7 @@ functions that according to *mydepfun* are not called by any other functio
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_bham.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_biff.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_brainvision_marker.m'
-      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_brainvision_vmrk.m'  
+      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_brainvision_vmrk.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_bti_ascii.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_bv_srf.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_ctf_coef.m'
@@ -131,18 +131,18 @@ functions that according to *mydepfun* are not called by any other functio
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_curry.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_elec.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_fcdc_trl.m'
-      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_labview_dtlg.m'      
+      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_labview_dtlg.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_lay.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_mat.m'
-      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_neuralynx_tsh.m'     
-      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_neuralynx_tsl.m'     
+      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_neuralynx_tsh.m'
+      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_neuralynx_tsl.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_off.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/read_stl.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/rmsubfield.m'
-      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/write_neuralynx_nts.m'    
+      '/home/electromag/sashae/matlab/fieldtrip/fileio/private/write_neuralynx_nts.m'
       '/home/electromag/sashae/matlab/fieldtrip/fileio/private/write_stl.m'
       '/home/electromag/sashae/matlab/fieldtrip/forward/private/avgref.m'
-      '/home/electromag/sashae/matlab/fieldtrip/forward/private/find_inside_vol.m'       
+      '/home/electromag/sashae/matlab/fieldtrip/forward/private/find_inside_vol.m'
       '/home/electromag/sashae/matlab/fieldtrip/forward/private/fixdipole.m'
       '/home/electromag/sashae/matlab/fieldtrip/forward/private/meg_leadfield1.m'
       '/home/electromag/sashae/matlab/fieldtrip/forward/private/progress.m'
@@ -169,4 +169,3 @@ functions that according to *mydepfun* are not called by any other functio
       '/home/electromag/sashae/matlab/fieldtrip/public/private/pos2transform.m'
       '/home/electromag/sashae/matlab/fieldtrip/statfun/private/nansum.m'
       '/home/electromag/sashae/matlab/fieldtrip/statfun/private/nanvar.m'
-

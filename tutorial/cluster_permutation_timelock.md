@@ -347,7 +347,7 @@ We now calculate the raw effect in the average with planar gradient data using t
 
 Using the following configuration for **[ft_topoplotER](/reference/ft_topoploter)** we can plot the raw effect and highlight the channels belonging to the significant cluster
 
-    figure;  
+    figure;
     timestep = 0.05; %(in seconds)
     sampling_rate = dataFC_LP.fsample;
     sample_count = length(stat.time);
@@ -495,7 +495,7 @@ With the output, we can now create the plots
     m = [1:timestep*sampling_rate:sample_count];  % temporal endpoints in MEEG samples
     % get relevant (significant) values
     pos_cluster_pvals = [stat.posclusters(:).prob];
-    
+
     % In case you have downloaded and loaded the data, ensure stat.cfg.alpha exist
     if ~isfield(stat.cfg,'alpha'); stat.cfg.alpha = 0.025; end; % stat.cfg.alpha was moved as the downloaded data was processed by an additional FieldTrip function to anonymize the data.
 

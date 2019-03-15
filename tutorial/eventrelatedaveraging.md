@@ -31,7 +31,7 @@ To calculate the event related field / potential for the example dataset we will
 - Compute the average over trials using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Calculate the planar gradient with the functions **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)**
 - Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
-  \*Grandaverage and realignment (optional). When you have data from more than one subject you can make a grand average of the ERPs / ERFs with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. **[ft_megrealign](/reference/ft_megrealign)** can be used to realign each subjects data to standard sensor positions before computing the grand average.
+- Grandaverage and realignment (optional). When you have data from more than one subject you can make a grand average of the ERPs / ERFs with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. **[ft_megrealign](/reference/ft_megrealign)** can be used to realign each subjects data to standard sensor positions before computing the grand average.
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/figure1.png" %}
 

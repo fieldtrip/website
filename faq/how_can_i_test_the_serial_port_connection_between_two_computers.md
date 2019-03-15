@@ -11,9 +11,9 @@ For the type of connection we are talking about here, you need a so called 'null
 
 To check that the serial connection between a linux computer and a windows computer is functional, you can do the followin
 
-*  On the linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g. /dev/ttyS0/). The main thing to consider is the Baudrate(e.g. 115200), which has to be the same on sending and receiving end.
-*  On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baudrate is the same as on the linux machine(i.e. 115200).
-*  Then once the connection is established you can type in the windows putty display and can then read it from the linux putty display and vice versa. If this doesn't work just check the hardware connections.
+- On the linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g. /dev/ttyS0/). The main thing to consider is the Baudrate(e.g. 115200), which has to be the same on sending and receiving end.
+- On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baudrate is the same as on the linux machine(i.e. 115200).
+- Then once the connection is established you can type in the windows putty display and can then read it from the linux putty display and vice versa. If this doesn't work just check the hardware connections.
 
 ## How to measure the delays of sending and receiving using a serial port connection
 
@@ -27,29 +27,29 @@ This is what I did on my office PC using FieldTrip commands **[ft_read_event](/r
     close all;
 
     addpath('H:\common\matlab\fieldtrip\');
-  % addpath('H:\common\matlab\fieldtrip\private\');
-  %% filetype_check_uri and ft_filter_event need to be in the path
-  %% Note the syntax: serial:`<port>`?key1=value1&key2=value2&...
-  %% here key1 is BaudRate and value1 is 115200
+    % addpath('H:\common\matlab\fieldtrip\private\');
+    %% filetype_check_uri and ft_filter_event need to be in the path
+    %% Note the syntax: serial:`<port>`?key1=value1&key2=value2&...
+    %% here key1 is BaudRate and value1 is 115200
 
-  %% write something to serial port 4
+    %% write something to serial port 4
     cfg.istream ='serial:COM4?BaudRate=115200';
-  %% and receive it on serial port 1 (serila ports are physically connected)
+    %% and receive it on serial port 1 (serila ports are physically connected)
     cfg.ostream ='serial:COM1?BaudRate=115200';
     event.value=5; %% This can be a string or an integer, e.g. 1 or 'Rock_n_Roll_will_never_dye', however longer strings will take longer to be communicated
     count=0;
     tlop=[];
     while true
     count=count+1;
-  %% write
+    %% write
     ft_write_event(cfg.istream,event,'eventformat','fcdc_serial');
     tic
-  %% read
+    %% read
     ww=ft_read_event(cfg.ostream,'eventformat','fcdc_serial');
-  %% measure time
+    %% measure time
     t1=toc;
     tlop=[tlop,t1];
-  %% disp received event
+    %% disp received event
     disp(ww);
     pause(0.15); %% give serial port a break
     if count>1000
@@ -71,9 +71,8 @@ This is what I did on my office PC using FieldTrip commands **[ft_read_event](/r
     gtext(num2str(modal_val));
     gtext(num2str(median_val));
     gtext(num2str(range_val));
-  %% close what we have opened
+    %% close what we have opened
     fclose('all');
-
 
 What I got looks like thi
 
@@ -81,13 +80,12 @@ What I got looks like thi
 
 Alternatively, one can simply use MATLAB serial objects and low level reading function fread or fscan
 
-
-  %% objects are cleared
+    %% objects are cleared
     clear all;
     delete(instrfind);
     fclose('all');
 
-  %% define 1st serial port on COM1
+    %% define 1st serial port on COM1
     serobjw = serial('COM1');              % Creating serial port object now its connected to COM7
     serobjw.Baudrate = 115200;             % Set the baud rate at the specific value
     set(serobjw, 'Parity', 'none');        % Set parity as none
@@ -96,10 +94,10 @@ Alternatively, one can simply use MATLAB serial objects and low level reading fu
     set(serobjw, 'Terminator', 10);        % set the terminator value to newline
     set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
     get(serobjw) ;
-  %% open it
+    %% open it
     fopen(serobjw);
 
-  %% define 2nd serial port on COM4
+    %% define 2nd serial port on COM4
     serobjw2 = serial('COM4');             % Creating serial port object now its connected to COM7
     serobjw2.Baudrate = 115200;            % Set the baud rate at the specific value
     set(serobjw2, 'Parity', 'none');       % Set parity as none
@@ -109,7 +107,7 @@ Alternatively, one can simply use MATLAB serial objects and low level reading fu
     set(serobjw, 'OutputBufferSize', 512); % Buffer for write operation, default it is 512
     get(serobjw) ;
 
-  %% open it
+    %% open it
     fopen(serobjw2);
 
     count=0
@@ -149,7 +147,7 @@ Alternatively, one can simply use MATLAB serial objects and low level reading fu
     gtext(num2str(modal_val));
     gtext(num2str(median_val));
     gtext(num2str(range_val));
-  %% close what we have opened
+    %% close what we have opened
     fclose('all');
     delete(instrfind);
 

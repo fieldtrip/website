@@ -7,9 +7,9 @@ tags: [faq, ctf]
 
 The following is taken from the CTF documentation "MEG File Formats - release 5.2.1" appendix C.
 
-_Higher-order gradiometer formation is a noise-cancellation technique exclusive to the CTF MEG System. It permits the MEG detectors to be sensitive to the weak signals of the brain, yet impervious to the much stronger sources from the environment. This process, which is carried out in real time, allows the system to be run without the expense of magnetic shielding, or in combination with a standard shielded room for enhanced noise reduction.
+\_Higher-order gradiometer formation is a noise-cancellation technique exclusive to the CTF MEG System. It permits the MEG detectors to be sensitive to the weak signals of the brain, yet impervious to the much stronger sources from the environment. This process, which is carried out in real time, allows the system to be run without the expense of magnetic shielding, or in combination with a standard shielded room for enhanced noise reduction.
 
-In order to calculate the forward solution, the same procedure must be performed on any field data calculated from a simulated dipole. The procedure consists of calculating the field at each coil in the sensor as well as each coil in a set of reference channels. The field values at the reference channels are then multiplied by the appropriate weight and subtracted from the MEG sensor channels._
+In order to calculate the forward solution, the same procedure must be performed on any field data calculated from a simulated dipole. The procedure consists of calculating the field at each coil in the sensor as well as each coil in a set of reference channels. The field values at the reference channels are then multiplied by the appropriate weight and subtracted from the MEG sensor channels.\_
 
 The data set on disk contains in the header the parameters that are used to convert the data between the original (raw) representation and the higher-order gradiometer representation ("balancing"). This conversion can be done in real-time during acquisition, but can also be done (and undone) afterwards using CTF DataEditor, or using **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**.
 
@@ -20,9 +20,9 @@ To get an intuition about what "balancing" means in terms of computation, let's 
 The grad structure included in the FieldTrip representation (i.e. hdr.grad or data.grad) should be consistent with the data, hence it contain
 
     grad.balance
-  
-    ans = 
-  
+
+    ans =
+
          G1BR: [1x1 struct]
          G2BR: [1x1 struct]
          G3BR: [1x1 struct]
@@ -36,8 +36,8 @@ We can explore the different higher order synthetic gradiometer forward solution
     subplot(2,2,[1 3]);imagesc(grad.balance.G1BR.tra);
     title('First order gradiometer forward solution');
     xlim([0 175]);colorbar;
-  
-  %example forward solution for the second MEG sensor
+
+    %example forward solution for the second MEG sensor
     colorcode = (grad.balance.G1BR.tra(2,:)~=0)+1;
     subplot(2,2,[2 4]);scatter(1:size(grad.balance.G1BR.tra,2),grad.balance.G1BR.tra(2,:),9,colorcode,'filled');
     title(['First order gradiometer forward solution for sensor ' grad.balance.G1BR.labelnew{2}]);
@@ -53,8 +53,8 @@ If we explore the second and the third synthetic gradiometers, things become ver
     subplot(2,2,[1 3]);imagesc(grad.balance.G2BR.tra);
     title('Second order gradiometer forward solution');
     xlim([0 175]);colorbar;
-  
-  %example forward solution for the second MEG sensor
+
+    %example forward solution for the second MEG sensor
     colorcode = (grad.balance.G2BR.tra(2,:)~=0)+1;
     subplot(2,2,[2 4]);scatter(1:size(grad.balance.G2BR.tra,2),grad.balance.G2BR.tra(2,:),9,colorcode,'filled');
     title(['Second order gradiometer forward solution for sensor ' grad.balance.G2BR.labelnew{2}]);
@@ -66,8 +66,8 @@ If we explore the second and the third synthetic gradiometers, things become ver
     subplot(2,2,[1 3]);imagesc(grad.balance.G3BR.tra);
     title('Third order gradiometer forward solution');
     xlim([0 175]);colorbar;
-  
-  %example forward solution for the second MEG sensor
+
+    %example forward solution for the second MEG sensor
     colorcode = (grad.balance.G3BR.tra(2,:)~=0)+1;
     subplot(2,2,[2 4]);scatter(1:size(grad.balance.G3BR.tra,2),grad.balance.G3BR.tra(2,:),9,colorcode,'filled');
     title(['Third order gradiometer forward solution for sensor ' grad.balance.G3BR.labelnew{2}]);
@@ -80,4 +80,3 @@ Now is more evident that the higher the synthetic gradiometer, the higher the co
 In you are interested in an extended explanation regarding MEG signal acquisition and processing in general, not only for CTF systems, please take a look to this referenc
 
 Vrba, J., & Robinson, S. E. (2001). Signal Processing in Magnetoencephalography. Methods, 25(2), 249-271. doi: http://dx.doi.org/10.1006/meth.2001.1238
-

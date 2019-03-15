@@ -25,36 +25,36 @@ The local organizers are Danai Theodosopoulou and Carsten Schmidt
 
 _Saturday 8th February_
 
-Session I
+### Session I
 
-10:00 - 10:15  Registration, welcome, opening remarks
-10:15 - 11:15   Lecture: An introduction to the MEG/EEG and the FieldTrip toolbox
-11:15 - 11:30  Coffee Break
-11:30 - 13:30  Hands-on: Initiation to FieldTrip & getting started with EEG data (preprocessing, ERP)
-13:30 - 14:45  Lunch
+- 10:00 - 10:15 Registration, welcome, opening remarks
+- 10:15 - 11:15 Lecture: An introduction to the MEG/EEG and the FieldTrip toolbox
+- 11:15 - 11:30 Coffee Break
+- 11:30 - 13:30 Hands-on: Initiation to FieldTrip & getting started with EEG data (preprocessing, ERP)
+- 13:30 - 14:45 Lunch
 
-Session II
+### Session II
 
-14:45 - 15:45  Lecture: Fundamentals of neuronal oscillations and synchrony
-15:45 - 16:00   Coffee Break
-16:00 - 18:00  Hands-on: Time-frequency analysis of power
-18:00 - 18:30  Wrap-up-the-day and Summary
+- 14:45 - 15:45 Lecture: Fundamentals of neuronal oscillations and synchrony
+- 15:45 - 16:00 Coffee Break
+- 16:00 - 18:00 Hands-on: Time-frequency analysis of power
+- 18:00 - 18:30 Wrap-up-the-day and Summary
 
 _Sunday 9th February_
 
-Session III
+### Session III
 
-9:00 - 10:15  Lecture: Non-parametric permutation techniques
-10:15 - 10:30  Coffee break
-10:30 - 12:30  Hands-on: Statistical Analyses
-12:30 - 13:45  Lunch
+- 9:00 - 10:15 Lecture: Non-parametric permutation techniques
+- 10:15 - 10:30 Coffee break
+- 10:30 - 12:30 Hands-on: Statistical Analyses
+- 12:30 - 13:45 Lunch
 
-Session IV
+### Session IV
 
-13:45 - 14:45  Lecture: Source reconstruction in FieldTrip
-14:45 - 15:00  Coffee break
-15:00 - 17:00  FieldTrip Playground (bring your own data)
-17:00 - 17:30  Wrap-up-the-day and Summary
+- 13:45 - 14:45 Lecture: Source reconstruction in FieldTrip
+- 14:45 - 15:00 Coffee break
+- 15:00 - 17:00 FieldTrip Playground (bring your own data)
+- 17:00 - 17:30 Wrap-up-the-day and Summary
 
 ## Installing FieldTrip and preparing for the hands-on sessions
 
@@ -64,9 +64,9 @@ version of FieldTrip that is distributed on a USB stick, rather than the older v
 
 If you want to download it in advance, please go to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/> and get
 
--   fieldtrip-20130906.zip
--   Subject01.zip
--   all files in the tutorial/eventrelatedaveraging directory
+- fieldtrip-20130906.zip
+- Subject01.zip
+- all files in the tutorial/eventrelatedaveraging directory
 
 {% include markup/danger %}
 Depending on the unzip program you are using (e.g. Winrar), the name of the zip file might also appear as directiory, resulting in path_to_directory/fieldtrip-xxxxxxxx/fieldtrip-xxxxxxxx, i.e. the FieldTrip directory in a FieldTrip directory. Please fix that by moving all files one level up.

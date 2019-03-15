@@ -7,9 +7,9 @@ tags: [realtime, development]
 
 This page contains some loose ends and random pieces that don't fit elsewhere.
 
-*  [closing the loop](/development/realtime/closing_the_loop) lists some methods for interacting with, and controlling the external world (i.e. outside the analysis computer)
-*  [pipeline](/development/realtime/pipeline) contains example fMRI pipeline description
-*  [Siemens fMRI](/development/realtime/fmri) also contains some fMRI details
+- [closing the loop](/development/realtime/closing_the_loop) lists some methods for interacting with, and controlling the external world (i.e. outside the analysis computer)
+- [pipeline](/development/realtime/pipeline) contains example fMRI pipeline description
+- [Siemens fMRI](/development/realtime/fmri) also contains some fMRI details
 
 ## Various notes and comments
 
@@ -25,13 +25,13 @@ the LD_LIBRARY_PATH that was loaded prior to the system one. Changing
 it to first having /lib and then the rest solved it.
 
 The following macro names are defined at compile time and may be handy for debuggin
-    __LINE__    Integer value representing the current line in the source code file being compiled.
-    __FILE__    A string literal containing the presumed name of the source file being compiled.
-    __DATE__    A string literal in the form "Mmm dd yyyy" containing the date in which the compilation process began.
-    __TIME__    A string literal in the form "hh:mm:ss" containing the time at which the compilation process began.
-    __cplusplus An integer value. All C++ compilers have this constant defined to some value. If the compiler is fully
-              compliant with the C++ standard its value is equal or greater than 199711L depending on the version
-              of the standard they comply.
+**LINE** Integer value representing the current line in the source code file being compiled.
+**FILE** A string literal containing the presumed name of the source file being compiled.
+**DATE** A string literal in the form "Mmm dd yyyy" containing the date in which the compilation process began.
+**TIME** A string literal in the form "hh:mm:ss" containing the time at which the compilation process began.
+\_\_cplusplus An integer value. All C++ compilers have this constant defined to some value. If the compiler is fully
+compliant with the C++ standard its value is equal or greater than 199711L depending on the version
+of the standard they comply.
 
 The threaded functions should be checked with http://en.wikipedia.org/wiki/Reentrant in mind
 
@@ -56,7 +56,7 @@ Furthermore, the implementation is based on IPv4, what would be required to
 extend this to IPv6? Useful would be a discussion in which the different
 choices of the transport layer are discussed. Why not UDP over ethernet? Why
 not over communicate over RS-232 (serial), IEE-1394 (firewire), IEEE-802
-(zigbee), X10, Bluetooth, or similar communication protocol.  
+(zigbee), X10, Bluetooth, or similar communication protocol.
 
 It is unclear whether the TCP connection should remain open throughout the
 communication or whether it should be closed. It is just a mechanism for
@@ -133,7 +133,7 @@ each PC to use the same (external) NTP server. In particular situations time
 information will certainly be useful. Regarding acquisition devices it remains
 difficult how to interpret the relation between buffer time and samples
 received.
-Why is time relevant? Probably to synchronize *events and samples*, or
+Why is time relevant? Probably to synchronize _events and samples_, or
 simultaneous recordings?
 
 > You should timestamp every event and data, but I would not use machine
@@ -148,7 +148,8 @@ acquisition computer. Events are presently timestamped using the sample number
 that relates the event to the acquired data. This time stamping is not
 explicitly addressed in the documentation.
 
-It would be possible to (optionally) add an explicit timestamp channel in the continuous data stream. Ideally a timestamp would be assigned to every sample by the acquisition software. If the acquisition software does not assign timestamps, the buffer server could do it for the incoming data and for the incoming events.  
+It would be possible to (optionally) add an explicit timestamp channel in the continuous data stream. Ideally a timestamp would be assigned to every sample by the acquisition software. If the acquisition software does not assign timestamps, the buffer server could do it for the incoming data and for the incoming events.
+
 ### Atomic PUT_DAT + PUT_EVT
 
 Because TMSi frontend continuously samples all the channels, including the
@@ -254,8 +255,8 @@ FAQ: How is time synchronised?
 
 ## See also
 
-*  [draft network](/development/realtime/draft_network)
-*  [draft implementation](/development/realtime/draft_implementation)
-*  [draft header chunks](/development/realtime/draft_header_chunks)
-*  [draft compatability](/development/realtime/draft_compatability)
-*  [scratchpad](/development/realtime/scratchpad)
+- [draft network](/development/realtime/draft_network)
+- [draft implementation](/development/realtime/draft_implementation)
+- [draft header chunks](/development/realtime/draft_header_chunks)
+- [draft compatability](/development/realtime/draft_compatability)
+- [scratchpad](/development/realtime/scratchpad)

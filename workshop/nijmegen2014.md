@@ -4,9 +4,9 @@ title: Toolkit of Cognitive Neuroscience - EEG/MEG
 
 # Toolkit of Cognitive Neuroscience: EEG/MEG
 
--   Where: Donders Institute, Radboud University Nijmegen
--   When: 6-9 May 2014
--   Who: Robert Oostenveld, Jan-Mathijs Schoffelen, et al.
+- Where: Donders Institute, Radboud University Nijmegen
+- When: 6-9 May 2014
+- Who: Robert Oostenveld, Jan-Mathijs Schoffelen, et al.
 
 ## Installing FieldTrip and Tutorial preparation
 
@@ -43,44 +43,44 @@ A [PDF with the detailed program](/assets/pdf/workshop/nijmegen2014/program.pdf)
 
 ### Tuesday 6 May
 
--   morning
-    -   1h welcome and intro lecture
-    -   1h data acquisition demo
--   afternoon
-    -   2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
-    -   1h neuronal oscillations lecture
-    -   1h wrap-up session
--   evening
-    -   pub?
+- morning
+  - 1h welcome and intro lecture
+  - 1h data acquisition demo
+- afternoon
+  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 1h neuronal oscillations lecture
+  - 1h wrap-up session
+- evening
+  - pub?
 
 ### Wednesday 7 May
 
--   morning
-    -   2h hands-on <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
-    -   1h forward and inverse modelling lecture
--   afternoon
-    -   1h beamforming lecture
-    -   2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
-    -   1h wrap-up session
--   evening
-    -   dinner <http://goo.gl/maps/jwrEI>
+- morning
+  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 1h forward and inverse modelling lecture
+- afternoon
+  - 1h beamforming lecture
+  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+  - 1h wrap-up session
+- evening
+  - dinner <http://goo.gl/maps/jwrEI>
 
 ### Thursday 8 May
 
--   morning
+- morning
 
-    -   1h non-parametric permutation statistics lecture
-    -   2h hands-on
-        -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
-        -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+  - 1h non-parametric permutation statistics lecture
+  - 2h hands-on
+    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
 
--   afternoon
-    -   1h connectivity lecture
-    -   2h hands on <http://www.fieldtriptoolbox.org/tutorial/connectivity>
-    -   1h wrap-up session
+- afternoon
+  - 1h connectivity lecture
+  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/connectivity>
+  - 1h wrap-up session
 
 ### Friday 9 May
 
--   morning-afternoon
-    -   5h playground (working on own data)
-    -   1h testimonial & evaluation
+- morning-afternoon
+  - 5h playground (working on own data)
+  - 1h testimonial & evaluation

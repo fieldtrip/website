@@ -5,7 +5,7 @@ tags: [example, headmodel, source]
 
 # Example use of the ft_compute_leadfield function
 
-  % create a set of electrodes, randomly placed on a sphere
+    % create a set of electrodes, randomly placed on a sphere
     elec = [];
     elec.pnt = randn(128,3);
     radius = sqrt(sum(elec.pnt.^2,2));
@@ -15,21 +15,21 @@ tags: [example, headmodel, source]
     end
     elec.elecpos = elec.pnt;
 
-  % create a concentric 3-sphere volume conductor, the radius is the same as for the electrodes
+    % create a concentric 3-sphere volume conductor, the radius is the same as for the electrodes
     vol = [];
     vol.r = [0.88 0.92 1.00]; % radii of spheres
     vol.c = [1 1/80 1];       % conductivity
     vol.o = [0 0 0];          % center of sphere
 
-  % compute the leadfield for a dipole at position [0 0 0.5]
+    % compute the leadfield for a dipole at position [0 0 0.5]
     pos = [0 0 0.5];
     lf = ft_compute_leadfield(pos, elec, vol);
 
-  % compute the potential distribution for a dipole with x-orientation
+    % compute the potential distribution for a dipole with x-orientation
     mom = [1 0 0]';
     pot = lf * mom;
 
-  % plot the 3-D distribution of the potential over the sphere surface
+    % plot the 3-D distribution of the potential over the sphere surface
     elec.tri = convhulln(elec.pnt)
     figure
     patch('faces', elec.tri, 'vertices', elec.pnt, 'FaceVertexCData', pot, 'FaceColor', 'interp')

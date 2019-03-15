@@ -117,8 +117,8 @@ The other option is to use maxfilter to create an ascii file containing the rele
 
 7. You can also reposition the subject according to a previous session. The headlocalizer dedicated computer has access to Odin's data directory, and thus, the headcoil coordinates. This is the .hc file, located in the .ds directory. Specify the template as follows and run the headlocalizer which should give you the markers from the start.
 
-    cfg.template = '/mnt/megdata/20100812/ArjSto_1200hz_20100812_01.ds';
-    ft_realtime_headlocalizer(cfg)
+   cfg.template = '/mnt/megdata/20100812/ArjSto_1200hz_20100812_01.ds';
+   ft_realtime_headlocalizer(cfg)
 
 Keep in mind that Odin's data directory is automatically cleaned every now and then. If your template dataset has been removed, you could still read it from your own M disk in case you have backed it up there. Logout the meg user on the headlocalizer dedicated computer and login as yourself. Now run the headlocalizer with specifying the file location on your M disk (e.g. cfg.template = '/home/action/arjsto/MEG/ArjSto_1200hz_20100812_01.ds').
 

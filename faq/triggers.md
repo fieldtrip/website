@@ -45,7 +45,6 @@ The trigger coding in the Neuromag system is more complex than in most systems. 
 
 The following code finds all unique events and aligns the individual bits in the STI00x channels with the combined value in a table.
 
-
     sample  = unique(smp)';
     latency = (sample-1)/hdr.Fs;
     type    = unique(typ)';

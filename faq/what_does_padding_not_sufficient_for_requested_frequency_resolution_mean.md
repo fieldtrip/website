@@ -3,7 +3,7 @@ title: What does "padding not sufficient for requested frequency resolution" mea
 tags: [faq, freq]
 ---
 
-#  What does "padding not sufficient for requested frequency resolution" mean?
+# What does "padding not sufficient for requested frequency resolution" mean?
 
 This means the frequency resolution in your cfg.foi cannot be attained by the current padding in cfg.pad. There are two solutions to this problem:
 

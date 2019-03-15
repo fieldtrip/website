@@ -21,7 +21,6 @@ The data can be downloaded from [SubjectNY394.zip](ftp://ftp.fieldtriptoolbox.or
 
 In line with the [main tutorial](/tutorial/human_ecog), you can use the following code for surface rendering and the plotting of electrodes. Note that in this dataset many steps are skipped and we are just plotting the result of the anatomical coregistration and electrode placement.
 
-
     %% load electrode locations
     fid = fopen('NY394_MRI_coor.txt');
     elec_info = textscan(fid,'%s %f %f %f %s');

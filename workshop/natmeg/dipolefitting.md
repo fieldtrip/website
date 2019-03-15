@@ -12,7 +12,7 @@ In this tutorial you can find information about how to fit dipole models to the 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the [Localizing oscillatory sources using beamformer techniques](/workshop/natmeg/beamforming) tutorial if you are interested in the later.
 
 {% include markup/info %}
-This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.  
+This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg) and is complemented by this lecture.
 
 {% include youtube id="4pVaY6f25w0" %}
 {% include markup/end %}
@@ -36,12 +36,12 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://sputnik.ece.
 
 To fit the dipole models to the data, we will perform the following steps:
 
-*  We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**,  then the mri is aligned with the MEG data using **[ft_volumerealign](/reference/ft_volumerealign)**, and subsequently it is resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system.
-*  The resliced volume is segmented to obtain the anatomical description of the brain, skull and skin with **[ft_volumesegment](/reference/ft_volumesegment)**.
-*  After creating meshes with the triangulated description of the outer brain, skull and skin compartment with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, we create a volume conduction model using **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
-*  We preprocess the MEG and EEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** and compute the average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
-*  Using **[ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
-*  Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailled visualisations.
+- We will preprocess the anatomical images in MATLAB. First, the mri image is read in with **[ft_read_mri](/reference/ft_read_mri)**, then the mri is aligned with the MEG data using **[ft_volumerealign](/reference/ft_volumerealign)**, and subsequently it is resliced with **[ft_volumereslice](/reference/ft_volumereslice)** to ensure that the volume is isotropic and to align the volume with the cardinal axes of the coordinate system.
+- The resliced volume is segmented to obtain the anatomical description of the brain, skull and skin with **[ft_volumesegment](/reference/ft_volumesegment)**.
+- After creating meshes with the triangulated description of the outer brain, skull and skin compartment with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, we create a volume conduction model using **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
+- We preprocess the MEG and EEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** and compute the average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
+- Using **[ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
+- Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailled visualisations.
 
 ### Read and visualise the anatomical data
 
@@ -54,7 +54,7 @@ DICOM datasets consist of a large number of files, one per slice. As filename yo
 
 We also read the geometrical data from the fif file. It contains information about the MEG magnetometer and gradiometer positions (the “grad” structure), about the EEG electrodes (the “elec” structure) and about the head shape.
 
-The MEG dataset is available as   [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
+The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
 
     dataset = 'oddball1_mc_downsampled.fif';
 
@@ -150,7 +150,7 @@ Now that we have the anatomical MRI coregistered and resliced in to [isotropic](
 
     save mri_segmented mri_segmented
 
-By treating the segmentation of brain/skull/scalp as a “functional” volume, we can trick **[ft_sourceplot](/reference/ft_sourceplot)** into plotting it on top of the anatomical MRI.  
+By treating the segmentation of brain/skull/scalp as a “functional” volume, we can trick **[ft_sourceplot](/reference/ft_sourceplot)** into plotting it on top of the anatomical MRI.
 
     cfg = [];
     cfg.funparameter = 'brain';
@@ -199,7 +199,7 @@ After having confirmed that the segmentations are consistent with the anatomical
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 {% include markup/end %}
 
-These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the *isosurface* method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
+These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
 
     cfg = [];
     cfg.method = 'isosurface';
@@ -235,7 +235,7 @@ It is also convenient to switch on the “Camera Toolbar” (under the figure me
 Using the rotate3d command, or the corresponding button in the toolbar, you can rotate the mesh in the figure with your mouse.
 {% include markup/end %}
 
-Now that we have the meshes, we use them to compute the volume conduction model. For the MEG, only the mesh that describes the interface between the brain and the skull is relevant.  
+Now that we have the meshes, we use them to compute the volume conduction model. For the MEG, only the mesh that describes the interface between the brain and the skull is relevant.
 
     cfg = [];
     cfg.method = 'singleshell';
@@ -308,7 +308,7 @@ We screen for bad trials using **[ft_rejectvisual](/reference/ft_rejectvisual)**
 
 #### Compute the time-locked average
 
-Using the *trialinfo* field, which contains the trigger code, the response code and the reaction time, we can select the standard and the deviant trials and compute a time-locked ER
+Using the _trialinfo_ field, which contains the trigger code, the response code and the reaction time, we can select the standard and the deviant trials and compute a time-locked ER
 
     cfg = [];
     timelock_all = ft_timelockanalysis(cfg, data_meg_clean2);
@@ -465,7 +465,7 @@ Using the dipole locations that we fitted to the rather short time window of the
     source_dev = ft_dipolefitting(cfg, timelock_dev); % estimate the amplitude and orientation
     source_dif = ft_dipolefitting(cfg, timelock_dif); % estimate the amplitude and orientation
 
-The orientation and strength of each dipole is represented as a 3*Ntime matrix, with a dipole moment along the x-, y- and z-direction. Since for each timepoint you have a [Qx Qy Qz] vector, which changes over time, you can also consider this as a vector that rotates over time.  
+The orientation and strength of each dipole is represented as a 3\*Ntime matrix, with a dipole moment along the x-, y- and z-direction. Since for each timepoint you have a [Qx Qy Qz] vector, which changes over time, you can also consider this as a vector that rotates over time.
 
     figure
     subplot(3,1,1); title('left: std & dev')
@@ -496,7 +496,7 @@ The orientation and strength of each dipole is represented as a 3*Ntime matrix, 
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_timeseries.png" width="500" %}--" %}
 
-Besides comparing the timecourse of the activity between the two conditions, we could also ask whether the activity is at a different location.  
+Besides comparing the timecourse of the activity between the two conditions, we could also ask whether the activity is at a different location.
 
     cfg = [];
     cfg.numdipoles = 2;
@@ -677,19 +677,19 @@ The following code demonstrates the effect of the imdilate function. It makes fo
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_segorg.png" width="200" %}
 
-*The original segmentation *
+_The original segmentation _
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_segdil1.png" width="200" %}
 
-*After dilation of 1 voxel *
+_After dilation of 1 voxel _
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_segdil2.png" width="200" %}
 
-*After dilation of 2 voxels *
+_After dilation of 2 voxels _
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_segbool.png" width="200" %}
 
-*The final segmentation *
+_The final segmentation _
 
 Using a combination of imerode and Boolean locic with the “AND” operator, we can make a segmentation of the scalp, skull and skin that is **not inflated**.
 
@@ -927,11 +927,11 @@ The EEG dipole fit is not so trustworthy as the MEG dipole fit. We can try to re
 How does this fit compare to the previous? Can you explain the difference?
 {% include markup/end %}
 
-##  Summary and conclusion
+## Summary and conclusion
 
-We demonstrated how to use dipole fitting to estimate the location and timecourse of the auditory evoked fields and the mismatch negativity. We computed the optimal dipole fits using different constraints (i.e. assumptions) on the dipole models. The fitted dipole position of the AEF in the “deviant” condition differs from the position in the “standard” condition, which can be explained by an additional set of sources in the deviant condition at a slightly deeper location.     
+We demonstrated how to use dipole fitting to estimate the location and timecourse of the auditory evoked fields and the mismatch negativity. We computed the optimal dipole fits using different constraints (i.e. assumptions) on the dipole models. The fitted dipole position of the AEF in the “deviant” condition differs from the position in the “standard” condition, which can be explained by an additional set of sources in the deviant condition at a slightly deeper location.
 
-This tutorial demonstrates how you can use different assumptions to get stable and meaningful dipole fit locations. However, it also demonstrates that in the dipole fitting procedure there are many choices than can be made, and that it is not easy to get all parameters right for a meaningful dipole fit solution. This explains why commercial software packages such as [BESA](http://www.besa.de) have elaborate graphical user interfaces in which you can more easily explore the effect of the constraints on the dipoles, and why  sequential dipole fitting strategies are required to construct dipole models for more complicated source configurations.
+This tutorial demonstrates how you can use different assumptions to get stable and meaningful dipole fit locations. However, it also demonstrates that in the dipole fitting procedure there are many choices than can be made, and that it is not easy to get all parameters right for a meaningful dipole fit solution. This explains why commercial software packages such as [BESA](http://www.besa.de) have elaborate graphical user interfaces in which you can more easily explore the effect of the constraints on the dipoles, and why sequential dipole fitting strategies are required to construct dipole models for more complicated source configurations.
 
 More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity timeseries at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
 

@@ -30,7 +30,7 @@ You can recompile individual mex files for your platform using the following com
 
 The following files all depend on some shared code in geometry.c and geometry.h, hence the compilation process is slighty different for thes
 
-    mex -I. -c geometry.c    
+    mex -I. -c geometry.c
     mex -I. -c solid_angle.c ; mex -o solid_angle solid_angle.o geometry.o
     mex -I. -c lmoutr.c      ; mex -o lmoutr      lmoutr.o      geometry.o
     mex -I. -c ptriproj.c    ; mex -o ptriproj    ptriproj.o    geometry.o
@@ -53,9 +53,9 @@ After compilation the mex files are automatically at the right location.
 Note that most of the mex files include a m-file wrapper which will try to do an auto compilation. Again, the autocompilation has not (and can not) be tested on all possible platforms, so your mileage may vary.
 
 If you are using the Visual Studio Compiler and get an error similar t
-    error LNK2005: mexFunction already defined in ptriproj.obj
+error LNK2005: mexFunction already defined in ptriproj.obj
 then try this line replacing ptriproj with the file you are trying to compile.
-    mex -I. -c ptriproj.c    ; mex ptriproj.c  geometry.obj
+mex -I. -c ptriproj.c ; mex ptriproj.c geometry.obj
 
 Note in Linu
 If you are get the error message "cannot find -lstdc++", you can install the libstdc++5 package using your package manager.
@@ -72,19 +72,19 @@ Some MEX files have been recompiled but have not been tested on all platform com
 ### SPM8 mexmaci64 MEX files fail on MATLAB 2017 and up
 
 Producing the following error
-    Invalid MEX-file '/Users/roboos/matlab/fieldtrip/external/spm8/spm_conv_vol.mexmaci64
-    dlopen(/Users/roboos/matlab/fieldtrip/external/spm8/spm_conv_vol.mexmaci64, 6): Library not loaded: @loader_path/libmex.dylib
-    Referenced from: /Users/roboos/matlab/fieldtrip/external/spm8/spm_conv_vol.mexmaci64
-    Reason: image not found.
+Invalid MEX-file '/Users/roboos/matlab/fieldtrip/external/spm8/spm_conv_vol.mexmaci64
+dlopen(/Users/roboos/matlab/fieldtrip/external/spm8/spm_conv_vol.mexmaci64, 6): Library not loaded: @loader_path/libmex.dylib
+Referenced from: /Users/roboos/matlab/fieldtrip/external/spm8/spm_conv_vol.mexmaci64
+Reason: image not found.
 
-1) You can recompile the SPM8 mex files. A makefile and instructions are provided on https://www.wikibooks.org/wiki/SPM#Installation.
+1. You can recompile the SPM8 mex files. A makefile and instructions are provided on https://www.wikibooks.org/wiki/SPM#Installation.
 
-2) You can use the maintenance version of SPM8 which has newer mex files, see https://github.com/spm/spm8/tree/maint
+2. You can use the maintenance version of SPM8 which has newer mex files, see https://github.com/spm/spm8/tree/maint
 
-3) Mex file issues should be resolved using the latest version of SPM12. You can specify the use of SPM12 at function call
-    cfg.spmversion = 'spm12' or 'spm8up'
+3. Mex file issues should be resolved using the latest version of SPM12. You can specify the use of SPM12 at function call
+   cfg.spmversion = 'spm12' or 'spm8up'
 
-4) For a more permanent solution that applies to all functions from the FieldTrip toolbox, you can set SPM12 as the default version in your startup.m
+4. For a more permanent solution that applies to all functions from the FieldTrip toolbox, you can set SPM12 as the default version in your startup.m
    global ft_default
    ft_default.spmversion = 'spm12'
    ft_defaults % this loads the rest of the defaults
@@ -93,7 +93,7 @@ Producing the following error
 
 Producing the following error
 
-   Error using read_gifti_file (line 17)
-   [GIFTI] Loading of XML file /Users/arjsto/Projects/Ecog/data/IR30/recon/freesurfer/SUMA/std.141.lh.pial.gii failed.
+Error using read_gifti_file (line 17)
+[GIFTI] Loading of XML file /Users/arjsto/Projects/Ecog/data/IR30/recon/freesurfer/SUMA/std.141.lh.pial.gii failed.
 
 You can replace the xml_findstr.mexmaci64 in external/gifti/@xmltree/private by the version hosted at https://github.com/spm/spm12/blob/master/%40xmltree/private/xml_findstr.mexmaci64

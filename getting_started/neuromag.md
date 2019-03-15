@@ -17,7 +17,6 @@ Note that the MEG-PD toolbox will only function on 32-bit machines, and requires
 
 To get started, you need to add the paths where the FieldTrip and MNE toolboxes can be found. In respect to FiedlTrip, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
-
     addpath `<full_path_to_fieldtrip>`
     ft_defaults
 
@@ -25,9 +24,8 @@ To get started, you need to add the paths where the FieldTrip and MNE toolboxes 
 
 The first step is to see if you can read in the data using both the toolboxes by typing the following in the command windo
 
-
-  >> hdr = ft_read_header(filename); %your fif-filename
-  >> hdr
+    >> hdr = ft_read_header(filename); %your fif-filename
+    >> hdr
 
     hdr =
 
@@ -43,9 +41,8 @@ The first step is to see if you can read in the data using both the toolboxes by
 
 The header contains a lot of information about the measurement parameters. In this example 317 channels were recorded, the sampling frequency was a 1000 Hz and in the field hdr.grad you can find information about the sensor-locations, for example. The field 'hdr.orig' contains all the original header information.
 
-
-  >> dat = ft_read_data(filename);
-  >> size(dat)
+    >> dat = ft_read_data(filename);
+    >> size(dat)
 
     ans =
 
@@ -57,11 +54,11 @@ When this works you are sure that FieldTrip can handle your dataset and you can 
 
 ## Special issues
 
-*  If you have STI001 up to STI008, the TTL values (single bits) in those channels will be combined into an event of type 'Trigger' with an integer value between 0 and 255.
-*  Reading .fif mri-data with FieldTrip and making a single shell headmodel (example script can be found [here](/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)).
-*  The default behavior of ft_read_event is that it assumes that event values below 5 are noise. However, in the new systems (Elekta Neuromag VectorView or Triux (306 channels both) this is seldom the case.
+- If you have STI001 up to STI008, the TTL values (single bits) in those channels will be combined into an event of type 'Trigger' with an integer value between 0 and 255.
+- Reading .fif mri-data with FieldTrip and making a single shell headmodel (example script can be found [here](/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)).
+- The default behavior of ft_read_event is that it assumes that event values below 5 are noise. However, in the new systems (Elekta Neuromag VectorView or Triux (306 channels both) this is seldom the case.
 
-##  Frequently Asked Questions
+## Frequently Asked Questions
 
 ### Can I do source reconstruction with combined planar and magnetometer channels?
 

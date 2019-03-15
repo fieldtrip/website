@@ -32,7 +32,7 @@ Furthermore, it is necessary to provide the voxel coordinates of the same fiduci
     % You can also use ft_volumerealign with cfg.interactive='yes' and obtain the fiducials from the output.cfg.fiducial
 
     vox_Nas = mri.nasion;  % fiducials saved in mri structure
-    vox_Lpa = mri.left;     
+    vox_Lpa = mri.left;
     vox_Rpa = mri.right;
 
     vox2head = mri.transform; % transformation matrix of individual MRI

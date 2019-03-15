@@ -22,9 +22,8 @@ NOTE: the example below uses some low-level functions from the FieldTrip/private
 
 FIXME in the following section the simulated data should consist of two dipoles with more appropriate timecourses
 
-
-  % create a gradiometer array with magnetometers at 12cm distance from the origin
-  [pnt, tri] = icosahedron162;
+    % create a gradiometer array with magnetometers at 12cm distance from the origin
+    [pnt, tri] = icosahedron162;
     pnt        = pnt(pnt(:,3)>=0,:);
     grad.pnt   = 12*pnt;
     grad.ori   = pnt;
@@ -32,15 +31,15 @@ FIXME in the following section the simulated data should consist of two dipoles 
     grad.label{i} = sprintf('chan%03d', i);
     end
 
-  % create a spherical volume conductor with 10cm radius
+    % create a spherical volume conductor with 10cm radius
     vol.r = 9;
     vol.o = [0 0 2.5];
 
-  % note that beamformer scanning will be done with a 1cm grid, so you should
-  % not put the dipole on a position that will not be covered by a grid
-  % location later
+    % note that beamformer scanning will be done with a 1cm grid, so you should
+    % not put the dipole on a position that will not be covered by a grid
+    % location later
 
-  % create a dipole simulation with two dipoles and a custom timecourse
+    % create a dipole simulation with two dipoles and a custom timecourse
     cfg      = [];
     cfg.headmodel = vol; % see above
     cfg.grad = grad;     % see above
@@ -62,9 +61,8 @@ FIXME in the following section the simulated data should consist of two dipoles 
 
 FIXME the following code should do freqanalysis instead of timelockanalysis
 
-
-  % compute the data covariance matrix, which will capture the activity of
-  % the simulated dipole
+    % compute the data covariance matrix, which will capture the activity of
+    % the simulated dipole
     cfg = [];
     cfg.covariance = 'yes';
     timelock = ft_timelockanalysis(cfg, data);
@@ -75,8 +73,7 @@ The following code demonstrates how to do beamformer source reconstruction with 
 
 FIMXE insert figure at the end of the following block of code
 
-
-  % do the beamformer source reconstuction on a 1 cm grid
+    % do the beamformer source reconstuction on a 1 cm grid
     cfg            = [];
     cfg.headmodel  = vol;
     cfg.grad       = grad;
@@ -84,8 +81,8 @@ FIMXE insert figure at the end of the following block of code
     cfg.method     = 'lcmv';
     source         = ft_sourceanalysis(cfg, timelock);
 
-  % compute the neural activity index, i.e. projected power divided by
-  % projected noise
+    % compute the neural activity index, i.e. projected power divided by
+    % projected noise
     cfg = [];
     cfg.powmethod = 'none'; % keep the power as estimated from the data covariance, i.e. the induced power
     source = ft_sourcedescriptives(cfg, source);

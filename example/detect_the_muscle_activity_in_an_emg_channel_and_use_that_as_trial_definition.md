@@ -10,7 +10,7 @@ and that defines variable length trials from the EMG onset up to the EMG offset.
 
 You would use this function as follows
 
-    cfg           = [];   
+    cfg           = [];
     cfg.dataset   = string, containing filename or directory
     cfg.trialfun  = 'trialfun_emgdetect';
     cfg           = ft_definetrial(cfg);
@@ -22,7 +22,7 @@ this trial function. You should change these parameters if neccessary.
 
     function [trl] = trialfun_emgdetect(cfg);
 
-  % read the header and determine the channel number corresponding with the EMG
+    % read the header and determine the channel number corresponding with the EMG
     hdr         = ft_read_header(cfg.headerfile);
     chanindx    = strmatch('EMGlft', hdr.label);
 
@@ -30,12 +30,12 @@ this trial function. You should change these parameters if neccessary.
     error('only one EMG channel supported');
     end
 
-  % read all data of the EMG channel, assume continuous file format
+    % read all data of the EMG channel, assume continuous file format
     emg = ft_read_data(cfg.datafile, 'header', hdr, ...
                   'begsample', 1, 'endsample', hdr.nSamples*hdr.nTrials, ...
                   'chanindx', chanindx, 'checkboundary', false);
 
-  % apply filtering, hilbert transformation and boxcar convolution (for smoothing)
+    % apply filtering, hilbert transformation and boxcar convolution (for smoothing)
     emgflt      = ft_preproc_highpassfilter(emg, hdr.Fs, 10); % highpassfilter
     emghlb      = abs(hilbert(emgflt')');                     % hilbert transform
     emgcnv      = conv2([1], ones(1,hdr.Fs), emghlb, 'same'); % smooth using convolution

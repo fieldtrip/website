@@ -18,5 +18,5 @@ Your EEG or MEG data structures may also contain sensor descriptions, which may 
 {% include markup/warning %}
 If you want to ensure that all computations are done correctly, you should ensure that all physical quantities are expressed according to the [International System of Units](https://en.wikipedia.org/wiki/International_System_of_Units) (SI). That means: meter, volt, tesla, ohm, amperes, kilogram, etc.
 
-These SI units are not necessarily the most convenient to work with, but you can always change the units back at the time of editing your figures to get more convenient values. 
+These SI units are not necessarily the most convenient to work with, but you can always change the units back at the time of editing your figures to get more convenient values.
 {% include markup/end %}

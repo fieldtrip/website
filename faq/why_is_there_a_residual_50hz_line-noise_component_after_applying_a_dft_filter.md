@@ -16,7 +16,7 @@ If you fit a constant sine wave, its amplitude will be the mean, i.e. at the beg
     % time
     t = (1:10000)/fs;
     % frequency (Hz)
-    f = 5;         
+    f = 5;
     % increasing amplitude
     amp = (1:10000)/fs;
 
@@ -39,7 +39,7 @@ Then imagine subtracting the estimated 5 Hz component. At the begin you subtract
 
     % bandstopfilter: remove 4.9 to 5.1 Hz
     s4 = ft_preproc_bandpstopfilter(s1, fs, [4.9 5.1], 2);
-    hold on; plot(t, s4, 'm');  
+    hold on; plot(t, s4, 'm');
 
 {% include image src="/assets/img/faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter/dftfilter2.png" width="500" %}
 

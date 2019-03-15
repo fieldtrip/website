@@ -8,24 +8,21 @@ tags: [eeg-language]
 This EEG dataset was acquired by [Irina Siminova et al.](https://doi.org/10.1371/journal.pone.0014465)
 in a study investigating semantic processing of stimuli presented
 as pictures (black line drawings on white background), visually
-displayed text or as auditorily presented words. Stimuli consisted
+displayed text or as auditory presented words. Stimuli consisted
 of concepts from three semantic categories: two relevant categories
 (animals, tools) and a task category that varied across subjects,
 either clothing or vegetables.
 
 All main stimuli were coded with 3-digits, i.e. as 'Sxxx':
 
-- The first digit codes task/no task: _1_ for the non-target semantic categories: animals, tools and _2_ for the target semantic category:
-    clothing. The subjects' task was to press the button in response to clothing items, these targets were not analyzed in the main study.
+- The first digit codes task/no task: _1_ for the non-target semantic categories: animals, tools and _2_ for the target semantic category: clothing. The subjects' task was to press the button in response to clothing items, these targets were not analyzed in the main study.
 
-- The second digit codes the items, _1 to 4_ for animals (cow, bear, lion,
-    ape) and _5 to 8_ for tools (ax, scissors, comb, pen). There were also
-  4 target items (clothing).
+- The second digit codes the items, _1 to 4_ for animals (cow, bear, lion, ape) and _5 to 8_ for tools (ax, scissors, comb, pen). There were also 4 target items (clothing).
 
-- The third digit codes the stimulus modality: _1_ for written words,
-  _2_ for pictures, _3_ for spoken words.
+- The third digit codes the stimulus modality: _1_ for written words, _2_ for pictures, _3_ for spoken words.
 
 {% include image src="/assets/img/workshop/madrid2019/datasets/simanova_fig1.png" width="400" %}
+
 _Figure 1. Experimental stimuli and conditions_
 
 Continuous EEG was registered using a 64 channel ActiCap system (Brain Products

@@ -31,7 +31,7 @@ Use the address of the pointer as a hex-string?
 ### Add prefixes to all C API functions and data structures
 
 C does not know namespaces, so we should try to avoid too short names like "append" which might yield problems when linking
-to other libraries at the same time. ''ft_'' or ''ftb_'' looks like a reasonable choice.
+to other libraries at the same time. ''ft*'' or ''ftb*'' looks like a reasonable choice.
 
 ### Add higher-level C API calls for standard requests
 
@@ -42,8 +42,8 @@ which provide automatic cleanup.
 
 ## See also
 
-*  [draft network](/development/realtime/draft_network)
-*  [draft implementation](/development/realtime/draft_implementation)
-*  [draft header chunks](/development/realtime/draft_header_chunks)
-*  [draft compatability](/development/realtime/draft_compatability)
-*  [scratchpad](/development/realtime/scratchpad)
+- [draft network](/development/realtime/draft_network)
+- [draft implementation](/development/realtime/draft_implementation)
+- [draft header chunks](/development/realtime/draft_header_chunks)
+- [draft compatability](/development/realtime/draft_compatability)
+- [scratchpad](/development/realtime/scratchpad)

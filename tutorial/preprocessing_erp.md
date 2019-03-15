@@ -1,6 +1,7 @@
 ---
 title: Preprocessing of EEG data and computing ERPs
-tags: [tutorial, eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
+tags:
+  [tutorial, eeg, brainvision, preprocessing, trialfun, timelock, eeg-affective]
 ---
 
 # Preprocessing of EEG data and computing ERPs

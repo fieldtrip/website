@@ -3,7 +3,7 @@ title: How should I specify the fiducials for electrode realignment?
 tags: [faq, eeg, fiducial]
 ---
 
-#  How should I specify the fiducials for electrode realignment?
+# How should I specify the fiducials for electrode realignment?
 
 Sensor locations are described by the elec structure and it can contain fewer or more channels that present in the data. Depending on the system we use, fiducials are digitized and represented just like electrodes, and in other systems the fiducials are represented separately from the sensors.
 
@@ -15,7 +15,7 @@ In **[ft_electroderealign](/reference/ft_electroderealign)** the fiducials are n
     fid.unit          = 'mm';                  % same units as mri
 
     cfg               = [];
-    cfg.method        = 'fiducial';            
+    cfg.method        = 'fiducial';
     cfg.template      = fid;                   % see above
     cfg.elec          = elec;
     cfg.fiducial      = {'Nz', 'LPA', 'RPA'};  % labels of fiducials in fid and in elec

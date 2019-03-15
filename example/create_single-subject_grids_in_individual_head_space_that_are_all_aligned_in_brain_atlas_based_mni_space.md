@@ -6,7 +6,7 @@ title: Create brain atlas based MNI-aligned grids in individual head-space
 
 When combining the source-level data of multiple subjects this data is typically first interpolated (e.g. using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)**) and then spatially normalized to a template brain (e.g. using **[ft_volumenormalise](/reference/ft_volumenormalise)**). However it is also possible to define the source-reconstruction grid for each individual subject in such a way that all these grids are already aligned in MNI-space. The combination or statistic of source-level data across subjects can then directly be computed within the source-structure without the need to interpolate and normalize each volume. In addition, the position of the grid points can be chosen in a way that only locations corresponding to particular brain areas (parcels) are included.
 
-The procedure is as follows. First, a template grid is computed on the basis of the standard head model located in the FieldTrip template directory. Subsequently, a brain atlas is loaded using  **[ft_read_atlas](/reference/ft_read_atlas)**. On the basis on the brain atlas and the template grid it is possible to create a binary mask of all locations in the template grid that match atlas locations using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally the mask is used to determine which location shall be defined as 'inside' the head model.
+The procedure is as follows. First, a template grid is computed on the basis of the standard head model located in the FieldTrip template directory. Subsequently, a brain atlas is loaded using **[ft_read_atlas](/reference/ft_read_atlas)**. On the basis on the brain atlas and the template grid it is possible to create a binary mask of all locations in the template grid that match atlas locations using **[ft_volumelookup](/reference/ft_volumelookup)**. Finally the mask is used to determine which location shall be defined as 'inside' the head model.
 
     [ftver, ftpath] = ft_version;
     load(fullfile(ftpath, 'template/headmodel/standard_singleshell.mat'));
@@ -74,7 +74,7 @@ Finally, you can load the subject-specific headmodel from [here](ftp://ftp.field
     sourcemodel = ft_convert_units(sourcemodel, 'm');
 
     figure
-    hold on   
+    hold on
     ft_plot_vol(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');
     ft_plot_axes(hdm);
     alpha 0.4  % make the surface transparent

@@ -14,31 +14,31 @@ FieldTrip functions usually have two input arguments, the first is the configura
 FieldTrip functions usually also have an output argument, which is a structure with the output data. The cfg.outputfile option specifies to which .mat file that data will be written.
 
 So instead of preprocessing data like
-    cfg = [];
-    cfg.dataset = 'Subject01.ds'
-    ...
-    data = ft_preprocessing(cfg);
-    save subject01_raw.mat data
+cfg = [];
+cfg.dataset = 'Subject01.ds'
+...
+data = ft_preprocessing(cfg);
+save subject01_raw.mat data
 
 followed by averaging the trials to get an ERP
-    load subject01_raw.mat data  % actually not needed here because the data is still in memory
-    cfg = [];
-    avg = ft_timelockanalysis(cfg, data);
-    save subject01_avg.mat avg
+load subject01_raw.mat data % actually not needed here because the data is still in memory
+cfg = [];
+avg = ft_timelockanalysis(cfg, data);
+save subject01_avg.mat avg
 
 you would do
-    cfg = [];
-    cfg.dataset = 'Subject01.ds'
-    ...
-    cfg.outputfile = 'subject01_raw.mat'
-    ft_preprocessing(cfg);
+cfg = [];
+cfg.dataset = 'Subject01.ds'
+...
+cfg.outputfile = 'subject01_raw.mat'
+ft_preprocessing(cfg);
 
 and
-    cfg = [];
-    ...
-    cfg.inputfile  = 'subject01_raw.mat'
-    cfg.outputfile = 'subject01_avg.mat'
-    ft_timelockanalysis(cfg);
+cfg = [];
+...
+cfg.inputfile = 'subject01_raw.mat'
+cfg.outputfile = 'subject01_avg.mat'
+ft_timelockanalysis(cfg);
 
 Note that when specifying the cfg.inputfile and/or cfg.outputfile options, that you should not specify an input and/or output variable.
 
@@ -49,7 +49,7 @@ The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldt
     subj  = [1 2 3 4];
 
     cfg = {};
-  % create a cell-array of configurations, one per subject
+    % create a cell-array of configurations, one per subject
     for i=1:length(subj)
 
     % just like in the scripting tutorial, you may want to evaluate a
@@ -67,27 +67,27 @@ The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldt
     cfg{i}.outputfile = sprintf('subj%02d_raw.mat', i);
     end
 
-  % define the trials, this returns an updated cfg
-  % this does not take long and does not have to be done in parallel
+    % define the trials, this returns an updated cfg
+    % this does not take long and does not have to be done in parallel
     cfg = cellfun(@ft_definetrial, cfg, 'UniformOutput', 0);
 
-  % read the raw data, preprocess it and save the result to disk
+    % read the raw data, preprocess it and save the result to disk
     peercellfun(@ft_preprocessing, cfg);
 
     cfg = {};
-  % create a cell-array of configurations, one per subject
+    % create a cell-array of configurations, one per subject
     for i=1:length(subj)
     cfg{i} = [];
     cfg{i}.inputfile  = sprintf('subj%02d_raw.mat', i);
     cfg{i}.outputfile = sprintf('subj%02d_avg.mat', i);
     end
 
-  % load the raw data from disk, average it and save the result
+    % load the raw data from disk, average it and save the result
     peercellfun(@ft_timelockanalysis, cfg);
 
 Please note that file permissions can be problematic if you use peers that are running under another user (e.g. public). If you use a publicly writeable directory, e.g. in linux
-    mkdir ~/public
-    chmod 777 ~/public
+mkdir ~/public
+chmod 777 ~/public
 for the cfg.outputfile and cfg.inputfile options, you should be fine.
 
 ## Bundling multiple functions in a single distributed job
@@ -106,9 +106,9 @@ And then you would call it in parallel for many subjects and conditions like thi
     for subj=1:10
     for cond=1:4
 
-  % here you would specify a different dataset for each subject
-  % and perhaps a different trigger code
-    cfg1{subj, cond} = ...  
+    % here you would specify a different dataset for each subject
+    % and perhaps a different trigger code
+    cfg1{subj, cond} = ...
 
     cfg2{subj, cond} = ...
 
@@ -129,8 +129,8 @@ How to make sure that you are recruiting the right machines? Just call the peerc
 
 Small job (half a GB and half an hour
 
-   peercellfun(@ft_timelockanalysis, cfg, 'memreq', .5*(1024^3), 'timreq', .5*3600);
+peercellfun(@ft_timelockanalysis, cfg, 'memreq', .5*(1024^3), 'timreq', .5*3600);
 
 Large job (two GB and 4 hours
 
-   peercellfun(@ft_freqanalysis, cfg, 'memreq', 2*(1024^3), 'timreq', 4*3600);
+peercellfun(@ft_freqanalysis, cfg, 'memreq', 2*(1024^3), 'timreq', 4*3600);

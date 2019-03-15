@@ -11,7 +11,7 @@ tags: [example, realtime]
 
 ## Example use
 
-The simplest is to try and classify the tutorial MEG dataset which is available from the ftp server.  More information is on the dataset is available [here](/tutorial/meg_language). That dataset contains the stimulus classes FC, IC and FIC, corresponding to trigger values 9, 5 and 3.
+The simplest is to try and classify the tutorial MEG dataset which is available from the ftp server. More information is on the dataset is available [here](/tutorial/meg_language). That dataset contains the stimulus classes FC, IC and FIC, corresponding to trigger values 9, 5 and 3.
 
     cfg = [];
     cfg.dataset  = 'Subject01.ds';
@@ -23,12 +23,11 @@ The simplest is to try and classify the tutorial MEG dataset which is available 
     cfg.trialdef.prestim     = 0.3;
     cfg.trialdef.poststim    = 0.7;
 
-The trial definition function *trialfun_twoclass_classification * that is being used is included in the fieldtrip/trialfun directory. Based on the code above you can already do
+The trial definition function _trialfun_twoclass_classification _ that is being used is included in the fieldtrip/trialfun directory. Based on the code above you can already do
 
     dummy = ft_definetrial(cfg);
 
 to see how the configuration and especially the trial definition looks lik
-
 
     >> dummy.trl
     ans =

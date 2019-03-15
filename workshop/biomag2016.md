@@ -14,16 +14,16 @@ The FieldTrip presentation (slides) are available from <http://www.slideshare.ne
 
 The corresponding group analysis was also done in other free software package
 
--   SPM <http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:multi>
--   MNE <http://mne-tools.github.io/mne-biomag-group-demo/>
--   BrainStorm <http://neuroimage.usc.edu/brainstorm/Biomag2016>
--   NutMEG
+- SPM <http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:multi>
+- MNE <http://mne-tools.github.io/mne-biomag-group-demo/>
+- BrainStorm <http://neuroimage.usc.edu/brainstorm/Biomag2016>
+- NutMEG
 
 A single subject from this dataset was also analyzed for the MEG-UK workshop
 
--   <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015>
--   <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo>
--   <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo>
+- <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015>
+- <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-stats-demo>
+- <http://www.fieldtriptoolbox.org/workshop/meg-uk-2015/fieldtrip-beamformer-demo>
 
 ### Abstract (of the satellite meeting)
 
@@ -49,23 +49,23 @@ Interstimlus interval of 1,700 ms comprised a central white circle.
 
 Two types of stimulation pattern:
 
--   Immediate: The image was presented consecutively
--   Long: The two images were presented with 5-15 intervening stimuli
+- Immediate: The image was presented consecutively
+- Long: The two images were presented with 5-15 intervening stimuli
 
 For the purposes of our analysis, we treat these two stimulation patterns of stimuli together.
 To maintain attention, subjects were asked to judge the symmetry of the image and respond with a keypress.
 
 ### Acquisition details
 
--   Sampling frequency : 1100 Hz
--   Stimulation triggers: The trigger channel is STI101 with the following event code
--   Famous faces: 5 (first), 6 (immediate), and 7 (long)
--   Unfamiliar faces: 13 (first), 14 (immediate), and 15 (long)
--   Scrambled faces: 17 (first), 18 (immediate), and 19 (long)
--   Sensors
-    -   102 magnetometers
-    -   204 planar gradiometers
-    -   70 electrodes recorded with a nose reference (Easycap conforming to extended 10-20% system)
-    -   Two sets of bipolar electrodes were used to measure vertical (left eye; EEG062) and horizontal   
-    -   electro-oculograms (EEG061). Another set was used to measure ECG (EEG063)
--   A fixed 34 ms delay exists between the appearance of a trigger in the trigger channel STI101 and the appearance of the stimulus on the screen
+- Sampling frequency : 1100 Hz
+- Stimulation triggers: The trigger channel is STI101 with the following event code
+- Famous faces: 5 (first), 6 (immediate), and 7 (long)
+- Unfamiliar faces: 13 (first), 14 (immediate), and 15 (long)
+- Scrambled faces: 17 (first), 18 (immediate), and 19 (long)
+- Sensors
+  - 102 magnetometers
+  - 204 planar gradiometers
+  - 70 electrodes recorded with a nose reference (Easycap conforming to extended 10-20% system)
+  - Two sets of bipolar electrodes were used to measure vertical (left eye; EEG062) and horizontal
+  - electro-oculograms (EEG061). Another set was used to measure ECG (EEG063)
+- A fixed 34 ms delay exists between the appearance of a trigger in the trigger channel STI101 and the appearance of the stimulus on the screen

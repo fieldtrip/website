@@ -10,36 +10,36 @@ Note: real-time analysis of EEG and MEG data is currently in development within 
 
 The following BCI input agents are desired
 
-*  Offline data from a file
-*  Online data from CTF MEG system
-*  Online data from Biosemi EEG system
-*  Online data from BrainAmp EEG system
-*  ...
+- Offline data from a file
+- Online data from CTF MEG system
+- Online data from Biosemi EEG system
+- Online data from BrainAmp EEG system
+- ...
 
 The following BCI classifying agents are desired
 
-*  CSP (common spatial pattern)
-*  invariant CSP
-*  2-channel power t-score
-*  ...
+- CSP (common spatial pattern)
+- invariant CSP
+- 2-channel power t-score
+- ...
 
 The following BCI actor agents are desired
 
-*  virtual keyboard (using VNC)
-*  virtual mouse (using VNC)
-*  serial port
-*  paralell port
-*  NBS Presentation
-*  E-Prime
-*  wheelchair
-*  LEGO robot arm
-*  Pong game, single and dual player mode
-*  Hex-o-spell
-*  ...
+- virtual keyboard (using VNC)
+- virtual mouse (using VNC)
+- serial port
+- paralell port
+- NBS Presentation
+- E-Prime
+- wheelchair
+- LEGO robot arm
+- Pong game, single and dual player mode
+- Hex-o-spell
+- ...
 
 Using the different actors, it is possible to implement a complete BCI system. The following BCI systems are desired
 
-*  Pong game, single and dual player mode
-*  EOG artifact detector
-*  head movement detector (only for MEG)
-*  ...
+- Pong game, single and dual player mode
+- EOG artifact detector
+- head movement detector (only for MEG)
+- ...

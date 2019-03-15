@@ -20,7 +20,6 @@ fieldtrip/fileio/private/read_neuroshare.m
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
 
-
     addpath `<full_path_to_fieldtrip>`
     ft_defaults
 
@@ -28,55 +27,50 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 To read header information, us
 
-
     filename = 'your_cyberkinetics_file.nev';
 
     hdr = ft_read_header(filename, 'headerformat', 'neuroshare');
 
-This calls the neuroshare toolbox and gives back the header structure in FieldTrip format, which includes the original header information (included as hdr.orig) as retrieved with the neuroshare functions *ns_GetXXXInfo*.
+This calls the neuroshare toolbox and gives back the header structure in FieldTrip format, which includes the original header information (included as hdr.orig) as retrieved with the neuroshare functions _ns_GetXXXInfo_.
 
 ## Reading triggers and other events
 
 To read events, us
 
-
     filename = 'your_cyberkinetics_file.nev';
 
     event = ft_read_event(filename, 'eventformat', 'neuroshare');
 
-This calls the neuroshare toolbox (using the functions *ns_GetEventData* and *ns_GetIndexByTime*) and gives back the event structure in FieldTrip format.
+This calls the neuroshare toolbox (using the functions _ns_GetEventData_ and _ns_GetIndexByTime_) and gives back the event structure in FieldTrip format.
 
 ## Reading LFP data
 
 To read analog data, us
 
-
     filename = 'your_cyberkinetics_file.nev';
 
     data = ft_read_data(filename, 'headerformat', 'neuroshare', 'dataformat', 'neuroshare');
 
-This calls the neuroshare toolbox (using the function *ns_GetAnalogData*) and gives back the data structure in FieldTrip format.
+This calls the neuroshare toolbox (using the function _ns_GetAnalogData_) and gives back the data structure in FieldTrip format.
 
 Optional input arguments should be specified in key-value pairs and may includ
 
-
-  %   'chanindx'   = list with channel indices to read
-  %   'begsample   = first sample to read
-  %   'endsample   = last sample to read
+    %   'chanindx'   = list with channel indices to read
+    %   'begsample   = first sample to read
+    %   'endsample   = last sample to read
 
 ## Reading spike data
 
 To read spike data, us
 
-
     filename = 'your_cyberkinetics_file.nev';
 
     spike = ft_read_spike(filename, 'spikeformat', 'neuroshare');
 
-This calls the neuroshare toolbox (using the functions *ns_GetSegmentData* or *ns_GetNeuralData*) and gives back the spike structure in FieldTrip format.
+This calls the neuroshare toolbox (using the functions _ns_GetSegmentData_ or _ns_GetNeuralData_) and gives back the spike structure in FieldTrip format.
 
 ## External links
 
-*  [http://neuroshare.org](http://neuroshare.org)
+- [http://neuroshare.org](http://neuroshare.org)
 
-*  http://www.blackrockmicro.com  Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)
+- http://www.blackrockmicro.com Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)

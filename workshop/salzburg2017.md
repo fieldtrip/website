@@ -6,10 +6,10 @@ title: FieldTrip workshop in Salzburg, Austria
 
 There will be a FieldTrip training event linked to the first [Salzburg Mind-Brain Annual Meeting](https://samba.ccns.sbg.ac.at).
 
--   By whom: Robert Oostenveld and Jan-Mathijs Schoffelen
--   When: 11-12 July 2017
--   Where: Centre for Cognitive Neuroscience ([CCNS](https://ccns.sbg.ac.at/about/)) at the Paris Lodron University of Salzburg ([PLUS](https://www.uni-salzburg.at/)).
--   Local organization: Nathan Weisz and Thomas Hartmann.
+- By whom: Robert Oostenveld and Jan-Mathijs Schoffelen
+- When: 11-12 July 2017
+- Where: Centre for Cognitive Neuroscience ([CCNS](https://ccns.sbg.ac.at/about/)) at the Paris Lodron University of Salzburg ([PLUS](https://www.uni-salzburg.at/)).
+- Local organization: Nathan Weisz and Thomas Hartmann.
 
 More details are provided by the local organizers [here](https://samba.ccns.sbg.ac.at/fieldtrip/).
 
@@ -54,34 +54,34 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 
 #### Tuesday
 
--   morning
+- morning
 
-    -   1h welcome and intro lecture - [slides](/assets/pdf/workshop/salzburg_introduction.pdf)
-    -   2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+  - 1h welcome and intro lecture - [slides](/assets/pdf/workshop/salzburg_introduction.pdf)
+  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
--   afternoon
+- afternoon
 
-    -   1h neuronal oscillations lecture - [slides](/assets/pdf/workshop/salzburg_frequency_analysis.pdf)
-    -   2h hands-on <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
-    -   wrap up of the day
+  - 1h neuronal oscillations lecture - [slides](/assets/pdf/workshop/salzburg_frequency_analysis.pdf)
+  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - wrap up of the day
 
--   evening
-    -   dinner and drinks + visit to Mozart Geburtshaus
+- evening
+  - dinner and drinks + visit to Mozart Geburtshaus
 
 #### Wednesday
 
--   morning
+- morning
 
-    -   1h forward and inverse modelling lecture - [slides](/assets/pdf/workshop/salzburg_source_reconstruction.pdf)
-    -   2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+  - 1h forward and inverse modelling lecture - [slides](/assets/pdf/workshop/salzburg_source_reconstruction.pdf)
+  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
 
--   afternoon
+- afternoon
 
-    -   1h non-parametric permutation statistics lecture - [slides](/assets/pdf/workshop/salzburg_cluster_statistics.pdf)
-    -   2h hands-on
-        -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
-        -   <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
-    -   wrap up of the day
+  - 1h non-parametric permutation statistics lecture - [slides](/assets/pdf/workshop/salzburg_cluster_statistics.pdf)
+  - 2h hands-on
+    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+    - <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+  - wrap up of the day
 
--   evening
-    -   drinks and dinner + visit to Mozart Wohnhaus, and if time permits visit to the Von Trapp family mansion.
+- evening
+  - drinks and dinner + visit to Mozart Wohnhaus, and if time permits visit to the Von Trapp family mansion.

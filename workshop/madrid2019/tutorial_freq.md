@@ -2,6 +2,7 @@
 title: Time-frequency and spectral analysis
 tags: [madrid2019, eeg-language, eeg-chennu]
 ---
+
 # Frequency analysis of task and resting state EEG
 
 ## General introduction
@@ -38,15 +39,14 @@ at each frequency, and multiplying that with a Gaussian taper. The width of the
 Gaussian taper is scaled with the frequency, such that there are always a fixed
 number of cycles in the wavelet, for example 3 or 5.
 
-
 {% include image src="/assets/img/tutorial/timefrequencyanalysis/tfrtiles.png" width="600" %}
 
-*Figure: Time and frequency smoothing. (a) For a fixed length time window
+_Figure: Time and frequency smoothing. (a) For a fixed length time window
 the time and frequency smoothing remains fixed. (b) For time windows that
 decrease with frequency, the temporal smoothing decreases and the
-frequency smoothing increases.*
+frequency smoothing increases._
 
-If you want to know more about *tapers* or *window functions* you can have a
+If you want to know more about _tapers_ or _window functions_ you can have a
 look at the [time-frequency tutorial](/tutorial/timefrequencyanalysis/). This
 [Wikipedia page](http://en.wikipedia.org/wiki/Window_function) explains the
 effect of the taper or windowing function. Note that Hann window is another name
@@ -59,13 +59,13 @@ To compute time-resolved power spectra for the task data and the
 (non time-resolved) power spectra for the resting state datasets we will
 perform the following steps:
 
-* Load the data into MATLAB
-* Compute the power spectra using **[ft_freqanalysis](/reference/ft_freqanalysis)**
-* Visualize the results for all channels and for selected channels. You can make time-frequency plots using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**, **[ft_multiplotTFR](/reference/ft_multiplotTFR)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. For power spectra without time dimension, you can use **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**.
+- Load the data into MATLAB
+- Compute the power spectra using **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Visualize the results for all channels and for selected channels. You can make time-frequency plots using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**, **[ft_multiplotTFR](/reference/ft_multiplotTFR)** and **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. For power spectra without time dimension, you can use **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**.
 
 {% include image src="/assets/img/tutorial/timefrequencyanalysis/tfr_pipelinenew.png" width="200" %}
 
-*Figure: Schematic overview of the steps in time-frequency analysis*
+_Figure: Schematic overview of the steps in time-frequency analysis_
 
 ## Part I: Computing time-frequency representations on task EEG data
 
@@ -77,7 +77,7 @@ the frequency resolution is defined according to the length of the time
 window (delta T). The frequency resolution (delta f in figure 1) =
 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time
 window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning
-that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc.  An integer number
+that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number
 of cycles must fit in the time window.
 
 We will skip the preprocessing and start directly with the preprocessed
@@ -152,8 +152,8 @@ adjusted in the cfg structure. For example:
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig1_multiplotTFR_absolute.png" width="600" %}
 
-*Figure: Time-frequency representations calculated using ft_freqanalysis.
-Plotting was done with ft_multiplotTFR)*
+_Figure: Time-frequency representations calculated using ft_freqanalysis.
+Plotting was done with ft_multiplotTFR)_
 
 By using the options `cfg.baseline` and `cfg.baselinetype` in the call to the
 plotting functions, the baseline correction is applied on the fly. Baseline
@@ -182,7 +182,7 @@ make a plot of a single channel use the function
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig2_singleTFR_absolute.png" width="600" %}
 
-*Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.*
+_Figure: The time-frequency representation with respect to single sensor obtained using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**._
 
 If you see plotting artifacts in your figure, see [this
 question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
@@ -206,9 +206,9 @@ topography of this power increase use the function
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig3_topoTFR_absolute.png" width="300" %}
 
-*Figure: A topographic representation of the time-frequency
+_Figure: A topographic representation of the time-frequency
 representations (3 - 8 Hz, 0.1 - 0.3 s post stimulus) obtained using
-ft_topoplotTFR*
+ft_topoplotTFR_
 
 ##### Exercise 1
 
@@ -270,7 +270,7 @@ Plot the result
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig6_singleTFRwave_absolute.png" width="600" %}
 
-*Figure: Time-frequency representations of power calculated using Morlet wavelets.*
+_Figure: Time-frequency representations of power calculated using Morlet wavelets._
 
 ##### Exercise 3
 
@@ -303,7 +303,7 @@ We read the data of participant 22 (baseline sedation session) and we will use
 **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut shorter trials out of
 the continuous data. Specifically, we will cut the data into non-overlapping
 segments of various lengths (1 sec, 2 secs and 4 secs) and we will compute the
-***power spectrum*** of all data segments and average them.
+**_power spectrum_** of all data segments and average them.
 
 {% include markup/warning %}
 You can also use **[ft_redefinetrial](/reference/ft_redefinetrial)** to cut the
@@ -388,17 +388,17 @@ over tapers. In the example below we already have the data segmented in windows
 of different sizes (1, 2, 4 seconds) and we can compute the power spectra using
 the following parameters:
 
--  cfg.foi determines the frequencies of interest, here from 1 Hz to 30 Hz in
-   steps of 2 Hz. The step size could be decreased at the expense of computation
-   time and redundancy.
+- cfg.foi determines the frequencies of interest, here from 1 Hz to 30 Hz in
+  steps of 2 Hz. The step size could be decreased at the expense of computation
+  time and redundancy.
 
--  cfg.tapsmofrq determines the width of frequency smoothing in Hz (= fw). We
-   have chosen `cfg.tapsmofrq = 4`, which assumes a bandwidth of 8Hz smoothing
-   (±4). For less smoothing you can specify smaller values, however, the
-   following relation (determined by the Shannon number) must hold (see Percival
-   and Walden, 1993):
+- cfg.tapsmofrq determines the width of frequency smoothing in Hz (= fw). We
+  have chosen `cfg.tapsmofrq = 4`, which assumes a bandwidth of 8Hz smoothing
+  (±4). For less smoothing you can specify smaller values, however, the
+  following relation (determined by the Shannon number) must hold (see Percival
+  and Walden, 1993):
 
-   K = 2*tw*fw-1,  where K is required to be larger than 0.
+  K = 2*tw*fw-1, where K is required to be larger than 0.
 
 K is the number of multitapers applied; the more tapers the greater the smoothing.
 
@@ -424,7 +424,6 @@ K is the number of multitapers applied; the more tapers the greater the smoothin
     legend('4 sec boxcar', '4 secs hanning', '4 sec dpss');
     xlabel('Frequency (Hz)');
     ylabel('absolute power (uV^2)');
-
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig8_taper1channel.png" width="600" %}
 

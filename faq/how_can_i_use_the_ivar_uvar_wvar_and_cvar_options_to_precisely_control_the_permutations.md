@@ -7,9 +7,9 @@ tags: [faq, statistics]
 
 In **[ft_timelockstatistics](/reference/ft_timelockstatistics)**, **[ft_freqstatistics](/reference/ft_freqstatistics)**, and **[ft_sourcestatistics](/reference/ft_sourcestatistics)** you can specify cfg.method='montecarlo' to use the permutation framework to get an estimate of the probability of the null-hypothesis that the data can be exchanged over the conditions. If that probability is low, you usually reject the null-hypothesis (H0) in favor of the alternative hypothesis (H1).
 
-However, not all permutations of the data are relevant for making a decision between the H0 and H1 in which you are interested. It might for example be that your have observed data for two conditions in 10 subjects. In that case, you probably are interested in whether the data is different for the conditions within a subject. So, you don't want to randomly shuffle the data over all subjects, but instead would like to now whether or not shuffling *within* the subjects destroys the difference between the conditions. In conventional statistics, you might use a [paired two-samples t-test](http://en.wikipedia.org/wiki/Student's_t-test).
+However, not all permutations of the data are relevant for making a decision between the H0 and H1 in which you are interested. It might for example be that your have observed data for two conditions in 10 subjects. In that case, you probably are interested in whether the data is different for the conditions within a subject. So, you don't want to randomly shuffle the data over all subjects, but instead would like to now whether or not shuffling _within_ the subjects destroys the difference between the conditions. In conventional statistics, you might use a [paired two-samples t-test](http://en.wikipedia.org/wiki/Student's_t-test).
 
-The Monte Carlo method (cfg.method='montecarlo') allows you to specify in detail the allowed permutations  for the columns of your experimental design matrix. You can use the following options.
+The Monte Carlo method (cfg.method='montecarlo') allows you to specify in detail the allowed permutations for the columns of your experimental design matrix. You can use the following options.
 
     cfg.ivar             = number or list with indices, independent variable(s)
     cfg.uvar             = number or list with indices, unit variable(s)
@@ -36,6 +36,6 @@ a slow HRF that convolutes the trials within a block, you can shuffle the
 blocks but not the individual trials in a block.
 
 The "Control variable" allows you to specify blocks within which the permutation should
-be done, while controlling that repetitions are not permuted *between* different control blocks. Specifying a control variable is an excellent way to control for a potentially confounding variable that associated with your independent variable.
+be done, while controlling that repetitions are not permuted _between_ different control blocks. Specifying a control variable is an excellent way to control for a potentially confounding variable that associated with your independent variable.
 
-If you want to understand in detail what the consequences are of specifying these options, I suggest you do  "cd fieldtrip/private" and "edit resampledesign". That is the low-level function used for the permutations and other resamplings.
+If you want to understand in detail what the consequences are of specifying these options, I suggest you do "cd fieldtrip/private" and "edit resampledesign". That is the low-level function used for the permutations and other resamplings.

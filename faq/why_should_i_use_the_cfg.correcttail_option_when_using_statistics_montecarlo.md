@@ -7,8 +7,7 @@ tags: [faq, statistics, cluster]
 
 When running statistics using **[ft_freqstatistics](/reference/ft_freqstatistics)**, **[ft_timelockstatistics](/reference/ft_timelockstatistics)**, or **[ft_sourcestatistics](/reference/ft_sourcestatistics)** with cfg.method = 'montecarlo' you are presented with the option cfg.correcttail, which is relevant when you are doing a two-sided tes
 
-
-  %   cfg.correcttail = correct p-values or alpha-values when doing a two-sided test, 'alpha','prob' or 'no' (default = 'no')
+    %   cfg.correcttail = correct p-values or alpha-values when doing a two-sided test, 'alpha','prob' or 'no' (default = 'no')
 
 ## Correct alpha
 
@@ -23,7 +22,6 @@ of the tails (the most extreme tail).
 
 In case of a two-sided test, with alpha = 0.05, the configuration would contain:
 
-
     cfg.alpha       = 0.05;
     cfg.tail        = 0; % two-sided test
     cfg.correcttail = 'alpha';
@@ -35,7 +33,7 @@ two tails, i.e., divide alpha by two. Each tail will be tested with alpha = 0.02
 
 An alternative solution to distribute the alpha level over both tails is
 achieved by multiplying the probability with a factor of two, prior to
-thresholding it with cfg.alpha.  The advantage of this solution is that
+thresholding it with cfg.alpha. The advantage of this solution is that
 it results in a p-value that corresponds with a parametric probability.
 
 Use the following configuration:

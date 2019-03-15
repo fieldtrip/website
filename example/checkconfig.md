@@ -40,7 +40,7 @@ When you use a FieldTrip function, this automatically calls **[ft_checkconfig](/
     %   cfg.trackconfig = 'cleanup', 'report' or 'off'
     %   cfg.checksize   = number in bytes, can be inf (set max size allowed for output cfg fields)
 
-When you use a FieldTrip function, this automatically calls ft_defaults. ft_defaults is a function that takes care of path setting, plus it sets defaults to be used throughout fieldtrip. It does this by creating a global variable called ft_defaults (i.e. a variable that is available to all functions, but not directly visible to the user. You can make it visible by typing 'global ft_default'). The variable ft_default has the following fields and default settings that pertain to **[ft_checkconfig](/reference/ft_checkconfig)*
+When you use a FieldTrip function, this automatically calls ft_defaults. ft_defaults is a function that takes care of path setting, plus it sets defaults to be used throughout fieldtrip. It does this by creating a global variable called ft_defaults (i.e. a variable that is available to all functions, but not directly visible to the user. You can make it visible by typing 'global ft_default'). The variable ft_default has the following fields and default settings that pertain to \*_[ft_checkconfig](/reference/ft_checkconfig)_
 
     ft_default.checkconfig = 'loose';
     ft_default.trackconfig = 'off';
@@ -86,7 +86,7 @@ If you are using the tutorial dataset, first get the trial definitio
     cfg.trialdef.prestim     = 1;
     cfg.trialdef.poststim    = 2;
     cfg.trialdef.eventvalue  = 3;
-    cfg = ft_definetrial(cfg);    
+    cfg = ft_definetrial(cfg);
 
 Now, run **[ft_preprocessing](/reference/ft_preprocessing)** with trackconfig set to cleanup. This will give you both a report (on screen) and a cleaned data.cfg:
 

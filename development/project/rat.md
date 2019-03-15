@@ -42,17 +42,18 @@ Has to be completed and consists o
 
 - retriangulation of the mesh
 
-    addpath ~/fieldtrip-dev/surface
-    cfg=[];
-    cfg.checkdoublevertices = 'yes';
-    cfg.convert = 'yes';
-    newshape = ft_surfacecheck(cfg,shape);
+  addpath ~/fieldtrip-dev/surface
+  cfg=[];
+  cfg.checkdoublevertices = 'yes';
+  cfg.convert = 'yes';
+  newshape = ft_surfacecheck(cfg,shape);
 
 - interpolation of the triangles
 
 - elastic repositioning (to create a regular grid triangles spacing)
 
 Look at the Gram matrix of the leadfields to check for regularity, by looking at the sorted eigenvalues.
+
 ### Use the geometrical model to create a 'vol' structure
 
 FieldTrip typically generated a volume conductor structure when dealing with Electrostatics/Magnetostatics forward solutions.
@@ -69,9 +70,9 @@ where 'shape' is a structure defining the boundary for the Boundary Element mode
 
 The electrodes are also given as a matrix of NX3 elements. They have to be put in a FieldTrip 'sensor' structure (see ). Given the electrodes and the volume conductor we are already able to generate the forward solution by means of the general purpose function 'ft_prepare_leadfield'.
 
-  % check for uniqueness of triangles and remove the nearest ones...
+    % check for uniqueness of triangles and remove the nearest ones...
 
-  %initialize the elec structure
+    %initialize the elec structure
     elec = [];
     elec.chanpos = elecmat;
     elec.elecpos = elecmat;
@@ -82,17 +83,16 @@ The electrodes are also given as a matrix of NX3 elements. They have to be put i
 The real labels are then assigned using the routine ft_apply_montage (a manual operations to be done by the experimenter).
 The next step is the calculation of the lead field
 
-
-  % Option 1. Calculate the lead fields (example with only one point)
+    % Option 1. Calculate the lead fields (example with only one point)
     cfg = [];
     cfg.elec = elec;
     cfg.headmodel = vol;
     cfg.grid.pos = point; % this can be done manually by clicking
     lf = ft_prepare_leadfield(cfg);
 
-  % Option 2. Alternatively use a grid of equally spaced points
+    % Option 2. Alternatively use a grid of equally spaced points
     res  =  1; % 1 mm spacing
-    xlim = [-8 8]; 
+    xlim = [-8 8];
     ylim = [-15 15];
     zlim = [0 12];
 
@@ -107,7 +107,6 @@ The next step is the calculation of the lead field
     cfg.headmodel = vol;
     cfg.grid = gridd;
     lf = ft_prepare_leadfield(cfg);
-
 
 ### Visualize the leadfields
 

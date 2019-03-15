@@ -15,7 +15,7 @@ A comprehensive introduction in the neurophysiology and biophysics of EEG (also 
 
 Steven J Luck, [An Introduction to the Event-Related Potential Technique](http://www.amazon.com/Introduction-Event-Related-Potential-Technique-Neuroscience/dp/0262621967), MIT Press: 2005, ISBN 0262621967. This book is reviewed here: Peter Hagoort (2006) [Event-related potentials from the user's perspective](http://www.nature.com/neuro/journal/v9/n4/full/nn0406-463.html); Nature Neuroscience 9, 463.
 
- [The brain in time: insights from neuromagnetic recordings](http://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2010.05438.x/abstract) by Riitta Hari, Lauri Parkkonen and Cathy Nangini gives a comprehensive introduction to MEG.
+[The brain in time: insights from neuromagnetic recordings](http://onlinelibrary.wiley.com/doi/10.1111/j.1749-6632.2010.05438.x/abstract) by Riitta Hari, Lauri Parkkonen and Cathy Nangini gives a comprehensive introduction to MEG.
 
 MEG: An Introduction to Methods. by Peter Hansen, Morten Kringelbach, Riitta Salmelin. [Pdf](http://brainmaster.com/software/pubs/brain/MEG%20-%20An%20Intro.pdf), [Amazon](http://www.amazon.com/MEG-Introduction-Methods-Peter-Hansen/dp/0195307232/ref=sr_1_2?s=books&ie=UTF8&qid=1375859237&sr=1-2&keywords=magnetoencephalography).
 
@@ -57,9 +57,9 @@ The Human Connectome Project (HCP) also provides good examples for data sharing 
 
 ## Signal processing
 
- [Analyzing Neural Time Series Data: Theory and Practice](http://www.amazon.com/Analyzing-Neural-Time-Data-Neuropsychology/dp/0262019876/ref=la_B00EWB0HO2_1_1?s=books&ie=UTF8&qid=1436709055&sr=1-1). by Mike X. Cohen.
+[Analyzing Neural Time Series Data: Theory and Practice](http://www.amazon.com/Analyzing-Neural-Time-Data-Neuropsychology/dp/0262019876/ref=la_B00EWB0HO2_1_1?s=books&ie=UTF8&qid=1436709055&sr=1-1). by Mike X. Cohen.
 
- [Spectral Analysis for Physical Applications: Multitaper and Conventional Univariate Techniques](http://faculty.washington.edu/dbp/sapabook.html) Donald B. Percival and Andrew T. Walden, 1993.
+[Spectral Analysis for Physical Applications: Multitaper and Conventional Univariate Techniques](http://faculty.washington.edu/dbp/sapabook.html) Donald B. Percival and Andrew T. Walden, 1993.
 
 Bruns A. [Fourier-, Hilbert- and wavelet-based signal analysis: are they really different approaches?](http://www.sciencedirect.com/science/article/pii/S0165027004001098) J Neurosci Methods. 2004 Aug 30;137(2):321-32.
 
@@ -79,7 +79,7 @@ Baillet, S and Mosher, J.C. [Electomagnetic Brain Mapping](http://cogimage.dsi.c
 
 The following paper is a review and gentle introduction into beamformin
 Hillebrand A, Singh KD, Holliday IE, Furlong PL, Barnes GR.
- [A new approach to neuroimaging with magnetoencephalography.](http://dx.doi.org/10.1002/hbm.20102) Hum Brain Mapp. 2005 Jun;25(2):199-211.
+[A new approach to neuroimaging with magnetoencephalography.](http://dx.doi.org/10.1002/hbm.20102) Hum Brain Mapp. 2005 Jun;25(2):199-211.
 
 ## Connectivity
 

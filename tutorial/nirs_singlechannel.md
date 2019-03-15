@@ -37,7 +37,7 @@ The data used in this tutorial is available from our FTP server; please download
 
 Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. We will first introduce you to a standard order of analysis steps, which you can subsequently try out step-by-step in this tutorial.
 
-The following order of steps provide a good standard approach for analysing fNIRS data (see Fig 1 for an overview
+The following order of steps provide a good standard approach for analysing fNIRS data (see Fig 1 for an overview:
 
 - read data & trim off non-experimental time windows
 - remove bad channels (not covered in this tutorial, because we focus on one channel only)

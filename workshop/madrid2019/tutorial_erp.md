@@ -176,7 +176,7 @@ FieldTrip data structures are intended to be "lightweight", in the sense
 that the internal MATLAB arrays can be transparently accessed. Have a look
 at the data as you read it into memory
 
-  >> data
+    >> data
 
     data =
 
@@ -200,7 +200,7 @@ trial:
 
 However, a more efficient way to quickly visualize and scroll through your data
 is to use **[ft_databrowser](/reference/ft_databrowser)**. That function also
-allows you to mark the time windows in  which artifacts are present.
+allows you to mark the time windows in which artifacts are present.
 
 ## Visual artifacts detection
 
@@ -213,7 +213,7 @@ it is more important to reject trials with (low frequency) drifts and eye
 artifacts.
 
 {% include markup/danger %}
-It is important that you make your selection of trials *blind* to the experimental manipulation. E.g. in an oddball experiment when you have many standards and few oddballs, you might be tempted to be more strict on the standards and more lenient on the oddballs. This would result in more remaining artifacts in your oddball condition, which could cause a trivial difference in the ERP waveforms.
+It is important that you make your selection of trials _blind_ to the experimental manipulation. E.g. in an oddball experiment when you have many standards and few oddballs, you might be tempted to be more strict on the standards and more lenient on the oddballs. This would result in more remaining artifacts in your oddball condition, which could cause a trivial difference in the ERP waveforms.
 
 So you should apply the same criteria for artifact rejection to all your experimental conditions.
 {% include markup/end %}
@@ -250,7 +250,7 @@ the mouse to go to the next is not always very efficient.
 Another option for visual artifact detection is
 **[ft_rejectvisual](/reference/ft_rejectvisual)**. This function allows you to
 inspect data that has been segmented into trials and identify either bad trials
-or  bad channels. It allows you to browse through large amounts of data in a
+or bad channels. It allows you to browse through large amounts of data in a
 single figure by either showing all channels at once (per trial), or showing all trials
 at once (per channel), or by showing a summary of all channels and trials.
 
@@ -258,7 +258,6 @@ We will first call **[ft_rejectvisual](/reference/ft_rejectvisual)** with all
 channels at once. This corresponds more or less to the way that
 **[ft_databrowser](/reference/ft_databrowser)** displays the data (one trial at
 the time), but now we can see individual channels better and can mark channels that are bad.
-
 
     cfg          = [];
     cfg.method   = 'trial';
@@ -442,7 +441,6 @@ on your ERP effect, compute group level averages with
 **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** or explore
 different ways of visualizing, i.e.
 **[ft_multiplotER](/reference/ft_multiplotER)** etc.
-
 
 ##### Exercise 6
 

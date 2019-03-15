@@ -31,22 +31,22 @@ You can find the template 2-D layouts for plotting that are included in FieldTri
 
 ## EASYCAP
 
-The following series of template layouts is for the electrode caps from [EASYCAP](http://www.easycap.de). They are sorted based on their electrode montages. FieldTrip provides .mat files (since r5201 - feb 2012) that are based on the bitmap images obtained from the easycap website and shown below. The layout structure stored in those .mat files contains fields that describe the position (.pos), the width (.width), and the height (.height), and the naming (.label) of the electrodes. Furthermore, it contains fields that describe the topographic interpolation boundaries (.mask) and the outlines of the 'head' (.outline).  
+The following series of template layouts is for the electrode caps from [EASYCAP](http://www.easycap.de). They are sorted based on their electrode montages. FieldTrip provides .mat files (since r5201 - feb 2012) that are based on the bitmap images obtained from the easycap website and shown below. The layout structure stored in those .mat files contains fields that describe the position (.pos), the width (.width), and the height (.height), and the naming (.label) of the electrodes. Furthermore, it contains fields that describe the topographic interpolation boundaries (.mask) and the outlines of the 'head' (.outline).
 
-###  10%-Arrangements
+### 10%-Arrangements
 
 The following template layout sets are provided
 
-*  easycapM25.mat
-*  easycapM3.mat
-*  easycapM22.mat
-*  easycapM23.mat
-*  easycapM24.mat
-*  easycapM11.mat
-*  easycapM1.mat
-*  easycapM15.mat
+- easycapM25.mat
+- easycapM3.mat
+- easycapM22.mat
+- easycapM23.mat
+- easycapM24.mat
+- easycapM11.mat
+- easycapM1.mat
+- easycapM15.mat
 
-####  easycapM25 - International 10/20-System (used in EC20)
+#### easycapM25 - International 10/20-System (used in EC20)
 
 {% include image src="/assets/img/template/layout/easycapm25.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm25.mat.png" width="200" %}
@@ -85,14 +85,15 @@ The following template layout sets are provided
 
 {% include image src="/assets/img/template/layout/easycapm15.png" width="200" %}
 {% include image src="/assets/img/template/layout/easycapm15.mat.png" width="200" %}
+
 ### Triangulated Equidistant Arrangements
 
 The following template layout sets are provided
 
-*  easycapM7.mat
-*  easycapM10.mat
-*  easycapM16.mat
-*  easycapM14.mat
+- easycapM7.mat
+- easycapM10.mat
+- easycapM16.mat
+- easycapM14.mat
 
 #### easycapM7 - Spherical 32-Channel-Arrangement
 
@@ -118,9 +119,9 @@ The following template layout sets are provided
 
 The following template layout sets are provided
 
-*  easycapM20.mat
-*  easycapM17.mat
-*  easycapM19.mat
+- easycapM20.mat
+- easycapM17.mat
+- easycapM19.mat
 
 #### easycapM20 - BESA 32-Channel-Arrangement for Epilepsy Diagnostics
 
@@ -166,7 +167,7 @@ The following template layout sets are for electrode caps from [NeuroScan](http:
 
 ## BioSemi cap
 
-The following template layouts are for an electrode cap from [BioSemi](http://www.biosemi.com).  
+The following template layouts are for an electrode cap from [BioSemi](http://www.biosemi.com).
 
 {% include image src="/assets/img/template/layout/biosemi16.lay.png" width="200" %}
 {% include image src="/assets/img/template/layout/biosemi32.lay.png" width="200" %}
@@ -214,35 +215,45 @@ The following template layouts are for a sensor array of the CTF MEG system.
 ### 306-channel system
 
 #### with all channels
+
 {% include image src="/assets/img/template/layout/neuromag306all.lay.png" width="200" %}
 
 #### with only the magnetometers
+
 {% include image src="/assets/img/template/layout/neuromag306mag.lay.png" width="200" %}
 
 #### with only the planar gradiometers
+
 {% include image src="/assets/img/template/layout/neuromag306planar.lay.png" width="200" %}
 
 #### with the combined planar gradiometers
+
 {% include image src="/assets/img/template/layout/neuromag306cmb.lay.png" width="200" %}
 
 #### with a more realistic display of temporal sensors, all channels
+
 {% include image src="/assets/img/template/layout/neuromag306all_helmet.png" width="200" %}
 
 #### with a more realistic display of temporal sensors, planar gradiometers only
+
 {% include image src="/assets/img/template/layout/neuromag306planar_helmet.png" width="200" %}
 
 #### with a more realistic display of temporal sensors, planar gradiometers combined
+
 {% include image src="/assets/img/template/layout/neuromag306cmb_helmet.png" width="200" %}
 
 #### with a more realistic display of temporal sensors, magnetometers only
+
 {% include image src="/assets/img/template/layout/neuromag306mag_helmet.png" width="200" %}
 
 ### 122-channel system
 
 #### with the planar gradiometers
+
 {% include image src="/assets/img/template/layout/neuromag122planar.lay.png" width="200" %}
 
 #### with the combined planar gradiometers
+
 {% include image src="/assets/img/template/layout/neuromag122cmb.lay.png" width="200" %}
 
 ## Yokogawa system
@@ -254,7 +265,9 @@ The following template layouts are for a sensor array of the Yokogawa MEG system
 {% include image src="/assets/img/template/layout/yokogawa440all.lay.png" width="200" %}
 
 #### with only the axial gradiometers
+
 {% include image src="/assets/img/template/layout/yokogawa440ag.lay.png" width="200" %}
 
 #### with only the planar gradiometers
+
 {% include image src="/assets/img/template/layout/yokogawa440pg.lay.png" width="200" %}

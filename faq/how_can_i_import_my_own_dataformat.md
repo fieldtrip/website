@@ -17,7 +17,7 @@ Contact us if you need help.
 
 You may be in the situation that you wish use ft_read_header/data/event for reading in your data, but your dataformat is very atypical and used only by your lab. In such a case, in order to prevent cluttering, it is preferential to not add the dataformat to FieldTrip. However, there is a simple way you can still use your own reading functions. To do so, make your read_XXX_header/data/event functions, and be sure they are on the path. Then, when e.g. calling ft_preprocessing, specify headerformat/dataformat/eventformat as the name of your specific function.
 
- For exampl
+For exampl
 
     cfg = [];
     cfg.headerfile   = 'SOMEFILENAME'
@@ -30,9 +30,9 @@ You may be in the situation that you wish use ft_read_header/data/event for read
     data = ft_preprocessing(cfg)
 
 Keep in mind that your reading functions have to follow the following input/output format.  
-    hdr   = myheaderfunction(filename)
-    dat   = mydatafunction(filename, hdr, begsample, endsample, chanindx)
-    event = myeventfunction(filename)  
+ hdr = myheaderfunction(filename)
+dat = mydatafunction(filename, hdr, begsample, endsample, chanindx)
+event = myeventfunction(filename)  
 See ft_read_header/data/event to find details of each of these variables are.
 
 ## Circumvent the FieldTrip reading functions
@@ -50,12 +50,12 @@ Alternatively, if you already are able to read the data into MATLAB somehow, you
                   % reaction times, correct responses etc. The dimensionality
                   % is Ntrial*M, where M is an arbitrary number of columns
 
-Each trial can have a different number of samples (i.e. variable length), that is why each trial needs an individual time axis. If your data consists of trials with a fixed length, then each vector data.time{i} is equal to data.time{1}. If your data consists of a single trial, e.g. when it is a continuous recording, there is only a single data.time{1} and single data.trial{1}. The data format is described in more detail in **[ft_datatype_raw](/reference/ft_datatype_raw)**. The main FieldTrip data structures are jointly described in [this FAQ](/faq/how_are_the_various_data_structures_defined).  
+Each trial can have a different number of samples (i.e. variable length), that is why each trial needs an individual time axis. If your data consists of trials with a fixed length, then each vector data.time{i} is equal to data.time{1}. If your data consists of a single trial, e.g. when it is a continuous recording, there is only a single data.time{1} and single data.trial{1}. The data format is described in more detail in **[ft_datatype_raw](/reference/ft_datatype_raw)**. The main FieldTrip data structures are jointly described in [this FAQ](/faq/how_are_the_various_data_structures_defined).
 
-If your data represents a continuous recording, you can also consider taking a simple two-step approach by first representing your data into *one long trial* as described above, and then cutting it up into individual trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
+If your data represents a continuous recording, you can also consider taking a simple two-step approach by first representing your data into _one long trial_ as described above, and then cutting it up into individual trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 
 Note that to do so you need to enter another field that makes the data recognizable as a long tria
-    data.sampleinfo % array containing [startsample endsample] of data
+data.sampleinfo % array containing [startsample endsample] of data
 
 Note also that if you want to add trial-specific information related to the short trials that are going to be created in the next step, you need to create the trialinfo field only after your call to ft_redefinetrial
 

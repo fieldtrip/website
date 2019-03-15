@@ -29,7 +29,7 @@ Installation procedure:
 - check your local version of gcc compiler (type 'gcc -v' in a terminal).
 
   \$ gcc -v
-    gcc version 4.3.2 (GCC)
+  gcc version 4.3.2 (GCC)
 
 - If your version of gcc is superior to 4.2 download OpenMEEG for gcc 4. Otherwise download OpenMEEG for gcc 3. The OpenMEEG version for gcc 4 provides support of OpenMP for parallel and faster computation.
 

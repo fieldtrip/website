@@ -6,7 +6,7 @@ tags: [faq, ica, data, crash, databrowser, surf, topoplot, topo]
 # The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
 
 FieldTrip relies on MATLABs plotting routines, which uses specific renderers. Unfortunately, specific combinations of graphics card, operating system and MATLAB version can cause MATLAB to crash using specific renderer. This can happen when using the databrowser, and if this happens for you, it will always happen unless you change something. The easiest change can be made to the renderer, as it entails only a simple MATLAB command. In most FieldTrip functions, you can set the renderer via the cfg. As such, for the databrowser you can simply add
-    cfg.renderer = 'painters'
+cfg.renderer = 'painters'
 prior to the call to ft_databrowser.
 
 {% include markup/info %}
@@ -32,7 +32,8 @@ also the many different driver versions that exist for each of these cards.
 
 So, you can try and switch to the software implementation of OpenGL by
 executing the following command in the command windo
->>opengl software
+
+> > opengl software
 
 This setting is retained for the current session of MATLAB. If you want
 MATLAB to remember this setting across settings, then I would suggest that
@@ -45,11 +46,11 @@ IF THE ABOVE PROCEDURE DOES NOT WOR
 We can try and change the renderer to one of the other two and see if this
 helps. You can change the renderer by using the "set" comman
 
->> set(gcf,'renderer','painters');
-OR
->>set(gcf,'renderer','zbuffer');
-OR
->>set(gcf,'renderer','opengl');
+> > set(gcf,'renderer','painters');
+> > OR
+> > set(gcf,'renderer','zbuffer');
+> > OR
+> > set(gcf,'renderer','opengl');
 
 Here "gcf" refers to the currently active figure window.
 

@@ -10,7 +10,7 @@ The MEG data are stored as epochs or trials of fixed length around each stimulus
 
 Magnetic resonance images (MRIs) were obtained with a 1.5 T Siemens system. During the MRI scans ear molds with small containers filled with vitamin E marked the same anatomical landmarks. This allows for realignment of the MRIs to the MEG coordinate system according to the anatomical landmarks.
 
-* * *
+---
 
 1.  Kutas M, Hillyard SA. (1980) Reading senseless sentences: brain potentials reflect semantic incongruity. Science. 207(4427):203-5
 2.  Kutas M, Federmeier KD. (2000) Electrophysiology reveals semantic memory use in language comprehension. Trends Cogn Sci. 4(12):463-470

@@ -3,7 +3,7 @@ title: Simulate an oscillatory signal with phase resetting
 tags: [example, freq]
 ---
 
-#  Simulate an oscillatory signal with phase resetting
+# Simulate an oscillatory signal with phase resetting
 
 ## Narrow-band oscillation
 
@@ -11,10 +11,10 @@ The following code simulates a clean oscillating signal with a phase reset at ti
 
     clear all
     close all
-  
+
     f = 5;
     t = (-1000:1:1000)/1000;
-   
+
     figure
     for i=1:10 % repeat 10 times
     s = nan(size(t));
@@ -26,8 +26,8 @@ The following code simulates a clean oscillating signal with a phase reset at ti
     hold on;
     end
     axis auto
-   
-    figure; 
+
+    figure;
     plot(t, mean(d,1))
 
 {% include image src="/assets/img/example/phase_reset/phase_reset_narrowband.png" width="400" %}
@@ -40,15 +40,15 @@ The following code also includes a small "random walk" in the phase, i.e. the si
     close all
     f = 5;
     t = (-2000:1:5000)/1000;
-   
+
     figure
     for i=1:10 % repeat 10 times
-    
+
     p = 2*pi*f*t; % linear phase increase
     p(t<0) = p(t<0) + 2*pi*rand(1); % random phase prior to TMS pulse
     p = p + cumsum(2*pi*(rand(size(p))-0.5)*0.01); % random walk
     p = p - p(t==0);
-   
+
     s = cos(p);
     s = 0.2*s+i;
     d(i,:) = s; % remember the signal on each repetition
@@ -56,9 +56,8 @@ The following code also includes a small "random walk" in the phase, i.e. the si
     hold on;
     end
     axis auto
-   
-    figure; 
+
+    figure;
     plot(t, mean(d,1))
 
 {% include image src="/assets/img/example/phase_reset/phase_reset_broadband.png" width="400" %}
-

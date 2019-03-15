@@ -15,20 +15,21 @@ Due to the gaps in the recording, the timestamps that relate to events cannot be
 
 The low-level read_neuralynx_ncs function detects the presence of gaps in the .Ncs file and issues a warning. If you get this warning, the solution is to read in the raw timestamps for all individual samples rather than relying on the monotonous linear relationship. This is possible for a single channel, the procedure does not yet work when reading a whole dataset at once (i.e. a directory containing multiple Ncs files).
 
-One can then construct a time-stamp axis and interpolate in-between samples, and set samples occurring within gaps to NaNs. This is demonstrated in the following cod
+One can then construct a time-stamp axis and interpolate in-between samples, and set samples occurring within gaps to NaNs. This is demonstrated in the following code:
 
-  % start with normal preprocessing of a single channel
+    % start with normal preprocessing of a single channel
     cfg         = [];
     cfg.dataset = 'CSC1.Ncs';
     data        = ft_preprocessing(cfg);
 
-  Warning: discontinuous recording, predicted number of timestamps and observed number of timestamps differ by 1693523717.00
-   Please consult the wiki on http://fieldtrip.fcdonders.nl/getting_started/neuralynx?&#discontinuous_recordings
-  > In fileio/private/read_neuralynx_ncs at 94
+    Warning: discontinuous recording, predicted number of timestamps and observed number of timestamps differ by 1693523717.00
+    Please consult the wiki on http://fieldtrip.fcdonders.nl/getting_started/neuralynx?&#discontinuous_recordings
+
+    > In fileio/private/read_neuralynx_ncs at 94
     In ft_read_header at 1196
     In ft_preprocessing at 394
 
-  >> disp(data)
+    >> disp(data)
              hdr: [1x1 struct]
            label: {'CSC1'}
             time: {[1x12902912 double]}
@@ -48,22 +49,22 @@ Now we continue with reading the actual timestamps and performing interpolation 
 
     function [data_all] = ft_read_neuralynx_interp(fname)
 
-  % FT_READ_NEURALYNX_INTERP reads a cell-array of NCS files and performs interpolation
-  % and gap-filling of the timestamp axis to correct for potentially different offsets
-  % across channels, and potential gaps within the recordings. All samples are being
-  % read out.
-  %
-  % Input
-  %  input FNAME is the list of CSC filenames
-  %  All of these channels should have the sample sampling frequency.
-  % Output
-  %  data_all is a raw data structure containing interpolated data and NaNs at the gaps,
-  %  based on all the available samples in a recording.
-  %
+    % FT_READ_NEURALYNX_INTERP reads a cell-array of NCS files and performs interpolation
+    % and gap-filling of the timestamp axis to correct for potentially different offsets
+    % across channels, and potential gaps within the recordings. All samples are being
+    % read out.
+    %
+    % Input
+    %  input FNAME is the list of CSC filenames
+    %  All of these channels should have the sample sampling frequency.
+    % Output
+    %  data_all is a raw data structure containing interpolated data and NaNs at the gaps,
+    %  based on all the available samples in a recording.
+    %
 
-  % Copyright (c) Martin Vinck, SILS, Center for Neuroscience, University of Amsterdam, 2013.
+    % Copyright (c) Martin Vinck, SILS, Center for Neuroscience, University of Amsterdam, 2013.
 
-  % first check if these are indeed ncs files
+    % first check if these are indeed ncs files
     ftype = zeros(length(fname), 1);
     for i=1:length(fname)
     if     ft_filetype(fname{i}, 'neuralynx_ncs')
@@ -72,23 +73,23 @@ Now we continue with reading the actual timestamps and performing interpolation 
     end
     if ~all(ftype==1), error('some files do not correspond to ncs files'); end
 
-  % number of channels
+    % number of channels
     nchans = length(fname);
 
-  % get the original headers
+    % get the original headers
     for i=1:nchans
     orig(i) = ft_read_header(fname{i});
     end
 
-  % check if they all have the same sampling frequency, otherwise return error
+    % check if they all have the same sampling frequency, otherwise return error
     for i=1:length(orig), SamplingFrequency(i) = orig(i).Fs; end
     if any(SamplingFrequency~=SamplingFrequency(1))
     error('not all channels have the same sampling rate');
     end
 
-  % get the minimum and maximum timestamp across all channels
+    % get the minimum and maximum timestamp across all channels
     for i = 1:nchans
-    ts    = ft_read_data(fname{i}, 'timestamp', true);  
+    ts    = ft_read_data(fname{i}, 'timestamp', true);
     mn(i) = ts(1);
     mx(i) = ts(end);
     ts1   = ts(1);
@@ -108,7 +109,7 @@ Now we continue with reading the actual timestamps and performing interpolation 
     end
     end
 
-  % issue some warning if channels don't start or end at the same time
+    % issue some warning if channels don't start or end at the same time
     startflag = 0; endflag = 0;
     if any(mn~=mn(1)),
     warning('not all continuous channels start at the same time');
@@ -120,20 +121,20 @@ Now we continue with reading the actual timestamps and performing interpolation 
     end
     if any(md~=md(1)), warning('not all channels have same mode'); end
 
-  % take the mode of the modes and construct the interpolation axis
-  % the interpolation axis should be casted in doubles
+    % take the mode of the modes and construct the interpolation axis
+    % the interpolation axis should be casted in doubles
     mode_dts  = mode(md);
     rng       = double(max_all-min_all); % this is small num, can be double
     offset    = double(mn-min_all); % store the offset per channel
     offsetmx  = double(max_all-mx);
     tsinterp  = [0:mode_dts:rng]; % the timestamp interpolation axis
 
-  % loop over the channels if the channels have different timestamps
+    % loop over the channels if the channels have different timestamps
     for i = 1:nchans
     cfg         = [];
     cfg.dataset = fname{i};
     data        = ft_preprocessing(cfg);
-    ts          = ft_read_data(cfg.dataset, 'timestamp', true);  
+    ts          = ft_read_data(cfg.dataset, 'timestamp', true);
 
     % original timestamaps in doubles, with the minimum ts subtracted
     ts          = double(ts-ts(1)) + offset(i);
@@ -142,7 +143,7 @@ Now we continue with reading the actual timestamps and performing interpolation 
     gaps     = find(diff(ts)>2*mode_dts); % skips at least a sample
     if isempty(gaps) && startflag==0 && endflag==0
       fprintf('there are no gaps and all channels start and end at same time, no interpolation performed\n');
-    else  
+    else
       % interpolate the data
       datinterp   = interp1(ts, data.trial{1}, tsinterp);
 
@@ -184,7 +185,7 @@ Now we continue with reading the actual timestamps and performing interpolation 
     end
     end
 
-  % correct the header information and the sampling information
+    % correct the header information and the sampling information
     data_all.hdr.FirstTimeStamp     = min_all;
     data_all.hdr.LastTimeStamp      = uint64(tsinterp(end)) + min_all;
     data_all.hdr.TimeStampPerSample = mode_dts;

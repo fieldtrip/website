@@ -22,18 +22,19 @@ FieldTrip and MNE-Python offer tools to analyze electrophysiological activity.
 
 Primary use cases for the integration of FieldTrip and MNE-Python are
 
-*  the ability for MNE users do channel-level time-frequency analysis and sensor-level statistics in FieldTrip.
-*  the ability for FieldTrip users to do source reconstruction in MNE.
+- the ability for MNE users do channel-level time-frequency analysis and sensor-level statistics in FieldTrip.
+- the ability for FieldTrip users to do source reconstruction in MNE.
 
 ## Background
 
 FieldTrip and MNE-Python have similar but not identical processing pipelines. A common pipeline in FieldTrip is to create trials by reading the data directly from disk (in order to have a **[ft_datatype_raw](/reference/ft_datatype_raw)**) and then use this preprocessed data to create ERP (**[ft_datatype_timelock](/reference/ft_datatype_timelock)**). In MNE-Python, the whole continuous recording is imported (with the **Raw** class), then trials are extracted with the **Epochs** class and finally trials are averaged into the **Evoked** class. To recap, this is the correspondence between datatypes in the two package
 
- | Conceptual                                   | FieldTrip                                                          | MNE-Python                                                                  |
- | ----------                                   | ---------                                                          | ----------                                                                  |
- | one continuous segment of data               | [ft_datatype_raw](/reference/ft_datatype_raw)           | Raw                                                                         |
- | multiple segments of data, e.g. trials       | [ft_datatype_raw](/reference/ft_datatype_raw)           | Epochs ((This datatype is not part of the original MNE Suite written in C)) |
- | averaged ERFs for one or multiple conditions | [ft_datatype_timelock](/reference/ft_datatype_timelock) | Evoked                                                                      |
+| Conceptual                                   | FieldTrip                                               | MNE-Python                                                                  |
+| -------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------- |
+| one continuous segment of data               | [ft_datatype_raw](/reference/ft_datatype_raw)           | Raw                                                                         |
+| multiple segments of data, e.g. trials       | [ft_datatype_raw](/reference/ft_datatype_raw)           | Epochs ((This datatype is not part of the original MNE Suite written in C)) |
+| averaged ERFs for one or multiple conditions | [ft_datatype_timelock](/reference/ft_datatype_timelock) | Evoked                                                                      |
+
 Therefore, we will need to import and export Raw, Epochs, and Evoked datatypes.
 
 The aim is to pass the channel=level data between FieldTrip and MNE. Reading is implemented through the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions. Writing is implemented through the ad-hoc **[fieldtrip2fiff](/reference/fieldtrip2fiff)** function.
@@ -64,9 +65,9 @@ Then, we export them
 
 This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the Matlab files, events might be recoded using numbers.
 
-You can then read the file into Python (MNE-Python 0.8
+You can then read the file into Python (MNE-Python 0.8)
 
-  :::python
+```python
     from mne.io import Raw
     raw = Raw('ctf_raw.fif')
     print(raw)
@@ -75,13 +76,15 @@ You can then read the file into Python (MNE-Python 0.8
     from mne import read_events
     events = read_events('ctf_raw-eve.fif')
     print(events)
+```
 
 #### Import Raw
 
 Once you have the data in Python as Raw, you can use the ''save'' method.
 
-  :::python
+```python
     raw.save('mne_python_raw.fif')
+```
 
 Then use FieldTrip to read the file
 
@@ -106,16 +109,17 @@ Currently, there is no export functionality to create mne-Epochs from fieldtrip.
 
 And then in Python, you can read the ''Epochs'' wit
 
-  :::python
+```python
     from mne import read_epochs
     epochs = read_epochs('ctf-epo.fif')
     print(type(epochs))
+```
 
 #### Import Epochs
 
-If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''Epochs'' clas
+If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''Epochs'' class
 
-  :::python
+```python
     from mne import read_events, Epochs
     from mne.fiff import Raw
 
@@ -123,15 +127,16 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
     events = read_events('ctf_raw-eve.fif')
     print(events)
 
-  # create events based on the index in the third column of events
+    # create events based on the index in the third column of events
     event_ids = {'eventA': 4, 'eventB': 8}
     tmin = -0.5
     tmax = 1
     epochs = Epochs(raw, events, event_ids, tmin, tmax, baseline=(None, 0))
     epochs.save('mne_python-epo.fif')
     mne.write_events('mne_python-eve.fif', epochs.events)
+```
 
-And then in Matla
+And then in Matlab
 
     fiff_file = 'mne_python-epo.fif';
     events_file = 'mne_python-eve.fif';
@@ -152,7 +157,7 @@ Better, one could also use the inbuilt-function [ft_definetrial](/reference/ft_d
     fiff_file = 'mne_python-epo.fif';
     cfg = [];
     cfg.dataset = fiff_file_epo;
-    cfg.trialdef.eventtype  = 'trial';               
+    cfg.trialdef.eventtype  = 'trial';
     cfg.trialfun = 'ft_trialfun_general';
     cfg = ft_definetrial(cfg);
 
@@ -179,23 +184,25 @@ Create evoked in FieldTrip:
     fiff_file = 'ctf-ave.fif';
     fieldtrip2fiff(fiff_file, avg)
 
-Now we can read it in MNE-Pytho
+Now we can read it in MNE-Python
 
-  :::python
+```python
     from mne.fiff import read_evoked
     evoked = read_evoked('ctf-ave.fif')
     print(type(evoked))
+```
 
 #### Import Evoked
 
 We just continue using the instance ''epochs'' that was defined [before](#datatype_raw_many_trials_-_epochs). We then create an instance of class ''Evoked'' using the method ''average'
 
-  :::python
+```python
     evoked = epochs.average()
     print(type(evoked))  # returns mne.fiff.evoked.Evoked
     evoked.save('mne_python-ave.fif')
+```
 
-And then in Matlab, we can read the dat
+And then in Matlab, we can read the data
 
     fiff_file = 'mne_python-ave.fif';
     cfg = [];

@@ -16,10 +16,13 @@ All functions in the test directory are executed regularly. If there are problem
 You can check the results of the test scripts yourself using the **[ft_test](/reference/ft_test)** function like this
 
     ft_test report test_tutorial_preprocessing
+
 to get the results of a specific test script, or
 
     ft_test report test_tutorial_preprocessing matlabversion 2017b
+
 to get the results of a specific test script for a specific MATLAB version, or
 
     ft_test report matlabversion 2012b arch maci64
+
 to get all results of a specific MATLAB version and specific platform.

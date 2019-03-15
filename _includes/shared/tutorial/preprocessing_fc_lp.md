@@ -4,12 +4,12 @@ The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/re
 
     % find the interesting segments of data
     cfg = [];                                           % empty configuration
-    cfg.dataset                 = 'Subject01.ds';       % name of CTF dataset  
+    cfg.dataset                 = 'Subject01.ds';       % name of CTF dataset
     cfg.trialdef.eventtype      = 'backpanel trigger';
     cfg.trialdef.prestim        = 1;
     cfg.trialdef.poststim       = 2;
     cfg.trialdef.eventvalue     = 9;                    % trigger value for fully congruent (FC)
-    cfg = ft_definetrial(cfg);            
+    cfg = ft_definetrial(cfg);
 
     % remove the trials that have artifacts from the trl
     cfg.trl([2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85],:) = [];
@@ -21,7 +21,7 @@ The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/re
     cfg.lpfilter   = 'yes';                              % apply lowpass filter
     cfg.lpfreq     = 35;                                 % lowpass at 35 Hz.
 
-    dataFC_LP = ft_preprocessing(cfg);                      
+    dataFC_LP = ft_preprocessing(cfg);
 
 These data have been cleaned from artifacts by removing several trials and two sensors; see the [visual artifact rejection tutorial](/tutorial/visual_artifact_rejection).
 

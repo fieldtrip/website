@@ -1,6 +1,19 @@
 ---
 title: Analysis of human ECoG and sEEG recordings
-tags: [tutorial, ieeg, ecog, seeg, anatomy, human, localization, mri, ct, freesurfer, ecog-protocol]
+tags:
+  [
+    tutorial,
+    ieeg,
+    ecog,
+    seeg,
+    anatomy,
+    human,
+    localization,
+    mri,
+    ct,
+    freesurfer,
+    ecog-protocol,
+  ]
 ---
 
 # Analysis of human ECoG and sEEG recordings
@@ -32,6 +45,7 @@ The second workflow focuses on improving the signal-to-noise ratio and extractin
 The two workflows become intrinsically connected for the first time during the electrode placement activity (Step 17), which offers the opportunity to directly link anatomical locations to electrode labels corresponding to the neural recordings. This activity involves a graphical user interface designed for efficient yet precise identification of electrodes in even the most challenging cases. The integration of the two workflows culminates in an interactive and anatomically informed data exploration tool and the ability to represent functional and epileptiform neural activity overlaid on cortical and subcortical surface models, in figure or video format (Steps 47-57).
 
 {% include image src="/assets/img/tutorial/human_ecog/ieeg_pipeline.png" width="600" %}
+
 ## Anatomical workflow
 
 **1**) Specify the subject ID. This ID will be used in the file naming, in addition to information about the type of data (e.g., MRI, CT), the coordinate system it is in (e.g., ACPC, MNI), and the process(es) that were applied to it (e.g., f for fusion). For example, a CT scan that is aligned to the ACPC coordinate system and that has just been fused with the anatomical MRI is written out to file as subjID_CT_acpc_f.nii.
@@ -77,9 +91,9 @@ For tutorial purposes, the example dataset contains the output from FreeSurfer, 
     subdir     = <path to subject directory>;
     mrfile     = <path to subject MR_acpc.nii>;
     system(['export FREESURFER_HOME=' fshome '; ' ...
-  'source $FREESURFER_HOME/SetUpFreeSurfer.sh; ' ...
-  'mri_convert -c -oc 0 0 0 ' mrfile ' ' [subdir '/tmp.nii'] '; ' ...
-  'recon-all -i ' [subdir '/tmp.nii'] ' -s ' 'freesurfer' ' -sd ' subdir ' -all'])
+    'source $FREESURFER_HOME/SetUpFreeSurfer.sh; ' ...
+    'mri_convert -c -oc 0 0 0 ' mrfile ' ' [subdir '/tmp.nii'] '; ' ...
+    'recon-all -i ' [subdir '/tmp.nii'] ' -s ' 'freesurfer' ' -sd ' subdir ' -all'])
 
 PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of the anatomical MRI currently may take up 10 hours or more.
 
@@ -211,7 +225,7 @@ The computation of the cortical hull takes some time. For tutorial purposes, loa
     cfg             = [];
     cfg.channel     = grids{g};
     cfg.keepchannel = 'yes';
-    cfg.elec        = elec_acpc_fr;  
+    cfg.elec        = elec_acpc_fr;
     cfg.method      = 'headshape';
     cfg.headshape   = hull_lh;
     cfg.warp        = 'dykstra2012';
@@ -258,7 +272,7 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
 
 CRITICAL STEP Accuracy of the spatial normalization step is important for correctly overlaying the electrode positions with a brain atlas in a following step.
 
-  [ftver, ftpath] = ft_version;
+    [ftver, ftpath] = ft_version;
     load([ftpath filesep 'template/anatomy/surface_pial_left.mat']);
     ft_plot_mesh(mesh);
     ft_plot_sens(elec_mni_frv);
@@ -320,10 +334,11 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
     cfg.output     = 'label';
     labels = ft_volumelookup(cfg, atlas);
 
-  [~, indx] = max(labels.count);
+    [~, indx] = max(labels.count);
     labels.name(indx)
     ans =
-   'ParaHippocampal_L'
+
+'ParaHippocampal_L'
 
 ?TROUBLESHOOTING
 
@@ -553,6 +568,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 ## Summary and conclusion
 
 Upon completion of this tutorial, one should obtain an integrated representation of neural and anatomical data. The exact results depend ultimately on the clinical or research question at hand, contingencies in the experimental paradigm, and decisions made during the execution of the protocol. This tutorial demonstrated the analysis of spatiotemporal neural dynamics occurring in relation to known experimental structure and relatively simple behavior, namely the pressing of a button with the right hand when hearing a target tone. However, with small adaptations of the protocol it is feasible to track the spatiotemporal evolution of epileptiform activity with high precision (e.g., [Supplementary Video 7](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM12_ESM.mp4)), or to perform group-level investigations of fine-grained emotion- or language-related neural dynamics in human hippocampus. A precise fusion of the anatomical images with the electrophysiological data is key to reproducible analyses and findings. Hence, it is important to examine the outcome of any critical step, as we have done above.
+
 ## Suggested further reading
 
 You can read more about intracranial EEG and other types of intracranial recordings such as [spike train recordings](/tutorial/spike) and [spikes and local field potentials](/tutorial/spikefield) in the following documentation.

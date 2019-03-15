@@ -81,7 +81,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
                                         '-F7','-Fz','-F8','-FT7', '-FC3', '-FCz',...
                                         '-FC4', '-FT8', '-T3', '-C3', '-Cz', '-C4','-T4','-TP7',...
                                         '-CP3', '-CPz', '-CP4','-TP8','-A1', '-T5', '-Pz',...
-                                        '-T6','-A2', '-O1', '-Oz', '-O2'};      
+                                        '-T6','-A2', '-O1', '-Oz', '-O2'};
     end                                                               % This will select F3 F4 P3 P4 for EEG
                                                                       % X1 X2 X3 X4 for EMG
                                                                       % X5 X6 X7 X8 for EOG
@@ -276,10 +276,10 @@ The algorithm will care to take away both EOG and EMG artifacts.
             % plot(data.time{1},upf,'r')
 
 
-            % Istantaneous (proto)phase difference found via Hilbert          
-            % Based on Pikovsky, A. R. (2001). Synchronization. A Universal   
-            % Concept In Nonlinear Sciences. Cambridge: Cambridge University  
-            % Press, pag. 368 A2.7                                            
+            % Istantaneous (proto)phase difference found via Hilbert
+            % Based on Pikovsky, A. R. (2001). Synchronization. A Universal
+            % Concept In Nonlinear Sciences. Cambridge: Cambridge University
+            % Press, pag. 368 A2.7
 
             % crate the data needed for phase coherence index
             chan1=data.trial{3}(5,:); % F3
@@ -303,12 +303,12 @@ The algorithm will care to take away both EOG and EMG artifacts.
             phir = atan2(((chan2hi .* chan4)-(chan2 .* chan4hi)),...
                          ((chan2 .* chan4)+(chan2hi .* chan4hi)));
 
-            % find the right hemisphere synchronization index  
+            % find the right hemisphere synchronization index
             sumsinr = sum(sin(phir))/blocksize;
             sumcosr = sum(cos(phir))/blocksize;
-            rhor = sqrt(sumsinr.^2 + sumcosr.^2);      
+            rhor = sqrt(sumsinr.^2 + sumcosr.^2);
 
-            % find the left hemisphere synchronization index  
+            % find the left hemisphere synchronization index
             sumsinl = sum(sin(phil))/blocksize;
             sumcosl = sum(cos(phil))/blocksize;
             rhol = sqrt(sumsinl.^2 + sumcosl.^2);
@@ -356,7 +356,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
                 % for the final performance plot
 
                 vl = vl([end 1:end-1]);
-                vl(1)=rhol-meanl;            
+                vl(1)=rhol-meanl;
                 vl1=vl(1);
 
                 vr = vr([end 1:end-1]);
@@ -402,8 +402,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
 
     end % while true
 
-
-  ## Source code for realtime_baseline
+## Source code for realtime_baseline
 
     function realtime_baseline()
 
@@ -448,7 +447,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
                                         '-F7','-Fz','-F8','-FT7', '-FC3', '-FCz',...
                                         '-FC4', '-FT8', '-T3', '-C3', '-Cz', '-C4','-T4','-TP7',...
                                         '-CP3', '-CPz', '-CP4','-TP8','-A1', '-T5', '-Pz',...
-                                        '-T6','-A2', '-O1', '-Oz', '-O2'};      
+                                        '-T6','-A2', '-O1', '-Oz', '-O2'};
     end                                                               % This will select F3 F4 P3 P4 for EEG
                                                                       % X1 X2 X3 X4 for EMG
                                                                       % X5 X6 X7 X8 for EOG
@@ -627,10 +626,10 @@ The algorithm will care to take away both EOG and EMG artifacts.
             % plot(data.time{1},upf,'r')
 
 
-            % Istantaneous (proto)phase difference found via Hilbert          
-            % Based on Pikovsky, A. R. (2001). Synchronization. A Universal   
-            % Concept In Nonlinear Sciences. Cambridge: Cambridge University  
-            % Press, pag. 368 A2.7                                            
+            % Istantaneous (proto)phase difference found via Hilbert
+            % Based on Pikovsky, A. R. (2001). Synchronization. A Universal
+            % Concept In Nonlinear Sciences. Cambridge: Cambridge University
+            % Press, pag. 368 A2.7
 
             % crate the data needed for phase coherence index
             chan1=data.trial{3}(5,:); % F3
@@ -654,12 +653,12 @@ The algorithm will care to take away both EOG and EMG artifacts.
             phir = atan2(((chan2hi .* chan4)-(chan2 .* chan4hi)),...
                          ((chan2 .* chan4)+(chan2hi .* chan4hi)));
 
-            % find the right hemisphere synchronization index  
+            % find the right hemisphere synchronization index
             sumsinr = sum(sin(phir))/blocksize;
             sumcosr = sum(cos(phir))/blocksize;
-            rhor = sqrt(sumsinr.^2 + sumcosr.^2);      
+            rhor = sqrt(sumsinr.^2 + sumcosr.^2);
 
-            % find the left hemisphere synchronization index  
+            % find the left hemisphere synchronization index
             sumsinl = sum(sin(phil))/blocksize;
             sumcosl = sum(cos(phil))/blocksize;
             rhol = sqrt(sumsinl.^2 + sumcosl.^2);
@@ -672,7 +671,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
 
             i=i+1;
 
-        end % if enough new samples   
+        end % if enough new samples
 
         % screen for the subject
         clf;
