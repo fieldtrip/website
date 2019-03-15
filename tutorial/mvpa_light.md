@@ -56,13 +56,13 @@ We will use `ft_timelockstatistics` to determine the classification accuracy bet
 Define the configuration struct
 
     cfg = [] ;
-    cfg.method      = 'mvpa';
-    cfg.mvpa.classifier  = 'multiclass_lda';
-    cfg.mvpa.metric      = 'accuracy';
-    cfg.mvpa.k           = 3;
-    cfg.latency     = [0.5, 0.7];
-    cfg.avgovertime = 'yes';
-    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1); 3*ones(nIC,1)];
+    cfg.method          = 'mvpa';
+    cfg.mvpa.classifier = 'multiclass_lda';
+    cfg.mvpa.metric     = 'accuracy';
+    cfg.mvpa.k          = 3;
+    cfg.latency         = [0.5, 0.7];
+    cfg.avgovertime     = 'yes';
+    cfg.design          = [ones(nFIC,1); 2*ones(nFC,1); 3*ones(nIC,1)];
 
 Let us unpack this:
 
@@ -71,17 +71,18 @@ Let us unpack this:
 - `cfg.mvpa.k` specifies the number of folds used to calculate the cross-validated performance. Cross-validation is explained in more detail in the next section.
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
 - `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section *Classification across time*).
-- `cfg.design` specifies the vector of *class labels*. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with *1*'s
-for the trials belonging to class 1, *2*'s for trials
+- `cfg.design` specifies the vector of *class labels*. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with *1*'s for the trials belonging to class 1, *2*'s for trials
 belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
-comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3).
+comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3). You can also use
+a different set of numbers (e.g. trigger codes) to denote the classes. MVPA-Light then
+internally translates them into *1*'s, *2*'s and *3*'s.
 
 Now call
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP, dataIC_LP)
 
 to perform the classification analysis. It is important to make sure that the order of class labels (FIC, FC, IC) matches the order that the datasets are passed in to `ft_timelockstatistics`. It is not required that each class
-corresponds to a separate dataset. The same result can be achieved when all classes are part of one
+is contained in a separate dataset. The same result can be achieved when all classes are part of one
 dataset `dat`. To illustrate this, append the data and then pass it to `ft_timelockstatistics`:
 
     dat = ft_appenddata([], dataFIC_LP, dataFC_LP, dataIC_LP);
@@ -103,11 +104,11 @@ the confusion matrix, all we need to do is to change the `metric` field:
 
     stat.confusion
 
-Looking at the diagonal of the matrix tells us that the classifier is doing better
-at predicting classes 1 and 2 than it is at correctly predicting class 3.
+Looking at the diagonal of the matrix tells us that the classifier is better
+at predicting classes 1 and 2 than it is at predicting class 3.
 For a simple visualisation of this result, we can use a plotting function in  [MVPA-Light](https://github.com/treder/MVPA-Light)
 called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m).
-It takes the result structure returned in `stat.mvpa_result` which contains the
+It takes the result structure returned in `stat.mvpa` which contains the
 classification results in a format required by the function.
 
     mv_plot_result(stat.mvpa)
@@ -215,20 +216,14 @@ However, since the MEG channels have a spatial structure,
 one can also consider groups of neighbouring channels in the searchlight. To do this, we must provide
 a distance matrix that specifies which channels are neighbours of each other.
 
-    %%% Get layout
     cfg = [];
+    cfg.method      = 'triangulation'
     cfg.layout      = 'CTF151_helmet.mat';
-    cfg.skipscale   = 'yes';
-    cfg.skipcomnt   = 'yes';
-    cfg.channel     = dataFIC_LP.label;
-    lay = ft_prepare_layout(cfg);
+    cfg.channel     = dataFC_LP.label;
+    neighbours = ft_prepare_neighbours(cfg);
 
-    %%% Get distance matrix
-    nb_mat = squareform(pdist(lay.pos));
-
-We are now ready to re-run the searchlight analysis. We pass the neighbourhood distance matrix
-via the parameter `cfg.nb`. By setting `cfg.size = 3`  in every iteration
-the target channel is considered together with its 3 closest neighbouring channels.
+We are now ready to re-run the searchlight analysis. We pass the neighbourhood structure
+via the parameter `cfg.neighbours`.
 
       cfg = [] ;  
       cfg.method      = 'mvpa';
@@ -237,8 +232,7 @@ the target channel is considered together with its 3 closest neighbouring channe
       cfg.latency     = [0.3, 0.7];
       cfg.avgovertime = 'yes';
 
-      cfg.mvpa.nb          = nb_mat;
-      cfg.mvpa.size        = 3;
+      cfg.mvpa.neighbours  = neighbours;
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
