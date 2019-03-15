@@ -1,6 +1,3 @@
-- name:  Meetings
-  link:  /development/meeting
-
 - name:  FieldTrip meeting - 20120822
   link:  /development/meeting/20120822
 
@@ -231,4 +228,7 @@
 
 - name:  FieldTrip meeting - 20160104
   link:  /development/meeting/20160104
+
+- name:  Meetings
+  link:  /development/meeting
 
