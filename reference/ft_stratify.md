@@ -1,5 +1,6 @@
 ---
 title: ft_stratify
+layout: default
 tags: 
 ---
 ```

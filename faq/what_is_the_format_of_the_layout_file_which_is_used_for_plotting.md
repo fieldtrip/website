@@ -31,12 +31,12 @@ Instead of constructing an ascii layout file, you can also specify one of the su
 Alternative to the ascii layout file, you can also use a Matlab layout file. It should be a .mat file containing a single variable with the name "lay". The lay variable should be a structure with
 
 `<code>`lay =
-        pos: [153x2 double]
-      width: [153x1 double]
-     height: [153x1 double]
-      label: {153x1 cell}
-    outline: {[101x2 double]  [3x2 double]  [10x2 double]  [10x2 double]}
-       mask: {[101x2 double]}
+pos: [153x2 double]
+width: [153x1 double]
+height: [153x1 double]
+label: {153x1 cell}
+outline: {[101x2 double][3x2 double] [10x2 double][10x2 double]}
+mask: {[101x2 double]}
 `</code>`
 
 This structure describes the position of each channel, the width and height of the box for **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, and the label. Furthermore, it optionally can contain the outline and the mask.

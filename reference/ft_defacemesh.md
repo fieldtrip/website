@@ -1,5 +1,6 @@
 ---
 title: ft_defacemesh
+layout: default
 tags: 
 ---
 ```

@@ -15,52 +15,49 @@ In the FieldTrip release, you can find the volumetric or surface based atlases i
 You can find the template anatomical atlases and parcellation schemes included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/atlas).
 {% include markup/end %}
 
-
 ## The AFNI TTatlas+tlrc Dataset
 
 This is a binary representation of the Talairach Tournoux atlas [ref 1]. It was digitized for the Talairach Daemon [ref 2] and converted into AFNI format. It is described in some detail on the [AFNI website](http://afni.nimh.nih.gov/afni/doc/misc/afni_ttatlas/). Note that the website seems to be unstable and relatively often unresponsive.
 
- 1.  Talairach J, Tournoux P (1988). Co-planar stereotaxic atlas of the human brain. Thieme, New York. [Amazon](http://www.amazon.com/Co-Planar-Stereotaxic-Atlas-Human-Brain/dp/0865772932)
- 2.  Lancaster JL, Rainey LH, Summerlin JL, Freitas CS, Fox PT, Evans AC, Toga AW, Mazziotta JC. *Automated labeling of the human brain: a preliminary report on the development and evaluation of a forward-transform method.* Hum Brain Mapp. 1997;5(4):238-42. [Pubmed](http://www.ncbi.nlm.nih.gov/pubmed/20408222)
+1.  Talairach J, Tournoux P (1988). Co-planar stereotaxic atlas of the human brain. Thieme, New York. [Amazon](http://www.amazon.com/Co-Planar-Stereotaxic-Atlas-Human-Brain/dp/0865772932)
+2.  Lancaster JL, Rainey LH, Summerlin JL, Freitas CS, Fox PT, Evans AC, Toga AW, Mazziotta JC. _Automated labeling of the human brain: a preliminary report on the development and evaluation of a forward-transform method._ Hum Brain Mapp. 1997;5(4):238-42. [Pubmed](http://www.ncbi.nlm.nih.gov/pubmed/20408222)
 
- You can use the following snippet of code to get a quick idea of this atlases.
+You can use the following snippet of code to get a quick idea of this atlases.
 
+    >> afni = ft_read_atlas('fieldtrip/template/atlas/afni/TTatlas+tlrc.HEAD')
 
-	>> afni = ft_read_atlas('fieldtrip/template/atlas/afni/TTatlas+tlrc.HEAD')
+    afni =
+              dim: [161 191 141]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
+             unit: 'mm'
+            coord: 'tal'
+           brick0: [161x191x141 uint8]
+      brick0label: {50x1 cell}
+           brick1: [161x191x141 uint8]
+      brick1label: {69x1 cell}
 
-	afni =
-	            dim: [161 191 141]
-	            hdr: [1x1 struct]
-	      transform: [4x4 double]
-	           unit: 'mm'
-	          coord: 'tal'
-	         brick0: [161x191x141 uint8]
-	    brick0label: {50x1 cell}
-	         brick1: [161x191x141 uint8]
-	    brick1label: {69x1 cell}
-
-	>> imagesc(afni.brick0(:,:,70))
+    >> imagesc(afni.brick0(:,:,70))
 
 {% include image src="/assets/img/template/atlas/afni.png" width="400" %}
 
 ## The AAL atlas
 
-The AAL atlas included with FieldTrip was downloaded from [here](http://www.gin.cnrs.fr/en/tools/aal-aal2/). The same atlas is also included in the SPM "WFU-PickAtlas" toolbox  with a slight difference in the format of the text file.
+The AAL atlas included with FieldTrip was downloaded from [here](http://www.gin.cnrs.fr/en/tools/aal-aal2/). The same atlas is also included in the SPM "WFU-PickAtlas" toolbox with a slight difference in the format of the text file.
 
-N. Tzourio-Mazoyer, B. Landeau, D. Papathanassiou, F. Crivello, O. Etard, N. Delcroix, B. Mazoyer, and M. Joliot. *Automated Anatomical Labeling of Activations in SPM Using a Macroscopic Anatomical Parcellation of the MNI MRI Single-Subject Brain.* NeuroImage 2002. 15:273-289.
+N. Tzourio-Mazoyer, B. Landeau, D. Papathanassiou, F. Crivello, O. Etard, N. Delcroix, B. Mazoyer, and M. Joliot. _Automated Anatomical Labeling of Activations in SPM Using a Macroscopic Anatomical Parcellation of the MNI MRI Single-Subject Brain._ NeuroImage 2002. 15:273-289.
 
+    >> aal = ft_read_atlas('fieldtrip/template/atlas/aal/ROI_MNI_V4.nii')
 
-	>> aal = ft_read_atlas('fieldtrip/template/atlas/aal/ROI_MNI_V4.nii')
+    aal =
+              dim: [91 109 91]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
+             unit: 'mm'
+           tissue: [91x109x91 double]
+      tissuelabel: {1x116 cell}
 
-	aal =
-	            dim: [91 109 91]
-	            hdr: [1x1 struct]
-	      transform: [4x4 double]
-	           unit: 'mm'
-	         tissue: [91x109x91 double]
-	    tissuelabel: {1x116 cell}    
-
-	>> imagesc(aal.tissue(:,:,45))
+    >> imagesc(aal.tissue(:,:,45))
 
 {% include image src="/assets/img/template/atlas/aal.png" width="400" %}
 
@@ -72,34 +69,34 @@ The segmentation is defined at a 1 mm isotropic voxel grid in Talairach space, w
 
 The discrete model is represented in a MATLAB .mat file as
 
-	>> load brainweb_discrete
-	>> disp(segmentation)
-	segmentation =
-	            dim: [181 217 181]
-	      transform: [4x4 double]
-	           unit: 'mm'
-	         tissue: [181x217x181 double]
-	    tissuelabel: {'csf'  'grey_matter'  'white_matter'  'fat'  'muscle_and_skin'  'skin'  'skull'  'glial_matter'  'connective'}
+    >> load brainweb_discrete
+    >> disp(segmentation)
+    segmentation =
+              dim: [181 217 181]
+        transform: [4x4 double]
+             unit: 'mm'
+           tissue: [181x217x181 double]
+      tissuelabel: {'csf'  'grey_matter'  'white_matter'  'fat'  'muscle_and_skin'  'skin'  'skull'  'glial_matter'  'connective'}
 
 The fuzzy model is represented in a MATLAB .mat file as
 
-	>> load brainweb_fuzzy
-	>> disp(segmentation)
+    >> load brainweb_fuzzy
+    >> disp(segmentation)
 
-	segmentation =
-	                dim: [181 217 181]
-	          transform: [4x4 double]
-	               unit: 'mm'
-	                csf: [181x217x181 double]
-	        grey_matter: [181x217x181 double]
-	       white_matter: [181x217x181 double]
-	                fat: [181x217x181 double]
-	    muscle_and_skin: [181x217x181 double]
-	               skin: [181x217x181 double]
-	              skull: [181x217x181 double]
-	       glial_matter: [181x217x181 double]
-	         connective: [181x217x181 double]
-	         background: [181x217x181 double]
+    segmentation =
+                  dim: [181 217 181]
+            transform: [4x4 double]
+                 unit: 'mm'
+                  csf: [181x217x181 double]
+          grey_matter: [181x217x181 double]
+         white_matter: [181x217x181 double]
+                  fat: [181x217x181 double]
+      muscle_and_skin: [181x217x181 double]
+                 skin: [181x217x181 double]
+                skull: [181x217x181 double]
+         glial_matter: [181x217x181 double]
+           connective: [181x217x181 double]
+           background: [181x217x181 double]
 
 Both discrete and fuzzy model are consistent with the data representation descibed in **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**.
 
@@ -109,20 +106,18 @@ This atlas is the same one as the on implemented in SPM's anatomy toolbox. The v
 
 The atlas and the toolbox are described in the publication belo
 
-S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, *A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data*, NeuroImage, Volume 25, Issue 4, 1 May 2005, Pages 1325-1335.
+S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, _A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data_, NeuroImage, Volume 25, Issue 4, 1 May 2005, Pages 1325-1335.
 
+    >> atlas = ft_read_atlas('fieldtrip/template/atlas/spm_anatomy/AllAreas_v17_MPM')
 
-	>> atlas = ft_read_atlas('fieldtrip/template/atlas/spm_anatomy/AllAreas_v17_MPM')
-
-	atlas =
-	            dim: [151 188 154]
-	            hdr: [1x1 struct]
-	      transform: [4x4 double]
-	           unit: 'mm'
-	         tissue: [151x188x154 double]
-	    tissuelabel: {67x1 cell}
-	       coordsys: 'spm'    
-
+    atlas =
+              dim: [151 188 154]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
+             unit: 'mm'
+           tissue: [151x188x154 double]
+      tissuelabel: {67x1 cell}
+         coordsys: 'spm'
 
 Besides the 'v17' version, the 'v18' is also supported.
 
@@ -135,24 +130,23 @@ The atlas is described in the publication belo
 Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human
 Cortex. Cerebral Cortex. 25: 3911-3931
 
+    >> load ('fieldtrip/template/atlas/vtpm.mat')
 
-	>> load ('fieldtrip/template/atlas/vtpm.mat')
+    vtpm =
 
-	vtpm =
+              dim: [182 218 182]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
+             unit: 'mm'
+      tissuelabel: {1x50 cell}
+           tissue: [182x218x182 double]
+         coordsys: 'mni'
 
-	            dim: [182 218 182]
-	            hdr: [1x1 struct]
-	      transform: [4x4 double]
-	           unit: 'mm'
-	    tissuelabel: {1x50 cell}
-	         tissue: [182x218x182 double]
-	       coordsys: 'mni'    
-
-	figure;
-	subplot(2,2,1);imagesc(vtpm.tissue(:,:,70))
-	subplot(2,2,2);imagesc(vtpm.tissue(:,:,80))
-	subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))
-	subplot(2,2,4);imagesc(vtpm.tissue(:,:,100))
+    figure;
+    subplot(2,2,1);imagesc(vtpm.tissue(:,:,70))
+    subplot(2,2,2);imagesc(vtpm.tissue(:,:,80))
+    subplot(2,2,3);imagesc(vtpm.tissue(:,:,90))
+    subplot(2,2,4);imagesc(vtpm.tissue(:,:,100))
 
 {% include image src="/assets/img/template/atlas/vtpm.png" width="400" %}
 
@@ -166,29 +160,28 @@ Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., Yang, Z., Chu, C., Xie
 
 In FieldTrip, the atlas is included as a nifti file, complemented with a text file with the tissue labels. You can read it like thi
 
+    brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
 
-	brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
+    brainnetome =
 
-	brainnetome =
+              dim: [145 173 145]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
+             unit: 'mm'
+           tissue: [145x173x145 double]
+         coordsys: 'mni'
+      tissuelabel: {1x246 cell}
 
-	            dim: [145 173 145]
-	            hdr: [1x1 struct]
-	      transform: [4x4 double]
-	           unit: 'mm'
-	         tissue: [145x173x145 double]
-	       coordsys: 'mni'
-	    tissuelabel: {1x246 cell}
-
-	imagesc(brainnetome.tissue(:,:,68))
+    imagesc(brainnetome.tissue(:,:,68))
 
 {% include image src="/assets/img/template/atlas/brainnetome_atlas2.png" width="400" %}
 
 ## References
 
-*  http://www.bic.mni.mcgill.ca/brainweb/
-*  C.A. Cocosco, V. Kollokian, R.K.-S. Kwan, A.C. Evans : "BrainWeb: Online Interface to a 3D MRI Simulated Brain Database" NeuroImage, vol.5, no.4, part 2/4, S425, 1997 -- Proceedings of 3-rd International Conference on Functional Mapping of the Human Brain, Copenhagen, May 1997.
-*  R.K.-S. Kwan, A.C. Evans, G.B. Pike : "MRI simulation-based evaluation of image-processing and classification methods" IEEE Transactions on Medical Imaging. 18(11):1085-97, Nov 1999.
-*  R.K.-S. Kwan, A.C. Evans, G.B. Pike : "An Extensible MRI Simulator for Post-Processing Evaluation" Visualization in Biomedical Computing (VBC'96). Lecture Notes in Computer Science, vol. 1131. Springer-Verlag, 1996. 135-140.
-*  D.L. Collins, A.P. Zijdenbos, V. Kollokian, J.G. Sled, N.J. Kabani, C.J. Holmes, A.C. Evans : "Design and Construction of a Realistic Digital Brain Phantom" IEEE Transactions on Medical Imaging, vol.17, No.3, p.463--468, June 1998.
-*  S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data, NeuroImage 25(4), 2005, 1325-1335.
-*  Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in  Human Cortex. Cerebral Cortex. 25: 3911-3931
+- http://www.bic.mni.mcgill.ca/brainweb/
+- C.A. Cocosco, V. Kollokian, R.K.-S. Kwan, A.C. Evans : "BrainWeb: Online Interface to a 3D MRI Simulated Brain Database" NeuroImage, vol.5, no.4, part 2/4, S425, 1997 -- Proceedings of 3-rd International Conference on Functional Mapping of the Human Brain, Copenhagen, May 1997.
+- R.K.-S. Kwan, A.C. Evans, G.B. Pike : "MRI simulation-based evaluation of image-processing and classification methods" IEEE Transactions on Medical Imaging. 18(11):1085-97, Nov 1999.
+- R.K.-S. Kwan, A.C. Evans, G.B. Pike : "An Extensible MRI Simulator for Post-Processing Evaluation" Visualization in Biomedical Computing (VBC'96). Lecture Notes in Computer Science, vol. 1131. Springer-Verlag, 1996. 135-140.
+- D.L. Collins, A.P. Zijdenbos, V. Kollokian, J.G. Sled, N.J. Kabani, C.J. Holmes, A.C. Evans : "Design and Construction of a Realistic Digital Brain Phantom" IEEE Transactions on Medical Imaging, vol.17, No.3, p.463--468, June 1998.
+- S.B. Eickhoff, K.E. Stephan, H. Mohlberg, C. Grefkes, G.R. Fink, K. Amunts, K. Zilles, A new SPM toolbox for combining probabilistic cytoarchitectonic maps and functional imaging data, NeuroImage 25(4), 2005, 1325-1335.
+- Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human Cortex. Cerebral Cortex. 25: 3911-3931

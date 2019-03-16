@@ -1,5 +1,6 @@
 ---
 title: printstruct
+layout: default
 tags: 
 ---
 ```

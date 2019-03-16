@@ -13,16 +13,17 @@ Using sourcestatistics, you can perform a random-effect parametric or non-parame
 ## STEPS
 
 To use sLORETA data in FieldTrip, you need to do the following steps.
+
 ### Convert the sLORETA source to a text file
 
- 1.  In the LORETA program, you go to main utilities > Format converter.
- 2.  There you select: input binary file (sLORETA)
- 3.  It does not matter which format for output you choose, the code will figure it out. In the text file, rows are the time points, columns are the volume-gridpoints (called voxels).
- 4.  After using loreta2fieldtrip the data is in [FieldTrip volume](http://fieldtrip.fcdonders.nl/reference/ft_datatype_volume) format in [MNI space](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined?s[]=mni#details_of_the_mni_coordinate_system).
+1.  In the LORETA program, you go to main utilities > Format converter.
+2.  There you select: input binary file (sLORETA)
+3.  It does not matter which format for output you choose, the code will figure it out. In the text file, rows are the time points, columns are the volume-gridpoints (called voxels).
+4.  After using loreta2fieldtrip the data is in [FieldTrip volume](http://fieldtrip.fcdonders.nl/reference/ft_datatype_volume) format in [MNI space](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined?s[]=mni#details_of_the_mni_coordinate_system).
 
 ### Hints on plotting the LORETA source
 
-For use in **[ft_sourceplot](/reference/ft_sourceplot)** with method *"slice"* or *"ortho"* you can use the MNI template as anatomy
+For use in **[ft_sourceplot](/reference/ft_sourceplot)** with method _"slice"_ or _"ortho"_ you can use the MNI template as anatomy
 
     % Read in the MNI template from SP
     template = ft_read_mri([cur_path_FT, '\external\spm8\templates\T1.nii']);
@@ -30,6 +31,6 @@ For use in **[ft_sourceplot](/reference/ft_sourceplot)** with method *"slice"* o
     % Interpolate your LORETA volume on the MNI template:
     [interp_mean] = ft_sourceinterpolate(cfg, GA_mean, template);
 
-For method *"surface"* you don't need to interpolate. However, you have to use a large sphereradius (15 for instance) to pull the source to plot nicely on the surface.
+For method _"surface"_ you don't need to interpolate. However, you have to use a large sphereradius (15 for instance) to pull the source to plot nicely on the surface.
 
 Also see the [plotting tutorial](/tutorial/plotting#plotting#plotting_data_at_the_source_level).

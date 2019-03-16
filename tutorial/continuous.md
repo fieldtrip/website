@@ -17,12 +17,12 @@ Using this approach, you can read all data from the file into memory, apply filt
 
 The following steps are taken to read data, to apply filters and to reference the data (in case of EEG), and optionally to select interesting segments of data around events or triggers or by cutting the continuous data into convenient constant-length segments.
 
-*  read the data for the EEG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, apply a filter and re-reference to linked mastoids
-*  read the data for the horizontal and vertical EOG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, and compute the horizontal and vertical bipolar EOG derivations
-*  combine the EEG and EOG into a single data representation using **[ft_appenddata](/reference/ft_appenddata)**
-*  determine interesting pieces of data based on the trigger events using **[ft_definetrial](/reference/ft_definetrial)**
-*  segment the continuous data into trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**
-*  segment the continuous data into one-second pieces using   **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- read the data for the EEG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, apply a filter and re-reference to linked mastoids
+- read the data for the horizontal and vertical EOG channels using **[ft_preprocessing](/reference/ft_preprocessing)**, and compute the horizontal and vertical bipolar EOG derivations
+- combine the EEG and EOG into a single data representation using **[ft_appenddata](/reference/ft_appenddata)**
+- determine interesting pieces of data based on the trigger events using **[ft_definetrial](/reference/ft_definetrial)**
+- segment the continuous data into trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- segment the continuous data into one-second pieces using **[ft_redefinetrial](/reference/ft_redefinetrial)**
 
 ## The data set used in this tutorial
 
@@ -40,7 +40,7 @@ The simplest method for preprocessing and reading the data into memory is by cal
     cfg.dataset     = 'subj2.vhdr';
     data_eeg        = ft_preprocessing(cfg)
 
-    >> data_eeg                             
+    >> data_eeg
     data_eeg =
         hdr: [1x1 struct]
       label: {64x1 cell}
@@ -51,11 +51,11 @@ The simplest method for preprocessing and reading the data into memory is by cal
 
 This reads the data from file as one long continuous segment without any additional filtering. The resulting data is represented as one very long trial. To plot the potential in one of the channels, you can simply use the MATLAB plot function.
 
-	chansel  = 1;
-	plot(data_eeg.time{1}, data_eeg.trial{1}(chansel, :))
-	xlabel('time (s)')
-	ylabel('channel amplitude (uV)')
-	legend(data_eeg.label(chansel))
+    chansel  = 1;
+    plot(data_eeg.time{1}, data_eeg.trial{1}(chansel, :))
+    xlabel('time (s)')
+    ylabel('channel amplitude (uV)')
+    legend(data_eeg.label(chansel))
 
 ## Reading continuous MEG data into memory
 
@@ -77,14 +77,14 @@ If the data on disk is stored in a segmented or epoched format, i.e. where the f
 
 This segmented MEG data dataset contains 266 trials. The following example shows how you can plot the data in a subset of the trials.
 
-	for trialsel=1:10
-	  chansel = 1; % this is the STIM channel that contains the trigger
-	  figure
-	  plot(data_meg.time{trialsel}, data_meg.trial{trialsel}(chansel, :))
-	  xlabel('time (s)')
-	  ylabel('channel amplitude (a.u.)')
-	  title(sprintf('trial %d', trialsel));
-	end
+    for trialsel=1:10
+      chansel = 1; % this is the STIM channel that contains the trigger
+      figure
+      plot(data_meg.time{trialsel}, data_meg.trial{trialsel}(chansel, :))
+      xlabel('time (s)')
+      ylabel('channel amplitude (a.u.)')
+      title(sprintf('trial %d', trialsel));
+    end
 
 If you want to force epoched data to be interpreted as continuous data, you can use the cfg.continuous option, like this:
 
@@ -193,7 +193,7 @@ This will display the event types and values on screen.
     event type: 'New Segment' with event values:
     event type: 'Response' with event values: 'R  8'
     event type: 'Stimulus' with event values: 'S  1' 'S 12' 'S 13' 'S 21' 'S 27' 'S111'
-     'S112' 'S113' 'S121' 'S122' 'S123' 'S131' 'S132' 'S133' 'S141' 'S142' 'S143'  
+     'S112' 'S113' 'S121' 'S122' 'S123' 'S131' 'S132' 'S133' 'S141' 'S142' 'S143'
      'S151' 'S152' 'S153' 'S161' 'S162' 'S163' 'S171' 'S172' 'S173' 'S181' 'S182'
      'S183' 'S211' 'S212' 'S213' 'S221' 'S222' 'S223' 'S231' 'S232' 'S233' 'S241'
      'S242' 'S243'

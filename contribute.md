@@ -7,7 +7,7 @@ tags: [development]
 
 FieldTrip is an [Open Source](http://www.opensource.org) project with contributions from various individual users and research groups.
 
-There are various ways in which ***you can contribute*** to FieldTrip.
+There are various ways in which **_you can contribute_** to FieldTrip.
 
 ## Share your expertise
 

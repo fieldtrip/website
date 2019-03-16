@@ -59,22 +59,22 @@ Optionally, it might be useful to have a **finalize** method for all PEs, in whi
 We'd like the flexibility to compose pipelines in any order and with any number of elements, and then run the pipeline like this
 
 **init** phase
-    PE{1} = init X
-    PE{2} = init Y
-    ...
+PE{1} = init X
+PE{2} = init Y
+...
 
 **process** phase
-    tmp = PE{1}(input)
-    for k=2:N
-     tmp = PE{k}(tmp)
-    end
-    output = tmp;
+tmp = PE{1}(input)
+for k=2:N
+tmp = PE{k}(tmp)
+end
+output = tmp;
 
 In order to avoid a clash of fieldnames for the ''tmp'' structure passed from one PE to the next, output fields other than the data itself
 should be written to uniquely names subfields, e.g., the motion correction PE could write its output as
-    tmp_out.data = aligned_volume;
-    tmp_out.motion_correction.rotation;    % estimated rotation parameters
-    tmp_out.motion_correction.translation; % estimated translation parameters
+tmp_out.data = aligned_volume;
+tmp_out.motion_correction.rotation; % estimated rotation parameters
+tmp_out.motion_correction.translation; % estimated translation parameters
 
 We could add a pre-flight run similar to BCI2000 where each PE does some pseudo-processing and then writes its output fields,
 so that the pipeline can check itself for consistency: For example, the quality display PE needs to be placed behind the motion correction PE,
@@ -91,7 +91,7 @@ Each type of PE would get its own directory, e.g. @MotionCorrection, with separa
 
     MCPE{k} = MotionCorrection(refVolume, flags);
     ...
-    [MCPE{k}, tmp_out] = MCPE{k}.process(tmp_in);  
+    [MCPE{k}, tmp_out] = MCPE{k}.process(tmp_in);
 
 Here, out.data contains aligned scan, out.someFieldOrSubStruct contains motion estimates, and MCPE gets updated by copying.
 
@@ -103,7 +103,7 @@ Each type of PE would get one class definition file, containing all code. Invoki
     ...
     in.data = rawScan;
     ...
-    [MCPE, out] = MCPE.process(in);  
+    [MCPE, out] = MCPE.process(in);
 
 #### New style handle classes (call by reference)
 
@@ -130,13 +130,13 @@ set a function handle to the right function.
 ### Plain function table solution
 
 As long as we only have one **process** functions, we can also build a simple table like thi
-    PE{1} = motion_correction_init(refVolume, flags);
-    procFunc{1} = @motion_correction_process;
-    PE{2} = slice_time_corr_init(deltaT);
-    procFunc{2} = @slice_time_corr_process;
-    ...
-    for k=1:N
-     [PE{k}, tmp_out] = feval(procFunc{k}, PE{k}, tmp_in);
-    end
+PE{1} = motion_correction_init(refVolume, flags);
+procFunc{1} = @motion_correction_process;
+PE{2} = slice_time_corr_init(deltaT);
+procFunc{2} = @slice_time_corr_process;
+...
+for k=1:N
+[PE{k}, tmp_out] = feval(procFunc{k}, PE{k}, tmp_in);
+end
 
 If you like tables, please consider [brainstream](/development/realtime/brainstream).

@@ -10,7 +10,7 @@ Using FieldTrip it is possible to [monitor](/faq/how_can_i_monitor_a_subject_s_h
 {% include markup/warning %}
 Please cite this paper when you use the realtime head localizer in your research:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R.  **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
 The following documentation describes how to set up the interface between the [CTF](/development/realtime/ctf) or [Neuromag](/development/realtime/neuromag) system and FieldTrip. The recommended implementation uses two separate computers, one for the acquisition (i.e. the one provided by CTF / Neuromag) and another one for the visualization towards the experimenter and the subject. The second computer can be the presentation computer that is commonly available, or another computer.
@@ -25,11 +25,11 @@ The second (visualization / real-time analysis) computer runs MATLAB, reads the 
 
 ## Step by step description for the CTF acquisition computer
 
-1) Download and unzip fieldtrip
+1. Download and unzip fieldtrip
 
-2) Run in a linux termina
+2. Run in a linux termina
 
-    sudo echo 67596000 > /proc/sys/kernel/shmmax
+   sudo echo 67596000 > /proc/sys/kernel/shmmax
 
 This command increases the amount of shared memory that the software is allowed to use; the RHEL3 default of 32MB is not enough for the CTF software realtime interface. Note that you can restore the default setting with
 
@@ -37,37 +37,37 @@ This command increases the amount of shared memory that the software is allowed 
 
 or by rebooting the system. To make this change permanent, you can update the file /etc/sysctl.conf.
 
-3) Run in a linux termina
+3. Run in a linux termina
 
-    $HOME/fieldtrip/realtime/src/acquisition/ctf/acq2ftx
+   \$HOME/fieldtrip/realtime/src/acquisition/ctf/acq2ftx
 
-4) Start Acquisition. You should see some information being printed in the terminal that you used to start acq2ftx.
+4. Start Acquisition. You should see some information being printed in the terminal that you used to start acq2ftx.
 
 ## Step by step description for the Neuromag acquisition computer
 
-1) Download and unzip fieldtrip
+1. Download and unzip fieldtrip
 
-2) Run in a linux termina
+2. Run in a linux termina
 
-    $HOME/fieldtrip/realtime/src/acquisition/neuromag/neuromag2ft
+   \$HOME/fieldtrip/realtime/src/acquisition/neuromag/neuromag2ft
 
-3) Start Acquisition. You should see some information being printed in the terminal that you used to start neuromag2ftx.
+3. Start Acquisition. You should see some information being printed in the terminal that you used to start neuromag2ftx.
 
 ## Step by step description for the visualization computer
 
-1) Download and unzip fieldtrip
+1. Download and unzip fieldtrip
 
-2) Start MATLAB and make sure the online_meg directory is added to pat
+2. Start MATLAB and make sure the online_meg directory is added to pat
 
-    addpath ~/fieldtrip
-    addpath ~/fieldtrip/realtime/online_meg
-    ft_defaults
+   addpath ~/fieldtrip
+   addpath ~/fieldtrip/realtime/online_meg
+   ft_defaults
 
-3) Type in the MATLAB command windo
+3. Type in the MATLAB command windo
 
-    cfg = [];
-    cfg.dataset = 'buffer://hostname:1972';
-    ft_realtime_headlocalizer(cfg)
+   cfg = [];
+   cfg.dataset = 'buffer://hostname:1972';
+   ft_realtime_headlocalizer(cfg)
 
 The hostname address should points to the location where the buffer is run - i.e. the CTF / Neuromag acquisition computer. You should now see the real-time head location being visualized. You can also explore **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** or the other [realtime examples](/getting_started/realtime).
 

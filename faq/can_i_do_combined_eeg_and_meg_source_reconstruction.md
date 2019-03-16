@@ -9,4 +9,4 @@ In principle the answer is "yes". However, it is sofar only supported by the low
 
 [Here](/example/combined_eeg_and_meg_source_reconstruction) is an example that demonstrates how forward computations can be done. Inverse source reconstructions using the low-level code should work similar, i.e. by combining the eeg and meg sensor definitions and volume conduction models into a cell array.
 
-Note that the same approach can also be used for combined EEG and invasive EEG, or combined MEG and invasive EEG, or any other data fusion. Furthermore note that the combination of volume conduction models can  contain more realistically and accurate forward models than those used below.  
+Note that the same approach can also be used for combined EEG and invasive EEG, or combined MEG and invasive EEG, or any other data fusion. Furthermore note that the combination of volume conduction models can contain more realistically and accurate forward models than those used below.

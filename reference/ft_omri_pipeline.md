@@ -1,5 +1,6 @@
 ---
 title: ft_omri_pipeline
+layout: default
 tags: 
 ---
 ```

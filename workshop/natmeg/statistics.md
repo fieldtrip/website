@@ -8,7 +8,7 @@ tags: [tutorial, natmeg, meg+eeg, statistics]
 ## Introduction
 
 The objective of this tutorial is to give an introduction to the statistical analysis of MEG data using different methods to control for the false alarm rate. The tutorial starts with sketching
- the background of cluster-based permutation tests. Subsequently it is shown how to use FieldTrip to perform statistical analysis (including cluster-based permutation tests) on the time-frequency response to a movement, and to the auditory mismatch negativity. The tutorial makes use of a between-trials (within-subject) design.
+the background of cluster-based permutation tests. Subsequently it is shown how to use FieldTrip to perform statistical analysis (including cluster-based permutation tests) on the time-frequency response to a movement, and to the auditory mismatch negativity. The tutorial makes use of a between-trials (within-subject) design.
 
 In this tutorial we will continue working on the dataset described in the [Preprocessing and event-related activity](/workshop/natmeg/preprocessing) and the [Time-frequency analysis of MEG and EEG](/workshop/natmeg/timefrequency) tutorials. We will repeat some code here to select the trials and preprocess the data. We assume that the preprocessingand the computation of the ERFs/TFRs are already clear to the reader.
 
@@ -24,9 +24,9 @@ This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/
 
 The topic of this tutorial is the statistical analysis of multi-channel MEG data. In cognitive experiments, the data is usually collected in different experimental conditions, and the experimenter wants to know whether there is a difference in the data observed in these conditions. In statistics, a result (for example, a difference among conditions) is statistically significant if it is unlikely to have occurred by chance according to a predetermined threshold probability, the significance level.
 
-An important feature of the MEG and EEG data is that it has a spatial temporal structure, i.e. the data is sampled at multiple time-points and sensors. The nature of the data influences which kind of statistics is the most suitable for comparing conditions. If the experimenter is interested in a difference in the signal at a certain time-point and sensor, then the more widely used parametric tests are also sufficient. If it is not possible to predict where the differences are, then many statistical comparisons are necessary which lead to the *multiple comparisons problem* (MCP). The MCP arises from the fact that the effect of interest (i.e., a difference between experimental conditions) is evaluated at an extremely large number of (channel,time)-pairs. This number is usually in the order of several thousands. Now, the MCP involves that, due to the large number of statistical comparisons (one per (channel,time)-pair), it is not possible to control the so called *family-wise error rate* (FWER) by means of the standard statistical procedures that operate at the level of single (channel,time)-pairs. The FWER is the probability, under the hypothesis of no effect, of falsely concluding that there is a difference between the experimental conditions at one or more (channel,time)-pairs. A solution of the MCP requires a procedure that controls the FWER at some critical alpha-level (typically, 0.05 or 0.01). The FWER is also called the *false alarm rate*.
+An important feature of the MEG and EEG data is that it has a spatial temporal structure, i.e. the data is sampled at multiple time-points and sensors. The nature of the data influences which kind of statistics is the most suitable for comparing conditions. If the experimenter is interested in a difference in the signal at a certain time-point and sensor, then the more widely used parametric tests are also sufficient. If it is not possible to predict where the differences are, then many statistical comparisons are necessary which lead to the _multiple comparisons problem_ (MCP). The MCP arises from the fact that the effect of interest (i.e., a difference between experimental conditions) is evaluated at an extremely large number of (channel,time)-pairs. This number is usually in the order of several thousands. Now, the MCP involves that, due to the large number of statistical comparisons (one per (channel,time)-pair), it is not possible to control the so called _family-wise error rate_ (FWER) by means of the standard statistical procedures that operate at the level of single (channel,time)-pairs. The FWER is the probability, under the hypothesis of no effect, of falsely concluding that there is a difference between the experimental conditions at one or more (channel,time)-pairs. A solution of the MCP requires a procedure that controls the FWER at some critical alpha-level (typically, 0.05 or 0.01). The FWER is also called the _false alarm rate_.
 
-When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting *n* number of statistical tests then each of the individual tests should be tested under a significance level that is divided by *n*. The Bonferroni correction was derived from the observation that if *n* tests are performed with an *alpha* significance level then the probability that one comes out significantly is =< *n**//alpha// (Boole's inequality). In order to keep this probability lower, we can use an *alpha* that is divided by *n* for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.   
+When parametric statistics are used, one method that addresses this problem is the so-called Bonferroni correction. The idea is if the experimenter is conducting _n_ number of statistical tests then each of the individual tests should be tested under a significance level that is divided by _n_. The Bonferroni correction was derived from the observation that if _n_ tests are performed with an _alpha_ significance level then the probability that one comes out significantly is smaller than or equal to _n_ times _alpha_ (Boole's inequality). In order to keep this probability lower, we can use an _alpha_ that is divided by _n_ for each test. However, the correction comes at the cost of increasing the probability of false negatives, i.e. the test does not have enough power to reveal differences among conditions.
 
 In constrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
@@ -35,6 +35,7 @@ In constrast to the familiar parametric statistical framework, it is straightfor
 The preprocessing and time-frequency computation is similar to how it is done in the previous tutorials, and hence not explained in further detail.
 
 The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
+
 ### Preprocessing the response-locked data
 
     cfg = [];
@@ -101,7 +102,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
 
 ### Single-trial time-frequency responses
 
-To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is ‘no’. Since we compute the TFR for each individual trial, we don’t have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in teh *trialinfo* field.
+To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is ‘no’. Since we compute the TFR for each individual trial, we don’t have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in teh _trialinfo_ field.
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -143,8 +144,8 @@ Let us compare the single-trial TFR with the averaged TFR.
 Use the MATLAB [boxplot](http://www.mathworks.se/help/stats/boxplot.html) function to plot the power in channel 'MEG0431' at 18 Hz and around 700 ms following movement offset.
 
 Hint: you can make a selection of the data like
-    TFR_all.powspctrm(:, 15, 4, 8)
-to give you a  vector with the power values in each trial, and you can use the *trialinfo* as the grouping variable.
+TFR_all.powspctrm(:, 15, 4, 8)
+to give you a vector with the power values in each trial, and you can use the _trialinfo_ as the grouping variable.
 {% include markup/end %}
 
 ### Log-transform the single-trial power
@@ -172,7 +173,7 @@ With time-frequency data we have three dimensions in which we can form clusters.
           label: 'MEG0111'
     neighblabel: {3x1 cell}
 
-The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as //[]//, i.e. empty.
+The neighbourhood structure contains for each channel a list of other channels that are considered its neighbours. In case you do **not** want to cluster over channels, you can specify the neighbours as '[]', i.e. empty.
 
 {% include image src="/assets/img/workshop/natmeg/statistics/natmeg_stat_neighbours.png" width="500" %}
 
@@ -191,7 +192,7 @@ The neighbourhood structure contains for each channel a list of other channels t
     cfg.correctm  = 'no';
     TFR_stat1     = ft_freqstatistics(cfg, TFR_logpow);
 
-The result of **[ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a *dimord* field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[ft_singleplotTFR](/reference/ft_singleplotTFR)** or **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
+The result of **[ft_freqstatistics](/reference/ft_freqstatistics)** is a structure that is organized just like most other FieldTrip structures, i.e. it has a _dimord_ field which explains how the data contained in the structure can be interpreted. This also means that the statistical output can be visualized like any other FieldTrip structure, in this case with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, **[ft_singleplotTFR](/reference/ft_singleplotTFR)** or **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
     disp(TFR_stat1)
 
@@ -224,7 +225,7 @@ Having computed the probability without correcting for multiple comparisons, we 
 
 ### Visualise the results
 
-We can visualize the results just like any other TFR structure. The *TFR_stat* structures contain the actual statistical value that was computed (i.e. the t-value) in the *stat* field.  
+We can visualize the results just like any other TFR structure. The _TFR_stat_ structures contain the actual statistical value that was computed (i.e. the t-value) in the _stat_ field.
 
     cfg               = [];
     cfg.marker        = 'on';
@@ -268,7 +269,7 @@ The following requires that the custom trial function [trialfun_oddball_stimlock
 
     data_stimlocked = ft_preprocessing(cfg);
 
-The oddball effect is rather strong, and with 600 trials (500 standards and 100 oddballs) it would be  trivial to find a significant effect. To make the procedure slightly more interesting and informative, we will make a subselection by taking the first 100 trials.
+The oddball effect is rather strong, and with 600 trials (500 standards and 100 oddballs) it would be trivial to find a significant effect. To make the procedure slightly more interesting and informative, we will make a subselection by taking the first 100 trials.
 
     cfg                 = [];
     cfg.trials          = 1:100;
@@ -276,7 +277,7 @@ The oddball effect is rather strong, and with 600 trials (500 standards and 100 
 
 After this subselection, there are 84 standard trials and only 16 deviant trials remaining.
 
-We can compute the ERFs for the two experimental conditions by selecting the standard (1) and deviant (2) trigger codes in the *trialinfo* field.
+We can compute the ERFs for the two experimental conditions by selecting the standard (1) and deviant (2) trigger codes in the _trialinfo_ field.
 
     cfg         = [];
     cfg.trials  = find(data_stimlocked.trialinfo(:,1) == 1);
@@ -292,6 +293,7 @@ The **[ft_selectdata](/reference/ft_selectdata)** function is a very handy gener
     cfg.latency = [0.08 0.11];
     cfg.avgovertime = 'yes';
     ERF_peak =  ft_selectdata(cfg, ERF_std)
+
 {% include markup/end %}
 
     cfg        = [];
@@ -301,7 +303,6 @@ The **[ft_selectdata](/reference/ft_selectdata)** function is a very handy gener
 {% include image src="/assets/img/workshop/natmeg/statistics/natmeg_stat_erf.png" width="500" %}
 
 To assess whether there is a significant difference between the two conditions, we also need to know what the variance in the data is. In principle we could use the variance that is estimated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and manualy compute the [t-test](http://en.wikipedia.org/wiki/Student%27s_t-test).
-
 
     disp(ERF_std)
 
@@ -335,9 +336,9 @@ However, we will leave the statistical evaluation to the **[ft_timelockstatistic
     trialinfo: [100x3 double]
           cfg: [1x1 struct]
 
-Note that the dimord is *rpt_chan_time*, i.e. trials by channels by time, which matches with the size of the ERF_all.trial array.
+Note that the dimord is _rpt_chan_time_, i.e. trials by channels by time, which matches with the size of the ERF_all.trial array.
 
-We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The *cfg.design* field specifies the condition in which each of the trials is observed. For the *indepsamplesT* statistic, it should contain 1’s and 2’s.
+We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1’s and 2’s.
 
     cfg           = [];
     cfg.statistic = 'indepsamplesT';
@@ -364,6 +365,7 @@ We proceed by computing the statistical tets, which returns the t-value, the pro
     cfg.numrandomization  = 500; % 1000 is recommended, but that takes longer
     cfg.neighbours        = neighbours;
     ERF_stat4     = ft_timelockstatistics(cfg, ERF_all);
+
 ### Visualise the results
 
 Again we can visualize the results of the statistical comparison. Since we have simple ERF data in two conditions, we can plot the original ERFs in combination with the statistical significance. The **[ft_multiplotER](/reference/ft_multiplotER)** function has a number of options for highlighting the data that is significant. These are specified using the cfg.maskstyle parameter.

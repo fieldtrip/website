@@ -7,10 +7,10 @@ tags: [faq, mri, coordinate]
 
 There are a number of coordinate systems that have the origin, i.e., the [0,0,0] point, at the Anterior Commissure and that have a RAS orientation (i.e. the x-axis pointing to the right, the y-axis pointing to anterior, the z-axis pointing to superior).
 
-*  ACPC is used if the geometry is according to the individual subject head/brain size.
-*  TAL is used if the geometry is piecewise scaled to match the Talairach-Tournoux (1988) atlas.
-*  MNI or SPM is used if the geometry is spatially warped to the MNI152 template brain.
-*  MNI305 or FSAVERAGE is used if the geometry is spatially warped to the MNI305 template brain.
+- ACPC is used if the geometry is according to the individual subject head/brain size.
+- TAL is used if the geometry is piecewise scaled to match the Talairach-Tournoux (1988) atlas.
+- MNI or SPM is used if the geometry is spatially warped to the MNI152 template brain.
+- MNI305 or FSAVERAGE is used if the geometry is spatially warped to the MNI305 template brain.
 
 In all cases the origin is at the [Anterior Commissure](http://en.wikipedia.org/wiki/Anterior_commissure) and the negative y-axis is passing through the [Posterior Commissure](http://en.wikipedia.org/wiki/Posterior_commissure).
 

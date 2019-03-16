@@ -9,7 +9,7 @@ Yes, if you have the MATLAB [compiler toolbox](https://www.mathworks.com/product
 
     ft_compile_standalone
 
-Subsequently you can run your analysis pipelines by providing them as script (not as a function) using the **fieldtrip.sh** Bash wrapper script (only provided for Linux and macOS). The compiled application and startup script can be found in the *fieldtrip/bin* directory
+Subsequently you can run your analysis pipelines by providing them as script (not as a function) using the **fieldtrip.sh** Bash wrapper script (only provided for Linux and macOS). The compiled application and startup script can be found in the _fieldtrip/bin_ directory
 
 If you make a script like the following
 

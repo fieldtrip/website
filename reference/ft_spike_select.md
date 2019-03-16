@@ -1,5 +1,6 @@
 ---
 title: ft_spike_select
+layout: default
 tags: 
 ---
 ```

@@ -9,5 +9,5 @@ Yes, it is if you want your source reconstruction to be as accurate as possible.
 
 ## See also
 
-*  Wang Y, Gotman J. *The influence of electrode location errors on EEG dipole source localization with a realistic head model.* Clin Neurophysiol. 2001 Sep;112(9):1777-80.
-*  Khosla D, Don M, Kwong B. *Spatial mislocalization of EEG electrodes -- effects on accuracy of dipole estimation.* Clin Neurophysiol. 1999 Feb;110(2):261-71.
+- Wang Y, Gotman J. _The influence of electrode location errors on EEG dipole source localization with a realistic head model._ Clin Neurophysiol. 2001 Sep;112(9):1777-80.
+- Khosla D, Don M, Kwong B. _Spatial mislocalization of EEG electrodes -- effects on accuracy of dipole estimation._ Clin Neurophysiol. 1999 Feb;110(2):261-71.

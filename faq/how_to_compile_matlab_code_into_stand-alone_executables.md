@@ -9,9 +9,9 @@ Using **[qsubcellfun](/reference/qsubcellfun)** and/or **[qsubcompile](/referenc
 
 When compiling your qsub jobs, or when compiling MATLAB code in general, you might run into some issues that have to do with the compile process. This page tries to list the problems that you might expect and the solutions.
 
-##  Using addpath in your startup 
+## Using addpath in your startup
 
-The compiled application includes all code that it requires to run and cannot incorporate MATLAB functions or scripts that were not compiled into the application.  Consequently, you cannot use the addpath MATLAB command to extend the search path.
+The compiled application includes all code that it requires to run and cannot incorporate MATLAB functions or scripts that were not compiled into the application. Consequently, you cannot use the addpath MATLAB command to extend the search path.
 
 A common use is to have a "startup.m" script in which the path is set. If present, your startup.m will be compiled into your application. The "isdeployed" MATLAB command can be used to exclude a part (or the complete) startup.m from being executed within your compiled application. So instead of
 

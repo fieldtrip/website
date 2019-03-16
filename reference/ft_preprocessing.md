@@ -1,5 +1,6 @@
 ---
 title: ft_preprocessing
+layout: default
 tags: 
 ---
 ```

@@ -17,12 +17,13 @@ The experimental design is displayed in the figure below.
 {% include image
 src="/assets/img/workshop/madrid2019/datasets/chennu_fig1.PNG" width="600" %}
 
-*Figure 1. Experimental manipulation and measurement of behaviour and
-propofol concentration in blood plasma.*
+_Figure 1. Experimental manipulation and measurement of behaviour and
+propofol concentration in blood plasma._
 
 Briefly, participants remained with the eyes closed while the EEG were
 acquired during periods around ~7 minutes. They recorded 4 experimental
 conditions:
+
 1. Baseline
 2. Bild sedation
 3. Moderate sedation

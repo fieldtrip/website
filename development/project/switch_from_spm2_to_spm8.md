@@ -20,9 +20,9 @@ It would be nice to get rid of the spm2 dependency and switch to spm8 instead. T
     private/volumewrite_spm.m
     fileio/ft_read_mri.m
     fileio/read_mri.m
-    
+
 -ft_volumeXXX have been adjusted to work with spm8 as default. One can switch back to spm2 by setting cfg.spmversion = 'spm2'.
- 
+
 -avw_img_read.m only refers to spm_flip_analyze_images in the documentation, so no changes here.
 
 -mni2tal.m and tal2mni.m added hastoolbox('SPM8',1), these call spm_matrix; the spm version is anyhow inconsequential here.
@@ -34,5 +34,3 @@ It would be nice to get rid of the spm2 dependency and switch to spm8 instead. T
 -ft_read_mri.m works
 
 -read_mri.m seems to be the old version of what is now known as ft_read_mri.
-
-    

@@ -11,7 +11,7 @@ Conventionally you would do the inference over the single subject between-condit
 
 Some notes:
 
- 1.  also in conventional statistics you do it in two steps: the first being the computation of the difference in a measure of central tendency (the mean), the second being the inference based on the between-subject consistency of these difference scores. The first step in conventional statistics (the computation of the mean) is often not recognized as such.
- 2.  if you have different numbers of trials between subjects, it is better to carry z-scores to the second level. You can convert t- to z-scores.
- 3.  instead of taking conventional t-scores to start with, you can use a Winsorized estimate of the mean and standard deviation to compute the t-scores at the first level. That makes them more rubust for outliers (common in EEG).
- 4.  quite often beta values estimated with a GLM are used as the statistic to be carried on to the second level. This allows you to explain part of the uninteresting variance in the data with confound-regressors.  
+1.  also in conventional statistics you do it in two steps: the first being the computation of the difference in a measure of central tendency (the mean), the second being the inference based on the between-subject consistency of these difference scores. The first step in conventional statistics (the computation of the mean) is often not recognized as such.
+2.  if you have different numbers of trials between subjects, it is better to carry z-scores to the second level. You can convert t- to z-scores.
+3.  instead of taking conventional t-scores to start with, you can use a Winsorized estimate of the mean and standard deviation to compute the t-scores at the first level. That makes them more rubust for outliers (common in EEG).
+4.  quite often beta values estimated with a GLM are used as the statistic to be carried on to the second level. This allows you to explain part of the uninteresting variance in the data with confound-regressors.

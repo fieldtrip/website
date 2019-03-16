@@ -4,7 +4,7 @@ tags: [faq, headmodel, source]
 ---
 
 {% include markup/danger %}
-This documentation is outdated, the latest version is available from http://openmeeg.github.io.
+This documentation is outdated, the latest version is available from <http://openmeeg.github.io>.
 {% include markup/end %}
 
 # How can I use OpenMEEG for forward modeling?
@@ -20,46 +20,43 @@ The OpenMEEG binaries are **not** included in the FieldTrip release, but the Ope
 OpenMEEG is available on Linux, Mac OS X and Windows.
 A 64bit machine is preferred due to the computational load of M/EEG forward modeling using the BEM.
 
-OpenMEEG can be downloaded fro
-
-https://gforge.inria.fr/frs/?group_id=435
+OpenMEEG can be downloaded from <https://gforge.inria.fr/frs/?group_id=435>.
 
 Installation procedure:
 
 ### For Linux
 
-    * check your local version of gcc compiler (type 'gcc -v' in a terminal).
+- check your local version of gcc compiler (type 'gcc -v' in a terminal).
 
-    $ gcc -v
-    gcc version 4.3.2 (GCC)
+  \$ gcc -v
+  gcc version 4.3.2 (GCC)
 
-    * If your version of gcc is superior to 4.2 download OpenMEEG for gcc 4. Otherwise download OpenMEEG for gcc 3. The OpenMEEG version for gcc 4 provides support of OpenMP for parallel and faster computation.
+- If your version of gcc is superior to 4.2 download OpenMEEG for gcc 4. Otherwise download OpenMEEG for gcc 3. The OpenMEEG version for gcc 4 provides support of OpenMP for parallel and faster computation.
 
 #### Install from the tar.gz file
 
-       * untar the .tar file
-       * Set the PATH environment variable in the appropriate .rc configuration file (e.g. .bashrc or .bash_profile)
-       * Example (for a Bash shell): export PATH=$PATH:openmeeg_folder/bin
-       * Set the LIB environment variable
-       * Example (for a Bash shell): export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:openmeeg_folder/lib
+- untar the .tar file
+- Set the PATH environment variable in the appropriate .rc configuration file (e.g. .bashrc or .bash_profile)
+- Example (for a Bash shell): export PATH=\$PATH:openmeeg_folder/bin
+- Set the LIB environment variable
+- Example (for a Bash shell): export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:openmeeg_folder/lib
 
 #### Install from the RPM
 
-*  open the RPM file with 'rpm' from command line in Linux or with an alternative front-end program (e.g. 'up2date' (CentOS) or 'yum' for Fedora/Red Hat)
+- open the RPM file with 'rpm' from command line in Linux or with an alternative front-end program (e.g. 'up2date' (CentOS) or 'yum' for Fedora/Red Hat)
 
-    $ rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
-
+  \$ rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
 
 ### For Windows
 
-    * Run the installer
-    * Choose to agree the license terms
-    * Select option to add OpenMEEG to the Windows path
+- Run the installer
+- Choose to agree the license terms
+- Select option to add OpenMEEG to the Windows path
 
 ### For Mac OS X
 
-    * Run the installer
-    * Choose to agree the license terms
+- Run the installer
+- Choose to agree the license terms
 
 ### From source
 
@@ -96,4 +93,4 @@ Some of the pre-compiled packages could have issues running on a particular Linu
 
 If you still meet any difficulty do not hesitate to contact the OpenMEEG team: openmeeg-info@lists.gforge.inria.fr
 
-Remember that OpenMEEG is Open Source but if you publish results using OpenMEEG you should cite the necessary related papers. More infos can be found a http://openmeeg.gforge.inria.fr
+Remember that OpenMEEG is Open Source but if you publish results using OpenMEEG you should cite the necessary related papers. More infos can be found a <http://openmeeg.gforge.inria.fr>.

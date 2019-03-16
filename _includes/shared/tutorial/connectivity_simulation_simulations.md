@@ -1,9 +1,9 @@
 We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.
 The model we are going to use to simulate the data is as follow
 
-  x(t) = 0.8_x(t-1) - 0.5_x(t-2)
-  y(t) = 0.9_y(t-1) + 0.5_z(t-1) - 0.8\*y(t-2)
-  z(t) = 0.5_z(t-1) + 0.4_x(t-1) - 0.2\*z(t-2)
+    x(t) = 0.8_x(t-1) - 0.5_x(t-2)
+    y(t) = 0.9_y(t-1) + 0.5_z(t-1) - 0.8\*y(t-2)
+    z(t) = 0.5_z(t-1) + 0.4_x(t-1) - 0.2\*z(t-2)
 
     cfg             = [];
     cfg.ntrials     = 500;
@@ -151,7 +151,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
 #### Exercise 2
 
 {% include markup/info %}
-Compute the granger output using instead the 'freq' data structure.  Plot them side-by-side using ft_connectivityplot.
+Compute the granger output using instead the 'freq' data structure. Plot them side-by-side using ft_connectivityplot.
 {% include markup/end %}
 
 Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivityplot)**, you can use the following low-level Matlab plotting code which gives a better understanding of the numerical representation of the results.

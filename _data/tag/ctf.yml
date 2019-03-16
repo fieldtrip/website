@@ -4,7 +4,7 @@
 - name:  CTF
   link:  /development/realtime/ctf
 
-- name:  Fixing a missing sensor
+- name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign

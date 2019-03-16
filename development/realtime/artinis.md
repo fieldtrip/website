@@ -7,7 +7,7 @@ tags: [realtime, artinis]
 
 ## Introduction
 
-Artinis Medical Systems is a Dutch company manufacturing wired and wireless  NIRS devices for clinical and research purposes. Artinis is an independent manufacturer, allowing them to design NIRS products for specific customer purposes. Their multichannel NIRS devices are highly modular, allowing cumulative upgrading.
+Artinis Medical Systems is a Dutch company manufacturing wired and wireless NIRS devices for clinical and research purposes. Artinis is an independent manufacturer, allowing them to design NIRS products for specific customer purposes. Their multichannel NIRS devices are highly modular, allowing cumulative upgrading.
 
 {% include image src="/assets/img/development/realtime/artinis/Single_Oxymon.png" %}
 

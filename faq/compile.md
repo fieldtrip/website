@@ -3,7 +3,7 @@ title: How can I compile the mex files and command-line executables ?
 tags: [faq, mex, compile]
 ---
 
-#  How can I compile the mex files and command-line executables ?
+# How can I compile the mex files and command-line executables ?
 
 We try to provide FieldTrip with all the mex files compiled for the most common platforms. However, sometimes specific MATLAB versions and/or specific operating systems require that you (re)compile the mex files. FieldTrip also includes a number of (command-line) executable programs. These are also provided in a compiled form that allows you to use them directly. Sometimes it is also required to recompile those. This FAQ describes the compilation procedure for the various components.
 
@@ -33,7 +33,7 @@ Some of the simple mex files come with a corresponding m-file that automatically
 
 ## Config object
 
-The config object is used by ft_checkconfig to keep track of cfg options that are used and changed. By default this is *not* enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do
+The config object is used by ft_checkconfig to keep track of cfg options that are used and changed. By default this is _not_ enabled. The cfg-tracking is implemented with a number of mex files. To compile these, do
 
     cd @config/private
     compile
@@ -93,32 +93,32 @@ If you want to compile a 32 bit version on a 64 bit platform, e.g. if you are us
     # override the architecture defaults
     CFLAGS += -arch i386
 
-##  Stand-alone executables in realtime directory
+## Stand-alone executables in realtime directory
 
-We generally only provide a ''Makefile'' for the GNU toolchain. This should be enough to compile the code using GCC on Linux/Mac OS X and using MinGW and Cygwin on Windows. Please note that not all tools will compile on all platforms, and that you might need additional libraries or vendor-specific SDKs which we can't distribute (e.g., you can only compile the [emotiv2ft](/development/realtime/Emotiv) application on Windows, and you need the Emotiv EDK).
+We generally only provide a ''Makefile'' for the GNU toolchain. This should be enough to compile the code using GCC on Linux/Mac OS X and using MinGW and Cygwin on Windows. Please note that not all tools will compile on all platforms, and that you might need additional libraries or vendor-specific SDKs which we can't distribute (e.g., you can only compile the [emotiv2ft](/development/realtime/emotiv) application on Windows, and you need the Emotiv EDK).
 
-##  Fixing MEX-compilation with 32-bit variants of MATLAB running under 64-bit Linux
+## Fixing MEX-compilation with 32-bit variants of MATLAB running under 64-bit Linux
 
 In this situation you could encounter errors like the followin
 
-	(...)
+(...)
 
-	Compiling tprod for first use
+    Compiling tprod for first use
 
-	/usr/bin/ld: skipping
+/usr/bin/ld: skipping
 
-	incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.so when searching for -lstdc++ /usr/bin/ld: skipping
+    incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.so when searching for -lstdc++ /usr/bin/ld: skipping
 
-	incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.a when searching for -lstdc++ /usr/bin/ld: skipping
+    incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.a when searching for -lstdc++ /usr/bin/ld: skipping
 
-	incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.so when searching for -lstdc++ /usr/bin/ld: skipping
+    incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.so when searching for -lstdc++ /usr/bin/ld: skipping
 
-	incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.a when searching for -lstdc++ /usr/bin/l
-	  cannot find -lstdc++ collect2: ld returned 1 exit status
+    incompatible /usr/lib/gcc/x86_64-linux-gnu/4.3.5/libstdc++.a when searching for -lstdc++ /usr/bin/l
+    cannot find -lstdc++ collect2: ld returned 1 exit status
 
-	mex: link of ' "tprod.mexglx"' failed.
+    mex: link of ' "tprod.mexglx"' failed.
 
-	??? Error using ==> tprod at 132 unable to compile MEX version of '/mnt/data/FieldTrip/bin/fieldtrip-read-only/multivariate/external/farquhar/tprod/tprod', please make sure your MEX compiler is set up correctly (try 'mex -setup')."
+??? Error using ==> tprod at 132 unable to compile MEX version of '/mnt/data/FieldTrip/bin/fieldtrip-read-only/multivariate/external/farquhar/tprod/tprod', please make sure your MEX compiler is set up correctly (try 'mex -setup')."
 
 ### Problem
 
@@ -126,20 +126,20 @@ This error is caused by the unrobust MATLAB design. The problem is that even whe
 
 ### Solution for Ubuntu Linux (10.10)
 
-*  Install the package "ia32-libs", for example with the easy-to-use *Synaptic Package Manager*.
+- Install the package "ia32-libs", for example with the easy-to-use _Synaptic Package Manager_.
 
-*  Let ''__MATLABROOT__'' stand for the directory where your MATLAB is installed. In the file   ''__MATLABROOT__/bin/mexopts.sh'' change the line:
-'' CLIBS="$CLIBS -lstdc++" ''
+- Let ''**MATLABROOT**'' stand for the directory where your MATLAB is installed. In the file ''**MATLABROOT**/bin/mexopts.sh'' change the line:
+  '' CLIBS="$CLIBS -lstdc++" ''
 to:
-'' CLIBS="$CLIBS -L__MATLABROOT__/sys/os/glnx86 -lstdc++" ''
+'' CLIBS="$CLIBS -L**MATLABROOT**/sys/os/glnx86 -lstdc++" ''
 
-*  Now make a *symbolic link* so that the *linker* can find the *C++ standard library*, for example in the following way.
-    * Press CTRL-ALT-T on your keyboard to open a terminal window.
-    * In that terminal window type a command of this form:
-''ln -s __MATLABROOT__/sys/os/glnx86/libstdc++.so.6 __MATLABROOT__/sys/os/glnx86/libstdc++.so''.
+- Now make a _symbolic link_ so that the _linker_ can find the _C++ standard library_, for example in the following way.
+  _ Press CTRL-ALT-T on your keyboard to open a terminal window.
+  _ In that terminal window type a command of this form:
+  ''ln -s **MATLABROOT**/sys/os/glnx86/libstdc++.so.6 **MATLABROOT**/sys/os/glnx86/libstdc++.so''.
 
-*  Start MATLAB again, and be sure to explicity specify the architecture to MATLAB.
- * If this solution is inadequate or fails for you, have a look at more extensive approaches presented in the original sources for this solution.
+- Start MATLAB again, and be sure to explicity specify the architecture to MATLAB.
+- If this solution is inadequate or fails for you, have a look at more extensive approaches presented in the original sources for this solution.
 
 ### Source references
 

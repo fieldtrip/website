@@ -13,7 +13,7 @@ Besides the potentially identifying data in the header of the DICOM file, the fa
 The remainder of this FAQ is only about the metadata in the header, not about [defacing](/faq/how_can_i_anonymize_an_anatomical_mri) or about imposing legal restrictions to prevent matching data against external databases.
 {% include markup/end %}
 
-Since it is not easy to determine if there is potentially identifying data in the DICOM headers, many researchers choose to share the data in NIfTI format rather than DICOM format. The NIfTI format is used by most neuroimaging software anyway, and the NIfTI header is very simple and does not allow to store any identifying information. However, there are also situations where it is desired to share the original DICOM files.  
+Since it is not easy to determine if there is potentially identifying data in the DICOM headers, many researchers choose to share the data in NIfTI format rather than DICOM format. The NIfTI format is used by most neuroimaging software anyway, and the NIfTI header is very simple and does not allow to store any identifying information. However, there are also situations where it is desired to share the original DICOM files.
 
 ## Using MATLAB
 
@@ -29,7 +29,7 @@ to remove all confidential metadata from the DICOM header.
 
 ## Using Horos
 
-[Horos](https://www.horosproject.org) is a free DICOM image file viewer for Mac OS X. You can use it to view your image files and explore the metadata in the header. It works by importing all DICOM files and organizing it in its own internal database.  It has an "anonymize" option which allows you to remove/replace the values in specific fields.
+[Horos](https://www.horosproject.org) is a free DICOM image file viewer for Mac OS X. You can use it to view your image files and explore the metadata in the header. It works by importing all DICOM files and organizing it in its own internal database. It has an "anonymize" option which allows you to remove/replace the values in specific fields.
 
 The default behavior of the anonymize option is that only the metadata in own internal database is anonymized; if you want the DICOM files to be anonymized on disk, you should use the export option to write the data back to disk. To be sure that the data on disk is anonymized, I recommend importing it a second time to check the metadata.
 

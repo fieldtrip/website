@@ -9,7 +9,7 @@ This page is part of the documentation series of the FieldTrip buffer for realti
 
 1.  description and general [overview of the buffer](/development/realtime/buffer_overview),
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
-3.  the [reference implementation](/development/realtime/reference_implementation ), and
+3.  the [reference implementation](/development/realtime/reference_implementation), and
 4.  specific [implementations](/development/realtime/implementation) that interface with acquisition software, or software platforms.
 5.  the [getting started](/getting_started/realtime) documentation which takes you through the first steps of real-time data streaming and analysis in MATLAB
 
@@ -24,8 +24,9 @@ The FieldTrip buffer source code is available from <ftp://ftp.fieldtriptoolbox.o
 The FieldTrip buffer source code is licensed under both the GNU General Public
 License (GPL) and the Berkeley Software Distribution License (BSD).
 You can choose the license that has the most advantages for yo
- 1.  Use the [BSD License](http://www.opensource.org/licenses/bsd-license.php) to use the FieldTrip buffer commercially or
- 2.  Use the [GNU General Public License](http://www.opensource.org/licenses/gpl-2.0.php) to use the FieldTrip buffer into your open source project.
+
+1.  Use the [BSD License](http://www.opensource.org/licenses/bsd-license.php) to use the FieldTrip buffer commercially or
+2.  Use the [GNU General Public License](http://www.opensource.org/licenses/gpl-2.0.php) to use the FieldTrip buffer into your open source project.
 
 A plain-text version of the GNU General Public License is included with the
 FieldTrip buffer source code release in the file LICENSE_GPL. It can also be
@@ -55,11 +56,11 @@ Building the source code on different platforms can appear challenging. The buff
 
 Generally, please note that no matter which platform, there are three different parts of the code, which are compiled in different steps.
 
-*  ''.../buffer/src'' contains the core buffer functions written in C. These are compiled into a library ''libbuffer.[a/lib]'' by using Makefiles or project files **outside** of Matlab.
+- ''.../buffer/src'' contains the core buffer functions written in C. These are compiled into a library ''libbuffer.[a/lib]'' by using Makefiles or project files **outside** of Matlab.
 
-*  ''.../buffer/test'' contains demos and test applications written in C. These are also compiled outside of Matlab, but since they depend on ''libbuffer'', they can only be compiled after that.
+- ''.../buffer/test'' contains demos and test applications written in C. These are also compiled outside of Matlab, but since they depend on ''libbuffer'', they can only be compiled after that.
 
-*  ''.../buffer/matlab'' contains the sources of the MEX file ''buffer.mex???''. Since Matlab installations vary so much, we rely on the command ''mex'' to compile this part **inside** Matlab. As of October 2010, the MEX files are not linked against ''libbuffer'' anymore, but rather the same source files are directly pulled in using ''mex''.
+- ''.../buffer/matlab'' contains the sources of the MEX file ''buffer.mex???''. Since Matlab installations vary so much, we rely on the command ''mex'' to compile this part **inside** Matlab. As of October 2010, the MEX files are not linked against ''libbuffer'' anymore, but rather the same source files are directly pulled in using ''mex''.
 
 The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, OS X and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, Mac OSX, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and OSX is pretty straight forward while doing that on Windows is a bit more tricky.
 
@@ -77,20 +78,21 @@ If you have an unsupported GCC version, you should check whether your Linux dist
 
 The following was tested from 16-03-2010 to 18-03-2010.
 
- | Matlab version | 32 bit ArchLinux, GCC 4.2 and 4.4                                                      | 32 bit Red Hat (mentat069), GCC 3.4.3 | 64 bit Red Hat (mentat 20x), GCC 4.1.2 |
- | -------------- | ---------------------------------                                                      | ------------------------------------- | -------------------------------------- |
- | 6.1            | compiles, but does not run due to missing mxCreateDoubleScalar                         |                                       | n.a.                                   |
- | 6.5.1          | compiles with GCC 3.4 -- 4.4 and runs, but not binary compatible with MEX files >= 7.0 |                                       | n.a.                                   |
- | 7.0            | n.a.                                                                                   | compiles, but does not run (see 7.1)  | n.a.                                   |
- | 7.1            | compiles, but does not run (complains about missing GCC 3.3 libraries)                 |                                       | compiles and runs                      |
- | 7.2 (R2006a)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
- | 7.3 (R2006b)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
- | 7.4 (R2007a)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
- | 7.5 (R2007b)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
- | 7.6 (R2008a)   | n.a.                                                                                   |                                       | compiles and runs                      |
- | 7.7 (R2008b)   | does not compile (libraries missing), can run other version                            |                                       | compiles and runs                      |
- | 7.8 (R2009a)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
- | 7.9 (R2009b)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
+| Matlab version | 32 bit ArchLinux, GCC 4.2 and 4.4                                                      | 32 bit Red Hat (mentat069), GCC 3.4.3 | 64 bit Red Hat (mentat 20x), GCC 4.1.2 |
+| -------------- | -------------------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------- |
+| 6.1            | compiles, but does not run due to missing mxCreateDoubleScalar                         |                                       | n.a.                                   |
+| 6.5.1          | compiles with GCC 3.4 -- 4.4 and runs, but not binary compatible with MEX files >= 7.0 |                                       | n.a.                                   |
+| 7.0            | n.a.                                                                                   | compiles, but does not run (see 7.1)  | n.a.                                   |
+| 7.1            | compiles, but does not run (complains about missing GCC 3.3 libraries)                 |                                       | compiles and runs                      |
+| 7.2 (R2006a)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
+| 7.3 (R2006b)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
+| 7.4 (R2007a)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
+| 7.5 (R2007b)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
+| 7.6 (R2008a)   | n.a.                                                                                   |                                       | compiles and runs                      |
+| 7.7 (R2008b)   | does not compile (libraries missing), can run other version                            |                                       | compiles and runs                      |
+| 7.8 (R2009a)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
+| 7.9 (R2009b)   | compiles and runs (GCC up to 4.2)                                                      |                                       | compiles and runs                      |
+
 Fields marked with "n.a." refer to unavailable or non-functioning Matlab configurations. Note that although you can run 32-bit Matlab versions
 on a 64-bit machine, you will not be able to compile MEX-files with your native 64-bit compiler in this case.
 
@@ -120,17 +122,17 @@ On 32-bit Windows platforms, Matlab ships with the LCC compiler, which can be us
 
 Unfortunately, Matlab doesn't recognise MinGW by itself, so for compiling the MEX-file, you will need to get [Gnumex](http://gnumex.sourceforge.net/). This is a small collection of tools that wrap the MinGW utilities for usage by the ''mex'' command. Both MinGW and Gnumex are relatively easy to install, and you should stick to the defaults (in particular, please place MinGW in ''C:\MinGW''). You should also put ''C:\MinGW\bin'' into your path. After installing, you do the followin
 
- 1.  In a command prompt window, change to the ''src'' directory and type ''mingw32-make''. If everything works, you should get a ''libbuffer.a'' file
- 2.  Change to the ''test'' directory and type ''mingw32-make''. This should produce ''demo_buffer.exe'' and further executables.
- 3.  Within Matlab, change to the ''...buffer\matlab'' directory and type ''compile('mingw')''. This should produce the file ''buffer.mexw32'' in the ''...\fileio\private'' directory.
+1.  In a command prompt window, change to the ''src'' directory and type ''mingw32-make''. If everything works, you should get a ''libbuffer.a'' file
+2.  Change to the ''test'' directory and type ''mingw32-make''. This should produce ''demo_buffer.exe'' and further executables.
+3.  Within Matlab, change to the ''...buffer\matlab'' directory and type ''compile('mingw')''. This should produce the file ''buffer.mexw32'' in the ''...\fileio\private'' directory.
 
 #### Borland C++ 5.5 (Free command line tools)
 
 Assuming you've installed the tools and put the corresponding ''bin'' directory (e.g., ''C:\BCC55\bin'') on the path, you may need to select BCC as the compiler in Matlab using ''mex -setup''. Then you can use ''Makefile_BCC'' for compiling the core buffer functions and test applications, and ''compile.m'' for compiling the buffer.
 
- 1.  In a command prompt window, change to the ''src'' directory and type ''make -f Makefile_BCC''. If everything works, you should get a ''libbuffer.lib'' file
- 2.  Change to the ''test'' directory and type the same. This should produce ''demo_buffer.exe'' and further executables.
- 3.  Within Matlab, change to the ''...buffer\matlab'' directory and type ''compile('bcc55')''. This should produce the file ''buffer.mexw32'' in the ''...\fileio\private'' directory.
+1.  In a command prompt window, change to the ''src'' directory and type ''make -f Makefile_BCC''. If everything works, you should get a ''libbuffer.lib'' file
+2.  Change to the ''test'' directory and type the same. This should produce ''demo_buffer.exe'' and further executables.
+3.  Within Matlab, change to the ''...buffer\matlab'' directory and type ''compile('bcc55')''. This should produce the file ''buffer.mexw32'' in the ''...\fileio\private'' directory.
 
 #### Visual C++
 
@@ -149,6 +151,6 @@ If your favorite compiler is not listed above, or you have some special non-stan
 ### Endiannes
 
 As of 18-05-2010, the FieldTrip buffer TCP server provides an automatic adaptation
-of requests and its responses to the [endianness](http://en.wikipedia.org/wiki/Endianness) of the client. For example, if the buffer resides on an Intel x86 computer, and data is written to it from a PPC G4 computer, the server will automatically convert the incoming packets (data/events/header information) to its own (little-endian) format, process the request, and then convert the response back to the (big-endian) format of the client. The opposite happens if the PPC G4 is the server, and the PC the client. No conversion is done if both the server and the client run on the same type of machine (which includes the *dmarequest* as a notable case).
+of requests and its responses to the [endianness](http://en.wikipedia.org/wiki/Endianness) of the client. For example, if the buffer resides on an Intel x86 computer, and data is written to it from a PPC G4 computer, the server will automatically convert the incoming packets (data/events/header information) to its own (little-endian) format, process the request, and then convert the response back to the (big-endian) format of the client. The opposite happens if the PPC G4 is the server, and the PC the client. No conversion is done if both the server and the client run on the same type of machine (which includes the _dmarequest_ as a notable case).
 
 Besides the G4 and G5 Apple PPC platform, the Raspberry Pi is also a big-endian computer.

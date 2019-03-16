@@ -6,16 +6,16 @@ title: User Documentation
 
 The documentation for FieldTrip is split into several parts:
 
-* [Walkthrough](/walkthrough)
-* [Tutorial documentation](/tutorial)
-* [Frequently asked questions](/faq)
-* [Example MATLAB scripts](/example)
-* [Reference documentation](/reference) and [configuration index](/reference/configuration_index)
-* [Video lectures](/video)
-* [Method references](/references_to_implemented_methods)
-* [Review and teaching material](/references_to_review_papers_and_teaching_material)
-* [Template models and data](/template)
-* [Realtime BCI](/development/realtime)
+- [Walkthrough](/walkthrough)
+- [Tutorial documentation](/tutorial)
+- [Frequently asked questions](/faq)
+- [Example MATLAB scripts](/example)
+- [Reference documentation](/reference) and [configuration index](/reference/configuration_index)
+- [Video lectures](/video)
+- [Method references](/references_to_implemented_methods)
+- [Review and teaching material](/references_to_review_papers_and_teaching_material)
+- [Template models and data](/template)
+- [Realtime BCI](/development/realtime)
 
 The [tutorials](/tutorial) will help you to get started by providing examples that you can copy-and-paste into Matlab. The [introduction tutorial](/tutorial/introduction) provides a short introduction in the the ideas behind the FieldTrip toolbox. The [Walkthrough](/walkthrough) will give you a more thorough overview of the conceptual ideas behind MEG and EEG analysis and how the toolbox is used.
 

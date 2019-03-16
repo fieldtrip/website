@@ -1,5 +1,6 @@
 ---
 title: ft_trialfun_imotions
+layout: default
 tags: 
 ---
 ```

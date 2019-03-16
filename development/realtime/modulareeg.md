@@ -11,23 +11,21 @@ This page describes the interface between the 2-6 channel Modular EEG amplifier 
 
 We provide two standalone tools (see ''realtime/src/acquisition/modeeg'' and ''realtime/bin'') to grab data from the serial port, and stream it to a FieldTrip buffer. The first one is called **modeeg2ft** and allows to specify which channels to stream and save in a configuration file like thi
 
-	
-	[select]
-	1=Left
-	2=Right
+    [select]
+
+1=Left
+2=Right
 
 You would then call the application like thi
 
-	
-	modeeg2ft COM5: config.txt  nameOfGDF  localhost  1972
+    modeeg2ft COM5: config.txt  nameOfGDF  localhost  1972
 
 where ''COM5:'' is the serial port on which the amplifier is connected (use something like ''/dev/ttyS0'' on Linux), ''config.txt'' is the name of the configuration file, ''nameOfGDF'' is the name of the GDF file where data should be saved to (extension ''.gdf'' will be added automatically), and ''localhost'' and ''1972'' are the address and port number of the buffer server (actually, these are the defaults for the last two arguments, so you can leave them out). In case you want to have the buffer server
 inside this application, replace the hostname by a minus (-).
 
 The second tool is called **modeeg2ft_2chn** and is basically a simplication of **modeeg2ft**: For this, always two channels are read, and there is no need for a configuration file. Just call for example
 
-	
-	modeeg2ft_2chn COM5:  nameOfGDF  localhost  1972
+    modeeg2ft_2chn COM5:  nameOfGDF  localhost  1972
 
 If you don't want to save data to GDF, you can replace the second argument (''nameOfGdf'') by a minus (-).
 
@@ -40,13 +38,13 @@ Windows. Note that you might need to [compile](/development/realtime/buffer) the
 
 #### Using a USB cable
 
-If your ModEEG uses the FT232RL USB-to-serial converter, you may have to install a driver to access it. 
+If your ModEEG uses the FT232RL USB-to-serial converter, you may have to install a driver to access it.
 
-First check 
+First check
 
     ls -al /dev/*usbserial*
 
-If that is empty, download and install the driver from http://www.ftdichip.com/Drivers/VCP.htm. After that, you should see 
+If that is empty, download and install the driver from <http://www.ftdichip.com/Drivers/VCP.htm>. After that, you should see
 
     powermac> ls -al /dev/*usbserial*
     crw-rw-rw-  1 root  wheel   10,   5 Feb 27 16:16 /dev/cu.usbserial-A9003PV6
@@ -61,36 +59,35 @@ The device that we have at the Donders has a "BlueSmirf FireFly" bluetooth inter
 
 ## Native MATLAB implementation
 
-On Linux and OS X it is also possible to read from a serial port or bluetooth interface from within MATLAB. To help in decoding the communication protocol, i.e. the byte stream that is sent over the serial interface, we also made a MATLAB implementation. 
+On Linux and OS X it is also possible to read from a serial port or bluetooth interface from within MATLAB. To help in decoding the communication protocol, i.e. the byte stream that is sent over the serial interface, we also made a MATLAB implementation.
 
-The MATLAB implementation can be found in ''realtime/example/ft_realtime_modeegproxy''. 
+The MATLAB implementation can be found in ''realtime/example/ft_realtime_modeegproxy''.
 
 It reads the data from the serial interface and copies the first two channels to a FieldTrip [buffer](/development/realtime/buffer_overview).
 
-##  Serial port communication protocol
+## Serial port communication protocol
 
-The page http://openeeg.sourceforge.net/doc/modeeg/firmware/modeeg-p2.c describes the communication protocol as follows 
+The page <http://openeeg.sourceforge.net/doc/modeeg/firmware/modeeg-p2.c> describes the communication protocol as follows
 
-  // Packet Format Version 2
-	// 17-byte packets are transmitted from the ModularEEG at 256Hz,
-	// using 1 start bit, 8 data bits, 1 stop bit, no parity, 57600 bits per second.
-	// Minimial transmission speed is 256Hz * sizeof(modeeg_packet) * 10 = 43520 bps.
-	
-	struct modeeg_packet
-	{
-	  uint8_t   sync0;     // = 0xA5
-	  uint8_t   sync1;     // = 0x5A
-	  uint8_t   version;   // = 2
-	  uint8_t   count;     // packet counter. Increases by 1 each packet
-	  uint16_t  data[6];   // 10-bit sample (= 0 - 1023) in big endian (Motorola) format
-	  uint8_t   switches;  // State of PD5 to PD2, in bits 3 to 0
-	};
-	
-	// Note that data is transmitted in big-endian format.
-	// By this measure together with the unique pattern in sync0 and sync1 it is guaranteed,
-	// that re-sync (i.e after disconnecting the data line) is always safe.
-	
+// Packet Format Version 2
+// 17-byte packets are transmitted from the ModularEEG at 256Hz,
+// using 1 start bit, 8 data bits, 1 stop bit, no parity, 57600 bits per second.
+// Minimial transmission speed is 256Hz _ sizeof(modeeg_packet) _ 10 = 43520 bps.
+  
+ struct modeeg_packet
+{
+uint8_t sync0; // = 0xA5
+uint8_t sync1; // = 0x5A
+uint8_t version; // = 2
+uint8_t count; // packet counter. Increases by 1 each packet
+uint16_t data[6]; // 10-bit sample (= 0 - 1023) in big endian (Motorola) format
+uint8_t switches; // State of PD5 to PD2, in bits 3 to 0
+};
+  
+ // Note that data is transmitted in big-endian format.
+// By this measure together with the unique pattern in sync0 and sync1 it is guaranteed,
+// that re-sync (i.e after disconnecting the data line) is always safe.
 
 ## External links
 
-*  http://openeeg.sourceforge.net/doc/
+- <http://openeeg.sourceforge.net/doc/>

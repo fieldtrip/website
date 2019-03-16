@@ -45,24 +45,23 @@ The trigger coding in the Neuromag system is more complex than in most systems. 
 
 The following code finds all unique events and aligns the individual bits in the STI00x channels with the combined value in a table.
 
+    sample  = unique(smp)';
+    latency = (sample-1)/hdr.Fs;
+    type    = unique(typ)';
 
-	sample  = unique(smp)';
-	latency = (sample-1)/hdr.Fs;
-	type    = unique(typ)';
+    trigarray = nan(length(sample), length(type));
 
-	trigarray = nan(length(sample), length(type));
+    for i=1:numel(sample)
+      sel = find(smp==sample(i));
+      for j=1:numel(sel)
+          trigarray(i, strcmp(type, typ{sel(j)})) = val(sel(j));
+      end
+    end
 
-	for i=1:numel(sample)
-	    sel = find(smp==sample(i));
-	    for j=1:numel(sel)
-	        trigarray(i, strcmp(type, typ{sel(j)})) = val(sel(j));
-	    end
-	end
+    trigtable = array2table(trigarray, 'VariableNames', type);
+    trigtable = [table(sample, latency) trigtable];
 
-	trigtable = array2table(trigarray, 'VariableNames', type);
-	trigtable = [table(sample, latency) trigtable];
-
-	writetable(trigtable, 'trigger.xls');
+    writetable(trigtable, 'trigger.xls');
 
 The table can easily be exported to Excel or LibreOffice, where you can do additional checks on the columns.
 

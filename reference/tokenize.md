@@ -1,5 +1,6 @@
 ---
 title: tokenize
+layout: default
 tags: 
 ---
 ```

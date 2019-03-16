@@ -1,5 +1,6 @@
 ---
 title: ft_preamble
+layout: default
 tags: 
 ---
 ```

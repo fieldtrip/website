@@ -1,5 +1,6 @@
 ---
 title: ft_write_data
+layout: default
 tags: 
 ---
 ```
@@ -21,6 +22,7 @@ tags:
  The supported dataformats for writing are
    edf
    gdf
+   anywave_ades
    brainvision_eeg
    neuralynx_ncs
    neuralynx_sdma

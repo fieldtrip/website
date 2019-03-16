@@ -4,16 +4,16 @@ title: Neighbour templates
 
 This project has been completed and it's result can be found here:
 
-*  http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors
-*  http://fieldtrip.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work
-*  http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_my_own_neighbourhood_template
+- http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors
+- http://fieldtrip.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work
+- http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_my_own_neighbourhood_template
 
 Related bugzilla bugs:
 
-*  http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=800
-*  http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=983
-*  http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=984
-*  http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1929
+- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=800
+- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=983
+- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=984
+- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1929
 
 Find below the old project notes
 
@@ -21,12 +21,12 @@ Find below the old project notes
 
 #### Goals
 
-1) Provide functionaltity for supporting neighbour templates [check]
-2) Provide information how to create own neighbour templates and check using ft_neighbourplot [check]
-3) Update the community on this functionality
-4) Make user obliged to call neighbourselection
-5) Update community about this functionality change
-6) Make a FAQ: How can I select neighbouring sensors? This can incorporate information from (2) [check]
+1. Provide functionaltity for supporting neighbour templates [check]
+2. Provide information how to create own neighbour templates and check using ft_neighbourplot [check]
+3. Update the community on this functionality
+4. Make user obliged to call neighbourselection
+5. Update community about this functionality change
+6. Make a FAQ: How can I select neighbouring sensors? This can incorporate information from (2) [check]
 
 #### How can I define neighbouring sensors?
 
@@ -34,20 +34,19 @@ Certain functions require knowledge what sensors are near other sensors and shou
 
 In FieldTrip, the function ft_neighbourselection is computing information about what sensors are neighbours of which other sensors. Neighbourhood should be a symmetric property (if A is a neighbour of B, then B is a neighbour of A). You can get neighbours from your data as followin
 
-	  cfg.neighbours = ft_neighbourselection(cfg, data);
+    cfg.neighbours = ft_neighbourselection(cfg, data);
 
 You can verify the neighbourselection by calling ft_neighbourplot
 
-	  ft_neighbourplot(cfg, data);
+    ft_neighbourplot(cfg, data);
 
 or by simply asking for feedback when calling ft_neighbourselection
 
-	  cfg.feedback = 'yes';
-	  cfg.neighbours = ft_neighbourselection(cfg, data);
-
+    cfg.feedback = 'yes';
+    cfg.neighbours = ft_neighbourselection(cfg, data);
 
 There are three methods how ft_neighbourselection can define the neighbour structure for your data: 'distance', 'triangulation' and 'template'. We recommend check whether the 'template' method looks suitable for you using ft_neighbourplot. However, note that we do not take responsibility for any wrongly drawn conclusions. The choice how to select neighbours has to be made by you!
-__Also note that ft_neighbourselection will first try to deduce the neighbours from the config (e.g. from the optional cfg.layout field) before it will try searching your data for sensor position information.__
+**Also note that ft_neighbourselection will first try to deduce the neighbours from the config (e.g. from the optional cfg.layout field) before it will try searching your data for sensor position information.**
 
 #### In depth information: How to ft_neighbourselection work?
 
@@ -66,9 +65,9 @@ For more information how to call and use this ft_neighbourselection, please see 
 
 Currently, each entry of the neighbour-structure needs to have two fields: 'label' and 'neighblabel'. cfg.neighbours must be a cell-array, with each entry having these two fields. You can then define the structure as follow
 
-	  cfg.neighbours = {};
-	  cfg.neighbours{1}.label = 'Fp1';
-	  cfg.neighbours{1}.neighblabel = {'Fpz'; 'AFz'};
+    cfg.neighbours = {};
+    cfg.neighbours{1}.label = 'Fp1';
+    cfg.neighbours{1}.neighblabel = {'Fpz'; 'AFz'};
 
 Similarly, you can load a template and then change the neighbour definition. Note, although repeating this over and over again: verify your choice using ft_neighbourplot.
 

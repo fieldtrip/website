@@ -4,12 +4,12 @@
 
     % find the interesting segments of data
     cfg = [];                                           % empty configuration
-    cfg.dataset                 = 'Subject01.ds';       % name of CTF dataset  
+    cfg.dataset                 = 'Subject01.ds';       % name of CTF dataset
     cfg.trialdef.eventtype      = 'backpanel trigger';
     cfg.trialdef.prestim        = 1;
     cfg.trialdef.poststim       = 2;
     cfg.trialdef.eventvalue     = 3;                    % event value of FIC
-    cfg = ft_definetrial(cfg);            
+    cfg = ft_definetrial(cfg);
 
     % remove the trials that have artifacts from the trl
     cfg.trl([15, 36, 39, 42, 43, 49, 50, 81, 82, 84],:) = [];

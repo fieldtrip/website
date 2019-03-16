@@ -12,7 +12,7 @@ Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758)
 
 {% include image src="/assets/img/tutorial/sensor_analysis/design.png" %}
 
-*Figure 1: illustration of the experimental paradigm.*
+_Figure 1: illustration of the experimental paradigm._
 
 We will perform three types of analyses in this tutorial. We will start by looking at the event-related field (ERF) surrounding visual stimulus onset. Next, we will examine the induced oscillatory activity during the visual stimulation. Finally, we will investigate the connectivity between the cortex and the muscle, by computing MEG-EMG coherence.
 
@@ -64,13 +64,13 @@ Time point 0 in all trials corresponds to the onset of the visual stimulation. T
 
 {% include image src="/assets/img/tutorial/sensor_analysis/multipletrials.png" %}
 
-*Figure 1a: Some example trials, with time t=0 marked.*
+_Figure 1a: Some example trials, with time t=0 marked._
 
 ## Event-related analysis
 
 When analyzing EEG or MEG signals, the aim is to investigate the modulation of the measured brain signals with respect to a certain event. However, due to intrinsic and extrinsic noise in the signals - which in single trials is often higher than the signal evoked by the brain - it is typically required to average data from several trials to increase the signal-to-noise ratio(SNR). One approach is to repeat a given event in your experiment and average the corresponding EEG/MEG signals. The assumption is that the noise is independent of the events and thus reduced when averaging, while the effect of interest is time-locked to the event. The approach results in ERPs and ERFs for respectively EEG and MEG. Timelock analysis can be used to calculate ERPs/ERFs.
 
-In FieldTrip, ERPs and ERFs are calculated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. For this particular dataset, we are interested in the ERF locked to visual stimulation. Since visual stimulation was the same in both the response-right and response-left conditions, we can combine the two data sets using **[ft_appenddata](/reference/ft_appenddata)*
+In FieldTrip, ERPs and ERFs are calculated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. For this particular dataset, we are interested in the ERF locked to visual stimulation. Since visual stimulation was the same in both the response-right and response-left conditions, we can combine the two data sets using \*_[ft_appenddata](/reference/ft_appenddata)_
 
     cfg  = [];
     data = ft_appenddata(cfg, data_left, data_right);
@@ -80,7 +80,6 @@ Next, proceed to compute the ER
     cfg                 = [];
     cfg.channel         = 'MEG';
     tl                  = ft_timelockanalysis(cfg, data);
-
 
 ### Plotting the results
 
@@ -96,7 +95,7 @@ Note that we request channel labels and head outline showing, and with a particu
 
 {% include image src="/assets/img/tutorial/sensor_analysis/multiploter.png" %}
 
-*Figure 2: event-related field for each MEG sensor.*
+_Figure 2: event-related field for each MEG sensor._
 
 As you can see, the event-related field for each MEG sensor is displayed at a location corresponding to the approximate location of each sensor.
 
@@ -104,19 +103,19 @@ The nice thing about this multiplot is that it is interactive: it is possible to
 
 {% include image src="/assets/img/tutorial/sensor_analysis/multiploter_interactive.png" %}
 
-*Figure 3: click the box to show the average of the selected sensors.*
+_Figure 3: click the box to show the average of the selected sensors._
 
 The plot that comes up shows a major deflection around 300m
 
 {% include image src="/assets/img/tutorial/sensor_analysis/singleploter.png" %}
 
-*Figure 4: average ERF for some left posterior sensors.*
+_Figure 4: average ERF for some left posterior sensors._
 
 Again, you can select a time range and click it to bring up a topographical plot (**[ft_topoplotER](/reference/ft_topoplotER)**) of the ERF averaged over the selected time window. Select the peak around 300ms and click i
 
 {% include image src="/assets/img/tutorial/sensor_analysis/topoploter.png" %}
 
-*Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset.*
+_Figure 5: topographical representation of the ERF deflection around 300ms after visual stimulus onset._
 
 {% include markup/info %}
 Given that the CTF system uses axial gradiometers (i.e. detecting the magnetic gradient orthogonal to the scalp), what electrical dipole configuration would explain the observed field pattern in the above figure?
@@ -130,7 +129,7 @@ Use the cfg.baseline option in ft_multplotER to correct the ERF for the baseline
 
 The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-order axial gradiometer sensors that measure the gradient of the magnetic field in the radial direction, i.e. orthogonal to the scalp. Often it is helpful to interpret the MEG fields after transforming the data to a planar gradient configuration, i.e. by computing the gradient tangential to the scalp. This representation of MEG data is comparable to the field measured by planar gradiometer sensors. One advantage of the planar gradient transformation is that the signal amplitude typically is largest directly above a source, whereas with axial gradient the signal amplitude is largest away from the source.
 
-We can compute the planar magnetic gradient using **[ft_megplanar](/reference/ft_megplanar)**, which gives us the planar gradient in the vertical and horizontal orientations. For visualization, and many subsequent analysis steps, these components need to be combined, which is implemented by **[ft_combineplanar](/reference/ft_combineplanar)**. Since averaging is a linear operation, it does not matter if we convert the data to planar gradient before or after the call to **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. However, later on we will do frequency analysis, where the order *does* matter, so we will use the same order here. To compute the planar gradient and recompute the ERFs on this dat
+We can compute the planar magnetic gradient using **[ft_megplanar](/reference/ft_megplanar)**, which gives us the planar gradient in the vertical and horizontal orientations. For visualization, and many subsequent analysis steps, these components need to be combined, which is implemented by **[ft_combineplanar](/reference/ft_combineplanar)**. Since averaging is a linear operation, it does not matter if we convert the data to planar gradient before or after the call to **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. However, later on we will do frequency analysis, where the order _does_ matter, so we will use the same order here. To compute the planar gradient and recompute the ERFs on this dat
 
     cfg                 = [];
     cfg.method          = 'template';
@@ -174,14 +173,14 @@ Calculating time-frequency representations of power is done using a sliding time
 
 {% include image src="/assets/img/tutorial/sensor_analysis/tfrtiles.png" %}
 
-*Figure 6: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases.*
+_Figure 6: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases._
 
 If you want to know more about tapers/ window functions you can have a look at this
 [wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for Hanning window used in this tutorial. There is also a wikipedia site about multitapers, to take a look at it click [here](http://en.wikipedia.org/wiki/Multitaper).
 
 ### Time-frequency representations using Hanning tapers
 
-We will here describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc.  An integer number of cycles must fit in the time window.
+We will here describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window.
 
 To compute our time-frequency representation (TFR), we will first subselect a piece of our trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**. This is done to increase the speed at which the subsequenc analysis will run. We need a part of the baseline interval, and a part of the stimulation interval, so we choose the interval from -0.8s to 1
 
@@ -221,7 +220,7 @@ Again we have to combine the two components of the planar gradien
 
 ### Plotting
 
-Then we can plot the results using **[ft_multiplotTFR](/reference/ft_multiplotTFR)*
+Then we can plot the results using \*_[ft_multiplotTFR](/reference/ft_multiplotTFR)_
 
     cfg                 = [];
     cfg.interactive     = 'yes';
@@ -236,7 +235,7 @@ Note the baseline and baselinetype parameters. These govern what baseline correc
 
 {% include image src="/assets/img/tutorial/sensor_analysis/multiplottfr.png" %}
 
-*Figure 7: Time-frequency representation using a Hanning taper with a fixed window length.*
+_Figure 7: Time-frequency representation using a Hanning taper with a fixed window length._
 
 This is an interactive plot, so just as with the event-related part you can select sensors and click to get an average TFR. With this, you can select a time and frequency range and plot a topography.
 
@@ -244,7 +243,7 @@ This is an interactive plot, so just as with the event-related part you can sele
 Click around the multiplot to explore the visual gamma response and its topography!
 {% include markup/end %}
 
-###  Overview of the conducted analysis
+### Overview of the conducted analysis
 
 In a next step, you can get an overview of your analyses by clicking on the FieldTrip menu item and selecting "Show pipeline
 
@@ -252,7 +251,7 @@ In a next step, you can get an overview of your analyses by clicking on the Fiel
 
 Exactly the same can be achieved using **[ft_analysispipeline](/reference/ft_analysispipeline)** as follow
 
-    cfg = [];  
+    cfg = [];
     ft_analysispipeline(cfg, freq);
 
 The function ft_analysispipeline puts all conducted analysis steps into perspective and visualizes them in a flowchar
@@ -260,6 +259,7 @@ The function ft_analysispipeline puts all conducted analysis steps into perspect
 {% include image src="/assets/img/tutorial/sensor_analysis/analysispipeline_sensor_analysis.png" %}
 
 By clicking on one of the boxes (in MATLAB), a new figure will appear that shows all cfg-options that were used to in the respective function.
+
 ## Cortico-muscular coherence
 
 Up to now, we have exclusively looked at the characteristics of the MEG signal. However, as explained in the introduction, this data set also contains EMG data for the left and right wrist muscles. These signals provide excellent reference signals to investigate the connectivity between the cortex and the muscle. This is what we will now look at; specifically, we will compute the coherence between the MEG signal and the left and right EMG signals.
@@ -273,7 +273,7 @@ This experiment was conducted to examine whether connectivity between the cortex
     cfg.minlength       = 'maxperlen'; % this ensures all resulting trials are equal length
     data_stim           = ft_redefinetrial(cfg, data);
 
-Coherence is one of the metrics which can be computed by **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. To compute coherence, this function needs the cross-spectral density matrix as input. This can be computed by **[ft_freqanalysis](/reference/ft_freqanalysis)**, the same function we used earlier to compute TFRs. By default **[ft_freqanalysis](/reference/ft_freqanalysis)** only outputs power values, and not the cross-spectral density. To change this, we have to specify cfg.output = 'powandcsd'. Also, while previously we wanted to get a time-resolved estimate of power, we are now interested in a *non*-time-resolved quantity, namely coherence. Therefore we use cfg.method = 'mtmfft' instead of cfg.method = 'mtmconvol
+Coherence is one of the metrics which can be computed by **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. To compute coherence, this function needs the cross-spectral density matrix as input. This can be computed by **[ft_freqanalysis](/reference/ft_freqanalysis)**, the same function we used earlier to compute TFRs. By default **[ft_freqanalysis](/reference/ft_freqanalysis)** only outputs power values, and not the cross-spectral density. To change this, we have to specify cfg.output = 'powandcsd'. Also, while previously we wanted to get a time-resolved estimate of power, we are now interested in a _non_-time-resolved quantity, namely coherence. Therefore we use cfg.method = 'mtmfft' instead of cfg.method = 'mtmconvol
 
     cfg                 = [];
     cfg.output          = 'powandcsd';
@@ -313,7 +313,7 @@ Again, this is an interactive plot, so click around it to get a nice overview of
 
 {% include image src="/assets/img/tutorial/sensor_analysis/cmc.png" %}
 
-*Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG.*
+_Figure 8: results of sensor-level analysis of corticomuscular coherence. Reference channel was the left EMG._
 
 {% include markup/info %}
 After exploring the coherence results when the reference channel is the left EMG, do the same for the right EMG (which is called 'EMGrgt'). What do you conclude?

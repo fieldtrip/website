@@ -1,5 +1,6 @@
 ---
 title: Index of all configuration options
+layout: default
 ---
 
 # Index of all configuration options 
@@ -236,6 +237,9 @@ value in uV or T, default inf
 ** cfg.artfctdef.threshold.range ** - [ft_artifact_threshold](/reference/ft_artifact_threshold)  
 value in uV or T, default inf
 
+** cfg.artfctdef.tms.artpadding ** - [ft_artifact_tms](/reference/ft_artifact_tms)  
+0.01
+
 ** cfg.artfctdef.tms.channel ** - [ft_artifact_tms](/reference/ft_artifact_tms)  
 Nx1 cell-array with selection of channels, see FT_CHANNELSELECTION for details
 
@@ -415,6 +419,9 @@ string, can be 'normalized', 'points', 'pixels', 'inches' or 'centimeters' (defa
 ** cfg.badchannel ** - [ft_channelrepair](/reference/ft_channelrepair)  
 cell-array, see FT_CHANNELSELECTION for details
 
+** cfg.badchannel ** - [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
+cell-array, see FT_CHANNELSELECTION for details (default = [])
+
 ** cfg.bandwidth ** - [ft_connectivityanalysis](/reference/ft_connectivityanalysis)  
 scalar, (default = Rayleigh frequency), needed for
 
@@ -427,7 +434,10 @@ scalar, (default = Rayleigh frequency), needed for
 ** cfg.baseline ** - [ft_singleplotER](/reference/ft_singleplotER)  
 'yes', 'no' or [time1 time2] (default = 'no'), see ft_timelockbaseline
 
-** cfg.baseline ** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+** cfg.baseline ** - [ft_movieplotER](/reference/ft_movieplotER)  
+'yes','no' or [time1 time2] (default = 'no'), see FT_TIMELOCKBASELINE
+
+** cfg.baseline ** - [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 'yes','no' or [time1 time2] (default = 'no'), see FT_TIMELOCKBASELINE or FT_FREQBASELINE
 
 ** cfg.baseline ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
@@ -445,14 +455,11 @@ number (default = 0.3)
 ** cfg.baseline ** - [ft_steadystatesimulation](/reference/ft_steadystatesimulation)  
 scalar, baseline length in seconds (default = 0)
 
-** cfg.baselinetype ** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+** cfg.baselinetype ** - [ft_movieplotER](/reference/ft_movieplotER), [ft_singleplotER](/reference/ft_singleplotER), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 'absolute' or 'relative' (default = 'absolute')
 
-** cfg.baselinetype ** - [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
-'absolute', 'relative', 'relchange' or 'db' (default = 'absolute')
-
-** cfg.baselinetype ** - [ft_freqbaseline](/reference/ft_freqbaseline)  
-'absolute', 'relative', 'relchange', 'normchange' or 'db' (default = 'absolute')
+** cfg.baselinetype ** - [ft_freqbaseline](/reference/ft_freqbaseline), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
+'absolute', 'relative', 'relchange', 'normchange', 'db' or 'zscore' (default = 'absolute')
 
 ** cfg.baselinewindow ** - [ft_combineplanar](/reference/ft_combineplanar)  
 [begin end]
@@ -522,6 +529,9 @@ ascending vector of isi bin edges.
 
 ** cfg.binsize ** - [ft_spike_psth](/reference/ft_spike_psth)  
 [binsize] in sec or string. If 'scott', we estimate the optimal bin width using Scott's formula (1979). If 'sqrt', we take the number of bins as the square root of the number of observations. The optimal bin width is derived over all neurons; thus, this procedure works best if the input contains only one neuron at a time.
+
+** cfg.blocksize ** - [ft_icabrowser](/reference/ft_icabrowser)  
+blocksize of time course (default = 1 sec)
 
 ** cfg.blocksize ** - [ft_databrowser](/reference/ft_databrowser)  
 duration in seconds for cutting the data up
@@ -642,6 +652,9 @@ optional scaling factor to apply to the data to convert it in uV, see below
 ** cfg.casesensitive ** - [ft_electroderealign](/reference/ft_electroderealign)  
 'yes' or 'no', determines whether string comparisons between electrode labels are case sensitive (default = 'yes')
 
+** cfg.center ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
+string, center and scale the electrodes in the sphere that represents the head, can be 'yes' or 'no' (default = 'no')
+
 ** cfg.channel ** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
 'all' (default) or list of channels for which an mvar model is fitted. (Do NOT specify if cfg.channelcmb is defined)
 
@@ -687,7 +700,7 @@ cell-array with selection of channels, see FT_CHANNELSELECTION
 ** cfg.channel ** - [ft_timelockbaseline](/reference/ft_timelockbaseline)  
 cell-array, see FT_CHANNELSELECTION
 
-** cfg.channel ** - [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.channel ** - [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
 cell-array, see FT_CHANNELSELECTION (default = 'all')
 
 ** cfg.channel ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer)  
@@ -831,7 +844,7 @@ N-by-3 colormap (see COLORMAP). Default = hot(256);
 ** cfg.colormap ** - [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
 N-by-3 colormap (see COLORMAP). or 'auto' (default,hot(256))
 
-** cfg.colormap ** - [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+** cfg.colormap ** - [ft_icabrowser](/reference/ft_icabrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 any sized colormap, see COLORMAP
 
 ** cfg.colormap ** - [ft_sliceinterp](/reference/ft_sliceinterp)  
@@ -953,7 +966,7 @@ string
 ** cfg.datafile ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_preprocessing](/reference/ft_preprocessing)  
 string with the filename
 
-** cfg.dataformat ** - [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
+** cfg.dataformat ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
 ** cfg.dataformat ** - [ft_spikedetection](/reference/ft_spikedetection)  
@@ -991,6 +1004,9 @@ string, name or location of a dataset/buffer (default = 'buffer://odin:1972')
 
 ** cfg.datatype ** - [ft_volumewrite](/reference/ft_volumewrite)  
 'bit1', 'uint8', 'int16', 'int32', 'float' or 'double'
+
+** cfg.debias ** - [ft_spike_xcorr](/reference/ft_spike_xcorr)  
+'yes' (default) or 'no'. If 'yes', we scale the cross-correlogram by M/(M-abs(lags)), where M = 2*N -1 with N the length of the data segment.
 
 ** cfg.degree ** - [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
 degree of legendre polynomials (default for <=32 electrodes = 9, <=64 electrodes = 14, <=128 electrodes = 20, else = 32
@@ -1038,7 +1054,7 @@ string, 'yes' or 'no', whether or not to make reference data zero mean prior to 
 'no' or 'yes', computes the first order derivative of the data (default = 'no')
 
 ** cfg.design ** - [ft_freqstatistics](/reference/ft_freqstatistics)  
-Nxnumobservations: design matrix (for examples/advice, please see the FieldTrip wiki, especially cluster-permutation tutorial and the 'walkthrough' design-matrix section)
+Nxnumobservations: design matrix (for examples/advice, please see the Fieldtrip wiki, especially cluster-permutation tutorial and the 'walkthrough' design-matrix section)
 
 ** cfg.detrend ** - [ft_resampledata](/reference/ft_resampledata)  
 'no' or 'yes', detrend the data prior to resampling (no default specified, see below)
@@ -1156,35 +1172,23 @@ number, scaling to apply to the EEG channels prior to display
 ** cfg.elec ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 
 
+** cfg.elec ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
+(required) structure with electrode positions or filename, see FT_READ_SENS
+
 ** cfg.elec ** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 struct containing previously placed electrodes (this overwrites cfg.channel)
 
-** cfg.elec ** - [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
-structure with electrode definition
-
-** cfg.elec ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
-structure with electrode definition, or
-
-** cfg.elec ** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electroderealign](/reference/ft_electroderealign), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-structure with electrode positions, see FT_DATATYPE_SENS
-
-** cfg.elecfile ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
-(required) string, filename of electrode configuration for the FEM leadfield
-
-** cfg.elecfile ** - [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout)  
-filename containing electrode definition
-
-** cfg.elecfile ** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electroderealign](/reference/ft_electroderealign), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-name of file containing the electrode positions, see FT_READ_SENS
-
-** cfg.elecfile ** - [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
-string, file containing the electrode definition
+** cfg.elec ** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electroderealign](/reference/ft_electroderealign), [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+structure with electrode positions or filename, see FT_READ_SENS
 
 ** cfg.emgscale ** - [ft_databrowser](/reference/ft_databrowser), [ft_rejectvisual](/reference/ft_rejectvisual)  
 number, scaling to apply to the EMG channels prior to display
 
 ** cfg.ems ** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
 'no' (default) or 'yes' explicit removal ensemble mean
+
+** cfg.enableedit ** - [ft_neighbourplot](/reference/ft_neighbourplot)  
+string, 'yes' or 'no', allows you to interactively add or remove edges between vertices (default = 'no')
 
 ** cfg.endsample ** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 single number or Nx1 vector, expressed in samples relative to the start of the input trial
@@ -1598,20 +1602,8 @@ variance (default = 1/16 of window length in sec).
 ** cfg.grad ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 
 
-** cfg.grad ** - [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot)  
-structure with gradiometer definition
-
-** cfg.grad ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
-structure with gradiometer definition, or
-
-** cfg.grad ** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-structure with gradiometer definition, see FT_DATATYPE_SENS
-
-** cfg.gradfile ** - [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout)  
-filename containing gradiometer definition
-
-** cfg.gradfile ** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-name of file containing the gradiometer definition, see FT_READ_SENS
+** cfg.grad ** - [ft_channelrepair](/reference/ft_channelrepair), [ft_databrowser](/reference/ft_databrowser), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+structure with gradiometer definition or filename, see FT_READ_SENS
 
 ** cfg.gradient ** - [ft_denoise_synthetic](/reference/ft_denoise_synthetic)  
 'none', 'G1BR', 'G2BR' or 'G3BR' specifies the gradiometer type to which the data should be changed
@@ -1628,12 +1620,6 @@ color(s) used for plotting the dataset(s) (default = 'brgkywrgbkywrgbkywrgbkyw')
 ** cfg.graphcolor ** - [ft_singleplotER](/reference/ft_singleplotER)  
 color(s) used for plotting the dataset(s) (default = 'brgkywrgbkywrgbkywrgbkyw') alternatively, colors can be specified as nx3 matrix of rgb values
 
-** cfg.grid ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-structure, see FT_PREPARE_SOURCEMODEL or FT_PREPARE_LEADFIELD
-
-** cfg.grid ** - [ft_denoise_dssp](/reference/ft_denoise_dssp)  
-structure, source model with precomputed leadfields (see FT_PREPARE_LEADFIELD)
-
 ** cfg.grid.corner1 ** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 1x3 position of the upper left corner point
 
@@ -1645,69 +1631,6 @@ structure, source model with precomputed leadfields (see FT_PREPARE_LEADFIELD)
 
 ** cfg.grid.corner4 ** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 1x3 position of the lower right corner point
-
-** cfg.grid.dim ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-[Nx Ny Nz] vector with dimensions in case of 3-D grid (optional)
-
-** cfg.grid.dim ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-[Nx Ny Nz] vector with dimensions in case of 3D grid (optional)
-
-** cfg.grid.filter ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-
-
-** cfg.grid.filter ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-or alternatively cfg.grid.avg.filter
-
-** cfg.grid.inside ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-N*1 vector with boolean value whether grid point is inside brain (optional)
-
-** cfg.grid.lbex ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-
-
-** cfg.grid.leadfield ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-
-
-** cfg.grid.nonlinear ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-'no' (or 'yes'), use non-linear normalization
-
-** cfg.grid.pos ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-N*3 matrix with position of each source
-
-** cfg.grid.pos ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-N*3 matrix with the vertex positions of the cortical sheet
-
-** cfg.grid.resolution ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-number (e.g. 1 cm) for automatic grid generation
-
-** cfg.grid.resolution ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-number (e.g. 6) of the resolution of the template MNI grid, defined in mm
-
-** cfg.grid.subspace ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-
-
-** cfg.grid.template ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-specification of a template grid (grid structure), or a filename of a template grid (defined in MNI space), either cfg.grid.resolution or cfg.grid.template needs to be defined. If both are defined cfg.grid.template prevails
-
-** cfg.grid.tight ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-'yes' or 'no' (default is automatic)
-
-** cfg.grid.tri ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-M*3 matrix that describes the triangles connecting the vertices
-
-** cfg.grid.unit ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-string, can be 'mm', 'cm', 'm' (default is automatic)
-
-** cfg.grid.warpmni ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-'yes'
-
-** cfg.grid.xgrid ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-
-** cfg.grid.ygrid ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-
-** cfg.grid.zgrid ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-vector (e.g. 0:1:20) or 'auto' (default = 'auto')
 
 ** cfg.gridscale ** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 scaling grid size (default = 67) determines resolution of figure
@@ -1729,7 +1652,7 @@ string
 ** cfg.headerfile ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_preprocessing](/reference/ft_preprocessing)  
 string with the filename
 
-** cfg.headerformat ** - [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
+** cfg.headerformat ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
 ** cfg.headerformat ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
@@ -1738,7 +1661,10 @@ string, default is determined automatic
 ** cfg.headmodel ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 (required) string, filename of precomputed FEM leadfield
 
-** cfg.headmodel ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_megplanar](/reference/ft_megplanar), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+** cfg.headmodel ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+structure with volume conduction model or filename, see FT_PREPARE_HEADMODEL
+
+** cfg.headmodel ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_megplanar](/reference/ft_megplanar), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 structure with volume conduction model, see FT_PREPARE_HEADMODEL
 
 ** cfg.headmodel ** - [ft_megrealign](/reference/ft_megrealign)  
@@ -1917,7 +1843,7 @@ FieldTrip buffer containing raw scans (default='buffer://localhost:1972')
 ** cfg.inputcoord ** - [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup)  
 'mni' or 'tal', coordinate system of the mri/source/stat
 
-** cfg.inputfile ** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_nan](/reference/ft_artifact_nan), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_clusterplot](/reference/ft_clusterplot), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_layoutplot](/reference/ft_layoutplot), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectartifact](/reference/ft_rejectartifact), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_singleplotER](/reference/ft_singleplotER), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_sourcemovie](/reference/ft_sourcemovie), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumewrite](/reference/ft_volumewrite)  
+** cfg.inputfile ** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_nan](/reference/ft_artifact_nan), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_clusterplot](/reference/ft_clusterplot), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_layoutplot](/reference/ft_layoutplot), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectartifact](/reference/ft_rejectartifact), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_singleplotER](/reference/ft_singleplotER), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_sourcemovie](/reference/ft_sourcemovie), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumewrite](/reference/ft_volumewrite)  
 ...
 
 ** cfg.interactive ** - [ft_movieplotTFR](/reference/ft_movieplotTFR)  
@@ -2005,6 +1931,12 @@ whether to skip to the end of the stream/file at startup (default = 'yes')
 
 ## K 
 
+** cfg.kappa ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+number or empty for automatic default
+
+** cfg.kappa ** - [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)  
+scalar, truncation parameter for the inverse
+
 ** cfg.keepbrain ** - [ft_defacevolume](/reference/ft_defacevolume)  
 'no' or 'yes', segment and retain the brain (default = 'no')
 
@@ -2066,7 +1998,7 @@ cell-array with strings, fields to keep (default = {})
 string, determines how to deal with trials that are not selected, can be 'no' completely remove deselected trials from the data (default) 'yes' keep deselected trials in the output data 'nan' fill the trials that are deselected with NaNs
 
 ** cfg.keeptrials ** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
-'no' (default) or 'yes' specifies whether the coefficients are estimated for each trial seperately, or on the concatenated data
+'no' (default) or 'yes' specifies whether the coefficients are estimated for each trial separately, or on the concatenated data
 
 ** cfg.keeptrials ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 'no' or 'yes'
@@ -2118,6 +2050,9 @@ regularisation parameter (default = 1e-5, not for method 'distance')
 ** cfg.lambda ** - [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
 regularization parameter (default = 1e-05)
 
+** cfg.lambda ** - [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)  
+scalar, or string, regularization parameter for the inverse
+
 ** cfg.latency ** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
 [b1 e1; b2 e2; ...]
 
@@ -2146,7 +2081,7 @@ regularization parameter (default = 1e-05)
 [begin end] in seconds, 'max' (default), 'min', 'prestim'(t<=0), or 'poststim' (t>=0).%
 
 ** cfg.latency ** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
-[begin end] in seconds, 'maxperiod' (default), 'minperiod', 'prestim' (all t<=0), or 'poststim' (all t>=0). If a third input is present, we will use the timelock.cfg.latency field to ensure that the raster and the timelock data have the same latency.
+[begin end] in seconds, 'maxperiod' (default), 'minperiod', 'prestim' (all t<=0), or 'poststim' (all t>=0).
 
 ** cfg.latency ** - [ft_spikedensity](/reference/ft_spikedensity)  
 [begin end] in seconds, 'maxperiod' (default), 'minperiod', 'prestim'(t>=0), or 'poststim' (t>=0).
@@ -2199,7 +2134,7 @@ filename containg the input layout (*.mat or *.lay file), this can also be a lay
 ** cfg.layout ** - [ft_layoutplot](/reference/ft_layoutplot)  
 filename containg the layout
 
-** cfg.layout ** - [ft_databrowser](/reference/ft_databrowser), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_neighbours](/reference/ft_prepare_neighbours)  
+** cfg.layout ** - [ft_databrowser](/reference/ft_databrowser), [ft_icabrowser](/reference/ft_icabrowser), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_neighbours](/reference/ft_prepare_neighbours)  
 filename of the layout, see FT_PREPARE_LAYOUT
 
 ** cfg.layout ** - [ft_topoplotCC](/reference/ft_topoplotCC)  
@@ -2351,6 +2286,9 @@ mask value mapped to the highest opacity, i.e. non-transparent (default = 'auto'
 ** cfg.maskcolmin ** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 mask value mapped to the lowest opacity, i.e. completely transparent (default ='auto')
 
+** cfg.maskfacealpha ** - [ft_multiplotER](/reference/ft_multiplotER), [ft_singleplotER](/reference/ft_singleplotER)  
+mask transparency value between 0 and 1
+
 ** cfg.maskmap ** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 opacitymap for source overlay (default is linspace(0,1,128))
 
@@ -2439,7 +2377,7 @@ number, scaling to apply to the MEG channels prior to display
 'cortexhull';
 
 ** cfg.method ** - [ft_artifact_tms](/reference/ft_artifact_tms)  
-'detect' or 'marker', see below. markers written in the EEG.
+'detect' or 'marker', see below.
 
 ** cfg.method ** - [ft_prepare_neighbours](/reference/ft_prepare_neighbours)  
 'distance', 'triangulation' or 'template'
@@ -2507,9 +2445,6 @@ different methods for calculating the significance probability and/or critical v
 ** cfg.method ** - [ft_freqanalysis](/reference/ft_freqanalysis)  
 different methods of calculating the spectra 'mtmfft', analyses an entire spectrum for the entire data length, implements multitaper frequency transformation 'mtmconvol', implements multitaper time-frequency transformation based on multiplication in the frequency domain. 'wavelet', implements wavelet time frequency transformation (using Morlet wavelets) based on multiplication in the frequency domain. 'tfr', implements wavelet time frequency transformation (using Morlet wavelets) based on convolution in the time domain. 'mvar', does a fourier transform on the coefficients of an estimated multivariate autoregressive model, obtained with FT_MVARANALYSIS. In this case, the output will contain a spectral transfer matrix, the cross-spectral density matrix, and the covariance matrix of the innovatio noise.
 
-** cfg.method ** - [ft_detect_movement](/reference/ft_detect_movement)  
-different methods of detecting different movement types 'velocity2D', Micro/saccade detection based on Engbert R, Kliegl R (2003) Vision Res 43:1035-1045. The method computes thresholds based on velocity changes from eyetracker data (horizontal and vertical components). 'clustering', Micro/saccade detection based on Otero-Millan et al., (2014) J Vis 14 (not implemented yet)
-
 ** cfg.method ** - [ft_resampledata](/reference/ft_resampledata)  
 interpolation method, see INTERP1 (default = 'pchip')
 
@@ -2524,6 +2459,9 @@ string representing the method for aligning 'interactive' use the GUI to specify
 
 ** cfg.method ** - [ft_electroderealign](/reference/ft_electroderealign)  
 string representing the method for aligning or placing the electrodes 'interactive' realign manually using a graphical user interface 'fiducial' realign using three fiducials (e.g. NAS, LPA and RPA) 'template' realign the electrodes to match a template set 'headshape' realign the electrodes to fit the head surface 'project' projects electrodes onto the head surface 'moveinward' moves electrodes inward along their normals
+
+** cfg.method ** - [ft_detect_movement](/reference/ft_detect_movement)  
+string representing the method for movement detection 'velocity2D' detects microsaccades using the 2D velocity 'clustering' use unsupervised clustering method to detect microsaccades
 
 ** cfg.method ** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 string representing the method for placing the electrodes 'volume' interactively locate electrodes on three orthogonal slices of a volumetric MRI or CT scan 'headshape' interactively locate electrodes on a head surface '1020' automatically locate electrodes on a head surface according to the 10-20 system 'shaft' automatically locate electrodes along a linear sEEG shaft 'grid' automatically locate electrodes on a MxN ECoG grid
@@ -2616,19 +2554,58 @@ number, movie frames are all time points at the fixed frequency moviefreq (defau
 number, movie frames are all frequencies at the fixed time movietime (default = []);
 
 ** cfg.mri ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-can be filename or MRI structure, containing the individual anatomy
-
-** cfg.mri ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 can be filename, MRI structure or segmented MRI structure
 
 ** cfg.mri ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 segmented anatomical MRI to be used for generating an outline, see FT_READ_MRI and FT_VOLUMESEGMENT for details
+
+** cfg.mri ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+structure with anatomical MRI model or filename, see FT_READ_MRI
 
 ** cfg.mva ** - [ft_statistics_crossvalidate](/reference/ft_statistics_crossvalidate)  
 a multivariate analysis (default = {dml.standardizer dml.svm})
 
 ** cfg.mvarmethod ** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
 scalar (only required when cfg.method = 'biosig'). default is 2, relates to the algorithm used for the computation of the AR-coefficients by mvar.m
+
+** cfg.mvpa ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+structure that contains detailed options for the MVPA procedure. See https://github.com/treder/MVPA-Light for more details.
+
+** cfg.mvpa.balance ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+string, for imbalanced data that does not have the same number of instances in each class 'oversample' oversamples the minority classes 'undersample' undersamples the minority classes such that all classes have the same number of instances. Note that undersampling is at the level of the repeats, whereas we oversampling occurs within each training set (for an explanation see mv_balance_classes). You can also give an integer number for undersampling. The samples will be reduced to this number. Note that concurrent over/undersampling (oversampling of the smaller class, undersampling of the larger class) is not supported at the moment
+
+** cfg.mvpa.classifier ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+'lda' Regularised linear discriminant analysis (LDA) (for two classes) 'multiclass_lda' LDA for more than two classes 'logreg' Logistic regression 'svm' Support Vector Machine (SVM) 'ensemble' Ensemble of classifiers. Any of the other classifiers can be used as a learner. 'kernel_fda' Kernel Fisher Discriminant Analysis
+
+** cfg.mvpa.cv ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+string, cross-validation type, either 'kfold', 'leaveout' or 'holdout'. If 'none', no cross-validation is used and the classifier is tested on the training set. (default 'kfold')
+
+** cfg.mvpa.feedback ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+'yes' or 'no', whether or not to print feedback on the console (default 'yes')
+
+** cfg.mvpa.k ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+number of folds in k-fold cross-validation (default 5)
+
+** cfg.mvpa.metric ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+string, performance metric. Possible metrics: accuracy auc tval dval confusion precision recall f1 See https://github.com/treder/MVPA-Light for an overview of all classifiers and metrics.
+
+** cfg.mvpa.normalise ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+string, normalises the data across samples, for each time point and each feature separately, using 'zscore' or 'demean' (default 'zscore'). Set to 'none' or [] to avoid normalisation.
+
+** cfg.mvpa.p ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+if cfg.cv is 'holdout', p is the fraction of test samples (default 0.1)
+
+** cfg.mvpa.param ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+struct, structure with hyperparameters for the classifier (see HYPERPARAMETERS below)
+
+** cfg.mvpa.repeat ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+number of times the cross-validation is repeated with new randomly assigned folds (default 5)
+
+** cfg.mvpa.replace ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+bool, if balance is set to 'oversample' or 'undersample', replace determines whether data is drawn with replacement (default 1)
+
+** cfg.mvpa.stratify ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+if 1, the class proportions are approximately preserved in each test fold (default 1)
 
 ** cfg.mychan ** - [ft_databrowser](/reference/ft_databrowser)  
 Nx1 cell-array with selection of channels
@@ -2685,6 +2662,9 @@ number (default = 0.1)
 
 ** cfg.noisecov ** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation)  
 matrix, [nsignal x nsignal] specifying the covariance matrix of the innovation process
+
+** cfg.nonlinear ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+'no' (or 'yes'), use non-linear normalization
 
 ** cfg.nonlinear ** - [ft_volumenormalise](/reference/ft_volumenormalise)  
 'yes' (default) or 'no', estimates a nonlinear transformation in addition to the linear affine registration. If a reasonably accurate normalisation is sufficient, a purely linearly transformed image allows for 'reverse-normalisation', which might come in handy when for example a region of interest is defined on the normalised group-average.
@@ -2832,17 +2812,17 @@ value, describe the value here and if needed continue here to allow automatic pa
 ** cfg.option3 ** - [ft_examplefunction](/reference/ft_examplefunction)  
 value, explain it here (default is automatic)
 
-** cfg.opto ** - [ft_channelrepair](/reference/ft_channelrepair)  
-structure with optode definition, see FT_DATATYPE_SENS
-
 ** cfg.opto ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
-structure with optode structure definition, or
+sstructure with optode definition or filename, see FT_READ_SENS
 
-** cfg.optofile ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
-filename containing optode structure definition
+** cfg.opto ** - [ft_neighbourplot](/reference/ft_neighbourplot)  
+structure with gradiometer definition or filename, see FT_READ_SENS
 
-** cfg.optofile ** - [ft_channelrepair](/reference/ft_channelrepair)  
-name of file containing the optode definition, see FT_READ_SENS
+** cfg.opto ** - [ft_layoutplot](/reference/ft_layoutplot)  
+structure with optode definition or filename, see FT_READ_SENS
+
+** cfg.opto ** - [ft_channelrepair](/reference/ft_channelrepair)  
+structure with optode definition, see FT_READ_SENS
 
 ** cfg.opts ** - [ft_volumesegment](/reference/ft_volumesegment)  
 struct, containing spm-version specific options. See the code and/or the SPM-documentation for more detail.
@@ -2930,6 +2910,9 @@ which channels should be in the output data, can be 'mixed' or 'all' (default = 
 
 ** cfg.outputfile ** - [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment)  
 ...
+
+** cfg.outputfile ** - [ft_icabrowser](/reference/ft_icabrowser)  
+MAT file which contains indices of all components to reject
 
 ** cfg.outputunit ** - [ft_spike_psth](/reference/ft_spike_psth)  
 'rate' (default) or 'spikecount' or 'proportion'. If 'rate', we convert the output per trial to firing rates (spikes/sec). If 'spikecount', we count the number spikes per trial. If 'proportion', we normalize the area under the PSTH to 1.
@@ -3056,6 +3039,9 @@ string, fieldname that contains the desired parcellation
 ** cfg.partchannel ** - [ft_connectivityanalysis](/reference/ft_connectivityanalysis)  
 cell-array containing a list of channels that need to be partialized out, support for method 'coh', 'csd', 'plv'
 
+** cfg.path ** - [ft_icabrowser](/reference/ft_icabrowser)  
+where pdfs will be saves (default = pwd)
+
 ** cfg.peakseparation ** - [ft_heartrate](/reference/ft_heartrate), [ft_respiration](/reference/ft_respiration)  
 scalar, time in seconds
 
@@ -3119,11 +3105,17 @@ value, length of data after interpolation window, in seconds (default = 1)
 ** cfg.powmethod ** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
 'regular', 'lambda1', 'trace', 'none'
 
+** cfg.powscale ** - [ft_icabrowser](/reference/ft_icabrowser)  
+scaling of y axis in power plot, 'lin' or 'log10', (default = 'log10')
+
 ** cfg.precision ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'single' or 'double' (default = 'double')
 
 ** cfg.precision ** - [ft_sourcewrite](/reference/ft_sourcewrite)  
 string, can be 'single', 'double', etc.
+
+** cfg.prefix ** - [ft_icabrowser](/reference/ft_icabrowser)  
+prefix of the pdf files (default = 'ICA')
 
 ** cfg.preproc.baselinewindow ** - [ft_spikedetection](/reference/ft_spikedetection), [ft_spikedownsample](/reference/ft_spikedownsample)  
 [begin end] in seconds, the default is the complete trial
@@ -3322,7 +3314,7 @@ integer seed value of user's choice
 string, 'yes', 'no' or a number (default = 'yes')
 
 ** cfg.rawtrial ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
-'no' or 'yes' construct filter from single trials, apply to single trials. Note that you also may want to set cfg.keeptrials='yes' to keep all trial information, especially if using in combination with grid.filter
+'no' or 'yes' construct filter from single trials, apply to single trials. Note that you also may want to set cfg.keeptrials='yes' to keep all trial information, especially if using in combination with sourcemodel.filter
 
 ** cfg.rectify ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'no' or 'yes' (default = 'no')
@@ -3360,6 +3352,9 @@ integer array, specifying temporal lags (in msec) by which to shift refchannel w
 ** cfg.refmethod ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'avg', 'median', or 'bipolar' for bipolar derivation of sequential channels (default = 'avg')
 
+** cfg.rejcomp ** - [ft_icabrowser](/reference/ft_icabrowser)  
+list of components which shall be initially marked for rejection, e.g. [1 4 7]
+
 ** cfg.reject ** - [ft_regressconfound](/reference/ft_regressconfound)  
 vector, [1 X Nconfounds], listing the confounds that are to be rejected (default = 'all')
 
@@ -3393,6 +3388,9 @@ cell-array with strings, values to remove (default = {})
 ** cfg.renderer ** - [ft_databrowser](/reference/ft_databrowser)  
 string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
 
+** cfg.reproducescript ** - [ft_reproducescript](/reference/ft_reproducescript)  
+string, directory with the script and intermediate data
+
 ** cfg.reref ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'no' or 'yes' (default = 'no')
 
@@ -3404,6 +3402,12 @@ true/false; upsample less occurring classes during training and downsample often
 
 ** cfg.resamplefs ** - [ft_resampledata](/reference/ft_resampledata)  
 frequency at which the data will be resampled (default = 256 Hz)
+
+** cfg.resolution ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+number (e.g. 1 cm) for automatic grid generation
+
+** cfg.resolution ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+number (e.g. 6) of the resolution of the template MNI grid, defined in mm
 
 ** cfg.resolution ** - [ft_volumereslice](/reference/ft_volumereslice)  
 number, in physical units
@@ -3575,6 +3579,9 @@ scalar value used for scaling (default = 1)
 ** cfg.scatter ** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn)  
 'yes' (default) or 'no'. If 'yes', we plot the individual values.
 
+** cfg.searchlight ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+'yes' or 'no', performs searchlight analysis (default 'no'). More information see below
+
 ** cfg.searchrange ** - [ft_recodeevent](/reference/ft_recodeevent)  
 'anywhere' search anywhere for the event, (default) 'insidetrial' only search inside 'outsidetrial' only search outside 'beforetrial' only search before the trial 'aftertrial' only search after the trial 'beforezero' only search before time t=0 of each trial 'afterzero' only search after time t=0 of each trial
 
@@ -3616,6 +3623,9 @@ scalar, distance between electrodes
 
 ** cfg.showRawVariation ** - [ft_omri_quality](/reference/ft_omri_quality)  
 1 to show variation in raw scans (default), 0 to show var. in processed scans
+
+** cfg.showcallinfo ** - [ft_icabrowser](/reference/ft_icabrowser)  
+show call info, 'yes' or 'no' (default: 'no')
 
 ** cfg.showcomment ** - [ft_multiplotER](/reference/ft_multiplotER)  
 'yes' or 'no' (default = 'yes')
@@ -3695,6 +3705,63 @@ kernel width in mm (Full Width Half Maximum) for smoothing (default = 8)
 ** cfg.sobi.p_correlations ** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 
 
+** cfg.sourcemodel ** - [ft_denoise_dssp](/reference/ft_denoise_dssp)  
+structure, source model with precomputed leadfields (see FT_PREPARE_LEADFIELD)
+
+** cfg.sourcemodel.dim ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+[Nx Ny Nz] vector with dimensions in case of 3-D grid (optional)
+
+** cfg.sourcemodel.dim ** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+[Nx Ny Nz] vector with dimensions in case of 3-D sourcemodel (optional)
+
+** cfg.sourcemodel.dim ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+[Nx Ny Nz] vector with dimensions in case of 3D grid (optional)
+
+** cfg.sourcemodel.filter ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+
+
+** cfg.sourcemodel.inside ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+N*1 vector with boolean value whether grid point is inside brain (optional)
+
+** cfg.sourcemodel.inside ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+N*1 vector with boolean value whether position is inside brain (optional)
+
+** cfg.sourcemodel.inside ** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+N*1 vector with boolean value whether sourcemodel point is inside brain (optional)
+
+** cfg.sourcemodel.lbex ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+
+
+** cfg.sourcemodel.leadfield ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+
+
+** cfg.sourcemodel.pos ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+N*3 matrix with position of each source
+
+** cfg.sourcemodel.pos ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+N*3 matrix with the vertex positions of the cortical sheet
+
+** cfg.sourcemodel.resolution ** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+number (e.g. 1 cm) for automatic sourcemodel generation
+
+** cfg.sourcemodel.subspace ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+
+
+** cfg.sourcemodel.tri ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+M*3 matrix that describes the triangles connecting the vertices
+
+** cfg.sourcemodel.unit ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+string, can be 'mm', 'cm', 'm' (default is automatic)
+
+** cfg.sourcemodel.xgrid ** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+
+** cfg.sourcemodel.ygrid ** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+
+** cfg.sourcemodel.zgrid ** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
+vector (e.g. 0:1:20) or 'auto' (default = 'auto')
+
 ** cfg.spacemax ** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 'auto' (default) or integer (last slice position)
 
@@ -3748,6 +3815,9 @@ number >0 and <=1 indicating the length of the spike. If cfg.spikelength = 1, th
 
 ** cfg.spikesel ** - [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)  
 'all' (default) or numerical or logical selection of spikes.
+
+** cfg.split ** - [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)  
+cell-array of channel types between which covariance is split, it can also be 'all' or 'no'
 
 ** cfg.spm.cost_fun ** - [ft_volumerealign](/reference/ft_volumerealign)  
 cost function string: 'mi' - Mutual Information (default) 'nmi' - Normalised Mutual Information 'ecc' - Entropy Correlation Coefficient 'ncc' - Normalised Cross Correlation
@@ -3955,6 +4025,9 @@ name of the template file, e.g. CTF275_neighb.mat
 ** cfg.template ** - [ft_megrealign](/reference/ft_megrealign)  
 single dataset that serves as template
 
+** cfg.template ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+specification of a template grid (grid structure), or a filename of a template grid (defined in MNI space), either cfg.resolution or cfg.template needs to be defined. If both are defined cfg.template prevails
+
 ** cfg.template ** - [ft_volumenormalise](/reference/ft_volumenormalise)  
 string, filename of the template anatomical MRI (default = 'T1.mnc' for spm2 or 'T1.nii' for spm8)
 
@@ -3997,6 +4070,9 @@ integer array, ([1 by 2] or [1 by numel(cfg.channel) + numel(cfg.reflags)]), reg
 ** cfg.threshold ** - [ft_heartrate](/reference/ft_heartrate)  
 scalar, between 0 and 1 (default = 0.4)
 
+** cfg.tight ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+'yes' or 'no' (default is automatic)
+
 ** cfg.time ** - [ft_resampledata](/reference/ft_resampledata)  
 cell-array with one time axis per trial (i.e. from another dataset)
 
@@ -4008,6 +4084,9 @@ cell-array with one time axis per trial, which are for example obtained from an 
 
 ** cfg.timestampspersecond ** - [ft_spike_maketrials](/reference/ft_spike_maketrials)  
 number of timestaps per second (for Neuralynx, 1000000 for example). This can be computed for example from the LFP hdr (cfg.timestampspersecond = data.hdr.Fs*data.hdr.TimeStampPerSecond) or is a priori known.
+
+** cfg.timextime ** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+'yes' or 'no', performs time x time generalisation. In other words, the classifier is trained at each time point and tested at every time point. The result is a time x time matrix of classification performance. (default 'no') Note that searchlight and timextime cannot be run simultaneously (at least one option needs to be set to 'no').
 
 ** cfg.timwin ** - [ft_nonlinearassociation](/reference/ft_nonlinearassociation)  
 0.2
@@ -4071,6 +4150,9 @@ vector 1 x numtoi, the times on which the analysis windows should be centered (i
 
 ** cfg.toilim ** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 [tmin tmax] to specify a latency window in seconds, can be Nx2 vector
+
+** cfg.tol ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+number or empty for automatic default
 
 ** cfg.tolerance ** - [ft_appendfreq](/reference/ft_appendfreq)  
 scalar, tolerance to determine how different the frequency and/or time axes are allowed to still be considered compatible (default = 1e-5)
@@ -4186,10 +4268,10 @@ is an nTrials-by-M matrix, with at least 3 columns: Every row contains start (co
 ** cfg.trl ** - [ft_databrowser](/reference/ft_databrowser)  
 structure that defines the data segments of interest, only applicable for trial-based data
 
-** cfg.trl ** - [ft_artifact_threshold](/reference/ft_artifact_threshold)  
+** cfg.trl ** - [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms)  
 structure that defines the data segments of interest, see FT_DEFINETRIAL
 
-** cfg.trl ** - [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
+** cfg.trl ** - [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 structure that defines the data segments of interest. See FT_DEFINETRIAL
 
 ** cfg.trllen ** - [ft_freqsimulation](/reference/ft_freqsimulation)  
@@ -4301,7 +4383,10 @@ substructure with additional low-level options for this method
 'fsaverage'
 
 ** cfg.warp ** - [ft_electroderealign](/reference/ft_electroderealign)  
-string describing the spatial transformation for the template and headshape methods 'rigidbody' apply a rigid-body warp (default) 'globalrescale' apply a rigid-body warp with global rescaling 'traditional' apply a rigid-body warp with individual axes rescaling 'nonlin1' apply a 1st order non-linear warp 'nonlin2' apply a 2nd order non-linear warp 'nonlin3' apply a 3rd order non-linear warp 'nonlin4' apply a 4th order non-linear warp 'nonlin5' apply a 5th order non-linear warp 'dykstra2012' non-linear wrap only for headshape method, useful for projecting ECoG onto cortex hull 'fsaverage' surface-based realignment with FreeSurfer fsaverage brain 'fsinflated' surface-based realignment with FreeSurfer individual subject inflated brain
+string describing the spatial transformation for the template and headshape methods 'rigidbody' apply a rigid-body warp (default) 'globalrescale' apply a rigid-body warp with global rescaling 'traditional' apply a rigid-body warp with individual axes rescaling 'nonlin1' apply a 1st order non-linear warp 'nonlin2' apply a 2nd order non-linear warp 'nonlin3' apply a 3rd order non-linear warp 'nonlin4' apply a 4th order non-linear warp 'nonlin5' apply a 5th order non-linear warp 'dykstra2012' non-linear wrap only for headshape method, useful for projecting ECoG onto cortex hull 'fsaverage' surface-based realignment with FreeSurfer fsaverage brain (left->left or right->right) 'fsaverage_sym' surface-based realignment with FreeSurfer fsaverage_sym left hemisphere (left->left or right->left) 'fsinflated' surface-based realignment with FreeSurfer individual subject inflated brain (left->left or right->right)
+
+** cfg.warpmni ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+'yes'
 
 ** cfg.whichEcho ** - [ft_omri_pipeline_nuisance](/reference/ft_omri_pipeline_nuisance)  
 which echo to process for multi-echo sequences (default = 1)
@@ -4350,6 +4435,9 @@ number or list with indices, within-cell variable(s)
 
 ## X 
 
+** cfg.xgrid ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+
 ** cfg.xlim ** - [ft_movieplotER](/reference/ft_movieplotER), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotER](/reference/ft_singleplotER), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
 'maxmin' or [xmin xmax] (default = 'maxmin')
 
@@ -4369,6 +4457,9 @@ selection boundaries over first dimension in data (e.g., time) 'maxmin' or [xmin
 [min max], in physical units
 
 ## Y 
+
+** cfg.ygrid ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+vector (e.g. -20:1:20) or 'auto' (default = 'auto')
 
 ** cfg.ylim ** - [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR)  
 'maxmin' or [ymin ymax] (default = 'maxmin')
@@ -4402,6 +4493,9 @@ vertical scaling, can be 'maxmin', 'maxabs' or [ymin ymax] (default = 'maxabs')
 
 ## Z 
 
+** cfg.zgrid ** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
+vector (e.g. 0:1:20) or 'auto' (default = 'auto')
+
 ** cfg.zlim ** - [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)  
 [min max], range in cm to plot (default is automatic)
 
@@ -4410,6 +4504,9 @@ color scaling to apply to component topographies, 'minmax', 'maxabs' (default = 
 
 ** cfg.zlim ** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 limits for color dimension, 'maxmin', 'maxabs', 'zeromax', 'minzero', or [zmin zmax] (default = 'maxmin')
+
+** cfg.zlim ** - [ft_icabrowser](/reference/ft_icabrowser)  
+plotting limits for color dimension of topoplot, 'maxmin', 'maxabs', 'zeromax', 'minzero', or [zmin zmax] (default = 'maxmin')
 
 ** cfg.zlim ** - [ft_connectivityplot](/reference/ft_connectivityplot)  
 plotting limits for color dimension, 'maxmin', 'maxabs' or [zmin zmax] (default = 'maxmin')

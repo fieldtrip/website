@@ -1,5 +1,6 @@
 ---
 title: ft_plot_axes
+layout: default
 tags: 
 ---
 ```
@@ -23,5 +24,5 @@ tags:
    'fontname'     =
    'fontweight'   =
 
- See also FT_PLOT_SENS, FT_PLOT_MESH, FT_PLOT_ORTHO, FT_PLOT_HEADSHAPE, FT_PLOT_DIPOLE, FT_PLOT_VOL
+ See also FT_PLOT_SENS, FT_PLOT_MESH, FT_PLOT_ORTHO, FT_PLOT_HEADSHAPE, FT_PLOT_DIPOLE, FT_PLOT_HEADMODEL
 ```

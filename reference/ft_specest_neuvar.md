@@ -1,5 +1,6 @@
 ---
 title: ft_specest_neuvar
+layout: default
 tags: 
 ---
 ```

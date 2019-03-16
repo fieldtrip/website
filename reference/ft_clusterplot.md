@@ -1,5 +1,6 @@
 ---
 title: ft_clusterplot
+layout: default
 tags: 
 ---
 ```

@@ -5,7 +5,7 @@ tags: [faq]
 
 # How do I prevent FieldTrip from printing the time and memory after each function call?
 
-To inform the user about the requirements of each function call and thereby give him/her a better feeling on how to optimize the analysis using distributed computing, each FieldTrip function estimates the time and memory(*) it requires. This information about the call is printed at the end of the function, like this
+To inform the user about the requirements of each function call and thereby give him/her a better feeling on how to optimize the analysis using distributed computing, each FieldTrip function estimates the time and memory(\*) it requires. This information about the call is printed at the end of the function, like this
 
     cfg = [];
     cfg.dataset = 'Subject01.ds';
@@ -33,6 +33,6 @@ You can also pass it as a general option to all functions like this
 
 The configuration options in the global ft_default variable are (in general) on startup of each FieldTrip function merged with the cfg options that you pass to that function.
 
-Of course you can add this general setting to your startup.m file so that you don't have to type it  each time that you start MATLAB.
+Of course you can add this general setting to your startup.m file so that you don't have to type it each time that you start MATLAB.
 
-*) Note that the memory estimate is currently not yet available on windows.  
+\*) Note that the memory estimate is currently not yet available on windows.

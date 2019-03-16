@@ -8,11 +8,11 @@ In the Motor task, participants executed a simple hand or foot movement. The lim
 
 {% include image src="/assets/img/tutorial/shared/hcp_motort/screen_shot_2015-09-15_at_14.21.52.png" width="200" %}
 
-*Figure Caption: A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements.*
+_Figure Caption: A. Hand and Foot movements during the Motor Task. B. Example sequence of stimuli in a block of Right Hand motor movements._
 
 #### Block/Trial Overview
 
-Each block started with an instruction screen, indicating the side (left, right) and the limb (hand, foot) to be used by the subject in the current block. Then, 10 pacing stimuli were presented in sequence, each one instructing the participant to make a brisk movement. The pacing stimulus consisted of a small arrow in the center of the screen pointing to the side of the limb movement (left or right, above). The interval between consecutive stimuli was fixed to 1200 msec. The arrow stayed on the screen for 150 msec and for the remaining 1050 msec the screen was black. 
+Each block started with an instruction screen, indicating the side (left, right) and the limb (hand, foot) to be used by the subject in the current block. Then, 10 pacing stimuli were presented in sequence, each one instructing the participant to make a brisk movement. The pacing stimulus consisted of a small arrow in the center of the screen pointing to the side of the limb movement (left or right, above). The interval between consecutive stimuli was fixed to 1200 msec. The arrow stayed on the screen for 150 msec and for the remaining 1050 msec the screen was black.
 
 In addition to the blocks of limb movements there were 10 interleaved resting blocks, each one of 15 sec duration. During these blocks the screen remained black. The last block was always a resting block after the last limb movement block.
 
@@ -27,11 +27,11 @@ The photodiode was activated whenever a cueing stimulus or pacing arrow was pres
 
 {% include image src="/assets/img/tutorial/shared/hcp_motort/screen_shot_2015-09-15_at_14.22.40.png" width="200" %}
 
-*Figure Caption: Original Trigger channel sequence from one run of Motor Task. E-Prime and Photodiode triggers are superimposed.*
+_Figure Caption: Original Trigger channel sequence from one run of Motor Task. E-Prime and Photodiode triggers are superimposed._
 
 {% include image src="/assets/img/tutorial/shared/hcp_motort/screen_shot_2015-09-15_at_14.22.49.png" width="200" %}
 
-*Figure Caption: Photodiode trigger sequence extracted from the Trigger channel of one Motor Task run.*
+_Figure Caption: Photodiode trigger sequence extracted from the Trigger channel of one Motor Task run._
 ￼￼
 ￼The E-Prime triggers contain the information about the experimental sequence. These triggers are superimposed on the photodiode triggers, in the following description it is assumed that the photodiode triggers have been subtracted from the trigger channel so that only the triggers from the E-Prime stimulation protocol remain. Such an E-Prime trigger sequence, extracted from the trigger channel is shown, right.
 

@@ -13,7 +13,7 @@ where MATLAB is not available.
 
 The goal of this toolbox is to provide you with an easy MATLAB interface to
 distribute your jobs that is compatible with the MATLAB feval and cellfun
-functions.  It offers a simple MATLAB interface to distribute your jobs and you
+functions. It offers a simple MATLAB interface to distribute your jobs and you
 do not have to go to the Linux command-line to use the qsub command from there.
 
 The toolbox supports Linux clusters with Torque and other PBS versions, LSF, SLURM, Sun

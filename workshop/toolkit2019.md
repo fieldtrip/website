@@ -14,4 +14,4 @@ Preregistration is open until 1 March 2019. Please go to [this page](https://www
 
 ## Detailed Program
 
-This will follow. Please see the program of the [last year](/workshop/toolkit2018) to get an idea.  
+This will follow. Please see the program of the [last year](/workshop/toolkit2018) to get an idea.

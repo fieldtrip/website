@@ -1,5 +1,6 @@
 ---
 title: minimumnormestimate
+layout: default
 tags: 
 ---
 ```

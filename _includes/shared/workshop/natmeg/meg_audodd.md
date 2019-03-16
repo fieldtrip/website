@@ -6,7 +6,7 @@ For the EEG-MEG workshop at NatMEG we recorded a dataset of a single subject to 
 
 The experiment that the subject performed is a slight adaptation of the classical oddball experiment. Using the oddball paradigm one can study the well-known EEG component called the mismatch-negativity (MMN). The classical auditory oddball experiment involves the presentation of a continuous series of identical tones at a relatively slow rate, say between one every two seconds to two every second. Every so often, say one out of ten, the tone is slightly different in pitch, duration or loudness. In our version, an oddball occurs after every 3 to 7 standard tones. The interval between each tone is jittered between 700 to 900 ms.
 
-{% include image src="/assets/img/shared/workshop/natmeg/meg_audodd/paradigm.png" width="600" %}
+{% include image src="/assets/img/shared/workshop/natmeg/paradigm.png" width="600" %}
 
 ### Mismatch negativity
 
@@ -36,16 +36,16 @@ The standard tones were 400ms 1000Hz sine-waves, with a short 50ms ramping up- a
 
 The MEG system records event-triggers in a separate channels, called STI101 and STI102. These channels are recorded simultaneously with the data channels, and at the same sampling rate. The onset (or offset) can therefore be precisely timed with respect to the data. The following trigger codes can be used for the analysis we will be doing during the workshop:
 
--   Onset of standard stimulus: 1
--   Onset of oddball stimulus: 2
--   Button-press onset of left hand: 256
--   Button-press onset of right hand: 4096
+- Onset of standard stimulus: 1
+- Onset of oddball stimulus: 2
+- Button-press onset of left hand: 256
+- Button-press onset of right hand: 4096
 
 ### Data
 
--   Data was sampled at 1000Hz.
--   306 channels MEG of which 102 are magnetometers, and 204 are planar gradiometers.
--   128 electrode EEG. The reference was placed on the right mastoid, the ground on the left mastoid. The locations of the electrodes are placed according to the 5% rule, which is an extension of the standard 10-20 system for high-density EEG caps. You can find details here: <http://www.biosemi.com/publications/pdf/Oostenveld2001b.pdf>). In addition, the locations of the EEG electrodes was measured in 3D using the Polhemus system and recorded in the data.
--   Horizontal EOG(1) electrodes were placed just outside the left and right eye. Vertical EOG(2) were placed above and below the left eye.
--   Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
--   Electromyography of the lower arm flexors of the left(1) and right(2) arm were recorded.
+- Data was sampled at 1000Hz.
+- 306 channels MEG of which 102 are magnetometers, and 204 are planar gradiometers.
+- 128 electrode EEG. The reference was placed on the right mastoid, the ground on the left mastoid. The locations of the electrodes are placed according to the 5% rule, which is an extension of the standard 10-20 system for high-density EEG caps. You can find details here: <http://www.biosemi.com/publications/pdf/Oostenveld2001b.pdf>). In addition, the locations of the EEG electrodes was measured in 3D using the Polhemus system and recorded in the data.
+- Horizontal EOG(1) electrodes were placed just outside the left and right eye. Vertical EOG(2) were placed above and below the left eye.
+- Electrocardiogram (ECG) was recorded as a bipolar recording from the collarbones.
+- Electromyography of the lower arm flexors of the left(1) and right(2) arm were recorded.

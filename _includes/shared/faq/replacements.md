@@ -2,34 +2,34 @@ To prevent unnecessary dependencies on functions from additional Mathworks toolb
 
 Alternatives are provided for the following functions from the "stats" toolbox
 
-*  nansum, nanstd, etc.
-*  biocdf
-*  binopdf
-*  tcdf
-*  range
+- nansum, nanstd, etc.
+- biocdf
+- binopdf
+- tcdf
+- range
 
 Alternatives are provided for the following functions from the "signal" toolbox
 
-*  barthannwin
-*  bilinear
-*  blackmanharris
-*  bohmanwin
-*  boxcar
-*  butter
-*  filtfilt
-*  flattopwin
-*  gausswin
-*  hann
-*  hanning
-*  hilbert
-*  kaiser
-*  nuttallwin
-*  parzenwin
-*  rectwin
-*  triang
-*  tukeywin
-*  window
+- barthannwin
+- bilinear
+- blackmanharris
+- bohmanwin
+- boxcar
+- butter
+- filtfilt
+- flattopwin
+- gausswin
+- hann
+- hanning
+- hilbert
+- kaiser
+- nuttallwin
+- parzenwin
+- rectwin
+- triang
+- tukeywin
+- window
 
 Alternatives are provided for the following functions from the "images" toolbox
 
-*  rgb2hsv
+- rgb2hsv

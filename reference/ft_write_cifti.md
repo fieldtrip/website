@@ -1,5 +1,6 @@
 ---
 title: ft_write_cifti
+layout: default
 tags: 
 ---
 ```

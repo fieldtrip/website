@@ -1,5 +1,6 @@
 ---
 title: spm_ov_quivernmt
+layout: default
 tags: 
 ---
 ```
@@ -10,7 +11,7 @@ tags:
  For general help about
  spm_orthviews and plugins type
              help spm_orthviews
- at the MATLAB prompt.
+ at the matlab prompt.
 _______________________________________________________________________
 
  adapted from spm_ov_quiver.m disributed with SPM Tools / tbxDiffusion:

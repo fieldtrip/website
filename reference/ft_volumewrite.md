@@ -1,5 +1,6 @@
 ---
 title: ft_volumewrite
+layout: default
 tags: 
 ---
 ```
@@ -54,5 +55,5 @@ tags:
  file on disk. This mat files should contain only a single variable named 'data',
  corresponding to the input structure.
 
- See also FT_SOURCEANALYSIS, FT_SOURCESTATISTICS, FT_SOURCEINTERPOLATE
+ See also FT_SOURCEANALYSIS, FT_SOURCESTATISTICS, FT_SOURCEINTERPOLATE, FT_WRITE_MRI
 ```
