@@ -1,16 +1,18 @@
 ---
-title: ft_trialfun_general
+title: ft_trialfun_artinis
 layout: default
 tags: 
 ---
 ```
- FT_TRIALFUN_GENERAL determines trials/segments in the data that are
- interesting for analysis, using the general event structure returned
- by read_event. This function is independent of the dataformat
+ FT_TRIALFUN_ARTINIS is adjoining the result of ft_trialfun_general and
+ those events found by FT_TRIALFUN_GENERAL.
 
  The trialdef structure can contain the following specifications
-   cfg.trialdef.eventtype  = string
+   cfg.trialdef.eventtype  = 'string'
    cfg.trialdef.eventvalue = number, string or list with numbers or strings
+   cfg.trialdef.oxyproj    = 'string', indicating an oxyproj-file, in
+                             which information about the events for this
+                             oxy3-file are stored
    cfg.trialdef.prestim    = latency in seconds (optional)
    cfg.trialdef.poststim   = latency in seconds (optional)
 
@@ -26,5 +28,5 @@ tags:
    cfg.trialdef.eventtype = 'gui'
  a graphical user interface will allow you to select events of interest.
 
- See also FT_DEFINETRIAL, FT_PREPROCESSING
+ See also FT_TRIALFUN_GENERAL, FT_DEFINETRIAL, FT_PREPROCESSING
 ```
