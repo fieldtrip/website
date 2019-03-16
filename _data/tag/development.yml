@@ -22,3 +22,75 @@
 - name:  Code guidelines
   link:  /development/guideline/code
 
+- name:  Documentation guidelines
+  link:  /development/guideline/documentation
+
+- name:  Template guidelines
+  link:  /development/guideline/templates
+
+- name:  Guidelines for audio and video material
+  link:  /development/guideline/video
+
+- name:  Meetings
+  link:  /development/meeting
+
+- name:  Modular organization of the source code
+  link:  /development/module
+
+- name:  Reading and writing of EEG/MEG time series data
+  link:  /development/module/fileio
+
+- name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
+  link:  /development/module/plotting
+
+- name:  Project overview
+  link:  /development/project
+
+- name:  FieldTrip buffer C implementation
+  link:  /development/realtime/buffer_c
+
+- name:  FieldTrip buffer C++ implementation
+  link:  /development/realtime/buffer_cpp
+
+- name:  FieldTrip buffer Java interface
+  link:  /development/realtime/buffer_java
+
+- name:  FieldTrip buffer MATLAB interface
+  link:  /development/realtime/buffer_matlab
+
+- name:  FieldTrip buffer Python interface
+  link:  /development/realtime/buffer_python
+
+- name:  Suggested improvements for compatibility across versions
+  link:  /development/realtime/draft_compatability
+
+- name:  Suggested improvements for handling header and chunks
+  link:  /development/realtime/draft_header_chunks
+
+- name:  Suggested changes to the reference implementation
+  link:  /development/realtime/draft_implementation
+
+- name:  Suggested changes to the network protocol
+  link:  /development/realtime/draft_network
+
+- name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+  link:  /development/realtime/implementation
+
+- name:  FieldTrip buffer reference implementation
+  link:  /development/realtime/reference_implementation
+
+- name:  Scratchpad for the realtime buffer interface
+  link:  /development/realtime/scratchpad
+
+- name:  Accessing the FieldTrip source code through SVN
+  link:  /development/svn
+
+- name:  How can I keep track of changes to the code?
+  link:  /faq/how_can_i_keep_track_of_the_changes_to_the_code
+
+- name:  How should I share example data with the email list or developers?
+  link:  /faq/how_should_i_send_example_data_to_the_developers
+
+- name:  Why was FieldTrip maintained in SVN and not in git?
+  link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
+

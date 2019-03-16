@@ -1,0 +1,15 @@
+- name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
+  link:  /faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path
+
+- name:  How to select the correct SPM toolbox?
+  link:  /faq/how_to_select_the_correct_spm_toolbox
+
+- name:  I am working at the Donders, should I also download FieldTrip?
+  link:  /faq/i_am_working_at_the_donders_should_i_also_download_fieldtrip
+
+- name:  Replacements for functions from Mathworks toolboxes
+  link:  /faq/matlab_replacements
+
+- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
+  link:  /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path
+
