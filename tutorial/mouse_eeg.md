@@ -133,7 +133,7 @@ This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger 
       temp_data = abs(trigger_data(trigger_event(1,tr):trigger_event(1,tr)+stim_duration-1));
       idx = find_cross(temp_data, trigger_threshold, 'down'); clear temp_data
       trigger_event(2,tr) = size(find(idx == 1),2) / (stim_duration / hdr.Fs); clear idx
-    end; clear tr
+    end clear tr
 
     trl       = [trigger_event(1, :) - stim_duration+1; trigger_event(1, :) + rest_duration]';
     trl(:, 3) = zeros(size(trl, 1), 1);

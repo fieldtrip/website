@@ -17,11 +17,11 @@ This page explains how to get started reading and using each of the file types i
 
 ## Background
 
-MEG datasets obtained from a 4D-neuroimaging MEG-system are usually stored in a directory structure which looks like thi
+MEG datasets obtained from a 4D-neuroimaging MEG-system are usually stored in a directory structure which looks like this:
 
-/basepath/subjid/scanname/sessionname/runname/
+    /basepath/subjid/scanname/sessionname/runname/
 
-Within each runname/-directory is a bunch of files which do not have uniquely identifiable names, this is important to keep in mind when a given dataset consists of multiple runs per subject, or when you analyse multiple subjects.
+Within each runname/-directory is a bunch of files which do not have uniquely identifiable names, this is important to keep in mind when a given dataset consists of multiple runs per subject, or when you analyze multiple subjects.
 Each runname/-directory usually contains the following file
 
 1.  hs_file, containing a list of coordinates in 3D-space, describing the participant's headshape.

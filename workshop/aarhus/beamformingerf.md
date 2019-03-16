@@ -534,7 +534,7 @@ Now we can plot the result.
       cfg.xlim    = [-.3 1.75];
 
       subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
-    end;
+    end
     for i=1:length(tfrvc.label)
       cfg=[];
       cfg.channel = tfrvc.label{i};
@@ -542,7 +542,7 @@ Now we can plot the result.
       cfg.xlim    = [-.5 2];
       cfg.ylim    = [1 40];
       subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
-    end;
+    end
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_meg.png" width="600" %}
 
@@ -556,7 +556,7 @@ Take your time to verbalize what you see. Try to decompose the averaged response
 
 ## (EEG) The forward model and lead field matrix
 
-We will continue to analyse the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
+We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
 
     load data_eeg_reref_ica
     %% sort into left and right hand response
@@ -746,7 +746,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
       cfg.xlim    = [-.3 1.75];
 
       subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
-    end;
+    end
     for i=1:length(tfrvc.label)
       cfg=[];
       cfg.channel = tfrvc.label{i};
@@ -754,7 +754,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
       cfg.xlim    = [-.5 1.75];
       cfg.ylim    = [1 40];
       subplot(2,2,i+1);ft_singleplotTFR(cfg,tfrvcbl);
-    end;
+    end
 
 {% include image src="/assets/img/workshop/aarhus/beamformingerf/timecourseatm1_eeg.png" width="600" %}
 _Figure 6: Time course of activity in the primary motor cortex reconstructed with EEG._

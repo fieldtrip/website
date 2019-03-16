@@ -160,7 +160,7 @@ treated as a communication error.
 
 Suppose you want to append 200 samples from 32 channels of single precision data. In this case,
 the **data_type** field contains the value 9 (DATATYPE_FLOAT32 in ''message.h''), and the size of all samples
-is 200*32*4 = 25600 bytes. The complete request would look like thi
+is 200*32*4 = 25600 bytes. The complete request would look like this:
 
 | message definition (request)                        | fixed data definition                                               | data samples                                       |
 | --------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------- |
@@ -171,7 +171,7 @@ is 200*32*4 = 25600 bytes. The complete request would look like thi
 This request is used for retrieving data samples from the buffer and comes in two flavours. The first variant
 just asks for **all** samples that are currently present in the buffer (note that this does not necessarily
 correspond to all samples that have been written so far, since old samples might have fallen out of the internally
-used ring buffer already). For this, the client just sends 8 bytes like the followin
+used ring buffer already). For this, the client just sends 8 bytes like the following
 
 | message definition (request)                    |
 | ----------------------------------------------- |

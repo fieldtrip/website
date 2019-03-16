@@ -70,11 +70,11 @@ It only depends on blas/lapack or atlas on Linux and Mac OS X and the Intel MKL 
 
 ## Make sure that it works
 
-After installing, you should check on the Matlab command line that the OpenMEEG command-line executable can be found. This is done by typing in your MATLAB promp
+After installing, you should check on the MATLAB command line that the OpenMEEG command-line executable can be found. This is done by typing in your MATLAB prompt:
 
     > system('om_assemble')
 
-You should see something like thi
+You should see something like this:
 
     > system('om_assemble');
     om_assemble version 2.0.svn (570) compiled at Mar 28 2010 07:25:26

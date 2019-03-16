@@ -163,7 +163,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I debug a problematic distributed job?](/faq/how_can_i_debug_a_problematic_distributed_job)
 - [How can I prevent a job from executing twice?](/faq/how_can_i_prevent_a_job_from_executing_twice)
 - [How can I read and write files if I use other people's peers?](/faq/how_can_i_read_and_write_files_if_i_use_other_people_s_peers)
-- [How can I set up the peer distributed computing on a large linux cluster?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_large_linux_cluster)
+- [How can I set up the peer distributed computing on a large Linux cluster?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_large_linux_cluster)
 - [How can I set up the peer distributed computing on a single multicore computer?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_single_multicore_computer)
 - [How can I set up the peer distributed computing on a small number of computers?](/faq/how_can_i_set_up_the_peer_distributed_computing_on_a_small_number_of_computers)
 - [How can I stop the different threads created by peermaster and peerslave?](/faq/how_can_i_stop_the_different_threads_created_by_peermaster_and_peerslave)

@@ -51,7 +51,7 @@ Consistent implementation of option for trial selection in all relevant function
 - nonlinearassociation.m -done-
 
 How it's currently implemented in these function
-  
+
  % cfg.trials = 'all' or a selection like 1:10 (default = 'all')
 
     % set the defaults
@@ -128,7 +128,7 @@ How it's currently implemented in these function
 
 (note: when cfg.trials='all' this doesn't apply)
 
-the code for adjusting the trl should look something like thi
+the code for adjusting the trl should look something like this:
 
 finding the trl (see e.g. appenddata.m
 
@@ -159,12 +159,12 @@ adjusting the tr
 
     %   cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
 
-## Appendix: useful linux commands
+## Appendix: useful Linux commands
 
-Find functions that use raw dat
+Find functions that use raw data:
 
     grep -n datatype.*raw *.m
 
-Find functions that already have cfg.trials optio
+Find functions that already have cfg.trials option:
 
     grep -n cfg.trials *.m

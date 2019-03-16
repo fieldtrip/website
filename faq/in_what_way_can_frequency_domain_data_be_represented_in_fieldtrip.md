@@ -7,11 +7,11 @@ tags: [faq, freq, connectivity, coherence]
 
 ## Different output options in ft_freqanalysis
 
-When computing the frequency domain representation of your data using **[ft_freqanalysis](/reference/ft_freqanalysis)**, you can specify the cfg-option 'output'. This option determines the representation of your dat
+When computing the frequency domain representation of your data using **[ft_freqanalysis](/reference/ft_freqanalysis)**, you can specify the cfg-option 'output'. This option determines the representation of your data:
 
     cfg.output = 'pow';
 
-The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like thi
+The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like this:
 
     freq =
 
@@ -22,11 +22,11 @@ The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like t
       cumtapcnt: [200x1 double]
             cfg: [1x1 struct]
 
-The numeric data will be stored in the field called 'powspctrm', containing the (real-valued) power per channel and frequency bin (and time bin, depending on cfg.method). As per request, using the cfg.keeptrials and cfg.keeptapers options, you can get an estimate for each single trial / taper.
+The numeric data will be stored in the field called 'powspctrm', containing the (real-valued) power per channel and frequency bin (and time bin, depending on cfg.method). As per request, using the cfg.keeptrials and cfg.keeptapers options, you can get an estimate for each single trial and taper.
 
     cfg.output = 'powandcsd';
 
-The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like thi
+The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like this:
 
     freq =
 
@@ -43,7 +43,7 @@ The numeric data will now be stored in two fields: the 'powspctrm' and the 'crss
 
     cfg.output = 'fourier';
 
-The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like thi
+The output to **[ft_freqanalysis](/reference/ft_freqanalysis)** will look like this:
 
     freq =
 
@@ -59,7 +59,7 @@ The numeric data are now stored in the (complex-valued) 'fourierspctrm' field. I
 
 ## Choosing the right output option for ft_freqanalysis
 
-Which representation is most useful for your analysis depends very much on what you want to do with it, how big your data sets are, etc. The disadvantage of the fourier representation is that it requires the single trial and tapers to be stored in memory, and if that is not needed, a representation containing the average across trials or tapers may be more memory efficient. On the other hand, a cross spectrum between all channel pairs and a lot of frequency bins (and time bins) can quickly become a very big matrix, and the more concise representation of fourier spectra may be more efficient.
+Which representation is most useful for your analysis depends very much on what you want to do with it, how big your data sets are, etc. The disadvantage of the Fourier representation is that it requires the single trial and tapers to be stored in memory, and if that is not needed, a representation containing the average across trials or tapers may be more memory efficient. On the other hand, a cross spectrum between all channel pairs and a lot of frequency bins (and time bins) can quickly become a very big matrix, and the more concise representation of fourier spectra may be more efficient.
 
 ## A historical note
 

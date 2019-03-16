@@ -13,7 +13,7 @@ The low-level functions are combined in the **specest** toolbox which is self-co
 1.  **[ft_specest_mtmconvol](/reference/ft_specest_mtmconvol)**
 
 
-    * *Wavelet convolution in the time-domain by multiplication in the frequency domain. Wavelets used are complex sinusoids multiplied with a windowing function (e.g. Slepian, Hanning, Hamming,...).*
+    * *Wavelet convolution in the time-domain by multiplication in the frequency domain. Wavelets used are complex sinusoids multiplied with a windowing function (e.g. Slepian, Hanning, Hamming, ...).*
 
 2.  **[ft_specest_mtmfft](/reference/ft_specest_mtmfft)**
 

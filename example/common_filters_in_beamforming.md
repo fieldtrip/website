@@ -48,7 +48,7 @@ We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we p
     cfg=[];
     cfg.method      = 'mtmfft';
     cfg.output      = 'fourier';  % gives the complex Fourier spectra
-    cfg.foilim      = [60 60];    % analyse 40-80 Hz (60 Hz +/- 20 Hz smoothing)
+    cfg.foilim      = [60 60];    %analyze40-80 Hz (60 Hz +/- 20 Hz smoothing)
     cfg.taper       = 'dpss';
     cfg.tapsmofrq   = 20;
     cfg.keeptrials  = 'yes';      % in order to separate the conditions again afterwards, we need to keep the trials. This is not otherwise necessary to compute the common filter
@@ -101,7 +101,7 @@ We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we p
     cfg=[];
     cfg.method      = 'mtmfft';
     cfg.output      = 'powandcsd';  % gives power and cross-spectral density matrices
-    cfg.foilim      = [60 60];      % analyse 40-80 Hz (60 Hz +/- 20 Hz smoothing)
+    cfg.foilim      = [60 60];      %analyze40-80 Hz (60 Hz +/- 20 Hz smoothing)
     cfg.taper       = 'dpss';
     cfg.tapsmofrq   = 20;
     cfg.keeptrials  = 'yes';        % in order to separate the conditions again afterwards, we need to keep the trials. This is not otherwise necessary to compute the common filter

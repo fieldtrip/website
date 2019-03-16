@@ -66,7 +66,7 @@ The most important fields are 'dataFIC_LP.trial' containing the individual trial
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/trial1_3feb09_ERF.png" width="400" %}
 
-_Figure: The MEG data from a single trial in a single sensor obtained after FT_PREPROCESSING._
+_Figure: The MEG data from a single trial in a single sensor obtained after ft_preprocessing._
 
 To perform the preprocessing for the fully congruent (FC) and initiall congruent (IC) conditions, do the followin
 
@@ -117,7 +117,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/multiplot_1cond_3feb09_erf.png" width="700" %}
 
-_Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using FT_PREPROCESSING followed by FT_TIMELOCKANALYSIS._
+_Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis._
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure. To plot all conditions list them as multiple variable
 
@@ -226,7 +226,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png" width="500" %}
 
-_Figure: A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using FT_MEGPLANAR and FT_COMBINEPLANAR.._
+_Figure: A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using ft_megplanar and ft_combineplanar._
 
 #### Exercise 3
 

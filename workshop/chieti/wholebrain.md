@@ -11,7 +11,7 @@ tags: [chieti, hcp-motort]
 This tutorial contains hands-on material that we used for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 {% include markup/end %}
 
-In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org).
+In this tutorial we will analyze a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org).
 
 {% include /shared/tutorial/hcp_motort.md %}
 

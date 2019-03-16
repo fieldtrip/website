@@ -7,7 +7,7 @@ tags: [peer]
 
 The FieldTrip-peer toolbox facilitates you to do distributed computing on an ad-hoc cluster. Setting up this peer-to-peer cluster does not require a system administrator, and using it does not require a lot of technical skills.
 
-The peer toolbox is inspired by the situation that many neuroscience research environments have plenty of computational power in the form of workstations that are idling most of the time, but that only few research institutes have the resources to set up a full-fledged Torque, SGE or Condir linux cluster. With the peer toolbox you can easily take a few of the computers of your room mates if they are not around, and combine those with your own workstation to speed up your computations.
+The peer toolbox is inspired by the situation that many neuroscience research environments have plenty of computational power in the form of workstations that are idling most of the time, but that only few research institutes have the resources to set up a full-fledged Torque, SGE or Condir Linux cluster. With the peer toolbox you can easily take a few of the computers of your room mates if they are not around, and combine those with your own workstation to speed up your computations.
 
 This toolbox has been developed as part of the FieldTrip toolbox, but can be used separately. See http://www.fieldtriptoolbox.org for general details on the FieldTrip project, http://www.fieldtriptoolbox.org/development/module/peer for specific details on the peer toolbox or see http://www.fieldtriptoolbox.org/faq for questions.
 
@@ -90,7 +90,7 @@ Elsewhere on this website you can find more examples on the use of the peer tool
 
 ### How it works in detail
 
-The idea is loosely based on the [FieldTrip buffer](/development/realtime/buffer), which is a multithreaded TCP server implemented as a mex file. The TCP server runs in a separate thread attached to Matlab, but not blocked by Matlab command execution. Let's refer to this as the **"peer server"**. The peer server has the following responsibilitie
+The idea is loosely based on the [FieldTrip buffer](/development/realtime/buffer), which is a multithreaded TCP server implemented as a mex file. The TCP server runs in a separate thread attached to Matlab, but not blocked by MATLAB command execution. Let's refer to this as the **"peer server"**. The peer server has the following responsibilitie
 
 1.  announce itself on the network
 2.  discover the other peers

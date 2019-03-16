@@ -77,7 +77,7 @@ We will first clean the data from potential bad segments such as SQUID jumps and
     trlind = [];
     for i=1:length(dataclean.cfg.artfctdef.summary.artifact)
       badtrials(i) = find(data.sampleinfo(:,1)==dataclean.cfg.artfctdef.summary.artifact(i));
-    end;
+    end
     disp(badtrials);
 
     % alternatively, you can use the list below, this is the definition of the badtrials for the data that has been stored on dis

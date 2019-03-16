@@ -27,7 +27,7 @@ The second (visualization / real-time analysis) computer runs MATLAB, reads the 
 
 1. Download and unzip fieldtrip
 
-2. Run in a linux termina
+2. Run in a Linux terminal:
 
    sudo echo 67596000 > /proc/sys/kernel/shmmax
 
@@ -37,7 +37,7 @@ This command increases the amount of shared memory that the software is allowed 
 
 or by rebooting the system. To make this change permanent, you can update the file /etc/sysctl.conf.
 
-3. Run in a linux termina
+3. Run in a Linux terminal:
 
    \$HOME/fieldtrip/realtime/src/acquisition/ctf/acq2ftx
 
@@ -47,7 +47,7 @@ or by rebooting the system. To make this change permanent, you can update the fi
 
 1. Download and unzip fieldtrip
 
-2. Run in a linux termina
+2. Run in a Linux terminal:
 
    \$HOME/fieldtrip/realtime/src/acquisition/neuromag/neuromag2ft
 
@@ -57,13 +57,13 @@ or by rebooting the system. To make this change permanent, you can update the fi
 
 1. Download and unzip fieldtrip
 
-2. Start MATLAB and make sure the online_meg directory is added to pat
+2. Start MATLAB and make sure the online_meg directory is added to path:
 
    addpath ~/fieldtrip
    addpath ~/fieldtrip/realtime/online_meg
    ft_defaults
 
-3. Type in the MATLAB command windo
+3. Type in the MATLAB command window:
 
    cfg = [];
    cfg.dataset = 'buffer://hostname:1972';

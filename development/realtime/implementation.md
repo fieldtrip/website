@@ -59,14 +59,18 @@ There are two applications, based on the FieldTrip buffer, that allow to record 
 against using these tools for archiving your data.
 
 The first application, **recording**, will act to the outside world as a normal FieldTrip buffer server. Internally, however, every incoming request is also handed to a callback function that stores all incoming data on disk. The program resides in ''fieldtrip/realtime/acquisition/general/'' and
-is called like thi
-recording someDirectory [port=1972]
+is called like this:
+
+    recording someDirectory [port=1972]
+
 This will spawn the callback-enabled buffer server on the given port, create the given directory (which must NOT exist already), and write a plain text file ''contents.txt'' into that directory. This file is always the same and just contains a general description of the way the **recording** writes data.
 Now, each time a header is written, a new subdirectory (starting with 0001) is created, the header is written there in binary and ASCII form, and all further samples and events are also written to binary files. The arrival time of incoming sample and event blocks is measured relative to the
 arrival time of the header, and logged in an ASCII file called ''timing''. For stopping the operation, the user may safely press CTRL-C which will close down the server thread and close any open files.
 
-The other application, **playback** in the ''fieldtrip/realtime/acquisition/general/'' directory, can be started like this
-playback someDirectory/0001 hostname port
+The other application, **playback** in the ''fieldtrip/realtime/acquisition/general/'' directory, can be started like this:
+
+    playback someDirectory/0001 hostname port
+
 This will replay the data recorded in the first "session" above, at almost exactly the original timing. In contrast to **recording**, this application will not spawn its own buffer server, but it can only stream data to a remote server. The design rational for this was that you might want to replay an experiment several times, but keep the buffer server running in a similar way as it's done with real acquisition systems.
 
 To create a new buffer you can call this from MATLAB using ft_create_buffer

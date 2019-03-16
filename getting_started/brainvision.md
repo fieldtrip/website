@@ -82,6 +82,6 @@ FieldTrip provides electrode layouts for the purpose of plotting data recorded b
 
 Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications. Specify the layout that matches your set-up/easycap when plotting, e.g.
 
-cfg.layout = 'easycapM1.lay';
+    cfg.layout = 'easycapM1.lay';
 
 Examples regarding the type of plots can be observed [here](/tutorial/plotting). In the [template](/template/layout) directory you can find a collection of template layouts for plotting. If you want to create your own custom layout files, please have a look [here](/tutorial/layout).

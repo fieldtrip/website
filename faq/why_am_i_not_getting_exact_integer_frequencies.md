@@ -11,7 +11,7 @@ When defining time and/or frequency intervals, you should be aware about the dif
 
 ## Using ft_definetrial with INCLUSIVE and/or EXCLUSIVE interval selection
 
-For trigger-based trial selection, when using the default trial function **ft_trialfun_general**, the cfg.trialdef.postim value is NOT inclusive. For example, if the configuration is like thi
+For trigger-based trial selection, when using the default trial function **ft_trialfun_general**, the cfg.trialdef.postim value is NOT inclusive. For example, if the configuration is like this:
 
     cfg                         = [];
     cfg.dataset                 = 'Subject01.ds';
@@ -78,7 +78,7 @@ You can define your time window in inclusive terms. i.e. as [-1 2] with square b
     end
     end
 
-Alternatively, you can add one sample (in seconds) to the poststim specification like thi
+Alternatively, you can add one sample (in seconds) to the poststim specification like this:
 
     hdr         = ft_read_header(cfg.dataset);
 

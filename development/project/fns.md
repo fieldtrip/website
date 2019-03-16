@@ -20,14 +20,14 @@ A: All inverse methods in FieldTrip are independent from the forward model, i.e.
 
 1. FNS computes the forward solution starting from segmented volumes (does not require necessarily meshes as input, but uses FSL (if installed) to segment them)
 2. The output of FNS is a volumetric image representing the voltage in all points of the space
-3. FNS on a linux machine requires Matlab and [Bielectromagnetism Matlab toolbox](http://eeg.sourceforge.net/) (for time series visualization?)
+3. FNS on a Linux machine requires Matlab and [Bielectromagnetism Matlab toolbox](http://eeg.sourceforge.net/) (for time series visualization?)
 4. To run FNS forward solver a user need to have 1 GByte of memory available
 
 ## How it works
 
 First create and store the system matrix in output file data.h
 
-    # Example of linux shell command
+    # Example of Linux shell command
     elecsfwd --img smri-seghead --electrodes electrodes.h5 --data data.h5 --contable  ../../data/conductivity/contable.csv --TOL 1e-8'
 
 The smri-seghead file is the name of a analyze format file (.hdr, .img) which contains the segmentations with the assigned tissue values (e.g. gray matter = 1, white matter =2, or single sphere = 1).

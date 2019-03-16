@@ -466,7 +466,7 @@ We create a dummy structure where we identify the power values per voxel and use
     dummy=atlas;
     for i=1:length(parcel.pow)
           dummy.tissue(find(dummy.tissue==i))=parcel.pow(i);
-    end;
+    end
     %%
     source_int.parcel=dummy.tissue;
     source_int.coordsys = 'mni';
@@ -602,7 +602,7 @@ We repeat the steps from above and plot the result in parceled brain space.
     for i=1:length(parcel.stat)
           dummy.tissue(find(dummy.tissue==i))=parcel.stat(i);
           dummymask.tissue(find(dummymask.tissue==i))=parcelmask.mask(i);
-    end;
+    end
     %% plot the result
     statint.parcel=dummy.tissue;
     statint.coordsys = 'mni';
@@ -715,13 +715,13 @@ On the basis of the computed filters, kept in the output, it is now possible to 
     for i=1:length(dataica.trial)
         virtsens.trial{i}=spatialfilter*dataica.trial{i};
 
-    end;
+    end
     virtsens.time=dataica.time;
     virtsens.fsample=dataica.fsample;
     indx=[indxFML;indxHGL;indxHGR];
     for i=1:length(virtsens.trial{1}(:,1))
         virtsens.label{i}=[num2str(i)];
-    end;
+    end
 
 Since our main interest is the time courses common to a given parcel we can average over within parcel locations.
 
@@ -754,7 +754,7 @@ Now we compute the source wave forms, plot and evaluate the result.
         cfg.xlim    = [-.1 1];
 
         subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
-    end;
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/sourcewaveformsensorygating.png" width="600" %}
 
@@ -785,7 +785,7 @@ Now we can plot and evaluate the result of the power estimates essentially confi
         cfg.xlim    = [-.5 1.6];
         cfg.ylim    = [0 20];
         subplot(2,2,i);ft_singleplotTFR(cfg,tfr);
-    end;
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/tfrvirtsensorsensorygating.png" width="600" %}
 
@@ -810,7 +810,7 @@ and restructure the output such that it can be plotted with an appropriate plott
         cfg.xlim    = [-.1 1];
         cfg.ylim    = [0 20];
         subplot(2,2,i);ft_singleplotTFR(cfg,coh);
-    end;
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/coherencesensorygating.png" width="400" %}
 
@@ -838,7 +838,7 @@ A property of volume conduction is instantaneousness. As a consequence a given p
         cfg.xlim    = [-.1 1];
         cfg.ylim    = [0 20];
         subplot(2,2,i);ft_singleplotTFR(cfg,coh);
-    end;
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/imagcoherencesensorygating.png" width="400" %}
 
@@ -902,7 +902,7 @@ In the following we flip the time axis.
     tmpdata=prestimdata;
     for jj=1:length(tmpdata.trial)
     tmpdata.trial{jj}=fliplr(tmpdata.trial{jj});
-    end;
+    end
 
 And compute granger analysis on these flipped data.
 

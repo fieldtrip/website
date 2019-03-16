@@ -7,7 +7,7 @@ tags: [realtime, biosemi]
 
 This page describes the interface between the [Biosemi EEG amplifier](http://www.biosemi.com) and the [FieldTrip buffer](/development/realtime/buffer).
 
-The acquisition setup consists of a battery box, the AD box, an analog input box, and the USB receiver device. We provide a standalone tool called **biosemi2ft** (see ''realtime/bin/`<your OS>`) that interfaces directly to the USB driver and thus does not depend on the Actiview software that Biosemi ships. We have tested the tool on Windows XP (32 bit), Windows (64 bit), Mac OS X (32 bit), and Linux (32 bit). It is called on the command line like thi
+The acquisition setup consists of a battery box, the AD box, an analog input box, and the USB receiver device. We provide a standalone tool called **biosemi2ft** (see ''realtime/bin/`<your OS>`) that interfaces directly to the USB driver and thus does not depend on the Actiview software that Biosemi ships. We have tested the tool on Windows XP (32 bit), Windows (64 bit), Mac OS X (32 bit), and Linux (32 bit). It is called on the command line like this:
 
     biosemi2ft `<config-file>` `<gdf-file>` `<hostname>` `<port>`
 
@@ -29,90 +29,62 @@ argument for **biosemi2ft**, the first GDF file will be called ''mydata_S1.gdf''
 
 The ActiveTwo can send out 312 data channels in total, out of which there are 256 EEG channels, 8 EXG channels, 8 JAZZ channels, further 8 specialised channels, and finally (optionally) up to 32 channels from the analog input box. If used with the analog input box, the sampling frequency is fixed at 2048 Hz. Streaming out all that data is an overkill for most applications, so we provide the following configuration file syntax for selection acquisition parameters (example ''config.txt''
 
+```ini
 # comments start with a hash
-
 ; ... or with a semicolon
 ; empty lines are fine as well
 
 # Write n=label to select hardware channel number n (starting from 1)
-
-# and attach a label to it. This will show up in the FieldTrip buffer
-
+# and attach a label to it. This will show up in the Fieldtrip buffer
 # and the GDF file.
-
 # Currently, there is no check for double inclusion of channels.
-
 # That is, if you define 1=FOO and 1=BAR, the first hardware channel
-
 # will show up twice, with different names.
-
 # Channels listed before the first [save] or [stream] line will be added
-
 # to both saving and streaming selections. Write [select] to enable
-
 # selection for both saving and streaming.
-
-    [select]
-
+[select]
 1=A1
 2=A2
 
 # Now we add some more channel for saving only
-
-    [save]
-
+[save]
 33=B1
 34=B2
 
 # And some channels we only want to stream
-
-    [stream]
-
+[stream]
 65=C1
 66=C2
 
 # Please take note that the channels will be written out in the order specified here,
-
 # that is, they will not be sorted according to the hardware channel number!
 
 # Write "downsample X" with a positive number X to set the downsampling
-
 # factor for streaming. The GDF file will receive full-rate data.
-
-    downsample 8
+downsample 8
 
 # Write "bandwidth X" with a positive real number X to set the cutoff frequency
-
 # of a Butterworth low-pass filter.
-
-    bandwidth 50
+bandwidth 50
 
 # Write "bworder N" to set the order of the lowpass Butterworth filter for downsampling
-
-    bworder 4
+bworder 4
 
 # Refresh period (in seconds) for inserting extra events.
-
 # Battery events are sent out in a fixed interval (set 0 to disable).
-
 # Status events are sent out when the status changes, OR when the specified
-
 # time has elapsed after the last event was sent out.
-
-    statusrefresh 4
-    batteryrefresh 20
+statusrefresh 4
+batteryrefresh 20
 
 # Triggers will be written as FieldTrip buffer events with type="TRIGGER" and a
-
 # value corresponding to the 16-bit trigger signal.
-
 # With the keyword splittrigger, you can opt to split the 16-bit trigger signal
-
 # into two 8-bit signals, and give names to the events that are sent out for the
-
 # low and high byte of the original signal, respectively.
-
-    splittrigger stimulus response
+splittrigger stimulus response
+```
 
 ### Compilation
 

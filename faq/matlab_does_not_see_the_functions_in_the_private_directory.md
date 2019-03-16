@@ -15,7 +15,7 @@ The private directory provides a convenient way of separating the high-level fun
     cd /your/path/to/fieldtrip
     mv private ../fieldtrip_private
 
-(on the Matlab prompt)
+(on the MATLAB prompt)
 
     addpath /your/path/to/fieldtrip
     addpath /your/path/to/fieldtrip_private

@@ -235,9 +235,9 @@ Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes 
 {% include markup/info %}
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
-cfg = [];
-cfg.viewmode = 'vertical';
-ft_databrowser(cfg, data_clean);
+    cfg = [];
+    cfg.viewmode = 'vertical';
+    ft_databrowser(cfg, data_clean);
 
 Note that you can also use the data browser to mark artifacts (instead of or in addition to ft_rejectvisual).
 {% include markup/end %}

@@ -22,23 +22,22 @@ The distributed computing toolbox requires that you begin by starting up the "wo
 which starts 4 workers with the "local" configuration. Subsequently you can use parfor instead of the normal for to iterate over a number of computations, as in
 
     dataset = {
+    'Subject01.ds'
+    'Subject02.ds'
+    'Subject03.ds'
+    };
 
-'Subject01.ds'
-'Subject02.ds'
-'Subject03.ds'
-};
-  
- parfor i=1:3
-cfg = [];
-cfg.dataset = dataset{i}
-data{i} = ft_preprocessing(cfg);
-end
+    parfor i=1:3
+      cfg = [];
+      cfg.dataset = dataset{i}
+      data{i} = ft_preprocessing(cfg);
+    end
 
 Alternatively you can use the dfeval function like this
 
     for i=1:3
-    cfg{i} = [];
-    cfg{i}.dataset = dataset{i};
+      cfg{i} = [];
+      cfg{i}.dataset = dataset{i};
     end
 
     data = dfeval(@ft_preprocessing, cfg, 'Configuration', 'local');

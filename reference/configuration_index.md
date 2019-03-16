@@ -7,6 +7,9 @@ layout: default
 
 A detailed description of each function is available in the [reference documentation](/reference).
 
+** cfg.TR ** - [ft_realtime_fmriproxy](/reference/ft_realtime_fmriproxy)  
+2.0
+
 ## A 
 
 ** cfg.absdiff ** - [ft_preprocessing](/reference/ft_preprocessing)  
@@ -23,6 +26,12 @@ distance from fiducial coordinate; green when within limits (default = 0.15 cm)
 
 ** cfg.accuracy_orange ** - [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)  
 orange when within limits, red when out (default = 0.3 cm)
+
+** cfg.acquisition ** - [ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy)  
+string, name of computer running the Cheetah software (default = 'fcdc284')
+
+** cfg.age ** - [ft_nirs_prepare_ODtransformation](/reference/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)  
+scalar, age of the subject (necessary to automatically select the appropriate DPF, or
 
 ** cfg.align ** - [ft_spike_waveform](/reference/ft_spike_waveform)  
 'yes' (def). or 'no'. If 'yes', we align all waves to maximum
@@ -473,6 +482,12 @@ scalar, baseline length in seconds (default = 0)
 ** cfg.baudrate ** - [ft_omri_quality](/reference/ft_omri_quality)  
 serial port baudrate (default = 19200)
 
+** cfg.bcifun ** - [ft_realtime_packettimer](/reference/ft_realtime_packettimer)  
+processing of the data (default = @bcifun_timer)
+
+** cfg.bcifun ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
+the BCI function that is called
+
 ** cfg.begsample ** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 single number or Nx1 vector, expressed in samples relative to the start of the input trial
 
@@ -530,14 +545,29 @@ ascending vector of isi bin edges.
 ** cfg.binsize ** - [ft_spike_psth](/reference/ft_spike_psth)  
 [binsize] in sec or string. If 'scott', we estimate the optimal bin width using Scott's formula (1979). If 'sqrt', we take the number of bins as the square root of the number of observations. The optimal bin width is derived over all neurons; thus, this procedure works best if the input contains only one neuron at a time.
 
+** cfg.blocksize ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+0.5;
+
 ** cfg.blocksize ** - [ft_icabrowser](/reference/ft_icabrowser)  
 blocksize of time course (default = 1 sec)
 
 ** cfg.blocksize ** - [ft_databrowser](/reference/ft_databrowser)  
 duration in seconds for cutting the data up
 
-** cfg.blocksize ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.blocksize ** - [ft_realtime_modeegproxy](/reference/ft_realtime_modeegproxy)  
+number, in seconds (default = 0.125)
+
+** cfg.blocksize ** - [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+number, in seconds (default = 0.5)
+
+** cfg.blocksize ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_topography](/reference/ft_realtime_topography)  
 number, size of the blocks/chuncks that are processed (default = 1 second)
+
+** cfg.blocksize ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
+number, size of the blocks/chuncks that are processed in seconds (default = 1)
+
+** cfg.blocksize ** - [ft_realtime_pooraudioproxy](/reference/ft_realtime_pooraudioproxy)  
+size of recorded audio blocks in seconds (default=1)
 
 ** cfg.bootstrap ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 'no' or 'yes' bootstrap resampling of trials
@@ -569,11 +599,14 @@ bandpass transition width (firws, overrides order, default set in low-level func
 ** cfg.bpfiltdir ** - [ft_preprocessing](/reference/ft_preprocessing)  
 filter direction, 'twopass' (default), 'onepass' or 'onepass-reverse' or 'onepass-zerophase' (default for firws) or 'onepass-minphase' (firws, non-linear!)
 
-** cfg.bpfilter ** - [ft_preprocessing](/reference/ft_preprocessing)  
+** cfg.bpfilter ** - [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
 'no' or 'yes' bandpass filter (default = 'no')
 
 ** cfg.bpfilter ** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_connectivitysimulation](/reference/ft_connectivitysimulation)  
 'yes' (or 'no')
+
+** cfg.bpfilter ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+[15 25];
 
 ** cfg.bpfiltord ** - [ft_preprocessing](/reference/ft_preprocessing)  
 bandpass filter order (default set in low-level function)
@@ -584,8 +617,14 @@ digital filter type, 'but' or 'firws' or 'fir' or 'firls' (default = 'but')
 ** cfg.bpfiltwintype ** - [ft_preprocessing](/reference/ft_preprocessing)  
 bandpass window type, 'hann' or 'hamming' (default) or 'blackman' or 'kaiser' (firws)
 
+** cfg.bpfreq ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+	 'yes'; ft_realtime_topography(cfg);
+
 ** cfg.bpfreq ** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation), [ft_connectivitysimulation](/reference/ft_connectivitysimulation)  
 [bplow bphigh] (default: [15 25])
+
+** cfg.bpfreq ** - [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+bandpass frequency range, specified as [low high] in Hz
 
 ** cfg.bpfreq ** - [ft_preprocessing](/reference/ft_preprocessing)  
 bandpass frequency range, specified as [lowFreq highFreq] in Hz
@@ -629,19 +668,31 @@ bandstop frequency range, specified as [low high] in Hz (or as Nx2 matrix for no
 ** cfg.bsinstabilityfix ** - [ft_preprocessing](/reference/ft_preprocessing)  
 deal with filter instability, 'no', 'reduce', 'split' (default = 'no')
 
-** cfg.bufferdata ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer)  
+** cfg.bufferdata ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
 causes the realtime function to jump to the last
+
+** cfg.bufferdata ** - [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)  
+causes the realtime function to jump to the last available data
 
 ** cfg.bufferdata ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer)  
 whether to process the 'first or 'last' data that is available (default = 'last')
 
-** cfg.bufferdata ** - [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.bufferdata ** - [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)  
+whether to start on the 'first or 'last' data that is available (default = 'first')
+
+** cfg.bufferdata ** - [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder)  
 whether to start on the 'first or 'last' data that is available (default = 'last')
+
+** cfg.bufferdata ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
+whether to start on the 'first or 'last' data that is available when the function _starts_ (default = 'last')
 
 ** cfg.bw ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 'yes' or 'no', if an image is used and this option is true, the image is transformed in black and white (default = 'no', i.e. do not transform)
 
 ## C 
+
+** cfg.calibration ** - [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)  
+number, in uV per bit (default = 1)
 
 ** cfg.calibration ** - [ft_spikedownsample](/reference/ft_spikedownsample)  
 optional scaling factor to apply to the data to convert it in uV, see below
@@ -654,6 +705,9 @@ optional scaling factor to apply to the data to convert it in uV, see below
 
 ** cfg.center ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 string, center and scale the electrodes in the sphere that represents the head, can be 'yes' or 'no' (default = 'no')
+
+** cfg.channel ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+'MEG';
 
 ** cfg.channel ** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
 'all' (default) or list of channels for which an mvar model is fitted. (Do NOT specify if cfg.channelcmb is defined)
@@ -682,6 +736,9 @@ Nx1 cell-array with selection of channels (default = 'all'), see CHANNELSELECTIO
 ** cfg.channel ** - [ft_denoise_dssp](/reference/ft_denoise_dssp), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_dipolesimulation](/reference/ft_dipolesimulation), [ft_electroderealign](/reference/ft_electroderealign), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_preprocessing](/reference/ft_preprocessing), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_spikedownsample](/reference/ft_spikedownsample), [ft_spikesplitting](/reference/ft_spikesplitting), [ft_spiketriggeredaverage](/reference/ft_spiketriggeredaverage), [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details
 
+** cfg.channel ** - [ft_nirs_prepare_ODtransformation](/reference/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)  
+Nx1 cell-array with selection of channels (default = 'nirs'), see FT_CHANNELSELECTION for more details
+
 ** cfg.channel ** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 Nx1 cell-array with selection of channels (default = {'1' '2' ...})
 
@@ -690,6 +747,12 @@ Nx1 cell-array with selection of channels, see FT_CHANNELSELECTION for details, 
 
 ** cfg.channel ** - [ft_databrowser](/reference/ft_databrowser)  
 cell-array with channel labels, see FT_CHANNELSELECTION
+
+** cfg.channel ** - [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+cell-array with channel names
+
+** cfg.channel ** - [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)  
+cell-array with channel names, see FT_CHANNELSELECTION
 
 ** cfg.channel ** - [ft_componentanalysis](/reference/ft_componentanalysis), [ft_spikesorting](/reference/ft_spikesorting)  
 cell-array with channel selection (default = 'all'), see FT_CHANNELSELECTION for details
@@ -700,7 +763,7 @@ cell-array with selection of channels, see FT_CHANNELSELECTION
 ** cfg.channel ** - [ft_timelockbaseline](/reference/ft_timelockbaseline)  
 cell-array, see FT_CHANNELSELECTION
 
-** cfg.channel ** - [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.channel ** - [ft_denoise_prewhiten](/reference/ft_denoise_prewhiten), [ft_realtime_asaproxy](/reference/ft_realtime_asaproxy), [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
 cell-array, see FT_CHANNELSELECTION (default = 'all')
 
 ** cfg.channel ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer)  
@@ -711,6 +774,9 @@ channels for which neighbours should be found
 
 ** cfg.channel ** - [ft_connectivityplot](/reference/ft_connectivityplot)  
 list of channels to be included for the plotting (default = 'all'), see FT_CHANNELSELECTION for details
+
+** cfg.channel ** - [ft_realtime_pooraudioproxy](/reference/ft_realtime_pooraudioproxy)  
+number of channels (1 or 2, default=2)
 
 ** cfg.channel ** - [ft_singleplotER](/reference/ft_singleplotER)  
 nx1 cell-array with selection of channels (default = 'all') see ft_channelselection for details
@@ -777,6 +843,9 @@ value or 'auto' (clipping of source data)
 
 ** cfg.clipsym ** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 'yes' or 'no' (default) symmetrical clipping
+
+** cfg.closedistance ** - [ft_nirs_referencechannelsubtraction](/reference/ft_nirs_referencechannelsubtraction)  
+scalar, defines the maximal distance between a shallow and a short channel in cm (default = 15). NOT APPLIED CURRENTLY!
 
 ** cfg.cloudtype ** - [ft_sourceplot](/reference/ft_sourceplot)  
 'point' plots a single point at each sensor position 'cloud' (default) plots each a group of spherically arranged points at each sensor position 'surf' plots a single spherical surface mesh at each sensor position
@@ -955,12 +1024,15 @@ vector that assigns a trial to class 1 or 2.
 ** cfg.csp.numfilters ** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 the number of spatial filters to use (default: 6).
 
+** cfg.cutoff ** - [ft_realtime_downsample](/reference/ft_realtime_downsample)  
+double, cutoff frequency of lowpass filter (default = 0.8*Nyquist-freq.)
+
 ** cfg.cvar ** - [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)  
 number or list with indices, control variable(s)
 
 ## D 
 
-** cfg.datafile ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.datafile ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous), [ft_realtime_topography](/reference/ft_realtime_topography)  
 string
 
 ** cfg.datafile ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_preprocessing](/reference/ft_preprocessing)  
@@ -975,11 +1047,17 @@ string with the output dataset format, see FT_WRITE_FCDC_SPIKE
 ** cfg.dataformat ** - [ft_spikedownsample](/reference/ft_spikedownsample)  
 string with the output dataset format, see WRITE_DATA
 
-** cfg.dataformat ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.dataformat ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous), [ft_realtime_topography](/reference/ft_realtime_topography)  
 string, default is determined automatic
 
 ** cfg.datahdr ** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser)  
 header structure of the EEG/MEG data, see FT_READ_HEADER
+
+** cfg.dataset ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+'PW02_ingnie_20061212_01.ds';
+
+** cfg.dataset ** - [ft_realtime_classification](/reference/ft_realtime_classification)  
+'Subject01.ds';
 
 ** cfg.dataset ** - [ft_qualitycheck](/reference/ft_qualitycheck)  
 a string (e.g. 'dataset.ds')
@@ -987,7 +1065,7 @@ a string (e.g. 'dataset.ds')
 ** cfg.dataset ** - [ft_definetrial](/reference/ft_definetrial)  
 pathname to dataset from which to read the events
 
-** cfg.dataset ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.dataset ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous), [ft_realtime_topography](/reference/ft_realtime_topography)  
 string
 
 ** cfg.dataset ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_headmovement](/reference/ft_headmovement), [ft_preprocessing](/reference/ft_preprocessing)  
@@ -1008,6 +1086,15 @@ string, name or location of a dataset/buffer (default = 'buffer://odin:1972')
 ** cfg.debias ** - [ft_spike_xcorr](/reference/ft_spike_xcorr)  
 'yes' (default) or 'no'. If 'yes', we scale the cross-correlogram by M/(M-abs(lags)), where M = 2*N -1 with N the length of the data segment.
 
+** cfg.debug ** - [ft_realtime_pooraudioproxy](/reference/ft_realtime_pooraudioproxy)  
+show sample time and clock time (default = 'yes')
+
+** cfg.decimate ** - [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)  
+integer number (default = 1)
+
+** cfg.decimation ** - [ft_realtime_downsample](/reference/ft_realtime_downsample)  
+integer, downsampling factor (default = 1, no downsampling)
+
 ** cfg.degree ** - [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
 degree of legendre polynomials (default for <=32 electrodes = 9, <=64 electrodes = 14, <=128 electrodes = 20, else = 32
 
@@ -1026,6 +1113,9 @@ nxn matrix, specifying the delay, in seconds, from one signal's spectral compone
 ** cfg.demean ** - [ft_preprocessing](/reference/ft_preprocessing), [ft_resampledata](/reference/ft_resampledata)  
 'no' or 'yes', whether to apply baseline correction (default = 'no')
 
+** cfg.demean ** - [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)  
+'no' or 'yes', whether to apply baseline correction (default = 'yes')
+
 ** cfg.demean ** - [ft_componentanalysis](/reference/ft_componentanalysis), [ft_rejectcomponent](/reference/ft_rejectcomponent)  
 'no' or 'yes', whether to demean the input data (default = 'yes')
 
@@ -1040,6 +1130,9 @@ nxn matrix, specifying the delay, in seconds, from one signal's spectral compone
 
 ** cfg.demean ** - [ft_channelnormalise](/reference/ft_channelnormalise)  
 'yes' or 'no' (or boolean value) (default = 'yes')
+
+** cfg.demean ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+'yes';
 
 ** cfg.demeandata ** - [ft_denoise_tsr](/reference/ft_denoise_tsr)  
 string, 'yes' or 'no', whether or not to make dependent variable zero mean prior to the regression (default = 'no')
@@ -1143,6 +1236,12 @@ integer, amount of downsampling before segmentation (default = 1; i.e., no downs
 ** cfg.downscale ** - [ft_spikesplitting](/reference/ft_spikesplitting)  
 single number or vector (for each channel), corresponding to the number of bits removed from the LSB side (default = 0)
 
+** cfg.dpf ** - [ft_nirs_prepare_ODtransformation](/reference/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)  
+scalar, differential path length factor
+
+** cfg.dpffile ** - [ft_nirs_prepare_ODtransformation](/reference/ft_nirs_prepare_ODtransformation), [ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)  
+string, location to a lookup table for the relation between participant age and DPF
+
 ** cfg.dss.denf.function ** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 
 
@@ -1211,10 +1310,10 @@ number, scaling to apply to the EOG channels prior to display
 ** cfg.eta ** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
 'yes' or 'no' (default = 'no')
 
-** cfg.eventfile ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.eventfile ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous), [ft_realtime_topography](/reference/ft_realtime_topography)  
 string
 
-** cfg.eventformat ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.eventformat ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous), [ft_realtime_topography](/reference/ft_realtime_topography)  
 string, default is determined automatic
 
 ** cfg.eventtype ** - [ft_recodeevent](/reference/ft_recodeevent)  
@@ -1222,6 +1321,12 @@ empty, 'string' or cell-array with multiple strings
 
 ** cfg.eventvalue ** - [ft_recodeevent](/reference/ft_recodeevent)  
 empty or a list of event values (can be numeric or string)
+
+** cfg.export.dataformat ** - [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder)  
+string describing the output file format, see FT_WRITE_DATA
+
+** cfg.export.dataset ** - [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder)  
+string with the output file name
 
 ## F 
 
@@ -1327,7 +1432,7 @@ empty or a list of event values (can be numeric or string)
 ** cfg.feedback ** - [ft_electrodermalactivity](/reference/ft_electrodermalactivity), [ft_heartrate](/reference/ft_heartrate), [ft_respiration](/reference/ft_respiration)  
 'yes' or 'no'
 
-** cfg.feedback ** - [ft_electroderealign](/reference/ft_electroderealign), [ft_prepare_neighbours](/reference/ft_prepare_neighbours)  
+** cfg.feedback ** - [ft_electroderealign](/reference/ft_electroderealign), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy), [ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy), [ft_realtime_modeegproxy](/reference/ft_realtime_modeegproxy)  
 'yes' or 'no' (default = 'no')
 
 ** cfg.feedback ** - [ft_electroderealign](/reference/ft_electroderealign)  
@@ -1423,6 +1528,9 @@ filename without the extension
 ** cfg.filename ** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_sourcewrite](/reference/ft_sourcewrite)  
 string, filename without the extension
 
+** cfg.filename ** - [ft_realtime_modeegproxy](/reference/ft_realtime_modeegproxy)  
+string, name of the serial port (default = '/dev/tty.FireFly-B106-SPP')
+
 ** cfg.filetype ** - [ft_volumewrite](/reference/ft_volumewrite)  
 'analyze', 'nifti', 'nifti_img', 'analyze_spm', 'mgz', 'vmp' or 'vmr'
 
@@ -1467,6 +1575,9 @@ vector with the frequencies at which the spectral quantities are estimated (in H
 
 ** cfg.foilim ** - [ft_freqinterpolate](/reference/ft_freqinterpolate)  
 Nx2 matrix with begin and end of each interval to be interpolated (default = [49 51; 99 101; 149 151])
+
+** cfg.foilim ** - [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)  
+[Flow Fhigh] (default = [0 120])
 
 ** cfg.foilim ** - [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
 [Flow Fhigh] (default = [1 45])
@@ -1537,11 +1648,17 @@ single number (in Hz)
 ** cfg.fsample ** - [ft_spikedensity](/reference/ft_spikedensity)  
 additional user input that can be used when input is a SPIKE structure, in that case a continuous representation is created using cfg.fsample (default = 1000)
 
+** cfg.fsample ** - [ft_realtime_pooraudioproxy](/reference/ft_realtime_pooraudioproxy)  
+audio sampling frequency in Hz (default = 44100)
+
 ** cfg.fsample ** - [ft_spikedownsample](/reference/ft_spikedownsample)  
 desired sampling frequency in Hz (default = 1000)
 
 ** cfg.fsample ** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation)  
 in Hz
+
+** cfg.fsample ** - [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+sampling frequency
 
 ** cfg.fsample ** - [ft_dipolesimulation](/reference/ft_dipolesimulation)  
 sampling frequency in Hz
@@ -1646,7 +1763,7 @@ determines the length of the used wavelets in standard deviations of the implici
 ** cfg.hdr ** - [ft_spike_maketrials](/reference/ft_spike_maketrials)  
 struct, should be specified if cfg.trlunit = 'samples'. This should be specified as cfg.hdr = data.hdr where data.hdr contains the subfields data.hdr.Fs (sampling frequency of the LFP), data.hdr.FirstTimeStamp, and data.hdr.TimeStampPerSecond.
 
-** cfg.headerfile ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.headerfile ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous), [ft_realtime_topography](/reference/ft_realtime_topography)  
 string
 
 ** cfg.headerfile ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue), [ft_databrowser](/reference/ft_databrowser), [ft_preprocessing](/reference/ft_preprocessing)  
@@ -1655,7 +1772,7 @@ string with the filename
 ** cfg.headerformat ** - [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_artifact_zvalue](/reference/ft_artifact_zvalue)  
 
 
-** cfg.headerformat ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod)  
+** cfg.headerformat ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_fmriviewer](/reference/ft_realtime_fmriviewer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_ouunpod](/reference/ft_realtime_ouunpod), [ft_realtime_powerestimate](/reference/ft_realtime_powerestimate), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer), [ft_realtime_synchronous](/reference/ft_realtime_synchronous), [ft_realtime_topography](/reference/ft_realtime_topography)  
 string, default is determined automatic
 
 ** cfg.headmodel ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
@@ -1754,6 +1871,9 @@ highlight marker symbol (default = 'o')
 ** cfg.hilbert ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'no', 'abs', 'complex', 'real', 'imag', 'absreal', 'absimag' or 'angle' (default = 'no')
 
+** cfg.host ** - [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy)  
+string, name of computer running the recorder software (default = 'eeg002')
+
 ** cfg.hotkeys ** - [ft_singleplotER](/reference/ft_singleplotER)  
 enables hotkeys (leftarrow/rightarrow/uparrow/downarrow/m) for dynamic zoom and translation (ctrl+) of the axes
 
@@ -1775,7 +1895,7 @@ highpass transition width (firws, overrides order, default set in low-level func
 ** cfg.hpfiltdir ** - [ft_preprocessing](/reference/ft_preprocessing)  
 filter direction, 'twopass' (default), 'onepass' or 'onepass-reverse' or 'onepass-zerophase' (default for firws) or 'onepass-minphase' (firws, non-linear!)
 
-** cfg.hpfilter ** - [ft_preprocessing](/reference/ft_preprocessing)  
+** cfg.hpfilter ** - [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
 'no' or 'yes' highpass filter (default = 'no')
 
 ** cfg.hpfiltord ** - [ft_preprocessing](/reference/ft_preprocessing)  
@@ -1787,7 +1907,7 @@ digital filter type, 'but' or 'firws' or 'fir' or 'firls' (default = 'but')
 ** cfg.hpfiltwintype ** - [ft_preprocessing](/reference/ft_preprocessing)  
 highpass window type, 'hann' or 'hamming' (default) or 'blackman' or 'kaiser' (firws)
 
-** cfg.hpfreq ** - [ft_preprocessing](/reference/ft_preprocessing)  
+** cfg.hpfreq ** - [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
 highpass frequency in Hz
 
 ** cfg.hpinstabilityfix ** - [ft_preprocessing](/reference/ft_preprocessing)  
@@ -1840,10 +1960,13 @@ FieldTrip buffer containing raw scans (default 'buffer://localhost:1972')
 ** cfg.input ** - [ft_omri_quality](/reference/ft_omri_quality)  
 FieldTrip buffer containing raw scans (default='buffer://localhost:1972')
 
+** cfg.input ** - [ft_realtime_dicomproxy](/reference/ft_realtime_dicomproxy)  
+string or cell array of strings (see below)
+
 ** cfg.inputcoord ** - [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup)  
 'mni' or 'tal', coordinate system of the mri/source/stat
 
-** cfg.inputfile ** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_nan](/reference/ft_artifact_nan), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_clusterplot](/reference/ft_clusterplot), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_layoutplot](/reference/ft_layoutplot), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectartifact](/reference/ft_rejectartifact), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_singleplotER](/reference/ft_singleplotER), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_sourcemovie](/reference/ft_sourcemovie), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumewrite](/reference/ft_volumewrite)  
+** cfg.inputfile ** - [ft_analysispipeline](/reference/ft_analysispipeline), [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_artifact_clip](/reference/ft_artifact_clip), [ft_artifact_ecg](/reference/ft_artifact_ecg), [ft_artifact_eog](/reference/ft_artifact_eog), [ft_artifact_jump](/reference/ft_artifact_jump), [ft_artifact_muscle](/reference/ft_artifact_muscle), [ft_artifact_nan](/reference/ft_artifact_nan), [ft_artifact_threshold](/reference/ft_artifact_threshold), [ft_artifact_tms](/reference/ft_artifact_tms), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_clusterplot](/reference/ft_clusterplot), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_layoutplot](/reference/ft_layoutplot), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_networkanalysis](/reference/ft_networkanalysis), [ft_nirs_prepare_ODtransformation](/reference/ft_nirs_prepare_ODtransformation), [ft_nirs_referencechannelsubtraction](/reference/ft_nirs_referencechannelsubtraction), [ft_nirs_scalpcouplingindex](/reference/ft_nirs_scalpcouplingindex), [ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs), [ft_prepare_leadfield](/reference/ft_prepare_leadfield), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectartifact](/reference/ft_rejectartifact), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_singleplotER](/reference/ft_singleplotER), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_sourcemovie](/reference/ft_sourcemovie), [ft_sourceplot](/reference/ft_sourceplot), [ft_sourcewrite](/reference/ft_sourcewrite), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_topoplotCC](/reference/ft_topoplotCC), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_topoplotTFR](/reference/ft_topoplotTFR), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment), [ft_volumewrite](/reference/ft_volumewrite)  
 ...
 
 ** cfg.interactive ** - [ft_movieplotTFR](/reference/ft_movieplotTFR)  
@@ -1923,11 +2046,20 @@ number or list with indices, independent variable(s)
 ** cfg.jackknife ** - [ft_freqdescriptives](/reference/ft_freqdescriptives)  
 'yes' or 'no', estimate standard error by means of the jack-knife (default = 'no')
 
-** cfg.jumptoeof ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer)  
+** cfg.jumptoeof ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
 causes the realtime function to jump to the end
 
-** cfg.jumptoeof ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer)  
+** cfg.jumptoeof ** - [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)  
+causes the realtime function to jump to the end when the
+
+** cfg.jumptoeof ** - [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+jump to end of file at initialization (default = 'no')
+
+** cfg.jumptoeof ** - [ft_realtime_coillocalizer](/reference/ft_realtime_coillocalizer), [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect), [ft_realtime_signalrecorder](/reference/ft_realtime_signalrecorder), [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)  
 whether to skip to the end of the stream/file at startup (default = 'yes')
+
+** cfg.jumptoeof ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
+whether to start on the 'first or 'last' data that is available when the function _starts_ (default = 'last')
 
 ## K 
 
@@ -2110,6 +2242,9 @@ scalar or string, can be 'all', 'prestim', 'poststim', or [beg end], specify tim
 ** cfg.latency ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 single number in seconds, for time-frequency analysis
 
+** cfg.layout ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+'CTF151.lay';
+
 ** cfg.layout ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 'butterfly' will give you a layout with all channels on top of each other
 
@@ -2137,7 +2272,7 @@ filename containg the layout
 ** cfg.layout ** - [ft_databrowser](/reference/ft_databrowser), [ft_icabrowser](/reference/ft_icabrowser), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_neighbours](/reference/ft_prepare_neighbours)  
 filename of the layout, see FT_PREPARE_LAYOUT
 
-** cfg.layout ** - [ft_topoplotCC](/reference/ft_topoplotCC)  
+** cfg.layout ** - [ft_realtime_topography](/reference/ft_realtime_topography), [ft_topoplotCC](/reference/ft_topoplotCC)  
 specification of the layout, see FT_PREPARE_LAYOUT
 
 ** cfg.layout ** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_topoplotIC](/reference/ft_topoplotIC)  
@@ -2200,7 +2335,7 @@ lowpass transition width (firws, overrides order, default set in low-level funct
 ** cfg.lpfiltdir ** - [ft_preprocessing](/reference/ft_preprocessing)  
 filter direction, 'twopass' (default), 'onepass' or 'onepass-reverse' or 'onepass-zerophase' (default for firws) or 'onepass-minphase' (firws, non-linear!)
 
-** cfg.lpfilter ** - [ft_preprocessing](/reference/ft_preprocessing)  
+** cfg.lpfilter ** - [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
 'no' or 'yes' lowpass filter (default = 'no')
 
 ** cfg.lpfiltord ** - [ft_preprocessing](/reference/ft_preprocessing)  
@@ -2212,7 +2347,7 @@ digital filter type, 'but' or 'firws' or 'fir' or 'firls' (default = 'but')
 ** cfg.lpfiltwintype ** - [ft_preprocessing](/reference/ft_preprocessing)  
 lowpass window type, 'hann' or 'hamming' (default) or 'blackman' or 'kaiser' (firws)
 
-** cfg.lpfreq ** - [ft_preprocessing](/reference/ft_preprocessing)  
+** cfg.lpfreq ** - [ft_preprocessing](/reference/ft_preprocessing), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
 lowpass frequency in Hz
 
 ** cfg.lpinstabilityfix ** - [ft_preprocessing](/reference/ft_preprocessing)  
@@ -2339,6 +2474,9 @@ threshold (mm) for absolute motion before 'A' is sent to serial port, default = 
 
 ** cfg.maxRel ** - [ft_omri_quality](/reference/ft_omri_quality)  
 threshold (mm) for relative motion before 'B' is sent to serial port, default = Inf
+
+** cfg.maxblocksize ** - [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+number, in seconds (default = 1)
 
 ** cfg.maxdelay ** - [ft_nonlinearassociation](/reference/ft_nonlinearassociation)  
 32/cfg.fsample
@@ -2478,6 +2616,9 @@ string, 'flip', 'nearest', 'linear', 'cubic' or 'spline' (default = 'linear')
 ** cfg.method ** - [ft_denoise_tsr](/reference/ft_denoise_tsr)  
 string, 'mlr', 'cca', 'pls', 'svd', option specifying the criterion for the regression (default = 'mlr')
 
+** cfg.method ** - [ft_nirs_referencechannelsubtraction](/reference/ft_nirs_referencechannelsubtraction)  
+string, 'regstat2', 'QR' or 'OLS' (default = 'QR')
+
 ** cfg.method ** - [ft_spiketriggeredinterpolation](/reference/ft_spiketriggeredinterpolation)  
 string, The interpolation method can be 'nan', 'cubic', 'linear', 'nearest', spline', 'pchip' (default = 'nan'). See INTERP1 for more details.
 
@@ -2516,6 +2657,9 @@ the name of the toolbox containing the function for the actual computation of th
 
 ** cfg.metric ** - [ft_rejectvisual](/reference/ft_rejectvisual)  
 string, describes the metric that should be computed in summary mode for each channel in each trial, can be 'var' variance within each channel (default) 'min' minimum value in each channel 'max' maximum value each channel 'maxabs' maximum absolute value in each channel 'range' range from min to max in each channel 'kurtosis' kurtosis, i.e. measure of peakedness of the amplitude distribution 'zvalue' mean and std computed over all time and trials, per channel
+
+** cfg.minblocksize ** - [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+number, in seconds (default = 0)
 
 ** cfg.minlength ** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 length in seconds, can be 'maxperlen' (default = [])
@@ -2630,6 +2774,9 @@ root-mean-square amplitude of wide-band signal prior to filtering
 ** cfg.name ** - [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
 string for output filename
 
+** cfg.nbits ** - [ft_realtime_pooraudioproxy](/reference/ft_realtime_pooraudioproxy)  
+recording depth in bits (default = 16)
+
 ** cfg.nearestto ** - [ft_recodeevent](/reference/ft_recodeevent)  
 'trialzero' compare with time t=0 for each trial (default) 'trialbegin' compare with the begin of each trial 'trialend' compare with the end of each trial
 
@@ -2692,6 +2839,9 @@ depth normalization parameter (default = 0.5)
 
 ** cfg.normalizevar ** - [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)  
 'N' or 'N-1' (default = 'N-1')
+
+** cfg.npackets ** - [ft_realtime_packettimer](/reference/ft_realtime_packettimer)  
+the number of packets shown in one plot (default=1000) after reaching the end
 
 ** cfg.nr_bins ** - [ft_nonlinearassociation](/reference/ft_nonlinearassociation)  
 7
@@ -2776,6 +2926,9 @@ numeric vector, should have same number of elements as cfg.tissue
 ** cfg.offset ** - [ft_nonlinearassociation](/reference/ft_nonlinearassociation)  
 0
 
+** cfg.offset ** - [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
+offset relative to the trigger (default = 0)
+
 ** cfg.offset ** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 single number or Nx1 vector, expressed in samples relative to current t=0
 
@@ -2836,6 +2989,9 @@ struct, containing spmversion specific options. See the code below and the SPM-d
 ** cfg.order ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 (optional)
 
+** cfg.order ** - [ft_realtime_downsample](/reference/ft_realtime_downsample)  
+interger, order of butterworth lowpass filter (default = 4)
+
 ** cfg.order ** - [ft_channelrepair](/reference/ft_channelrepair)  
 order of the polynomial interpolation (default = 4, not for method 'distance')
 
@@ -2847,6 +3003,9 @@ scalar, order of the autoregressive model (default=10)
 
 ** cfg.ori ** - [ft_sourceplot](/reference/ft_sourceplot)  
 'x', 'y', or 'z', specifies the orthogonal plane which will be plotted (default = 'y')
+
+** cfg.ostream ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous), [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
+the output stream that is used to send a command via write_event (default = []
 
 ** cfg.outline ** - [ft_prepare_layout](/reference/ft_prepare_layout)  
 string, how to create the outline, can be 'circle', 'convex', 'headshape', 'mri' or 'no' (default is automatic)
@@ -2908,7 +3067,7 @@ which channels should be in the output data, can be 'mixed' or 'all' (default = 
 ** cfg.outputfile ** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 (required) string, filename prefix for the output files
 
-** cfg.outputfile ** - [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment)  
+** cfg.outputfile ** - [ft_annotate](/reference/ft_annotate), [ft_anonymizedata](/reference/ft_anonymizedata), [ft_appenddata](/reference/ft_appenddata), [ft_appendfreq](/reference/ft_appendfreq), [ft_channelnormalise](/reference/ft_channelnormalise), [ft_channelrepair](/reference/ft_channelrepair), [ft_combineplanar](/reference/ft_combineplanar), [ft_componentanalysis](/reference/ft_componentanalysis), [ft_connectivityanalysis](/reference/ft_connectivityanalysis), [ft_denoise_synthetic](/reference/ft_denoise_synthetic), [ft_detect_movement](/reference/ft_detect_movement), [ft_dipolefitting](/reference/ft_dipolefitting), [ft_examplefunction](/reference/ft_examplefunction), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_freqdescriptives](/reference/ft_freqdescriptives), [ft_freqgrandaverage](/reference/ft_freqgrandaverage), [ft_freqinterpolate](/reference/ft_freqinterpolate), [ft_freqstatistics](/reference/ft_freqstatistics), [ft_globalmeanfield](/reference/ft_globalmeanfield), [ft_interpolatenan](/reference/ft_interpolatenan), [ft_lateralizedpotential](/reference/ft_lateralizedpotential), [ft_math](/reference/ft_math), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_meshrealign](/reference/ft_meshrealign), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nirs_referencechannelsubtraction](/reference/ft_nirs_referencechannelsubtraction), [ft_nirs_scalpcouplingindex](/reference/ft_nirs_scalpcouplingindex), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial), [ft_regressconfound](/reference/ft_regressconfound), [ft_rejectcomponent](/reference/ft_rejectcomponent), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_removetemplateartifact](/reference/ft_removetemplateartifact), [ft_resampledata](/reference/ft_resampledata), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity), [ft_sourceanalysis](/reference/ft_sourceanalysis), [ft_sourcedescriptives](/reference/ft_sourcedescriptives), [ft_sourcegrandaverage](/reference/ft_sourcegrandaverage), [ft_sourceinterpolate](/reference/ft_sourceinterpolate), [ft_timelockanalysis](/reference/ft_timelockanalysis), [ft_timelockbaseline](/reference/ft_timelockbaseline), [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage), [ft_timelockstatistics](/reference/ft_timelockstatistics), [ft_volumedownsample](/reference/ft_volumedownsample), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumerealign](/reference/ft_volumerealign), [ft_volumereslice](/reference/ft_volumereslice), [ft_volumesegment](/reference/ft_volumesegment)  
 ...
 
 ** cfg.outputfile ** - [ft_icabrowser](/reference/ft_icabrowser)  
@@ -2928,6 +3087,15 @@ MAT file which contains indices of all components to reject
 
 ** cfg.outputunit ** - [ft_spike_xcorr](/reference/ft_spike_xcorr)  
 - 'proportion' (value in each bin indicates proportion of occurence) - 'center' (values are scaled to center value which is set to 1) - 'raw' (default) unnormalized crosscorrelogram.
+
+** cfg.overlap ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+0.25;
+
+** cfg.overlap ** - [ft_realtime_topography](/reference/ft_realtime_topography)  
+number, amojunt of overlap between chunks (default = 0 seconds)
+
+** cfg.overlap ** - [ft_realtime_asynchronous](/reference/ft_realtime_asynchronous)  
+overlap between blocks in seconds (default = 0)
 
 ** cfg.overlap ** - [ft_redefinetrial](/reference/ft_redefinetrial)  
 single number (between 0 and 1 (exclusive)) specifying the fraction of overlap between snippets (0 = no overlap)
@@ -3093,6 +3261,12 @@ polynome order for poly trend removal (default = 2; note that all lower-order tr
 ** cfg.polyremoval ** - [ft_freqanalysis](/reference/ft_freqanalysis)  
 number (default = 0), specifying the order of the polynome which is fitted and subtracted from the time domain data prior to the spectral analysis. For example, a value of 1 corresponds to a linear trend. The default is a mean subtraction, thus a value of 0. If no removal is requested, specify -1. see FT_PREPROC_POLYREMOVAL for details
 
+** cfg.port ** - [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy)  
+number, TCP port to connect to (default = 51244)
+
+** cfg.port ** - [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)  
+number, UDP port to listen on (default = 55000)
+
 ** cfg.position ** - [ft_databrowser](/reference/ft_databrowser)  
 location and size of the figure, specified as a vector of the form [left bottom width height].
 
@@ -3110,6 +3284,9 @@ scaling of y axis in power plot, 'lin' or 'log10', (default = 'log10')
 
 ** cfg.precision ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'single' or 'double' (default = 'double')
+
+** cfg.precision ** - [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+numeric representation, can be double, single, int32, int16 (default = 'double')
 
 ** cfg.precision ** - [ft_sourcewrite](/reference/ft_sourcewrite)  
 string, can be 'single', 'double', etc.
@@ -3316,6 +3493,12 @@ string, 'yes', 'no' or a number (default = 'yes')
 ** cfg.rawtrial ** - [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 'no' or 'yes' construct filter from single trials, apply to single trials. Note that you also may want to set cfg.keeptrials='yes' to keep all trial information, especially if using in combination with sourcemodel.filter
 
+** cfg.readevent ** - [ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)  
+whether or not to copy events (default = 'no')
+
+** cfg.readevent ** - [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+whether or not to copy events (default = 'no'; event type can also be specified; e.g., 'UPPT002')
+
 ** cfg.rectify ** - [ft_preprocessing](/reference/ft_preprocessing)  
 'no' or 'yes' (default = 'no')
 
@@ -3360,6 +3543,9 @@ vector, [1 X Nconfounds], listing the confounds that are to be rejected (default
 
 ** cfg.rejectonpeak ** - [ft_spike_waveform](/reference/ft_spike_waveform)  
 'yes' (default) or 'no': takes away waveforms with too late peak, and no rising AP towards peak of other waveforms
+
+** cfg.rellim ** - [ft_realtime_packettimer](/reference/ft_realtime_packettimer)  
+y limits of subplot 1 (default = [-100 100])
 
 ** cfg.relnoise ** - [ft_dipolesimulation](/reference/ft_dipolesimulation)  
 add noise with level relative to simulated signal
@@ -3555,6 +3741,9 @@ string, filename of the output figures (default = 'no')
 ** cfg.savemat ** - [ft_qualitycheck](/reference/ft_qualitycheck)  
 string, 'yes' or 'no' to save the analysis (default = 'yes')
 
+** cfg.saveplot ** - [ft_realtime_packettimer](/reference/ft_realtime_packettimer)  
+if path is specified, first plot is saved (default=[]);
+
 ** cfg.saveplot ** - [ft_qualitycheck](/reference/ft_qualitycheck)  
 string, 'yes' or 'no' to save the visualization (default = 'yes')
 
@@ -3620,6 +3809,9 @@ scalar, distance between electrodes
 
 ** cfg.shaft.tip ** - [ft_electrodeplacement](/reference/ft_electrodeplacement)  
 1x3 position of the electrode at the tip of the shaft
+
+** cfg.shortdistance ** - [ft_nirs_referencechannelsubtraction](/reference/ft_nirs_referencechannelsubtraction)  
+scalar, below which distance a channel is regarded as short in cm (default = 1.5)
 
 ** cfg.showRawVariation ** - [ft_omri_quality](/reference/ft_omri_quality)  
 1 to show variation in raw scans (default), 0 to show var. in processed scans
@@ -3705,6 +3897,27 @@ kernel width in mm (Full Width Half Maximum) for smoothing (default = 8)
 ** cfg.sobi.p_correlations ** - [ft_componentanalysis](/reference/ft_componentanalysis)  
 
 
+** cfg.source.datafile ** - [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+string
+
+** cfg.source.dataformat ** - [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+string, default is determined automatic
+
+** cfg.source.dataset ** - [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+string
+
+** cfg.source.eventfile ** - [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+string
+
+** cfg.source.eventformat ** - [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+string, default is determined automatic
+
+** cfg.source.headerfile ** - [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+string
+
+** cfg.source.headerformat ** - [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+string, default is determined automatic
+
 ** cfg.sourcemodel ** - [ft_denoise_dssp](/reference/ft_denoise_dssp)  
 structure, source model with precomputed leadfields (see FT_PREPARE_LEADFIELD)
 
@@ -3767,6 +3980,15 @@ vector (e.g. 0:1:20) or 'auto' (default = 'auto')
 
 ** cfg.spacemin ** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 'auto' (default) or integer (first slice position)
+
+** cfg.speed ** - [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+relative speed at which data is written (default = 1)
+
+** cfg.speed ** - [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)  
+relative speed at which data is written (default = inf)
+
+** cfg.speedup ** - [ft_realtime_dicomproxy](/reference/ft_realtime_dicomproxy)  
+optional speedup parameter
 
 ** cfg.sphere ** - [ft_volumelookup](/reference/ft_volumelookup)  
 radius of each sphere in cm/mm dep on unit of input
@@ -3992,11 +4214,26 @@ vector 1 x numfoi, the amount of spectral smoothing through multi-tapering. Note
 ** cfg.tapsmofrq ** - [ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)  
 vector 1 x numfoi, the amount of spectral smoothing through multi-tapering. Note that 4 Hz smoothing means plus-minus 4 Hz, i.e. a 8 Hz smoothing box. cfg.foi = vector 1 x numfoi, frequencies of interest cfg.taper = 'dpss', 'hanning' or many others, see WINDOW (default = 'hanning') cfg.t_ftimwin = vector 1 x numfoi, length of time window (in seconds) cfg.taperopt = parameter that goes in WINDOW function (only applies to windows like KAISER). cfg.spikechannel = cell-array with selection of channels (default = 'all') see FT_CHANNELSELECTION for details cfg.channel = Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details cfg.borderspikes = 'yes' (default) or 'no'. If 'yes', we process the spikes falling at the border using an LFP that is not centered on the spike. If 'no', we output NaNs for spikes around which we could not center an LFP segment. cfg.rejectsaturation= 'yes' (default) or 'no'. If 'yes', we set EEG segments where the maximum or minimum voltage range is reached with zero derivative (i.e., saturated signal) to NaN, effectively setting all spikes phases that use these parts of the EEG to NaN. An EEG that saturates always returns the same phase at all frequencies and should be ignored.
 
+** cfg.target ** - [ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)  
+Mx1 cell-array, can be 'O2Hb' (oxygenated hemo- globin), 'HHb' de-oxygenated hemoglobin') or 'tHb' (total hemoglobin), or a combination of those (default: {'O2Hb', 'HHb'})
+
 ** cfg.target ** - [ft_electroderealign](/reference/ft_electroderealign)  
 list of electrode sets that will be averaged
 
 ** cfg.target ** - [ft_electroderealign](/reference/ft_electroderealign)  
 single electrode set that serves as standard
+
+** cfg.target.datafile ** - [ft_realtime_asaproxy](/reference/ft_realtime_asaproxy), [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_ctfproxy](/reference/ft_realtime_ctfproxy), [ft_realtime_dicomproxy](/reference/ft_realtime_dicomproxy), [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy), [ft_realtime_fmriproxy](/reference/ft_realtime_fmriproxy), [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy), [ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy), [ft_realtime_modeegproxy](/reference/ft_realtime_modeegproxy), [ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy), [ft_realtime_pooraudioproxy](/reference/ft_realtime_pooraudioproxy), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+string, target destination for the data (default = 'buffer://localhost:1972')
+
+** cfg.target.dataformat ** - [ft_realtime_asaproxy](/reference/ft_realtime_asaproxy), [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_ctfproxy](/reference/ft_realtime_ctfproxy), [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_realtime_fileproxy](/reference/ft_realtime_fileproxy), [ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy), [ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy), [ft_realtime_modeegproxy](/reference/ft_realtime_modeegproxy), [ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy), [ft_realtime_pooraudioproxy](/reference/ft_realtime_pooraudioproxy), [ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)  
+string, default is determined automatic
+
+** cfg.target.eventfile ** - [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)  
+string, target destination for the events (default = 'buffer://localhost:1972')
+
+** cfg.target.eventformat ** - [ft_realtime_brainampproxy](/reference/ft_realtime_brainampproxy), [ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)  
+string, default is determined automatic
 
 ** cfg.target.label ** - [ft_electroderealign](/reference/ft_electroderealign)  
 {'NAS', 'LPA', 'RPA'}
@@ -4069,6 +4306,12 @@ integer array, ([1 by 2] or [1 by numel(cfg.channel) + numel(cfg.reflags)]), reg
 
 ** cfg.threshold ** - [ft_heartrate](/reference/ft_heartrate)  
 scalar, between 0 and 1 (default = 0.4)
+
+** cfg.threshold ** - [ft_nirs_scalpcouplingindex](/reference/ft_nirs_scalpcouplingindex)  
+scalar, the correlation value which has to be exceeded to be labelled a 'good' channel (default 0.75)
+
+** cfg.threshold ** - [ft_realtime_heartbeatdetect](/reference/ft_realtime_heartbeatdetect)  
+value, after normalization (default = 3)
 
 ** cfg.tight ** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 'yes' or 'no' (default is automatic)
@@ -4187,14 +4430,29 @@ initial rotation of the box (default = [0 0 0])
 ** cfg.trialdef ** - [ft_definetrial](/reference/ft_definetrial)  
 structure with details of trial definition, see below
 
-** cfg.trialdef.eventtype ** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial)  
+** cfg.trialdef.eventtype ** - [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+'?'
+
+** cfg.trialdef.eventtype ** - [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+'gui'
+
+** cfg.trialdef.eventtype ** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
 'string'
 
-** cfg.trialdef.eventvalue ** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial)  
+** cfg.trialdef.eventvalue ** - [ft_artifact_tms](/reference/ft_artifact_tms), [ft_definetrial](/reference/ft_definetrial), [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
 number, string or list with numbers or strings
+
+** cfg.trialdef.oxyproj ** - [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+'string', indicating an oxyproj-file, in which information about the events for this oxy3-file are stored
+
+** cfg.trialdef.poststim ** - [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+latency in seconds (optional)
 
 ** cfg.trialdef.poststim ** - [ft_definetrial](/reference/ft_definetrial)  
 number, latency in seconds (optional)
+
+** cfg.trialdef.prestim ** - [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+latency in seconds (optional)
 
 ** cfg.trialdef.prestim ** - [ft_definetrial](/reference/ft_definetrial)  
 number, latency in seconds (optional)
@@ -4202,13 +4460,19 @@ number, latency in seconds (optional)
 ** cfg.trialdef.triallength ** - [ft_definetrial](/reference/ft_definetrial)  
 duration in seconds (can also be 1 or Inf) cfg.trialdef.ntrials = number of trials (can also be 1 or Inf)
 
+** cfg.trialdef.triallength ** - [ft_trialfun_artinis](/reference/ft_trialfun_artinis)  
+duration in seconds (can be Inf) cfg.trialdef.ntrials = number of trials
+
+** cfg.trialfun ** - [ft_realtime_classification](/reference/ft_realtime_classification)  
+'trialfun_Subject01'; ft_realtime_classification(cfg);
+
 ** cfg.trialfun ** - [ft_artifact_tms](/reference/ft_artifact_tms)  
 function name, see below (default = 'ft_trialfun_general')
 
 ** cfg.trialfun ** - [ft_definetrial](/reference/ft_definetrial)  
 string with function name, see below (default = 'ft_trialfun_general')
 
-** cfg.trialfun ** - [ft_realtime_oddball](/reference/ft_realtime_oddball)  
+** cfg.trialfun ** - [ft_realtime_average](/reference/ft_realtime_average), [ft_realtime_classification](/reference/ft_realtime_classification), [ft_realtime_oddball](/reference/ft_realtime_oddball), [ft_realtime_selectiveaverage](/reference/ft_realtime_selectiveaverage)  
 string with the trial function
 
 ** cfg.triallength ** - [ft_connectivitysimulation](/reference/ft_connectivitysimulation)  
@@ -4252,6 +4516,9 @@ vector of indices (e.g., 1:2:10) logical selection of trials (e.g., [1010101010]
 
 ** cfg.trials ** - [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat)  
 vector of indices (e.g., 1:2:10), logical selection of trials (e.g., [1010101010]), or 'all' (default)
+
+** cfg.trigger ** - [ft_realtime_synchronous](/reference/ft_realtime_synchronous)  
+the trigger values that should be processed (default = 'all')
 
 ** cfg.trl ** - [ft_preprocessing](/reference/ft_preprocessing), [ft_redefinetrial](/reference/ft_redefinetrial)  
 Nx3 matrix with the trial definition, see FT_DEFINETRIAL
@@ -4326,6 +4593,9 @@ number or list with indices, unit variable(s)
 ** cfg.velocity2D.kernel ** - [ft_detect_movement](/reference/ft_detect_movement)  
 vector 1 x nsamples, kernel to compute velocity (default = [1 1 0 -1 -1].*(data.fsample/6); cfg.velocity2D.demean = 'no' or 'yes', whether to apply centering correction (default = 'yes') cfg.velocity2D.mindur = minimum microsaccade durantion in samples (default = 3); cfg.velocity2D.velthres = threshold for velocity outlier detection (default = 6);
 
+** cfg.verbose ** - [ft_nirs_referencechannelsubtraction](/reference/ft_nirs_referencechannelsubtraction)  
+boolean, whether text output is desired (default = false)
+
 ** cfg.verbose ** - [ft_neighbourplot](/reference/ft_neighbourplot)  
 string, 'yes' or 'no', whether the function will print feedback text in the command window
 
@@ -4367,6 +4637,9 @@ string, 'yes' or 'no' to visualize the analysis (default = 'yes')
 
 ** cfg.vmpversion ** - [ft_volumewrite](/reference/ft_volumewrite)  
 1 or 2 (default) version of the vmp-format to use
+
+** cfg.voxels ** - [ft_realtime_fmriproxy](/reference/ft_realtime_fmriproxy)  
+[64 64 32]
 
 ## W 
 
@@ -4413,7 +4686,7 @@ string, parameter to be used to control the line width (see below)
 options that go with cfg.winfunc For cfg.winfunc = 'alpha': the timeconstant in seconds (default = 0.005s) For cfg.winfunc = 'gauss': the standard deviation in seconds (default = 1/4 of window duration in seconds) For cfg.winfunc = 'wname' with 'wname' any standard window function see window opts in that function and add as cell array If cfg.winfunctopt = [], default opts are taken.
 
 ** cfg.winlen ** - [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
-cfg.window length in seconds (default = 5*binwidth). length of our window is 2*round*(cfg.winlen/binwidth) where binwidth is the binwidth of the jpsth (jpsth.time(2)-jpsth.time(1)).
+window length in seconds (default = 5*binwidth). length of our window is 2*round*(cfg.winlen/binwidth) where binwidth is the binwidth of the jpsth (jpsth.time(2)-jpsth.time(1)).
 
 ** cfg.winlen ** - [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn)  
 window length in seconds (default = 5*cfg.dt). The total length of our window is 2*round*(cfg.winlen/cfg.dt) +1;

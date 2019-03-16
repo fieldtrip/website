@@ -68,9 +68,9 @@ Subsequently you retry the **[peercellfun](/reference/peercellfun)** and look at
 
 ## Start a slave in non-graphical mode
 
-It might be that the problem is related to the graphical output of the function that you are trying to evaluate. The slaves that are running by default on the DCCN linux cluster do not have a graphical output. Some graphical functions (like plotting) has been reported to work, but others (like drawing a GUI) have been reported to fail.
+It might be that the problem is related to the graphical output of the function that you are trying to evaluate. The slaves that are running by default on the DCCN Linux cluster do not have a graphical output. Some graphical functions (like plotting) has been reported to work, but others (like drawing a GUI) have been reported to fail.
 
-To ensure that a non-graphical slave can execute your jobs, you can use putty to connect to a linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerslave](/reference/peerslave)** with
+To ensure that a non-graphical slave can execute your jobs, you can use putty to connect to a Linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerslave](/reference/peerslave)** with
 peerslave('allowuser', 'yourid');
 
 Subsequently you can restrict your **[peermaster](/reference/peermaster)** to the same userid (you can also use groups for this, see above) and retry the execution of the jobs with **[peercellfun](/reference/peercellfun)**.

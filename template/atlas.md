@@ -158,7 +158,7 @@ The atlas is described in the publication belo
 
 Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., Yang, Z., Chu, C., Xie, S., Laird, A.R., Fox, P.T., Eickhoff, S.B., Yu, C. & Jiang, T. The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture. Cerebral Cortex, 26 (8): 3508-3526,(2016)
 
-In FieldTrip, the atlas is included as a nifti file, complemented with a text file with the tissue labels. You can read it like thi
+In FieldTrip, the atlas is included as a nifti file, complemented with a text file with the tissue labels. You can read it like this:
 
     brainnetome = ft_read_atlas('template/atlas/brainnetome/BNA_MPM_thr25_1.25mm.nii')
 

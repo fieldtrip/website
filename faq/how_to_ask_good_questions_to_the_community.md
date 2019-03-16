@@ -65,29 +65,28 @@ Dear community,
 
 My name is MyName MyLastname and I am working in the BigBoss lab in MyCity on intracranial and extracranial Brain-Computer Interfaces. Currently I am analysing data of a side-project, where we recorded using combined EEG/fMRI.
 
-I tried using ft_functionname to assess spatio-temporal aspects of my data. When I call ft_functionname, I expect to get a structure with several fields, which I can subsequently plot using ft_XXXplot. However, I receive the following error messag
+I tried using ft_functionname to assess spatio-temporal aspects of my data. When I call ft_functionname, I expect to get a structure with several fields, which I can subsequently plot using ft_XXXplot. However, I receive the following error message:
 
-??? In an assignment A(:) = B, the number of elements in A and B
-must be the same.
-Error in ==> ft_functionname at 23
-data.time(cfg.time) = time;
+    ??? In an assignment A(:) = B, the number of elements in A and B
+    must be the same.
+    Error in ==> ft_functionname at 23
+    data.time(cfg.time) = time;
 
-sThe cfg and data I use are as follow
+The cfg and data I use are as follows:
 
     >> display(cfg)
 
-cfg.time = -1:0.25:0;
-cfg.freq = 1:32;
-...
+    cfg.time = -1:0.25:0;
+    cfg.freq = 1:32;
+    ...
 
     >> display(data)
 
-data.freq = [1 2 3 ... 32]
-data.time = `<1x321 cell>`
-...
+    data.freq = [1 2 3 ... 32]
+    data.time = `<1x321 cell>`
+    ...
 
-I uploaded my cfg and data on a file hoster such as rapidshare.com as it exceeds the critical file size of 1 MB. Here is the lin
-http://www...
+I uploaded my cfg and data on a file hoster such as rapidshare.com as it exceeds the critical file size of 1 MB. You can download it from <http://www.yousendit.com/xxx>.
 
 Can someone tell me if there is something wrong with the cfg settings I use or if I am doing something wrong at any other place? The last days, I tried using ... and ... but without success. Also I expected ... to be wrong, but after running intensive tests I could not find anything wrong with it. Any help would be appreciated.
 

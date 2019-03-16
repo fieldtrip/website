@@ -187,7 +187,7 @@ Just like with FreeSurfer, you have to first take care that HCP workbench is ins
 
     module load hcp-workbench
 
-Then you can run the fieldtrip/bin/ft_postfreesurferscript.sh from the linux command line, in the following way:
+Then you can run the fieldtrip/bin/ft_postfreesurferscript.sh from the Linux command line, in the following way:
 
     <PATH_TO_FIELDTRIP>/fieldtrip/bin/ft_postfreesurferscript.sh <OUTPUTDIRECTORY> <SUBJECTNAME> <TEMPLATEDIRECTORY>
 

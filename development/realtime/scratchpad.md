@@ -17,7 +17,7 @@ Portability note: non-unix systems may not allow read()/write() on
 sockets, but recv()/send() are usually ok. This is true on Windows and
 OS/2, for example.
 
-On a 32 bits linux/RHEL4 machine (mentat068) I got the following error
+On a 32-bits Linux/RHEL4 machine (mentat068) I got the following error
 "libgcc_s.so.1 must be installed for pthread_cancel to work"
 Searching the internet did not give much helpfull suggestions, but using
 strace did help. It turned out that there was a version of libgcc_s on

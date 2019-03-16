@@ -63,11 +63,14 @@ NIRS data requires transformations from (changes in) optical densities to (chang
 Robert and me settled on creating a forward- and an inverse-function for this purpose.
 function [transform] = ft_convertODs(cfg, opto)
 with
-cfg.channel = cell-array of strings or 1xN vector, defines on which channels the transformation matrix should be computed
-cfg.target = string, can be 'HbO' (oxygenated hemoglobin) or 'HbR' (deoxygenated hemoglobin')
-cfg.age = scalar, age of the participant
+
+    cfg.channel = cell-array of strings or 1xN vector, defines on which channels the transformation matrix should be computed
+    cfg.target = string, can be 'HbO' (oxygenated hemoglobin) or 'HbR' (deoxygenated hemoglobin')
+    cfg.age = scalar, age of the participant
 or
-cfg.dpf = scalar, differential path length factor
+
+  cfg.dpf = scalar, differential path length factor
+
 additional fields can contain the lookup table for the absorption coefficient or dpf.
 
 The resulting transform matrix can be multiplied with the data to obtain the concentrations. A respective ft_convertToODs function can be made to undo the conversion.

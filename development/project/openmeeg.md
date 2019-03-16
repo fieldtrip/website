@@ -35,7 +35,7 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
 
 - Document the steps to build a bem model for a generic conductor (done)
   - See [/example/testing_bem_created_leadfields](/example/testing_bem_created_leadfields)
-- Test OpenMEEG binaries under the different OS ( linux32, linux64, windows)
+- Test OpenMEEG binaries under the different OS (Linux32, Linux64, Windows)
   - For Linux: (done)
     - check the environment variables (done)
     - check correct binary (32-64 bit) (done)

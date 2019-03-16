@@ -9,11 +9,11 @@ For the type of connection we are talking about here, you need a so called 'null
 
 ## How can I test the serial port connection between two computers?
 
-To check that the serial connection between a linux computer and a windows computer is functional, you can do the followin
+To check that the serial connection between a Linux computer and a windows computer is functional, you can do the followin
 
-- On the linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g. /dev/ttyS0/). The main thing to consider is the Baudrate(e.g. 115200), which has to be the same on sending and receiving end.
-- On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baudrate is the same as on the linux machine(i.e. 115200).
-- Then once the connection is established you can type in the windows putty display and can then read it from the linux putty display and vice versa. If this doesn't work just check the hardware connections.
+- On the Linux PC, open up a putty session by typing putty. Choose serial and type the path for the serial port (e.g. /dev/ttyS0/). The main thing to consider is the baud rate (e.g. 115200), which has to be the same on sending and receiving end.
+- On the windows PC, open up a putty session and setup a serial port connection (click on serial), and specify the name of the port where the serial device is connected to (e.g. 'COM3)', make sure baud rate is the same as on the Linux machine(i.e. 115200).
+- Then once the connection is established you can type in the windows putty display and can then read it from the Linux putty display and vice versa. If this doesn't work just check the hardware connections.
 
 ## How to measure the delays of sending and receiving using a serial port connection
 
@@ -55,7 +55,7 @@ This is what I did on my office PC using FieldTrip commands **[ft_read_event](/r
     if count>1000
       break
     end
-    end;
+    end
 
 
     figure
@@ -74,7 +74,7 @@ This is what I did on my office PC using FieldTrip commands **[ft_read_event](/r
     %% close what we have opened
     fclose('all');
 
-What I got looks like thi
+What I got looks like this:
 
 {% include image src="/assets/img/faq/how_can_i_test_the_serial_port_connection_between_two_computers/serial_connect_write_read_event.jpg" width="400" %}
 

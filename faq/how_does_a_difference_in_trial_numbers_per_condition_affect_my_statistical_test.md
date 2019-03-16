@@ -73,10 +73,10 @@ Now that we have simulated the data for all subjects we are going to divide the 
 
       cfg.trials = find(temp_design==2);
       avg_B{i} = ft_timelockanalysis(cfg, data{i});
-    end;
+    end
     stat = ft_timelockstatistics(cfg_stats, avg_A{:},avg_B{:});   % don't forget the {:}!
     h(j) = sum(stat.mask)/numel(stat.mask); % calculate proportion of significant tests
-    end;
+    end
 
 ## Assumptions of statistical tests
 

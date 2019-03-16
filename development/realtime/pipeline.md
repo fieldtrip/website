@@ -12,7 +12,7 @@ A pipeline needs to handle a stream of data and consists of multiple elements. U
 sequentially on the data, that is, the original data stream is fed into the first pipeline element (PE) in small blocks,
 processed there, and the output of the first element is fed as input to the second element and so on.
 
-input -> [PE 1] -> [PE 2] -> ... -> [PE N] -> output
+    input -> [PE 1] -> [PE 2] -> ... -> [PE N] -> output
 
 In some situations it might be desirable to split the pipeline and be able to run some PEs in parallel,
 but we will ignore this for now.
@@ -59,22 +59,25 @@ Optionally, it might be useful to have a **finalize** method for all PEs, in whi
 We'd like the flexibility to compose pipelines in any order and with any number of elements, and then run the pipeline like this
 
 **init** phase
-PE{1} = init X
-PE{2} = init Y
-...
+
+    PE{1} = init X
+    PE{2} = init Y
+    ...
 
 **process** phase
-tmp = PE{1}(input)
-for k=2:N
-tmp = PE{k}(tmp)
-end
-output = tmp;
+
+    tmp = PE{1}(input)
+    for k=2:N
+      tmp = PE{k}(tmp)
+    end
+    output = tmp;
 
 In order to avoid a clash of fieldnames for the ''tmp'' structure passed from one PE to the next, output fields other than the data itself
 should be written to uniquely names subfields, e.g., the motion correction PE could write its output as
-tmp_out.data = aligned_volume;
-tmp_out.motion_correction.rotation; % estimated rotation parameters
-tmp_out.motion_correction.translation; % estimated translation parameters
+
+  tmp_out.data = aligned_volume;
+  tmp_out.motion_correction.rotation; % estimated rotation parameters
+  tmp_out.motion_correction.translation; % estimated translation parameters
 
 We could add a pre-flight run similar to BCI2000 where each PE does some pseudo-processing and then writes its output fields,
 so that the pipeline can check itself for consistency: For example, the quality display PE needs to be placed behind the motion correction PE,
@@ -129,14 +132,15 @@ set a function handle to the right function.
 
 ### Plain function table solution
 
-As long as we only have one **process** functions, we can also build a simple table like thi
-PE{1} = motion_correction_init(refVolume, flags);
-procFunc{1} = @motion_correction_process;
-PE{2} = slice_time_corr_init(deltaT);
-procFunc{2} = @slice_time_corr_process;
-...
-for k=1:N
-[PE{k}, tmp_out] = feval(procFunc{k}, PE{k}, tmp_in);
-end
+As long as we only have one **process** functions, we can also build a simple table like this:
+
+    PE{1} = motion_correction_init(refVolume, flags);
+    procFunc{1} = @motion_correction_process;
+    PE{2} = slice_time_corr_init(deltaT);
+    procFunc{2} = @slice_time_corr_process;
+    ...
+    for k=1:N
+      [PE{k}, tmp_out] = feval(procFunc{k}, PE{k}, tmp_in);
+    end
 
 If you like tables, please consider [brainstream](/development/realtime/brainstream).

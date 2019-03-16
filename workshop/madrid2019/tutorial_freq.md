@@ -206,9 +206,7 @@ topography of this power increase use the function
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_freq/fig3_topoTFR_absolute.png" width="300" %}
 
-_Figure: A topographic representation of the time-frequency
-representations (3 - 8 Hz, 0.1 - 0.3 s post stimulus) obtained using
-ft_topoplotTFR_
+_Figure: A topographic representation of the time-frequency representations (3 - 8 Hz, 0.1 - 0.3 s post stimulus) obtained using ft_topoplotTFR_
 
 ##### Exercise 1
 

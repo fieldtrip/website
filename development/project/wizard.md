@@ -8,7 +8,7 @@ title: Implement a graphical user interface as a "wizard" for certain analysis p
 
 _This project has been completed, the documentation below is only provided for future reference._
 
-The idea is to make a graphical user interface that allows the user to step through a sequence of functions, where for example each block consists of a computation with the associated graphical feedback. E.g. consider the following analysis protoco
+The idea is to make a graphical user interface that allows the user to step through a sequence of functions, where for example each block consists of a computation with the associated graphical feedback. E.g. consider the following analysis protocol:
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Step 1: do the preprocessing
@@ -57,7 +57,7 @@ The idea is to make a graphical user interface that allows the user to step thro
     cfg.layout      = 'CTF151.lay';
     multiplotTFR(cfg, TFRhann);
 
-Using the wizard on this analalysis protocol would result in a graphical user interface like thi
+Using the wizard on this analalysis protocol would result in a graphical user interface like this:
 
 {% include image src="/assets/img/development/project/wizard/wizard1.png" %}
 {% include image src="/assets/img/development/project/wizard/wizard2.png" %}

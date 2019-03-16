@@ -6,7 +6,7 @@ title: How can I distribute a batch of jobs?
 
 Peer distributed computing allows to have multiple computers running the same analysis at the same time, efficiently speeding up your entire analysis. But how can I distribute my jobs?
 
-Let's say we have an analysis-script and we want to run that particular analysis for every subject, every condition (say we have 2), every event (again 2), and 5 different frequencies of interest. The analysis-script should receive any of these parameters and then compute. For example, such an analysis-script could look like thi
+Let's say we have an analysis script and we want to run that particular analysis for every subject, every condition (say we have 2), every event (again 2), and 5 different frequencies of interest. The analysis script should receive any of these parameters and then compute. For example, such an analysis script could look like this:
 
     myanalysis(input)
 
@@ -28,7 +28,7 @@ Let's say we have an analysis-script and we want to run that particular analysis
     save(output, data);
     clear
 
-This script will simply perform 'analysis' on the parameters specified. Now we should effectively distribute this script and different parameters (we don't want multiple computers to do exactly the same of course). Here is an example of how such a job distribution (all subjects, 2 conditions, 2 events, 5 frequencies) script could look like. Basically in our example, we have 4 (2 conditions \* 2 events) different task-parameters repeated for 5 different frequencie
+This script will simply perform 'analysis' on the parameters specified. Now we should effectively distribute this script and different parameters (we don't want multiple computers to do exactly the same of course). Here is an example of how such a job distribution (all subjects, 2 conditions, 2 events, 5 frequencies) script could look like. Basically in our example, we have 4 (2 conditions \* 2 events) different task-parameters repeated for 5 different frequencies:
 
      % our study parameters
      myconds    = {'A','B'};

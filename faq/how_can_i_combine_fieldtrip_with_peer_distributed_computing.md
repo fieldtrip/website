@@ -14,31 +14,35 @@ FieldTrip functions usually have two input arguments, the first is the configura
 FieldTrip functions usually also have an output argument, which is a structure with the output data. The cfg.outputfile option specifies to which .mat file that data will be written.
 
 So instead of preprocessing data like
-cfg = [];
-cfg.dataset = 'Subject01.ds'
-...
-data = ft_preprocessing(cfg);
-save subject01_raw.mat data
+
+  cfg = [];
+  cfg.dataset = 'Subject01.ds'
+  ...
+  data = ft_preprocessing(cfg);
+  save subject01_raw.mat data
 
 followed by averaging the trials to get an ERP
-load subject01_raw.mat data % actually not needed here because the data is still in memory
-cfg = [];
-avg = ft_timelockanalysis(cfg, data);
-save subject01_avg.mat avg
+
+  load subject01_raw.mat data % actually not needed here because the data is still in memory
+  cfg = [];
+  avg = ft_timelockanalysis(cfg, data);
+  save subject01_avg.mat avg
 
 you would do
-cfg = [];
-cfg.dataset = 'Subject01.ds'
-...
-cfg.outputfile = 'subject01_raw.mat'
-ft_preprocessing(cfg);
+
+  cfg = [];
+  cfg.dataset = 'Subject01.ds'
+  ...
+  cfg.outputfile = 'subject01_raw.mat'
+  ft_preprocessing(cfg);
 
 and
-cfg = [];
-...
-cfg.inputfile = 'subject01_raw.mat'
-cfg.outputfile = 'subject01_avg.mat'
-ft_timelockanalysis(cfg);
+
+  cfg = [];
+  ...
+  cfg.inputfile = 'subject01_raw.mat'
+  cfg.outputfile = 'subject01_avg.mat'
+  ft_timelockanalysis(cfg);
 
 Note that when specifying the cfg.inputfile and/or cfg.outputfile options, that you should not specify an input and/or output variable.
 
@@ -85,10 +89,12 @@ The MEG data used in the FieldTrip tutorials is available from <ftp://ftp.fieldt
     % load the raw data from disk, average it and save the result
     peercellfun(@ft_timelockanalysis, cfg);
 
-Please note that file permissions can be problematic if you use peers that are running under another user (e.g. public). If you use a publicly writeable directory, e.g. in linux
-mkdir ~/public
-chmod 777 ~/public
-for the cfg.outputfile and cfg.inputfile options, you should be fine.
+Please note that file permissions can be problematic if you use peers that are running under another user (e.g. public). If you use a publicly writeable directory, e.g. in Linux:
+
+    mkdir ~/public
+    chmod 777 ~/public
+
+For the cfg.outputfile and cfg.inputfile options, you should be fine.
 
 ## Bundling multiple functions in a single distributed job
 
@@ -129,8 +135,8 @@ How to make sure that you are recruiting the right machines? Just call the peerc
 
 Small job (half a GB and half an hour
 
-peercellfun(@ft_timelockanalysis, cfg, 'memreq', .5*(1024^3), 'timreq', .5*3600);
+    peercellfun(@ft_timelockanalysis, cfg, 'memreq', .5*(1024^3), 'timreq', .5*3600);
 
 Large job (two GB and 4 hours
 
-peercellfun(@ft_freqanalysis, cfg, 'memreq', 2*(1024^3), 'timreq', 4*3600);
+    peercellfun(@ft_freqanalysis, cfg, 'memreq', 2*(1024^3), 'timreq', 4*3600);
