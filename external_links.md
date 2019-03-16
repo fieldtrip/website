@@ -46,7 +46,7 @@ Feel free to edit this page and add links that you think are appropriate.
 
 ## EEG hardware companies
 
-- [BrainProducts](http://www.brainproducts.de)
+- [BrainProducts](http://www.brainproducts.com)
 - [Biosemi](http://www.biosemi.com)
 - [EGI](http://www.egi.com)
 - [Compumedics Neuroscan](https://compumedicsneuroscan.com/) (also MEG)

@@ -404,7 +404,7 @@ For each trial, the condition information is kept with the data structure in `da
 Inspect the resulting data structure after
 **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-Which fields have been added and what information do they contain? The fields in the data structure are explained in more detail in **[ft_datatype_timelock](/reference/ft_dataype_timelock)**.
+Which fields have been added and what information do they contain? The fields in the data structure are explained in more detail in **[ft_datatype_timelock](/reference/ft_datatype_timelock)**.
 {% include markup/end %}
 
 We will now use **[ft_topoplotER](/reference/ft_topoplotER)** to plot both

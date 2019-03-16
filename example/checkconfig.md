@@ -5,7 +5,7 @@ tags: [example, cfg]
 
 # How to use ft_checkconfig
 
-The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input configuration (cfg) for the main FieldTrip functions. This is similar to what **[ft_checkdata](/reference/ft_checkdata)** does for the input data. **[Ft_checkconfig](/reference/Ft_checkconfig)** is automatically called when you use a FieldTrip function. You may not even notice this, unless it gives you feedback about your cfg (i.e., warning or error messages).
+The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input configuration (cfg) for the main FieldTrip functions. This is similar to what **[ft_checkdata](/reference/ft_checkdata)** does for the input data. The **[ft_checkconfig](/reference/ft_checkconfig)** function is automatically called when you use a FieldTrip function. You may not even notice this, unless it gives you feedback about your cfg (i.e., warning or error messages).
 
 **[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg (i.e., the cfg that is given back by the function, usually data.cfg) and give more elaborate feedback to the user. This tutorial explains what **[ft_checkconfig](/reference/ft_checkconfig)** does, and importantly, how you can control it and use it to your advantage!
 

@@ -15,7 +15,7 @@ tags: [natmeg, meg-audodd]
 
 This course is organized by [NatMEG](http://www.natmeg.se), the Swedish National MEG facility located at the Karolinska Institute in Stockholm. The target audience consists of Scandinavian researchers with a reasonable level of (clinical) EEG experience.
 
-You can watch all lectures on NatMEG's [online lectures page](http://natmeg.se/wp/activities/natmeg-lectures/).
+You can watch all lectures on NatMEG's [online lectures page](http://natmeg.se/learnaboutmeg/meglectures/index.html).
 
 ## Overview of hands-on sessions
 

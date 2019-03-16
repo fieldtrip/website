@@ -496,7 +496,7 @@ As ICA is in principle a spatial filter, we can inspect how each component loads
 
 {% include image src="/assets/img/tutorial/tms-eeg/topoplotic-comps.png" %}
 
-Using **[ft_databrowser](/reference/ft_databrowser)**, or MATLAB's plotting function, together with the output from **[ft_topoplotic](/reference/ft_topoplotic)** should be able to find one or two components that capture the decay artifact and/or the cranial muscle if the ICA was successful.
+Using **[ft_databrowser](/reference/ft_databrowser)**, or MATLAB's plotting function, together with the output from **[ft_topoplotIC](/reference/ft_topoplotIC)** should be able to find one or two components that capture the decay artifact and/or the cranial muscle if the ICA was successful.
 
 #### Exercise: find the components
 
@@ -877,7 +877,7 @@ We will also calculate the difference between conditions. Usually when plotting 
     cfg.parameter = 'powspctrm';
     difference_freq = ft_math(cfg, contract_freq_bc, relax_freq_bc);
 
-Now that we've calculated the TFRs for both conditions and their differences we can plot the results in various ways. We can start with plotting all TFRs on a 2D representation of the head using **[ft_multiplotTFR](/reference/ft_multiplottfr)**.
+Now that we've calculated the TFRs for both conditions and their differences we can plot the results in various ways. We can start with plotting all TFRs on a 2D representation of the head using **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
 
     cfg = [];
     cfg.xlim = [-0.1 1.0];
@@ -889,7 +889,7 @@ Now that we've calculated the TFRs for both conditions and their differences we 
 
 {% include image src="/assets/img/tutorial/tms-eeg/multi-tfr-relchange.png" %}
 
-This plot is fully interactive, click and drag to select one or more channels, click on them to view an averaged representation of the selected channels. You can also plot single (or multiple) channels in a single view using **[ft_singleplotTFR](/reference/ft_singleplottfr)**.
+This plot is fully interactive, click and drag to select one or more channels, click on them to view an averaged representation of the selected channels. You can also plot single (or multiple) channels in a single view using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
 
     cfg = [];
     cfg.channel = '17'; % Specify the channel to plot

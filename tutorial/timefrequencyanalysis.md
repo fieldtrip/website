@@ -9,7 +9,7 @@ tags: [tutorial, freq, meg, eeg, plot, meg-language]
 
 In this tutorial you can find information about the time-frequency analysis of a single subject's MEG data using a Hanning window, multitapers and wavelets. This tutorial also shows how to visualize the results.
 
-Here, we will work on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [artifact rejection](/tutorial/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
+Here, we will work on the MEG-language dataset, you can click [here](/tutorial/meg_language) for details on the dataset. This tutorial is a continuation from the preprocessing tutorials. We will begin by repeating the code used to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts)). We assume that the reader already knows how to do the preprocessing in FieldTrip.
 
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see the [summary and suggested further reading](#Summary and suggested further reading) section).
 

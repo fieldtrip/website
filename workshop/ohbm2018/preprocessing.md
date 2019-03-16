@@ -84,7 +84,7 @@ The following steps are taken in the EEG section of the tutorial:
 
 - Compute global mean field power using **[ft_globalmeanfield](/reference/ft_globalmeanfield)**
 
-- Visualize the results using **[ft_topoplotER](/reference/ft_topoploter)**, and **[ft_multiplotER](/reference/ft_multiploter)**
+- Visualize the results using **[ft_topoplotER](/reference/ft_topoplotER)**, and **[ft_multiplotER](/reference/ft_multiplotER)**
 
 ## Reading and preprocessing the interesting trials
 
@@ -219,7 +219,7 @@ FieldTrip has a built-in function to calculate the GMFP; [ft_globalmeanfield](/r
 
 ### Plotting the results of EEG and MEG
 
-Using the plot functions **[ft_topoplotER](/reference/ft_topoploter)** and **[ft_multiplotER](/reference/ft_multiplotER)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
+Using the plot functions **[ft_topoplotER](/reference/ft_topoplotER)** and **[ft_multiplotER](/reference/ft_multiplotER)** you can plot the average of the trials. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial. Furthermore, we use the below script to visualize single trial with global mean field power and we find the time of interest and we save it together with the EEG_avg.
 
     figure;
 

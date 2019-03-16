@@ -53,7 +53,7 @@ New channels for ft_chantype should be 'nirs', 'receiver' and 'transmitter'.
 
 | Manufacturer                                                                                               | System(s)                            | File format | Proprietary file format |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- | ----------------------- |
-| [Artinis Medical Systems](http://www.artinis.com/group/NIRS)                                               | Oxymon, Octamon, Portamon, Portalite | .oxy3       | yes                     |
+| [Artinis Medical Systems](http://www.artinis.com)                                                          | Oxymon, Octamon, Portamon, Portalite | .oxy3       | yes                     |
 | [Hitachi Medical Systems](http://www.hitachi-medical-systems.nl/products-and-services/optical-topography/) | ETG-4000                             | .csv        | no                      |
 
 ## Transformations

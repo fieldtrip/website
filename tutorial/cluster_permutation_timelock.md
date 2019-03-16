@@ -9,7 +9,7 @@ tags: [tutorial, statistics, eeg, meg, timelock, plot, meg-language]
 
 The objective of this tutorial is to give an introduction to the statistical analysis of event-related EEG and MEG data (denoted as MEEG data in the following) by means of cluster-based permutation tests. The tutorial starts with a long background section that sketches the background of permutation tests. Subsequently it is shown how to use FieldTrip to perform cluster-based permutation tests on actual axial and planar event-related fields in a between-trials (using single-subject data) and in a within-subjects design (using data from multiple subjects).
 
-In this tutorial we will continue working on the [dataset](/tutorial/meg_language) of a single subject described in the [trigger-based trial selection preprocessing tutorial](/tutorial/preprocessing). Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/Preprocessing), [artifact rejection](/tutorial/artifacts), [event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
+In this tutorial we will continue working on the [dataset](/tutorial/meg_language) of a single subject described in the [trigger-based trial selection preprocessing tutorial](/tutorial/preprocessing). Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts), [event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
 
 This tutorial is not covering statistical test on time-frequency representations. If you are interested in that, you can read the [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial. If you are interested how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
@@ -30,7 +30,7 @@ In this tutorial we will consider a **between-trials** experiment, in which we a
 - Preprocessing and time-locked analysis with the **[ft_definetrial](/reference/ft_definetrial)**, **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** functions
 - (Calculation of the planar gradient with the **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions)
 - Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-- Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
+- Plotting the result with the **[ft_topoplotER](/reference/ft_topoplotER)** function
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/bwtrial_stat_procedure_axial.png" %}
 
@@ -46,7 +46,7 @@ Subsequently, we consider a **within-subjects** experiment, in which we compare 
 - Calculation of the planar gradient with the **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
 - Make grandaverage with the **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** function
 - Permutation test with the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-- Plotting the result with the **[ft_topoplotER](/reference/ft_topoploter)** function
+- Plotting the result with the **[ft_topoplotER](/reference/ft_topoplotER)** function
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/ft_stat_tutorial2.png" width="550" %}
 
@@ -345,7 +345,7 @@ We now calculate the raw effect in the average with planar gradient data using t
     cfg.parameter = 'avg';
     raweffectFICvsFC     = ft_math(cfg,avgFIC_planar_cmb,avgFC_planar_cmb);
 
-Using the following configuration for **[ft_topoplotER](/reference/ft_topoploter)** we can plot the raw effect and highlight the channels belonging to the significant cluster
+Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels belonging to the significant cluster
 
     figure;
     timestep = 0.05; %(in seconds)

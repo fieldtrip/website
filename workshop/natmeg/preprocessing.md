@@ -125,9 +125,9 @@ The following steps are taken in the MEG section of the tutorial:
 - Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
 - Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - Compute event-related fields using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-- Visualize the magnetometer results. You can plot the ERF of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
+- Visualize the magnetometer results. You can plot the ERF of one channel with **[ft_singleplotER](/reference/ft_singleplotER)** or several channels with **[ft_multiplotER](/reference/ft_multiplotER)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoplotER)**
 - Combine horizontal and vertical planar gradiometers with **[ft_combineplanar](/reference/ft_combineplanar)**
-- Plot the gradiometer data using **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)**, and **[ft_topoplotER](/reference/ft_topoploter)**
+- Plot the gradiometer data using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart1.png" width="400" %}
 
@@ -280,7 +280,7 @@ The most important field is ERF_standard.avg, containing the average over all tr
 
 #### Plotting the results using the magnetometers
 
-Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
+Using the plot functions **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
 Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
@@ -467,7 +467,7 @@ The EEG section of this tutorial resembles the MEG section. We will take the fol
 - Read the data into Matlab using **[ft_preprocessing](/reference/ft_preprocessing)**
 - Clean the data in a semi-automatic way using **[ft_rejectvisual](/reference/ft_rejectvisual)**
 - Calculate event-related potentials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-- Visualize the results using **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)**, and **[ft_topoplotER](/reference/ft_topoploter)**
+- Visualize the results using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
 - Calculate scalp-current density with **[ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)**
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart2.png" width="400" %}
@@ -582,7 +582,7 @@ The most important field is _ERP_oddball.avg_, containing the average over all t
 
 #### Plotting the results of EEG
 
-Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
+Using the plot functions **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
 Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 

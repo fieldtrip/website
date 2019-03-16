@@ -95,7 +95,7 @@ If you want to compile a 32 bit version on a 64 bit platform, e.g. if you are us
 
 ## Stand-alone executables in realtime directory
 
-We generally only provide a ''Makefile'' for the GNU toolchain. This should be enough to compile the code using GCC on Linux/Mac OS X and using MinGW and Cygwin on Windows. Please note that not all tools will compile on all platforms, and that you might need additional libraries or vendor-specific SDKs which we can't distribute (e.g., you can only compile the [emotiv2ft](/development/realtime/Emotiv) application on Windows, and you need the Emotiv EDK).
+We generally only provide a ''Makefile'' for the GNU toolchain. This should be enough to compile the code using GCC on Linux/Mac OS X and using MinGW and Cygwin on Windows. Please note that not all tools will compile on all platforms, and that you might need additional libraries or vendor-specific SDKs which we can't distribute (e.g., you can only compile the [emotiv2ft](/development/realtime/emotiv) application on Windows, and you need the Emotiv EDK).
 
 ## Fixing MEX-compilation with 32-bit variants of MATLAB running under 64-bit Linux
 

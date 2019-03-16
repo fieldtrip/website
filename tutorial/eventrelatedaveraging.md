@@ -30,7 +30,7 @@ To calculate the event related field / potential for the example dataset we will
 - Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Compute the average over trials using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Calculate the planar gradient with the functions **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)**
-- Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
+- Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleplotER)** or several channels with **[ft_multiplotER](/reference/ft_multiplotER)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoplotER)**
 - Grandaverage and realignment (optional). When you have data from more than one subject you can make a grand average of the ERPs / ERFs with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. **[ft_megrealign](/reference/ft_megrealign)** can be used to realign each subjects data to standard sensor positions before computing the grand average.
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/figure1.png" %}
@@ -104,7 +104,7 @@ The most important field is avgFIC.avg, containing the average over all trials f
 
 ## Plot the results (axial gradients)
 
-Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
+Using the plot functions **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
 Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 

@@ -17,19 +17,19 @@ This page deals with specific implemenations of the FieldTrip buffer protocol. T
 
 ## Implementations for specific aquisition systems
 
-- [ANT NeuroSDK](/development/realtime/NeuroSDK)
+- [ANT NeuroSDK](/development/realtime/neurosdk)
 - [Artinis Medical Systems (NIRS)](/development/realtime/artinis)
 - [BrainVision Recorder](/development/realtime/rda)
-- [Biosemi](/development/realtime/Biosemi)
-- [CTF (MEG)](/development/realtime/CTF)
-- [Emotiv](/development/realtime/Emotiv)
-- [Elekta Neuromag (MEG)](/development/realtime/Neuromag)
+- [Biosemi](/development/realtime/biosemi)
+- [CTF (MEG)](/development/realtime/ctf)
+- [Emotiv](/development/realtime/emotiv)
+- [Elekta Neuromag (MEG)](/development/realtime/neuromag)
 - [Jinga-Hi (LFP/EEG)](/development/realtime/jinga-hi)
-- [Micromed (ECoG)](/development/realtime/Micromed)
-- [ModularEEG/OpenEEG](/development/realtime/ModularEEG)
-- [Neuralynx (LFP)](/development/realtime/Neuralynx)
-- [Neurosky ThinkCap](/development/realtime/Neurosky)
-- [OpenBCI](/development/realtime/OpenBCI)
+- [Micromed (ECoG)](/development/realtime/micromed)
+- [ModularEEG/OpenEEG](/development/realtime/modulareeg)
+- [Neuralynx (LFP)](/development/realtime/neuralynx)
+- [Neurosky ThinkCap](/development/realtime/neurosky)
+- [OpenBCI](/development/realtime/openbci)
 - [Sound card input](/development/realtime/audio2ft)
 - [Siemens fMRI](/development/realtime/fmri)
 - [TMSI](/development/realtime/tmsi)
@@ -39,7 +39,7 @@ This page deals with specific implemenations of the FieldTrip buffer protocol. T
 
 - [Java](/development/realtime/buffer_java) client-side implementation
 - [Python](/development/realtime/buffer_python) client-side implementation
-- [Arduino](/development/realtime/Arduino) client-side implementation
+- [Arduino](/development/realtime/arduino) client-side implementation
 - [BCI2000](/development/realtime/bci2000) includes the FieldTripBuffer and the FieldTripBufferSource modules
 - [BrainVision RDA interface](/development/realtime/rda) allows streaming data in the RDA format
 - [BrainStream](/development/realtime/brainstream) is directly supported through shared MATLAB code

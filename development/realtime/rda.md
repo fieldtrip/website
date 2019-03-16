@@ -120,7 +120,7 @@ RDA -> FieldTrip: Channel number field of RDA markers should be matched to value
 
 ## External links
 
-- http://www.brainproducts.de
+- http://www.brainproducts.com
 
 - http://www.bci2000.org
 
