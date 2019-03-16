@@ -212,9 +212,9 @@ We call `ft_topoplotER` to do the plotting.
 
 In the previous analysis, classification has been performed for each channel individually.
 However, since the MEG channels have a spatial structure,
-one can also consider groups of neighbouring channels in the searchlight. To do this, we must provide
-a distance matrix that specifies which channels are neighbours of each other.
-['ft_prepare_neighbours'](http://www.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work/)
+one can also consider groups of neighbouring channels in the searchlight. To build the neighbourhood
+structure, we use
+['ft_prepare_neighbours'](http://www.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work/):
 
     cfg = [];
     cfg.method      = 'triangulation'
@@ -235,6 +235,9 @@ via the parameter `cfg.neighbours`.
       cfg.mvpa.neighbours  = neighbours;
 
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
+
+
+We call `ft_topoplotER` again to plot the result as a topography.
 
       cfg              = [];
       cfg.parameter    = 'accuracy';
