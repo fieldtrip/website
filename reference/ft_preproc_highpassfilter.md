@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_highpassfilter
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_HIGHPASSFILTER applies a high-pass filter to the data and thereby removes

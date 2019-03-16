@@ -1,5 +1,7 @@
 ---
 title: fieldtrip2spss
+layout: default
+tags: 
 ---
 ```
  FIELDTRIP2SPSS compiles data and correpsonding labels into a textfile,

@@ -1,5 +1,7 @@
 ---
 title: ft_write_headshape
+layout: default
+tags: 
 ---
 ```
  FT_WRITE_HEADSHAPE writes a head surface, cortical sheet or

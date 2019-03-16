@@ -1,5 +1,7 @@
 ---
 title: ft_plot_vector
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_VECTOR visualizes a vector as a line, similar to PLOT.

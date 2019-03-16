@@ -1,5 +1,7 @@
 ---
 title: ft_plot_headshape
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_HEADSHAPE visualizes the shape of a head from a variety of

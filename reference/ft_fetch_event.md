@@ -1,5 +1,7 @@
 ---
 title: ft_fetch_event
+layout: default
+tags: 
 ---
 ```
  FT_FETCH_EVENT mimics the behaviour of FT_READ_EVENT, but for a FieldTrip

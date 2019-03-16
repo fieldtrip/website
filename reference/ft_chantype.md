@@ -1,5 +1,7 @@
 ---
 title: ft_chantype
+layout: default
+tags: 
 ---
 ```
  FT_CHANTYPE determines for each individual channel what chantype of data it

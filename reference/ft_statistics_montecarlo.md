@@ -1,5 +1,7 @@
 ---
 title: ft_statistics_montecarlo
+layout: default
+tags: 
 ---
 ```
  FT_STATISTICS_MONTECARLO performs a nonparametric statistical test by calculating

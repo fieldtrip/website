@@ -1,5 +1,7 @@
 ---
 title: ft_preamble
+layout: default
+tags: 
 ---
 ```
  FT_PREAMBLE is a helper function that is included in many of the FieldTrip

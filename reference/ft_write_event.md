@@ -1,5 +1,7 @@
 ---
 title: ft_write_event
+layout: default
+tags: 
 ---
 ```
  FT_WRITE_EVENT writes an event structure to a file, a message daemon

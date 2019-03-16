@@ -1,5 +1,7 @@
 ---
 title: dipole_fit
+layout: default
+tags: 
 ---
 ```
  DIPOLE_FIT performs an equivalent current dipole fit with a single

@@ -1,5 +1,7 @@
 ---
 title: ft_senslabel
+layout: default
+tags: 
 ---
 ```
  FT_SENSLABEL returns a list of predefined sensor labels given the

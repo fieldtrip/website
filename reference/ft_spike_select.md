@@ -1,5 +1,7 @@
 ---
 title: ft_spike_select
+layout: default
+tags: 
 ---
 ```
  FT_SPIKE_SELECT selects subsets of spikes, channels and trials from a

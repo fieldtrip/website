@@ -1,5 +1,7 @@
 ---
 title: ft_spiketriggeredspectrum_fft
+layout: default
+tags: 
 ---
 ```
  FT_SPIKETRIGGEREDSPECTRUM_FFT computes the Fourier spectrum (amplitude and phase)

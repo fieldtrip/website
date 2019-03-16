@@ -1,5 +1,7 @@
 ---
 title: ft_poll_buffer
+layout: default
+tags: 
 ---
 ```
  FT_POLL_BUFFER is deprecated.

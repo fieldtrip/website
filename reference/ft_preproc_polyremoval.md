@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_polyremoval
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_POLYREMOVAL removed an Nth order polynomal from the data

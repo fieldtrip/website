@@ -1,5 +1,7 @@
 ---
 title: ft_headmodel_localspheres
+layout: default
+tags: 
 ---
 ```
  FT_HEADMODEL_LOCALSPHERES constructs a MEG volume conduction model in

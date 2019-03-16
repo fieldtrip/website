@@ -1,5 +1,7 @@
 ---
 title: ft_read_data
+layout: default
+tags: 
 ---
 ```
  FT_READ_DATA reads electrophysiological data from a variety of EEG, MEG and LFP

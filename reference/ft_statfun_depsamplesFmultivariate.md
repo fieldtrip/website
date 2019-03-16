@@ -1,5 +1,7 @@
 ---
 title: ft_statfun_depsamplesFmultivariate
+layout: default
+tags: 
 ---
 ```
  FT_STATFUN_DEPSAMPLESFMULTIVARIATE calculates the MANOVA dependent samples

@@ -1,5 +1,7 @@
 ---
 title: ft_artifact_jump
+layout: default
+tags: 
 ---
 ```
  FT_ARTIFACT_JUMP reads the data segments of interest from file and identifies

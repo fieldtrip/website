@@ -1,5 +1,7 @@
 ---
 title: beamformer_dics
+layout: default
+tags: 
 ---
 ```
  BEAMFORMER_DICS scans on pre-defined dipole locations with a single dipole

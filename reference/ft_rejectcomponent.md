@@ -1,5 +1,7 @@
 ---
 title: ft_rejectcomponent
+layout: default
+tags: 
 ---
 ```
  FT_REJECTCOMPONENT backprojects an ICA (or similar) decomposition to the

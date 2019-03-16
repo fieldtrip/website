@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_signalviewer
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_SIGNALVIEWER is an example realtime application for online viewing of
@@ -38,7 +40,7 @@ title: ft_realtime_signalviewer
  If you want to skip all data that was acquired before you start the RT function,
  but don't want to miss any data that was acquired while the realtime function is
  started, then you should use jumptoeof=yes and bufferdata=first. If you want to
- analyse data from a file, then you should use jumptoeof=no and bufferdata=first.
+ analyze data from a file, then you should use jumptoeof=no and bufferdata=first.
 
  To stop this realtime function, you have to press Ctrl-C
 ```

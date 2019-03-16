@@ -1,5 +1,7 @@
 ---
 title: ft_struct2string
+layout: default
+tags: 
 ---
 ```
  FT_STRUCT2STRING converts all char-array elements in a structure

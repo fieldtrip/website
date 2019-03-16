@@ -1,5 +1,7 @@
 ---
 title: ft_plot_box
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_BOX plots the outline of a box that is specified by its lower

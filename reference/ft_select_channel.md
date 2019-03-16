@@ -1,5 +1,7 @@
 ---
 title: ft_select_channel
+layout: default
+tags: 
 ---
 ```
  FT_SELECT_CHANNEL is a helper function that can be used as callback function

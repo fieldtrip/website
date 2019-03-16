@@ -1,5 +1,7 @@
 ---
 title: ft_mvaranalysis
+layout: default
+tags: 
 ---
 ```
  FT_MVARANALYSIS performs multivariate autoregressive modeling on

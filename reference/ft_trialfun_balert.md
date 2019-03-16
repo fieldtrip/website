@@ -1,5 +1,7 @@
 ---
 title: ft_trialfun_balert
+layout: default
+tags: 
 ---
 ```
 ft_definetrialBAlert: Extract trials B-Alert data from CSV file. 

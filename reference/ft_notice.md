@@ -1,5 +1,7 @@
 ---
 title: ft_notice
+layout: default
+tags: 
 ---
 ```
  FT_NOTICE prints a notice message on screen, depending on the verbosity 

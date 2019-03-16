@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_spike
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_SPIKE describes the FieldTrip MATLAB structure for spike data

@@ -1,5 +1,7 @@
 ---
 title: ft_keyval2cfg
+layout: default
+tags: 
 ---
 ```
  FT_KEYVAL2CFG converts between a structure and a cell-array with key-value

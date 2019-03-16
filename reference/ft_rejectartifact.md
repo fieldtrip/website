@@ -1,5 +1,7 @@
 ---
 title: ft_rejectartifact
+layout: default
+tags: 
 ---
 ```
  FT_REJECTARTIFACT removes data segments containing artifacts. It returns a

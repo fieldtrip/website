@@ -1,5 +1,7 @@
 ---
 title: ft_channelcombination
+layout: default
+tags: 
 ---
 ```
  FT_CHANNELCOMBINATION creates a cell-array with combinations of EEG/MEG

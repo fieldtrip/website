@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_micromedproxy
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_MICROMEDPROXY reads continuous data from a Micromed acquisition system

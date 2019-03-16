@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_padding
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_PADDING performs padding on the data, i.e. adds or removes samples

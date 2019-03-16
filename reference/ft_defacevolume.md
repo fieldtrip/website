@@ -1,5 +1,7 @@
 ---
 title: ft_defacevolume
+layout: default
+tags: 
 ---
 ```
  FT_DEFACEVOLUME allows you to de-identify an anatomical MRI by erasing specific

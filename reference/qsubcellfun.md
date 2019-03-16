@@ -1,5 +1,7 @@
 ---
 title: qsubcellfun
+layout: default
+tags: 
 ---
 ```
  QSUBCELLFUN applies a function to each element of a cell-array. The

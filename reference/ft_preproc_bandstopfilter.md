@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_bandstopfilter
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_BANDSTOPFILTER applies a band-stop filter to the data and thereby

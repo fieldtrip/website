@@ -1,5 +1,7 @@
 ---
 title: ft_volumerealign
+layout: default
+tags: 
 ---
 ```
  FT_VOLUMEREALIGN spatially aligns an anatomical MRI with head coordinates based on

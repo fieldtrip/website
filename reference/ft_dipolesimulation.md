@@ -1,5 +1,7 @@
 ---
 title: ft_dipolesimulation
+layout: default
+tags: 
 ---
 ```
  FT_DIPOLESIMULATION computes the field or potential of a simulated dipole
@@ -39,10 +41,8 @@ title: ft_dipolesimulation
    cfg.headmodel     = structure with volume conduction model, see FT_PREPARE_HEADMODEL
 
  The EEG or MEG sensor positions should be specified as
-   cfg.elec          = structure with electrode positions, see FT_DATATYPE_SENS
-   cfg.grad          = structure with gradiometer definition, see FT_DATATYPE_SENS
-   cfg.elecfile      = name of file containing the electrode positions, see FT_READ_SENS
-   cfg.gradfile      = name of file containing the gradiometer definition, see FT_READ_SENS
+   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
+   cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
 
  See also FT_SOURCEANALYSIS, FT_DIPOLEFITTING, FT_TIMELOCKSIMULATION,
  FT_FREQSIMULATION, FT_CONNECTIVITYSIMULATION

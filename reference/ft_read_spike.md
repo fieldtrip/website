@@ -1,5 +1,7 @@
 ---
 title: ft_read_spike
+layout: default
+tags: 
 ---
 ```
  FT_READ_SPIKE reads spike timestamps and waveforms from various data

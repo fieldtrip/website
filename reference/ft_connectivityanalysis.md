@@ -1,5 +1,7 @@
 ---
 title: ft_connectivityanalysis
+layout: default
+tags: 
 ---
 ```
  FT_CONNECTIVITYANALYSIS computes various measures of connectivity between

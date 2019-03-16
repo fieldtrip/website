@@ -1,5 +1,7 @@
 ---
 title: ft_sourcegrandaverage
+layout: default
+tags: 
 ---
 ```
  FT_SOURCEGRANDAVERAGE averages source reconstructions over either multiple
@@ -13,7 +15,7 @@ title: ft_sourcegrandaverage
  FT_SOURCESTATISTICS with the method 'randomization' or 'randcluster'.
 
  The input source structures should be spatially alligned to each other
- and should have the same positions for the source grid.
+ and should have the same positions for the sourcemodel.
 
  Use as
   [grandavg] = ft_sourcegrandaverage(cfg, source1, source2, ...)

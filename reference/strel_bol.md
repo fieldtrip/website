@@ -1,5 +1,7 @@
 ---
 title: strel_bol
+layout: default
+tags: 
 ---
 ```
  STREL_BOL constructs a 3D sphere with the specified radius

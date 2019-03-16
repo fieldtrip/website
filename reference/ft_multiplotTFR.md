@@ -1,5 +1,7 @@
 ---
 title: ft_multiplotTFR
+layout: default
+tags: 
 ---
 ```
  FT_MULTIPLOTTFR plots the time-frequency representations of power or coherence

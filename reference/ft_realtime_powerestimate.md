@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_powerestimate
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_POWERESTIMATE is an example realtime application for online

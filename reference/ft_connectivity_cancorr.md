@@ -1,5 +1,7 @@
 ---
 title: ft_connectivity_cancorr
+layout: default
+tags: 
 ---
 ```
  FT_CONNECTIVITY_CANCORR computes the canonical correlation or coherence between

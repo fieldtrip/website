@@ -1,5 +1,7 @@
 ---
 title: qsubget
+layout: default
+tags: 
 ---
 ```
  QSUBGET get the output arguments after the remote job has been executed

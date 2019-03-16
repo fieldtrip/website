@@ -1,5 +1,7 @@
 ---
 title: ft_spike_rate
+layout: default
+tags: 
 ---
 ```
  FT_SPIKE_RATE computes the firing rate of spiketrains and their variance

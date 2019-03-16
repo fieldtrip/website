@@ -1,5 +1,7 @@
 ---
 title: ft_spike_rate_orituning
+layout: default
+tags: 
 ---
 ```
  FT_SPIKE_RATE_ORITUNING computes a model of the firing rate as a function

@@ -1,5 +1,7 @@
 ---
 title: ft_meshrealign
+layout: default
+tags: 
 ---
 ```
  FT_MESHREALIGN rotates, translates and optionally scales electrode positions. The

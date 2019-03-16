@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_oddball
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_ODDBALL is an realtime application that computes an online

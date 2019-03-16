@@ -1,5 +1,7 @@
 ---
 title: ft_statistics_stats
+layout: default
+tags: 
 ---
 ```
  FT_STATISTICS_STATS performs a massive univariate statistical test using the

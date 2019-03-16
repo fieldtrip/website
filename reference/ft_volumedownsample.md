@@ -1,5 +1,7 @@
 ---
 title: ft_volumedownsample
+layout: default
+tags: 
 ---
 ```
  FT_VOLUMEDOWNSAMPLE downsamples an anatomical MRI or source reconstruction

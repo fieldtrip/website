@@ -1,5 +1,7 @@
 ---
 title: matlab2markdown
+layout: default
+tags: 
 ---
 ```
  MATLAB2MARKDOWN converts a MATLAB script or function to MarkDown format. All

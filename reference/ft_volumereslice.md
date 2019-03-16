@@ -1,5 +1,7 @@
 ---
 title: ft_volumereslice
+layout: default
+tags: 
 ---
 ```
  FT_VOLUMERESLICE flips, permutes, interpolates and reslices a volume along the

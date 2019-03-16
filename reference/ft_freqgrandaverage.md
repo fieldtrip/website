@@ -1,5 +1,7 @@
 ---
 title: ft_freqgrandaverage
+layout: default
+tags: 
 ---
 ```
  FT_FREQGRANDAVERAGE computes the average powerspectrum or time-frequency spectrum

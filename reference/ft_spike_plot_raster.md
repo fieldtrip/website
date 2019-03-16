@@ -1,5 +1,7 @@
 ---
 title: ft_spike_plot_raster
+layout: default
+tags: 
 ---
 ```
  FT_SPIKE_PLOT_RASTER makes a raster plot of spike-trains and allows for a

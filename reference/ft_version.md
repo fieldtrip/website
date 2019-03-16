@@ -1,5 +1,7 @@
 ---
 title: ft_version
+layout: default
+tags: 
 ---
 ```
  FT_VERSION returns the version and installation directory of FieldTrip

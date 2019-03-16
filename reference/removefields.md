@@ -1,5 +1,7 @@
 ---
 title: removefields
+layout: default
+tags: 
 ---
 ```
  REMOVEFIELDS makes a selection of the fields in a structure

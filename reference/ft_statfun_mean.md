@@ -1,5 +1,7 @@
 ---
 title: ft_statfun_mean
+layout: default
+tags: 
 ---
 ```
  FT_STATFUN_MEAN computes the mean over all replications for each of the

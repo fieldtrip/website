@@ -1,5 +1,7 @@
 ---
 title: ft_spikedensity
+layout: default
+tags: 
 ---
 ```
  FT_SPIKEDENSITY computes the spike density function of the spike trains by

@@ -1,5 +1,7 @@
 ---
 title: ft_statfun_diff_itc
+layout: default
+tags: 
 ---
 ```
  FT_STATFUN_DIFF_ITC computes the difference in the inter-trial coherence between

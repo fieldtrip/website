@@ -1,5 +1,7 @@
 ---
 title: ft_interactiverealign
+layout: default
+tags: 
 ---
 ```
  FT_INTERACTIVEREALIGN allows the user to interactively translate, rotate and scale an
@@ -36,5 +38,5 @@ title: ft_interactiverealign
  one or multiple template objects.
 
  See also FT_VOLUMEREALIGN, FT_ELECTRODEREALIGN, FT_DETERMINE_COORDSYS,
- FT_READ_SENS, FT_READ_VOL, FT_READ_HEADSHAPE
+ FT_READ_SENS, FT_READ_HEADMODEL, FT_READ_HEADSHAPE
 ```

@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_parcellation
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_PARCELLATION describes the FieldTrip MATLAB structure for parcellated

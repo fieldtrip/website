@@ -1,5 +1,7 @@
 ---
 title: ft_headmodel_dipoli
+layout: default
+tags: 
 ---
 ```
  FT_HEADMODEL_DIPOLI creates a volume conduction model of the head

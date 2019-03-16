@@ -1,5 +1,7 @@
 ---
 title: nmt_svdtrunc
+layout: default
+tags: 
 ---
 ```
  [Rtrunc,q,u,v] = nmt_svdtrunc(R,signalspace)

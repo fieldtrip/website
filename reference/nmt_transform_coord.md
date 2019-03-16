@@ -1,5 +1,7 @@
 ---
 title: nmt_transform_coord
+layout: default
+tags: 
 ---
 ```
  [XYZ_O]=NMT_COORDTFM(A,XYZ_I)

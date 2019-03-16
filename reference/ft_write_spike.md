@@ -1,5 +1,7 @@
 ---
 title: ft_write_spike
+layout: default
+tags: 
 ---
 ```
  FT_WRITE_SPIKE writes animal electrophysiology spike timestamps and/or waveforms

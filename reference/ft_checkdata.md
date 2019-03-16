@@ -1,5 +1,7 @@
 ---
 title: ft_checkdata
+layout: default
+tags: 
 ---
 ```
  FT_CHECKDATA checks the input data of the main FieldTrip functions, e.g. whether the

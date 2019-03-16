@@ -1,5 +1,7 @@
 ---
 title: ft_spike_jpsth
+layout: default
+tags: 
 ---
 ```
  FT_SPIKE_JPSTH computes the joint peristimulus histograms for spiketrains

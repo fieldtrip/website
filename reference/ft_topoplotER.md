@@ -1,5 +1,7 @@
 ---
 title: ft_topoplotER
+layout: default
+tags: 
 ---
 ```
  FT_TOPOPLOTER plots the topographic distribution over the head

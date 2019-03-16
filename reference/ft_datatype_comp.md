@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_comp
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_COMP describes the FieldTrip MATLAB structure for comp data

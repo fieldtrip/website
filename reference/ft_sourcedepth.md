@@ -1,5 +1,7 @@
 ---
 title: ft_sourcedepth
+layout: default
+tags: 
 ---
 ```
  FT_SOURCEDEPTH computes the distance from the source to the surface of
@@ -14,5 +16,5 @@ title: ft_sourcedepth
  A negative depth indicates that the source is inside the source
  compartment, positive indicates outside.
 
- See also FIND_INSIDE_VOL
+ See also FT_INSIDE_HEADMODEL
 ```

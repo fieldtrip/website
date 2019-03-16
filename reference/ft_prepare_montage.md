@@ -1,5 +1,7 @@
 ---
 title: ft_prepare_montage
+layout: default
+tags: 
 ---
 ```
  FT_PREPARE_MONTAGE creates a referencing scheme based on the input configuration

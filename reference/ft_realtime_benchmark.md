@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_benchmark
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_BENCHMARK times the reading and writing of data

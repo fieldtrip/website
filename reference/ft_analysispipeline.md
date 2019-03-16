@@ -1,5 +1,7 @@
 ---
 title: ft_analysispipeline
+layout: default
+tags: 
 ---
 ```
  FT_ANALYSIPIPELINE reconstructs the complete analysis pipeline that was used to create

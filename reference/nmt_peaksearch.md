@@ -1,5 +1,7 @@
 ---
 title: nmt_peaksearch
+layout: default
+tags: 
 ---
 ```
  [vox_idx, t_idx] = nmt_peaksearch(cfg)

@@ -1,5 +1,7 @@
 ---
 title: qsubexec
+layout: default
+tags: 
 ---
 ```
  QSUBEXEC is a helper function to execute a job on the Torque, SGE, PBS

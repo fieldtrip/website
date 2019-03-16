@@ -1,5 +1,7 @@
 ---
 title: spm_ov_quivernmt
+layout: default
+tags: 
 ---
 ```
  This routine is a plugin to spm_orthviews for SPM12 / SPM8.

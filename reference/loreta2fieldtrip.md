@@ -1,5 +1,7 @@
 ---
 title: loreta2fieldtrip
+layout: default
+tags: 
 ---
 ```
  LORETA2FIELDTRIP reads and converts a LORETA source reconstruction into a

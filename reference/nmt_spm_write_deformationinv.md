@@ -1,5 +1,7 @@
 ---
 title: nmt_spm_write_deformationinv
+layout: default
+tags: 
 ---
 ```
  nmt_spm_write_deformationinv(mrifullpath)

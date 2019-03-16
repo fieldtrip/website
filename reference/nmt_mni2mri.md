@@ -1,5 +1,7 @@
 ---
 title: nmt_mni2mri
+layout: default
+tags: 
 ---
 ```
  [xyz_o_mm,xyz_o_vx]=nmt_mri2mni(xyz_i,mrifullpath,[doaffine])

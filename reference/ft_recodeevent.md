@@ -1,5 +1,7 @@
 ---
 title: ft_recodeevent
+layout: default
+tags: 
 ---
 ```
  FT_RECODEEVENT will recode the event structure, given the trial

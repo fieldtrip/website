@@ -1,5 +1,7 @@
 ---
 title: ft_combineplanar
+layout: default
+tags: 
 ---
 ```
  FT_COMBINEPLANAR computes the planar gradient magnitude over both directions

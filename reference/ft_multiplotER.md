@@ -1,5 +1,7 @@
 ---
 title: ft_multiplotER
+layout: default
+tags: 
 ---
 ```
  FT_MULTIPLOTER plots the event-related potentials or event-related fields verus

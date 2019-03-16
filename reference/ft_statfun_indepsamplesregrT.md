@@ -1,5 +1,7 @@
 ---
 title: ft_statfun_indepsamplesregrT
+layout: default
+tags: 
 ---
 ```
  FT_STATFUN_INDEPSAMPLESREGRT calculates independent samples regression coefficient

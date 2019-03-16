@@ -1,5 +1,7 @@
 ---
 title: Contents
+layout: default
+tags: 
 ---
 ```
  FieldTrip

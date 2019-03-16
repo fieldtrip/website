@@ -1,5 +1,7 @@
 ---
 title: ft_regressconfound
+layout: default
+tags: 
 ---
 ```
  FT_REGRESSCONFOUND estimates the regression weight of a set of confounds

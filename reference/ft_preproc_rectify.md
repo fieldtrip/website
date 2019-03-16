@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_rectify
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_RECTIFY rectifies the data, i.e. converts all samples with a

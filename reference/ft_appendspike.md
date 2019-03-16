@@ -1,5 +1,7 @@
 ---
 title: ft_appendspike
+layout: default
+tags: 
 ---
 ```
  FT_APPENDSPIKE combines continuous data (i.e. LFP) with point-process data

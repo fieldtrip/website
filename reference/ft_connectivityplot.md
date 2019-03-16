@@ -1,5 +1,7 @@
 ---
 title: ft_connectivityplot
+layout: default
+tags: 
 ---
 ```
  FT_CONNECTIVITYPLOT plots channel-level frequency resolved connectivity. The

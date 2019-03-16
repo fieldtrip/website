@@ -1,5 +1,7 @@
 ---
 title: ft_plot_ortho
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_ORTHO plots 3 orthographic slices through a 3-D volume and interpolates if needed

@@ -1,5 +1,7 @@
 ---
 title: ft_select_range
+layout: default
+tags: 
 ---
 ```
  FT_SELECT_RANGE is a helper function that can be used as callback function

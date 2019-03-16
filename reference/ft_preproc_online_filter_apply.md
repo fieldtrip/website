@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_online_filter_apply
+layout: default
+tags: 
 ---
 ```
  function [FM, xf] = ft_preproc_online_filter_apply(FM, x)

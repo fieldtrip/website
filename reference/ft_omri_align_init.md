@@ -1,5 +1,7 @@
 ---
 title: ft_omri_align_init
+layout: default
+tags: 
 ---
 ```
  function model = ft_omri_align_init(Vr,flags)

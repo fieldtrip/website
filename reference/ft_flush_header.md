@@ -1,5 +1,7 @@
 ---
 title: ft_flush_header
+layout: default
+tags: 
 ---
 ```
  FT_FLUSH_HEADER removes the header information from the data queue

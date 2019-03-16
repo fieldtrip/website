@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_medianfilter
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_MEDIANFILTER applies a median filter, which smooths the data with a

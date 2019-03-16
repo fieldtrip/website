@@ -1,5 +1,7 @@
 ---
 title: ft_statfun_diff
+layout: default
+tags: 
 ---
 ```
  FT_STATFUN_DIFF computes the difference of the mean in two conditions. Although it

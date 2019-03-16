@@ -1,5 +1,7 @@
 ---
 title: ft_connectivity_granger
+layout: default
+tags: 
 ---
 ```
  FT_CONNECTIVITY_GRANGER computes spectrally resolved granger causality. This

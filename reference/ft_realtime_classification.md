@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_classification
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_CLASSIFICATION is an example realtime application for online

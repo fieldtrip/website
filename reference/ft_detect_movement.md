@@ -1,5 +1,7 @@
 ---
 title: ft_detect_movement
+layout: default
+tags: 
 ---
 ```
  FT_SACCADE_DETECTION performs detection of movements such as saccades and

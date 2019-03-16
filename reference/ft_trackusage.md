@@ -1,5 +1,7 @@
 ---
 title: ft_trackusage
+layout: default
+tags: 
 ---
 ```
  FT_TRACKUSAGE tracks the usage of specific FieldTrip components using a central

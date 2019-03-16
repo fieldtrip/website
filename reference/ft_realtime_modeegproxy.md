@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_modeegproxy
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_MODEEGPROXY reads continuous data from a modeeg EEG acquisition system

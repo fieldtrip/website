@@ -1,5 +1,7 @@
 ---
 title: ft_sourceplot
+layout: default
+tags: 
 ---
 ```
  FT_SOURCEPLOT plots functional source reconstruction data on slices or on a surface,

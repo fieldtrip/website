@@ -1,5 +1,7 @@
 ---
 title: ft_trialfun_trial
+layout: default
+tags: 
 ---
 ```
  FT_TRIALFUN_TRIAL creates a trial definition that corresponds to the

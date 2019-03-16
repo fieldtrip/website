@@ -1,5 +1,7 @@
 ---
 title: ft_datatype
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE determines the type of data represented in a FieldTrip data

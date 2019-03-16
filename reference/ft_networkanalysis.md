@@ -1,5 +1,7 @@
 ---
 title: ft_networkanalysis
+layout: default
+tags: 
 ---
 ```
  FT_NETWORKANALYSIS computes various network graph measures from

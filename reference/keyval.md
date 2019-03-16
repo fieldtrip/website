@@ -1,5 +1,7 @@
 ---
 title: keyval
+layout: default
+tags: 
 ---
 ```
  KEYVAL returns the value that corresponds to the requested key in a

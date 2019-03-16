@@ -1,5 +1,7 @@
 ---
 title: data2bids
+layout: default
+tags: 
 ---
 ```
  DATA2BIDS is a helper function to convert MEG, EEG, iEEG or anatomical MRI data to

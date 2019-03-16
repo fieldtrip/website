@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_timelock
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_TIMELOCK describes the FieldTrip MATLAB structure for timelock data

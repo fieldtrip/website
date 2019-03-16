@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_slidingrange
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_SLIDINGRANGE computes the range of the data in a sliding time

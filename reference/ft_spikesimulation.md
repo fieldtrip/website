@@ -1,5 +1,7 @@
 ---
 title: ft_spikesimulation
+layout: default
+tags: 
 ---
 ```
  FT_SPIKESIMULATION simulates a spiketrain with a structured timing in the neuronal

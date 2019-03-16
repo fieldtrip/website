@@ -1,5 +1,7 @@
 ---
 title: ft_findcfg
+layout: default
+tags: 
 ---
 ```
  FT_FINDCFG searches for an element in the cfg structure

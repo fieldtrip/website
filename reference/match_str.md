@@ -1,5 +1,7 @@
 ---
 title: match_str
+layout: default
+tags: 
 ---
 ```
  MATCH_STR looks for matching labels in two lists of strings

@@ -1,5 +1,7 @@
 ---
 title: ft_selectdata
+layout: default
+tags: 
 ---
 ```
  FT_SELECTDATA makes a selection in the input data along specific data

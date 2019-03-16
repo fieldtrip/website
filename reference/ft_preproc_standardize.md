@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_standardize
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_STANDARDIZE performs a z-transformation or standardization

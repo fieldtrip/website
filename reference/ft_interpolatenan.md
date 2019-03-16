@@ -1,5 +1,7 @@
 ---
 title: ft_interpolatenan
+layout: default
+tags: 
 ---
 ```
  FT_INTERPOLATENAN interpolates time series that contains segments of nans obtained

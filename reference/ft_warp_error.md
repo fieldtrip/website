@@ -1,5 +1,7 @@
 ---
 title: ft_warp_error
+layout: default
+tags: 
 ---
 ```
  FT_WARP_ERROR computes the mean distance after linear or non-linear warping

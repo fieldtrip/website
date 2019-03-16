@@ -1,5 +1,7 @@
 ---
 title: ft_crossfrequencyanalysis
+layout: default
+tags: 
 ---
 ```
  FT_CROSSFREQUENCYANALYSIS performs cross-frequency analysis

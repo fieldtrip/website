@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_mvar
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_MVAR describes the FieldTrip MATLAB structure for multi-variate

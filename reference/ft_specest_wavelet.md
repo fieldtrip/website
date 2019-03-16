@@ -1,5 +1,7 @@
 ---
 title: ft_specest_wavelet
+layout: default
+tags: 
 ---
 ```
  FT_SPECEST_WAVELET performs time-frequency analysis on any time series trial data

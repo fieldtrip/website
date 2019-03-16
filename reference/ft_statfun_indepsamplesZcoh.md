@@ -1,5 +1,7 @@
 ---
 title: ft_statfun_indepsamplesZcoh
+layout: default
+tags: 
 ---
 ```
  FT_STATFUN_INDEPSAMPLESCOHZ calculates the independent samples coherence

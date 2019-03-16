@@ -1,5 +1,7 @@
 ---
 title: ft_statfun_indepsamplesT
+layout: default
+tags: 
 ---
 ```
  FT_STATFUN_INDEPSAMPLEST calculates the independent samples T-statistic on the

@@ -1,5 +1,7 @@
 ---
 title: nmt_reducerank
+layout: default
+tags: 
 ---
 ```
  leadgrid = nmt_reducerank(cfg,leadgrid);

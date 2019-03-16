@@ -1,5 +1,7 @@
 ---
 title: nearest
+layout: default
+tags: 
 ---
 ```
  NEAREST return the index of an array nearest to a scalar

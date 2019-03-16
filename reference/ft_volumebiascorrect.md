@@ -1,5 +1,7 @@
 ---
 title: ft_volumebiascorrect
+layout: default
+tags: 
 ---
 ```
  FT_VOLUMEBIASCORRECT corrects the image inhomogeneity bias in an anatomical MRI

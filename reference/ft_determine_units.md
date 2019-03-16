@@ -1,5 +1,7 @@
 ---
 title: ft_determine_units
+layout: default
+tags: 
 ---
 ```
  FT_DETERMINE_UNITS tries to determine the units of a geometrical object by

@@ -1,5 +1,7 @@
 ---
 title: ft_annotate
+layout: default
+tags: 
 ---
 ```
  FT_ANNOTATE returns the same output data as the user has provided as input, but allows

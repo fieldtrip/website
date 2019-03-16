@@ -1,5 +1,7 @@
 ---
 title: ft_databrowser
+layout: default
+tags: 
 ---
 ```
  FT_DATABROWSER can be used for visual inspection of data. Artifacts that were
@@ -77,10 +79,8 @@ title: ft_databrowser
  attempt is made to construct one from the sensor definition that is present in the
  data or specified in the configuration.
    cfg.layout                  = filename of the layout, see FT_PREPARE_LAYOUT
-   cfg.elec                    = structure with electrode positions, see FT_DATATYPE_SENS
-   cfg.grad                    = structure with gradiometer definition, see FT_DATATYPE_SENS
-   cfg.elecfile                = name of file containing the electrode positions, see FT_READ_SENS
-   cfg.gradfile                = name of file containing the gradiometer definition, see FT_READ_SENS
+   cfg.elec                    = structure with electrode positions or filename, see FT_READ_SENS
+   cfg.grad                    = structure with gradiometer definition or filename, see FT_READ_SENS
 
  The default font size might be too small or too large, depending on the number of
  channels. You can use the following options to change the size of text inside the

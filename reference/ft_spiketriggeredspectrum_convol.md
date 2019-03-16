@@ -1,5 +1,7 @@
 ---
 title: ft_spiketriggeredspectrum_convol
+layout: default
+tags: 
 ---
 ```
  FT_SPIKETRIGGEREDSPECTRUM_CONVOL computes the Fourier spectrum (amplitude and

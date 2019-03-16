@@ -1,5 +1,7 @@
 ---
 title: ft_spike_isi
+layout: default
+tags: 
 ---
 ```
  FT_SPIKE_ISI computes the interspike interval histogram

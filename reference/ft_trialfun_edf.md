@@ -1,5 +1,7 @@
 ---
 title: ft_trialfun_edf
+layout: default
+tags: 
 ---
 ```
  FT_TRIALFUN_EDF is an example trial function. It searches for events

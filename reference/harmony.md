@@ -1,5 +1,7 @@
 ---
 title: harmony
+layout: default
+tags: 
 ---
 ```
  HARMONY computes a linear estimate of the current in a distributed source model

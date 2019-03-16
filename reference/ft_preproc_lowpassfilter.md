@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_lowpassfilter
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_LOWPASSFILTER applies a low-pass filter to the data and thereby

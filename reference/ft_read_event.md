@@ -1,5 +1,7 @@
 ---
 title: ft_read_event
+layout: default
+tags: 
 ---
 ```
  FT_READ_EVENT reads all events from an EEG/MEG dataset and returns

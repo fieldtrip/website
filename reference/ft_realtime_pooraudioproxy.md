@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_pooraudioproxy
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_POORAUDIOPROXY reads continuous data from the sound card using the

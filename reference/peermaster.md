@@ -1,5 +1,7 @@
 ---
 title: peermaster
+layout: default
+tags: 
 ---
 ```
  PEERMASTER starts the low-level peer services and switches to master

@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_ctfproxy
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_CTFPROXY provides a  real-time interface to the MEG data stream.

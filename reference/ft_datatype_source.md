@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_source
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_SOURCE describes the FieldTrip MATLAB structure for data that is

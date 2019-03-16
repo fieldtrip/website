@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_dftfilter
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_DFTFILTER reduces power line noise (50 or 60Hz) via two 
@@ -24,12 +26,12 @@ title: ft_preproc_dftfilter
  The signal is:
  I)   transformed into the frequency domain via a discrete Fourier 
        transform (DFT), 
- II)  the line noise component (e.g. 50Hz, Flwidth = 1 (1Hz): 49-51Hz) is 
+ II)  the line noise component (e.g. 50Hz, Flwidth = 1 (±1Hz): 49-51Hz) is 
        interpolated in the amplitude spectrum by replacing the amplitude 
        of this frequency bin by the mean of the adjacent frequency bins 
        ('neighbours', e.g. 49Hz and 51Hz). 
        Neighwidth defines frequencies considered for the mean (e.g. 
-       Neighwidth = 2 (2Hz) implies 47-49 Hz and 51-53 Hz). 
+       Neighwidth = 2 (±2Hz) implies 47-49 Hz and 51-53 Hz). 
        The original phase information of the noise frequency bin is
        retained.
  III) the signal is transformed back into the time domain via inverse DFT

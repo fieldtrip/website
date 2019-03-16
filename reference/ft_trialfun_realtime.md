@@ -1,5 +1,7 @@
 ---
 title: ft_trialfun_realtime
+layout: default
+tags: 
 ---
 ```
  FT_TRIALFUN_REALTIME can be used to segment a continuous stream of

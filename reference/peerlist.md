@@ -1,5 +1,7 @@
 ---
 title: peerlist
+layout: default
+tags: 
 ---
 ```
  PEERLIST gives information about all peers in the network, e.g. the

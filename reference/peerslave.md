@@ -1,5 +1,7 @@
 ---
 title: peerslave
+layout: default
+tags: 
 ---
 ```
  PEERSLAVE starts the low-level peer services and switches to slave mode.

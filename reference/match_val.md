@@ -1,5 +1,7 @@
 ---
 title: match_val
+layout: default
+tags: 
 ---
 ```
  MATCH_VAL looks for matching values in two arrays of values

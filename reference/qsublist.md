@@ -1,5 +1,7 @@
 ---
 title: qsublist
+layout: default
+tags: 
 ---
 ```
  QSUBLIST is a helper function that is used to keep track of all the jobs in a

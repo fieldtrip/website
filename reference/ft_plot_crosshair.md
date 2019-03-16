@@ -1,5 +1,7 @@
 ---
 title: ft_plot_crosshair
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_CROSSHAIR plots a crosshair at a specified position in two [x, y] or three

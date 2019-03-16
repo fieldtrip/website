@@ -1,5 +1,7 @@
 ---
 title: qsubcompile
+layout: default
+tags: 
 ---
 ```
  QSUBCOMPILE compiles your function into an standalone executable that can easily

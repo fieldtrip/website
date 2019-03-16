@@ -1,5 +1,7 @@
 ---
 title: minimumnormestimate
+layout: default
+tags: 
 ---
 ```
  MINIMUMNORMESTIMATE computes a linear estimate of the current in a

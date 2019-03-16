@@ -1,5 +1,7 @@
 ---
 title: ft_dipolefitting
+layout: default
+tags: 
 ---
 ```
  FT_DIPOLEFITTING perform grid search and non-linear fit with one or multiple
@@ -24,23 +26,22 @@ title: ft_dipolefitting
    cfg.nonlinear   = 'yes' or 'no', perform nonlinear search for optimal
                      dipole parameters (default = 'yes')
 
- If you start with a grid search, the complete grid with dipole
- positions and optionally precomputed leadfields should be specified
-   cfg.grid            = structure, see FT_PREPARE_SOURCEMODEL or FT_PREPARE_LEADFIELD
- The positions of the dipoles can be specified as a regular 3-D
- grid that is aligned with the axes of the head coordinate system
-   cfg.grid.xgrid      = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-   cfg.grid.ygrid      = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-   cfg.grid.zgrid      = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
-   cfg.grid.resolution = number (e.g. 1 cm) for automatic grid generation
-   cfg.grid.inside     = N*1 vector with boolean value whether grid point is inside brain (optional)
-   cfg.grid.dim        = [Nx Ny Nz] vector with dimensions in case of 3-D grid (optional)
+ If you start with a grid search, the complete grid with dipole positions and
+ optionally precomputed leadfields is constructed using FT_PREPARE_SOURCEMODEL. It
+ can be specified as as a regular 3-D grid that is aligned with the axes of the head
+ coordinate system using
+   cfg.xgrid               = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+   cfg.ygrid               = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+   cfg.zgrid               = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
+   cfg.resolution          = number (e.g. 1 cm) for automatic grid generation
  If the source model destribes a triangulated cortical sheet, it is described as
-   cfg.grid.pos        = N*3 matrix with the vertex positions of the cortical sheet
-   cfg.grid.tri        = M*3 matrix that describes the triangles connecting the vertices
+   cfg.sourcemodel.pos     = N*3 matrix with the vertex positions of the cortical sheet
+   cfg.sourcemodel.tri     = M*3 matrix that describes the triangles connecting the vertices
  Alternatively the position of a few dipoles at locations of interest can be
- specified, for example obtained from an anatomical or functional MRI
-   cfg.grid.pos        = N*3 matrix with position of each source
+ user-specified, for example obtained from an anatomical or functional MRI
+   cfg.sourcemodel.pos     = N*3 matrix with position of each source
+   cfg.sourcemodel.inside  = N*1 vector with boolean value whether grid point is inside brain (optional)
+   cfg.sourcemodel.dim     = [Nx Ny Nz] vector with dimensions in case of 3-D grid (optional)
 
  If you do not start with a grid search, you have to give a starting location
  for the nonlinear search
@@ -78,10 +79,8 @@ title: ft_dipolefitting
    cfg.headmodel     = structure with volume conduction model, see FT_PREPARE_HEADMODEL
 
  The EEG or MEG sensor positions can be present in the data or can be specified as
-   cfg.elec          = structure with electrode positions, see FT_DATATYPE_SENS
-   cfg.grad          = structure with gradiometer definition, see FT_DATATYPE_SENS
-   cfg.elecfile      = name of file containing the electrode positions, see FT_READ_SENS
-   cfg.gradfile      = name of file containing the gradiometer definition, see FT_READ_SENS
+   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
+   cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
 
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile   =  ...

@@ -1,5 +1,7 @@
 ---
 title: ft_stratify
+layout: default
+tags: 
 ---
 ```
  FT_STRATIFY tries to reduce the variance in a specific feature in the data

@@ -1,5 +1,7 @@
 ---
 title: ft_freqdescriptives
+layout: default
+tags: 
 ---
 ```
  FT_FREQDESCRIPTIVES computes descriptive univariate statistics of

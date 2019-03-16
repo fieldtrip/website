@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_signalproxy
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_SIGNALPROXY creates some random data and writes it to a FieldTrip buffer.

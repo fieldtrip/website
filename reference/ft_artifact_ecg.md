@@ -1,5 +1,7 @@
 ---
 title: ft_artifact_ecg
+layout: default
+tags: 
 ---
 ```
  FT_ARTIFACT_ECG performs a peak-detection on the ECG-channel and identifies the

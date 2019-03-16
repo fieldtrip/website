@@ -1,5 +1,7 @@
 ---
 title: ft_read_header
+layout: default
+tags: 
 ---
 ```
  FT_READ_HEADER reads header information from a variety of EEG, MEG and LFP

@@ -1,5 +1,7 @@
 ---
 title: qsubfeval
+layout: default
+tags: 
 ---
 ```
  QSUBFEVAL evaluates the specified MATLAB function on the input arguments

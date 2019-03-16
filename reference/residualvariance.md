@@ -1,5 +1,7 @@
 ---
 title: residualvariance
+layout: default
+tags: 
 ---
 ```
  RESIDUALVARIANCE scan with a single dipole and computes the RV

@@ -1,5 +1,7 @@
 ---
 title: ft_plot_axes
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_AXES adds three axes of 150 mm and a 10 mm sphere at the origin to the
@@ -22,5 +24,5 @@ title: ft_plot_axes
    'fontname'     =
    'fontweight'   =
 
- See also FT_PLOT_SENS, FT_PLOT_MESH, FT_PLOT_ORTHO, FT_PLOT_HEADSHAPE, FT_PLOT_DIPOLE, FT_PLOT_VOL
+ See also FT_PLOT_SENS, FT_PLOT_MESH, FT_PLOT_ORTHO, FT_PLOT_HEADSHAPE, FT_PLOT_DIPOLE, FT_PLOT_HEADMODEL
 ```

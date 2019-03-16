@@ -1,5 +1,7 @@
 ---
 title: fieldtrip2besa
+layout: default
+tags: 
 ---
 ```
  FIELDTRIP2BESA saves a FieldTrip data structures to a corresponding BESA file. This

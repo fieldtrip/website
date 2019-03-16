@@ -1,5 +1,7 @@
 ---
 title: ft_filter_event
+layout: default
+tags: 
 ---
 ```
  FT_FILTER_EVENT does what its name implies

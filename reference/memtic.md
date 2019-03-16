@@ -1,5 +1,7 @@
 ---
 title: memtic
+layout: default
+tags: 
 ---
 ```
  MEMTIC start a MATLAB memory recorder

@@ -1,5 +1,7 @@
 ---
 title: ft_redefinetrial
+layout: default
+tags: 
 ---
 ```
  FT_REDEFINETRIAL allows you to adjust the time axis of your data, i.e. to

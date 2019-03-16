@@ -1,5 +1,7 @@
 ---
 title: ft_examplefunction
+layout: default
+tags: 
 ---
 ```
  FT_EXAMPLEFUNCTION demonstrates to new developers how a FieldTrip function should look like

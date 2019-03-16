@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_downsample
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_DOWNSAMPLE reads realtime data from one buffer and writes it after downsampling

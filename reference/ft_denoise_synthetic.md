@@ -1,5 +1,7 @@
 ---
 title: ft_denoise_synthetic
+layout: default
+tags: 
 ---
 ```
  FT_DENOISE_SYNTHETIC computes CTF higher-order synthetic gradients for

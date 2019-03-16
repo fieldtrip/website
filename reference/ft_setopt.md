@@ -1,5 +1,7 @@
 ---
 title: ft_setopt
+layout: default
+tags: 
 ---
 ```
  FT_SETOPT assigns a value to an configuration structure or to a cell-array

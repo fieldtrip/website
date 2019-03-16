@@ -1,5 +1,7 @@
 ---
 title: ft_omri_slice_time_init
+layout: default
+tags: 
 ---
 ```
  function STM = ft_omri_slice_time_init(X0, TR, deltaT);

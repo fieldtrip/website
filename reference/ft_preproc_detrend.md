@@ -1,5 +1,7 @@
 ---
 title: ft_preproc_detrend
+layout: default
+tags: 
 ---
 ```
  FT_PREPROC_DETREND removes mean and linear trend from the

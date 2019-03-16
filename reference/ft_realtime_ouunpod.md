@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_ouunpod
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_OUUNPOD is an example realtime application for online power

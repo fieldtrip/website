@@ -1,5 +1,7 @@
 ---
 title: ft_appenddata
+layout: default
+tags: 
 ---
 ```
  FT_APPENDDATA concatenates multiple raw data structures that have been preprocessed

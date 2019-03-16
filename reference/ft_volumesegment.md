@@ -1,5 +1,7 @@
 ---
 title: ft_volumesegment
+layout: default
+tags: 
 ---
 ```
  FT_VOLUMESEGMENT segments an anatomical MRI. The behaviour depends on the output requested. It can

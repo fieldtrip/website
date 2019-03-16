@@ -1,5 +1,7 @@
 ---
 title: ft_scalpcurrentdensity
+layout: default
+tags: 
 ---
 ```
  FT_SCALPCURRENTDENSITY computes an estimate of the SCD using the
@@ -22,8 +24,7 @@ title: ft_scalpcurrentdensity
    cfg.method       = 'finite' for finite-difference method or
                       'spline' for spherical spline method
                       'hjorth' for Hjorth approximation method
-   cfg.elecfile     = string, file containing the electrode definition
-   cfg.elec         = structure with electrode definition
+   cfg.elec         = structure with electrode positions or filename, see FT_READ_SENS
    cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
    cfg.feedback     = string, 'no', 'text', 'textbar', 'gui' (default = 'text')
 

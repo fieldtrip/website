@@ -1,5 +1,7 @@
 ---
 title: peerinfo
+layout: default
+tags: 
 ---
 ```
  PEERINFO displays information about the current peer, e.g. whether the

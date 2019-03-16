@@ -1,5 +1,7 @@
 ---
 title: edf2fieldtrip
+layout: default
+tags: 
 ---
 ```
  EDF2FIELDTRIP reads data from a EDF file with channels that have a different

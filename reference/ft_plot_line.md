@@ -1,5 +1,7 @@
 ---
 title: ft_plot_line
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_LINE helper function for plotting a line, which can also be used in

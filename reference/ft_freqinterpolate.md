@@ -1,5 +1,7 @@
 ---
 title: ft_freqinterpolate
+layout: default
+tags: 
 ---
 ```
  FT_FREQINTERPOLATE interpolates frequencies by looking at neighbouring

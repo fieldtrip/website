@@ -1,5 +1,7 @@
 ---
 title: renamefields
+layout: default
+tags: 
 ---
 ```
  RENAMEFIELDS renames a selection of the fields in a structure

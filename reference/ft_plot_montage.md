@@ -1,5 +1,7 @@
 ---
 title: ft_plot_montage
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_MONTAGE makes a montage of a 3-D array by selecting slices at regular distances

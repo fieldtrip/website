@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_fileproxy
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_FILEPROXY reads continuous data from an EEG/MEG file and writes it to a

@@ -1,5 +1,7 @@
 ---
 title: nmt_spmfig_setup
+layout: default
+tags: 
 ---
 ```
  adds custom features to SPM MRI display window

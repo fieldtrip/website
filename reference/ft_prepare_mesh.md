@@ -1,5 +1,7 @@
 ---
 title: ft_prepare_mesh
+layout: default
+tags: 
 ---
 ```
  FT_PREPARE_MESH creates a triangulated surface mesh for the volume

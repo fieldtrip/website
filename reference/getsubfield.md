@@ -1,5 +1,7 @@
 ---
 title: getsubfield
+layout: default
+tags: 
 ---
 ```
  GETSUBFIELD returns a field from a structure just like the standard

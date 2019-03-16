@@ -1,5 +1,7 @@
 ---
 title: nmt_repos
+layout: default
+tags: 
 ---
 ```
  nmt_repos([x y z], t)

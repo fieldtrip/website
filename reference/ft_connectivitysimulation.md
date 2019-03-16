@@ -1,5 +1,7 @@
 ---
 title: ft_connectivitysimulation
+layout: default
+tags: 
 ---
 ```
  FT_CONNECTIVITYSIMULATION simulates channel-level time-series data with a

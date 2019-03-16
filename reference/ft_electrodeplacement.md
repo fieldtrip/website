@@ -1,5 +1,7 @@
 ---
 title: ft_electrodeplacement
+layout: default
+tags: 
 ---
 ```
  FT_ELECTRODEPLACEMENT allows manual placement of electrodes on a MRI scan, CT scan
@@ -9,7 +11,7 @@ title: ft_electrodeplacement
  assign an electrode label to the current crosshair location by clicking on a label
  in the eletrode list. You can undo the selection by clicking on the same label
  again. The electrode labels shown in the list can be prespecified using cfg.channel
- when calling ft_electrodeplacement. The zoom slider allows zooming in at the
+ when calling ft_electrodeplacement. The zoom slider allows zoomi/ng in at the
  location of the crosshair. The intensity sliders allow thresholding the image's low
  and high values. The magnet feature transports the crosshair to the nearest peak
  intensity voxel, within a certain voxel radius of the selected location. The labels

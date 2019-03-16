@@ -1,5 +1,7 @@
 ---
 title: printstruct
+layout: default
+tags: 
 ---
 ```
  PRINTSTRUCT converts a MATLAB structure into a multiple-line string that, when

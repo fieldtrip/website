@@ -1,5 +1,7 @@
 ---
 title: ft_plot_matrix
+layout: default
+tags: 
 ---
 ```
  FT_PLOT_MATRIX visualizes a matrix as an image, similar to IMAGESC.

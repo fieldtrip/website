@@ -1,5 +1,7 @@
 ---
 title: ft_omri_info_from_header
+layout: default
+tags: 
 ---
 ```
  function S = ft_omri_info_from_header(hdr)

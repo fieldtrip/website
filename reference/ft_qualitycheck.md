@@ -1,5 +1,7 @@
 ---
 title: ft_qualitycheck
+layout: default
+tags: 
 ---
 ```
  FT_QUALITYCHECK performs a quality inspection of a given MEG/EEG dataset,

@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_segmentation
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_SEGMENTATION describes the FieldTrip MATLAB structure for segmented

@@ -1,5 +1,7 @@
 ---
 title: ft_datatype_headmodel
+layout: default
+tags: 
 ---
 ```
  FT_DATATYPE_HEADMODEL describes the FieldTrip MATLAB structure for a volume
@@ -63,7 +65,7 @@ title: ft_datatype_headmodel
  fem_simbio -> simbio, concentric -> concentricspheres. Deprecated the fields
  that indicate the index of the innermost and outermost surfaces.
 
- See also FT_DATATYPE, FT_DATATYPE_COMP, FT_DATATYPE_DIP, FT_DATATYPE_FREQ,
- FT_DATATYPE_MVAR, FT_DATATYPE_RAW, FT_DATATYPE_SOURCE, FT_DATATYPE_SPIKE,
- FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME
+ See also FT_PREPARE_HEADMODEL, FT_DATATYPE, FT_DATATYPE_COMP, FT_DATATYPE_DIP,
+ FT_DATATYPE_FREQ, FT_DATATYPE_MVAR, FT_DATATYPE_RAW, FT_DATATYPE_SOURCE, 
+ FT_DATATYPE_SPIKE, FT_DATATYPE_TIMELOCK, FT_DATATYPE_VOLUME
 ```

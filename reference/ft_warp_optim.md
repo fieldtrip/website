@@ -1,5 +1,7 @@
 ---
 title: ft_warp_optim
+layout: default
+tags: 
 ---
 ```
  FT_WARP_OPTIM determine intermediate positions using warping (deformation)

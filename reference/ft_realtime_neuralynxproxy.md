@@ -1,5 +1,7 @@
 ---
 title: ft_realtime_neuralynxproxy
+layout: default
+tags: 
 ---
 ```
  FT_REALTIME_NEURALYNXPROXY reads continuous data from a Neuralynx Cheetah
