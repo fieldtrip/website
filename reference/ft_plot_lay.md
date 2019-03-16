@@ -1,7 +1,5 @@
 ---
 title: ft_plot_lay
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_LAY plots a two-dimensional layout

@@ -1,7 +1,5 @@
 ---
 title: rmsubfield
-layout: default
-tags: 
 ---
 ```
  RMSUBFIELD removes the contents of the specified field from a structure

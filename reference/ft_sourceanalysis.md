@@ -1,7 +1,5 @@
 ---
 title: ft_sourceanalysis
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEANALYSIS performs beamformer dipole analysis on EEG or MEG data
@@ -31,30 +29,31 @@ tags:
  methods are for time domain data. ELORETA can be used both for time, frequency and
  time-frequency domain data.
 
- The complete grid with dipole positions and optionally precomputed leadfields is
- constructed using FT_PREPARE_SOURCEMODEL. It can be specified as as a regular 3-D
- grid that is aligned with the axes of the head coordinate system using
-   cfg.xgrid               = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-   cfg.ygrid               = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-   cfg.zgrid               = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
-   cfg.resolution          = number (e.g. 1 cm) for automatic grid generation
+ The source model to use in the reconstruction should be specified as
+   cfg.grid            = structure, see FT_PREPARE_SOURCEMODEL or FT_PREPARE_LEADFIELD
+ The positions of the dipoles can be specified as a regular 3-D
+ grid that is aligned with the axes of the head coordinate system
+   cfg.grid.xgrid      = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+   cfg.grid.ygrid      = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+   cfg.grid.zgrid      = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
+   cfg.grid.resolution = number (e.g. 1 cm) for automatic grid generation
+   cfg.grid.inside     = N*1 vector with boolean value whether grid point is inside brain (optional)
+   cfg.grid.dim        = [Nx Ny Nz] vector with dimensions in case of 3-D grid (optional)
  If the source model destribes a triangulated cortical sheet, it is described as
-   cfg.sourcemodel.pos     = N*3 matrix with the vertex positions of the cortical sheet
-   cfg.sourcemodel.tri     = M*3 matrix that describes the triangles connecting the vertices
+   cfg.grid.pos        = N*3 matrix with the vertex positions of the cortical sheet
+   cfg.grid.tri        = M*3 matrix that describes the triangles connecting the vertices
  Alternatively the position of a few dipoles at locations of interest can be
- user-specified, for example obtained from an anatomical or functional MRI
-   cfg.sourcemodel.pos     = N*3 matrix with position of each source
-   cfg.sourcemodel.inside  = N*1 vector with boolean value whether grid point is inside brain (optional)
-   cfg.sourcemodel.dim     = [Nx Ny Nz] vector with dimensions in case of 3-D grid (optional)
+ specified, for example obtained from an anatomical or functional MRI
+   cfg.grid.pos        = N*3 matrix with position of each source
 
  Besides the source positions, you may also include previously computed
- spatial filters and/or leadfields using
-   cfg.sourcemodel.filter
-   cfg.sourcemodel.leadfield
+ spatial filters and/or leadfields like this
+   cfg.grid.filter
+   cfg.grid.leadfield
 
  The following strategies are supported to obtain statistics for the source parameters using
  multiple trials in the data, either directly or through a resampling-based approach
-   cfg.rawtrial      = 'no' or 'yes'   construct filter from single trials, apply to single trials. Note that you also may want to set cfg.keeptrials='yes' to keep all trial information, especially if using in combination with sourcemodel.filter
+   cfg.rawtrial      = 'no' or 'yes'   construct filter from single trials, apply to single trials. Note that you also may want to set cfg.keeptrials='yes' to keep all trial information, especially if using in combination with grid.filter
    cfg.jackknife     = 'no' or 'yes'   jackknife resampling of trials
    cfg.pseudovalue   = 'no' or 'yes'   pseudovalue resampling of trials
    cfg.bootstrap     = 'no' or 'yes'   bootstrap resampling of trials
@@ -74,8 +73,8 @@ tags:
    cfg.numrandomization   = number, e.g. 500
    cfg.numpermutation     = number, e.g. 500 or 'all'
 
- If you have not specified a sourcemodel with pre-computed leadfields,
- the leadfield for each source position will be computed on the fly.
+ If you have not specified a grid with pre-computed leadfields,
+ the leadfield for each grid location will be computed on the fly.
  In that case you can modify the leadfields by reducing the rank
  (i.e.  remove the weakest orientation), or by normalizing each
  column.
@@ -106,8 +105,10 @@ tags:
    cfg.headmodel     = structure with volume conduction model, see FT_PREPARE_HEADMODEL
 
  The EEG or MEG sensor positions can be present in the data or can be specified as
-   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
-   cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
+   cfg.elec          = structure with electrode positions, see FT_DATATYPE_SENS
+   cfg.grad          = structure with gradiometer definition, see FT_DATATYPE_SENS
+   cfg.elecfile      = name of file containing the electrode positions, see FT_READ_SENS
+   cfg.gradfile      = name of file containing the gradiometer definition, see FT_READ_SENS
 
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile   =  ...

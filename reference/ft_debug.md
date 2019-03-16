@@ -1,7 +1,5 @@
 ---
 title: ft_debug
-layout: default
-tags: 
 ---
 ```
  FT_DEBUG prints a debug message on screen, depending on the verbosity 

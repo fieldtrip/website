@@ -1,7 +1,5 @@
 ---
 title: fieldtrip2bis
-layout: default
-tags: 
 ---
 ```
  FIELDTRIP2BIS writes BioImage Suite .mgrid files with eletrode 

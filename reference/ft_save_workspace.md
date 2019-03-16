@@ -1,7 +1,5 @@
 ---
 title: ft_save_workspace
-layout: default
-tags: 
 ---
 ```
  FT_SAVE_WORKSPACE saves every variable in the base workspace to a .mat file with

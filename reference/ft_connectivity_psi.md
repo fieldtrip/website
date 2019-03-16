@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_psi
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_PSI computes the phase slope index from a data-matrix

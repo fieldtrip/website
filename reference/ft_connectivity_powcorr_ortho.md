@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_powcorr_ortho
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_POWCORR_ORTHO computes power correlation after removing the

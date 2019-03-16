@@ -1,7 +1,5 @@
 ---
 title: ft_electroderealign
-layout: default
-tags: 
 ---
 ```
  FT_ELECTRODEREALIGN rotates, translates, scales and warps electrode positions. The
@@ -72,7 +70,8 @@ tags:
    cfg.feedback       = 'yes' or 'no' (default = 'no')
 
  The electrode positions can be present in the 2nd input argument or can be specified as
-   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
+   cfg.elec          = structure with electrode positions, see FT_DATATYPE_SENS
+   cfg.elecfile      = name of file containing the electrode positions, see FT_READ_SENS
 
  If you want to realign the EEG electrodes using anatomical fiducials, you should
  specify the target location of the three fiducials, e.g.
@@ -95,7 +94,7 @@ tags:
                         points
 
  If you want to align ECoG electrodes to the pial surface, you first need to compute
- the cortex hull with FT_PREPARE_MESH. Then use either the algorithm described in
+ the cortex hull with FT_PREPARE_MESH. Then use either the algorithm described in 
  Dykstra et al. (2012, Neuroimage) or in Hermes et al. (2010, J Neurosci methods) to
  snap the electrodes back to the cortical hull, e.g.
    cfg.method         = 'headshape'

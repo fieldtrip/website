@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_twoclass_classification
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_TWOCLASS_CLASSIFICATION

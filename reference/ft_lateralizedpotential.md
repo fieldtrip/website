@@ -1,7 +1,5 @@
 ---
 title: ft_lateralizedpotential
-layout: default
-tags: 
 ---
 ```
  FT_LATERALIZEDPOTENTIAL computes lateralized potentials such as the

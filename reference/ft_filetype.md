@@ -1,7 +1,5 @@
 ---
 title: ft_filetype
-layout: default
-tags: 
 ---
 ```
  FT_FILETYPE determines the filetype of many EEG/MEG/MRI data files by

@@ -1,7 +1,5 @@
 ---
 title: ft_convert_coordsys
-layout: default
-tags: 
 ---
 ```
  FT_CONVERT_COORDSYS changes the coordinate system of the input object to

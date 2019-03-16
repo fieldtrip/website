@@ -1,7 +1,5 @@
 ---
 title: ft_spikesorting
-layout: default
-tags: 
 ---
 ```
  FT_SPIKESORTING performs clustering of spike-waveforms and returns the

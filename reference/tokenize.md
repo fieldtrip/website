@@ -1,7 +1,5 @@
 ---
 title: tokenize
-layout: default
-tags: 
 ---
 ```
  TOKENIZE cuts a string into pieces, returning the pieces in a cell array

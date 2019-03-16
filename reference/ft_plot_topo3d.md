@@ -1,7 +1,5 @@
 ---
 title: ft_plot_topo3d
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_TOPO3D makes a 3-D topographic representation of the electric

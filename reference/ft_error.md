@@ -1,7 +1,5 @@
 ---
 title: ft_error
-layout: default
-tags: 
 ---
 ```
  FT_ERROR prints an error message on screen, just like the standard ERROR function.

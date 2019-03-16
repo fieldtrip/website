@@ -1,7 +1,5 @@
 ---
 title: ft_omri_pipeline
-layout: default
-tags: 
 ---
 ```
  FT_OMRI_PIPELINE implements an online fMRI pre-processing pipeline

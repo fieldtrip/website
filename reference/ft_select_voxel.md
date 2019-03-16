@@ -1,7 +1,5 @@
 ---
 title: ft_select_voxel
-layout: default
-tags: 
 ---
 ```
  FT_SELECT_VOXEL is a helper function that can be used as callback function

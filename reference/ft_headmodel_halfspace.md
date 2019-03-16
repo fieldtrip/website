@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_halfspace
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_HALFSPACE creates an EEG volume conduction model that
@@ -13,9 +11,9 @@ tags:
  Use as
     headmodel = ft_headmodel_halfspace(mesh, Pc, ...)
  where
-   mesh.pos = Nx3 vector specifying N points through which a plane is fitted
-   Pc       = 1x3 vector specifying the spatial position of a single point that
-              is lying in the conductive halfspace
+   mesh.pos = Nx3 vector specifying N points through which a plane is fitted 
+   Pc       = 1x3 vector specifying the spatial position of a point lying in the conductive halfspace 
+              (this determines the plane normal's direction)
 
  Additional optional arguments should be specified as key-value pairs and can include
    'sourcemodel'  = string, 'monopole' or 'dipole' (default = 'dipole')

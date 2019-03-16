@@ -1,7 +1,5 @@
 ---
 title: ft_freqanalysis_mvar
-layout: default
-tags: 
 ---
 ```
  FT_FREQANALYSIS_MVAR performs frequency analysis on

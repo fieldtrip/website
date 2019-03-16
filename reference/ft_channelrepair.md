@@ -1,7 +1,5 @@
 ---
 title: ft_channelrepair
-layout: default
-tags: 
 ---
 ```
  FT_CHANNELREPAIR repairs bad or missing channels in the data by replacing them with the
@@ -30,9 +28,12 @@ tags:
  another dataset or from a template.
 
  The EEG, MEG or NIRS sensor positions can be present in the data or can be specified as
-   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
-   cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
-   cfg.opto          = structure with optode definition, see FT_READ_SENS
+   cfg.elec          = structure with electrode positions, see FT_DATATYPE_SENS
+   cfg.elecfile      = name of file containing the electrode positions, see FT_READ_SENS
+   cfg.grad          = structure with gradiometer definition, see FT_DATATYPE_SENS
+   cfg.gradfile      = name of file containing the gradiometer definition, see FT_READ_SENS
+   cfg.opto          = structure with optode definition, see FT_DATATYPE_SENS
+   cfg.optofile      = name of file containing the optode definition, see FT_READ_SENS
 
  This function only interpolates data over space, not over time. If you want to
  interpolate using temporal information, e.g. using a segment of data before and

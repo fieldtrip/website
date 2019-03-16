@@ -1,7 +1,5 @@
 ---
 title: ft_senstype
-layout: default
-tags: 
 ---
 ```
  FT_SENSTYPE determines the type of acquisition device by looking at the channel

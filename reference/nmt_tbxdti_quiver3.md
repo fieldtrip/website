@@ -1,7 +1,5 @@
 ---
 title: nmt_tbxdti_quiver3
-layout: default
-tags: 
 ---
 ```
 QUIVER3 3-D quiver plot.

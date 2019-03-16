@@ -1,7 +1,5 @@
 ---
 title: ft_plot_mesh
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_MESH visualizes a surface or volumetric mesh, for example describing the
@@ -46,5 +44,5 @@ tags:
    'contourlinestyle'  = string, line specification 
    'contourlinewidth'  = number
 
- See also FT_PLOT_HEADSHAPE, FT_PLOT_HEADMODEL, TRIMESH, PATCH
+ See also FT_PLOT_HEADSHAPE, FT_PLOT_VOL, TRIMESH, PATCH
 ```

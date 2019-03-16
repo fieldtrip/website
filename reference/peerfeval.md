@@ -1,7 +1,5 @@
 ---
 title: peerfeval
-layout: default
-tags: 
 ---
 ```
  PEERFEVAL execute the specified function on another peer.

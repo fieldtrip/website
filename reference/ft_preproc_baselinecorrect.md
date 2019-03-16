@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_baselinecorrect
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_BASELINECORRECT performs a baseline correction, e.g. using the

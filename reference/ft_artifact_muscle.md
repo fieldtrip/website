@@ -1,7 +1,5 @@
 ---
 title: ft_artifact_muscle
-layout: default
-tags: 
 ---
 ```
  FT_ARTIFACT_MUSCLE reads the data segments of interest from file and

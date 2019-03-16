@@ -1,11 +1,19 @@
 ---
 title: ft_read_vol
-layout: default
-tags: 
 ---
 ```
- This function is a backward compatibility wrapper for existing MATLAB scripts
- that call a function that is not part of the FieldTrip toolbox any more.
+ FT_READ_VOL reads a volume conduction model from various manufacturer
+ specific files. Currently supported are ASA, CTF, Neuromag, MBFYS
+ and Matlab.
 
- Please update your code to make it future-proof.
+ Use as
+   headmodel = ft_read_vol(filename, ...)
+
+ Additional options should be specified in key-value pairs and can be
+   'fileformat'   string
+
+ The volume conduction model is represented as a structure with fields
+ that depend on the type of model.
+
+ See also FT_TRANSFORM_VOL, FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD
 ```

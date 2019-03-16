@@ -1,7 +1,5 @@
 ---
 title: enginecellfun
-layout: default
-tags: 
 ---
 ```
  ENGINECELLFUN applies a function to each element of a cell-array. The function

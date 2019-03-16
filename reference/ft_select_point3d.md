@@ -1,7 +1,5 @@
 ---
 title: ft_select_point3d
-layout: default
-tags: 
 ---
 ```
  FT_SELECT_POINT3D helper function for selecting one or multiple points on a 3D mesh

@@ -1,7 +1,5 @@
 ---
 title: ft_specest_mtmfft
-layout: default
-tags: 
 ---
 ```
  FT_SPECEST_MTMFFT computes a fast Fourier transform using multitapering with

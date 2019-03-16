@@ -1,7 +1,5 @@
 ---
 title: ft_fetch_header
-layout: default
-tags: 
 ---
 ```
  FT_FETCH_HEADER mimics the behaviour of FT_READ_HEADER, but for a FieldTrip

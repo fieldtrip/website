@@ -1,7 +1,5 @@
 ---
 title: qsublisten
-layout: default
-tags: 
 ---
 ```
  QSUBLISTEN checks whether jobs, submitted by qsubfeval, have been

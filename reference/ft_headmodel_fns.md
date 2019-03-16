@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_fns
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_FNS creates the volume conduction structure to be used

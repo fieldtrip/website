@@ -1,7 +1,5 @@
 ---
 title: ft_resampledata
-layout: default
-tags: 
 ---
 ```
  FT_RESAMPLEDATA performs a resampling or downsampling of the data

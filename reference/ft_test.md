@@ -1,7 +1,5 @@
 ---
 title: ft_test
-layout: default
-tags: 
 ---
 ```
  FT_TEST performs selected FieldTrip test scripts or reports on previous test

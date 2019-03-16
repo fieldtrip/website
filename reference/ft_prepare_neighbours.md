@@ -1,7 +1,5 @@
 ---
 title: ft_prepare_neighbours
-layout: default
-tags: 
 ---
 ```
  FT_PREPARE_NEIGHBOURS finds the neighbours of the channels based on three
@@ -31,8 +29,10 @@ tags:
    cfg.feedback      = 'yes' or 'no' (default = 'no')
 
  The EEG or MEG sensor positions can be present in the data or can be specified as
-   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
-   cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
+   cfg.elec          = structure with electrode positions, see FT_DATATYPE_SENS
+   cfg.grad          = structure with gradiometer definition, see FT_DATATYPE_SENS
+   cfg.elecfile      = name of file containing the electrode positions, see FT_READ_SENS
+   cfg.gradfile      = name of file containing the gradiometer definition, see FT_READ_SENS
 
  The output is an array of structures with the "neighbours" which is
  structured like this:

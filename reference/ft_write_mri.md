@@ -1,7 +1,5 @@
 ---
 title: ft_write_mri
-layout: default
-tags: 
 ---
 ```
  FT_WRITE_MRI exports volumetric data such as anatomical and functional

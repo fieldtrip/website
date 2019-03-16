@@ -1,7 +1,5 @@
 ---
 title: issubfield
-layout: default
-tags: 
 ---
 ```
  ISSUBFIELD tests for the presence of a field in a structure just like the standard

@@ -1,7 +1,5 @@
 ---
 title: ft_statistics_crossvalidate
-layout: default
-tags: 
 ---
 ```
  FT_STATISTICS_CROSSVALIDATE performs cross-validation using a prespecified

@@ -1,7 +1,5 @@
 ---
 title: peerreset
-layout: default
-tags: 
 ---
 ```
  PEERRESET clears all jobs on the local peer server and switches to

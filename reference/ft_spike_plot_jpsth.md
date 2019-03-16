@@ -1,7 +1,5 @@
 ---
 title: ft_spike_plot_jpsth
-layout: default
-tags: 
 ---
 ```
  FT_SPIKE_PLOT_JPSTH makes a plot from JPSTH structure.
@@ -30,7 +28,7 @@ tags:
      ' gausswin'     use a Gaussian smooth function
      ' boxcar'       use a box-car to smooth
    cfg.gaussvar    =  variance  (default = 1/16 of window length in sec).
-   cfg.winlen      =  window length in seconds (default = 5*binwidth).
+   cfg.winlen      =  cfg.window length in seconds (default = 5*binwidth).
      length of our window is 2*round*(cfg.winlen/binwidth)
      where binwidth is the binwidth of the jpsth (jpsth.time(2)-jpsth.time(1)).
 

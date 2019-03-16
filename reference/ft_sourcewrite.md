@@ -1,7 +1,5 @@
 ---
 title: ft_sourcewrite
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEWRITE exports source-reconstructed results to gifti or nifti format file.

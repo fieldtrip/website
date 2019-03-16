@@ -1,7 +1,5 @@
 ---
 title: ft_spiketriggeredinterpolation
-layout: default
-tags: 
 ---
 ```
  FT_SPIKETRIGGEREDINTERPOLATION interpolates the data in the LFP channels

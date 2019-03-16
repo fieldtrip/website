@@ -1,7 +1,5 @@
 ---
 title: ft_appendsens
-layout: default
-tags: 
 ---
 ```
  FT_APPENDSENS concatenates multiple sensor definitions that have been processed

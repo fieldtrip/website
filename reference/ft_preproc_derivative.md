@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_derivative
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_DERIVATIVE computes the temporal Nth order derivative of the

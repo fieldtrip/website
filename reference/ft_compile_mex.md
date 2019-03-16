@@ -1,7 +1,5 @@
 ---
 title: ft_compile_mex
-layout: default
-tags: 
 ---
 ```
  FT_COMPILE_MEX can be used for compiling most of the FieldTrip MEX files Note that

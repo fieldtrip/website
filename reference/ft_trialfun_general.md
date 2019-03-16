@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_general
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_GENERAL determines trials/segments in the data that are
@@ -14,7 +12,7 @@ tags:
    cfg.trialdef.prestim    = latency in seconds (optional)
    cfg.trialdef.poststim   = latency in seconds (optional)
 
- If you want to read all data from a continuous file in segments, you can specify
+ If you want to read all data from a continous file in segments, you can specify
     cfg.trialdef.triallength = duration in seconds (can be Inf)
     cfg.trialdef.ntrials     = number of trials
 

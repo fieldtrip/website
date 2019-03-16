@@ -1,7 +1,5 @@
 ---
 title: ft_appendtimelock
-layout: default
-tags: 
 ---
 ```
  FT_APPENDTIMELOCK concatenates multiple timelock (ERP/ERF) data structures that

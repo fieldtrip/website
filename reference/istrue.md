@@ -1,7 +1,5 @@
 ---
 title: istrue
-layout: default
-tags: 
 ---
 ```
  ISTRUE converts an input argument like "yes/no", "true/false" or "on/off" into a

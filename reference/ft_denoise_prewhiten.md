@@ -1,7 +1,5 @@
 ---
 title: ft_denoise_prewhiten
-layout: default
-tags: 
 ---
 ```
  FT_DENOISE_PREWHITEN applies a spatial prewhitening operation to the data using the

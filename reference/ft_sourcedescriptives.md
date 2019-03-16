@@ -1,7 +1,5 @@
 ---
 title: ft_sourcedescriptives
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEDESCRIPTIVES computes descriptive parameters of the source

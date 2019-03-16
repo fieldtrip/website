@@ -1,7 +1,5 @@
 ---
 title: ft_channelselection
-layout: default
-tags: 
 ---
 ```
  FT_CHANNELSELECTION makes a selection of EEG and/or MEG channel labels.

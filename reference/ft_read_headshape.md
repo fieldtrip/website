@@ -1,7 +1,5 @@
 ---
 title: ft_read_headshape
-layout: default
-tags: 
 ---
 ```
  FT_READ_HEADSHAPE reads the fiducials and/or the measured headshape from a variety
@@ -61,5 +59,5 @@ tags:
    'brainvisa_mesh'
    'brainsuite_dfs'
 
- See also FT_READ_HEADMODEL, FT_READ_SENS, FT_READ_ATLAS, FT_WRITE_HEADSHAPE
+ See also FT_READ_VOL, FT_READ_SENS, FT_READ_ATLAS, FT_WRITE_HEADSHAPE
 ```

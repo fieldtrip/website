@@ -1,7 +1,5 @@
 ---
 title: nmt_addtopo
-layout: default
-tags: 
 ---
 ```
  configures and display topoplot on nutmegtrip viewer

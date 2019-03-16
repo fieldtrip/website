@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_example1
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_EXAMPLE1 is an example trial function. It searches for events

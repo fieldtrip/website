@@ -1,7 +1,5 @@
 ---
 title: bis2fieldtrip
-layout: default
-tags: 
 ---
 ```
  BIS2FIELDTRIP reads BioImage Suite .mgrid files and converts them 

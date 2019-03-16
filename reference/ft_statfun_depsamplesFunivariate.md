@@ -1,7 +1,5 @@
 ---
 title: ft_statfun_depsamplesFunivariate
-layout: default
-tags: 
 ---
 ```
  FT_STATFUN_DEPSAMPLESFUNIIVARIATE calculates the univariate repeated-mesures ANOVA

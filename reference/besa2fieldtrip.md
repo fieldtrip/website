@@ -1,7 +1,5 @@
 ---
 title: besa2fieldtrip
-layout: default
-tags: 
 ---
 ```
  BESA2FIELDTRIP reads and converts various BESA datafiles into a FieldTrip

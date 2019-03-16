@@ -1,7 +1,5 @@
 ---
 title: imotions2fieldtrip
-layout: default
-tags: 
 ---
 ```
  IMOTIONS2FIELDTRIP imports an iMotions *.txt file and represents it as a FieldTrip

@@ -1,7 +1,5 @@
 ---
 title: ft_layoutplot
-layout: default
-tags: 
 ---
 ```
  FT_LAYOUTPLOT makes a figure with the 2-D layout of the channel positions
@@ -28,9 +26,10 @@ tags:
    cfg.layout      = filename containg the layout
    cfg.rotate      = number, rotation around the z-axis in degrees (default = [], which means automatic)
    cfg.projection  = string, 2D projection method can be 'stereographic', 'ortographic', 'polar', 'gnomic' or 'inverse' (default = 'orthographic')
-   cfg.elec        = structure with electrode positions or filename, see FT_READ_SENS
-   cfg.grad        = structure with gradiometer definition or filename, see FT_READ_SENS
-   cfg.opto        = structure with optode definition or filename, see FT_READ_SENS
+   cfg.elec        = structure with electrode definition
+   cfg.grad        = structure with gradiometer definition
+   cfg.elecfile    = filename containing electrode definition
+   cfg.gradfile    = filename containing gradiometer definition
    cfg.output      = filename to which the layout will be written (default = [])
    cfg.montage     = 'no' or a montage structure (default = 'no')
    cfg.image       = filename, use an image to construct a layout (e.g. usefull for ECoG grids)

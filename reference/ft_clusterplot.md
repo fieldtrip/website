@@ -1,7 +1,5 @@
 ---
 title: ft_clusterplot
-layout: default
-tags: 
 ---
 ```
  FT_CLUSTERPLOT plots a series of topographies with highlighted clusters.

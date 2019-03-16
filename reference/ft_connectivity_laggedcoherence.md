@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_laggedcoherence
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_LAGGEDCOHERENCE performs time-resolved coherence analysis of

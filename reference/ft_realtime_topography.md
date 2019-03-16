@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_topography
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_TOPOGRAPHY reads continuous data from a file or from a data stream,

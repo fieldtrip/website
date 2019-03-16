@@ -1,7 +1,5 @@
 ---
 title: ft_omri_quality_plot
-layout: default
-tags: 
 ---
 ```
  function ft_omri_quality_plot(motEst, curScan, varScan, [maxVal, maxVar])

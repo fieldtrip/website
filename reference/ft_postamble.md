@@ -1,7 +1,5 @@
 ---
 title: ft_postamble
-layout: default
-tags: 
 ---
 ```
  FT_POSTAMBLE is a helper function that is included in many of the FieldTrip

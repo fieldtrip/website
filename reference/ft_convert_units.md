@@ -1,7 +1,5 @@
 ---
 title: ft_convert_units
-layout: default
-tags: 
 ---
 ```
  FT_CONVERT_UNITS changes the geometrical dimension to the specified SI unit.

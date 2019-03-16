@@ -1,7 +1,5 @@
 ---
 title: ft_spikefixdmafile
-layout: default
-tags: 
 ---
 ```
  FT_SPIKEFIXDMAFILE fixes the problem in DMA files due to stopping and

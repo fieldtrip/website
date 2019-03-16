@@ -1,7 +1,5 @@
 ---
 title: ft_math
-layout: default
-tags: 
 ---
 ```
  FT_MATH performs mathematical operations on FieldTrip data structures,

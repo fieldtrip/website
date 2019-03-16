@@ -1,7 +1,5 @@
 ---
 title: ft_topoplotTFR
-layout: default
-tags: 
 ---
 ```
  FT_TOPOPLOTTFR plots the topographic distribution over the head

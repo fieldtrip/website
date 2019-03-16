@@ -1,7 +1,5 @@
 ---
 title: ft_platform_supports
-layout: default
-tags: 
 ---
 ```
  FT_PLATFORM_SUPPORTS returns a boolean indicating whether the current platform

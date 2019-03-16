@@ -1,11 +1,14 @@
 ---
 title: ft_transform_sens
-layout: default
-tags: 
 ---
 ```
- This function is a backward compatibility wrapper for existing MATLAB scripts
- that call a function that is not part of the FieldTrip toolbox any more.
+ FT_TRANSFORM_SENS applies a homogenous coordinate transformation to a
+ structure with EEG electrodes or MEG gradiometers. For MEG gradiometers
+ the homogenous transformation matrix should be limited to a rigid-body
+ translation plus rotation.
 
- Please update your code to make it future-proof.
+ Use as
+   sens = ft_transform_sens(transform, sens)
+
+ See also FT_READ_SENS, FT_PREPARE_VOL_SENS, FT_COMPUTE_LEADFIELD, FT_TRANSFORM_GEOMETRY
 ```

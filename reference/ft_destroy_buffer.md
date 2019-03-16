@@ -1,7 +1,5 @@
 ---
 title: ft_destroy_buffer
-layout: default
-tags: 
 ---
 ```
  FT_DESTROY_BUFFER stops the thread with the TCP server attached to

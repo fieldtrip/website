@@ -1,7 +1,5 @@
 ---
 title: ft_anonymizedata
-layout: default
-tags: 
 ---
 ```
  FT_ANONYMIZEDATA clears the value of potentially identifying fields in

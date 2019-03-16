@@ -1,7 +1,5 @@
 ---
 title: ft_apply_montage
-layout: default
-tags: 
 ---
 ```
  FT_APPLY_MONTAGE changes the montage (i.e. linear combination) of a set of
@@ -50,5 +48,5 @@ tags:
  applied to the first. In effect, the output montage will first do
  montage1, then montage2.
 
- See also FT_READ_SENS, FT_DATATYPE_SENS
+ See also FT_READ_SENS, FT_TRANSFORM_SENS
 ```

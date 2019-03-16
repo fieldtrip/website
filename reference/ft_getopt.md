@@ -1,7 +1,5 @@
 ---
 title: ft_getopt
-layout: default
-tags: 
 ---
 ```
  FT_GETOPT gets the value of a specified option from a configuration structure

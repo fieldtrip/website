@@ -1,7 +1,5 @@
 ---
 title: ft_headmovement
-layout: default
-tags: 
 ---
 ```
  FT_HEADMOVEMENT creates a raw data structure, or cell-array of datastructures

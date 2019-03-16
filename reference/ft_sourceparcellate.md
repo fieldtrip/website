@@ -1,7 +1,5 @@
 ---
 title: ft_sourceparcellate
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEPARCELLATE combines the source-reconstruction parameters over the parcels, for

@@ -1,7 +1,5 @@
 ---
 title: ft_write_cifti
-layout: default
-tags: 
 ---
 ```
  FT_WRITE_CIFTI writes functional data or functional connectivity to a cifti-2

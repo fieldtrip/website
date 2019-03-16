@@ -1,7 +1,5 @@
 ---
 title: ft_rejectvisual
-layout: default
-tags: 
 ---
 ```
  FT_REJECTVISUAL shows the preprocessed data in all channels and/or trials to

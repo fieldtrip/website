@@ -1,7 +1,5 @@
 ---
 title: ft_denoise_tsr
-layout: default
-tags: 
 ---
 ```
  FT_DENOISE_TSR performs a regression analysis, using a (time-shifted set

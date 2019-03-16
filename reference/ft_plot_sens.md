@@ -1,7 +1,5 @@
 ---
 title: ft_plot_sens
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_SENS visualizes the EEG, MEG or NIRS sensor array.
@@ -54,5 +52,5 @@ tags:
    figure; ft_plot_sens(sens, 'coilshape', 'circle', 'coil', true, 'chantype', 'meggrad')
    figure; ft_plot_sens(sens, 'coilshape', 'circle', 'coil', false, 'orientation', true)
 
- See also FT_READ_SENS, FT_PLOT_HEADSHAPE, FT_PLOT_HEADMODEL
+ See also FT_READ_SENS, FT_PLOT_HEADSHAPE, FT_PLOT_VOL
 ```

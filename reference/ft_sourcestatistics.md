@@ -1,7 +1,5 @@
 ---
 title: ft_sourcestatistics
-layout: default
-tags: 
 ---
 ```
  FT_SOURCESTATISTICS computes the probability for a given null-hypothesis using
@@ -11,7 +9,7 @@ tags:
    [stat] = ft_sourcestatistics(cfg, source1, source2, ...)
  where the input data is the result from FT_SOURCEANALYSIS, FT_SOURCEDESCRIPTIVES
  or FT_SOURCEGRANDAVERAGE.  The source structures should be spatially alligned
- to each other and should have the same positions for the sourcemodel.
+ to each other and should have the same positions for the source grid.
 
  The configuration should contain the following option for data selection
    cfg.parameter  = string, describing the functional data to be processed, e.g. 'pow', 'nai' or 'coh'

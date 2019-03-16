@@ -1,7 +1,5 @@
 ---
 title: ft_timelockanalysis
-layout: default
-tags: 
 ---
 ```
  FT_TIMELOCKANALYSIS computes the timelocked average ERP/ERF and
