@@ -436,7 +436,7 @@ look as you would expect?
 Following the computation of ERPs, FieldTrip offers many more functions to
 continue analyzing your data. You can use **[ft_math](/reference/ft_math)** to
 compute difference waves,
-**[ft_timelockstatistics](reference/ft_timelockstatistics)** to run statistics
+**[ft_timelockstatistics](/reference/ft_timelockstatistics)** to run statistics
 on your ERP effect, compute group level averages with
 **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** or explore
 different ways of visualizing, i.e.

@@ -21,7 +21,7 @@ When comparing conditions in an analysis, you often run into the situation that 
 
 The easiest way to see whether a difference in the number of trials can be a problem for you is to simulate such a scenario and run the same statistical tests you are planning to use in your study. In the following example we will consider a within-subjects design with 20 subjects and two conditions. We will generate the data with [ft_freqsimulation](/reference/ft_freqsimulation), average the data with [ft_timelockaverage](/reference/ft_timelockanalysis) and [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) followed by running statistical tests with [ft_timelockstatistics](/reference/ft_timelockstatistics).
 
-First we will start with simulating the data for all subject
+First we will start with simulating the data for all subjects:
 
     n_subjects = 20;
     data = cell(1,n_subjects);
@@ -33,10 +33,10 @@ First we will start with simulating the data for all subject
     cfg.trllen = 1;
     cfg.numtrl = 100;
     for i=1:n_subjects
-    data{i} = ft_freqsimulation(cfg);
-    end;
+      data{i} = ft_freqsimulation(cfg);
+    end
 
-Now that we have simulated the data for all subjects we are going to divide the data into conditions A and B. Note that the assignment into one or the other condition is random and there should be no difference between conditions! After we have divided the data into two conditions, we will average the data per condition and test the difference on the group level. We will repeat this process 100 times and check the distribution of p-values for this particular test and ratio of trials. We will start out with an equal amount of trials in both condition
+Now that we have simulated the data for all subjects we are going to divide the data into conditions A and B. Note that the assignment into one or the other condition is random and there should be no difference between conditions! After we have divided the data into two conditions, we will average the data per condition and test the difference on the group level. We will repeat this process 100 times and check the distribution of p-values for this particular test and ratio of trials. We will start out with an equal amount of trials in both conditions:
 
     % Divide the data 1. case, equal amount of trial
 
