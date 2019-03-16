@@ -149,7 +149,7 @@ Here, we will focused on how to read the Plexon dataset directories (_\_ds_) whi
     cfg.headerformat     = 'plexon_ds';  % this is optional, and will be auto-detected
     cfg = ft_preprocessing(cfg)
 
-The specification of the dataformat and headerformat options as _combined_ds_ ensures that the appropriate low-level FieldTrip reading function will be called to read the multiple single-channel Plexon .nex files contained in the dataset directory. After preprocessing, we can obtain a data structure like thi
+The specification of the dataformat and headerformat options as _combined_ds_ ensures that the appropriate low-level FieldTrip reading function will be called to read the multiple single-channel Plexon .nex files contained in the dataset directory. After preprocessing, we can obtain a data structure like this:
 
     data =
 

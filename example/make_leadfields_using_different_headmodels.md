@@ -13,7 +13,7 @@ For all functions used, you can type 'help _function_' in MATLAB for more inform
 
 The MEG dataset that is used in this demo is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and is named Subject01.zip.
 
-If you download this data into a folder named 'testdata', the directory should look like thi
+If you download this data into a folder named 'testdata', the directory should look like this:
 
     >> cd testdata
     >> ls

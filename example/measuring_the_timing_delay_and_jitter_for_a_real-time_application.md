@@ -370,7 +370,7 @@ The number of new samples is now already returned by the ft_poll_buffer function
                      disp(out_event);
                      %write_event(outstream, out_event);
                      fwrite(serobjw, out_event.value);
-                 end;
+                 end
 
 
             else %% use read_event function that does the flank detection

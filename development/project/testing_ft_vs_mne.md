@@ -591,7 +591,7 @@ FIXME I should match the positions of the source points with each other.
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/plot_source3_100.jpg" width="650" %}
 
-The same figure of a random source calculated with the original leadfield of FieldTrip looks like thi
+The same figure of a random source calculated with the original leadfield of FieldTrip looks like this:
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/plot_source_100.jpg" width="650" %}
 

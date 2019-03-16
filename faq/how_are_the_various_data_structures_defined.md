@@ -50,10 +50,9 @@ An example of a source structure obtained after performing a frequency domain so
            freq: 6,                        the frequency of the oscillations at which the activity is estimated
          method: 'singletrial'             specifies how the data is represented
             cfg: [1x1 struct]              configuration structure used by the invoking FieldTrip function
-          trial: [10x1 struct]             contain the numeric data, each structure source.trial(x) can look like thi
+          trial: [10x1 struct]             contain the numeric data, each structure source.trial(x) can look like this
 
                  source.trial(1)
-
                    pow: [6732x1 double]    Npositions x 1 array containing the power at each source location for the given trial
                  noise: [6732x1 double]    Npositions x 1 array containing an estimate of the noise at each source location
                    csd: {6732x1 cell}      Npositions x 1 cell-array containing the source cross-spectral density

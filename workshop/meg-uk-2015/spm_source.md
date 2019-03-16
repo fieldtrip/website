@@ -75,10 +75,10 @@ With the previous steps, we invert data of whole trials from -100 to +800ms acro
 
 You can use the batch framework to construct a processing pipeline across a group of subjects or across different source reconstruction approaches. A brief exampl
 
-1.  Save the batch by going to “File” in the Batch editor and select “save Batch and Script“. As file name write ‘batch_localise_inv’. This will result in two files: a batch file ‘batch_localise_inv_job.m’ and a Matlab script ‘batch_localise_inv.m’ which runs the batch file. Take a look at the job-file by entering “open batch_localise_inv_job.m” in the Matlab command window.
+1.  Save the batch by going to “File” in the Batch editor and select “save Batch and Script“. As file name write ‘batch_localise_inv’. This will result in two files: a batch file ‘batch_localise_inv_job.m’ and a Matlab script ‘batch_localise_inv.m’ which runs the batch file. Take a look at the job-file by entering “open batch_localise_inv_job.m” in the MATLAB command window.
 2.  In batch_localise_inv.m replace nrun = X; with nrun = 1 and save the file. We could now run this Matlab script with the same results as if we had pressed the green “Run” button in the Batch Editor.
 3.  To make things a bit more interesting, we go back to the batch and right-click on the M/EEG datasets field of the first source inversion module and select “Clear Value”. Do the same for “Time window of interest” and save batch and script under ‘batch_localise_inv_subj.m’.
-4.  In the Matlab command window, type ’open batch_localise_inv_subj_job.m’. The cleared values have been replaced by ’`<UNDEFINED>`’. We will provide these undefined values via the Matlab script.
+4.  In the MATLAB command window, type ’open batch_localise_inv_subj_job.m’. The cleared values have been replaced by ’`<UNDEFINED>`’. We will provide these undefined values via the Matlab script.
 5.  In batch_localise_inv_subj.m replace nrun = X; with nrun = 1 and as inputs specify “{’PapMcbdspmeeg_run_01_sss.mat’}” and [-100 800].
 6.  Finally, save and run the batch_localise_inv_subj.m script.
 

@@ -221,7 +221,7 @@ In our case the electrode labels are equal to the channel numbers. Please be awa
 
 We will now plot the data for all channels in separate windows. You can use the following code to close all previous figure window
 
-close all
+    close all
 
     for i=1:numel(data_tms_avg.label)                   % Loop through all channels
         figure;
@@ -231,7 +231,7 @@ close all
         title(['Channel ' data_tms_avg.label{i}]);
         ylabel('Amplitude (uV)')
         xlabel('Time (s)');
-    end;
+    end
 
 Take a moment to have a look at all channels. See if you can determine the artifacts that are present.
 
@@ -285,7 +285,7 @@ In this channel we can find ringing/step response, cranial muscle, exponential d
     for i=1:numel(labels)
       highlight_idx = [nearest(data_tms_avg.time,artifacts(i,1)) nearest(data_tms_avg.time,artifacts(i,2)) ];
       plot(data_tms_avg.time(highlight_idx(1):highlight_idx(2)), data_tms_avg.avg(channel_idx,highlight_idx(1):highlight_idx(2)),colors(i));
-    end;
+    end
     legend(['raw data', labels]);
 
 {% include image src="/assets/img/tutorial/tms-eeg/tep_highlighted.png" %}
@@ -574,7 +574,7 @@ We can now have a look at the current status of our data.
         title(['Channel ' data_tms_clean_avg.label{i}]);
         ylabel('Amplitude (uV)')
         xlabel('Time (s)');
-    end;
+    end
 
 {% include image src="/assets/img/tutorial/tms-eeg/pre-clean.png" %}
 
@@ -623,7 +623,7 @@ When we want to know which data point corresponds to any given time point we oft
     muscle_window_idx = [nearest(data_tms_clean.time{1},muscle_window(1)) nearest(data_tms_clean.time{1},muscle_window(2))]; % Find the indices in the time vector corresponding to our window of interest
     for i=1:numel(data_tms_clean.trial) % Loop through all trials
       data_tms_clean.trial{i}(:,muscle_window_idx(1):muscle_window_idx(2))=nan; % Replace the segment of data corresponding to our window of interest with nans
-    end;
+    end
 
 Now that everything we would like to interpolate has been replaced by nans we can start the interpolation. The function **[ft_interpolatenan](/reference/ft_interpolatenan)** loops through trials and channels and interpolates segments containing nans using MATLAB's built-in [interp1](http://www.mathworks.nl/help/matlab/ref/interp1.html) function. You can therefore use all the methods supported by this function in your interpolation. We will use cubic interpolation as it avoids sharp transitions from your data to the edges of the interpolated segments you might create by using linear interpolation but does not appear to introduce strong artificial sinusoids as spline interpolation sometimes does. Feel free to try-out the different types of interpolation.
 
@@ -658,7 +658,7 @@ Using the following code we will compare the average TEP of the original data wi
         ylabel('Amplitude (uV)')
         xlabel('Time (s)');
         legend({'Raw' 'Cleaned'});
-    end;
+    end
 
 {% include markup/warning %}
 After artifact removal, make sure to browse through your channels comparing the data prior and post correction to check if there are any residual artifacts left. It could be that you will have to interpolate a bit more or try to remove additional independent components.

@@ -9,14 +9,13 @@ This page describes the interface between the 2-6 channel Modular EEG amplifier 
 
 ## Standalone program modeeg2ft/modeeg2ft_2chn
 
-We provide two standalone tools (see ''realtime/src/acquisition/modeeg'' and ''realtime/bin'') to grab data from the serial port, and stream it to a FieldTrip buffer. The first one is called **modeeg2ft** and allows to specify which channels to stream and save in a configuration file like thi
+We provide two standalone tools (see ''realtime/src/acquisition/modeeg'' and ''realtime/bin'') to grab data from the serial port, and stream it to a FieldTrip buffer. The first one is called **modeeg2ft** and allows to specify which channels to stream and save in a configuration file like this:
 
     [select]
+    1=Left
+    2=Right
 
-1=Left
-2=Right
-
-You would then call the application like thi
+You would then call the application like this:
 
     modeeg2ft COM5: config.txt  nameOfGDF  localhost  1972
 
@@ -73,7 +72,7 @@ The page <http://openeeg.sourceforge.net/doc/modeeg/firmware/modeeg-p2.c> descri
 // 17-byte packets are transmitted from the ModularEEG at 256Hz,
 // using 1 start bit, 8 data bits, 1 stop bit, no parity, 57600 bits per second.
 // Minimial transmission speed is 256Hz _ sizeof(modeeg_packet) _ 10 = 43520 bps.
-  
+
  struct modeeg_packet
 {
 uint8_t sync0; // = 0xA5
@@ -83,7 +82,7 @@ uint8_t count; // packet counter. Increases by 1 each packet
 uint16_t data[6]; // 10-bit sample (= 0 - 1023) in big endian (Motorola) format
 uint8_t switches; // State of PD5 to PD2, in bits 3 to 0
 };
-  
+
  // Note that data is transmitted in big-endian format.
 // By this measure together with the unique pattern in sync0 and sync1 it is guaranteed,
 // that re-sync (i.e after disconnecting the data line) is always safe.

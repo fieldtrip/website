@@ -11,12 +11,12 @@ The **[ft_write_data](/reference/ft_write_data)** function requires that you con
 
     hdr = ft_fetch_header(data);
 
-If your data is continuous and hence the data structure contains only a single (very long) trial d
+If your data is continuous and hence the data structure contains only a single (very long) trial do:
 
     dat = data.trial{1};
     ft_write_data('yourfile.ext', dat, 'header', hdr, ...)
 
-If you want to write multiple trials, you have to concatenate them and like thi
+If you want to write multiple trials, you have to concatenate them and like this:
 
     dat = cat(2,data.trial{:})
     ft_write_data('yourfile.ext', dat, 'header', hdr, ...)

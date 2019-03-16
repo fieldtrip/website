@@ -50,7 +50,7 @@ The header contains a lot of information about the measurement parameters. In th
 
 The variable 'dat' contains all the data for 317 channels for all samples. This is a recording of 396 seconds sampled at 1000 Hz.
 
-When this works you are sure that FieldTrip can handle your dataset and you can start to analyse your data as described [here](/tutorial/introduction).
+When this works you are sure that FieldTrip can handle your dataset and you can start to analyze your data as described [here](/tutorial/introduction).
 
 ## Special issues
 

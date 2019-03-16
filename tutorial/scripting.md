@@ -72,7 +72,7 @@ you can program a generic solution to save all analysis steps of every subject i
 
 In this way all your functions (i.e. analysis steps) can read the output of the previous step as .mat files based upon their subject number.
 
-We suggest that you store a single variable per file. This will in general make it possible to more easily only read what is necessary. Furthermore, if you give the files a clear and consistent name, you can easily delete the files (intermediate results) that are not needed anymore. Note that you can sort in the file manager on filename, as well as on creation date. The latter is convenient to quickly get an overview of the most recent files after you notice yet another bug in your analysis script :). For one subject a full analysis of the content of your data directory could then look something like thi
+We suggest that you store a single variable per file. This will in general make it possible to more easily only read what is necessary. Furthermore, if you give the files a clear and consistent name, you can easily delete the files (intermediate results) that are not needed anymore. Note that you can sort in the file manager on filename, as well as on creation date. The latter is convenient to quickly get an overview of the most recent files after you notice yet another bug in your analysis script :). For one subject a full analysis of the content of your data directory could then look something like this:
 
     subject01.eeg
     subject01_rawdata.mat
@@ -91,7 +91,7 @@ We suggest that you store a single variable per file. This will in general make 
     subject02_avg_cond1.mat
     ...
 
-Along the way, you will most likely expand on the subject-specific information. For instance, in the first step you used ft_databrowser to select some unusual artifacts in one subject, which you could write (automatically) in your subject m-fil
+Along the way, you will most likely expand on the subject-specific information. For instance, in the first step you used ft_databrowser to select some unusual artifacts in one subject, which you could write (automatically) in your subject .m file:
 
     subjectdata.visualartifacts = [
     160611,162906

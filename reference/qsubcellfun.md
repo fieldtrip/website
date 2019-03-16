@@ -69,7 +69,7 @@ tags:
    qstat
    qstat -an1
    qstat -Q
- comands on the linux command line. To delete jobs from the Torque batch
+ comands on the Linux command line. To delete jobs from the Torque batch
  queue and to abort already running jobs, you can use
    qdel <jobnumber>
    qdel all

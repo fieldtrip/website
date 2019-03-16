@@ -165,30 +165,30 @@ First we need to define our trial
 
 For detecting jump artifacts, begin with the following parameter
 
-% jump
-cfg = [];
-cfg.trl = trl;
-cfg.datafile = 'ArtifactMEG.ds';
-cfg.headerfile = 'ArtifactMEG.ds';
-cfg.continuous = 'yes';
+    % jump
+    cfg = [];
+    cfg.trl = trl;
+    cfg.datafile = 'ArtifactMEG.ds';
+    cfg.headerfile = 'ArtifactMEG.ds';
+    cfg.continuous = 'yes';
 
-% channel selection, cutoff and padding
-cfg.artfctdef.zvalue.channel = 'MEG';
-cfg.artfctdef.zvalue.cutoff = 20;
-cfg.artfctdef.zvalue.trlpadding = 0;
-cfg.artfctdef.zvalue.artpadding = 0;
-cfg.artfctdef.zvalue.fltpadding = 0;
+    % channel selection, cutoff and padding
+    cfg.artfctdef.zvalue.channel = 'MEG';
+    cfg.artfctdef.zvalue.cutoff = 20;
+    cfg.artfctdef.zvalue.trlpadding = 0;
+    cfg.artfctdef.zvalue.artpadding = 0;
+    cfg.artfctdef.zvalue.fltpadding = 0;
 
-% algorithmic parameters
-cfg.artfctdef.zvalue.cumulative = 'yes';
-cfg.artfctdef.zvalue.medianfilter = 'yes';
-cfg.artfctdef.zvalue.medianfiltord = 9;
-cfg.artfctdef.zvalue.absdiff = 'yes';
+    % algorithmic parameters
+    cfg.artfctdef.zvalue.cumulative = 'yes';
+    cfg.artfctdef.zvalue.medianfilter = 'yes';
+    cfg.artfctdef.zvalue.medianfiltord = 9;
+    cfg.artfctdef.zvalue.absdiff = 'yes';
 
-% make the process interactive
-cfg.artfctdef.zvalue.interactive = 'yes';
+    % make the process interactive
+    cfg.artfctdef.zvalue.interactive = 'yes';
 
-[cfg, artifact_jump] = ft_artifact_zvalue(cfg);
+    [cfg, artifact_jump] = ft_artifact_zvalue(cfg);
 
 Specifying cfg.artfctdef.zvalue.interactive = 'yes' will open a figure,
 such as the one below, which provides you information with respect to

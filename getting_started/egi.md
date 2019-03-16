@@ -29,15 +29,17 @@ In short, the code in ft_read_header and ft_read_data does
 
     case {'egi_mff_v1' 'egi_mff'}
 
-% do the old stuff
-case {'egi_mff_v2'}
-% do the newer stuff
-case {'egi_mff_v3'}
-% do the newest stuff
+    % do the old stuff
+    case {'egi_mff_v2'}
+    % do the newer stuff
+    case {'egi_mff_v3'}
+    % do the newest stuff
 
 At this moment the default is to use the egi_mff_v1 implementation. This can be overruled by specifying
-cfg.dataformat = 'egi_mff_v3'
-cfg.headerformat = 'egi_mff_v3'
+
+    cfg.dataformat = 'egi_mff_v3'
+    cfg.headerformat = 'egi_mff_v3'
+
 to **[ft_preprocessing](/reference/ft_preprocessing)** and all other high-level FT functions that read data. Furthermore, by specifying
 
     ft_read_header(...., 'headerformat', 'egi_mff_v3')

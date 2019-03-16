@@ -248,7 +248,7 @@ This requirement on the dependencies ensures the [modular design](/development/m
 Generally functions (i.e. in the plotting directory) have optional arguments as a pair
 of inputs describing the name of one property and its value.
 These arguments have to be handled at the very beginning inside the function, by setting a default value,
-like thi
+like this:
 
     function ft_plot_mesh(bnd, varargin)
     ...

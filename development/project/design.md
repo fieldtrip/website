@@ -6,8 +6,7 @@ title: Explain how to create cfg.design for ft_statistics
 
 # Explain how to create cfg.design for ft_statistics
 
-cfg.design as input into ft_statistics (freq, timelock, or source) should be designed as follow
-size MxN, where N is the number of trials/conditions
+cfg.design as input into ft_statistics (freq, timelock, or source) should be designed as Windowssize MxN, where N is the number of trials/conditions.
 
 M is variable length. Along with cfg.design, the other options cfg.ivar, cfg.uvar, cfg.wvar, and cfg.cvar may also need to be specified. They are an index (indices) into which row(s) of the cfg.design correspond to 'independent variables', 'units of observation', 'within-block variables' and 'control variables', respectively.
 

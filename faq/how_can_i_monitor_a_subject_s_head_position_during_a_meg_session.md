@@ -104,7 +104,7 @@ The other option is to use maxfilter to create an ascii file containing the rele
 
 3. 'Start Acq'. You should see activity in the terminal in which acq2ftx is running.
 
-4. Start Matlab on the 'real-time computer' by typing on the linux command line
+4. Start Matlab on the 'real-time computer' by typing on the Linux command line
 
    matlab79
 

@@ -13,7 +13,7 @@ tags:
  - evaluate the desired function on the input arguments using PEEREXEC
  - save the output arguments to an output file
 
- This function should be started from the linux command line as follows
+ This function should be started from the Linux command line as follows
    qsub /opt/bin/matlab -r "qsubexec(jobid); exit"
  which starts the MATLAB executable, executes this function and exits
  MATLAB to leave your batch job in a clean state. The jobid is

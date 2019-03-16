@@ -17,7 +17,7 @@ Check your local version of gcc compiler (type 'gcc -v' in a terminal
 
 OpenMEEG installers are provided for gcc >= 4.1.
 
-The OpenMEEG version for linux 64 provides support of OpenMP for parallel and faster computation.
+The OpenMEEG version for Linux 64 provides support of OpenMP for parallel and faster computation.
 
 #### Install from the tar.gz file
 

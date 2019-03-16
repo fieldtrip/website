@@ -47,17 +47,21 @@ In particular imdilate can be used to augment the volume of a closed surface (e.
 
 {% include image src="/assets/img/faq/how_can_i_fine-tune_my_bem_volume_conduction_model/wiki12.png" width="300" %}
 
-The code used to generate the figure i
-seg = imdilate(seg,strel_bol(3));
-figure,volplot(seg);
+The code used to generate the figure is:
+
+    seg = imdilate(seg,strel_bol(3));
+    figure
+    volplot(seg);
 
 An example of the imfill function is given below. This is the case, for example, in which we want to fill the volume so that it constitutes a single entity. It results in being useful for triangulation, as explained in one of the techniques to obtain the outer-most surface (i.e. the skin).
 
 {% include image src="/assets/img/faq/how_can_i_fine-tune_my_bem_volume_conduction_model/wiki34.png" width="300" %}
 
-The code used to generate the figure i
-seg = imfill(seg,'holes');
-figure,volplot(seg);
+The code used to generate the figure is:
+
+    seg = imfill(seg,'holes');
+    figure
+    volplot(seg);
 
 The same effect can be reached with the use of another morphology function: bwlabeln. This function classifies the cluster of neighboring voxels and attaches a label to them, so that different objects can be easily distinguished (and processed) in the successive steps.
 

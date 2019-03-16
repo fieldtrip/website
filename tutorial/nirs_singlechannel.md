@@ -7,7 +7,7 @@ tags: [tutorial, nirs, preprocessing, nirs-singlechannel]
 
 ## Introduction
 
-This tutorial demonstrates how to analyse a functional near-infrared spectroscopy (fNIRS) dataset focussing on one single channel.
+This tutorial demonstrates how to analyze a functional near-infrared spectroscopy (fNIRS) dataset focussing on one single channel.
 The goal is to introduce the basic fNIRS analysis features of FieldTrip on Artinis NIRS data.
 You can find details on the Artinis recording and analysis software [here](http://www.fieldtriptoolbox.org/getting_started/artinis).
 
@@ -193,7 +193,7 @@ interest for the hemodynamic response. That is activation below 0.1 Hz. Addition
 
 ### Define epochs of interest
 
-Because we are interested to find whether the brain responds specifically to the events that took place during the experiment, we want to focus our analyses on the timewindows in which the events took place (these timewindows are often called epochs or trials). More specifically, we want to investigate whether there is increase in oxygenation in the channel of interest timelocked to the experimental event. In the current dataset, the events are fingertaps of the participant. To be able to analyse these specific event-related responses, we have not only recorded the NIRS signal, but also when which event happened, stored in a so-called trigger channel. The triggers indicate when what happened in the experiment.
+Because we are interested to find whether the brain responds specifically to the events that took place during the experiment, we want to focus our analyses on the timewindows in which the events took place (these timewindows are often called epochs or trials). More specifically, we want to investigate whether there is increase in oxygenation in the channel of interest timelocked to the experimental event. In the current dataset, the events are fingertaps of the participant. To be able to analyze these specific event-related responses, we have not only recorded the NIRS signal, but also when which event happened, stored in a so-called trigger channel. The triggers indicate when what happened in the experiment.
 
 Earlier, we have read in all epochs by not specifying cfg.trl during our previous call to **[ft_preprocessing](/reference/ft_preprocessing)**. In the help documentation cfg.trl points to **[ft_definetrial](/reference/ft_definetrial)**, which we will now use to define our trials. So let us have a look at the functio
 

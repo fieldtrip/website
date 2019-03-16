@@ -43,7 +43,7 @@ First we will generate the layout along the guidelines explained in the layout t
      data.trial(i,:) =eval(filename2);
      data.time = {EventTime};
      data.fsample = 1000;
-    end;
+    end
 
     data.trial={data.trial};
     data.label=lay.label(1:128);

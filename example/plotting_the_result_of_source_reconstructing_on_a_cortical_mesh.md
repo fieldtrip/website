@@ -20,7 +20,7 @@ The following function can be used to plot the results of source reconstruction 
 
     if nargin < 3
       cfg = struct();
-    end;
+    end
 
 
     cortex_light = [0.781 0.762 0.664];
@@ -36,20 +36,20 @@ The following function can be used to plot the results of source reconstruction 
     else
       opacmin = cfg.opacity(1);
       opacmax = cfg.opacity(2);
-    end;
+    end
     if ~isfield(cfg,'colormapping')
       fcolmin = min((source.avg.pow(:)));
       fcolmax = max((source.avg.pow(:)));
     else
       fcolmin = cfg.opacity(1);
       fcolmax = cfg.opacity(2);
-    end;
+    end
     if ~isfield(cfg,'edgealpha'), edgealpha = 1; end;
     if ~isfield(cfg,'mask'),
       maskval = source.avg.pow(:);
     else
       maskval = cfg.mask;
-    end;
+    end
 
 
     figure;

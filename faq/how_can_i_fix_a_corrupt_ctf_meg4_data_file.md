@@ -56,8 +56,8 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
             disp(['Removing datafile ' num2str(counter) ' because it does not contain data.']);
             movefile(datafiles(counter).name, backup_location);
             datafiles(counter) = [];
-        end;
-    end;
+        end
+    end
 
     % Calculate maximum number of trials based on
     %  amount of data recorded
@@ -70,7 +70,7 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
 
     if(bytes_recorded == 0)
         error('Repair failed, no data recorded');
-    end;
+    end
 
     number_of_trials = bytes_recorded / 4 / hdr.nChans / hdr.nSamples;
 
@@ -94,7 +94,7 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
 
         for file = datafiles(1:end-1)
             bytes_to_copy = bytes_to_copy - file.size + 8;
-        end;
+        end
 
         bytes_to_copy = bytes_to_copy + 8;
 
@@ -110,11 +110,11 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
         for i = 1:((bytes_to_copy - 8) / hdr.nChans / 4)
             val = fread(infile, hdr.nChans * 4, 'uchar');
             fwrite(outfile, val, 'uchar');
-        end;
+        end
 
         fclose(outfile);
         fclose(infile);
-    end;
+    end
 
 {% include markup/warning %}
 This script will backup your data by appending the extension '.old'. Your newly obtained set of files might be truncated by a few bytes, so you might loose a little bit of data.

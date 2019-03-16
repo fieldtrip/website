@@ -19,14 +19,14 @@ To inform the user about the requirements of each function call and thereby give
     reading and preprocessing trial 266 from 266
     the call to "ft_preprocessing" took 14 seconds and an estimated 386 MB
 
-If you do not want the time and memory to be printed, you can specify cfg.showcallinfo='no' instead of the default 'yes'. This is something you can do for every function separately, like thi
+If you do not want the time and memory to be printed, you can specify cfg.showcallinfo='no' instead of the default 'yes'. This is something you can do for every function separately, like this:
 
     cfg = [];
     cfg.dataset = 'Subject01.ds';
     cfg.showcallinfo = 'no';
     data = ft_preprocessing(cfg);
 
-You can also pass it as a general option to all functions like this
+You can also pass it as a general option to all functions like this:
 
     global ft_default
     ft_default.showcallinfo = 'no';

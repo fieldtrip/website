@@ -59,7 +59,7 @@ Load the subject specific information. Then read and preprocess the continuous s
       %Subject01
       Subject05
 
-      % load the continous sleep EEG, EOG, EMG and ECG data
+      % load the continuous sleep EEG, EOG, EMG and ECG data
       cfg             = [];
       cfg.dataset     = [datapath filesep subjectdata.subjectdir filesep subjectdata.datafile];
       cfg.continuous  = 'yes';
@@ -89,14 +89,14 @@ Because the original channels are not named conveniently we apply a montage stru
       cfg.montage = montage_rename;
       data_continuous = ft_preprocessing(cfg, data_orig);
 
-Lets browse the continous sleep data as typical for sleep scoring in 30-s epochs using **[ft_databrowser](/reference/ft_databrowser)**.
+Lets browse the continuous sleep data as typical for sleep scoring in 30-s epochs using **[ft_databrowser](/reference/ft_databrowser)**.
 
 Please also skip through several epochs in the data and zoom out in the time axis to view the full data. Play around to get a good feeling for the signals represented and how the different signals look like and change over the time of sleep.
 
       cfg             = [];
       cfg.continuous  = 'yes';
       cfg.viewmode    = 'vertical'; % all channels separate
-      cfg.blocksize   = 30;         % view the continous data in 30-s blocks
+      cfg.blocksize   = 30;         % view the continuous data in 30-s blocks
       ft_databrowser(cfg, data_continuous);
 
 {% include image src="/assets/img/tutorial/sleep/sleep_figure_1.png" width="400" %}
@@ -104,9 +104,9 @@ Please also skip through several epochs in the data and zoom out in the time axi
 
 _Figure 2: **[ft_databrowser](/reference/ft_databrowser)** of the original data with renamed channels. The data can be horizontally (time axis) and vertically (y-axis/signal amplitude) zoomed in and out to view the data in smaller or larger segments. And data can be viewed segment by segment.._
 
-We now additionaly segment the continous data in 30-second trials. This that allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
+We now additionaly segment the continuous data in 30-second trials. This that allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
 
-      % segment the continous data in segments of 30-seconds
+      % segment the continuous data in segments of 30-seconds
       % we call these epochs trials, although they are not time-locked to a particular event
       cfg          = [];
       cfg.length   = 30; % in seconds;
@@ -265,7 +265,7 @@ Electrophysiological recordings can also be used to identify wake periods. In th
         cumtapcnt: [1154x1 double]
               cfg: [1x1 struct]
 
-Now comes a trick to analyse the data more efficiently:
+Now comes a trick to analyze the data more efficiently:
 the trials/segments/epochs in the data represent time at the level of the experiment, i.e. every subsequent trial is one 30-s epoch advanced in time.
 We can reformat the freq_epoched structure into a regular time-frequency representation. The time or latency of each trial can be constructed using the sampleinfo from the segmented data, which specified for each trial the begin and the end-sample relative in the original datafile.
 See also the frequently asked question ["how can I do time-frequency analysis on continuous data"](/faq/how_can_i_do_time-frequency_analysis_on_continuous_data) for more details.
@@ -314,7 +314,7 @@ What we need in the end is time-frequency spectra over specific frequency bands.
     cfg.avgoverfreq         = 'yes';
     freq_continuous_spindle = ft_selectdata(cfg, freq_continuous);
 
-Concatenate the average frequency band signals to one data trial and combine the channels with each one frequency band to a single data structure
+Concatenate the average frequency band signals to one data trial and combine the channels with each one frequency band to a single data structure:
 
       data_continuous_swa                  = [];
       data_continuous_swa.label            = {'swa'};
@@ -343,7 +343,7 @@ Concatenate the average frequency band signals to one data trial and combine the
       data_continuous_alpha, ...
       data_continuous_spindle);
 
-The resulting data structure should then look like thi
+The resulting data structure should then look like this:
 
     data_continuous_perband =
         label: {4x1 cell}
@@ -865,7 +865,7 @@ Try to visualize an average QRS complex around the R-wave like was done for slee
 
 ## Summary and suggested further reading
 
-In this tutorial we learned how to read and interpret continous sleep data. We learned how to use modalities EMG, EOG, EEG and ECG to gain more information about the changing states during a long recording. We used EMG and EOG to find epochs of Wake that we considered artifacts for further analysis of non-REM sleep.
+In this tutorial we learned how to read and interpret continuous sleep data. We learned how to use modalities EMG, EOG, EEG and ECG to gain more information about the changing states during a long recording. We used EMG and EOG to find epochs of Wake that we considered artifacts for further analysis of non-REM sleep.
 
 Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information of further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g. Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further.
 

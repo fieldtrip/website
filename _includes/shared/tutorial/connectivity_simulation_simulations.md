@@ -97,7 +97,7 @@ It is also possible to compute the spectral transfer function using non-parametr
 
 ### Non-parametric computation of the cross-spectral density matrix
 
-Some connectivity metrics can be computed from a non-parametric spectral estimate (i.e. after the application of the FFT-algorithm and conjugate multiplication to get cross-spectral densities), such as coherence, phase-locking value and phase slope index. The following part computes the fourier-representation of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)**. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**, contains functionality to compute the cross-spectral density from the fourier coefficients.
+Some connectivity metrics can be computed from a non-parametric spectral estimate (i.e. after the application of the FFT-algorithm and conjugate multiplication to get cross-spectral densities), such as coherence, phase-locking value and phase slope index. The following part computes the Fourier-representation of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)**. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**, contains functionality to compute the cross-spectral density from the Fourier coefficients.
 
     cfg           = [];
     cfg.method    = 'mtmfft';

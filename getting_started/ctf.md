@@ -49,7 +49,9 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 To analyze your CTF MEG data in FieldTrip, you would usually start by calling high-level functions such as **[ft_definetrial](/reference/ft_definetrial)** or **[ft_preprocessing](/reference/ft_preprocessing)** (see the [tutorial documentation](/tutorial)). These functions read the raw MEG data by calling low-level functions such as **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)**.
 The header and data are in different files, and the data itself can be split over multiple 2GB files. You specify the combination of files as a dataset, i.e. with the directory
-cfg.dataset = 'Subject01.ds';
+
+    cfg.dataset = 'Subject01.ds';
+
 FieldTrip automatically figures out what the actual header and datafiles are.
 
 To get started with reading your CTF MEG data into FieldTrip, it might be a good check to call the low-level reading functions directly. As an example for the code below, we will use the tutorial dataset, which can be downloaded from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).

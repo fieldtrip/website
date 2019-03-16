@@ -48,7 +48,7 @@ for up to 10 data packets and a simple (socket pair) mechanism to synchronize be
 
 ### Downsampling, channel selection, applying gains
 
-The most recent interface, called **ctf2ft_v3**, does everything that version 2 does but has the additional ability to downsample the incoming CTF data, apply the correct sensor gains, and write out only selected channels. This application is started like thi
+The most recent interface, called **ctf2ft_v3**, does everything that version 2 does but has the additional ability to downsample the incoming CTF data, apply the correct sensor gains, and write out only selected channels. This application is started like this:
 
     ctf2ft_v3 hostname:port:flags:decimation:channels
 
@@ -91,7 +91,7 @@ After you start
 
       >> ctf2ft_v1
 
-on the linux command line, and in another terminal
+on the Linux command line, and in another terminal
 
       >> Acq
 
@@ -123,7 +123,7 @@ Whereas in the software version _6.1.5-el6_7.x86_64-20160720-3344_ the ACQ_BUFFE
 
 ### shmget: Invalid argument
 
-It seems that the default linux/redhat configuratino of the shared memory does not allow a sufficiently large memory block to be allocated. To change the setting in the operating system, you should do (as root user
+It seems that the default Linux/RedHat configuration of the shared memory does not allow a sufficiently large memory block to be allocated. To change the setting in the operating system, you should do (as root user
 
     echo 1000000000 > /proc/sys/kernel/shmmax
 

@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_signalrecorder
 layout: default
-tags: 
+tags:
 ---
 ```
  FT_REALTIME_SIGNALRECORDER is an example realtime application for recording of data

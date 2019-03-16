@@ -102,7 +102,7 @@ In practice, we may want to average the parameters over folds to get an average 
 Explain which information the contingency matrix gives you, which the accuracy does not.  
 {% include markup/end %}
 
-Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyse this data.
+Redo the above analysis with a latency of [0 0.5]. Explain what you believe to be the optimal latency with which to analyze this data.
 
 Suppose you use a dataset consisting of randomly generated data. What do you expect when you test classifier performance using the same data? And what do you expect if you use a second randomly generated dataset to test the classifier? Use the concepts of _overfitting_ and _generalization_ in your explanation.
 

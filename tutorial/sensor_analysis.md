@@ -49,7 +49,7 @@ Plot the data for the first trial, 130th channe
 Which channel is the 130th channel?
 {% include markup/end %}
 
-Time point 0 in all trials corresponds to the onset of the visual stimulation. Trials end when the visual stimulus changed its speed, which is when the subject had to move their wrist (so the data for the actual movement is not in the trials). The visual stimulus speed change happened at an unpredictable time after t=0, so not all trials are the same length. To see this, plot some trials like thi
+Time point 0 in all trials corresponds to the onset of the visual stimulation. Trials end when the visual stimulus changed its speed, which is when the subject had to move their wrist (so the data for the actual movement is not in the trials). The visual stimulus speed change happened at an unpredictable time after t=0, so not all trials are the same length. To see this, plot some trials like this:
 
     for k = 1:10
     plot(data_left.time{k}, data_left.trial{k}(130,:)+k*1.5e-12);
@@ -83,7 +83,7 @@ Next, proceed to compute the ER
 
 ### Plotting the results
 
-FieldTrip provides several options for visualizing the results of event-related analyses: **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)** (see the [plotting tutorial](/tutorial/plotting) for an extensive introduction to your plotting options). In most cases, **[ft_multiplotER](/reference/ft_multiplotER)** is the most convenient start, as it provides easy access to the other two visualization methods through the graphical user interface. Call it like thi
+FieldTrip provides several options for visualizing the results of event-related analyses: **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)** (see the [plotting tutorial](/tutorial/plotting) for an extensive introduction to your plotting options). In most cases, **[ft_multiplotER](/reference/ft_multiplotER)** is the most convenient start, as it provides easy access to the other two visualization methods through the graphical user interface. Call it like this:
 
     cfg                 = [];
     cfg.showlabels      = 'yes';
@@ -91,7 +91,7 @@ FieldTrip provides several options for visualizing the results of event-related 
     cfg.layout          = 'CTF151_helmet.mat';
     ft_multiplotER(cfg, tl);
 
-Note that we request channel labels and head outline showing, and with a particular template layout corresponding to our MEG acquisition system. The output should look like thi
+Note that we request channel labels and head outline showing, and with a particular template layout corresponding to our MEG acquisition system. The output should look like this:
 
 {% include image src="/assets/img/tutorial/sensor_analysis/multiploter.png" %}
 
@@ -176,20 +176,20 @@ Calculating time-frequency representations of power is done using a sliding time
 _Figure 6: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases._
 
 If you want to know more about tapers/ window functions you can have a look at this
-[wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for Hanning window used in this tutorial. There is also a wikipedia site about multitapers, to take a look at it click [here](http://en.wikipedia.org/wiki/Multitaper).
+[Wikipedia page](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for Hanning window used in this tutorial. There is also a Wikipedia site about multitapers, to take a look at it click [here](http://en.wikipedia.org/wiki/Multitaper).
 
 ### Time-frequency representations using Hanning tapers
 
 We will here describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window.
 
-To compute our time-frequency representation (TFR), we will first subselect a piece of our trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**. This is done to increase the speed at which the subsequenc analysis will run. We need a part of the baseline interval, and a part of the stimulation interval, so we choose the interval from -0.8s to 1
+To compute our time-frequency representation (TFR), we will first subselect a piece of our trials using **[ft_redefinetrial](/reference/ft_redefinetrial)**. This is done to increase the speed at which the subsequent analysis will run. We need a part of the baseline interval and a part of the stimulation interval, so we choose the interval from -0.8s to 1.0s
 
     cfg                 = [];
     cfg.toilim          = [-0.8 1];
     cfg.minlength       = 'maxperlen'; % this ensures all resulting trials are equal length
     data_small          = ft_redefinetrial(cfg, data_planar);
 
-The structure data_small contains less trials than the original data, because we want trials that last until at least 1s after stimulus onset. Recall that not all trials last that long, because the visual stimulus speed change might have happened before t=1s already. Note that we are again using the planar gradient data, in order to make interpreting the results easier. Now we move on to using **[ft_freqanalysis](/reference/ft_freqanalysis)** to compute our TFR using a 0.2s window siz
+The structure data_small contains less trials than the original data, because we want trials that last until at least 1s after stimulus onset. Recall that not all trials last that long, because the visual stimulus speed change might have happened before t=1s already. Note that we are again using the planar gradient data, in order to make interpreting the results easier. Now we move on to using **[ft_freqanalysis](/reference/ft_freqanalysis)** to compute our TFR using a 0.2s window size:
 
     cfg                 = [];
     cfg.method          = 'mtmconvol';

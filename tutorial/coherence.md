@@ -133,7 +133,7 @@ After the computation of the frequency domain representation **[ft_connectivitya
 
 In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the fourier spectra, which is the 'bare' frequency domain representation of the signal, where both amplitude and phase information of the oscillations are represented in a complex number for each frequency.
 
-First, a configuration structure (cfg) must be defined. The FFT-algorithm will be used to compute the fourier representation of each signal. To optimize the estimation, spectral smoothing using ‘multitapers’ will be applied. In this context, the degree of ‘smoothing’ (as defined in the parameter cfg.tapsmofrq) is critical. We will return to this parameter later.
+First, a configuration structure (cfg) must be defined. The FFT-algorithm will be used to compute the Fourier representation of each signal. To optimize the estimation, spectral smoothing using ‘multitapers’ will be applied. In this context, the degree of ‘smoothing’ (as defined in the parameter cfg.tapsmofrq) is critical. We will return to this parameter later.
 
     cfg            = [];
     cfg.output     = 'fourier';

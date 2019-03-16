@@ -55,7 +55,7 @@ In some cases, FieldTrip is working together with external toolboxes or programs
 
 ### Using the toolbox and MATLAB
 
-Each FieldTrip function implements a specific algorithm, for which specific parameters can be specified. These parameters on how the function behaves is passed as a configuration structure. Where applicable, the configuration parameters will have sensible defaults. The most convenient way of specifying the configuration is by typing it into a script in the MATLAB editor and copy-and-pasting that into the MATLAB command-line window. The configuration for **[ft_definetrial](/reference/ft_definetrial)** (for ctf data that is recorded in epochs) might look like thi
+Each FieldTrip function implements a specific algorithm, for which specific parameters can be specified. These parameters on how the function behaves is passed as a configuration structure. Where applicable, the configuration parameters will have sensible defaults. The most convenient way of specifying the configuration is by typing it into a script in the MATLAB editor and copy-and-pasting that into the MATLAB command-line window. The configuration for **[ft_definetrial](/reference/ft_definetrial)** (for ctf data that is recorded in epochs) might look like this:
 
     cfg1                         = [];
     cfg1.dataset                 = 'Subject01.ds';

@@ -23,7 +23,7 @@ The best way to get started with incorporating the FieldTrip buffer in your own 
 
 ### The buffer will be attached to your local application
 
-Your application is responsible for starting up the tcpserver. The tcpserver is a multithreaded function, which will spawn a separate tcpsocket thread for every incoming connection. The tcpsocket thread reads a request from the network, processes the request, and returns a response. Possible requests that the buffer can process are PUT_HDR, PUT_DAT, PUT_EVT, GET_HRD, GET_DAT, GET_EVT, FLUSH_HDR, FLUSH_DAT, FLUSH_EVT. The tcpserver is instantiated using the following pseudo-cod
+Your application is responsible for starting up the tcpserver. The tcpserver is a multithreaded function, which will spawn a separate tcpsocket thread for every incoming connection. The tcpsocket thread reads a request from the network, processes the request, and returns a response. Possible requests that the buffer can process are PUT_HDR, PUT_DAT, PUT_EVT, GET_HRD, GET_DAT, GET_EVT, FLUSH_HDR, FLUSH_DAT, FLUSH_EVT. The tcpserver is instantiated using the following pseudo-code:
 
     ... start the multithreading...
     tcpserver((void *)(&host));
@@ -35,7 +35,7 @@ or alternatively you can start the tcpserver in its own thread like this
 
 A real example for starting the tcpserver can be found in the code in buffer/test/demo_buffer.c (only the buffer) or in buffer/test/demo_combined.c (which starts the tcpserver and subsequently writes simulated data to it).
 
-After starting the tcpserver, your application can start writing to the buffer. The writing to the buffer should be done like in this pseudo cod
+After starting the tcpserver, your application can start writing to the buffer. The writing to the buffer should be done like in this pseudo code:
 
     ... construct a PUT_HDR request ...
     connection = open_connection(hostname, port);
@@ -49,7 +49,7 @@ After starting the tcpserver, your application can start writing to the buffer. 
     close_connection(connection);
     end
 
-In the example above, the network transparent communication is kept stateless. It is also possible to keep the connection open for multiple subsequent requests, like thi
+In the example above, the network transparent communication is kept stateless. It is also possible to keep the connection open for multiple subsequent requests, like this:
 
     connection = open_connection(hostname, port);
     ... construct a PUT_HDR request ...
