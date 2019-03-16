@@ -39,9 +39,9 @@ FIC, FC, and IC, using the average activity in the 0.5-0.7 s post-stimulus inter
 
 After this, we will focus on two out of the three classes, namely FIC vs FC, and we will investigate the following questions:
 
-* At *what times* ('when') in a trial can one discriminate between FIC and FC?
-* At *which sensor locations* ('where') can one discriminate between FIC and FC?
-* Which representations that discriminate between FIC and FC [*generalize across time*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)?
+- At _what times_ ('when') in a trial can one discriminate between FIC and FC?
+- At _which sensor locations_ ('where') can one discriminate between FIC and FC?
+- Which representations that discriminate between FIC and FC [_generalize across time_](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)?
 
 Note that the classification is performed for a single subject using single trials.
 
@@ -67,15 +67,15 @@ Define the configuration struct
 Let us unpack this:
 
 - `cfg.mvpa.classifier` indicates which classifier we want to use. Here, we use multi-class Linear Discriminant Analysis (LDA).  [Click here](https://github.com/treder/MVPA-Light#classifiers-for-two-classes) for a full list of available classifiers.
-- `cfg.metric` indicates the metric we use to measure classifier performance. Here, *classification accuracy* is used. Other metrics such as AUC and F1-score are available. [Click here](https://github.com/treder/MVPA-Light#classifier-performance-metrics) for a full list of available metrics.
+- `cfg.metric` indicates the metric we use to measure classifier performance. Here, _classification accuracy_ is used. Other metrics such as AUC and F1-score are available. [Click here](https://github.com/treder/MVPA-Light#classifier-performance-metrics) for a full list of available metrics.
 - `cfg.mvpa.k` specifies the number of folds used to calculate the cross-validated performance. Cross-validation is explained in more detail in the next section.
 - `cfg.latency` restricts the classification analysis to a specific time window (here 0.5-0.7s).
-- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section *Classification across time*).
-- `cfg.design` specifies the vector of *class labels*. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with *1*'s for the trials belonging to class 1, *2*'s for trials
+- `cfg.avgovertime` specifies whether the activity in latency window should be averaged prior to classification. If `'no'`, a separate classification is performed for every time point (see section _Classification across time_).
+- `cfg.design` specifies the vector of _class labels_. Class labels indicate which class (or experimental condition) trials belong to. The task of the classifier is to predict these class labels given the data. To this end, we create a vector with _1_'s for the trials belonging to class 1, _2_'s for trials
 belonging to class 2, and so on. The [MEG-language dataset](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip),
 comprises three classes, namely FIC (class 1), FC (class 2), and IC (class 3). You can also use
 a different set of numbers (e.g. trigger codes) to denote the classes. MVPA-Light then
-internally translates them into *1*'s, *2*'s and *3*'s.
+internally translates them into _1_'s, _2_'s and _3_'s.
 
 Now call
 
@@ -137,7 +137,7 @@ useful to repeat the cross-validation multiple times?
 
 ## Classification across time ('when')
 
-Many neuroimaging datasets have a 3-D structure (trials x channels x time). Classification across time can help identify the time points in a trial *when* discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
+Many neuroimaging datasets have a 3-D structure (trials x channels x time). Classification across time can help identify the time points in a trial _when_ discriminative information shows up. To this end, classification is performed for each time point separately. First, we need to make sure that the time dimension is not averaged out. We can set `cfg.avgovertime = 'no'`, but since the default value is `'no'` we can simply omit this parameter.
 
     cfg = [] ;  
     cfg.method           = 'mvpa';
@@ -192,7 +192,7 @@ Which channels contribute most to classification performance? The answer to this
     cfg.avgovertime = 'yes';
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-Since we did not specify a classifier and a metric, the default values (LDA as classifier and classification accuracy as metric) are used. In searchlight analysis, the *time points* in a trial are used as
+Since we did not specify a classifier and a metric, the default values (LDA as classifier and classification accuracy as metric) are used. In searchlight analysis, the _time points_ in a trial are used as
 features, for each channel separately. Set `cfg.latency` to restrict the analysis to
 a specific time window. Set `cfg.avgovertime='yes'` if you prefer to average the values in the time window to a single feature.
 
@@ -325,7 +325,7 @@ TODO
 ## Summary
 
 In this tutorial, classification across time, searchlight analysis, and time generalization
-(time x time classification) were used to pinpoint *where* and *when* there is discriminative
+(time x time classification) were used to pinpoint _where_ and _when_ there is discriminative
 information within MEG trials. It is worth stressing that searchlight analysis and classification across time yield complementary information: in searchlight analysis,
 the time points serve as features and classification is performed for each channel separately.
 In classification across time, the channels serve as features and classification is performed for each time point separately.
