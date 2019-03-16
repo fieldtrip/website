@@ -41,7 +41,7 @@ After this, we will focus on two out of the three classes, namely FIC vs FC, and
 
 * At *what times* ('when') in a trial can one discriminate between FIC and FC?
 * At *which sensor locations* ('where') can one discriminate between FIC and FC?
-* Which representations that discriminate between FIC and FC [*generalise across time*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)?
+* Which representations that discriminate between FIC and FC [*generalize across time*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)?
 
 Note that the classification is performed for a single subject using single trials.
 
@@ -182,7 +182,7 @@ classifier, use kernel FDA. As metric, use classification accuracy.
 
 ## Searchlight analysis ('where')
 
-Which channels contribute most to classification performance? The answer to this question can be used to better interpret the data or to perform feature selection. To this end, we will perform classification for each feature separately. The result of the searchlight analysis is a classification performance measure for each channel.
+Which channels contribute most to classification performance? The answer to this question can be used to better interpret the data or to perform feature selection. To this end, we will perform a separate classification analysis for each channel.
 
     cfg = [] ;  
     cfg.method      = 'mvpa';
@@ -192,8 +192,7 @@ Which channels contribute most to classification performance? The answer to this
     cfg.avgovertime = 'yes';
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
-Since we did not specify a classifier and a metric, the default values (LDA as classifier and classification accuracy as metric)
-are used. In searchlight analysis, the *time points* in a trial are used as
+Since we did not specify a classifier and a metric, the default values (LDA as classifier and classification accuracy as metric) are used. In searchlight analysis, the *time points* in a trial are used as
 features, for each channel separately. Set `cfg.latency` to restrict the analysis to
 a specific time window. Set `cfg.avgovertime='yes'` if you prefer to average the values in the time window to a single feature.
 
@@ -210,9 +209,9 @@ We call `ft_topoplotER` to do the plotting.
 
 {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo1.png" width="200" %}
 
-In the previous analysis, classification has been performed for each channel individually.
-However, since the MEG channels have a spatial structure,
-one can also consider groups of neighbouring channels in the searchlight. To build the neighbourhood
+In the previous analysis, classification has been performed for each channel separately.
+However, the spatial arrangement of MEG channels can be exploited in order to
+ group neighbouring channels as features in the searchlight. To build the neighbourhood
 structure, we use
 [`ft_prepare_neighbours`](http://www.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work/):
 
@@ -222,7 +221,7 @@ structure, we use
     cfg.channel     = dataFC_LP.label;
     neighbours = ft_prepare_neighbours(cfg);
 
-We are now ready to re-run the searchlight analysis. Pass the neighbourhood structure
+We are now ready to re-run the searchlight analysis. We can pass the neighbourhood structure
 via the parameter `cfg.mvpa.neighbours`.
 
       cfg = [] ;  
@@ -237,7 +236,7 @@ via the parameter `cfg.mvpa.neighbours`.
       stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP)
 
 
-Call `ft_topoplotER` again to plot the result as a topography.
+Call `ft_topoplotER` to plot the result as a topography.
 
       cfg              = [];
       cfg.parameter    = 'accuracy';
@@ -251,9 +250,10 @@ As expected, the resultant topography is slightly more smeared out. Peak classif
       {% include image src="/assets/img/tutorial/mvpa_light/searchlight_topo2.png" width="200" %}
 
 
-## Time generalisation (time x time classification)
+## Time generalization (time x time classification)
 
-Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalisation, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). To perform
+Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every
+possible training time point. To perform
 time x time classification, we only need to set the `cfg.timextime` parameter:
 
 
@@ -264,14 +264,14 @@ time x time classification, we only need to set the `cfg.timextime` parameter:
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
 
-It returns a 2-D matrix of classification performance, with performance calculated for each combination of training time point and testing time point. We plot the
+It returns a 2-D matrix of classification performances, with performance calculated for each combination of training time point and testing time point. We plot the
 result using [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m). As parameters, we pass the classification result and an additional parameter specifying the time axis.
 
     mv_plot_result(stat.mvpa, dataFC_LP.time{1})
 
 In the resultant plot, each row (corresponding to a value of on the y-axis)  corresponds to the
 time point at which the classifier was trained. Each point on the x-axis corresponds
-to a time point at which the respective classifier was tested. Clearly, the classifier attains peak performance roughly in the 0.45-0.65s period.
+to a time point at which the respective classifier was tested. The classifier attains peak performance roughly in the 0.45-0.65s period.
 
 
 {% include image src="/assets/img/tutorial/mvpa_light/timextime.png" width="300" %}
@@ -324,7 +324,7 @@ TODO
 
 ## Summary
 
-In this tutorial, classification across time, searchlight analysis, and time generalisation
+In this tutorial, classification across time, searchlight analysis, and time generalization
 (time x time classification) were used to pinpoint *where* and *when* there is discriminative
 information within MEG trials. It is worth stressing that searchlight analysis and classification across time yield complementary information: in searchlight analysis,
 the time points serve as features and classification is performed for each channel separately.
