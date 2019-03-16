@@ -1,6 +1,0 @@
-- name:  The correct pipeline order for combining planar MEG channels
-  link:  /example/combineplanar_pipelineorder
-
-- name:  Find the orientation of planar gradiometers
-  link:  /example/planar_orientation
-
