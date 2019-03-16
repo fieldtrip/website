@@ -1,5 +1,6 @@
 ---
 title: ft_preproc_baselinecorrect
+layout: default
 tags: 
 ---
 ```

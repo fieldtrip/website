@@ -1,5 +1,6 @@
 ---
 title: ft_realtime_headlocalizer
+layout: default
 tags: 
 ---
 ```

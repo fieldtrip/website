@@ -1,5 +1,6 @@
 ---
 title: ft_volumebiascorrect
+layout: default
 tags: 
 ---
 ```
@@ -7,8 +8,8 @@ tags:
 
  Use as
    mri_unbias = ft_volumebiascorrect(cfg, mri)
- where the input mri should be a single anatomical volume that was for example read with
- FT_READ_MRI. 
+ where the input mri should be a single anatomical volume organised in a structure
+ as obtained from the FT_READ_MRI function
 
  The configuration structure can contain
    cfg.spmversion     = string, 'spm8', 'spm12' (default = 'spm8')

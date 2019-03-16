@@ -1,5 +1,6 @@
 ---
 title: nmt_repos
+layout: default
 tags: 
 ---
 ```

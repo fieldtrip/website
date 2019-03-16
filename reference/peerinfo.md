@@ -1,5 +1,6 @@
 ---
 title: peerinfo
+layout: default
 tags: 
 ---
 ```

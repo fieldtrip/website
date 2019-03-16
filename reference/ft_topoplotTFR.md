@@ -1,5 +1,6 @@
 ---
 title: ft_topoplotTFR
+layout: default
 tags: 
 ---
 ```
@@ -114,6 +115,7 @@ tags:
  of the subplots, you should create your own layout file.
 
  To facilitate data-handling and distributed computing you can use
+   cfg.inputfile   =  ...
    cfg.inputfile   =  ...
  If you specify this option the input data will be read from a *.mat
  file on disk. This mat files should contain only a single variable named 'data',

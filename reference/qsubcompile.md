@@ -1,5 +1,6 @@
 ---
 title: qsubcompile
+layout: default
 tags: 
 ---
 ```

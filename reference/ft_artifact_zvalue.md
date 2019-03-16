@@ -1,5 +1,6 @@
 ---
 title: ft_artifact_zvalue
+layout: default
 tags: 
 ---
 ```
@@ -40,12 +41,12 @@ tags:
    cfg.artfctdef.zvalue.artfctpeak  = 'yes' or 'no'
    cfg.artfctdef.zvalue.interactive = 'yes' or 'no'
 
- If you specify artfctpeak='yes', the maximum value of the artifact within its range
- will be found and saved into cfg.artfctdef.zvalue.peaks.
+ If you specify cfg.artfctdef.zvalue.artfctpeak='yes', the maximum value of the
+ artifact within its range will be found and saved into cfg.artfctdef.zvalue.peaks.
 
- If you specify interactive='yes', a GUI will be started and you can manually
- accept/reject detected artifacts, and/or change the threshold. To control the
- graphical interface via keyboard, use the following keys:
+ If you specify cfg.artfctdef.zvalue.interactive='yes', a GUI will be started and
+ you can manually accept/reject detected artifacts, and/or change the threshold. To
+ control the graphical interface via keyboard, use the following keys:
 
      q                 : Stop
 

@@ -1,5 +1,6 @@
 ---
 title: ft_spiketriggeredspectrum_convol
+layout: default
 tags: 
 ---
 ```

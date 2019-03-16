@@ -1,10 +1,11 @@
 ---
 title: ft_spikesimulation
+layout: default
 tags: 
 ---
 ```
- FT_SPIKESIMULATION simulates a spiketrain with a structures timing of the
- neuronal firing.
+ FT_SPIKESIMULATION simulates a spiketrain with a structured timing in the neuronal
+ firing.
 
  Use as
    data = ft_spikesimulation(cfg)

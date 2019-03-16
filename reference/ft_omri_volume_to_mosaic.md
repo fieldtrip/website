@@ -1,5 +1,6 @@
 ---
 title: ft_omri_volume_to_mosaic
+layout: default
 tags: 
 ---
 ```

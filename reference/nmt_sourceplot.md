@@ -1,5 +1,6 @@
 ---
 title: nmt_sourceplot
+layout: default
 tags: 
 ---
 ```

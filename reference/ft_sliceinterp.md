@@ -1,5 +1,6 @@
 ---
 title: ft_sliceinterp
+layout: default
 tags: 
 ---
 ```

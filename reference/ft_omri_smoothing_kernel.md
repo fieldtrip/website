@@ -1,5 +1,6 @@
 ---
 title: ft_omri_smoothing_kernel
+layout: default
 tags: 
 ---
 ```

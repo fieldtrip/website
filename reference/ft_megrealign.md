@@ -1,5 +1,6 @@
 ---
 title: ft_megrealign
+layout: default
 tags: 
 ---
 ```
@@ -31,7 +32,8 @@ tags:
    cfg.headmodel   = structure, see FT_PREPARE_HEADMODEL
 
  A source model (i.e. a superficial layer with distributed sources) can be
- constructed from a headshape file, or from the volume conduction model
+ constructed from a headshape file, or from inner surface of the volume conduction
+ model using FT_PREPARE_SOIURCEMODEL using the following options
    cfg.spheremesh  = number of dipoles in the source layer (default = 642)
    cfg.inwardshift = depth of the source layer relative to the headshape
                      surface or volume conduction model (no default

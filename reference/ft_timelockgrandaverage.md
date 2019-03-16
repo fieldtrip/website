@@ -1,5 +1,6 @@
 ---
 title: ft_timelockgrandaverage
+layout: default
 tags: 
 ---
 ```

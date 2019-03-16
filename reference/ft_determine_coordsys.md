@@ -1,5 +1,6 @@
 ---
 title: ft_determine_coordsys
+layout: default
 tags: 
 ---
 ```
@@ -31,5 +32,5 @@ tags:
  Recognized and supported coordinate systems include: ctf, 4d, bti, itab,
  neuromag, spm, mni, tal, acpc, als, ras, paxinos.
 
- See also FT_VOLUMEREALIGN, FT_VOLUMERESLICE
+ See also FT_VOLUMEREALIGN, FT_VOLUMERESLICE, FT_PLOT_ORTHO, FT_PLOT_AXES
 ```

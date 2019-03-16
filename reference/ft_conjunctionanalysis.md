@@ -1,5 +1,6 @@
 ---
 title: ft_conjunctionanalysis
+layout: default
 tags: 
 ---
 ```

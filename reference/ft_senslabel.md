@@ -1,5 +1,6 @@
 ---
 title: ft_senslabel
+layout: default
 tags: 
 ---
 ```

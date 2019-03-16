@@ -1,5 +1,6 @@
 ---
 title: ft_qualitycheck
+layout: default
 tags: 
 ---
 ```

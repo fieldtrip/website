@@ -1,5 +1,6 @@
 ---
 title: ft_hash
+layout: default
 tags: 
 ---
 ```

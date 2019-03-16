@@ -1,5 +1,6 @@
 ---
 title: ft_specest_wavelet
+layout: default
 tags: 
 ---
 ```

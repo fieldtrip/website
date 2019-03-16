@@ -1,5 +1,6 @@
 ---
 title: ft_compute_leadfield
+layout: default
 tags: 
 ---
 ```
@@ -12,7 +13,7 @@ tags:
  Use as
    [lf] = ft_compute_leadfield(dippos, sens, headmodel, ...)
  with input arguments
-   dippos       = position dipole (1*3 or Ndip*3)
+   dippos    = position dipole (1*3 or Ndip*3)
    sens      = structure with gradiometer or electrode definition
    headmodel = structure with volume conductor definition
 
@@ -48,16 +49,19 @@ tags:
  electrodes.
 
  The supported forward solutions for MEG are
+   infinite homogenous medium
    single sphere (Cuffin and Cohen, 1977)
    multiple spheres with one sphere per channel (Huang et al, 1999)
    realistic single shell using superposition of basis functions (Nolte, 2003)
-   leadfield interpolation using a precomputed grid
+   leadfield interpolation using a precomputed sourcemodel
    boundary element method (BEM)
 
  The supported forward solutions for EEG are
+   infinite homogenous medium
+   infinite halfspace homogenous medium
    single sphere
    multiple concentric spheres (up to 4 spheres)
-   leadfield interpolation using a precomputed grid
+   leadfield interpolation using a precomputed sourcemodel
    boundary element method (BEM)
 
  See also FT_PREPARE_VOL_SENS, FT_HEADMODEL_ASA, FT_HEADMODEL_BEMCP,

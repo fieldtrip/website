@@ -1,5 +1,6 @@
 ---
 title: ft_uilayout
+layout: default
 tags: 
 ---
 ```

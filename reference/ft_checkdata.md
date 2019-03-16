@@ -1,5 +1,6 @@
 ---
 title: ft_checkdata
+layout: default
 tags: 
 ---
 ```
@@ -26,6 +27,8 @@ tags:
    isnirs             = yes, no
    hasunit            = yes, no
    hascoordsys        = yes, no
+   haschantype        = yes, no
+   haschanunit        = yes, no
    hassampleinfo      = yes, no, ifmakessense (applies to raw and timelock data)
    hascumtapcnt       = yes, no (only applies to freq data)
    hasdim             = yes, no
