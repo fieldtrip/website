@@ -1,5 +1,6 @@
 ---
 title: residualvariance
+layout: default
 tags: 
 ---
 ```

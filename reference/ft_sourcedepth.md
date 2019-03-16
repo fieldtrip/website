@@ -1,5 +1,6 @@
 ---
 title: ft_sourcedepth
+layout: default
 tags: 
 ---
 ```
@@ -15,5 +16,5 @@ tags:
  A negative depth indicates that the source is inside the source
  compartment, positive indicates outside.
 
- See also FIND_INSIDE_VOL
+ See also FT_INSIDE_HEADMODEL
 ```

@@ -1,5 +1,6 @@
 ---
 title: ft_warp_error
+layout: default
 tags: 
 ---
 ```

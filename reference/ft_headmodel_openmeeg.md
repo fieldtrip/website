@@ -1,5 +1,6 @@
 ---
 title: ft_headmodel_openmeeg
+layout: default
 tags: 
 ---
 ```

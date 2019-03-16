@@ -1,12 +1,13 @@
 ---
 title: ft_spike_xcorr
+layout: default
 tags: 
 ---
 ```
  FT_SPIKE_XCORR computes the cross-correlation histogram and shift predictor.
 
  Use as
-   [stat] = ft_spike_xcorr(cfg,data)
+   [stat] = ft_spike_xcorr(cfg, data)
 
  The input SPIKE should be organised as the spike or the raw datatype, obtained from
  FT_SPIKE_MAKETRIALS or FT_PREPROCESSING (in that case, conversion is done
@@ -18,7 +19,7 @@ tags:
                           cross-correlation function in sec (default = 0.1 sec).
    cfg.debias           = 'yes' (default) or 'no'. If 'yes', we scale the
                           cross-correlogram by M/(M-abs(lags)), where M = 2*N -1 with N
-                          the length of the data segment. 
+                          the length of the data segment.
    cfg.method           = 'xcorr' or 'shiftpredictor'. If 'shiftpredictor'
                            we do not compute the normal cross-correlation
                            but shuffle the subsequent trials.
@@ -46,28 +47,25 @@ tags:
    cfg.trials           = numeric selection of trials (default = 'all')
    cfg.keeptrials       = 'yes' or 'no' (default)
 
- A peak at a negative lag for stat.xcorr(chan1,chan2,:) means that chan1 is
- leading chan2. Thus, a negative lag represents a spike in the second
- dimension of stat.xcorr before the channel in the third dimension of
- stat.stat.
+ A peak at a negative lag for stat.xcorr(chan1,chan2,:) means that chan1 is leading
+ chan2. Thus, a negative lag represents a spike in the second dimension of
+ stat.xcorr before the channel in the third dimension of stat.stat.
 
- Variable trial length is controlled by the option cfg.vartriallen. If
- cfg.vartriallen = 'yes', all trials are selected that have a minimum
- overlap with the latency window of cfg.maxlag. However, the shift
- predictor calculation demands that following trials have the same amount
- of data, otherwise, it does not control for rate non-stationarities. If
- cfg.vartriallen = 'yes', all trials should fall in the latency window,
- otherwise we do not compute the shift predictor.
+ Variable trial length is controlled by the option cfg.vartriallen. If it is
+ specified as cfg.vartriallen='yes', all trials are selected that have a minimum
+ overlap with the latency window of cfg.maxlag. However, the shift predictor
+ calculation demands that following trials have the same amount of data, otherwise,
+ it does not control for rate non-stationarities. If cfg.vartriallen = 'yes', all
+ trials should fall in the latency window, otherwise we do not compute the shift
+ predictor.
 
  Output:
-    stat.xcorr            = nchans-by-nchans-by-(2*nlags+1) cross correlation histogram
-   or 
-    stat.shiftpredictor   = nchans-by-nchans-by-(2*nlags+1) shift predictor.
-  both with dimord 'chan_chan_time'
+    stat.xcorr            = nchans-by-nchans-by-(2*nlags+1) cross correlation histogram with dimord 'chan_chan_time'
+   or
+    stat.shiftpredictor   = nchans-by-nchans-by-(2*nlags+1) shift predictor with dimord 'chan_chan_time'
+ and
     stat.lags             = (2*nlags + 1) vector with lags in seconds.
-
-    stat.trial            = ntrials-by-nchans-by-nchans-by-(2*nlags + 1) with single
-                            trials and dimord 'rpt_chan_chan_time';
+    stat.trial            = ntrials-by-nchans-by-nchans-by-(2*nlags + 1) with single trials and dimord 'rpt_chan_chan_time'
     stat.label            = corresponding labels to channels in stat.xcorr
-    stat.cfg              = configurations used in this function.
+    stat.cfg              = configurations used in this function
 ```

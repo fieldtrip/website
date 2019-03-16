@@ -1,5 +1,6 @@
 ---
 title: ft_trialfun_brainvision_segmented
+layout: default
 tags: 
 ---
 ```

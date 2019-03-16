@@ -1,5 +1,6 @@
 ---
 title: ft_freqsimulation
+layout: default
 tags: 
 ---
 ```

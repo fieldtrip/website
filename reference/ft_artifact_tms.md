@@ -1,5 +1,6 @@
 ---
 title: ft_artifact_tms
+layout: default
 tags: 
 ---
 ```
@@ -22,35 +23,31 @@ tags:
  where the input data is a structure as obtained from FT_PREPROCESSING.
 
  In both cases the configuration should also contain
-   cfg.trl         = structure that defines the data segments of interest. See FT_DEFINETRIAL
-   cfg.continuous  = 'yes' or 'no' whether the file contains continuous data (default   = 'yes')
+   cfg.trl         = structure that defines the data segments of interest, see FT_DEFINETRIAL
+   cfg.continuous  = 'yes' or 'no' whether the file contains continuous data (default = 'yes')
  and
    cfg.method      = 'detect' or 'marker', see below.
-                     markers written in the EEG.
-   cfg.prestim     = scalar, time in seconds prior to onset of detected
-                     event to mark as artifactual (default = 0.005 seconds)
-   cfg.poststim    = scalar, time in seconds post onset of detected even to
-                     mark as artifactual (default = 0.010 seconds)
+   cfg.prestim     = scalar, time in seconds prior to onset of detected event to mark as artifactual (default = 0.005 seconds)
+   cfg.poststim    = scalar, time in seconds post onset of detected even to mark as artifactual (default = 0.010 seconds)
 
- METHOD SPECIFIC OPTIONS AND DESCRIPTIONS
+ The different methods are described in detail below.
 
- With cfg.method='detect', TMS-artifacts are detected by preprocessing the data to be
- sensitive to transient high gradients, typical for TMS-pulses.  The data is preprocessed
- (again) with the following configuration parameters, which are optimal for identifying tms
- artifacts. This acts as a wrapper around ft_artifact_zvalue
+ With cfg.method='detect', TMS-artifact are detected on basis of transient
+ high-amplidude gradients that are typical for TMS-pulses. The data is preprocessed
+ (again) with the following settings, which are optimal for identifying TMS-pulses.
+ Artifacts are identified by means of thresholding the z-transformed value of the
+ preprocessed data. This method acts as a wrapper around FT_ARTIFACT_ZVALUE.
    cfg.artfctdef.tms.derivative  = 'yes'
- Artifacts are identified by means of thresholding the z-transformed value
- of the preprocessed data.
    cfg.artfctdef.tms.channel     = Nx1 cell-array with selection of channels, see FT_CHANNELSELECTION for details
    cfg.artfctdef.tms.cutoff      = z-value at which to threshold (default = 4)
    cfg.artfctdef.tms.trlpadding  = 0.1
    cfg.artfctdef.tms.fltpadding  = 0.1
-   cfg.artfctdef.tms.artpadding  = 0.01 
+   cfg.artfctdef.tms.artpadding  = 0.01
  Be aware that if one artifact falls within this specified range of another artifact, both
  artifact will be counted as one. Depending on cfg.prestim and cfg.poststim you may not mark
- enough data as artifactual.)
+ enough data as artifactual.
 
- With cfg.method='marker', TMS-artifact onset and offsets are based on markers/triggers that
+ With cfg.method='marker', TMS-artifact onsets and offsets are based on markers/triggers that
  are written into the EEG dataset. This method acts as a wrapper around FT_DEFINETRIAL to
  determine on- and offsets of TMS pulses by reading markers in the EEG.
    cfg.trialfun            = function name, see below (default = 'ft_trialfun_general')

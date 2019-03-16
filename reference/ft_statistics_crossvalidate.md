@@ -1,5 +1,6 @@
 ---
 title: ft_statistics_crossvalidate
+layout: default
 tags: 
 ---
 ```

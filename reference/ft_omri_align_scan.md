@@ -1,5 +1,6 @@
 ---
 title: ft_omri_align_scan
+layout: default
 tags: 
 ---
 ```

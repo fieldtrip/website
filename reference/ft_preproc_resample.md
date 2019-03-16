@@ -1,5 +1,6 @@
 ---
 title: ft_preproc_resample
+layout: default
 tags: 
 ---
 ```

@@ -1,5 +1,6 @@
 ---
 title: ft_connectivity_csd2transfer
+layout: default
 tags: 
 ---
 ```

@@ -1,5 +1,6 @@
 ---
 title: ft_spike_plot_psth
+layout: default
 tags: 
 ---
 ```

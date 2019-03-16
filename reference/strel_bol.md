@@ -1,5 +1,6 @@
 ---
 title: strel_bol
+layout: default
 tags: 
 ---
 ```

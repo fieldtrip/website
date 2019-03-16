@@ -1,5 +1,6 @@
 ---
 title: ft_trialfun_edf
+layout: default
 tags: 
 ---
 ```

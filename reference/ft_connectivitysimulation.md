@@ -1,9 +1,10 @@
 ---
 title: ft_connectivitysimulation
+layout: default
 tags: 
 ---
 ```
- FT_CONNECTIVITYSIMULATION simulates channel-level time series data with a
+ FT_CONNECTIVITYSIMULATION simulates channel-level time-series data with a
  specified connectivity structure. This function returns an output data
  structure that resembles the output of FT_PREPROCESSING.
 

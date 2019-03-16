@@ -1,5 +1,6 @@
 ---
 title: ft_write_sens
+layout: default
 tags: 
 ---
 ```

@@ -1,5 +1,6 @@
 ---
 title: ft_notice
+layout: default
 tags: 
 ---
 ```

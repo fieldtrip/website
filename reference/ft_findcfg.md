@@ -1,5 +1,6 @@
 ---
 title: ft_findcfg
+layout: default
 tags: 
 ---
 ```

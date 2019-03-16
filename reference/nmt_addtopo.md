@@ -1,5 +1,6 @@
 ---
 title: nmt_addtopo
+layout: default
 tags: 
 ---
 ```

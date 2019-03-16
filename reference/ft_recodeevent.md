@@ -1,5 +1,6 @@
 ---
 title: ft_recodeevent
+layout: default
 tags: 
 ---
 ```

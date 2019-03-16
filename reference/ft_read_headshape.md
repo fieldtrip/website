@@ -1,5 +1,6 @@
 ---
 title: ft_read_headshape
+layout: default
 tags: 
 ---
 ```
@@ -29,6 +30,7 @@ tags:
    'unit'        = string, e.g. 'mm' (default is the native units of the file)
    'concatenate' = 'no' or 'yes' (default = 'yes')
    'image'       = path to .jpg file
+   'surface'     = specific surface to be read (only for caret spec files)
 
  Supported input file formats include
    'matlab'       containing FieldTrip or BrainStorm headshapes or cortical meshes
@@ -59,5 +61,5 @@ tags:
    'brainvisa_mesh'
    'brainsuite_dfs'
 
- See also FT_READ_VOL, FT_READ_SENS, FT_READ_ATLAS, FT_WRITE_HEADSHAPE
+ See also FT_READ_HEADMODEL, FT_READ_SENS, FT_READ_ATLAS, FT_WRITE_HEADSHAPE
 ```

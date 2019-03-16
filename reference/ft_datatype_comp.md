@@ -1,11 +1,12 @@
 ---
 title: ft_datatype_comp
+layout: default
 tags: 
 ---
 ```
  FT_DATATYPE_COMP describes the FieldTrip MATLAB structure for comp data
 
- The comp data structure represents time series channel-level data that has
+ The comp data structure represents time-series channel-level data that has
  been decomposed or unmixed from the channel level into its components or
  "blind sources", for example using ICA (independent component analysis) or
  PCA. This data structure is usually generated with the FT_COMPONENTANALYSIS

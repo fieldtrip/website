@@ -1,5 +1,6 @@
 ---
 title: ft_plot_mesh
+layout: default
 tags: 
 ---
 ```
@@ -39,5 +40,11 @@ tags:
    ft_plot_mesh(mesh, 'facecolor', 'skin', 'edgecolor', 'none')
    camlight
 
- See also FT_PLOT_HEADSHAPE, FT_PLOT_VOL, TRIMESH, PATCH
+ You can plot an additional contour around specified areas using
+   'contour'           = inside of contour per vertex, either 0 or 1
+   'contourcolor'      = string, color specification
+   'contourlinestyle'  = string, line specification 
+   'contourlinewidth'  = number
+
+ See also FT_PLOT_HEADSHAPE, FT_PLOT_HEADMODEL, TRIMESH, PATCH
 ```
