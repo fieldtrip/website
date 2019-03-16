@@ -1,6 +1,5 @@
-cfg.headmodel---
+---
 title: Integration with NUTMEG
-
 ---
 
 {% include /shared/development/warning.md %}
