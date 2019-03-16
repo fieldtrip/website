@@ -22,10 +22,15 @@ cd $HOME/website
 # ensure that we have the latest version of the repository
 # let's hope there are no conflicts with the reference documentation
 $GIT pull > /dev/null 2>&1
+
 # integrate updates to the reference documentation, these get copied from elsewhere to the web server
+$GIT add reference/*.md
 $GIT commit -m "updated reference documentation" reference > /dev/null 2>&1
+
 # update the tags using a bash script
-_scripts/collect_tags.sh
+_scripts/update_tags.sh
+$GIT add _data/tag/*.yml
+$GIT add tag/*.md
 $GIT commit -m "updated tags" _data/tag tag > /dev/null 2>&1
 # push the updates back to the repository
 $GIT push > /dev/null 2>&1
