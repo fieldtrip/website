@@ -21,7 +21,8 @@ iEEG data for the hands-on sessions are available [here](https://doi.org/10.5281
 
 ### Session I
 
-- 9:00 – 9:15 Registration, welcome, and coffee
+- 8:15 – 9:00 Registration, welcome and coffee
+- 9:00 – 9:15 Welcome and opening remarks (Ignacio Saez)
 - 9:15 – 10:15 Lecture I: Introduction to the FieldTrip Toolbox (Robert Oostenveld)
 - 10:15 – 10:30 Coffee break
 - 10:30 – 12:30 Hands-on I: [Trial selection](/tutorial/preprocessing) & [Preprocessing](/tutorial/preprocessing_erp)
