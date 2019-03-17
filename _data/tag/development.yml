@@ -1,9 +1,6 @@
 - name:  Bugzilla and Github issue tracking
   link:  /bugzilla
 
-- name:  Latest documentation commit
-  link:  /commit
-
 - name:  Contribute
   link:  /contribute
 
