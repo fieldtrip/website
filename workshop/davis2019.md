@@ -9,8 +9,8 @@ We're hosting the first ECoG/sEEG FieldTrip bootcamp at the UC Davis
 Medical Center (Sacramento, California) on March 20-22. The workshop
 will consist of lectures and hands-on sessions covering the methods
 implemented in FieldTrip. Speakers include Robert Oostenveld (Donders
-Institute), Bob Knight (UC Berkeley), and Arjen Stolk (UC Berkeley,
-Donders). For more information, including how to register, please
+Institute), Arjen Stolk (UC Berkeley, Donders), Bob Knight (UC Berkeley),
+and Fady Girgis (UC Davis). For more information, including how to register, please
 visit the [bootcamp website](https://saez.faculty.ucdavis.edu/fieldtrip-bootcamp/).
 
 EEG/MEG data for the hands-on sessions are available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/davis2019/).
