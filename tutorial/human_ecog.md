@@ -325,7 +325,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
     labels.name(indx)
     ans =
 
-'ParaHippocampal_L'
+    'ParaHippocampal_L'
 
 ?TROUBLESHOOTING
 
