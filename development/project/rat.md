@@ -35,21 +35,20 @@ every half a millimetre slices."
 
 ### Refine the model for the rat inner skull
 
-This involves checking for uniqueness of the vertices and interpolation of the triangles in the area covered by the grid's leads. These functions are partly implemented in the 'surface' branch of FieldTri
-http://code.google.com/p/fieldtrip/source/browse/#svn%2Fbranches%2Fsurface
+This involves checking for uniqueness of the vertices and interpolation of the triangles in the area covered by the grid's leads. These functions are partly implemented in the 'surface' branch of FieldTrip <http://code.google.com/p/fieldtrip/source/browse/#svn%2Fbranches%2Fsurface>
 
-Has to be completed and consists o
+Has to be completed and consists of:
 
 - retriangulation of the mesh
 
   addpath ~/fieldtrip-dev/surface
-  cfg=[];
+
+  cfg = [];
   cfg.checkdoublevertices = 'yes';
   cfg.convert = 'yes';
   newshape = ft_surfacecheck(cfg,shape);
 
 - interpolation of the triangles
-
 - elastic repositioning (to create a regular grid triangles spacing)
 
 Look at the Gram matrix of the leadfields to check for regularity, by looking at the sorted eigenvalues.
@@ -60,9 +59,9 @@ FieldTrip typically generated a volume conductor structure when dealing with Ele
 Here is the logi
 
     shape = ft_read_headshape('rat_dura','format','STL');
-    cfg=[];
+    cfg = [];
     cfg.method = 'dipoli';
-    vol=ft_prepare_headmodel(cfg,shape);
+    vol = ft_prepare_headmodel(cfg,shape);
 
 where 'shape' is a structure defining the boundary for the Boundary Element model to be used in the next step. (shape.tri is the vertex connectivity for each triangle element, shape.pnt are all the vertices, a M points X 3 matrix).
 
@@ -72,7 +71,7 @@ The electrodes are also given as a matrix of NX3 elements. They have to be put i
 
     % check for uniqueness of triangles and remove the nearest ones...
 
-    %initialize the elec structure
+    % initialize the elec structure
     elec = [];
     elec.chanpos = elecmat;
     elec.elecpos = elecmat;
@@ -114,4 +113,4 @@ Uses the function ft_plot_topo3d.m
 
 ### Solve the inverse problem, finally ...
 
-See [/tutorial/beamformer](/tutorial/beamformer), look for 'Scanning the brain volume'
+See [beamformer](/tutorial/beamformer), look for 'Scanning the brain volume'

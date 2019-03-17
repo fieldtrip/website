@@ -17,7 +17,7 @@ The analysis of an experiment typically involves a lot of repetition as similar 
 
 ## Subject m-files
 
-As stated before, by making our own function around FieldTrip functions we can in a later stage easily repeat them, e.g. over multiple subjects. However, every subject or condition will commonly have different filenames, different variables, different filter-settings, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first optio
+As stated before, by making our own function around FieldTrip functions we can in a later stage easily repeat them, e.g. over multiple subjects. However, every subject or condition will commonly have different filenames, different variables, different filter-settings, different trials that have to be rejected, etc. A good idea, therefore, is to first **write all your subject-specific details in a separate m-file**. You can choose to have one m-file per subject, or one in which you combine all subjects. In the current example we will use the first option:
 
     % Subject01.m
 
@@ -34,11 +34,11 @@ As stated before, by making our own function around FieldTrip functions we can i
     % more information can be added to this script when needed
     ...
 
-Save this as _Subject01.m_ in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval(‘Subject01’)`. This will return the structure `subjectdata` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`
+Save this as _Subject01.m_ in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval(‘Subject01’)`. This will return the structure `subjectdata` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`.
 
 ## Making your own analysis functions
 
-As already said, FieldTrip is most efficiently used by calling its functions within your own functions. To make a function in MATLAB write something in the style o
+As already said, FieldTrip is most efficiently used by calling its functions within your own functions. To make a function in MATLAB write something in the style of:
 
     function output = MyOwnFunction(input)
 
@@ -58,11 +58,11 @@ Having saved your function in a folder of your MATLAB path you can, from within 
 
 This is the way most FieldTrip functions work: you provide the parameters together with data as the input and the function will return the results as the output.
 
-It is often convenient to save intermediate results to disk. For instance you can type
+It is often convenient to save intermediate results to disk. For instance you can type:
 
     save('firstoutput','output');
 
-to save the output to _firstoutput.mat_ in the directory you are in. Let's say you defined an output folder as in the first paragraph
+to save the output to _firstoutput.mat_ in the directory you are in. Let's say you defined an output folder as in the first paragraph:
 
     subjectdata.subjectdir = 'Subject01';
 

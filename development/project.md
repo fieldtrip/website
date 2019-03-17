@@ -5,7 +5,9 @@ tags: [development]
 
 # Project overview
 
-This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpad for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [bugzilla](/bugzilla) to track projects.
+This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpad for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users.
+
+We also use [github](/development/git) and [bugzilla](/bugzilla) to track projects.
 
 ## Open projects
 
@@ -31,18 +33,15 @@ This section of the website lists information aimed at developers of FieldTrip a
 - [Restructure and rework all visualization functions](/development/project/restructure_and_rework_all_visualization_functions)
 - [Checkdata and make source-structure definition consistent with other datatypes](/development/project/checkdata)
 - [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)
-
-### Projects dealing with forward and inverse modeling
-
-- [How to deal with forward model UNITS?](/development/project/fwdunits) (see [686](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=686))
-- [Source-reconstruction using two dipoles - example script under construction](/development/project/symmetric_dipoles) (see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1559))
-- Source reconstruction of event-related fields using minimum-norm estimate - (done and moved into place)
-- [Developing the documentation of the source reconstruction methods](/development/project/documentation_source)
 - [Example use of DSS for BCG removal](/development/project/dss)
-- [the rat beamformer](/development/project/rat)
+- [Source-reconstruction using two dipoles - example script under construction](/development/project/symmetric_dipoles), see [1559](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1559)
+- [Improve the documentation of the source reconstruction methods](/development/project/documentation_source)
 
 ## Closed Projects
 
+- [the rat beamformer](/development/project/rat) (won't be further worked on)
+- Source reconstruction of event-related fields using minimum-norm estimate - (done and moved into place)
+- [How to deal with forward model UNITS?](/development/project/fwdunits), see [686](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=686) (done)
 - [Dealing with TMS-EEG datasets](/development/project/eeg_tms) (done)
 - [move internal fcdc documentation onto the wiki](/development/project/move_internal_fcdc_documentation_onto_the_wiki) (done)
 - [Create a tutorial on the processing of animal data](/development/project/animal) (done)

@@ -70,7 +70,7 @@ The data is structured and we have a configuration containing a cfg.trl, which i
 
     dataSeg = ft_redefinetrial(cfg, data);
 
-With these two snippets of code, and **[ft_trialfun_balert](/reference/ft_trialfun_balert)** your data is ready to be preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. Afterwards, when you are going to use **[ft_databrowser](/reference/ft_databrowser)**, you need to specify cfg.channel and cfg.headerfile, as defined in ''data.hdr'' earlier o
+With these two snippets of code, and **[ft_trialfun_balert](/reference/ft_trialfun_balert)** your data is ready to be preprocessed with **[ft_preprocessing](/reference/ft_preprocessing)**. Afterwards, when you are going to use **[ft_databrowser](/reference/ft_databrowser)**, you need to specify cfg.channel and cfg.headerfile, as defined in ''data.hdr'' earlier on:
 
     cfg = [];
     cfg.channel = {'Fz','POz','Cz','F3','F4','PO3','PO4','C3','C4'}; % All 9 EEG channels of the B-Alert X-10
