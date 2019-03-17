@@ -10,7 +10,7 @@ The following is a scratch pad for a demo that I (=Robert) have prepared for the
 1.  arduino1: read data from a gravity sensor, write to bluetooth just like ModEEG
 2.  laptop computer runs the FieldTrip buffer, the modeeg2ft application, and the [viewer](/development/realtime/viewer) application for the visualization of the 3 sensor channels
 3.  arduino2: connects to the network, read data from FieldTrip buffer, write to RFM12b
-4.  arduino3: read data from RFM12b, blink leds
+4.  arduino3: read data from RFM12b, blink LEDs
 
 Other laptop computers and a Raspberry Pi were connected simultaneously to show (using the [viewer](/development/realtime/viewer) realtime visualization) that the FieldTrip realtime EEG interface runs on various operating systems (Windows, Linux, OS X) and on various hardware architectures (Intel, PPC, ARM).
 
@@ -40,7 +40,7 @@ The modeeg synchronization code is 0xA5 0x5A, or 165 90 in decimal.
 
 The purpose of this device is to demonstrate that an arduino with ethershield is capable of connecting to a FieldTrip buffer over TCP/IP, read the data and do something with it. This device is connected with Ethernet, reads some data and passes it on using a wireless RFM12b (433/886 MHz) connection.
 
-It is based on a `<del>`Sparkfun Pro Micro`</del>` [Arduino Pro Mini 3V3](http://arduino.cc/en/Main/ArduinoBoardProMini). Ethernet is provided by a [WIZnet W5100](https://www.sparkfun.com/products/9473) network module. Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/products/9582) module.
+It is based on a ~~Sparkfun Pro Micro~~ [Arduino Pro Mini 3V3](http://arduino.cc/en/Main/ArduinoBoardProMini). Ethernet is provided by a [WIZnet W5100](https://www.sparkfun.com/products/9473) network module. Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/products/9582) module.
 
 This [comment](https://forum.sparkfun.com/viewtopic.php?f=32&t=32037#p152780) gives the SPI interface pins for the Sparkfun Pro Micr
 
@@ -87,7 +87,7 @@ I am using the DIP version of the RFM12B module. The pin connections ar
 
 The purpose of this device is to demonstrate that something can be controlled. It reads the control signal using a wireless RFM12b (433/886 MHz) connection and visualizes it with a 10-segment LED array. Instead of driving the LED array, it could also act as a switch or drive a servo motor.
 
-It is based on a `<del>`[3V3 Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)`</del>` [5V Arduino Mini](http://arduino.cc/en/Main/ArduinoBoardMini).
+It is based on a ~~[3V3 Arduino Pro Mini](http://arduino.cc/en/Main/ArduinoBoardProMini)~~ [5V Arduino Mini](http://arduino.cc/en/Main/ArduinoBoardMini).
 
 - SPI: 10 (SS), 11 (MOSI), 12 (MISO), 13 (SCK)
 

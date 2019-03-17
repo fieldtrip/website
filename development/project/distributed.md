@@ -6,7 +6,7 @@ title: Core idea
 
 ## Core idea
 
-Standardise distributed computing `<del>`at the DCCN`</del>` from within open source MATLAB toolboxes, through the use of developed functions such as Torque (qsubfeval, qsubcellfun) or peer-to-peer computing (peerfeval, peercellfun).
+Standardize distributed computing ~~at the DCCN~~ from within open source MATLAB toolboxes, through the use of developed functions such as Torque (qsubfeval, qsubcellfun) or peer-to-peer computing (peerfeval, peercellfun).
 
 This could be implemented into
 
