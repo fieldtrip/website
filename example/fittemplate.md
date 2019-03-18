@@ -1,6 +1,8 @@
-function test_bug3453
-filename = '/home/common/matlab/fieldtrip/data/ftp/tutorial/epilepsy/case1/ctf_data/case1.pos';
-filename = 'D:\Development\Data\case1\ctf_data/case1.pos';
+---
+title: Individualizing a template volume conduction to on the basis of surface information
+tags: [head model]
+---
+
 # Individualizing a template volume conduction to on the basis of surface information
 
 ## Introduction
