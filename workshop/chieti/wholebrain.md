@@ -11,7 +11,7 @@ tags: [chieti, hcp-motort]
 This tutorial contains hands-on material that we used for the [MEG connectivity workshop in Chieti](/workshop/chieti2015).
 {% include markup/end %}
 
-In this tutorial we will analyse a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org).
+In this tutorial we will analyze a single-subject MEG dataset from the [Human Connectome Project](http://www.humanconnectome.org).
 
 {% include /shared/tutorial/hcp_motort.md %}
 
@@ -55,7 +55,7 @@ Previously we computed the time-ferquency representation over the full time and 
     cfg.toi = 0.100; % just following movement onset
     freq = ft_freqanalysis(cfg, data_rh);
 
-The have pre-computed the lead field for a full 3-D grid with source locations. We can project the spectral estimate from the channel-level into the source-level using the "pcc" method. This is a modification of the [original DICS method](http://www.ncbi.nlm.nih.gov/pubmed/?term=dics+gross+2001) that allows post-hoc computation of various connectivity measures.  
+The have pre-computed the lead field for a full 3-D grid with source locations. We can project the spectral estimate from the channel-level into the source-level using the "pcc" method. This is a modification of the [original DICS method](http://www.ncbi.nlm.nih.gov/pubmed/?term=dics+gross+2001) that allows post-hoc computation of various connectivity measures.
 
     cfg = [];
     cfg.headmodel = headmodel;

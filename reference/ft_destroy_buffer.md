@@ -1,5 +1,6 @@
 ---
 title: ft_destroy_buffer
+layout: default
 tags: 
 ---
 ```

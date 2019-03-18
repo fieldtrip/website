@@ -1,5 +1,6 @@
 ---
 title: ft_plot_patch
+layout: default
 tags: 
 ---
 ```

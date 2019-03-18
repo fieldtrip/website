@@ -1,5 +1,6 @@
 ---
 title: ft_headmodel_infinite
+layout: default
 tags: 
 ---
 ```

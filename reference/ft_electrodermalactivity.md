@@ -1,5 +1,6 @@
 ---
 title: ft_electrodermalactivity
+layout: default
 tags: 
 ---
 ```

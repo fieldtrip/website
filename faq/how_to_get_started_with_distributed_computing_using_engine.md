@@ -11,12 +11,12 @@ Let's assume that you have a quad-core CPU and that you want to run some jobs in
 
     enginepool open 4
 
-This will start 4 threads within MATLAB, each connected to a separate MATLAB "engine" instance. These engines are full-fledged MATLAB sessions, but without the graphical user interface.  
+This will start 4 threads within MATLAB, each connected to a separate MATLAB "engine" instance. These engines are full-fledged MATLAB sessions, but without the graphical user interface.
 
 The following shows the current configuratio
 
     >> enginepool
-    there are 4 engines  
+    there are 4 engines
     0 of them have a job
     0 of them are busy
 
@@ -36,7 +36,7 @@ What happened is that **[enginecellfun](/reference/enginecellfun)** distributed 
     power(2, 2)
     power(3, 2)
 
-Most applications of **[enginecellfun](/reference/enginecellfun)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g. 
+Most applications of **[enginecellfun](/reference/enginecellfun)** will return non-scalar values, which cannot be appended into a single vector. In that case, consistent with cellfun, it will return an error unless you specify that the output will be non-uniform. E.g.
 
     enginecellfun(@rand, {1, 2, 3}, 'UniformOutput', false)
 

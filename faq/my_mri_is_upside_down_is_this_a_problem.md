@@ -13,4 +13,4 @@ If you still find the upside-down issue problematic, you can use **[ft_volumeres
 
 {% include image src="/assets/img/faq/my_mri_is_upside_down_is_this_a_problem/potatomen.png" width="600" %}
 
-*Figure; The interpretation of the axes in the voxel coordinate system (pink) depends on how the anatomy is stored in the 'box', but the interpretation of the axes in the potato-related coordinate system (green) stays the same. This is irrespective of how the anatomy is stored in the box.*
+_Figure; The interpretation of the axes in the voxel coordinate system (pink) depends on how the anatomy is stored in the 'box', but the interpretation of the axes in the potato-related coordinate system (green) stays the same. This is irrespective of how the anatomy is stored in the box._

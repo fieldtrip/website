@@ -2,18 +2,18 @@
 title: General instructions for MATLAB demo's
 ---
 
-#  General instructions for MATLAB demo's
+# General instructions for MATLAB demo's
 
 We have installed the demo dataset, MATLAB 2013b and a tested copy of FieldTrip and SPM12 on the lab computers.
 
-## SPM  instructions
+## SPM instructions
 
 Start MATLAB and type
 
     restoredefaultpath
     addpath c:\workshop\spm12
     spm eeg
-    
+
     cd c:\workshop
 
 ## FieldTrip instructions
@@ -25,7 +25,5 @@ Start MATLAB and type
     restoredefaultpath
     addpath c:\workshop\fieldtrip
     ft_defaults
-    
-    cd c:\workshop\fieldtrip-demo
 
- 
+    cd c:\workshop\fieldtrip-demo

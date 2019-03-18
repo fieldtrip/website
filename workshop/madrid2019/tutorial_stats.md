@@ -20,14 +20,14 @@ Please note that you **do not** have to download all subjects for this tutorial.
 
 In a step-by-step fashion, this tutorial will show how to
 
-  1. Compute **within**-participant contrasts
-  2. Compute **between**-participant contrasts
+1. Compute **within**-participant contrasts
+2. Compute **between**-participant contrasts
 
 Toward the end of the tutorial there are some more challenging exercises:
 
-  3. Compute a **multivariate ANOVA** to test the drug effect on the entire power spectrum
-  4. Compute a **2x2 interaction**
-  5. Compute a **correlation** between an external variable and the power spectrum
+3. Compute a **multivariate ANOVA** to test the drug effect on the entire power spectrum
+4. Compute a **2x2 interaction**
+5. Compute a **correlation** between an external variable and the power spectrum
 
 ## Overview
 
@@ -42,10 +42,10 @@ still responsive behavioral state. For more details on the dataset
 For every subject, average power spectra are computed over all segments of data
 belonging to each of the sedative state. Thus, for every subject, the data are
 summarized as condition-specific power spectra for each of the channels. The
-question of interest is whether the data is *different* between the sedative
+question of interest is whether the data is _different_ between the sedative
 states. The permutation test that will be described in the following informs us
 about the following null hypothesis: the probability distribution of the
-condition-specific power averages is *not different* between the sedative
+condition-specific power averages is _not different_ between the sedative
 states.
 
 ## Preparing the dataset
@@ -162,7 +162,7 @@ Collect the data to plot it using the `plotSpread` function, which is specific f
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig1_spreadplot.png" width="800" %}
 
 Let us make topoplots and power spectra for each ROI in each sedative condition,
-similar to Fig 5A in  [original paper](https://doi.org/10.1371/journal.pcbi.1004669).
+similar to Fig 5A in [original paper](https://doi.org/10.1371/journal.pcbi.1004669).
 
     cfg = [];
     cfg.elec             = elec;
@@ -303,97 +303,97 @@ fields that are unique to
 
 In the following section we will describe the various options one-by-one.
 
--  With **cfg.method** = **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**
-we choose the Monte Carlo method for calculating the significance probability.
-This significance probability is a Monte Carlo estimate of the p-value under the
-permutation distribution.
+- With **cfg.method** = **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**
+  we choose the Monte Carlo method for calculating the significance probability.
+  This significance probability is a Monte Carlo estimate of the p-value under the
+  permutation distribution.
 
--  With **cfg.statistic** = **[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**
-we choose the dependent samples T-statistic to evaluate the effect (the
-difference between the baseline and the moderate condition) at the sample level.
-In cfg.statistic, many other test statistics can be specified. Which test
-statistic is appropriate depends on your research question and your experimental
-design. For instance, in a within-UO design (present one), one must use the
-dependent samples T-statistic
-(**[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**). And if you
-want to compare more than two experimental conditions, you should choose an
-F-statistic (**[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)**
-or **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)**;
-you can give a try in the Challenging exercise section below).
+- With **cfg.statistic** = **[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**
+  we choose the dependent samples T-statistic to evaluate the effect (the
+  difference between the baseline and the moderate condition) at the sample level.
+  In cfg.statistic, many other test statistics can be specified. Which test
+  statistic is appropriate depends on your research question and your experimental
+  design. For instance, in a within-UO design (present one), one must use the
+  dependent samples T-statistic
+  (**[ft_statfun_depsamplesT](/reference/ft_statfun_depsamplesT)**). And if you
+  want to compare more than two experimental conditions, you should choose an
+  F-statistic (**[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)**
+  or **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)**;
+  you can give a try in the Challenging exercise section below).
 
--  We use **cfg.clusteralpha** to choose the critical value that will be
-used for thresholding the sample-specific T-statistics. With
-a value of 0.05, every sample-specific T-statistic is compared
-with the critical value of the univariate T-test with a critical
-alpha-level of 0.05. The value of cfg.clusteralpha does not affect the false
-alarm rate of the statistical test at the cluster-level. It is a rational
-threshold for deciding whether a sample should be considered a member of
-some large cluster of samples, which may or may not be significant at the
-cluster-level.
+- We use **cfg.clusteralpha** to choose the critical value that will be
+  used for thresholding the sample-specific T-statistics. With
+  a value of 0.05, every sample-specific T-statistic is compared
+  with the critical value of the univariate T-test with a critical
+  alpha-level of 0.05. The value of cfg.clusteralpha does not affect the false
+  alarm rate of the statistical test at the cluster-level. It is a rational
+  threshold for deciding whether a sample should be considered a member of
+  some large cluster of samples, which may or may not be significant at the
+  cluster-level.
 
--  We use **cfg.clusterstatistic** to choose the test statistic that will
-be evaluated under the permutation distribution. This is the actual test
-statistic and it must be distinguished from the sample-specific T-statistics
-that are used for thresholding. With 'maxsum', the actual test statistic is the
-maximum of the cluster-level statistics. A cluster-level statistic is equal to
-the sum of the sample-specific T-statistics that belong to this cluster. Taking
-the largest of these cluster-level statistics of the different clusters produces
-the actual test statistic.
+- We use **cfg.clusterstatistic** to choose the test statistic that will
+  be evaluated under the permutation distribution. This is the actual test
+  statistic and it must be distinguished from the sample-specific T-statistics
+  that are used for thresholding. With 'maxsum', the actual test statistic is the
+  maximum of the cluster-level statistics. A cluster-level statistic is equal to
+  the sum of the sample-specific T-statistics that belong to this cluster. Taking
+  the largest of these cluster-level statistics of the different clusters produces
+  the actual test statistic.
 
--  The value of **cfg.minnbchan** is a tuning parameter that determines
-the way the clusters are formed. More specifically, we use it to specify the
-minimum number of channels from the neighbours that is required for a selected
-sample (i.e., a sample who's T-statistic exceeds the threshold) to be included
-in the clustering algorithm. With the default value, it sometimes happens that
-two clusters are spatially connected via a narrow bridge. Because they are
-connected, these two clusters merge into a single cluster. If you want to
-interpret clusters as reflecting spatially distinct sources, such a combined
-cluster does not make much sense. To suppress this type of combined clusters,
-you can choose to ignore all selected samples (on the basis of their T-values)
-if they have less than some minimum number of neighbors that were also selected.
-This minimum number is assigned to cfg.minnbchan. This number must be chosen
-independently of the data.
+- The value of **cfg.minnbchan** is a tuning parameter that determines
+  the way the clusters are formed. More specifically, we use it to specify the
+  minimum number of channels from the neighbours that is required for a selected
+  sample (i.e., a sample who's T-statistic exceeds the threshold) to be included
+  in the clustering algorithm. With the default value, it sometimes happens that
+  two clusters are spatially connected via a narrow bridge. Because they are
+  connected, these two clusters merge into a single cluster. If you want to
+  interpret clusters as reflecting spatially distinct sources, such a combined
+  cluster does not make much sense. To suppress this type of combined clusters,
+  you can choose to ignore all selected samples (on the basis of their T-values)
+  if they have less than some minimum number of neighbors that were also selected.
+  This minimum number is assigned to cfg.minnbchan. This number must be chosen
+  independently of the data.
 
--  **cfg.neighbours** is a structure that you need to have previously
-created using **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**.
+- **cfg.neighbours** is a structure that you need to have previously
+  created using **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**.
 
--  We use **cfg.tail** to choose between a one-sided and a two-sided
-statistical test. Choosing cfg.tail = 0 affects the calculations in three
-ways. First, the sample-specific T-values are thresholded from below as
-well as from above. This implies that both large negative and large
-positive T-statistics are selected for later clustering. Second,
-clustering is performed separately for thresholded positive and
-thresholded negative T-statistics. And third, the critical value for the
-cluster-level test statistic (determined by cfg.alpha; see further) is
-now two-sided: negative cluster-level statistics must be compared with
-the negative critical value, and positive cluster-level statistics must
-be compared with the positive critical value.
+- We use **cfg.tail** to choose between a one-sided and a two-sided
+  statistical test. Choosing cfg.tail = 0 affects the calculations in three
+  ways. First, the sample-specific T-values are thresholded from below as
+  well as from above. This implies that both large negative and large
+  positive T-statistics are selected for later clustering. Second,
+  clustering is performed separately for thresholded positive and
+  thresholded negative T-statistics. And third, the critical value for the
+  cluster-level test statistic (determined by cfg.alpha; see further) is
+  now two-sided: negative cluster-level statistics must be compared with
+  the negative critical value, and positive cluster-level statistics must
+  be compared with the positive critical value.
 
--  We use **cfg.alpha** to control the false alarm rate of the
-permutation test (the probability of falsely rejecting the null
-hypothesis). The value of cfg.alpha determines the critical values with
-which we must compare the test statistic (i.e., the maximum and the
-minimum cluster-level statistic).
+- We use **cfg.alpha** to control the false alarm rate of the
+  permutation test (the probability of falsely rejecting the null
+  hypothesis). The value of cfg.alpha determines the critical values with
+  which we must compare the test statistic (i.e., the maximum and the
+  minimum cluster-level statistic).
 
 {% include markup/danger %}
 If you want to run a two-sided test, i.e. you want to test both the left
 (negative clusters) and the right (positive clusters) tail of the distribution.
 you have to split the critical alpha value by setting cfg.correcttail = 'alpha';
 i.e. this effectively does a Bonferroni correction and sets cfg.alpha = 0.025,
-corresponding to a false alarm rate of 0.05 in a two-sided test.*
+corresponding to a false alarm rate of 0.05 in a two-sided test.\*
 {% include markup/end %}
 
--  We use **cfg.numrandomization** to control the number of draws from
-the permutation distribution. Remember that
-**[ft_freqstatistics](/reference/ft_freqstatistics)** approximates the
-permutation distribution by means of a histogram with a Monte Carlo approximation of the true permutation distribution. In this tutorial,
-we use cfg.numrandomization = 500 to keep the computational time low. In general you should set this to a higher value (1000 or up). If it turns out that estimated p-value is very close to the the critical
-alpha-level (0.05 or 0.01), you should increase this number.
+- We use **cfg.numrandomization** to control the number of draws from
+  the permutation distribution. Remember that
+  **[ft_freqstatistics](/reference/ft_freqstatistics)** approximates the
+  permutation distribution by means of a histogram with a Monte Carlo approximation of the true permutation distribution. In this tutorial,
+  we use cfg.numrandomization = 500 to keep the computational time low. In general you should set this to a higher value (1000 or up). If it turns out that estimated p-value is very close to the the critical
+  alpha-level (0.05 or 0.01), you should increase this number.
 
--  We use **cfg.design** to store information about the independent variable
-(the experimental manipulation) and the units of observation (the subjects).
-Consider the hypothetical case that 12 participants has been observed in two
-different conditions. Then the design matrix looks like this:
+- We use **cfg.design** to store information about the independent variable
+  (the experimental manipulation) and the units of observation (the subjects).
+  Consider the hypothetical case that 12 participants has been observed in two
+  different conditions. Then the design matrix looks like this:
 
 ```
 cfg.design =
@@ -407,8 +407,8 @@ Columns 12 through 24
 1     2     3     4     5     6     7     8     9    10    11    12...
 ```
 
--  We use **cfg.ivar** to indicate the row of the design matrix that
-contains the independent variable (i.e. condition).
+- We use **cfg.ivar** to indicate the row of the design matrix that
+  contains the independent variable (i.e. condition).
 
 You should be aware that the sensitivity of the statistical test (i.e., the
 probability of detecting an effect) depends on the width of the frequency
@@ -438,18 +438,18 @@ stat1.posclusters and stat1.posclusterslabelmat. The field
 **stat.posclusters** is an array that provides the following information
 for every cluste
 
--  The field `stat1.clusterstat` contains the cluster-level statistic (the
-sum of the T-values in each cluster).
+- The field `stat1.clusterstat` contains the cluster-level statistic (the
+  sum of the T-values in each cluster).
 
--  The field `stat1.prob` contains the proportion of draws from the
-permutation distribution with a maximum cluster-level statistic that is
-larger than clusterstat. The elements in the array stat.posclusters are
-sorted according to their p-value: the cluster with the smallest p-value
-comes first, followed by the cluster with the second-smallest, etc. Thus,
-if the k-th cluster has a p-value that is larger than the critical
-alpha-level (e.g., 0.025), then so does the (k+1)-th. Type
-stat.posclusters(k) on the MATLAB command line to see the information for
-the k-th cluster.
+- The field `stat1.prob` contains the proportion of draws from the
+  permutation distribution with a maximum cluster-level statistic that is
+  larger than clusterstat. The elements in the array stat.posclusters are
+  sorted according to their p-value: the cluster with the smallest p-value
+  comes first, followed by the cluster with the second-smallest, etc. Thus,
+  if the k-th cluster has a p-value that is larger than the critical
+  alpha-level (e.g., 0.025), then so does the (k+1)-th. Type
+  stat.posclusters(k) on the MATLAB command line to see the information for
+  the k-th cluster.
 
 The field `stat1.posclusterslabelmat` contains indices (i.e. numbers 1, 2, 3,
 ...) that identify the clusters to which the (channel,ferquency)-pairs (the samples)
@@ -529,7 +529,7 @@ Choose the cluster you want to see: either positive or negative
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig3_stats_with.png" width="600" %}
 
-## 2. Compute  **between**-participants contrasts
+## 2. Compute **between**-participants contrasts
 
 In a between-participant experimental designs, we analyze the data of multiple
 participants that are observed during different experimental conditions, for
@@ -598,9 +598,9 @@ We now perform the permutation test using
 **[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration
 settings for this analysis differ from the previous settings in several fields:
 
- 1.  We have to select a different statistic for the sample level effect (in cfg.statistic)
- 2.  The design matrix is different (i.c., it now contains only one row instead of two)
- 3.  The independent variable is now the group assignment
+1.  We have to select a different statistic for the sample level effect (in cfg.statistic)
+2.  The design matrix is different (i.c., it now contains only one row instead of two)
+3.  The independent variable is now the group assignment
 
 The configuration looks as follow:
 
@@ -635,19 +635,19 @@ The configuration looks as follow:
 We now describe the differences between this configuration and the
 configuration for a within-trials experiment.
 
--  Instead of an dependent samples T-statistic, we use the **independent
-samples T-statistic** to evaluate the effect at the sample level
-(cfg.statistic = **[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)**). This is because we are
-dealing with a between-UO instead of a within-UO design.
+- Instead of an dependent samples T-statistic, we use the **independent
+  samples T-statistic** to evaluate the effect at the sample level
+  (cfg.statistic = **[ft_statfun_indepsamplesT](/reference/ft_statfun_indepsamplesT)**). This is because we are
+  dealing with a between-UO instead of a within-UO design.
 
--  The **design matrix** in a between-UO design is different from the
-design matrix in a within-UO design. In the design matrix for a between-UO
-design, you have to specify the group to which each unit (subject) is assigned.
-For example, consider a hypothetical study with two experimental groups, the
-first group with 4 subjects and the second group with 6 subjects: the design
-matrix then looks like this: `design = [1 1 1 1 2 2 2 2 2 2]`. The data from the
-subjects will be shuffled between the two groups, but the number of subjects per
-group will remain the same (i.e. 4 versus 6).
+- The **design matrix** in a between-UO design is different from the
+  design matrix in a within-UO design. In the design matrix for a between-UO
+  design, you have to specify the group to which each unit (subject) is assigned.
+  For example, consider a hypothetical study with two experimental groups, the
+  first group with 4 subjects and the second group with 6 subjects: the design
+  matrix then looks like this: `design = [1 1 1 1 2 2 2 2 2 2]`. The data from the
+  subjects will be shuffled between the two groups, but the number of subjects per
+  group will remain the same (i.e. 4 versus 6).
 
 Now, use the configuration above to perform the following statistical
 analysis:
@@ -825,10 +825,10 @@ experimental conditions.
     cfg.ivar   = 1; % sedation level
     cfg.uvar   = 2; % subject number
 
--  We use the **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)** for a repeated-measures (i.e. dependent samples) multivariate ANOVA.
+- We use the **[ft_statfun_depsamplesFmultivariate](/reference/ft_statfun_depsamplesFmultivariate)** for a repeated-measures (i.e. dependent samples) multivariate ANOVA.
 
--  The **design matrix**, the **cfg.ivar** and the **cfg.uvar** will be
-the same as in the within-UO design
+- The **design matrix**, the **cfg.ivar** and the **cfg.uvar** will be
+  the same as in the within-UO design
 
 We now pass the data from all four conditions as input variables:
 
@@ -988,7 +988,7 @@ A common perspective on statistical testing starts from the distinction between
 dependent and independent variables. The EEG signals are typically considered to
 be the dependent variable. The independent variable can be the experimental
 conditions, as defined by task instructions, stimulus type, learning history,
-etc. The label *independent variable* suggests that it must be under the
+etc. The label _independent variable_ suggests that it must be under the
 experimenter's control. However, this is not necessarily the case, for example
 in case of reaction times, response accuracy or the drug concentrations in the blood.
 
@@ -1020,7 +1020,7 @@ permuted across the UOs, and in a within-UO design, they are permuted across the
 conditions in which the UO has been observed.
 
 It is important to point out that the hypothesis of statistical independence
-rules out *all possible* relations between the dependent and a quantitative
+rules out _all possible_ relations between the dependent and a quantitative
 independent variable, and not only the linear relation. This contrasts with the
 three test statistics for quantitative independent variables that are
 implemented in FieldTrip: these are only sensitive to deviations from
@@ -1036,7 +1036,7 @@ Now, it is time to prepare the data as follows:
 1. Compute the within-participant contrast for each group: baseline vs moderate
 2. Compute the between-participant contrast of the differences computed in step 1
 
-~~~~
+```
     cfg = [];
     cfg.channel          = 'all';
     cfg.frequency        = [8 20]; % let us test alpha and low beta bands
@@ -1079,5 +1079,6 @@ Now, it is time to prepare the data as follows:
     cfg.zlim       = [-3 3];
     cfg.elec       = elec;
     ft_clusterplot(cfg, stat5);
-~~~~
+```
+
 {% include image src="/assets/img/workshop/madrid2019/tutorial_stats/fig8_corr.png" width="800" %}

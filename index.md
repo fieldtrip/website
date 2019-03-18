@@ -22,6 +22,10 @@ To get started with FieldTrip, please continue reading the [getting started](/ge
 
 ## News and announcements
 
+### 13 March, 2019
+
+Check it out! Matthias Treder has kindly contributed a tutorial and some code (streamlined a bit by yours truly) that now allows you to perform MVPA analysis in FieldTrip, using his awesome [MVPA-light toolbox](https://github.com/treder/MVPA-Light) ! For now it is well supported, documented and tested for channel level time domain data, but in the near future (and with your help) we will also ensure support for frequency domain and source level data. For now you can just use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** with cfg.method='mvpa'. The tutorial can be found in the [tutorial section](/tutorial/mvpa_light)
+
 ### 11 January, 2019
 
 All the best wishes for the new year to all of you on behalf of the FieldTrip team! According to Google Scholar, the FieldTrip paper has now been cited more than 3000 times. We are happy that the project provides so many of you with helpful tools that facilitate you to contribute to the scientific community.
@@ -41,30 +45,6 @@ If you want to edit any page on this website, please click the "Edit this page o
 ### 09 October, 2018
 
 Tzvetan has published a new paper, entitled [FieldTrip made easy: An Analysis Protocol for Group Analysis of the Auditory Steady State Brain Response in Time, Frequency, and Space](https://www.frontiersin.org/articles/10.3389/fnins.2018.00711/full). Go and check it out!
-
-### 10 September, 2018
-
-This website has been migrated to a new server.
-
-### 04 September, 2018
-
-Eleven EU countries have decided that all scientific publications funded by their respective national science councils should be full Open Access immediately upon publication. See this [blog post from PLOS](https://blogs.plos.org/plos/2018/09/open-access-publishing-forges-ahead-in-europe/), there is more news to follow in the coming days.
-
-### 03 September, 2018
-
-Here are the slides of the topics that we presented and discussed in the Open Science Panel session at the [BIOMAG 2018](http://www.biomag2018.org) conference in Philadelphia last week:
-
-* [Robert Oostenveld - Introduction](https://www.slideshare.net/RobertOostenveld/biomag2018-robert-oostenveld-open-science-intro)
-* [Guiomar Niso - BIDS and Omega](https://www.slideshare.net/JuliaGuiomarNisoGaln/guiomar-niso-biomag-2018-open-science-meg)
-* [Darren Price - CamCAN](https://www.slideshare.net/RobertOostenveld/biomag2018-darren-price-camcan)
-* [Jan-Mathijs Schoffelen - COBIDAS](https://www.slideshare.net/RobertOostenveld/biomag2018-janmathijs-schoffelen-cobidas)
-* [Vladimir Litvak - Group Analyses in Frontiers](https://www.slideshare.net/RobertOostenveld/biomag2018-vladimir-litvak-frontiers)
-* [Tzvetan Popov - HCP User's Perspective](https://www.slideshare.net/RobertOostenveld/biomag2018-tzvetan-popov-hcp-from-a-users-perspective)
-* [Dennis Engemann - MNE-HCP](https://www.slideshare.net/RobertOostenveld/biomag2018-denis-engemann-mnehcp)
-
-### 09 July, 2018
-
-Arjen has published a new paper, entitled [Integrated analysis of anatomical and electrophysiological human intracranial data](https://www.nature.com/articles/s41596-018-0009-6). Go and check it out!
 
 ## Recent improvements to the code
 

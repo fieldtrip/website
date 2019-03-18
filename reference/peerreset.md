@@ -1,5 +1,6 @@
 ---
 title: peerreset
+layout: default
 tags: 
 ---
 ```

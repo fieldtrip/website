@@ -1,5 +1,6 @@
 ---
 title: ft_removetemplateartifact
+layout: default
 tags: 
 ---
 ```

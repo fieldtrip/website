@@ -1,15 +1,16 @@
 ---
 title: nutmeg2fieldtrip
+layout: default
 tags: 
 ---
 ```
  NUTMEG2FIELDTRIP converts from NUTMEG either a sensor data structure
- ('nuts') to a valid FieldTrip 'raw' structure (plus 'grid' and 'mri' if
- available), OR a source structure 'beam' to a valid FieldTrip source
- structure
+ ('nuts') to a valid FieldTrip 'raw' structure (plus 'sourcemodel' and
+ 'mri' if available), OR a source structure ('beam') to a valid FieldTrip
+ source structure.
 
  Use as
-    [data, mri, grid] = nutmeg2fieldtrip(cfg, fileorstruct)
+    [data, mri, sourcemodel] = nutmeg2fieldtrip(cfg, fileorstruct)
 
  Input:
       cfg
@@ -24,10 +25,11 @@ tags:
 
  Output: depending on input, one of options
          1) If nuts sensor structure input, then 'data' will be 'raw' and
-            optionally 'grid' if Lp present, or 'mri' if individual MRI present
+            optionally 'sourcemodel' if Lp present, or 'mri' if individual MRI present
          2) If beam source structure input, then 'data' will be 'source'
             (May be an array of source structures (source{1} etc))
-            'grid' and 'mri' may be output as well if present in beam structure
+            'sourcemodel' and 'mri' may be output as well if present in beam structure
 
- See alo FT_DATATYPE_SOURCE, LORETA2FIELDTRIP, SPASS2FIELDTRIP, FIELDTRIP2SPSS
+ See alo FT_DATATYPE_RAW, FT_DATATYPE_SOURCE, LORETA2FIELDTRIP, SPASS2FIELDTRIP,
+ FIELDTRIP2SPSS
 ```

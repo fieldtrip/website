@@ -5,4 +5,4 @@ tags: [natmeg, meg+eeg, meg-audodd]
 
 # Description of the NatMEG dataset
 
-{% include /shared/tutorial/meg_audodd.md %}
+{% include /shared/workshop/natmeg/meg_audodd.md %}

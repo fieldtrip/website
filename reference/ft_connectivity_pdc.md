@@ -1,5 +1,6 @@
 ---
 title: ft_connectivity_pdc
+layout: default
 tags: 
 ---
 ```

@@ -9,7 +9,7 @@ This page describes the interface between the Jinga-Hi JAGA16 device and the Fie
 
 {% include image src="/assets/img/development/realtime/jinga-hi/jaga16.jpg" width="120" %}--" %}
 
-The [Jinga-Hi](http://www.jinga-hi.com) JAGA16 is a miniaturised stand-alone device includes amplifier, digitizer, signal processor and transmitter. The device has 16 channels. Although the JAGA16 has been primarily designed for electrophysiological recordings (spikes and LFPs) in small animals, its specifications also make it very applicable to wireless EEG-BCI systems.  
+The [Jinga-Hi](http://www.jinga-hi.com) JAGA16 is a miniaturised stand-alone device includes amplifier, digitizer, signal processor and transmitter. The device has 16 channels. Although the JAGA16 has been primarily designed for electrophysiological recordings (spikes and LFPs) in small animals, its specifications also make it very applicable to wireless EEG-BCI systems.
 
 The packaged version that is depicted above includes a micro-USB interface at the side that can be used to power the device, although for normal operation it should be battery powered. Below is the device (wrapped in protective foil) besides a 500mAh battery.
 
@@ -21,7 +21,7 @@ We provide two interfaces between the JAGA16 device and the FieldTrip buffer: on
 
 The data files created by Jinga-hi software can also be read using **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** for offline analysis.
 
-##  MATLAB-based interface
+## MATLAB-based interface
 
 The JAGA16 device streams the data over UDP network connection. The **[ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)** function (part of the realtime module in FieldTrip) sets up a UDP server that listens to port 55000and writes all data it receives to a [FieldTrip buffer](/development/realtime). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
@@ -33,7 +33,7 @@ Subsequently in another MATLAB session you can read from the FieldTrip buffer us
 The UDP network interface in MATLAB is implemented in the freely available [TCP/UDP/IP toolbox](http://mathworks.com/matlabcentral/fileexchange/345). You should download this toolbox and add it to your MATLAB path if you want to use the **[ft_realtime_jaga16proxy](/reference/ft_realtime_jaga16proxy)** function.
 
 {% include markup/info %}
-The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less  system resources.
+The MATLAB implementation is mainly for educational and testing purposes. For proper real-time analyses we recommend you to use the standalone interface, which is faster and requires less system resources.
 {% include markup/end %}
 
 ## Standalone interface with jaga2ft

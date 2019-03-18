@@ -5,7 +5,7 @@ tags: [faq, qsub, peer, engine, distcomp, matlab]
 
 # What are the different approaches I can take for distributed computing?
 
-At the Donders Centre we have a linux cluster that we use for the analysis of the neuroimaging data (MEG, fMRI, DTi, ...). On this cluster we have explored various options for distributed computing to speed up the analysis. Particular considerations have resulted so far in own development of two add-on toolboxes that are both distributed along with FieldTrip: fieldtrip/peer and fieldtrip/qsub. We are of course also aware of the Mathworks parallel computing toolbox and the accompanying distributed computing engines, although we don't have a license for those.
+At the Donders Centre we have a Linux cluster that we use for the analysis of the neuroimaging data (MEG, fMRI, DTi, ...). On this cluster we have explored various options for distributed computing to speed up the analysis. Particular considerations have resulted so far in own development of two add-on toolboxes that are both distributed along with FieldTrip: fieldtrip/peer and fieldtrip/qsub. We are of course also aware of the Mathworks parallel computing toolbox and the accompanying distributed computing engines, although we don't have a license for those.
 
 Distributed computing in short means cutting up a large computational problem into smaller sections, i.e. jobs, and distributing those over many CPUs. Managing each of the jobs has some overhead: the more jobs, the more overhead. If the jobs get too small (e.g. an FFT of a single vector of 1000 datapoints), the overhead becomes larger than the actual computation and distribution of the jobs is not beneficial any more. If there are fewer jobs than available CPUs, the cluster is not optimally busy. If there are many more jobs than available CPUs, the overhead of the many small jobs might deteriorate the performance. Finding the right granularity (not too large, not too small) of the job size is quite challenging and depends on a lot of parameters
 
@@ -15,7 +15,7 @@ Let me outline the different approaches below. Note that although in the example
 
 ### Mathworks parallel computing toolbox and distributed computing engines
 
-The [parallel computing toolbox](http://www.mathworks.nl/products/parallel-computing) allows you to start multiple MATLAB "labs" on your desktop computer and distribute the computational load over these labs. This for example looks like
+The [parallel computing toolbox](http://www.mathworks.nl/products/parallel-computing) allows you to start multiple MATLAB "labs" on your desktop computer and distribute the computational load over these labs. This for example looks like this:
 
     matlabpool open 4
     parfor i=1:Nsubj
@@ -26,7 +26,7 @@ The [parallel computing toolbox](http://www.mathworks.nl/products/parallel-compu
 
 This will keep 4 MATLAB workers on your own computer busy with preprocessing. Note that this example is probably not so efficient to distribute: presumably your local hard disk speed is the bottleneck, not the CPU speed.
 
-An other way to distribute jobs is using DFEVAL like thi
+An other way to distribute jobs is using DFEVAL like this:
 
     for i=1:Nsubj
     cfg{i}         = ...
@@ -52,7 +52,7 @@ See **[qsubcellfun](/reference/qsubcellfun)**, **[qsubfeval](/reference/qsubfeva
 
 ### FieldTrip peer computing toolbox
 
-The FieldTrip peer computing toolbox was developed to harness the computational resources in an unorganized organization, e.g. to use the computers of your office mates during the night, or to use multiple linux computers that are not clustered. More documentation on the peer toolbox can be found [here](/development/module/peer).
+The FieldTrip peer computing toolbox was developed to harness the computational resources in an unorganized organization, e.g. to use the computers of your office mates during the night, or to use multiple Linux computers that are not clustered. More documentation on the peer toolbox can be found [here](/development/module/peer).
 
 {% include markup/danger %}
 Please note that this requires compilation of some mex files. At this moment it is not actively supported.
@@ -70,7 +70,7 @@ See **[peercellfun](/reference/peercellfun)**, **[peerfeval](/reference/peerfeva
 
 ### FieldTrip engine toolbox
 
-The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development//module/engine).
+The FieldTrip-engine toolbox was designed for distributed computing on a massive multicore computer without requiring the MATLAB parallel toolbox. More documentation on the engine toolbox is found [here](/development/module/engine).
 
 {% include markup/danger %}
 Please note that this requires compilation of some mex files. At this moment it is not actively supported.

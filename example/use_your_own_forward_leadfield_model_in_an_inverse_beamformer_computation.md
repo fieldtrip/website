@@ -33,7 +33,7 @@ Using the geometrical description of the sensor locations and the geometrical de
     cfg                 = [];
     cfg.elec            = elec;
     cfg.headmodel       = vol;
-    cfg.grid.resolution = 2;  
+    cfg.grid.resolution = 2;
     cfg.grid.unit       = 'cm';   % same unit as above, i.e. in cm
     grid = ft_prepare_leadfield(cfg);
 

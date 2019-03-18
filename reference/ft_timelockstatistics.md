@@ -1,5 +1,6 @@
 ---
 title: ft_timelockstatistics
+layout: default
 tags: 
 ---
 ```

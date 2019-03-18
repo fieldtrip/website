@@ -17,7 +17,7 @@ As of September 23, 2011 we updated the description of how the sensors are defin
 
 Note that there is typically a one-to-one match between electrodes and channels, but in principle channels and electrodes can refer to different entities. In the context of EEG, one may consider a setup containing bipolar derivations, in which each 'channel' represents the voltage difference between a pair of electrodes. Consequently, the number of channels N then is different from the number of electrodes M. An additional field is needed in the elec-structure
 
-    elec.tra  % NxM matrix with the weight of each electrode into each channel  
+    elec.tra  % NxM matrix with the weight of each electrode into each channel
 
 to tell FieldTrip how to combine the electrodes into channels. This array can be stored as a sparse array and it also allows to set the position of the reference electrode in unipolar recordings. In case elec.tra is not provided, the forward and inverse calculations will be performed assuming an average reference over all electrodes.
 
@@ -41,7 +41,7 @@ The channel 'orientation' is needed for synthetic gradient computation for axial
 {% include markup/warning %}
 MEG forward computations are performed for each grad.coilpos and grad.coilori, and subsequently combined using grad.tra. Although they are called "coils", you can better think of them as "field digitization points".
 
-By default a first order gradiometer is described by 2 "coils", but you could use more digitization points to get a more accurate forward model.   
+By default a first order gradiometer is described by 2 "coils", but you could use more digitization points to get a more accurate forward model.  
 {% include markup/end %}
 
 ## The old electrode and gradiometer structure
@@ -60,9 +60,9 @@ The old gradiometer definition contained the following field
 
 The upgrade from this to the current representation is motivated by the fact that the relevant information that is needed from the grad/elec structure is different for different analysis/visualization step
 
-*  for displaying purposes, usually the channels are the entities of relevance. Also, in the context of finding neighbours to a given channel (for clustering, or synthetic gradient computation, or interpolation as in scalpcurrentdensity or channelrepair), the channels are the relevant entities.
+- for displaying purposes, usually the channels are the entities of relevance. Also, in the context of finding neighbours to a given channel (for clustering, or synthetic gradient computation, or interpolation as in scalpcurrentdensity or channelrepair), the channels are the relevant entities.
 
-*  for forward and inverse modelling purposes, the sensing elements, i.e. the electrodes or coils are of relevance.
+- for forward and inverse modelling purposes, the sensing elements, i.e. the electrodes or coils are of relevance.
 
 Originally, FieldTrip relied on the fact that the channel positions can be recovered from the electrode/coil positions by looking into the tra-matrix, because the tra-matrix specifies which electrode/coil contributes to which channel. However, FieldTrip supports increasingly complicated tra-matrices that for example include balancing coefficients (obtained through ft_denoise_synthetic, or ft_denoise_pca), projected-out spatial topographies (obtained through a sequence of ft_componentanalysis and ft_rejectcomponent), or synthetic planar gradients (obtained through ft_megplanar). With these increasingly complicated tra-matrices, recovery of the channel positions from the coil/electrode positions is not straightforward and sometimes impossible.
 We decided to make the distinction between channels on the one hand, and electrodes/coils on the other hand explicit in the code.
@@ -73,11 +73,11 @@ The tra-matrix is a very important piece of information that needs to be taken i
 
 As the tra-matrix provides the recipe of how the individual electrodes/coils relate to the individual channels in the data structure, it is updated automatically upon manipulation of the sensor data in the following function
 
- **[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**
- **[ft_denoise_pca](/reference/ft_denoise_pca)**
- **[ft_componentanalysis](/reference/ft_componentanalysis)**
- **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
+**[ft_denoise_synthetic](/reference/ft_denoise_synthetic)**
+**[ft_denoise_pca](/reference/ft_denoise_pca)**
+**[ft_componentanalysis](/reference/ft_componentanalysis)**
+**[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 
-Algorithmically, the tra-matrix is used as a left multiplier of the unbalanced lead field (i.e. the leadfield that represents the magnetic field distribution at the location of the original magnetometer coils) in the following way: *lf_balanced = grad.tra * lf_unbalanced*. For example, to obtain a first-order axial gradiometer, each row in the tra-matrix contains two '1's (assuming the orientation of the top and bottom coils to be opposite), indicating that the modelled field estimated at the top and bottom coil of a gradiometer should be summed to obtain a model of the axial gradients. In order to obtain synthetic higher order gradients, the columns in the tra-matrix that correspond to the reference coils will have non-zero values, reflecting the 'balancing' coefficients.
+Algorithmically, the tra-matrix is used as a left multiplier of the unbalanced lead field (i.e. the leadfield that represents the magnetic field distribution at the location of the original magnetometer coils) in the following way: _lf_balanced = grad.tra _ lf_unbalanced\*. For example, to obtain a first-order axial gradiometer, each row in the tra-matrix contains two '1's (assuming the orientation of the top and bottom coils to be opposite), indicating that the modelled field estimated at the top and bottom coil of a gradiometer should be summed to obtain a model of the axial gradients. In order to obtain synthetic higher order gradients, the columns in the tra-matrix that correspond to the reference coils will have non-zero values, reflecting the 'balancing' coefficients.
 
 In summary, if you are doing fancy things with your data, and later on want to do source reconstruction, it's not safe to just take any grad-structure to construct your leadfields with. For obvious reasons, not only do the positions of the coils need to be the same as the ones used during the measurement. Additionally, the tra-matrix needs to reflect all the manipulations you have applied to the data that you wish to source-reconstruct.

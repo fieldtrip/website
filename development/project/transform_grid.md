@@ -9,5 +9,3 @@ at the moment, people are supposed to call warp_apply, whereas elsewhere in the 
 Do we also need a griddtype function?
 
 What is the relation between a source and a grid structure?
-
- 

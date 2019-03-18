@@ -6,8 +6,8 @@ title: Jyväskylä, Finland
 
 There will be a M/EEG analysis workshop in Jyvaskyla, focussing on connectivity analysis. On one of the days we will use FieldTrip for the teaching (on the other day we will use MNE python. This workshop is part of a summer school: [International summer school on understanding learning in the brain](http://cibr.jyu.fi/en/training/brain-summerschool2017/scientific_program).
 
--   By whom: Simo Monto, Matti Stenroos, Jan Kujala, Jan-Mathijs Schoffelen and others
--   When: 15-16 June 2017
+- By whom: Simo Monto, Matti Stenroos, Jan Kujala, Jan-Mathijs Schoffelen and others
+- When: 15-16 June 2017
 
 More details are provided by the local organizers [here](http://cibr.jyu.fi/en/training/brain-summerschool2017/scientific_program).
 
@@ -23,8 +23,8 @@ Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/
 
 Furthermore, we recommend you to watch the following online videos prior to the workshop. Note that these video lectures cannot be quickly glanced over. You should **plan ahead and take your time** to go through them.
 
--   [FieldTrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
--   [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
+- [FieldTrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
+- [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
 
 The content of the shorter second lecture is also covered in the first, but presented differently and therefore possibly useful to get a good understanding of the signals that we deal with.
 
@@ -48,10 +48,10 @@ In general, please do NOT use the graphical path management tool from MATLAB. In
 Furthermore, please do NOT add FieldTrip with all subdirectories, subdirectories will be added automatically when needed, and only when needed (see this [FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)).
 {% include markup/end %}
 
--   morning
+- morning
 
-    -   1h Lecture on some aspects related to connectivity analysis on M/EEG data. Measures of directed interactions, interpretational issues, and howto's.
-    -   1.5h handson [Connectivity](/tutorial/connectivity)
+  - 1h Lecture on some aspects related to connectivity analysis on M/EEG data. Measures of directed interactions, interpretational issues, and howto's.
+  - 1.5h handson [Connectivity](/tutorial/connectivity)
 
--   afternoon
-    -   1.5h handson [Networkanalysis](/tutorial/networkanalysis)
+- afternoon
+  - 1.5h handson [Networkanalysis](/tutorial/networkanalysis)

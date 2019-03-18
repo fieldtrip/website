@@ -3,7 +3,7 @@ title: Does a firewall affect the communication between peers?
 tags: [faq, peer]
 ---
 
-#  Does a firewall affect the communication between peers?
+# Does a firewall affect the communication between peers?
 
 All communication between peers is done over the TCP/IP network. Peers announce themselves to the whole network with a multicast packet, a "master" peers send the input data for a job after connecting to a TCP socket on a "slave" peer, and a "slave" peer returns the output data after connecting to a TCP socket on the master.
 

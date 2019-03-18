@@ -1,5 +1,6 @@
 ---
 title: ft_spikesorting
+layout: default
 tags: 
 ---
 ```

@@ -1,5 +1,6 @@
 ---
 title: ft_statfun_diff_itc
+layout: default
 tags: 
 ---
 ```

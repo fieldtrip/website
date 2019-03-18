@@ -9,7 +9,7 @@ tags: [ctf, meg, dataformat]
 
 The following data files can be read and used in FieldTrip: .meg4, .res4, .mri, .hdm, ClassFile.cls, MarkerFile.mrk. All required CTF reading functions are supplied with the FieldTrip toolbox.
 
-Initially, reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in  the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
+Initially, reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
 
 These low-level functions are written by Dr. Harold Wilson and courtesy of MISL. These are not used for clinical studies and the user assumes all risk with their use. Although the functions originate from MISL, these are included in in FieldTrip under the explicit agreement that MISL does not support these functions. If you find bugs or have suggestions for improvements, please contact the FieldTrip developers and not MISL.
 
@@ -17,10 +17,10 @@ An alternative ("old") implementation for reading the CTF data is available in t
 
 The following types of CTF data can be read and used in FieldTrip:
 
-*  MEG/EEG and AUX data: .res4, .meg4, .1_meg4, .2_meg4, etc.
-*  event information: .meg4, ClassFile.cls, MarkerFile.mrk
-*  single sphere and multi-sphere volume conduction models: .hdm
-*  anatomical MRI: .mri
+- MEG/EEG and AUX data: .res4, .meg4, .1_meg4, .2_meg4, etc.
+- event information: .meg4, ClassFile.cls, MarkerFile.mrk
+- single sphere and multi-sphere volume conduction models: .hdm
+- anatomical MRI: .mri
 
 This page explains how to get started reading and using each of these file types in FieldTrip.
 
@@ -33,23 +33,25 @@ Besides the main CTF recording modus in epoched files (with or without gaps betw
 MEG datasets recorded with CTF acquisition software are written in a xxx.ds folder (with xxx the name of your dataset). This folder contains, among others, the xxx.meg4 file which contains the data of your recording, and the xxx.res4 file which contains the header information.
 
 You should not store any scripts or mat files in the xxx.ds folder. When analyzing your CTF MEG data with FieldTrip, it is good practice to keep three separate folder
- 1.  a folder with the raw recorded data (i.e., containing your xxx.ds dataset)
- 2.  a folder that contains your MATLAB scripts
- 3.  a folder that contains the MATLAB/FieldTrip data that you want to save
+
+1.  a folder with the raw recorded data (i.e., containing your xxx.ds dataset)
+2.  a folder that contains your MATLAB scripts
+3.  a folder that contains the MATLAB/FieldTrip data that you want to save
 
 ## Set path
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
-
-	addpath `<full_path_to_fieldtrip>`
-	ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
 ## Reading MEG data
 
 To analyze your CTF MEG data in FieldTrip, you would usually start by calling high-level functions such as **[ft_definetrial](/reference/ft_definetrial)** or **[ft_preprocessing](/reference/ft_preprocessing)** (see the [tutorial documentation](/tutorial)). These functions read the raw MEG data by calling low-level functions such as **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)**.
 The header and data are in different files, and the data itself can be split over multiple 2GB files. You specify the combination of files as a dataset, i.e. with the directory
-   cfg.dataset = 'Subject01.ds';
+
+    cfg.dataset = 'Subject01.ds';
+
 FieldTrip automatically figures out what the actual header and datafiles are.
 
 To get started with reading your CTF MEG data into FieldTrip, it might be a good check to call the low-level reading functions directly. As an example for the code below, we will use the tutorial dataset, which can be downloaded from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
@@ -61,78 +63,69 @@ format. It takes the dataset filename as input. Alternatively, you can directly 
 
 To read the header from the tutorial dataset, use
 
-
-	hdr = ft_read_header('Subject01.ds')
+    hdr = ft_read_header('Subject01.ds')
 
 or
 
-
-	hdr = ft_read_header('Subject01.ds/Subject01.res4')
+    hdr = ft_read_header('Subject01.ds/Subject01.res4')
 
 This should return a header structure with the following element
 
+    hdr =
 
-	hdr =
-
-	             Fs: 300           % sampling frequency
-	         nChans: 187           % number of channels
-	       nSamples: 900           % number of samples per trial
-	    nSamplesPre: 300           % number of pre-trigger samples in each trial
-	        nTrials: 266           % number of trials
-	          label: {187x1 cell}  % cell-array with labels of each channel
-	           grad: [1x1 struct]  % gradiometer structure
-	           orig: [1x1 struct]  % additional header information
+               Fs: 300           % sampling frequency
+           nChans: 187           % number of channels
+         nSamples: 900           % number of samples per trial
+      nSamplesPre: 300           % number of pre-trigger samples in each trial
+          nTrials: 266           % number of trials
+            label: {187x1 cell}  % cell-array with labels of each channel
+             grad: [1x1 struct]  % gradiometer structure
+             orig: [1x1 struct]  % additional header information
 
 Make sure that the header information is correctly read.
+
 ### Read data
 
 The **[ft_read_data](/reference/ft_read_data)** function reads the CTF MEG data and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
 
 To read the data from the tutorial dataset, use
 
-
-	dat = ft_read_data('Subject01.ds');
+    dat = ft_read_data('Subject01.ds');
 
 or
 
+    dat = ft_read_data('Subject01.ds/Subject01.meg4');
 
-	dat = ft_read_data('Subject01.ds/Subject01.meg4');
-
-This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 187x900x266 in case of the tutorial data, which is a trial-based dataset. In case of continuous data, this function returns a 2-D matrix of size Nchans*Nsamples.
+This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 187x900x266 in case of the tutorial data, which is a trial-based dataset. In case of continuous data, this function returns a 2-D matrix of size Nchans\*Nsamples.
 Additional options should be specified in key-value pairs (see **[ft_read_data](/reference/ft_read_data)**). When only the filename is specified, all data in the dataset will be read. To only read the first 3 trials from channels 5-9, us
 
-
-	dat = ft_read_data('Subject01.ds', 'begtrial', 1, 'endtrial', 3, 'chanindx', [5:9]);
+    dat = ft_read_data('Subject01.ds', 'begtrial', 1, 'endtrial', 3, 'chanindx', [5:9]);
 
 This returns a 3-D matrix of size Nchans*Nsamples*Ntrials: 5x900x3.
 
 You can explicitly specify the data format (also [see below](#Specifying the low-level reading functions)), e.g.
 
-
-	dat = ft_read_data('Subject01.ds', 'dataformat', 'ctf_ds');
+    dat = ft_read_data('Subject01.ds', 'dataformat', 'ctf_ds');
 
 ### Preprocessing
 
 After checking that the low-level reading functions successfully read your CTF dataset, you are ready to start working with the high-level FieldTrip functions, such as **[ft_preprocessing](/reference/ft_preprocessing)**. To preprocess the tutorial data, us
 
-
-	cfg=[];
-	cfg.dataset = 'Subject01.ds';
-	data = ft_preprocessing(cfg)
+    cfg=[];
+    cfg.dataset = 'Subject01.ds';
+    data = ft_preprocessing(cfg)
 
 This should return the following data structur
 
+    data =
 
-	data =
-
-	        hdr: [1x1 struct]    % header information
-	      label: {187x1 cell}    % channel labels
-	      trial: {1x266 cell}    % data (Nchans*Nsamples) for each trial
-	       time: {1x266 cell}    % time axis for each trial
-	    fsample: 300             % sampling frequency
-	       grad: [1x1 struct]    % gradiometer structure
-	        cfg: [1x1 struct]    % the configuration used for processing the data
-
+          hdr: [1x1 struct]    % header information
+        label: {187x1 cell}    % channel labels
+        trial: {1x266 cell}    % data (Nchans*Nsamples) for each trial
+         time: {1x266 cell}    % time axis for each trial
+      fsample: 300             % sampling frequency
+         grad: [1x1 struct]    % gradiometer structure
+          cfg: [1x1 struct]    % the configuration used for processing the data
 
 With cfg.continuous = 'yes' or 'no' you can specify whether the file contains continuous data. The default is determined automatically. Data that is measured pseudo-continuously should be treated as cfg.continuous = 'yes'.
 
@@ -140,7 +133,7 @@ For more preprocessing options and information on how to define trials, see the 
 
 ### Specifying the low-level reading functions
 
-The default low-level reading functions for the MEG data are the functions supplied by CTF, which are located in the  fieldtrip/external/ctf directory. There is also an old implementation of the reading functions, which will be used if you specify
+The default low-level reading functions for the MEG data are the functions supplied by CTF, which are located in the fieldtrip/external/ctf directory. There is also an old implementation of the reading functions, which will be used if you specify
 
     cfg.headerformat = 'ctf_old'
     cfg.dataformat   = 'ctf_old'
@@ -151,6 +144,7 @@ Other dataformat options include 'ctf_ds', 'ctf_meg4' and 'ctf_res4'.
 ### Reading 64-channel CTF data
 
 The old 64-channel CTF datasets are not supported in the native CTF reading functions. However, they do seem to work with the old reading functions. So if you specify the headerformat, eventformat and the dataformat as 'ctf_old', you can analyze the old 64-channel data.
+
 ## Reading events
 
 Usually, you would call **[ft_definetrial](/reference/ft_definetrial)** to select pieces of data around those events in the data that interest you, either using a generic definition or using your own “trialfun”. The trialfunction calls the low-level reading function **[ft_read_event](/reference/ft_read_event)**. The **[ft_read_event](/reference/ft_read_event)** function reads event information and represents it in a common data-independent format. It takes the dataset filename as input. Alternatively, you can directly specify the data file.
@@ -163,29 +157,29 @@ To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/f
 
 This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structur
 
-	event =
+    event =
 
-	1343x1 struct array with field
-	    type
-	    sample
-	    value
-	    offset
-	    duration
+1343x1 struct array with field
+type
+sample
+value
+offset
+duration
 
 To access the first event, use
 
-	>> event(1)
+    >> event(1)
 
-	ans =
-	        type: 'trial'
-	      sample: 1
-	       value: []
-	      offset: -300
-	    duration: 900
+    ans =
+          type: 'trial'
+        sample: 1
+         value: []
+        offset: -300
+      duration: 900
 
 ### Frontpanel and Backpanel triggers
 
-The 151 channel MEG system we started off with at the Donders in 2002 had an electronics rack which   was placed such that there was a clear front and back side. Each side of the rack exposed 16 binary inputs (i.e. bits) for connecting external triggers. To the front we connected the button boxes, to the back we connected the stimulus presentation computer. The 16 bits from the front and from the back were combined in the 32 bit STIM channel.
+The 151 channel MEG system we started off with at the Donders in 2002 had an electronics rack which was placed such that there was a clear front and back side. Each side of the rack exposed 16 binary inputs (i.e. bits) for connecting external triggers. To the front we connected the button boxes, to the back we connected the stimulus presentation computer. The 16 bits from the front and from the back were combined in the 32 bit STIM channel.
 
 Given the connections of the button boxes and stimulus computers, in the analysis the 32 bit STIM channel values did not match the users' expectations with respect to button box and presentation trigger codes. Therefore the FieldTrip reading software back then was implemented to split the 32 bits into the 16 frontpanel and the 16 backpanel bits. This also shifts the bits to recover the trigger codes that were used in the presentation software by the users. This situation from early '2000 at the Donders in Nijmegen is still supported by FieldTrip. The "Subject01.ds" tutorial dataset is from that time, so that is why you still see it in the tutorials.
 
@@ -220,12 +214,12 @@ For more information on reading, creating and plotting headmodels refer to
 
 Anatomical MRI files can be converted into CTF compatible data using the CTF software MRIConverter and MRIViewer. After this process, a .mri file is saved which can be used in FieldTrip.
 
-*  Open the original MRI data in MRIConverter
-*  Make sure that the View Direction and Image Orientation are correctly set
-*  Save the file in the .mri format
-*  Open the newly created .mri file in MRIViewer
-*  Mark the fiducials: left and right ear and nasion; they should reflect the location of the MEG coils
-*  Save the changes in the .mri file
+- Open the original MRI data in MRIConverter
+- Make sure that the View Direction and Image Orientation are correctly set
+- Save the file in the .mri format
+- Open the newly created .mri file in MRIViewer
+- Mark the fiducials: left and right ear and nasion; they should reflect the location of the MEG coils
+- Save the changes in the .mri file
 
 The .mri file can be read into FieldTrip using **[ft_read_mri](/reference/ft_read_mri)**. To read the mri file of the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 

@@ -1,5 +1,6 @@
 ---
 title: ft_resampledata
+layout: default
 tags: 
 ---
 ```

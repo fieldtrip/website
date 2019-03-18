@@ -1,5 +1,6 @@
 ---
 title: peermaster
+layout: default
 tags: 
 ---
 ```

@@ -1,5 +1,6 @@
 ---
 title: ft_read_event
+layout: default
 tags: 
 ---
 ```

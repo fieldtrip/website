@@ -30,22 +30,21 @@ For some analyses, e.g. spectral power estimation, it is better to have the data
     ...                                             % further specification of filter settings etc.
     data = ft_preprocessing(cfg);
 
-This uses the **ft_trialfun_general** function to segment the data. This function is included in FieldTrip, type *help trialfun_general* for more details.
+This uses the **ft_trialfun_general** function to segment the data. This function is included in FieldTrip, type _help trialfun_general_ for more details.
 
-##  An example for making overlapping segments
+## An example for making overlapping segments
 
+    cfg = [];
+    cfg.dataset     = 'yourfile.ext';
 
-	cfg = [];
-	cfg.dataset     = 'yourfile.ext';
+    hdr             = ft_read_header(cfg.dataset);
+    begsample       = 1:256:hdr.nSamples;             % slide with 256 samples
+    endsample       = begsample + 512 - 1;            % the segment length is 512 samples
+    offset          = zeros(size(begsample));
 
-	hdr             = ft_read_header(cfg.dataset);
-	begsample       = 1:256:hdr.nSamples;             % slide with 256 samples
-	endsample       = begsample + 512 - 1;            % the segment length is 512 samples
-	offset          = zeros(size(begsample));
+    cfg.trl         = [begsample(:) endsample(:) offset(:)]
 
-	cfg.trl         = [begsample(:) endsample(:) offset(:)]
+    sel             = find(endsample>hdr.nSamples);
+    cfg.trl(sel, :) = [];                             % remove the segments that are beyond the end of the file
 
-	sel             = find(endsample>hdr.nSamples);
-	cfg.trl(sel, :) = [];                             % remove the segments that are beyond the end of the file
-
-	data = ft_preprocessing(cfg);
+    data = ft_preprocessing(cfg);

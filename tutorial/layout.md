@@ -5,11 +5,11 @@ tags: [tutorial, plot, eeg, meg, ecog, layout]
 
 # Specifying the channel layout for plotting
 
-The 2-D channel layout is a representation of the channel positions, together with the outline of the head or other anatomical features, that allows data to be plotted in a topographically consistent manner on a 2-D computer screen (or piece of paper). The 2-D channel layout is *not an exact representation* of the channel positions, just a projection for the purpose of visualization.
+The 2-D channel layout is a representation of the channel positions, together with the outline of the head or other anatomical features, that allows data to be plotted in a topographically consistent manner on a 2-D computer screen (or piece of paper). The 2-D channel layout is _not an exact representation_ of the channel positions, just a projection for the purpose of visualization.
 
 ## Introduction to layout files (.lay files)
 
-FieldTrip can use layout files that gives you exact control of the 2-D position of the sensors for topoplotting, and of the per-channel local coordinate axes for the multiplotting. These layout files are ascii file with the extention .lay, or MATLAB files containing a variable with the name "lay". In general, FieldTrip prefers .mat-files because of more flexible outlines of the headshape. For .lay files a standard headshape is drawn around the normalized channel positions. Here is a small snippet of an ascii layout fil
+FieldTrip can use layout files that gives you exact control of the 2-D position of the sensors for topoplotting, and of the per-channel local coordinate axes for the multiplotting. These layout files are ascii file with the extension .lay, or MATLAB files containing a variable with the name "lay". In general, FieldTrip prefers .mat-files because of more flexible outlines of the headshape. For .lay files a standard headshape is drawn around the normalized channel positions. Here is a small snippet of an ASCII layout file:
 
     1  -0.308949  0.951110  0.750000  0.450000  Fp1
     2   0.000121  1.000000  0.750000  0.450000  Fpz
@@ -88,13 +88,13 @@ The advantage of the MATLAB file over the ASCII file, is that the MATLAB file ca
 
 Layouts are an essential functionality for all 2-D plotting functions in FieldTrip. See below for an overview of functions that require you to specify a layout.
 
-*  **[ft_multiplotER](/reference/ft_multiplotER)**
-*  **[ft_multiplotTFR](/reference/ft_multiplotTFR)**
-*  **[ft_topoplotER](/reference/ft_topoplotER)**
-*  **[ft_topoplotTFR](/reference/ft_topoplotTFR)**
-*  **[ft_movieplotER](/reference/ft_movieplotER)**
-*  **[ft_movieplotTFR](/reference/ft_movieplotTFR)**
-*  **[ft_databrowser](/reference/ft_databrowser)**
-*  **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**
-*  **[ft_neighbourplot](/reference/ft_neighbourplot)**
-*  **[ft_layoutplot](/reference/ft_layoutplot)**
+- **[ft_multiplotER](/reference/ft_multiplotER)**
+- **[ft_multiplotTFR](/reference/ft_multiplotTFR)**
+- **[ft_topoplotER](/reference/ft_topoplotER)**
+- **[ft_topoplotTFR](/reference/ft_topoplotTFR)**
+- **[ft_movieplotER](/reference/ft_movieplotER)**
+- **[ft_movieplotTFR](/reference/ft_movieplotTFR)**
+- **[ft_databrowser](/reference/ft_databrowser)**
+- **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**
+- **[ft_neighbourplot](/reference/ft_neighbourplot)**
+- **[ft_layoutplot](/reference/ft_layoutplot)**

@@ -1,5 +1,6 @@
 ---
 title: ft_connectivity_granger
+layout: default
 tags: 
 ---
 ```

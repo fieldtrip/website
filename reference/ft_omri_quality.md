@@ -1,5 +1,6 @@
 ---
 title: ft_omri_quality
+layout: default
 tags: 
 ---
 ```

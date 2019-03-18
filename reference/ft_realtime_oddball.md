@@ -1,5 +1,6 @@
 ---
 title: ft_realtime_oddball
+layout: default
 tags: 
 ---
 ```

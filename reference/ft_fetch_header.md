@@ -1,5 +1,6 @@
 ---
 title: ft_fetch_header
+layout: default
 tags: 
 ---
 ```

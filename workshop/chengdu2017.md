@@ -4,11 +4,11 @@ title: Chengdu, China
 
 # Chengdu, China
 
--   By whom: Robert Oostenveld
--   When: 27-29 September 2017
--   Where: Room 133 (theoretical part) and Room 135 (practical part), Center for Information in Medicine, School of Life Science & Technology, University of Electronic Science & Technology of China (UESTC)
--   Local Organizer: Pedro Valdés-Sosa, Vincent (Qing Wang) and Eduardo.
--   Advice for the attendees: Bring a computer with a recent MATLAB version and FieldTrip.
+- By whom: Robert Oostenveld
+- When: 27-29 September 2017
+- Where: Room 133 (theoretical part) and Room 135 (practical part), Center for Information in Medicine, School of Life Science & Technology, University of Electronic Science & Technology of China (UESTC)
+- Local Organizer: Pedro Valdés-Sosa, Vincent (Qing Wang) and Eduardo.
+- Advice for the attendees: Bring a computer with a recent MATLAB version and FieldTrip.
 
 This will be a loosely organized workshop that comprises a series of lectures and hands-on sessions. In the first workshop session Robert will give an introduction on FieldTrip and we will do a hands-on session on preprocessing EEG data. After that we will jointly decide what the next topic will be. Possible topics include basic or advanced analysis methods for EEG/MEG using FieldTrip, the use of the [BIDS standard](http://bids.neuroimaging.io) for EEG/MEG data organization and sharing, and the use of the megconnectome pipelines from the [Human Connectome Project](http://humanconnectome.org).
 
@@ -16,17 +16,17 @@ This will be a loosely organized workshop that comprises a series of lectures an
 
 #### Wednesday morning
 
--   1h - welcome and intro lecture - [slides](/assets/pdf/workshop/chengdu2017/introduction.pdf)
--   2h - hands-on on preprocessing of [EEG](/tutorial/preprocessing_erp) data.
+- 1h - welcome and intro lecture - [slides](/assets/pdf/workshop/chengdu2017/introduction.pdf)
+- 2h - hands-on on preprocessing of [EEG](/tutorial/preprocessing_erp) data.
 
 #### Thursday morning
 
--   3h - preprocessing of Cuban EEG dataset (eyes opened/closed and hyperventilation)
+- 3h - preprocessing of Cuban EEG dataset (eyes opened/closed and hyperventilation)
 
 #### Friday morning
 
--   1h - forward and inverse modeling lecture - [slides](/assets/pdf/workshop/chengdu2017/forward.pdf)
--   2h - anatomical processing and lead fields for Cuban EEG dataset
+- 1h - forward and inverse modeling lecture - [slides](/assets/pdf/workshop/chengdu2017/forward.pdf)
+- 2h - anatomical processing and lead fields for Cuban EEG dataset
 
 Please note that the script for the Cuban EEG dataset is further down on this page.
 

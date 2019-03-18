@@ -32,7 +32,7 @@ We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us t
 
 ### Github
 
-We use Git and Github for version control of the software and for managing external contributions.  More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
+We use Git and Github for version control of the software and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
 
 Following a push to github, a web hook is triggered. The code for that is at http://github.com/fieldtrip/webhook and is running on a dedicated (Raspberry Pi) server.
 
@@ -74,7 +74,7 @@ We use Google to complement the internal [Dokuwiki](#Dokuwiki) search engine. If
 
 ### Dashboard
 
-We have a set of MATLAB and Bash scripts for regression testing. This allows to do semi-automatic runs of all the test scripts on the DCCN compute cluster. We refer to this as the quality [/development/dashboard](/development/dashboard). The code is hosted on [github](https://github.com/fieldtrip/dashboard) and the MATLAB interface is implemented in **ft_test**, which you can find in the utilities folder.
+We have a set of MATLAB and Bash scripts for regression testing. This allows to do semi-automatic runs of all the test scripts on the DCCN compute cluster. We refer to this as the quality [dashboard](/development/dashboard). The code is hosted on [github](https://github.com/fieldtrip/dashboard) and the MATLAB interface is implemented in **[ft_test](/reference/ft_test)**, which you can find in the utilities folder.
 
 ### Slack
 

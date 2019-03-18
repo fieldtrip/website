@@ -1,5 +1,6 @@
 ---
 title: ft_denoise_tsr
+layout: default
 tags: 
 ---
 ```

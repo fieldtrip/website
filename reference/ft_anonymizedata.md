@@ -1,5 +1,6 @@
 ---
 title: ft_anonymizedata
+layout: default
 tags: 
 ---
 ```

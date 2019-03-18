@@ -1,22 +1,11 @@
 ---
 title: ft_inside_vol
+layout: default
 tags: 
 ---
 ```
- FT_INSIDE_VOL locates dipole locations inside/outside the source
- compartment of a volume conductor model.
+ This function is a backward compatibility wrapper for existing MATLAB scripts
+ that call a function that is not part of the FieldTrip toolbox any more.
 
- Use as
-   [inside] = ft_inside_vol(dippos, headmodel, ...)
-
- The input should be
-   dippos      = Nx3 matrix with dipole positions
-   headmodel   = structure with volume conductor model
- and the output is
-   inside      = boolean vector indicating for each dipole wether it is inside the source compartment
-
- Additional optional input arguments should be given in key value pairs and can include
-   inwardshift = number
-   grad        = structure with gradiometer information, used for localspheres
-   headshape   = structure with headshape, used for old CTF localspheres strategy
+ Please update your code to make it future-proof.
 ```

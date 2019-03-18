@@ -21,57 +21,58 @@ To study the oscillatory synchrony between two signals, one can compute the cohe
 
 To compute the coherence between the MEG and EMG signals for the example dataset we will perform the following step
 
-* Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
-* Compute the power spectra and cross-spectral densities using the function **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute the coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**
-* Visualize the results using **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
-* Subsequently it is possible to localise the neuronal sources coherent with the EMG, using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+- Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Compute the power spectra and cross-spectral densities using the function **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute the coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**
+- Visualize the results using **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_multiplotER](/reference/ft_multiplotER)**, and **[ft_topoplotER](/reference/ft_topoplotER)**
+- Subsequently it is possible to localise the neuronal sources coherent with the EMG, using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
 
 ## Preprocessing
 
 We will calculate the coherence between the MEG and the EMG when the subject extended her LEFT wrist, while keeping the right forearm muscle relaxed.
-The first step is to read the data. In this section we will apply automatic artifact rejection. Preprocessing requires the original MEG dataset, which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
+The first step is to read the data. In this section we will apply automatic artifact rejection. Preprocessing requires the original MEG dataset, which is
+available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip).
 
 The epochs of interest have to be defined according to a custom-written function called trialfun_left.m. Note that this function is not part of the FieldTrip toolbox: see [appendix 2](/tutorial/coherence#appendix_2trialfun_left), or download it from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/trialfun_left.m). This function uses the information provided by the triggers which were recorded simultaneously with the data. In this experiment each trigger corresponds with the start or the end of a contraction. The epochs which correspond to a contraction of the left forearm muscle are selected. Subsequently these 10-second pieces are cut into ten 1-second epochs.
 
-	% find the interesting epochs of data
-	cfg = [];
-	cfg.trialfun                  = 'trialfun_left';
-	cfg.dataset                   = 'SubjectCMC.ds';
-	cfg = ft_definetrial(cfg);
+    % find the interesting epochs of data
+    cfg = [];
+    cfg.trialfun                  = 'trialfun_left';
+    cfg.dataset                   = 'SubjectCMC.ds';
+    cfg = ft_definetrial(cfg);
 
-	% detect EOG artifacts in the MEG data
-	cfg.continuous                = 'yes';
-	cfg.artfctdef.eog.padding     = 0;
-	cfg.artfctdef.eog.bpfilter    = 'no';
-	cfg.artfctdef.eog.detrend     = 'yes';
-	cfg.artfctdef.eog.hilbert     = 'no';
-	cfg.artfctdef.eog.rectify     = 'yes';
-	cfg.artfctdef.eog.cutoff      = 2.5;
-	cfg.artfctdef.eog.interactive = 'no';
-	cfg = ft_artifact_eog(cfg);
+    % detect EOG artifacts in the MEG data
+    cfg.continuous                = 'yes';
+    cfg.artfctdef.eog.padding     = 0;
+    cfg.artfctdef.eog.bpfilter    = 'no';
+    cfg.artfctdef.eog.detrend     = 'yes';
+    cfg.artfctdef.eog.hilbert     = 'no';
+    cfg.artfctdef.eog.rectify     = 'yes';
+    cfg.artfctdef.eog.cutoff      = 2.5;
+    cfg.artfctdef.eog.interactive = 'no';
+    cfg = ft_artifact_eog(cfg);
 
-	% detect jump artifacts in the MEG data
-	cfg.artfctdef.jump.interactive = 'no';
-	cfg.padding                    = 5;
-	cfg = ft_artifact_jump(cfg);
+    % detect jump artifacts in the MEG data
+    cfg.artfctdef.jump.interactive = 'no';
+    cfg.padding                    = 5;
+    cfg = ft_artifact_jump(cfg);
 
-	% detect muscle artifacts in the MEG data
-	cfg.artfctdef.muscle.cutoff      = 8;
-	cfg.artfctdef.muscle.interactive = 'no';
-	cfg = ft_artifact_muscle(cfg);
+    % detect muscle artifacts in the MEG data
+    cfg.artfctdef.muscle.cutoff      = 8;
+    cfg.artfctdef.muscle.interactive = 'no';
+    cfg = ft_artifact_muscle(cfg);
 
-	% reject the epochs that contain artifacts
-	cfg.artfctdef.reject          = 'complete';
-	cfg = ft_rejectartifact(cfg);
+    % reject the epochs that contain artifacts
+    cfg.artfctdef.reject          = 'complete';
+    cfg = ft_rejectartifact(cfg);
 
-	% preprocess the MEG data
-	cfg.demean                    = 'yes';
-	cfg.dftfilter                 = 'yes';
-	cfg.channel                   = {'MEG'};
-	cfg.continuous                = 'yes';
-	meg = ft_preprocessing(cfg);
+    % preprocess the MEG data
+    cfg.demean                    = 'yes';
+    cfg.dftfilter                 = 'yes';
+    cfg.channel                   = {'MEG'};
+    cfg.continuous                = 'yes';
+    meg = ft_preprocessing(cfg);
 
-Next, read the left and right EMG data. Note that the settings are different for the EMG and MEG data. Most importantly, the EMG data are highpass filtered and rectified. This is a standard procedure when calculating cortico-muscle coherence.  
+Next, read the left and right EMG data. Note that the settings are different for the EMG and MEG data. Most importantly, the EMG data are highpass filtered and rectified. This is a standard procedure when calculating cortico-muscle coherence.
 
     cfg              = [];
     cfg.dataset      = meg.cfg.dataset;
@@ -93,7 +94,7 @@ Note, that due to the artifact rejection, this procedure is very slow and we typ
 
     save data data
 
-The preprocessed data is available as a mat-file from the  [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this
+The preprocessed data is available as a mat-file from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this
 
     load data
 
@@ -112,7 +113,7 @@ To get a feel for the data, plot a trial from a sensor overlying the left motor-
 
 {% include image src="/assets/img/tutorial/coherence/figure1c.png" width="400" %}
 
-*Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG.*
+_Figure: An example of the raw MEG data from sensor MLC21 (upper frame) and the EMG data (lower frame). The signals are from the output of **[ft_preprocessing](/reference/ft_preprocessing)** and plotted using the MATLAB plot function. Note that the signal strength of the left EMG is bigger than that of the right EMG._
 
 #### Exercise 1
 
@@ -132,7 +133,7 @@ After the computation of the frequency domain representation **[ft_connectivitya
 
 In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the fourier spectra, which is the 'bare' frequency domain representation of the signal, where both amplitude and phase information of the oscillations are represented in a complex number for each frequency.
 
-First, a configuration structure (cfg) must be defined. The FFT-algorithm will be used to compute the fourier representation of each signal. To optimize the estimation, spectral smoothing using ‘multitapers’ will be applied. In this context, the degree of ‘smoothing’ (as defined in the parameter cfg.tapsmofrq) is critical. We will return to this parameter later.  
+First, a configuration structure (cfg) must be defined. The FFT-algorithm will be used to compute the Fourier representation of each signal. To optimize the estimation, spectral smoothing using ‘multitapers’ will be applied. In this context, the degree of ‘smoothing’ (as defined in the parameter cfg.tapsmofrq) is critical. We will return to this parameter later.
 
     cfg            = [];
     cfg.output     = 'fourier';
@@ -145,7 +146,7 @@ First, a configuration structure (cfg) must be defined. The FFT-algorithm will b
 
 ##### Method 2
 
-In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the cross- and power spectra, which are mathematically constructed from the multiplication of a complex-valued fourier spectrum with the complex conjugate of another fourier spectrum. If the two fourier spectra are derived from the same channel, the cross spectrum is called the auto spectrum, and this is exactly the same as the power spectrum. Rather than in method 1 (see above), where the phase in the fourier spectra represented the *phase* of the oscillation, the phase in the cross spectra represent the *phase difference* between the oscillations of a specific channel pair. For this reason, we need to specify in the cfg between which pairs we want to compute the cross spectra.
+In this 'method' we will use **[ft_freqanalysis](/reference/ft_freqanalysis)** for the computation of the cross- and power spectra, which are mathematically constructed from the multiplication of a complex-valued fourier spectrum with the complex conjugate of another fourier spectrum. If the two fourier spectra are derived from the same channel, the cross spectrum is called the auto spectrum, and this is exactly the same as the power spectrum. Rather than in method 1 (see above), where the phase in the fourier spectra represented the _phase_ of the oscillation, the phase in the cross spectra represent the _phase difference_ between the oscillations of a specific channel pair. For this reason, we need to specify in the cfg between which pairs we want to compute the cross spectra.
 
     cfg            = [];
     cfg.output     = 'powandcsd';
@@ -181,7 +182,7 @@ Visualize the coherence between the EMG and all the MEG sensor
 
 {% include image src="/assets/img/tutorial/coherence/figure2.png" width="400" %}
 
-*Figure: The coherence between the left EMG and all the MEG sensors calculated using ft_freqanalysis and ft_connectivityanalysis. Plotting was done with ft_multiplotER.*
+_Figure: The coherence between the left EMG and all the MEG sensors calculated using ft_freqanalysis and ft_connectivityanalysis. Plotting was done with ft_multiplotER._
 
 Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multiplotER](/reference/ft_multiplotER)**
 
@@ -190,7 +191,7 @@ Plot the coherence for sensor MRC21 (using the same settings as in **[ft_multipl
 
 {% include image src="/assets/img/tutorial/coherence/figure3b.png" width="400" %}
 
-*Figure: The coherence spectrum between the EMG and sensor MRC21.*
+_Figure: The coherence spectrum between the EMG and sensor MRC21._
 
 ### Exercise 2
 
@@ -209,7 +210,7 @@ b) Plot a topographical distribution of the coherence in the beta band. The vari
 
 {% include image src="/assets/img/tutorial/coherence/tutorial4b.png" width="400" %}
 
-*Figure: A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER.*
+_Figure: A topographic representation of the coherence between the left EMG and the sensors. The plot was created with ft_topoplotER._
 {% include markup/end %}
 
 ### Exercise 3
@@ -242,7 +243,7 @@ a) 2 Hz smoothing (cfg.tapsmofrq = 2 Hz)
     cfg.channelcmb = {'MEG' 'EMG'};
     fd2            = ft_connectivityanalysis(cfg,freq2);
 
-Plot the results of the 5 and 2Hz smoothin
+Plot the results of the 5 and 2Hz smoothing:
 
     cfg               = [];
     cfg.parameter     = 'cohspctrm';
@@ -296,7 +297,7 @@ Create the following configuration, and compute the coherence.
     cfg.keeptrials = 'yes';
     cfg.channel    = {'MEG' 'EMGlft'};
     cfg.channelcmb = {'MEG' 'EMGlft'};
-    cfg.trials     = 1:50;  
+    cfg.trials     = 1:50;
     freq50         = ft_freqanalysis(cfg,data);
 
     cfg            = [];
@@ -386,11 +387,11 @@ There are various ways to visualise the volumetric interpolated data. The most s
 
 {% include image src="/assets/img/tutorial/coherence/figure5.png" %}
 
-//Figure 5; The neuronal source showing maximum coherence with the left EMG at 18 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**//.
+_Figure: The neuronal source showing maximum coherence with the left EMG at 18 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**._
 
 ## Appendix 2: trialfun_left
 
-The trial function used to extract the trial
+The trial function used to extract the trials:
 
     function trl = trialfun_left(cfg)
 

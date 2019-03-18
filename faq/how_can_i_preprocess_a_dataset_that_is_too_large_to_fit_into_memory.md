@@ -9,19 +9,19 @@ If your dataset is too large to fit into memory at once, you can preprocess one 
 
 In summary, the code would look like this:
 
-	for i=1:nchans
-	  cfgp         = [];
-	  cfgp.dataset = 'yourfile.dat';
-	  % instead of specifying channel names, you are allowed to use channel numbers
-	  cfgp.channel = i;
-	  datp         = ft_preprocessing(cfgp);
+    for i=1:nchans
+    cfgp         = [];
+    cfgp.dataset = 'yourfile.dat';
+    % instead of specifying channel names, you are allowed to use channel numbers
+    cfgp.channel = i;
+    datp         = ft_preprocessing(cfgp);
 
-	  cfgr            = [];
-	  cfgr.resamplefs = 250;
-	  datr{i}         = ft_resampledata(cfgr, datp);
+    cfgr            = [];
+    cfgr.resamplefs = 250;
+    datr{i}         = ft_resampledata(cfgr, datp);
 
-	  clear datp
-	end
+    clear datp
+    end
 
-	cfg = [];
-	datall = ft_appenddata(cfg, datr{:}); % this expands all cells into input variables
+    cfg = [];
+    datall = ft_appenddata(cfg, datr{:}); % this expands all cells into input variables

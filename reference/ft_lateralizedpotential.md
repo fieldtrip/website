@@ -1,5 +1,6 @@
 ---
 title: ft_lateralizedpotential
+layout: default
 tags: 
 ---
 ```

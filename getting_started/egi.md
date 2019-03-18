@@ -11,13 +11,13 @@ Please add information if you're using EGI/Philips data and want to share info w
 
 Net Station can export data to several data formats that FieldTrip can read in.
 
-*  .egis, .sbin, and .mff can be read in by FieldTrip (I have no details on how well they work, and what the known issues are). Other formats like .ave, .gave, .ses are not supported but the data can be read by exporting to one of the supported formats.
-*  **Simple binary** (.raw), only the channels from the hdEEG net are exported, the PIB channels, for instance, are not. Channel labels are not present in this format, and are thus made on the fly by FieldTrip. Events are present and read in correctly. Data sets containing multiple epochs are exported by NetStation as separate .raw files. The events are, however, exported as one file, which make it tricky (read impossible) to align data and events properly when having multiple discontinuous epochs.
-*  **EDF+** (.edf) All channels, including PIB channels, are read in correctly, including channel labels. However, the events, which are stored on the annotation channel, are written in a way by Net Station that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream.
+- .egis, .sbin, and .mff can be read in by FieldTrip (I have no details on how well they work, and what the known issues are). Other formats like .ave, .gave, .ses are not supported but the data can be read by exporting to one of the supported formats.
+- **Simple binary** (.raw), only the channels from the hdEEG net are exported, the PIB channels, for instance, are not. Channel labels are not present in this format, and are thus made on the fly by FieldTrip. Events are present and read in correctly. Data sets containing multiple epochs are exported by NetStation as separate .raw files. The events are, however, exported as one file, which make it tricky (read impossible) to align data and events properly when having multiple discontinuous epochs.
+- **EDF+** (.edf) All channels, including PIB channels, are read in correctly, including channel labels. However, the events, which are stored on the annotation channel, are written in a way by Net Station that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream.
 
 ## Meta File Format (mff)
 
- The beta version of NetStation 4.5 (and up) writes data in mff, which is supported by FieldTrip as of 2011. FieldTrip reads in the data of all signals (hdEEG-net, PIB, etc). Data sets containing multiple epochs are supported, FieldTrip keeps track of the offset to the start of the recording for all epochs. Also events are read in, and also with discontinuous epochs aligning of events to data works.
+The beta version of NetStation 4.5 (and up) writes data in mff, which is supported by FieldTrip as of 2011. FieldTrip reads in the data of all signals (hdEEG-net, PIB, etc). Data sets containing multiple epochs are supported, FieldTrip keeps track of the offset to the start of the recording for all epochs. Also events are read in, and also with discontinuous epochs aligning of events to data works.
 
 The initial (v1) implementation was made by Ingrid Nieuwenhuis. It works for quite a few datasets but also has a number of known limitations (a.o. not full reading of info from triggers/events).
 
@@ -28,15 +28,18 @@ The third (v3) implementation is partially provided by EGI and has been reworked
 In short, the code in ft_read_header and ft_read_data does
 
     case {'egi_mff_v1' 'egi_mff'}
-   % do the old stuff
+
+    % do the old stuff
     case {'egi_mff_v2'}
-   % do the newer stuff
+    % do the newer stuff
     case {'egi_mff_v3'}
-   % do the newest stuff
+    % do the newest stuff
 
 At this moment the default is to use the egi_mff_v1 implementation. This can be overruled by specifying
+
     cfg.dataformat = 'egi_mff_v3'
     cfg.headerformat = 'egi_mff_v3'
+
 to **[ft_preprocessing](/reference/ft_preprocessing)** and all other high-level FT functions that read data. Furthermore, by specifying
 
     ft_read_header(...., 'headerformat', 'egi_mff_v3')

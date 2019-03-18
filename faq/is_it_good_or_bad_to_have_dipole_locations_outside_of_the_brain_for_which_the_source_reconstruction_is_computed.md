@@ -7,8 +7,8 @@ tags: [faq, source]
 
 This depends on the type of source reconstruction you are performing, and on the head model (also called volume conduction model) with which you create your source model (also called grid). Depending on this it is beneficial in some cases, but harmful in others. To determine whether it is harmful, one could ask the following question
 
- 1.  is my source reconstruction of locations inside the brain affected by the source reconstruction of other locations? (e.g. with minimum norm estimate (MNE) based methods, but not with beamformers)
- 2.  can my head model create meaningful lead fields for dipole locations that fall outside  of the brain? (e.g. with 'singleshell/singlesphere/localsphere' models, but not with boundary element models (BEM))
+1.  is my source reconstruction of locations inside the brain affected by the source reconstruction of other locations? (e.g. with minimum norm estimate (MNE) based methods, but not with beamformers)
+2.  can my head model create meaningful lead fields for dipole locations that fall outside of the brain? (e.g. with 'singleshell/singlesphere/localsphere' models, but not with boundary element models (BEM))
 
 If the answer the first question is 'Yes', then it can be harmful. If the answer to the second question is 'No', the results are not meaningful at these locations. If the answer the first question is 'No', and the answer to the second question is 'Yes', then it can be beneficial. Below some examples.
 
