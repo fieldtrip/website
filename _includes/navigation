@@ -16,7 +16,7 @@
       {% endfor %}
 
       <li class="nav-item">
-        <a class="nav-link" href="https://github.com/fieldtrip/fieldtrip">
+        <a class="nav-link" href="https://github.com/fieldtrip">
           <span class="fab fa-github"></span>
         </a>
       </li>

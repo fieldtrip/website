@@ -1,5 +1,6 @@
 ---
 title: ft_scalpcurrentdensity
+layout: default
 tags: 
 ---
 ```
@@ -23,8 +24,7 @@ tags:
    cfg.method       = 'finite' for finite-difference method or
                       'spline' for spherical spline method
                       'hjorth' for Hjorth approximation method
-   cfg.elecfile     = string, file containing the electrode definition
-   cfg.elec         = structure with electrode definition
+   cfg.elec         = structure with electrode positions or filename, see FT_READ_SENS
    cfg.trials       = 'all' or a selection given as a 1xN vector (default = 'all')
    cfg.feedback     = string, 'no', 'text', 'textbar', 'gui' (default = 'text')
 
@@ -43,6 +43,9 @@ tags:
 
  The hjorth method requires the following
    cfg.neighbours   = neighbourhood structure, see FT_PREPARE_NEIGHBOURS
+
+ For the spline method you can specify the following
+   cfg.badchannel      = cell-array, see FT_CHANNELSELECTION for details (default = [])
 
  Note that the skin conductivity, electrode dimensions and the potential
  all have to be expressed in the same SI units, otherwise the units of

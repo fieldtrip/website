@@ -1,3 +1,6 @@
+- name:  Frequently Asked Questions
+  link:  /faq
+
 - name:  What is the difference between the ACPC, MNI, SPM and TAL coordinate systems?
   link:  /faq/acpc
 
@@ -31,17 +34,17 @@
 - name:  Can I compare EEG channels between different electrode caps?
   link:  /faq/capmapping
 
-- name:  Can I use FieldTrip without MATLAB license?
-  link:  /faq/compiled
-
 - name:  How can I compile the mex files and command-line executables ?
   link:  /faq/compile
 
-- name:  What dataformats are supported?
-  link:  /faq/dataformat
+- name:  Can I use FieldTrip without MATLAB license?
+  link:  /faq/compiled
 
 - name:  How can I share my MEG data?
   link:  /faq/data_sharing
+
+- name:  What dataformats are supported?
+  link:  /faq/dataformat
 
 - name:  How can I deal with a discontinuous Neuralynx recording
   link:  /faq/discontinuous_neuralynx
@@ -238,6 +241,15 @@
 - name:  How to change the MRI orientation, the voxel size or the field-of-view?
   link:  /faq/how_change_mri_orientation_size_fov
 
+- name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
+  link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
+
+- name:  How do I construct a layout file for the plotting functions?
+  link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
+
+- name:  How do I prevent FieldTrip from printing the time and memory after each function call?
+  link:  /faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call
+
 - name:  How does a difference in trial numbers per condition affect my statistical test
   link:  /faq/how_does_a_difference_in_trial_numbers_per_condition_affect_my_statistical_test
 
@@ -252,15 +264,6 @@
 
 - name:  How does the peer smartshare algorithm work?
   link:  /faq/how_does_the_peer_smartshare_algorithm_work
-
-- name:  How do I avoid having to allocate N copies of my data if I want to execute N jobs?
-  link:  /faq/how_do_i_avoid_having_to_allocate_n_copies_of_my_data_if_i_want_to_execute_n_jobs
-
-- name:  How do I construct a layout file for the plotting functions?
-  link:  /faq/how_do_i_construct_a_layout_file_for_the_plotting_functions
-
-- name:  How do I prevent FieldTrip from printing the time and memory after each function call?
-  link:  /faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call
 
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
@@ -316,9 +319,6 @@
 - name:  How to get started with the MATLAB distributed computing toolbox?
   link:  /faq/how_to_get_started_with_the_matlab_distributed_computing_toolbox
 
-- name:  How to perform a multiple sessions MEG experiment (CTF275 system)
-  link:  /faq/how_to_perform_a_multiple_sessions_meg_experiment_ctf275_system
-
 - name:  How to select the correct SPM toolbox?
   link:  /faq/how_to_select_the_correct_spm_toolbox
 
@@ -340,8 +340,17 @@
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
   link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
+- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
+  link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
+
+- name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
+  link:  /faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore
+
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
+
+- name:  Is it good or bad to have dipole locations outside of the brain for which the source reconstruction is computed?
+  link:  /faq/is_it_good_or_bad_to_have_dipole_locations_outside_of_the_brain_for_which_the_source_reconstruction_is_computed
 
 - name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
   link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
@@ -351,12 +360,6 @@
 
 - name:  How can I compute inter-trial coherence?
   link:  /faq/itc
-
-- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
-  link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
-
-- name:  I used to work with trl-matrices that have more than 3 columns. Why is this not supported anymore?
-  link:  /faq/i_used_to_work_with_trl-matrices_that_have_more_than_3_columns._why_is_this_not_supported_anymore
 
 - name:  MATLAB complains about a missing or invalid MEX file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
@@ -369,9 +372,6 @@
 
 - name:  MATLAB version 7.3 (2006b) crashes when I try to do ...
   link:  /faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do
-
-- name:  Frequently Asked Questions
-  link:  /faq
 
 - name:  How does MTMCONVOL work?
   link:  /faq/mtmconvol
@@ -421,7 +421,7 @@
 - name:  What are the different approaches I can take for distributed computing?
   link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
 
-- name:  What are the different Neuromag and Yokogawa layouts good for?
+- name:  What are the different Neuromag/Elekta and Yokogawa layouts good for?
   link:  /faq/what_are_the_different_neuromag_and_yokogawa_layouts_good_for
 
 - name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
@@ -430,10 +430,13 @@
 - name:  What does a typical call to a FieldTrip function look like?
   link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
 
-- name:  What happens if a job fails to execute properly?
+- name:  What does "padding not sufficient for requested frequency resolution" mean?
+  link:  /faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean
+
+- name:  What happens if a peer distributed job fails to execute properly?
   link:  /faq/what_happens_if_a_job_fails_to_execute_properly
 
-- name:  What happens with a job that has an error on the slave?
+- name:  What happens with a peer distributed job that has an error on the slave?
   link:  /faq/what_happens_with_a_job_that_has_an_error_on_the_slave
 
 - name:  What is the conductivity of the brain, CSF, skull and skin tissue?
@@ -490,7 +493,7 @@
 - name:  Why are the peers using multicast to announce themselves?
   link:  /faq/why_are_the_peers_using_multicast_to_announce_themselves
 
-- name:  Why are there multiple neighbour templates for the NeuroMag306 system?
+- name:  Why are there multiple neighbour templates for the Neuromag306 system?
   link:  /faq/why_are_there_multiple_neighbour_templates_for_the_neuromag306_system
 
 - name:  Why does my anatomical MRI show upside-down when plotting it with ft_sourceplot?

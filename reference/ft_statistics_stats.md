@@ -1,5 +1,6 @@
 ---
 title: ft_statistics_stats
+layout: default
 tags: 
 ---
 ```

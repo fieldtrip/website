@@ -1,5 +1,6 @@
 ---
 title: ft_appenddata
+layout: default
 tags: 
 ---
 ```

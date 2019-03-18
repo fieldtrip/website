@@ -130,8 +130,14 @@
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 
+- name:  Analysis of monkey ECoG recordings
+  link:  /tutorial/monkey_ecog
+
 - name:  Multivariate analysis of electrophysiological data
   link:  /tutorial/multivariateanalysis
+
+- name:  Classification of event related MEG data using MVPA-Light
+  link:  /tutorial/mvpa_light
 
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp
@@ -151,14 +157,14 @@
 - name:  Beamforming evoked fields and potentials in combined MEG/EEG data
   link:  /workshop/aarhus/beamformingerf
 
+- name:  FieldTrip workshop in Madrid
+  link:  /workshop/madrid2019
+
 - name:  Convert to BIDS
   link:  /workshop/madrid2019/convert_bids
 
 - name:  Details on the resting-state EEG dataset recorded with different sedation levels
   link:  /workshop/madrid2019/eeg_chennu
-
-- name:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
 
 - name:  Cleaning and processing resting-state EEG
   link:  /workshop/madrid2019/tutorial_cleaning

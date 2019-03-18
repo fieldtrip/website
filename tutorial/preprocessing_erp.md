@@ -21,15 +21,15 @@ The EEG dataset used in this script is available [here](ftp://ftp.fieldtriptoolb
 
 ## Procedure
 
-###  Defining trials
+### Defining trials
 
-Make sure that all files that you have downloaded from the ftp link are unzipped and are located in the present working directory in MATLAB. In the command window, you can type [pwd](http://www.mathworks.nl/help/techdoc/ref/pwd.html) to see what the present directory is, and you can type [dir](http://www.mathworks.nl/help/techdoc/ref/dir.html) to see the content of the working directory.  
+Make sure that all files that you have downloaded from the ftp link are unzipped and are located in the present working directory in MATLAB. In the command window, you can type [pwd](http://www.mathworks.nl/help/techdoc/ref/pwd.html) to see what the present directory is, and you can type [dir](http://www.mathworks.nl/help/techdoc/ref/dir.html) to see the content of the working directory.
 
 For memory efficiency (especially relevant for large datasets), with FieldTrip we commonly use the strategy to only read in those segments of data that are of interest. This requires first to define the segments of interest (the trials) and subsequently to read them in and preprocess them. It is also possible to read in the whole continuous data, and segment the data in memory [(see here)](/tutorial/continuous).
 
 Instead of using the default 'trialfun_general' function with **[ft_definetrial](/reference/ft_definetrial)**, we will use a custom 'trialfun_affcog' that has been written specifically for this experiment. This custom function reads markers from the EEG record and identifies trials that belong to condition 1 (positive-negative judgement) or 2 (animal-human judgement). The function is available along with the data.
 
-The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendixthe_trialfun_used_in_this_example ) of this example script. Please save it to a local file with the name `trialfun_affcog.m`.
+The custom trial function is available from [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_erp/trialfun_affcog.m) or can be found at the end in the [appendix](#appendix-the-trialfun-used-in-this-example) of this example script. Please save it to a local file with the name `trialfun_affcog.m`.
 
     cfg              = [];
     cfg.trialfun     = 'trialfun_affcog';
@@ -72,7 +72,7 @@ Now call pre-processing:
 
 Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data segments that were read into memory.
 
-    cfg = [];  % use only default options                 
+    cfg = [];  % use only default options
     ft_databrowser(cfg, data);
 
 {% include markup/info %}
@@ -81,6 +81,7 @@ You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize th
     cfg         = [];
     cfg.dataset = 's04.vhdr';
     ft_databrowser(cfg);
+
 {% include markup/end %}
 
 #### Exercise 1
@@ -93,7 +94,7 @@ Can you find this line (or lines with other labels) on the second call to ft_dat
 Try setting `cfg.viewmode = 'vertical'` before the call to ft_databrowser.
 {% include markup/end %}
 
-FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memor
+FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memory:
 
     >> data
 
@@ -185,7 +186,7 @@ You can check the channel labels that are now present in the data and use **[ft_
 
 ### Channel layout
 
-For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was use
+For topoplotting and sometimes for analysis it is necessary to know how the electrodes were positioned on the scalp. In contrast to the sensor arrangement from a given MEG manufacturer, the topographical arrangement of the channels in EEG is not fixed. Different acquisition systems are designed for different electrode montages, and the number and position of electrodes can be adjusted depending on the experimental goal. In the current experiment, so-called 64-electrodes equidistant montage (ActiCap, BrainVision) was used.
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/layoutacticapmpi.png" width="200" %}
 
@@ -199,7 +200,7 @@ Note that the layout should contain correct channel labels that match the channe
 
 ### Artifacts
 
-An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [visual artifact removal tutorial](/tutorial/visual_artifact_rejection ) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts.  We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
+An next important step of EEG preprocessing is detection (and rejection) of artifacts. Different approaches of dealing with artifacts are presented in details in the [introductory tutorial on artifacts](/tutorial/artifacts), the [visual artifact removal tutorial](/tutorial/visual_artifact_rejection) and the [automatic artifact rejection removal tutorial](/tutorial/automatic_artifact_rejection). In this example script, we will use **[ft_rejectvisual](/reference/ft_rejectvisual)** function to visually inspect the data and reject the trials or channels that contain artifacts. We first will try the "channel" mode. In this mode all trials are displayed at once allowing paging through the channels. Then we will try the "summary" mode.
 
 #### Channel mode
 
@@ -207,7 +208,7 @@ An next important step of EEG preprocessing is detection (and rejection) of arti
     cfg.method = 'channel';
     ft_rejectvisual(cfg, data)
 
-You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yourself that trials 22, 42, 126, 136 and 150 contain blinks. You can exclude a trial from the data by clicking on it. Note, however, that in this example we do not assign any output to the function. MATLAB will create the default output "ans" variable. All the changes (rejections) that you make will be applied to the "ans". The "data" will remain the same, no trials will be removed!  
+You can scroll to the vertical EOG channel ('veog', number 61) and confirm to yourself that trials 22, 42, 126, 136 and 150 contain blinks. You can exclude a trial from the data by clicking on it. Note, however, that in this example we do not assign any output to the function. MATLAB will create the default output "ans" variable. All the changes (rejections) that you make will be applied to the "ans". The "data" will remain the same, no trials will be removed!
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/example_script_artifacts1.png" width="600" %}
 
@@ -234,9 +235,9 @@ Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes 
 {% include markup/info %}
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
 
-   cfg          = [];
-   cfg.viewmode = 'vertical';
-   ft_databrowser(cfg, data_clean);
+    cfg = [];
+    cfg.viewmode = 'vertical';
+    ft_databrowser(cfg, data_clean);
 
 Note that you can also use the data browser to mark artifacts (instead of or in addition to ft_rejectvisual).
 {% include markup/end %}
@@ -248,17 +249,17 @@ We now would like to compute the ERP's for two conditions: positive-negative jud
     disp(data_clean.trialinfo')
 
      Columns 1 through 19
-       2 1 1 2 1 1 2 1 1 2 1 1 1 2 1 1 2 2 2   
+       2 1 1 2 1 1 2 1 1 2 1 1 1 2 1 1 2 2 2
 
      Columns 20 through 38
-       1 2 2 2 2 2 1 2 1 2 1 2 2 1 2 1 2 1 2   
+       1 2 2 2 2 2 1 2 1 2 1 2 2 1 2 1 2 1 2
 
      ...
 
      Columns 172 through 184
        2 1 1 2 2 2 1 2 1 1 1 1 2
 
-FieldTrip automatically kept track of the trials with artifacts that were rejected: the data_clean.trialinfo field contains the condition code for the 184 clean trials, whereas the data.trialinfo field contained the information for the original 192 trials.  
+FieldTrip automatically kept track of the trials with artifacts that were rejected: the data_clean.trialinfo field contains the condition code for the 184 clean trials, whereas the data.trialinfo field contained the information for the original 192 trials.
 
 We now select the trials with conditions 1 and 2 and compute ERP's.
 

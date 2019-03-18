@@ -1,5 +1,6 @@
 ---
 title: ft_channelselection
+layout: default
 tags: 
 ---
 ```

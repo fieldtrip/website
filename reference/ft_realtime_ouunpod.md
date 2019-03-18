@@ -1,5 +1,6 @@
 ---
 title: ft_realtime_ouunpod
+layout: default
 tags: 
 ---
 ```

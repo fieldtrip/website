@@ -1,5 +1,6 @@
 ---
 title: ft_headmodel_concentricspheres
+layout: default
 tags: 
 ---
 ```

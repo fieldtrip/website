@@ -1,5 +1,6 @@
 ---
 title: ft_prepare_headmodel
+layout: default
 tags: 
 ---
 ```
@@ -17,11 +18,11 @@ tags:
  subsequent computations are efficient and fast.
 
  Use as
-   headmodel = ft_prepare_headmodel(cfg)       or
-   headmodel = ft_prepare_headmodel(cfg, mesh) with the output of FT_PREPARE_MESH or FT_READ_HEADSHAPE
-   headmodel = ft_prepare_headmodel(cfg, seg)  with the output of FT_VOLUMESEGMENT
-   headmodel = ft_prepare_headmodel(cfg, elec) with the output of FT_READ_SENS
-   headmodel = ft_prepare_headmodel(cfg, grid) with the output of FT_PREPARE_LEADFIELD
+   headmodel = ft_prepare_headmodel(cfg)               or
+   headmodel = ft_prepare_headmodel(cfg, mesh)         with the output of FT_PREPARE_MESH or FT_READ_HEADSHAPE
+   headmodel = ft_prepare_headmodel(cfg, seg)          with the output of FT_VOLUMESEGMENT
+   headmodel = ft_prepare_headmodel(cfg, elec)         with the output of FT_READ_SENS
+   headmodel = ft_prepare_headmodel(cfg, sourcemodel)  with the output of FT_PREPARE_LEADFIELD
 
  In general the input to this function is a geometrical description of the
  shape of the head and a description of the electrical conductivity. The
@@ -93,7 +94,7 @@ tags:
 
  BESA
    cfg.headmodel         (required) string, filename of precomputed FEM leadfield
-   cfg.elecfile          (required) string, filename of electrode configuration for the FEM leadfield
+   cfg.elec              (required) structure with electrode positions or filename, see FT_READ_SENS
    cfg.outputfile        (required) string, filename prefix for the output files
 
  FNS
@@ -113,7 +114,7 @@ tags:
  low-level function which is called FT_HEADMODEL_XXX where XXX is the method
  of choise.
 
- See also FT_PREPARE_SOURCEMODEL, FT_PREPARE_LEADFIELD, FT_PREPARE_MESH,
+ See also FT_PREPARE_MESH, FT_PREPARE_SOURCEMODEL, FT_PREPARE_LEADFIELD,
  FT_HEADMODEL_BEMCP, FT_HEADMODEL_ASA, FT_HEADMODEL_DIPOLI,
  FT_HEADMODEL_SIMBIO, FT_HEADMODEL_FNS, FT_HEADMODEL_HALFSPACE,
  FT_HEADMODEL_INFINITE, FT_HEADMODEL_OPENMEEG, FT_HEADMODEL_SINGLESPHERE,

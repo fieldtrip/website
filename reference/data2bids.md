@@ -1,5 +1,6 @@
 ---
 title: data2bids
+layout: default
 tags: 
 ---
 ```
@@ -26,6 +27,7 @@ tags:
  The configuration structure should contains
    cfg.dataset                 = string, filename of the input data
    cfg.outputfile              = string, optional filename for the output data, see below
+   cfg.keepnative              = string, 'yes' or 'no' (default = 'no')
    cfg.presentationfile        = string, optional filename for the presentation log file, see below
    cfg.mri.deface              = string, 'yes' or 'no' (default = 'no')
    cfg.mri.writesidecar        = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
@@ -43,10 +45,10 @@ tags:
  it will get from the dataset.
 
  If you also specify cfg.outputfile, this function will furthermore read the data
- from the input dataset and (if needed) convert and write it to the output file. The
- output format is NIFTI for anatomical MRIs, and BrainVision for EEG and iEEG. Note
- that in principle you can also convert MEG data to BrainVision, but that is not
- recommended.
+ from the input dataset and (if cfg.keepnative is no), convert and write
+ it to the output file. The output format is NIFTI for anatomical MRIs,
+ and BrainVision for EEG and iEEG. Note that in principle you can also
+ convert MEG data to BrainVision, but that is not recommended.
 
  You can specify cfg.presentationfile for a NBS Presentation log file that
  is to be used to construct the events.tsv file for task data.

@@ -1,5 +1,6 @@
 ---
 title: ft_connectivitysimulation
+layout: default
 tags: 
 ---
 ```

@@ -1,5 +1,6 @@
 ---
 title: beamformer_dics
+layout: default
 tags: 
 ---
 ```
@@ -29,6 +30,8 @@ tags:
   'Cr'               = cross spectral density between all data channels and the external reference channel
   'refdip'           = location of dipole with which coherence is computed
   'lambda'           = regularisation parameter
+  'kappa'            = parameter for covariance matrix inversion
+  'tol'              = parameter for covariance matrix inversion
   'powmethod'        = can be 'trace' or 'lambda1'
   'feedback'         = give ft_progress indication, can be 'text', 'gui' or 'none'
   'fixedori'         = use fixed or free orientation,                 can be 'yes' or 'no'

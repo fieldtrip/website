@@ -1,5 +1,6 @@
 ---
 title: fieldtrip2fiff
+layout: default
 tags: 
 ---
 ```

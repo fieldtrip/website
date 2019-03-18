@@ -1,5 +1,6 @@
 ---
 title: ft_headmodel_localspheres
+layout: default
 tags: 
 ---
 ```

@@ -1,10 +1,11 @@
 ---
 title: ft_spikesplitting
+layout: default
 tags: 
 ---
 ```
  FT_SPIKESPLITTING reads a single Neuralynx DMA log file and writes each
- individual channel to a seperate file.
+ individual channel to a separate file.
 
  Use as
    [cfg] = ft_spikesplitting(cfg)

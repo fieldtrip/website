@@ -33,7 +33,7 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
 
     % Find datafiles and determine their size
     dot = find(datafile == '.');
-    prefix = datafile(1:dot(end));    
+    prefix = datafile(1:dot(end));
     suffix = datafile(dot(end)+1:end);
 
     current_file = datafile;
@@ -41,9 +41,9 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
 
     while(exist(current_file))
         datafiles(counter).name = current_file;
-        fileinfo = dir(current_file);       
+        fileinfo = dir(current_file);
         datafiles(counter).size = fileinfo.bytes;
-        current_file = [prefix num2str(counter) '_' suffix];       
+        current_file = [prefix num2str(counter) '_' suffix];
         counter = counter + 1;
     end
 
@@ -54,10 +54,10 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
     for counter = length(datafiles):-1:2
         if(datafiles(counter).size == 8)
             disp(['Removing datafile ' num2str(counter) ' because it does not contain data.']);
-            movefile(datafiles(counter).name, backup_location);            
+            movefile(datafiles(counter).name, backup_location);
             datafiles(counter) = [];
-        end;
-    end;      
+        end
+    end
 
     % Calculate maximum number of trials based on
     %  amount of data recorded
@@ -70,7 +70,7 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
 
     if(bytes_recorded == 0)
         error('Repair failed, no data recorded');
-    end;
+    end
 
     number_of_trials = bytes_recorded / 4 / hdr.nChans / hdr.nSamples;
 
@@ -81,11 +81,11 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
     disp(['Recorded amount of trials (previous): ' num2str(val)]);
     fseek(fid, 1312, 'bof');
     fwrite(fid, number_of_trials, 'int16');
-    disp(['Recorded amount of trials (current): ' num2str(number_of_trials)]);    
-    fclose(fid);        
+    disp(['Recorded amount of trials (current): ' num2str(number_of_trials)]);
+    fclose(fid);
 
     % Remove partial trials (if present)
-    if(number_of_trials ~= floor(number_of_trials))       
+    if(number_of_trials ~= floor(number_of_trials))
         disp('Removing partially recorded trial.');
 
         number_of_trials = floor(number_of_trials);
@@ -94,7 +94,7 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
 
         for file = datafiles(1:end-1)
             bytes_to_copy = bytes_to_copy - file.size + 8;
-        end;
+        end
 
         bytes_to_copy = bytes_to_copy + 8;
 
@@ -110,11 +110,11 @@ If your datafile is corrupt, maybe due to incomplete storing or because the acqu
         for i = 1:((bytes_to_copy - 8) / hdr.nChans / 4)
             val = fread(infile, hdr.nChans * 4, 'uchar');
             fwrite(outfile, val, 'uchar');
-        end;
+        end
 
         fclose(outfile);
         fclose(infile);
-    end;
+    end
 
 {% include markup/warning %}
 This script will backup your data by appending the extension '.old'. Your newly obtained set of files might be truncated by a few bytes, so you might loose a little bit of data.

@@ -4,7 +4,7 @@
 - name:  Determine the filter characteristics
   link:  /example/determine_the_filter_characteristics
 
-- name:  Fixing a missing sensor
+- name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
 - name:  Getting started with reading raw EEG or MEG data
@@ -106,11 +106,11 @@
 - name:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs_singlechannel
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing
+
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
 
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis

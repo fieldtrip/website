@@ -1,5 +1,6 @@
 ---
 title: ft_select_box
+layout: default
 tags: 
 ---
 ```

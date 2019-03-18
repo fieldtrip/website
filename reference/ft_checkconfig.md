@@ -1,5 +1,6 @@
 ---
 title: ft_checkconfig
+layout: default
 tags: 
 ---
 ```
@@ -41,8 +42,9 @@ tags:
    deprecated      = {'opt1', 'opt2', etc.} % list the deprecated options
    unused          = {'opt1', 'opt2', etc.} % list the unused options, these will be removed and a warning is issued
    createsubcfg    = {'subname', etc.}      % list the names of the subcfg
+   createtopcfg    = {'subname', etc.}      % list the names of the subcfg
    dataset2files   = 'yes', 'no'            % converts dataset into headerfile and datafile
-   inside2logical  = 'yes', 'no'            % converts cfg.inside or cfg.grid.inside into logical representation
+   inside2logical  = 'yes', 'no'            % converts cfg.inside or cfg.sourcemodel.inside into logical representation
    checksize       = 'yes', 'no'            % remove large fields from the cfg
    trackconfig     = 'on', 'off'            % start/end config tracking
 

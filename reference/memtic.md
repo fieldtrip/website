@@ -1,5 +1,6 @@
 ---
 title: memtic
+layout: default
 tags: 
 ---
 ```

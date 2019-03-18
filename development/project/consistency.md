@@ -8,50 +8,49 @@ title: Check the consistency between the documentation and the implementations
 
 ## Objectives
 
-*  the reference documentation should be included in the m-files (i.e. "help function_name")
-*  the documentation should be complete w.r.t. the underlying implementation
-*  the documentation should be up-to-date, and should be easily kept up-to-date
-*  the structure between the functions should become more transparent
+- the reference documentation should be included in the m-files (i.e. "help function_name")
+- the documentation should be complete w.r.t. the underlying implementation
+- the documentation should be up-to-date, and should be easily kept up-to-date
+- the structure between the functions should become more transparent
 
 The help of any function could look like this
 
-	% FUNNAME does something usefull
-	%
-	% Use as
-	%    output = funname(cfg, input)
-	% where the input is the result from OTHER_FUNNAME
-	%
-	% The cfg contains
-	%   cfg.xxx =
-	%   cfg.xxx =
-	%   cfg.xxx =
-	%   cfg.xxx =
-	%
-	% See also OTHER_FUNNAME, and other related functions
+    % FUNNAME does something usefull
+    %
+    % Use as
+    %    output = funname(cfg, input)
+    % where the input is the result from OTHER_FUNNAME
+    %
+    % The cfg contains
+    %   cfg.xxx =
+    %   cfg.xxx =
+    %   cfg.xxx =
+    %   cfg.xxx =
+    %
+    % See also OTHER_FUNNAME, and other related functions
 
 The second commented block in each file (i.e. which is not visible when you type help, but which is visible if you edit the file) can contain the more advanced and obscure options. Furthermore, it can contain a description of the dependencies of the reference documentation of this function on the documentation in other (private) functions.
 
-
-	% Undocumented local options
-	%   cfg.yyy
-	%   cfg.yyy
-	%   cfg.yyy
-	%   cfg.yyy
-	%   cfg.yyy
-	%
-	% This function depends on prepare_zzz, which has the following options
-	%   cfg.zzz
-	%   cfg.zzz
-	%   cfg.zzz
-	%   cfg.zzz
-	%   cfg.zzz
-	%
-	% This function depends on prepare_aaa, which has the following options
-	%   cfg.aaa
-	%   cfg.aaa
-	%   cfg.aaa
-	%
-	% ...
+    % Undocumented local options
+    %   cfg.yyy
+    %   cfg.yyy
+    %   cfg.yyy
+    %   cfg.yyy
+    %   cfg.yyy
+    %
+    % This function depends on prepare_zzz, which has the following options
+    %   cfg.zzz
+    %   cfg.zzz
+    %   cfg.zzz
+    %   cfg.zzz
+    %   cfg.zzz
+    %
+    % This function depends on prepare_aaa, which has the following options
+    %   cfg.aaa
+    %   cfg.aaa
+    %   cfg.aaa
+    %
+    % ...
 
 ## Step 1: get an overview of all undocumented options
 
@@ -63,23 +62,24 @@ Status: done.
 
 ## Step 3: automize the creation of the html documentation for the FieldTrip site
 
-The documentation should consist of an overview of the main commands with the complete help similar as in Matlab ([reference](/reference)) and an index with all cfg options ([index](/reference/configuration_index)). Status: done. 
+The documentation should consist of an overview of the main commands with the complete help similar as in Matlab ([reference](/reference)) and an index with all cfg options ([index](/reference/configuration_index)). Status: done.
 
 These should be cross-linked. Status: no attempts yet.
+
 ## Appendix: some usefull unix commands
 
 Finding all configuration option
-    grep -o 'cfg\.[a-zA-Z0-9]*' function_name.m
-    grep -o 'cfg\.[a-zA-Z0-9]*' *.m
-    grep -o 'cfg\.[a-zA-Z0-9]*' function_name.m  | sort | uniq
-    grep -o 'cfg\.[a-zA-Z0-9]*' *.m              | sort | uniq
+grep -o 'cfg\.[a-zA-Z0-9]_' function_name.m
+grep -o 'cfg\.[a-zA-Z0-9]_' _.m
+grep -o 'cfg\.[a-zA-Z0-9]_' function_name.m | sort | uniq
+grep -o 'cfg\.[a-zA-Z0-9]_' _.m | sort | uniq
 
 Getting the Nth paragraps of a text file (the N below should be changed into a number
-    cat function_name.m | awk "BEGIN {t=1}; /^$/ {t=t+1}; !/^$/ {if ((t-N)==0) print}"
+cat function_name.m | awk "BEGIN {t=1}; /^$/ {t=t+1}; !/^$/ {if ((t-N)==0) print}"
 
 Get a set of files that describe all config options in the help and in the code, and determine the config options that are missing from either the help or the code:
-    for file in *.m ; do grep -v '^%' $file | grep -o 'cfg\.[a-zA-Z0-9]*' | sort | uniq > $file.cfg_code ; done
-    for file in *.m ; do grep    '^%' $file | grep -o 'cfg\.[a-zA-Z0-9]*' | sort | uniq > $file.cfg_help ; done
-    for file in *.m ; do diff $file.cfg_* > $file.diff ; done
-    for file in *.diff ; do grep '^`<' $file | tr '<' '%' >` $file.missing_help ; done
-    for file in *.diff ; do grep '^>' $file | tr '>' '%' > $file.missing_code ; done
+for file in _.m ; do grep -v '^%' \$file | grep -o 'cfg\.[a-zA-Z0-9]_' | sort | uniq > $file.cfg_code ; done
+    for file in *.m ; do grep    '^%' $file | grep -o 'cfg\.[a-zA-Z0-9]_' | sort | uniq > \$file.cfg_help ; done
+for file in _.m ; do diff $file.cfg_* > $file.diff ; done
+for file in _.diff ; do grep '^`<' $file | tr '<' '%' >` \$file.missing_help ; done
+for file in _.diff ; do grep '^>' $file | tr '>' '%' > $file.missing_code ; done

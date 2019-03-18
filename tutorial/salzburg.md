@@ -24,238 +24,239 @@ In the following section we will read and epoch the data. Subsequently we will a
 
 The following steps had been performed:
 
-*  Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
-*  Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
+- Defining triggers around which the data will be segmented using **[ft_definetrial](/reference/ft_definetrial)**. The data is segmented to include 2 seconds prior to S1 onset (i.e. baseline) and 1.57 second post S1 onset (i.e. event related interval including S1 and S2).
+- Calling **[ft_preprocessing](/reference/ft_preprocessing)** without applying any preprocessing steps yet.
 
 To run the following section of code you need the original dataset and trial function: [download c,rfhp0.1Hz dataset](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/c,rfhp0.1Hz),[download config file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/config) [download ft_trialfun_sensorygating.m trial function](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/ft_trialfun_sensorygating.m)
 
-	clear all
-	close all
+    clear all
+    close all
 
-	cfg = [];
-	cfg.dataset = 'c,rfhp0.1Hz';
-	cfg.trialfun = 'ft_trialfun_sensorygating';
-	cfg.trialdef.prestim = 2; %sec
-	cfg.trialdef.poststim = 2; %sec
-	cfg.channel = {'MEG' '-A28' '-A148' };
-	cfg = ft_definetrial(cfg);
-	data = ft_preprocessing(cfg);
+    cfg = [];
+    cfg.dataset = 'c,rfhp0.1Hz';
+    cfg.trialfun = 'ft_trialfun_sensorygating';
+    cfg.trialdef.prestim = 2; %sec
+    cfg.trialdef.poststim = 2; %sec
+    cfg.channel = {'MEG' '-A28' '-A148' };
+    cfg = ft_definetrial(cfg);
+    data = ft_preprocessing(cfg);
 
 The epoched data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/dataclean.mat).
 
 Load the data using the following command:
 
-	load dataclean
+    load dataclean
 
-First we will visual inspection of the data in order to reject trials contaminated by movements and/or other artifacts such as SQUID jumps. We will use **[ft_rejectvisual](/reference/ft_rejectvisual)** where we want a summary of the activity over trials and sensors, i.e. *cfg.method* = 'summary';. It is recommended to explore the topography and time course of data that will be classified as artificial. The configuration option *cfg.layout* = '4D148.lay'; allows us to do so.
+First we will visual inspection of the data in order to reject trials contaminated by movements and/or other artifacts such as SQUID jumps. We will use **[ft_rejectvisual](/reference/ft_rejectvisual)** where we want a summary of the activity over trials and sensors, i.e. _cfg.method_ = 'summary';. It is recommended to explore the topography and time course of data that will be classified as artificial. The configuration option _cfg.layout_ = '4D148.lay'; allows us to do so.
 
-	cfg = [];
-	cfg.fontsize = 12;
-	cfg.method = 'summary';
-	cfg.layout = '4D148.lay';
-	dataclean = ft_rejectvisual(cfg, data);
-	save dataclean dataclean
+    cfg = [];
+    cfg.fontsize = 12;
+    cfg.method = 'summary';
+    cfg.layout = '4D148.lay';
+    dataclean = ft_rejectvisual(cfg, data);
+    save dataclean dataclean
 
 Next, we perform the independent component analysis according to the following step
 
-*  Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**.
-*  Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
-*  Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
+- Resampling the data to a lower sample rate in order to speed up ICA computation **[ft_resampledata](/reference/ft_resampledata)**.
+- Perform the independent components analysis on the resampled data **[ft_componentanalysis](/reference/ft_componentanalysis)**
+- Repeat the independent components analysis on the original data by applying the linear demixing and topography lebels form the previous step
 
 Note, that we will compute the ICA twice in order to retain the original sampling rate. The option **cfg.resamplefs** depends on your knowledge about the spectral characteristics of the artifacts you would like to discover. Vertical and horizontal eye movements are typically dominated by high energy in the low frequency < 10 Hz. Therefore everything above the Nyquist frequency of the targeted signal, in this case 20 Hz, is an appropriate sampling rate. Cardiac artifacts vary over the entire frequency spectrum, although there is some dominance in the slower frequencies too. The decision about the new sampling frequency thus strongly depends on your needs. If you are interested in the detection of caridac and oculo-motor activity, a sampling rate of >100 Hz will be appropriate for most of the cases.
 
-	cfg = [];
-	cfg.resamplefs = 140;
-	cfg.detrend    = 'no';
-	datads = ft_resampledata(cfg, dataclean);
-	% perform the independent component analysis (i.e., decompose the data)
-	cfg        = [];
-	cfg.method = 'runica';
-	cfg.runica.maxsteps =50;
-	comp = ft_componentanalysis(cfg, datads);
-	cfg           = [];
-	cfg.unmixing  = comp.unmixing;
-	cfg.topolabel = comp.topolabel;
-	comp = ft_componentanalysis(cfg, data);
+    cfg = [];
+    cfg.resamplefs = 140;
+    cfg.detrend    = 'no';
+    datads = ft_resampledata(cfg, dataclean);
+    % perform the independent component analysis (i.e., decompose the data)
+    cfg        = [];
+    cfg.method = 'runica';
+    cfg.runica.maxsteps =50;
+    comp = ft_componentanalysis(cfg, datads);
+    cfg           = [];
+    cfg.unmixing  = comp.unmixing;
+    cfg.topolabel = comp.topolabel;
+    comp = ft_componentanalysis(cfg, data);
 
 Now we could explore the decomposed data by using **[ft_databrowser](/reference/ft_databrowser)**
 
-	cfg = [];
-	cfg.channel = {comp.label{1:5}}; % components to be plotted
-	cfg.layout = '4D148.lay'; % specify the layout file that should be used for plotting
-	cfg.compscale = 'local';
-	ft_databrowser(cfg, comp);
+    cfg = [];
+    cfg.channel = {comp.label{1:5}}; % components to be plotted
+    cfg.layout = '4D148.lay'; % specify the layout file that should be used for plotting
+    cfg.compscale = 'local';
+    ft_databrowser(cfg, comp);
 
 Take your time to browse and evaluate the topographies and the corresponding time courses. We will reject several of these with **[ft_rejectcomponent](/reference/ft_rejectcomponent)**
 
-	cfg = [];
-	cfg.component = [3 6 7 16];
-	dataica = ft_rejectcomponent(cfg, comp);
+    cfg = [];
+    cfg.component = [3 6 7 16];
+    dataica = ft_rejectcomponent(cfg, comp);
 
 The ica corrected data can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/dataica.mat).
 
-###  Computing and plotting of the auditory evoked fields
+### Computing and plotting of the auditory evoked fields
 
 Now we can average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and plot the evoked activity using the plotting functions **[ft_multiplotER](/reference/ft_multiplotER)**,**[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**.
 
-	cfg=[]
-	tlk=ft_timelockanalysis(cfg,dataica);
+    cfg=[]
+    tlk=ft_timelockanalysis(cfg,dataica);
 
-	cfg=[];
-	cfg.layout = '4D148.lay';
-	figure;
-	ft_multiplotER(cfg,tlk);
+    cfg=[];
+    cfg.layout = '4D148.lay';
+    figure;
+    ft_multiplotER(cfg,tlk);
 
-	cfg=[];
-	cfg.channel = {'A77'};
-	cfg.xlim    = [-.2 1];
-	figure;
-	subplot(2,2,1);ft_singleplotER(cfg,tlk);
-	cfg =[];
-	cfg.layout = '4D148.lay';
-	cfg.xlim = [0.114416 0.136568];
-	cfg.zlim = [-2e-13 2e-13];
-	subplot(2,2,2); ft_topoplotER(cfg,tlk);
-	title('S1')
-	cfg.xlim = cfg.xlim+0.5;
-	subplot(2,2,4); ft_topoplotER(cfg,tlk);
-	title('S2')
+    cfg=[];
+    cfg.channel = {'A77'};
+    cfg.xlim    = [-.2 1];
+    figure;
+    subplot(2,2,1);ft_singleplotER(cfg,tlk);
+    cfg =[];
+    cfg.layout = '4D148.lay';
+    cfg.xlim = [0.114416 0.136568];
+    cfg.zlim = [-2e-13 2e-13];
+    subplot(2,2,2); ft_topoplotER(cfg,tlk);
+    title('S1')
+    cfg.xlim = cfg.xlim+0.5;
+    subplot(2,2,4); ft_topoplotER(cfg,tlk);
+    title('S2')
 
 {% include image src="/assets/img/tutorial/salzburg/s1s2topography.png" width="600" %}
 
-###  Computing and plotting time-frequency power representations
+### Computing and plotting time-frequency power representations
 
 Now we will compute the time-frequency representation of the event-related fields by considering each trial individually and subsequently averaging over trials. It is recommended that you make yourself familiar with the different strategies in frequency and time-frequency analysis [here](/tutorial/timefrequencyanalysis).
 
-	cfg              = [];
-	cfg.output       = 'pow';
-	cfg.method       = 'mtmconvol';
-	cfg.taper        = 'hanning';
-	cfg.foi          = 2:2:30;                          
-	cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
-	cfg.toi          = -1.5:.05:1;               
-	cfg.keeptrials ='no';
-	tfr= ft_freqanalysis(cfg,  dataica);
-	% baseline correction
-	cfg=[];
-	cfg.baseline=[-1.75 -.25];
-	cfg.baselinetype='db';
-	tfrbl = ft_freqbaseline(cfg, tfr);
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.foi          = 2:2:30;
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
+    cfg.toi          = -1.5:.05:1;
+    cfg.keeptrials ='no';
+    tfr= ft_freqanalysis(cfg,  dataica);
+    % baseline correction
+    cfg=[];
+    cfg.baseline=[-1.75 -.25];
+    cfg.baselinetype='db';
+    tfrbl = ft_freqbaseline(cfg, tfr);
 
 Subsequently we plot and evaluate the result.
 
-	cfg=[];
-	cfg.channel = {'A77'};
-	cfg.xlim    = [-.2 1];
-	figure;
-	subplot(2,2,1);ft_singleplotTFR(cfg,tfrbl);
-	cfg =[];
-	cfg.layout = '4D148.lay';
-	cfg.xlim = [0.06 0.3];
-	cfg.ylim = [5 8];
-	cfg.zlim = [-2 2]
-	subplot(2,2,2); ft_topoplotTFR(cfg,tfrbl);
-	title('S1')
-	cfg.xlim = cfg.xlim+0.5;
-	subplot(2,2,4); ft_topoplotTFR(cfg,tfrbl);
-	title('S2')
+    cfg=[];
+    cfg.channel = {'A77'};
+    cfg.xlim    = [-.2 1];
+    figure;
+    subplot(2,2,1);ft_singleplotTFR(cfg,tfrbl);
+    cfg =[];
+    cfg.layout = '4D148.lay';
+    cfg.xlim = [0.06 0.3];
+    cfg.ylim = [5 8];
+    cfg.zlim = [-2 2]
+    subplot(2,2,2); ft_topoplotTFR(cfg,tfrbl);
+    title('S1')
+    cfg.xlim = cfg.xlim+0.5;
+    subplot(2,2,4); ft_topoplotTFR(cfg,tfrbl);
+    title('S2')
 
 {% include image src="/assets/img/tutorial/salzburg/s1s2tfr.png" width="600" %}
 
 Sometimes one might be interested in power modulations significantly different from pre stimulus baseline. In the following section we will illustrate how to achieve this.
 
-###  Within subject statistics on time-frequency representations
+### Within subject statistics on time-frequency representations
 
 We will apply the following steps. First the data is segmented into pre and post stimulus intervals of equal length using **[ft_redefinetrial](/reference/ft_redefinetrial)**. Thereafter time-frequency representation of power is computed on these intervals separately by keeping the individual trials in the output structure.
 
 test
 
-	%%
-	cfg=[];
-	cfg.toilim = [-2 -.5];
-	datapre = ft_redefinetrial(cfg,dataica);
-	cfg.toilim = [-.5 1];
-	datapst = ft_redefinetrial(cfg,dataica);
-	%%
-	cfg              = [];
-	cfg.output       = 'pow';
-	cfg.method       = 'mtmconvol';
-	cfg.taper        = 'hanning';
-	cfg.foi          = 0:2:30;                          
-	cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
-	cfg.toi          = -2:.05:-.5;               
-	cfg.keeptrials ='yes';
-	tfrpre= ft_freqanalysis(cfg,  datapre);
-	cfg.foi          = 0:2:30;   
-	cfg.toi          = -.5:.05:1;
-	tfrpst= ft_freqanalysis(cfg,  datapst);
+    %%
+    cfg=[];
+    cfg.toilim = [-2 -.5];
+    datapre = ft_redefinetrial(cfg,dataica);
+    cfg.toilim = [-.5 1];
+    datapst = ft_redefinetrial(cfg,dataica);
+    %%
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.foi          = 0:2:30;
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
+    cfg.toi          = -2:.05:-.5;
+    cfg.keeptrials ='yes';
+    tfrpre= ft_freqanalysis(cfg,  datapre);
+    cfg.foi          = 0:2:30;
+    cfg.toi          = -.5:.05:1;
+    tfrpst= ft_freqanalysis(cfg,  datapst);
 
 Since the data is of equal length we equalize the time axis of pre and post stimulus segments as well as assuring that both frequency dimensions are also the same.
 
-	tfrpre.time = tfrpst.time
-	tfrpre.freq = round(tfrpre.freq);
-	tfrpst.freq = round(tfrpst.freq);
+    tfrpre.time = tfrpst.time
+    tfrpre.freq = round(tfrpre.freq);
+    tfrpst.freq = round(tfrpst.freq);
 
 Now we compute the statistical evaluation using permutation approach. All of the details are explained [elsewere](/tutorial/cluster_permutation_freq).
 
-	cfg = [];
-	cfg.channel          = {'MEG'};
-	cfg.latency          = [0 1];
-	cfg.method           = 'montecarlo';
-	cfg.statistic        = 'ft_statfun_actvsblT';
-	cfg.correctm         = 'cluster';
-	cfg.clusteralpha     = 0.05;
-	cfg.clusterstatistic = 'maxsum';
-	cfg.minnbchan        = 2;
-	cfg.tail             = 0;
-	cfg.clustertail      = 0;
-	cfg.alpha            = 0.025;
-	cfg.numrandomization = 500;
-	% prepare_neighbours determines what sensors may form clusters
-	cfg_neighb.method    = 'distance';
-	cfg.neighbours       = ft_prepare_neighbours(cfg_neighb, tfrpre);
+    cfg = [];
+    cfg.channel          = {'MEG'};
+    cfg.latency          = [0 1];
+    cfg.method           = 'montecarlo';
+    cfg.statistic        = 'ft_statfun_actvsblT';
+    cfg.correctm         = 'cluster';
+    cfg.clusteralpha     = 0.05;
+    cfg.clusterstatistic = 'maxsum';
+    cfg.minnbchan        = 2;
+    cfg.tail             = 0;
+    cfg.clustertail      = 0;
+    cfg.alpha            = 0.025;
+    cfg.numrandomization = 500;
+    % prepare_neighbours determines what sensors may form clusters
+    cfg_neighb.method    = 'distance';
+    cfg.neighbours       = ft_prepare_neighbours(cfg_neighb, tfrpre);
 
-	ntrials = size(tfrpst.powspctrm,1);
-	design  = zeros(2,2*ntrials);
-	design(1,1:ntrials) = 1;
-	design(1,ntrials+1:2*ntrials) = 2;
-	design(2,1:ntrials) = [1:ntrials];
-	design(2,ntrials+1:2*ntrials) = [1:ntrials];
+    ntrials = size(tfrpst.powspctrm,1);
+    design  = zeros(2,2*ntrials);
+    design(1,1:ntrials) = 1;
+    design(1,ntrials+1:2*ntrials) = 2;
+    design(2,1:ntrials) = [1:ntrials];
+    design(2,ntrials+1:2*ntrials) = [1:ntrials];
 
-	cfg.design   = design;
-	cfg.ivar     = 1;
-	cfg.uvar     = 2;
+    cfg.design   = design;
+    cfg.ivar     = 1;
+    cfg.uvar     = 2;
 
-	cfg.design           = design;
-	cfg.ivar             = 1;
+    cfg.design           = design;
+    cfg.ivar             = 1;
 
-	[stat] = ft_freqstatistics(cfg, tfrpst, tfrpre);
-	save stat stat
+    [stat] = ft_freqstatistics(cfg, tfrpst, tfrpre);
+    save stat stat
 
-Now we can plot the result in a similar way as illustrated above. The difference now is that the functional data is expressed in units of t-values. In addition we use now a mask to illustrate the time-frequency tile on the basis of which we reject the H0- the data from pre and post stimulus interval is exchangeable.  
+Now we can plot the result in a similar way as illustrated above. The difference now is that the functional data is expressed in units of t-values. In addition we use now a mask to illustrate the time-frequency tile on the basis of which we reject the H0- the data from pre and post stimulus interval is exchangeable.
 
-	cfg=[];
-	cfg.channel = {'A77'};
-	cfg.parameter = 'stat';
-	cfg.maskparameter = 'mask';
-	cfg.maskstyle     = 'outline';
-	cfg.zlim = [-5 5]
-	cfg.xlim    = [0 .7];
-	figure;
-	subplot(2,2,1);ft_singleplotTFR(cfg,stat);
-	cfg =[];
-	cfg.layout = '4D148.lay';
-	cfg.parameter = 'stat';
-	cfg.xlim = [0.06 0.3];
-	cfg.ylim = [5 8];
-	cfg.zlim = [-5 5]
-	subplot(2,2,2); ft_topoplotTFR(cfg,stat);
-	title('S1')
-	cfg.xlim = cfg.xlim+0.5;
-	subplot(2,2,4); ft_topoplotTFR(cfg,stat);
-	title('S2')
+    cfg=[];
+    cfg.channel = {'A77'};
+    cfg.parameter = 'stat';
+    cfg.maskparameter = 'mask';
+    cfg.maskstyle     = 'outline';
+    cfg.zlim = [-5 5]
+    cfg.xlim    = [0 .7];
+    figure;
+    subplot(2,2,1);ft_singleplotTFR(cfg,stat);
+    cfg =[];
+    cfg.layout = '4D148.lay';
+    cfg.parameter = 'stat';
+    cfg.xlim = [0.06 0.3];
+    cfg.ylim = [5 8];
+    cfg.zlim = [-5 5]
+    subplot(2,2,2); ft_topoplotTFR(cfg,stat);
+    title('S1')
+    cfg.xlim = cfg.xlim+0.5;
+    subplot(2,2,4); ft_topoplotTFR(cfg,stat);
+    title('S2')
 
 {% include image src="/assets/img/tutorial/salzburg/s1s2stat.png" width="600" %}
+
 ## Localizing auditory evoked fields using beamforming techniques in parceled brain space
 
 In this section we would demonstrate how to derive the time series of neuronal activity at a particular brain location. We will apply a beamforming technique.
@@ -272,47 +273,47 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
 
 ##### Create template grid based on the standard head model
 
-	load('~/fieldtrip/template/headmodel/standard_singleshell');
+    load('~/fieldtrip/template/headmodel/standard_singleshell');
 
-	cfg = [];
-	cfg.grid.xgrid  = -20:1:20;
-	cfg.grid.ygrid  = -20:1:20;
-	cfg.grid.zgrid  = -20:1:20;
-	cfg.grid.unit   = 'cm';
-	cfg.grid.tight  = 'yes';
-	cfg.inwardshift = -1.5;
-	cfg.headmodel        = vol;
-	template_grid  = ft_prepare_sourcemodel(cfg);
+    cfg = [];
+    cfg.grid.xgrid  = -20:1:20;
+    cfg.grid.ygrid  = -20:1:20;
+    cfg.grid.zgrid  = -20:1:20;
+    cfg.grid.unit   = 'cm';
+    cfg.grid.tight  = 'yes';
+    cfg.inwardshift = -1.5;
+    cfg.headmodel        = vol;
+    template_grid  = ft_prepare_sourcemodel(cfg);
 
-	figure;
-	ft_plot_mesh(template_grid.pos(template_grid.inside,:));
-	hold on
-	ft_plot_vol(vol,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
+    figure;
+    ft_plot_mesh(template_grid.pos(template_grid.inside,:));
+    hold on
+    ft_plot_vol(vol,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
 
 {% include image src="/assets/img/tutorial/salzburg/templateheadmodelwithregulargrid.png" width="600" %}
 
 ##### Load atlas and create a binary mask
 
-	atlas = ft_read_atlas('~/fieldtrip/template/atlas/aal/ROI_MNI_V4.nii');
+    atlas = ft_read_atlas('~/fieldtrip/template/atlas/aal/ROI_MNI_V4.nii');
 
-	atlas = ft_convert_units(atlas,'cm'); % assure that atlas and template_grid are expressed in the %same units
+    atlas = ft_convert_units(atlas,'cm'); % assure that atlas and template_grid are expressed in the %same units
 
-	cfg = []
-	cfg.atlas = atlas;
-	cfg.roi = atlas.tissuelabel;
-	cfg.inputcoord = 'mni';
-	mask = ft_volumelookup(cfg,template_grid);
+    cfg = []
+    cfg.atlas = atlas;
+    cfg.roi = atlas.tissuelabel;
+    cfg.inputcoord = 'mni';
+    mask = ft_volumelookup(cfg,template_grid);
 
-	% create temporary mask according to the atlas entries
-	tmp                  = repmat(template_grid.inside,1,1);
-	tmp(tmp==1)          = 0;
-	tmp(mask)            = 1;
+    % create temporary mask according to the atlas entries
+    tmp                  = repmat(template_grid.inside,1,1);
+    tmp(tmp==1)          = 0;
+    tmp(mask)            = 1;
 
-	% define inside locations according to the atlas based mask
-	template_grid.inside = tmp;
+    % define inside locations according to the atlas based mask
+    template_grid.inside = tmp;
 
-	% plot the atlas based grid
-	figure;ft_plot_mesh(template_grid.pos(template_grid.inside,:));
+    % plot the atlas based grid
+    figure;ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
 {% include image src="/assets/img/tutorial/salzburg/atlasbasedtemplategrid.png" %}
 
@@ -320,188 +321,188 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
 
 For this step the individual volume is required, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/mri.mat).
 
-	cfg                = [];
-	cfg.grid.warpmni   = 'yes';
-	cfg.grid.template  = template_grid;
-	cfg.grid.nonlinear = 'yes';
-	cfg.mri            = mri;
-	sourcemodel        = ft_prepare_sourcemodel(cfg);
+    cfg                = [];
+    cfg.grid.warpmni   = 'yes';
+    cfg.grid.template  = template_grid;
+    cfg.grid.nonlinear = 'yes';
+    cfg.mri            = mri;
+    sourcemodel        = ft_prepare_sourcemodel(cfg);
 
 ##### Plot the final source model together with the individual head model and the sensor array
 
-	close all
-	% the 4D/bti system is expressed in units of 'm', therefore we force all geometrical objects to have the same unit
-	hdm = ft_convert_units(hdm, 'm');
-	sourcemodel = ft_convert_units(sourcemodel, 'm');
+    close all
+    % the 4D/bti system is expressed in units of 'm', therefore we force all geometrical objects to have the same unit
+    hdm = ft_convert_units(hdm, 'm');
+    sourcemodel = ft_convert_units(sourcemodel, 'm');
 
-	figure; hold on     % plot all objects in one figure
+    figure; hold on     % plot all objects in one figure
 
-	ft_plot_vol(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; %camlight;
-	alpha 0.4           % make the surface transparent
+    ft_plot_vol(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; %camlight;
+    alpha 0.4           % make the surface transparent
 
-	ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:)); % plot only locations inside the volume
+    ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:)); % plot only locations inside the volume
 
-	ft_plot_sens(dataica.grad,'style','*r'); % plot the sensor array
-	view ([0 -90 0])
+    ft_plot_sens(dataica.grad,'style','*r'); % plot the sensor array
+    view ([0 -90 0])
 
 {% include image src="/assets/img/tutorial/salzburg/sourcemodelwarpedinatlasbasedspace.png" %}
 
 ### Compute the leadfield
 
-We first create the leadfield using [**reference: ft_prepare_leadfield](/**reference/ ft_prepare_leadfield) using the individual head model from the previous step, the sensor array and the sourcemodel.
+We first create the leadfield using [**reference: ft_prepare_leadfield](/\*\*reference/ ft_prepare_leadfield) using the individual head model from the previous step, the sensor array and the sourcemodel.
 
-	cfg                 = [];
-	cfg.channel         = dataica.label; % ensure that rejected sensors are not present
-	cfg.grad            = dataica.grad;
-	cfg.headmodel       = hdm;
-	cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
-	cfg.grid = sourcemodel;
-	[grid] = ft_prepare_leadfield(cfg);
+    cfg                 = [];
+    cfg.channel         = dataica.label; % ensure that rejected sensors are not present
+    cfg.grad            = dataica.grad;
+    cfg.headmodel       = hdm;
+    cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
+    cfg.grid = sourcemodel;
+    [grid] = ft_prepare_leadfield(cfg);
 
-We want to reconstruct the locations of the M100 component. In the present case this component is maximal around 50 to 180ms post stimulus onset. Therefore we segment the data around this interval using [**reference: ft_redefinetrial](/**reference/ ft_redefinetrial). Furthermore we would contrast the source solution against a prestimulus baseline of equal length.
+We want to reconstruct the locations of the M100 component. In the present case this component is maximal around 50 to 180ms post stimulus onset. Therefore we segment the data around this interval using [**reference: ft_redefinetrial](/\*\*reference/ ft_redefinetrial). Furthermore we would contrast the source solution against a prestimulus baseline of equal length.
 
-	cfg = [];            
-	cfg.toilim = [-.18 -.05];
-	datapre = ft_redefinetrial(cfg, dataica);
-	cfg.toilim = [.05 .18];
-	datapost = ft_redefinetrial(cfg, dataica);
+    cfg = [];
+    cfg.toilim = [-.18 -.05];
+    datapre = ft_redefinetrial(cfg, dataica);
+    cfg.toilim = [.05 .18];
+    datapost = ft_redefinetrial(cfg, dataica);
 
 ### Compute data covariance
 
-The spatial filters are computed on the basis of the covariance matrix obtained from the data. In the following step we compute this matrix for an interval accounting for the pre and post stimulus intervals of interest. For this we make a call to [**reference: ft_timelockanalysis](/**reference/ ft_timelockanalysis) with the ** cfg.covariance = 'yes';** and ** cfg.covariancewindow = [xx yy];**. These configuration will ensure the covariance matrix to be present in the output structure.
+The spatial filters are computed on the basis of the covariance matrix obtained from the data. In the following step we compute this matrix for an interval accounting for the pre and post stimulus intervals of interest. For this we make a call to [**reference: ft_timelockanalysis](/**reference/ ft_timelockanalysis) with the ** cfg.covariance = 'yes';** and ** cfg.covariancewindow = [xx yy];\*\*. These configuration will ensure the covariance matrix to be present in the output structure.
 
-	cfg = [];
-	cfg.covariance='yes';
-	cfg.covariancewindow = [-.3 .3];
-	avg = ft_timelockanalysis(cfg,dataica);
+    cfg = [];
+    cfg.covariance='yes';
+    cfg.covariancewindow = [-.3 .3];
+    avg = ft_timelockanalysis(cfg,dataica);
 
-	cfg = [];
-	cfg.covariance='yes';
-	avgpre = ft_timelockanalysis(cfg,datapre);
-	avgpst = ft_timelockanalysis(cfg,datapost);
+    cfg = [];
+    cfg.covariance='yes';
+    avgpre = ft_timelockanalysis(cfg,datapre);
+    avgpst = ft_timelockanalysis(cfg,datapost);
 
-Now we make a first call to [** reference: ft_sourceanalysis](/** reference/ ft_sourceanalysis) in order to compute the spatial filters on the basis of the entire data and keep them in the output for a later use.
+Now we make a first call to [** reference: ft_sourceanalysis](/\*\* reference/ ft_sourceanalysis) in order to compute the spatial filters on the basis of the entire data and keep them in the output for a later use.
 
-	cfg=[];
-	cfg.method='lcmv';
-	cfg.grid=grid;
-	cfg.headmodel=hdm;
-	cfg.lcmv.keepfilter='yes';
-	cfg.channel = dataica.label;
-	sourceavg=ft_sourceanalysis(cfg, avg);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.headmodel=hdm;
+    cfg.lcmv.keepfilter='yes';
+    cfg.channel = dataica.label;
+    sourceavg=ft_sourceanalysis(cfg, avg);
 
 ### Perform sourcanalysis
 
 Subsequently we reconstruct the activity in the pre and post stimulus intervals using the precomputed filters.
 
-	cfg=[];
-	cfg.method='lcmv';
-	cfg.grid=grid;
-	cfg.grid.filter=sourceavg.avg.filter;
-	cfg.headmodel=hdm;
-	sourcepreS1=ft_sourceanalysis(cfg, avgpre);
-	sourcepstS1=ft_sourceanalysis(cfg, avgpst);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.headmodel=hdm;
+    sourcepreS1=ft_sourceanalysis(cfg, avgpre);
+    sourcepstS1=ft_sourceanalysis(cfg, avgpst);
 
 Now we can subtract the two conditions, normalize by the power in the pre stimulus interval and multiply by 100. Thereby the data is expressed in percentage change from pre stimulus baseline.
 
-	cfg = [];
-	cfg.parameter = 'avg.pow';
-	cfg.operation = '((x1-x2)./x2)*100';
-	S1bl=ft_math(cfg,sourcepstS1,sourcepreS1);
+    cfg = [];
+    cfg.parameter = 'avg.pow';
+    cfg.operation = '((x1-x2)./x2)*100';
+    S1bl=ft_math(cfg,sourcepstS1,sourcepreS1);
 
-The result is then interpolated on the template mri after the individual dipole locations are set back to be equal with the template_grid locations. This is done with [**reference: ft_sourceinterpolate](/**reference/ ft_sourceinterpolate).
+The result is then interpolated on the template mri after the individual dipole locations are set back to be equal with the template_grid locations. This is done with [**reference: ft_sourceinterpolate](/\*\*reference/ ft_sourceinterpolate).
 
-	if isunix
-	  templatefile = '~fieldtrip/template/anatomy/single_subj_T1.nii';
-	elseif ispc
-	  templatefile = 'H:\~\fieldtrip\template\anatomy\single_subj_T1.nii';
-	end
-	template_mri = ft_read_mri(templatefile);
-	S1bl.pos=template_grid.pos;
-	cfg              = [];
-	cfg.voxelcoord   = 'no';
-	cfg.parameter    = 'pow';
-	cfg.interpmethod = 'nearest';
-	source_int  = ft_sourceinterpolate(cfg, S1bl, template_mri);
+    if isunix
+      templatefile = '~fieldtrip/template/anatomy/single_subj_T1.nii';
+    elseif ispc
+      templatefile = 'H:\~\fieldtrip\template\anatomy\single_subj_T1.nii';
+    end
+    template_mri = ft_read_mri(templatefile);
+    S1bl.pos=template_grid.pos;
+    cfg              = [];
+    cfg.voxelcoord   = 'no';
+    cfg.parameter    = 'pow';
+    cfg.interpmethod = 'nearest';
+    source_int  = ft_sourceinterpolate(cfg, S1bl, template_mri);
 
-Finally, we can plot the result using [**reference: ft_sourceplot](/**reference/ ft_sourceplot).
+Finally, we can plot the result using [**reference: ft_sourceplot](/\*\*reference/ ft_sourceplot).
 
-	cfg               = [];
-	cfg.method        = 'ortho';
-	cfg.funparameter  = 'pow';
-	cfg.location = [64 -32 8];
-	cfg.funcolormap = 'jet';
-	ft_sourceplot(cfg,source_int);
+    cfg               = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'pow';
+    cfg.location = [64 -32 8];
+    cfg.funcolormap = 'jet';
+    ft_sourceplot(cfg,source_int);
 
 {% include image src="/assets/img/tutorial/salzburg/sourcepowers1.png" %}
 
 ### Plot the result in parceled brain space
 
-It is now possible to integrate the result over the brain parcels using the brain atlas and [**reference: ft_sourceparcellate](/**reference/ ft_sourceparcellate). First, we load the template mri corresponding to the brain atlas located in the spm8/templates directory and interpolate the result on this template once more. Subsequently we call [**reference: ft_sourceparcellate](/**reference/ ft_sourceparcellate) with this sourceinterpolated structure and the brain atlas.
+It is now possible to integrate the result over the brain parcels using the brain atlas and [**reference: ft_sourceparcellate](/**reference/ ft_sourceparcellate). First, we load the template mri corresponding to the brain atlas located in the spm8/templates directory and interpolate the result on this template once more. Subsequently we call [**reference: ft_sourceparcellate](/\*\*reference/ ft_sourceparcellate) with this sourceinterpolated structure and the brain atlas.
 
-	templatefile = '~fieldtrip/external/spm8/templates/T1.nii';
-	template_mri = ft_read_mri(templatefile);
-	cfg              = [];
-	cfg.voxelcoord   = 'no';
-	cfg.parameter    = 'pow';
-	cfg.interpmethod = 'nearest';
-	source_int  = ft_sourceinterpolate(cfg, S1bl, template_mri);
-	%%
-	cfg=[];
-	parcel = ft_sourceparcellate(cfg, source_int, atlas);
+    templatefile = '~fieldtrip/external/spm8/templates/T1.nii';
+    template_mri = ft_read_mri(templatefile);
+    cfg              = [];
+    cfg.voxelcoord   = 'no';
+    cfg.parameter    = 'pow';
+    cfg.interpmethod = 'nearest';
+    source_int  = ft_sourceinterpolate(cfg, S1bl, template_mri);
+    %%
+    cfg=[];
+    parcel = ft_sourceparcellate(cfg, source_int, atlas);
 
-	parcel =
+    parcel =
 
-	            label: {1x116 cell}  % brain parcels labels
-	          anatomy: [116x1 double]
-	    anatomydimord: 'chan_unknown'
-	              pow: [116x1 double]% one value of brain activity per parcel
-	        powdimord: 'chan'
-	    brainordinate: [1x1 struct]
-	              cfg: [1x1 struct]
+                label: {1x116 cell}  % brain parcels labels
+              anatomy: [116x1 double]
+        anatomydimord: 'chan_unknown'
+                  pow: [116x1 double]% one value of brain activity per parcel
+            powdimord: 'chan'
+        brainordinate: [1x1 struct]
+                  cfg: [1x1 struct]
 
 We create a dummy structure where we identify the power values per voxel and use this for subsequent plotting.
 
-	dummy=atlas;
-	for i=1:length(parcel.pow)
-	      dummy.tissue(find(dummy.tissue==i))=parcel.pow(i);
-	end;
-	%%
-	source_int.parcel=dummy.tissue;
-	source_int.coordsys = 'mni';
-	cfg=[];
-	cfg.method = 'ortho';
-	cfg.funparameter = 'parcel';
-	cfg.funcolormap    = 'jet';
-	cfg.renderer = 'zbuffer';
-	cfg.location = [-42 -20 6];
-	cfg.atlas = atlas;
-	cfg.funcolorlim = [-30 30];
-	ft_sourceplot(cfg,source_int);
+    dummy=atlas;
+    for i=1:length(parcel.pow)
+          dummy.tissue(find(dummy.tissue==i))=parcel.pow(i);
+    end
+    %%
+    source_int.parcel=dummy.tissue;
+    source_int.coordsys = 'mni';
+    cfg=[];
+    cfg.method = 'ortho';
+    cfg.funparameter = 'parcel';
+    cfg.funcolormap    = 'jet';
+    cfg.renderer = 'zbuffer';
+    cfg.location = [-42 -20 6];
+    cfg.atlas = atlas;
+    cfg.funcolorlim = [-30 30];
+    ft_sourceplot(cfg,source_int);
 
 {% include image src="/assets/img/tutorial/salzburg/sourcepowers1parceled.png" %}
 
 Alternatively, the maximal activity in the left Heschl gyrus can be plotted on the brain surface as follows.
 
-	cfg = [];
-	cfg.method         = 'surface';
-	cfg.funparameter   = 'parcel';
-	cfg.funcolorlim    = [-30 30];
-	cfg.funcolormap    = 'jet';
-	cfg.projmethod     = 'nearest';
-	cfg.surfinflated   = 'surface_inflated_both_caret.mat';
-	cfg.projthresh     = 0.8;
-	cfg.camlight       = 'no';
-	ft_sourceplot(cfg, source_int);
-	view ([-70 20 50])
-	light ('Position',[-70 20 50])
-	material dull
+    cfg = [];
+    cfg.method         = 'surface';
+    cfg.funparameter   = 'parcel';
+    cfg.funcolorlim    = [-30 30];
+    cfg.funcolormap    = 'jet';
+    cfg.projmethod     = 'nearest';
+    cfg.surfinflated   = 'surface_inflated_both_caret.mat';
+    cfg.projthresh     = 0.8;
+    cfg.camlight       = 'no';
+    ft_sourceplot(cfg, source_int);
+    view ([-70 20 50])
+    light ('Position',[-70 20 50])
+    material dull
 
 {% include image src="/assets/img/tutorial/salzburg/leftheschlgyrus.png" %}
 
 ### Apply statistical threshold for plotting the result on source level
 
-In the previous section we used an arbitrary threshold (80% of maximum) to illustrate the "hill" of the activity. However, in some situations one might be interested in the spatial activation pattern that is statistically different from pre stimulus baseline. In order to achieve this we will keep the units of observation (i.e. trials) and apply nonparametric permutation approach  to quantify the spatial activation pattern after stimulus presentation.
+In the previous section we used an arbitrary threshold (80% of maximum) to illustrate the "hill" of the activity. However, in some situations one might be interested in the spatial activation pattern that is statistically different from pre stimulus baseline. In order to achieve this we will keep the units of observation (i.e. trials) and apply nonparametric permutation approach to quantify the spatial activation pattern after stimulus presentation.
 
 It is recommended to make yourself familiar with the permutation framework before you continue. This is explained in detail in the statics tutorial. You might also consult this on-line lecture.
 
@@ -513,112 +514,112 @@ This tutorial contains the hands-on material of the [Salzburg workshop](/worksho
 
 First we keep single trial information and perform source analysis once again. It is important to estimate the spatial filter on the basis of all data and not the single trials. The latter is typically noisy and results in not very robust estimates.
 
-	cfg = [];
-	cfg.covariance='yes';
-	cfg.keeptrials = 'yes';
-	avgpre = ft_timelockanalysis(cfg,datapre);
-	avgpst = ft_timelockanalysis(cfg,datapost);
-	%%
-	cfg=[];
-	cfg.method='lcmv';
-	cfg.grid=grid;
-	cfg.headmodel=hdm;
-	cfg.lcmv.keepfilter='yes';
-	cfg.channel = dataica.label;
-	sourceavg=ft_sourceanalysis(cfg, avg);
-	cfg=[];
-	cfg.method='lcmv';
-	cfg.grid=grid;
-	cfg.grid.filter=sourceavg.avg.filter;
-	cfg.rawtrial = 'yes';
-	cfg.headmodel=hdm;
-	sourcepreS1=ft_sourceanalysis(cfg, avgpre);
-	sourcepstS1=ft_sourceanalysis(cfg, avgpst);
+    cfg = [];
+    cfg.covariance='yes';
+    cfg.keeptrials = 'yes';
+    avgpre = ft_timelockanalysis(cfg,datapre);
+    avgpst = ft_timelockanalysis(cfg,datapost);
+    %%
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.headmodel=hdm;
+    cfg.lcmv.keepfilter='yes';
+    cfg.channel = dataica.label;
+    sourceavg=ft_sourceanalysis(cfg, avg);
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid=grid;
+    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.rawtrial = 'yes';
+    cfg.headmodel=hdm;
+    sourcepreS1=ft_sourceanalysis(cfg, avgpre);
+    sourcepstS1=ft_sourceanalysis(cfg, avgpst);
 
 Now statistical analysis can be performed.
 
-	cfg = [];
-	cfg.parameter    = 'pow';
-	cfg.dim          = grid.dim;
-	cfg.method           = 'montecarlo';
-	cfg.statistic        = 'ft_statfun_depsamplesT';
-	cfg.correctm         = 'cluster';
-	cfg.clusteralpha     = 0.05;
-	cfg.clusterstatistic = 'maxsum';
-	cfg.tail             = 0;
-	cfg.clustertail      = 0;
-	cfg.alpha            = 0.025;
-	cfg.numrandomization = 1000;
+    cfg = [];
+    cfg.parameter    = 'pow';
+    cfg.dim          = grid.dim;
+    cfg.method           = 'montecarlo';
+    cfg.statistic        = 'ft_statfun_depsamplesT';
+    cfg.correctm         = 'cluster';
+    cfg.clusteralpha     = 0.05;
+    cfg.clusterstatistic = 'maxsum';
+    cfg.tail             = 0;
+    cfg.clustertail      = 0;
+    cfg.alpha            = 0.025;
+    cfg.numrandomization = 1000;
 
-	ntrials = numel(sourcepreS1.trial);
-	design  = zeros(2,2*ntrials);
-	design(1,1:ntrials) = 1;
-	design(1,ntrials+1:2*ntrials) = 2;
-	design(2,1:ntrials) = [1:ntrials];
-	design(2,ntrials+1:2*ntrials) = [1:ntrials];
+    ntrials = numel(sourcepreS1.trial);
+    design  = zeros(2,2*ntrials);
+    design(1,1:ntrials) = 1;
+    design(1,ntrials+1:2*ntrials) = 2;
+    design(2,1:ntrials) = [1:ntrials];
+    design(2,ntrials+1:2*ntrials) = [1:ntrials];
 
-	cfg.design   = design;
-	cfg.ivar     = 1;
-	cfg.uvar     = 2;
-	stat = ft_sourcestatistics(cfg,sourcepstS1,sourcepreS1);
-	stat.pos=template_grid.pos; % keep positions for plotting later
+    cfg.design   = design;
+    cfg.ivar     = 1;
+    cfg.uvar     = 2;
+    stat = ft_sourcestatistics(cfg,sourcepstS1,sourcepreS1);
+    stat.pos=template_grid.pos; % keep positions for plotting later
 
 Subsequently we interpolate the result and the binary mask containing information of significant deferences per voxel.
 
-	stat.inside=template_grid.inside;
-	cfg              = [];
-	cfg.voxelcoord   = 'no';
-	cfg.parameter    = 'stat';
-	cfg.interpmethod = 'nearest';
-	statint  = ft_sourceinterpolate(cfg, stat, template_mri);
-	cfg.parameter    = 'mask';
-	maskint  = ft_sourceinterpolate(cfg, stat, template_mri);
-	statint.mask = maskint.mask;
+    stat.inside=template_grid.inside;
+    cfg              = [];
+    cfg.voxelcoord   = 'no';
+    cfg.parameter    = 'stat';
+    cfg.interpmethod = 'nearest';
+    statint  = ft_sourceinterpolate(cfg, stat, template_mri);
+    cfg.parameter    = 'mask';
+    maskint  = ft_sourceinterpolate(cfg, stat, template_mri);
+    statint.mask = maskint.mask;
 
 And plot the result masked for significant activations where the functional data is now expressed in t-values.
 
-	statint.coordsys = 'mni';
-	cfg               = [];
-	cfg.method        = 'ortho';
-	cfg.funparameter  = 'stat';
-	cfg.maskparameter = 'mask';
-	cfg.atlas         = atlas;
-	cfg.location = 'max';
-	cfg.funcolorlim   = [-5 5];
-	cfg.funcolormap = 'jet';
-	ft_sourceplot(cfg,statint);
+    statint.coordsys = 'mni';
+    cfg               = [];
+    cfg.method        = 'ortho';
+    cfg.funparameter  = 'stat';
+    cfg.maskparameter = 'mask';
+    cfg.atlas         = atlas;
+    cfg.location = 'max';
+    cfg.funcolorlim   = [-5 5];
+    cfg.funcolormap = 'jet';
+    ft_sourceplot(cfg,statint);
 
 {% include image src="/assets/img/tutorial/salzburg/s1statactvsbl.png" %}
 
 We repeat the steps from above and plot the result in parceled brain space.
 
-	cfg=[];
-	parcel = ft_sourceparcellate(cfg, statint, atlas);
-	parcelmask = ft_sourceparcellate(cfg, maskint, atlas);
-	%% create dummy struct
-	dummy=atlas;
-	dummymask = atlas;
-	for i=1:length(parcel.stat)
-	      dummy.tissue(find(dummy.tissue==i))=parcel.stat(i);
-	      dummymask.tissue(find(dummymask.tissue==i))=parcelmask.mask(i);
-	end;
-	%% plot the result
-	statint.parcel=dummy.tissue;
-	statint.coordsys = 'mni';
-	statint.mask  = dummymask.tissue;
-	cfg=[];
-	cfg.method = 'slice';
-	cfg.funparameter = 'parcel';
-	cfg.funcolormap    = 'jet';
-	cfg.maskparameter = 'mask';
-	cfg.renderer = 'zbuffer';
-	cfg.funcolorlim   = [-5 5];
-	cfg.atlas = atlas;
-	ft_sourceplot(cfg,statint);
+    cfg=[];
+    parcel = ft_sourceparcellate(cfg, statint, atlas);
+    parcelmask = ft_sourceparcellate(cfg, maskint, atlas);
+    %% create dummy struct
+    dummy=atlas;
+    dummymask = atlas;
+    for i=1:length(parcel.stat)
+          dummy.tissue(find(dummy.tissue==i))=parcel.stat(i);
+          dummymask.tissue(find(dummymask.tissue==i))=parcelmask.mask(i);
+    end
+    %% plot the result
+    statint.parcel=dummy.tissue;
+    statint.coordsys = 'mni';
+    statint.mask  = dummymask.tissue;
+    cfg=[];
+    cfg.method = 'slice';
+    cfg.funparameter = 'parcel';
+    cfg.funcolormap    = 'jet';
+    cfg.maskparameter = 'mask';
+    cfg.renderer = 'zbuffer';
+    cfg.funcolorlim   = [-5 5];
+    cfg.atlas = atlas;
+    ft_sourceplot(cfg,statint);
 
 {% include image src="/assets/img/tutorial/salzburg/s1statactvsblparcel.png" %}
 
-The two different thresholds (80% of maximum vs. permutation statistics) seem to convey slightly different results. While a predominant activation in the left heschl gyrus was observed as a maximal difference between pre and post stimulus interval, the statistical evaluation suggest right temporal activation together with distributed activity in prefrontal areas. At first this appears somewhat puzzling yet evaluating the spatial extend of the activity in the left heschl gyrus suggest a very focal circumscribed source likely involving very few voxels. On the other hand during the call to [**reference: ft_sourcestatistics](/**reference/ ft_sourcestatistics) we used a particular configuration for the clusterstatistics- 'maxsum'. Using this option only voxel clusters with largest summed activity are considered during the sampling of the distribution. The right temporal area is characterized by rather broad spatial homogeneity that leads to greater statistical sensitivity. Instead of 'maxsum' it is also possible to use 'max' values during the montercarlo sampling of the distribution. When we do so it becomes apparent that on the basis of the activity in the left heschl gyrus we can reject H0 too.
+The two different thresholds (80% of maximum vs. permutation statistics) seem to convey slightly different results. While a predominant activation in the left heschl gyrus was observed as a maximal difference between pre and post stimulus interval, the statistical evaluation suggest right temporal activation together with distributed activity in prefrontal areas. At first this appears somewhat puzzling yet evaluating the spatial extend of the activity in the left heschl gyrus suggest a very focal circumscribed source likely involving very few voxels. On the other hand during the call to [**reference: ft_sourcestatistics](/\*\*reference/ ft_sourcestatistics) we used a particular configuration for the clusterstatistics- 'maxsum'. Using this option only voxel clusters with largest summed activity are considered during the sampling of the distribution. The right temporal area is characterized by rather broad spatial homogeneity that leads to greater statistical sensitivity. Instead of 'maxsum' it is also possible to use 'max' values during the montercarlo sampling of the distribution. When we do so it becomes apparent that on the basis of the activity in the left heschl gyrus we can reject H0 too.
 
 {% include image src="/assets/img/tutorial/salzburg/parceled_nonparceld_stats_s1.png" width="800" %}
 
@@ -640,120 +641,120 @@ We used statistics to reject the hypothesis that: the data in the pre and post s
 
 First, we interpolate the statistical result and the atlas.
 
-	cfg = [];
-	cfg.interpmethod = 'nearest';
-	cfg.parameter = 'tissue';
-	stat_atlas = ft_sourceinterpolate(cfg, atlas, stat);
+    cfg = [];
+    cfg.interpmethod = 'nearest';
+    cfg.parameter = 'tissue';
+    stat_atlas = ft_sourceinterpolate(cfg, atlas, stat);
 
 Determine the index of the label of interest,
 
-	x = find(ismember(atlas.tissuelabel,'Heschl_L'));
+    x = find(ismember(atlas.tissuelabel,'Heschl_L'));
 
 and determine the index points of locations within the desired parcel.
 
-	indxHGL = find(stat_atlas.tissue==x);
+    indxHGL = find(stat_atlas.tissue==x);
 
 These steps can be repeated for all desired parcels. In the present case the ramining tw
 
-	x=find(ismember(atlas.tissuelabel,'Heschl_R'));
-	indxHGR = find(stat_atlas.tissue==x);
+    x=find(ismember(atlas.tissuelabel,'Heschl_R'));
+    indxHGR = find(stat_atlas.tissue==x);
 
-	x=find(ismember(atlas.tissuelabel,'Cingulum_Mid_L'));
-	indxCML = find(stat_atlas.tissue==x);
+    x=find(ismember(atlas.tissuelabel,'Cingulum_Mid_L'));
+    indxCML = find(stat_atlas.tissue==x);
 
 Next, we normalise the individual MRI to derive parameters allowing to convert the mni- coordinates of the desired parcels into individual coordinates. For this we use **[ft_warp_apply](/reference/ft_warp_apply)**.
 
-	template_grid=ft_convert_units(template_grid,'mm'); % ensure no unit mismatch
-	norm=ft_volumenormalise([],mri);
+    template_grid=ft_convert_units(template_grid,'mm'); % ensure no unit mismatch
+    norm=ft_volumenormalise([],mri);
 
-	posCML=template_grid.pos(indxCML,:); % xyz positions in mni coordinates
-	posHGL=template_grid.pos(indxHGL,:); % xyz positions in mni coordinates
-	posHGR=template_grid.pos(indxHGR,:); % xyz positions in mni coordinates
+    posCML=template_grid.pos(indxCML,:); % xyz positions in mni coordinates
+    posHGL=template_grid.pos(indxHGL,:); % xyz positions in mni coordinates
+    posHGR=template_grid.pos(indxHGR,:); % xyz positions in mni coordinates
 
-	posback=ft_warp_apply(norm.params,posCML,'sn2individual');
-	btiposCML= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
+    posback=ft_warp_apply(norm.params,posCML,'sn2individual');
+    btiposCML= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
 
-	posback=ft_warp_apply(norm.params,posHGL,'sn2individual');
-	btiposHGL= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
+    posback=ft_warp_apply(norm.params,posHGL,'sn2individual');
+    btiposHGL= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
 
-	posback=ft_warp_apply(norm.params,posHGR,'sn2individual');
-	btiposHGR= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
+    posback=ft_warp_apply(norm.params,posHGR,'sn2individual');
+    btiposHGR= ft_warp_apply(pinv(norm.initial),posback); % xyz positions in individual coordinates
 
 Now we create a source model for these particular locations only.
 
-	cfg=[];
-	cfg.headmodel=hdm;
-	cfg.channel=dataica.label;  
-	cfg.grid.pos=[btiposCML;btiposHGL;btiposHGR]./1000; % units of m
-	cfg.grad=dataica.grad;
-	sourcemodel_virt=ft_prepare_leadfield(cfg);
+    cfg=[];
+    cfg.headmodel=hdm;
+    cfg.channel=dataica.label;
+    cfg.grid.pos=[btiposCML;btiposHGL;btiposHGR]./1000; % units of m
+    cfg.grad=dataica.grad;
+    sourcemodel_virt=ft_prepare_leadfield(cfg);
 
 And repeat the source analysis steps for above but now for 3 parcels represented in a total of 21 locations.
 
-	%% keep covariance in the output
-	cfg = [];
-	cfg.channel=dataica.label;
-	cfg.covariance='yes';
-	cfg.covariancewindow=[0 1];
-	avg = ft_timelockanalysis(cfg,dataica);
+    %% keep covariance in the output
+    cfg = [];
+    cfg.channel=dataica.label;
+    cfg.covariance='yes';
+    cfg.covariancewindow=[0 1];
+    avg = ft_timelockanalysis(cfg,dataica);
 
-	%% perform source analysis
-	cfg=[];
-	cfg.method='lcmv';
-	cfg.grid = sourcemodel_virt;
-	cfg.headmodel=hdm;
-	cfg.lcmv.keepfilter='yes';
-	cfg.lcmv.fixedori='yes';
-	cfg.lcmv.lamda='5%';
-	source=ft_sourceanalysis(cfg, avg);
+    %% perform source analysis
+    cfg=[];
+    cfg.method='lcmv';
+    cfg.grid = sourcemodel_virt;
+    cfg.headmodel=hdm;
+    cfg.lcmv.keepfilter='yes';
+    cfg.lcmv.fixedori='yes';
+    cfg.lcmv.lamda='5%';
+    source=ft_sourceanalysis(cfg, avg);
 
 On the basis of the computed filters, kept in the output, it is now possible to multiply them with the data. This operation will yield time series commonly known as virtual sensors.
 
-	spatialfilter=cat(1,source.avg.filter{:});
-	virtsens=[];
-	for i=1:length(dataica.trial)
-	    virtsens.trial{i}=spatialfilter*dataica.trial{i};
+    spatialfilter=cat(1,source.avg.filter{:});
+    virtsens=[];
+    for i=1:length(dataica.trial)
+        virtsens.trial{i}=spatialfilter*dataica.trial{i};
 
-	end;
-	virtsens.time=dataica.time;
-	virtsens.fsample=dataica.fsample;
-	indx=[indxFML;indxHGL;indxHGR];
-	for i=1:length(virtsens.trial{1}(:,1))
-	    virtsens.label{i}=[num2str(i)];
-	end;
+    end
+    virtsens.time=dataica.time;
+    virtsens.fsample=dataica.fsample;
+    indx=[indxFML;indxHGL;indxHGR];
+    for i=1:length(virtsens.trial{1}(:,1))
+        virtsens.label{i}=[num2str(i)];
+    end
 
 Since our main interest is the time courses common to a given parcel we can average over within parcel locations.
 
-	cfg = [];
-	cfg.channel = virtsens.label(1:16); % cingulum is prepresented by 16 locations
-	cfg.avgoverchan = 'yes';
-	virtsensCML = ft_selectdata(cfg,virtsens);
-	virtsensCML.label = {'CML'};
+    cfg = [];
+    cfg.channel = virtsens.label(1:16); % cingulum is prepresented by 16 locations
+    cfg.avgoverchan = 'yes';
+    virtsensCML = ft_selectdata(cfg,virtsens);
+    virtsensCML.label = {'CML'};
 
-	cfg.channel = virtsens.label(17:19); % left heschl by 3
-	virtsensHGL = ft_selectdata(cfg,virtsens);
-	virtsensHGL.label = {'HGL'};
+    cfg.channel = virtsens.label(17:19); % left heschl by 3
+    virtsensHGL = ft_selectdata(cfg,virtsens);
+    virtsensHGL.label = {'HGL'};
 
-	cfg.channel = virtsens.label(20:21); % right heschl by 2
-	virtsensHGR = ft_selectdata(cfg,virtsens);
-	virtsensHGR.label = {'HGR'};
+    cfg.channel = virtsens.label(20:21); % right heschl by 2
+    virtsensHGR = ft_selectdata(cfg,virtsens);
+    virtsensHGR.label = {'HGR'};
 
-	%% append the data
-	virtsensparcel=ft_appenddata([],virtsensCML,virtsensHGL,virtsensHGR);
+    %% append the data
+    virtsensparcel=ft_appenddata([],virtsensCML,virtsensHGL,virtsensHGR);
 
 Now we compute the source wave forms, plot and evaluate the result.
 
-	cfg=[];
-	tlkvc=ft_timelockanalysis(cfg, virtsensparcel);
-	figure;
-	for i=1:length(tlkvc.label)
-	    cfg=[];
-	    cfg.channel = tlkvc.label{i};
-	    cfg.parameter = 'avg';
-	    cfg.xlim    = [-.1 1];
+    cfg=[];
+    tlkvc=ft_timelockanalysis(cfg, virtsensparcel);
+    figure;
+    for i=1:length(tlkvc.label)
+        cfg=[];
+        cfg.channel = tlkvc.label{i};
+        cfg.parameter = 'avg';
+        cfg.xlim    = [-.1 1];
 
-	    subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
-	end;
+        subplot(2,2,i);ft_singleplotER(cfg,tlkvc);
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/sourcewaveformsensorygating.png" width="600" %}
 
@@ -763,53 +764,53 @@ One of various and equally valid methods of assessing connectivity is the concep
 
 First, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** much in the same way as demonstrated above. The only difference is that the phase information is kept in the output by the configuration option **cfg.output = 'powandcsd'**.
 
-	cfg         = [];
-	cfg.method       = 'mtmconvol';
-	cfg.taper        = 'hanning';
-	cfg.output  = 'powandcsd';
-	cfg.foi          = 2:2:40;                          
-	cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
-	cfg.toi          = -2:0.05:1;
-	tfr = ft_freqanalysis(cfg, virtsensparcel);
+    cfg         = [];
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.output  = 'powandcsd';
+    cfg.foi          = 2:2:40;
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
+    cfg.toi          = -2:0.05:1;
+    tfr = ft_freqanalysis(cfg, virtsensparcel);
 
 Now we can plot and evaluate the result of the power estimates essentially confirming the pattern we already observed.
 
-	figure;
-	for i=1:length(tfr.label)
-	    cfg=[];
-	    cfg.channel = tfr.label{i};
-	    cfg.baselinetype    = 'db';
-	    cfg.baseline        = [-inf 0];
-	    cfg.zlim    = [-2 2];
-	    cfg.xlim    = [-.5 1.6];
-	    cfg.ylim    = [0 20];
-	    subplot(2,2,i);ft_singleplotTFR(cfg,tfr);
-	end;
+    figure;
+    for i=1:length(tfr.label)
+        cfg=[];
+        cfg.channel = tfr.label{i};
+        cfg.baselinetype    = 'db';
+        cfg.baseline        = [-inf 0];
+        cfg.zlim    = [-2 2];
+        cfg.xlim    = [-.5 1.6];
+        cfg.ylim    = [0 20];
+        subplot(2,2,i);ft_singleplotTFR(cfg,tfr);
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/tfrvirtsensorsensorygating.png" width="600" %}
 
 The slow frequency increases in energy are likely related to the evoked components in the data. In addition an increase in amplitude around 10-14Hz is also observed. In the next step we would like to evaluate to what extend this patterns represent a temporal relationship between the nodes.
 First we compute coherence using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
 
-	cfg = [];
-	cfg.method = 'coh';
-	coherence = ft_connectivityanalysis(cfg, tfr);
+    cfg = [];
+    cfg.method = 'coh';
+    coherence = ft_connectivityanalysis(cfg, tfr);
 
 and restructure the output such that it can be plotted with an appropriate plotting function.
 
-	coh=tfr;
-	coh.powspctrm = coherence.cohspctrm;
-	coh.label = {'CML-HGR','HGL-HGR','HGL-CML'};
+    coh=tfr;
+    coh.powspctrm = coherence.cohspctrm;
+    coh.label = {'CML-HGR','HGL-HGR','HGL-CML'};
 
-	%% and plot the result
-	figure;
-	for i=1:length(coh.label)
-	    cfg=[];
-	    cfg.channel = coh.label{i};
-	    cfg.xlim    = [-.1 1];
-	    cfg.ylim    = [0 20];
-	    subplot(2,2,i);ft_singleplotTFR(cfg,coh);
-	end;
+    %% and plot the result
+    figure;
+    for i=1:length(coh.label)
+        cfg=[];
+        cfg.channel = coh.label{i};
+        cfg.xlim    = [-.1 1];
+        cfg.ylim    = [0 20];
+        subplot(2,2,i);ft_singleplotTFR(cfg,coh);
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/coherencesensorygating.png" width="400" %}
 
@@ -819,25 +820,25 @@ However this descriptive description of the obtained result could be entirely wr
 
 A property of volume conduction is instantaneousness. As a consequence a given pattern of activity is visible at two independent sites with no time delay. This is typically described as a zero phase lag relationship. Mathematically, a cosine function has a phase angle of zero degree. Now, consider a complex plain with real (abscissa) and imaginary (ordinate) components. According to the definition, volume conduction, i.e. zero phase lag relationship, is entirely represented along the real axis. This suggest that in order to disregard the contribution of volume conduction one could take into account only signals that have non zero values on the imaginary axis. This strategy is also known as the imaginary part of coherency. The following section demonstrates how to assess this quantity.
 
-	cfg = [];
-	cfg.method = 'coh';
-	cfg.complex = 'imag'; % ensure only imaginary parts kept in the output
-	coherence = ft_connectivityanalysis(cfg, tfr);
+    cfg = [];
+    cfg.method = 'coh';
+    cfg.complex = 'imag'; % ensure only imaginary parts kept in the output
+    coherence = ft_connectivityanalysis(cfg, tfr);
 
-	%% reorganize the data and take the absolute value
-	coh=tfr;
-	coh.powspctrm = abs(coherence.cohspctrm);
-	coh.label = {'CML-HGR','HGL-HGR','HGL-CML'};
+    %% reorganize the data and take the absolute value
+    coh=tfr;
+    coh.powspctrm = abs(coherence.cohspctrm);
+    coh.label = {'CML-HGR','HGL-HGR','HGL-CML'};
 
-	%% and plot the result
-	figure;
-	for i=1:length(coh.label)
-	    cfg=[];
-	    cfg.channel = coh.label{i};
-	    cfg.xlim    = [-.1 1];
-	    cfg.ylim    = [0 20];
-	    subplot(2,2,i);ft_singleplotTFR(cfg,coh);
-	end;
+    %% and plot the result
+    figure;
+    for i=1:length(coh.label)
+        cfg=[];
+        cfg.channel = coh.label{i};
+        cfg.xlim    = [-.1 1];
+        cfg.ylim    = [0 20];
+        subplot(2,2,i);ft_singleplotTFR(cfg,coh);
+    end
 
 {% include image src="/assets/img/tutorial/salzburg/imagcoherencesensorygating.png" width="400" %}
 
@@ -857,34 +858,34 @@ An alternative is a non parametric estimation where the essential ingredients fo
 
 The presence of transient activity such as evoked responses is a major violation of the assumptions in Granger analysis. Therefore we will focus on time intervals before stimulus presentation that is not contaminated by evoked responses. Moreover, for simplicity and illustrative purposes we will reduce the data set to two nodes- cingulum mid left and left heschl gyrus.
 
-	cfg = [];
-	cfg.channel = {'HGL','CML'};
-	cfg.latency = [-2 0];
-	prestimdata=ft_selectdata(cfg,virtsensparcel);
+    cfg = [];
+    cfg.channel = {'HGL','CML'};
+    cfg.latency = [-2 0];
+    prestimdata=ft_selectdata(cfg,virtsensparcel);
 
 A requirement of the method is that frequency analysis is performed for 0Hz(DC) up to the Nyquist frequency. Moreover, a padding of the data with zeros is applied in order to minimized the effects of sharp changes in the estimated granger spectrum due for example to line noise.
 
-	cfg            = [];
-	cfg.output     = 'fourier';
-	cfg.method     = 'mtmfft';
-	cfg.taper      = 'dpss';
-	cfg.tapsmofrq  = 2;
-	cfg.keeptrials = 'yes';
-	cfg.pad = 2;
-	cfg.padtype = 'zero';
-	freq    = ft_freqanalysis(cfg, prestimdata);
+    cfg            = [];
+    cfg.output     = 'fourier';
+    cfg.method     = 'mtmfft';
+    cfg.taper      = 'dpss';
+    cfg.tapsmofrq  = 2;
+    cfg.keeptrials = 'yes';
+    cfg.pad = 2;
+    cfg.padtype = 'zero';
+    freq    = ft_freqanalysis(cfg, prestimdata);
 
-	cfg           = [];
-	cfg.method    = 'granger';
-	cfg.granger.sfmethod = 'bivariate';
-	granger      = ft_connectivityanalysis(cfg, freq);
+    cfg           = [];
+    cfg.method    = 'granger';
+    cfg.granger.sfmethod = 'bivariate';
+    granger      = ft_connectivityanalysis(cfg, freq);
 
 and plot the result...
 
-	cfg = [];
-	cfg.parameter = 'grangerspctrm';
-	cfg.xlim      = [0 40];
-	figure; ft_connectivityplot(cfg,granger);
+    cfg = [];
+    cfg.parameter = 'grangerspctrm';
+    cfg.xlim      = [0 40];
+    figure; ft_connectivityplot(cfg,granger);
 
 {% include image src="/assets/img/tutorial/salzburg/grangersensorygating.png" width="400" %}
 
@@ -894,38 +895,38 @@ Although such a conclusion might appear in line with some theories on cortical c
 
 Consider a case where an unknown third source party biases activity in the locations of examinations in such a way that its power is projected strongly to a given location A as compared to B. Consider also constant noise level present in the data. In such a scenario due to different levels of SNR in location A and B, past knowledge of A will always help to "predict" future state of B than B alone. In other words, the output of the granger analysis will confirm effective connectivity between the nodes of examination despite the fact that there is none. The down side of scenarios like this is that they represent a rule rather than an exception. However, the motivation behind these types of analysis is not to prove the presence of effective connection between the nodes but to guide our uncertainty in the decision and interpretation of the data.
 
-Accordingly we seek for an alternative evaluation that will aid and support such decisions. One possibility is to flip the time axis of the data, that is future becomes past and past future. This manipulation will not affect the SNR issue described above such that a similar granger  spectrum in the original and in the flipped version will add confidence in our decision that the effective connectivity we are after is actually not present in the data. However, in the case of discrepancy this also does not mean that there IS effective connectivity not biased by scenarios and source constellations different from the example above. It will merely reduce our uncertainty in the data interpretation in turn of a great value in generating testable predictions for future examinations.
+Accordingly we seek for an alternative evaluation that will aid and support such decisions. One possibility is to flip the time axis of the data, that is future becomes past and past future. This manipulation will not affect the SNR issue described above such that a similar granger spectrum in the original and in the flipped version will add confidence in our decision that the effective connectivity we are after is actually not present in the data. However, in the case of discrepancy this also does not mean that there IS effective connectivity not biased by scenarios and source constellations different from the example above. It will merely reduce our uncertainty in the data interpretation in turn of a great value in generating testable predictions for future examinations.
 
 In the following we flip the time axis.
 
-	tmpdata=prestimdata;
-	for jj=1:length(tmpdata.trial)
-	tmpdata.trial{jj}=fliplr(tmpdata.trial{jj});
-	end;
+    tmpdata=prestimdata;
+    for jj=1:length(tmpdata.trial)
+    tmpdata.trial{jj}=fliplr(tmpdata.trial{jj});
+    end
 
 And compute granger analysis on these flipped data.
 
-	cfg            = [];
-	cfg.output     = 'fourier';
-	cfg.method     = 'mtmfft';
-	cfg.taper      = 'dpss';
-	cfg.tapsmofrq  = 2;
-	cfg.keeptrials = 'yes';
-	cfg.pad = 2;
-	cfg.padtype = 'zero';
-	freq    = ft_freqanalysis(cfg, tmpdata);
+    cfg            = [];
+    cfg.output     = 'fourier';
+    cfg.method     = 'mtmfft';
+    cfg.taper      = 'dpss';
+    cfg.tapsmofrq  = 2;
+    cfg.keeptrials = 'yes';
+    cfg.pad = 2;
+    cfg.padtype = 'zero';
+    freq    = ft_freqanalysis(cfg, tmpdata);
 
-	cfg           = [];
-	cfg.method    = 'granger';
-	cfg.granger.sfmethod = 'bivariate';
-	grangerflip     = ft_connectivityanalysis(cfg, freq);
+    cfg           = [];
+    cfg.method    = 'granger';
+    cfg.granger.sfmethod = 'bivariate';
+    grangerflip     = ft_connectivityanalysis(cfg, freq);
 
 Now we plot the results of the original and the flipped version of the same data.
 
-	cfg = [];
-	cfg.parameter = 'grangerspctrm';
-	cfg.xlim      = [0 40];
-	figure; ft_connectivityplot(cfg,granger,grangerflip);
+    cfg = [];
+    cfg.parameter = 'grangerspctrm';
+    cfg.xlim      = [0 40];
+    figure; ft_connectivityplot(cfg,granger,grangerflip);
 
 {% include image src="/assets/img/tutorial/salzburg/grangerflippedsensorygating.png" %}
 

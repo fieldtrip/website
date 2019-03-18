@@ -1,5 +1,6 @@
 ---
 title: ft_preproc_polyremoval
+layout: default
 tags: 
 ---
 ```

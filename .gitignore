@@ -5,6 +5,5 @@ Gemfile.lock
 .sass-cache/*
 _site
 _site/*
-commit.md
 assets/pdf
 assets/root

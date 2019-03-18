@@ -1,5 +1,6 @@
 ---
 title: ft_plot_vector
+layout: default
 tags: 
 ---
 ```
@@ -16,6 +17,8 @@ tags:
    'highlight'       = a logical vector of size Y, where 1 means that the corresponding values in Y are highlighted (according to the highlightstyle)
    'highlightstyle'  = can be 'box', 'thickness', 'saturation', 'difference' (default='box')
    'color'           = see MATLAB standard line properties and see below
+   'facecolor'       = color for the highlighted box (default = [0.6 0.6 0.6])
+   'facealpha'       = transparency for the highlighted box, between 0 and 1 (default = 1)
    'linewidth'       = see MATLAB standard line properties
    'markersize'      = see MATLAB standard line properties
    'markerfacecolor' = see MATLAB standard line properties

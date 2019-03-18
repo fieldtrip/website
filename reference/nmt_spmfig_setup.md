@@ -1,5 +1,6 @@
 ---
 title: nmt_spmfig_setup
+layout: default
 tags: 
 ---
 ```

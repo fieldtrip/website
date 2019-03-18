@@ -1,5 +1,6 @@
 ---
 title: ft_version
+layout: default
 tags: 
 ---
 ```

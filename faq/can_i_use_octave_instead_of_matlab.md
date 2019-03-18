@@ -5,7 +5,7 @@ tags: [faq, octave]
 
 # Can I use Octave instead of MATLAB?
 
-From the [Octave](http://www.gnu.org/software/octave) website: *"GNU Octave is a high-level interpreted language, primarily intended for numerical computations... The Octave language is quite similar to Matlab so that most programs are easily portable."*
+From the [Octave](http://www.gnu.org/software/octave) website: _"GNU Octave is a high-level interpreted language, primarily intended for numerical computations... The Octave language is quite similar to Matlab so that most programs are easily portable."_
 
 There are quite some people interested in this, mainly because Octave provides a free alternative to MATLAB. We do FieldTrip development in MATLAB and do all our own analyses in Matlab. Parts of the code (e.g. the plotting functions) are written in a way that is rather MATLAB specific. However, the core computations that you can do with FieldTrip can in principle also be performed using Octave.
 

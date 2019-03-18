@@ -1,5 +1,6 @@
 ---
 title: ft_connectivity_powcorr_ortho
+layout: default
 tags: 
 ---
 ```

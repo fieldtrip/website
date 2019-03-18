@@ -6,6 +6,7 @@ tags: [tutorial, example, memory, matlab, script]
 # Making a memory efficient analysis script
 
 ## Introduction
+
 This tutorial gives advice about how to do data-analysis in a memory-efficient way when large amount of data is analyzed. It does not provide information about any FieldTrip functions or any analysis steps.
 
 ## Background
@@ -14,23 +15,23 @@ Neurophysiological data can become quite large with the result that disk space, 
 
 ## Memory efficient coding tips
 
-*  Work on your programming *style*. Take a look [here](http://www.datatool.com/downloads/matlab_style_guidelines.pdf) for a concise summary of the recommended style of programming.
-*  Downsample your data (but backup your original data), e.g. using **[ft_resampledata](/reference/ft_resampledata)**
-*  Change data to single-precision (after preprocessing by using **[ft_struct2single](/reference/ft_struct2single)** or by using "cfg.precision = 'single'" in certain functions)
-*  Check if you really have to “cfg.keeptrials = 'yes'” in **[ft_freqanalysis](/reference/ft_freqanalysis)**.
-*  If you are working on a single subject, make sure other subjects are no longer in memory. This might seem trivial, but many people assign unique variables to subjects and forget to clear them.
-*  Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
-*  Within a script or function make sure you clear large variables that you don’t need anymore using the clear statement. Note that MATLAB’s memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
+- Work on your programming _style_. Take a look [here](http://www.datatool.com/downloads/matlab_style_guidelines.pdf) for a concise summary of the recommended style of programming.
+- Downsample your data (but backup your original data), e.g. using **[ft_resampledata](/reference/ft_resampledata)**
+- Change data to single-precision (after preprocessing by using **[ft_struct2single](/reference/ft_struct2single)** or by using "cfg.precision = 'single'" in certain functions)
+- Check if you really have to “cfg.keeptrials = 'yes'” in **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+- If you are working on a single subject, make sure other subjects are no longer in memory. This might seem trivial, but many people assign unique variables to subjects and forget to clear them.
+- Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
+- Within a script or function make sure you clear large variables that you don’t need anymore using the clear statement. Note that MATLAB’s memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
 
 {% include markup/warning %}
 If you have any more suggestions please add them here.
 {% include markup/end %}
 
-##  Save your data to disk
+## Save your data to disk
 
 Remember to always backup your original data that was acquired on external hard disks, CDs or DVDs for long-term storage. If possible, the backup should include the presentation code that was used in the experiment and a small ascii .txt file with the recording details.
 
-When using FieldTrip for large analyses, it is recommended to save one MATLAB variable to a single file. That will result in a lot of files in your data directory and in first instance you may consider that to look messy. However, the advantage is that you can easily manage the data, delete results that you don't need any more, check that the results are complete for all subjects, check that the timestamps of the files with certain results are consistent for all subjects (e.g. after you have updated some parameters and rerun  part of the analysis), ...
+When using FieldTrip for large analyses, it is recommended to save one MATLAB variable to a single file. That will result in a lot of files in your data directory and in first instance you may consider that to look messy. However, the advantage is that you can easily manage the data, delete results that you don't need any more, check that the results are complete for all subjects, check that the timestamps of the files with certain results are consistent for all subjects (e.g. after you have updated some parameters and rerun part of the analysis), ...
 
 When writing intermediate results, consider if you really need to save all intermediate steps in your analysis pipeline. For instance with MEG data it might not take that much time to calculate your planar gradient. It will save you a lot of disk space if you only have to write your axial data to disk. When using a high sampling frequency during acquisition, you may be able to downsample your data to save disk space and speed up all subsequent processing steps.
 
@@ -38,7 +39,7 @@ Do make sure you save the important parameters (e.g. rejected trials) so you can
 
 ## Load only as much data as you need
 
-Only import into MATLAB as much of a large data set as you need for the problem you are trying to solve. Many users are tempted to try and load the entire file first, and then process it with MATLAB. This is not always necessary. Use the *whos* function with the *-file* option to preview the file. This command displays each array in the MAT-file that you specify and the number of bytes in the arra
+Only import into MATLAB as much of a large data set as you need for the problem you are trying to solve. Many users are tempted to try and load the entire file first, and then process it with MATLAB. This is not always necessary. Use the _whos_ function with the _-file_ option to preview the file. This command displays each array in the MAT-file that you specify and the number of bytes in the arra
 
     whos -file session1.mat
     Name      Size            Bytes  Class     Attributes
@@ -49,15 +50,15 @@ Only import into MATLAB as much of a large data set as you need for the problem 
     Seq       1x912211       912211  int8
 
 If there are large arrays in the MAT-file that you do not need for your current task, you can selectively import only those variables that you want using load, for instance:
-    seq = load(‘session1.mat’,’Seq’).
+seq = load(‘session1.mat’,’Seq’).
 
 ## Avoid creating temporary arrays
 
 Avoid creating large temporary variables, and also make it a practice to clear those temporary variables you do use when they are no longer needed. For example, when you create a large array of zeros, instead of saving to a temporary variable A, and then converting A to a singl
-    A = zeros(1e6,1);
-    As = single(A);
+A = zeros(1e6,1);
+As = single(A);
 use just the one command to do both operation
-    A = zeros(1e6,1,'single');
+A = zeros(1e6,1,'single');
 
 Using the repmat function, array preallocation and for loops are other ways to work on nondouble data without requiring temporary storage in memory.
 
@@ -86,10 +87,10 @@ In the course of a MATLAB session, memory can become fragmented due to dynamic m
 To make more efficient use of your memory, preallocate a block of memory large enough to hold the matrix at its final size before entering the loop. When you preallocate memory for an array, MATLAB reserves sufficient contiguous space for the entire full-size array at the beginning of the computation. Once you have this space, you can add elements to the array without having to continually allocate new space for it in memory.
 
 The following code creates a scalar variable x, and then gradually increases the size of x in a for loop instead of preallocating the required amount of memory at the star
-    x = 0;
-    for k = 2:1000
-     x(k) = x(k-1) + 5;
-    end
+x = 0;
+for k = 2:1000
+x(k) = x(k-1) + 5;
+end
 
 Change the first line to preallocate a 1-by-1000 block of memory for x initialized to zero. This time there is no need to repeatedly reallocate memory and move data as more values are assigned to x in the loo
 
@@ -101,10 +102,10 @@ Change the first line to preallocate a 1-by-1000 block of memory for x initializ
 ## Clear old variables from memory when no longer needed
 
 When you are working with a very large data set repeatedly or interactively, clear the old variable first to make space for the new variable. Otherwise, MATLAB requires temporary storage of equal size before overriding the variable. For example,
-    a = rand(100e6,1)              % 800 MB array
-    a = rand(100e6,1)              % New 800 MB array
-    ??? Error using ==> rand
-    Out of memory. Type HELP MEMORY for your options.
+a = rand(100e6,1) % 800 MB array
+a = rand(100e6,1) % New 800 MB array
+??? Error using ==> rand
+Out of memory. Type HELP MEMORY for your options.
 
     clear a
     a = rand(100e6,1)              % New 800 MB array

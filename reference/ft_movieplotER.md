@@ -1,5 +1,6 @@
 ---
 title: ft_movieplotER
+layout: default
 tags: 
 ---
 ```
@@ -18,7 +19,7 @@ tags:
    cfg.framespersec = number, frames per second (default = 5)
    cfg.framesfile   = [], no file saved, or 'string', filename of saved frames.mat (default = []);
    cfg.layout       = specification of the layout, see below
-   cfg.baseline     = 'yes','no' or [time1 time2] (default = 'no'), see FT_TIMELOCKBASELINE or FT_FREQBASELINE
+   cfg.baseline     = 'yes','no' or [time1 time2] (default = 'no'), see FT_TIMELOCKBASELINE
    cfg.baselinetype = 'absolute' or 'relative' (default = 'absolute')
    cfg.colorbar     = 'yes', 'no' (default = 'no')
 

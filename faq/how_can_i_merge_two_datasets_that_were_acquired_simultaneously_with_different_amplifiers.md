@@ -25,7 +25,7 @@ Below a piece of example code is given that outlines the approach that can be us
     cfg = [];
     cfg.dataset = 'dataset2.eeg'
     cfg.trialdef.eventtype  = 'STATUS';  % see below
-    cfg.trialdef.eventvalue = 127;        
+    cfg.trialdef.eventvalue = 127;
     cfg.trialdef.prestim = 1;            % in seconds
     cfg.trialdef.poststim = 2;            % in seconds
     cfg = ft_definetrial(cfg);
@@ -49,7 +49,7 @@ The idea now is to interpolate the timeseries of one dataset to the same resolut
 
     % resample/interpolate dataset1 onto the sampled timepoints of dataset2
     cfg = [];
-    cfg.time = data2.time;  
+    cfg.time = data2.time;
     data1_resampled = ft_resampledata(cfg, data1);
 
     cfg = [];

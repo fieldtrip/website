@@ -1,5 +1,6 @@
 ---
 title: ft_write_event
+layout: default
 tags: 
 ---
 ```

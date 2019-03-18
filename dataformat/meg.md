@@ -7,7 +7,7 @@ tags: [dataformat, meg, ctf, neuromag, 4d, yokogawa]
 
 ## Support for CTF and/or VSM MedTech MEG data.
 
-Initially the reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in  the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
+Initially the reading functions for CTF files were implemented from scratch by the FieldTrip developers. However, in 2008 we switched to the reading functions that are provided (but not officially maintained) by CTF. The new CTF reading functions are located in the external/ctf directory and will be automatically called by the appropriate FieldTrip functions.
 
 The following data files can be read and used in FieldTrip: .meg4, .res4, .mri, .hdm, ClassFile.cls, MarkerFile.mrk. All required CTF reading functions are supplied with the FieldTrip toolbox.
 
@@ -22,6 +22,7 @@ Alternative support for Neuromag data is implemented by calling the mex files fr
 Note that the MEG-PD toolbox will only function on 32-bit machines, and requires either a Linux or HP-UX system to run. As the mex files are compiled code, it is not possible to modify these to run on 64-bit machines (which are becoming increasingly common), at present.
 
 You may want to continue reading the section on [getting started with Neuromag](/getting_started/neuromag).
+
 ## Support for BTi and/or 4D Neuroimaging MEG data
 
 The recommended way of working with 4D-Neuroimaging/BTi data is to work on the raw data files directly. The code for reading header information from the raw files is based on Eugene Kronberg's msi2matlab tools, and have been further developed by Gavin Paterson and Jan-Mathijs Schoffelen, at CCNi.

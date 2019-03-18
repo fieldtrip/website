@@ -1,5 +1,6 @@
 ---
 title: ft_headmodel_singleshell
+layout: default
 tags: 
 ---
 ```

@@ -1,11 +1,12 @@
 ---
 title: ft_artifact_clip
+layout: default
 tags: 
 ---
 ```
- FT_ARTIFACT_CLIP scans the data segments of interest for channels that
- clip. A clipping artifact is detected by the signal being completely
- flat for some time.
+ FT_ARTIFACT_CLIP scans the data segments of interest for channels that clip. These
+ artifacts are detected by the signal being completely flat for a given amount of
+ time.
 
  Use as
    [cfg, artifact] = ft_artifact_clip(cfg)
@@ -14,6 +15,9 @@ tags:
  or
    cfg.headerfile  = string with the filename
    cfg.datafile    = string with the filename
+ and optionally
+   cfg.headerformat
+   cfg.dataformat
 
  Alternatively you can use it as
    [cfg, artifact] = ft_artifact_clip(cfg, data)

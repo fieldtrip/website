@@ -19,7 +19,7 @@ For MEG specific material, please refer also to: [MEG community site](http://meg
 During a neural discharge two contributions to biological currents can be distinguished in the surrounding of the neuron: 1. an axonal current (also called primary), 2. an extracellular ionic current (also called secondary).
 
 {% include image src="/assets/img/development/project/tutorial_documentation/baillet.jpg" %}
-*Pattern of primary and secondary neural currents (from Baillet et al)*
+_Pattern of primary and secondary neural currents (from Baillet et al)_
 
 The two currents (intra and extra-cellular) contribute differently to the signal of MEG and EEG/ECoG.
 In particular no intracellular current contribution is sensed by EEG, since its sensors are able to pick up
@@ -32,13 +32,13 @@ See also [A nice general tutorial on bioelectromagnetism](http://www.bem.fi/book
 
 Topic
 
-*  the quasistatic approximation of Maxwell's equations
+- the quasistatic approximation of Maxwell's equations
 
-*  magnetic and electric fields in an homogeneous piecewise conductor
+- magnetic and electric fields in an homogeneous piecewise conductor
 
-*  the current dipole and the distributed sources configuration
+- the current dipole and the distributed sources configuration
 
-*  realistically shaped conductor models
+- realistically shaped conductor models
 
 ## How to build a forward model in FieldTrip
 
@@ -49,27 +49,27 @@ Check also 'The Forward model and Lead Field matrix' in [HERE](http://fieldtrip.
 
 ### Ingredients to build the forward model
 
-*  Volume conductor geometry
-*  Specific Maxwell equations  (e.g. electric or magnetic field)
-*  Type of source (simple/distributed)
-*  Matter properties (conductivity)
-*  Lead field algorithm
+- Volume conductor geometry
+- Specific Maxwell equations (e.g. electric or magnetic field)
+- Type of source (simple/distributed)
+- Matter properties (conductivity)
+- Lead field algorithm
 
 ## Examples in FieldTrip
 
 ### MEG forward models
 
-*  single sphere
-*  multiple spheres
-*  BEM
-*  Nolte
+- single sphere
+- multiple spheres
+- BEM
+- Nolte
 
 ### EEG forward models
 
-*  single sphere
-*  concentric spheres
-*  BEM
+- single sphere
+- concentric spheres
+- BEM
 
 ### ECoG forward models
 
-*  BEM
+- BEM

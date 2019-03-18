@@ -11,9 +11,9 @@ If possible, please provide a link to the online version of the manuscript. A li
 
 Please check [Sherpa Romeo](http://www.sherpa.ac.uk/romeo/) for the copyright conditions and whether you are allowed to
 
- 1. release the publisher version, i.e. the final online pdf version from Elsevier or so
- 2. release a [self-archived](http://www.eprints.org/openaccess/self-faq/#self-archiving) version, i.e. your own pdf (or word) document as it has been accepted for publication
- 3. not release a copy of the manuscript that is freely available to everyone
+1.  release the publisher version, i.e. the final online pdf version from Elsevier or so
+2.  release a [self-archived](http://www.eprints.org/openaccess/self-faq/#self-archiving) version, i.e. your own pdf (or word) document as it has been accepted for publication
+3.  not release a copy of the manuscript that is freely available to everyone
 
 ## EEG and MEG forward modeling
 
@@ -143,7 +143,7 @@ Kaminski and Blinowska. [A new method of the description of the information flow
 
 ### Spectrally resolved Granger causality
 
-Mingzhou Ding, Yonghong Chen, Steven L. Bressler. [Granger Causality: Basic Theory and Application to Neuroscience.](https://arxiv.org/abs/q-bio/0608035) In: *Handbook of Time Series Analysis*, ed. B. Schelter, M. Winterhalder, and J. Timmer, Wiley-VCH Verlage, 2006: 451-474. arXiv:q-bio/0608035v1
+Mingzhou Ding, Yonghong Chen, Steven L. Bressler. [Granger Causality: Basic Theory and Application to Neuroscience.](https://arxiv.org/abs/q-bio/0608035) In: _Handbook of Time Series Analysis_, ed. B. Schelter, M. Winterhalder, and J. Timmer, Wiley-VCH Verlage, 2006: 451-474. arXiv:q-bio/0608035v1
 
 Dhamala M, Rangarajan G, Ding M. [Analyzing information flow in brain networks with nonparametric Granger causality.](http://www.ncbi.nlm.nih.gov/pubmed/18394927) Neuroimage. 2008 Jun;41(2):354-62. Epub 2008 Feb 25. PubMed PMID: 18394927; PubMed Central PMCID: PMC2685256.
 

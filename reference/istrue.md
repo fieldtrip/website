@@ -1,5 +1,6 @@
 ---
 title: istrue
+layout: default
 tags: 
 ---
 ```

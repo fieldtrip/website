@@ -10,13 +10,13 @@ title: Check the correctness of the implementation of the algorithms
 
 The functions should be tested regularly on correctness, therefore test scripts are needed. These scripts should cover
 
-*  the correctness of the implemented algorithms
+- the correctness of the implemented algorithms
 
-*  proper parsing of configuration options, including backward compatibility
+- proper parsing of configuration options, including backward compatibility
 
-*  support for the normal data structures, also backward compatible
+- support for the normal data structures, also backward compatible
 
-**Method A:** If possible, the scripts should check against an internal reference solution, i.e., the outcome of the algorithm on  particular ideal data is known, therefore the correctness of the algorithm can be tested using simulated data.
+**Method A:** If possible, the scripts should check against an internal reference solution, i.e., the outcome of the algorithm on particular ideal data is known, therefore the correctness of the algorithm can be tested using simulated data.
 
 **Method B:** If that is not possible or difficult, the scripts should check the consistency of one implementation with another implementation.
 
@@ -26,12 +26,12 @@ The functions should be tested regularly on correctness, therefore test scripts 
 
 Create testscripts fo
 
-*  different headmodels (method B, hanvdgei: done )
-*  frequency analysis (method A, hanvdgei: work in progress)
-*  statistical analysis (method A, erimar & roboos: work in progress)
-*  use the scripts of the toolkit 2004 as test (method C)
-*  use the scripts of the toolkit 2005 as test (method C)
-*  use the scripts of the toolkit 2006 as test (method C)
+- different headmodels (method B, hanvdgei: done )
+- frequency analysis (method A, hanvdgei: work in progress)
+- statistical analysis (method A, erimar & roboos: work in progress)
+- use the scripts of the toolkit 2004 as test (method C)
+- use the scripts of the toolkit 2005 as test (method C)
+- use the scripts of the toolkit 2006 as test (method C)
 
 Frequency Analysis progres
 

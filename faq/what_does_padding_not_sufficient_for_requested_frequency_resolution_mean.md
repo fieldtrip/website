@@ -1,12 +1,14 @@
 ---
 title: What does "padding not sufficient for requested frequency resolution" mean?
+tags: [faq, freq]
 ---
 
-##  What does "padding not sufficient for requested frequency resolution" mean?
+# What does "padding not sufficient for requested frequency resolution" mean?
 
-This means the frequency resolution in your cfg.foi cannot be attained by the current padding in cfg.pad. There are two solutions to this proble
- 1.  change your cfg.foi
- 2.  change your cfg.pad
+This means the frequency resolution in your cfg.foi cannot be attained by the current padding in cfg.pad. There are two solutions to this problem:
+
+1.  change your cfg.foi
+2.  change your cfg.pad
 
 In order to do either of these, it is important to understand what the frequency resolution of your data is, and you can 'manipulate' it. The frequency resolution of any signal to be analyzed depends on the Rayleigh frequency of the data. The Rayleigh is equal to 1/T, with T being the time (in seconds) of the trial that you are analyzing. Using the Rayleigh frequency you can determine what frequencies can be estimated, namely: 0:Rayhleigh:Fsample/2 (Fsample/2 being the Nyquist frequency). So, if the length of your trial is 2.350s and you sample your data at 1000 Hz, the frequencies you can estimate are 0:(1/2.35):500. I.e. [0 0.4255 0.8511 1.2766 .... 499.1489 499.5745 500].
 
@@ -15,4 +17,3 @@ Usually, this is undesirable because it is difficult to work with, and can chang
 An easy way to specify an appropriate integer seconds that is sure to fit the length of your maximum trial is to do
 
     cfg.pad = ceil(max(cellfun(@numel, data.time)/data.fsample));
-

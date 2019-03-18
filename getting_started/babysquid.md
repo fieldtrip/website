@@ -9,9 +9,9 @@ tags: [babysquid, meg, dataformat]
 
 The BabySQUID is a series of MEG systems for infants and young children that is developed by [Tristan Technologies](http://tristantech.com/babysquid).
 
-*  [BabySQUID Artemis123](http://tristantech.com/artemis123babysquid), see also this [paper](http://journal.frontiersin.org/article/10.3389/fnhum.2014.00099/abstract)
-*  [BabySQUID MAGView](http://tristantech.com/meg-system-magview)
-*  [BabySQUID 74-channel system](http://www.tristantech.com/pdf/babySQUID_v1.1.pdf)
+- [BabySQUID Artemis123](http://tristantech.com/artemis123babysquid), see also this [paper](http://journal.frontiersin.org/article/10.3389/fnhum.2014.00099/abstract)
+- [BabySQUID MAGView](http://tristantech.com/meg-system-magview)
+- [BabySQUID 74-channel system](http://www.tristantech.com/pdf/babySQUID_v1.1.pdf)
 
 ## Background
 
@@ -19,7 +19,7 @@ The BabySQUID systems record the data in the fif file format, which is the same 
 
 To analyze your BabySQUID MEG data in FieldTrip, you would usually start by calling high-level functions such as **[ft_definetrial](/reference/ft_definetrial)** or **[ft_preprocessing](/reference/ft_preprocessing)** (see the [tutorial documentation](/tutorial)). These functions read the raw MEG data by calling low-level functions. The header, data and events are in the fif file, which you specify as
 
-   cfg.dataset = 'filename.fif';
+    cfg.dataset = 'filename.fif';
 
 To get started with reading your BabySQUID MEG data into FieldTrip, it might be a good check to call the low-level reading functions directly, i.e. to check that **[ft_read_header](/reference/ft_read_header)** and **[ft_read_event](/reference/ft_read_event)** return the expected representation of the data.
 

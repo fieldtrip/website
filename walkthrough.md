@@ -16,7 +16,7 @@ Stephen Whitmarsh
 
 ### Introduction
 
-In most cases you would like to analyze your data in respect to stimulus/condition markers recorded within the data. Alternatively, you might want to define trials based upon visual inspection of the data, or based upon recordings of external device (eye tracker, EOG, SCR, TMS, etc) or log file. For the sake of the purpose of overview only go into the first option although all these latter options are certainly supported in FieldTrip. If possible always record stimulus/condition markers in your EEG/MEG data. It will make the analysis, if not life itself, substantially easier. You might have coded every stimulus with its own code, or rather used the marker to code the condition number. In any case, most probably the first step you want to do is to load your data and segment it into conditions according to the markers in the data. In the end you’ll just need to find a nice test-statistic, e.g. average alpha-power, and do your statistical comparison:
+In most cases you would like to analyze your data in respect to stimulus/condition markers recorded within the data. Alternatively, you might want to define trials based upon visual inspection of the data, or based upon recordings of external device (eye-tracker, EOG, SCR, TMS, etc) or log file. For the sake of the purpose of overview only go into the first option although all these latter options are certainly supported in FieldTrip. If possible always record stimulus/condition markers in your EEG/MEG data. It will make the analysis, if not life itself, substantially easier. You might have coded every stimulus with its own code, or rather used the marker to code the condition number. In any case, most probably the first step you want to do is to load your data and segment it into conditions according to the markers in the data. In the end you’ll just need to find a nice test-statistic, e.g. average alpha-power, and do your statistical comparison:
 
 {% include image src="/assets/img/walkthrough/wt_fig1b.png" width="400" %}
 
@@ -56,30 +56,30 @@ Looking at one trial separately gives us the familiar channels x time structure:
 
 Most often every trial has the same time axis. E.g. they all go from one second before the marker until three second after the marker. This is not always the case however, and this is why every trial has its own time axis. It has the same length as the data, defining a (relative) time point in seconds for every sample in the data, for instance:
 
-    data.time{5}: [1x1000 double]   	% of which a small part might be:  [… 1.06 1.07 1.08 1.09 …]
+    data.time{5}: [1x1000 double]    % of which a small part might be:  [… 1.06 1.07 1.08 1.09 …]
 
-Where the trials were originally from, meaning the samples in the continuous data are found in data.sampleinfo. It has a simple two column format of a start and end sample number for every trial (on every row). 	
+Where the trials were originally from, meaning the samples in the continuous data are found in data.sampleinfo. It has a simple two column format of a start and end sample number for every trial (on every row).
 
-    data.sampleinfo: [2x25 double]     % one row might be: [173450 174450]
+    data.sampleinfo: [2x25 double]   % one row might be: [173450 174450]
 
 Finally, you might have extra information per trial about the specific condition to which the trial belongs, the response time, etc. How to include this information yourself will be explored next but for now it will suffice to say you can might find it in an extra field called trialinfo where every row contains some extra info for every trial. For example:
 
-    data.trialinfo: [3x25 double] 	% one row might be: [100 3.4556 1] 
+    data.trialinfo: [3x25 double]    % one row might be: [100 3.4556 1] 
 
 ## Trial bookkeeping, part I
 
 At this point you might ask: “how does FieldTrip know which trials correspond to which condition?” Unlike perhaps other analysis packages, it doesn’t. You will have to do your own bookkeeping on that. How you want to do that, and indeed if you want to do that, will depend on how you want to undertake your analysis. Let’s take the simplest case of comparing the averages (or whatever) of two conditions. In FieldTrip this can be done in two ways:
 
--   Doing the whole analysis separately for each condition (starting with preprocessing).
--   Average over conditions
--   Compare the averages
+- Doing the whole analysis separately for each condition (starting with preprocessing).
+- Average over conditions
+- Compare the averages
 
 or
 
--   Doing the whole analysis over all the trials at once.
--   Split the trials belonging to each condition.
--   Average over conditions
--   Compare the averages
+- Doing the whole analysis over all the trials at once.
+- Split the trials belonging to each condition.
+- Average over conditions
+- Compare the averages
 
 The main difference between the two approaches considering trial bookkeeping is that in the first case you do not need any trial bookkeeping – you simply only read and process the data you need separately for every conditions. The other option is to postpone the separation of trials into conditions. This would make sense in any trial-by-trial based analysis [sic] or just purely for the sake of keeping stuff together. We’ll start with the first step. The second is an extension of that one.
 
@@ -127,7 +127,7 @@ What makes ft_definetrial very flexible is that it uses a separate trial functio
 {% include image src="/assets/img/walkthrough/wt_fig3.png" width="400" %}
 
 Within trialfun the trl is made according to specifications given through the cfg, as well as anything else you want to add. For instance, you might want to make trials dependent not only on the stimulus marker, but also on a correct response marker. This would be the place to do that. Also, sometimes you might be left with a rather awkward way of coding your conditions. This would also be the place to recode your trials and create a less ambiguous system.
-For the purpose of trial bookkeeping we only need to append one extra column (or more) to the standard three columns of the trl. Here we write information about the stimulus code, response time, condition numbers, etc. Next in ft_preprocessing (explained next) these extra columns will be put in an extra field of the data structure (trialinfo). This will enable us at any moment during our analysis to select trials based upon any arbitrary reason.  
+For the purpose of trial bookkeeping we only need to append one extra column (or more) to the standard three columns of the trl. Here we write information about the stimulus code, response time, condition numbers, etc. Next in ft_preprocessing (explained next) these extra columns will be put in an extra field of the data structure (trialinfo). This will enable us at any moment during our analysis to select trials based upon any arbitrary reason.
 
 {% include markup/warning %}
 You are not obliged to make all trials the same length. Be careful though as you might end up in a statistical snake-pit later.
@@ -148,11 +148,11 @@ Besides loading the data all the other functionalities can be done at any later 
 
 If we don’t specify the trial definition we made previously, ft_preprocessing would load all data and put them into a [channels x time] array of a single trial (e.g. in data.trial{1}). To save memory it is sometimes preferred to load only the data that is actually used, and you’ll need to segment the data into trials sooner or later anyway. To do so we supply ft_preprocessing with the trl we made previously. You might have everything you need already specified within the cfg, but just to be sure we’ll repeat it here:
 
-    cfg.trl = trl; 			% saved somewhere previously
-    cfg.dataset = ‘exampledata.eeg’;  	% data file, you might also need to add the path to it
-    trialdata = ft_preprocessing(cfg);	% call preprocessing, putting the output in ‘trialdata’
+    cfg.trl = trl;                      % saved somewhere previously
+    cfg.dataset = ‘exampledata.eeg’;    % data file, you might also need to add the path to it
+    trialdata = ft_preprocessing(cfg);  % call preprocessing, putting the output in ‘trialdata’
 
-What we end up with now is a datastructure called trialdata. See the previous ‘trialstructure’ on how the data it is organized. Please note here that all the info that was contained in the trl is now put in two different fields of the datastructure. The first two colums of the trl that described the start and end samples in the original data are now found in trialdata.sampleinfo. All the extra information for our trial bookkeeping that was put in extra columns of the trl are now found in trialdata.trialinfo.  
+What we end up with now is a datastructure called trialdata. See the previous ‘trialstructure’ on how the data it is organized. Please note here that all the info that was contained in the trl is now put in two different fields of the datastructure. The first two colums of the trl that described the start and end samples in the original data are now found in trialdata.sampleinfo. All the extra information for our trial bookkeeping that was put in extra columns of the trl are now found in trialdata.trialinfo.
 
 {% include image src="/assets/img/walkthrough/wt_fig4.png" width="600" %}
 
@@ -187,7 +187,7 @@ If we now call ''cfg = ft_databrowser(cfg,data)'', we are able to scroll through
 
     cfg.artfctdef.visual.artifact: [2xnArtifacts double]
 
-Note that ft_databrowser does not do anything with your data. To remove the trials that overlap with the segments we selected (and which are now in our cfg) and to save the remaining data in a new data structure we still need to use the function ft_rejectartifact:  
+Note that ft_databrowser does not do anything with your data. To remove the trials that overlap with the segments we selected (and which are now in our cfg) and to save the remaining data in a new data structure we still need to use the function ft_rejectartifact:
 
     cfg.artfctdef.reject  = 'complete';
     cleandata = ft_rejectartifact(cfg,data);
@@ -199,6 +199,7 @@ You can extend the type of events you can mark by adding to cfg.selectvisual. Yo
 ### Using ICA for eye artifact removal
 
 Severe contamination of EEG/MEG activity by eye movements, blinks, muscle, heart and line noise is a serious problem for its interpretation and analysis. Many methods exist to remove eye movement and blink artifacts. Simply rejecting contaminated epochs results in a considerable loss of collected information. Often regression in the time or frequency domain is performed on simultaneous electro-oculographic (EOG) recordings to derive parameters characterizing the appearance and spread of EOG artifacts in the other channels. However, EOG records also contain brain signals, so regressing out EOG activity inevitably involves subtracting a portion of the relevant brain-signal from each recording as well. Also, since many noise sources, include muscle noise, electrode noise and line noise, have no clear reference channels, regression methods cannot be used to removed them. ICA can effectively detect, separate and remove activity in EEG/MEG records from a wide variety of artifactual sources, with results comparing favorably to those obtained using regression- or PCA-based methods (<http://sccn.ucsd.edu/~scott/tutorial/>).
+
 First we need to decompose the data into independent components. The only thing we have to be sure of is that we only use the actual EEG or MEG channels and don’t use reference sensors or EOG:
 
     cfg = \[];
@@ -271,7 +272,7 @@ The translation from one domain to the other is done using a variation of the (i
 
 ### Power per trial
 
-In the simplest case you are interested in the power of certain frequencies (frequencies of interest: cfg.foi)  of the whole trial. This is done by using 'mtmfft' as the method:
+In the simplest case you are interested in the power of certain frequencies (frequencies of interest: cfg.foi) of the whole trial. This is done by using 'mtmfft' as the method:
 
     cfg = [];
     cfg.method = 'mtmfft';
@@ -296,7 +297,7 @@ The most used method for frequency analysis in FieldTrip besides ''mtmfft'' is '
 1.  Wavelets are created, the length determined by ''cfg.tf_timwin'', with 1 wavelet per frequency.
 2.  Wavelet is windowed/tapered similarly as step 1 in ''mtmfft''.
 3.  The Fast-Fourier-Transform is taken of both your raw data and your wavelet and multiplied with each other (for each frequency).
-4.  The inverse Fourier-transform is taken, and parts of this are selected as output. 
+4.  The inverse Fourier-transform is taken, and parts of this are selected as output.
 
 ##### Sliding time windows
 
@@ -333,11 +334,11 @@ By default ''ft_freqanalysis'' (and as we will see, also ''ft_timelockanalysis''
 Also for reasons of memory and speed this might be a good moment to separate your trials into conditions and do a frequency analysis for every condition separately.
 You can select the trials on which to do ''ft_freqanalysis'' or ''ft_timelockanalysis'' by specifying trial indexes in ''cfg.trials''. The trial index is nothing more than a number pointing to the n-th trial in the data structure. Since we have all the information about the conditions that the trials belong to stored in the ''.trialinfo'' field, we can search through it to make such a list. Remember we already made a list of trial codes belonging to our two conditions (markersA & markersB). We’ll just search through our ''.trialinfo'' looking for those trials that match those code
 
-    trialsA = [];					        %make an empty array
-    for i = 1 : size(markersA,2) 	                        % start a loop from 1 to the number of items in our markersA array
-    index = find(data_manual.trialinfo == markersA(i)); 	% find the index in data_manual.trialinfo that corresponds with the i-th item in the markersA list. If there is not, it will remain empty
-    trialsA = [trialsA index]				        % add the index to the trialA array      
-    end						                % end of loop
+    trialsA = [];                                       % make an empty array
+    for i = 1 : size(markersA,2)                        % start a loop from 1 to the number of items in our markersA array
+    index = find(data_manual.trialinfo == markersA(i)); % find the index in data_manual.trialinfo that corresponds with the i-th item in the markersA list. If there is not, it will remain empty
+    trialsA = [trialsA index]                           % add the index to the trialA array
+    end                                                 % end of loop
 
 We can now add the following line to the cfg:
 
@@ -345,11 +346,11 @@ We can now add the following line to the cfg:
 
 However, if you want to save trials separately you can specify the following option:
 
-    cfg.keeptrials = 'yes'; 		                        % default = 'no'
+    cfg.keeptrials = 'yes';                             % default = 'no'
 
 ##### Output of ft_freqanalysis
 
-We might go further into the output of ft_freqanalysis in a future release of this document but for now it suffices to say it gives a datastructure as output similar as the input structure but now with the field ''.powspctrm'' instead of ''.trial'' or ''.avg.trial''. For further information see [timefrequencyanalysis](/tutorial/timefrequencyanalysis) and [plotting](/tutorial//plotting). 
+We might go further into the output of ft_freqanalysis in a future release of this document but for now it suffices to say it gives a datastructure as output similar as the input structure but now with the field ''.powspctrm'' instead of ''.trial'' or ''.avg.trial''. For further information see [timefrequencyanalysis](/tutorial/timefrequencyanalysis) and [plotting](/tutorial/plotting).
 
 ## Statistics
 
@@ -369,9 +370,9 @@ The inferential statistic is what you get when you test your descriptive statist
 
 Also when it comes to your statistical analysis FieldTrip doesn’t let you down: The structure of its output is consistent with the datastructure of its input. We will revisit the following figure a couple of times, but for now please notice:
 
- 1.  Unless you specify otherwise through averaging on a certain dimension, the structure of the output will have the same structure as the input
- 2.  Those values of the output – the descriptive statistics, the inferential statistics and the decisions (to reject your null-hypothesis), are dependent on cfg.statistic, cfg.method and cfg.alpha, respectively.
- 3.  That we need to specify a design matrix – our next topic
+1.  Unless you specify otherwise through averaging on a certain dimension, the structure of the output will have the same structure as the input
+2.  Those values of the output – the descriptive statistics, the inferential statistics and the decisions (to reject your null-hypothesis), are dependent on cfg.statistic, cfg.method and cfg.alpha, respectively.
+3.  That we need to specify a design matrix – our next topic
 
 {% include image src="/assets/img/walkthrough/wt_fig14.png" width="600" %}
 
@@ -399,33 +400,18 @@ You might not want to test groups but rather calculate a correlation with any ot
 
 #### Averaging over time/frequencies/sensors
 
-As you are well aware, however, the power of our statistical test (not to be confused with test statistic) is vulnerable to the multiple comparison problem, a problem that is greatly exacerbated with the multidimensional nature of psychophysiological data. One way of dealing with this problem is simply to average over (parts of) a dimension. Doing this now, instead of earlier during ft_preprocessing, ft_freqanalysis or ft_timelockanalysis gives us all the flexibility to explore different windows on which to calculate our test statistic (“average power of…”, or “average amplitude of…”). Remember how we showed in the previous page to specify a time-frequency window or select channels. We can simply average over one of these dimensions as follows:
+As you are well aware, however, the decision we make using the statistical test (not to be confused with the test-statistic) is vulnerable to the multiple comparison problem, a problem that is greatly exacerbated with the multidimensional nature of psychophysiological data. One way of dealing with this problem is simply to average over (parts of) a dimension. Doing this now, instead of earlier during ft_preprocessing, ft_freqanalysis or ft_timelockanalysis gives us all the flexibility to explore different windows on which to calculate our test statistic (“average power of…”, or “average amplitude of…”). Remember how we showed in the previous page to specify a time-frequency window or select channels. We can simply average over one of these dimensions as follows:
 
 {% include image src="/assets/img/walkthrough/wt_fig18.png" width="600" %}
-
-##### Descriptive Statistics
-
--   actvsblIT
--   depsamplesF
--   depsamplesT
--   depsamplesregrT
--   diff
--   diff_itc
--   indepsamplesF
--   indepsamplesT
--   indepsamplesZcoh
--   mean
--   pooledT
--   roc
 
 ##### Statistical methods
 
 Once the design matrix is specified and the test statistic is defined we only need to decide how we are going to test our hypothesis. Of course the statistical methods one will use are somewhat dependent on the design matrix you specified but let’s just summarize them all here:
 
--   Montecarlo
--   Analytic
--   Stats
--   Crossvalidate
+- [ft_statistics_analytic](/reference/ft_statistics_analytic)
+- [ft_statistics_crossvalidate](/reference/ft_statistics_crossvalidate)
+- [ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)
+- [ft_statistics_stats](/reference/ft_statistics_stats)
 
 #### Calling ft_freqanalysis
 

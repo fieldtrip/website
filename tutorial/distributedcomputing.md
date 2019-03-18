@@ -35,248 +35,248 @@ Using the basic FieldTrip functions in a memory efficient manner requires that y
 
 The distributed operations of FieldTrip functions in this example require the original MEG datasets for the four subjects, which are available from
 
-*  [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)
-*  [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip)
-*  [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip)
-*  [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip)     
+- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)
+- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip)
+- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip)
+- [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip)
 
 Or, when at the Donders Centre for Cognitive Neuroimaging, use
 
-	cd /home/common/matlab/fieldtrip/data
+    cd /home/common/matlab/fieldtrip/data
 
-##  Example 1: using only FieldTrip functions in distributed computing
+## Example 1: using only FieldTrip functions in distributed computing
 
 This example script demonstrates how to run basic FieldTrip functions in parallel. The idea is schematically depicted in the following figure.
 
-	subjectlist = {
-	  'Subject01.ds'
-	  'Subject02.ds'
-	  'Subject03.ds'
-	  'Subject04.ds'
-	  };
+    subjectlist = {
+      'Subject01.ds'
+      'Subject02.ds'
+      'Subject03.ds'
+      'Subject04.ds'
+      };
 
-	conditionlist = {
-	  'FC'
-	  'FIC'
-	  'IC'
-	  };
+    conditionlist = {
+      'FC'
+      'FIC'
+      'IC'
+      };
 
-	triggercode = [
-	  9
-	  3
-	  5
-	  ];
+    triggercode = [
+      9
+      3
+      5
+      ];
 
-	% start with a new and empty configuration
-	cfg = {};
+    % start with a new and empty configuration
+    cfg = {};
 
-	for subj=1:4
-	  for cond=1:3
-	    cfg{subj,cond}                      = [];
-	    cfg{subj,cond}.dataset              = subjectlist{subj};
-	    cfg{subj,cond}.trialdef.prestim     = 1;
-	    cfg{subj,cond}.trialdef.poststim    = 2;
-	    cfg{subj,cond}.trialdef.eventtype   = 'backpanel trigger';
-	    cfg{subj,cond}.trialdef.eventvalue  = triggercode(cond);
-	  end
-	end
+    for subj=1:4
+      for cond=1:3
+        cfg{subj,cond}                      = [];
+        cfg{subj,cond}.dataset              = subjectlist{subj};
+        cfg{subj,cond}.trialdef.prestim     = 1;
+        cfg{subj,cond}.trialdef.poststim    = 2;
+        cfg{subj,cond}.trialdef.eventtype   = 'backpanel trigger';
+        cfg{subj,cond}.trialdef.eventvalue  = triggercode(cond);
+      end
+    end
 
-	cfg = qsubcellfun(@ft_definetrial, cfg);
+    cfg = qsubcellfun(@ft_definetrial, cfg);
 
-	% this extends the previous configuration
-	for subj=1:4
-	  for cond=1:3
-	    cfg{subj,cond}.channel              = {'MEG', '-MLP31', '-MLO12'};
-	    cfg{subj,cond}.demean               = 'yes';
-	    cfg{subj,cond}.baselinewindow       = [-0.2 0];
-	    cfg{subj,cond}.lpfilter             = 'yes';
-	    cfg{subj,cond}.lpfreq               = 35;
-	  end
-	end
+    % this extends the previous configuration
+    for subj=1:4
+      for cond=1:3
+        cfg{subj,cond}.channel              = {'MEG', '-MLP31', '-MLO12'};
+        cfg{subj,cond}.demean               = 'yes';
+        cfg{subj,cond}.baselinewindow       = [-0.2 0];
+        cfg{subj,cond}.lpfilter             = 'yes';
+        cfg{subj,cond}.lpfreq               = 35;
+      end
+    end
 
-	data = qsubcellfun(@ft_preprocessing, cfg);
+    data = qsubcellfun(@ft_preprocessing, cfg);
 
-	% start with a new and empty configuration
-	cfg = {};
+    % start with a new and empty configuration
+    cfg = {};
 
-	for subj=1:4
-	  for cond=1:3
-	    % timelockanalysis does not require any non-default settings
-	    cfg{subj,cond} = [];
-	  end
-	end
+    for subj=1:4
+      for cond=1:3
+        % timelockanalysis does not require any non-default settings
+        cfg{subj,cond} = [];
+      end
+    end
 
-	timelock = qsubcellfun(@ft_timelockanalysis, cfg, data);
+    timelock = qsubcellfun(@ft_timelockanalysis, cfg, data);
 
-	% from here on we won't process the data in parallel any more
-	% average each condition over all subjects
-	cfg = [];
-	avgFC  = ft_timelockgrandaverage(cfg, timelock{:,1});
-	avgFIC = ft_timelockgrandaverage(cfg, timelock{:,2});
-	avgIC  = ft_timelockgrandaverage(cfg, timelock{:,3});
+    % from here on we won't process the data in parallel any more
+    % average each condition over all subjects
+    cfg = [];
+    avgFC  = ft_timelockgrandaverage(cfg, timelock{:,1});
+    avgFIC = ft_timelockgrandaverage(cfg, timelock{:,2});
+    avgIC  = ft_timelockgrandaverage(cfg, timelock{:,3});
 
-	cfg = [];
-	cfg.layout = 'CTF151_helmet.mat';
-	ft_multiplotER(cfg, avgFC, avgFIC, avgIC);
+    cfg = [];
+    cfg.layout = 'CTF151_helmet.mat';
+    ft_multiplotER(cfg, avgFC, avgFIC, avgIC);
 
-	cfg = [];
-	cfg.channel = {'MLC33', 'MLC43', 'MLP11', 'MLP12', 'MLP13', 'MLP33', 'MLP34', 'MLT14', 'MLT15', 'MLT25'}
-	ft_singleplotER(cfg, avgFC, avgFIC, avgIC);
+    cfg = [];
+    cfg.channel = {'MLC33', 'MLC43', 'MLP11', 'MLP12', 'MLP13', 'MLP33', 'MLP34', 'MLT14', 'MLT15', 'MLT25'}
+    ft_singleplotER(cfg, avgFC, avgFIC, avgIC);
 
 {% include image src="/assets/img/tutorial/distributedcomputing/singleplot_fig1.png" width="400" %}
 
 In the code above all data is processed by the distributed computers and subsequently returned to the workspace of your desktop computer. The data can take quite a lot of RAM, which you can check like this.
 
-	>> whos
-	  Name               Size                 Bytes  Class     Attributes
+    >> whos
+      Name               Size                 Bytes  Class     Attributes
 
-	  conditionlist      3x1                    350  cell                
-	  subjectlist        4x1                    544  cell                
-	  triggercode        3x1                     24  double              
-	  cfg                4x3                9732384  cell                
-	  data               4x3             1203237420  cell                
-	  timelock           4x3               65515200  cell                
-	  ...
+      conditionlist      3x1                    350  cell
+      subjectlist        4x1                    544  cell
+      triggercode        3x1                     24  double
+      cfg                4x3                9732384  cell
+      data               4x3             1203237420  cell
+      timelock           4x3               65515200  cell
+      ...
 
 Instead of returning the 12 variables for the different subjects and conditions all to your workspace, you can also use the cfg.inputfile and cfg.outputfile options to have the distributed computers read/write the data to/from disk. For example the section on **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_timelockanalysis](/reference/ft_timelockanalysis)** could be changed into
 
-	% ...
+    % ...
 
-	for subj=1:4
-	  for cond=1:3
-	    cfg{subj,cond}.channel              = {'MEG', '-MLP31', '-MLO12'};
-	    cfg{subj,cond}.demean               = 'yes';
-	    cfg{subj,cond}.baselinewindow       = [-0.2 0];
-	    cfg{subj,cond}.lpfilter             = 'yes';
-	    cfg{subj,cond}.lpfreq               = 35;
-	    cfg{subj,cond}.outputfile           = sprintf('subj%02d_cond%02d_raw.mat', subj, cond);
-	  end
-	end
+    for subj=1:4
+      for cond=1:3
+        cfg{subj,cond}.channel              = {'MEG', '-MLP31', '-MLO12'};
+        cfg{subj,cond}.demean               = 'yes';
+        cfg{subj,cond}.baselinewindow       = [-0.2 0];
+        cfg{subj,cond}.lpfilter             = 'yes';
+        cfg{subj,cond}.lpfreq               = 35;
+        cfg{subj,cond}.outputfile           = sprintf('subj%02d_cond%02d_raw.mat', subj, cond);
+      end
+    end
 
-	% note that here we don't specify an output parameter
-	qsubcellfun(@ft_preprocessing, cfg);
+    % note that here we don't specify an output parameter
+    qsubcellfun(@ft_preprocessing, cfg);
 
-	cfg = {};
+    cfg = {};
 
-	for subj=1:4
-	  for cond=1:3
-	    cfg{subj,cond}.inputfile  = sprintf('subj%02d_cond%02d_raw.mat', subj, cond);
-	    cfg{subj,cond}.outputfile = sprintf('subj%02d_cond%02d_avg.mat', subj, cond);
-	  end
-	end
+    for subj=1:4
+      for cond=1:3
+        cfg{subj,cond}.inputfile  = sprintf('subj%02d_cond%02d_raw.mat', subj, cond);
+        cfg{subj,cond}.outputfile = sprintf('subj%02d_cond%02d_avg.mat', subj, cond);
+      end
+    end
 
-	% note that here we don't specify an output parameter
-	qsubcellfun(@ft_timelockanalysis, cfg);
+    % note that here we don't specify an output parameter
+    qsubcellfun(@ft_timelockanalysis, cfg);
 
-	% ...
+    % ...
 
-##  Example 2: writing custom functions for distributed computing
+## Example 2: writing custom functions for distributed computing
 
 This example script demonstrates how you can efficiently design your custom code for distributed computing.
 
-	subjectlist = {
-	  'Subject01.ds'
-	  'Subject02.ds'
-	  'Subject03.ds'
-	  'Subject04.ds'
-	  };
+    subjectlist = {
+      'Subject01.ds'
+      'Subject02.ds'
+      'Subject03.ds'
+      'Subject04.ds'
+      };
 
-	conditionlist = {
-	  'FC'
-	  'FIC'
-	  'IC'
-	  };
+    conditionlist = {
+      'FC'
+      'FIC'
+      'IC'
+      };
 
-	triggercode = [
-	  9
-	  3
-	  5
-	  ];
+    triggercode = [
+      9
+      3
+      5
+      ];
 
-	% start with a new and empty configuration
-	cfg1 = {};
-	cfg2 = {};
-	cfg3 = {};
-	cfg4 = {};
-	outputfile = {};
+    % start with a new and empty configuration
+    cfg1 = {};
+    cfg2 = {};
+    cfg3 = {};
+    cfg4 = {};
+    outputfile = {};
 
-	for subj=1:4
-	  for cond=1:3
-	    % this is for definetrial and preprocessing
-	    cfg1{subj,cond}                      = [];
-	    cfg1{subj,cond}.dataset              = subjectlist{subj};
-	    cfg1{subj,cond}.trialdef.prestim     = 1;
-	    cfg1{subj,cond}.trialdef.poststim    = 2;
-	    cfg1{subj,cond}.trialdef.eventtype   = 'backpanel trigger';
-	    cfg1{subj,cond}.trialdef.eventvalue  = triggercode(cond);
-	    cfg1{subj,cond}.channel              = {'MEG', '-MLP31', '-MLO12'};
-	    cfg1{subj,cond}.demean               = 'yes';
-	    cfg1{subj,cond}.baselinewindow       = [-0.2 0];
-	    cfg1{subj,cond}.lpfilter             = 'yes';
-	    cfg1{subj,cond}.lpfreq               = 35;
+    for subj=1:4
+      for cond=1:3
+        % this is for definetrial and preprocessing
+        cfg1{subj,cond}                      = [];
+        cfg1{subj,cond}.dataset              = subjectlist{subj};
+        cfg1{subj,cond}.trialdef.prestim     = 1;
+        cfg1{subj,cond}.trialdef.poststim    = 2;
+        cfg1{subj,cond}.trialdef.eventtype   = 'backpanel trigger';
+        cfg1{subj,cond}.trialdef.eventvalue  = triggercode(cond);
+        cfg1{subj,cond}.channel              = {'MEG', '-MLP31', '-MLO12'};
+        cfg1{subj,cond}.demean               = 'yes';
+        cfg1{subj,cond}.baselinewindow       = [-0.2 0];
+        cfg1{subj,cond}.lpfilter             = 'yes';
+        cfg1{subj,cond}.lpfreq               = 35;
 
-	    % this is for timelockanalysis
-	    cfg2{subj,cond}                      = [];
+        % this is for timelockanalysis
+        cfg2{subj,cond}                      = [];
 
-	    % this is for megplanar
-	    cfg3{subj,cond}                      = [];
+        % this is for megplanar
+        cfg3{subj,cond}                      = [];
 
-	    % this is for combineplanar
-	    cfg4{subj,cond}                      = [];
+        % this is for combineplanar
+        cfg4{subj,cond}                      = [];
 
-	    % this defines the file that will contain the output
-	    outputfile{subj,cond} = sprintf('subj%02d_cond%02d_combined.mat', subj, cond);
-	  end
-	end
+        % this defines the file that will contain the output
+        outputfile{subj,cond} = sprintf('subj%02d_cond%02d_combined.mat', subj, cond);
+      end
+    end
 
-	% note that the "preproc_timelock_planar" function is defined further down in this tutorial
-	qsubcellfun(@preproc_timelock_planar, cfg1, cfg2, cfg3, cfg4, outputfile);
+    % note that the "preproc_timelock_planar" function is defined further down in this tutorial
+    qsubcellfun(@preproc_timelock_planar, cfg1, cfg2, cfg3, cfg4, outputfile);
 
-	% let's now load the individual subject data from the 12 .mat files and
-	% average it for subsequent plotting
-	timelock = {};
-	for subj=1:4
-	for cond=1:3
-	  tmp = load(sprintf('subj%02d_cond%02d_combined.mat', subj, cond));
-	  timelock{subj,cond} = tmp.combined;
-	  clear tmp
-	end
-	end
+    % let's now load the individual subject data from the 12 .mat files and
+    % average it for subsequent plotting
+    timelock = {};
+    for subj=1:4
+    for cond=1:3
+      tmp = load(sprintf('subj%02d_cond%02d_combined.mat', subj, cond));
+      timelock{subj,cond} = tmp.combined;
+      clear tmp
+    end
+    end
 
-	cfg = [];
-	avgFC  = ft_timelockanalysis(cfg, timelock{:,1));
-	avgFIC = ft_timelockanalysis(cfg, timelock{:,2));
-	avgIC  = ft_timelockanalysis(cfg, timelock{:,3));
+    cfg = [];
+    avgFC  = ft_timelockanalysis(cfg, timelock{:,1));
+    avgFIC = ft_timelockanalysis(cfg, timelock{:,2));
+    avgIC  = ft_timelockanalysis(cfg, timelock{:,3));
 
-	cfg = [];
-	cfg.layout = 'CTF151_helmet.mat';
-	ft_multiplotER(cfg, avgFC, avgFIC, avgIC)
+    cfg = [];
+    cfg.layout = 'CTF151_helmet.mat';
+    ft_multiplotER(cfg, avgFC, avgFIC, avgIC)
 
 This way you can distribute your custom function (e.g. see below) along with the input and output parameters.
 
-	function preproc_timelock_planar(cfg1, cfg2, cfg3, cfg4, outputfile)
+    function preproc_timelock_planar(cfg1, cfg2, cfg3, cfg4, outputfile)
 
-	cfg1 = ft_definetrial(cfg1);
-	data = ft_preprocessing(cfg1);
+    cfg1 = ft_definetrial(cfg1);
+    data = ft_preprocessing(cfg1);
 
-	timelock = ft_timelockanalysis(cfg2, data);
-	clear data
+    timelock = ft_timelockanalysis(cfg2, data);
+    clear data
 
-	planar = ft_megplanar(cfg3, timelock);
-	clear timelock
+    planar = ft_megplanar(cfg3, timelock);
+    clear timelock
 
-	combined = ft_combineplanar(cfg4, planar);
-	clear planar
+    combined = ft_combineplanar(cfg4, planar);
+    clear planar
 
-	save(outputfile, 'combined');
-	clear combined
+    save(outputfile, 'combined');
+    clear combined
 
 ## Summary and suggested further reading
 
 This tutorial covered how to distribute your computations/workload over multiple computers in a cluster that uses the Torque or SGE batch queue system. In our example, we have performed a relatively simple timelock analysis (ERF) on MEG data, but one can imagine that it does not need many adjustments to distribute any other type of analysis. Using the configuration demonstrated in Example 2, one can distribute any form of analysis.
 
 FAQs related to issues in this tutorial:
-{% include seealso tag1="faq" tag2="qsub" 			%}
-{% include seealso tag1="faq" tag2="peer" 			%}
-{% include seealso tag1="faq" tag2="engine" 		%}
-{% include seealso tag1="faq" tag2="distcomp" 	%}
+{% include seealso tag1="faq" tag2="qsub"       %}
+{% include seealso tag1="faq" tag2="peer"       %}
+{% include seealso tag1="faq" tag2="engine"     %}
+{% include seealso tag1="faq" tag2="distcomp"   %}

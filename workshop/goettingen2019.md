@@ -4,12 +4,12 @@ title: FieldTrip Workshop in Göttingen
 
 # FieldTrip workshop in Göttingen
 
-The Clinic for Clinical Neurophysiology (Georg-August University) in Göttingen Germany will be hosting a FieldTrip Course on MEG Analysis 
+The Clinic for Clinical Neurophysiology (Georg-August University) in Göttingen Germany will be hosting a FieldTrip Course on MEG Analysis
 with Tzvetan Popov and Mats van Es from 4 to 6 of February 2019.
 
 ### Where
 
-[Georg-August University Göttingen](https://www.uni-goettingen.de/en/1.html)  
+[Georg-August University Göttingen](https://www.uni-goettingen.de/en/1.html)
 
 ### When
 
@@ -24,40 +24,37 @@ Local organizer: Daniel van de Velden.
 
 ### Monday 4 February
 
--   **09:00 - 09:15**   Registration, welcome and coffee
--   **09:15 - 10:15**   Lecture I: Introduction to EEG/MEG and introduction to the FieldTrip toolbox _Mats van Es_ - [lecture](/assets/pdf/workshop/goettingen2019/1_introduction.pdf)  
--   **10:15 - 12:00**   Hands-On I: [Introduction to Event-Related Fields](/tutorial/eventrelatedaveraging) - “Preprocessing”
--   **12:00 - 13:15**   Lunch
+- **09:00 - 09:15** Registration, welcome and coffee
+- **09:15 - 10:15** Lecture I: Introduction to EEG/MEG and introduction to the FieldTrip toolbox _Mats van Es_ - [lecture](/assets/pdf/workshop/goettingen2019/1_introduction.pdf)
+- **10:15 - 12:00** Hands-On I: [Introduction to Event-Related Fields](/tutorial/eventrelatedaveraging) - “Preprocessing”
+- **12:00 - 13:15** Lunch
 
--   **13:15 - 14:30**   Lecture II: Fundamentals of neuronal oscillations and synchrony - “Time-Frequency Analysis” _Mats van Es_ - [lecture](/assets/pdf/workshop/goettingen2019/2_frequency_analysis.pdf)
--   **14:30 - 14:45**   Q&A so far
--   **14:45 - 15:15**   Coffee break
--   **15:15 - 17:00**   Hands On II: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis) - “Time-Frequency Analysis”
--   **17:00 - 17:30**   Wrap-up-the-day and questions
+- **13:15 - 14:30** Lecture II: Fundamentals of neuronal oscillations and synchrony - “Time-Frequency Analysis” _Mats van Es_ - [lecture](/assets/pdf/workshop/goettingen2019/2_frequency_analysis.pdf)
+- **14:30 - 14:45** Q&A so far
+- **14:45 - 15:15** Coffee break
+- **15:15 - 17:00** Hands On II: [Time-frequency analysis of power](/tutorial/timefrequencyanalysis) - “Time-Frequency Analysis”
+- **17:00 - 17:30** Wrap-up-the-day and questions
 
+### Tuesday 5 February 2019
 
-### Tuesday  5 February 2019
+- **09:00 - 10:15** Lecture IV: Source reconstruction using beamformers - “Source Analysis” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/3_source_reconstruction.pdf)
+- **10:15 - 10:30** Coffee break
+- **10:30 - 12:00** Hands On III: [Identifying oscillatory sources using Beamformers](/tutorial/beamformer) – “Source Analysis”
+- **12:00 - 13:00** Lunch
 
--   **09:00 - 10:15**    Lecture IV: Source reconstruction using beamformers - “Source Analysis” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/3_source_reconstruction.pdf)
--   **10:15 - 10:30**    Coffee break
--   **10:30 - 12:00**    Hands On III: [Identifying oscillatory sources using Beamformers](/tutorial/beamformer) – “Source Analysis” 
--   **12:00 - 13:00**    Lunch
+- **13:00 - 14:00** Lecture IV: Connectivity analysis in MEG and EEG data - “Connectivity” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/4_connectivity_analysis.pdf)
+- **14:00 - 14:15** Coffee break
+- **14:15 - 15:15** Hands On IV: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity) – “Connectivity”
+- **15:15 - 16:15** Lecture V: Statistics using non-parametric randomization techniques - “Statistical Testing/Methods” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/5_cluster_statistics.pdf)
+- **16:15 - 16:45** Wrap-up-the-day and questions
+- **19:00 - 23:00** Social Event
 
--   **13:00 - 14:00**   Lecture IV: Connectivity analysis in MEG and EEG data - “Connectivity” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/4_connectivity_analysis.pdf)
--   **14:00 - 14:15**   Coffee break
--   **14:15 - 15:15**   Hands On IV: [Analysis of sensor- and source-level connectivity](/tutorial/connectivity) – “Connectivity”
--   **15:15 - 16:15**   Lecture V: Statistics using non-parametric randomization techniques - “Statistical Testing/Methods” _Tzvetan Popov_ - [lecture](/assets/pdf/workshop/goettingen2019/5_cluster_statistics.pdf)
--   **16:15 - 16:45**   Wrap-up-the-day and questions
--   **19:00 - 23:00**   Social Event
+### Wednesday 6 February 2019
 
-
-### Wednesday  6 February 2019
-
--   **9:00 - 10:00**   Hands On V: [Statistics using non-parametric randomization techniques](/tutorial/cluster_permutation_freq) - “Statistical Testing/Methods”
--   **10:00- 10:15**   Coffee break
--   **10:15- 13:00**   FieldTrip Playground (bring your own data)
--   **13:00- 13:45**   Wrap-up-the-day and Closing remarks
-
+- **9:00 - 10:00** Hands On V: [Statistics using non-parametric randomization techniques](/tutorial/cluster_permutation_freq) - “Statistical Testing/Methods”
+- **10:00- 10:15** Coffee break
+- **10:15- 13:00** FieldTrip Playground (bring your own data)
+- **13:00- 13:45** Wrap-up-the-day and Closing remarks
 
 ## Getting started with the hands-on sessions
 

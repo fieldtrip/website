@@ -45,32 +45,36 @@ After installing FieldTrip to your path, you change into the tutorial directory
 
 #### Monday
 
--   morning
-    -   1h intro lecture [ppt](https://db.tt/wNf4lyNH)
-    -   2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+- morning
 
--   afternoon
-    -   1h oscillations lecture [ppt](https://db.tt/IRxD9rDb)
-    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+  - 1h intro lecture [ppt](https://db.tt/wNf4lyNH)
+  - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
--   evening
-    -   pub
+- afternoon
+
+  - 1h oscillations lecture [ppt](https://db.tt/IRxD9rDb)
+  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+
+- evening
+  - pub
 
 #### Tuesday
 
--   morning
-    -   1h beamforming lecture [ppt](https://db.tt/kR4N2pSp)
-    -   2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
+- morning
 
--   afternoon
-    -   1h nonparametric statistics lecture [ppt](https://db.tt/x9E0jmDG)
-    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
-    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+  - 1h beamforming lecture [ppt](https://db.tt/kR4N2pSp)
+  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
 
--   evening
-    -   dinner <http://goo.gl/maps/IM6yX>
+- afternoon
+
+  - 1h nonparametric statistics lecture [ppt](https://db.tt/x9E0jmDG)
+  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/eventrelatedstatistics>
+  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+
+- evening
+  - dinner <http://goo.gl/maps/IM6yX>
 
 #### Wednesday
 
--   morning
-    -   3h playground (working on own data), [ft_trialfun_brainvision_segmented](https://db.tt/rn7mS2Lu)
+- morning
+  - 3h playground (working on own data), [ft_trialfun_brainvision_segmented](https://db.tt/rn7mS2Lu)

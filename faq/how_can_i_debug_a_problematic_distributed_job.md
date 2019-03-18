@@ -25,12 +25,12 @@ The problem may be related to file and/or directory permissions because the peer
 
 ## Start an interactive peerslave
 
- You can start another interactive MATLAB session, preferably on another computer, and within that MATLAB session start a **[peerslave](/reference/peerslave)**. To ensure that the master will pick this slave, and not one of the other idle slaves on the network, you have to specify both to your master and your slave that they should restict them selves based on username using the allowuser option.
+You can start another interactive MATLAB session, preferably on another computer, and within that MATLAB session start a **[peerslave](/reference/peerslave)**. To ensure that the master will pick this slave, and not one of the other idle slaves on the network, you have to specify both to your master and your slave that they should restict them selves based on username using the allowuser option.
 
 In the master MATLAB session you do
-    peermaster('allowuser, 'roboos');
+peermaster('allowuser, 'roboos');
 and in the slave MATLAB session you start
-    peerslave('allowuser', 'roboos');
+peerslave('allowuser', 'roboos');
 
 Since both MATLAB sessions will run under your own account (here with the account name "roboos"), the master and slave will exclusively communicate.
 
@@ -68,10 +68,10 @@ Subsequently you retry the **[peercellfun](/reference/peercellfun)** and look at
 
 ## Start a slave in non-graphical mode
 
-It might be that the problem is related to the graphical output of the function that you are trying to evaluate. The slaves that are running by default on the DCCN linux cluster do not have a graphical output. Some graphical functions (like plotting) has been reported to work, but others (like drawing a GUI) have been reported to fail.
+It might be that the problem is related to the graphical output of the function that you are trying to evaluate. The slaves that are running by default on the DCCN Linux cluster do not have a graphical output. Some graphical functions (like plotting) has been reported to work, but others (like drawing a GUI) have been reported to fail.
 
-To ensure that a non-graphical slave can execute your jobs, you can use putty to connect to a linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerslave](/reference/peerslave)** with
-    peerslave('allowuser', 'yourid');
+To ensure that a non-graphical slave can execute your jobs, you can use putty to connect to a Linux cluster node. Subsequently you start MATLAB in the putty window and start **[peerslave](/reference/peerslave)** with
+peerslave('allowuser', 'yourid');
 
 Subsequently you can restrict your **[peermaster](/reference/peermaster)** to the same userid (you can also use groups for this, see above) and retry the execution of the jobs with **[peercellfun](/reference/peercellfun)**.
 
@@ -81,4 +81,4 @@ If all of the methods described above fail, you'll have to resort to using the M
 
 In the function that is executed you insert a "keyboard" statement. Since the slave runs like a normal MATLAB, it will jump to debug mode on that line and you can continue step-by-step.
 
-You can also try to resolve the problem by typing "dbstop if caught error" in MATLAB prior to starting the **[peerslave](/reference/peerslave)**. The slave will evaluate the function using peerexec, which does feval in a large try-catch loop. Note that a normal "dbstop if error" will not be sufficient, because the error is caught with the purpose of sending it back to the master.  
+You can also try to resolve the problem by typing "dbstop if caught error" in MATLAB prior to starting the **[peerslave](/reference/peerslave)**. The slave will evaluate the function using peerexec, which does feval in a large try-catch loop. Note that a normal "dbstop if error" will not be sufficient, because the error is caught with the purpose of sending it back to the master.
