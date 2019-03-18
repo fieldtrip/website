@@ -1,5 +1,6 @@
 ---
 title: ft_datatype_dip
+layout: default
 tags: 
 ---
 ```

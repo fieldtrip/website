@@ -1,5 +1,6 @@
 ---
 title: ft_spikedetection
+layout: default
 tags: 
 ---
 ```

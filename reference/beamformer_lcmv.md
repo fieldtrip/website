@@ -1,5 +1,6 @@
 ---
 title: beamformer_lcmv
+layout: default
 tags: 
 ---
 ```
@@ -25,6 +26,8 @@ tags:
 
  Additional options should be specified in key-value pairs and can be
   'lambda'           = regularisation parameter
+  'kappa'            = parameter for covariance matrix inversion
+  'tol'              = parameter for covariance matrix inversion
   'powmethod'        = can be 'trace' or 'lambda1'
   'feedback'         = give ft_progress indication, can be 'text', 'gui' or 'none' (default)
   'fixedori'         = use fixed or free orientation,                   can be 'yes' or 'no'

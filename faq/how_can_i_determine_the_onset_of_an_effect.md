@@ -8,7 +8,7 @@ tags: [faq, statistics]
 {% include markup/info %}
 I received the following question:
 
-*"If I am interested at the onset of an effect that is present in one condition and not another can I use the start time of a cluster (cluster-based permutation test) to represent the onset time of the effect?"*.
+_"If I am interested at the onset of an effect that is present in one condition and not another can I use the start time of a cluster (cluster-based permutation test) to represent the onset time of the effect?"_.
 
 The answer below starts from the idea of cluster-based statistics, but applies to determining onset in general.
 {% include markup/end %}
@@ -19,7 +19,7 @@ The cluster represents the thresholded uncorrected massive univariate statistics
 
 Given that the mean and standard deviation are unbiassed estimators, they won’t systematically change if you change the number of trials. But sqrt(N) changes with the number of trials. Hence the t-score increases with increasing number of trials.
 
-Imagine the typical effect that starts weak and then increases over time until it peaks.  The onset that you determine using the thresholded t-score depends on the number of trials, but it is always with finite N biassed to being too late. If you have few trials, it will be much too late (close to the peak), if you have many trials it will only be a bit too late. The more trials, the closer it gets to the true onset. But you know that it will always be too late, and that it depends quite ramdonmly on the amount of data that you happen to have.
+Imagine the typical effect that starts weak and then increases over time until it peaks. The onset that you determine using the thresholded t-score depends on the number of trials, but it is always with finite N biassed to being too late. If you have few trials, it will be much too late (close to the peak), if you have many trials it will only be a bit too late. The more trials, the closer it gets to the true onset. But you know that it will always be too late, and that it depends quite ramdonmly on the amount of data that you happen to have.
 
 Determining the onset of an effect that you know exists (i.e. you have rejected the H0 of no effect in favour of H1) is not a statistical question. There is an effect, its as simple as that! So why use the value that you computed under the rejected null hypothesis to quantify a feature of the effect?
 

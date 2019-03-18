@@ -27,15 +27,15 @@ The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-orde
 
 To calculate the event related field / potential for the example dataset we will perform the following step
 
-   * Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
-   * Compute the average over trials using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
-   * Calculate the planar gradient with the functions **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)**
-   * Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleploter)** or several channels with **[ft_multiplotER](/reference/ft_multiploter)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoploter)**
-   *Grandaverage and realignment (optional). When you have data from more than one subject you can make a grand average of the ERPs / ERFs with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. **[ft_megrealign](/reference/ft_megrealign)** can be used to realign each subjects data to standard sensor positions before computing the grand average.
+- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Compute the average over trials using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
+- Calculate the planar gradient with the functions **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)**
+- Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleplotER)** or several channels with **[ft_multiplotER](/reference/ft_multiplotER)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoplotER)**
+- Grandaverage and realignment (optional). When you have data from more than one subject you can make a grand average of the ERPs / ERFs with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. **[ft_megrealign](/reference/ft_megrealign)** can be used to realign each subjects data to standard sensor positions before computing the grand average.
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/figure1.png" %}
 
-*Figure: A schematic overview of the steps in averaging of event related fields.*
+_Figure: A schematic overview of the steps in averaging of event related fields._
 
 ## Preprocessing
 
@@ -66,7 +66,7 @@ The most important fields are 'dataFIC_LP.trial' containing the individual trial
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/trial1_3feb09_ERF.png" width="400" %}
 
-*Figure: The MEG data from a single trial in a single sensor obtained after FT_PREPROCESSING.*
+_Figure: The MEG data from a single trial in a single sensor obtained after ft_preprocessing._
 
 To perform the preprocessing for the fully congruent (FC) and initiall congruent (IC) conditions, do the followin
 
@@ -104,7 +104,7 @@ The most important field is avgFIC.avg, containing the average over all trials f
 
 ## Plot the results (axial gradients)
 
-Using the plot functions **[ft_multiplotER](/reference/ft_multiploter)**, **[ft_singleplotER](/reference/ft_singleploter)** and **[ft_topoplotER](/reference/ft_topoploter)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
+Using the plot functions **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)** you can make plots of the average. You can find information about plotting also in the [Plotting data at the channel and source level](/tutorial/plotting) tutorial.
 
 Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one figure:
 
@@ -117,7 +117,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/multiplot_1cond_3feb09_erf.png" width="700" %}
 
-*Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using FT_PREPROCESSING followed by FT_TIMELOCKANALYSIS.*
+_Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis._
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure. To plot all conditions list them as multiple variable
 
@@ -132,7 +132,7 @@ This plots the event related fields for all sensors arranged topographically acc
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/multiplot_allcond_3feb09_erf.png" width="700" %}
 
-*Figure: The event related fields for three conditions plotted simultaneously using ft_multiplotER.*
+_Figure: The event related fields for three conditions plotted simultaneously using ft_multiplotER._
 
 To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** and specify the name of the channel you are interested in, for instance MLC2
 
@@ -144,7 +144,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/singleplot_mlc24_3feb09_erf.png" width="400" %}
 
-*Figure: The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER.*
+_Figure: The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER._
 
 To plot the topographic distribution of the data averaged over the time interval from 0.3 to 0.5 seconds use to following command
 
@@ -155,9 +155,9 @@ To plot the topographic distribution of the data averaged over the time interval
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_FIC_3feb09_erf.png" width="400" %}
 
-*Figure: A topographic plot of the event related fields obtained using ft_topoplotER.*
+_Figure: A topographic plot of the event related fields obtained using ft_topoplotER._
 
-To plot a sequence of topographic plots define the time intervals in cfg.xli
+To plot a sequence of topographic plots define the time intervals in cfg.xlim
 
     cfg = [];
     cfg.xlim = [-0.2 : 0.1 : 1.0];  % Define 12 time intervals
@@ -167,12 +167,12 @@ To plot a sequence of topographic plots define the time intervals in cfg.xli
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_timeserie_3feb09_erf.png" width="700" %}
 
-*Figure: The topography of event related fields over time obtained using ft_topoplotER.*
+_Figure: The topography of event related fields over time obtained using ft_topoplotER._
 
 #### Exercise 1
 
 {% include markup/info %}
-What changes in data if you extend the baseline correction from -200 ms to 0 ms to  -500 ms to 0?
+What changes in data if you extend the baseline correction from -200 ms to 0 ms to -500 ms to 0?
 
 Apply a band-pass filter in the preprocessing instead of only a low-pass filter. Use for example the values from 1 to 30 Hz. What changes in the data? What are the pros and cons of using a high-pass filter?
 {% include markup/end %}
@@ -226,7 +226,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png" width="500" %}
 
-*Figure: A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using FT_MEGPLANAR and FT_COMBINEPLANAR..*
+_Figure: A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using ft_megplanar and ft_combineplanar._
 
 #### Exercise 3
 

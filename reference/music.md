@@ -1,5 +1,6 @@
 ---
 title: music
+layout: default
 tags: 
 ---
 ```

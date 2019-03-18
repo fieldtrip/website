@@ -13,17 +13,17 @@ If you want to implement the buffer in your own application, you should consider
 
 The best way to get started with incorporating the FieldTrip buffer in your own software project, is by looking at the example applications in the buffer/test directory. It contains a number of examples
 
-*  ''buffer'' implements a standalone buffer (middle box in the figure above)
+- ''buffer'' implements a standalone buffer (middle box in the figure above)
 
-*  ''demo_sinewave'' implements a standalone data acquisition client (left box in the figure above)
+- ''demo_sinewave'' implements a standalone data acquisition client (left box in the figure above)
 
-*  ''demo_combined'' implements both the buffer and the data acquisition in a single executable (left+middle box)
+- ''demo_combined'' implements both the buffer and the data acquisition in a single executable (left+middle box)
 
-*  ''demo_event'' writes events to the buffer, c.f. demo_sinewave which writes only data
+- ''demo_event'' writes events to the buffer, c.f. demo_sinewave which writes only data
 
 ### The buffer will be attached to your local application
 
-Your application is responsible for starting up the tcpserver. The tcpserver is a multithreaded function, which will spawn a separate tcpsocket thread for every incoming connection. The tcpsocket thread reads a request from the network, processes the request, and returns a response. Possible requests that the buffer can process are PUT_HDR, PUT_DAT, PUT_EVT, GET_HRD, GET_DAT, GET_EVT, FLUSH_HDR, FLUSH_DAT, FLUSH_EVT. The tcpserver is instantiated using the following pseudo-cod
+Your application is responsible for starting up the tcpserver. The tcpserver is a multithreaded function, which will spawn a separate tcpsocket thread for every incoming connection. The tcpsocket thread reads a request from the network, processes the request, and returns a response. Possible requests that the buffer can process are PUT_HDR, PUT_DAT, PUT_EVT, GET_HRD, GET_DAT, GET_EVT, FLUSH_HDR, FLUSH_DAT, FLUSH_EVT. The tcpserver is instantiated using the following pseudo-code:
 
     ... start the multithreading...
     tcpserver((void *)(&host));
@@ -33,15 +33,15 @@ or alternatively you can start the tcpserver in its own thread like this
     ... start the multithreading...
     pthread_create(&tid, &attr, tcpserver, (void *)(&host));
 
-A real example for starting the tcpserver can be found in the code in buffer/test/demo_buffer.c (only the buffer) or in buffer/test/demo_combined.c (which starts the tcpserver and subsequently writes simulated data to it). 
+A real example for starting the tcpserver can be found in the code in buffer/test/demo_buffer.c (only the buffer) or in buffer/test/demo_combined.c (which starts the tcpserver and subsequently writes simulated data to it).
 
-After starting the tcpserver, your application can start writing to the buffer. The writing to the buffer should be done like in this pseudo cod
+After starting the tcpserver, your application can start writing to the buffer. The writing to the buffer should be done like in this pseudo code:
 
     ... construct a PUT_HDR request ...
     connection = open_connection(hostname, port);
     status = clientrequest(connection, request, &response);
     close_connection(connection);
-    
+
     while (newdata)
     ... construct a PUT_DAT request ...
     connection = open_connection(hostname, port);
@@ -49,12 +49,12 @@ After starting the tcpserver, your application can start writing to the buffer. 
     close_connection(connection);
     end
 
-In the example above, the network transparent communication is kept stateless. It is also possible to keep the connection open for multiple subsequent requests, like thi
+In the example above, the network transparent communication is kept stateless. It is also possible to keep the connection open for multiple subsequent requests, like this:
 
     connection = open_connection(hostname, port);
     ... construct a PUT_HDR request ...
     status = clientrequest(connection, request, &response);
-    
+
     while (newdata)
     ... construct a PUT_DAT request ...
     status = clientrequest(connection, request, &response);
@@ -68,14 +68,13 @@ If your want your application only to write to a remote buffer, you can use the 
     connection = open_connection(hostname, port);
     ... construct a PUT_HDR request ...
     status = clientrequest(connection, request, &response);
-    
+
     while (newdata)
     ... construct a PUT_DAT request ...
     status = clientrequest(connection, request, &response);
     end
     close_connection(connection);
 
-Depending on how the host is specified, the open_connection function will open a network socket (remote buffer) or will do nothing (local buffer). The clientrequest function will automatically determine whether it should write to a remote or to a local buffer, and it will call tcprequest or dmarequest (dma = direct memory access) respectively. 
+Depending on how the host is specified, the open_connection function will open a network socket (remote buffer) or will do nothing (local buffer). The clientrequest function will automatically determine whether it should write to a remote or to a local buffer, and it will call tcprequest or dmarequest (dma = direct memory access) respectively.
 
 The dmarequest function always deals with the low-level memory management. If you want to keep all multithreaded code out of your application, which is only possible if you write to a remote buffer, then you can use the tcprequest function instead of the clientrequest function. The only c-functions that require multithreading are tcpserver which start a thread for every incoming connection, and dmarequest which uses a mutex to ensure that multiple memcopy requests are not interfering.
-

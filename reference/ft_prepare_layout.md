@@ -1,5 +1,6 @@
 ---
 title: ft_prepare_layout
+layout: default
 tags: 
 ---
 ```
@@ -26,13 +27,11 @@ tags:
    cfg.layout      = filename containg the input layout (*.mat or *.lay file), this can also be a layout
                      structure, which is simply returned as-is (see below for details)
    cfg.output      = filename (ending in .mat or .lay) to which the layout will be written (default = [])
-   cfg.elec        = structure with electrode definition, or
-   cfg.elecfile    = filename containing electrode definition
-   cfg.grad        = structure with gradiometer definition, or
-   cfg.gradfile    = filename containing gradiometer definition
-   cfg.opto        = structure with optode structure definition, or
-   cfg.optofile    = filename containing optode structure definition
+   cfg.elec        = structure with electrode positions or filename, see FT_READ_SENS
+   cfg.grad        = structure with gradiometer definition or filename, see FT_READ_SENS
+   cfg.opto        = sstructure with optode definition or filename, see FT_READ_SENS
    cfg.rotate      = number, rotation around the z-axis in degrees (default = [], which means automatic)
+   cfg.center      = string, center and scale the electrodes in the sphere that represents the head, can be 'yes' or 'no' (default = 'no')
    cfg.projection  = string, 2D projection method can be 'stereographic', 'orthographic', 'polar' or 'gnomic' (default = 'polar')
                      When 'orthographic', cfg.viewpoint can be used to indicate to specificy projection (keep empty for legacy projection)
    cfg.viewpoint   = string indicating the view point that is used for orthographic projection of 3-D sensor
@@ -70,7 +69,7 @@ tags:
  Alternatively the layout can be constructed from either one of these in the input data structure:
    data.elec     = structure with electrode positions
    data.grad     = structure with gradiometer definition
-   data.opto     = structure with optode structure definition
+   data.opto     = structure with optode definition
 
  Alternatively you can specify the following systematic layouts which will be
  generated for all channels present in the data. Note that these layouts are only

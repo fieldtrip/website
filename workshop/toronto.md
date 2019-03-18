@@ -20,39 +20,43 @@ Thilo Womelsdorf is the host and local organizer. Robert Oostenveld (Donders, Ni
 
 ### Saturday
 
--   morning
-    -   1h lecture - Introduction to FieldTrip and LFP/EEG analysis (Robert Oostenveld)
-    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
+- morning
 
--   afternoon
-    -   1h lecture - Spike, and Spike-LFP Analysis (Martin Vinck)
-    -   1h handson <http://www.fieldtriptoolbox.org/tutorial/spike>
-    -   1h people work on own data with ERFs and/or spikes
+  - 1h lecture - Introduction to FieldTrip and LFP/EEG analysis (Robert Oostenveld)
+  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/eventrelatedaveraging>
 
--   evening - special interest lectures on decoding methods
-    -   Use of entropy and mutual information measures for neuroscience applications (Martin)
-    -   A hands-on introduction to Bayesian decoding of multiple spike train data (Matthijs van der Meer; e-mail to get the data)
-    -   open discussion
+- afternoon
+
+  - 1h lecture - Spike, and Spike-LFP Analysis (Martin Vinck)
+  - 1h handson <http://www.fieldtriptoolbox.org/tutorial/spike>
+  - 1h people work on own data with ERFs and/or spikes
+
+- evening - special interest lectures on decoding methods
+  - Use of entropy and mutual information measures for neuroscience applications (Martin)
+  - A hands-on introduction to Bayesian decoding of multiple spike train data (Matthijs van der Meer; e-mail to get the data)
+  - open discussion
 
 ### Sunday
 
--   morning
-    -   1h lecture - Frequency analysis of power and coherence (Robert)
-    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
+- morning
 
--   afternoon
-    -   1h lecture - Connectivity analysis (Martin)
-    -   1h handson <http://www.fieldtriptoolbox.org/tutorial/spikefield>
-    -   1h handson <http://www.fieldtriptoolbox.org/tutorial/connectivity>
+  - 1h lecture - Frequency analysis of power and coherence (Robert)
+  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
 
--   evening
-    -   short project presentations from participants
+- afternoon
+
+  - 1h lecture - Connectivity analysis (Martin)
+  - 1h handson <http://www.fieldtriptoolbox.org/tutorial/spikefield>
+  - 1h handson <http://www.fieldtriptoolbox.org/tutorial/connectivity>
+
+- evening
+  - short project presentations from participants
 
 ### Monday
 
--   morning
-    -   1h lecture - Randomization and Cluster statistics (Robert)
-    -   2h people work on own data on laptops
+- morning
+  - 1h lecture - Randomization and Cluster statistics (Robert)
+  - 2h people work on own data on laptops
 
 ## Preparing for the hands-on sessions
 

@@ -1,5 +1,6 @@
 ---
 title: ft_average_sens
+layout: default
 tags: 
 ---
 ```
@@ -14,5 +15,5 @@ tags:
    'weights'    a vector of weights (will be normalized to sum==1)
    'fiducials'  optional structure array of headshapes
 
- See also FT_READ_SENS, FT_PREPARE_VOL_SENS, FT_TRANSFORM_SENS
+ See also FT_READ_SENS, FT_DATATYPE_SENS, FT_PREPARE_VOL_SENS
 ```

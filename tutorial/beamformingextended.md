@@ -10,7 +10,7 @@ tags: [tutorial, meg, source, coherence, meg-visuomotor151]
 In this tutorial we will continue working on the combined visual and motor task dataset((Schoffelen, Poort, Oostenveld, & Fries (2011) Selective Movement Preparation Is Subserved by Selective
 Increases in Corticomuscular Gamma-Band Coherence. J Neurosci. 31(18):6750-6758)) described in the [channel-level analysis tutorial](/tutorial/sensor_analysis).
 
-In this tutorial you will learn about applying beamformer techniques in the frequency domain.  You will learn how to compute an appropriate head model and lead field matrix, how to compute appropriate time-frequency windows, and how to contrast the effect of interest against some control/baseline.  Also, you will play around with several options for plotting the results overlaid on a structural MRI. Finally, you will apply the results from the sensor-level coherence analysis and localize sources that are coherent with the EMG signals.
+In this tutorial you will learn about applying beamformer techniques in the frequency domain. You will learn how to compute an appropriate head model and lead field matrix, how to compute appropriate time-frequency windows, and how to contrast the effect of interest against some control/baseline. Also, you will play around with several options for plotting the results overlaid on a structural MRI. Finally, you will apply the results from the sensor-level coherence analysis and localize sources that are coherent with the EMG signals.
 
 It is expected that you understand the previous steps of preprocessing and filtering and understand the essence of (time-)frequency analysis of the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful. Also you should be at least familiar with how to compute coherence on the sensor-level data before diving into the source-level.
 
@@ -18,37 +18,38 @@ This tutorial will not cover the time-domain option for LCMV/SAM beamformers nor
 
 ## Background
 
-In the [sensor-level tutorial](/tutorial/sensor_analysis) we found gamma-band oscillations over occipital MEG channels during visual stimulation. Furthermore, we identified cortico-muscular coherence between the EMG and MEG channels over the contralateral MEG channels. The goal of this tutorial is to localize sources responsible for this oscillatory activity. We will use a beamformer, which is a adaptive spatial filter. Scanning with the beamformer over the whole brain allows us to estimate the activity everywhere in the brain. The filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'.  This latter part means that, if a hypothetical source that projects to the sensors had a power of amplitude 1, the inverse filter applied to the sensor level representation would then reconstruct the source power with strength 1 at the location of the hypothetical source. Beamforming assumes that sources in different parts of the brain are not strongly temporally correlated.
+In the [sensor-level tutorial](/tutorial/sensor_analysis) we found gamma-band oscillations over occipital MEG channels during visual stimulation. Furthermore, we identified cortico-muscular coherence between the EMG and MEG channels over the contralateral MEG channels. The goal of this tutorial is to localize sources responsible for this oscillatory activity. We will use a beamformer, which is a adaptive spatial filter. Scanning with the beamformer over the whole brain allows us to estimate the activity everywhere in the brain. The filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'. This latter part means that, if a hypothetical source that projects to the sensors had a power of amplitude 1, the inverse filter applied to the sensor level representation would then reconstruct the source power with strength 1 at the location of the hypothetical source. Beamforming assumes that sources in different parts of the brain are not strongly temporally correlated.
 
 The brain is divided in a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross et al. 2001). Other beamformer methods rely on sources estimates calculated in the time domain, e.g. the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. These distributions of source power can then be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
 
 When conducting a multiple-subject study, it is essential that averaging over subjects does not violate any statistical assumption. One of these assumptions is that subject's sources are represented in a common space, i.e. an averaged grid point represents the estimate of the same brain region across subjects. One way to get subjects in a common space is by spatially deforming and interpolating the source reconstruction after beamforming. However, we will use an alternative way that does not require interpolation. Prior to source estimation we construct a regular grid in MNI template space and spatially deform this grid to each of the individual subjects (note that you will only have the data from one subject here). The beamformer estimation is done on the direct grid mapped to MNI space, so that the results can be compared over subjects. This procedure is explained in detail [in this example code](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). Creating the MNI template grid only needs to be done once, and the result is provided in the fieldtrip/template directory. We strongly suggest that you have a quick (but thorough) look at the example code page and understand the essence of what is being done there anyway!
 
-The tutorial is split into three parts. In the first part of the tutorial, we will explain how to compute the forward and inverse model, which is the fundamental basic for source level analysis. In the second part, we will localize the sources responsible for the posterior gamma activity upon visual stimlation. In the third part of the tutorial, we will compute coherence to study the oscillatory synchrony between two sources in the brain. This is computed in the frequency domain by normalizing the magnitude of the summed cross-spectral density between two signals by their respective power. For each frequency bin the coherence value is a number between 0 and 1. The coherence values reflect the consistency of the phase difference between the two signals at a given frequency. In the dataset we will analyse the subject was required to maintain an isometric contraction of a forearm muscle. The example in this session covers thus cortico-muscular coherence on source level. The same principles, however, apply to cortico-cortical coherence, for which the interested reader can already have a look at [another tutorial](/tutorial/connectivityextended) that will be covered later.
+The tutorial is split into three parts. In the first part of the tutorial, we will explain how to compute the forward and inverse model, which is the fundamental basic for source level analysis. In the second part, we will localize the sources responsible for the posterior gamma activity upon visual stimlation. In the third part of the tutorial, we will compute coherence to study the oscillatory synchrony between two sources in the brain. This is computed in the frequency domain by normalizing the magnitude of the summed cross-spectral density between two signals by their respective power. For each frequency bin the coherence value is a number between 0 and 1. The coherence values reflect the consistency of the phase difference between the two signals at a given frequency. In the dataset we will analyze the subject was required to maintain an isometric contraction of a forearm muscle. The example in this session covers thus cortico-muscular coherence on source level. The same principles, however, apply to cortico-cortical coherence, for which the interested reader can already have a look at [another tutorial](/tutorial/connectivityextended) that will be covered later.
+
 ## Procedure
 
 In the first part of this tutorial we will use the anatomical data to prepare the source analysis. This involve
 
-* Reading in the subject specific anatomical MRI using  **[ft_read_mri](/reference/ft_read_mri)**
-*  Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
-*  Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
+- Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/ft_read_mri)**
+- Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+- Prepare the source model using **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)**
 
 Next, we head out to investigate the response to the visual stimulation. We will localize the sources of the visual gamma-band activity following the following step
 
-* Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
-* Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
-* Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
-*  Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-*  Compute the condition difference using **[ft_math](/reference/ft_math)**
-*  Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
+- Load the data from disk and define baseline and poststimulus period using **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- Compute the cross-spectral density matrix for all MEG channels using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Compute the lead field matrices using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
+- Compute a common spatial filter and estimate the power of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+- Compute the condition difference using **[ft_math](/reference/ft_math)**
+- Visualize the result with **[ft_sourceplot](/reference/ft_sourceplot)**
 
 In the third part we shift our attention to the motor task in this dataset. We will compute the spatial distribution of the cortico-muscular coherence over the whole brain using a very similar analysis pipelin
 
-* Define a suitable time window without interfering stimulation **[ft_redefinetrial](/reference/ft_redefinetrial)**
-* Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](/reference/ft_freqanalysis)**
-* Use the source- and headmodel as computed above using  **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
-* Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-*  Visualize the cortico-muscular coherence with **[ft_sourceplot](/reference/ft_sourceplot)**
+- Define a suitable time window without interfering stimulation **[ft_redefinetrial](/reference/ft_redefinetrial)**
+- Compute the cross-spectral density matrix for MEG and EMG channels using **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Use the source- and headmodel as computed above using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
+- Beam the oscillatory activity and estimate the cortico-muscular coherence using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
+- Visualize the cortico-muscular coherence with **[ft_sourceplot](/reference/ft_sourceplot)**
 
 {% include image src="/assets/img/tutorial/beamformingextended/pipeline.png" width="650" %}
 
@@ -99,7 +100,7 @@ You can check whether the segmentation was successful by callin
 
 {% include image src="/assets/img/tutorial/beamformingextended/fig2_segmri.png" %}
 
-*Figure: The segmented MRI and the original MRI on top of each other. If everything went well, there is a perfect overlap between these two!*
+_Figure: The segmented MRI and the original MRI on top of each other. If everything went well, there is a perfect overlap between these two!_
 
 If the yellow-greyish brain shows up in the subjects heads, everything went fine as shown in above Figure. Otherwise, it might be that you need to flip either of the three dimensions or that some unit conversion went wrong before segmenting the MRI (note to yourself: never blame FieldTrip, always blame yourself for not checking what you were doing!)
 
@@ -118,11 +119,11 @@ Note that we call the headmodel on some occasions volume conduction model, do no
     save hdm hdm
 
 {% include markup/warning %}
-If you want to do a source reconstruction of EEG data, you have to pay special attention to the  referencing. The forward model will be computed with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value of the forward model over all electrodes is zero. Consequently, this also has to hold for your data.
+If you want to do a source reconstruction of EEG data, you have to pay special attention to the referencing. The forward model will be computed with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value of the forward model over all electrodes is zero. Consequently, this also has to hold for your data.
 
 Prior to doing the spectral decomposition with **[ft_freqanalysis](/reference/ft_freqanalysis)** you have to ensure with **[ft_preprocessing](/reference/ft_preprocessing)** that all channels are re-referenced to the common average reference.
 
-Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.   
+Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding bad and absent channels) and after re-referencing them, you should not make sub-selections of channels any more and discard channels, as that would cause the data not be average referenced any more.  
 {% include markup/end %}
 
 #### Exercise: head model
@@ -151,7 +152,7 @@ Following the construction of the volume conduction model, we need to discretize
     cfg.mri            = mri;
     sourcemodel        = ft_prepare_sourcemodel(cfg);
 
-Please note that we are using the terms *source model* and *grid* interchangeably. Next we can save the sourcemodel so that we do not have to repeat all above steps for this subject agai
+Please note that we are using the terms _source model_ and _grid_ interchangeably. Next we can save the sourcemodel so that we do not have to repeat all above steps for this subject agai
 
     save sourcemodel sourcemodel
 
@@ -170,7 +171,7 @@ Finally, it is wise to check whether all computed objects align well with one an
 
 {% include image src="/assets/img/tutorial/beamformingextended/fig3_srcalign.png" %}
 
-*Figure: The sensor positions, the source model and the head model nicely align up. Note that the front of the brain is located where the helmet opens up (which it does at the front).*
+_Figure: The sensor positions, the source model and the head model nicely align up. Note that the front of the brain is located where the helmet opens up (which it does at the front)._
 
 When all these align up well, we have already have the first half of the ingredients for source analysis. In the next steps, we need to incorporate our data.
 
@@ -182,11 +183,11 @@ What would be the consequence of averaging over subject specific grids?
 
 ## Localization of sources of oscillatory gamma-band activity
 
-The aim is to identify the sources of oscillatory activity in the gamma band. In the section time-frequency analysis we have identified the frequency band around 40 Hz to 70 Hz with a center frequency of about 55 Hz. We seek to compare the activation during the post-stimulus interval to the activation during the pre-stimulus interval. We will use  **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. Remember that the length of each data piece has to be the length of a fixed integer number of oscillatory cycles. Here we select a time window of 0.8s, which allows for an integer amount of cycles: 0.8 s*55 Hz = 44 cycles. Thus, the pre-stimulus time-window ranges from -0.8 s to 0.0 s and the post-stimulus interval between 0.3 s to 1.1 s (see Figure 1).
+The aim is to identify the sources of oscillatory activity in the gamma band. In the section time-frequency analysis we have identified the frequency band around 40 Hz to 70 Hz with a center frequency of about 55 Hz. We seek to compare the activation during the post-stimulus interval to the activation during the pre-stimulus interval. We will use **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. Remember that the length of each data piece has to be the length of a fixed integer number of oscillatory cycles. Here we select a time window of 0.8s, which allows for an integer amount of cycles: 0.8 s\*55 Hz = 44 cycles. Thus, the pre-stimulus time-window ranges from -0.8 s to 0.0 s and the post-stimulus interval between 0.3 s to 1.1 s (see Figure 1).
 
 {% include image src="/assets/img/tutorial/beamformingextended/fig1_tfr.png" %}
 
-*Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response!.*
+_Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response!._
 
 #### Exercise: data length
 
@@ -198,28 +199,27 @@ Why does the length of each data piece has to have the length of a fixed number 
 
 We already combined data from the left-hand response condition and the right-hand response condition (see above). Now we need to make sure that all trials to be analyzed have data in the time interval of interest (if not, we remove those trials
 
-    cfg           = [];                                           
-    cfg.toilim    = [-0.8 1.1];           
+    cfg           = [];
+    cfg.toilim    = [-0.8 1.1];
     cfg.minlength = 'maxperlen'; % this ensures all resulting trials are equal length
     data          = ft_redefinetrial(cfg, data_combined);
 
 Now, we 'cut' out the pre- and post-stimulus time window
 
-    cfg        = [];                                           
-    cfg.toilim = [-0.8 0];                       
+    cfg        = [];
+    cfg.toilim = [-0.8 0];
     data_bsl   = ft_redefinetrial(cfg, data);
 
-    cfg.toilim = [0.3 1.1];                       
+    cfg.toilim = [0.3 1.1];
     data_exp   = ft_redefinetrial(cfg, data);
 
 As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
- 1.  Suitable control windows are, for exampl
+
+1.  Suitable control windows are, for exampl
     - Activity contrasted with baseline (example shown here using data_bsl)
     - Activity of condition 1 contrasted with condition 2 (using data_left and data_right)
- 2.  However, if no other suitable data condition or baseline time-window exists, then
-    - Activity contrasted with estimated noise
-    - Use normalized leadfields
-The latter two cases are covered in [another tutorial](/tutorial/beamformer#source_analysiswithout_contrasting_condition) that we will not deal with today
+2.  However, if no other suitable data condition or baseline time-window exists, then - Activity contrasted with estimated noise - Use normalized leadfields
+    The latter two cases are covered in [another tutorial](/tutorial/beamformer#source_analysiswithout_contrasting_condition) that we will not deal with today
 
 The null hypothesis for both options in (1) is that the data (thus also the noise-level) in these conditions are the same, and thus the best spatial filter is the one computed using both these conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
 
@@ -260,7 +260,7 @@ Now, we can separate the two conditions agai
 
 Note that we will need all three data structures for beamforming later on, so keep them.
 
-###  Computing the leadfield matrices
+### Computing the leadfield matrices
 
 Before computing the leadfields, we need to load again our source- and headmodels if they are not in memory anymor
 
@@ -348,11 +348,11 @@ Now, we can plot the interpolated data:
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
     cfg.opacitylim    = [0.0 1.2];
-    cfg.opacitymap    = 'rampup';  
+    cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg,source_diff_int);
 
 {% include image src="/assets/img/tutorial/beamformingextended/fig4_beamed2.png" %}
-*Figure: The power estimates of the activity induced by the visual stimulus around 55 Hz. The image was done using[ft_sourceinterpolate and ft_sourceplot*
+_Figure: The power estimates of the activity induced by the visual stimulus around 55 Hz. The image was done using[ft_sourceinterpolate and ft_sourceplot_
 
 Congratulations, you successfully beamed visual gamma!
 
@@ -366,6 +366,7 @@ Use these settings for 'surface' plotting
     cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat';
     cfg.surfdownsample = 10;
+
 {% include markup/end %}
 
 #### Exercise: determining anatomical labels
@@ -437,7 +438,7 @@ The resulting source-structure is a volumetric reconstruction which is specified
 For this, we first need to overwrite the position information of the sourcemodel and then load the template MRI, which is distributed with FieldTrip.
 
     source_coh_lft.pos = template.sourcemodel.pos;
-    source_coh_lft.dim = template.sourcemodel.dim;  
+    source_coh_lft.dim = template.sourcemodel.dim;
 
     % this returns the location where FieldTrip is installed
     [ftver, ftdir] = ft_version;
@@ -463,7 +464,7 @@ Again there are various ways to visualise the volumetric interpolated data. The 
 
 {% include image src="/assets/img/tutorial/beamformingextended/fig5_beamedcoh2.png" %}
 
-//Figure: The neuronal source showing maximum coherence with the left EMG at 20 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**//.
+_Figure: The neuronal source showing maximum coherence with the left EMG at 20 Hz. The plot was created with **[ft_sourceplot](/reference/ft_sourceplot)**._
 
 Since the data is expressed in MNI coordinates, you can also make a surface rendering of the coherence displayed on the cortical shee
 
@@ -490,7 +491,7 @@ How do all these beamforming result relate to the [sensor level analysis](/tutor
 
 We demonstrated how to apply the DICS beamformer algorithm in the frequency domain. The essence of a source reconstruction model requires to compute a head- and sourcemodel to derive the leadfields. Here, we showed how to compute a head model (single shell) and forward lead field based on an anatomical template in MNI space. Then, we applied the beamformer to retrieve activity on source level. We interpolated the source level result and plotted it against the template anatomy. Subsequently, options for plotting on slices, orthogonal views, or on the surface were shown. In a next step, we discussed how to identify sources of cortico-muscular coherence using the nearly exact pipeline as for ordinary source reconstruction.
 
-Details on head models can be found [here](/tutorial/headmodel_meg) or  [here](/example/make_leadfields_using_different_headmodels). Another tutorial on beamforming that covers options without contrasting conditions [can be found here](/tutorial/beamformer#source_analysiswithout_contrasting_condition).
+Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/make_leadfields_using_different_headmodels). Another tutorial on beamforming that covers options without contrasting conditions [can be found here](/tutorial/beamformer#source_analysiswithout_contrasting_condition).
 Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming). See [here for source statistics](/example/source_statistics). If you want to dive deeper into coherence, [take a look here](/tutorial/coherence). And in the appendix there is a way described how to [compute virtual MEG sensors](/tutorial/virtual_sensors).
 
 ## See also

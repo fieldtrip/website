@@ -63,18 +63,18 @@ You can subsequently epoch your data using [ft_definetrial](/reference/ft_define
 Sometimes users have already done some processing (e.g., rereferencing, epoching, artifact identification) in BrainVision Analyzer, and in order to avoid repeating the time consuming / subjective selection steps it might be preferable to start from the processed data. BrainVision Analyzer stores the processing steps in a so called history file, keeping the raw data unchanged, and applying the processing steps on-the-fly. This is not something that FieldTrip can work with, so you need to export your data first.
 
 The following describes the recipe to export the processed data into a format the FieldTrip can deal with. It produces a triplet of files (.vhdr, .vmrk and .seg (instead of .eeg)), that can be imported into FieldTrip, in much the same way as described above.
-You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. iltering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'.  You'll get a window (maybe 2 consecutive windows) popping up asking for various settings.  Leave everything as it is, except make sure the following are set:
+You can do all the preprocessing you want to do in BrainVision Analyzer (e.g. iltering and re-referencing can be done too) and once you have the data segmented the way you want it select 'export > generic data'. You'll get a window (maybe 2 consecutive windows) popping up asking for various settings. Leave everything as it is, except make sure the following are set:
 
- 1.  For the filename output you should set it to be .seg instead of .eeg (which I think is the default).
- 2.  DataFormat should be 'BINARY'
- 3.  DataOrientation should be 'MULTIPLEXED'
- 4.  Encoding should be 'UTF-8'
- 5.  DataType should be 'TIMEDOMAIN'
- 6.  BinaryFormat should be 'IEEE_FLOAT_32'
+1.  For the filename output you should set it to be .seg instead of .eeg (which I think is the default).
+2.  DataFormat should be 'BINARY'
+3.  DataOrientation should be 'MULTIPLEXED'
+4.  Encoding should be 'UTF-8'
+5.  DataType should be 'TIMEDOMAIN'
+6.  BinaryFormat should be 'IEEE_FLOAT_32'
 
- {% include markup/info %}
- When comparing your preprocessed data from FieldTrip to preprocessed data from BrainVision Analyzer, you might notice subtle differences. This might be due to two reasons: First, the filtersettings of BVA are hard to mimic using FieldTrip, because FieldTrip is using different defaults. Also, the order of preprocessing steps is fixed in FieldTrip, whereas you have to perform them manually, which makes it possible to do them in any order in BVA. The effect filters have on your data depend on the order of the preprocessing steps.
- {% include markup/end %}
+{% include markup/info %}
+When comparing your preprocessed data from FieldTrip to preprocessed data from BrainVision Analyzer, you might notice subtle differences. This might be due to two reasons: First, the filtersettings of BVA are hard to mimic using FieldTrip, because FieldTrip is using different defaults. Also, the order of preprocessing steps is fixed in FieldTrip, whereas you have to perform them manually, which makes it possible to do them in any order in BVA. The effect filters have on your data depend on the order of the preprocessing steps.
+{% include markup/end %}
 
 ### Plotting
 
@@ -82,6 +82,6 @@ FieldTrip provides electrode layouts for the purpose of plotting data recorded b
 
 Using FieldTrip, data recorded with Brain Vision hard- and software is readily plotted. It is important that the channel labels match that of the manufacturer specifications. Specify the layout that matches your set-up/easycap when plotting, e.g.
 
-   cfg.layout = 'easycapM1.lay';
+    cfg.layout = 'easycapM1.lay';
 
 Examples regarding the type of plots can be observed [here](/tutorial/plotting). In the [template](/template/layout) directory you can find a collection of template layouts for plotting. If you want to create your own custom layout files, please have a look [here](/tutorial/layout).

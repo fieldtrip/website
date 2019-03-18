@@ -13,10 +13,10 @@ The general idea behind the real-time processing of EEG/MEG data in FieldTrip in
 To get some quick satisfaction with streaming data, you might want to try out the example given in this [frequently asked question](/faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer).
 {% include markup/end %}
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
-	addpath `<full_path_to_fieldtrip>`
-	ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
 ## Buffering a real data stream
 
@@ -24,7 +24,7 @@ MATLAB is basically a single-threaded application. There are some computations t
 
 The TCP server is non-blocking and allows for multiple simultaneous read and write requests. It constantly listens to the network for "write" and "read" requests. Upon a write-request, a new piece of data is added to the buffer. With a read-request you can get the latest data from the buffer, but you can also get slightly older data from the buffer. So if your application lags behind a little bit because it was busy with a lengthy computation, you still can catch up and no data will be lost. The actual implementation of the buffer is equivalent to a ring-buffer. For a typical acquisition system with 1kHz sampling rate and with the default settings during compilation, it will hold approximately 10 minutes of data (600000 Samples).
 
-There are different possibilities for getting the data from your acquisition system into the FieldTrip buffer. A comprehensive list is [here](/development/realtime). With [BCI2000](/development/realtime/bci2000) you can use the FieldTrip Buffer to read the data from any of the in BCI2000 supported acquisition system and stream it into the FieldTrip buffer. For some selected acquisition systems, like CTF, Neuralynx and BrainVision a native MATLAB implementation has been created independent of BCI2000. These MATLAB functions act as a proxy between the acquisition system and the FieldTrip buffer. The "ft_realtime_xxxproxy" functions use some acquisition system specific code (e.g. linux shared memory for CTF, Active-X for Neuralynx and TCP for BrainVision) to read the data from the acquisition system. Once the data is in MATLAB memory it is immediately copied into the FieldTrip buffer. The data in the FieldTrip buffer is subsequently available for analysis in another MATLAB instance.
+There are different possibilities for getting the data from your acquisition system into the FieldTrip buffer. A comprehensive list is [here](/development/realtime). With [BCI2000](/development/realtime/bci2000) you can use the FieldTrip Buffer to read the data from any of the in BCI2000 supported acquisition system and stream it into the FieldTrip buffer. For some selected acquisition systems, like CTF, Neuralynx and BrainVision a native MATLAB implementation has been created independent of BCI2000. These MATLAB functions act as a proxy between the acquisition system and the FieldTrip buffer. The "ft_realtime_xxxproxy" functions use some acquisition system specific code (e.g. Linux shared memory for CTF, Active-X for Neuralynx and TCP for BrainVision) to read the data from the acquisition system. Once the data is in MATLAB memory it is immediately copied into the FieldTrip buffer. The data in the FieldTrip buffer is subsequently available for analysis in another MATLAB instance.
 
 The following text is tailored for users of ready-made acquistion systems and describes the logic of how to process the data. If you are concerned with integrating a new acquisition system or a similar task, you should read [this page](/development/realtime/buffer_overview) as well.
 
@@ -34,13 +34,13 @@ Although in the end you'll want to analyze real data from your acquisition syste
 
 ### Simulating real-time data from a file
 
-Since the real-time processing in FieldTrip relies on the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions and the [FieldTrip buffer](/development/realtime/buffer), you can get started with all online processing functions that are listed below by just pointing your real-time application to one of your data files on disk.  
+Since the real-time processing in FieldTrip relies on the **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** functions and the [FieldTrip buffer](/development/realtime/buffer), you can get started with all online processing functions that are listed below by just pointing your real-time application to one of your data files on disk.
 
 Instead of reading the data that you want to analyze from file, you can also emulate the acquisition by reading small segments to file and copying it to the FieldTrip buffer, which is implemented in the **[ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)** function. The rt-fileproxy allows you to "replay" previously acquired data in real-time, just as if it is streaming from your acquisition system. The code to analyze the data in real-time would be running in another Matlab session and would read the data from the buffer as it comes in.
 
 ### Simulating real-time data using random numbers
 
-Instead of playing back real data to get a realistic experience , you can also simulate random data using the  **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)** function. It generates a random signal according to your specification of the number of channels and the sampling frequency. Subsequently the random signal is filtered and written to the buffer. In another Matlab instance you can then read the signal from that buffer and analyze it. The ft_realtime_signalproxy function is especially useful to test the timing of your analysis code or to do a quick test of the network-transparent data streaming/buffering.
+Instead of playing back real data to get a realistic experience , you can also simulate random data using the **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)** function. It generates a random signal according to your specification of the number of channels and the sampling frequency. Subsequently the random signal is filtered and written to the buffer. In another Matlab instance you can then read the signal from that buffer and analyze it. The ft_realtime_signalproxy function is especially useful to test the timing of your analysis code or to do a quick test of the network-transparent data streaming/buffering.
 
 Both the **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)** and **[ft_realtime_fileproxy](/reference/ft_realtime_fileproxy)** should be started in a separate Matlab session, just like all other ft_realtime_XXXproxy functions, i.e. you should have one Matlab session that generates or reads data from file or acquisition system and writes it to the buffer. In the other Matlab session, which can be on another computer, you read from the buffer to do real-time analysis and visualization.
 
@@ -72,8 +72,8 @@ There are various options for closing the loop documented [here](/development/re
 
 ## Overview of all examples used here
 
-*  [ft_realtime_signalviewer](/example/ft_realtime_signalviewer)
-*  [ft_realtime_powerestimate](/example/ft_realtime_powerestimate)
-*  [ft_realtime_average](/example/ft_realtime_average)
-*  [ft_realtime_selectiveaverage](/example/ft_realtime_selectiveaverage)
-*  [ft_realtime_classification](/example/ft_realtime_classification)
+- [ft_realtime_signalviewer](/example/ft_realtime_signalviewer)
+- [ft_realtime_powerestimate](/example/ft_realtime_powerestimate)
+- [ft_realtime_average](/example/ft_realtime_average)
+- [ft_realtime_selectiveaverage](/example/ft_realtime_selectiveaverage)
+- [ft_realtime_classification](/example/ft_realtime_classification)

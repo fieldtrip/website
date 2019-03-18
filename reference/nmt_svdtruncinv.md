@@ -1,5 +1,6 @@
 ---
 title: nmt_svdtruncinv
+layout: default
 tags: 
 ---
 ```

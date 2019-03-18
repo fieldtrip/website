@@ -1,5 +1,6 @@
 ---
 title: ft_connectivity_dtf
+layout: default
 tags: 
 ---
 ```

@@ -1,5 +1,6 @@
 ---
 title: ft_plot_topo3d
+layout: default
 tags: 
 ---
 ```
@@ -7,7 +8,7 @@ tags:
  potential or field at the sensor locations
 
  Use as
-   ft_plot_topo3d(pos, val, ...);
+   ft_plot_topo3d(pos, val, ...)
  where the channel positions are given as a Nx3 matrix and the values are
  given as Nx1 vector.
 

@@ -1,13 +1,15 @@
 ---
 title: ft_apply_montage
+layout: default
 tags: 
 ---
 ```
- FT_APPLY_MONTAGE changes the montage of an electrode or gradiometer array. A
- montage can be used for EEG rereferencing, MEG synthetic gradients, MEG
- planar gradients or unmixing using ICA. This function applies the montage
- to the input EEG or MEG sensor array, which can subsequently be used for
- forward computation and source reconstruction of the data.
+ FT_APPLY_MONTAGE changes the montage (i.e. linear combination) of a set of
+ electrode or gradiometer channels. A montage can be used for EEG rereferencing, MEG
+ synthetic gradients, MEG planar gradients or unmixing using ICA. This function not
+ only applies the montage to the EEG or MEG data, but also applies the montage to
+ the input EEG or MEG sensor array, which can subsequently be used for forward
+ computation and source reconstruction of the data.
 
  Use as
    [sens]    = ft_apply_montage(sens,     montage,  ...)
@@ -37,16 +39,16 @@ tags:
    montage.chanunitnew = Mx1 cell-array
 
  Additional options should be specified in key-value pairs and can be
-   'keepunused'    string, 'yes' or 'no' (default = 'no')
-   'inverse'       string, 'yes' or 'no' (default = 'no')
-   'balancename'   string, name of the montage (default = '')
-   'feedback'      string, see FT_PROGRESS (default = 'text')
-   'warning'       boolean, whether to show warnings (default = true)
-   'showcallinfo'  string, 'yes' or 'no' (default = 'no')
+   'keepunused'    = string, 'yes' or 'no' (default = 'no')
+   'inverse'       = string, 'yes' or 'no' (default = 'no')
+   'balancename'   = string, name of the montage (default = '')
+   'feedback'      = string, see FT_PROGRESS (default = 'text')
+   'warning'       = boolean, whether to show warnings (default = true)
+   'showcallinfo'  = string, 'yes' or 'no' (default = 'no')
 
  If the first input is a montage, then the second input montage will be
  applied to the first. In effect, the output montage will first do
  montage1, then montage2.
 
- See also FT_READ_SENS, FT_TRANSFORM_SENS
+ See also FT_READ_SENS, FT_DATATYPE_SENS
 ```

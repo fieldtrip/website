@@ -1,5 +1,6 @@
 ---
 title: ft_megplanar
+layout: default
 tags: 
 ---
 ```
@@ -52,5 +53,5 @@ tags:
  files should contain only a single variable, corresponding with the
  input/output structure.
 
- See also FT_COMBINEPLANAR, FT_NEIGHBOURSELECTION
+ See also FT_COMBINEPLANAR, FT_PREPARE_NEIGHBOURS
 ```

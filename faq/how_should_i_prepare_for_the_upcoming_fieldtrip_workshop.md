@@ -5,7 +5,7 @@ tags: [faq, workshop]
 
 # How should I prepare for the upcoming FieldTrip workshop?
 
-*This assumes that you will be attending one of the upcoming [FieldTrip workshops](/workshop).*
+_This assumes that you will be attending one of the upcoming [FieldTrip workshops](/workshop)._
 
 For both the "MEG toolkit" courses in Nijmegen and for the external workshops we use a mixture of lectures, hands-on sessions, and a playground session. It is especially important for the FieldTrip playground session (usually the last afternoon) that you prepare by bringing your own data.
 

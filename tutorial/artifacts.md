@@ -21,8 +21,8 @@ Generally speaking, an artifact (or artefact) is some unexpected or unwanted fea
 
 FieldTrip deals with artifacts by first identifying them, and subsequently removing them. Detection of artifacts can be done visually, or using automatic routines (or a combination of both). After you know what the artifacts are, they are removed by
 
-*  rejecting the piece of data containing the artifact (e.g. for a short-lived artifact)   
-*  subtracting the spatio-temporal contribution of the artifact from the data (e.g. for line noise)
+- rejecting the piece of data containing the artifact (e.g. for a short-lived artifact)
+- subtracting the spatio-temporal contribution of the artifact from the data (e.g. for line noise)
 
 For the artifact detection the functions FieldTrip provides depend on whether your data is continuous or trial-based (i.e. segmented with holes between the segments) and depending on whether your data is stored on disk or already in memory.
 
@@ -38,8 +38,8 @@ In manual artifact detection, the user visually inspects the data and identifies
 
 The functions that are available for manual artifact detection are
 
-* **[ft_rejectvisual](/reference/ft_rejectvisual)**
-* **[ft_databrowser](/reference/ft_databrowser)**
+- **[ft_rejectvisual](/reference/ft_rejectvisual)**
+- **[ft_databrowser](/reference/ft_databrowser)**
 
 The **[ft_rejectvisual](/reference/ft_rejectvisual)** function works only for segmented data (i.e. trials) that have already been read into memory. It allows you to browse through the large amounts of data in a MATLAB figure by either showing all channels at once (per trial) or showing all trials at once (per channel) or by showing a summary of all channels and trials. Using the mouse, you can select trials and/or channels that should be removed from the data. This function directly returns the data with the noise parts removed and you don't have to call **[ft_rejectartifact](/reference/ft_rejectartifact)** or **[ft_rejectcomponent](/reference/ft_rejectcomponent)**.
 
@@ -53,17 +53,17 @@ More information about manually dealing with artifacts is found in the [Visual a
 
 To speed up the processing of many or of very large datasets, and to facilitate the use of objective criteria for artifacts, FieldTrip also includes a collection of functions for automatic artifact detection. Although the automatic artifact detection algorithm works efficiently for well-known artifacts in well-behaved data, you should **not** use the automatic detection functions as your default method.
 
-Most of the automatic artifact detection functions are based on filtering the data and subsequently  combining the data over channels. The relevant parameters for this are the various linear and non-linear filtering and the data padding options are set *a priori* for each of them via the configuration options. For example, in continuous datasets these might be the bandpass filter frequencies or the padding length.
+Most of the automatic artifact detection functions are based on filtering the data and subsequently combining the data over channels. The relevant parameters for this are the various linear and non-linear filtering and the data padding options are set _a priori_ for each of them via the configuration options. For example, in continuous datasets these might be the bandpass filter frequencies or the padding length.
 
 The available functions for automatic artifact detection are:
 
-*  **[ft_artifact_clip](/reference/ft_artifact_clip)**
-*  **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
-*  **[ft_artifact_threshold](/reference/ft_artifact_threshold)**
-*  **[ft_artifact_eog](/reference/ft_artifact_eog)**
-*  **[ft_artifact_jump](/reference/ft_artifact_jump)**
-*  **[ft_artifact_muscle](/reference/ft_artifact_muscle)**
-*  **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**
+- **[ft_artifact_clip](/reference/ft_artifact_clip)**
+- **[ft_artifact_ecg](/reference/ft_artifact_ecg)**
+- **[ft_artifact_threshold](/reference/ft_artifact_threshold)**
+- **[ft_artifact_eog](/reference/ft_artifact_eog)**
+- **[ft_artifact_jump](/reference/ft_artifact_jump)**
+- **[ft_artifact_muscle](/reference/ft_artifact_muscle)**
+- **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**
 
 Note that the eog, jump and muscle detection functions are all just wrappers around **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** where the filter and padding options are set to reasonable defaults.
 

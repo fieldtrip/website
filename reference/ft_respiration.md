@@ -1,5 +1,6 @@
 ---
 title: ft_respiration
+layout: default
 tags: 
 ---
 ```

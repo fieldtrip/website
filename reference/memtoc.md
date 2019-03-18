@@ -1,5 +1,6 @@
 ---
 title: memtoc
+layout: default
 tags: 
 ---
 ```

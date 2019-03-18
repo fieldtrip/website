@@ -57,32 +57,36 @@ After installing FieldTrip to your path, you change into the tutorial directory
 
 #### Wednesday
 
--   morning
-    -   1h intro lecture
-    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/sensor_analysis>
+- morning
 
--   afternoon
-    -   1h beamforming lecture
-    -   2h handson <http://www.fieldtriptoolbox.org/tutorial/beamformingextended>
+  - 1h intro lecture
+  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/sensor_analysis>
 
--   evening
-    -   dinner
+- afternoon
+
+  - 1h beamforming lecture
+  - 2h handson <http://www.fieldtriptoolbox.org/tutorial/beamformingextended>
+
+- evening
+  - dinner
 
 #### Thursday
 
--   morning
-    -   1h connectivity lecture
-    -   2h hands on <http://www.fieldtriptoolbox.org/tutorial/connectivityextended>
+- morning
 
--   afternoon
-    -   1h nonparametric statistics lecture
-    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
-    -   1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+  - 1h connectivity lecture
+  - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/connectivityextended>
 
--   evening
-    -   pub?
+- afternoon
+
+  - 1h nonparametric statistics lecture
+  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_timelock>
+  - 1h hands on <http://www.fieldtriptoolbox.org/tutorial/cluster_permutation_freq>
+
+- evening
+  - pub?
 
 #### Friday
 
--   morning
-    -   3h playground (working on own data)
+- morning
+  - 3h playground (working on own data)

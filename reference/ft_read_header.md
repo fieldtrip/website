@@ -1,5 +1,6 @@
 ---
 title: ft_read_header
+layout: default
 tags: 
 ---
 ```
@@ -82,6 +83,7 @@ tags:
 
  The following NIRS dataformats are supported
    BUCN - Birkbeck college, London (*.txt)
+   Artinis - Artinis Medical Systems B.V. (*.oxy3, *.oxyproj)
 
  The following Eyetracker dataformats are supported
    EyeLink - SR Research (*.asc)

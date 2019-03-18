@@ -26,22 +26,22 @@ September 18, 2015.
 
 Laura Marzetti and Robert Oostenveld.
 
-This workshop is an **advanced** workshop in which we will move beyond standard MEG data processing. Familiarity with FieldTrip is required. Please read the [FieldTrip](http://www.hindawi.com/journals/cin/2011/156869/) reference papers to understand the toolbox design.  
+This workshop is an **advanced** workshop in which we will move beyond standard MEG data processing. Familiarity with FieldTrip is required. Please read the [FieldTrip](http://www.hindawi.com/journals/cin/2011/156869/) reference papers to understand the toolbox design.
 
 To prepare for the hands-on session, you should watch the following online videos prior to the workshop. Note that these lectures are about one hour each, which means that you should **plan ahead and take your time** to go through them. It is your own responsibility to come well-prepared. Starting one day in advance will not cut it!
 
--   [MEG instrumentation (video)](https://www.youtube.com/watch?v=15Qs4fuPpes)
--   [FieldTrip intro (video and hands-on)](/tutorial/introduction)
--   [Frequency analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
--   [Beamformer source analysis (video and hands-on)](/tutorial/beamformer)
+- [MEG instrumentation (video)](https://www.youtube.com/watch?v=15Qs4fuPpes)
+- [FieldTrip intro (video and hands-on)](/tutorial/introduction)
+- [Frequency analysis (video and hands-on)](/tutorial/timefrequencyanalysis)
+- [Beamformer source analysis (video and hands-on)](/tutorial/beamformer)
 
 ## Program
 
 ### Friday 18 September 2015
 
--   8:30 - 9:30 MEG connectivity: concepts, metrics and implementation (lecture)
--   9:30 - 10:15 Hands-on: [Seed-based connectivity](/workshop/chieti/virtualchannel)
--   10:15 - 10:45 Coffee break
--   10:45 - 11:30 Hands-on: [Simulating and estimating, what about model (mis)match?](/workshop/chieti/simulation)
--   11:30 - 12:15 Hands-on: [Whole-brain connectivity](/workshop/chieti/wholebrain)
--   12:15 - 12:30 Review of MEG connectivity, challenges and opportunities (lecture)
+- 8:30 - 9:30 MEG connectivity: concepts, metrics and implementation (lecture)
+- 9:30 - 10:15 Hands-on: [Seed-based connectivity](/workshop/chieti/virtualchannel)
+- 10:15 - 10:45 Coffee break
+- 10:45 - 11:30 Hands-on: [Simulating and estimating, what about model (mis)match?](/workshop/chieti/simulation)
+- 11:30 - 12:15 Hands-on: [Whole-brain connectivity](/workshop/chieti/wholebrain)
+- 12:15 - 12:30 Review of MEG connectivity, challenges and opportunities (lecture)

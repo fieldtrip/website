@@ -1,5 +1,6 @@
 ---
 title: ft_channelcombination
+layout: default
 tags: 
 ---
 ```

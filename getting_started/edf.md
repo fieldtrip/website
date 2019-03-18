@@ -11,11 +11,11 @@ Please feel free to add information here if you're using EDF data and want to sh
 
 ## Introduction
 
-The [European Data Format (EDF)](http://www.edfplus.info) is a simple and flexible format for exchange and storage of multichannel biological and physical signals.  It was developed by a few European 'medical' engineers who first met at the 1987 international Sleep Congress in Copenhagen. The EDF logo is derived from the congress logo which was the green pea from the fairy tale "The princess and the pea" by the Danish writer Hans Christian Andersen. With the support of the late professor Annelise Rosenfalck from Aalborg university, the engineers initiated the project "Methodology for the Analysis of the Sleep-Wakefulness Continuum" (1989-1992) that was funded by the European Community  through its "Comité d'Action Concertée" (COMAC committee) on Biomedical Engineering. They wanted to apply their sleep analysis algorithms to each others data and compare the analysis results. So, on a morning in Leiden in March 1990, they agreed upon a very simple file format to exchange their sleep recordings. This format became known as the European Data Format. In August 1990, all participating labs had contributed an EDF sleep recording to the project.
+The [European Data Format (EDF)](http://www.edfplus.info) is a simple and flexible format for exchange and storage of multichannel biological and physical signals. It was developed by a few European 'medical' engineers who first met at the 1987 international Sleep Congress in Copenhagen. The EDF logo is derived from the congress logo which was the green pea from the fairy tale "The princess and the pea" by the Danish writer Hans Christian Andersen. With the support of the late professor Annelise Rosenfalck from Aalborg university, the engineers initiated the project "Methodology for the Analysis of the Sleep-Wakefulness Continuum" (1989-1992) that was funded by the European Community through its "Comité d'Action Concertée" (COMAC committee) on Biomedical Engineering. They wanted to apply their sleep analysis algorithms to each others data and compare the analysis results. So, on a morning in Leiden in March 1990, they agreed upon a very simple file format to exchange their sleep recordings. This format became known as the European Data Format. In August 1990, all participating labs had contributed an EDF sleep recording to the project.
 
 EDF was published in 1992 in Electroencephalography and Clinical Neurophysiology 82, pages 391-393. Since then, EDF became the de-facto standard for EEG and PSG recordings in commercial equipment and multicenter research projects.
 
-An extension of EDF, named EDF+, was developed in 2002 and is largely compatible to EDF: all existing EDF viewers also show EDF+ signals. But EDF+ files can also contain interrupted recordings, annotations, stimuli and events. Therefore, EDF+ can store any medical recording such as EMG, Evoked potentials, ECG, as well as automatic and manual analysis results such as deltaplots, QRS parameters and sleep stages. The specs are stricter than EDF which enables automatic localization and calibration of electrodes.  And EDF+ fixed a few omissions in EDF such as the Y2K problem, little-endian integers, and comma vs dot.
+An extension of EDF, named EDF+, was developed in 2002 and is largely compatible to EDF: all existing EDF viewers also show EDF+ signals. But EDF+ files can also contain interrupted recordings, annotations, stimuli and events. Therefore, EDF+ can store any medical recording such as EMG, Evoked potentials, ECG, as well as automatic and manual analysis results such as deltaplots, QRS parameters and sleep stages. The specs are stricter than EDF which enables automatic localization and calibration of electrodes. And EDF+ fixed a few omissions in EDF such as the Y2K problem, little-endian integers, and comma vs dot.
 
 EDF+ was published in 2003 in Clinical Neurophysiology 114, pages 1755-1761. Since then, hundreds of EDF+ files and several EDF+ viewers became available on the internet. Applications are mainly in Clinical Neurophysiology, Sleep, and Cardiology. Formal standards from other specialisms can also be integrated into EDF+. Most EDF applications have migrated to EDF+.
 
@@ -59,39 +59,39 @@ The detect flank option is explicitly disabled here, this indicates to the code 
 
 #### Trial function that uses the annotation channel
 
-	function [trl, event] = trialfun_annotation(cfg)
+    function [trl, event] = trialfun_annotation(cfg)
 
-	% read the header, this is needed to determine the sampling rate of EEG channels
-	hdr = ft_read_header(cfg.dataset);
+    % read the header, this is needed to determine the sampling rate of EEG channels
+    hdr = ft_read_header(cfg.dataset);
 
-	% read the events, don't detect flanks in a trigger channel but read annotations
-	event = ft_read_event(cfg.dataset, 'detectflank', []);
+    % read the events, don't detect flanks in a trigger channel but read annotations
+    event = ft_read_event(cfg.dataset, 'detectflank', []);
 
-	% make a selection of the Stimulus annotations
-	sel = ismember({event.value}, {'Stimulus'});
+    % make a selection of the Stimulus annotations
+    sel = ismember({event.value}, {'Stimulus'});
 
-	% determine the sample numbers of events
-	smp = [event(sel).sample];
+    % determine the sample numbers of events
+    smp = [event(sel).sample];
 
-	begsample = smp-round(0.250*hdr.Fs);
-	endsample = smp+round(0.750*hdr.Fs);
-	offset    = -ones(size(begsample))*round(0.250*hdr.Fs);
+    begsample = smp-round(0.250*hdr.Fs);
+    endsample = smp+round(0.750*hdr.Fs);
+    offset    = -ones(size(begsample))*round(0.250*hdr.Fs);
 
-	trl = [begsample(:) endsample(:) offset(:)];
+    trl = [begsample(:) endsample(:) offset(:)];
 
-	% remove trials that overlap with the beginning of the file
-	sel = trl(:,1)>1;
-	trl = trl(sel,:);
+    % remove trials that overlap with the beginning of the file
+    sel = trl(:,1)>1;
+    trl = trl(sel,:);
 
-	% remove trials that overlap with the end of the file
-	sel = trl(:,2)<hdr.nSamples;
-	trl = trl(sel,:);
+    % remove trials that overlap with the end of the file
+    sel = trl(:,2)<hdr.nSamples;
+    trl = trl(sel,:);
 
 #### EDF files that are exported from EGI NetStation
 
 Following the use of **[ft_read_header](/reference/ft_read_header)**, the index of the annotation channel can be found in hdr.orig.annotation. However, when using the EGI 'Net Station', the events are written in a way that is not compatible with the edf+ reading implementation in FieldTrip. So, events do not come out properly. Also discontinuous epochs are "glued" together as one "continuous" data stream (please add, anyone, whether this also holds for other acquisition systems).
 
-Events can also be stored in an extra channel that is appended to the brain data channels. For instance, a photodiode transducer attached to a stimulus presentation screen may convert screen light into current. This way, changes in light are captured as an analog signal in that data channel and can be used to synchronize timing of the experiment with the brain recording. When the name or the channel index of the event channel is known, it becomes feasible to use that channel for reading data segments or trials of interest into the MATLAB work environment using FieldTrip. The most straightforward approach is to create a trial function (as invoked with cfg.trialfun) that reads in the event channel and performs some form of thresholding on the signal in that channel to determine the events of interest. We provide an example pipeline below.  
+Events can also be stored in an extra channel that is appended to the brain data channels. For instance, a photodiode transducer attached to a stimulus presentation screen may convert screen light into current. This way, changes in light are captured as an analog signal in that data channel and can be used to synchronize timing of the experiment with the brain recording. When the name or the channel index of the event channel is known, it becomes feasible to use that channel for reading data segments or trials of interest into the MATLAB work environment using FieldTrip. The most straightforward approach is to create a trial function (as invoked with cfg.trialfun) that reads in the event channel and performs some form of thresholding on the signal in that channel to determine the events of interest. We provide an example pipeline below.
 
     % define trials
     cfg            = [];
@@ -117,7 +117,7 @@ Note that filtering, re-referencing, etcetera can be performed at the preprocess
 
 Hereunder are two examples of a trial function for parsing a continuously sampled TTL channel. See also [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
 
-The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:   
+The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:
 
     function [trl, event] = trialfun_ttl(cfg)
 
@@ -173,8 +173,7 @@ In this second example, we define a data segment as the time the trigger was 'on
     end
 
 Alternatively, when the event channel index is unknown, but its name, or a part thereof (e.g., 'DC01'), is, one may us
-    chanindx      = find(ismember(hdr.label, ft_channelselection('*DC01*', hdr.label)));
-
+chanindx = find(ismember(hdr.label, ft_channelselection('_DC01_', hdr.label)));
 
 ## See also
 

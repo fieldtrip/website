@@ -1,5 +1,6 @@
 ---
 title: ft_headmovement
+layout: default
 tags: 
 ---
 ```

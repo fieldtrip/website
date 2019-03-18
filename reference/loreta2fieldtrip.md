@@ -1,11 +1,12 @@
 ---
 title: loreta2fieldtrip
+layout: default
 tags: 
 ---
 ```
  LORETA2FIELDTRIP reads and converts a LORETA source reconstruction into a
  FieldTrip data structure, which subsequently can be used for statistical
- analysis or other analysis methods implemented in FieldTrip.
+ analysis or other analysis methods implemented in Fieldtrip.
 
  Use as
    [source]  =  loreta2fieldtrip(filename, ...)

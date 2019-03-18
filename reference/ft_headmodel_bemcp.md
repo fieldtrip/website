@@ -1,5 +1,6 @@
 ---
 title: ft_headmodel_bemcp
+layout: default
 tags: 
 ---
 ```

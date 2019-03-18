@@ -1,5 +1,6 @@
 ---
 title: ft_redefinetrial
+layout: default
 tags: 
 ---
 ```

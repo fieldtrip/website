@@ -8,7 +8,7 @@ title: Developing the documentation of the source-reconstruction methods
 
 ### Introduction
 
-This page contains questions that users could ask when they analyze their data with FieldTrip. If it is possible  the answers are also provided. If any documentation already exist on the FieldTrip wiki which gives an answer, the answer should point to those pages. In some cases, may we just want to point to relevant literature.
+This page contains questions that users could ask when they analyze their data with FieldTrip. If it is possible the answers are also provided. If any documentation already exist on the FieldTrip wiki which gives an answer, the answer should point to those pages. In some cases, may we just want to point to relevant literature.
 
 ### Questions and Answers
 
@@ -16,61 +16,62 @@ This page contains questions that users could ask when they analyze their data w
 
 The [Inverse source parameter estimates from EEG/MEG data](/development/module/inverse) page describes under the second point which are the supported methods.
 
- 1.  dipole fitting
+1.  dipole fitting
     - simultaneous optimisation of position, orientation and strength
-    -  symmetry constrains and/or fixed position, with free orientation and strength
- 2.  dipole scanning
+    - symmetry constrains and/or fixed position, with free orientation and strength
+2.  dipole scanning
     - dynamic imaging of coherent sources (DICS)
     - linear constrained minimum variance (LCMV)
     - partial canonical coherence (PCC)
     - multiple signal classification (MUSIC)
     - scanning for residual variance
- 3.  distributed source modeling
+3.  distributed source modeling
     - minimum norm estimation with and without noise regularisation (MNE)
 
 The reference of the **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function refers to the following method
 
-
-	cfg.method     = 'lcmv'    linear constrained minimum variance beamformer
-	                     'sam'     synthetic aperture magnetometry
-	                     'dics'    dynamic imaging of coherent sources
-	                     'pcc'     partial cannonical correlation/coherence
-	                     'mne'     minimum norm estimation
-	                     'loreta'  minimum norm estimation with smoothness constraint
-	                     'rv'      scan residual variance with single dipole
-	                     'music'   multiple signal classification
-	                     'mvl'   multivariate Laplace source localization
+    cfg.method = 'lcmv'    linear constrained minimum variance beamformer
+                 'sam'     synthetic aperture magnetometry
+                 'dics'    dynamic imaging of coherent sources
+                 'pcc'     partial cannonical correlation/coherence
+                 'mne'     minimum norm estimation
+                 'loreta'  minimum norm estimation with smoothness constraint
+                 'rv'      scan residual variance with single dipole
+                 'music'   multiple signal classification
+                 'mvl'     multivariate Laplace source localization
 
 ### What is the difference between the methods?
 
 Here are the [References to implemented methods](/references_to_implemented_methods).
+
 ### What kind of source-reconstruction method should I use?
 
-      * *Does it depend on the data?* (EEG vs. MEG, oscillations vs event-related, realistic vs. non-realistic headmodel)
- Event-related Field/Potential + time-course: MNE
- Oscillatory activity + at certain point in time: beamforming (dics)
- beamforming: lcmv - ?
- (see Hesse, Jensen (2010) and Background of the MNE tutorial)
+- _Does it depend on the data?_ (EEG vs. MEG, oscillations vs event-related, realistic vs. non-realistic headmodel)
 
-      * *Does it depend on a priori hypothesis of the source involved?* (cortical sheets vs. 3D grid)
-      * *Does it depend on what kind of information I am interested in?* (e.g. changes in time or not)
+Event-related Field/Potential + time-course: MNE
+Oscillatory activity + at certain point in time: beamforming (dics)
+beamforming: lcmv - ?
+(see Hesse, Jensen (2010) and Background of the MNE tutorial)
+
+- _Does it depend on a priori hypothesis of the source involved?_ (cortical sheets vs. 3D grid)
+- _Does it depend on what kind of information I am interested in?_ (e.g. changes in time or not)
 
 ### What kind of data I need for source-reconstruction?
 
- functional data, anatomical data, channel/electrode positions  
+functional data, anatomical data, channel/electrode positions
 
 ### Why should I use source-reconstruction?
 
- point to  introductionary literature
+point to introductionary literature
 
 ### How should I do source-reconstruction?
 
- depends on the specific method; available documentation in FT at the momen
+depends on the specific method; available documentation in FT at the momen
 
 #### dipolefitting
 
-    - simultaneous optimisation of position, orientation and strength
-    - symmetry constrains and/or fixed position, with free orientation and strength
+- simultaneous optimisation of position, orientation and strength
+- symmetry constrains and/or fixed position, with free orientation and strength
 
 **tutorial sites:**
 
@@ -82,179 +83,171 @@ none.
 
 [Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
 
-*Why is this fixme?*
+_Why is this fixme?_
 
 [Source-reconstruction using two dipoles](/development/project/symmetric_dipoles)
 
-*This is under construction, but it is not really clear how this exactly relates to dipole fitting.*
+_This is under construction, but it is not really clear how this exactly relates to dipole fitting._
 
 #### dipole scanning
 
-    - dynamic imaging of coherent sources (DICS)
-    - linear constrained minimum variance (LCMV)
-    - partial canonical coherence (PCC)
-    - multiple signal classification (MUSIC)
-    - scanning for residual variance
+- dynamic imaging of coherent sources (DICS)
+- linear constrained minimum variance (LCMV)
+- partial canonical coherence (PCC)
+- multiple signal classification (MUSIC)
+- scanning for residual variance
 
 #### distributed source modeling
 
-    - minimum norm estimation with and without noise regularisation (MNE)
+- minimum norm estimation with and without noise regularisation (MNE)
 
 ### What kind of volume conduction models of the head are implemented in FieldTrip?
 
-FA
-[What kind of volume conduction models are implemented?](/faq/what_kind_of_volume_conduction_models_are_implemented)
+FAQ: [What kind of volume conduction models are implemented?](/faq/what_kind_of_volume_conduction_models_are_implemented)
 
-Referenc
+Reference: **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
 
-**[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
-
-*  The methods listed in the reference of ft_prepare_headmodel should be matched to the articles in [References to implemented methods](/references_to_implemented_methods).
-
-*  The references to implemented methods can be probably extended.
-
+- The methods listed in the reference of ft_prepare_headmodel should be matched to the articles in [References to implemented methods](/references_to_implemented_methods).
+- The references to implemented methods can be probably extended.
 
 Method
 
 **EEG**
 
-*  name in help of ft_prepare_headmodel: asa
+- name in help of ft_prepare_headmodel: asa
 
-*  article in References to implemented methods: **none**
+- article in References to implemented methods: **none**
 
-*  explanation in help of the lower-level function: yes
+- explanation in help of the lower-level function: yes
 
-*  reference in help of the lower-level function: **none** but it is probably not applicable
+- reference in help of the lower-level function: **none** but it is probably not applicable
 
-*  **reading function** (reads in a certain type of volume conduction model)
+- **reading function** (reads in a certain type of volume conduction model)
 
-*  name in help of ft_prepare_headmodel: bemcp
+- name in help of ft_prepare_headmodel: bemcp
 
-*  article in References to implemented methods: **none**
+- article in References to implemented methods: **none**
 
-*  explanation in help of the lower-level function: yes
+- explanation in help of the lower-level function: yes
 
-*  reference in help of the lower-level function: **none** but the person's name who provided the code is mentioned
+- reference in help of the lower-level function: **none** but the person's name who provided the code is mentioned
 
+- name in help of ft_prepare_headmodel: dipoli
 
-*  name in help of ft_prepare_headmodel: dipoli
+- article in References to implemented methods: yes (Oostendorp T, van Oosterom A., 1991)
 
-*  article in References to implemented methods: yes (Oostendorp T, van Oosterom A., 1991)
+- explanation in help of the lower-level function: yes
 
-*  explanation in help of the lower-level function: yes
+- reference in help of the lower-level function: yes
 
-*  reference in help of the lower-level function: yes
+- name in help of ft_prepare_headmodel: openmeeg
 
+- article in References to implemented methods: **none**
 
-*  name in help of ft_prepare_headmodel: openmeeg
+- explanation in help of the lower-level function: yes
 
-*  article in References to implemented methods: **none**
+- reference in help of the lower-level function: **yes**
 
-*  explanation in help of the lower-level function: yes
+- name in help of ft_prepare_headmodel: concentricspheres
 
-*  reference in help of the lower-level function: **yes**
+- article in References to implemented methods: yes (Cuffin, Cohen, 1979)
 
+- explanation in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: concentricspheres
+- reference in help of the lower-level function: **none**
 
-*  article in References to implemented methods: yes (Cuffin, Cohen, 1979)
+- name in help of ft_prepare_headmodel: halfspace
 
-*  explanation in help of the lower-level function: yes
+- article in References to implemented methods: **none** (but is it relevant?)
 
-*  reference in help of the lower-level function: **none**
+- explanation in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: halfspace
+- reference in help of the lower-level function: **none** (but is it relevant?)
 
-*  article in References to implemented methods: **none** (but is it relevant?)
+- name in help of ft_prepare_headmodel: infinite
 
-*  explanation in help of the lower-level function: yes
+- article in References to implemented methods: **none** (but is it relevant?)
 
-*  reference in help of the lower-level function: **none** (but is it relevant?)
+- explanation in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: infinite
+- reference in help of the lower-level function: **none** (but is it relevant?)
 
-*  article in References to implemented methods: **none** (but is it relevant?)
+- name in help of ft_prepare_headmodel: multispheres
 
-*  explanation in help of the lower-level function: yes
+- Does this methods apply also to EEG? It says so in [Refurbishing the FORWARD module](/development/project/fwdarch) but it is **not listed as method for EEG** in the reference of ft_prepare_headmodel.
 
-*  reference in help of the lower-level function: **none** (but is it relevant?)
+- see it under MEG methods.
 
-*  name in help of ft_prepare_headmodel: multispheres
+- name in help of ft_prepare_headmodel: singlesphere
 
-*  Does this methods apply also to EEG? It says so in [Refurbishing the FORWARD module](/development/project/fwdarch) but it is **not listed as method for EEG** in the reference of ft_prepare_headmodel.
+- article in References to implemented methods: yes (Cuffin, Cohen, 1977)
 
-*  see it under MEG methods.
+- explanation in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: singlesphere
+- reference in help of the lower-level function: yes
 
-*  article in References to implemented methods: yes (Cuffin, Cohen, 1977)
+- name in help of ft_prepare_headmodel: **none**
 
-*  explanation in help of the lower-level function: yes
+- name in script of ft_prepare_headmodel: **slab_monopole**
 
-*  reference in help of the lower-level function: yes
+- article in References to implemented methods: **none**
 
-*  name in help of ft_prepare_headmodel: **none**
+- lower-level function name: **[ft_headmodel_slab](/reference/ft_headmodel_slab)**
 
-*  name in script of ft_prepare_headmodel: **slab_monopole**
+- explanation in help of the lower-level function: yes
 
-*  article in References to implemented methods: **none**
+- reference in help of the lower-level function: **none**
 
-*  lower-level function name: **[ft_headmodel_slab](/reference/ft_headmodel_slab)**
+- name in help of ft_prepare_headmodel: simbio
 
-*  explanation in help of the lower-level function: yes
+- article in References to implemented methods: **none** but is probably not applicable
 
-*  reference in help of the lower-level function: **none**
+- explanation in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: simbio
+- reference in help of the lower-level function: **none** but it is probably not applicable
 
-*  article in References to implemented methods: **none** but is probably not applicable
+- **reading function** (reads in a certain type of volume conduction model)
 
-*  explanation in help of the lower-level function: yes
+- name in help of ft_prepare_headmodel: fns
 
-*  reference in help of the lower-level function: **none** but it is probably not applicable
+- article in References to implemented methods: **none**
 
-*  **reading function** (reads in a certain type of volume conduction model)
+- explanation in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: fns
-
-*  article in References to implemented methods: **none**
-
-*  explanation in help of the lower-level function: yes
-
-*  reference in help of the lower-level function: **yes** (or at least a link provided)
+- reference in help of the lower-level function: **yes** (or at least a link provided)
 
 **MEG**
 
-*  name in help of ft_prepare_headmodel: singlesphere
+- name in help of ft_prepare_headmodel: singlesphere
 
-*  see it under EEG methods.
+- see it under EEG methods.
 
-*  name in help of ft_prepare_headmodel: **multispheres** FIXME rather not use multisphere because it is ambiguous
+- name in help of ft_prepare_headmodel: **multispheres** FIXME rather not use multisphere because it is ambiguous
 
-*  name in script of ft_prepare_headmodel: **localspheres**
+- name in script of ft_prepare_headmodel: **localspheres**
 
-*  article in References to implemented methods: yes (Huang et al., 1999) but is called: **multispheres**
+- article in References to implemented methods: yes (Huang et al., 1999) but is called: **multispheres**
 
-*  lower-level function name: **[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**
+- lower-level function name: **[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**
 
-*  explanation in help of the lower-level function: yes
+- explanation in help of the lower-level function: yes
 
-*  reference in help of the lower-level function: yes
+- reference in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: singleshell
+- name in help of ft_prepare_headmodel: singleshell
 
-*  article in References to implemented methods: yes (Nolte, 2003)
+- article in References to implemented methods: yes (Nolte, 2003)
 
-*  explanation in help of the lower-level function: yes
+- explanation in help of the lower-level function: yes
 
-*  reference in help of the lower-level function: yes
+- reference in help of the lower-level function: yes
 
-*  name in help of ft_prepare_headmodel: infinite
+- name in help of ft_prepare_headmodel: infinite
 
-*  see it under EEG methods.
+- see it under EEG methods.
 
-*  name in help of ft_prepare_headmodel: openmeeg
+- name in help of ft_prepare_headmodel: openmeeg
 
-*  Does this methods apply also to MEG? It says so in [Refurbishing the FORWARD module](/development/project/fwdarch) but it is **not listed as method for MEG** in the reference of ft_prepare_headmodel.
+- Does this methods apply also to MEG? It says so in [Refurbishing the FORWARD module](/development/project/fwdarch) but it is **not listed as method for MEG** in the reference of ft_prepare_headmodel.
 
-*  see it under EEG methods.
+- see it under EEG methods.

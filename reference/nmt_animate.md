@@ -1,5 +1,6 @@
 ---
 title: nmt_animate
+layout: default
 tags: 
 ---
 ```

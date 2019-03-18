@@ -1,5 +1,6 @@
 ---
 title: ft_spiketriggeredinterpolation
+layout: default
 tags: 
 ---
 ```

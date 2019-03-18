@@ -11,31 +11,31 @@ The directory ''fieldtrip/realtime/src/buffer/python'' contains a single-file Py
 
 The following Python code example demonstrates how to use the interfac
 
-	:::python
-	import sys
-	import FieldTrip
-	
-	ftc = FieldTrip.Client()		
-	ftc.connect('localhost', 1972)    # might throw IOError
-	H = ftc.getHeader()
-	if H is Non
-	    print 'Failed to retrieve header!'
-	    sys.exit(1)
-	
-	print H
-	print H.labels
-	
-	if H.nSamples > 
-	    print 'Trying to read last sample...'
-	    index = H.nSamples - 1
-	    D = ftc.getData([index, index])
-	    print D
-	
-	if H.nEvents > 
-	    print 'Trying to read (all) events...'
-	    E = ftc.getEvents()
-	    for e in 
-	        print e
-					
-	ftc.disconnect()
+```python
+    import sys
+    import FieldTrip
 
+    ftc = FieldTrip.Client()
+    ftc.connect('localhost', 1972)    # might throw IOError
+    H = ftc.getHeader()
+    if H is Non
+      print 'Failed to retrieve header!'
+      sys.exit(1)
+
+    print H
+    print H.labels
+
+    if H.nSamples >
+      print 'Trying to read last sample...'
+      index = H.nSamples - 1
+      D = ftc.getData([index, index])
+      print D
+
+    if H.nEvents >
+      print 'Trying to read (all) events...'
+      E = ftc.getEvents()
+      for e in
+          print e
+
+    ftc.disconnect()
+```

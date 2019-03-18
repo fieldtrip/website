@@ -1,5 +1,6 @@
 ---
 title: ft_datatype_parcellation
+layout: default
 tags: 
 ---
 ```

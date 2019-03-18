@@ -6,9 +6,9 @@ title: FieldTrip Workshop in Marseille
 
 Together with Jean-Michel Badier and Christian Benar from the [MEG laboratory in Marseille](http://meg.univ-amu.fr/wiki/Main_Page), we will run a FieldTrip workshop.
 
--   Who: Robert Oostenveld with help from local staff
--   When: 11-13 January 2016
--   Where: You should have received detailed instructions on the venue at INSERM Marseille. If you have questions, please contact demat-form.dr-marseille@inserm.fr.
+- Who: Robert Oostenveld with help from local staff
+- When: 11-13 January 2016
+- Where: You should have received detailed instructions on the venue at INSERM Marseille. If you have questions, please contact demat-form.dr-marseille@inserm.fr.
 
 We will keep this page up to date and post new information here when available.
 
@@ -28,8 +28,8 @@ Please read the [FieldTrip reference paper](http://www.hindawi.com/journals/cin/
 
 Furthermore, we recommend you to watch the following online videos prior to the workshop. Note that these video lectures cannot be quickly glanced over. You should **plan ahead and take your time** to go through them.
 
--   [FieldTrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
--   [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
+- [FieldTrip toolbox introduction, 1 hour](https://www.youtube.com/watch?v=eUVL_twWNdk)
+- [MEG basics and instrumentation, 15 minutes](https://www.youtube.com/watch?v=CPj4jJACeIs)
 
 The content of the shorter second lecture is also covered in the first, but presented differently and therefore possibly useful to get a good understanding of the signals that we deal with.
 
@@ -45,40 +45,40 @@ _We will start each day at 9:00 sharp and will finish around 17:00 on Monday and
 
 #### Monday
 
--   morning
+- morning
 
-    -   1h Lecture on frequency analysis - [slides](/assets/pdf/workshop/marseille_frequency.pdf)
-    -   2h handson [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
+  - 1h Lecture on frequency analysis - [slides](/assets/pdf/workshop/marseille_frequency.pdf)
+  - 2h handson [Sensor-level ERF, TFR and connectivity analyses](/tutorial/sensor_analysis)
 
--   afternoon
+- afternoon
 
-    -   1h Lecture on source reconstruction using beamforming - [slides](/assets/pdf/workshop/marseille_beamforming.pdf)
-    -   2h handson [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
-    -   wrap up of the day
+  - 1h Lecture on source reconstruction using beamforming - [slides](/assets/pdf/workshop/marseille_beamforming.pdf)
+  - 2h handson [Localizing visual gamma and cortico-muscular coherence](/tutorial/beamformingextended)
+  - wrap up of the day
 
--   evening
-    -   dinner (not included, i.e. on own costs)
+- evening
+  - dinner (not included, i.e. on own costs)
 
 #### Tuesday
 
--   morning
+- morning
 
-    -   1h Lecture on connectivity analysis - [slides](/assets/pdf/workshop/marseille_connectivity.pdf)
-    -   2h hands on [Analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
+  - 1h Lecture on connectivity analysis - [slides](/assets/pdf/workshop/marseille_connectivity.pdf)
+  - 2h hands on [Analysis of sensor- and source-level connectivity](/tutorial/connectivityextended)
 
--   afternoon
+- afternoon
 
-    -   1h Lecture on nonparametric statistics using clustering - [slides](/assets/pdf/workshop/marseille_statistics.pdf)
-    -   2h hands on [Cluster-based permutation tests on ERFs](/tutorial/cluster_permutation_timelock) or on [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
-    -   wrap up of the day
+  - 1h Lecture on nonparametric statistics using clustering - [slides](/assets/pdf/workshop/marseille_statistics.pdf)
+  - 2h hands on [Cluster-based permutation tests on ERFs](/tutorial/cluster_permutation_timelock) or on [Cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq)
+  - wrap up of the day
 
--   evening
-    -   pub (not included, i.e. on own costs)
+- evening
+  - pub (not included, i.e. on own costs)
 
 #### Wednesday
 
--   Playground in which you will be working on own data (under supervision)
--   Wrap up of the workshop
+- Playground in which you will be working on own data (under supervision)
+- Wrap up of the workshop
 
 For the playground you should bring your own data. In case you don't have a suitable dataset for analysis (yet), we will provide you with a dataset and details on the experiment and analysis options.
 

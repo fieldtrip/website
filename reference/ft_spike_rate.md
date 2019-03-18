@@ -1,5 +1,6 @@
 ---
 title: ft_spike_rate
+layout: default
 tags: 
 ---
 ```

@@ -10,6 +10,7 @@ This page describes the interface between the 8-channel [OpenBCI](http://www.ope
 {% include image src="/assets/img/development/realtime/openbci/8_perspective_1024x1024.jpg" width="400" %}
 
 The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you’ve worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
+
 ## Standalone interface with openbci2ft
 
 You can use **openbci2ft** to transport data from the UDP network connection to a FieldTrip buffer. The **openbci2ft** application is written in C and takes 1 required and 2 optional command line arguments
@@ -19,11 +20,11 @@ You can use **openbci2ft** to transport data from the UDP network connection to 
 For example, if you want to stream the data from a specific serial port to a remote buffer on mentat205:1972, you would type
 
     openbci2ft /dev/tty.usbserial-DN0094FY mentat205 1972
-    
+
 For spawning a local FieldTrip buffer within ** openbci2ft** at port 1234, you would use a dash (-) instead of the second hostname and write
 
     openbci2ft /dev/tty.usbserial-DN0094FY - 1234
-    
+
 Leaving out the two optional arguments spawns a local buffer on the default port 197
 
     openbci2ft /dev/tty.usbserial-DN0094FY

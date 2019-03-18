@@ -15,26 +15,26 @@ The specifications of this data format can be found on [the company's website](h
 
 To read Blackrock data into FieldTrip, you will need the NPMK toolbox. The latest version of it can be cloned from github: https://github.com/BlackrockMicrosystems/NPMK. This is a MATLAB-toolbox provided by Blackrock microsystems. FieldTrip relies on the low-level reading functionality of this code. Make sure that the .m files in the NPMK toolbox are on the MATLAB path.
 
-To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings (see the [faq](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
+To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
-	addpath `<full_path_to_fieldtrip>`
-	ft_defaults
+    addpath `<full_path_to_fieldtrip>`
+    ft_defaults
 
 ## Reading header information
 
 To read header information, use
 
-	filename = 'your_cyberkinetics_file.nev';
-	hdr = ft_read_header(filename, 'headerformat', 'neuroshare');
+    filename = 'your_cyberkinetics_file.nev';
+    hdr = ft_read_header(filename, 'headerformat', 'neuroshare');
 
-This calls the NPMK toolbox and gives back the header structure in FieldTrip format, which includes the original header information (included as hdr.orig) as retrieved with the neuroshare functions *openNSx* or *openNEV*.
+This calls the NPMK toolbox and gives back the header structure in FieldTrip format, which includes the original header information (included as hdr.orig) as retrieved with the neuroshare functions _openNSx_ or _openNEV_.
 
 ## Reading triggers and other events
 
 To read events, use
 
-	filename = 'your_datafile';
-	event = ft_read_event(filename, 'eventformat', 'neuroshare');
+    filename = 'your_datafile';
+    event = ft_read_event(filename, 'eventformat', 'neuroshare');
 
 TO BE DONE.
 
@@ -42,16 +42,16 @@ TO BE DONE.
 
 To read analog data, use
 
-	filename = 'your_datafile.ns1';
-	data = ft_read_data(filename);
+    filename = 'your_datafile.ns1';
+    data = ft_read_data(filename);
 
-This calls the NPMK toolbox (using the function *openNSx*) and gives back a data structure in FieldTrip format.
+This calls the NPMK toolbox (using the function _openNSx_) and gives back a data structure in FieldTrip format.
 
 Optional input arguments should be specified in key-value pairs and may includ
 
-	%   'chanindx'   = list with channel indices to read
-	%   'begsample   = first sample to read
-	%   'endsample   = last sample to read
+    %   'chanindx'   = list with channel indices to read
+    %   'begsample   = first sample to read
+    %   'endsample   = last sample to read
 
 TO BE DONE.
 
@@ -59,11 +59,11 @@ TO BE DONE.
 
 To read spike data, use
 
-	filename = 'your_cyberkinetics_file.nev';
-	spike = ft_read_spike(filename, 'spikeformat', 'neuroshare');
+    filename = 'your_cyberkinetics_file.nev';
+    spike = ft_read_spike(filename, 'spikeformat', 'neuroshare');
 
 TO BE DONE.
 
 ## External links
 
-*  http://www.blackrockmicro.com  Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)
+- http://www.blackrockmicro.com Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)

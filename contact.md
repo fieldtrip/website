@@ -18,11 +18,11 @@ Donders Centre for Cognitive Neuroimaging, c/o Robert Oostenveld
 Radboud University  
 P.O. Box 9101  
 NL-6500 AH Nijmegen  
-The Netherlands  
+The Netherlands
 
 ## Funding
 
-* [Human Connectome Project](http://humanconnectome.org)
-* [BrainGain](http://www.braingain.nu)
-* [NWO](http://www.nwo.nl)
-* [ChildBrain](http://www.childbrain.eu)
+- [Human Connectome Project](http://humanconnectome.org)
+- [BrainGain](http://www.braingain.nu)
+- [NWO](http://www.nwo.nl)
+- [ChildBrain](http://www.childbrain.eu)

@@ -17,7 +17,7 @@ Check your local version of gcc compiler (type 'gcc -v' in a terminal
 
 OpenMEEG installers are provided for gcc >= 4.1.
 
-The OpenMEEG version for linux 64 provides support of OpenMP for parallel and faster computation.
+The OpenMEEG version for Linux 64 provides support of OpenMP for parallel and faster computation.
 
 #### Install from the tar.gz file
 
@@ -29,7 +29,7 @@ The OpenMEEG version for linux 64 provides support of OpenMP for parallel and fa
 
 #### Install from the RPM
 
-*  open the RPM with your package manager.
+- open the RPM with your package manager.
 
 ### For Windows
 
@@ -52,7 +52,7 @@ You should add the location of the OpenMEEG binaries and dynamic link libraries 
 or using LD_LIBRARY_PATH on Linux.
 
 You can test the actual path that MATLAB will use by
-    system('echo $PATH');
+system('echo $PATH');
     system('echo $DYLD_LIBRARY_PATH'); % or LD_LIBRARY_PATH on Linux
 
 If it is not appropriate, you can do

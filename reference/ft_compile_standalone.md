@@ -1,5 +1,6 @@
 ---
 title: ft_compile_standalone
+layout: default
 tags: 
 ---
 ```
@@ -9,7 +10,7 @@ tags:
  The compiled executable includes
   - all main FieldTrip m-files
   - all main FieldTrip m-files dependencies for as long as these
-    dependencies are in the FieldTrip modules and external toolboxes
+    dependencies are in the fieldtrip modules and external toolboxes
     on the path, MATLAB built-in, or toolbox/(stats/images/signal)
     functions
 

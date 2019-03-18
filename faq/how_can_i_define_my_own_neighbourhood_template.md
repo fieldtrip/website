@@ -7,8 +7,8 @@ tags: [faq, statistics, cluster]
 
 Currently, each entry of the neighbour-structure needs to have two fields: 'label' and 'neighblabel'. cfg.neighbours must be a struct-array, with each entry having these two fields. You can then define the structure as follow
 
-	  cfg.neighbours = struct;
-	  cfg.neighbours(1).label = 'Fp1';
-	  cfg.neighbours(1).neighblabel = {'Fpz'; 'AFz'};
+    cfg.neighbours = struct;
+    cfg.neighbours(1).label = 'Fp1';
+    cfg.neighbours(1).neighblabel = {'Fpz'; 'AFz'};
 
 Similarly, you can load a template and then change the neighbour definition. Note, that you should verify your definition using **[ft_neighbourplot](/reference/ft_neighbourplot)**.

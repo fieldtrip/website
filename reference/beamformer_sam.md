@@ -1,5 +1,6 @@
 ---
 title: beamformer_sam
+layout: default
 tags: 
 ---
 ```

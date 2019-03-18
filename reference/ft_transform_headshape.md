@@ -1,13 +1,11 @@
 ---
 title: ft_transform_headshape
+layout: default
 tags: 
 ---
 ```
- FT_TRANSFORM_HEADSHAPE applies a homogenous coordinate transformation to a
- structure with headshape and fiducial information.
+ This function is a backward compatibility wrapper for existing MATLAB scripts
+ that call a function that is not part of the FieldTrip toolbox any more.
 
- Use as
-   shape = ft_transform_headshape(transform, shape)
-
- See also FT_READ_HEADSHAPE, FT_TRANSFORM_GEOMETRY
+ Please update your code to make it future-proof.
 ```

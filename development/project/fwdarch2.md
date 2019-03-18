@@ -18,13 +18,13 @@ The functions' types available at the moment deal with different types of object
 
 * The from (rows)-to (columns) matri
 
- | ^ ana ^ seg ^ surf ^ mesh ^ hdm                                                       
- | -------------------------------                                                       
- | 1.ana|[11](#method 11 )|[12](#method 12 )|[10](#method 10 )|n.a.|n.a.|                
- | 2.seg| n.a.|[13](#method 13):-||[10](#method 10 )|[14](#method 14):-||[3](#method 3 )|
- | 3.surf| n.a.|[4](#method 4 )|[15](#method 15)|[16](#method 16):-||[5](#method 5 )|    
- | 4.mesh| n.a.|[8](#method 8 )|[7](#method 7 ):-||[9](#method 9 )|[6](#method 6 )|      
- | 5.hdm | n.a.|[1](#method 1 )|[2](#method 2 ):-||n.a.| n.a.|                           
+| ^ ana ^ seg ^ surf ^ mesh ^ hdm |
+| ------------------------------- |
+| 1.ana                           | [11](#method 11 ) | [12](#method 12 ) | [10](#method 10 ) | n.a. | n.a. |
+| 2.seg                           | n.a. | [13](#method 13):- |  | [10](#method 10 ) | [14](#method 14):- |  | [3](#method 3 ) |
+| 3.surf                          | n.a. | [4](#method 4 ) | [15](#method 15) | [16](#method 16):- |  | [5](#method 5 ) |
+| 4.mesh                          | n.a. | [8](#method 8 ) | [7](#method 7 ):- |  | [9](#method 9 ) | [6](#method 6 ) |
+| 5.hdm                           | n.a. | [1](#method 1 ) | [2](#method 2 ):- |  | n.a. | n.a. |
 
 ## method 1
 

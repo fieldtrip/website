@@ -1,10 +1,11 @@
 ---
 title: ft_artifact_eog
+layout: default
 tags: 
 ---
 ```
- FT_ARTIFACT_EOG reads the data segments of interest from file and
- identifies EOG artifacts.
+ FT_ARTIFACT_EOG reads the data segments of interest from file and identifies EOG
+ artifacts.
 
  Use as
    [cfg, artifact] = ft_artifact_eog(cfg)

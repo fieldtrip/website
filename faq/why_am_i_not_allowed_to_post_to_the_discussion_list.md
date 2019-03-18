@@ -3,11 +3,11 @@ title: Why am I not allowed to post to the discussion list?
 tags: [faq, email]
 ---
 
-## Why am I not allowed to post to the discussion list?
+# Why am I not allowed to post to the discussion list?
 
 If you try to post on the FieldTrip [email discussion list](/discussion_list) and get the following error:
 
-*You are not allowed to post to this mailing list, and your message has been automatically rejected.  If you think that your messages are being rejected in error, contact the mailing list owner at fieldtrip-owner AT donders.ru.nl.*
+_You are not allowed to post to this mailing list, and your message has been automatically rejected. If you think that your messages are being rejected in error, contact the mailing list owner at fieldtrip-owner AT science.ru.nl._
 
 It might be due to you not having registered. Only people registered to the mailing list are allowed to send messages on it, and will receive messages from it.
 

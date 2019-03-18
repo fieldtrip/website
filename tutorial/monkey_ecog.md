@@ -1,6 +1,6 @@
 ---
 title: Analysis of monkey ECoG recordings
-tags: [tutorial, ecog, animal]
+tags: [tutorial, ieeg, ecog, animal]
 ---
 
 # Analysis of monkey ECoG recordings
@@ -14,277 +14,277 @@ In the following tutorial we will analyze a whole hemisphere EcoG grid implanted
 This particular experiment deals with an yet frequently exploited experimental design- a visual grating task. This particular task is known to reliably elicit a sustained signal in the gamma frequency range ~60-80 Hz in both humans and nonhuman primates. More elaborate discussion on the sustained gamma band signal can be found [here](http://www.sciencedirect.com/science/article/pii/S0896627308003747). The animal is seated with fixated head and restrained arm motion in front of a black screen. A grating pattern in eight different orientation has been presented for 2 seconds following a 2 seconds baseline period (black screen) while the brain activity was monitored with 128 channel ECoG grid covering the entire right hemisphere (Figure1). Some more information can also be found [here](http://neurotycho.org/visual-grating-task).
 
 {% include image src="/assets/img/tutorial/monkey_ecog/k2_1.png" width="400" %}
-*Figure 1: X-ray with electrode coverage illustrating the position of the electrodes in the right hemisphere*
+_Figure 1: X-ray with electrode coverage illustrating the position of the electrodes in the right hemisphere_
 
 ## Procedure
 
 The tutorial will follow the steps:
 
- * prepare a 2D electrode layout for visualisation that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
- * load data into MATLAB and assemble it into a format FieldTrip can deal with
- * define a trial sturcture and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
- * append the data into a common dataset **[ft_appenddata](/reference/ft_appenddata)** apply an independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)** after which we will plot and explore some components using **[ft_databrowser](/reference/ft_databrowser)**
- * Compute time-frequency representaions of power and plot using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)** respectively.
- * Compute coherence between reference electrode and the remaining electrodes using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
- * Perform networkanalysis using **[ft_networkanalysis](/reference/ft_networkanalysis)**
+- prepare a 2D electrode layout for visualisation that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
+- load data into MATLAB and assemble it into a format FieldTrip can deal with
+- define a trial sturcture and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
+- append the data into a common dataset **[ft_appenddata](/reference/ft_appenddata)** apply an independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)** after which we will plot and explore some components using **[ft_databrowser](/reference/ft_databrowser)**
+- Compute time-frequency representaions of power and plot using **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)** respectively.
+- Compute coherence between reference electrode and the remaining electrodes using **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**.
+- Perform networkanalysis using **[ft_networkanalysis](/reference/ft_networkanalysis)**
 
 ### Preprocessing
 
 First we will generate the layout along the guidelines explained in the layout tutorial [here](http://www.fieldtriptoolbox.org/tutorial/layout?s[]=layout). Once you have downloaded and uncompressed the data you can load and restructure it in the following way. Alternatively you can download the reformatted data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/monkey_ecog/).
 
-	load Event.mat
-	load lay
-	vec=1:128;
-	for i=1:length(vec);
-	 filename=strcat('ECoG_ch', num2str(vec(i)));
-	 data.label{i}=num2str(vec(i));
-	 load(filename)
-	 filename2=strcat('ECoGData_ch', num2str(vec(i)));
-	 data.trial(i,:) =eval(filename2);
-	 data.time = {EventTime};
-	 data.fsample = 1000;
-	end;
+    load Event.mat
+    load lay
+    vec=1:128;
+    for i=1:length(vec);
+     filename=strcat('ECoG_ch', num2str(vec(i)));
+     data.label{i}=num2str(vec(i));
+     load(filename)
+     filename2=strcat('ECoGData_ch', num2str(vec(i)));
+     data.trial(i,:) =eval(filename2);
+     data.time = {EventTime};
+     data.fsample = 1000;
+    end
 
-	data.trial={data.trial};
-	data.label=lay.label(1:128);
-	data.trial=double(data.trial{1})
-	data.trial={data.trial};
-	data.label{129}='event';
-	clear ECoG*
+    data.trial={data.trial};
+    data.label=lay.label(1:128);
+    data.trial=double(data.trial{1})
+    data.trial={data.trial};
+    data.label{129}='event';
+    clear ECoG*
 
 Using the information provided in the "readme.txt" file we can build a trial structure that can be used during the call to **[ft_redefinetrial](/reference/ft_redefinetrial)**
 
-	trigger = EventData;
-	sample  = EventIndex;
+    trigger = EventData;
+    sample  = EventIndex;
 
-	% determine the number of samples before and after the trigger
-	pretrig  = -data.fsample*2;
-	posttrig =  data.fsample*2;
+    % determine the number of samples before and after the trigger
+    pretrig  = -data.fsample*2;
+    posttrig =  data.fsample*2;
 
-	trl = [];
-	for j = 2:(length(trigger)-2)
-	  trg1 = trigger(j);
-	  trg2 = trigger(j+1);
-	  trg3 = trigger(j+1);
-	  trg4 = trigger(j-1);
+    trl = [];
+    for j = 2:(length(trigger)-2)
+      trg1 = trigger(j);
+      trg2 = trigger(j+1);
+      trg3 = trigger(j+1);
+      trg4 = trigger(j-1);
 
-	  %%% provided txt file reads that
-	  %%% orientation one spans values from 650 to 750
-	  %%% baseline spans values from 300 400
+      %%% provided txt file reads that
+      %%% orientation one spans values from 650 to 750
+      %%% baseline spans values from 300 400
 
-	  if trg1 > 400 && trg2 `< 750 && trg3 >`= 650 && trg4 <= 400      
-	    trlbegin = sample(j) + pretrig;       
-	    trlend   = sample(j) + posttrig;       
-	    offset   = pretrig;
-	    newtrl   = [trlbegin trlend offset];
-	    trl      = [trl; newtrl];
-	  end
-	end
+      if trg1 > 400 && trg2 `< 750 && trg3 >`= 650 && trg4 <= 400
+        trlbegin = sample(j) + pretrig;
+        trlend   = sample(j) + posttrig;
+        offset   = pretrig;
+        newtrl   = [trlbegin trlend offset];
+        trl      = [trl; newtrl];
+      end
+    end
 
-The structure **trl** is now a 20 rows by 3 columns matrix containing the begin, end and offset(i.e. baseline) samples for each trial of type *45° orientation*. Subsequently we call **[ft_redefinetrial](/reference/ft_redefinetrial)** where we provide the trial structure computed in the previous step **cfg.trl = trl;**.
+The structure **trl** is now a 20 rows by 3 columns matrix containing the begin, end and offset(i.e. baseline) samples for each trial of type _45° orientation_. Subsequently we call **[ft_redefinetrial](/reference/ft_redefinetrial)** where we provide the trial structure computed in the previous step **cfg.trl = trl;**.
 
-	cfg=[];
-	cfg.trl=trl;
-	data_1=ft_redefinetrial(cfg,data);
+    cfg=[];
+    cfg.trl=trl;
+    data_1=ft_redefinetrial(cfg,data);
 
 Now we illustrate the time course of the channel defining the event in order to check whether trial onset was appropriately assigned.
 
-	cfg=[];
-	cfg.trl =data_1.trial;
-	cfg.channel    = 'event';
-	cfg.ylim = [0 3000];
-	cfg.blocksize = 4;
-	ft_databrowser(cfg,data_1);
+    cfg=[];
+    cfg.trl =data_1.trial;
+    cfg.channel    = 'event';
+    cfg.ylim = [0 3000];
+    cfg.blocksize = 4;
+    ft_databrowser(cfg,data_1);
 
 {% include image src="/assets/img/tutorial/monkey_ecog/databrowser_event.png" width="400" %}
 
-*Figure 2: Event onset at time stamp 0 and duration 2 seconds.*
+_Figure 2: Event onset at time stamp 0 and duration 2 seconds._
 
 Next, we will use independent component analysis to identify the presence of artifacts but also the presence of oscillatory activity. First, the data is resampled down to 140 Hz in order to speed up the calculation of the independent components. We reduce the iteration steps to 50 and finally project the original high sampling data thru the identified components again.
 
-	%% resample the data
-	cfg = [];
-	cfg.resamplefs = 140;
-	cfg.detrend    = 'no';
-	datads = ft_resampledata(cfg, data);
+    %% resample the data
+    cfg = [];
+    cfg.resamplefs = 140;
+    cfg.detrend    = 'no';
+    datads = ft_resampledata(cfg, data);
 
-	% decompose the data
-	cfg        = [];
-	cfg.method = 'runica';
-	cfg.runica.maxsteps = 50;
-	comp = ft_componentanalysis(cfg, datads);
+    % decompose the data
+    cfg        = [];
+    cfg.method = 'runica';
+    cfg.runica.maxsteps = 50;
+    comp = ft_componentanalysis(cfg, datads);
 
-	% project the original data thru the components again
-	cfg           = [];
-	cfg.unmixing  = comp.unmixing;
-	cfg.topolabel = comp.topolabel;
-	comp=ft_componentanalysis(cfg, data);
+    % project the original data thru the components again
+    cfg           = [];
+    cfg.unmixing  = comp.unmixing;
+    cfg.topolabel = comp.topolabel;
+    comp=ft_componentanalysis(cfg, data);
 
 We will use **[ft_databrowser](/reference/ft_databrowser)** again in order to plot the topography of the components and corresponding time courses. In the present case only particular components bearing artifacts (component 22) and clear oscillatory signatures (11,43,44) are plotted.
 
 {% include image src="/assets/img/tutorial/monkey_ecog/components_plot.png" width="400" %}
 
-*Figure 3: Independent components illustrating some clear visual (1 and 11) and sensorimotor (43,44) topography and oscillatory time course.*
+_Figure 3: Independent components illustrating some clear visual (1 and 11) and sensorimotor (43,44) topography and oscillatory time course._
 
 The build-in functionality of **[ft_databrowser](/reference/ft_databrowser)** allows for interactively mark a time window and perform a spectral analysis via left mouse click. This launches an additional figure that allows for adding and removing of component's power spectra and (log/linear) scale adjustments. Doing so we can confirm the presence of 10.89 Hz alpha peak (compontent 11) over occipito-posterior electrodes (component 11 topography in Figure 3).
 
 {% include image src="/assets/img/tutorial/monkey_ecog/powspctrm_components.png" width="400" %}
 
-*Figure 4: Power spectrum of components #11 and #43 illustrating a clear 10.89 Hz alpha peak (green traces) in the visual and 17.05 beta peak (cyan traces) in the sensorimotor regions.*
+_Figure 4: Power spectrum of components #11 and #43 illustrating a clear 10.89 Hz alpha peak (green traces) in the visual and 17.05 beta peak (cyan traces) in the sensorimotor regions._
 
 ### Time-frequency analysis
 
 After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectcomponent)** a time-frequency analysis can be performed. Detailed information regarding this analysis step is extensively covered [here](/tutorial/timefrequencyanalysis). Furthermore, we will use different settings for the estimates of low (`<40Hz) and high (>`40Hz) frequencies. The rational behind this strategy is also covered in the time-freuqncy tutorial and extensively explained by Robert in the video lecture [here](https://www.youtube.com/watch?v=6EIBh5lHNSc). The time-frequency representation of power is calculated with **[ft_freqanalysis](/reference/ft_freqanalysis)**. Subsequently the power estimates are baseline corrected with **[ft_freqbaseline](/reference/ft_freqbaseline)** and plotted with **[ft_multiplotTFR](/reference/ft_multiplotTFR)**.
 
-	% perform time-frequency analysis
-	cfg              = [];
-	cfg.output       = 'pow';
-	cfg.method       = 'mtmconvol';
-	cfg.taper        = 'hanning';
-	cfg.foi          = 1:1:40;                          
-	cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
-	cfg.toi          = -2:0.05:2;               
-	cfg.keeptrials ='yes';
-	tfr= ft_freqanalysis(cfg,data);
+    % perform time-frequency analysis
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.foi          = 1:1:40;
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
+    cfg.toi          = -2:0.05:2;
+    cfg.keeptrials ='yes';
+    tfr= ft_freqanalysis(cfg,data);
 
-	% baseline correction
-	cfg=[];
-	cfg.baseline=[-1 0];
-	cfg.baselinetype='db';
-	tfrbl = ft_freqbaseline(cfg, tfr);
+    % baseline correction
+    cfg=[];
+    cfg.baseline=[-1 0];
+    cfg.baselinetype='db';
+    tfrbl = ft_freqbaseline(cfg, tfr);
 
-	% plot the result
-	cfg=[];
-	cfg.channel = {'all'};
-	cfg.xlim=[-.2 2];
-	cfg.ylim=[1 40];
-	cfg.fontsize = 12;
-	cfg.layout = lay;
-	% cfg.zlim = [-.5 .5];
-	figure;
-	ft_multiplotTFR(cfg, tfrbl);
+    % plot the result
+    cfg=[];
+    cfg.channel = {'all'};
+    cfg.xlim=[-.2 2];
+    cfg.ylim=[1 40];
+    cfg.fontsize = 12;
+    cfg.layout = lay;
+    % cfg.zlim = [-.5 .5];
+    figure;
+    ft_multiplotTFR(cfg, tfrbl);
 
 {% include image src="/assets/img/tutorial/monkey_ecog/multiplottfr.png" width="400" %}
 
-*Figure 5: Time-frequency representation of power using ft_multiplotTFR and the layout designed in the steps above. Highlighted area of electrodes is used for the illustration in figure 6.*
+_Figure 5: Time-frequency representation of power using ft_multiplotTFR and the layout designed in the steps above. Highlighted area of electrodes is used for the illustration in figure 6._
 
 {% include image src="/assets/img/tutorial/monkey_ecog/sensorimotortfr.png" width="400" %}
 
-*Figure 6: Time-frequency representation of power averaged across the electrodes highlighted in the previous figure. Note the initial evoked power in the low frequency range followed by induced depression of oscillatory power in the alpha frequency range.*
+_Figure 6: Time-frequency representation of power averaged across the electrodes highlighted in the previous figure. Note the initial evoked power in the low frequency range followed by induced depression of oscillatory power in the alpha frequency range._
 
 Typically, visual grating tasks reliably elicit sustained gamma band response ~60-80 Hz in both humans ((Hoogenboom N1, Schoffelen JM, Oostenveld R, Parkes LM, Fries P. (2006) Localizing human visual gamma-band activity in frequency, time and space. Neuroimage. 2006 Feb 1;29(3):764-73. Epub 2005 Oct 10.)) and non human primates ((Fries P, Scheeringa R, Oostenveld R. (2008) Finding Gamma. Neuron. 2008 May 8;58(3):303-5. doi: 10.1016/j.neuron.2008.04.020.)). The following lines will estimate oscillatory power in the higher frequencies > 40 Hz, baseline correct and plot the rusult.
 
-	% estimate high frequency gamma
-	cfg = [];
-	cfg.output     = 'pow';
-	cfg.method     = 'mtmconvol';
-	cfg.taper      = 'dpss';        
-	cfg.foi        = 40:2:120;       
-	cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;  
-	cfg.tapsmofrq  = 6 ;
-	cfg.toi        = -2:0.05:2;
-	cfg.pad        = 'maxperlen';
-	cfg.keeptrials = 'yes';
-	tfrhf = ft_freqanalysis(cfg, data);
+    % estimate high frequency gamma
+    cfg = [];
+    cfg.output     = 'pow';
+    cfg.method     = 'mtmconvol';
+    cfg.taper      = 'dpss';
+    cfg.foi        = 40:2:120;
+    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
+    cfg.tapsmofrq  = 6 ;
+    cfg.toi        = -2:0.05:2;
+    cfg.pad        = 'maxperlen';
+    cfg.keeptrials = 'yes';
+    tfrhf = ft_freqanalysis(cfg, data);
 
-	% baseline correct
-	cfg=[];
-	cfg.baseline     = [-.75 0];
-	cfg.baselinetype = 'db';
-	tfrhfbl=ft_freqbaseline(cfg, tfrhf);
+    % baseline correct
+    cfg=[];
+    cfg.baseline     = [-.75 0];
+    cfg.baselinetype = 'db';
+    tfrhfbl=ft_freqbaseline(cfg, tfrhf);
 
-	% plot
-	figure;
-	cfg=[];
-	cfg.xlim = [0.18 0.87]
-	cfg.ylim = [53 80];
-	cfg.layout = lay;
-	subplot(2,2,1); ft_topoplotTFR(cfg,tfrhfbl);
-	cfg=[];
-	cfg.channel = {'chan123'};
-	cfg.xlim=[-.2 1.5];
-	cfg.ylim=[40 120];
-	subplot(2,2,2); ft_singleplotTFR(cfg,tfrhfbl);
+    % plot
+    figure;
+    cfg=[];
+    cfg.xlim = [0.18 0.87]
+    cfg.ylim = [53 80];
+    cfg.layout = lay;
+    subplot(2,2,1); ft_topoplotTFR(cfg,tfrhfbl);
+    cfg=[];
+    cfg.channel = {'chan123'};
+    cfg.xlim=[-.2 1.5];
+    cfg.ylim=[40 120];
+    subplot(2,2,2); ft_singleplotTFR(cfg,tfrhfbl);
 
 {% include image src="/assets/img/tutorial/monkey_ecog/gammatopotfr.png" width="400" %}
 
-*Figure 7: Left- topography of the induced gamma band response centered around ~60 Hz. Right-Time-frequency representation of power for a single electrode located over the occipital cortex.*
+_Figure 7: Left- topography of the induced gamma band response centered around ~60 Hz. Right-Time-frequency representation of power for a single electrode located over the occipital cortex._
 
 ### Connectivity analysis
 
 Now we can analysis the connectivity patterns that may arise due to coherence in the gamma band. Towards this end we'll use **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and imaginary coherence as a metric of communication between electrodes. First, we take advantage of multitapering in order to estimated gamma power at 60 Hz and compute the connectivity between all possible electrode pairs.
 
-	% estimate 60 Hz power
-	cfg            = [];
-	cfg.method     = 'mtmfft';
-	cfg.output     = 'fourier';
-	cfg.taper      = 'dpss';
-	cfg.keeptrials = 'yes';
-	cfg.tapsmofrq  = 2;
-	cfg.foi        = 60;
-	freq           = ft_freqanalysis(cfg, data);
+    % estimate 60 Hz power
+    cfg            = [];
+    cfg.method     = 'mtmfft';
+    cfg.output     = 'fourier';
+    cfg.taper      = 'dpss';
+    cfg.keeptrials = 'yes';
+    cfg.tapsmofrq  = 2;
+    cfg.foi        = 60;
+    freq           = ft_freqanalysis(cfg, data);
 
-	% then compute connectivity
-	cfg=[];
-	cfg.method='coh';
-	cfg.complex = 'absimag'; % check absimag solves the abs on line 161
-	conn=ft_connectivityanalysis(cfg,freq);
+    % then compute connectivity
+    cfg=[];
+    cfg.method='coh';
+    cfg.complex = 'absimag'; % check absimag solves the abs on line 161
+    conn=ft_connectivityanalysis(cfg,freq);
 
 Now we plot the coherence of a reference electrode with maximal gamma power relative to the remaining electrodes. In this case the electrode is 'chan123' with an index number 119.
 
-	%% plot coherence from max gamma chan to all other
-	coh.label=data.label;
-	coh.dimord = 'chan_time'
-	coh.avg= conn.cohspctrm(119,:)';
-	coh.time = 1;
-	cfg = [];
-	cfg.layout = lay;
-	cfg.colormap = 'jet';
-	cfg.zlim     = [-.2 .2];
-	cfg.colorbar = 'yes';
-	cfg.interactive = 'no';
-	cfg.marker = 'off';
-	cfg.highlight = 'on';
-	cfg.highlightchannel = {'chan123'};
-	cfg.highlightsymbol = '*';
-	cfg.highlightcolor = [1 0 1];
-	cfg.highlightsize   = 12;
-	cfg.highlightfontsize =12;
-	figure;
-	ft_topoplotER(cfg,coh);
-	title ('ICOH')
+    %% plot coherence from max gamma chan to all other
+    coh.label=data.label;
+    coh.dimord = 'chan_time'
+    coh.avg= conn.cohspctrm(119,:)';
+    coh.time = 1;
+    cfg = [];
+    cfg.layout = lay;
+    cfg.colormap = 'jet';
+    cfg.zlim     = [-.2 .2];
+    cfg.colorbar = 'yes';
+    cfg.interactive = 'no';
+    cfg.marker = 'off';
+    cfg.highlight = 'on';
+    cfg.highlightchannel = {'chan123'};
+    cfg.highlightsymbol = '*';
+    cfg.highlightcolor = [1 0 1];
+    cfg.highlightsize   = 12;
+    cfg.highlightfontsize =12;
+    figure;
+    ft_topoplotER(cfg,coh);
+    title ('ICOH')
 
 {% include image src="/assets/img/tutorial/monkey_ecog/icoh.png" width="400" %}
 
-*Figure 8: Coherence between a reference occipital electrode (magenta) and all of the remaining electrodes.*
+_Figure 8: Coherence between a reference occipital electrode (magenta) and all of the remaining electrodes._
 
 Finally, we use **[ft_networkanalysis](/reference/ft_networkanalysis)** to illustrate a rather formal description of the connectivity pattern in the form of a graph.
 
-	% calculate graph theoretical metric
-	fn=fieldnames(conn);
-	parameter = 'degrees';
-	cfg = [];
-	cfg.method = parameter;
-	cfg.parameter = fn{3};
-	cfg.threshold = .1;
-	deg = ft_networkanalysis(cfg,conn);
+    % calculate graph theoretical metric
+    fn=fieldnames(conn);
+    parameter = 'degrees';
+    cfg = [];
+    cfg.method = parameter;
+    cfg.parameter = fn{3};
+    cfg.threshold = .1;
+    deg = ft_networkanalysis(cfg,conn);
 
-	% plot the result
-	cfg = [];
-	cfg.layout = lay;
-	cfg.colormap = 'jet';
-	cfg.parameter = parameter;
-	cfg.zlim     = [-15 15];
-	cfg.colorbar = 'yes';
-	cfg.interactive = 'no';
-	cfg.marker      = 'off';
-	figure;
-	ft_topoplotTFR(cfg,deg);
-	title ('NODE DEGREE')
+    % plot the result
+    cfg = [];
+    cfg.layout = lay;
+    cfg.colormap = 'jet';
+    cfg.parameter = parameter;
+    cfg.zlim     = [-15 15];
+    cfg.colorbar = 'yes';
+    cfg.interactive = 'no';
+    cfg.marker      = 'off';
+    figure;
+    ft_topoplotTFR(cfg,deg);
+    title ('NODE DEGREE')
 
 {% include image src="/assets/img/tutorial/monkey_ecog/nodedegree.png" width="400" %}
 
-*Figure 8: Node degree topography illustrating the amount of connections of a given electrode(node) to all other possible electrodes(nodes).*
+_Figure 8: Node degree topography illustrating the amount of connections of a given electrode(node) to all other possible electrodes(nodes)._
 
 ## Summary and conclusion
 

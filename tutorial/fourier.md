@@ -31,9 +31,9 @@ we can use its outputs to compute power-spectra and cross-spectral densities.
 
 In this tutorial the following steps will be demonstrate
 
-*  Spectral analysis using the **Fast Fourier Transform** (FFT).
-*  Computation of the **power spectrum** from the Fourier transformed data.
-*  Computation of the **coherence spectrum** from the Fourier transformed data of two signals.
+- Spectral analysis using the **Fast Fourier Transform** (FFT).
+- Computation of the **power spectrum** from the Fourier transformed data.
+- Computation of the **coherence spectrum** from the Fourier transformed data of two signals.
 
 ## The concept of spectral analysis using the Fourier Transform
 
@@ -51,139 +51,139 @@ This vector has an amplitude and a phase (phase relative to the begin of the tim
 amplitude is of interest when we later compute the power spectrum of a signal and the phase is
 particularly important when we later compute the coherence spectrum between two signals.
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% The Fourier Transform
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	clear all
-	close all
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % The Fourier Transform
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    clear all
+    close all
 
-	% get a sine and cosine wave of equal frequency and plot them
-	frq = 20; % Hz
-	len = 1; % seconds
-	smpfrq = 1000; % Hz
-	phs = 0;
-	ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
-	sinwav = sin(ind);
-	coswav = cos(ind);
-	figure;
-	plot(sinwav);
-	hold on;
-	plot(coswav,'r');
+    % get a sine and cosine wave of equal frequency and plot them
+    frq = 20; % Hz
+    len = 1; % seconds
+    smpfrq = 1000; % Hz
+    phs = 0;
+    ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
+    sinwav = sin(ind);
+    coswav = cos(ind);
+    figure;
+    plot(sinwav);
+    hold on;
+    plot(coswav,'r');
 
-	% get the FFT of the waves and plot the real and imaginary components
-	fftsin = fft(sinwav);
-	figure;
-	subplot(2,1,1);
-	plot(real(fftsin));
-	subplot(2,1,2);
-	plot(imag(fftsin),'r');
+    % get the FFT of the waves and plot the real and imaginary components
+    fftsin = fft(sinwav);
+    figure;
+    subplot(2,1,1);
+    plot(real(fftsin));
+    subplot(2,1,2);
+    plot(imag(fftsin),'r');
 
-	fftcos = fft(coswav);
-	figure;
-	subplot(2,1,1);
-	plot(real(fftcos));
-	subplot(2,1,2);
-	plot(imag(fftcos),'r');
+    fftcos = fft(coswav);
+    figure;
+    subplot(2,1,1);
+    plot(real(fftcos));
+    subplot(2,1,2);
+    plot(imag(fftcos),'r');
 
 {% include image src="/assets/img/tutorial/fourier/fft_sinwav2.png" %}
 
-*Figure: The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
+_Figure: The Fourier transform of the sine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel)._
 
 {% include image src="/assets/img/tutorial/fourier/fft_coswav2.png" %}
 
-*Figure: The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel).*
+_Figure: The Fourier transform of the cosine wave. The result of the Fourier transform is complex, containing, for each frequency, the cosine component of the signal as the real component (upper panel) and the sine component of the signal as the imaginary component (lower panel)._
 
-	% calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
-	figure;
-	subplot(2,1,1);
-	sigsinwav = sinwav;
-	plot(sigsinwav .* coswav)
-	subplot(2,1,2);
-	plot(sigsinwav .* sinwav)
-	coscmpsin = sum(sigsinwav .* coswav)
-	sincmpsin = sum(sigsinwav .* sinwav)
-	figure;
-	plot([0,coscmpsin],[0,sincmpsin]);
-	set(gca,'xlim',[-600 600],'ylim',[-600 600])
+    % calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
+    figure;
+    subplot(2,1,1);
+    sigsinwav = sinwav;
+    plot(sigsinwav .* coswav)
+    subplot(2,1,2);
+    plot(sigsinwav .* sinwav)
+    coscmpsin = sum(sigsinwav .* coswav)
+    sincmpsin = sum(sigsinwav .* sinwav)
+    figure;
+    plot([0,coscmpsin],[0,sincmpsin]);
+    set(gca,'xlim',[-600 600],'ylim',[-600 600])
 
-	figure;
-	subplot(2,1,1);
-	plot(coswav .* coswav)
-	subplot(2,1,2);
-	plot(coswav .* sinwav)
-	coscmpcos = sum(coswav .* coswav)
-	sincmpcos = sum(coswav .* sinwav)
-	figure;
-	plot([0,coscmpcos],[0,sincmpcos]);
-	set(gca,'xlim',[-600 600],'ylim',[-600 600])
+    figure;
+    subplot(2,1,1);
+    plot(coswav .* coswav)
+    subplot(2,1,2);
+    plot(coswav .* sinwav)
+    coscmpcos = sum(coswav .* coswav)
+    sincmpcos = sum(coswav .* sinwav)
+    figure;
+    plot([0,coscmpcos],[0,sincmpcos]);
+    set(gca,'xlim',[-600 600],'ylim',[-600 600])
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% generate a cosine wave that is shifted by 45 degrees
-	frq = 20; % Hz
-	len = 1; % seconds
-	smpfrq = 1000; % Hz
-	phs = 45 ./360; % the relative phase advance in fraction of radiants
-	ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
-	wav = sin(ind);
-	figure;
-	plot(wav);
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % generate a cosine wave that is shifted by 45 degrees
+    frq = 20; % Hz
+    len = 1; % seconds
+    smpfrq = 1000; % Hz
+    phs = 45 ./360; % the relative phase advance in fraction of radiants
+    ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
+    wav = sin(ind);
+    figure;
+    plot(wav);
 
 {% include image src="/assets/img/tutorial/fourier/cos45.png" %}
 
-*Figure: A 20 Hz cosine wave shifted 45 degrees.*
+_Figure: A 20 Hz cosine wave shifted 45 degrees._
 
-	% get the FFT of the wave
-	fftwav = fft(wav);
-	figure;
-	subplot(2,1,1);
-	plot(real(fftwav));
-	subplot(2,1,2);
-	plot(imag(fftwav),'r');
+    % get the FFT of the wave
+    fftwav = fft(wav);
+    figure;
+    subplot(2,1,1);
+    plot(real(fftwav));
+    subplot(2,1,2);
+    plot(imag(fftwav),'r');
 
 {% include image src="/assets/img/tutorial/fourier/fft_cos45.png" %}
 
-*Figure: The FFT of a 20 Hz cosine wave shifted 45 degrees.*
+_Figure: The FFT of a 20 Hz cosine wave shifted 45 degrees._
 
-	% calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
-	figure;
-	subplot(2,1,1);
-	plot(wav .* coswav)
-	subplot(2,1,2);
-	plot(wav .* sinwav)
-	coscmpwav = sum(wav .* coswav)
-	sincmpwav = sum(wav .* sinwav)
-	figure;
-	plot([0,coscmpwav],[0,sincmpwav]);
-	set(gca,'xlim',[-600 600],'ylim',[-600 600])
+    % calculate the FFT results at the signal frequency "by hand" and plot the result as a vector
+    figure;
+    subplot(2,1,1);
+    plot(wav .* coswav)
+    subplot(2,1,2);
+    plot(wav .* sinwav)
+    coscmpwav = sum(wav .* coswav)
+    sincmpwav = sum(wav .* sinwav)
+    figure;
+    plot([0,coscmpwav],[0,sincmpwav]);
+    set(gca,'xlim',[-600 600],'ylim',[-600 600])
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% generate a wave of a different frequency
-	frq = 10; % Hz
-	len = 1; % seconds
-	smpfrq = 1000; % Hz
-	phs = 0; % the relative phase advance in fraction of radiants
-	ind = ((0 : (len.*smpfrq -1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
-	wav = sin(ind);
-	figure;
-	plot(wav);
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % generate a wave of a different frequency
+    frq = 10; % Hz
+    len = 1; % seconds
+    smpfrq = 1000; % Hz
+    phs = 0; % the relative phase advance in fraction of radiants
+    ind = ((0 : (len.*smpfrq -1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
+    wav = sin(ind);
+    figure;
+    plot(wav);
 
-	% get the FFT of the wave
-	fftwav = fft(wav);
-	figure;
-	subplot(2,1,1);
-	plot(real(fftwav));
-	subplot(2,1,2);
-	plot(imag(fftwav),'r');
+    % get the FFT of the wave
+    fftwav = fft(wav);
+    figure;
+    subplot(2,1,1);
+    plot(real(fftwav));
+    subplot(2,1,2);
+    plot(imag(fftwav),'r');
 
-	% calculate the FFT result OF THE SIGNAL FREQUENCY "by hand"
-	figure;
-	subplot(2,1,1);
-	plot(wav .* coswav)
-	subplot(2,1,2);
-	plot(wav .* sinwav)
+    % calculate the FFT result OF THE SIGNAL FREQUENCY "by hand"
+    figure;
+    subplot(2,1,1);
+    plot(wav .* coswav)
+    subplot(2,1,2);
+    plot(wav .* sinwav)
 
-	coscmpwav = sum(wav .* coswav)
-	sincmpwav = sum(wav .* sinwav)
+    coscmpwav = sum(wav .* coswav)
+    sincmpwav = sum(wav .* sinwav)
 
 ## The power spectrum
 
@@ -193,56 +193,56 @@ squared absolute of the Fourier transform (plus appropriate normalisation that w
 covered in detail here). The power spectrum no longer contains the phase
 information. Thus, the power spectra of our sine and cosine waves are identical!
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% The Power spectrum
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% calculate the power spectrum
-	clear all
-	close all
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % The Power spectrum
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % calculate the power spectrum
+    clear all
+    close all
 
-	% get a sine and cosine wave of equal frequency and plot them
-	frq = 10; % Hz
-	len = 1; % seconds
-	smpfrq = 1000; % Hz
-	phs = 0;
-	ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
-	sinwav = sin(ind);
-	coswav = cos(ind);
-	figure('name','sin&cos');
-	plot(sinwav);
-	hold on;
-	plot(coswav,'r');
+    % get a sine and cosine wave of equal frequency and plot them
+    frq = 10; % Hz
+    len = 1; % seconds
+    smpfrq = 1000; % Hz
+    phs = 0;
+    ind = ((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(phs.*2.*pi);
+    sinwav = sin(ind);
+    coswav = cos(ind);
+    figure('name','sin&cos');
+    plot(sinwav);
+    hold on;
+    plot(coswav,'r');
 
 {% include image src="/assets/img/tutorial/fourier/sincos.png" %}
 
-*Figure: A sine (blue) and cosine wave (red) of equal frequency (10 Hz).*
+_Figure: A sine (blue) and cosine wave (red) of equal frequency (10 Hz)._
 
-	% get the FFT of the waves
-	fftsin = fft(sinwav);
-	figure('name','fft sin');
-	subplot(2,1,1);
-	plot(real(fftsin));
-	subplot(2,1,2);
-	plot(imag(fftsin),'r');
+    % get the FFT of the waves
+    fftsin = fft(sinwav);
+    figure('name','fft sin');
+    subplot(2,1,1);
+    plot(real(fftsin));
+    subplot(2,1,2);
+    plot(imag(fftsin),'r');
 
-	fftcos = fft(coswav);
-	figure('name','fft cos');
-	subplot(2,1,1);
-	plot(real(fftcos));
-	subplot(2,1,2);
-	plot(imag(fftcos),'r');
+    fftcos = fft(coswav);
+    figure('name','fft cos');
+    subplot(2,1,1);
+    plot(real(fftcos));
+    subplot(2,1,2);
+    plot(imag(fftcos),'r');
 
-	numsmp = length(sinwav);
-	psdsin = 2 .* abs(fftsin) .^ 2 ./ (numsmp .^2);
-	figure('name','power sin');
-	plot(psdsin);
-	psdcos = 2 .* abs(fftcos) .^ 2 ./ (numsmp .^2);
-	figure('name','power cos');
-	plot(psdcos);
+    numsmp = length(sinwav);
+    psdsin = 2 .* abs(fftsin) .^ 2 ./ (numsmp .^2);
+    figure('name','power sin');
+    plot(psdsin);
+    psdcos = 2 .* abs(fftcos) .^ 2 ./ (numsmp .^2);
+    figure('name','power cos');
+    plot(psdcos);
 
 {% include image src="/assets/img/tutorial/fourier/powsin.png" %}
 
-*Figure: The power spectrum of a 10 Hz sine wave. The power spectrum of the 10 Hz cosine wave is identical.*
+_Figure: The power spectrum of a 10 Hz sine wave. The power spectrum of the 10 Hz cosine wave is identical._
 
 ## The coherence spectrum
 
@@ -279,105 +279,105 @@ denominator is necessary in order to make direct comparisons possible between si
 different amplitudes. Coherence is then normalized between 0 – random phase difference – and 1 –
 constant phase difference.
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% The Coherence spectrum
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % The Coherence spectrum
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% get many repetitions of two signals with random phase difference
-	clear all
-	close all
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % get many repetitions of two signals with random phase difference
+    clear all
+    close all
 
-	frq = 10; % Hz
-	len = 1; % seconds
-	smpfrq = 100; % Hz
-	numrpt = 1000;
-	ranphs = rand(2.*numrpt,2);
-	phsdif = 45 ./ 360;
-	noifac = 1./50;
-	for rptlop = 1:numrpt
-	  wav(:,rptlop,1) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(ranphs(rptlop,1).*2.*pi)) + ...
-	    randn(1,len.*smpfrq).*noifac;
-	  wav(:,rptlop,2) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+((ranphs(rptlop,2)+phsdif).*2.*pi)) + ...
-	    randn(1,len.*smpfrq).*noifac;
-	end
+    frq = 10; % Hz
+    len = 1; % seconds
+    smpfrq = 100; % Hz
+    numrpt = 1000;
+    ranphs = rand(2.*numrpt,2);
+    phsdif = 45 ./ 360;
+    noifac = 1./50;
+    for rptlop = 1:numrpt
+      wav(:,rptlop,1) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(ranphs(rptlop,1).*2.*pi)) + ...
+        randn(1,len.*smpfrq).*noifac;
+      wav(:,rptlop,2) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+((ranphs(rptlop,2)+phsdif).*2.*pi)) + ...
+        randn(1,len.*smpfrq).*noifac;
+    end
 
-	% get the FFT of the waves
-	for rptlop = 1:numrpt
-	  fftwav(:,rptlop,1) = fft(wav(:,rptlop,1));
-	  fftwav(:,rptlop,2) = fft(wav(:,rptlop,2));
-	end
+    % get the FFT of the waves
+    for rptlop = 1:numrpt
+      fftwav(:,rptlop,1) = fft(wav(:,rptlop,1));
+      fftwav(:,rptlop,2) = fft(wav(:,rptlop,2));
+    end
 
-	% calculate the power-spectral densities (psd) and the cross-spectral
-	% densities (csd) and sum them over repetitions
-	numsmp = length(wav);
-	psd = 2.*abs(fftwav).^2./(numsmp.^2);
-	csd = 2.*(fftwav(:,:,1).*conj(fftwav(:,:,2)))./(numsmp.^2);
-	sumpsd = squeeze(sum(psd,2));
-	sumcsd = squeeze(sum(csd,2));
+    % calculate the power-spectral densities (psd) and the cross-spectral
+    % densities (csd) and sum them over repetitions
+    numsmp = length(wav);
+    psd = 2.*abs(fftwav).^2./(numsmp.^2);
+    csd = 2.*(fftwav(:,:,1).*conj(fftwav(:,:,2)))./(numsmp.^2);
+    sumpsd = squeeze(sum(psd,2));
+    sumcsd = squeeze(sum(csd,2));
 
-	% calculate coherence
-	coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
+    % calculate coherence
+    coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
 
-	figure;
-	plot(squeeze(wav(:,:,1)));
-	figure;
-	plot(squeeze(wav(:,:,2)));
-	figure;
-	plot(coh);
+    figure;
+    plot(squeeze(wav(:,:,1)));
+    figure;
+    plot(squeeze(wav(:,:,2)));
+    figure;
+    plot(coh);
 
 {% include image src="/assets/img/tutorial/fourier/coh_randomphase.png" %}
 
-*Figure: Coherence spectrum for two 10 Hz signals with a random phase difference.*
+_Figure: Coherence spectrum for two 10 Hz signals with a random phase difference._
 
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	% get many repetitions of two signals with somewhat consistent phase difference
-	clear all
-	close all
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % get many repetitions of two signals with somewhat consistent phase difference
+    clear all
+    close all
 
-	frq = 10; % Hz
-	len = 1; % seconds
-	smpfrq = 100; % Hz
-	numrpt = 1000;
-	phsspreadfac = 0.5;
-	circulran = mod(randn(2.*numrpt,2).*phsspreadfac + pi, 2.* pi) - pi;
-	ranphs = circulran ./ (2 .* pi);
-	phsdif = 45 ./ 360;
-	noifac = 1./50;
-	for rptlop = 1:numrpt
-	  wav(:,rptlop,1) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(ranphs(rptlop,1).*2.*pi)) + ...
-	    randn(1,len.*smpfrq).*noifac;
-	  wav(:,rptlop,2) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+((ranphs(rptlop,2)+phsdif).*2.*pi)) + ...
-	    randn(1,len.*smpfrq).*noifac;
-	end
+    frq = 10; % Hz
+    len = 1; % seconds
+    smpfrq = 100; % Hz
+    numrpt = 1000;
+    phsspreadfac = 0.5;
+    circulran = mod(randn(2.*numrpt,2).*phsspreadfac + pi, 2.* pi) - pi;
+    ranphs = circulran ./ (2 .* pi);
+    phsdif = 45 ./ 360;
+    noifac = 1./50;
+    for rptlop = 1:numrpt
+      wav(:,rptlop,1) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+(ranphs(rptlop,1).*2.*pi)) + ...
+        randn(1,len.*smpfrq).*noifac;
+      wav(:,rptlop,2) = sin(((0:(len.*smpfrq-1))./(smpfrq).*(frq.*2.*pi))+((ranphs(rptlop,2)+phsdif).*2.*pi)) + ...
+        randn(1,len.*smpfrq).*noifac;
+    end
 
-	% get the FFT of the waves
-	for rptlop = 1:numrpt
-	  fftwav(:,rptlop,1) = fft(wav(:,rptlop,1));
-	  fftwav(:,rptlop,2) = fft(wav(:,rptlop,2));
-	end
+    % get the FFT of the waves
+    for rptlop = 1:numrpt
+      fftwav(:,rptlop,1) = fft(wav(:,rptlop,1));
+      fftwav(:,rptlop,2) = fft(wav(:,rptlop,2));
+    end
 
-	% calculate the power-spectral densities (psd) and the cross-spectral
-	% densities (csd) and sum them over repetitions
-	numsmp = length(wav);
-	psd = 2.*abs(fftwav).^2./(numsmp.^2);
-	csd = 2.*(fftwav(:,:,1).*conj(fftwav(:,:,2)))./(numsmp.^2);
-	sumpsd = squeeze(sum(psd,2));
-	sumcsd = squeeze(sum(csd,2));
+    % calculate the power-spectral densities (psd) and the cross-spectral
+    % densities (csd) and sum them over repetitions
+    numsmp = length(wav);
+    psd = 2.*abs(fftwav).^2./(numsmp.^2);
+    csd = 2.*(fftwav(:,:,1).*conj(fftwav(:,:,2)))./(numsmp.^2);
+    sumpsd = squeeze(sum(psd,2));
+    sumcsd = squeeze(sum(csd,2));
 
-	% calculate coherence
-	coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
+    % calculate coherence
+    coh = abs(sumcsd ./ sqrt(sumpsd(:,1) .* sumpsd(:,2)));
 
-	figure;
-	plot(squeeze(wav(:,:,1)));
-	figure;
-	plot(squeeze(wav(:,:,2)));
-	figure;
-	plot(coh);
+    figure;
+    plot(squeeze(wav(:,:,1)));
+    figure;
+    plot(squeeze(wav(:,:,2)));
+    figure;
+    plot(coh);
 
 {% include image src="/assets/img/tutorial/fourier/coh_consphase.png" %}
 
-*Figure: Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference.*
+_Figure: Coherence spectrum for two 10 Hz signals with a somewhat consistent phase difference._
 
 ### Exercise
 

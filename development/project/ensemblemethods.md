@@ -4,7 +4,7 @@ title:
 
 {% include /shared/development/warning.md %}
 
-At the moment the ft_mv_gridsearch class  produces the classifier of all
+At the moment the ft_mv_gridsearch class produces the classifier of all
 candidate classifiers, which are defined in the input, with the best performance.
 
 The extension which is currently implemented and under investigation is a class that finds an ensemble of all candidate classifiers.

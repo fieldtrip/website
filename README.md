@@ -1,20 +1,30 @@
 # FieldTrip website
 
-This repository contains the content that is hosted on http://www.fieldtriptoolbox.org
+This repository contains the FieldTrip documentation hosted on <http://www.fieldtriptoolbox.org>.
 
-Feel free to contribute to the FieldTrip documentation by doing edits here and sending a pull request.
-
-Please note that the markdown documents that are nicely displayed here on github will not have the hyperlinks pointing to the correct pages. The hyperlinks will be conrrect when compiled and deployed on our web server.
+Feel free to contribute by doing edits here and sending a pull request. See <http://www.fieldtriptoolbox.org/development/git> for a complete tutorial.
 
 ## Technical notes
 
-* Pages that contain tags must have a title.
-* Tags should be in lower case.
-* Variables passed in an include must be specified in quotes.
-* Code blocks should have an empty line before and after them.
-* Shared pages should go in _include/shared.
-* MarkDown documentation can be found on https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet.
-* Liquid documentation can be found on https://help.shopify.com/en/themes/liquid and https://shopify.github.io/liquid.
+- The website is rebuild after every pushed commit, this can take up to 5 minutes.
+- Pages that contain tags must have a title.
+- Tags should be in lower case.
+- All tags should appear on a single line.
+- Variables passed in an include must be specified in quotes.
+- Code blocks should have an empty line before and after them.
+- Shared pages should go in \_include/shared.
+- MarkDown documentation can be found on <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>.
+- Liquid documentation can be found on <https://help.shopify.com/en/themes/liquid> and <https://shopify.github.io/liquid>.
+
+## Limitations when viewing on github
+
+Most of the Markdown formatting will show up nicely here on github, but there are some limitations.
+
+- Hyperlinks will not be pointing to the correct pages.
+- Images are not included correctly.
+- Youtube videos will not be included correctly.
+- Highlighted sections will not show correctly.
+- Code blocks don't have syntax highlighting.
 
 ## Evaluating the website locally
 
@@ -22,16 +32,9 @@ If you make changes that you want to evaluate prior to publishing them, you have
 
     bundle exec jekyll serve --incremental --livereload
 
-which will convert the markdown into html and serve the complete website on http://localhost:4000.
-
+which will convert the markdown into html and serve the complete website on <http://localhost:4000>.
 
 ## Checking for broken links and missing images
 
     wget --spider -r -nd -nv -o spider.log http://localhost:4000
     grep -B1 'broken link!' spider.log  | grep http > broken.log
-
-## Ideas
-
-* For image resizing we might consider a service like https://www.imgix.com or https://images.weserv.nl.
-* Use code highlighting from https://jekyllrb.com/docs/liquid/tags/#code-snippet-highlighting.
-

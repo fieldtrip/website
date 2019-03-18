@@ -1,5 +1,6 @@
 ---
 title: ft_spikedownsample
+layout: default
 tags: 
 ---
 ```

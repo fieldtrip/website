@@ -1,5 +1,6 @@
 ---
 title: ft_getopt
+layout: default
 tags: 
 ---
 ```

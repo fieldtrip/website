@@ -1,10 +1,11 @@
 ---
 title: ft_appendsource
+layout: default
 tags: 
 ---
 ```
  FT_APPENDSOURCE concatenates multiple volumetric source reconstruction data
- structures that have been processed seperately.
+ structures that have been processed separately.
 
  If the source reconstructions were computed for different ROIs or different slabs
  of a regular 3D grid (as indicated by the source positions), the data will be

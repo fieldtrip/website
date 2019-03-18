@@ -3,7 +3,7 @@ title: What is the format of the layout file which is used for plotting?
 tags: [faq, layout, plot]
 ---
 
-## What is the format of the layout file which is used for plotting?
+# What is the format of the layout file which is used for plotting?
 
 The layout file is a plain ascii file with the extention .lay. It gives you exact control of the 2-D position of the channels for topoplotting, and of the per-channel local coordinate axes for the multiplotting. The 2-D positions of the channels can be expressed in an arbitrary coordinate system. Once read in, they will be shifted and scaled such that they fit within a prespecified x- and y-range ([-0.45 0.45] a.u.). After shifting and scaling, a circle representing the head with nose and ears will be added. This circle has a center (0,0) and radius 0.5 (a.u.).
 
@@ -31,12 +31,12 @@ Instead of constructing an ascii layout file, you can also specify one of the su
 Alternative to the ascii layout file, you can also use a Matlab layout file. It should be a .mat file containing a single variable with the name "lay". The lay variable should be a structure with
 
 `<code>`lay =
-        pos: [153x2 double]
-      width: [153x1 double]
-     height: [153x1 double]
-      label: {153x1 cell}
-    outline: {[101x2 double]  [3x2 double]  [10x2 double]  [10x2 double]}
-       mask: {[101x2 double]}
+pos: [153x2 double]
+width: [153x1 double]
+height: [153x1 double]
+label: {153x1 cell}
+outline: {[101x2 double][3x2 double] [10x2 double][10x2 double]}
+mask: {[101x2 double]}
 `</code>`
 
 This structure describes the position of each channel, the width and height of the box for **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)**, and the label. Furthermore, it optionally can contain the outline and the mask.

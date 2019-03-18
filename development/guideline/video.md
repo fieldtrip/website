@@ -7,15 +7,15 @@ tags: [development, guidelines, video]
 
 This page is for sharing our knowledge and suggestions on how to write, record, produce, archive and upload audio and audiovisual presentations. There are several situations where audio or audiovisual recordings can be mad
 
--   During an internal MEG toolkit
--   During an external workshops
--   At an improvised studio
+- During an internal MEG toolkit
+- During an external workshops
+- At an improvised studio
 
 For several purpose
 
--   For creating a video lecture on the [FieldTrip channel](https://www.youtube.com/c/fieldtriptoolbox) on YouTube
--   For sharing raw footage with colleagues
--   For in-house development of presentations
+- For creating a video lecture on the [FieldTrip channel](https://www.youtube.com/c/fieldtriptoolbox) on YouTube
+- For sharing raw footage with colleagues
+- For in-house development of presentations
 
 ## Writing your presentation
 
@@ -35,9 +35,9 @@ The intelligibility of a recording depends much on the quality of the _audio_ re
 
 You can record audio using:
 
--   The internal microphone of a laptop
--   The internal microphone of a camcorder
--   An external microphone
+- The internal microphone of a laptop
+- The internal microphone of a camcorder
+- An external microphone
 
 Using the internal [microphone](http://reviewsformusicians.com/best-microphone-for-youtube/) of a laptop or camcorder often has limitations in quality and positionion. We advice an external microphone such as the [Zoom H2](http://www.zoom.co.jp/english/products/h2/) the we acauired and that can be found in the box of equipment in Robert's office. The Zoom H2 is very easy to use, although it does have some options you might not expect (it e.g. has 4 channels). You can familiarize yourself with the manual [here](http://www.zoom.co.jp/downloads/h2/manual/).
 
@@ -48,10 +48,10 @@ To use the Zoom H2 as a USB microphone, make sure it is in XY recording mode. Th
 
 Then, to connect the Zoom H2 to your computer:
 
--   Press the MENU button on the right
--   Use the PLAY toggle to move down the menu to USB, then press to enter
--   Use the PLAY toggle to move down the menu to AUDIO I/F, then press to enter
--   Use the PLAY toggle to move down the menu to CONNECT, then press to enter
+- Press the MENU button on the right
+- Use the PLAY toggle to move down the menu to USB, then press to enter
+- Use the PLAY toggle to move down the menu to AUDIO I/F, then press to enter
+- Use the PLAY toggle to move down the menu to CONNECT, then press to enter
 
 It is also possible to use another (external) microphone record with the Zoom H2, such as a headset or [lavalier microphone](http://en.wikipedia.org/wiki/Lavalier_microphone). Both microphones can also be found in the box of gadgets in Robert's office. The quality of these microphones seems OK, not great, but they do get rid of some environmental noise, echoes and reverberations. However, with the headset the recording can sound like the person is talking straight into your ear which is really not comfortable to listen to.
 
@@ -61,9 +61,9 @@ Although it is possible to record audio with the build-in microphone of a camcor
 
 You can record video using:
 
--   The build-in webcam of a laptop
--   An external webcam
--   A camcorder
+- The build-in webcam of a laptop
+- An external webcam
+- A camcorder
 
 Your internal webcam might be sufficient, but Robert can also borrow you a [Logitec HD-PRO C920 webcam](http://www.logitech.com/nl-nl/product/hd-pro-webcam-c920). The quality is great so long as you don't record in the highest (HD) quality. If you do, the video will probably not be smooth.
 
@@ -73,9 +73,9 @@ Our first video was recorded using a semi-professional camcorder borrowed from t
 
 The are several places and occasions where you might want to do audio or audiovisual recordings:
 
--   At a workshop at the Donders
--   At an external workshops
--   At your office or at home
+- At a workshop at the Donders
+- At an external workshops
+- At your office or at home
 
 In combination with the specific purpose of the recording, there are many ways in which you could set up the equipment.
 
@@ -91,9 +91,9 @@ In addition you can use video recordings to make your video more entertaining, e
 
 If you are making a recording at your office or at home, you have more flexibilty of the setup. You can:
 
--   Record behind your desk
--   Record your presentation in front of a group
--   Prepare and record a video in an improvised 'studio'
+- Record behind your desk
+- Record your presentation in front of a group
+- Prepare and record a video in an improvised 'studio'
 
 When recording at your office, the DCCN or at home you will have more control over the environment, and might carry around more bulky equipment.
 

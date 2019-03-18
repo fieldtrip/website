@@ -1,5 +1,6 @@
 ---
 title: ft_setopt
+layout: default
 tags: 
 ---
 ```

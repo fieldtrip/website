@@ -16,7 +16,7 @@ In this tutorial we will continue working on the [dataset](/tutorial/meg_languag
 This tutorial is not covering statistical test on event-related fields. If you are interested in that, you can read the [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) tutorial. If you are interested how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
 {% include markup/info %}
-This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.  
+This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
 
 {% include youtube id="x0hR-VsHZj8" %}
 {% include markup/end %}
@@ -29,37 +29,37 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 In this tutorial we will consider a **between-trials** experiment, in which we analyze the data of a single subject. For the statistical analysis for this experiment we calculate the planar TFRs. The steps we perform are as follow
 
-*  Preprocessing with the **[ft_definetrial](/reference/ft_definetrial)** and with the **[ft_preprocessing](/reference/ft_preprocessing)** functions
-*  Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-*  Permutation test with the **[ft_freqstatistics](/reference/ft_freqstatistics)** function
-*  Plotting the result using the **[ft_freqdescriptives](/reference/ft_freqdescriptives)** and the **[ft_clusterplot](/reference/ft_clusterplot)** functions
+- Preprocessing with the **[ft_definetrial](/reference/ft_definetrial)** and with the **[ft_preprocessing](/reference/ft_preprocessing)** functions
+- Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
+- Permutation test with the **[ft_freqstatistics](/reference/ft_freqstatistics)** function
+- Plotting the result using the **[ft_freqdescriptives](/reference/ft_freqdescriptives)** and the **[ft_clusterplot](/reference/ft_clusterplot)** functions
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planar_ficvsfc.png" %}
 
-*Figure 1. Pipeline of statistical analysis of planar TFR's in a between trials design*
+_Figure 1. Pipeline of statistical analysis of planar TFR's in a between trials design_
 
 Subsequently we will consider a **within-trials** experiment, in which we compare the pre-stimulus baseline to the post-stimulus activity time window. The steps we perform are as follows
 
-*  Preprocessing with **[ft_definetrial](/reference/ft_definetrial)** and with **[ft_preprocessing](/reference/ft_preprocessing)** and selecting the appropriate time windows with the **[ft_redefinetrial](/reference/ft_redefinetrial)** function
-*  Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-*  Permutation test with the **[ft_freqstatistics](/reference/ft_freqstatistics)** function
-*  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
+- Preprocessing with **[ft_definetrial](/reference/ft_definetrial)** and with **[ft_preprocessing](/reference/ft_preprocessing)** and selecting the appropriate time windows with the **[ft_redefinetrial](/reference/ft_redefinetrial)** function
+- Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
+- Permutation test with the **[ft_freqstatistics](/reference/ft_freqstatistics)** function
+- Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_planarfic_actvsbl2.png" %}
 
-*Figure 2. Pipeline of statistical analysis of planar TFR's in a within-trials design*
+_Figure 2. Pipeline of statistical analysis of planar TFR's in a within-trials design_
 
 Finally we will consider a **within-subjects** experiment with the following step
 
-*  Preprocessing with **[ft_definetrial](/reference/ft_definetrial)** and with **[ft_preprocessing](/reference/ft_preprocessing)**
-*  Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
-*  Calculation of the grandaverage with the **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)** function
-*  Permutation test with **[ft_freqstatistics](/reference/ft_freqstatistics)**
-*  Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
+- Preprocessing with **[ft_definetrial](/reference/ft_definetrial)** and with **[ft_preprocessing](/reference/ft_preprocessing)**
+- Calculation of the planar gradient and time-frequency analysis with the **[ft_megplanar](/reference/ft_megplanar)**, with the **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_combineplanar](/reference/ft_combineplanar)** functions
+- Calculation of the grandaverage with the **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)** function
+- Permutation test with **[ft_freqstatistics](/reference/ft_freqstatistics)**
+- Plotting the result using **[ft_clusterplot](/reference/ft_clusterplot)**
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_anaprot_stat_ga_planar_ficvsfc.png" %}
 
-*Figure 3. Pipeline of statistical analysis of planar TFR's in a within-subjects design*
+_Figure 3. Pipeline of statistical analysis of planar TFR's in a within-subjects design_
 
 ## Between-trial experiments
 
@@ -72,6 +72,7 @@ We first extract the trials of the fully incongruent condition.
 
 Then we also extract the trails of the fully congruent condition.
 {% include /shared/tutorial/preprocessing_fc.md %}
+
 ### Calculation of the planar gradient and time-frequency analysis
 
 Before calculating the TFRs we calculate the planar gradient with **[ft_megplanar](/reference/ft_megplanar)**.
@@ -122,9 +123,9 @@ To save:
 
 ### Permutation test
 
-Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to compare freqFIC_planar_cmb and freqFC_planar_cmb. Except for the field cfg.latency, the following configuration is identical to the configuration that was used for comparing event-related averages in the [cluster-based permutation tests on event related fields tutorial](/tutorial/cluster_permutation_timelock). Also see [this tutorial](/tutorial/cluster_permutation_timelock) for a detailed explanation of all the configuration settings. You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQ's](/faq/how_does_ft_prepare_neighbours_work).
+Now, run **[ft_freqstatistics](/reference/ft_freqstatistics)** to compare freqFIC_planar_cmb and freqFC_planar_cmb. Except for the field cfg.latency, the following configuration is identical to the configuration that was used for comparing event-related averages in the [cluster-based permutation tests on event related fields tutorial](/tutorial/cluster_permutation_timelock). Also see [this tutorial](/tutorial/cluster_permutation_timelock) for a detailed explanation of all the configuration settings. You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
 
-To load the planar gradient TFRs (also available on the FieldTrip FTP servers,  [freqFIC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_planar_cmb.mat) and [freqFC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFC_planar_cmb.mat)), us
+To load the planar gradient TFRs (also available on the FieldTrip FTP servers, [freqFIC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_planar_cmb.mat) and [freqFC_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFC_planar_cmb.mat)), us
 
     load freqFIC_planar_cmb
     load freqFC_planar_cmb
@@ -188,7 +189,7 @@ Subsequently we add the raw effect (FIC-FC) to the obtained stat structure and p
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_topos_20hz_raweffect_ficvsfc_plan_subj1_clusterplot1.png" %}
 
-*Figure 1: Raw effect (FIC-FC) and channel-time cluster of planar gradient TFRs of subject 1.*
+_Figure 1: Raw effect (FIC-FC) and channel-time cluster of planar gradient TFRs of subject 1._
 
 ## Within trial experiments
 
@@ -249,7 +250,7 @@ Finally, we combine the two planar gradients at each sensor and add the gradiome
     freqFIC_activation_planar_cmb = ft_combineplanar(cfg,freqFIC_activation_planar);
 
     freqFIC_baseline_planar_cmb.grad   = dataFIC.grad;
-    freqFIC_activation_planar_cmb.grad = dataFIC.grad;  
+    freqFIC_activation_planar_cmb.grad = dataFIC.grad;
 
 To save:
 
@@ -294,9 +295,9 @@ To compare freqFIC_baseline_planar_cmb and freqFIC_activation_planar_cmb by mean
     cfg.ivar     = 1;
     cfg.uvar     = 2;
 
-This configuration for a within-trials experiment is very similar to the configuration for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments) in which we compared the evoked responses to fully incongruent and fully congruent sentence endings. The main difference is the measure that we use to evaluate the effect at the sample level (cfg.statistic = 'ft_statfun_actvsblT' instead of cfg.statistic = 'ft_statfun_depsamplesT'). With cfg.statistic = 'ft_statfun_actvsblT', we choose the so-called *activation-versus-baseline T-statistic*. This statistic compares the power in every sample (i.e., a (channel,frequency,time)-triplet) in the activation period with the corresponding time-averaged power (i.e., the average over the temporal dimension) in the baseline period. The comparison of the activation and the time-averaged baseline power is performed by means of a dependent samples T-statistic.
+This configuration for a within-trials experiment is very similar to the configuration for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments) in which we compared the evoked responses to fully incongruent and fully congruent sentence endings. The main difference is the measure that we use to evaluate the effect at the sample level (cfg.statistic = 'ft_statfun_actvsblT' instead of cfg.statistic = 'ft_statfun_depsamplesT'). With cfg.statistic = 'ft_statfun_actvsblT', we choose the so-called _activation-versus-baseline T-statistic_. This statistic compares the power in every sample (i.e., a (channel,frequency,time)-triplet) in the activation period with the corresponding time-averaged power (i.e., the average over the temporal dimension) in the baseline period. The comparison of the activation and the time-averaged baseline power is performed by means of a dependent samples T-statistic.
 
-You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQ's](/faq/how_does_ft_prepare_neighbours_work).
+You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
 
 We can now run **[ft_freqstatistics](/reference/ft_freqstatistics)**
 
@@ -325,7 +326,7 @@ This time we will plot the largest cluster on top of the statistics, which are p
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_topos_20hz_fic_actvsbl_plan_subj1_clusterplot.png" %}
 
-*Figure 2: Largest cluster that shows a difference between activation and baseline, plotted on top of the T-statistic of the difference..*
+_Figure 2: Largest cluster that shows a difference between activation and baseline, plotted on top of the T-statistic of the difference.._
 
 ## Within subjects experiments
 
@@ -338,9 +339,10 @@ To test the difference between the average TFRs for fully incongruent (FIC) and 
     load GA_TFR_orig;
 
 The averages of the TFRs for the fully incongruent and the fully congruent sentence endings are stored in GA_TFRFIC and GA_TFRFC. These averages were calculated using **[ft_freqgrandaverage](/reference/ft_freqgrandaverage)** .
+
 ### Permutation test
 
-We now perform the permutation test using **[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration setting for this analysis are almost identical to the settings for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments). The only difference is a small change in the latency window (cfg.latency). You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQ's](/faq/how_does_ft_prepare_neighbours_work).
+We now perform the permutation test using **[ft_freqstatistics](/reference/ft_freqstatistics)**. The configuration setting for this analysis are almost identical to the settings for the [within-subjects experiment in the "Cluster-based permutation tests on event related fields" tutorial](/tutorial/cluster_permutation_timelock#within-subjects_experiments). The only difference is a small change in the latency window (cfg.latency). You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function in the [FAQs](/faq/how_does_ft_prepare_neighbours_work).
 
     cfg = [];
     cfg.channel          = {'MEG'};
@@ -400,7 +402,7 @@ Plot again with **[ft_clusterplot](/reference/ft_clusterplot)**:
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_topos_20Hz_FIC_ACTvsBL_plan_GA_clusterplot3.png" width="700" %}
 
-*Figure 3: T-statistic of the difference (FIC-FC) (of the combined planar gradient TFRs) and largest channel-time clusters.*
+_Figure 3: T-statistic of the difference (FIC-FC) (of the combined planar gradient TFRs) and largest channel-time clusters._
 
 #### Exercise
 

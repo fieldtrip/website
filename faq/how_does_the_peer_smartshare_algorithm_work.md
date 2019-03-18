@@ -11,7 +11,7 @@ Optimizing CPU time requirements of the jobs is challenging. Consider the follow
 
     tic; peercellfun('pause', {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}); toc
 
-and  
+and
 
     tic; peercellfun('pause', {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}); toc
 

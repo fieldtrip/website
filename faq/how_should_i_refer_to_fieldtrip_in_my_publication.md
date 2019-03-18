@@ -13,8 +13,8 @@ Oostenveld, R., Fries, P., Maris, E., Schoffelen, JM (2011). **FieldTrip: Open S
 
 Besides referring to the paper, you can use a phrasing like this, where REF corresponds to the reference to the paper.
 
-*  The data analysis was performed using the FieldTrip toolbox for EEG/MEG-analysis (REF; Donders Institute for Brain, Cognition and Behaviour, Radboud University, the Netherlands. See %%http://fieldtriptoolbox.org%%).
-*  The data analysis was performed using the FieldTrip toolbox for EEG/MEG-analysis, developed at the Donders Institute for Brain, Cognition and Behaviour (REF; %%http://fieldtriptoolbox.org%%).
-*  The data analysis was performed using FieldTrip (REF; %%http://fieldtriptoolbox.org%%).
+- The data analysis was performed using the FieldTrip toolbox for EEG/MEG-analysis (REF; Donders Institute for Brain, Cognition and Behaviour, Radboud University, the Netherlands. See %%http://fieldtriptoolbox.org%%).
+- The data analysis was performed using the FieldTrip toolbox for EEG/MEG-analysis, developed at the Donders Institute for Brain, Cognition and Behaviour (REF; %%http://fieldtriptoolbox.org%%).
+- The data analysis was performed using FieldTrip (REF; %%http://fieldtriptoolbox.org%%).
 
 Important is that you refer to the correct web address, so not to %%"www2.ru.nl"%% and not to %%"fieldtrip.fcdonders.nl"%%, but to %%"www.ru.nl/neuroimaging/fieldtrip"%%.

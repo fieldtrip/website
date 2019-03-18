@@ -1,12 +1,13 @@
 ---
 title: ft_artifact_ecg
+layout: default
 tags: 
 ---
 ```
- FT_ARTIFACT_ECG performs a peak-detection on the ECG-channel and identifies the windows
- around the QRS peak as artifacts. Using FT_REJECTARTIFACT you can remove these windows from
- your data, or using FT_REMOVETEMPLATEARTIFACT you can subtract an averaged template artifact
- from your data.
+ FT_ARTIFACT_ECG performs a peak-detection on the ECG-channel and identifies the
+ windows around the QRS peak as artifacts. Using FT_REJECTARTIFACT you can remove
+ these windows from your data, or using FT_REMOVETEMPLATEARTIFACT you can subtract
+ an averaged template artifact from your data.
 
  Use as
    [cfg, artifact] = ft_artifact_ecg(cfg)

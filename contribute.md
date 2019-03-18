@@ -7,7 +7,7 @@ tags: [development]
 
 FieldTrip is an [Open Source](http://www.opensource.org) project with contributions from various individual users and research groups.
 
-There are various ways in which ***you can contribute*** to FieldTrip.
+There are various ways in which **_you can contribute_** to FieldTrip.
 
 ## Share your expertise
 
@@ -16,10 +16,6 @@ The FieldTrip community is organized around the [email discussion list](/discuss
 ## Report bugs or request enhancements
 
 You can [provide us with detailed bug reports](/bugzilla). The easier it is for one of us to reproduce the bug, the more likely it is that we can fix the problem. You can use the same approach to request new functionality. We cannot guarantee that we have time to implement it, but it is good to know what people are trying to do or would like to do with FieldTrip.
-
-{% include markup/info %}
-The easier it is for one of the developers to reproduce your bug, the more likely it is that we'll fix the problem. Good bug reports include a small test script and the data (i.e. mat file) required to reproduce the bug.
-{% include markup/end %}
 
 ## Contribute code
 

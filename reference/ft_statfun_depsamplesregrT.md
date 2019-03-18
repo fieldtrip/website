@@ -1,5 +1,6 @@
 ---
 title: ft_statfun_depsamplesregrT
+layout: default
 tags: 
 ---
 ```
