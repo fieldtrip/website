@@ -9,8 +9,6 @@ The function **[ft_checkconfig](/reference/ft_checkconfig)** checks the input co
 
 **[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg (i.e., the cfg that is given back by the function, usually data.cfg) and give more elaborate feedback to the user. This tutorial explains what **[ft_checkconfig](/reference/ft_checkconfig)** does, and importantly, how you can control it and use it to your advantage!
 
-**WARNING: currently the full implementation of [ft_checkconfig](/reference/ft_checkconfig) as described here, is only available for internal users (at the Donders Centre). In time, these features (trackconfig) will also become available for external users!**
-
 ## Introduction to ft_checkconfig
 
 This function checks the input cfg of the main FieldTrip functions in three ways:
