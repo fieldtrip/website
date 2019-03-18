@@ -1,6 +1,6 @@
 ---
 title: Individualizing a template volume conduction to on the basis of surface information
-tags: [head model]
+tags: [example]
 ---
 
 # Individualizing a template volume conduction to on the basis of surface information
@@ -37,20 +37,22 @@ Before starting with FieldTrip, it is important that you set up your
 Then you can load the data head shape measured with the Polhemus and a
 template volume conduction model. Also we will convert the units into mm
 by now.
-polhemus = ft_read_headshape(filename);
-polhemus = ft_convert_units(polhemus,'mm');
+
+    polhemus = ft_read_headshape(filename);
+    polhemus = ft_convert_units(polhemus,'mm');
 
 template = ft_read_vol('standard_bem.mat');
 template = ft_convert_units(template,'mm');
-# # Coregistration
+## Coregistration
 
 In the next step we coregister both meshes with each other.
 cfg = [];
-cfg.template.headshape      = polhemus;
-cfg.checksize               = inf;
-cfg.individual.headmodel    = template;
-cfg                         = ft_interactiverealign(cfg);
-template                    = ft_transform_geometry(cfg.m,template);
+
+    cfg.template.headshape      = polhemus;
+    cfg.checksize               = inf;
+    cfg.individual.headmodel    = template;
+    cfg                         = ft_interactiverealign(cfg);
+    template                    = ft_transform_geometry(cfg.m,template);
 
 ## Create surface meshes with shared features
 
@@ -58,27 +60,29 @@ For creating the individualized mesh it is important that the head
 surface of template only contains features that are also in the head
 surface measurement of the Polhemus. Therefore, we use ft_defacemesh to remove the undesired features.
 
-defaced_template                = template;
-cfg                             = [];
-defaced_template.bnd(1).unit    = 'mm';
-defaced                         =  ft_defacemesh(cfg,defaced_template.bnd(1));
+    defaced_template                = template;
+    cfg                             = [];
+    defaced_template.bnd(1).unit    = 'mm';
+    defaced                         =  ft_defacemesh(cfg,defaced_template.bnd(1));
 
-defaced_template.bnd(1).pos = defaced.pos;
-defaced_template.bnd(1).tri = defaced.tri;
+    defaced_template.bnd(1).pos = defaced.pos;
+    defaced_template.bnd(1).tri = defaced.tri;
 
 ## Fitting template to Polhemus measurement
 
 We will now use the surface information of the template model and the
 Polhemus measurement to create an individualised version mesh of the template mesh.
-cfg             = [];
-cfg.headshape   = polhemus;
-cfg.template    = defaced_template.bnd(1);
-cfg.method      = 'fittemplate';
-fitted          = ft_prepare_mesh(cfg, template.bnd);
+
+    cfg             = [];
+    cfg.headshape   = polhemus;
+    cfg.template    = defaced_template.bnd(1);
+    cfg.method      = 'fittemplate';
+    fitted          = ft_prepare_mesh(cfg, template.bnd);
 
 ## Creating volume conduction model
 
 Finally we will create a volume conduction model.
-cfg = [];
-cfg.method = 'bemcp';
-headmodel_bem = ft_prepare_headmodel(cfg, fitted);
+
+    cfg = [];
+    cfg.method = 'bemcp';
+    headmodel_bem = ft_prepare_headmodel(cfg, fitted);
