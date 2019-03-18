@@ -168,7 +168,7 @@ Raw recording files are not shared, in order to protect the subject's identity. 
     elec_acpc_f =
 
     unit: 'mm'
-    coordsys: ‘acpc’
+    coordsys: 'acpc'
     label: {152x1 cell}
     elecpos: [152x3 double]
     chanpos: [152x3 double]
