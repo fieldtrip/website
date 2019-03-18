@@ -53,6 +53,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 * [Testing BEM created lead fields](/example/testing_bem_created_leadfields)
 * [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
 * [Using the low-level compute_leadfield function](/example/compute_leadfield)
+* [Individualizing a template volume conduction to on the basis of surface information](/example/fittemplate)
 
 ### Statistical analysis
 
