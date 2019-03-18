@@ -1,11 +1,11 @@
-- name:  Guidelines
-  link:  /development/guideline
-
 - name:  Code guidelines
   link:  /development/guideline/code
 
 - name:  Documentation guidelines
   link:  /development/guideline/documentation
+
+- name:  Guidelines
+  link:  /development/guideline
 
 - name:  Template guidelines
   link:  /development/guideline/templates
