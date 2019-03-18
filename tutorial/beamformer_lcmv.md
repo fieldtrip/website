@@ -85,13 +85,15 @@ We can plot the results with the MATLAB plot command to get a first impression
 
 We can additionally explore the spatiotemporal dynamics using FieldTrip interactive plotting function
 
-    % view the results
-    cfg        = [];
-    cfg.layout = 'CTF275.lay';
-    ft_multiplotER(cfg, timelock);
 
-    % or using
-    ft_movieplotER(cfg, timelock);
+	% view the results
+	cfg        = [];
+	cfg.layout = 'CTF275_helmet.mat';
+        cfg.xlim   = [0.045 0.050];
+	ft_topoplotER(cfg, timelock);
+
+{% include image src="/assets/img/tutorial/beamformer_lcmv/subjectseftopo.png" width="400" %}
+
 
 ### Visualize the sensor level results (planar gradients)
 
@@ -119,13 +121,13 @@ Compute the amplitude of the planar gradient by combining the horizontal and ver
     cfg                 = [];
     timelock_planarcomb = ft_combineplanar(cfg, timelock_planar);
 
-    % view the results
-    cfg                 = [];
-    cfg.layout          = 'CTF275.lay';
-    ft_multiplotER(cfg, timelock_planarcomb);
 
-    % or using
-    ft_movieplotER(cfg, timelock_planarcomb);
+	% view the results
+	cfg        = [];
+	cfg.layout = 'CTF275_helmet.mat';
+        cfg.xlim   = [0.045 0.050];
+	ft_topoplotER(cfg, timelock_planarcomb);
+
 
 ## The forward model and lead field matrix
 
@@ -152,11 +154,12 @@ The first step in constructing the forward model is to find the brain surface fr
 
 Now prepare the head model from the segmented brain surface:
 
-    % compute the subject's headmodel/volume conductor model
-    cfg                = [];
-    cfg.method         = 'singleshell';
-    vol                = ft_prepare_headmodel(cfg, seg);
-    vol                = ft_convert_units(vol, 'cm'); % mm to cm, since the grid will also be expressed in cm
+
+	% compute the subject's headmodel/volume conductor model
+	cfg                = [];
+	cfg.method         = 'singleshell';
+	headmodel          = ft_prepare_headmodel(cfg, seg);
+	headmodel          = ft_convert_units(headmodel, 'cm'); % mm to cm, since the grid will also be expressed in cm
 
 {% include markup/warning %}
 If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
@@ -170,44 +173,44 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 
 Now prepare the source model. Here one has the option to make a 'normalized grid', such that the grid points in different subjects are aligned in MNI-space. For more details on how to make a normalized grid, see [here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). In this tutorial, we continue with non-normalized grid points:
 
-    % create the subject specific grid
-    hdr                 = ft_read_header('SubjectSEF.ds');
 
-    cfg                 = [];
-    cfg.grad            = hdr.grad;
-    cfg.headmodel       = vol;
-    cfg.grid.resolution = 1;
-    cfg.grid.unit       = 'cm';
-    cfg.inwardshift     = -1.5;
-    grid                = ft_prepare_sourcemodel(cfg);
+	% create the subject specific grid
+        grad = ft_read_sens('SubjectSEF.ds');
 
-    % make a figure of the single subject headmodel, and grid positions
-    sens = ft_read_sens('SubjectSEF.ds');
-    ft_plot_sens(sens, 'style', '*b');
-    ft_plot_vol(vol, 'edgecolor', 'none'); alpha 0.4;
-    ft_plot_mesh(grid.pos(grid.inside,:));
+	cfg             = [];
+	cfg.grad        = grad;
+	cfg.headmodel   = headmodel;
+	cfg.resolution  = 0.5;
+	cfg.inwardshift = -1;
+	sourcemodel     = ft_prepare_sourcemodel(cfg);
+
+	% make a figure of the single subject headmodel, and grid positions
+        figure;
+	ft_plot_sens(grad, 'style', '*b');
+	ft_plot_vol(headmodel, 'edgecolor', 'none'); alpha 0.4;
+	ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));
 
 ### Leadfield
 
 Combine all the information into the leadfield matrix:
 
-    % create leadfield
-    hdr                  = ft_read_header('SubjectSEF.ds');
-    cfg                  = [];
-    cfg.grad             = hdr.grad;  % gradiometer distances
-    cfg.headmodel        = vol;   % volume conduction headmodel
-    cfg.grid             = grid;  % normalized grid positions
-    cfg.channel          = {'MEG'};
-    cfg.normalize        = 'yes'; % to remove depth bias (Q in eq. 27 of van Veen et al, 1997)
-    lf                   = ft_prepare_leadfield(cfg);
+
+	% create leadfield
+	cfg                  = [];
+	cfg.grad             = grad;  % gradiometer distances
+	cfg.headmodel        = headmodel;   % volume conduction headmodel
+	cfg.sourcemodel      = sourcemodel;
+	cfg.channel          = {'MEG'};
+	cfg.singleshell.batchsize = 2000;
+        lf                   = ft_prepare_leadfield(cfg);
 
 ## Source analysis
 
-    % create spatial filter using the lcmv beamformer
-    cfg                  = [];
-    cfg.method           = 'lcmv';
-    cfg.grid             = lf; % leadfield, which has the grid information
-    cfg.headmodel        = vol; % volume conduction model (headmodel)
-    cfg.keepfilter       = 'yes';
-    cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
-    source_avg           = ft_sourceanalysis(cfg, timelock);
+	% create spatial filter using the lcmv beamformer
+	cfg                  = [];
+	cfg.method           = 'lcmv';
+	cfg.sourcemodel      = lf; % leadfield
+	cfg.headmodel        = headmodel; % volume conduction model (headmodel)
+	cfg.lcmv.keepfilter  = 'yes';
+	cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
+	source               = ft_sourceanalysis(cfg, timelock);
