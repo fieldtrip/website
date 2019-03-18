@@ -7,10 +7,8 @@ tags: [head model]
 
 ## Introduction
 
-This tutorial demonstrates how to construct an individualized template
+This example script demonstrates how to construct an individualized template
 volume conduction model on the basis of a surface scan.
-
-This tutorial does not cover how to do the source estimation itself.
 
 ###  Background
 
@@ -30,8 +28,6 @@ For this the tutorial we will use
 dataset. More information on this dataset can be found
 [here](/tutorial/epilepsy/).
 Also we need an external toolbox which can be downloaded [here](https://sites.google.com/site/myronenko/research/cpd)
-
-
 
 ## Loading and coregistering data
 
@@ -55,6 +51,7 @@ cfg.checksize               = inf;
 cfg.individual.headmodel    = template;
 cfg                         = ft_interactiverealign(cfg);
 template                    = ft_transform_geometry(cfg.m,template);
+
 ## Create surface meshes with shared features
 
 For creating the individualized mesh it is important that the head
@@ -68,6 +65,7 @@ defaced                         =  ft_defacemesh(cfg,defaced_template.bnd(1));
 
 defaced_template.bnd(1).pos = defaced.pos;
 defaced_template.bnd(1).tri = defaced.tri;
+
 ## Fitting template to Polhemus measurement
 
 We will now use the surface information of the template model and the
@@ -84,13 +82,3 @@ Finally we will create a volume conduction model.
 cfg = [];
 cfg.method = 'bemcp';
 headmodel_bem = ft_prepare_headmodel(cfg, fitted);
-
-## Summary and further reading
-
-In this tutorial we learned how to individualize a volume conduction
-model.
-
-For further reading suggest to read to about
-[BEM](/tutorial/headmodel_eeg_bem) or [FEM](/tutorial/headmodel_eeg_fem).
-
-This tutorial was last tested on 02-04-2019 by Simon Homölle on Windows 10, Matlab 2018a.
