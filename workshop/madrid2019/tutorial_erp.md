@@ -358,7 +358,7 @@ reject those artifacts using
 this in the [resting-state cleaning EEG
 tutorial](/workshop/madrid2019/tutorial_cleaning)
 
-## Computing and plotting the ERP's
+## Computing and plotting the ERPs
 
 ### Channel layout
 
@@ -386,7 +386,7 @@ tutorial](/tutorial/layout).
 
 ### Trial-average
 
-We will now compute the ERP's for two conditions: visual and auditory stimulus presentation.
+We will now compute the ERPs for two conditions: visual and auditory stimulus presentation.
 
 For each trial, the condition information is kept with the data structure in `data.trialinfo`. We use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to compute the ERPs and average only those trials in which the trigger code corresponds to the condition of interest (i.e. visual or auditory).
 

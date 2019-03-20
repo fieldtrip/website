@@ -458,7 +458,7 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
     after = timelock{1,1};
     after.trial{1} = (timelock{1,3}.trial{1} + timelock{2,3}.trial{1} + timelock{3,3}.trial{1} + timelock{4,3}.trial{1} ) ./ 4;
 
-    % plot ERP's
+    % plot ERPs
     cfg = [];
     cfg.layout = 'biosemi160lay.mat';
     cfg.interactive = 'yes';
