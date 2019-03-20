@@ -51,7 +51,7 @@ After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now n
 
 ### Pre-processing and re-referencing
 
-In this raw BrainVision dataset, the signal from all electrodes is monopolar and referenced to the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition the 'RM' electrode (number 32) had been placed on the right mastoid. In order to re-reference the data (e.g. including also the right mastoid in the reference) we added implicit channel 'REF' to the channels (which represents the left mastoid), and assigned two reference channels ('REF' and 'RM', channels of the left and right mastoids).
+In this raw BrainVision dataset, the signal from all electrodes is unipolar and referenced to the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition the 'RM' electrode (number 32) had been placed on the right mastoid. In order to re-reference the data (e.g. including also the right mastoid in the reference) we added implicit channel 'REF' to the channels (which represents the left mastoid), and assigned two reference channels ('REF' and 'RM', channels of the left and right mastoids).
 
 Now call pre-processing:
 
