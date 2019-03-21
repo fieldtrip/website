@@ -175,7 +175,7 @@ I know this looks like a lot of work. However, it might pay off in the end when 
 
 ### Visual data inspection
 
-As most FieldTrip functions ft_databrowser needs a configuration structure and a data structure as input. First of all we can specify how to visualize the dat
+As most FieldTrip functions ft_databrowser needs a configuration structure and a data structure as input. First of all we can specify how to visualize the data:
 
 {% include image src="/assets/img/walkthrough/wt_fig5e.png" width="600" %}
 

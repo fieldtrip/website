@@ -86,7 +86,7 @@ Next, read the left and right EMG data. Note that the settings are different for
     cfg.rectify      = 'yes';
     emg = ft_preprocessing(cfg);
 
-Finally, combine the EMG and MEG trials to a common data structur
+Finally, combine the EMG and MEG trials to a common data structure:
 
     data = ft_appenddata([], meg, emg);
 
@@ -98,7 +98,7 @@ The preprocessed data is available as a mat-file from the [FieldTrip ftp server 
 
     load data
 
-To get a feel for the data, plot a trial from a sensor overlying the left motor-cortex (MRC21) and the left and right EMG-signals, by selecting the first trial from the dat
+To get a feel for the data, plot a trial from a sensor overlying the left motor-cortex (MRC21) and the left and right EMG-signals, by selecting the first trial from the data:
 
     figure
     subplot(2,1,1);

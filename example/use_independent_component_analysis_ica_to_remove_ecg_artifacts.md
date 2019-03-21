@@ -32,7 +32,7 @@ It is very important to remove all jump and muscle artifacts before running your
     cfg = ft_rejectartifact(cfg);
     cfg.trl([3 11 23],:) = []; % quick removal of trials with muscle artifacts, works only for this dataset!
 
-You can now preprocess the dat
+You can now preprocess the data:
 
     cfg.channel            = {'MEG', 'EEG058'}; % channel 'EEG058' contains the ECG recording
     cfg.continuous         = 'yes';

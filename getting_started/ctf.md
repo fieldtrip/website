@@ -115,7 +115,7 @@ After checking that the low-level reading functions successfully read your CTF d
     cfg.dataset = 'Subject01.ds';
     data = ft_preprocessing(cfg)
 
-This should return the following data structur
+This should return the following data structure:
 
     data =
 
@@ -155,7 +155,7 @@ To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/f
 
     event = ft_read_event('Subject01.ds')
 
-This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structur
+This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structure:
 
     event =
 

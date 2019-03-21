@@ -199,7 +199,7 @@ To save system memory we will clear the data_tms_raw structure.
 
 Although we do not have any trials anymore, we can still use ft_databrowser in the same way as before to browse through all the channels. As we are interested in the occurrence, onset, and offset of TMS artifacts it as convenient to use MATLAB's built-in plotting functions.
 
-The averaged data we want to plot is represented in the data_tms_avg structure. Lets have a look at this structur
+The averaged data we want to plot is represented in the data_tms_avg structure. Lets have a look at this structure:
 
     >> data_tms_avg
 

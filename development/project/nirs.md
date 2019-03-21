@@ -93,7 +93,7 @@ Layouts should be created on-the-fly by ft_prepare_layout. NeuroMag layouts can 
 
 ## Code structure
 
-Overall structur
+Overall structure:
 In case a high-level FieldTrip function calls a NIRS function, ft_hastoolbox will check whether the respective subfolder is already added and adds it, and a splash screen is shown, indicating a change in copyright (probably not GPL, definitely not for medical use, etc.).
 
 ## Other Matlab NIRS toolboxes

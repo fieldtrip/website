@@ -215,7 +215,7 @@ The following files are useful for doing these:
 4.  averaging script
 5.  script for covariance estimation
 
-There are two options for processing the dat
+There are two options for processing the data:
 
 1.  in interactive mode
 2.  in batch mode

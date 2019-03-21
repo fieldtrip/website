@@ -67,7 +67,7 @@ Load the subject specific information. Then read and preprocess the continuous s
 
 The provided example data sets were already originally pre-filtered for scoring thus there is no need to filter them again, but they still retain all artifacts.
 
-The data from Subject01 should have the following structur
+The data from Subject01 should have the following structure:
 
     data_orig =
            hdr: [1x1 struct]

@@ -217,7 +217,7 @@ To analyze high-frequency phase-coupling between spikes and LFPs recorded from t
     cfg.method       = 'linear'; % remove the replaced segment with interpolation
     data_i           = ft_spiketriggeredinterpolation(cfg, data_all);
 
-We illustrate this method by plotting the dat
+We illustrate this method by plotting the data:
 
     figure,
     plot(data_i.time{1},data_i.trial{1}(2,:),'g-'), hold on, plot(data_i.time{1}, data_i.trial{1}(5,:),'r')
