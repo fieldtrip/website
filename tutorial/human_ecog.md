@@ -427,8 +427,8 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
     cfg            = [];
     cfg.method     = 'mtmconvol';
     cfg.toi        = -.3:0.01:.8;
-    cfg.t_ftimwin  = ones(length(cfg.foi),1).*0.2;
     cfg.foi        = 5:5:200;
+    cfg.t_ftimwin  = ones(length(cfg.foi),1).*0.2;
     cfg.taper      = 'hanning';
     cfg.output     = 'pow';
     cfg.keeptrials = 'no';
