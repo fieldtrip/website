@@ -13,7 +13,8 @@ For understanding the coordinate system, the following questions need to be addr
 - In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?
 - In what units are coordinates expressed, i.e. does the number "1" mean 1 meter, 1 centimeter or 1 milimeter?
 - Is the geometry scaled to some template or atlas, or does it still match the individual's head/brain size?  
-  {% include markup/end %}
+
+{% include markup/end %}
 
 FieldTrip does not have a native coordinate system, but assumes that all geometrical data which are used together (i.e. mri, headmodel, electrodes, dipoles) are expressed in the same coordinate system and with the same physical units (e.g. mm or cm). In order to be able to compare these fundamental properties across data structures, FieldTrip defines two fields in the geometrical data mentioned above. These fields pertain to the interpretation of the physical **units**, XXX.unit, and to the interpretation of the **coordinate system** in which the coordinates are expressed, XXX.coordsys.
 
