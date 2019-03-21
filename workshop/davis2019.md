@@ -17,6 +17,10 @@ EEG/MEG data for the hands-on sessions are available [here](ftp://ftp.fieldtript
 
 iEEG data for the hands-on sessions are available [here](https://doi.org/10.5281/zenodo.1201559).
 
+## Planning for the playground session
+
+Please provide some details for planning the playground session via [this link](https://goo.gl/forms/7OThPe2b6oWp00D63).
+
 ## Wednesday March 20th 2019
 
 ### Session I
