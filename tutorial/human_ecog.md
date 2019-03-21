@@ -96,7 +96,7 @@ PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of
 
 **8**) Import the FreeSurfer-processed MRI into the MATLAB workspace for the purpose of fusing with the CT scan at a later step, and specify the coordinate system to which it was aligned in Step 4.
 
-    fsmri_acpc = ft_read_mri('freesurfer/mri/T1.mgz');
+    fsmri_acpc = ft_read_mri('freesurfer/mri/T1.mgz'); % on Windows, use 'SubjectUCI29_MR_acpc.nii'
     fsmri_acpc.coordsys = 'acpc';
 
 ### Preprocessing of the anatomical CT
