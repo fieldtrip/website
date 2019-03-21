@@ -45,7 +45,7 @@ To compile tia2ft, you can do the followin
 1.  build ''libbuffer.a'' in ''/realtime/buffer/src'' by issuing ''make'',
 2.  build ''tia2ft'' by issuing ''make'' in ''/realtime/acquisition/tobi/''.
 
-Then, it can simply be run wit
+Then, it can simply be run with:
 \$ ./tia2ft.sh --serve-ft-buffer
 
 The shell script adds the TiA library to the search path, and starts the

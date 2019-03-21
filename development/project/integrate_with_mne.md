@@ -107,7 +107,7 @@ Events are in Nx3 matrix, where the first column contains the samples and the th
 
 Currently, there is no export functionality to create mne-Epochs from fieldtrip. Feel free to add it on [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip).
 
-And then in Python, you can read the ''Epochs'' wit
+And then in Python, you can read the ''Epochs'' with:
 
 ```python
     from mne import read_epochs

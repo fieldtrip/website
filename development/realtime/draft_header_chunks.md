@@ -24,7 +24,7 @@ The server would respond with a **version;errorcode;msgsize=0** triple.
 
 ### GET_HDR
 
-The client would send the triple **version;command**=GET_HDR;**msgsize=0**, and the server would respond wit
+The client would send the triple **version;command**=GET_HDR;**msgsize=0**, and the server would respond with:
 | field | type | description |
 | ----- | ---- | ----------- |
 | **nchans** | uint32 | number of channels |

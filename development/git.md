@@ -229,7 +229,7 @@ create mode 100644 ft_welcome.m
 
 #### Switch to master
 
-While you are working on the developmental branch called _welcome_, you might want to run some analysis on the main branch (called by default _master_). You can easily switch into the main branch wit
+While you are working on the developmental branch called _welcome_, you might want to run some analysis on the main branch (called by default _master_). You can easily switch into the main branch with:
 
 ```bash
 git checkout master

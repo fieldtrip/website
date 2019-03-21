@@ -151,7 +151,7 @@ The output cfg variable contains the trial structure in cfg.trl. As we will also
 
 trl = cfg.trl;
 
-The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data wit
+The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
 
     load data_tms_raw;
 
@@ -339,7 +339,7 @@ The function **[ft_rejectartifact](/reference/ft_rejectartifact)** allows us to 
     cfg_artifact.artfctdef.minaccepttim = 0.01; % This specifies the minimumm size of resulting trials. You have to set this, the default is too large for thre present data, resulting in small artifact-free segments being rejected as well.
     cfg = ft_rejectartifact(cfg_artifact); % Reject trials partially
 
-We have already read-in the data segments without the artifacts for you. You can download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_segmented.mat). If you have downloaded the dataset, you can load it wit
+We have already read-in the data segments without the artifacts for you. You can download the data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_segmented.mat). If you have downloaded the dataset, you can load it with:
 
     load data_tms_segmented.mat
 
@@ -641,7 +641,7 @@ Now that everything we would like to interpolate has been replaced by nans we ca
 
     data_tms_clean_avg = ft_timelockanalysis(cfg, data_tms_clean);
 
-We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_avg.mat) and load it wit
+We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_avg.mat) and load it with:
 
     load data_tms_avg;
 

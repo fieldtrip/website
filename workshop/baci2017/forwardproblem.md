@@ -127,7 +127,7 @@ In Windows the method 'dipoli' does not work. You can either load "headmodel_bem
 
 ## 7A. Align the electrodes
 
-If the electrodes are not well aligned with the mesh, we can realign them wit
+If the electrodes are not well aligned with the mesh, we can realign them with:
 
     cfg          = [];
     cfg.method   = 'interactive';
@@ -252,7 +252,7 @@ _Figure9: visualization of headmodel_fem and electrodes_
 
 ## 7B. Align the electrodes
 
-If the electrodes are not well aligned with the mesh, we can realign them wit
+If the electrodes are not well aligned with the mesh, we can realign them with:
 
     cfg          = [];
     cfg.method   = 'interactive';

@@ -81,7 +81,7 @@ Yokogawa uses analogue channels as trigger channels, often in a binary way. Whic
 
 This means that the user (you!) needs to know exactly which channels are used, whether a trigger is encoded by an up-flank or down-flank and what the threshold should be. One way of figuring out these is to just take a look at the trigger channel.
 
-After reading the data wit
+After reading the data with:
 
     data = ft_read_data('test.sqd');
 

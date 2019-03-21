@@ -20,7 +20,7 @@ This tutorial does not cover the steps required to import data into FieldTrip an
 
 ## Reading in the data
 
-For your convenience, the data has already been preprocessed and read into FieldTrip. You can load the data wit
+For your convenience, the data has already been preprocessed and read into FieldTrip. You can load the data with:
 
     load subjectK
 
