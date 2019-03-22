@@ -90,11 +90,11 @@ Finally, combine the EMG and MEG trials to a common data structure:
 
     data = ft_appenddata([], meg, emg);
 
-Note, that due to the artifact rejection, this procedure is very slow and we typically would want to perform this step only once. Therefore you can save the preprocessed dat
+Note, that due to the artifact rejection, this procedure is very slow and we typically would want to perform this step only once. Therefore you can save the preprocessed data:
 
     save data data
 
-The preprocessed data is available as a mat-file from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this
+The preprocessed data is available as a mat-file from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this:
 
     load data
 
