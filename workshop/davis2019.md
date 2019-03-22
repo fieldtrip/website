@@ -19,7 +19,9 @@ iEEG data for the hands-on sessions are available [here](https://doi.org/10.5281
 
 ## Planning for the playground session
 
-Please provide some details for planning the playground session via [this link](https://goo.gl/forms/7OThPe2b6oWp00D63).
+Please share some details on your data for planning the playground session via [this form](https://goo.gl/forms/7OThPe2b6oWp00D63).
+
+Please see the [playground notes](https://docs.google.com/document/d/1bvzi8gv1WUHME41Rw2e5vofUy7s0NNY5cEb-4Vm2nNE/edit?usp=sharing) with  pointers to relevant documentation and functions. This page can be updated as we go along with the playground session.
 
 ## Wednesday March 20th 2019
 
