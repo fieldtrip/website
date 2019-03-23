@@ -84,7 +84,7 @@ The MATLAB file can subsequently be specified as cfg.layout='layout_ecog.mat' wh
 
 The advantage of the MATLAB file over the ASCII file, is that the MATLAB file can also contain a user-specified outline of the head and user-specified mask, whereas for the ASCII layout file the same circle with nose and ears will be used.
 
-### Functions that require a layout configuration
+## Functions that require a layout configuration
 
 Layouts are an essential functionality for all 2-D plotting functions in FieldTrip. See below for an overview of functions that require you to specify a layout.
 
