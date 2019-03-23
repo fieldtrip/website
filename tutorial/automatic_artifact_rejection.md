@@ -145,7 +145,7 @@ To remove the detected artifacts from the trial definition (trl) you can add you
 
 The output of ft_rejectartifact will contain the cfg.trl, which is the cleaned trial definition, and cfg.trlold which contains the old trl (the output of **[ft_definetrial](/reference/ft_definetrial)**).
 
-If you call ft*artifact_zvalue with cfg as \_output* (''cfg = ft_artifact_zvalue(cfg)''), you can directly feed that output into ft_rejectartifact. Examples of this will be given below.
+If you call ft_artifact_zvalue with cfg as output argument (e.g. ''cfg = ft_artifact_zvalue(cfg)''), you can directly feed that output into ft_rejectartifact. Examples of this will be given below.
 
 ## Examples for getting started
 

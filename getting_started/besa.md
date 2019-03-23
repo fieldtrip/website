@@ -164,4 +164,4 @@ In this second example, we define a data segment as the time the trigger was 'on
     end
 
 Alternatively, when the event channel index is unknown, but its name, or a part thereof (e.g., 'DC01'), is, one may us
-chanindx = find(ismember(hdr.label, ft*channelselection('\_DC01*', hdr.label)));
+chanindx = find(ismember(hdr.label, ft_channelselection('\_DC01*', hdr.label)));
