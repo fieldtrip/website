@@ -49,17 +49,17 @@ This image is for the equidistant M10 electrodecap arrangement and taken from th
 
 The placement of ECoG electrodes always differs from one patient to the next patient. It is common that the neurosurgeon makes a sketch (on paper) of the electrode placement in relation to anatomical landmarks such as the central sulcus. Sometimes a photo is taken, such as this one that was copied from [Dalal et al. in Journal of Neuroscience Methods 174 (2008) 106–115)](http://www.ncbi.nlm.nih.gov/pubmed/18657573).
 
-{% include image src="/assets/img/tutorial/layout/dalal_ecog.png" width="450" %}
+{% include image src="/assets/img/tutorial/layout/dalal_ecog.png" width="400" %}
 
-As in the EEG case, you can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. Instead of specifying the complete outline of the head as we usually do in EEG (as a circle), you may want to identify other important landmarks such as the major sulci and the outline of the trepanation. You can also specify the mask for the topographic interpolation. If you have a large trepanation with multiple smaller grids, you probably want to make a mask for the topographic interpolation around each grid, to avoid the ECoG potential from being interpolated in between the grids where no actual electrodes were placed.
+As in the EEG case, you can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. Instead of specifying the complete outline of the head as we usually do in EEG (as a circle), you may want to identify other important landmarks such as the major sulci and the outline of the trepanation.
+
+You can also specify the mask for the topographic interpolation. If you have a large trepanation with multiple smaller grids, you probably want to make a mask for the topographic interpolation around each grid, to avoid the ECoG potential from being interpolated in between the grids where no actual electrodes were placed.
 
     cfg = [];
     cfg.image = 'dalal_ecog.png';
     layout_ecog = ft_prepare_layout(cfg);
 
-{% include image src="/assets/img/tutorial/layout/dalal_ecog.png" width="400" %}
-
-After creating the layout, you should manually assign the correct name of the channel labels in the lay.label cell-array. Furthermore, you probably should place the SCALE and COMNT locations at a convenient place in the figure and modify the width and height of the boxes used for multiplotting. You can use **[ft_layoutplot](/reference/ft_layoutplot)** for a visual inspection of the complete layout
+After creating the layout, you should manually assign the correct name of the channel labels in the label cell-array. Furthermore, you probably should place the SCALE and COMNT locations at a convenient place in the figure and modify the width and height of the boxes used for multiplotting. You can use **[ft_layoutplot](/reference/ft_layoutplot)** for a visual inspection of the complete layout
 
     cfg = [];
     cfg.layout = layout_ecog;   % this is the layout structure that you created before
@@ -67,11 +67,11 @@ After creating the layout, you should manually assign the correct name of the ch
 
 {% include image src="/assets/img/tutorial/layout/fig2.png" width="400" %}
 
-or including the original image as black-and-white background like this
+or including the original photo as black-and-white background image like this
 
     cfg = [];
     cfg.image  = 'dalal_ecog.png';    % use the photo as background
-    cfg.layout = layout_ecog;         % this is the layout structure that you created before
+    cfg.layout = layout_ecog;         % this is the manually created layout structure
     ft_layoutplot(cfg);
 
 {% include image src="/assets/img/tutorial/layout/fig3.png" width="400" %}
@@ -82,7 +82,11 @@ Once you are happy with the result, you can save it to a MATLAB file like this:
 
 The MATLAB file can subsequently be specified as cfg.layout='layout_ecog.mat' whenever you need a layout for plotting. Alternatively, you can specify the layout like `cfg.layout=layout_ecog`.
 
-The advantage of the MATLAB file over the ASCII file, is that the MATLAB file can also contain a user-specified outline of the head and user-specified mask, whereas for the ASCII layout file the same circle with nose and ears will be used.
+{% include markup/warning %}
+
+The advantage of the MATLAB file over the ASCII .lay file, is that the MATLAB file can also contain a user-specified outline of the head and user-specified mask, whereas for the ASCII layout file the same circle with nose and ears will be used.
+
+{% include markup/end %}
 
 ## Functions that require a layout configuration
 
