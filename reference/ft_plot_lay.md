@@ -1,13 +1,13 @@
 ---
-title: ft_plot_lay
+title: ft_plot_layout
 layout: default
 tags: 
 ---
 ```
- FT_PLOT_LAY plots a two-dimensional layout
+ FT_PLOT_LAYOUT plots a two-dimensional layout
 
  Use as
-   ft_plot_lay(layout, ...)
+   ft_plot_layout(layout, ...)
  where the layout is a FieldTrip structure obtained from FT_PREPARE_LAYOUT.
 
  Additional options should be specified in key-value pairs and can be

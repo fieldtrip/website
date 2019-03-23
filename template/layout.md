@@ -17,7 +17,7 @@ You can use the following snippet of code to get a quick overview of the templat
     layout = ft_prepare_layout(cfg);
 
     figure
-    ft_plot_lay(layout);
+    ft_plot_layout(layout);
     h = title(filename{i});
     set(h, 'Interpreter', 'none');
 

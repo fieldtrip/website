@@ -152,7 +152,7 @@ The location of all channels and the COMMENT and SCALE placeholder can be visual
     cfg.layout = ft_prepare_layout(cfg);
     reading layout from file CTF151.lay
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 1 MB
-    figure; ft_plot_lay(cfg.layout);
+    figure; ft_plot_layout(cfg.layout);
 
 {% include image src="/assets/img/tutorial/plotting/fig11.png" %}
 
@@ -174,7 +174,7 @@ Although many tutorials elsewhere on the FieldTrip wiki are using the standard C
     cfg.layout = ft_prepare_layout(cfg);
     reading layout from file CTF151_helmet.mat
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 4 MB
-    figure; ft_plot_lay(cfg.layout);
+    figure; ft_plot_layout(cfg.layout);
 
 {% include image src="/assets/img/tutorial/plotting/fig13.png" %}
 
@@ -187,7 +187,7 @@ For multiplotting planar gradient data from the Elekta Neuromag system it is esp
     cfg.layout = ft_prepare_layout(cfg);
     reading layout from file neuromag306all.lay
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 7 MB
-    figure; ft_plot_lay(cfg.layout);
+    figure; ft_plot_layout(cfg.layout);
 
 {% include image src="/assets/img/tutorial/plotting/fig14.png" %}
 

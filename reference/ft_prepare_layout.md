@@ -88,5 +88,5 @@ tags:
    layout.mask    = optional cell-array with line segments that determine the area for topographic interpolation
    layout.outline = optional cell-array with line segments that represent the head, nose, ears, sulci or other anatomical features
 
- See also FT_TOPOPLOTER, FT_TOPOPLOTTFR, FT_MULTIPLOTER, FT_MULTIPLOTTFR, FT_PLOT_LAY
+ See also FT_TOPOPLOTER, FT_TOPOPLOTTFR, FT_MULTIPLOTER, FT_MULTIPLOTTFR, FT_PLOT_LAYOUT
 ```

@@ -32,5 +32,5 @@ tags:
    'hlim'          = horizontal scaling limits within the local axes
    'vlim'          = vertical scaling limits within the local axes
 
- See also FT_PLOT_TOPO3D, FT_PLOT_LAY, FT_TOPOPLOTER, FT_TOPOPLOTTFR
+ See also FT_PLOT_TOPO3D, FT_PLOT_LAYOUT, FT_TOPOPLOTER, FT_TOPOPLOTTFR
 ```

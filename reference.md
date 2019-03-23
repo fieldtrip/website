@@ -167,7 +167,7 @@ Note that this reference documentation is identical to the help text that is dis
 - [ft_plot_crosshair](/reference/ft_plot_crosshair)
 - [ft_plot_dipole](/reference/ft_plot_dipole)
 - [ft_plot_headshape](/reference/ft_plot_headshape)
-- [ft_plot_lay](/reference/ft_plot_lay)
+- [ft_plot_layout](/reference/ft_plot_layout)
 - [ft_plot_line](/reference/ft_plot_line)
 - [ft_plot_matrix](/reference/ft_plot_matrix)
 - [ft_plot_mesh](/reference/ft_plot_mesh)
