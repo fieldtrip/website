@@ -39,7 +39,7 @@ You can record audio using:
 - The internal microphone of a camcorder
 - An external microphone
 
-Using the internal [microphone](http://reviewsformusicians.com/best-microphone-for-youtube/) of a laptop or camcorder often has limitations in quality and positionion. We advice an external microphone such as the [Zoom H2](http://www.zoom.co.jp/english/products/h2/) the we acauired and that can be found in the box of equipment in Robert's office. The Zoom H2 is very easy to use, although it does have some options you might not expect (it e.g. has 4 channels). You can familiarize yourself with the manual [here](http://www.zoom.co.jp/downloads/h2/manual/).
+Using the internal [microphone](http://reviewsformusicians.com/best-microphone-for-youtube/) of a laptop or camcorder often has limitations in quality and positionion. We recommend an external microphone such as the [Zoom H2](http://www.zoom.co.jp/english/products/h2/) that we acquired and that can be found in the box of equipment in Robert's office. The Zoom H2 is very easy to use, although it does have some options you might not expect (e.g. it has 4 channels). You can familiarize yourself with the manual [here](https://www.zoom-na.com/sites/default/files/products/downloads/pdfs/E_H2.pdf).
 
 When you plan to do an audiovisual recording you need need to synchronize the audio recording with the video recording. This can be done later (i.e. during editing) but it is easier to record audio and video simultaneously from the start. For this purpose the Zoom H2 be used as a USB microphone.
 To use the Zoom H2 as a USB microphone, make sure it is in XY recording mode. This is a 2-channel mode (4-channels do not work through USB) which is directed towards you if you have the menu screen directed towards yo
