@@ -44,9 +44,9 @@ A copy of the git repository of the FieldTrip software is maintained on BitBucke
 
 We used to do the development with Subversion (also known as SVN). As of February 2016 we have moved all development over to git and github.
 
-### Googlecode - obsolete
+### Google Code - obsolete
 
-We used to maintain a copy of the SVN repository with the software on [Google code](http://code.google.com/p/fieldtrip) but in 2015 Google stopped support for it . Right now there is only a link to the FieldTrip website.
+We used to maintain a copy of the SVN repository with the software on [Google Code](http://code.google.com/p/fieldtrip) but in 2015 Google stopped support for it . Right now there is only a link to the FieldTrip website.
 
 ### Sourceforge - obsolete
 

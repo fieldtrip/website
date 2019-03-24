@@ -5,9 +5,9 @@ tags: [development]
 
 # Project overview
 
-This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpad for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users.
+This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users.
 
-We also use [github](/development/git) and [bugzilla](/bugzilla) to track projects.
+We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projects.
 
 ## Open projects
 
@@ -15,7 +15,7 @@ We also use [github](/development/git) and [bugzilla](/bugzilla) to track projec
 - [Implement a common distributed computing backend](/development/project/distributed)
 - [describe how to create design matrix (prepare_design to be deprecated)](/development/project/design)
 - [document grad.tra, modifications to it, and effects on inverse](/development/project/tra)
-- [ensure that all wiki pages exist](/development/project/orphans)
+- [ensure that all website pages exist](/development/project/orphans)
 - [write a tutorial on how to work with the MEGSIM data](/development/project/megsim)
 - [clean up tutorial documentation](/development/project/tutorial_documentation)
 - [cleanup private functions](/development/project/cleanup_private_functions)
