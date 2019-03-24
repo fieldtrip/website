@@ -8,19 +8,19 @@ For the documentation, communication and development of the FieldTrip project we
 
 ### Dokuwiki
 
-We use [dokuwiki](http://dokuwiki.org/) as the CMS system on which our website is implemented. The CMS is hosted on a virtual machine at the DCCN. Upon an edit of the wiki, a tweet is send to http://twitter.com/fieldtriptoolbx.
+We use [dokuwiki](http://dokuwiki.org/) as the CMS system on which our website is implemented. The CMS is hosted on a virtual machine at the DCCN. Upon an edit of the wiki, a tweet is send to <http://twitter.com/fieldtriptoolbx>.
 
 ### Mailman
 
-We use this for a number of email discussion lists. It is hosted by C&CZ at http://mailman.science.ru.nl. Upon an email to the main FieldTrip mailing list, a tweet is send to http://twitter.com/fieldtriptoolbx.
+We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>. Upon an email to the main FieldTrip mailing list, a tweet is send to <http://twitter.com/fieldtriptoolbx>.
 
 ### Facebook
 
-We use http://facebook.com/fieldtriptoolbox to announce events and to post photo's and messages that relate to the social interaction between developers and users. The Facebook page is not used to provide support. People who like our Facebook page are displayed on the start page. Photo's from Facebook albums are often used in news messages on the start page.
+We use <http://facebook.com/fieldtriptoolbox> to announce events and to post photos and messages that relate to the social interaction between developers and users. The Facebook page is not used to provide support. People who like our Facebook page are displayed on the start page. Photos from Facebook albums are often used in news messages on the start page.
 
 ### Twitter
 
-We use http://twitter.com/fieldtriptoolbx to notify people about events. Wiki page edits, email messages to the discussion list and code commits are posted on the timeline.
+We use <http://twitter.com/fieldtriptoolbx> to notify people about events. Wiki page edits, email messages to the discussion list and code commits are posted on the timeline.
 
 ### YouTube
 
@@ -34,7 +34,7 @@ We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us t
 
 We use Git and GitHub for version control of the software and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
 
-Following a push to github, a web hook is triggered. The code for that is at http://github.com/fieldtrip/webhook and is running on a dedicated (Raspberry Pi) server.
+Following a push to github, a web hook is triggered. The code for that is at <http://github.com/fieldtrip/webhook> and is running on a dedicated (Raspberry Pi) server.
 
 ### Bitbucket
 
