@@ -22,9 +22,9 @@ We use http://facebook.com/fieldtriptoolbox to announce events and to post photo
 
 We use http://twitter.com/fieldtriptoolbx to notify people about events. Wiki page edits, email messages to the discussion list and code commits are posted on the timeline.
 
-### Youtube
+### YouTube
 
-We use a Youtube video channel to distribute video recordings of lectures. More details are [here](/video).
+We use a YouTube video channel to distribute video recordings of lectures. More details are [here](/video).
 
 ### Bugzilla
 
