@@ -47,5 +47,5 @@ which will convert the Markdown into HTML and serve the complete website on <htt
   * "open source", not "open-source"
   * "website", not "web site"
 * Sentence case (not "Title Case") for section headings
-
+* Use en- or em-dashes where appropriate
 
