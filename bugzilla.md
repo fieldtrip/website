@@ -5,7 +5,7 @@ tags: [development]
 
 # Bugzilla and GitHub issue tracking
 
-For a long time we have used our own [bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking issues, but recently we started moving over to [GitHub issues](http://github.com/fieldtrip/fieldtrip/issues). Both Bugzilla and GitHub help us to manage the workflow: by having all bugs/issues/requests in a sort of TODO list, we can more easily collaborate, distribute the responsibilities and keep track of things.
+For a long time we have used our own [Bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking issues, but recently we started moving over to [GitHub issues](http://github.com/fieldtrip/fieldtrip/issues). Both Bugzilla and GitHub help us to manage the workflow: by having all bugs/issues/requests in a sort of TODO list, we can more easily collaborate, distribute the responsibilities and keep track of things.
 
 ## Use github to report an issue (recommended)
 
