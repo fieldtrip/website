@@ -65,7 +65,7 @@ In general, FieldTrip is keeping all input arguments to a function stored togeth
     help ft_preprocessing
 
 It might also be helpful to check out the code to obtain an understanding of what the function is about.
-As FieldTrip is an open-source toolbox, you can always have a look at the code details by typing
+As FieldTrip is an open source toolbox, you can always have a look at the code details by typing
 
     edit ft_preprocessing
 

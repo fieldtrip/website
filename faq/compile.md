@@ -67,7 +67,7 @@ The peer distributed computing toolbox has a number of mex files that are compil
 
     peercompile
 
-Furthermore, for the different Unix platforms there is a command-line peerslave client. Since we provide an executable for the different platforms, the executables need to have a different name. We are following the Mathworks naming scheme for the mex files, i.e.
+Furthermore, for the different Unix platforms there is a command-line peerslave client. Since we provide an executable for the different platforms, the executables need to have a different name. We are following the MathWorks naming scheme for the mex files, i.e.
 
     peerslave.maci    (32-bit OS X)
     peerslave.maci64  (64-bit OS X)

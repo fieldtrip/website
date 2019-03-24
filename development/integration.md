@@ -30,15 +30,15 @@ We use a Youtube video channel to distribute video recordings of lectures. More 
 
 We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us to maintain and distribute to-do lists and supports the follow up communication with users that report problems or suggestions. It is hosted at the DCCN and details can be found [here](/bugzilla)
 
-### Github
+### GitHub
 
-We use Git and Github for version control of the software and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
+We use Git and GitHub for version control of the software and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
 
 Following a push to github, a web hook is triggered. The code for that is at http://github.com/fieldtrip/webhook and is running on a dedicated (Raspberry Pi) server.
 
 ### Bitbucket
 
-A copy of the git repository of the FieldTrip software is maintained on BitBucket, although the primary site is on [Github](#Github).
+A copy of the git repository of the FieldTrip software is maintained on BitBucket, although the primary site is on [GitHub](#GitHub).
 
 ### SVN - obsolete
 

@@ -11,6 +11,6 @@ tags: [faq, matlab, toolbox]
 
 {% include /shared/faq/external.md %}
 
-## Replacements for functions from Mathworks toolboxes
+## Replacements for functions from MathWorks toolboxes
 
 {% include /shared/faq/replacements.md %}

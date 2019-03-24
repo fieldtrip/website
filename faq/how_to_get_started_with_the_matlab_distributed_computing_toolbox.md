@@ -5,7 +5,7 @@ tags: [faq, distcomp]
 
 # How to get started with the MATLAB distributed computing toolbox?
 
-The MATLAB [parallel computing toolbox](http://www.mathworks.com/products/index.html), formerly known as the distributed computing toolbox (DCT) is a commercial toolbox provided by Mathworks. It allows you to execute distributed computations on multiple cores in a single computer, or if you have access to [distributed computing engines](http://www.mathworks.com/products/distriben/index.html) on a compute cluster. To figure out whether you have it, you can try
+The MATLAB [parallel computing toolbox](http://www.mathworks.com/products/index.html), formerly known as the distributed computing toolbox (DCT) is a commercial toolbox provided by MathWorks. It allows you to execute distributed computations on multiple cores in a single computer, or if you have access to [distributed computing engines](http://www.mathworks.com/products/distriben/index.html) on a compute cluster. To figure out whether you have it, you can try
 
     help distcomp
 

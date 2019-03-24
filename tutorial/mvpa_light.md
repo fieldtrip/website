@@ -18,7 +18,7 @@ This tutorial builds on skills acquired in the [preprocessing](/tutorial/preproc
 
 MVPA-Light is a stand-alone Matlab toolbox for multivariate pattern analysis. FieldTrip provides a high-level interface to its functions so one does not need to directly interact with the toolbox.
 However, it needs to be installed and included in
-Matlab's search path. To this end, [follow the installation instructions](https://github.com/treder/MVPA-Light#installation-) on its Github
+Matlab's search path. To this end, [follow the installation instructions](https://github.com/treder/MVPA-Light#installation-) on its GitHub
 page.
 
 ## Procedure

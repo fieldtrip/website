@@ -23,7 +23,7 @@ tags:
    batchid     = string that is used for the compiled application filename 
                  and to identify the jobs in the queue, the default is
                  automatically determined and looks like user_host_pid_batch.
-   toolbox     = string or cell-array with strings, additional Mathworks 
+   toolbox     = string or cell-array with strings, additional MathWorks 
                  toolboxes to include (see below).
    executable  = string with the name of a previous compiled executable 
                  to start, which usually takes the form "run_xxx.sh". This 
@@ -42,7 +42,7 @@ tags:
  cell-array. For example
    compiledfun = qsubcompile({@ft_definetrial, @trialfun_custom})
 
- If you need to include Mathworks toolboxes that are not automatically
+ If you need to include MathWorks toolboxes that are not automatically
  detected as dependencies by the MATLAB compiler, you can specify them
  like this
    compiledfun = qsubcompile(fname, 'toolbox', {'signal', 'image', 'stats'})

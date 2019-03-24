@@ -68,7 +68,7 @@ Here are some possible ways to estimate a module's requirements, ranging from si
 | OSCAR                 | ?                        |
 | Amazon Cloud          | ?                        |
 | SLURM                 | ?                        |
-| Mathworks DCE         | Robert, WashU and Chieti |
+| MathWorks DCE         | Robert, WashU and Chieti |
 
 Q (Robert): How would you like to refer to the home-built Cambridge system for distributing the load (i.e. with aa_doprocessing_parallel in v3.01).
 

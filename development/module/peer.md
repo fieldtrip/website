@@ -62,7 +62,7 @@ The **[peerslave](/reference/peerslave)** command will start the network buffer 
 
 ### Requirement: enough MATLAB licenses
 
-The default usage as explained above is to start one exemplar of MATLAB for each of the peers. The Mathworks license agreement allows you to start multiple instances of MATLAB on a single computer. So if you run 4 peerslaved plus one peermaster on a quad-core computer, you require only a single MATLAB license (which you would have needed anyway). If you run one or multiple peerslaves on another computer, you will also need a MATLAB license for those. Also on other computers you will need one license per computer.
+The default usage as explained above is to start one exemplar of MATLAB for each of the peers. The MathWorks license agreement allows you to start multiple instances of MATLAB on a single computer. So if you run 4 peerslaved plus one peermaster on a quad-core computer, you require only a single MATLAB license (which you would have needed anyway). If you run one or multiple peerslaves on another computer, you will also need a MATLAB license for those. Also on other computers you will need one license per computer.
 
 On Linux and Mac OS X we have an alternative implementation that consists of a peerslave command-line executable which is started from the unix command line. The command-line executable does not require a MATLAB license when waiting for an incoming job, but will require a license as soon as a job comes in. It uses the MATLAB engine to execute the job. The peerslave command line executable allows you to set up a large number of peerslaves that wait in the background, with hardly any computational requirements, but that can kick in as soon as you want to run a bacth of distributed jobs.
 

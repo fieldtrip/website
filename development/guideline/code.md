@@ -1,6 +1,6 @@
 ---
 title: Code guidelines
-tags: [guidelines, development]
+tags: [guidelines, development, fixme]
 ---
 
 # Code guidelines
@@ -193,7 +193,7 @@ Example of bad ui code (please avoid this):
 
 ### Figure handles and Handle Graphics 2
 
-From Matlab 2014b onwards, Mathworks introduced a new way of figure handling as a standard called Handle Graphics 2 (HG2). While in former Matlab versions, a figure handle could be treated as a double variable, this is not the case for HG2 anymore, where figure handles are objects. These figure handle objects can, however, be casted to double. Thus, an initialization of a graphics handle cannot be done by setting it to \[], 0 or 1 anymore.
+From Matlab 2014b onwards, MathWorks introduced a new way of figure handling as a standard called Handle Graphics 2 (HG2). While in former Matlab versions, a figure handle could be treated as a double variable, this is not the case for HG2 anymore, where figure handles are objects. These figure handle objects can, however, be casted to double. Thus, an initialization of a graphics handle cannot be done by setting it to \[], 0 or 1 anymore.
 
 It is good practice in FieldTrip to name a figure according to the function that created it and the data that was put in. Due to HG2, a proper (i.e. compatible) code for this is
 

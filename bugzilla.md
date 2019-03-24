@@ -1,15 +1,15 @@
 ---
-title: Bugzilla and Github issue tracking
+title: Bugzilla and GitHub issue tracking
 tags: [development]
 ---
 
-# Bugzilla and Github issue tracking
+# Bugzilla and GitHub issue tracking
 
-For a long time we have used our own [bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking issues, but recently we started moving over to [Github issues](http://github.com/fieldtrip/fieldtrip/issues). Both Bugzilla and Github help us to manage the workflow: by having all bugs/issues/requests in a sort of TODO list, we can more easily collaborate, distribute the responsibilities and keep track of things.
+For a long time we have used our own [bugzilla](http://bugzilla.fieldtriptoolbox.org) server for tracking issues, but recently we started moving over to [GitHub issues](http://github.com/fieldtrip/fieldtrip/issues). Both Bugzilla and GitHub help us to manage the workflow: by having all bugs/issues/requests in a sort of TODO list, we can more easily collaborate, distribute the responsibilities and keep track of things.
 
 ## Use github to report an issue (recommended)
 
-To report an issue on Github you have to [sign up for an account](https://github.com/join) on Github. This allows us to follow up on reported issues and keep you automatically updated on the status. I.e., you will get an automatic mail whenever someone works on your request.
+To report an issue on GitHub you have to [sign up for an account](https://github.com/join) on GitHub. This allows us to follow up on reported issues and keep you automatically updated on the status. I.e., you will get an automatic mail whenever someone works on your request.
 
 ## Use bugzilla to report an issue (old)
 

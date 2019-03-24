@@ -8,9 +8,9 @@ This is a question with many possible answers. Below is a list of tips from vari
 
 - Save in .eps format, these can be easily edited in Adobe Illustrator etc.
 
-- Use the function [saveSameSize](http://www.mathworks.com/matlabcentral/fileexchange/17868-savesamesize) from the Mathworks File Exchange. This function saves the the figure like it looks on-screen.
+- Use the function [saveSameSize](http://www.mathworks.com/matlabcentral/fileexchange/17868-savesamesize) from the MathWorks File Exchange. This function saves the the figure like it looks on-screen.
 
-- Use the function [export_fig](http://www.mathworks.com/matlabcentral/fileexchange/23629-exportfig) from the Mathworks File Exchange for advanced saving options.
+- Use the function [export_fig](http://www.mathworks.com/matlabcentral/fileexchange/23629-exportfig) from the MathWorks File Exchange for advanced saving options.
 
 - When processing an exported .eps file in Adobe Illustrator, remember the following things/bugs about Matlab's figure export
   - Matlab usually creates invisible 'boxes/objects' around plot-elements like axes, text, etc. To make it easier to work with the objects that are actually important, delete all these superfluous and invisible objects by selecting everything (ctrl+a), or selecting 'empty space' and deleting the ones that contain none of the elements that you want, or look unimportant (there are ALWAYS many of these annoying objects). A 'clean' figure is always easier for a Journal copy-editor to work with.
