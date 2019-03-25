@@ -57,11 +57,9 @@ When using example data in tutorials, please use consistent naming. That i
 
 ## How to add figures?
 
-The preferred format for figures on this wiki is the SVG graphics format. SVG is a standardized scalable vector graphics format and can be edited with several software packages (e.g. Inkscape on Linux, and Adobe Illustrator for Windows and OS X). The advantage of SVG is that it allows other people to download the figure, modify it, and upload the changed figure without loss of quality.
+The preferred format for figures on the website is the PNG format. Also figures from MATLAB and screenshots should preferably be exported in the PNG format. If you want to edit the MATLAB figure, you should first export the figure to EPS or AI, open the figure in Adobe Illustrator and make the changes, and save it to PNG.
 
-Figures from MATLAB should preferably be exported in the .png format. If you think it might be beneficial that the MATLAB figure is editable in the future, you should export the figure to EPS or AI, open the figure in Adobe Illustrator, and save it to SVG.
-
-Making schematic figures in SVG is easy in Office Word or Office Powerpoint using their default shapes under the _insert_ ta
+We also considered SVG, which is a standardized scalable vector graphics format. This would allow other people to download the figure, modify it, and upload the changed figure without loss of quality. However, SVG had too many problems rendering correctly in different browsers. Making schematic figures in SVG is easy in Office Word or Office Powerpoint using their default shapes under the _insert_ tab:
 
 {% include image src="/assets/img/development/guideline/documentation/excel-drawing-tools-2007-2010.jpg" width="200" %}
 
@@ -69,7 +67,7 @@ When you are done making the figure just select all text and images and copy-pas
 
 ## What colors to use
 
-If you make schematic figures yourself we suggest the default Office 2007 color scheme. The lighter (pastel) colors are made by making the images 50% transparent (_right-button_ click on figure, then change transparency under _format shape_), or by using the RGB values in the boxes below. Also, we suggest using the Calibri or Arial font in figures. Here you can download Adobe Illustrator swatch (palette) and an example.
+If you make schematic figures yourself we suggest the default Office 2007 color scheme. The lighter (pastel) colors are made by making the images 50% transparent (_right-button_ click on figure, then change transparency under _format shape_), or by using the RGB values in the boxes below. Also, we suggest using the Calibri or Arial font in figures. Here you can find an example of the colors.
 
 {% include image src="/assets/img/development/guideline/documentation/fieltrip_palette.png" %}
 
