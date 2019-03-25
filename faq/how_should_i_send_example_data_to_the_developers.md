@@ -10,9 +10,9 @@ In general it is not a good idea to send data as email attachment to the email d
 If the data that you want to send is too large for an email attachment, you can use one of the file sharing methods below:
 
 - <https://wetransfer.com>
-- <http://www.dropbox.com>
+- <https://www.dropbox.com>
 - <http://www.yousendit.com>
-- <http://www.sendspace.com>
+- <https://www.sendspace.com>
 
 or one of the other file sharing methods that is described [here](http://www.techlore.com/blog/entry/18653/Great-Ways-to-Send--Receive-or-Share-Large-Files).
 
