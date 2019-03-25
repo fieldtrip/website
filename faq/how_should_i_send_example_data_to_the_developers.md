@@ -14,6 +14,4 @@ If the data that you want to send is too large for an email attachment, you can 
 - <https://www.hightail.com/>
 - <https://www.sendspace.com>
 
-or one of the other file sharing methods that is described [here](http://www.techlore.com/blog/entry/18653/Great-Ways-to-Send--Receive-or-Share-Large-Files).
-
 So instead of sending the large file as attachment, you would just include the download link in your email.
