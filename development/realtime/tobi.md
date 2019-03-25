@@ -55,9 +55,9 @@ executable ''tia2ft''.
 
 Compiling on windows is not yet supported.
 
-### OS X
+### macOS
 
-Compiling on OS X is not yet supported.
+Compiling on macOS is not yet supported.
 
 ## Testing tia2ft
 

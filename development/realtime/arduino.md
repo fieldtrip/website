@@ -12,7 +12,7 @@ The following is a scratch pad for a demo that I (=Robert) have prepared for the
 3.  arduino2: connects to the network, read data from FieldTrip buffer, write to RFM12b
 4.  arduino3: read data from RFM12b, blink LEDs
 
-Other laptop computers and a Raspberry Pi were connected simultaneously to show (using the [viewer](/development/realtime/viewer) realtime visualization) that the FieldTrip realtime EEG interface runs on various operating systems (Windows, Linux, OS X) and on various hardware architectures (Intel, PPC, ARM).
+Other laptop computers and a Raspberry Pi were connected simultaneously to show (using the [viewer](/development/realtime/viewer) realtime visualization) that the FieldTrip realtime EEG interface runs on various operating systems (Windows, Linux, macOS) and on various hardware architectures (Intel, PPC, ARM).
 
 ## Arduino 1: simulate EEG recording
 

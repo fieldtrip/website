@@ -30,8 +30,8 @@ The benchmarking results presented in the table below were determined with the d
 
 The tests have been performed on and between the following computer
 
-- **powerbook**: Apple PowerBook G4 PPC 1.33GHz, 1.25GB RAM, OS X 10.4.11
-- **manzana**: Apple Mac Pro 2x 2.66GHz Dual-Core Intel Xeon, 2GB RAM, OS X 10.5.8
+- **powerbook**: Apple PowerBook G4 PPC 1.33GHz, 1.25GB RAM, macOS 10.4.11
+- **manzana**: Apple Mac Pro 2x 2.66GHz Dual-Core Intel Xeon, 2GB RAM, macOS 10.5.8
 - **fcdc273**: Dell PC with Windows XP, P4 2.8GHz, 2GB RAM
 
 ### Writing to localhost on powerbook

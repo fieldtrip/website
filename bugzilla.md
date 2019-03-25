@@ -23,6 +23,6 @@ The easier it is for one of the developers to reproduce your bug, the more likel
 
 Please create a small test script and a piece of data that are both as small and simple as possible to reproduce the problem. For example: a .mat file containing a data structure and a cfg structure, and an instruction like _"load the cfg and data from the mat file and run ft_freqanalysis(cfg, data)"_.
 
-If there is a chance to the bug being platform dependent, please also specify the platform (Windows, OS X, Linux), the version of your operating system (Windows 10, Redhat 7.2, High Sierra, ...) and the version of MATLAB that you are using..
+If there is a chance to the bug being platform dependent, please also specify the platform (Windows, macOS, Linux), the version of your operating system (Windows 10, Redhat 7.2, High Sierra, ...) and the version of MATLAB that you are using..
 
 Example data (e.g. your MATLAB workspace) that helps to pinpoint a specific issue can be uploaded to the bugzilla server as attachment. This only works for relatively small files. If the data that you want to share is too large, please consider using one of the methods for sharing files that is listed in [this frequently asked question](/faq/how_should_i_send_example_data_to_the_developers).

@@ -64,7 +64,7 @@ The **[peerslave](/reference/peerslave)** command will start the network buffer 
 
 The default usage as explained above is to start one exemplar of MATLAB for each of the peers. The Mathworks license agreement allows you to start multiple instances of MATLAB on a single computer. So if you run 4 peerslaved plus one peermaster on a quad-core computer, you require only a single MATLAB license (which you would have needed anyway). If you run one or multiple peerslaves on another computer, you will also need a MATLAB license for those. Also on other computers you will need one license per computer.
 
-On Linux and Mac OS X we have an alternative implementation that consists of a peerslave command-line executable which is started from the unix command line. The command-line executable does not require a MATLAB license when waiting for an incoming job, but will require a license as soon as a job comes in. It uses the MATLAB engine to execute the job. The peerslave command line executable allows you to set up a large number of peerslaves that wait in the background, with hardly any computational requirements, but that can kick in as soon as you want to run a bacth of distributed jobs.
+On Linux and macOS we have an alternative implementation that consists of a peerslave command-line executable which is started from the unix command line. The command-line executable does not require a MATLAB license when waiting for an incoming job, but will require a license as soon as a job comes in. It uses the MATLAB engine to execute the job. The peerslave command line executable allows you to set up a large number of peerslaves that wait in the background, with hardly any computational requirements, but that can kick in as soon as you want to run a bacth of distributed jobs.
 
 ### Requirement: network communication
 
@@ -197,8 +197,8 @@ The disadvantage of running peerslave inside MATLAB is that each slave requires 
 
 - peerslave.glnxa64 (Linux, 64 bit)
 - peerslave.glnx86 (Linux, 32 bit)
-- peerslave.maci64 (Mac OS X, 64 bit)
-- peerslave.maci (Mac OS X, 32 bit)
+- peerslave.maci64 (macOS, 64 bit)
+- peerslave.maci (macOS, 32 bit)
 
 The command-line peerslave starts the threads, waits for an incoming job, and starts the MATLAB engine to evaluate the job. After MATLAB is done, the results are sent back to the master. If the MATLAB engine is idle for 30 seconds, it is closed and the license is returned to the network license server.
 

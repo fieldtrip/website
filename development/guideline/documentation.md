@@ -57,7 +57,7 @@ When using example data in tutorials, please use consistent naming. That i
 
 ## How to add figures?
 
-The preferred format for figures on this wiki is the SVG graphics format. SVG is a standardized scalable vector graphics format and can be edited with several software packages (e.g. Inkscape on Linux, and Adobe Illustrator for Windows and OS X). The advantage of SVG is that it allows other people to download the figure, modify it, and upload the changed figure without loss of quality.
+The preferred format for figures on this wiki is the SVG graphics format. SVG is a standardized scalable vector graphics format and can be edited with several software packages (e.g. Inkscape on Linux, and Adobe Illustrator for Windows and macOS). The advantage of SVG is that it allows other people to download the figure, modify it, and upload the changed figure without loss of quality.
 
 Figures from MATLAB should preferably be exported in the .png format. If you think it might be beneficial that the MATLAB figure is editable in the future, you should export the figure to EPS or AI, open the figure in Adobe Illustrator, and save it to SVG.
 
