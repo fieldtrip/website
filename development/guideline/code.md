@@ -48,7 +48,7 @@ There are 5 different ways of doing this.
 - **warning**: A warning printed on screen. E.g.: “Warning: no baseline correction”. Warnings are used when the user's input is not erroneous in certain context but it could lead to an error or sub-optimal analysis in another context. The user can re-consider whether the right input was used.
 - **error**: Error printed on screen and the process is terminated. This happens when the input does not make sense or is obviously wrong. A short text message is provided with the error to point out why it has occurred.
 
-When a new function is written in FieldTrip, it is important to include these feedbacks. Each warning and error should have an **identifier**. By using identifiers, the individual warnings can be switched off by the user in Matlab. Hence, `warning_once` should be used cautiously.
+When a new function is written in FieldTrip, it is important to include these feedbacks. Each warning and error should have an **identifier**. By using identifiers, the individual warnings can be switched off by the user in MATLAB. Hence, `warning_once` should be used cautiously.
 
 The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a **[Frequently Asked Question](/faq)** should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
 should also have the same 'warning' or 'error' tag (e.g. `FieldTrip:fileio:fileNotExisting`).
@@ -193,7 +193,7 @@ Example of bad ui code (please avoid this):
 
 ### Figure handles and Handle Graphics 2
 
-From Matlab 2014b onwards, MathWorks introduced a new way of figure handling as a standard called Handle Graphics 2 (HG2). While in former Matlab versions, a figure handle could be treated as a double variable, this is not the case for HG2 anymore, where figure handles are objects. These figure handle objects can, however, be casted to double. Thus, an initialization of a graphics handle cannot be done by setting it to \[], 0 or 1 anymore.
+From MATLAB 2014b onwards, MathWorks introduced a new way of figure handling as a standard called Handle Graphics 2 (HG2). While in former MATLAB versions, a figure handle could be treated as a double variable, this is not the case for HG2 anymore, where figure handles are objects. These figure handle objects can, however, be casted to double. Thus, an initialization of a graphics handle cannot be done by setting it to \[], 0 or 1 anymore.
 
 It is good practice in FieldTrip to name a figure according to the function that created it and the data that was put in. Due to HG2, a proper (i.e. compatible) code for this is
 
@@ -233,7 +233,7 @@ Examples of bad log messages are
 
 ## Public and private functions
 
-In FieldTrip the interface towards the user is controlled by making only those functions publicly available that the end-user is supposed to call from the command-line or from a Matlab script. Those functions are **public** and should be in the main directory or in one of the module directories.
+In FieldTrip the interface towards the user is controlled by making only those functions publicly available that the end-user is supposed to call from the command-line or from a MATLAB script. Those functions are **public** and should be in the main directory or in one of the module directories.
 
 Low-level functions that are only supposed to be called by other FieldTrip functions but not by the end-user should be in the private directories.
 
@@ -348,8 +348,8 @@ Here is a list of MATLAB release dates; a complete list can be found on [Wikiped
 
 To facilitate supporting older MATLAB versions, below we list some known incompatibilities:
 
-- the nargout function in Matlab 6.5 and older does not work on function handles
-- the "try ... catch me ..." statement fails in Matlab 7.4, see [this bug](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=541)
+- the nargout function in MATLAB 6.5 and older does not work on function handles
+- the "try ... catch me ..." statement fails in MATLAB 7.4, see [this bug](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=541)
 - the ~ output argument is not supported in MATLAB versions &lt; 2009b and should be avoided
 - nan with multiple input arguments to create a nan-matrix does not work for MATLAB versions &lt; R14
 
@@ -361,24 +361,24 @@ In case the mex file is used in multiple modules and hence represented (by means
 
 If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the source code for the mex file source code should be present in that specific directory and should include instructions and a compile script in that directory.
 
-For Unix-like platforms (Linux and OSX), it it also possible to compile all mex files from the Unix shell command line interface (on OSX called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
+For Unix-like platforms (Linux and OSX), it it also possible to compile all mex files from the Unix shell command line interface (on OSX called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with MATLAB and Octave, and requires providing the path to the MATLAB or octave binary. For example,
 
     make mex MATLAB=/usr/bin/matlab
 
-would build for Matlab using the binary in ''/usr/bin/matlab'' (a typical location on Linux platforms),
+would build for MATLAB using the binary in ''/usr/bin/matlab'' (a typical location on Linux platforms),
 
     make mex MATLAB=/Applications/MATLAB_R2015a.app/bin/matlab
 
-would use Matlab 2015a on OSX, and
+would use MATLAB 2015a on OSX, and
 
     make mex OCTAVE=/Applications/Octave.app/Contents/Resources/usr/bin/octave
 
 would build for Octave on OSX.
-If the binary is already in the search path (for example, ''which matlab'' prints the location of Matlab), a shortened form with only the binary name itself can be used as in
+If the binary is already in the search path (for example, ''which matlab'' prints the location of MATLAB), a shortened form with only the binary name itself can be used as in
 
     make mex MATLAB=matlab
 
-Different platforms have different extensions; for example, ''.mexmaci64'' for Matlab OSX 64 bit intel, ''.mexw32'' for Matlab Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determines the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
+Different platforms have different extensions; for example, ''.mexmaci64'' for MATLAB OSX 64 bit intel, ''.mexw32'' for MATLAB Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determines the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
 
 Below are more details on the compilation guidelines on different platforms.
 

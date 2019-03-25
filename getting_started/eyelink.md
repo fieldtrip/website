@@ -105,7 +105,7 @@ The following shows the data and the events in the first 20 seconds.
 ### Alternative ways of importing the data
 
 You would also try an alternative to the EDF2ASC.EXE conversion that I found
-[here](http://www.univie.ac.at/experimentalwiki/wiki/index.php?title=CC_EyeLink#Using_the_EDF2ASC_utility_to_export_the_data_as_an_AScii_file_which_can_be_read_by_Matlab). There is also direct method, using a mex file that reads \*.EDF files directly into MATLAB structures (samples **and** events), [compiled versions for OS X and Win64 are available here](https://github.com/iandol/opticka/tree/master/communication). You will have to combine this with your own code to [convert the data to FieldTrip format](/faq/how_can_i_import_my_own_dataformat).
+[here](http://www.univie.ac.at/experimentalwiki/wiki/index.php?title=CC_EyeLink#Using_the_EDF2ASC_utility_to_export_the_data_as_an_AScii_file_which_can_be_read_by_MATLAB). There is also direct method, using a mex file that reads \*.EDF files directly into MATLAB structures (samples **and** events), [compiled versions for OS X and Win64 are available here](https://github.com/iandol/opticka/tree/master/communication). You will have to combine this with your own code to [convert the data to FieldTrip format](/faq/how_can_i_import_my_own_dataformat).
 
 ## Simultaneous EEG and eye-tracker recordings
 

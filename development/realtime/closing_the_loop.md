@@ -11,7 +11,7 @@ Before you attempt to close the loop, please make sure that the data is streamin
 
 ## Communicating over a serial port connection
 
-Standard Matlab already includes functionality to read from and write to serial ports. This uses the **instrfind** and **fopen** functions.
+Standard MATLAB already includes functionality to read from and write to serial ports. This uses the **instrfind** and **fopen** functions.
 
 The [Psychtoolbox IOPort](http://docs.psychtoolbox.org/IOPort) is a MEX file for precise control of input/output hardware, e.g., Serial ports (or emulated serial ports like Serial-over-USB etc.),
 parallel ports, network ports, and special digital I/O boxes.

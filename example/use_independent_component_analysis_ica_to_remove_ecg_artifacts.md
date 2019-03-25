@@ -62,7 +62,7 @@ Finally, you should downsample your data before continuing, otherwise ICA decomp
 This script demonstrates how you can use ICA for cleaning the ECG artifacts from your MEG data. It starts by first doing a decomposition of the MEG data in the data segments of interest (i.e. the real trials in your experiment). Subsequently goes back to the original raw datafile and it reads the data segments around the QRS peaks that can easily be detected in the ECG channel.
 It uses the decomposition from the original data to estimate the timecourse of the components around the ECG artifacts. By looking at the component timecourses (averaged), the coherence between the components and the ECG channel, and the spatial topographies, it is possible to determine which components are responsible for the ECG artifact in the MEG channels. Those components can then be removed from the original data.
 
-    % read the already preprocessed MEG data from a Matlab file
+    % read the already preprocessed MEG data from a MATLAB file
     load datfile.mat data
 
     cfg            = [];

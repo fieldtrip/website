@@ -62,7 +62,7 @@ TODO: This requires a smarter implementation for linking the local spheres (one 
 
 ## Step 4: ensure that the gradiometer order is defined in the data
 
-The res4 file should specify somewhere how the raw data has been written (i.e. with 0th, 1st, 2nd or 3rd order balancing). That information should be added to the dataset in Matlab memory, and the gradiometer structure (grad.tra) should be consistent.
+The res4 file should specify somewhere how the raw data has been written (i.e. with 0th, 1st, 2nd or 3rd order balancing). That information should be added to the dataset in MATLAB memory, and the gradiometer structure (grad.tra) should be consistent.
 
 When changing the balancing (e.g. using the fieldtrip/ft_denoise_synthetic.m function), the data structure should remain internally consistent and should describe the balancing.
 

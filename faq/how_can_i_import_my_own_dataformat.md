@@ -37,7 +37,7 @@ See ft_read_header/data/event to find details of each of these variables are.
 
 ## Circumvent the FieldTrip reading functions
 
-Alternatively, if you already are able to read the data into MATLAB somehow, you can reformat that data within Matlab into a datastructure that is compatible with FieldTrip. Raw data that is comparable with the output of preprocessing should consist of a structure with the fields
+Alternatively, if you already are able to read the data into MATLAB somehow, you can reformat that data within MATLAB into a datastructure that is compatible with FieldTrip. Raw data that is comparable with the output of preprocessing should consist of a structure with the fields
 
     data.label      % cell-array containing strings, Nchan*1
     data.fsample    % sampling frequency in Hz, single number

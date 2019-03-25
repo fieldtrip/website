@@ -15,7 +15,7 @@ The **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** functi
 
 Once the connection is initiated by the Micromed acquisition software, **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** will receive the header information (number of channels and sampling frequency) and subsequently the data. The header and subsequent data that is streaming from the Micromed acquisition software is copied over to the FieldTrip buffer.
 
-Interfacing Matlab and/or FieldTrip to the realtime Micromed ECoG data stream therefore is as simple as starting the **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** in one MATLAB instance, configure the Micromed acquisition software to send the data to that computer, and in another MATLAB instance (which can run on yet another computer) use the function
+Interfacing MATLAB and/or FieldTrip to the realtime Micromed ECoG data stream therefore is as simple as starting the **[ft_realtime_micromedproxy](/reference/ft_realtime_micromedproxy)** in one MATLAB instance, configure the Micromed acquisition software to send the data to that computer, and in another MATLAB instance (which can run on yet another computer) use the function
 
     ft_read_header(filename)
     ft_read_data(filename, ...)

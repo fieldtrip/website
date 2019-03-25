@@ -50,7 +50,7 @@ These functions are used to read the actual files. If you are not sure whether y
 
     read_neuralynx_xxx('fullpath/filename.xxx')   % where XXX is the file format
 
-This returns the content of a single-channel file as a Matlab structure.
+This returns the content of a single-channel file as a MATLAB structure.
 
 ## Working with a complete dataset
 

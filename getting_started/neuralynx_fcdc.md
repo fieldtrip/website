@@ -128,7 +128,7 @@ Samples and timestamps are related to each other according to
     TimeStamp    = FirstTimeStamp + TimeStampPerSample*(SampleNumber - 1);
     SampleNumber = (TimeStamp - FirstTimeStamp) / TimeStampPerSample + 1;
 
-Note that timestamps start counting at zero, whereas in Matlab/FieldTrip convention the first sample of the recording is sample 1.
+Note that timestamps start counting at zero, whereas in MATLAB/FieldTrip convention the first sample of the recording is sample 1.
 
 ### Dealing with triggers
 

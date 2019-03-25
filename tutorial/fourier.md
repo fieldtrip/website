@@ -41,7 +41,7 @@ To get to the concept of spectral analysis, we first construct a sine-wave and a
 known frequency. (While in this course, we will use sine waves for reasons of simplicity and
 clarity, please bear in mind that biological signals are never sine waves but extend over a
 frequency range. This is important for the appropriate way of analysing them.) We then calculate the
-Fourier transform of those signals using the Fast Fourier Transform (FFT) function of Matlab. The
+Fourier transform of those signals using the Fast Fourier Transform (FFT) function of MATLAB. The
 Fourier transform decomposes the time series signals into the cosine and sine components at all
 frequencies. The result of the Fourier transform is complex, containing, for each frequency, the
 cosine component of the signal as the real component and the sine component of the signal as the

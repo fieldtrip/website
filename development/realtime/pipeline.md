@@ -43,11 +43,11 @@ Can be seen as a PE with input consisting of a volume and a row of the design ma
 
 ### Quality assurance display
 
-Can be seen as a PE that turns the input (volume + motion estimate) into a Matlab figure, but does not output anything (but it can output the unmodified input volume, or maybe a mosaic representation with re-ordered slices). Needs to keep track of older motion estimates, and possibly statistics about signal-to-noise, variation in the scans, or other things.
+Can be seen as a PE that turns the input (volume + motion estimate) into a MATLAB figure, but does not output anything (but it can output the unmodified input volume, or maybe a mosaic representation with re-ordered slices). Needs to keep track of older motion estimates, and possibly statistics about signal-to-noise, variation in the scans, or other things.
 
 ## Common properties
 
-All PEs need an **init** and a **process** routine. The type of inputs and outputs varies between PEs, but it seems we could pass around a Matlab ''struct'' with a ''data'' field that is always present. On top of that, each PE can add further output fields, but it should always pass on the fields it received from the previous PE, because succeeding PEs might need those fields (e.g., consider the pipeline [motion correction] -> [slice time correction] -> [quality display] where the motion estimates need to
+All PEs need an **init** and a **process** routine. The type of inputs and outputs varies between PEs, but it seems we could pass around a MATLAB ''struct'' with a ''data'' field that is always present. On top of that, each PE can add further output fields, but it should always pass on the fields it received from the previous PE, because succeeding PEs might need those fields (e.g., consider the pipeline [motion correction] -> [slice time correction] -> [quality display] where the motion estimates need to
 be passed on, although they are not used by the slice time correction PE).
 
 Further to that, most PEs need an internal state representation that can be updated during **process**.
@@ -86,7 +86,7 @@ composition of pipelines to the user ;-)
 
 ### OOP solution
 
-It seems natural to represent each PE by an object of a specific class, where all classes inherit from a common superclass (describing only the **init** and **process** interface). If we go for OOP, we need to decide on whether to use a) old style classes, b) new style classes, or c) new style handle classes. This has consequences for the organization of the code, the way PEs are invoked, and last but not least on the compatibility with different Matlab versions.
+It seems natural to represent each PE by an object of a specific class, where all classes inherit from a common superclass (describing only the **init** and **process** interface). If we go for OOP, we need to decide on whether to use a) old style classes, b) new style classes, or c) new style handle classes. This has consequences for the organization of the code, the way PEs are invoked, and last but not least on the compatibility with different MATLAB versions.
 
 #### Old style classes
 

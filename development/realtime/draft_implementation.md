@@ -7,7 +7,7 @@ tags: [realtime, development]
 
 ### Provide a unified open_connection call
 
-Currently, Matlab users type 'buffer://hostname:port' for talking to a buffer, and thanks to some intelligence in
+Currently, MATLAB users type 'buffer://hostname:port' for talking to a buffer, and thanks to some intelligence in
 the MEX file, this translates into either opening a new TCP connection, reusing a connection, or talking directly to
 a buffer embedded in the MEX file.
 

@@ -4,7 +4,7 @@ We try to develop FieldTrip in such a way that it works with the latest MATLAB r
 
 However, the MATLAB syntax and the availability of functions in the standard MathWorks toolboxes [changes over time](http://www.mathworks.com/help/matlab/release-notes.html). Consequently, sometimes we will use MATLAB code that is only supported from a certain version upwards. In general we attempt to support MATLAB versions up to 5 years old.
 
-An online poll in April 2011 showed that a large proportion (>98%) of our users access the FieldTrip toolbox with a Matlab version younger than 2006 (<5 years). The full results can be found [here](http://bugzilla.fieldtriptoolbox.org/attachment.cgi?id=45).
+An online poll in April 2011 showed that a large proportion (>98%) of our users access the FieldTrip toolbox with a MATLAB version younger than 2006 (<5 years). The full results can be found [here](http://bugzilla.fieldtriptoolbox.org/attachment.cgi?id=45).
 
 ## MathWorks toolboxes
 

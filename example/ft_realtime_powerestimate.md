@@ -13,7 +13,7 @@ The **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** functi
 
 ## Example use
 
-The easiest way to try out the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** example is by starting two Matlab sessions. In the first session you create some random signal and write it to the buffer by means of \*_[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)_
+The easiest way to try out the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** example is by starting two MATLAB sessions. In the first session you create some random signal and write it to the buffer by means of \*_[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)_
 
     cfg                = [];
     cfg.channel        = 1:10;                         % list with channel "names"
@@ -24,7 +24,7 @@ The easiest way to try out the **[ft_realtime_powerestimate](/reference/ft_realt
     cfg.target.dataset = 'buffer://localhost:1972';    % where to write the data
     ft_realtime_signalproxy(cfg)
 
-In the second Matlab session you start the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** and point it to the buffe
+In the second MATLAB session you start the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** and point it to the buffe
 
     cfg                = [];
     cfg.blocksize      = 1;                            % seconds
@@ -34,7 +34,7 @@ In the second Matlab session you start the **[ft_realtime_powerestimate](/refere
 
 After starting the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)**, you should see a figure that updates itself every second. That figure contains the powerspectrum of the simulated random number signal. If you close the figure, the figure will re-appear and start all over again with the automatic scaling of the vertical axis.
 
-You can also start the two Matlab sessions on two different computers, where on the second you would then point the reading function to the first computer.
+You can also start the two MATLAB sessions on two different computers, where on the second you would then point the reading function to the first computer.
 
 ## MATLAB code
 
@@ -187,7 +187,7 @@ You can also start the two Matlab sessions on two different computers, where on 
         xlabel('frequency (Hz)');
         ylabel('power');
 
-        % force Matlab to update the figure
+        % force MATLAB to update the figure
         drawnow
 
       end % if enough new samples

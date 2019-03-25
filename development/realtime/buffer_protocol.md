@@ -23,7 +23,7 @@ The FieldTrip buffer is designed to facilitate transporting of data samples and 
 called markers) from an acquisition device (e.g., an EEG amplifier) to one or more
 (analysis) programs in real-time. Hereafter, we will refer to both the acquisition part
 and the analysis part(s) as **clients**, and we do not distinguish between clients that
-mostly write and clients that mostly read. Since we explicitly wish to include Matlab scripts and other single-threaded programming
+mostly write and clients that mostly read. Since we explicitly wish to include MATLAB scripts and other single-threaded programming
 environments as possible clients, it is apparent that we need some sort of buffering of
 data and events. The application (or part thereof) that does this is refered to as the
 
@@ -34,7 +34,7 @@ a list of event structures. Since we target real-time usage, both the data matri
 list of events will usually be implemented as a **ring buffer**, which means that after a time,
 old data samples and events will not be accessible anymore.
 
-The binary TCP/IP network protocol allows client applications to be developed in an arbitrary programming language, e.g. C, Matlab, Java or Python. The [network protocol](/development/realtime/buffer_protocol) documents the low-level protocol used for serializing requests and responses.
+The binary TCP/IP network protocol allows client applications to be developed in an arbitrary programming language, e.g. C, MATLAB, Java or Python. The [network protocol](/development/realtime/buffer_protocol) documents the low-level protocol used for serializing requests and responses.
 
 ### Outside our scope
 

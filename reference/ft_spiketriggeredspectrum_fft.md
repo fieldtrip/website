@@ -46,7 +46,7 @@ tags:
  The output STS data structure can be input to FT_SPIKETRIGGEREDSPECTRUM_STAT
 
  This function uses a NaN-aware spectral estimation technique, which will default to the
- standard Matlab FFT routine if no NaNs are present. The fft_along_rows subfunction below
+ standard MATLAB FFT routine if no NaNs are present. The fft_along_rows subfunction below
  demonstrates the expected function behaviour.
 
  See FT_SPIKETRIGGEREDINTERPOLATION to remove segments of LFP around spikes.

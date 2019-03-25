@@ -154,7 +154,7 @@ The coherence measure is a symmetric measure, which means that it does not provi
 Compute the granger output using instead the 'freq' data structure. Plot them side-by-side using ft_connectivityplot.
 {% include markup/end %}
 
-Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivityplot)**, you can use the following low-level Matlab plotting code which gives a better understanding of the numerical representation of the results.
+Instead of plotting it with **[ft_connectivityplot](/reference/ft_connectivityplot)**, you can use the following low-level MATLAB plotting code which gives a better understanding of the numerical representation of the results.
 
     figure
     for row=1:3

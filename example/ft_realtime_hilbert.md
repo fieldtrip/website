@@ -21,7 +21,7 @@ If you scroll the script you can see that this image is a particular point of vi
 ## Procedure
 
 Get the FieldTripBufferDemo from the workshop_bci2000 folder on the FieldTrip ftp server and . Start BCI2000 and modifiy the config. The script works originally with 40 channels (see the variable 'lab' in the realtime_hilbert script), the samplingrate used is 1000Hz. Use a blocksize of 1000 samples. Ensure BCI2000 runs for more than 2 minutes in the application tab. Set config and start BCI2000.
-Start Matlab and in the shell type realtime_hilbert.
+Start MATLAB and in the shell type realtime_hilbert.
 
 Now it will start the function realtime_baseline that for 2 minutes will record the subject baseline and store the results for realtime_hilbert.
 Basically there are 12 channels: 4 for EEG (I used F3-P3-F4-P4), 4 for the EOG, 4 for the EMG (front and neck). In this script, those are selected from the forty originally recorded channels you can find in the variable 'lab'.
@@ -349,7 +349,7 @@ The algorithm will care to take away both EOG and EMG artifacts.
                 % objects=allchild(h1);
                 % fig2=copyobj(get(h1,'children'),h2);
 
-                % force Matlab to update the figure
+                % force MATLAB to update the figure
                 drawnow ;
 
                 % add the step to the array for the feedback and upgrade the M

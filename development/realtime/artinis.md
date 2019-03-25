@@ -21,7 +21,7 @@ Artinis has developed their own software Oxysoft for data collection and viewing
 
 Oxysoft assumes the default buffer port to be 1972. Oxysoft will start an own shared memory segment that data will be buffered to.
 
-Once configured, you can read the streamed data from Matlab, e.g. with FieldTrip
+Once configured, you can read the streamed data from MATLAB, e.g. with FieldTrip
 
     ft_read_header(filename)
     ft_read_data(filename, ...)

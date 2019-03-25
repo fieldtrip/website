@@ -74,7 +74,7 @@ Furthermore, for the different Unix platforms there is a command-line peerslave 
     peerslave.glnx86  (32-bit Linux)
     peerslave.glnxa64 (64-bit Linux)
 
-Compiling the peerslave command line executable is done on the Unix command line. However, since the compilation process involves linking the object files to the Matlab engine library, the location where your copy of Matlab is installed should be specified. Please edit the Makefile and change it so that the following settings are correct for your platform. Note that maci is used for 32-bit Matlab and maci64 is used for 64-bit Matlab.
+Compiling the peerslave command line executable is done on the Unix command line. However, since the compilation process involves linking the object files to the MATLAB engine library, the location where your copy of MATLAB is installed should be specified. Please edit the Makefile and change it so that the following settings are correct for your platform. Note that maci is used for 32-bit MATLAB and maci64 is used for 64-bit MATLAB.
 
     MATLABARCH = maci
     MATLABPATH = /Applications/MATLAB_R2009a.app
