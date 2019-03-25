@@ -22,6 +22,10 @@ To get started with FieldTrip, please continue reading the [getting started](/ge
 
 ## News and announcements
 
+### 24 March, 2019
+
+We just held the first [ECoG/SEEG toolkit](http://www.fieldtriptoolbox.org/workshop/davis2019/) at the UC Davis Medical Center in Sacramento, California. The three-day event was packed with lectures, hands-on sessions, and fruitful discussions, with people visiting from all over the US (and beyond). Many thanks also to neurosurgeon Fady Girgis and neuroscientist Bob Knight for providing lectures on the clinical aspects and research applications of intracranial EEG. We plan to upload videos of the lectures, so stay tuned.
+
 ### 13 March, 2019
 
 Check it out! Matthias Treder has kindly contributed a tutorial and some code (streamlined a bit by yours truly) that now allows you to perform MVPA analysis in FieldTrip, using his awesome [MVPA-light toolbox](https://github.com/treder/MVPA-Light) ! For now it is well supported, documented and tested for channel level time domain data, but in the near future (and with your help) we will also ensure support for frequency domain and source level data. For now you can just use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** with cfg.method='mvpa'. The tutorial can be found in the [tutorial section](/tutorial/mvpa_light)
