@@ -352,9 +352,9 @@ To facilitate supporting older MATLAB versions, below we list some known incompa
 
 FieldTrip has to run on a large variety of platforms, with different operating systems and MATLAB versions. Therefore, we try to keep the compiled mex files reasonably consistent. Since mex file are added in the course of the development, and we don't want to recompile them too often, we cannot be too strict on the compile environment. If possible you should compile the mex files with a MATLAB version that is two years old, i.e. not the latest, but also not a version that is very old.
 
-In case the mex file is used in multiple modules and hence represented (by means of fieldtrip/bin/synchronize-private.sh) in multiple private directories, the source code should be located in fieldtrip/src. If a mex file is very simple and does not have external dependencies, it should also be located in fieldtrip/src. Having the mex file source code in fieldtrip/src facilitates recompilation on all platforms with **[ft_compile_mex](/reference/ft_compile_mex)**.
+In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` BASH script is used to copy the updated mex files to all required (private) directories.
 
-If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the source code for the mex file source code should be present in that specific directory and should include instructions and a compile script in that directory.
+If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
 
 For Unix-like platforms (Linux and OSX), it it also possible to compile all mex files from the Unix shell command line interface (on OSX called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
 
