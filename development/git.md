@@ -17,11 +17,11 @@ git clone https://github.com/fieldtrip/fieldtrip.git
 This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on github, fork FieldTrip to our own account and read on for a complete tutorial.
 {% include markup/end %}
 
-To keep an eye on the changes to the code, you can follow FieldTrip on [Twitter](http://twitter.com/fieldtriptoolbx).
+To keep an eye on the changes to the code, you can follow us on [Twitter](http://twitter.com/fieldtriptoolbx).
 
 ## Development workflow
 
-We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for our code development. We complement this with code reviews by the core team and quality control using running a set of test scripts. The general procedure is as follow
+We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for our code development. We complement this with code reviews by the core team and quality control using a set of test scripts. The general procedure is as follows:
 
 1. The contributor/developer makes the suggested changes in a branch, pushes that branch to his/her own fork (on github) and submits a pull request.
 2. The core team reviews the code in the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and should be documented.
@@ -30,7 +30,7 @@ We use git (the software) and github.com (the website, see below) in combination
 
 ## How to contribute with git and github.com
 
-We welcome the contribution of external users, even if the changes consist of a few lines of code. The git version control system offers a simple and straightforward way to add your contribution to the FieldTrip toolbox.
+We welcome external contributions, large and small, even if those only change a few lines of code. The git version control system offers a simple and straightforward way to add your contribution to the FieldTrip toolbox.
 
 ### What is git?
 
