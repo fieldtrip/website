@@ -17,7 +17,7 @@ In this example we will only be dealing with the format in which the data is org
 
 Prior to conversion the data comprises 10 files (one file per subject). After conversion there are 52 or 72 files (for the two options described below), which includes the sidecar files with metadata.
 
-The procedure for converting the original data consists of a number of steps
+The procedure for converting the original data consists of a number of steps:
 
 1.  Create empty directory structure according to BIDS
 2.  Collect the EEG data
@@ -29,7 +29,7 @@ Step 1, 2 and step 4 are implemented using [Bash](<https://en.wikipedia.org/wiki
 
 We will describe two alternative approaches: in the first one the files are kept in their original file format, in the second one the files are explicitly converted to the recommended format for BIDS.
 
-After each of the automated steps the results should be checked. For that I have been using the command line applications like "find DIR -name PATTERN | wc -l" to count the number of files, but also a graphical databrowser to check the directory structure and a text editor to check the content of the JSON and TSV sidecar files.
+After each of the automated steps the results should be checked. For that I have been using the command line applications like `find DIR -name PATTERN \| wc -l` to count the number of files, but also a graphical databrowser to check the directory structure and a text editor to check the content of the JSON and TSV sidecar files.
 
 It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
 
@@ -37,15 +37,17 @@ It is important that you use appropriate tools. Command line utilities are very 
 
 ### Step 1a: create empty directory structure
 
-    BIDSROOT=$HOME/example
+```bash
+BIDSROOT=$HOME/example
 
-    mkdir -p $BIDSROOT/code
-    mkdir -p $BIDSROOT/stimuli
-    mkdir -p $BIDSROOT/sourcedata
+mkdir -p $BIDSROOT/code
+mkdir -p $BIDSROOT/stimuli
+mkdir -p $BIDSROOT/sourcedata
 
-    for SUB in 01 02 03 04 05 06 07 08 09 10; do
-    mkdir -p $BIDSROOT/sub-$SUB/eeg
-    done
+for SUB in 01 02 03 04 05 06 07 08 09 10; do
+mkdir -p $BIDSROOT/sub-$SUB/eeg
+done
+```
 
 ### Step 2a: copy the EEG data to the BIDS organization
 
@@ -53,26 +55,28 @@ The original data gets copied and renamed to the location in the BIDS structure.
 
 In this case it is not needed to convert the data, since the EEGLAB .set format is explicitly allowed according to the BIDS standard (although BrainVision and EDF are preferred).
 
-    BIDSROOT=$HOME/example
-    SOURCEDATA=$BIDSROOT/sourcedata
+```bash
+BIDSROOT=$HOME/example
+SOURCEDATA=$BIDSROOT/sourcedata
 
-    cd $SOURCEDATA
-    wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
+cd $SOURCEDATA
+wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
 
-    TASK=something
+TASK=something
 
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-01/eeg/sub-01_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-02/eeg/sub-02_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-03/eeg/sub-03_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-04/eeg/sub-04_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-05/eeg/sub-05_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-06/eeg/sub-06_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-07/eeg/sub-07_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-08/eeg/sub-08_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
-    cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-01/eeg/sub-01_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-02/eeg/sub-02_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-03/eeg/sub-03_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-04/eeg/sub-04_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-05/eeg/sub-05_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-06/eeg/sub-06_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-07/eeg/sub-07_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-08/eeg/sub-08_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
+cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
+```
 
-### Step 3a: create the sidecar files for each subject
+### Step 3a: use MATLAB to create the sidecar files for each subject
 
 The **[data2bids](/reference/data2bids)** function will read each EEG recording and determine the metadata that is available in the file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
 
@@ -124,16 +128,18 @@ The **[data2bids](/reference/data2bids)** function will read each EEG recording 
     end % for each dataset
     end % for each subject
 
-### Step 4a: create the general sidecar files
+### Step 4a: use Python to create the general sidecar files
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-    BIDSROOT=$HOME/example
-    BIDSTOOLS=$HOME/bids-tools/bin
+```bash
+BIDSROOT=$HOME/example
+BIDSTOOLS=$HOME/bids-tools/bin
 
 $BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT # create the dataset_description.json file
 $BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT # create the participants.tsv file
 $BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT # create the scans.tsv files (per subject and session)
+```
 
 ### Step 5a: finalize
 
@@ -147,39 +153,43 @@ Throughout the development of the scripts and and after having completed the con
 
 ### Step 1b: create empty directory structure
 
-    BIDSROOT=$HOME/example
+```bash
+BIDSROOT=$HOME/example
 
-    mkdir -p $BIDSROOT/code
-    mkdir -p $BIDSROOT/stimuli
-    mkdir -p $BIDSROOT/sourcedata
+mkdir -p $BIDSROOT/code
+mkdir -p $BIDSROOT/stimuli
+mkdir -p $BIDSROOT/sourcedata
 
-    for SUB in 01 02 03 04 05 06 07 08 09 10; do
-    mkdir -p $BIDSROOT/sub-$SUB/eeg
-    done
+for SUB in 01 02 03 04 05 06 07 08 09 10; do
+mkdir -p $BIDSROOT/sub-$SUB/eeg
+done
+```
 
 ### Step 2b: copy the EEG data for all participants
 
 Here I am copying the single example file to each of the subjects. This would normally not be needed, since you would already have the original data somewhere in some structure. The original format data can be shared in BIDS in the _sourcedata_ directory.
 
-    BIDSROOT=$HOME/example
-    SOURCEDATA=$BIDSROOT/sourcedata
+```bash
+BIDSROOT=$HOME/example
+SOURCEDATA=$BIDSROOT/sourcedata
 
-    cd $SOURCEDATA
-    wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
+cd $SOURCEDATA
+wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
 
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant01.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant02.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant03.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant04.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant05.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant06.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant07.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant08.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant09.set
-    cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
-    rm $SOURCEDATA/Eeglab_data.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant01.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant02.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant03.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant04.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant05.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant06.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant07.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant08.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant09.set
+cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
+rm $SOURCEDATA/Eeglab_data.set
+```
 
-### Step 3b: convert the data and create the sidecar files for each subject
+### Step 3b: use MATLAB to convert the data and to create sidecar files for each subject
 
 The **[data2bids](/reference/data2bids)** function will get the metadata that is available from the original file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
 
@@ -233,16 +243,18 @@ In principle converting the data is not needed, since EEGLAB .set is also one of
 
     end % for each dataset
 
-### Step 4b: create the general sidecar files
+### Step 4b: use Python to create the general sidecar files
 
 This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
 
-    BIDSROOT=$HOME/example
-    BIDSTOOLS=$HOME/bids-tools/bin
+```bash
+BIDSROOT=$HOME/example
+BIDSTOOLS=$HOME/bids-tools/bin
 
 $BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT # create the dataset_description.json file
 $BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT # create the participants.tsv file
 $BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT # create the scans.tsv files (per subject and session)
+```
 
 ### Step 5b: finalize
 
@@ -267,4 +279,4 @@ In this example it all looks very simple, which is partially because the data is
 As a rule of thumb: if you have few exceptions, better don't try to make the scripts above too complex, but deal with them manually. If you have many exceptions of the same or similar type, it is worthwhile to invest into making these scripts smarter to automate the exception handling.
 {% include markup/end %}
 
-In reusing the data, either by yourself, your (future) colleagues in your lab, or people outside your lab, this type of information is very relevant. Although it is frustrating to encounter these inconsistencies when converting to BIDS, it actually reveals that these aspects need to be represented and documented properly in the (meta)data.
+In reusing the data, either by yourself, your (future) colleagues in your lab, or people outside your lab, this type of information is very relevant. Although it can be frustrating to encounter these inconsistencies when converting to BIDS, it actually reveals that these aspects need to be represented and documented properly in the (meta)data.
