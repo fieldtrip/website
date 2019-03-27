@@ -1,6 +1,3 @@
-- name:  MEG-UK 2015 meeting
-  link:  /workshop/meg-uk-2015
-
 - name:  Face recognition dataset
   link:  /workshop/meg-uk-2015/dataset
 
@@ -15,6 +12,9 @@
 
 - name:  FieldTrip stats demo
   link:  /workshop/meg-uk-2015/fieldtrip-stats-demo
+
+- name:  MEG-UK 2015 meeting
+  link:  /workshop/meg-uk-2015
 
 - name:  SPM Source reconstruction demo
   link:  /workshop/meg-uk-2015/spm_source
