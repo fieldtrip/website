@@ -267,33 +267,27 @@ Since we support FieldTrip on all currently popular platforms regarding hardware
 Ensuring that all executables can co-exist on all platforms (and especially on the unix base platforms) means that they should have unique file names. The choice for that is based on the specification according to the MATLAB function "computer", i.e.
 
     >> help computer
-     COMPUTER Computer type.
-        C = COMPUTER returns string C denoting the type of computer
-        on which MATLAB is executing. Possibilities ar
-
-                                                  ISPC   ISUNIX   ISMAC
-        32-Bit Platforms
-          PCWIN    - Microsoft Windows on x86       1       0       0
-          GLNX86   - Linux on x86                   0       1       0
-          MACI     - Apple macOS on x86          0       1       1
-
-        64-Bit Platforms
-          PCWIN64  - Microsoft Windows on x64       1       0       0
-          GLNXA64  - Linux on x86_64                0       1       0
-          SOL64    - Sun Solaris on SPARC           0       1       0
-          MACI64   - Apple macOS on x86_64       0       1       1
-
-        [C,MAXSIZE] = COMPUTER also returns integer MAXSIZE which
-        contains the maximum number of elements allowed in a matrix
-        on this version of MATLAB.
-
-        [C,MAXSIZE,ENDIAN] = COMPUTER also returns either 'L' for
-        little endian byte ordering or 'B' for big endian byte ordering.
-
-        HPUX, HP700, ALPHA, IBM_RS, SGI, and Mac for PowerPC are no
-        longer supported.
-
-        See also ispc, isunix, ismac.
+    computer Computer type.
+      C = computer returns character vector C denoting the type of computer
+      on which MATLAB is executing. Possibilities are:
+   
+                                                ISPC ISUNIX ISMAC ARCHSTR    
+      64-Bit Platforms
+        PCWIN64  - Microsoft Windows on x64       1     0     0   win64
+        GLNXA64  - Linux on x86_64                0     1     0   glnxa64
+        MACI64   - Apple Mac OS X on x86_64       0     1     1   maci64
+    
+      ARCHSTR = computer('arch') returns character vector ARCHSTR which is
+      used by the MEX command -arch switch.
+   
+      [C,MAXSIZE] = computer returns integer MAXSIZE which 
+      contains the maximum number of elements allowed in a matrix
+      on this version of MATLAB.
+   
+      [C,MAXSIZE,ENDIAN] = computer returns either 'L' for
+      little endian byte ordering or 'B' for big endian byte ordering.
+   
+      See also ispc, isunix, ismac.
 
 The binaries for the different versions of the unix platforms (Linux, macOS) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
 
