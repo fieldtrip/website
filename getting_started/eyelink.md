@@ -9,12 +9,12 @@ At the Donders we have an [Eyelink 1000 eyetracker](http://www.sr-research.com/e
 The eye-tracker can be used on itself, or in combination with other data acquisition techniques (e.g. EEG, MEG, TMS or fMRI). FieldTrip allows you to analyze the eye-tracker data in all of these situations. In the following I will provide the background of the data acquisition and present some examples on how to analyze eye-tracker data.
 
 {% include markup/info %}
-With your presentation script on the stimulus presentation computer you can also write "data" to disk in the form of behavioural log files. In the subsequent examples we will not consider integrating the physiological measurements with the "data" in these behavioural log files. We will only consider physiological data from the eye-tracker, from the EEG system and from the MEG system.
+With your presentation script on the stimulus presentation computer you can also write "data" to disk in the form of behavioral log files. In the subsequent examples we will not consider integrating the physiological measurements with the "data" in these behavioral log files. We will only consider physiological data from the eye-tracker, from the EEG system and from the MEG system.
 {% include markup/end %}
 
 ## Eye tracker recordings by themselves
 
-It is possible to use the eye-tracker in combination with a behavioural task that involves stimuli (usually on a screen) and response, but without EEG or MEG recordings. In this case the EyeLink computer records all data.
+It is possible to use the eye-tracker in combination with a behavioral task that involves stimuli (usually on a screen) and response, but without EEG or MEG recordings. In this case the EyeLink computer records all data.
 
 ### Converting the EDF file to an ASC file
 
@@ -105,7 +105,7 @@ The following shows the data and the events in the first 20 seconds.
 ### Alternative ways of importing the data
 
 You would also try an alternative to the EDF2ASC.EXE conversion that I found
-[here](http://www.univie.ac.at/experimentalwiki/wiki/index.php?title=CC_EyeLink#Using_the_EDF2ASC_utility_to_export_the_data_as_an_AScii_file_which_can_be_read_by_Matlab). There is also direct method, using a mex file that reads \*.EDF files directly into MATLAB structures (samples **and** events), [compiled versions for OS X and Win64 are available here](https://github.com/iandol/opticka/tree/master/communication). You will have to combine this with your own code to [convert the data to FieldTrip format](/faq/how_can_i_import_my_own_dataformat).
+[here](http://www.univie.ac.at/experimentalwiki/wiki/index.php?title=CC_EyeLink#Using_the_EDF2ASC_utility_to_export_the_data_as_an_AScii_file_which_can_be_read_by_Matlab). There is also direct method, using a mex file that reads \*.EDF files directly into MATLAB structures (samples **and** events), [compiled versions for macOS and Win64 are available here](https://github.com/iandol/opticka/tree/master/communication). You will have to combine this with your own code to [convert the data to FieldTrip format](/faq/how_can_i_import_my_own_dataformat).
 
 ## Simultaneous EEG and eye-tracker recordings
 

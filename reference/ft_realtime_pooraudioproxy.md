@@ -5,8 +5,8 @@ tags:
 ---
 ```
  FT_REALTIME_POORAUDIOPROXY reads continuous data from the sound card using the
- standard Matlab API and writes it to a FieldTrip buffer. This proxy has poor timing
- and will produce dropped audio frames between blocks. Also the Matlab documentation
+ standard MATLAB API and writes it to a FieldTrip buffer. This proxy has poor timing
+ and will produce dropped audio frames between blocks. Also the MATLAB documentation
  warns about using this API for long recordings because this will fill up memory and
  degrade performance.
 

@@ -5,7 +5,7 @@ tags: [example, dataformat, ctf, meg]
 
 # Can I create an artificial CTF dataset using MATLAB?
 
-Q: Is there a way to create an artificial CTF dataset using Matlab or one of the CTF utilities, or alternatively take a real dataset and replace just the channel data with my simulated data?
+Q: Is there a way to create an artificial CTF dataset using MATLAB or one of the CTF utilities, or alternatively take a real dataset and replace just the channel data with my simulated data?
 
 A: Yes, there is, see below.
 

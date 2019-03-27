@@ -13,7 +13,7 @@ You can create a regularly spaced 3D grid with only dipoles in the grey matter. 
 
 It requires that you have a segmentation of your anatomical MRI, which specifies the different tissue types. Such a segmentation can be made from the anatomical MRI using **[ft_volumesegment](/reference/ft_volumesegment)** (which internally uses the SPM8 toolbox). The anatomical MRI and its segmentation have to be aligned in the same coordinate system as the one in which you want to perform the source reconstruction. That often means that the MRI should be expressed in head coordinates.
 
-If you want to use the canonical MRI that is included in SPM, you can also use the accompanying segmentation into the different tissue types. You can download the [anatomical](http://www.bic.mni.mcgill.ca/brainweb/selection_normal.html) 1mm MRI and the [segmentations](http://www.bic.mni.mcgill.ca/brainweb/anatomic_normal.html) from the MNI brainweb site. You should use the "crisp" segmentation for creating the grey matter volume. If you have SPM2 on your Matlab path, the MINC file format will automatically be detected and supported by FieldTrip.
+If you want to use the canonical MRI that is included in SPM, you can also use the accompanying segmentation into the different tissue types. You can download the [anatomical](http://www.bic.mni.mcgill.ca/brainweb/selection_normal.html) 1mm MRI and the [segmentations](http://www.bic.mni.mcgill.ca/brainweb/anatomic_normal.html) from the MNI brainweb site. You should use the "crisp" segmentation for creating the grey matter volume. If you have SPM2 on your MATLAB path, the MINC file format will automatically be detected and supported by FieldTrip.
 
 ## Making a surface model of the cortical sheet
 

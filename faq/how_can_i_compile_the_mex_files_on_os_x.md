@@ -1,11 +1,11 @@
 ---
-title: How can I compile the mex files on OS X?
+title: How can I compile the mex files on macOS?
 tags: [faq, mex]
 ---
 
-# How can I compile the mex files on OS X?
+# How can I compile the mex files on macOS?
 
-To compile the mex files with MATLAB 2012b on OS X 10.9 using the gcc version that is shipped with Xcode 6.2, the following changes are neede
+To compile the mex files with MATLAB 2012b on macOS 10.9 using the gcc version that is shipped with Xcode 6.2, the following changes are neede
 
 In _/Users/yourname/.matlab/R2012b/mexopts.sh_ under the maxi64 section you need to
 

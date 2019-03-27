@@ -1,3 +1,6 @@
+- name:  Code guidelines
+  link:  /development/guideline/code
+
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 

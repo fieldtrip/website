@@ -27,7 +27,7 @@ See [/development/compat](/development/project/compat) for mydepfun example
    _ CTF can, not sure with other formats. (file bug if not true for all formats)
   _ Would help if could be done at line ''data.trial = cutdat;'' in ft_preprocessing. \* write a subfunction ft_single that loops over trials and singles each
 - ft_chantype(data.label) 'unknown' in test case for neuromag.
-- Issue of clearing a data variable in Matlab but it still takes up memory (with FT but not with NM).
+- Issue of clearing a data variable in MATLAB but it still takes up memory (with FT but not with NM).
 
 ### 3) Forward modelling
 
@@ -43,7 +43,7 @@ See [/development/compat](/development/project/compat) for mydepfun example
 - ft_sourceanalysis allow for multiple time and multiple frequency windows? (regardless of whether LCMV, DICS, or covariances from wavelet transform)
 - nut_beamforming_gui
 - rumour has it that some people prefer the interactive fiducial selection in NM over FT.
-- simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to Matlab
+- simplified pipeline for OpenMEEG with BrainVisa segmentations (Sarang to write wiki on BrainVisa use, then OM creates BEM, then import to MATLAB
 - single precision used as long as double not needed (e.g. initial loading single but covariance computation double)
 - how does FT reduce/display data computed with vector inverse method and therefore the source data has 3 components per voxel?
   _ Specifically, can the s_perp (1 or 2 extra components not of primary direction) be displayed or further manipulated (e.g. in statistics)?

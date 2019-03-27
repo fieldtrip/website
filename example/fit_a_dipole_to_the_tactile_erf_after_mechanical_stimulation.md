@@ -7,7 +7,7 @@ tags: [example, meg, timelock, source, dipole, fixme, meg-tactile]
 
 ## Description
 
-The Matlab script is given first; the figures that this script produces are at the bottom of this page.
+The MATLAB script is given first; the figures that this script produces are at the bottom of this page.
 
 The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) is available from our FTP server.
 
@@ -78,7 +78,7 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
     %
     % after detecting the segments of data contaminated by artifacts, those
     % segments subsequently are removed and the clean data segments of interest
-    % can finally be imported into Matlab using the ft_preprocessing function.
+    % can finally be imported into MATLAB using the ft_preprocessing function.
     cfg.artfctdef.minaccepttim    = 0.2;
     cfg.artfctdef.reject          = 'partial';
     cfg.artfctdef.feedback        = 'yes';
@@ -96,7 +96,7 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % make a butterfly plot of the ERF
-    % using the plain Matlab plotting function
+    % using the plain MATLAB plotting function
     figure
     plot(1000*avg.time, avg.avg)  % convert time to ms
     xlabel('time (ms)')

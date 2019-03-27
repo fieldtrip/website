@@ -115,7 +115,7 @@ Out of memory. Type HELP MEMORY for your options.
 This tutorial gave advice for doing data-analysis in a memory-efficient way.
 If you are interested in further issues on efficiency, check [this](/tutorial/distributedcomputing) and [this](/tutorial/memory) tutorials.
 
-It is much advised to also read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from Mathworks.
+It is much advised to also read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks.
 
 These are FAQs that are related to memory issues:
 

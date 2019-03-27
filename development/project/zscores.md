@@ -62,7 +62,7 @@ _--> Problem: these solutions may introduce additional noise!_
 
 Properties of the data:
 
-- behaviour of noise within subjects / trials (stationary or non-stationary)
+- behavior of noise within subjects / trials (stationary or non-stationary)
 - model of effect (additive or multiplicative)
 
 ## Step 2: simulate data

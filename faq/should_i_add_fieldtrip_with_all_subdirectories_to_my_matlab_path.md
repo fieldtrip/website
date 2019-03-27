@@ -36,7 +36,7 @@ If a subsequent FieldTrip function need an external toolbox that is present in f
 
 ## Making it persistent
 
-It is most convenient to have the addpath and **[ft_defaults](/reference/ft_defaults)** in a script with the name **startup.m**, which is located in your own MATLAB directory. See [this information from Mathworks](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/startup.html).
+It is most convenient to have the addpath and **[ft_defaults](/reference/ft_defaults)** in a script with the name **startup.m**, which is located in your own MATLAB directory. See [this information from MathWorks](http://www.mathworks.com/access/helpdesk/help/techdoc/ref/startup.html).
 
 ## Clean up your path
 

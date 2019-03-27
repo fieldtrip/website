@@ -6,7 +6,7 @@ title: Getting started with EEGLAB
 
 ## Background
 
-EEGLAB is an interactive Matlab toolbox for processing continuous and event-related EEG, MEG and other electrophysiological data using independent component analysis (ICA), time/frequency analysis, and other methods including artifact rejection. EEGLAB incorporates and extends the ICA/EEG toolbox of Makeig, and it provides the user with a graphical interface. The homepage of EEGLAB is located at www.sccn.ucsd.edu/eeglab/.
+EEGLAB is an interactive MATLAB toolbox for processing continuous and event-related EEG, MEG and other electrophysiological data using independent component analysis (ICA), time/frequency analysis, and other methods including artifact rejection. EEGLAB incorporates and extends the ICA/EEG toolbox of Makeig, and it provides the user with a graphical interface. The homepage of EEGLAB is located at <http://www.sccn.ucsd.edu/eeglab/>.
 
 EEGLAB supports external plug-ins and one of them is DIPFIT. With the DIPFIT plugin, you can localize the sources of signal components that have been separated using ICA. The DIPFIT plugin is based on code from Robert Oostenveld, and the same code is included in FieldTrip.
 
@@ -20,10 +20,10 @@ Together with the EEGLAB developers we maintain two functions for converting the
 
 The old version 1.x of DIPFIT only fitted dipoles to EEG data using a 4-shell spherical head model. The new version 2.x of DIPFIT also supports realistic BEM volume conduction models for EEG. Currently, EEGLAB cannot support some critical informations about the MEG sensors (the orientations of the gradiometers, mainly) so DIPFIT cannot be use with MEG signal.
 
-To prevent overlapping programming efforts, the DIPFIT version 2.0 plugin uses the forward and inverse methods that are already implemented in FieldTrips dipolefitting function. That means that you can use the DIPFIT graphical interface in EEGLAB, but you should have installed FieldTrip on your Matlab path.
+To prevent overlapping programming efforts, the DIPFIT version 2.0 plugin uses the forward and inverse methods that are already implemented in FieldTrips dipolefitting function. That means that you can use the DIPFIT graphical interface in EEGLAB, but you should have installed FieldTrip on your MATLAB path.
 
 ## Using other FieldTrip functions
 
 Besides using FieldTrip as the underlying "engine" for the DIPFIT plug-in of EEGLAB, it is also possible to export various aspects of your EEGLAB data structure completely to FieldTrip. Subsequently, you can continue your analysis of the data using the command-line FieldTrip functions
 
-Exporting data from EEGLAB to FieldTrip is done using the eeglab2fieldtrip function. That function takes an "EEG" Matlab structure as input, and will give a Matlab structure as output that is identical to the output format of one of the standard FieldTrip functions (e.g. timelockanalysis or freqanalysis).
+Exporting data from EEGLAB to FieldTrip is done using the eeglab2fieldtrip function. That function takes an "EEG" MATLAB structure as input, and will give a MATLAB structure as output that is identical to the output format of one of the standard FieldTrip functions (e.g. timelockanalysis or freqanalysis).

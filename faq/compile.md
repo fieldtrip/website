@@ -67,14 +67,14 @@ The peer distributed computing toolbox has a number of mex files that are compil
 
     peercompile
 
-Furthermore, for the different Unix platforms there is a command-line peerslave client. Since we provide an executable for the different platforms, the executables need to have a different name. We are following the Mathworks naming scheme for the mex files, i.e.
+Furthermore, for the different Unix platforms there is a command-line peerslave client. Since we provide an executable for the different platforms, the executables need to have a different name. We are following the MathWorks naming scheme for the mex files, i.e.
 
-    peerslave.maci    (32-bit OS X)
-    peerslave.maci64  (64-bit OS X)
+    peerslave.maci    (32-bit macOS)
+    peerslave.maci64  (64-bit macOS)
     peerslave.glnx86  (32-bit Linux)
     peerslave.glnxa64 (64-bit Linux)
 
-Compiling the peerslave command line executable is done on the Unix command line. However, since the compilation process involves linking the object files to the Matlab engine library, the location where your copy of Matlab is installed should be specified. Please edit the Makefile and change it so that the following settings are correct for your platform. Note that maci is used for 32-bit Matlab and maci64 is used for 64-bit Matlab.
+Compiling the peerslave command line executable is done on the Unix command line. However, since the compilation process involves linking the object files to the MATLAB engine library, the location where your copy of MATLAB is installed should be specified. Please edit the Makefile and change it so that the following settings are correct for your platform. Note that maci is used for 32-bit MATLAB and maci64 is used for 64-bit MATLAB.
 
     MATLABARCH = maci
     MATLABPATH = /Applications/MATLAB_R2009a.app
@@ -95,7 +95,7 @@ If you want to compile a 32 bit version on a 64 bit platform, e.g. if you are us
 
 ## Stand-alone executables in realtime directory
 
-We generally only provide a ''Makefile'' for the GNU toolchain. This should be enough to compile the code using GCC on Linux/Mac OS X and using MinGW and Cygwin on Windows. Please note that not all tools will compile on all platforms, and that you might need additional libraries or vendor-specific SDKs which we can't distribute (e.g., you can only compile the [emotiv2ft](/development/realtime/emotiv) application on Windows, and you need the Emotiv EDK).
+We generally only provide a ''Makefile'' for the GNU toolchain. This should be enough to compile the code using GCC on Linux/macOS and using MinGW and Cygwin on Windows. Please note that not all tools will compile on all platforms, and that you might need additional libraries or vendor-specific SDKs which we can't distribute (e.g., you can only compile the [emotiv2ft](/development/realtime/emotiv) application on Windows, and you need the Emotiv EDK).
 
 ## Fixing MEX-compilation with 32-bit variants of MATLAB running under 64-bit Linux
 

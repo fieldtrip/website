@@ -13,7 +13,7 @@ The simplest example for continuous data without any events or triggers is a sim
 
 ## Example use
 
-The easiest way to try out the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** example is by starting two Matlab sessions. In the first session you create some random signal and write it to the buffe
+The easiest way to try out the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** example is by starting two MATLAB sessions. In the first session you create some random signal and write it to the buffe
 
     cfg                = [];
     cfg.channel        = 1:10;                         % list with channel "names"
@@ -22,14 +22,14 @@ The easiest way to try out the **[ft_realtime_signalviewer](/reference/ft_realti
     cfg.target.dataset = 'buffer://localhost:1972';    % where to write the data
     ft_realtime_signalproxy(cfg)
 
-In the second Matlab session you start the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** and point it to the buffe
+In the second MATLAB session you start the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)** and point it to the buffe
 
     cfg                = [];
     cfg.blocksize      = 1;                            % seconds
     cfg.dataset        = 'buffer://localhost:1972';    % where to read the data
     ft_realtime_signalviewer(cfg)
 
-After starting the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)**, you should see a figure that updates itself every second. That figure contains the raw signal. You can also start the two Matlab sessions on two different computers, where on the second you would then point the reading function to the first computer.
+After starting the **[ft_realtime_signalviewer](/reference/ft_realtime_signalviewer)**, you should see a figure that updates itself every second. That figure contains the raw signal. You can also start the two MATLAB sessions on two different computers, where on the second you would then point the reading function to the first computer.
 
 ## MATLAB code
 
@@ -207,7 +207,7 @@ After starting the **[ft_realtime_signalviewer](/reference/ft_realtime_signalvie
           end
         end
 
-        % force Matlab to update the figure
+        % force MATLAB to update the figure
         drawnow
 
       end % if enough new samples

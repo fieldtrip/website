@@ -26,7 +26,7 @@ You can use the following snippet of code to get a quick overview of the templat
     end
 
 {% include markup/warning %}
-You can find the template 2-D layouts for plotting that are included in FieldTrip [here on Github](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout/).
+You can find the template 2-D layouts for plotting that are included in FieldTrip [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/template/layout/).
 {% include markup/end %}
 
 ## EASYCAP

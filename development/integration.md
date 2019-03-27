@@ -8,7 +8,7 @@ For the documentation, communication and development of the FieldTrip project we
 
 ### Jekyll
 
-We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents are hosted on [github](https://github.com/fieldtrip/website) and use a webhook to trigger the rebuild of the static html files on the webserver. The webserver is hosted as a virtual machine at the DCCN.
+We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents are hosted on [GitHub](https://github.com/fieldtrip/website) and use a webhook to trigger the rebuild of the static html files on the webserver. The webserver is hosted as a virtual machine at the DCCN.
 
 ### Dokuwiki - obsolete
 
@@ -16,41 +16,41 @@ In the past we used [dokuwiki](http://dokuwiki.org/) as the CMS system for our w
 
 ### Mailman
 
-We use this for a number of email discussion lists. It is hosted by C&CZ at http://mailman.science.ru.nl. Upon an email to the main FieldTrip mailing list, a tweet is send to http://twitter.com/fieldtriptoolbx.
+We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>. Upon an email to the main FieldTrip mailing list, a tweet is send to <http://twitter.com/fieldtriptoolbx>.
 
 ### Facebook
 
-We use http://facebook.com/fieldtriptoolbox to announce events and to post photo's and messages that relate to the social interaction between developers and users. The Facebook page is not used to provide support. People who like our Facebook page are displayed on the start page. Photo's from Facebook albums are often used in news messages on the start page.
+We use <http://facebook.com/fieldtriptoolbox> to announce events and to post photos and messages that relate to the social interaction between developers and users. The Facebook page is not used to provide support. People who like our Facebook page are displayed on the start page. Photos from Facebook albums are often used in news messages on the start page.
 
 ### Twitter
 
-We use http://twitter.com/fieldtriptoolbx to notify people about events. Website page edits, email messages to the discussion list and code commits are posted on the timeline.
+We use <http://twitter.com/fieldtriptoolbx> to notify people about events. Website page edits, email messages to the discussion list and code commits are posted on the timeline.
 
-### Youtube
+### YouTube
 
-We use a Youtube video channel to distribute video recordings of lectures. More details are [here](/video).
+We use a YouTube video channel to distribute video recordings of lectures. More details are [here](/video).
 
 ### Bugzilla
 
 We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us to maintain and distribute to-do lists and supports the follow up communication with users that report problems or suggestions. It is hosted at the DCCN and details can be found [here](/bugzilla)
 
-### Github
+### GitHub
 
-We use Git and Github for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
+We use Git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
 
-Following a push to github, a web hook is triggered. The code for that is at http://github.com/fieldtrip/webhook and is running on a dedicated (Raspberry Pi) server.
+Following a push to github, a web hook is triggered. The code for that is at <http://github.com/fieldtrip/webhook> and is running on a dedicated (Raspberry Pi) server.
 
 ### Bitbucket
 
-A copy of the git repository of the FieldTrip software is maintained on BitBucket, although the primary site is on [Github](#Github).
+A copy of the git repository of the FieldTrip software is maintained on BitBucket, although the primary site is on [GitHub](#GitHub).
 
 ### SVN - obsolete
 
 We used to do the development with Subversion (also known as SVN). As of February 2016 we have moved all development over to git and github.
 
-### Googlecode - obsolete
+### Google Code - obsolete
 
-We used to maintain a copy of the SVN repository with the software on [Google code](http://code.google.com/p/fieldtrip) but in 2015 Google stopped support for it . Right now there is only a link to the FieldTrip website.
+We used to maintain a copy of the SVN repository with the software on [Google Code](http://code.google.com/p/fieldtrip) but in 2015 Google stopped support for it . Right now there is only a link to the FieldTrip website.
 
 ### Sourceforge - obsolete
 

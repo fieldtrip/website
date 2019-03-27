@@ -196,7 +196,7 @@ The **[ft_realtime_classification](/reference/ft_realtime_classification)** func
         semilogy([instantaneous(:) cumulative(:)]/hdr.Fs, '.');
         title('acceleration factor');
         legend({'instantaneous', 'cumulative'});
-        % force Matlab to update the figure
+        % force MATLAB to update the figure
         drawnow
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

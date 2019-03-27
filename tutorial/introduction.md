@@ -88,7 +88,7 @@ How to make analysis protocols for different types of analysis using the FieldTr
 
 ### Executing FieldTrip commands from MATLAB
 
-FieldTrip is composed of a collection of scripts running in MATLAB. The toolbox is platform independent (i.e. can run under Linux, Mac OS X and Windows). To start MATLAB on Linux at the DCC
+FieldTrip is composed of a collection of scripts running in MATLAB. The toolbox is platform independent (i.e. can run under Linux, macOS and Windows). To start MATLAB on Linux at the DCC
 
     matlab2014b (or use another version number, e.g. 2016a)
 

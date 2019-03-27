@@ -17,9 +17,9 @@ A feature or method marked as deprecated is one which is considered obsolete, an
 
 ## Introduction
 
-FieldTrip is developed in a continuous fashion, i.e. there are no fixed releases, instead it is continuously being updated. Usually the changes to FieldTrip result in more functionality. Sometimes it is also neccessary to remove a function or some functionality in FieldTrip. The reasons for it can be that it is replaced by a better function, that the name has changed for consistency with other FieldTrip functions, or that the implementation was buggy and too difficult to fix.
+FieldTrip is developed in a continuous fashion, i.e. there are no fixed releases; instead it is continuously being updated. Usually the changes to FieldTrip result in more functionality. Sometimes it is also neccessary to remove a function or some functionality in FieldTrip. The reasons for it can be that it is replaced by a better function, that the name has changed for consistency with other FieldTrip functions, or that the implementation was buggy and too difficult to fix.
 
-Typically we will try to keep FieldTrip backward compatible whenever we replace a function or an option with something else. However, it is not possible to maintain backward compatibility for ever. That is why specific functionality is _deprecated_. This page tries to give an overview of deprecated functions and/or functionality.
+Typically we will try to keep FieldTrip backward compatible whenever we replace a function or an option with something else. However, it is not possible to maintain backward compatibility forever. That is why specific functionality is _deprecated_. This page tries to give an overview of deprecated functions and/or functionality.
 
 The [code development guidelines](/development/guideline/code?&#document_deprecated_source_code) explain how you (as developer) should deal with deprecating functions, options or other pieces of functionality.
 
@@ -27,11 +27,11 @@ The [code development guidelines](/development/guideline/code?&#document_depreca
 
 February 2015:
 
-- **ft_analysisprotocol** (ft_analysispipeline has replaced this function, see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2852)
+- **ft_analysisprotocol** (ft_analysispipeline has replaced this function; see <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2852>)
 
 July 2013:
 
-- **ft_freqcomparison** (ft_math can do the same and more, see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2222)
+- **ft_freqcomparison** (ft_math can do the same and more; see <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2222>)
 
 October 2011: the following functions were already deprecated and I moved them from the main directory to fieldtrip/compat.
 
@@ -49,7 +49,7 @@ October 2010: the following functions will be substituted by a single implementa
 - **ft_artifact_jump**
 - **ft_artifact_muscle**
 
-January 2010: Because of switching to the new low-level plotting functions in the plotting toolbox topoplot.m has become deprecated. Nearly all of it's functionality is now in topoplotER/TFR.
+January 2010: Because of switching to the new low-level plotting functions in the plotting toolbox topoplot.m has become deprecated. Nearly all of its functionality is now in topoplotER/TFR.
 
 - **topoplot.m**
 
@@ -83,13 +83,13 @@ January 2006: The XXXvolume functions have all been renamed to volumeXXX to make
 - **normalisevolume.m** has been renamed to volumenormalise
 - **segmentvolume.m** has been renamed to volumesegment
 
-January 2006: Some of the artifact detection functions have been completely rewritten. Although the new functions should have the same behaviour, the exact same result cannot be guaranteed. To allow people to use the old implementations, they are stil available:
+January 2006: Some of the artifact detection functions have been completely rewritten. Although the new functions should have the same behavior, the exact same result cannot be guaranteed. To allow people to use the old implementations, they are stil available:
 
 - **artifact_eog_old.m** is the old implementation of artifact_eog
 - **artifact_jump_old.m** is the old implementation of artifact_jump
 - **artifact_muscle_old.m** is the old implementation of artifact_muscle
 
-September 2005: The list of trial functions below all predate the generic event handling that has been implemented using read_fcdc_event. These trial functions are file-format specific, and therefore deprecated.
+September 2005: The trial functions in the list below all predate the generic event handling that has been implemented using read_fcdc_event. These trial functions are file-format specific, and therefore deprecated.
 
 The idea underlying the new implementation for trialfuns is to separate the "hardware knowledge" for getting trigger information out of the file (in _read_fcdc_event.m_) from the "experiment knowledge" in determining the sequence of trigger events that is interesting (in the trialfun). There is one general trial function _trialfun_general.m_ that can be used for selecting a segment around a trigger. A more elaborate explanation and example code is given [here](/example/making_your_own_trialfun_for_conditional_trial_definition).
 
