@@ -11,7 +11,7 @@ We use the FieldTrip dashboard in development and for maintaining the quality of
 If you suspect that there is an problem with the FieldTrip code, the best way for you to report is is to post it on [github](https://github.com/fieldtrip/fieldtrip/issues) and to contribute a (small) test script that helps us to reproduce the problem.
 {% include markup/end %}
 
-All functions in the test directory are executed regularly. If there are problems with the test scripts, an email sent to the main developers.
+All functions in the test directory are executed regularly using the FieldTrip [dashboard scripts](https://github.com/fieldtrip/dashboard) that are running in a cron job on the [DCCN compute cluster](https://dccn-hpc-wiki.readthedocs.io). If there are problems with any of the test scripts, an email is sent to the main developers.
 
 You can check the results of the test scripts yourself using the **[ft_test](/reference/ft_test)** function like this
 

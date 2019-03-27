@@ -8,9 +8,9 @@ tags: [guidelines, development]
 When you add documentation, please consider the following documentation guidelines to keep it consistent with other documentation and to facilitate cross-linking.
 
 - FieldTrip should be written with capital "F" and capital "T"
-- All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to reference documentation: i.e. **[ft_preprocessing](/reference/ft_preprocessing)**
+- All FieldTrip functions should be written in the text made **bold**, without .m, and with a link to the reference documentation: i.e. **[ft_preprocessing](/reference/ft_preprocessing)**
 - When you add a new page, please give it relevant [tags](#how_to_add_tags).
-- If you see something that needs to be fixed in the documentation, add a FIXME comment (write fixme in capital letters), and also [add the tag](#how_to_add_tags) 'fixme' at the top of the page.
+- If you see something that needs to be fixed in the documentation, report it as issue on the [github page for the website](https://github.com/fieldtrip/website/issues)
 - Please structure new tutorials [in the following way](#how_to_structure_a_tutorial).
 - Please give clear [names for example data](</#How to name example data>).
 - If you refer to file formats using the extension, please do it like .txt, .dat or .ext in general.
@@ -55,15 +55,34 @@ When using example data in tutorials, please use consistent naming. That i
 
 - save the data as a mat-file with the same name (e.g. save the variable freqFIC to the file freqFIC.mat)
 
+## How to add tags?
+
+At the top of each markdown page there is a [Jekyll front-matter](https://jekyllrb.com/docs/front-matter/) section like this
+
+```text
+---
+title: this is the title, it should also be the first top-level heading
+tags: [tag1, tag2]
+---
+```
+
+You can add tags to that list; these will be automatically shown at the top of each page on the actual website. The corresponding page with the overview of all pages that share the same tag (like [this](/tag/guidelines/)) will be automatically constructed upon the next build of the website. To increase the value of the tags, you should choose tags that are also used on other pages, and you should not add too many tags to a single page. Please use only lower-case letters in the tags, and use a minus sign to separate multiple words that are combined in a single tag (like [meg-language](/tag/meg-language/)).
+
 ## How to add figures?
 
 The preferred format for figures on the website is the PNG format. Also figures from MATLAB and screenshots should preferably be exported in the PNG format. If you want to edit the MATLAB figure, you should first export the figure to EPS or AI, open the figure in Adobe Illustrator and make the changes, and save it to PNG.
 
-We also considered SVG, which is a standardized scalable vector graphics format. This would allow other people to download the figure, modify it, and upload the changed figure without loss of quality. However, SVG had too many problems rendering correctly in different browsers. Making schematic figures in SVG is easy in Office Word or Office Powerpoint using their default shapes under the _insert_ tab:
+Figures should be added to the `assets/img` directory of the website repository. Please do not upload very large binary files, such as PDFs, but send them to Robert for static inclusion on the website. Figures should not be included in the standard markdown style, since that does not allow the specification of the size and does not allow zooming in. Instead, figures should be included using a piece of custom [Liquid code](https://shopify.github.io/liquid/) which gets translated into html at the moment the website is rebuilt.
+
+```ruby
+{% include image src="/assets/img/development/guideline/documentation/excel-drawing-tools-2007-2010.jpg" width="200" %}
+```
+
+We also considered SVG, which is a standardized scalable vector graphics format. This would allow other people to download the figure, modify it, and upload the changed figure without loss of quality. However, SVG had too many problems rendering correctly in different browsers.
+
+Making schematic figures in SVG is easy in Office Word or Office Powerpoint using their default shapes under the _insert_ tab. When you are done making the figure just select all text and images and copy-paste them it in Adobe Illustrator to save as SVG.
 
 {% include image src="/assets/img/development/guideline/documentation/excel-drawing-tools-2007-2010.jpg" width="200" %}
-
-When you are done making the figure just select all text and images and copy-paste them it in Adobe Illustrator to save as SVG.
 
 ## What colors to use
 
@@ -73,4 +92,4 @@ If you make schematic figures yourself we suggest the default Office 2007 color 
 
 ## Suggested further reading
 
-Please also consider the [code guidelines](/development/guideline/code) when making contributions to the FieldTrip project.
+Please also consider the [code guidelines](/development/guideline/code) when making contributions to FieldTrip.
