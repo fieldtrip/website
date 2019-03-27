@@ -6,7 +6,7 @@ title: Integration between tools
 
 For the documentation, communication and development of the FieldTrip project we use various tools. This page lists the tools and the integration that we have implemented between them.
 
-### Dokuwiki
+### Dokuwiki - obsolete
 
 We use [dokuwiki](http://dokuwiki.org/) as the CMS system on which our website is implemented. The CMS is hosted on a virtual machine at the DCCN. Upon an edit of the wiki, a tweet is send to http://twitter.com/fieldtriptoolbx.
 
@@ -32,7 +32,7 @@ We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us t
 
 ### Github
 
-We use Git and Github for version control of the software and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
+We use Git and Github for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
 
 Following a push to github, a web hook is triggered. The code for that is at http://github.com/fieldtrip/webhook and is running on a dedicated (Raspberry Pi) server.
 
