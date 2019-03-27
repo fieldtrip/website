@@ -4,6 +4,9 @@
 - name:  Details on the multimodal faces dataset
   link:  /tutorial/mmfaces
 
+- name:  MEG-UK 2015 meeting
+  link:  /workshop/meg-uk-2015
+
 - name:  FieldTrip beamformer demo
   link:  /workshop/meg-uk-2015/fieldtrip-beamformer-demo
 
@@ -12,7 +15,4 @@
 
 - name:  FieldTrip stats demo
   link:  /workshop/meg-uk-2015/fieldtrip-stats-demo
-
-- name:  MEG-UK 2015 meeting
-  link:  /workshop/meg-uk-2015
 
