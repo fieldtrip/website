@@ -62,7 +62,7 @@ Generally, please note that no matter which platform, there are three different 
 
 - ''.../buffer/matlab'' contains the sources of the MEX file ''buffer.mex???''. Since Matlab installations vary so much, we rely on the command ''mex'' to compile this part **inside** Matlab. As of October 2010, the MEX files are not linked against ''libbuffer'' anymore, but rather the same source files are directly pulled in using ''mex''.
 
-The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, macOS and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, Mac macOS, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and macOS is pretty straight forward while doing that on Windows is a bit more tricky.
+The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, macOS and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, macOS, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and macOS is pretty straight forward while doing that on Windows is a bit more tricky.
 
 ### Linux and macOS
 
