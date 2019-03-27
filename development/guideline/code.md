@@ -267,42 +267,36 @@ Since we support FieldTrip on all currently popular platforms regarding hardware
 Ensuring that all executables can co-exist on all platforms (and especially on the unix base platforms) means that they should have unique file names. The choice for that is based on the specification according to the MATLAB function "computer", i.e.
 
     >> help computer
-     COMPUTER Computer type.
-        C = COMPUTER returns string C denoting the type of computer
-        on which MATLAB is executing. Possibilities ar
+    computer Computer type.
+      C = computer returns character vector C denoting the type of computer
+      on which MATLAB is executing. Possibilities are:
+   
+                                                ISPC ISUNIX ISMAC ARCHSTR    
+      64-Bit Platforms
+        PCWIN64  - Microsoft Windows on x64       1     0     0   win64
+        GLNXA64  - Linux on x86_64                0     1     0   glnxa64
+        MACI64   - Apple Mac OS X on x86_64       0     1     1   maci64
+    
+      ARCHSTR = computer('arch') returns character vector ARCHSTR which is
+      used by the MEX command -arch switch.
+   
+      [C,MAXSIZE] = computer returns integer MAXSIZE which 
+      contains the maximum number of elements allowed in a matrix
+      on this version of MATLAB.
+   
+      [C,MAXSIZE,ENDIAN] = computer returns either 'L' for
+      little endian byte ordering or 'B' for big endian byte ordering.
+   
+      See also ispc, isunix, ismac.
 
-                                                  ISPC   ISUNIX   ISMAC
-        32-Bit Platforms
-          PCWIN    - Microsoft Windows on x86       1       0       0
-          GLNX86   - Linux on x86                   0       1       0
-          MACI     - Apple Mac OS X on x86          0       1       1
-
-        64-Bit Platforms
-          PCWIN64  - Microsoft Windows on x64       1       0       0
-          GLNXA64  - Linux on x86_64                0       1       0
-          SOL64    - Sun Solaris on SPARC           0       1       0
-          MACI64   - Apple Mac OS X on x86_64       0       1       1
-
-        [C,MAXSIZE] = COMPUTER also returns integer MAXSIZE which
-        contains the maximum number of elements allowed in a matrix
-        on this version of MATLAB.
-
-        [C,MAXSIZE,ENDIAN] = COMPUTER also returns either 'L' for
-        little endian byte ordering or 'B' for big endian byte ordering.
-
-        HPUX, HP700, ALPHA, IBM_RS, SGI, and Mac for PowerPC are no
-        longer supported.
-
-        See also ispc, isunix, ismac.
-
-The binaries for the different versions of the unix platforms (Linux, OS X) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
+The binaries for the different versions of the unix platforms (Linux, macOS) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
 
 - buffer.exe for Microsoft Windows
 - buffer.glnx86 for 32-bit Linux
 - buffer.glnxa64 for 64-bit Linux
-- buffer.mac for 32-bit Mac OS X on PPC hardware
-- buffer.maci for 32-bit Mac OS X on Intel hardware
-- buffer.maci64 for 64-bit Mac OS X on Intel hardware
+- buffer.mac for 32-bit macOS on PPC hardware
+- buffer.maci for 32-bit macOS on Intel hardware
+- buffer.maci64 for 64-bit macOS on Intel hardware
 
 Note that on Windows the executable is required to have the file extension "exe". In general it is sufficient to only provide a 32-bit version of the executable. For 64-bit Windows there is no convention yet.
 
@@ -356,7 +350,7 @@ In most cases the mex file source code should be located in fieldtrip/src. The `
 
 If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
 
-For Unix-like platforms (Linux and OSX), it it also possible to compile all mex files from the Unix shell command line interface (on OSX called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
+For Unix-like platforms (Linux and macOS), it it also possible to compile all mex files from the Unix shell command line interface (on macOS called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
 
     make mex MATLAB=/usr/bin/matlab
 
@@ -364,16 +358,16 @@ would build for Matlab using the binary in ''/usr/bin/matlab'' (a typical locati
 
     make mex MATLAB=/Applications/MATLAB_R2015a.app/bin/matlab
 
-would use Matlab 2015a on OSX, and
+would use Matlab 2015a on macOS, and
 
     make mex OCTAVE=/Applications/Octave.app/Contents/Resources/usr/bin/octave
 
-would build for Octave on OSX.
+would build for Octave on macOS.
 If the binary is already in the search path (for example, ''which matlab'' prints the location of Matlab), a shortened form with only the binary name itself can be used as in
 
     make mex MATLAB=matlab
 
-Different platforms have different extensions; for example, ''.mexmaci64'' for Matlab OSX 64 bit intel, ''.mexw32'' for Matlab MS Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determine the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
+Different platforms have different extensions; for example, ''.mexmaci64'' for Matlab macOS 64 bit intel, ''.mexw32'' for Matlab MS Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determine the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
 
 Below are more details on the compilation guidelines on different platforms.
 
@@ -395,11 +389,11 @@ You should use gcc, but further details are not known at the moment.
 
 Most development at the Donders is done on CentOS release 5.2 and the default gcc version 4.1.2. Further details are not known at the moment.
 
-### Apple OS X 32 bit
+### Apple macOS 32 bit
 
-MATLAB is not supported on 32 bit OS X any more.
+MATLAB is not supported on 32 bit macOS any more.
 
-### Apple OS X 64 bit
+### Apple macOS 64 bit
 
 You should use the gcc compiler that is included in the XCode package. Further details are not known at the moment.
 

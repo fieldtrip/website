@@ -364,4 +364,4 @@ The next step of workshop will be the source reconstruction among different head
 
 ---
 
-This tutorial was last tested on 12-06-2018 by Simon Homölle on OS X El Capitan 10.11.5, Matlab 2015b.
+This tutorial was last tested on 12-06-2018 by Simon Homölle on macOS El Capitan 10.11.5, Matlab 2015b.

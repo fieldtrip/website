@@ -17,7 +17,7 @@ The OpenMEEG binaries are **not** included in the FieldTrip release, but the Ope
 
 ## Installing OpenMEEG
 
-OpenMEEG is available on Linux, Mac OS X and Windows.
+OpenMEEG is available on Linux, macOS and Windows.
 A 64bit machine is preferred due to the computational load of M/EEG forward modeling using the BEM.
 
 OpenMEEG can be downloaded from <https://gforge.inria.fr/frs/?group_id=435>.
@@ -53,7 +53,7 @@ Installation procedure:
 - Choose to agree the license terms
 - Select option to add OpenMEEG to the Windows path
 
-### For Mac OS X
+### For macOS
 
 - Run the installer
 - Choose to agree the license terms
@@ -66,7 +66,7 @@ The source code of OpenMEEG can be accessed by SVN
 
 OpenMEEG is build with CMake on all platforms.
 
-It only depends on blas/lapack or atlas on Linux and Mac OS X and the Intel MKL on Windows.
+It only depends on blas/lapack or atlas on Linux and macOS and the Intel MKL on Windows.
 
 ## Make sure that it works
 

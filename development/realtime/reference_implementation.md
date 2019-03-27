@@ -52,7 +52,7 @@ Given the symmetry in the design, it is possible to have a standalone buffer, i.
 
 ## Compiling the code
 
-Building the source code on different platforms can appear challenging. The buffer has been successfully compiled and tested on Linux (32 and 64 bit), Windows (32 bit) and Mac OS X (32 bit PowerPC and 32 and 64 bit Intel platform). We try to facilitate the compilation of the source code by supplying various build methods.
+Building the source code on different platforms can appear challenging. The buffer has been successfully compiled and tested on Linux (32 and 64 bit), Windows (32 bit) and macOS (32 bit PowerPC and 32 and 64 bit Intel platform). We try to facilitate the compilation of the source code by supplying various build methods.
 
 Generally, please note that no matter which platform, there are three different parts of the code, which are compiled in different steps.
 
@@ -62,11 +62,11 @@ Generally, please note that no matter which platform, there are three different 
 
 - ''.../buffer/matlab'' contains the sources of the MEX file ''buffer.mex???''. Since Matlab installations vary so much, we rely on the command ''mex'' to compile this part **inside** Matlab. As of October 2010, the MEX files are not linked against ''libbuffer'' anymore, but rather the same source files are directly pulled in using ''mex''.
 
-The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, OS X and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, Mac OSX, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and OSX is pretty straight forward while doing that on Windows is a bit more tricky.
+The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, macOS and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, macOS, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and macOS is pretty straight forward while doing that on Windows is a bit more tricky.
 
-### Linux and Mac OS X
+### Linux and macOS
 
-On Linux and OS X almost all dependencies should be pre-installed. You need a build-environment. This should be available by default on OSX. On Linux it can be installed by installing a package called something like "build-essentials", which is probably available through the distribution's package-system (like apt on debian).
+On Linux and macOS almost all dependencies should be pre-installed. You need a build-environment. This should be available by default on macOS. On Linux it can be installed by installing a package called something like "build-essentials", which is probably available through the distribution's package-system (like apt on debian).
 
 Compiling the buffer library should simply work by changing into the directory ''...realtime/buffer/src'' and typing ''make'', with the expected outcome of a new file ''libbuffer.a''. You can also build the demos and test applications by changing into ''...realtime/buffer/test'' and typing ''make'' again.
 
@@ -102,7 +102,7 @@ using the same platform. If you get strange build errors, you might try to link 
 
 #### Building with cmake (probably outdated)
 
-On OSX the cmake software has to be downloaded and installed from [here](http://www.cmake.org), or using FinkCommander.
+On macOS the cmake software has to be downloaded and installed from [here](http://www.cmake.org), or using FinkCommander.
 
 In the top-level directory of the source-tree (the place where you see e.g. the "src" folder) create a new directory called e.g. "build" and enter it. Now issue ''cmake ../''. This checks for dependencies. If cmake complains about not finding something, it must be installed first.
 
@@ -118,7 +118,7 @@ On 32-bit Windows platforms, Matlab ships with the LCC compiler, which can be us
 
 #### MinGW and Gnumex
 
-[MinGW](http://www.mingw.org/) is a port of GCC that produces executables without special dependencies (or rather, they only depend on the Microsoft C run-time which is present on any Windows system). For compiling the code in both the ''src'' and ''test'' directories, you can just use the same ''Makefile'' as the one on Linux and MacOS X.
+[MinGW](http://www.mingw.org/) is a port of GCC that produces executables without special dependencies (or rather, they only depend on the Microsoft C run-time which is present on any Windows system). For compiling the code in both the ''src'' and ''test'' directories, you can just use the same ''Makefile'' as the one on Linux and macOS.
 
 Unfortunately, Matlab doesn't recognise MinGW by itself, so for compiling the MEX-file, you will need to get [Gnumex](http://gnumex.sourceforge.net/). This is a small collection of tools that wrap the MinGW utilities for usage by the ''mex'' command. Both MinGW and Gnumex are relatively easy to install, and you should stick to the defaults (in particular, please place MinGW in ''C:\MinGW''). You should also put ''C:\MinGW\bin'' into your path. After installing, you do the followin
 

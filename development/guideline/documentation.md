@@ -70,7 +70,7 @@ You can add tags to that list; these will be automatically shown at the top of e
 
 ## How to add figures?
 
-The preferred format for figures on the website is the PNG format. Also figures from MATLAB and screenshots should preferably be exported in the PNG format. If you want to edit the MATLAB figure, you should first export the figure to EPS or AI, open the figure in Adobe Illustrator and make the changes, and save it to PNG.
+The preferred format for figures on the website is the PNG format. Also figures from MATLAB and screenshots should preferably be exported in the PNG format. If you want to edit the MATLAB figure, you should first export the figure to EPS or AI, open the figure in Adobe Illustrator or Inkscape and make the changes, and save it to PNG.
 
 Figures should be added to the `assets/img` directory of the website repository. Please do not upload very large binary files, such as PDFs, but send them to Robert for static inclusion on the website. Figures should not be included in the standard markdown style, since that does not allow the specification of the size and does not allow zooming in. Instead, figures should be included using a piece of custom [Liquid code](https://shopify.github.io/liquid/) which gets translated into html at the moment the website is rebuilt.
 

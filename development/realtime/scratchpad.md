@@ -124,7 +124,7 @@ example, the gradiometer positions are not mentioned in that page.
 
 ### Timestamps
 
-We are missing discussion on multi-platform (Windows+Linux+OSX) issues, due to
+We are missing discussion on multi-platform (Windows+Linux+macOS) issues, due to
 different resolutions available on each platform
 (http://msdn.microsoft.com/en-us/library/ms724397). In the situation where
 application and FieldTrip server are located on different PC's, how is the time
