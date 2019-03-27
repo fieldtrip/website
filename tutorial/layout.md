@@ -5,7 +5,7 @@ tags: [tutorial, plot, eeg, meg, ecog, layout]
 
 # Specifying the channel layout for plotting
 
-The 2-D channel layout is a representation of the channel positions, together with the outline of the head or other anatomical features, that allows data to be plotted in a topographically consistent manner on a 2-D computer screen (or piece of paper). The 2-D channel layout is _not an exact representation_ of the channel positions, just a projection for the purpose of visualization.
+The 2D channel layout is a representation of the channel positions, together with the outline of the head or other anatomical features, that allows data to be plotted in a topographically consistent manner on a 2D computer screen (or piece of paper). The 2D channel layout is _not an exact representation_ of the channel positions, just a projection for the purpose of visualization.
 
 ## Constructing a layout
 
@@ -38,7 +38,7 @@ Sometimes a schematic layout is more convenient, since it "flattens" the head an
 
 Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systemsof the same type (e.g. CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layout files](/template/layout).
 
-For future OPM-based MEG systems it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2-D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3-D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](/reference/ft_prepare_layout)** to make a 3-D layout.
+For future OPM-based MEG systems it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](/reference/ft_prepare_layout)** to make a 3D layout.
 
 ### Creating a layout from sensor positions
 
@@ -338,7 +338,7 @@ but the color-coded interpolated values on the shafts should be interpreted with
 
 ## Functions that make use of a 2D layout for visualization
 
-Layouts are used in all 2-D plotting functions in FieldTrip:
+Layouts are used in all 2D plotting functions in FieldTrip:
 
 - **[ft_multiplotER](/reference/ft_multiplotER)**
 - **[ft_multiplotTFR](/reference/ft_multiplotTFR)**
