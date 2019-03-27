@@ -45,4 +45,4 @@ There is also a Linux shell script with the name peerslave, which is designed to
 
 Please type on the unix command line
 peerslave.arch --help
-(where arch is glnx86, glnxa64 or maci) to get an overview of all the options. In principle most of the options have the same behaviour as the MATLAB **[peerslave](/reference/peerslave)** function.
+(where arch is glnx86, glnxa64 or maci) to get an overview of all the options. In principle most of the options have the same behavior as the MATLAB **[peerslave](/reference/peerslave)** function.

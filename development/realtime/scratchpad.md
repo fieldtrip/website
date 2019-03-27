@@ -163,7 +163,7 @@ said to the approach of driving people into a guaranteed safe solution by
 combining both PUT_DAT and PUT_EVT operations.
 
 Viewed from an online perspective, polling of events can already be achieved
-based on the nevents field returned by the header and assuming fifo behaviour.
+based on the nevents field returned by the header and assuming fifo behavior.
 In the offline case, adding index information to the events is useful since it
 reflects the incoming following order of events, which may differ from the
 ordering based on the sample field.

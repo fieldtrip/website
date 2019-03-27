@@ -1,4 +1,11 @@
 #!/bin/bash
+#
+# This script parses all pages for tags and creates an overview page for each tag.
+# It results in an update of _data/tag/*.yml and of tag/*.md
+#
+# Following execution of this script, you should commmit the tag pages that have
+# been changed.
+
 
 if [[ ! -e _config.yml ]] ; then echo ERROR this should be executed in the toplevel directory ;  exit 1 ; fi
 
@@ -31,4 +38,3 @@ for TAG in `cat ${TAGFILE}` ; do
     echo ''                >> _data/tag/$TAG.yml
   done
 done
-

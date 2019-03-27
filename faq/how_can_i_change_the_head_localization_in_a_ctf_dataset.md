@@ -25,7 +25,7 @@ This assumes a pre-run head localization was performed but, if not, just specify
 
 ## Changing the head localization
 
-Using the CTF command line utility changeHeadPos, you can change the head coil positions in the dataset. The default behaviour is to read the dataset's .hc file and update it's sensor resources using the values in the .hc file. There are also options to swap or modify the head coil positions. For instance, when you want to change the swap the positions of the left ear coil with the right ear head coil, this can be achieved with:
+Using the CTF command line utility changeHeadPos, you can change the head coil positions in the dataset. The default behavior is to read the dataset's .hc file and update it's sensor resources using the values in the .hc file. There are also options to swap or modify the head coil positions. For instance, when you want to change the swap the positions of the left ear coil with the right ear head coil, this can be achieved with:
 
 changeHeadPos -swap N R L dataset.ds
 
