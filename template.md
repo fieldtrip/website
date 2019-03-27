@@ -9,7 +9,7 @@ The FieldTrip release comes with a number of templates to facilitate data proces
 
 These templates are based on "data", where data should be seen in a broad sense. Most of the templates pertain to geometrical data, for example electrode layouts and head models. These depend on the original assessment (i.e. measurement) of the geometry.
 
-These pages on the wiki describe the templates and how they are constructed. For some templates there have historically been different versions, which we also try to get represented here.
+These pages on the website describe the templates and how they are constructed. For some templates there have historically been different versions, which we also try to get represented here.
 
 The following categories of templates exis
 

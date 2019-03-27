@@ -167,7 +167,7 @@ All channels are squeezed in a circle and the nose and ears are indicated at the
 
 {% include image src="/assets/img/tutorial/plotting/fig12.png" %}
 
-Although many tutorials elsewhere on the FieldTrip wiki are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
+Although many tutorials elsewhere on the FieldTrip website are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
 
     cfg = [];
     cfg.layout = 'CTF151_helmet.mat'; % note that it is a binary .mat file, not an ascii .lay file

@@ -11,7 +11,7 @@ For a long time we have used our own [Bugzilla](http://bugzilla.fieldtriptoolbox
 
 To report an issue on GitHub you have to [sign up for an account](https://github.com/join) on GitHub. This allows us to follow up on reported issues and keep you automatically updated on the status; i.e., you will get an automatic email whenever someone works on your request.
 
-## Use bugzilla to report an issue (old)
+## Use bugzilla to report an issue (not recommended any more)
 
 To report an issue on Bugzilla or to add yourself to one of the existing bugs, you have to create a [Bugzilla account](http://bugzilla.fieldtriptoolbox.org/createaccount.cgi) with your email address as the user name. Your email address will not be visible to external visitors and will only be used to ask for additional information or to report when the bug is resolved.
 

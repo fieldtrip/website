@@ -17,7 +17,7 @@ A high-level FieldTrip function always should behave like this
 
 where some functions might not need _inputargs_ and some functions might not return _outputargs_.
 
-The function should always start with a help section, that explains the purpose of the function, the type of input data that it expects, the type of output data that it will produce and the configurable options that the user has to control the behaviour of the function.
+The function should always start with a help section, that explains the purpose of the function, the type of input data that it expects, the type of output data that it will produce and the configurable options that the user has to control the behavior of the function.
 
 ### The best-practice example function
 
@@ -267,42 +267,36 @@ Since we support FieldTrip on most currently popular platforms regarding hardwar
 Ensuring that all executables can co-exist on all platforms (and especially on the Unix base platforms) means that they should have unique file names. The choice for that is based on the specification according to the MATLAB function "computer", i.e.
 
     >> help computer
-     COMPUTER Computer type.
-        C = COMPUTER returns string C denoting the type of computer
-        on which MATLAB is executing. Possibilities ar
+    computer Computer type.
+      C = computer returns character vector C denoting the type of computer
+      on which MATLAB is executing. Possibilities are:
+   
+                                                ISPC ISUNIX ISMAC ARCHSTR    
+      64-Bit Platforms
+        PCWIN64  - Microsoft Windows on x64       1     0     0   win64
+        GLNXA64  - Linux on x86_64                0     1     0   glnxa64
+        MACI64   - Apple Mac OS X on x86_64       0     1     1   maci64
+    
+      ARCHSTR = computer('arch') returns character vector ARCHSTR which is
+      used by the MEX command -arch switch.
+   
+      [C,MAXSIZE] = computer returns integer MAXSIZE which 
+      contains the maximum number of elements allowed in a matrix
+      on this version of MATLAB.
+   
+      [C,MAXSIZE,ENDIAN] = computer returns either 'L' for
+      little endian byte ordering or 'B' for big endian byte ordering.
+   
+      See also ispc, isunix, ismac.
 
-                                                  ISPC   ISUNIX   ISMAC
-        32-Bit Platforms
-          PCWIN    - Microsoft Windows on x86       1       0       0
-          GLNX86   - Linux on x86                   0       1       0
-          MACI     - Apple Mac OS X on x86          0       1       1
-
-        64-Bit Platforms
-          PCWIN64  - Microsoft Windows on x64       1       0       0
-          GLNXA64  - Linux on x86_64                0       1       0
-          SOL64    - Sun Solaris on SPARC           0       1       0
-          MACI64   - Apple Mac OS X on x86_64       0       1       1
-
-        [C,MAXSIZE] = COMPUTER also returns integer MAXSIZE which
-        contains the maximum number of elements allowed in a matrix
-        on this version of MATLAB.
-
-        [C,MAXSIZE,ENDIAN] = COMPUTER also returns either 'L' for
-        little endian byte ordering or 'B' for big endian byte ordering.
-
-        HPUX, HP700, ALPHA, IBM_RS, SGI, and Mac for PowerPC are no
-        longer supported.
-
-        See also ispc, isunix, ismac.
-
-The binaries for the different versions of the Unix platforms (Linux, OS X) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
+The binaries for the different versions of the unix platforms (Linux, macOS) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
 
 - buffer.exe for Microsoft Windows
 - buffer.glnx86 for 32-bit Linux
 - buffer.glnxa64 for 64-bit Linux
-- buffer.mac for 32-bit Mac OS X on PPC hardware
-- buffer.maci for 32-bit Mac OS X on Intel hardware
-- buffer.maci64 for 64-bit Mac OS X on Intel hardware
+- buffer.mac for 32-bit macOS on PPC hardware
+- buffer.maci for 32-bit macOS on Intel hardware
+- buffer.maci64 for 64-bit macOS on Intel hardware
 
 Note that on Windows the executable is required to have the file extension "exe". In general it is sufficient to only provide a 32-bit version of the executable. For 64-bit Windows there is no convention yet.
 
@@ -357,11 +351,11 @@ To facilitate supporting older MATLAB versions, below we list some known incompa
 
 FieldTrip has to run on a large variety of platforms, with different operating systems and MATLAB versions. Therefore, we try to keep the compiled mex files reasonably consistent. Since mex files are added in the course of the development, and we don't want to recompile them too often, we cannot be too strict on the compile environment. If possible you should compile the mex files with a MATLAB version that is two years old, i.e. not the latest, but also not a version that is very old.
 
-In case the mex file is used in multiple modules and hence represented (by means of fieldtrip/bin/synchronize-private.sh) in multiple private directories, the source code should be located in fieldtrip/src. If a mex file is very simple and does not have external dependencies, it should also be located in fieldtrip/src. Having the mex file source code in fieldtrip/src facilitates recompilation on all platforms with **[ft_compile_mex](/reference/ft_compile_mex)**.
+In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` BASH script is used to copy the updated mex files to all required (private) directories.
 
-If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the source code for the mex file source code should be present in that specific directory and should include instructions and a compile script in that directory.
+If the mex file is part of a collection of related mex files and only present on a single location (e.g. fieldtrip/@config/private), the mex file source code should be present in _that_ specific directory together with a compilation script.
 
-For Unix-like platforms (Linux and OSX), it it also possible to compile all mex files from the Unix shell command line interface (on OSX called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with MATLAB and Octave, and requires providing the path to the MATLAB or octave binary. For example,
+For Unix-like platforms (Linux and macOS), it it also possible to compile all mex files from the Unix shell command line interface (on macOS called ''Terminal.app'') using ''make'' with target ''mex'', which uses the ''Makefile'' in FieldTrip's root directory. This approach is supported with Matlab and Octave, and requires providing the path to the MATLAB or octave binary. For example,
 
     make mex MATLAB=/usr/bin/matlab
 
@@ -369,7 +363,7 @@ would build for MATLAB using the binary in ''/usr/bin/matlab'' (a typical locati
 
     make mex MATLAB=/Applications/MATLAB_R2015a.app/bin/matlab
 
-would use MATLAB 2015a on OSX, and
+would use MATLAB 2015a on macOS, and
 
     make mex OCTAVE=/Applications/Octave.app/Contents/Resources/usr/bin/octave
 
@@ -378,7 +372,7 @@ If the binary is already in the search path (for example, ''which matlab'' print
 
     make mex MATLAB=matlab
 
-Different platforms have different extensions; for example, ''.mexmaci64'' for MATLAB OSX 64 bit intel, ''.mexw32'' for MATLAB Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determines the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
+Different platforms have different extensions; for example, ''.mexmaci64'' for MATLAB macOS 64 bit intel, ''.mexw32'' for MATLAB Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determines the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
 
 Below are more details on the compilation guidelines on different platforms.
 
@@ -400,11 +394,11 @@ You should use gcc, but further details are not known at the moment.
 
 Most development at the Donders is done on CentOS release 5.2 and the default gcc version 4.1.2. Further details are not known at the moment.
 
-### Apple OS X 32 bit
+### Apple macOS 32 bit
 
-MATLAB is not supported on 32 bit OS X any more.
+MATLAB is not supported on 32 bit macOS any more.
 
-### Apple OS X 64 bit
+### Apple macOS 64 bit
 
 You should use the gcc compiler that is included in the Xcode package. Further details are not known at the moment.
 
@@ -435,7 +429,7 @@ With Ctrl-A, Ctrl-I you can auto-indent the whole m-file and ensure that the hor
 
 FieldTrip functions should not rely on the channels being represented in a particular order, but should always explicitly look into the list with the channel labels in order to determine on which elements in the numeric data a particular computation is required. Functions may operate on several data-arguments that have data that belong to channels, e.g. channel position, coil-to-channel mappings for MEG gradiometer arrays, time series of electrophysiological data, parameters of a sphere fitted to the headsurface directly underlying a particular channel, a set of neighbours relative to a particular channel etc.
 
-In this case we aim at imposing the following behaviour of the function:
+In this case we aim at imposing the following behavior of the function:
 
 1.  The order of the channels in the first data argument will be the one that determines the order of the channels in the output: it will always override the order specified in the cfg (in cfg.channel).
 2.  The order of the channels in the data overrides the order in the auxiliary information (such as sensor definitions).

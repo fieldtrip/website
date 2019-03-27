@@ -90,14 +90,14 @@ Events can also be stored in a data channel appended to the brain data channels.
     cfg.trialfun   = 'trialfun_besa';
     cfg            = ft_definetrial(cfg);
 
-where 'trialfun_besa' is a self-specified MATLAB function for conditional selection of data segments or trials of interest. See below and [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for examples.
+where 'trialfun_besa' is a self-specified MATLAB function for conditional selection of data segments or trials of interest. See below and [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for examples.
 
     % read and preprocess the data
     cfg.continuous = 'yes';
     cfg.channel    = 'all';
     data           = ft_preprocessing(cfg);
 
-Note that filtering, re-referencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the MATLAB environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this wiki page](/tutorial/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
+Note that filtering, re-referencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the MATLAB environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this page](/tutorial/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
 
     % visually inspect the data
     cfg            = [];
@@ -106,7 +106,7 @@ Note that filtering, re-referencing, etcetera can be performed at the preprocess
 
 ### Trial functions
 
-Hereunder are two examples of a trial function. See also [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
+Hereunder are two examples of a trial function. See also [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
 
 The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:
 

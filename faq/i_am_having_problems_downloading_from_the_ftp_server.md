@@ -9,7 +9,7 @@ The FieldTrip source code and example datasets are released to the general publi
 
 The ftp service runs on a shared server which occasionally has a performance bottleneck. If you cannot connect, please try again at a later time (i.e. one hour later, or the next day).
 
-If you have difficulties using the ftp server (especially using a OS X or Linux command line ftp client), you can try to turn off "Extended Passive Mode" by typing "epsv".
+If you have difficulties using the ftp server (especially using a macOS or Linux command line ftp client), you can try to turn off "Extended Passive Mode" by typing "epsv".
 
 Some ftp clients may have problems with specific firewall configurations. This can be due to both the firewall on your side and the firewall on our side. If you have problems downloading, please try with another [ftp client](http://www.google.com/search?q=ftp+client).
 

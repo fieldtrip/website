@@ -1,13 +1,13 @@
 ---
-title: How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?
+title: How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
 tags: [faq, statistics]
 ---
 
-# How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?
+# How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
 
 ## Dependent versus Independent Variables
 
-A common perspective on the statistical testing starts from the distinction between dependent and independent variables. When analysing neurobiological signals, these are typically considered to be the dependent variable. In these studies, the independent variable can be the experimental conditions, as defined by task instructions, stimulus type, learning history, etc. The label _independent variable_ suggests that it must be under the experimenter's control. However, this is not necessarily the case, and this is exemplified by response accuracy, which may very well serve as the independent variable in a study in which the relation is investigated between behaviour (actually, one aspect of it, accuracy) and neural activity. Because neither of these variables (accuracy and neural activity) is under experimental control, it is arbitrary how the roles of dependent and independent variable are assigned. In FieldTrip, we use the convention that the variable with the smallest dimensionality is assigned the role of independent variable. For our example, this implies that accuracy is assigned the role of independent and the neurobiological signal the role of dependent variable. In fact, accuracy is represented by a single number, whereas the neurobiological signal often has a spatial (the channels), a temporal (the time points), and a spectral (the frequencies) dimension.
+A common perspective on the statistical testing starts from the distinction between dependent and independent variables. When analysing neurobiological signals, these are typically considered to be the dependent variable. In these studies, the independent variable can be the experimental conditions, as defined by task instructions, stimulus type, learning history, etc. The label _independent variable_ suggests that it must be under the experimenter's control. However, this is not necessarily the case, and this is exemplified by response accuracy, which may very well serve as the independent variable in a study in which the relation is investigated between behavior (actually, one aspect of it, accuracy) and neural activity. Because neither of these variables (accuracy and neural activity) is under experimental control, it is arbitrary how the roles of dependent and independent variable are assigned. In FieldTrip, we use the convention that the variable with the smallest dimensionality is assigned the role of independent variable. For our example, this implies that accuracy is assigned the role of independent and the neurobiological signal the role of dependent variable. In fact, accuracy is represented by a single number, whereas the neurobiological signal often has a spatial (the channels), a temporal (the time points), and a spectral (the frequencies) dimension.
 
 ## Categorical versus Quantitative Independent Variables
 
@@ -44,7 +44,7 @@ It is important to point out that the hypothesis of statistical independence rul
 
 ## Statistical Testing of the Relation Between a Neurobiological and a Behavioural Variable
 
-Sometimes, the statistical testing of the relation with a quantitative variable is confused with the testing of the relation with a behavioural variable. This is understandable, as several interesting behavioural variables are quantitative (e.g., response time, scores on a questionnaire or ability test, accuracy as quantified in the proportion correct). However, from a statistical point of view, the two issues are unrelated. This can be demonstrated using an example: in a single-subject study, one can test for a relation between behaviour and the measured neurobiological signal by means of an independent samples T-statistic that compares the signal between correct and incorrect trials.
+Sometimes, the statistical testing of the relation with a quantitative variable is confused with the testing of the relation with a behavioral variable. This is understandable, as several interesting behavioral variables are quantitative (e.g., response time, scores on a questionnaire or ability test, accuracy as quantified in the proportion correct). However, from a statistical point of view, the two issues are unrelated. This can be demonstrated using an example: in a single-subject study, one can test for a relation between behavior and the measured neurobiological signal by means of an independent samples T-statistic that compares the signal between correct and incorrect trials.
 
 ## Examples
 

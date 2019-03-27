@@ -17,7 +17,7 @@ git clone https://github.com/fieldtrip/fieldtrip.git
 This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on GitHub, fork `fieldtrip/fieldtrip` to your own account and read on for a complete tutorial.
 {% include markup/end %}
 
-To keep an eye on the changes to the code, you can follow FieldTrip on [Twitter](http://twitter.com/fieldtriptoolbx).
+To keep an eye on the changes to the code, you can follow us on [Twitter](http://twitter.com/fieldtriptoolbx).
 
 ## Development workflow
 

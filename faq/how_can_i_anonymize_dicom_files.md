@@ -29,7 +29,7 @@ to remove all confidential metadata from the DICOM header.
 
 ## Using Horos
 
-[Horos](https://www.horosproject.org) is a free DICOM image file viewer for Mac OS X. You can use it to view your image files and explore the metadata in the header. It works by importing all DICOM files and organizing it in its own internal database. It has an "anonymize" option which allows you to remove/replace the values in specific fields.
+[Horos](https://www.horosproject.org) is a free DICOM image file viewer for macOS. You can use it to view your image files and explore the metadata in the header. It works by importing all DICOM files and organizing it in its own internal database. It has an "anonymize" option which allows you to remove/replace the values in specific fields.
 
 The default behavior of the anonymize option is that only the metadata in own internal database is anonymized; if you want the DICOM files to be anonymized on disk, you should use the export option to write the data back to disk. To be sure that the data on disk is anonymized, I recommend importing it a second time to check the metadata.
 
