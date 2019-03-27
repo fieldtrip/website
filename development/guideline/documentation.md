@@ -17,11 +17,11 @@ When you add documentation, please consider the following documentation guidelin
 
 ## Where to add documentation on the website?
 
-There are several places where you are especially encouraged to add your own input to the FieldTrip wiki. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the ftp-server (ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/).
+There are several places where you are especially encouraged to add your own input to the FieldTrip website. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the ftp-server (ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/).
 
 ## How to structure a tutorial?
 
-The tutorials should be written with a clear audience in mind: the reader of the tutorial expects to learn something. The tutorial should contain examples that can be reproduced. Furthermore, the examples should be explained in such a manner that the reader can generalize these hands-on examples to his/her own experimental data analysis.
+The tutorials should be written with a clear purpose in mind: the reader of the tutorial expects to learn something. The tutorial should contain examples that can be reproduced. Furthermore, the examples should be explained in such a manner that the reader can generalize these hands-on examples to his/her own experimental data analysis.
 
 For consistency the tutorials should preferably be structured in the following way:
 
@@ -49,15 +49,15 @@ The tutorial mat files are made available on <ftp://ftp.fieldtriptoolbox.org/pub
 
 ## How to name example data?
 
-When using example data in tutorials, please use consistent naming. That i
+When using example data in tutorials, please use consistent naming.
 
-- add a prefix to the data-name that shows what kind of data it is. Prefixes are: data (for raw/preprocessed data), timelock, freq, stat and source. Example: if you have timelocked data (ERP/ERF) of condition FIC, you can call it timelockFIC. So do not use 'data' for everything.
-
-- save the data as a mat-file with the same name (e.g. save the variable freqFIC to the file freqFIC.mat)
+- Add a prefix to the data-name that shows what kind of data it is. Prefixes are: data (for raw/preprocessed data), timelock, freq, stat and source. For example, if you have timelocked data (ERP/ERF) of condition FIC, you can call it timelockFIC. So do not use 'data' for everything.
+- Save the data as a .mat file with the same name, e.g. save the variable freqFIC to the file freqFIC.mat.
+- Store only one variable in every .mat file.
 
 ## How to add tags?
 
-At the top of each markdown page there is a [Jekyll front-matter](https://jekyllrb.com/docs/front-matter/) section like this
+At the top of each markdown page there is a [Jekyll front-matter](https://jekyllrb.com/docs/front-matter/) section like this:
 
 ```text
 ---
@@ -73,10 +73,6 @@ You can add tags to that list; these will be automatically shown at the top of e
 The preferred format for figures on the website is the PNG format. Also figures from MATLAB and screenshots should preferably be exported in the PNG format. If you want to edit the MATLAB figure, you should first export the figure to EPS or AI, open the figure in Adobe Illustrator and make the changes, and save it to PNG.
 
 Figures should be added to the `assets/img` directory of the website repository. Please do not upload very large binary files, such as PDFs, but send them to Robert for static inclusion on the website. Figures should not be included in the standard markdown style, since that does not allow the specification of the size and does not allow zooming in. Instead, figures should be included using a piece of custom [Liquid code](https://shopify.github.io/liquid/) which gets translated into html at the moment the website is rebuilt.
-
-```ruby
-{% include image src="/assets/img/development/guideline/documentation/excel-drawing-tools-2007-2010.jpg" width="200" %}
-```
 
 We also considered SVG, which is a standardized scalable vector graphics format. This would allow other people to download the figure, modify it, and upload the changed figure without loss of quality. However, SVG had too many problems rendering correctly in different browsers.
 
