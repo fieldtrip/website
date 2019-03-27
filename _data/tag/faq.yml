@@ -154,7 +154,7 @@
 - name:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
 
-- name:  How can I import my own dataformat?
+- name:  How can I import my own data format?
   link:  /faq/how_can_i_import_my_own_dataformat
 
 - name:  How can I interpret the different types of padding in FieldTrip?
