@@ -25,7 +25,7 @@
 - name:  How to test an interaction effect using cluster-based permutation tests?
   link:  /faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests
 
-- name:  How can I test for correlations between neuronal data and quantitative stimulus and behavioural variables?
+- name:  How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
   link:  /faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables
 
 - name:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
