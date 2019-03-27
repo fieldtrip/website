@@ -11,7 +11,7 @@ This tutorial demonstrates how to construct a volume conduction model of the hea
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
-Furthermore, elsewhere on this wiki you can find also information [about MEG headmodels](/tutorial/headmodel_meg) and about other [EEG headmodels](/tutorial/headmodel_eeg).
+Furthermore, elsewhere on this website you can find also information [about MEG headmodels](/tutorial/headmodel_meg) and about other [EEG headmodels](/tutorial/headmodel_eeg).
 
 We want to note that the FEM modelling works only on MATLAB versions 2011 and above.
 

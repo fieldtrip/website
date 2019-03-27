@@ -6,9 +6,13 @@ title: Integration between tools
 
 For the documentation, communication and development of the FieldTrip project we use various tools. This page lists the tools and the integration that we have implemented between them.
 
+### Jekyll
+
+We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents are hosted on [github](https://github.com/fieldtrip/website) and use a webhook to trigger the rebuild of the static html files on the webserver. The webserver is hosted as a virtual machine at the DCCN.
+
 ### Dokuwiki - obsolete
 
-We use [dokuwiki](http://dokuwiki.org/) as the CMS system on which our website is implemented. The CMS is hosted on a virtual machine at the DCCN. Upon an edit of the wiki, a tweet is send to http://twitter.com/fieldtriptoolbx.
+In the past we used [dokuwiki](http://dokuwiki.org/) as the CMS system for our website.
 
 ### Mailman
 
@@ -20,7 +24,7 @@ We use http://facebook.com/fieldtriptoolbox to announce events and to post photo
 
 ### Twitter
 
-We use http://twitter.com/fieldtriptoolbx to notify people about events. Wiki page edits, email messages to the discussion list and code commits are posted on the timeline.
+We use http://twitter.com/fieldtriptoolbx to notify people about events. Website page edits, email messages to the discussion list and code commits are posted on the timeline.
 
 ### Youtube
 
@@ -70,7 +74,7 @@ Inside the DCCN we have a central storage system (i.e. a large and shared networ
 
 ### Google
 
-We use Google to complement the internal [Dokuwiki](#Dokuwiki) search engine. If you start searching on the wiki, you'll get an initial results page that provides a Google search box for the wiki and for the discussion list archives.
+We use Google to provide the search functionality on the website and discussion list archives.
 
 ### Dashboard
 

@@ -16,7 +16,7 @@ One might wish to combine BESA’s capacities and convenience in spatiotemporal 
 
 ## Reading in data files from BESA
 
-BESA has its own file formats for storing various aspects of the data. Most of the files contain the data in plain ascii format and it is relatively easy to read in their contents into Matlab or any other program. You can use a normal text editing program like Microsoft Wordpad to have a look at the content and format of the files.
+BESA has its own file formats for storing various aspects of the data. Most of the files contain the data in plain ascii format and it is relatively easy to read in their contents into MATLAB or any other program. You can use a normal text editing program like Microsoft Wordpad to have a look at the content and format of the files.
 
 FieldTrip directly supports the following BESA file format
 
@@ -28,7 +28,7 @@ FieldTrip directly supports the following BESA file format
 - .tfc contains a time-frequency representation of power or coherence
 - .dat contains multiple source beamformer output on a regular 3D grid
 
-It is possible to use the low-level functions in FieldTrip to read in the BESA data into Matlab, but it is preferred to use the high-level besa2fieldtrip function. That function will read the data and format it into a structure that is compatible with fieldtrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
+It is possible to use the low-level functions in FieldTrip to read in the BESA data into MATLAB, but it is preferred to use the high-level besa2fieldtrip function. That function will read the data and format it into a structure that is compatible with fieldtrip. Depending of the content of the file, the data will be formatted to appear similar to the output of one of the FieldTrip function
 
 - .avr converted to ft_timelockanalysis
 - .mul converted to ft_timelockanalysis
@@ -42,15 +42,15 @@ or a time-frequency estimate of power using
 
     freq = besa2fieldtrip('filename.tfc');
 
-## BESA Matlab toolbox
+## BESA MATLAB toolbox
 
-For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using BESA2FIELDTRIP is to download the BESA toolbox and to add it to your Matlab path. The conversion function will automatically detect and use it when available on your path.
+For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using BESA2FIELDTRIP is to download the BESA toolbox and to add it to your MATLAB path. The conversion function will automatically detect and use it when available on your path.
 
 The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the FieldTrip release as \*_fieldtrip/external/besa._ for your convenience.
 
 ## Electrode information
 
-BESA electrode files can also be read into Matlab, using the **[ft_read_sens](/reference/ft_read_sens)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to this:
+BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](/reference/ft_read_sens)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to this:
 
     data = besa2fieldtrip(‘yourbesafile.avr’);
     data.elec = ft_read_sens(‘yourelectrodes.sfp’);
@@ -82,7 +82,7 @@ The .besa format contains continuous (unprocessed) data, including header and ev
 
 FIXME: needs elaboration
 
-Events can also be stored in a data channel appended to the brain data channels. For instance, a photodiode transducer attached to a stimulus presentation screen may convert screen light into current. This way, changes in light are captured as an analog signal in that data channel and can be used to synchronize timing of the experiment with the brain recording. When the name or the channel index of the event channel is known, it becomes feasible to use that channel for reading data segments or trials of interest into the Matlab work environment using FieldTrip. The most straightforward approach is to create a trial function (as invoked with cfg.trialfun) that reads in the event channel and performs some form of thresholding on the signal in that channel to determine the events of interest. We provide an example pipeline below.
+Events can also be stored in a data channel appended to the brain data channels. For instance, a photodiode transducer attached to a stimulus presentation screen may convert screen light into current. This way, changes in light are captured as an analog signal in that data channel and can be used to synchronize timing of the experiment with the brain recording. When the name or the channel index of the event channel is known, it becomes feasible to use that channel for reading data segments or trials of interest into the MATLAB work environment using FieldTrip. The most straightforward approach is to create a trial function (as invoked with cfg.trialfun) that reads in the event channel and performs some form of thresholding on the signal in that channel to determine the events of interest. We provide an example pipeline below.
 
     % define trials
     cfg            = [];
@@ -90,14 +90,14 @@ Events can also be stored in a data channel appended to the brain data channels.
     cfg.trialfun   = 'trialfun_besa';
     cfg            = ft_definetrial(cfg);
 
-where 'trialfun_besa' is a self-specified Matlab function for conditional selection of data segments or trials of interest. See below and [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for examples.
+where 'trialfun_besa' is a self-specified MATLAB function for conditional selection of data segments or trials of interest. See below and [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for examples.
 
     % read and preprocess the data
     cfg.continuous = 'yes';
     cfg.channel    = 'all';
     data           = ft_preprocessing(cfg);
 
-Note that filtering, re-referencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the MATLAB environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this wiki page](/tutorial/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
+Note that filtering, re-referencing, etcetera can be performed at the preprocessing stage. Type 'help ft_preprocessing' to get an overview of the possibilities. Now that the raw data is in the MATLAB environment it becomes possible, as shown below, to use ft_databrowser to browse through the raw segmented data. See also [this page](/tutorial/visual_artifact_rejection) for a number of strategies on how to inspect and clean up the data from artifacts.
 
     % visually inspect the data
     cfg            = [];
@@ -106,7 +106,7 @@ Note that filtering, re-referencing, etcetera can be performed at the preprocess
 
 ### Trial functions
 
-Hereunder are two examples of a trial function. See also [this wiki page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by Matlab and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
+Hereunder are two examples of a trial function. See also [this page](/example/making_your_own_trialfun_for_conditional_trial_definition) for more examples. Ensure that your trial function is available on the MATLAB path for it to be found by MATLAB and invoked by the call to ft_define_trial (see above). The below examples assume that the experiment events are stored in a data channel whose name or index (referred to as chanindx in the code) is known to the user.
 
 The example scripts also assume that the event is marked by an 'up flank' in the recorded signal (e.g., by virtue of an increase in light on the photodiode transducer). Down flanks can also be detected by specifying cfg.detectflank = 'down'. The trigger threshold can be a hard threshold, i.e. numeric, or flexibly defined by an executable string (e.g., to calculate the 'median' of the analog signal). In the first example, we define a 'segment' as one second preceding this trigger until 2 seconds thereafter:
 
