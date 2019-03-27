@@ -4,7 +4,7 @@ layout: default
 tags: 
 ---
 ```
- FT_FETCH_DATA mimics the behaviour of FT_READ_DATA, but for a FieldTrip
+ FT_FETCH_DATA mimics the behavior of FT_READ_DATA, but for a FieldTrip
  raw data structure instead of a file on disk.
 
  Use as

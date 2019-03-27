@@ -17,7 +17,7 @@ A high-level FieldTrip function always should behave like this
 
 where some functions might not need _inputargs_ and some functions might not return _outputargs_.
 
-The function should always start with a help section, that explains the purpose of the function, the type of input data that it expects, the type of output data that it will produce and the configurable options that the user has to control the behaviour of the function.
+The function should always start with a help section, that explains the purpose of the function, the type of input data that it expects, the type of output data that it will produce and the configurable options that the user has to control the behavior of the function.
 
 ### The best-practice example function
 
@@ -203,7 +203,7 @@ gcf refers to the current figure handle. There are number of additional conseque
 
 ## SVN log messages
 
-SVN log entries should describe the change to the file or files. The log message should allow an end-user to realize that a recent change in the code may relate to the changed behaviour that he/she observes. The log message should also allow another developer that is familiar with the particular code to understand why the code was changed, and what part of the code is changed.
+SVN log entries should describe the change to the file or files. The log message should allow an end-user to realize that a recent change in the code may relate to the changed behavior that he/she observes. The log message should also allow another developer that is familiar with the particular code to understand why the code was changed, and what part of the code is changed.
 
 Log messages don't have to be long, but they have to be clear to the intended audience: end-users and colleague developers. Log messages should also be clear for yourself, because sometimes you'll have to go back in a function to fix problems that were introduced by your own previous change.
 
@@ -430,7 +430,7 @@ With Ctrl-A, Ctrl-I you can auto-indent the whole m-file and ensure that the hor
 
 FieldTrip functions should not rely on the channels being represented in a particular order, but should always explicitly look into the list with the channel labels in order to determine on which elements in the numeric data a particular computation is required. Functions may operate on several data-arguments that have data that belong to channels, e.g. channel position, coil-to-channel mappings for MEG gradiometer arrays, time series of electrophysiological data, parameters of a sphere fitted to the headsurface directly underlying a particular channel, a set of neighbours relative to a particular channel etc.
 
-In this case we aim at imposing the following behaviour of the function:
+In this case we aim at imposing the following behavior of the function:
 
 1.  The order of the channels in the first data argument will be the one that determines the order of the channels in the output: it will always override the order specified in the cfg (in cfg.channel).
 2.  The order of the channels in the data overrides the order in the auxiliary information (such as sensor definitions).

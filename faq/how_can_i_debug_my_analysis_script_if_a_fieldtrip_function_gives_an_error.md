@@ -69,7 +69,7 @@ It is likely that you don't want to edit all of your analysis scripts to add
 
     cfg.debug = 'saveonerror'
 
-to each individual function call. It is possible to enable this behaviour globally, using the ft_default global variable.
+to each individual function call. It is possible to enable this behavior globally, using the ft_default global variable.
 
     global ft_default
     ft_default.debug = 'saveonerror'
