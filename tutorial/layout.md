@@ -82,7 +82,7 @@ Customized MEG layouts can be useful when you want to avoid the distortion due t
     cfg.distance = 3; % the 3D sensor positions are in cm
     layout = ft_appendlayout(cfg, layoutL, layoutR);
 
-{% include image src="/assets/img/tutorial/layout/ctf151_left_right.png" width="300" %}
+{% include image src="/assets/img/tutorial/layout/ctf151_left_right.png" width="400" %}
 
 In a similar way you can use **[ft_prepare_layout](/reference/ft_prepare_layout)** and **[ft_appendlayout](/reference/ft_appendlayout)** to make a layout that combines a left, right, top, front and back view of the MEG sensors in a fold-out arrangement.
 
@@ -108,7 +108,7 @@ For the Neuromag/Elekta/Megin MEG system which consists of sensor-triplets with 
     cfg.distance = 0.3; % the layouts are approximately scaled to fit a unit sphere
     layout = ft_appendlayout(cfg, layout1, layout2, layout3);
 
-{% include image src="/assets/img/tutorial/layout/neuromag306_123.png" width="300" %}
+{% include image src="/assets/img/tutorial/layout/neuromag306_123.png" width="400" %}
 
 Since the magnetometers and planar gradiometers have different units (T and T/m), the magnitude of the channel level data is quite different. Combined plotting therefore requires that you scale the channels to a similar magnitude. FIXME
 
@@ -193,10 +193,166 @@ The advantage of the MATLAB file over the ASCII file, is that the MATLAB file ca
 
 Sometimes you want to construct an iEEG layout prior to doing the full anatomical pipeline, e.g. to check the iEEG data quality and/or whether the expected experimental effects are present in the functional data. You can use **[ft_prepare_layout](/reference/ft_prepare_layout)** in combination with the **[ft_appendlayout](/reference/ft_appendlayout)** function.
 
-A schematic layout can also be convenient, since it "flattens" the head and allows to see all channels better. In the case of iEEG (either sEEG and/or ECoG) electrodes, it can also save a lot of work to
+A schematic layout can also be convenient, since it "flattens" the head and allows to see all channels better. Furthermore, for sEEG shafts it can be difficult to come up with a geometrically accurate representation of the electrode contacts in 2D space.
 
- Furthermore, for sEEG electrodes it can be difficult to come up with a geometrically accurate representation of the channels in 2D space.
+#### Creating a schematic layout for the sEEG shafts
 
+The ft_prepare_layout function has the horizontal and vertical option for making an N\*1 layout. For example
+
+    cfg = [];
+    cfg.channel = {'1', '2', '3', '4', '5'};
+    cfg.layout = 'horizontal';
+    cfg.direction = 'LR';
+    layout12345 = ft_prepare_layout(cfg);
+
+The direction of the electrode contacts along the shaft can be specified as 'LR'
+(left-to-right) or RL for horizontal, and 'TB' (top-to-bottom) and 'BT' for
+vertical.
+
+You can also use the raw or processed iEEG data to specify channel names. For
+example the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has
+sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and
+ROC. You can download the spectrally analyzed data from the [FieldTrip ftp server
+(SubjectUCI29_freq.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/human_ecog/SubjectUCI29/SubjectUCI29_freq.mat)
+and use the following
+
+    load SubjectUCI29_freq.mat
+
+    cfg = [];
+    cfg.layout = 'vertical';
+    cfg.direction = 'BT';
+    cfg.channel = 'LAM*'; % using wildcard for all LAM electrodes
+    cfg.width = 0.2;
+    layoutLAM = ft_prepare_layout(cfg, freq);
+
+In the same way you can make layouts for all other shafts
+
+    % the other shafts in the left hemisphere
+    cfg.channel = 'LHH*';
+    layoutLHH = ft_prepare_layout(cfg, freq);
+    cfg.channel = 'LTH*';
+    layoutLTH = ft_prepare_layout(cfg, freq);
+
+    % and the right hemisphere
+    cfg.channel = 'RAM*';
+    layoutRAM = ft_prepare_layout(cfg, freq);
+    cfg.channel = 'RHH*';
+    layoutRHH = ft_prepare_layout(cfg, freq);
+    cfg.channel = 'RTH*';
+    layoutRTH = ft_prepare_layout(cfg, freq);
+    cfg.channel = 'ROC*';
+    layoutROC = ft_prepare_layout(cfg, freq);
+
+    figure;
+    ft_plot_layout(layoutLAM)
+
+{% include image src="/assets/img/tutorial/layout/layoutLAM.png" width="400" %}
+
+You can combine the layouts using **[ft_appendlayout](/reference/ft_appendlayout)** like this
+
+    cfg = [];
+    layoutL = ft_appendlayout(cfg, layoutLAM, layoutLHH, layoutLTH);
+
+    cfg = [];
+    layoutR = ft_appendlayout(cfg, layoutRAM, layoutRHH, layoutRTH, layoutROC);
+
+    figure;
+    ft_plot_layout(layoutL);
+
+{% include image src="/assets/img/tutorial/layout/layoutL.png" width="400" %}
+
+And subsequently combine the left- and right-hemisphere layouts for the sEEG shafts with
+
+    cfg = [];
+    cfg.direction = 'vertical';
+    cfg.align = 'left';
+    cfg.distance = 0.1; % tweak the distance a bit
+    layoutShafts = ft_appendlayout(cfg, layoutL, layoutR);
+
+    figure;
+    ft_plot_layout(layoutShafts);
+
+{% include image src="/assets/img/tutorial/layout/layoutShafts.png" width="400" %}
+
+#### Creating a schematic layout for the ECoG grids
+
+The example dataset includes an 8x8 ECoG grid over the left parietal cortex, and a
+4x8 grid over the left temporal cortex, as displayed in this schematic drawing provided by
+the neurosurgeon.
+
+{% include image src="/assets/img/tutorial/layout/SubjectUCI29_grids.png" width="400" %}
+
+You can construct a layout for these ECoG grids by specifying 'ordered' and the
+number of rows and columns. The channel numbering starts in the upper right corner,
+hence we specify the direction 'RLTB' for right-left-top-bottom.
+
+    cfg = [];
+    cfg.layout = 'ordered';
+    cfg.direction = 'RLTB'; % this can require some trial-and-error
+    cfg.rows = 8;
+    cfg.columns = 8;
+    cfg.channel = 'LPG*';
+    cfg.height = 1/8; % scale the LPG and LTG grid consistently
+    layoutLPG = ft_prepare_layout(cfg, freq);
+
+    figure;
+    ft_plot_layout(layoutLPG);
+
+{% include image src="/assets/img/tutorial/layout/layoutLPG.png" width="400" %}
+
+    cfg.rows = 4;
+    cfg.columns = 8;
+    cfg.channel = 'LTG*';
+    cfg.height = 1/8; % scale the LPG and LTG grid consistently
+    layoutLTG = ft_prepare_layout(cfg, freq);
+
+    figure;
+    ft_plot_layout(layoutLTG);
+
+{% include image src="/assets/img/tutorial/layout/layoutLTG.png" width="400" %}
+
+#### Combine the ECoG and sEEG layouts
+
+We can now append the two ECoG grids vertically, and combine the layout of the
+ECoG grids with the layout of the sEEG shafts.
+
+    cfg = [];
+    cfg.direction = 'vertical';
+    cfg.align = 'left';
+    cfg.distance = 0.1; % tweak the distance a bit
+
+    layoutGrids = ft_appendlayout(cfg, layoutLPG, layoutLTG);
+
+    cfg = [];
+    cfg.direction = 'horizontal';
+    cfg.align = 'top';
+    cfg.distance = 0.3; % tweak the distance a bit
+
+    layoutAll = ft_appendlayout(cfg, layoutGrids, layoutShafts);
+
+{% include image src="/assets/img/tutorial/layout/layoutAll.png" width="400" %}
+
+Subsequently you can use the combined layout of the shafts and grids to visualize the results of the ERP or TFR analysis.
+
+    cfg = [];
+    cfg.baseline = [-inf 0];
+    cfg.baselinetype = 'db';
+    cfg.layout = layoutAll;
+    ft_multiplotTFR(cfg, freq);
+
+{% include image src="/assets/img/tutorial/layout/freq_layoutAll.png" width="400" %}
+
+The figure created like this is interactive, like all multiplot figures, and you
+can make a selection of channels using your mouse and subsequently select a
+time-frequency range for which a topopgraphy is shown. Please be aware that the
+topoplot function will interpolate all channels as if they form a continuum. The
+interpolated values will only be shown withing the masked regions (the dashed lines
+in the layout plots) around each grid or shaft, but the interpolation will actually
+cause the values of one shaft to spill over to the next.
+
+The topographic interpretation of the color-coded interpolated values on the ECoG grids is quite OK (although
+be aware of the interpolation artefacts where the two grids are close to each other),
+but the color-coded interpolated values on the shafts should be interpreted with caution.
 
 ## Functions that make use of a 2D layout for visualization
 
