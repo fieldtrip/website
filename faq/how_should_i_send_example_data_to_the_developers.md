@@ -18,21 +18,21 @@ or one of the other file sharing methods that is described [here](http://www.tec
 
 So instead of sending the large file as attachment, you would just include the download link in your email.
 
-## Using GitHub and Git LFS
+## Using GitHub and Git Large File Storage
 
 You can also share example data by storing it in a GitHub hosted repo using [Git LFS](https://git-lfs.github.com/). In addition to sharing a snapshot of a file's state, this also lets you track changes to the files over time, control access to the shared data, easily sync it between multiple machines, and collaborate by allowing multiple users to write changes to the file set.
 
-{% include markup/info %}
-Important: If this is confidential data, remember that by default, GitHub repos are public and visible to everyone. To keep your data private, you must make it a private repo, and selectively grant access to the users you wish to see it!
+{% include markup/danger %}
+If this is confidential data, remember that by default, GitHub repos are public and visible to everyone. To keep your data private, you must make it a private repo, and selectively grant access to the users you wish to see it.
 {% include markup/end %}
 
 To share files via Git LFS on GitHub:
 
-* Install [Git LFS](https://git-lfs.github.com/) on your local machine
-* On GitHub, [Create a new repository](https://github.com/new)
-  * Name it `example-<description>-yyyy-mm` or something similar; this is just example data so you do not need a memorable name
-* Clone the repo to your local machine
-* Run `git lfs install` inside the cloned local repo
-* Copy your example data files into the local repo
-* Use `git lfs track` to make sure the files you have added are tracked by Git LFS instead of committed as regular files
-* `git add` the files, `git commit`, and `git push`
+- Install [Git LFS](https://git-lfs.github.com/) on your computer
+- On GitHub, [Create a new repository](https://github.com/new)
+  - Name it `example-<description>-yyyy-mm` or something similar; this is just example data so you do not need a memorable name
+- Clone the repo to your local machine
+- Run `git lfs install` inside the cloned local repo
+- Copy your example data files into the local repo
+- Use `git lfs track` to make sure the files you have added are tracked by Git LFS instead of committed as regular files
+- `git add` the files, `git commit`, and `git push`
