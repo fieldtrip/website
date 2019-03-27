@@ -32,24 +32,6 @@ If you do not have a measurement of the 3D positions of your sensors, but do hav
 
 Sometimes a schematic layout is more convenient, since it "flattens" the head and allows to see all channels better. In the case of iEEG (either sEEG and/or ECoG) electrodes, it can also save a lot of work to locate the electrodes in 3D as explained in the [human iEEG tutorial](http://www.fieldtriptoolbox.org/tutorial/human_ecog/). Furthermore, for sEEG electrodes it can be difficult to come up with a geometrically accurate representation of the channels in 2D space.
 
-## The format of layout files
-
-The layout is represented on disk in ASCII file with the extension .lay, or in MATLAB files that contain a variable with the name "layout" or "lay". In general, MATLAB layout files are preferred since they allow a detailed specification of the outlines of the head shape (EEG) or helmet (MEG). For ASCII layout files a standard head shape that consists of a circle (for the head) with ears and the nose at the top will be drawn around the normalized channel positions.
-
-Here is a small snippet of an ASCII layout file:
-
-    1  -0.308949  0.951110  0.750000  0.450000  Fp1
-    2   0.000121  1.000000  0.750000  0.450000  Fpz
-    3   0.309064  0.951004  0.750000  0.450000  Fp2
-    4  -0.808816  0.587705  0.750000  0.450000  F7
-    5  -0.411232  0.519845  0.750000  0.450000  F3
-    6   0.000257  0.499920  0.750000  0.450000  Fz
-    7   0.410919  0.519568  0.750000  0.450000  F4
-    8   0.809069  0.587789  0.750000  0.450000  F8
-    ...
-
-The format of the layout file is described in more detail in this [frequently asked question](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
-
 ## Making a layout for MEG sensors
 
 ### Using a template layout
@@ -126,7 +108,7 @@ If you have recorded electrode positions, you can use the **[ft_prepare_layout](
 
 You can also make a layout based on a bitmap image with the electrode arrangement. For example, the following image from the [EasyCap](http://www.easycap.de) website shows the equidistant M10 electrode arrangement.
 
-{% include image src="/assets/img/tutorial/layout/easycap_m10_equidistant61chan.gif" %}
+{% include image src="/assets/img/tutorial/layout/easycap_m10_equidistant61chan.gif" width="400" %}
 
 You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)** and subsequently click on the location of each electrode. After specifying each electrode location, you'll be asked to specify the outlines of the head (i.e. the circle around the head, the nose and ears and optionally some lines representing other important landmarks). Finally you will have to specify the mask for the topographic interpolation, this is the same circle around the head (without ears and nose).
 
@@ -369,3 +351,21 @@ Layouts are used in all 2-D plotting functions in FieldTrip:
 - **[ft_layoutplot](/reference/ft_layoutplot)**
 
 Furthermore, the **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)** function allows you to specify a channel layout to determine neighboring channels. Please note that it is more accurate to determine neighbors from the 3D representation of the channel positions, you should only use the layout if you don't have actual 3D channel positions.
+
+## The format of layout files
+
+The layout is represented on disk in ASCII file with the extension .lay, or in MATLAB files that contain a variable with the name "layout" or "lay". In general, MATLAB layout files are preferred since they allow a detailed specification of the outlines of the head shape (EEG) or helmet (MEG). For ASCII layout files a standard head shape that consists of a circle (for the head) with ears and the nose at the top will be drawn around the normalized channel positions.
+
+Here is a small snippet of an ASCII layout file:
+
+    1  -0.308949  0.951110  0.750000  0.450000  Fp1
+    2   0.000121  1.000000  0.750000  0.450000  Fpz
+    3   0.309064  0.951004  0.750000  0.450000  Fp2
+    4  -0.808816  0.587705  0.750000  0.450000  F7
+    5  -0.411232  0.519845  0.750000  0.450000  F3
+    6   0.000257  0.499920  0.750000  0.450000  Fz
+    7   0.410919  0.519568  0.750000  0.450000  F4
+    8   0.809069  0.587789  0.750000  0.450000  F8
+    ...
+
+The format of the layout file is described in more detail in this [frequently asked question](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
