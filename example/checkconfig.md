@@ -28,13 +28,13 @@ required format.
 relevant and used fields. The size of fields in the output cfg is also
 controlled: fields exceeding a certain maximum size are emptied.
 
-## How to control the behaviour of ft_checkconfig
+## How to control the behavior of ft_checkconfig
 
 When you use a FieldTrip function, this automatically calls **[ft_checkconfig](/reference/ft_checkconfig)** to check the cfg you supplied. If necessary, **[ft_checkconfig](/reference/ft_checkconfig)** will give you feedback. How can you control this feedback? As explained in the help documentation
 
-    % The behaviour of checkconfig can be controlled by the following cfg options,
+    % The behavior of checkconfig can be controlled by the following cfg options,
     % which can be set as global FieldTrip defaults (see FT_DEFAULTS
-    %   cfg.checkconfig = 'pedantic', 'loose' or 'silent' (control the feedback behaviour of checkconfig)
+    %   cfg.checkconfig = 'pedantic', 'loose' or 'silent' (control the feedback behavior of checkconfig)
     %   cfg.trackconfig = 'cleanup', 'report' or 'off'
     %   cfg.checksize   = number in bytes, can be inf (set max size allowed for output cfg fields)
 
@@ -44,7 +44,7 @@ When you use a FieldTrip function, this automatically calls ft_defaults. ft_defa
     ft_default.trackconfig = 'off';
     ft_default.checksize   = 1e5;
 
-These settings control the behaviour of **[ft_checkconfig](/reference/ft_checkconfig)**. If you want to change these settings, either do it via the global variable (this way they will apply to all FieldTrip functions and automatically be added to the cfg), or do it directly via the cfg when you call a specific function. What are the available options?
+These settings control the behavior of **[ft_checkconfig](/reference/ft_checkconfig)**. If you want to change these settings, either do it via the global variable (this way they will apply to all FieldTrip functions and automatically be added to the cfg), or do it directly via the cfg when you call a specific function. What are the available options?
 
 **cfg.checkconfig: 'pedantic', 'loose' or 'silent'**
 
@@ -66,7 +66,7 @@ _Note: the feedback **[ft_checkconfig](/reference/ft_checkconfig)** gives on you
 
 **cfg.trackconfig: 'cleanup', 'report' or 'off'**
 
-**[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg. It tracks the cfg from the moment you put it into a function until it comes out again (usually as data.cfg). This can provide you with useful feedback: which of the options you specified were actually used? Which options have been added as defaults by the FieldTrip function? You can control the behaviour of configtracking: **'report'** will only give you a report, **'cleanup'** will give both a report and a cleaned output cfg. If you do not want to use configtracking at all, use **'off'**.
+**[ft_checkconfig](/reference/ft_checkconfig)** can also control the output cfg. It tracks the cfg from the moment you put it into a function until it comes out again (usually as data.cfg). This can provide you with useful feedback: which of the options you specified were actually used? Which options have been added as defaults by the FieldTrip function? You can control the behavior of configtracking: **'report'** will only give you a report, **'cleanup'** will give both a report and a cleaned output cfg. If you do not want to use configtracking at all, use **'off'**.
 
 **cfg.checksize: number in bytes, can be inf**
 

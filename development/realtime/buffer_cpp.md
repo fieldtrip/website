@@ -67,7 +67,7 @@ wiki page for the [Biosemi acquisition driver](/development/realtime/biosemi) fo
 
 The ''StringServer'' class wraps up a mechanism to listen to ASCII messages on a TCP port. Multiple clients can connect
 at the same time. Commands should be terminated by a line-feed (''\n''). The server will respond by line-feed terminated
-ASCII strings in the same way. This is used to control the runtime behaviour of the ''OnlineDataManager'' (see below).
+ASCII strings in the same way. This is used to control the runtime behavior of the ''OnlineDataManager'' (see below).
 
 ### OnlineDataManager
 
@@ -90,7 +90,7 @@ and saving it to a GDF file at the same time. The general scheme looks like this
 
 Saving to disk will be handled in a separate thread to allow for smallest possible latencies + jitter.
 
-#### Commands that influence runtime behaviour
+#### Commands that influence runtime behavior
 
 The OnlineDataManager will listen on a certain TCP port for incoming commands given as line-feed-terminated ASCII strings such a
 
