@@ -463,7 +463,7 @@ Lets load a prescored hypnogram as the reference
     legend({'prescored', 'hypnogram'})
     ylim([-1.1 5.1]);
 
-    lab = yticklabels; %lab = get(gca,'YTickLabel'); %prior to Matlab 2016b use this
+    lab = yticklabels; %lab = get(gca,'YTickLabel'); %prior to MATLAB 2016b use this
 
     lab(strcmp(lab, '0'))  = {'wake'};
     lab(strcmp(lab, '1'))  = {'S1'};
@@ -472,7 +472,7 @@ Lets load a prescored hypnogram as the reference
     lab(strcmp(lab, '4'))  = {'SWS'};
     lab(strcmp(lab, '5'))  = {'REM'};
     lab(strcmp(lab, '-1')) = {'?'};
-    yticklabels(lab); %set(gca,'YTickLabel',lab) ; %prior to Matlab 2016b use this
+    yticklabels(lab); %set(gca,'YTickLabel',lab) ; %prior to MATLAB 2016b use this
 
 {% include image src="/assets/img/tutorial/sleep/sleep_hypongram_estimated_vs_prescored.png" width="400" %}
 

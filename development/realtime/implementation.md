@@ -81,12 +81,12 @@ To create a new buffer you can call this from MATLAB using ft_create_buffer
 | -------- | ------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | C        | yes    | yes    | Reference implementation, please see [here](/development/realtime/buffer_c)                                                                |
 | C++      | yes    | yes    | Thin wrapper classes around the reference implementation for handling client requests, please see [here](/development/realtime/buffer_cpp) |
-| Matlab   | yes    | yes    | Full support via MEX files, please see [here](/development/realtime/buffer_matlab)                                                         |
+| MATLAB   | yes    | yes    | Full support via MEX files, please see [here](/development/realtime/buffer_matlab)                                                         |
 | Python   | yes    | no     | this depends on [Numpy](http://numpy.scipy.org), please see [here](/development/realtime/buffer_python)                                    |
 | Java     | yes    | no     | please see [here](/development/realtime/buffer_java)                                                                                       |
 
 ## Closing the loop
 
-For a real-time BCI system, it is important that a control signal somehow can be used to close the loop towards the subject. [Here](/development/realtime/closing_the_loop) you can find a description on the options that you have for [closing the loop](/development/realtime/closing_the_loop) from within your Matlab-based BCI application.
+For a real-time BCI system, it is important that a control signal somehow can be used to close the loop towards the subject. [Here](/development/realtime/closing_the_loop) you can find a description on the options that you have for [closing the loop](/development/realtime/closing_the_loop) from within your MATLAB-based BCI application.
 
 Current plans and design considerations for building a general pipeline architecture can be found [here](/development/realtime/pipeline).

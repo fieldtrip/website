@@ -12,7 +12,7 @@ FieldTrip relies on MATLABs plotting routines, which uses specific renderers. Un
 prior to the call to ft_databrowser.
 
 {% include markup/info %}
-This error and solution has been confirmed by the Mathworks. Thanks to Martine van Schouwenburg for contacting Mathworks and forwarding their response.
+This error and solution has been confirmed by the MathWorks. Thanks to Martine van Schouwenburg for contacting MathWorks and forwarding their response.
 {% include markup/end %}
 
 EMAIL SUPPORT TEAM MATHWORK

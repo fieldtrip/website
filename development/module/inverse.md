@@ -10,7 +10,7 @@ FieldTrip has a consistent set of low-level functions for source reconstruction,
 
 The objective of supplying these low-level functions as a separate module/toolbox are to
 
-1.  facilitate the reuse of these functions in other open-source projects (e.g. EEGLAB, SPM)
+1.  facilitate the reuse of these functions in other open source projects (e.g. EEGLAB, SPM)
 2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
 3.  facilitate the implementation of advanced features
 

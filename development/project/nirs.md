@@ -96,7 +96,7 @@ Layouts should be created on-the-fly by ft_prepare_layout. NeuroMag layouts can 
 Overall structure:
 In case a high-level FieldTrip function calls a NIRS function, ft_hastoolbox will check whether the respective subfolder is already added and adds it, and a splash screen is shown, indicating a change in copyright (probably not GPL, definitely not for medical use, etc.).
 
-## Other Matlab NIRS toolboxes
+## Other MATLAB NIRS toolboxes
 
 The original [NIRS-SPM](http://bispl.weebly.com/nirs-spm.html) was developed by Korea Advanced Institute of Science & Technology. The general NIRS-SPM approach is to solve a GLM based on different approaches of nongaussian random field theory. One of the developers, Sungho Tak, is now working at UCL in Will Penny's group. He reworked NIRS-SPM, which can now be found as on [NIRTC as SPM for fNIRS toolbox](http://www.nitrc.org/projects/spm_fnirs). SPM-fNIRS includes DCM as well.
 

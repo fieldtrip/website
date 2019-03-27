@@ -19,6 +19,8 @@ When you add documentation, please consider the following documentation guidelin
 
 There are several places where you are especially encouraged to add your own input to the FieldTrip website. On the [frequently asked questions](/faq) page you can add answers to a variety of FieldTrip-related questions. On the [example scripts](/example) page you can put parts of your own scripts of specific analysis done in FieldTrip or in conjunction with FieldTrip. If these scripts get very elaborate and use example data, you can alternatively add a tutorial on the [tutorials](/tutorial) page and [contact](/contact) us to [send](/faq/how_should_i_send_example_data_to_the_developers) the example data so it can be put on the ftp-server (ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/).
 
+To submit changes to the FieldTrip website, make a Pull Request on the [`fieldtrip/website` repo on GitHub](https://github.com/fieldtrip/website).
+
 ## How to structure a tutorial?
 
 The tutorials should be written with a clear purpose in mind: the reader of the tutorial expects to learn something. The tutorial should contain examples that can be reproduced. Furthermore, the examples should be explained in such a manner that the reader can generalize these hands-on examples to his/her own experimental data analysis.
@@ -30,22 +32,22 @@ For consistency the tutorials should preferably be structured in the following w
   - What does this tutorial expect as background understanding or skills?
   - Which topics are not covered in this tutorial?
 - **Background:** some background on the methods used
-- **Procedure:** summarize which analysis steps are performed in the tutorial, this should include a picture of the analysis protocol (please use SVG).
+- **Procedure:** summarize which analysis steps are performed in the tutorial. This should include a picture of the analysis protocol (please use SVG).
 - All steps in the procedure are **subsequent headings**.
 - **Summary and conclusion:**
   - What has been covered?
   - What has not been covered but is relevant in the context of the tutorial?
   - Provide links to suggested further reading, related FAQs and example scripts.
 
-To check that the tutorial meets the expected didactical qualities, the introduction should spell out what the reader will learn, what is expected from him (e.g. that he already has done another tutorial) and what will not be covered. The summary should link to follow up documentation and to the more advanced topics that relate to the tutorial.
+To check that the tutorial meets the expected didactical qualities, the introduction should spell out what the reader will learn, what is expected from him/her (e.g. that he/she already has done another tutorial) and what will not be covered. The summary should link to follow up documentation and to the more advanced topics that relate to the tutorial.
 
 For an example of a well-structured tutorial see the [tutorial on event related fields](/tutorial/eventrelatedaveraging).
 
 ## How to update the tutorial data on the FTP?
 
-Some computations in the tutorials may take a (too) long time, or take more memory than available in the computers of the people that want to walk through the tutorial. To allow people in these cases to follow through the whole tutorial, we provide the intermediate data and final results at important stages in the tutorial. This data is stored in \*.mat files. See below for the recommended file and variable naming scheme.
+Some computations in the tutorials may take a long time (or too long), or take more memory than available in the computers of the people that want to walk through the tutorial. To allow people in these cases to follow through the whole tutorial, we provide the intermediate data and final results at important stages in the tutorial. This data is stored in .mat files. See below for the recommended file and variable naming scheme.
 
-The tutorial mat files are made available on <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/> and are distributed to all computers whenever we have a toolkit course or workshop. To get new files on the FTP server, or update existing files, you should copy them on the DCCN central storage system to the directory /home/common/matlab/fieldtrip/data/ftp. That directory is automatically synchronized with the FTP server.
+The tutorial mat-files are made available on <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/> and are distributed to all computers whenever we have a toolkit course or workshop. To get new files on the FTP server, or update existing files, you should copy them on the DCCN central storage system to the directory /home/common/matlab/fieldtrip/data/ftp. That directory is automatically synchronized with the FTP server.
 
 ## How to name example data?
 
@@ -70,15 +72,16 @@ You can add tags to that list; these will be automatically shown at the top of e
 
 ## How to add figures?
 
-The preferred format for figures on the website is the PNG format. Also figures from MATLAB and screenshots should preferably be exported in the PNG format. If you want to edit the MATLAB figure, you should first export the figure to EPS or AI, open the figure in Adobe Illustrator or Inkscape and make the changes, and save it to PNG.
+The preferred format for figures on the website is the PNG format. Also figures from MATLAB and screenshots should preferably be exported in the PNG format. If you want to edit the MATLAB figure, you should first export the figure to EPS or AI, open the figure in Adobe Illustrator and make the changes, and save it to PNG.
 
 Figures should be added to the `assets/img` directory of the website repository. Please do not upload very large binary files, such as PDFs, but send them to Robert for static inclusion on the website. Figures should not be included in the standard markdown style, since that does not allow the specification of the size and does not allow zooming in. Instead, figures should be included using a piece of custom [Liquid code](https://shopify.github.io/liquid/) which gets translated into html at the moment the website is rebuilt.
 
 We also considered SVG, which is a standardized scalable vector graphics format. This would allow other people to download the figure, modify it, and upload the changed figure without loss of quality. However, SVG had too many problems rendering correctly in different browsers.
 
-Making schematic figures in SVG is easy in Office Word or Office Powerpoint using their default shapes under the _insert_ tab. When you are done making the figure just select all text and images and copy-paste them it in Adobe Illustrator to save as SVG.
+Making schematic figures in SVG is easy in Microsoft Word or Microsoft Powerpoint using their default shapes under the _insert_ tab. When you are done making the figure just select all text and images and copy-paste them it in Adobe Illustrator to save as SVG.
 
 {% include image src="/assets/img/development/guideline/documentation/excel-drawing-tools-2007-2010.jpg" width="200" %}
+
 
 ## What colors to use
 

@@ -50,4 +50,4 @@ Tzvetan has published a new paper, entitled [FieldTrip made easy: An Analysis Pr
 
 ## Recent improvements to the code
 
-All changes to the code can be tracked on [Twitter](http://twitter.com/fieldtriptoolbx) and [Github](/development/git).
+All changes to the code can be tracked on [Twitter](http://twitter.com/fieldtriptoolbx) and [GitHub](/development/git).

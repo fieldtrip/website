@@ -11,9 +11,9 @@ The support for the 'cyberkinetics' format using neuroshare has never been fully
 
 ## Introduction
 
-To read Cyberkinetics data into FieldTrip, you will need the Neuroshare toolbox, see http://www.neuroshare.org. Neuroshare is created to support the collaborative development of open library and data file format specifications for neurophysiology and distribute open-source data handling software tools for neuroscientists.
+To read Cyberkinetics data into FieldTrip, you will need the Neuroshare toolbox, see http://www.neuroshare.org. Neuroshare is created to support the collaborative development of open library and data file format specifications for neurophysiology and distribute open source data handling software tools for neuroscientists.
 
-You will need to download the "Matlab Import Filter" and the Cyberkinetics library files. Currently this will run on WINDOWS platforms only. Make sure all the Neuroshare files are available on the Matlab path.
+You will need to download the "MATLAB Import Filter" and the Cyberkinetics library files. Currently this will run on Windows platforms only. Make sure all the Neuroshare files are available on the MATLAB path.
 
 The low-level FieldTrip reading function that is used to read Cyberkinetics dat
 fieldtrip/fileio/private/read_neuroshare.m

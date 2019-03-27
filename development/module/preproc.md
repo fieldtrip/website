@@ -37,7 +37,7 @@ All of the low-level preprocessing functions require data to be represented as a
 
 For real-time use of the functions in this module it is relevant to know how much time each function takes. The execution time depends on the number of channels and on the number of samples in the data block. Assuming that multiple functions are called as part of a larger processing pipeline, the time of the functions that are called has to be summed up.
 
-The benchmarking results presented in the table below were determined with fieldtrip-20101227 and Matlab R2010a running on a Macbook Pro with a 2.53 GHz Intel Core 2 Duo processor. Execution time was determined for three representative data block sizes and for various parameters for each function.
+The benchmarking results presented in the table below were determined with fieldtrip-20101227 and MATLAB R2010a running on a Macbook Pro with a 2.53 GHz Intel Core 2 Duo processor. Execution time was determined for three representative data block sizes and for various parameters for each function.
 
 The full code for the benchmarking (one script per preproc function and some helper functions) is included in the release version of FieldTrip. You can repeat it on your own workstation and for your own data characteristics.
 

@@ -31,7 +31,7 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 To localize the evoked sources for the example dataset we will perform the following step
 
-- Read the data into Matlab using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Construct a forward model and lead field matrix using **[ft_volumesegment](/reference/ft_volumesegment)**, **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** and **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**
 

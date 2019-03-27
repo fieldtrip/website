@@ -1,6 +1,6 @@
 ---
 title: Code guidelines
-tags: [guidelines, development]
+tags: [guidelines, development, fixme]
 ---
 
 # Code guidelines
@@ -46,12 +46,12 @@ There are 5 different ways of doing this.
 - **print**: Notifications are printed on screen. E.g.: “processing trials”, "5 trials rejected with artifacts". Via these prints the user is informed that the expected operations are taking place. These are really important when it is not obvious in the output whether an operation has really occurred. When such prints appear on screen the user also knows the processing of the input started and where it is at the moment. This is important when the functions do time-consuming computations.
 - **warning once**: A warning printed on screen (i.e. a short text message starting with "Warning: ...") when it occurs _first_. This was implemented to avoid many warnings when a function is executed more times after each other.
 - **warning**: A warning printed on screen. E.g.: “Warning: no baseline correction”. Warnings are used when the user's input is not erroneous in certain context but it could lead to an error or sub-optimal analysis in another context. The user can re-consider whether the right input was used.
-- **error**: Error printed on screen and the process is terminated. This happens when the input does not make sense or obviously wrong. A short text message is provided with the error to point out why it has occurred.
+- **error**: Error printed on screen and the process is terminated. This happens when the input does not make sense or is obviously wrong. A short text message is provided with the error to point out why it has occurred.
 
-When a new function is written in FieldTrip, it is important to include these feedbacks. Each warning and error should have an **identifier**. By using identifiers, the individual warnings can be switched off by the user in Matlab. Hence, 'warning_once' should be used cautiously.
+When a new function is written in FieldTrip, it is important to include these feedbacks. Each warning and error should have an **identifier**. By using identifiers, the individual warnings can be switched off by the user in MATLAB. Hence, `warning_once` should be used cautiously.
 
 The short text messages which accompany errors and warnings on the screen are often not enough to provide insight for the users. The text message on screen should be kept short, but a **[Frequently Asked Question](/faq)** should explain the warning and why an error occurred. The identifiers should help the user to find the relevant FAQ. The FAQ
-should also have the same 'warning' or 'error' tag (e.g. FieldTrip:fileio:fileNotExisting).
+should also have the same 'warning' or 'error' tag (e.g. `FieldTrip:fileio:fileNotExisting`).
 
 ## Use the dimord field to describe or deciper the data
 
@@ -114,9 +114,9 @@ To determine the dimord, you should use the **fieldtrip/private/getdimord** func
 
 ## Adding new configuration options
 
-Any new configuration option should have a default set at the beginning of the function. If you don't know a good default value, you should specify the default value as empty, i.e. cfg.newoption = \[].
+Any new configuration option should have a default set at the beginning of the function. If you don't know a good default value, you should specify the default value as empty, i.e. `cfg.newoption = []`.
 
-If you add a configuration option, you should check in the [configuration index](/reference/configuration_index) whether a cfg option with similar functionality already exist in another function. Use identical names for identical functionality and try to keep the help similar if possible.
+If you add a configuration option, you should check in the [configuration index](/reference/configuration_index) whether a cfg option with similar functionality already exists in another function. Use identical names for identical functionality and try to keep the help similar if possible.
 
 ## Renaming configuration options or values
 
@@ -142,7 +142,7 @@ In case the user still specifies the option, he/she will get warning or error (d
 
 Sometimes it is necessary to rename or remove a function, an option or a piece of code. We should try to keep FieldTrip backward compatible whenever we replace a function or an option with something else. However, it is not possible to maintain backward compatibility for ever and sometimes the requirements for the deprecated functionality interferes with other maintenance to the code or the implementation of new functionality. Therefore we should accommodate the possibility to remove deprecated functionality, i.e. make the functionality unsupported.
 
-Sections of code or functions that are deprecated should be documented in the code as such, including the name of the person who deprecated it, the date at which it was deprecated, and possibly also a link to some background (e.g. link to bugzilla) and an estimate of when the support for the deprecated functionality can be removed all together (i.e. an "expiration date"). Deprecated functions and options should also be added to [this list](/development/deprecated).
+Sections of code or functions that are deprecated should be documented in the code as such, including the name of the person who deprecated it, the date at which it was deprecated, and possibly also a link to some background (e.g. link to GitHub Issues) and an estimate of when the support for the deprecated functionality can be removed altogether (i.e. an "expiration date"). Deprecated functions and options should also be added to [this list](/development/deprecated).
 
 An example is
 
@@ -154,12 +154,12 @@ An example is
 
 ### Graphical-User Interfaces (GUI)
 
-If you want to add a user interface (ui) to a figure, use the functions uicontrol and ft_uilayout for setting it up. This helps to manage the different components. Try to keep ui-definitions at one place in the code to make the code more manageable for other developers. Please make yourself known with other functions with a GUI before programming one your own, e.g. ft_databrowser.
+If you want to add a user interface (ui) to a figure, use the functions uicontrol and ft_uilayout for setting it up. This helps to manage the different components. Try to keep ui-definitions at one place in the code to make the code more manageable for other developers. Please make yourself familiar with other functions with a GUI before programming one your own, e.g. ft_databrowser.
 
 Some practical issue
 
-- Use tags to identify components. Tags should have a sensible name to facilitate code readability. Tags should be named according to function (e.g. 'channelui' or according to type ('buttonui') or position in the ui ('leftui').
-- If it makes sense to group ui elements together, do it as early as possible - it makes life easier. Do not retag otherwise!
+- Use tags to identify components. Tags should have a sensible name to facilitate code readability. Tags should be named according to function (e.g. 'channelui') or according to type ('buttonui') or position in the ui ('leftui').
+- If it makes sense to group ui elements together, do it as early as possible – it makes life easier. Do not retag otherwise!
 
 Example of good ui code:
 
@@ -193,21 +193,21 @@ Example of bad ui code (please avoid this):
 
 ### Figure handles and Handle Graphics 2
 
-From Matlab 2014b onwards, Mathworks introduced a new way of figure handling as a standard called Handle Graphics 2 (HG2). While in former Matlab versions, a figure handle could be treated as a double variable, this is not the case for HG2 anymore, where figure handles are objects. These figure handle objects can, however, be casted to double. Thus, an initiation of a graphics handle cannot be done by setting it to \[], 0 or 1 anymore.
+From MATLAB 2014b onwards, MathWorks introduced a new way of figure handling as a standard called Handle Graphics 2 (HG2). While in former MATLAB versions, a figure handle could be treated as a double variable, this is not the case for HG2 anymore, where figure handles are objects. These figure handle objects can, however, be casted to double. Thus, an initialization of a graphics handle cannot be done by setting it to \[], 0 or 1 anymore.
 
 It is good practice in FieldTrip to name a figure according to the function that created it and the data that was put in. Due to HG2, a proper (i.e. compatible) code for this is
 
     set(gcf, 'Name', sprintf('%d: %s: %s', double(gcf), funcname, dataname));
 
-gcf refers to the current figure handle. There are number of additional consequences of HG2, which are too numerous to list here. See [Bugzilla bug 2461](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2461) for FieldTrip relevant issues. While this bug is being solved, the most prominent issues and their fixes will be listed here.
+gcf refers to the current figure handle. There are number of additional consequences of HG2, which are too numerous to list here. See [Bugzilla bug 2461](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2461) for FieldTrip relevant issues. While this bug is being solved, the most prominent issues and their fixes will be listed there.
 
-## SVN log messages
+## Git commit log messages
 
-SVN log entries should describe the change to the file or files. The log message should allow an end-user to realize that a recent change in the code may relate to the changed behavior that he/she observes. The log message should also allow another developer that is familiar with the particular code to understand why the code was changed, and what part of the code is changed.
+Git commit messages should describe the change to the file or files. The log message should allow an end-user to realize that a recent change in the code may relate to the changed behaviour that he/she observes. The log message should also allow another developer that is familiar with the particular code to understand why the code was changed, and what part of the code was changed.
 
 Log messages don't have to be long, but they have to be clear to the intended audience: end-users and colleague developers. Log messages should also be clear for yourself, because sometimes you'll have to go back in a function to fix problems that were introduced by your own previous change.
 
-To allow better human and machine readable changelogs, please start your log message with a single descriptive word and a hyphen to separates it from the actual description. Whenever applicable you should use the description "bugfix", "enhancement", "documentation", "restructuring".
+To allow better human and machine readable changelogs, please start your log message with a single descriptive word and a hyphen to separate it from the actual description. Whenever applicable you should use the description "bugfix", "enhancement", "documentation", or "restructuring".
 
 Examples of good and useful log messages are
 
@@ -233,19 +233,19 @@ Examples of bad log messages are
 
 ## Public and private functions
 
-In FieldTrip the interface towards the user is controlled by making only those functions publicly available that the end-user is supposed to call from the command-line or from a Matlab script. Those functions are **public** and should be in the main directory or in one of the module directories.
+In FieldTrip the interface towards the user is controlled by making only those functions publicly available that the end-user is supposed to call from the command-line or from a MATLAB script. Those functions are **public** and should be in the main directory or in one of the module directories.
 
-Low-level functions that are only supposed to be called by other FieldTrip functions but not by the end-user should be in the private directory.
+Low-level functions that are only supposed to be called by other FieldTrip functions but not by the end-user should be in the private directories.
 
 ## Calling functions that are located elsewhere
 
-Functions in a module, i.e. sub-directory, should **not** be calling any FieldTrip functions at a higher level. E.g. a function like fileio/xxx.m should only call other functions in fileio, in fileio/private or in an external toolbox. If you don't know how to work with svn autosycn, please ask the senior developers.
+Functions in a module, i.e. sub-directory, should **not** be calling any FieldTrip functions at a higher level. E.g. a function like fileio/xxx.m should only call other functions in fileio, in fileio/private or in an external toolbox.
 
 This requirement on the dependencies ensures the [modular design](/development/module).
 
 ## Varargin arguments
 
-Generally functions (i.e. in the plotting directory) have optional arguments as a pair
+Generally functions (e.g. in the plotting directory) have optional arguments as a pair
 of inputs describing the name of one property and its value.
 These arguments have to be handled at the very beginning inside the function, by setting a default value,
 like this:
@@ -262,9 +262,9 @@ In this way the variables which are used in the function are always correctly in
 
 ## File names for executable/compiled binaries
 
-Since we support FieldTrip on all currently popular platforms regarding hardware and software, we have to create executables for all platforms that we can. If an executable cannot be compiled on a particular platform, e.g. because it depends on windows specific DLLs, then you of course don't have to bother.
+Since we support FieldTrip on most currently popular platforms regarding hardware and software, we have to create executables for all platforms that we can. If an executable cannot be compiled on a particular platform, e.g. because it depends on Windows-specific DLLs, then you of course don't have to bother.
 
-Ensuring that all executables can co-exist on all platforms (and especially on the unix base platforms) means that they should have unique file names. The choice for that is based on the specification according to the MATLAB function "computer", i.e.
+Ensuring that all executables can co-exist on all platforms (and especially on the Unix base platforms) means that they should have unique file names. The choice for that is based on the specification according to the MATLAB function "computer", i.e.
 
     >> help computer
     computer Computer type.
@@ -302,16 +302,21 @@ Note that on Windows the executable is required to have the file extension "exe"
 
 ## Check the requirements
 
-FieldTrip of course depends on MATLAB, but there are additional requirements, such as operating systems (for mex files) and external toolboxes. We want to develop FieldTrip such that it can be used by as many people as possible, which means that we want to control and minimize the additional requirements
+FieldTrip of course depends on MATLAB, but there are additional requirements, such as operating systems (for mex files) and external toolboxes. We want to develop FieldTrip such that it can be used by as many people as possible, which means that we want to control and minimize the additional requirements.
 
 Please consider the general [requirements](/faq/requirements) when extending or changing the FieldTrip code. Keep in mind that FieldTrip should not only run on the latest and greatest MATLAB version that you happen to have installed on your personal "supercomputer", but also on the more modest computers of many other people with other (older or newer) MATLAB versions and operating systems.
 
 ## Ensure that it runs on older MATLAB versions
 
-Although you may be developing FieldTrip on the latest MATLAB version, we try to support it for previous MATLAB versions up to five years old. Here is a list of release dates, a complete list can be found on [Wikipedia](https://en.wikipedia.org/wiki/MATLAB#Release_history).
+Although you may be developing FieldTrip on the latest MATLAB version, we try to support it for previous MATLAB versions up to five years old. As of March 2019, this means supporting MATLAB R2014a and newer.
+
+Here is a list of MATLAB release dates; a complete list can be found on [Wikipedia](https://en.wikipedia.org/wiki/MATLAB#Release_history).
 
 | version number | release name | release date |
 | -------------- | ------------ | ------------ |
+| MATLAB 9.6     | R2019a       | 20 Mar 2019  |
+| MATLAB 9.5     | R2018b       | 12 Sep 2018  |
+| MATLAB 9.4     | R2018a       | 15 Mar 2018  |
 | MATLAB 9.3     | R2017b       | 14 Sep 2017  |
 | MATLAB 9.2     | R2017a       | 09 Mar 2017  |
 | MATLAB 9.1     | R2016b       | 15 Sep 2016  |
@@ -337,14 +342,14 @@ Although you may be developing FieldTrip on the latest MATLAB version, we try to
 
 To facilitate supporting older MATLAB versions, below we list some known incompatibilities:
 
-- the nargout function in Matlab 6.5 and older does not work on function handles
-- the "try ... catch me ..." statement fails in Matlab 7.4, see [this bug](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=541)
+- the nargout function in MATLAB 6.5 and older does not work on function handles
+- the "try ... catch me ..." statement fails in MATLAB 7.4, see [this bug](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=541)
 - the ~ output argument is not supported in MATLAB versions &lt; 2009b and should be avoided
 - nan with multiple input arguments to create a nan-matrix does not work for MATLAB versions &lt; R14
 
 ## Compiling MEX files
 
-FieldTrip has to run on a large variety of platforms, with different operating systems and MATLAB versions. Therefore, we try to keep the compiled mex files reasonably consistent. Since mex file are added in the course of the development, and we don't want to recompile them too often, we cannot be too strict on the compile environment. If possible you should compile the mex files with a MATLAB version that is two years old, i.e. not the latest, but also not a version that is very old.
+FieldTrip has to run on a large variety of platforms, with different operating systems and MATLAB versions. Therefore, we try to keep the compiled mex files reasonably consistent. Since mex files are added in the course of the development, and we don't want to recompile them too often, we cannot be too strict on the compile environment. If possible you should compile the mex files with a MATLAB version that is two years old, i.e. not the latest, but also not a version that is very old.
 
 In most cases the mex file source code should be located in fieldtrip/src. The `ft_compile_mex` function is used to compile the mex files and the `synchronize-private.sh` BASH script is used to copy the updated mex files to all required (private) directories.
 
@@ -354,20 +359,20 @@ For Unix-like platforms (Linux and macOS), it it also possible to compile all me
 
     make mex MATLAB=/usr/bin/matlab
 
-would build for Matlab using the binary in ''/usr/bin/matlab'' (a typical location on Linux platforms),
+would build for MATLAB using the binary in ''/usr/bin/matlab'' (a typical location on Linux platforms),
 
     make mex MATLAB=/Applications/MATLAB_R2015a.app/bin/matlab
 
-would use Matlab 2015a on macOS, and
+would use MATLAB 2015a on macOS, and
 
     make mex OCTAVE=/Applications/Octave.app/Contents/Resources/usr/bin/octave
 
-would build for Octave on macOS.
-If the binary is already in the search path (for example, ''which matlab'' prints the location of Matlab), a shortened form with only the binary name itself can be used as in
+would build for Octave on OSX.
+If the binary is already in the search path (for example, ''which matlab'' prints the location of MATLAB), a shortened form with only the binary name itself can be used as in
 
     make mex MATLAB=matlab
 
-Different platforms have different extensions; for example, ''.mexmaci64'' for Matlab macOS 64 bit intel, ''.mexw32'' for Matlab MS Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determine the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
+Different platforms have different extensions; for example, ''.mexmaci64'' for MATLAB macOS 64 bit intel, ''.mexw32'' for MATLAB Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determines the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
 
 Below are more details on the compilation guidelines on different platforms.
 
@@ -395,7 +400,7 @@ MATLAB is not supported on 32 bit macOS any more.
 
 ### Apple macOS 64 bit
 
-You should use the gcc compiler that is included in the XCode package. Further details are not known at the moment.
+You should use the gcc compiler that is included in the Xcode package. Further details are not known at the moment.
 
 ## Avoid using nested functions
 
@@ -403,7 +408,7 @@ Although a nested function has certain advantages, it makes maintaining the code
 
 ## Avoid using inline functions
 
-The inline constructio
+The inline construction
 
     assign = @(var, val) assignin('caller', var, val);
 
@@ -414,9 +419,9 @@ is not supported in GNU Octave; instead you should define a sub-function like th
 
 to accomplish the same goal.
 
-## Use a consistent tab spacing
+## Use a consistent spacing
 
-It is annoying to get large svn diffs just because of changes in the whitespace. That is why all developers are encouraged to work with two spaces instead of tabs. In the MATLAB editor you can specify this in preferences->editor->tab, where you can specify "2" and "tab key inserts spaces".
+It is annoying to get large git diffs just because of changes in the whitespace. That is why all developers are encouraged to work with two spaces instead of tabs. In the MATLAB editor you can specify this in Preferences->Editor/Debugger->Tab, where you can specify "2" and "tab key inserts spaces".
 
 With Ctrl-A, Ctrl-I you can auto-indent the whole m-file and ensure that the horizontal whitespaces are consistent.
 
@@ -458,7 +463,10 @@ Note the Id tag at the bottom (see below).
 
 ## Include the SVN revision number in the file
 
-FIXME this should be updated to reflect the migration to git
+FIXME this should be updated to reflect the migration to Git
+
+| NOTE: This section is obsolete: FieldTrip has migrated from SVN to Git, and Git does not support `$Id:` tags.|
+|---|
 
 You should include a line like this.
 

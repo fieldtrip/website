@@ -28,7 +28,7 @@ The width and height are used for the subplot that will be made in **[ft_multipl
 
 Instead of constructing an ascii layout file, you can also specify one of the supported electrode or gradiometer files (e.g. Polhemus file, or CTF .res4 header file). The **[ft_prepare_layout](/reference/ft_prepare_layout)** function will read the 3-D sensor positions from the file and will projected these to a 2-D plane. Furthermore, if no layout file is specified, but if electrodes or gradiometers are present in the data, the **[ft_prepare_layout](/reference/ft_prepare_layout)** function will use those to create a 2-D layout on the fly.
 
-Alternative to the ascii layout file, you can also use a Matlab layout file. It should be a .mat file containing a single variable with the name "lay". The lay variable should be a structure with
+Alternative to the ascii layout file, you can also use a MATLAB layout file. It should be a .mat file containing a single variable with the name "lay". The lay variable should be a structure with
 
 `<code>`lay =
 pos: [153x2 double]

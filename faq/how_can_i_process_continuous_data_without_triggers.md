@@ -18,7 +18,7 @@ This will give you a raw data structure containing all continuous data represent
 
     plot(data.time{1}, data.trial{1});
 
-For some analyses, e.g. spectral power estimation, it is better to have the data in smaller chunks. You can segment the continuous data after reading it into Matlab using **[ft_redefinetrial](/reference/ft_redefinetrial)** or while reading it in using the following configuration:
+For some analyses, e.g. spectral power estimation, it is better to have the data in smaller chunks. You can segment the continuous data after reading it into MATLAB using **[ft_redefinetrial](/reference/ft_redefinetrial)** or while reading it in using the following configuration:
 
     cfg = [];
     cfg.dataset              = 'yourfile.ext';

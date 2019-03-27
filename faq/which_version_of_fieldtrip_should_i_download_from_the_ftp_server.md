@@ -11,4 +11,4 @@ We release a daily version of FieldTrip, with the name fieldtrip-YYYYMMDD, where
 
 In general, you should download the most recent daily release version. It contains the most features and all known bugs will be fixed in that version. If you encounter a problem and think that that is caused by a bug in the code, you should download the latest version of that moment. If the problem still persists, please inform us about it through the [email discussion list](/discussion_list).
 
-If you want to control in detail which version of FieldTrip you have, if you want to do frequent updates, or if you want to change or conontribute code, you can use the [Github](/development/git) version.
+If you want to control in detail which version of FieldTrip you have, if you want to do frequent updates, or if you want to change or conontribute code, you can use the [GitHub](/development/git) version.

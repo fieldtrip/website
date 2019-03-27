@@ -15,7 +15,7 @@ This section discusses an alternative approach, where the TCP server can handle 
 of the ''dmarequest'' function in a switch statement based on the incoming version number. This would make it possible to connect older clients
 to a more recent server.
 
-On the client side (MATLAB), the different protocol versions would be handled by different MEX files (old versions frozen) and glue code in Matlab.
+On the client side (MATLAB), the different protocol versions would be handled by different MEX files (old versions frozen) and glue code in MATLAB.
 This would make it possible to connect a client from a recent FieldTrip version (say, talking protocol version 3 natively) to an older server (V1).
 The logic would involve detecting the server version by sending requests with decreasing client versions (using different MEX-files) until a call succeeds.
 

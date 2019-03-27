@@ -56,16 +56,16 @@ _Figure: Overview of fNIRS analysis procedure._
 
 ### Getting Started
 
-The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let Matlab know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)) and then execute the **[ft_defaults](/reference/ft_defaults)** function by typin
+The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let MATLAB know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)) and then execute the **[ft_defaults](/reference/ft_defaults)** function by typin
 
     ft_defaults
 
-In general, FieldTrip is keeping all input arguments to a function stored together in a local variable called 'configuration' or 'cfg'. Although Matlab variables could take any name, for convenience we will keep on using the name 'cfg' for this. FieldTrip functions are designed to each represent one step in your analysis pipeline. One (crucial) step in your analysis pipeline is to read in and preprocess the data. For this, we will make use of the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**. You can check out the help of the preprocessing function by typing:
+In general, FieldTrip is keeping all input arguments to a function stored together in a local variable called 'configuration' or 'cfg'. Although MATLAB variables could take any name, for convenience we will keep on using the name 'cfg' for this. FieldTrip functions are designed to each represent one step in your analysis pipeline. One (crucial) step in your analysis pipeline is to read in and preprocess the data. For this, we will make use of the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**. You can check out the help of the preprocessing function by typing:
 
     help ft_preprocessing
 
 It might also be helpful to check out the code to obtain an understanding of what the function is about.
-As FieldTrip is an open-source toolbox, you can always have a look at the code details by typing
+As FieldTrip is an open source toolbox, you can always have a look at the code details by typing
 
     edit ft_preprocessing
 
@@ -87,7 +87,7 @@ Let us try to execute **[ft_preprocessing](/reference/ft_preprocessing)** now as
 
     [data] = ft_preprocessing(cfg);
 
-When working with .oxy3-files, the optode template containing the layout of the optodes needs to be loaded. If MATLAB cannot find the template file on your path, it will pop up a graphical user interface dialogue asking you to locate the xml file. By default this file is located in C:\Program Files (x86)\Artinis Medical Systems BV\Oxysoft 3.0.103. The file to select is “optodetemplates.xml”. However, given that FieldTrip often will search for this function, it is best to copy this function to the same folder as where your Matlab analysis script and/or your fNIRS are data stored. For information on how to choose the optimal template for your experiments, please see https://www.artinis.com/blogpost-all/2017/6/27/how-do-i-choose-the-correct-fibers-and-template-for-my-oxymon.
+When working with .oxy3-files, the optode template containing the layout of the optodes needs to be loaded. If MATLAB cannot find the template file on your path, it will pop up a graphical user interface dialogue asking you to locate the xml file. By default this file is located in C:\Program Files (x86)\Artinis Medical Systems BV\Oxysoft 3.0.103. The file to select is “optodetemplates.xml”. However, given that FieldTrip often will search for this function, it is best to copy this function to the same folder as where your MATLAB analysis script and/or your fNIRS are data stored. For information on how to choose the optimal template for your experiments, please see https://www.artinis.com/blogpost-all/2017/6/27/how-do-i-choose-the-correct-fibers-and-template-for-my-oxymon.
 
 FieldTrip is finished when you see something like this on the scree
 

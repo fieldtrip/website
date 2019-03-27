@@ -15,7 +15,7 @@ You may want to continue reading the section on [getting started with CTF](/gett
 
 ## Support for NeuroMag and/or Elekta MEG data.
 
-All data in Neuromag is stored in .fif files, where the files can contain different data objects. The following data objects can be read and used in FieldTrip: MEG data, EEG data, gradiometer positions, single sphere models, BEM models (using the MEG-CALC toolbox). FieldTrip reads Neuromag fif files using low-level Matlab functions from the MNE toolbox from Matti Hamalainen, see [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php). This will work on any platform, as it is based on open-source m-files.
+All data in Neuromag is stored in .fif files, where the files can contain different data objects. The following data objects can be read and used in FieldTrip: MEG data, EEG data, gradiometer positions, single sphere models, BEM models (using the MEG-CALC toolbox). FieldTrip reads Neuromag fif files using low-level MATLAB functions from the MNE toolbox from Matti Hamalainen, see [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/MNE_register/index.php). This will work on any platform, as it is based on open source m-files.
 
 Alternative support for Neuromag data is implemented by calling the mex files from [Kimmo Uutela's MEG-PD toolbox](http://www.kolumbus.fi/kuutela/programs/meg-pd/). The files in the MEG-PD toolbox are not included with FieldTrip, but you can download them[here](http://www.kolumbus.fi/kuutela/programs/meg-pd/). Extract the toolbox and put it on your MATLAB path, or copy the files into the "fieldtrip/private" directory. This is used if you select the file format as "neuromag_fif".
 
