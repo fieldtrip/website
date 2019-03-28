@@ -21,6 +21,8 @@ You can [provide us with detailed bug reports](/bugzilla). The easier it is for 
 
 You can contribute by directly sharing your MATLAB code with us and helping us integrate it into the FieldTrip toolbox. On the [development section of this website](/development) you can find more details on how the development is organized. You can of course also [ask](/contact).
 
+If yor contribution is considerable, for example a completely new algorithm, there are some additional requirements. Your code contribution must be in FieldTrip style, the algorithm must be of broad interest (i.e. more than a single lab), must be maintainable and must be documented not only with help in the code, but also on the website as a tutorial or as example script.
+
 {% include markup/info %}
 When you contribute code, please consider the [code guidelines](/development/guideline/code) to keep it consistent and compatible with the existing implementation. Also try to adhere to the existing representation of the data in the [data structures](/faq/how_are_the_various_data_structures_defined).
 {% include markup/end %}
