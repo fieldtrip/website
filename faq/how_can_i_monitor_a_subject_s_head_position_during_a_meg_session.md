@@ -88,7 +88,7 @@ In stead of reading data from the shared memory, one now reads data from a previ
       ft_realtime_headlocalizer(cfg)
 
 Before we can replay the data acquired with the Elekta Neuromag, the data has to be preprocessed with maxfilter. The first possibility is to add the relevant information to .fif file with MaxMove (see also under further reading).
-The other option is to use maxfilter to create an ascii file containing the relevant information about head movement. Under ‘Head position estimation’ the button ‘Save head postions in an ascii file’ just need to be pressed (see also under further reading).
+The other option is to use maxfilter to create an ASCII file containing the relevant information about head movement. Under ‘Head position estimation’ the button ‘Save head postions in an ASCII file’ just need to be pressed (see also under further reading).
 
       cfg.bufferdata   = 'first';                 % read data from first until last segment
       cfg.template     = 'previousdataset';

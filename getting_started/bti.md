@@ -53,7 +53,7 @@ The 4D software organizes all files in a nested directory structure, managing th
 | exp1     | redundant information about the experiment                                          |
 | exp2     | redundant information about the experiment                                          |
 | hs_file  | digitized head-shape coordinates (x-, y-, z-points)                                 |
-| pdf.txt  | ascii file with a description of the alternative file names of the data (see below) |
+| pdf.txt  | ASCII file with a description of the alternative file names of the data (see below) |
 
 Depending on how the dataset is exported the actual data files are just named 0, 1, 2, ..., (as above) but could also be called something like:
 

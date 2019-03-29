@@ -16,7 +16,7 @@ One might wish to combine BESA’s capacities and convenience in spatiotemporal 
 
 ## Reading in data files from BESA
 
-BESA has its own file formats for storing various aspects of the data. Most of the files contain the data in plain ascii format and it is relatively easy to read in their contents into MATLAB or any other program. You can use a normal text editing program like Microsoft Wordpad to have a look at the content and format of the files.
+BESA has its own file formats for storing various aspects of the data. Most of the files contain the data in plain ASCII format and it is relatively easy to read in their contents into MATLAB or any other program. You can use a normal text editing program like Microsoft Wordpad to have a look at the content and format of the files.
 
 FieldTrip directly supports the following BESA file format
 

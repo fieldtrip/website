@@ -104,7 +104,7 @@ If you zoom in and look in detail at the SCLK01 channel, you can see that there 
 
 For preprocessing this EEG data set, the choice of the reference has to be considered. During acquisition the reference channel of the EEG amplifier was attached to the left mastoid. We would like to analyze this data with a linked-mastoid reference (also known as an average-mastoid reference). Furthermore, the detection of eye movement and blink artifacts is facilitated by computing bipolar derivation for the electrodes that were placed horizontally and vertically around the eyes.
 
-The channel names that were configured in the BrainAmp Recorder software correspond to the labels of the locations in the electrode cap. These electrode locations are numbered 1 to 60, and the corresponding channel names as ascii strings are '1', '2', ... '60'. Channel 53 correspond to the right mastoid. Since the left mastoid was used as reference in the acquisition, it is not represented in the data file (because the Voltage at that electrode is zero by definition).
+The channel names that were configured in the BrainAmp Recorder software correspond to the labels of the locations in the electrode cap. These electrode locations are numbered 1 to 60, and the corresponding channel names as ASCII strings are '1', '2', ... '60'. Channel 53 correspond to the right mastoid. Since the left mastoid was used as reference in the acquisition, it is not represented in the data file (because the Voltage at that electrode is zero by definition).
 
     cfg = [];
     cfg.dataset     = 'subj2.vhdr';

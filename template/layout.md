@@ -5,7 +5,7 @@ tags: [template, layout]
 
 # Template 2-D layouts for plotting
 
-Electrode positions in the layouts are represented as points in 2-D Carthesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ascii .lay files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
+Electrode positions in the layouts are represented as points in 2-D Carthesian space, i.e. with an X and Y position for each electrode. Furthermore, each electrode has a label. In the [layout tutorial](/tutorial/layout) you can find more details on how to create and use them. The file format for layout files specified as ASCII .lay files is explained [here](/faq/what_is_the_format_of_the_layout_file_which_is_used_for_plotting).
 
 You can use the following snippet of code to get a quick overview of the template layout sets.
 

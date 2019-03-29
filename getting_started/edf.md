@@ -51,7 +51,7 @@ The original EDF format did not allow for storing triggers or events. The EDF+ f
 
 #### EDF files that have a proper annotation channel
 
-The annotation channel contains an ascii encoded representation of the time in seconds that certain events happened. You can read the events using **[ft_read_event](/reference/ft_read_event)** like this
+The annotation channel contains an ASCII encoded representation of the time in seconds that certain events happened. You can read the events using **[ft_read_event](/reference/ft_read_event)** like this
 
     event = ft_read_event('testfile.edf', 'detect flank', [])
 

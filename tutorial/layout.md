@@ -18,11 +18,11 @@ Many of the FieldTrip plotting functions use a 2D layout of the channels for plo
 
 ### 3D sensor positions
 
-The geometrically most accurate layout representation is obtained by starting from a 3D representation of the sensor positions as a [grad/elec/opto structure](/faq/how_are_electrodes_magnetometers_or_gradiometers_described). However, projecting 3D sensor positions to a 2D plane always incurs some distortion, especially at the edges where the surface is "bending" away from view. Consider for example how the North pole is distorted on a map of the world.
+The geometrically most accurate layout representation can be obtained from a 3D representation of the sensor positions as a [grad/elec/opto structure](/faq/how_are_electrodes_magnetometers_or_gradiometers_described). However, projecting 3D sensor positions to a 2D plane always incurs distortion, especially at the edges where the surface is "bending" away from view. Consider for example how the North pole is distorted on a map of the world.
 
 ### Template layout from disk
 
-A [template layout files](/template/layout) from disk is easy to use. Furthermore, it has the advantage that care has been taken to add an outline of geometric features (e.g. the ears and nose, or the outline of the MEG helmet) and that a well-fitting interpolation mask (i.e. the region in which the topoplot functions should interpolate) is present. For example the [CTF helmet layouts](/template/layout/#with-a-more-realistic-display-of-temporal-sensors-1) looks much more realistic than what you would get by projecting the 3D sensors onto a 2D place and drawing a circle with nose and ears around it.
+A [template layout](/template/layout) from disk is easy to use. Furthermore, it has the advantage that care has been taken to add an outline of geometric features (e.g. the ears and nose, or the outline of the MEG helmet) and that a well-fitting interpolation mask (i.e. the region in which the topoplot functions should interpolate) is present. For example the [CTF helmet layouts](/template/layout/#with-a-more-realistic-display-of-temporal-sensors-1) looks much more realistic than what you would get by projecting the 3D sensors onto a 2D place and drawing a circle with nose and ears around it.
 
 ### From a picture
 
@@ -36,13 +36,13 @@ Sometimes a schematic layout is more convenient, since it "flattens" the head an
 
 ### Using a template layout
 
-Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systemsof the same type (e.g. CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layout files](/template/layout).
+Since MEG sensors are in generally fixed in a rigid helmet inside the dewar, and since the arrangement of sensors is the same for all MEG systemsof the same type (e.g. CTT275, Neuromag306), it is not common to construct individual-subject MEG layouts. Instead, most people will simply use one of the [template layouts](/template/layout).
 
-For future OPM-based MEG systems it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](/reference/ft_prepare_layout)** to make a 3D layout.
+For future [OPM-based MEG systems](https://dx.doi.org/10.1038/nature26147) it is more likely that MEG sensor layouts will differ from one subject to another subject. Constructing 2D layouts for OPM based systems can be done similar to the way that they are constructed for EEG systems. If you have the 3D description of the MEG sensors, you can also specify that as `cfg.grad` into **[ft_prepare_layout](/reference/ft_prepare_layout)** to make a 3D layout.
 
 ### Creating a layout from sensor positions
 
-Customized MEG layouts can be useful when you want to avoid the distortion due to the projection of sensors in 3D space. For example if you present auditory stimuli to both ears and want to look at the symmetry of the AEF responses, you can use the following code to make a layout from the left and right.
+Customized MEG layouts can be useful to avoid the distortion due to the projection of sensors in 3D space. For example if you present auditory stimuli to both ears and want to compare the AEF responses on the left and right, you can use the following code to make a layout.
 
     grad = ft_read_sens('Subject01.ds', 'senstype', 'meg');
 
@@ -62,13 +62,13 @@ Customized MEG layouts can be useful when you want to avoid the distortion due t
     cfg = [];
     cfg.direction = 'horizontal';
     cfg.distance = 3; % the 3D sensor positions are in cm
-    layout = ft_appendlayout(cfg, layoutL, layoutR);
+    layoutLR = ft_appendlayout(cfg, layoutL, layoutR);
 
 {% include image src="/assets/img/tutorial/layout/ctf151_left_right.png" width="400" %}
 
-In a similar way you can use **[ft_prepare_layout](/reference/ft_prepare_layout)** and **[ft_appendlayout](/reference/ft_appendlayout)** to make a layout that combines a left, right, top, front and back view of the MEG sensors in a fold-out arrangement.
+In a similar way you can make a layout that combines a left, right, top, front and back view of the MEG sensors in a fold-out arrangement.
 
-For the Neuromag/Elekta/Megin MEG system which consists of sensor-triplets with a combination of planar gradiometers in the horizontal direction, planar gradiometers in the vertical direction, and magnetometers, you can use this strategy to make a layout with the separate channel types:
+For the Neuromag/Elekta/Megin MEG system - which consists of sensor-triplets with a combination of planar gradiometers in the horizontal direction, planar gradiometers in the vertical direction, and magnetometers - you can make a layout that separates the different channel types.
 
     grad = ft_read_sens('oddball1_mc_downsampled.fif', 'senstype', 'meg');
 
@@ -88,7 +88,7 @@ For the Neuromag/Elekta/Megin MEG system which consists of sensor-triplets with 
     cfg = [];
     cfg.direction = 'horizontal';
     cfg.distance = 0.3; % the layouts are approximately scaled to fit a unit sphere
-    layout = ft_appendlayout(cfg, layout1, layout2, layout3);
+    layout123 = ft_appendlayout(cfg, layout1, layout2, layout3);
 
 {% include image src="/assets/img/tutorial/layout/neuromag306_123.png" width="400" %}
 

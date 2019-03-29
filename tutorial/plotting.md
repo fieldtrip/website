@@ -170,7 +170,7 @@ All channels are squeezed in a circle and the nose and ears are indicated at the
 Although many tutorials elsewhere on the FieldTrip website are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
 
     cfg = [];
-    cfg.layout = 'CTF151_helmet.mat'; % note that it is a binary .mat file, not an ascii .lay file
+    cfg.layout = 'CTF151_helmet.mat'; % note that it is a binary .mat file, not an ASCII .lay file
     cfg.layout = ft_prepare_layout(cfg);
     reading layout from file CTF151_helmet.mat
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 4 MB
