@@ -1,7 +1,5 @@
 ---
 title: ft_layoutplot
-layout: default
-tags: 
 ---
 ```
  FT_LAYOUTPLOT makes a figure with the 2-D layout of the channel positions

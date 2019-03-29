@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_singlesphere
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_SINGLESPHERE creates a volume conduction model of the

@@ -1,7 +1,5 @@
 ---
 title: ft_datatype_dip
-layout: default
-tags: 
 ---
 ```
  FT_DATATYPE_DIP descripts the FieldTrip MATLAB structure for dip data

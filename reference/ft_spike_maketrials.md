@@ -1,7 +1,5 @@
 ---
 title: ft_spike_maketrials
-layout: default
-tags: 
 ---
 ```
  FT_SPIKE_MAKETRIALS converts raw timestamps in a SPIKE structure to spike

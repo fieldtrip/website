@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_headlocalizer
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_HEADLOCALIZER is a real-time application for online visualization of

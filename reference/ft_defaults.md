@@ -1,7 +1,5 @@
 ---
 title: ft_defaults
-layout: default
-tags: 
 ---
 ```
  FT_DEFAULTS (ending with "s") sets some general settings in the global variable

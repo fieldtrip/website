@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_dtf
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_DTF computes the directed transfer function.

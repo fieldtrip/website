@@ -1,7 +1,5 @@
 ---
 title: ft_spikesplitting
-layout: default
-tags: 
 ---
 ```
  FT_SPIKESPLITTING reads a single Neuralynx DMA log file and writes each

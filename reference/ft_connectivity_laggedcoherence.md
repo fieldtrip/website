@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_laggedcoherence
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_LAGGEDCOHERENCE performs time-resolved coherence analysis of
@@ -20,7 +18,7 @@ tags:
  the time resolution in freqout.
 
  This function must be called separately for each frequency of interest. To analyse
- multiple frequencies, we advise the use of a for loop like this:
+ multiple frequencies, you can use a for-loop like this:
    cfg_F             = [];
    cfg_F.method      = 'wavelet';
    cfg_F.output      = 'fourier';
@@ -36,8 +34,8 @@ tags:
        cfg_LC.foi    = foi(counter);
        width         = cfg_F.width/cfg_F.foi;
        cfg_F.toi     = data.time{1}(1) + ceil(fs*width/2)/fs : ...   %from:
-         cfg_LC.lag/cfg_F.foi : ...                     %in steps of size:
-         data.time{1}(end) - ceil(fs*width/2)/fs;                     %to:
+         cfg_LC.lag/cfg_F.foi : ...                      %in steps of size:
+         data.time{1}(end) - ceil(fs*width/2)/fs;                      %to:
        freqout       = ft_freqanalysis(cfg_F,data);
        lcoh(counter) = ft_connectivityanalysis(cfg_LC,freqout);
    end

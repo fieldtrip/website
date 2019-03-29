@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_mim
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_MIM computes the multivariate interaction measure from a

@@ -1,7 +1,5 @@
 ---
 title: markdown2matlab
-layout: default
-tags: 
 ---
 ```
  MARKDOWN2MATLAB converts a MarkDown file to a MATLAB script or function. All text

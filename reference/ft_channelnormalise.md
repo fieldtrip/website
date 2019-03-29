@@ -1,7 +1,5 @@
 ---
 title: ft_channelnormalise
-layout: default
-tags: 
 ---
 ```
  FT_CHANNELNORMALISE shifts and scales all channels of the the input data.

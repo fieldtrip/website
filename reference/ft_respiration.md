@@ -1,7 +1,5 @@
 ---
 title: ft_respiration
-layout: default
-tags: 
 ---
 ```
  FT_RESPIRATION estimates the respiration rate from a respiration belt, temperature

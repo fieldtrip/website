@@ -1,7 +1,5 @@
 ---
 title: ft_reproducescript
-layout: default
-tags: 
 ---
 ```
  FT_REPRODUCESCRIPT is a helper function to clean up the script and intermediate

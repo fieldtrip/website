@@ -1,7 +1,5 @@
 ---
 title: ft_write_sens
-layout: default
-tags: 
 ---
 ```
  FT_WRITE_SENS writes electrode information to an external file for further processing in external software.

@@ -1,7 +1,5 @@
 ---
 title: ft_wizard
-layout: default
-tags: 
 ---
 ```
  FT_WIZARD is a graphical user interface to evaluate a FieldTrip analysis

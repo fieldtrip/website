@@ -1,7 +1,5 @@
 ---
 title: ft_scalpcurrentdensity
-layout: default
-tags: 
 ---
 ```
  FT_SCALPCURRENTDENSITY computes an estimate of the SCD using the

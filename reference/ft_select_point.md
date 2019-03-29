@@ -1,7 +1,5 @@
 ---
 title: ft_select_point
-layout: default
-tags: 
 ---
 ```
  FT_SELECT_POINT helper function for selecting a one or multiple points in the

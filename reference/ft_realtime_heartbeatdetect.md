@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_heartbeatdetect
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_HEARTBEATDETECT is an example realtime application for online

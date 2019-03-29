@@ -1,7 +1,5 @@
 ---
 title: ft_omri_slice_time_apply
-layout: default
-tags: 
 ---
 ```
  function [STM, Xs] = ft_omri_slice_time_apply(STM, X)

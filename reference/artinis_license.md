@@ -1,7 +1,5 @@
 ---
 title: artinis_license
-layout: default
-tags: 
 ---
 ```
  ARTINIS_LICENSE prints the license only once upon the first call to

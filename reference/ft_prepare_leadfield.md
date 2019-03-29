@@ -1,14 +1,12 @@
 ---
 title: ft_prepare_leadfield
-layout: default
-tags: 
 ---
 ```
  FT_PREPARE_LEADFIELD computes the forward model for many dipole locations
  on a regular 2D or 3D sourcemodel and stores it for efficient inverse modelling
 
  Use as
-   [sourcemodel] = ft_prepare_leadfield(cfg, data);
+   [sourcemodel] = ft_prepare_leadfield(cfg, data)
 
  It is neccessary to input the data on which you want to perform the
  inverse computations, since that data generally contain the gradiometer

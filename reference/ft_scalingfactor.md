@@ -1,7 +1,5 @@
 ---
 title: ft_scalingfactor
-layout: default
-tags: 
 ---
 ```
  FT_SCALINGFACTOR determines the scaling factor from old to new units, i.e. it

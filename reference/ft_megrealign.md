@@ -1,7 +1,5 @@
 ---
 title: ft_megrealign
-layout: default
-tags: 
 ---
 ```
  FT_MEGREALIGN interpolates MEG data towards standard gradiometer locations by

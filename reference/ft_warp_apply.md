@@ -1,7 +1,5 @@
 ---
 title: ft_warp_apply
-layout: default
-tags: 
 ---
 ```
  FT_WARP_APPLY performs a 3D linear or nonlinear transformation on the input

@@ -1,7 +1,5 @@
 ---
 title: ft_headmodeltype
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODELTYPE determines the type of volume conduction model of the head

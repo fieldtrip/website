@@ -1,7 +1,5 @@
 ---
 title: copyfields
-layout: default
-tags: 
 ---
 ```
  COPYFIELDS copies a selection of the fields from one structure to another

@@ -1,7 +1,5 @@
 ---
 title: ft_omri_pipeline_nuisance
-layout: default
-tags: 
 ---
 ```
  FT_OMRI_PIPELINE_NUISANCE implements an online fMRI pre-processing pipeline, including

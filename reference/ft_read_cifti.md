@@ -1,7 +1,5 @@
 ---
 title: ft_read_cifti
-layout: default
-tags: 
 ---
 ```
  FT_READ_CIFTI read functional data or functional connectivity from a cifti-1 or

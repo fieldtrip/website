@@ -1,7 +1,5 @@
 ---
 title: ft_timelockstatistics
-layout: default
-tags: 
 ---
 ```
  FT_TIMELOCKSTATISTICS  computes significance probabilities and/or critical values of a parametric statistical test

@@ -1,7 +1,5 @@
 ---
 title: ft_write_data
-layout: default
-tags: 
 ---
 ```
  FT_WRITE_DATA exports electrophysiological data such as EEG to a file.

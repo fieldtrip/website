@@ -1,7 +1,5 @@
 ---
 title: ft_source2sparse
-layout: default
-tags: 
 ---
 ```
  FT_SOURCE2SPARSE removes the grid locations outside the brain from the source 

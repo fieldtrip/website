@@ -1,7 +1,5 @@
 ---
 title: ft_connectivityplot
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITYPLOT plots channel-level frequency resolved connectivity. The
@@ -10,12 +8,12 @@ tags:
 
  Use as
    ft_connectivityplot(cfg, data)
+ where the first input argument is a configuration structure (see below)
+ and the input data is a structure obtained from  FT_CONNECTIVITYANALYSIS
+ using a frequency-domain connectivity metric. Consequently the input data
+ should have a dimord of 'chan_chan_freq', or 'chan_chan_freq_time'.
 
- The input data is a structure containing the output to FT_CONNECTIVITYANALYSIS
- using a frequency domain metric of connectivity. Consequently the input
- data should have a dimord of 'chan_chan_freq', or 'chan_chan_freq_time'.
-
- The cfg can have the following options:
+ The configuration can have the following options
    cfg.parameter   = string, the functional parameter to be plotted (default = 'cohspctrm')
    cfg.xlim        = selection boundaries over first dimension in data (e.g., freq)
                      'maxmin' or [xmin xmax] (default = 'maxmin')

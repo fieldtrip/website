@@ -1,7 +1,5 @@
 ---
 title: ft_preprocessing
-layout: default
-tags: 
 ---
 ```
  FT_PREPROCESSING reads MEG and/or EEG data according to user-specified trials

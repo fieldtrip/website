@@ -1,7 +1,5 @@
 ---
 title: ft_prepare_vol_sens
-layout: default
-tags: 
 ---
 ```
  FT_PREPARE_VOL_SENS does some bookkeeping to ensure that the volume

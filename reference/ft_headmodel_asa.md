@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_asa
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_ASA reads a volume conduction model from an ASA *.vol

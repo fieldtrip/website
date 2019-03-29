@@ -1,7 +1,5 @@
 ---
 title: ft_movieplotER
-layout: default
-tags: 
 ---
 ```
  FT_MOVIEPLOTER makes a movie of the the event-related potentials, event-related

@@ -1,7 +1,5 @@
 ---
 title: ft_documentationindex
-layout: default
-tags: 
 ---
 ```
  FT_DOCUMENTATIONINDEX is a helper function to maintain the online documentation.

@@ -1,7 +1,5 @@
 ---
 title: ft_freqsimulation
-layout: default
-tags: 
 ---
 ```
  FT_FREQSIMULATION makes simulated data in FieldTrip format. The data is

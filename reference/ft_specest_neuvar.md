@@ -1,7 +1,5 @@
 ---
 title: ft_specest_neuvar
-layout: default
-tags: 
 ---
 ```
  FT_SPECEST_NEUVAR computes a time-domain estimation of overall signal 

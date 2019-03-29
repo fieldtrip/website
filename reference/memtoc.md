@@ -1,7 +1,5 @@
 ---
 title: memtoc
-layout: default
-tags: 
 ---
 ```
  MEMTOC return the memory that was used

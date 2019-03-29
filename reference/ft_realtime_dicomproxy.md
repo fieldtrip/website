@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_dicomproxy
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_DICOMPROXY simulates an fMRI acquisition system by reading a series of

@@ -1,12 +1,10 @@
 ---
 title: ft_read_headmodel
-layout: default
-tags: 
 ---
 ```
  FT_READ_HEADMODEL reads a volume conduction model from various manufacturer
  specific files. Currently supported are ASA, CTF, Neuromag, MBFYS
- and MATLAB.
+ and Matlab.
 
  Use as
    headmodel = ft_read_headmodel(filename, ...)

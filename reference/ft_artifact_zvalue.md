@@ -1,7 +1,5 @@
 ---
 title: ft_artifact_zvalue
-layout: default
-tags: 
 ---
 ```
  FT_ARTIFACT_ZVALUE reads the interesting segments of data from file and identifies

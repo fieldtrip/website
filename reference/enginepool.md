@@ -1,7 +1,5 @@
 ---
 title: enginepool
-layout: default
-tags: 
 ---
 ```
  ENGINEPOOL manages the pool of MATLAB engine workers that is available

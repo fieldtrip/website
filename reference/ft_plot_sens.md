@@ -1,7 +1,5 @@
 ---
 title: ft_plot_sens
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_SENS visualizes the EEG, MEG or NIRS sensor array.

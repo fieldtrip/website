@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_bandpassfilter
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_BANDPASSFILTER applies a band-pass filter to the data and thereby

@@ -1,7 +1,5 @@
 ---
 title: ft_topoplotER
-layout: default
-tags: 
 ---
 ```
  FT_TOPOPLOTER plots the topographic distribution over the head
@@ -67,7 +65,7 @@ tags:
    cfg.comment            = 'no', 'auto' or 'xlim' (default = 'auto')
                             'auto': date, xparam and zparam limits are printed
                             'xlim': only xparam limits are printed
-   cfg.commentpos         = string or two numbers, position of comment (default 'leftbottom')
+   cfg.commentpos         = string or two numbers, position of the comment (default = 'leftbottom')
                             'lefttop' 'leftbottom' 'middletop' 'middlebottom' 'righttop' 'rightbottom'
                             'title' to place comment as title
                             'layout' to place comment as specified for COMNT in layout

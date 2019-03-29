@@ -1,7 +1,5 @@
 ---
 title: ft_documentationreference
-layout: default
-tags: 
 ---
 ```
  FT_DOCUMENTATIONREFERENCE is a function to maintain the online reference documentation.

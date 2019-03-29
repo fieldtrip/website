@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_interpolate
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_INTERPOLATE describes a volume conduction model of the head in which

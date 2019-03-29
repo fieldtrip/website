@@ -1,7 +1,5 @@
 ---
 title: ft_spike_waveform
-layout: default
-tags: 
 ---
 ```
  FT_SPIKE_WAVEFORM computes descriptive parameters on

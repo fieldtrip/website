@@ -1,7 +1,5 @@
 ---
 title: ft_plot_headmodel
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_HEADMODEL visualizes the boundaries in the volume conduction model of the head as

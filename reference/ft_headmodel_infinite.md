@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_infinite
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_INFINITE returns an infinitely large homogenous

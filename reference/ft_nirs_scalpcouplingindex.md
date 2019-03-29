@@ -1,7 +1,5 @@
 ---
 title: ft_nirs_scalpcouplingindex
-layout: default
-tags: 
 ---
 ```
  FT_NIRS_SCALPCOUPLINGINDEX computes the zero-lag cross-correlation 

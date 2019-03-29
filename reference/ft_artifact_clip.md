@@ -1,7 +1,5 @@
 ---
 title: ft_artifact_clip
-layout: default
-tags: 
 ---
 ```
  FT_ARTIFACT_CLIP scans the data segments of interest for channels that clip. These

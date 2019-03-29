@@ -1,7 +1,5 @@
 ---
 title: ft_topoplotTFR
-layout: default
-tags: 
 ---
 ```
  FT_TOPOPLOTTFR plots the topographic distribution over the head
@@ -65,7 +63,7 @@ tags:
                             'auto': date, xparam, yparam and parameter limits are printed
                             'xlim': only xparam limits are printed
                             'ylim': only yparam limits are printed
-   cfg.commentpos         = string or two numbers, position of comment (default 'leftbottom')
+   cfg.commentpos         = string or two numbers, position of the comment (default = 'leftbottom')
                             'lefttop' 'leftbottom' 'middletop' 'middlebottom' 'righttop' 'rightbottom'
                             'title' to place comment as title
                             'layout' to place comment as specified for COMNT in layout

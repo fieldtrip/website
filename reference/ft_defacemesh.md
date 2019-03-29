@@ -1,7 +1,5 @@
 ---
 title: ft_defacemesh
-layout: default
-tags: 
 ---
 ```
  FT_DEFACEMESH allows you to de-identify a scalp surface mesh by erasing specific

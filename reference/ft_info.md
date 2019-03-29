@@ -1,7 +1,5 @@
 ---
 title: ft_info
-layout: default
-tags: 
 ---
 ```
  FT_INFO prints an info message on screen, depending on the verbosity 

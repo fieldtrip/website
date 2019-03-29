@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_denoise
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_DENOISE performs a regression of the matrix dat onto

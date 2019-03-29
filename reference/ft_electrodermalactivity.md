@@ -1,7 +1,5 @@
 ---
 title: ft_electrodermalactivity
-layout: default
-tags: 
 ---
 ```
  FT_ELECTRODERMALACTIVITY estimates the electrodermal activity from a recording of

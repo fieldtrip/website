@@ -1,7 +1,5 @@
 ---
 title: ft_checkconfig
-layout: default
-tags: 
 ---
 ```
  FT_CHECKCONFIG checks the input cfg of the main FieldTrip functions

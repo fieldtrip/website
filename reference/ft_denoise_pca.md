@@ -1,7 +1,5 @@
 ---
 title: ft_denoise_pca
-layout: default
-tags: 
 ---
 ```
  FT_DENOISE_PCA performs a principal component analysis (PCA) on specified reference

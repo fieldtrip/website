@@ -1,7 +1,5 @@
 ---
 title: ft_plot_vol
-layout: default
-tags: 
 ---
 ```
  This function is a backward compatibility wrapper for existing MATLAB scripts

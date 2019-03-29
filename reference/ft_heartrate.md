@@ -1,7 +1,5 @@
 ---
 title: ft_heartrate
-layout: default
-tags: 
 ---
 ```
  FT_HEARTRATE estimates the heart rate from a continuous PPG or ECG channel. It

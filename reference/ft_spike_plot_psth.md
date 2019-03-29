@@ -1,7 +1,5 @@
 ---
 title: ft_spike_plot_psth
-layout: default
-tags: 
 ---
 ```
  FT_SPIKE_PLOT_PSTH makes a bar plot of PSTH structure with error bars.

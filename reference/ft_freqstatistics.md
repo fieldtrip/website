@@ -1,7 +1,5 @@
 ---
 title: ft_freqstatistics
-layout: default
-tags: 
 ---
 ```
  FT_FREQSTATISTICS computes significance probabilities and/or critical

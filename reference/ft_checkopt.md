@@ -1,7 +1,5 @@
 ---
 title: ft_checkopt
-layout: default
-tags: 
 ---
 ```
  FT_CHECKOPT does a validity test on the types and values of a configuration

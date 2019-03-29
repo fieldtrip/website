@@ -1,7 +1,5 @@
 ---
 title: beamformer_sam
-layout: default
-tags: 
 ---
 ```
  BEAMFORMER_SAM scans on pre-defined dipole locations with a single

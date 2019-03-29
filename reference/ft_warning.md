@@ -1,7 +1,5 @@
 ---
 title: ft_warning
-layout: default
-tags: 
 ---
 ```
  FT_WARNING prints a warning message on screen, depending on the verbosity 

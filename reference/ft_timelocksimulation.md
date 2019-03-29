@@ -1,7 +1,5 @@
 ---
 title: ft_timelocksimulation
-layout: default
-tags: 
 ---
 ```
  FT_TIMELOCKSIMULATION computes a simulated signal that resembles an

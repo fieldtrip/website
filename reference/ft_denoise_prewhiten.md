@@ -1,7 +1,5 @@
 ---
 title: ft_denoise_prewhiten
-layout: default
-tags: 
 ---
 ```
  FT_DENOISE_PREWHITEN applies a spatial prewhitening operation to the data using the
@@ -11,7 +9,7 @@ tags:
 
  Use as
    dataout = ft_denoise_prewhiten(cfg, datain, noise)
- where the datain is the original data from FT_PREPROCESSING, where
+ where the datain is the original data from FT_PREPROCESSING and
  noise should contain the estimated noise covariance from
  FT_TIMELOCKANALYSIS.
 

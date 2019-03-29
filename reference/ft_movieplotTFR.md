@@ -1,7 +1,5 @@
 ---
 title: ft_movieplotTFR
-layout: default
-tags: 
 ---
 ```
  FT_MOVIEPLOTTFR makes a movie of the time-frequency representation of power or

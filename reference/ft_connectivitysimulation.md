@@ -1,7 +1,5 @@
 ---
 title: ft_connectivitysimulation
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITYSIMULATION simulates channel-level time-series data with a
@@ -10,7 +8,6 @@ tags:
 
  Use as
    [data] = ft_connectivitysimulation(cfg)
-
  where the configuration structure should contain:
    cfg.method      = string, can be 'linear_mix', 'mvnrnd', 'ar', 'ar_reverse' (see below)
    cfg.nsignal     = scalar, number of signals
@@ -18,14 +15,11 @@ tags:
    cfg.triallength = in seconds
    cfg.fsample     = in Hz
 
- Depending on the specific method that is selected, the configuration
- may also contain:
-
  Method 'linear_mix' implements a linear mixing with optional time shifts
  where the number of unobserved signals can be different from the number
  of observed signals
 
- Required cfg options:
+ Required configuration options:
    cfg.mix    = matrix, [nsignal x number of unobserved signals]
                 specifying the mixing from the unobserved signals to
                 the observed signals, or
@@ -40,7 +34,7 @@ tags:
                 specifying the time shift (in samples) between the
                 unobserved signals and the observed signals
 
- Optional cfg options:
+ Optional configuration options:
    cfg.bpfilter  = 'yes' (or 'no')
    cfg.bpfreq    = [bplow bphigh] (default: [15 25])
    cfg.demean    = 'yes' (or 'no')
@@ -57,11 +51,11 @@ tags:
  parameters on the simulation is not really clear. This method will be
  disabled in the future.
 
- Required cfg options:
+ Required configuration options:
    cfg.covmat    = covariance matrix between the signals
    cfg.delay     = delay vector between the signals in samples
 
- Optional cfg options:
+ Optional configuration options:
    cfg.bpfilter  = 'yes' (or 'no')
    cfg.bpfreq    = [bplow bphigh] (default: [15 25])
    cfg.demean    = 'yes' (or 'no')
@@ -92,7 +86,7 @@ tags:
    cfg.delay    = nxn matrix, specifying the delay, in seconds, from one
                    signal's spectral component to the other signal, rows
                    causing column
-   cfg.ampl     = nxn matrix, specifying the amplitude 
+   cfg.ampl     = nxn matrix, specifying the amplitude
    cfg.bpfreq   = nxnx2 matrix, specifying the lower and upper frequencies
                    of the bands that are transmitted, rows causing column
 

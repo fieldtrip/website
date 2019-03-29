@@ -1,7 +1,5 @@
 ---
 title: hasyokogawa
-layout: default
-tags: 
 ---
 ```
  HASYOKOGAWA tests whether the data input toolbox for MEG systems by

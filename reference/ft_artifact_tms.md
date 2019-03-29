@@ -1,7 +1,5 @@
 ---
 title: ft_artifact_tms
-layout: default
-tags: 
 ---
 ```
  FT_ARTIFACT_TMS reads the data segments of interest from file and identifies artefacts in

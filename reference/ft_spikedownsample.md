@@ -1,7 +1,5 @@
 ---
 title: ft_spikedownsample
-layout: default
-tags: 
 ---
 ```
  FT_SPIKEDOWNSAMPLE takes electrophysiological data that was continuoudly

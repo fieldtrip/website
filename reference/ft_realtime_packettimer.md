@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_packettimer
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_PACKETTIMER can be used to time the rate at which data can be processed

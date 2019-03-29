@@ -1,7 +1,5 @@
 ---
 title: ft_hastoolbox
-layout: default
-tags: 
 ---
 ```
  FT_HASTOOLBOX tests whether an external toolbox is installed. Optionally

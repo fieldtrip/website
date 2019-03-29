@@ -1,7 +1,5 @@
 ---
 title: ft_conjunctionanalysis
-layout: default
-tags: 
 ---
 ```
  FT_CONJUNCTIONANALYSIS finds the minimum statistic common across two or

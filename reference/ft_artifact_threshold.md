@@ -1,7 +1,5 @@
 ---
 title: ft_artifact_threshold
-layout: default
-tags: 
 ---
 ```
  FT_ARTIFACT_THRESHOLD scans for trials in which the range, i.e. the minimum, the

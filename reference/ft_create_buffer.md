@@ -1,7 +1,5 @@
 ---
 title: ft_create_buffer
-layout: default
-tags: 
 ---
 ```
  FT_CREATE_BUFFER starts the thread with the TCP server attached to the local

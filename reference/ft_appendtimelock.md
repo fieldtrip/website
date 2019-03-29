@@ -1,7 +1,5 @@
 ---
 title: ft_appendtimelock
-layout: default
-tags: 
 ---
 ```
  FT_APPENDTIMELOCK concatenates multiple timelock (ERP/ERF) data structures that
@@ -13,9 +11,7 @@ tags:
  Use as
    combined = ft_appendtimelock(cfg, timelock1, timelock2, ...)
 
- The following configuration options are supported:
-
- The configuration can optionally contain
+ The configuration can contain
    cfg.appenddim       = string, the dimension to concatenate over which to append,
                          this can be 'chan' and 'rpt' (default is automatic)
    cfg.tolerance       = scalar, tolerance to determine how different the time axes

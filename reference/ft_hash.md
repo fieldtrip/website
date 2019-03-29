@@ -1,7 +1,5 @@
 ---
 title: ft_hash
-layout: default
-tags: 
 ---
 ```
  FT_HASH computes a MD5 hash from a MATLAB variable or structure
