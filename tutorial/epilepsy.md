@@ -17,6 +17,23 @@ FieldTrip is released under the [GNU General Public License](http://www.gnu.org/
 
 The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy/)
 
+All MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
+
+The kurtosis beamformer method described here, for identifying the source(s) of epileptiform activity, was originally published by [Kirsch et al (2006)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5953276/).
+
+The ABC clinical staff would typically use the following sequence of analysis steps for epilepsy data:
+1. Screen the data visually for spikes and also to identify physiological or external recording artefacts.
+2. Choose relatively artefact-free data, that appears to contain spikes, for further analysis (bearing in mind that data quality can vary widely in patient recordings, especially children)
+3. Run the kurtosis beamformer analysis to yield candidate sources in volumetric images, which can be examined alongside other information e.g. lesions visible in anatomical images.
+4. Examine source timeseries from the candidate sources to verify the presence of spikes. Usually source timeseries would be visualised alongside the original raw data. Candidate spikes can be automatically marked in the timeseries based on their amplitude.
+5. Before reporting back to the surgical team, candidate sources are typically confirmed by dipole-fitting of key spikes identified by the pipeline outlined above.  
+
+Because of the importance to clinical work of visually screening data and marking spikes, we have also incorporated here (with brief instructions) the use of [AnyWave software](http://meg.univ-amu.fr/wiki/AnyWave), an open-source package for visualising MEG and EEG data which lends itself well to the interpretation of the outputs from this analysis. 
+
+There are some small differences in the parameters for the beamformer source analysis depending on whether the analysis is for CTF or Elekta data, so analyses for each data type are presented here separately.
+
+
+
 ## Case 1
 
 _Male, age 9. Right parietal Glioma with parietal extended lesionectomy. Corticography also showed interictal discharges in the frontal lobe, though seizures were of parietal origin. Following the MEG, was operated and is now seizure free and off medication._
