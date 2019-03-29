@@ -104,6 +104,8 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
 
 #### Importing and filtering the channel level data
 
+The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artefacts such as eyeblinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible.  At this point we assume that the clinician has already visually screened the raw data, but we can plot it out below.
+
     dataset = 'case1.ds';
 
     cfg = [];
@@ -114,8 +116,7 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
     cfg.lpfreq    = 70;
     cfg.channel   = 'MEG';
     data = ft_preprocessing(cfg);
-    
-The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artefacts such as eyeblinks or EMG that might affect the analysis, while preserving as much energy from the spikes as possible.  
+     
 
     %% visualize the preprocessed data
 
@@ -170,7 +171,7 @@ To save time we have chosen to use a 7 mm grid for the source model here, but in
     mri_resliced = ft_volumereslice(cfg, mri);   
     save mri_resliced mri_resliced;
   
-Plot everything out and check that everything is aligned correctly.     
+We plot everything out and check that everything is aligned correctly.     
 
     figure
     ft_plot_vol(headmodel, 'unit', 'mm');
@@ -258,7 +259,7 @@ Returning to our images in FieldTrip, we can scroll through the slices to see wh
 #### Visualise the beamformer timeseries in AnyWave
 It is also clinically important to visualise the spikes that are contributing to the kurtosis images, not least to screen out any spurious sources which may be elicited by artefacts.  To do this, it is useful to have the original sensor data visible alongside the source timeseries. Marking the timepoints at which spikes occur at the sources can help the clinician scroll more easily through the data. We will write the data to a format that can be read by the open-source package [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), which is well-suited to this purpose.
 
-When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data.  So we import that to Fieldtrip and then append source timeseries data, adding header information for this, before writing the whole lot to the Anywave ADES file format. 
+When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data.  So we import that to Fieldtrip and then append source timeseries data, adding header information for this, before writing the whole lot to the AnyWave ADES file format. 
 
     % dataset = 'case1_sss_hpi.fif'  % our original data file
     cfg = [];
@@ -282,7 +283,7 @@ When we read in the data earlier, we filtered it, but here it is more useful to 
     % write to files
     ft_write_data(filename, dat, 'header', hdr, 'dataformat', 'anywave_ades');
 
-_(Notes:  At the time of writing, units for the source timeseries in Anywave are abitrary. Also, it is currently advisable to write all data to file at the same time rather than attempting to append source timeseries to an existing data file)._
+_(Notes:  At the time of writing, units for the source timeseries in AnyWave are abitrary. Also, it is currently advisable to write all data to file at the same time rather than attempting to append source timeseries to an existing data file)._
 
 Finally we can automatically mark potential spikes in the source timeseries data and create labels in AnyWave marker file format.  We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source timeseries exceeds 6 standard deviations of its mean.  
 
@@ -307,19 +308,126 @@ Finally we can automatically mark potential spikes in the source timeseries data
     fclose(fid);
 
 
-
 The data can now be opened in AnyWave.  Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data.  Set the timescale to be
 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropritely. Use the menu to import the marker file that we just created.
 
 
 
 
+### Analysis of the MEGIN dataset
+
+The MEGIN (formerly Elekta) dataset was collected from the same patient on the same day as the CTF dataset described above. So, we expect the results to be very similar to those yielded by the CTF data.
+
+Generally the analysis of MEGIN data is almost identical to the analysis of CTF data.  So this part of the tutorial has fewer comments than above. However there is one important difference, related to the processing of Maxfiltered data, which is addressed in more detail in the relevant tutorial sections below.  Maxfilter is MEGIN's proprietary pre-processing system which offers some improvements in signal-to-noise ratio and artefact handling, and potential for head movement correction. Importantly it is obligatory in datasets where active shielding ('MaxShield') was used during data collection and indeed the epilepsy data used here required preprocessing with Maxfilter for this reason.  But Maxfilter has effects on the data covariance which can cause problems in accurately computing the beamformer source model.  Some ways to optimise the beamformer calculations to avoid these problems are demonstrated below. 
+
+
+#### Coregistering the data
+For patient confidentiality we only include here the MRI which has already been coregistered with the data, defaced, and resliced to align it to the data head co-ordinate system.  The process for coregistration is identical to the one described above, except that in the MEGIN file system the polhemus head shape points are stored in the raw data file. When we reslice this MRI, it becomes aligned with the MEGIN co-ordinate system (RAS) which means that slice images are shown in a different set of orientations to the CTF data that has been aligned to its own co-ordinate system (see the following [tutorial](http://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/) for more details).
+
+    load mri_coreg_resliced.mat
+    cfg = [];
+    ft_sourceplot(cfg, mri_resliced)
+    
+#### Importing and filtering the sensor level data
+
+MEGIN MEG data has two channel types, and we are importing them both here.  With the checks we will perform later, there is no need to exclude one or the other channel type. We apply the same 10-70 Hz bandpass filter as for the CTF analysis.  
+
+    dataset = 'case1_sss_hpi.fif'
+    cfg = [];
+    cfg.dataset   = dataset;
+    cfg.hpfilter  = 'yes';
+    cfg.hpfreq    = 10;
+    cfg.lpfilter  = 'yes';
+    cfg.lpfreq    = 70;
+    cfg.channel   = 'MEG';  
+    % cfg.trl = [21*2000 255000 0];  % omit the first 20 seconds (numbers based on pre-screening of data)
+    data = ft_preprocessing(cfg);
+    
+    data.grad   = ft_convert_units(data.grad, 'm');
+    
+#### Construction of the volume conduction model of the head
+This is exactly the same as for the CTF data.
+
+    mri = ft_read_mri('mri_coreg_resliced.mat');
+    % segment the brain from the mri
+    cfg = [];
+    cfg.tissue = 'brain';
+    seg = ft_volumesegment(cfg, mri);
+
+    % extract surface mesh of the brain for the headmodel
+    cfg = [];
+    cfg.tissue = 'brain';
+    brain_mesh = ft_prepare_mesh(cfg, seg);
+
+    % turn this into a headmodel 
+    cfg = [];
+    cfg.method = 'singleshell';
+    headmodel = ft_prepare_headmodel(cfg, brain_mesh); 
+    
+    
+#### Construction of the source model
+This step is identical to the method for the CTF data, up until the very last stage where the LCMV beamformer is computed.
+
+    cfg = [];
+    cfg.resolution = 7;  % clinical work would typically use a grid which <5mm
+    cfg.grid.unit = 'mm';
+    cfg.headmodel = headmodel;
+    cfg.grad = data.grad; 
+    sourcemodel_grid = ft_prepare_sourcemodel(cfg); 
+
+    % align the voxel axes with the head co-ordinate axes.
+    cfg.xrange = [min(sourcemodel_grid.pos(:,1))-30 max(sourcemodel_grid.pos(:,1))+30];
+    cfg.yrange = [min(sourcemodel_grid.pos(:,2))-30 max(sourcemodel_grid.pos(:,2))+30];
+    cfg.zrange = [min(sourcemodel_grid.pos(:,3))-30 max(sourcemodel_grid.pos(:,3))+30];
+    mri_coreg_resliced = ft_volumereslice(cfg, mri);  
+
+    %% plot out what we have got to check alignment
+    figure
+    ft_plot_headmodel(headmodel, 'unit', 'mm');  %this is the brain shaped head model volume
+    ft_plot_sens(data.grad, 'unit', 'mm', 'coilsize', 10);  %this is the sensor locations  
+    ft_plot_mesh(sourcemodel_grid.pos); % the source model is a cubic grid of points 
+    ft_plot_ortho(mri.anatomy, 'transform', mri.transform, 'style', 'intersect');
+
+
+    cfg = [];
+    cfg.channel = 'MEG';
+    cfg.covariance = 'yes';
+    cov_matrix = ft_timelockanalysis(cfg, data);  
+
+    %% Precompute the leadfields, which speeds up the source reconstructions (but this is not obligatory)
+    cfg = [];
+    cfg.channel = 'MEG';
+    cfg.headmodel  = headmodel;
+    cfg.grid = sourcemodel_grid;
+    cfg.normalize = 'yes';  % normalisation avoids power bias towards centre of head
+    leadfield = ft_prepare_leadfield(cfg, cov_matrix);  
 
 
 
-### Analysis of the Elekta dataset
 
-FIXME
+[u,s,v] = svd(cov_matrix.cov);
+figure;semilogy(diag(s),'o-');
+
+%% from jan-mathijs
+% 
+cfg                  = [];
+cfg.method           = 'lcmv';
+cfg.grid             = leadfield;
+cfg.headmodel        = headmodel;
+cfg.lcmv.keepfilter  = 'yes';
+cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
+cfg.lcmv.reducerank  = 2;
+cfg.lcmv.lambda      = 5;
+cfg.lcmv.kappa       = 68%73;  based on SVD plot 
+
+cfg.lcmv.projectmom = 'yes';  %project dipole timeseries for each dipole in direction of maximal power (see below)
+cfg.lcmv.kurtosis = 'yes';
+source = ft_sourceanalysis(cfg, cov_matrix);
+
+
+
+
+### 
 
 ## Case 2
 
