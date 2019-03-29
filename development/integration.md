@@ -4,7 +4,7 @@ title: Integration between tools
 
 # Integration between tools
 
-For the documentation, communication and development of the FieldTrip project we use various tools. This page lists the tools and the integration that we have implemented between them.
+For the documentation, communication and development of the FieldTrip project we use various tools. This page lists the tools and the integrations between them.
 
 ## Jekyll
 
@@ -12,7 +12,7 @@ We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents ar
 
 ## Mailman
 
-We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>. Upon an email to the main FieldTrip mailing list, a tweet is send to <http://twitter.com/fieldtriptoolbx>.
+We use this for a number of email discussion lists. It is hosted by C&CZ at <http://mailman.science.ru.nl>. Upon an email to the main FieldTrip mailing list, a tweet is send to <http://twitter.com/fieldtriptoolbx>. The Google search on the website also searches the email list archives.
 
 ## Facebook
 
@@ -20,7 +20,7 @@ We use <http://facebook.com/fieldtriptoolbox> to announce events and to post pho
 
 ## Twitter
 
-We use <http://twitter.com/fieldtriptoolbx> to notify people about events. Website page edits, email messages to the discussion list and code commits are posted on the timeline.
+We use <http://twitter.com/fieldtriptoolbx> to notify people about events. Commits of new code are automatically tweeted.
 
 ## Bitly
 
@@ -28,13 +28,13 @@ We use [Bitly](https://bitly.com) to automatically create short URLs that are in
 
 ## YouTube
 
-We use a YouTube video channel to distribute video recordings of lectures. More details are [here](/video).
+We use a YouTube [video channel](https://www.youtube.com/fieldtriptoolbox) to distribute video recordings of lectures. More details are [here](/video) and [here](/development/guideline/video).
 
 ## GitHub
 
-We use Git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the same git repository on [BitBucket](#bitbucket).
+We use Git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the repository on [BitBucket](#bitbucket) and on [Gitlab](#gitlab).
 
-Following a push to github, a webhook is triggered. The code for that is at <http://github.com/fieldtrip/webhook> and is running on a dedicated (Raspberry Pi) server.
+If changes are pushed to github, a webhook is triggered. The code for that is maintained at <http://github.com/fieldtrip/webhook>.
 
 ## Bitbucket
 
@@ -46,19 +46,19 @@ A copy of the git repository of the FieldTrip software is stored on Gitlab, alth
 
 ## Bugzilla
 
-We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us to maintain and distribute to-do lists and supports the follow up communication with users that report problems or suggestions. It is hosted at the DCCN and details can be found [here](/bugzilla)
+We use [Bugzilla](http://www.bugzilla.org) as an "issue tracker". It allows us to maintain and distribute to-do lists and supports the follow up communication with users that report problems or suggestions. It is hosted at the DCCN, more details can be found [here](/bugzilla)
 
 ## Google
 
-We use Google to provide the search functionality on the website and discussion list archives. Furthermore, we use Google Analytics to collect site usage statistics.
+We use Google to provide the search functionality on the website and discussion list archives. Furthermore, we use Google Analytics to collect usage statistics.
 
 ## Ftp
 
-We use the DCCN ftp server to distribute a daily updated copy of the software and to distribute tutorial data.
+We use the DCCN [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/) to distribute a daily updated copy of the software and to distribute the tutorial data.
 
 ## Central storage
 
-Inside the DCCN we have a central storage system (i.e. a large and shared network drive) on which an up-to-date copy of the software is maintained. Also the test data used for development and regression testing with the [dashboard](#dashboard) is on central storage.
+At the DCCN we have a central storage system (i.e. a large and shared network drive) on which an up-to-date copy of the software is maintained. Also the test data used for development and regression testing with the [dashboard](#dashboard) is on central storage.
 
 ## Dashboard
 
@@ -70,7 +70,7 @@ We are experimenting with MixPanel to track the software usage. More details are
 
 ## Slack
 
-We are experimenting with [Slack](https://slack.com) as a messaging tool for the development team.
+We are experimenting with [Slack](https://fieldtriptoolbox.slack.com) as a messaging tool for the development team.
 
 ## Dokuwiki - obsolete
 

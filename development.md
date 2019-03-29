@@ -11,15 +11,16 @@ tags: [development]
 - [Projects](/development/project)
 - [Meetings](/development/meeting)
 - [Dashboard](/development/dashboard)
+- [Integration](/development/integration)
 - [Realtime](/development/realtime)
 
-To get direct access to the code, please refer to the [Git and GitHub](/development/git) documentation.
+For direct access to the code, please refer to the [Git and GitHub](/development/git) documentation.
 
-The source code in the FieldTrip toolbox is split over multiple directories reflecting its [modular organization](/development/module). The modular organization facilitates a separation between end-user functions that also do data bookkeeping, and low level functions that focus on the algorithms.
+The source code in the FieldTrip toolbox is split over multiple directories reflecting its [modular organization](/development/module). This facilitates a separation between high-level functions that do data bookkeeping, and low-level functions that focus on the algorithms.
 
 For keeping track of new ideas, feature requests and bugs, we still use [Bugzilla](/bugzilla) but are slowly moving over to [GitHub issues](https://github.com/fieldtrip/fieldtrip).
 
-For many of the tools (GitHub, website, mailman, Twitter, Facebook) that we use we have made an [integration](/development/integration); e.g. an update on the website is automatically tweeted.
+We use a combination of tools (GitHub, website, mailman, Twitter, Facebook) that are loosely linked to each other; for example, an update to the code is automatically tweeted. An overview is presented on the [integration](/development/integration) page.
 
 ## Recent improvements to the code
 
