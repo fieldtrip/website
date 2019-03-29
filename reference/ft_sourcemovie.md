@@ -1,7 +1,5 @@
 ---
 title: ft_sourcemovie
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEMOVIE displays the source reconstruction on a cortical mesh

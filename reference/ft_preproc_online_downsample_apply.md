@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_online_downsample_apply
-layout: default
-tags: 
 ---
 ```
  function [DM, xd] = ft_preproc_online_downsample_apply(DM, x)

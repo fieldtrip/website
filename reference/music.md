@@ -1,7 +1,5 @@
 ---
 title: music
-layout: default
-tags: 
 ---
 ```
  MUSIC source localization using MUltiple SIgnal Classification

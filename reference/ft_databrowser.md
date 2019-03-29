@@ -1,7 +1,5 @@
 ---
 title: ft_databrowser
-layout: default
-tags: 
 ---
 ```
  FT_DATABROWSER can be used for visual inspection of data. Artifacts that were

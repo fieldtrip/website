@@ -1,7 +1,5 @@
 ---
 title: ft_plot_topo
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_TOPO interpolates and plots the 2-D spatial topography of the

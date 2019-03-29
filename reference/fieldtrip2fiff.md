@@ -1,7 +1,5 @@
 ---
 title: fieldtrip2fiff
-layout: default
-tags: 
 ---
 ```
  FIELDTRIP2FIFF saves a FieldTrip raw data structure as a fiff-file, allowing it

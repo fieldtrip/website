@@ -1,7 +1,5 @@
 ---
 title: ft_steadystatesimulation
-layout: default
-tags: 
 ---
 ```
  FT_STEADYSTATESIMULATION creates a simulated EEG/MEG dataset. This function

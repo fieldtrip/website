@@ -1,7 +1,5 @@
 ---
 title: ft_spiketriggeredaverage
-layout: default
-tags: 
 ---
 ```
  FT_SPIKETRIGGEREDAVERAGE computes the avererage of the LFP around the

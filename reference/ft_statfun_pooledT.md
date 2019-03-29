@@ -1,7 +1,5 @@
 ---
 title: ft_statfun_pooledT
-layout: default
-tags: 
 ---
 ```
  FT_STATFUN_POOLEDT computes the pooled t-value over a number of replications. The

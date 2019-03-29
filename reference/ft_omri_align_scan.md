@@ -1,7 +1,5 @@
 ---
 title: ft_omri_align_scan
-layout: default
-tags: 
 ---
 ```
  function [model, mat_r, mat_a, Va] = ft_omri_align_scan(model, Vo)

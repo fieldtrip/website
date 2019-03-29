@@ -1,7 +1,5 @@
 ---
 title: peerschedule
-layout: default
-tags: 
 ---
 ```
  PEERSCHEDULE sorts the list of avaialble peers according to a number of heuristic 

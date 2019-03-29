@@ -1,7 +1,5 @@
 ---
 title: ft_determine_coordsys
-layout: default
-tags: 
 ---
 ```
  FT_DETERMINE_COORDSYS plots a geometrical object, allowing you to perform

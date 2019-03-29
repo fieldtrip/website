@@ -1,7 +1,5 @@
 ---
 title: ft_removetemplateartifact
-layout: default
-tags: 
 ---
 ```
  FT_REMOVETEMPLATEARTIFACT removes an artifact from preprocessed data by template

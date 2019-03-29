@@ -1,7 +1,5 @@
 ---
 title: keepfields
-layout: default
-tags: 
 ---
 ```
  KEEPFIELDS makes a selection of the fields in a structure

@@ -1,7 +1,5 @@
 ---
 title: ft_neighbourplot
-layout: default
-tags: 
 ---
 ```
  FT_NEIGHBOURPLOT visualizes neighbouring channels in a particular channel

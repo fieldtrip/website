@@ -1,7 +1,5 @@
 ---
 title: ft_estimate_units
-layout: default
-tags: 
 ---
 ```
  FT_ESTIMATE_UNITS tries to determine the units of a geometrical object by

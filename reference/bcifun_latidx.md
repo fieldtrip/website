@@ -1,7 +1,5 @@
 ---
 title: bcifun_latidx
-layout: default
-tags: 
 ---
 ```
  BCIFUN_LATIDX extracts alpha power, computes the alpha lateralization index 

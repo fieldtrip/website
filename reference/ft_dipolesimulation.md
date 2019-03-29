@@ -1,7 +1,5 @@
 ---
 title: ft_dipolesimulation
-layout: default
-tags: 
 ---
 ```
  FT_DIPOLESIMULATION computes the field or potential of a simulated dipole

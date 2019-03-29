@@ -1,7 +1,5 @@
 ---
 title: ft_combineplanar
-layout: default
-tags: 
 ---
 ```
  FT_COMBINEPLANAR computes the planar gradient magnitude over both directions
@@ -11,7 +9,8 @@ tags:
 
  Use as
    [data] = ft_combineplanar(cfg, data)
- where data contains an averaged planar gradient ERF or single-trial/averaged TFR.
+ where data contains an averaged planar-gradient ERF or single-trial or
+ averaged TFRs.
 
  The configuration can contain
    cfg.method         = 'sum', 'svd', 'abssvd', or 'complex' (default = 'sum')

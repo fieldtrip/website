@@ -1,7 +1,5 @@
 ---
 title: ft_headcoordinates
-layout: default
-tags: 
 ---
 ```
  FT_HEADCOORDINATES returns the homogeneous coordinate transformation matrix

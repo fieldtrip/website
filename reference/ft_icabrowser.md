@@ -1,7 +1,5 @@
 ---
 title: ft_icabrowser
-layout: default
-tags: 
 ---
 ```
  FT_ICABROWSER loads in comp structure from FieldTrip ft_componentanalysis

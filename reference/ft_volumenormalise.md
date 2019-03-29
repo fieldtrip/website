@@ -1,7 +1,5 @@
 ---
 title: ft_volumenormalise
-layout: default
-tags: 
 ---
 ```
  FT_VOLUMENORMALISE normalises anatomical and functional volume data

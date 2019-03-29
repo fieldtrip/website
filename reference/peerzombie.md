@@ -1,7 +1,5 @@
 ---
 title: peerzombie
-layout: default
-tags: 
 ---
 ```
  PEERZOMBIE starts the low-level peer servicesand switches to zombie

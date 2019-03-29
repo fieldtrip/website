@@ -1,7 +1,5 @@
 ---
 title: engineexec
-layout: default
-tags: 
 ---
 ```
  ENGINEEXEC is a helper function to execute a command in another engine.

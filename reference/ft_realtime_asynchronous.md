@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_asynchronous
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_ASYNCHRONOUS is an example realtime application for

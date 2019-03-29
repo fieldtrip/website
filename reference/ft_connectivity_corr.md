@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_corr
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_CORR computes correlation, coherence or a related quantity from a

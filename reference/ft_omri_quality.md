@@ -1,7 +1,5 @@
 ---
 title: ft_omri_quality
-layout: default
-tags: 
 ---
 ```
  FT_OMRI_QUALITY implements an online fMRI quality assurance stack

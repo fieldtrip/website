@@ -1,7 +1,5 @@
 ---
 title: ft_datatype_volume
-layout: default
-tags: 
 ---
 ```
  FT_DATATYPE_VOLUME describes the FieldTrip MATLAB structure for volumetric data.

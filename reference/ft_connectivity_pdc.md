@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_pdc
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_PDC computes partial directed coherence. This function implements

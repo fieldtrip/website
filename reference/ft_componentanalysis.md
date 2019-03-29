@@ -1,7 +1,5 @@
 ---
 title: ft_componentanalysis
-layout: default
-tags: 
 ---
 ```
  FT_COMPONENTANALYSIS performs independent component analysis or other

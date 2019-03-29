@@ -1,7 +1,5 @@
 ---
 title: ft_prepare_neighbours
-layout: default
-tags: 
 ---
 ```
  FT_PREPARE_NEIGHBOURS finds the neighbours of the channels based on three

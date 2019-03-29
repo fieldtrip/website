@@ -1,7 +1,5 @@
 ---
 title: ft_audiovideobrowser
-layout: default
-tags: 
 ---
 ```
  FT_AUDIOVIDEOBROWSER reads and vizualizes the audio and/or video data

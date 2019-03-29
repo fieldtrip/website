@@ -1,7 +1,5 @@
 ---
 title: ft_datatype_raw
-layout: default
-tags: 
 ---
 ```
  FT_DATATYPE_RAW describes the FieldTrip MATLAB structure for raw data

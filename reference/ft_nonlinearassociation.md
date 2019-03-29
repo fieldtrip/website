@@ -1,7 +1,5 @@
 ---
 title: ft_nonlinearassociation
-layout: default
-tags: 
 ---
 ```
  NONLINEARASSOCIATION calculate the association coefficient as a

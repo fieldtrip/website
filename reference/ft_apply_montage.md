@@ -1,7 +1,5 @@
 ---
 title: ft_apply_montage
-layout: default
-tags: 
 ---
 ```
  FT_APPLY_MONTAGE changes the montage (i.e. linear combination) of a set of

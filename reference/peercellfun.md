@@ -1,7 +1,5 @@
 ---
 title: peercellfun
-layout: default
-tags: 
 ---
 ```
  PEERCELLFUN applies a function to each element of a cell-array. The

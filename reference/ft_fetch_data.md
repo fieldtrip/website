@@ -1,7 +1,5 @@
 ---
 title: ft_fetch_data
-layout: default
-tags: 
 ---
 ```
  FT_FETCH_DATA mimics the behavior of FT_READ_DATA, but for a FieldTrip

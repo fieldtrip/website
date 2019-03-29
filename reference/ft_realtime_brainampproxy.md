@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_brainampproxy
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_BRAINAMPPROXY reads continuous data from a BrainAmp EEG acquisition

@@ -1,7 +1,5 @@
 ---
 title: ft_clusterplot
-layout: default
-tags: 
 ---
 ```
  FT_CLUSTERPLOT plots a series of topographies with highlighted clusters.
@@ -21,7 +19,7 @@ tags:
    cfg.saveaspng                 = string, filename of the output figures (default = 'no')
    cfg.visible                   = string, 'on' or 'off' whether figure will be visible (default = 'on')
 
- You can also specify all cfg options that apply to FT_TOPOPLOTER or FT_TOPOPLOTTFR,
+ You can also specify most configuration options that apply to FT_TOPOPLOTER or FT_TOPOPLOTTFR,
  except for cfg.xlim, any of the highlight options, cfg.comment and cfg.commentpos.
 
  To facilitate data-handling and distributed computing you can use

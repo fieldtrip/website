@@ -1,7 +1,5 @@
 ---
 title: ft_nirs_referencechannelsubtraction
-layout: default
-tags: 
 ---
 ```
  FT_NIRS_REFERENCECHANNELSUBTRACTION performs reference channel subtraction for NIRS data

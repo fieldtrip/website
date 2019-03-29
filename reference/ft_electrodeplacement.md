@@ -1,7 +1,5 @@
 ---
 title: ft_electrodeplacement
-layout: default
-tags: 
 ---
 ```
  FT_ELECTRODEPLACEMENT allows manual placement of electrodes on a MRI scan, CT scan

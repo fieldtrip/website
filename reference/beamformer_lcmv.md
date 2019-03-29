@@ -1,7 +1,5 @@
 ---
 title: beamformer_lcmv
-layout: default
-tags: 
 ---
 ```
  BEAMFORMER_LCMV scans on pre-defined dipole locations with a single dipole

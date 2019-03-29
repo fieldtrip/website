@@ -1,7 +1,5 @@
 ---
 title: ft_sourcegrandaverage
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEGRANDAVERAGE averages source reconstructions over either multiple

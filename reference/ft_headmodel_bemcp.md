@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_bemcp
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_BEMCP creates a volume conduction model of the head

@@ -1,7 +1,5 @@
 ---
 title: ft_sourceinterpolate
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEINTERPOLATE interpolates source activity or statistical maps onto the

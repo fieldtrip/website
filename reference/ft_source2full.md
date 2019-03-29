@@ -1,7 +1,5 @@
 ---
 title: ft_source2full
-layout: default
-tags: 
 ---
 ```
  FT_SOURCE2FULL recreates the grid locations outside the brain in the source 

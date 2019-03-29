@@ -1,7 +1,5 @@
 ---
 title: ft_plot_patch
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_PATCH plot a colored shape, similar to the MATLAB patch() function. It is 

@@ -1,7 +1,5 @@
 ---
 title: ft_megplanar
-layout: default
-tags: 
 ---
 ```
  FT_MEGPLANAR computes planar MEG gradients gradients for raw data or average

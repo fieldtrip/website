@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_brainvision_segmented
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_BRAINVISION_SEGMENTED creates trials for a Brain Vision Analyzer

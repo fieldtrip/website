@@ -1,7 +1,5 @@
 ---
 title: keyvalcheck
-layout: default
-tags: 
 ---
 ```
  KEYVALCHECK is a helper function for parsing optional key-value input pairs.

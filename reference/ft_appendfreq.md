@@ -1,7 +1,5 @@
 ---
 title: ft_appendfreq
-layout: default
-tags: 
 ---
 ```
  FT_APPENDFREQ concatenates multiple frequency or time-frequency data structures

@@ -1,7 +1,5 @@
 ---
 title: ft_prepare_sourcemodel
-layout: default
-tags: 
 ---
 ```
  FT_PREPARE_SOURCEMODEL constructs a source model, for example a 3D grid or a

@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_concentricspheres
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_CONCENTRICSPHERES creates a volume conduction model

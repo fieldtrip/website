@@ -1,7 +1,5 @@
 ---
 title: ft_statfun_roc
-layout: default
-tags: 
 ---
 ```
  FT_STATFUN_ROC computes the area under the curve (AUC) of the Receiver Operator

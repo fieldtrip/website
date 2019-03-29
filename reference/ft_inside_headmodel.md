@@ -1,7 +1,5 @@
 ---
 title: ft_inside_headmodel
-layout: default
-tags: 
 ---
 ```
  FT_INSIDE_HEADMODEL locates dipole locations inside/outside the source

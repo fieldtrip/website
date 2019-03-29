@@ -1,7 +1,5 @@
 ---
 title: ft_average_sens
-layout: default
-tags: 
 ---
 ```
  FT_AVERAGE_SENS computes average sensor array from a series of input

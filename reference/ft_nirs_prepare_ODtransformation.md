@@ -1,7 +1,5 @@
 ---
 title: ft_nirs_prepare_ODtransformation
-layout: default
-tags: 
 ---
 ```
  FT_NIRS_PREPARE_ODTRANSFORMATION returns the transformation matrix from
@@ -9,7 +7,7 @@ tags:
  oxygenated hemoglobin.
 
  Use as
-   [montage] = ft_prepare_ODtransformation(cfg, data);
+   [montage] = ft_prepare_ODtransformation(cfg, data)
 
  It is neccessary to input the data on which you want to perform the
  inverse computations, since that data generally contain the optode

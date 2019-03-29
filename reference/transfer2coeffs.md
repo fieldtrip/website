@@ -1,7 +1,5 @@
 ---
 title: transfer2coeffs
-layout: default
-tags: 
 ---
 ```
  TRANSFER2COEFFS converts a spectral transfer matrix into the time domain equivalent

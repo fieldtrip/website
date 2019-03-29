@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_coillocalizer
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_COILLOCALIZER is a realtime application for online tracking

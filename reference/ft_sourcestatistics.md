@@ -1,7 +1,5 @@
 ---
 title: ft_sourcestatistics
-layout: default
-tags: 
 ---
 ```
  FT_SOURCESTATISTICS computes the probability for a given null-hypothesis using

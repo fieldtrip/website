@@ -1,7 +1,5 @@
 ---
 title: ft_prepare_headmodel
-layout: default
-tags: 
 ---
 ```
  FT_PREPARE_HEADMODEL constructs a volume conduction model from the geometry

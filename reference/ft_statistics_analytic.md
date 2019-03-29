@@ -1,7 +1,5 @@
 ---
 title: ft_statistics_analytic
-layout: default
-tags: 
 ---
 ```
  FT_STATISTICS_ANALYTIC performs a parametric statistical test on the

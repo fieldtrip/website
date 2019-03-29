@@ -1,7 +1,5 @@
 ---
 title: ft_connectivityanalysis
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITYANALYSIS computes various measures of connectivity between
@@ -62,7 +60,7 @@ tags:
    cfg.feedback   = string, specifying the feedback presented to the user.
      Default is 'none'. See FT_PROGRESS
 
- For specific methods the cfg can also contain
+ For specific methods the configuration can also contain
    cfg.partchannel = cell-array containing a list of channels that need to
      be partialized out, support for method 'coh', 'csd', 'plv'
    cfg.complex     = 'abs' (default), 'angle', 'complex', 'imag', 'real',

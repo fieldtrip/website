@@ -1,7 +1,5 @@
 ---
 title: ft_flush_data
-layout: default
-tags: 
 ---
 ```
  FT_FLUSH_DATA removes all data from the data queue

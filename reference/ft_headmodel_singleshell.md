@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_singleshell
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_SINGLESHELL creates a volume conduction model of the

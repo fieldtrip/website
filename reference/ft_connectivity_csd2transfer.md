@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_csd2transfer
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_CSD2TRANSFER computes the transfer-function from frequency domain

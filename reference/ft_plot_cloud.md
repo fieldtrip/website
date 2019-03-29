@@ -1,7 +1,5 @@
 ---
 title: ft_plot_cloud
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_CLOUD visualizes spatially sparse scalar data as points, spheres, or 

@@ -1,7 +1,5 @@
 ---
 title: ft_spike_plot_isi
-layout: default
-tags: 
 ---
 ```
  FT_SPIKE_PLOT_ISI makes an inter-spike-interval bar plot.

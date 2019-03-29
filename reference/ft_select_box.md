@@ -1,7 +1,5 @@
 ---
 title: ft_select_box
-layout: default
-tags: 
 ---
 ```
  FT_SELECT_BOX helper function for selecting a rectangular region

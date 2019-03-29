@@ -1,7 +1,5 @@
 ---
 title: fieldtrip2ctf
-layout: default
-tags: 
 ---
 ```
  FIELDTRIP2CTF saves a FieldTrip data structures to a corresponding CTF file. The

@@ -1,7 +1,5 @@
 ---
 title: ft_topoplotIC
-layout: default
-tags: 
 ---
 ```
  FT_TOPOPLOTIC plots the topographic distribution of an independent

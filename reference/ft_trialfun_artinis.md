@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_artinis
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_ARTINIS is adjoining the result of ft_trialfun_general and

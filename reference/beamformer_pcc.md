@@ -1,7 +1,5 @@
 ---
 title: beamformer_pcc
-layout: default
-tags: 
 ---
 ```
  BEAMFORMER_PCC implements an experimental beamformer based on partial

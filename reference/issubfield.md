@@ -1,11 +1,9 @@
 ---
 title: issubfield
-layout: default
-tags: 
 ---
 ```
  ISSUBFIELD tests for the presence of a field in a structure just like the standard
- MATLAB ISFIELD function, except that you can also specify nested fields
+ Matlab ISFIELD function, except that you can also specify nested fields
  using a '.' in the fieldname. The nesting can be arbitrary deep.
 
  Use as

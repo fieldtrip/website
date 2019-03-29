@@ -1,7 +1,5 @@
 ---
 title: ft_progress
-layout: default
-tags: 
 ---
 ```
  FT_PROGRESS shows a graphical or non-graphical progress indication similar to the

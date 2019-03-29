@@ -1,7 +1,5 @@
 ---
 title: read_artinis_oxy3
-layout: default
-tags: 
 ---
 ```
  reads Artinix oxy3-files into FieldTrip format

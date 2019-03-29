@@ -1,7 +1,5 @@
 ---
 title: ft_compile_standalone
-layout: default
-tags: 
 ---
 ```
  FT_COMPILE_STANDALONE compiles the FieldTrip functions along with

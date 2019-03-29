@@ -1,7 +1,5 @@
 ---
 title: ft_struct2char
-layout: default
-tags: 
 ---
 ```
  FT_STRUCT2CHAR converts all string elements in a structure

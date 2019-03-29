@@ -1,7 +1,5 @@
 ---
 title: ft_datatype_headmodel
-layout: default
-tags: 
 ---
 ```
  FT_DATATYPE_HEADMODEL describes the FieldTrip MATLAB structure for a volume

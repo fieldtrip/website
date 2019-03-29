@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_smooth
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_SMOOTH performs boxcar smoothing with specified length.

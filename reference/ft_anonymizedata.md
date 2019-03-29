@@ -1,7 +1,5 @@
 ---
 title: ft_anonymizedata
-layout: default
-tags: 
 ---
 ```
  FT_ANONYMIZEDATA clears the value of potentially identifying fields in
@@ -23,11 +21,11 @@ tags:
  value of each provenance element, and whether it should be kept or
  removed. Furthermore, it has a number of buttons:
    - sort        specify which column is used for sorting
-   - apply       apply the current selection of "keep" and "remove" and hide the corresponding rows
-   - keep all    toggle all visibe rows to "keep"
-   - remove all  toggle all visibe rows to "keep"
-   - clear all   clear all visibe rows, i.e. neither "keep" nor "remove"
-   - quit        apply the current selection of "keep" and "remove" and exit
+   - apply       apply the current selection of 'keep' and 'remove' and hide the corresponding rows
+   - keep all    toggle all visibe rows to 'keep'
+   - remove all  toggle all visibe rows to 'keep'
+   - clear all   clear all visibe rows, i.e. neither 'keep' nor 'remove'
+   - quit        apply the current selection of 'keep' and 'remove' and exit
 
  To facilitate data-handling and distributed computing you can use
    cfg.inputfile  = ...

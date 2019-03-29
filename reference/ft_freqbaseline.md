@@ -1,7 +1,5 @@
 ---
 title: ft_freqbaseline
-layout: default
-tags: 
 ---
 ```
  FT_FREQBASELINE performs baseline normalization for time-frequency data

@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_fmriproxy
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_FMRIPROXY simulates an fMRI acquisition system by writing volumes in a

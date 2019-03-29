@@ -1,7 +1,5 @@
 ---
 title: ft_specest_hilbert
-layout: default
-tags: 
 ---
 ```
  FT_SPECEST_HILBERT performs a spectral estimation of data by repeatedly applying a

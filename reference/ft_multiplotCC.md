@@ -1,7 +1,5 @@
 ---
 title: ft_multiplotCC
-layout: default
-tags: 
 ---
 ```
  FT_MULTIPLOTCC visualises the coherence between channels by using
