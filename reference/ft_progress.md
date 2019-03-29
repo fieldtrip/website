@@ -12,7 +12,7 @@ title: ft_progress
    ft_progress('init', 'gui',     'Please wait...')
    ft_progress('init', 'etf',     'Please wait...')      % estimated time to finish
    ft_progress('init', 'dial',    'Please wait...')      % rotating dial
-   ft_progress('init', 'textbar', 'Please wait...')      % ASCII progress bar
+   ft_progress('init', 'textbar', 'Please wait...')      % ascii progress bar
    ft_progress('init', 'text',    'Please wait...')
 
  In each iteration of the for-loop, you should call either

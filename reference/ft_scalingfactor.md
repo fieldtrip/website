@@ -53,7 +53,7 @@ title: ft_scalingfactor
    gauss       gauss magnetic field strength
 
  The following derived units are not supported due to potential confusion
- between their ASCII character representation
+ between their ascii character representation
    ohm             #   electric resistance, impedance, reactance   V/A M#L2#T-3#I-2
    watt            W   power, radiant flux J/s = V#A   M#L2#T-3
    degree Celsius	?C	temperature relative to 273.15 K	K	?

@@ -75,7 +75,7 @@ title: ft_multiplotER
  The layout defines how the channels are arranged and what the size of each
  subplot is. You can specify the layout in a variety of ways:
   - you can provide a pre-computed layout structure (see prepare_layout)
-  - you can give the name of an ASCII layout file with extension *.lay
+  - you can give the name of an ascii layout file with extension *.lay
   - you can give the name of an electrode file
   - you can give an electrode definition, i.e. "elec" structure
   - you can give a gradiometer definition, i.e. "grad" structure

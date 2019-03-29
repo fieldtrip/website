@@ -24,8 +24,8 @@ title: ft_write_headshape
    'unit'        = string, e.g. 'mm'
 
  Supported output formats are
-   'mne_tri'		MNE surface desciption in ASCII format
-   'mne_pos'		MNE source grid in ASCII format, described as 3D points
+   'mne_tri'		MNE surface desciption in ascii format
+   'mne_pos'		MNE source grid in ascii format, described as 3D points
    'off'
    'vista'
    'tetgen'
