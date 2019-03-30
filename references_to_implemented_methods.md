@@ -189,4 +189,4 @@ Van Gerven, M.A.J., Jensen, O. [Attention Modulations of Posterior Alpha as a Co
 
 ## Intracranial EEG analysis
 
-Stolk A., Griffin S., van der Meij R., Dewar C., Saez I., Piantoni G., Schoffelen J.M., Knight R.T., Oostenveld R. [Integrated Analysis of Anatomical and Electrophysiological Human Intracranial Data](https://www.ncbi.nlm.nih.gov/pubmed/29988107) Nature Protocols. 2018; 13(7):1699-1723
+Stolk A., Griffin S., van der Meij R., Dewar C., Saez I., Piantoni G., Schoffelen J.M., Knight R.T., Oostenveld R. [Integrated Analysis of Anatomical and Electrophysiological Human Intracranial Data.](https://www.ncbi.nlm.nih.gov/pubmed/29988107) Nature Protocols. 2018; 13(7):1699-1723
