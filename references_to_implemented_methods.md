@@ -187,6 +187,6 @@ Van Gerven, M.A.J., Hesse, C., Jensen, O., Heskes, T. [Interpreting Single Trial
 
 Van Gerven, M.A.J., Jensen, O. [Attention Modulations of Posterior Alpha as a Control Signal for Two-Dimensional Brain-Computer Interfaces.](http://www.sciencedirect.com/science?ob=ArticleURL&udi=B6T04-4VGPJNH-1&user=10&rdoc=1&fmt=&orig=search&sort=d&view=c&acct=C000050221&version=1&urlVersion=0&userid=10&md5=09def4bc21af5427ef3f82d069c45c1d) J Neurosci Methods. 2009; 179:78-84.
 
-### Intracranial EEG analysis
+## Intracranial EEG analysis
 
 Stolk A., Griffin S., van der Meij R., Dewar C., Saez I., Piantoni G., Schoffelen J.M., Knight R.T., Oostenveld R. [Integrated Analysis of Anatomical and Electrophysiological Human Intracranial Data](https://www.ncbi.nlm.nih.gov/pubmed/29988107) Nature Protocols. 2018; 13(7):1699-1723
