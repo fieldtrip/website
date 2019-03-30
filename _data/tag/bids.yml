@@ -1,8 +1,8 @@
-- name:  Preparing an EEG dataset for sharing
-  link:  /example/bids_eeg
-
 - name:  BIDS - the brain imaging data structure
   link:  /example/bids
+
+- name:  Preparing an EEG dataset for sharing
+  link:  /example/bids_eeg
 
 - name:  Preparing a combined MEG/fMRI dataset for sharing
   link:  /example/bids_mous
