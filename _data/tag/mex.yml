@@ -1,4 +1,4 @@
-- name:  How can I compile the mex files and command-line executables ?
+- name:  How can I compile the mex files and command-line executable?
   link:  /faq/compile
 
 - name:  Can I use FieldTrip without MATLAB license?
