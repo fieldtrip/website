@@ -14,12 +14,12 @@ An overview of MATLAB versions is available on the [MathWorks site](http://www.m
 
 | Operating system | MATLAB 6.1 | MATLAB 6.5 | MATLAB 7.0 | MATLAB 7.1 | MATLAB 7.2 | MATLAB 7.3 | MATLAB 7.4 |
 | ---------------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- |
-| Linux 32 bit     | XX (1)     | XX (1)     | OK (2)     | OK (2)     | OK         | n.a.       |            |
-| Linux 64 bit     | n.a.       | n.a.       | OK (3)     | OK         | OK         | OK         |            |
-| Windows 32 bit   |            |            |            | OK         |            |            |            |
+| Linux 32-bit     | XX (1)     | XX (1)     | OK (2)     | OK (2)     | OK         | n.a.       |            |
+| Linux 64-bit     | n.a.       | n.a.       | OK (3)     | OK         | OK         | OK         |            |
+| Windows 32-bit   |            |            |            | OK         |            |            |            |
 | Macintosh PPC    | n.a.       |            |            |            |            |            |            |
 | Macintosh Intel  | n.a.       | n.a.       | n.a.       | n.a.       | n.a.       |            |            |
-| Windows 64 bit   | n.a.       | n.a.       | n.a.       | n.a.       | n.a.       |            |            |
+| Windows 64-bit   | n.a.       | n.a.       | n.a.       | n.a.       | n.a.       |            |            |
 
 n.a. = MATLAB version is not available for this OS
 
@@ -36,7 +36,7 @@ XX = does not work
 
 ## Available MATLAB versions within the FC Donders
 
-Windows 32 bit
+Windows 32-bit
 
 - MATLAB 6.1
 
@@ -52,13 +52,13 @@ Windows 32 bit
 
 - MATLAB 7.4
 
-Windows 64 bit
+Windows 64-bit
 
 - MATLAB 7.3
 
 - MATLAB 7.4
 
-Linux 32 bit
+Linux 32-bit
 
 - MATLAB 6.1
 
@@ -72,7 +72,7 @@ Linux 32 bit
 
 - MATLAB 7.4 (?)
 
-Linux 64 bit
+Linux 64-bit
 
 - MATLAB 7.0
 

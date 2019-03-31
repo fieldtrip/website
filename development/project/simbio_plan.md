@@ -40,7 +40,7 @@ Here are the [background materials](/development/project/simbio_materials) for t
 - read simbio documentation, done
 - how to write the fieldtrip/matlab data structures to files that SIMBIO understands, done
 - how to read the SIMBIO output files back into matlab, done
-- get the simbio binaries running under Linux CentOS 64 bit, release 5.2, done
+- get the simbio binaries running under Linux CentOS 64-bit, release 5.2, done
 - discuss with Robert about i) testing with practical datasets ii) meshing models programs like vgrid, done
 - test write functions from Felix, done
 - integrate dip,elc write functions in FieldTrip, done

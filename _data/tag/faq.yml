@@ -103,7 +103,7 @@
 - name:  How can I combine FieldTrip with peer distributed computing?
   link:  /faq/how_can_i_combine_fieldtrip_with_peer_distributed_computing
 
-- name:  How can I compile the mex files on 64 bit Windows?
+- name:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/how_can_i_compile_the_mex_files_on_64_bit_windows
 
 - name:  How can I compile the mex files on macOS?

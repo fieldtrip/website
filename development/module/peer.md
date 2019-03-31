@@ -116,7 +116,7 @@ The peer-to-peer parallel toolbox for MATLAB consists of a compiled mex file tha
 
 #### Peercellfun(...)
 
-This executes a function on all the elements of a cell-array. Each cell is executed on another peer, and the execution is in parallel. Once all cells have been executed, the results are gathered and returned to the user as cell array. For example
+This executes a function on all the elements of a cell-array. Each cell is executed on another peer, and the execution is in parallel. Once all cells have been executed, the results are gathered and returned to the user as cell-array. For example
 
     peercellfun('plus', {1, 2, 3}, {1, 2, 3})
 
@@ -195,10 +195,10 @@ Displays information about all the peers in the network.
 
 The disadvantage of running peerslave inside MATLAB is that each slave requires one active MATLAB license, even while waiting for a job. To allow for having a lot of idle slaves on the network that do not take licenses when not in use, I have implemented a command-line peerslave which is an executable that you start from the command line. The following compiled executables are currently included
 
-- peerslave.glnxa64 (Linux, 64 bit)
-- peerslave.glnx86 (Linux, 32 bit)
-- peerslave.maci64 (macOS, 64 bit)
-- peerslave.maci (macOS, 32 bit)
+- peerslave.glnxa64 (Linux, 64-bit)
+- peerslave.glnx86 (Linux, 32-bit)
+- peerslave.maci64 (macOS, 64-bit)
+- peerslave.maci (macOS, 32-bit)
 
 The command-line peerslave starts the threads, waits for an incoming job, and starts the MATLAB engine to evaluate the job. After MATLAB is done, the results are sent back to the master. If the MATLAB engine is idle for 30 seconds, it is closed and the license is returned to the network license server.
 

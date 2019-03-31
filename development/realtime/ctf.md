@@ -56,7 +56,7 @@ where ''flags'' can be any combination of **R**, which enables writing the ''.re
 
     ctf2ft_v3 -:1972:RE:1:*
 
-Actually you can have multiple definitions and stream different parts of the data to different buffers. For example, the following call will spawn a local FieldTrip buffer on port 1972, which will receive all channels, the ''.res4'' header, and events (but data is kept at 32 bit integers), and in addition stream out 4x downsampled and scaled head-localization channels to a buffer on the lab-meg001 computer (also port=1972
+Actually you can have multiple definitions and stream different parts of the data to different buffers. For example, the following call will spawn a local FieldTrip buffer on port 1972, which will receive all channels, the ''.res4'' header, and events (but data is kept at 32-bit integers), and in addition stream out 4x downsampled and scaled head-localization channels to a buffer on the lab-meg001 computer (also port=1972
 
     ctf2ft_v3 -:1972:RE:1:*
     lab-meg001:1972:G:4:HLC0011,HLC0012,HLC0013,HLC0021,HLC0022,HLC0023,HLC0031,HLC0032,HLC0033

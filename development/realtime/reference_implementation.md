@@ -52,7 +52,7 @@ Given the symmetry in the design, it is possible to have a standalone buffer, i.
 
 ## Compiling the code
 
-Building the source code on different platforms can appear challenging. The buffer has been successfully compiled and tested on Linux (32 and 64 bit), Windows (32 bit) and macOS (32 bit PowerPC and 32 and 64 bit Intel platform). We try to facilitate the compilation of the source code by supplying various build methods.
+Building the source code on different platforms can appear challenging. The buffer has been successfully compiled and tested on Linux (32 and 64-bit), Windows (32-bit) and macOS (32-bit PowerPC and 32 and 64-bit Intel platform). We try to facilitate the compilation of the source code by supplying various build methods.
 
 Generally, please note that no matter which platform, there are three different parts of the code, which are compiled in different steps.
 
@@ -78,7 +78,7 @@ If you have an unsupported GCC version, you should check whether your Linux dist
 
 The following was tested from 16-03-2010 to 18-03-2010.
 
-| MATLAB version | 32 bit ArchLinux, GCC 4.2 and 4.4                                                      | 32 bit Red Hat (mentat069), GCC 3.4.3 | 64 bit Red Hat (mentat 20x), GCC 4.1.2 |
+| MATLAB version | 32-bit ArchLinux, GCC 4.2 and 4.4                                                      | 32-bit Red Hat (mentat069), GCC 3.4.3 | 64-bit Red Hat (mentat 20x), GCC 4.1.2 |
 | -------------- | -------------------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------- |
 | 6.1            | compiles, but does not run due to missing mxCreateDoubleScalar                         |                                       | n.a.                                   |
 | 6.5.1          | compiles with GCC 3.4 -- 4.4 and runs, but not binary compatible with MEX files >= 7.0 |                                       | n.a.                                   |
@@ -97,8 +97,8 @@ Fields marked with "n.a." refer to unavailable or non-functioning MATLAB configu
 on a 64-bit machine, you will not be able to compile MEX-files with your native 64-bit compiler in this case.
 
 **Cross-version compatibility**: It seems MEX-files compiled on any version >= 7.2 can be run on any other version >= 7.2 on the same type of machine.
-**Possible trap**: If you're trying to compile both 32 and 64 bit versions from the same source directory, make sure you always compile ''libbuffer.a''
-using the same platform. If you get strange build errors, you might try to link a 64 bit MEX file to a 32 bit library, or vice versa.
+**Possible trap**: If you're trying to compile both 32 and 64-bit versions from the same source directory, make sure you always compile ''libbuffer.a''
+using the same platform. If you get strange build errors, you might try to link a 64-bit MEX file to a 32-bit library, or vice versa.
 
 #### Building with cmake (probably outdated)
 

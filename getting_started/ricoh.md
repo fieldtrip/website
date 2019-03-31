@@ -336,7 +336,7 @@ For an exported .con file that contains the information of digitized points, ''h
 
     >> headshape.fid.label
     ans =
-    13×1 cell array
+    13×1 cell-array
       'nas'
       'lpa'
       'rpa'
@@ -364,7 +364,7 @@ On contrary to an exported .con file, an original (not-exported) data file (.con
 
     >> headshape.fid.label
     ans =
-    5×1 cell array
+    5×1 cell-array
       'nas'
       'lpa'
       'rpa'

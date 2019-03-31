@@ -33,7 +33,7 @@ where only the first parameter (configuration file) is mandatory. Defaults for t
 
 It is currently not quite clear which driver versions work with the SDK that we use
 to compile the aforementioned tools. A brief test with a recent beta version of the driver
-for Windows 7 (64 bit), using the old SDK failed.
+for Windows 7 (64-bit), using the old SDK failed.
 
 ### Compilation
 

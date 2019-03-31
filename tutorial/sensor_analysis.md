@@ -286,7 +286,7 @@ Coherence is one of the metrics which can be computed by **[ft_connectivityanaly
     cfg.channelcmb      = {'MEG' 'EMGlft'; 'MEG' 'EMGrgt'};
     freq_csd            = ft_freqanalysis(cfg, data_stim);
 
-Note that some other things are different as well. cfg.keeptrials = 'yes' because phase estimates are required for each individual trial (i.e., averaging phase over trials is generally not a good idea). We use multitapers ('dpss') this time, to have a good control over our spectral smoothing. The desired smoothing is specified in cfg.tapsmofrq ('taper smoothing frequency'). Finally, note that cfg.channel now also includes the two EMG channels, and that cfg.channelcmb is a 2x2 cell array specifying that we want to compute the cross-spectral density between the MEG and the left EMG, and the MEG and the right EMG.
+Note that some other things are different as well. cfg.keeptrials = 'yes' because phase estimates are required for each individual trial (i.e., averaging phase over trials is generally not a good idea). We use multitapers ('dpss') this time, to have a good control over our spectral smoothing. The desired smoothing is specified in cfg.tapsmofrq ('taper smoothing frequency'). Finally, note that cfg.channel now also includes the two EMG channels, and that cfg.channelcmb is a 2x2 cell-array specifying that we want to compute the cross-spectral density between the MEG and the left EMG, and the MEG and the right EMG.
 
 After computing the cross-spectral density, we can invoke **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** to compute the coherenc
 

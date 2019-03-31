@@ -59,8 +59,8 @@ In general (although some exceptions apply, see below) the specification of the 
 
     datastructure.aaa = 2-D array
     datastructure.aaadimord = ‘xxx_yyy’
-    datastructure.xxx = scalar vector or cell array that describes the 1st dimension
-    datastructure.yyy = scalar vector or cell array that describes the 2st dimension
+    datastructure.xxx = scalar vector or cell-array that describes the 1st dimension
+    datastructure.yyy = scalar vector or cell-array that describes the 2st dimension
 
 This can be extended like
 
@@ -95,8 +95,8 @@ If a structure only contains a single data field, all fields (i.e. the only one)
 
     datastructure.aaa = 2-D array
     datastructure.dimord = ‘xxx_yyy’
-    datastructure.xxx = scalar vector or cell array that describes the 1st dimension
-    datastructure.yyy = scalar vector or cell array that describes the 2st dimension
+    datastructure.xxx = scalar vector or cell-array that describes the 1st dimension
+    datastructure.yyy = scalar vector or cell-array that describes the 2st dimension
 
 Some high-level FieldTrip functions allow or require the specification of the parameter on which to perform their algorithm, whereas other functions do not require or allow the parameter to be specified. If the parameter is not specified, and if the non-specific “dimord” only refers to a single data field, that field is considered to be the main data and will be used as input for the algorithm.
 
@@ -372,33 +372,33 @@ If the binary is already in the search path (for example, ''which matlab'' print
 
     make mex MATLAB=matlab
 
-Different platforms have different extensions; for example, ''.mexmaci64'' for MATLAB macOS 64 bit intel, ''.mexw32'' for MATLAB Windows 32 bit, and ''.mex'' for all Octave platforms. The "Makefile" determines the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
+Different platforms have different extensions; for example, ''.mexmaci64'' for MATLAB macOS 64-bit intel, ''.mexw32'' for MATLAB Windows 32-bit, and ''.mex'' for all Octave platforms. The "Makefile" determines the correct extension based on the ''MATLAB'' or ''OCTAVE'' binary provided.
 
 Below are more details on the compilation guidelines on different platforms.
 
-### Windows 32 bit
+### Windows 32-bit
 
 You should use the LCC compiler that is included with MATLAB.
 
-### Windows 64 bit
+### Windows 64-bit
 
 The 64-bit versions of MATLAB do not come with a compiler (see for example [here](http://www.mathworks.com/support/compilers/R2012a/win64.html) and [here](http://www.mathworks.nl/support/sysreq/previous_releases.html)). Furthermore, a C/C++ compiler is by default not available on Windows systems, therefore you are required to install a compiler to (re)compile the mex files.
 
 You should use the Microsoft Visual C++ 2008 compiler. This compiler is available for free in the [MSVC 2008 Express Edition](http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express) and is supported in MATLAB2012a and older versions (going back to 2008).
 
-### Linux 32 bit
+### Linux 32-bit
 
 You should use gcc, but further details are not known at the moment.
 
-### Linux 64 bit
+### Linux 64-bit
 
 Most development at the Donders is done on CentOS release 5.2 and the default gcc version 4.1.2. Further details are not known at the moment.
 
-### Apple macOS 32 bit
+### Apple macOS 32-bit
 
-MATLAB is not supported on 32 bit macOS any more.
+MATLAB is not supported on 32-bit macOS any more.
 
-### Apple macOS 64 bit
+### Apple macOS 64-bit
 
 You should use the gcc compiler that is included in the Xcode package. Further details are not known at the moment.
 

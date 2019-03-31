@@ -79,7 +79,7 @@ one obtains a so called spike structure (see **[ft_datatype_spike](/reference/ft
               cfg: [1x1 struct]
 
 The spike structure contains a representation of timestamps, waveform and labels for a number of cells (N = 2).
-The field spike.label is an 1 x N cell array containing a character string that identifies each cell. For each of the N units, the field spike.timestamp contains the spike timestamps, where one timestamps corresponds to 1/40000 seconds in this case, as can be seen from spike.hdr.FileHeader.Frequency (and would correspond to microseconds for the Digital Neuralynx, for example).
+The field spike.label is an 1 x N cell-array containing a character string that identifies each cell. For each of the N units, the field spike.timestamp contains the spike timestamps, where one timestamps corresponds to 1/40000 seconds in this case, as can be seen from spike.hdr.FileHeader.Frequency (and would correspond to microseconds for the Digital Neuralynx, for example).
 For example, 164456 spikes were recorded for the isolated single unit 'sig002a_wf'.
 The (optional) waveform field spike.waveform contains the waveform information for each of the spikes.
 The first dimension of spike.waveform{i} is 'leads'. For tetrode recordings, multiple leads per electrode are available, in which case the first dimension of spike.waveform{i} would have been of size 4.

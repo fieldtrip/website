@@ -1,4 +1,4 @@
-To prevent unnecessary dependencies on functions from additional MathWorks toolboxes, FieldTrip includes a number of drop-in replacement functions with the same behaviour as their MATLAB counterparts.
+To avoid unnecessary dependencies on functions from non-standard MathWorks toolboxes, FieldTrip includes a number of drop-in replacement functions that have the same functionality as their MATLAB counterparts. Have a look at [this FAQ](/faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path) how you can control whether these are added to your path.
 
 Alternatives are provided for the following functions from the Statistics Toolbox
 
