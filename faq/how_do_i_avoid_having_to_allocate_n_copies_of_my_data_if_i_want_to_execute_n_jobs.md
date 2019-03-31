@@ -5,7 +5,7 @@ tags: [faq, peer]
 
 # How do I avoid having to allocate N copies of my data if I want to execute N jobs?
 
-When using [peercellfun](/reference/peercellfun), you need to provide the arguments to your function as cell arrays. Each cell array should have one element per job that you want to execute. This can be problematic if you need to provide the same large array (e.g., electrophysiological data) as input to each of your jobs, since this can require impossible amounts of memory.
+When using [peercellfun](/reference/peercellfun), you need to provide the arguments to your function as cell-arrays. Each cell-array should have one element per job that you want to execute. This can be problematic if you need to provide the same large array (e.g., electrophysiological data) as input to each of your jobs, since this can require impossible amounts of memory.
 
 One way to take care of this is by using input- and outputfiles. See the FAQ on [faq:how_can_i_combine_fieldtrip_with_peer_distributed_computing](/faq/how_can_i_combine_fieldtrip_with_peer_distributed_computing) for this approach.
 

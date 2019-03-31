@@ -6,7 +6,7 @@ title: How do I install the OpenMEEG binaries?
 
 ## Install the binaries
 
-Download a suitable version for your operating system (Mac, Linux 32 or 64 bits, Windows 32 or 64 bits) from http://gforge.inria.fr/frs/?group_id=435.
+Download a suitable version for your operating system (Mac, Linux 32 or 64-bits, Windows 32 or 64-bits) from http://gforge.inria.fr/frs/?group_id=435.
 
 ### For Linux
 

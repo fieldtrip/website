@@ -35,7 +35,7 @@ Starting N+1 instances of MATLAB on a single computer as a single user will only
 
 A disadvantage of starting the peerslaves within an interactive MATLAB session is that they require a license, also when the slave is idle. The command-line peerslave is a stand-alone executable that implements the announce, discover, tcpserver and expire threads and that waits for an incoming job. Once a job arrives for local execution, the MATLAB engine is started, the job is evaluated, and the results are sent back. After finishing the job, the engine remains running for 30 seconds to quickly evaluate another incoming job. After being idle for more than 30 seconds, the engine is stopped.
 
-The command line peerslave is currently implemented for Linux (32 and 64 bit) and macOS (32 bit Intel only). The command-line executable is included in the release version for the different architectures and is started with one of the following commands:
+The command line peerslave is currently implemented for Linux (32 and 64-bit) and macOS (32-bit Intel only). The command-line executable is included in the release version for the different architectures and is started with one of the following commands:
 
 - peerslave.glnx86
 - peerslave.glna64

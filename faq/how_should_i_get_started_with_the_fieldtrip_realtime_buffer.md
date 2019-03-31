@@ -15,8 +15,8 @@ Navigate to the directory ''fieldtrip/realtime/bin/ARCH'' where ARCH is the arch
 | mac          | 32-bit macOS on [PPC](http://en.wikipedia.org/wiki/PowerPC) hardware    |
 | maci         | 32-bit macOS                                                            |
 | maci64       | 64-bit macOS                                                            |
-| glnx86       | 32 bit Linux                                                            |
-| glnxa64      | 64 bit Linux                                                            |
+| glnx86       | 32-bit Linux                                                            |
+| glnxa64      | 64-bit Linux                                                            |
 | raspberrypi  | Debian Linux on the [Raspberry Pi](http://www.raspberrypi.org/)         |
 
 Unless otherwise specified, this assumes that you are using an Intel-compatible computer.
