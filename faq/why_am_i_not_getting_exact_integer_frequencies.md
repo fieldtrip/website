@@ -7,7 +7,7 @@ tags: [faq, preprocessing, freq]
 
 Probably this is due to your time windows being one sample longer than you expect, at a sampling frequency of 1000 Hz you might have e.g. 1001 samples rather than 1000 samples.
 
-When defining time and/or frequency intervals, you should be aware about the different behaviour of FieldTrip functions of the specification of bounds. The problem is sketched in general on the Wikipedia lemma on [interval notation](http://en.wikibooks.org/wiki/Algebra/Interval_Notation).
+When defining time and/or frequency intervals, you should be aware about the different behavior of FieldTrip functions of the specification of bounds. The problem is sketched in general on the Wikipedia lemma on [interval notation](http://en.wikibooks.org/wiki/Algebra/Interval_Notation).
 
 ## Using ft_definetrial with INCLUSIVE and/or EXCLUSIVE interval selection
 

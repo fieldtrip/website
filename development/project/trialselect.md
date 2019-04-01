@@ -21,7 +21,7 @@ Consistent implementation of option for trial selection in all relevant function
 
 ---
 
-##### Functions that use raw dat
+##### Functions that use raw data:
 
 - preprocessing.m (when called with preprocessed data) -done-
 - combineplanar.m -done-

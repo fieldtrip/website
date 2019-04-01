@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_asaproxy
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_ASAPROXY reads continuous data from the ASA acquisition system and

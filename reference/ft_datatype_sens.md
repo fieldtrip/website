@@ -1,7 +1,5 @@
 ---
 title: ft_datatype_sens
-layout: default
-tags: 
 ---
 ```
  FT_DATATYPE_SENS describes the FieldTrip structure that represents an EEG, ECoG, or

@@ -1,7 +1,5 @@
 ---
 title: ft_read_mri
-layout: default
-tags: 
 ---
 ```
  FT_READ_MRI reads anatomical and functional MRI data from different file formats.

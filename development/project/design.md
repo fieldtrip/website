@@ -40,7 +40,7 @@ User calls ft\_\*statistics (freq, timelock, or source)
             cfg.method: different methods for calculating probability of null hypothesis
                          will call function: statistics_(cfg.method)
 
-however, in ft*sourcestatistics, instead sourcestatistics*(cfg.method) is called, or statistics_wrapper if no method specified.
+however, in ft_sourcestatistics, instead statistics(cfg.method) is called, or statistics_wrapper if no method specified.
 
 statistics_montecarlo.m (only) calls resampledesign.m
 

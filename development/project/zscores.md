@@ -60,9 +60,9 @@ _--> Problem: these solutions may introduce additional noise!_
 
 ##### 4. Assumption
 
-Properties of the dat
+Properties of the data:
 
-- behaviour of noise within subjects / trials (stationary or non-stationary)
+- behavior of noise within subjects / trials (stationary or non-stationary)
 - model of effect (additive or multiplicative)
 
 ## Step 2: simulate data

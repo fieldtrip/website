@@ -1,7 +1,5 @@
 ---
 title: ft_statfun_depsamplesregrT
-layout: default
-tags: 
 ---
 ```
  FT_STATFUN_DEPSAMPLESREGRT calculates dependent samples regression T-statistic on

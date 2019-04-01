@@ -1,7 +1,5 @@
 ---
 title: ft_interactiverealign
-layout: default
-tags: 
 ---
 ```
  FT_INTERACTIVEREALIGN allows the user to interactively translate, rotate and scale an

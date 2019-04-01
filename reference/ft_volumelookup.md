@@ -1,7 +1,5 @@
 ---
 title: ft_volumelookup
-layout: default
-tags: 
 ---
 ```
  FT_VOLUMELOOKUP can be used in to combine an anatomical or functional

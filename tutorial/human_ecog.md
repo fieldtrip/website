@@ -27,7 +27,7 @@ This particular iEEG dataset was chosen for three reasons. First, it contains ne
 
 The tutorial has two parallel but interrelated workflows, as shown in the figure below. The first workflow entails the processing of anatomical data. Its main activities constitute the preprocessing and fusion of the anatomical images, and electrode placement (Steps 1-20). Secondary activities that are also demonstrated include cortical surface extraction with FreeSurfer, brain shift compensation, spatial normalization, and anatomical labeling (Steps 6 and 21-34). Generally, the anatomical workflow aims to obtain estimates of the electrode locations in relation to the individual and atlas-based brain anatomy, which is a one-time procedure for each subject.
 
-The second workflow focuses on improving the signal-to-noise ratio and extracting the relevant features from the electrophysiological data, while preparing for subsequent analyses. It minimally encompasses the preprocessing of the neural recordings, but may also include follow-up activities such as time- frequency and single-subject or group-level statistical analysis (Steps 35-46). Generally, the specifics of the functional workflow depend ultimately on the clinical or research question at hand and contingencies in the experimental paradigm.
+The second workflow focuses on improving the signal-to-noise ratio and extracting the relevant features from the electrophysiological data, while preparing for subsequent analyses. It minimally encompasses the preprocessing of the neural recordings, but may also include follow-up activities such as time-frequency and single-subject or group-level statistical analysis (Steps 35-46). Generally, the specifics of the functional workflow depend ultimately on the clinical or research question at hand and contingencies in the experimental paradigm.
 
 The two workflows become intrinsically connected for the first time during the electrode placement activity (Step 17), which offers the opportunity to directly link anatomical locations to electrode labels corresponding to the neural recordings. This activity involves a graphical user interface designed for efficient yet precise identification of electrodes in even the most challenging cases. The integration of the two workflows culminates in an interactive and anatomically informed data exploration tool and the ability to represent functional and epileptiform neural activity overlaid on cortical and subcortical surface models, in figure or video format (Steps 47-57).
 
@@ -96,7 +96,7 @@ PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of
 
 **8**) Import the FreeSurfer-processed MRI into the MATLAB workspace for the purpose of fusing with the CT scan at a later step, and specify the coordinate system to which it was aligned in Step 4.
 
-    fsmri_acpc = ft_read_mri('freesurfer/mri/T1.mgz');
+    fsmri_acpc = ft_read_mri('freesurfer/mri/T1.mgz'); % on Windows, use 'SubjectUCI29_MR_acpc.nii'
     fsmri_acpc.coordsys = 'acpc';
 
 ### Preprocessing of the anatomical CT
@@ -155,7 +155,7 @@ Raw recording files are not shared, in order to protect the subject's identity. 
 
     hdr = ft_read_header(<path to recording file>);
 
-**17**) Localize the electrodes in the post-implant CT with ft_electrodeplacement, shown in the figure below. Clicking an electrode label in the list will directly assign that label to the current crosshair location ([Supplementary Video 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM9_ESM.mp4)). Several in-app features facilitate efficient yet precise navigation of the anatomical image, such as a zoom mode, a magnet option that transports the crosshair to the nearest weighted maximum with subvoxel accuracy (or minimum in case of a post-implant MRI), and an interactive three-dimensional scatter figure that is linked to the two-dimensional volume representations. Furthermore, passing on the pre-implant MRI, fsmri_acpc, to ft_electrodeplacement allows toggling between CT and MRI views for the identification of specific electrodes based on their anatomical location. Generally, electrode #1 is the electrode farthest away from the craniotomy or burr hole in case of depths and single-row strips. Careful notes taken during surgery and recording are critical for determining the numbering of grid and multi-row strip electrodes.
+**17**) Localize the electrodes in the post-implant CT with ft_electrodeplacement, shown in the figure below. Clicking an electrode label in the list will directly assign that label to the current crosshair location ([Supplementary Video 4](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM9_ESM.mp4)). Several in-app features facilitate efficient yet precise navigation of the anatomical image, such as a zoom mode, a magnet option that transports the crosshair to the nearest weighted maximum with subvoxel accuracy (or minimum in case of a post-implant MRI), and an interactive three-dimensional scatter figure that is linked to the two-dimensional volume representations. Furthermore, passing on the pre-implant MRI, fsmri_acpc, to ft_electrodeplacement allows toggling between CT and MRI views for the identification of specific electrodes based on their anatomical location. Generally, electrode #1 is the electrode farthest away from the craniotomy or burr hole in case of depths and single-row strips. The present subject had 6 bilateral depths targeting left and right amygdalae (LAM/RAM) and the heads/anterior and tails/posterior of both hippocampi (LHH/RHH & LTH/RTH). Furthermore, one depth targeted right occipital cortex (ROC). Careful notes taken during surgery and recording are critical for determining the numbering of grid and multi-row strip electrodes.
 
     cfg         = [];
     cfg.channel = hdr.label;
@@ -191,7 +191,7 @@ Raw recording files are not shared, in order to protect the subject's identity. 
 **21**) In case of "brain shift", i.e. the inward displacement of brain tissue and electrodes due to pressure changes related to the craniotomy, realignment of electrode grids to the pre-implant cortical surface may be necessary. To prevent inwardly displaced electrodes from being incorrectly placed in nearby cortical sulci during back-projection, create a smooth hull around the cortical mesh generated by FreeSurfer. This hull tracks the (exposed) outer surface on which the cortical grid rested.
 
 {% include markup/warning %}
-The computation of the cortical hull takes some time. For tutorial purposes, load the hull from file and continue with step 23: load([subjID '_hull_lh.mat']);
+The computation of the cortical hull takes some time. For tutorial purposes, load the hull from file and continue with step 23: load([subjID '_hull_lh.mat']); hull_lh = mesh;
 {% include markup/end %}
 
     cfg           = [];
@@ -427,8 +427,8 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
     cfg            = [];
     cfg.method     = 'mtmconvol';
     cfg.toi        = -.3:0.01:.8;
-    cfg.t_ftimwin  = ones(length(cfg.foi),1).*0.2;
     cfg.foi        = 5:5:200;
+    cfg.t_ftimwin  = ones(length(cfg.foi),1).*0.2;
     cfg.taper      = 'hanning';
     cfg.output     = 'pow';
     cfg.keeptrials = 'no';

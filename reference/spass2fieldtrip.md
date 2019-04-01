@@ -1,7 +1,5 @@
 ---
 title: spass2fieldtrip
-layout: default
-tags: 
 ---
 ```
  SPASS2FIELDTRIP reads data from a set of SPASS data files and converts

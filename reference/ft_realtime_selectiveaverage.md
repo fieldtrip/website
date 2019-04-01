@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_selectiveaverage
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_SELECTIVEAVERAGE is an example realtime application for online

@@ -165,7 +165,7 @@ recording to the artifact structure. Many FieldTrip functions, ie
 **[ft_channelselection](/reference/ft_channelselection)** or
 **[ft_channelrepair](/reference/ft_channelrepair)**, which we will use further
 *down, require the specification of channel names in their configuration. For
-*this specify channel names as strings in a cell array such as {'E7';'Oz'}
+*this specify channel names as strings in a cell-array such as {'E7';'Oz'}
 
     artif.badchannel  = input('write badchannels: ');
     artif.misschannel = input('write missed channels: ');

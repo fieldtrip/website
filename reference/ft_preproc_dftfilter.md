@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_dftfilter
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_DFTFILTER reduces power line noise (50 or 60Hz) via two 
@@ -20,9 +18,9 @@ tags:
  used to estimate the line noise. The estimate is subtracted from the
  complete data.
 
- B) Alternatively line noise is reduced via spectrum interpolation 
- (introduced by Mewett et al., 2004, Med. Biol. Eng. Comput. 42, 
- doi:10.1007/BF02350994). 
+ B) Alternatively line noise is reduced via spectrum interpolation
+ (Leske & Dalal, 2019, NeuroImage 189,
+  doi: 10.1016/j.neuroimage.2019.01.026)
  The signal is:
  I)   transformed into the frequency domain via a discrete Fourier 
        transform (DFT), 

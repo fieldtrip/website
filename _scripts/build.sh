@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# This script builds the FieldTrip website
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -54,7 +56,7 @@ LATEST=$(git log -1 --format=%H)
 if [ "$LATEST" != "$PREVIOUS" ] ; then
 
 # update the tags, this uses a bash script
-_scripts/update_tags.sh
+_scripts/tags.sh
 $GIT add _data/tag/*.yml
 $GIT add tag/*.md
 $GIT commit -m "updated tags" _data/tag tag > /dev/null 2>&1
@@ -64,6 +66,7 @@ $GIT push > /dev/null 2>&1
 echo building website version $LATEST
 echo $LATEST > $LOGFILE
 
+JEKYLL_ENV=production
 $BUNDLE install           > /dev/null 2>&1
 $BUNDLE exec jekyll build > /dev/null 2>&1
 
@@ -74,4 +77,3 @@ fi
 
 # remove the lock
 rm $LOCKFILE
-

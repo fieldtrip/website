@@ -1,7 +1,5 @@
 ---
 title: peerget
-layout: default
-tags: 
 ---
 ```
  PEERGET get the output arguments after the remote job has been executed.

@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_simbio
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_SIMBIO creates a volume conduction model of the head

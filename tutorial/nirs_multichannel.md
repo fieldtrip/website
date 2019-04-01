@@ -31,7 +31,7 @@ The data used in this tutorial is available from <ftp://ftp.fieldtriptoolbox.org
 
 For the XML file you probably have to _right-click_ and use the _save-as_ option, otherwise it will display the XML content in your browser.
 
-You should now have the following files in your folder
+You should now have the following files in your folder:
 
     LR-01-2015-06-01-0002.oxy3
     LR-02-2015-06-08-0001.oxy3
@@ -87,7 +87,7 @@ For the purpose of this tutorial, we assume that the data is stored in your curr
 
 Note that the optodetemplates.xml file that was included here is a modified version of the default optodetemplates.xml file of Artinis. This modified optodetemplates.xml contains the layout of the optodes used in this particular experiment. If MATLAB cannot find the optodetemplates.xml on your path, it will pop up a graphical user interface dialogue asking you to locate the xml file. For information on how to choose the optimal template for your experiments, please see <https://www.artinis.com/blogpost-all/2017/6/27/how-do-i-choose-the-correct-fibers-and-template-for-my-oxymon>
 
-You will see something like this in the command windo
+You will see something like this in the command window:
 
     processing channel { 'Rx1a-Tx1 [844nm]' ... 'ADC007' 'ADC008' }
     reading and preprocessing
@@ -112,7 +112,7 @@ To retrieve the layout from the data file as shown above, you can use:
 
 #### Trigger channels
 
-Important information about the timing of the stimuli, is stored in channel ADC001 for the standard tones and in channel ADC002 for the deviant tones. The labels of the channels can be found in the field labe
+Important information about the timing of the stimuli, is stored in channel ADC001 for the standard tones and in channel ADC002 for the deviant tones. The labels of the channels can be found in the field label:
 
     find(strcmp(data_raw.label,'ADC001'))
     find(strcmp(data_raw.label,'ADC002'))
@@ -249,7 +249,7 @@ In this experiment, the segment of interest is a period of 5 s before and 20s af
     cfg.trl = trl
     data_epoch = ft_redefinetrial(cfg,data_down);
 
-If you type in data_epoch, you should see this in the command windo
+If you type in data_epoch, you should see this in the command window:
 
     data_epoch =
 
@@ -265,17 +265,17 @@ If you type in data_epoch, you should see this in the command windo
         sampleinfo: [597×2 double]
                cfg: [1×1 struct]
 
-Notably, both trial and time fields will now have 1x597 cell array (compare this to data_down). This corresponds to the 597 stimuli that were presented. In data_epoch.trialinfo the information about the type of stimulus is stored (event 1 or event 2). Thus, we can find which of those cells belongs to the first devian
+Notably, both trial and time fields will now have 1x597 cell-array (compare this to data_down). This corresponds to the 597 stimuli that were presented. In data_epoch.trialinfo the information about the type of stimulus is stored (event 1 or event 2). Thus, we can find which of those cells belongs to the first deviant:
 
     idx = find(data_epoch.trialinfo==2,1,'first')
 
-which should give yo
+which should give you:
 
     idx =
 
          8
 
-Let’s take a look at what happens around the first deviant, by plotting the average optical densit
+Let’s take a look at what happens around the first deviant, by plotting the average optical density:
 
     cfg          = [];
     cfg.channel  = 'Rx*';
@@ -301,7 +301,7 @@ First, we will remove the optode channels that make poor contact with the skin o
     cfg                 = [];
     data_sci            = ft_nirs_scalpcouplingindex(cfg, data_epoch);
 
-You can see that you throw away some channels in data_sci.label, where we now only have 86 labels instead of 10
+You can see that you throw away some channels in data_sci.label, where we now only have 86 labels instead of 104:
 
     data_sci =
 
@@ -325,7 +325,7 @@ We already removed major motion artefacts by epoching, thus removing the periods
 **Exercise 4**: We just wrote "Therefore, this step can be ignored." Check this yourself, are there indeed no artifacts? Hint: you can use cfg.artfctdef.zvalue.interactive = 'yes'; and [cfg, artifact] = ft_artifact_zvalue(cfg, data_epoch); like in Exercise 2 of the single channel tutorial.
 {% include markup/end %}
 
-### Transform optical densities to oxy- and deoxyhemoglobin concentration changes
+### Transform optical densities to oxy- and deoxy-hemoglobin concentration changes
 
 Like in the [single channel tutorial](/tutorial/nirs_singlechannel), we will now convert the optical densities into oxygenated and deoxygenated hemoglobin concentrations by using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**.
 
@@ -384,14 +384,14 @@ In the previous steps, you averaged over all standard trials and baseline correc
 
 To visualize the data in spatial terms (‘where on the head do we find functional brain activity in response to my different conditions?’), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called ‘nirs_48ch_layout.mat’. In case you would like to get an idea of how to create your own layout file, the following page might be informative: [/tutorial/layout](/tutorial/layout).
 
-The layout can be loaded using the standard MATLAB function ‘load’. The file ‘nirs_48ch_layout.mat’ contains a structure called ‘lay’. Just for clarity, we will rename the O2Hb channels representing changes in oxygenation concentration ‘functional’. We do this as follow
+The layout can be loaded using the standard MATLAB function ‘load’. The file ‘nirs_48ch_layout.mat’ contains a structure called ‘lay’. Just for clarity, we will rename the O2Hb channels representing changes in oxygenation concentration ‘functional’. We do this as follows:
 
     load('nirs_48ch_layout.mat')
     label               = lay.label;
     label               = strrep(label, 'O2Hb', 'functional');
     lay.label           = label;
 
-There are a number of FieldTrip options available for visualizing the results, such as **[ft_singleplotER](/reference/ft_singleplotER)** (ER stands for Event Related), which allows you to plot a single channel, and **[ft_multiplotER](/reference/ft_multiplotER)**, which allows you to plot multiple channels on a schematic representation of the head. The **[ft_multiplotER](/reference/ft_multiplotER)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window). For now, we are interested to first see whether we find the typical hemodynamic response, hence the changes in oxygenated concentration. Therefore, we select all channels which contain ‘functional’ in their label. This is done by cfg.channel = ‘\* [functional]’; If you want to see what other options the plotting functions has, you can look at the documentatio
+There are a number of FieldTrip options available for visualizing the results, such as **[ft_singleplotER](/reference/ft_singleplotER)** (ER stands for Event Related), which allows you to plot a single channel, and **[ft_multiplotER](/reference/ft_multiplotER)**, which allows you to plot multiple channels on a schematic representation of the head. The **[ft_multiplotER](/reference/ft_multiplotER)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window). For now, we are interested to first see whether we find the typical hemodynamic response, hence the changes in oxygenated concentration. Therefore, we select all channels which contain ‘functional’ in their label. This is done by cfg.channel = ‘\* [functional]’; If you want to see what other options the plotting functions has, you can look at the documentation:
 
     doc ft_multiplotER
 

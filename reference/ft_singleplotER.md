@@ -1,7 +1,5 @@
 ---
 title: ft_singleplotER
-layout: default
-tags: 
 ---
 ```
  FT_SINGLEPLOTER plots the event-related fields or potentials of a single

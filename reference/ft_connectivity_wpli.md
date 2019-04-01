@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_wpli
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_WPLI computes the weighted phase lag index from a data matrix

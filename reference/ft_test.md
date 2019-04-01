@@ -1,7 +1,5 @@
 ---
 title: ft_test
-layout: default
-tags: 
 ---
 ```
  FT_TEST performs selected FieldTrip test scripts or reports on previous test
@@ -28,16 +26,17 @@ tags:
    dependency       = string
    upload           = string, upload test results to the dashboard, can be 'yes' or 'no' (default = 'yes')
    dccnpath         = string, allow files to be read from the DCCN path, can be 'yes' or 'no' (default is automatic)
-   assertclean      = string, test whether FT version is clean, can be 'yes' or 'no' (default = 'yes')
    maxmem           = number (in bytes) or string such as 10GB
    maxwalltime      = number (in seconds) or string such as HH:MM:SS
+   sort             = string, can be 'alphabetical', 'walltime', 'mem' or 'random' (default = 'alphabetical')
+   returnerror      = string, whether give an error upon detecting a failed script, can be 'immediate', 'final', 'no' (default = 'no')
 
  ========= Running MOxUnit tests =========
 
  To execute tests using MOxUNit, you would do
    ft_test moxunit_run
 
- This feature is still experimental, but should support the same 
+ This feature is still experimental, but should support the same
  options as ft_test run (see above), and in addition:
    xmloutput         = string, filename for JUnit-like XML file with test
                        results (used for shippable CI).
@@ -58,9 +57,13 @@ tags:
    matlabversion    = string, for example 2016b
    fieldtripversion = string
    branch           = string
-   arch             = string, can be glnxa64, maci64. win32 or win64 
+   arch             = string, can be glnxa64, maci64. win32 or win64
    hostname         = string
    user             = string
+
+ Optionally, you may capture the output to get the results as a Matlab table
+ array, in which case they are not automatically displayed.
+   rslt = ft_test('report', 'fieldtripversion', 'cef3396');
 
  ========= Comparing tests =========
 
@@ -73,7 +76,7 @@ tags:
    matlabversion    = string, for example 2016b
    fieldtripversion = string
    branch           = string
-   arch             = string, can be glnxa64, maci64. win32 or win64 
+   arch             = string, can be glnxa64, maci64. win32 or win64
    hostname         = string
    user             = string
 

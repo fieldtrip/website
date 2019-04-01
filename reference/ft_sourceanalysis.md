@@ -1,7 +1,5 @@
 ---
 title: ft_sourceanalysis
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEANALYSIS performs beamformer dipole analysis on EEG or MEG data

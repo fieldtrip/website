@@ -1,7 +1,5 @@
 ---
 title: ft_transform_sens
-layout: default
-tags: 
 ---
 ```
  This function is a backward compatibility wrapper for existing MATLAB scripts

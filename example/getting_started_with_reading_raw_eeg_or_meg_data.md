@@ -10,7 +10,7 @@ In FieldTrip you first have to define the segments of data in which you are inte
     cfg = [];
     cfg.dataset = 'ArtifactMEG.ds';
     cfg.trialdef.eventtype  = '?';
-    ft_definetrial(cfg); % no output variable neccessary here, just look at the output in the Matlab screen
+    ft_definetrial(cfg); % no output variable neccessary here, just look at the output in the MATLAB screen
 
 The output on screen might look like this
 
@@ -32,7 +32,7 @@ Since "trial" events have a clear begin, end and duration, you do not have to sp
     cfg.trialdef.eventtype = 'trial';
     cfg = ft_definetrial(cfg); % now you do want to use an output variable for definetrial, since you need its output
 
-This time the following lines will appear on the Matlab output
+This time the following lines will appear on the MATLAB output
 
     evaluating trialfunction 'trialfun_general'
     found 76 events

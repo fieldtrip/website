@@ -7,7 +7,7 @@
 - name:  How to select the correct SPM toolbox?
   link:  /faq/how_to_select_the_correct_spm_toolbox
 
-- name:  Replacements for functions from Mathworks toolboxes
+- name:  Replacements for functions from MathWorks toolboxes
   link:  /faq/matlab_replacements
 
 - name:  What are the MATLAB requirements for using FieldTrip?

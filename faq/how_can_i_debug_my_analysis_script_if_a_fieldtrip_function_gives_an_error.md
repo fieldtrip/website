@@ -23,7 +23,7 @@ Another way of debugging an analysis pipeline is by using the FieldTrip debuggin
 
 to your high-level FieldTrip function calls, the function that detects the error will save its input arguments to a temporary mat file. There are multiple options for the cfg.debug field: 'display', 'displayonerror', 'displayonsuccess', 'save', 'saveonerror', saveonsuccess' or 'no' (which is the default).
 
-For example, the following will result in an error because of the invalid input data structur
+For example, the following will result in an error because of the invalid input data structure:
 
     >> cfg = [];
     >> cfg.debug = 'saveonerror'
@@ -69,7 +69,7 @@ It is likely that you don't want to edit all of your analysis scripts to add
 
     cfg.debug = 'saveonerror'
 
-to each individual function call. It is possible to enable this behaviour globally, using the ft_default global variable.
+to each individual function call. It is possible to enable this behavior globally, using the ft_default global variable.
 
     global ft_default
     ft_default.debug = 'saveonerror'

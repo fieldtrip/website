@@ -86,19 +86,19 @@ Next, read the left and right EMG data. Note that the settings are different for
     cfg.rectify      = 'yes';
     emg = ft_preprocessing(cfg);
 
-Finally, combine the EMG and MEG trials to a common data structur
+Finally, combine the EMG and MEG trials to a common data structure:
 
     data = ft_appenddata([], meg, emg);
 
-Note, that due to the artifact rejection, this procedure is very slow and we typically would want to perform this step only once. Therefore you can save the preprocessed dat
+Note, that due to the artifact rejection, this procedure is very slow and we typically would want to perform this step only once. Therefore you can save the preprocessed data:
 
     save data data
 
-The preprocessed data is available as a mat-file from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this
+The preprocessed data is available as a mat-file from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this:
 
     load data
 
-To get a feel for the data, plot a trial from a sensor overlying the left motor-cortex (MRC21) and the left and right EMG-signals, by selecting the first trial from the dat
+To get a feel for the data, plot a trial from a sensor overlying the left motor-cortex (MRC21) and the left and right EMG-signals, by selecting the first trial from the data:
 
     figure
     subplot(2,1,1);
@@ -123,7 +123,7 @@ Explore the MEG and EMG in figure 1, e.g. by zooming in. How are the signals dif
 
 ## Computing the coherence
 
-Using **[ft_freqanalysis](/reference/ft_freqanalysis)**, the characteristics in the frequency domain will be computed. This step requires the preprocessed MEG and EMG data (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat)). Load the data wit
+Using **[ft_freqanalysis](/reference/ft_freqanalysis)**, the characteristics in the frequency domain will be computed. This step requires the preprocessed MEG and EMG data (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat)). Load the data with:
 
     load data
 
@@ -334,7 +334,7 @@ Example script
 
 In order to localise the neuronal sources which are coherent with the EMG, we can apply beamformers to the data. For a more extensive background in beamforming, in particular beamforming with frequency-domain data, please consult the beamformer tutorial.
 In this example, we are going to use an algorithm, known as DICS, to estimate the activity of the neuronal sources and to subsequently estimate the coherence with the EMG. In order to achieve this, we first need an estimate of the cross-spectral density between all MEG-channel combinations, and between the MEG-channels and the EMG, at a frequency of interest.
-This requires the preprocessed data, see above, or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat). Load wit
+This requires the preprocessed data, see above, or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat). Load with:
 
     load data
 

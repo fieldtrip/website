@@ -62,9 +62,9 @@ The **[peerslave](/reference/peerslave)** command will start the network buffer 
 
 ### Requirement: enough MATLAB licenses
 
-The default usage as explained above is to start one exemplar of MATLAB for each of the peers. The Mathworks license agreement allows you to start multiple instances of MATLAB on a single computer. So if you run 4 peerslaved plus one peermaster on a quad-core computer, you require only a single MATLAB license (which you would have needed anyway). If you run one or multiple peerslaves on another computer, you will also need a MATLAB license for those. Also on other computers you will need one license per computer.
+The default usage as explained above is to start one exemplar of MATLAB for each of the peers. The MathWorks license agreement allows you to start multiple instances of MATLAB on a single computer. So if you run 4 peerslaved plus one peermaster on a quad-core computer, you require only a single MATLAB license (which you would have needed anyway). If you run one or multiple peerslaves on another computer, you will also need a MATLAB license for those. Also on other computers you will need one license per computer.
 
-On Linux and Mac OS X we have an alternative implementation that consists of a peerslave command-line executable which is started from the unix command line. The command-line executable does not require a MATLAB license when waiting for an incoming job, but will require a license as soon as a job comes in. It uses the MATLAB engine to execute the job. The peerslave command line executable allows you to set up a large number of peerslaves that wait in the background, with hardly any computational requirements, but that can kick in as soon as you want to run a bacth of distributed jobs.
+On Linux and macOS we have an alternative implementation that consists of a peerslave command-line executable which is started from the unix command line. The command-line executable does not require a MATLAB license when waiting for an incoming job, but will require a license as soon as a job comes in. It uses the MATLAB engine to execute the job. The peerslave command line executable allows you to set up a large number of peerslaves that wait in the background, with hardly any computational requirements, but that can kick in as soon as you want to run a bacth of distributed jobs.
 
 ### Requirement: network communication
 
@@ -90,7 +90,7 @@ Elsewhere on this website you can find more examples on the use of the peer tool
 
 ### How it works in detail
 
-The idea is loosely based on the [FieldTrip buffer](/development/realtime/buffer), which is a multithreaded TCP server implemented as a mex file. The TCP server runs in a separate thread attached to Matlab, but not blocked by MATLAB command execution. Let's refer to this as the **"peer server"**. The peer server has the following responsibilitie
+The idea is loosely based on the [FieldTrip buffer](/development/realtime/buffer), which is a multithreaded TCP server implemented as a mex file. The TCP server runs in a separate thread attached to MATLAB, but not blocked by MATLAB command execution. Let's refer to this as the **"peer server"**. The peer server has the following responsibilitie
 
 1.  announce itself on the network
 2.  discover the other peers
@@ -99,7 +99,7 @@ The idea is loosely based on the [FieldTrip buffer](/development/realtime/buffer
 
 Sending and receiving data implies sending the input arguments of a function that is remotely evaluated and receiving the output arguments of that function call.
 
-On top of this peer server a number of regular Matlab functions are implemented in a m-file. These regular functions encapsulate the low-level server details. On the master computer the commands could look like
+On top of this peer server a number of regular MATLAB functions are implemented in a m-file. These regular functions encapsulate the low-level server details. On the master computer the commands could look like
 
     jobid  = peerfeval(functionname, argin);
     result = peerget(jobid);
@@ -112,11 +112,11 @@ which would keep running as a slave for one hour (3600 seconds) and evaluate the
 
 ### Implemented functionality in MATLAB
 
-The peer-to-peer parallel toolbox for Matlab consists of a compiled mex file that implements the low-level functionality, plus a collection of end-user functions. The most important end-user functions are descibed here.
+The peer-to-peer parallel toolbox for MATLAB consists of a compiled mex file that implements the low-level functionality, plus a collection of end-user functions. The most important end-user functions are descibed here.
 
 #### Peercellfun(...)
 
-This executes a function on all the elements of a cell-array. Each cell is executed on another peer, and the execution is in parallel. Once all cells have been executed, the results are gathered and returned to the user as cell array. For example
+This executes a function on all the elements of a cell-array. Each cell is executed on another peer, and the execution is in parallel. Once all cells have been executed, the results are gathered and returned to the user as cell-array. For example
 
     peercellfun('plus', {1, 2, 3}, {1, 2, 3})
 
@@ -132,16 +132,16 @@ would return
 
     {[1x1]  [2x2]  [3x3]}
 
-Its interface is identical to the standard Matlab cellfun() command except that only function handlers to external (non-anonymous) functions can be passed.
+Its interface is identical to the standard MATLAB cellfun() command except that only function handlers to external (non-anonymous) functions can be passed.
 
 #### Peerfeval(...)
 
-The Matlab session that executes the peereval command searches for a peer that acts as slave, and sends the job (the function name and the input arguments) to the available slave peer. The slave peer evaluates the function on the input arguments and subsequently writes the output arguments back to the peer server of the host Matlab session, i.e. the session that initiated the job.
+The MATLAB session that executes the peereval command searches for a peer that acts as slave, and sends the job (the function name and the input arguments) to the available slave peer. The slave peer evaluates the function on the input arguments and subsequently writes the output arguments back to the peer server of the host MATLAB session, i.e. the session that initiated the job.
 
 Multiple peerevals can be executed without explicitely waiting for the results to return, hence the peer server (running on the master) should be able to receive and hold multiple "argouts".
 
 The jobid should include information about the peer to which the job was assigned. Furthermore, information about the begin and end time would be usefull to estimate the time it takes to execute similar jobs.
-Its interface is identical to the standard Matlab feval() command.
+Its interface is identical to the standard MATLAB feval() command.
 
 #### Peerget(...)
 
@@ -195,10 +195,10 @@ Displays information about all the peers in the network.
 
 The disadvantage of running peerslave inside MATLAB is that each slave requires one active MATLAB license, even while waiting for a job. To allow for having a lot of idle slaves on the network that do not take licenses when not in use, I have implemented a command-line peerslave which is an executable that you start from the command line. The following compiled executables are currently included
 
-- peerslave.glnxa64 (Linux, 64 bit)
-- peerslave.glnx86 (Linux, 32 bit)
-- peerslave.maci64 (Mac OS X, 64 bit)
-- peerslave.maci (Mac OS X, 32 bit)
+- peerslave.glnxa64 (Linux, 64-bit)
+- peerslave.glnx86 (Linux, 32-bit)
+- peerslave.maci64 (macOS, 64-bit)
+- peerslave.maci (macOS, 32-bit)
 
 The command-line peerslave starts the threads, waits for an incoming job, and starts the MATLAB engine to evaluate the job. After MATLAB is done, the results are sent back to the master. If the MATLAB engine is idle for 30 seconds, it is closed and the license is returned to the network license server.
 
@@ -230,7 +230,7 @@ The following is a list with details that are already implemented and/or support
 
 - each MATLAB session is either master (i.e. sending/receiving jobs) or slave (performing jobs)
 - there can be multiple masters and multiple slaves on the same network (preferably many more slaves than masters)
-- at the end of the day people would keep Matlab running, and type "peerslave", resulting in the while-loop mentioned above
+- at the end of the day people would keep MATLAB running, and type "peerslave", resulting in the while-loop mentioned above
 - the next morning people return to their computer and do ctrl-c
 - the pwd and the path are passed along with the job, so that the peer can load users data and/or feval users scripts
 - fair sharing is implemented based on the estimated execution time
@@ -246,7 +246,7 @@ The following is a list with details that are already implemented and/or support
 The following is a list with unassorted ideas and considerations for improving and/or using the peer-to-peer parallel toolbox in an efficient manner in the typical research lab setting.
 
 - localhost slaves should be preferred over remote hosts
-- security is not part of this design, but can be implemented by running the Matlab slave session in a sandbox (i.e. as unpriviledged user)
+- security is not part of this design, but can be implemented by running the MATLAB slave session in a sandbox (i.e. as unpriviledged user)
 
 ### Security
 
@@ -254,10 +254,10 @@ The whole mechanism does not have inherent security mechanisms implemented. An m
 
 peerfeval('system', 'rm -rf \*')
 
-erasing all users files on the computer hosting the slave. To solve this problem, the Matlab session with the peerslave server should be running under an unpriviledged account, i.e. as a user without write access to the important parts of the file system.
+erasing all users files on the computer hosting the slave. To solve this problem, the MATLAB session with the peerslave server should be running under an unpriviledged account, i.e. as a user without write access to the important parts of the file system.
 
 ### Relation between multiple peers
 
-The schematic figure below shows how Matlab and the peer server (running as a mex file) work together in writing and receiving data from other peers.
+The schematic figure below shows how MATLAB and the peer server (running as a mex file) work together in writing and receiving data from other peers.
 
 {% include image src="/assets/img/development/module/peer/peer1.png" %}

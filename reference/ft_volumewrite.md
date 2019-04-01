@@ -1,7 +1,5 @@
 ---
 title: ft_volumewrite
-layout: default
-tags: 
 ---
 ```
  FT_VOLUMEWRITE exports anatomical or functional volume data to a Analyze

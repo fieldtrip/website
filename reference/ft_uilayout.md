@@ -1,7 +1,5 @@
 ---
 title: ft_uilayout
-layout: default
-tags: 
 ---
 ```
  FT_UILAYOUT is a helper function to make a consistent graphical user interafce with

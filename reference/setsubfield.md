@@ -1,7 +1,5 @@
 ---
 title: setsubfield
-layout: default
-tags: 
 ---
 ```
  SETSUBFIELD sets the contents of the specified field to a specified value

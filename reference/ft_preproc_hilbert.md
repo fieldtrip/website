@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_hilbert
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_HILBERT computes the Hilbert transpose of the data and optionally

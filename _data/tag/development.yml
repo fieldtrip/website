@@ -1,4 +1,4 @@
-- name:  Bugzilla and Github issue tracking
+- name:  Bugzilla and GitHub issue tracking
   link:  /bugzilla
 
 - name:  Contribute
@@ -19,7 +19,7 @@
 - name:  Code guidelines
   link:  /development/guideline/code
 
-- name:  Documentation guidelines
+- name:  Documentation guidelines this is the title, it should also be the first top-level heading
   link:  /development/guideline/documentation
 
 - name:  Template guidelines

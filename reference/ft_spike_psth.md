@@ -1,7 +1,5 @@
 ---
 title: ft_spike_psth
-layout: default
-tags: 
 ---
 ```
  FT_SPIKE_PSTH computes the peristimulus histogram of spiketrains.

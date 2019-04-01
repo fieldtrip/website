@@ -1,7 +1,5 @@
 ---
 title: ft_struct2double
-layout: default
-tags: 
 ---
 ```
  FT_STRUCT2DOUBLE converts all single precision numeric data in a structure

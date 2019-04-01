@@ -1,7 +1,5 @@
 ---
 title: ft_preproc_resample
-layout: default
-tags: 
 ---
 ```
  FT_PREPROC_RESAMPLE resamples all channels in the data matrix

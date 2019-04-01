@@ -1,7 +1,5 @@
 ---
 title: ft_specest_mtmconvol
-layout: default
-tags: 
 ---
 ```
  FT_SPECEST_MTMCONVOL performs wavelet convolution in the time domain by

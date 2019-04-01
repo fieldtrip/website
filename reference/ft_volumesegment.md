@@ -1,10 +1,8 @@
 ---
 title: ft_volumesegment
-layout: default
-tags: 
 ---
 ```
- FT_VOLUMESEGMENT segments an anatomical MRI. The behaviour depends on the output requested. It can
+ FT_VOLUMESEGMENT segments an anatomical MRI. The behavior depends on the output requested. It can
  return probabilistic tissue maps of gray/white/csf compartments, a skull-stripped anatomy, or
  binary masks representing the brain surface, skull, or scalp surface.
 

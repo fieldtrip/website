@@ -122,7 +122,7 @@ Alternatively, one can simply use MATLAB serial objects and low level reading fu
               %% read from COM4 (physically connected to COM1)
               a=fread(serobjw2,serobjw2.BytesAvailable);disp(a);
               clear a;
-              %% to convet numeric ascii code to char string use a=char(a')
+              %% to convet numeric ASCII code to char string use a=char(a')
               %% the line below will also work for char input
               % a=fscanf(serobjw2,'%s\n',serobjw2.BytesAvailable),clear a;
               t1=toc;

@@ -217,7 +217,7 @@ To analyze high-frequency phase-coupling between spikes and LFPs recorded from t
     cfg.method       = 'linear'; % remove the replaced segment with interpolation
     data_i           = ft_spiketriggeredinterpolation(cfg, data_all);
 
-We illustrate this method by plotting the dat
+We illustrate this method by plotting the data:
 
     figure,
     plot(data_i.time{1},data_i.trial{1}(2,:),'g-'), hold on, plot(data_i.time{1}, data_i.trial{1}(5,:),'r')
@@ -273,7 +273,7 @@ The pre-stimulus STA reveals locking of spikes to alpha LFP cycles.
 
 ### Computing the phases of spikes relative to the ongoing LFP
 
-After we obtained, from the preprocessing steps, a data structure containing the spike information that was either appended in binarized form to the LFP data (through **[ft_appendspike]]**) or stored in a separate spike structure (through **[ft_spike_maketrials](/reference/ft_spike_maketrials)**) we can proceed with computing the phase of the LFP relative to single spikes. It is also possible (not covered in this tutorial) to analyze the data_all structure (containing both LFP and spike data) using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute connectivity measures with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. This would have been the method to compute the spike-field coherence metric. However, this latter methodology has disadvantages, as explained in the introduction.
+After we obtained, from the preprocessing steps, a data structure containing the spike information that was either appended in binarized form to the LFP data (through **[ft_appendspike](/reference/ft_appendspike)**) or stored in a separate spike structure (through **[ft_spike_maketrials](/reference/ft_spike_maketrials)**) we can proceed with computing the phase of the LFP relative to single spikes. It is also possible (not covered in this tutorial) to analyze the data_all structure (containing both LFP and spike data) using **[ft_freqanalysis](/reference/ft_freqanalysis)** and subsequently compute connectivity measures with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**. This would have been the method to compute the spike-field coherence metric. However, this latter methodology has disadvantages, as explained in the introduction.
 
 The idea of our procedure is to take an LFP segment around the spike and compute the Discrete Fourier Transform of that.
 Two algorithms are available for computing the phases of single spikes relative to the LFP. The first algorithm **[ft_spiketriggeredspectrum_fft](/reference/ft_spiketriggeredspectrum_fft)** computes the FFT locally around every spike by calling MATLAB's FFT function and uses the same window length for all frequencies. The other algorithm in **[ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)** computes the phase for every frequency separately by computing the DFT for a given frequency through convolution. Different time-windows per frequency are then allowed. The choice of the algorithm at the user-end is determined by calling **[ft_spiketriggeredspectrum](/reference/ft_spiketriggeredspectrum)** with cfg.method = 'mtmfft' or cfg.method = 'mtmconvol'.
@@ -303,7 +303,7 @@ We then obtain
                 label: {'sig002a_wf'}
                   cfg: [1x1 struct]
 
-This structure is a spike (**[ft_datatype_spike](/reference/ft_datatype_spike)**) formatted structure with the additional field sts.fourierspctrm.
+This structure is a structure formatted as **[ft_datatype_spike](/reference/ft_datatype_spike)** with the additional field sts.fourierspctrm.
 For every i-th unit, the field stsFFT.fourierspctrm{i} contains complex valued LFP fourierspectra taken around the occurrence of every spike.
 The spike phases for the unit 'sig001U_wf' are thus obtained by
 

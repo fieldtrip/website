@@ -29,7 +29,7 @@ If you have any more suggestions please add them here.
 
 ## Save your data to disk
 
-Remember to always backup your original data that was acquired on external hard disks, CDs or DVDs for long-term storage. If possible, the backup should include the presentation code that was used in the experiment and a small ascii .txt file with the recording details.
+Remember to always backup your original data that was acquired on external hard disks, CDs or DVDs for long-term storage. If possible, the backup should include the presentation code that was used in the experiment and a small ASCII .txt file with the recording details.
 
 When using FieldTrip for large analyses, it is recommended to save one MATLAB variable to a single file. That will result in a lot of files in your data directory and in first instance you may consider that to look messy. However, the advantage is that you can easily manage the data, delete results that you don't need any more, check that the results are complete for all subjects, check that the timestamps of the files with certain results are consistent for all subjects (e.g. after you have updated some parameters and rerun part of the analysis), ...
 
@@ -115,7 +115,7 @@ Out of memory. Type HELP MEMORY for your options.
 This tutorial gave advice for doing data-analysis in a memory-efficient way.
 If you are interested in further issues on efficiency, check [this](/tutorial/distributedcomputing) and [this](/tutorial/memory) tutorials.
 
-It is much advised to also read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from Mathworks.
+It is much advised to also read this [technical note](http://www.mathworks.com/support/tech-notes/1100/1106.html) from MathWorks.
 
 These are FAQs that are related to memory issues:
 

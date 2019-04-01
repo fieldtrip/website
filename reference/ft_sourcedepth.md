@@ -1,7 +1,5 @@
 ---
 title: ft_sourcedepth
-layout: default
-tags: 
 ---
 ```
  FT_SOURCEDEPTH computes the distance from the source to the surface of

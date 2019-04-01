@@ -1,7 +1,5 @@
 ---
 title: ft_statfun_correlationT
-layout: default
-tags: 
 ---
 ```
  FT_STATFUN_CORRELATIONT calculates correlation coefficient T-statistics on the

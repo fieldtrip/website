@@ -1,7 +1,5 @@
 ---
 title: nutmeg2fieldtrip
-layout: default
-tags: 
 ---
 ```
  NUTMEG2FIELDTRIP converts from NUTMEG either a sensor data structure

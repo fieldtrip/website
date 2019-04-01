@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_fmriviewer
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_FMRIVIEWER allows for realtime visualization of the fMRI data stream

@@ -1,7 +1,5 @@
 ---
 title: ft_chanunit
-layout: default
-tags: 
 ---
 ```
  FT_CHANUNIT is a helper function that tries to determine the physical

@@ -7,7 +7,7 @@
 - name:  Which external toolboxes are used by FieldTrip?
   link:  /faq/external
 
-- name:  How can I compile the mex files on 64 bit Windows?
+- name:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/how_can_i_compile_the_mex_files_on_64_bit_windows
 
 - name:  How can I determine the number of threads that MATLAB uses?
@@ -22,7 +22,7 @@
 - name:  MATLAB complains about a missing or invalid MEX file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do
 
-- name:  Replacements for functions from Mathworks toolboxes
+- name:  Replacements for functions from MathWorks toolboxes
   link:  /faq/matlab_replacements
 
 - name:  What are the MATLAB requirements for using FieldTrip?

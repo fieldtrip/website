@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_imotions
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_IMOTIONS makes a trial definition for an iMotions event structure

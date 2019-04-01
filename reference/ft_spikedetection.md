@@ -1,7 +1,5 @@
 ---
 title: ft_spikedetection
-layout: default
-tags: 
 ---
 ```
  FT_SPIKEDETECTION reads continuous data from disk and detects spikes. The

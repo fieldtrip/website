@@ -5,7 +5,7 @@ tags: [faq, layout, plot]
 
 # What is the format of the layout file which is used for plotting?
 
-The layout file is a plain ascii file with the extention .lay. It gives you exact control of the 2-D position of the channels for topoplotting, and of the per-channel local coordinate axes for the multiplotting. The 2-D positions of the channels can be expressed in an arbitrary coordinate system. Once read in, they will be shifted and scaled such that they fit within a prespecified x- and y-range ([-0.45 0.45] a.u.). After shifting and scaling, a circle representing the head with nose and ears will be added. This circle has a center (0,0) and radius 0.5 (a.u.).
+The layout file is a plain ASCII file with the extention .lay. It gives you exact control of the 2-D position of the channels for topoplotting, and of the per-channel local coordinate axes for the multiplotting. The 2-D positions of the channels can be expressed in an arbitrary coordinate system. Once read in, they will be shifted and scaled such that they fit within a prespecified x- and y-range ([-0.45 0.45] a.u.). After shifting and scaling, a circle representing the head with nose and ears will be added. This circle has a center (0,0) and radius 0.5 (a.u.).
 
 Here is a small snippet of an EEG layout fil
 
@@ -26,9 +26,9 @@ The 6th column is a string with the channel label.
 
 The width and height are used for the subplot that will be made in **[ft_multiplotER](/reference/ft_multiplotER)** and **[ft_multiplotTFR](/reference/ft_multiplotTFR)**. The width and height represent 80 and 60% of the smallest 2D channel distance respectively. The channels in the data are matched case sensitive to the channels in the layout. There are two additional labels, SCALE and COMNT, which specify the location and size of the comment and scale.
 
-Instead of constructing an ascii layout file, you can also specify one of the supported electrode or gradiometer files (e.g. Polhemus file, or CTF .res4 header file). The **[ft_prepare_layout](/reference/ft_prepare_layout)** function will read the 3-D sensor positions from the file and will projected these to a 2-D plane. Furthermore, if no layout file is specified, but if electrodes or gradiometers are present in the data, the **[ft_prepare_layout](/reference/ft_prepare_layout)** function will use those to create a 2-D layout on the fly.
+Instead of constructing an ASCII layout file, you can also specify one of the supported electrode or gradiometer files (e.g. Polhemus file, or CTF .res4 header file). The **[ft_prepare_layout](/reference/ft_prepare_layout)** function will read the 3-D sensor positions from the file and will projected these to a 2-D plane. Furthermore, if no layout file is specified, but if electrodes or gradiometers are present in the data, the **[ft_prepare_layout](/reference/ft_prepare_layout)** function will use those to create a 2-D layout on the fly.
 
-Alternative to the ascii layout file, you can also use a Matlab layout file. It should be a .mat file containing a single variable with the name "lay". The lay variable should be a structure with
+Alternative to the ASCII layout file, you can also use a MATLAB layout file. It should be a .mat file containing a single variable with the name "lay". The lay variable should be a structure with
 
 `<code>`lay =
 pos: [153x2 double]

@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_example2
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_EXAMPLE2 is an example trial function that detects muscle

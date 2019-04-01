@@ -1,7 +1,5 @@
 ---
 title: ft_statfun_indepsamplesF
-layout: default
-tags: 
 ---
 ```
  FT_STATFUN_INDEPSAMPLESF calculates the independent samples F-statistic on the

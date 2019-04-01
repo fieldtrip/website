@@ -1,7 +1,5 @@
 ---
 title: ft_standalone
-layout: default
-tags: 
 ---
 ```
  FT_STANDALONE is the entry function of the compiled FieldTrip application.

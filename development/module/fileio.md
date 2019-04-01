@@ -11,7 +11,7 @@ All these ft_read_xxx functions automatically detect the file format and subsequ
 
 The objective of supplying the low-level EEG and MEG reading functions as a separate module/toolbox are to
 
-1.  facilitate the reuse of the ft_read_xxx functions in other open-source projects (e.g. EEGLAB, SPM)
+1.  facilitate the reuse of the ft_read_xxx functions in other open source projects (e.g. EEGLAB, SPM)
 2.  facilitate the implementation and support for new data formats, esp. for external users/contributors
 3.  facilitate the implementation of advanced features without complicating the standard use
 
@@ -43,7 +43,7 @@ Other options that have been suggested, but that are not implemented yet are
 
 ## Definition of the function-calls (API)
 
-The API allows for reading header information, event information, and blocks of data. The API consists of two parts: a clearly defined function call, and a clearly defined output of that function call.
+The API allows for reading header information, event information and blocks of data. The API consists of two parts: a clearly defined function call, and a clearly defined output of that function call.
 
     hdr    = ft_read_header(filename)    % returns a structure with the header information
     event  = ft_read_event(filename)     % returns a structure with trigger information
@@ -51,7 +51,7 @@ The API allows for reading header information, event information, and blocks of 
 
 The data-reading function has additional variable input arguments for selecting segments and channels.
 
-The motivation for separating the reading into header/event/data is (among others) inspired by the CTF and by the BrainVision data formats. Based on the header, you want to decide how to approach reading the data, i.e. read everything for an average ERP, read an epoch for trial-based data, read a segment for continuous data. Based on the events (triggers and such), you want to decide which segments of data to read, i.e. read a pre/post-stimulus data segment around each trigger. These decisions are part of the FieldTrip/SPM/EEGLAB/enduser code.
+The motivation for separating the reading into header/event/data is (among others) inspired by the CTF and by the BrainVision data formats. Based on the header, you want to decide how to approach reading the data, e.g. read everything for an average ERP, read an epoch for trial-based data, read a segment for continuous data. Based on the events (triggers and such), you want to decide which segments of data to read, e.g. read a pre/post-stimulus data segment around each trigger. These decisions are part of the FieldTrip/SPM/EEGLAB/enduser code.
 
 ### Header format
 
@@ -71,11 +71,11 @@ Additional header information that is present for only specific file formats is 
         nChans: 218            % number of channels, in this case 151 MEG channels  and some additional EEG channels
          label: {218x1 cell}   % channel labels
       nSamples: 6000           % number of samples per trial, in this case 10 seconds long
-
-nSamplesPre: 0 % baseline period in each trial
-nTrials: 49 % number of trials
-grad: [1x1 struct] % details on the position and orientation of the MEG sensors
-orig: [1x1 struct] % the original CTF header structure
+      
+      nSamplesPre: 0 % baseline period in each trial
+      nTrials: 49 % number of trials
+      grad: [1x1 struct] % details on the position and orientation of the MEG sensors
+      orig: [1x1 struct] % the original CTF header structure
 
 ### Data format
 
@@ -83,7 +83,7 @@ The electrophysiological data is returned as a Nchans X Nsamples matrix (for con
 
 ### Event format
 
-The event structure allows for various events, that can be coded as numbers (trigger values) or as strings (annotations and trial classifications). Events have a location in the file (sample number) and may have a duration. In the end-user application, it should be easy to search for events of a particular type. Selected events should be used to fetch the data of interest from the file.
+The event structure allows for various events, which can be coded as numbers (trigger values) or as strings (annotations and trial classifications). Events have a location in the file (sample number) and may have a duration. In the end-user application, it should be easy to search for events of a particular type. Selected events should be used to fetch the data of interest from the file.
 
 An example event structure for a CTF MEG dataset looks like this
 
@@ -117,37 +117,49 @@ In case of events with duration that define trials event.sample is the first sam
 ## Example use of the ft_read_xxx functions
 
 The following piece of code will read each trial in an trial-based dataset that has a trigger with value "1"
+
+```
 hdr = ft_read_header(filename);
 event = ft_read_event(filename);
 trig1 = find(cell2mat({event.value})==1);
 for i=1:length(trig1)
 dat(i,:,:) = ft_read_data(filename, 'trial', trig1(i));
 end
+```
 
 The following piece of code will read all trial with trigger value "1" all at once
+
+```
 hdr = ft_read_header(filename);
 event = ft_read_event(filename);
 trig1 = find(cell2mat({event.value})==1);
 dat = ft_read_data(filename, 'trial', trig1);
+```
 
 The following piece of code will read the first 10 seconds data from a continuous file
+
+```
 hdr = ft_read_header(filename);
 dat = ft_read_data(filename, 'begsample', 1, 'endsample', 10\*hdr.fsample);
+```
 
 The following piece of code will read a one-second segment of data from a continuous dataset around the first trigger with value "4"
+
+```
 hdr = ft_read_header(filename);
 event = ft_read_event(filename);
 sel = [];
 for i=1:length(event)
-% test each event, we are looking for a trigger with value 4
-if isequal(event(i).type, 'trigger') && isequal(event(i).value, 4)
-sel = [sel; i];
-end
+  % test each event, we are looking for a trigger with value 4
+  if isequal(event(i).type, 'trigger') && isequal(event(i).value, 4)
+    sel = [sel; i];
+  end
 end
 sel = sel(1); % select only the first trigger that was found
 begsample = event(sel(1)).sample - 0.3*hdr.Fs; % select 300ms before the sample of the trigger
 endsample = event(sel(1)).sample + 0.7*hdr.Fs; % select 700ms after the sample of the trigger
 dat = ft_read_data(filename, 'begsample', begsample, 'endsample', endsample);
+```
 
 ## The representation of discontinuous data on disk
 
@@ -165,8 +177,11 @@ The event.sample relates to the sample index into the file, disregarding any int
 4 has segments ("trials" in fieldtrip-speak) of unequal length.
 
 To support all of these with ft_read_header, ft_read_data and ft_read_event, some conventions have been adopted. Say we do
+
+```
 hdr = ft_read_header(filename)
 event = ft_read_event(filename)
+```
 
 then in all cases hdr.nSamples*ndr.nTrials reflects the total number of samples present in the datafile. Each sample in the datafile is indexed, starting from 1, up to hdr.nSamples*ndr.nTrials.
 
@@ -175,7 +190,7 @@ then in all cases hdr.nSamples*ndr.nTrials reflects the total number of samples 
 - In case 3, hdr.nSamplesPre is sometimes known from the file and is returned as non-zero (by default it is zero).
 - In case 4, hdr.nSamples does not apply as a single number to the variable length segments.
 
-To deal with the more detailed structure in the file, the output of ft_read_event is neede
+To deal with the more detailed structure in the file, the output of ft_read_event is needed
 
 - In case 1, there are events for each trigger.
 - In case 2, there are events for each trigger, but there is also a "trial" event for each segment in the file
@@ -188,9 +203,9 @@ If you want to know which trigger (or triggers) happen in which trial, you have 
 
 ## Guidelines for adding support for other file formats
 
-The ft_read_data, ft_read_header and ft_read_event functions strongly depend on the **[ft_filetype](/reference/ft_filetype)** helper function. That function automatically determines the format of the file, for example by looking at the extension, by looking at the first few bytes of the file or any other characteristic feature. So adding support for a new file format also requires that new file format to be added to the filetype function.
+The ft_read_data, ft_read_header and ft_read_event functions strongly depend on the **[ft_filetype](/reference/ft_filetype)** helper function. That function automatically determines the format of the file, for example by looking at the extension, by looking at the first few bytes of the file or any other characteristic feature. So adding support for a new file format also requires that new file format to be added to the ft_filetype function.
 
-The **[ft_filetype](/reference/ft_filetype)** function is often called like this (e.g. in ft_read_data
+The **[ft_filetype](/reference/ft_filetype)** function is often called like this (e.g. in ft_read_data)
 
     var = ft_filetype(filename)
     if strcmp(var, something)
@@ -210,18 +225,18 @@ or like this
 
 The ft_filetype function does its checks in one long if-elseif-elseif ladder. The consequence is that the detection sometimes is order sensitive: the first match in ft_filetype will be the one returned. So for common file extensions like ".dat" it can be problematic. The solution for identical file extensions is to have the most stringent check first (e.g. "extension is .dat and header contains a few magic bytes") followed by the less stringent check ("extension is .dat").
 
-Another recommendation for file type detection is to use the potential context, i.e. the simultaneous presence of multiple files. That is used for example in BrainAnalyzer, which always has a set of three files (an ascii .vhdr, another ascii .vmrk and one binary file with extension .dat, .eeg or .seg). The .dat file in then easy to recognize because it is always accompanied by the .vhdr and .vmrk file.
+Another recommendation for file type detection is to use the potential context, e.g. the simultaneous presence of multiple files. That is used for example in BrainAnalyzer, which always has a set of three files (an ASCII .vhdr, another ASCII .vmrk and one binary file with extension .dat, .eeg or .seg). The .dat file in then easy to recognize because it is always accompanied by the .vhdr and .vmrk file.
 
 ## Related documentation
 
 Related projects on electrophysiology (EEG, MEG) data I/O are
 
-- Biosig, http://biosig.sourceforge.net/
-- NeuroShare, http://www.neuroshare.org/
-- EEG toolbox, http://eeg.sourceforge.net/
-- FIFF access, http://ltl.tkk.fi/~kuutela/meg-pd/
+- [Biosig](http://biosig.sourceforge.net/)
+- [NeuroShare](http://www.neuroshare.org/)
+- [EEG toolbox](http://eeg.sourceforge.net/)
+- [FIFF access](http://ltl.tkk.fi/~kuutela/meg-pd/)
 
 Lists of EEG and MEG file formats can be found here
 
-- http://www.eemagine.com/fileformats.htm
-- http://bci.tugraz.at/~schloegl/biosig/TESTED
+- <http://www.eemagine.com/fileformats.htm>
+- <http://bci.tugraz.at/~schloegl/biosig/TESTED>

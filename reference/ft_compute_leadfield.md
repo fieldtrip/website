@@ -1,7 +1,5 @@
 ---
 title: ft_compute_leadfield
-layout: default
-tags: 
 ---
 ```
  FT_COMPUTE_LEADFIELD computes a forward solution for a dipole in a a volume

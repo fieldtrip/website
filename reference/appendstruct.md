@@ -1,7 +1,5 @@
 ---
 title: appendstruct
-layout: default
-tags: 
 ---
 ```
  APPENDSTRUCT appends a structure to a structure or struct-array.

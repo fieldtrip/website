@@ -1,7 +1,5 @@
 ---
 title: ft_plot_slice
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_SLICE plots a 2-D cut through a 3-D volume and interpolates if needed

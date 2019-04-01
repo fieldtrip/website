@@ -1,7 +1,5 @@
 ---
 title: ft_channelrepair
-layout: default
-tags: 
 ---
 ```
  FT_CHANNELREPAIR repairs bad or missing channels in the data by replacing them with the

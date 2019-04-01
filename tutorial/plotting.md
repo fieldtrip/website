@@ -8,13 +8,13 @@ title: Plotting data at the channel and source level
 
 To visualize your data you can use FieldTrip's high-level plotting functions, which are optimized for the FT data structures. Like other high-level functions they take a cfg as first input argument, followed by the data. These functions take care of all bookkeeping and some of the functions allow you to interact with the data by clicking in the figure.
 
-Alternatively, you can use the low-level FieldTrip plotting functions. These are located in the plotting sub-directory and are named ft*plot_xxx. You can find them by typing in the command window “help ft_plot*” and then press the Tab key.
+Alternatively, you can use the low-level FieldTrip plotting functions. These are located in the plotting sub-directory and are named ft_plot_xxx. You can find them by typing in the command window `help ft_plot_` and then press the Tab key.
 
-Of course you can use the standard MATLAB functions ('plot, 'image', 'images', 'patch').
+Of course you can also use the standard MATLAB functions like `plot`, `plot3`, `image`, `imagesc`, `patch`, `surface`, etc.
 
 ## Background
 
-The goal of the plotting functions in FieldTrip is to ease the visualization of complex data structures with multiple dimensions and with data that is not trivial to interpret spatially. This is accomplished with high-level functions (e.g. **[ft_topoplotER](/reference/ft_topoplotER)** or **[ft_multiplotTFR](/reference/ft_multiplotTFR)**) and low-level functions (with prefixes 'ft*plot*' and 'ft*select*', e.g. ft_plot_matrix or ft_select_box). For more simple data, such as a set of reaction times of the subject, we expect you to use the standard MATLAB plotting functions.
+The goal of the plotting functions in FieldTrip is to ease the visualization of complex data structures with multiple dimensions and with data that is not trivial to interpret spatially. This is accomplished with high-level functions (e.g. **[ft_topoplotER](/reference/ft_topoplotER)** or **[ft_multiplotTFR](/reference/ft_multiplotTFR)**) and low-level functions (with prefixes 'ft_plot_\*' and 'ft_select_\*', e.g. ft_plot_matrix or ft_select_box). For more simple data, such as a set of reaction times of the subject, we expect you to use the standard MATLAB plotting functions.
 
 The high-level functions take care of the data bookkeeping and call the low-level function. If you want to make more complex figures or tweak all options, you can bypass the high-level functions and call the low-level functions instead. This is especially useful if there is no data selection and bookkeeping involved, e.g. when you want to plot multiple geometrical objects (like sensors, source model, head surface, etc).
 
@@ -152,7 +152,7 @@ The location of all channels and the COMMENT and SCALE placeholder can be visual
     cfg.layout = ft_prepare_layout(cfg);
     reading layout from file CTF151.lay
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 1 MB
-    figure; ft_plot_lay(cfg.layout);
+    figure; ft_plot_layout(cfg.layout);
 
 {% include image src="/assets/img/tutorial/plotting/fig11.png" %}
 
@@ -167,14 +167,14 @@ All channels are squeezed in a circle and the nose and ears are indicated at the
 
 {% include image src="/assets/img/tutorial/plotting/fig12.png" %}
 
-Although many tutorials elsewhere on the FieldTrip wiki are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
+Although many tutorials elsewhere on the FieldTrip website are using the standard CTF151 layout, we do have another one that better reflects the helmet shap
 
     cfg = [];
-    cfg.layout = 'CTF151_helmet.mat'; % note that it is a binary .mat file, not an ascii .lay file
+    cfg.layout = 'CTF151_helmet.mat'; % note that it is a binary .mat file, not an ASCII .lay file
     cfg.layout = ft_prepare_layout(cfg);
     reading layout from file CTF151_helmet.mat
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 4 MB
-    figure; ft_plot_lay(cfg.layout);
+    figure; ft_plot_layout(cfg.layout);
 
 {% include image src="/assets/img/tutorial/plotting/fig13.png" %}
 
@@ -187,7 +187,7 @@ For multiplotting planar gradient data from the Elekta Neuromag system it is esp
     cfg.layout = ft_prepare_layout(cfg);
     reading layout from file neuromag306all.lay
     the call to "ft_prepare_layout" took 0 seconds and required the additional allocation of an estimated 7 MB
-    figure; ft_plot_lay(cfg.layout);
+    figure; ft_plot_layout(cfg.layout);
 
 {% include image src="/assets/img/tutorial/plotting/fig14.png" %}
 

@@ -1,7 +1,5 @@
 ---
 title: ft_read_event
-layout: default
-tags: 
 ---
 ```
  FT_READ_EVENT reads all events from an EEG/MEG dataset and returns
@@ -37,7 +35,7 @@ tags:
  Some data formats have trigger channels that are sampled continuously with
  the same rate as the electrophysiological data. The default is to detect
  only the up-going TTL flanks. The trigger events will correspond with the
- first sample where the TTL value is up. This behaviour can be changed
+ first sample where the TTL value is up. This behavior can be changed
  using the 'detectflank' option, which also allows for detecting the
  down-going flank or both. In case of detecting the down-going flank, the
  sample number of the event will correspond with the first sample at which

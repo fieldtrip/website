@@ -408,7 +408,7 @@ Next we will calculate the ratio between the left- and right-hand response
     source_diff_int  = source_left_int;
     source_diff_int.pow  = (source_left_int.pow - source_right_int.pow) ./ (source_left_int.pow + source_right_int.pow);
 
-Finally, we can plot the dat
+Finally, we can plot the data:
 
     cfg = [];
     cfg.method        = 'ortho';

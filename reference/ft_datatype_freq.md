@@ -1,7 +1,5 @@
 ---
 title: ft_datatype_freq
-layout: default
-tags: 
 ---
 ```
  FT_DATATYPE_FREQ describes the FieldTrip MATLAB structure for freq data

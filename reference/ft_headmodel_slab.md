@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_slab
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_SLAB creates an EEG volume conduction model that

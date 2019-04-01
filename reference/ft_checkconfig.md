@@ -1,7 +1,5 @@
 ---
 title: ft_checkconfig
-layout: default
-tags: 
 ---
 ```
  FT_CHECKCONFIG checks the input cfg of the main FieldTrip functions
@@ -26,9 +24,9 @@ tags:
  Use as
    [cfg] = ft_checkconfig(cfg, ...)
 
- The behaviour of checkconfig can be controlled by the following cfg options,
+ The behavior of checkconfig can be controlled by the following cfg options,
  which can be set as global FieldTrip defaults (see FT_DEFAULTS)
-   cfg.checkconfig = 'pedantic', 'loose' or 'silent' (control the feedback behaviour of checkconfig)
+   cfg.checkconfig = 'pedantic', 'loose' or 'silent' (control the feedback behavior of checkconfig)
    cfg.trackconfig = 'cleanup', 'report' or 'off'
    cfg.checksize   = number in bytes, can be inf (set max size allowed for output cfg fields)
 

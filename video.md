@@ -86,7 +86,7 @@ We have a [YouTube channel](https://www.youtube.com/fieldtriptoolbox) on which w
 
 ### NatMEG Videos
 
-The [NatMEG](https://www.natmeg.se), the Swedish national MEG Facility at the Karolinska Institute in Stockholm, has recorded a set of scientific lectures and instructional video's. These can be viewed online [here](http://natmeg.se/learnaboutmeg/meglectures/index.html).
+The [NatMEG](https://www.natmeg.se), the Swedish National MEG Facility at the [Karolinska Institute](http://www.ki.se) in Stockholm, has recorded a set of scientific lectures and instructional video's on MEG. These can be viewed online [here](http://natmeg.se/learnaboutmeg/meglectures/index.html).
 
 ### SPM Course Videos
 

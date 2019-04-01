@@ -1,7 +1,5 @@
 ---
 title: ft_spiketriggeredspectrum_fft
-layout: default
-tags: 
 ---
 ```
  FT_SPIKETRIGGEREDSPECTRUM_FFT computes the Fourier spectrum (amplitude and phase)
@@ -47,7 +45,7 @@ tags:
 
  This function uses a NaN-aware spectral estimation technique, which will default to the
  standard Matlab FFT routine if no NaNs are present. The fft_along_rows subfunction below
- demonstrates the expected function behaviour.
+ demonstrates the expected function behavior.
 
  See FT_SPIKETRIGGEREDINTERPOLATION to remove segments of LFP around spikes.
  See FT_SPIKETRIGGEREDSPECTRUM_CONVOL for an alternative implementation based

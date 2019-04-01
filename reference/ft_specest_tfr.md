@@ -1,7 +1,5 @@
 ---
 title: ft_specest_tfr
-layout: default
-tags: 
 ---
 ```
  FT_SPECEST_TFR performs time-frequency analysis on any time series trial data using

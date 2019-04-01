@@ -1,7 +1,5 @@
 ---
 title: ft_timelockgrandaverage
-layout: default
-tags: 
 ---
 ```
  FT_TIMELOCKGRANDAVERAGE computes ERF/ERP average and variance

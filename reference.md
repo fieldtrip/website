@@ -7,7 +7,7 @@ tags: [cfg, timelock, freq, source, headmodel, statistics, plot]
 
 The reference documentation is provided here for your convenience. In the first part of this page the most important FieldTrip functions are listed by category. In the second part of this page you will find an alphabetical list of all FieldTrip functions.
 
-A complete overview with all configuration options is available in the [configuration index](/reference/configuration_index).
+A complete overview with all configuration options is available in the [configuration index](/reference/configuration).
 
 If you are looking for the papers that describe the algorithms implemented in FieldTrip, please look at the [references to implemented methods](/references_to_implemented_methods).
 
@@ -167,7 +167,7 @@ Note that this reference documentation is identical to the help text that is dis
 - [ft_plot_crosshair](/reference/ft_plot_crosshair)
 - [ft_plot_dipole](/reference/ft_plot_dipole)
 - [ft_plot_headshape](/reference/ft_plot_headshape)
-- [ft_plot_lay](/reference/ft_plot_lay)
+- [ft_plot_layout](/reference/ft_plot_layout)
 - [ft_plot_line](/reference/ft_plot_line)
 - [ft_plot_matrix](/reference/ft_plot_matrix)
 - [ft_plot_mesh](/reference/ft_plot_mesh)

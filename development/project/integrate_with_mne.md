@@ -4,14 +4,14 @@ title: Integrate FieldTrip and MNE-Python
 
 {% include /shared/development/warning.md %}
 
-Not all the information contained in either Matlab or Python can be completely copied into the other format.
+Not all the information contained in either MATLAB or Python can be completely copied into the other format.
 
 We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/bugzilla) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
 
 Code under development, the mne-python community currently works on reader functions for FieldTrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
 
-More functions to work with files coming from MNE-python in Matlab are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
+More functions to work with files coming from MNE-python in MATLAB are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
 
 # Integrate FieldTrip and MNE-Python
 
@@ -63,7 +63,7 @@ Then, we export them
     fiff_file  = 'ctf_raw.fif';
     fieldtrip2fiff(fiff_file, data)
 
-This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the Matlab files, events might be recoded using numbers.
+This function will also attempt to create an event file, called ''ctf_raw-eve.fif''. Because the fiff format is less flexible than the MATLAB files, events might be recoded using numbers.
 
 You can then read the file into Python (MNE-Python 0.8)
 
@@ -107,7 +107,7 @@ Events are in Nx3 matrix, where the first column contains the samples and the th
 
 Currently, there is no export functionality to create mne-Epochs from fieldtrip. Feel free to add it on [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip).
 
-And then in Python, you can read the ''Epochs'' wit
+And then in Python, you can read the ''Epochs'' with:
 
 ```python
     from mne import read_epochs
@@ -136,7 +136,7 @@ If we have the data as ''Raw'' in MNE-Python, we can create epochs, using the ''
     mne.write_events('mne_python-eve.fif', epochs.events)
 ```
 
-And then in Matlab
+And then in MATLAB
 
     fiff_file = 'mne_python-epo.fif';
     events_file = 'mne_python-eve.fif';
@@ -202,7 +202,7 @@ We just continue using the instance ''epochs'' that was defined [before](#dataty
     evoked.save('mne_python-ave.fif')
 ```
 
-And then in Matlab, we can read the data
+And then in MATLAB, we can read the data
 
     fiff_file = 'mne_python-ave.fif';
     cfg = [];

@@ -1,7 +1,5 @@
 ---
 title: ft_transform_geometry
-layout: default
-tags: 
 ---
 ```
  FT_TRANSFORM_GEOMETRY applies a homogeneous coordinate transformation to a

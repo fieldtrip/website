@@ -1,7 +1,5 @@
 ---
 title: ft_dipolefitting
-layout: default
-tags: 
 ---
 ```
  FT_DIPOLEFITTING perform grid search and non-linear fit with one or multiple

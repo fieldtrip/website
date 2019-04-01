@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_ppc
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_PPC computes pairwise phase consistency or weighted pairwise phase

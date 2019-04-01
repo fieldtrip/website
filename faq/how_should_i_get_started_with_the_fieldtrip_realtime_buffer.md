@@ -12,11 +12,11 @@ Navigate to the directory ''fieldtrip/realtime/bin/ARCH'' where ARCH is the arch
 | Architecture | Description                                                             |
 | ------------ | ----------------------------------------------------------------------- |
 | win32        | 32-bit Microsoft Windows                                                |
-| mac          | 32-bit Mac OS X on [PPC](http://en.wikipedia.org/wiki/PowerPC) hardware |
-| maci         | 32-bit Mac OS X                                                         |
-| maci64       | 64-bit Mac OS X                                                         |
-| glnx86       | 32 bit Linux                                                            |
-| glnxa64      | 64 bit Linux                                                            |
+| mac          | 32-bit macOS on [PPC](http://en.wikipedia.org/wiki/PowerPC) hardware    |
+| maci         | 32-bit macOS                                                            |
+| maci64       | 64-bit macOS                                                            |
+| glnx86       | 32-bit Linux                                                            |
+| glnxa64      | 64-bit Linux                                                            |
 | raspberrypi  | Debian Linux on the [Raspberry Pi](http://www.raspberrypi.org/)         |
 
 Unless otherwise specified, this assumes that you are using an Intel-compatible computer.

@@ -1,7 +1,5 @@
 ---
 title: ft_plot_mesh
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_MESH visualizes a surface or volumetric mesh, for example describing the

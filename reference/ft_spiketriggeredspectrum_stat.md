@@ -1,7 +1,5 @@
 ---
 title: ft_spiketriggeredspectrum_stat
-layout: default
-tags: 
 ---
 ```
  FT_SPIKETRIGGEREDSPECTRUM_STAT computes phase-locking statistics for spike-LFP

@@ -1,7 +1,5 @@
 ---
 title: ft_electroderealign
-layout: default
-tags: 
 ---
 ```
  FT_ELECTRODEREALIGN rotates, translates, scales and warps electrode positions. The

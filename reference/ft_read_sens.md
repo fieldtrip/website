@@ -1,7 +1,5 @@
 ---
 title: ft_read_sens
-layout: default
-tags: 
 ---
 ```
  FT_READ_SENS read sensor positions from various manufacturer specific files. See

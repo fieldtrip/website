@@ -1,7 +1,5 @@
 ---
 title: peercompile
-layout: default
-tags: 
 ---
 ```
  PEERCOMPILE  This script/function is used for compiling and linking the 'peer' MEX file.

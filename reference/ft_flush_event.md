@@ -1,7 +1,5 @@
 ---
 title: ft_flush_event
-layout: default
-tags: 
 ---
 ```
  FT_FLUSH_EVENT removes all events from the event queue

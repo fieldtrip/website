@@ -11,7 +11,7 @@ This tutorial works on the MEG-language dataset, you can click [here](/tutorial/
 
 In this tutorial you can find information about how to compute an event related potential (ERP)/ event related field (ERF) and how to calculate the planar gradient (in case the MEG data was acquired by axial-gradiometer sensors). You can find also information in this tutorial about how to visualize the results of the ERP/ERF analysis, and about how to average the results across subjects.
 
-This tutorial assumes that the steps of preprocessing are already clear for the reader. This tutorial does not show how to do statistical analysis on the ERF/ERP's. You can find more information about the statistics in the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial. If you are interested in the event related changes in the oscillatory components of the EEG/MEG signal, you can check out the [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) tutorial.
+This tutorial assumes that the steps of preprocessing are already clear for the reader. This tutorial does not show how to do statistical analysis on the ERF/ERPs. You can find more information about the statistics in the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial. If you are interested in the event related changes in the oscillatory components of the EEG/MEG signal, you can check out the [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) tutorial.
 
 ## Background
 

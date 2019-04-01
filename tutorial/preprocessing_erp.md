@@ -51,9 +51,11 @@ After the call to **[ft_definetrial](/reference/ft_definetrial)**, the cfg now n
 
 ### Pre-processing and re-referencing
 
-In this raw BrainVision dataset, the signal from all electrodes is monopolar and referenced to the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition the 'RM' electrode (number 32) had been placed on the right mastoid. In order to re-reference the data (e.g. including also the right mastoid in the reference) we added implicit channel 'REF' to the channels (which represents the left mastoid), and assigned two reference channels ('REF' and 'RM', channels of the left and right mastoids).
+In this raw BrainVision dataset, the signal from all electrodes is recorded unipolar and referenced to an electrode on the left mastoid. We want the signal to be referenced to linked (left and right) mastoids. During the acquisition an 'RM' electrode (number 32) was placed on the right mastoid and recorded along with all EEG channels.
 
-Now call pre-processing:
+To re-reference the data we use the `cfg.implicitref` option of **[ft_preprocessing](/reference/ft_preprocessing)** to add the implicit reference channel 'LM' (the left mastoid) to the data representation as a channel with all zeros, and subsequently use the `cfg.refchannel` and `cfg.reref` options to subtract the mean of the two mastoid channels ('LM' and 'RM') from all channels.
+
+Now call pre-processing using the cfg output that resulted from **[ft_definetrial](/reference/ft_definetrial)**:
 
     % Baseline-correction options
     cfg.demean          = 'yes';
@@ -63,10 +65,10 @@ Now call pre-processing:
     cfg.lpfilter        = 'yes';
     cfg.lpfreq          = 100;
 
-    % Re-referencing options - see explanation below
+    % Re-referencing options - see explanation above
+    cfg.implicitref   = 'LM';
     cfg.reref         = 'yes';
-    cfg.implicitref   = 'REF';
-    cfg.refchannel    = {'RM' 'REF'};
+    cfg.refchannel    = {'LM' 'RM'};
 
     data = ft_preprocessing(cfg);
 
@@ -75,14 +77,11 @@ Try **[ft_databrowser](/reference/ft_databrowser)** now to visualize the data se
     cfg = [];  % use only default options
     ft_databrowser(cfg, data);
 
-{% include markup/info %}
-You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk.
+You can also use **[ft_databrowser](/reference/ft_databrowser)** to visualize the continuous data that is stored on disk. The data will be read on the fly:
 
     cfg         = [];
     cfg.dataset = 's04.vhdr';
     ft_databrowser(cfg);
-
-{% include markup/end %}
 
 #### Exercise 1
 
@@ -94,7 +93,7 @@ Can you find this line (or lines with other labels) on the second call to ft_dat
 Try setting `cfg.viewmode = 'vertical'` before the call to ft_databrowser.
 {% include markup/end %}
 
-FieldTrip data structures are intended to be 'lightweight', in the sense that the internal Matlab arrays can be transparently accessed. Have a look at the data as you read it into memory:
+FieldTrip data structures are intended to be 'lightweight', in the sense that the internal MATLAB arrays can be transparently accessed. Have a look at the data as you read it into memory:
 
     >> data
 
@@ -109,7 +108,7 @@ FieldTrip data structures are intended to be 'lightweight', in the sense that th
          trialinfo: [192x1 double]
                cfg: [1x1 struct]
 
-and note that, if you wanted to, you could plot a single trial with default Matlab function
+and note that, if you wanted to, you could plot a single trial with default MATLAB function
 
     plot(data.time{1}, data.trial{1});
 
@@ -117,8 +116,8 @@ and note that, if you wanted to, you could plot a single trial with default Matl
 
 We now continue with re-referencing to extract the bipolar EOG signal from the data. In the BrainAmp acquisition system, all channels are measured relative to a common reference. For the horizontal EOG we will compute the potential difference between channels 57 and 25 (see the plot of the layout and the figure below). For the vertical EOG we will use channel 53 and channel "LEOG" which was placed below the subjects' left eye (not pictured on the layout).
 
-{% include markup/success %}
-Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The re-referencing step to obtain the EOG is therefore not required when working with Biosemi or other bipolar data.
+{% include markup/warning %}
+Some acquisition systems, such as Biosemi, allow for direct bipolar recording of EOG. The following re-referencing step to obtain the EOG channels is not needed when working with bipolar data.
 {% include markup/end %}
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/example_eog.png" width="200" %}
@@ -222,15 +221,15 @@ The data can be also displayed in a "summary" mode, in which case the variance (
 
     cfg          = [];
     cfg.method   = 'summary';
-    cfg.layout   = 'mpi_customized_acticap64.mat';   % this allows for plotting individual trials
-    cfg.channel  = [1:60];    % do not show EOG channels
+    cfg.layout   = 'mpi_customized_acticap64.mat';  % for plotting individual trials
+    cfg.channel  = [1:60];                          % do not show EOG channels
     data_clean   = ft_rejectvisual(cfg, data);
 
 {% include image src="/assets/img/tutorial/preprocessing_erp/example_script_artifacts.png" %}
 
-The left lower box of Figure 4 shows the variance of the signal in each trial. By dragging the mouse over the trials in this box you can remove them from the plot and reject them from the data. You will see the numbers of the rejected trials in the box on the right. You can undo the rejection by typing the trial's number in "Toggle trial" box. You can also plot the signal in a specific trial with "Plot trial" box. Here, we have plotted the trial 90 - the one with the highest variance. On the topoplot you can see a drift in the channel 48. You can zoom in to this channel by dragging the mouse over it.
+The left lower box of Figure 4 shows the variance of the signal in each trial. By dragging the mouse over the trials in this box you can remove them from the plot and reject them from the data. You will see the numbers of the rejected trials in the box on the right. You can undo the rejection by typing the trial's number in "Toggle trial" box. You can also plot the signal in a specific trial with "Plot trial" box. Here, we have plotted the trial 90 - the one with the highest variance. On the topoplot you can see drift in channel 48. You can zoom further in to this channel by dragging the mouse over it and clicking.
 
-Rejection of trials based on visual inspection is somewhat arbitrary. Sometimes it is not easy to decide if a trial has to be rejected or not. In this exercise we suggest that you remove 8 trials with the highest variance (trial numbers 22, 42, 89, 90, 92, 126, 136 and 150). As you see, the trials with blinks that we saw in the "Channel" mode are among them. To complete the rejection press "Quit" button. You get the data_clean variable that will be used for subsequent analyses.
+Rejection of trials based on visual inspection is somewhat arbitrary; it is not always easy to decide if a trial should be rejected or not. In this exercise we suggest that you remove 8 trials with the highest variance (trial numbers 22, 42, 89, 90, 92, 126, 136 and 150). As you see, the trials with blinks that we saw in the "Channel" mode are among them. To complete the rejection press "Quit" button. You get the data_clean variable that will be used for subsequent analyses.
 
 {% include markup/info %}
 After removing data segments that contain artifacts, you might want to do a last visual inspection of the EEG traces.
@@ -239,12 +238,12 @@ After removing data segments that contain artifacts, you might want to do a last
     cfg.viewmode = 'vertical';
     ft_databrowser(cfg, data_clean);
 
-Note that you can also use the data browser to mark artifacts (instead of or in addition to ft_rejectvisual).
+Note that you can also use **[ft_databrowser](/reference/ft_databrowser)** to mark artifacts instead of - or in addition to - ft_rejectvisual. The artifacts marked in ft_databrowser can be removed using **[ft_rejectartifact](/reference/ft_rejectartifact)**. The important difference between the two is that ft_rejectvisual can only be used to reject complete trials, whereas ft_rejectartifact can also be used to reject small sections from continuous data or from long trials.
 {% include markup/end %}
 
-### Computing and plotting the ERP's
+### Computing and plotting the ERPs
 
-We now would like to compute the ERP's for two conditions: positive-negative judgement and human-animal judgement. For each trial, the condition is assigned by the trialfun that we used in the beginning when defined the trials, this information is kept with the data in data.trialinfo.
+We now would like to compute the ERPs for two conditions: positive-negative judgement and human-animal judgement. For each trial, the condition is assigned by the trialfun that we used in the beginning when defined the trials, this information is kept with the data in data.trialinfo.
 
     disp(data_clean.trialinfo')
 
@@ -259,9 +258,9 @@ We now would like to compute the ERP's for two conditions: positive-negative jud
      Columns 172 through 184
        2 1 1 2 2 2 1 2 1 1 1 1 2
 
-FieldTrip automatically kept track of the trials with artifacts that were rejected: the data_clean.trialinfo field contains the condition code for the 184 clean trials, whereas the data.trialinfo field contained the information for the original 192 trials.
+FieldTrip automatically kept track of the trials with artifacts that were rejected: the `data_clean.trialinfo` field contains the condition code for the 184 clean trials, whereas the `data.trialinfo` field contained the information for the original 192 trials.
 
-We now select the trials with conditions 1 and 2 and compute ERP's.
+We now select the trials with conditions 1 and 2 and compute ERPs.
 
     % use ft_timelockanalysis to compute the ERPs
     cfg = [];
@@ -332,6 +331,7 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
       end
     end
 
+    % the last part is common to all conditions
     PreTrig   = round(0.2 * hdr.Fs);
     PostTrig  = round(1 * hdr.Fs);
 
@@ -340,8 +340,7 @@ Explore the event-related potential by dragging boxes around (groups of) sensors
 
     offset = -PreTrig*ones(size(endsample));
 
-    %% the last part is again common to all trial functions
-    % return the trl matrix (required) and the event structure (optional)
+    % concatenate the columns into the trl matrix
     trl = [begsample endsample offset task];
 
 ## Suggested further reading

@@ -1,7 +1,5 @@
 ---
 title: ft_plot_topo
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_TOPO interpolates and plots the 2-D spatial topography of the
@@ -32,5 +30,5 @@ tags:
    'hlim'          = horizontal scaling limits within the local axes
    'vlim'          = vertical scaling limits within the local axes
 
- See also FT_PLOT_TOPO3D, FT_PLOT_LAY, FT_TOPOPLOTER, FT_TOPOPLOTTFR
+ See also FT_PLOT_TOPO3D, FT_PLOT_LAYOUT, FT_TOPOPLOTER, FT_TOPOPLOTTFR
 ```

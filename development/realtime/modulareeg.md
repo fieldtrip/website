@@ -33,7 +33,7 @@ If you don't want to save data to GDF, you can replace the second argument (''na
 On the command line, change to the ''realtime/datasource/modeeg'' directory and type ''make''. The Makefile will also work with the MinGW compiler on
 Windows. Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
-### Support for Mac OS X
+### Support for macOS
 
 #### Using a USB cable
 
@@ -58,7 +58,7 @@ The device that we have at the Donders has a "BlueSmirf FireFly" bluetooth inter
 
 ## Native MATLAB implementation
 
-On Linux and OS X it is also possible to read from a serial port or bluetooth interface from within MATLAB. To help in decoding the communication protocol, i.e. the byte stream that is sent over the serial interface, we also made a MATLAB implementation.
+On Linux and macOS it is also possible to read from a serial port or bluetooth interface from within MATLAB. To help in decoding the communication protocol, i.e. the byte stream that is sent over the serial interface, we also made a MATLAB implementation.
 
 The MATLAB implementation can be found in ''realtime/example/ft_realtime_modeegproxy''.
 

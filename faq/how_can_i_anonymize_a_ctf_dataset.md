@@ -22,7 +22,7 @@ newDd version 5.4.0-linux-20061212 is known to have a bug that causes the collec
 It is advisable to also convert the headlocalizer datasets, which are inside the SubjectXX.ds and are named hz.ds, hz2.ds, etc.
 
 {% include markup/warning %}
-After creating the anonymous dataset, you should delete the **defaults.de** ascii file that is present in the `<savePath>`, because that contains some information that can be traced back to the original file location on disk (which may include your name or the name of the subject).
+After creating the anonymous dataset, you should delete the **defaults.de** ASCII file that is present in the `<savePath>`, because that contains some information that can be traced back to the original file location on disk (which may include your name or the name of the subject).
 {% include markup/end %}
 
 An example use is (note that this should all be on a single line)

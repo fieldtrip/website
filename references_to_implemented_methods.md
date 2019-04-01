@@ -7,7 +7,7 @@ tags: [references, eeg, meg, source, headmodel, freq, statistics, coherence]
 
 This list is far from complete, many more algorithms that have been published in papers are implemented in FieldTrip. If you want to know which paper describes a method in detail and the information is not given here, you can ask on the email [discussion list](/discussion_list).
 
-If possible, please provide a link to the online version of the manuscript. A link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed) or [sciencedirect](http://www.sciencedirect.com) is in general nice, as it allows quick cross-referencing. If allowed, you can also upload a pdf version to the wiki and provide a link here.
+If possible, please provide a link to the online version of the manuscript. A link to [pubmed](http://www.ncbi.nlm.nih.gov/pubmed) or [sciencedirect](http://www.sciencedirect.com) is in general nice, as it allows quick cross-referencing. If allowed, you can also upload a pdf version to the website and provide a link here.
 
 Please check [Sherpa Romeo](http://www.sherpa.ac.uk/romeo/) for the copyright conditions and whether you are allowed to
 
@@ -186,3 +186,7 @@ Van Gerven, M.A.J., Hesse, C., Jensen, O., Heskes, T. [Interpreting Single Trial
 ## Brain-computer interfacing
 
 Van Gerven, M.A.J., Jensen, O. [Attention Modulations of Posterior Alpha as a Control Signal for Two-Dimensional Brain-Computer Interfaces.](http://www.sciencedirect.com/science?ob=ArticleURL&udi=B6T04-4VGPJNH-1&user=10&rdoc=1&fmt=&orig=search&sort=d&view=c&acct=C000050221&version=1&urlVersion=0&userid=10&md5=09def4bc21af5427ef3f82d069c45c1d) J Neurosci Methods. 2009; 179:78-84.
+
+## Intracranial EEG analysis
+
+Stolk A., Griffin S., van der Meij R., Dewar C., Saez I., Piantoni G., Schoffelen J.M., Knight R.T., Oostenveld R. [Integrated Analysis of Anatomical and Electrophysiological Human Intracranial Data.](https://www.ncbi.nlm.nih.gov/pubmed/29988107) Nature Protocols. 2018; 13(7):1699-1723

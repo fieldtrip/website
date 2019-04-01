@@ -1,7 +1,5 @@
 ---
 title: ft_statfun_depsamplesT
-layout: default
-tags: 
 ---
 ```
  FT_STATFUN_DEPSAMPLEST calculates the dependent samples T-statistic on the

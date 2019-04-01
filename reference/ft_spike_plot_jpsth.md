@@ -1,7 +1,5 @@
 ---
 title: ft_spike_plot_jpsth
-layout: default
-tags: 
 ---
 ```
  FT_SPIKE_PLOT_JPSTH makes a plot from JPSTH structure.

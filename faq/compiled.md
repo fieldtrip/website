@@ -1,6 +1,6 @@
 ---
 title: Can I use FieldTrip without MATLAB license?
-tags: [faq, matlab, mex]
+tags: [faq, matlab, mex, compile]
 ---
 
 # Can I use FieldTrip without MATLAB license?
@@ -9,7 +9,7 @@ Yes, if you have the MATLAB [compiler toolbox](https://www.mathworks.com/product
 
     ft_compile_standalone
 
-Subsequently you can run your analysis pipelines by providing them as script (not as a function) using the **fieldtrip.sh** Bash wrapper script (only provided for Linux and macOS). The compiled application and startup script can be found in the _fieldtrip/bin_ directory
+Subsequently you can run your analysis pipelines by providing them as script (not as a function) using the `fieldtrip.sh` Bash wrapper script (only provided for Linux and macOS). The compiled application and startup script can be found in the `fieldtrip/bin` directory
 
 If you make a script like the following
 

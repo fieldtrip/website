@@ -5,7 +5,7 @@ tags: [faq, eeg]
 
 # Can I compare EEG channels between different electrode caps?
 
-Different EEG caps use different labels and especially different electrode placements. However, sometimes you want to relate the different electrodes from one layout to another.
+Different EEG caps use different labels and especially different electrode placements. However, sometimes you want to relate electrode positions in one layout to another layout.
 
 Here is a schematic layout of the easycapM10 and easycapM11 electrode caps.
 
@@ -17,7 +17,7 @@ Here is a schematic layout of the easycapM10 and easycapM11 electrode caps.
 
 {% include image src="/assets/img/faq/capmapping/easycapm11.png" width="200" %}
 
-We can see that the channel **Cz** from M10 relates to the channel **1** from M11. However for the channel **FT10** there exist non relating channel in the M11. So we can only make a few-to-few mapping with channels that mostly overlap.
+We can see that the channel **Cz** from M10 relates to the channel **1** from M11. However for the channel **FT10** there does not exist a relating channel in M11. So we can only make a few-to-few mapping with channels that mostly overlap.
 
 Mapping between easycapM10 and easycapM11:
 

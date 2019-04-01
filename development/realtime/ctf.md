@@ -23,7 +23,7 @@ Multiple real-time interfaces have been developed over the years. The first vers
 
 The second version (ctf2ft_v2, originally known as acq2ft) combines the access to shared memory with copying to the FieldTrip buffer to make the data available elsewhere on the network. It operates by grabbing one packet (setup or data) at a time out of the shared memory, and more or less directly transferring it into a FieldTrip buffer that is started by the **ctf2ft_v2** application itself, or a buffer that is running separately on the same computer or elsewhere on the network.
 
-The **ctf2ft_v2** application decodes header information from the **.res4** file pointed to by the _setup collection_ packet, and thus knows by itself which channels contain triggers instead of relying on a 3rd application or Matlab script to write that information back to shared memory. On top of that, ** ctf2ft_v2** overallocates the shared memory by 1000 samples and is prepared to operate successfully even if the proprietary **Acq** application writes too much data into any slot. Instead of preparing the shared memory segment for access by a third application, it streams the data and events (decoded from the trigger channels) to a local or remote [FieldTrip buffer](/development/realtime/buffer), as depicted by the following diagra
+The **ctf2ft_v2** application decodes header information from the **.res4** file pointed to by the _setup collection_ packet, and thus knows by itself which channels contain triggers instead of relying on a 3rd application or MATLAB script to write that information back to shared memory. On top of that, ** ctf2ft_v2** overallocates the shared memory by 1000 samples and is prepared to operate successfully even if the proprietary **Acq** application writes too much data into any slot. Instead of preparing the shared memory segment for access by a third application, it streams the data and events (decoded from the trigger channels) to a local or remote [FieldTrip buffer](/development/realtime/buffer), as depicted by the following diagra
 
 {% include image src="/assets/img/development/realtime/ctf/acq2ft_scheme_75.png" %}
 
@@ -56,7 +56,7 @@ where ''flags'' can be any combination of **R**, which enables writing the ''.re
 
     ctf2ft_v3 -:1972:RE:1:*
 
-Actually you can have multiple definitions and stream different parts of the data to different buffers. For example, the following call will spawn a local FieldTrip buffer on port 1972, which will receive all channels, the ''.res4'' header, and events (but data is kept at 32 bit integers), and in addition stream out 4x downsampled and scaled head-localization channels to a buffer on the lab-meg001 computer (also port=1972
+Actually you can have multiple definitions and stream different parts of the data to different buffers. For example, the following call will spawn a local FieldTrip buffer on port 1972, which will receive all channels, the ''.res4'' header, and events (but data is kept at 32-bit integers), and in addition stream out 4x downsampled and scaled head-localization channels to a buffer on the lab-meg001 computer (also port=1972
 
     ctf2ft_v3 -:1972:RE:1:*
     lab-meg001:1972:G:4:HLC0011,HLC0012,HLC0013,HLC0021,HLC0022,HLC0023,HLC0031,HLC0032,HLC0033
@@ -79,7 +79,7 @@ In FieldTrip it is possible to use the fileio module to read from shared memory.
 
 The **[ft_realtime_ctfproxy](/reference/ft_realtime_ctfproxy)** function (part of the realtime module in FieldTrip) reads the MEG data from shared memory and writes to a [FieldTrip buffer](/development/realtime/buffer). The FieldTrip buffer is a multi-threaded and network transparent buffer that allows data to be streamed to it, while at the same time allowing another MATLAB session on the same or another computer to read data from the buffer for analysis.
 
-Subsequently in another Matlab session you can read from the FieldTrip buffer using the **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions.
+Subsequently in another MATLAB session you can read from the FieldTrip buffer using the **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)** functions by specifying %%'buffer://hostname:port'%% as the filename to the reading functions.
 
 {% include image src="/assets/img/development/realtime/ctf/acq_nt_scheme.png" %}
 

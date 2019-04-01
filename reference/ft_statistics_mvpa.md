@@ -1,7 +1,5 @@
 ---
 title: ft_statistics_mvpa
-layout: default
-tags: 
 ---
 ```
  FT_STATISTICS_MVPA performs multivariate pattern classification
@@ -39,7 +37,7 @@ tags:
                          https://github.com/treder/MVPA-Light for more
                          details.
 
-   
+
    cfg.mvpa.classifier      = 'lda'          Regularised linear discriminant analysis
                                         (LDA) (for two classes)
                          'multiclass_lda' LDA for more than two classes

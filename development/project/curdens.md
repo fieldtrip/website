@@ -23,7 +23,7 @@ Overview about the methods which are used
 
 ## Procedure
 
-A set of logical steps describing the pipeline, in Matlab, FieldTrip code or also from somewhere else (e.g. FreeSurfer)
+A set of logical steps describing the pipeline, in MATLAB, FieldTrip code or also from somewhere else (e.g. FreeSurfer)
 Examples with code/command lines instructions
 
 **@Cristiano**

@@ -81,7 +81,7 @@ Yokogawa uses analogue channels as trigger channels, often in a binary way. Whic
 
 This means that the user (you!) needs to know exactly which channels are used, whether a trigger is encoded by an up-flank or down-flank and what the threshold should be. One way of figuring out these is to just take a look at the trigger channel.
 
-After reading the data wit
+After reading the data with:
 
     data = ft_read_data('test.sqd');
 
@@ -223,7 +223,7 @@ You now have to find the three forehead markers in the MRI and write down the co
 
 Using the three fiducial points expressed both in head coordinates and in MEG dewar coordinates, we can transform all other spatial locations (i.e. the sensors) from dewar coordinates to head coordinates. We have determined the positions relative to the head coordinate system using the MRI, so we now need the fiducial positions that were recorded relative to the MEG dewar coordinate system.
 
-The MEG fiducial positions are stored in an ascii text file that you can open in the MATLAB editor.
+The MEG fiducial positions are stored in an ASCII text file that you can open in the MATLAB editor.
 
     edit  marker-coregis.txt
 

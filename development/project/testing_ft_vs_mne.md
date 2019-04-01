@@ -143,7 +143,7 @@ The source space is a 2D surface.
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/ft_plot_mesh_pos.jpg" width="300" %}
 
-(This latest code does not work properly with an earlier version of Matlab (Matlab R2008b).)
+(This latest code does not work properly with an earlier version of MATLAB (MATLAB R2008b).)
 
 ### Leadfield
 
@@ -784,7 +784,7 @@ Windows... Manage averages... (It should be N=1)
 
 ### Noise-covariance matrix estimation
 
-I made a noise-covariance matrix in Matlab. It was necessary because MNE did not calculate a noise-covariance matrix because I had only 1 trial that is shorter than 20 s.
+I made a noise-covariance matrix in MATLAB. It was necessary because MNE did not calculate a noise-covariance matrix because I had only 1 trial that is shorter than 20 s.
 
     cov = [];
     cov.data = eye(186);
@@ -822,7 +822,7 @@ I haven't aligned anything but a transformation matrix saved (with diagonal matr
 
     mne_do_inverse_operator --fwd phantomas-fwd.fif --senscov phantomas3-cov.fif --meg
 
-### Visualizing the result in Matlab
+### Visualizing the result in MATLAB
 
     res = mne_ex_compute_inverse('/home/language/lilmag/Lilla/phantom_mne/phantomas-ave.fif',1,'/home/language/lilmag/Lilla/phantom_mne/phantomas-meg-inv.fif',1,1e-4,[]);
 

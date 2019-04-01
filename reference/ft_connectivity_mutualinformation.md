@@ -1,7 +1,5 @@
 ---
 title: ft_connectivity_mutualinformation
-layout: default
-tags: 
 ---
 ```
  FT_CONNECTIVITY_MUTUALINFORMATION computes mutual information using the information

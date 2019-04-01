@@ -5,7 +5,7 @@ tags: [faq, meg, realtime]
 
 # How can I monitor a subject's head position during a MEG session?
 
-The CTF/Neuromag acquisition software provides a shared memory in which the the data from the MEG channels and all auxiliary channels are available in real-time. The acq2ftx/neuromag2ft application transfers this data from the shared memory to a [FieldTrip buffer](/development/realtime/buffer) on the acquisition computer. Matlab software running on another computer can then be used to analyze the real-time data. See the [getting started](/getting_started/realtime_headlocalizer) page for setting up this interface on your MEG system.
+The CTF/Neuromag acquisition software provides a shared memory in which the the data from the MEG channels and all auxiliary channels are available in real-time. The acq2ftx/neuromag2ft application transfers this data from the shared memory to a [FieldTrip buffer](/development/realtime/buffer) on the acquisition computer. MATLAB software running on another computer can then be used to analyze the real-time data. See the [getting started](/getting_started/realtime_headlocalizer) page for setting up this interface on your MEG system.
 
 {% include markup/warning %}
 Please cite this paper when you use the realtime head localizer in your research:
@@ -80,7 +80,7 @@ _Figure 1; Top (left plot) and back view (right plot) of the subject's head. Nas
 
 ### Replaying a subject's recorded head position
 
-In stead of reading data from the shared memory, one now reads data from a previously recorded MEG dataset. This can be done offline, on any computer running a recent version of Matlab.
+In stead of reading data from the shared memory, one now reads data from a previously recorded MEG dataset. This can be done offline, on any computer running a recent version of MATLAB.
 
       cfg.bufferdata = 'first';                 % read data from first until last segment
       cfg.template   = 'previousdataset.ds';
@@ -88,7 +88,7 @@ In stead of reading data from the shared memory, one now reads data from a previ
       ft_realtime_headlocalizer(cfg)
 
 Before we can replay the data acquired with the Elekta Neuromag, the data has to be preprocessed with maxfilter. The first possibility is to add the relevant information to .fif file with MaxMove (see also under further reading).
-The other option is to use maxfilter to create an ascii file containing the relevant information about head movement. Under ‘Head position estimation’ the button ‘Save head postions in an ascii file’ just need to be pressed (see also under further reading).
+The other option is to use maxfilter to create an ASCII file containing the relevant information about head movement. Under ‘Head position estimation’ the button ‘Save head postions in an ASCII file’ just need to be pressed (see also under further reading).
 
       cfg.bufferdata   = 'first';                 % read data from first until last segment
       cfg.template     = 'previousdataset';
@@ -104,7 +104,7 @@ The other option is to use maxfilter to create an ascii file containing the rele
 
 3. 'Start Acq'. You should see activity in the terminal in which acq2ftx is running.
 
-4. Start Matlab on the 'real-time computer' by typing on the Linux command line
+4. Start MATLAB on the 'real-time computer' by typing on the Linux command line
 
    matlab79
 
@@ -129,7 +129,7 @@ Currently the option for online monitoring is only available for the CTF system.
 1. 'Initialize the MEG system'.
 2. 'Start neuromag2ft for real-time head localization'.
 3. 'Start Acq'. You should see activity in the terminal in which neuromag2ft is running.
-4. Start Matlab on the 'real-time computer'
+4. Start MATLAB on the 'real-time computer'
 5. Visualize the subject's head in real-time.
 
    cfg = [];

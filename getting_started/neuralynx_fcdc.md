@@ -33,7 +33,7 @@ The overall flow of datafile formats transformations that we currently use in ou
 
 ### Data splitting
 
-The Neuralynx acquisition system provides the data in a format containing the raw data directly after A/D conversion. During each recorded session, the .nrd file is written directly to an external Lacie RAID-0 hard disk that is connected by firewire 800. The .nrd datafiles contain a 16kB ascii header, followed by the multiplexed 32-bit channel-level data (see also [this](/getting_started/neuralynx) page). The huge size of these multiplexed files (>100 Gb per 45 minute session) precludes them for efficient post-processing. Using the FieldTrip **[ft_spikesplitting](/reference/ft_spikesplitting)** function, we split the .nrd file into separate files for each channel, containing exactly the same 32-bit information. These files are written into a single directory which usually has the extension .sdma, since it contains the "split dma" channels. We refer to this directory as the output dataset, whereas the .nrd file is the input dataset.
+The Neuralynx acquisition system provides the data in a format containing the raw data directly after A/D conversion. During each recorded session, the .nrd file is written directly to an external Lacie RAID-0 hard disk that is connected by firewire 800. The .nrd datafiles contain a 16kB ASCII header, followed by the multiplexed 32-bit channel-level data (see also [this](/getting_started/neuralynx) page). The huge size of these multiplexed files (>100 Gb per 45 minute session) precludes them for efficient post-processing. Using the FieldTrip **[ft_spikesplitting](/reference/ft_spikesplitting)** function, we split the .nrd file into separate files for each channel, containing exactly the same 32-bit information. These files are written into a single directory which usually has the extension .sdma, since it contains the "split dma" channels. We refer to this directory as the output dataset, whereas the .nrd file is the input dataset.
 
 An example of the configuration for spikesplitting is provided belo
 
@@ -128,13 +128,13 @@ Samples and timestamps are related to each other according to
     TimeStamp    = FirstTimeStamp + TimeStampPerSample*(SampleNumber - 1);
     SampleNumber = (TimeStamp - FirstTimeStamp) / TimeStampPerSample + 1;
 
-Note that timestamps start counting at zero, whereas in Matlab/FieldTrip convention the first sample of the recording is sample 1.
+Note that timestamps start counting at zero, whereas in MATLAB/FieldTrip convention the first sample of the recording is sample 1.
 
 ### Dealing with triggers
 
-During acquisition the 16 bit trigger channel is sampled with 32kHz, just like all other channels. Consequently in the .ndr DMA log file there is a "ttl" channel that represents the triggers. The ttl channel is a 32 bit channel, although only 16 of those bits are connected to the trigger input.
+During acquisition the 16 bit trigger channel is sampled with 32kHz, just like all other channels. Consequently in the .ndr DMA log file there is a "ttl" channel that represents the triggers. The ttl channel is a 32-bit channel, although only 16 of those bits are connected to the trigger input.
 
-After spikesplitting, there is a .ttl file containing the same 32kHz representation of the trigger channel as in the DMA log file. There are also two files (.tsl and .tsh) that represent the lowest and highest 32 bits of the 64 bit timestamp channel. The Neuralynx timestamp channel has a clock rate of 1MHz, i.e. 1e6 timestamps per second, or approximately 32 timestamps per data sample at 32kHz (1e6/32556).
+After spikesplitting, there is a .ttl file containing the same 32kHz representation of the trigger channel as in the DMA log file. There are also two files (.tsl and .tsh) that represent the lowest and highest 32-bits of the 64-bit timestamp channel. The Neuralynx timestamp channel has a clock rate of 1MHz, i.e. 1e6 timestamps per second, or approximately 32 timestamps per data sample at 32kHz (1e6/32556).
 
 After spikedownsampling, the continuous sampled LFP channels are not represented at 32kHz any more, but typically at 1000 Hz. That means that the samples at which the triggers occur in the .ttl channel cannot directly be mapped onto the samples in the LFP channels. The method to link the original triggers to the downsampled data is by means of the timestamps. The **[ft_spikedownsample](/reference/ft_spikedownsample)** function has the option _cfg.timestampdefinition_ which can be _'orig'_ or _'sample'_. If you specify it as _cfg.timestampdefinition='sample'_, the timestamps in the downsampled LFP channels will correspond to the original samples, i.e. there will be 32566 timestamps per second in the downsampled data. The first downsampled sample will be at timestamp 17, because the first 32 original samples are all compressed into the first downsampled sample. If you specify _cfg.timestampdefinition='orig'_, the downsampled LFP data will be written to disk with the original timestamp definition with 1e6 timestamps per second.
 

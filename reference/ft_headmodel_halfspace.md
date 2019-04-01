@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_halfspace
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_HALFSPACE creates an EEG volume conduction model that

@@ -1,7 +1,5 @@
 ---
 title: ft_freqanalysis
-layout: default
-tags: 
 ---
 ```
  FT_FREQANALYSIS performs frequency and time-frequency analysis

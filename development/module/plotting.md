@@ -28,7 +28,7 @@ For data objects with a 2D representation, i.e. for a flat screen or pape
 - ft_plot_line - helper function for plotting a line, which can also be used in
 - ft_plot_text - helper function for plotting text, which can also be used in
 - ft_plot_topo - interpolates and plots the 2-D spatial topography of the
-- ft_plot_lay - plots a two-dimensional layout
+- ft_plot_layout - plots a two-dimensional layout
 - ft_plot_box - plots the outline of a box that is specified by its lower
 
 For data objects with a 3D geometrical representatio

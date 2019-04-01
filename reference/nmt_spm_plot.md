@@ -1,7 +1,5 @@
 ---
 title: nmt_spm_plot
-layout: default
-tags: 
 ---
 ```
  nmt_spm_plot(cfg)

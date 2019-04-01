@@ -1,7 +1,5 @@
 ---
 title: ft_singleplotTFR
-layout: default
-tags: 
 ---
 ```
  FT_SINGLEPLOTTFR plots the time-frequency representation of power of a

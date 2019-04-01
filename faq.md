@@ -5,9 +5,9 @@ tags: [faq]
 
 # Frequently Asked Questions
 
-On this page you can find (and add) answers to a variety of FieldTrip and MATLAB related questions.
+On this page you can find answers to a variety of FieldTrip and MATLAB related questions.
 
-We invite you to [add your own](/contribute) example scripts or frequently asked questions on the wiki. Also tutorials can be added. Every time you explain somebody something about FieldTrip, please consider whether you could use the wiki for this so others can learn from it as well.
+We invite you to [add your own](/contribute) example scripts or frequently asked questions on the wiki. Also tutorials can be added. Every time you explain somebody something about FieldTrip, please consider whether you could use the website for this, so others can learn from it as well.
 
 See also the [tutorials](/tutorial) and [example scripts](/example).
 
@@ -184,8 +184,8 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [Can I use FieldTrip without MATLAB license?](/faq/compiled)
 - [Can I use Octave instead of MATLAB?](/faq/can_i_use_octave_instead_of_matlab)
 - [How can I compile the mex files and command-line programs?](/faq/compile)
-- [How can I compile the mex files on 64 bit Windows?](/faq/how_can_i_compile_the_mex_files_on_64_bit_windows)
-- [How can I compile the mex files on OS X?](/faq/how_can_i_compile_the_mex_files_on_os_x)
+- [How can I compile the mex files on 64-bit Windows?](/faq/how_can_i_compile_the_mex_files_on_64_bit_windows)
+- [How can I compile the mex files on macOS?](/faq/how_can_i_compile_the_mex_files_on_os_x)
 - [How can I determine the number of threads that MATLAB uses?](/faq/how_can_i_determine_the_number_of_threads_that_matlab_uses)
 - [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
 - [How to select the correct SPM toolbox?](/faq/how_to_select_the_correct_spm_toolbox)
@@ -208,7 +208,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 
 ## Organizational questions
 
-- [Can I get an offline version of the wiki documentation?](/faq/can_i_get_an_offline_version_of_the_wiki_documentation)
+- [Can I get an offline version of the website documentation?](/faq/can_i_get_an_offline_version_of_the_wiki_documentation)
 - [Can I use the FieldTrip logo on my poster?](/faq/can_i_use_the_fieldtrip_logo_on_my_poster)
 - [How many people are subscribed to the email discussion list?](/faq/how_many_people_are_subscribed_to_the_email_discussion_list)
 - [How should I refer to FieldTrip in my publication?](/faq/how_should_i_refer_to_fieldtrip_in_my_publication)

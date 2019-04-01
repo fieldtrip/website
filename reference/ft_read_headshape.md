@@ -1,7 +1,5 @@
 ---
 title: ft_read_headshape
-layout: default
-tags: 
 ---
 ```
  FT_READ_HEADSHAPE reads the fiducials and/or the measured headshape from a variety

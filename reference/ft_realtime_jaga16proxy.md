@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_jaga16proxy
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_JAGA16PROXY reads continuous EEG data from a Jinga-Hi JAGA16 system

@@ -1,7 +1,5 @@
 ---
 title: ft_plot_axes
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_AXES adds three axes of 150 mm and a 10 mm sphere at the origin to the

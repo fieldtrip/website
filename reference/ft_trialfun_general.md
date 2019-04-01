@@ -1,7 +1,5 @@
 ---
 title: ft_trialfun_general
-layout: default
-tags: 
 ---
 ```
  FT_TRIALFUN_GENERAL determines trials/segments in the data that are

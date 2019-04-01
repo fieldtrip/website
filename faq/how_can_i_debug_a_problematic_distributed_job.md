@@ -11,7 +11,7 @@ This page describes a number of strategies that you can use.
 
 ## Try the normal cellfun
 
-Peercellfun replicates the functionality of teh standard MATLAB cellfun function, except that the jobs are distributed. You can try
+Peercellfun replicates the functionality ofthestandard MATLAB cellfun function, except that the jobs are distributed. You can try
 
     cellfun(@yourfunction, {arg1, arg2, ...})
 

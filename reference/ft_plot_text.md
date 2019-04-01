@@ -1,7 +1,5 @@
 ---
 title: ft_plot_text
-layout: default
-tags: 
 ---
 ```
  FT_PLOT_TEXT helper function for plotting text, which can also be used in

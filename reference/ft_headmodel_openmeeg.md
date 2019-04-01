@@ -1,7 +1,5 @@
 ---
 title: ft_headmodel_openmeeg
-layout: default
-tags: 
 ---
 ```
  FT_HEADMODEL_OPENMEEG creates a volume conduction model of the

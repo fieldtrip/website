@@ -1,7 +1,5 @@
 ---
 title: ft_read_headmodel
-layout: default
-tags: 
 ---
 ```
  FT_READ_HEADMODEL reads a volume conduction model from various manufacturer

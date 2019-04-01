@@ -1,7 +1,5 @@
 ---
 title: ft_read_atlas
-layout: default
-tags: 
 ---
 ```
  FT_READ_ATLAS reads an template/individual segmentation or parcellation from disk.

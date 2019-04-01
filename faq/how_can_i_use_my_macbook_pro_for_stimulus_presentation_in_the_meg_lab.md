@@ -10,7 +10,7 @@ It can be useful to use your MacBook Pro for stimulus presentation instead of th
 In order to make use of this setup:
 
 1.  Install the latest version of Psychtoolbox on you Mac
-2.  Run Matlab in 32 bit mode (Psychtoolbox doesn't offer 64 bit support at the moment)
+2.  Run MATLAB in 32-bit mode (Psychtoolbox doesn't offer 64-bit support at the moment)
 3.  Connect the VGA output to the beamer to your Mac using a minidvi-to-vga adapter
 4.  Connect the serial port cable from the presentation machine to your Mac using a usb-to-serial adapter (keyspan)
 

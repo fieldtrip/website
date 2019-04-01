@@ -8,7 +8,7 @@ title: Developing the documentation of the source-reconstruction methods
 
 ### Introduction
 
-This page contains questions that users could ask when they analyze their data with FieldTrip. If it is possible the answers are also provided. If any documentation already exist on the FieldTrip wiki which gives an answer, the answer should point to those pages. In some cases, may we just want to point to relevant literature.
+This page contains questions that users could ask when they analyze their data with FieldTrip. If it is possible the answers are also provided. If any documentation already exist on the FieldTrip wiki website gives an answer, the answer should point to those pages. In some cases, may we just want to point to relevant literature.
 
 ### Questions and Answers
 

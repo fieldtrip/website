@@ -14,7 +14,7 @@ Ricoh took over the MEG branch from Yokogawa in 2016 and has started manufacturi
 
 The RICOH MEG is an MEG system that is developed by Ricoh Company, Ltd. Ricoh took over the MEG branch from Yokogawa in 2016 and has started manufacturing and installing the MEG system, continuing to support Yokogawa systems. They released their first MEG system at the end of 2017. A current RICOH MEG system is a successor to Yokogawa MEG systems and has most of the same characteristics as those of Yokogawa systems, especially those of the 160-channel Yokogawa MEG system.
 
-The following data files can be read and used in FieldTrip: the files with the extensions of '.con', '.ave', and '.mrk'. All required reading low-level functions are located in the ''external/ricoh_meg_reader'' directory as a set of pre-compiled p-files and will be called by appropriate FieldTrip functions. The low-level functions are officially supplied by Ricoh Company, Ltd. for using their data in open-source software environments.
+The following data files can be read and used in FieldTrip: the files with the extensions of '.con', '.ave', and '.mrk'. All required reading low-level functions are located in the ''external/ricoh_meg_reader'' directory as a set of pre-compiled p-files and will be called by appropriate FieldTrip functions. The low-level functions are officially supplied by Ricoh Company, Ltd. for using their data in open source software environments.
 
 The data files, .con, .ave, and .mrk, are pre-selected standard files of the RICOH MEG system. Each contains
 
@@ -336,7 +336,7 @@ For an exported .con file that contains the information of digitized points, ''h
 
     >> headshape.fid.label
     ans =
-    13×1 cell array
+    13×1 cell-array
       'nas'
       'lpa'
       'rpa'
@@ -364,7 +364,7 @@ On contrary to an exported .con file, an original (not-exported) data file (.con
 
     >> headshape.fid.label
     ans =
-    5×1 cell array
+    5×1 cell-array
       'nas'
       'lpa'
       'rpa'

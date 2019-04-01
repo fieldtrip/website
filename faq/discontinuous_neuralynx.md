@@ -23,7 +23,7 @@ One can then construct a time-stamp axis and interpolate in-between samples, and
     data        = ft_preprocessing(cfg);
 
     Warning: discontinuous recording, predicted number of timestamps and observed number of timestamps differ by 1693523717.00
-    Please consult the wiki on http://fieldtrip.fcdonders.nl/getting_started/neuralynx?&#discontinuous_recordings
+    Please consult http://www.fieldtriptoolbox.org/getting_started/neuralynx?&#discontinuous_recordings
 
     > In fileio/private/read_neuralynx_ncs at 94
     In ft_read_header at 1196

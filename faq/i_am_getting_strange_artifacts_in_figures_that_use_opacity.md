@@ -5,7 +5,7 @@ tags: [faq, plot, artifact]
 
 # I am getting strange artifacts in figures that use opacity
 
-The Matlab OpenGL renderer is very buggy when using opacity. Sometimes parts of your axes system disappear or colors are not drawn correctly, etc. , and some of these issues are especially prevalent when saving your figures as vectorized images using postscript (e.g.: .eps).
+The MATLAB OpenGL renderer is very buggy when using opacity. Sometimes parts of your axes system disappear or colors are not drawn correctly, etc. , and some of these issues are especially prevalent when saving your figures as vectorized images using postscript (e.g.: .eps).
 
 One option is to manually specify the renderer for your figure, e.g.  
  set(gcf, 'renderer', 'zbuffer'); % valid options are painters, zbuffer, opengl, none

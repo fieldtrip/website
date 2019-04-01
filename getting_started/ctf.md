@@ -115,7 +115,7 @@ After checking that the low-level reading functions successfully read your CTF d
     cfg.dataset = 'Subject01.ds';
     data = ft_preprocessing(cfg)
 
-This should return the following data structur
+This should return the following data structure:
 
     data =
 
@@ -155,7 +155,7 @@ To read the events from the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/f
 
     event = ft_read_event('Subject01.ds')
 
-This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structur
+This automatically reads the events from the trigger channels, from the class file and from the marker file and combines them in a single uniform representation. On the tutorial dataset it returns the following event structure:
 
     event =
 
@@ -179,9 +179,9 @@ To access the first event, use
 
 ### Frontpanel and Backpanel triggers
 
-The 151 channel MEG system we started off with at the Donders in 2002 had an electronics rack which was placed such that there was a clear front and back side. Each side of the rack exposed 16 binary inputs (i.e. bits) for connecting external triggers. To the front we connected the button boxes, to the back we connected the stimulus presentation computer. The 16 bits from the front and from the back were combined in the 32 bit STIM channel.
+The 151 channel MEG system we started off with at the Donders in 2002 had an electronics rack which was placed such that there was a clear front and back side. Each side of the rack exposed 16 binary inputs (i.e. bits) for connecting external triggers. To the front we connected the button boxes, to the back we connected the stimulus presentation computer. The 16 bits from the front and from the back were combined in the 32-bit STIM channel.
 
-Given the connections of the button boxes and stimulus computers, in the analysis the 32 bit STIM channel values did not match the users' expectations with respect to button box and presentation trigger codes. Therefore the FieldTrip reading software back then was implemented to split the 32 bits into the 16 frontpanel and the 16 backpanel bits. This also shifts the bits to recover the trigger codes that were used in the presentation software by the users. This situation from early '2000 at the Donders in Nijmegen is still supported by FieldTrip. The "Subject01.ds" tutorial dataset is from that time, so that is why you still see it in the tutorials.
+Given the connections of the button boxes and stimulus computers, in the analysis the 32-bit STIM channel values did not match the users' expectations with respect to button box and presentation trigger codes. Therefore the FieldTrip reading software back then was implemented to split the 32-bits into the 16 frontpanel and the 16 backpanel bits. This also shifts the bits to recover the trigger codes that were used in the presentation software by the users. This situation from early '2000 at the Donders in Nijmegen is still supported by FieldTrip. The "Subject01.ds" tutorial dataset is from that time, so that is why you still see it in the tutorials.
 
 The front and back panel at other CTF sites with the old electronics rack may be (or have been) connected differently. Furthermore, the present CTF systems have more trigger input options and no front and back side any more, so better don't use those any more in your analyses. In many cases UPPT001 and similarly named channels are the interesting trigger channels. MEG data acquired with the older CTF systems uses the STIM channel. If you want to relate FieldTrip to the CTF software, you will have to focus on the STIM and UPPT channels.
 

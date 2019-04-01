@@ -13,7 +13,7 @@ The following benchmarks have been run using the **rt_benchmark** script in the 
 - **mentat204**, **mentat205**, **mentat232**: 64-bit Linux, Core 2 Quad 2.8 GHz, 8GB RAM
 - **laptop**: 32-bit Linux, 1.6Ghz Pentium M, 512 MB RAM
 
-The first name in the legend always refers to the machine where the **rt_benchmark** script was run from, whereas the other name behind the dash refers to the machine that contained the buffer, with the exception of **dma**, which means that the buffer was kept in the same Matlab instance, thus involving no TCP/IP communication.
+The first name in the legend always refers to the machine where the **rt_benchmark** script was run from, whereas the other name behind the dash refers to the machine that contained the buffer, with the exception of **dma**, which means that the buffer was kept in the same MATLAB instance, thus involving no TCP/IP communication.
 
 {% include image src="/assets/img/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming/benchmark_w.png" %}
 {% include image src="/assets/img/faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming/benchmark_r.png" %}
@@ -30,8 +30,8 @@ The benchmarking results presented in the table below were determined with the d
 
 The tests have been performed on and between the following computer
 
-- **powerbook**: Apple PowerBook G4 PPC 1.33GHz, 1.25GB RAM, OS X 10.4.11
-- **manzana**: Apple Mac Pro 2x 2.66GHz Dual-Core Intel Xeon, 2GB RAM, OS X 10.5.8
+- **powerbook**: Apple PowerBook G4 PPC 1.33GHz, 1.25GB RAM, macOS 10.4.11
+- **manzana**: Apple Mac Pro 2x 2.66GHz Dual-Core Intel Xeon, 2GB RAM, macOS 10.5.8
 - **fcdc273**: Dell PC with Windows XP, P4 2.8GHz, 2GB RAM
 
 ### Writing to localhost on powerbook
@@ -91,7 +91,7 @@ The best result above for statefull tcp corresponds with 60 kHz @ 32 channels or
 | 32\*256=8192             | 20894       | remote host (100Mbps), tcp, stateless |
 | 64\*256=16384            | 41785       | remote host (100Mbps), tcp, stateless |
 
-## Determine the bandwidth/throughput in Matlab
+## Determine the bandwidth/throughput in MATLAB
 
 You can replicate this benchmark within MATLAB using the following lines of cod
 
@@ -119,7 +119,7 @@ You can replicate this benchmark within MATLAB using the following lines of cod
 
 Note that the MATLAB interface to the buffer does not allow you to use a statefull connection or a DMA connection, it only provides the stateless TCP connection.
 
-## Determine the time of a single write operation in Matlab
+## Determine the time of a single write operation in MATLAB
 
 The following code can be used to determine the time of a single write operation.
 

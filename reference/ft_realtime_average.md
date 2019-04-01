@@ -1,7 +1,5 @@
 ---
 title: ft_realtime_average
-layout: default
-tags: 
 ---
 ```
  FT_REALTIME_AVERAGE is an example realtime application for online

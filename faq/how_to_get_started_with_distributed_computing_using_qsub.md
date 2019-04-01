@@ -60,9 +60,9 @@ The **[qsubfeval](/reference/qsubfeval)** command creates a bunch of tempory fil
 
 ### Submitting a batch of jobs
 
-To execute few jobs in parallel as a batch you will use **[qsubcellfun](/reference/qsubcellfun)**. It is very similar to **[qsubfeval](/reference/qsubfeval)**, but instead of one input argument, you specify a cell array of arguments. Qsubcellfun then evaluates your function with each element of the array. In fact it calls **[qsubfeval](/reference/qsubfeval)** as many times as the number of elements in the array.
+To execute few jobs in parallel as a batch you will use **[qsubcellfun](/reference/qsubcellfun)**. It is very similar to **[qsubfeval](/reference/qsubfeval)**, but instead of one input argument, you specify a cell-array of arguments. Qsubcellfun then evaluates your function with each element of the array. In fact it calls **[qsubfeval](/reference/qsubfeval)** as many times as the number of elements in the array.
 
-Qsubcellfun is similar to the standard Matlab Cellfun. Try the following:
+Qsubcellfun is similar to the standard MATLAB Cellfun. Try the following:
 
     >> qsubcellfun(@randn, {1,1,1,1}, 'memreq', 1024, 'timreq', 60)
 

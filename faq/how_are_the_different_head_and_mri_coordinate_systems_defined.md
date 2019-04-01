@@ -13,7 +13,8 @@ For understanding the coordinate system, the following questions need to be addr
 - In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?
 - In what units are coordinates expressed, i.e. does the number "1" mean 1 meter, 1 centimeter or 1 milimeter?
 - Is the geometry scaled to some template or atlas, or does it still match the individual's head/brain size?  
-  {% include markup/end %}
+
+{% include markup/end %}
 
 FieldTrip does not have a native coordinate system, but assumes that all geometrical data which are used together (i.e. mri, headmodel, electrodes, dipoles) are expressed in the same coordinate system and with the same physical units (e.g. mm or cm). In order to be able to compare these fundamental properties across data structures, FieldTrip defines two fields in the geometrical data mentioned above. These fields pertain to the interpretation of the physical **units**, XXX.unit, and to the interpretation of the **coordinate system** in which the coordinates are expressed, XXX.coordsys.
 
@@ -184,7 +185,7 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 
 ## Details of the Polhemus coordinate system
 
-The **Polhemus** coordinate system as such does not exist. [Polhemus](http://www.polhemus.com) is the company that manufactures electromagnetic 3-D trackers for a large variety of applications, and usually the trackers are sold to you by an EEG company. The EEG company bundles the tracker with specific software for recording the position of the electrodes. The software program communicates with the tracker, and presents the measured electrode locations on the computer screen and writes them to an ascii file. Therefore, the software determines the coordinate system that is used. It is common to require the user first to record external anatomical landmarks (i.e. fiducials) on the head: usually the left and right pre-auricular points and the nasion. Using there fiducials, the software can convert all subsequent electrode positions into a head coordinate system.
+The **Polhemus** coordinate system as such does not exist. [Polhemus](http://www.polhemus.com) is the company that manufactures electromagnetic 3-D trackers for a large variety of applications, and usually the trackers are sold to you by an EEG company. The EEG company bundles the tracker with specific software for recording the position of the electrodes. The software program communicates with the tracker, and presents the measured electrode locations on the computer screen and writes them to an ASCII file. Therefore, the software determines the coordinate system that is used. It is common to require the user first to record external anatomical landmarks (i.e. fiducials) on the head: usually the left and right pre-auricular points and the nasion. Using there fiducials, the software can convert all subsequent electrode positions into a head coordinate system.
 The most common definition of the head coordinate system used by the software that accompanies the Polhemus tracker is
 
 - the origin is exactly between LPA and RPA

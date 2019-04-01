@@ -1,5 +1,5 @@
 ---
-title: Matlab does not see the functions in the "private" directory
+title: MATLAB does not see the functions in the "private" directory
 ---
 
 # MATLAB does not see the functions in the "private" directory
