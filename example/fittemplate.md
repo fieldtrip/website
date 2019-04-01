@@ -1,35 +1,33 @@
 ---
-title: Creating a head model, when there is no MRI
-tags: [example]
+title: How to create a head model if you do not have an individual MRI
+tags: [example, source]
 ---
 
-# Creating a head model, when there is no MRI
+# How to create a head model if you do not have an individual MRI
 
 ## Introduction
 
-Creating a head model is crucial for source reconstruction. The typical way is to
-base the headmodel on the individual's anatomical MRI. However, this data is not always available.
-In this example we will show two ways on how to create an individual head model on the basis of surface
-data acquired with the Polhemus.
+A volume conduction model of the head is required for source reconstruction. Ideally you base the 
+headmodel on the individual's anatomical MRI, but that is not always available. In the case of EEG you can use a template head model and fit your measured electrodes (or template electrodes) on the scalp of the template model. For MEG you cannot simply use a template head model, since the distance between the head and the (fixed) MEG sensors depends on the head size.
 
-Both methods share the same approach by applying a spatial transformation on the template head model. However, the derivation of the transformation is different.
+In this example we will show two ways on how to create an individual head model on the basis of surface
+data acquired with the Polhemus. Both methods determine the translation, rotation and scaling of the 
+template head model to fit the Polhemus head shape, but the second method applies a more detailed spatial scaling.
 
 ## Download
 
-For both approaches we will use the same dataset, which can be found
-[here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy)
-dataset. More information on this dataset can be found
-[here](/tutorial/epilepsy/).
-Also we need an external toolbox which can be downloaded [here](https://sites.google.com/site/myronenko/research/cpd)
+Both approaches will be demonstrated using the same dataset, which you can find on the 
+[ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). More 
+information on this dataset can be found [here](/tutorial/epilepsy/).
 
 ## Loading the data
 
 Before starting with FieldTrip, it is important that you set up your
 [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
-Then you can load the data head shape measured with the Polhemus and a
-template volume conduction model. Also we will convert the units into mm
-by now.
+You can load the head shape measured during the MEG recording with the Polhemus and a
+template volume conduction model. We have to ensure that they have consistent units, hence 
+we will convert the units into mm.
 
     polhemus = ft_read_headshape(filename);
     polhemus = ft_convert_units(polhemus,'mm');
@@ -39,15 +37,14 @@ by now.
 
 ## Coregistration
 
-In the next step we coregister both meshes with each other. Coregistration ensures that bot datasets are expressed in the same coordinate system. This already serves as an initial rotation and translation of the data and ensures, that the next steps are more robust.
-
+In the next step we coregister the template head model with the Polhemus head shape to ensure that they are expressed consistently in the MEG coordinate system (i.e. relative to the same origin and with the axes pointing in the same direction). The coregistration consists of a rotation and translation.
 
     cfg = [];
     cfg.template.headshape      = polhemus;
     cfg.checksize               = inf;
     cfg.individual.headmodel    = template;
     cfg                         = ft_interactiverealign(cfg);
-    template                    = ft_transform_geometry(cfg.m,template);
+    template                    = ft_transform_geometry(cfg.m, template);
 
 ## Determining and applying of the transformation
 
@@ -94,29 +91,38 @@ Determine the global scaling and translation
 
     transformation = T1*S*T2;
 
-Appyling the transformation to the template
+Appyly the transformation to the template head model
 
     template_fiducial = ft_transform_geometry(transformation, template)
 
+Now that we have have the surfaces of the full template model (not only the scalp) rotated, translated and scaled to fit the Polhemus measurement, we can recompute the volume conduction model 
 
-### Method 2: On the basis of the head surface
+    cfg = [];
+    cfg.method = 'bemcp';
+    headmodel_fiducial = ft_prepare_headmodel(cfg, template_fiducial);
 
-With this method we make full use of the head surface. In this approach we match the template head model to fit the whole polhemus measurement and not only the three fiducials. This allows us to compute an affine transformation (transformation, with translation, rotation, scaling and skewing)
 
-For creating the individualized mesh it is important that the head
-surface of template only contains features that are also in the head
-surface measurement of the Polhemus. Therefore, we use ft_defacemesh to remove the undesired features.
+### Method 2: On the basis of the full head surface
 
-    defaced_template                = template;
-    cfg                             = [];
-    defaced_template.bnd(1).unit    = 'mm';
-    defaced                         =  ft_defacemesh(cfg,defaced_template.bnd(1));
+This requires an external toolbox, which can be downloaded [here](https://sites.google.com/site/myronenko/research/cpd)
 
-    defaced_template.bnd(1).pos = defaced.pos;
-    defaced_template.bnd(1).tri = defaced.tri;
+With this method we apply an affine transformation to the template head model to fit the 
+whole Polhemus head shape.  This not only applies a translation and rotation, but also a 
+scaling in the different directions and some skewing.
 
-We will now use the surface information of the template model and the
-Polhemus measurement to create an individualised version mesh of the template mesh.
+To cerate the individualized head model it is important that the scalp
+surface of the template head model only contains features that are also in the Polhemus head
+shape. We can use **[ft_defacemesh](/reference/ft_defacemesh)** to remove some features.
+
+    % make a copy, only keep the scalp surface
+    defaced_template     = template;
+    defaced_template.bnd = defaced_template.bnd(1);
+    
+    cfg              = [];
+    defaced_template =  ft_defacemesh(cfg, defaced_template);
+
+We will now use the template scalp and the Polhemus head shape to determine the
+affine transformation.
 
     cfg              = [];
     cfg.headshape    = polhemus;
@@ -124,18 +130,8 @@ Polhemus measurement to create an individualised version mesh of the template me
     cfg.method       = 'fittemplate';
     template_surface = ft_prepare_mesh(cfg, template.bnd);
 
-## Creating volume conduction model
-
-Now we have derived two geometrical description. This allows to create the head models
-
-    cfg = [];
-    cfg.method = 'bemcp';
-    headmodel_fiducial = ft_prepare_headmodel(cfg, template_fiducial);
+Now that we have have the surfaces of the full template model (not only the scalp) transformed to fit the Polhemus measurement, we can recompute the volume conduction model 
 
     cfg = [];
     cfg.method = 'bemcp';
     headmodel_surface = ft_prepare_headmodel(cfg, template_surface);
-
-## Discussion
-
-We introduced two different ways to create individualized head models, when no anatomical MRI is available. One uses three fiducials, while the other uses the whole head surface. Using the fiducials requires a minimal investment of digitizing three locations on the head surface. In using the whole head surface we can obtain a more realistic description of the individual head model, but this requires more lab time than the other approach.
