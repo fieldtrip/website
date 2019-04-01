@@ -45,6 +45,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Create MNI-aligned grids in individual head-space](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space)
 - [Determine the filter characteristics](/example/determine_the_filter_characteristics)
 - [Fit a dipole to the tactile ERF after mechanical stimulation](/example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation)
+- [How to create a head model if you do not have an individual MRI](/example/fittemplate)
 - [Localizing the sources underlying the difference in event related fields](/example/difference_erf)
 - [Make leadfields using different headmodels](/example/make_leadfields_using_different_headmodels)
 - [Plotting the result of source reconstructing on a cortical mesh](/example/plotting_the_result_of_source_reconstructing_on_a_cortical_mesh)
@@ -53,7 +54,6 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Testing BEM created lead fields](/example/testing_bem_created_leadfields)
 - [Use your own forward leadfield model in an inverse beamformer computation](/example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation)
 - [Using the low-level compute_leadfield function](/example/compute_leadfield)
-- [Individualizing a template volume conduction to on the basis of surface information](/example/fittemplate)
 
 ### Statistical analysis
 
