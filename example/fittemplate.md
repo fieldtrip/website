@@ -61,7 +61,8 @@ So first we visualise both meshes:
 
 As the template model and the Polhemus measurement have exclusive features, we will now remove these  
 
-    defaced_template = template.bnd(1);  
+    defaced_template      = template.bnd(1);
+    defaced_template.unit = template.unit
 
     cfg              = [];
     cfg.translate    = [-40 0 -50];
@@ -139,7 +140,7 @@ affine transformation.
 
     cfg              = [];
     cfg.headshape    = polhemus;
-    cfg.template     = defaced_template.bnd(1);
+    cfg.template     = defaced_template;
     cfg.method       = 'fittemplate';
     template_surface = ft_prepare_mesh(cfg, template.bnd);
 
@@ -149,7 +150,7 @@ Now that we have have the surfaces of the full template model (not only the scal
 
     cfg = [];
     cfg.method = 'openmeeg';
-    headmodel_sphere = ft_prepare_headmodel(cfg, template_sphere);
+    headmodel_sphere = ft_prepare_headmodel(cfg, template_sphere.bnd);
 
     cfg = [];
     cfg.method = 'openmeeg';
