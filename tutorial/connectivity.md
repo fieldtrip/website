@@ -112,7 +112,7 @@ The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing]
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
     ft_databrowser(cfg, sourcedata);
 
-{% include image src="/assets/img/tutorial/connectivity/virtualchan.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/sourcedata.png" width="300" %}
 
 Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent cu
 rrent dipole source at the location of interest.
@@ -126,12 +126,12 @@ The interpretation of connectivity is facilitated if we can compute it between t
 
     [u, s, v] = svd(timeseries, 'econ');
 
-    % whos u s v
-    %   Name           Size              Bytes  Class     Attributes
-    %
-    %   s              3x3                  72  double
-    %   u              3x3                  72  double
-    %   v         196800x3             4723200  double
+    whos u s v
+     Name           Size              Bytes  Class     Attributes
+
+       s              3x3                  72  double
+       u              3x3                  72  double
+       v         196800x3             4723200  double
 
 Matrix u contains the spatial decomposition, matrix v the temporal and on the diagonal of matrix s you can find the eigenvalues. See "help svd" for more details.
 
