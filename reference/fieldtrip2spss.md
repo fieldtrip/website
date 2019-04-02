@@ -10,7 +10,7 @@ title: fieldtrip2spss
 
  When exporting from MATLAB, set:
    - filename; should be string (e.g. 'counts.txt')
-   - labels; should be a cell array (e.g. {'ones', 'twos', 'threes'})
+   - labels; should be a cell-array (e.g. {'ones', 'twos', 'threes'})
    - data; should be either a vector or matrix (e.g. [1 2 3; 1 2 3; 1 2 3])
 
  When importing to SPSS, set;

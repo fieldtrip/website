@@ -802,13 +802,13 @@ cell-array with channel labels, that (when using the 'vertical' viewmode) will a
 Mx2 cell-array with selection of channel pairs (default = {'all' 'all'}), see FT_CHANNELCOMBINATION for details
 
 **cfg.channelcmb** - [ft_lateralizedpotential](/reference/ft_lateralizedpotential)  
-Nx2 cell array
+Nx2 cell-array
 
 **cfg.channelcmb** - [ft_connectivityanalysis](/reference/ft_connectivityanalysis)  
 Nx2 cell-array containing the channel combinations on which to compute the connectivity. This only has an effect when the input data is univariate. See FT_CHANNELCOMBINATION
 
 **cfg.channelcmb** - [ft_mvaranalysis](/reference/ft_mvaranalysis)  
-specify channel combinations as a two-column cell array with channels in each column between which a bivariate model will be fit (overrides cfg.channel)
+specify channel combinations as a two-column cell-array with channels in each column between which a bivariate model will be fit (overrides cfg.channel)
 
 **cfg.channelcmb** - [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
 string or index of single channel combination to trigger on. See SPIKESTATION_FT_SUB_CHANNELCOMBINATION for details.
@@ -1999,7 +1999,7 @@ FieldTrip buffer containing raw scans (default 'buffer://localhost:1972')
 FieldTrip buffer containing raw scans (default='buffer://localhost:1972')
 
 **cfg.input** - [ft_realtime_dicomproxy](/reference/ft_realtime_dicomproxy)  
-string or cell array of strings (see below)
+string or cell-array of strings (see below)
 
 **cfg.inputcoord** - [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup)  
 'mni' or 'tal', coordinate system of the mri/source/stat
@@ -3174,10 +3174,10 @@ cell-array with strings, fields that should be parcellated (default = 'all')
 cell-array with the functional data to be normalised (default = 'all')
 
 **cfg.parameter** - [ft_timelockbaseline](/reference/ft_timelockbaseline)  
-field for which to apply baseline normalization, or cell array of strings to specify multiple fields to normalize (default = 'avg')
+field for which to apply baseline normalization, or cell-array of strings to specify multiple fields to normalize (default = 'avg')
 
 **cfg.parameter** - [ft_freqbaseline](/reference/ft_freqbaseline)  
-field for which to apply baseline normalization, or cell array of strings to specify multiple fields to normalize (default = 'powspctrm')
+field for which to apply baseline normalization, or cell-array of strings to specify multiple fields to normalize (default = 'powspctrm')
 
 **cfg.parameter** - [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 field that contains the data to be plotted as color, for example 'avg', 'powspctrm' or 'cohspctrm' (default is automatic)
@@ -3873,7 +3873,7 @@ show call info, 'yes' or 'no' (default: 'no')
 'yes', 'no' (default = 'yes')
 
 **cfg.showinfo** - [ft_analysispipeline](/reference/ft_analysispipeline)  
-string or cell array of strings, information to display in the gui boxes, can be any combination of 'functionname', 'revision', 'matlabversion', 'computername', 'username', 'calltime', 'timeused', 'memused', 'workingdir', 'scriptpath' (default = 'functionname', only display function name). Can also be 'all', show all pipeline. Please note that if you want to show a lot of information, this will require a lot of screen real estate.
+string or cell-array of strings, information to display in the gui boxes, can be any combination of 'functionname', 'revision', 'matlabversion', 'computername', 'username', 'calltime', 'timeused', 'memused', 'workingdir', 'scriptpath' (default = 'functionname', only display function name). Can also be 'all', show all pipeline. Please note that if you want to show a lot of information, this will require a lot of screen real estate.
 
 **cfg.showlabels** - [ft_multiplotER](/reference/ft_multiplotER)  
 'yes' or 'no' (default = 'no')
@@ -4343,7 +4343,7 @@ structure, see FT_READ_HEADSHAPE
 structure, see FT_READ_MRI
 
 **cfg.testtrials** - [ft_denoise_tsr](/reference/ft_denoise_tsr)  
-cell array or string, trial indices to be used as test folds in a cross-validation scheme (numel(cfg.testrials == number of folds))
+cell-array or string, trial indices to be used as test folds in a cross-validation scheme (numel(cfg.testrials == number of folds))
 
 **cfg.threshold** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 0.1, relative to the maximum value in the segmentation
@@ -4733,7 +4733,7 @@ string, parameter to be used to control the line width (see below)
 (a) string or function handle, type of window to convolve with (def = 'gauss'). - 'gauss' (default) - 'alphawin', given by win = x*exp(-x/timeconstant) - For standard window functions in the signal processing toolbox see WINDOW. (b) vector of length nSamples, used directly as window
 
 **cfg.winfuncopt** - [ft_spikedensity](/reference/ft_spikedensity)  
-options that go with cfg.winfunc For cfg.winfunc = 'alpha': the timeconstant in seconds (default = 0.005s) For cfg.winfunc = 'gauss': the standard deviation in seconds (default = 1/4 of window duration in seconds) For cfg.winfunc = 'wname' with 'wname' any standard window function see window opts in that function and add as cell array If cfg.winfunctopt = [], default opts are taken.
+options that go with cfg.winfunc For cfg.winfunc = 'alpha': the timeconstant in seconds (default = 0.005s) For cfg.winfunc = 'gauss': the standard deviation in seconds (default = 1/4 of window duration in seconds) For cfg.winfunc = 'wname' with 'wname' any standard window function see window opts in that function and add as cell-array If cfg.winfunctopt = [], default opts are taken.
 
 **cfg.winlen** - [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth)  
 window length in seconds (default = 5*binwidth). length of our window is 2*round*(cfg.winlen/binwidth) where binwidth is the binwidth of the jpsth (jpsth.time(2)-jpsth.time(1)).

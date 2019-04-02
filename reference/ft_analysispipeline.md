@@ -23,7 +23,7 @@ title: ft_analysispipeline
    cfg.filetype   = string, can be 'matlab', 'html' or 'dot'
    cfg.feedback   = string, 'no', 'text', 'gui' or 'yes', whether text and/or
                     graphical feedback should be presented (default = 'yes')
-   cfg.showinfo   = string or cell array of strings, information to display
+   cfg.showinfo   = string or cell-array of strings, information to display
                     in the gui boxes, can be any combination of
                     'functionname', 'revision', 'matlabversion',
                     'computername', 'username', 'calltime', 'timeused',

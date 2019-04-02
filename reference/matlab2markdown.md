@@ -2,7 +2,7 @@
 title: matlab2markdown
 ---
 ```
- MATLAB2MARKDOWN converts a MATLAB script or function to MarkDown format. All
+ MATLAB2MARKDOWN converts a MATLAB script or function to Markdown format. All
  comments are converted to text, comment lines starting with %% are converted to
  headings, sections with code are properly formatted, and words that appear in bold,
  italic or monospace are converted.

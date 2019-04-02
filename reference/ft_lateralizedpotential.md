@@ -10,7 +10,7 @@ title: ft_lateralizedpotential
 
  where the input datasets should come from FT_TIMELOCKANALYSIS
  and the configuration should contain
-   cfg.channelcmb = Nx2 cell array
+   cfg.channelcmb = Nx2 cell-array
 
  An example channelcombination containing the homologous channels
  in the 10-20 standard system is

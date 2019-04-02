@@ -49,9 +49,9 @@ title: ft_spike_maketrials
      or is a priori known.
 
  Outputs appended to spike:
-   spike.time                  = 1-by-nUnits cell array, containing the spike times in
+   spike.time                  = 1-by-nUnits cell-array, containing the spike times in
                                  seconds relative to the event trigger.
-   spike.trial                 = 1-by-nUnits cell array, containing the trial number for
+   spike.trial                 = 1-by-nUnits cell-array, containing the trial number for
                                  every spike telling in which trial it was recorded.
    spike.trialtime             = nTrials-by-2 matrix specifying the start and end of
                                  every trial in seconds.
