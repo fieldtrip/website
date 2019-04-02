@@ -2,9 +2,9 @@
 title: ft_plot_cloud
 ---
 ```
- FT_PLOT_CLOUD visualizes spatially sparse scalar data as points, spheres, or 
- spherical clouds of points and optionally 2D slices through the spherical 
- clouds. This is for example useful for spectral power on depth (sEEG) electrodes.
+ FT_PLOT_CLOUD visualizes spatially sparse scalar data as points, spheres,
+ discs, or spherical clouds of points and optionally 2D slices through the 
+ spherical clouds
 
  Use as
    ft_plot_cloud(pos, val, ...)
@@ -15,6 +15,7 @@ title: ft_plot_cloud
    'cloudtype'          = 'point' plots a single 2D point at each sensor position (see plot3)
                           'cloud' (default) plots a group of spherically arranged points at each sensor position
                           'surf' plots a single spherical surface mesh at each sensor position
+                          'disc' plots a single cylindrical disc at each sensor position aligned with the mesh (required)
    'scalerad'           = scale radius with val, can be 'yes' or 'no' (default = 'yes')
    'radius'             = scalar, maximum radius of cloud (default = 4)
    'clim'               = 1x2 vector specifying the min and max for the colorscale
@@ -48,6 +49,12 @@ title: ft_plot_cloud
    'intersectcolor'     = string, Nx1 cell-array, or Nx3 vector specifying line color (default = 'k')
    'intersectlinestyle' = string or Nx1 cell-array, line style specification (default = '-')
    'intersectlinewidth' = scalar or Nx1 vector, line width specification (default = 2)
+
+ The following inputs apply when 'cloudtype' = 'surf' and 'slice' = '2d'
+   'ncirc'           = scalar, number of concentric circles to plot for each
+                       cloud slice (default = 15) make this hidden or scale
+   'scalealpha'      = 'yes' or 'no', scale the maximum alpha value of the center circle
+                       with distance from center of cloud
 
  See also FT_ELECTRODEPLACEMENT, FT_PLOT_TOPO, FT_PLOT_TOPO3D
 ```
