@@ -36,7 +36,7 @@ There are some small differences in the parameters for the beamformer source ana
 
 ## Case 1
 
-_Male, age 9. Right parietal Glioma with parietal extended lesionectomy. Corticography also showed interictal discharges in the frontal lobe, though seizures were of parietal origin. Following the MEG, was operated and is now seizure free and off medication._
+_Male, age 9. Right parietal Glioma with epilepsy. Corticography also showed interictal discharges in the frontal lobe, though seizures were of parietal origin. Following the MEG, was operated in the right parietal area and is now partially seizure free._
 
 MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
@@ -171,7 +171,7 @@ To save time we have chosen to use a 7 mm grid for the source model here, but in
     mri_resliced = ft_volumereslice(cfg, mri);   
     save mri_resliced mri_resliced;
   
-We plot everything out and check that everything is aligned correctly.     
+We plot everything out and check that it is all aligned correctly.     
 
     figure
     ft_plot_vol(headmodel, 'unit', 'mm');
@@ -186,7 +186,7 @@ In the following stage, we compute the data covariance matrix for the beamformer
     cfg.covariance = 'yes';
     cov_matrix = ft_timelockanalysis(cfg, data);
     
-Next we precompute the leadfields, which is not obligatory but speeds up the following steps.
+Next we precompute the leadfields, which is not obligatory but speeds up the subsequent step.
     
     cfg = [];
     cfg.channel = 'MEG';
@@ -330,7 +330,7 @@ For patient confidentiality we only include here the MRI which has already been 
     
 #### Importing and filtering the sensor level data
 
-MEGIN MEG data has two channel types, and we are importing them both here.  With the checks we will perform later, there is no need to exclude one or the other channel type. We apply the same 10-70 Hz bandpass filter as for the CTF analysis.  
+MEGIN MEG data has two channel types, and we are importing them both here.  With the checks we will perform later, there is no need to exclude one or the other channel type. We apply the same 10-70 Hz bandpass filter as for the CTF analysis.  In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artefact, so we omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording.   
 
     dataset = 'case1_sss_hpi.fif'
     cfg = [];
@@ -340,7 +340,7 @@ MEGIN MEG data has two channel types, and we are importing them both here.  With
     cfg.lpfilter  = 'yes';
     cfg.lpfreq    = 70;
     cfg.channel   = 'MEG';  
-    % cfg.trl = [21*2000 255000 0];  % omit the first 20 seconds (numbers based on pre-screening of data)
+    cfg.trl = [21*2000 255000 0];  % omit the first 20 seconds (numbers based on pre-screening of data)
     data = ft_preprocessing(cfg);
     
     data.grad   = ft_convert_units(data.grad, 'm');
@@ -403,26 +403,123 @@ This step is identical to the method for the CTF data, up until the very last st
     leadfield = ft_prepare_leadfield(cfg, cov_matrix);  
 
 
+At this point the analysis deviates from the CTF analysis because we need to account for differences in the covariance matrix that result from Maxfilter. First, we perform a singular value decomposition of the covariance matrix and plot the singular values, 's'. These are plotted in descending order, and two discontinuities can be seen which reflect the nature of this maxfiltered data.  The first, and most important, occurs at around the 67th value for this dataset.  This reflects the effects of Maxfilter, which has reconstructed the data based on (typically) 80 components.  The second discontinuity is at the 204th value, which reflects the different sensor types: 204 planar gradiometers and 102 magnetometers. 
+
+    [u,s,v] = svd(cov_matrix.cov);
+    figure;semilogy(diag(s),'o-');
+    
+As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa.  We set this at the value just before the big 'cliff' in the singular values.  We also set a parameter called lambda which can be considered a weighting factor for the regularisation.  
+
+    cfg                  = [];
+    cfg.method           = 'lcmv';
+    cfg.grid             = leadfield;
+    cfg.headmodel        = headmodel;
+    cfg.lcmv.keepfilter  = 'yes';
+    cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
+    cfg.lcmv.reducerank  = 2;
+    cfg.lcmv.lambda      = '5%';
+    cfg.lcmv.kappa       = 68;
+    cfg.lcmv.projectmom = 'yes';  %project dipole timeseries for each dipole in direction of maximal power (see below)
+    cfg.lcmv.kurtosis = 'yes';
+    source = ft_sourceanalysis(cfg, cov_matrix);
 
 
-[u,s,v] = svd(cov_matrix.cov);
-figure;semilogy(diag(s),'o-');
+The remainder of the analysis is identical to the CTF analysis - we run the LCMV beamformer, compute the images and explore the timeseries.  
+    
+Plotting the images:
 
-%% from jan-mathijs
-% 
-cfg                  = [];
-cfg.method           = 'lcmv';
-cfg.grid             = leadfield;
-cfg.headmodel        = headmodel;
-cfg.lcmv.keepfilter  = 'yes';
-cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
-cfg.lcmv.reducerank  = 2;
-cfg.lcmv.lambda      = 5;
-cfg.lcmv.kappa       = 68%73;  based on SVD plot 
+    source.kurtosis = source.avg.kurtosis(source.inside) %get rid of NaNs which fall outside head
+    source.kurtosisdimord = 'pos';  
+    cfg = [];
+    cfg.parameter = 'kurtosis';
+    source_interp = ft_sourceinterpolate(cfg, source, mri);
 
-cfg.lcmv.projectmom = 'yes';  %project dipole timeseries for each dipole in direction of maximal power (see below)
-cfg.lcmv.kurtosis = 'yes';
-source = ft_sourceanalysis(cfg, cov_matrix);
+    cfg = [];
+    cfg.funparameter = 'kurtosis';
+    cfg.method = 'ortho'; % orthogonal slices with crosshairs at peak (default anyway if not specified)
+    ft_sourceplot(cfg, source_interp);
+    
+    cfg = [];
+    cfg.funparameter = 'kurtosis';
+    cfg.method = 'slice';  % plot slices
+    ft_sourceplot(cfg, source_interp);
+    
+ Writing the images to NIFTI:
+    
+    cfg = [];
+    cfg.filename = 'Case1_resliced_anatomy.nii'
+    cfg.parameter = 'anatomy';
+    cfg.format = 'nifti';
+    ft_volumewrite(cfg, mri_resliced);
+
+    cfg = [];
+    cfg.filename = 'Case1_kurtosis.nii';
+    cfg.parameter = 'kurtosis';
+    cfg.format = 'nifti';
+    ft_volumewrite(cfg, source);
+
+Identifying the peaks in the image:
+    
+    [ispeak] = findpeaksn(reshape(source.avg.kurtosis, source.dim));
+    j = find(ispeak(:));
+    [m, i] = sort(-source.avg.kurtosis(j));  % sort on the basis of kurtosis value
+    peaks = j(i);
+    disp(source.pos(peaks(1:10),:));  % output their positions
+    
+    for i = 1:5,
+        cfg = [];
+        cfg.funparameter = 'kurtosis';
+        cfg.location = source.pos(peaks(i),:);
+        ft_sourceplot(cfg, source_interp);  
+    end
+    
+    
+ << insert here a description of the differences in output between the CTF and Elekta datasets >>   
+
+Output the timeseries to AnyWave format:
+ 
+    % dataset = 'case1_sss_hpi.fif'  % our original data file
+    cfg = [];
+    cfg.dataset   = dataset;
+    cfg.channel   = 'MEG';
+    data = ft_preprocessing(cfg);
+    dat = ft_fetch_data(data);  
+    hdr = ft_fetch_header(data);
+    
+    nsources = 5;
+    for i = 1:nsources, 
+        dat(size(dat,1)+1,:)= source.avg.mom{peaks(i),:}*10e5; %see comment below about scaling
+        hdr.label{end+1}= ['S' num2str(i)];
+        hdr.chantype{end+1} = 'source';
+        hdr.chanunit{end+1} = ''  ; % see note below about scaling
+    end; 
+    hdr.nChans = hdr.nChans+nsources;
+
+    ft_write_data(filename, dat, 'header', hdr, 'dataformat', 'anywave_ades');
+
+Create a marker file:
+
+    fid = fopen([filename,'.mrk'], 'w+'); 
+    fprintf(fid,'%s\r\n','// AnyWave Marker File ');
+    % loop through sources and times
+    for i = 1:nsources
+        dat = source.avg.mom{peaks(i),:};
+        sd = std(dat);
+        tr = zeros(1,length(dat));
+        tr(dat>6*sd)=1;
+        [tmp,mrksample] = findpeaks(tr, 'MinPeakDistance', 300); % peaks have to be separated by 300 sample points to be treated as separate
+
+        for j = 1:length(mrksample)
+            fprintf(fid, '%d\t', i);  %marker name (just a number)
+            fprintf(fid, '%d\t', i); %marker value (same number)
+            fprintf(fid, '%d\t',source.time(mrksample(j)) ); %marker time
+            fprintf(fid, '%s\t', '0'); %marker duration
+            fprintf(fid, 'SOURCE%d\r\n', 'i'); %marker channel 
+        end
+    end
+    fclose(fid);
+
+
 
 
 
