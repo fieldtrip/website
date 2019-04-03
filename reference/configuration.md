@@ -1106,6 +1106,9 @@ integer number (default = 1)
 **cfg.decimation** - [ft_realtime_downsample](/reference/ft_realtime_downsample)  
 integer, downsampling factor (default = 1, no downsampling)
 
+**cfg.deformweight** - [ft_electroderealign](/reference/ft_electroderealign)  
+number (default: 1), weight of deformation relative to shift energy cost (lower increases grid flexibility)
+
 **cfg.degree** - [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
 degree of legendre polynomials (default for <=32 electrodes = 9, <=64 electrodes = 14, <=128 electrodes = 20, else = 32
 
@@ -2064,6 +2067,9 @@ depth of the source layer relative to the headshape surface or volume conduction
 **cfg.inwardshift** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 number, how much should the innermost surface be moved inward to constrain sources to be considered inside the source compartment (default = 0)
 
+**cfg.isodistance** - [ft_electroderealign](/reference/ft_electroderealign)  
+'yes', 'no' (default) or number, to enforce isotropic inter-electrode distances (pairmethod 'label' only)
+
 **cfg.isolatedsource** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 (optional)
 
@@ -2518,6 +2524,9 @@ number, in seconds (default = 1)
 
 **cfg.maxdelay** - [ft_nonlinearassociation](/reference/ft_nonlinearassociation)  
 32/cfg.fsample
+
+**cfg.maxiter** - [ft_electroderealign](/reference/ft_electroderealign)  
+number (default: 50), maximum number of optimization iterations
 
 **cfg.maxlag** - [ft_spike_xcorr](/reference/ft_spike_xcorr)  
 number in seconds, indicating the maximum lag for the cross-correlation function in sec (default = 0.1 sec).
@@ -3157,6 +3166,9 @@ string, type of padding (default 'zero', see ft_preproc_padding)
 
 **cfg.padtype** - [ft_preprocessing](/reference/ft_preprocessing)  
 string, type of padding (default: 'data' padding or 'mirror', depending on feasibility)
+
+**cfg.pairmethod** - [ft_electroderealign](/reference/ft_electroderealign)  
+'pos' (default) or 'label', the method for electrode pairing on which the deformation energy is based
 
 **cfg.pairtrials** - [ft_stratify](/reference/ft_stratify)  
 'spikesort', 'linkage' or 'no' (default = 'spikesort')
@@ -4703,7 +4715,7 @@ substructure with additional low-level options for this method
 'fsaverage'
 
 **cfg.warp** - [ft_electroderealign](/reference/ft_electroderealign)  
-string describing the spatial transformation for the template and headshape methods 'rigidbody' apply a rigid-body warp (default) 'globalrescale' apply a rigid-body warp with global rescaling 'traditional' apply a rigid-body warp with individual axes rescaling 'nonlin1' apply a 1st order non-linear warp 'nonlin2' apply a 2nd order non-linear warp 'nonlin3' apply a 3rd order non-linear warp 'nonlin4' apply a 4th order non-linear warp 'nonlin5' apply a 5th order non-linear warp 'dykstra2012' non-linear wrap only for headshape method, useful for projecting ECoG onto cortex hull 'fsaverage' surface-based realignment with FreeSurfer fsaverage brain (left->left or right->right) 'fsaverage_sym' surface-based realignment with FreeSurfer fsaverage_sym left hemisphere (left->left or right->left) 'fsinflated' surface-based realignment with FreeSurfer individual subject inflated brain (left->left or right->right)
+string describing the spatial transformation for the template and headshape methods 'rigidbody' apply a rigid-body warp (default) 'globalrescale' apply a rigid-body warp with global rescaling 'traditional' apply a rigid-body warp with individual axes rescaling 'nonlin1' apply a 1st order non-linear warp 'nonlin2' apply a 2nd order non-linear warp 'nonlin3' apply a 3rd order non-linear warp 'nonlin4' apply a 4th order non-linear warp 'nonlin5' apply a 5th order non-linear warp 'dykstra2012' back-project ECoG onto the cortex using energy minimzation 'hermes2010' back-project ECoG onto the cortex along the local norm vector 'fsaverage' surface-based realignment with FreeSurfer fsaverage brain (left->left or right->right) 'fsaverage_sym' surface-based realignment with FreeSurfer fsaverage_sym left hemisphere (left->left or right->left) 'fsinflated' surface-based realignment with FreeSurfer individual subject inflated brain (left->left or right->right)
 
 **cfg.warpmni** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 'yes'
