@@ -104,7 +104,7 @@ Please also skip through several epochs in the data and zoom out in the time axi
 
 _Figure 2: **[ft_databrowser](/reference/ft_databrowser)** of the original data with renamed channels. The data can be horizontally (time axis) and vertically (y-axis/signal amplitude) zoomed in and out to view the data in smaller or larger segments. And data can be viewed segment by segment.._
 
-We now additionaly segment the continuous data in 30-second trials. This that allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
+We now additionaly segment the continuous data in 30-second trials. This allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
 
       % segment the continuous data in segments of 30-seconds
       % we call these epochs trials, although they are not time-locked to a particular event
@@ -395,7 +395,7 @@ Create a new combined channel from the normalized signal of slow-wave activity (
     cfg.montage = montage_sum;
     data_continuous_perband_sum = ft_preprocessing(cfg, data_continuous_perband);
 
-View the whole sleep data in frequency band power now including the combinded sleep spindle and SWA power. **Is this enought to find the sleep stages and cylces?**
+View the whole sleep data in frequency band power now including the combinded sleep spindle and SWA power. **Is this enough t to find the sleep stages and cylces?**
 
     cfg = [];
     cfg.continuous   = 'yes';
@@ -405,7 +405,7 @@ View the whole sleep data in frequency band power now including the combinded sl
 
 {% include image src="/assets/img/tutorial/sleep/sleep_freq_bands_over_sleep_non-rem_estimation.png" width="600" %}
 
-As an estimate to find epochs that are very likely to be non-REM we identify every epoch where the SWA+Spindle signal is above a certain threshold. For example the the average of the signal is used here as a threshold and we then keep the information of when those periods begin and end.
+As an estimate to find epochs that are very likely to be non-REM we identify every epoch where the SWA+Spindle signal is above a certain threshold. For example the average of the signal is used here as a threshold and we then keep the information of when those periods begin and end.
 
     cfg = [];
     cfg.artfctdef.threshold.channel   = {'swa+spindle'};
@@ -556,7 +556,7 @@ First we practice how to detect a very well defined event, the QRS complex, and 
 ### R-waves and heart rate in ECG
 
 Detect R-waves using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)** by filtering in a frequency band
-that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maximums in the envelope of the envelope signals.
+that puts an emphasis on the R-waves frequency in the ECG. As R-waves are concrete peaks we find the maxima in the envelope of the envelope signals.
 Note that this methods also works if the R-waves would be inversed pointing towards the negative values.
 
     %% find heart R-waves in ECG
@@ -590,7 +590,10 @@ Safe when (the samples of the R-waves occur for later
 
 {% include markup/info %}
 The R-peaks are difficult to see, since there are so many (>35000 heart beats during one night) use the MATLAB magnifying glass to zoom in.
-Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards). In this case the signal could be inverted by multiplying this channel's data with -1. For example: data_continuous.trial{1}(4,:) = -1\*data_continuous.trial{1}(4,:)
+Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards). In this case the signal could be inverted by multiplying this channel's data with -1. For example: 
+      
+      data_continuous.trial{1}(4,:) = -1\*data_continuous.trial{1}(4,:)
+      
 {% include markup/end %}
 
 Check if the detected peaks are good estimates of the R-wave in the **[ft_databrowser](/reference/ft_databrowser)**
@@ -728,10 +731,10 @@ Lets see how many slow waves or sleep spindles we found and if they are of the r
     %mean event duration
     mean(event_duration)
 
-Often to check if we get the right kind of event, at least on average, it is very helpful to look at the average sleep slow wave or sleep spindle.
-For this we need a good offset for which our events can be aligned that when averaged the variable signal do not cancel each other out.
-Other than for ERPs, where we might have recored event markers, we need find such offsets ourselves in for spontaneous detected events .
-Often a clear minimum or maximum in the event with the hightest or lowest amplitude in a narrow time window (around the center) is a good candidate as an offset, as this is the most consistent time point between such events.
+Often, to check if we get the right kind of event, at least on average, it is very helpful to look at the average sleep slow wave or sleep spindle.
+For this we need a good offset at which our events can be aligned, so that when averaged the variable signal do not cancel each other out.
+Other than for ERPs, where we might have recored event markers, we need to find such offsets ourselves in for spontaneous detected events .
+Often a clear minimum or maximum in the event with the highest or lowest amplitude in a narrow time window (around the center) is a good candidate as an offset, as this is the most consistent time point between such events.
 For sleep spindles and slow waves the minimum peak of the hightest amplitude is typically chosen for this.
 
     %%% get the trials to get the data +-1 second around the envelope
@@ -867,9 +870,9 @@ Try to visualize an average QRS complex around the R-wave like was done for slee
 
 In this tutorial we learned how to read and interpret continuous sleep data. We learned how to use modalities EMG, EOG, EEG and ECG to gain more information about the changing states during a long recording. We used EMG and EOG to find epochs of Wake that we considered artifacts for further analysis of non-REM sleep.
 
-Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information of further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g. Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further.
+Also we looked at the distribution of different sleep frequency bands, their fluctuation in sleep cycles and how we can extract epochs from the data that contains useful information for further analysis while at the same time deciding to exclude epochs with other (artifactual) activity (e.g. Wake). We thus constructed a partial estimate of a sleep profile (hypnogram) to aid us further.
 
-Finally we explored how easy it is to detect spontaneous events in signlas like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g. we found R-waves, sleep slow waves and spindles. These have been then viewed in the ft_databrowser and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activit (ERF), all in a single channel.
+Finally we explored how easy it is to detect spontaneous events in signals like ECG and EEG by using simple filtering and thresholding of the cleaned data epochs as a basis, e.g. we found R-waves, sleep slow waves and spindles. These have been then viewed in the ft_databrowser and we looked at the typical spontaneous events by aligning them by time (ERP) and look at time-locked frequency activit (ERF), all in a single channel.
 
 This should give you a basis of also recognizing other data and see that recordings are highly dependent on the current state. Importantly, this might also apply to wake recordings of task in which the subjects might doze off, loose focus or have their eyes closed or directed away at important periods of the task. The techinques here can thus also be used as sanity check in other data.
 
