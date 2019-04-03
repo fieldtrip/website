@@ -142,7 +142,7 @@ Why might a single sphere model be inadequate for performing beamformer estimate
 
 ### Compute lead field
 
-The next step is to discretize the brain volume into a grid. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
+The next step is to discretize the brain volume into a grid (the sourcemodel). For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
 {% include markup/warning %}
 Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields.
@@ -153,8 +153,8 @@ Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to 
     cfg.headmodel       = headmodel;
     cfg.reducerank      = 2;
     cfg.channel         = {'MEG','-MLP31', '-MLO12'};
-    cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
-    cfg.grid.unit       = 'cm';
+    cfg.resolution = 1;   % use a 3-D grid with a 1 cm resolution
+    cfg.sourcemodel.unit       = 'cm';
     [grid] = ft_prepare_leadfield(cfg);
 
 As mentioned earlier on, if you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
@@ -166,7 +166,7 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
     cfg              = [];
     cfg.method       = 'dics';
     cfg.frequency    = 18;
-    cfg.grid         = grid;
+    cfg.sourcemodel         = grid;
     cfg.headmodel    = headmodel;
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda       = 0;
@@ -189,14 +189,14 @@ The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns 
 
     cfg            = [];
     cfg.downsample = 2;
-    cfg.parameter = 'avg.pow';
+    cfg.parameter = 'pow';
     sourcePostInt_nocon  = ft_sourceinterpolate(cfg, sourcePost_nocon , mri);
 
 Plot the interpolated data:
 
     cfg              = [];
     cfg.method       = 'slice';
-    cfg.funparameter = 'avg.pow';
+    cfg.funparameter = 'pow';
     figure
     ft_sourceplot(cfg,sourcePostInt_nocon);
 
@@ -221,14 +221,14 @@ If it is not possible to compare two conditions (e.g. A versus B or post versus 
 
     cfg = [];
     cfg.downsample = 2;
-    cfg.parameter = 'avg.pow';
+    cfg.parameter = 'pow';
     sourceNAIInt = ft_sourceinterpolate(cfg, sourceNAI , mri);
 
 Plot it:
 
     cfg = [];
     cfg.method        = 'slice';
-    cfg.funparameter  = 'avg.pow';
+    cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [4.0 6.2];
     cfg.opacitylim    = [4.0 6.2];
@@ -268,7 +268,7 @@ Then we compute the inverse filter based on both conditions. Note the use of cfg
     cfg              = [];
     cfg.method       = 'dics';
     cfg.frequency    = 18;
-    cfg.grid         = grid;
+    cfg.sourcemodel         = grid;
     cfg.headmodel    = headmodel;
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda       = '5%';
@@ -276,9 +276,9 @@ Then we compute the inverse filter based on both conditions. Note the use of cfg
     cfg.dics.realfilter   = 'yes';
     sourceAll = ft_sourceanalysis(cfg, freqAll);
 
-By placing this pre-computed filter inside cfg.grid.filter, it can now be applied to each condition separately.
+By placing this pre-computed filter inside cfg.sourcemodel.filter, it can now be applied to each condition separately.
 
-    cfg.grid.filter = sourceAll.avg.filter;
+    cfg.sourcemodel.filter = sourceAll.avg.filter;
     sourcePre_con  = ft_sourceanalysis(cfg, freqPre );
     sourcePost_con = ft_sourceanalysis(cfg, freqPost);
 
@@ -299,14 +299,14 @@ Then interpolate the source to the MR
 
     cfg            = [];
     cfg.downsample = 2;
-    cfg.parameter  = 'avg.pow';
+    cfg.parameter  = 'pow';
     sourceDiffInt  = ft_sourceinterpolate(cfg, sourceDiff , mri);
 
 Now plot the power ratios:
 
     cfg = [];
     cfg.method        = 'slice';
-    cfg.funparameter  = 'avg.pow';
+    cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
     cfg.opacitylim    = [0.0 1.2];
@@ -335,7 +335,7 @@ To plot an 'orthogonal cut
 
     cfg = [];
     cfg.method        = 'ortho';
-    cfg.funparameter  = 'avg.pow';
+    cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
     cfg.opacitylim    = [0.0 1.2];
@@ -357,7 +357,7 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
     cfg = [];
     cfg.method        = 'ortho';
     cfg.interactive   = 'yes';
-    cfg.funparameter  = 'avg.pow';
+    cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
     cfg.funcolorlim   = [0.0 1.2];
     cfg.opacitylim    = [0.0 1.2];
@@ -378,7 +378,7 @@ Now the data can be plotted
 
     cfg = [];
     cfg.method         = 'surface';
-    cfg.funparameter   = 'avg.pow';
+    cfg.funparameter   = 'pow';
     cfg.maskparameter  = cfg.funparameter;
     cfg.funcolorlim    = [0.0 1.2];
     cfg.funcolormap    = 'jet';
