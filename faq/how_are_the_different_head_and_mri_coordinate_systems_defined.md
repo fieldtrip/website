@@ -12,7 +12,7 @@ For understanding the coordinate system, the following questions need to be addr
 - What is the definition of the origin of the coordinate system, i.e. where is [0,0,0]?
 - In which directions are the x-, y- and z-axis pointing, i.e. is +x towards the right or towards anterior?
 - In what units are coordinates expressed, i.e. does the number "1" mean 1 meter, 1 centimeter or 1 milimeter?
-- Is the geometry scaled to some template or atlas, or does it still match the individual's head/brain size?  
+- Is the geometry scaled to some template or atlas, or does it still match the individual's head/brain size?
 
 {% include markup/end %}
 
@@ -66,7 +66,8 @@ The **4D Neuroimaging** (also known as BTi) coordinate system is expressed in me
 - the X-axis goes towards NAS
 - the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 - the Z-axis goes approximately towards the vertex, orthogonal to X and Y
-  {% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_bti.png" width="200" %}
+
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_bti.png" width="200" %}
 
 ## Details on the ACPC coordinate system
 
@@ -95,7 +96,8 @@ The **Analyze** coordinate system is defined by and used in the Analyze software
 - the x-axis goes from right to left
 - the y-axis goes from posterior to anterior
 - the z-axis goes from inferior to superior
-  Note that the Analyze .img/.hdr file format is also being used by other software (notably SPM), but the conventions of the coordinate systems may be different. Typically, fMRI specific software will use neurological conventions instead of radiological conventions.
+
+Note that the Analyze .img/.hdr file format is also being used by other software (notably SPM), but the conventions of the coordinate systems may be different. Typically, fMRI specific software will use neurological conventions instead of radiological conventions.
 
 ## Details of the BESA coordinate system
 
@@ -104,20 +106,24 @@ The **BESA** native coordinate system is expressed in spherical coordinates. If 
 - the x-axis passes through LPA and RPA. Positive x is right.
 - the y-axis passes through the nasion and is orthogonal to the x-axis. Positive y is anterior
 - the z-axis is orthogonal to x and y. Positive z is superior.
-  If you prefer to consider the center of the sphere to coincide with the origin of the coordinate system, the principal axes will not go exactly through the external landmarks (i.e. fiducials). The reason for the shift in the negative z-direction of LPA, RPA and Nasion is that, after the shift, the electrodes better fit on the spherical head model. I.e. the nose and ears are not in the middle of the sphere, but are lower.
-  See also [this documentation](http://wiki.besa.de/index.php?title=Electrodes_and_Surface_Locations) on the BESA wiki.
+
+If you prefer to consider the center of the sphere to coincide with the origin of the coordinate system, the principal axes will not go exactly through the external landmarks (i.e. fiducials). The reason for the shift in the negative z-direction of LPA, RPA and Nasion is that, after the shift, the electrodes better fit on the spherical head model. I.e. the nose and ears are not in the middle of the sphere, but are lower.
+
+See also [this documentation](http://wiki.besa.de/index.php?title=Electrodes_and_Surface_Locations) on the BESA wiki.
 
 ## Details of the CapTrack coordinate system
 
 **CapTrack** is the name of a device manufactured by the company [Brain Products](http://pressrelease.brainproducts.com/captrak/). CapTrack consists of a hand held scanner featuring two cameras that track EEG electrodes on a subject's scalp. CapTrack makes use of LEDs inbuilt into the EEG electrodes manufactured by Brain Products and calculates the 3D coordinates by comparing each LED position with the position of three "special LED" positions. These special LEDs form the coordinate system and are placed as fiducials onto anatomical landmarks (nasion, right and left preauricular points) on the subject's head.
-The coordinates of each electrode are defined in millimeters x,y,z with respect to the following coordinate syste
+
+The coordinates of each electrode are defined in millimeters as [x,y,z] with respect to the following coordinate system:
 
 - the X-axis goes from LPA towards RPA
 - the Y-axis goes orthogonally to the X-axis and towards (through) NAS
 - the Z-axis goes orthogonally to the X-Y-plane towards the vertex
   If the ears are not symmetric, the origin will not be precisely between the ears but shifted to one side. E.g., if the right ear is more to the front, the origin will be shifted to the right.
   See below a visualization of the coordinate system.
-  {% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrack.png" width="300" %}
+
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrack.png" width="300" %}
 
 ## Details of the Chieti ITAB coordinate system
 
@@ -136,7 +142,8 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI which i
 - the X-axis goes towards NAS
 - the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
 - the Z-axis goes approximately towards the vertex, orthogonal to X and Y
-  {% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_ctf.png" width="200" %}
+
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_ctf.png" width="200" %}
 
 ## Details of the DICOM coordinate system
 
@@ -149,6 +156,7 @@ The **CTF** coordinate system is expressed in centimeter (except the MRI which i
 ## Details of the FreeSurfer coordinate system
 
 FreeSurfer is a software package that can be used to process anatomical MRIs, to obtain segmentations, cortical meshes, and inflated surfaces. The orientation of the coordinate system is RAS, and for volumetric (i.e. anatomical MRI) data the origin is defined to be the centre of a 256x256x256 isotropic 1 mm volume. Note that if the head is not centered in the volume, the origin of the coordinate system will not coincide with the center of the head.
+
 For surface based data FreeSurfer uses the tkrRAS coordinate system.
 See [this page](http://www.grahamwideman.com/gw/brain/fs/coords/fscoords.htm) for more information about this.
 
@@ -160,8 +168,8 @@ The Montreal Neurological Institute coordinate system is comparable to, but not 
 - The X-axis extends from the left side of the brain to the right side
 - The Y-axis points from posterior to anterior
 - The Z-axis points from inferior to superior
-  See also this [frequently asked question](/faq/acpc).
-  Note that the SPM software makes use of the MNI coordinate system.
+
+See also this [frequently asked question](/faq/acpc). Note that the SPM software makes use of the MNI coordinate system.
 
 ## Details of the Neuromag coordinate system
 
@@ -171,7 +179,8 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 - Y-axis from the origin towards the nasion (exactly through)
 - Z-axis from the origin upwards orthogonal to the XY-plane
 - Origin: Intersection of the line through LPA and RPA and a line orthogonal to L passing through the nasion.
-  {% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_neuromag.png" width="200" %}
+
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/coordinatesystem_neuromag.png" width="200" %}
 
 ## Details of the NIfTI coordinate system
 
@@ -181,11 +190,13 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 - The x-axis increases from left to right
 - The y-axis increases from posterior to anterior
 - The z-axis increases from inferior to superior
-  Note that this coordinate system applies when images are not registered to a standard space; if they are, the coordinate system of the relevant standard space applies (e.g. MNI or Talairach-Tournoux). See also [here](https://brainder.org/2012/09/23/the-nifti-file-format/) (search for "Orientation information").
+
+Note that this coordinate system applies when images are not registered to a standard space; if they are, the coordinate system of the relevant standard space applies (e.g. MNI or Talairach-Tournoux). See also [here](https://brainder.org/2012/09/23/the-nifti-file-format/) (search for "Orientation information").
 
 ## Details of the Polhemus coordinate system
 
 The **Polhemus** coordinate system as such does not exist. [Polhemus](http://www.polhemus.com) is the company that manufactures electromagnetic 3-D trackers for a large variety of applications, and usually the trackers are sold to you by an EEG company. The EEG company bundles the tracker with specific software for recording the position of the electrodes. The software program communicates with the tracker, and presents the measured electrode locations on the computer screen and writes them to an ASCII file. Therefore, the software determines the coordinate system that is used. It is common to require the user first to record external anatomical landmarks (i.e. fiducials) on the head: usually the left and right pre-auricular points and the nasion. Using there fiducials, the software can convert all subsequent electrode positions into a head coordinate system.
+
 The most common definition of the head coordinate system used by the software that accompanies the Polhemus tracker is
 
 - the origin is exactly between LPA and RPA
@@ -202,34 +213,41 @@ The Talairach-Tournoux coordinate system is comparable to, but [not exactly the 
 - the y-axis goes towards the front of the brain, along the line connecting PC and AC
 - the z-axis goes towards the top of the brain
 - the x-axis goes towards the right side of the brain
-  See also this [frequently asked question](/faq/acpc).
+
+See also this [frequently asked question](/faq/acpc).
 
 ## Details on the Paxinos-Franklin mouse coordinate system
 
 The Paxinos-Franklin atlas [The Mouse Brain in Stereotaxic Coordinate (2001)](http://www.amazon.com/Mouse-Stereotaxic-Coordinates-Second-Edition/dp/0125476361) defines a commonly used coordinate system for the mouse brain anatomy. Note however, that other coordinate system definitions are also being used.
+
 For the mouse coordinate system it is relevant to understand the nomenclature differences similarities and differences between the human anatomy and that of most other animals. A nice explanation is provided on [wikipedia](http://en.wikipedia.org/wiki/Anatomical_terms_of_location) and [here](http://johnhawks.net/explainer/laboratory/anatomical-directions/).
+
 The Paxinos-Franklin atlas specifies two points of reference: the [Bregma point](http://en.wikipedia.org/wiki/Bregma) and the midpoint of the intra-aural line. Both are indicated as [0, 0, 0] in the atlas, we will make use of the Bregma point.
 
 - The origin of the coordinate system is at the [Bregma point](http://en.wikipedia.org/wiki/Bregma).
 - The X-axis extends along the Medial-Lateral direction, with positive towards the right (see below).
 - The Y-axis points from Dorsal to Ventral, i.e. towards the top of the head.
 - The Z-axis points from Cranial to Caudal, or Anterior to Posterior, i.e. towards the tail of the animal. The Z-axis extends from the [Bregma point](http://en.wikipedia.org/wiki/Bregma) to the [Lambda point](<http://en.wikipedia.org/wiki/Lambda_(anatomy)>)
-  The Paxinos-Franklin atlas is not explicit about the positive and negative x-direction. We observe that the y-axis is from Inferior to Superior and the z-axis from Anterior to Posterior, which means that we obtain a right-handed coordinate system by defining the x-axis from Medial to the _Right_ Lateral side.
-  Although we define the origin at the Bregma point, the Paxinos-Franklin atlas also refers to the interaural point as a possible origin. The interaural point is a logical choice if a stereotact is used with pins in both ear canals. Converting from interaural to Bregma as origin of the coordinate system involves a translation which can be described in the following homogenous transformation matrix  
-   interaural2bregma = [
-  1 0 0 Tx
-  0 1 0 Ty
-  0 0 1 Tz
-  0 0 0 1
-  ];
 
-Converting from Bregma to interaural as origin of the coordinate system involves a translation which can be described in the following homogenous transformation matrix  
- bregma2interaural = [
-1 0 0 Tx
-0 1 0 Ty
-0 0 1 Tz
-0 0 0 1
-];
+The Paxinos-Franklin atlas is not explicit about the positive and negative x-direction. We observe that the y-axis is from Inferior to Superior and the z-axis from Anterior to Posterior, which means that we obtain a right-handed coordinate system by defining the x-axis from Medial to the _Right_ Lateral side.
+
+Although we define the origin at the Bregma point, the Paxinos-Franklin atlas also refers to the interaural point as a possible origin. The interaural point is a logical choice if a stereotact is used with pins in both ear canals. Converting from interaural to Bregma as origin of the coordinate system involves a translation which can be described in the following homogenous transformation matrix
+
+    interaural2bregma = [
+        1 0 0 Tx
+        0 1 0 Ty
+        0 0 1 Tz
+        0 0 0 1
+    ];
+
+Converting from Bregma to interaural as origin of the coordinate system involves a translation which can be described in the following homogenous transformation matrix
+
+    bregma2interaural = [
+        1 0 0 Tx
+        0 1 0 Ty
+        0 0 1 Tz
+        0 0 0 1
+    ];
 
 ## Details of the Yokogawa coordinate system
 
