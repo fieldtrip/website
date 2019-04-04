@@ -30,7 +30,7 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
     % determine interesting segments in the data
 
     cfg                     = [];
-    cfg.dataset             = 'MarkusBraille.ds';
+    cfg.dataset             = 'SubjectBraille.ds';
     cfg.continuous          = 'yes';
     cfg.trialdef.eventtype  = 'backpanel trigger';
     cfg.trialdef.eventvalue = [4,8];
@@ -121,7 +121,7 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
     cfg = [];
     cfg.latency = [0.045 0.055];  % specify latency window around M50 peak
     cfg.numdipoles = 1;
-    cfg.hdmfile = 'bauer_m.hdm';
+    cfg.hdmfile = 'SubjectBraille.hdm';
     cfg.feedback = 'textbar';
     cfg.grid.resolution = 2;
     cfg.grid.unit = 'cm';
@@ -132,7 +132,7 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % make a plot of the location of the dipoles
     % read the anatomical MRI
-    mri = ft_read_mri('bauer_m.mri');
+    mri = ft_read_mri('SubjectBraille.mri');
 
     % the source is expressed in cm, the MRI is expressed in mm
     cfg = [];

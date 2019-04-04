@@ -50,7 +50,7 @@ For these examples, we'll use the example data of [dataset 10](/faq/what_types_o
 First, we read the data, as usua
 
     cfg = [];
-    cfg.dataset = 'MarkusBraille.ds';
+    cfg.dataset = 'SubjectBraille.ds';
     cfg.trialdef.triallength = Inf;
     cfg = ft_definetrial(cfg);
 
@@ -170,7 +170,7 @@ where ''data1'' contains the data organized in multiple trials including conditi
 Create evoked in FieldTrip:
 
     cfg = [];
-    cfg.dataset = 'MarkusBraille.ds';
+    cfg.dataset = 'SubjectBraille.ds';
     cfg.trialdef.eventtype      = 'backpanel trigger';
     cfg.trialdef.prestim        = 1;
     cfg.trialdef.poststim       = 2;
