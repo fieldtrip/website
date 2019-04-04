@@ -9,7 +9,7 @@ tags: [example, meg, timelock, source, dipole, fixme, meg-tactile]
 
 The MATLAB script is given first; the figures that this script produces are at the bottom of this page.
 
-The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) is available from our FTP server.
+The MEG dataset [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip) is available from our FTP server.
 
 ## MATLAB script
 
@@ -24,7 +24,7 @@ The MEG dataset [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pu
     % data. Because stimuli were too difficult there was absolutely no task.
     %
     % The MEG dataset is available from
-    %   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip
+    %   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % determine interesting segments in the data

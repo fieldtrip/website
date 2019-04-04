@@ -43,7 +43,7 @@ The aim is to pass the channel=level data between FieldTrip and MNE. Reading is 
 
 ### datatype_raw (one trial) `<->` Raw
 
-For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [TactileStimulusDipolefit.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/TactileStimulusDipolefit.zip) and extract the ''.ds'' folder in a convenient location.
+For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip) and extract the ''.ds'' folder in a convenient location.
 
 #### Export to Raw
 
