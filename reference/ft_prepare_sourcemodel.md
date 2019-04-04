@@ -18,7 +18,7 @@ title: ft_prepare_sourcemodel
    - regular 3D grid, based on a warped template grid, based on the MNI brain
    - surface mesh based on the brain surface from the volume conduction model
    - surface mesh based on the head surface from an external file
-   - cortical sheet that was created in MNE or FreeSurfer
+   - cortical sheet that was created in MNE or Freesurfer
    - using user-supplied source positions, which can be regular or irregular
  The approach that will be used depends on the configuration options that
  you specify.

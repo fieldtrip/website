@@ -33,7 +33,7 @@ title: ft_write_headshape
    'stl'           STereoLithography file format, for use with CAD and generic 3D mesh editing programs
    'vtk'           Visualization ToolKit file format, for use with Paraview
    'ply'           Stanford Polygon file format, for use with Paraview or Meshlab
-   'freesurfer'    FreeSurfer surf-file format, using write_surf from FreeSurfer
+   'freesurfer'    Freesurfer surf-file format, using write_surf from FreeSurfer
 
  See also FT_READ_HEADSHAPE
 ```
