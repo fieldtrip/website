@@ -532,7 +532,7 @@ FROM MRI TO Single shell (MEG only)
 
 The single shell method is also know as the Nolte method and consists in creating a realistic description of the geometry by fitting a series of spherical harmonics to the points describing the geometry of the outer skull.
 
-- Segment the brain using SPM/Freesurfer
+- Segment the brain using SPM/FreeSurfer
 - Obtain the inner skull compartment by using csf+white+gray
 - smooth and threshold the obtained volume
 - Use one of the known [triangulation methods](#Triangulation methods) to obtain a surface

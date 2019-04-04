@@ -18,7 +18,7 @@ In general, one could construct a source model that defines positions of dipoles
 
 ## Procedure
 
-We will describe a few different ways to create a source model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Some of these procedures can be done entirely using high-level FieldTrip functions. Other procedures require the use of external software, in particular Freesurfer, or HCP-workbench.
+We will describe a few different ways to create a source model based on the anatomical mri of the [tutorial data set](/tutorial/meg_language) which is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Some of these procedures can be done entirely using high-level FieldTrip functions. Other procedures require the use of external software, in particular FreeSurfer, or HCP-workbench.
 
 - Construction of a source model based on a regular 3-dimensional grid of dipole positions.
 - Construction of a source model based on a surface description of the cortical sheet.

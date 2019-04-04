@@ -50,7 +50,7 @@ The last three steps are using the outputs from processing of anatomical and ele
 
 ### 1. Anatomical processing
 
-The first part of anatomical processing of the MRI data is done by the Freesurfer program. MNE is using the output of this program and one of the FS functions to create head shapes with the boundary element method (BEM) and to set up the source space for the forward solution. The next figure shows the filenames (with red) that were created by FS and MNE is using them for input. When MNE is creating the BEM model meshes it is using a function (mri_watershed) from FS. Therefore, the FS has to be set up before running this MNE function.
+The first part of anatomical processing of the MRI data is done by the FreeSurfer program. MNE is using the output of this program and one of the FS functions to create head shapes with the boundary element method (BEM) and to set up the source space for the forward solution. The next figure shows the filenames (with red) that were created by FS and MNE is using them for input. When MNE is creating the BEM model meshes it is using a function (mri_watershed) from FS. Therefore, the FS has to be set up before running this MNE function.
 
 {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/anatomical_processing_2.png" width="650" %}
 
@@ -88,7 +88,7 @@ First, it is averaging the multiple scanning runs together if they exist (output
 
 Then, a non-parametric non-uniform intensity normalization (N3) corrects for intensity non-uniformities (output: $SUBJECTS_DIR/&lt;subject's name>/mri/**nu**.mgz). Next, talairach transformation is computed (from nu.mgz) using MNI305 atlas, and outputs the transformation into $SUBJECTS_DIR/&lt;subject's name>/mri/transforms/talairach.auto.xfm and **talairach**.xfm.
 
-Then, it performs an intensity normalization (intensity of all voxels are scaled) and gives the output \$SUBJECTS_DIR/&lt;subject's name>/mri/**T1**.mgz. This is the volume that is used by the interactive analysis tool of MNE, mne_analyze where the MRI Viewer is using the T1.mgz volume together with the Freesurfer tkmedit user interface. The tkmedit shows the MRI volume index and the Talairach coordinates. T1.mgz is also used as input for MNE for creating BEM meshes.
+Then, it performs an intensity normalization (intensity of all voxels are scaled) and gives the output \$SUBJECTS_DIR/&lt;subject's name>/mri/**T1**.mgz. This is the volume that is used by the interactive analysis tool of MNE, mne_analyze where the MRI Viewer is using the T1.mgz volume together with the FreeSurfer tkmedit user interface. The tkmedit shows the MRI volume index and the Talairach coordinates. T1.mgz is also used as input for MNE for creating BEM meshes.
 
 Last, the mri_watershed program is running that finds the boundary between the brain and the skull (output: $SUBJECTS_DIR/&lt;subject's name>/mri/brainmask.auto.mgz and $SUBJECTS_DIR/&lt;subject's name>/mri/**brainmask**.mgz).
 

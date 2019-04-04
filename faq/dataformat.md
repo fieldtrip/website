@@ -61,8 +61,8 @@ The following eye-tracker data formats are supported by **[ft_read_header](/refe
 
 The following anatomical MRI data formats are supported by **[ft_read_mri](/reference/ft_read_mri)**
 
-- nifti (.nii / .nii.gz), using the Freesurfer toolbox
-- mgz (.mgz), using the Freesurfer toolbox
+- nifti (.nii / .nii.gz), using the FreeSurfer toolbox
+- mgz (.mgz), using the FreeSurfer toolbox
 - Analzye (.hdr, .img), using the SPM toolbox
 - MINC (.mnc), using the SPM toolbox
 - CTF (.mri)

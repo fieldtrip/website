@@ -100,7 +100,7 @@ tags: [example, mne, source]
     headmodel.pos=headmodel_pos(:,1:3);
     headmodel = ft_convert_units(headmodel, 'cm');
 
-    %% Reading Freesurfer Source Space
+    %% Reading FreeSurfer Source Space
     src = ft_read_headshape(src_fname, 'format', 'mne_source');
 
     % Transform

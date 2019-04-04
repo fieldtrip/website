@@ -5,7 +5,7 @@ tags: [template]
 
 # Anatomical templates for visualizing source reconstructed activity
 
-When visualizing source reconstructed activity, one can interpolate the activity maps onto a subject-specific anatomical image, using [ft_sourceinterpolate](/reference/ft_sourceinterpolate). Subsequently, the interpolated activity can be spatially normalized (using volumetric normalization) using [ft_volumenormalise](/reference/ft_volumenormalise). The activity can also be rendered onto the cortical surface. FieldTrip includes a set of template surfaces that have been derived from the Colin27 brain (in MNI152 space) with Freesurfer. These surfaces have been derived from the SPM Canonical Brain.
+When visualizing source reconstructed activity, one can interpolate the activity maps onto a subject-specific anatomical image, using [ft_sourceinterpolate](/reference/ft_sourceinterpolate). Subsequently, the interpolated activity can be spatially normalized (using volumetric normalization) using [ft_volumenormalise](/reference/ft_volumenormalise). The activity can also be rendered onto the cortical surface. FieldTrip includes a set of template surfaces that have been derived from the Colin27 brain (in MNI152 space) with FreeSurfer. These surfaces have been derived from the SPM Canonical Brain.
 
 {% include markup/warning %}
 You can find the anatomical templates included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/anatomy).
@@ -13,7 +13,7 @@ You can find the anatomical templates included in FieldTrip [here](https://githu
 
 ## High resolution triangulations of the neocortical sheet
 
-The Freesurfer cortical sheets can be downloaded from the [SurfRend toolbox website](http://spmsurfrend.sourceforge.net/). The mat-files that are in FieldTrip have been obtained using [ft_read_headshape](/reference/ft_read_headshape). The following sheets are included:
+The FreeSurfer cortical sheets can be downloaded from the [SurfRend toolbox website](http://spmsurfrend.sourceforge.net/). The mat-files that are in FieldTrip have been obtained using [ft_read_headshape](/reference/ft_read_headshape). The following sheets are included:
 
 - surface defined at the gray/white matter boundary: surface_white_both/left/right.
 - surface defined at the pial surface: surface_pial_both/left/right.
@@ -21,7 +21,7 @@ The Freesurfer cortical sheets can be downloaded from the [SurfRend toolbox webs
 - inflated surface generated with Caret (added May 26, 2014 using the command caret_command -surface-generate-inflated), preserving the main sulcal structure: surface_inflate_both/left/right_caret.
 
 {% include markup/danger %}
-FieldTrip versions 9031-9400 (Dec 13, 2013 - April 12, 2014) contain the surfaces in an incorrect coordinate system. The consequence of this is that the on-the-fly interpolation and rendering of source reconstructed data onto the cortical sheets (using ft_sourceplot) was incorrect. This has been fixed in revision 9401. The figures below show an overlay of the current (r.9401) cortical sheet surface_white_both with the single_subj_T1_1mm.nii. The incorrect coordinate system was due to not taking into account that the original surfaces were expressed in the Freesurfer coordinate system. The correction that had to be taken into account was the xfm matrix in spm_CanonicalBrain from the spm-surfrend toolbox.
+FieldTrip versions 9031-9400 (Dec 13, 2013 - April 12, 2014) contain the surfaces in an incorrect coordinate system. The consequence of this is that the on-the-fly interpolation and rendering of source reconstructed data onto the cortical sheets (using ft_sourceplot) was incorrect. This has been fixed in revision 9401. The figures below show an overlay of the current (r.9401) cortical sheet surface_white_both with the single_subj_T1_1mm.nii. The incorrect coordinate system was due to not taking into account that the original surfaces were expressed in the FreeSurfer coordinate system. The correction that had to be taken into account was the xfm matrix in spm_CanonicalBrain from the spm-surfrend toolbox.
 {% include markup/end %}
 
 {% include image src="/assets/img/template/anatomy/surface_white_both.png" width="600" %}

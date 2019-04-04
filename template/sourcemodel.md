@@ -74,7 +74,7 @@ The following documentation is a verbatim copy of _spm_mesh.man_ in [SPM8](http:
 - cortex_5124.surf.gii
 - cortex_8196.surf.gii
 
-The cortical mesh surfaces here were created using Freesurfer version
+The cortical mesh surfaces here were created using FreeSurfer version
 4.0.1 (Dale et al. 1999, Fischl et al. 2001, Fischl et al. 1999) from
 an average of 27 T1 scans of the same subject (see spm_templates.man and
 Tzourio-Mazoyer et al. 2002 for more details).
