@@ -17,7 +17,7 @@ title: ft_select_point3d
    'markercolor' = character, for example 'r', 'b' or 'g' (default = 'k')
 
  Example
-   [pos, tri] = sphere_mesh(162);
+   [pos, tri] = mesh_sphere(162);
    bnd.pos = pos;
    bnd.tri = tri;
    ft_plot_mesh(bnd)
