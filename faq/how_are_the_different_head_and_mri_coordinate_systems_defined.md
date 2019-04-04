@@ -220,9 +220,9 @@ See also this [frequently asked question](/faq/acpc).
 
 The Paxinos-Franklin atlas [The Mouse Brain in Stereotaxic Coordinate (2001)](http://www.amazon.com/Mouse-Stereotaxic-Coordinates-Second-Edition/dp/0125476361) defines a commonly used coordinate system for the mouse brain anatomy. Note however, that other coordinate system definitions are also being used.
 
-For the mouse coordinate system it is relevant to understand the nomenclature differences similarities and differences between the human anatomy and that of most other animals. A nice explanation is provided on [wikipedia](http://en.wikipedia.org/wiki/Anatomical_terms_of_location) and [here](http://johnhawks.net/explainer/laboratory/anatomical-directions/).
+For the mouse coordinate system it is relevant to understand the similarities and differences in nomenclature between the human anatomy and that of most other animals. A nice explanation is provided on [Wikipedia](http://en.wikipedia.org/wiki/Anatomical_terms_of_location) and [here](http://johnhawks.net/explainer/laboratory/anatomical-directions/).
 
-The Paxinos-Franklin atlas specifies two points of reference: the [Bregma point](http://en.wikipedia.org/wiki/Bregma) and the midpoint of the intra-aural line. Both are indicated as [0, 0, 0] in the atlas, we will make use of the Bregma point.
+The Paxinos-Franklin atlas specifies two points of reference: the [Bregma point](http://en.wikipedia.org/wiki/Bregma) and the midpoint of the intra-aural line. Both are indicated as [0, 0, 0] in the atlas, here we will use the Bregma point as origin.
 
 - The origin of the coordinate system is at the [Bregma point](http://en.wikipedia.org/wiki/Bregma).
 - The X-axis extends along the Medial-Lateral direction, with positive towards the right (see below).
