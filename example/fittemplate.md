@@ -46,61 +46,23 @@ In the next step we coregister the template head model with the Polhemus head sh
     cfg                         = ft_interactiverealign(cfg);
     template                    = ft_transform_geometry(cfg.m, template);
 
-## Removing unshared details between Polhemus and the template
-
-To create the individualized head model it is important that the scalp
-surface of the template head model only contains features that are also in the Polhemus head
-shape, and vice versa. We can use **[ft_defacemesh](/reference/ft_defacemesh)** to remove some features.
-
-So first we visualise both meshes:
-
-    ft_plot_mesh(template.bnd);  
-    ft_plot_mesh(polhemus);  
-
-{% include image src="/assets/img/example/fittemplate/template_surface_polhemus_surface_plot.png" %}
-
-As the template model and the Polhemus measurement have exclusive features, we will now remove these  
-
-    defaced_template      = template.bnd(1);
-    defaced_template.unit = template.unit
-
-    cfg              = [];
-    cfg.translate    = [-40 0 -50];
-    cfg.scale        = [200 200 200];
-    cfg.rotate       = [0 0 0];
-    defaced_template =  ft_defacemesh(cfg, defaced_template);
-
-    cfg              = [];
-    cfg.translate    = [-40 0 -50];
-    cfg.scale        = [200 200 200];
-    cfg.rotate       = [0 0 0];
-    defaced_polhemus =  ft_defacemesh(cfg, polhemus);
-
-Now we have another look at the surfaces
-
-    ft_plot_mesh(defaced_template);  
-    ft_plot_mesh(defaced_polhemus);  
-
-{% include image src="/assets/img/example/fittemplate/defaced_template_surface_polhemus_surface_plot.png" %}
-
-
 ## Determining and applying of the transformation
 
 ### Method 1: On the basis of spheres fitted to the head shapes
 
-For the first approach we will fit a sphere to the three fiducials and we will fit another sphere to the template head model. On the basis of difference of the center and scaling between the two spheres we can derive a transformation containing information of the translation and the global scaling.
+For the first approach we will fit a sphere to the head surface measured with the Polhemus and another sphere to the template head model. On the basis of difference of the center and scaling between the two spheres we can derive a transformation containing information of the translation and the global scaling.
 
 Fit a sphere to the MRI template
 
-    cfg=[];
-    cfg.method='singlesphere';
-    template_sphere = ft_prepare_headmodel(cfg, defaced_template);
+    cfg             = [];
+    cfg.method      = 'singlesphere';
+    template_sphere = ft_prepare_headmodel(cfg, template);
 
-Fit a sphere to the polhemus headshape
+Fit a sphere to the Polhemus headshape
 
-    cfg=[];
-    cfg.method = 'singlesphere';
-    polhemus_sphere = ft_prepare_headmodel(cfg, defaced_polhemus);
+    cf              = [];
+    cfg.method      = 'singlesphere';
+    polhemus_sphere = ft_prepare_headmodel(cfg, polhemus);
 
 Determine the global scaling and translation
 
@@ -125,9 +87,63 @@ Determine the global scaling and translation
 
 Apply the transformation to the template head model
 
-    template_sphere = ft_transform_geometry(transformation, template)
+    template_t_sphere = ft_transform_geometry(transformation, template);
 
-### Method 2: On the basis of the full head surface
+### Method 2: On the basis of fiducials
+
+With this method we describe a scaling method if we only have the fiducials recorded with the Polhemus.
+
+First we have to localise the fiducials on the template models.
+
+    cfg                = [];
+    cfg.method         = 'headshape';
+    fiducials          = ft_electrode_placement(cfg, template.bnd);
+
+{% include image src="\assets\img\example\fittemplate\electrodeplacement.png" %}  
+
+Fit a sphere to the MRI template
+
+    cfg             = [];
+    cfg.method      = 'singlesphere';
+    template_sphere = ft_prepare_headmodel(cfg, fiducials);
+
+Unfortunately for this data set we need to a bit of noise to the fiducials . Otherwise,
+the algorithm determining the sphere will not work correctly.
+
+    polhemus.fid.pos = polhemus.fid.pos+randn(3,3)/100     
+
+Fit a sphere to the fiducials, (For this example this radius should be 73.4mm, if not please repeat the previous step)
+
+    cfg              = [];
+    cfg.method      = 'singlesphere';
+    polhemus_sphere = ft_prepare_headmodel(cfg, polhemus.fid);
+
+Determine the global scaling and translation
+
+    scale = polhemus_sphere.r/template_sphere.r;
+
+    T2 = [1 0 0 template_sphere.o(1);
+          0 1 0 template_sphere.o(2);
+          0 0 1 template_sphere.o(3);
+          0 0 0 1                ];
+
+    T1 = [1 0 0 -template_sphere.o(1);
+          0 1 0 -template_sphere.o(2);
+          0 0 1 -template_sphere.o(3);
+          0 0 0 1                 ];
+
+    S  = [scale 0 0 0;
+          0 scale 0 0;
+          0 0 scale 0;
+          0 0 0 1 ];
+
+    transformation = T1*S*T2;
+
+Apply the transformation to the template head model
+
+    template_fiducials = ft_transform_geometry(transformation, template);
+
+### Method 3: On the basis of the full head surface
 
 This requires an external toolbox, which can be downloaded [here](https://sites.google.com/site/myronenko/research/cpd)
 
@@ -135,11 +151,46 @@ With this method we apply an affine transformation to the template head model to
 whole Polhemus head shape.  This not only applies a translation and rotation, but also a
 scaling in the different directions and some skewing.
 
+To create the individualized head model with this method it is important that the scalp
+surface of the template head model only contains features that are also in the Polhemus head
+shape, and vice versa. We can use **[ft_defacemesh](/reference/ft_defacemesh)** to remove some features.
+
+So first we visualise both meshes:
+
+    ft_plot_mesh(template.bnd);  
+    ft_plot_mesh(polhemus);  
+
+{% include image src="/assets/img/example/fittemplate/template_surface_polhemus_surface_plot.png" %}
+
+As the template model and the Polhemus measurement have exclusive features. The Polhemus measurement digitized facial details and part of the upper headsurface, it did not measure the head surface on the side and lower part of the back of the head. So we will now remove these from the template.
+
+    defaced_template      = template.bnd(1);
+    defaced_template.unit = template.unit
+
+    cfg              = [];
+    cfg.translate    = [-40 0 -50];
+    cfg.scale        = [200 200 200];
+    cfg.rotate       = [0 0 0];
+    defaced_template =  ft_defacemesh(cfg, defaced_template);
+
+    cfg              = [];
+    cfg.translate    = [-40 0 -50];
+    cfg.scale        = [200 200 200];
+    cfg.rotate       = [0 0 0];
+    defaced_polhemus =  ft_defacemesh(cfg, polhemus);
+
+Now we have another look at the surfaces
+
+    ft_plot_mesh(defaced_template);  
+    ft_plot_mesh(defaced_polhemus);  
+
+{% include image src="/assets/img/example/fittemplate/defaced_template_surface_polhemus_surface_plot.png" %}
+
 We will now use the template scalp and the Polhemus head shape to determine the
 affine transformation.
 
     cfg              = [];
-    cfg.headshape    = polhemus;
+    cfg.headshape    = defaced_polhemus;
     cfg.template     = defaced_template;
     cfg.method       = 'fittemplate';
     template_surface = ft_prepare_mesh(cfg, template.bnd);
@@ -148,10 +199,52 @@ affine transformation.
 
 Now that we have have the surfaces of the full template model (not only the scalp) transformed to fit the Polhemus measurement, we can recompute the volume conduction model
 
-    cfg = [];
-    cfg.method = 'openmeeg';
-    headmodel_sphere = ft_prepare_headmodel(cfg, template_sphere.bnd);
+### Openmeeg
 
-    cfg = [];
-    cfg.method = 'openmeeg';
+First we will create the volume conduction models using Openmeeg
+
+    cfg              = [];
+    cfg.conductivity = [0.33 0.0042 0.33];
+    cfg.method       = 'openmeeg';
+    headmodel_sphere = ft_prepare_headmodel(cfg, template_t_sphere.bnd);
+
+    ft_plot_mesh(headmodel_sphere.bnd(1))
+    ft_plot_mesh(polhemus)
+
+{% include image src="\assets\img\example\fittemplate\headmodel_sphere_polhemus.png" %}
+
+    cfg               = [];
+    cfg.conductivity  = [0.33 0.0042 0.33];
+    cfg.method        = 'openmeeg';
+    headmodel_fiducials = ft_prepare_headmodel(cfg, template_fiducials);    
+
+    ft_plot_mesh(headmodel_sphere.bnd(1))
+    ft_plot_mesh(polhemus)
+
+{% include image src="\assets\img\example\fittemplate\headmodel_fiducials_polhemus.png" %}
+
+    cfg               = [];
+    cfg.conductivity  = [0.33 0.0042 0.33];
+    cfg.method        = 'openmeeg';
     headmodel_surface = ft_prepare_headmodel(cfg, template_surface);    
+
+    ft_plot_mesh(headmodel_sphere.bnd(1))
+    ft_plot_mesh(polhemus)
+
+{% include image src="\assets\img\example\fittemplate\headmodel_surface_polhemus.png" %}
+
+### Taking the inner shell for a single shell model
+
+Another option is to create a single shell model. As we have scaled all 3 compartments of the template head model, we can create a single shell of the innermost boundary, which represents the brain compartment.
+
+    cfg                          = [];
+    cfg.method                   = 'singlesphere';
+    headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_t_sphere.bnd(3));
+
+    cfg                          = [];
+    cfg.method                   = 'singlesphere';
+    headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_fiducials.bnd(3));
+
+    cfg                          = [];
+    cfg.method                   = 'singlesphere';
+    headmodel_singleshell_sphere = ft_prepare_headmodel(cfg, template_surface(3));
