@@ -524,6 +524,9 @@ The Presentation log files for the visual stimuli had an \<enter\> after the per
 
 - Schoffelen JM, Hultén A, Lam N, Marquand AF, Uddén J, Hagoort P. [Frequency-specific directed interactions in the human brain network for language.](https://doi.org/10.1073/pnas.1703155114) Proc Natl Acad Sci U S A. 2017 Jul 25;114(30):8083-8088. doi: 10.1073/pnas.1703155114.
 
-- Lam NHL, Schoffelen JM, Uddén J, Hultén A, Hagoort P. Neural activity during sentence processing as reflected in theta, alpha, beta, and gamma oscillations.](https://doi.org/10.1016/j.neuroimage.2016.03.007) Neuroimage. 2016 Nov 15;142:43-54. doi: 10.1016/j.neuroimage.2016.03.007.
+- Lam NHL, Schoffelen JM, Uddén J, Hultén A, Hagoort P. [Neural activity during sentence processing as reflected in theta, alpha, beta, and gamma oscillations.](https://doi.org/10.1016/j.neuroimage.2016.03.007) Neuroimage. 2016 Nov 15;142:43-54. doi: 10.1016/j.neuroimage.2016.03.007.
 
 - Lam NHL, Hultén A, Hagoort P & Schoffelen JM. [Robust neuronal oscillatory entrainment to speech displays individual variation in lateralisation](https://doi.org/10.1080/23273798.2018.1437456) Language, Cognition and Neuroscience, 33:8, 943-954. doi: 10.1080/23273798.2018.1437456.
+
+- Schoffelen JM, Oostenveld R, Lam NHL, Uddén J, Hultén A & Hagoort P. [A 204-subject multimodal neuroimaging dataset to study
+language processing](https://doi.org/10.1038/s41597-019-0020-y) Scientific Data 2019 Apr 3;6(17). doi: 10.1038/s41597-019-0020-y.
