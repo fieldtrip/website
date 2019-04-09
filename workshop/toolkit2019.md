@@ -31,7 +31,7 @@ Registration is closed.
 
 - 09:00-10:45 Time-frequency analysis of power - [hands-on](/tutorial/timefrequencyanalysis)
 - 10:45-11:00 Coffee Break
-- 11:00-12:15 Spontaneous EEG and sleep - lecture
+- 11:00-12:15 Spontaneous EEG and sleep - [lecture](/assets/pdf/workshop/toolkit2019/sleep.pdf)
 - 12:15-13:15 Lunch
 - 13:15-15:15 Analysis of continuous EEG data - [hands-on](/tutorial/sleep)
 - 15:15-15:30 Tea break
