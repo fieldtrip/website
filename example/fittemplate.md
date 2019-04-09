@@ -17,7 +17,7 @@ These approaches will be demonstrated using the same dataset, which you can find
 
 ## Loading the data
 
-You load the head shape measured during the MEG recording with the Polhemus and a template volume conduction model. We have to ensure that they have consistent units, hence we will convert the units into mm.
+You load the head shape measured during the MEG recording with the Polhemus and a template volume conduction model. We have to ensure that they have consistent units, hence we will convert the units into mm. Expressing the data in mm will give a better expression of the data (i.e. 90mm vs. 0.09m).
 
     polhemus = ft_read_headshape('epilepsy/case1/ctf_data/case1.pos');
     polhemus = ft_convert_units(polhemus,'mm');
@@ -48,7 +48,7 @@ In this step you can already accurately rotate, translate and scale the template
 
 ### Method 1: On the basis of spheres fitted to the head shapes
 
-We will fit a sphere to the scalp surface measured with the Polhemus and another sphere to the scalp surface of the template. On the basis of difference of the center and scaling between the two spheres we derive a translation and the global scaling. Important to note is that the template head model consists of three surfaces (template.bnd) describing the (1) scalp, (2) skull and (3) brain.
+We will fit a sphere to the scalp surface measured with the Polhemus and another sphere to the scalp surface of the template. On the basis of the two spheres we can derive a translation and global scaling. Important to note is that the template head model consists of three surfaces (template.bnd) describing the (1) scalp, (2) skull and (3) brain. Only the scalp surface will be used to determine the sphere.
 
 Fit a sphere to the template scalp surface.
 
@@ -58,7 +58,7 @@ Fit a sphere to the template scalp surface.
 
 Fit a sphere to the Polhemus scalp surface
 
-    cf              = [];
+    cfg              = [];
     cfg.method      = 'singlesphere';
     sphere_polhemus = ft_prepare_headmodel(cfg, polhemus);
 
@@ -139,7 +139,12 @@ We determine the transformation and apply it to all 3 surfaces of the template h
 
 ## Computing the head models
 
-Now that we have the surfaces of the full template model (not only the scalp) transformed to fit the Polhemus measurement, we can recompute the volume conduction model. For this we need to specify conductivities for each compartment (scalp, skull and brain). 
+We can compute the volume conduction model on the basis of the refined template head models. For this we need to specify conductivities for each compartment (scalp, skull and brain). We specify these conductivities in SI units. Therefore the refined models need to be expressed in SI units as well.
+
+    template_fit_sphere  = ft_convert_units(template_fit_sphere,'m');
+    template_fit_surface = ft_convert_units(template_fit_surface,'m');
+
+
 
 ### Openmeeg
 
