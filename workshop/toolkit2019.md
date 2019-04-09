@@ -24,7 +24,7 @@ Registration is closed.
 - 12:00-13:00 Lunch
 - 13:00-15:00 Pre-processing - [hands-on](/tutorial/eventrelatedaveraging)
 - 15:00-15:15 Tea Break
-- 15:15-16:30 Time frequency analysis of power - [lecture]((/assets/pdf/workshop/toolkit2019/frequency.pdf)
+- 15:15-16:30 Time frequency analysis of power - [lecture](/assets/pdf/workshop/toolkit2019/frequency.pdf)
 - 16:30-17:15 Wrap-up-the-day: special topics, general questions and answers
 
 ### Tuesday April 9, 2019
