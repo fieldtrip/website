@@ -35,9 +35,9 @@ Registration is closed.
 - 12:15-13:15 Lunch
 - 13:15-15:15 Analysis of continuous EEG data - [hands-on](/tutorial/sleep)
 - 15:15-15:30 Tea break
-- 15:30-16:30 Forward and inverse modeling - lecture
+- 15:30-16:30 Forward and inverse modeling - [lecture](/assets/pdf/workshop/toolkit2019/forward_inverse.pdf)
 - 16:30-17:15 Wrap-up-the-day: special topics, general questions and answers
-- 18:30-22:00 Drinks & dinner at Mi Barrio
+- 18:30-22:00 Drinks & dinner at Mi Barrio - [Google Maps](https://goo.gl/maps/ZH9YuKnEZ3C2)
 
 ### Wednesday April 10, 2019
 
