@@ -15,11 +15,11 @@ This tutorial assumes that the steps of [preprocessing](/tutorial/preprocessing)
 
 ## Background
 
-** Multi-modal sleep recordings **
+### Multi-modal sleep recordings
 
 Discrete events and continuous shifts in activity during sleep are not easily observed in one modality by itself. They have to be identified and marked by using the combination of the different modalities. This is why sleep recordings span multiple modalities, each with clearly defined changes in the activity that are relatively easy to predict. We have some good understanding about the physiological relationships between the events and what is happening to the different body parts during sleep. Finally, most of the activity which we usually consider as artifacts in our task-related EEG recordings (e.g. eye movements, muscle and heart activity) occur here in a systematic manner and are considered important features of a sleep state rather than an artifact. Thus using sleep data allows us to safely explore how to identify changes in brain state in a well studied example. Here we can gain some skills to explore cross-modality relations in recordings that are less well defined, e.g. task or resting state recordings, or parllel recordings that expand the interpretability by adding features of other or related modalities (e.g. motion sensors, MEG, fMRI).
 
-** Sleep states by Polysomnography **
+### Sleep states by Polysomnography
 
 Sleep has well defined brain states which are called Wake, Stage 1, Stage 2, Stage 3, Stage 4 and rapid-eye-movement (REM) sleep. In the more recent terminology Stage 3 and Stage 4 are combined as one stage and called slow-wave sleep (SWS). A more coarse classification consists of Wake, REM and non-REM, where non-REM combines Stage 1, Stage 2 and SWS sleep. Often we have movement arousals as well as longer times with movement during sleep. These arousals and movement times do not necessarily reflect the Wake state, but give us information about sleep as well. Furthermore, the movements indicate where we can find artifactual data in our recordings we might want to exclude for more focused analyses. Sleep states happen usually in clearly defined temporal cycles about every 1 to 2 hours. An idealized sleep “hypnogram” example is given below. However, sleep varies a lot between individuals and real sleep “hypnograms” from two different individuals by expert scoring are given below.
 
@@ -590,10 +590,10 @@ Safe when (the samples of the R-waves occur for later
 
 {% include markup/info %}
 The R-peaks are difficult to see, since there are so many (>35000 heart beats during one night) use the MATLAB magnifying glass to zoom in.
-Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards). In this case the signal could be inverted by multiplying this channel's data with -1. For example: 
-      
-      data_continuous.trial{1}(4,:) = -1\*data_continuous.trial{1}(4,:)
-      
+Also it might be that the signal was recored in the opposite direction, that is the R-waves would be pointing down rather than up (which is the case here point downwards). In this case the signal could be inverted by multiplying this channel's data with -1. For example:
+
+      data_continuous.trial{1}(4,:) = -1 * data_continuous.trial{1}(4,:)
+
 {% include markup/end %}
 
 Check if the detected peaks are good estimates of the R-wave in the **[ft_databrowser](/reference/ft_databrowser)**
