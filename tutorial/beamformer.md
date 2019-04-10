@@ -29,7 +29,7 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 ## Procedure
 
-To localize the oscillatory sources for the example dataset we will perform the following step
+To localize the oscillatory sources for the example dataset we will perform the following steps:
 
 - Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Compute the cross-spectral density matrix using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
@@ -42,7 +42,7 @@ To localize the oscillatory sources for the example dataset we will perform the 
 
 ## Preprocessing
 
-The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
+The aim is to identify the sources of oscillatory activity in the beta band. From the section time-frequency analysis we have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. It is important that the length of each data piece matches an integer number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the post-stimulus time-window range between 0.8 to 1.3 s and the pre-stimulus interval between -0.5 to 0.0 s (see Figure 1).
 
 {% include image src="/assets/img/tutorial/beamformer/tfrbmf.png" width="700" %}
 
@@ -67,7 +67,7 @@ Now 'cut' out the pre- and post-stimulus time window
 
 As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
 
-1.  Suitable control windows are, for exampl
+1.  Suitable control windows are, for example:
     - Activity contrasted with baseline (example shown here using dataPre)
     - Activity of condition 1 contrasted with condition 2 (example not shown)
 2.  However, if no other suitable data condition or baseline time-window exists, then
@@ -79,7 +79,7 @@ The null hypothesis for both options within (1) is that the data in both conditi
 ### Exercise 1: data length
 
 {% include markup/info %}
-Why is it important that the length of each data piece is the length of a fixed number of oscillatory cycles?
+Why is it important that the length of each data piece matches an integer number of oscillatory cycles?
 {% include markup/end %}
 
 ## Calculating the cross spectral density matrix
@@ -116,11 +116,11 @@ Otherwise, segmentation involves the following steps ((**[ft_volumesegment](/ref
     cfg.write      = 'no';
     [segmentedmri] = ft_volumesegment(cfg, mri);
 
-Alternatively, you can load the segmented MRI available from the [FieldTrip ftp server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat
+Alternatively, you can load the segmented MRI available from the [FieldTrip ftp server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat)
 
     load segmentedmri
 
-Now prepare the head model from the segmented brain surfac
+Now prepare the head model from the segmented brain surface:
 
     cfg = [];
     cfg.method = 'singleshell';
@@ -175,14 +175,15 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
 
 The purpose of cfg.dics.projectnoise will become more clear in the section on Neural Activity Index. The purpose of lambda is discussed in Exercise 6.
 
-Save the outpu
-save sourcePost_nocon sourcePost_nocon
+Save the output:
+
+    save sourcePost_nocon sourcePost_nocon
 
 The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip ftp server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also is available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
 
     load sourcePost_nocon
 
-The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the measure of power increase with the structural MRI of the subject. The alignment is done according to the anatomical landmarks (nasion, left and right ear canal) that were both determined in the MEG measurement and in the MRI scan. Using the ft_volumereslice function before doing the interpolation ensures that the MRI is well behaved, because the reslicing causes the voxel axes to be aligned with the head coordinate axe
+The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the measure of power increase with the structural MRI of the subject. The alignment is done according to the anatomical landmarks (nasion, left and right ear canal) that were both determined in the MEG measurement and in the MRI scan. Using the ft_volumereslice function before doing the interpolation ensures that the MRI is well behaved, because the reslicing causes the voxel axes to be aligned with the head coordinate axes:
 
     mri = ft_read_mri('Subject01.mri');
     mri = ft_volumereslice([], mri);
@@ -214,7 +215,7 @@ Discuss why the source power is overestimated in the center of the brain. Hint 1
 
 ### Neural Activity Index
 
-If it is not possible to compare two conditions (e.g. A versus B or post versus pre) one can apply the neural activity index (NAI), in order to remove the center of the head bias shown above. The NAI is the power normalized with an estimate of the spatially inhomogeneous noise. An estimate of the noise has been done by **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, by setting cfg.dics.projectnoise='yes' (default is 'no'). This noise estimate was computed on the basis of the smallest eigenvalue of the cross-spectral density matrix. To calculate the NAI do the followin
+If it is not possible to compare two conditions (e.g. A versus B or post versus pre) one can apply the neural activity index (NAI), in order to remove the center of the head bias shown above. The NAI is the power normalized with an estimate of the spatially inhomogeneous noise. An estimate of the noise has been done by **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, by setting cfg.dics.projectnoise='yes' (default is 'no'). This noise estimate was computed on the basis of the smallest eigenvalue of the cross-spectral density matrix. To calculate the NAI do the following:
 
     sourceNAI = sourcePost_nocon;
     sourceNAI.avg.pow = sourcePost_nocon.avg.pow ./ sourcePost_nocon.avg.noise;
@@ -290,12 +291,12 @@ Now we can compute the contrast of (post-pre)/pre. In this operation we assume t
     sourceDiff = sourcePost_con;
     sourceDiff.avg.pow = (sourcePost_con.avg.pow - sourcePre_con.avg.pow) ./ sourcePre_con.avg.pow;
 
-Load and reslice the MRI if not done already in previous ste
+Load and reslice the MRI if not done already in previous step:
 
     mri = ft_read_mri('Subject01.mri');
     mri = ft_volumereslice([], mri);
 
-Then interpolate the source to the MR
+Then interpolate the source to the MRI:
 
     cfg            = [];
     cfg.downsample = 2;
@@ -401,8 +402,8 @@ Beamforming source analysis in the frequency domain with DICS has been demonstra
 Details on head models can be found [here](/tutorial/headmodel_meg) or [here](/example/make_leadfields_using_different_headmodels). Computing event-related fields with [MNE](/tutorial/minimumnormestimate) or [LCMV](/tutorial/beamformer_lcmv) might be of interest. More information on [common filters can be found here](/example/common_filters_in_beamforming).
 If you are doing a group study where you want the grid points to be the same over all subjects, [see here](/example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space). See [here for source statistics](/example/source_statistics).
 
-FAQ
+FAQs:
 {% include seealso tag1="source" tag2="faq" %}
 
-Example script
+Example scripts:
 {% include seealso tag1="source" tag2="example" %}
