@@ -17,7 +17,7 @@ FieldTrip is released under the [GNU General Public License](http://www.gnu.org/
 
 The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy/)
 
-All MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
+All MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>); the steps in the kurtosis pipeline itself are provided by [Dr Caroline Witton](https://www2.aston.ac.uk/lhs/staff/az-index/wittonc-0) on behalf of the Aston clinical team. The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
 The kurtosis beamformer method described here, for identifying the source(s) of epileptiform activity, was originally published by [Kirsch et al (2006)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5953276/).
 
@@ -36,7 +36,7 @@ There are some small differences in the parameters for the beamformer source ana
 
 ## Case 1
 
-_Male, age 9. Right parietal Glioma with epilepsy. Corticography also showed interictal discharges in the frontal lobe, though seizures were of parietal origin. Following the MEG, was operated in the right parietal area and is now partially seizure free._
+_Male, age 9. Right parietal Glioma with epilepsy. Corticography also showed interictal discharges in the frontal lobe, though the majority of seizures were of parietal origin. Following the MEG, was operated in the right parietal area and is now partially seizure free. This was a complex multifocal case, where prior clinical assessment using EEG had been inconclusive (non-localising), leading to the patient's referral for MEG._
 
 MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
@@ -104,7 +104,7 @@ Note that the patients head is tilted to the right. Apparently the anatomical la
 
 #### Importing and filtering the channel level data
 
-The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artefacts such as eyeblinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible.  At this point we assume that the clinician has already visually screened the raw data, but we can plot it out below.
+The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artefacts such as eyeblinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible.  At this point we assume that the clinician has already visually screened the raw data.  The current dataset is pretty clean and free of artefacts.
 
     dataset = 'case1.ds';
 
@@ -117,17 +117,6 @@ The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz
     cfg.channel   = 'MEG';
     data = ft_preprocessing(cfg);
      
-
-    %% visualize the preprocessed data
-
-    cfg = [];
-    cfg.viewmode = 'vertical';
-    cfg.channel  = 'MEG';
-    cfg.layout   = 'CTF275.lay';
-    cfg.event    = ft_read_event(dataset);
-    ft_databrowser(cfg, data);
-
-
 #### Construction of the volume conduction model of the head
 
 We will use the defaced MRI, which has been realigned with the CTF system and resliced
@@ -178,6 +167,8 @@ We plot everything out and check that it is all aligned correctly.
     ft_plot_sens(data.grad, 'unit', 'mm', 'coildiameter', 10);
     ft_plot_mesh(sourcemodel_grid.pos);
     ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced, 'style', 'intersect');
+    
+ {% include image src="/assets/img/tutorial/epilepsy/case1a_head.png" width="400" %}
 
 In the following stage, we compute the data covariance matrix for the beamformer source reconstruction.  We use the **[ft_timelockanalysis](/reference/ft_sourceanalysis)** function (more commonly used elsewhere to compute an average), and because we have not defined individual trials within the data it will produce the covariance matrix for the whole time period of the data.  
 
@@ -224,6 +215,10 @@ We are ready to explore the results visually, starting with the volumetric image
     cfg.method = 'slice';  % plot a series of slices
     ft_sourceplot(cfg, source_interp);
     
+    {% include image src="/assets/img/tutorial/epilepsy/case1a_result.png" width="400" %}
+    {% include image src="/assets/img/tutorial/epilepsy/case1a_slices.png" width="400" %}
+    
+
 At this stage, we can also write out our images (i.e., the resliced MRI and the kurtosis image that we just made) into NIFTI format so they can be imported into other software that may be more prevalent in clinical settings and merged with other clinical information.
      
     cfg = [];
@@ -238,8 +233,7 @@ At this stage, we can also write out our images (i.e., the resliced MRI and the 
     cfg.format = 'nifti';
     ft_volumewrite(cfg, source);
 
-
-Returning to our images in FieldTrip, we can scroll through the slices to see where the areas of high kurtosis fall. But to be more objective it is useful to identify each discrete peak location in the kurtosis data. Here we use a 3rd party function called [findpeaksn.m](https://github.com/vigente/gerardus/blob/master/matlab/PointsToolbox/findpeaksn.m) which needs to be downloaded separately and added to the matlab path. The Aston clinical team would typically examine every single peak but for simplicity we will just look at the top few. We plot the co-ordinates and some images. 
+Returning to our images in FieldTrip, we can scroll through the slices to see where the areas of high kurtosis fall.  But to be more objective it is useful to identify each discrete peak location in the kurtosis data. Here we use a 3rd party function called [findpeaksn.m](https://github.com/vigente/gerardus/blob/master/matlab/PointsToolbox/findpeaksn.m) which needs to be downloaded separately and added to the matlab path. The Aston clinical team would typically examine every single peak but for simplicity we will just look at the top few. We display the co-ordinates and plot some images. 
 
     [ispeak] = findpeaksn(reshape(source.avg.kurtosis, source.dim)); % We need to input a 3d array instead of a 1 x n voxels array.
     j = find(ispeak(:));
@@ -256,19 +250,21 @@ Returning to our images in FieldTrip, we can scroll through the slices to see wh
         ft_sourceplot(cfg, source_interp);
     end
 
+(In this complicated case study, the peak that falls near the glioma is quite far down the list, shown in this image)
+{% include image src="/assets/img/tutorial/epilepsy/case1a_nearlesion.png" width="400" %}
+
 #### Visualise the beamformer timeseries in AnyWave
 It is also clinically important to visualise the spikes that are contributing to the kurtosis images, not least to screen out any spurious sources which may be elicited by artefacts.  To do this, it is useful to have the original sensor data visible alongside the source timeseries. Marking the timepoints at which spikes occur at the sources can help the clinician scroll more easily through the data. We will write the data to a format that can be read by the open-source package [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), which is well-suited to this purpose.
 
 When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data.  So we import that to Fieldtrip and then append source timeseries data, adding header information for this, before writing the whole lot to the AnyWave ADES file format. 
 
-    % dataset = 'case1_sss_hpi.fif'  % our original data file
+  
     cfg = [];
     cfg.dataset   = dataset;
     cfg.channel   = 'MEG';
     data = ft_preprocessing(cfg);
     dat = ft_fetch_data(data);  
     hdr = ft_fetch_header(data);
-
 
     % then append the source hdr and data to the channel hdr and data. 
     nsources = 10;  % for simplicity here we just append the top 10 source timeseries.
@@ -283,9 +279,9 @@ When we read in the data earlier, we filtered it, but here it is more useful to 
     % write to files
     ft_write_data(filename, dat, 'header', hdr, 'dataformat', 'anywave_ades');
 
-_(Notes:  At the time of writing, units for the source timeseries in AnyWave are abitrary. Also, it is currently advisable to write all data to file at the same time rather than attempting to append source timeseries to an existing data file)._
+_(Notes:  At the time of writing, units for the source timeseries in AnyWave are abitrary. Also, it is advisable to write all data to file at the same time rather than attempting to append source timeseries to an existing data file)._
 
-Finally we can automatically mark potential spikes in the source timeseries data and create labels in AnyWave marker file format.  We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source timeseries exceeds 6 standard deviations of its mean.  
+Finally we can automatically mark potential spikes in the source timeseries data and create labels in AnyWave marker file format.  We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source timeseries exceeds 6 standard deviations of its mean.  In our marker file, there is one label for each source, so events on the marker labelled '1' correspond to spikes on the timeseries from peak number 1 in the image.  Marker 2 indicates events occurring at peak number 2, etc., etc. 
 
     fid = fopen([filename,'.mrk'], 'w+'); 
     fprintf(fid,'%s\r\n','// AnyWave Marker File ');
@@ -311,15 +307,13 @@ Finally we can automatically mark potential spikes in the source timeseries data
 The data can now be opened in AnyWave.  Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data.  Set the timescale to be
 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropritely. Use the menu to import the marker file that we just created.
 
-
-
+The ABC clinicians examined the source data alongside other information including anatomical imaging of the lesion in the left parietal lobe, and seizure semiology, and their observations were followed up by the surgical with corticography in the zone surrounding the lesion. Surgery in the area surrounding the lesion resulted in a significant reduction in seizures for the patient.  The data are several years old and nowadays SEEG would be the normal follow-up procedure subsequent to neuroimaging. 
 
 ### Analysis of the MEGIN dataset
 
-The MEGIN (formerly Elekta) dataset was collected from the same patient on the same day as the CTF dataset described above. So, we expect the results to be very similar to those yielded by the CTF data.
+The MEGIN (formerly 'Elekta' or 'Neuromag') dataset was collected from the same patient on the same day as the CTF dataset described above. So, we expect the results to be very similar to those yielded by the CTF data.
 
 Generally the analysis of MEGIN data is almost identical to the analysis of CTF data.  So this part of the tutorial has fewer comments than above. However there is one important difference, related to the processing of Maxfiltered data, which is addressed in more detail in the relevant tutorial sections below.  Maxfilter is MEGIN's proprietary pre-processing system which offers some improvements in signal-to-noise ratio and artefact handling, and potential for head movement correction. Importantly it is obligatory in datasets where active shielding ('MaxShield') was used during data collection and indeed the epilepsy data used here required preprocessing with Maxfilter for this reason.  But Maxfilter has effects on the data covariance which can cause problems in accurately computing the beamformer source model.  Some ways to optimise the beamformer calculations to avoid these problems are demonstrated below. 
-
 
 #### Coregistering the data
 For patient confidentiality we only include here the MRI which has already been coregistered with the data, defaced, and resliced to align it to the data head co-ordinate system.  The process for coregistration is identical to the one described above, except that in the MEGIN file system the polhemus head shape points are stored in the raw data file. When we reslice this MRI, it becomes aligned with the MEGIN co-ordinate system (RAS) which means that slice images are shown in a different set of orientations to the CTF data that has been aligned to its own co-ordinate system (see the following [tutorial](http://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/) for more details).
@@ -330,16 +324,16 @@ For patient confidentiality we only include here the MRI which has already been 
     
 #### Importing and filtering the sensor level data
 
-MEGIN MEG data has two channel types, and we are importing them both here.  With the checks we will perform later, there is no need to exclude one or the other channel type. We apply the same 10-70 Hz bandpass filter as for the CTF analysis.  In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artefact, so we omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording.   
+MEGIN MEG data has two channel types, but we are only going to import the gradiometer data for now. We apply the same 10-70 Hz bandpass filter as for the CTF analysis.  In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artefact, so we omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording.   
 
-    dataset = 'case1_sss_hpi.fif'
+    dataset = 'case1_cHPI_raw_trans_sss.fif'
     cfg = [];
     cfg.dataset   = dataset;
     cfg.hpfilter  = 'yes';
     cfg.hpfreq    = 10;
     cfg.lpfilter  = 'yes';
     cfg.lpfreq    = 70;
-    cfg.channel   = 'MEG';  
+    cfg.channel   = 'meggrad';  
     cfg.trl = [21*2000 255000 0];  % omit the first 20 seconds (numbers based on pre-screening of data)
     data = ft_preprocessing(cfg);
     
@@ -381,12 +375,15 @@ This step is identical to the method for the CTF data, up until the very last st
     cfg.zrange = [min(sourcemodel_grid.pos(:,3))-30 max(sourcemodel_grid.pos(:,3))+30];
     mri_coreg_resliced = ft_volumereslice(cfg, mri);  
 
-    %% plot out what we have got to check alignment
+    %% plot out what we have done to check alignment
     figure
     ft_plot_headmodel(headmodel, 'unit', 'mm');  %this is the brain shaped head model volume
     ft_plot_sens(data.grad, 'unit', 'mm', 'coilsize', 10);  %this is the sensor locations  
     ft_plot_mesh(sourcemodel_grid.pos); % the source model is a cubic grid of points 
     ft_plot_ortho(mri.anatomy, 'transform', mri.transform, 'style', 'intersect');
+    
+    
+{% include image src="/assets/img/tutorial/epilepsy/case1b_head.png" width="400" %}
 
 
     cfg = [];
@@ -403,12 +400,15 @@ This step is identical to the method for the CTF data, up until the very last st
     leadfield = ft_prepare_leadfield(cfg, cov_matrix);  
 
 
-At this point the analysis deviates from the CTF analysis because we need to account for differences in the covariance matrix that result from Maxfilter. First, we perform a singular value decomposition of the covariance matrix and plot the singular values, 's'. These are plotted in descending order, and two discontinuities can be seen which reflect the nature of this maxfiltered data.  The first, and most important, occurs at around the 67th value for this dataset.  This reflects the effects of Maxfilter, which has reconstructed the data based on (typically) 80 components.  The second discontinuity is at the 204th value, which reflects the different sensor types: 204 planar gradiometers and 102 magnetometers. 
+At this point the analysis deviates from the CTF analysis because we need to account for differences in the covariance matrix that result from Maxfilter. First, we perform a singular value decomposition of the covariance matrix and plot the singular values, 's'. These are plotted in descending order, and the discontinuity that occurs after the 68th value reflects the effects of Maxfilter, which has reconstructed the data based on (typically) about 80 components.   
 
     [u,s,v] = svd(cov_matrix.cov);
     figure;semilogy(diag(s),'o-');
     
-As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa.  We set this at the value just before the big 'cliff' in the singular values.  We also set a parameter called lambda which can be considered a weighting factor for the regularisation.  
+{% include image src="/assets/img/tutorial/epilepsy/case1b_gradsonlysvd.png" width="400" %}
+
+    
+As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa.  We set this at a value before the big 'cliff' in the singular values.  We also set a parameter called lambda which can be considered a weighting factor for the regularisation.  
 
     cfg                  = [];
     cfg.method           = 'lcmv';
@@ -418,7 +418,7 @@ As we compute the LCMV beamformer below, we can use the information from the SVD
     cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
     cfg.lcmv.reducerank  = 2;
     cfg.lcmv.lambda      = '5%';
-    cfg.lcmv.kappa       = 68;
+    cfg.lcmv.kappa       = 65;
     cfg.lcmv.projectmom = 'yes';  %project dipole timeseries for each dipole in direction of maximal power (see below)
     cfg.lcmv.kurtosis = 'yes';
     source = ft_sourceanalysis(cfg, cov_matrix);
@@ -443,6 +443,15 @@ Plotting the images:
     cfg.funparameter = 'kurtosis';
     cfg.method = 'slice';  % plot slices
     ft_sourceplot(cfg, source_interp);
+    
+{% include image src="/assets/img/tutorial/epilepsy/case1b_result.png" width="400" %}
+
+{% include image src="/assets/img/tutorial/epilepsy/case1b_slices.png" width="400" %}
+
+
+We can see here that the results are similar, but not identical to the results from the CTF data. Both analyses reveal an area of relatively high kurtosis adjacent to the lesion, a glioma in the right parietal area.  This was the area followed up by the surgical team, based on the kurtosis data (originally analysed in CTF software) interpreted in the context of seizure semiology and neuroanatomy.  Both analyses also yielded a strong peak in the left frontal cortex, which is also thought to be clinically significant (the peak indicated by the crosshairs in the image above).  
+In contrast with the CTF data, this analysis of the MEGIN data did not show an activation in the right frontal cortex, perhaps because of differences in the patterns of spiking activity in the different recordings, or alternatively perhaps because the patient's head was located further from these sensors in this recording (see note below about this).  The deeper activity that can be seen in the slice images appears to be located in white matter, but is potentially leakage from activity propagated to deeper areas e.g. insula cortex.  
+
     
  Writing the images to NIFTI:
     
@@ -474,11 +483,9 @@ Identifying the peaks in the image:
     end
     
     
- << insert here a description of the differences in output between the CTF and Elekta datasets >>   
-
 Output the timeseries to AnyWave format:
  
-    % dataset = 'case1_sss_hpi.fif'  % our original data file
+    % dataset = 'case1_cHPI_raw_trans_sss.fif'  % our original data file
     cfg = [];
     cfg.dataset   = dataset;
     cfg.channel   = 'MEG';
@@ -520,22 +527,10 @@ Create a marker file:
     fclose(fid);
 
 
+{% include image src="/assets/img/tutorial/epilepsy/case1b_anywave.png" width="600" %}
 
 
+#### Note about head position
+The flexibility of analysis in Fieldtrip can offer additional information to support data interpretation. For example, the step above where the MRI, sensors, headmodel and mesh are plotted together, can be used to examine positioning within the MEG helmet.  This can be particularly important for clinical analysis with children because, with smaller heads, they have potential to move quite far from the sensors.  In the Maxfiltering process for the MEGIN data above, the continuous head position monitoring had allowed the sensor timeseries to be realigned to a 'standard' position in the centre of the MEG helmet so this effect is not observed.  However if the head position is plotted for a version of the data where this head position correction was not done, the original positioning of the brain in relation to the sensors can be seen.  In this case, the child patient's head was not centrally located during the recording.  This might explain the lack of activation in the right temporal lobe for this dataset and underlines the need for MEG systems which better serve paediatric recordings.    
 
-
-### 
-
-## Case 2
-
-_Female, age 14. Epilepsy. Referral for MEG because EEG did not allow laterlisation or localisation of discharges, though clinically they appeared to come from the left hemisphere. Functional neuroimaging in the form of a PET scan showed a right area of hypo metabolism. Surgical follow-up information about this patient is not available._
-
-MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
-
-### Analysis of the CTF dataset
-
-FIXME
-
-### Analysis of the Elekta dataset
-
-FIXME
+{% include image src="/assets/img/tutorial/epilepsy/case1b_headpos.png" width="400" %}
