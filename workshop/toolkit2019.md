@@ -41,12 +41,12 @@ Registration is closed.
 
 ### Wednesday April 10, 2019
 
-- 09:00-10:00 Source reconstruction using beamformers - lecture
+- 09:00-10:00 Source reconstruction using beamformers - [lecture](/assets/pdf/workshop/toolkit2019/beamformer.pdf)
 - 10:00-10:45 Beamforming - [hands-on](/tutorial/beamformer)
 - 10:45-11:00 Coffee Break
 - 11:00-12:15 Beamforming - [hands-on](/tutorial/beamformer)
 - 12:15-13:15 Lunch
-- 13:15-14:15 Connectivity analysis in MEG and EEG data - lecture
+- 13:15-14:15 Connectivity analysis in MEG and EEG data - [lecture](/assets/pdf/workshop/toolkit2019/connectivity.pdf)
 - 14:15-15:00 Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity)
 - 15:00-15:15 Tea Break
 - 15:30-16:30 Analysis of sensor- and source-level connectivity - [hands-on](/tutorial/connectivity)
