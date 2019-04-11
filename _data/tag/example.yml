@@ -76,6 +76,9 @@
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
 
+- name:  How to create a head model if you do not have an individual MRI
+  link:  /example/fittemplate
+
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
