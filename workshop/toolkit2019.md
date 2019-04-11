@@ -54,7 +54,7 @@ Registration is closed.
 
 ### Thursday April 11, 2019
 
-- 09:00-10:30 Statistics using non-parametric randomization techniques - lecture
+- 09:00-10:30 Statistics using non-parametric randomization techniques - [lecture](/assets/pdf/workshop/toolkit2019/statistics.pdf)
 - 10:30-10:45 Coffee break
 - 10:45-12:00 Statistics using non-parametric randomization techniques - [hands-on](/tutorial/cluster_permutation_timelock)
 - 12:00-13:00 Lunch
