@@ -59,7 +59,7 @@ Registration is closed.
 - 10:45-12:00 Statistics using non-parametric randomization techniques - [hands-on](/tutorial/cluster_permutation_timelock)
 - 12:00-13:00 Lunch
 - 13:00-14:00 Statistics using non-parametric randomization techniques - [hands-on](/tutorial/cluster_permutation_timelock)
-- 14:00-15:00 Large scale analyses and open science - lecture
+- 14:00-15:00 Large scale analyses and open science - [lecture](/assets/pdf/workshop/toolkit2019/openscience.pdf)
 - 15:00-15:15 Tea break
 - 15:15-17:15 FieldTrip playground part 1
 - 17:15-18:00 Wrap-up-the-day: special topics, general questions and answers
