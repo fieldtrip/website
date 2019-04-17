@@ -19,7 +19,7 @@ The information on this page originates from the human intracranial data analysi
 
 ## Background
 
-The example iEEG data set was acquired at the Medical Center of the University of California, Irvine. The Office for the Protection of Human Subjects of the University of California, Berkeley, approved the study and the subject gave informed consent. The data set includes a pre-implant MRI, a post-implant CT, a post-implant MRI, and neural recordings from 96 ECoG and 56 SEEG electrodes that were implanted as part of the preparation for the epilepsy surgery. The neural data were recorded in the context of an experiment that required the patient to press a button with the right hand when hearing a target tone. The original dataset (after defacing the imaging data with ft_defacevolume) and the processed results are available for download from [here](https://doi.org/10.5281/zenodo.1201560). Raw DICOM images and recording files are not shared to protect the subject's identity.
+The example iEEG data set was acquired at the Medical Center of the University of California, Irvine. The Office for the Protection of Human Subjects of the University of California, Berkeley, approved the study and the subject gave informed consent. The data set includes a pre-implant T1-weighted MRI, a post-implant CT, a post-implant T1-weighted MRI, and neural recordings from 96 ECoG and 56 SEEG electrodes that were implanted as part of the preparation for the epilepsy surgery. The neural data were recorded in the context of an experiment that required the patient to press a button with the right hand when hearing a target tone. The original dataset (after defacing the imaging data with ft_defacevolume) and the processed results are available for download from [here](https://doi.org/10.5281/zenodo.1201560). Raw DICOM images and recording files are not shared to protect the subject's identity.
 
 This particular iEEG dataset was chosen for three reasons. First, it contains neural recordings from both cortical grid (ECoG) and stereotactically inserted depth electrodes (SEEG), requiring strategies for dealing with each type as well as their combination in the analysis. Second, the pre-implant MRI is not of the best quality (a contrast agent was used), electrodes of adjacent cortical grids have seemingly merged with one another in the post-implant CT, and there is significant electrode displacement due to a subdural hygroma contributing to so-called "brain shift". These issues reflect real-world challenges in intracranial data analysis, allowing demonstrating the analysis of non-ideal data. Finally, the experimental paradigm is simple enough to need no further explanation, yet requires performing all the fundamental steps underlying the analysis of intracranial data recorded using a more complex experimental paradigm.
 
@@ -82,7 +82,7 @@ For tutorial purposes, the example dataset contains the output from FreeSurfer, 
     'mri_convert -c -oc 0 0 0 ' mrfile ' ' [subdir '/tmp.nii'] '; ' ...
     'recon-all -i ' [subdir '/tmp.nii'] ' -s ' 'freesurfer' ' -sd ' subdir ' -all'])
 
-PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of the anatomical MRI currently may take up 10 hours or more.
+PAUSE POINT FreeSurfer's fully automated segmentation and cortical extraction of a T1-weighted MRI can take 10 hours or more.
 
 **7**) Import the extracted cortical surfaces into the MATLAB workspace and examine their quality. Repeat the following code using rh.pial to visualize the pial surface of the right hemisphere.
 
