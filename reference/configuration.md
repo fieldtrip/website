@@ -1745,6 +1745,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.mvpa.metric** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
+**cfg.mvpa.neighbours** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+
+
 **cfg.mvpa.normalise** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
@@ -1758,6 +1761,9 @@ A detailed description of each function is available in the [reference documenta
 
 
 **cfg.mvpa.replace** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
+
+
+**cfg.mvpa.size** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
 
 
 **cfg.mvpa.stratify** - [ft_statistics_mvpa](/reference/ft_statistics_mvpa)  
