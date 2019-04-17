@@ -1231,7 +1231,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.headmovement** - [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)  
 
 
-**cfg.headshape** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)  
+**cfg.headshape** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_megplanar](/reference/ft_megplanar), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_layout](/reference/ft_prepare_layout), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer)  
 
 
 **cfg.headshape.headshape** - [ft_volumerealign](/reference/ft_volumerealign)  
@@ -2283,7 +2283,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.roi** - [ft_sourceplot](/reference/ft_sourceplot), [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup), [ft_volumelookup](/reference/ft_volumelookup)  
 
 
-**cfg.rotate** - [ft_layoutplot](/reference/ft_layoutplot), [ft_prepare_layout](/reference/ft_prepare_layout)  
+**cfg.rotate** - [ft_defacemesh](/reference/ft_defacemesh), [ft_defacevolume](/reference/ft_defacevolume), [ft_layoutplot](/reference/ft_layoutplot), [ft_prepare_layout](/reference/ft_prepare_layout)  
 
 
 **cfg.rotatenumberofccw90degslicerotations** - [ft_sliceinterp](/reference/ft_sliceinterp)  
@@ -2794,7 +2794,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.target.pos** - [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign), [ft_electroderealign](/reference/ft_electroderealign)  
 
 
-**cfg.template** - [ft_megrealign](/reference/ft_megrealign), [ft_megrealign](/reference/ft_megrealign), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
+**cfg.template** - [ft_megrealign](/reference/ft_megrealign), [ft_megrealign](/reference/ft_megrealign), [ft_megrealign](/reference/ft_megrealign), [ft_prepare_mesh](/reference/ft_prepare_mesh), [ft_prepare_neighbours](/reference/ft_prepare_neighbours), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel), [ft_realtime_headlocalizer](/reference/ft_realtime_headlocalizer), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
 
 
 **cfg.template.axes** - [ft_interactiverealign](/reference/ft_interactiverealign)  
@@ -2890,7 +2890,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.transform** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
 
 
-**cfg.translate** - [ft_defacemesh](/reference/ft_defacemesh), [ft_defacemesh](/reference/ft_defacemesh), [ft_defacevolume](/reference/ft_defacevolume), [ft_defacevolume](/reference/ft_defacevolume)  
+**cfg.translate** - [ft_defacemesh](/reference/ft_defacemesh), [ft_defacevolume](/reference/ft_defacevolume)  
 
 
 **cfg.trialborders** - [ft_spike_plot_raster](/reference/ft_spike_plot_raster)  
