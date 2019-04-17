@@ -2,14 +2,13 @@
 title: ft_plot_cloud
 ---
 ```
- FT_PLOT_CLOUD visualizes spatially sparse scalar data as points, spheres,
- discs, or spherical clouds of points and optionally 2D slices through the 
- spherical clouds
+ FT_PLOT_CLOUD visualizes spatially sparse scalar data as points, spheres, discs, or
+ spherical clouds of points and optionally 2D slices through the spherical clouds
 
  Use as
    ft_plot_cloud(pos, val, ...)
- where the first argument are the sensor positions and the second argument are the
- sensor values.
+ where the first argument are the positions and the second argument are the values
+ for each location.
 
  Optional input arguments should come in key-value pairs and can include
    'cloudtype'          = 'point' plots a single 2D point at each sensor position (see plot3)
@@ -17,7 +16,7 @@ title: ft_plot_cloud
                           'surf' plots a single spherical surface mesh at each sensor position
                           'disc' plots a single cylindrical disc at each sensor position aligned with the mesh (required)
    'scalerad'           = scale radius with val, can be 'yes' or 'no' (default = 'yes')
-   'radius'             = scalar, maximum radius of cloud (default = 4)
+   'radius'             = scalar, maximum radius of cloud (default = 4 mm)
    'clim'               = 1x2 vector specifying the min and max for the colorscale
    'unit'               = string, convert the sensor array to the specified geometrical units (default = [])
    'mesh'               = string or Nx1 cell-array, triangulated mesh(es), see FT_PREPARE_MESH
@@ -26,14 +25,12 @@ title: ft_plot_cloud
                           '3d', draws an outline around the mesh at a particular slice
 
  The following inputs apply when 'cloudtype' = 'cloud'
-   'rmin'               = scalar >= 1, minimum radius of cloud if scalerad = 'yes' (default = 1)
+   'rmin'               = scalar >= 1, minimum radius of cloud if scalerad = 'yes' (default = 1 mm)
    'colormap'           = colormap for functional data, see COLORMAP
-   'colorgrad'          = 'white' or a scalar (e.g. 1), degree to which color of points
-                          in cloud changes from its center
-   'ptsize'             = scalar, size of points in cloud (default = 1)
-   'ptdensity'          = scalar, density of points in cloud (default = 20)
-   'ptgradient'         = scalar, degree to which density of points in cloud changes
-                          from its center, default = .5 (uniform density)
+   'colorgrad'          = 'white' or a scalar (e.g. 1), degree to which the saturatoin of points in cloud changes from its center
+   'ptsize'             = scalar, size of points in cloud (default = 1 mm)
+   'ptdensity'          = scalar, density of points in cloud (default = 20 per mm^3)
+   'ptgradient'         = scalar, degree to which density of points in cloud changes from its center (default = 0.5, i.e. uniform density)
 
  The following options apply when 'cloudtype' = 'point'
    'marker'          = marker type representing the channels, see plot3 (default = '.')
@@ -56,5 +53,5 @@ title: ft_plot_cloud
    'scalealpha'      = 'yes' or 'no', scale the maximum alpha value of the center circle
                        with distance from center of cloud
 
- See also FT_ELECTRODEPLACEMENT, FT_PLOT_TOPO, FT_PLOT_TOPO3D
+ See also FT_ELECTRODEPLACEMENT, FT_PLOT_SENS, FT_PLOT_TOPO, FT_PLOT_TOPO3D
 ```
