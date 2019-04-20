@@ -91,6 +91,10 @@ Jarvis MR, Mitra PP. [Sampling properties of the spectrum and coherency of seque
 
 Tallon-Baudry C, Bertrand O, Delpuech C, Permier J. [Oscillatory gamma-band (30-70 Hz) activity induced by a visual search task in humans.](http://www.ncbi.nlm.nih.gov/pubmed/8987794) J Neurosci. 1997 Jan 15;17(2):722-34.
 
+### Irregular-resampling auto-spectral analysis (IRASA)
+
+Wen H, Liu Z. [Separating fractal and oscillatory components in the power spectrum of neurophysiological signal.](https://www.ncbi.nlm.nih.gov/pubmed/26318848) Brain Topogr. 2016 Jan;29(1):13-26.
+
 ## Dealing with different head positions and with movements
 
 Knosche TR. [Transformation of whole-head MEG recordings between different sensor positions.](http://www.ncbi.nlm.nih.gov/pubmed/11977444) Biomed Tech (Berl). 2002 Mar;47(3):59-62.
