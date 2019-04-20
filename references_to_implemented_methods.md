@@ -95,7 +95,7 @@ Tallon-Baudry C, Bertrand O, Delpuech C, Permier J. [Oscillatory gamma-band (30-
 
 Knosche TR. [Transformation of whole-head MEG recordings between different sensor positions.](http://www.ncbi.nlm.nih.gov/pubmed/11977444) Biomed Tech (Berl). 2002 Mar;47(3):59-62.
 
-Stolk A, Todorovic A, Schoffelen J-M, Oostenveld R. [Online and offline tools for head movement compensation in MEG.] (https://doi.org/10.1016/j.neuroimage.2012.11.047) NeuroImage. 2013.
+Stolk A, Todorovic A, Schoffelen J-M, Oostenveld R. [Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047) NeuroImage. 2013.
 
 ## Scalp current density mapping
 
