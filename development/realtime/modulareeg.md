@@ -9,7 +9,7 @@ This page describes the interface between the 2-6 channel Modular EEG amplifier 
 
 ## Standalone program modeeg2ft/modeeg2ft_2chn
 
-We provide two standalone tools (see ''realtime/src/acquisition/modeeg'' and ''realtime/bin'') to grab data from the serial port, and stream it to a FieldTrip buffer. The first one is called **modeeg2ft** and allows to specify which channels to stream and save in a configuration file like this:
+We provide two standalone tools (see "realtime/src/acquisition/modeeg" and "realtime/bin") to grab data from the serial port, and stream it to a FieldTrip buffer. The first one is called **modeeg2ft** and allows to specify which channels to stream and save in a configuration file like this:
 
     [select]
     1=Left
@@ -19,18 +19,18 @@ You would then call the application like this:
 
     modeeg2ft COM5: config.txt  nameOfGDF  localhost  1972
 
-where ''COM5:'' is the serial port on which the amplifier is connected (use something like ''/dev/ttyS0'' on Linux), ''config.txt'' is the name of the configuration file, ''nameOfGDF'' is the name of the GDF file where data should be saved to (extension ''.gdf'' will be added automatically), and ''localhost'' and ''1972'' are the address and port number of the buffer server (actually, these are the defaults for the last two arguments, so you can leave them out). In case you want to have the buffer server
+where "COM5:" is the serial port on which the amplifier is connected (use something like "/dev/ttyS0" on Linux), "config.txt" is the name of the configuration file, "nameOfGDF" is the name of the GDF file where data should be saved to (extension ".gdf" will be added automatically), and "localhost" and "1972" are the address and port number of the buffer server (actually, these are the defaults for the last two arguments, so you can leave them out). In case you want to have the buffer server
 inside this application, replace the hostname by a minus (-).
 
 The second tool is called **modeeg2ft_2chn** and is basically a simplication of **modeeg2ft**: For this, always two channels are read, and there is no need for a configuration file. Just call for example
 
     modeeg2ft_2chn COM5:  nameOfGDF  localhost  1972
 
-If you don't want to save data to GDF, you can replace the second argument (''nameOfGdf'') by a minus (-).
+If you don't want to save data to GDF, you can replace the second argument ("nameOfGdf") by a minus (-).
 
 ### Compilation
 
-On the command line, change to the ''realtime/datasource/modeeg'' directory and type ''make''. The Makefile will also work with the MinGW compiler on
+On the command line, change to the "realtime/datasource/modeeg" directory and type "make". The Makefile will also work with the MinGW compiler on
 Windows. Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
 ### Support for macOS
@@ -60,7 +60,7 @@ The device that we have at the Donders has a "BlueSmirf FireFly" bluetooth inter
 
 On Linux and macOS it is also possible to read from a serial port or bluetooth interface from within MATLAB. To help in decoding the communication protocol, i.e. the byte stream that is sent over the serial interface, we also made a MATLAB implementation.
 
-The MATLAB implementation can be found in ''realtime/example/ft_realtime_modeegproxy''.
+The MATLAB implementation can be found in "realtime/example/ft_realtime_modeegproxy".
 
 It reads the data from the serial interface and copies the first two channels to a FieldTrip [buffer](/development/realtime/buffer_overview).
 

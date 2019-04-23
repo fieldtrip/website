@@ -50,7 +50,7 @@ Leaving out the last two arguments spawns a local buffer on the default port 197
 
 #### Compilation
 
-On the command line, change to the ''realtime/datasource/BrainAmp'' directory and type ''make''. The Makefile will also work with the MinGW compiler on
+On the command line, change to the "realtime/datasource/BrainAmp" directory and type "make". The Makefile will also work with the MinGW compiler on
 Windows. You will need to [compile](/development/realtime/reference_implementation#compiling_the_code) the **libbuffer** library first.
 
 ### Alternative interface using BCI2000
@@ -59,7 +59,7 @@ The RDA interface to BrainVision Recorder is also supported by [BCI2000](http://
 
 ## Streaming data from a FieldTrip buffer to an RDA client
 
-We have developed a tool that acts as an RDA server with a FieldTrip buffer as its data source. This enables users to connect any data acquisition system that can write to a FieldTrip buffer to any piece of analysis software that uses the RDA client interface. This tool (the RDA server) is written in C with a simple API to spawn the server thread, and as such can be easily embedded in bigger applications. So far we only provide one example, namely **demo_buffer_rda** in the ''realtime/buffer/test'' directory. Usually the RDA server will be spawned by the same application that hosts the FieldTrip buffer, but this is not necessary - actually the two servers can even run on different machines.
+We have developed a tool that acts as an RDA server with a FieldTrip buffer as its data source. This enables users to connect any data acquisition system that can write to a FieldTrip buffer to any piece of analysis software that uses the RDA client interface. This tool (the RDA server) is written in C with a simple API to spawn the server thread, and as such can be easily embedded in bigger applications. So far we only provide one example, namely **demo_buffer_rda** in the "realtime/buffer/test" directory. Usually the RDA server will be spawned by the same application that hosts the FieldTrip buffer, but this is not necessary - actually the two servers can even run on different machines.
 
 Users can spawn both a server for 16-bit integer data (default port 51234), which only streams out data if the FieldTrip buffer actually contains 16-bit data itself, and a server for 32-bit floating point data (default port 51244), which automatically converts the data contained in the FieldTrip buffer on the fly.
 

@@ -5,7 +5,7 @@ tags: [realtime, development]
 
 ## FieldTrip buffer C implementation
 
-The best example for integrating the FieldTrip buffer in your own application is in the ''demo_sinewave'' and the ''demo_combined'' command-line applications. They implement a sinewave signal generator that writes its data to the buffer. The ''demo_sinewave'' has to be used in combination with the ''buffer'' application, whereas ''demo_combined'' contains both. Subsequently another application (e.g. implemented in MATLAB) can read from the buffer.
+The best example for integrating the FieldTrip buffer in your own application is in the "demo_sinewave" and the "demo_combined" command-line applications. They implement a sinewave signal generator that writes its data to the buffer. The "demo_sinewave" has to be used in combination with the "buffer" application, whereas "demo_combined" contains both. Subsequently another application (e.g. implemented in MATLAB) can read from the buffer.
 
 If you want to implement the buffer in your own application, you should consider whether your application should maintain the buffer itself, or whether your application would be writing to a buffer that is maintained by another application.
 
@@ -13,13 +13,13 @@ If you want to implement the buffer in your own application, you should consider
 
 The best way to get started with incorporating the FieldTrip buffer in your own software project, is by looking at the example applications in the buffer/test directory. It contains a number of examples
 
-- ''buffer'' implements a standalone buffer (middle box in the figure above)
+- "buffer" implements a standalone buffer (middle box in the figure above)
 
-- ''demo_sinewave'' implements a standalone data acquisition client (left box in the figure above)
+- "demo_sinewave" implements a standalone data acquisition client (left box in the figure above)
 
-- ''demo_combined'' implements both the buffer and the data acquisition in a single executable (left+middle box)
+- "demo_combined" implements both the buffer and the data acquisition in a single executable (left+middle box)
 
-- ''demo_event'' writes events to the buffer, c.f. demo_sinewave which writes only data
+- "demo_event" writes events to the buffer, c.f. demo_sinewave which writes only data
 
 ### The buffer will be attached to your local application
 

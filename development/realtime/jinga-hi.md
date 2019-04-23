@@ -7,7 +7,7 @@ tags: [realtime, jinga-hi, jaga16]
 
 This page describes the interface between the Jinga-Hi JAGA16 device and the FieldTrip buffer.
 
-{% include image src="/assets/img/development/realtime/jinga-hi/jaga16.jpg" width="120" %}--" %}
+{% include image src="/assets/img/development/realtime/jinga-hi/jaga16.jpg" width="120" %}
 
 The [Jinga-Hi](http://www.jinga-hi.com) JAGA16 is a miniaturised stand-alone device includes amplifier, digitizer, signal processor and transmitter. The device has 16 channels. Although the JAGA16 has been primarily designed for electrophysiological recordings (spikes and LFPs) in small animals, its specifications also make it very applicable to wireless EEG-BCI systems.
 
@@ -56,4 +56,4 @@ Leaving out all arguments spawns a local buffer on the default port 197
 
 #### Compilation
 
-On the command line, change to the ''realtime/src/acquisition/jaga'' directory and type ''make''. Note that you might need to compile the buffer library first.
+On the command line, change to the "realtime/src/acquisition/jaga" directory and type "make". Note that you might need to compile the buffer library first.

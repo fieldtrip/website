@@ -483,9 +483,9 @@ Test on phantom data
 
 Plot inverse solution at max (in time):
 
-[1] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/ftplotmesh_mne_phantom_at284.jpg" width="200" %}--" %}
-[2] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at198.jpg" width="200" %}--" %}
-[3] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/phantom_ft_sameleadfield.jpg" width="200" %}--" %}
+[1] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/ftplotmesh_mne_phantom_at284.jpg" width="200" %}
+[2] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/ftplotmesh_ft_phantom_at198.jpg" width="200" %}
+[3] {% include image src="/assets/img/development/project/replicate_functionality_of_mne_software/phantom_ft_sameleadfield.jpg" width="200" %}
 
 ### Comparing source spaces
 

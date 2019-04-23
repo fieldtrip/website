@@ -233,7 +233,7 @@ This is how we tested the timing of this system on the CTF275 system at the Dond
 
 This means set up a buffer on the localhost (or other machine, whose name needs to be specified instead of the - sign) on port 1972, and stream both data and events. The three flags GER stand for G) apply gains E) send events R) transmit extended header information (.res4). In this example, we do not downsample (1) and stream all channels (\*).
 
-2. We now start the MEG data acquistion, on Acq.
+2. We now start the MEG data acquisition, on Acq.
 
 3)Again using a separate MATLAB session we repeatedly send trigger codes of value 4 to a serial port, which -after serial to parallel conversion- in this case was connected the the MEG console via Parallel Port 1. The triggers then get recorded on disk (channel UPPT01).
 

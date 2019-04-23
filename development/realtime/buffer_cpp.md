@@ -50,14 +50,14 @@ integers, you would call something like
 
 ### ChannelSelection & SignalConfiguration
 
-The ''ChannelSelection'' class wraps up a list of channel indices and labels. It's used twice within
-the ''SignalConfiguration'' class: Once for describing a selection of channels for streaming, and once for saving
-to disk. On top of that, the ''SignalConfiguration'' provides a few commonly used properties such as the desired
+The "ChannelSelection" class wraps up a list of channel indices and labels. It's used twice within
+the "SignalConfiguration" class: Once for describing a selection of channels for streaming, and once for saving
+to disk. On top of that, the "SignalConfiguration" provides a few commonly used properties such as the desired
 bandwidth (cutoff frequency) and filter order for lowpass filtering, a decimation factor for downsampling streamed
 data and so on. It also provides functions for parsing these configuration options from a text file (see the
 wiki page for the [Biosemi acquisition driver](/development/realtime/biosemi) for an example).
 
-''ChannelSelection'' could actually be used in both ways:
+"ChannelSelection" could actually be used in both ways:
 
 1.  Say you have a hardware device with a fixed list of channels, which are not necessarily labeled. In this case, you would select the desired channels by their index, and then attach a name as in the configuration file described above.
 
@@ -65,9 +65,9 @@ wiki page for the [Biosemi acquisition driver](/development/realtime/biosemi) fo
 
 ### StringServer
 
-The ''StringServer'' class wraps up a mechanism to listen to ASCII messages on a TCP port. Multiple clients can connect
-at the same time. Commands should be terminated by a line-feed (''\n''). The server will respond by line-feed terminated
-ASCII strings in the same way. This is used to control the runtime behavior of the ''OnlineDataManager'' (see below).
+The "StringServer" class wraps up a mechanism to listen to ASCII messages on a TCP port. Multiple clients can connect
+at the same time. Commands should be terminated by a line-feed ("\n"). The server will respond by line-feed terminated
+ASCII strings in the same way. This is used to control the runtime behavior of the "OnlineDataManager" (see below).
 
 ### OnlineDataManager
 
@@ -94,16 +94,16 @@ Saving to disk will be handled in a separate thread to allow for smallest possib
 
 The OnlineDataManager will listen on a certain TCP port for incoming commands given as line-feed-terminated ASCII strings such a
 
-- ''STREAM START'' will enable streaming.
-- ''STREAM STOP'' will disable streaming.
-- ''STREAM SELECT index=label index=label ...'' to select channels for streaming. Spaces can be used in labels by using double quotes, e.g. ''STREAM SELECT 1="Channel 1"''
-- ''STREAM FILTER bandwidth order factor'' to enable low-pass filtering and downsampling
-- ''STREAM STATUS'' to retrieve information about running state. The response will be of the form `numacquired=N numstreamed=S downsample=D bandwidth=B bworder=O` where ''N'' is the number of continuously sampled channels from the hardware, ''S'' is the number of channels selected for streaming, ''D'' is the downsampling factor, ''B'' is the bandwidth (cut-off frequency of lowpass filter), and ''O'' is the order of the Butterworth filter used. Notice that for ''O=0'' no filtering takes place, no matter which bandwidth is reported.
-- ''SAVE START'' will enable saving to GDF. In case no new filename has been set (see below), a suffix ''\_Si'' with ''i'' being a counter will be appended.
-- ''SAVE STOP'' will disable saving to GDF. The current file will be closed orderly.
-- ''SAVE SELECT index=label index=label ...'' to select channels for streaming.
-- ''SAVE FILE filename'' to set the filename for the next GDF file to be written.
-- ''SAVE STATUS'' to retrieve information about running state. The response will be of the form `numacquired=N numsaved=S saving=T savingto="filename"` where ''N'' is the number of continuously sampled channels from the hardware, ''S'' is the number of channels selected for staving, ''T'' is either ''true'' or ''false'' depending on whether saving is enabled, and ''filename'' describes the file currently written to. Notice that the latter is always empty ("") in case ''saving=false''.
-- ''STATUS'' to retrieve information about running state (both streaming and saving). The response is a combination of the responses or ''SAVE STATUS'' and ''STREAM STATUS''.
+- "STREAM START" will enable streaming.
+- "STREAM STOP" will disable streaming.
+- "STREAM SELECT index=label index=label ..." to select channels for streaming. Spaces can be used in labels by using double quotes, e.g. "STREAM SELECT 1="Channel 1""
+- "STREAM FILTER bandwidth order factor" to enable low-pass filtering and downsampling
+- "STREAM STATUS" to retrieve information about running state. The response will be of the form `numacquired=N numstreamed=S downsample=D bandwidth=B bworder=O` where "N" is the number of continuously sampled channels from the hardware, "S" is the number of channels selected for streaming, "D" is the downsampling factor, "B" is the bandwidth (cut-off frequency of lowpass filter), and "O" is the order of the Butterworth filter used. Notice that for "O=0" no filtering takes place, no matter which bandwidth is reported.
+- "SAVE START" will enable saving to GDF. In case no new filename has been set (see below), a suffix "\_Si" with "i" being a counter will be appended.
+- "SAVE STOP" will disable saving to GDF. The current file will be closed orderly.
+- "SAVE SELECT index=label index=label ..." to select channels for streaming.
+- "SAVE FILE filename" to set the filename for the next GDF file to be written.
+- "SAVE STATUS" to retrieve information about running state. The response will be of the form `numacquired=N numsaved=S saving=T savingto="filename"` where "N" is the number of continuously sampled channels from the hardware, "S" is the number of channels selected for staving, "T" is either "true" or "false" depending on whether saving is enabled, and "filename" describes the file currently written to. Notice that the latter is always empty ("") in case "saving=false".
+- "STATUS" to retrieve information about running state (both streaming and saving). The response is a combination of the responses or "SAVE STATUS" and "STREAM STATUS".
 
 Generally, the SELECT, FILTER and FILE commands will only be accepted after a corresponding STOP command.

@@ -19,7 +19,7 @@ Recent Siemens software versions (VB17) include an option for realtime export of
 There are essentially two steps involved for using this mechanis
 
 1.  Start a FieldTrip buffer server on some machine and port number in the network, e.g. on mentat069:1972.
-2.  On the scanner console, start **gui_streamer** and enter ''mentat069'' as well as ''1972'' in the ''hostname'' and ''port'' input fields, then press ''Connect''.
+2.  On the scanner console, start **gui_streamer** and enter "mentat069" as well as "1972" in the "hostname" and "port" input fields, then press "Connect".
     If the connection could be made, the color of the input fields will switch to green. You can now start scanning and have a look at the **gui_streamer** window
     to monitor the number of scans etc.
 
@@ -34,9 +34,9 @@ correspond to the scans that are written to the buffer from the streaming tool o
 
 ## Pipeline for quality assurance and online head movement monitoring
 
-The directory ''fieldtrip/realtime/online_mri'' contains some functions that are useful for realtime processing of fMRI data.
+The directory "fieldtrip/realtime/online_mri" contains some functions that are useful for realtime processing of fMRI data.
 In the MRI lab of the FC Donders centre, we use the function **ft_omri_quality** to monitor head movement and signal quality.
-In order to start this, e.g. on the lab machine ''lab-mri004'' close to the Avanto scanner, simply click on the icon labelled "fMRI quality control".
+In order to start this, e.g. on the lab machine "lab-mri004" close to the Avanto scanner, simply click on the icon labelled "fMRI quality control".
 This will first fire up a FieldTrip buffer server on port 1972, and subsequently a MATLAB session that automatically runs **ft_omri_quality**.
 Once the buffer server has started (visible in a new terminal window), you can start the **gui_streamer** on the scanner host and connect
 to the address (in the Donders centre, a link in the start menu of the scanner host starts the tool with the right hostname:port combination).
@@ -63,18 +63,18 @@ Apart from motion correction and other pre-processing steps, it is necessary to 
 
 #### Starting the various applications
 
-1.  you should start up the FieldTrip buffer servers. In case you **do not** want to save the incoming scans and events, you can use the plain **buffer** application `<code>`/home/common/MATLAB/fieldtrip/realtime/bin/glnxa64/buffer`In case you *do want to save* the data for later offline analysis or for debugging, you should use the **recording** application. In detail, open a terminal window and type`/home/common/MATLAB/fieldtrip/realtime/bin/glnxa64/playback path_to_raw_data 1972`where ''path_to_raw_data'' is the name of a new directory (will be created for you) that will receive the unprocessed scans. Then, in a second terminal, similarly type`/home/common/MATLAB/fieldtrip/realtime/bin/glnxa64/playback path_to_processed_data 1973` to spawn a second buffer server on another port.
-2.  you should start **serial_event**, the tool for translating the TTL pulses to FieldTrip events. In the DCCN MRI labs, this application is available on ''D:\TTL_to_FieldTrip'' on the machine ''Presentation010'' close to the Avanto. The configuration file ''serial_event.conf'' should already contain the right settings.
-3.  you should start the MATLAB script that does the preprocessing, e.g. **ft_omri_pipeline**. The script takes a ''cfg'' structure as an input argument, where you can tweak some settings, which notably includes the address of the two FieldTrip buffers. If you run the script on the same machine as the two buffer servers, the default options of ''localhost:1972'' and ''localhost:1973'' for ''cfg.input'' and ''cfg.output'' are already fine.
-4.  you should start **gui_streamer** on the scanner host. Make sure that the address of the buffer servers is correct (in the example above, this should be ''lab-mri004'' and ''1972''), and that the connection is made (press ''Connect'', after which the address fields should be green). Also make sure that you enter the name of the presentation machine (e.g., ''Presentation010'') in the input field on the bottom of the **gui_streamer** dialog window, and that the port number (e.g., 1990) is the same as in the **serial_event** configuration file. Press ''Enable'' to send ''RESET'' messages at the start of each MR sequence.
+1.  you should start up the FieldTrip buffer servers. In case you **do not** want to save the incoming scans and events, you can use the plain **buffer** application `<code>`/home/common/MATLAB/fieldtrip/realtime/bin/glnxa64/buffer`In case you *do want to save* the data for later offline analysis or for debugging, you should use the **recording** application. In detail, open a terminal window and type`/home/common/MATLAB/fieldtrip/realtime/bin/glnxa64/playback path_to_raw_data 1972`where "path_to_raw_data" is the name of a new directory (will be created for you) that will receive the unprocessed scans. Then, in a second terminal, similarly type`/home/common/MATLAB/fieldtrip/realtime/bin/glnxa64/playback path_to_processed_data 1973` to spawn a second buffer server on another port.
+2.  you should start **serial_event**, the tool for translating the TTL pulses to FieldTrip events. In the DCCN MRI labs, this application is available on "D:\TTL_to_FieldTrip" on the machine "Presentation010" close to the Avanto. The configuration file "serial_event.conf" should already contain the right settings.
+3.  you should start the MATLAB script that does the preprocessing, e.g. **ft_omri_pipeline**. The script takes a "cfg" structure as an input argument, where you can tweak some settings, which notably includes the address of the two FieldTrip buffers. If you run the script on the same machine as the two buffer servers, the default options of "localhost:1972" and "localhost:1973" for "cfg.input" and "cfg.output" are already fine.
+4.  you should start **gui_streamer** on the scanner host. Make sure that the address of the buffer servers is correct (in the example above, this should be "lab-mri004" and "1972"), and that the connection is made (press "Connect", after which the address fields should be green). Also make sure that you enter the name of the presentation machine (e.g., "Presentation010") in the input field on the bottom of the **gui_streamer** dialog window, and that the port number (e.g., 1990) is the same as in the **serial_event** configuration file. Press "Enable" to send "RESET" messages at the start of each MR sequence.
 5.  you should now be ready to start the sequence on the scanner.
 
 ## Background information
 
 ### Mosaic files
 
-With the current Siemens scanner software (VB17A), a new file ''E:\IMAGE\xx-yyyy\zzzzzzz.PixelData''
-is created on the ''E:\'' drive of the host computer (the Windows box the scanner is operated from)
+With the current Siemens scanner software (VB17A), a new file "E:\IMAGE\xx-yyyy\zzzzzzz.PixelData"
+is created on the "E:\" drive of the host computer (the Windows box the scanner is operated from)
 immediately after each scan. This file contains pixel data as unsigned 16-bit integers, where different
 slices show up as tiles of a mosaic. The mosaic seems to be always square, and blank tiles are appended
 if the number of slices is smaller than the number of tiles in the mosaic.
@@ -101,37 +101,37 @@ For the above example, we would have 64x48x32 = 98304 "channels". The data forma
 ### PixelDataGrabber
 
 In order to react efficiently to a new scan, which shows up as a file with name and location not known in
-advance (apart from its suffix), the Windows API function [ReadDirectoryChangesW](<http://msdn.microsoft.com/en-us/library/windows/desktop/aa365465(v=vs.85).aspx>) is used to monitor ''E:\IMAGE''
+advance (apart from its suffix), the Windows API function [ReadDirectoryChangesW](<http://msdn.microsoft.com/en-us/library/windows/desktop/aa365465(v=vs.85).aspx>) is used to monitor "E:\IMAGE"
 and all of its subdirectories. Whenever a new file is created or modified anywhere in that tree, a Windows event is triggered and
-the corresponding path is made available. This mechanism is wrapped up in the C++ class ''FolderWatcher''.
+the corresponding path is made available. This mechanism is wrapped up in the C++ class "FolderWatcher".
 
-A second C++ class, ''PixelDataGrabber'', encapsulates the actual real-time fMRI acquisition mechanism based on
-the ''FolderWatcher'' and client-side code of the FieldTrip buffer. Detailed Doxygen-style documentation is
-provided in ''PixelDataGrabber.h'', and developers can also look at ''pixeldata_to_remote_buffer.cc'' for a
+A second C++ class, "PixelDataGrabber", encapsulates the actual real-time fMRI acquisition mechanism based on
+the "FolderWatcher" and client-side code of the FieldTrip buffer. Detailed Doxygen-style documentation is
+provided in "PixelDataGrabber.h", and developers can also look at "pixeldata_to_remote_buffer.cc" for a
 simple example of using this class in a command-line application. A slightly more complex program is compiled
-from ''gui_streamer.cc'', which combines the PixelDataGrabber with a small GUI written with [FLTK](http://www.fltk.org).
+from "gui_streamer.cc", which combines the PixelDataGrabber with a small GUI written with [FLTK](http://www.fltk.org).
 This program provides a few buttons for starting and stopping to monitor for new files, and to connect to/disconnect
 from a FieldTrip buffer (see above).
 
 ### Protocol information
 
-How does the ''PixelDataGrabber'' determine the number of slices and their dimensions? For this to work, the best
+How does the "PixelDataGrabber" determine the number of slices and their dimensions? For this to work, the best
 way is to modify the MR sequence by adding
 
     #ifndef VXWORKS
      pMrProt->fwrite("E:imagemrprot.txt")
     #endif
 
-to the function ''fSeqCheck'' in the sequence code, which is executed once before the first scan. This will dump the
-complete protocol information to the specified location. With the ''PixelDataGrabber'' listening for files in
-''E:\image'', it will note this and immediately parse the new protocol. The information written to that file is the same
+to the function "fSeqCheck" in the sequence code, which is executed once before the first scan. This will dump the
+complete protocol information to the specified location. With the "PixelDataGrabber" listening for files in
+"E:\image", it will note this and immediately parse the new protocol. The information written to that file is the same
 that is contained in one of the private tags of the DICOM headers, which the scanner writes using the normal (offline) mechanisms.
-The filename "mrprot.txt" is currently hard-coded in both the ''PixelDataGrabber'' and the standard sequences used at the DCCN.
+The filename "mrprot.txt" is currently hard-coded in both the "PixelDataGrabber" and the standard sequences used at the DCCN.
 
-If you run an unmodified MR sequence that does not dump the information, you can try to create your own ''mrprot.txt'' and
-place it in ''E:\image'' before running the scans. In this case, the ''PixelDataGrabber'' will read that file when the first
-scan arrives. In case the ''PixelDataGrabber'' encounters a mismatch between protocol specifications and the size of the
-''.PixelData'' files, it will report an error and not write the sample. The most important ingredients for a hand-made
+If you run an unmodified MR sequence that does not dump the information, you can try to create your own "mrprot.txt" and
+place it in "E:\image" before running the scans. In this case, the "PixelDataGrabber" will read that file when the first
+scan arrives. In case the "PixelDataGrabber" encounters a mismatch between protocol specifications and the size of the
+".PixelData" files, it will report an error and not write the sample. The most important ingredients for a hand-made
 protocol file are shown in the following exampl
 alTR = 2900000
 lContrasts = 5
@@ -140,11 +140,11 @@ sSliceArray.lSize = 32
 sSliceArray.asSlice[0].dPhaseFOV = 224.0
 sSliceArray.asSlice[0].dReadoutFOV = 168.0
 sSliceArray.asSlice[0].dThickness = 3.0
-There are many more variables that the ''PixelDataGrabber'' will react to, but describing this here would be too much detail.
+There are many more variables that the "PixelDataGrabber" will react to, but describing this here would be too much detail.
 
 ### Decoding the protocol file
 
-''Siemensap'', a plain C library in ''fieldtrip/realtime/datasource/siemens'' provides some functions and datatypes to parse
+"Siemensap", a plain C library in "fieldtrip/realtime/datasource/siemens" provides some functions and datatypes to parse
 the ASCII format Siemens protocol data into a list or tree of key/value items. Currently supported value types are
 strings, long integers, and double precision numbers. Field types are determined automatically to a large extend
 (e.g. a dot in a number implies a double precision value), but some special rules are added. For example, a field
@@ -157,7 +157,7 @@ stick to the usual FieldTrip functions.
 
 ### Compilation
 
-We provide a simple ''Makefile'' for the MinGW compiler on Windows or GCC on other platforms. Please go to the ''realtime/datasource/siemens'' directory and type ''make'' or ''mingw32-make''. You will need to have the [FLTK](http://www.fltk.org) library installed for your platform. Note that you also might need to [compile](/development/realtime/buffer) the **buffer** library first.
+We provide a simple "Makefile" for the MinGW compiler on Windows or GCC on other platforms. Please go to the "realtime/datasource/siemens" directory and type "make" or "mingw32-make". You will need to have the [FLTK](http://www.fltk.org) library installed for your platform. Note that you also might need to [compile](/development/realtime/buffer) the **buffer** library first.
 
 ## Testing with pre-recorded fMRI data
 

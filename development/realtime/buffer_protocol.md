@@ -5,7 +5,7 @@ tags: [realtime]
 
 # Low-level FieldTrip buffer TCP network protocol
 
-This page is part of the documentation series of the FieldTrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, bein
+This page is part of the documentation series of the FieldTrip buffer for realtime aquisition. The FieldTrip buffer is a standard that defines a central hub (the [FieldTrip buffer](/development/realtime)) that facilitates realtime exchange of neurophysiological data. The documentation is organized in five main sections, being:
 
 1.  description and general [overview of the buffer](/development/realtime/buffer_overview),
 2.  definition of the [buffer protocol](/development/realtime/buffer_protocol),
@@ -67,7 +67,7 @@ but one of the more important issues is a strategy that allows for both flexibil
 ## Network protocol
 
 Every request and response starts with the following fixed-size 8 byte structure which
-corresponds to the definition of **messagedef_t** in ''message.h'' in the [reference implementation](/development/realtime/reference_implementation).
+corresponds to the definition of **messagedef_t** in "message.h" in the [reference implementation](/development/realtime/reference_implementation).
 
 | field       | type   | description                                                        |
 | ----------- | ------ | ------------------------------------------------------------------ |
@@ -84,10 +84,10 @@ Because we are relying on detecting endianness by looking at the 16-bit version 
 ### PUT_HDR: Put header information into the buffer
 
 This request is used for initialising the buffer and setting header information like the number of channels and the sampling frequency.
-Clients need to transmit a fixed structure and optionally a set of _chunks_ (**chunk_t** in ''message.h''). The **command** number
+Clients need to transmit a fixed structure and optionally a set of _chunks_ (**chunk_t** in "message.h"). The **command** number
 of this request is 0x101 (=257 in decimal notation).
 
-The fixed part (24 bytes) consists of the following (**headerdef_t** in ''message.h'')
+The fixed part (24 bytes) consists of the following (**headerdef_t** in "message.h")
 
 | field         | type    | description                                                                |
 | ------------- | ------- | -------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ Clients need to transmit a fixed structure followed by the actual data samples, 
 each from multiple channels) need to be transmitted contiguously.
 The **command** number of this request is 0x102 (=258 in decimal notation).
 
-The fixed part (16 bytes) consists of the following (**datadef_t** in ''message.h'')
+The fixed part (16 bytes) consists of the following (**datadef_t** in "message.h")
 
 | field         | type   | description                                                             |
 | ------------- | ------ | ----------------------------------------------------------------------- |
@@ -159,7 +159,7 @@ treated as a communication error.
 #### Example
 
 Suppose you want to append 200 samples from 32 channels of single precision data. In this case,
-the **data_type** field contains the value 9 (DATATYPE_FLOAT32 in ''message.h''), and the size of all samples
+the **data_type** field contains the value 9 (DATATYPE_FLOAT32 in "message.h"), and the size of all samples
 is 200*32*4 = 25600 bytes. The complete request would look like this:
 
 | message definition (request)                        | fixed data definition                                               | data samples                                       |
@@ -178,7 +178,7 @@ used ring buffer already). For this, the client just sends 8 bytes like the foll
 | **version**=1, **command**=0x202, **bufsize**=0 |
 
 The client can also request a specific interval of samples by transmitting 2 indices as unsigned 32-bit integers
-(see **datasel_t** in ''message.h''). For example, to retrieve samples with index 4 up to (and including) 15, you
+(see **datasel_t** in "message.h"). For example, to retrieve samples with index 4 up to (and including) 15, you
 would send
 
 | message definition (request)                    | data selection                    |
@@ -211,7 +211,7 @@ The **command** number of this request is 0x103 (=259). As for the PUT_DAT reque
 events, and at some point old events will fall out of the ring buffer. Every event is described by a fixed
 structure followed by a variable-length field that contains the event's _type_ and _value_.
 
-The fixed part (32 bytes) consists of the following fields (**eventdef_t** in ''message.h''
+The fixed part (32 bytes) consists of the following fields (**eventdef_t** in "message.h"
 
 | field           | type   | description                                      |
 | --------------- | ------ | ------------------------------------------------ |
@@ -236,7 +236,7 @@ The response of the buffer server will be the usual triple **version**=1,**comma
 
 Suppose you want to add two events that relate to sample 10 and 12, respectively, whose _type_ is the string "Button"
 and whose value is "Left" and "Right". We'll use **offset**=**duration**=0, and since both _type_ and _value_ are
-given as strings, the **type_type** and **value_type** fields both have the value 0 (for DATATYPE_CHAR, see ''message.h'').
+given as strings, the **type_type** and **value_type** fields both have the value 0 (for DATATYPE_CHAR, see "message.h").
 The **type_numel** and **value_numel** fields contain the lengths of the respective strings, and since a character only
 takes one byte, the **bufsize** field is the sum of both string lengths. All in all, the complete request for this would b
 
@@ -277,7 +277,7 @@ of an 8-byte triple as follow
 | **version**=1, **command**=0x203 (GET_EVT), **bufsize**=0 |
 
 The client can also request a specific interval of events by transmitting 2 indices as unsigned 32-bit integers
-(see **eventsel_t** in ''message.h''). For example, to retrieve samples with index 8 up to (and including) 10, you
+(see **eventsel_t** in "message.h"). For example, to retrieve samples with index 8 up to (and including) 10, you
 would send
 
 | message definition (request)                    | event selection                 |
@@ -384,7 +384,7 @@ a very high number (2^32-1 as the biggest uint32). The same works for the opposi
 
 ### Chunks for transmitting extended header information
 
-As already mentioned, the PUT_HDR request can contain a variable part consisting of _chunks_. These are transmitted one after another (**chunk_t** in ''message.h''). Their
+As already mentioned, the PUT_HDR request can contain a variable part consisting of _chunks_. These are transmitted one after another (**chunk_t** in "message.h"). Their
 structure is
 
 | field    | type   | description                                                      |
@@ -396,7 +396,7 @@ structure is
 The chunk type and the content of the chunk are system specific. If the client application does not recognize the chunk type, it can skip over it.
 
 If chunks are present, they will be transmitted in every GET_HDR request, using the same format. Care must be taken to adapt the processing logic
-of the client in case the header contains a large chunk (such as a ~3MB big CTF ''.res4'' file), that is, the GET_HDR request should be made only as often
+of the client in case the header contains a large chunk (such as a ~3MB big CTF ".res4" file), that is, the GET_HDR request should be made only as often
 as necessary, and replaced by WAIT_DAT.
 
 The following is a list of currently defined and used chunk type

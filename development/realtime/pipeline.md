@@ -47,7 +47,7 @@ Can be seen as a PE that turns the input (volume + motion estimate) into a MATLA
 
 ## Common properties
 
-All PEs need an **init** and a **process** routine. The type of inputs and outputs varies between PEs, but it seems we could pass around a MATLAB ''struct'' with a ''data'' field that is always present. On top of that, each PE can add further output fields, but it should always pass on the fields it received from the previous PE, because succeeding PEs might need those fields (e.g., consider the pipeline [motion correction] -> [slice time correction] -> [quality display] where the motion estimates need to
+All PEs need an **init** and a **process** routine. The type of inputs and outputs varies between PEs, but it seems we could pass around a MATLAB "struct" with a "data" field that is always present. On top of that, each PE can add further output fields, but it should always pass on the fields it received from the previous PE, because succeeding PEs might need those fields (e.g., consider the pipeline [motion correction] -> [slice time correction] -> [quality display] where the motion estimates need to
 be passed on, although they are not used by the slice time correction PE).
 
 Further to that, most PEs need an internal state representation that can be updated during **process**.
@@ -72,7 +72,7 @@ We'd like the flexibility to compose pipelines in any order and with any number 
     end
     output = tmp;
 
-In order to avoid a clash of fieldnames for the ''tmp'' structure passed from one PE to the next, output fields other than the data itself
+In order to avoid a clash of fieldnames for the "tmp" structure passed from one PE to the next, output fields other than the data itself
 should be written to uniquely names subfields, e.g., the motion correction PE could write its output as
 
   tmp_out.data = aligned_volume;
@@ -81,7 +81,7 @@ should be written to uniquely names subfields, e.g., the motion correction PE co
 
 We could add a pre-flight run similar to BCI2000 where each PE does some pseudo-processing and then writes its output fields,
 so that the pipeline can check itself for consistency: For example, the quality display PE needs to be placed behind the motion correction PE,
-and thus it should check for the existence of the ''motion_correction'' sub-structure. Or we just keep it simple and leave a sensible
+and thus it should check for the existence of the "motion_correction" sub-structure. Or we just keep it simple and leave a sensible
 composition of pipelines to the user ;-)
 
 ### OOP solution

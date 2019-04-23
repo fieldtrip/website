@@ -240,11 +240,11 @@ This is the simplest method, but not the most efficient. You start with a single
 
 The idea is to use a template grid that is defined in normalized space, e.g. based on a template anatomical MRI in MNI coordinates. Subsequently, each individual MRI is warped to this template MRI, and the inverse of this warp is applied to the template dipole grid. Hereby the individual subjects' grids are not regularly spaced anymore (meaning the distance between 2 grid points can vary), see figure 1. However, as a consequence of this warping procedure, homologous grid points across subjects are located at exactly the same location in normalized MNI space. As a consequence, the source-reconstructed activity can be directly averaged across subjects. You can either define a template grid yourself, or use one from a set of predefined template grids that are included in fieldtrip: fieldtrip/template/sourcemodel/standard_gridXmm.mat.
 
-{% include image src="/assets/img/tutorial/sourcemodel/brains.gif" width="500" %}--" %}
+{% include image src="/assets/img/tutorial/sourcemodel/brains.gif" width="500" %}
 
 **Figure 1a: Example: the MNI template brain and the brains of 3 subjects**
 
-{% include image src="/assets/img/tutorial/sourcemodel/mni_grids2.gif" width="500" %}--" %}
+{% include image src="/assets/img/tutorial/sourcemodel/mni_grids2.gif" width="500" %}
 
 **Figure 1b: Example: the MNI grid and the grid of 3 subjects, note that each grid point points to the same location in all brains, and that the subjects' grids are not regularly spaced**
 

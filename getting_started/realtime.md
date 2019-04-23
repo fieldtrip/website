@@ -26,7 +26,7 @@ The TCP server is non-blocking and allows for multiple simultaneous read and wri
 
 There are different possibilities for getting the data from your acquisition system into the FieldTrip buffer. A comprehensive list is [here](/development/realtime). With [BCI2000](/development/realtime/bci2000) you can use the FieldTrip Buffer to read the data from any of the in BCI2000 supported acquisition system and stream it into the FieldTrip buffer. For some selected acquisition systems, like CTF, Neuralynx and BrainVision a native MATLAB implementation has been created independent of BCI2000. These MATLAB functions act as a proxy between the acquisition system and the FieldTrip buffer. The "ft_realtime_xxxproxy" functions use some acquisition system specific code (e.g. Linux shared memory for CTF, Active-X for Neuralynx and TCP for BrainVision) to read the data from the acquisition system. Once the data is in MATLAB memory it is immediately copied into the FieldTrip buffer. The data in the FieldTrip buffer is subsequently available for analysis in another MATLAB instance.
 
-The following text is tailored for users of ready-made acquistion systems and describes the logic of how to process the data. If you are concerned with integrating a new acquisition system or a similar task, you should read [this page](/development/realtime/buffer_overview) as well.
+The following text is tailored for users of ready-made acquisition systems and describes the logic of how to process the data. If you are concerned with integrating a new acquisition system or a similar task, you should read [this page](/development/realtime/buffer_overview) as well.
 
 ## Simulating a data stream
 

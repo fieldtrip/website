@@ -9,11 +9,11 @@ Because the tools listed here are fairly simple, studying their [source code](ht
 
 ## Java implementation of the Buffer Server
 
-The directory ''realtime/src/buffer/java/bufferserver'' contains a Java implementation of the buffer server.
+The directory "realtime/src/buffer/java/bufferserver" contains a Java implementation of the buffer server.
 
 ## Java implementation of the Buffer Client
 
-The directory ''realtime/src/buffer/java'' contains a couple of Java classes that implement a client-side interface to the FieldTrip buffer (socket connections only). The classes wrap FieldTrip-style header structures, events, and client connections to a server.
+The directory "realtime/src/buffer/java" contains a couple of Java classes that implement a client-side interface to the FieldTrip buffer (socket connections only). The classes wrap FieldTrip-style header structures, events, and client connections to a server.
 
 The following Java code example demonstrates how to use the interfac
 
@@ -68,13 +68,13 @@ The following Java code example demonstrates how to use the interfac
 
 ## Writing FieldTrip buffer events
 
-There are also a couple of tools for translating events such as incoming MIDI messages or GUI button presses into FieldTrip events. For all tools listed below, the ''sample'' field of the written events will be automatically inserted (either by the server or polling for the current number of samples), and the ''offset'' and ''duration'' fields will be set to zero.
+There are also a couple of tools for translating events such as incoming MIDI messages or GUI button presses into FieldTrip events. For all tools listed below, the "sample" field of the written events will be automatically inserted (either by the server or polling for the current number of samples), and the "offset" and "duration" fields will be set to zero.
 
 Because the tools listed here are fairly simple, studying their [source code](http://code.google.com/p/fieldtrip/source/browse/trunk/realtime/src/buffer/java) is also a good way to learn about the [Java interface](/development/realtime/buffer_java) to the FieldTrip buffer.
 
 ### MidiToBuffer
 
-The class ''MidiToBuffer'' can be used to listen on a MIDI in device for messages, and write them to a FieldTrip buffer. You should start the tool from the command line like (note the colon between hostname and port
+The class "MidiToBuffer" can be used to listen on a MIDI in device for messages, and write them to a FieldTrip buffer. You should start the tool from the command line like (note the colon between hostname and port
 
     java MidiToBuffer localhost:1972
 
@@ -89,17 +89,17 @@ On [www.midi.org](http://www.midi.org/techspecs/midimessages.php) you can find a
 
 ### MarkerGUI
 
-The ''MarkerGUI'' class can be used to insert events into a FieldTrip buffer by typing a ''type'' and a ''value'' string into GUI input fields, and pressing a button. This is mostly useful for debugging online paradigms, or maybe to control realtime applications that use buffer events for communication between each other. You can start the program from the command line by typing
+The "MarkerGUI" class can be used to insert events into a FieldTrip buffer by typing a "type" and a "value" string into GUI input fields, and pressing a button. This is mostly useful for debugging online paradigms, or maybe to control realtime applications that use buffer events for communication between each other. You can start the program from the command line by typing
 
     java MarkerGUI [hostname:port]
 
-If you leave out the optional argument, ''localhost:1972'' will be used as the default. However, you _need_ to connect to the buffer server, and can disconnect, change the address, and re-connect at any time, using the GUI. The ''Address'' input field will have a light green background as long as the application is connected to the buffer server. In case of errors during writing events, the connection will be closed automatically.
+If you leave out the optional argument, "localhost:1972" will be used as the default. However, you _need_ to connect to the buffer server, and can disconnect, change the address, and re-connect at any time, using the GUI. The "Address" input field will have a light green background as long as the application is connected to the buffer server. In case of errors during writing events, the connection will be closed automatically.
 
 {% include image src="/assets/img/development/realtime/buffer_java/markergui.png" %}
 
 ### Compilation
 
-The simplest way to compile the Java tools is to change to the directory ''realtime/src/buffer/java'' and just to type
+The simplest way to compile the Java tools is to change to the directory "realtime/src/buffer/java" and just to type
 
     javac *.java
 

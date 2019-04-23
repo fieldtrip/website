@@ -31,8 +31,8 @@ Leaving out the two optional arguments spawns a local buffer on the default port
 
 #### Compilation
 
-On the command line, change to the ''realtime/src/acquisition/openbci'' directory and type ''make''. Note that you might need to compile the buffer library first.
+On the command line, change to the "realtime/src/acquisition/openbci" directory and type "make". Note that you might need to compile the buffer library first.
 
 ## Java implementation
 
-The directory ''realtime/src/acquisition/openbci/java'' contains an alternative application implemented in Java, which also copies the data from the serial interface to a FieldTrip buffer.
+The directory "realtime/src/acquisition/openbci/java" contains an alternative application implemented in Java, which also copies the data from the serial interface to a FieldTrip buffer.

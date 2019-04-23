@@ -6,7 +6,7 @@ tags: [realtime, tmsi]
 ## TMSI EEG amplifiers
 
 We provide two tools for grabbing EEG data from [TMSi](http://www.tmsi.com) amplifiers. The code for both can be found
-in the directory ''realtime/acquisition/tmsi''. As far as I know, the FieldTrip code can be used both with the standard REFA and the mobile PORTI systems.
+in the directory "realtime/acquisition/tmsi". As far as I know, the FieldTrip code can be used both with the standard REFA and the mobile PORTI systems.
 
 {% include image src="/assets/img/development/realtime/tmsi/refa.jpg" width="200" %}
 {% include image src="/assets/img/development/realtime/tmsi/porti.jpg" width="200" %}
@@ -27,7 +27,7 @@ Based on code from **tmsidriver**, but also heavily relying on the [common C++](
 
     tmsi2ft config.txt [hostname [port [ctrlPort]]]
 
-where only the first parameter (configuration file) is mandatory. Defaults for the remaining three parameters are ''localhost'', ''1972'', and ''8000''. If you want **tmsi2ft** to spawn its own FieldTrip buffer server, pass a minus (-) for the hostname parameter.
+where only the first parameter (configuration file) is mandatory. Defaults for the remaining three parameters are "localhost", "1972", and "8000". If you want **tmsi2ft** to spawn its own FieldTrip buffer server, pass a minus (-) for the hostname parameter.
 
 ### Compatibility
 
@@ -37,4 +37,4 @@ for Windows 7 (64-bit), using the old SDK failed.
 
 ### Compilation
 
-There is a Visual C++ project file for **tmsidriver**, but both tools can also be compiled using [MinGW](http://www.mingw.org) using the provided ''Makefile''.
+There is a Visual C++ project file for **tmsidriver**, but both tools can also be compiled using [MinGW](http://www.mingw.org) using the provided "Makefile".

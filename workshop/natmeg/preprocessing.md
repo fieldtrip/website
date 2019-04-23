@@ -192,7 +192,7 @@ The most important fields are data_MEG.trial containing the individual trials an
     plot(data_MEG.time{1}, data_MEG.trial{1}(130,:))
     print -dpng natmeg_preproc1.png
 
-{% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf0.png" width="600" %}--" %}
+{% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf0.png" width="600" %}
 
 _Figure; A plot of a single trial of one channel_
 
@@ -351,7 +351,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
     print -dpng natmeg_erf3.png
 
-{% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf3.png" width="650" %}--" %}
+{% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf3.png" width="650" %}
 
 \*Figure: A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)\***
 
@@ -721,7 +721,7 @@ To plot the scalp current density results, use the following code
 
 Note that if you get plotting artifacts in these figures, such as colorbars that do not show completely, you can have a look at this [frequently asked question](/faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity).
 
-{% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_scd1.png" width="650" %}--" %}
+{% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_scd1.png" width="650" %}
 
 \*Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)\***
 

@@ -21,16 +21,16 @@ There is also an older attempt implemented in the code which allows to access th
 
 ## Standalone program nlx2ft
 
-There's a new tool called **nlx2ft** which operates with the same principle as **[ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy)**, but achieves much lower blocksizes + latencies due to being written in C and using separate threads for grabbing the data and streaming it out again. Currently **nlx2ft** can only write the data to a FieldTrip buffer over TCP (as opposed to spawning its own buffer server). The sources and the Windows binary are available in the ''realtime/datasource/neuralynx'' directory, and those are the steps to use i
+There's a new tool called **nlx2ft** which operates with the same principle as **[ft_realtime_neuralynxproxy](/reference/ft_realtime_neuralynxproxy)**, but achieves much lower blocksizes + latencies due to being written in C and using separate threads for grabbing the data and streaming it out again. Currently **nlx2ft** can only write the data to a FieldTrip buffer over TCP (as opposed to spawning its own buffer server). The sources and the Windows binary are available in the "realtime/datasource/neuralynx" directory, and those are the steps to use i
 
 1.  Start the Neuralynx acquisition software (or the Cheetah demo for testing).
 2.  Start a FieldTrip buffer server on a machine of your choice.
-3.  Start **nlx2ft** with command line arguments ''hostname'' and ''port'' as usual. Defaults are ''localhost'' and ''1972''.
+3.  Start **nlx2ft** with command line arguments "hostname" and "port" as usual. Defaults are "localhost" and "1972".
 4.  Start the acquisition by clicking the relevant buttons in the Neuralynx software.
 
 ### Compilation
 
-On the command line (Windows), change to the ''realtime/datasource/neuralynx'' directory and type ''make'' or ''mingw32-make'',
+On the command line (Windows), change to the "realtime/datasource/neuralynx" directory and type "make" or "mingw32-make",
 depending on the setup of your MinGW compiler. Note that you might need to [compile](/development/realtime/buffer) the **libbuffer** library first.
 
 ## External links

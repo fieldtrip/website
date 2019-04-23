@@ -4,7 +4,7 @@ title: Translating characters received on a serial port to FieldTrip events
 
 # Translating characters received on a serial port to FieldTrip events
 
-This page describes the tool **serial2event**, which is located in the directory ''realtime/utilities/serial2event'', and whose purpose is to write events to a FieldTrip buffer when a character is received on a serial port. The tool was developed specifically to be run on the presentation machines in the DCCN's MRI labs in order to forward TTL pulses from the scanner to the FieldTrip buffer.
+This page describes the tool **serial2event**, which is located in the directory "realtime/utilities/serial2event", and whose purpose is to write events to a FieldTrip buffer when a character is received on a serial port. The tool was developed specifically to be run on the presentation machines in the DCCN's MRI labs in order to forward TTL pulses from the scanner to the FieldTrip buffer.
 
 The user has the option to either only react on specific characters, and to write events with
 a fixed _type_ and _value_, or to forward the received character as the _value_ of the event.
@@ -15,7 +15,7 @@ The tool is started from the command line by typing
 
     serial2event [config-file]
 
-If the ''config-file'' argument is not given, a default of ''serial2event.conf'' is assumed.
+If the "config-file" argument is not given, a default of "serial2event.conf" is assumed.
 
 ### Configuration file syntax
 
@@ -59,4 +59,4 @@ The operation mode of the tool is controlled by given a configuration file. A do
 
 ### Compilation
 
-We provide a simple ''Makefile'' for the MinGW compiler or GCC. Please go to the ''realtime/utilities/serial2event'' directory and type ''make'' or ''mingw32-make''. Note that you might need to [compile](/development/realtime/buffer) the **buffer** library first.
+We provide a simple "Makefile" for the MinGW compiler or GCC. Please go to the "realtime/utilities/serial2event" directory and type "make" or "mingw32-make". Note that you might need to [compile](/development/realtime/buffer) the **buffer** library first.

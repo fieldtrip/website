@@ -11,8 +11,8 @@ Currently, MATLAB users type 'buffer://hostname:port' for talking to a buffer, a
 the MEX file, this translates into either opening a new TCP connection, reusing a connection, or talking directly to
 a buffer embedded in the MEX file.
 
-The C interface, however, is less consistent. For example, a TCP connection is opened using ''open_connection(hostname, port)'',
-a connection using the new UNIX sockets facility is opened using ''open_unix_connection(pathname)'', and for direct memory access,
+The C interface, however, is less consistent. For example, a TCP connection is opened using "open_connection(hostname, port)",
+a connection using the new UNIX sockets facility is opened using "open_unix_connection(pathname)", and for direct memory access,
 no such call is made. Robert proposed to provide a unified API also on the C level, that is, we would have one function that is called like
 
     con = open_connection("localhost:1972");   // open a TCP connection
@@ -31,7 +31,7 @@ Use the address of the pointer as a hex-string?
 ### Add prefixes to all C API functions and data structures
 
 C does not know namespaces, so we should try to avoid too short names like "append" which might yield problems when linking
-to other libraries at the same time. ''ft*'' or ''ftb*'' looks like a reasonable choice.
+to other libraries at the same time. "ft*" or "ftb*" looks like a reasonable choice.
 
 ### Add higher-level C API calls for standard requests
 

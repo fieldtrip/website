@@ -7,7 +7,7 @@ tags: [realtime, development]
 
 ## Client side pure Python implementation
 
-The directory ''fieldtrip/realtime/src/buffer/python'' contains a single-file Python module called ''FieldTrip.py''. This provides classes that wrap FieldTrip-style header structures, events, and client connections to a server, including functions for the various requests to read and write samples and events. The module depends on [Numpy](http://numpy.scipy.org) for representing data matrices and type and value fields of events.
+The directory "fieldtrip/realtime/src/buffer/python" contains a single-file Python module called "FieldTrip.py". This provides classes that wrap FieldTrip-style header structures, events, and client connections to a server, including functions for the various requests to read and write samples and events. The module depends on [Numpy](http://numpy.scipy.org) for representing data matrices and type and value fields of events.
 
 The following Python code example demonstrates how to use the interfac
 
