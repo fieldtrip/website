@@ -15,7 +15,7 @@ title: ft_freqanalysis
  The configuration should contain:
    cfg.method      = different methods of calculating the spectra
                      'mtmfft', analyses an entire spectrum for the entire data
-                       length, implements multitaper frequency transformation
+                       length, implements multitaper frequency transformation.
                      'mtmconvol', implements multitaper time-frequency
                        transformation based on multiplication in the
                        frequency domain.
@@ -31,6 +31,8 @@ title: ft_freqanalysis
                        output will contain a spectral transfer matrix,
                        the cross-spectral density matrix, and the
                        covariance matrix of the innovatio noise.
+                     'irasa', analyses an entire spectrum for the entire data
+                       length, returns the fractal/arrhythmic component.
    cfg.output      = 'pow'       return the power-spectra
                      'powandcsd' return the power and the cross-spectra
                      'fourier'   return the complex Fourier-spectra
