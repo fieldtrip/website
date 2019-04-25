@@ -32,7 +32,7 @@ For the simplest case, the BEM and the theoretical solutions for EEG lead field 
     % Define the corresponding spatial grid
     cfg = [];
     cfg.inwardshift = 5;
-    cfg.grid.pos = pos;
+    cfg.sourcemodel.pos = pos;
     gridp = ft_prepare_sourcemodel(cfg, vol, sens);
 
 **BEM model, single sphere:**

@@ -169,9 +169,9 @@ In the following section we will compute the ingredients for accurate reconstruc
 
     %% compute the source model
     cfg = [];
-    cfg.grid.warpmni   = 'yes';
-    cfg.grid.template  = template.sourcemodel;
-    cfg.grid.nonlinear = 'yes'; % use non-linear normalization
+    cfg.warpmni   = 'yes';
+    cfg.template  = template.sourcemodel;
+    cfg.nonlinear = 'yes'; % use non-linear normalization
     cfg.mri            = mri;
     sourcemodel        = ft_prepare_sourcemodel(cfg);
 
@@ -433,7 +433,7 @@ Now we will compute the source analysis steps again as illustrated above, howeve
     cfg.grad              = freq.grad;
     cfg.method            = 'pcc';
     cfg.grid              = lf;
-    cfg.grid.filter       = source.avg.filter;
+    cfg.sourcemodel.filter       = source.avg.filter;
     cfg.headmodel         = hdm;
     cfg.keeptrials        = 'yes';
     cfg.pcc.lambda        = '5%';

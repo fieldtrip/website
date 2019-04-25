@@ -358,8 +358,8 @@ This step requires the subject's headmodel, which is available from [ftp://ftp.f
     cfg.frequency       = 18;
     cfg.hdmfile         = 'SubjectCMC.hdm';
     cfg.inwardshift     = 1;
-    cfg.grid.resolution = 1;
-    cfg.grid.unit       = 'cm';
+    cfg.resolution = 1;
+    cfg.unit       = 'cm';
     source              = ft_sourceanalysis(cfg, freq);
 
 The resulting source-structure is a volumetric reconstruction which is specified in head-coordinates. In order to be able to visualise the result with respect to the subject's MRI, we have to interpolate the functional data to the anatomical MRI.

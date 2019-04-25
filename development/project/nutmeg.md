@@ -120,7 +120,7 @@ The conversion from NUTMEG to FieldTrip is done with the following functions ins
     cfg=[];
     cfg.method='dics';
     cfg.grid=grid;
-    cfg.grid.filter=filter;
+    cfg.sourcemodel.filter=filter;
     cfg.headmodel=raw.vol;
     cfg.grad=raw.grad;
     cfg.keepfilter='no';

@@ -33,8 +33,8 @@ Using the geometrical description of the sensor locations and the geometrical de
     cfg                 = [];
     cfg.elec            = elec;
     cfg.headmodel       = vol;
-    cfg.grid.resolution = 2;
-    cfg.grid.unit       = 'cm';   % same unit as above, i.e. in cm
+    cfg.resolution = 2;
+    cfg.unit       = 'cm';   % same unit as above, i.e. in cm
     grid = ft_prepare_leadfield(cfg);
 
 The idea now is that, using your own forward model, you construct a "grid" structure with the same elements. Note that the channel numbering should correspond with the channels in the data, and that the EEG leadfields should be averaged referenced.

@@ -124,7 +124,7 @@ We have the preprocessed data for both conditions (_dataA_ and _dataB_) and we p
     cfg.method      = 'dics';
     cfg.grid        = grid;       % previously computed grid
     cfg.headmodel   = vol;        % previously computed volume conduction model
-    cfg.grid.filter = source.avg.filter; % use the common filter computed in the previous step!
+    cfg.sourcemodel.filter = source.avg.filter; % use the common filter computed in the previous step!
     cfg.frequency   = 60;
     cfg.rawtrial    = 'yes';      % project each single trial through the filter. Only necessary if you are interested in reconstructing single trial data
 

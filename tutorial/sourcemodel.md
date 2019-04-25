@@ -282,8 +282,8 @@ As an alternative you can create a template grid yourself, like this:
     % construct the dipole grid in the template brain coordinates
     % the negative inwardshift means an outward shift of the brain surface for inside/outside detection
     cfg = [];
-    cfg.grid.resolution = 1;
-    cfg.grid.tight      = 'yes';
+    cfg.resolution = 1;
+    cfg.tight      = 'yes';
     cfg.inwardshift     = -1.5;
     cfg.headmodel       = template_headmodel;
     template_grid       = ft_prepare_sourcemodel(cfg);
@@ -322,11 +322,11 @@ It is not required to create a volume conduction model of the head in order to c
 
     % create the subject specific grid, using the template grid that has just been created
     cfg                = [];
-    cfg.grid.warpmni   = 'yes';
-    cfg.grid.template  = template_grid;
-    cfg.grid.nonlinear = 'yes';
+    cfg.warpmni   = 'yes';
+    cfg.template  = template_grid;
+    cfg.nonlinear = 'yes';
     cfg.mri            = mri;
-    cfg.grid.unit      ='mm';
+    cfg.unit      ='mm';
     grid               = ft_prepare_sourcemodel(cfg);
 
     % make a figure of the single subject headmodel, and grid positions

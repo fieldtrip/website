@@ -123,8 +123,8 @@ The MEG dataset [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtri
     cfg.numdipoles = 1;
     cfg.hdmfile = 'SubjectBraille.hdm';
     cfg.feedback = 'textbar';
-    cfg.grid.resolution = 2;
-    cfg.grid.unit = 'cm';
+    cfg.resolution = 2;
+    cfg.unit = 'cm';
     dipM50 = ft_dipolefitting(cfg, avg);
     cfg.latency = [0.100 0.120]; % specify latency window around M100 peak
     dipM100 = ft_dipolefitting(cfg, avg);

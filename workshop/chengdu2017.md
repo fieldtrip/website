@@ -416,8 +416,8 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
     load headmodel_dipoli
 
     cfg = [];
-    cfg.grid.resolution = 10;
-    cfg.grid.unit = 'mm';
+    cfg.resolution = 10;
+    cfg.unit = 'mm';
     cfg.headmodel = headmodel_dipoli;
     sourcemodel = ft_prepare_sourcemodel(cfg);
 

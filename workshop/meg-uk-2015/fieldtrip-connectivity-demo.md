@@ -63,11 +63,11 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     cfg.method      = 'lcmv';
     cfg.lcmv.keepfilter = 'yes';
     cfg.lcmv.projectmom = 'yes';
-    cfg.grid.unit   = 'mm';
-    cfg.grid.pos    = pos1;
+    cfg.unit   = 'mm';
+    cfg.sourcemodel.pos    = pos1;
     source1 = ft_sourceanalysis(cfg, timelock2);
 
-    cfg.grid.pos = pos2;
+    cfg.sourcemodel.pos = pos2;
     source2 = ft_sourceanalysis(cfg, timelock2);
 
 
@@ -175,9 +175,9 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     %%
 
     cfg = [];
-    cfg.grid.resolution = 7;
+    cfg.resolution = 7;
     % cfg.inwardshift = -7; % allow dipoles 10mm outside the brain, this improves interpolation at the edges
-    cfg.grid.unit = 'mm';
+    cfg.unit = 'mm';
     cfg.headmodel = vol;  % from FT
     cfg.grad      = sens; % from FT
     cfg.senstype  = 'meg';

@@ -12,11 +12,11 @@ The procedure is as follows. First, a template grid is computed on the basis of 
     load(fullfile(ftpath, 'template/headmodel/standard_singleshell.mat'));
 
     cfg = [];
-    cfg.grid.xgrid  = -20:1:20;
-    cfg.grid.ygrid  = -20:1:20;
-    cfg.grid.zgrid  = -20:1:20;
-    cfg.grid.unit   = 'cm';
-    cfg.grid.tight  = 'yes';
+    cfg.xgrid  = -20:1:20;
+    cfg.ygrid  = -20:1:20;
+    cfg.zgrid  = -20:1:20;
+    cfg.unit   = 'cm';
+    cfg.tight  = 'yes';
     cfg.inwardshift = -1.5;
     cfg.headmodel   = vol;
     template_grid   = ft_prepare_sourcemodel(cfg);
@@ -58,9 +58,9 @@ Load the subject-specific MRI from [here](ftp://ftp.fieldtriptoolbox.org/pub/fie
     mri = ft_read_mri(dccnpath('/home/common/matlab/fieldtrip/dataftp/tutorial/salzburg/mri.mat'));
 
     cfg                = [];
-    cfg.grid.warpmni   = 'yes';
-    cfg.grid.template  = template_grid;
-    cfg.grid.nonlinear = 'yes'; % use non-linear normalization
+    cfg.warpmni   = 'yes';
+    cfg.template  = template_grid;
+    cfg.nonlinear = 'yes'; % use non-linear normalization
     cfg.mri            = mri;
     sourcemodel        = ft_prepare_sourcemodel(cfg);
 

@@ -164,9 +164,9 @@ As mentioned earlier on, if you are not contrasting the activity of interest aga
     cfg.grad            = powcsd_all.grad;
     cfg.headmodel       = headmodel_meg;
     cfg.dics.reducerank = 2; % default for MEG is 2, for EEG is 3
-    cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
-    cfg.grid.unit       = 'cm';
-    cfg.grid.tight      = 'yes';
+    cfg.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
+    cfg.unit       = 'cm';
+    cfg.tight      = 'yes';
     [grid] = ft_prepare_leadfield(cfg);
 
 The grid data structure has the following field
@@ -226,7 +226,7 @@ Remember that we intended to contrast the left hand to the right hand responses.
     cfg.method       = 'dics';
     cfg.frequency    = 18;
     cfg.grid         = grid;
-    cfg.grid.filter  = source_all.avg.filter;
+    cfg.sourcemodel.filter  = source_all.avg.filter;
     cfg.headmodel    = headmodel_meg;
     cfg.senstype     ='MEG';
 
@@ -356,9 +356,9 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
     cfg.elec            = powcsd_all.elec;
     cfg.headmodel       = headmodel_eeg;
     cfg.reducerank      = 3; % default is 3 for EEG, 2 for MEG
-    cfg.grid.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
-    cfg.grid.unit       = 'cm';
-    cfg.grid.tight      = 'yes';
+    cfg.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
+    cfg.unit       = 'cm';
+    cfg.tight      = 'yes';
     [grid] = ft_prepare_leadfield(cfg);
 
 ## (EEG) Source analysis
@@ -387,7 +387,7 @@ Finally, we can apply source analysis on the separate conditions using the commo
     cfg.method       = 'dics';
     cfg.frequency    = 18;
     cfg.grid         = grid;
-    cfg.grid.filter  = source_all.avg.filter; % Use the common filter
+    cfg.sourcemodel.filter  = source_all.avg.filter; % Use the common filter
     cfg.headmodel    = headmodel_eeg;
     cfg.senstype     = 'EEG';
 

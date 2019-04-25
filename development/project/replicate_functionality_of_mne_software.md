@@ -443,8 +443,8 @@ First, the units of the source space should be converted because all units shoul
     cfg = [];
     cfg.grad = data.grad;
     cfg.headmodel = vol;
-    cfg.grid.pos = bnd3.pnt;
-    cfg.grid.inside = 1:size(bnd3.pnt,1);
+    cfg.sourcemodel.pos = bnd3.pnt;
+    cfg.sourcemodel.inside = 1:size(bnd3.pnt,1);
     cfg.channel = 'MEG';
     grid = ft_prepare_leadfield(cfg);
 

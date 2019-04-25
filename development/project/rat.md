@@ -86,7 +86,7 @@ The next step is the calculation of the lead field
     cfg = [];
     cfg.elec = elec;
     cfg.headmodel = vol;
-    cfg.grid.pos = point; % this can be done manually by clicking
+    cfg.sourcemodel.pos = point; % this can be done manually by clicking
     lf = ft_prepare_leadfield(cfg);
 
     % Option 2. Alternatively use a grid of equally spaced points
@@ -96,9 +96,9 @@ The next step is the calculation of the lead field
     zlim = [0 12];
 
     cfg = [];
-    cfg.grid.xgrid  = xlim(1):res:xlim(2);
-    cfg.grid.ygrid  = ylim(1):res:ylim(2);
-    cfg.grid.zgrid  = zlim(2):res:zlim(1);
+    cfg.xgrid  = xlim(1):res:xlim(2);
+    cfg.ygrid  = ylim(1):res:ylim(2);
+    cfg.zgrid  = zlim(2):res:zlim(1);
     gridd = ft_prepare_sourcemodel(cfg, vol, elec);
 
     cfg = [];

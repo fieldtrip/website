@@ -150,7 +150,7 @@ The source space is a 2D surface.
     cfg             = [];
     cfg.grad        = data.grad;
     cfg.headmodel   = vol_ph;
-    cfg.grid.pos    = pos;
+    cfg.sourcemodel.pos    = pos;
     cfg.channel     = 'MEG';
     grid            = ft_prepare_leadfield(cfg);
 

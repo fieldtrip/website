@@ -215,9 +215,9 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     %%
 
     cfg = [];
-    cfg.grid.resolution = 7;
+    cfg.resolution = 7;
     % cfg.inwardshift = -7; % allow dipoles 10mm outside the brain, this improves interpolation at the edges
-    cfg.grid.unit = 'mm';
+    cfg.unit = 'mm';
     cfg.headmodel = vol;  % from FT
     cfg.grad = sens; % from FT
     cfg.senstype = 'meg';
@@ -340,8 +340,8 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     pos = [21 -64 30];
 
     cfg = [];
-    cfg.grid.pos = pos;
-    cfg.grid.unit = 'mm';
+    cfg.sourcemodel.pos = pos;
+    cfg.unit = 'mm';
     % cfg.grid = grid;
     cfg.headmodel = vol;
     cfg.grad = sens;

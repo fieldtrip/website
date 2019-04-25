@@ -146,9 +146,9 @@ Following the construction of the volume conduction model, we need to discretize
 
     % inverse-warp the template grid to subject specific coordinates
     cfg                = [];
-    cfg.grid.warpmni   = 'yes';
-    cfg.grid.template  = template.sourcemodel;
-    cfg.grid.nonlinear = 'yes'; % use non-linear normalization
+    cfg.warpmni   = 'yes';
+    cfg.template  = template.sourcemodel;
+    cfg.nonlinear = 'yes'; % use non-linear normalization
     cfg.mri            = mri;
     sourcemodel        = ft_prepare_sourcemodel(cfg);
 
@@ -311,7 +311,7 @@ When plotting the source-level power now, you would realize that the power is st
 Remember that we intended to contrast the baseline with the experiment time period. Therefore, we need to estimate activity on the source level for the baseline data and for the experiment data using the filter obtained from beaming data from both conditions ('common filter'
 
     % beam pre- and poststim by using the common filter
-    cfg.grid.filter  = source.avg.filter;
+    cfg.sourcemodel.filter  = source.avg.filter;
     source_bsl       = ft_sourceanalysis(cfg, freq_bsl);
     source_exp       = ft_sourceanalysis(cfg, freq_exp);
 

@@ -356,8 +356,8 @@ Having constructed the volume conduction model and completed the processing of t
     cfg.latency = [0.080 0.110];
     cfg.numdipoles = 2;
     cfg.symmetry = 'x';
-    cfg.grid.resolution = 1;
-    cfg.grid.unit = 'cm';
+    cfg.resolution = 1;
+    cfg.unit = 'cm';
     cfg.gridsearch = 'yes';
     cfg.headmodel = headmodel_meg;
     cfg.senstype = 'meg';
@@ -851,8 +851,8 @@ Now we are actually able to do the dipole fitting on the EEG dat
     cfg.latency = [0.080 0.110];
     cfg.numdipoles = 2;
     cfg.symmetry = 'x';
-    cfg.grid.resolution = 1;
-    cfg.grid.unit = 'cm';
+    cfg.resolution = 1;
+    cfg.unit = 'cm';
     cfg.gridsearch = 'yes';
     cfg.headmodel = headmodel_eeg;
     cfg.senstype = 'eeg';

@@ -190,9 +190,9 @@ If you are not contrasting the activity of interest against another condition or
     cfg.grad            = grad;
     cfg.headmodel       = headmodel_meg;
     cfg.lcmv.reducerank = 2; % default for MEG is 2, for EEG is 3
-    cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
-    cfg.grid.unit       = 'cm';
-    cfg.grid.tight      = 'yes';
+    cfg.resolution = 1;   % use a 3-D grid with a 1 cm resolution
+    cfg.unit       = 'cm';
+    cfg.tight      = 'yes';
     [grid] = ft_prepare_leadfield(cfg);
 
 Save the gri
@@ -253,7 +253,7 @@ Now using the headmodel and the precomputed leadfield we make three subsequent c
     cfg=[];
     cfg.method='lcmv';
     cfg.grid=grid;
-    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.sourcemodel.filter=sourceavg.avg.filter;
     cfg.headmodel=headmodel_meg;
     sourcepreM1=ft_sourceanalysis(cfg, avgpre);
     sourcepstM1=ft_sourceanalysis(cfg, avgpst);
@@ -375,7 +375,7 @@ Next, we repeat the three subsequent calls to **[ft_sourceanalysis](/reference/f
     cfg=[];
     cfg.method='lcmv';
     cfg.grid=grid;
-    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.sourcemodel.filter=sourceavg.avg.filter;
     cfg.rawtrial = 'yes';
     cfg.headmodel=headmodel_meg;
     sourcepreM1=ft_sourceanalysis(cfg, avgpre);
@@ -462,7 +462,7 @@ The ultimate motivation of source analysis of MEEG data is the reconstruction of
     cfg=[];
     cfg.headmodel=headmodel_meg;
     cfg.channel=data_right.label;
-    cfg.grid.pos=[-42 -18 67]./10; % units of cm
+    cfg.sourcemodel.pos=[-42 -18 67]./10; % units of cm
     cfg.grad=grad;
     cfg.unit = 'cm';
     sourcemodel_virt=ft_prepare_leadfield(cfg);
@@ -601,9 +601,9 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
     cfg.channel           = data_eeg_reref_ica.label;
     cfg.headmodel       = headmodel_eeg;
     cfg.dics.reducerank = 3; % default for MEG is 2, for EEG is 3
-    cfg.grid.resolution = 1;   % use a 3-D grid with a 1 cm resolution
-    cfg.grid.unit       = 'cm';
-    cfg.grid.tight      = 'yes';
+    cfg.resolution = 1;   % use a 3-D grid with a 1 cm resolution
+    cfg.unit       = 'cm';
+    cfg.tight      = 'yes';
     [grid] = ft_prepare_leadfield(cfg);
     save grid_eeg grid
 
@@ -631,7 +631,7 @@ Now that we have everything prepared we can start to calculate the spatial filte
     cfg.method='lcmv';
     cfg.elec = elec;
     cfg.grid=grid;
-    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.sourcemodel.filter=sourceavg.avg.filter;
     cfg.headmodel=headmodel_eeg;
     cfg.lcmv.lambda = '5%';
     cfg.channel           = data_eeg_reref_ica.label;
@@ -675,7 +675,7 @@ We would like to compare the time course of activity reconstructed with MEG and 
     cfg=[];
     cfg.headmodel=headmodel_eeg;
     cfg.channel           = data_eeg_reref_ica.label;
-    cfg.grid.pos=[-28 -17 67]./10; % units of cm
+    cfg.sourcemodel.pos=[-28 -17 67]./10; % units of cm
     cfg.elec = elec;
     cfg.unit = 'cm';
     sourcemodel_virt=ft_prepare_leadfield(cfg);

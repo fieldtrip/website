@@ -355,7 +355,7 @@ Now we will compute the source reconstructed alpha power again, as illustrated a
     cfg.frequency         = freq.freq;
     cfg.method            = 'pcc';
     cfg.grid              = lf;
-    cfg.grid.filter       = source.avg.filter;
+    cfg.sourcemodel.filter       = source.avg.filter;
     cfg.headmodel         = hdm;
     cfg.keeptrials        = 'yes';
     cfg.pcc.lambda        = '10%';

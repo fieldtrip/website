@@ -202,10 +202,10 @@ _Figure9: visualization of headmodel_fem_eeg and electrodes_
 
 ## 3(EEG). Create the source-model
 
-In this phase, source locations are selected within the gray matter compartment. During this tutorial we recommend to create a rather coarse grid (cfg.grid.resolution = 5;), in order to be able to compute the forward solution in the time available in this course.
+In this phase, source locations are selected within the gray matter compartment. During this tutorial we recommend to create a rather coarse grid (cfg.resolution = 5;), in order to be able to compute the forward solution in the time available in this course.
 
     cfg                 = [];
-    cfg.grid.resolution = 5; %in mm
+    cfg.resolution = 5; %in mm
     cfg.headmodel       = headmodel_fem_eeg;
     cfg.inwardshift     = 1; %shifts dipoles away from surfaces
     sourcemodel         = ft_prepare_sourcemodel(cfg, headmodel_fem_eeg);
@@ -262,7 +262,7 @@ Please DO NOT run _ft_prepare_vol_sens_ in this tutorial session! It will take t
 If the source-model was already created at the step 3(EEG), it can be simply loaded for this step.
 
     cfg                 = [];
-    cfg.grid.resolution = 5; %in mm
+    cfg.resolution = 5; %in mm
     cfg.headmodel       = headmodel_fem_meg;
     cfg.inwardshift     = 1; %shifts dipoles away from surfaces
     sourcemodel         = ft_prepare_sourcemodel(cfg, headmodel_fem_meg);

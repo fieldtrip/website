@@ -150,7 +150,7 @@ _Figure6: mesh, electrodes and axes._
 ## 8A. Create the sourcemodel
 
     cfg = [];
-    cfg.grid.resolution = 7.5;
+    cfg.resolution = 7.5;
     cfg.threshold = 0.1;
     cfg.smooth = 5;
     cfg.headmodel = headmodel_bem;

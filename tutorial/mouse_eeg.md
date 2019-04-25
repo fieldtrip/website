@@ -829,10 +829,10 @@ By using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can get 
     cfg.reducerank      = 3;
     cfg.normalize       = 'yes';
     cfg.channel         = sens.label;
-    cfg.grid.xgrid      = -6:0.25:6;
-    cfg.grid.ygrid      = -8:0.25:1;
-    cfg.grid.zgrid      = -7:0.25:10;
-    cfg.grid.unit       = 'mm';
+    cfg.xgrid      = -6:0.25:6;
+    cfg.ygrid      = -8:0.25:1;
+    cfg.zgrid      = -7:0.25:10;
+    cfg.unit       = 'mm';
     leadfieldM          = ft_prepare_leadfield(cfg);
 
     leadfieldM =
@@ -909,7 +909,7 @@ Using the covariance matrices and the leadfield matrices a spatial filtering is 
     cfg.dics.realfilter   = 'yes';
     sourceAll           = ft_sourceanalysis(cfg, freqAll);
 
-    cfg.grid.filter     = sourceAll.avg.filter;
+    cfg.sourcemodel.filter     = sourceAll.avg.filter;
     sourcePre           = ft_sourceanalysis(cfg, freqPre );
     sourcePost          = ft_sourceanalysis(cfg, freqPost);
 

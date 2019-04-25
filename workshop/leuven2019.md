@@ -222,7 +222,7 @@ _Figure 6: Mesh, electrodes and axes._
 Before we are able to create the leadfields
 
     cfg = [];
-    cfg.grid.resolution = 7.5;
+    cfg.resolution = 7.5;
     cfg.threshold       = 0.1;
     cfg.smooth          = 5;
     cfg.headmodel       = headmodel_bem;

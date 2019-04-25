@@ -146,8 +146,8 @@ Segment the brain compartment from the anatomical MRI and make the volume conduc
 To save time we have chosen to use a 7 mm grid for the source model here, but in a real clincal scenario a grid of 5 mm or smaller would typically be used. 
 
     cfg = [];
-    cfg.grid.resolution = 7;
-    cfg.grid.unit = 'mm';
+    cfg.resolution = 7;
+    cfg.unit = 'mm';
     cfg.headmodel = headmodel;
     cfg.grad = data.grad; % this being needed here is a silly historical artifact
     sourcemodel_grid = ft_prepare_sourcemodel(cfg);
@@ -364,7 +364,7 @@ This step is identical to the method for the CTF data, up until the very last st
 
     cfg = [];
     cfg.resolution = 7;  % clinical work would typically use a grid which <5mm
-    cfg.grid.unit = 'mm';
+    cfg.unit = 'mm';
     cfg.headmodel = headmodel;
     cfg.grad = data.grad; 
     sourcemodel_grid = ft_prepare_sourcemodel(cfg); 

@@ -424,9 +424,9 @@ With the covariance and the forward model for the specific seed points, we can c
     cfg.lcmv.keepfilter = 'yes';
     cfg.lcmv.projectmom = 'yes';
     cfg.lcmv.lambda = '10%';
-    cfg.grid.units = 'mm';
+    cfg.units = 'mm';
 
-    cfg.grid.pos = [
+    cfg.sourcemodel.pos = [
     lh_seed_pos
     rh_seed_pos
     ml_seed_pos

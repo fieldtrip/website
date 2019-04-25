@@ -276,11 +276,11 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
     load('~/fieldtrip/template/headmodel/standard_singleshell');
 
     cfg = [];
-    cfg.grid.xgrid  = -20:1:20;
-    cfg.grid.ygrid  = -20:1:20;
-    cfg.grid.zgrid  = -20:1:20;
-    cfg.grid.unit   = 'cm';
-    cfg.grid.tight  = 'yes';
+    cfg.xgrid  = -20:1:20;
+    cfg.ygrid  = -20:1:20;
+    cfg.zgrid  = -20:1:20;
+    cfg.unit   = 'cm';
+    cfg.tight  = 'yes';
     cfg.inwardshift = -1.5;
     cfg.headmodel        = vol;
     template_grid  = ft_prepare_sourcemodel(cfg);
@@ -322,9 +322,9 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
 For this step the individual volume is required, which can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/salzburg/mri.mat).
 
     cfg                = [];
-    cfg.grid.warpmni   = 'yes';
-    cfg.grid.template  = template_grid;
-    cfg.grid.nonlinear = 'yes';
+    cfg.warpmni   = 'yes';
+    cfg.template  = template_grid;
+    cfg.nonlinear = 'yes';
     cfg.mri            = mri;
     sourcemodel        = ft_prepare_sourcemodel(cfg);
 
@@ -398,7 +398,7 @@ Subsequently we reconstruct the activity in the pre and post stimulus intervals 
     cfg=[];
     cfg.method='lcmv';
     cfg.grid=grid;
-    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.sourcemodel.filter=sourceavg.avg.filter;
     cfg.headmodel=hdm;
     sourcepreS1=ft_sourceanalysis(cfg, avgpre);
     sourcepstS1=ft_sourceanalysis(cfg, avgpst);
@@ -530,7 +530,7 @@ First we keep single trial information and perform source analysis once again. I
     cfg=[];
     cfg.method='lcmv';
     cfg.grid=grid;
-    cfg.grid.filter=sourceavg.avg.filter;
+    cfg.sourcemodel.filter=sourceavg.avg.filter;
     cfg.rawtrial = 'yes';
     cfg.headmodel=hdm;
     sourcepreS1=ft_sourceanalysis(cfg, avgpre);
@@ -685,7 +685,7 @@ Now we create a source model for these particular locations only.
     cfg=[];
     cfg.headmodel=hdm;
     cfg.channel=dataica.label;
-    cfg.grid.pos=[btiposCML;btiposHGL;btiposHGR]./1000; % units of m
+    cfg.sourcemodel.pos=[btiposCML;btiposHGL;btiposHGR]./1000; % units of m
     cfg.grad=dataica.grad;
     sourcemodel_virt=ft_prepare_leadfield(cfg);
 

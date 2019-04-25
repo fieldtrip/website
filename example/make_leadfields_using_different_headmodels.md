@@ -47,9 +47,9 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                  = [];
     cfg.grad             = grad;
     cfg.headmodel        = ctf_ss;
-    cfg.grid.resolution  = 1;
-    cfg.grid.unit        = 'cm';
-    grid_ctf_ss          = ft_prepare_leadfield(cfg);
+    cfg.resolution       = 1;
+    cfg.unit             = 'cm';
+    sourcemodel_ctf_ss   = ft_prepare_leadfield(cfg);
 
 **CTF headmodel, single sphere:**
 
@@ -73,9 +73,9 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                 = [];
     cfg.grad            = hdr.grad;
     cfg.headmodel       = ctf_ls;
-    cfg.grid.resolution = 1;
-    cfg.grid.unit       = 'cm';
-    grid_ctf_ls         = ft_prepare_leadfield(cfg);
+    cfg.resolution      = 1;
+    cfg.unit            = 'cm';
+    sourcemodel_ctf_ls  = ft_prepare_leadfield(cfg);
 
 **CTF headmodel, local spheres:**
 
@@ -105,9 +105,9 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                 = [];
     cfg.grad            = hdr.grad;
     cfg.headmodel       = ls_headshape;
-    cfg.grid.resolution = 1;
-    cfg.grid.unit       = 'cm';
-    grid_ls_headshape   = ft_prepare_leadfield(cfg);
+    cfg.resolution      = 1;
+    cfg.unit            = 'cm';
+    sourcemodel_ls_headshape = ft_prepare_leadfield(cfg);
 
 **FieldTrip headmodel, local spheres with CTF headshape:**
 
@@ -156,9 +156,9 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                  = [];
     cfg.grad             = grad;
     cfg.headmodel        = ls_mri;
-    cfg.grid.resolution  = 1;
-    cfg.grid.unit        = 'cm';
-    grid_ls_mri          = ft_prepare_leadfield(cfg);
+    cfg.resolution       = 1;
+    cfg.unit             = 'cm';
+    sourcemodel_ls_mri   = ft_prepare_leadfield(cfg);
 
 **FieldTrip headmodel, local spheres based on segmented mri:**
 
@@ -188,9 +188,9 @@ If you download this data into a folder named 'testdata', the directory should l
     cfg                = [];
     cfg.grad           = grad;
     cfg.headmodel      = singleshell;
-    cfg.grid.resolution  = 1;
-    cfg.grid.unit        = 'cm';
-    grid_singleshell   = ft_prepare_leadfield(cfg);
+    cfg.resolution     = 1;
+    cfg.unit           = 'cm';
+    sourcemodel_singleshell   = ft_prepare_leadfield(cfg);
 
 **Single-shell headmodel, realistic geometry:**
 
@@ -206,11 +206,11 @@ If you download this data into a folder named 'testdata', the directory should l
     % compute the amplitudes of the leadfields
     %----------------------------------------------------------------------------------------------------------
     grid = {};
-    grid{1} = grid_ctf_ss;
-    grid{2} = grid_ctf_ls;
-    grid{3} = grid_ls_headshape;
-    grid{4} = grid_ls_mri;
-    grid{5} = grid_singleshell;
+    grid{1} = sourcemodel_ctf_ss;
+    grid{2} = sourcemodel_ctf_ls;
+    grid{3} = sourcemodel_ls_headshape;
+    grid{4} = sourcemodel_ls_mri;
+    grid{5} = sourcemodel_singleshell;
 
     ampl = {};
     for i=1:5
@@ -244,14 +244,10 @@ If you download this data into a folder named 'testdata', the directory should l
     % compute the correlations between the different leadfields
     % NOTE: to be able to compare them you should recalculate the leadfields with the grid
     % specifications that are the same for all models, e.g. taking them from the single-shell model,
-    % so rather than specifying cfg.grid.resolution you would specify
-    % cfg.grid.xgrid   = grid_singleshell.xgrid;
-    % cfg.grid.ygrid   = grid_singleshell.ygrid;
-    % cfg.grid.zgrid   = grid_singleshell.zgrid;
-    % cfg.grid.pos     = grid_singleshell.pos;
-    % cfg.grid.unit    = grid_singleshell.unit;
-    % cfg.grid.inside  = grid_singleshell.inside;
-    % cfg.grid.outside = grid_singleshell.outside;
+    % so rather than specifying cfg.resolution you would specify
+    % cfg.sourcemodel.pos     = sourcemodel_singleshell.pos;
+    % cfg.sourcemodel.unit    = sourcemodel_singleshell.unit;
+    % cfg.sourcemodel.inside  = sourcemodel_singleshell.inside;
     %--------------------------------------------------------------------------------------------
     comp = {};
     for i=1:5
