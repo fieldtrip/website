@@ -36,6 +36,7 @@ title: ft_singleplotTFR
    cfg.hotkeys        = enables hotkeys (leftarrow/rightarrow/uparrow/downarrow/pageup/pagedown/m) for dynamic zoom and translation (ctrl+) of the axes and color limits
    cfg.colormap       = any sized colormap, see COLORMAP
    cfg.colorbar       = 'yes', 'no' (default = 'yes')
+   cfg.colorbartext   =  string indicating the text next to colorbar
    cfg.interactive    = Interactive plot 'yes' or 'no' (default = 'yes')
                         In a interactive plot you can select areas and produce a new
                         interactive plot when a selected area is clicked. Multiple areas

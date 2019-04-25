@@ -26,6 +26,7 @@ title: ft_movieplotTFR
    cfg.baseline     = 'yes','no' or [time1 time2] (default = 'no'), see FT_TIMELOCKBASELINE or FT_FREQBASELINE
    cfg.baselinetype = 'absolute', 'relative', 'relchange', 'normchange', 'db' or 'zscore' (default = 'absolute')
    cfg.colorbar     = 'yes', 'no' (default = 'no')
+   cfg.colorbartext =  string indicating the text next to colorbar
 
  the layout defines how the channels are arranged. you can specify the
  layout in a variety of ways:

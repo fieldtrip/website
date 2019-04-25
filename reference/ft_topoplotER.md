@@ -49,6 +49,7 @@ title: ft_topoplotER
                             'SouthOutside'       outside bottom
                             'EastOutside'        outside right
                             'WestOutside'        outside left
+   cfg.colorbartext       =  string indicating the text next to colorbar
    cfg.interplimits       = limits for interpolation (default = 'head')
                             'electrodes' to furthest electrode
                             'head' to edge of head
