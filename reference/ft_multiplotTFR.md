@@ -39,6 +39,7 @@ title: ft_multiplotTFR
                           Draw a box around each graph
    cfg.hotkeys          = enables hotkeys (up/down arrows) for dynamic colorbar adjustment
    cfg.colorbar         = 'yes', 'no' (default = 'no')
+   cfg.colorbartext     =  string indicating the text next to colorbar
    cfg.colormap         = any sized colormap, see COLORMAP
    cfg.showlabels       = 'yes', 'no' (default = 'no')
    cfg.showoutline      = 'yes', 'no' (default = 'no')

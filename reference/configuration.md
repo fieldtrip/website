@@ -654,6 +654,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.colorbar** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
 
 
+**cfg.colorbartext** - [ft_movieplotER](/reference/ft_movieplotER), [ft_movieplotTFR](/reference/ft_movieplotTFR), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_sourceplot](/reference/ft_sourceplot), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
+
+
 **cfg.colorgrad** - [ft_sourceplot](/reference/ft_sourceplot)  
 
 

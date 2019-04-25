@@ -69,6 +69,7 @@ title: ft_sourceplot
                         'auto', if funparameter values are all positive: 'zeromax',
                           all negative: 'minzero', both possitive and negative: 'maxabs'
    cfg.colorbar      = 'yes' or 'no' (default = 'yes')
+   cfg.colorbartext  =  string indicating the text next to colorbar
 
  The 'ortho' method can also plot time and/or frequency, the other methods can not.
  If your functional data has a time and/or frequency dimension, you can use
