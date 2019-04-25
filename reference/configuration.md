@@ -1637,6 +1637,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.matfile** - [ft_qualitycheck](/reference/ft_qualitycheck)  
 
 
+**cfg.matrix** - [ft_math](/reference/ft_math)  
+
+
 **cfg.maxAbs** - [ft_omri_quality](/reference/ft_omri_quality)  
 
 
@@ -2594,9 +2597,6 @@ A detailed description of each function is available in the [reference documenta
 **cfg.sourcemodel.tri** - [ft_dipolefitting](/reference/ft_dipolefitting), [ft_sourceanalysis](/reference/ft_sourceanalysis)  
 
 
-**cfg.sourcemodel.unit** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
-
-
 **cfg.sourcemodel.xgrid** - [ft_prepare_leadfield](/reference/ft_prepare_leadfield)  
 
 
@@ -2955,7 +2955,7 @@ A detailed description of each function is available in the [reference documenta
 
 ## U 
 
-**cfg.unit** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel)  
+**cfg.unit** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
 **cfg.unmixing** - [ft_componentanalysis](/reference/ft_componentanalysis)  

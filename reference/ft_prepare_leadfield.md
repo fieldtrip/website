@@ -71,5 +71,5 @@ title: ft_prepare_leadfield
  file on disk. This mat files should contain only a single variable named 'data',
  corresponding to the input structure.
 
- See also FT_SOURCEANALYSIS, FT_DIPOLEFITTING, FT_PREPARE_HEADMODEL,FT_PREPARE_SOURCEMODEL
+ See also FT_SOURCEANALYSIS, FT_DIPOLEFITTING, FT_PREPARE_HEADMODEL, FT_PREPARE_SOURCEMODEL
 ```

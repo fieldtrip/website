@@ -23,6 +23,7 @@ title: ft_math
  If you specify only a single input data structure and the operation is 'add',
  'subtract', 'divide' or 'multiply', the configuration should also contain:
    cfg.scalar    = scalar value to be used in the operation
+   cfg.matrix    = matrix with identical size as the data, it will be element-wise be applied
 
  The operation 'add' is implemented as follows
    y = x1 + x2 + ....

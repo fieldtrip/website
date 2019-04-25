@@ -19,7 +19,7 @@ title: ft_prepare_layout
  layout is no longer recommended, since the outline of the head and the mask within
  which the interpolation is done is less refined. A large number of template layout
  files is provided in the fieldtrip/template/layout directory. See also
- http://fieldtriptoolbox.org/template/layout
+ also http://www.fieldtriptoolbox.org/template/layout
 
  You can specify any one of the following configuration options
    cfg.layout      = filename containg the input layout (*.mat or *.lay file), this can also be a layout
@@ -89,7 +89,7 @@ title: ft_prepare_layout
 
  For an ECoG grid the option cfg.layout='ordered' is useful. In this case you can
  also specify the number of rows and/or columns and hwo the channels increment over
- the grid (e.g. first left-to-right, then top-to-bottom). You can check the channel 
+ the grid (e.g. first left-to-right, then top-to-bottom). You can check the channel
  order of your grid using FT_PLOT_LAYOUT.
    cfg.rows      = number of rows (default is automatic)
    cfg.columns   = number of columns (default is automatic)
