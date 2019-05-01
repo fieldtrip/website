@@ -109,6 +109,9 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
+- name:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /tutorial/sensor_analysis_plusminus
+
 - name:  Extracting the brain state and events from continuous sleep EEG
   link:  /tutorial/sleep
 

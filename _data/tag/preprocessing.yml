@@ -115,6 +115,9 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
+- name:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /tutorial/sensor_analysis_plusminus
+
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
