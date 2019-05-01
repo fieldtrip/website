@@ -42,6 +42,11 @@ pre {
   margin-bottom: 0;
 }
 
+/* don't highlight inline code segments */
+code.highlighter-rouge {
+  color: inherit;
+}
+
 /* -------------------------------------------------- */
 /* Page Table of Contents */
 
