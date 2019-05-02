@@ -4,6 +4,9 @@
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
 
+- name:  Overview of all tutorials
+  link:  /tutorial
+
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
@@ -25,11 +28,11 @@
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
-- name:  Extended analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivityextended
-
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
 
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
@@ -67,9 +70,6 @@
 - name:  Specifying the channel layout for plotting
   link:  /tutorial/layout
 
-- name:  Overview of all tutorials
-  link:  /tutorial
-
 - name:  Making a memory efficient analysis script
   link:  /tutorial/memory
 
@@ -97,11 +97,11 @@
 - name:  Preprocessing and averaging of single-channel NIRS data
   link:  /tutorial/nirs_singlechannel
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
 - name:  Trigger-based trial selection
   link:  /tutorial/preprocessing
+
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
 
 - name:  Creating a clean analysis script
   link:  /tutorial/scripting
