@@ -317,7 +317,9 @@ By clicking on one of the boxes (in MATLAB), a new figure will appear that shows
 
 This tutorial gave an overview of some options available in FieldTrip for doing sensor-level analysis. We started by showing how you can read data from disk using trigger channels and/or custom trial functions. Then, we investigated an event-related field evoked by visual stimulation and computed a planar gradient representation. Next, time-frequency analysis was performed and revealed induced visual gamma activity.
 
-After having finished this tutorial, you might want to read through the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/beamformer) for source reconstruction (potentially the [extended beamforming tutorial](/tutorial/beamformingextended) on the same data set as the present one) or, for details on statistics, one of the statistics [tutorials](/tutorial).
+The tutorial on which this one was based contains an extra section on how to performance analysis of coherence of MEG signals with an external reference (in this case, EMG). If you're done early, you may want to [have a look at that one](/tutorial/sensor_analysis#cortico-muscular-coherence). It's also a good basis for the tutorial we'll later be doing on beamforming.
+
+Alternatively, or additionally, you could read through the tutorial on [time-frequency analysis](/tutorial/timefrequencyanalysis), which provides more details on the various tapers available and their implications. Alternative follow-ups would be the tutorial on [beamformers](/tutorial/beamformer) for source reconstruction (potentially the [extended beamforming tutorial](/tutorial/beamformingextended) on the same data set as the present one) or, for details on statistics, one of the statistics [tutorials](/tutorial).
 
 FAQ:
 {% include seealso tag1="faq" tag2="preprocessing" %}

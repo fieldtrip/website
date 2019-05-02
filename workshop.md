@@ -17,6 +17,7 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
+- 2019, [Oxford, UK](/workshop/oxford2019) - Oxford, UK
 - 2019, [EEG workshop](/workshop/oslo2019) - Oslo, Norway
 
 Previous FieldTrip workshops took place at
