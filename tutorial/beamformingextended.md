@@ -471,7 +471,7 @@ Since the data is expressed in MNI coordinates, you can also make a surface rend
 
 {% include markup/info %}
 The template MRI included with SPM (and therefore with FieldTrip) is oriented such that the anatomical left is projected to the right side of the screen, and vice versa. This is why the volumetric above are also oriented as such. You could [download a version of the MNI brain](http://nist.mni.mcgill.ca/?p=957) (see bottom of that page, use NIFTI format, file 'average305_t1_tal_lin.nii' in the resulting ZIP) that is oriented differently, and use it instead, if you want to prevent this.
-{% include markup.end %}
+{% include markup/end %}
 
 #### Exercise: anatomical labeling
 
