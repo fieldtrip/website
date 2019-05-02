@@ -160,9 +160,6 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
-- name:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /tutorial/sensor_analysis_plusminus
-
 - name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
   link:  /tutorial/sourcemodel
 
@@ -225,4 +222,7 @@
 
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
+
+- name:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /workshop/oxford2019/sensor_analysis_plusminus
 

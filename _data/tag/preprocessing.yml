@@ -115,12 +115,12 @@
 - name:  Sensor-level ERF, TFR and connectivity analyses
   link:  /tutorial/sensor_analysis
 
-- name:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /tutorial/sensor_analysis_plusminus
-
 - name:  Visual artifact rejection
   link:  /tutorial/visual_artifact_rejection
 
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /workshop/natmeg/preprocessing
+
+- name:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /workshop/oxford2019/sensor_analysis_plusminus
 
