@@ -27,9 +27,8 @@ title: ft_plot_sens
  The following options apply to EEG electrodes
    'elec'            = true/false, plot each individual electrode (default = false)
    'orientation'     = true/false, plot a line for the orientation of each electrode (default = false)
-   'elecshape'       = 'point', 'circle', 'square', 'sphere', or 'disc' (default is automatic)
+   'elecshape'       = 'point', 'circle', 'square', or 'sphere' (default is automatic)
    'elecsize'        = diameter of the electrodes (default is automatic)
-   'headshape'       = headshape, required for elecshape 'disc'
  The following options apply to NIRS optodes
    'opto'            = true/false, plot each individual optode (default = false)
    'orientation'     = true/false, plot a line for the orientation of each optode (default = false)
