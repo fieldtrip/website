@@ -6,7 +6,7 @@ tags: [blackrock, lfp, spike, dataformat]
 # Getting started with Blackrock data
 
 FIXME This getting started guide and the reading code are still under development,
-see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964.
+see [bugzilla](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964).
 However, we very much welcome you to start using this functionality, and would be happy with any feedback provided.
 
 ## Introduction
