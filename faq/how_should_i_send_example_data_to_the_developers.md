@@ -11,7 +11,7 @@ If the data that you want to send is too large for an email attachment, you can 
 
 - <https://wetransfer.com>
 - <https://www.dropbox.com>
-- <https://www.hightail.com/>
+- <https://www.hightail.com>
 - <https://www.sendspace.com>
 
 So instead of sending the large file as attachment, you would just include the download link in your email.
