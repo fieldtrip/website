@@ -76,7 +76,7 @@ If your recorded data is continuous, specify _cfg.continuous = 'yes'_, if you ha
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_databrowser1.png" width="650" %}
 
-_Figure; Raw plot from magnetometers using ft_databrowser_
+_Figure: Raw plot from magnetometers using ft_databrowser_
 
 {% include markup/info %}
 Try to get a feel of your data by browsing through the data. Do you see any obvious artifacts?
@@ -109,7 +109,7 @@ Finally, we will look at the EEG channel
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_databrowser2.png" width="650" %}
 
-_Figure; Raw plot from EEG channels using ft_databrowser_
+_Figure: Raw plot from EEG channels using ft_databrowser_
 
 {% include markup/info %}
 At first glance, can you see any differences between the MEG and EEG data or artifacts?
@@ -131,7 +131,7 @@ The following steps are taken in the MEG section of the tutorial:
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_flowchart1.png" width="400" %}
 
-_Figure; A schematic overview of the steps in averaging of event related fields_
+_Figure: A schematic overview of the steps in averaging of event related fields_
 
 ### Reading and preprocessing the interesting trials
 
@@ -194,7 +194,7 @@ The most important fields are data_MEG.trial containing the individual trials an
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf0.png" width="600" %}
 
-_Figure; A plot of a single trial of one channel_
+_Figure: A plot of a single trial of one channel_
 
 This demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. The way we deal with artifacts is described in general in [another tutorial](/tutorial/artifacts) and visual artifact rejection is described in the [Visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. For efficiency in this hands-on tutorial, we will use a semi-automatic way of rejecting trials and channels containing artifacts using a summary view of all trials and channels transformed into z-scores. This allows you to get a quick overview of your data and enables you to easily detect and remove outliers.
 
@@ -212,7 +212,7 @@ This demonstrate how to extract trials from a dataset based on trigger informati
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_rejectsummary.png" width="650" %}
 
-\*Figure: An overview of the data using **[ft_rejectvisual](/reference/ft_rejectvisual)\***
+_Figure: An overview of the data using ft_rejectvisual_
 
 {% include markup/warning %}
 Use the mouse to click and drag a selection box over the trials you wish to reject. You can see the trials that were marked for rejection on the right. If you wish to unmark a trial for rejection, type the number of the trial in the 'toggle trial' box and press enter. You can change from _zvalue_ to another metrics to detect outliers.
@@ -290,7 +290,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim = [-2.5e-13 2.5e-13];
     cfg.xlim = [-0.2 0.6];
 
-    figure;
+    figure
     ft_multiplotER(cfg, ERF_standard, ERF_oddball, ERF_diff );
     legend({'Standard';'Oddball';'Difference'});
 
@@ -299,7 +299,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf1.png" width="650" %}
 
-\*Figure: A plot of the average of all conditions for all channels plotted using **[ft_multiplotER](/reference/ft_multiplotER)\***
+_Figure: A plot of the average of all conditions for all channels plotted using ft_multiplotER_
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
@@ -320,7 +320,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf2.png" width="650" %}
 
-\*Figure: A plot of the average of all conditions for channel MEG0211 plotted using **[ft_singleplotER](/reference/ft_singleplotER)\***
+_Figure: A plot of the average of all conditions for channel MEG0211 plotted using ft_singleplotER_
 
 To plot the topographic distribution of the data averaged over the time interval from 0.08 to 0.15 seconds use to following command
 
@@ -353,7 +353,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf3.png" width="650" %}
 
-\*Figure: A topoplot of the data averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)\***
+_Figure: Topoplot of the data averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
 {% include markup/info %}
 Can you try to explain the topographical distribution in terms of a dipole?
@@ -390,7 +390,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf4.png" width="650" %}
 
-\*Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis\***
+_Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
 {% include markup/info %}
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
@@ -414,7 +414,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf5.png" width="650" %}
 
-\*Figure: The event related field plotted using ft_singleplotER. The event related fields were calculated using **ft_preprocessing** followed by **ft_timelockanalysis\***
+_Figure: The event related field plotted using ft_singleplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
 Now we are going to look at the topographical spread of the field by usin
 
@@ -447,7 +447,7 @@ Now we are going to look at the topographical spread of the field by usin
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf6.png" width="650" %}
 
-\*Figure: A topographic plot of the event related fields obtained using **ft_topoplotER\***
+_Figure: Topographic plot of the event related fields obtained using ft_topoplotER_
 
 {% include markup/info %}
 Compare this distribution with those resulting from the magnetometers. Do you understand the differences?
@@ -600,7 +600,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp1.png" width="650" %}
 
-\*Figure: The event related potentials plotted using ft_multiplotER. The event related potentials were calculated using **ft_preprocessing** followed by **ft_timelockanalysis\***
+_Figure: The event related potentials plotted using ft_multiplotER. The event related potentials were calculated using ft_preprocessing followed by ft_timelockanalysis_
 
 This plots the event related fields for all sensors arranged topographically according to their position in the helmet. You can use the zoom button (magnifying glass) to enlarge parts of the figure.
 
@@ -622,11 +622,11 @@ Using **[ft_singleplotER](/reference/ft_singleplotER)** we are going to plot a s
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp2.png" width="650" %}
 
-\*Figure: The event related potentials plotted for three conditions for channel EEG020 using **[ft_singleplotER](/reference/ft_singleplotER)\***
+_Figure: The event related potentials plotted for three conditions for channel EEG020 using ft_singleplotER_
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf2.png" width="650" %}
 
-\*Figure: The event related fields plotted for three conditions for channel MEG0211 using **[ft_singleplotER](/reference/ft_singleplotER)\***
+_Figure: The event related fields plotted for three conditions for channel MEG0211 using ft_singleplotER_
 
 {% include markup/info %}
 Compare this plot to the single-channel ERFs obtained from the magnetometer data (see Figure 9). Can you identify similar components?
@@ -664,7 +664,7 @@ To plot the topographic distribution of the data averaged over the time interval
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erp3.png" width="650" %}
 
-\*Figure 10; A topographic plot of the event related potentials obtained using **[ft_topoplotER](/reference/ft_topoplotER)\***
+_Figure: Topographic plot of the event related potentials obtained using ft_topoplotER_
 
 {% include markup/info %}
 To which MEG channels can we best compare the topographical plots from the EEG data, the magnetometers or the gradiometers?
@@ -672,7 +672,7 @@ To which MEG channels can we best compare the topographical plots from the EEG d
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_erf6.png" width="650" %}
 
-\*Figure 11; A topographic plot of the event related fields (gradiometer) obtained using **[ft_topoplotER](/reference/ft_topoplotER)\***
+_Figure: Topographic plot of the event related fields (gradiometer) obtained using ft_topoplotER_
 
 #### Scalp current density (SCD)
 
@@ -723,7 +723,7 @@ Note that if you get plotting artifacts in these figures, such as colorbars that
 
 {% include image src="/assets/img/workshop/natmeg/preprocessing/natmeg_scd1.png" width="650" %}
 
-\*Figure 12; A topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using **[ft_topoplotER](/reference/ft_topoplotER)\***
+_Figure: Topoplot of the scalp current density averaged between 0.08 and 0.15 seconds using ft_topoplotER_
 
 {% include markup/info %}
 Did calculating the scalp current density help in narrowing down the source of the EEG activity?

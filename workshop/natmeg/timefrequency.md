@@ -80,7 +80,7 @@ At this stage in the processing pipeline you could remove bad trials using, for 
 
 ## Time-frequency analysis with a Hanning taper and fixed window length
 
-We will here describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window. In the following example a time window with length 500 ms is applied.
+We will here describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in the first) = 1/length of time window in sec (delta T in the first figure). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window. In the following example a time window with length 500 ms is applied.
 
 Since we have two conditions (responses with left and right index finger), we will calculate the data separately for both so that we can compare them. We select the trials based on the .trialinfo field. We created this field when we called _trialfun_oddball_responselocked_ in ft_definetrial. In addition to the three colums in the .trl, it also added a column with response side based on the response trigger (256 and 2048 for left and right, respectively). After preprocessing, this column is added in the data structure as the field .trailinfo. This is a good example of keeping your own internal bookkeeping. You can e.g. also add response times, or accuracy. This info will travel with you throughout your analysis as long as it represents separate trials (and not averages).
 
@@ -140,11 +140,11 @@ There are three ways of graphically representing the data: 1) time-frequency plo
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq3.png" %}
 
-_Figure: Time-frequency representations calculated using ft_freqanalysis. Plotting was done with ft_multiplotTFR. Note that the image is displayed rotated for unknown reason (website bug)._
+_Figure: Time-frequency representations calculated using ft_freqanalysis and plotted with ft_multiplotTFR_
 
 Note that by using the options cfg.baseline and cfg.baselinetype when calling plotting functions, baseline correction can be applied to the data. Baseline correction can also be applied directly by calling **[ft_freqbaseline](/reference/ft_freqbaseline)**. You can combine the various visualisation options/functions interactively to explore your data. Currently, this is the default ploting behavior because the configuration option cfg.interactive='yes' is activated unless you explicitly select cfg.interactive='no' before calling **[ft_multiplotTFR](/reference/ft_multiplotTFR)** to deactivate it. See also the [plotting tutorial](/tutorial/plotting) for more details.
 
-Something interesting seems to happen at channel MEG1041. To make a plot of a single channel use the function \*_[ft_singleplotTFR](/reference/ft_singleplotTFR)_
+Something interesting seems to happen at channel MEG1041. To make a plot of a single channel use the function **[ft_singleplotTFR](/reference/ft_singleplotTFR)**.
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -159,9 +159,9 @@ Something interesting seems to happen at channel MEG1041. To make a plot of a si
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq4.png" %}
 
-_Figure: The time-frequency representation with respect to single sensor obtained using ft_singleplotTFR_
+_Figure: The time-frequency representation for a single sensor, obtained using ft_singleplotTFR_
 
-From Figure 4 one can see that there is an increase in power around 15-25 Hz in the time interval 0.4 to about 0.8 s after response onset. To show the topography of the beta increase use the function \*_[ft_topoplotTFR](/reference/ft_topoplotTFR)_
+From the previous figure you can see that there is an increase in power around 15-25 Hz in the time interval 0.4 to about 0.8 s after response onset. To show the topography of the beta increase use the function **[ft_topoplotTFR](/reference/ft_topoplotTFR)**.
 
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -179,7 +179,7 @@ From Figure 4 one can see that there is an increase in power around 15-25 Hz in 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq5.png" %}
 
-_Figure 5; A topographic representation of the time-frequency representations of beta (15-25 Hz) after (0.5-1.0s) left-finger response, obtained using ft_topoplotTFR._
+_Figure: Topographic representation of the time-frequency representations of beta (15-25 Hz) after (0.5-1.0s) left-finger response, obtained using ft_topoplotTFR._
 
 {% include markup/info %}
 So what do you think we are looking at? I guess the introduction gave it away, but how would you argue for it?
@@ -203,7 +203,7 @@ Perhaps we should now also look at the beta-rebound after a response of the othe
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq6.png" %}
 
-_Figure: A topographic representation of the time-frequency representations of beta (15-25 Hz) after (0.5-1.0s) right-finger response, obtained using ft_topoplotTFR_
+_Figure: Topographic representation of the time-frequency representations of beta (15-25 Hz) after (0.5-1.0s) right-finger response, obtained using ft_topoplotTFR_
 
 Until now we have been using an (absolute) baseline. However, because we have two conditions with an - assumed - similar baseline, we can also compare the two conditions directly by subtracting and then dividing the two powerspectra by there sum, thereby normalizing by their common activity using **[ft_math](/reference/ft_math)**.
 
@@ -227,7 +227,7 @@ Until now we have been using an (absolute) baseline. However, because we have tw
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq7.png" %}
 
-_Figure: A topographic representation of the time-frequency representations of the difference in beta (15-25 Hz) power, between left and right response, after 0.5-1.0s, obtained using ft_topoplotTFR._
+_Figure: Topographic representation of the time-frequency representations of the difference in beta (15-25 Hz) power, between left and right response, after 0.5-1.0s, obtained using ft_topoplotTFR._
 
 ## Preprocessing EEG
 
@@ -295,7 +295,7 @@ Fixing bad channels is usually done by interpolating between neighbouring channe
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq8.png" %}
 
-_Figure: A 3-D representation of the neighbourstructure, obtained using ft_neighbourplot._
+_Figure: 3-D representation of the neighbourstructure, obtained using ft_neighbourplot._
 
 We can then use this neighborhood structure to fix our bad channels with **[ft_channelrepair](/reference/ft_channelrepair)**, by replacing their values with interpolations between their neighbours.
 
@@ -380,7 +380,7 @@ In fact, we are now encountering an aspect of EEG recordings we haven't seen in 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq10.png" %}
 
-_Figure 10; Frequency topography (EEG) calculated using ft_freqanalysis. Plotting was done with \*\*[ft_topoplotTFR._
+_Figure: Frequency topography (EEG) calculated using ft_freqanalysis. Plotting was done with ft_topoplotTFR._
 
 {% include markup/info %}
 Why this difference?
@@ -413,7 +413,7 @@ This will at the same time solved the above problem. Can you say why?
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq11.png" %}
 
-_Figure 11; A topographic representation of the time-frequency representations of the difference in beta (15-25 Hz) power, between left and right response, in EEG, after 0.5-1.0s, obtained using ft_topoplotTFR._
+_Figure: A topographic representation of the time-frequency representations of the difference in beta (15-25 Hz) power, between left and right response, in EEG, after 0.5-1.0s, obtained using ft_topoplotTFR._
 
 ## MEG planar gradiometers
 
@@ -434,7 +434,7 @@ Finally, lets take a look at how the topography looks when we use the MEG planar
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq12.png" %}
 
-_Figure 12; A topographic representation of the time-frequency representations of the relative change in beta (15-25 Hz) power, for gradiometers, after 0.5-1.0s, obtained using ft_topoplotTFR._
+_Figure: A topographic representation of the time-frequency representations of the relative change in beta (15-25 Hz) power, for gradiometers, after 0.5-1.0s, obtained using ft_topoplotTFR._
 
 {% include markup/info %}
 Now that looks a bit funky, right? Do you know why?
@@ -460,9 +460,10 @@ In fact, we are now plotting the two different gradiometers together. You can se
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq13.png" %}
 
-_Figure 13; A topographic representation of the time-frequency representations of the relative change in beta (15-25 Hz) power, for combined gradiometers, after 0.5-1.0s, obtained using ft_topoplotTFR._
+_Figure: Topographic representation of the time-frequency representations of the relative change in beta (15-25 Hz) power, for combined gradiometers, after 0.5-1.0s, obtained using ft_topoplotTFR._
 
 Now that looks much better!
+
 Finally, let's plot the difference between conditions using the combined gradiometers. Should we calculate the combination before or after we do the comparison (i.e. (left-right) / (left+right))? Why?
 
     cfg = [];
@@ -486,7 +487,7 @@ Finally, let's plot the difference between conditions using the combined gradiom
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/natmeg_freq14.png" %}
 
-_Figure 14; A topographic representation of the time-frequency representations of the differences in beta (15-25 Hz) power, between left and right response, after 0.5-1.0s, obtained using combined planar gradiometers in ft_topoplotTFR._
+_Figure: A topographic representation of the time-frequency representations of the differences in beta (15-25 Hz) power, between left and right response, after 0.5-1.0s, obtained using combined planar gradiometers in ft_topoplotTFR._
 
 We have now reached the end of the MEG-EEG part of the tutorial.
 

@@ -64,7 +64,7 @@ The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtri
 
 The high-level plotting functions do not offer support for flexible plotting of the geometrical information. The [plotting module](/development/module/plotting), i.e. the set of functions in the fieldtrip/plotting directory, includes a number of lower-level functions to make nice figures of the various geometrical data objects. In contrast to the high-level functions, these plotting functions do **not** take a cfg as first input argument.
 
-    figure;
+    figure
     ft_plot_headshape(shape);
     ft_plot_sens(grad, 'style', '*b');
     ft_plot_sens(elec, 'style', '*g');
@@ -76,7 +76,7 @@ The high-level plotting functions do not offer support for flexible plotting of 
 
 It is possible to visualise the anatomical MRI using the **[ft_sourceplot](/reference/ft_sourceplot)** function. Usually we use the function to overlay functional data from a beamformer source reconstruction on the anatomical MRI, but in the absence of the functional data it will simply show the anatomical MRI. Besides showing the MRI, you can also use the function to see how the MRI is aligned with the coordinate system, and how the voxel indices [i j k] map onto geometrical coordinates [x y z].
 
-    figure;
+    figure
     cfg = [];
     ft_sourceplot(cfg, mri_orig);
 
@@ -245,7 +245,7 @@ Now that we have the meshes, we use them to compute the volume conduction model.
 
     save headmodel_meg headmodel_meg
 
-    figure;
+    figure
     hold on
     ft_plot_headshape(shape);
     ft_plot_sens(grad, 'style', 'ob');
@@ -422,7 +422,7 @@ Now that we have a better starting point for the dipole fit, we can release the 
     cfg.senstype = 'meg';
     source_planar_nosym = ft_dipolefitting(cfg, timelock_all);
 
-    figure;
+    figure
     hold on
 
     ft_plot_dipole(source_planar.dip.pos(1,:), mean(source_planar.dip.mom(1:3,:),2), 'color', 'g')

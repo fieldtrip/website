@@ -144,7 +144,9 @@ Let us compare the single-trial TFR with the averaged TFR.
 Use the MATLAB [boxplot](http://www.mathworks.se/help/stats/boxplot.html) function to plot the power in channel 'MEG0431' at 18 Hz and around 700 ms following movement offset.
 
 Hint: you can make a selection of the data like
-TFR_all.powspctrm(:, 15, 4, 8)
+
+    TFR_all.powspctrm(:, 15, 4, 8)
+
 to give you a vector with the power values in each trial, and you can use the _trialinfo_ as the grouping variable.
 {% include markup/end %}
 
@@ -179,7 +181,7 @@ The neighbourhood structure contains for each channel a list of other channels t
 
 ### Compute the statistics
 
-    cfg = [];
+    cfg           = [];
     cfg.channel   = 'MEG*1';
     cfg.statistic = 'indepsamplesT';
     cfg.ivar      = 1;
@@ -252,12 +254,12 @@ The following requires that the custom trial function [trialfun_oddball_stimlock
     cfg.dataset = 'oddball1_mc_downsampled.fif';
 
     % define trials based on stimulus
-    cfg.trialdef.prestim  = 0.3;
-    cfg.trialdef.poststim = 0.7;
+    cfg.trialdef.prestim       = 0.3;
+    cfg.trialdef.poststim      = 0.7;
     cfg.trialdef.stim_triggers = [1 2];
     cfg.trialdef.rsp_triggers  = [256 4096];
-    cfg.trialfun          = 'trialfun_oddball_stimlocked';
-    cfg                   = ft_definetrial(cfg);
+    cfg.trialfun               = 'trialfun_oddball_stimlocked';
+    cfg = ft_definetrial(cfg);
 
     % preprocess MEG data
     cfg.channel           = 'MEG*1';
@@ -292,7 +294,7 @@ The **[ft_selectdata](/reference/ft_selectdata)** function is a very handy gener
     cfg = [];
     cfg.latency = [0.08 0.11];
     cfg.avgovertime = 'yes';
-    ERF_peak =  ft_selectdata(cfg, ERF_std)
+    ERF_peak = ft_selectdata(cfg, ERF_std)
 
 {% include markup/end %}
 

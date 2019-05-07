@@ -29,7 +29,7 @@ The brain is divided in a regular three dimensional grid and the source strength
 
 ## Procedure
 
-To localize the oscillatory sources for the example dataset we will perform the following step
+To localize the oscillatory sources for the example dataset we will perform the following steps:
 
 - Reading in the subject specific anatomical MRI using **[ft_read_mri](/reference/ft_read_mri)**
 - Construct a forward model using **[ft_volumesegment](/reference/ft_volumesegment)** and **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**
@@ -56,7 +56,7 @@ _Figure: An example of a pipeline to locate oscillatory sources._
 
 First, we are going to load the data already preprocessed during the [Time-frequency analysis tutorial](/workshop/natmeg/timefrequency).
 
-Load the data using the following comman
+Load the data using the following command:
 
     load data_clean_MEG_responselocked.mat
 
@@ -65,7 +65,7 @@ Load the data using the following comman
 The first requirement for the source reconstruction procedure is that we need a forward model. The forward model allows us to calculate the distribution of the magnetic field on the MEG sensors given a hypothetical current distribution.
 We are going to use the forward model that was calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting).
 
-Load the forward model using the following cod
+Load the forward model using the following code:
 
     load headmodel_meg.mat
 
@@ -158,18 +158,18 @@ Sensors that were previously removed from the data set should also be removed wh
 
 As mentioned earlier on, if you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
 
-    % Create leadfield grid
+    % Create source model with leadfields
     cfg                 = [];
     cfg.channel         = {'MEG*2', 'MEG*3'};
     cfg.grad            = powcsd_all.grad;
     cfg.headmodel       = headmodel_meg;
-    cfg.dics.reducerank = 2; % default for MEG is 2, for EEG is 3
-    cfg.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
-    cfg.unit       = 'cm';
-    cfg.tight      = 'yes';
+    cfg.dics.reducerank = 2;     % default for MEG is 2, for EEG is 3
+    cfg.resolution      = 0.5;   % use a 3-D grid with a 0.5 cm resolution
+    cfg.unit            = 'cm';
+    cfg.tight           = 'yes';
     [grid] = ft_prepare_leadfield(cfg);
 
-The grid data structure has the following field
+The source model has the following fields:
 
     grid =
 
@@ -186,7 +186,7 @@ The grid data structure has the following field
 
 ## (MEG) Source analysis on conditions
 
-Using the cross-spectral density and the lead field matrices a spatial filter is calculated for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for the pre- and post-stimulus activity. This results in a power estimate for each grid point. Since we want to use a common filter, we first need to input data from all condition
+Using the cross-spectral density and the lead field matrices a spatial filter is calculated for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for the pre- and post-stimulus activity. This results in a power estimate for each grid point. Since we want to use a common filter, we first need to input data from all conditions:
 
     cfg              = [];
     cfg.channel      = {'MEG*2', 'MEG*3'};
@@ -200,7 +200,7 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
     cfg.dics.lambda  = '5%';
     source_all = ft_sourceanalysis(cfg, powcsd_all);
 
-The source data structure has the following field
+The source data structure has the following fields:
 
     source_all =
 
@@ -230,7 +230,7 @@ Remember that we intended to contrast the left hand to the right hand responses.
     cfg.headmodel    = headmodel_meg;
     cfg.senstype     ='MEG';
 
-    source_left = ft_sourceanalysis(cfg, powcsd_left);
+    source_left  = ft_sourceanalysis(cfg, powcsd_left);
     source_right = ft_sourceanalysis(cfg, powcsd_right);
 
 After successfully applying the above steps, we obtained an estimate of the beta-band suppression in both experimental conditions at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** to match position of the MRI. The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns the source level activity with the structural MRI. We only need to specify what parameter we want to interpolate and to specify the MRI we want to use for interpolation.
@@ -243,12 +243,12 @@ Before aligning the source activity to the MRI we will reslice the MRI using [ft
 
     mri_resliced = ft_volumereslice([], mri_realigned2);
 
-Now we will align the source activity to the MR
+Now we will align the source activity to the MRI:
 
     cfg            = [];
     cfg.parameter = 'pow';
     source_left_int  = ft_sourceinterpolate(cfg, source_left, mri_resliced);
-    source_right_int  = ft_sourceinterpolate(cfg, source_right, mri_resliced);
+    source_right_int = ft_sourceinterpolate(cfg, source_right, mri_resliced);
 
 Now we can finally compute the difference between the two conditions. Here we take the ratio between the two conditions normalised by the sum. In this operation we assume that the noise bias is the same for both experimental conditions and it will thus cancel out when contrasting.
 
@@ -268,7 +268,7 @@ Now, we can plot the interpolated data:
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam1.png" width="650" %}
 
-_Figure: A source plot of the beta response in the left-hand condition._
+_Figure: Source plot of the beta response in the left-hand condition._
 
 {% include markup/info %}
 As you can see the strongest motor response is located in the center of the head. Can you explain this finding?
@@ -279,7 +279,7 @@ As you can see the strongest motor response is located in the center of the head
 
 {% include image src="/assets/img/workshop/natmeg/beamforming/natmeg_beam2.png" width="650" %}
 
-_Figure: A source plot of the beta response ratio between the left- and right-hand conditions._
+_Figure: Source plot of the beta response ratio between the left- and right-hand conditions._
 
 {% include markup/info %}
 Try to explain the location of the red and blue blobs.
@@ -313,7 +313,7 @@ We will continue to analyze the EEG data according to a series of steps similar 
 
 As before, we will use the head model calculated in the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) and the preprocessed data from the [time-frequency analysis tutorial](/workshop/natmeg/timefrequency).
 
-Load the EEG head model and preprocessed data using the following cod
+Load the EEG head model and preprocessed data using the following code:
 
     load headmodel_eeg.mat
     load data_clean_EEG_responselocked.mat
@@ -327,7 +327,7 @@ As before, we are first going to extract a time window that we are interested in
     cfg.toilim = [0.35 0.85];
     data_timewindow = ft_redefinetrial(cfg,data_clean_EEG_responselocked);
 
-Now that we have extracted the time window of interest we can continue with calculating the cross-spectral density matri
+Now that we have extracted the time window of interest we can continue with calculating the cross-spectral density matrix:
 
     % Freqanalysis for beamformer
     cfg = [];
@@ -352,10 +352,10 @@ Now that we have extracted the time window of interest we can continue with calc
 The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**.
 
     % common grid/filter
-    cfg                 = [];
-    cfg.elec            = powcsd_all.elec;
-    cfg.headmodel       = headmodel_eeg;
-    cfg.reducerank      = 3; % default is 3 for EEG, 2 for MEG
+    cfg            = [];
+    cfg.elec       = powcsd_all.elec;
+    cfg.headmodel  = headmodel_eeg;
+    cfg.reducerank = 3; % default is 3 for EEG, 2 for MEG
     cfg.resolution = 0.5;   % use a 3-D grid with a 0.5 cm resolution
     cfg.unit       = 'cm';
     cfg.tight      = 'yes';
@@ -366,14 +366,14 @@ The leadfield is calculated using **[ft_prepare_leadfield](/reference/ft_prepare
 Now that we have everything prepared we can start to calculate the common filter through which we we project the data from both conditions.
 
     % beamform common filter
-    cfg              = [];
-    cfg.method       = 'dics';
-    cfg.frequency    = 18;
-    cfg.grid         = grid;
-    cfg.headmodel    = headmodel_eeg;
-    cfg.senstype     = 'EEG'; % Remember this must be specified as either EEG, or MEG
-    cfg.dics.keepfilter   = 'yes';
-    cfg.dics.lambda       = '15%';
+    cfg                 = [];
+    cfg.method          = 'dics';
+    cfg.frequency       = 18;
+    cfg.grid            = grid;
+    cfg.headmodel       = headmodel_eeg;
+    cfg.senstype        = 'EEG'; % Remember this must be specified as either EEG, or MEG
+    cfg.dics.keepfilter = 'yes';
+    cfg.dics.lambda     = '15%';
     source_all = ft_sourceanalysis(cfg, powcsd_all);
 
 {% include markup/info %}
@@ -383,34 +383,34 @@ How does the value for lambda set here compare to the one for the MEG dataset? W
 Finally, we can apply source analysis on the separate conditions using the common filter calculated previously.
 
     % beamform conditions
-    cfg              = [];
-    cfg.method       = 'dics';
-    cfg.frequency    = 18;
-    cfg.grid         = grid;
-    cfg.sourcemodel.filter  = source_all.avg.filter; % Use the common filter
-    cfg.headmodel    = headmodel_eeg;
-    cfg.senstype     = 'EEG';
+    cfg                    = [];
+    cfg.method             = 'dics';
+    cfg.frequency          = 18;
+    cfg.grid               = grid;
+    cfg.sourcemodel.filter = source_all.avg.filter; % Use the common filter
+    cfg.headmodel          = headmodel_eeg;
+    cfg.senstype           = 'EEG';
 
-    source_left = ft_sourceanalysis(cfg, powcsd_left);
+    source_left  = ft_sourceanalysis(cfg, powcsd_left);
     source_right = ft_sourceanalysis(cfg, powcsd_right);
 
 Let's now see how our sources look like. We will again have to realign our functional data to our anatomical data. We will therefore use the realigned mri from the [dipole fitting tutorial](/workshop/natmeg/dipolefitting) which we already loaded and resliced during the MEG section of this tutorial.
 
 The realignment is done using the following cod
 
-    cfg            = [];
+    cfg           = [];
     cfg.parameter = 'pow';
     source_left_int  = ft_sourceinterpolate(cfg, source_left, mri_resliced);
-    source_right_int  = ft_sourceinterpolate(cfg, source_right, mri_resliced);
+    source_right_int = ft_sourceinterpolate(cfg, source_right, mri_resliced);
 
 Next we will calculate the ratio between the left- and right-hand response
 
-    source_diff_int  = source_left_int;
-    source_diff_int.pow  = (source_left_int.pow - source_right_int.pow) ./ (source_left_int.pow + source_right_int.pow);
+    source_diff_int = source_left_int;
+    source_diff_int.pow = (source_left_int.pow - source_right_int.pow) ./ (source_left_int.pow + source_right_int.pow);
 
 Finally, we can plot the data:
 
-    cfg = [];
+    cfg               = [];
     cfg.method        = 'ortho';
     cfg.funparameter  = 'pow';
     cfg.funcolorlim   = 'maxabs';
