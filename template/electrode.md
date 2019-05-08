@@ -31,15 +31,10 @@ The following template electrode sets describe the 10-20 EEG electrodes and were
 The electrodes are stored in an ASA .elc file which can be read with **[ft_read_sens](/reference/ft_read_sens)**. The electrode positions are represented in mm in the MNI coordinate system and are aligned with the scalp model which is detailed in [this publication](http://www.ncbi.nlm.nih.gov/pubmed/12842715).
 
 - standard_1005.elc
-
 - standard_1020.elc
-
 - standard_alphabetic.elc
-
 - standard_postfixed.elc
-
 - standard_prefixed.elc
-
 - standard_primed.elc
 
 ### The EGI geodesic sensor net
@@ -47,17 +42,11 @@ The electrodes are stored in an ASA .elc file which can be read with **[ft_read_
 The following template electrode sets are for the [EGI](http://www.egi.com) geodesic sensor net and were downloaded from the EGI [ftp server](ftp://www.egi.com/).
 
 - GSN-HydroCel-128.sfp
-
 - GSN-HydroCel-129.sfp
-
 - GSN-HydroCel-256.sfp
-
 - GSN-HydroCel-257.sfp
-
 - GSN-HydroCel-32.sfp
-
 - GSN-HydroCel-64_1.0.sfp
-
 - GSN-HydroCel-65_1.0.sfp
 
 ### Easycap electrode arrangements
@@ -65,5 +54,4 @@ The following template electrode sets are for the [EGI](http://www.egi.com) geod
 The following template electrode sets are for the [Easycap](http://www.easycap.de/easycap/e/products/products.htm) electrode arrangements and were downloaded from the Easycap [download page](http://www.easycap.de/easycap/e/downloads/electrode_sites_coordinates.htm).
 
 - easycap-M1.sfp (Full 10%-System)
-
 - easycap-M10.sfp (Equidistant 61-Channel-Arrangement)
