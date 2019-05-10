@@ -14,7 +14,7 @@ title: ft_heartrate
    cfg.channel          = selected channel for processing, see FT_CHANNELSELECTION
    cfg.envelopewindow   = scalar, time in seconds
    cfg.peakseparation   = scalar, time in seconds
-   cfg.threshold        = scalar, between 0 and 1 (default = 0.4)
+   cfg.threshold        = scalar, usually between 0 and 1 (default = 0.4)
    cfg.feedback         = 'yes' or 'no'
  The input data can be preprocessed on the fly using
    cfg.preproc.bpfilter = 'yes' or 'no'
