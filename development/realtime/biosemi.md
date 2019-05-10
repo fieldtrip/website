@@ -92,6 +92,15 @@ Depending on your platform, you might be able to get ready-made binaries, or you
 For compiling the "biosemi2ft" tool, change to the "realtime/datasource/biosemi" directory and type "make". The Makefile will
 also work with the MinGW compiler on Windows. Note that you might need to compile the buffer library first.
 
+
+### Multi-EEG using Mk2 A/D box
+
+Using the "biosemi2ft" tool with the Mk2 A/D box in a multi-EEG setup (daisy chained) may return wrong sampling frequencies, given the changed meaning of the SpeedMode switch. For example, a dual-EEG setup with "SpeedMode" set to 1 returns a sampling frequency of 4 kHz whereas data is sampled at 2 kHz. This writes a wrong value in the data header and may cause problems in real-time analyses and online filtering.
+
+The problem can be fixed by recompiling the "biosemi2ft" tool after setting the sampling frequency independent of the detected speed mode to 2 kHz in "BioSemiClient.cc" (note: multi EEG always operates at 2 kHz). However, this recompiled biosemi2ft version will no longer work with single EEG setup using other sampling frequencies than 2 kHz.
+
+A recompiled version for Win64 is provided [to be added] (tested using Mk2 + Mk1 A/D box in dual EEG setup under 64-bit Windows 10).
+
 ## External links
 
 - http://www.biosemi.com
