@@ -74,7 +74,7 @@ The trials belonging to one condition will now be averaged with the onset of the
 
 ## Forward solution
 
-The source space, the volume conduction model and the position of the sensors are necessary inputs for creating the leadfield (forward solution) with the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function. The sensor positions are contained in the grad field of the averaged data. However, the grad field contains the positions of all channels, therefore, the used channels have to be also specified.
+The source space, the volume conduction model and the position of the sensors are necessary inputs for creating the leadfield (forward solution) with the **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** function. The sensor positions are contained in the grad field of the averaged data. However, the grad field contains the positions of all channels, therefore, the used channels have to be also specified. The source model file can be obtained at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_sourcemodel_15684.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_sourcemodel_15684.mat) and the head model file at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_headmodel.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sourcemodel/Subject01_headmodel.mat).
 
     load tlck;
     load Subject01_sourcemodel_15684;
