@@ -103,4 +103,4 @@ A recompiled version for Win64 is provided as `biosemi2ft_2khz.exe`. This has be
 
 ## External links
 
-- http://www.biosemi.com
+- <http://www.biosemi.com>
