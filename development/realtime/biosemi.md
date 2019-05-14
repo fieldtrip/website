@@ -25,7 +25,7 @@ In the current implementation, the user needs to press "S" to start saving to th
 
 ### Configuration file
 
-The ActiveTwo can send out 312 data channels in total, out of which there are 256 EEG channels, 8 EXG channels, 8 JAZZ channels, further 8 specialised channels, and finally (optionally) up to 32 channels from the analog input box. If used with the analog input box, the sampling frequency is fixed at 2048 Hz. Streaming out all that data is an overkill for most applications, so we provide the following configuration file syntax for selection acquisition parameters (example "config.txt"
+The ActiveTwo can send out 312 data channels in total, out of which there are 256 EEG channels, 8 EXG channels, 8 JAZZ channels, further 8 specialised channels, and finally (optionally) up to 32 channels from the analog input box. If used with the analog input box, the sampling frequency is fixed at 2048 Hz. Streaming out all that data is an overkill for most applications, so we provide the following configuration file syntax for selection acquisition parameters (example "config.txt").
 
 ```ini
 # comments start with a hash
@@ -92,6 +92,15 @@ Depending on your platform, you might be able to get ready-made binaries, or you
 For compiling the "biosemi2ft" tool, change to the "realtime/datasource/biosemi" directory and type "make". The Makefile will
 also work with the MinGW compiler on Windows. Note that you might need to compile the buffer library first.
 
+
+### Multi-EEG using the Mk2 A/D box
+
+Using the "biosemi2ft" tool with the Mk2 A/D box in a daisy-chained multi-EEG setup may return wrong sampling frequencies, given the changed meaning of the SpeedMode switch. For example, a multi-EEG setup and "SpeedMode" set to 1 returns a sampling frequency of 4 kHz, whereas data is actually sampled at 2 kHz (note that multi-EEG always operates at 2 kHz). This results in an incorrect data header and may cause problems in real-time analyses and online filtering.
+
+The problem can be fixed by recompiling the "biosemi2ft" tool after setting the sampling frequency independent of the detected speed mode to 2 kHz in "BioSemiClient.cc". However, this recompiled biosemi2ft version will no longer work with single EEG setup using other sampling frequencies than 2 kHz.
+
+A recompiled version for Win64 is provided as `biosemi2ft_2khz.exe`. This has been tested using Mk2 + Mk1 A/D box in dual EEG setup under 64-bit Windows 10.
+
 ## External links
 
-- http://www.biosemi.com
+- <http://www.biosemi.com>
