@@ -155,7 +155,6 @@ _Figure6: mesh, electrodes and axes._
     cfg.smooth = 5;
     cfg.headmodel = headmodel_bem;
     cfg.inwardshift = 1; %shifts dipoles away from surfaces
-    cfg.headmodel = headmodel_bem;
     sourcemodel = ft_prepare_sourcemodel(cfg);
 
 Visualize the sourcemodel
