@@ -76,15 +76,15 @@ We can visualize the resliced MRI
 
 ## 4A. Segment the MRI
 
-    cfg           = [];
-    cfg.output    = {'brain','skull', 'scalp'};
+    cfg = [];
+    cfg.output = {'brain','skull', 'scalp'};
     mri_segmented_3_compartment = ft_volumesegment(cfg, mri_resliced);
 
 Visualize the segmentation
 
     seg_i = ft_datatype_segmentation(mri_segmented_3_compartment,'segmentationstyle','indexed');
 
-    cfg              = [];
+    cfg = [];
     cfg.funparameter = 'seg';
     cfg.funcolormap  = gray(4); % distinct color per tissue
     cfg.location     = 'center';
@@ -96,8 +96,8 @@ _Figure4: 3 compartment segmentation output_
 
 ## 5A. Create the mesh
 
-    cfg=[];
-    cfg.tissue={'brain','skull','scalp'};
+    cfg = [];
+    cfg.tissue = {'brain','skull','scalp'};
     cfg.numvertices = [3000 2000 1000];
     mesh_bem=ft_prepare_mesh(cfg,mri_segmented_3_compartment);
 
@@ -117,7 +117,7 @@ _Figure5: 3 compartment mesh with electrodes_
 
 ## 6A. Create the headmodel
 
-    cfg        = [];
+    cfg = [];
     cfg.method ='dipoli'; % You can also specify 'bemcp', or another method.
     headmodel_bem       = ft_prepare_headmodel(cfg, mesh_bem);
 
@@ -129,18 +129,18 @@ In Windows the method 'dipoli' does not work. You can either load "headmodel_bem
 
 If the electrodes are not well aligned with the mesh, we can realign them with:
 
-    cfg          = [];
-    cfg.method   = 'interactive';
-    cfg.elec     = elec;
+    cfg = [];
+    cfg.method    = 'interactive';
+    cfg.elec      = elec;
     cfg.headshape = headmodel_bem.bnd;
     elec = ft_electroderealign(cfg);
 
 Check the alignment visually.
 
     figure;
-    ft_plot_axes(mesh_bem(1))
+    ft_plot_axes(mesh_bem)
     hold on;
-    ft_plot_mesh(mesh_bem,'surfaceonly','yes','vertexcolor','none','facecolor',...
+    ft_plot_mesh(mesh_bem.bnd(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
     ft_plot_sens(elec,'style', '.k');
 
@@ -185,7 +185,7 @@ Save the sourcemode
 ## 4B. Segment the MRI
 
     cfg           = [];
-    cfg.output    = {'scalp','skull','csf','gray','white'};
+    cfg.output         = {'scalp','skull','csf','gray','white'};
     cfg.brainsmooth    = 1;
     cfg.scalpthreshold = 0.11;
     cfg.skullthreshold = 0.15;
@@ -229,8 +229,8 @@ Visualize the headmodel and the electrodes (it might take time and memory)
     figure
     mesh2 =[];
     mesh2.hex = headmodel_fem.hex(headmodel_fem.tissue==ts,:); %mesh2.hex(1:size(mesh2.hex),:);
-    mesh2.pos =  headmodel_fem.pos;
-    mesh2.tissue =  headmodel_fem.tissue(headmodel_fem.tissue==ts,:); %mesh.tissue(1:size(mesh2.hex),:);
+    mesh2.pos = headmodel_fem.pos;
+    mesh2.tissue = headmodel_fem.tissue(headmodel_fem.tissue==ts,:); %mesh.tissue(1:size(mesh2.hex),:);
 
     mesh_ed = mesh2edge(mesh2);
     patch('Faces',mesh_ed.poly,...
@@ -255,9 +255,9 @@ _Figure9: visualization of headmodel_fem and electrodes_
 
 If the electrodes are not well aligned with the mesh, we can realign them with:
 
-    cfg          = [];
-    cfg.method   = 'interactive';
-    cfg.elec     = elec;
+    cfg           = [];
+    cfg.method    = 'interactive';
+    cfg.elec      = elec;
     cfg.headshape = headmodel_fem;
     elec = ft_electroderealign(cfg);
 
