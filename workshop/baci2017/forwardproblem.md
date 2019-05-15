@@ -155,12 +155,13 @@ _Figure6: mesh, electrodes and axes._
     cfg.smooth = 5;
     cfg.headmodel = headmodel_bem;
     cfg.inwardshift = 1; %shifts dipoles away from surfaces
-    sourcemodel = ft_prepare_sourcemodel(cfg, headmodel_bem);
+    cfg.headmodel = headmodel_bem;
+    sourcemodel = ft_prepare_sourcemodel(cfg);
 
 Visualize the sourcemodel
 
     figure, ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:))
-    hold on, ft_plot_mesh(mesh_bem(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
+    hold on, ft_plot_mesh(mesh_bem.bnd(1),'surfaceonly','yes','vertexcolor','none','facecolor',...
                'skin','facealpha',0.5,'edgealpha',0.1)
 
 {% include image src="/assets/img/workshop/baci2017/forwardproblem/sourcemodel_all.png" %}
