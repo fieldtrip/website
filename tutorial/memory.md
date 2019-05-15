@@ -39,7 +39,7 @@ Do make sure you save the important parameters (e.g. rejected trials) so you can
 
 ## Load only as much data as you need
 
-Only import into MATLAB as much of a large data set as you need for the problem you are trying to solve. Many users are tempted to try and load the entire file first, and then process it with MATLAB. This is not always necessary. Use the _whos_ function with the _-file_ option to preview the file. This command displays each array in the MAT-file that you specify and the number of bytes in the arra
+Only import into MATLAB as much of a large data set as you need for the problem you are trying to solve. Many users are tempted to try and load the entire file first, and then process it with MATLAB. This is not always necessary. Use the _whos_ function with the _-file_ option to preview the file. This command displays each array in the MAT-file that you specify and the number of bytes in the array.
 
     whos -file session1.mat
     Name      Size            Bytes  Class     Attributes
@@ -65,7 +65,7 @@ Using the repmat function, array preallocation and for loops are other ways to w
 ## Use nested functions to pass fewer arguments
 
 When working with large data sets, be aware that MATLAB makes a temporary copy of an input variable if the called function modifies its value. This temporarily doubles the memory required to store the array.
-One way to use less memory in this situation is to use nested functions. A nested function shares the workspace of all outer functions, giving the nested function access to data outside of its usual scope. In the example shown here, nested function setrowval has direct access to the workspace of the outer function myfun, making it unnecessary to pass a copy of the variable in the function call. When setrowval modifies the value of A, it modifies it in the workspace of the calling function. There is no need to use additional memory to hold a separate array for the function being called, and there also is no need to return the modified value of
+One way to use less memory in this situation is to use nested functions. A nested function shares the workspace of all outer functions, giving the nested function access to data outside of its usual scope. In the example shown here, nested function setrowval has direct access to the workspace of the outer function myfun, making it unnecessary to pass a copy of the variable in the function call. When setrowval modifies the value of A, it modifies it in the workspace of the calling function. There is no need to use additional memory to hold a separate array for the function being called, and there also is no need to return the modified value of A.
 
     function myfun
     A = magic(500);
@@ -86,13 +86,13 @@ MATLAB provides you with different sizes of data classes, such as double and uin
 In the course of a MATLAB session, memory can become fragmented due to dynamic memory allocation and deallocation. For and while loops that incrementally increase the size of a data structure each time through the loop can add to this fragmentation as they have to repeatedly find and allocate larger blocks of memory to store the data. When memory is fragmented, there may be plenty of free space, but not enough contiguous memory to store a new large variable.
 To make more efficient use of your memory, preallocate a block of memory large enough to hold the matrix at its final size before entering the loop. When you preallocate memory for an array, MATLAB reserves sufficient contiguous space for the entire full-size array at the beginning of the computation. Once you have this space, you can add elements to the array without having to continually allocate new space for it in memory.
 
-The following code creates a scalar variable x, and then gradually increases the size of x in a for loop instead of preallocating the required amount of memory at the star
+The following code creates a scalar variable x, and then gradually increases the size of x in a for loop instead of preallocating the required amount of memory at the star.
 x = 0;
 for k = 2:1000
 x(k) = x(k-1) + 5;
 end
 
-Change the first line to preallocate a 1-by-1000 block of memory for x initialized to zero. This time there is no need to repeatedly reallocate memory and move data as more values are assigned to x in the loo
+Change the first line to preallocate a 1-by-1000 block of memory for x initialized to zero. This time there is no need to repeatedly reallocate memory and move data as more values are assigned to x in the loop.
 
     x = zeros(1, 1000);
     for k = 2:1000
