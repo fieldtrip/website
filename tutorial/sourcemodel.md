@@ -256,7 +256,7 @@ First, you need to define a template grid, as mentioned above, and the easiest t
 
     % NOTE: the path to the template file is user-specific
     ftpath   = '/home/common/matlab/fieldtrip'; % this is the path to FieldTrip at Donders
-    load(fullfile(ftpath, 'template/sourcemodel/standard_sourcemodel3d10mm');
+    load(fullfile(ftpath, 'template/sourcemodel/standard_sourcemodel3d10mm'));
     template_grid = sourcemodel;
     clear sourcemodel;
 
