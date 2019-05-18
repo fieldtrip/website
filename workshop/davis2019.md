@@ -45,7 +45,7 @@ Please see the [playground notes](https://docs.google.com/document/d/1bvzi8gv1WU
 
 ### Session III
 
-- 9:00 – 10:15 Lecture IV: Anatomical reconstruction of intracranial data (Arjen Stolk)
+- 9:00 – 10:15 Lecture IV: [Anatomical reconstruction of intracranial data (Arjen Stolk)](https://youtu.be/NdIqUSPPAeM)
 - 10:15 – 10:30 Coffee break
 - 10:30 – 12:30 Hands-on III: [Analysis of human ECoG and SEEG](/tutorial/human_ecog)
 
