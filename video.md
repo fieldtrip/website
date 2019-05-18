@@ -19,6 +19,10 @@ Please use the menu below to get an overview and to navigate through the worksho
 
 {% include youtube id="CPj4jJACeIs" %}
 
+## ECoG/sEEG bootcamp, UC Davis (March 2019)
+
+- [Anatomical reconstruction of intracranial data](https://youtu.be/NdIqUSPPAeM) by Arjen Stolk
+
 ## Advanced MEG/EEG data analysis toolkit course, Nijmegen (April 2018)
 
 - [Introduction to EEG, MEG and analysis with the FieldTrip toolbox](https://www.youtube.com/watch?v=7B4rDZYwQLM) by Robert Oostenveld
