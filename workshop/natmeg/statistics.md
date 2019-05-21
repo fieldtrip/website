@@ -1,5 +1,5 @@
 ---
-title: Preprocessing and event-related activity in combined MEG/EEG data
+title: Statistical analysis and multiple comparison correction for combined MEG/EEG data
 tags: [tutorial, natmeg, meg+eeg, statistics, meg-audodd]
 ---
 
