@@ -22,6 +22,9 @@
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /workshop/natmeg/preprocessing
 
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/statistics
+
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
 
