@@ -64,6 +64,6 @@
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
 
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
+- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
   link:  /workshop/natmeg/statistics
 
