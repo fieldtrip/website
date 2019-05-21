@@ -17,7 +17,7 @@ title: ft_audiovideobrowser
    cfg.videohdr    = header structure of the video data, see FT_READ_HEADER
    cfg.audiofile   = string with the filename
    cfg.videofile   = string with the filename
-   cfg.trl         = Nx3 matrix, see FT_DEFINETRIAL
+   cfg.trl         = Nx3 matrix, expressed in the MEG/EEG data samples, see FT_DEFINETRIAL
    cfg.anonimize   = [x1 x2 y1 y2], range in pixels for placing a bar over the eyes (default = [])
    cfg.interactive = 'yes' or 'no' (default = 'yes')
 
