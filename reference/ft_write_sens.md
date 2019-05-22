@@ -15,6 +15,7 @@ title: ft_write_sens
 
  The supported file formats are
    bioimage_mgrid
+   matlab
 
  See also FT_READ_SENS, FT_DATATYPE_SENS
 ```
