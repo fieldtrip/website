@@ -17,7 +17,7 @@ We will analyze brain signals acquired during a resting condition with eyes clos
 
 Such connectomes are typically used for a subsequent graph analysis, to extract specific structure in the connections. We will illustrate this by visualizing the node degree.
 
-Also, we will explore the connectomes in more detail, and investigate how the spatial structure changes when moving from one seed locatoin to another.
+Also, we will explore the connectomes in more detail, and investigate how the spatial structure changes when moving from one seed location to another.
 
 ## Procedure
 
