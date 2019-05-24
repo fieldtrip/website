@@ -11,7 +11,7 @@ title: ft_freqbaseline
    cfg.baseline     = [begin end] (default = 'no'), alternatively an
                       Nfreq x 2 matrix can be specified, that provides
                       frequency specific baseline windows.
-   cfg.baselinetype = 'absolute', 'relative', 'relchange', 'normchange', 'db' or 'zscore' (default = 'absolute')
+   cfg.baselinetype = 'absolute', 'relative', 'relchange', 'normchange', 'db', 'vssum' or 'zscore' (default = 'absolute')
    cfg.parameter    = field for which to apply baseline normalization, or
                       cell-array of strings to specify multiple fields to normalize
                       (default = 'powspctrm')
