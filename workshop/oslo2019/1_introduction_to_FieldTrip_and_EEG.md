@@ -1,6 +1,6 @@
 ---
 title: Preprocessing and event-related fields in EEG data
-tags: [tutorial, oslo, eeg, raw, preprocessing eeg-audodd]
+tags: [tutorial, oslo, eeg, raw, preprocessing, eeg-audodd]
 ---
 
 # Preprocessing and event-related potentials in EEG data
@@ -11,22 +11,21 @@ This tutorial describes how to define epochs of interest (trials) from recorded 
 
 In this tutorial, preprocessing and segmenting the data into epochs/trials are done in a single step. If you are interested in how to do preprocessing on continuous data prior to segmenting it into epochs/trials, you can check the [Preprocessing - Reading continuous data](/tutorial/continuous) tutorial.
 
-{%include markup/info %}
+{% include markup/info %}
 This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg) to see in its entirety.
 
-{% include youtube id=z0xCqcYmIfA" %}
+{% include youtube id="z0xCqcYmIfA" %}
 {% include markup/end %}
-
-
 ## Background
 
 In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) re-referencing. The **[ft_preprocessing](/reference/ft_preprocessiing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
-There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.  
-1. Read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments  
+There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
+
+1. Read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments
 2. Identify the interesting segments, read those segments from the data file and apply filters to those segments only  
-An advantage of the first approach is that it allows you to apply most temporal fitlers to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.  
-Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
+   An advantage of the first approach is that it allows you to apply most temporal fitlers to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.  
+   Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 We are going to define segments of interest (epochs/trials) based on triggers encoded in a specific trigger channel.
 This depends on the function **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a so-called configuration structure (typically called _cfg_), which contains the field _cfg.trl_. This is a matrix representing the relevant parts of the raw data, which are to be selected for further processing. Each row in trl-matrix represents a single epoch-of-interest (trial), and the trl-matrix has three or more columns. The first column defines (in samples) the beginning point of each epoch with respect to how the data are stored in the raw data file. The second column defines (in samples) the end point of each epoch. The third column specifies the offset (in sample) of the first sample within each epoch with respect to time point 0 within than epoch. In essence they contain information about when the epoch begins, end and when time 0 appears. The trial matrix can contain more columns with more (user-chosen) information about the trial.
@@ -35,7 +34,7 @@ You can either use a default trial function or design your own. When using the d
 
 ## Description of the auditory oddball EEG (& MEG) Dataset
 
-{% include /shared/workshop/natmeg(meg_audodd.md %}
+{% include /shared/workshop/natmeg/meg_audodd.md %}
 
 ## Browsing the data prior to preprocessing
 
@@ -45,13 +44,13 @@ Before we start preprocessing our data and calculate event-related potentials (E
 
 The data browser can be used to look at your raw or preprocessed data. The main purpose is to do quality checks and visual artifact detection and also annotate time periods during which specific events happens. However, it also supports annotation of the data, such as annotating sleep spindles and epileptic spikes.
 
-The data browser supports three view modes: _butterfly_, _vertical_ and _component_. In _butterfly_, all signal traces will be plotted on top of one another; in _vertical, the traces will be below one another. The _component_ view mode is to be used for data that is decomposed into independent components (see **[ft_componentanalysis](/reference/ft_componentanalysis)**. Components will be plotted as in the vertical view mode, but will include the component topography to the left of the time trace. As an alternative to these three view modes, you can provide a _cfg.layout_, and **[ft_databrowser](/reference/ft_databrowser)** will try to plot the data according to the sensor positions specified in that layout.
+The data browser supports three view modes: _butterfly_, _vertical_ and _component_. In _butterfly_, all signal traces will be plotted on top of one another; in _vertical, the traces will be below one another. The \_component_ view mode is to be used for data that is decomposed into independent components (see **[ft_componentanalysis](/reference/ft_componentanalysis)**. Components will be plotted as in the vertical view mode, but will include the component topography to the left of the time trace. As an alternative to these three view modes, you can provide a _cfg.layout_, and **[ft_databrowser](/reference/ft_databrowser)** will try to plot the data according to the sensor positions specified in that layout.
 
 When the data browser opens, you will see button to navigate along the bottom of the screen and buttons for artifact annotation to the right. Note that also artifacts that were marked with automatic artifact detection methods will be displayed here (see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**. You can click on one of the artifact types, drag over a time window to select the beginning and the end of the artifact and then double-click in the selected area to mark it as an artifact. Double-clicking again will remove the selection.
 
 {% include markup/warning %}
 The data browser will **not** change your data in an way. If you specify a _cfg_ as output, it will just store your selected artifacts in your cfg.
-{include markup/end %}
+{% include markup/end %}
 
 ## Visualization of raw EEG data
 
@@ -67,14 +66,15 @@ The EEG dataset used in this tutorial is available [here](ftp://ftp.fieldtriptoo
 
     set(gcf, 'units', 'normalized', 'outerposition', [0 0 1 1]) % full screen
     print -dpng databrowser_oslo2019.png
+
 {% include markup/warning %}
-If your recorded is continuous, specify _cfg.continuous = 'yes'_. If your data is segmented into epochs/trials, specify _cfg.continuous = 'no'_
+If your recorded is continuous, specify _cfg.continuous = 'yes'_. If your data is segmented into epochs/trials, specify _cfg.continuous = 'no'_.
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/oslo2019/databrowser.png" width="650" %}
-_Figure 1: Raw plot of electrodes using ft\_databrowser_
+_Figure 1: Raw plot of electrodes using ft_databrowser_
 
-{% include markup/info % }
+{% include markup/info %}
 Get a feel of your data by browsing through it. Do you see any obvious artifacts?
 {% include markup/end %}
 
@@ -123,9 +123,9 @@ We will take the following steps
 
     data                    = ft_preprocessing(cfg);
 
-The output of _ft\_preprocessing(cfg)_ is _data_, which is a structure that has the following fields:
+The output of _ft_preprocessing(cfg)_ is _data_, which is a structure that has the following fields:
 
-    data = 
+    data =
 
                hdr: [1x1 struct]
              label: {128x1 cell}
@@ -135,6 +135,7 @@ The output of _ft\_preprocessing(cfg)_ is _data_, which is a structure that has 
         sampleinfo: [600x2 double]
          trialinfo: [600x1 double]
                cfg: [1x1 struct]
+
 - _hdr_ contains header information about the data structure (metadata)
 - _label_ contains the names of all channels
 - _time_ contains the time courses for each of the 600 trials
@@ -147,7 +148,7 @@ The output of _ft\_preprocessing(cfg)_ is _data_, which is a structure that has 
 {% include markup/warning %}
 Make absolutely sure that you have **no** bad channels in your data before you do an average reference  
 Or more generally, make sure your reference isn't bad
-{include markup/end %}
+{% include markup/end %}
 
 Let's have a closer look at the first entries in _time_ and _trial_:
 
@@ -163,8 +164,7 @@ Let's have a closer look at the first entries in _time_ and _trial_:
 
        128   200
 
-
-- For _time_ this is a row vector which has 200 entries, thus there are 200 time points in this epoch 
+- For _time_ this is a row vector which has 200 entries, thus there are 200 time points in this epoch
 - For _trial_ this is a matrix with 128 rows and 200 columns, having the voltage for each of the 128 channels and the 200 time points
 
 ### Cleaning data using visual summaries
@@ -187,7 +187,7 @@ What is best - using an _objective_ automatic procedure with a common threshold 
 
 In my case, I removed 25 trials
 
-    cleaned_data = 
+    cleaned_data =
 
                hdr: [1x1 struct]
              label: {128x1 cell}
@@ -201,7 +201,7 @@ In my case, I removed 25 trials
 ### Event-Related Potentials (ERPs) (also unfortunately known as time-locked responses)
 
 The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an average (ERP) over all the trials in a segmented data structure.  
-For purposes of visualization, we will also apply a low-pass filter. (Note that we could have done that earlier as well. But we decided to clean before applying low- or high-pass filters  
+For purposes of visualization, we will also apply a low-pass filter. (Note that we could have done that earlier as well. But we decided to clean before applying low- or high-pass filters
 
     cfg                = [];
     cfg.lpfilter       = 'yes';
@@ -212,9 +212,7 @@ For purposes of visualization, we will also apply a low-pass filter. (Note that 
 
     data_EEG_filt = ft_preprocessing(cfg, cleaned_data);
 
-
 We are creating two ERPs, one for the standard and one for the deviant.
-
 
     cfg        = [];
     cfg.trials = find(data_EEG_filt.trialinfo == 1);
@@ -228,8 +226,7 @@ We are creating two ERPs, one for the standard and one for the deviant.
 
 The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** looks like this:
 
-
-    ERP_standard = 
+    ERP_standard =
 
           time: [1x200 double]
          label: {128x1 cell}
@@ -250,6 +247,7 @@ The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** looks li
 These can be plotted using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
 
 #### multiplot
+
     figure;
 
     cfg        = [];
@@ -304,7 +302,7 @@ _Figure 4: A plot of a single channel_
     title('Auditory Response: Deviant')
     print -dpng deviant_aud.png
 
- {% include image src="/assets/img/workshop/oslo2019/standard_aud.png" width="650" %}
+{% include image src="/assets/img/workshop/oslo2019/standard_aud.png" width="650" %}
 _Figure 5: A topographical plot showing the average electric potential between 100 and 170 ms for the **standard**_
 
 {% include image src="/assets/img/workshop/oslo2019/deviant_aud.png" width="650" %}
@@ -351,6 +349,7 @@ _Figure 7: A plot of all channels showing the MMN_
     plot([0 0], cfg.ylim, 'k--') % vert. l
 
     print -dpng singleplot_MMN.png
+
 {% include image src="/assets/img/workshop/oslo2019/singleplot_MMN.png" width="650" %}
 _Figure 8: A plot of a single channel showing the MMN_
 
@@ -369,7 +368,7 @@ _Figure 8: A plot of a single channel showing the MMN_
     print -dpng MMN.png
 
 {% include image src="/assets/img/workshop/oslo2019/MMN.png" width="650" %}
-_Figure 9: A topographical plot showing the MMN (average over 100  to 170 ms)_
+_Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 
 ### Optional: N400
 
@@ -402,8 +401,5 @@ _Figure 9: A topographical plot showing the MMN (average over 100  to 170 ms)_
 
     print -dpng N400.png
 
-
 {% include image src="/assets/img/workshop/oslo2019/MMN.png" width="650" %}
-_Figure 10: A topographical plot showing the N400 (average over 350  to 450 ms)_
-
-
+_Figure 10: A topographical plot showing the N400 (average over 350 to 450 ms)_
