@@ -1,6 +1,6 @@
 ---
-title: Preprocessing and event-related fields in EEG data
-tags: [tutorial, oslo, eeg, raw, preprocessing, eeg-audodd]
+title: Preprocessing and event-related potentials in EEG data
+tags: [oslo2019, eeg-audodd]
 ---
 
 # Preprocessing and event-related potentials in EEG data
