@@ -1,3 +1,6 @@
+- name:  Website syntax and formatting Event related averaging and MEG planar gradient
+  link:  /development/guideline/website
+
 - name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
   link:  /development/module/plotting
 

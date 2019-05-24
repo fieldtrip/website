@@ -1,6 +1,9 @@
 - name:  MEG dataformats
   link:  /dataformat/meg
 
+- name:  Website syntax and formatting Event related averaging and MEG planar gradient
+  link:  /development/guideline/website
+
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
