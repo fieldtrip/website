@@ -5,268 +5,137 @@ tags: [example, bids, sharing, anonymize]
 
 # Preparing an EEG dataset for sharing
 
-This example describes how to prepare an EEG dataset for sharing in the BIDS format. The example starts from a single publicly available EEG recording of a single subject, which is copied multiple times to simulate a dataset comprising data from ten subjects.
-
-On this page you can find two versions of the preparation of a BIDS EEG dataset. The first version copies the existing data without changing its format, since the format is BIDS compliant. The second version also converts the data to (another) BIDS-compliant data format, which is what you would do in case your original data is in a format that is not directly supported by BIDS.
+This example describes how to use **[data2bids](/reference/data2bids)** to convert an EEG dataset for sharing according to the BIDS standard.  
 
 {% include markup/warning %}
-If you want to share data, there are multiple things to consider. For example the file format of the data, the access mechanism for the data (ftp/http/sftp), the data use agreement, whether all data or some part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
+If you want to share data, there are multiple things to consider. For example the file format of the data, the place to share the data (openneuro/zenodo/figshare/dataverse), the access mechanism for the data (ftp/http/sftp), the license or data use agreement, whether all data or only part of the data is shared, using pseudonyms in the description of the data, scrubbing the date and time of recording, removing identifying features from the data, etc.
 
-In this example we will only be dealing with the format in which the data is organized (over directories) and stored (in files), for which we use the [Brain Imaging Data Structure](http://bids.neuroimaging.io).
+In this example we will only be dealing with the format in which the data is organized (over directories) and stored (in files), for which we use BIDS. Please see the [BIDS website](https://bids.neuroimaging.io) for background information and the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) for further details on the file and directory organization.
 {% include markup/end %}
 
-Prior to conversion the data comprises 10 files (one file per subject). After conversion there are 52 or 72 files (for the two options described below), which includes the sidecar files with metadata.
+We will describe two approaches: in the first the data files are is kept in their original format, in the second approaches the files are explicitly converted to BrainVision (the recommended format for EEG data in BIDS). Prior to conversion the data (in principle) comprises 10 files, one EEG file per subject. After conversion there are 52 or 72 files for the two approaches, which includes the EEG data and the sidecar files with metadata.
 
-The procedure for converting the original data consists of a number of steps:
+It is important that you use appropriate tools. BIDS stores metadata in TSV and JSON files, which makes then not only machine readable, but also human readable. A good graphical text/code editor helps you to navigate through the full directory structure and check or update the content of individual files. We recommend the [atom editor](http://atom.io/), but there are good [alternatives](https://alternativeto.net/software/atom/).
 
-1.  Create empty directory structure according to BIDS
-2.  Collect the EEG data
-3.  Create the sidecar files for each dataset
-4.  Create the general sidecar files
-5.  Finalize
+{% include markup/info %}
+The BIDS standard for EEG is introduced in [this preprint publoication](https://psyarxiv.com/63a4y/), which has been peer reviewed and accepted for publication in [Scientific Data](http://nature.com/sdata/). The full [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) including MEG, iEEG, MRI and behavioral data is maintained and available online. 
+{% include markup/end %}
 
-Step 1, 2 and step 4 are implemented using [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>) scripts. The construction of the sidecar files in step 3 is implemented using the **[data2bids](/reference/data2bids)** function that is part of FieldTrip. The final step is not automated, but consists of some manual work.
+## Converting to BIDS - copying the data
 
-We will describe two alternative approaches: in the first one the files are kept in their original file format, in the second one the files are explicitly converted to the recommended format for BIDS.
+If your EEG data is in a format supported by BIDS, you only have to rename the files and organize them in the right directory structure. After that, you have to add the required metadata.
 
-After each of the automated steps the results should be checked. For that I have been using the command line applications like `find DIR -name PATTERN \| wc -l` to count the number of files, but also a graphical databrowser to check the directory structure and a text editor to check the content of the JSON and TSV sidecar files.
+Rather than starting with 10 real EEG recordings, we can download a publicly available EEG file and copy it multiple times, pretending that this file contains the EEG data for each of our subjects. You can download the dataset from the EEGLAB website at <https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set>.
 
-It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
+```
+sub = {'01', '02', '03', '04', '05', '06', '07', '08', '09', '10'};
 
-## Organize EEG data as BIDS dataset - keep the files in the same format
+% for subject 3 the age is unknown, for subject 2 the sex is not specified
+age = [11  96  nan 77  82  87  18 40  26  80];
+sex = {'f' [] 'f' 'f' 'f' 'm' 'm' 'm' 'm' 'm'};
 
-### Step 1a: create empty directory structure
+for subindx=1:numel(sub)
 
-```bash
-BIDSROOT=$HOME/example
+  cfg = [];
+  cfg.method    = 'copy';
+  cfg.datatype  = 'eeg';
 
-mkdir -p $BIDSROOT/code
-mkdir -p $BIDSROOT/stimuli
-mkdir -p $BIDSROOT/sourcedata
+  % specify the input file name, here we are using the same file for every subject
+  cfg.dataset   = 'Eeglab_data.set';
 
-for SUB in 01 02 03 04 05 06 07 08 09 10; do
-mkdir -p $BIDSROOT/sub-$SUB/eeg
-done
+  % specify the output directory
+  cfg.bidsroot  = 'bids';
+  cfg.sub       = sub{subindx};
+
+  % specify the information for the participants.tsv file
+  % this is optional, you can also pass other pieces of info
+  cfg.participants.age = age(subindx);
+  cfg.participants.sex = sex{subindx};
+
+  % specify the information for the scans.tsv file
+  % this is optional, you can also pass other pieces of info
+  cfg.scans.acq_time = datestr(now, 'yyyy-mm-ddThh:MM:SS'); % according to RFC3339
+
+  % specify some general information that will be added to the eeg.json file
+  cfg.InstitutionName             = 'University of California San Diego';
+  cfg.InstitutionalDepartmentName = 'Schwartz Center for Computational Neuroscience';
+  cfg.InstitutionAddress          = '9500 Gilman Drive # 0559; La Jolla CA 92093, USA';
+
+  % provide the mnemonic and long description of the task
+  cfg.TaskName        = 'changedetection';
+  cfg.TaskDescription = 'Subjects were responding as fast as possible upon a change in a visually presented stimulus.';
+
+  % these are EEG specific
+  cfg.eeg.PowerLineFrequency = 60;   % since recorded in the USA
+  cfg.eeg.EEGReference       = 'M1'; % actually I do not know, but let's assume it was left mastoid
+
+  data2bids(cfg);
+
+end
 ```
 
-### Step 2a: copy the EEG data to the BIDS organization
+## Converting to BIDS - converting the data
 
-The original data gets copied and renamed to the location in the BIDS structure. In reality we would of course copy the data of each individual subject, rather than copying the same data 10 times.
+If your EEG data is in a format that is not supported by BIDS, you can convert it to BrainVision format. Contrary to many proprietary EEG formats, the BrainVision format is a simple file format that is well documented and widely supported in multiple programming environments (MATLAB, Python, C/C++) and all sorts of software (free and commercial). This makes it a very good format for storing data such that it remains accessible in the future.
 
-In this case it is not needed to convert the data, since the EEGLAB .set format is explicitly allowed according to the BIDS standard (although BrainVision and EDF are preferred).
+For this you would use the same script as above, but rather than
 
-```bash
-BIDSROOT=$HOME/example
-SOURCEDATA=$BIDSROOT/sourcedata
+    cfg.method = 'copy';
 
-cd $SOURCEDATA
-wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
+you specify
 
-TASK=something
+    cfg.method = 'convert';
 
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-01/eeg/sub-01_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-02/eeg/sub-02_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-03/eeg/sub-03_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-04/eeg/sub-04_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-05/eeg/sub-05_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-06/eeg/sub-06_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-07/eeg/sub-07_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-08/eeg/sub-08_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-09/eeg/sub-09_task-${TASK}_eeg.set
-cp $SOURCEDATA/Eeglab_data.set $BIDSROOT/sub-10/eeg/sub-10_task-${TASK}_eeg.set
+The BrainVision format consists of a separate header, data and marker file. This means that each dataset now consists of three files, plus the TSV and JSON sidecar files for BIDS.  
+
+## Multiple sessions and/or runs
+
+With BIDS you can also organize data that was recorded in multiple sessions, i.e. lab visits, for example before and after a treatment or a night sleep. You can also specify multiple runs, i.e. subsequent recordings during the same session. Converting such data would go like this
+
 ```
+sub = {'01', '02', '03', '04', '05', '06', '07', '08', '09', '10'};
+ses = {'before', 'after'};
+run = [1 2 3]; % this must be numeric
 
-### Step 3a: use MATLAB to create the sidecar files for each subject
+for subindx=1:numel(sub)
+  for sesindx=1:numel(ses)
+    for runindx=1:numel(run)
 
-The **[data2bids](/reference/data2bids)** function will read each EEG recording and determine the metadata that is available in the file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
-
-    %% this is an example that starts with data in a supported format
-
-    bidsroot = fullfile(getenv('HOME'), 'example');
-    subject  = dir(fullfile(bidsroot, 'sub-*'));
-    subject  = {subject.name};
-
-    for i=1:numel(subject)
-
-    anat = dir(fullfile(bidsroot, subject{i}, 'anat', '*.nii'));
-    func = dir(fullfile(bidsroot, subject{i}, 'func', '*.nii'));
-    dwi  = dir(fullfile(bidsroot, subject{i}, 'dwi',  '*.nii'));
-    meg  = dir(fullfile(bidsroot, subject{i}, 'meg',  '*.ds'));
-    eeg  = dir(fullfile(bidsroot, subject{i}, 'eeg',  '*.set'));
-
-    catfile = @(p, f) fullfile(p, f);
-
-    anat = cellfun(catfile, {anat.folder}, {anat.name}, 'UniformOutput', 0);
-    func = cellfun(catfile, {func.folder}, {func.name}, 'UniformOutput', 0);
-    dwi  = cellfun(catfile, {dwi.folder},  {dwi.name},  'UniformOutput', 0);
-    meg  = cellfun(catfile, {meg.folder},  {meg.name},  'UniformOutput', 0);
-    eeg  = cellfun(catfile, {eeg.folder},  {eeg.name},  'UniformOutput', 0);
-
-    dataset = cat(1, anat(:), func(:), dwi(:), meg(:), eeg(:));
-
-    for j=1:numel(dataset)
       cfg = [];
-      cfg.dataset                     = dataset{j};
+      cfg.method    = 'convert';
+      cfg.datatype  = 'eeg';
 
-      cfg.eeg.writesidecar            = 'replace';
-      cfg.channels.writesidecar       = 'replace';
-      cfg.events.writesidecar         = 'replace';
+      % specify the input file name, here we are using the same file for every subject
+      cfg.dataset   = 'Eeglab_data.set';
 
-      cfg.InstitutionName             = 'University of California San Diego';
-      cfg.InstitutionalDepartmentName = 'Schwartz Center for Computational Neuroscience';
-      cfg.InstitutionAddress          = '9500 Gilman Drive # 0559; La Jolla CA 92093, USA';
+      % specify the output directory
+      cfg.bidsroot  = 'bids';
+      cfg.sub       = sub{subindx};
+      cfg.ses       = ses{sesindx};
+      cfg.run       = run(runindx);
 
-      % provide the long rescription of the task
-      cfg.TaskName = 'Subjects were doing something.';
+      data2bids(cfg);
 
-      % these are EEG specific
-      cfg.eeg.PowerLineFrequency      = 60;  % recorded in the USA
-      cfg.eeg.EEGReference            ='M1'; % actually I do not know, but let's assume it was left mastoid
-
-      data2bids(cfg)
-
-    end % for each dataset
-    end % for each subject
-
-### Step 4a: use Python to create the general sidecar files
-
-This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
-
-```bash
-BIDSROOT=$HOME/example
-BIDSTOOLS=$HOME/bids-tools/bin
-
-$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT # create the dataset_description.json file
-$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT # create the participants.tsv file
-$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT # create the scans.tsv files (per subject and session)
+    end % for run
+  end % for ses
+end % for sub
 ```
 
-### Step 5a: finalize
+Information that is session specific would be specified in `cfg.scans` and go in the `scans.tsv` file. Information that varies from one run to the next run (such as the sedation level, or the behavioral performance during the run) can also be added to the `scans.tsv` file.
 
-There are some things which are not implemented as a script, for example filling out the details in the top-level _dataset_description.json_ file, adding a _README_ file, updating the _CHANGES_ file.
+Information that is subject specific and identical for all recordings goes via `cfg.participants` into the `participants.tsv` file.
 
-I also manually renamed the subdirectories with the presentation log files in the _sourcedata_ directory, and added the presentation source code and stimulus material in the _stimuli_ directory.
+## Finalize the BIDS dataset
 
-Throughout the development of the scripts and and after having completed the conversion I used the [bids-validator](http://github.com/INCF/bids-validator/) to check compliance with BIDS.
+There are some things which are not so conveniently implemented as a MATLAB script, for example filling out all details in the top-level `dataset_description.json` file, adding a `README` file and updating the `CHANGES` file. These are things you would usually do using a regular text editor after converting all data. You should also use the [bids-validator](http://github.com/bids-standard/bids-validator/) to check compliance. Note that the online validator does not require you to upload any data; it runs as JavaScript in your local browser, so the files stay on your computer.
 
-## Organize EEG data as BIDS dataset - converting the files along the way
+In converting data from one to another format there is always a chance of loosing information. Therefore you should store the data files in their original format in the `bids/sourcedata` directory. This also applies to auxiliary files, lab notes, presentation log files and other information that you do not want to loose.
 
-### Step 1b: create empty directory structure
-
-```bash
-BIDSROOT=$HOME/example
-
-mkdir -p $BIDSROOT/code
-mkdir -p $BIDSROOT/stimuli
-mkdir -p $BIDSROOT/sourcedata
-
-for SUB in 01 02 03 04 05 06 07 08 09 10; do
-mkdir -p $BIDSROOT/sub-$SUB/eeg
-done
-```
-
-### Step 2b: copy the EEG data for all participants
-
-Here I am copying the single example file to each of the subjects. This would normally not be needed, since you would already have the original data somewhere in some structure. The original format data can be shared in BIDS in the _sourcedata_ directory.
-
-```bash
-BIDSROOT=$HOME/example
-SOURCEDATA=$BIDSROOT/sourcedata
-
-cd $SOURCEDATA
-wget --no-check-certificate https://sccn.ucsd.edu/mediawiki/images/9/9c/Eeglab_data.set
-
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant01.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant02.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant03.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant04.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant05.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant06.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant07.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant08.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant09.set
-cp $SOURCEDATA/Eeglab_data.set $SOURCEDATA/participant10.set
-rm $SOURCEDATA/Eeglab_data.set
-```
-
-### Step 3b: use MATLAB to convert the data and to create sidecar files for each subject
-
-The **[data2bids](/reference/data2bids)** function will get the metadata that is available from the original file, such as the channel names, sampling frequency, etc. There is also information about the data that is not available in the file, which you have to specify in the configuration structure. It is also possible to overrule information that is incorrect/incomplete in the data file and to ensure that the correct metadata appears in the sidecar files.
-
-Besides creating the sidecar files with the metadata, in this step we are also converting the data from EEGLAB .set format into BrainVision format. This is (along with EDF) the preferred format for EEG data in BIDS, since it is widely supported by many EEG analysis software packages.
-
-In principle converting the data is not needed, since EEGLAB .set is also one of the (non-preferred) formats allowed for EEG data in BIDS.
-
-    %% this is an example that converts the EEG data to BrainVision format
-
-    bidsroot   = fullfile(getenv('HOME'), 'example');
-    sourcedata = fullfile(bidsroot, 'sourcedata');
-
-    dataset = {
-    fullfile(sourcedata, 'participant01.set')
-    fullfile(sourcedata, 'participant02.set')
-    fullfile(sourcedata, 'participant03.set')
-    fullfile(sourcedata, 'participant04.set')
-    fullfile(sourcedata, 'participant05.set')
-    fullfile(sourcedata, 'participant06.set')
-    fullfile(sourcedata, 'participant07.set')
-    fullfile(sourcedata, 'participant08.set')
-    fullfile(sourcedata, 'participant09.set')
-    fullfile(sourcedata, 'participant10.set')
-    };
-
-    nsubj = 10;
-    task = 'something';
-
-    for i=1:nsubj
-
-    cfg = [];
-    cfg.dataset                     = dataset{i};
-    cfg.outputfile                  = fullfile(bidsroot, sprintf('sub-%02d', i), 'eeg', sprintf('sub-%02d_task-%s_eeg.vhdr', i, task));
-
-    cfg.eeg.writesidecar            = 'replace';
-    cfg.channels.writesidecar       = 'replace';
-    cfg.events.writesidecar         = 'replace';
-
-    cfg.InstitutionName             = 'University of California San Diego';
-    cfg.InstitutionalDepartmentName = 'Schwartz Center for Computational Neuroscience';
-    cfg.InstitutionAddress          = '9500 Gilman Drive # 0559; La Jolla CA 92093, USA';
-
-    % provide the long rescription of the task
-    cfg.TaskName = 'Subjects were doing something.';
-
-    % these are EEG specific
-    cfg.eeg.PowerLineFrequency      = 60;  % recorded in the USA
-    cfg.eeg.EEGReference            ='M1'; % actually I do not know, but let's assume it was left mastoid
-
-    data2bids(cfg)
-
-    end % for each dataset
-
-### Step 4b: use Python to create the general sidecar files
-
-This step is again done on the Linux command line, using some tools that are shared [here](https://github.com/robertoostenveld/bids-tools). Some of the other tools might be useful in creating scripts to gather and/or reorganize your EEG, MEG, Presentation or DICOM data.
-
-```bash
-BIDSROOT=$HOME/example
-BIDSTOOLS=$HOME/bids-tools/bin
-
-$BIDSTOOLS/create_sidecar_files  -f --description  $BIDSROOT # create the dataset_description.json file
-$BIDSTOOLS/create_sidecar_files  -f --participants $BIDSROOT # create the participants.tsv file
-$BIDSTOOLS/create_sidecar_files  -f --scans        $BIDSROOT # create the scans.tsv files (per subject and session)
-```
-
-### Step 5b: finalize
-
-There are some things which are not implemented as a script, for example filling out the details in the top-level _dataset_description.json_ file, adding a _README_ file, updating the _CHANGES_ file.
-
-I also manually renamed the subdirectories with the presentation log files in the _sourcedata_ directory, and added the presentation source code and stimulus material in the _stimuli_ directory.
-
-Throughout the development of the scripts and and after having completed the conversion I used the [bids-validator](http://github.com/INCF/bids-validator/) to check compliance with BIDS.
+Furthermore, it is recommended to store the script that you used for converting the data in the `bids/code`. See the [BIDS specification](https://bids-specification.readthedocs.io/en/stable/) for further details.  
 
 ## Concluding remarks
 
-In this example it all looks very simple, which is partially because the data is not only more-or-less the same, but actually perfectly identical. Usually the challenge in organizing the data arise due to inconsistencies between the different recordings. Although the inconsistencies will not be part of the experimental protocol, stuff happens and not all lab recordings can be guaranteed to be exactly according to the same protocol. For example
+In this example it all looks very simple, which is because the data files are perfectly identical and there are no exceptions. Usually challenge arises due to inconsistencies between recordings or subjects. Although these inconsistencies are not be part of the experimental protocol, stuff happens. For example
 
 - one subject was recorded with different acquisition settings
 - one subject was recorded with another EEG cap
@@ -276,7 +145,9 @@ In this example it all looks very simple, which is partially because the data is
 - etc.
 
 {% include markup/warning %}
-As a rule of thumb: if you have few exceptions, better don't try to make the scripts above too complex, but deal with them manually. If you have many exceptions of the same or similar type, it is worthwhile to invest into making these scripts smarter to automate the exception handling.
+As a rule of thumb - if you have few exceptions, better don't try to make the scripts above too complex, but deal with them manually.
+
+If you have many exceptions of a similar type, it is worthwhile to invest into making these scripts smarter to automate the exception handling.
 {% include markup/end %}
 
-In reusing the data, either by yourself, your (future) colleagues in your lab, or people outside your lab, this type of information is very relevant. Although it can be frustrating to encounter these inconsistencies when converting to BIDS, it actually reveals that these aspects need to be represented and documented properly in the (meta)data.
+In reusing the data, either by yourself, your (future) colleagues in your lab, or people outside your lab, this type of information is very relevant. Although it can be frustrating to deal with the lack of proper documentation and the inconsistencies in your data when converting to BIDS, it actually reveals that these aspects need to be represented and documented properly!

@@ -5,13 +5,13 @@ tags: [website, syntax, guidelines, development]
 
 # Website syntax and formatting
 
-This page describes the syntax and formatting for the Markdown pages that comprise this FieldTrip website. The Markdown pages are converted into html using [Jekyll](https://jekyllrb.com), and includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language. The resulting html pages and style sheets make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
+This page describes the syntax and formatting for the FieldTrip website. The content of the website is maintained on <http://github.com/fieldtrip/website> and we have a complete [tutorial](/development/git/) that explains how to contribute. You can also use the GitHub web interface by opening a specific page page and clicking on the pen symbol ("Edit this file") in the upper right corner.
+
+The website pages are written in Markdown format, which are converted into html using [Jekyll](https://jekyllrb.com). The Markdown pages includes sections in the [Liquid](https://shopify.github.io/liquid/) makeup language for more detailed formatting. The resulting static html pages and style sheets also make use of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
 This Markdown [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a very good place to start. It is also helpful to check the formatting in an online Markdown editor like <https://stackedit.io> or <https://dillinger.io>.
 
 Since Markdown is limited in its layout options, we use some custom code implemented in Liquid for specific formatting details. A good way to learn the formatting is by looking at the **raw format** of pages on <http://github.com/fieldtrip/website>.
-
-Note that if you look at the raw code of this page, you will also see some [html symbols](https://www.toptal.com/designers/htmlarrows/) in the code: these are required to show the raw code rather that it being rendered.
 
 ## Page header
 
@@ -110,7 +110,7 @@ The preferred format for screenshots is png. The preferred format for photo's is
 
 ## Pdf documents
 
-Pdf documents can be used on the website, but are not managed in github. Since they are binary files and often very large (e.g. slides of presentations), storing them in git would be inefficient. Please send pdf file that you want on the website to Robert.
+Pdf documents can be used on the FieldTrip website, but are not managed in git on GitHub. Since they are binary files and often very large (e.g. slides of presentations), storing them in git would be inefficient. Please send pdf file that you want on the website to Robert, he will copy it to .
 
 ## Videos
 
