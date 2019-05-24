@@ -78,5 +78,89 @@ title: data2bids
    cfg.participant.age         = scalar
    cfg.participant.sex         = string, 'm' or 'f'
    cfg.scan.acq_time           = string, should be formatted according to  RFC3339 as '2019-05-22T15:13:38'
-   cfg.dataset_description.
+   cfg.dataset_description     = structure with additional fields, see below
+ In case any of these values is specified as empty (i.e. []) or as nan, it will be
+ written to the tsv file as 'n/a'.
+
+ In case cfg.dataset points to a NIFTI file, or in case you pass a preprocessed MRI
+ as input data structure, you can specify cfg.mri.dicomfile to read the detailed MR
+ scanner and sequence details from the DICOM file. This will be used to fill in the
+ details of the corresponding JSON file.
+   cfg.mri.dicomfile           = string, filename of a matching DICOM file for header details (default = [])
+
+ You can specify cfg.events.trl as a Nx3 matrix with the trial definition (see
+ FT_DEFINETRIAL) or as a MATLAB table. When specified as table, the first three
+ columns containing integer values corresponding to the begsample, endsample and
+ offset, the additional colums can be of another type and have any name. If you do
+ not specify the trial definition, the events will be read from the MEG/EEG/iEEG
+ dataset. Events from the trial definition or from the data will be written to
+ events.tsv.
+   cfg.events.trl              = trial definition, see also FT_DEFINETRIAL
+
+ You can specify cfg.presentationfile with the name of a NBS presentation log file,
+ which will be aligned with the data based on triggers (MEG/EEG/iEEG) or based on
+ the volumes (fMRI). To indicate how triggers (in MEG/EEG/iEEG) or volumes (in fMRI)
+ match the presentation events, you should also specify the mapping between them.
+ Events from the presentation log file will be written to events.tsv.
+   cfg.presentationfile        = string, optional filename for the presentation log file
+   cfg.trigger.eventtype       = string (default = [])
+   cfg.trigger.eventvalue      = string or number
+   cfg.presentation.eventtype  = string (default = [])
+   cfg.presentation.eventvalue = string or number
+   cfg.presentation.skip       = 'last'/'first'/'none'
+
+ For EEG and iEEG data you can specify an electrode definition according to
+ FT_DATATYPE_SENS as an "elec" field in the input data, or you can specify it as
+ cfg.elec or you can specify a filename with electrode information.
+   cfg.elec                     = structure with electrode positions or filename, see FT_READ_SENS
+
+ General BIDS options that apply to all data types are
+   cfg.InstitutionName             = string
+   cfg.InstitutionAddress          = string
+   cfg.InstitutionalDepartmentName = string
+   cfg.Manufacturer                = string
+   cfg.ManufacturersModelName      = string
+   cfg.DeviceSerialNumber          = string
+   cfg.SoftwareVersions            = string
+
+ If you specify cfg.bidsroot, this function will also write the dataset_description.json
+ file. You can specify the following fields
+   cfg.dataset_description                     = string
+   cfg.dataset_description.writesidecar        = string
+   cfg.dataset_description.Name	              = string
+   cfg.dataset_description.BIDSVersion	        = string
+   cfg.dataset_description.License	            = string
+   cfg.dataset_description.Authors	            = string
+   cfg.dataset_description.Acknowledgements	  = string
+   cfg.dataset_description.HowToAcknowledge	  = string
+   cfg.dataset_description.Funding	            = string
+   cfg.dataset_description.ReferencesAndLinks	= string
+   cfg.dataset_description.DatasetDOI	        = string
+
+ General BIDS options that apply to all functional data types are
+   cfg.TaskName                    = string
+   cfg.TaskDescription             = string
+   cfg.Instructions                = string
+   cfg.CogAtlasID                  = string
+   cfg.CogPOID                     = string
+
+ There are more BIDS options for the mri/meg/eeg/ieeg data type specific sidecars.
+ Rather than listing them all here, please open this function in the MATLAB editor,
+ and scroll down a bit to see what those are. In general the information in the JSON
+ files is specified in CamelCase, whereas the information for TSV files is in
+ lowercase.
+   cfg.mri.SomeOption              = string in CamelCase, please check the MATLAB code
+   cfg.meg.SomeOption              = string in CamelCase, please check the MATLAB code
+   cfg.eeg.SomeOption              = string in CamelCase, please check the MATLAB code
+   cfg.ieeg.SomeOption             = string in CamelCase, please check the MATLAB code
+   cfg.channels.someoption         = string in lowercase, please check the MATLAB code
+   cfg.events.someoption           = string in lowercase, please check the MATLAB code
+   cfg.coordsystem.someoption      = string in lowercase, please check the MATLAB code
+
+ The implementation in this function corresponds to BIDS version 1.2.0. See
+ https://bids-specification.readthedocs.io/ for the full specification and
+ http://bids.neuroimaging.io/ for further details.
+
+ See also FT_DATAYPE_RAW, FT_DATAYPE_VOLUME, FT_DATATYPE_SENS, FT_DEFINETRIAL,
+ FT_PREPROCESSING, FT_READ_MRI
 ```
