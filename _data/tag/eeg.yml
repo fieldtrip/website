@@ -196,3 +196,6 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
 
+- name:  Preprocessing and event-related potentials in EEG data
+  link:  /workshop/oslo2019/introduction
+
