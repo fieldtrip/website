@@ -13,7 +13,7 @@
 - name:  Preparing an EEG dataset for sharing
   link:  /example/bids_eeg
 
-- name:  Preparing a combined MEG/fMRI dataset for sharing
+- name:  Preparing the combined MEG/fMRI MOUS dataset for sharing in BIDS
   link:  /example/bids_mous
 
 - name:  Example analysis pipeline for Biosemi data
