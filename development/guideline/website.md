@@ -114,6 +114,8 @@ Pdf documents can be used on the website, but are not managed in github. Since t
 
 ## Videos
 
+This is implemented with some small snippets of html code contained in the `includes` directory.
+
 You can include a Youtube video like This
 
 {% raw %}
