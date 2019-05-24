@@ -15,7 +15,7 @@ Note that if you look at the raw code of this page, you will also see some [html
 
 ## Page header
 
-The Markdown document should start with a short header between lined with exactly three minus symbols `---`, including the title and the tags (formatted in a comma-separated) like this
+The Markdown document should start with a short header between two lines with three minus characters (not more and not less), including the title and the tags (formatted in a comma-separated) like this
 
 ```markdown
 ---

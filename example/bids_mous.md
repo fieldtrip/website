@@ -1,13 +1,17 @@
 ---
-title: Preparing a combined MEG/fMRI dataset for sharing
+title: Preparing the combined MEG/fMRI MOUS dataset for sharing in BIDS
 tags: [example, bids, sharing, anonymize]
 ---
 
-# Preparing a combined MEG/fMRI dataset for sharing
+# Preparing the combined MEG/fMRI MOUS dataset for sharing in BIDS
 
-This example describes how to prepare a combined MEG/fMRI dataset for sharing. The study involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. The data and the experiment are descriobed in more details in the references that you find at the end of this page.
+This example describes how we prepared a combined MEG/fMRI dataset for sharing. The project involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. For every subject resting-state and task MEG and fMRI was recorded. The data and the experiment are described in more details in the references that you find at the end of this page.
 
-Although we acquired slightly more data, the part that we now want to share for these subjects consists of
+{% include markup/success %}
+The data is shared on the Donders Repository with the persistent identifier [11633/di.dccn.DSC_3011020.09_236](http://hdl.handle.net/11633/di.dccn.DSC_3011020.09_236) and the corresponding publication "A 204-subject multimodal neuroimaging dataset to study language processing" has been published as [10.1038/s41597-019-0020-y](https://doi.org/10.1038/s41597-019-0020-y).
+{% include markup/end %}
+
+Although we acquired slightly more data than published, the part that we share for these 204 subjects consists of
 
 - anatomical MRI
 - diffusion weighted MRI
@@ -18,15 +22,11 @@ Although we acquired slightly more data, the part that we now want to share for 
   - resting state
   - functional task
 
-MEG was acquired with a 275 channel CTF system. MRI was acquired with a 3T Siemens scanner. For the coregistration of the MEG with the anatomical MRI, the headshape was recorded using a Polhemus electromagnetic tracker. Digital photo's of the anatomical landmark at both ears were taken. Furthermore, head localizer coils were used for MEG coregistration as usual.
+MEG was acquired with a 275 channel CTF system. MRI was acquired with a 3T Siemens scanner. For the coregistration of the MEG with the anatomical MRI, the head shape was recorded using a Polhemus electromagnetic tracker. Digital photo's of the anatomical landmark at both ears were taken. Furthermore, head localizer coils were used for MEG coregistration as usual.
 
-Simulus presentation was done using using [NBS Presentation](https://www.neurobs.com). For MEG the events are coded as triggers in the data set. Both for MEG and MRI the presentation log files are shared and used to create/extend the _events.tsv_ sidecar files for the task data.
+Stimulus presentation was done using using [NBS Presentation](https://www.neurobs.com). For MEG the events are coded as triggers in the data set. Both for MEG and MRI the presentation log files are shared and used to create/extend the _events.tsv_ sidecar files for the task data.
 
 The shared data is organized according to [BIDS](http://bids.neuroimaging.io), the Brain Imaging Data Structure. This not only gives structure to the organization of the data files, but also helps to ensure that appropriate metadata and documentation are shared. We believe that this will facilitate reuse and increase the value of the shared data.
-
-{% include markup/warning %}
-At this moment the data sharing has not been totally completed. Right now we are working on a publication that describes the details of this dataset, and the data is currently under review. Once completed, the data will be published on the [Donders Repository](https://www.ru.nl/donders/research/data/) with DOI http://hdl.handle.net/11633/di.dccn.DSC_3011020.09_236.
-{% include markup/end %}
 
 ## Procedure
 
@@ -61,6 +61,12 @@ raw/A2001/mri_task
 ```
 
 for each subject. The actual data files (CTF, DICOM, Presentation log files, Polhemus, etc.) are located in these directories.
+
+{% include markup/warning %}
+Since preparing the data for publication and creating this page, the **[data2bids](/reference/data2bids)** function has been greatly improved. Nowadays Bash and Python are not needed any more, but (almost) the whole dataset conversion and reorganization can be done with a MATLAB script. The only part where the Linux command line is still needed is for renaming and anonimizing the CTF datasets, which requires the `newDs` command line application.
+
+We keep the documentation here for reference, but suggest that you look at more recent examples to learn how to [convert your data to BIDS](/tag/bids/).
+{% include markup/end %}
 
 The procedure for converting the original data consists of a number of steps
 
@@ -522,11 +528,10 @@ The Presentation log files for the visual stimuli had an \<enter\> after the per
 
 ## References
 
+- Schoffelen JM, Oostenveld R, Lam NHL, Uddén J, Hultén A & Hagoort P. [A 204-subject multimodal neuroimaging dataset to study language processing](https://doi.org/10.1038/s41597-019-0020-y) Scientific Data 2019 Apr 3;6(17). doi: 10.1038/s41597-019-0020-y.
+
 - Schoffelen JM, Hultén A, Lam N, Marquand AF, Uddén J, Hagoort P. [Frequency-specific directed interactions in the human brain network for language.](https://doi.org/10.1073/pnas.1703155114) Proc Natl Acad Sci U S A. 2017 Jul 25;114(30):8083-8088. doi: 10.1073/pnas.1703155114.
 
 - Lam NHL, Schoffelen JM, Uddén J, Hultén A, Hagoort P. [Neural activity during sentence processing as reflected in theta, alpha, beta, and gamma oscillations.](https://doi.org/10.1016/j.neuroimage.2016.03.007) Neuroimage. 2016 Nov 15;142:43-54. doi: 10.1016/j.neuroimage.2016.03.007.
 
 - Lam NHL, Hultén A, Hagoort P & Schoffelen JM. [Robust neuronal oscillatory entrainment to speech displays individual variation in lateralisation](https://doi.org/10.1080/23273798.2018.1437456) Language, Cognition and Neuroscience, 33:8, 943-954. doi: 10.1080/23273798.2018.1437456.
-
-- Schoffelen JM, Oostenveld R, Lam NHL, Uddén J, Hultén A & Hagoort P. [A 204-subject multimodal neuroimaging dataset to study
-language processing](https://doi.org/10.1038/s41597-019-0020-y) Scientific Data 2019 Apr 3;6(17). doi: 10.1038/s41597-019-0020-y.
