@@ -16,6 +16,7 @@ This data in this tutorial is originally from the [NatMEG workshop](/workshop/na
 
 {% include youtube id="z0xCqcYmIfA" %}
 {% include markup/end %}
+
 ## Background
 
 In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) re-referencing. The **[ft_preprocessing](/reference/ft_preprocessiing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
@@ -24,7 +25,9 @@ There are largely two alternative approaches for preprocessing, which especially
 
 1. Read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments
 2. Identify the interesting segments, read those segments from the data file and apply filters to those segments only  
-   An advantage of the first approach is that it allows you to apply most temporal fitlers to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.  
+
+
+An advantage of the first approach is that it allows you to apply most temporal fitlers to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.  
    Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 We are going to define segments of interest (epochs/trials) based on triggers encoded in a specific trigger channel.
@@ -136,14 +139,14 @@ The output of _ft_preprocessing(cfg)_ is _data_, which is a structure that has t
          trialinfo: [600x1 double]
                cfg: [1x1 struct]
 
-- _hdr_ contains header information about the data structure (metadata)
-- _label_ contains the names of all channels
-- _time_ contains the time courses for each of the 600 trials
-- _trial_ contains the _voltages_ for each of the 600 trials
-- _fsample_ indicates the sampling frequency in Hz
+- _hdr_        contains header information about the data structure (metadata)
+- _label_      contains the names of all channels
+- _time_       contains the time courses for each of the 600 trials
+- _trial_      contains the _voltages_ for each of the 600 trials
+- _fsample_    indicates the sampling frequency in Hz
 - _sampleinfo_ is a matrix the samples at which sample points trials begin and end
-- _trialinfo_ is a column vector indicating the type of trial (1=standard, 2=deviant)
-- _cfg_ contains information about the call leading to this output
+- _trialinfo_  is a column vector indicating the type of trial (1=standard, 2=deviant)
+- _cfg_        contains information about the call leading to this output
 
 {% include markup/warning %}
 Make absolutely sure that you have **no** bad channels in your data before you do an average reference  
@@ -236,13 +239,13 @@ The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** looks li
         dimord: 'chan_time'
            cfg: [1x1 struct]
 
-- _time_ is now just a row vector with the time points in seconds (before we had a cell array with 600 cells in it)
-- _label_ is still our 128 names
-- _avg_ contains our averages for each of the 128 channels at each of the 200 time points
-- _var_ contains the variance for each of the 128 channels at each of the 200 time points (can be used e.g. for calculating standard deviations)
-- _dof_ contains the degrees of freedoms for each of the 128 channels at each of the 200 time points
-- _dimord_ indicates ordering of dimension, rows are channels and columns are time
-- _cfg_ shows the cfg that gave rise to this structure
+- _time_   is now just a row vector with the time points in seconds (before we had a cell array with 600 cells in it)
+- _label_  is still our 128 names
+- _avg_    contains our averages for each of the 128 channels at each of the 200 time points
+- _var_    contains the variance for each of the 128 channels at each of the 200 time points (can be used e.g. for calculating standard deviations)
+- _dof_    contains the degrees of freedoms for each of the 128 channels at each of the 200 time points
+- _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
+- _cfg_    shows the cfg that gave rise to this structure
 
 These can be plotted using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
 
@@ -331,7 +334,7 @@ These can be plotted using the same tools as before
 
     print -dpng multiplot_diff.png
 
-{% include image src="/assets/img/workshop/oslo2019/multiplot_MMN.png" width="650" %}
+{% include image src="/assets/img/workshop/oslo2019/multiplot_diff.png" width="650" %}
 _Figure 7: A plot of all channels showing the MMN_
 
     figure
@@ -401,5 +404,5 @@ _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 
     print -dpng N400.png
 
-{% include image src="/assets/img/workshop/oslo2019/MMN.png" width="650" %}
+{% include image src="/assets/img/workshop/oslo2019/N400.png" width="650" %}
 _Figure 10: A topographical plot showing the N400 (average over 350 to 450 ms)_
