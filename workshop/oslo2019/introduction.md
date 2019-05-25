@@ -249,7 +249,7 @@ The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** looks li
 
 These can be plotted using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
 
-#### multiplot
+#### Multiplot
 
     figure;
 
@@ -263,7 +263,7 @@ These can be plotted using **[ft_multiplotER](/reference/ft_multiplotER)**, **[f
 {% include image src="/assets/img/workshop/oslo2019/multiplot.png" width="650" %}
 _Figure 3: A plot of all channels_
 
-#### singleplot
+#### Singleplot
 
     figure
 
@@ -285,7 +285,7 @@ _Figure 3: A plot of all channels_
 {% include image src="/assets/img/workshop/oslo2019/singleplot.png" width="650" %}
 _Figure 4: A plot of a single channel_
 
-#### topoplot
+#### Topoplot
 
     figure
 
@@ -323,7 +323,7 @@ We can calculate the difference wave, the subtraction of one ERP from another
 
 These can be plotted using the same tools as before
 
-#### multiplot
+#### Multiplot
 
     figure;
 
