@@ -80,7 +80,7 @@ We proceed by computing the statistical tets, which returns the t-value, the pro
 
 _stat\_t_ contains:
 
-    stat_t = 
+    stat_t =
 
            stat: [128x200 double]
              df: 572
@@ -200,7 +200,7 @@ We will first run it and then discuss some of the options and details afterwards
                                  % cluster
     cfg.alpha            = 0.025; % corresponds to an alpha level of 0.05, since ...
                                   % two tests are made ...
-                                  % (negative and positive: 2*0.025=0.05) 
+                                  % (negative and positive: 2*0.025=0.05)
     cfg.numrandomization = 100;  % number of permutations run
 
     cfg.design           = data_EEG_filt.trialinfo; % same design as before
@@ -213,7 +213,7 @@ We will first run it and then discuss some of the options and details afterwards
 
 The output of _stat\_t\_cluster_ is:
 
-    stat_t_cluster = 
+    stat_t_cluster =
 
                        prob: [128x200 double]
                 posclusters: [1x11 struct]
@@ -257,7 +257,8 @@ There's quite a lot to unpack here. It is critical to distinguish between _t-val
 1. Do a _t-test_ similar to above (_stat\_t_) - these provide the _t-values_ in _stat\_t\_cluster.stat_
 {% include markup/exercise %}
 See for yourself that _stat\_t.stat_ and _stat\_t\_cluster.stat_ are identical (use e.g. _isequal_ or _plot)
-{% include markup/end % %}
+{% include markup/end %}
+
 2. Find the _T-values_ for each cluster of _t-values_ that pass the analytic significance test based on _cfg.clusteralpha_. The _T-value_ for a cluster is the sum of all the _t-values_ in that cluster
 3. Permute the condition labels (_cfg.design_) as many times as set in _cfg.numrandomization_; then compute the _t-values_ (as in step 1 above), and compute the _T-values_ for each of the clusters that pass the analytic significance test based on _cfg.clusteralpha_ (as in step 2 above).
 4. For each of the _cfg.numrandomization_ permutations, retrieve the maximum _T-value_, and create a permutation based distribution of _T-values_
@@ -295,5 +296,3 @@ Put informally_: **our way of labeling the conditions _does_ matter**
 Let's have a look at the cluster corrected channel:
 
 **WORK IN PROGRESS**
-
-
