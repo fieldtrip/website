@@ -30,6 +30,8 @@ When parametric statistics are used, one method that addresses this problem is t
 
 In constrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
+# Tutorial (ERPs)
+
 ## Load the ERP data and preprocess
 
     load cleaned_data_ERP.mat
@@ -180,8 +182,8 @@ As noted above, EEG data is smooth over the spatio-temporal dimensions. We can e
 
     print -dpng neighbor_structure.png
 
-{% include image src="/assets/img/workshop/oslo2019/neighbour_structure.png" width="650" %}
-_Figure 3: Single channel plot - Electrode neighbor structure_
+{% include image src="/assets/img/workshop/oslo2019/neighbor_structure.png" width="650" %}
+_Figure 3: Electrode neighbor structure_
 
 ### Permutation
 
@@ -253,19 +255,14 @@ The output of _stat\_t\_cluster_ is:
 
 There's quite a lot to unpack here. It is critical to distinguish between _t-values_ and _T-values_ here. We will now state the procedure step by step
 
-
 1. Do a _t-test_ similar to above (_stat\_t_) - these provide the _t-values_ in _stat\_t\_cluster.stat_
-{% include markup/exercise %}
-See for yourself that _stat\_t.stat_ and _stat\_t\_cluster.stat_ are identical (use e.g. _isequal_ or _plot)
-{% include markup/end %}
-
 2. Find the _T-values_ for each cluster of _t-values_ that pass the analytic significance test based on _cfg.clusteralpha_. The _T-value_ for a cluster is the sum of all the _t-values_ in that cluster
 3. Permute the condition labels (_cfg.design_) as many times as set in _cfg.numrandomization_; then compute the _t-values_ (as in step 1 above), and compute the _T-values_ for each of the clusters that pass the analytic significance test based on _cfg.clusteralpha_ (as in step 2 above).
 4. For each of the _cfg.numrandomization_ permutations, retrieve the maximum _T-value_, and create a permutation based distribution of _T-values_
 5. Observe the likelihood of the maximum _T-value_ under the permuted distribution for the _positive clusters_ direction and evaluate at _cfg.alpha_
 6. Repeat step 5 for the _negative clusters_
 
-Below follows some figures and operations illustrating key features of these steps
+Below follows some figures and operations illustrating key features of these steps - (the code for these plots in the **Appendix** below)
 
 #### Equivalence of the _t-values_ (step 1)
 
@@ -291,8 +288,137 @@ _Figure 6: The observed positive and negative_ T-values compared to the permuted
 #### Compare against _cfg.alpha_ (steps 5 and 6)
 
 Since both the _positive_ and _negative p-values_ are lesser than _cfg.alpha_ (0.025), we reject the null hypothesis for both the positive and negative directions.  
-Put informally_: **our way of labeling the conditions _does_ matter**
+_Put informally_: **our way of labeling the conditions _does_ matter**
 
 Let's have a look at the cluster corrected channel:
 
+{% include image src="/assets/img/workshop/oslo2019/singleplot_t_cluster.png " width="650" %}
+_Figure 7: Single channel plot - Cluster correction_
+
+And here the three tested corrections are side by side
+
+{% include image src="/assets/img/workshop/oslo2019/singleplots_side_by_side.png " width="650" %}  
+_Figure 8: Single channel plot - corrections side by side_
+
+
+We can also do topographical plots.  
+Here are the three side by side at 168 ms  
+
+    n_plots = 3;
+    figure('units', 'normalized', 'outerposition', [0 0 0.5 0.5]);
+    stats = {stat_t stat_t_bonferroni stat_t_cluster};
+
+    for plot_index = 1:n_plots
+        
+        stat = stats{plot_index};
+        subplot(1, 3, plot_index)
+
+
+        difference_wave.mask = stat.mask;
+
+        cfg               = [];
+        cfg.layout        = 'natmeg_customized_eeg1005.lay';
+        cfg.maskparameter = 'mask';
+        cfg.xlim          = [0.168 0.168];
+        cfg.zlim          = [-4.5e-6 4.5e-6]; % Volts
+        if plot_index > 1;
+            cfg.comment   = 'no';
+        end
+
+        ft_topoplotER(cfg, difference_wave)
+        
+        title(['Correction: ' stat.cfg.correctm])   
+
+    end
+
+    print -dpng difference_wave_topoplots.png
+
+{% include image src="/assets/img/workshop/oslo2019/difference_wave_topoplots.png " width="650" %}  
+_Figure 9: Difference wave (MMN) topographical plots_
+
+And here's the difference between the normal _t-mask_ and the _t-cluster-mask_. Note it is that not big.  
+{% include image src="/assets/img/workshop/oslo2019/difference_between_masks.png " width="650" %}  
+_Figure 10: Difference wave showing the difference in masks coming from stat\_t and stat\_t\_cluster_
+
+{% include markup/info %}
+Do note that we, in EEG, most of the time do not make the inference at the level of the individual subject, but it is relevant to do so in for example diagnostic measurements.
+{% include markup/end %}
+
+We will now do a quick example of applying this to time-frequency data (TFR)
+
+# Tutorial (TFRs)
+
+Waiting for Britta's work
+
+# Appendix - code snippets for producing images
+
+
+    %% INDICATE EQUIVALENCE (FIG. 4)
+    figure
+    subplot(1, 2, 1)
+    plot(stat_t.time, stat_t.stat(1, :)) % plot t-values for first EEG
+    title('Stat field for "stat_t"', 'interpreter', 'none')
+    xlim([stat_t.time(1) stat_t.time(end)])
+    xlabel('Time (s)')
+    ylabel('t');
+
+    subplot(1, 2, 2)
+    plot(stat_t_cluster.time, stat_t_cluster.stat(1, :)) % repeat
+    title('Stat field for "stat_t_cluster"', 'interpreter', 'none')
+    xlim([stat_t_cluster.time(1) stat_t_cluster.time(end)])
+    xlabel('Time (s)')
+    ylabel('t-value');
+
+    print -dpng stat_equivalence.png
+
+    %% PLOT CLUSTER T-VALUES (FIG. 5)
+    figure
+    hold on
+
+    plot([stat_t_cluster.posclusters.clusterstat], 'ro')
+    plot([stat_t_cluster.negclusters.clusterstat], 'bo')
+    xlabel('Cluster index')
+    ylabel('T-value')
+    ylim([-9000 9000])
+    title('T-values per cluster')
+    legend({'Positive clusters' 'Negative clusters'})
+
+    print -dpng cluster_T_values.png
+
+    %% PLOT DISTRIBUTIONS (FIG. 6)
+
+    figure('units', 'normalized', 'outerposition', [0 0 0.35 0.5]);
+    hold on
+
+    positive_p = stat_t_cluster.posclusters(1).prob;
+    negative_p = stat_t_cluster.negclusters(1).prob;
+
+    positive_T = stat_t_cluster.posclusters(1).clusterstat;
+    negative_T = stat_t_cluster.negclusters(1).clusterstat;
+
+    positive_text = sprintf(['Observed T\np = ' num2str(round(positive_p, 4))]);
+    negative_text = sprintf(['Observed T\np = ' num2str(round(negative_p, 4))]);
+
+    subplot(1, 2, 1)
+    histogram(stat_t_cluster.posdistribution, 'facecolor', 'r')
+    xlabel('Permuted T-values')
+    ylabel('Observations (#)')
+    title('Permutation Distribution - Positive')
+    xlim([0 positive_T + 2500])
+    ylim([0 60])
+    arrow([positive_T, 10], [positive_T, 0])
+    text(positive_T - 2000 , 12, positive_text)
+
+    subplot(1, 2, 2)
+    histogram(stat_t_cluster.negdistribution, 'facecolor', 'b')
+    xlabel('Permuted T-values')    
+    ylabel('Observations (#)')
+    title('Permutation Distribution - Negative')
+    xlim([negative_T - 1000 0])
+    ylim([0 60])
+    arrow([negative_T, 10], [negative_T, 0])
+    text(negative_T - 500 , 12, negative_text)
+
+    print -dpng permutation_distributions.png
+    
 **WORK IN PROGRESS**
