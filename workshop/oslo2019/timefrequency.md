@@ -148,7 +148,7 @@ Note especially how the output now contains a field ``time`` and that  ``powspct
 
 To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: (a) Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval. (b) Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period devided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e. no change is represented by 1.
 
-Let's first look at the topographical representation of the power changes in a specified time-interval. We choose to look at 400 to 800 ms. We plot the data with an absolute baseline.
+Let's first look at the topographical representation of the power changes in a specified time-interval using  **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. We choose to look at 400 to 800 ms and plot the data with an absolute baseline.
 
     cfg              = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -161,24 +161,29 @@ Let's first look at the topographical representation of the power changes in a s
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
     figure;
-	cfg.title        = 'Left hand reaction';
     ft_topoplotTFR(cfg, tfr_left);
+	title('Left hand reaction');
 
     figure;
-	cfg.title        = 'Right hand reaction';
     ft_topoplotTFR(cfg, tfr_right);
+	title('Right hand reaction');
 	
 {% include image src="/assets/img/workshop/oslo2019/tfr_both.png" %}	
 
-_Figure: Topographic representation of absolute power changes versus baseline.__
+_Figure: Topographic representation of absolute power changes to baseline._
 
+{% include markup/info %}
+Let's pause for a moment and look at those results. Do they match what you expected with regard to localization and lateralization? How would you explain those results?
+{% include markup/end %}
 
-# Use a relative baseline
+### Using a relative baseline
+
+Let's take a look at what happens when instead of an absolute baseline we use a relative baseline:
 
     cfg              = [];
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'relative';  % we use a relative baseline 
-    cfg.xlim         = [0.5 1.0];
+	cfg.xlim         = [0.4 0.8];
     cfg.ylim         = [16 24]; 
 	cfg.zlim         = 'maxabs';
     cfg.marker       = 'on';
@@ -187,11 +192,35 @@ _Figure: Topographic representation of absolute power changes versus baseline.__
 
     figure;
     ft_topoplotTFR(cfg, tfr_left);
+	title('Left hand reaction');
 
     figure;
     ft_topoplotTFR(cfg, tfr_right);
+	title('Right hand reaction');	
+	
+{% include image src="/assets/img/workshop/oslo2019/tfr_rel_both.png" %}	
 
-# Take the difference between conditions
+_Figure: Topographic representation of relative power changes to baseline._	
+
+This looks better! We can also plot the time-resolved activity using **[ft_singleplotTFR](/reference/ft_singleplotTFR)**. Let's choose the same central electrode as we used above for the power spectra:
+
+	cfg          = [];
+	cfg.colorbar = 'yes';
+	cfg.zlim     = 'maxabs';
+	cfg.ylim     = [10 Inf];  % plot alpha band upwards
+	cfg.layout   = 'natmeg_customized_eeg1005.lay';
+	cfg.channel  = 'EEG126';
+
+	figure;
+	ft_singleplotTFR(cfg, tfr_left);
+	title('Left hand reaction');
+
+{% include image src="/assets/img/workshop/oslo2019/tfr_channel_left.png" %}	
+
+
+### Take the difference between conditions
+
+We now want to collaps the information of both conditions by comparing them. One possibility is by taking the difference between the conditions: we substract the two power spectra and then divide them by their sum - this normalizes the difference by the common activity. This can conveniently be done using  **[ft_math](/reference/ft_math)**:
 
     cfg = [];
     cfg.parameter    = 'powspctrm';
@@ -209,9 +238,22 @@ _Figure: Topographic representation of absolute power changes versus baseline.__
 
     figure;
     ft_topoplotTFR(cfg, tfr_difference);
+	title('Left vs right hand reaction');
+	
+{% include image src="/assets/img/workshop/natmeg/timefrequency/tfr_diff.png" %}
 
-# Recreate the analysis using Morlet wavelets
+_Figure: Topographic representation of the time-frequency representations of the difference in beta power, between left and right response._	
 
+## Bonus: Recreate this analysis using Morlet wavelets
+
+An alternative to calculating TFRs with the Fourier analysis is to use Morlet wavelets. A special thing about wavelets is that their temporal resolution scales with frequency (for a given number of cycles). In our analysis above, we used a sliding time window that was fixed, i.e., it was (in our case) always 500 ms long, irrespective of the frequency. This means that for higher frequencies, more cycles fit into this window: for example, 5 cycles of a 10 Hz oscillation fit in 500 ms, whereas for 30 Hz we can fit 15 cycles.
+For wavelets, we instead specify the number of cycles (equal to the width of the wavelet) directly, setting the parameter ``cfg.width``.
+
+{% include markup/info %}
+Making the width of a wavelet smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width*2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7*2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)).
+{% include markup/end %}
+
+Let's calculate the time-frequency representation of our data using Morlet wavelets (i.e., using wavelets that were created using a Gaussian taper):
 
     cfg            = [];
     cfg.output     = 'pow';
@@ -222,14 +264,15 @@ _Figure: Topographic representation of absolute power changes versus baseline.__
     cfg.foi        = 1:40;
 
     cfg.trials     = find(data.trialinfo(:,1) == 256);
-    wave_left       = ft_freqanalysis(cfg, data);
+    wave_left      = ft_freqanalysis(cfg, data);
 
     cfg.trials     = find(data.trialinfo(:,1) == 4096);
-    wave_right      = ft_freqanalysis(cfg, data);
+    wave_right     = ft_freqanalysis(cfg, data);
 
 
+#### Take the difference between conditions and plot the result
 
-# Take the difference between conditions
+As for our first analysis, we want to look at the difference between the conditions, so we use **[ft_math](/reference/ft_math)** again. We then visualize the results looking at the same channels as above.
 
     cfg            = [];
     cfg.parameter  = 'powspctrm';
@@ -239,12 +282,18 @@ _Figure: Topographic representation of absolute power changes versus baseline.__
 
     cfg          = [];
     cfg.colorbar = 'yes';
-	cfg.zlim         = 'maxabs';
+	cfg.zlim     = 'maxabs';
     cfg.layout   = 'natmeg_customized_eeg1005.lay';
     cfg.channel  = 'EEG126';
 
     figure;
     ft_singleplotTFR(cfg, wave_difference);
+    title('Left vs right hand reaction');
 
+{% include image src="/assets/img/workshop/natmeg/timefrequency/wavelets_channel_diff.png" %}
 
+_Figure: Time-frequency representations of power calculated using Morlet wavelets, difference between the conditions._
 
+{% include markup/exercise %}
+**Exercise:** Find out how what happens to the TFR if you change the ``cfg.width`` parameter.
+{% include markup/end %}
