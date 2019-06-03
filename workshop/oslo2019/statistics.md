@@ -82,7 +82,7 @@ We proceed by computing the statistical tets, which returns the t-value, the pro
 
 _stat\_t_ contains:
 
-    stat_t = 
+    stat_t =
 
            stat: [128x200 double]
              df: 572
@@ -202,7 +202,7 @@ We will first run it and then discuss some of the options and details afterwards
                                  % cluster
     cfg.alpha            = 0.025; % corresponds to an alpha level of 0.05, since ...
                                   % two tests are made ...
-                                  % (negative and positive: 2*0.025=0.05) 
+                                  % (negative and positive: 2*0.025=0.05)
     cfg.numrandomization = 100;  % number of permutations run
 
     cfg.design           = data_EEG_filt.trialinfo; % same design as before
@@ -215,7 +215,7 @@ We will first run it and then discuss some of the options and details afterwards
 
 The output of _stat\_t\_cluster_ is:
 
-    stat_t_cluster = 
+    stat_t_cluster =
 
                        prob: [128x200 double]
                 posclusters: [1x11 struct]
@@ -420,3 +420,5 @@ Waiting for Britta's work
     text(negative_T - 500 , 12, negative_text)
 
     print -dpng permutation_distributions.png
+    
+**WORK IN PROGRESS**
