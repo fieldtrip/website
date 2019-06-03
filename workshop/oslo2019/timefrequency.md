@@ -41,7 +41,7 @@ _Figure: Schematic overview of the steps in time-frequency analysis_
 
 The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -1.0 s to 1.5 s (t = 0 s defines the time of response); however, the script reads the data from -1.5 s to 2.0 s.
 
-The EEG dataset that we use in this tutorial is available as BrainVision EEG files from our ftp server. You should download the [binary data file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.eeg), the [header file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vhdr), and the [text marker file]((ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vmrk). You can find out more about the BrainVision file format [in this overview](/getting_started/brainvision/).
+The EEG dataset that we use in this tutorial is available as BrainVision EEG files from our ftp server. You should download the [binary data file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.eeg), the [header file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vhdr), and the [text marker file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vmrk). You can find out more about the BrainVision file format [in this overview](/getting_started/brainvision/).
 
 We will focus on two conditions from this dataset: whether the participant responded with the left or the right index finger.
 
@@ -112,9 +112,9 @@ We can visualize the power spectra from both conditions in one plot using MATLAB
 	
 ## Time-frequency analysis with a Hanning taper and fixed window length
 
-Here, We will look at calculating time-frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in the first) = 1/length of time window in sec (delta T in the first figure). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window. In the following example a time window with length 500 ms is applied.
+Here, we will look at calculating time-frequency representations using Hanning tapers. When choosing a fixed window length for the sliding window, the frequency resolution is defined according to the length of this time window (compare delta T in the first figure of this tutorial). The frequency resolution (delta f in the first figure) equals 1/delta T (the length of time window in sec). Thus, a 500 ms time window as we choose here results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz). This means that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc., as an integer number of cycles must fit in the time window.
 
-Since we have two conditions (responses with left and right index finger), we will calculate the data separately for both so that we can compare them. We select the trials based on the .trialinfo field. We created this field when we called _trialfun_oddball_responselocked_ in ft_definetrial. In addition to the three colums in the .trl, it also added a column with response side based on the response trigger (256 and 2048 for left and right, respectively). After preprocessing, this column is added in the data structure as the field .trailinfo. This is a good example of keeping your own internal bookkeeping. You can e.g. also add response times, or accuracy. This info will travel with you throughout your analysis as long as it represents separate trials (and not averages).
+Since we have two conditions (responses with left and right index finger), we will calculate the output separately for both conditions so that we can compare them. We select the trials based on the ``.trialinfo`` field and the trigger values for left hand (256) and right hand responses (4096). 
 
     cfg            = [];
     cfg.output     = 'pow';
@@ -122,7 +122,7 @@ Since we have two conditions (responses with left and right index finger), we wi
     cfg.method     = 'mtmconvol';
     cfg.taper      = 'hanning';
     cfg.toi        = -1 : 0.10 : 1.5;
-    cfg.foi        = 1:40;
+    cfg.foi        = 2:2:40;
     cfg.t_ftimwin  = ones(size(cfg.foi)) * 0.5;
 
     cfg.trials     = find(data.trialinfo(:,1) == 256);
@@ -131,21 +131,47 @@ Since we have two conditions (responses with left and right index finger), we wi
     cfg.trials     = find(data.trialinfo(:,1) == 4096);
     tfr_right      = ft_freqanalysis(cfg, data);
 
-# Plot the topography for the beta band
+If we compare the output of **[ft_freqanalysis](/reference/ft_freqanalysis)** now to what we obtained when computing the power spectra (see above), we can see that this data also contains a time dimension:
+
+	tfr_left = 
+        label: {128×1 cell}
+       dimord: 'chan_freq_time'
+         freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40]
+         time: [1×26 double]
+    powspctrm: [128×20×26 double]
+          cfg: [1×1 struct]
+		  
+Note especially how the output now contains a field ``time`` and that  ``powspctrm`` is not 3-dimensional. The dimension order field ``dimord`` tells us that time is the third dimension of the power output matrix ``powspctrm``.
+
+
+## Visualization
+
+To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: (a) Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval. (b) Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period devided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e. no change is represented by 1.
+
+Let's first look at the topographical representation of the power changes in a specified time-interval. We choose to look at 400 to 800 ms. We plot the data with an absolute baseline.
 
     cfg              = [];
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
-    cfg.xlim         = [0.5 1.0];
-    cfg.ylim         = [15 25];  % we only plot the beta band
+    cfg.xlim         = [0.4 0.8];
+    cfg.ylim         = [16 24];  % we only plot the beta band
+	cfg.zlim         = 'maxabs';
     cfg.marker       = 'on';
+	cfg.colorbar     = 'yes';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
     figure;
+	cfg.title        = 'Left hand reaction';
     ft_topoplotTFR(cfg, tfr_left);
 
     figure;
+	cfg.title        = 'Right hand reaction';
     ft_topoplotTFR(cfg, tfr_right);
+	
+{% include image src="/assets/img/workshop/oslo2019/tfr_both.png" %}	
+
+_Figure: Topographic representation of absolute power changes versus baseline.__
+
 
 # Use a relative baseline
 
@@ -153,8 +179,10 @@ Since we have two conditions (responses with left and right index finger), we wi
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'relative';  % we use a relative baseline 
     cfg.xlim         = [0.5 1.0];
-    cfg.ylim         = [15 25]; 
+    cfg.ylim         = [16 24]; 
+	cfg.zlim         = 'maxabs';
     cfg.marker       = 'on';
+	cfg.colorbar     = 'yes';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
 
     figure;
@@ -173,7 +201,8 @@ Since we have two conditions (responses with left and right index finger), we wi
 
     cfg = [];
     cfg.xlim         = [0.4 0.8];
-    cfg.ylim         = [15 25];
+    cfg.ylim         = [16 24];
+	cfg.zlim         = 'maxabs';
     cfg.marker       = 'on';
     cfg.colorbar     = 'yes';
     cfg.layout       = 'natmeg_customized_eeg1005.lay';
@@ -210,6 +239,7 @@ Since we have two conditions (responses with left and right index finger), we wi
 
     cfg          = [];
     cfg.colorbar = 'yes';
+	cfg.zlim         = 'maxabs';
     cfg.layout   = 'natmeg_customized_eeg1005.lay';
     cfg.channel  = 'EEG126';
 
