@@ -1,0 +1,220 @@
+---
+title: Time-frequency analysis of EEG data
+tags: [tutorial, oslo, eeg, frequency, eeg-audodd]
+---
+
+# Time-frequency analysis of EEG data
+
+## Introduction
+
+In this tutorial, you can find information about the frequency and  time-frequency analysis of a single subject's EEG data. We will use both a Hanning taper and Morlet wavelet approach and have a special focus on how to visualize the data. We will learn how to compare conditions in the frequency domain,  looking at differences in beta-rebound after left versus the right hand responses. Familiarize yourself with the paradigm and data by reading [the example dataset description](/workshop/natmeg/meg_audodd).
+
+## Background
+
+Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)). The goal of this tutorial is to compute and visualize event-related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. 
+
+Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power a taper is multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
+
+
+{% include image src="/assets/img/workshop/natmeg/timefrequency/tfrtiles.png" width="600" %}
+
+_Figure: Time and frequency smoothing. (a) For a fixed length time window the time and frequency smoothing remains fixed. (b) For time windows that decrease with frequency, the temporal smoothing decreases and the frequency smoothing increases._
+
+
+If you want to know more about tapers/window functions you can have a look at this
+[Wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for Hanning window used in this tutorial.
+
+## Procedure
+
+To calculate the time-frequency analysis for the example dataset we will perform the following steps for both MEG and EE
+
+- Read the data into Matlab using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
+- Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
+
+{% include image src="/assets/img/workshop/natmeg/timefrequency/tfr_pipelinenew.png" width="200" %}
+
+_Figure: Schematic overview of the steps in time-frequency analysis_
+
+
+## Preprocessing EEG data
+
+The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -1.0 s to 1.5 s (t = 0 s defines the time of response); however, the script reads the data from -1.5 s to 2.0 s.
+
+The EEG dataset that we use in this tutorial is available as BrainVision EEG files from our ftp server. You should download the [binary data file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.eeg), the [header file](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vhdr), and the [text marker file]((ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/oddball1_mc_downsampled_eeg.vmrk). You can find out more about the BrainVision file format [in this overview](/getting_started/brainvision/).
+
+We will focus on two conditions from this dataset: whether the participant responded with the left or the right index finger.
+
+
+### Read and epoch data
+
+    cfg = [];
+    cfg.dataset = 'oddball1_mc_downsampled_eeg.vhdr';
+
+	% define trials based on responses
+    cfg.trialdef.prestim    = 1.5;
+    cfg.trialdef.poststim   = 2.0;
+    cfg.trialdef.eventtype  = 'STI102';  % name of trigger channel
+    cfg.trialdef.eventvalue = [256, 4096];  % 256: button press left;
+                                            % 4096: button press right
+    cfg.trialfun            = 'ft_trialfun_general';
+    cfg                     = ft_definetrial(cfg);
+
+	% preprocess EEG data
+    cfg.demean              = 'yes';
+    cfg.dftfilter           = 'yes';
+    cfg.dftfreq             = [50 100];
+    cfg.reref               = 'yes';  % re-referencing
+    cfg.refchannel          = 'all';
+
+    data                    = ft_preprocessing(cfg);
+
+## Computing power spectra
+
+At first, we will look at the frequency content in the data using a Fourier transform using a Hanning window by using **[ft_freqanalysis](/reference/ft_freqanalysis)**. This is not time resolved, but gives us a power estimate per frequency over the whole time window. We calculate this seperately for the trials where the participant responded with the left and the right index finger. We will calculate and visualize the power for a selected central EEG channel.
+
+    cfg         = [];
+    cfg.output  = 'pow';
+    cfg.channel = 'EEG126';
+    cfg.method  = 'mtmfft';
+    cfg.taper   = 'hanning';
+    cfg.foi     = 7:40;
+
+    cfg.trials   = find(data.trialinfo(:,1) == 256);
+    spectr_left  = ft_freqanalysis(cfg, data);
+
+    cfg.trials   = find(data.trialinfo(:,1) == 4096);
+    spectr_right = ft_freqanalysis(cfg, data);
+	
+The output of **[ft_freqanalysis](/reference/ft_freqanalysis)** is a structure with the following elements:
+
+	spectr_left = 
+	
+	    label: {'EEG126'}      % Channel names
+       dimord: 'chan_freq'     % Dimensions contained in powspctrm, channels x frequencies
+         freq: [1×34 double]   % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
+    powspctrm: [1×34 double]   % Array containing the power values
+          cfg: [1×1 struct]    % Settings used in computing this frequency decomposition
+
+The field spectr_left.powspctrm contains the power values for each specified frequency in the left response condition.
+
+### Visualizing the power spectra
+
+We can visualize the power spectra from both conditions in one plot using MATLAB's plotting function.
+	
+    figure;
+    hold on;
+    plot(spectr_left.freq, (spectr_left.powspctrm), 'linewidth', 2)
+    plot(spectr_left.freq, (spectr_right.powspctrm), 'linewidth', 2)
+    legend('Button press left', 'Button press right')
+    xlabel('Frequency (Hz)')
+    ylabel('Power (\mu V^2)')
+	
+## Time-frequency analysis with a Hanning taper and fixed window length
+
+Here, We will look at calculating time-frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in the first) = 1/length of time window in sec (delta T in the first figure). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window. In the following example a time window with length 500 ms is applied.
+
+Since we have two conditions (responses with left and right index finger), we will calculate the data separately for both so that we can compare them. We select the trials based on the .trialinfo field. We created this field when we called _trialfun_oddball_responselocked_ in ft_definetrial. In addition to the three colums in the .trl, it also added a column with response side based on the response trigger (256 and 2048 for left and right, respectively). After preprocessing, this column is added in the data structure as the field .trailinfo. This is a good example of keeping your own internal bookkeeping. You can e.g. also add response times, or accuracy. This info will travel with you throughout your analysis as long as it represents separate trials (and not averages).
+
+    cfg            = [];
+    cfg.output     = 'pow';
+    cfg.channel    = 'all';
+    cfg.method     = 'mtmconvol';
+    cfg.taper      = 'hanning';
+    cfg.toi        = -1 : 0.10 : 1.5;
+    cfg.foi        = 1:40;
+    cfg.t_ftimwin  = ones(size(cfg.foi)) * 0.5;
+
+    cfg.trials     = find(data.trialinfo(:,1) == 256);
+    tfr_left       = ft_freqanalysis(cfg, data);
+
+    cfg.trials     = find(data.trialinfo(:,1) == 4096);
+    tfr_right      = ft_freqanalysis(cfg, data);
+
+# Plot the topography for the beta band
+
+    cfg              = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'absolute';
+    cfg.xlim         = [0.5 1.0];
+    cfg.ylim         = [15 25];  % we only plot the beta band
+    cfg.marker       = 'on';
+    cfg.layout       = 'natmeg_customized_eeg1005.lay';
+
+    figure;
+    ft_topoplotTFR(cfg, tfr_left);
+
+    figure;
+    ft_topoplotTFR(cfg, tfr_right);
+
+# Use a relative baseline
+
+    cfg              = [];
+    cfg.baseline     = [-0.5 -0.1];
+    cfg.baselinetype = 'relative';  % we use a relative baseline 
+    cfg.xlim         = [0.5 1.0];
+    cfg.ylim         = [15 25]; 
+    cfg.marker       = 'on';
+    cfg.layout       = 'natmeg_customized_eeg1005.lay';
+
+    figure;
+    ft_topoplotTFR(cfg, tfr_left);
+
+    figure;
+    ft_topoplotTFR(cfg, tfr_right);
+
+# Take the difference between conditions
+
+    cfg = [];
+    cfg.parameter    = 'powspctrm';
+    cfg.operation    = '(x1-x2)/(x1+x2)';
+
+    tfr_difference = ft_math(cfg, tfr_right, tfr_left);
+
+    cfg = [];
+    cfg.xlim         = [0.4 0.8];
+    cfg.ylim         = [15 25];
+    cfg.marker       = 'on';
+    cfg.colorbar     = 'yes';
+    cfg.layout       = 'natmeg_customized_eeg1005.lay';
+
+    figure;
+    ft_topoplotTFR(cfg, tfr_difference);
+
+# Recreate the analysis using Morlet wavelets
+
+
+    cfg            = [];
+    cfg.output     = 'pow';
+    cfg.channel    = 'all';
+    cfg.method     = 'wavelet';
+    cfg.width      = 7;
+    cfg.toi        = -1 : 0.05 : 1.5;
+    cfg.foi        = 1:40;
+
+    cfg.trials     = find(data.trialinfo(:,1) == 256);
+    wave_left       = ft_freqanalysis(cfg, data);
+
+    cfg.trials     = find(data.trialinfo(:,1) == 4096);
+    wave_right      = ft_freqanalysis(cfg, data);
+
+
+
+# Take the difference between conditions
+
+    cfg            = [];
+    cfg.parameter  = 'powspctrm';
+    cfg.operation  = '(x1-x2)/(x1+x2)';
+
+    wave_difference = ft_math(cfg, wave_right, wave_left);
+
+    cfg          = [];
+    cfg.colorbar = 'yes';
+    cfg.layout   = 'natmeg_customized_eeg1005.lay';
+    cfg.channel  = 'EEG126';
+
+    figure;
+    ft_singleplotTFR(cfg, wave_difference);
+
+
+
