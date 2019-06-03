@@ -244,7 +244,7 @@ We now want to collaps the information of both conditions by comparing them. One
 
 _Figure: Topographic representation of the time-frequency representations of the difference in beta power, between left and right response._	
 
-## Bonus: Recreate this analysis using Morlet wavelets
+## Bonus: Recreate the analysis using Morlet wavelets
 
 An alternative to calculating TFRs with the Fourier analysis is to use Morlet wavelets. A special thing about wavelets is that their temporal resolution scales with frequency (for a given number of cycles). In our analysis above, we used a sliding time window that was fixed, i.e., it was (in our case) always 500 ms long, irrespective of the frequency. This means that for higher frequencies, more cycles fit into this window: for example, 5 cycles of a 10 Hz oscillation fit in 500 ms, whereas for 30 Hz we can fit 15 cycles.
 For wavelets, we instead specify the number of cycles (equal to the width of the wavelet) directly, setting the parameter ``cfg.width``.
