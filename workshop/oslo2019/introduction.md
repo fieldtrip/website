@@ -14,7 +14,7 @@ In this tutorial, preprocessing and segmenting the data into epochs/trials are d
 {% include markup/info %}
 This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg) to see in its entirety.
 
-{% include youtube id="z0xCqcYmIfA" %}
+{% include youtube id="zOxCqcYmIfA" %}
 {% include markup/end %}
 
 ## Background
