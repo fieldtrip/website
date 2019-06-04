@@ -1,9 +1,9 @@
 ---
-title: Preparing the combined MEG/fMRI MOUS dataset for sharing in BIDS
+title: Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
 tags: [example, bids, sharing, anonymize]
 ---
 
-# Preparing the combined MEG/fMRI MOUS dataset for sharing in BIDS
+# Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
 
 This example describes how we prepared a combined MEG/fMRI dataset for sharing. The project involved 204 subjects, which participated in either a auditory or a visual version of a language experiment. For every subject resting-state and task MEG and fMRI was recorded. The data and the experiment are described in more details in the references that you find at the end of this page.
 

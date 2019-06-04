@@ -1,9 +1,9 @@
 ---
-title: Preparing an EEG dataset for sharing
+title: Converting an example EEG dataset for sharing in BIDS
 tags: [example, bids, sharing, anonymize]
 ---
 
-# Preparing an EEG dataset for sharing
+# Converting an example EEG dataset for sharing in BIDS
 
 This example describes how to use **[data2bids](/reference/data2bids)** to convert an EEG dataset for sharing according to the BIDS standard.  
 

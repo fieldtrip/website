@@ -1,9 +1,9 @@
 ---
-title: Convert sedation EEG dataset to BIDS
+title: Convert the EEG sedation dataset for sharing in BIDS
 tags: [bids, eeg-sedation]
 ---
 
-# Convert sedation EEG dataset to BIDS
+# Convert the EEG sedation dataset for sharing in BIDS
 
 ```
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
