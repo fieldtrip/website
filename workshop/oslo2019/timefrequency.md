@@ -91,7 +91,6 @@ At first, we will look at the frequency content in the data using a Fourier tran
 The output of **[ft_freqanalysis](/reference/ft_freqanalysis)** is a structure with the following elements:
 
     spectr_left =
-	
         label: {'EEG126'}      % Channel names
        dimord: 'chan_freq'     % Dimensions contained in powspctrm, channels x frequencies
          freq: [1×34 double]   % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
@@ -103,7 +102,7 @@ The field `spectr_left.powspctrm` contains the power values for each specified f
 ### Visualizing the power spectra
 
 We can visualize the power spectra from both conditions in one plot using MATLAB's plotting function.
-	
+
     figure;
     hold on;
     plot(spectr_left.freq, (spectr_left.powspctrm), 'linewidth', 2)
@@ -150,9 +149,9 @@ Note especially how the output now contains a field `time` and that `powspctrm` 
 
 ## Visualization
 
-To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: 
+To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing:
 
-- Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval. 
+- Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval.
 - Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period devided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e., no change is represented by 1.
 
 Let's first look at the topographical representation of the power changes in a specified time-interval using **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. We choose to look at 400 to 800 ms and plot the data with an absolute baseline.
@@ -174,7 +173,7 @@ Let's first look at the topographical representation of the power changes in a s
     figure;
     ft_topoplotTFR(cfg, tfr_right);
     title('Right hand reaction');
-	
+
 {% include image src="/assets/img/workshop/oslo2019/tfr_both.png" %}
 
 _Figure: Topographic representation of absolute power changes to baseline._
@@ -189,9 +188,9 @@ Let's take a look at what happens when instead of an absolute baseline we use a 
 
     cfg              = [];
     cfg.baseline     = [-0.5 -0.1];
-    cfg.baselinetype = 'relative';  % we use a relative baseline 
+    cfg.baselinetype = 'relative';  % we use a relative baseline
     cfg.xlim         = [0.4 0.8];
-    cfg.ylim         = [16 24]; 
+    cfg.ylim         = [16 24];
     cfg.zlim         = 'maxabs';
     cfg.marker       = 'on';
     cfg.colorbar     = 'yes';
@@ -205,7 +204,7 @@ Let's take a look at what happens when instead of an absolute baseline we use a 
     ft_topoplotTFR(cfg, tfr_right);
     title('Right hand reaction');
 
-{% include image src="/assets/img/workshop/oslo2019/tfr_rel_both.png" %}	
+{% include image src="/assets/img/workshop/oslo2019/tfr_rel_both.png" %}
 
 _Figure: Topographic representation of relative power changes to baseline._
 
@@ -246,7 +245,7 @@ We now want to collapse the information of both conditions by comparing them. On
     figure;
     ft_topoplotTFR(cfg, tfr_difference);
     title('Left vs right hand reaction');
-	
+
 {% include image src="/assets/img/workshop/natmeg/timefrequency/tfr_diff.png" %}
 
 _Figure: Topographic representation of the time-frequency representations of the difference in beta power, between left and right response._
