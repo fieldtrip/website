@@ -18,7 +18,7 @@ This tutorial contains the hands-on material for the [Oslo 2019 workshop](/works
 
 ## Background
 
-Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)). The goal of this tutorial is to compute and visualize event-related changes by calculating time-frequency representations (TFRs) of power. This will be done using analyses based on Fourier analysis and wavelets. 
+Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ([Tallon-Baudry & Bertrand, 1999](https://doi.org/10.1016/S1364-6613(99)01299-1)). The goal of this tutorial is to compute and visualize event-related changes by calculating time-frequency representations (TFRs) of power. This will be done using analyses based on Fourier analysis and wavelets. 
 
 Calculating time-frequency representations of power using Fourier analysis is done using a sliding time window. This time window can either have a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power, a taper is multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
@@ -263,7 +263,7 @@ An alternative for calculating TFRs is to use wavelets instead of Fourier analys
 For wavelets, we instead specify the number of cycles (equal to the width of the wavelet) directly, setting the parameter ``cfg.width``.
 
 {% include markup/info %}
-Making the width of a wavelet smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width \* 2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7 \* 2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)).
+Making the width of a wavelet smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width \* 2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7 \* 2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms)  ([Tallon-Baudry & Bertrand, 1999](https://doi.org/10.1016/S1364-6613(99)01299-1)).
 {% include markup/end %}
 
 Let's calculate the time-frequency representation of our data using Morlet wavelets (i.e., using wavelets that were created using a Gaussian taper):
