@@ -78,6 +78,6 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
 - [How to use checkconfig](/example/checkconfig)
-- [Preparing an EEG dataset for sharing](/example/bids_eeg)
-- [Preparing an MEG+fMRI dataset for sharing](/example/bids)
+- [Converting an example EEG dataset for sharing in BIDS](/example/bids_eeg)
+- [Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS](/example/bids)
 - [Writing simulated data to a CTF dataset](/example/writing_simulated_data_to_a_ctf_dataset)
