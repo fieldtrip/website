@@ -199,6 +199,9 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
 
+- name:  Forward modeling for EEG source reconstruction
+  link:  /workshop/oslo2019/forward_modeling
+
 - name:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction
 
