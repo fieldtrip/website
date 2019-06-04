@@ -10,6 +10,6 @@
 - name:  How should I specify the coordinate systems in a BIDS dataset?
   link:  /faq/bids_coordsystem
 
-- name:  Convert to BIDS
+- name:  Convert sedation EEG dataset to BIDS
   link:  /workshop/madrid2019/bids_sedation
 
