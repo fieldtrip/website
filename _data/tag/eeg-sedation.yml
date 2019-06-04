@@ -4,7 +4,7 @@
 - name:  FieldTrip workshop in Madrid
   link:  /workshop/madrid2019
 
-- name:  Convert sedation EEG dataset to BIDS
+- name:  Convert the EEG sedation dataset for sharing in BIDS
   link:  /workshop/madrid2019/bids_sedation
 
 - name:  Details on the resting-state EEG dataset recorded with different sedation levels
