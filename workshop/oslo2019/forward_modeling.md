@@ -96,7 +96,7 @@ _Figure 2: Plot of the resliced MRI, where axes are located in a more convenient
 
 {% include markup/exercise %}
 Make sure that the coordinate system is correct, i.e. _up_ is _z-positive_, _anterior_ is _y-positive_ and _right_ is _x-positive_
-{% include markup/end % }
+{% include markup/end %}
 
 ### Segment the brain
 
