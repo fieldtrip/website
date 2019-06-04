@@ -1,6 +1,6 @@
 ---
 title: Which datasets are used in the documentation and where are they used?
-tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-visuomotor151, meg-visuomotor275, meg-attention, meg-tactile, meg-audodd, eeg-language, eeg-affective, eeg-chennu, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
+tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-visuomotor151, meg-visuomotor275, meg-attention, meg-tactile, meg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
 ---
 
 # Which datasets are used in the documentation and where are they used?
@@ -102,7 +102,7 @@ Documentation referring to this dataset:
 Documentation referring to this dataset:
 {% include seealso tag1="eeg-affective" %}
 
-## EEG-chennu
+## EEG-sedation
 
 - Participants had their eyes closed, while high-density resting-state EEG was recorded during propofol sedation. Approximately 7 minutes of data is available at four different sedation levels: baseline, mild and moderate sedation & recovery.
 - 128-channel HydroCel Geodesic Sensor Net (GSN) (of which 91 channels available) with a NetAmps 300 Amplifier, sampled at 250 Hz and rereferenced to the average of all channels.
@@ -111,7 +111,7 @@ Documentation referring to this dataset:
 - Download the dataset here [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/) from our FTP server.
 
 Documentation referring to this dataset:
-{% include seealso tag1="eeg-chennu" %}
+{% include seealso tag1="eeg-sedation" %}
 
 ## EEG-TMS
 

@@ -1,6 +1,6 @@
 ---
 title: Time-frequency and spectral analysis
-tags: [madrid2019, eeg-language, eeg-chennu]
+tags: [madrid2019, eeg-language, eeg-sedation]
 ---
 
 # Frequency analysis of task and resting state EEG
@@ -9,7 +9,7 @@ tags: [madrid2019, eeg-language, eeg-chennu]
 
 In this tutorial we will analyze the power spectra for two different EEG
 datasets. The first dataset is recorded in a **[language task](/tutorial/eeg_language)**,
-the second dataset is recorded in a **[resting-state experiment](/workshop/madrid2019/eeg_chennu)**.
+the second dataset is recorded in a **[resting-state experiment](/workshop/madrid2019/eeg_sedation)**.
 Before starting with this tutorial, please read through the linked descriptions
 of the two datasets.
 

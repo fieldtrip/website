@@ -1,6 +1,6 @@
 ---
 title: Cluster-based permutation tests on resting-state EEG power spectra
-tags: [madrid2019, eeg-chennu]
+tags: [madrid2019, eeg-sedation]
 ---
 
 # Cluster-based permutation tests on resting-state EEG power spectra
@@ -37,7 +37,7 @@ participants in multiple experimental conditions, i.e. levels of sedation. Data
 is recorded in in blocks (runs) of 10 mins, in which the participants received
 varying amounts of Propofol, an anesthetic drug, aimed to produce a relaxed but
 still responsive behavioral state. For more details on the dataset
-[click here](/workshop/madrid2019/eeg_chennu).
+[click here](/workshop/madrid2019/eeg_sedation).
 
 For every subject, average power spectra are computed over all segments of data
 belonging to each of the sedative state. Thus, for every subject, the data are
