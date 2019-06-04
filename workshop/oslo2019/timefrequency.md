@@ -110,6 +110,10 @@ We can visualize the power spectra from both conditions in one plot using MATLAB
     xlabel('Frequency (Hz)')
     ylabel('Power (\mu V^2)')
 	
+{% include image src="/assets/img/workshop/oslo2019/powerspectra.png" %}	
+_Figure: Power spectra for both conditions in a right central electrode._
+
+	
 ## Time-frequency analysis with a Hanning taper and fixed window length
 
 Here, we will look at calculating time-frequency representations using Hanning tapers. When choosing a fixed window length for the sliding window, the frequency resolution is defined according to the length of this time window (compare delta T in the first figure of this tutorial). The frequency resolution (delta F in the first figure) equals 1/delta T (the length of time window in sec). Thus, a 500 ms time window as we choose here results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz). This means that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc., as an integer number of cycles must fit in the time window.
