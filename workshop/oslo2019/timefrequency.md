@@ -7,13 +7,13 @@ tags: [tutorial, oslo, eeg, frequency, eeg-audodd]
 
 ## Introduction
 
-In this tutorial, you can find information about the frequency and  time-frequency analysis of a single subject's EEG data. We will use both a Hanning taper and Morlet wavelet approach and have a special focus on how to visualize the data. We will learn how to compare conditions in the frequency domain,  looking at differences in beta-rebound after left versus the right hand responses. Familiarize yourself with the paradigm and data by reading [the example dataset description](/workshop/natmeg/meg_audodd).
+In this tutorial, you can find information about the frequency and  time-frequency analysis of a single subject's EEG data. We will use both Fourier analysis with Hanning tapers and Morlet wavelets; and we will have a special focus on how to visualize the data. We will learn how to compare conditions in the frequency domain,  looking at differences in beta band activity after left versus the right hand responses. You can familiarize yourself with the paradigm and data by reading [the example dataset description](/workshop/natmeg/meg_audodd).
 
 ## Background
 
-Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)). The goal of this tutorial is to compute and visualize event-related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. 
+Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)). The goal of this tutorial is to compute and visualize event-related changes by calculating time-frequency representations (TFRs) of power. This will be done using analyses based on Fourier analysis and wavelets. 
 
-Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power a taper is multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
+Calculating time-frequency representations of power using Fourier analysis is done using a sliding time window. This time window can either have a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power, a taper is multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
 
 {% include image src="/assets/img/workshop/natmeg/timefrequency/tfrtiles.png" width="600" %}
@@ -22,11 +22,11 @@ _Figure: Time and frequency smoothing. (a) For a fixed length time window the ti
 
 
 If you want to know more about tapers/window functions you can have a look at this
-[Wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for Hanning window used in this tutorial.
+[Wikipedia site](http://en.wikipedia.org/wiki/Window_function). Note that Hann window is another name for the Hanning window used in this tutorial.
 
 ## Procedure
 
-To calculate the time-frequency analysis for the example dataset we will perform the following steps for both MEG and EE
+To calculate the time-frequency representation for the example dataset we will perform the following steps:
 
 - Read the data into Matlab using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
 - Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
@@ -71,7 +71,7 @@ We will focus on two conditions from this dataset: whether the participant respo
 
 ## Computing power spectra
 
-At first, we will look at the frequency content in the data using a Fourier transform using a Hanning window by using **[ft_freqanalysis](/reference/ft_freqanalysis)**. This is not time resolved, but gives us a power estimate per frequency over the whole time window. We calculate this seperately for the trials where the participant responded with the left and the right index finger. We will calculate and visualize the power for a selected central EEG channel.
+At first, we will look at the frequency content in the data using a Fourier transform using a Fourier transform with a Hanning window by using **[ft_freqanalysis](/reference/ft_freqanalysis)**. This is not time resolved, but gives us a power estimate per frequency over the whole time window. We calculate this seperately for the trials where the participant responded with the left and the right index finger. We will calculate and visualize the power for a selected central EEG channel.
 
     cfg         = [];
     cfg.output  = 'pow';
@@ -112,7 +112,7 @@ We can visualize the power spectra from both conditions in one plot using MATLAB
 	
 ## Time-frequency analysis with a Hanning taper and fixed window length
 
-Here, we will look at calculating time-frequency representations using Hanning tapers. When choosing a fixed window length for the sliding window, the frequency resolution is defined according to the length of this time window (compare delta T in the first figure of this tutorial). The frequency resolution (delta f in the first figure) equals 1/delta T (the length of time window in sec). Thus, a 500 ms time window as we choose here results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz). This means that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc., as an integer number of cycles must fit in the time window.
+Here, we will look at calculating time-frequency representations using Hanning tapers. When choosing a fixed window length for the sliding window, the frequency resolution is defined according to the length of this time window (compare delta T in the first figure of this tutorial). The frequency resolution (delta F in the first figure) equals 1/delta T (the length of time window in sec). Thus, a 500 ms time window as we choose here results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz). This means that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc., as an integer number of cycles must fit in the time window.
 
 Since we have two conditions (responses with left and right index finger), we will calculate the output separately for both conditions so that we can compare them. We select the trials based on the ``.trialinfo`` field and the trigger values for left hand (256) and right hand responses (4096). 
 
@@ -131,7 +131,7 @@ Since we have two conditions (responses with left and right index finger), we wi
     cfg.trials     = find(data.trialinfo(:,1) == 4096);
     tfr_right      = ft_freqanalysis(cfg, data);
 
-If we compare the output of **[ft_freqanalysis](/reference/ft_freqanalysis)** now to what we obtained when computing the power spectra (see above), we can see that this data also contains a time dimension:
+If we compare the output of **[ft_freqanalysis](/reference/ft_freqanalysis)**  to what we obtained when computing the power spectra (see above), we can see that the data now also contains a time dimension:
 
 	tfr_left = 
         label: {128×1 cell}
@@ -141,12 +141,14 @@ If we compare the output of **[ft_freqanalysis](/reference/ft_freqanalysis)** no
     powspctrm: [128×20×26 double]
           cfg: [1×1 struct]
 		  
-Note especially how the output now contains a field ``time`` and that  ``powspctrm`` is not 3-dimensional. The dimension order field ``dimord`` tells us that time is the third dimension of the power output matrix ``powspctrm``.
+Note especially how the output now contains a field ``time`` and that  ``powspctrm`` is 3-dimensional. The dimension order field ``dimord`` tells us that time is the third dimension of the power output matrix ``powspctrm``.
 
 
 ## Visualization
 
-To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: (a) Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval. (b) Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period devided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e. no change is represented by 1.
+To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: 
+- Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the _absolute change_ in power with respect to the baseline interval. 
+- Expressing the raw power values as the relative increase or decrease with respect to the power in the baseline interval (for each frequency): active period devided by baseline. Note that the _relative baseline_ is expressed as a ratio; i.e., no change is represented by 1.
 
 Let's first look at the topographical representation of the power changes in a specified time-interval using  **[ft_topoplotTFR](/reference/ft_topoplotTFR)**. We choose to look at 400 to 800 ms and plot the data with an absolute baseline.
 
@@ -220,7 +222,7 @@ This looks better! We can also plot the time-resolved activity using **[ft_singl
 
 ### Take the difference between conditions
 
-We now want to collaps the information of both conditions by comparing them. One possibility is by taking the difference between the conditions: we substract the two power spectra and then divide them by their sum - this normalizes the difference by the common activity. This can conveniently be done using  **[ft_math](/reference/ft_math)**:
+We now want to collaps the information of both conditions by comparing them. One possibility is to take the difference between the conditions: we substract the two power spectra and then divide them by their sum - this normalizes the difference by the common activity. This can conveniently be done using  **[ft_math](/reference/ft_math)**:
 
     cfg = [];
     cfg.parameter    = 'powspctrm';
@@ -246,11 +248,11 @@ _Figure: Topographic representation of the time-frequency representations of the
 
 ## Bonus: Recreate the analysis using Morlet wavelets
 
-An alternative to calculating TFRs with the Fourier analysis is to use Morlet wavelets. A special thing about wavelets is that their temporal resolution scales with frequency (for a given number of cycles). In our analysis above, we used a sliding time window that was fixed, i.e., it was (in our case) always 500 ms long, irrespective of the frequency. This means that for higher frequencies, more cycles fit into this window: for example, 5 cycles of a 10 Hz oscillation fit in 500 ms, whereas for 30 Hz we can fit 15 cycles.
+An alternative for calculating TFRs is to use wavelets instead of Fourier analysis. A special thing about wavelets is that their temporal resolution scales with frequency (for a given number of cycles). In our analysis above, we used a sliding time window that was fixed, i.e., it was (in our case) always 500 ms long, irrespective of the frequency. This means that for higher frequencies, more cycles fit into this window: for example, 5 cycles of a 10 Hz oscillation fit in 500 ms, whereas for 30 Hz we can fit 15 cycles.
 For wavelets, we instead specify the number of cycles (equal to the width of the wavelet) directly, setting the parameter ``cfg.width``.
 
 {% include markup/info %}
-Making the width of a wavelet smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width*2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7*2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)).
+Making the width of a wavelet smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width \* 2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7 \* 2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)).
 {% include markup/end %}
 
 Let's calculate the time-frequency representation of our data using Morlet wavelets (i.e., using wavelets that were created using a Gaussian taper):
