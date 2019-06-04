@@ -437,7 +437,7 @@ We subsequently plot this _combined_ field at a location where the skin is very 
 
     ft_sourceplot(cfg, mri_segmented_binary);
 
-{% include image src="/assets/img/workshop/oslo2019/leadfield_vector.png" width="650" %}
+{% include image src="/assets/img/workshop/oslo2019/surfaces.png" width="650" %}
 _Figure 13: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
 
 ### Algorithm to use
