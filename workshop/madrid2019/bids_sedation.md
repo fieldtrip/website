@@ -1,57 +1,41 @@
 ---
-title: Convert to BIDS
-tags: [bids, eeg-chennu]
+title: Convert sedation EEG dataset to BIDS
+tags: [bids, eeg-sedation]
 ---
 
+# Convert sedation EEG dataset to BIDS
+
 ```
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Research data supporting "Brain connectivity during propofol sedation"
 % Chennu, S., O’ Connor, S., Adapa, R., Menon, D. K., & Bekinschtein, T. A. (2015).
 %
 % https://www.repository.cam.ac.uk/handle/1810/252736
 % https://doi.org/10.1371/journal.pcbi.1004669
 %
-% This script converts the shared data to the BIDS organization.
+% This script converts the shared EEG data to the BIDS organization.
 %
-% BIDS is documented on http://bids.neuroimaging.io
-% The general details can be found on http://bids.neuroimaging.io/bids_spec.pdf
-% The EEG specific details can be found on https://psyarxiv.com/63a4y
+% The BIDS background is explained on http://bids.neuroimaging.io/
+%
+% Details can be found on https://bids-specification.readthedocs.io/en/stable/
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-bidsroot = '/Volumes/128GB/data/Sedation-RestingState/bids';
+sourcedata = '/Volumes/Samsung T3/data/eeg-sedation/sourcedata';
+bidsroot   = '/Volumes/Samsung T3/data/eeg-sedation/bids';
+
+cd(sourcedata)
 
 load datainfo
 
-% For each dataset, there is an entry in the "datainfo" table with the following meaning
+% For each dataset, there is an entry in the "datainfo" table with the following content
 % 1) the name of the dataset
 % 2) the level of sedation at which the dataset was acquired (1 = baseline, 2 = mild sedation, 3 = moderate sedation, 4 = recovery)
 % 3) the concentration of propofol measured in blood plasma at that level (in microgram/litre)
-% 4) the average reaction times measured in a speeded two-choice response task administered at that level (in milliseconds)
+% 4) the average reaction time measured in a speeded two-choice response task administered at that level (in milliseconds)
 % 5) the number of correct responses in that task (out of a max of 40)
 
-subject = {
-  '02'
-  '03'
-  '05'
-  '06'
-  '07'
-  '08'
-  '09'
-  '10'
-  '13'
-  '14'
-  '18'
-  '20'
-  '22'
-  '23'
-  '24'
-  '25'
-  '26'
-  '27'
-  '28'
-  '29'
-  };
-
+% use full descriptions rather than 1, 2, 3, 4
 level = {
   'baseline'
   'mild sedation'
@@ -59,112 +43,70 @@ level = {
   'recovery'
   };
 
+for i=1:length(datainfo)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PART 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  filename          = datainfo{i,1};
+  sedation          = datainfo{i,2};
+  concentration     = datainfo{i,3};
+  reactiontime      = datainfo{i,4};
+  correctresponses  = datainfo{i,5};
 
-for isub=1:numel(subject)
+  cfg = [];
+  cfg.dataset = fullfile(sourcedata, [filename '.set']);
+  cfg.datatype = 'eeg';
 
-    % find the 4 datasets for this subject
-    sel = find(startsWith(datainfo(:,1), subject{isub}));
-    num = numel(sel);
+  % copying would have also been an option, but the BrainVision format is more widely supported
+  cfg.method = 'convert';
 
-    dataset           = datainfo(sel,1);    % keep this as cell-array with strings
-    sedation          = [datainfo{sel,2}];  % convert this to a numeric array
-    concentration     = [datainfo{sel,3}];
-    reactiontime      = [datainfo{sel,4}];
-    correctresponses  = [datainfo{sel,5}];
+  % what to do with existing files, e.g. on re-runs of this script
+  cfg.eeg.writesidecar            = 'replace';
+  cfg.channels.writesidecar       = 'replace';
+  cfg.events.writesidecar         = 'replace';
+  cfg.dataset_description.writesidecar = 'replace';
 
-    if num~=4
-    error('inconsistent number of datasets for subject %s', subject{isub});
-    end
+  % this is used for the output file name
+  cfg.bidsroot  = bidsroot;
+  cfg.sub       = filename(1:2);
+  cfg.task      = 'resting';
+  cfg.run       = sedation; % this is a number
 
-    for i=1:4
+  % general information for the eeg.json file
+  cfg.InstitutionName             = 'University of Cambridge';
+  cfg.InstitutionalDepartmentName = 'Department of Clinical Neurosciences';
+  cfg.InstitutionAddress          = 'Cambridge, United Kingdom';
+  cfg.TaskDescription             = 'resting state, eyes closed';
 
-    % construct the output file name
-    sub       = sprintf('sub-%s', subject{isub});
-    task      = 'task-rest';
-    run       = sprintf('run-%d', i);
-    filename  = [sub '_' task '_' run '_eeg.vhdr'];
+  % these are EEG specific
+  cfg.eeg.PowerLineFrequency      = 50;
+  cfg.eeg.EEGReference            ='average';
+  cfg.eeg.SoftwareFilters         = nan;
 
-    mkdir(fullfile(bidsroot, sub, 'eeg'));
+  % all 91 channels in the original recording are of the same type
+  cfg.channels.type  = repmat({'eeg'}, 91, 1);
+  cfg.channels.units = repmat({'uV'}, 91, 1);
 
-    cfg = [];
-    cfg.dataset                     = [dataset{i} '.set'];
-    cfg.outputfile                  = fullfile(bidsroot, sub, 'eeg', filename);
+  % these details should go in the scans.tsv file
+  cfg.scans.sedationlevel    = level{sedation}; % convert number into string
+  cfg.scans.concentration    = concentration;
+  cfg.scans.reactiontime     = reactiontime;
+  cfg.scans.correctresponses = correctresponses;
 
-    cfg.eeg.writesidecar            = 'replace';
-    cfg.channels.writesidecar       = 'replace';
-    cfg.events.writesidecar         = 'replace';
+  % these details should go in the participants.tsv file
+  cfg.participants.age = nan;
+  cfg.participants.sex = nan;
 
-    cfg.InstitutionName             = 'University of Cambridge';
-    cfg.InstitutionalDepartmentName = 'Department of Clinical Neurosciences';
-    cfg.InstitutionAddress          = 'Cambridge, United Kingdom';
+  % these details should go in the dataset_description.json file
+  cfg.dataset_description.Name                = 'Research data supporting ''Brain connectivity during propofol sedation''';
+  cfg.dataset_description.Authors             = {'Chennu, S.', 'O’Connor, S.', 'Adapa, R.', 'Menon, D. K.', 'Bekinschtein, T. A.'};
+  cfg.dataset_description.KeyWords            = {'Consciousness', 'Electroencephalography', 'Sedation', 'Propofol', 'Brain Connectivity'};
+  cfg.dataset_description.ReferencesAndLinks  = {'http://dx.doi.org/10.1371/journal.pcbi.1004669', 'https://www.repository.cam.ac.uk/handle/1810/252736'};
+  cfg.dataset_description.Abstract            = 'Accurately measuring the neural correlates of consciousness is a grand challenge for neuroscience. Despite theoretical advances, developing reliable brain measures to track the loss of reportable consciousness during sedation is hampered by significant individual variability in susceptibility to anaesthetics. We addressed this challenge using high-density electroencephalography to characterise changes in brain networks during propofol sedation. Assessments of spectral connectivity networks before, during and after sedation were combined with measurements of behavioural responsiveness and drug concentrations in blood. Strikingly, we found that participants who had weaker alpha band networks at baseline were more likely to become unresponsive during sedation, despite registering similar levels of drug in blood. In contrast, phase-amplitude coupling between slow and alpha oscillations correlated with drug concentrations in blood. Our findings highlight novel markers that prognosticate individual differences in susceptibility to propofol and track drug exposure. These advances could inform accurate drug titration and brain state monitoring during anaesthesia.';
+  cfg.dataset_description.Sponsorship         = 'This work was supported by grants from the James S. McDonnell Foundation, the Wellcome Trust [WT093811MA to TAB], and the British Oxygen Professorship from the Royal College of Anaesthetists [to DKM]. The research was also supported by the NIHR Brain Injury Healthcare Technology Co-operative based at Cambridge University Hospitals NHS Foundation Trust and University of Cambridge. The views expressed are those of the authors and not necessarily those of the UK National Health Service, the NIHR or the UK Department of Health. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the manuscript.';
+  cfg.dataset_description.License             = 'Attribution 2.0 UK: England & Wales, see http://creativecommons.org/licenses/by/2.0/uk/';
+  cfg.dataset_description.BIDSVersion         = '1.2';
 
-    % provide the long rescription of the task
-    cfg.TaskName = 'resting state, eyes closed';
-
-    % these are EEG specific
-    cfg.eeg.PowerLineFrequency      = 50;
-    cfg.eeg.EEGReference            ='average';
-
-    cfg.channels.type = repmat({'eeg'}, 91, 1);
-    cfg.channels.units = repmat({'uV'}, 91, 1);
-
-    % further down I will also put these in the scans.tsv file
-    cfg.SedationLevel = level{sedation(i)}; % pick it from a descriptive list
-    cfg.Concentration = concentration(i);
-    cfg.ReactionTime = reactiontime(i);
-    cfg.CorrectResponses = correctresponses(i);
-
-    data2bids(cfg)
-
-    end % for 1 to 4
-
-end
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PART 2
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% After the initial conversion of the EEG data files, I used
-% https://github.com/robertoostenveld/bids-tools to make the additional metadata
-% files and used the following code to update the scans.tsv files
-
-for isub=1:numel(subject)
-
-    % find the 4 datasets for this subject
-    sel = find(startsWith(datainfo(:,1), subject{isub}));
-    num = numel(sel);
-
-    dataset           = datainfo(sel,1);    % keep this as cell-array with strings
-    sedation          = [datainfo{sel,2}];  % convert this to a numeric array
-    concentration     = [datainfo{sel,3}];
-    reactiontime      = [datainfo{sel,4}];
-    correctresponses  = [datainfo{sel,5}];
-
-    sub       = sprintf('sub-%s', subject{isub});
-    filename = fullfile(bidsroot, sub, [sub '_scans.tsv']);
-
-    t = readtable(filename, 'FileType', 'text', 'Delimiter', '\t');
-
-    % add the subject-specific information
-    t.sedation       = level(sedation);
-    t.concentration  = concentration(:);
-    t.reactiontime  = reactiontime(:);
-    t.correctresponses = correctresponses(:);
-
-    writetable(t, filename, 'FileType', 'text', 'Delimiter', '\t');
+  data2bids(cfg);
 
 end
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PART 3
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Then I used an editor to check and copy some general fields into the metadata
-% sidecar files.
 ```
