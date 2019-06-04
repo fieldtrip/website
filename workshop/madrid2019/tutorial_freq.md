@@ -393,8 +393,8 @@ the following parameters:
 - cfg.tapsmofrq determines the width of frequency smoothing in Hz (= fw). We
   have chosen `cfg.tapsmofrq = 4`, which assumes a bandwidth of 8Hz smoothing
   (±4). For less smoothing you can specify smaller values, however, the
-  following relation (determined by the Shannon number) must hold (see Percival
-  and Walden, 1993):
+  following relation determined by the Shannon number must hold (see
+  [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
 
   K = 2*tw*fw-1, where K is required to be larger than 0.
 
