@@ -9,6 +9,13 @@ tags: [tutorial, oslo, eeg, frequency, eeg-audodd]
 
 In this tutorial, you can find information about the frequency and  time-frequency analysis of a single subject's EEG data. We will use both Fourier analysis with Hanning tapers and Morlet wavelets; and we will have a special focus on how to visualize the data. We will learn how to compare conditions in the frequency domain,  looking at differences in beta band activity after left versus the right hand responses. You can familiarize yourself with the paradigm and data by reading [the example dataset description](/workshop/natmeg/meg_audodd).
 
+{% include markup/info %}
+This tutorial contains the hands-on material for the [Oslo 2019 workshop](/workshop/oslo2019) and is complemented by this lecture, which was filmed at an [earlier workshop at NatMEG](/workshop/natmeg).
+
+{% include youtube id="QLvsa1r1Voc" %}
+{% include markup/end %}
+
+
 ## Background
 
 Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ((Tallon-Baudry and Bertrand (1999) Oscillatory gamma activity in humans and its role in object representation. Trends Cogn Sci. 3(4):151-162)). The goal of this tutorial is to compute and visualize event-related changes by calculating time-frequency representations (TFRs) of power. This will be done using analyses based on Fourier analysis and wavelets. 
