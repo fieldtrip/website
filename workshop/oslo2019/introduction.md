@@ -55,6 +55,16 @@ When the data browser opens, you will see button to navigate along the bottom of
 The data browser will **not** change your data in an way. If you specify a _cfg_ as output, it will just store your selected artifacts in your cfg.
 {% include markup/end %}
 
+### Before we begin
+
+We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft\_defaults_
+
+    clear variables
+    restoredefaultpath
+
+    addpath /home/lau/matlab/fieldtrip/ %% set your own path
+    ft_defaults
+
 ## Visualization of raw EEG data
 
 The EEG dataset used in this tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)

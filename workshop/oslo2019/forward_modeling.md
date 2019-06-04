@@ -8,7 +8,7 @@ tags: [oslo2019, eeg-audodd, forward]
 ## Introduction
 
 This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.  
-It is part of the [Oslo 2019 workshop tutorials](http://www.fieldtriptoolbox.org/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](link missing), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](link missing).
+It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](link missing), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](link missing).
 
 The data for the tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
 
@@ -36,6 +36,16 @@ All it models is how a source _given_ that it was active with a given current (1
 One immediate challenge here is that the _source model_ and the _head model_ are going to be based on the MRI data where positions are going to be expressed in the scanner's coordinate system, whereas the _sensor description_ is based on a another coordinate system. In our case, they were digitized using a so-called [Polhemus system](https://polhemus.com/scanning-digitizing/digitizing-products/), where the coordinate system is centered on an _x-axis_ which runs between the _pre-auricular_ points on the ears of the subject. The _y-axis_ runs through the center point of the _x-axis_ and towards the _nasion_ of the subject. Finally, the _z-axis_ is perpendicular to the _x-_ and _y-axes_. The three points, the _pre-auricular_ points and the nasion are together called the _fiducials_.  
 We **need** to bring these two coordinate systems together before we can create a sensible forward model.  
 The first step, however, is to read in the MRI data.
+
+### Before we begin
+
+We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft\_defaults_
+
+    clear variables
+    restoredefaultpath
+
+    addpath /home/lau/matlab/fieldtrip/ %% set your own path
+    ft_defaults
 
 ### Read in and visualize the data
 
@@ -337,12 +347,15 @@ The code for this takes a bit more work as can be seen by the length of the code
     end
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo_wrong.png" width="650" %}
-_Figure 8: Lead fields in the_ XYZ-_directions for_ headmodel\_bem _for a superficial source_
+_Figure 8: Lead fields in the_ XYZ-_directions for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo_wrong.png" width="650" %}
-_Figure 9: Magnitude of the lead fields for_ headmodel\_bem _for a superficial source_
+_Figure 9: Magnitude of the lead fields for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
 
-Here it is quickly seen that something is **awry...**
+{% include markup/warning %}
+Here it is quickly seen that something is **awry...** (the topographies are not smooth, and the lead fields are of too great a magnitude (millivolts))
+{% include markup/end %}
+
 
 Let's change to the _dipoli_ head model (load it if you cannot create it)
 
@@ -350,7 +363,9 @@ Let's change to the _dipoli_ head model (load it if you cannot create it)
 
 and run the code creating _elec\_realigned_, _sourcemodel_ and _sourcemodel\_and\_leadfield_ again with _headmodel_ as _headmodel\_dipoli_
 
+{% include markup/info %}
 Now the plots look **correct** - (the electric potentials are in the order of microvolts and the topographies look smooth)
+{% include markup/end %}
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo.png" width="650" %}
 _Figure 10: Lead fields in the_ XYZ-_directions for_ headmodel\_dipoli _for a superficial source_
@@ -360,6 +375,10 @@ _Figure 11: Magnitude of the lead fields for_ headmodel\_dipoli _for a superfici
 
 {% include markup/exercise %}
 When plotting the lead field topographies, try to change _source\_index_ and _sensory\_dipole\_current_ to change the topography and get a feeling for how it works. Also change the source index (will work for a number between 1 and 1659)
+{% include markup/end %}
+
+{% include markup/info %}
+Do always check the lead field of both a superficial source, as this is where errors are most prone, and a central source. If you see errors for the superficial sources, you can use _cfg.inwardshift_ from **[ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)** as this removes sources from the outermost parts of the brain
 {% include markup/end %}
 
 We can also plot the vectors - note that they are more or less normal to the scalp surface. Also note that we are using an unrealistic source current here, 1 mAm. This is just to make sure that they are visible. Do play around with it to see its effect.
@@ -397,4 +416,32 @@ We can also plot the vectors - note that they are more or less normal to the sca
 {% include image src="/assets/img/workshop/oslo2019/leadfield_vector.png" width="650" %}
 _Figure 12: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
 
-## WORK IN PROGRESS
+## Advanced troubleshooting
+
+The _bemcp_ algorithm might have failed due to the meshes overlapping (_brain_, _skull_ and _scalp_). One way to test this is to increase the number of vertices when creating the meshes at the expense of an increase in processing time. I tested it with a fine head model where all the meshes had 10,000 vertices. This also didn't succeed. In other cases, you might succeed, so it might be worth trying.  
+One reason that it might fail is that the segmented surfaces are "too" thin at places. The following code will exemplify this. First, we create a "binary" mri, where _brain_, _skull_ and _scalp_ are expressed binarily. Then a _combined_ field is created.
+
+    mri_segmented_binary = mri_segmented; % make a copy
+
+    binary_brain = mri_segmented.brain;
+    binary_skull = mri_segmented.skull | mri_segmented.brain;
+    binary_scalp = mri_segmented.scalp | mri_segmented.skull | mri_segmented.brain;
+
+    mri_segmented_binary.combined = binary_scalp + binary_skull + binary_brain;
+
+We subsequently plot this _combined_ field at a location where the skin is very thin. Please have a look around and ascertain for yourself that these thin places exist
+
+    cfg              = [];
+    cfg.funparameter = 'combined';
+    cfg.location     = [-74 -4 30];
+
+    ft_sourceplot(cfg, mri_segmented_binary);
+
+{% include image src="/assets/img/workshop/oslo2019/leadfield_vector.png" width="650" %}
+_Figure 13: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
+
+### Algorithm to use
+
+If possible use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some careful installation before it works, and it only works on Linux and Mac systems.
+
+If you cannot make this work, then _dipoli_, which also only works on Linux and Mac systems (at the moment), is your next choice and finally _bemcp_
