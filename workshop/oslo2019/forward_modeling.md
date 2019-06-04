@@ -117,8 +117,6 @@ The next step is to segment our co-registered and resliced MR image into the thr
 
     mri_segmented = ft_volumesegment(cfg, mri_resliced);
 
-    save mri_segmented mri_segmented
-
 ### Creating meshes
 
 From this segmentation, we will now create a mesh for each of the three tissues.
@@ -162,7 +160,7 @@ _Figure 3: Plot of the three meshes (_brain, skull _and_ scalp_)_
 
 ### Head models (component 2)
 
-We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel\_dipoli_ can be downloaded here instead
+We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel\_dipoli_ can be downloaded at the [ftp](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) instead
 
     cfg              = [];
     cfg.method       = 'bemcp';
@@ -171,8 +169,6 @@ We will now use these non-intersecting meshes to specify the head models, which 
     headmodel_bem = ft_prepare_headmodel(cfg, mesh_eeg);
     headmodel_bem = ft_convert_units(headmodel_bem, 'm'); % Use SI Units
 
-    save headmodel_bem headmodel_bem
-
     cfg              = [];
     cfg.method       = 'dipoli'; % will not work with Windows
     cfg.conductivity = [1 1/80 1] * (1/3); % S/m
@@ -180,7 +176,6 @@ We will now use these non-intersecting meshes to specify the head models, which 
     headmodel_dipoli = ft_prepare_headmodel(cfg, mesh_eeg);
     headmodel_dipoli = ft_convert_units(headmodel_dipoli, 'm'); % Use SI Units
 
-    save headmodel_dipoli headmodel_dipoli
 
 Now let's set the headmodel that we are going to use for now, starting with _headmodel\_bem_
 
@@ -248,6 +243,14 @@ _Figure 6: Electrodes are in meaningful places_
 
 The next step is to create a source model that indicates where our sources are. For beamformer and dipole analyses, so-called volumetric grids will do just fine. (For Minimum Norm Estimates, a source model, where sources are constrained to the cortical surface is needed, see for example this [tutorial](/tutorial/minimumnormestimate))
 
+    cfg            = [];
+    cfg.headmodel  = headmodel; % used to estimate extent of grid
+    cfg.resolution = 0.01; % a source per 0.01 m -> 1 cm
+
+    sourcemodel = ft_prepare_sourcemodel(cfg);
+
+and plot it
+
     figure
     hold on
     ft_plot_mesh(sourcemodel, 'vertexsize', 20);
@@ -258,6 +261,26 @@ The next step is to create a source model that indicates where our sources are. 
 
 {% include image src="/assets/img/workshop/oslo2019/sourcemodel.png" width="650" %}
 _Figure 7: Head model overlain with source model (black dots)_
+
+and highlight the sources inside the brain (in red)
+
+    inside = sourcemodel;
+    outside = sourcemodel;
+
+    inside.pos = sourcemodel.pos(sourcemodel.inside, :);
+    outside.pos = sourcemodel.pos(~sourcemodel.inside, :);
+
+    figure
+    hold on
+    ft_plot_mesh(inside, 'vertexsize', 20, 'vertexcolor', 'red');
+    ft_plot_mesh(outside, 'vertexsize', 20)
+    ft_plot_headmodel(headmodel, 'facealpha', 0.1)
+    view(125, 10)
+
+    print -dpng sourcemodel_inside_outside.png
+
+{% include image src="/assets/img/workshop/oslo2019/sourcemodel.png" width="650" %}
+_Figure 8: Head model overlain with sources outside (black dots) and sources inside the brain (red dots)_
 
 ### Estimating the lead field
 
@@ -346,11 +369,32 @@ The code for this takes a bit more work as can be seen by the length of the code
           'markersize', 20, 'markerfacecolor', 'r')
     end
 
+    % plot norm
+
+    figure('units', 'normalized', 'outerposition', [0 0 0.5 0.85])
+    hold on
+    ft_plot_topo3d(elec_realigned.chanpos, voltages)
+    if strcmp(headmodel.type, 'dipoli')
+        caxis([0, 10e-6])
+    end
+    c = colorbar('location', 'eastoutside');
+    c.Label.String = 'Lead field (V)';
+    axis tight
+    ft_plot_headmodel(headmodel, 'facealpha', 0.10);
+    ft_plot_sens(elec_realigned, 'elecsize', 20);
+    title('Leadfield magnitude')
+    plot3(sourcemodel_and_leadfield.pos(inside_index, 1), ...
+      sourcemodel_and_leadfield.pos(inside_index, 2), ...
+      sourcemodel_and_leadfield.pos(inside_index, 3), 'bo', ...
+      'markersize', 20, 'markerfacecolor', 'r')
+
+    view(-90, 0)
+
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo_wrong.png" width="650" %}
-_Figure 8: Lead fields in the_ XYZ-_directions for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
+_Figure 9: Lead fields in the_ XYZ-_directions for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo_wrong.png" width="650" %}
-_Figure 9: Magnitude of the lead fields for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
+_Figure 10: Magnitude of the lead fields for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
 
 {% include markup/warning %}
 Here it is quickly seen that something is **awry...** (the topographies are not smooth, and the lead fields are of too great a magnitude (millivolts))
@@ -368,10 +412,10 @@ Now the plots look **correct** - (the electric potentials are in the order of mi
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo.png" width="650" %}
-_Figure 10: Lead fields in the_ XYZ-_directions for_ headmodel\_dipoli _for a superficial source_
+_Figure 11: Lead fields in the_ XYZ-_directions for_ headmodel\_dipoli _for a superficial source_
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo.png" width="650" %}
-_Figure 11: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
+_Figure 12: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
 
 {% include markup/exercise %}
 When plotting the lead field topographies, try to change _source\_index_ and _sensory\_dipole\_current_ to change the topography and get a feeling for how it works. Also change the source index (will work for a number between 1 and 1659)
@@ -414,7 +458,7 @@ We can also plot the vectors - note that they are more or less normal to the sca
           'markersize', 60, 'markerfacecolor', 'r')
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_vector.png" width="650" %}
-_Figure 12: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
+_Figure 13: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
 
 ## Advanced troubleshooting
 
@@ -438,7 +482,7 @@ We subsequently plot this _combined_ field at a location where the skin is very 
     ft_sourceplot(cfg, mri_segmented_binary);
 
 {% include image src="/assets/img/workshop/oslo2019/surfaces.png" width="650" %}
-_Figure 13: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
+_Figure 14: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
 
 ### Algorithm to use
 
