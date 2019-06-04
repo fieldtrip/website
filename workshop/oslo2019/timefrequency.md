@@ -90,7 +90,7 @@ At first, we will look at the frequency content in the data using a Fourier tran
 
 The output of **[ft_freqanalysis](/reference/ft_freqanalysis)** is a structure with the following elements:
 
-    spectr_left = 
+    spectr_left =
 	
         label: {'EEG126'}      % Channel names
        dimord: 'chan_freq'     % Dimensions contained in powspctrm, channels x frequencies
@@ -138,14 +138,14 @@ Since we have two conditions (responses with left and right index finger), we wi
 
 If we compare the output of **[ft_freqanalysis](/reference/ft_freqanalysis)** to what we obtained when computing the power spectra (see above), we can see that the data now also contains a time dimension:
 
-    tfr_left = 
+    tfr_left =
         label: {128×1 cell}
        dimord: 'chan_freq_time'
          freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40]
          time: [1×26 double]
     powspctrm: [128×20×26 double]
           cfg: [1×1 struct]
-	  
+
 Note especially how the output now contains a field `time` and that `powspctrm` is 3-dimensional. The dimension order field `dimord` tells us that time is the third dimension of the power output matrix `powspctrm`.
 
 ## Visualization
@@ -203,7 +203,7 @@ Let's take a look at what happens when instead of an absolute baseline we use a 
 
     figure;
     ft_topoplotTFR(cfg, tfr_right);
-    title('Right hand reaction');	
+    title('Right hand reaction');
 
 {% include image src="/assets/img/workshop/oslo2019/tfr_rel_both.png" %}	
 
