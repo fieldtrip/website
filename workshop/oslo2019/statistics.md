@@ -32,6 +32,16 @@ In constrast to the familiar parametric statistical framework, it is straightfor
 
 # Tutorial (ERPs)
 
+## Before we begin
+
+We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft\_defaults_
+
+    clear variables
+    restoredefaultpath
+
+    addpath /home/lau/matlab/fieldtrip/ %% set your own path
+    ft_defaults
+
 ## Load the ERP data and preprocess
 
     load cleaned_data_ERP.mat
