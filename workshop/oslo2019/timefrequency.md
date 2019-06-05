@@ -112,6 +112,7 @@ We can visualize the power spectra from both conditions in one plot using MATLAB
     ylabel('Power (\mu V^2)')
 
 {% include image src="/assets/img/workshop/oslo2019/powerspectra.png" %}
+
 _Figure: Power spectra for both conditions in a right central electrode._
 
 ## Time-frequency analysis with a Hanning taper and fixed window length
