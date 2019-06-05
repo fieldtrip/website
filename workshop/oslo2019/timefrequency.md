@@ -246,7 +246,7 @@ We now want to collapse the information of both conditions by comparing them. On
     ft_topoplotTFR(cfg, tfr_difference);
     title('Left vs right hand reaction');
 
-{% include image src="/assets/img/workshop/natmeg/timefrequency/tfr_diff.png" %}
+{% include image src="/assets/img/workshop/oslo2019/timefrequency/tfr_diff.png" %}
 
 _Figure: Topographic representation of the time-frequency representations of the difference in beta power, between left and right response._
 
@@ -294,7 +294,7 @@ As for our first analysis, we want to look at the difference between the conditi
     ft_singleplotTFR(cfg, wave_difference);
     title('Left vs right hand reaction');
 
-{% include image src="/assets/img/workshop/natmeg/timefrequency/wavelets_channel_diff.png" %}
+{% include image src="/assets/img/workshop/oslo2019/timefrequency/wavelets_channel_diff.png" %}
 
 _Figure: Time-frequency representations of power calculated using Morlet wavelets, difference between the conditions._
 
