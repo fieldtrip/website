@@ -1,7 +1,7 @@
 ---
 title: ft_prepare_neighbours
 ---
-```
+```plaintext
  FT_PREPARE_NEIGHBOURS finds the channel neighbours for spatial clustering or
  interpolation of bad channels. Using the 'distance' method, neighbours are based on
  a minimum neighbourhood distance (in cfg.neighbourdist). Using the 'triangulation'

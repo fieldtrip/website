@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_mutualinformation
 ---
-```
+```plaintext
  FT_CONNECTIVITY_MUTUALINFORMATION computes mutual information using the information
  breakdown toolbox (ibtb), as described in Magri et al., BMC Neuroscience 2009,
  1471-2202.

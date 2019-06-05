@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_roc
 ---
-```
+```plaintext
  FT_STATFUN_ROC computes the area under the curve (AUC) of the Receiver Operator
  Characteristic (ROC). This is a measure of the separability of the data divided
  over two conditions. The AUC can be used to test statistical significance of being

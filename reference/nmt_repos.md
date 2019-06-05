@@ -1,7 +1,7 @@
 ---
 title: nmt_repos
 ---
-```
+```plaintext
  nmt_repos([x y z], t)
  nmt_repos([x y z], [t0 t1])
  nmt_repos(pos_idx, t_idx)

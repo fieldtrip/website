@@ -1,7 +1,7 @@
 ---
 title: residualvariance
 ---
-```
+```plaintext
  RESIDUALVARIANCE scan with a single dipole and computes the RV
  at each grid location.
 

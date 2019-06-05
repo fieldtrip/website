@@ -1,7 +1,7 @@
 ---
 title: ft_statistics_analytic
 ---
-```
+```plaintext
  FT_STATISTICS_ANALYTIC performs a parametric statistical test on the
  data, based on a known (i.e. analytic) distribution of the test
  statistic. This function should not be called directly, instead

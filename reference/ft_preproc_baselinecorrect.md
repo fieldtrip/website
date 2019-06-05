@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_baselinecorrect
 ---
-```
+```plaintext
  FT_PREPROC_BASELINECORRECT performs a baseline correction, e.g. using the
  prestimulus interval of the data or using the complete data
 

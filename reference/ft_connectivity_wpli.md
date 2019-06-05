@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_wpli
 ---
-```
+```plaintext
  FT_CONNECTIVITY_WPLI computes the weighted phase lag index from a data matrix
  containing the cross-spectral density. This implements the method described in
  Vinck M, Oostenveld R, van Wingerden M, Battaglia F, Pennartz CM. An improved index

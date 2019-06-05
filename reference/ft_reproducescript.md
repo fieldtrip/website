@@ -1,7 +1,7 @@
 ---
 title: ft_reproducescript
 ---
-```
+```plaintext
  FT_REPRODUCESCRIPT is a helper function to clean up the script and intermediate
  datafiles that are the result from using the cfg.reproducescript option. You should
  call this function all the way at the end of your analysis. This function will look

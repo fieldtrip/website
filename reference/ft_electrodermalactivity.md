@@ -1,7 +1,7 @@
 ---
 title: ft_electrodermalactivity
 ---
-```
+```plaintext
  FT_ELECTRODERMALACTIVITY estimates the electrodermal activity from a recording of
  the electric resistance of the skin.
 

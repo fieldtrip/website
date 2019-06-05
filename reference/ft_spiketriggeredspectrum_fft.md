@@ -1,7 +1,7 @@
 ---
 title: ft_spiketriggeredspectrum_fft
 ---
-```
+```plaintext
  FT_SPIKETRIGGEREDSPECTRUM_FFT computes the Fourier spectrum (amplitude and phase)
  of the LFP around the % spikes.  A phase of zero corresponds to the spike being on
  the peak of the LFP oscillation. A phase of 180 degree corresponds to the spike being

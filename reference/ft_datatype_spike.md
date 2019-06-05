@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_spike
 ---
-```
+```plaintext
  FT_DATATYPE_SPIKE describes the FieldTrip MATLAB structure for spike data
 
  Spike data is obtained using FT_READ_SPIKE to read files from a Plexon,

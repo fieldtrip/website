@@ -1,7 +1,7 @@
 ---
 title: ft_test
 ---
-```
+```plaintext
  FT_TEST performs selected FieldTrip test scripts or reports on previous test
  results from the dashboard database.
 

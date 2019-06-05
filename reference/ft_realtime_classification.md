@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_classification
 ---
-```
+```plaintext
  FT_REALTIME_CLASSIFICATION is an example realtime application for online
  classification of the data. It should work both for EEG and MEG.
 

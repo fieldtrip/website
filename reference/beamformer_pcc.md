@@ -1,7 +1,7 @@
 ---
 title: beamformer_pcc
 ---
-```
+```plaintext
  BEAMFORMER_PCC implements an experimental beamformer based on partial
  canonical correlations or coherences. Dipole locations that are outside
  the head will return a NaN value.

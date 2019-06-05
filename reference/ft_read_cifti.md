@@ -1,7 +1,7 @@
 ---
 title: ft_read_cifti
 ---
-```
+```plaintext
  FT_READ_CIFTI read functional data or functional connectivity from a cifti-1 or
  cifti-2 file. The functional data can consist of a dense or a parcellated
  representation. The geometrical description of the brainordinates can consist of

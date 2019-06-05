@@ -1,7 +1,7 @@
 ---
 title: ft_plot_vector
 ---
-```
+```plaintext
  FT_PLOT_VECTOR visualizes a vector as a line, similar to PLOT.
 
  Use as

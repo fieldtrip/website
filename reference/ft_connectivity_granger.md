@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_granger
 ---
-```
+```plaintext
  FT_CONNECTIVITY_GRANGER computes spectrally resolved granger causality. This
  implementation is loosely based on the code used in Brovelli, et. al., PNAS 101,
  9849-9854 (2004).

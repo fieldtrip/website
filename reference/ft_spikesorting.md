@@ -1,7 +1,7 @@
 ---
 title: ft_spikesorting
 ---
-```
+```plaintext
  FT_SPIKESORTING performs clustering of spike-waveforms and returns the
  unit number to which each spike belongs.
 

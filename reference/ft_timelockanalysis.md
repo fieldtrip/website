@@ -1,7 +1,7 @@
 ---
 title: ft_timelockanalysis
 ---
-```
+```plaintext
  FT_TIMELOCKANALYSIS computes the timelocked average ERP/ERF and
  optionally computes the covariance matrix. 
 

@@ -1,7 +1,7 @@
 ---
 title: bis2fieldtrip
 ---
-```
+```plaintext
  BIS2FIELDTRIP reads BioImage Suite .mgrid files and converts them 
  into a FieldTrip-compatible elec datatype structure and converts electrode
  positions from BioImage Suite mgrid that are in 'xyz' to head coordinates

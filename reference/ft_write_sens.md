@@ -1,7 +1,7 @@
 ---
 title: ft_write_sens
 ---
-```
+```plaintext
  FT_WRITE_SENS writes electrode information to an external file for further processing in external software.
 
  Use as

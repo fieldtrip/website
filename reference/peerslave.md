@@ -1,7 +1,7 @@
 ---
 title: peerslave
 ---
-```
+```plaintext
  PEERSLAVE starts the low-level peer services and switches to slave mode.
  Subsequently it will wait untill a job comes in and execute it.
 

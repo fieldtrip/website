@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_rereference
 ---
-```
+```plaintext
  FT_PREPROC_REREFERENCE computes the average reference over all EEG channels
  or rereferences the data to the selected channels
 

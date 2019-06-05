@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_depsamplesregrT
 ---
-```
+```plaintext
  FT_STATFUN_DEPSAMPLESREGRT calculates dependent samples regression T-statistic on
  the biological data in dat (the dependent variable), using the information on the
  independent variable (ivar) in design.

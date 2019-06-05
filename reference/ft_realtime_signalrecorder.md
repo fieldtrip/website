@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_signalrecorder
 ---
-```
+```plaintext
  FT_REALTIME_SIGNALRECORDER is an example realtime application for recording of data
  that is streaming to the buffer in real-time. It should work both for EEG and MEG.
 

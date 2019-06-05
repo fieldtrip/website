@@ -1,7 +1,7 @@
 ---
 title: data2bids
 ---
-```
+```plaintext
  DATA2BIDS is a helper function to convert MEG, EEG, iEEG or MRI data to the Brain
  Imaging Data Structure. The overall idea is that you write a MATLAB script in which
  you call this function multiple times, once for each individually recorded data

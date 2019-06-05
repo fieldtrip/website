@@ -1,7 +1,7 @@
 ---
 title: ft_documentationconfiguration
 ---
-```
+```plaintext
  FT_DOCUMENTATIONCONFIGURATION is a helper function to maintain the online
  documentation of all configuration options.
 

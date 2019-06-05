@@ -1,7 +1,7 @@
 ---
 title: beamformer_lcmv
 ---
-```
+```plaintext
  BEAMFORMER_LCMV scans on pre-defined dipole locations with a single dipole
  and returns the beamformer spatial filter output for a dipole on every
  location. Dipole locations that are outside the head will return a

@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_freq
 ---
-```
+```plaintext
  FT_DATATYPE_FREQ describes the FieldTrip MATLAB structure for freq data
 
  The freq data structure represents frequency or time-frequency decomposed

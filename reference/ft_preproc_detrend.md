@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_detrend
 ---
-```
+```plaintext
  FT_PREPROC_DETREND removes mean and linear trend from the
  data using using a General Linear Modeling approach.
 

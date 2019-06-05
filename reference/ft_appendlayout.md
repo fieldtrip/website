@@ -1,7 +1,7 @@
 ---
 title: ft_appendlayout
 ---
-```
+```plaintext
  FT_APPENDLAYOUT concatenates multiple layout descriptions that have been constructed
  separately.
 

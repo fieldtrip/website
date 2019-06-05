@@ -1,7 +1,7 @@
 ---
 title: ft_filter_event
 ---
-```
+```plaintext
  FT_FILTER_EVENT does what its name implies
 
  Use as

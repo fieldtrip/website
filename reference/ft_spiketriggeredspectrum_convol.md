@@ -1,7 +1,7 @@
 ---
 title: ft_spiketriggeredspectrum_convol
 ---
-```
+```plaintext
  FT_SPIKETRIGGEREDSPECTRUM_CONVOL computes the Fourier spectrum (amplitude and
  phase) of the LFP around the spikes using convolution of the complete LFP traces. A
  phase of zero corresponds to the spike being on the peak of the LFP oscillation. A

@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_fmriviewer
 ---
-```
+```plaintext
  FT_REALTIME_FMRIVIEWER allows for realtime visualization of the fMRI data stream
 
  Use as

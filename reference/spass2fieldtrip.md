@@ -1,7 +1,7 @@
 ---
 title: spass2fieldtrip
 ---
-```
+```plaintext
  SPASS2FIELDTRIP reads data from a set of SPASS data files and converts
  the contents into data structures that FieldTrip understands. Note that
  dependent on the SPASS data it might be required to change some

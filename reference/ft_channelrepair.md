@@ -1,7 +1,7 @@
 ---
 title: ft_channelrepair
 ---
-```
+```plaintext
  FT_CHANNELREPAIR repairs bad or missing channels in the data by replacing them with the
  plain average of of all neighbours, by a weighted average of all neighbours, by an
  interpolation based on a surface Laplacian, or by spherical spline interpolating (see

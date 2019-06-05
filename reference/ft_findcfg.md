@@ -1,7 +1,7 @@
 ---
 title: ft_findcfg
 ---
-```
+```plaintext
  FT_FINDCFG searches for an element in the cfg structure
  or in the nested previous cfgs
 

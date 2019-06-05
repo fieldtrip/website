@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_asynchronous
 ---
-```
+```plaintext
  FT_REALTIME_ASYNCHRONOUS is an example realtime application for
  asynchronous brain-computer interfaces
 

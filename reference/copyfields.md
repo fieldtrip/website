@@ -1,7 +1,7 @@
 ---
 title: copyfields
 ---
-```
+```plaintext
  COPYFIELDS copies a selection of the fields from one structure to another
 
  Use as

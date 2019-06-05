@@ -1,7 +1,7 @@
 ---
 title: ft_plot_montage
 ---
-```
+```plaintext
  FT_PLOT_MONTAGE makes a montage of a 3-D array by selecting slices at regular distances
  and combining them in one large 2-D image.  Note that the montage of MRI slices is not to
  be confused with the EEG montage, which is a way of specifying the reference scheme

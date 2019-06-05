@@ -1,7 +1,7 @@
 ---
 title: nmt_sourceplot
 ---
-```
+```plaintext
  NMT_SOURCEPLOT
  plots functional source reconstruction data on slices or on
  a surface, optionally as an overlay on anatomical MRI data, where

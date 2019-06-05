@@ -1,7 +1,7 @@
 ---
 title: ft_connectivityplot
 ---
-```
+```plaintext
  FT_CONNECTIVITYPLOT plots channel-level frequency resolved connectivity. The
  data are rendered in a square grid of subplots, each subplot containing the
  connectivity spectrum between the two respective channels.

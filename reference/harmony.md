@@ -1,7 +1,7 @@
 ---
 title: harmony
 ---
-```
+```plaintext
  HARMONY computes a linear estimate of the current in a distributed source model
  using a mesh harmonic based low-pass filter.
 

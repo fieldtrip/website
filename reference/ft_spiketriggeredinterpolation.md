@@ -1,7 +1,7 @@
 ---
 title: ft_spiketriggeredinterpolation
 ---
-```
+```plaintext
  FT_SPIKETRIGGEREDINTERPOLATION interpolates the data in the LFP channels
  around the spikes that are detected in the spike channels, or replaces
  the LFP around the spike with NaNs. The purpose of this procedure is to

@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_mean
 ---
-```
+```plaintext
  FT_STATFUN_MEAN computes the mean over all replications for each of the
  observations (i.e. channel-time-frequency points or voxels).
 

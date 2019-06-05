@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_threshold
 ---
-```
+```plaintext
  FT_ARTIFACT_THRESHOLD scans for trials in which the range, i.e. the minimum, the
  maximum or the range (min-max difference) of the signal in any channel exceeds a
  specified threshold.

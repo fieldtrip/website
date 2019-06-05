@@ -1,7 +1,7 @@
 ---
 title: ft_apply_montage
 ---
-```
+```plaintext
  FT_APPLY_MONTAGE changes the montage (i.e. linear combination) of a set of
  electrode or gradiometer channels. A montage can be used for EEG rereferencing, MEG
  synthetic gradients, MEG planar gradients or unmixing using ICA. This function not

@@ -1,7 +1,7 @@
 ---
 title: ft_icabrowser
 ---
-```
+```plaintext
  FT_ICABROWSER loads in comp structure from FieldTrip ft_componentanalysis
  and presents a GUI interface showing the power spectrum, variance over
  time and the topography of the components, as well as the possibility to

@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_cancorr
 ---
-```
+```plaintext
  FT_CONNECTIVITY_CANCORR computes the canonical correlation or coherence between
  multiple variables. Canonical correlation analysis (CCA) is a way of measuring the
  linear relationship between two multidimensional variables. It finds two bases, one

@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_heartbeatdetect
 ---
-```
+```plaintext
  FT_REALTIME_HEARTBEATDETECT is an example realtime application for online
  detection of heart beats. It should work both for EEG and MEG.
 

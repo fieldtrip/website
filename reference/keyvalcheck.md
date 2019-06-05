@@ -1,7 +1,7 @@
 ---
 title: keyvalcheck
 ---
-```
+```plaintext
  KEYVALCHECK is a helper function for parsing optional key-value input pairs.
 
  Use as

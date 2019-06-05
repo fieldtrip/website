@@ -1,7 +1,7 @@
 ---
 title: ft_progress
 ---
-```
+```plaintext
  FT_PROGRESS shows a graphical or non-graphical progress indication similar to the
  standard WAITBAR function, but with the extra option of printing it in the command
  window as a plain text string or as a rotating dial. Alternatively, you can also

@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_micromedproxy
 ---
-```
+```plaintext
  FT_REALTIME_MICROMEDPROXY reads continuous data from a Micromed acquisition system
  through the BCI interface and writes it to a FieldTrip buffer.
 

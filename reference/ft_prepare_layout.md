@@ -1,7 +1,7 @@
 ---
 title: ft_prepare_layout
 ---
-```
+```plaintext
  FT_PREPARE_LAYOUT loads or creates a 2-D layout of the channel locations. This
  layout is required for plotting the topographical distribution of the potential or
  field distribution, or for plotting timecourses in a topographical arrangement.

@@ -1,7 +1,7 @@
 ---
 title: ft_databrowser
 ---
-```
+```plaintext
  FT_DATABROWSER can be used for visual inspection of data. Artifacts that were
  detected by artifact functions (see FT_ARTIFACT_xxx functions where xxx is the type
  of artifact) are marked. Additionally data pieces can be marked and unmarked as

@@ -1,7 +1,7 @@
 ---
 title: ft_omri_align_scan
 ---
-```
+```plaintext
  function [model, mat_r, mat_a, Va] = ft_omri_align_scan(model, Vo)
 
  Estimate 6-DOF motion parameters and align volume Vo with reference model.

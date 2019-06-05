@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_actvsblT
 ---
-```
+```plaintext
  FT_STATFUN_ACTVSBLT calculates the activation-versus-baseline T-statistic on the
  biological data (the dependent variable), using the information on the independent
  variable (ivar) in design.

@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_realtime
 ---
-```
+```plaintext
  FT_TRIALFUN_REALTIME can be used to segment a continuous stream of
  data in real-time. Trials are defined as [begsample endsample offset
  condition]

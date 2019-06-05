@@ -1,7 +1,7 @@
 ---
 title: ft_freqbaseline
 ---
-```
+```plaintext
  FT_FREQBASELINE performs baseline normalization for time-frequency data
 
  Use as

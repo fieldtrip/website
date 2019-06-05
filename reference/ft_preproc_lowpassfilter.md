@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_lowpassfilter
 ---
-```
+```plaintext
  FT_PREPROC_LOWPASSFILTER applies a low-pass filter to the data and thereby
  removes all high frequency components in the data
 

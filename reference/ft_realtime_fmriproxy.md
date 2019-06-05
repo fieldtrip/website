@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_fmriproxy
 ---
-```
+```plaintext
  FT_REALTIME_FMRIPROXY simulates an fMRI acquisition system by writing volumes in a
  cycle of about 2 seconds. The voxel data is written as a column vector with X*Y*Z
  channels, where X and Y are the readout and phase-encoding resolution, and Z is the

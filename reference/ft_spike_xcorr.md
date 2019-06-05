@@ -1,7 +1,7 @@
 ---
 title: ft_spike_xcorr
 ---
-```
+```plaintext
  FT_SPIKE_XCORR computes the cross-correlation histogram and shift predictor.
 
  Use as

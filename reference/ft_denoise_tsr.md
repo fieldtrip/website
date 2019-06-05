@@ -1,7 +1,7 @@
 ---
 title: ft_denoise_tsr
 ---
-```
+```plaintext
  FT_DENOISE_TSR performs a regression analysis, using a (time-shifted set
  of) reference signal(s) as independent variable. It is a generic
  implementation of the method described by De Cheveigne

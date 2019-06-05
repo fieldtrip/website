@@ -1,7 +1,7 @@
 ---
 title: ft_statistics_stats
 ---
-```
+```plaintext
  FT_STATISTICS_STATS performs a massive univariate statistical test using the
  MATLAB statistics toolbox. This function should not be called directly,
  instead you should call the function that is associated with the type of data

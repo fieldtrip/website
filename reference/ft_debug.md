@@ -1,7 +1,7 @@
 ---
 title: ft_debug
 ---
-```
+```plaintext
  FT_DEBUG prints a debug message on screen, depending on the verbosity 
  settings of the calling high-level FieldTrip function.
 

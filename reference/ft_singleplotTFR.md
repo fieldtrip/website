@@ -1,7 +1,7 @@
 ---
 title: ft_singleplotTFR
 ---
-```
+```plaintext
  FT_SINGLEPLOTTFR plots the time-frequency representation of power of a
  single channel or the average over multiple channels.
 

@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_psi
 ---
-```
+```plaintext
  FT_CONNECTIVITY_PSI computes the phase slope index from a data-matrix
  containing the cross-spectral density. It implements the method described
  in: Nolte et al., Robustly estimating the flow direction of information

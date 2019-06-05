@@ -1,7 +1,7 @@
 ---
 title: ft_sourceinterpolate
 ---
-```
+```plaintext
  FT_SOURCEINTERPOLATE interpolates source activity or statistical maps onto the
  voxels or vertices of an anatomical description of the brain.  Both the functional
  and the anatomical data can either describe a volumetric 3D regular grid, a

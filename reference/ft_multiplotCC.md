@@ -1,7 +1,7 @@
 ---
 title: ft_multiplotCC
 ---
-```
+```plaintext
  FT_MULTIPLOTCC visualises the coherence between channels by using
  multiple topoplots. The topoplot at a given channel location shows the
  coherence of that channel with all other channels.

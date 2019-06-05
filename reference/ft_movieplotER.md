@@ -1,7 +1,7 @@
 ---
 title: ft_movieplotER
 ---
-```
+```plaintext
  FT_MOVIEPLOTER makes a movie of the the event-related potentials, event-related
  fields or oscillatory activity (power or coherence) versus frequency.
 

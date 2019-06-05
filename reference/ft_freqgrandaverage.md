@@ -1,7 +1,7 @@
 ---
 title: ft_freqgrandaverage
 ---
-```
+```plaintext
  FT_FREQGRANDAVERAGE computes the average powerspectrum or time-frequency spectrum
  over multiple subjects
 

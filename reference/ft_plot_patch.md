@@ -1,7 +1,7 @@
 ---
 title: ft_plot_patch
 ---
-```
+```plaintext
  FT_PLOT_PATCH plot a colored shape, similar to the MATLAB patch() function. It is 
  similar in usage as ft_plot_vector, and they can be combined, for example,
  to plot an area equivalent to a SEM or STD-DEV around a line.

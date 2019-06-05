@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_example2
 ---
-```
+```plaintext
  FT_TRIALFUN_EXAMPLE2 is an example trial function that detects muscle
  activity in an EMG channel and defines variable length trials from the
  EMG onset up to the EMG offset.

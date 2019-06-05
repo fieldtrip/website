@@ -1,7 +1,7 @@
 ---
 title: ft_read_sens
 ---
-```
+```plaintext
  FT_READ_SENS read sensor positions from various manufacturer specific files. See
  further down for the list of file types that are supported.
 

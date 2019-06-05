@@ -1,7 +1,7 @@
 ---
 title: nmt_svdtruncinv
 ---
-```
+```plaintext
  [Rtrunc,q,u,v] = nmt_svdtruncinv(R,signalspace)
 
  Allows user to define signalspace of an arbitrary matrix R and perform an

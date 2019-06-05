@@ -1,7 +1,7 @@
 ---
 title: ft_electroderealign
 ---
-```
+```plaintext
  FT_ELECTRODEREALIGN rotates, translates, scales and warps electrode positions. The
  default is to only rotate and translate, i.e. to do a rigid body transformation in
  which only the coordinate system is changed. With the right settings if can apply

@@ -1,7 +1,7 @@
 ---
 title: ft_multiplotER
 ---
-```
+```plaintext
  FT_MULTIPLOTER plots the event-related potentials or event-related fields verus
  time, or the oscillatory activity (power or coherence) versus frequency. Multiple
  datasets can be overlayed. The plots are arranged according to their location

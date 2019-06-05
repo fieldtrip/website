@@ -1,7 +1,7 @@
 ---
 title: ft_hastoolbox
 ---
-```
+```plaintext
  FT_HASTOOLBOX tests whether an external toolbox is installed. Optionally
  it will try to determine the path to the toolbox and install it
  automatically.

@@ -1,7 +1,7 @@
 ---
 title: tokenize
 ---
-```
+```plaintext
  TOKENIZE cuts a string into pieces, returning the pieces in a cell-array
 
  Use as

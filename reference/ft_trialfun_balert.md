@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_balert
 ---
-```
+```plaintext
 ft_definetrialBAlert: Extract trials B-Alert data from CSV file. 
    FieldTrip cannot yet interpret the event markers from B-Alert data.
    Therefore, it is necessary to have B-Alert LAB. This is (paid) software

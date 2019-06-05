@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_parcellation
 ---
-```
+```plaintext
  FT_DATATYPE_PARCELLATION describes the FieldTrip MATLAB structure for parcellated
  cortex-based data and atlases. A parcellation can either be indexed or probabilistic
  (see below).

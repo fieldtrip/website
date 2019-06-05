@@ -1,7 +1,7 @@
 ---
 title: ft_singleplotER
 ---
-```
+```plaintext
  FT_SINGLEPLOTER plots the event-related fields or potentials of a single
  channel or the average over multiple channels. Multiple datasets can be
  overlayed.

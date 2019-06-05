@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_powcorr_ortho
 ---
-```
+```plaintext
  FT_CONNECTIVITY_POWCORR_ORTHO computes power correlation after removing the
  zero-lag contribution on a trial-by-trial basis. This implements the method
  described in JF Hipp, DJ Hawellek, M Corbetta, M Siegel, AK Engel. Large-scale

@@ -1,7 +1,7 @@
 ---
 title: ft_info
 ---
-```
+```plaintext
  FT_INFO prints an info message on screen, depending on the verbosity 
  settings of the calling high-level FieldTrip function.
 

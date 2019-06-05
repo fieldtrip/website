@@ -1,7 +1,7 @@
 ---
 title: ft_write_cifti
 ---
-```
+```plaintext
  FT_WRITE_CIFTI writes functional data or functional connectivity to a cifti-2
  file. The geometrical description of the brainordinates can consist of
  triangulated surfaces or voxels in a regular 3-D volumetric grid. The functional

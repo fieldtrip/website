@@ -1,7 +1,7 @@
 ---
 title: ft_omri_info_from_header
 ---
-```
+```plaintext
  function S = ft_omri_info_from_header(hdr)
 
  Convenience function to retrieve most important MR information

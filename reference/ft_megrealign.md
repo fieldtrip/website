@@ -1,7 +1,7 @@
 ---
 title: ft_megrealign
 ---
-```
+```plaintext
  FT_MEGREALIGN interpolates MEG data towards standard gradiometer locations by
  projecting the individual timelocked data towards a coarse source reconstructed
  representation and computing the magnetic field on the standard gradiometer

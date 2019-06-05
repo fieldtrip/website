@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_slidingrange
 ---
-```
+```plaintext
  FT_PREPROC_SLIDINGRANGE computes the range of the data in a sliding time
  window of the width specified. Width should be an odd number (since the
  window needs to be centered on an individual sample).

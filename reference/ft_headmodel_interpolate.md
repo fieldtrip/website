@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_interpolate
 ---
-```
+```plaintext
  FT_HEADMODEL_INTERPOLATE describes a volume conduction model of the head in which
  subsequent leadfield computations can be performed using a simple interpolation
  scheme.

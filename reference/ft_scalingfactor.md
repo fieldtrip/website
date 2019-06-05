@@ -1,7 +1,7 @@
 ---
 title: ft_scalingfactor
 ---
-```
+```plaintext
  FT_SCALINGFACTOR determines the scaling factor from old to new units, i.e. it
  returns a number with which the data in the old units needs to be multiplied
  to get it expressed in the new units. 

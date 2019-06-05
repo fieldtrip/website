@@ -1,7 +1,7 @@
 ---
 title: ft_select_point
 ---
-```
+```plaintext
  FT_SELECT_POINT helper function for selecting a one or multiple points in the
  current figure using the mouse. It returns a list of the [x y] coordinates of the
  selected points.

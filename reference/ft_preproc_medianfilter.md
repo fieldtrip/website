@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_medianfilter
 ---
-```
+```plaintext
  FT_PREPROC_MEDIANFILTER applies a median filter, which smooths the data with a
  boxcar-like kernel, except that it keeps steps in the data. This function requires
  the MATLAB Signal Processing toolbox.

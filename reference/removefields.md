@@ -1,7 +1,7 @@
 ---
 title: removefields
 ---
-```
+```plaintext
  REMOVEFIELDS makes a selection of the fields in a structure
 
  Use as

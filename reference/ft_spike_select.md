@@ -1,7 +1,7 @@
 ---
 title: ft_spike_select
 ---
-```
+```plaintext
  FT_SPIKE_SELECT selects subsets of spikes, channels and trials from a
  spike structure.
 

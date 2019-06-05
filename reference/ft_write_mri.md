@@ -1,7 +1,7 @@
 ---
 title: ft_write_mri
 ---
-```
+```plaintext
  FT_WRITE_MRI exports volumetric data such as anatomical and functional
  MRI to a file.
 

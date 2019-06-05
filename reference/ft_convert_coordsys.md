@@ -1,7 +1,7 @@
 ---
 title: ft_convert_coordsys
 ---
-```
+```plaintext
  FT_CONVERT_COORDSYS changes the coordinate system of the input object to
  the specified coordinate system. The coordinate system of the input
  object is determined from the structure field object.coordsys, or needs to

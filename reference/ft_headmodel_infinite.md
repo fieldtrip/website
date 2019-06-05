@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_infinite
 ---
-```
+```plaintext
  FT_HEADMODEL_INFINITE returns an infinitely large homogenous
  volume conduction model. For EEG the volume conductor can be used
  to compute the leadfield of electric current dipoles, for MEG it

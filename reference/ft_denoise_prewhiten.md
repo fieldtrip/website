@@ -1,7 +1,7 @@
 ---
 title: ft_denoise_prewhiten
 ---
-```
+```plaintext
  FT_DENOISE_PREWHITEN applies a spatial prewhitening operation to the data using the
  inverse noise covariance matrix. The consequence is that all channels are expressed
  in singnal-to-noise units, causing different channel types to be comparable. This

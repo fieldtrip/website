@@ -1,7 +1,7 @@
 ---
 title: ft_combineplanar
 ---
-```
+```plaintext
  FT_COMBINEPLANAR computes the planar gradient magnitude over both directions
  combining the two gradients at each sensor to a single positive-valued number. This
  can be done for single-trial/averaged planar gradient ERFs or single-trial/averaged

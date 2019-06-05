@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_synchronous
 ---
-```
+```plaintext
  FT_REALTIME_SYNCHRONOUS is an example realtime application for
  synchronous (trigger-based) brain-computer interfaces
 

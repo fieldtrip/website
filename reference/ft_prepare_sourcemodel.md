@@ -1,7 +1,7 @@
 ---
 title: ft_prepare_sourcemodel
 ---
-```
+```plaintext
  FT_PREPARE_SOURCEMODEL constructs a source model, for example a 3D grid or a
  cortical sheet. The source model that can be used for source reconstruction,
  beamformer scanning, linear estimation and MEG interpolation.

@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_sens
 ---
-```
+```plaintext
  FT_DATATYPE_SENS describes the FieldTrip structure that represents an EEG, ECoG, or
  MEG sensor array. This structure is commonly called "elec" for EEG, "grad" for MEG,
  "opto" for NIRS, or general "sens" for either one.

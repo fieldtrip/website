@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_neuralynxproxy
 ---
-```
+```plaintext
  FT_REALTIME_NEURALYNXPROXY reads continuous data from a Neuralynx Cheetah
  acquisition system and writes it to a FieldTrip buffer.
 

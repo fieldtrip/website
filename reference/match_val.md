@@ -1,7 +1,7 @@
 ---
 title: match_val
 ---
-```
+```plaintext
  MATCH_VAL looks for matching values in two arrays of values
  and returns the indices into both the 1st and 2nd list of the matches.
  They will be ordered according to the first input argument.

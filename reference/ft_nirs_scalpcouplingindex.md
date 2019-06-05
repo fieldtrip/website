@@ -1,7 +1,7 @@
 ---
 title: ft_nirs_scalpcouplingindex
 ---
-```
+```plaintext
  FT_NIRS_SCALPCOUPLINGINDEX computes the zero-lag cross-correlation 
  between pairs of raw NIRS-channels to identify bad channels. 
 

@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_openmeeg
 ---
-```
+```plaintext
  FT_HEADMODEL_OPENMEEG creates a volume conduction model of the
  head using the boundary element method (BEM). This function takes
  as input the triangulated surfaces that describe the boundaries and

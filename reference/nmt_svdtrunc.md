@@ -1,7 +1,7 @@
 ---
 title: nmt_svdtrunc
 ---
-```
+```plaintext
  [Rtrunc,q,u,v] = nmt_svdtrunc(R,signalspace)
 
  Allows user to reject undesired SVD components of an arbitrary matrix R.

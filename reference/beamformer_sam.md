@@ -1,7 +1,7 @@
 ---
 title: beamformer_sam
 ---
-```
+```plaintext
  BEAMFORMER_SAM scans on pre-defined dipole locations with a single
  dipole and returns the CTF Synthetic Aperture Magnetometry (SAM)
  beamformer estimates. location. Dipole locations that are outside

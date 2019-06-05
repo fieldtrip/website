@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_selectiveaverage
 ---
-```
+```plaintext
  FT_REALTIME_SELECTIVEAVERAGE is an example realtime application for online
  averaging of the data. It should work both for EEG and MEG.
 

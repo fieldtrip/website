@@ -1,7 +1,7 @@
 ---
 title: ft_source2full
 ---
-```
+```plaintext
  FT_SOURCE2FULL recreates the grid locations outside the brain in the source 
  reconstruction, so that the source volume again describes the full grid.
  This undoes the memory savings that can be achieved using FT_SOURCE2SPARSE

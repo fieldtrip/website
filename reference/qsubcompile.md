@@ -1,7 +1,7 @@
 ---
 title: qsubcompile
 ---
-```
+```plaintext
  QSUBCOMPILE compiles your function into an standalone executable that can easily
  be distributed on a cluster by QSUBCELLFUN. Running a compiled version of your
  function does not take any additional MATLAB licenses. Note that it does require

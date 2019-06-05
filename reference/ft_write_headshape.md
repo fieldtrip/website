@@ -1,7 +1,7 @@
 ---
 title: ft_write_headshape
 ---
-```
+```plaintext
  FT_WRITE_HEADSHAPE writes a head surface, cortical sheet or
  geometrical descrition of the volume conduction model or source
  model to a file for further processing in external software.

@@ -1,7 +1,7 @@
 ---
 title: ft_appendspike
 ---
-```
+```plaintext
  FT_APPENDSPIKE combines continuous data (i.e. LFP) with point-process data
  (i.e. spikes) into a single large dataset. For each spike channel an
  additional continuos channel is inserted in the data that contains

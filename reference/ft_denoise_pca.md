@@ -1,7 +1,7 @@
 ---
 title: ft_denoise_pca
 ---
-```
+```plaintext
  FT_DENOISE_PCA performs a principal component analysis (PCA) on specified reference
  channels and subtracts the projection of the data of interest onto this orthogonal
  basis from the data of interest. This is the algorithm which is applied by 4D to

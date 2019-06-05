@@ -1,7 +1,7 @@
 ---
 title: ft_meshrealign
 ---
-```
+```plaintext
  FT_MESHREALIGN rotates, translates and optionally scales electrode positions. The
  different methods are described in detail below.
 

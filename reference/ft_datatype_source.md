@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_source
 ---
-```
+```plaintext
  FT_DATATYPE_SOURCE describes the FieldTrip MATLAB structure for data that is
  represented at the source level. This is typically obtained with a beamformer of
  minimum-norm source reconstruction using FT_SOURCEANALYSIS.

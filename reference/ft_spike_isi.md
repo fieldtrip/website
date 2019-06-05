@@ -1,7 +1,7 @@
 ---
 title: ft_spike_isi
 ---
-```
+```plaintext
  FT_SPIKE_ISI computes the interspike interval histogram
 
  The input SPIKE should be organised as 

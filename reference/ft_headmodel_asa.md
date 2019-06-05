@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_asa
 ---
-```
+```plaintext
  FT_HEADMODEL_ASA reads a volume conduction model from an ASA *.vol
  file
 

@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_eog
 ---
-```
+```plaintext
  FT_ARTIFACT_EOG reads the data segments of interest from file and identifies EOG
  artifacts.
 

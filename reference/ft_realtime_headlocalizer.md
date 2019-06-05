@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_headlocalizer
 ---
-```
+```plaintext
  FT_REALTIME_HEADLOCALIZER is a real-time application for online visualization of
  the head position for the CTF275 and the Elekta/Neuromag systems. This uses the
  continuous head localization (in CTF terminology, i.e. CHL) or position indicator

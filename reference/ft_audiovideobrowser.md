@@ -1,7 +1,7 @@
 ---
 title: ft_audiovideobrowser
 ---
-```
+```plaintext
  FT_AUDIOVIDEOBROWSER reads and vizualizes the audio and/or video data
  corresponding to the EEG/MEG data that is passed into this function.
 

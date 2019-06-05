@@ -1,7 +1,7 @@
 ---
 title: ft_examplefunction
 ---
-```
+```plaintext
  FT_EXAMPLEFUNCTION demonstrates to new developers how a FieldTrip function should look like
 
  Use as

@@ -1,7 +1,7 @@
 ---
 title: ft_spike_plot_isi
 ---
-```
+```plaintext
  FT_SPIKE_PLOT_ISI makes an inter-spike-interval bar plot.
 
  Use as

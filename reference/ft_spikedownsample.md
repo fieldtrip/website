@@ -1,7 +1,7 @@
 ---
 title: ft_spikedownsample
 ---
-```
+```plaintext
  FT_SPIKEDOWNSAMPLE takes electrophysiological data that was continuoudly
  sampled at 32KHz and preprocesses and downsamples it to obtain the LFP
  data, which can subsequently be processed in more detail.

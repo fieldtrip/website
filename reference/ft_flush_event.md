@@ -1,7 +1,7 @@
 ---
 title: ft_flush_event
 ---
-```
+```plaintext
  FT_FLUSH_EVENT removes all events from the event queue
 
  Use as

@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_mim
 ---
-```
+```plaintext
  FT_CONNECTIVITY_MIM computes the multivariate interaction measure from a
  data-matrix containing the cross-spectral density. This implements the method
  described in Ewald et al., Estimating true brain connectivity from EEG/MEG data

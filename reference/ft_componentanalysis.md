@@ -1,7 +1,7 @@
 ---
 title: ft_componentanalysis
 ---
-```
+```plaintext
  FT_COMPONENTANALYSIS performs independent component analysis or other
  spatio-temporal decompositions of EEG or MEG data. This function computes
  the topography and timecourses of the components. The output of this

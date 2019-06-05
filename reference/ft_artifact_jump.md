@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_jump
 ---
-```
+```plaintext
  FT_ARTIFACT_JUMP reads the data segments of interest from file and identifies
  SQUID jump artifacts.
 

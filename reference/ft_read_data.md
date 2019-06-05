@@ -1,7 +1,7 @@
 ---
 title: ft_read_data
 ---
-```
+```plaintext
  FT_READ_DATA reads electrophysiological data from a variety of EEG, MEG and LFP
  files and represents it in a common data-independent format. The supported formats
  are listed in the accompanying FT_READ_HEADER function.

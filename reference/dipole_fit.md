@@ -1,7 +1,7 @@
 ---
 title: dipole_fit
 ---
-```
+```plaintext
  DIPOLE_FIT performs an equivalent current dipole fit with a single
  or a small number of dipoles to explain an EEG or MEG scalp topography.
 

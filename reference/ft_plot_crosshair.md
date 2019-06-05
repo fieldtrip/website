@@ -1,7 +1,7 @@
 ---
 title: ft_plot_crosshair
 ---
-```
+```plaintext
  FT_PLOT_CROSSHAIR plots a crosshair at a specified position in two [x, y] or three
  [x, y, z] dimensions. 
 

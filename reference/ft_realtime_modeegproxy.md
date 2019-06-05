@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_modeegproxy
 ---
-```
+```plaintext
  FT_REALTIME_MODEEGPROXY reads continuous data from a modeeg EEG acquisition system
  through the serial port or through BlueTooth and writes it to a FieldTrip buffer.
 

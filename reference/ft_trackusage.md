@@ -1,7 +1,7 @@
 ---
 title: ft_trackusage
 ---
-```
+```plaintext
  FT_TRACKUSAGE tracks the usage of specific FieldTrip components using a central
  tracking server. This involves sending a small snippet of information to the
  server. Tracking is only used to gather data on the usage of the FieldTrip

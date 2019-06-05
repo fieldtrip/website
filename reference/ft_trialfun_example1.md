@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_example1
 ---
-```
+```plaintext
  FT_TRIALFUN_EXAMPLE1 is an example trial function. It searches for events
  of type "trigger" and specifically for a trigger with value 7, followed
  by a trigger with value 64.

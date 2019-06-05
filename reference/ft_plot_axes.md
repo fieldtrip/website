@@ -1,7 +1,7 @@
 ---
 title: ft_plot_axes
 ---
-```
+```plaintext
  FT_PLOT_AXES adds three axes of 150 mm and a 10 mm sphere at the origin to the
  present 3-D figure. The axes and sphere are scaled according to the units of the
  geometrical object that is passed to this function. Furthermore, when possible,

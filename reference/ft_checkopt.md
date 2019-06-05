@@ -1,7 +1,7 @@
 ---
 title: ft_checkopt
 ---
-```
+```plaintext
  FT_CHECKOPT does a validity test on the types and values of a configuration
  structure or cell-array with key-value pairs.
 

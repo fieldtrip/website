@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_clip
 ---
-```
+```plaintext
  FT_ARTIFACT_CLIP scans the data segments of interest for channels that clip. These
  artifacts are detected by the signal being completely flat for a given amount of
  time.

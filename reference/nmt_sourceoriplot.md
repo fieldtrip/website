@@ -1,7 +1,7 @@
 ---
 title: nmt_sourceoriplot
 ---
-```
+```plaintext
  NMT_SOURCEORIPLOT
  plots functional source orientation data on slices or on
  a surface, optionally as an overlay on anatomical MRI data, where

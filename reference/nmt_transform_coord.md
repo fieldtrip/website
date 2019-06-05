@@ -1,7 +1,7 @@
 ---
 title: nmt_transform_coord
 ---
-```
+```plaintext
  [XYZ_O]=NMT_COORDTFM(A,XYZ_I)
  [X_O,Y_O,Z_O]=NMT_COORDTFM(A,X_I,Y_I,Z_I)
  Performs coordinate transformation using transform matrix A.

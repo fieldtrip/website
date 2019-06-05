@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_signalproxy
 ---
-```
+```plaintext
  FT_REALTIME_SIGNALPROXY creates some random data and writes it to a FieldTrip buffer.
 
  The FieldTrip buffer is a network transparent server that allows the acquisition

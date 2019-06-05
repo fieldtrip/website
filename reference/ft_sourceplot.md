@@ -1,7 +1,7 @@
 ---
 title: ft_sourceplot
 ---
-```
+```plaintext
  FT_SOURCEPLOT plots functional source reconstruction data on slices or on a surface,
  optionally as an overlay on anatomical MRI data, where statistical data can be used to
  determine the opacity of the mask. Input data comes from FT_SOURCEANALYSIS,

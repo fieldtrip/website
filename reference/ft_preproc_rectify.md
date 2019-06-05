@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_rectify
 ---
-```
+```plaintext
  FT_PREPROC_RECTIFY rectifies the data, i.e. converts all samples with a
  negative value into the similar magnitude positive value
 

@@ -1,7 +1,7 @@
 ---
 title: bcifun_latidx
 ---
-```
+```plaintext
  BCIFUN_LATIDX extracts alpha power, computes the alpha lateralization index 
  and sends a command to an external device
 

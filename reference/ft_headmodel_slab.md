@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_slab
 ---
-```
+```plaintext
  FT_HEADMODEL_SLAB creates an EEG volume conduction model that
  is described with an infinite conductive slab. You can think
  of this as two parallel planes containing a mass of conductive

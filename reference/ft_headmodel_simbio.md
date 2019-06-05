@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_simbio
 ---
-```
+```plaintext
  FT_HEADMODEL_SIMBIO creates a volume conduction model of the head
  using the finite element method (FEM) for EEG. This function takes
  as input a volumetric mesh (hexahedral or tetrahedral) and

@@ -1,7 +1,7 @@
 ---
 title: ft_plot_mesh
 ---
-```
+```plaintext
  FT_PLOT_MESH visualizes a surface or volumetric mesh, for example describing the
  realistic shape of the head. Surface meshes should be described by triangles and
  contain the fields "pos" and "tri". Volumetric meshes should be described with

@@ -1,7 +1,7 @@
 ---
 title: ft_timelockbaseline
 ---
-```
+```plaintext
  FT_TIMELOCKBASELINE performs baseline correction for ERF and ERP data
 
  Use as

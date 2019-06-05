@@ -1,7 +1,7 @@
 ---
 title: matlab2markdown
 ---
-```
+```plaintext
  MATLAB2MARKDOWN converts a MATLAB script or function to Markdown format. All
  comments are converted to text, comment lines starting with %% are converted to
  headings, sections with code are properly formatted, and words that appear in bold,
@@ -19,7 +19,8 @@ title: matlab2markdown
  Optional input arguments can be specified as key-value pairs and can include
    imagestyle = 'none|inline|jekyll'
    pageheader = 'none|jekyll'
-   overwrite  = true/false allow overwriting of the .md file
+   overwrite  = true/false, allow overwriting of the .md file
+   highlight  = string, 'matlab', 'plaintext' or '' (default = '')
    ...
 
  See also MARKDOWN2MATLAB

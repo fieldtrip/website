@@ -1,7 +1,7 @@
 ---
 title: ft_networkanalysis
 ---
-```
+```plaintext
  FT_NETWORKANALYSIS computes various network graph measures from
  between-channel or between source-level EEG/MEG signals. This function
  acts as a wrapper aroun the network metrics implemented in the brain

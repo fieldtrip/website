@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_depsamplesT
 ---
-```
+```plaintext
  FT_STATFUN_DEPSAMPLEST calculates the dependent samples T-statistic on the
  biological data in dat (the dependent variable), using the information on the
  independent variable (ivar) in design.

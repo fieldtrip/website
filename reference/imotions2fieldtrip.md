@@ -1,7 +1,7 @@
 ---
 title: imotions2fieldtrip
 ---
-```
+```plaintext
  IMOTIONS2FIELDTRIP imports an iMotions *.txt file and represents it as a FieldTrip
  raw data structure.
 

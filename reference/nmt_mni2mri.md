@@ -1,7 +1,7 @@
 ---
 title: nmt_mni2mri
 ---
-```
+```plaintext
  [xyz_o_mm,xyz_o_vx]=nmt_mri2mni(xyz_i,mrifullpath,[doaffine])
  Takes MNI coordinates (mm) and converts to original MRI coordinates (mm
  and/or voxel) using normalization info from SPM8 (or SPM12 'OldNorm')

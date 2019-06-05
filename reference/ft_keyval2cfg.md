@@ -1,7 +1,7 @@
 ---
 title: ft_keyval2cfg
 ---
-```
+```plaintext
  FT_KEYVAL2CFG converts between a structure and a cell-array with key-value
  pairs which can be used for optional input arguments. 
  

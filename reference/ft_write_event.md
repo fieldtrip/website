@@ -1,7 +1,7 @@
 ---
 title: ft_write_event
 ---
-```
+```plaintext
  FT_WRITE_EVENT writes an event structure to a file, a message daemon
  listening on a network socked, or to another computer connected through
  the serial port.

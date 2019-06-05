@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_headmodel
 ---
-```
+```plaintext
  FT_DATATYPE_HEADMODEL describes the FieldTrip MATLAB structure for a volume
  conduction model of the head that can be used for forward computations of
  the EEG potentials or the MEG fields. The volume conduction model represents

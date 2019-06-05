@@ -1,7 +1,7 @@
 ---
 title: ft_spikedensity
 ---
-```
+```plaintext
  FT_SPIKEDENSITY computes the spike density function of the spike trains by
  convolving the data with a window.
 

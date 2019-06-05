@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_raw
 ---
-```
+```plaintext
  FT_DATATYPE_RAW describes the FieldTrip MATLAB structure for raw data
 
  The raw datatype represents sensor-level time-domain data typically

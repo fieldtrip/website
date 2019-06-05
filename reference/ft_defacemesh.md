@@ -1,7 +1,7 @@
 ---
 title: ft_defacemesh
 ---
-```
+```plaintext
  FT_DEFACEMESH allows you to de-identify a scalp surface mesh by erasing specific
  regions, such as the face and ears. The graphical user interface allows you to
  position a box over the anatomical data inside which all vertices will be removed.

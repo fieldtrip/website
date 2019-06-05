@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_packettimer
 ---
-```
+```plaintext
  FT_REALTIME_PACKETTIMER can be used to time the rate at which data can be processed
 
  Use as

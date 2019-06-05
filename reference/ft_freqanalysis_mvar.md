@@ -1,7 +1,7 @@
 ---
 title: ft_freqanalysis_mvar
 ---
-```
+```plaintext
  FT_FREQANALYSIS_MVAR performs frequency analysis on
  mvar data, by fourier transformation of the coefficients. The output
  contains cross-spectral density, spectral transfer matrix, and the

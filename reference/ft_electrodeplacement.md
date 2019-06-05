@@ -1,7 +1,7 @@
 ---
 title: ft_electrodeplacement
 ---
-```
+```plaintext
  FT_ELECTRODEPLACEMENT allows manual placement of electrodes on a MRI scan, CT scan
  or on a triangulated surface of the head. This function supports different methods.
 

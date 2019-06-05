@@ -1,7 +1,7 @@
 ---
 title: ft_select_range
 ---
-```
+```plaintext
  FT_SELECT_RANGE is a helper function that can be used as callback function
  in a figure. It allows the user to select a horizontal or a vertical
  range, or one or multiple boxes.

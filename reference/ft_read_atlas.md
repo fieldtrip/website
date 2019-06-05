@@ -1,7 +1,7 @@
 ---
 title: ft_read_atlas
 ---
-```
+```plaintext
  FT_READ_ATLAS reads an template/individual segmentation or parcellation from disk.
  The volumetric segmentation or the surface-based parcellation can either represent
  a template atlas (eg. AAL or the Talairach Daemon), it can represent an

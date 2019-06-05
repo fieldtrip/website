@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_singlesphere
 ---
-```
+```plaintext
  FT_HEADMODEL_SINGLESPHERE creates a volume conduction model of the
  head by fitting a spherical model to a set of points that describe
  the head surface.

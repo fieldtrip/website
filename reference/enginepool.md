@@ -1,7 +1,7 @@
 ---
 title: enginepool
 ---
-```
+```plaintext
  ENGINEPOOL manages the pool of MATLAB engine workers that is available
  for distributed computing
 

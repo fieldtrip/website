@@ -1,7 +1,7 @@
 ---
 title: ft_rejectartifact
 ---
-```
+```plaintext
  FT_REJECTARTIFACT removes data segments containing artifacts. It returns a
  configuration structure with a modified trial definition which can be used for
  preprocessing of only the clean data.

@@ -1,7 +1,7 @@
 ---
 title: ft_mvaranalysis
 ---
-```
+```plaintext
  FT_MVARANALYSIS performs multivariate autoregressive modeling on
  time series data over multiple trials.
 

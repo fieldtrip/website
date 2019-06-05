@@ -1,7 +1,7 @@
 ---
 title: ft_topoplotTFR
 ---
-```
+```plaintext
  FT_TOPOPLOTTFR plots the topographic distribution over the head
  of a 3-dimensional data representations such as time-frequency
  representation of the power or coherence spectrum.

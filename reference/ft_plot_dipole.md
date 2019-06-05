@@ -1,7 +1,7 @@
 ---
 title: ft_plot_dipole
 ---
-```
+```plaintext
  FT_PLOT_DIPOLE makes a 3-D representation of a dipole using a sphere and a stick
  pointing along the dipole orientation
 

@@ -1,7 +1,7 @@
 ---
 title: ft_rejectcomponent
 ---
-```
+```plaintext
  FT_REJECTCOMPONENT backprojects an ICA (or similar) decomposition to the
  channel level after removing the independent components that contain
  the artifacts. This function does not automatically detect the artifact

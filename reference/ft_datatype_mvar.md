@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_mvar
 ---
-```
+```plaintext
  FT_DATATYPE_MVAR describes the FieldTrip MATLAB structure for multi-variate
  autoregressive model data.
 

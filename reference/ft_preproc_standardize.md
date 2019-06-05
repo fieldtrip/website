@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_standardize
 ---
-```
+```plaintext
  FT_PREPROC_STANDARDIZE performs a z-transformation or standardization
  of the data. The standardized data will have a zero-mean and a unit
  standard deviation.

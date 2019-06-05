@@ -1,7 +1,7 @@
 ---
 title: ft_volumelookup
 ---
-```
+```plaintext
  FT_VOLUMELOOKUP can be used in to combine an anatomical or functional
  atlas with the source reconstruction results. You can use it for forward
  and reverse lookup.

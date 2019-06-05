@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_hilbert
 ---
-```
+```plaintext
  FT_PREPROC_HILBERT computes the Hilbert transpose of the data and optionally
  performs post-processing on the complex representation, e.g. the absolute
  value of the Hilbert transform of a band-pass filtered signal corresponds

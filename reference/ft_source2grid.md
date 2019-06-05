@@ -1,7 +1,7 @@
 ---
 title: ft_source2grid
 ---
-```
+```plaintext
  FT_SOURCE2GRID removes the fields from a source structure that are
  not necessary to reuse the dipole grid in another source estimation.
 

@@ -1,7 +1,7 @@
 ---
 title: ft_plot_headshape
 ---
-```
+```plaintext
  FT_PLOT_HEADSHAPE visualizes the shape of a head from a variety of
  acquisition system. Usually the head shape is measured with a
  Polhemus tracker and some proprietary software (e.g. from CTF, BTi

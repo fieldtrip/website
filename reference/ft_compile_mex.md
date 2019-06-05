@@ -1,7 +1,7 @@
 ---
 title: ft_compile_mex
 ---
-```
+```plaintext
  FT_COMPILE_MEX can be used for compiling most of the FieldTrip MEX files Note that
  this function does not put the MEX files in the correct location in the private
  folders, this is managed by a Bash script. In case you are not working with Git and

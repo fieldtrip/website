@@ -1,7 +1,7 @@
 ---
 title: ft_dipolesimulation
 ---
-```
+```plaintext
  FT_DIPOLESIMULATION computes the field or potential of a simulated dipole
  and returns a datastructure identical to the FT_PREPROCESSING function.
 

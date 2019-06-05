@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_imotions
 ---
-```
+```plaintext
  FT_TRIALFUN_IMOTIONS makes a trial definition for an iMotions event structure
 
  The trialdef structure can contain the following specifications

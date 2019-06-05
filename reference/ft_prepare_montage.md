@@ -1,7 +1,7 @@
 ---
 title: ft_prepare_montage
 ---
-```
+```plaintext
  FT_PREPARE_MONTAGE creates a referencing scheme based on the input configuration
  options and the channels in the data structure. The resulting montage can be
  given as input to FT_APPLY_MONTAGE, or as cfg.montage to FT_PREPROCESSING.

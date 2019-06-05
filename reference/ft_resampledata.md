@@ -1,7 +1,7 @@
 ---
 title: ft_resampledata
 ---
-```
+```plaintext
  FT_RESAMPLEDATA performs a resampling or downsampling of the data
 
  Use as

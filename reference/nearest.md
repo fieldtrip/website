@@ -1,7 +1,7 @@
 ---
 title: nearest
 ---
-```
+```plaintext
  NEAREST return the index of an array nearest to a scalar
 
  Use as

@@ -1,7 +1,7 @@
 ---
 title: ft_preamble
 ---
-```
+```plaintext
  FT_PREAMBLE is a helper function that is included in many of the FieldTrip
  functions and which takes care of some general settings and operations at the
  begin of the function.

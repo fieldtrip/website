@@ -1,7 +1,7 @@
 ---
 title: ft_specest_wavelet
 ---
-```
+```plaintext
  FT_SPECEST_WAVELET performs time-frequency analysis on any time series trial data
  using the 'wavelet method' based on Morlet wavelets, doing convolution in the time
  domain by multiplication in the frequency domain.

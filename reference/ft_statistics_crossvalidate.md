@@ -1,7 +1,7 @@
 ---
 title: ft_statistics_crossvalidate
 ---
-```
+```plaintext
  FT_STATISTICS_CROSSVALIDATE performs cross-validation using a prespecified
  multivariate analysis given by cfg.mva
 

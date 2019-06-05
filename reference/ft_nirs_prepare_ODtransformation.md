@@ -1,7 +1,7 @@
 ---
 title: ft_nirs_prepare_ODtransformation
 ---
-```
+```plaintext
  FT_NIRS_PREPARE_ODTRANSFORMATION returns the transformation matrix from
  optical densities (OD) to chromophore concentrations such as (de-)
  oxygenated hemoglobin.

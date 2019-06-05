@@ -1,7 +1,7 @@
 ---
 title: ft_spikedetection
 ---
-```
+```plaintext
  FT_SPIKEDETECTION reads continuous data from disk and detects spikes. The
  function writes the unsorted spike waveforms to disk in another file.
 

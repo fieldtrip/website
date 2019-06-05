@@ -1,7 +1,7 @@
 ---
 title: ft_select_point3d
 ---
-```
+```plaintext
  FT_SELECT_POINT3D helper function for selecting one or multiple points on a 3D mesh
  using the mouse. It returns a list of the [x y z] coordinates of the selected
  points.

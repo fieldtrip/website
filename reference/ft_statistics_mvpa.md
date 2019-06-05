@@ -1,7 +1,7 @@
 ---
 title: ft_statistics_mvpa
 ---
-```
+```plaintext
  FT_STATISTICS_MVPA performs multivariate pattern classification
  on the data. If the data has not been averaged over time, classification
  is performed separately for every time point. Additionally, searchlight

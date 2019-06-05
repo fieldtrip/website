@@ -1,7 +1,7 @@
 ---
 title: ft_getopt
 ---
-```
+```plaintext
  FT_GETOPT gets the value of a specified option from a configuration structure
  or from a cell-array with key-value pairs.
 

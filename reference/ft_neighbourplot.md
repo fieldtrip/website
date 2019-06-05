@@ -1,7 +1,7 @@
 ---
 title: ft_neighbourplot
 ---
-```
+```plaintext
  FT_NEIGHBOURPLOT visualizes neighbouring channels in a particular channel
  configuration. The positions of the channel are specified in a
  gradiometer or electrode configuration or from a layout.

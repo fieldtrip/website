@@ -1,7 +1,7 @@
 ---
 title: ft_volumewrite
 ---
-```
+```plaintext
  FT_VOLUMEWRITE exports anatomical or functional volume data to a Analyze
  or BrainVoyager file. The data in the resulting file(s) can be
  further analyzed and/or visualized in MRIcro, SPM, BrainVoyager,

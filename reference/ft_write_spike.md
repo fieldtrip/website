@@ -1,7 +1,7 @@
 ---
 title: ft_write_spike
 ---
-```
+```plaintext
  FT_WRITE_SPIKE writes animal electrophysiology spike timestamps and/or waveforms
  to file
 

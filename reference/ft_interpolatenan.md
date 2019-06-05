@@ -1,7 +1,7 @@
 ---
 title: ft_interpolatenan
 ---
-```
+```plaintext
  FT_INTERPOLATENAN interpolates time series that contains segments of nans obtained
  by replacing artifactual data with nans using, for example, FT_REJECTARTIFACT, or
  by redefining trials with FT_REDEFINETRIAL resulting in trials with gaps.

@@ -1,7 +1,7 @@
 ---
 title: ft_freqdescriptives
 ---
-```
+```plaintext
  FT_FREQDESCRIPTIVES computes descriptive univariate statistics of
  the frequency or time-frequency decomposition of the EEG/MEG signal,
  thus the powerspectrum and its standard error.

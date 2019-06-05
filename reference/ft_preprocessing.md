@@ -1,7 +1,7 @@
 ---
 title: ft_preprocessing
 ---
-```
+```plaintext
  FT_PREPROCESSING reads MEG and/or EEG data according to user-specified trials
  and applies several user-specified preprocessing steps to the signals.
 

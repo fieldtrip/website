@@ -1,7 +1,7 @@
 ---
 title: ft_timelockgrandaverage
 ---
-```
+```plaintext
  FT_TIMELOCKGRANDAVERAGE computes ERF/ERP average and variance
  over multiple subjects or over blocks within one subject
 

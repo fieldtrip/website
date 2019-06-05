@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_smooth
 ---
-```
+```plaintext
  FT_PREPROC_SMOOTH performs boxcar smoothing with specified length.
  Edge behavior is improved by implicit padding with the mean over
  half the boxcar length at the edges of the data segment.

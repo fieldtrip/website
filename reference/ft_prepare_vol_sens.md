@@ -1,7 +1,7 @@
 ---
 title: ft_prepare_vol_sens
 ---
-```
+```plaintext
  FT_PREPARE_VOL_SENS does some bookkeeping to ensure that the volume
  conductor model and the sensor array are ready for subsequent forward
  leadfield computations. It takes care of some pre-computations that can

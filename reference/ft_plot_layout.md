@@ -1,7 +1,7 @@
 ---
 title: ft_plot_layout
 ---
-```
+```plaintext
  FT_PLOT_LAYOUT plots a two-dimensional channel layout
 
  Use as

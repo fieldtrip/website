@@ -1,7 +1,7 @@
 ---
 title: ft_channelcombination
 ---
-```
+```plaintext
  FT_CHANNELCOMBINATION creates a cell-array with combinations of EEG/MEG
  channels for subsequent cross-spectral-density and coherence analysis
 

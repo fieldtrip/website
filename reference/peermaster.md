@@ -1,7 +1,7 @@
 ---
 title: peermaster
 ---
-```
+```plaintext
  PEERMASTER starts the low-level peer services and switches to master
  mode. After switching to master mode, you can use submit jobs for
  remote execution. The server will not accept jobs to be executed,

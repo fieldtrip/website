@@ -1,7 +1,7 @@
 ---
 title: ft_headcoordinates
 ---
-```
+```plaintext
  FT_HEADCOORDINATES returns the homogeneous coordinate transformation matrix
  that converts the specified fiducials in any coordinate system (e.g. MRI)
  into the rotated and translated headcoordinate system.

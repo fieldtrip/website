@@ -1,7 +1,7 @@
 ---
 title: ft_defacevolume
 ---
-```
+```plaintext
  FT_DEFACEVOLUME allows you to de-identify an anatomical MRI by erasing specific
  regions, such as the face and ears. The graphical user interface allows you to
  position a box over the anatomical data inside which all anatomical voxel values will

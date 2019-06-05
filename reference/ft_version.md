@@ -1,7 +1,7 @@
 ---
 title: ft_version
 ---
-```
+```plaintext
  FT_VERSION returns the version and installation directory of FieldTrip
 
  FieldTrip is not released with version numbers as "2.0", "2.1", etc. Instead, we

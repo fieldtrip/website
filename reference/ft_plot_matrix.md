@@ -1,7 +1,7 @@
 ---
 title: ft_plot_matrix
 ---
-```
+```plaintext
  FT_PLOT_MATRIX visualizes a matrix as an image, similar to IMAGESC.
  The position, width and height can be controlled to allow multiple
  matrices (i.e. channels) to be plotted in a topographic arrangement.

@@ -1,7 +1,7 @@
 ---
 title: ft_math
 ---
-```
+```plaintext
  FT_MATH performs mathematical operations on FieldTrip data structures,
  such as addition, subtraction, division, etc.
 

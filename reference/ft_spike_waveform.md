@@ -1,7 +1,7 @@
 ---
 title: ft_spike_waveform
 ---
-```
+```plaintext
  FT_SPIKE_WAVEFORM computes descriptive parameters on
  waveform (mean and variance), and performs operations like realignment, outlier rejection,
  invertation, normalization and interpolation (see configurations).

@@ -1,7 +1,7 @@
 ---
 title: ft_datatype
 ---
-```
+```plaintext
  FT_DATATYPE determines the type of data represented in a FieldTrip data
  structure and returns a string with raw, freq, timelock source, comp,
  spike, source, volume, dip, montage, event.

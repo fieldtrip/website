@@ -1,7 +1,7 @@
 ---
 title: ft_save_workspace
 ---
-```
+```plaintext
  FT_SAVE_WORKSPACE saves every variable in the base workspace to a .mat file with
  the same name as the variable in the workspace itself. For example, the variable
  "ans" would be saved to the file "ans.mat". Prior to calling this function, you

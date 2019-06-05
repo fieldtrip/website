@@ -1,7 +1,7 @@
 ---
 title: ft_specest_mtmconvol
 ---
-```
+```plaintext
  FT_SPECEST_MTMCONVOL performs wavelet convolution in the time domain by
  multiplication in the frequency domain.
 

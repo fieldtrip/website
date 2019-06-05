@@ -1,7 +1,7 @@
 ---
 title: ft_omri_quality_plot
 ---
-```
+```plaintext
  function ft_omri_quality_plot(motEst, curScan, varScan, [maxVal, maxVar])
 
  motEst  should be Nx6 matrix of estimated motion parameters

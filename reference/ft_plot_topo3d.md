@@ -1,7 +1,7 @@
 ---
 title: ft_plot_topo3d
 ---
-```
+```plaintext
  FT_PLOT_TOPO3D makes a 3-D topographic representation of the electric
  potential or field at the sensor locations
 

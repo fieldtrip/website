@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_muscle
 ---
-```
+```plaintext
  FT_ARTIFACT_MUSCLE reads the data segments of interest from file and
  identifies muscle artifacts.
 

@@ -1,7 +1,7 @@
 ---
 title: ft_compute_leadfield
 ---
-```
+```plaintext
  FT_COMPUTE_LEADFIELD computes a forward solution for a dipole in a a volume
  conductor model. The forward solution is expressed as the leadfield
  matrix (Nchan*3), where each column corresponds with the potential or field

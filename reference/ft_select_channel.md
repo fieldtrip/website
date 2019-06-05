@@ -1,7 +1,7 @@
 ---
 title: ft_select_channel
 ---
-```
+```plaintext
  FT_SELECT_CHANNEL is a helper function that can be used as callback function
  in a figure. It allows the user to select a channel. The channel labels
  are returned.

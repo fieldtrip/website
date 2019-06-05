@@ -1,7 +1,7 @@
 ---
 title: ft_dipolefitting
 ---
-```
+```plaintext
  FT_DIPOLEFITTING perform grid search and non-linear fit with one or multiple
  dipoles and try to find the location where the dipole model is best able
  to explain the measured EEG or MEG topography.

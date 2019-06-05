@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_indepsamplesF
 ---
-```
+```plaintext
  FT_STATFUN_INDEPSAMPLESF calculates the independent samples F-statistic on the
  biological data in dat (the dependent variable), using the information on the
  independent variable (ivar) in design.

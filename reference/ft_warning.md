@@ -1,7 +1,7 @@
 ---
 title: ft_warning
 ---
-```
+```plaintext
  FT_WARNING prints a warning message on screen, depending on the verbosity 
  settings of the calling high-level FieldTrip function. This function works
  similar to the standard WARNING function, but also features the "once" mode.

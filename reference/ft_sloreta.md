@@ -1,7 +1,7 @@
 ---
 title: ft_sloreta
 ---
-```
+```plaintext
  ft_sloreta scans on pre-defined dipole locations with a single dipole
  and returns the sLORETA spatial filter output for a dipole on every
  location. Dipole locations that are outside the head will return a

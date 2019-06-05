@@ -1,7 +1,7 @@
 ---
 title: ft_appendtimelock
 ---
-```
+```plaintext
  FT_APPENDTIMELOCK concatenates multiple timelock (ERP/ERF) data structures that
  have been processed separately. If the input data structures contain different
  channels, it will be concatenated along the channel direction. If the channels are

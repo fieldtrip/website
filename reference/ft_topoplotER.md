@@ -1,7 +1,7 @@
 ---
 title: ft_topoplotER
 ---
-```
+```plaintext
  FT_TOPOPLOTER plots the topographic distribution over the head
  of a 2-dimensional data representations such as the event-related
  fields or potentials or the power- or coherence spectrum.

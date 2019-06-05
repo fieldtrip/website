@@ -1,7 +1,7 @@
 ---
 title: ft_checkconfig
 ---
-```
+```plaintext
  FT_CHECKCONFIG checks the input cfg of the main FieldTrip functions
  in three steps.
 

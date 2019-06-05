@@ -1,7 +1,7 @@
 ---
 title: ft_standalone
 ---
-```
+```plaintext
  FT_STANDALONE is the entry function of the compiled FieldTrip application.
  The compiled application can be used to execute FieldTrip data analysis
  scripts.

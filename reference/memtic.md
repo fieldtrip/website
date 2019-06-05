@@ -1,7 +1,7 @@
 ---
 title: memtic
 ---
-```
+```plaintext
  MEMTIC start a MATLAB memory recorder
 
    MEMTIC and MEMTOC functions work together to measure memory usage.

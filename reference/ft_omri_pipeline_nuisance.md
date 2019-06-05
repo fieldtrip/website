@@ -1,7 +1,7 @@
 ---
 title: ft_omri_pipeline_nuisance
 ---
-```
+```plaintext
  FT_OMRI_PIPELINE_NUISANCE implements an online fMRI pre-processing pipeline, including
  motion correction, slice time correction, smoothing, and regressing out nuisance
  regressors (constant, linear trend, motion estimates).

@@ -1,7 +1,7 @@
 ---
 title: ft_rejectvisual
 ---
-```
+```plaintext
  FT_REJECTVISUAL shows the preprocessed data in all channels and/or trials to
  allow the user to make a visual selection of the data that should be
  rejected. The data can be displayed in a "summary" mode, in which case

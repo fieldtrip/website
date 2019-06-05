@@ -1,7 +1,7 @@
 ---
 title: ft_clusterplot
 ---
-```
+```plaintext
  FT_CLUSTERPLOT plots a series of topographies with highlighted clusters.
 
  Use as

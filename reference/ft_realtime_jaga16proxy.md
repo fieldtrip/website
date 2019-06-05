@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_jaga16proxy
 ---
-```
+```plaintext
  FT_REALTIME_JAGA16PROXY reads continuous EEG data from a Jinga-Hi JAGA16 system
  through the UDP network interface and writes it to a FieldTrip buffer.
 

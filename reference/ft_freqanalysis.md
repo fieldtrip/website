@@ -1,7 +1,7 @@
 ---
 title: ft_freqanalysis
 ---
-```
+```plaintext
  FT_FREQANALYSIS performs frequency and time-frequency analysis
  on time series data over multiple trials
 

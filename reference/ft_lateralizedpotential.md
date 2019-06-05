@@ -1,7 +1,7 @@
 ---
 title: ft_lateralizedpotential
 ---
-```
+```plaintext
  FT_LATERALIZEDPOTENTIAL computes lateralized potentials such as the
  lateralized readiness potential (LRP)
 

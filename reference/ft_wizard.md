@@ -1,7 +1,7 @@
 ---
 title: ft_wizard
 ---
-```
+```plaintext
  FT_WIZARD is a graphical user interface to evaluate a FieldTrip analysis
  script one step at a time, allowing you to go to the next step if you are
  content with the data so far, or to the previous step if you want to repeat it

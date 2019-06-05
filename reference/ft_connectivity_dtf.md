@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_dtf
 ---
-```
+```plaintext
  FT_CONNECTIVITY_DTF computes the directed transfer function.
 
  Use as

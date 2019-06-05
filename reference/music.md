@@ -1,7 +1,7 @@
 ---
 title: music
 ---
-```
+```plaintext
  MUSIC source localization using MUltiple SIgnal Classification
 
  This is a signal subspace method, which covers the techniques for

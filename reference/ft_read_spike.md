@@ -1,7 +1,7 @@
 ---
 title: ft_read_spike
 ---
-```
+```plaintext
  FT_READ_SPIKE reads spike timestamps and waveforms from various data
  formats.
 

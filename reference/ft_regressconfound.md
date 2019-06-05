@@ -1,7 +1,7 @@
 ---
 title: ft_regressconfound
 ---
-```
+```plaintext
  FT_REGRESSCONFOUND estimates the regression weight of a set of confounds
  using a General Linear Model (GLM) and removes the estimated contribution
  from the single-trial data.

@@ -1,7 +1,7 @@
 ---
 title: qsubcellfun
 ---
-```
+```plaintext
  QSUBCELLFUN applies a function to each element of a cell-array. The
  function execution is done in parallel using the Torque, SGE, PBS or
  SLURM batch queue system.

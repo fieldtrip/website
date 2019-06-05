@@ -1,7 +1,7 @@
 ---
 title: ft_select_voxel
 ---
-```
+```plaintext
  FT_SELECT_VOXEL is a helper function that can be used as callback function
  in a figure. It allows the user to select a voxel from a (resliced) 3-D volume.
 

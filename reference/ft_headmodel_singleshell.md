@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_singleshell
 ---
-```
+```plaintext
  FT_HEADMODEL_SINGLESHELL creates a volume conduction model of the
  head for MEG based on a realistic shaped surface of the inside of
  the skull.

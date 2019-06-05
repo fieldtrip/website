@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_twoclass_classification
 ---
-```
+```plaintext
  FT_TRIALFUN_TWOCLASS_CLASSIFICATION
 
  This trial function can be used to train and test a real-time

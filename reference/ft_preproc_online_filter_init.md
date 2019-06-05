@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_online_filter_init
 ---
-```
+```plaintext
  function FM = ft_preproc_online_filter_init(B, A, x)
 
  Initialize an IIR filter model with coefficients B and A, as used in filter and butter etc.

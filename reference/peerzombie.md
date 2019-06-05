@@ -1,7 +1,7 @@
 ---
 title: peerzombie
 ---
-```
+```plaintext
  PEERZOMBIE starts the low-level peer servicesand switches to zombie
  mode. As a zombie, the peer will not allow any job requests or job results
  to be written to it. It still announces itself to the other peers in the

@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_fileproxy
 ---
-```
+```plaintext
  FT_REALTIME_FILEPROXY reads continuous data from an EEG/MEG file and writes it to a
  FieldTrip buffer. This works for any file format that is supported by FieldTrip.
 

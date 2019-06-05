@@ -1,7 +1,7 @@
 ---
 title: ft_eloreta
 ---
-```
+```plaintext
 
  Use as
    [dipout] = ft_eloreta(dipin, grad, headmodel, dat, cov, varargin)

@@ -1,7 +1,7 @@
 ---
 title: ft_omri_pipeline
 ---
-```
+```plaintext
  FT_OMRI_PIPELINE implements an online fMRI pre-processing pipeline
 
  Use as

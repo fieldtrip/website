@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_diff
 ---
-```
+```plaintext
  FT_STATFUN_DIFF computes the difference of the mean in two conditions. Although it
  can be used for statistical testing, it is not very usefull since it will have
  rather limited sensitivity.

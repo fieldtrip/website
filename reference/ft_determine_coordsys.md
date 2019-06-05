@@ -1,7 +1,7 @@
 ---
 title: ft_determine_coordsys
 ---
-```
+```plaintext
  FT_DETERMINE_COORDSYS plots a geometrical object, allowing you to perform
  a visual check on the coordinatesystem, the units and on the anatomical
  labels for the coordinate system axes.

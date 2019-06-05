@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_signalviewer
 ---
-```
+```plaintext
  FT_REALTIME_SIGNALVIEWER is an example realtime application for online viewing of
  the data. It should work both for EEG and MEG.
 

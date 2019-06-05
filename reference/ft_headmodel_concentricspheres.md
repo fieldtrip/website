@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_concentricspheres
 ---
-```
+```plaintext
  FT_HEADMODEL_CONCENTRICSPHERES creates a volume conduction model
  of the head based on three or four concentric spheres. For a 3-sphere
  model the spheres represent the skin surface, the outside of the

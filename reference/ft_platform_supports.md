@@ -1,7 +1,7 @@
 ---
 title: ft_platform_supports
 ---
-```
+```plaintext
  FT_PLATFORM_SUPPORTS returns a boolean indicating whether the current platform
  supports a specific capability
 

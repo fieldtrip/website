@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_tms
 ---
-```
+```plaintext
  FT_ARTIFACT_TMS reads the data segments of interest from file and identifies artefacts in
  EEG recordings that were done during TMS stimulation.
 

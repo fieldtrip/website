@@ -1,7 +1,7 @@
 ---
 title: ft_plot_headmodel
 ---
-```
+```plaintext
  FT_PLOT_HEADMODEL visualizes the boundaries in the volume conduction model of the head as
  specified in the headmodel structure
 

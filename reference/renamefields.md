@@ -1,7 +1,7 @@
 ---
 title: renamefields
 ---
-```
+```plaintext
  RENAMEFIELDS renames a selection of the fields in a structure
 
  Use as

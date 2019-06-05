@@ -1,7 +1,7 @@
 ---
 title: ft_volumenormalise
 ---
-```
+```plaintext
  FT_VOLUMENORMALISE normalises anatomical and functional volume data
  to a template anatomical MRI.
 

@@ -1,7 +1,7 @@
 ---
 title: ft_struct2string
 ---
-```
+```plaintext
  FT_STRUCT2STRING converts all char-array elements in a structure
  into strings.
 

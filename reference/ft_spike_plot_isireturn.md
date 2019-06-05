@@ -1,7 +1,7 @@
 ---
 title: ft_spike_plot_isireturn
 ---
-```
+```plaintext
  FT_SPIKE_PLOT_ISIRETURN makes a return plot from ISIH structure. A return
  plot (also called Poincare plot) plots the isi to the next spike versus the isi
  from the next spike to the second next spike, and thus gives insight in

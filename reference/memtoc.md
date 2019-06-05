@@ -1,7 +1,7 @@
 ---
 title: memtoc
 ---
-```
+```plaintext
  MEMTOC return the memory that was used
 
    MEMTIC and MEMTOC functions work together to measure memory usage.

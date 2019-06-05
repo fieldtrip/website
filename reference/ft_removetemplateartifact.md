@@ -1,7 +1,7 @@
 ---
 title: ft_removetemplateartifact
 ---
-```
+```plaintext
  FT_REMOVETEMPLATEARTIFACT removes an artifact from preprocessed data by template
  subtraction. The template can for example be formed by averaging an ECG-triggered
  MEG timecourse.

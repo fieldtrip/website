@@ -1,7 +1,7 @@
 ---
 title: ft_timelockstatistics
 ---
-```
+```plaintext
  FT_TIMELOCKSTATISTICS  computes significance probabilities and/or critical values of a parametric statistical test
  or a non-parametric permutation test.
 

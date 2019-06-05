@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_bandstopfilter
 ---
-```
+```plaintext
  FT_PREPROC_BANDSTOPFILTER applies a band-stop filter to the data and thereby
  removes the spectral components in the specified frequency band
 

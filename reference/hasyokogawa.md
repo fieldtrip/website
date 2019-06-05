@@ -1,7 +1,7 @@
 ---
 title: hasyokogawa
 ---
-```
+```plaintext
  HASYOKOGAWA tests whether the data input toolbox for MEG systems by
  Yokogawa (www.yokogawa.com, designed by KIT/EagleTechnology) is
  installed. Only the newest version of the toolbox is accepted.

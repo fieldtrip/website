@@ -1,7 +1,7 @@
 ---
 title: ft_statistics_montecarlo
 ---
-```
+```plaintext
  FT_STATISTICS_MONTECARLO performs a nonparametric statistical test by calculating
  Monte-Carlo estimates of the significance probabilities and/or critical values
  from the permutation distribution. This function should not be called

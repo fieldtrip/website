@@ -1,7 +1,7 @@
 ---
 title: ft_denoise_synthetic
 ---
-```
+```plaintext
  FT_DENOISE_SYNTHETIC computes CTF higher-order synthetic gradients for
  preprocessed data and for the corresponding gradiometer definition.
 

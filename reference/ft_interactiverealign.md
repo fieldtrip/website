@@ -1,7 +1,7 @@
 ---
 title: ft_interactiverealign
 ---
-```
+```plaintext
  FT_INTERACTIVEREALIGN allows the user to interactively translate, rotate and scale an
  individual geometrical object to a template geometrical object. It can for example be used
  to align EEG electrodes to a model of the scalp surface.

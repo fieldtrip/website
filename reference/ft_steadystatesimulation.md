@@ -1,7 +1,7 @@
 ---
 title: ft_steadystatesimulation
 ---
-```
+```plaintext
  FT_STEADYSTATESIMULATION creates a simulated EEG/MEG dataset. This function
  allows to simulate the effect of several independent stimulus trains. These can
  be presented as a periodic sequence, or as single (or few) transient stimuli.

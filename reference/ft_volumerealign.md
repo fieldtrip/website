@@ -1,7 +1,7 @@
 ---
 title: ft_volumerealign
 ---
-```
+```plaintext
  FT_VOLUMEREALIGN spatially aligns an anatomical MRI with head coordinates based on
  external fiducials or anatomical landmarks. This function does not change the
  anatomical MRI volume itself, but only adjusts the homogeneous transformation

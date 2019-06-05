@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_dip
 ---
-```
+```plaintext
  FT_DATATYPE_DIP descripts the FieldTrip MATLAB structure for dip data
 
  The dip structure reprents a dipole model that has been fitted to

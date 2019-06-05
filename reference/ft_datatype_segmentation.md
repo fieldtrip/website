@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_segmentation
 ---
-```
+```plaintext
  FT_DATATYPE_SEGMENTATION describes the FieldTrip MATLAB structure for segmented
  voxel-based data and atlasses. A segmentation can either be indexed or probabilistic
  (see below).

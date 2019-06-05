@@ -1,7 +1,7 @@
 ---
 title: ft_prepare_mesh
 ---
-```
+```plaintext
  FT_PREPARE_MESH creates a triangulated surface mesh for the volume
  conduction model. The mesh can either be selected manually from raw
  mri data or can be generated starting from a segmented volume

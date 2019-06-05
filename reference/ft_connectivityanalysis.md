@@ -1,7 +1,7 @@
 ---
 title: ft_connectivityanalysis
 ---
-```
+```plaintext
  FT_CONNECTIVITYANALYSIS computes various measures of connectivity between
  MEG/EEG channels or between source-level signals.
 

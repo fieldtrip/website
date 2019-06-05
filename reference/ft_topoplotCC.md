@@ -1,7 +1,7 @@
 ---
 title: ft_topoplotCC
 ---
-```
+```plaintext
  FT_TOPOPLOTCC plots the coherence between channel pairs
 
  Use as

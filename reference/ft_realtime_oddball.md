@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_oddball
 ---
-```
+```plaintext
  FT_REALTIME_ODDBALL is an realtime application that computes an online
  average for a standard and deviant condition. The ERPs/ERFs are plotted,
  together with the difference as t-values. It should work both for EEG and

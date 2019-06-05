@@ -1,7 +1,7 @@
 ---
 title: ft_average_sens
 ---
-```
+```plaintext
  FT_AVERAGE_SENS computes average sensor array from a series of input
  arrays. Corresponding average fiducials can also be computed (optional)
 

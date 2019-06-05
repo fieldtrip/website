@@ -1,7 +1,7 @@
 ---
 title: ft_analysispipeline
 ---
-```
+```plaintext
  FT_ANALYSIPIPELINE reconstructs the complete analysis pipeline that was used to create
  the input FieldTrip data structure. The pipeline will be visualized as a flowchart.
  In the future it will be possible to output the complete pipeline as a MATLAB script

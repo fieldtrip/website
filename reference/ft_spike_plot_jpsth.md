@@ -1,7 +1,7 @@
 ---
 title: ft_spike_plot_jpsth
 ---
-```
+```plaintext
  FT_SPIKE_PLOT_JPSTH makes a plot from JPSTH structure.
 
  Use as

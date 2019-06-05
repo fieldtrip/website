@@ -1,7 +1,7 @@
 ---
 title: fieldtrip2bis
 ---
-```
+```plaintext
  FIELDTRIP2BIS writes BioImage Suite .mgrid files with eletrode 
  positions in 'xyz' coordinates using a elec datatype structure and the 
  corresponding MRI volume 

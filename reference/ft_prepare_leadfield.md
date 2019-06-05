@@ -1,7 +1,7 @@
 ---
 title: ft_prepare_leadfield
 ---
-```
+```plaintext
  FT_PREPARE_LEADFIELD computes the forward model for many dipole locations
  on a regular 2D or 3D sourcemodel and stores it for efficient inverse modelling
 

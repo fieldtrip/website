@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_ppc
 ---
-```
+```plaintext
  FT_CONNECTIVITY_PPC computes pairwise phase consistency or weighted pairwise phase
  consistency from a data-matrix containing a cross-spectral density. This implements
  the method described in Vinck M, van Wingerden M, Womelsdorf T, Fries P, Pennartz

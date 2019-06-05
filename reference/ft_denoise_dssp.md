@@ -1,7 +1,7 @@
 ---
 title: ft_denoise_dssp
 ---
-```
+```plaintext
  FT_DENOISE_DSSP implements a dual signal subspace projection algorithm
  to suppress interference outside a predefined source region of
  interest. It is based on: Sekihara et al. J. Neural Eng. 2016 13(3), and

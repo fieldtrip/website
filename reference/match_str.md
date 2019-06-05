@@ -1,7 +1,7 @@
 ---
 title: match_str
 ---
-```
+```plaintext
  MATCH_STR looks for matching labels in two lists of strings
  and returns the indices into both the 1st and 2nd list of the matches.
  They will be ordered according to the first input argument.

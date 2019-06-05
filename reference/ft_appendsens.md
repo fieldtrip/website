@@ -1,7 +1,7 @@
 ---
 title: ft_appendsens
 ---
-```
+```plaintext
  FT_APPENDSENS concatenates multiple sensor definitions that have been processed
  separately.
 

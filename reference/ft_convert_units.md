@@ -1,7 +1,7 @@
 ---
 title: ft_convert_units
 ---
-```
+```plaintext
  FT_CONVERT_UNITS changes the geometrical dimension to the specified SI unit.
  The units of the input object is determined from the structure field
  object.unit, or is estimated based on the spatial extend of the structure,

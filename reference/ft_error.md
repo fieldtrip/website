@@ -1,7 +1,7 @@
 ---
 title: ft_error
 ---
-```
+```plaintext
  FT_ERROR prints an error message on screen, just like the standard ERROR function.
 
  Use as

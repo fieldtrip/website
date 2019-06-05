@@ -1,7 +1,7 @@
 ---
 title: ft_headmovement
 ---
-```
+```plaintext
  FT_HEADMOVEMENT creates a raw data structure, or cell-array of datastructures
  containing the HLC-coil data, which have a grad structure that has the
  head position information incorporated.

@@ -1,7 +1,7 @@
 ---
 title: minimumnormestimate
 ---
-```
+```plaintext
  MINIMUMNORMESTIMATE computes a linear estimate of the current in a
  distributed source model.
 

@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_ctfproxy
 ---
-```
+```plaintext
  FT_REALTIME_CTFPROXY provides a  real-time interface to the MEG data stream.
  This application requires Acq to stream the data to shared memory, and ctf2ft_v1
  (formerly known as AcqBuffer) to be maintaining the shared memory and to prevent

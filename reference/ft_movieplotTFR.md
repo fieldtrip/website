@@ -1,7 +1,7 @@
 ---
 title: ft_movieplotTFR
 ---
-```
+```plaintext
  FT_MOVIEPLOTTFR makes a movie of the time-frequency representation of power or
  coherence.
 

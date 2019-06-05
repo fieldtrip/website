@@ -1,7 +1,7 @@
 ---
 title: ft_inside_headmodel
 ---
-```
+```plaintext
  FT_INSIDE_HEADMODEL locates dipole locations inside/outside the source
  compartment of a volume conductor model.
 

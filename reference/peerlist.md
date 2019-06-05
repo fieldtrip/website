@@ -1,7 +1,7 @@
 ---
 title: peerlist
 ---
-```
+```plaintext
  PEERLIST gives information about all peers in the network, e.g. the
  number of slaves, their network configuration, etc.
 

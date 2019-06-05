@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_nan
 ---
-```
+```plaintext
  FT_ARTIFACT_NAN identifies artifacts that are indicated in the data as nan (not a
  number) values.
 

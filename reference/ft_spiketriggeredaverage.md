@@ -1,7 +1,7 @@
 ---
 title: ft_spiketriggeredaverage
 ---
-```
+```plaintext
  FT_SPIKETRIGGEREDAVERAGE computes the avererage of the LFP around the
  spikes.
 

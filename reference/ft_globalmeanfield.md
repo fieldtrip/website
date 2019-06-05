@@ -1,7 +1,7 @@
 ---
 title: ft_globalmeanfield
 ---
-```
+```plaintext
  FT_GLOBALMEANFIELD calculates global mean field amplitude or power of input data
 
  Use as

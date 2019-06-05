@@ -1,7 +1,7 @@
 ---
 title: peerfeval
 ---
-```
+```plaintext
  PEERFEVAL execute the specified function on another peer.
 
  Use as

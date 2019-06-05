@@ -1,7 +1,7 @@
 ---
 title: nutmeg2fieldtrip
 ---
-```
+```plaintext
  NUTMEG2FIELDTRIP converts from NUTMEG either a sensor data structure
  ('nuts') to a valid FieldTrip 'raw' structure (plus 'sourcemodel' and
  'mri' if available), OR a source structure ('beam') to a valid FieldTrip

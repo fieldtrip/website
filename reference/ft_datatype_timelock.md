@@ -1,7 +1,7 @@
 ---
 title: ft_datatype_timelock
 ---
-```
+```plaintext
  FT_DATATYPE_TIMELOCK describes the FieldTrip MATLAB structure for timelock data
 
  The timelock data structure represents averaged or non-averaged event-releted

@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_depsamplesFunivariate
 ---
-```
+```plaintext
  FT_STATFUN_DEPSAMPLESFUNIIVARIATE calculates the univariate repeated-mesures ANOVA
  on the biological data (the dependent variable), using the information on
  the independent variable (ivar) in design.

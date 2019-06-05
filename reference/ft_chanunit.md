@@ -1,7 +1,7 @@
 ---
 title: ft_chanunit
 ---
-```
+```plaintext
  FT_CHANUNIT is a helper function that tries to determine the physical
  units of each channel. In case the type of channel is not detected, it
  will return 'unknown' for that channel.

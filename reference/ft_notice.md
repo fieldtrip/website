@@ -1,7 +1,7 @@
 ---
 title: ft_notice
 ---
-```
+```plaintext
  FT_NOTICE prints a notice message on screen, depending on the verbosity 
  settings of the calling high-level FieldTrip function.
 

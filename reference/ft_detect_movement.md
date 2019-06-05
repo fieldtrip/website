@@ -1,7 +1,7 @@
 ---
 title: ft_detect_movement
 ---
-```
+```plaintext
  FT_SACCADE_DETECTION performs detection of movements such as saccades and
  microsaccades, but also joystick movements, from time series data over multiple
  trials. Different methods for detecting movements are implemented, which are

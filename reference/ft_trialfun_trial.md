@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_trial
 ---
-```
+```plaintext
  FT_TRIALFUN_TRIAL creates a trial definition that corresponds to the
  events that are returned by FT_READ_EVENT with type='trial'
 

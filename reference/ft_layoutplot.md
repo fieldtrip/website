@@ -1,7 +1,7 @@
 ---
 title: ft_layoutplot
 ---
-```
+```plaintext
  FT_LAYOUTPLOT makes a figure with the 2-D layout of the channel positions
  for topoplotting and the individual channel axes (i.e. width and height
  of the subfigures) for multiplotting. A correct 2-D layout is a

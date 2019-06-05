@@ -1,7 +1,7 @@
 ---
 title: ft_specest_mtmfft
 ---
-```
+```plaintext
  FT_SPECEST_MTMFFT computes a fast Fourier transform using multitapering with
  multiple tapers from the DPSS sequence or using a variety of single tapers.
 

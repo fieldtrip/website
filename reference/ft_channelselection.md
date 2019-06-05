@@ -1,7 +1,7 @@
 ---
 title: ft_channelselection
 ---
-```
+```plaintext
  FT_CHANNELSELECTION makes a selection of EEG and/or MEG channel labels.
  This function translates the user-specified list of channels into channel
  labels as they occur in the data. This channel selection procedure can be

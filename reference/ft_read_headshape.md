@@ -1,7 +1,7 @@
 ---
 title: ft_read_headshape
 ---
-```
+```plaintext
  FT_READ_HEADSHAPE reads the fiducials and/or the measured headshape from a variety
  of files (like CTF and Polhemus). The headshape and fiducials can for example be
  used for coregistration.

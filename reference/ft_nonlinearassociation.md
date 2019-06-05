@@ -1,7 +1,7 @@
 ---
 title: ft_nonlinearassociation
 ---
-```
+```plaintext
  NONLINEARASSOCIATION calculate the association coefficient as a
  function of delay.
 

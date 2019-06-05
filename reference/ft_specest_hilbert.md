@@ -1,7 +1,7 @@
 ---
 title: ft_specest_hilbert
 ---
-```
+```plaintext
  FT_SPECEST_HILBERT performs a spectral estimation of data by repeatedly applying a
  bandpass filter and then doing a Hilbert transform.
 

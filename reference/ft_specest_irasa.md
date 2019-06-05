@@ -1,7 +1,7 @@
 ---
 title: ft_specest_irasa
 ---
-```
+```plaintext
  FT_SPECEST_IRASA estimates the powerspectral arrythmic component of the 
  time-domain using Irregular-Resampling Auto-Spectral Analysis. 
 

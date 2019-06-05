@@ -1,7 +1,7 @@
 ---
 title: ft_fetch_event
 ---
-```
+```plaintext
  FT_FETCH_EVENT mimics the behavior of FT_READ_EVENT, but for a FieldTrip
  raw data structure instead of a file on disk.
 

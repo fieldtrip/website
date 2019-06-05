@@ -1,7 +1,7 @@
 ---
 title: ft_conjunctionanalysis
 ---
-```
+```plaintext
  FT_CONJUNCTIONANALYSIS finds the minimum statistic common across two or
  more contrasts, i.e. data following ft_xxxstatistics. Furthermore, it
  finds the overlap of sensors/voxels that show statistically significant

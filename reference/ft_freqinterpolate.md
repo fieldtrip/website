@@ -1,7 +1,7 @@
 ---
 title: ft_freqinterpolate
 ---
-```
+```plaintext
  FT_FREQINTERPOLATE interpolates frequencies by looking at neighbouring
  values or simply replaces a piece in the spectrum by NaN.
 

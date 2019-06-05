@@ -1,7 +1,7 @@
 ---
 title: ft_heartrate
 ---
-```
+```plaintext
  FT_HEARTRATE estimates the heart rate from a continuous PPG or ECG channel. It
  returns a new data structure with a continuous representation of the heartrate in
  beats per minute.

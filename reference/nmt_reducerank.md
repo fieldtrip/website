@@ -1,7 +1,7 @@
 ---
 title: nmt_reducerank
 ---
-```
+```plaintext
  leadgrid = nmt_reducerank(cfg,leadgrid);
 
  Reduces the rank of a lead field after it has been computed. Particularly

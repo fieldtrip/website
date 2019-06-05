@@ -1,7 +1,7 @@
 ---
 title: ft_sourcedescriptives
 ---
-```
+```plaintext
  FT_SOURCEDESCRIPTIVES computes descriptive parameters of the source
  analysis results.
 

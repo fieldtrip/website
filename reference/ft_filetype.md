@@ -1,7 +1,7 @@
 ---
 title: ft_filetype
 ---
-```
+```plaintext
  FT_FILETYPE determines the filetype of many EEG/MEG/MRI data files by
  looking at the name, extension and optionally (part of) its contents.
  It tries to determine the global type of file (which usually

@@ -1,7 +1,7 @@
 ---
 title: ft_annotate
 ---
-```
+```plaintext
  FT_ANNOTATE returns the same output data as the user has provided as input, but allows
  to add comments to that data structure. These comments are stored along with the other
  provenance information and can be displayed with FT_ANALYSISPIPELINE. Adding comments

@@ -1,7 +1,7 @@
 ---
 title: ft_volumedownsample
 ---
-```
+```plaintext
  FT_VOLUMEDOWNSAMPLE downsamples an anatomical MRI or source reconstruction
  and optionally normalizes its coordinate axes, keeping the homogenous
  transformation matrix correct.

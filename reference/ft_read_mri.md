@@ -1,7 +1,7 @@
 ---
 title: ft_read_mri
 ---
-```
+```plaintext
  FT_READ_MRI reads anatomical and functional MRI data from different file formats.
  The output data is structured in such a way that it is compatible with
  FT_DATATYPE_VOLUME.

@@ -1,7 +1,7 @@
 ---
 title: peerget
 ---
-```
+```plaintext
  PEERGET get the output arguments after the remote job has been executed.
 
  Use as

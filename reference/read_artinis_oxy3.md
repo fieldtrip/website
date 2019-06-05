@@ -1,7 +1,7 @@
 ---
 title: read_artinis_oxy3
 ---
-```
+```plaintext
  reads Artinix oxy3-files into FieldTrip format
  use as
    header = read_artinis_oxy3(filename)

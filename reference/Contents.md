@@ -1,7 +1,7 @@
 ---
 title: Contents
 ---
-```
+```plaintext
  FieldTrip
  Version unknown www.fieldtriptoolbox.org DD-MM-YYYY
 

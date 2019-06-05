@@ -1,7 +1,7 @@
 ---
 title: ft_appendsource
 ---
-```
+```plaintext
  FT_APPENDSOURCE concatenates multiple volumetric source reconstruction data
  structures that have been processed separately.
 

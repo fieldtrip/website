@@ -1,7 +1,7 @@
 ---
 title: ft_compile_standalone
 ---
-```
+```plaintext
  FT_COMPILE_STANDALONE compiles the FieldTrip functions along with
  the standalone entry function into a compiled executable.
 

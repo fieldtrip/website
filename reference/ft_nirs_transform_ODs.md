@@ -1,7 +1,7 @@
 ---
 title: ft_nirs_transform_ODs
 ---
-```
+```plaintext
  FT_NIRS_TRANSFORM_ODs computes the transformation from optical densities (OD)
  to chromophore concentrations such as (de-)oxygenated  hemoglobin, or the
  other way around.

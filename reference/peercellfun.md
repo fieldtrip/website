@@ -1,7 +1,7 @@
 ---
 title: peercellfun
 ---
-```
+```plaintext
  PEERCELLFUN applies a function to each element of a cell-array. The
  function execution is done in parallel on all avaialble peers.
 

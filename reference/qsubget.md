@@ -1,7 +1,7 @@
 ---
 title: qsubget
 ---
-```
+```plaintext
  QSUBGET get the output arguments after the remote job has been executed
  on the Torque, SGE, PBS or SLURM batch queue system.
 

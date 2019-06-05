@@ -1,7 +1,7 @@
 ---
 title: ft_sourcestatistics
 ---
-```
+```plaintext
  FT_SOURCESTATISTICS computes the probability for a given null-hypothesis using
  a parametric statistical test or using a non-parametric randomization test.
 

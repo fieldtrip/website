@@ -1,7 +1,7 @@
 ---
 title: dccnpath
 ---
-```
+```plaintext
  DCCNPATH updates the path in the filename of a test file located on DCCN central
  storage. It helps to read test file from Linux, Windows or macOS computers in the
  DCCN.

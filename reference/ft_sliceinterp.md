@@ -1,7 +1,7 @@
 ---
 title: ft_sliceinterp
 ---
-```
+```plaintext
  FT_SLICEINTERP plots a 2D-montage of source reconstruction and anatomical MRI
  after these have been interpolated onto the same grid.
 

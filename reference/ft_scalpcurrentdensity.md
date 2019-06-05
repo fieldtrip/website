@@ -1,7 +1,7 @@
 ---
 title: ft_scalpcurrentdensity
 ---
-```
+```plaintext
  FT_SCALPCURRENTDENSITY computes an estimate of the SCD using the
  second-order derivative (the surface Laplacian) of the EEG potential
  distribution

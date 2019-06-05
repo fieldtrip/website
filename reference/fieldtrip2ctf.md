@@ -1,7 +1,7 @@
 ---
 title: fieldtrip2ctf
 ---
-```
+```plaintext
  FIELDTRIP2CTF saves a FieldTrip data structures to a corresponding CTF file. The
  file to which the data is exported depends on the input data structure that you
  provide.

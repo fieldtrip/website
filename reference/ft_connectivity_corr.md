@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_corr
 ---
-```
+```plaintext
  FT_CONNECTIVITY_CORR computes correlation, coherence or a related quantity from a
  data-matrix containing a covariance or cross-spectral density. It implements the
  methods as described in the following papers:

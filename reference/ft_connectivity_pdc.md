@@ -1,7 +1,7 @@
 ---
 title: ft_connectivity_pdc
 ---
-```
+```plaintext
  FT_CONNECTIVITY_PDC computes partial directed coherence. This function implements
  the metrices described in Baccala et al., Biological Cybernetics 2001, 84(6),
  463-74. and in Baccala et al., 15th Int.Conf.on DSP 2007, 163-66.

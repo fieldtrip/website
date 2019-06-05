@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_resample
 ---
-```
+```plaintext
  FT_PREPROC_RESAMPLE resamples all channels in the data matrix
 
  Use as

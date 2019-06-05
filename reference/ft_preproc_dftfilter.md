@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_dftfilter
 ---
-```
+```plaintext
  FT_PREPROC_DFTFILTER reduces power line noise (50 or 60Hz) via two 
  alternative methods:
  A) DFT filter (Flreplace = 'zero') or

@@ -1,7 +1,7 @@
 ---
 title: ft_spiketriggeredspectrum_stat
 ---
-```
+```plaintext
  FT_SPIKETRIGGEREDSPECTRUM_STAT computes phase-locking statistics for spike-LFP
  phases. These contain the PPC statistics according to Vinck et al. 2010 (Neuroimage)
  and Vinck et al. 2011 (Journal of Computational Neuroscience).

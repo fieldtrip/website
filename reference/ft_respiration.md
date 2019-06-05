@@ -1,7 +1,7 @@
 ---
 title: ft_respiration
 ---
-```
+```plaintext
  FT_RESPIRATION estimates the respiration rate from a respiration belt, temperature
  sensor, movement sensor or from the heart rate. It returns a new data structure
  with a continuous representation of the rate and phase.

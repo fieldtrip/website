@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_dicomproxy
 ---
-```
+```plaintext
  FT_REALTIME_DICOMPROXY simulates an fMRI acquisition system by reading a series of
  DICOM files from disk, and streaming them to a FieldTrip buffer.
 

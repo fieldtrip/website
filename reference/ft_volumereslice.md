@@ -1,7 +1,7 @@
 ---
 title: ft_volumereslice
 ---
-```
+```plaintext
  FT_VOLUMERESLICE flips, permutes, interpolates and reslices a volume along the
  principal axes of the coordinate system according to a specified resolution.
 

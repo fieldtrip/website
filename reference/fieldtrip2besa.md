@@ -1,7 +1,7 @@
 ---
 title: fieldtrip2besa
 ---
-```
+```plaintext
  FIELDTRIP2BESA saves a FieldTrip data structures to a corresponding BESA file. This
  export function is based on documentation that was provided by Todor Jordanov of
  BESA.

@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_depsamplesFmultivariate
 ---
-```
+```plaintext
  FT_STATFUN_DEPSAMPLESFMULTIVARIATE calculates the MANOVA dependent samples
  F-statistic on the biological data in dat (the dependent variable), using the
  information on the independent variable (ivar) in design.

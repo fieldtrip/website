@@ -1,7 +1,7 @@
 ---
 title: ft_freqstatistics
 ---
-```
+```plaintext
  FT_FREQSTATISTICS computes significance probabilities and/or critical
  values of a parametric statistical test or a non-parametric permutation
  test.

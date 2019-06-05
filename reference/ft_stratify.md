@@ -1,7 +1,7 @@
 ---
 title: ft_stratify
 ---
-```
+```plaintext
  FT_STRATIFY tries to reduce the variance in a specific feature in the data
  that is not related to an effect in two or multiple conditions, but where
  that feature may confound the analysis. Stratification is implemented by

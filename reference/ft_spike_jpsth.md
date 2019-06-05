@@ -1,7 +1,7 @@
 ---
 title: ft_spike_jpsth
 ---
-```
+```plaintext
  FT_SPIKE_JPSTH computes the joint peristimulus histograms for spiketrains
  and a shift predictor (for example see Aertsen et al. 1989).
 

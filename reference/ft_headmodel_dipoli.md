@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_dipoli
 ---
-```
+```plaintext
  FT_HEADMODEL_DIPOLI creates a volume conduction model of the head
  using the boundary element method (BEM) for EEG. This function takes
  as input the triangulated surfaces that describe the boundaries and

@@ -1,7 +1,7 @@
 ---
 title: ft_spike_maketrials
 ---
-```
+```plaintext
  FT_SPIKE_MAKETRIALS converts raw timestamps in a SPIKE structure to spike
  times that are relative to an event trigger in an SPIKE structure. This
  is a preprocessing step to use functions such as FT_SPIKE_PSTH.

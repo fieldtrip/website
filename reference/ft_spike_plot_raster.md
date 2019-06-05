@@ -1,7 +1,7 @@
 ---
 title: ft_spike_plot_raster
 ---
-```
+```plaintext
  FT_SPIKE_PLOT_RASTER makes a raster plot of spike-trains and allows for a
  spike-density or a PSTH plot on top.
 

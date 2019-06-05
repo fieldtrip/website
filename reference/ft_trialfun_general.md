@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_general
 ---
-```
+```plaintext
  FT_TRIALFUN_GENERAL determines trials/segments in the data that are
  interesting for analysis, using the general event structure returned
  by read_event. This function is independent of the dataformat

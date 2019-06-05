@@ -1,7 +1,7 @@
 ---
 title: ft_plot_cloud
 ---
-```
+```plaintext
  FT_PLOT_CLOUD visualizes spatially sparse scalar data as points, spheres, discs, or
  spherical clouds of points and optionally 2D slices through the spherical clouds
 

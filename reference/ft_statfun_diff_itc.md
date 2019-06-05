@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_diff_itc
 ---
-```
+```plaintext
  FT_STATFUN_DIFF_ITC computes the difference in the inter-trial coherence between
  two conditions. The input data for this test should consist of complex-values
  spectral estimates, e.g. computed using FT_FREQANALYSIS with method=mtmfft, wavelet

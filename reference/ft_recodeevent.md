@@ -1,7 +1,7 @@
 ---
 title: ft_recodeevent
 ---
-```
+```plaintext
  FT_RECODEEVENT will recode the event structure, given the trial
  definition that was analyzed
 

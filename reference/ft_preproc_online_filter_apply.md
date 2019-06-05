@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_online_filter_apply
 ---
-```
+```plaintext
  function [FM, xf] = ft_preproc_online_filter_apply(FM, x)
 
  Passes signal x (channels times samples) through the filter,

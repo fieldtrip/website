@@ -1,7 +1,7 @@
 ---
 title: ft_redefinetrial
 ---
-```
+```plaintext
  FT_REDEFINETRIAL allows you to adjust the time axis of your data, i.e. to
  change from stimulus-locked to response-locked. Furthermore, it allows
  you to select a time window of interest, or to resegment your long trials

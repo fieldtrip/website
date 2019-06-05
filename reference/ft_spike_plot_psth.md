@@ -1,7 +1,7 @@
 ---
 title: ft_spike_plot_psth
 ---
-```
+```plaintext
  FT_SPIKE_PLOT_PSTH makes a bar plot of PSTH structure with error bars.
 
  Use as

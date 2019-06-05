@@ -1,7 +1,7 @@
 ---
 title: ft_preproc_bandpassfilter
 ---
-```
+```plaintext
  FT_PREPROC_BANDPASSFILTER applies a band-pass filter to the data and thereby
  removes the spectral components in the data except for the ones in the
  specified frequency band.

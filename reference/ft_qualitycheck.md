@@ -1,7 +1,7 @@
 ---
 title: ft_qualitycheck
 ---
-```
+```plaintext
  FT_QUALITYCHECK performs a quality inspection of a given MEG/EEG dataset,
  stores (.mat), and visualizes the result (.png and .pdf).
 

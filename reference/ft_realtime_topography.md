@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_topography
 ---
-```
+```plaintext
  FT_REALTIME_TOPOGRAPHY reads continuous data from a file or from a data stream,
  estimates the power and plots the scalp topography in real time.
 

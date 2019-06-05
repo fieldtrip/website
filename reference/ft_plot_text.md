@@ -1,7 +1,7 @@
 ---
 title: ft_plot_text
 ---
-```
+```plaintext
  FT_PLOT_TEXT helper function for plotting text, which can also be used in
  combination with the multiple channel layout display in FieldTrip.
 

@@ -1,7 +1,7 @@
 ---
 title: ft_timelocksimulation
 ---
-```
+```plaintext
  FT_TIMELOCKSIMULATION computes a simulated signal that resembles an
  event-related potential or field
 

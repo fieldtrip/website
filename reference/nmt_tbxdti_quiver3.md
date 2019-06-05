@@ -1,7 +1,7 @@
 ---
 title: nmt_tbxdti_quiver3
 ---
-```
+```plaintext
 QUIVER3 3-D quiver plot.
    QUIVER3(X,Y,Z,U,V,W) plots velocity vectors as arrows with components
    (u,v,w) at the points (x,y,z).  The matrices X,Y,Z,U,V,W must all be

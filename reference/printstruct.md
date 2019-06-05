@@ -1,7 +1,7 @@
 ---
 title: printstruct
 ---
-```
+```plaintext
  PRINTSTRUCT converts a MATLAB structure into a multiple-line string that, when
  evaluated by MATLAB, results in the original structure. It also works for most
  other standard MATLAB classes, such as numbers, vectors, matrices, and cell-arrays.

@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_halfspace
 ---
-```
+```plaintext
  FT_HEADMODEL_HALFSPACE creates an EEG volume conduction model that
  is described with an infinite conductive halfspace. You can think
  of this as a plane with on one side a infinite mass of conductive

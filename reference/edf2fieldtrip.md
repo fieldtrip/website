@@ -1,7 +1,7 @@
 ---
 title: edf2fieldtrip
 ---
-```
+```plaintext
  EDF2FIELDTRIP reads data from a EDF file with channels that have a different
  sampling rates. It upsamples all data to the highest sampling rate and
  concatenates all channels into a raw data structure that is compatible with the

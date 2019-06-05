@@ -1,7 +1,7 @@
 ---
 title: fieldtrip2spss
 ---
-```
+```plaintext
  FIELDTRIP2SPSS compiles data and correpsonding labels into a textfile,
  suitable for importing into SPSS or JASP (jasp-stats.org).
 

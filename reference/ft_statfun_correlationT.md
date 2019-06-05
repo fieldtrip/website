@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_correlationT
 ---
-```
+```plaintext
  FT_STATFUN_CORRELATIONT calculates correlation coefficient T-statistics on the
  biological data in dat (the dependent variable), using the information on the
  independent variable (predictor) in design. The correlation coefficients are stored

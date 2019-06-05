@@ -1,7 +1,7 @@
 ---
 title: ft_struct2double
 ---
-```
+```plaintext
  FT_STRUCT2DOUBLE converts all single precision numeric data in a structure
  into double precision. It will also convert plain matrices and
  cell-arrays.

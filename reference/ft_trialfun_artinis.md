@@ -1,7 +1,7 @@
 ---
 title: ft_trialfun_artinis
 ---
-```
+```plaintext
  FT_TRIALFUN_ARTINIS is adjoining the result of ft_trialfun_general and
  those events found by FT_TRIALFUN_GENERAL.
 

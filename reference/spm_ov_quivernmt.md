@@ -1,7 +1,7 @@
 ---
 title: spm_ov_quivernmt
 ---
-```
+```plaintext
  This routine is a plugin to spm_orthviews for SPM12 / SPM8.
  Used by NutmegTrip / nmt_sourceoriplot.m to plot vector fields
  (e.g., orientations) on MRI

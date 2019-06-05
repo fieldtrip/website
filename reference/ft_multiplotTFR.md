@@ -1,7 +1,7 @@
 ---
 title: ft_multiplotTFR
 ---
-```
+```plaintext
  FT_MULTIPLOTTFR plots the time-frequency representations of power or coherence
  in a topographical layout. The plots of the indivual sensors are arranged
  according to their location specified in the layout.

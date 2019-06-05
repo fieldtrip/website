@@ -1,7 +1,7 @@
 ---
 title: ft_megplanar
 ---
-```
+```plaintext
  FT_MEGPLANAR computes planar MEG gradients gradients for raw data or average
  event-related field data. It can also convert frequency-domain data that was computed
  using FT_FREQANALYSIS, as long as it contains the complex-valued fourierspcrm and not

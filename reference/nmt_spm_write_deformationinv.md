@@ -1,7 +1,7 @@
 ---
 title: nmt_spm_write_deformationinv
 ---
-```
+```plaintext
  nmt_spm_write_deformationinv(mrifullpath)
 
  writes out the forward and inverse deformation fields

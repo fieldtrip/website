@@ -1,7 +1,7 @@
 ---
 title: ft_sourcegrandaverage
 ---
-```
+```plaintext
  FT_SOURCEGRANDAVERAGE averages source reconstructions over either multiple
  subjects or conditions. It computes the average and variance for all
  known source parameters. The output can be used in FT_SOURCESTATISTICS

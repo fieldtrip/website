@@ -1,7 +1,7 @@
 ---
 title: ft_headmodeltype
 ---
-```
+```plaintext
  FT_HEADMODELTYPE determines the type of volume conduction model of the head
 
  Use as

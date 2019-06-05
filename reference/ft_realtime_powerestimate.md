@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_powerestimate
 ---
-```
+```plaintext
  FT_REALTIME_POWERESTIMATE is an example realtime application for online
  power estimation. It should work both for EEG and MEG.
 

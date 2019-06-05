@@ -1,7 +1,7 @@
 ---
 title: ft_sourcemovie
 ---
-```
+```plaintext
  FT_SOURCEMOVIE displays the source reconstruction on a cortical mesh
  and allows the user to scroll through time with a movie. 
 

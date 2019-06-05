@@ -1,7 +1,7 @@
 ---
 title: ft_flush_data
 ---
-```
+```plaintext
  FT_FLUSH_DATA removes all data from the data queue
 
  Use as

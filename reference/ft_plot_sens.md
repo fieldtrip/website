@@ -1,7 +1,7 @@
 ---
 title: ft_plot_sens
 ---
-```
+```plaintext
  FT_PLOT_SENS visualizes the EEG, MEG or NIRS sensor array.
 
  Use as

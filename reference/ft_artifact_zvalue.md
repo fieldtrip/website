@@ -1,7 +1,7 @@
 ---
 title: ft_artifact_zvalue
 ---
-```
+```plaintext
  FT_ARTIFACT_ZVALUE reads the interesting segments of data from file and identifies
  artifacts by means of thresholding the z-transformed value of the preprocessed raw data.
  Depending on the preprocessing options, this method will be sensitive to EOG, muscle or

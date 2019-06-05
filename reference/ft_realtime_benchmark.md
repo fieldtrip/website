@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_benchmark
 ---
-```
+```plaintext
  FT_REALTIME_BENCHMARK times the reading and writing of data
 
  Use as

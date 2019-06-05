@@ -1,7 +1,7 @@
 ---
 title: ft_transform_geometry
 ---
-```
+```plaintext
  FT_TRANSFORM_GEOMETRY applies a homogeneous coordinate transformation to a
  structure with geometric information, for example a volume conduction model for the
  head, gradiometer of electrode structure containing EEG or MEG sensor positions and

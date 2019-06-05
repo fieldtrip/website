@@ -1,7 +1,7 @@
 ---
 title: ft_definetrial
 ---
-```
+```plaintext
  FT_DEFINETRIAL defines the segments of data that will be used for
  further processing and analysis, i.e. the pieces of data that will
  be read in by FT_PREPROCESSING. Trials are defined by their begin

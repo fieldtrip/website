@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_fns
 ---
-```
+```plaintext
  FT_HEADMODEL_FNS creates the volume conduction structure to be used
  in the FNS forward solver.
 

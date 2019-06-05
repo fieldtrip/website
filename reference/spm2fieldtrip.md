@@ -1,7 +1,7 @@
 ---
 title: spm2fieldtrip
 ---
-```
+```plaintext
  SPM2FIELDTRIP converts an SPM8 meeg object into a FieldTrip raw data structure
 
  Use as

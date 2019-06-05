@@ -1,7 +1,7 @@
 ---
 title: ft_omri_slice_time_apply
 ---
-```
+```plaintext
  function [STM, Xs] = ft_omri_slice_time_apply(STM, X)
 
  Put new scan X through slice time correction, by linear interpolation

@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_asaproxy
 ---
-```
+```plaintext
  FT_REALTIME_ASAPROXY reads continuous data from the ASA acquisition system and
  writes it to a FieldTrip buffer. This function uses the NeuroSDK software, which
  can be obtained from ANT.

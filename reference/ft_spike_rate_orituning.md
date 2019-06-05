@@ -1,7 +1,7 @@
 ---
 title: ft_spike_rate_orituning
 ---
-```
+```plaintext
  FT_SPIKE_RATE_ORITUNING computes a model of the firing rate as a function
  of orientation or direction.
 

@@ -1,7 +1,7 @@
 ---
 title: ft_plot_box
 ---
-```
+```plaintext
  FT_PLOT_BOX plots the outline of a box that is specified by its lower
  left and upper right corner
 

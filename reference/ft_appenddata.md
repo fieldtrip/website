@@ -1,7 +1,7 @@
 ---
 title: ft_appenddata
 ---
-```
+```plaintext
  FT_APPENDDATA concatenates multiple raw data structures that have been preprocessed
  separately into a single raw data structure.
 

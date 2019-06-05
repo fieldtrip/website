@@ -1,7 +1,7 @@
 ---
 title: ft_topoplotIC
 ---
-```
+```plaintext
  FT_TOPOPLOTIC plots the topographic distribution of an independent
  component that was computed using the FT_COMPONENTANALYSIS function,
  as a 2-D circular view (looking down at the top of the head).

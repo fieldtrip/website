@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_brainampproxy
 ---
-```
+```plaintext
  FT_REALTIME_BRAINAMPPROXY reads continuous data from a BrainAmp EEG acquisition
  system through the RDA network interface and writes it to a FieldTrip buffer.
 

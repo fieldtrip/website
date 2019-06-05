@@ -1,7 +1,7 @@
 ---
 title: ft_channelnormalise
 ---
-```
+```plaintext
  FT_CHANNELNORMALISE shifts and scales all channels of the the input data.
  The default behavior is to subtract each channel's mean, and scale to a
  standard deviation of 1, for each channel individually.

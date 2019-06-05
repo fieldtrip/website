@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_indepsamplesregrT
 ---
-```
+```plaintext
  FT_STATFUN_INDEPSAMPLESREGRT calculates independent samples regression coefficient
  T-statistics on the biological data in dat (the dependent variable), using the
  information on the independent variable (predictor) in design.

@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_indepsamplesZcoh
 ---
-```
+```plaintext
  FT_STATFUN_INDEPSAMPLESCOHZ calculates the independent samples coherence
  Z-statistic on the biological data in dat (the dependent variable), using the
  information on the independent variable (ivar) in design.

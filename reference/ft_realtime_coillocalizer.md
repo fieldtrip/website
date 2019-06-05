@@ -1,7 +1,7 @@
 ---
 title: ft_realtime_coillocalizer
 ---
-```
+```plaintext
  FT_REALTIME_COILLOCALIZER is a realtime application for online tracking
  of MEG localizer coils.
 

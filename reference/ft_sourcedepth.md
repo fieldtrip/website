@@ -1,7 +1,7 @@
 ---
 title: ft_sourcedepth
 ---
-```
+```plaintext
  FT_SOURCEDEPTH computes the distance from the source to the surface of
  the source compartment (usually the brain) in the volume conduction model.
 

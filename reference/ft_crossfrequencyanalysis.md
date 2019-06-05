@@ -1,7 +1,7 @@
 ---
 title: ft_crossfrequencyanalysis
 ---
-```
+```plaintext
  FT_CROSSFREQUENCYANALYSIS performs cross-frequency analysis
 
  Use as

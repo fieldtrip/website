@@ -1,7 +1,7 @@
 ---
 title: ft_anonymizedata
 ---
-```
+```plaintext
  FT_ANONYMIZEDATA clears the value of potentially identifying fields in
  the data and in the provenance information, i.e., it updates the data and
  the configuration structure and history that is maintained by FieldTrip

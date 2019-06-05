@@ -1,7 +1,7 @@
 ---
 title: ft_headmodel_localspheres
 ---
-```
+```plaintext
  FT_HEADMODEL_LOCALSPHERES constructs a MEG volume conduction model in
  with a local sphere fitted to the head or brain surface for each separate
  channel

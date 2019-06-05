@@ -1,7 +1,7 @@
 ---
 title: ft_statfun_pooledT
 ---
-```
+```plaintext
  FT_STATFUN_POOLEDT computes the pooled t-value over a number of replications. The
  idea is that you compute a contrast between two conditions per subject The t-values
  are pooled over subjects and compared against the pooled pseudo-values. Since

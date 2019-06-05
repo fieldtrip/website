@@ -1,7 +1,7 @@
 ---
 title: ft_select_box
 ---
-```
+```plaintext
  FT_SELECT_BOX helper function for selecting a rectangular region
  in the current figure using the mouse.
 

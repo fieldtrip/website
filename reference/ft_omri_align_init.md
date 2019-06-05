@@ -1,7 +1,7 @@
 ---
 title: ft_omri_align_init
 ---
-```
+```plaintext
  function model = ft_omri_align_init(Vr,flags)
 
  Ripped out of SPM 8 and modified (2010, S.Klanke)

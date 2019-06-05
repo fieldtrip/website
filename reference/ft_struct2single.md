@@ -1,7 +1,7 @@
 ---
 title: ft_struct2single
 ---
-```
+```plaintext
  FT_STRUCT2SINGLE converts all double precision numeric data in a structure
  into single precision, which takes up half the amount of memory compared
  to double precision. It will also convert plain matrices and cell-arrays.

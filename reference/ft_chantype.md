@@ -1,7 +1,7 @@
 ---
 title: ft_chantype
 ---
-```
+```plaintext
  FT_CHANTYPE determines for each individual channel what chantype of data it
  represents, e.g. a planar gradiometer, axial gradiometer, magnetometer,
  trigger channel, etc. If you want to know what the acquisition system is

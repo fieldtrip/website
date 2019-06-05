@@ -1,7 +1,7 @@
 ---
 title: ft_postamble
 ---
-```
+```plaintext
  FT_POSTAMBLE is a helper function that is included in many of the FieldTrip
  functions and which takes care of some general settings and operations at the end
  of the function.

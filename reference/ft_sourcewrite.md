@@ -1,7 +1,7 @@
 ---
 title: ft_sourcewrite
 ---
-```
+```plaintext
  FT_SOURCEWRITE exports source-reconstructed results to gifti or nifti format file.
  The appropriate output file depends on whether the source locations are described by
  on a cortically constrained sheet (gifti) or by a regular 3D lattice (nifti).
