@@ -255,15 +255,15 @@ If you type in data_epoch, you should see this in the command window:
 
       struct with field
 
-               hdr: [1×1 struct]
-             trial: {1×597 cell}
-              time: {1×597 cell}
+               hdr: [1x1 struct]
+             trial: {1x597 cell}
+              time: {1x597 cell}
            fsample: 10
-             label: {104×1 cell}
-              opto: [1×1 struct]
-         trialinfo: [597×1 double]
-        sampleinfo: [597×2 double]
-               cfg: [1×1 struct]
+             label: {104x1 cell}
+              opto: [1x1 struct]
+         trialinfo: [597x1 double]
+        sampleinfo: [597x2 double]
+               cfg: [1x1 struct]
 
 Notably, both trial and time fields will now have 1x597 cell-array (compare this to data_down). This corresponds to the 597 stimuli that were presented. In data_epoch.trialinfo the information about the type of stimulus is stored (event 1 or event 2). Thus, we can find which of those cells belongs to the first deviant:
 
@@ -307,15 +307,15 @@ You can see that you throw away some channels in data_sci.label, where we now on
 
       struct with field
 
-               hdr: [1×1 struct]
-             trial: {1×597 cell}
-              time: {1×597 cell}
+               hdr: [1x1 struct]
+             trial: {1x597 cell}
+              time: {1x597 cell}
            fsample: 10
-             label: {86×1 cell}
-              opto: [1×1 struct]
-         trialinfo: [597×1 double]
-        sampleinfo: [597×2 double]
-               cfg: [1×1 struct]
+             label: {86x1 cell}
+              opto: [1x1 struct]
+         trialinfo: [597x1 double]
+        sampleinfo: [597x2 double]
+               cfg: [1x1 struct]
 
 ### Remove artefacts
 

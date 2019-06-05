@@ -58,16 +58,16 @@ To check if you can read in the data, you try the FieldTrip functions, **[ft_rea
     >> hdr = ft_read_header(dataset)
 
     hdr =
-             orig: [1×1 struct]
+             orig: [1x1 struct]
                Fs: 2000
            nChans: 251
          nSamples: 664000
       nSamplesPre: 0
           nTrials: 1
-            label: {251×1 cell}
-             grad: [1×1 struct]
-         chantype: {251×1 cell}
-         chanunit: {251×1 cell}
+            label: {251x1 cell}
+             grad: [1x1 struct]
+         chantype: {251x1 cell}
+         chanunit: {251x1 cell}
 
 The header contains a lot of information about the measurement parameters. In this example 251 channels were recorded, and the sampling frequency was a 2000 Hz. The field 'hdr.orig' contains all the original header information.
 
@@ -110,7 +110,7 @@ In order to select pieces of data around the events in which you are interest, y
 
     event =
 
-    204×1 struct array with field
+    204x1 struct array with field
 
       sample
       value
@@ -138,7 +138,7 @@ The first 14 components of the event structure in the above example ar
 
     ans =
 
-    14×5 table
+    14x5 table
 
       sample        type           value      offset    duration
       ______    _____________    _________    ______    ________
@@ -329,14 +329,14 @@ For an exported .con file that contains the information of digitized points, ''h
     >> headshape = ft_read_headshape(fullfile(meg_path, meg_file))
     headshape =
     struct with field
-        pos: [106×3 double]
-      label: {106×1 cell}
-        fid: [1×1 struct]
+        pos: [106x3 double]
+      label: {106x1 cell}
+        fid: [1x1 struct]
        unit: 'cm'
 
     >> headshape.fid.label
     ans =
-    13×1 cell-array
+    13x1 cell-array
       'nas'
       'lpa'
       'rpa'
@@ -359,12 +359,12 @@ On contrary to an exported .con file, an original (not-exported) data file (.con
     headshape =
     struct with field
        pos: []
-       fid: [1×1 struct]
+       fid: [1x1 struct]
       unit: 'cm'
 
     >> headshape.fid.label
     ans =
-    5×1 cell-array
+    5x1 cell-array
       'nas'
       'lpa'
       'rpa'

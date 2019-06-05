@@ -206,7 +206,7 @@ To plot the results of the permutation test, we use the plotting function **[ft_
     cfg.parameter = 'avg';
     raweffectFICvsFC = ft_math(cfg,avgFIC,avgFC);
 
-We then construct a boolean matrix indicating membership in the significant clusters. This matrix has size [Number_of_MEG_channels × Number_of_temporal_samples], like stat.posclusterslabelmat. We'll make two such matrices: one for positive clusters (named pos), and one for negative (neg). All (channel,time)-pairs belonging to the significant clusters will be coded in the new boolean matrix as 1, and all those that don't will be coded as 0.
+We then construct a boolean matrix indicating membership in the significant clusters. This matrix has size [Number_of_MEG_channels x Number_of_temporal_samples], like stat.posclusterslabelmat. We'll make two such matrices: one for positive clusters (named pos), and one for negative (neg). All (channel,time)-pairs belonging to the significant clusters will be coded in the new boolean matrix as 1, and all those that don't will be coded as 0.
 
 In plotting significant clusters, we must of course first determine which clusters are reliable.
 % Make a vector of all p-values associated with the clusters from ft_timelockstatistics.

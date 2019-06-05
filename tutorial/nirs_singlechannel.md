@@ -103,14 +103,14 @@ Let us take a look at what just happened. If you observed your workspace closely
 If preprocessing was done as described, the data will have the following field
 
     data =
-           hdr: [1×1 struct]
-         label: {48×1 cell}
-          time: {[1×4462 double]}
-         trial: {[48×4462 double]}
+           hdr: [1x1 struct]
+         label: {48x1 cell}
+          time: {[1x4462 double]}
+         trial: {[48x4462 double]}
        fsample: 5
     sampleinfo: [1 4462]
-          opto: [1×1 struct]
-           cfg: [1×1 struct]
+          opto: [1x1 struct]
+           cfg: [1x1 struct]
 
 Let us go through these one-by-one. The field 'hdr' contain all top-level information about your data, like for example the original sample rate, the number of channels etc. So all information that was potentially available at the time you read in the dataset. The field 'label' lists the name of all channels that you decided to read in. Note that you have told **[ft_preprocessing](/reference/ft_preprocessing)** to just read-in, by default, all channels as you haven't specified a subset. As you can see, there are 48 labels, and as the measurement consisted of 2 wavelengths per channel, this represents 24 channels. You also read in a set of ADC-channels, these will be ignored for now (these contain the triggers of the oxymon file, hence, this is NIRS acquisition hardware specific). The next field is called 'time' and represents the time axis of the dataset. The field 'trial' contains the data of all your channels. It is called 'trial' because usually, data is separated into different trials. To start off, we however have now read in all available data. The field 'fsample' describes the current sample rate of the data in the 'trial'-field. The field 'sampleinfo' describes the sample numbers of each trial with respect to the original measurement. The field 'opto' contains all high-level information about the composition of the channels and optodes, such as what wavelengths were used, the position of the optodes, what optodes formed which channels, etc. Finally, the field 'cfg' is the same cfg that we have just used, extended by some default values. This way, we can always trace back what has actually happened to our data. But more about that later.
 
@@ -258,14 +258,14 @@ We would like to compute the average of our data and have a look at the average 
 The output is the data structure data_timelock with the following field
 
     data_timelock =
-       avg: [2×225 double]
-       var: [2×225 double]
-      time: [1×225 double]
-       dof: [2×225 double]
-     label: {2×1 cell}
+       avg: [2x225 double]
+       var: [2x225 double]
+      time: [1x225 double]
+       dof: [2x225 double]
+     label: {2x1 cell}
     dimord: 'chan_time'
-      opto: [1×1 struct]
-       cfg: [1×1 struct]
+      opto: [1x1 struct]
+       cfg: [1x1 struct]
 
 The most important field is data.timelock.avg, containing the average over all trials for each channel.
 

@@ -40,16 +40,18 @@ The first and only section with a single `#` corresponds to the page title and i
 
 Please ensure that the page title in the header and the first `#` section title are identical.
 
-## Highlighting
+## Text block highlighting
 
 This is implemented with small snippets of html code that are contained in the `_includes/markup` directory. Most of them directly correspond to Bootstrap [alerts](https://getbootstrap.com/docs/4.0/components/alerts/#examples). The syntax is like this
 
 {% raw %}
+
 ```liquid
 {% include markup/info %}
 info
 {% include markup/end %}
 ```
+
 {% endraw %}
 
 and it would show up like this
@@ -74,11 +76,61 @@ danger
 exercise
 {% include markup/end %}
 
+## Code syntax highlighting
+
+You can indent a single word in a sentence using three back-tics at the start and end. You can highlight a block with multiple lines by indenting the whole block with 4 spaces. You can also highlight a multi-line block by starting with three back-tics.
+
+````plaintext
+```
+This would be formatted as MATLAB code.
+```
+````
+
+The default syntax highlighter is for MATLAB. You can use other highlighting options as explained [here](https://frankindev.com/2017/03/18/syntax-highlight-with-rouge-in-jekyll/).
+
+````plaintext
+```python
+This would be formatted as Python code.
+```
+````
+
+````plaintext
+```bash
+This would be formatteded as Bash command-line code.
+```
+````
+
+and
+
+````plaintext
+```plaintext
+This is formatted with a fixed-width font, but without color highlighting.
+```
+````
+
+The last option is useful for MATLAB command window output, which in itself is not executable code, and for displaying sections of MATLAB help.
+
 ## Tags
 
-Tags are included at the top of the page.
+Tags are displayed at the top of the page. If you click on a tag, you are brought to an overview page with all pages that share the same tag. Those overview pages are automatically build on the web server after every change.
 
 ## See also
+
+You can include an automatically generated list of pages with specific tags like this
+
+{% raw %}
+
+```liquid
+{% include seealso tag1="guidelines" %}
+```
+
+{% endraw %}
+
+which results in the following list
+
+{% include seealso tag1="guidelines" %}
+
+Tags are indicated with `tag`, `tag1`, `tag2` etcetera, and multiple tags are logically combined with **and**, not with **or**.
 
 ## Images
 
@@ -99,9 +151,11 @@ where the image is either local or a http link.
 For the FieldTrip website you have to do
 
 {% raw %}
+
 ```liquid
 {% include image src="/assets/img/filename.png" width="300" %}
 ```
+
 {% endraw %}
 
 Please keep images in `assets/img` with subdirectories according to the place where the image appears.
@@ -119,15 +173,19 @@ This is implemented with some small snippets of html code contained in the `incl
 You can include a Youtube video like This
 
 {% raw %}
+
 ```liquid
 {% include youtube id="S8l8Cw7ysis" %}
 ```
+
 {% endraw %}
 
 and a Vimeo video like this
 
 {% raw %}
+
 ```liquid
 {% include vimeo id="21604990" %}
 ```
+
 {% endraw %}
