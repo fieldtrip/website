@@ -12,7 +12,8 @@ the background of cluster-based permutation tests. Subsequently it is shown how 
 
 In this tutorial we will continue working on the dataset described in the [Preprocessing and event-related activity](/workshop/oslo2019/introduction) and the [Time-frequency analysis of MEG and EEG](/workshop/natmeg/timefrequency) tutorials. We will repeat some code here to select the trials and preprocess the data. We assume that the preprocessing and the computation of the ERFs/TFRs are already clear to the reader.
 
-This tutorial is not covering group analysis. If you are interested in that, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
+This tutorial is not covering group analysis. Look [here](/tutorial/eventrelatedstatistics) for that.  
+If you are interested, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
@@ -358,7 +359,180 @@ We will now do a quick example of applying this to time-frequency data (TFR)
 
 # Tutorial (TFRs)
 
-Waiting for Britta's work
+Here, we'll just quickly show how to do within-subject statistics on TFRs
+
+## Load the data
+
+First, we'll load the data, both the ones with the trials and the ones with the average of the trials. We append the two trial data structures to one another using **[ft_appendfreq](/reference/ft_appendfreq)** and we calculate the difference between the two averages using **[ft_math](/reference/ft_math)**.
+
+    load tfr_left_trials.mat
+    load tfr_right_trials.mat
+    load tfr_left.mat
+    load tfr_right.mat
+
+    cfg = [];
+
+    tfr = ft_appendfreq(cfg, tfr_right_trials, tfr_left_trials);
+
+    cfg = [];
+    cfg.parameter    = 'powspctrm';
+    cfg.operation    = '(x1-x2) / (x1+x2)';
+
+    tfr_difference = ft_math(cfg, tfr_right, tfr_left);
+
+We can see the sizes and ordering of dimensions using the in-built function _size_ and checking the _dimord_
+
+    >> size(tfr.powspctrm)
+
+    ans =
+
+       110   128    20    26
+
+    >> tfr.dimord
+
+    ans =
+
+    rpt_chan_freq_time
+
+meaning that we have 110 trials on 128 channels at 20 frequencies and at 26 time points.  
+For the difference betweem the averages, we have:
+
+    >> size(tfr_difference.powspctrm)
+
+    ans =
+
+       128    20    26
+
+    >> tfr_difference.dimord
+
+    ans =
+
+    chan_freq_time
+
+meaning that we have a difference between averages on 128 channels at 20 frequencies and at 26 time points.
+
+## Applying the tests
+
+Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz (the beta band range) and on the time interval between 400 ms and 1,000 ms (the time range of the beta rebound). This is set using _cfg.frequency_ and _cfg.latency_. We do this because we have _a priori_ knowledge that it is around here we should observe our beta rebound.
+
+### t-test with no correction
+
+    cfg           = [];
+    cfg.method    = 'analytic'; % using a parametric test
+    cfg.statistic = 'ft_statfun_indepsamplesT'; % using independent samples
+    cfg.correctm  = 'no'; % no multiple comparisons correction
+    cfg.alpha     = 0.05;
+    cfg.frequency = [15 30];
+    cfg.latency   = [0.400 1.000];
+
+    cfg.design    = zeros(1, length(tfr.trialinfo));
+    cfg.design(tfr.trialinfo == 256)  = 1; % indicating which trials belong ...
+    cfg.design(tfr.trialinfo == 4096) = 2; % to what category
+                                            
+    cfg.ivar      = 1; % indicating that the independent variable is found in ...
+                       % first row of cfg.design
+
+    stat_t_freq = ft_freqstatistics(cfg, tfr);
+
+### t-test with Bonferroni correction
+
+    cfg           = [];
+    cfg.method    = 'analytic'; % using a parametric test
+    cfg.statistic = 'ft_statfun_indepsamplesT'; % using independent samples
+    cfg.correctm  = 'bonferroni'; % no multiple comparisons correction
+    cfg.alpha     = 0.05;
+    cfg.frequency = [15 30];
+    cfg.latency   = [0.400 1.000];
+
+    cfg.design    = zeros(1, length(tfr.trialinfo));
+    cfg.design(tfr.trialinfo == 256)  = 1; % indicating which trials belong ...
+    cfg.design(tfr.trialinfo == 4096) = 2; % to what category
+                                            
+    cfg.ivar      = 1; % indicating that the independent variable is found in ...
+                       % first row of cfg.design
+
+    stat_t_bonferroni_freq = ft_freqstatistics(cfg, tfr);
+
+### Permutation test with cluster correction
+
+    cfg                  = [];
+    cfg.method           = 'montecarlo'; % use montecarlo to permute the data
+    cfg.statistic        = 'ft_statfun_indepsamplesT'; % function to use when ...
+                                                       % calculating the ...
+                                                       % parametric t-values
+    cfg.alpha            = 0.025; % corresponds to an alpha level of 0.05, since ...
+                                  % two tests are made ...
+                                  % (negative and positive: 2*0.025=0.05) 
+    cfg.frequency = [15 30];
+    cfg.latency   = [0.400 1.000];
+
+    cfg.correctm         = 'cluster'; % the correction to use
+    cfg.clusteralpha     = 0.05; % the alpha level used to determine whether or ...
+                                 % not a channel/time pair can be included in a ...
+                                 % cluster
+    cfg.clustertail      = 0; % two-way t-test
+    cfg.clusterstatistic = 'maxsum';
+
+    cfg.numrandomization = 1000;  % number of permutations run
+
+    cfg.design    = zeros(1, length(tfr.trialinfo));
+    cfg.design(tfr.trialinfo == 256)  = 1; % indicating which trials belong ...
+    cfg.design(tfr.trialinfo == 4096) = 2; % to what category
+    cfg.ivar             = 1; % indicating that the independent variable is found in ...
+                              % first row of cfg.design
+    cfg.neighbours       = neighbors; % the spatial structire
+    cfg.minnbchan        = 2; % minimum number of channels required to form a cluster
+
+    stat_t_cluster_freq = ft_freqstatistics(cfg, tfr);
+
+## Plotting the tests
+
+    stats = {stat_t_freq stat_t_bonferroni_freq stat_t_cluster_freq};
+    n_tests = length(stats);
+    h = figure;
+    for test_index = 1:n_tests
+        
+        subplot(1, 3, test_index)
+        stat = stats{test_index};
+
+        cfg = [];
+        cfg.frequency = [stat.freq(1) stat.freq(end)];
+        cfg.latency   = [stat.time(1) stat.time(end)];
+
+        this_tfr = ft_selectdata(cfg, tfr_difference);
+
+        this_tfr.mask = stat.mask;
+
+        cfg = [];
+        cfg.layout = 'natmeg_customized_eeg1005.lay';
+        cfg.parameter = 'powspctrm';
+        cfg.maskparameter = 'mask';
+        cfg.maskstyle = 'outline';
+
+        ft_multiplotTFR(cfg, this_tfr);
+        c = colorbar('location', 'southoutside');
+        c.Label.String = 'Power ratio (right over left';
+        title(['Correction: ' stat.cfg.correctm]);
+        
+        
+    end
+
+    set(h, 'units', 'normalized', 'outerposition', [0 0 1 1])
+
+{% include image src="/assets/img/workshop/oslo2019/tfr_stats.png " width="650" %}  
+_Figure 11: Three multiplots showing the differences between the three tests/corrections_
+
+Note how the cluster correction seems to catch the clusters that "catch" our eyes, while not showing the many non-clustered values that the non-corrected _t-test_ showed. Also note that the Bonferroni correction removed all significant effects, showing that it is too conservative to apply to TFR data.
+
+## Extending the frequency and time ranges of the tests
+
+{% include markup/exercise %}
+Do the three tests again without setting _cfg.frequency_ and _cfg.latency_ (you can comment them out)  
+Compare with the plot below - why may it be important to use one's _prior_ knowledge?
+{% include markup/end %}
+
+{% include image src="/assets/img/workshop/oslo2019/tfr_stats_all.png " width="650" %}  
+_Figure 12: **Testing on all frequencies and all latencies** Three multiplots showing the differences between the three tests/corrections. Note what this means for the cluster corrected test_
 
 # Appendix - code snippets for producing images
 
@@ -430,5 +604,3 @@ Waiting for Britta's work
     text(negative_T - 500 , 12, negative_text)
 
     print -dpng permutation_distributions.png
-    
-**WORK IN PROGRESS**

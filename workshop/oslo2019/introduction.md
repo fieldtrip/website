@@ -14,7 +14,7 @@ In this tutorial, preprocessing and segmenting the data into epochs/trials are d
 {% include markup/info %}
 This data in this tutorial is originally from the [NatMEG workshop](/workshop/natmeg) and it is complemented by this lecture. This lectured featured the combination of MEG and EEG. Please go [here](/workshop/natmeg) to see in its entirety.
 
-{% include youtube id="z0xCqcYmIfA" %}
+{% include youtube id="zOxCqcYmIfA" %}
 {% include markup/end %}
 
 ## Background
@@ -116,7 +116,7 @@ We will take the following steps
     cfg.trialdef.poststim   = 0.600; % seconds
     cfg.trialfun = 'ft_trialfun_general';
 
-    cfg = ft_definetrial(cfg); %% note that new cfg is created here
+    cfg = ft_definetrial(cfg); %% note that a new cfg is created here
 
     % and we add more stuff to it here
 
@@ -184,10 +184,10 @@ Let's have a closer look at the first entries in _time_ and _trial_:
 
 In this tutorial, we are going to use a visual summary tool for rejecting bad trials. It is also possible to annotate artifacts using a more automatic procedure (see **[automatic artifact rejection](/tutorial/automatic_artifact_rejection)**
 
-    cfg = [];
+    cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
 
-    cleaned_data = ft_rejectvisual(cfg, data);
+    cleaned_data_ERP = ft_rejectvisual(cfg, data);
 
 {% include image src="/assets/img/workshop/oslo2019/reject_visual.png" width="650" %}
 _Figure 2: The visual summary plot tool_
@@ -198,18 +198,22 @@ You can use different metrics to calculate the summary, but variance is usually 
 What is best - using an _objective_ automatic procedure with a common threshold between subjects, or should you use this more _"subjective"_ method?
 {% include markup/end %}
 
-In my case, I removed 25 trials
+In my case, I removed 26 trials
 
-    cleaned_data =
+    cleaned_data_ERP = 
 
                hdr: [1x1 struct]
              label: {128x1 cell}
-              time: {1x575 cell}
-             trial: {1x575 cell}
+              time: {1x574 cell}
+             trial: {1x574 cell}
            fsample: 250
-        sampleinfo: [575x2 double]
-         trialinfo: [575x1 double]
+        sampleinfo: [574x2 double]
+         trialinfo: [574x1 double]
                cfg: [1x1 struct]
+
+If you want to carry on with the data cleaned by the organizers, load the data using the command below
+
+    load cleaned_data_ERP.mat
 
 ### Event-Related Potentials (ERPs) (also unfortunately known as time-locked responses)
 
@@ -223,7 +227,7 @@ For purposes of visualization, we will also apply a low-pass filter. (Note that 
     cfg.detrend        = 'yes'; % removing linear trends
     cfg.baselinewindow = [-Inf 0];% using the mean activity in this window
 
-    data_EEG_filt = ft_preprocessing(cfg, cleaned_data);
+    data_EEG_filt = ft_preprocessing(cfg, cleaned_data_ERP);
 
 We are creating two ERPs, one for the standard and one for the deviant.
 
