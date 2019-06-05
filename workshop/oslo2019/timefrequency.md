@@ -93,9 +93,9 @@ The output of **[ft_freqanalysis](/reference/ft_freqanalysis)** is a structure w
     spectr_left =
         label: {'EEG126'}      % Channel names
        dimord: 'chan_freq'     % Dimensions contained in powspctrm, channels x frequencies
-         freq: [1×34 double]   % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
-    powspctrm: [1×34 double]   % Array containing the power values
-          cfg: [1×1 struct]    % Settings used in computing this frequency decomposition
+         freq: [1x34 double]   % Array of frequencies of interest (the elements of freq may be different from your cfg.foi input depending on your trial length)
+    powspctrm: [1x34 double]   % Array containing the power values
+          cfg: [1x1 struct]    % Settings used in computing this frequency decomposition
 
 The field `spectr_left.powspctrm` contains the power values for each specified frequency in the left response condition.
 
@@ -112,6 +112,7 @@ We can visualize the power spectra from both conditions in one plot using MATLAB
     ylabel('Power (\mu V^2)')
 
 {% include image src="/assets/img/workshop/oslo2019/powerspectra.png" %}
+
 _Figure: Power spectra for both conditions in a right central electrode._
 
 ## Time-frequency analysis with a Hanning taper and fixed window length
@@ -138,12 +139,12 @@ Since we have two conditions (responses with left and right index finger), we wi
 If we compare the output of **[ft_freqanalysis](/reference/ft_freqanalysis)** to what we obtained when computing the power spectra (see above), we can see that the data now also contains a time dimension:
 
     tfr_left =
-        label: {128×1 cell}
+        label: {128x1 cell}
        dimord: 'chan_freq_time'
          freq: [2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40]
-         time: [1×26 double]
-    powspctrm: [128×20×26 double]
-          cfg: [1×1 struct]
+         time: [1x26 double]
+    powspctrm: [128x20x26 double]
+          cfg: [1x1 struct]
 
 Note especially how the output now contains a field `time` and that `powspctrm` is 3-dimensional. The dimension order field `dimord` tells us that time is the third dimension of the power output matrix `powspctrm`.
 
@@ -223,6 +224,7 @@ This looks better! We can also plot the time-resolved activity using **[ft_singl
 
 {% include image src="/assets/img/workshop/oslo2019/tfr_channel_left.png" %}
 
+_Figure: Time-frequency representation of power at a central electrode._
 
 ### Take the difference between conditions
 
@@ -246,7 +248,7 @@ We now want to collapse the information of both conditions by comparing them. On
     ft_topoplotTFR(cfg, tfr_difference);
     title('Left vs right hand reaction');
 
-{% include image src="/assets/img/workshop/natmeg/timefrequency/tfr_diff.png" %}
+{% include image src="/assets/img/workshop/oslo2019/timefrequency/tfr_diff.png" %}
 
 _Figure: Topographic representation of the time-frequency representations of the difference in beta power, between left and right response._
 
@@ -294,7 +296,7 @@ As for our first analysis, we want to look at the difference between the conditi
     ft_singleplotTFR(cfg, wave_difference);
     title('Left vs right hand reaction');
 
-{% include image src="/assets/img/workshop/natmeg/timefrequency/wavelets_channel_diff.png" %}
+{% include image src="/assets/img/workshop/oslo2019/timefrequency/wavelets_channel_diff.png" %}
 
 _Figure: Time-frequency representations of power calculated using Morlet wavelets, difference between the conditions._
 
