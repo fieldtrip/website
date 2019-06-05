@@ -223,6 +223,7 @@ This looks better! We can also plot the time-resolved activity using **[ft_singl
 	title('Left hand reaction');
 
 {% include image src="/assets/img/workshop/oslo2019/tfr_channel_left.png" %}
+
 _Figure: Time-frequency representation of power at a central electrode._
 
 ### Take the difference between conditions
