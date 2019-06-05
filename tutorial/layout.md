@@ -120,7 +120,7 @@ You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)
 
 ### Creating a layout from 3D electrode positions
 
-The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as explained in the [human iEEG tutorial](http://www.fieldtriptoolbox.org/tutorial/human_ecog/). Following the electrode localization, you can make layouts using the orthographic projection method.
+The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as explained in the [human iEEG tutorial](http://www.fieldtriptoolbox.org/tutorial/human_ecog/). Following the electrode localization, you can make layouts using the orthographic projection method described in step 47 of that tutorial.
 
 {% include markup/warning %}
 
