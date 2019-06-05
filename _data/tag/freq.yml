@@ -121,6 +121,9 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
 
+- name:  Time-frequency analysis of EEG data
+  link:  /workshop/oslo2019/timefrequency
+
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 
