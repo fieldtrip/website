@@ -246,6 +246,7 @@ CRITICAL STEP Accuracy of the realignment operation is important for correctly p
     cfg            = [];
     cfg.nonlinear  = 'yes';
     cfg.spmversion = 'spm12';
+    cfg.spmmethod  = 'new';
     fsmri_mni = ft_volumenormalise(cfg, fsmri_acpc);
 
 **27**) Use the resulting deformation parameters to obtain the electrode positions in standard MNI space.
