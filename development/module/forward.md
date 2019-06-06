@@ -123,7 +123,7 @@ FieldTrip relies on external contributed software for the low-level computations
 
 The OpenMEEG software is developed within the Athena project-team at INRIA Sophia-Antipolis and was initiated in 2006 by the [Odyssee Project Team](http://www.inria.fr/en/teams/odyssee) (INRIA/ENPC/ENS Ulm). OpenMEEG solves forward problems related to Magneto- and Electro-encephalography (MEG and EEG) using the symmetric Boundary Element Method, providing excellent accuracy.
 
-The MATLAB interface to the [OpenMEEG](http://www-sop.inria.fr/athena/software/OpenMEEG/) implementation is kindly provided by Maureen Clerc, Alexandre Gramfort, and co-workers.
+The MATLAB interface to the [OpenMEEG](https://openmeeg.github.io) implementation is kindly provided by Maureen Clerc, Alexandre Gramfort, and co-workers.
 
 ### fieldtrip/external/bemcp
 

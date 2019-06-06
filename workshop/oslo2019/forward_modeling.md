@@ -1,6 +1,6 @@
 ---
 title: Forward modeling for EEG source reconstruction
-tags: [oslo2019, eeg-audodd, forward]
+tags: [oslo2019, eeg-audodd, headmodel]
 ---
 
 # Forward modeling for EEG source reconstruction
@@ -294,7 +294,7 @@ _Figure 8: Head model overlain with sources outside (black dots) and sources ins
 
 Let's have a look at the output of _sourcemodel\_and\_leadfield_
 
-    sourcemodel_and_leadfield = 
+    sourcemodel_and_leadfield =
 
                     dim: [14 18 14]
                     pos: [3528x3 double]
@@ -305,7 +305,7 @@ Let's have a look at the output of _sourcemodel\_and\_leadfield_
                   label: {128x1 cell}
         leadfielddimord: '{pos}_chan_ori'
 
-- _dim_             contains the dimensions of the grid in which the 3528 (14x18x14) sources are placed 
+- _dim_             contains the dimensions of the grid in which the 3528 (14x18x14) sources are placed
 - _pos_             contains the _xyz_ coordinates for the sources in the source model
 - _unit_            contains the unit of _pos_
 - _inside_          contains a logical vector indicating whether the source is a source or not
@@ -486,6 +486,6 @@ _Figure 14: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). No
 
 ### Algorithm to use
 
-If possible use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some careful installation before it works, and it only works on Linux and Mac systems.
+If possible you should use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
 
-If you cannot make this work, then _dipoli_, which also only works on Linux and Mac systems (at the moment), is your next choice and finally _bemcp_
+If you cannot make this work, then _dipoli_, which also only works on Linux and Mac systems (at the moment) is your next choice, and finally _bemcp_ which works on all platforms.

@@ -21,7 +21,7 @@ Feel free to edit this page and add links that you think are appropriate.
 - [SPM](http://www.fil.ion.ucl.ac.uk/spm/)
 - [BrainStorm](http://neuroimage.usc.edu/brainstorm)
 - [MNE software](http://www.nmr.mgh.harvard.edu/martinos/userInfo/data/sofMNE.php)
-- [OpenMEEG](http://www-sop.inria.fr/odyssee/software/OpenMEEG/)
+- [OpenMEEG](https://openmeeg.github.io)
 - [BIOSIG](http://biosig.sourceforge.net)
 - [NUTMEG](http://nutmeg.berkeley.edu)
 - [EEG-toolbox](http://eeg.sourceforge.net)

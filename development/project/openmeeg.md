@@ -7,7 +7,7 @@ title: Introduction
 # Introduction
 
 The OpenMEEG software is developed within the Odyssee project-team at INRIA Sophia-Antipolis and at ENPC.
-This package provides tools for solving forward and inverse problems for Magneto- and Electro-encephalography (MEG and EEG). The forward problem uses symmetric Boundary Element Method (symmetric BEM) [Kybic et al, A common formalism for the integral formulations of the forward EEG Problem, IEEE Transactions on Medical Imaging, vol. 24, no.1, 2005]. This method provides excellent accuracy notably for superfical cortical sources.
+This package provides tools for solving forward and inverse problems for Magneto- and Electro-encephalography (MEG and EEG). The forward problem uses symmetric Boundary Element Method (symmetric BEM) [Kybic et al, A common formalism for the integral formulations of the forward EEG Problem, IEEE Transactions on Medical Imaging, vol. 24, no.1, 2005]. This method provides excellent accuracy notably for superficial cortical sources.
 
 ## Goals
 
@@ -46,4 +46,5 @@ Integrate the OpenMEEG forward models into FieldTrip as better quality alternati
 
 ## External links
 
-- http://openmeeg.gforge.inria.fr
+- <https://openmeeg.github.io>
+- <https://gforge.inria.fr/frs/?group_id=435>

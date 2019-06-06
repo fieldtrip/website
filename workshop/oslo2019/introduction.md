@@ -1,6 +1,6 @@
 ---
 title: Preprocessing and event-related potentials in EEG data
-tags: [oslo2019, eeg-audodd]
+tags: [oslo2019, eeg-audodd, preprocessing]
 ---
 
 # Preprocessing and event-related potentials in EEG data
@@ -200,7 +200,7 @@ What is best - using an _objective_ automatic procedure with a common threshold 
 
 In my case, I removed 26 trials
 
-    cleaned_data_ERP = 
+    cleaned_data_ERP =
 
                hdr: [1x1 struct]
              label: {128x1 cell}

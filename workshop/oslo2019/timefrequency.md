@@ -1,6 +1,6 @@
 ---
 title: Time-frequency analysis of EEG data
-tags: [oslo2019, eeg, frequency, eeg-audodd]
+tags: [oslo2019, eeg-audodd, frequency]
 ---
 
 # Time-frequency analysis of EEG data

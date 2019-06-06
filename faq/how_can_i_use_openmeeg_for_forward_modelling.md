@@ -1,6 +1,6 @@
 ---
 title: How can I use OpenMEEG for forward modeling?
-tags: [faq, headmodel, source]
+tags: [faq, openmeeg, headmodel, source]
 ---
 
 {% include markup/danger %}
@@ -20,7 +20,7 @@ The OpenMEEG binaries are **not** included in the FieldTrip release, but the Ope
 OpenMEEG is available on Linux, macOS and Windows.
 A 64bit machine is preferred due to the computational load of M/EEG forward modeling using the BEM.
 
-OpenMEEG can be downloaded from <https://gforge.inria.fr/frs/?group_id=435>.
+OpenMEEG can be downloaded from <https://openmeeg.github.io>.
 
 Installation procedure:
 
@@ -60,9 +60,7 @@ Installation procedure:
 
 ### From source
 
-The source code of OpenMEEG can be accessed by SVN
-
-    svn checkout svn://scm.gforge.inria.fr/svn/openmeeg
+The source code of OpenMEEG can be accessed on <https://github.com/openmeeg/openmeeg/>
 
 OpenMEEG is build with CMake on all platforms.
 
@@ -93,4 +91,4 @@ Some of the pre-compiled packages could have issues running on a particular Linu
 
 If you still meet any difficulty do not hesitate to contact the OpenMEEG team: openmeeg-info@lists.gforge.inria.fr
 
-Remember that OpenMEEG is Open Source but if you publish results using OpenMEEG you should cite the necessary related papers. More infos can be found a <http://openmeeg.gforge.inria.fr>.
+Remember that OpenMEEG is Open Source, but if you publish results using OpenMEEG, you should cite the necessary related papers. More infos can be found a <https://openmeeg.github.io>.
