@@ -226,9 +226,6 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
 
-- name:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
-
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 

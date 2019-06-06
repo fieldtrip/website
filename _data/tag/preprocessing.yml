@@ -124,6 +124,9 @@
 - name:  Preprocessing and event-related activity in combined MEG/EEG data
   link:  /workshop/natmeg/preprocessing
 
+- name:  Preprocessing and event-related potentials in EEG data
+  link:  /workshop/oslo2019/introduction
+
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 

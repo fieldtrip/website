@@ -1,6 +1,9 @@
 - name:  Website syntax and formatting Event related averaging and MEG planar gradient
   link:  /development/guideline/website
 
+- name:  FieldTrip workshop in Oslo
+  link:  /workshop/oslo2019
+
 - name:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling
 
