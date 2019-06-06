@@ -154,7 +154,7 @@ Cortex. Cerebral Cortex. 25: 3911-3931
 
 The Brainnetome Atlas is designed to study activation and connectivity. Each hemisphere is subdivided into 123 subregions and the parcellation is based on both structural and functional connectivity features. More information can be found [here](http://atlas.brainnetome.org/).
 
-The atlas is described in the publication belo
+The atlas is described in the publication below
 
 Fan, L., Li, H., Zhuo, J., Zhang, Y., Wang, J., Chen, L., Yang, Z., Chu, C., Xie, S., Laird, A.R., Fox, P.T., Eickhoff, S.B., Yu, C. & Jiang, T. The Human Brainnetome Atlas: A New Brain Atlas Based on Connectional Architecture. Cerebral Cortex, 26 (8): 3508-3526,(2016)
 
@@ -175,6 +175,42 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
     imagesc(brainnetome.tissue(:,:,68))
 
 {% include image src="/assets/img/template/atlas/brainnetome_atlas2.png" width="400" %}
+
+
+## The Yeo Atlases
+
+The Yeo Atlases are designed to study intrinsic functional connectivity. Each hemisphere is subdivided into either 7 or 17 functionally coupled regions across the cerebral cortex. More information can be found [here](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011). The atlases originate from Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii.gz and Yeo2011_17Networks_MNI152_FreeSurferConformed1mm.nii.gz and have been aligned to the Colin27 brain (single_subj_T1_1mm).
+
+The atlases are described in the publication below
+
+Yeo BT, Krienen FM, Sepulcre J, Sabuncu MR, Lashkari D, Hollinshead M, Roffman JL, Smoller JW, Zollei L., Polimeni JR, Fischl B, Liu H, Buckner RL. The organization of the human cerebral cortex estimated by intrinsic functional connectivity. J Neurophysiol 106(3):1125-65, 2011.
+
+In FieldTrip, the two atlases are included as nifti files. You can read them like this:
+
+    yeo7 = ft_read_atlas('/template/atlas/yeo/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
+    
+    yeo7 = 
+
+            dim: [256 256 256]
+            hdr: [1×1 struct]
+      transform: [4×4 double]
+           unit: 'mm'
+         tissue: [256×256×256 double]
+    tissuelabel: {7×1 cell}
+       coordsys: 'mni'
+
+    yeo17 = ft_read_atlas('/template/atlas/yeo/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
+    
+    yeo17 = 
+
+            dim: [256 256 256]
+            hdr: [1×1 struct]
+      transform: [4×4 double]
+           unit: 'mm'
+         tissue: [256×256×256 double]
+    tissuelabel: {17×1 cell}
+       coordsys: 'mni'
+
 
 ## References
 
