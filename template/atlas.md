@@ -179,7 +179,7 @@ In FieldTrip, the atlas is included as a nifti file, complemented with a text fi
 
 ## The Yeo Atlases
 
-The Yeo Atlases are designed to study intrinsic functional connectivity. Each hemisphere is subdivided into either 7 or 17 functionally coupled regions across the cerebral cortex. More information can be found [here](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011). The atlases originate from Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii.gz and Yeo2011_17Networks_MNI152_FreeSurferConformed1mm.nii.gz and have been aligned to the Colin27 brain (single_subj_T1_1mm).
+The Yeo Atlases are designed to study intrinsic functional connectivity. Each hemisphere is subdivided into either 7 or 17 functionally coupled regions across the cerebral cortex. More information can be found [here](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation_Yeo2011). The atlases included with FieldTrip were created by transforming Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii.gz and Yeo2011_17Networks_MNI152_FreeSurferConformed1mm.nii.gz into standardized space (single_subj_T1_1mm) using volume-based anatomical registration approaches.
 
 The atlases are described in the publication below
 
