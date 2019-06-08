@@ -6,7 +6,6 @@
 # Following execution of this script, you should commmit the tag pages that have
 # been changed.
 
-
 if [[ ! -e _config.yml ]] ; then echo ERROR this should be executed in the toplevel directory ;  exit 1 ; fi
 
 # these will be recreated
@@ -28,7 +27,7 @@ done
 
 # this constructs a list of pages that have a certain tag
 for TAG in `cat ${TAGFILE}` ; do
-  FILELIST=`find . -name \*.md | xargs grep -l tags:.*${TAG} | sort | uniq `
+  FILELIST=`find . -name \*.md | xargs grep -l ^tags:.*${TAG} | sort | uniq `
   rm -f _data/tag/$TAG.yml
   for FILE in ${FILELIST}; do
     NAME=`grep title: $FILE | cut -d : -f 2 | cut -b 2-`
