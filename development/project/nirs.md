@@ -8,14 +8,14 @@ title: NIRS development
 
 see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2753
 
-Analysis of NIRS data is not particularly different from analysing any other signal. A few nuts and bolts need to be twisted differently, and some more transformations are possible (changes in optical densities to concentration changes, i.e. changes in oxygenated and deoxygenated blood). The specific NIRS part should become a toolbox similar to the spike toolbox (see fieldtrip/contrib/spike). As Jörn Horschig started working at Artinis and got several requests of using FieldTrip to analyze multimodal EEG/NIRS data, he will take the lead in implementing this.
+Analysis of NIRS data is not particularly different from analyzing any other signal. A few nuts and bolts need to be twisted differently, and some more transformations are possible (changes in optical densities to concentration changes, i.e. changes in oxygenated and deoxygenated blood). The specific NIRS part should become a toolbox similar to the spike toolbox (see fieldtrip/contrib/spike). As Jörn Horschig started working at Artinis and got several requests of using FieldTrip to analyze multimodal EEG/NIRS data, he will take the lead in implementing this.
 
 Points of action:
 
 - define a standardized way to represent data and their peculiarities
 - extend getting started section on NIRS. Information on different devices need to come from the manufacturers
 - if analysis steps specific to NIRS should be implemented, these need to be written by experienced NIRS researchers
-- a tutorial for analysing NIRS and/or combined NIRS/EEG needs to be written
+- a tutorial for analyzing NIRS and/or combined NIRS/EEG needs to be written
 
 Mark van Wanrooij (DCN/biophysics) and his group might substantially contribute to this project.
 

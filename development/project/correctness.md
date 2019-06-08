@@ -51,7 +51,7 @@ Frequency Analysis progres
       - visualizing wavelets see figure freq002_h.
 
       * tjirp data
-      - tested the methods for analysing 'tjirp' data. Results shown in freq002_g. (/hanvdgei/test_HD_002/freq002_g). When t_ftimwin is big (I took one second before) the read curve has peaks like wltconvol but the amplitudes are similar over time (they don't decrease like wltconvol).
+      - tested the methods for analyzing 'tjirp' data. Results shown in freq002_g. (/hanvdgei/test_HD_002/freq002_g). When t_ftimwin is big (I took one second before) the read curve has peaks like wltconvol but the amplitudes are similar over time (they don't decrease like wltconvol).
       - tested mtmfft and mtmwelch for the same timewindow (cfg.t_ftimwin=10 for mtmwelch and mtmconvol). Amplitudes are now close to eachother. (5.6039 e -8 (mtmfft) and 5.6051 e -8 (mtmwelch and mtmconvol)).
 
 **freq002_a**

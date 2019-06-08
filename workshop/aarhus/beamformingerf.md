@@ -556,7 +556,7 @@ Take your time to verbalize what you see. Try to decompose the averaged response
 
 ## (EEG) The forward model and lead field matrix
 
-We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
+We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analyzing the EEG and MEG data. The data used in this tutorial can be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/aarhus/mri_segmented.mat).
 
     load data_eeg_reref_ica
     %% sort into left and right hand response

@@ -37,7 +37,7 @@ The data used in this tutorial is available from our FTP server; please download
 
 Analyses can be conducted in many different ways and in different orders, depending on the data and on the experimental design. We will first introduce you to a standard order of analysis steps, which you can subsequently try out step-by-step in this tutorial.
 
-The following order of steps provide a good standard approach for analysing fNIRS data (see Fig 1 for an overview:
+The following order of steps provide a good standard approach for analyzing fNIRS data (see Fig 1 for an overview:
 
 - read data & trim off non-experimental time windows
 - remove bad channels (not covered in this tutorial, because we focus on one channel only)
@@ -168,7 +168,7 @@ What is the optimal threshold to get rid off short lived peaks?
 
 ### Transform to changes in oxyHB/deoxyHB
 
-You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analysing changes in blood oxygenation in muscles
+You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analyzing changes in blood oxygenation in muscles
 
     cfg = [];
     cfg.dpf = 5.9;

@@ -307,7 +307,7 @@ The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' an
 
 ## (EEG) The forward model and lead field matrix
 
-We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analysing the EEG and MEG data.
+We will continue to analyze the EEG data according to a series of steps similar to the MEG. Try to note the differences between analyzing the EEG and MEG data.
 
 ### EEG Head model & data
 

@@ -230,7 +230,7 @@ and after that the _value_ of this event. Multiple events can be transmitted one
 **bufsize** field above should always contain **type_numel** times the size per _type_ element plus the same product
 for the _value_ field.
 
-The response of the buffer server will be the usual triple **version**=1,**command**,**bufsize**=0, with **command** equal to 0x104 (=260 / PUT_OK) on sucess, or 0x105 (=261 / PUT_ERR) in case an error occured.
+The response of the buffer server will be the usual triple **version**=1,**command**,**bufsize**=0, with **command** equal to 0x104 (=260 / PUT_OK) on sucess, or 0x105 (=261 / PUT_ERR) in case an error occurred.
 
 #### Example
 

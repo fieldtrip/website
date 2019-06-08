@@ -63,7 +63,7 @@ Subject: Improper matrix assignment in ft_functionname
 
 Dear community,
 
-My name is MyName MyLastname and I am working in the BigBoss lab in MyCity on intracranial and extracranial Brain-Computer Interfaces. Currently I am analysing data of a side-project, where we recorded using combined EEG/fMRI.
+My name is MyName MyLastname and I am working in the BigBoss lab in MyCity on intracranial and extracranial Brain-Computer Interfaces. Currently I am analyzing data of a side-project, where we recorded using combined EEG/fMRI.
 
 I tried using ft_functionname to assess spatio-temporal aspects of my data. When I call ft_functionname, I expect to get a structure with several fields, which I can subsequently plot using ft_XXXplot. However, I receive the following error message:
 
