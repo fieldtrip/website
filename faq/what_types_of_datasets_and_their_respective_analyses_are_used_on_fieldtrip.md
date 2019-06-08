@@ -1,6 +1,6 @@
 ---
 title: Which datasets are used in the documentation and where are they used?
-tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-visuomotor151, meg-visuomotor275, meg-attention, meg-tactile, meg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
+tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-visuomotor151, meg-visuomotor275, meg-attention, meg-tactile, meg-audodd, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
 ---
 
 # Which datasets are used in the documentation and where are they used?
@@ -77,11 +77,20 @@ Documentation referring to this dataset:
 - Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
 - 306-channel Elekta Triux MEG system
 - Auditory stimulus presentation with a standard and an oddball, motor responses on the oddball, visual cue for the response hand (left or right) at the start of each block.
-- Dataset [details](/workshop/natmeg/meg_audodd)
+- Experimental and dataset [details](/workshop/natmeg/meg_audodd)
 - Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="meg-audodd" %}
+
+## EEG-audodd
+
+- Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
+- Experimental [details](/workshop/natmeg/meg_audodd)
+- This is the same dataset as MEG-audodd, but only with the EEG channels and reformatted as BrainVision file
+
+Documentation referring to this dataset:
+{% include seealso tag1="eeg-audodd" %}
 
 ## EEG-language
 
