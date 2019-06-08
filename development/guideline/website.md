@@ -19,8 +19,8 @@ The Markdown document should start with a short header between two lines with th
 
 ```markdown
 ---
-title: Event related averaging and MEG planar gradient
-tags: [tutorial, meg, timelock, preprocessing, plot, meg-language]
+title: Website syntax and formatting
+tags: [website, syntax, guidelines, development]
 ---
 ```
 
