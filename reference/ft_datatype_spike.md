@@ -71,7 +71,7 @@ title: ft_datatype_spike
          waveformdimord: '{chan}_lead_time_spike'
          cfg
 
- For analyzing the relation between the spikes and the local field
+ For analysing the relation between the spikes and the local field
  potential (e.g. phase-locking), the SPIKE structure can have additional
  fields such as fourierspctrm, lfplabel, freq and fourierspctrmdimord.
 
