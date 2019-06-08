@@ -4,9 +4,6 @@
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
-- name:  Website syntax and formatting Event related averaging and MEG planar gradient
-  link:  /development/guideline/website
-
 - name:  Example analysis pipeline for Biosemi data
   link:  /example/biosemi
 
