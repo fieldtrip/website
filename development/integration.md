@@ -34,7 +34,7 @@ We use a YouTube [video channel](https://www.youtube.com/fieldtriptoolbox) to di
 
 We use Git and GitHub for version control of the software and of the website, and for managing external contributions. More details can be found [here](/development/git). We also maintain a copy of the repository on [BitBucket](#bitbucket) and on [Gitlab](#gitlab).
 
-If changes are pushed to github, a webhook is triggered. The code for that is maintained at <http://github.com/fieldtrip/webhook>.
+If changes are pushed to github, a webhook is triggered. The code for that is maintained at <http://github.com/fieldtrip/automation>.
 
 ## Bitbucket
 
