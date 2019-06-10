@@ -379,36 +379,11 @@ _Figure 8: A plot of a single channel showing the MMN_
 {% include image src="/assets/img/workshop/oslo2019/MMN.png" width="650" %}
 _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 
-### Optional: N400
+### Optional: Movie plot
 
-    figure('units', 'normalized', 'outerposition', [0 0 0.5 0.5]);
+    cfg        = [];
+    cfg.layout = 'natmeg_customized_eeg1005.lay';
 
-    cfg              = [];
-    cfg.layout       = 'natmeg_customized_eeg1005.lay';
-    cfg.xlim         = [0.350 0.450]; % seconds
-    cfg.zlim         = [-3e-6 3e-6]; % Volts
-    cfg.colorbar     = 'southoutside';
-    cfg.colorbartext = 'Electric Potential (V)';
-    cfg.comment      = 'no';
+    ft_movieplotER(cfg, difference_wave);
 
-
-    subplot(1, 3, 1)
-    ft_topoplotER(cfg, ERP_standard);
-    title('Standard N400')
-    axis tight
-
-    subplot(1, 3, 2)
-    ft_topoplotER(cfg, ERP_deviant);
-    title('Deviant N400')
-    axis tight
-
-    subplot(1, 3, 3)
-    cfg.colorbartext = 'Electric Potential Difference (V)';
-    ft_topoplotER(cfg, difference_wave);
-    title('Difference N400')
-    axis tight
-
-    print -dpng N400.png
-
-{% include image src="/assets/img/workshop/oslo2019/N400.png" width="650" %}
-_Figure 10: A topographical plot showing the N400 (average over 350 to 450 ms)_
+Play around with the _zlim_ to get a feeling for how the _difference\_wave_ changes topography. Try also plotting the the ERPs themselves
