@@ -283,7 +283,7 @@ and highlight the sources inside the brain (in red)
 
     print -dpng sourcemodel_inside_outside.png
 
-{% include image src="/assets/img/workshop/oslo2019/sourcemodel.png" width="650" %}
+{% include image src="/assets/img/workshop/oslo2019/sourcemodel_inside_outside.png" width="650" %}
 _Figure 8: Head model overlain with sources outside (black dots) and sources inside the brain (red dots)_
 
 ### Estimating the lead field
