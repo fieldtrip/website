@@ -3,7 +3,7 @@ title: Statistical analysis and multiple comparison correction for EEG data
 tags: [oslo2019, eeg-audodd, statistics]
 ---
 
-# Statistical analysis and multiple comparison correction for EEG data (WORK IN PROGRESS)
+# Statistical analysis and multiple comparison correction for EEG data
 
 ## Introduction
 
