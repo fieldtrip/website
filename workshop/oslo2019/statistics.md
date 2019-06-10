@@ -511,7 +511,7 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
 
         ft_multiplotTFR(cfg, this_tfr);
         c = colorbar('location', 'southoutside');
-        c.Label.String = 'Power ratio (right over left';
+        c.Label.String = 'Power ratio (right over left)';
         title(['Correction: ' stat.cfg.correctm]);
         
         
