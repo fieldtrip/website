@@ -3,7 +3,7 @@ title: Statistical analysis and multiple comparison correction for EEG data
 tags: [oslo2019, eeg-audodd, statistics]
 ---
 
-# Statistical analysis and multiple comparison correction for EEG data (WORK IN PROGRESS)
+# Statistical analysis and multiple comparison correction for EEG data
 
 ## Introduction
 
@@ -511,7 +511,7 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
 
         ft_multiplotTFR(cfg, this_tfr);
         c = colorbar('location', 'southoutside');
-        c.Label.String = 'Power ratio (right over left';
+        c.Label.String = 'Power ratio (right over left)';
         title(['Correction: ' stat.cfg.correctm]);
         
         
