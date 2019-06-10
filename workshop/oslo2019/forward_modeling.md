@@ -127,6 +127,7 @@ From this segmentation, we will now create a mesh for each of the three tissues.
     cfg.numvertices = 3000;
 
     mesh_brain = ft_prepare_mesh(cfg, mri_segmented);
+    mesh_brain = ft_convert_units(mesh_brain, 'm'); % Use SI Units
 
     cfg             = [];
     cfg.method      = 'projectmesh';
@@ -134,12 +135,15 @@ From this segmentation, we will now create a mesh for each of the three tissues.
     cfg.numvertices = 2000;
 
     mesh_skull = ft_prepare_mesh(cfg, mri_segmented);
+    mesh_skull = ft_convert_units(mesh_skull, 'm'); % Use SI Units
+
     cfg             = [];
     cfg.method      = 'projectmesh';
     cfg.tissue      = 'scalp';
     cfg.numvertices = 1000;
 
     mesh_scalp = ft_prepare_mesh(cfg, mri_segmented);
+    mesh_scalp = ft_convert_units(mesh_scalp, 'm'); % Use SI Units
 
     mesh_eeg = [mesh_brain mesh_skull mesh_scalp];
 
@@ -160,7 +164,7 @@ _Figure 3: Plot of the three meshes (_brain, skull _and_ scalp_)_
 
 ### Head models (component 2)
 
-We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel\_dipoli_ can be downloaded at the [ftp](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) instead
+We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel\_dipoli_ can be downloaded at the [ftp](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
 
     cfg              = [];
     cfg.method       = 'bemcp';
