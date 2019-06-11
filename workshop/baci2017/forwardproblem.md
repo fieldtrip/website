@@ -14,7 +14,7 @@ The aim of this tutorial is to solve the EEG forward problem using two different
 
 ## Procedure
 
-As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved in the next session ([inverse problem](http://www.fieldtriptoolbox.org/workshop/baci2017/inverseproblem)).
+As already mentioned, the goal of this session is to solve the EEG forward problem, more precisely we want to compute EEG leadfields so that the inverse problem can be solved in the next session ([inverse problem](/workshop/baci2017/inverseproblem)).
 In order to compute leadfields, there are 9 main steps that have to be followed.
 
 1.  Load and read the anatomical data, namely a T1-MRI (**[ft_read_mri](/reference/ft_read_mri)**);

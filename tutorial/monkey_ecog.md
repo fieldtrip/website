@@ -30,7 +30,7 @@ The tutorial will follow the steps:
 
 ### Preprocessing
 
-First we will generate the layout along the guidelines explained in the layout tutorial [here](http://www.fieldtriptoolbox.org/tutorial/layout?s[]=layout). Once you have downloaded and uncompressed the data you can load and restructure it in the following way. Alternatively you can download the reformatted data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/monkey_ecog/).
+First we will generate the layout along the guidelines explained in the layout tutorial [here](/tutorial/layout?s[]=layout). Once you have downloaded and uncompressed the data you can load and restructure it in the following way. Alternatively you can download the reformatted data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/monkey_ecog/).
 
     load Event.mat
     load lay

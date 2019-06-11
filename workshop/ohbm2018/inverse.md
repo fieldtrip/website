@@ -6,9 +6,9 @@ title: Inverse problem
 
 ## Introduction
 
-In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [preprocessing](http://www.fieldtriptoolbox.org/workshop/baci2017/preprocessing).
+In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [preprocessing](/workshop/baci2017/preprocessing).
 
-We will be working on the dataset from the previous hands on sessions, and we will use the functional and anatomical data from these tutorials to deal with the inverse problem. As you already noticed we have prepared two different mathematical models from the [forward problem](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem). We will use both to solve the inverse problem and compare the results. You've either got the relevant data already processed yourself or can find in the data directory.
+We will be working on the dataset from the previous hands on sessions, and we will use the functional and anatomical data from these tutorials to deal with the inverse problem. As you already noticed we have prepared two different mathematical models from the [forward problem](/workshop/baci2017/forwardproblem). We will use both to solve the inverse problem and compare the results. You've either got the relevant data already processed yourself or can find in the data directory.
 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the Localizing oscillatory sources using beamformer techniques tutorial if you are interested in the later.
 
