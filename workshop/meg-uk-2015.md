@@ -38,7 +38,7 @@ For FieldTrip (all taken from <http://www.fieldtriptoolbox.org/video>)
 - [Measures of Connectivity](https://www.youtube.com/watch?v=LKrxdrntWcQ)
 - [Cluster based randomisation statistics](https://www.youtube.com/watch?v=vOSfabsDUNg)
 
-## Programme
+## Program
 
 The programme mixes short theoretical sessions with hands-on computer assignments. The day ends with a supervised computer session where people are free to work on their dataset of choice.
 
