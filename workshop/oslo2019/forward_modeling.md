@@ -21,9 +21,10 @@ Optimally, we have individual Magnetic Resonance Images (MRIs) available for eac
 
 There are four components of a forward model
 
-1. A _source model_: we need to know where the sources are - preferably they should be in the brain
-2. A _head model_: we need to know how the electric currents generated at the source spread throughout the volume conductor (the head, containing the borders between brain and skull and between skull and skin)
-3. A _sensor description_: we need to know where the sensors are that pick up the activity coming from the sources
+ 
+1. A _head model_: we need to know how the electric currents generated at the source spread throughout the volume conductor (the head, containing the borders between brain and skull and between skull and skin)
+2. A _sensor description_: we need to know where the sensors are that pick up the activity coming from the sources
+3. A _source model_: we need to know where the sources are - preferably they should be in the brain
 4. A _lead field_ : we need to know how the sources and sensors "connect" to one another. That is, for each source (activated at unit strength (1 Am)) we calculate the electic potential vector at each sensor (electrode). It may be seen that the _lead field_ (component 4) is really the "sum" of the information from components 1-3.
 
 {% include markup/info %}
@@ -31,7 +32,7 @@ Note that the _forward model_ is completely independent of the actual EEG data.
 All it models is how a source _given_ that it was active with a given current (1 Am), _would_ be seen at the sensor level.
 {% include markup/end %}
 
-#### The challenge of coordinate systems
+## The challenge of coordinate systems
 
 One challenge that we will face is that the _source model_ and the _head model_ are going to be based on the MRI data where positions are going to be expressed in the scanner's coordinate system, whereas the _sensor description_ is based on a another coordinate system. In our case, they were digitized using a so-called [Polhemus system](https://polhemus.com/scanning-digitizing/digitizing-products/), where the coordinate system is centered on an _x-axis_ which runs between the _pre-auricular_ points on the ears of the subject. The _y-axis_ runs through the center point of the _x-axis_ and towards the _nasion_ of the subject. Finally, the _z-axis_ is perpendicular to the _x-_ and _y-axes_. The three points, the _pre-auricular_ points and the nasion are together called the _fiducials_.
 
@@ -183,7 +184,7 @@ and we will plot them
 {% include image src="/assets/img/workshop/oslo2019/meshes.png" width="650" %}
 _Figure 4: Plot of the three meshes (\_brain, skull \_and_ scalp*)*
 
-### Head models (component 2)
+## Head models (component 1)
 
 We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel_dipoli_ can be downloaded at the [ftp](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
 
@@ -214,7 +215,7 @@ and let's plot it
 {% include image src="/assets/img/workshop/oslo2019/headmodel.png" width="650" %}
 _Figure 5: Plot of the head model with the three meshes (\_brain, skull \_and_ scalp*). Use the zooming tools to see the differences between the different tissues.*
 
-### Getting electrodes in the right position (component 3)
+## Getting electrodes in the right position (component 2)
 
 Now, we will load the electrodes description _elec.mat_ that we have gotten from our Polhemus data and convert units to SI.
 
@@ -232,7 +233,7 @@ and then plot them
 {% include image src="/assets/img/workshop/oslo2019/elec_headmodel_wrong.png" width="650" %}
 _Figure 6: Some electrodes are inside the head_
 
-#### Realigning electrodes
+### Realigning electrodes
 
 We will now realign the electrodes by projecting them to the surface
 
@@ -262,7 +263,7 @@ and plot again
 {% include image src="/assets/img/workshop/oslo2019/elec_headmodel_correct.png" width="650" %}
 _Figure 7: Electrodes are in meaningful places_
 
-### Creating a source model (a volumetric grid (fit for beamformer and dipole analysis))
+## Creating a source model (a volumetric grid (fit for beamformer and dipole analysis)) (Component 3)
 
 The next step is to create a source model that indicates where our sources are. For beamformer and dipole analyses, so-called volumetric grids will do just fine. (For Minimum Norm Estimates, a source model, where sources are constrained to the cortical surface is needed, see for example this [tutorial](/tutorial/minimumnormestimate))
 
@@ -307,7 +308,7 @@ and highlight the sources inside the brain (in red)
 {% include image src="/assets/img/workshop/oslo2019/sourcemodel_inside_outside.png" width="650" %}
 _Figure 9: Head model overlain with sources outside (black dots) and sources inside the brain (red dots)_
 
-### Estimating the lead field
+## Estimating the lead field (Component 4)
 
     cfg = [];
     cfg.sourcemodel = sourcemodel;    %% where are the sources?
@@ -508,7 +509,7 @@ We subsequently plot this _combined_ field at a location where the skin is very 
 {% include image src="/assets/img/workshop/oslo2019/surfaces.png" width="650" %}
 _Figure 15: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
 
-### Which BEM algorithm to use?
+## Which BEM algorithm to use?
 
 If possible, you should use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
 
