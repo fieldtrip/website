@@ -98,7 +98,7 @@ A version of _mri\_aligned\_headshape_ is already included in the FTP. Using thi
 Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri\_aligned\_headshape_.
 {% include markup/end %}
 
-    load mri_realigned_headshape
+    load mri_aligned_headshape
 
 ### Re-slice the MRI
 
