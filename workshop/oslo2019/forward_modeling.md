@@ -98,9 +98,11 @@ A version of _mri\_aligned\_headshape_ is already included in the FTP. Using thi
 Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri\_aligned\_headshape_.
 {% include markup/end %}
 
+    load mri_realigned_headshape
+
 ### Re-slice the MRI
 
-We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is not only convenient for plotting, but we also need it later on for the some image processing functions we are going to apply (_imerode/imdilate_).
+We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is convenient for plotting,
 
     cfg            = [];
     cfg.resolution = 1;
