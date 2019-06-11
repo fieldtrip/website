@@ -381,6 +381,8 @@ _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 
 ### Optional: Movie plot
 
+    figure
+
     cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
 

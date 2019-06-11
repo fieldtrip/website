@@ -79,19 +79,24 @@ The next step is to bring the two coordinate systems (DICOM and Polhemus) togeth
 
     mri_aligned_fiducials = ft_volumerealign(cfg, mri);
 
-In this case, we also have extra head shape points digitized with the Polhemus system. We are going to better the co-registration using these as well
+In this case, we also have extra head shape points digitized with the Polhemus system. We are going to better the co-registration using these as well. If the initial looks okay (e.g. nose points are around the MRI-nose), then just press quit, and the Iterative Closest Point algorithm do its work (_cfg.headshape.icp_)
 
     load headshape.mat
 
     cfg                     = [];
     cfg.method              = 'headshape';
     cfg.headshape.headshape = headshape;
+    cfg.headshape.icp       = 'yes'; % use iterative closest point procedure
     cfg.coordsys            = 'neuromag';
 
     mri_aligned_headshape = ft_volumerealign(cfg, mri_aligned_fiducials);
 
+We follow this up by a check running **[ft_volumerealign](/reference/ft_volumerealign)** again
+
+    ft_volumerealign(cfg, mri_aligned_headshape);
+
 {% include image src="/assets/img/workshop/oslo2019/headshape_registration.png" width="650" %}
-_Figure 2: Plot of the co-registration procedure using the Polhemus head shape points_
+_Figure 2: Plot of the co-registration after applying Iterative Closest Points on the Polhemus head shape points_
 
 {% include markup/info %}
 A version of _mri\_aligned\_headshape_ is already included in the FTP. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well.  
