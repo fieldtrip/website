@@ -69,7 +69,7 @@ We then apply the same preprocessing as before
 
     data_EEG_filt = ft_preprocessing(cfg, cleaned_data_ERP);
 
-### The Student's t-test
+#### The Student's t-test
 
 A ubiquitous test used to assess statistical significance is the Student's t-test [Wikipedia entry](https://en.wikipedia.org/wiki/Student's_t-test) [original article](https://doi.org/10.1093/biomet/6.1.1)  
 To perform the t-test, _t-values_ need to be calculated, which a bit simplified are: \frac{µ}{SEM}, where µ is the mean difference between the conditions and SEM is the standard devation divided by \sqrt{n}, where _n_ is the number of observations.
@@ -151,7 +151,7 @@ _Figure 1: Single channel plot - no correction_
 Note that we see the MMN difference (~120-200 ms), but we also see other differences and even a pre-zero one. We cannot decide which are _true positives_ and which are _false positives_. In fact, we know that there will be a lot _false positives_ (assuming that the data were from identical distributions, i.e. the null hypothesis is true, we would expect that 5% of our significant differences are _false positives_)
 {% include markup/end %}
 
-### Bonferroni correction
+#### Bonferroni correction
 
 We will now control the _false positives_ by using the Bonferroni Correction [Wikipedia article](https://en.wikipedia.org/wiki/Bonferroni_correction)
 
@@ -176,11 +176,11 @@ _Figure 2: Single channel plot - Bonferroni correction_
 The Bonferroni correction has eliminated some likely _false positives_, but probably at the expense of introducing some _false negatives_. According to our image, only the peak of our MMN is significant. But EEG responses are not peaky in nature, they wax and wane smoothly in time and are smeared out over several electrodes. The Bonferroni correction implicitly assumes that EEG responses are uncorrelated, which they are patently not. Our next correction, the _cluster correction_ addresses the issue of correlation.
 {% include markup/end %}
 
-### Cluster-based correction for multiple comparisons
+#### Cluster-based correction for multiple comparisons
 
 As noted above, EEG data is smooth over the spatio-temporal dimensions. We can easily imaging how we can build clusters in the temporal dimension. These are simply data points that are neighboring each other in time. For the spatial dimension, it is necessary to build a neighbor structure using **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**. This uses the (digitized) positions of the electrodes.
 
-#### Neighbors
+##### Neighbors
 
 {% include markup/danger %}
 Sometimes we use the word 'neighbour' according to the British spelling and sometimes we use it as neighbor according to the American spelling.
@@ -200,7 +200,7 @@ Sometimes we use the word 'neighbour' according to the British spelling and some
 {% include image src="/assets/img/workshop/oslo2019/neighbor_structure.png" width="650" %}
 _Figure 3: Electrode neighbor structure_
 
-#### Permutation
+##### Permutation
 
 The cluster correction is not meaningful for parametric statistics, e.g. _t-tests_, therefore we are going to use a non-parameteric test.  
 We will first run it and then discuss some of the options and details afterwards.
@@ -279,7 +279,7 @@ There's quite a lot to unpack here. It is critical to distinguish between _t-val
 
 Below follows some figures and operations illustrating key features of these steps - (the code for these plots in the **Appendix** below)
 
-##### Equivalence of the _t-values_ (step 1)
+###### Equivalence of the _t-values_ (step 1)
 
     >> isequal(stat_t.stat, stat_t_cluster.stat)
 
@@ -290,17 +290,17 @@ Below follows some figures and operations illustrating key features of these ste
 {% include image src="/assets/img/workshop/oslo2019/stat_equivalence.png" width="650" %}
 _Figure 4: Equivalence of_ t-values
 
-#### Cluster _T-values_ (step 2)
+###### Cluster _T-values_ (step 2)
 
 {% include image src="/assets/img/workshop/oslo2019/cluster_T_values.png" width="650" %}
 _Figure 5: The_ T-values _of each of the clusters_
 
-##### Maximum positive and negative cluster _T-values_ compared to the permuted distributions (steps 3 and 4)
+###### Maximum positive and negative cluster _T-values_ compared to the permuted distributions (steps 3 and 4)
 
 {% include image src="/assets/img/workshop/oslo2019/permutation_distributions.png" width="650" %}
 _Figure 6: The observed positive and negative_ T-values compared to the permuted distributions
 
-##### Compare against _cfg.alpha_ (steps 5 and 6)
+###### Compare against _cfg.alpha_ (steps 5 and 6)
 
 Since both the _positive_ and _negative p-values_ are lesser than _cfg.alpha_ (0.025), we reject the null hypothesis for both the positive and negative directions.  
 _Put informally_: **our way of labeling the conditions _does_ matter**
@@ -525,7 +525,7 @@ _Figure 11: Three multiplots showing the differences between the three tests/cor
 
 Note how the cluster correction seems to catch the clusters that "catch" our eyes, while not showing the many non-clustered values that the non-corrected _t-test_ showed. Also note that the Bonferroni correction removed all significant effects, showing that it is too conservative to apply to TFR data.
 
-### Extending the frequency and time ranges of the tests
+## Extending the frequency and time ranges of the tests
 
 {% include markup/exercise %}
 Do the three tests again without setting _cfg.frequency_ and _cfg.latency_ (you can comment them out)  
