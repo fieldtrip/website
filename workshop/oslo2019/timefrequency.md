@@ -226,7 +226,7 @@ This looks better! We can also plot the time-resolved activity using **[ft_singl
 
 _Figure: Time-frequency representation of power at a central electrode._
 
-### Take the difference between conditions
+### Plot the difference between conditions
 
 We now want to collapse the information of both conditions by comparing them. One possibility is to take the difference between the conditions: we subtract the two power spectra and then divide them by their sum - this normalizes the difference by the common activity. This can conveniently be done using **[ft_math](/reference/ft_math)**:
 
@@ -276,7 +276,7 @@ Let's calculate the time-frequency representation of our data using Morlet wavel
     cfg.trials     = find(data.trialinfo(:,1) == 4096);
     wave_right     = ft_freqanalysis(cfg, data);
 
-#### Take the difference between conditions and plot the result
+### Plot the difference between conditions
 
 As for our first analysis, we want to look at the difference between the conditions, so we use **[ft_math](/reference/ft_math)** again. We then visualize the results looking at the same channels as above.
 
