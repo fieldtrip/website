@@ -247,9 +247,11 @@ _Figure 6: Electrodes are in meaningful places_
 
 The next step is to create a source model that indicates where our sources are. For beamformer and dipole analyses, so-called volumetric grids will do just fine. (For Minimum Norm Estimates, a source model, where sources are constrained to the cortical surface is needed, see for example this [tutorial](/tutorial/minimumnormestimate))
 
-    cfg            = [];
-    cfg.headmodel  = headmodel; % used to estimate extent of grid
-    cfg.resolution = 0.01; % a source per 0.01 m -> 1 cm
+    cfg             = [];
+    cfg.headmodel   = headmodel; % used to estimate extent of grid
+    cfg.resolution  = 0.01; % a source per 0.01 m -> 1 cm
+    cfg.inwardshift = 0.005; % moving sources 5 mm inwards from the skull, ...
+                             % since BEM models may be unstable here
 
     sourcemodel = ft_prepare_sourcemodel(cfg);
 
