@@ -79,14 +79,30 @@ The next step is to bring the two coordinate systems (DICOM and Polhemus) togeth
 
     mri_aligned_fiducials = ft_volumerealign(cfg, mri);
 
+In this case, we also have extra head shape points digitized with the Polhemus system. We are going to better the co-registration using these as well
+
+    load headshape.mat
+
+    cfg                     = [];
+    cfg.method              = 'headshape';
+    cfg.headshape.headshape = headshape;
+    cfg.coordsys            = 'neuromag';
+
+    mri_aligned_headshape = ft_volumerealign(cfg, mri_aligned_fiducials);
+
+{% include image src="/assets/img/workshop/oslo2019/headshape_registration.png" width="650" %}
+_Figure 2: Plot of the co-registration procedure using the Polhemus head shape points_
+
 {% include markup/info %}
-A version of _mri\_aligned\_fiducials_ is already included in the FTP. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well.  
-Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri\_aligned\_fiducials_.
+A version of _mri\_aligned\_headshape_ is already included in the FTP. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well.  
+Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri\_aligned\_headshape_.
 {% include markup/end %}
+
+    load mri_realigned_headshape
 
 ### Re-slice the MRI
 
-We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is not only convenient for plotting, but we also need it later on for the some image processing functions we are going to apply (_imerode/imdilate_).
+We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordinate axes. This is convenient for plotting,
 
     cfg            = [];
     cfg.resolution = 1;
@@ -102,7 +118,7 @@ and when we plot it now, the axes are more conveniently located - note that ever
     print -dpng mri_aligned_resliced.png
 
 {% include image src="/assets/img/workshop/oslo2019/mri_aligned_resliced.png" width="650" %}
-_Figure 2: Plot of the resliced MRI, where axes are located in a more convenient manner_
+_Figure 3: Plot of the resliced MRI, where axes are located in a more convenient manner_
 
 {% include markup/exercise %}
 Make sure that the coordinate system is correct, i.e. _up_ is _z-positive_, _anterior_ is _y-positive_ and _right_ is _x-positive_
@@ -160,7 +176,7 @@ and we will plot them
     print -dpng meshes.png
 
 {% include image src="/assets/img/workshop/oslo2019/meshes.png" width="650" %}
-_Figure 3: Plot of the three meshes (_brain, skull _and_ scalp_)_
+_Figure 4: Plot of the three meshes (_brain, skull _and_ scalp_)_
 
 ### Head models (component 2)
 
@@ -192,7 +208,7 @@ and let's plot it
     view(90, 0)
 
 {% include image src="/assets/img/workshop/oslo2019/headmodel.png" width="650" %}
-_Figure 4: Plot of the head model with the three meshes (_brain, skull _and_ scalp_). Use the zooming tools to see the differences between the different tissues._
+_Figure 5: Plot of the head model with the three meshes (_brain, skull _and_ scalp_). Use the zooming tools to see the differences between the different tissues._
 
 ### Getting electrodes in the right position (component 3)
 
@@ -211,7 +227,7 @@ and then plot them
 
 
 {% include image src="/assets/img/workshop/oslo2019/elec_headmodel_wrong.png" width="650" %}
-_Figure 5: Electrodes are in all the wrong places_
+_Figure 6: Some electrodes are inside the head_
 
 #### Realigning electrodes
 
@@ -241,15 +257,17 @@ and plot again
     print -dpng elec_headmodel_correct.png
 
 {% include image src="/assets/img/workshop/oslo2019/elec_headmodel_correct.png" width="650" %}
-_Figure 6: Electrodes are in meaningful places_
+_Figure 7: Electrodes are in meaningful places_
 
 ### Creating a source model (a volumetric grid (fit for beamformer and dipole analysis))
 
 The next step is to create a source model that indicates where our sources are. For beamformer and dipole analyses, so-called volumetric grids will do just fine. (For Minimum Norm Estimates, a source model, where sources are constrained to the cortical surface is needed, see for example this [tutorial](/tutorial/minimumnormestimate))
 
-    cfg            = [];
-    cfg.headmodel  = headmodel; % used to estimate extent of grid
-    cfg.resolution = 0.01; % a source per 0.01 m -> 1 cm
+    cfg             = [];
+    cfg.headmodel   = headmodel; % used to estimate extent of grid
+    cfg.resolution  = 0.01; % a source per 0.01 m -> 1 cm
+    cfg.inwardshift = 0.005; % moving sources 5 mm inwards from the skull, ...
+                             % since BEM models may be unstable here
 
     sourcemodel = ft_prepare_sourcemodel(cfg);
 
@@ -264,7 +282,7 @@ and plot it
     print -dpng sourcemodel.png
 
 {% include image src="/assets/img/workshop/oslo2019/sourcemodel.png" width="650" %}
-_Figure 7: Head model overlain with source model (black dots)_
+_Figure 8: Head model overlain with source model (black dots)_
 
 and highlight the sources inside the brain (in red)
 
@@ -284,7 +302,7 @@ and highlight the sources inside the brain (in red)
     print -dpng sourcemodel_inside_outside.png
 
 {% include image src="/assets/img/workshop/oslo2019/sourcemodel_inside_outside.png" width="650" %}
-_Figure 8: Head model overlain with sources outside (black dots) and sources inside the brain (red dots)_
+_Figure 9: Head model overlain with sources outside (black dots) and sources inside the brain (red dots)_
 
 ### Estimating the lead field
 
@@ -395,10 +413,10 @@ The code for this takes a bit more work as can be seen by the length of the code
     view(-90, 0)
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo_wrong.png" width="650" %}
-_Figure 9: Lead fields in the_ XYZ-_directions for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
+_Figure 10: Lead fields in the_ XYZ-_directions for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo_wrong.png" width="650" %}
-_Figure 10: Magnitude of the lead fields for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
+_Figure 11: Magnitude of the lead fields for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
 
 {% include markup/warning %}
 Here it is quickly seen that something is **awry...** (the topographies are not smooth, and the lead fields are of too great a magnitude (millivolts))
@@ -416,10 +434,10 @@ Now the plots look **correct** - (the electric potentials are in the order of mi
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo.png" width="650" %}
-_Figure 11: Lead fields in the_ XYZ-_directions for_ headmodel\_dipoli _for a superficial source_
+_Figure 12: Lead fields in the_ XYZ-_directions for_ headmodel\_dipoli _for a superficial source_
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo.png" width="650" %}
-_Figure 12: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
+_Figure 13: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
 
 {% include markup/exercise %}
 When plotting the lead field topographies, try to change _source\_index_ and _sensory\_dipole\_current_ to change the topography and get a feeling for how it works. Also change the source index (will work for a number between 1 and 1659)
@@ -462,7 +480,7 @@ We can also plot the vectors - note that they are more or less normal to the sca
           'markersize', 60, 'markerfacecolor', 'r')
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_vector.png" width="650" %}
-_Figure 13: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
+_Figure 14: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
 
 ## Advanced troubleshooting
 
@@ -486,7 +504,7 @@ We subsequently plot this _combined_ field at a location where the skin is very 
     ft_sourceplot(cfg, mri_segmented_binary);
 
 {% include image src="/assets/img/workshop/oslo2019/surfaces.png" width="650" %}
-_Figure 14: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
+_Figure 15: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
 
 ### Algorithm to use
 
