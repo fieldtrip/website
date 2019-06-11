@@ -140,7 +140,7 @@ The MATLAB session that executes the peereval command searches for a peer that a
 
 Multiple peerevals can be executed without explicitely waiting for the results to return, hence the peer server (running on the master) should be able to receive and hold multiple "argouts".
 
-The jobid should include information about the peer to which the job was assigned. Furthermore, information about the begin and end time would be usefull to estimate the time it takes to execute similar jobs.
+The jobid should include information about the peer to which the job was assigned. Furthermore, information about the begin and end time would be useful to estimate the time it takes to execute similar jobs.
 Its interface is identical to the standard MATLAB feval() command.
 
 #### Peerget(...)

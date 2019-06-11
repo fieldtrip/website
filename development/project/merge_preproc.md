@@ -117,6 +117,6 @@ The most obvious function to start in is fieldtrip/private/preproc, but other Fi
 
 - spikeanalysis.m
 
-## Usefull commands
+## useful commands
 
     grep filter\( *.m

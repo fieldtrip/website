@@ -29,7 +29,7 @@ We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projec
 - [Check the correctness of the implementation of the algorithms](/development/project/correctness)
 - [Document the deprecated functions and configuration options](/development/deprecated)
 - [improve interactive and non-interactive plotting of 4D bivariate data](/development/project/visualization)
-- [Ensemblemethods](/development/project/ensemblemethods)
+- [Ensemble methods](/development/project/ensemblemethods)
 - [Restructure and rework all visualization functions](/development/project/restructure_and_rework_all_visualization_functions)
 - [Checkdata and make source-structure definition consistent with other datatypes](/development/project/checkdata)
 - [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)
