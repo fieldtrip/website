@@ -107,7 +107,7 @@ We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordin
     cfg            = [];
     cfg.resolution = 1;
 
-    mri_resliced = ft_volumereslice(cfg, mri_aligned_fiducials);
+    mri_resliced = ft_volumereslice(cfg, mri_aligned_headshape);
 
 and when we plot it now, the axes are more conveniently located - note that everything could have been done with the "flipped" images as well.
 
