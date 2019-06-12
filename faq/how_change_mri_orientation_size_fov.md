@@ -21,16 +21,15 @@ An example volume structure is
 
     disp(mri)
 
-         dim: [256 256 256]            % the size of the 3D volume in voxels
-     anatomy: [256x256x256 int16]      % the numeric data, in this case anatomical information
+           dim: [256 256 256]        % the size of the 3D volume in voxels
+       anatomy: [256x256x256 int16]  % the numeric data, in this case anatomical information
+     transform: [4x4 double]         % affine transformation matrix
+      coordsys: 'ctf'                % description of the (head) coordinate system
+           hdr: [1x1 struct]
 
-transform: [4x4 double] % affine transformation matrix
-coordsys: 'ctf' % description of the (head) coordinate system
-hdr: [1x1 struct]
+This volume is already aligned to the CTF head [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). But the alignment by itself does not change the orientation of the original `anatomy` field, it just adds a transformation matrix which allows for relating each voxel intensity to the corresponding voxel location in the CTF head coordinate system. Note that the transformation matrix is taken into account at all subsequent computations.
 
-This volume is already aligned to the 'ctf' head [coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined). But the alignment by itself does not change the orientation of the original **anatomy** field, it just adds a transformation matrix which allows for relating each voxel coordinate to the CTF head coordinate system. (Note: the transformation matrix is taken into account at subsequent computations.)
-
-When the anatomical data is plotted, the default behavior is to plot the anatomical data as it is in the **anatomy** field (without changing its orientation according to the transformation matrix). This is the reason why anatomical data is sometimes plotted with the top of the head pointing downwards (figure 1).
+When the anatomical data is plotted, the default behavior is to plot the anatomical data as it is in the `anatomy` field, without changing its orientation according to the transformation matrix. This is the reason why anatomical data is sometimes plotted with the top of the head pointing to the bottom of the screen (figure 1).
 
     cfg = [];
     ft_sourceplot(cfg,mri)
@@ -39,7 +38,7 @@ When the anatomical data is plotted, the default behavior is to plot the anatomi
 
 _Figure 1. Anatomical mri plotted **without** using ft_volumereslice before plotting_
 
-When you call the **[ft_volumereslice](/reference/ft_volumereslice)** function on the anatomical MRI, it will apply the transformation matrix to the field **anatomy** and interpolate the anatomical data onto a new voxel-grid that is aligned with the axis of the head coordinate system. If the input MRI has a coordsys field, the center of the volume will be shifted (with respect to the origin of the coordinate system) for the brain to fit nicely in the box. By default the voxel resolution is 1 mm. The output will have a different orientation of the anatomy and consequently, a different transformation matrix.
+When you call the **[ft_volumereslice](/reference/ft_volumereslice)** function on the anatomical MRI, it will apply the transformation matrix to the field `anatomy` and interpolate the anatomical data onto a new voxel-grid that is aligned with the axis of the head coordinate system. If the input MRI has a `coordsys` field, the center of the volume will be shifted (with respect to the origin of the coordinate system) for the brain to fit nicely in the box. By default the voxel resolution is 1 mm. The output will have a different orientation of the anatomy and consequently, a different transformation matrix.
 
 Plotting the resliced anatomical MRI results in a figure with the usually desired orientation of the head (Figure 2).
 
@@ -67,8 +66,8 @@ In the figures above you can appreciate the change in the FOV by considering the
 
 ## General principle of reslicing as a 3D interpolation
 
-The ft_volumereslice operations, such as changing the orientation of the anatomy and changing the resolution of the voxels can be conceptually understood by looking at the figure belo
+The **[ft_volumereslice](/reference/ft_volumereslice)** operations, such as changing the orientation of the anatomy and changing the resolution of the voxels can be conceptually understood by looking at the figure below:
 
 {% include image src="/assets/img/faq/how_change_mri_orientation_size_fov/reslice2.jpg" width="500" %}
 
-The figure shows the original volumetric slices (dotted black lines) and the desired slices (bold red). Note that the distance between the original slices is 2 cm, whereas the pixel distance within the same slice is 1 cm (black). After re-slicing (red) the voxel's dimensions are the same. You can also see that the voxels are aligned with the axes of the coordinate system to which the image was re-aligned earlier (see the black vs. red axes at the bottom of the figures).
+The figure shows the original volumetric slices (dotted black lines) and the desired slices (bold red). Note that the distance between the original slices is 2 cm, whereas the pixel distance within the same slice is 1 cm (black). After re-slicing (red) the voxels' dimensions are the same. You can also see that the voxels are aligned with the axes of the coordinate system to which the image was re-aligned earlier (see the black vs. red axes at the bottom of the figures).

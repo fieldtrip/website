@@ -8,6 +8,7 @@ tags: [oslo2019, eeg-audodd, headmodel]
 ## Introduction
 
 This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.  
+
 It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](link missing), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](link missing).
 
 The data for the tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
@@ -21,7 +22,7 @@ Optimally, we have individual Magnetic Resonance Images (MRIs) available for eac
 
 There are four components of a forward model
 
- 
+
 1. A _head model_: we need to know how the electric currents generated at the source spread throughout the volume conductor (the head, containing the borders between brain and skull and between skull and skin)
 2. A _sensor description_: we need to know where the sensors are that pick up the activity coming from the sources
 3. A _source model_: we need to know where the sources are - preferably they should be in the brain
