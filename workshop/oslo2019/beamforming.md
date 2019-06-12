@@ -61,7 +61,7 @@ We need to have information about the head geometry and conduction and the elect
 
     load headmodel_meg.mat
     load sourcemodel
-	
+
 ### Plotting the forward model
 
 It is always a good idea to plot all ingredients of the forward model together, to see if they line up. So here, we plot the source grid, the headmodel, and the sensor positions together:
@@ -86,12 +86,12 @@ It is always a good idea to plot all ingredients of the forward model together, 
         'b*', 'markersize', 20);
 
     view(90, 0)
-	
+
 
 {% include image src="/assets/img/workshop/oslo2019/modelfit.png" %}
 
 _Figure: The different parts for the forward model all line up._
-	
+
 ## Identifying a time window of interest
 
 The aim is to identify the sources of oscillatory activity in the beta band. We have identified 18 Hz as the center frequency for which the power estimates should be calculated. We seek to compare the activation between the response with the left finger to the activation in response to the right finger. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. Remember, that it is important that the length of each data piece is the length of a fixed number of oscillatory cycles. Here 9 cycles are used resulting in a 9/18 Hz = 0.5 s time window. Thus, the time window we will use ranges from 0.35 to 0.85 second after response onset (see Figure 2).
@@ -137,7 +137,7 @@ We choose to only use the trials with the left hand response for now, that is wh
 The cross-spectral density data structure has a similar data structure as other output out of [ft_freqanalysis](/reference/ft_freqanalysis):
 
 
-    powcsd_left = 
+    powcsd_left =
 
           label: {204x1 cell}     % Channel labels
          dimord: 'chan_freq'      % Dimensions in the data
@@ -153,9 +153,9 @@ The cross-spectral density data structure has a similar data structure as other 
 How come our target frequency is 17.8657, didn't we ask for 18? _Hint: How large is our time window?_
 {% include markup/end %}
 
-## MEG source analysis on the left hand reaction 
+## MEG source analysis on the left hand reaction
 
-Using the cross-spectral density and the lead field matrices that we loaded, a spatial filter is calculated for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for the left hand reaction activity. This results in a power estimate for each grid point. 
+Using the cross-spectral density and the lead field matrices that we loaded, a spatial filter is calculated for each grid point. By applying the filter to the Fourier transformed data we can then estimate the power for the left hand reaction activity. This results in a power estimate for each grid point.
 
     cfg              = [];
     cfg.method       = 'dics';
@@ -163,12 +163,12 @@ Using the cross-spectral density and the lead field matrices that we loaded, a s
     cfg.headmodel    = headmodel_meg;
     cfg.channel      = {'MEG*2', 'MEG*3'};
     cfg.frequency    = 18;
-    cfg.senstype     = 'MEG'; % Must be 'MEG', although we only kept MEG channels, 
+    cfg.senstype     = 'MEG'; % Must be 'MEG', although we only kept MEG channels,
                               % information on EEG channels is still present in data
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda  = '5%';
     source_left = ft_sourceanalysis(cfg, powcsd_left);
-	
+
 The source data structure has the following fields:
 
     source_left =
@@ -223,10 +223,10 @@ It is ideal to contrast the activity of interest against some control.
 2.  However, if no other suitable data condition or baseline time-window exists, then
     - Activity contrasted with estimated noise
     - Use normalized leadfields (that is what we did above!)
-	
+
 {% include markup/info %}
 Why shouldn't we calculate a spatial filter for both conditions separately in this case? Would there be a reason to do so?
-{% include markup/end %}	
+{% include markup/end %}
 
 The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition. To calculate the common filter, we will use the extracted time window pooled over both conditions.
 
@@ -260,13 +260,13 @@ We now use all the data as input for computing the _common spatial filter_. We s
     cfg.headmodel    = headmodel_meg;
     cfg.channel      = {'MEG*2', 'MEG*3'};
     cfg.frequency    = 18;
-    cfg.senstype     = 'MEG'; 
+    cfg.senstype     = 'MEG';
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda  = '5%';
     cfg.dics.keepfilter   = 'yes';  % We wish to reuse the calculated filter later on
 
     source_all = ft_sourceanalysis(cfg, powcsd_all);
-	
+
 To apply this common spatial filter to the trials of our two conditions separately, we run `ft_sourceanalysis`again - for both conditions - but specify that we want to use the filter we just computed.
 
     cfg              = [];
@@ -296,7 +296,7 @@ This is the same operations as we did above. We interpolate the data onto the st
     cfg.parameter = 'pow';
     source_diff_int  = ft_sourceinterpolate(cfg, source_diff, mri_resliced);
 
-	% Plot the result 
+	% Plot the result
     cfg = [];
     cfg.method        = 'ortho';
     cfg.funparameter  = 'pow';
@@ -320,5 +320,5 @@ The 'ortho' method is not the only plotting method implemented. Use the 'help' o
 #### Exercise 3: regularization
 
 {% include markup/info %}
-The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?  
+The regularization parameter was lambda = '5%'. Change it to '0%' or to '10%' and plot the power estimate. How does the regularization parameter affect the properties of the spatial filter?
 {% include markup/end %}
