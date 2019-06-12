@@ -43,7 +43,7 @@ This tutorial does not cover forward model computation. We will load the needed 
 
 _Figure: An example of a pipeline to locate oscillatory sources._
 
-## Preparing the data 
+## Preparing the data
 
 ### Loading the data
 
