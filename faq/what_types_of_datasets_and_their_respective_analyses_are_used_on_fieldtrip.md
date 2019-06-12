@@ -1,6 +1,6 @@
 ---
 title: Which datasets are used in the documentation and where are they used?
-tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-visuomotor151, meg-visuomotor275, meg-attention, meg-tactile, meg-audodd, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
+tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-visuomotor151, meg-visuomotor275, meg-attention, meg-tactile, meg-audodd, eeg-audodd, eeg-language, eeg-affective, eeg-sedation, eeg-tms, hcp-motort, mmfaces, meg-epilepsy, spike-attention, spike-placefield, neurotycho, ecog-visual, ecog-protocol, nirs-singlechannel, nirs-multichannel]
 ---
 
 # Which datasets are used in the documentation and where are they used?
@@ -179,6 +179,13 @@ Documentation referring to this dataset:
 
 Documentation referring to this dataset:
 {% include seealso tag1="spike-placefield" %}
+
+## NeuroTycho
+
+- The [NeuroTycho](http://neurotycho.org) project shares ECoG and sEEG data recorded in monkeys while performing various tasks, plus behavioral data. The datasets were recorded in the Laboratory for Adaptive Intelligence, BSI, RIKEN and have been made publicly available.
+
+Documentation referring to this dataset:
+{% include seealso tag1="neurotycho" %}
 
 ## ECoG-visual
 
