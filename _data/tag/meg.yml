@@ -223,6 +223,9 @@
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
 
+- name:  Beamforming oscillatory responses in MEG data
+  link:  /workshop/oslo2019/beamforming
+
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 
