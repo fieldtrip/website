@@ -217,7 +217,6 @@ The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an 
     cfg                = [];
     cfg.lpfilter       = 'yes';
     cfg.lpfreq         = 30;
-    cfg.demean         = 'yes';     % we demean (baseline correct) ...
     cfg.detrend        = 'yes';     % removing linear trends
     cfg.baselinewindow = [-Inf 0];  % using the mean activity in this window
 
