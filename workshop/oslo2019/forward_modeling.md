@@ -485,7 +485,7 @@ We can also plot the vectors - note that they are more or less normal to the sca
           'markersize', 60, 'markerfacecolor', 'r')
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_vector.png" width="650" %}
-_Figure 14: Magnitude of the lead fields for_ headmodel_dipoli _for a superficial source_
+_Figure 14: Orientations of the lead fields for_ headmodel_dipoli _for a superficial source_
 
 ## Bonus: troubleshooting the meshes
 
