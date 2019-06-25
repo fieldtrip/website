@@ -21,7 +21,7 @@ To get started with FieldTrip, please continue reading the [getting started](/ge
 ## News and announcements
 
 {% for post in site.posts %}
-{% if post.categories contains 'frontpage' %}
+{% if post.categories contains 'news' %}
 {{ post.excerpt }}
 {% endif %}
 {% endfor %}

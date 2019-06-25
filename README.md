@@ -15,6 +15,7 @@ Feel free to contribute by doing edits here and sending a pull request. See <htt
 - Shared pages should go in \_include/shared.
 - Markdown documentation can be found on <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>.
 - Liquid documentation can be found on <https://help.shopify.com/en/themes/liquid> and <https://shopify.github.io/liquid>.
+- Jekyll cheatsheet can be found on >https://devhints.io/jekyll>.
 
 ## Limitations when viewing on GitHub
 
@@ -49,4 +50,3 @@ which will convert the Markdown into HTML and serve the complete website on <htt
   * "MATLAB", not "Matlab"
 * Sentence case (not "Title Case") for section headings
 * Use en- or em-dashes where appropriate
-
