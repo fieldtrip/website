@@ -55,7 +55,7 @@
 - name:  Getting started with BrainVision Analyzer and Easycap
   link:  /getting_started/brainvision
 
-- name:  Getting started with 4D-neuroimaging/BTi data
+- name:  Getting started with BTi/4D data
   link:  /getting_started/bti
 
 - name:  Getting started with CTF data
