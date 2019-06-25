@@ -17,10 +17,11 @@ If there is no information listed for a potential workshop below, then we don't 
 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
-- 2019, [EEG workshop](/workshop/oslo2019) - Oslo, Norway
+- 2020, [MEG/EEG toolkit](/workshop/toolkit2020) - Nijmegen, NL
 
 Previous FieldTrip workshops took place at
 
+- 2019, [EEG workshop](/workshop/oslo2019) - Oslo, Norway
 - 2019, [Oxford, UK](/workshop/oxford2019) - Oxford, UK
 - 2019, [MEG/EEG toolkit](/workshop/toolkit2019) - Nijmegen, NL
 - 2019, [ECoG/SEEG toolkit](/workshop/davis2019) - Davis, California
