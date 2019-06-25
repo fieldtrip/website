@@ -1,14 +1,29 @@
+- name:  Details on the resting-state EEG dataset recorded with different sedation levels
+  link:  /workshop/madrid2019/eeg_sedation
+
 - name:  Example script for leadfield based on FEM headmodel
   link:  /development/project/example_fem
+
+- name:  Cleaning and processing resting-state EEG
+  link:  /workshop/madrid2019/tutorial_cleaning
 
 - name:  Modular EEG, OpenEEG
   link:  /development/realtime/modulareeg
 
+- name:  Getting started with EEG data, quality checks and ERPs
+  link:  /workshop/madrid2019/tutorial_erp
+
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/align_eeg_electrode_positions_to_bem_headmodel
 
+- name:  Time-frequency and spectral analysis
+  link:  /workshop/madrid2019/tutorial_freq
+
 - name:  Example analysis pipeline for Biosemi data
   link:  /example/biosemi
+
+- name:  Cluster-based permutation tests on resting-state EEG power spectra
+  link:  /workshop/madrid2019/tutorial_stats
 
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
@@ -16,32 +31,65 @@
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
 
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /workshop/natmeg/beamforming
+
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
+
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /workshop/natmeg/dipolefitting
 
 - name:  Getting started with reading raw EEG or MEG data
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
+- name:  Description of the auditory oddball MEG+EEG dataset
+  link:  /workshop/natmeg/meg_audodd
+
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/preprocessing
+
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 
+- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
 - name:  Use your own forward leadfield model in an inverse beamformer computation
+  link:  /workshop/natmeg/statistics
   link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
+
+
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /workshop/natmeg/timefrequency
 
 - name:  Can I do combined EEG and MEG source reconstruction?
   link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
 
+- name:  FieldTrip workshop in Oslo
+  link:  /workshop/oslo2019
+
 - name:  Can I compare EEG channels between different electrode caps?
   link:  /faq/capmapping
+
+- name:  Forward modeling for EEG source reconstruction
+  link:  /workshop/oslo2019/forward_modeling
 
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
+- name:  Preprocessing and event-related potentials in EEG data
+  link:  /workshop/oslo2019/introduction
+
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
 
+- name:  Statistical analysis and multiple comparison correction for EEG data
+  link:  /workshop/oslo2019/statistics
+
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
+
+- name:  Time-frequency analysis of EEG data
+  link:  /workshop/oslo2019/timefrequency
 
 - name:  How can I use OpenMEEG for forward modeling?
   link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
