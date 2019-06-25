@@ -39,7 +39,7 @@ The following EEG/MEG sensor formats are supported by **[ft_read_sens](/referenc
 - FIL Polhemus
 - BESA positions (numeric file with accompanying .elp and .ela)
 - BESA sfp
-- MEG systems (CTF, Elekta/Neuromag, Yokogawa, 4D/BTi)
+- MEG systems (CTF, Neuromag/Elekta, Yokogawa, 4D/BTi)
 - SPM8 EEG
 
 The following spike and LFP data formats are supported by **[ft_read_spike](/reference/ft_read_spike)** and **[ft_read_data](/reference/ft_read_data)**

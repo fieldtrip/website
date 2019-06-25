@@ -6,7 +6,7 @@ tags: [ctf, meg, dataformat]
 # Getting started with CTF data
 
 {% include markup/success %}
-The company based in Coquitlam (BC, Canada) making these MEG systems was initially called CTF, later renamed to VSM/MedTech, then operated as MISL (MEG International Services), and now goes with the name CTF again. We refer to all incarnations of these MEG systems with "CTF".  
+The company based in Coquitlam (BC, Canada) making these MEG systems was initially called CTF, later renamed to VSM-MedTech, then operated as MISL (MEG International Services), and now goes with the name CTF again. We refer to all incarnations of these MEG systems with "CTF".  
 {% include markup/end %}
 
 ## Introduction

@@ -89,7 +89,7 @@ The most crucial step in preprocessing is to transform the optical densities to 
 
 ## Layouts
 
-Layouts should be created on-the-fly by ft_prepare_layout. NeuroMag layouts can be taken as an example, where within the same data, different sensortypes are present at the same/nearby locations. The function should create an outline where optode positions are indicated (i.e. by a circle), and space for the different numbers of measures (concentrations) is computed and reserved, e.g. for multiplotting. The space depends on the cfg, i.e. desired channels/concentrations to be plotted (reminder: concentrations will be read out by the data labels).
+Layouts should be created on-the-fly by ft_prepare_layout. Neuromag layouts can be taken as an example, where within the same data, different sensortypes are present at the same/nearby locations. The function should create an outline where optode positions are indicated (i.e. by a circle), and space for the different numbers of measures (concentrations) is computed and reserved, e.g. for multiplotting. The space depends on the cfg, i.e. desired channels/concentrations to be plotted (reminder: concentrations will be read out by the data labels).
 
 ## Code structure
 

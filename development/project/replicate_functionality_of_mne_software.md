@@ -523,6 +523,6 @@ And the source space of the same volume created in FieldTrip, and reduced to the
 
 ## References
 
-Matti Hamalainen, MNE software User's Guide. Version 2.7
+Matti Hämäläinen, MNE software User's Guide. Version 2.7
 
 FreeSurfer Wiki, <http://surfer.nmr.mgh.harvard.edu/fswiki>

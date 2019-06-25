@@ -87,7 +87,8 @@ In stead of reading data from the shared memory, one now reads data from a previ
       cfg.dataset    = 'previousdataset.ds';
       ft_realtime_headlocalizer(cfg)
 
-Before we can replay the data acquired with the Elekta Neuromag, the data has to be preprocessed with maxfilter. The first possibility is to add the relevant information to .fif file with MaxMove (see also under further reading).
+Before we can replay the data acquired with the Neuromag/Elekta system, the data has to be preprocessed with maxfilter. The first possibility is to add the relevant information to .fif file with MaxMove (see also under further reading).
+
 The other option is to use maxfilter to create an ASCII file containing the relevant information about head movement. Under ‘Head position estimation’ the button ‘Save head postions in an ASCII file’ just need to be pressed (see also under further reading).
 
       cfg.bufferdata   = 'first';                 % read data from first until last segment
@@ -124,7 +125,7 @@ Keep in mind that Odin's data directory is automatically cleaned every now and t
 
 ### Elekta specific protocol
 
-Currently the option for online monitoring is only available for the CTF system. The Elekta real-time data stream can already be processed in FieldTrip, however, the relevant information in real time data stream is currently missing. However, in principle it would look similar to CTF specific protocol
+Currently the option for online monitoring is only available for the CTF system. The Neuromag/Elekta real-time data stream can already be processed in FieldTrip, however, the relevant information in real time data stream is currently missing. However, in principle it would look similar to CTF specific protocol
 
 1. 'Initialize the MEG system'.
 2. 'Start neuromag2ft for real-time head localization'.
@@ -144,6 +145,6 @@ The above online head localization procedure can substantially reduce the influe
 
 Furthermore, despite using the Polhemus to localize electrode locations we can use the structure.io to localize them. You can find the tutorial [here](/tutorial/electrode). This means we do not need the Polhemus for our experimental procedure and therefore reduce the preparation time by having less to measure.
 
-For the Elekta Neuromag system the Maxfilter [User’s guide Chapter 4 MaxMove](https://www.google.nl/search?hl=nl&dcr=0&source=hp&ei=HtczWtaeGMbawAKP0JiYBg&q=maxfilter+user%E2%80%99s+guide&oq=maxfilter+user%E2%80%99s+guide&gs_l=psy-ab.3...708.708.0.1007.1.1.0.0.0.0.81.81.1.1.0....0...1c.2.64.psy-ab..0.0.0....0.PPP2C6Blbso) provides further information on offline head movement visualization and compensation.
+For the Neuromag/Elekta system the Maxfilter [User’s guide Chapter 4 MaxMove](https://www.google.nl/search?hl=nl&dcr=0&source=hp&ei=HtczWtaeGMbawAKP0JiYBg&q=maxfilter+user%E2%80%99s+guide&oq=maxfilter+user%E2%80%99s+guide&gs_l=psy-ab.3...708.708.0.1007.1.1.0.0.0.0.81.81.1.1.0....0...1c.2.64.psy-ab..0.0.0....0.PPP2C6Blbso) provides further information on offline head movement visualization and compensation.
 
 For more information about the CTF head localization we recommend [Head Localization Guide CTF MEG Software](https://www.google.nl/search?ei=htczWqiUCs2VsAefoZP4BA&q=Head+Localization+Guide+CTF+MEGTM+Software&oq=Head+Localization+Guide+CTF+MEGTM+Software&gs_l=psy-ab.3...665.2032.0.2495.2.2.0.0.0.0.127.197.1j1.2.0....0...1c.1.64.psy-ab..0.0.0....0.S5__Ll6gens).

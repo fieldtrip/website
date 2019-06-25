@@ -75,7 +75,7 @@ Documentation referring to this dataset:
 ## MEG-audodd
 
 - Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
-- 306-channel Elekta Triux MEG system
+- 306-channel Neuromag/Elekta Triux MEG system
 - Auditory stimulus presentation with a standard and an oddball, motor responses on the oddball, visual cue for the response hand (left or right) at the start of each block.
 - Experimental and dataset [details](/workshop/natmeg/meg_audodd)
 - Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/) from our FTP server.
@@ -147,7 +147,7 @@ Documentation referring to this dataset:
 ## mmfaces
 
 - EEG, MEG, fMRI and structural MRI data from 16 subjects, also used in SPM8 and SPM12 documentation
-- Recorded by Rik Hanson and colleagues in Cambridge, using 306-channel Elekta/Neuromag system
+- Recorded by Rik Hanson and colleagues in Cambridge, using 306-channel Neuromag/Elekta system
 - Subjects watch familiar, unfamiliar and scrambled faces
 - Download the dataset from the [MRC-CBU](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/) FTP server.
 - Details [mmfaces](/tutorial/mmfaces)
@@ -157,7 +157,7 @@ Documentation referring to this dataset:
 
 ## MEG-epilepsy
 
-- This dataset contains MEG data from two patients. The data was recorded at Aston Brain Centre (ABC) using a 275-channel CTF system and using an Elekta 306-channel system, i.e. for both patients there are the recordings with the two MEG systems. This clinical data was kindly provided by Professor Stefano Seri.
+- This dataset contains MEG data from two patients. The data was recorded at Aston Brain Centre (ABC) using a 275-channel CTF system and using a Neuromag/Elekta 306-channel system, i.e. for both patients there are the recordings with the two MEG systems. This clinical data was kindly provided by Professor Stefano Seri.
 - Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy/) from our FTP server.
 
 Documentation referring to this dataset:

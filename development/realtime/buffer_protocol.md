@@ -491,7 +491,7 @@ in its normal binary (big-endian!) format.
 | **size** | size of the .res4 file     |
 | **data** | contents of the .res4 file |
 
-#### Elekta/Neuromag MEG system .fif file
+#### Neuromag/Elekta MEG system .fif file
 
 These chunks contain .fif files as written by the neuromag2ft realtime interface. The header file is in its native platform (little-endian!) format, the isotrak and hpi_result files are in big-endian format.
 

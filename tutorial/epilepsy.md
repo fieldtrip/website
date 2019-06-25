@@ -17,7 +17,7 @@ FieldTrip is released under the [GNU General Public License](http://www.gnu.org/
 
 The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy/)
 
-All MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>); the steps in the kurtosis pipeline itself are provided by [Dr Caroline Witton](https://www2.aston.ac.uk/lhs/staff/az-index/wittonc-0) on behalf of the Aston clinical team. The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
+All MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using a Neuromag/Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>); the steps in the kurtosis pipeline itself are provided by [Dr Caroline Witton](https://www2.aston.ac.uk/lhs/staff/az-index/wittonc-0) on behalf of the Aston clinical team. The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
 The kurtosis beamformer method described here, for identifying the source(s) of epileptiform activity, was originally published by [Kirsch et al (2006)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5953276/).
 
@@ -30,7 +30,7 @@ The ABC clinical staff would typically use the following sequence of analysis st
 
 Because of the importance to clinical work of visually screening data and marking spikes, we have also incorporated here (with brief instructions) the use of [AnyWave software](http://meg.univ-amu.fr/wiki/AnyWave), an open-source package for visualising MEG and EEG data which lends itself well to the interpretation of the outputs from this analysis.
 
-There are some small differences in the parameters for the beamformer source analysis depending on whether the analysis is for CTF or Elekta data, so analyses for each data type are presented here separately.
+There are some small differences in the parameters for the beamformer source analysis depending on whether the analysis is for CTF or Neuromag/Elekta data, so analyses for each data type are presented here separately.
 
 
 
@@ -38,7 +38,7 @@ There are some small differences in the parameters for the beamformer source ana
 
 _Male, age 9. Right parietal Glioma with epilepsy. Corticography also showed interictal discharges in the frontal lobe, though the majority of seizures were of parietal origin. Following the MEG, was operated in the right parietal area and is now partially seizure free. This was a complex multifocal case, where prior clinical assessment using EEG had been inconclusive (non-localising), leading to the patient's referral for MEG._
 
-MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
+MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using a Neuromag/Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
 ### Analysis of the CTF dataset
 

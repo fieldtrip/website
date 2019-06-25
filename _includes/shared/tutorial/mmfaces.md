@@ -4,7 +4,7 @@ The "mmfaces" dataset contains EEG, MEG, functional MRI and structural MRI data 
 
 The complete dataset is available from the [MRC-CBU ftp server](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/).
 
-The MEG data consist of 102 magnetometers and 204 planar gradiometers from an Elekta VectorView system. The same system was used to simultaneously record EEG data from 70 electrodes (using a nose reference), which are stored in the same “FIF” format file. The above FTP site includes a raw FIF file for each run/subject, but also a second FIF file in which the MEG data have been “cleaned” using Signal-Space Separation as implemented in MaxFilter 2.1. We use the latter here.
+The MEG data consist of 102 magnetometers and 204 planar gradiometers from a Neuromag/Elekta VectorView system. The same system was used to simultaneously record EEG data from 70 electrodes (using a nose reference), which are stored in the same “FIF” format file. The above FTP site includes a raw FIF file for each run/subject, but also a second .fif file in which the MEG data have been “cleaned” using Signal-Space Separation as implemented in MaxFilter 2.1. We use the latter here.
 
 A Polhemus digitizer was used to digitise three fiducial points and a large number of other points across the scalp, which can be used to coregister the M/EEG data with the structural MRI image. Six runs (sessions ) of approximately 10mins were acquired for each subject, while they judged the left-right symmetry of each stimulus (face or scrambled), leading to nearly 300 trials in total for each of the 3 conditions.
 
