@@ -76,7 +76,7 @@
 - name:  Getting started with the Neuralynx data recorded at the Donders Institute
   link:  /getting_started/neuralynx_fcdc
 
-- name:  Getting started with Neuromag/Elekta data
+- name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
 
 - name:  Getting started with Plexon data

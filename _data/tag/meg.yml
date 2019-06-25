@@ -70,7 +70,7 @@
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
 
-- name:  Getting started with Neuromag/Elekta data
+- name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
 
 - name:  Getting started with real-time head localization in MEG

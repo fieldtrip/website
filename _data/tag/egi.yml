@@ -4,6 +4,9 @@
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 
+- name:  Getting started with Neuromag/Elekta/Megin data
+  link:  /getting_started/neuromag
+
 - name:  Creating a clean analysis script
   link:  /tutorial/scripting
 

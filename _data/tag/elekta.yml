@@ -4,6 +4,6 @@
 - name:  Find the orientation of planar gradiometers
   link:  /example/planar_orientation
 
-- name:  Getting started with Neuromag/Elekta data
+- name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
 
