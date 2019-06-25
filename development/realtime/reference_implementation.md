@@ -52,15 +52,19 @@ Given the symmetry in the design, it is possible to have a standalone buffer, i.
 
 ## Compiling the code
 
-Building the source code on different platforms can appear challenging. The buffer has been successfully compiled and tested on Linux (32 and 64-bit), Windows (32-bit) and macOS (32-bit PowerPC and 32 and 64-bit Intel platform). We try to facilitate the compilation of the source code by supplying various build methods.
+Building the source code on different platforms can appear challenging. The
+buffer has been successfully compiled and tested on Linux (32 and 64-bit),
+Windows (32-bit) and macOS (32-bit PowerPC and 32 and 64-bit Intel platform). We
+try to facilitate the compilation of the source code by supplying various build
+methods.
 
 Generally, please note that no matter which platform, there are three different parts of the code, which are compiled in different steps.
 
-- ".../buffer/src" contains the core buffer functions written in C. These are compiled into a library "libbuffer.[a/lib]" by using Makefiles or project files **outside** of MATLAB.
+- `.../buffer/src` contains the core buffer functions written in C. These are compiled into a library "libbuffer.[a/lib]" by using Makefiles or project files **outside** of MATLAB.
 
-- ".../buffer/test" contains demos and test applications written in C. These are also compiled outside of MATLAB, but since they depend on "libbuffer", they can only be compiled after that.
+- `.../buffer/test` contains demos and test applications written in C. These are also compiled outside of MATLAB, but since they depend on "libbuffer", they can only be compiled after that.
 
-- ".../buffer/matlab" contains the sources of the MEX file "buffer.mex???". Since MATLAB installations vary so much, we rely on the command "mex" to compile this part **inside** MATLAB. As of October 2010, the MEX files are not linked against "libbuffer" anymore, but rather the same source files are directly pulled in using "mex".
+- `.../buffer/matlab` contains the sources of the MEX file "buffer.mex???". Since MATLAB installations vary so much, we rely on the command "mex" to compile this part **inside** MATLAB. As of October 2010, the MEX files are not linked against "libbuffer" anymore, but rather the same source files are directly pulled in using "mex".
 
 The best tested method for compilation of the stand-alone tools is by using the Makefile (only for Linux, macOS and MinGW). For Windows, Borland C++ (version 6.0) project files are supplied. The buffer can also be compiled on Linux, macOS, and Windows using [cmake](http://www.cmake.org). Compiling on Linux and macOS is pretty straight forward while doing that on Windows is a bit more tricky.
 
@@ -74,7 +78,7 @@ The MEX-file is compiled within MATLAB. Just change into "...realtime/buffer/mat
 
 If you have an unsupported GCC version, you should check whether your Linux distribution offers older packages of GCC. You can also compile GCC from source and install multiple versions of GCC alongside, but please refer to [http://gcc.gnu.org](http://gcc.gnu.org) for more information on this. If you have multiple versions of GCC, you will also have to tweak the file "~/.matlab/matlabXXXX/mexopts.sh" where "XXXX" denotes the version of MATLAB you are using: First locate the right "case" segment for your operation system, e.g. glnx86 for 32-bit Linux flavours. Then, modify the variables "CC" and "CXX" such that they point to the binaries of the right version. As a hint, these are often called "gcc-4.2" and "g++-4.2", that is, the version number forms part of the name. Maybe try and find the right files on the command line first.
 
-#### Compiling and running the buffer MEX-file with various MATLAB versions (as installed within the F.C. Donders Centre)
+#### Buffer MEX-file with various MATLAB versions
 
 The following was tested from 16-03-2010 to 18-03-2010.
 
