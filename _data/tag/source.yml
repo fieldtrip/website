@@ -1,32 +1,14 @@
-- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
-  link:  /tutorial/headmodel_eeg_fem
-
-- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
-  link:  /tutorial/headmodel_meg
-
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/align_eeg_electrode_positions_to_bem_headmodel
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
 
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
-- name:  Source reconstruction of event-related fields using minimum-norm estimation
-  link:  /tutorial/minimumnormestimate
-
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
-- name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
-  link:  /tutorial/sourcemodel
-
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
-
-- name:  Beamforming oscillatory responses in MEG data
-  link:  /workshop/oslo2019/beamforming
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit

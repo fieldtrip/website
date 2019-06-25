@@ -1,62 +1,29 @@
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
-
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
-
-- name:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms-eeg
 
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
 
-- name:  Visual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
-
 - name:  Overview of all tutorials
   link:  /tutorial
-
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus/beamformingerf
 
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
-
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
-
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg/beamforming
 
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg/dipolefitting
-
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended
 
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
-
 - name:  Cluster-based permutation tests on time-frequency data
-- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
   link:  /tutorial/cluster_permutation_freq
-  link:  /workshop/natmeg/statistics
-
 
 - name:  Cluster-based permutation tests on event related fields
-- name:  Time-frequency analysis of combined MEG/EEG data
   link:  /tutorial/cluster_permutation_timelock
-  link:  /workshop/natmeg/timefrequency
-
-
-- name:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
 
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
