@@ -189,3 +189,8 @@ and a Vimeo video like this
 ```
 
 {% endraw %}
+
+
+## News items
+
+To show a news item on the front page, you have to add the news item as a Markdown page to `_posts` with the name `YYYY-MM-DD-short-description.md`. See the other examples in that directory. Posts that have the category `news` are shown on the front page, for older posts you should remove the `news` category.
