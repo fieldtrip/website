@@ -1,23 +1,27 @@
 ---
-title: Getting started with 4D-neuroimaging/BTi data
+title: Getting started with BTi/4D data
 tags: [4d, bti, meg, dataformat]
 ---
 
-# Getting started with 4D-neuroimaging/BTi data
+# Getting started with BTi/4D data
+
+{% include markup/success %}
+The company based in San Diego (CA, USA) making these MEG systems was initially called BTi and later renamed to 4D-Neuroimaging. The company is not operational any more, although its MEG systems are still being used in various labs over the world.    
+{% include markup/end %}
 
 ## Introduction
 
-The recommended way of working with 4D-Neuroimaging/BTi data is to work on the raw data files directly. The code for reading header information from the raw files is based on Eugene Kronberg's msi2matlab tools, and have been further developed by Gavin Paterson and Jan-Mathijs Schoffelen, at CCNi.
+The recommended way of working with BTi/4D data is to work on the raw data files directly. The code for reading header information from the raw files is based on Eugene Kronberg's msi2matlab tools, and have been further developed by Gavin Paterson and Jan-Mathijs Schoffelen, at CCNi.
 
-Alternatively, you can work with 4D-Neuroimaging/BTi data using intermediate ASCII files (.m4d and .xyz), created with "pdf2set", which is a c-program linked to the 4D libraries. This "pdf2set" program should be available to all 4D-users.
+Alternatively, you can work with BTi/4D data using intermediate ASCII files (.m4d and .xyz), created with "pdf2set", which is a c-program linked to the BTi/4D libraries. This "pdf2set" program should be available to all BTi/4D users.
 
-All the required 4D-Neuroimaging/BTi reading functions for MATLAB are supplied with the FieldTrip toolbox.
+All the required BTi/4D reading functions for MATLAB are supplied with the FieldTrip toolbox.
 
 This page explains how to get started reading and using each of the file types in FieldTrip.
 
 ## Background
 
-MEG datasets obtained from a 4D-neuroimaging MEG-system are usually stored in a directory structure which looks like this:
+MEG datasets obtained from a BTi/4D MEG-system are usually stored in a directory structure which looks like this:
 
     /basepath/subjid/scanname/sessionname/runname/
 
@@ -28,7 +32,7 @@ Each runname/-directory usually contains the following file
 2.  config, containing system specific information regarding the acquisition parameters etc
 3.  one or more data files, the name(s) of which depend on the acquisition parameters used (see below)
 
-FieldTrip knows how to deal with raw, i.e. unprocessed, data files. Data files which have been obtained using 4D-software (such as averaging, digital weight computation etc) can probably not be handled by FieldTrip.
+FieldTrip knows how to deal with raw, i.e. unprocessed, data files. Data files which have been obtained using BTi/4D software (such as averaging, digital weight computation etc) can probably not be handled by FieldTrip.
 
 ## Set path
 
@@ -41,7 +45,7 @@ To get started, you should add the FieldTrip main directory to your path, and ex
 
 ### Organization of the files
 
-The 4D software organizes all files in a nested directory structure, managing the subject, scan/experiment, session and run, with at the lowest level the actual data files. The files containing the various bits of information do not have file extensions to distinguish them, the full filename instead is required to interpret which file is which. A 4D dataset directory at the lowest level (a "run") might contain something like this
+The BTi/4D software organizes all files in a nested directory structure, managing the subject, scan/experiment, session and run, with at the lowest level the actual data files. The files containing the various bits of information do not have file extensions to distinguish them, the full filename instead is required to interpret which file is which. A BTi/4D dataset directory at the lowest level (a "run") might contain something like this
 
 | filename | content of the file                                                                 |
 | -------- | ----------------------------------------------------------------------------------- |
@@ -68,7 +72,7 @@ COH (or COH1) refer to the short recording to obtain the positions of the Coils 
 
 ### Organization of the directories
 
-The 4D software also uses a directory structure to organize the data in line with its patient/subject database. The directory structure looks like
+The BTi/4D software also uses a directory structure to organize the data in line with its patient/subject database. The directory structure looks like
 
     p0/s0/n0/r0
     p0/s1/n0/r0
@@ -113,7 +117,7 @@ Typically, a set of (analog and a set of) digital balancing weights are applied 
 
 ### Preprocessing
 
-The 4D neuroimaging software contains functionality to compute and apply a set of balancing weights, based on the magnetic field measurements by a set of reference coils, located far away from the brain. The idea is that these coils mainly pick up environmental noise. By subtracting a weighted combination of the reference coil measurements from the coils that pick up the brain activity, one potentially achieves a reduction in the noise (this is typically low frequency noise, so it is most relevant when analyzing event related fields). The set of weights can be computed using linear regression. The command-line programs provide by 4D are called 'cfw' and 'afw', and operate on a whole data set at once. FieldTrip contains an implementation of the same algorithm, which moreover allows for more flexibility than the 4D implementation. For example, one can use a subset of the data for the weight computation, and/or preprocess the reference coil data (amplifying particular features) prior to weight computation. The FieldTrip function that achieves the weight computation/balancing is **[ft_denoise_pca](/reference/ft_denoise_pca)**
+The BTi/4D neuroimaging software contains functionality to compute and apply a set of balancing weights, based on the magnetic field measurements by a set of reference coils, located far away from the brain. The idea is that these coils mainly pick up environmental noise. By subtracting a weighted combination of the reference coil measurements from the coils that pick up the brain activity, one potentially achieves a reduction in the noise (this is typically low frequency noise, so it is most relevant when analyzing event related fields). The set of weights can be computed using linear regression. The command-line programs provide by BTi/4D are called 'cfw' and 'afw', and operate on a whole data set at once. FieldTrip contains an implementation of the same algorithm, which moreover allows for more flexibility than the BTi/4D implementation. For example, one can use a subset of the data for the weight computation, and/or preprocess the reference coil data (amplifying particular features) prior to weight computation. The FieldTrip function that achieves the weight computation/balancing is **[ft_denoise_pca](/reference/ft_denoise_pca)**
 
 ### MEG-system specific issues
 
