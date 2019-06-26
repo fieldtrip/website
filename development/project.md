@@ -5,9 +5,7 @@ tags: [development]
 
 # Project overview
 
-This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users.
-
-We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projects.
+This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projects; those projects are typically not listed here.
 
 ## Open projects
 
