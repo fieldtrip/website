@@ -529,7 +529,7 @@
 - name:  Why is FieldTrip developed separately from EEGLAB?
   link:  /faq/why_is_fieldtrip_developed_separately_from_eeglab
 
-- name:  Why was FieldTrip maintained in SVN and not in git?
+- name:  Why was FieldTrip maintained in SVN and not in Git?
   link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
 
 - name:  Why is my message rejected from the email discussion list?
