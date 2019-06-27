@@ -5,10 +5,6 @@ tags: [tutorial, nirs, preprocessing, nirs-multichannel]
 
 # Preprocessing and averaging of multi-channel NIRS data
 
-{% include markup/warning %}
-This tutorial is still under development.
-{% include markup/end %}
-
 ## Introduction
 
 In this tutorial, you will process a functional near-infrared spectroscopy (fNIRS) data set consisting of multiple channels. We will read in the raw data, have a look at the setup and the data, preprocess the data incorporating specific procedures for multichannel setups, and explore different methods of visualizing the temporal and spatial aspects of the response.
@@ -47,9 +43,9 @@ The participant was engaged in a basic event-related auditory oddball paradigm i
 
 #### fNIRS Measurement
 
-The fNIRS data was recorded using 4 connected Oxymon systems from Artinis to enable a 48 channel recording.
+The fNIRS data was recorded using four Oxymon systems from Artinis that were linked to enable a 48 channel recording.
 
-FIXME add a photo of the cap as Figure 1
+{% include image src="/assets/img/tutorial/nirs_multichannel/nirs_cap.png" width="400" %}
 
 Half of the optode fibers (n = 16) were placed over left temporal cortex, the other half over the right temporal cortex (Fig. 1 grey text). Of the optodes, half were detectors (or receivers, Rx), and the other half were sources (or transmitters, Tx). The source and detector optodes were positioned such that there were deep and shallow channels of 3 cm and 1.5 cm, respectively (black text indicating both receivers and transmitters).
 
