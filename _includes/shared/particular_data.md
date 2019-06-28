@@ -21,6 +21,8 @@ In general you should get started with the [tutorials](/tutorial). The subsequen
 - [Getting started with Biosemi BDF data](/getting_started/biosemi)
 - [Getting started with EDF data](/getting_started/edf)
 - [Getting started with EGI/Philips data](/getting_started/egi)
+- [Getting started with Nicolet data](/getting_started/nicolet)
+
 
 ## Getting started with other types of data
 
