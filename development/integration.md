@@ -58,7 +58,7 @@ At the DCCN we have a central storage system (i.e. a large and shared network dr
 
 ## Dashboard
 
-We have a set of MATLAB and Bash scripts for regression testing. This allows to do semi-automatic runs of all the test scripts on the DCCN compute cluster. We refer to this as the quality [dashboard](/development/dashboard). The code is hosted on [github](https://github.com/fieldtrip/dashboard) and the MATLAB interface is implemented in **[ft_test](/reference/ft_test)**, which you can find in the utilities folder.
+We have a set of MATLAB and Bash scripts for regression testing. This allows to do semi-automatic runs of all the test scripts on the DCCN compute cluster. We refer to this as the [test dashboard](/development/dashboard). The code is hosted on [github](https://github.com/fieldtrip/dashboard) and the MATLAB interface is implemented in **[ft_test](/reference/ft_test)**, which you can find in the utilities folder.
 
 ## Mixpanel
 
