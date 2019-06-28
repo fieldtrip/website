@@ -10,7 +10,7 @@
 - name:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
 
-- name:  Dashboard
+- name:  Code testing and release
   link:  /development/dashboard
 
 - name:  Accessing the FieldTrip source code through Git
