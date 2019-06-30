@@ -15,7 +15,7 @@ Feel free to contribute by doing edits here and sending a pull request. See <htt
 - Shared pages should go in \_include/shared.
 - Markdown documentation can be found on <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>.
 - Liquid documentation can be found on <https://help.shopify.com/en/themes/liquid> and <https://shopify.github.io/liquid>.
-- Jekyll cheatsheet can be found on >https://devhints.io/jekyll>.
+- Jekyll cheatsheet can be found on <https://devhints.io/jekyll>.
 
 ## Limitations when viewing on GitHub
 
