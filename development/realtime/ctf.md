@@ -101,9 +101,9 @@ You can access the data in MATLAB like this
     event  = ft_read_event(filename), this returns a structure with the event information, (i.e. the triggers)
     dat    = ft_read_data(filename, ...), this returns a 2-D or 3-D array with the data
 
-where filename should be a string containing 'ctf_shm://', i.e. similar as a Universal Resource Identifier. In case you want to use the header information from another res4 file, you can specify the filename as 'ctf_shm://`<example.res4>', i.e. including the full path and filename of the res4 header file.
+where filename should be a string containing `ctf_shm://`, i.e. similar as a Universal Resource Identifier. In case you want to use the header information from another res4 file, you can specify the filename as `ctf_shm://<dataset.res4>`, i.e. including the full path and filename of the res4 header file.
 
-The (inter-)operation of the three involved software components, all running on the same machine can be summarised with the following diagram.
+The (inter-)operation of the three involved software components, all running on the same machine can be summarized with the following diagram.
 
 {% include image src="/assets/img/development/realtime/ctf/acq_scheme_75.png" %}
 

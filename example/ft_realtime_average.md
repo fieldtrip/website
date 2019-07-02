@@ -36,7 +36,7 @@ tags: [example, realtime]
 
     % Copyright (C) 2009, Robert Oostenveld
     %
-    % Subversion does not use the Log keyword, use 'svn log `<filename>` or 'svn -v log | less' to get detailled information
+    % Subversion does not use the Log keyword, use 'svn log <filename>' or 'svn -v log | less' to get detailed information
 
     % set the default configuration options
     if ~isfield(cfg, 'dataformat'),     cfg.dataformat = [];      end % default is detected automatically

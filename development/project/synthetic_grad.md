@@ -70,8 +70,6 @@ TODO: think of a way of adding this information to the output of fieldtrip/prepr
 
 ## Appendix: description from CTF
 
-`<file>`
-
 The sensor and coefficient information should ALWAYS be read from
 the dataset (i.e., '.res4' file). This will guarantee that the sensor and
 coefficient information are the corrected ones at the time the data was
@@ -93,13 +91,13 @@ each coil doesn't matter (if you follow the steps prescribed below).
 
 ## Simulating data / forward solution computation
 
-Each sensor is described b
+Each sensor is described by:
 
 - one or more coils
 - zero or more baselines
 - signed gain
 
-Each coil is described b
+Each coil is described by:
 
 - position of centre of coil (use the position relative to head coordinate system)
 - number of turns (N)
@@ -199,11 +197,9 @@ The ideal coefficients are based on geometry of the sensor configuration.
 The real coefficients accounts for geometrical and common mode errors; these
 are determined experimentally.
 
-## FOR DipoleFit AND dfit VERSION 4.12 and up
+## For DipoleFit AND dfit VERSION 4.12 and up
 
 We use the real coefficients for both processing real data and forward solution
 computation. Recent studies at CTF showed that using the real coefficients for the
 forward solution computation gave a more accurate match with the real data compared
 to the using the ideal coefficients.
-
-`</file>`

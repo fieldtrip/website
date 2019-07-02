@@ -13,7 +13,7 @@ To test the equality of the two softwers solving the inverse solution with minim
 Here is the script that I use
 
     cfg=[];
-    cfg.dataset='/`<path>`/MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
+    cfg.dataset='//MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
     cfg.trialdef.eventtype='?';
     cfg=ft_definetrial(cfg);
 
@@ -28,7 +28,7 @@ Here is the script that I use
 
 
     cfg = [];
-    cfg.dataset = '/`<path>`/MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
+    cfg.dataset = '/<path>/MEG_phantom_CTF151/MagPhant_Phantom_20031211_01-av.ds';
     cfg.trialdef.eventtype = 'trial';
     cfg=ft_definetrial(cfg);
 
@@ -468,7 +468,7 @@ Now, I will use the leadfield from the MNE Suite analysis of the phantom data.
     %%%%%
 
     % the forward solution from MNE Suite
-    fwd = mne_read_forward_solution('/`<path>`/test_phantom/MEG/phantomas/phantomas-fwd.fif');
+    fwd = mne_read_forward_solution('/<path>/test_phantom/MEG/phantomas/phantomas-fwd.fif');
 
     % the leadfield from FieldTrip (see above)
     load grid;
@@ -632,9 +632,9 @@ Compare this to figure at the end of the next session ("Minimum-norm estimate wi
 
 ### Setting up the environmental variables and etc.
 
-    export MNE_ROOT=/`<path>`/MNE/MNE-2.7.0-3106-Linux-x86_64
+    export MNE_ROOT=/<path>/MNE/MNE-2.7.0-3106-Linux-x86_64
     echo $MNE_ROOT
-    export MATLAB_ROOT=/`<path>`/matlab
+    export MATLAB_ROOT=/<path>/matlab
     cd $MNE_ROOT/bin
 
 . ./mne_setup_sh
@@ -644,7 +644,7 @@ export SUBJECT=phantomas
 
 ### Data conversion
 
-    cd /`<path>`/test/MEG/phantomas
+    cd /<path>/test/MEG/phantomas
     mne_ctf2fiff --ds MagPhant_Phantom_20031211_01-av.ds --fif phantomas-raw
 
 ### Setup source space
@@ -669,7 +669,7 @@ First, I have created text files with matlab.
 
 And then, I created the source space for MNE Suite.
 
-    mne_volume_source_space --pos /`<path>`/pos.txt --src /`<path>`/test/subjects/phantomas/bem/phantomas-src.fif
+    mne_volume_source_space --pos /<path>/pos.txt --src /<path>/test/subjects/phantomas/bem/phantomas-src.fif
 
 ### Creating the volume-conductor
 
@@ -706,7 +706,7 @@ First, I have created a text file in MATLAB with .tri extension
 I renamed the .txt file to .tri.
 And then, I used MNE Suite.
 
-    mne_surf2bem --tri /`<path>`/vol.tri --sigma 1 --id 1 --fif /`<path>`/test/subjects/phantomas/bem/phantomas-bem.fif
+    mne_surf2bem --tri /<path>/vol.tri --sigma 1 --id 1 --fif /<path>/test/subjects/phantomas/bem/phantomas-bem.fif
 
 :?: The value (1) after sigma is the conductivity value that is supposed to be in S/m. I set it to 1 because conductivity was set to 1 also in FT, but I do not know the unit of the conductivity in FT.
 The value (1) after id means that this is an innerskull mesh. I do not know if it is necessary to specify this.
@@ -795,7 +795,7 @@ I made a noise-covariance matrix in MATLAB. It was necessary because MNE did not
 
     cov.nfree = []; %this becomes -1
 
-    rawinfo = fiff_read_meas_info('/`<path>`/phantomas_raw.fif');
+    rawinfo = fiff_read_meas_info('/<path>/phantomas_raw.fif');
     cov.names = rawinfo.ch_names;
 
     cov.diag = 0; %this is not a diagonal matrix
@@ -814,7 +814,7 @@ I haven't aligned anything but a transformation matrix saved (with diagonal matr
 
 ### Forward solution
 
-    mne_prepare_bem_model --bem /`<path>`/test/subjects/phantomas/bem/phantomas-bem.fif --sol /`<path>`/test/subjects/phantomas/bem/phantomas-bem-sol.fif --method linear
+    mne_prepare_bem_model --bem /<path>/test/subjects/phantomas/bem/phantomas-bem.fif --sol /<path>/test/subjects/phantomas/bem/phantomas-bem-sol.fif --method linear
 
     mne_do_forward_solution --src phantomas-src.fif --bem phantomas-bem.fif  --meas phantomas-ave.fif --fwd phantomas-fwd.fif --megonly
 

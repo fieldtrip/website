@@ -78,7 +78,7 @@ Please note that each FieldTrip function has its own configuration structure and
 
 The help included in each function will explain the configurable settings and how they should be specified. In MATLAB, you can get help for a specific function by typing
 
-    help `<function name>`
+    help <functionname>
 
 e.g.
 

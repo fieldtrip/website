@@ -43,7 +43,7 @@ For the hands-on sessions you have to start MATLAB. We will provide a recent Fie
 To get going, you need to start MATLAB. Then, you need to issue the following command
 
     restoredefaultpath
-    cd `<path_to_fieldtrip>`
+    cd <path_to_fieldtrip>
     addpath(pwd)
     ft_defaults
 

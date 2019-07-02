@@ -83,7 +83,7 @@ For optogenetic stimulation, we used a semiconductor laser (USA & BCL-040-445; 4
 ### define trials
 
 Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the pieces of data that will be read in for preprocessing. Trials are defined by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the optogenetic stimulus-trigger) is for that trial.
-The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions require the original EEG dataset acquiring from Synamp system, which is available at this link `<cnt file link>`.
+The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions require the original EEG dataset acquiring from Synamp system.
 
 Actually, example dataset has not digital trigger information. To mark stimulation timing in the file, they use analog input (41th channel) as trigger information. Since FieldTrip can offer to support customized function by using cfg.trialfun, this tutorial shows how to make trial-based dataset.
 This results in a cfg.trl = 'mousetrialfun' in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined.

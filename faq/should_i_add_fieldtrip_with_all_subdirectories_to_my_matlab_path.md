@@ -18,7 +18,7 @@ because that will add many toolbox directories to your path that you won't use. 
 ## Step 1
 
 You should do
-addpath `<full_path_to_fieldtrip>`
+addpath <path_to_fieldtrip>
 where full_path_to_fieldtrip is the location where the FieldTrip directory is located. Inside the Donders Centre for Cognitive Neuroimaging, this would be on Linux
 addpath /home/common/matlab/fieldtrip
 and on Windows
