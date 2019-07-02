@@ -9,4 +9,4 @@ Two weeks ago, our external contributors Lau Møller Andersen (NatMEG, Stockholm
 
 {% include image src="https://www.uio.no/ritmo/english/news-and-events/events/workshops/2019/fieldtrip-workshop/photos/annica-thomson/5r0a1099.jpg" width="500" %}
 
-More photos of the RITMO workshop can be found [here](https://www.uio.no/ritmo/english/news-and-events/events/workshops/2019/fieldtrip-workshop/photos/).
+(Photo copyright Annica Thomson, University of Oslo). More photos of the RITMO workshop can be found [here](https://www.uio.no/ritmo/english/news-and-events/events/workshops/2019/fieldtrip-workshop/photos/).
