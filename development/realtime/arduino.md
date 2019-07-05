@@ -101,4 +101,4 @@ Wireless connectivity is provided by a [RFM12B](https://www.sparkfun.com/product
 
 - [development/realtime/modulareeg](/development/realtime/modulareeg) for the bluetooth OpenEEG interface
 
-- [here on github](https://github.com/fieldtrip/fieldtrip/tree/master/realtime/src/arduino) for the Arduino specific source code
+- [here on GitHub](https://github.com/fieldtrip/fieldtrip/tree/master/realtime/src/arduino) for the Arduino specific source code
