@@ -5,11 +5,14 @@ tags: [example, freq, connectivity, Granger]
 
 # Conditional Granger causality in the frequency domain
 
-Conditional Granger causality is a derivative of spectral Granger causality that is computed over a triplet of channels (or blocks of channels). It provides the advantage that for this triplet, it allows to differentiate between a delayed parallel drive from sources $A$ to be $B$ and $C$ and a sequential drive from $A$ to $B$ to $C$.
+Conditional Granger causality is a derivative of spectral Granger causality that is computed over a triplet of channels (or blocks of channels). It provides the advantage that for this triplet, it allows to differentiate between a delayed parallel drive from sources <i>A</i> to be <i>B</i> and <i>C</i> and a sequential drive from <i>A</i> to <i>B</i> to <i>C</i>.
 
-This example illustrates the simulation and base analysis of the paper **TODO**.
+This example illustrates the simulation and base analysis of the paper
+[Chen, Y., Bressler, S. L., & Ding, M. (2006). Frequency decomposition of conditional Granger causality and application to multivariate neural field potential data. <i>Journal of neuroscience methods, 150(2), 228-237</i>](https://arxiv.org/pdf/q-bio/0608034).
 
 See also: [the connectivity tutorial](http://www.fieldtriptoolbox.org/tutorial/connectivity/).
+
+## Setup and simulating the data sets
 
 First, define parameters under which samples should be simulated.
 
@@ -20,25 +23,46 @@ First, define parameters under which samples should be simulated.
     simcfg.nsignal     = 3;
     simcfg.method      = 'ar';
 
-    % parmeters of the model itself
+We want to simulate a system with three signals. Their noise is modelled as white noise processes with zero mean and standard deviations
+
+<i>&sigma;<sub>1</sub><sup>2</sup>=1</i><br/>
+<i>&sigma;<sub>2</sub><sup>2</sup>=0.2</i><br/>
+<i>&sigma;<sub>3</sub><sup>2</sup>=0.3</i>.
+
+They will have the covariances &zeta;, &eta; and &epsilon;. We also require a paramters &mu;=0.5.
+
+    parmeters of the model itself
     mu                 = 0.5;
     absnoise           = [ 1.0   0.2   0.3 ];
 
 First, we generate the sample for the case of sequential driving.
+We want to incorporate the system
 
-    % params(i,j,k): j -> i at t=k
+<i>x(t) = &zeta;(t)</i><br/>
+<i>y(t) = x(t-1) + &eta;(t)</i><br/>
+<i>z(t) = &mu;&sdot;z(t-1) + y(t-1) + &epsilon;(t)</i>,
+
+which we can do like this:
+
+    params(i,j,k): j -> i at t=k
     simcfg.params(:,:,1) = [   0      0      0;
                              1.0      0      0;
                                0    1.0     mu];
 
-Note that the matrix representation for the covariance reads from columns to row, other than the MVAR-model is read intuitively.
+Note that the matrix representation for the covariance reads from columns to row, other than the MVAR-model is read intuitively. But we still need to hand the parameters of the noise to the model:
 
-    % paper defines stds, not cov:
+    paper defines stds, not cov:
     simcfg.noisecov      = diag(absnoise.^2);
 
-data2           = ft_connectivitysimulation(simcfg);
+    data2           = ft_connectivitysimulation(simcfg);
 
-Now create sample data for the case of differentially delayed driving.
+Now create sample data for the case of differentially delayed driving,
+
+<i>x(t) = &zeta;(t)</i><br/>
+<i>y(t) = x(t-1) + &eta;(t)</i><br/>
+<i>z(t) = &mu;&sdot;z(t-1) + x(t-2) + &epsilon;</i>,
+
+which we can write as
 
     simcfg.params(:,:,1) = [   0      0      0;
                              1.0      0      0;
@@ -47,7 +71,7 @@ Now create sample data for the case of differentially delayed driving.
                                0      0      0;
                              1.0      0      0];
 
-Build the actual MVAR-representation...
+We build the actual MVAR-representation...
 
     data1           = ft_connectivitysimulation(simcfg);
 
@@ -58,9 +82,10 @@ Build the actual MVAR-representation...
     legend(data1.label)
     xlabel('time (s)')
 
-%% --------------------------------------------------------
-% 2.a) mvar model freq analysis
-% ---------------------------------------------------------
+Don't be confused that we started with data2 and conclude with data1. This is just to maintain the order the systems have in the paper.
+
+## MVAR model frequency analysis
+We generate spectral representations from the MVAR representations we defined with data1 and data2. After all, we want to compute spectral Granger causality. Fast Fourier is a good starting point.
 
     freq                   = [];
     freq.freqcfg           = [];
@@ -70,34 +95,27 @@ Build the actual MVAR-representation...
     freqdata1           = ft_freqanalysis(freq.freqcfg, data1);
     freqdata2           = ft_freqanalysis(freq.freqcfg, data2);
 
-%% --------------------------------------------------------
-% 3.) test regular granger causality
-% ---------------------------------------------------------
-% Standard granger causal analysis
+## "Regular" Granger causality
+Let first compute regular bivariate Granger causality, as this makes the difference clear to what we want.
 
     grangercfg = [];
     grangercfg.method  = 'granger';
     grangercfg.granger.conditional = 'no';
+    grangercfg.granger.sfmethod = 'bivariate';
 
     gdata = [];
-
-    gdata.g1_bivar_mvar     = ft_connectivityanalysis(grangercfg, mfreqdata1);
-    gdata.g2_bivar_mvar     = ft_connectivityanalysis(grangercfg, mfreqdata2);
-
-    grangercfg.granger.sfmethod = 'bivariate';
     gdata.g1_bivar_reg      = ft_connectivityanalysis(grangercfg, freqdata1);
     gdata.g2_bivar_reg      = ft_connectivityanalysis(grangercfg, freqdata2);
 
-%% --------------------------------------------------------
-% 4.a) Bivariate conditional
-% ---------------------------------------------------------
+## Multivariate conditional Granger causality
+However, we clearly want a multivariate approach. Also, we need to define channel combinations, as we now require triplets of inputs.
 
     grangercfg.granger.conditional = 'yes';
     grangercfg.channelcmb  = {{'signal001'} {'signal002'} {'signal003'}};
     grangercfg.granger.sfmethod = 'multivariate';
     grangercfg.granger.conditional = 'yes';
 
-    % block-wise causality
+    block-wise causality
     grangercfg.granger.block(1).name   = freqdata1.label{1};
     grangercfg.granger.block(1).label  = freqdata1.label(1);
     grangercfg.granger.block(2).name   = freqdata1.label{2};
@@ -108,19 +126,15 @@ Build the actual MVAR-representation...
     gdata.g1_multi_reg_conditional = ft_connectivityanalysis(grangercfg, freqdata1);
     gdata.g2_multi_reg_conditional = ft_connectivityanalysis(grangercfg, freqdata2);
 
-%% --------------------------------------------------------
-% 5) Evaluate
-% ---------------------------------------------------------
-% The label combinations are 6x2 cell arrays, containing all 2-permutations
-% tuplets from the channels. How to interpret this?
-% Is the combination a b representing F a -> b given rest?
-% Let's check this. In scenario 2, we should clearly see a higher causality
-% from 1 -> 3 given 2 than in scenario 1 of the differentially delayed
-% drive. This corresponds to row 4 in the
-% gdata.g1_multi_reg_conditional.labelcmb.
-% So, let's compare the labelcmb 1 3 in both scenarios:
+## Evaluation
+The label combinations are 6x2 cell arrays, containing all 2-permutations
+tuplets from the channels. How to interpret this?
+Is the combination a, b representing F<sub>a&rarr;b|c</sub>?
+Let's check this. In scenario 2, we should clearly see a higher causality
+from 1&rarr;3 | 2 than in scenario 1 of the differentially delayed
+drive. This corresponds to row 4 in the
+gdata.g1_multi_reg_conditional.labelcmb.
+So, let's compare the labelcmb 1, 3 in both scenarios:
 
     scenario1_mean = mean(gdata.g1_multi_reg_conditional.grangerspctrm(4, :));
     scenario2_mean = mean(gdata.g2_multi_reg_conditional.grangerspctrm(4, :));
-
-% But scenario2_mean < scenario1_mean...
