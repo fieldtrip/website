@@ -120,6 +120,7 @@ The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz
     cfg.lpfilter  = 'yes';
     cfg.lpfreq    = 70;
     cfg.channel   = 'MEG';
+    cfg.coilaccuracy = 1; % ensure that sensors are expressed in SI units
     data = ft_preprocessing(cfg);
 
 #### Construction of the volume conduction model of the head
@@ -141,6 +142,7 @@ Segment the brain compartment from the anatomical MRI and make the volume conduc
     brain = ft_prepare_mesh(cfg, seg);
 
     cfg = [];
+    cfg.unit = 'm'; % ensure that the headmodel is expressed n SI units
     cfg.method = 'singleshell';
     headmodel = ft_prepare_headmodel(cfg, brain);
 
@@ -151,27 +153,20 @@ Segment the brain compartment from the anatomical MRI and make the volume conduc
 To save time we have chosen to use a 7 mm grid for the source model here, but in a real clinical scenario a grid of 5 mm or smaller would typically be used.
 
     cfg = [];
-    cfg.resolution = 7;
-    cfg.unit = 'mm';
+    cfg.resolution = 0.007;
+    cfg.unit = 'm'; % ensure that the sourcemodel is expressed n SI units
     cfg.headmodel = headmodel;
     cfg.grad = data.grad; % this being needed here is a silly historical artifact
     sourcemodel_grid = ft_prepare_sourcemodel(cfg);
 
-Finally we align the voxel axes with the head co-ordinate axes and reslice the MRI
-
-    cfg.xrange = [min(sourcemodel_grid.pos(:,1))-30 max(sourcemodel_grid.pos(:,1))+30];
-    cfg.yrange = [min(sourcemodel_grid.pos(:,2))-30 max(sourcemodel_grid.pos(:,2))+30];
-    cfg.zrange = [min(sourcemodel_grid.pos(:,3))-30 max(sourcemodel_grid.pos(:,3))+30];
-    mri_resliced = ft_volumereslice(cfg, mri);
-    save mri_resliced mri_resliced;
-
-We plot everything out and check that it is all aligned correctly.
+Finally we plot everything out and check that it is all aligned correctly.
 
     figure
     ft_plot_headmodel(headmodel, 'unit', 'mm');
-    ft_plot_sens(data.grad, 'unit', 'mm', 'coildiameter', 10);
-    ft_plot_mesh(sourcemodel_grid.pos);
-    ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced, 'style', 'intersect');
+    ft_plot_sens(data.grad, 'unit', 'mm', 'coilsize', 10, 'chantype', 'meggrad');
+    ft_plot_mesh(sourcemodel_grid.pos, 'unit', 'mm');
+    ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'style', 'intersect', 'unit', 'mm');
+    alpha 0.5
 
 {% include image src="/assets/img/tutorial/epilepsy/case1a_head.png" width="400" %}
 
@@ -182,31 +177,29 @@ In the following stage, we compute the data covariance matrix for the beamformer
     cfg.covariance = 'yes';
     cov_matrix = ft_timelockanalysis(cfg, data);
 
-Next we precompute the leadfields, which is not obligatory but speeds up the subsequent step.
+Next we precompute the leadfields, which is not obligatory, but speeds up the subsequent step.
 
     cfg = [];
     cfg.channel = 'MEG';
     cfg.headmodel  = headmodel;
-    cfg.grid = sourcemodel_grid;
-    cfg.normalize = 'yes';  % normalisation avoids power bias towards centre of head
+    cfg.sourcemodel = sourcemodel_grid;
+    cfg.normalize = 'yes';  % normalization avoids power bias towards centre of head
     leadfield = ft_prepare_leadfield(cfg, cov_matrix);
 
-Now we compute the LCMV beamformer and reconstruct the time series at each of the locations specified in the source model grid. **[ft_sourceanalysis](/reference/ft_sourceanalysis)** can also automatically compute the kurtosis of each time series.
+Now we compute the LCMV beamformer and reconstruct the time series at each of the locations specified in the source model grid. By projecting the vector dipole moment (for x, y, and z direction) in the direction of maximal power, the source time series becomes a simple vector. The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function can compute the kurtosis of this time series.
 
     cfg = [];
     cfg.headmodel  = headmodel;
-    cfg.grid = leadfield;
+    cfg.sourcemodel = leadfield;
     cfg.method = 'lcmv';
-    cfg.lcmv.projectmom = 'yes';  %project dipole time series for each dipole in direction of maximal power (see below)
-    cfg.lcmv.kurtosis = 'yes'; % compute kurtosis at each location
+    cfg.lcmv.projectmom = 'yes';  % project dipole time series for each dipole in direction of maximal power (see below)
+    cfg.lcmv.kurtosis = 'yes';    % compute kurtosis at each location
     source = ft_sourceanalysis(cfg, cov_matrix);
 
 #### Explore the outputs
 
-We are ready to explore the results visually, starting with the volumetric images. First of all we need to interpolate the kurtosis information with the resliced MRI, then we can plot the images.
+We are ready to explore the results visually, starting with the volumetric images. First of all we need to interpolate the kurtosis on the resliced MRI, then we can plot the images.
 
-    source.kurtosis = source.avg.kurtosis(source.inside) % get rid of NaNs which fall outside head
-    source.kurtosisdimord = 'pos';
     cfg = [];
     cfg.parameter = 'kurtosis';
     source_interp = ft_sourceinterpolate(cfg, source, mri_resliced);
@@ -238,9 +231,12 @@ At this stage, we can also write out our images (i.e., the resliced MRI and the 
     cfg.format = 'nifti';
     ft_volumewrite(cfg, source);
 
-Returning to our images in FieldTrip, we can scroll through the slices to see where the areas of high kurtosis fall. But to be more objective it is useful to identify each discrete peak location in the kurtosis data. Here we use a 3rd party function called [findpeaksn.m](https://github.com/vigente/gerardus/blob/master/matlab/PointsToolbox/findpeaksn.m) which needs to be downloaded separately and added to the matlab path. The Aston clinical team would typically examine every single peak but for simplicity we will just look at the top few. We display the co-ordinates and plot some images.
+Returning to our images in FieldTrip, we can scroll through the slices to see where the areas of high kurtosis fall. But to be more objective, it is useful to identify each discrete peak location in the kurtosis data. This can be done using the [imregionalmax](https://nl.mathworks.com/help/images/ref/imregionalmax.html) function from the Image Processing toolbox. An alternative is to use a 3rd party function called [findpeaksn.m](https://github.com/vigente/gerardus/blob/master/matlab/PointsToolbox/findpeaksn.m) which needs to be downloaded separately and added to the MATLAB path. The Aston clinical team would typically examine every single peak but for simplicity we will just look at the top few. We display the co-ordinates and plot some images.
 
-    [ispeak] = findpeaksn(reshape(source.avg.kurtosis, source.dim)); % We need to input a 3d array instead of a 1 x n voxels array.
+    % we need to input a 3d array instead of a 1 x n voxels array.
+    % ispeak = findpeaksn(reshape(source.avg.kurtosis, source.dim));
+    ispeak = imregionalmax(reshape(source.avg.kurtosis, source.dim), 6); % use 6 neighbours in 3-D, instead of the default 26
+
     j = find(ispeak(:));
     [m, i] = sort(-source.avg.kurtosis(j));  % sort on the basis of kurtosis value
     peaks = j(i);
@@ -257,39 +253,40 @@ Returning to our images in FieldTrip, we can scroll through the slices to see wh
 (In this complicated case study, the peak that falls near the glioma is quite far down the list, shown in this image)
 {% include image src="/assets/img/tutorial/epilepsy/case1a_nearlesion.png" width="400" %}
 
-#### Visualise the beamformer time series in AnyWave
+#### Visualize the beamformer time series in AnyWave
 
-It is also clinically important to visualise the spikes that are contributing to the kurtosis images, not least to screen out any spurious sources which may be elicited by artifacts. To do this, it is useful to have the original sensor data visible alongside the source time series. Marking the timepoints at which spikes occur at the sources can help the clinician scroll more easily through the data. We will write the data to a format that can be read by the open-source package [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), which is well-suited to this purpose.
+It is also clinically important to visualize the spikes that are contributing to the kurtosis images, not least to screen out any spurious sources which may be elicited by artifacts. To do this, it is useful to have the original sensor data visible alongside the source time series. Marking the timepoints at which spikes occur at the sources can help the clinician scroll more easily through the data. We will write the data to a format that can be read by the open-source package [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), which is well-suited to this purpose.
 
-When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data. So we import that to Fieldtrip and then append source time series data, adding header information for this, before writing the whole lot to the AnyWave ADES file format.
+When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data. So we import that to FieldTrip and then append source time series data, adding header information for this, before writing the whole lot to the AnyWave ADES file format.
 
     cfg = [];
-    cfg.dataset   = dataset;
-    cfg.channel   = 'MEG';
+    cfg.dataset = dataset;
+    cfg.channel = 'MEG';
     data = ft_preprocessing(cfg);
     dat = ft_fetch_data(data);
     hdr = ft_fetch_header(data);
 
     % then append the source hdr and data to the channel hdr and data.
     nsources = 10;  % for simplicity here we just append the top 10 source time series.
-    for i = 1:nsources,
-        dat(size(dat,1)+1,:)= source.avg.mom{peaks(i),:}*10e5; %see comment below about scaling
+    for i = 1:nsources
+        dat(size(dat,1)+1,:)= source.avg.mom{peaks(i),:}*10e5; % see note below about scaling
         hdr.label{end+1}= ['S' num2str(i)];
         hdr.chantype{end+1} = 'source';
-        hdr.chanunit{end+1} = ''  ; % see note below about scaling
-    end;
+        hdr.chanunit{end+1} = ''; % see note below about scaling
+    end
     hdr.nChans = hdr.nChans+nsources;
 
     % write to files
-    ft_write_data(filename, dat, 'header', hdr, 'dataformat', 'anywave_ades');
+    ft_write_data('Case1_timeseries', dat, 'header', hdr, 'dataformat', 'anywave_ades');
 
-_(Notes: At the time of writing, units for the source time series in AnyWave are abitrary. Also, it is advisable to write all data to file at the same time rather than attempting to append source time series to an existing data file)._
+_(Notes: At the time of writing, units for the source time series in AnyWave are arbitrary. Also, it is advisable to write all data to file at the same time rather than attempting to append source time series to an existing data file)._
 
 Finally we can automatically mark potential spikes in the source time series data and create labels in AnyWave marker file format. We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source time series exceeds 6 standard deviations of its mean. In our marker file, there is one label for each source, so events on the marker labelled '1' correspond to spikes on the time series from peak number 1 in the image. Marker 2 indicates events occurring at peak number 2, etc., etc.
 
-    fid = fopen([filename,'.mrk'], 'w+');
+    fid = fopen('Case1_timeseries.mrk', 'w');
     fprintf(fid,'%s\r\n','// AnyWave Marker File ');
     % loop through sources and times
+    k = 1;
     for i = 1:nsources
         dat = source.avg.mom{peaks(i),:};
         sd = std(dat);
@@ -298,17 +295,17 @@ Finally we can automatically mark potential spikes in the source time series dat
         [tmp,mrksample] = findpeaks(tr, 'MinPeakDistance', 300); % peaks have to be separated by 300 sample points to be treated as separate
 
         for j = 1:length(mrksample)
-            fprintf(fid, '%d\t', i);  %marker name (just a number)
-            fprintf(fid, '%d\t', i); %marker value (same number)
-            fprintf(fid, '%d\t',source.time(mrksample(j)) ); %marker time
-            fprintf(fid, '%s\t', '0'); %marker duration
-            fprintf(fid, 'SOURCE%d\r\n', 'i'); %marker channel
+            fprintf(fid, '%d\t', k);                          % marker name (just a number)
+            fprintf(fid, '%d\t', dat(mrksample(j)));          % marker value
+            fprintf(fid, '%d\t',source.time(mrksample(j)) );  % marker time
+            fprintf(fid, '%d\t', 0);                          % marker duration
+            fprintf(fid, 'S%d\r\n', i);                       % marker channel
+            k = k + 1;
         end
     end
     fclose(fid);
 
-The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be
-0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropritely. Use the menu to import the marker file that we just created.
+The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropritely. Use the menu to import the marker file that we just created.
 
 The ABC clinicians examined the source data alongside other information including anatomical imaging of the lesion in the left parietal lobe, and seizure semiology, and their observations were followed up by the surgical with corticography in the zone surrounding the lesion. Surgery in the area surrounding the lesion resulted in a significant reduction in seizures for the patient. The data are several years old and nowadays SEEG would be the normal follow-up procedure subsequent to neuroimaging.
 
@@ -348,6 +345,7 @@ MEGIN MEG data has two channel types, but we are only going to import the gradio
 This is exactly the same as for the CTF data.
 
     mri = ft_read_mri('mri_coreg_resliced.mat');
+
     % segment the brain from the mri
     cfg = [];
     cfg.tissue = 'brain';
@@ -380,12 +378,13 @@ This step is identical to the method for the CTF data, up until the very last st
     cfg.zrange = [min(sourcemodel_grid.pos(:,3))-30 max(sourcemodel_grid.pos(:,3))+30];
     mri_coreg_resliced = ft_volumereslice(cfg, mri);
 
-    %% plot out what we have done to check alignment
+    %% plot all geometrical data to check their alignment
     figure
-    ft_plot_headmodel(headmodel, 'unit', 'mm');  %this is the brain shaped head model volume
-    ft_plot_sens(data.grad, 'unit', 'mm', 'coilsize', 10);  %this is the sensor locations
+    ft_plot_headmodel(headmodel, 'unit', 'mm');  % this is the brain shaped head model volume
+    ft_plot_sens(data.grad, 'unit', 'mm', 'coilsize', 10);  % the sensor locations
     ft_plot_mesh(sourcemodel_grid.pos); % the source model is a cubic grid of points
     ft_plot_ortho(mri.anatomy, 'transform', mri.transform, 'style', 'intersect');
+    alpha 0.5 % make the anatomical MRI slices a bit transparent
 
 {% include image src="/assets/img/tutorial/epilepsy/case1b_head.png" width="400" %}
 
@@ -398,7 +397,7 @@ This step is identical to the method for the CTF data, up until the very last st
     cfg = [];
     cfg.channel = 'MEG';
     cfg.headmodel  = headmodel;
-    cfg.grid = sourcemodel_grid;
+    cfg.sourcemodel = sourcemodel_grid;
     cfg.normalize = 'yes';  % normalisation avoids power bias towards centre of head
     leadfield = ft_prepare_leadfield(cfg, cov_matrix);
 
@@ -409,11 +408,11 @@ At this point the analysis deviates from the CTF analysis because we need to acc
 
 {% include image src="/assets/img/tutorial/epilepsy/case1b_gradsonlysvd.png" width="400" %}
 
-As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa. We set this at a value before the big 'cliff' in the singular values. We also set a parameter called lambda which can be considered a weighting factor for the regularisation.
+As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa. We set this at a value before the big 'cliff' in the singular values. We also set a parameter called lambda which can be considered a weighting factor for the regularization.
 
     cfg                  = [];
     cfg.method           = 'lcmv';
-    cfg.grid             = leadfield;
+    cfg.sourcemodel      = leadfield;
     cfg.headmodel        = headmodel;
     cfg.lcmv.keepfilter  = 'yes';
     cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
@@ -428,7 +427,7 @@ The remainder of the analysis is identical to the CTF analysis - we run the LCMV
 
 Plotting the images:
 
-    source.kurtosis = source.avg.kurtosis(source.inside) %get rid of NaNs which fall outside head
+    source.kurtosis = source.avg.kurtosis(source.inside) % get rid of NaNs which fall outside head
     source.kurtosisdimord = 'pos';
     cfg = [];
     cfg.parameter = 'kurtosis';
@@ -493,7 +492,7 @@ Output the time series to AnyWave format:
 
     nsources = 5;
     for i = 1:nsources,
-        dat(size(dat,1)+1,:)= source.avg.mom{peaks(i),:}*10e5; %see comment below about scaling
+        dat(size(dat,1)+1,:)= source.avg.mom{peaks(i),:}*10e5; % see comment below about scaling
         hdr.label{end+1}= ['S' num2str(i)];
         hdr.chantype{end+1} = 'source';
         hdr.chanunit{end+1} = ''  ; % see note below about scaling
