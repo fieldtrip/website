@@ -132,7 +132,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     figure
     hold on; % add the subsequent objects to the same figure
     ft_plot_headshape(headshape);
-    ft_plot_sens(ft_convert_units(sens, 'mm'), 'coil', 'yes', 'coildiameter', 10);
+    ft_plot_sens(ft_convert_units(sens, 'mm'), 'coil', 'yes', 'coilsize', 10);
     ft_plot_headmodel(ft_convert_units(vol, 'mm'));
 
 {% include image src="/assets/img/workshop/meg-uk-2015/fieldtrip-beamformer-demo/screen_shot_2015-01-05_at_10.43.46.png" %}

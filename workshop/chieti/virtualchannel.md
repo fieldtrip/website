@@ -99,7 +99,7 @@ We want to visualise the various geometrical objects that we read into memory. F
     %% plot volume and channels
     figure
     hold on;
-    ft_plot_sens(data.grad, 'coil', 'yes', 'coildiameter', 10);
+    ft_plot_sens(data.grad, 'coil', 'yes', 'coilsize', 10);
     ft_plot_headmodel(headmodel);
 
 {% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.45.png" width="500" %}
@@ -113,7 +113,7 @@ We want to visualise the various geometrical objects that we read into memory. F
 
     ft_determine_coordsys(individual_mri, 'interactive', false); title('individual_mri')
     hold on
-    ft_plot_sens(data.grad, 'coil', 'yes', 'coildiameter', 10);
+    ft_plot_sens(data.grad, 'coil', 'yes', 'coilsize', 10);
     ft_plot_mesh(individual_sourcemodel3d.pos(individual_sourcemodel3d.inside, :));
 
 {% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.37.41.png" width="500" %}
