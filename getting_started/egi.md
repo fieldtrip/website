@@ -45,7 +45,7 @@ to **[ft_preprocessing](/reference/ft_preprocessing)** and all other high-level 
     ft_read_header(...., 'headerformat', 'egi_mff_v3')
     ft_read_data(...., 'headerformat', 'egi_mff_v2', 'dataformat', 'egi_mff_v3')
 
-also the low-level [development:fileio](/development/module/fileio) functions will use the v3 reading functions.
+also the low-level [fileio](/development/module/fileio) functions will use the v3 reading functions.
 
 ### Installing the EGI Java implementation for version 2
 

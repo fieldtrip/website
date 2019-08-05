@@ -16,15 +16,15 @@ The objective of supplying these low-level functions as a separate module/toolbo
 2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
 3.  facilitate the implementation of advanced features
 
-The low-level functions for source estimation/reconstruction are contained in the [development:forward](/development/module/forward) and [development:inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them separately from the FieldTrip main functions, you can also download them separately [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
+The low-level functions for source estimation/reconstruction are contained in the [forward](/development/module/forward) and [inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them separately from the FieldTrip main functions, you can also download them separately [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
 
 Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 
 ## Module layout
 
-The [development:forward](/development/module/forward) module contains functions with a user interface that will be easily understood by experimenced programmers and methods developers and can be considered medium-level functions. They have a clear and consistent programming interface (API) which hides the specific details particular volume conduction models and that allows software developers to write forward methods without having to worry about integrating it with the inverse methods worry about data handling. The low-level functions on which the functions in the forward module depend are located in a private subdirectory which is not accessible from the MATLAB command line.
+The [forward](/development/module/forward) module contains functions with a user interface that will be easily understood by experimenced programmers and methods developers and can be considered medium-level functions. They have a clear and consistent programming interface (API) which hides the specific details particular volume conduction models and that allows software developers to write forward methods without having to worry about integrating it with the inverse methods worry about data handling. The low-level functions on which the functions in the forward module depend are located in a private subdirectory which is not accessible from the MATLAB command line.
 
-The forward module is complemented by an [development:inverse](/development/module/inverse) module that contains the implementation of various high-quality inverse source estimation algorithms, such as dipole fitting, beamforming and linear estimation using the minimum-norm approach.
+The forward module is complemented by an [inverse](/development/module/inverse) module that contains the implementation of various high-quality inverse source estimation algorithms, such as dipole fitting, beamforming and linear estimation using the minimum-norm approach.
 
 Instead of implementing all forward methods completely from scratch, the FieldTrip forward module makes use of some high quality implementations that have been provided by the original method developers. Some of these contributions consist of MATLAB code, some contain MEX files and some are implemented using an external command-line executable that is called from the command-line. All of these external implementations are fully wrapped in the FieldTrip forward module and do not require specific expertise on behalf of the end-user.
 
@@ -68,7 +68,7 @@ These are explained in more detail in the appropriate [tutorials](/tutorial).
 
 Volume conduction models of the head are represented as a MATLAB structure, which content depends on the model details. In the subsequent documentation the volume conduction model structure is referred to as **vol**. The electrodes in case of EEG, or magnetometers or gradiometers in case of MEG, are described as a MATLAB structure. In the subsequent documentation this is referred to as **elec** for electrodes, **grad** for magmetometers and/or gradiometers, or **sens** to represent either electrodes or gradiometers.
 
-Using the FieldTrip [development:fileio](/development/module/fileio) module one can read in volume conduction models and the definition of the sensor array (electrodes or gradiometers) from file by using the **[ft_read_headmodel](/reference/ft_read_headmodel)** and/or **[ft_read_sens](/reference/ft_read_sens)** functions.
+Using the FieldTrip [fileio](/development/module/fileio) module one can read in volume conduction models and the definition of the sensor array (electrodes or gradiometers) from file by using the **[ft_read_headmodel](/reference/ft_read_headmodel)** and/or **[ft_read_sens](/reference/ft_read_sens)** functions.
 
     [vol] = ft_read_headmodel(filename)
     [sens] = ft_read_sens(filename)
