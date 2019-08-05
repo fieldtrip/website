@@ -9,5 +9,5 @@ Having 'grid', 'vol', and 'grad', you can use the following:
 
     Hold on
     plot3(grid.pos(:,1),grid.pos(:,2),grid.pos(:,3),'.');
-    ft_plot_vol(vol);
+    ft_plot_headmodel(vol);
     ft_plot_sens(grad);

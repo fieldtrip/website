@@ -447,7 +447,7 @@ To refine the above fiducial-points based registration, it is recommended to uti
     ft_plot_sens(realignedgrad, 'style','*b')
     hold on
     ft_plot_mesh(mesh_scalp, 'edgecolor','none','facealpha',0.6,'facecolor',[0.6 0.6 0.8]);
-    ft_plot_vol(headmodel,'edgecolor','b')
+    ft_plot_headmodel(headmodel,'edgecolor','b')
     ft_plot_headshape(headshape)
     ft_plot_axes([], 'unit', 'mm');
     % plot fiducial points

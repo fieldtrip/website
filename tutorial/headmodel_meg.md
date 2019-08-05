@@ -38,7 +38,7 @@ We will create a head model based on the anatomical mri of the [tutorial data se
 - First, we will read the anatomical data with **[ft_read_mri](/reference/ft_read_mri)**;
 - then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
 - and create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
-- Finally, we will check the geometry of the head model by plotting it with **[ft_plot_vol](/reference/ft_plot_vol)**.
+- Finally, we will check the geometry of the head model by plotting it with **[ft_plot_headmodel](/reference/ft_plot_headmodel)**.
 
 {% include image src="/assets/img/tutorial/headmodel_meg/headmodel-01.png" width="250" %}
 
@@ -160,7 +160,7 @@ Alternatively, you can also create and use a multiple-layered head model with Op
 
 ### Visualization
 
-The head model (vol) contains the brain-skull boundary as the geometrical description of the head. You can visualize this using the following code. First, we will plot the sensors (MEG channels) with the **[ft_plot_sens](/reference/ft_plot_sens)** function. Second, we will plot the head model with **[ft_plot_vol](/reference/ft_plot_vol)** in the same figure with the sensors. In order to plot also the location of the MEG channels, we read in the location of the channels using the .ds file from the tutorial data and the **[ft_read_sens](/reference/ft_read_sens)** function. (The .zip file that can be downloaded from the [FieldTrip ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) also contains the .ds file.) The units of the headmodel are defined in 'mm', while the units of the sensors are in 'cm'. When we plot the headmodel together with the sensors, they need to have the same units. Therefore, the units of the headmodel will be converted to 'cm' with the **[ft_convert_units](/reference/ft_convert_units)** function.
+The head model (vol) contains the brain-skull boundary as the geometrical description of the head. You can visualize this using the following code. First, we will plot the sensors (MEG channels) with the **[ft_plot_sens](/reference/ft_plot_sens)** function. Second, we will plot the head model with **[ft_plot_headmodel](/reference/ft_plot_headmodel)** in the same figure with the sensors. In order to plot also the location of the MEG channels, we read in the location of the channels using the .ds file from the tutorial data and the **[ft_read_sens](/reference/ft_read_sens)** function. (The .zip file that can be downloaded from the [FieldTrip ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) also contains the .ds file.) The units of the headmodel are defined in 'mm', while the units of the sensors are in 'cm'. When we plot the headmodel together with the sensors, they need to have the same units. Therefore, the units of the headmodel will be converted to 'cm' with the **[ft_convert_units](/reference/ft_convert_units)** function.
 
     vol = ft_convert_units(vol,'cm');
     sens = ft_read_sens('Subject01.ds');
@@ -169,7 +169,7 @@ The head model (vol) contains the brain-skull boundary as the geometrical descri
     ft_plot_sens(sens, 'style', '*b');
 
     hold on
-    ft_plot_vol(vol);
+    ft_plot_headmodel(vol);
 
 {% include image src="/assets/img/tutorial/headmodel_meg/vol1_sens.png" width="300" %}
 
@@ -182,7 +182,7 @@ When the figure is plotted, you can look at the figure from different views usin
 {% include markup/info %}
 Create a head model with method 'singlesphere' that you fit on the inside brain surface, i.e. using the output of the already made segmentation.
 
-Plot both head models in the same figure, check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the two head models together.
+Plot both head models in the same figure, check the help of **[ft_plot_headmodel](/reference/ft_plot_headmodel)** for further options of the visualization (e.g. color, transparency) which help to see the two head models together.
 
 What is the difference between the head models?
 {% include markup/end %}

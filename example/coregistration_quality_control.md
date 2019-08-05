@@ -24,7 +24,7 @@ Please note that this is an example where the coregistration was not completely 
     figure
     ft_plot_sens(sens, 'unit', 'mm')
     ft_plot_headshape(headshapeMEG, 'unit', 'mm')
-    ft_plot_vol(headmodel_mri, 'unit', 'mm')
+    ft_plot_headmodel(headmodel_mri, 'unit', 'mm')
     ft_plot_axes([], 'unit', 'mm');
 
 {% include image src="/assets/img/example/coregistration_quality_control/coreg_qc_fig1.png" width="400" %}

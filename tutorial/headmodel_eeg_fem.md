@@ -371,7 +371,7 @@ _Figure 9. Aligned electrodes plotted together with the head surface_
 {% include markup/info %}
 Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
 
-Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
+Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_headmodel](/reference/ft_plot_headmodel)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
 
 What is the difference between this head model and the FEM?
 {% include markup/end %}

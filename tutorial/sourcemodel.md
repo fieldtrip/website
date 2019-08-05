@@ -291,7 +291,7 @@ As an alternative you can create a template grid yourself, like this:
     % make a figure with the template head model and dipole grid
     figure
     hold on
-    ft_plot_vol(template_headmodel, 'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
+    ft_plot_headmodel(template_headmodel, 'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
     ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
 {% include image src="/assets/img/tutorial/sourcemodel/mni_fig1a.png" width="300" %}
@@ -331,7 +331,7 @@ It is not required to create a volume conduction model of the head in order to c
 
     % make a figure of the single subject headmodel, and grid positions
     figure; hold on;
-    ft_plot_vol(headmodel, 'edgecolor', 'none', 'facealpha', 0.4);
+    ft_plot_headmodel(headmodel, 'edgecolor', 'none', 'facealpha', 0.4);
     ft_plot_mesh(grid.pos(grid.inside,:));
 
 {% include image src="/assets/img/tutorial/sourcemodel/mni_fig2b.png" width="300" %}

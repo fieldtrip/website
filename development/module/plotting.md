@@ -43,7 +43,7 @@ For data objects with a 3D geometrical representatio
 - ft_plot_sens - plots the position of the channels in the EEG or MEG sensor array
 - ft_plot_slice - cuts a 2-D slice from a 3-D volume and interpolates if needed
 - ft_plot_topo3d - makes a 3-D topographic representation of the electric
-- ft_plot_vol - visualizes the boundaries in the volume conduction model of the head as
+- ft_plot_headmodel - visualizes the boundaries in the volume conduction model of the head as
 
 A number of functions serves to construct interactive graphical user interfaces.
 

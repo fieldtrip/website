@@ -126,7 +126,7 @@ I created a sphere volume conductor with a 10 cm long radius.
 
 It looks like this (the function below creates a mesh out of it
 
-    ft_plot_vol(vol_ph)
+    ft_plot_headmodel(vol_ph)
 
 {% include image src="/assets/img/development/project/testing_ft_vs_mne/plot_vol_vol_ph.jpg" width="400" %}
 

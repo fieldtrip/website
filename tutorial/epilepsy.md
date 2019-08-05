@@ -25,10 +25,10 @@ The kurtosis beamformer approach described here, for identifying the source(s) o
 
 The ABC clinical staff would typically use the following sequence of analysis steps for epilepsy data:
 
-1. Screen the data visually for spikes and also to identify physiological or external recording artefacts.
-2. Choose relatively artefact-free data, that appears to contain spikes, for further analysis (bearing in mind that data quality can vary widely in patient recordings, especially children)
+1. Screen the data visually for spikes and also to identify physiological or external recording artifacts.
+2. Choose relatively artifact-free data, that appears to contain spikes, for further analysis (bearing in mind that data quality can vary widely in patient recordings, especially children)
 3. Run the kurtosis beamformer analysis to yield candidate sources in volumetric images, which can be examined alongside other information e.g. lesions visible in anatomical images.
-4. Examine source time series from the candidate sources to verify the presence of spikes. Usually source timeseries would be visualised alongside the original raw data. Candidate spikes can be automatically marked in the timeseries based on their amplitude.
+4. Examine source time series from the candidate sources to verify the presence of spikes. Usually source time series would be visualised alongside the original raw data. Candidate spikes can be automatically marked in the time series based on their amplitude.
 5. Before reporting back to the surgical team, candidate sources are typically confirmed by dipole-fitting of key spikes identified by the pipeline outlined above.
 
 Because of the importance to clinical work of visually screening data and marking spikes, we have also incorporated here (with brief instructions) the use of [AnyWave software](http://meg.univ-amu.fr/wiki/AnyWave), an open-source package for visualising MEG and EEG data which lends itself well to the interpretation of the outputs from this analysis.
@@ -109,7 +109,7 @@ Note that the patients head is tilted to the right relative to the coordinate ax
 
 #### Importing and filtering the channel level data
 
-The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artefacts such as eyeblinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible. At this point we assume that the clinician has already visually screened the raw data. The current dataset is pretty clean and free of artefacts.
+The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artifacts such as eye blinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible. At this point we assume that the clinician has already visually screened the raw data. The current dataset is pretty clean and free of artifacts.
 
     dataset = 'case1.ds';
 
@@ -124,11 +124,11 @@ The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz
 
 #### Construction of the volume conduction model of the head
 
-We will use the defaced MRI, which has been realigned with the CTF system and resliced
+We will use the defaced MRI, which has been realigned with the CTF system and resliced.
 
     mri = ft_read_mri('mri_defaced.mat');
 
-Segment the brain compartment from the anatomical MRI and make the volume conduction model
+Segment the brain compartment from the anatomical MRI and make the volume conduction model. If you want, you could save the head model to disk.
 
     cfg = [];
     cfg.tissue = 'brain';
@@ -148,7 +148,7 @@ Segment the brain compartment from the anatomical MRI and make the volume conduc
 
 #### Construction of the source model
 
-To save time we have chosen to use a 7 mm grid for the source model here, but in a real clincal scenario a grid of 5 mm or smaller would typically be used.
+To save time we have chosen to use a 7 mm grid for the source model here, but in a real clinical scenario a grid of 5 mm or smaller would typically be used.
 
     cfg = [];
     cfg.resolution = 7;
@@ -168,7 +168,7 @@ Finally we align the voxel axes with the head co-ordinate axes and reslice the M
 We plot everything out and check that it is all aligned correctly.
 
     figure
-    ft_plot_vol(headmodel, 'unit', 'mm');
+    ft_plot_headmodel(headmodel, 'unit', 'mm');
     ft_plot_sens(data.grad, 'unit', 'mm', 'coildiameter', 10);
     ft_plot_mesh(sourcemodel_grid.pos);
     ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced, 'style', 'intersect');
@@ -191,13 +191,13 @@ Next we precompute the leadfields, which is not obligatory but speeds up the sub
     cfg.normalize = 'yes';  % normalisation avoids power bias towards centre of head
     leadfield = ft_prepare_leadfield(cfg, cov_matrix);
 
-Now we compute the LCMV beamformer and reconstruct the timeseries at each of the locations specified in the source model grid. **[ft_sourceanalysis](/reference/ft_sourceanalysis)** can also automatically compute the kurtosis of each timeseries.
+Now we compute the LCMV beamformer and reconstruct the time series at each of the locations specified in the source model grid. **[ft_sourceanalysis](/reference/ft_sourceanalysis)** can also automatically compute the kurtosis of each time series.
 
     cfg = [];
     cfg.headmodel  = headmodel;
     cfg.grid = leadfield;
     cfg.method = 'lcmv';
-    cfg.lcmv.projectmom = 'yes';  %project dipole timeseries for each dipole in direction of maximal power (see below)
+    cfg.lcmv.projectmom = 'yes';  %project dipole time series for each dipole in direction of maximal power (see below)
     cfg.lcmv.kurtosis = 'yes'; % compute kurtosis at each location
     source = ft_sourceanalysis(cfg, cov_matrix);
 
@@ -257,11 +257,11 @@ Returning to our images in FieldTrip, we can scroll through the slices to see wh
 (In this complicated case study, the peak that falls near the glioma is quite far down the list, shown in this image)
 {% include image src="/assets/img/tutorial/epilepsy/case1a_nearlesion.png" width="400" %}
 
-#### Visualise the beamformer timeseries in AnyWave
+#### Visualise the beamformer time series in AnyWave
 
-It is also clinically important to visualise the spikes that are contributing to the kurtosis images, not least to screen out any spurious sources which may be elicited by artefacts. To do this, it is useful to have the original sensor data visible alongside the source timeseries. Marking the timepoints at which spikes occur at the sources can help the clinician scroll more easily through the data. We will write the data to a format that can be read by the open-source package [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), which is well-suited to this purpose.
+It is also clinically important to visualise the spikes that are contributing to the kurtosis images, not least to screen out any spurious sources which may be elicited by artifacts. To do this, it is useful to have the original sensor data visible alongside the source time series. Marking the timepoints at which spikes occur at the sources can help the clinician scroll more easily through the data. We will write the data to a format that can be read by the open-source package [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), which is well-suited to this purpose.
 
-When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data. So we import that to Fieldtrip and then append source timeseries data, adding header information for this, before writing the whole lot to the AnyWave ADES file format.
+When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data. So we import that to Fieldtrip and then append source time series data, adding header information for this, before writing the whole lot to the AnyWave ADES file format.
 
     cfg = [];
     cfg.dataset   = dataset;
@@ -271,7 +271,7 @@ When we read in the data earlier, we filtered it, but here it is more useful to 
     hdr = ft_fetch_header(data);
 
     % then append the source hdr and data to the channel hdr and data.
-    nsources = 10;  % for simplicity here we just append the top 10 source timeseries.
+    nsources = 10;  % for simplicity here we just append the top 10 source time series.
     for i = 1:nsources,
         dat(size(dat,1)+1,:)= source.avg.mom{peaks(i),:}*10e5; %see comment below about scaling
         hdr.label{end+1}= ['S' num2str(i)];
@@ -283,9 +283,9 @@ When we read in the data earlier, we filtered it, but here it is more useful to 
     % write to files
     ft_write_data(filename, dat, 'header', hdr, 'dataformat', 'anywave_ades');
 
-_(Notes: At the time of writing, units for the source timeseries in AnyWave are abitrary. Also, it is advisable to write all data to file at the same time rather than attempting to append source timeseries to an existing data file)._
+_(Notes: At the time of writing, units for the source time series in AnyWave are abitrary. Also, it is advisable to write all data to file at the same time rather than attempting to append source time series to an existing data file)._
 
-Finally we can automatically mark potential spikes in the source timeseries data and create labels in AnyWave marker file format. We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source timeseries exceeds 6 standard deviations of its mean. In our marker file, there is one label for each source, so events on the marker labelled '1' correspond to spikes on the timeseries from peak number 1 in the image. Marker 2 indicates events occurring at peak number 2, etc., etc.
+Finally we can automatically mark potential spikes in the source time series data and create labels in AnyWave marker file format. We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source time series exceeds 6 standard deviations of its mean. In our marker file, there is one label for each source, so events on the marker labelled '1' correspond to spikes on the time series from peak number 1 in the image. Marker 2 indicates events occurring at peak number 2, etc., etc.
 
     fid = fopen([filename,'.mrk'], 'w+');
     fprintf(fid,'%s\r\n','// AnyWave Marker File ');
@@ -316,7 +316,7 @@ The ABC clinicians examined the source data alongside other information includin
 
 The MEGIN (formerly 'Elekta' or 'Neuromag') dataset was collected from the same patient on the same day as the CTF dataset described above. So, we expect the results to be very similar to those yielded by the CTF data.
 
-Generally the analysis of MEGIN data is almost identical to the analysis of CTF data. So this part of the tutorial has fewer comments than above. However there is one important difference, related to the processing of Maxfiltered data, which is addressed in more detail in the relevant tutorial sections below. Maxfilter is MEGIN's proprietary pre-processing system which offers some improvements in signal-to-noise ratio and artefact handling, and potential for head movement correction. Importantly it is obligatory in datasets where active shielding ('MaxShield') was used during data collection and indeed the epilepsy data used here required preprocessing with Maxfilter for this reason. But Maxfilter has effects on the data covariance which can cause problems in accurately computing the beamformer source model. Some ways to optimise the beamformer calculations to avoid these problems are demonstrated below.
+Generally the analysis of MEGIN data is almost identical to the analysis of CTF data. So this part of the tutorial has fewer comments than above. However there is one important difference, related to the processing of Maxfiltered data, which is addressed in more detail in the relevant tutorial sections below. Maxfilter is MEGIN's proprietary pre-processing system which offers some improvements in signal-to-noise ratio and artifact handling, and potential for head movement correction. Importantly it is obligatory in datasets where active shielding ('MaxShield') was used during data collection and indeed the epilepsy data used here required preprocessing with Maxfilter for this reason. But Maxfilter has effects on the data covariance which can cause problems in accurately computing the beamformer source model. Some ways to optimise the beamformer calculations to avoid these problems are demonstrated below.
 
 #### Coregistering the data
 
@@ -328,7 +328,7 @@ For patient confidentiality we only include here the MRI which has already been 
 
 #### Importing and filtering the sensor level data
 
-MEGIN MEG data has two channel types, but we are only going to import the gradiometer data for now. We apply the same 10-70 Hz bandpass filter as for the CTF analysis. In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artefact, so we omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording.
+MEGIN MEG data has two channel types, but we are only going to import the gradiometer data for now. We apply the same 10-70 Hz bandpass filter as for the CTF analysis. In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artifact, so we omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording.
 
     dataset = 'case1_cHPI_raw_trans_sss.fif'
     cfg = [];
@@ -420,11 +420,11 @@ As we compute the LCMV beamformer below, we can use the information from the SVD
     cfg.lcmv.reducerank  = 2;
     cfg.lcmv.lambda      = '5%';
     cfg.lcmv.kappa       = 65;
-    cfg.lcmv.projectmom = 'yes';  %project dipole timeseries for each dipole in direction of maximal power (see below)
+    cfg.lcmv.projectmom = 'yes';  % project dipole time series for each dipole in direction of maximal power (see below)
     cfg.lcmv.kurtosis = 'yes';
     source = ft_sourceanalysis(cfg, cov_matrix);
 
-The remainder of the analysis is identical to the CTF analysis - we run the LCMV beamformer, compute the images and explore the timeseries.
+The remainder of the analysis is identical to the CTF analysis - we run the LCMV beamformer, compute the images and explore the time series.
 
 Plotting the images:
 
@@ -481,7 +481,7 @@ Identifying the peaks in the image:
         ft_sourceplot(cfg, source_interp);
     end
 
-Output the timeseries to AnyWave format:
+Output the time series to AnyWave format:
 
     % dataset = 'case1_cHPI_raw_trans_sss.fif'  % our original data file
     cfg = [];

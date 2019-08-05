@@ -299,7 +299,7 @@ Plot sensors, fiducials and headmodel to doublecheck
     xlabel('X');
     ylabel('Y');
     zlabel('Z');
-    ft_plot_vol(vol_cm,'facecolor','skin','edgecolor','none','facealpha',0.5);
+    ft_plot_headmodel(vol_cm,'facecolor','skin','edgecolor','none','facealpha',0.5);
     camlight left
     camlight left
 

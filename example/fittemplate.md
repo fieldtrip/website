@@ -20,10 +20,10 @@ These approaches will be demonstrated using the same dataset, which you can find
 You load the head shape measured during the MEG recording with the Polhemus and a template volume conduction model. We have to ensure that they have consistent units, hence we will convert the units into mm. Expressing the data in mm will give a better expression of the data (i.e. 90mm vs. 0.09m).
 
     polhemus = ft_read_headshape('epilepsy/case1/ctf_data/case1.pos');
-    polhemus = ft_convert_units(polhemus,'mm');
+    polhemus = ft_convert_units(polhemus, 'mm');
 
-    template = ft_read_vol('standard_bem.mat');
-    template = ft_convert_units(template,'mm');
+    template = ft_read_headmodel('standard_bem.mat');
+    template = ft_convert_units(template, 'mm');
 
 Note that the template head model contains three surfaces describing the three compartments of scalp, skull and brain.    
 

@@ -193,7 +193,7 @@ Alternatively, one could create a volumetric dipole grid based on regularly spac
     figure;
 
     % make the headmodel surface transparent
-    ft_plot_vol(hdm, 'edgecolor', 'none'); alpha 0.4
+    ft_plot_headmodel(hdm, 'edgecolor', 'none'); alpha 0.4
     ft_plot_mesh(ft_convert_units(sourcemodel, 'cm'),'vertexcolor',sourcemodel.sulc);
     ft_plot_sens(dataclean.grad);
     view([0 -90 0])

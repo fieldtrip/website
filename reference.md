@@ -152,10 +152,10 @@ Note that this reference documentation is identical to the help text that is dis
 - [ft_read_event](/reference/ft_read_event)
 - [ft_read_header](/reference/ft_read_header)
 - [ft_read_headshape](/reference/ft_read_headshape)
+- [ft_read_headmodel](/reference/ft_read_headmodel)
 - [ft_read_mri](/reference/ft_read_mri)
 - [ft_read_sens](/reference/ft_read_sens)
 - [ft_read_spike](/reference/ft_read_spike)
-- [ft_read_vol](/reference/ft_read_vol)
 - [ft_write_data](/reference/ft_write_data)
 - [ft_write_event](/reference/ft_write_event)
 
@@ -167,6 +167,7 @@ Note that this reference documentation is identical to the help text that is dis
 - [ft_plot_crosshair](/reference/ft_plot_crosshair)
 - [ft_plot_dipole](/reference/ft_plot_dipole)
 - [ft_plot_headshape](/reference/ft_plot_headshape)
+- [ft_plot_headmodel](/reference/ft_plot_headmodel)
 - [ft_plot_layout](/reference/ft_plot_layout)
 - [ft_plot_line](/reference/ft_plot_line)
 - [ft_plot_matrix](/reference/ft_plot_matrix)
@@ -180,7 +181,6 @@ Note that this reference documentation is identical to the help text that is dis
 - [ft_plot_topo](/reference/ft_plot_topo)
 - [ft_plot_topo3d](/reference/ft_plot_topo3d)
 - [ft_plot_vector](/reference/ft_plot_vector)
-- [ft_plot_vol](/reference/ft_plot_vol)
 
 ### ... from the forward module
 

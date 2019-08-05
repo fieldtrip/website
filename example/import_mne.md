@@ -88,7 +88,7 @@ tags: [example, mne, source]
     % title('MEG headshape and sensors', 'FontSize', 13)
 
     %% Read potato
-    vol = ft_read_vol(volname);
+    vol = ft_read_headmodel(volname);
     headmodel = vol;
     headmodel = ft_convert_units(headmodel,'m'); % Make sure units is in meters for transform
 

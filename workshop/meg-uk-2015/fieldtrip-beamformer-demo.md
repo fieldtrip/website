@@ -125,7 +125,7 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     ft_determine_coordsys(mri_realigned, 'interactive', 'no')
     hold on; % add the subsequent objects to the same figure
     ft_plot_headshape(headshape);
-    ft_plot_vol(ft_convert_units(vol, 'mm'));
+    ft_plot_headmodel(ft_convert_units(vol, 'mm'));
 
 {% include image src="/assets/img/workshop/meg-uk-2015/fieldtrip-beamformer-demo/screen_shot_2015-01-05_at_10.43.42.png" %}
 
@@ -133,13 +133,13 @@ Please use the [general instructions](/workshop/meg-uk-2015/general) to get star
     hold on; % add the subsequent objects to the same figure
     ft_plot_headshape(headshape);
     ft_plot_sens(ft_convert_units(sens, 'mm'), 'coil', 'yes', 'coildiameter', 10);
-    ft_plot_vol(ft_convert_units(vol, 'mm'));
+    ft_plot_headmodel(ft_convert_units(vol, 'mm'));
 
 {% include image src="/assets/img/workshop/meg-uk-2015/fieldtrip-beamformer-demo/screen_shot_2015-01-05_at_10.43.46.png" %}
 
     figure
-    ft_plot_vol(ft_convert_units(vol,  'mm'), 'facecolor', 'r'); % FT
-    ft_plot_vol(ft_convert_units(vol1, 'mm'), 'facecolor', 'g'); % SPM
+    ft_plot_headmodel(ft_convert_units(vol,  'mm'), 'facecolor', 'r'); % FT
+    ft_plot_headmodel(ft_convert_units(vol1, 'mm'), 'facecolor', 'g'); % SPM
     alpha 0.5
 
 {% include image src="/assets/img/workshop/meg-uk-2015/fieldtrip-beamformer-demo/screen_shot_2015-01-05_at_10.43.49.png" %}

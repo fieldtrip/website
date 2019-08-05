@@ -193,7 +193,7 @@ So please be aware that "frontpanel" and "backpanel" are Donders conventions tha
 
 ## Reading headmodels
 
-Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a .hdm file. The .hdm headmodel files can be read using **[ft_read_vol](/reference/ft_read_vol)** and visualized using **[ft_plot_vol](/reference/ft_plot_vol)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create MEG headmodels.
+Single sphere and multi sphere headmodels can be prepared using the CTF software MRIViewer and the CTF command-line utility localSpheres. Both CTF programs will write the headmodel to a .hdm file. The .hdm headmodel files can be read using **[ft_read_headmodel](/reference/ft_read_headmodel)** and visualized using **[ft_plot_headmodel](/reference/ft_plot_headmodel)**. Alternative to using the CTF software, you can also use the FieldTrip function **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** to create MEG headmodels.
 
 For example, to read and plot the single sphere model produced with CTF software for the [tutorial data](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip), use
 
@@ -202,8 +202,8 @@ For example, to read and plot the single sphere model produced with CTF software
     ft_plot_headshape(headshape)
 
     % read and plot the single sphere head model that was constructed with the CTF software
-    headmodel = ft_read_vol('Subject01.hdm');
-    ft_plot_vol(headmodel)
+    headmodel = ft_read_headmodel('Subject01.hdm');
+    ft_plot_headmodel(headmodel)
     alpha 0.8
     camlight
 

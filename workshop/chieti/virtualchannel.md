@@ -100,13 +100,13 @@ We want to visualise the various geometrical objects that we read into memory. F
     figure
     hold on;
     ft_plot_sens(data.grad, 'coil', 'yes', 'coildiameter', 10);
-    ft_plot_vol(headmodel);
+    ft_plot_headmodel(headmodel);
 
 {% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.45.png" width="500" %}
 
     figure
     hold on
-    ft_plot_vol(headmodel, 'facecolor', 'cortex', 'edgecolor', 'none'); alpha 0.5; camlight;
+    ft_plot_headmodel(headmodel, 'facecolor', 'cortex', 'edgecolor', 'none'); alpha 0.5; camlight;
     ft_plot_mesh(individual_sourcemodel3d.pos(individual_sourcemodel3d.inside, :));
 
 {% include image src="/assets/img/workshop/chieti/virtualchannel/screen_shot_2015-09-17_at_09.36.52.png" width="500" %}

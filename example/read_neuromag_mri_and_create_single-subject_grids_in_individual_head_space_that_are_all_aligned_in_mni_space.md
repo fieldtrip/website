@@ -95,7 +95,7 @@ This example script relies on the example script [Create MNI-aligned grids in in
     figure
     ft_plot_mesh(grid.pos(grid.inside,:))
     ft_plot_sens(hdr.grad)
-    ft_plot_vol(headmodel)
+    ft_plot_headmodel(headmodel)
 
 {% include image src="/assets/img/example/read_neuromag_mri_and_create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space/headmodel.png" %}
 
