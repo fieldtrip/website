@@ -15,7 +15,7 @@ This tutorial describes two approaches for distributing the analysis of multiple
 
 After this tutorial you should be able to execute your multi-subject analysis in parallel and design analysis scripts that allow for easy parallelization, either over subjects or over parameters used in the analysis.
 
-In this tutorial we use the qsub toolbox that is released along with FieldTrip. There are alternative methods for distributed computing, such as the [MATLAB parallel computing toolbox](http://www.mathworks.com/products/parallel-computing/) (e.g. using parfor or dfeval) or with the peer-to-peer toolbox (also included with FieldTrip). More general information about the different approaches for distributed processing in MATLAB can be found in the [frequently asked questions](/faq#distributed_computing_with_fieldtrip_and_matlab).
+In this tutorial we use the qsub toolbox that is released along with FieldTrip. There are alternative methods for distributed computing, such as the [MATLAB Parallel Computing toolbox](http://www.mathworks.com/products/parallel-computing/) (e.g. using parfor or batch) or with the peer-to-peer toolbox (also included with FieldTrip). More general information about the different approaches for distributed processing in MATLAB can be found in the [frequently asked questions](/faq#distributed_computing_with_fieldtrip_and_matlab).
 
 ## Background
 
