@@ -4,7 +4,7 @@ title: besa2fieldtrip
 ```plaintext
  BESA2FIELDTRIP reads and converts various BESA datafiles into a FieldTrip
  data structure, which subsequently can be used for statistical analysis
- or other analysis methods implemented in FieldTrip.
+ or other analysis methods implemented in Fieldtrip.
 
  Use as
    [data] = besa2fieldtrip(filename)
