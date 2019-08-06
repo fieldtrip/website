@@ -2,8 +2,8 @@
 title: ft_plot_cloud
 ---
 ```plaintext
- FT_PLOT_CLOUD visualizes spatially sparse scalar data as points, spheres, discs, or
- spherical clouds of points and optionally 2D slices through the spherical clouds
+ FT_PLOT_CLOUD visualizes spatially sparse scalar data as spheres or
+ spherical clouds of points and optionally 2D slices through those clouds
 
  Use as
    ft_plot_cloud(pos, val, ...)
@@ -11,10 +11,8 @@ title: ft_plot_cloud
  for each location.
 
  Optional input arguments should come in key-value pairs and can include
-   'cloudtype'          = 'point' plots a single 2D point at each sensor position (see plot3)
-                          'cloud' (default) plots a group of spherically arranged points at each sensor position
+   'cloudtype'          = 'cloud' (default) plots a group of spherically arranged points at each sensor position
                           'surf' plots a single spherical surface mesh at each sensor position
-                          'disc' plots a single cylindrical disc at each sensor position aligned with the mesh (required)
    'scalerad'           = scale radius with val, can be 'yes' or 'no' (default = 'yes')
    'radius'             = scalar, maximum radius of cloud (default = 4 mm)
    'clim'               = 1x2 vector specifying the min and max for the colorscale
@@ -31,9 +29,6 @@ title: ft_plot_cloud
    'ptsize'             = scalar, size of points in cloud (default = 1 mm)
    'ptdensity'          = scalar, density of points in cloud (default = 20 per mm^3)
    'ptgradient'         = scalar, degree to which density of points in cloud changes from its center (default = 0.5, i.e. uniform density)
-
- The following options apply when 'cloudtype' = 'point'
-   'marker'          = marker type representing the channels, see plot3 (default = '.')
 
  The following inputs apply when 'slice' = '2d' or '3d'
    'ori'                = 'x', 'y', or 'z', specifies the orthogonal plane which will be plotted (default = 'y')

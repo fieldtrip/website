@@ -15,7 +15,7 @@ title: ft_trialfun_example2
 
  Note that there are some parameters, like the EMG channel name and the
  processing that is done on the EMG channel data, which are hardcoded in
- this trial function. You should change these parameters if neccessary.
+ this trial function. You should change these parameters if necessary.
 
  See also FT_DEFINETRIAL, FT_PREPROCESSING
 ```

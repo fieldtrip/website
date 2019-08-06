@@ -24,5 +24,5 @@ title: peerfeval
    argout = peerget(jobid, 'timeout', inf);
    disp(argout);
 
- See also PEERGET, PEERCELLFUN, PEERMASTER, PEERSLAVE, FEVAL, DFEVAL, DFEVALASYNC
+ See also PEERGET, PEERCELLFUN, PEERMASTER, PEERSLAVE, FEVAL, BATCH
 ```

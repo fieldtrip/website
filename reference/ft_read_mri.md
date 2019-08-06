@@ -36,14 +36,14 @@ title: ft_read_mri
    'yokogawa_mri'
 
  The following MRI file formats are supported
-   CTF - VSM MedTech (*.svl, *.mri version 4 and 5)
+   CTF (*.svl, *.mri version 4 and 5)
    NIFTi (*.nii) and zipped NIFTi (*.nii.gz)
    Analyze (*.img, *.hdr)
    DICOM (*.dcm, *.ima)
    AFNI (*.head, *.brik)
    FreeSurfer (*.mgz, *.mgh)
    MINC (*.mnc)
-   Neuromag - Elekta (*.fif)
+   Neuromag/Elekta (*.fif)
    ANT - Advanced Neuro Technology (*.mri)
    Yokogawa (*.mrk, incomplete)
 

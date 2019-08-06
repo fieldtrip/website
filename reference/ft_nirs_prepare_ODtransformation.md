@@ -9,7 +9,7 @@ title: ft_nirs_prepare_ODtransformation
  Use as
    [montage] = ft_prepare_ODtransformation(cfg, data)
 
- It is neccessary to input the data on which you want to perform the
+ It is necessary to input the data on which you want to perform the
  inverse computations, since that data generally contain the optode
  information and information about the channels that should be included in
  the transformation. The data structure can be either obtained

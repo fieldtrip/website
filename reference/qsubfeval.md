@@ -33,5 +33,5 @@ title: qsubfeval
    jvm         = 'yes' or 'no', whether the nojvm option should be passed to MATLAB (default = 'yes', meaning with jvm)
    rerunable   = 'yes' or 'no', whether the job can be restarted on a torque/maui/moab cluster (default = 'no')
 
- See also QSUBCELLFUN, QSUBGET, FEVAL, DFEVAL, DFEVALASYNC
+ See also QSUBCELLFUN, QSUBGET, FEVAL, BATCH
 ```

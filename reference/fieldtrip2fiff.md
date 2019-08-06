@@ -3,7 +3,7 @@ title: fieldtrip2fiff
 ---
 ```plaintext
  FIELDTRIP2FIFF saves a FieldTrip raw data structure as a fiff-file, allowing it
- to be further analyzed by the Elekta/Neuromag software, or in the MNE suite
+ to be further analyzed by the Neuromag/Elekta software, or in the MNE suite
  software.
 
  Use as

@@ -60,7 +60,7 @@ title: ft_filetype
   - Tobii *.tsv
   - Stanford *.ply
   - Tucker Davis Technology
-  - VSM-Medtech/CTF
+  - CTF
   - Yokogawa & Ricoh
   - nifti, gifti
   - Nicolet *.e (currently from Natus, formerly Carefusion, Viasys and Taugagreining. Also known as Oxford/Teca/Medelec Valor Nervus)

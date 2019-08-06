@@ -45,11 +45,10 @@ title: ft_read_header
  returned in the hdr.orig subfield.
 
  The following MEG dataformats are supported
-   CTF - VSM MedTech (*.ds, *.res4, *.meg4)
-   Neuromag - Elekta (*.fif)
-   BTi - 4D Neuroimaging (*.m4d, *.pdf, *.xyz)
-   Yokogawa (*.ave, *.con, *.raw)
-   Ricoh (*.ave, *.con)
+   CTF (*.ds, *.res4, *.meg4)
+   Neuromag/Elekta (*.fif)
+   BTi/4D (*.m4d, *.pdf, *.xyz)
+   Yokogawa/Ricoh (*.ave, *.con, *.raw)
    NetMEG (*.nc)
    ITAB - Chieti (*.mhd)
    Tristan Babysquid (*.fif)
@@ -81,7 +80,7 @@ title: ft_read_header
 
  The following NIRS dataformats are supported
    BUCN - Birkbeck college, London (*.txt)
-   Artinis - Artinis Medical Systems B.V. (*.oxy3, *.oxyproj)
+   Artinis - Artinis Medical Systems B.V. (*.oxy3, *.oxy4, *.oxyproj)
 
  The following Eyetracker dataformats are supported
    EyeLink - SR Research (*.asc)

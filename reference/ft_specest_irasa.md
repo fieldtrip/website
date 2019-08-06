@@ -3,7 +3,7 @@ title: ft_specest_irasa
 ---
 ```plaintext
  FT_SPECEST_IRASA estimates the powerspectral arrythmic component of the 
- time-domain using Irregular-Resampling Auto-Spectral Analysis. 
+ time-domain using Irregular-Resampling Auto-Spectral Analysis (IRASA)
 
  Use as
    [spectrum,ntaper,freqoi] = ft_specest_irasa(dat,time...)
@@ -26,6 +26,11 @@ title: ft_specest_irasa
    verbose    = output progress to console (0 or 1, default 1)
 
  This implements: Wen H, Liu Z. Separating fractal and oscillatory components in the power spectrum of neurophysiological signal. Brain Topogr. 2016 Jan;29(1):13-26.
+   For application, see Stolk et al., Electrocorticographic dissociation of 
+   alpha and beta rhythmic activity in the human sensorimotor system. It
+   is recommended the user first sub-segments the data using ft_redefinetrial 
+   and specifies cfg.pad = 'nextpow2' when calling ft_frequencyanalysis in 
+   order to implement steps A and B of the original algorithm in Wen & liu.
 
  See also FT_FREQANALYSIS, FT_SPECEST_MTMFFT, FT_SPECEST_MTMCONVOL, FT_SPECEST_TFR, FT_SPECEST_HILBERT, FT_SPECEST_WAVELET
 ```

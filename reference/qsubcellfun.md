@@ -72,5 +72,5 @@ title: qsubcellfun
    qdel <jobnumber>
    qdel all
 
- See also QSUBCOMPILE, QSUBFEVAL, CELLFUN, PEERCELLFUN, FEVAL, DFEVAL, DFEVALASYNC
+ See also QSUBCOMPILE, QSUBFEVAL, CELLFUN, PEERCELLFUN, FEVAL, BATCH
 ```

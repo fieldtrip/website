@@ -29,5 +29,5 @@ title: peercellfun
    x2    = {2, 2, 2, 2, 2};
    y     = peercellfun(fname, x1, x2);
 
- See also PEERMASTER, PEERSLAVE, PEERLIST, PEERINFO, PEERFEVAL, CELLFUN, DFEVAL
+ See also PEERMASTER, PEERSLAVE, PEERLIST, PEERINFO, PEERFEVAL, CELLFUN, BATCH
 ```

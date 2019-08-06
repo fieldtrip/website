@@ -33,5 +33,5 @@ title: ft_debug
  You can query the current on/off/once state for all messages using
    ft_debug query
 
- See also FT_ERROR, FT_WARNING, FT_NOTICE, FT_debug, FT_DEBUG, ERROR, WARNING
+ See also FT_ERROR, FT_WARNING, FT_NOTICE, FT_INFO, FT_DEBUG, ERROR, WARNING
 ```
