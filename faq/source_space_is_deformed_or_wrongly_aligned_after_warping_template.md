@@ -52,7 +52,7 @@ The solution to the problem is to switch the method FieldTrip use to normalize M
 ```Octave
 %% Warp MRI to template with new parameters
 cfg = [];
-cfg.spmversion  = 'spm8';
+cfg.spmversion  = 'spm12';
 cfg.nonlinear   = 'yes';
 cfg.spmmethod   = 'new';
 mri_spm12 = ft_volumenormalise(cfg, mri)
