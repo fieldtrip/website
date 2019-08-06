@@ -213,7 +213,7 @@ In the previous analysis, classification has been performed for each channel sep
 However, the spatial arrangement of MEG channels can be exploited in order to
  group neighbouring channels as features in the searchlight. To build the neighbourhood
 structure, we use
-[`ft_prepare_neighbours`](http://www.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work/):
+[`ft_prepare_neighbours`](/faq/how_does_ft_prepare_neighbours_work/):
 
     cfg = [];
     cfg.method      = 'triangulation'

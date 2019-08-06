@@ -27,7 +27,7 @@ All of the low-level preprocessing functions require data to be represented as a
 - **[ft_preproc_denoise](/reference/ft_preproc_denoise)** - regresses out noise with a known timecourse
 - **[ft_preproc_derivative](/reference/ft_preproc_derivative)** - computes the temporal Nth order derivative
 - **[ft_preproc_hilbert](/reference/ft_preproc_hilbert)** - computes the Hilbert transpose of the data
-- **[ft_preproc_rectify](/reference/ft_preproc_rectify)** - rectifies the data, usefull for EMG
+- **[ft_preproc_rectify](/reference/ft_preproc_rectify)** - rectifies the data, useful for EMG
 - **[ft_preproc_rereference](/reference/ft_preproc_rereference)** - rereferences EEG data using the average over all channels or selected channels
 - **[ft_preproc_resample](/reference/ft_preproc_resample)** - resamples the data
 - **[ft_preproc_slidingrange](/reference/ft_preproc_slidingrange)** - computes the range of the data in a sliding time window

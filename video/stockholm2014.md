@@ -13,7 +13,7 @@ tags: [video]
 
 {% include youtube id="6EIBh5lHNSc" %}
 
-## Frequency analysis applications in neuroscience by Matti Hamalainen
+## Frequency analysis applications in neuroscience by Matti Hämäläinen
 
 {% include youtube id="7R5SmoG8pD0" %}
 
@@ -21,7 +21,7 @@ tags: [video]
 
 {% include youtube id="nLaOcMMvcNI" %}
 
-## Current dipole models in MEG by Matti Hamalainen
+## Current dipole models in MEG by Matti Hämäläinen
 
 {% include youtube id="pFdCWsqPEFg" %}
 

@@ -36,11 +36,11 @@ If you download this data into a folder named 'testdata', the directory should l
     shape = rmfield(shape, 'fid'); %remove the fiducials->these are stored in MRI-voxel
 
     % read in the single sphere models produced with CTF software
-    ctf_ss = ft_read_vol('Subject01.hdm');
+    ctf_ss = ft_read_headmodel('Subject01.hdm');
 
     % plotting the head model together with the head shape
     ft_plot_sens(grad);
-    ft_plot_vol(ctf_ss, 'facecolor', 'cortex');
+    ft_plot_headmodel(ctf_ss, 'facecolor', 'cortex');
     ft_plot_headshape(shape);
 
     % prepare the leadfield for the single sphere model
@@ -62,11 +62,11 @@ If you download this data into a folder named 'testdata', the directory should l
     %--------------------------------------------------------------------------------------
 
     % read in the local spheres model produced with CTF software
-    ctf_ls = ft_read_vol(fullfile('Subject01.ds', 'default.hdm'));
+    ctf_ls = ft_read_headmodel(fullfile('Subject01.ds', 'default.hdm'));
 
     % plotting the headmodel
     ft_plot_sens(grad, 'unit', 'cm');
-    ft_plot_vol(ctf_ls, 'facecolor', 'cortex', 'grad', grad, 'unit', 'cm');
+    ft_plot_headmodel(ctf_ls, 'facecolor', 'cortex', 'grad', grad, 'unit', 'cm');
     ft_plot_headshape(shape, 'unit', 'cm');
 
     % prepare_leadfield;
@@ -98,7 +98,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
     % plotting the headmodel
     ft_plot_sens(grad, 'unit', 'cm');
-    ft_plot_vol(ls_headshape, 'facecolor', 'cortex', 'grad', grad, 'unit', 'cm');
+    ft_plot_headmodel(ls_headshape, 'facecolor', 'cortex', 'grad', grad, 'unit', 'cm');
     ft_plot_headshape(shape, 'unit', 'cm');
 
     % prepare_leadfield for local spheres headmodel with ctf headshape
@@ -150,7 +150,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
     % plotting the headmodel
     ft_plot_sens(grad);
-    ft_plot_vol(ls_mri, 'facecolor', 'cortex');
+    ft_plot_headmodel(ls_mri, 'facecolor', 'cortex');
 
     % ft_prepare_leadfield for the local spheres headmodel produced using a segmented mri
     cfg                  = [];
@@ -182,7 +182,7 @@ If you download this data into a folder named 'testdata', the directory should l
 
     % plotting the headmodel
     ft_plot_sens(grad, 'unit', 'cm');
-    ft_plot_vol(singleshell, 'facecolor', 'cortex', 'unit', 'cm');
+    ft_plot_headmodel(singleshell, 'facecolor', 'cortex', 'unit', 'cm');
 
     % ft_prepare_leadfield for the Nolte headmodel, created using FieldTrip
     cfg                = [];

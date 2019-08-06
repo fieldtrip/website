@@ -15,36 +15,36 @@ Let me outline the different approaches below. Note that although in the example
 
 ### MathWorks parallel computing toolbox and distributed computing engines
 
-The [parallel computing toolbox](http://www.mathworks.nl/products/parallel-computing) allows you to start multiple MATLAB "labs" on your desktop computer and distribute the computational load over these labs. This for example looks like this:
+The [MATLAB Parallel Computing toolbox](http://www.mathworks.nl/products/parallel-computing) allows you to start multiple MATLAB "labs" on your desktop computer and distribute the computational load over these labs. This for example looks like this:
 
     matlabpool open 4
     parfor i=1:Nsubj
-    cfg         = ...
-    cfg.dataset = sprintf('subject%d.eeg');
-    rawdata{i}  = ft_preprocessing(cfg);
+      cfg         = ...
+      cfg.dataset = sprintf('subject%d.eeg');
+      rawdata{i}  = ft_preprocessing(cfg);
     end
 
 This will keep 4 MATLAB workers on your own computer busy with preprocessing. Note that this example is probably not so efficient to distribute: presumably your local hard disk speed is the bottleneck, not the CPU speed.
 
-An other way to distribute jobs is using DFEVAL like this:
+Another way to distribute jobs is using [batch](https://www.mathworks.com/help/distcomp/batch.html) like this:
 
     for i=1:Nsubj
-    cfg{i}         = ...
-    cfg{i}.dataset = sprintf('subject%d.eeg');
+      cfg{i}         = ...
+      cfg{i}.dataset = sprintf('subject%d.eeg');
     end
-    rawdata = dfeval(@ft_preprocessing, cfg);
+    rawdata = batch(@ft_preprocessing, Nsubj, cfg);
 
-If you also have the [distributed computing engines](http://www.mathworks.nl/products/distriben), which have to be installed on a compute cluster, you can use those as remote engines for executing the separate jobs.
+If you also have the [MATLAB Parallel Server](https://nl.mathworks.com/products/matlab-parallel-server.html), which has to be installed on a compute cluster, you can use those as remote engines for executing the separate jobs.
 
 ### FieldTrip qsub toolbox
 
 At the Donders we have a Linux compute cluster that is managed with a batch queueing system that allows users to submit large batches of jobs to run in parallel. The Donders cluster runs Torque/Maui, but other PBS systems, SLURM, LSF, Sun Grid Engine and Oracle Grid Engine are also supported. More documentation on the qsub toolbox is found [here](/development/module/qsub).
 
-To facilitate distributed computing on the compute cluster, we have implemented a qsub wrapper function within MATLAB, which for the end-user works similar to DFEVAL and PEERCELLFUN.
+To facilitate distributed computing, we have implemented the **[qsubcellfun](/reference/qsubcellfun)** wrapper function within MATLAB, which for the end-user works similar to [cellfun](https://nl.mathworks.com/help/matlab/ref/cellfun.html) and [batch](https://nl.mathworks.com/help/parallel-computing/batch.html).
 
     for i=1:Nsubj
-    cfg{i}         = ...
-    cfg{i}.dataset = sprintf('subject%d.eeg');
+      cfg{i}         = ...
+      cfg{i}.dataset = sprintf('subject%d.eeg');
     end
     rawdata = qsubcellfun(@ft_preprocessing, cfg);
 
@@ -58,11 +58,11 @@ The FieldTrip peer computing toolbox was developed to harness the computational 
 Please note that this requires compilation of some mex files. At this moment it is not actively supported.
 {% include markup/end %}
 
-The syntax you would use to distribute jobs with the peer system is identitcal to DFEVAL, i.e.
+The syntax you would use to distribute jobs with the peer system is similar to [cellfun](https://nl.mathworks.com/help/matlab/ref/cellfun.html), i.e.
 
     for i=1:Nsubj
-    cfg{i}         = ...
-    cfg{i}.dataset = sprintf('subject%d.eeg');
+      cfg{i}         = ...
+      cfg{i}.dataset = sprintf('subject%d.eeg');
     end
     rawdata = peercellfun(@ft_preprocessing, cfg);
 

@@ -1,5 +1,5 @@
 ---
-title: ft_plot_vol
+title: ft_plot_headmodel
 ---
 ```plaintext
  This function is a backward compatibility wrapper for existing MATLAB scripts

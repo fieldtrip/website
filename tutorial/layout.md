@@ -30,7 +30,7 @@ If you do not have a measurement of the 3D positions of your sensors, but do hav
 
 ### Schematic layout
 
-Sometimes a schematic layout is more convenient, since it "flattens" the head and allows to see all channels better. In the case of iEEG (either sEEG and/or ECoG) electrodes, it can also save a lot of work to locate the electrodes in 3D as explained in the [human iEEG tutorial](http://www.fieldtriptoolbox.org/tutorial/human_ecog/). Furthermore, for sEEG electrodes it can be difficult to come up with a geometrically accurate representation of the channels in 2D space.
+Sometimes a schematic layout is more convenient, since it "flattens" the head and allows to see all channels better. In the case of iEEG (either sEEG and/or ECoG) electrodes, it can also save a lot of work to locate the electrodes in 3D as explained in the [human iEEG tutorial](/tutorial/human_ecog/). Furthermore, for sEEG electrodes it can be difficult to come up with a geometrically accurate representation of the channels in 2D space.
 
 ## Making a layout for MEG sensors
 
@@ -120,7 +120,7 @@ You can specify cfg.image in **[ft_prepare_layout](/reference/ft_prepare_layout)
 
 ### Creating a layout from 3D electrode positions
 
-The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as explained in the [human iEEG tutorial](http://www.fieldtriptoolbox.org/tutorial/human_ecog/). Following the electrode localization, you can make layouts using the orthographic projection method described in step 47 of that tutorial.
+The sEEG and ECoG electrodes can be localized in 3D from a CT and/or MRI scan as explained in the [human iEEG tutorial](/tutorial/human_ecog/). Following the electrode localization, you can make layouts using the orthographic projection method described in step 47 of that tutorial.
 
 {% include markup/warning %}
 

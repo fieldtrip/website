@@ -1,17 +1,17 @@
 ---
 title: Analysis of monkey ECoG recordings
-tags: [tutorial, ieeg, ecog, animal]
+tags: [tutorial, ieeg, ecog, neurotycho, animal]
 ---
 
 # Analysis of monkey ECoG recordings
 
 ## Introduction
 
-In the following tutorial we will analyze a whole hemisphere EcoG grid implanted in a macaque monkey. This data set has been recorded in the Lab of Dr. Naotaka Fujii in Japan and can be downloaded [here](http://neurotycho.org/). This homepage also provides some information about why and how the data is shared so that we will not expand on this here. Instead this tutorial provides some overview of how to get started with EcoG data by using this particular data set as an example.
+In the following tutorial we will analyze a whole hemisphere EcoG grid implanted in a macaque monkey. This data set has been recorded in the Laboratory for Adaptive Intelligence, BSI, RIKEN, Japan and has been shared as part of the [NeuroTycho](<(http://neurotycho.org/)>) project. The NeuroTycho homepage also provides some information about why and how the data is shared so that we will not expand on this here. Instead this tutorial provides some overview of how to get started with ECoG data by using this particular data set as an example.
 
 ## Background
 
-This particular experiment deals with an yet frequently exploited experimental design- a visual grating task. This particular task is known to reliably elicit a sustained signal in the gamma frequency range ~60-80 Hz in both humans and nonhuman primates. More elaborate discussion on the sustained gamma band signal can be found [here](http://www.sciencedirect.com/science/article/pii/S0896627308003747). The animal is seated with fixated head and restrained arm motion in front of a black screen. A grating pattern in eight different orientation has been presented for 2 seconds following a 2 seconds baseline period (black screen) while the brain activity was monitored with 128 channel ECoG grid covering the entire right hemisphere (Figure1). Some more information can also be found [here](http://neurotycho.org/visual-grating-task).
+This particular experiment deals with a visual grating task. This particular task is known to reliably elicit a sustained signal in the gamma frequency range ~60-80 Hz in both humans and nonhuman primates. More elaborate discussion on the sustained gamma band signal can be found [here](http://www.sciencedirect.com/science/article/pii/S0896627308003747). The animal is seated with fixated head and restrained arm motion in front of a black screen. A grating pattern in eight different orientation has been presented for 2 seconds following a 2 seconds baseline period (black screen) while the brain activity was monitored with 128 channel ECoG grid covering the entire right hemisphere (Figure1). Some more information can be found [here](http://neurotycho.org/visual-grating-task), where you can also download the data.
 
 {% include image src="/assets/img/tutorial/monkey_ecog/k2_1.png" width="400" %}
 _Figure 1: X-ray with electrode coverage illustrating the position of the electrodes in the right hemisphere_
@@ -30,29 +30,29 @@ The tutorial will follow the steps:
 
 ### Preprocessing
 
-First we will generate the layout along the guidelines explained in the layout tutorial [here](http://www.fieldtriptoolbox.org/tutorial/layout?s[]=layout). Once you have downloaded and uncompressed the data you can load and restructure it in the following way. Alternatively you can download the reformatted data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/monkey_ecog/).
+First we will generate the layout along the guidelines explained in the layout tutorial [here](/tutorial/layout). Once you have downloaded and uncompressed the data you can load and restructure it in the following way. Alternatively you can download the reformatted data [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/monkey_ecog/).
 
     load Event.mat
     load lay
     vec=1:128;
-    for i=1:length(vec);
+    for i=1:length(vec)
      filename=strcat('ECoG_ch', num2str(vec(i)));
-     data.label{i}=num2str(vec(i));
+     data.label{i} = num2str(vec(i));
      load(filename)
-     filename2=strcat('ECoGData_ch', num2str(vec(i)));
-     data.trial(i,:) =eval(filename2);
+     filename2 = strcat('ECoGData_ch', num2str(vec(i)));
+     data.trial(i,:) = eval(filename2);
      data.time = {EventTime};
      data.fsample = 1000;
     end
 
-    data.trial={data.trial};
-    data.label=lay.label(1:128);
-    data.trial=double(data.trial{1})
-    data.trial={data.trial};
-    data.label{129}='event';
+    data.trial = {data.trial};
+    data.label = lay.label(1:128);
+    data.trial = double(data.trial{1})
+    data.trial = {data.trial};
+    data.label{129} = 'event';
     clear ECoG*
 
-Using the information provided in the "readme.txt" file we can build a trial structure that can be used during the call to **[ft_redefinetrial](/reference/ft_redefinetrial)**
+Using the information provided in the "readme.txt" file, we can build a trial structure that can be used during the call to **[ft_redefinetrial](/reference/ft_redefinetrial)**
 
     trigger = EventData;
     sample  = EventIndex;
@@ -83,18 +83,18 @@ Using the information provided in the "readme.txt" file we can build a trial str
 
 The structure **trl** is now a 20 rows by 3 columns matrix containing the begin, end and offset(i.e. baseline) samples for each trial of type _45° orientation_. Subsequently we call **[ft_redefinetrial](/reference/ft_redefinetrial)** where we provide the trial structure computed in the previous step **cfg.trl = trl;**.
 
-    cfg=[];
-    cfg.trl=trl;
-    data_1=ft_redefinetrial(cfg,data);
+    cfg     = [];
+    cfg.trl = trl;
+    data_1 = ft_redefinetrial(cfg,data);
 
 Now we illustrate the time course of the channel defining the event in order to check whether trial onset was appropriately assigned.
 
-    cfg=[];
-    cfg.trl =data_1.trial;
-    cfg.channel    = 'event';
-    cfg.ylim = [0 3000];
+    cfg           = [];
+    cfg.trl       = data_1.trial;
+    cfg.channel   = 'event';
+    cfg.ylim      = [0 3000];
     cfg.blocksize = 4;
-    ft_databrowser(cfg,data_1);
+    ft_databrowser(cfg, data_1);
 
 {% include image src="/assets/img/tutorial/monkey_ecog/databrowser_event.png" width="400" %}
 
@@ -103,14 +103,14 @@ _Figure 2: Event onset at time stamp 0 and duration 2 seconds._
 Next, we will use independent component analysis to identify the presence of artifacts but also the presence of oscillatory activity. First, the data is resampled down to 140 Hz in order to speed up the calculation of the independent components. We reduce the iteration steps to 50 and finally project the original high sampling data thru the identified components again.
 
     %% resample the data
-    cfg = [];
+    cfg            = [];
     cfg.resamplefs = 140;
     cfg.detrend    = 'no';
     datads = ft_resampledata(cfg, data);
 
     % decompose the data
-    cfg        = [];
-    cfg.method = 'runica';
+    cfg                 = [];
+    cfg.method          = 'runica';
     cfg.runica.maxsteps = 50;
     comp = ft_componentanalysis(cfg, datads);
 
@@ -118,7 +118,7 @@ Next, we will use independent component analysis to identify the presence of art
     cfg           = [];
     cfg.unmixing  = comp.unmixing;
     cfg.topolabel = comp.topolabel;
-    comp=ft_componentanalysis(cfg, data);
+    comp = ft_componentanalysis(cfg, data);
 
 We will use **[ft_databrowser](/reference/ft_databrowser)** again in order to plot the topography of the components and corresponding time courses. In the present case only particular components bearing artifacts (component 22) and clear oscillatory signatures (11,43,44) are plotted.
 
@@ -144,23 +144,23 @@ After rejecting bad components with **[ft_rejectcomponent](/reference/ft_rejectc
     cfg.foi          = 1:1:40;
     cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
     cfg.toi          = -2:0.05:2;
-    cfg.keeptrials ='yes';
-    tfr= ft_freqanalysis(cfg,data);
+    cfg.keeptrials   ='yes';
+    tfr = ft_freqanalysis(cfg,data);
 
     % baseline correction
-    cfg=[];
-    cfg.baseline=[-1 0];
-    cfg.baselinetype='db';
+    cfg               = [];
+    cfg.baseline      = [-1 0];
+    cfg.baselinetype  = 'db';
     tfrbl = ft_freqbaseline(cfg, tfr);
 
     % plot the result
-    cfg=[];
-    cfg.channel = {'all'};
-    cfg.xlim=[-.2 2];
-    cfg.ylim=[1 40];
-    cfg.fontsize = 12;
-    cfg.layout = lay;
-    % cfg.zlim = [-.5 .5];
+    cfg           = [];
+    cfg.channel   = {'all'};
+    cfg.xlim      = [-.2 2];
+    cfg.ylim      = [1 40];
+    cfg.fontsize  = 12;
+    cfg.layout    = lay;
+    % cfg.zlim    = [-.5 .5];
     figure;
     ft_multiplotTFR(cfg, tfrbl);
 
@@ -175,12 +175,12 @@ _Figure 6: Time-frequency representation of power averaged across the electrodes
 Typically, visual grating tasks reliably elicit sustained gamma band response ~60-80 Hz in both humans ((Hoogenboom N1, Schoffelen JM, Oostenveld R, Parkes LM, Fries P. (2006) Localizing human visual gamma-band activity in frequency, time and space. Neuroimage. 2006 Feb 1;29(3):764-73. Epub 2005 Oct 10.)) and non human primates ((Fries P, Scheeringa R, Oostenveld R. (2008) Finding Gamma. Neuron. 2008 May 8;58(3):303-5. doi: 10.1016/j.neuron.2008.04.020.)). The following lines will estimate oscillatory power in the higher frequencies > 40 Hz, baseline correct and plot the rusult.
 
     % estimate high frequency gamma
-    cfg = [];
+    cfg            = [];
     cfg.output     = 'pow';
     cfg.method     = 'mtmconvol';
     cfg.taper      = 'dpss';
     cfg.foi        = 40:2:120;
-    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;
+    cfg.t_ftimwin  = ones(length(cfg.foi),1).*0.5;
     cfg.tapsmofrq  = 6 ;
     cfg.toi        = -2:0.05:2;
     cfg.pad        = 'maxperlen';
@@ -188,22 +188,22 @@ Typically, visual grating tasks reliably elicit sustained gamma band response ~6
     tfrhf = ft_freqanalysis(cfg, data);
 
     % baseline correct
-    cfg=[];
+    cfg              = [];
     cfg.baseline     = [-.75 0];
     cfg.baselinetype = 'db';
-    tfrhfbl=ft_freqbaseline(cfg, tfrhf);
+    tfrhfbl = ft_freqbaseline(cfg, tfrhf);
 
     % plot
     figure;
-    cfg=[];
-    cfg.xlim = [0.18 0.87]
-    cfg.ylim = [53 80];
-    cfg.layout = lay;
+    cfg         = [];
+    cfg.xlim    = [0.18 0.87]
+    cfg.ylim    = [53 80];
+    cfg.layout  = lay;
     subplot(2,2,1); ft_topoplotTFR(cfg,tfrhfbl);
-    cfg=[];
+    cfg         = [];
     cfg.channel = {'chan123'};
-    cfg.xlim=[-.2 1.5];
-    cfg.ylim=[40 120];
+    cfg.xlim    = [-.2 1.5];
+    cfg.ylim    = [40 120];
     subplot(2,2,2); ft_singleplotTFR(cfg,tfrhfbl);
 
 {% include image src="/assets/img/tutorial/monkey_ecog/gammatopotfr.png" width="400" %}
@@ -225,34 +225,35 @@ Now we can analysis the connectivity patterns that may arise due to coherence in
     freq           = ft_freqanalysis(cfg, data);
 
     % then compute connectivity
-    cfg=[];
-    cfg.method='coh';
+    cfg         = [];
+    cfg.method  = 'coh';
     cfg.complex = 'absimag'; % check absimag solves the abs on line 161
-    conn=ft_connectivityanalysis(cfg,freq);
+    conn = ft_connectivityanalysis(cfg,freq);
 
 Now we plot the coherence of a reference electrode with maximal gamma power relative to the remaining electrodes. In this case the electrode is 'chan123' with an index number 119.
 
     %% plot coherence from max gamma chan to all other
-    coh.label=data.label;
+    coh.label =data.label;
     coh.dimord = 'chan_time'
-    coh.avg= conn.cohspctrm(119,:)';
+    coh.avg = conn.cohspctrm(119,:)';
     coh.time = 1;
-    cfg = [];
-    cfg.layout = lay;
-    cfg.colormap = 'jet';
-    cfg.zlim     = [-.2 .2];
-    cfg.colorbar = 'yes';
+
+    cfg           = [];
+    cfg.layout    = lay;
+    cfg.colormap  = 'jet';
+    cfg.zlim      = [-.2 .2];
+    cfg.colorbar  = 'yes';
     cfg.interactive = 'no';
-    cfg.marker = 'off';
+    cfg.marker    = 'off';
     cfg.highlight = 'on';
     cfg.highlightchannel = {'chan123'};
     cfg.highlightsymbol = '*';
-    cfg.highlightcolor = [1 0 1];
+    cfg.highlightcolor  = [1 0 1];
     cfg.highlightsize   = 12;
     cfg.highlightfontsize =12;
     figure;
     ft_topoplotER(cfg,coh);
-    title ('ICOH')
+    title('ICOH')
 
 {% include image src="/assets/img/tutorial/monkey_ecog/icoh.png" width="400" %}
 
@@ -263,24 +264,24 @@ Finally, we use **[ft_networkanalysis](/reference/ft_networkanalysis)** to illus
     % calculate graph theoretical metric
     fn=fieldnames(conn);
     parameter = 'degrees';
-    cfg = [];
-    cfg.method = parameter;
+    cfg           = [];
+    cfg.method    = parameter;
     cfg.parameter = fn{3};
     cfg.threshold = .1;
-    deg = ft_networkanalysis(cfg,conn);
+    deg = ft_networkanalysis(cfg, conn);
 
     % plot the result
-    cfg = [];
-    cfg.layout = lay;
-    cfg.colormap = 'jet';
-    cfg.parameter = parameter;
-    cfg.zlim     = [-15 15];
-    cfg.colorbar = 'yes';
+    cfg             = [];
+    cfg.layout      = lay;
+    cfg.colormap    = 'jet';
+    cfg.parameter   = parameter;
+    cfg.zlim        = [-15 15];
+    cfg.colorbar    = 'yes';
     cfg.interactive = 'no';
     cfg.marker      = 'off';
     figure;
-    ft_topoplotTFR(cfg,deg);
-    title ('NODE DEGREE')
+    ft_topoplotTFR(cfg, deg);
+    title('NODE DEGREE')
 
 {% include image src="/assets/img/tutorial/monkey_ecog/nodedegree.png" width="400" %}
 
@@ -294,8 +295,7 @@ First, the data has been organized in a FieldTrip appropriate format. Psychophys
 
 Subsequently, the data has been further evaluated by decomposing the linear superposition of activity using independent components by means of ICA. On the basis of the topographic layout and the component time courses the spatial and temporal characteristics of the data had been evaluated.
 
-Next, the spectral characteristic in the data were evaluated. It is well documented that in experimental context such as the present, i.e. visual stimulation with gratings characterized by high spatial frequency, a prominent stimulus induced power modulation in the gamma frequency range ~60 Hz is observed. The evaluated data set confirmed this observation demonstrating a prominent increase in high frequency activity. This increase was most prominent over visual areas.
-Following the steps described above it was possible to conclude that stimulus presentation is associated with specific brain activity characterized by time (0-2 sec post stim), frequency(~60Hz) and space (visual) "bounderies".
+Next, the spectral characteristic in the data were evaluated. It is well documented that in experimental context such as the present, i.e. visual stimulation with gratings characterized by high spatial frequency, a prominent stimulus induced power modulation in the gamma frequency range ~60 Hz is observed. The evaluated data set confirmed this observation demonstrating a prominent increase in high frequency activity. This increase was most prominent over visual areas. Following the steps described above it was possible to conclude that stimulus presentation is associated with specific brain activity characterized by time (0-2 sec post stim), frequency (~60Hz) and space (visual) "bounderies".
 
 Given this knowledge often we seek to characterize some quantity of interaction or connectivity between brain structures in this case electrodes. This tutorial applied "coherence" as method of choice although there are various, equally valid other methods implemented in FieldTrip. Descriptively, using a reference electrode (seed) defined as the maximal gamma band power it could be demonstrated that the propagation of the observed stimulus induced brain response is rather spatially constrained to several nearby electrodes surrounding the seed region.
 

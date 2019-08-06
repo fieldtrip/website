@@ -15,7 +15,7 @@ title: Check the consistency between the documentation and the implementations
 
 The help of any function could look like this
 
-    % FUNNAME does something usefull
+    % FUNNAME does something useful
     %
     % Use as
     %    output = funname(cfg, input)
@@ -66,20 +66,29 @@ The documentation should consist of an overview of the main commands with the co
 
 These should be cross-linked. Status: no attempts yet.
 
-## Appendix: some usefull unix commands
+## Appendix: some useful unix commands
 
 Finding all configuration option
+
+```bash
 grep -o 'cfg\.[a-zA-Z0-9]_' function_name.m
 grep -o 'cfg\.[a-zA-Z0-9]_' _.m
 grep -o 'cfg\.[a-zA-Z0-9]_' function_name.m | sort | uniq
 grep -o 'cfg\.[a-zA-Z0-9]_' _.m | sort | uniq
+```
 
-Getting the Nth paragraps of a text file (the N below should be changed into a number
+Getting the Nth paragraphs of a text file (the N below should be changed into a number)
+
+```bash
 cat function_name.m | awk "BEGIN {t=1}; /^$/ {t=t+1}; !/^$/ {if ((t-N)==0) print}"
+```
 
 Get a set of files that describe all config options in the help and in the code, and determine the config options that are missing from either the help or the code:
+
+```bash
 for file in _.m ; do grep -v '^%' \$file | grep -o 'cfg\.[a-zA-Z0-9]_' | sort | uniq > $file.cfg_code ; done
-    for file in *.m ; do grep    '^%' $file | grep -o 'cfg\.[a-zA-Z0-9]_' | sort | uniq > \$file.cfg_help ; done
+for file in *.m ; do grep    '^%' $file | grep -o 'cfg\.[a-zA-Z0-9]_' | sort | uniq > \$file.cfg_help ; done
 for file in _.m ; do diff $file.cfg_* > $file.diff ; done
 for file in _.diff ; do grep '^`<' $file | tr '<' '%' >` \$file.missing_help ; done
 for file in _.diff ; do grep '^>' $file | tr '>' '%' > $file.missing_code ; done
+```

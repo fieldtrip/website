@@ -17,7 +17,7 @@ no such call is made. Robert proposed to provide a unified API also on the C lev
 
     con = open_connection("localhost:1972");   // open a TCP connection
     con = open_connection("/some/unix/path");  // open a UNIX/local domain connection
-    con = open_connection("`<dma>`");          // "open" a direct memory "connection"
+    con = open_connection("<dma>");            // "open" a direct memory "connection"
 
 and that returns a data structure with information about the type of connection instead of a simple integer (or socket identifier).
 This would naturally extend to future implementations (e.g., Windows pipes).

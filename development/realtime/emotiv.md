@@ -13,7 +13,7 @@ The acquisition setup consists of the headset itself and a bluetooth dongle, whi
 tool called **emotiv2ft** (see "realtime/datasource/emotiv") to grab data from the headset, and stream it to a FieldTrip buffer.
 You can call this tool with the usual command line arguments, that is,
 
-    emotiv2ft `<config-file>` [hostname=localhost [port=1972 [ctrlPort=8000]]]
+    emotiv2ft <configfile> [hostname=localhost [port=1972 [ctrlPort=8000]]]
 
 where replacing "hostname" by a minus (-) tells the software to spawn its own buffer server on the given port. When called without arguments other than the config file,
 

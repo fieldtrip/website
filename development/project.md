@@ -5,9 +5,7 @@ tags: [development]
 
 # Project overview
 
-This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users.
-
-We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projects.
+This section of the website lists information aimed at developers of FieldTrip and collaborating software projects. Most of the pages here are just meant as scratchpads for sharing ideas and for keeping track of the "to do" list and therefore will be of limited use to end-users. We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projects; those projects are typically not listed here.
 
 ## Open projects
 
@@ -29,7 +27,7 @@ We also use [GitHub](/development/git) and [Bugzilla](/bugzilla) to track projec
 - [Check the correctness of the implementation of the algorithms](/development/project/correctness)
 - [Document the deprecated functions and configuration options](/development/deprecated)
 - [improve interactive and non-interactive plotting of 4D bivariate data](/development/project/visualization)
-- [Ensemblemethods](/development/project/ensemblemethods)
+- [Ensemble methods](/development/project/ensemblemethods)
 - [Restructure and rework all visualization functions](/development/project/restructure_and_rework_all_visualization_functions)
 - [Checkdata and make source-structure definition consistent with other datatypes](/development/project/checkdata)
 - [Import and export data to and from MNE-Python](/development/project/integrate_with_mne)

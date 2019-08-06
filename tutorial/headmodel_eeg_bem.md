@@ -39,7 +39,7 @@ The anatomical mri of the [tutorial data set](/tutorial/meg_language) is availab
 - then we segment the anatomical information into different tissue types with **[ft_volumesegment](/reference/ft_volumesegment)**;
 - triangulate the surfaces with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**;
 - and create the headmodel with **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**.
-- Finally, we will check the geometry of the head model by plotting it with **[ft_plot_mesh](/reference/ft_plot_vol)**.
+- Finally, we will check the geometry of the head model by plotting it with **[ft_plot_mesh](/reference/ft_plot_headmodel)**.
 
 {% include image src="/assets/img/tutorial/headmodel_eeg_bem/hedmodel_eeg-01.png" %}
 
@@ -348,7 +348,7 @@ This electrode structure can be used later when the leadfield is computed during
 {% include markup/info %}
 Create a head model with method 'concentricspheres' that you fit on scalp, skull and brain surfaces, i.e. using the already made mesh.
 
-Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_vol](/reference/ft_plot_vol)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
+Plot the head model in the same figure with the brain surface and scalp. Check the help of **[ft_plot_headmodel](/reference/ft_plot_headmodel)** for further options of the visualization (e.g. color, transparency) which help to see the spheres and the brain surface together.
 
 What is the difference between this head model and the BEM?
 {% include markup/end %}

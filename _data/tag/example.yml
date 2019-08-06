@@ -109,6 +109,9 @@
 - name:  How to import data from MNE-Python and FreeSurfer
   link:  /example/import_mne
 
+- name:  Irregular Resampling Auto-Spectral Analysis (IRASA)
+  link:  /example/irasa
+
 - name:  Make leadfields using different headmodels
   link:  /example/make_leadfields_using_different_headmodels
 

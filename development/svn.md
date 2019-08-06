@@ -5,7 +5,7 @@ tags: [development, cvs, svn, git]
 
 # Accessing the FieldTrip source code through SVN
 
-The FieldTrip code base used to be managed using the Subversion source code version control system, also known as SVN. In February 2016 we switched over to [Git](http://git-scm.com) and you can now access the code and contribute on [GitHub](http://github.com/fieldtrip).
+The FieldTrip code used to be managed using the [Subversion](https://subversion.apache.org/) version control system, also known as SVN. In February 2016 we switched over to [Git](http://git-scm.com) and you can now access the code and contribute on [GitHub](http://github.com/fieldtrip).
 
 Please see our [GitHub tutorial](/development/git) for details.
 

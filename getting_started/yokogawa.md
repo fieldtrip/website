@@ -33,7 +33,7 @@ Usually you will be starting your FieldTrip analysis with raw continuous data wh
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
-    addpath `<full_path_to_fieldtrip>`
+    addpath <path_to_fieldtrip>
     ft_defaults
 
 ## Testing that the reading into MATLAB works
@@ -299,7 +299,7 @@ Plot sensors, fiducials and headmodel to doublecheck
     xlabel('X');
     ylabel('Y');
     zlabel('Z');
-    ft_plot_vol(vol_cm,'facecolor','skin','edgecolor','none','facealpha',0.5);
+    ft_plot_headmodel(vol_cm,'facecolor','skin','edgecolor','none','facealpha',0.5);
     camlight left
     camlight left
 

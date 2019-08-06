@@ -14,15 +14,15 @@ The objective of supplying these low-level functions as a separate module/toolbo
 2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
 3.  facilitate the implementation of advanced features
 
-The low-level functions are combined in the [development:forward](/development/module/forward) and the [development:inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip but can also be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/) as separate toolboxes. In the past these functions were combined in one toolbox.
+The low-level functions are combined in the [forward](/development/module/forward) and the [inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip but can also be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/) as separate toolboxes. In the past these functions were combined in one toolbox.
 
 Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably will want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 
 ## Module layout
 
-The [development:forward](/development/module/forward) module contains the methods to compute the solution to the volume conduction problem, i.e. "What is the potential or field distribution given a known source?".
+The [forward](/development/module/forward) module contains the methods to compute the solution to the volume conduction problem, i.e. "What is the potential or field distribution given a known source?".
 
-The [development:inverse](/development/module/inverse) module contains the methods to estimate the source parameters, i.e. to answer the question "What are the unknown source parameters, given the observed EEG or MEG field distribution?".
+The [inverse](/development/module/inverse) module contains the methods to estimate the source parameters, i.e. to answer the question "What are the unknown source parameters, given the observed EEG or MEG field distribution?".
 
 It contains high-level functions that are publicly available for experienced end-user. The functionality of these functions within these modules depend on low-level functions which are not available to the end-user and combined in a private directory.
 

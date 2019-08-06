@@ -24,11 +24,10 @@ In FieldTrip, the preprocessing of data refers to the reading of the data, segme
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 
 1. Read all data from the file into memory, apply filters, and subsequently cut the data into interesting segments
-2. Identify the interesting segments, read those segments from the data file and apply filters to those segments only  
-
+2. Identify the interesting segments, read those segments from the data file and apply filters to those segments only
 
 An advantage of the first approach is that it allows you to apply most temporal fitlers to your data without the distorting the data. In the latter approach, you have to be more careful with the temporal filtering you apply, but it is much more memory-friendly, especially for big datasets.  
-   Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
+ Here we are using the second approach. The approach for reading and filtering continuous data and segmenting afterwards is explained in [another tutorial](/tutorial/continuous).
 
 We are going to define segments of interest (epochs/trials) based on triggers encoded in a specific trigger channel.
 This depends on the function **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a so-called configuration structure (typically called _cfg_), which contains the field _cfg.trl_. This is a matrix representing the relevant parts of the raw data, which are to be selected for further processing. Each row in trl-matrix represents a single epoch-of-interest (trial), and the trl-matrix has three or more columns. The first column defines (in samples) the beginning point of each epoch with respect to how the data are stored in the raw data file. The second column defines (in samples) the end point of each epoch. The third column specifies the offset (in sample) of the first sample within each epoch with respect to time point 0 within than epoch. In essence they contain information about when the epoch begins, end and when time 0 appears. The trial matrix can contain more columns with more (user-chosen) information about the trial.
@@ -39,11 +38,11 @@ You can either use a default trial function or design your own. When using the d
 
 {% include /shared/workshop/natmeg/meg_audodd.md %}
 
-## Browsing the data prior to preprocessing
+## Have a look at the data prior to preprocessing
 
 Before we start preprocessing our data and calculate event-related potentials (ERPs), we will first have a look at our data while it is unprocessed and not yet cut into trial (following FieldTrip nomenclature: _raw_-data). To do this, we use **[ft_databrowser](/reference/ft_databrowser)**. Note that **[ft_databrowser](/reference/ft_databrowser)** is very memory efficient, as it does not read all data into memory - only the part that it displays.
 
-## How can I use the data browser?
+### How can I use the data browser?
 
 The data browser can be used to look at your raw or preprocessed data. The main purpose is to do quality checks and visual artifact detection and also annotate time periods during which specific artifacts happens. However, it also supports annotation of the data, such as annotating sleep spindles or epileptic spikes.
 
@@ -57,7 +56,7 @@ The data browser will **not** change your data in an way. If you specify a _cfg_
 
 ### Before we begin
 
-We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft\_defaults_
+We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft_defaults_
 
     clear variables
     restoredefaultpath
@@ -65,7 +64,7 @@ We will clear all variables that we have in the workspace, restore the default p
     addpath /home/lau/matlab/fieldtrip/ %% set your own path
     ft_defaults
 
-## Visualization of raw EEG data
+### Visualization of raw EEG data
 
 The EEG dataset used in this tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
 
@@ -148,14 +147,14 @@ The output of _ft_preprocessing(cfg)_ is _data_, which is a structure that has t
          trialinfo: [600x1 double]
                cfg: [1x1 struct]
 
-- _hdr_        contains header information about the data structure (metadata)
-- _label_      contains the names of all channels
-- _time_       contains the time courses for each of the 600 trials
-- _trial_      contains the _voltages_ for each of the 600 trials
-- _fsample_    indicates the sampling frequency in Hz
+- _hdr_ contains header information about the data structure (metadata)
+- _label_ contains the names of all channels
+- _time_ contains the time courses for each of the 600 trials
+- _trial_ contains the _voltages_ for each of the 600 trials
+- _fsample_ indicates the sampling frequency in Hz
 - _sampleinfo_ is a matrix the samples at which sample points trials begin and end
-- _trialinfo_  is a column vector indicating the type of trial (1=standard, 2=deviant)
-- _cfg_        contains information about the call leading to this output
+- _trialinfo_ is a column vector indicating the type of trial (1=standard, 2=deviant)
+- _cfg_ contains information about the call leading to this output
 
 {% include markup/warning %}
 Make absolutely sure that you have **no** bad channels in your data before you do an average reference. Or more generally, make sure your reference isn't bad.
@@ -218,7 +217,6 @@ The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes an 
     cfg                = [];
     cfg.lpfilter       = 'yes';
     cfg.lpfreq         = 30;
-    cfg.demean         = 'yes';     % we demean (baseline correct) ...
     cfg.detrend        = 'yes';     % removing linear trends
     cfg.baselinewindow = [-Inf 0];  % using the mean activity in this window
 
@@ -246,18 +244,17 @@ The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** looks li
         dimord: 'chan_time'
            cfg: [1x1 struct]
 
-- _time_   is now just a row vector with the time points in seconds (before we had a cell array with 600 cells in it)
-- _label_  is still our 128 names
-- _avg_    contains our averages for each of the 128 channels at each of the 200 time points
-- _var_    contains the variance for each of the 128 channels at each of the 200 time points (can be used e.g. for calculating standard deviations)
-- _dof_    contains the degrees of freedoms for each of the 128 channels at each of the 200 time points
+- _time_ is now just a row vector with the time points in seconds (before we had a cell array with 600 cells in it)
+- _label_ is still our 128 names
+- _avg_ contains our averages for each of the 128 channels at each of the 200 time points
+- _var_ contains the variance for each of the 128 channels at each of the 200 time points (can be used e.g. for calculating standard deviations)
+- _dof_ contains the degrees of freedoms for each of the 128 channels at each of the 200 time points
 - _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
-- _cfg_    shows the cfg that gave rise to this structure
+- _cfg_ shows the cfg that gave rise to this structure
 
 These can be plotted using **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
 
 #### Multiplot
-
 
     cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
@@ -332,7 +329,6 @@ These can be plotted using the same tools as before
 
 #### Multiplot
 
-
     cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
 
@@ -379,11 +375,17 @@ _Figure 8: A plot of a single channel showing the MMN_
 {% include image src="/assets/img/workshop/oslo2019/MMN.png" width="650" %}
 _Figure 9: A topographical plot showing the MMN (average over 100 to 170 ms)_
 
-### Optional: Movie plot
+## Bonus: Visualize the temporal evolution of the ERP as a movie
+
+    figure
 
     cfg        = [];
     cfg.layout = 'natmeg_customized_eeg1005.lay';
 
     ft_movieplotER(cfg, difference_wave);
 
-Play around with the _zlim_ to get a feeling for how the _difference\_wave_ changes topography. Try also plotting the the ERPs themselves
+Play around with the _zlim_ to get a feeling for how the _difference_wave_ changes topography. Try also plotting the the ERPs themselves.
+
+{% include markup/exercise %}
+**Exercise:** The topographies that we have seen in the figures and movie have a rather loose fit of the circle (representing the head) around the electrodes. Explore the **[ft_prepare_layout](/reference/ft_prepare_layout)** function and [documentation](/tutorial/layout/) to improve the topographic representation.
+{% include markup/end %}

@@ -16,15 +16,15 @@ The objective of supplying these low-level functions as a separate module/toolbo
 2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
 3.  facilitate the implementation of advanced features
 
-The low-level functions for source estimation/reconstruction are contained in the [development:forward](/development/module/forward) and [development:inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them separately from the FieldTrip main functions, you can also download them separately [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
+The low-level functions for source estimation/reconstruction are contained in the [forward](/development/module/forward) and [inverse](/development/module/inverse) toolboxes, which are released together with FieldTrip. If you are interested in using them separately from the FieldTrip main functions, you can also download them separately [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/). For reference: in the past the forward and inverse modules were combined in a single "forwinv" toolbox.
 
 Please note that if you are an end-user interested in analyzing experimental EEG/MEG data, you will probably want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** and **[ft_sourceanalysis](/reference/ft_sourceanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 
 ## Module layout
 
-The [development:forward](/development/module/forward) module contains functions with a user interface that will be easily understood by experimenced programmers and methods developers and can be considered medium-level functions. They have a clear and consistent programming interface (API) which hides the specific details particular volume conduction models and that allows software developers to write forward methods without having to worry about integrating it with the inverse methods worry about data handling. The low-level functions on which the functions in the forward module depend are located in a private subdirectory which is not accessible from the MATLAB command line.
+The [forward](/development/module/forward) module contains functions with a user interface that will be easily understood by experimenced programmers and methods developers and can be considered medium-level functions. They have a clear and consistent programming interface (API) which hides the specific details particular volume conduction models and that allows software developers to write forward methods without having to worry about integrating it with the inverse methods worry about data handling. The low-level functions on which the functions in the forward module depend are located in a private subdirectory which is not accessible from the MATLAB command line.
 
-The forward module is complemented by an [development:inverse](/development/module/inverse) module that contains the implementation of various high-quality inverse source estimation algorithms, such as dipole fitting, beamforming and linear estimation using the minimum-norm approach.
+The forward module is complemented by an [inverse](/development/module/inverse) module that contains the implementation of various high-quality inverse source estimation algorithms, such as dipole fitting, beamforming and linear estimation using the minimum-norm approach.
 
 Instead of implementing all forward methods completely from scratch, the FieldTrip forward module makes use of some high quality implementations that have been provided by the original method developers. Some of these contributions consist of MATLAB code, some contain MEX files and some are implemented using an external command-line executable that is called from the command-line. All of these external implementations are fully wrapped in the FieldTrip forward module and do not require specific expertise on behalf of the end-user.
 
@@ -68,50 +68,59 @@ These are explained in more detail in the appropriate [tutorials](/tutorial).
 
 Volume conduction models of the head are represented as a MATLAB structure, which content depends on the model details. In the subsequent documentation the volume conduction model structure is referred to as **vol**. The electrodes in case of EEG, or magnetometers or gradiometers in case of MEG, are described as a MATLAB structure. In the subsequent documentation this is referred to as **elec** for electrodes, **grad** for magmetometers and/or gradiometers, or **sens** to represent either electrodes or gradiometers.
 
-Using the FieldTrip [development:fileio](/development/module/fileio) module one can read in volume conduction models and the definition of the sensor array (electrodes or gradiometers) from file by using the **[ft_read_vol](/reference/ft_read_vol)** and/or **[ft_read_sens](/reference/ft_read_sens)** function
-[vol] = ft_read_vol(filename)
-[sens] = ft_read_sens(filename)
+Using the FieldTrip [fileio](/development/module/fileio) module one can read in volume conduction models and the definition of the sensor array (electrodes or gradiometers) from file by using the **[ft_read_headmodel](/reference/ft_read_headmodel)** and/or **[ft_read_sens](/reference/ft_read_sens)** functions.
+
+    [vol] = ft_read_headmodel(filename)
+    [sens] = ft_read_sens(filename)
+
 This assumes that the volume conduction model was created in external software (e.g. CTF, Neuromag, or ASA) and that the sensor description is stored in an external acquisition-specific file format.
 
 Alternative to reading the volume conduction model from an external file, you can of course also generate a volume conduction model based on a geometrical description of the head. For example, you can fit a single or multiple spheres to a set of points that describes the head surface. FieldTrip provides a separate function for the constructing of a head model for each of the EEG/MEG computational forward method
-[vol] = ft_headmodel_asa(filename, ...)
-[vol] = ft_headmodel_bem_cp(geom, ...)
-[vol] = ft_headmodel_concentricspheres(geom, ...)
-[vol] = ft_headmodel_dipoli(geom, ...)
-[vol] = ft_headmodel_halfspace(location, orientation, ...)
-[vol] = ft_headmodel_infinite(...)
-[vol] = ft_headmodel_localspheres(geom, grad, ...)
-[vol] = ft_headmodel_openmeeg(geom, ...)
-[vol] = ft_headmodel_singleshell(geom, sens, ...)
-[vol] = ft_headmodel_singlesphere(pnt, ...)
+
+    [vol] = ft_headmodel_asa(filename, ...)
+    [vol] = ft_headmodel_bem_cp(geom, ...)
+    [vol] = ft_headmodel_concentricspheres(geom, ...)
+    [vol] = ft_headmodel_dipoli(geom, ...)
+    [vol] = ft_headmodel_halfspace(location, orientation, ...)
+    [vol] = ft_headmodel_infinite(...)
+    [vol] = ft_headmodel_localspheres(geom, grad, ...)
+    [vol] = ft_headmodel_openmeeg(geom, ...)
+    [vol] = ft_headmodel_singleshell(geom, sens, ...)
+    [vol] = ft_headmodel_singlesphere(pnt, ...)
 
 Most of these functions take a geometrical description of the head, skull and/or brain surface as input. These geometrical descriptions of the shape of the head can for example be derived from an anatomical MRI, from a CT scan, or from a Polhemus measurement of the outside of the scalp. In most cases the geometrical model consists of a Nx3 matrix with surface points, which is sometimes accompanied with a description of the triangles that form the surface. The processing of the anatomical data such as MRIs to construct a geometrical model is not part of the forward module and is described elsewhere specifically for [MEG](/tutorial/headmodel_meg) and [EEG](/tutorial/headmodel_eeg).
 
-Detailed information for each of the functions that creates a head model can be found in the respective reference documentation: **[ft_headmodel_asa](/reference/ft_headmodel_asa)**,
+Detailed information for each of the functions that creates a head model can be found in the respective reference documentation:
 
-**[ft_headmodel_bemcp](/reference/ft_headmodel_bemcp)**,
-**[ft_headmodel_concentricspheres](/reference/ft_headmodel_concentricspheres)**,
-**[ft_headmodel_dipoli](/reference/ft_headmodel_dipoli)**,
-**[ft_headmodel_halfspace](/reference/ft_headmodel_halfspace)**,
-**[ft_headmodel_infinite](/reference/ft_headmodel_infinite)**,
-**[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**,
-**[ft_headmodel_openmeeg](/reference/ft_headmodel_openmeeg)**,
-**[ft_headmodel_singleshell](/reference/ft_headmodel_singleshell)**,
-**[ft_headmodel_singlesphere](/reference/ft_headmodel_singlesphere)**.
+- **[ft_headmodel_asa](/reference/ft_headmodel_asa)**
+- **[ft_headmodel_bemcp](/reference/ft_headmodel_bemcp)**
+- **[ft_headmodel_concentricspheres](/reference/ft_headmodel_concentricspheres)**
+- **[ft_headmodel_dipoli](/reference/ft_headmodel_dipoli)**
+- **[ft_headmodel_halfspace](/reference/ft_headmodel_halfspace)**
+- **[ft_headmodel_infinite](/reference/ft_headmodel_infinite)**
+- **[ft_headmodel_localspheres](/reference/ft_headmodel_localspheres)**
+- **[ft_headmodel_openmeeg](/reference/ft_headmodel_openmeeg)**
+- **[ft_headmodel_singleshell](/reference/ft_headmodel_singleshell)**
+- **[ft_headmodel_singlesphere](/reference/ft_headmodel_singlesphere)**
 
 If desired the volume conduction model and the sensor array can be spatially transformed using a 4x4 homogenous transformation matrix. E.g. the electrodes can be translated and rotated to align them with head coordinate system, or they can be translated and rotated to switch to another coordinate system.
-[vol] = ft_transform_vol(transform, vol)
-[sens] = ft_transform_sens(transform, sens)
+
+    [vol] = ft_transform_vol(transform, vol)
+    [sens] = ft_transform_sens(transform, sens)
+
 The reason for using the **[ft_transform_sens](/reference/ft_transform_sens)** and **[ft_transform_vol](/reference/ft_transform_vol)** functions is that they allow you to transform any sensor type (EEG and/or MEG) and any volume conduction model without you having to manipulate the elements within the sens or vol structure.
 
 Up to here the head model only depends on the geometrical description of the volume conductor and is independent of the data, with exception of the MEG localspheres model. The consequence is that the head model can be used for multiple experimental sessions, multiple electrode or gradiometer placements, or different selections of channels for a single session. The head model, i.e. the **vol** structure, can be saved to disk and re-used in an analysis on the next day.
 
-Following the initial set-up of the head model, but prior to the actual forward computations, the **[ft_prepare_vol_sens](/reference/ft_prepare_vol_sens)** function should be called to link the head model and the sensors and make a data dependent forward model (consisting of the vol and sens).  
- [vol, sens] = ft_prepare_vol_sens(vol, sens, ...)
+Following the initial set-up of the head model, but prior to the actual forward computations, the **[ft_prepare_vol_sens](/reference/ft_prepare_vol_sens)** function should be called to link the head model and the sensors and make a data dependent forward model (consisting of the vol and sens).
+
+    [vol, sens] = ft_prepare_vol_sens(vol, sens, ...)
+
 The **[ft_prepare_vol_sens](/reference/ft_prepare_vol_sens)** function does a variety of things, depending on the peculiarities of the sensors and head model. It can be used for channel selection, which sometimes involves both the sensors and volume conduction model (e.g. in case of a localspheres MEG model). It will project EEG electrodes (which are described as a Nx3 set of points) onto the scalp surface. It will provide an interpolation of the BEM potential (which is usually computed at the vertices) onto the electrodes. In general the **[ft_prepare_vol_sens](/reference/ft_prepare_vol_sens)** function tries to carry out as many preparations as possible, so that subsequently the leadfields can be computed as efficiently as possible.
 
 Finally the subsequent computation of the EEG potential or MEG field distribution is done with the **[ft_compute_leadfield](/reference/ft_compute_leadfield)** function:
-[lf] = ft_compute_leadfield(pos, sens, vol, ...)
+
+    [lf] = ft_compute_leadfield(pos, sens, vol, ...)
 
 Most functions have additional optional input arguments that are specified as key-value pairs.
 

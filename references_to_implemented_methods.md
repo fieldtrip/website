@@ -59,7 +59,7 @@ Van Veen BD, van Drongelen W, Yuchtman M, Suzuki A. [Localization of brain elect
 
 ### Beamformer source analysis in the frequency-domain using DICS
 
-Gross J, Kujala J, Hamalainen M, Timmermann L, Schnitzler A, Salmelin R. [Dynamic imaging of coherent sources: Studying neural interactions in the human brain.](http://www.ncbi.nlm.nih.gov/pubmed/11209067) Proc Natl Acad Sci USA. 2001 Jan 16;98(2):694-9.
+Gross J, Kujala J, Hämäläinen M, Timmermann L, Schnitzler A, Salmelin R. [Dynamic imaging of coherent sources: Studying neural interactions in the human brain.](http://www.ncbi.nlm.nih.gov/pubmed/11209067) Proc Natl Acad Sci USA. 2001 Jan 16;98(2):694-9.
 
 ### Source localization by fitting an equivalent current dipole model
 
@@ -71,7 +71,7 @@ Dale AM, Liu AK, Fischl B, Buckner RL, Belliveau JW, Lewine JD, Halgren E (2000)
 
 Arthur K. Liu, Anders M. Dale, and John W. Belliveau (2002): [Monte Carlo Simulation Studies of EEG and MEG Localization Accuracy.](http://www.ncbi.nlm.nih.gov/pubmed/11870926) Human Brain Mapping 16:47-62.
 
-Fa-Hsuan Lin, Thomas Witzel, Matti S. Hamalainen, Anders M. Dale, John W. Belliveau, and Steven M. Stufflebeam (2004): [Spectral spatiotemporal imaging of cortical oscillations and interactions in the human brain.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2884198/) NeuroImage 23:582-595.
+Fa-Hsuan Lin, Thomas Witzel, Matti S. Hämäläinen, Anders M. Dale, John W. Belliveau, and Steven M. Stufflebeam (2004): [Spectral spatiotemporal imaging of cortical oscillations and interactions in the human brain.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2884198/) NeuroImage 23:582-595.
 
 ### Using multiple signal classification (MUSIC) to scan the source space
 

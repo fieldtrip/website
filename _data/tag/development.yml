@@ -10,7 +10,7 @@
 - name:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
 
-- name:  Dashboard
+- name:  Code testing and release
   link:  /development/dashboard
 
 - name:  Accessing the FieldTrip source code through Git
@@ -91,6 +91,6 @@
 - name:  How should I share example data with the email list or developers?
   link:  /faq/how_should_i_send_example_data_to_the_developers
 
-- name:  Why was FieldTrip maintained in SVN and not in git?
+- name:  Why was FieldTrip maintained in SVN and not in Git?
   link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
 

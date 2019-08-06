@@ -223,7 +223,7 @@ Examples of good and useful log messages are
 
 Examples of bad log messages are
 
-    `<empty>`
+    <empty>
 
     made a change in this function
 
@@ -270,23 +270,23 @@ Ensuring that all executables can co-exist on all platforms (and especially on t
     computer Computer type.
       C = computer returns character vector C denoting the type of computer
       on which MATLAB is executing. Possibilities are:
-   
+
                                                 ISPC ISUNIX ISMAC ARCHSTR    
       64-Bit Platforms
         PCWIN64  - Microsoft Windows on x64       1     0     0   win64
         GLNXA64  - Linux on x86_64                0     1     0   glnxa64
         MACI64   - Apple Mac OS X on x86_64       0     1     1   maci64
-    
+
       ARCHSTR = computer('arch') returns character vector ARCHSTR which is
       used by the MEX command -arch switch.
-   
-      [C,MAXSIZE] = computer returns integer MAXSIZE which 
+
+      [C,MAXSIZE] = computer returns integer MAXSIZE which
       contains the maximum number of elements allowed in a matrix
       on this version of MATLAB.
-   
+
       [C,MAXSIZE,ENDIAN] = computer returns either 'L' for
       little endian byte ordering or 'B' for big endian byte ordering.
-   
+
       See also ispc, isunix, ismac.
 
 The binaries for the different versions of the unix platforms (Linux, macOS) should have an extension corresponding to the computer type, e.g. the buffer executable would be named
@@ -455,7 +455,7 @@ You should add something like this to code that you have written yourself, or to
     %    GNU General Public License for more details.
     %
     %    You should have received a copy of the GNU General Public License
-    %    along with FieldTrip. If not, see `<http://www.gnu.org/licenses/>`.
+    %    along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.
     %
     % $Id: ft_preprocessing.m 6987 2012-11-26 11:56:08Z jorhor $
 
@@ -481,7 +481,7 @@ The $Id$ line will be automatically updated when you SVN commit. It helps your c
 This requires that the Id keyword is detected by SVN, which relies on
 [this SVN configuration setting](/development/svn#keeping_the_svn_repository_tidy). You can also do
 
-    svn propset svn:keywords "Rev Id" `<yourfile.m>`
+    svn propset svn:keywords "Rev Id" <yourfile.m>
 
 ## Ask for help
 

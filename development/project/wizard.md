@@ -64,7 +64,7 @@ Using the wizard on this analalysis protocol would result in a graphical user in
 
 Pressing the "next" button would result in the snippet of MATLAB code inside the edit box to be executed, pressing the "previous" button results in going one step back. The code would be executed in the main MATLAB workspace as if it were a normal script, which means that the variable names are also defined in the wizard. Loading and saving data from/to files would also be easy to implement using the standard MATLAB "uigetfile" function.
 
-The wizard would have to read and parse the MATLAB script that contains the documentation and the code, and it would have to detect the sections by the "%%%%%" separators. To make a usefull wizard using this graphical interface would then only require making example MATLAB scripts with a well-defined structure with comments and with code.
+The wizard would have to read and parse the MATLAB script that contains the documentation and the code, and it would have to detect the sections by the "%%%%%" separators. To make a useful wizard using this graphical interface would then only require making example MATLAB scripts with a well-defined structure with comments and with code.
 
 ## Ideas for further refinement
 

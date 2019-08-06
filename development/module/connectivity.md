@@ -14,7 +14,7 @@ The objective of supplying these low-level functions as a separate module/toolbo
 2.  facilitate the implementation and support for new inverse methods, esp. for external users/contributors
 3.  facilitate the implementation of advanced features
 
-The low-level functions are in the [development:connectivity](/development/module/connectivity) module, which is released together with FieldTrip but can also be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/) as a separate toolbox.
+The low-level functions are in the [connectivity](/development/module/connectivity) module, which is released together with FieldTrip but can also be downloaded [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/modules/) as a separate toolbox.
 
 Please note that if you are an end-user interested in analyzing experimental EEG/MEG/ECoG data, you will probably will want to use the high-level FieldTrip functions. The functions such as **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, **[ft_mvaranalysis](/reference/ft_mvaranalysis)**, **[ft_freqanalysis](/reference/ft_freqanalysis)**, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_networkanalysis](/reference/ft_networkanalysis)** provide a user-friendly interface that take care of all relevant analysis steps and the data bookkeeping.
 

@@ -32,19 +32,19 @@ The functions in FieldTrip that allows you to execute the pre-processing and co-
 
 To get started, you should add the FieldTrip main directory to your path, and execute the **[ft_defaults](/reference/ft_defaults)** function, which sets the defaults and configures up the minimal required path settings. See also this [frequently asked question](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path). You also need to set the path to your data files.
 
-    addpath `<full_path_to_fieldtrip>`
+    addpath <path_to_fieldtrip>
     ft_defaults
 
-    addpath `<full_path_to_fieldtrip>`
+    addpath <path_to_fieldtrip>
     ft_defaults
 
     %% MEG data
-    meg_path = `<full_path_to_meg_data_file>`;
+    meg_path = <path_to_meg_data_file>;
     meg_file = 'continuous_data_export.con';  % your exported con-filename
     dataset = fullfile(meg_path, meg_file);
 
     %% MRI data
-    mri_path = `<full_path_to_meg_data>`;
+    mri_path = <path_to_meg_data>;
     mri_file = 'mri_data.nii';  % your NIfTI filename or the first DICOM file
 
 ## Read MEG data
@@ -447,7 +447,7 @@ To refine the above fiducial-points based registration, it is recommended to uti
     ft_plot_sens(realignedgrad, 'style','*b')
     hold on
     ft_plot_mesh(mesh_scalp, 'edgecolor','none','facealpha',0.6,'facecolor',[0.6 0.6 0.8]);
-    ft_plot_vol(headmodel,'edgecolor','b')
+    ft_plot_headmodel(headmodel,'edgecolor','b')
     ft_plot_headshape(headshape)
     ft_plot_axes([], 'unit', 'mm');
     % plot fiducial points

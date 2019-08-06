@@ -32,6 +32,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Effects of tapering for power estimates](/example/effects_of_tapering_for_power_estimates_in_the_frequency_domain)
 - [Fourier analysis of oscillatory power and coherence](/tutorial/fourier)
 - [Simulate an oscillatory signal with phase resetting](/example/phase_reset)
+- [Irregular Resampling Auto-Spectral Analysis (IRASA)](/example/irasa)
 
 ### Source reconstruction
 

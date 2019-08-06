@@ -8,6 +8,7 @@ tags: [oslo2019, eeg-audodd, headmodel]
 ## Introduction
 
 This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.  
+
 It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](link missing), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](link missing).
 
 The data for the tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
@@ -21,25 +22,26 @@ Optimally, we have individual Magnetic Resonance Images (MRIs) available for eac
 
 There are four components of a forward model
 
-1. A _source model_:       we need to know where the sources are - preferably they should be in the brain
-2. A _head model_:         we need to know how the electric currents generated at the source spread throughout the volume conductor (the head, containing the borders between brain and skull and between skull and skin)
-3. A _sensor description_: we need to know where the sensors are that pick up the activity coming from the sources
-4. A _lead field_        : we need to know how the sources and sensors "connect" to one another. That is, for each source (activated at unit strength (1 Am)) we calculate the electic potential vector at each sensor (electrode). It may be seen that the _lead field_ (component 4) is really the "sum" of the information from components 1-3.
+
+1. A _head model_: we need to know how the electric currents generated at the source spread throughout the volume conductor (the head, containing the borders between brain and skull and between skull and skin)
+2. A _sensor description_: we need to know where the sensors are that pick up the activity coming from the sources
+3. A _source model_: we need to know where the sources are - preferably they should be in the brain
+4. A _lead field_ : we need to know how the sources and sensors "connect" to one another. That is, for each source (activated at unit strength (1 Am)) we calculate the electic potential vector at each sensor (electrode). It may be seen that the _lead field_ (component 4) is really the "sum" of the information from components 1-3.
 
 {% include markup/info %}
 Note that the _forward model_ is completely independent of the actual EEG data.  
 All it models is how a source _given_ that it was active with a given current (1 Am), _would_ be seen at the sensor level.
 {% include markup/end %}
 
-#### The challenge of separate coordinate systems
+## The challenge of coordinate systems
 
-One immediate challenge here is that the _source model_ and the _head model_ are going to be based on the MRI data where positions are going to be expressed in the scanner's coordinate system, whereas the _sensor description_ is based on a another coordinate system. In our case, they were digitized using a so-called [Polhemus system](https://polhemus.com/scanning-digitizing/digitizing-products/), where the coordinate system is centered on an _x-axis_ which runs between the _pre-auricular_ points on the ears of the subject. The _y-axis_ runs through the center point of the _x-axis_ and towards the _nasion_ of the subject. Finally, the _z-axis_ is perpendicular to the _x-_ and _y-axes_. The three points, the _pre-auricular_ points and the nasion are together called the _fiducials_.  
-We **need** to bring these two coordinate systems together before we can create a sensible forward model.  
-The first step, however, is to read in the MRI data.
+One challenge that we will face is that the _source model_ and the _head model_ are going to be based on the MRI data where positions are going to be expressed in the scanner's coordinate system, whereas the _sensor description_ is based on a another coordinate system. In our case, they were digitized using a so-called [Polhemus system](https://polhemus.com/scanning-digitizing/digitizing-products/), where the coordinate system is centered on an _x-axis_ which runs between the _pre-auricular_ points on the ears of the subject. The _y-axis_ runs through the center point of the _x-axis_ and towards the _nasion_ of the subject. Finally, the _z-axis_ is perpendicular to the _x-_ and _y-axes_. The three points, the _pre-auricular_ points and the nasion are together called the _fiducials_.
+
+We **need** to bring these two coordinate systems together before we can create a sensible forward model. The first step, however, is to read in the MRI data.
 
 ### Before we begin
 
-We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft\_defaults_
+We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft_defaults_
 
     clear variables
     restoredefaultpath
@@ -47,7 +49,7 @@ We will clear all variables that we have in the workspace, restore the default p
     addpath /home/lau/matlab/fieldtrip/ %% set your own path
     ft_defaults
 
-### Read in and visualize the data
+### Read in and visualize the MRI data
 
 The anatomical MRI data available here comes directly from the scanner in the DICOM format (read more about the DICOM format [here](https://en.wikipedia.org/wiki/DICOM). You can download [dicom.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/dicom.zip). Please unzip the files in a folder called _dicom_, which should be put in the folder where you have the other scripts used for the Oslo 2019 tutorials.
 
@@ -79,23 +81,28 @@ The next step is to bring the two coordinate systems (DICOM and Polhemus) togeth
 
     mri_aligned_fiducials = ft_volumerealign(cfg, mri);
 
-In this case, we also have extra head shape points digitized with the Polhemus system. We are going to better the co-registration using these as well
+In this case, we also have extra head shape points digitized with the Polhemus system. We are going to better the co-registration using these as well. If the initial looks okay (e.g. nose points are around the MRI-nose), then just press quit, and the Iterative Closest Point algorithm do its work (_cfg.headshape.icp_)
 
     load headshape.mat
 
     cfg                     = [];
     cfg.method              = 'headshape';
     cfg.headshape.headshape = headshape;
+    cfg.headshape.icp       = 'yes'; % use iterative closest point procedure
     cfg.coordsys            = 'neuromag';
 
     mri_aligned_headshape = ft_volumerealign(cfg, mri_aligned_fiducials);
 
+We follow this up by a check running **[ft_volumerealign](/reference/ft_volumerealign)** again
+
+    ft_volumerealign(cfg, mri_aligned_headshape);
+
 {% include image src="/assets/img/workshop/oslo2019/headshape_registration.png" width="650" %}
-_Figure 2: Plot of the co-registration procedure using the Polhemus head shape points_
+_Figure 2: Plot of the co-registration after applying Iterative Closest Points on the Polhemus head shape points_
 
 {% include markup/info %}
-A version of _mri\_aligned\_headshape_ is already included in the FTP. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well.  
-Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri\_aligned\_headshape_.
+A version of _mri_aligned_headshape_ is already included in the FTP. Using this, you will achieve the same solutions as us, but do try to do the co-registration yourself as well.  
+Note also that _neuromag_ coordinates are seen under the voxel indices when you run **[ft_sourceplot](/reference/ft_sourceplot)** on _mri_aligned_headshape_.
 {% include markup/end %}
 
     load mri_aligned_headshape
@@ -176,11 +183,11 @@ and we will plot them
     print -dpng meshes.png
 
 {% include image src="/assets/img/workshop/oslo2019/meshes.png" width="650" %}
-_Figure 4: Plot of the three meshes (_brain, skull _and_ scalp_)_
+_Figure 4: Plot of the three meshes (\_brain, skull \_and_ scalp*)*
 
-### Head models (component 2)
+## Head models (component 1)
 
-We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel\_dipoli_ can be downloaded at the [ftp](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
+We will now use these non-intersecting meshes to specify the head models, which will later be used to indicate how currents spread throughout the volume conductor. We create two models, one with the _bemcp_ method and one with the _dipoli_ method. For the article on the _dipoli_ method, see [Oostendorp & van Oosterom, 1989](https://doi.org/10.1109/10.19859) and for an article on the _bemcp_ method, see for example [Mosher et al., 1999](https://doi.org/10.1109/10.748978). Do note that the _dipoli_ method will not work on a Windows computer. The _headmodel_dipoli_ can be downloaded at the [ftp](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) instead. The best choice is to use [OpenMEEG](https://openmeeg.github.io/), (_cfg.method = 'openmeeg'_). This requires some manual installation and setting up, so it is not covered here.
 
     cfg              = [];
     cfg.method       = 'bemcp';
@@ -196,8 +203,7 @@ We will now use these non-intersecting meshes to specify the head models, which 
     headmodel_dipoli = ft_prepare_headmodel(cfg, mesh_eeg);
     headmodel_dipoli = ft_convert_units(headmodel_dipoli, 'm'); % Use SI Units
 
-
-Now let's set the headmodel that we are going to use for now, starting with _headmodel\_bem_
+Now let's set the headmodel that we are going to use for now, starting with _headmodel_bem_
 
     headmodel = headmodel_bem;
 
@@ -208,9 +214,9 @@ and let's plot it
     view(90, 0)
 
 {% include image src="/assets/img/workshop/oslo2019/headmodel.png" width="650" %}
-_Figure 5: Plot of the head model with the three meshes (_brain, skull _and_ scalp_). Use the zooming tools to see the differences between the different tissues._
+_Figure 5: Plot of the head model with the three meshes (\_brain, skull \_and_ scalp*). Use the zooming tools to see the differences between the different tissues.*
 
-### Getting electrodes in the right position (component 3)
+## Getting electrodes in the right position (component 2)
 
 Now, we will load the electrodes description _elec.mat_ that we have gotten from our Polhemus data and convert units to SI.
 
@@ -225,11 +231,10 @@ and then plot them
     ft_plot_headmodel(headmodel, 'facealpha', 0.5);
     view(90, 0)
 
-
 {% include image src="/assets/img/workshop/oslo2019/elec_headmodel_wrong.png" width="650" %}
 _Figure 6: Some electrodes are inside the head_
 
-#### Realigning electrodes
+### Realigning electrodes
 
 We will now realign the electrodes by projecting them to the surface
 
@@ -259,7 +264,7 @@ and plot again
 {% include image src="/assets/img/workshop/oslo2019/elec_headmodel_correct.png" width="650" %}
 _Figure 7: Electrodes are in meaningful places_
 
-### Creating a source model (a volumetric grid (fit for beamformer and dipole analysis))
+## Creating a source model (a volumetric grid (fit for beamformer and dipole analysis)) (Component 3)
 
 The next step is to create a source model that indicates where our sources are. For beamformer and dipole analyses, so-called volumetric grids will do just fine. (For Minimum Norm Estimates, a source model, where sources are constrained to the cortical surface is needed, see for example this [tutorial](/tutorial/minimumnormestimate))
 
@@ -304,7 +309,7 @@ and highlight the sources inside the brain (in red)
 {% include image src="/assets/img/workshop/oslo2019/sourcemodel_inside_outside.png" width="650" %}
 _Figure 9: Head model overlain with sources outside (black dots) and sources inside the brain (red dots)_
 
-### Estimating the lead field
+## Estimating the lead field (Component 4)
 
     cfg = [];
     cfg.sourcemodel = sourcemodel;    %% where are the sources?
@@ -314,7 +319,7 @@ _Figure 9: Head model overlain with sources outside (black dots) and sources ins
     % how do sources and sensors connect?
     sourcemodel_and_leadfield = ft_prepare_leadfield(cfg);
 
-Let's have a look at the output of _sourcemodel\_and\_leadfield_
+Let's have a look at the output of _sourcemodel_and_leadfield_
 
     sourcemodel_and_leadfield =
 
@@ -327,18 +332,19 @@ Let's have a look at the output of _sourcemodel\_and\_leadfield_
                   label: {128x1 cell}
         leadfielddimord: '{pos}_chan_ori'
 
-- _dim_             contains the dimensions of the grid in which the 3528 (14x18x14) sources are placed
-- _pos_             contains the _xyz_ coordinates for the sources in the source model
-- _unit_            contains the unit of _pos_
-- _inside_          contains a logical vector indicating whether the source is a source or not
-- _cfg_             contains information about the call of _ft\_prepare\_leadfield_
-- _leadfield_       a cell array, where each cell (3528) contains a matrix of 128 rows (n channels) and 3 columns (_xyz-coordinates). (The ones that are outside the brain are empty though). For each channel-orientation pair, you get the electric potential measured given that the relevant source has an activation of 1 Am
-- _label_           contains the electrode names
+- _dim_ contains the dimensions of the grid in which the 3528 (14x18x14) sources are placed
+- _pos_ contains the _xyz_ coordinates for the sources in the source model
+- _unit_ contains the unit of _pos_
+- _inside_ contains a logical vector indicating whether the source is a source or not
+- _cfg_ contains information about the call of _ft_prepare_leadfield_
+- _leadfield_ a cell array, where each cell (3528) contains a matrix of 128 rows (n channels) and 3 columns (\_xyz-coordinates). (The ones that are outside the brain are empty though). For each channel-orientation pair, you get the electric potential measured given that the relevant source has an activation of 1 Am
+- _label_ contains the electrode names
 - _leadfielddimord_ indicates the dimension. Each cell is a position, which contains a matrix ordered by channels x orientations (_xyz_)
 
 ### Plotting the lead field
+
 It is always recommended to plot the lead fields alongside the electrodes and head model to see if things look okay.  
-The code for this takes a bit more work as can be seen by the length of the code below. Note that we use a realistic source current of 100 nAm (_sensory\_dipole\_current_)
+The code for this takes a bit more work as can be seen by the length of the code below. Note that we use a realistic source current of 100 nAm (_sensory_dipole_current_)
 
     figure('units', 'normalized', 'outerposition', [0 0 0.5 0.5])
     source_index = 1200; %% a superficial sources
@@ -375,14 +381,14 @@ The code for this takes a bit more work as can be seen by the length of the code
         this_axis = axes{axis_index};
         subplot(1, 3, axis_index)
         hold on
-        ft_plot_topo3d(elec_realigned.chanpos, this_axis)
+        ft_plot_topo3d(elec_realigned.chanpos, this_axis, 'facealpha', 0.8)
         if strcmp(headmodel.type, 'dipoli')
-            caxis([0, 10e-6])
+            caxis([-10e-6, 10e-6])
         end
         c = colorbar('location', 'southoutside');
         c.Label.String = 'Lead field (V)';
         axis tight
-        ft_plot_headmodel(headmodel, 'facealpha', 0.10);
+        ft_plot_mesh(mesh_brain, 'facealpha', 0.10);
         ft_plot_sens(elec_realigned, 'elecsize', 20);
         title(titles{axis_index})
         plot3(sourcemodel_and_leadfield.pos(inside_index, 1), ...
@@ -395,14 +401,14 @@ The code for this takes a bit more work as can be seen by the length of the code
 
     figure('units', 'normalized', 'outerposition', [0 0 0.5 0.85])
     hold on
-    ft_plot_topo3d(elec_realigned.chanpos, voltages)
+    ft_plot_topo3d(elec_realigned.chanpos, voltages, 'facealpha', 0.8)
     if strcmp(headmodel.type, 'dipoli')
         caxis([0, 10e-6])
     end
     c = colorbar('location', 'eastoutside');
     c.Label.String = 'Lead field (V)';
     axis tight
-    ft_plot_headmodel(headmodel, 'facealpha', 0.10);
+    ft_plot_mesh(mesh_brain, 'facealpha', 0.10);
     ft_plot_sens(elec_realigned, 'elecsize', 20);
     title('Leadfield magnitude')
     plot3(sourcemodel_and_leadfield.pos(inside_index, 1), ...
@@ -413,34 +419,33 @@ The code for this takes a bit more work as can be seen by the length of the code
     view(-90, 0)
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo_wrong.png" width="650" %}
-_Figure 10: Lead fields in the_ XYZ-_directions for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
+_Figure 10: Lead fields in the_ XYZ-_directions for_ headmodel_bem _for a superficial source. **Note that there is something wrong**._
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo_wrong.png" width="650" %}
-_Figure 11: Magnitude of the lead fields for_ headmodel\_bem _for a superficial source. **Note that there is something wrong**._
+_Figure 11: Magnitude of the lead fields for_ headmodel_bem _for a superficial source. **Note that there is something wrong**._
 
 {% include markup/warning %}
 Here it is quickly seen that something is **awry...** (the topographies are not smooth, and the lead fields are of too great a magnitude (millivolts))
 {% include markup/end %}
 
-
 Let's change to the _dipoli_ head model (load it if you cannot create it)
 
     headmodel = headmodel_dipoli;
 
-and run the code creating _elec\_realigned_, _sourcemodel_ and _sourcemodel\_and\_leadfield_ again with _headmodel_ as _headmodel\_dipoli_
+and run the code creating _elec_realigned_, _sourcemodel_ and _sourcemodel_and_leadfield_ again with _headmodel_ as _headmodel_dipoli_
 
 {% include markup/info %}
 Now the plots look **correct** - (the electric potentials are in the order of microvolts and the topographies look smooth)
 {% include markup/end %}
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_components_topo.png" width="650" %}
-_Figure 12: Lead fields in the_ XYZ-_directions for_ headmodel\_dipoli _for a superficial source_
+_Figure 12: Lead fields in the_ XYZ-_directions for_ headmodel_dipoli _for a superficial source_
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_magnitude_topo.png" width="650" %}
-_Figure 13: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
+_Figure 13: Magnitude of the lead fields for_ headmodel_dipoli _for a superficial source_
 
 {% include markup/exercise %}
-When plotting the lead field topographies, try to change _source\_index_ and _sensory\_dipole\_current_ to change the topography and get a feeling for how it works. Also change the source index (will work for a number between 1 and 1659)
+When plotting the lead field topographies, try to change _source_index_ and _sensory_dipole_current_ to change the topography and get a feeling for how it works. Also change the source index (will work for a number between 1 and 1659)
 {% include markup/end %}
 
 {% include markup/info %}
@@ -480,12 +485,11 @@ We can also plot the vectors - note that they are more or less normal to the sca
           'markersize', 60, 'markerfacecolor', 'r')
 
 {% include image src="/assets/img/workshop/oslo2019/leadfield_vector.png" width="650" %}
-_Figure 14: Magnitude of the lead fields for_ headmodel\_dipoli _for a superficial source_
+_Figure 14: Orientations of the lead fields for_ headmodel_dipoli _for a superficial source_
 
-## Advanced troubleshooting
+## Bonus: troubleshooting the meshes
 
-The _bemcp_ algorithm might have failed due to the meshes overlapping (_brain_, _skull_ and _scalp_). One way to test this is to increase the number of vertices when creating the meshes at the expense of an increase in processing time. I tested it with a fine head model where all the meshes had 10,000 vertices. This also didn't succeed. In other cases, you might succeed, so it might be worth trying.  
-One reason that it might fail is that the segmented surfaces are "too" thin at places. The following code will exemplify this. First, we create a "binary" mri, where _brain_, _skull_ and _scalp_ are expressed binarily. Then a _combined_ field is created.
+The _bemcp_ algorithm might have failed due to the meshes overlapping (_brain_, _skull_ and _scalp_). One way to test this is to increase the number of vertices when creating the meshes at the expense of an increase in processing time. I tested it with a fine head model where all the meshes had 10,000 vertices. This also didn't succeed. In other cases, you might succeed, so it might be worth trying. One reason that it might fail is that the segmented surfaces are "too" thin at places. The following code will exemplify this. First, we create a "binary" mri, where _brain_, _skull_ and _scalp_ are expressed binarily. Then a _combined_ field is created.
 
     mri_segmented_binary = mri_segmented; % make a copy
 
@@ -506,8 +510,8 @@ We subsequently plot this _combined_ field at a location where the skin is very 
 {% include image src="/assets/img/workshop/oslo2019/surfaces.png" width="650" %}
 _Figure 15: The_ brain _(white),_ skull _(yellow) and_ scalp _surfaces (red). Notice how thin the scalp is at places, which will make the potentials (in the model) escape from the skull to the air around it directly_
 
-### Algorithm to use
+## Which BEM algorithm to use?
 
-If possible you should use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
+If possible, you should use the [OpenMEEG algorihtm](https://openmeeg.github.io/) implemented in FieldTrip (in **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)** use _cfg.method = 'openmeeg'_. This may require some [careful installation](/faq/how_do_i_install_the_openmeeg_binaries) before it works, and it only works on Linux and Mac systems.
 
 If you cannot make this work, then _dipoli_, which also only works on Linux and Mac systems (at the moment) is your next choice, and finally _bemcp_ which works on all platforms.

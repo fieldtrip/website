@@ -6,9 +6,9 @@ title: Inverse problem
 
 ## Introduction
 
-In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [preprocessing](http://www.fieldtriptoolbox.org/workshop/baci2017/preprocessing).
+In this tutorial you can find information about how to fit dipole models and how to do source reconstruction using minimum-norm estimation to the somatosensory evoked potentials (SEPs) of a single subject from the [preprocessing](/workshop/baci2017/preprocessing).
 
-We will be working on the dataset from the previous hands on sessions, and we will use the functional and anatomical data from these tutorials to deal with the inverse problem. As you already noticed we have prepared two different mathematical models from the [forward problem](http://www.fieldtriptoolbox.org/workshop/baci2017/forwardproblem). We will use both to solve the inverse problem and compare the results. You've either got the relevant data already processed yourself or can find in the data directory.
+We will be working on the dataset from the previous hands on sessions, and we will use the functional and anatomical data from these tutorials to deal with the inverse problem. As you already noticed we have prepared two different mathematical models from the [forward problem](/workshop/baci2017/forwardproblem). We will use both to solve the inverse problem and compare the results. You've either got the relevant data already processed yourself or can find in the data directory.
 
 This tutorial will not show how to combine source-level data over multiple subjects. It will also not describe how to do source-localization of oscillatory activation. You can check the Localizing oscillatory sources using beamformer techniques tutorial if you are interested in the later.
 
@@ -21,7 +21,7 @@ Scherg M. [Fundamentals of dipole source potential analysis](http://apsychoserve
 
 ### Minimum norm estimate
 
-To calculate distributed neuronal activation we will use the minimum-norm estimation. This approach is favored for analyzing evoked responses and for tracking the wide-spread activation over time. It is a distributed inverse solution that discretizes the source space into locations on the cortical surface or in the brain volume using a large number of equivalent current dipoles. It estimates the amplitude of all modeled source locations simultaneously and recovers a source distribution with minimum overall energy that produces data consistent with the measurement ((Ou, W., Hamalainen, M., Golland, P., 2008, A Distributed Spatio-temporal EEG/MEG Inverse Solver)) ((Jensen, O., Hesse, C., 2010, Estimating distributed representation of evoked responses and oscillatory brain activity, In: MEG: An Introduction to Methods, ed. by Hansen, P., Kringelbach, M., Salmelin, R., doi:10.1093/acprof:oso/9780195307238.001.0001)). The reference for the implemented method is [Dale et al. (2000)](/references_to_implemented_methods).
+To calculate distributed neuronal activation we will use the minimum-norm estimation. This approach is favored for analyzing evoked responses and for tracking the wide-spread activation over time. It is a distributed inverse solution that discretizes the source space into locations on the cortical surface or in the brain volume using a large number of equivalent current dipoles. It estimates the amplitude of all modeled source locations simultaneously and recovers a source distribution with minimum overall energy that produces data consistent with the measurement ((Ou, W., Hämäläinen, M., Golland, P., 2008, A Distributed Spatio-temporal EEG/MEG Inverse Solver)) ((Jensen, O., Hesse, C., 2010, Estimating distributed representation of evoked responses and oscillatory brain activity, In: MEG: An Introduction to Methods, ed. by Hansen, P., Kringelbach, M., Salmelin, R., doi:10.1093/acprof:oso/9780195307238.001.0001)). The reference for the implemented method is [Dale et al. (2000)](/references_to_implemented_methods).
 
 ## Dipole fit
 

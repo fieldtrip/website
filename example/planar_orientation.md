@@ -5,9 +5,9 @@ tags: [elekta, planar]
 
 # Find the orientation of planar gradiometers
 
-The Elekta Neuromag Vectorview and Triux scanners have a combination of magnetometers and two planar gradiometers at each sensor location.
+The Neuromag/Elekta Vectorview and Triux scanners have a combination of magnetometers and two planar gradiometers at each sensor location.
 
-This is further detailed in the Elekta System Hardware Users' Guide and on [this page](http://imaging.mrc-cbu.cam.ac.uk/meg/VectorviewDescription#Magsgrads).
+This is further detailed in the Neuromag/Elekta System Hardware Users' Guide and on [this page](http://imaging.mrc-cbu.cam.ac.uk/meg/VectorviewDescription#Magsgrads).
 
 The following code demonstrates how you can determine the orientation of the two planar channels at each location.
 

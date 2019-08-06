@@ -58,9 +58,9 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
     % scale to get into mm
     elec.pnt = 100*elec.pnt;
 
-    vol = ft_read_vol('headmodel/standard_vol.mat');
+    vol = ft_read_headmodel('headmodel/standard_bem.mat');
 
-    %realign electrodes to headmodel
+    % realign electrodes to headmodel
     cfg = [];
     cfg.method = 'interactive';
     cfg.elec = elec;
@@ -431,12 +431,9 @@ Biosemi BDF data should always be off-line referenced to one of the electrodes t
     load headmodel/standard_mri.mat
 
     elec = ft_read_sens('elec160.mat');
-    vol  = ft_read_vol('headmodel/standard_vol.mat');
+    vol  = ft_read_headmodel('headmodel/standard_bem.mat');
 
-      vol.r = [86 88 92 100];
-      vol.o = [0 0 40];
-      figure, ft_plot_vol(vol)
-    ft_plot_vol([],vol);
+    figure, ft_plot_headmodel(vol)
 
     % prepare data
     cfg = [];

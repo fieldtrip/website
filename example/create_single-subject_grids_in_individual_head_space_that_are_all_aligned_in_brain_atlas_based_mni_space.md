@@ -26,7 +26,7 @@ The procedure is as follows. First, a template grid is computed on the basis of 
     figure;
     hold on
     ft_plot_mesh(template_grid.pos(template_grid.inside,:));
-    ft_plot_vol(vol,  'facecolor', 'cortex', 'edgecolor', 'none');
+    ft_plot_headmodel(vol,  'facecolor', 'cortex', 'edgecolor', 'none');
     ft_plot_axes(vol);
     alpha 0.5
     camlight
@@ -75,7 +75,7 @@ Finally, you can load the subject-specific headmodel from [here](ftp://ftp.field
 
     figure
     hold on
-    ft_plot_vol(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');
+    ft_plot_headmodel(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');
     ft_plot_axes(hdm);
     alpha 0.4  % make the surface transparent
     ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:));

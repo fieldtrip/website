@@ -18,7 +18,7 @@ In general, we advise to use the singleshell as a volume conductor model for MEG
 The following code shows how to visualize the gradiometer positions in combination with the subject's headshape and the single sphere volume conductor model. We use the example data which can be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 
     % read in single sphere volume conductor model
-    vol  = ft_read_vol('Subject01.hdm');
+    vol  = ft_read_headmodel('Subject01.hdm');
 
     % read in the gradiometer description
     hdr  = ft_read_header('Subject01.ds');
@@ -30,5 +30,5 @@ The following code shows how to visualize the gradiometer positions in combinati
 
     % plot
     ft_plot_sens(grad);
-    ft_plot_vol(vol, 'facecolor', 'none');
+    ft_plot_headmodel(vol, 'facecolor', 'none');
     ft_plot_headshape(shape);

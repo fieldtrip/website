@@ -54,7 +54,7 @@ The databrowser will **not** change your data in any way. If you specify a cfg a
 
 ### Visualization combined data
 
-Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Elekta/Neuromag MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look [here in this video](http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s).
+Since we have a dataset that contains both MEG and EEG data, we will browse through the dataset looking at different channel subsets at a time. We will first look at the MEG data. As you know, the Neuromag/Elekta MEG data has two types of channels; magnetometers and planar gradiometers, we will look at them separately as well. If you are not familiar yet with the difference between different MEG sensor designs, take a look [here in this video](http://www.youtube.com/watch?v=CPj4jJACeIs&t=5m58s).
 
 The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
 

@@ -64,13 +64,13 @@
 - name:  Getting started with BabySQUID data
   link:  /getting_started/babysquid
 
-- name:  Getting started with 4D-neuroimaging/BTi data
+- name:  Getting started with BTi/4D data
   link:  /getting_started/bti
 
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
 
-- name:  Getting started with Elekta/Neuromag data
+- name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
 
 - name:  Getting started with real-time head localization in MEG
@@ -222,6 +222,9 @@
 
 - name:  Time-frequency analysis of combined MEG/EEG data
   link:  /workshop/natmeg/timefrequency
+
+- name:  Beamforming oscillatory responses in MEG data
+  link:  /workshop/oslo2019/beamforming
 
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus

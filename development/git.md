@@ -86,7 +86,7 @@ you will switch from a side branch into the main branch of your repository.
 
 ### What is GitHub?
 
-[GitHub](http://github.com) is a popular website for sharing code and collaborating. It has a clean and intuitive website interface. Many large projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip).
+[github.com](https://github.com) is a popular website for sharing code and collaborating. It has a clean and intuitive website interface. Many large projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip).
 
 ### How to add a feature or fix a bug
 
@@ -271,7 +271,7 @@ which means that we are pushing the commits in the branch called _welcome_ to th
 
 ### 7. Make a pull request
 
-Go to [github.com](https://github.com) to review the changes. By default on the webpage, you are shown the branch _master_, so you should switch to the newly created branch called _welcome_. Review the commits, by clicking on _commits_. Click on **pull request** in the top middle. The next page will show you the changes that are part of the pull request.
+Go to your copy of the repository on [github.com](https://github.com) to review the changes. By default you are shown the branch _master_, so you should switch to the newly created branch called _welcome_. Review the commits, by clicking on _commits_. Click on **pull request** in the top middle. The next page will show you the changes that are part of the pull request.
 
 {% include markup/warning %}
 You are about to send the changes to the main developers of FieldTrip, so explain in the box what you did and why. Please, review the commits very carefully before sending the pull request. It sometimes happens that you have commits that you forgot about and you did not intend to share.
@@ -342,7 +342,7 @@ This may (or may not) show changes to files and new files that were added. Subse
 git push origin master
 ```
 
-After this, both the local copy on your hard drive and your copy on [github.com](http://github.com) will be up to date with the official release.
+After this, both the local copy on your hard drive and your copy on [github.com](https://github.com) will be up to date with the official release.
 
 Troubleshooting: pushing your master branch to your _origin_ personal GitHub repository may throw the error "This repository is configured for Git LFS but 'git-lfs' was not found on your path. If you no longer wish to use Git LFS, remove this hook by deleting .git/hooks/pre-push." This .git directory can be found in the local directory of your repository (../fieldtrip/.git).
 
@@ -350,4 +350,4 @@ Working with remotes is explained in more detail in the [Git book](http://git-sc
 
 ## Want more?
 
-[GitHub](http://github.com) offers lots of documentation. In particular, see the detailed instructions to [fork a repository](https://help.github.com/articles/fork-a-repo) and to [create a pull request](https://help.github.com/articles/using-pull-requests). If you plan to continue development, I suggest to set up your remotes with _origin_ pointing to your personal remote repository and _upstream_ pointing to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip), as described in [fork a repository](https://help.github.com/articles/fork-a-repo).
+[github.com](https://github.com) offers lots of documentation. In particular, see the detailed instructions to [fork a repository](https://help.github.com/articles/fork-a-repo) and to [create a pull request](https://help.github.com/articles/using-pull-requests). If you plan to continue development, I suggest to set up your remotes with _origin_ pointing to your personal remote repository and _upstream_ pointing to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip), as described in [fork a repository](https://help.github.com/articles/fork-a-repo).

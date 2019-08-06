@@ -288,7 +288,7 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
     figure;
     ft_plot_mesh(template_grid.pos(template_grid.inside,:));
     hold on
-    ft_plot_vol(vol,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
+    ft_plot_headmodel(vol,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; camlight;
 
 {% include image src="/assets/img/tutorial/salzburg/templateheadmodelwithregulargrid.png" width="600" %}
 
@@ -337,7 +337,7 @@ For this step the individual volume is required, which can be downloaded [here](
 
     figure; hold on     % plot all objects in one figure
 
-    ft_plot_vol(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; %camlight;
+    ft_plot_headmodel(hdm,  'facecolor', 'cortex', 'edgecolor', 'none');alpha 0.5; %camlight;
     alpha 0.4           % make the surface transparent
 
     ft_plot_mesh(sourcemodel.pos(sourcemodel.inside,:)); % plot only locations inside the volume

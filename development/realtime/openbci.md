@@ -15,7 +15,7 @@ The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on 
 
 You can use **openbci2ft** to transport data from the UDP network connection to a FieldTrip buffer. The **openbci2ft** application is written in C and takes 1 required and 2 optional command line arguments
 
-    openbci2ft `<device>` [ftHostname] [ftPort]
+    openbci2ft <device> [ftHostname] [ftPort]
 
 For example, if you want to stream the data from a specific serial port to a remote buffer on mentat205:1972, you would type
 

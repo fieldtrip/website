@@ -17,7 +17,7 @@ A feature or method marked as deprecated is one which is considered obsolete, an
 
 ## Introduction
 
-FieldTrip is developed in a continuous fashion, i.e. there are no fixed releases; instead it is continuously being updated. Usually the changes to FieldTrip result in more functionality. Sometimes it is also neccessary to remove a function or some functionality in FieldTrip. The reasons for it can be that it is replaced by a better function, that the name has changed for consistency with other FieldTrip functions, or that the implementation was buggy and too difficult to fix.
+FieldTrip is developed in a continuous fashion, i.e. there are no fixed or scheduled releases; instead the code is continuously being extended and improved. Usually the changes to FieldTrip result in more functionality. Sometimes it is also necessary to remove a function or some functionality in FieldTrip. The reasons for it can be that it is replaced by a better function, that the name has changed for consistency with other FieldTrip functions, or that the implementation was buggy and too difficult to fix.
 
 Typically we will try to keep FieldTrip backward compatible whenever we replace a function or an option with something else. However, it is not possible to maintain backward compatibility forever. That is why specific functionality is _deprecated_. This page tries to give an overview of deprecated functions and/or functionality.
 

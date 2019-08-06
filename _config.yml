@@ -7,6 +7,8 @@ url: "http://www.fieldtriptoolbox.org"      # the base hostname & protocol for y
 twitter_username: fieldtriptoolbx
 github_username:  fieldtrip
 
+excerpt_separator: <!--more-->
+
 # Build settings
 sass:
   sass_dir: ./assets/css
@@ -20,6 +22,14 @@ defaults:
     values:
       layout: "default"
       toc: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      toc: false
+      sitemap: false
   -
     scope:
       path: "development/project"

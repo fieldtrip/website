@@ -60,9 +60,9 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 
 - [FieldTrip introduction](https://www.youtube.com/watch?v=I1lQumrWFKs) by Robert Oostenveld
 - [Frequency analysis methods](https://www.youtube.com/watch?v=6EIBh5lHNSc) by Robert Oostenveld
-- [Frequency analysis applications in neuroscience](https://www.youtube.com/watch?v=7R5SmoG8pD0) by Matti Hamalainen
+- [Frequency analysis applications in neuroscience](https://www.youtube.com/watch?v=7R5SmoG8pD0) by Matti Hämäläinen
 - [Realtime MEG analysis](https://www.youtube.com/watch?v=nLaOcMMvcNI) by Robert Oostenveld
-- [Current dipole models in MEG](https://www.youtube.com/watch?v=pFdCWsqPEFg) by Matti Hamalainen
+- [Current dipole models in MEG](https://www.youtube.com/watch?v=pFdCWsqPEFg) by Matti Hämäläinen
 - [Connectivity analysis of MEG data](https://www.youtube.com/watch?v=LKrxdrntWcQ) by Robert Oostenveld
 - [Decoding MEG data](https://www.youtube.com/watch?v=f3yrVfVtCUE) by Alexandre Gramfort
 

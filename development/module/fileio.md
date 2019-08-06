@@ -5,7 +5,7 @@ tags: [development]
 
 # Reading and writing of EEG/MEG time series data
 
-FieldTrip has a flexible way of supporting dataformats. It uses three wrapper functions that provide a common interface to all electrophysiological file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. Other data that is commonly used in electrophysiological analysis such as anatomical measurements can be read with **[ft_read_mri](/reference/ft_read_mri)**, **[ft_read_sens](/reference/ft_read_sens)** and **[ft_read_headshape](/reference/ft_read_headshape)**. Furthermore, **[ft_read_vol](/reference/ft_read_vol)** can be used for reading EEG and MEG volume conduction models of the head, and neuronal spiking data can be read with **[ft_read_spike](/reference/ft_read_spike)**.
+FieldTrip has a flexible way of supporting dataformats. It uses three wrapper functions that provide a common interface to all electrophysiological file formats: **[ft_read_header](/reference/ft_read_header)**, **[ft_read_data](/reference/ft_read_data)** and **[ft_read_event](/reference/ft_read_event)**. Other data that is commonly used in electrophysiological analysis such as anatomical measurements can be read with **[ft_read_mri](/reference/ft_read_mri)**, **[ft_read_sens](/reference/ft_read_sens)** and **[ft_read_headshape](/reference/ft_read_headshape)**. Furthermore, **[ft_read_headmodel](/reference/ft_read_headmodel)** can be used for reading EEG and MEG volume conduction models of the head, and neuronal spiking data can be read with **[ft_read_spike](/reference/ft_read_spike)**.
 
 All these ft_read_xxx functions automatically detect the file format and subsequently will call the appropriate low-level function for each file format. Some of the low-level functions are written by ourselves, some are supplied by the manufacturers and some are obtained from other open source toolboxes.
 
@@ -71,7 +71,7 @@ Additional header information that is present for only specific file formats is 
         nChans: 218            % number of channels, in this case 151 MEG channels  and some additional EEG channels
          label: {218x1 cell}   % channel labels
       nSamples: 6000           % number of samples per trial, in this case 10 seconds long
-      
+
       nSamplesPre: 0 % baseline period in each trial
       nTrials: 49 % number of trials
       grad: [1x1 struct] % details on the position and orientation of the MEG sensors

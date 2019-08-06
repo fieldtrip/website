@@ -12,8 +12,7 @@ the background of cluster-based permutation tests. Subsequently it is shown how 
 
 In this tutorial we will continue working on the dataset described in the [Preprocessing and event-related activity](/workshop/oslo2019/introduction) and the [Time-frequency analysis of MEG and EEG](/workshop/natmeg/timefrequency) tutorials. We will repeat some code here to select the trials and preprocess the data. We assume that the preprocessing and the computation of the ERFs/TFRs are already clear to the reader.
 
-This tutorial is not covering group analysis. Look [here](/tutorial/eventrelatedstatistics) for that.  
-If you are interested, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
+This tutorial is not covering group analysis. Look [here](/tutorial/eventrelatedstatistics) for that. If you are interested, you can read the other tutorials that cover cluster-based permutation tests on [event related fields](/tutorial/cluster_permutation_timelock) and on [time-frequency data](/tutorial/cluster_permutation_freq). If you are interested in a more gentle introduction as to how parametric statistical tests can be used with FieldTrip, you can read the [Parametric and non-parametric statistics on event-related fields](/tutorial/eventrelatedstatistics) tutorial.
 
 {% include markup/info %}
 This tutorial contains the hands-on material of the [NatMEG workshop](/workshop/natmeg). The background is explained in this lecture, which was recorded at the [Aston MEG-UK workshop](/workshop/birmingham).
@@ -31,11 +30,11 @@ When parametric statistics are used, one method that addresses this problem is t
 
 In constrast to the familiar parametric statistical framework, it is straightforward to solve the MCP in the nonparametric framework. Nonparametric tests offer more freedom to the experimenter regarding which test statistics are used for comparing conditions, and help to maximize the sensitivity to the expected effect. For more details see the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
-# Tutorial (ERPs)
+## Procedure for ERPs
 
-## Before we begin
+### Before we begin
 
-We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft\_defaults_
+We will clear all variables that we have in the workspace, restore the default path, add fieldtrip and run _ft_defaults_
 
     clear variables
     restoredefaultpath
@@ -43,7 +42,7 @@ We will clear all variables that we have in the workspace, restore the default p
     addpath /home/lau/matlab/fieldtrip/ %% set your own path
     ft_defaults
 
-## Load the ERP data and preprocess
+### Load the ERP data and preprocess
 
     load cleaned_data_ERP.mat
     load ERP_deviant.mat
@@ -69,7 +68,7 @@ We then apply the same preprocessing as before
 
     data_EEG_filt = ft_preprocessing(cfg, cleaned_data_ERP);
 
-## The Student's t-test
+#### The Student's t-test
 
 A ubiquitous test used to assess statistical significance is the Student's t-test [Wikipedia entry](https://en.wikipedia.org/wiki/Student's_t-test) [original article](https://doi.org/10.1093/biomet/6.1.1)  
 To perform the t-test, _t-values_ need to be calculated, which a bit simplified are: \frac{µ}{SEM}, where µ is the mean difference between the conditions and SEM is the standard devation divided by \sqrt{n}, where _n_ is the number of observations.
@@ -91,7 +90,7 @@ We proceed by computing the statistical tets, which returns the t-value, the pro
 
     stat_t = ft_timelockstatistics(cfg, data_EEG_filt);
 
-_stat\_t_ contains:
+_stat_t_ contains:
 
     stat_t =
 
@@ -106,16 +105,16 @@ _stat\_t_ contains:
            time: [1x200 double]
             cfg: [1x1 struct]
 
-- _stat_    contains the _t-values_ at all channels and time points
-- _df_      is the degrees of freedom determining the _t-distribution_ that the _t-value_ is compared against to obtain the _p-values_
+- _stat_ contains the _t-values_ at all channels and time points
+- _df_ is the degrees of freedom determining the _t-distribution_ that the _t-value_ is compared against to obtain the _p-values_
 - _critval_ contains the critical values for the test performed; if a _t-value_ is lesser than the negative value or greater than the positive value, the difference is declared significant. The _critval_ is dependent on _cfg.alpha_ and the degrees of freedom (_df_)
-- _prob_    contains the _p-values_ assciated with the _t-values_ given the degrees of freedom (_df_)
-- _mask_    is a _logical_ matrix, 0's are where _p-values_ (_prob_) are greater than _cfg.alpha_, 1's are where they are lesser than _cfg.alpha_
-- _dimord_  indicates the ordering of dimensions, rows are channels and columns are time
-- _elec_    contains information about the electrodes, e.g. positions and names
-- _label_   contains the names of all channels
-- _time_    is a row vector with the time points in seconds
-- _cfg_     shows the cfg that gave rise to this structure
+- _prob_ contains the _p-values_ assciated with the _t-values_ given the degrees of freedom (_df_)
+- _mask_ is a _logical_ matrix, 0's are where _p-values_ (_prob_) are greater than _cfg.alpha_, 1's are where they are lesser than _cfg.alpha_
+- _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
+- _elec_ contains information about the electrodes, e.g. positions and names
+- _label_ contains the names of all channels
+- _time_ is a row vector with the time points in seconds
+- _cfg_ shows the cfg that gave rise to this structure
 
 We can now plot the ERPs using the field _cfg.maskparameter_ of the plotting functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)** and **[ft_topoplotER](/reference/ft_topoplotER)**
 
@@ -151,7 +150,7 @@ _Figure 1: Single channel plot - no correction_
 Note that we see the MMN difference (~120-200 ms), but we also see other differences and even a pre-zero one. We cannot decide which are _true positives_ and which are _false positives_. In fact, we know that there will be a lot _false positives_ (assuming that the data were from identical distributions, i.e. the null hypothesis is true, we would expect that 5% of our significant differences are _false positives_)
 {% include markup/end %}
 
-## Bonferroni correction
+#### Bonferroni correction
 
 We will now control the _false positives_ by using the Bonferroni Correction [Wikipedia article](https://en.wikipedia.org/wiki/Bonferroni_correction)
 
@@ -176,12 +175,16 @@ _Figure 2: Single channel plot - Bonferroni correction_
 The Bonferroni correction has eliminated some likely _false positives_, but probably at the expense of introducing some _false negatives_. According to our image, only the peak of our MMN is significant. But EEG responses are not peaky in nature, they wax and wane smoothly in time and are smeared out over several electrodes. The Bonferroni correction implicitly assumes that EEG responses are uncorrelated, which they are patently not. Our next correction, the _cluster correction_ addresses the issue of correlation.
 {% include markup/end %}
 
-
-## Cluster correction
+#### Cluster-based correction for multiple comparisons
 
 As noted above, EEG data is smooth over the spatio-temporal dimensions. We can easily imaging how we can build clusters in the temporal dimension. These are simply data points that are neighboring each other in time. For the spatial dimension, it is necessary to build a neighbor structure using **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**. This uses the (digitized) positions of the electrodes.
 
-### Neighbors
+##### Neighbors
+
+{% include markup/danger %}
+Sometimes we use the word 'neighbour' according to the British spelling and sometimes we use it as neighbor according to the American spelling.
+{% include markup/end %}
+
 
     cleaned_data_ERP.elec = elec; % add the elec structure
 
@@ -196,7 +199,7 @@ As noted above, EEG data is smooth over the spatio-temporal dimensions. We can e
 {% include image src="/assets/img/workshop/oslo2019/neighbor_structure.png" width="650" %}
 _Figure 3: Electrode neighbor structure_
 
-### Permutation
+##### Permutation
 
 The cluster correction is not meaningful for parametric statistics, e.g. _t-tests_, therefore we are going to use a non-parameteric test.  
 We will first run it and then discuss some of the options and details afterwards.
@@ -224,7 +227,7 @@ We will first run it and then discuss some of the options and details afterwards
 
     stat_t_cluster = ft_timelockstatistics(cfg, data_EEG_filt);
 
-The output of _stat\_t\_cluster_ is:
+The output of _stat_t_cluster_ is:
 
     stat_t_cluster =
 
@@ -244,29 +247,29 @@ The output of _stat\_t\_cluster_ is:
                        time: [1x200 double]
                         cfg: [1x1 struct]
 
-- _prob_                contains the _p-values_ for each channel/time pair inhterited from the cluster that pair is part of
-- _posclusters_         contains a structure for each positive cluster found that contains
-    - _prob_               contains the _p-value_ associated with the cluster
-    - _clusterstat_        contains the _T-value_ associated with this cluster
-    - _stddev_             contains the standard deviation of the _prob_ of this cluster
-    - _cirange_            contains the 95% confidence interval for the _prob_ of thus cluster - if this range include _cfg.alpha_ a warning is issued recommending increasing the number of permutations
+- _prob_ contains the _p-values_ for each channel/time pair inhterited from the cluster that pair is part of
+- _posclusters_ contains a structure for each positive cluster found that contains
+  - _prob_ contains the _p-value_ associated with the cluster
+  - _clusterstat_ contains the _T-value_ associated with this cluster
+  - _stddev_ contains the standard deviation of the _prob_ of this cluster
+  - _cirange_ contains the 95% confidence interval for the _prob_ of thus cluster - if this range include _cfg.alpha_ a warning is issued recommending increasing the number of permutations
 - _posclusterslabelmat_ contains a matrix with a number indicating which positive cluster each channel/time pair belongs (0 if is doens't belong to any)
-- _posdistribution_     contains a row vector containing the _T-value_ for each of the permutations
-- _negclusters_         contains the negative equivalent of _posclusters_
+- _posdistribution_ contains a row vector containing the _T-value_ for each of the permutations
+- _negclusters_ contains the negative equivalent of _posclusters_
 - _negclusterslabelmat_ contains the negative equivalent of _negclusterslabelmat_
-- _negdistribution_     contains the negative equivalent of _posdistribution_
-- _cirange_             contains the 95% confidence interval for the _prob_
-- _mask_                is a _logical_ matrix, 0's are where _p-values_ (_prob_) are greater than _cfg.alpha_, 1's are where they are lesser than _cfg.alpha_
-- _stat_                contains the _t-values_ (the first step)
-- _ref_                 contains the mean value of the _t-value_ over all of the permutations
-- _dimord_              indicates the ordering of dimensions, rows are channels and columns are time
-- _label_               contains the names of all channels
-- _time_                is a row vector with the time points in seconds
-- _cfg_                 shows the cfg that gave rise to this structure
+- _negdistribution_ contains the negative equivalent of _posdistribution_
+- _cirange_ contains the 95% confidence interval for the _prob_
+- _mask_ is a _logical_ matrix, 0's are where _p-values_ (_prob_) are greater than _cfg.alpha_, 1's are where they are lesser than _cfg.alpha_
+- _stat_ contains the _t-values_ (the first step)
+- _ref_ contains the mean value of the _t-value_ over all of the permutations
+- _dimord_ indicates the ordering of dimensions, rows are channels and columns are time
+- _label_ contains the names of all channels
+- _time_ is a row vector with the time points in seconds
+- _cfg_ shows the cfg that gave rise to this structure
 
 There's quite a lot to unpack here. It is critical to distinguish between _t-values_ and _T-values_ here. We will now state the procedure step by step
 
-1. Do a _t-test_ similar to above (_stat\_t_) - these provide the _t-values_ in _stat\_t\_cluster.stat_
+1. Do a _t-test_ similar to above (_stat_t_) - these provide the _t-values_ in _stat_t_cluster.stat_
 2. Find the _T-values_ for each cluster of _t-values_ that pass the analytic significance test based on _cfg.clusteralpha_. The _T-value_ for a cluster is the sum of all the _t-values_ in that cluster
 3. Permute the condition labels (_cfg.design_) as many times as set in _cfg.numrandomization_; then compute the _t-values_ (as in step 1 above), and compute the _T-values_ for each of the clusters that pass the analytic significance test based on _cfg.clusteralpha_ (as in step 2 above).
 4. For each of the _cfg.numrandomization_ permutations, retrieve the maximum _T-value_, and create a permutation based distribution of _T-values_
@@ -275,7 +278,7 @@ There's quite a lot to unpack here. It is critical to distinguish between _t-val
 
 Below follows some figures and operations illustrating key features of these steps - (the code for these plots in the **Appendix** below)
 
-#### Equivalence of the _t-values_ (step 1)
+###### Equivalence of the _t-values_ (step 1)
 
     >> isequal(stat_t.stat, stat_t_cluster.stat)
 
@@ -286,17 +289,17 @@ Below follows some figures and operations illustrating key features of these ste
 {% include image src="/assets/img/workshop/oslo2019/stat_equivalence.png" width="650" %}
 _Figure 4: Equivalence of_ t-values
 
-#### Cluster _T-values_ (step 2)
+###### Cluster _T-values_ (step 2)
 
 {% include image src="/assets/img/workshop/oslo2019/cluster_T_values.png" width="650" %}
 _Figure 5: The_ T-values _of each of the clusters_
 
-#### Maximum positive and negative cluster _T-values_ compared to the permuted distributions (steps 3 and 4)
+###### Maximum positive and negative cluster _T-values_ compared to the permuted distributions (steps 3 and 4)
 
 {% include image src="/assets/img/workshop/oslo2019/permutation_distributions.png" width="650" %}
 _Figure 6: The observed positive and negative_ T-values compared to the permuted distributions
 
-#### Compare against _cfg.alpha_ (steps 5 and 6)
+###### Compare against _cfg.alpha_ (steps 5 and 6)
 
 Since both the _positive_ and _negative p-values_ are lesser than _cfg.alpha_ (0.025), we reject the null hypothesis for both the positive and negative directions.  
 _Put informally_: **our way of labeling the conditions _does_ matter**
@@ -311,19 +314,17 @@ And here the three tested corrections are side by side
 {% include image src="/assets/img/workshop/oslo2019/singleplots_side_by_side.png " width="650" %}  
 _Figure 8: Single channel plot - corrections side by side_
 
-
 We can also do topographical plots.  
-Here are the three side by side at 168 ms  
+Here are the three side by side at 168 ms
 
     n_plots = 3;
     figure('units', 'normalized', 'outerposition', [0 0 0.5 0.5]);
     stats = {stat_t stat_t_bonferroni stat_t_cluster};
 
     for plot_index = 1:n_plots
-        
+
         stat = stats{plot_index};
         subplot(1, 3, plot_index)
-
 
         difference_wave.mask = stat.mask;
 
@@ -337,8 +338,8 @@ Here are the three side by side at 168 ms
         end
 
         ft_topoplotER(cfg, difference_wave)
-        
-        title(['Correction: ' stat.cfg.correctm])   
+
+        title(['Correction: ' stat.cfg.correctm])
 
     end
 
@@ -349,7 +350,7 @@ _Figure 9: Difference wave (MMN) topographical plots_
 
 And here's the difference between the normal _t-mask_ and the _t-cluster-mask_. Note it is that not big.  
 {% include image src="/assets/img/workshop/oslo2019/difference_between_masks.png " width="650" %}  
-_Figure 10: Difference wave showing the difference in masks coming from stat\_t and stat\_t\_cluster_
+_Figure 10: Difference wave showing the difference in masks coming from stat_t and stat_t_cluster_
 
 {% include markup/info %}
 Do note that we, in EEG, most of the time do not make the inference at the level of the individual subject, but it is relevant to do so in for example diagnostic measurements.
@@ -357,11 +358,11 @@ Do note that we, in EEG, most of the time do not make the inference at the level
 
 We will now do a quick example of applying this to time-frequency data (TFR)
 
-# Tutorial (TFRs)
+## Procedure for TFRs
 
 Here, we'll just quickly show how to do within-subject statistics on TFRs
 
-## Load the data
+### Load the data
 
 First, we'll load the data, both the ones with the trials and the ones with the average of the trials. We append the two trial data structures to one another using **[ft_appendfreq](/reference/ft_appendfreq)** and we calculate the difference between the two averages using **[ft_math](/reference/ft_math)**.
 
@@ -411,11 +412,11 @@ For the difference betweem the averages, we have:
 
 meaning that we have a difference between averages on 128 channels at 20 frequencies and at 26 time points.
 
-## Applying the tests
+### Applying the tests
 
 Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz (the beta band range) and on the time interval between 400 ms and 1,000 ms (the time range of the beta rebound). This is set using _cfg.frequency_ and _cfg.latency_. We do this because we have _a priori_ knowledge that it is around here we should observe our beta rebound.
 
-### t-test with no correction
+#### t-test with no correction
 
     cfg           = [];
     cfg.method    = 'analytic'; % using a parametric test
@@ -428,13 +429,13 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
     cfg.design    = zeros(1, length(tfr.trialinfo));
     cfg.design(tfr.trialinfo == 256)  = 1; % indicating which trials belong ...
     cfg.design(tfr.trialinfo == 4096) = 2; % to what category
-                                            
+
     cfg.ivar      = 1; % indicating that the independent variable is found in ...
                        % first row of cfg.design
 
     stat_t_freq = ft_freqstatistics(cfg, tfr);
 
-### t-test with Bonferroni correction
+#### t-test with Bonferroni correction
 
     cfg           = [];
     cfg.method    = 'analytic'; % using a parametric test
@@ -447,13 +448,13 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
     cfg.design    = zeros(1, length(tfr.trialinfo));
     cfg.design(tfr.trialinfo == 256)  = 1; % indicating which trials belong ...
     cfg.design(tfr.trialinfo == 4096) = 2; % to what category
-                                            
+
     cfg.ivar      = 1; % indicating that the independent variable is found in ...
                        % first row of cfg.design
 
     stat_t_bonferroni_freq = ft_freqstatistics(cfg, tfr);
 
-### Permutation test with cluster correction
+#### Permutation test with cluster correction
 
     cfg                  = [];
     cfg.method           = 'montecarlo'; % use montecarlo to permute the data
@@ -462,7 +463,7 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
                                                        % parametric t-values
     cfg.alpha            = 0.025; % corresponds to an alpha level of 0.05, since ...
                                   % two tests are made ...
-                                  % (negative and positive: 2*0.025=0.05) 
+                                  % (negative and positive: 2*0.025=0.05)
     cfg.frequency = [15 30];
     cfg.latency   = [0.400 1.000];
 
@@ -485,13 +486,13 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
 
     stat_t_cluster_freq = ft_freqstatistics(cfg, tfr);
 
-## Plotting the tests
+### Plotting the test results
 
     stats = {stat_t_freq stat_t_bonferroni_freq stat_t_cluster_freq};
     n_tests = length(stats);
     h = figure;
     for test_index = 1:n_tests
-        
+
         subplot(1, 3, test_index)
         stat = stats{test_index};
 
@@ -513,8 +514,7 @@ Note that we here apply the tests on the frequency range between 15 Hz and 30 Hz
         c = colorbar('location', 'southoutside');
         c.Label.String = 'Power ratio (right over left)';
         title(['Correction: ' stat.cfg.correctm]);
-        
-        
+
     end
 
     set(h, 'units', 'normalized', 'outerposition', [0 0 1 1])
@@ -534,8 +534,7 @@ Compare with the plot below - why may it be important to use one's _prior_ knowl
 {% include image src="/assets/img/workshop/oslo2019/tfr_stats_all.png " width="650" %}  
 _Figure 12: **Testing on all frequencies and all latencies** Three multiplots showing the differences between the three tests/corrections. Note what this means for the cluster corrected test_
 
-# Appendix - code snippets for producing images
-
+## Appendix - code snippets for producing images
 
     %% INDICATE EQUIVALENCE (FIG. 4)
     figure
@@ -595,7 +594,7 @@ _Figure 12: **Testing on all frequencies and all latencies** Three multiplots sh
 
     subplot(1, 2, 2)
     histogram(stat_t_cluster.negdistribution, 'facecolor', 'b')
-    xlabel('Permuted T-values')    
+    xlabel('Permuted T-values')
     ylabel('Observations (#)')
     title('Permutation Distribution - Negative')
     xlim([negative_T - 1000 0])
