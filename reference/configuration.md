@@ -2937,7 +2937,7 @@ A detailed description of each function is available in the [reference documenta
 
 ## U 
 
-**cfg.unit** - [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
+**cfg.unit** - [ft_prepare_sourcemodel](/reference/ft_prepare_sourcemodel)  
 
 
 **cfg.unmixing** - [ft_componentanalysis](/reference/ft_componentanalysis)  

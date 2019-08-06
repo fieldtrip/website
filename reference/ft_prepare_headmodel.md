@@ -102,7 +102,6 @@ title: ft_prepare_headmodel
    cfg.elec
    cfg.grad
    cfg.transform
-   cfg.unit
 
  HALFSPACE
    cfg.point
