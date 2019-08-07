@@ -1,4 +1,4 @@
 ---
 layout: tag
-tag: MRI
+tag: mri
 ---
