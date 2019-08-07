@@ -111,7 +111,7 @@ Let first compute regular bivariate Granger causality, as this makes the differe
 However, we clearly want a multivariate approach. Also, we need to define channel combinations, as we now require triplets of inputs.
 
     grangercfg.granger.conditional = 'yes';
-    grangercfg.channelcmb  = {{'signal001'} {'signal002'} {'signal003'}};
+    grangercfg.channelcmb  = {'signal001', 'signal002', 'signal003'};
     grangercfg.granger.sfmethod = 'multivariate';
     grangercfg.granger.conditional = 'yes';
 
