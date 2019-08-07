@@ -1,3 +1,6 @@
+- name:  Conditional Granger causality in the frequency domain
+  link:  /example/connectivity_conditional_granger
+
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 

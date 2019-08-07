@@ -43,6 +43,9 @@
 - name:  Example use of the ft_compute_leadfield function
   link:  /example/compute_leadfield
 
+- name:  Conditional Granger causality in the frequency domain
+  link:  /example/connectivity_conditional_granger
+
 - name:  Check the quality of the anatomical coregistration
   link:  /example/coregistration_quality_control
 
