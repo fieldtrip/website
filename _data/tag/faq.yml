@@ -394,6 +394,9 @@
 - name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
   link:  /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path
 
+- name:  Source space is deformed or wrongly aligned after warping template
+  link:  /faq/source_space_is_deformed_or_wrongly_aligned_after_warping_template
+
 - name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
   link:  /faq/structuresensor
 
