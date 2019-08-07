@@ -820,7 +820,7 @@ Even after processing the co-registration, there could be have some gaps between
 
 ### make leadfield matrix
 
-The final procedure of the forward problem is to generate a leadfield that representing the linear relation between sourcespace and measurements (Gain matrix).
+The final procedure of the forward problem is to generate a leadfield that representing the linear relation between sourcemodel and measurements (Gain matrix).
 By using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)** we can get the matrices with respect to aligned electrode position and BEM meshes.
 
     cfg                 = [];

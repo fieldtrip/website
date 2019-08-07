@@ -92,7 +92,7 @@
   link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
 
 - name:  Source space is deformed or wrongly aligned after warping template
-  link:  /faq/source_space_is_deformed_or_wrongly_aligned_after_warping_template
+  link:  /faq/why_is_the_source_model_deformed_or_incorrectly_aligned_after_warping_template
 
 - name:  What is the conductivity of the brain, CSF, skull and skin tissue?
   link:  /faq/what_is_the_conductivity_of_the_brain_csf_skull_and_skin_tissue
