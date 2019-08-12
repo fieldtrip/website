@@ -6,7 +6,7 @@ tags: [example, eeg, source, dipole]
 # Compute forward simulated data and apply a dipole fit
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % create a set of electrodes, randomly placed on the sphere
+    %% create a set of electrodes, randomly placed on the sphere
     elec = [];
     elec.pnt = randn(128,3);
     dum = sqrt(sum(elec.pnt.^2,2));
@@ -26,7 +26,7 @@ tags: [example, eeg, source, dipole]
     vol.o = [0 0 0];          % center of sphere
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % create a dipole simulation with one dipole and a 10Hz sine wave
+    %% create a dipole simulation with one dipole and a 10Hz sine wave
     cfg = [];
     cfg.headmodel = vol;        % see above
     cfg.elec = elec;            % see above
@@ -41,7 +41,7 @@ tags: [example, eeg, source, dipole]
     plot(avg1.time, avg1.avg);  % plot the timecourse
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % create a dipole simulation with one dipole and a custom timecourse
+    %% create a dipole simulation with one dipole and a custom timecourse
     cfg      = [];
     cfg.headmodel = vol;          % see above
     cfg.elec = elec;              % see above
@@ -56,7 +56,7 @@ tags: [example, eeg, source, dipole]
     plot(avg2.time, avg2.avg);    % plot the timecourse
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % create a dipole simulation with two dipoles and a custom timecourse
+    %% create a dipole simulation with two dipoles and a custom timecourse
     cfg      = [];
     cfg.headmodel = vol;   % see above
     cfg.elec = elec;       % see above
@@ -77,7 +77,7 @@ tags: [example, eeg, source, dipole]
     avg3 = ft_timelockanalysis([], raw3);
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % do a dipole fit of the first simulated dataset
+    %% do a dipole fit of the first simulated dataset
     cfg      = [];
     cfg.headmodel = vol;    % see above
     cfg.elec = elec;        % see above
@@ -86,7 +86,7 @@ tags: [example, eeg, source, dipole]
     dip1 = ft_dipolefitting(cfg, avg1);
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % or alternatively start with an exhaustive search on a coarse grid
+    %% or alternatively start with an exhaustive search on a coarse grid
     cfg = [];
     cfg.headmodel = vol;    % see above
     cfg.elec = elec;        % see above
