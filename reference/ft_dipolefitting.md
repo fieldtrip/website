@@ -72,7 +72,10 @@ title: ft_dipolefitting
 
  Optionally, you can modify the leadfields by reducing the rank, i.e. remove the weakest orientation
    cfg.reducerank      = 'no', or number (default = 3 for EEG, 2 for MEG)
-
+   cfg.normalize       = 'no', 'yes' or 'column'
+   cfg.normalizeparam  = parameter for depth normalization (default = 0.5)
+   cfg.weight          = number or 1xN vector, weight for each dipole position to compensate for the size of the corresponding patch (default = 1)
+   cfg.backproject     = 'yes' (default) or 'no', in the case of a rank reduction this parameter determines whether the result will be backprojected onto the original subspace
 
  The volume conduction model of the head should be specified as
    cfg.headmodel     = structure with volume conduction model, see FT_PREPARE_HEADMODEL

@@ -18,8 +18,8 @@ title: ft_resampledata
    cfg.sampleindex     = 'no' or 'yes', add a channel with the original sample indices (default = 'no')
 
  Instead of specifying cfg.resamplefs, you can also specify a time axis on which you
- want the data to be resampled. This is usefull for merging data from two acquisition 
- devices, after resampledata you can call FT_APPENDDATA to concatenate the channels 
+ want the data to be resampled. This is usefull for merging data from two acquisition
+ devices, after resampledata you can call FT_APPENDDATA to concatenate the channels
  from the different acquisition devices.
    cfg.time        = cell-array with one time axis per trial (i.e. from another dataset)
    cfg.method      = interpolation method, see INTERP1 (default = 'pchip')

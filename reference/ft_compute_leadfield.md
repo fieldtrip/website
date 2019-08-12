@@ -32,10 +32,8 @@ title: ft_compute_leadfield
    'reducerank'      = 'no' or number
    'normalize'       = 'no', 'yes' or 'column'
    'normalizeparam'  = parameter for depth normalization (default = 0.5)
-   'weight'          = number or 1xN vector, weight for each dipole position (default = 1)
-   'backproject'     = 'yes' (default) or 'no', in the case of a rank reduction
-                       this parameter determines whether the result will be
-                       backprojected onto the original subspace
+   'weight'          = number or 1xN vector, weight for each dipole position to compensate for the size of the corresponding patch (default = 1)
+   'backproject'     = 'yes' (default) or 'no', in the case of a rank reduction this parameter determines whether the result will be backprojected onto the original subspace
 
  The leadfield weight may be used to specify a (normalized)
  corresponding surface area for each dipole, e.g. when the dipoles
