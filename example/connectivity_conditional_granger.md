@@ -1,6 +1,6 @@
 ---
 title: Conditional Granger causality in the frequency domain
-tags: [example, freq, connectivity, Granger]
+tags: [example, freq, connectivity, granger]
 ---
 
 # Conditional Granger causality in the frequency domain
