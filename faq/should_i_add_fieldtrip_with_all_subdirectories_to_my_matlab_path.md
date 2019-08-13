@@ -5,10 +5,10 @@ tags: [faq, matlab, path, warning]
 
 # Should I add FieldTrip with all subdirectories to my MATLAB path?
 
-In general you should **not** add FieldTrip with all subdirectories to your path. There are a number of external toolboxes (in fieldtrip/external) which are irrelevant for most users, and even can cause some problems if they overlap with other (custom) toolboxes on your path. Furthermore, there are some functions for backward compatibility in fieldtrip/compat, which should only be added to your path in case you use an older MATLAB release.
+In general you should **not** add FieldTrip with all subdirectories to your path. There are a number of external toolboxes (in fieldtrip/external) which are irrelevant for most users, and even can cause some problems if they overlap with other (custom) toolboxes on your path. Furthermore, there are some functions for backward compatibility in fieldtrip/compat, which should *only* be added to your path in case you use the corresponding old MATLAB release.
 
 {% include markup/danger %}
-Please be aware that you should NOT do
+Please be aware that you should *not* do
 
     addpath(genpath('/home/user/fieldtrip'))
 
@@ -18,13 +18,20 @@ because that will add many toolbox directories to your path that you won't use. 
 ## Step 1
 
 You should do
-addpath <path_to_fieldtrip>
+
+    addpath <path_to_fieldtrip>
+
 where full_path_to_fieldtrip is the location where the FieldTrip directory is located. Inside the Donders Centre for Cognitive Neuroimaging, this would be on Linux
-addpath /home/common/matlab/fieldtrip
+
+    addpath /home/common/matlab/fieldtrip
+
 and on Windows
-addpath H:\common\matlab\fieldtrip
+
+    addpath H:\common\matlab\fieldtrip
+
 whereas on your personal computer it might be
-addpath D:\fieldtrip-20100228
+
+    addpath D:\fieldtrip-201900813
 
 ## Step 2
 
