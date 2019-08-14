@@ -18,5 +18,5 @@ title: tokenize
  spaces between two words). The default is rep=1, i.e. repeated
  separators are treated as one.
 
- See also STRTOK, TEXTSCAN
+ See also SPLIT, STRTOK, TEXTSCAN
 ```

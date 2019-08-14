@@ -19,7 +19,7 @@ title: matlab2markdown
  Optional input arguments can be specified as key-value pairs and can include
    imagestyle = 'none|inline|jekyll'
    pageheader = 'none|jekyll'
-   overwrite  = true/false, allow overwriting of the .md file
+   overwrite  = true/false, allow overwriting of the .md file (default = false)
    highlight  = string, 'matlab', 'plaintext' or '' (default = '')
    ...
 
