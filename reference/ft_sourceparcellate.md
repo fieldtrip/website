@@ -26,6 +26,7 @@ title: ft_sourceparcellate
    'min'       take the minimal value
    'max'       take the maximal value
    'maxabs'    take the signed maxabs value
+   'std'       take the standard deviation
 
  See also FT_SOURCEANALYSIS, FT_DATATYPE_PARCELLATION, FT_DATATYPE_SEGMENTATION
 ```
