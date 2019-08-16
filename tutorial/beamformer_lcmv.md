@@ -6,7 +6,7 @@ tags: [fixme]
 {% include markup/danger %}
 This page is a draft for a future tutorial and is still developing. Hence, there is no guarantee that the content of this page at this moment is correct and complete.
 
-See http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718 for the progress.
+See <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1718> for the progress.
 
 Once this tutorial is completed, it will be listed in the tutorial section in the menu. Also once complete, it will receive the tags _tutorial meg source headmodel mri lcmv beamformer_ to link it to other pages.
 {% include markup/end %}

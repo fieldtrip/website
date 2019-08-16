@@ -4,14 +4,14 @@ tags: [cyberkinetics, lfp, spike, dataformat]
 ---
 
 {% include markup/danger %}
-The support for the 'cyberkinetics' format using neuroshare has never been fully operational. Moreover, the limited functionality was restricted to the Windows platform. Nowadays, this file format has been adopted by Blackrock microsystems, and cross-platform support for the file format in FieldTrip is being implemented. Please see http://www.fieldtriptoolbox.org/getting_started/blackrock and http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964 for more information.
+The support for the 'cyberkinetics' format using neuroshare has never been fully operational. Moreover, the limited functionality was restricted to the Windows platform. Nowadays, this file format has been adopted by Blackrock microsystems, and cross-platform support for the file format in FieldTrip is being implemented. Please see <http://www.fieldtriptoolbox.org/getting_started/blackrock> and <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964> for more information.
 {% include markup/end %}
 
 # Getting started with Cyberkinetics data
 
 ## Introduction
 
-To read Cyberkinetics data into FieldTrip, you will need the Neuroshare toolbox, see http://www.neuroshare.org. Neuroshare is created to support the collaborative development of open library and data file format specifications for neurophysiology and distribute open source data handling software tools for neuroscientists.
+To read Cyberkinetics data into FieldTrip, you will need the Neuroshare toolbox, see <http://www.neuroshare.org>. Neuroshare is created to support the collaborative development of open library and data file format specifications for neurophysiology and distribute open source data handling software tools for neuroscientists.
 
 You will need to download the "MATLAB Import Filter" and the Cyberkinetics library files. Currently this will run on Windows platforms only. Make sure all the Neuroshare files are available on the MATLAB path.
 

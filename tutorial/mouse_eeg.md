@@ -361,7 +361,7 @@ To confirm your calibration,
 
 {% include image src="/assets/img/tutorial/mouse_eeg/2014-06-18_5-45-12.jpg" width="400" %}
 
-:!: This is discussed on http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2602
+:!: This is discussed on <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2602>
 
 The current standards to deal with differences in mouse brain size are very comparable to those adopted in the Talairach-Tournoux anatomical atlas of the human brain. For human EEG it is easy to make use of a template and to compare or average subjects, since EEG recording caps scale along with the size of the human head. E.g. at the Donders we have caps in different sizes, ranging from 52 to 60 cm head circumference in 2cm steps, thereby accommodating approximately a 15% variance in head circumference.
 
@@ -589,7 +589,7 @@ FIXME insert figure (16 ft_sourceplot)
 
 ### Reading and coregistring the anatomical atlas
 
-On http://brainatlas.mbi.ufl.edu there is also an anatomically labeled version of the same brain available. We can use this as anatomical atlas.
+On <http://brainatlas.mbi.ufl.edu> there is also an anatomically labeled version of the same brain available. We can use this as anatomical atlas.
 
     atlas = ft_read_atlas('Num1_MinDef_M_Normal_age12_num10Atlas.hdr')
 

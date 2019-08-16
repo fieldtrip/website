@@ -20,8 +20,8 @@ Plan: investigate at which locations knowledge about the units is assumed/needed
 
 This project has been taken up in
 
-- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=953
-- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=963
-- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=686
+- <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=953>
+- <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=963>
+- <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=686>
 
 and work is underway.

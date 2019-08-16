@@ -147,7 +147,7 @@ Sections of code or functions that are deprecated should be documented in the co
 An example is
 
     % DEPRECATED by roboos on 17 May 2013
-    % see http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2171 for more details
+    % see <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2171> for more details
     % support for this functionality can be removed at the end of 2013
 
 ## Graphics
@@ -219,7 +219,7 @@ Examples of good and useful log messages are
 
     bugfix - fixed a problem in xxx, in case of ... it did ..., whereas it should be doing ...
 
-    bugfix - fixed the problem described in http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=50
+    bugfix - fixed the problem described in <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=50>
 
 Examples of bad log messages are
 

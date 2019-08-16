@@ -19,7 +19,7 @@ Note that during installation of MSVC the following warning was issued.
 
 The support page on <http://support.microsoft.com/kb/326922> explains that the `msvcr90.dll` file needs to be redistributed along with compiled application (in this case the mex files). Since most Windows computers seem to have this file already installed (probably because it is redistributed with many other applications), we do not include it in the FieldTrip release. There are many places on the internet where you can [download the msvcr90.dll file](http://www.google.com/search?rls=en&q=msvcr90) if you find it missing on your computer. Note that it will be installed alongside the Microsoft Visual Studio 2008 Express Edition.
 
-See also http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1258 and
+See also <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1258> and
 [compilation instructions in the code guidelines](/development/guideline/code#windows_64_bit).
 
 ## What if the compiler does not work? Is there an alternative?

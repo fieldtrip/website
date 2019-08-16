@@ -4,16 +4,16 @@ title: Neighbour templates
 
 This project has been completed and it's result can be found here:
 
-- http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors
-- http://fieldtrip.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work
-- http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_my_own_neighbourhood_template
+- <http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_neighbouring_sensors>
+- <http://fieldtrip.fieldtriptoolbox.org/faq/how_does_ft_prepare_neighbours_work>
+- <http://fieldtrip.fieldtriptoolbox.org/faq/how_can_i_define_my_own_neighbourhood_template>
 
 Related bugzilla bugs:
 
-- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=800
-- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=983
-- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=984
-- http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1929
+- <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=800>
+- <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=983>
+- <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=984>
+- <http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=1929>
 
 Find below the old project notes
 
