@@ -5,17 +5,17 @@ tags: [example, meg, source]
 
 # Compute forward simulated data and apply a beamformer scan
 
-    % This example script shows you how to create some simulated channel-level
-    % MEG data with a single dipole at a specified location in the head.
-    % Subsequently it does a beamformer source reconstruction to localize that
-    % source.
+This example script shows you how to create some simulated channel-level MEG data with a single dipole at a specified location in the head. Subsequently it does a beamformer source reconstruction to localize that source.
 
-    % create a gradiometer array with magnetometers at 12cm distance from the origin
-    [pnt, tri] = icosahedron162;
-    pnt = pnt(pnt(:,3)>=0,:);
-    grad.coilpos = 12*pnt;
-    grad.coilori = pnt;
-    for i=1:length(pnt)
+    % create an array with some magnetometers at 12cm distance from the origin
+    [X, Y, Z] = sphere(10);
+    pos = unique([X(:) Y(:) Z(:)], 'rows');
+    pos = pos(pos(:,3)>=0,:);
+    grad = [];
+    grad.coilpos = 12*pos;
+    grad.coilori = pos; % in the outward direction
+    % grad.tra = eye(length(pos)); % each coils contributes exactly to one channel
+    for i=1:length(pos)
       grad.label{i} = sprintf('chan%03d', i);
     end
 
@@ -23,7 +23,7 @@ tags: [example, meg, source]
     vol.r = 10;
     vol.o = [0 0 0];
 
-    % note that beamformer scanning will be done with a 1cm grid, so you should
+    % note that beamformer scanning will be done with a 1cm grid, so you should
     % not put the dipole on a position that will not be covered by a grid
     % location later
     cfg = [];
@@ -45,25 +45,21 @@ tags: [example, meg, source]
     cfg = [];
     cfg.headmodel = vol;
     cfg.grad = grad;
-    cfg.grad.unit='cm'; %error otherwise
     cfg.resolution = 1;
     cfg.method = 'lcmv';
-    cfg.projectnoise='yes'; %needed for neural activity index
+    cfg.lcmv.projectnoise = 'yes'; % needed for neural activity index
     source = ft_sourceanalysis(cfg, timelock);
 
     % compute the neural activity index, i.e. projected power divided by
     % projected noise
     cfg = [];
     cfg.powmethod = 'none'; % keep the power as estimated from the data covariance, i.e. the induced power
-    source = ft_sourcedescriptives(cfg, source);
-    source.avg.nai=source.avg.pow./source.avg.noise;  %neural activity index calculation
-
-    source = rmfield(source,'time');
+    source_nai = ft_sourcedescriptives(cfg, source);
 
     cfg = [];
     cfg.method = 'ortho';
-    cfg.funparameter = 'avg.nai';
-    cfg.funcolorlim = [1.5 2];  % the voxel in the center of the volume conductor messes up the autoscaling
-    ft_sourceplot(cfg, source);
+    cfg.funparameter = 'nai';
+    cfg.funcolorlim = [1.4 1.5];  % the voxel in the center of the volume conductor messes up the autoscaling
+    ft_sourceplot(cfg, source_nai);
 
 {% include image src="/assets/img/example/compute_forward_simulated_data_and_apply_a_beamformer_scan/example_beamforming.png" %}
