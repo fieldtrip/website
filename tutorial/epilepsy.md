@@ -109,11 +109,11 @@ option.
 
 The shared data is available from [out FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
-    datadir   = '/data/epilepsy/raw/case3'; % this contains the shared data
-
     restoredefaultpath
     addpath ~/matlab/fieldtrip/
     ft_defaults
+
+    datadir   = '/data/epilepsy/raw/case3'; % this contains the shared data
 
 ### Analysis of the CTF dataset
 
@@ -331,6 +331,8 @@ We use a bit of standard MATLAB code to find the regional peaks in the kurtosis
       ft_sourceplot(cfg, source_interp);
     end
 
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/animated_peaks.gif" width="700" %}
+
 ##### Visualize the kurtisis images in MRIcro
 
 At this stage, we can also write out our images (i.e., the resliced MRI and the kurtosis image that we just made) into NIFTI format so they can be imported into other software that may be more prevalent in clinical settings and allows the results to merged with other clinical information.
@@ -413,6 +415,8 @@ To ensure that we are not mixing up the two datasets, we will clear all variable
 
     clear all
 
+    datadir   = '/data/epilepsy/raw/case3'; % this contains the shared data
+
     outputdir = '/data/epilepsy/processed/case3/neuromag';
     cd(outputdir)
 
@@ -446,6 +450,8 @@ For patient confidentiality we only include here the MRI which has already been 
 
     ft_determine_coordsys(mri_realigned, 'interactive', 'no')
     ft_plot_headshape(headshape);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure01.png" width="700" %}
 
     cfg = [];
     cfg.translate = [0 70 -60];
@@ -550,6 +556,8 @@ Again we plot all geometrical data to check their alignment.
     ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'style', 'intersect');
     alpha 0.5 % make the anatomical MRI slices a bit transparent
 
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure02.png" width="700" %}
+
 #### Compute the beamformer virtual channels and kurtosis
 
 At this point the analysis deviates from the CTF analysis because we need to account for differences in the covariance matrix that result from Maxfilter. First, we perform a singular value decomposition of the covariance matrix and plot the singular values, 's'. These are plotted in descending order, and the discontinuity that occurs after the 68th value reflects the effects of Maxfilter, which has reconstructed the data based on (typically) about 80 components.
@@ -557,6 +565,8 @@ At this point the analysis deviates from the CTF analysis because we need to acc
     [u,s,v] = svd(cov_matrix.cov);
     figure;
     semilogy(diag(s),'o-');
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure03.png" width="700" %}
 
 As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa. We set this at a value before the big 'cliff' in the singular values. We also set a parameter called lambda which can be considered a weighting factor for the regularization.
 
@@ -587,10 +597,14 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
     cfg.method = 'ortho'; % orthogonal slices with crosshairs at peak (default anyway if not specified)
     ft_sourceplot(cfg, source_interp);
 
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure04.png" width="700" %}
+
     cfg = [];
     cfg.funparameter = 'kurtosis';
     cfg.method = 'slice'; % plot slices
     ft_sourceplot(cfg, source_interp);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure05.png" width="700" %}
 
     array = reshape(source.avg.kurtosis, source.dim);
     array(isnan(array)) = 0;
@@ -609,6 +623,8 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
       ft_sourceplot(cfg, source_interp);
     end
 
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/animated_peaks.gif" width="700" %}
+
 ##### Visualize the kurtisis images in MRIcro
 
     cfg = [];
@@ -623,6 +639,8 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
     cfg.format = 'nifti';
     cfg.datatype = 'float'; % integer datatypes will be scaled to the maximum, floating point datatypes not
     ft_volumewrite(cfg, source_interp);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure06.png" width="700" %}
 
 ##### Visualize the beamformer time series in AnyWave
 
@@ -668,3 +686,5 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
       end
     end
     fclose(fid);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure07.png" width="700" %}
