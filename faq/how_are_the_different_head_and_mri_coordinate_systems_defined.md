@@ -40,7 +40,7 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 | Analyze            | mm    | LAS         |                                             | native                                                                                                    |                              |
 | CTF MRI            | mm    | ALS         | between the ears                            | native                                                                                                    | voxel order can be arbitrary |
 | CTF gradiometer    | cm    | ALS         | between the ears                            | native                                                                                                    |                              |
-| CapTrack           | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
+| CapTrak            | mm    | RAS         | approximately between the ears              |                                                                                                           |                              |
 | Chieti ITAB        | mm    | RAS         | between the ears                            | native                                                                                                    |                              |
 | DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
 | FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
@@ -111,19 +111,25 @@ If you prefer to consider the center of the sphere to coincide with the origin o
 
 See also [this documentation](http://wiki.besa.de/index.php?title=Electrodes_and_Surface_Locations) on the BESA wiki.
 
-## Details of the CapTrack coordinate system
+## Details of the CapTrak coordinate system
 
-**CapTrack** is the name of a device manufactured by the company [Brain Products](http://pressrelease.brainproducts.com/captrak/). CapTrack consists of a hand held scanner featuring two cameras that track EEG electrodes on a subject's scalp. CapTrack makes use of LEDs inbuilt into the EEG electrodes manufactured by Brain Products and calculates the 3D coordinates by comparing each LED position with the position of three "special LED" positions. These special LEDs form the coordinate system and are placed as fiducials onto anatomical landmarks (nasion, right and left preauricular points) on the subject's head.
+**CapTrak** is the name of a device manufactured by the company [Brain Products](http://pressrelease.brainproducts.com/captrak/).
+CapTrak consists of a hand held scanner featuring two cameras that track EEG electrodes on a subject's scalp.
+CapTrak makes use of LEDs inbuilt into the EEG electrodes manufactured by Brain Products and calculates the 3D coordinates by comparing each LED position with the position of three "special LED" positions.
+These special LEDs form the coordinate system and are placed as fiducials onto anatomical landmarks (nasion, right and left preauricular points) on the subject's head.
 
 The coordinates of each electrode are defined in millimeters as [x,y,z] with respect to the following coordinate system:
 
-- the X-axis goes from LPA towards RPA
+- the X-axis goes from LPA towards (through) RPA
 - the Y-axis goes orthogonally to the X-axis and towards (through) NAS
-- the Z-axis goes orthogonally to the X-Y-plane towards the vertex
-  If the ears are not symmetric, the origin will not be precisely between the ears but shifted to one side. E.g., if the right ear is more to the front, the origin will be shifted to the right.
-  See below a visualization of the coordinate system.
+- the Z-axis goes orthogonally to the X-Y-plane upwards
 
-{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrack.png" width="300" %}
+If the ears are not symmetric, the origin will not be precisely between the ears but shifted to one side.
+E.g., if the right ear is more to the front, the origin will be shifted to the right.
+
+See below a visualization of the coordinate system.
+
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrak.png" width="300" %}
 
 ## Details of the Chieti ITAB coordinate system
 
