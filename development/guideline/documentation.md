@@ -32,7 +32,7 @@ For consistency the tutorials should preferably be structured in the following w
   - What does this tutorial expect as background understanding or skills?
   - Which topics are not covered in this tutorial?
 - **Background:** some background on the methods used
-- **Procedure:** summarize which analysis steps are performed in the tutorial. This should include a picture of the analysis protocol (please use SVG).
+- **Procedure:** summarize which analysis steps are performed in the tutorial. This should include a picture of the analysis protocol.
 - All steps in the procedure are **subsequent headings**.
 - **Summary and conclusion:**
   - What has been covered?
