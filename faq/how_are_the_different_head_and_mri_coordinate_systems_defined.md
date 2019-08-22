@@ -129,7 +129,7 @@ E.g., if the right ear is more to the front, the origin will be shifted to the r
 
 See below a visualization of the coordinate system.
 
-{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrack.png" width="300" %}
+{% include image src="/assets/img/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/captrak.png" width="300" %}
 
 ## Details of the Chieti ITAB coordinate system
 
