@@ -106,7 +106,7 @@ Documentation referring to this dataset:
 
 - Dutch words presented in visual form, subjects made positive/negative or animal/human judgments on the nouns.
 - 64-channel ActiCap system (Brain Products GmbH)
-- Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_eeg/) from our FTP server.
+- Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/preprocessing_erp/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="eeg-affective" %}
