@@ -19,12 +19,6 @@
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended
 
-- name:  Virtual channel analysis of epilepsy MEG data - Case 1
-  link:  /tutorial/case1
-
-- name:  Virtual channel analysis of epilepsy MEG data - Case 2
-  link:  /tutorial/case2
-
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
