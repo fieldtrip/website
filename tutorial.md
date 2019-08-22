@@ -51,6 +51,7 @@ When adding or contributing to the tutorials please consider the [documentation 
 - [Source reconstruction of event-related fields using minimum-norm estimation](/tutorial/minimumnormestimate)
 - [Dipole fitting of combined MEG/EEG data](/workshop/natmeg/dipolefitting)
 - [Computation of virtual MEG channels in source-space](/tutorial/virtual_sensors)
+- [Virtual channel analysis of epilepsy MEG data](/tutorial/epilepsy)
 
 ## Analysis of intracranial electrophysiological recordings
 
