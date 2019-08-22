@@ -88,6 +88,7 @@ Documentation referring to this dataset:
 - Combined MEG/EEG dataset recorded at the NatMEG in Stockholm
 - Experimental [details](/workshop/natmeg/meg_audodd)
 - This is the same dataset as MEG-audodd, but only with the EEG channels and reformatted as BrainVision file
+- Download the dataset [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/) from our FTP server.
 
 Documentation referring to this dataset:
 {% include seealso tag1="eeg-audodd" %}
