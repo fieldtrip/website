@@ -3,10 +3,6 @@ title: Virtual channel analysis of epilepsy MEG data
 tags: [tutorial, meg-epilepsy]
 ---
 
-{% include markup/info %}
-This documentation is under development and hence incomplete and perhaps incorrect.
-{% include markup/end %}
-
 # Virtual channel analysis of epilepsy MEG data
 
 {% include markup/danger %}
@@ -15,25 +11,142 @@ The FieldTrip toolbox is designed for research purposes only. The FieldTrip proj
 FieldTrip is released under the [GNU General Public License](http://www.gnu.org/copyleft/gpl.html) and you should review its terms and conditions.
 {% include markup/end %}
 
-The data for this tutorial can be downloaded from [our ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy/)
+## Introduction
+
+This tutorial describes how to perform a source localisation on epilepsy data using a kurtosis beamformer method implemented in FieldTrip. The tutorial assumes that the reader is already experienced with epilepsy data, and understands the basics of MEG, but is perhaps not familiar with FieldTrip or its capabilities. The tutorial does not attempt to fully explain the intrepretation of the results, which requires clinical expertise and further knowledge of the case histories.
+
+The tutorial covers data for 3 patients, all shared via our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). The provided datasets have varying degrees of clinical complexity. The more complex cases are, of course, the ones most likely to be referred for MEG recordings prior to consideration for surgery. 
+
+For one of the patients, Case 3, we provide a detailed line-by-line breakdown of the matlab code required to analyse the data. We outline the steps in obtaining the beamformer outputs, from anatomical coregistration right through to plotting source images. We note an important extra step that is required in computing the beamformer for data collected on an Elekta/MEGIN MEG system compared to a CTF system. We also describe how to output the source images into NiFTI format for viewing in other software such as [MRIcro] (https://www.mccauslandcenter.sc.edu/crnl/tools), and how to output source timeseries as a file which can be examined clinically alongside the original data in [AnyWave] (http://meg.univ-amu.fr/wiki/AnyWave) data viewing software. 
+
+For patients 1 and 2, we simply provide a summary of the outputs and some other useful observations. These datasets can be analysed by the reader in exactly the same way as Case 3.
+
+All the MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using a Neuromag 306-channel system. The case reports and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>); the steps in the kurtosis pipeline itself were provided by [Dr Caroline Witton](https://www2.aston.ac.uk/lhs/staff/az-index/wittonc-0) on behalf of the Aston clinical team. The data have been clinically analysed by the staff of ABC using the software accompanying the MEG systems. The FieldTrip analysis demonstrated here is only for educational purposes.
+## Background 
+
+The kurtosis beamformer approach described here, for identifying the source(s) of epileptiform activity, was originally published by [Kirsch et al (2006)](https://www.ncbi.nlm.nih.gov/pubmed/16893680) and has subsequently been validated in other studies (e.g. [Hall et al 2017] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5953276/). Beamformer-based source localisation can have particular advantages in cases where a wide network of cortical areas are affected, or where there is an initial lack of _a_ _priori_ evidence (e.g. from MRI or EEG) about the likely source of epileptogenic activity. Beamformers also provide excellent improvement in signal to noise ratio of the data. 
+
+## Procedure 
+
+The Aston Brain Centre clinical staff would typically use the following sequence of analysis steps for epilepsy data:
+
+1. Screen the data visually for spikes and also to identify physiological or external recording artifacts.
+2. Choose relatively artifact-free data, that appears to contain spikes, for further analysis (bearing in mind that data quality can vary widely in patient recordings, especially children)
+3. Run the kurtosis beamformer analysis to yield candidate sources in volumetric images, which can be examined alongside other information e.g. lesions visible in anatomical images.
+4. Examine source time series from the candidate sources to verify the presence of spikes. Usually source time series would be visualised alongside the original raw data. Candidate spikes can be automatically marked in the time series based on their amplitude.
+5. Before reporting back to the surgical team, candidate sources are typically confirmed by dipole-fitting of key spikes identified by the pipeline outlined above.
+
+Because of the importance to clinical work of visually screening data and marking spikes, we have also incorporated here (with brief instructions) the use of [AnyWave software](http://meg.univ-amu.fr/wiki/AnyWave), an open-source package for visualizing MEG and EEG data which lends itself well to the interpretation of the outputs from this analysis.
+
+Since there are some small differences in the parameters for the beamformer analysis depending for CTF or Neuromag data, the analyses for each data type are presented here separately.
+
+For all cases, MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using a Neuromag 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analyzed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
 
 ## Case 1
 
-_Male, age 9. Right parietal Glioma with parietal extended lesionectomy. Corticography also showed interictal discharges in the frontal lobe, though seizures were of parietal origin. Following the MEG, was operated and is now seizure free and off medication._
+{% include markup/success %}
+Male, age 9. Right parietal Glioma with epilepsy. Corticography also 
+showed interictal discharges in the frontal lobe, though the majority
+of seizures were of parietal origin. This was a complex multifocal
+case, where prior clinical assessment using EEG had been inconclusive
+(non-localizing), leading to the patient's referral for MEG.
 
-MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
+Following the MEG, was operated in the right parietal area and is
+now partially seizure free.
+{% include markup/end %}
+
+The data analysis for this subject shows multiple maxima in the kurtosis, and a complex pattern of epileptiform spikes. Due to the complexity of the clinical case, we will not present results here, but we will report on some details. The data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
+
+#### Analysis of the CTF dataset
+
+The analysis pipeline is mostly similar to that of case 3.
+
+In the CTF recording it appears that the patient's head is tilted to the right, relative to the coordinate axes. Apparently the anatomical landmarks at the left and right ear were not clicked symmetrically with the Polhemus. This is not a problem for further processing, as long as we remember that results are expressed in head coordinates relative to the anatomical landmark of this specific recording.
+
+#### Analysis of the Neuromag dataset
+
+In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artifact, so we can omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording when we use the **[ft_preprocessing] (http://www.fieldtriptoolbox.org/reference/ft_preprocessing/)** command (see the line-by-line commands for Case 3, below).
+
+The joint analysis of planar and magnetometer channels for the Neuromag data did not result in satisfactory results. We chose to select only the planar gradiometers for further analysis. The results are similar, but not identical to the results from the CTF data. Both analyses reveal an area of relatively high kurtosis adjacent to the lesion, a glioma in the right parietal area. This was the area followed up by the surgical team, based on the kurtosis data (originally analyzed in CTF software) interpreted in the context of seizure semiology and neuroanatomy. Both analyses also yielded a strong peak in the left frontal cortex, which is also thought to be clinically significant.
+
+In contrast with the CTF data, this analysis of the Neuromag data did not show an activation in the right frontal cortex, perhaps because of differences in the patterns of spiking activity in the different recordings, or alternatively perhaps because the patient's head was located further from these sensors in this recording. The deeper activity that can be seen in the slice images appears to be located in white matter, but is potentially leakage from activity propagated to deeper areas e.g. insula cortex.
+
+The flexibility of FieldTrip can offer additional information to support data interpretation. For example, the step where the MRI, sensors, head model and mesh are plotted together, can be used to examine positioning within the MEG helmet. This can be particularly important for clinical analysis with children because, with smaller heads, they can potential move quite far from the sensors. In the Maxfiltering process for the Neuromag data above, the continuous head position monitoring allowed the sensor time series to be realigned to a 'standard' position in the centre of the MEG helmet so this effect is not observed. However if the head position is plotted for a version of the data where this head position correction was not done, the original positioning of the brain in relation to the sensors can be seen. In this case, the patient's head was not centrally located during the recording. This might explain the lack of activation in the right temporal lobe for this dataset and underlines the need for MEG systems which better serve pediatric recordings.
+
+{% include image src="/assets/img/tutorial/epilepsy/case1b_headpos.png" width="400" %}
+
+## Case 2
+
+{% include markup/success %}
+Female, age 14. Epilepsy. Referral for MEG because EEG did not
+allow laterlisation or localisation of discharges, though clinically
+they appeared to come from the left hemisphere. Functional neuroimaging
+in the form of a PET scan showed a right area of hypometabolism.
+
+We don't have surgical follow-up information about this patient,
+because she was not from our local hospital.
+{% include markup/end %}
+
+Analysis using a pipeline similar to that for case 3 gives meaningful focal results (not presented here). The data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
+
+#### Analysis of the CTF dataset
+
+This follows the pipeline as described for case 3.
+
+#### Analysis of the Neuromag dataset
+
+The headshape that was scanned with the Polhemus in the Neuromag
+recording has a number of points where the stylus did not touch the scalp
+properly. These have been removed in MATLAB by hand, and the resulting
+headshape were written to a pos file (CTF format, ASCII) and a mat
+file (MATLAB).
+
+Rather than reading the headshape from the fif file, it should be read from the mat file. Other than that the analysis follows the pipeline as described for case 3.
+
+## Case 3
+
+{% include markup/success %}
+Female, age 10. She was referred for investigation with a history
+of symptomatic focal epilepsy. At the time of investigation there
+had been an increase in seizures which included blank episodes and
+jerks. She presented with difficulties in verbal comprehension and
+memory.
+
+Her MRI revealed right perisylvian polymicrogyria. Medication included
+Leviteracetum and Carbmazepine. Investigations were to consider epilepsy
+surgery, though the extent of the polymicrogyria rendered this a difficult
+option.
+{% include markup/end %}
+
+The shared data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+
+    restoredefaultpath
+    addpath ~/matlab/fieldtrip/
+    ft_defaults
+
+    datadir   = '/data/epilepsy/raw/case3'; % this contains the shared data
 
 ### Analysis of the CTF dataset
 
-#### Coregistration of the anatomical MRI
+We want to store all processed results in a different directory than the one containing the raw data.
 
-The original MRI that is provided for this patient has been partially processed in the CTF software and is stored in CTF .mri format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
+    outputdir = '/data/epilepsy/processed/case3'; % this is where results will be saved
+    cd(outputdir)
 
-    mri_orig = ft_read_mri('case1.mri');
+#### Coregistering the MEG and MRI data
+
+The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIFTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
+
+{% include markup/info %}
+For coregistration we need the original MRI with full facial details, however this is not shared for reasons of anonymity. You should skip this section and continue after the coregistration.
+{% include markup/end %}
+
+    mri_orig = ft_read_mri(fullfile(datadir, 'case3.nii'));
 
 The dataset also includes a Polhemus recording of the head surface, which can be used to coregister the MRI to the CTF system.
 
-    headshape = ft_read_headshape('case1.pos');
+    filename = fullfile(datadir, 'ctf', 'case3.pos');
+    headshape = ft_read_headshape(filename);
     headshape = ft_convert_units(headshape, 'mm');
 
 Check the coregistration of the Polhemus headshape and the anatomical MRI. In the CTF coordinate system the x-axis should be pointing to the nose and the y-axis to the left ear.
@@ -41,11 +154,9 @@ Check the coregistration of the Polhemus headshape and the anatomical MRI. In th
     ft_determine_coordsys(mri_orig, 'interactive', 'no')
     ft_plot_headshape(headshape);
 
-In this case the coregistration is already nearly perfect.
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure01.png" width="700" %}
 
-{% include image src="/assets/img/tutorial/epilepsy/case1a-coreg.png" width="400" %}
-
-Usually you would start with an anatomical MRI (e.g. stored as a stack of DICOM files) that is not yet coregistered with the MEG. We will improve the coregistration a bit, using the same procedure you could use to coregister from scratch.
+The nose in the MRI is pointing toward the +X direction, whereas the noise in the headshape is pointing in the +Y direction, i.e. the MRI is 90 degrees off with the headshape, which is in CTF coordinates.
 
 The coregistration procedure starts with a coarse manual coregistration, followed by an automatic fine coregistration in which the skin surface from the MRI is fitted to the headshape points.
 
@@ -55,271 +166,545 @@ The coregistration procedure starts with a coarse manual coregistration, followe
     cfg.headshape.icp = 'yes';
     cfg.headshape.headshape = headshape;
     cfg.coordsys = 'ctf';
+    cfg.spmversion = 'spm12';
     mri_realigned = ft_volumerealign(cfg, mri_orig);
+    mri_realigned.coordsys = 'ctf'; % remember that it is in ctf coordinates
 
-{% include image src="/assets/img/tutorial/epilepsy/case1a-coreg-manual.png" width="400" %}
+After coregistration we check once more.
 
-The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface of the **[ft_defacevolume](/reference/ft_defacevolume)** function.
+    ft_determine_coordsys(mri_realigned, 'interactive', 'no')
+    ft_plot_headshape(headshape);
+
+The headshape not only covers the scalp, but also the face and nose. Hence the coregistration needs to be done prior to defacing from the anatomical MRI. After coregistration we use **[ft_defacevolume](/reference/ft_defacevolume)** to remove the facial details. The translate, rotate and scale parameters specified here were determined experimentally in the graphical user interface.
 
     cfg = [];
-    cfg.translate = [100 0 -60];
-    cfg.rotate = [-4 30 0];
-    cfg.scale = [75 150 120];
+    cfg.translate = [70 0 -75];
+    cfg.rotate = [0 30 0];
+    cfg.scale = [75 175 120];
     mri_defaced = ft_defacevolume(cfg, mri_realigned);
 
-{% include image src="/assets/img/tutorial/epilepsy/case1a-deface.png" width="400" %}
+    save mri_defaced.mat mri_defaced % save the data for sharing
 
-{% include image src="/assets/img/tutorial/epilepsy/case1a-deface_result.png" width="400" %}
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure02.png" width="700" %}
 
-For convenience in later plotting, we reslice the MRI so that the axes of the volume are aligned with the axes of the coordinate system.
+and we use **[ft_volumereslice](/reference/ft_volumereslice)** to reslice the MRI, so that the axes of the volume are aligned with the axes of the coordinate system. This facilitates plotting and ensures that results interpolated on the MRI are not displayed upside-down.
 
     cfg = [];
     mri_resliced = ft_volumereslice(cfg, mri_defaced);
 
-Finally we should do a visual inspection of the realigned, defaced and replaced MRI.
+    save mri_resliced.mat mri_resliced % save the data for sharing
+
+#### Importing and filtering the sensor level data
+
+The kurtosis beamformer is typically run within a bandpass filter (here 10-70 Hz) which excludes some physiological artifacts such as eye blinks or EMG that might affect the analysis, while preserving as much signal from the spikes as possible. At this point we assume that the clinician has already visually screened the raw data. The current dataset is pretty clean and free of artifacts.
+
+    dataset = fullfile(datadir, 'ctf', 'case3.ds');
 
     cfg = [];
-    ft_sourceplot(cfg, mri_resliced)
-
-{% include image src="/assets/img/tutorial/epilepsy/case1a-resliced.png" width="400" %}
-
-Note that the patients head is tilted to the right. Apparently the anatomical landmarks at the left and right ear were not clicked symmetrically with the Polhemus. This is not a problem for further processing, as long as we remember that results are expressed in head coordinates relative to the anatomical landmark of this specific recording.
-
-#### Processing the channel level data
-
-    dataset = 'case1.ds';
-
-    cfg = [];
-    cfg.dataset   = dataset;
-    cfg.hpfilter  = 'yes';
-    cfg.hpfreq    = 10;
-    cfg.lpfilter  = 'yes';
-    cfg.lpfreq    = 70;
-    cfg.channel   = 'MEG';
+    cfg.dataset = dataset;
+    cfg.hpfilter = 'yes';
+    cfg.hpfreq = 10;
+    cfg.lpfilter = 'yes';
+    cfg.lpfreq = 70;
+    cfg.channel = 'MEG';
+    cfg.coilaccuracy = 0; % ensure that sensors are expressed in SI units
     data = ft_preprocessing(cfg);
 
-    %% visualize the preprocessed data
-
-    cfg = [];
-    cfg.viewmode = 'vertical';
-    cfg.channel  = 'MEG';
-    cfg.layout   = 'CTF275.lay';
-    cfg.event    = ft_read_event(dataset);
-    ft_databrowser(cfg, data);
-
-    %% compute channel-level kurtosis
-
-    datak = [];
-    datak.label    = data.label;
-    datak.dimord   = 'chan';
-    datak.kurtosis = kurtosis(data.trial{1}')';
-
-    cfg = [];
-    cfg.comment = 'computed channel-level kurtosis';
-    datak = ft_annotate(cfg, datak);
-
-    cfg = [];
-    cfg.layout    = 'CTF275.lay';
-    cfg.parameter = 'kurtosis';
-    ft_topoplotER(cfg, datak);
-
-    % caxis([0 40])
-
-#### Construction of the volume conduction model of the head
-
-    % we will use the defaced MRI, which has been realigned with the CTF system and resliced
-
-    mri = ft_read_mri('mri_defaced.mat');
-
-    %% segment the brain compartment from the anatomical MRI and make the volume conduction model
-
-    cfg = [];
-    cfg.tissue = 'brain';
-    seg = ft_volumesegment(cfg, mri);
-
-    % save seg seg
-
-    cfg = [];
-    cfg.tissue = 'brain';
-    brain = ft_prepare_mesh(cfg, seg);
-
-    cfg = [];
-    cfg.method = 'singleshell';
-    headmodel = ft_prepare_headmodel(cfg, brain);
-
-    % save headmodel headmodel
-
-#### Construction of the source model
-
-    cfg = [];
-    cfg.grid.resolution = 7;
-    cfg.grid.unit = 'mm';
-    cfg.headmodel = headmodel;
-    cfg.grad = data.grad; % this being needed here is a silly historical artifact
-    sourcemodel = ft_prepare_sourcemodel(cfg);
-
-    %%
-    cfg = [];
-    cfg.xrange = [min(sourcemodel.pos(:,1))-30 max(sourcemodel.pos(:,1))+30];
-    cfg.yrange = [min(sourcemodel.pos(:,2))-30 max(sourcemodel.pos(:,2))+30];
-    cfg.zrange = [min(sourcemodel.pos(:,3))-30 max(sourcemodel.pos(:,3))+30];
-    mri_resliced = ft_volumereslice(cfg, mri_defaced);
-
-    % save mri_resliced mri_resliced
-
-    figure
-    ft_plot_vol(headmodel, 'unit', 'mm');
-    ft_plot_sens(data.grad, 'unit', 'mm', 'coildiameter', 10);
-    ft_plot_mesh(sourcemodel.pos);
-    ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced, 'style', 'intersect');
-
-    %% compute data covariance for source reconstruction
+In the following stage, we compute the data covariance matrix for the beamformer source reconstruction. We use the **[ft_timelockanalysis](/reference/ft_sourceanalysis)** function (more commonly used elsewhere to compute an average), and because we have not defined individual trials within the data it will produce the covariance matrix for the whole time period of the data.
 
     cfg = [];
     cfg.channel = 'MEG';
     cfg.covariance = 'yes';
-    timelock = ft_timelockanalysis(cfg, data);
+    cov_matrix = ft_timelockanalysis(cfg, data);
 
-    %% this is not required, but speeds up repeated source reconstructions
+    save cov_matrix cov_matrix
+
+#### Construction of the volume conduction model of the head
+
+We will use the defaced MRI, which has been realigned with the CTF system and resliced.
+
+    mri_resliced = ft_read_mri('mri_resliced.mat');
+
+Segment the brain compartment from the anatomical MRI and make the volume conduction model. If you want, you can save the segmentation and head model to disk.
+
+    cfg = [];
+    cfg.tissue = 'brain';
+    cfg.spmversion = 'spm12';
+    seg = ft_volumesegment(cfg, mri_resliced);
+
+    save seg seg
+
+    cfg = [];
+    cfg.tissue = 'brain';
+    cfg.spmversion = 'spm12';
+    brain_mesh = ft_prepare_mesh(cfg, seg);
+
+    cfg = [];
+    cfg.method = 'singleshell';
+    cfg.unit = 'm'; % ensure that the headmodel is expressed in SI units
+    headmodel = ft_prepare_headmodel(cfg, brain_mesh);
+
+    save headmodel headmodel
+
+#### Construction of the source model
+
+To save time for the purpose of this tutorial demonstration we have chosen to use a 7 mm grid for the source model here, but in a real clinical scenario a grid of 5 mm or smaller would typically be used.
+
+    cfg = [];
+    cfg.headmodel = headmodel;
+    cfg.grad = data.grad; % this being needed here is a silly historical artifact
+    cfg.resolution = 0.007; % in SI units
+    cfg.unit = 'm'; % ensure that the sourcemodel is expressed in SI units
+    sourcemodel = ft_prepare_sourcemodel(cfg);
+
+    save sourcemodel sourcemodel
+
+We again visualize the source model, in combination with the MRI and head model, to ensure that all geometrical data is properly aligned.
+
+    figure
+    ft_plot_headmodel(headmodel, 'unit', 'mm');
+    ft_plot_sens(data.grad, 'unit', 'mm', 'coilsize', 10, 'chantype', 'meggrad');
+    ft_plot_mesh(sourcemodel.pos, 'unit', 'mm');
+    ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'style', 'intersect', 'unit', 'mm');
+    alpha 0.5
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure03.png" width="700" %}
+
+Next we precompute the leadfields, which is not obligatory, but speeds up the subsequent steps.
 
     cfg = [];
     cfg.channel = 'MEG';
-    cfg.headmodel  = headmodel;
-    cfg.grid = sourcemodel;
-    cfg.normalize = 'yes';
-    sourcemodel = ft_prepare_leadfield(cfg, timelock);
+    cfg.headmodel = headmodel;
+    cfg.sourcemodel = sourcemodel;
+    cfg.normalize = 'yes'; % normalization avoids power bias towards centre of head
+    cfg.reducerank = 2;
+    leadfield = ft_prepare_leadfield(cfg, cov_matrix);
 
-    % save sourcemodel sourcemodel
+    save leadfield leadfield
+
+#### Compute the beamformer virtual channels and kurtosis
+
+Now we compute the LCMV beamformer and reconstruct the time series at each of the locations specified in the source model grid. By projecting the vector dipole moment (for x, y, and z direction) in the direction of maximal power, the source time series becomes a simple vector. The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** function can compute the kurtosis of this time series.
 
     cfg = [];
-    cfg.headmodel  = headmodel;
-    cfg.grid = sourcemodel;
+    cfg.headmodel = headmodel;
+    cfg.sourcemodel = leadfield;
     cfg.method = 'lcmv';
-    cfg.lcmv.projectmom = 'yes';
-    sourcep = ft_sourceanalysis(cfg, timelock);
+    cfg.lcmv.projectmom = 'yes'; % project dipole time series in direction of maximal power (see below)
+    cfg.lcmv.kurtosis = 'yes'; % compute kurtosis at each location
+    source = ft_sourceanalysis(cfg, cov_matrix);
 
-    sourcep.kurtosis = nan(size(sourcep.pos,1),1);
-    sourcep.kurtosisdimord = 'pos';
-    sel = find(sourcep.inside(:));
-    for i=1:length(sel)
-    disp(i);
-    sourcep.kurtosis(sel(i)) = kurtosis(sourcep.avg.mom{sel(i)});
+    save source source
+
+#### Explore the outputs
+
+We are ready to explore the results visually, starting with the volumetric images. First of all we need to interpolate the kurtosis on the resliced MRI, then we can plot the images. Note that the MRI is expressed in millimeter, whereas all source reconstructions are performed in SI units, i.e. in meter.
+
+    % source is in m, mri_resliced is in mm, hence source_interp will also be in mm
+    cfg = [];
+    cfg.parameter = 'kurtosis';
+    source_interp = ft_sourceinterpolate(cfg, source, mri_resliced);
+
+    save source_interp source_interp
+
+    cfg = [];
+    cfg.funparameter = 'kurtosis';
+    cfg.method = 'ortho'; % orthogonal slices with crosshairs at peak (default anyway if not specified)
+    ft_sourceplot(cfg, source_interp);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure04.png" width="700" %}
+
+    cfg = [];
+    cfg.funparameter = 'kurtosis';
+    cfg.method = 'slice'; % plot a series of slices
+    ft_sourceplot(cfg, source_interp);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure05.png" width="700" %}
+
+In our figure in FieldTrip, we can scroll through the slices to see where the areas of high kurtosis fall. But to be more objective, it is useful to identify each discrete peak location in the kurtosis data. This can be done using the [imregionalmax](https://nl.mathworks.com/help/images/ref/imregionalmax.html) function from the Image Processing toolbox. An alternative is to use a 3rd party function called [findpeaksn.m](https://github.com/vigente/gerardus/blob/master/matlab/PointsToolbox/findpeaksn.m) which needs to be downloaded separately and added to the MATLAB path. The Aston clinical team would typically examine every single peak but for simplicity we will just look at the top few. We display the co-ordinates and plot some images.
+
+We use a bit of standard MATLAB code to find the regional peaks in the kurtosis
+
+    array = reshape(source.avg.kurtosis, source.dim);
+    array(isnan(array)) = 0;
+    ispeak = imregionalmax(array); % findpeaksn is an alternative that does not require the image toolbox
+    peakindex = find(ispeak(:));
+    [peakval, i] = sort(source.avg.kurtosis(peakindex), 'descend'); % sort on the basis of kurtosis value
+    peakindex = peakindex(i);
+
+    npeaks = 10;
+    disp(source.pos(peakindex(1:npeaks),:)); % output the positions of the top peaks
+
+    for i = 1:npeaks
+      cfg = [];
+      cfg.funparameter = 'kurtosis';
+      cfg.location = source.pos(peakindex(i),:)*1000; % convert from m into mm
+      ft_sourceplot(cfg, source_interp);
     end
 
-    cfg = [];
-    cfg.comment = 'computed source-level kurtosis';
-    sourcep = ft_annotate(cfg, sourcep);
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/animated_peaks.gif" width="700" %}
 
-    %% explore the results
+##### Visualize the kurtisis images in MRIcro
+
+At this stage, we can also write out our images (i.e., the resliced MRI and the kurtosis image that we just made) into NIFTI format so they can be imported into other software that may be more prevalent in clinical settings and allows the results to merged with other clinical information.
+
+    cfg = [];
+    cfg.filename = 'Case3_anatomy.nii';
+    cfg.parameter = 'anatomy';
+    cfg.format = 'nifti';
+    ft_volumewrite(cfg, source_interp);
+
+    cfg = [];
+    cfg.filename = 'Case3_kurtosis.nii';
+    cfg.parameter = 'kurtosis';
+    cfg.format = 'nifti';
+    cfg.datatype = 'float'; % integer datatypes will be scaled to the maximum, floating point datatypes not
+    ft_volumewrite(cfg, source_interp);
+
+The MRIcro software from [Chris Rorden's lab](https://www.mccauslandcenter.sc.edu/crnl/tools) is very useful to visualize anatomical in combination with functional data, to change thresholds on the fly, and to make 3D renderings of the peaks of the activity in relation to the anatomy.
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure06.png" width="700" %}
+
+##### Visualize the beamformer time series in AnyWave
+
+It is also clinically important to visualize the spikes that are contributing to the kurtosis images, not least to screen out any spurious sources which may be elicited by artifacts. To do this, it is useful to have the original sensor data visible alongside the source time series. Marking the timepoints at which spikes occur at the sources can help the clinician scroll more easily through the data. We will write the data to a format that can be read by the open-source package [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave), which is well-suited to this purpose.
+
+When we read in the data earlier, we filtered it, but here it is more useful to have the unfiltered data. So we import that to FieldTrip and then append source time series data, adding header information for this, before writing the whole lot to the AnyWave ADES file format.
+
+    cfg = [];
+    cfg.dataset = dataset;
+    cfg.channel = 'MEG';
+    cfg.coilaccuracy = 0;
+    data_unfiltered = ft_preprocessing(cfg);
+
+    dat = ft_fetch_data(data_unfiltered);
+    hdr = ft_fetch_header(data_unfiltered);
+
+    npeaks = 10; % for simplicity we limit ourselves to appending the time series of the top peaks
+    for i = 1:npeaks
+      dat(end+1,:)= source.avg.mom{peakindex(i),:}; % see note below about scaling
+      hdr.label{end+1}= ['S' num2str(i)];
+      hdr.chantype{end+1} = 'Source';
+      hdr.chanunit{end+1} = 'T'; % see note below about scaling
+    end
+    hdr.nChans = hdr.nChans+npeaks;
+    ft_write_data('Case3_timeseries', dat, 'header', hdr, 'dataformat', 'anywave_ades');
+
+Finally we can automatically mark potential spikes in the source time series data and create labels in AnyWave marker file format. We use the convention (from the original CTF SAMg2 software) of placing a marker wherever the source time series exceeds 6 standard deviations of its mean. In our marker file, there is one label for each source, so events on the marker labelled 'S1' correspond to spikes on the time series from peak number 1 in the image. Marker S2 indicates events occurring at peak number 2, etc., etc.
+
+    fid = fopen('Case3_timeseries.mrk', 'w');
+    fprintf(fid,'%s\r\n','// AnyWave Marker File ');
+    k = 1;
+    for i = 1:npeaks
+      dat = source.avg.mom{peakindex(i),:};
+      sd = std(dat);
+      tr = zeros(size(dat));
+      tr(dat>6*sd)=1;
+      [tmp, peaksample] = findpeaks(tr, 'MinPeakDistance', 300); % peaks have to be separated by 300 sample points to be treated as separate
+      for j = 1:length(peaksample)
+        fprintf(fid, 'S%d_%02d\t', i, j); % marker name
+        fprintf(fid, '%d\t', dat(peaksample(j))); % marker value
+        fprintf(fid, '%d\t',source.time(peaksample(j)) ); % marker time
+        fprintf(fid, '%d\t', 0); % marker duration
+        fprintf(fid, 'S%d\r\n', i); % marker channel
+        k = k + 1;
+      end
+    end
+    fclose(fid);
+
+The data can now be opened in AnyWave. Once the file is opened, to see sources alongside source data, click 'Add View' in the top/middle toolbar. Then use the eyeball icon to set each view so that one has 'MEG' and one has 'SOURCE' data. Set the timescale to be 0.3 sec/cm (close to the clinical standard 3cm/sec) and scale the amplitudes appropritely. Use the menu to import the marker file that we just created.
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/ctf/figure07.png" width="700" %}
+
+### Analysis of the Neuromag dataset
+
+The Neuromag (formerly also known as 'Elekta' and now operating under the company name 'MEGIN') dataset was collected from the same patient on the same day as the CTF dataset described above. So, we expect the results to be very similar to those yielded by the CTF data.
+
+Generally the analysis of Neuromag data is almost identical to the analysis of CTF data. So this part of the tutorial has fewer comments than above. However there is one important difference, related to the processing of Maxfiltered data, which is addressed in more detail in the relevant tutorial sections below. Maxfilter is proprietary software that comes with the Neuromag system for pre-processing; it offers some improvements in signal-to-noise ratio and artifact handling, and potential for head movement correction. Importantly it is obligatory in datasets where active shielding ('MaxShield') was used during data collection and indeed the epilepsy data used here required preprocessing with Maxfilter for this reason. But Maxfilter has effects on the data covariance which can cause problems in accurately computing the beamformer source model. Some ways to optimize the beamformer calculations to avoid these problems are demonstrated below.
+
+To ensure that we are not mixing up the two datasets, we will clear all variables from MATLAB memory and start from scratch.
+
+    clear all
+
+    datadir   = '/data/epilepsy/raw/case3'; % this contains the shared data
+
+    outputdir = '/data/epilepsy/processed/case3/neuromag';
+    cd(outputdir)
+
+#### Coregistering the MEG and MRI data
+
+For patient confidentiality we only include here the MRI which has already been coregistered with the data, defaced, and resliced to align it to the data head co-ordinate system. The process for coregistration is identical to the one described above, except that in the Neuromag system the Polhemus head shape points are stored in the raw data file.
+
+    mri_orig = ft_read_mri(fullfile(datadir, 'case3.nii'));
+
+    headshape = ft_read_headshape(fullfile(datadir, 'neuromag', 'case3.fif'));
+    headshape = ft_convert_units(headshape, 'mm');
+
+    ft_determine_coordsys(mri_orig, 'interactive', 'no')
+    ft_plot_headshape(headshape);
+
+    cfg = [];
+    cfg.method = 'headshape';
+    cfg.headshape.interactive = 'yes';
+    cfg.headshape.icp = 'yes';
+    cfg.headshape.headshape = headshape;
+    cfg.coordsys = 'neuromag';
+    cfg.spmversion = 'spm12';
+    mri_realigned = ft_volumerealign(cfg, mri_orig);
+    mri_realigned.coordsys = 'neuromag'; % remember that it is in neuromag coordinates
+
+    % Do you want to change the anatomical labels for the axes [Y, n]? y
+    % What is the anatomical label for the positive X-axis [r, l, a, p, s, i]? r
+    % What is the anatomical label for the positive Y-axis [r, l, a, p, s, i]? a
+    % What is the anatomical label for the positive Z-axis [r, l, a, p, s, i]? s
+    % Is the origin of the coordinate system at the a(nterior commissure), i(nterauricular), n(ot a landmark)? i
+
+    ft_determine_coordsys(mri_realigned, 'interactive', 'no')
+    ft_plot_headshape(headshape);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure01.png" width="700" %}
+
+    cfg = [];
+    cfg.translate = [0 70 -60];
+    cfg.rotate = [0 0 0];
+    cfg.scale = [150 100 120];
+    mri_defaced = ft_defacevolume(cfg, mri_realigned);
+
+    save mri_defaced.mat mri_defaced % save the data for sharing
+
+When we reslice this MRI, it becomes aligned with the Neuromag co-ordinate system (RAS) which means that slice images are shown in a different set of orientations to the CTF data that has been aligned to its own co-ordinate system. See [this FAQ](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined/) for more details on different coordinate systems.
+
+    cfg = [];
+    mri_resliced = ft_volumereslice(cfg, mri_defaced);
+
+    save mri_resliced.mat mri_resliced % save the data for sharing
+
+#### Importing and filtering the sensor level data
+
+Neuromag MEG data has two channel types - magnetometers and planar gradiometers - and in this analysis we use both at the same time. The units of planar magnetometers (field per distance) are different than the units of magnetometers (field), therefore we have to use SI units to ensure that all forward and inverse model computations are correct.
+
+We apply the same 10-70 Hz bandpass filter as for the CTF analysis.
+
+    dataset = fullfile(datadir, 'neuromag', 'case3.fif');
+
+    cfg = [];
+    cfg.dataset = dataset;
+    cfg.hpfilter = 'yes';
+    cfg.hpfreq = 10;
+    cfg.lpfilter = 'yes';
+    cfg.lpfreq = 70;
+    cfg.channel = {'megmag', 'meggrad'};
+    cfg.coilaccuracy = 0;
+    data = ft_preprocessing(cfg);
+
+The data comprises 300 seconds at 2000Hz, which results in a 16GB source reconstruction in memory. Although this is is fine for clinical work on heavy workstations, for demonstration purposes we will downsample the data here to reduce the memory requirements.
+
+    cfg = [];
+    cfg.resamplefs = 500;
+    data_resampled = ft_resampledata(cfg, data);
+
+We compute the data covariance window as before.
+
+    cfg = [];
+    cfg.channel = 'MEG';
+    cfg.covariance = 'yes';
+    cov_matrix = ft_timelockanalysis(cfg, data_resampled);
+
+    save cov_matrix cov_matrix
+
+#### Construction of the volume conduction model of the head
+
+This follows the same procedure as for the CTF data
+
+    mri_resliced = ft_read_mri('mri_resliced.mat');
+
+    cfg = [];
+    cfg.tissue = 'brain';
+    cfg.spmversion = 'spm12';
+    seg = ft_volumesegment(cfg, mri_resliced);
+
+    save seg seg
+
+    cfg = [];
+    cfg.tissue = 'brain';
+    cfg.spmversion = 'spm12';
+    brain_mesh = ft_prepare_mesh(cfg, seg);
+
+    cfg = [];
+    cfg.method = 'singleshell';
+    headmodel = ft_prepare_headmodel(cfg, brain_mesh);
+
+    save headmodel headmodel
+
+#### Construction of the source model
+
+    cfg = [];
+    cfg.resolution = 0.007; % clinical work would typically use a grid which <5mm
+    cfg.unit = 'm';
+    cfg.headmodel = headmodel;
+    cfg.grad = data.grad;
+    sourcemodel = ft_prepare_sourcemodel(cfg);
+
+    save sourcemodel sourcemodel
+
+    cfg = [];
+    cfg.channel = 'MEG';
+    cfg.headmodel = headmodel;
+    cfg.sourcemodel = sourcemodel;
+    cfg.normalize = 'yes'; % normalisation avoids power bias towards centre of head
+    cfg.reducerank = 2;
+    leadfield = ft_prepare_leadfield(cfg, cov_matrix);
+
+    save leadfield leadfield
+
+Again we plot all geometrical data to check their alignment.
+
+    figure
+    ft_plot_axes([], 'unit', 'mm', 'coordsys', 'neuromag');
+    ft_plot_headmodel(headmodel, 'unit', 'mm'); % this is the brain shaped head model volume
+    ft_plot_sens(data.grad, 'unit', 'mm', 'coilsize', 10); % the sensor locations
+    ft_plot_mesh(sourcemodel.pos, 'unit', 'mm'); % the source model is a cubic grid of points
+    ft_plot_ortho(mri_resliced.anatomy, 'transform', mri_resliced.transform, 'style', 'intersect');
+    alpha 0.5 % make the anatomical MRI slices a bit transparent
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure02.png" width="700" %}
+
+#### Compute the beamformer virtual channels and kurtosis
+
+At this point the analysis deviates from the CTF analysis because we need to account for differences in the covariance matrix that result from Maxfilter. First, we perform a singular value decomposition of the covariance matrix and plot the singular values, 's'. These are plotted in descending order, and the discontinuity that occurs after the 68th value reflects the effects of Maxfilter, which has reconstructed the data based on (typically) about 80 components.
+
+    [u,s,v] = svd(cov_matrix.cov);
+    figure;
+    semilogy(diag(s),'o-');
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure03.png" width="700" %}
+
+As we compute the LCMV beamformer below, we can use the information from the SVD to help regularize the covariance matrix using a truncation parameter called kappa. We set this at a value before the big 'cliff' in the singular values. We also set a parameter called lambda which can be considered a weighting factor for the regularization.
+
+    cfg = [];
+    cfg.method = 'lcmv';
+    cfg.sourcemodel = leadfield;
+    cfg.headmodel = headmodel;
+    cfg.lcmv.keepfilter = 'yes';
+    cfg.lcmv.fixedori = 'yes'; % project on axis of most variance using SVD
+    cfg.lcmv.lambda = '5%';
+    cfg.lcmv.kappa = 69;
+    cfg.lcmv.projectmom = 'yes'; % project dipole time series in direction of maximal power (see below)
+    cfg.lcmv.kurtosis = 'yes';
+    source = ft_sourceanalysis(cfg, cov_matrix);
+
+    save source source
+
+#### Explore the results
+
+The remainder of the analysis is identical to the CTF analysis: we interpolate and export the images and the time series.
 
     cfg = [];
     cfg.parameter = 'kurtosis';
-    sourcepi = ft_sourceinterpolate(cfg, sourcep, mrir);
-
-    %%
-
-    % cfg = [];
-    % cfg.funparameter = 'mom';
-    % ft_sourceplot(cfg, sourcep);
-
-    %%
+    source_interp = ft_sourceinterpolate(cfg, source, mri_resliced);
 
     cfg = [];
     cfg.funparameter = 'kurtosis';
-    ft_sourceplot(cfg, sourcep);
+    cfg.method = 'ortho'; % orthogonal slices with crosshairs at peak (default anyway if not specified)
+    ft_sourceplot(cfg, source_interp);
 
-    %%
-
-    cfg = [];
-    cfg.funparameter = 'kurtosis';
-    ft_sourceplot(cfg, sourcepi);
-
-    %% find peaks and plot timecourse
-
-    ispeak = findpeaksn(sourcep.kurtosis);
-    j = find(ispeak(:));
-    [m, i] = sort(-sourcep.kurtosis(j));
-    peaks = j(i);
-    disp(sourcep.pos(peaks(1:20),:));
-
-    % peak 1 is left frontal
-    % peak 4 is right frontal
-
-    s1 = sourcep.avg.mom{peaks(1)};
-    s4 = sourcep.avg.mom{peaks(4)};
-    shift = 1.1*(max(s1) - min(s4));
-
-    figure;
-    plot(sourcep.time, s1, 'r');
-    hold on
-    plot(sourcep.time, s4 + shift, 'm');
-    legend({'area 1', 'area 4'})
-
-    datas = [];
-    datas.time = {sourcep.time};
-    datas.trial = {[s1; s4]};
-    datas.label = {'area 1', 'area 4'}';
-
-    cfg = [];
-    cfg.comment = 'constructed virtual-channel raw data structure';
-    datas = ft_annotate(cfg, datas);
-
-    %%
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure04.png" width="700" %}
 
     cfg = [];
     cfg.funparameter = 'kurtosis';
-    cfg.location = sourcep.pos(peaks(1),:);
-    ft_sourceplot(cfg, sourcepi);
-    cfg.location = sourcep.pos(peaks(4),:);
-    ft_sourceplot(cfg, sourcepi);
+    cfg.method = 'slice'; % plot slices
+    ft_sourceplot(cfg, source_interp);
 
-    %% find maxima in virtual channel time series based on 6 SDs
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure05.png" width="700" %}
 
-    sd1 = std(s1);
-    sd4 = std(s4);
+    array = reshape(source.avg.kurtosis, source.dim);
+    array(isnan(array)) = 0;
+    ispeak = imregionalmax(array); % findpeaksn is an alternative that does not require the image toolbox
+    peakindex = find(ispeak(:));
+    [peakval, i] = sort(source.avg.kurtosis(peakindex), 'descend'); % sort on the basis of kurtosis value
+    peakindex = peakindex(i);
 
-    tr = abs(s1)>6*sd1 & abs(s4)>6*sd4;
-    % tr = conv(double(tr), ones(1,60), 'same');
-    tr = tr>0;
-    begsample = find(diff([tr 0]==1));
-    endsample = find(diff([tr 0]==1));
+    npeaks = 5;
+    disp(source.pos(peakindex(1:npeaks),:)); % output their positions
 
-    %%
+    for i = 1:npeaks
+      cfg = [];
+      cfg.funparameter = 'kurtosis';
+      cfg.location = source.pos(peakindex(i),:)*1000; % convert from m to mm
+      ft_sourceplot(cfg, source_interp);
+    end
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/animated_peaks.gif" width="700" %}
+
+##### Visualize the kurtisis images in MRIcro
 
     cfg = [];
-    datac = ft_appenddata(cfg, data, datas);
+    cfg.filename = 'Case3_anatomy.nii';
+    cfg.parameter = 'anatomy';
+    cfg.format = 'nifti';
+    ft_volumewrite(cfg, source_interp);
 
     cfg = [];
-    cfg.artfctdef.interictal.artifact = [begsample(:) endsample(:)];
-    cfg.viewmode = 'vertical';
+    cfg.filename = 'Case3_kurtosis.nii';
+    cfg.parameter = 'kurtosis';
+    cfg.format = 'nifti';
+    cfg.datatype = 'float'; % integer datatypes will be scaled to the maximum, floating point datatypes not
+    ft_volumewrite(cfg, source_interp);
+
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure06.png" width="700" %}
+
+##### Visualize the beamformer time series in AnyWave
+
+    cfg = [];
+    cfg.dataset = dataset;
     cfg.channel = 'MEG';
-    cfg.layout = 'CTF275.lay';
-    % cfg.event = ft_read_event(dataset);
-    ft_databrowser(cfg, datac);
-
-    %% show the provenance of the analysis pipeline
+    cfg.coilaccuracy = 0;
+    data_unfiltered = ft_preprocessing(cfg);
 
     cfg = [];
-    cfg.filename = 'sourcepi';
-    cfg.filetype = 'html';
-    ft_analysispipeline(cfg, sourcepi);
+    cfg.resamplefs = 500;
+    data_unfiltered_resampled = ft_resampledata(cfg, data_unfiltered);
 
-    !open sourcepi.html
+    dat = ft_fetch_data(data_unfiltered_resampled);
+    hdr = ft_fetch_header(data_unfiltered_resampled);
 
-### Analysis of the Elekta dataset
+    npeaks = 5;
+    for i = 1:npeaks
+      dat(end+1,:) = source.avg.mom{peakindex(i),:}; % see comment below about scaling
+      hdr.label{end+1}= ['S' num2str(i)];
+      hdr.chantype{end+1} = 'Source';
+      hdr.chanunit{end+1} = 'T' ; % see note below about scaling
+    end
+    hdr.nChans = hdr.nChans+npeaks;
+    ft_write_data('Case3_timeseries', dat, 'header', hdr, 'dataformat', 'anywave_ades');
 
-FIXME
+    fid = fopen('Case3_timeseries.mrk', 'w');
+    fprintf(fid,'%s\r\n','// AnyWave Marker File ');
+    k = 1;
+    for i = 1:npeaks
+      dat = source.avg.mom{peakindex(i),:};
+      sd = std(dat);
+      tr = zeros(size(dat));
+      tr(dat>6*sd)=1;
+      [tmp, peaksample] = findpeaks(tr, 'MinPeakDistance', 300); % peaks have to be separated by 300 sample points to be treated as separate
+      for j = 1:length(peaksample)
+        fprintf(fid, 'S%d_%02d\t', i, j); % marker name
+        fprintf(fid, '%d\t', dat(peaksample(j))); % marker value
+        fprintf(fid, '%d\t',source.time(peaksample(j)) ); % marker time
+        fprintf(fid, '%d\t', 0); % marker duration
+        fprintf(fid, 'S%d\r\n', i); % marker channel
+        k = k + 1;
+      end
+    end
+    fclose(fid);
 
-## Case 2
+{% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure07.png" width="700" %}
 
-_Female, age 14. Epilepsy. Referral for MEG because EEG did not allow laterlisation or localisation of discharges, though clinically they appeared to come from the left hemisphere. Functional neuroimaging in the form of a PET scan showed a right area of hypo metabolism. Surgical follow-up information about this patient is not available._
 
-MEG data was recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using an Elekta 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analysed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
+## Summary and Conclusions
 
-### Analysis of the CTF dataset
+This tutorial provided step-by-step details on how to perform a kurtosis beamformer analysis of epilepsy data using FieldTrip.  Data for 3 patients were shared, and detailed analysis instructions were given for Patient 3. As well as outlining how the data are processed in FieldTrip, the tutorial described how to write the outputs into file formats which can be read with other software, to continue the clincal interpretation of the data 
 
-FIXME
+As a next step, the reader can use the steps given for Patient 3 to analyse the data for the other two patients, as a proof-of-concept.
 
-### Analysis of the Elekta dataset
-
-FIXME
+In conclusion, this tutorial illustrates how the capabilities of FieldTrip are well suited to the requirements of epilepsy data analysis, and provide a clear and transparent pipeline that is easily applied.
