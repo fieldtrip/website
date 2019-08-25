@@ -13,19 +13,19 @@ FieldTrip is released under the [GNU General Public License](http://www.gnu.org/
 
 ## Introduction
 
-This tutorial describes how to perform a source localisation on epilepsy data using a kurtosis beamformer method implemented in FieldTrip. The tutorial assumes that the reader is already experienced with epilepsy data, and understands the basics of MEG, but is perhaps not familiar with FieldTrip or its capabilities. The tutorial does not attempt to fully explain the intrepretation of the results, which requires clinical expertise and further knowledge of the case histories.
+This tutorial describes how to perform a source localization on epilepsy data using a kurtosis beamformer method implemented in FieldTrip. The tutorial assumes that the reader is already experienced with epilepsy data, and understands the basics of MEG, but is perhaps not familiar with FieldTrip or its capabilities. The tutorial does not attempt to fully explain the intrepretation of the results, which requires clinical expertise and further knowledge of the case histories.
 
-The tutorial covers data for 3 patients, all shared via our FTP server. The provided datasets have varying degrees of clinical complexity. The more complex cases are, of course, the ones most likely to be referred for MEG recordings prior to consideration for surgery.
+The tutorial covers data for 3 patients, all shared via our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). The provided datasets have varying degrees of clinical complexity. The more complex cases are, of course, the ones most likely to be referred for MEG recordings prior to consideration for surgery.
 
-For one of the patients, Case 3, we provide a detailed line-by-line breakdown of the MATLAB code required to analyze the data. We outline the steps in obtaining the beamformer outputs, from anatomical coregistration right through to plotting source images. We note an important extra step that is required in computing the beamformer for data collected on an Neuromag/Elekta/MEGIN system compared to a CTF system. We also describe how to output the source images into NiFTI format for viewing in other software such as [MRIcro](https://www.mccauslandcenter.sc.edu/crnl/tools), and how to output source timeseries as a file which can be examined clinically alongside the original data in [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave) data viewing software.
+For one of the patients, case 3, we provide a detailed line-by-line breakdown of the MATLAB code required to analyze the data. We outline the steps in obtaining the beamformer outputs, from anatomical coregistration right through to plotting source images. We note an important extra step that is required in computing the beamformer for data collected on an Neuromag/Elekta/MEGIN system compared to a CTF system. We also describe how to output the source images into NiFTI format for viewing in other software such as [MRIcro](https://www.mccauslandcenter.sc.edu/crnl/tools), and how to output source timeseries as a file which can be examined clinically alongside the original data in [AnyWave](http://meg.univ-amu.fr/wiki/AnyWave) data viewing software.
 
-For patients 1 and 2, we simply provide a summary of the outputs and some other useful observations. These datasets can be analyzed by the reader in exactly the same way as Case 3.
+For patients 1 and 2, we simply provide a summary of the outputs and some other useful observations. These datasets can be analyzed by the reader in exactly the same way as case 3.
 
-All the MEG data were recorded at Aston Brain Centre (ABC) using both a 275-channel CTF system and using a 306-channel Neuromag system. The case reports and the data are kindly provided by Professor Stefano Seri; the steps in the kurtosis pipeline itself were provided by Dr Caroline Witton on behalf of the Aston clinical team. The data have been clinically analyzed by the staff of ABC using the software accompanying the MEG systems. The FieldTrip analysis demonstrated here is only for educational purposes.
+All the MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using a Neuromag 306-channel system. The case reports and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>); the steps in the kurtosis pipeline itself were provided by [Dr Caroline Witton](https://www2.aston.ac.uk/lhs/staff/az-index/wittonc-0) on behalf of the Aston clinical team. The data have been clinically analyzed by the staff of ABC using the software accompanying the MEG systems. The FieldTrip analysis demonstrated here is only for educational purposes.
 
 ## Background
 
-The kurtosis beamformer approach described here, for identifying the source(s) of epileptiform activity, was originally published by Kirsch et al (2006) and has subsequently been validated in other studies (e.g. [Hall et al 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5953276/)). Beamformer-based source localization can have particular advantages in cases where a wide network of cortical areas are affected, or where there is an initial lack of a priori evidence (e.g. from MRI or EEG) about the likely source of epileptogenic activity. Beamformers also provide excellent improvement in signal to noise ratio of the data.
+The kurtosis beamformer approach described here, for identifying the source(s) of epileptiform activity, was originally published by [Kirsch et al. 2006](https://www.ncbi.nlm.nih.gov/pubmed/16893680) and has subsequently been validated in other studies (e.g. [Hall et al. 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5953276/)). Beamformer-based source localization can have particular advantages in cases where a wide network of cortical areas are affected, or where there is an initial lack of _a_ _priori_ evidence (e.g. from MRI or EEG) about the likely source of epileptogenic activity. Beamformers also provide excellent improvement in signal to noise ratio of the data.
 
 ## Procedure
 
@@ -39,9 +39,7 @@ The Aston Brain Centre clinical staff would typically use the following sequence
 
 Because of the importance to clinical work of visually screening data and marking spikes, we have also incorporated here (with brief instructions) the use of [AnyWave software](http://meg.univ-amu.fr/wiki/AnyWave), an open-source package for visualizing MEG and EEG data which lends itself well to the interpretation of the outputs from this analysis.
 
-Since there are some small differences in the parameters for the beamformer analysis depending for CTF or Neuromag data, the analyses for each data type are presented here separately.
-
-For all cases, MEG data were recorded at [Aston Brain Centre](http://www.aston.ac.uk/lhs/research/centres-facilities/brain-centre/) (ABC) using both a 275-channel CTF system and using a Neuromag 306-channel system. This case report and the data are kindly provided by Professor [Stefano Seri](<https://research.aston.ac.uk/portal/en/persons/stefano-seri(448f2383-5cc6-48b7-ae19-f599c6e69c58).html>). The data has been clinically analyzed by the staff of ABC using the software accompanying the MEG system. The FieldTrip analysis demonstrated here is only for educational purposes.
+Since there are some small differences in the parameters for the beamformer analysis depending for CTF or Neuromag data, the analyzes for each data type are presented here separately.
 
 ## Case 1
 
@@ -56,7 +54,7 @@ Following the MEG, was operated in the right parietal area and is
 now partially seizure free.
 {% include markup/end %}
 
-The data analysis for this subject shows multiple maxima in the kurtosis, and a complex pattern of epileptiform spikes. Due to the complexity of the clinical case, we will not present results here, but we will report on some details. The data is available from [out FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
+The data analysis for this subject shows multiple maxima in the kurtosis, and a complex pattern of epileptiform spikes. Due to the complexity of the clinical case, we will not present results here, but we will report on some details. The data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
 
 #### Analysis of the CTF dataset
 
@@ -66,13 +64,13 @@ In the CTF recording it appears that the patient's head is tilted to the right, 
 
 #### Analysis of the Neuromag dataset
 
-In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artifact, so we can omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording when we use the **[ft_preprocessing](/reference/ft_preprocessing/)** command (see the line-by-line commands for Case 3, below).
+In this dataset, the head coils are switched on after 20 seconds of recording, which causes a filter artifact, so we can omit the first 20 seconds of data by specifying a single 'trial' from 21 seconds until the end of the recording by using the **[ft_preprocessing](/reference/ft_preprocessing/)** function (see the line-by-line commands for case 3, below).
 
-The joint analysis of planar and magnetometer channels for the Neuromag data did not result in satisfactory results. We chose to select only the planar gradiometers for further analysis. The results are similar, but not identical to the results from the CTF data. Both analyses reveal an area of relatively high kurtosis adjacent to the lesion, a glioma in the right parietal area. This was the area followed up by the surgical team, based on the kurtosis data (originally analyzed in CTF software) interpreted in the context of seizure semiology and neuroanatomy. Both analyses also yielded a strong peak in the left frontal cortex, which is also thought to be clinically significant (the peak indicated by the crosshairs in the image above).
+The joint analysis of planar and magnetometer channels for the Neuromag data did not result in satisfactory results. We chose to select only the planar gradiometers for further analysis. The results are similar, but not identical to the results from the CTF data. Both analyzes reveal an area of relatively high kurtosis adjacent to the lesion, a glioma in the right parietal area. This was the area followed up by the surgical team, based on the kurtosis data (originally analyzed in CTF software) interpreted in the context of seizure semiology and neuroanatomy. Both analyzes also yielded a strong peak in the left frontal cortex, which is also thought to be clinically significant.
 
 In contrast with the CTF data, this analysis of the Neuromag data did not show an activation in the right frontal cortex, perhaps because of differences in the patterns of spiking activity in the different recordings, or alternatively perhaps because the patient's head was located further from these sensors in this recording. The deeper activity that can be seen in the slice images appears to be located in white matter, but is potentially leakage from activity propagated to deeper areas e.g. insula cortex.
 
-The flexibility of FieldTrip can offer additional information to support data interpretation. For example, the step above where the MRI, sensors, head model and mesh are plotted together, can be used to examine positioning within the MEG helmet. This can be particularly important for clinical analysis with children because, with smaller heads, they can potential move quite far from the sensors. In the Maxfiltering process for the Neuromag data above, the continuous head position monitoring allowed the sensor time series to be realigned to a 'standard' position in the centre of the MEG helmet so this effect is not observed. However if the head position is plotted for a version of the data where this head position correction was not done, the original positioning of the brain in relation to the sensors can be seen. In this case, the patient's head was not centrally located during the recording. This might explain the lack of activation in the right temporal lobe for this dataset and underlines the need for MEG systems which better serve pediatric recordings.
+The flexibility of FieldTrip can offer additional information to support data interpretation. For example, the step where the MRI, sensors, head model and mesh are plotted together, can be used to examine positioning within the MEG helmet. This can be particularly important for clinical analysis with children because, with smaller heads, they can potential move quite far from the sensors. In the Maxfiltering process for the Neuromag data above, the continuous head position monitoring allowed the sensor time series to be realigned to a 'standard' position in the centre of the MEG helmet so this effect is not observed. However if the head position is plotted for a version of the data where this head position correction was not done, the original positioning of the brain in relation to the sensors can be seen. In this case, the patient's head was not centrally located during the recording. This might explain the lack of activation in the right temporal lobe for this dataset and underlines the need for MEG systems which better serve pediatric recordings.
 
 {% include image src="/assets/img/tutorial/epilepsy/case1b_headpos.png" width="400" %}
 
@@ -80,7 +78,7 @@ The flexibility of FieldTrip can offer additional information to support data in
 
 {% include markup/success %}
 Female, age 14. Epilepsy. Referral for MEG because EEG did not
-allow laterlisation or localisation of discharges, though clinically
+allow laterlisation or localization of discharges, though clinically
 they appeared to come from the left hemisphere. Functional neuroimaging
 in the form of a PET scan showed a right area of hypometabolism.
 
@@ -88,7 +86,7 @@ We don't have surgical follow-up information about this patient,
 because she was not from our local hospital.
 {% include markup/end %}
 
-Analysis using a pipeline similar to that for case 3 gives meaningful focal results (not presented here). The data is available from [out FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
+Analysis using a pipeline similar to that for case 3 gives meaningful focal results (not presented here). The data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy).
 
 #### Analysis of the CTF dataset
 
@@ -113,13 +111,13 @@ had been an increase in seizures which included blank episodes and
 jerks. She presented with difficulties in verbal comprehension and
 memory.
 
-Her MRI revealed Right perisylvian polymicrogyria. Medication included
+Her MRI revealed right perisylvian polymicrogyria. Medication included
 Leviteracetum and Carbmazepine. Investigations were to consider epilepsy
 surgery, though the extent of the polymicrogyria rendered this a difficult
 option.
 {% include markup/end %}
 
-The shared data is available from [out FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
+The shared data is available from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). After downloading the data, we set up the path and ensure that FieldTrip is the only toolbox on the path. See also [this FAQ](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path).
 
     restoredefaultpath
     addpath ~/matlab/fieldtrip/
@@ -139,7 +137,7 @@ We want to store all processed results in a different directory than the one con
 The original MRI that is provided for this patient has been partially processed with the CTF software and MRIcro, and is stored in NIFTI format. This MRI is _not shared_ for privacy reasons. Nevertheless, here we will show how it was processed in FieldTrip.
 
 {% include markup/info %}
-For coregistration we need the original MRI with full facial details, however this is not shared. You should skip this section and continue after the coregistration.
+For coregistration we need the original MRI with full facial details, however this is not shared for reasons of anonymity. You should skip this section and continue after the coregistration.
 {% include markup/end %}
 
     mri_orig = ft_read_mri(fullfile(datadir, 'case3.nii'));
@@ -701,10 +699,11 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
 
 {% include image src="/assets/img/tutorial/epilepsy/case3/neuromag/figure07.png" width="700" %}
 
+
 ## Summary and Conclusions
 
-This tutorial provided step-by-step details on how to perform a kurtosis beamformer analysis of epilepsy data using FieldTrip. Data for 3 patients were shared, and detailed analysis instructions were given for Patient 3. As well as outlining how the data are processed in FieldTrip, the tutorial described how to write the outputs into file formats which can be read with other software, to continue the clincal interpretation of the data
+This tutorial provided step-by-step details on how to perform a kurtosis beamformer analysis of epilepsy data using FieldTrip.  Data for 3 patients were shared, and detailed analysis instructions were given for Patient 3. As well as outlining how the data are processed in FieldTrip, the tutorial described how to write the outputs into file formats which can be read with other software, to continue the clinical interpretation of the data
 
-As a next step, the reader can use the steps given for Patient 3 to analyse the data for the other two patients, as a proof-of-concept.
+As a next step, the reader can use the steps given for Patient 3 to analyze the data for the other two patients, as a proof-of-concept.
 
 In conclusion, this tutorial illustrates how the capabilities of FieldTrip are well suited to the requirements of epilepsy data analysis, and provide a clear and transparent pipeline that is easily applied.
