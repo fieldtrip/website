@@ -702,7 +702,7 @@ The remainder of the analysis is identical to the CTF analysis: we interpolate a
 
 ## Summary and Conclusions
 
-This tutorial provided step-by-step details on how to perform a kurtosis beamformer analysis of epilepsy data using FieldTrip.  Data for 3 patients were shared, and detailed analysis instructions were given for Patient 3. As well as outlining how the data are processed in FieldTrip, the tutorial described how to write the outputs into file formats which can be read with other software, to continue the clinical interpretation of the data
+This tutorial provided step-by-step details on how to perform a kurtosis beamformer analysis of epilepsy data using FieldTrip.  Data for 3 patients were shared, and detailed analysis instructions were given for Patient 3. As well as outlining how the data are processed in FieldTrip, the tutorial described how to write the outputs into file formats which can be read with other software, to continue the clinical interpretation of the data.
 
 As a next step, the reader can use the steps given for Patient 3 to analyze the data for the other two patients, as a proof-of-concept.
 
