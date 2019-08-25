@@ -66,7 +66,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How are the different head and MRI coordinate systems defined?](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)
 - [How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?](/faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer)
 - [How can I convert an anatomical mri from DICOM into CTF format?](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format)
-- [How can I determine the anatomical label of a source?](/faq/how_can_i_determine_the_anatomical_label_of_a_source)
+- [How can I determine the anatomical label of a source or electrode?](/faq/how_can_i_determine_the_anatomical_label_of_a_source)
 - [How can I fine-tune my BEM volume conduction model?](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/how_can_i_map_source_locations_between_two_different_representations)
 - [How can I use OpenMEEG for forward modelling?](/faq/how_can_i_use_openmeeg_for_forward_modelling)
