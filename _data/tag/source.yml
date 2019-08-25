@@ -67,7 +67,7 @@
 - name:  How can I check whether the grid that I have is aligned to the segmented volume and to the sensor gradiometer?
   link:  /faq/how_can_i_check_whether_the_grid_that_i_have_is_aligned_to_the_segmented_volume_and_to_the_sensor_gradiometer
 
-- name:  How can I determine the anatomical label of a source?
+- name:  How can I determine the anatomical label of a source or electrode?
   link:  /faq/how_can_i_determine_the_anatomical_label_of_a_source
 
 - name:  How can I fine-tune my BEM volume conduction model?

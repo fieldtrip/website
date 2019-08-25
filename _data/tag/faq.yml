@@ -130,7 +130,7 @@
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
 
-- name:  How can I determine the anatomical label of a source?
+- name:  How can I determine the anatomical label of a source or electrode?
   link:  /faq/how_can_i_determine_the_anatomical_label_of_a_source
 
 - name:  How can I determine the number of threads that MATLAB uses?
