@@ -313,7 +313,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
     atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
 
-**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere’s hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file).
+**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere’s hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/how_can_i_determine_the_anatomical_label_of_a_source).
 
     cfg            = [];
     cfg.roi        = elec_mni_frv.chanpos(match_str(elec_mni_frv.label,'LHH1'),:);
@@ -566,7 +566,6 @@ You can read more about intracranial EEG and other types of intracranial recordi
 {% include seealso tag1="getting_started" tag2="bioimage" %}
 {% include seealso tag1="example" tag2="ecog" %}
 {% include seealso tag1="tutorial" tag2="animal" %}
-[How can I determine the anatomical label of a source or electrode?](/faq/how_can_i_determine_the_anatomical_label_of_a_source)
 
 Here is also a list of related documentation:
 
