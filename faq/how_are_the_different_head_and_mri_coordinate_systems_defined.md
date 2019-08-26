@@ -45,11 +45,11 @@ Imaging methods such as MRI and CT result in 3-D volumetric representations of t
 | DICOM              | mm    | LPS         |                                             | native                                                                                                    |                              |
 | FreeSurfer         | mm    | RAS         | center of isotropic 1 mm 256x256x256 volume |                                                                                                           |                              |
 | MNI                | mm    | RAS         | anterior commissure                         | scaled to match averaged template                                                                         |                              |
-| NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |
+| NIfTI              | mm    | RAS         | scanner origin (centre of gradient coil)    | see [here](https://brainder.org/2012/09/23/the-nifti-file-format/), search for "Orientation information". |                              |
 | Neuromag/Elekta    | m     | RAS         | between the ears                            | native                                                                                                    |                              |
 | Paxinos-Franklin   | mm    | RSP         | Bregma point                                |                                                                                                           |                              |
 | Talairach-Tournoux | mm    | RAS         | anterior commissure                         | scaled to match atlas                                                                                     |                              |
-| Yokogawa           |       | ALS         | center of device                            |                                                                                                           |
+| Yokogawa           |       | ALS         | center of device                            |                                                                                                           |                              |
 
 A/P means anterior/posterior
 L/R means left/right
@@ -199,29 +199,6 @@ The **Neuromag** coordinate system is expressed in meter, with the principal (X,
 
 Note that this coordinate system applies when images are not registered to a standard space; if they are, the coordinate system of the relevant standard space applies (e.g. MNI or Talairach-Tournoux). See also [here](https://brainder.org/2012/09/23/the-nifti-file-format/) (search for "Orientation information").
 
-## Details of the Polhemus coordinate system
-
-The **Polhemus** coordinate system as such does not exist. [Polhemus](http://www.polhemus.com) is the company that manufactures electromagnetic 3-D trackers for a large variety of applications, and usually the trackers are sold to you by an EEG company. The EEG company bundles the tracker with specific software for recording the position of the electrodes. The software program communicates with the tracker, and presents the measured electrode locations on the computer screen and writes them to an ASCII file. Therefore, the software determines the coordinate system that is used. It is common to require the user first to record external anatomical landmarks (i.e. fiducials) on the head: usually the left and right pre-auricular points and the nasion. Using there fiducials, the software can convert all subsequent electrode positions into a head coordinate system.
-
-The most common definition of the head coordinate system used by the software that accompanies the Polhemus tracker is
-
-- the origin is exactly between LPA and RPA
-- the X-axis goes towards NAS
-- the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
-- the Z-axis goes approximately towards the vertex, orthogonal to X and Y
-
-## Details of the Talairach-Tournoux coordinate system
-
-The [Co-Planar Stereotaxic Atlas of the Human Brain](https://www.thieme.com/books-main/neurosurgery/product/414-co-planar-stereotaxic-atlas-of-the-human-brain) (1988) by Talairach and Tournoux defines a coordinate system using the Anterior and Posterior Commissure and applies that on a post-mortem dissection of an individual human brain. Furthermore, it introduces a strategy for piece-wise linear scaling to allow other brains to be compared to the template brain that is featured in the atlas.
-The Talairach-Tournoux coordinate system is comparable to, but [not exactly the same as the MNI coordinate system](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach). It is defined using landmarks inside the brain and therefore can only be determined from an MRI scan, CT scan, or X-ray photo. This is in contrast to the external landmarks that are used for EEG/MEG recording. The landmarks used in the TT coordinate system are the anterior and posterior commisura (AC and PC) and the coordinate axes are defined according to
-
-- the origin of the TT coordinate system is in the AC
-- the y-axis goes towards the front of the brain, along the line connecting PC and AC
-- the z-axis goes towards the top of the brain
-- the x-axis goes towards the right side of the brain
-
-See also this [frequently asked question](/faq/acpc).
-
 ## Details on the Paxinos-Franklin mouse coordinate system
 
 The Paxinos-Franklin atlas [The Mouse Brain in Stereotaxic Coordinate (2001)](http://www.amazon.com/Mouse-Stereotaxic-Coordinates-Second-Edition/dp/0125476361) defines a commonly used coordinate system for the mouse brain anatomy. Note however, that other coordinate system definitions are also being used.
@@ -254,6 +231,29 @@ Converting from Bregma to interaural as origin of the coordinate system involves
         0 0 1 Tz
         0 0 0 1
     ];
+
+## Details of the Polhemus coordinate system
+
+The **Polhemus** coordinate system as such does not exist. [Polhemus](http://www.polhemus.com) is the company that manufactures electromagnetic 3-D trackers for a large variety of applications, and usually the trackers are sold to you by an EEG company. The EEG company bundles the tracker with specific software for recording the position of the electrodes. The software program communicates with the tracker, and presents the measured electrode locations on the computer screen and writes them to an ASCII file. Therefore, the software determines the coordinate system that is used. It is common to require the user first to record external anatomical landmarks (i.e. fiducials) on the head: usually the left and right pre-auricular points and the nasion. Using there fiducials, the software can convert all subsequent electrode positions into a head coordinate system.
+
+The most common definition of the head coordinate system used by the software that accompanies the Polhemus tracker is
+
+- the origin is exactly between LPA and RPA
+- the X-axis goes towards NAS
+- the Y-axis goes approximately towards LPA, orthogonal to X and in the plane spanned by the fiducials
+- the Z-axis goes approximately towards the vertex, orthogonal to X and Y
+
+## Details of the Talairach-Tournoux coordinate system
+
+The [Co-Planar Stereotaxic Atlas of the Human Brain](https://www.thieme.com/books-main/neurosurgery/product/414-co-planar-stereotaxic-atlas-of-the-human-brain) (1988) by Talairach and Tournoux defines a coordinate system using the Anterior and Posterior Commissure and applies that on a post-mortem dissection of an individual human brain. Furthermore, it introduces a strategy for piece-wise linear scaling to allow other brains to be compared to the template brain that is featured in the atlas.
+The Talairach-Tournoux coordinate system is comparable to, but [not exactly the same as the MNI coordinate system](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach). It is defined using landmarks inside the brain and therefore can only be determined from an MRI scan, CT scan, or X-ray photo. This is in contrast to the external landmarks that are used for EEG/MEG recording. The landmarks used in the TT coordinate system are the anterior and posterior commisura (AC and PC) and the coordinate axes are defined according to
+
+- the origin of the TT coordinate system is in the AC
+- the y-axis goes towards the front of the brain, along the line connecting PC and AC
+- the z-axis goes towards the top of the brain
+- the x-axis goes towards the right side of the brain
+
+See also this [frequently asked question](/faq/acpc).
 
 ## Details of the Yokogawa coordinate system
 
