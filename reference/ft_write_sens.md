@@ -15,6 +15,8 @@ title: ft_write_sens
 
  The supported file formats are
    bioimage_mgrid
+   besa_sfp
+   polhemus_pos
    matlab
 
  See also FT_READ_SENS, FT_DATATYPE_SENS

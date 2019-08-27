@@ -2,25 +2,25 @@
 title: ft_prepare_mesh
 ---
 ```plaintext
- FT_PREPARE_MESH creates a triangulated surface mesh for the volume
- conduction model. The mesh can either be selected manually from raw
- mri data or can be generated starting from a segmented volume
- information stored in the mri structure. FT_PREPARE_MESH can be used
- to create a cortex hull, i.e. the smoothed envelope around the pial
- surface created by freesurfer. The result is a bnd structure which
- contains the information about all segmented surfaces related to mri
- sand are expressed in world coordinates.
+ FT_PREPARE_MESH creates a triangulated surface mesh or tetrahedral/hexahedral
+ volume mesh that can be used as geometrical description for a volume conduction
+ model. The mesh can either be created manually from anatomical MRI data or can be
+ generated starting from a segmented MRI. This function can also be used to create a
+ cortex hull, i.e. the smoothed envelope around the pial surface created by
+ freesurfer.
 
  Use as
-   bnd = ft_prepare_mesh(cfg)
-   bnd = ft_prepare_mesh(cfg, mri)
-   bnd = ft_prepare_mesh(cfg, seg)
+   mesh = ft_prepare_mesh(cfg)
+   mesh = ft_prepare_mesh(cfg, mri)
+   mesh = ft_prepare_mesh(cfg, seg)
 
  Configuration options:
    cfg.method      = string, can be 'interactive', 'projectmesh', 'iso2mesh', 'isosurface',
                      'headshape', 'hexahedral', 'tetrahedral','cortexhull', 'fittemplate'
-   cfg.tissue      = cell-array with tissue types or numeric vector with integer values
-   cfg.numvertices = numeric vector, should have same number of elements as cfg.tissue
+   cfg.tissue      = cell-array with strings representing the tissue types, or numeric vector with integer values
+   cfg.numvertices = numeric vector, should have same number of elements as the number of tissues
+
+ When providing an anatomical MRI or a segmentation, you should specify
    cfg.downsample  = integer number (default = 1, i.e. no downsampling), see FT_VOLUMEDOWNSAMPLE
    cfg.spmversion  = string, 'spm2', 'spm8', 'spm12' (default = 'spm8')
 
@@ -34,8 +34,8 @@ title: ft_prepare_mesh
  For method 'fittemplate' you should specify
    cfg.headshape   = a filename containing headshape
    cfg.template    = a filename containing headshape
- With this method you are fitting the headshape from the configuration to the template; 
- the resulting affine transformation is applied to the input mesh (or set of meshes), 
+ With this method you are fitting the headshape from the configuration to the template;
+ the resulting affine transformation is applied to the input mesh (or set of meshes),
  which is subsequently returned as output variable.
 
 
@@ -57,7 +57,7 @@ title: ft_prepare_mesh
    cfg             = [];
    cfg.tissue      = {'scalp', 'skull', 'brain'};
    cfg.numvertices = [800, 1600, 2400];
-   bnd             = ft_prepare_mesh(cfg, segmentation);
+   mesh            = ft_prepare_mesh(cfg, segmentation);
 
    cfg             = [];
    cfg.method      = 'cortexhull';
