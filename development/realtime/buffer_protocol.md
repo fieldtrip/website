@@ -121,7 +121,7 @@ The response will be the 8-byte triple `version=1`,`command`,`bufsize=0`. On suc
 
 #### Example
 
-Suppose you want to append 200 samples from 32 channels of single precision data. In this case, the `data_type` field contains the value 9 (DATATYPE_FLOAT32 in "message.h"), and the size of all samples is 200*32*4 = 25600 bytes. The complete request would look like this:
+Suppose you want to append 200 samples from 32 channels of single precision data. In this case, the `data_type` field contains the value 9 (DATATYPE_FLOAT32 in "message.h"), and the size of all samples is 200\*32\*4 = 25600 bytes. The complete request would look like this:
 
 | message definition (request)                  | fixed data definition                                       | data samples                                       |
 | --------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------- |
@@ -155,7 +155,7 @@ If an error occurs, for example if the requested indices are outside of the rang
 
 ### PUT_EVT: Put events into the buffer
 
-Using this request, clients can store events (in a ringbuffer similar to that used for the data samples). The `command` number of this request is 0x103 (=259). As for the PUT*DAT request, you can only `append` events, and at some point old events will fall out of the ring buffer. Every event is described by a fixed structure followed by a variable-length field that contains the event's \_type* and _value_.
+Using this request, clients can store events (in a ringbuffer similar to that used for the data samples). The `command` number of this request is 0x103 (=259). As for the PUT_DAT request, you can only `append` events, and at some point old events will fall out of the ring buffer. Every event is described by a fixed structure followed by a variable-length field that contains the event's _type_ and _value_.
 
 The fixed part (32 bytes) consists of the following fields (`eventdef_t` in "message.h"):
 
@@ -308,7 +308,7 @@ If you only want to wait for new events, and do not care about data samples (yet
 
 ### Chunks for transmitting extended header information
 
-As already mentioned, the PUT*HDR request can contain a variable part consisting of \_chunks*. These are transmitted one after another (`chunk_t` in "message.h"). Their structure is:
+As already mentioned, the PUT_HDR request can contain a variable part consisting of _chunks_. These are transmitted one after another (`chunk_t` in "message.h"). Their structure is:
 
 | field  | type   | description                                                      |
 | ------ | ------ | ---------------------------------------------------------------- |
