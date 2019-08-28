@@ -45,7 +45,7 @@ title: data2bids
  obtain the sidecar files for a dataset that already has the correct BIDS name.
 
  CONVERT - data2bids will read the input data (or use the specified input data) and
- write it to a new output file that is BIDS compliant. The output format is NIFTI
+ write it to a new output file that is BIDS compliant. The output format is NIfTI
  for MRI data, and BrainVision for EEG and iEEG. Note that MEG data files are stored
  in BIDS in their native format and this function will NOT convert them for you.
 
@@ -82,7 +82,7 @@ title: data2bids
  In case any of these values is specified as empty (i.e. []) or as nan, it will be
  written to the tsv file as 'n/a'.
 
- In case cfg.dataset points to a NIFTI file, or in case you pass a preprocessed MRI
+ In case cfg.dataset points to a NIfTI file, or in case you pass a preprocessed MRI
  as input data structure, you can specify cfg.mri.dicomfile to read the detailed MR
  scanner and sequence details from the DICOM file. This will be used to fill in the
  details of the corresponding JSON file.
