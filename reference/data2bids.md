@@ -21,18 +21,11 @@ title: data2bids
  and/or realigned and defaced anatomical MRI to disk.
 
  The configuration structure should contains
-   cfg.method                  = string, can be 'decorate', 'convert' or 'copy', see below (default is automatic)
-   cfg.dataset                 = string, filename of the input data
-   cfg.outputfile              = string, optional filename for the output data
-   cfg.mri.deface              = string, 'yes' or 'no' (default = 'no')
-   cfg.mri.writesidecar        = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
-   cfg.meg.writesidecar        = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
-   cfg.eeg.writesidecar        = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
-   cfg.ieeg.writesidecar       = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
-   cfg.events.writesidecar     = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
-   cfg.coordystem.writesidecar = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
-   cfg.channels.writesidecar   = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
-   cfg.electrodes.writesidecar = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
+   cfg.method       = string, can be 'decorate', 'convert' or 'copy', see below (default is automatic)
+   cfg.dataset      = string, filename of the input data
+   cfg.outputfile   = string, optional filename for the output data (default is automatic)
+   cfg.writejson    = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
+   cfg.writetsv     = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
 
  This function starts from existing data file on disk or from a FieldTrip compatible
  data structure in MATLAB memory that is passed as the second input argument.
@@ -42,7 +35,7 @@ title: data2bids
 
  DECORATE - data2bids will read the header details and events from the data and write
  the appropriate sidecar files alongside the existing dataset. You would use this to
- obtain the sidecar files for a dataset that already has the correct BIDS name.
+ obtain the sidecar files for data files that are already in the BIDS organization.
 
  CONVERT - data2bids will read the input data (or use the specified input data) and
  write it to a new output file that is BIDS compliant. The output format is NIfTI
@@ -82,26 +75,27 @@ title: data2bids
  In case any of these values is specified as empty (i.e. []) or as nan, it will be
  written to the tsv file as 'n/a'.
 
- In case cfg.dataset points to a NIfTI file, or in case you pass a preprocessed MRI
- as input data structure, you can specify cfg.mri.dicomfile to read the detailed MR
- scanner and sequence details from the DICOM file. This will be used to fill in the
- details of the corresponding JSON file.
-   cfg.mri.dicomfile           = string, filename of a matching DICOM file for header details (default = [])
+ For anatomical and functional MRI data you can specify cfg.dicomfile to read the
+ detailed MRI scanner and sequence details from the header of that DICOM file. This
+ will be used to fill in the details of the corresponding JSON file.
+   cfg.dicomfile               = string, filename of a matching DICOM file for header details (default = [])
+   cfg.deface                  = string, 'yes' or 'no' (default = 'no')
 
- You can specify cfg.events.trl as a Nx3 matrix with the trial definition (see
+ You can specify cfg.events as a Nx3 matrix with the trial definition (see
  FT_DEFINETRIAL) or as a MATLAB table. When specified as table, the first three
  columns containing integer values corresponding to the begsample, endsample and
  offset, the additional colums can be of another type and have any name. If you do
  not specify the trial definition, the events will be read from the MEG/EEG/iEEG
  dataset. Events from the trial definition or from the data will be written to
  events.tsv.
-   cfg.events.trl              = trial definition, see also FT_DEFINETRIAL
+   cfg.events                  = trial definition (see FT_DEFINETRIAL) or event structure (see FT_READ_EVENT)
 
- You can specify cfg.presentationfile with the name of a NBS presentation log file,
- which will be aligned with the data based on triggers (MEG/EEG/iEEG) or based on
- the volumes (fMRI). To indicate how triggers (in MEG/EEG/iEEG) or volumes (in fMRI)
- match the presentation events, you should also specify the mapping between them.
- Events from the presentation log file will be written to events.tsv.
+ If NBS Presentation was used in combination with another functional data type, you
+ can specify cfg.presentationfile with the name of the presentation log file, which
+ will be aligned with the data based on triggers (MEG/EEG/iEEG) or based on the
+ volumes (fMRI). Events from the presentation log file will also be written to
+ events.tsv. To indicate how triggers (in MEG/EEG/iEEG) or volumes (in fMRI) match
+ the presentation events, you should specify the mapping between them.
    cfg.presentationfile        = string, optional filename for the presentation log file
    cfg.trigger.eventtype       = string (default = [])
    cfg.trigger.eventvalue      = string or number
@@ -112,7 +106,7 @@ title: data2bids
  For EEG and iEEG data you can specify an electrode definition according to
  FT_DATATYPE_SENS as an "elec" field in the input data, or you can specify it as
  cfg.elec or you can specify a filename with electrode information.
-   cfg.elec                     = structure with electrode positions or filename, see FT_READ_SENS
+   cfg.elec                    = structure with electrode positions or filename, see FT_READ_SENS
 
  General BIDS options that apply to all data types are
    cfg.InstitutionName             = string
@@ -161,5 +155,5 @@ title: data2bids
  http://bids.neuroimaging.io/ for further details.
 
  See also FT_DATAYPE_RAW, FT_DATAYPE_VOLUME, FT_DATATYPE_SENS, FT_DEFINETRIAL,
- FT_PREPROCESSING, FT_READ_MRI
+ FT_PREPROCESSING, FT_READ_MRI, FT_READ_EVENT
 ```
