@@ -16,10 +16,8 @@ title: ft_read_event
    'eventformat'    string
    'header'         header structure, see FT_READ_HEADER
    'detectflank'    string, can be 'bit', 'up', 'down', 'both', 'peak', 'trough' or 'auto' (default is system specific)
-   'chanindx'       list with channel indices in case of different sampling frequencies (only for EDF)
    'trigshift'      integer, number of samples to shift from flank to detect trigger value (default = 0)
-   'trigindx'       list with channel numbers for the trigger detection, only for Yokogawa & Ricoh (default is automatic)
-   'triglabel'      list of channel labels for the trigger detection (default is all ADC* channels for Artinis .oxy3- or .oxy4-  files)
+   'chanindx'       list with channel numbers for the trigger detection (default is automatic)
    'threshold'      threshold for analog trigger channels (default is system specific)
    'blocking'       wait for the selected number of events (default = 'no')
    'timeout'        amount of time in seconds to wait when blocking (default = 5)

@@ -66,4 +66,6 @@ title: ft_filetype
   - Nicolet *.e (currently from Natus, formerly Carefusion, Viasys and Taugagreining. Also known as Oxford/Teca/Medelec Valor Nervus)
   - Biopac *.acq
   - AnyWave *.ades
+  - Qualisys *.tsv
+  - Mrtrix *.mif
 ```

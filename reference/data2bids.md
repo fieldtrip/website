@@ -99,6 +99,7 @@ title: data2bids
    cfg.presentationfile        = string, optional filename for the presentation log file
    cfg.trigger.eventtype       = string (default = [])
    cfg.trigger.eventvalue      = string or number
+   cfg.trigger.skip            = 'last'/'first'/'none'
    cfg.presentation.eventtype  = string (default = [])
    cfg.presentation.eventvalue = string or number
    cfg.presentation.skip       = 'last'/'first'/'none'

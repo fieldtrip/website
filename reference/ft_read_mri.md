@@ -34,6 +34,7 @@ title: ft_read_mri
    'nifti_fsl'                  uses FreeSurfer code
    'nifti_spm'                  uses SPM
    'yokogawa_mri'
+   'mrtrix_mif'                 uses mrtrix code
 
  The following MRI file formats are supported
    CTF (*.svl, *.mri version 4 and 5)
@@ -46,6 +47,7 @@ title: ft_read_mri
    Neuromag/Elekta (*.fif)
    ANT - Advanced Neuro Technology (*.mri)
    Yokogawa (*.mrk, incomplete)
+   Mrtrix image format (*.mif)
 
  If you have a series of DICOM files, please provide the name of any of the files
  in the series (e.g. the first one). The other files will be found automatically.
