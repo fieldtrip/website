@@ -81,7 +81,7 @@ The procedure for converting the original data consists of a number of steps
 
 Step 1-5 and step 7 are implemented using [Bash](<https://en.wikipedia.org/wiki/Bash_(Unix_shell)>) scripts. The construction of the sidecar files in step 6 is implemented using the **[data2bids](/reference/data2bids)** function that is part of FieldTrip. The final step is not automated, but consists of some manual work.
 
-After each of the automated steps the results should be checked. For that I have been using the command line applications like "find DIR -name PATTERN | wc -l" to count the number of files, but also a graphical databrowser to check the directory structure and a text editor to check the content of the JSON and TSV sidecar files.
+After each of the automated steps the results should be checked. For that I have been using the command line applications like `find DIR -name PATTERN | wc -l` to count the number of files, but also a graphical databrowser to check the directory structure and a text editor to check the content of the JSON and TSV sidecar files.
 
 It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
 
