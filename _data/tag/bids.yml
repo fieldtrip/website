@@ -1,11 +1,23 @@
 - name:  BIDS - the brain imaging data structure
   link:  /example/bids
 
+- name:  Converting an example behavioral dataset for sharing in BIDS
+  link:  /example/bids_behavioral
+
 - name:  Converting an example EEG dataset for sharing in BIDS
   link:  /example/bids_eeg
 
+- name:  Converting an example EMG dataset for sharing in BIDS
+  link:  /example/bids_emg
+
+- name:  Converting an example eyetracker dataset for sharing in BIDS
+  link:  /example/bids_eyetracker
+
 - name:  Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
   link:  /example/bids_mous
+
+- name:  Converting an example video dataset for sharing in BIDS
+  link:  /example/bids_video
 
 - name:  How should I specify the coordinate systems in a BIDS dataset?
   link:  /faq/bids_coordsystem
