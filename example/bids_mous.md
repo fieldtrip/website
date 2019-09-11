@@ -489,7 +489,7 @@ end % for each subject
 {% include markup/info %}
 This script here deals with some dataset specific exceptions. Indeed, given the fact that we are working with real data here, due to various reasons, automatic conversions (one-size-fits-all) are likely to occasionally fail.
 
-In the current context, the tricky part happened to be the creation of the events.tsv files for the MEG task data. In order to create these files, data2bids attempts to align the experimental events, as extracted from the presentation software logfile, with the experimental events, as extracted from the digital trigger channel in the MEG data files. This only works well and unambiguously, if there's a one-to-one-mapping of the events (or a specific type of event) in the two representations.
+In the current context, the tricky part happened to be the creation of the events.tsv files for the MEG task data. In order to create these files, **[data2bids](/reference/data2bids)** attempts to align the experimental events, as extracted from the presentation software logfile, with the experimental events, as extracted from the digital trigger channel in the MEG data files. This only works well and unambiguously, if there's a one-to-one-mapping of the events (or a specific type of event) in the two representations.
 
 In the current example, there were occasional issues with the digital trigger channel, which precluded fully automatic processing of all files. The resulting example script above is therefore the result of several iterations to deal with the exceptions.
 {% include markup/end %}
