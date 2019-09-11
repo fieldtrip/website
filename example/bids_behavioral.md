@@ -52,7 +52,7 @@ general.bidsroot = targetpath;
 general.datatype = 'events';
 ```
 
-## Presentation log files
+### Presentation log files
 
 ```
 % the first two files are in Presentation .log format
@@ -88,7 +88,7 @@ for i=1:numel(subject)
 end
 ```
 
-## Custom log files
+### Custom log files
 
 The standard MATLAB [readtable](https://www.mathworks.com/help/matlab/ref/readtable.html) function is very useful to read tabular data. It automatically figures out whether there are header lines to skip, what the column headings are (if any), and what the separator between the columns is. This function returns a MATLAB table object, which is similar to a 2D cell-array, but it includes column headings.
 

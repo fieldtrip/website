@@ -6,18 +6,14 @@ tags: [example, bids, sharing, eyetracker]
 # Converting an example eye tracker dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how EMG should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
+BIDS does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how EMG should be added to the [BIDS specification](http://bids-specification.readthedocs.io/). Information that need to be further considered to be documented in the metadata is for example whether both eyes or only one was tracked, sapling rate, if and how pupil diameter is quantified, what calibration process was used, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.
 {% include markup/end %}
 
 Eye tracking data can be stored in the BIDS representation similar to [behavioral data](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/07-behavioral-experiments.html). This not only includes the gaze position, pupil diameter, but also allows for presentation (stimulus and response events) and saccades to be represented in the events.tsv file.
 
-Rather than storing the eye tracker data as generic pysiological data in the `_pysio.tsv` file, the implementation of **[data2bids](/reference/data2bids)** allows it to be specified as eyetracker data, resulting it to be written in an eyetracker.tsv file, with an associated eyetracker.json file with metadata details on the equipment and experiment.
+Rather than storing the eye tracker data as generic pysiological data in the `_pysio.tsv` file, the implementation of **[data2bids](/reference/data2bids)** allows it to be specified as eyetracker data, resulting it to be written in an `_eyetracker.tsv` file, with an associated `_eyetracker.json` file with metadata details on the equipment and experiment.
 
 If the online analysis in the eye tracker software also detects blinks, saccades, and other events with a distinct time (i.e. non-continuous), those can also be added to the `_events.tsv` file.
-
-Tbd. It should be documented in metadata whether both eyes or only one was tracked, left or right, sapling rate, if and how pupil diameter is quantified, what calibration process, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.
-
-There is a work-in-progress document to extend BIDS with eye tracker data here https://docs.google.com/document/d/1eggzTCzSHG3AEKhtnEDbcdk-2avXN6I94X8aUPEBVsw/edit# It is not very clear on file formats (yet), and only lists a small number of metadata fields for the eyetrack.json file. But for me (=Robert) it is not yet clear whether those fields make sense (e.g. “StartMessage”?) or can in general provided (e.g. “AverageCalibrationError”?).
 
 All data for the following examples is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_eyetracker/).
 
@@ -33,7 +29,7 @@ There is a draft BIDS extension proposal (BEP) to extend the specification with 
 
 ## SR Research EyeLink
 
-The SR Research  EyeLink system records the data in a binary file with the extension edf. This is not to be confused with the European Data Format (https://www.edfplus.info) for EEG and other biological and physical signals. The proprietary EyeLink edf format cannot be read in open source software, but SR Research provides a tool called `edf2asc.exe` that converts the data to ASCII format. The ASCII format is still difficult to work with and represents a mixture of continuous gaze and pupil diameter parameters with discontinuous events, such as fixation, loss of tracking, etc.
+The SR Research  EyeLink system records the data in a binary file with the extension `.edf`. This is not to be confused with the European Data Format (https://www.edfplus.info) for EEG and other biological and physical signals. The proprietary EyeLink edf format cannot be read in open source software, but SR Research provides a tool called `edf2asc.exe` that converts the data to ASCII format. The ASCII format is still difficult to work with and represents a mixture of continuous gaze and pupil diameter parameters with discontinuous events, such as fixation, loss of tracking, etc.
 
 FieldTrip can read the EyeLink asc format. The gaze and/or pupil diameter are represented as continuous raw channels (using FT_READ_DATA), the other information is represented as events (using FT_READ_EVENT).  For more details you can see http://www.fieldtriptoolbox.org/getting_started/eyelink/. In the examples below we use **[data2bids](/reference/data2bids)** to read the asc files and convert the data to a simple eyetracker.tsv file for the continuous gaze and pupil diameter, and an events.tsv file for the discontinuous events.
 
@@ -218,7 +214,7 @@ end % for subjid
 
 ## TOBII
 
-The data from the TOBII eye tracker can be exported in tsv or in xlsx format. Moreover, the data can be exported to either have a file for each subject, or with all the subjects in one file. Both formats are included in the example. The TOBI studio software allows to add additional information in the exported files.
+The data from the TOBII eye tracker can be exported in `.tsv` or in `.xlsx` format. Moreover, the data can be exported to either have a file for each subject, or with all the subjects in one file. Both formats are included in the example. The TOBI studio software allows to add additional information in the exported files.
 
 ## SMI
 
