@@ -149,7 +149,7 @@ The complete dataset is rather memory demanding, hence we will only read the seg
 
 The output cfg variable contains the trial structure in cfg.trl. As we will also need this trial structure later in this tutorial, we will copy it into another MATLAB variable.
 
-trl = cfg.trl;
+    trl = cfg.trl;
 
 The cfg structure we obtained from **[ft_definetrial](/reference/ft_definetrial)** contains enough information for ft_preprocessing to read our data from disk into trials. We will, however, also specify that the data should be re-referenced. As it can take quite a while (5-10 minutes) to read-in the data, the processed data can be found [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_raw.mat). If you have downloaded this file, you can load the data with:
 
@@ -170,7 +170,7 @@ The reference electrode used during the acquisition is not present in the data f
 
 If you have decided to read the trials from the data file on disk, use the following code to save the processed data structure for future use.
 
-`save('data_tms_raw','data_tms_raw','-v7.3');`{matlab}
+    save('data_tms_raw','data_tms_raw','-v7.3');
 
 We will now visually inspect the data using **[ft_databrowser](/reference/ft_databrowser)**. For plotting purposes we will apply a baseline correction using the pre-stimulation period.
 
@@ -641,7 +641,7 @@ Now that everything we would like to interpolate has been replaced by nans we ca
 
     data_tms_clean_avg = ft_timelockanalysis(cfg, data_tms_clean);
 
-We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_avg.mat) and load it with:
+We can now compare the raw data with the cleaned data. If you do not have the time-locked average of the raw data anymore, you can download it [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/tms/sp/data_tms_avg.mat) and load it with:
 
     load data_tms_avg;
 
@@ -828,7 +828,7 @@ Now we can plot the GMFP of both conditions.
     ylabel('GMFP (uv^2)');
     legend({'Relax' 'Contract'});
     xlim([-0.1 0.6]);
-    ylim([0 3]); `</code>`
+    ylim([0 3]);
 
     {% include image src="/assets/img/tutorial/tms-eeg/gmfp-plot.png" %}
 
@@ -840,9 +840,9 @@ Are there differences between the outcome of this analysis and the comparison be
 
 ### Time-frequency analysis
 
-We have so far analyzed responses to the TMS pulse which always occur at the same time. Anything that is not phase-locked to the onset of the TMS pulse is cancelled out due to averaging. It is, however, possible that the TMS pulse induces responses that are not necessarily phase-locked to the onset of the pulse, for example changes in spontaneous oscillatory activity. To look at these induced responses we are going to look at time-frequency representations of our data. We will decompose our signals into frequencies and look at the averages of the power of these frequencies. Contrasting to time-lock analyses we are then sensitive to oscillatory activity not phase-locked to onset of the pulse (also see: [[tutorial:timefrequencyanalysis|Time-frequency analysis using Hanning window, multitapers and wavelets]]).
+We have so far analyzed responses to the TMS pulse which always occur at the same time. Anything that is not phase-locked to the onset of the TMS pulse is cancelled out due to averaging. It is, however, possible that the TMS pulse induces responses that are not necessarily phase-locked to the onset of the pulse, for example changes in spontaneous oscillatory activity. To look at these induced responses we are going to look at time-frequency representations of our data. We will decompose our signals into frequencies and look at the averages of the power of these frequencies. Contrasting to time-lock analyses we are then sensitive to oscillatory activity not phase-locked to onset of the pulse (also see: [Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis)).
 
-We will first decompose our signal into different frequencies using **[[ft_freqanalysis|ft_freqanalysis]]**. When doing spectral analyses it is important to detrend and demean your data prior to decomposing into frequencies to avoid strange looking powerspectra (see: [[faq:why_does_my_tfr_look_strange|Why does my TFR look strange (part I, demeaning)?]] and [[faq:why_does_my_tfr_look_strange_part_ii|Why does my TFR look strange (part II, detrending)?]]). We will therefore detrend and demean our data using the .preproc option.
+We will first decompose our signal into different frequencies using **[ft_freqanalysis](/reference/ft_freqanalysis)**. When doing spectral analyses it is important to detrend and demean your data prior to decomposing into frequencies to avoid strange looking powerspectra (see: [Why does my TFR look strange (part I, demeaning)?](/faq/why_does_my_tfr_look_strange) and [Why does my TFR look strange (part II, detrending)?](/faq/why_does_my_tfr_look_strange_part_ii)). We will therefore detrend and demean our data using the .preproc option.
 
     % Calculate Induced TFRs fpor both conditions
     cfg = [];
