@@ -5,22 +5,14 @@ tags: [bids, eeg-sedation]
 
 # Convert the EEG sedation dataset for sharing in BIDS
 
-```
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Research data supporting "Brain connectivity during propofol sedation"
-% Chennu, S., O’ Connor, S., Adapa, R., Menon, D. K., & Bekinschtein, T. A. (2015).
-%
-% https://www.repository.cam.ac.uk/handle/1810/252736
-% https://doi.org/10.1371/journal.pcbi.1004669
-%
-% This script converts the shared EEG data to the BIDS organization.
-%
-% The BIDS background is explained on http://bids.neuroimaging.io/
-%
-% Details can be found on https://bids-specification.readthedocs.io/en/stable/
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The following script shows how the EEG data supporting [Brain connectivity during propofol sedation](https://doi.org/10.1371/journal.pcbi.1004669)
+by Chennu et al. (2015) was converted to the Brain Imaging Data Structure (BIDS). The original data has been made available on the [Cambridge data repository](https://www.repository.cam.ac.uk/handle/1810/252736).
 
+The BIDS background is explained on <http://bids.neuroimaging.io>, details on the specification can be found on <https://bids-specification.readthedocs.io/>.
+
+This conversion makes use of the **[data2bids](/reference/data2bids)** function to convert the data and to write the associated metadata to the accompanying TSV and JSON files. The converted data in the BIDS organization is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/madrid2019/extra/complete_resting_data/).
+
+```
 sourcedata = '/Volumes/Samsung T3/data/eeg-sedation/sourcedata';
 bidsroot   = '/Volumes/Samsung T3/data/eeg-sedation/bids';
 
