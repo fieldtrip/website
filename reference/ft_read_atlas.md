@@ -16,6 +16,9 @@ title: ft_read_atlas
  Additional options should be specified in key-value pairs and can include
    'format'      = string, see below
    'unit'        = string, e.g. 'mm' (default is to keep it in the native units of the file)
+   'map'         = string, 'maxprob' (default), or 'prob', for fsl-based
+                     atlases, providing either a probabilistic
+                     segmentation or a maximum a posterior probability map
 
  For individual surface-based atlases from FreeSurfer you should specify two
  filenames as a cell-array: the first points to the file that contains information
