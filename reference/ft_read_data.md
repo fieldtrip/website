@@ -2,9 +2,9 @@
 title: ft_read_data
 ---
 ```plaintext
- FT_READ_DATA reads electrophysiological data from a variety of EEG, MEG and LFP
- files and represents it in a common data-independent format. The supported formats
- are listed in the accompanying FT_READ_HEADER function.
+ FT_READ_DATA reads data from a variety of EEG, MEG and other time series data files
+ and represents it in a common data-independent format. The supported formats are
+ listed in the accompanying FT_READ_HEADER function.
 
  Use as
    dat = ft_read_data(filename, ...)
@@ -31,11 +31,10 @@ title: ft_read_data
  Nchans*Nsamples*Ntrials for epoched or trial-based data when begtrial
  and endtrial are specified.
 
- The list of supported file formats can be found in FT_READ_HEADER.
-
- To use an external reading function, you can specify the function name as argument
- to 'dataformat'. The function needs to be on the path, and should take as input:
- filename, hdr, begsample, endsample, chanindx.
+ To use an external reading function, you can specify a function as the 'dataformat'
+ option. This function should take five input arguments: filename, hdr, begsample,
+ endsample, chanindx. Please check the code of this function for details, and search
+ for BIDS_TSV as example.
 
  See also FT_READ_HEADER, FT_READ_EVENT, FT_WRITE_DATA, FT_WRITE_EVENT
 ```

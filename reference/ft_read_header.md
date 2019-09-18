@@ -2,9 +2,9 @@
 title: ft_read_header
 ---
 ```plaintext
- FT_READ_HEADER reads header information from a variety of EEG, MEG and LFP
- files and represents the header information in a common data-independent
- format. The supported formats are listed below.
+ FT_READ_HEADER reads header information from a variety of EEG, MEG and other time
+ series data files and represents the header information in a common
+ data-independent structure. The supported formats are listed below.
 
  Use as
    hdr = ft_read_header(filename, ...)
@@ -16,6 +16,7 @@ title: ft_read_header
    'chanindx'       = list with channel indices in case of different sampling frequencies (only for EDF)
    'coordsys'       = string, 'head' or 'dewar' (default = 'head')
    'chantype'       = string or cell of strings, channel types to be read (NeuroOmega, BlackRock).
+   'headerformat'   = name of a MATLAB function that takes the filename as input (default is automatic)
 
  This returns a header structure with the following elements
    hdr.Fs                  sampling frequency
@@ -27,22 +28,24 @@ title: ft_read_header
    hdr.chantype            Nx1 cell-array with the channel type, see FT_CHANTYPE
    hdr.chanunit            Nx1 cell-array with the physical units, see FT_CHANUNIT
 
+ For continuously recorded data, this will return nSamplesPre=0 and nTrials=1.
+
  For some data formats that are recorded on animal electrophysiology
  systems (e.g. Neuralynx, Plexon), the following optional fields are
  returned, which allows for relating the timing of spike and LFP data
    hdr.FirstTimeStamp      number, represented as 32 bit or 64 bit unsigned integer
    hdr.TimeStampPerSample  number, represented in double precision
 
- For continuously recorded data, nSamplesPre=0 and nTrials=1.
+ Depending on the file format, additional header information can be
+ returned in the hdr.orig subfield.
 
- To use an external reading function, use key-value pair: 'headerformat', FUNCTION_NAME.
- (Function needs to be on the path, and take as input: filename)
+ To use an external reading function, you can specify a function as the
+ 'headerformat' option. This function should take the filename as input argument.
+ Please check the code of this function for details, and search for BIDS_TSV as
+ example.
 
  Use cfg.chantype='chaninfo' to get hdr.chaninfo table. For BlackRock
  specify decimation with chantype:skipfactor (e.g. cfg.chantype='analog:10')
-
- Depending on the file format, additional header information can be
- returned in the hdr.orig subfield.
 
  The following MEG dataformats are supported
    CTF (*.ds, *.res4, *.meg4)
