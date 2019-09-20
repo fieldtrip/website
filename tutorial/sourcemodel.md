@@ -179,11 +179,11 @@ Now, we are ready to start using FreeSurfer. As a first step, we have to 'conver
     recon-all -autorecon2 -subjid $SUBJECTNAME
     recon-all -autorecon3 -subjid $SUBJECTNAME
 
-After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. The commands referenced above are also available as a shell-script in fieldtrip/bin/ft_freesurferscript.sh, for instance to be used in a batch processing mode.
+After these steps (which may take quite a while) you end up with a bunch of files in the **Subject01/surf/** directory. The commands referenced above are also available as a Bash-script in fieldtrip/bin/ft_freesurferscript.sh, for instance to be used in a batch processing mode.
 
 #### 2. Source model: Creation of the mesh using HCP workbench
 
-Just like with FreeSurfer, you have to first take care that HCP workbench is installed and loaded. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP workbench documentation to set up the software [here](https://www.humanconnectome.org/software/connectome-workbench). In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you need to get the standard*mesh_atlases directory from [here](https://github.com/Washington-University/HCPpipelines), which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your file system. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.*.gii, and R.\_.gii. Once all files are in place, you should ensure that the HCP workbench module is loaded and ready to use. The precise details of how to do this will depend on your local computing infrustructure, but if you are working at the Center for Cognitive Neuroimaging at the Donders Institute in Nijmegen you can do this by typing the following command in your Linux/Unix terminal:
+Just like with FreeSurfer, you have to first take care that HCP workbench is installed and loaded. If you work on the compute cluster of the DCCN in Nijmegen, this is already installed. Otherwise, please refer to the HCP workbench documentation to set up the software [here](https://www.humanconnectome.org/software/connectome-workbench). In addition, this step needs as set of template files, that for now need to be retrieved from two different locations. First, you need to get the standard/mesh_atlases directory from [here](https://github.com/Washington-University/HCPpipelines), which is located in the global/templates/ directory. One way to do this would be to selectively copy the contents of this directory to a location on your file system. Then, you also need to copy the template spherical meshes from fieldtrip/template/sourcemodel to the same directory. The files you need are the ones that are named L.\*.gii, and R.\*.gii. Once all files are in place, you should ensure that the HCP workbench module is loaded and ready to use. The precise details of how to do this will depend on your local computing infrastructure, but if you are working at the Center for Cognitive Neuroimaging at the Donders Institute in Nijmegen you can do this by typing the following command in your Linux/Unix terminal:
 
     module load hcp-workbench
 
@@ -281,12 +281,12 @@ As an alternative you can create a template grid yourself, like this:
 
     % construct the dipole grid in the template brain coordinates
     % the negative inwardshift means an outward shift of the brain surface for inside/outside detection
-    cfg = [];
-    cfg.resolution = 1;
-    cfg.tight      = 'yes';
-    cfg.inwardshift     = -1.5;
-    cfg.headmodel       = template_headmodel;
-    template_grid       = ft_prepare_sourcemodel(cfg);
+    cfg              = [];
+    cfg.resolution   = 1;
+    cfg.tight        = 'yes';
+    cfg.inwardshift  = -1.5;
+    cfg.headmodel    = template_headmodel;
+    template_grid    = ft_prepare_sourcemodel(cfg);
 
     % make a figure with the template head model and dipole grid
     figure
@@ -321,13 +321,13 @@ It is not required to create a volume conduction model of the head in order to c
 ##### Make the individual subjects' grid
 
     % create the subject specific grid, using the template grid that has just been created
-    cfg                = [];
+    cfg           = [];
     cfg.warpmni   = 'yes';
     cfg.template  = template_grid;
     cfg.nonlinear = 'yes';
-    cfg.mri            = mri;
+    cfg.mri       = mri;
     cfg.unit      ='mm';
-    grid               = ft_prepare_sourcemodel(cfg);
+    grid          = ft_prepare_sourcemodel(cfg);
 
     % make a figure of the single subject headmodel, and grid positions
     figure; hold on;
@@ -348,7 +348,7 @@ If you performed source reconstruction on the cortical surface, and you used the
 
 ## Summary and further reading
 
-In this tutorial, it was explained how to build a sourcemodel that can be used for source-reconstruction of measured EEG or MEG activity.
+This tutorial explained how to build a sourcemodel that can be used for source-reconstruction of EEG or MEG measurements.
 
 You can read more about specific source-reconstruction methods in the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and in the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 
