@@ -6,7 +6,9 @@ tags: [example, bids, sharing, eyetracker]
 # Converting an example eye tracker dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how EMG should be added to the [BIDS specification](http://bids-specification.readthedocs.io/). Information that need to be further considered to be documented in the metadata is for example whether both eyes or only one was tracked, sapling rate, if and how pupil diameter is quantified, what calibration process was used, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.
+BIDS does currently not specify how to represent eye tracker data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/). 
+
+Information that need to be further considered to be documented in the metadata is for example whether both eyes or only one was tracked, sapling rate, if and how pupil diameter is quantified, what calibration process was used, how to interpret the gaze position (pixels, degrees), whether the origin is at the center of the screen or the upper left corner, etc.
 {% include markup/end %}
 
 Eye tracking data can be stored in the BIDS representation similar to [behavioral data](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/07-behavioral-experiments.html). This not only includes the gaze position, pupil diameter, but also allows for presentation (stimulus and response events) and saccades to be represented in the events.tsv file.
