@@ -218,7 +218,7 @@ The SMI eye tracker stores the raw data in an `.idf` file. That file cannot be r
 
 ### Example
 
-In the following example we are converting two runs of eye tracker data for two subjects. The data was recorded at the DCCN. Since additional information is missing (e.g. units, origin, calibration procedure), the metadata is very sparse. 
+In the following example we are converting two runs of eye tracker data for two subjects. The data was recorded at the DCCN. Since additional information is missing (e.g. units, origin, calibration procedure), the metadata is very sparse.
 
 ```
 filename = {
