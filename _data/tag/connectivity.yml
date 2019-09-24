@@ -1,20 +1,44 @@
-- name:  Conditional Granger causality in the frequency domain
-  link:  /example/connectivity_conditional_granger
-
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
+- name:  Conditional Granger causality in the frequency domain
+  link:  /example/connectivity_conditional_granger
+
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
+
+- name:  In what way can frequency domain data be represented in FieldTrip?
+  link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
 
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis
+
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
+
+- name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis_old
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
+
+- name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis
+
+- name:  FieldTrip connectivity demo
+  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old

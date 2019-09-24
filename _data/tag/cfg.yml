@@ -1,11 +1,23 @@
 - name:  How to use ft_checkconfig
   link:  /example/checkconfig
 
+- name:  How to use ft_checkconfig
+  link:  /example/checkconfig
+
+- name:  Reference documentation
+  link:  /reference
+
 - name:  Reference documentation
   link:  /reference
 
 - name:  Introduction to the FieldTrip toolbox
   link:  /tutorial/introduction
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
+- name:  FieldTrip Walkthrough
+  link:  /walkthrough
 
 - name:  FieldTrip Walkthrough
   link:  /walkthrough

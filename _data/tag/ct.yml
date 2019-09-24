@@ -1,35 +1,47 @@
+- name:  Fixing a missing channel
+  link:  /example/fixing_a_missing_sensor
+
 - name:  MEG dataformats
   link:  /dataformat/meg
 
 - name:  CTF
   link:  /development/realtime/ctf
 
-- name:  Conditional Granger causality in the frequency domain
-  link:  /example/connectivity_conditional_granger
-
-- name:  Fit a dipole to the tactile ERF after mechanical stimulation
-  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
-
-- name:  Fixing a missing channel
-  link:  /example/fixing_a_missing_sensor
-
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+
+- name:  Conditional Granger causality in the frequency domain
+  link:  /example/connectivity_conditional_granger
 
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign
 
+- name:  Fit a dipole to the tactile ERF after mechanical stimulation
+  link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
+
+- name:  Fixing a missing channel
+  link:  /example/fixing_a_missing_sensor
 
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
 
+- name:  How to incorporate head movements in MEG analysis
+  link:  /example/how_to_incorporate_head_movements_in_meg_analysis
+
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
+- name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
+  link:  /example/megrealign
+
 - name:  Can I use Octave instead of MATLAB?
   link:  /faq/can_i_use_octave_instead_of_matlab
+
+- name:  Use independent component analysis (ICA) to remove ECG artifacts
+  link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
 - name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
   link:  /faq/how_are_the_lpa_and_rpa_points_defined
@@ -37,53 +49,134 @@
 - name:  How can I anonymize or deidentify a CTF dataset?
   link:  /faq/how_can_i_anonymize_a_ctf_dataset
 
+- name:  Use independent component analysis (ICA) to remove EOG artifacts
+  link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
+
 - name:  How can I change the head localization in a CTF dataset?
   link:  /faq/how_can_i_change_the_head_localization_in_a_ctf_dataset
 
+- name:  Can I create an artificial CTF dataset using MATLAB?
+  link:  /example/writing_simulated_data_to_a_ctf_dataset
+
 - name:  How can I check the quality of an EEG or MEG recording ?
+- name:  Can I use Octave instead of MATLAB?
   link:  /faq/how_can_i_check_the_quality_of_an_meeg_dataset
+  link:  /faq/can_i_use_octave_instead_of_matlab
+
 
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
 
+- name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
+  link:  /faq/how_are_the_lpa_and_rpa_points_defined
+
 - name:  How can I convert an anatomical MRI from DICOM into CTF format?
   link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
+
+- name:  How can I anonymize or deidentify a CTF dataset?
+  link:  /faq/how_can_i_anonymize_a_ctf_dataset
 
 - name:  How can I fix a corrupt CTF meg4 file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file
 
+- name:  How can I change the head localization in a CTF dataset?
+  link:  /faq/how_can_i_change_the_head_localization_in_a_ctf_dataset
+
 - name:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
+
+- name:  How can I check the quality of an EEG or MEG recording ?
+  link:  /faq/how_can_i_check_the_quality_of_an_meeg_dataset
 
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
 
+- name:  How can I consistently represent artifacts in my data?
+  link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
+
 - name:  How can I read corrupted (unsaved) CTF data?
   link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
+
+- name:  How can I convert an anatomical MRI from DICOM into CTF format?
+  link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
 
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
 
+- name:  How can I fix a corrupt CTF meg4 file?
+  link:  /faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file
+
 - name:  How does the CTF higher-order gradiometer work?
   link:  /faq/how_does_the_ctf_higher-order_gradiometer_work
+
+- name:  How can I fix a corrupt CTF res4 header file?
+  link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
 
 - name:  How does the filter padding in preprocessing work?
   link:  /faq/how_does_the_filter_padding_in_preprocessing_work
 
+- name:  How can I interpret the different types of padding in FieldTrip?
+  link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
+
 - name:  I am getting strange artifacts in figures that use opacity
   link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
+
+- name:  How can I read corrupted (unsaved) CTF data?
+  link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
 
 - name:  I am having problems reading the CTF .hc headcoordinates file
   link:  /faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file
 
+- name:  How can I use the databrowser?
+  link:  /faq/how_can_i_use_the_databrowser
+
 - name:  In what way can frequency domain data be represented in FieldTrip?
   link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
+
+- name:  How does the CTF higher-order gradiometer work?
+  link:  /faq/how_does_the_ctf_higher-order_gradiometer_work
 
 - name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
   link:  /faq/structuresensor
 
+- name:  How does the filter padding in preprocessing work?
+  link:  /faq/how_does_the_filter_padding_in_preprocessing_work
+
 - name:  What does a typical call to a FieldTrip function look like?
   link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
+
+- name:  I am getting strange artifacts in figures that use opacity
+  link:  /faq/i_am_getting_strange_artifacts_in_figures_that_use_opacity
+
+- name:  What kind of filters can I apply to my data?
+  link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
+
+- name:  I am having problems reading the CTF .hc headcoordinates file
+  link:  /faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file
+
+- name:  Which datasets are used in the documentation and where are they used?
+  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
+
+- name:  In what way can frequency domain data be represented in FieldTrip?
+  link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
+
+- name:  Why are so many of the interesting functions in the private directories?
+  link:  /faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories
+
+- name:  Why does my TFR look strange (part I, demeaning)?
+- name:  Should I use a Polhemus or a Structure Sensor to record electrode positions?
+  link:  /faq/why_does_my_tfr_look_strange
+
+  link:  /faq/structuresensor
+
+- name:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/why_does_my_tfr_look_strange_part_ii
+
+- name:  What does a typical call to a FieldTrip function look like?
+  link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
+
+- name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
+  link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
 
 - name:  What kind of filters can I apply to my data?
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
@@ -91,11 +184,23 @@
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
+- name:  Getting started with CTF data
+  link:  /getting_started/ctf
+
+- name:  Human ECoG
+  link:  /getting_started/human_ecog
+
 - name:  Why are so many of the interesting functions in the private directories?
   link:  /faq/why_are_so_many_of_the_interesting_functions_in_the_private_directories
 
+- name:  Introduction - dealing with artifacts
+  link:  /tutorial/artifacts
+
 - name:  Why does my TFR look strange (part I, demeaning)?
   link:  /faq/why_does_my_tfr_look_strange
+
+- name:  Automatic artifact rejection
+  link:  /tutorial/automatic_artifact_rejection
 
 - name:  Why does my TFR look strange (part II, detrending)?
   link:  /faq/why_does_my_tfr_look_strange_part_ii
@@ -103,38 +208,74 @@
 - name:  Why is there a residual 50Hz line-noise component after applying a DFT filter?
   link:  /faq/why_is_there_a_residual_50hz_line-noise_component_after_applying_a_dft_filter
 
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
 - name:  Getting started with CTF data
+- name:  Analysis of sensor- and source-level connectivity
   link:  /getting_started/ctf
+  link:  /tutorial/connectivity
+
 
 - name:  Human ECoG
   link:  /getting_started/human_ecog
 
-- name:  Introduction - dealing with artifacts
-  link:  /tutorial/artifacts
-
-- name:  Automatic artifact rejection
-  link:  /tutorial/automatic_artifact_rejection
-
-- name:  Analysis of corticomuscular coherence
-  link:  /tutorial/coherence
-
-- name:  Analysis of sensor- and source-level connectivity
-  link:  /tutorial/connectivity
-
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
+
+- name:  Introduction - dealing with artifacts
+  link:  /tutorial/artifacts
 
 - name:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/electrode
 
+- name:  Automatic artifact rejection
+  link:  /tutorial/automatic_artifact_rejection
+
 - name:  Analysis of human ECoG and sEEG recordings
   link:  /tutorial/human_ecog
+
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
+
+- name:  Whole brain connectivity and network analysis
+  link:  /tutorial/networkanalysis
+
+- name:  Whole brain connectivity and network analysis
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/networkanalysis_old
+
+  link:  /tutorial/connectivity
+
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
+
+- name:  Extracting the brain state and events from continuous sleep EEG
+  link:  /tutorial/sleep
+
+- name:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/electrode
+
+- name:  Visual artifact rejection
+  link:  /tutorial/visual_artifact_rejection
+
+- name:  Analysis of human ECoG and sEEG recordings
+  link:  /tutorial/human_ecog
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis
 
 - name:  Whole brain connectivity and network analysis
   link:  /tutorial/networkanalysis_old
+
+- name:  FieldTrip connectivity demo
+  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
 
 - name:  Preprocessing of EEG data and computing ERPs
   link:  /tutorial/preprocessing_erp

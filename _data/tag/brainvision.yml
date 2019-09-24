@@ -1,3 +1,6 @@
+- name:  Preprocessing of EEG data and computing ERPs
+  link:  /tutorial/preprocessing_erp
+
 - name:  BrainVision Recorder Remote Data Access (RDA)
   link:  /development/realtime/rda
 

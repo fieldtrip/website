@@ -1,44 +1,8 @@
-- name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
-  link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
-
-- name:  Effect of SNR on Coherence
-  link:  /example/coherence_snr
-
-- name:  Common filters in beamforming
-  link:  /example/common_filters_in_beamforming
-
-- name:  Conditional Granger causality in the frequency domain
-  link:  /example/connectivity_conditional_granger
-
-- name:  Correlation analysis in fMRI data
-  link:  /example/correlation_analysis_in_fmri_data
-
-- name:  Cross-frequency analysis
-  link:  /example/crossfreq
-
-- name:  Effects of tapering for power estimates
-  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
-
-- name:  Simulate an oscillatory signal with phase resetting
-  link:  /example/phase_reset
-
-- name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
-  link:  /example/ssvep
-
-- name:  How can I do time-frequency analysis on continuous data?
-  link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
-
-- name:  In what way can frequency domain data be represented in FieldTrip?
-  link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
-
-- name:  How can I compute inter-trial coherence?
-  link:  /faq/itc
-
-- name:  How does MTMCONVOL work?
-  link:  /faq/mtmconvol
-
 - name:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalyis?
   link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_mtmconvol_in_ft_freqanalyis
+
+- name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
+  link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
 
 - name:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalyis?
   link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_mtmfft_in_ft_freqanalyis
@@ -46,17 +10,32 @@
 - name:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
   link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_wavelet_formerly_wltconvol_in_ft_freqanalyis
 
+- name:  Effect of SNR on Coherence
+  link:  /example/coherence_snr
+
 - name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
   link:  /faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft
+
+- name:  Common filters in beamforming
+  link:  /example/common_filters_in_beamforming
 
 - name:  What does "padding not sufficient for requested frequency resolution" mean?
   link:  /faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean
 
+- name:  Conditional Granger causality in the frequency domain
+  link:  /example/connectivity_conditional_granger
 - name:  What kind of filters can I apply to my data?
+
   link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
+
+- name:  Correlation analysis in fMRI data
+  link:  /example/correlation_analysis_in_fmri_data
 
 - name:  Why am I not getting integer frequencies?
   link:  /faq/why_am_i_not_getting_exact_integer_frequencies
+
+- name:  Cross-frequency analysis
+  link:  /example/crossfreq
 
 - name:  Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?
   link:  /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmconvol_in_ft_freqanalyis
@@ -64,29 +43,143 @@
 - name:  Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis
   link:  /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmfft_in_ft_freqanalyis
 
+- name:  Effects of tapering for power estimates
+  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
+
 - name:  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
   link:  /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_wavelet_formerly_wltconvol_in_ft_freqanalyis
+
+- name:  Simulate an oscillatory signal with phase resetting
+  link:  /example/phase_reset
 
 - name:  Why does my TFR contain NaNs?
   link:  /faq/why_does_my_tfr_contain_nans
 
+- name:  Analyze Steady-State Visual Evoked Potentials (SSVEPs)
+  link:  /example/ssvep
+
 - name:  Why does my TFR look strange (part I, demeaning)?
   link:  /faq/why_does_my_tfr_look_strange
+
+- name:  How can I do time-frequency analysis on continuous data?
+  link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
 
 - name:  Why does my TFR look strange (part II, detrending)?
   link:  /faq/why_does_my_tfr_look_strange_part_ii
 
+- name:  In what way can frequency domain data be represented in FieldTrip?
+  link:  /faq/in_what_way_can_frequency_domain_data_be_represented_in_fieldtrip
+
+- name:  How can I compute inter-trial coherence?
+  link:  /faq/itc
+
 - name:  Reference documentation
   link:  /reference
+
+- name:  How does MTMCONVOL work?
+  link:  /faq/mtmconvol
 
 - name:  References to implemented methods
   link:  /references_to_implemented_methods
 
+- name:  What are the differences between the old and the new implementation of 'mtmconvol' in ft_freqanalyis?
+  link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_mtmconvol_in_ft_freqanalyis
+
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
+- name:  What are the differences between the old and the new implementation of 'mtmftt' in ft_freqanalyis?
+  link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_mtmfft_in_ft_freqanalyis
+
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
+
+- name:  What are the differences between the old and the new implementation of 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
+  link:  /faq/what_are_the_differences_between_the_old_and_the_new_implementation_of_wavelet_formerly_wltconvol_in_ft_freqanalyis
+
+- name:  Analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivity
+
+- name:  What convention is used to define absolute phase in 'mtmconvol', 'wavelet' and 'mtmfft'?
+  link:  /faq/what_convention_is_used_to_define_absolute_phase_in_mtmconvol_wavelet_and_mtmfft
+
+- name:  Extended analysis of sensor- and source-level connectivity
+  link:  /tutorial/connectivityextended
+
+- name:  What does "padding not sufficient for requested frequency resolution" mean?
+  link:  /faq/what_does_padding_not_sufficient_for_requested_frequency_resolution_mean
+
+- name:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/eventrelatedstatistics
+
+- name:  What kind of filters can I apply to my data?
+  link:  /faq/what_kind_of_filters_can_i_apply_to_my_data
+
+- name:  Fourier analysis of neuronal oscillations and synchronization
+  link:  /tutorial/fourier
+
+- name:  Why am I not getting integer frequencies?
+  link:  /faq/why_am_i_not_getting_exact_integer_frequencies
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
+- name:  Why does my output.freq not match my cfg.foi when using 'mtmconvol' in ft_freqanalyis?
+  link:  /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmconvol_in_ft_freqanalyis
+
+- name:  Multivariate analysis of electrophysiological data
+  link:  /tutorial/multivariateanalysis
+
+- name:  Why does my output.freq not match my cfg.foi when using 'mtmfft' in ft_freqanalyis
+  link:  /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_mtmfft_in_ft_freqanalyis
+
+- name:  Classification of event related MEG data using MVPA-Light
+  link:  /tutorial/mvpa_light
+
+- name:  Why does my output.freq not match my cfg.foi when using 'wavelet' (formerly 'wltconvol') in ft_freqanalyis?
+  link:  /faq/why_does_my_output.freq_not_match_my_cfg.foi_when_using_wavelet_formerly_wltconvol_in_ft_freqanalyis
+
+- name:  Sensor-level ERF, TFR and connectivity analyses
+- name:  Why does my TFR contain NaNs?
+  link:  /tutorial/sensor_analysis
+
+  link:  /faq/why_does_my_tfr_contain_nans
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+- name:  Why does my TFR look strange (part I, demeaning)?
+  link:  /tutorial/timefrequencyanalysis
+
+  link:  /faq/why_does_my_tfr_look_strange
+
+- name:  Why does my TFR look strange (part II, detrending)?
+  link:  /faq/why_does_my_tfr_look_strange_part_ii
+- name:  FieldTrip Walkthrough
+
+  link:  /walkthrough
+
+- name:  Reference documentation
+  link:  /reference
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
+
+- name:  References to implemented methods
+  link:  /references_to_implemented_methods
+
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /workshop/natmeg/timefrequency
+
+- name:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/beamformer
+
+- name:  Time-frequency analysis of EEG data
+  link:  /workshop/oslo2019/timefrequency
+
+- name:  Cluster-based permutation tests on time-frequency data
+  link:  /tutorial/cluster_permutation_freq
+
+- name:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /workshop/oxford2019/sensor_analysis_plusminus
 
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity

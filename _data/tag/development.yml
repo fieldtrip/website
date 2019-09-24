@@ -1,35 +1,77 @@
-- name:  Bugzilla and GitHub issue tracking
-  link:  /bugzilla
-
-- name:  Contribute
-  link:  /contribute
-
-- name:  Development
-  link:  /development
-
-- name:  Accessing the FieldTrip source code through CVS
-  link:  /development/cvs
-
 - name:  Code testing and release
   link:  /development/dashboard
 
 - name:  Accessing the FieldTrip source code through Git
   link:  /development/git
 
+- name:  Bugzilla and GitHub issue tracking
+  link:  /bugzilla
+
 - name:  Code guidelines
   link:  /development/guideline/code
+
+- name:  Contribute
+  link:  /contribute
 
 - name:  Documentation guidelines this is the title, it should also be the first top-level heading
   link:  /development/guideline/documentation
 
 - name:  Template guidelines
+- name:  Development
   link:  /development/guideline/templates
+  link:  /development
+
 
 - name:  Guidelines for audio and video material
   link:  /development/guideline/video
 
+- name:  Accessing the FieldTrip source code through CVS
+  link:  /development/cvs
+
+- name:  Website syntax and formatting Website syntax and formatting
+- name:  Code testing and release
+  link:  /development/guideline/website
+
+  link:  /development/dashboard
+
+- name:  Meetings
+  link:  /development/meeting
+
+- name:  Accessing the FieldTrip source code through Git
+  link:  /development/git
+
+- name:  Modular organization of the source code
+  link:  /development/module
+
+- name:  Code guidelines
+  link:  /development/guideline/code
+
+- name:  Reading and writing of EEG/MEG time series data
+  link:  /development/module/fileio
+
+- name:  Documentation guidelines this is the title, it should also be the first top-level heading
+  link:  /development/guideline/documentation
+
+- name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
+  link:  /development/module/plotting
+
+- name:  Template guidelines
+  link:  /development/guideline/templates
+
+- name:  Project overview
+  link:  /development/project
+
+- name:  Guidelines for audio and video material
+  link:  /development/guideline/video
+
+- name:  FieldTrip buffer C implementation
+  link:  /development/realtime/buffer_c
+
 - name:  Website syntax and formatting Website syntax and formatting
   link:  /development/guideline/website
+
+- name:  FieldTrip buffer C++ implementation
+  link:  /development/realtime/buffer_cpp
 
 - name:  Meetings
   link:  /development/meeting
@@ -37,47 +79,89 @@
 - name:  Modular organization of the source code
   link:  /development/module
 
-- name:  Reading and writing of EEG/MEG time series data
-  link:  /development/module/fileio
-
-- name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
-  link:  /development/module/plotting
-
-- name:  Project overview
-  link:  /development/project
-
-- name:  FieldTrip buffer C implementation
-  link:  /development/realtime/buffer_c
-
-- name:  FieldTrip buffer C++ implementation
-  link:  /development/realtime/buffer_cpp
-
 - name:  FieldTrip buffer Java interface
   link:  /development/realtime/buffer_java
+
+- name:  Reading and writing of EEG/MEG time series data
+  link:  /development/module/fileio
 
 - name:  FieldTrip buffer MATLAB interface
   link:  /development/realtime/buffer_matlab
 
+- name:  Plotting of channel-level, source-level and other geometrical data related to EEG/MEG
+  link:  /development/module/plotting
+
 - name:  FieldTrip buffer Python interface
   link:  /development/realtime/buffer_python
+
+- name:  Project overview
+  link:  /development/project
 
 - name:  Suggested improvements for compatibility across versions
   link:  /development/realtime/draft_compatability
 
+- name:  FieldTrip buffer C implementation
+  link:  /development/realtime/buffer_c
+
 - name:  Suggested improvements for handling header and chunks
   link:  /development/realtime/draft_header_chunks
+
+- name:  FieldTrip buffer C++ implementation
+- name:  Suggested changes to the reference implementation
+  link:  /development/realtime/buffer_cpp
+
+  link:  /development/realtime/draft_implementation
+
+- name:  FieldTrip buffer Java interface
+  link:  /development/realtime/buffer_java
+
+- name:  Suggested changes to the network protocol
+  link:  /development/realtime/draft_network
+
+- name:  FieldTrip buffer MATLAB interface
+  link:  /development/realtime/buffer_matlab
+
+- name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
+  link:  /development/realtime/implementation
+
+- name:  FieldTrip buffer Python interface
+  link:  /development/realtime/buffer_python
+
+- name:  FieldTrip buffer reference implementation
+  link:  /development/realtime/reference_implementation
+
+- name:  Suggested improvements for compatibility across versions
+  link:  /development/realtime/draft_compatability
+
+- name:  Scratchpad for the realtime buffer interface
+  link:  /development/realtime/scratchpad
+
+- name:  Suggested improvements for handling header and chunks
+  link:  /development/realtime/draft_header_chunks
+
+- name:  Accessing the FieldTrip source code through SVN
+  link:  /development/svn
 
 - name:  Suggested changes to the reference implementation
   link:  /development/realtime/draft_implementation
 
 - name:  Suggested changes to the network protocol
   link:  /development/realtime/draft_network
+- name:  How can I keep track of changes to the code?
+
+  link:  /faq/how_can_i_keep_track_of_the_changes_to_the_code
 
 - name:  Specific software implementations for realtime EEG/MEG/fMRI/NIRS
   link:  /development/realtime/implementation
 
+- name:  How should I share example data with the email list or developers?
+  link:  /faq/how_should_i_send_example_data_to_the_developers
+
 - name:  FieldTrip buffer reference implementation
   link:  /development/realtime/reference_implementation
+
+- name:  Why was FieldTrip maintained in SVN and not in Git?
+  link:  /faq/why_is_fieldtrip_maintained_in_svn_and_not_in_git
 
 - name:  Scratchpad for the realtime buffer interface
   link:  /development/realtime/scratchpad

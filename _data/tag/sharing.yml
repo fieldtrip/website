@@ -1,11 +1,23 @@
+- name:  How can I anonymize or deidentify a CTF dataset?
+  link:  /faq/how_can_i_anonymize_a_ctf_dataset
+
 - name:  BIDS - the brain imaging data structure
   link:  /example/bids
+
+- name:  How can I anonymize or deidentify an anatomical MRI?
+  link:  /faq/how_can_i_anonymize_an_anatomical_mri
 
 - name:  Converting an example behavioral dataset for sharing in BIDS
   link:  /example/bids_behavioral
 
+- name:  How can I anonymize DICOM files?
+  link:  /faq/how_can_i_anonymize_dicom_files
+
 - name:  Converting an example EEG dataset for sharing in BIDS
   link:  /example/bids_eeg
+
+- name:  How can I anonymize data processed in FieldTrip?
+  link:  /faq/how_can_i_anonymize_fieldtrip_data
 
 - name:  Converting an example EMG dataset for sharing in BIDS
   link:  /example/bids_emg

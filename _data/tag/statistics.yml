@@ -1,32 +1,65 @@
+- name:  How NOT to interpret results from a cluster-based permutation test
+  link:  /faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test
+
 - name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
   link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
+
+- name:  What is the idea behind statistical inference at the second-level?
+  link:  /faq/what_is_the_idea_behind_statistical_inference_at_the_second-level
 
 - name:  Computing and using estimates of effect size
   link:  /example/effectsize
 
+- name:  Why should I use the cfg.correcttail option when using statistics_montecarlo?
+  link:  /faq/why_should_i_use_the_cfg.correcttail_option_when_using_statistics_montecarlo
+
 - name:  Source statistics
   link:  /example/source_statistics
+
+- name:  Reference documentation
+  link:  /reference
 
 - name:  Stratify the distribution of one variable that differs in two conditions
   link:  /example/stratify
 
+- name:  References to implemented methods
+  link:  /references_to_implemented_methods
+
 - name:  Use simulated ERPs to explore cluster statistics
   link:  /example/use_simulated_erps_to_explore_cluster_statistics
+
+- name:  Cluster-based permutation tests on time-frequency data
+  link:  /tutorial/cluster_permutation_freq
 
 - name:  How can I define my own neighbourhood templates or updating an already existing template?
   link:  /faq/how_can_i_define_my_own_neighbourhood_template
 
+- name:  Cluster-based permutation tests on event related fields
+  link:  /tutorial/cluster_permutation_timelock
+
 - name:  How can I define neighbouring sensors?
   link:  /faq/how_can_i_define_neighbouring_sensors
+
+- name:  Parametric and non-parametric statistics on event-related fields
+  link:  /tutorial/eventrelatedstatistics
 
 - name:  How can I determine the onset of an effect?
   link:  /faq/how_can_i_determine_the_onset_of_an_effect
 
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
+
 - name:  How to test an interaction effect using cluster-based permutation tests?
   link:  /faq/how_can_i_test_an_interaction_effect_using_cluster-based_permutation_tests
 
+- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
+  link:  /workshop/natmeg/statistics
+
 - name:  How can I test for correlations between neuronal data and quantitative stimulus and behavioral variables?
   link:  /faq/how_can_i_test_for_correlations_between_neuronal_data_and_quantitative_stimulus_and_behavioural_variables
+
+- name:  Statistical analysis and multiple comparison correction for EEG data
+  link:  /workshop/oslo2019/statistics
 
 - name:  How can I use the ivar, uvar, wvar and cvar options to precisely control the permutations?
   link:  /faq/how_can_i_use_the_ivar_uvar_wvar_and_cvar_options_to_precisely_control_the_permutations
