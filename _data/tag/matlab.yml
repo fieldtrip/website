@@ -1,47 +1,23 @@
-- name:  Should I add FieldTrip with all subdirectories to my MATLAB path?
-  link:  /faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path
-
 - name:  Can I prevent "external" toolboxes from being added to my MATLAB path?
   link:  /faq/can_i_prevent_external_toolboxes_from_being_added_to_my_matlab_path
-
-- name:  What are the different approaches I can take for distributed computing?
-  link:  /faq/what_are_the_different_approaches_i_can_take_for_distributed_computing
 
 - name:  Can I use FieldTrip without MATLAB license?
   link:  /faq/compiled
 
-- name:  Where can I find the dipoli command-line executable?
-  link:  /faq/where_can_i_find_the_dipoli_command-line_executable
-
 - name:  Which external toolboxes are used by FieldTrip?
   link:  /faq/external
-
-- name:  Why are the fileio functions stateless, does the fseek not make them very slow?
-  link:  /faq/why_are_the_fileio_functions_stateless_does_the_fseek_not_make_them_very_slow
 
 - name:  How can I compile the mex files on 64-bit Windows?
   link:  /faq/how_can_i_compile_the_mex_files_on_64_bit_windows
 
-- name:  Speeding up your analysis with distributed computing
-  link:  /tutorial/distributedcomputing
-
 - name:  How can I determine the number of threads that MATLAB uses?
   link:  /faq/how_can_i_determine_the_number_of_threads_that_matlab_uses
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
 
 - name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
 
-- name:  Making a memory efficient analysis script
-  link:  /tutorial/memory
-
 - name:  How fast is the FieldTrip buffer for realtime data streaming?
   link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
-
-- name:  Creating a clean analysis script
-  link:  /tutorial/scripting
 
 - name:  MATLAB complains about a missing or invalid MEX file, what should I do?
   link:  /faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do

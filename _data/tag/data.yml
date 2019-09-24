@@ -1,32 +1,14 @@
-- name:  How are the various MATLAB data structures defined?
-  link:  /faq/how_are_the_various_data_structures_defined
-
 - name:  MEG dataformats
   link:  /dataformat/meg
-
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
 
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
-
 - name:  Example analysis pipeline for Biosemi data
-- name:  How can I convert one dataformat into an other?
   link:  /example/biosemi
-  link:  /faq/how_can_i_convert_one_dataformat_into_an_other
-
-
-- name:  How can I import my own data format?
-  link:  /faq/how_can_i_import_my_own_dataformat
 
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
-
-- name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
 
 - name:  How can I share my MEG data?
   link:  /faq/data_sharing
@@ -34,89 +16,44 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  How can I use the databrowser?
-  link:  /faq/how_can_i_use_the_databrowser
-
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
-
-- name:  How is anatomical, functional or statistical "volume data" described?
-  link:  /faq/how_is_anatomical_functional_or_statistical_volume_data_described
 
 - name:  How can I extend the reading functions with a new dataformat?
   link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
 
-- name:  How is the segmentation defined?
-  link:  /faq/how_is_the_segmentation_defined
-
 - name:  How can I convert an anatomical MRI from DICOM into CTF format?
   link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
-
-- name:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
-
-- name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
-  link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
 
 - name:  How can I convert one dataformat into an other?
   link:  /faq/how_can_i_convert_one_dataformat_into_an_other
 
-- name:  Where can I find open access MEG/EEG data?
-  link:  /faq/open_data
-
 - name:  How can I import my own data format?
   link:  /faq/how_can_i_import_my_own_dataformat
-
-- name:  Reading is slow, can I write my raw data to a more efficient file format?
-  link:  /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format
 
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
 
-- name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
-  link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
-
 - name:  How can I use the databrowser?
   link:  /faq/how_can_i_use_the_databrowser
-
-- name:  What does a typical call to a FieldTrip function look like?
-  link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
 
 - name:  How is anatomical, functional or statistical "volume data" described?
   link:  /faq/how_is_anatomical_functional_or_statistical_volume_data_described
 
-- name:  Which datasets are used in the documentation and where are they used?
-  link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
-
 - name:  How is the segmentation defined?
   link:  /faq/how_is_the_segmentation_defined
-
-- name:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /getting_started/1020
 
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
   link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
-- name:  Getting started with ASA and EEProbe
-  link:  /getting_started/antneuro
-
 - name:  I used ICA on my MEG data from before 2012 and now FieldTrip crashes, why is that?
   link:  /faq/i_used_ica_on_my_meg_data_from_before_2012_and_now_fieldtrip_crashes_why_is_that
-
-- name:  Getting started with BabySQUID data
-  link:  /getting_started/babysquid
 
 - name:  Where can I find open access MEG/EEG data?
   link:  /faq/open_data
 
-- name:  Getting started with Biosemi BDF data
-  link:  /getting_started/biosemi
-
 - name:  Reading is slow, can I write my raw data to a more efficient file format?
   link:  /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format
-
-- name:  Getting started with Blackrock data
-  link:  /getting_started/blackrock
 
 - name:  The databrowser crashes and destroys the whole MATLAB session, how can I resolve this?
   link:  /faq/the_databrowser_crashes_and_destroys_the_whole_matlab_session_how_can_i_resolve_this
@@ -124,23 +61,11 @@
 - name:  What does a typical call to a FieldTrip function look like?
   link:  /faq/what_does_a_typical_call_to_a_fieldtrip_function_look_like
 
-- name:  Getting started with BrainVision Analyzer and Easycap
-  link:  /getting_started/brainvision
-
-- name:  Getting started with BTi/4D data
-  link:  /getting_started/bti
-
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
-- name:  Getting started with CTF data
-  link:  /getting_started/ctf
-
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/1020
-
-- name:  Getting started with Cyberkinetics data
-  link:  /getting_started/cyberkinetics
 
 - name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
@@ -148,26 +73,14 @@
 - name:  Getting started with BabySQUID data
   link:  /getting_started/babysquid
 
-- name:  Getting started with EDF (European Data Format) data
-  link:  /getting_started/edf
-
 - name:  Getting started with Biosemi BDF data
   link:  /getting_started/biosemi
-
-- name:  Getting started with Philips/EGI data
-  link:  /getting_started/egi
 
 - name:  Getting started with Blackrock data
   link:  /getting_started/blackrock
 
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
-
 - name:  Getting started with BrainVision Analyzer and Easycap
   link:  /getting_started/brainvision
-
-- name:  Getting started with the Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
 
 - name:  Getting started with BTi/4D data
   link:  /getting_started/bti
@@ -175,32 +88,17 @@
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
 
-- name:  Getting started with Neuromag/Elekta/Megin data
-  link:  /getting_started/neuromag
-
-- name:  Getting started with Nicolet data
-  link:  /getting_started/nicolet
-
 - name:  Getting started with Cyberkinetics data
   link:  /getting_started/cyberkinetics
 
-- name:  Getting started with Plexon data
 - name:  Getting started with EDF (European Data Format) data
-  link:  /getting_started/plexon
   link:  /getting_started/edf
 
-
-- name:  Getting started with Yokogawa data
 - name:  Getting started with Philips/EGI data
-  link:  /getting_started/yokogawa
   link:  /getting_started/egi
-
 
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
-
-- name:  Importing your data
-  link:  /reading_data
 
 - name:  Getting started with the Neuralynx data recorded at the Donders Institute
   link:  /getting_started/neuralynx_fcdc

@@ -1,17 +1,8 @@
-- name:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
-
 - name:  Correlation analysis in fMRI data
   link:  /example/correlation_analysis_in_fmri_data
 
-- name:  Reading is slow, can I write my raw data to a more efficient file format?
 - name:  Getting started with reading raw EEG or MEG data
-  link:  /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
-
-
-- name:  Importing your data
-  link:  /reading_data
 
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/making_your_own_trialfun_for_conditional_trial_definition
@@ -19,50 +10,26 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  Automatic artifact rejection
-  link:  /tutorial/automatic_artifact_rejection
-
 - name:  How can I anonymize or deidentify a CTF dataset?
   link:  /faq/how_can_i_anonymize_a_ctf_dataset
-
-- name:  Cluster-based permutation tests on time-frequency data
-  link:  /tutorial/cluster_permutation_freq
 
 - name:  How can I find out what eventvalues and eventtypes there are in my data?
   link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data
 
-- name:  Preprocessing - Reading continuous EEG and MEG data
-  link:  /tutorial/continuous
-
 - name:  How can I fix a corrupt CTF meg4 file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_meg4_data_file
-
-- name:  Introduction to the FieldTrip toolbox
-  link:  /tutorial/introduction
 
 - name:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
 
-- name:  Trigger-based trial selection
-  link:  /tutorial/preprocessing
-
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-- name:  Visual artifact rejection
-
-  link:  /tutorial/visual_artifact_rejection
 
 - name:  How can I process continuous data without triggers?
   link:  /faq/how_can_i_process_continuous_data_without_triggers
 
-- name:  FieldTrip Walkthrough
-  link:  /walkthrough
-
 - name:  How can I read corrupted (unsaved) CTF data?
   link:  /faq/how_can_i_read_corrupted_unsaved_ctf_data
-
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
 
 - name:  I am having problems reading the CTF .hc headcoordinates file
   link:  /faq/i_am_having_problems_reading_the_ctf_.hc_headcoordinates_file

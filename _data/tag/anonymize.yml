@@ -1,6 +1,3 @@
-- name:  How can I anonymize data processed in FieldTrip?
-  link:  /faq/how_can_i_anonymize_fieldtrip_data
-
 - name:  Converting an example EEG dataset for sharing in BIDS
   link:  /example/bids_eeg
 

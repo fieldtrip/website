@@ -1,41 +1,20 @@
-- name:  How are the various MATLAB data structures defined?
-  link:  /faq/how_are_the_various_data_structures_defined
-
 - name:  MEG dataformats
   link:  /dataformat/meg
-
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
 
 - name:  Spike and LFP dataformats
   link:  /dataformat/spike
 
-- name:  How can I convert an anatomical MRI from DICOM into CTF format?
-  link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
-
 - name:  Example analysis pipeline for Biosemi data
   link:  /example/biosemi
-
-- name:  How can I convert one dataformat into an other?
-  link:  /faq/how_can_i_convert_one_dataformat_into_an_other
 
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
 
-- name:  How can I import my own data format?
-  link:  /faq/how_can_i_import_my_own_dataformat
-
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
-  link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
-
-- name:  I have problems reading in neuroscan .cnt files. How can I fix this?
-  link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
 - name:  How can I extend the reading functions with a new dataformat?
   link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
@@ -43,68 +22,35 @@
 - name:  How can I convert an anatomical MRI from DICOM into CTF format?
   link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
 
-- name:  Reading is slow, can I write my raw data to a more efficient file format?
-  link:  /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format
-
 - name:  How can I convert one dataformat into an other?
   link:  /faq/how_can_i_convert_one_dataformat_into_an_other
-
-- name:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /getting_started/1020
 
 - name:  How can I import my own data format?
   link:  /faq/how_can_i_import_my_own_dataformat
 
-- name:  Getting started with ASA and EEProbe
-  link:  /getting_started/antneuro
-
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-
-- name:  Getting started with BabySQUID data
-  link:  /getting_started/babysquid
 
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
   link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
-- name:  Getting started with Biosemi BDF data
-  link:  /getting_started/biosemi
-
 - name:  Reading is slow, can I write my raw data to a more efficient file format?
   link:  /faq/reading_is_slow_can_i_write_my_raw_data_to_a_more_efficient_file_format
-
-- name:  Getting started with Blackrock data
-  link:  /getting_started/blackrock
 
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
   link:  /getting_started/1020
 
-- name:  Getting started with BrainVision Analyzer and Easycap
-  link:  /getting_started/brainvision
-
 - name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
-
-- name:  Getting started with BTi/4D data
-  link:  /getting_started/bti
 
 - name:  Getting started with BabySQUID data
   link:  /getting_started/babysquid
 
-- name:  Getting started with CTF data
-  link:  /getting_started/ctf
-
 - name:  Getting started with Biosemi BDF data
   link:  /getting_started/biosemi
 
-- name:  Getting started with Cyberkinetics data
-  link:  /getting_started/cyberkinetics
-
 - name:  Getting started with Blackrock data
   link:  /getting_started/blackrock
-
-- name:  Getting started with EDF (European Data Format) data
-  link:  /getting_started/edf
 
 - name:  Getting started with BrainVision Analyzer and Easycap
   link:  /getting_started/brainvision
@@ -112,50 +58,26 @@
 - name:  Getting started with BTi/4D data
   link:  /getting_started/bti
 
-- name:  Getting started with Philips/EGI data
-  link:  /getting_started/egi
-
 - name:  Getting started with CTF data
   link:  /getting_started/ctf
-
-- name:  Getting started with Neuralynx data
-  link:  /getting_started/neuralynx
 
 - name:  Getting started with Cyberkinetics data
   link:  /getting_started/cyberkinetics
 
-- name:  Getting started with the Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
-
 - name:  Getting started with EDF (European Data Format) data
   link:  /getting_started/edf
-
-- name:  Getting started with Neuromag/Elekta/Megin data
-  link:  /getting_started/neuromag
 
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 
-- name:  Getting started with Nicolet data
-  link:  /getting_started/nicolet
-
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
-
-- name:  Getting started with Plexon data
-  link:  /getting_started/plexon
 
 - name:  Getting started with the Neuralynx data recorded at the Donders Institute
   link:  /getting_started/neuralynx_fcdc
 
-- name:  Getting started with Yokogawa data
-  link:  /getting_started/yokogawa
-
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
-
-- name:  Importing your data
-  link:  /reading_data
 
 - name:  Getting started with Nicolet data
   link:  /getting_started/nicolet
