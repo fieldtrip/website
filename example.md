@@ -75,11 +75,17 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Miscellaneous
 
+- [BIDS - the brain imaging data structure](/example/bids)
+- [Converting an example behavioral dataset for sharing in BIDS](/example/bids_behavioral)
+- [Converting an example EEG dataset for sharing in BIDS](/example/bids_eeg)
+- [Converting an example EMG dataset for sharing in BIDS](/example/bids_emg)
+- [Converting an example eyetracker dataset for sharing in BIDS](/example/bids_eyetracker)
+- [Converting an example motion tracking dataset for sharing in BIDS](/example/bids_motion)		
+- [Converting an example video dataset for sharing in BIDS](/example/bids_video)
+- [Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS](/example/bids_mous)
 - [Correlation analysis in fMRI data](/example/correlation_analysis_in_fmri_data)
 - [Example analysis pipeline for Biosemi bdf data](/example/biosemi)
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
 - [How to use checkconfig](/example/checkconfig)
-- [Converting an example EEG dataset for sharing in BIDS](/example/bids_eeg)
-- [Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS](/example/bids)
 - [Writing simulated data to a CTF dataset](/example/writing_simulated_data_to_a_ctf_dataset)
