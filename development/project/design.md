@@ -15,7 +15,7 @@ Not all are needed: see statistics\_\*.m for what vectors it may include.
 See http://fieldtrip.fcdonders.nl/walkthrough#non-paired_comparison and http://fieldtrip.fcdonders.nl/walkthrough#paired_comparison for examples on ivar and uvar.
 and http://fieldtrip.fcdonders.nl/development/statistics for uvar.
 
-Is there any explanation on the wiki for more on uvar and wvar? (Seems it is all on the email discussion list specific to people's questions).
+Is there any explanation on the website for more on uvar and wvar? (Seems it is all on the email discussion list specific to people's questions).
 
 ##### links to already existing pages with some mention of design matrix
 

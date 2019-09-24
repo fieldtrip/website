@@ -41,7 +41,7 @@ This section of the website lists information aimed at developers of FieldTrip a
 - Source reconstruction of event-related fields using minimum-norm estimate - (done and moved into place)
 - [How to deal with forward model UNITS?](/development/project/fwdunits), see [686](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=686) (done)
 - [Dealing with TMS-EEG datasets](/development/project/eeg_tms) (done)
-- [move internal fcdc documentation onto the wiki](/development/project/move_internal_fcdc_documentation_onto_the_wiki) (done)
+- [move internal fcdc documentation onto the website](/development/project/move_internal_fcdc_documentation_onto_the_wiki) (done)
 - [Create a tutorial on the processing of animal data](/development/project/animal) (done)
 - [Support for NIRS data](/development/project/nirs) (done)
 - [integration with SPM8](/development/project/spm8) (done)

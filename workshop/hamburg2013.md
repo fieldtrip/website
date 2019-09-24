@@ -42,7 +42,7 @@ _The first hands-on can be skipped by people that already have been using FieldT
 - Hands-on 4: [Beamforming](/tutorial/beamformer) and [Minimum-norm estimation](/tutorial/minimumnormestimate) (own data, bring the MRI)
 - Wrap-up of the day
 
-_We will use the online tutorials on the wiki, but in principle you will be working on your own data._
+_We will use the online tutorials on the website, but in principle you will be working on your own data._
 
 ### Friday 13 September (day 3)
 
