@@ -325,9 +325,180 @@ bids
 
 The anat, dwi, and fmap directories relate to static/structural data. The func, beh and emg directories relate do dynamic data, i.e. data with a time dimension where the participants behaviour and physiology are simultaneously recorded, while the subject was executing a task.
 
+## Converting the MRI data to BIDS
+
+The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.com/Donders-Institute/bidscoin). Marcel (involved in the POM project and informed about the DICOM sequence details) assisted with the conversion by providig a '.yaml' file.
+
 ## Converting the non-MRI data to BIDS
 
-TBD
+The conversion of the EMG, eyetracker and behavioral data to BIDS uses [data2bids](/example/data2bids) and follows the [other examples](/example/bids) that you can find on this website. The code is as follows.
+
+```
+sourcepath = './original';
+targetpath = './bids';
+
+%%
+
+general = [];
+
+general.InstitutionName             = 'Radboud University';
+general.InstitutionalDepartmentName = 'Donders Institute for Brain, Cognition and Behaviour';
+general.InstitutionAddress          = 'Kapittelweg 29, 6525 EN, Nijmegen, The Netherlands';
+
+% required for dataset_description.json
+general.dataset_description.Name                = 'POM - Parkinson op maat';
+
+% optional for dataset_description.json
+general.dataset_description.Authors             = 'n/a';
+general.dataset_description.DatasetDOI          = 'n/a';
+general.dataset_description.License             = 'n/a';
+general.dataset_description.Acknowledgements    = 'n/a';
+general.dataset_description.Funding             = 'n/a';
+general.dataset_description.ReferencesAndLinks  = {'https://www.parkinsonopmaat.nl'};
+
+%% EMG
+
+filename = {
+ 'POM1FM0023671_rest1.vhdr'
+ 'POM1FM0023671_task1.vhdr'
+ 'POM1FM0031237_rest1.vhdr'
+ 'POM1FM0031237_task1.vhdr'
+ };
+
+for i=1:numel(filename)
+ [p, f, x] = fileparts(filename{i});
+ piece = split(f, '_');
+ sub  = piece{1};
+ task = piece{2}(1:end-1);
+
+ % start by including the general metadata
+ cfg = general;
+ cfg.dataset = fullfile(sourcepath, 'emg', filename{i});
+ cfg.method = 'copy';
+
+ % specify the type and target location
+ cfg.bidsroot = targetpath;
+ cfg.sub = sub;
+ cfg.task = task;
+ cfg.datatype = 'emg';
+
+ cfg.participant.age = nan;
+ cfg.participant.sex = 'n/a';
+
+ data2bids(cfg);
+
+end
+
+%% Presentation custom .txt files
+
+filename = {
+ 'POM1FM0031237_prac1_logfile.txt'
+ 'POM1FM0023671_prac1_logfile.txt'
+ 'POM1FM0031237_task1_logfile.txt'
+ 'POM1FM0023671_task1_logfile.txt'
+ };
+
+for i=1:numel(filename)
+ [p, f, x] = fileparts(filename{i});
+ piece = split(f, '_');
+ sub  = piece{1};
+ task = piece{2}(1:end-1);
+
+ % start by including the general metadata
+ cfg = general;
+
+ % specify the type and target location
+ cfg.bidsroot = targetpath;
+ cfg.datatype = 'events';
+ cfg.sub = sub;
+ switch task
+ case 'prac1'
+   cfg.task = 'prac';
+ case 'task1'
+   cfg.task = 'motor';
+ end   
+ cfg.acq = 'txt'; % this is needed to distinguish the different recordings of the events
+
+ cfg.writetsv = 'replace';
+
+ % read the ascii log file
+ log = readtable(fullfile(sourcepath, 'task', filename{i}));
+
+ % add the onset and duration (both in seconds)
+ % the Presentation software uses time stamps of 0.1 milliseconds
+ % but these log files appear to be in 1 millisecond steps
+ log.onset = (log.Fixation_Time)/1e3;
+ log.duration = (log.Response_Time - log.Fixation_Time)/1e3;
+ log.duration(log.Response_Time==0) = nan;
+
+ cfg.events = log;
+ data2bids(cfg);
+end
+
+%% Presentation standard .log files
+
+filename = {
+ 'POM1FM0031237_task1-MotorTaskEv_left.log'
+ 'POM1FM0023671_task1-MotorTaskEv_right.log'
+ };
+
+for i=1:numel(filename)
+ [p, f, x] = fileparts(filename{i});
+ piece = split(f, '_');
+ sub = piece{1};
+
+ % start by including the general metadata
+ cfg = general;
+
+ cfg.dataset = fullfile(sourcepath, 'task', filename{i});
+
+ % specify the type and target location
+ cfg.bidsroot = targetpath;
+ cfg.datatype = 'events';
+ cfg.sub = sub;
+ cfg.task = 'motor';
+ cfg.acq = 'log'; % this is needed to distinguish the different recordings of the events
+
+ data2bids(cfg);
+end
+
+%% SMI eye tracker data
+
+filename = {
+ 'POM1FM0023671_rest1 Samples.txt'
+ 'POM1FM0023671_task1 Samples.txt'
+ 'POM1FM0031237_rest1 Samples.txt'
+ 'POM1FM0031237_task1 Samples.txt'
+ };
+
+for i=1:numel(filename)
+ [p, f, x] = fileparts(filename{i});
+ f(f==' ') = '_'; % replace spaces in the file name
+ piece = split(f, '_');
+ sub  = piece{1};
+ task = piece{2}(1:end-1);
+
+ % start by including the general metadata
+ cfg = general;
+
+ % the ascii file will be convertet to TSV
+ cfg.dataset = fullfile(sourcepath, 'eyetracker', filename{i});
+
+ % specify the type and target location
+ cfg.bidsroot = targetpath;
+ cfg.datatype = 'eyetracker';
+ cfg.sub = sub;
+ switch task
+ case 'rest1'
+   cfg.task = 'rest';
+ case 'task1'
+   cfg.task = 'motor';
+ end   
+ cfg.acq = 'smi'; % this is needed to distinguish the different recordings of the events
+
+ data2bids(cfg);
+end
+```
 
 ## Alining the time of the different measurements
 
@@ -395,11 +566,15 @@ Looking at the `_events.tsv` files for the EMG recording - which were derived fr
 
 From the `_scans.tsv` we can get for the start of the functional MRI acquisition
 
-    func/sub-POM1FM0023671_task-rest_acq-MB8_run-1_bold.nii.gz  1900-01-01T18:57:57
+```bash
+func/sub-POM1FM0023671_task-rest_acq-MB8_run-1_bold.nii.gz  1900-01-01T18:57:57
+```
 
 From the corresponding EMG `_events.tsv` we can get
 
-    14.5752	0.0002	72877	Response	R  1
+```bash
+14.5752	0.0002	72877	Response	R  1
+```
 
 which indicates that the first scan (coded in the EMG recording as response event "R 1") starts 14.5752 seconds _after_ the start of EMG acquisition. The EMG can therefore be aligned with the wall-time clock by means of the MRI triggers
 
@@ -421,11 +596,13 @@ To check that all MRI triggers are picked up, we can compare the number of event
 
     eyetracker_rest = readtable('sub-POM1FM0023671/beh/sub-POM1FM0023671_task-rest_acq-smi_events.tsv', 'FileType', 'Text', 'Delimiter', '\t');
     sum(eyetracker_rest.value==100)
-    emg_rest = readtable('sub-POM1FM0023671/emg/sub-POM1FM0023671_task-rest_events.tsv', 'FileType', 'Text', 'Delimiter', '\t');
-    sum(strcmp(emg_rest.value, 'R  1'))
 
     ans =
        805
+
+    emg_rest = readtable('sub-POM1FM0023671/emg/sub-POM1FM0023671_task-rest_events.tsv', 'FileType', 'Text', 'Delimiter', '\t');
+    sum(strcmp(emg_rest.value, 'R  1'))
+
     ans =
        805
 
@@ -442,7 +619,7 @@ This shows that for both EMG and eyetracker there are 805 triggers, which corres
         transform: [4×4 double]
              unit: 'mm'
 
-#### Eye tracker measurement
+#### Eye tracker data
 
 The eyetracker data can be aligned with the clock in the same way as the EMG, i.e. by means of the MRI triggers
 
@@ -476,7 +653,7 @@ This is similar to the procedure we used above.
     ans =
         '1900-01-01T19:11:02.205'
 
-#### Eye tracker measurement
+#### Eye tracker data
 
 This is similar to the procedure we used above.
 
