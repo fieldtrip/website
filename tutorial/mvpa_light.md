@@ -216,7 +216,7 @@ structure, we use
 [`ft_prepare_neighbours`](/faq/how_does_ft_prepare_neighbours_work/):
 
     cfg = [];
-    cfg.method      = 'triangulation'
+    cfg.method      = 'triangulation';
     cfg.layout      = 'CTF151_helmet.mat';
     cfg.channel     = dataFC_LP.label;
     neighbours = ft_prepare_neighbours(cfg);
@@ -254,12 +254,12 @@ As expected, the resultant topography is slightly more smeared out. Peak classif
 
 Classification across time does not give insight into whether information is shared across different time points. For example, is the information that the classifier uses early in a trial (t=80 ms) the same that it uses later (t=300ms)? In time generalization, this question is answered by training the classifier at a certain time point t. The classifer is then tested at the same time point t but it is also tested at all other time points in the trial ([King and Dehaene, 2014](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5635958/)). This procedure is then repeated for every
 possible training time point. To perform
-time x time classification, we only need to set the `cfg.timextime` parameter:
+time x time classification, we only need to set the `cfg.generalize` parameter:
 
 
     cfg = [] ;  
     cfg.method      = 'mvpa';
-    cfg.timextime   = 'yes';
+    cfg.generalize  = 'time';
     cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
 
     stat = ft_timelockstatistics(cfg, dataFIC_LP, dataFC_LP);
@@ -275,6 +275,102 @@ to a time point at which the respective classifier was tested. The classifier at
 
 
 {% include image src="/assets/img/tutorial/mvpa_light/timextime.png" width="300" %}
+
+## Classification of time-frequency data
+
+There are many possible ways in which to classify time-frequency data: performing
+ classification for each time point and frequency yields a two-dimensional result
+ that can be plotted as an image in the time-frequency plane. Alternatively, a one-dimensional
+ result is obtained by performing a separate classification for every
+time point (treating both frequencies and channels as features), or for every frequency point (treating both time points and channels as features). Which of these analyses is the most reasonable is ultimately
+determined by the research question, though it may be useful to run all of these analyses
+since they contain partly complementary information. To start we first perform a
+time-frequency analysis of the data (see [Time-frequency analysis using Hanning window, multitapers and wavelets](http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis/)
+ for details on time-frequency analysis).
+
+    cfg              = [];
+    cfg.output       = 'pow';
+    cfg.method       = 'mtmconvol';
+    cfg.taper        = 'hanning';
+    cfg.keeptrials   = 'yes';
+    cfg.foi          = 2:1:30;
+    cfg.t_ftimwin    = ones(length(cfg.foi),1) * 0.5;
+    cfg.toi          = -0.5:0.05:1.5;
+
+    freqFIC = ft_freqanalysis(cfg, dataFIC_LP);
+    freqFC = ft_freqanalysis(cfg, dataFC_LP);
+
+We can now perform classification for
+each time-frequency point separately by setting `cfg.search = {'freq' 'time'}`,
+that is, specifying both time and frequency as search dimensions.
+
+    cfg = [] ;  
+    cfg.method      = 'mvpa';
+    cfg.search      = {'freq' 'time'}
+    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
+
+    stat = ft_freqstatistics(cfg, freqFIC, freqFC);
+
+This yields a two-dimensional result in the time-frequency plane. What if, instead
+of considering each time-frequency point on its own, we want to include the information
+from the immediately preceding/following time point and the immediately preceding/following
+frequency point? This corresponds to a time-frequency searchlight analysis. To this end,
+we can define a binary frequency x frequency matrix that, for every time point,
+specifies which other time points are used as features.
+
+    freq_neigh = ones(numel(freqFIC.freq));
+    freq_neigh = freq_neigh - triu(freq_neigh,2) - tril(freq_neigh,-2);
+
+This yields a matrix with 1's on the diagonal and immediate off-diagonals and 0's elsewhere.
+To see this, let us look at the first few rows/columns of the matrix
+
+    freq_neigh(1:6, 1:6)
+
+Now we do the same for the time dimension
+
+    time_neigh = ones(numel(freqFIC.time));
+    time_neigh = time_neigh - triu(time_neigh,2) - tril(time_neigh,-2);
+
+    time_neigh(1:10, 1:10)
+
+
+We can provide these two matrices as a cell array in `cfg.mvpa.neighbours` and
+then re-run the analysis.
+
+    cfg.mvpa.neighbours = {freq_neigh, time_neigh};
+    stat = ft_freqstatistics(cfg, freqFIC, freqFC);
+
+The analysis will take longer since the feature space is now
+3 freqs x 3 times = 9 times as large.
+
+What if we want to perform a classification for every time point only, using
+both the channels and the frequencies as features? This is as easy as simply
+setting `cfg.search = 'time'`. The feature space is now large
+(149 channels x 29 frequencies = 4321 features), so it is expedient to use a kernel-based
+classifier. For kernel classifiers, computation time is mostly affected by the number of samples
+rather than the number of features. We can use kernel FDA with a linear kernel,
+which is equivalent to LDA but is more efficient when the number of features
+is much larger than the number of samples.
+
+    cfg = [] ;  
+    cfg.method      = 'mvpa';
+    cfg.search      = 'time';
+    cfg.design      = [ones(nFIC,1); 2*ones(nFC,1)];
+    cfg.mvpa.classifier             = 'kernel_fda';
+    cfg.mvpa.hyperparameter.kernel  = 'linear';
+
+    stat = ft_freqstatistics(cfg, freqFIC, freqFC);
+
+
+#### Exercise 3
+
+{% include markup/info %}
+Building on the previous example, perform an analysis for every frequency bin,
+using channels and time points as features. Confirm that kernel FDA with a linear
+kernel is indeed faster than ordinary LDA by running the analysis for both
+classifiers and stopping the time using the `tic` and `toc` functions.
+{% include markup/end %}
+
 
 
 <!--
