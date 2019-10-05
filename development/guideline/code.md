@@ -203,7 +203,7 @@ gcf refers to the current figure handle. There are number of additional conseque
 
 ## Git commit log messages
 
-Git commit messages should describe the change to the file or files. The log message should allow an end-user to realize that a recent change in the code may relate to the changed behaviour that he/she observes. The log message should also allow another developer that is familiar with the particular code to understand why the code was changed, and what part of the code was changed.
+Git commit messages should describe the change to the file or files. The log message should allow an end-user to realize that a recent change in the code may relate to the changed behavior that he/she observes. The log message should also allow another developer that is familiar with the particular code to understand why the code was changed, and what part of the code was changed.
 
 Log messages don't have to be long, but they have to be clear to the intended audience: end-users and colleague developers. Log messages should also be clear for yourself, because sometimes you'll have to go back in a function to fix problems that were introduced by your own previous change.
 

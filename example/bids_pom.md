@@ -5,7 +5,7 @@ tags: [example, bids, sharing]
 
 # Combining simultaneous recordings in BIDS
 
-When studying cognition and/or behaviour in relation to the brain, it is common to use multiple pieces of equipment at the same time. For the offline analysis of the biological activity in the brain in relation to the behaviour we rely on the equipment recording digital data on disk. Each of the pieces of equipment has its own way of recording data and its own file formats. When we represent all data in BIDS, we combine all these recordings in a uniform fashion to facilitate the interpretation and (re)use of the data.
+When studying cognition and/or behavior in relation to the brain, it is common to use multiple pieces of equipment at the same time. For the offline analysis of the biological activity in the brain in relation to the behaviour, we rely on the equipment recording digital data on disk. Each of the pieces of equipment has its own way of recording data and its own file formats. When we represent all data in BIDS, we combine all these recordings in a uniform fashion to facilitate the interpretation and (re)use of the data.
 
 Here are some pieces of equipment that we use at the Donders Institute _and_ that record data to disk, together with a short description of the data that they record.
 
@@ -41,7 +41,7 @@ The remainder of this example deals with simultaneous recordings and especially 
 
 ## Example dataset
 
-The example dataset that we will use here was recorded for the [Parkinson op Maat](https://www.parkinsonopmaat.nl) (POM) study. The example dataset is limited to only two participants, and only includes the data recorded during the session in the MR lab at the DCCN. Note also that actual data is **not** being shared here; we only present an outline of the data to demonstrate the strategy for aligning the timing of the different measurements.
+The example dataset that we will use here was recorded as part of the [Parkinson op Maat](https://www.parkinsonopmaat.nl) (POM) study. The dataset presented here is limited to only two participants, and only includes the data recorded during the session in the MR lab at the DCCN. Note also that actual data is **not** being shared here; we only present an outline of the data to demonstrate the strategy for organizing the data in BIDS and aligning the timing of the different measurements.
 
 The original collection of data is organized in a directory structure like this.
 
@@ -323,7 +323,7 @@ bids
 18 directories, 196 files
 ```
 
-The anat, dwi, and fmap directories relate to static/structural data. The func, beh and emg directories relate do dynamic data, i.e. data with a time dimension where the participants behaviour and physiology are simultaneously recorded, while the subject was executing a task.
+The anat, dwi, and fmap directories relate to static/structural data. The func, beh and emg directories relate to dynamic data, i.e. data with a time dimension where the participants behavior and physiology are simultaneously recorded, while the subject was executing a task.
 
 ## Converting the MRI data to BIDS
 
