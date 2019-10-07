@@ -28,6 +28,9 @@
 - name:  Converting the combined MEG/fMRI MOUS dataset for sharing in BIDS
   link:  /example/bids_mous
 
+- name:  Combining simultaneous recordings in BIDS
+  link:  /example/bids_pom
+
 - name:  Converting an example video dataset for sharing in BIDS
   link:  /example/bids_video
 

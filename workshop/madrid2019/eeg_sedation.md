@@ -14,7 +14,7 @@ The experimental design is displayed in the figure below.
 {% include image
 src="/assets/img/workshop/madrid2019/datasets/chennu_fig1.PNG" width="600" %}
 
-_Figure 1. Experimental manipulation and measurement of behaviour and
+_Figure 1. Experimental manipulation and measurement of behavior and
 propofol concentration in blood plasma._
 
 Briefly, participants remained with the eyes closed while the EEG were

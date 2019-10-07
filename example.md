@@ -76,6 +76,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 ### Miscellaneous
 
 - [BIDS - the brain imaging data structure](/example/bids)
+- [Combining simultaneous recordings in BIDS](/example/bids_pom)
 - [Converting an example behavioral dataset for sharing in BIDS](/example/bids_behavioral)
 - [Converting an example EEG dataset for sharing in BIDS](/example/bids_eeg)
 - [Converting an example EMG dataset for sharing in BIDS](/example/bids_emg)

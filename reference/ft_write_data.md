@@ -25,10 +25,10 @@ title: ft_write_data
    neuralynx_ncs
    neuralynx_sdma
    plexon_nex
-   riff_wave
    fcdc_matbin
    fcdc_mysql
    fcdc_buffer
+   flac, m4a, mp4, oga, ogg, wav (audio formats)
    matlab
 
  For EEG data formats, the input data is assumed to be scaled in microvolt.
