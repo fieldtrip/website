@@ -17,7 +17,11 @@ Motion tracking data - optionally in relation to the presentation of stimulus ma
 Besides storing the output of the motion capture system, the position of the (optical) markers on the body, the frame of reference (coordinate system) and the units should be documented in the sidecar JSON file. This can be added to the `cfg.motion` field to **[data2bids](/reference/data2bids)** function, e.g. as `cfg.motion.MarkerPositions` and `cfg.motion.MotionCoordinateSystem`.
 {% include markup/end %}
 
-## Example
+## Qualisys
+
+[Qualisys](https://www.qualisys.com) consists of a camera-based motion capture system. _It would be nice to have some more details here on the system and corresponding software, please contribute your knowledge via [GitHub](https://github.com/fieldtrip/website)._
+
+### Example
 
 The example that we present here was recorded using a [Qualisys](https://www.qualisys.com) camera-based motion capture system. The data was exported from the proprietary Qualisys `.qtm` format to the standard biomechanics `.c3d` format (see [this link](https://www.c3d.org) for the standard) and to the `.tsv` (tab-separated-values) format; data in both exported formats can directly be read and processed by FieldTrip.
 
@@ -58,3 +62,9 @@ cfg.task = 'handmovement';
 
 data2bids(cfg);
 ```
+
+## Optotrak
+
+The Optotrak software, NDI First Principles, automatically exports a collection file, an experiment file, a tool definition file, and two raw data files. One of the raw data files contains the Optotrak data, which consists of the 3D data from the attached markers, and the other raw data file contains the ODAU data. The ODAU is a separate unit of the Optotrak system that digitizes additional analog inputs, e.g. from analog inputs to synchronize the data to an external system. Additionally, the software can convert the data and export it in the following formats: NDI 3D, NDI Odau, C3D, AII to ASCII, or NDI 6D. The export format can be specified in the software prior to starting the recording, or the data can be converted offline.
+
+Experimental events, such as the beginning of a trial or the onset of a stimulus, are usually captured by sending a signal to one of the analog channels of the ODAU unit of the Optotrak system. This can be done by sending for example a step function or a pulse with a given amplitude and duration. This analog signal differs from experimental events in for example the data from Presentation software, as it is saved as a continuous analog stream of data (similar to the 3D marker data) instead of saving the onset and offset of a certain event in a separate events file.
