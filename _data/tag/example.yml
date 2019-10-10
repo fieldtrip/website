@@ -1,9 +1,6 @@
 - name:  Example script for leadfield based on FEM headmodel
   link:  /development/project/example_fem
 
-- name:  Example MATLAB scripts
-  link:  /example
-
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/align_eeg_electrode_positions_to_bem_headmodel
 
@@ -88,11 +85,11 @@
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
 
-- name:  Effects of tapering for power estimates
-  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
-
 - name:  Computing and using estimates of effect size
   link:  /example/effectsize
+
+- name:  Effects of tapering for power estimates
+  link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
@@ -138,6 +135,9 @@
 
 - name:  Making your own trialfun for conditional trial definition
   link:  /example/making_your_own_trialfun_for_conditional_trial_definition
+
+- name:  Example MATLAB scripts
+  link:  /example
 
 - name:  Measuring the timing delay and jitter for a real-time application
   link:  /example/measuring_the_timing_delay_and_jitter_for_a_real-time_application
