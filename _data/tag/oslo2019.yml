@@ -1,3 +1,6 @@
+- name:  FieldTrip workshop in Oslo
+  link:  /workshop/oslo2019
+
 - name:  Beamforming oscillatory responses in MEG data
   link:  /workshop/oslo2019/beamforming
 
@@ -6,9 +9,6 @@
 
 - name:  Preprocessing and event-related potentials in EEG data
   link:  /workshop/oslo2019/introduction
-
-- name:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
 
 - name:  Statistical analysis and multiple comparison correction for EEG data
   link:  /workshop/oslo2019/statistics
