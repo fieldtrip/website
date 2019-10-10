@@ -1,3 +1,6 @@
+- name:  BIDS - the brain imaging data structure
+  link:  /example/bids
+
 - name:  Converting an example behavioral dataset for sharing in BIDS
   link:  /example/bids_behavioral
 
@@ -9,9 +12,6 @@
 
 - name:  Converting an example eyetracker dataset for sharing in BIDS
   link:  /example/bids_eyetracker
-
-- name:  BIDS - the brain imaging data structure
-  link:  /example/bids
 
 - name:  Converting an example motion tracking dataset for sharing in BIDS
   link:  /example/bids_motion

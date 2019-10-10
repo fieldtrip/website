@@ -70,11 +70,11 @@
 - name:  Getting started with Philips/EGI data
   link:  /getting_started/egi
 
-- name:  Getting started with the Neuralynx data recorded at the Donders Institute
-  link:  /getting_started/neuralynx_fcdc
-
 - name:  Getting started with Neuralynx data
   link:  /getting_started/neuralynx
+
+- name:  Getting started with the Neuralynx data recorded at the Donders Institute
+  link:  /getting_started/neuralynx_fcdc
 
 - name:  Getting started with Neuromag/Elekta/Megin data
   link:  /getting_started/neuromag
