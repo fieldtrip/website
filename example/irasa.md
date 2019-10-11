@@ -7,7 +7,7 @@ tags: [example, irasa]
 
 IRASA allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The technique virtually compresses and expands the time-domain data with a set of non-integer resampling factors prior to Fourier-based spectral decomposition. As a result, rhythmic components in the power-spectrum are redistributed while the arrhythmic 1/f distribution is left intact. Taking the median of the resulting auto-spectral distributions extracts the power-spectral 1/f component, and the subsequent removal of the 1/f component from the original power-spectrum offers a power-spectral estimate of rhythmic content in the recorded signal.
 
-The below MATLAB script demonstrates the use of the [IRASA technique](https://link.springer.com/article/10.1007/s10548-015-0448-0) (on simulated data) for the purpose of [extracting rhythmic spectral features](https://www.biorxiv.org/content/10.1101/636241v2) from the electrophysiological signal.
+The below MATLAB script demonstrates the use of the [IRASA technique](https://link.springer.com/article/10.1007/s10548-015-0448-0) (on simulated data) for the purpose of [extracting rhythmic spectral features](https://elifesciences.org/articles/48065) from the electrophysiological signal.
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -19,8 +19,8 @@ The below MATLAB script demonstrates the use of the [IRASA technique](https://li
     %   addpath <path to fieldtrip home directory>
     %   ft_defaults
     %
-    % From Stolk et al., Electrocorticographic dissociation of alpha and 
-    % beta rhythmic activity in the human sensorimotor system
+    % From Stolk et al., eLife 2019 Electrocorticographic dissociation of 
+    % alpha and beta rhythmic activity in the human sensorimotor system
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
