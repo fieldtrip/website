@@ -138,7 +138,7 @@ title: data2bids
    cfg.CogAtlasID                  = string
    cfg.CogPOID                     = string
 
- There are more BIDS options for the mri/meg/eeg/ieegdata type specific sidecars.
+ There are more BIDS options for the mri/meg/eeg/ieeg data type specific sidecars.
  Rather than listing them all here, please open this function in the MATLAB editor,
  and scroll down a bit to see what those are. In general the information in the JSON
  files is specified in CamelCase, whereas the information for TSV files is in
