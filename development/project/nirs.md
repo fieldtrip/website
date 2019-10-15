@@ -27,16 +27,16 @@ NIRS data has another kind of sensor called "optode". An optode can either emit 
 
 In a similar vein as for MEG data, the .opto field should contain a .tra matrix, that contains information on how the channels are defined in terms of transmitters and receivers. Note that, in contrast to electrophysiological measurements, this is a 1-1-1 mapping, i.e. exactly one transmitter and exactly one receiver make up one channel (technically this is commonly achieved by multiplexing).
 
-Optode specifications:
+Optode specifications, where C is the number of channels, N is the number of optodes and M is the numberv of wavelengths:
 
     hdr.opto            - contains information about the optodes.
-    hdr.opto.tra        - NxC matrix, boolean, contains information about how receiver and transmitter form channels.
+    hdr.opto.tra        - CxN matrix, boolean, contains information about how receiver and transmitter form channels.
     hdr.opto.optopos    - contains information about the position of the optodes.
     hdr.opto.optotype   - contains information about the type of optode (receiver or transmitter).
     hdr.opto.chanpos    - contains information about the position of the channels (i.e. average of optopos)
     hdr.opto.chantype   - contains information about the channel type (NIRS)
     hdr.opto.wavelength - 1xM vector of all wavelengths that were used
-    hdr.opto.transmits  - NxM matrix, boolean, where N is the number of optodes and M the number of wavelengths per transmitter. Specifies what optode is transmitting at what wavelength (or nothing at all, which indicates that it is a receiver)
+    hdr.opto.transmits  - NxM matrix, boolean, where N is the number of optodes and M the number of wavelengths. Specifies which optode is transmitting at what wavelength (or nothing at all, indicating that it is a receiver)
     hdr.opto.laserstrength - 1xM vector of the strength of the emitted light of the lasers.
 
 ## Datatype
