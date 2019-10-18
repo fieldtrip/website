@@ -32,6 +32,7 @@ title: ft_databrowser
    cfg.allowoverlap            = 'yes' or 'no', whether data that is overlapping in multiple trials is allowed (default = 'no')
    cfg.channel                 = cell-array with channel labels, see FT_CHANNELSELECTION
    cfg.channelclamped          = cell-array with channel labels, that (when using the 'vertical' viewmode) will always be shown at the bottom. This is useful for showing ECG/EOG channels along with the other channels
+   cfg.compscale               = string, 'global' or 'local', defines whether the colormap for the topographic scaling is applied per topography or on all visualized components (default 'global')
    cfg.plotlabels              = 'yes', 'no' or 'some', whether to plot channel labels in vertical viewmode. The option 'some' plots one label for every ten channels, which is useful if there are many channels. (default = 'yes')
    cfg.ploteventlabels         = 'type=value', 'colorvalue' (default = 'type=value');
    cfg.plotevents              = 'no' or 'yes', whether to plot event markers. (default is 'yes')
@@ -39,8 +40,10 @@ title: ft_databrowser
    cfg.artfctdef.xxx.artifact  = Nx2 matrix with artifact segments see FT_ARTIFACT_xxx functions
    cfg.selectfeature           = string, name of feature to be selected/added (default = 'visual')
    cfg.selectmode              = 'markartifact', 'markpeakevent', 'marktroughevent' (default = 'markartifact')
-   cfg.colorgroups             = 'sequential' 'allblack' 'labelcharx' (x = xth character in label), 'chantype' or vector with length(data/hdr.label) defining groups (default = 'sequential')
-   cfg.channelcolormap         = COLORMAP (default = customized lines map with 15 colors)
+   cfg.colorgroups             = 'sequential', 'allblack', 'labelcharN' (N = Nth character in label), 'chantype' or a vector with the length of the number of channels defining the groups (default = 'sequential')
+   cfg.linecolor               = string with line colors or Nx3 color map (default = customized lines map with 15 colors)
+   cfg.linewidth               = linewidth in points (default = 0.5)
+   cfg.linestyle               = linestyle/marker type, see options of the PLOT function (default = '-')
    cfg.verticalpadding         = number or 'auto', padding to be added to top and bottom of plot to avoid channels largely dissappearing when viewmode = 'vertical'/'component'  (default = 'auto'). The padding is expressed as a proportion of the total height added to the top and bottom. The setting 'auto' determines the padding depending on the number of channels that are being plotted.
    cfg.selfun                  = string, name of function that is evaluated using the right-click context menu. The selected data and cfg.selcfg are passed on to this function.
    cfg.selcfg                  = configuration options for function in cfg.selfun
@@ -48,10 +51,10 @@ title: ft_databrowser
    cfg.renderer                = string, 'opengl', 'zbuffer', 'painters', see MATLAB Figure Properties. If this function crashes, you should try 'painters'.
    cfg.position                = location and size of the figure, specified as a vector of the form [left bottom width height].
 
- The following options for the scaling of the EEG, EOG, ECG, EMG and MEG channels is
- optional and can be used to bring the absolute numbers of the different channel
- types in the same range (e.g. fT and uV). The channel types are determined from the
- input data using FT_CHANNELSELECTION.
+ The following options for the scaling of the EEG, EOG, ECG, EMG, MEG and NIRS channels
+ is optional and can be used to bring the absolute numbers of the different
+ channel types in the same range (e.g. fT and uV). The channel types are determined
+ from the input data using FT_CHANNELSELECTION.
    cfg.eegscale                = number, scaling to apply to the EEG channels prior to display
    cfg.eogscale                = number, scaling to apply to the EOG channels prior to display
    cfg.ecgscale                = number, scaling to apply to the ECG channels prior to display
@@ -59,10 +62,10 @@ title: ft_databrowser
    cfg.megscale                = number, scaling to apply to the MEG channels prior to display
    cfg.gradscale               = number, scaling to apply to the MEG gradiometer channels prior to display (in addition to the cfg.megscale factor)
    cfg.magscale                = number, scaling to apply to the MEG magnetometer channels prior to display (in addition to the cfg.megscale factor)
+   cfg.nirsscale               = number, scaling to apply to the NIRS channels prior to display
    cfg.mychanscale             = number, scaling to apply to the channels specified in cfg.mychan
    cfg.mychan                  = Nx1 cell-array with selection of channels
    cfg.chanscale               = Nx1 vector with scaling factors, one per channel specified in cfg.channel
-   cfg.compscale               = string, 'global' or 'local', defines whether the colormap for the topographic scaling is applied per topography or on all visualized components (default 'global')
 
  You can specify preprocessing options that are to be applied to the  data prior to
  display. Most options from FT_PREPROCESSING are supported. They should be specified
@@ -87,7 +90,6 @@ title: ft_databrowser
    cfg.fontunits               = string, can be 'normalized', 'points', 'pixels', 'inches' or 'centimeters' (default = 'normalized')
    cfg.axisfontsize            = number, fontsize along the axes (default = 10)
    cfg.axisfontunits           = string, can be 'normalized', 'points', 'pixels', 'inches' or 'centimeters' (default = 'points')
-   cfg.linewidth               = number, width of plotted lines (default = 0.5)
 
  When visually selection data, a right-click will bring up a context-menu containing
  functions to be executed on the selected data. You can use your own function using

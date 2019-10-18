@@ -46,6 +46,11 @@ title: ft_rejectvisual
    cfg.alim        = value that determines the amplitude scaling for the
                      channel and trial display, if empty then the amplitude
                      scaling is automatic (default = [])
+
+ The following options for the scaling of the EEG, EOG, ECG, EMG, MEG and NIRS channels
+ is optional and can be used to bring the absolute numbers of the different
+ channel types in the same range (e.g. fT and uV). The channel types are determined
+ from the input data using FT_CHANNELSELECTION.
    cfg.eegscale    = number, scaling to apply to the EEG channels prior to display
    cfg.eogscale    = number, scaling to apply to the EOG channels prior to display
    cfg.ecgscale    = number, scaling to apply to the ECG channels prior to display
@@ -53,11 +58,10 @@ title: ft_rejectvisual
    cfg.megscale    = number, scaling to apply to the MEG channels prior to display
    cfg.gradscale   = number, scaling to apply to the MEG gradiometer channels prior to display (in addition to the cfg.megscale factor)
    cfg.magscale    = number, scaling to apply to the MEG magnetometer channels prior to display (in addition to the cfg.megscale factor)
-
- The scaling to the EEG, EOG, ECG, EMG and MEG channels is optional and can
- be used to bring the absolute numbers of the different channel types in
- the same range (e.g. fT and uV). The channel types are determined from
- the input data using FT_CHANNELSELECTION.
+   cfg.nirsscale   = number, scaling to apply to the NIRS channels prior to display
+   cfg.mychanscale = number, scaling to apply to the channels specified in cfg.mychan
+   cfg.mychan      = Nx1 cell-array with selection of channels
+   cfg.chanscale   = Nx1 vector with scaling factors, one per channel specified in cfg.channel
 
  Optionally, the raw data is preprocessed (filtering etc.) prior to
  displaying it or prior to computing the summary metric. The
