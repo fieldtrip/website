@@ -1,6 +1,6 @@
 ---
 title: Bugzilla and GitHub issue tracking
-tags: [development]
+tags: [development, support]
 ---
 
 # Bugzilla and GitHub issue tracking

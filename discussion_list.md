@@ -1,5 +1,6 @@
 ---
 title: Discussion List
+tags: [support]
 ---
 
 # Discussion List
