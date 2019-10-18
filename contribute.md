@@ -9,7 +9,7 @@ FieldTrip is an [Open Source](http://www.opensource.org) project with contributi
 
 ## Share your expertise
 
-The FieldTrip community is organized around the [email discussion list](/discussion_list). You can contribute your expertise by helping other people, answering questions from other people on the email list, or posting your ideas.
+The FieldTrip community is organized around the [email discussion list](/discussion_list). You can contribute your expertise by helping other people, answering questions from other people on the email list, or posting your ideas. This is also the place where you should ask your questions how to use FieldTrip.
 
 ## Report bugs or request enhancements
 
