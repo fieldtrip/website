@@ -68,4 +68,5 @@ title: ft_filetype
   - AnyWave *.ades
   - Qualisys *.tsv
   - Mrtrix *.mif
+  - MAUS *.TextGrid
 ```
