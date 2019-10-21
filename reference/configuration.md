@@ -672,7 +672,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.colorgrad** - [ft_sourceplot](/reference/ft_sourceplot)  
 
 
-**cfg.colorgroups** - [ft_databrowser](/reference/ft_databrowser)  
+**cfg.colorgroups** - [ft_databrowser](/reference/ft_databrowser), [ft_multiplotER](/reference/ft_multiplotER)  
 
 
 **cfg.colormap** - [ft_icabrowser](/reference/ft_icabrowser), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_singleplotTFR](/reference/ft_singleplotTFR), [ft_spike_plot_isireturn](/reference/ft_spike_plot_isireturn), [ft_spike_plot_jpsth](/reference/ft_spike_plot_jpsth), [ft_topoplotER](/reference/ft_topoplotER), [ft_topoplotIC](/reference/ft_topoplotIC), [ft_topoplotTFR](/reference/ft_topoplotTFR)  
