@@ -11,9 +11,7 @@ This tutorial demonstrates how to analyze a functional near-infrared spectroscop
 The goal is to introduce the basic fNIRS analysis features of FieldTrip on Artinis NIRS data.
 You can find details on the Artinis recording and analysis software [here](http://www.fieldtriptoolbox.org/getting_started/artinis).
 
-By the end of this tutorial, you will be able to read in fNIRS data, segment it and apply different pre-processing steps. This tutorial thus also serves as a kind of general introduction into the basic fundamentals of FieldTrip.
-You will also learn how to create basic visualizations of the data such as plotting single traces or topographic mapping.
-Finally, in this tutorial you will compute time-locked averages from the segmented data.
+By the end of this tutorial, you will be able to read in fNIRS data, segment it and apply different pre-processing steps. This tutorial thus also serves as a kind of general introduction into the basic fundamentals of FieldTrip. You will also learn how to create basic visualizations of the data such as plotting single traces or topographic mapping. Finally, in this tutorial you will compute time-locked averages from the segmented data.
 
 This tutorial does not show how to deal with bad channels as it only operates on single channel data. You can find more information about [how to remove bad channels](/tutorial/nirs_multichannel#remove_bad_channels) and generally how to analyise multiple channels in the [Preprocessing and averaging of multi-channel NIRS data](/tutorial/nirs_multichannel) tutorial.
 
@@ -56,16 +54,15 @@ _Figure: Overview of fNIRS analysis procedure._
 
 ### Getting Started
 
-The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let MATLAB know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)) and then execute the **[ft_defaults](/reference/ft_defaults)** function by typin
+The dataset that we would like to analyze is called 'motor_cortex.oxy3'. First, we need to point FieldTrip to this file. Note that FieldTrip does not feature a graphical-user interface, but instead requires you to script your way to the end goal. To let MATLAB know that we want to use FieldTrip and it's file locations, add the FieldTrip folder to your path ([without subfolders](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)) and then execute the **[ft_defaults](/reference/ft_defaults)** function by typing:
 
     ft_defaults
 
-In general, FieldTrip is keeping all input arguments to a function stored together in a local variable called 'configuration' or 'cfg'. Although MATLAB variables could take any name, for convenience we will keep on using the name 'cfg' for this. FieldTrip functions are designed to each represent one step in your analysis pipeline. One (crucial) step in your analysis pipeline is to read in and preprocess the data. For this, we will make use of the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**. You can check out the help of the preprocessing function by typing:
+In general, FieldTrip is keeping all input arguments to a function stored together in a local variable called 'configuration' or 'cfg'. Although MATLAB variables could take any name, for convenience we will keep on using the name 'cfg' for this. FieldTrip functions are designed to each represent one step in your analysis pipeline. One (crucial) step in your analysis pipeline is to read in and preprocess the data. For this, we will make use of the FieldTrip function **[ft_preprocessing](/reference/ft_preprocessing)**. You can check out the help of the preprocessing function by typing
 
     help ft_preprocessing
 
-It might also be helpful to check out the code to obtain an understanding of what the function is about.
-As FieldTrip is an open source toolbox, you can always have a look at the code details by typing
+It might also be helpful to check out the code to obtain an understanding of what the function is about. As FieldTrip is an open source toolbox, you can always have a look at the code details by typing:
 
     edit ft_preprocessing
 
@@ -76,20 +73,20 @@ If this is your first time using FieldTrip you might also want to have a look at
 ### Read & trim data
 
 For now, however, let's take a moment and read the help only and neglect the code.
-So, it seems that **[ft_preprocessing](/reference/ft_preprocessing)** would like to see our filename in the variable cfg.dataset. So, let us give FieldTrip this information. Best is to open up the editor and put all lines of code in there. It is also good practice to initialize the cfg-variable each time you want to start a new step in your processing pipelin
+So, it seems that **[ft_preprocessing](/reference/ft_preprocessing)** would like to see our filename in the variable cfg.dataset. So, let us give FieldTrip this information. Best is to open up the editor and put all lines of code in there. It is also good practice to initialize the cfg-variable each time you want to start a new step in your processing pipeline.
 
     cfg = [];
     cfg.dataset = 'motor_cortex.oxy3';
 
 Normally you would specify the full path, including the drive (for instance: C:\). This makes sure that your code will execute independent from your current MATLAB location. It is good practice to keep your original raw data, your processed data and your scripts in three separate locations. In this case we will work with the data in the present working directory.
 
-Let us try to execute **[ft_preprocessing](/reference/ft_preprocessing)** now as was specified in the hel
+Let us try to execute **[ft_preprocessing](/reference/ft_preprocessing)** now as was specified in the help:
 
     [data] = ft_preprocessing(cfg);
 
 When working with .oxy3-files, the optode template containing the layout of the optodes needs to be loaded. If MATLAB cannot find the template file on your path, it will pop up a graphical user interface dialogue asking you to locate the xml file. By default this file is located in C:\Program Files (x86)\Artinis Medical Systems BV\Oxysoft 3.0.103. The file to select is “optodetemplates.xml”. However, given that FieldTrip often will search for this function, it is best to copy this function to the same folder as where your MATLAB analysis script and/or your fNIRS are data stored. For information on how to choose the optimal template for your experiments, please see https://www.artinis.com/blogpost-all/2017/6/27/how-do-i-choose-the-correct-fibers-and-template-for-my-oxymon.
 
-FieldTrip is finished when you see something like this on the scree
+FieldTrip is finished when you see something like this on the screen
 
     >> the call to "ft_preprocessing" took 9 seconds
 
@@ -100,7 +97,8 @@ Through the option cfg.trl you can specify which trials should be read in. For n
 {% include markup/end %}
 
 Let us take a look at what just happened. If you observed your workspace closely, you will have noticed that a new variable was added called 'data'. This is the same name that we put just in front of **[ft_preprocessing](/reference/ft_preprocessing)**. Had you written [something], then the variable 'something' would have been added to your workspace.
-If preprocessing was done as described, the data will have the following field
+
+If preprocessing was done as described, the data will have the following fields
 
     data =
            hdr: [1x1 struct]
@@ -145,7 +143,7 @@ Take a moment to familiarize yourself with the user-interface. Change the horizo
 
 ### Remove artifacts
 
-There are several ways to remove aspects of the data that are not of interest. That is, fNIRS data not only represents changes in oxyhemoglobin and deoxyhemoglobin concentrations, but contains, amongst others, also other physiological signals, random noise and variations stemming from the measurement environment. One prominent issue is motion artifacts, which are produced by temporary changes in the contact between optode and skin, often caused by movements of the head. Typically, one finds these motion artifacts in all channels simultaneously, but it could also be that just one channel or a few channels were affected, for instance if the participant moves the mouth. Short, unexpected peaks in the data are considered to stem from motion. You can detect and remove these artifacts for instance through \*_[ft_artifact_zvalue](/reference/ft_artifact_zvalue)_
+There are several ways to remove aspects of the data that are not of interest. That is, fNIRS data not only represents changes in oxyhemoglobin and deoxyhemoglobin concentrations, but contains, amongst others, also other physiological signals, random noise and variations stemming from the measurement environment. One prominent issue is motion artifacts, which are produced by temporary changes in the contact between optode and skin, often caused by movements of the head. Typically, one finds these motion artifacts in all channels simultaneously, but it could also be that just one channel or a few channels were affected, for instance if the participant moves the mouth. Short, unexpected peaks in the data are considered to stem from motion. You can detect and remove these artifacts for instance through **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**.
 
 You can specify a z-value cut-off like this:
 
@@ -163,12 +161,12 @@ You will see that FieldTrip identified 8 artifacts through this procedure. These
 Play around with the cut-off z-value. You can do this by running the artifact rejection in interactive mode by adding cfg.artfctdef.zvalue.interactive = 'yes'; before you run [cfg, artifact] = ft_artifact_zvalue(cfg, data);.
 In the interactive mode, you can change the threshold to see which parts of the data would be rejected, the rejected bits are marked in red.
 
-What is the optimal threshold to get rid off short lived peaks?
+What is the optimal threshold to get rid off short-lived peaks?
 {% include markup/end %}
 
 ### Transform to changes in oxyHB/deoxyHB
 
-You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analyzing changes in blood oxygenation in muscles
+You might have noticed that you were looking at OD values (OD stands for optical density and directly relates to the light intensity that fell on the optodes) rather than at oxygenated and deoxygenated hemoglobin concentrations, because the channel labels mention the wavelengths. We can transform our data to concentrations using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)**. One of the choices you can make when using **[ft_nirs_transform_ODs](/reference/ft_nirs_transform_ODs)** is the dpf (differential path length factor), which can differ depending on the age of the participant and the tissue type under investigation (i.e. when analyzing changes in blood oxygenation in muscles.
 
     cfg = [];
     cfg.dpf = 5.9;
@@ -183,8 +181,7 @@ Check out the data again! As expected, the selected channel, in which you were a
 
 ### Separate functional from systemic responses
 
-Apart from motion artifacts, which appear as spikes in the data, fNIRS measurements also contain systemic responses, which, for functional NIRS, we want to filter out of our data. There are multiple ways of extracting the functional response (the fNIRS response) out of the data, but for now, we take a simple but relatively effective approach, namely by applying a bandpass filter. A bandpass filter eliminates data above and below a user-defined threshold frequency. We will filter our data in the frequency range of most
-interest for the hemodynamic response. That is activation below 0.1 Hz. Additionally we high-pass filter above 0.01 Hz to eliminate slow drifts.
+Apart from motion artifacts, which appear as spikes in the data, fNIRS measurements also contain systemic responses, which, for functional NIRS, we want to filter out of our data. There are multiple ways of extracting the functional response (the fNIRS response) out of the data, but for now, we take a simple but relatively effective approach, namely by applying a bandpass filter. A bandpass filter eliminates data above and below a user-defined threshold frequency. We will filter our data in the frequency range of most interest for the hemodynamic response. That is activation below 0.1 Hz. Additionally we high-pass filter above 0.01 Hz to eliminate slow drifts.
 
     cfg = [];
     cfg.bpfilter = 'yes';
@@ -211,8 +208,7 @@ The question mark indicates that we are not sure about the event triggers, and t
 
     ft_definetrial(cfg);
 
-In the command window, you will see that 24 events were found, and two types of events were used, namely event 'A' and event 'B'. In case you recorded your files with the Artinis Oxymon system, and you
-did not add events during the measurement, you can include them here, see FAQ.
+In the command window, you will see that 24 events were found, and two types of events were used, namely event 'A' and event 'B'. In case you recorded your files with the Artinis Oxymon system, and you did not add events during the measurement, you can include them here, see FAQ.
 
 Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event ‘A’) and ending 35 seconds after ‘A’ (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)**:
 
@@ -223,7 +219,7 @@ Furthermore, note that we do not define the output variable [cfg] now, as we are
     cfg = ft_definetrial(cfg);
     data_epoch = ft_redefinetrial(cfg,data_filtered);
 
-Note that we left out the brackets around the output variable as we have a single output variable here. Great, we have 12 trials now! Check them out using the databrowser, but let us use some settings to make the plots look neate
+Note that we left out the brackets around the output variable as we have a single output variable here. Great, we have 12 trials now! Check them out using the databrowser, but let us use some settings to make the plots look neater:
 
     cfg = [];
     cfg.ylim = [-1 1];
