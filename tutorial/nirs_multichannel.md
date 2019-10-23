@@ -99,7 +99,7 @@ For information about FieldTrip data structures and their fields, see this [freq
 To retrieve the layout from the data file as shown above, you can use:
 
     cfg           = [];
-    cfg.optofile  = 'LR-01-2015-06-01-0002.oxy3';
+    cfg.opto      = 'LR-01-2015-06-01-0002.oxy3';
     ft_layoutplot(cfg);
 
 {% include image src="/assets/img/tutorial/nirs_multichannel/nirs_tut2_optodepositions.png" width="400" %}
@@ -177,7 +177,7 @@ We can now plot the data and see what it looks like. In cfg.preproc we can speci
 
 This is very noisy! Do not give up hope. In the next steps, you will remove most of the noise.
 
-As we are also not interested in very slow changes (and/or a constant offset/ DC) in the hemodynamic response, we can ‘safely’ throw away low-frequency information by high-pass filtering.
+As we are also not interested in very slow changes (and/or a constant offset/ DC) in the hemodynamic response, we can safely throw away low-frequency information by high-pass filtering.
 
     cfg                 = [];
     cfg.hpfilter        = 'yes';
@@ -200,14 +200,14 @@ This step has removed some of the variability in the hemodynamic response betwee
 
 ### Epoch
 
-In the single channel tutorial, after initial preprocessing we continued with removing ‘bad’ data as there were no pieces of the data that were both irrelevant (say, during a break) and very noisy. In this tutorial, we will first segment the data to get the time segments of interest before we move on to cleaning the data further. The motivation here to first segment and then detect artifacts is that the largest artifacts in the data are due to motion artifacts that occur between the experimental blocks. By segmenting the data in trials, these non-relevant sections in the data are ignored and we obtain a cleaner data set already.
+In the single channel tutorial, after initial preprocessing we continued with removing bad data as there were no pieces of the data that were both irrelevant (say, during a break) and very noisy. In this tutorial, we will first segment the data to get the time segments of interest before we move on to cleaning the data further. The motivation here to first segment and then detect artifacts is that the largest artifacts in the data are due to motion artifacts that occur between the experimental blocks. By segmenting the data in trials, these non-relevant sections in the data are ignored and we obtain a cleaner data set already.
 
 In this experiment, the segment of interest is a period of 5 s before and 20s after stimulus onset. We will cut out the segments in the data using the function **[ft_redefinetrial](/reference/ft_redefinetrial)**. Normally we would use **[ft_definetrial](/reference/ft_definetrial)** to determine the segments, but due to the resampling the sample indices have changed and hence we will do it by hand.
 
     event = ft_read_event('LR-01-2015-06-01-0002.oxy3');
 
-    adc001 = find(strcmp({event.type}, ‘ADC001’));
-    adc002 = find(strcmp({event.type}, ‘ADC002’));
+    adc001 = find(strcmp({event.type}, 'ADC001'));
+    adc002 = find(strcmp({event.type}, 'ADC002'));
 
     % get the sample number in the original data
     % note that we transpose them to get columns
@@ -241,8 +241,8 @@ In this experiment, the segment of interest is a period of 5 s before and 20s af
     sel = trl(:,2)<size(data_down.trial{1},2);
     trl = trl(sel,:);
 
-    cfg     = []
-    cfg.trl = trl
+    cfg     = [];
+    cfg.trl = trl;
     data_epoch = ft_redefinetrial(cfg,data_down);
 
 If you type in data_epoch, you should see this in the command window:
@@ -263,7 +263,7 @@ If you type in data_epoch, you should see this in the command window:
 
 Notably, both trial and time fields will now have 1x597 cell-array (compare this to data_down). This corresponds to the 597 stimuli that were presented. In data_epoch.trialinfo the information about the type of stimulus is stored (event 1 or event 2). Thus, we can find which of those cells belongs to the first deviant:
 
-    idx = find(data_epoch.trialinfo==2,1,'first')
+    idx = find(data_epoch.trialinfo==2, 1, 'first')
 
 which should give you:
 
@@ -294,8 +294,8 @@ Inspect the signal carefully! When does it increase/decrease, when does it peak?
 
 First, we will remove the optode channels that make poor contact with the skin of the scalp yielding bad signal because of that. From the optical density traces we can estimate whether there is a good coupling between optode and scalp, because the two signals from each optode (corresponding to the two wavelengths) should have a heartbeat that is positively correlated. If the correlation is small or negative, we exclude that optode from further processing. This is implemented in **[ft_nirs_scalpcouplingindex](/reference/ft_nirs_scalpcouplingindex)**. [For more details see Polloniniet al. (2014), Auditory cortex activation to natural speech and simulated cochlear implant speech measured with functional near-infrared spectroscopy. Hearing Research, 309, 84-93. doi:10.1016/j.heares.2013.11.007]
 
-    cfg                 = [];
-    data_sci            = ft_nirs_scalpcouplingindex(cfg, data_epoch);
+    cfg      = [];
+    data_sci = ft_nirs_scalpcouplingindex(cfg, data_epoch);
 
 You can see that you throw away some channels in data_sci.label, where we now only have 86 labels instead of 104:
 
@@ -378,18 +378,18 @@ In the previous steps, you averaged over all standard trials and baseline correc
     cfg.baseline  = [-5 0];
     timelockDEV   = ft_timelockbaseline(cfg, timelockDEV);
 
-To visualize the data in spatial terms (‘where on the head do we find functional brain activity in response to my different conditions?’), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called ‘nirs_48ch_layout.mat’. In case you would like to get an idea of how to create your own layout file, the following page might be informative: [/tutorial/layout](/tutorial/layout).
+To visualize the data in spatial terms (i.e. to answer the question "where on the head do we find functional brain activity in response to my different conditions?"), FieldTrip requires information about the spatial layout about the location of the channel on the head. For this tutorial a layout file is provided, which is called `nirs_48ch_layout.mat`. In case you would like to get an idea of how to create your own layout file, the following page might be informative: [/tutorial/layout](/tutorial/layout).
 
-The layout can be loaded using the standard MATLAB function ‘load’. The file ‘nirs_48ch_layout.mat’ contains a structure called ‘lay’. Just for clarity, we will rename the O2Hb channels representing changes in oxygenation concentration ‘functional’. We do this as follows:
+The layout can be loaded using the standard MATLAB function `load`. The file `nirs_48ch_layout.mat` contains a structure called `lay`. Just for clarity, we will rename the O2Hb channels representing changes in oxygenation concentration into `functional`. We do this as follows:
 
     load('nirs_48ch_layout.mat')
     label               = lay.label;
     label               = strrep(label, 'O2Hb', 'functional');
     lay.label           = label;
 
-There are a number of FieldTrip options available for visualizing the results, such as **[ft_singleplotER](/reference/ft_singleplotER)** (ER stands for Event Related), which allows you to plot a single channel, and **[ft_multiplotER](/reference/ft_multiplotER)**, which allows you to plot multiple channels on a schematic representation of the head. The **[ft_multiplotER](/reference/ft_multiplotER)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window). For now, we are interested to first see whether we find the typical hemodynamic response, hence the changes in oxygenated concentration. Therefore, we select all channels which contain ‘functional’ in their label. This is done by cfg.channel = ‘\* [functional]’; If you want to see what other options the plotting functions has, you can look at the documentation:
+There are a number of FieldTrip options available for visualizing the results, such as **[ft_singleplotER](/reference/ft_singleplotER)** (ER stands for Event Related), which allows you to plot a single channel, and **[ft_multiplotER](/reference/ft_multiplotER)**, which allows you to plot multiple channels on a schematic representation of the head. The **[ft_multiplotER](/reference/ft_multiplotER)** can also be used in interactive mode to select pieces of the data of interest (for instance specific channels and a specific time window). For now, we are interested to first see whether we find the typical hemodynamic response, hence the changes in oxygenated concentration. Therefore, we select all channels which contain "functional" in their label. This is done by `cfg.channel = '* [functional]'`. If you want to see what other options the plotting functions has, you can look at the documentation:
 
-    doc ft_multiplotER
+    help ft_multiplotER
 
 Important to remember is that for **[ft_multiplotER](/reference/ft_multiplotER)** to run, you need to point FieldTrip to the layout structure using cfg.layout = lay;
 
@@ -408,7 +408,7 @@ Important to remember is that for **[ft_multiplotER](/reference/ft_multiplotER)*
 You can also generate a spatial representation of the signal at a certain time point, or averaged over a time window. To plot the response that was found during a specific time window, you will need to specify this by setting limitations to the time dimension. In this case, time is the first dimension, and therefore, the time window can be set by using 'cfg.xlim = [5 7];'. The third dimension here is the strength of the response. We set the scale here from -0.2 to 0.2, but this depends on your data: many fNIRS researchers use block designs, and depending on the block duration, the response may gain a larger amplitude. In the current data, the scale can be derived from the previous figure, which was generated without setting the response scale (zlim in this case).
 
 {% include markup/info %}
-Per default FieldTrip uses the minimum and the maximum in the selected part of the data for the zlim parameter. Setting the scale manually has the advantage that you can set zero as the middle point in the scale, which can be helpful for the interpretation of the color-coded graph.
+Per default FieldTrip uses the minimum and the maximum in the selected part of the data for the `zlim` parameter. Setting the scale manually has the advantage that you can set zero as the middle point in the scale, which can be helpful for the interpretation of the color-coded graph.
 {% include markup/end %}
 
     cfg          = [];
