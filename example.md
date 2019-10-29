@@ -71,12 +71,13 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Example real-time selective average](/example/ft_realtime_selectiveaverage)
 - [Example real-time signal viewer](/example/ft_realtime_signalviewer)
 - [Measuring the timing delay and jitter for a real-time application](/example/measuring_the_timing_delay_and_jitter_for_a_real-time_application)
-- [Realtime neurofeedback application based on hilbert phase estimation](/example/ft_realtime_hilbert)
+- [Realtime neurofeedback application based on Hilbert phase estimation](/example/ft_realtime_hilbert)
 
 ### Miscellaneous
 
 - [BIDS - the brain imaging data structure](/example/bids)
 - [Combining simultaneous recordings in BIDS](/example/bids_pom)
+- [Converting an example audio dataset for sharing in BIDS](/example/bids_audio)
 - [Converting an example behavioral dataset for sharing in BIDS](/example/bids_behavioral)
 - [Converting an example EEG dataset for sharing in BIDS](/example/bids_eeg)
 - [Converting an example EMG dataset for sharing in BIDS](/example/bids_emg)

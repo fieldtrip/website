@@ -17,7 +17,7 @@ EMG is not part as an individual data type in the BIDS specification. In the **[
 
 The example data is available from our [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_emg/)
 
-The examples includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
+The example includes the original log files under the “original” directory. It also has a copy of the script to do the conversion under “code”. The reorganized data is under the “bids” directory. According to [the documentation](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#source-vs-raw-vs-derived-data) the original data can be added to the BIDS dataset under the “sourcedata” directory and code can be added to the “code” directory. This way no information is lost and the conversion/reorganization is fully reproducible.
 
 In general: if your original data is in a different format than the BIDS representation (e.g. DICOMs instead of NIfTI, or data from an EMG system in an unsupported format), you might want to keep the sourcedata, e.g. on a data acquisition collection on the Donders Repository. If it is in the same format (as here), you could simply delete the copy in sourcedata. Your own analyses and the sharing of the data would be based on the BIDS representation.
 
