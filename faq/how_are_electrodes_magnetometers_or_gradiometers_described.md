@@ -1,6 +1,6 @@
 ---
 title: How are electrodes, magnetometers or gradiometers described?
-tags: [faq, electrodes, eeg, meg, layout]
+tags: [faq, electrode, eeg, meg, layout]
 ---
 
 # How are electrodes, magnetometers or gradiometers described?
