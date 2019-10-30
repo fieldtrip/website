@@ -13,7 +13,7 @@ This page covers (1) how electrodes that have been localized in BioImage Suite (
 
 #### Localize Electrodes in BioImage Suite
 
-For a video tutorial on how to localize iEEG electrodes using the BioImage Suite Electrode Editor, see here: https://www.youtube.com/watch?v=j_8rT3naXgM. Once electrodes have been localized, a .mgrid file containing information on electrode labels and coordinates is generated. Within the .mgrid file, electrode coordinates are specified in milimeters according to a unique xyz coordinate system where the origin is one of the eight corner voxels (depending on the orientation of the brain volume where the electrodes are localized). This coordinate system is used to specify electrode coordinates in BioImage Suite regardless of if the brain volume has a traditional coordinate system (e.g., ACPC, MNI, etc.).
+For a video tutorial on how to localize iEEG electrodes using the BioImage Suite Electrode Editor, see here: https://www.youtube.com/watch?v=j_8rT3naXgM. Once electrodes have been localized, a .mgrid file containing information on electrode labels and coordinates is generated. Within the .mgrid file, electrode coordinates are specified in millimeters according to a unique xyz coordinate system where the origin is one of the eight corner voxels (depending on the orientation of the brain volume where the electrodes are localized). This coordinate system is used to specify electrode coordinates in BioImage Suite regardless of if the brain volume has a traditional coordinate system (e.g., ACPC, MNI, etc.).
 
 #### Load the .mgrid file into FieldTrip
 

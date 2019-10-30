@@ -13,7 +13,7 @@ Please cite this paper when you use the realtime head localizer in your research
 Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
 {% include markup/end %}
 
-## Acquiring the head shape for more realistic visualisation
+## Acquiring the head shape for more realistic visualization
 
 Monitoring the head position can be done by visualizing the head shape in 3 different ways: as a sphere, using head shape points acquired with the Polhemus (mostly from the upper part of the head) or with a realistic head shape including facial details acquired with a 3D-Scanner like [this](https://structure.io/structure-sensor).
 

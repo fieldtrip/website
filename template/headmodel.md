@@ -5,7 +5,7 @@ tags: [template]
 
 ## Template head models for forward volume conduction modeling
 
-Volume conduction models of the head are a necessary ingredient for source reconstruction. Sources are typically modelled as equivalent current dipoles (ECDs), i.e. point sources with a location and orientation. These sources produce an electrical current that flows through all surrounding tissue. The geometrical and conductive aspects of the tissue influence how the source becomes visible in the EEG or MEG.
+Volume conduction models of the head are a necessary ingredient for source reconstruction. Sources are typically modeled as equivalent current dipoles (ECDs), i.e. point sources with a location and orientation. These sources produce an electrical current that flows through all surrounding tissue. The geometrical and conductive aspects of the tissue influence how the source becomes visible in the EEG or MEG.
 
 {% include markup/warning %}
 You can find the template head models included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/headmodel).

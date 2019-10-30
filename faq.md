@@ -234,7 +234,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I anonymize data processed in FieldTrip?](/faq/how_can_i_anonymize_fieldtrip_data)
 - [How can I anonymize or deidentify an anatomical MRI?](/faq/how_can_i_anonymize_an_anatomical_mri)
 - [How can I convert an anatomical MRI from DICOM into CTF format?](/faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format)
-- [How can I share my MEG or EEG dataset?](/faq/data_sharing)
+- [How can I share my MEG data?](/faq/data_sharing)
 - [How do I prevent FieldTrip from printing the time and memory after each function call?](/faq/how_do_i_prevent_fieldtrip_from_printing_the_time_and_memory_after_each_function_call)
 - [How should I prepare for the upcoming FieldTrip workshop?](/faq/how_should_i_prepare_for_the_upcoming_fieldtrip_workshop)
 - [How should I specify the coordinate systems in a BIDS dataset?](/faq/bids_coordsystem)

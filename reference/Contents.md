@@ -56,7 +56,7 @@ title: Contents
 
  The FieldTrip toolbox depend on functions from other toolboxes to do a large part of
  the actual work, such as reading data from binary files and forward and inverse
- modelling of the EEG/MEG. These low-level functions are contained in the private
+ modeling of the EEG/MEG. These low-level functions are contained in the private
  subdirectory. These other toolboxes on which the framework depends are copyrighted by
  their respective authors, see each individual MATLAB file for the details.
 

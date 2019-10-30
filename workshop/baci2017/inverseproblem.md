@@ -82,7 +82,7 @@ _Figure 1. Dipole computed with BEM model_
     cfg.mne.scalesourcecov  = 'yes';                    %scaling the source covariance matrix
     minimum_norm_bem        = ft_sourceanalysis(cfg,EEG_avg);
 
-For the purpose of visualisation we internet the MNE results onto the replaced anatomical MRI.
+For the purpose of visualization we internet the MNE results onto the replaced anatomical MRI.
 
     cfg            = [];
     cfg.parameter  = 'avg.pow';

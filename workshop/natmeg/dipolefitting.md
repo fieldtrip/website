@@ -41,7 +41,7 @@ To fit the dipole models to the data, we will perform the following steps:
 - After creating meshes with the triangulated description of the outer brain, skull and skin compartment with **[ft_prepare_mesh](/reference/ft_prepare_mesh)**, we create a volume conduction model using **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**;
 - We preprocess the MEG and EEG data using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** and compute the average over trials using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 - Using **[ft_dipolefitting](/reference/ft_dipolefitting)** we will fit dipole models to the averaged data for each condition and to the difference between the conditions.
-- Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailled visualisations.
+- Throughout this tutorial, we will use the [high-level plotting](/tutorial/plotting) functions to look at the data, and some [lower-level plotting](/development/module/plotting) functions to make detailled visualizations.
 
 ### Read and visualise the anatomical data
 
@@ -199,7 +199,7 @@ After having confirmed that the segmentations are consistent with the anatomical
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 {% include markup/end %}
 
-These meshes are all relatively coarse and don’t look so nice in a visualisation. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
+These meshes are all relatively coarse and don’t look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
 
     cfg = [];
     cfg.method = 'isosurface';

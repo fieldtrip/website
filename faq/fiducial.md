@@ -5,12 +5,14 @@ tags: [faq, eeg, fiducial]
 
 # How should I specify the fiducials for electrode realignment?
 
-Sensor locations are described by the elec structure and it can contain fewer or more channels that present in the data. Depending on the system we use, fiducials are digitized and represented just like electrodes, and in other systems the fiducials are represented separately from the sensors.
+Sensor locations are described by the `elec` structure and can contain fewer or more electrodes than channels actually present in the data, e.g. the electrode positions for the EOG or ECG channels might not be represented.
 
-In **[ft_electroderealign](/reference/ft_electroderealign)** the fiducials are never obtained from the elec structure, but they always have to be explicitly specified in the cf
+Depending on the system from which the data originates, fiducials are either digitized and represented just like electrodes, or fiducials are represented separately from the electrodes.
 
-    fid.chanpos       = [nas; lpa; rpa];       % ctf-coordinates of fiducials
-    fid.elecpos       = [nas; lpa; rpa];       % Nx3, where N includes the fiducials
+In **[ft_electroderealign](/reference/ft_electroderealign)** the fiducials are never obtained from the `elec` structure, but they always have to be explicitly specified in the configuration:
+
+    fid.chanpos       = [nas; lpa; rpa];       % CTF coordinates of the fiducials
+    fid.elecpos       = [nas; lpa; rpa];       % just like electrode positions
     fid.label         = {'Nz','LPA','RPA'};    % same labels as in elec
     fid.unit          = 'mm';                  % same units as mri
 
@@ -21,6 +23,6 @@ In **[ft_electroderealign](/reference/ft_electroderealign)** the fiducials are n
     cfg.fiducial      = {'Nz', 'LPA', 'RPA'};  % labels of fiducials in fid and in elec
     elec_aligned      = ft_electroderealign(cfg);
 
-In case fiducials are present in the elec structure, they will simply be removed at the time of forward modelling. Just like channels such as “trigger” and “EOG” are removed from the data prior to forward modelling.
+In case fiducials are present in the `elec` structure, they will simply be removed at the time of forward modeling. Just like channels such as “trigger” and “EOG” are removed from the data prior to forward modeling.
 
 See also the FAQ about [how are electrodes, magnetometers or gradiometers described?](/faq/how_are_electrodes_magnetometers_or_gradiometers_described).

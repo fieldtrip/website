@@ -20,7 +20,7 @@ _Figure 1: X-ray with electrode coverage illustrating the position of the electr
 
 The tutorial will follow the steps:
 
-- prepare a 2D electrode layout for visualisation that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
+- prepare a 2D electrode layout for visualization that will be used throughout the tutorial with **[ft_prepare_layout](/reference/ft_prepare_layout)** and plot it with **[ft_layoutplot](/reference/ft_layoutplot)**
 - load data into MATLAB and assemble it into a format FieldTrip can deal with
 - define a trial sturcture and subsequently use **[ft_redefinetrial](/reference/ft_redefinetrial)** in order to separate the eight conditions/orientations.
 - append the data into a common dataset **[ft_appenddata](/reference/ft_appenddata)** apply an independent component analysis using **[ft_componentanalysis](/reference/ft_componentanalysis)** after which we will plot and explore some components using **[ft_databrowser](/reference/ft_databrowser)**

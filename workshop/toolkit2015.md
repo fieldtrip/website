@@ -36,7 +36,7 @@ title: Advanced analysis and source modeling of EEG and MEG data
 
 | 09:00-10:45 | Time-frequency analysis of power | [Hands-on](/tutorial/timefrequencyanalysis) |  
  | 10:45-11:00 | Coffee Break | |  
- | 11:00-12:15 | Forward and inverse modelling | [Lecture](https://www.youtube.com/watch?v=86f5_x9SVQQ) [Slides](/assets/pdf//workshop/toolkit2015/robert_forward_and_inverse.pdf) |
+ | 11:00-12:15 | Forward and inverse modeling | [Lecture](https://www.youtube.com/watch?v=86f5_x9SVQQ) [Slides](/assets/pdf//workshop/toolkit2015/robert_forward_and_inverse.pdf) |
 | 12:15-13:00 | Lunch | |  
  | 13:00-14:00 | Source reconstruction using beamformers | [Lecture](https://www.youtube.com/watch?v=Ez72OFjSABs) [Slides](/assets/pdf//workshop/toolkit2015/tzvetan_beamforming.pdf) |
 | 14:00-15:00 | Identifying oscillatory sources using beamformers | [Hands-on](/tutorial/beamformer) |  

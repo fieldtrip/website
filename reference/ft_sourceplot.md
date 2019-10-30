@@ -23,7 +23,7 @@ title: ft_sourceplot
  the three ortho views are the 1st, 2nd and 3rd dimension of the 3-D data matrix, not of
  the head coordinate system. The specification of the coordinate for slice intersection
  is specified in head coordinates, i.e. relative to anatomical landmarks or fiducials and
- expressed in mm or cm. If you want the visualisation to be consistent with the head
+ expressed in mm or cm. If you want the visualization to be consistent with the head
  coordinate system, you can reslice the data using FT_VOLUMERESLICE. See http://bit.ly/1OkDlVF
 
  The configuration should contain:

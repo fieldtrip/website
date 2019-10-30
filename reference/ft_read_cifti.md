@@ -27,7 +27,7 @@ title: ft_read_cifti
    'readsurface'      = boolean, can be false or true (default = true)
    'cortexleft'       = string, filename with left cortex (optional, default is automatic)
    'cortexright'      = string, filename with right cortex (optional, default is automatic)
-   'hemisphereoffset' = number, amount in milimeter to move the hemispheres apart from each other (default = 0)
+   'hemisphereoffset' = number, amount in millimeter to move the hemispheres apart from each other (default = 0)
    'mapname'          = string, 'field' to represent multiple maps separately, or 'array' to represent as array (default = 'field')
    'debug'            = boolean, write a debug.xml file (default = false)
 

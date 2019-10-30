@@ -47,7 +47,7 @@ Please note that the recording of the lecture on Sleep and continuous EEG by Mar
 
 - [Introduction to MEG (vs. EEG) instrumentation](https://www.youtube.com/watch?v=15Qs4fuPpes) by Stephen Whitmarsh
 - [Introducing FieldTrip](https://www.youtube.com/watch?v=zOxCqcYmIfA) by Robert Oostenveld
-- [Forward modelling in MEG and EEG](https://www.youtube.com/watch?v=4pVaY6f25w0) by Robert Oostenveld
+- [Forward modeling in MEG and EEG](https://www.youtube.com/watch?v=4pVaY6f25w0) by Robert Oostenveld
 - [Principles of frequency analysis](https://www.youtube.com/watch?v=QLvsa1r1Voc) by Robert Oostenveld
 - [Connectivity analysis in MEG and EEG: metrics and issues](https://www.youtube.com/watch?v=-RpQklxbCsg) by Robert Oostenveld
 - [Beamforming EEG and MEG data](https://www.youtube.com/watch?v=7eS11DtbIPw) by Robert Oostenveld

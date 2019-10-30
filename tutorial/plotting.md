@@ -557,7 +557,7 @@ Since source-level function data requires three dimensions for "space" and uses 
 
 ### Using external tools
 
-Although MATLAB is a very flexible development and analysis environment, it is not super-fast in visualisation. Hence external visualisation tools are sometimes more useful for exploring your data. Volumetric and surface based data can be exported to standard file formats using **[ft_sourcewrite](/reference/ft_sourcewrite)**. Subsequently, you can use external tools such as
+Although MATLAB is a very flexible development and analysis environment, it is not super-fast in visualization. Hence external visualization tools are sometimes more useful for exploring your data. Volumetric and surface based data can be exported to standard file formats using **[ft_sourcewrite](/reference/ft_sourcewrite)**. Subsequently, you can use external tools such as
 
 - [MRIcron](http://www.mccauslandcenter.sc.edu/mricro/mricron/index.html)
 - [OpenWallnut](http://www.openwalnut.org)

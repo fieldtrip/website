@@ -18,7 +18,7 @@ title: ft_singletrialanalysis
   cfg.channel = Nx1 cell-array with selection of channels (default = 'all'),
                 see FT_CHANNELSELECTION for details
   cfg.trials  = 'all' or a selection given as a 1xN vector (default = 'all')
-  cfg.output  = 'model', or 'residual', which returns the modelled data,
+  cfg.output  = 'model', or 'residual', which returns the modeled data,
                 or the residuals.
 
  Method specific options are specified in the appropriate substructure.

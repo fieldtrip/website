@@ -5,7 +5,7 @@ tags: [template, sourcemodel, grid]
 
 ## Template models for source reconstruction
 
-Source models are a necessary ingredient for estimating the cortical activity from EEG or MEG data. Sources are typically modelled as equivalent current dipoles (ECDs), i.e. point sources with a location, orientation and strength.
+Source models are a necessary ingredient for estimating the cortical activity from EEG or MEG data. Sources are typically modeled as equivalent current dipoles (ECDs), i.e. point sources with a location, orientation and strength.
 
 {% include markup/warning %}
 You can find the template models for source reconstruction included in FieldTrip [here](https://github.com/fieldtrip/fieldtrip/tree/master/template/sourcemodel).

@@ -1,21 +1,21 @@
 ---
-title: How can I deal with a discontinuous Neuralynx recording
+title: How can I deal with a discontinuous Neuralynx recording?
 tags: [faq, neuralynx, corrupt, preprocessing]
 ---
 
-# How can I deal with a discontinuous Neuralynx recording
+# How can I deal with a discontinuous Neuralynx recording?
 
-It may occur that there are gaps in the Neuralynx recording traces, e.g. when the experimenter stops and re-starts the recording in the Cheetah software. The consequence is that the data samples do not form a continuous data representation any more. This can be detected offline, since the time-stamps that are stored along with the data will show gaps.
+It may occur that there are gaps in the Neuralynx recordings, e.g. when the experimenter stops and re-starts the recording in the Cheetah acquisition software. The consequence is that the data samples do not form a continuous representation any more. This can be detected offline, since the time-stamps that are stored along with the data will show gaps.
 
-If there are gaps in the recording, the default way of linking timestamps to samples and vice versa will be incorrect. The default is is to assume a linear relationship, i.e.
+In case there are gaps in the recording, the default way of linking timestamps to samples and vice versa will be incorrect. The default is is to assume a linear relationship, i.e.
 
     timestamp = hdr.TimeStampPerSample * sample hdr.FirstTimeStamp
 
-Due to the gaps in the recording, the timestamps that relate to events cannot be mapped like this onto sample numbers. Furthermore, **[ft_read_header](/reference/ft_read_header)** computes the hdr.TimeStampPerSample without taking the gaps in the recording into account, so it will be incorrect.
+Due to the gaps in the recording, the timestamps that relate to events cannot be mapped like this to the sample numbers. Furthermore, **[ft_read_header](/reference/ft_read_header)** computes the hdr.TimeStampPerSample without taking the gaps in the recording into account, so it will be incorrect.
 
-The low-level read_neuralynx_ncs function detects the presence of gaps in the .Ncs file and issues a warning. If you get this warning, the solution is to read in the raw timestamps for all individual samples rather than relying on the monotonous linear relationship. This is possible for a single channel, the procedure does not yet work when reading a whole dataset at once (i.e. a directory containing multiple Ncs files).
+The low-level `read_neuralynx_ncs` function detects the presence of gaps in the `.ncs` file and issues a warning. If you get this warning, the solution is to read in the raw timestamps for all individual samples rather than relying on the monotonous linear relationship. This is possible for a single channel, the procedure does not yet work when reading a whole dataset at once (i.e. a directory containing multiple `.ncs` files).
 
-One can then construct a time-stamp axis and interpolate in-between samples, and set samples occurring within gaps to NaNs. This is demonstrated in the following code:
+You can then construct a time-stamp vector with all time stamps for all samples, interpolate missing samples, and set the values for missing samples (in the recording gap) to NaNs. This is demonstrated in the following code:
 
     % start with normal preprocessing of a single channel
     cfg         = [];
@@ -23,7 +23,7 @@ One can then construct a time-stamp axis and interpolate in-between samples, and
     data        = ft_preprocessing(cfg);
 
     Warning: discontinuous recording, predicted number of timestamps and observed number of timestamps differ by 1693523717.00
-    Please consult http://www.fieldtriptoolbox.org/getting_started/neuralynx?&#discontinuous_recordings
+    Please consult http://www.fieldtriptoolbox.org/faq/discontinuous_neuralynx
 
     > In fileio/private/read_neuralynx_ncs at 94
     In ft_read_header at 1196
@@ -45,7 +45,7 @@ One can then construct a time-stamp axis and interpolate in-between samples, and
 
 This shows the default time axis of the data, which FieldTrip assumes to be continuous.
 
-Now we continue with reading the actual timestamps and performing interpolation and gap-filling with NaNs across multiple channels. Your multiple channels can happen to have different start or end timestamps (which is another "feature" of the Cheetah software). This function then constructs a single timestamp-axis onto which all channels are represented.
+Now we continue with reading the actual timestamps and performing interpolation and gap-filling with NaNs across multiple channels. Your multiple channels can happen to have different start or end timestamps (which is another "feature" of the Cheetah acquisition software). This function then constructs a single timestamp-axis onto which all channels are represented.
 
     function [data_all] = ft_read_neuralynx_interp(fname)
 
@@ -61,7 +61,6 @@ Now we continue with reading the actual timestamps and performing interpolation 
     %  data_all is a raw data structure containing interpolated data and NaNs at the gaps,
     %  based on all the available samples in a recording.
     %
-
     % Copyright (c) Martin Vinck, SILS, Center for Neuroscience, University of Amsterdam, 2013.
 
     % first check if these are indeed ncs files

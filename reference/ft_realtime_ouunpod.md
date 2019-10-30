@@ -3,7 +3,7 @@ title: ft_realtime_ouunpod
 ---
 ```plaintext
  FT_REALTIME_OUUNPOD is an example realtime application for online power
- estimation and visualisation. It is designed for use with the OuUnPod, an
+ estimation and visualization. It is designed for use with the OuUnPod, an
  OpenEEG based low cost EEG system with two channels, but in principle
  should work for any EEG or MEG system.
 

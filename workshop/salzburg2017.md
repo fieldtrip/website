@@ -72,7 +72,7 @@ After installing FieldTrip to your path, you need to change into the hands-on sp
 
 - morning
 
-  - 1h forward and inverse modelling lecture - [slides](/assets/pdf/workshop/salzburg_source_reconstruction.pdf)
+  - 1h forward and inverse modeling lecture - [slides](/assets/pdf/workshop/salzburg_source_reconstruction.pdf)
   - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>
 
 - afternoon

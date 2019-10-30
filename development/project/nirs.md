@@ -103,6 +103,6 @@ In case a high-level FieldTrip function calls a NIRS function, ft_hastoolbox wil
 
 The original [NIRS-SPM](http://bispl.weebly.com/nirs-spm.html) was developed by Korea Advanced Institute of Science & Technology. The general NIRS-SPM approach is to solve a GLM based on different approaches of nongaussian random field theory. One of the developers, Sungho Tak, is now working at UCL in Will Penny's group. He reworked NIRS-SPM, which can now be found as on [NIRTC as SPM for fNIRS toolbox](http://www.nitrc.org/projects/spm_fnirs). SPM-fNIRS includes DCM as well.
 
-[Homer2](http://www.nmr.mgh.harvard.edu/PMI/resources/homer2/home.htm), developed by the Martinos Centre in Harvard, and primarily maintained by Ted Huppert from University in Pittsburgh. Is the most commonly used toolbox for NIRS analysis. Includes some forward modelling in the AtlasViewer.
+[Homer2](http://www.nmr.mgh.harvard.edu/PMI/resources/homer2/home.htm), developed by the Martinos Centre in Harvard, and primarily maintained by Ted Huppert from University in Pittsburgh. Is the most commonly used toolbox for NIRS analysis. Includes some forward modeling in the AtlasViewer.
 
 Other available toolboxes such as [EasyTopo](https://sites.google.com/site/fenghuatian/software/easytopo) (for visualization) or the [NIRS Analysis package (NAP)](https://sites.google.com/site/tomerfekete2/) are not widely used.

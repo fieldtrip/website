@@ -25,7 +25,7 @@ Now you can **specify one DCM model** for this subject’s data:
 
 - In the data file, the conditions are ordered as follows: 1 – famous faces, 2 – unfamiliar faces, 3 – scrambled faces. You can access this information by loading the data into SPM (in Matlab: “D = spm_eeg_load(filename)”) and inspecting the “D.conditions” array. As we want to model the main effect of faces, under “between-trial effects” we can leave all three conditions (i.e. [1 2 3]), and specify the effect in the window below as [1 1 0] – this will model the modulatory effects of face presentation, with “scrambled faces” treated as a baseline. You can call this effect “faces” in the window on the left.
 
-- There are several options to reduce the data before modelling. First, you can remove a number of subsequent polynomial trends (linear, quadratic, cubic etc.) from the data. Second, you can only use subsampled data (e.g. every 2nd or every 4th datapoint). Finally, you can model a limited number of spatiotemporal modes explaining the most variance in your data. Here, use linear detrending (1), no subsampling (1) and 8 eigenmodes.
+- There are several options to reduce the data before modeling. First, you can remove a number of subsequent polynomial trends (linear, quadratic, cubic etc.) from the data. Second, you can only use subsampled data (e.g. every 2nd or every 4th datapoint). Finally, you can model a limited number of spatiotemporal modes explaining the most variance in your data. Here, use linear detrending (1), no subsampling (1) and 8 eigenmodes.
 
 - Click the red arrow to continue - this will activate the next part of the “DCM for M/EEG” window where you will be able to specify the electromagnetic model.
 
@@ -37,7 +37,7 @@ Now you can **specify one DCM model** for this subject’s data:
   - lFFA [-36 -48 -24]
   - rSTS [51 -39 18]
 
-- As we are modelling a visual response, use a prior onset of sensory input at 70ms with a standard deviation of 16ms determining its duration.
+- As we are modeling a visual response, use a prior onset of sensory input at 70ms with a standard deviation of 16ms determining its duration.
 
 - Click the red arrow to continue. The data you’re working with should have a pre-specified head model (mapping from source-space to sensor-space). If the head model for this dataset hasn’t been computed, SPM will ask you to do it now. Let’s use the “template” model with a “normal” cortical mesh. To specify Nasion position, click “select” –> “nas” -> “OK”. Please do the same for LPA and RPA. Use headshape points. After a couple of minutes, click on “display MEG”, then use a “3-shell sphere” EEG head model and a “single shell” MEG head model and again click on “display MEG”. This completes the head model.
 
@@ -77,7 +77,7 @@ Now you can **specify one DCM model** for this subject’s data:
   (1) rOFA
   (2) lOFA
 
-- Finally, we do not impose constraints on dipolar symmetry, optimise source location, lock trial-specific effects or assume trial-specific inputs. You can ignore the wavelet options – these are used when modelling spectral responses (e.g. with CSD or IND models).
+- Finally, we do not impose constraints on dipolar symmetry, optimise source location, lock trial-specific effects or assume trial-specific inputs. You can ignore the wavelet options – these are used when modeling spectral responses (e.g. with CSD or IND models).
 
 - You can now save this model definition as a file, e.g. as “DCM_inpO1F0_modF1B1”.
 
@@ -104,7 +104,7 @@ To compare different models and select the winning model, you should use **Bayes
 
 **Parameter inference**
 
-- First, you can inspect a single model from a single participant using the GUI. To do this, in Matlab go to the "pre-computed" directory, and in the GUI load one of Subject 15’s inverted models. Then use the drop-down menu in the lower left corner of the “DCM for M/EEG” window to view the results. For example, selecting “ERPs (mode)” will plot the observed (dashed lines) and model-predicted (solid lines) responses for all experimental conditions and spatiotemporal modes you have modelled. “ERPs (sources)” will plot the activity modelled for each neuronal source, including its different neuronal populations – in case of an ERP neuronal model, the solid lines will represent superficial pyramidal cells which contribute most strongly to the measured signals. Further options include e.g. “Coupling (B)” which will show you posterior estimates of modulatory connectivity parameters (the B matrix), and “trial-specific effects” (see below) which will show you connection strengths for different conditions (here 100% represents the connection strength for the baseline condition). Finally, “Response (image)” will show you the model fits across all modelled time points and sensors. This is the end of our demo.
+- First, you can inspect a single model from a single participant using the GUI. To do this, in Matlab go to the "pre-computed" directory, and in the GUI load one of Subject 15’s inverted models. Then use the drop-down menu in the lower left corner of the “DCM for M/EEG” window to view the results. For example, selecting “ERPs (mode)” will plot the observed (dashed lines) and model-predicted (solid lines) responses for all experimental conditions and spatiotemporal modes you have modelled. “ERPs (sources)” will plot the activity modeled for each neuronal source, including its different neuronal populations – in case of an ERP neuronal model, the solid lines will represent superficial pyramidal cells which contribute most strongly to the measured signals. Further options include e.g. “Coupling (B)” which will show you posterior estimates of modulatory connectivity parameters (the B matrix), and “trial-specific effects” (see below) which will show you connection strengths for different conditions (here 100% represents the connection strength for the baseline condition). Finally, “Response (image)” will show you the model fits across all modeled time points and sensors. This is the end of our demo.
 
 {% include image src="/assets/img/workshop/meg-uk-2015/dcm_tutorial/image007.png" width="400" %}
 

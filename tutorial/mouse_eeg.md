@@ -22,7 +22,7 @@ If you are interested in how to measure mouse EEG prior to main process, you can
 - improve channel level analysis
 
   - preprocessing and re-referencing
-  - visualisation
+  - visualization
   - statistics
   - coregistration of data over different animals
 
@@ -438,7 +438,7 @@ To visualize the power changes, a normalization with respect to a baseline inter
 This method, "relchange", means (active period-baseline)/baseline. Note that the "relchange" is expressed as a ratio of subtracting, for each frequency.
 If you want to visualize TFR on the head outline of mouse, "cfg.layout=mouse_layout.mat" have to be declared.
 
-    %% visualisation of all EEG channels
+    %% visualization of all EEG channels
     cfg                   = [] ;
     cfg.xlim              = [-1 2];
     cfg.ylim              = [4 100];
@@ -454,7 +454,7 @@ FIXME insert figure (10 ft_multiplotTFR)
 
 Otherwise, you can visualize TFR sequentially without mouse layout.
 
-    %% visualisation of all EEG channels, not topographically arranged
+    %% visualization of all EEG channels, not topographically arranged
     cfg                   = [] ;
     cfg.xlim              = [-1 2];
     cfg.ylim              = [4 100];

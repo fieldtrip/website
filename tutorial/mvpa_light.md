@@ -106,7 +106,7 @@ the confusion matrix, all we need to do is to change the `metric` field:
 
 Looking at the diagonal of the matrix tells us that the classifier is better
 at predicting classes 1 and 2 than it is at predicting class 3.
-For a simple visualisation of this result, we can use a plotting function in  [MVPA-Light](https://github.com/treder/MVPA-Light)
+For a simple visualization of this result, we can use a plotting function in  [MVPA-Light](https://github.com/treder/MVPA-Light)
 called [`mv_plot_result`](https://github.com/treder/MVPA-Light/blob/master/plot/mv_plot_result.m).
 It takes the result structure returned in `stat.mvpa` which contains the
 classification results in a format required by the function.

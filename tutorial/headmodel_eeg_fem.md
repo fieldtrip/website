@@ -13,7 +13,7 @@ This tutorial will **not** show how to perform the source reconstruction itself.
 
 Furthermore, elsewhere on this website you can find also information [about MEG headmodels](/tutorial/headmodel_meg) and about other [EEG headmodels](/tutorial/headmodel_eeg).
 
-We want to note that the FEM modelling works only on MATLAB versions 2011 and above.
+We want to note that the FEM modeling works only on MATLAB versions 2011 and above.
 
 {% include markup/warning %}
 The SimBio software is described in detail [here](https://www.mrt.uni-jena.de/simbio/index.php/Main_Page#Welcome). The integration with FieldTrip is described in the reference below. Please cite this reference if you use the FieldTrip-SimBio pipeline in your research.
@@ -199,7 +199,7 @@ The mesh contains the following field
 
 - **tissuelabel**: Names of tissue-types.
 
-At the moment FieldTrip only supports hexahedrons for FEM modelling.
+At the moment FieldTrip only supports hexahedrons for FEM modeling.
 
 ## Head model
 

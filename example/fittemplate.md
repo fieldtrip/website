@@ -148,7 +148,7 @@ We can compute the volume conduction model on the basis of the refined template 
 
 ### Openmeeg
 
-We create the volume conduction models using Openmeeg. This model can be later used for EEG or MEG volume conduction modelling.
+We create the volume conduction models using Openmeeg. This model can be later used for EEG or MEG volume conduction modeling.
 
     cfg              = [];
     cfg.conductivity = [0.33 0.0042 0.33];

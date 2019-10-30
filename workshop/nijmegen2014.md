@@ -57,7 +57,7 @@ A [PDF with the detailed program](/assets/pdf/workshop/nijmegen2014/program.pdf)
 
 - morning
   - 2h hands-on <http://www.fieldtriptoolbox.org/tutorial/timefrequencyanalysis>
-  - 1h forward and inverse modelling lecture
+  - 1h forward and inverse modeling lecture
 - afternoon
   - 1h beamforming lecture
   - 2h hands on <http://www.fieldtriptoolbox.org/tutorial/beamformer>

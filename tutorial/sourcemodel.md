@@ -13,7 +13,7 @@ This tutorial will **not** show how to perform the source reconstruction itself.
 
 ## Background
 
-Depending of the source reconstruction algorithm you want to use, you have to a priori specify a model that describes the locations of the sources (and sometimes the orientation) that you want to take into account. Specifically, this pertains to distributed source modelling approaches (e.g. Minimum Norm Estimation procedures), and for scanning approaches (e.g. beamformers). Dipolefitting approaches in general do not require an a priori source model (apart from when you want to use the option 'gridsearch').
+Depending of the source reconstruction algorithm you want to use, you have to a priori specify a model that describes the locations of the sources (and sometimes the orientation) that you want to take into account. Specifically, this pertains to distributed source modeling approaches (e.g. Minimum Norm Estimation procedures), and for scanning approaches (e.g. beamformers). Dipolefitting approaches in general do not require an a priori source model (apart from when you want to use the option 'gridsearch').
 In general, one could construct a source model that defines positions of dipoles on a 3-dimensional grid (this is sometimes referred to as a volumetric source model), or on a 2-dimensional surface (typically the cortical sheet).
 
 ## Procedure
