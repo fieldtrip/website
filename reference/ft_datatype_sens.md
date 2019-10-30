@@ -12,13 +12,13 @@ title: ft_datatype_sens
  the channel can be represented as in between the position of the two electrodes.
 
  The structure for MEG gradiometers and/or magnetometers contains
-    sens.label    = Mx1 cell-array with channel labels
-    sens.chanpos  = Mx3 matrix with channel positions
-    sens.chanori  = Mx3 matrix with channel orientations, used for synthetic planar gradient computation
-    sens.tra      = MxN matrix to combine coils into channels
-    sens.coilpos  = Nx3 matrix with coil positions
-    sens.coilori  = Nx3 matrix with coil orientations
-    sens.balance  = structure containing info about the balancing, See FT_APPLY_MONTAGE
+    sens.label      = Mx1 cell-array with channel labels
+    sens.chanpos    = Mx3 matrix with channel positions
+    sens.chanori    = Mx3 matrix with channel orientations, used for synthetic planar gradient computation
+    sens.coilpos    = Nx3 matrix with coil positions
+    sens.coilori    = Nx3 matrix with coil orientations
+    sens.tra        = MxN matrix to combine coils into channels
+    sens.balance    = structure containing info about the balancing, See FT_APPLY_MONTAGE
  and optionally
     sens.chanposold = Mx3 matrix with original channel positions (in case
                       sens.chanpos has been updated to contain NaNs, e.g.
@@ -26,36 +26,41 @@ title: ft_datatype_sens
     sens.chanoriold = Mx3 matrix with original channel orientations
     sens.labelold   = Mx1 cell-array with original channel labels
 
- The structure for EEG or ECoG channels contains
-    sens.label    = Mx1 cell-array with channel labels
-    sens.elecpos  = Nx3 matrix with electrode positions
-    sens.chanpos  = Mx3 matrix with channel positions (often the same as electrode positions)
-    sens.tra      = MxN matrix to combine electrodes into channels
+ The structure for EEG, sEEG or ECoG channels contains
+    sens.label      = Mx1 cell-array with channel labels
+    sens.chanpos    = Mx3 matrix with channel positions (often the same as electrode positions)
+    sens.elecpos    = Nx3 matrix with electrode positions
+    sens.tra        = MxN matrix to combine electrodes into channels
  In case sens.tra is not present in the EEG sensor array, the channels
  are assumed to be average referenced.
 
  The structure for NIRS channels contains
-   sens.optopos        = contains information about the position of the optodes
-   sens.optotype       = contains information about the type of optode (receiver or transmitter)
-   sens.chanpos        = contains information about the position of the channels (i.e. average of optopos)
-   sens.tra            = NxC matrix, boolean, contains information about how receiver and transmitter form channels
-   sens.wavelength     = 1xM vector of all wavelengths that were used
-   sens.transmits      = NxM matrix, boolean, where N is the number of optodes and M the number of wavelengths per transmitter. Specifies what optode is transmitting at what wavelength (or nothing at all, which indicates that it is a receiver)
-   sens.laserstrength  = 1xM vector of the strength of the emitted light of the lasers
+    sens.label          = Mx1 cell-array with channel labels
+    sens.chanpos        = Mx3 matrix with position of the channels (usually halfway the transmitter and receiver)
+    sens.optopos        = Nx3 matrix with the position of the optodes
+    sens.optotype       = Nx1 cell-array with information about the type of optode (receiver or transmitter)
+    sens.optolabel      = Nx1 cell-array with optode labels
+    sens.tra            = MxN matrix, boolean, contains information about how receiver and transmitter are combined to form channels
+    sens.wavelength     = 1xK vector of all wavelengths that were used
+    sens.transmits      = NxK matrix, boolean, where N is the number of optodes and K the number of wavelengths. Specifies what optode is transmitting at what wavelength (or nothing at all, which indicates that it is a receiver).
+    sens.laserstrength  = 1xK vector of the strength of the emitted light of the lasers
 
- The following fields apply to MEG and EEG
+ The following fields apply to MEG, EEG, sEEG and ECoG
     sens.chantype = Mx1 cell-array with the type of the channel, see FT_CHANTYPE
     sens.chanunit = Mx1 cell-array with the units of the channel signal, e.g. 'V', 'fT' or 'T/cm', see FT_CHANUNIT
 
  The following fields are optional
-    sens.type     = string with the type of acquisition system, see FT_SENSTYPE
-    sens.fid      = structure with fiducial information
+    sens.type = string with the type of acquisition system, see FT_SENSTYPE
+    sens.fid  = structure with fiducial information
 
  Historical fields:
-    pnt, pos, ori, pnt1, pnt2
+    pnt, pos, ori, pnt1, pnt2, fiberpos, fibertype, fiberlabel, transceiver
 
  Revision history:
- (2016/latest) The chantype and chanunit have become required fields.
+ (2019/latest) Updated the specification of the NIRS sensor definition.
+   Use "opto" instead of "fibers", see http://bit.ly/33WaqWU for details.
+
+ (2016) The chantype and chanunit have become required fields.
   Original channel details are specified with the suffix "old" rather than "org".
   All numeric values are represented in double precision.
   It is possible to convert the amplitude and distance units (e.g. from T to fT and
