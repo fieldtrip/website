@@ -1,6 +1,6 @@
 ---
 title: Can I compare EEG channels between different electrode caps?
-tags: [faq, eeg]
+tags: [faq, eeg, electrodes]
 ---
 
 # Can I compare EEG channels between different electrode caps?
