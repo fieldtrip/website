@@ -46,7 +46,7 @@
 - name:  What dataformats are supported?
   link:  /faq/dataformat
 
-- name:  How can I deal with a discontinuous Neuralynx recording
+- name:  How can I deal with a discontinuous Neuralynx recording?
   link:  /faq/discontinuous_neuralynx
 
 - name:  Does a firewall affect the communication between peers?
