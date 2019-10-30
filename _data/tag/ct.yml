@@ -31,6 +31,15 @@
 - name:  Can I use Octave instead of MATLAB?
   link:  /faq/can_i_use_octave_instead_of_matlab
 
+- name:  Can I compare EEG channels between different electrode caps?
+  link:  /faq/capmapping
+
+- name:  How should I specify the fiducials for electrode realignment?
+  link:  /faq/fiducial
+
+- name:  How are electrodes, magnetometers or gradiometers described?
+  link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
+
 - name:  How are the Left and Right Pre-Auricular (LPA and RPA) points defined?
   link:  /faq/how_are_the_lpa_and_rpa_points_defined
 
@@ -54,6 +63,9 @@
 
 - name:  How can I fix a corrupt CTF res4 header file?
   link:  /faq/how_can_i_fix_a_corrupt_ctf_res4_header_file
+
+- name:  How can I inspect the electrode impedances of my data?
+  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
 
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts

@@ -157,6 +157,9 @@
 - name:  How can I import my own data format?
   link:  /faq/how_can_i_import_my_own_dataformat
 
+- name:  How can I inspect the electrode impedances of my data?
+  link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
+
 - name:  How can I interpret the different types of padding in FieldTrip?
   link:  /faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts
 
