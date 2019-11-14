@@ -26,9 +26,56 @@ Robert Oostenveld and Jan-Mathijs Schoffelen will come from the Donders to lectu
 
 # Program and training material
 
-The training material will be posted here once finalized.
-
 Please visit the <http://practicalmeeg2019.org>. website for more information.
 
 All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dataset).
 
+## Schedule
+
+#### Day 1 (Tuesday December 3, 2019)
+
+- 08:30 – 09:00 Registration, with coffee/tea + Welcome & intro
+- 09:00 – 10:30 Lecture 1: Data organization (Robert) and initial data processing(Alex)
+- 10:30 – 12:30 Hands-on 1: [From raw to ERPs](/workshop/paris2019/handson_raw2erp)
+
+- 12:30 – 13:30 Lunch
+
+- 13:30 – 15:00 Lecture 2: Sensor level analysis (JM)
+- 15:00 – 17:00 Hands-on 2: [Sensor level analysis](/workshop/paris2019/handson_sensoranalysis)
+- 17:00 – 17:30 Wrap-up / Q&A session
+
+#### Day 2 (Wednesday December 4, 2019)
+
+- 09:00 – 10:30 Lecture 3: Source estimation 1 (Alex & Frank)
+- 10:30 – 12:30 Hands-on 3: [Creating head and source models](/workshop/paris2019/handson_anatomy)
+
+- 12:30 – 13:30 Lunch
+
+- 13:30 – 15:00 Lecture 4: Source estimation 2 (Denis)
+- 15:00 – 17:00 Hands-on 4: [Single and distributed sources](/workshop/paris2019/handson_sourceanalysis)
+- 17:00 – 17:30 Wrap-up / Q&A session
+
+#### Day 3 (Thursday December 5, 2019)
+
+- 09:00 – 10:30 Lecture 5: Group level analysis (Robert)
+- 10:30 – 12:30 Hands-on 5: [From raw to ERPs](/workshop/paris2019/handson_groupanalysis)
+
+- 12:30 – 13:30 Lunch
+
+- 13:30 – 15:00 Lecture 6: Miscellaneous topics
+- 15:00 – 17:00 Hands-on 2: Playground and final try out
+- 17:00 – 17:30 Wrap-up / Q&A session
+
+## Tutorial preparation
+
+In order to use Fieldtrip, the toolbox needs to be added to the matlab path. To achieve this, do the following:
+
+- Change directory to the location of the FieldTrip package. Note the subfolders present.
+- Add the FieldTrip folder to the path
+
+    addpath('where_is_fieldtrip');
+
+(Note: **do not** add the folder recursively; i.e. do not use addpath(genpath()))
+
+- Run 'ft_defaults' in MATLAB.
+- Confirm that FT has been successfully added to your path, for example by typing 'which ft_preprocessing' in Matlab; the correct path should be displayed.
