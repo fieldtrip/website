@@ -26,11 +26,13 @@ Preprocessing involves several steps including identifying individual trials fro
 - according to a specified trigger channel
 - according to your own criteria when you write your own trial function
 
-This tutorial will focus on the first way, and briefly mention the second. Both ways depend on **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
+This tutorial will focus on the first way, and briefly mention the second. Both ways typically depend on **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
-We will demonstrate reading in data based on the localizer task for the experiment that was described at the start. These data are available from the [FieldTrip ftp server (SubjectCMC.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). In this localizer task, a simple cue was presented 50 times, instructing the participant to lift the left or right wrist and keep the muscle contracted for 10 seconds. We will use the default trialfun `ft_trialfun_general` to define trials based on the triggers sent alongside these cues. We want to read in 1s of data before each trigger, and 10s of data after each trigger. This is achieved by the following:
+In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)** altogether, and create a trl matrix 'by hand', using information obtained from the 'events.tsv' files, which contain the necessary information.
+
+We want to read in 1s of data before each trigger, and 10s of data after each trigger. This is achieved by the following:
 
     cfg = [];
     cfg.dataset = 'SubjectCMC.ds';
