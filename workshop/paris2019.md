@@ -29,3 +29,6 @@ Robert Oostenveld and Jan-Mathijs Schoffelen will come from the Donders to lectu
 The training material will be posted here once finalized.
 
 Please visit the <http://practicalmeeg2019.org>. website for more information.
+
+All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dataset).
+
