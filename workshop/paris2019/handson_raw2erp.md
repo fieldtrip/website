@@ -30,38 +30,107 @@ This tutorial will focus on the first way, and briefly mention the second. Both 
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
-In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)** altogether, and create a trl matrix 'by hand', using information obtained from the 'events.tsv' files, which contain the necessary information.
+In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)** altogether, and create a trl matrix 'by hand', using information obtained from the 'events.tsv' files, which contain the necessary event information, specifically which type of stimulus was presented when. In order to extract the events from a given dataset, FieldTrip has the function **[ft_read_event](/reference/ft_read_event)**. Each event in the output structure is of a particular type (and may have a specific value), and has an associated sample, which reflects the time point expressed in samples relative to the onset of the data recording. According to BIDS, event timing is expressed in units of time in the events.tsv file, and in order to express the event timing in samples, information about the sampling frequency (which is present in the header information of the dataset) needs to be passed into the function as well.
 
-We want to read in 1s of data before each trigger, and 10s of data after each trigger. This is achieved by the following:
+First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
+We use the **datainfo_subject** function, which is provided in the **scripts** folder associated with this course. If we do the following:
 
-    cfg = [];
-    cfg.dataset = 'SubjectCMC.ds';
-    cfg.trialfun = 'ft_trialfun_general';
-    cfg.trialdef.eventtype = 'backpanel trigger'; % the name of your trigger channel
-    cfg.trialdef.eventvalue = 1:50; % which triggers to look for
-    cfg.trialdef.prestim = 1; % 1s of data before each trigger
-    cfg.trialdef.poststim = 10; % 10s of data after each trigger
-    cfg = ft_definetrial(cfg);
+   subj = datainfo_subject(15);
 
-Note that we're taking the output of `ft_definetrial` and storing it in our `cfg` variable. The output `cfg` now additionally has a field `cfg.trl` that contains our trial definition. Using the created trial definition, we can add some preprocessing options and read in the data:
+We obtain a structure that looks something like this:
 
-    % the following tells the reading functions that the data on disk is
-    % continuous and not already segmented
-    cfg.continuous = 'yes';
+   subj =
 
-    cfg.channel = {'MEG' 'EMGlft' 'EMGrgt' 'EOG' 'ECG'};
+   struct with fields:
 
-    % just to show that you can apply a lowpass filter while reading in data
-    cfg.lpfilter = 'yes';
-    cfg.lpfreq = 40;
-    cfg.lpfilttype = 'firws'; % windowed-sinc FIR filter
+            id: 15
+          name: 'sub-15'
+       mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
+       fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
+    outputpath: '/project_qnap/3010000.02/practicalMEEG/process?'
+       megfile: {6×1 cell}
+    eventsfile: {6×1 cell}
 
-    % and use data padding for the filtering
-    cfg.padding = 13; % pad our 11s-long trials to 13s before filtering
-    cfg.padtype = 'data'; % this is the default when reading from disk
+We can now run the following chunk of code:
 
-    data = ft_preprocessing(cfg);
+  trl = cell(6,1);
+  for run_nr = 1:6
+    hdr   = ft_read_header(subj.megfile{run_nr});
+    event = ft_read_event(subj.eventsfile{run_nr}, 'header', hdr, 'eventformat', 'bids_tsv');
 
-Now you could start working with these localizer data.
+    trialtype = {event.type}';
+    sel       = ismember(trialtype, {'Famous' 'Unfamiliar' 'Scrambled'});
+    event     = event(sel);
 
-## Reading in preprocessed data from the main task
+    prestim  = round(0.5.*hdr.Fs);
+    poststim = round(1.2.*hdr.Fs-1);
+
+    trialtype = {event.type}';
+    trialcode = nan(numel(event),1);
+    trialcode(strcmp(trialtype, 'Famous'))     = 1;
+    trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
+    trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
+
+    begsample = max(round([event.sample]) - prestim,  1);
+    endsample = min(round([event.sample]) + poststim, hdr.nSamples);
+    offset    = -prestim.*ones(numel(begsample),1);
+
+    trl = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
+
+    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_trl_run%02d', subj.name, run_nr));
+    save(filename, 'trl');
+    clear trl;
+  end
+
+Now we have created a set of files, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument:
+
+  rundata = cell(1,6);
+    for run_nr = 1:6
+      filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_trl_run%02d', subj.name, run_nr));
+      load(filename);
+
+      cfg         = [];
+      cfg.dataset = subj.megfile{run_nr};
+      cfg.trl     = trl;
+
+      % MEG specific settings
+      cfg.channel = 'MEG';
+      cfg.demean  = 'yes';
+      cfg.coilaccuracy = 0;
+      cfg.bpfilter = 'yes';
+      cfg.bpfilttype = 'firws';
+      cfg.bpfreq  = [1 40];
+      cfg.padding = 3;
+      data_meg    = ft_preprocessing(cfg);
+
+      % EEG specific settings
+      cfg.channel    = 'EEG';
+      cfg.demean     = 'yes';
+      cfg.reref      = 'yes';
+      cfg.refchannel = 'all'; % average reference
+      data_eeg       = ft_preprocessing(cfg);
+
+      % settings for all other channels
+      cfg.channel = {'all', '-MEG', '-EEG'};
+      cfg.demean  = 'no';
+      cfg.reref   = 'no';
+      data_other  = ft_preprocessing(cfg);
+
+      cfg            = [];
+      cfg.resamplefs = 300;
+      data_meg       = ft_resampledata(cfg, data_meg);
+      data_eeg       = ft_resampledata(cfg, data_eeg);
+      data_other     = ft_resampledata(cfg, data_other);
+
+      %% append the different channel sets into a single structure
+      rundata{run_nr} = ft_appenddata([], data_meg, data_eeg, data_other);
+      clear data_meg data_eeg data_other
+    end % for each run
+
+    data = ft_appenddata([], rundata{:});
+    clear rundata;
+
+    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_data', subj.name));
+    save(filename, 'data');
+
+  end
