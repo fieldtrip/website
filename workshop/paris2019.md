@@ -58,7 +58,7 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 #### Day 3 (Thursday December 5, 2019)
 
 - 09:00 – 10:30 Lecture 5: Group level analysis (Robert)
-- 10:30 – 12:30 Hands-on 5: [From raw to ERPs](/workshop/paris2019/handson_groupanalysis)
+- 10:30 – 12:30 Hands-on 5: [Group level analysis](/workshop/paris2019/handson_groupanalysis)
 
 - 12:30 – 13:30 Lunch
 

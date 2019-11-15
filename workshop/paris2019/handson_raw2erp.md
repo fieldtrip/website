@@ -35,52 +35,52 @@ In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)**
 First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
 We use the **datainfo_subject** function, which is provided in the **scripts** folder associated with this course. If we do the following:
 
-   subj = datainfo_subject(15);
+  subj = datainfo_subject(15);
 
 We obtain a structure that looks something like this:
 
-   subj =
+     subj =
 
-   struct with fields:
+     struct with fields:
 
-            id: 15
-          name: 'sub-15'
-       mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
-       fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
-    outputpath: '/project_qnap/3010000.02/practicalMEEG/process?'
-       megfile: {6×1 cell}
-    eventsfile: {6×1 cell}
+                 id: 15
+               name: 'sub-15'
+            mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
+            fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
+         outputpath: '/project_qnap/3010000.02/practicalMEEG/process?'
+            megfile: {6×1 cell}
+         eventsfile: {6×1 cell}
 
 We can now run the following chunk of code:
 
-  trl = cell(6,1);
-  for run_nr = 1:6
-    hdr   = ft_read_header(subj.megfile{run_nr});
-    event = ft_read_event(subj.eventsfile{run_nr}, 'header', hdr, 'eventformat', 'bids_tsv');
+    trl = cell(6,1);
+    for run_nr = 1:6
+      hdr   = ft_read_header(subj.megfile{run_nr});
+      event = ft_read_event(subj.eventsfile{run_nr}, 'header', hdr, 'eventformat', 'bids_tsv');
 
-    trialtype = {event.type}';
-    sel       = ismember(trialtype, {'Famous' 'Unfamiliar' 'Scrambled'});
-    event     = event(sel);
+      trialtype = {event.type}';
+      sel       = ismember(trialtype, {'Famous' 'Unfamiliar' 'Scrambled'});
+      event     = event(sel);
 
-    prestim  = round(0.5.*hdr.Fs);
-    poststim = round(1.2.*hdr.Fs-1);
+      prestim  = round(0.5.*hdr.Fs);
+      poststim = round(1.2.*hdr.Fs-1);
 
-    trialtype = {event.type}';
-    trialcode = nan(numel(event),1);
-    trialcode(strcmp(trialtype, 'Famous'))     = 1;
-    trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
-    trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
+      trialtype = {event.type}';
+      trialcode = nan(numel(event),1);
+      trialcode(strcmp(trialtype, 'Famous'))     = 1;
+      trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
+      trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
 
-    begsample = max(round([event.sample]) - prestim,  1);
-    endsample = min(round([event.sample]) + poststim, hdr.nSamples);
-    offset    = -prestim.*ones(numel(begsample),1);
+      begsample = max(round([event.sample]) - prestim,  1);
+      endsample = min(round([event.sample]) + poststim, hdr.nSamples);
+      offset    = -prestim.*ones(numel(begsample),1);
 
-    trl = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
+      trl = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
 
-    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_trl_run%02d', subj.name, run_nr));
-    save(filename, 'trl');
-    clear trl;
-  end
+      filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_trl_run%02d', subj.name, run_nr));
+      save(filename, 'trl');
+      clear trl;
+    end
 
 Now we have created a set of files, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument:
 
