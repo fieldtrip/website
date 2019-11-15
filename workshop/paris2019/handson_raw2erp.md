@@ -109,6 +109,7 @@ Now we have created a set of files, which contain, for each of the runs in the e
         cfg.channel = {'all', '-MEG', '-EEG'};
         cfg.demean  = 'no';
         cfg.reref   = 'no';
+        cfg.bpfilter = 'no';
         data_other  = ft_preprocessing(cfg);
 
         cfg            = [];
@@ -128,3 +129,7 @@ Now we have created a set of files, which contain, for each of the runs in the e
       filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_data',  subj.name));
       save(filename, 'data');
     end
+
+The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** three times per run, with channel type specific processing options. These processing options are specified in the cfg-structure. Take some time to understand these options. If things are unclear, browse the website for additional information.
+
+## Compute condition-specific averages (ERFs/ERPs)
