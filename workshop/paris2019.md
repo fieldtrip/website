@@ -1,6 +1,6 @@
 ---
 title: Practical MEEG workshop at ICM in Paris
-tags: [chile2020]
+tags: [paris2019]
 ---
 
 # Practical MEEG workshop at ICM in Paris
