@@ -68,6 +68,10 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 ## Tutorial preparation
 
+{% include markup/info %}
+For this workshop, we have created a set of dedicated tutorials, and fixed some small bugs in FieldTrip in order to get everything to run smoothly. Therefore, you should have a really recent version of the code, otherwise the tutorials will not run through without errors. Specifically, you need to have the code not 'older' than November 25, 2019.
+{% include markup/end %}
+
 In order to use Fieldtrip, the toolbox needs to be added to the matlab path. To achieve this, do the following:
 
 - Change directory to the location of the FieldTrip package. Note the subfolders present.

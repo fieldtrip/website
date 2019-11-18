@@ -15,7 +15,7 @@ In this tutorial, we will learn how to read in 'raw' data from a file, and to ap
 
 This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. This is covered in more detail in the [preprocessing](/tutorial/preprocessing) tutorial, which you can refer to if you want more details.
 
-## Reading in raw data from disk
+## Preliminaries, definition of subject specific filenames, and definition of epochs-of-interest
 
  In FieldTrip the preprocessing of data refers to the reading of the data, segmenting the data around interesting events such as triggers, temporal filtering and optionally rereferencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
@@ -30,7 +30,7 @@ In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)**
 First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
 We use the **datainfo_subject** function, which is provided in the **scripts** folder associated with this course. If we do the following:
 
-  subj = datainfo_subject(15);
+    subj = datainfo_subject(15);
 
 We obtain a structure that looks something like this:
 
@@ -77,7 +77,9 @@ We can now run the following chunk of code:
       clear trl;
     end
 
-Now we have created a set of files, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument:
+## Reading in raw data from disk
+
+In the section above, we have created a set of files, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument:
 
       rundata = cell(1,6);
       for run_nr = 1:6
@@ -128,9 +130,8 @@ Now we have created a set of files, which contain, for each of the runs in the e
 
       filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_data',  subj.name));
       save(filename, 'data');
-    end
 
-The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** three times per run, with channel type specific processing options. Of note is the rereferencing of the EEG data, and the exclusion of a subset of the EEG channels. The excluded channels correspond to non-brain recording EEG signals (EOG/ECG etc.), and are excluded from further analysis. Subsequently, the data are average-referenced.
+The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** three times per run, with channel type specific processing options. Of note is the rereferencing of the EEG data, and the exclusion of a subset of the EEG channels. The excluded channels correspond to non-brain recording EEG signals (EOG/ECG etc.), and are excluded from further analysis. Subsequently, the EEG data are average-referenced. After the data has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
 
 ## Compute condition-specific averages (ERFs/ERPs)
 
@@ -152,3 +153,7 @@ Once the data has been epoched and filtered, we can proceed with computing event
 
     filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
     save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
+
+## Visualisation of the ERFs
+
+At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualise the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/elctrodes. In FieldTrip, this is specified by the cfg.layout option. You can read more about layouts in a **[dedicated tutorial](/tutorial/layout).
