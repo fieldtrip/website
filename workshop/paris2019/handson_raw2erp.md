@@ -99,7 +99,7 @@ Now we have created a set of files, which contain, for each of the runs in the e
         data_meg    = ft_preprocessing(cfg);
 
         % EEG specific settings
-        cfg.channel    = 'EEG';
+        cfg.channel    = {'EEG' '-EEG061' '-EEG062' '-EEG063' '-EEG064'};
         cfg.demean     = 'yes';
         cfg.reref      = 'yes';
         cfg.refchannel = 'all'; % average reference
@@ -130,8 +130,25 @@ Now we have created a set of files, which contain, for each of the runs in the e
       save(filename, 'data');
     end
 
-The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** three times per run, with channel type specific processing options. These processing options are specified in the cfg-structure. Take some time to understand these options. If things are unclear, browse the website for additional information.
+The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** three times per run, with channel type specific processing options. Of note is the rereferencing of the EEG data, and the exclusion of a subset of the EEG channels. The excluded channels correspond to non-brain recording EEG signals (EOG/ECG etc.), and are excluded from further analysis. Subsequently, the data are average-referenced.
 
 ## Compute condition-specific averages (ERFs/ERPs)
 
 Once the data has been epoched and filtered, we can proceed with computing event-related averages. In Fieldtrip, this can be achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the data.trialinfo field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
+
+    cfg        = [];
+    cfg.trials = find(data.trialinfo(:,1)==1);
+    cfg.preproc.demean = 'yes';
+    cfg.preproc.baselinewindow = [-0.1 0];
+    avg_famous = ft_timelockanalysis(cfg, data);
+    cfg.trials = find(data.trialinfo(:,1)==2);
+    avg_unfamiliar = ft_timelockanalysis(cfg, data);
+
+    cfg.trials = find(data.trialinfo(:,1)==3);
+    avg_scrambled = ft_timelockanalysis(cfg, data);
+
+    cfg.trials = find(data.trialinfo(:,1)==1 | data.trialinfo(:,1)==2);
+    avg_faces  = ft_timelockanalysis(cfg, data);
+
+    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
+    save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
