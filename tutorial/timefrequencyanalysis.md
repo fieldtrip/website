@@ -74,7 +74,7 @@ In the following example a time window with length 500 ms is applied.
     cfg.toi          = -0.5:0.05:1.5;                  % time window "slides" from -0.5 to 1.5 sec in steps of 0.05 sec (50 ms)
     TFRhann = ft_freqanalysis(cfg, dataFIC);
 
-Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following element
+Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following fields:
 
     TFRhann =
 
@@ -86,7 +86,7 @@ Regardless of the method used for calculating the TFR, the output format is iden
              grad: [1x1 struct]                % Gradiometer positions etc
               cfg: [1x1 struct]                % Settings used in computing this frequency decomposition
 
-The element TFRhann.powspctrm contains the temporal evolution of the raw power values for each specified frequency.
+The field TFRhann.powspctrm contains the temporal evolution of the raw power values for each specified frequency.
 
 ## Visualization
 
