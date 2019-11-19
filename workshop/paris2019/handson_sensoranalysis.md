@@ -409,7 +409,7 @@ Plot the result
 
 _Figure: Time-frequency representations of power calculated using Morlet wavelets._
 
-**Exercise 6**:
+#### Exercise 6:
 {% include markup/info %}
  Adjust cfg.width and see how the TFRs change.
 {% include markup/end %}
