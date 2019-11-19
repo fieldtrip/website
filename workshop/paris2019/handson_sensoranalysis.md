@@ -241,7 +241,7 @@ It is also possible to calculate the TFRs with respect to a time window that var
 
 The analysis is best done by first selecting the numbers of cycles per time window which will be the same for all frequencies. For instance if the number of cycles per window is 7, the time window is 1000 ms for 7 Hz (1/7 x 7 cycles); 700 ms for 10 Hz (1/10 x 7 cycles) and 350 ms for 20 Hz (1/20 x 7 cycles). The frequency can be chosen arbitrarily - however; too fine a frequency resolution is just going to increase the redundancy rather than providing new information.
 
-Below is the configuration for a 7-cycle time window. The calculation is only done for one sensor (MRC15) but it can of course be extended to all sensors.
+Below is the configuration for a 7-cycle time window. The calculation is only done for one sensor (MEG0741) but it can of course be extended to all sensors.
 
     cfg              = [];
     cfg.output       = 'pow';
