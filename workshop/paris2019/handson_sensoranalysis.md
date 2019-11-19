@@ -32,7 +32,7 @@ If you want to know more about tapers/ window functions you can have a look at t
 
 To calculate the time-frequency analysis for the example dataset we will perform the following steps:
 
-- Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Read the data into MATLAB using the same strategy as in the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)**.
 - Compute the power values for each frequency bin and each time bin using the function **[ft_freqanalysis](/reference/ft_freqanalysis)**
 - Visualize the results. This can be done by creating time-frequency plots for one (**[ft_singleplotTFR](/reference/ft_singleplotTFR)**) or several channels (**[ft_multiplotTFR](/reference/ft_multiplotTFR)**), or by creating a topographic plot for a specified time- and frequency interval (**[ft_topoplotTFR](/reference/ft_topoplotTFR)**).
 
@@ -44,7 +44,7 @@ In this tutorial, procedures of 4 types of time-frequency analysis will be shown
 
 ## Preprocessing
 
-The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time of stimulus); however, the script reads the data from -1.0 s to 2.0 s.
+The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.6 s to 1.3 s (t = 0 s defines the time of stimulus); however, for reasons that will become clear later, the script reads the data from -0.8 s to 1.5 s.
 
 {% include /shared/tutorial/preprocessing_fic.md %}
 
@@ -52,23 +52,91 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 ### Hanning taper, fixed window length
 
-Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus a 500 ms time window results in a 2 Hz frequency resolution (1/0.5 sec= 2 Hz) meaning that power can be calculated for 2 Hz, 4 Hz, 6 Hz etc. An integer number of cycles must fit in the time window.
+Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus, a 400 ms time window results in a 2.5 Hz frequency resolution (1/0.4 sec= 2.5 Hz) meaning that power can be calculated for freqiemcu bins centered at 2.5 Hz, 5 Hz, 7.5 Hz etc. An integer number of cycles must fit in the time window.
 
-**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires preprocessed data (see above), which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/dataFIC.mat>.
+**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)** tutorial, with a few important modifications. As mentioned, the epoch length is increased, in order to account for boundary effects. Moreover, we will not apply a bandpassfilter to the data (why not?) and only read in the MEG data for now.
 
-    load dataFIC
+    trl = cell(6,1);
+    for run_nr = 1:6
+      hdr   = ft_read_header(subj.megfile{run_nr});
+      event = ft_read_event(subj.eventsfile{run_nr}, 'header', hdr, 'eventformat', 'bids_tsv');
 
-In the following example a time window with length 500 ms is applied.
+      trialtype = {event.type}';
+      sel       = ismember(trialtype, {'Famous' 'Unfamiliar' 'Scrambled'});
+      event     = event(sel);
 
-    cfg              = [];
-    cfg.output       = 'pow';
-    cfg.channel      = 'MEG';
-    cfg.method       = 'mtmconvol';
-    cfg.taper        = 'hanning';
-    cfg.foi          = 2:2:30;                         % analysis 2 to 30 Hz in steps of 2 Hz
-    cfg.t_ftimwin    = ones(length(cfg.foi),1).*0.5;   % length of time window = 0.5 sec
-    cfg.toi          = -0.5:0.05:1.5;                  % time window "slides" from -0.5 to 1.5 sec in steps of 0.05 sec (50 ms)
-    TFRhann = ft_freqanalysis(cfg, dataFIC);
+      prestim  = round(0.8.*hdr.Fs);
+      poststim = round(1.5.*hdr.Fs)-1;
+
+      trialtype = {event.type}';
+      trialcode = nan(numel(event),1);
+      trialcode(strcmp(trialtype, 'Famous'))     = 1;
+      trialcode(strcmp(trialtype, 'Unfamiliar')) = 2;
+      trialcode(strcmp(trialtype, 'Scrambled'))  = 3;
+
+      begsample = max(round([event.sample]) - prestim,  1);
+      endsample = min(round([event.sample]) + poststim, hdr.nSamples);
+      offset    = -prestim.*ones(numel(begsample),1);
+
+      trl = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
+
+      filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_trl_run%02d', subj.name, run_nr));
+      save(filename, 'trl');
+      clear trl;
+    end
+
+    rundata = cell(1,6);
+    for run_nr = 1:6
+      filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_trl_run%02d', subj.name, run_nr));
+      load(filename);
+
+      cfg         = [];
+      cfg.dataset = subj.megfile{run_nr};
+      cfg.trl     = trl;
+
+      % MEG specific settings
+      cfg.channel = 'MEG';
+      cfg.demean  = 'yes';
+      cfg.coilaccuracy = 0;
+      data_meg    = ft_preprocessing(cfg);
+
+      cfg            = [];
+      cfg.resamplefs = 300;
+      data_meg       = ft_resampledata(cfg, data_meg);
+
+      rundata{run_nr} = data_meg;
+      clear data_meg
+    end % for each run
+
+    data = ft_appenddata([], rundata{:});
+    clear rundata;
+
+    filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_data', subj.name));
+    save(filename, 'data');
+
+Once we have the data in memory, we can compute the time-frequency representation, which we do here for each of the conditions separately:
+
+    filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_data', subj.name));
+    load(filename, 'data');
+
+    cfg        = [];
+    cfg.method = 'mtmconvol';
+    cfg.output = 'pow';
+    cfg.foi    = 2.5:2.5:30;
+    cfg.t_ftimwin = ones(1,numel(cfg.foi)).*0.4;
+    cfg.taper  = 'hanning';
+    cfg.toi    = (-0.8:0.05:1.3);
+    cfg.pad    = 4;
+
+    cfg.trials = find(data.trialinfo(:,1)==1);
+    freqlow_famous = ft_freqanalysis(cfg, data);
+
+    cfg.trials = find(data.trialinfo(:,1)==2);
+    freqlow_unfamiliar = ft_freqanalysis(cfg, data);
+
+    cfg.trials = find(data.trialinfo(:,1)==3);
+    freqlow_scrambled = ft_freqanalysis(cfg, data);
+
 
 Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following element
 
