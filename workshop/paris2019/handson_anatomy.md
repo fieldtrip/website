@@ -63,12 +63,12 @@ First, we extract the positions of the landmarks from the subject's MRI metadata
 
 Next, we can inspect the location of the landmarks in the anatomical image.
 
-      mri = ft_read_mri(subj.mrifile);
+      mri_orig = ft_read_mri(subj.mrifile);
 
       cfg = [];
       cfg.locationcoordinates = 'voxel'; % treat the location as voxel coordinates
       cfg.location = NAS;
-      ft_sourceplot(cfg, mri);
+      ft_sourceplot(cfg, mri_orig);
 
 If the contrast of the image is a bit low, you can use the 'shift+' key to increase the contrast.
 
@@ -80,6 +80,22 @@ _Figure: The location of the NAS indicated by the crosshair in the anatomical MR
 
 {% include markup/exercise %}
 Inspect the location of the LPA and RPA.
+{% include markup/end %}
+
+Now, we can coregister the MRI image to the coordinate system as used for the MEG sensor positions:
+
+    cfg              = [];
+    cfg.method       = 'fiducial';
+    cfg.fiducial.nas = NAS;
+    cfg.fiducial.lpa = LPA;
+    cfg.fiducial.rpa = RPA;
+    cfg.coordsys     = 'neuromag';
+    mri              = ft_volumerealign(cfg, mri_orig);
+
+#### Exercise 2
+
+{% include markup/exercise %}
+Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.
 {% include markup/end %}
 
 
