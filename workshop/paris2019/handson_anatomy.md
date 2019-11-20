@@ -27,7 +27,7 @@ There are different approaches to creating a forward model, each of which requir
 
 ## Coregistration of anatomical MRI image with MEG sensor array
 
-The ingredients for a forward model (i.e. geometrical information about the sensor array, the headmodel, and the sourcemodel) are all defined in space, i.e. the location of their constituting elements can be described with spatial coordinates. It may sound trivial, but before anything meaningful can be done in combining these geometrical objects, we need to ensure that all spatial coordinates are expressed in the same **[coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)**, and that the metrical units are the same. That is, the objects need to be coregistered to each other. In our experience, the realm of coordinate systems is a murky one. Typically, software packages try to hide as much as possible the murky details, often by adopting rigid conventions about the coordinate systems in which the data is to be represented. This usually results in relatively robust behavior, yet, when things go wrong, they typically go **very** wrong. FieldTrip aims at being lenient with respect to the exact specification of the coordinate system, and should work fine, as long as the objects are properly coregistered. This requires some basic understanding about coordinate systems and coordinate system transforms, in order to be able to diagnose any potential problems encountered.
+The ingredients for a forward model (i.e. geometrical information about the sensor array, the headmodel, and the sourcemodel) are all defined in space, i.e. the location of their constituting elements can be described with spatial coordinates. It may sound trivial, but before anything meaningful can be done in combining these geometrical objects, we need to ensure that all spatial coordinates are expressed in the same **[coordinate system](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)**, and that the metrical units are the same. That is, the objects need to be **[coregistered](/faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions)** to each other. In our experience, the realm of coordinate systems is a murky one. Typically, software packages try to hide as much as possible the murky details, often by adopting rigid conventions about the coordinate systems in which the data is to be represented. This usually results in relatively robust behavior, yet, when things go wrong, they typically go **very** wrong. FieldTrip aims at being lenient with respect to the exact specification of the coordinate system, and should work fine, as long as the objects are properly coregistered. This requires some basic understanding about coordinate systems and coordinate system transforms, in order to be able to diagnose any potential problems encountered.
 The coordinate system in which the MEG sensors are expressed is defined based on three anatomical landmarks that can be identified on a subject's head (i.e. the nasion, and the left and right preauricular points (lpa and rpa)). In FieldTrip, we typically coregister the anatomical image to the sensor array, which will be done with **[ft_volumerealign](/reference/ft_volumerealign)**. For the current dataset, the locations of the nasion,lpa and rpa (expressed in voxel coordinates of the corresponding MRI image) are already available, so the coregistration is straightforward. Alternatively, the researcher needs to interactively determine the location of the anatomical landmarks in the MRI image, which is possible using cfg.method = 'interactive'. Here, we will use the 'fiducial' method.
 First, we extract the positions of the landmarks from the subject's MRI metadata .json file:
 
@@ -98,9 +98,24 @@ Now, we can coregister the MRI image to the coordinate system as used for the ME
 Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay special attention to the location coordinates, as compared to the location coordinates of the original MRI.
 {% include markup/end %}
 
-
-
 ## Creation of the single shell head model
+
+Now, to create a single shell model of the inner surface of the skull, we need a segmentation of the MRI image, which can be achieved with the function **[ft_volumesegment](/reference/ft_volumesegment)**. This function uses SPM for segmentation, and in its default behavior returns a probabilistic segmentation of the grey, white and csd compartments **[](/faq/how_is_the_segmentation_defined)**. Here, we only need a description of the surface of the brain, which is obtained by thresholding the probabilistic combined grey/white/csf image, 
+
+    thr = 0.5;
+
+    % segment the coregistered mri
+    cfg                = [];
+    cfg.output         = 'brain';
+    cfg.brainthreshold = thr;
+    seg = ft_volumesegment(cfg, mri);
+
+    % create the mesh
+    cfg        = [];
+    cfg.method = 'singleshell';
+    headmodel  = ft_prepare_headmodel(cfg, seg);
+    save(fullfile(subj.outputpath, 'anatomy', sprintf('%s_headmodel', subj.name)), 'headmodel');
+
 
 ## Creation of a cortex based source model
 
