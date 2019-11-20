@@ -124,9 +124,38 @@ You can now visualise the headmodel in combination with the anatomical image:
 
 {% include image src="/assets/img/workshop/paris2019/mri_headmodel.png" width="400" %}
 
-_Figure: The location of the NAS indicated by the crosshair in the anatomical MRI image_
+_Figure: The headmodel visualised on top of the volulmetric anatomical image_
 
 ## Creation of a cortex based source model
+
+To creation of a state-of-the-art sourcemodel that is based on an accurate individual cortical segmentation is described in a **[dedicated tutorial](/tutorial/sourcemodel)**. Source reconstruction algorithms that assume distributed sources (for instance Minimum Norm Estimates MNEs) require these cortical models, whereas for beamformers are not absolutely necessary. The generation of cortically constrained sourcemodels, defined on a triangulated surface mesh can be rather time consuming, so we are not going to do that here. Instead, the sourcemodels have already been computed, according to a slightly modified version of the recipe described in the abovementioned tutorial. Below, the code is referenced that was used to generate the sourcemodels. It serves as an illustrative example, because it was executed on the Donders Institute's compute cluster, which uses a specific way to execute computational jobs (qsub). The overall idea would be however to tweak a set of shell scripts (**[ft_freesurferscript.sh](/reference/bin/ft_freesurferscript.sh)** and **[ft_postfreesurferscript.sh](/reference/bin/ft_postfreesurferscript.sh)**), and execute those on your own computer (requires a Linux or MatOS environment, with installed freesurfer and workbench).
+In contrast to the **[referenced tutorial](/tutorial/sourcemodel)**, the input MRI image that serves as the starting point for the freesurfer pipeline is the image coregistered to the MEG coordinate system. This coordinate system is sufficently similar to the conventional coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
+
+    % this part creates a freesurfer output base directory and fills it with
+    % an anatomical image that is going to be used by freesurfer
+    mkdir(fullfile(subj.outputpath, 'anatomy', 'freesurfer'));
+    cfg              = [];
+    cfg.filename     = fullfile(subj.outputpath, 'anatomy', 'freesurfer',       subj.name);
+    cfg.filetype     = 'mgz'; % not sure whether this is supported in Windows
+    cfg.parameter    = 'anatomy';
+    ft_volumewrite(cfg, mri);
+
+    % this part runs a standard automatic freesurfer pipeline, that is not
+    % guaranteed to work out-of-the-box. It may require some manual tweaks along
+    % along the how_are_the_different_head_and_mri_coordinate_systems_defined
+    [dum, ft_path] = ft_version;
+    scriptname = fullfile(ft_path,'bin','ft_freesurferscript.sh');
+    subj_dir   = fullfile(subj.outputpath, 'anatomy', 'freesurfer');
+    cmd_str    = sprintf('echo "%s %s %s" | qsub -l walltime=20:00:00,mem=8gb -N sub-%02d', scriptname, subj_dir, subj.name, subj.id);
+    system(cmd_str);
+
+    % this part runs a set of postprocessing steps, and requires hcp-workbench
+    % to be available
+    [dum, ft_path] = ft_version;
+    scriptname = fullfile(ft_path,'bin','ft_postfreesurferscript.sh');
+    subj_dir   = fullfile(subj.outputpath, 'anatomy', 'freesurfer');
+    templ_dir  = '/home/language/jansch/projects/Pipelines/global/templates/standard_mesh_atlases';%fullfile(ft_path,'template','sourcemodel');
+    cmd_str    = sprintf('echo "%s %s %s %s" | qsub -l walltime=20:00:00,mem=8gb -N sub-%02d', scriptname, subj_dir, subj.name, templ_dir, subj.id);
 
 
 
