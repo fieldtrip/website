@@ -100,7 +100,7 @@ Inspect the location of the NAS, LPA and RPA of the coregistered MRI. Pay specia
 
 ## Creation of the single shell head model
 
-Now, to create a single shell model of the inner surface of the skull, we need a segmentation of the MRI image, which can be achieved with the function **[ft_volumesegment](/reference/ft_volumesegment)**. This function uses SPM for segmentation, and in its default behavior returns a probabilistic segmentation of the grey, white and csd compartments **[](/faq/how_is_the_segmentation_defined)**. Here, we only need a description of the surface of the brain, which is obtained by thresholding the probabilistic combined grey/white/csf image, 
+Now, to create a single shell model of the inner surface of the skull, we need a segmentation of the MRI image, which can be achieved with the function **[ft_volumesegment](/reference/ft_volumesegment)**. This function uses SPM for segmentation, and in its default behavior returns a probabilistic segmentation of the grey, white and csd compartments **[](/faq/how_is_the_segmentation_defined)**. Here, we only need a description of the surface of the brain, which is obtained by thresholding the probabilistic combined grey/white/csf image,
 
     thr = 0.5;
 
@@ -116,7 +116,18 @@ Now, to create a single shell model of the inner surface of the skull, we need a
     headmodel  = ft_prepare_headmodel(cfg, seg);
     save(fullfile(subj.outputpath, 'anatomy', sprintf('%s_headmodel', subj.name)), 'headmodel');
 
+You can now visualise the headmodel in combination with the anatomical image:
+
+    cfg = [];
+    cfg.intersectmesh = headmodel.bnd;
+    ft_sourceplot(cfg, mri);
+
+{% include image src="/assets/img/workshop/paris2019/mri_headmodel.png" width="400" %}
+
+_Figure: The location of the NAS indicated by the crosshair in the anatomical MRI image_
 
 ## Creation of a cortex based source model
+
+
 
 ## Computation of the forward model
