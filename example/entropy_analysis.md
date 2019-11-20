@@ -69,8 +69,8 @@ The mse output struct has the following fields:
 	time: [1×26 double]
 	dimord: 'chan_timescales_time'
 	sampen: [48×42×26 double]
-    r: [48×42×26 double]  
-    cfg: [1×1 struct]
+	r: [48×42×26 double]  
+	cfg: [1×1 struct]
 
 The `mse` struct has been designed to be structurally comparable to a `freq` structure as obtained from **[ft_freqanalysis](/reference/ft_freqanalysis)**, with the following exceptions: `timescales` replaces the `frequency` field, indicating the timescales axis. `sampen` replaces the `powspctrm` field, containing the resulting sample entropy values. `fsample` indicates the sampling rate of the data at each coarsegraining step. `r` contains the r values computed at each channel-by-timescales-by-time location.
 
