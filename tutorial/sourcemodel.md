@@ -92,7 +92,7 @@ save(fullfile(mripath,sprintf('%s_transform_vox2ctf',subjectname)), 'transform_v
     ft_volumewrite(cfg, mri);
 
 {% include markup/danger %}
-Importantly, the mgz-filetype can **only** be used on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved nor read on a Windows PC. If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer.
+Importantly, the mgz-filetype is not fully supported on Windows platforms. Reading **and** writing can be done on Linux and Mac platforms. When you are processing the anatomical information on one of these platforms it is OK to save as mgz (and useful too, because it compresses the files and uses less diskspace as a consequence). These files cannot be saved on a Windows PC (although reading is possible). If you use MATLAB on Windows, you can save the volume as a nifti file using cfg.filetype = 'nifti'. Subsequently, if needed, you can convert it to mgz using [mri_convert](http://surfer.nmr.mgh.harvard.edu/fswiki/mri_convert) with FreeSurfer. Note, however, that as far as the writer of this tutorial knows, FreeSurfer itself does not run on Windows.
 {% include markup/end %}
 
 #### 5. Preparation of the anatomical MRI: coregister to coordinate system according to the 'acpc' convention
