@@ -97,6 +97,9 @@
 - name:  Computing and using estimates of effect size
   link:  /example/effectsize
 
+- name:  Performing multi-scale entropy analysis on EEG/MEG/LFP data
+  link:  /example/entropy_analysis
+
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
 

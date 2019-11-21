@@ -1,0 +1,3 @@
+- name:  Performing multi-scale entropy analysis on EEG/MEG/LFP data
+  link:  /example/entropy_analysis
+
