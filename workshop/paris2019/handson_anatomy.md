@@ -157,6 +157,110 @@ In contrast to the **[referenced tutorial](/tutorial/sourcemodel)**, the input M
     templ_dir  = '/home/language/jansch/projects/Pipelines/global/templates/standard_mesh_atlases';%fullfile(ft_path,'template','sourcemodel');
     cmd_str    = sprintf('echo "%s %s %s %s" | qsub -l walltime=20:00:00,mem=8gb -N sub-%02d', scriptname, subj_dir, subj.name, templ_dir, subj.id);
 
+The result of the **ft_freesurferscript.sh** is a 'standard' set of freesurfer generated files, which in this case are stored in the freesurfer/sub-15 directory. Relevant for our subsequent endeavours are the files located in the freesurfer/sub-15/surf folder. Checking the content of such a surf folder, which can be done by typing:
+
+    ls
+
+on the MATLAB command line, you see something like this:
+
+    >> ls
+    lh.area			lh.pial			lh.volume		rh.inflated.H		rh.smoothwm.S.crv
+    lh.area.mid		lh.qsphere.nofix	lh.w-g.pct.mgh		rh.inflated.K		rh.smoothwm.nofix
+    lh.area.pial		lh.smoothwm		lh.white		rh.inflated.nofix	rh.sphere
+    lh.avg_curv		lh.smoothwm.BE.crv	lh.white.preaparc	rh.jacobian_white	rh.sphere.reg
+    lh.curv			lh.smoothwm.C.crv	lh.white.preaparc.H	rh.orig			rh.sulc
+    lh.curv.pial		lh.smoothwm.FI.crv	lh.white.preaparc.K	rh.orig.nofix		rh.thickness
+    lh.defect_borders	lh.smoothwm.H.crv	rh.area			rh.pial			rh.volume
+    lh.defect_chull		lh.smoothwm.K.crv	rh.area.mid		rh.qsphere.nofix	rh.w-g.pct.mgh
+    lh.defect_labels	lh.smoothwm.K1.crv	rh.area.pial		rh.smoothwm		rh.white
+    lh.inflated		lh.smoothwm.K2.crv	rh.avg_curv		rh.smoothwm.BE.crv	rh.white.preaparc
+    lh.inflated.H		lh.smoothwm.S.crv	rh.curv			rh.smoothwm.C.crv	rh.white.preaparc.H
+    lh.inflated.K		lh.smoothwm.nofix	rh.curv.pial		rh.smoothwm.FI.crv	rh.white.preaparc.K
+    lh.inflated.nofix	lh.sphere		rh.defect_borders	rh.smoothwm.H.crv
+    lh.jacobian_white	lh.sphere.reg		rh.defect_chull		rh.smoothwm.K.crv
+    lh.orig			lh.sulc			rh.defect_labels	rh.smoothwm.K1.crv
+    lh.orig.nofix		lh.thickness		rh.inflated		rh.smoothwm.K2.crv
+
+
+That is, a bunch of files, which exist in an 'rh', and 'lh' version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in fieldtrip, and visualise them in the following way:
+
+    pial = ft_read_headshape({'lh.pial' 'rh.pial'});
+    figure;
+    ft_plot_mesh(pial, 'vertexcolor', pial.sulc);
+    h1 = light('position',[-1 0 0]);
+    h2 = light('position',[1 0 0]);
+    material dull
+    lighting gouraud;set(gcf,'color','w');  
+
+{% include image src="/assets/img/workshop/paris2019/surf_native.png" width="400" %}
+
+_Figure: The pial surface extracted by freesurfer_
+
+
+Inspecing the variable 'pial', you will see something like this:
+
+    >> pial
+
+    pial =
+
+    struct with fields:
+
+                    pos: [259215×3 double]
+                    tri: [518422×3 double]
+                   sulc: [259215×1 double]
+                   curv: [259215×1 double]
+                   area: [259215×1 double]
+              thickness: [259215×1 double]
+         brainstructure: [259215×1 double]
+    brainstructurelabel: {2×1 cell}
+
+The relevant topological information is represented in the 'pos' and 'tri' fields, where the 259215x3 pos-matrix contains a set of coordinates in 3D space of the vertices of a triangulated mesh, and the 518422x3 tri-matrix contains on each row the indices of the points that make up the individual triangles. The 259215x1 vectors in the sulc/curv/area/thickness/brainstructure reflect scalar parameters corresponding to local properties of the cortical sheet, at each of the vertices.
+For the purpose of MEG-based source reconstruction, the freesurfer based surface needs to be downsampled a lower number of vertices, since the large number of vertices is just an overkill, given the limited spatial resolution of MEG. Moreover, each individual cortical sheet (and hemisphere) has a different number of vertex location, which makes it easy to combine these native cortical meshes across subjects. The **ft_postfreesurferscript.sh** does a surface-based registration to a template surface, reorganising the meshes to have a fixed number of ~164000 vertices per hemisphere, followed by a downsampling step, resulting in meshes that are topologically equivalent to the high resolution meshes, but with a lower number of vertices per hemisphere (~32k, ~8k, ~4k). The idea now is, that each of the vertices of the resulting meshes are registered to a standardised template, so they can be easily compared across subjects, facilitating group level analysis later on.
+The software needed for this step is [connectome workbench](https://www.humanconnectome.org/software/connectome-workbench). The output of this step is stored here in the freesurfer/workbench directory. Checking the content of such a workbench folder, you see something like this:
+
+    >> ls
+    fsaverage						sub-15.L.white.8k_fs_LR.surf.gii
+    sub-15.164k_fs_LR.wb.spec				sub-15.L.white.native.surf.gii
+    sub-15.32k_fs_LR.wb.spec				sub-15.R.ArealDistortion_FS.164k_fs_LR.shape.gii
+    sub-15.4k_fs_LR.wb.spec					sub-15.R.ArealDistortion_FS.32k_fs_LR.shape.gii
+    sub-15.8k_fs_LR.wb.spec					sub-15.R.ArealDistortion_FS.4k_fs_LR.shape.gii
+    sub-15.L.ArealDistortion_FS.164k_fs_LR.shape.gii	sub-15.R.ArealDistortion_FS.8k_fs_LR.shape.gii
+    sub-15.L.ArealDistortion_FS.32k_fs_LR.shape.gii		sub-15.R.ArealDistortion_FS.native.shape.gii
+    sub-15.L.ArealDistortion_FS.4k_fs_LR.shape.gii		sub-15.R.aparc.164k_fs_LR.label.gii
+    sub-15.L.ArealDistortion_FS.8k_fs_LR.shape.gii		sub-15.R.aparc.32k_fs_LR.label.gii
+    sub-15.L.ArealDistortion_FS.native.shape.gii		sub-15.R.aparc.4k_fs_LR.label.gii
+    sub-15.L.aparc.164k_fs_LR.label.gii			sub-15.R.aparc.8k_fs_LR.label.gii
+    sub-15.L.aparc.32k_fs_LR.label.gii			sub-15.R.aparc.a2009s.164k_fs_LR.label.gii
+    sub-15.L.aparc.4k_fs_LR.label.gii			sub-15.R.aparc.a2009s.32k_fs_LR.label.gii
+    sub-15.L.aparc.8k_fs_LR.label.gii			sub-15.R.aparc.a2009s.4k_fs_LR.label.gii
+    sub-15.L.aparc.a2009s.164k_fs_LR.label.gii		sub-15.R.aparc.a2009s.8k_fs_LR.label.gii
+    sub-15.L.aparc.a2009s.32k_fs_LR.label.gii		sub-15.R.aparc.a2009s.native.label.gii
+    sub-15.L.aparc.a2009s.4k_fs_LR.label.gii		sub-15.R.aparc.native.label.gii
+
+The long story short here is, that the majority of files are gifti-files (with the .gii extension), rather than the legacy fileformat used by freesurfer. Gifti files are versatile files that are used to represent geometric data that are defined as tessellated meshes. Next to a specific naming scheme of the files, connectome workbench uses a specific convention for representing the different types of data. Let's dissect the filenaming in some detail:
+
+      subjectname.<hemisphere>.<somename>.<number>k_fs_LR.<someothername>.gii
+
+Starting off with <number>, which here is 4, 8, 32, or 164. This refers to the resolution of the corresponding mesh. All files with the same number 'belong' together. The <hemisphere> can be either L or R, reflecting the left or right hemispheres respectively. Then, the <someothername> gives an idea of what is represented in the file. If this is 'surf', the file actually contains topological information, i.e. a combination of vertex positions and triangle definitions. For a given hemisphere and resolution, the triangle definitions will be the same for all corresponding surf.gii files, only the positions differ. <somename> gives an indication of what is represented. For the surf.gii files, <somename> can be white, midthickness, pial, inflated, very_inflated, and sphere. Relevant for our further purposes are the midthickness meshes, which will be used as the sourcemodels (reflecting the halway point between the grey-white matter boundary and the pial surface), and the inflated meshes, which allow for nice visualisation in some situations.
+Next to the surf.gii files, there are shape.gii and label.gii files, which contain scalar information about local properties (for instance curvature) or contain parcellation information (i.e. the anatomical parcel to which a given vertex belongs).
+We can have a look at some files in a bit more detail:
+
+    white = ft_read_headshape('sub-15.L.white.8k_fs_LR.surf.gii');
+    midthickness = ft_read_headshape('sub-15.L.midthickness.8k_fs_LR.surf.gii');
+    pial = ft_read_headshape('sub-15.L.pial.8k_fs_LR.surf.gii');
+    inflated = ft_read_headshape('sub-15.L.inflated.8k_fs_LR.surf.gii');
+    very_inflated = ft_read_headshape('sub-15.L.very_inflated.8k_fs_LR.surf.gii');
+    sphere = ft_read_headshape('sub-15.L.sphere.8k_fs_LR.surf.gii');
+
+
+    figure;
+    h1=subplot(2,3,1);ft_plot_mesh(white,'vertexcolor',white.thickness);lighting gouraud;material dull;light
+    h2=subplot(2,3,2);ft_plot_mesh(midthickness,'vertexcolor',white.thickness);lighting gouraud;material dull;light
+    h3=subplot(2,3,3);ft_plot_mesh(pial,'vertexcolor',white.thickness);lighting gouraud;material dull;light
+    h4=subplot(2,3,4);ft_plot_mesh(inflated,'vertexcolor',white.thickness);lighting gouraud;material dull;light
+    h5=subplot(2,3,5);ft_plot_mesh(very_inflated,'vertexcolor',white.thickness);lighting gouraud;material dull;light
+    h6=subplot(2,3,6);ft_plot_mesh(sphere,'vertexcolor',white.thickness);lighting gouraud;material dull;light
+    linkprop([h1 h2 h3 h4 h5 h6],'cameraposition');
 
 
 ## Computation of the forward model
