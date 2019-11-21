@@ -297,5 +297,3 @@ Importantly, before proceeding, we first need to check whether the headmodel and
 {% include image src="/assets/img/workshop/paris2019/coregistration.png" width="400" %}
 
 _Figure: Coregistration between headmodel, sourcemodel and sensors_
-
-## Computation of the forward model
