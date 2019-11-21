@@ -75,6 +75,7 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 
 ### Miscellaneous
 
+- [MSE - perform multiscale entropy analysis](/example/entropy_analysis)
 - [BIDS - the brain imaging data structure](/example/bids)
 - [Combining simultaneous recordings in BIDS](/example/bids_pom)
 - [Converting an example audio dataset for sharing in BIDS](/example/bids_audio)
