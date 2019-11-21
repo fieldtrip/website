@@ -1,4 +1,3 @@
-```markdown
 ---
 title: Performing multi-scale entropy analysis on EEG/MEG/LFP data 
 tags: [example, entropy]
@@ -88,6 +87,3 @@ Kloosterman NA, Kosciessa J, Lindenberger U, Fahrenfort J, Garrett DD (2019) Boo
 Kosciessa JQ, Kloosterman NA, Garrett DD (2019) Standard multiscale entropy reflects spectral power at mismatched temporal scales: What’s signal irregularity got to do with it? Biorxiv:752808. 
 
 Grandy TH, Garrett DD, Schmiedek F, Werkle-Bergner M (2016) On the estimation of brain signal entropy from sparse neuroimaging data. Sci Rep 6:23073. 
-
-```
-
