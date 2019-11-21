@@ -7,7 +7,7 @@ tags: [example, entropy]
 
 Recently, we have developed a novel algorithm based on multi-scale entropy **[Costa et al. 2002](https://doi.org/10.1103/PhysRevLett.89.068102)** called modified multi-scale entropy (mMSE) that directly quantifies the temporal irregularity of time-domain EEG/MEG/LFP signals at longer and shorter timescales. In general, patterns of fluctuations in brain activity that tend to repeat over time are assigned lower entropy, whereas more irregular, non-repeating patterns yield higher entropy. To allow the investigation of dynamic changes in signal irregularity, we developed mMSE as a time-resolved variant, while also permitting assessment of entropy over atypically longer time scales by calculating across discontinuous, concatenated segments **[Grandy et al.](https://doi.org/10.1038/srep23073)** (see the figure below). 
 
-{% include image src="/assets/img/example/entropy_analysis/mMSEmethod.png" %}
+{% include image src="/assets/img/example/entropy_analysis/Figure2.png" %}
  
 Please see our preprints **[Kloosterman et al.](https://doi.org/10.1101/834614)** and **[Kosciessa et al.](https://doi.org/10.1101/752808)** for more information, and the tutorial folder on our Github page for a step-by-step explanation of the computation of multiscale entropy within our MATLAB function.
 
