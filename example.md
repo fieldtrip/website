@@ -90,5 +90,5 @@ See also the [tutorials](/tutorial) and [frequently asked questions](/faq).
 - [Example analysis pipeline for Biosemi bdf data](/example/biosemi)
 - [Find the orientation of planar gradiometer channels](/example/planar_orientation)
 - [How to import data from MNE-Python and FreeSurfer](/example/import_mne)
-- [How to use checkconfig](/example/checkconfig)
+- [How to use ft_checkconfig](/example/checkconfig)
 - [Writing simulated data to a CTF dataset](/example/writing_simulated_data_to_a_ctf_dataset)
