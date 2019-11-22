@@ -17,13 +17,9 @@ It is expected that you understand the previous steps of preprocessing and filte
 
 This tutorial will not cover the frequency-domain option for DICS/PCC beamformers (which is explained [here](/tutorial/beamformer)), nor how to compute minimum-norm-estimated sources of evoked/averaged data (which is explained [here](/tutorial/minimumnormestimate)).
 
-## Background
-
-
-
 ## Procedure
 
-To localize the evoked sources for this example dataset we will perform the following steps:
+To localise the evoked sources for this example dataset we will perform the following steps:
 
 - Read the data into MATLAB using the same strategy as in the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)**.
 - Spatially whiten the data to account for differences in sensor type (magnetometers versus gradiometers)
@@ -31,13 +27,67 @@ To localize the evoked sources for this example dataset we will perform the foll
 - Construct the leadfield matrix using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**, in combination with the previously computed head- and sourcemodels + the whitened gradiometer array.
 
 - Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-  - Visualize the results, by first interpolating the sources to the anatomical MRI using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and plotting this with **[ft_sourceplot](/reference/ft_sourceplot)**.
+  - Visualize the results, using **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
 ## Preprocessing
 
 ### Reading the data
 
-The aim is to identify the sources underlying somatosensory evoked fields. We seek to compare the activation in the post-stimulus to the activation in the pre-stimulus interval. We first use **[ft_preprocessing](/reference/ft_preprocessing)** and **[ft_redefinetrial](/reference/ft_redefinetrial)** to extract relevant data. We know that the subject's median nerve was stimulated almost at 3Hz (every 0.36 sec), which influences our selection of the pre- and post-stimulus interval (i.e. as short as possible).
+The aim is to reconstruct the sources underlying the event-related field, when the subject is presented with pictures of faces. in the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)** we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the **[anatomy tutorial](/workshop/paris2019/handson_sourceanalysis)**.
+
+    load(fullfile(subj.outputpath, 'anatomy', sprintf('%s_headmodel', subj.name)));
+    load(fullfile(subj.outputpath, 'anatomy', sprintf('%s_sourcemodel', subj.name)));
+    headmodel   = ft_convert_units(headmodel,   'm');
+    sourcemodel = ft_convert_units(sourcemodel, 'm');
+    sourcemodel.inside = sourcemodel.atlasroi>0;
+
+    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_data', subj.name));
+    load(filename, 'data');
+
+In this tutorial, we are only going to use the MEG data for the source reconstruction. Therefore, we proceed by selecting the MEG channels from the epoched data.
+
+    cfg         = [];
+    cfg.channel = {'MEG'};
+    data        = ft_selectdata(cfg, data);
+
+Next, for reasons that will become clear soon, we also select from the epoched data the timewindows just preceding the onset of the stimulus, from a time window between -200 ms and 0.
+
+    cfg         = [];
+    cfg.latency = [-0.2 0];
+    baseline    = ft_selectdata(cfg, data);
+
+Next, we use **[ft_timelockanalysis](/reference/ft_timelockanalysis)** to compute the sensor-level covariance of the baseline data.
+
+    cfg            = [];
+    cfg.covariance = 'yes';
+    baseline_avg   = ft_timelockanalysis(cfg, baseline);
+
+Now, if we reorder the channels a bit, we can visualise this covariance matrix as follows:
+
+    selmag  = ft_chantype(baseline_avg.label, 'megmag');
+    selgrad = ft_chantype(baseline_avg.label, 'megplanar');
+
+    C = baseline_avg.cov([find(selmag);find(selgrad)],[find(selmag);find(selgrad)]);
+    figure;imagesc(C);hold on;plot(102.5.*[1 1],[0 306],'w','linewidth',2);plot([0 306],102.5.*[1 1],'w','linewidth',2);
+
+  {% include image src="/assets/img/workshop/paris2019/cov_meg.png" width="400" %}
+
+  _Figure: MEG sensor covariance matrix_
+
+The figure shows the covariance between all pairs of magnetometers in the left upper square on the diagonal, between all pairs of gradiometers the right lower square, and the covariance between magnetometers and gradiometers in the off- diagonal blocks. As can be seen, the left upper and off-diagonal blocks appear blue, suggesting that the numerical range of the magnetometer is a lot smaller than the numerical range of the gradiometers. In itself, this might not pose a problem, but it will result in a different weighing of gradiometers versus magnetometers when computing the source reconstruction. In addition to the difference in magnitude of the different channel types, the covariance matrix may be poorly estimated (for instance due to a limited amount of data available), or may be rank deficient due to previous processing steps. Examples of processing steps that cause the data to be rank deficient are artifact cleaning procedures based on independent component analysis (ICA), or signal space projections (SSPs). Another important processing step that reduces the rank of the data massively, is Elekta's maxfilter.
+It is crucial to account for rank deficiency of the data, because if it's not done properly, the noise (be it numerical or real) will blow up the reconstruction.
+Beamformers require the mathematical inverse of the covariance matrix computed from the epochs-of-interest (typically including a basline window but **never** computed on the baseline window alone). State-of-the-art distributed source reconstuction with minimum-norm estimation (MNE) require (implicitly) the mathematical inverse of a noise covariance matrix. Either way, irrespective of your favourite source reconstruction method, mathematical inversion of rank deficient covariance matrices that moreover consist of signals with different orders of magnitude requires some tricks to make the final result numerically well-behaved.
+To make this a bit more concrete, we first will have a look at the singular value decomposition (which in this case is similar to a principal component analysis) of the baseline covariance matrix:
+
+    [u,s,v] = svd(baseline_avg.cov);
+    figure;plot(log10(diag(s)),'o');
+
+  {% include image src="/assets/img/workshop/paris2019/cov_svd.png" width="400" %}
+
+  _Figure: Singular values of a MEG sensor covariance matrix_
+
+When thus plotted on a log scale, it can be seen that there is a range of 16 orders of magnitude in the signal components, and that there are actually 3 stairs in this singular value spectrum. There is a steep decline around component 70 or so, and another step at component 204. The step at component 204 reflects the magnitude difference between the 204 gradiometer signals and the 102 magnetometer signals. The discontinuity around component 70 reflects the effect of the Maxfilter, which has effectively removed about 236 spatial components out of the data.
+
 
 The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectSEF.zip>.
 
