@@ -22,7 +22,7 @@ This tutorial will not cover the frequency-domain option for DICS/PCC beamformer
 To localise the evoked sources for this example dataset we will perform the following steps:
 
 - Read the data into MATLAB using the same strategy as in the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)**.
-- Spatially whiten the data to account for differences in sensor type (magnetometers versus gradiometers)
+- Spatially whiten the data to account for differences in sensor type (magnetometers versus gradiometers) with **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)**
 - Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 - Construct the leadfield matrix using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**, in combination with the previously computed head- and sourcemodels + the whitened gradiometer array.
 
@@ -35,12 +35,7 @@ To localise the evoked sources for this example dataset we will perform the foll
 
 The aim is to reconstruct the sources underlying the event-related field, when the subject is presented with pictures of faces. in the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)** we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the **[anatomy tutorial](/workshop/paris2019/handson_sourceanalysis)**.
 
-    load(fullfile(subj.outputpath, 'anatomy', sprintf('%s_headmodel', subj.name)));
-    load(fullfile(subj.outputpath, 'anatomy', sprintf('%s_sourcemodel', subj.name)));
-    headmodel   = ft_convert_units(headmodel,   'm');
-    sourcemodel = ft_convert_units(sourcemodel, 'm');
-    sourcemodel.inside = sourcemodel.atlasroi>0;
-
+    subj = datainfo_subject(15);
     filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_data', subj.name));
     load(filename, 'data');
 
@@ -113,7 +108,37 @@ The prewhitening operator is defined as the inverse of the matrix square root of
  Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with imagesc() after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
 {% include markup/end %}
 
+A byproduct of the magnetometers and gradiometers being represented at a similar scale, is the possibility to do a quick-and-dirty artifact identification (and rejection) using **[ft_rejectvisual](/reference/ft_rejectvisual/)**.
+
+    cfg        = [];
+    cfg.layout = 'neuromag306mag_helmet.mat';
+    layout     = ft_prepare_layout(cfg);
+
+    cfg        = [];
+    cfg.method = 'summary';
+    cfg.layout = layout;
+    dataw_meg  = ft_rejectvisual(cfg, dataw_meg);
+
+{% include image src="/assets/img/workshop/paris2019/rejectvisual.png" width="400" %}
+
+_Figure: Visual artifact rejection window_
+
+#### Exercise 2:
+{% include markup/info %}
+Consult the **[ft_rejectvisual tutorial](/tutorial/visual_artifact_rejection/)** and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data.
+{% include markup/end %}
+
 ## Compute the covariance matrix of the prewhitened data
+
+For a beamformer analysis, we need to compute the covariance between all pairs of channels during a time window of interest, which should include the active time window, i.e. the time window after stimulus onset. Thus, we should not constrain the window to the prestimulus time window, as we have done so far. The covariance, as an average across all single trial covariances is computed by using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** on the prewhitened data, including the whole time window (i.e. we don't call ft_selectdata to extract a time window from the data):
+
+    cfg = [];
+    cfg.preproc.demean = 'yes';
+    cfg.preproc.baselinewindow = [-0.2 0];
+    cfg.covariance = 'yes';
+    tlckw = ft_timelockanalysis(cfg, dataw_meg);
+
+
 
 ## Compute the forward model
 
