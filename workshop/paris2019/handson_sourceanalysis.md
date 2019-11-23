@@ -119,16 +119,16 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
     cfg.layout = layout;
     dataw_meg  = ft_rejectvisual(cfg, dataw_meg);
 
-{% include image src="/assets/img/workshop/paris2019/rejectvisual.png" width="400" %}
+{% include image src="/assets/img/workshop/paris2019/rejectvisual.png" width="600" %}
 
 _Figure: Visual artifact rejection window_
 
 #### Exercise 2:
 {% include markup/info %}
-Consult the **[ft_rejectvisual tutorial](/tutorial/visual_artifact_rejection/)** and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data.
+Consult the **[ft_rejectvisual tutorial](/tutorial/visual_artifact_rejection/)** and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
 {% include markup/end %}
 
-## Compute the covariance matrix of the prewhitened data
+### Compute the covariance matrix of the prewhitened data
 
 For a beamformer analysis, we need to compute the covariance between all pairs of channels during a time window of interest, which should include the active time window, i.e. the time window after stimulus onset. Thus, we should not constrain the window to the prestimulus time window, as we have done so far. The covariance, as an average across all single trial covariances is computed by using **[ft_timelockanalysis](/reference/ft_timelockanalysis)** on the prewhitened data, including the whole time window (i.e. we don't call ft_selectdata to extract a time window from the data):
 
@@ -138,31 +138,105 @@ For a beamformer analysis, we need to compute the covariance between all pairs o
     cfg.covariance = 'yes';
     tlckw = ft_timelockanalysis(cfg, dataw_meg);
 
+### Compute the forward model
 
+For a beamformer analysis, we need to predefine a set of dipole locations to be scanned. Typically, this set of dipole locations is defined on a 3D grid, to allow for volumetric postprocessing possibilities (for instance volumetric spatial normalisation for group statistics). Alternatively, we can use a set of dipole locations defined on the cortical sheet, e.g. as per the sourcemodel created in the **[head- and sourcemodel tutorial](/workshop/paris2019/handson_anatomy)**. With the surface-based models being registered to a template, postprocessing is relatively straightforward. Moreover, parcellation of the source reconstructed results using surface-based atlases can be easily achieved.
+Finally, with the beamformer solution on the cortical surface, it can be easily compared to a MNE solution, should one be inclined to do so. It is important to note that 1) the metric units of the geometric objects are identical to one another, and 2) to use here the gradiometer array from the whitened data, because we will also use the whitened data for the source reconstruction. With respect to point 1, FieldTrip will check for this, but to be sure, we ensure the equality of metric units explicitly.
 
-## Compute the forward model
+    % obtain the necessary ingredients for obtaining a forward model
+    load(fullfile(subj.outputpath, 'anatomy', sprintf('%s_headmodel', subj.name)));
+    load(fullfile(subj.outputpath, 'anatomy', sprintf('%s_sourcemodel', subj.name)));
+    headmodel   = ft_convert_units(headmodel,   tlckw.grad.unit);
+    sourcemodel = ft_convert_units(sourcemodel, tlckw.grad.unit);
+    sourcemodel.inside = sourcemodel.atlasroi>0;
 
-### Leadfield
+    % compute the forward model for the whitened data
+    cfg             = [];
+    cfg.channel     = tlckw.label;
+    cfg.grad        = tlckw.grad;
+    cfg.sourcemodel = sourcemodel;
+    cfg.headmodel   = headmodel;
+    cfg.method      = 'singleshell';
+    cfg.singleshell.batchsize = 1000;
+    leadfield_meg   = ft_prepare_leadfield(cfg); % NOTE: input of the whitened data ensures the correct sensor definition to be used.
 
-Combine all the information into the leadfield matrix:
+### Source analysis and visualisation of virtual channel data
 
+With the forward model and the covariance (as average across trials) computed, we can proceed with the computation of the beamformer solution. For this, we need to specify a kappa parameter for the regularisation. Also, we will specify that the spatial filters be kept in the output, so that we can later apply them to the individual conditions, in order to obtain condition-specific event-related averages at the source level, ensuring that the same spatial filter is used for each condition. Also, we specify the spatial filter to have a 'fixedori', which means that for each dipole location the source is assumed to have a fixed orientation.
 
-	% create leadfield
-	cfg                  = [];
-	cfg.grad             = grad;  % gradiometer distances
-	cfg.headmodel        = headmodel;   % volume conduction headmodel
-	cfg.sourcemodel      = sourcemodel;
-	cfg.channel          = {'MEG'};
-	cfg.singleshell.batchsize = 2000;
-        lf                   = ft_prepare_leadfield(cfg);
+    [u,s,v] = svd(tlckw.cov);
+    d       = -diff(log10(diag(s)));
+    d       = d./std(d);
+    kappa   = find(d>5,1,'first');
 
-## Source analysis
+    cfg                 = [];
+    cfg.method          = 'lcmv';
+    cfg.lcmv.kappa      = kappa;
+    cfg.lcmv.keepfilter = 'yes';
+    cfg.lcmv.fixedori   = 'yes';
+    cfg.lcmv.weightnorm = 'unitnoisegain';
+    cfg.headmodel   = headmodel;
+    cfg.sourcemodel = leadfield_meg;
+    source          = ft_sourceanalysis(cfg, tlckw);
 
-	% create spatial filter using the lcmv beamformer
-	cfg                  = [];
-	cfg.method           = 'lcmv';
-	cfg.sourcemodel      = lf; % leadfield
-	cfg.headmodel        = headmodel; % volume conduction model (headmodel)
-	cfg.lcmv.keepfilter  = 'yes';
-	cfg.lcmv.fixedori    = 'yes'; % project on axis of most variance using SVD
-	source               = ft_sourceanalysis(cfg, timelock);
+    filename = fullfile(subj.outputpath, 'sourceanalysis', sprintf('%s_source_lcmv', subj.name));
+    save(filename, 'source', 'tlckw');
+
+With the source structure computed, we can inspect the fields of the variable source, and the subfields of source.avg:
+
+    source =
+
+      struct with fields:
+
+          time: [1×510 double]
+        inside: [15684×1 logical]
+           pos: [15684×3 double]
+           tri: [31360×3 double]
+        method: 'average'
+           avg: [1×1 struct]
+           cfg: [1×1 struct]
+
+    >> source.avg
+
+    ans =
+
+      struct with fields:
+
+                 ori: {1×15684 cell}
+                 pow: [15684×1 double]
+                 mom: {15684×1 cell}
+               noise: [15684×1 double]
+              filter: {15684×1 cell}
+               label: {306×1 cell}
+        filterdimord: '{pos}_ori_chan'
+
+The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the timecourses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in  a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in november 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
+
+    wb_dir = fullfile(subj.outputpath, 'anatomy', 'freesurfer', subj.name, 'workbench');
+    filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii', subj.name));
+    inflated = ft_read_headshape({filename strrep(filename, '.L.', '.R.')});
+    inflated = ft_determine_units(inflated);
+    inflated.coordsys = 'neuromag';
+
+    cfg           = [];
+    cfg.clim      = [-2.5 2.5];
+    cfg.colormap  = 'parula';
+    cfg.parameter = 'mom';
+
+    % replace the original dipole positions with those of the inflated
+    % surface
+    source.pos = inflated.pos;
+    figure;ft_sourceplot_interactive(cfg, source);
+
+{% include image src="/assets/img/workshop/paris2019/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_vc_timecourse.png" width="400" %}
+
+_Figure: Interactive figure windows to inspect virtual channels_
+
+The function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)** opens two figures, one showing a time course with the event-related field, averaged across all dipoles, and the other showing the cortical surface. Here, we replaced the original source dipole positions with their equivalent 'inflated' counterparts to better appreciate the stuff that is going on in the sulci. Pressing the shift-key while selecting a location on the cortical surface creates a new figure, with the event-related field of the selected location. Clicking in the figure with the time courses shifts the latency at which the corresponding topographical map is shown.
+
+#### Exercise 3:
+{% include markup/info %}
+ Explore the spatial distribution of the prominent ERF peaks. Try and explain why the topographies occasionally look 'patchy'.
+{% include markup/end %}
+
+### Source analysis and visualisation of virtual channel data per condition
