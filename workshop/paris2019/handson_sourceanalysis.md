@@ -119,7 +119,7 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
     cfg.layout = layout;
     dataw_meg  = ft_rejectvisual(cfg, dataw_meg);
 
-{% include image src="/assets/img/workshop/paris2019/rejectvisual.png" width="600" %}
+{% include image src="/assets/img/workshop/paris2019/rejectvisual.png" width="600" height="600"%}
 
 _Figure: Visual artifact rejection window_
 
@@ -228,7 +228,7 @@ The content of source.avg is the interesting stuff. Particularly, the 'mom' fiel
     source.pos = inflated.pos;
     figure;ft_sourceplot_interactive(cfg, source);
 
-{% include image src="/assets/img/workshop/paris2019/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_vc_timecourse.png" width="400" %}
+{% include image src="/assets/img/workshop/paris2019/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_vc_timecourse.png" width="400"%}
 
 _Figure: Interactive figure windows to inspect virtual channels_
 
@@ -305,4 +305,3 @@ You can also investigate the difference between the 'famous' and 'scrambled' con
     cfg.parameter = 'mom';
     cfg.has_diff  = true;
     figure;ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
-  
