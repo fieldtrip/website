@@ -89,24 +89,6 @@ To make this a bit more concrete, we first will have a look at the singular valu
 When thus plotted on a log scale, it can be seen that there is a range of 16 orders of magnitude in the signal components, and that there are actually 3 stairs in this singular value spectrum. There is a steep decline around component 70 or so, and another step at component 204. The step at component 204 reflects the magnitude difference between the 204 gradiometer signals and the 102 magnetometer signals. The discontinuity around component 70 reflects the effect of the Maxfilter, which has effectively removed about 236 spatial components out of the data.
 
 
-The ft_definetrial and ft_preprocessing functions require the original MEG dataset, which is available from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectSEF.zip>.
-
-    % find the interesting segments of data
-    cfg                         = [];
-    cfg.dataset                 = 'SubjectSEF.ds';
-    cfg.trialdef.eventtype      = 'Blue';
-    cfg.trialdef.prestim        = .1;        % .1 sec prior to trigger
-    cfg.trialdef.poststim       = .2;        % .2 sec following trigger
-    cfg.continuous              = 'yes';
-    cfg = ft_definetrial(cfg);
-
-    % preprocess the data
-    cfg.channel                 = {'MEG'};
-    cfg.demean                  = 'yes';     % apply baselinecorrection
-    cfg.baselinewindow          = [-0.05 0]; % on basis of mean signal between -0.05 and 0
-    cfg.lpfilter                = 'yes';     % apply lowpass filter
-    cfg.lpfreq                  = 55;        % lowpass at 55 Hz
-    data = ft_preprocessing(cfg);
 
 ### Averaging and computation of the covariance matrix
 
