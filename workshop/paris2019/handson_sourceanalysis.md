@@ -293,3 +293,16 @@ With the spatial filters computed from the covariance matrix estimated from all 
     cfg           = [];
     cfg.parameter = 'mom';
     figure;ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
+
+You can also investigate the difference between the 'famous' and 'scrambled' conditions:
+
+    cfg = [];
+    cfg.operation = 'subtract';
+    cfg.parameter = 'mom';
+    source_diff   = ft_math(cfg, source_famous, source_scrambled);
+
+    cfg           = [];
+    cfg.parameter = 'mom';
+    cfg.has_diff  = true;
+    figure;ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
+  
