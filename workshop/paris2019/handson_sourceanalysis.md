@@ -31,7 +31,7 @@ To localise the evoked sources for this example dataset we will perform the foll
 
 ## Preprocessing
 
-### Reading the data
+### Reading the data, and some issues with covariance matrices
 
 The aim is to reconstruct the sources underlying the event-related field, when the subject is presented with pictures of faces. in the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)** we have computed sensor-level event-related fields, but we also stored the single-epoch data. We start off by loading the precomputed single-epoch data, and the headmodel and sourcemodel that were created during the **[anatomy tutorial](/workshop/paris2019/handson_sourceanalysis)**.
 
@@ -87,10 +87,11 @@ To make this a bit more concrete, we first will have a look at the singular valu
   _Figure: Singular values of a MEG sensor covariance matrix_
 
 When thus plotted on a log scale, it can be seen that there is a range of 16 orders of magnitude in the signal components, and that there are actually 3 stairs in this singular value spectrum. There is a steep decline around component 70 or so, and another step at component 204. The step at component 204 reflects the magnitude difference between the 204 gradiometer signals and the 102 magnetometer signals. The discontinuity around component 70 reflects the effect of the Maxfilter, which has effectively removed about 236 spatial components out of the data.
+Just using the 'normal' way of computing the covariance matrix' inverse, by using MATLAB's inv() function is asking for numerical problems, because the spatial components with very small singular values (which don't reflect any real signal) are blown up big time in the inverse. For this reason, regularised or truncated inversion techniques are to be used. In addition to applying more thoughtful algorithms for matrix inversion, spatial prewhitening techniques can be used, which manipulate the data in a way to make them, as the name suggests, spatially (more or less) white. This means that the signals are uncorrelated to each other, and have the same variance. As a byproduct, when the whitening is done separately for the magnetometers and gradiometers, the scale difference between the different channel types disappears, and thus prewhitening results in an 'equal' treatment of both channel types, and allows for a relatively straightforward combination of the different channel types during source reconstruction.
+
+### Spatial whitening of the task data, using the activity from the baseline
 
 
-
-### Averaging and computation of the covariance matrix
 
 The function ft_timelockanalysis makes averages of all the trials in a data structure and also estimates the covariance. For a correct covariance estimation it is important that you used the cfg.demean = 'yes' option when the function ft_preprocessing was applied.
 
