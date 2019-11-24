@@ -46,7 +46,7 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 #### Day 2 (Wednesday December 4, 2019)
 
-- 09:00 – 10:30 Lecture 3: Source estimation 1 (Alex & Frank)
+- 09:00 – 10:30 Lecture 3: Source estimation 1 (Alex & François)
 - 10:30 – 12:30 Hands-on 3: [Creating head and source models](/workshop/paris2019/handson_anatomy)
 
 - 12:30 – 13:30 Lunch
