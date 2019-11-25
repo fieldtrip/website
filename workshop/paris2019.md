@@ -83,12 +83,24 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 For this workshop, we have created a set of dedicated tutorials, and fixed some small bugs in FieldTrip in order to get everything to run smoothly. Therefore, you should have a really recent version of the code, otherwise the tutorials will not run through without errors. Specifically, you need to have the code not 'older' than November 25, 2019.
 {% include markup/end %}
 
-In order to use Fieldtrip, the toolbox needs to be added to the matlab path. To achieve this, do the following:
+You should start by getting an up-to-date copy of Fieldtrip. This is best done through github, as is explained in detail in a dedicated [page](/development/git). The FieldTrip code and website are both maintained on [https://github.com/fieldtrip](http://github.com/fieldtrip).
+
+{% include markup/info %}
+To quickly get access to the code, you would do the following from the command line or the equivalent in a graphical git interface, such as the [GitHub desktop](https://desktop.github.com).
+
+```bash
+git clone https://github.com/fieldtrip/fieldtrip.git
+```
+
+This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on GitHub, fork `fieldtrip/fieldtrip` to your own account and read the abovementioned page.
+{% include markup/end %}
+
+Once FieldTrip is on your computer, the toolbox needs to be added to the matlab path. To achieve this, do the following:
 
 - Change directory to the location of the FieldTrip package. Note the subfolders present.
 - Add the FieldTrip folder to the path
 
-    addpath('where_is_fieldtrip');
+    addpath(<the name of the fieldtrip folder>);
 
 (Note: **do not** add the folder recursively; i.e. do not use addpath(genpath()))
 
