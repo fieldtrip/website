@@ -37,7 +37,7 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 - 08:30 – 09:00 Registration, with coffee/tea + Welcome & intro
 - 09:00 – 10:30 Lecture 1: Data organization (Robert) and initial data processing(Alex)
 - 10:30 – 12:30 Hands-on 1a: [From raw to ERPs using FieldTrip](/workshop/paris2019/handson_raw2erp)
-- 10:30 – 12:30 Hands-on 1b: From raw to ERPs using Brainstorm
+- 10:30 – 12:30 Hands-on 1b: [From raw to ERPs using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
 - 10:30 – 12:30 Hands-on 1c: From raw to ERPs using MNE python
 
 
@@ -45,7 +45,7 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 - 13:30 – 15:00 Lecture 2: Sensor level analysis (JM)
 - 15:00 – 17:00 Hands-on 2a: [Sensor level analysis using Fieldtrip](/workshop/paris2019/handson_sensoranalysis)
-- 15:00 – 17:00 Hands-on 2b: Sensor level analysis using Brainstorm
+- 15:00 – 17:00 Hands-on 2b: [Sensor level analysis using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
 - 15:00 – 17:00 Hands-on 2c: Sensor level analysis using MNE python
 - 17:00 – 17:30 Wrap-up / Q&A session
 
@@ -53,14 +53,14 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 - 09:00 – 10:30 Lecture 3: Source estimation 1 (Alex & François)
 - 10:30 – 12:30 Hands-on 3a: [Creating head and source models using Fieldtrip](/workshop/paris2019/handson_anatomy)
-- 10:30 – 12:30 Hands-on 3b: Creating head and source models using Brainstorm
+- 10:30 – 12:30 Hands-on 3b: [Creating head and source models using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
 - 10:30 – 12:30 Hands-on 3c: Creating head and source models using MNE python
 
 - 12:30 – 13:30 Lunch
 
 - 13:30 – 15:00 Lecture 4: Source estimation 2 (Denis)
 - 15:00 – 17:00 Hands-on 4a: [Single and distributed sources using Fieldtrip](/workshop/paris2019/handson_sourceanalysis)
-- 15:00 – 17:00 Hands-on 4b: Single and distributed sources using Brainstorm
+- 15:00 – 17:00 Hands-on 4b: [Single and distributed sources using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
 - 15:00 – 17:00 Hands-on 4c: Single and distributed sources using MNE python
 - 17:00 – 17:30 Wrap-up / Q&A session
 
@@ -68,7 +68,7 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 - 09:00 – 10:30 Lecture 5: Group level analysis (Robert)
 - 10:30 – 12:30 Hands-on 5a: [Group level analysis using Fieldtrip](/workshop/paris2019/handson_groupanalysis)
-- 10:30 – 12:30 Hands-on 5b: Group level analysis using Brainstorm
+- 10:30 – 12:30 Hands-on 5b: [Group level analysis using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
 - 10:30 – 12:30 Hands-on 5c: Group level analysis using MNE python
 
 - 12:30 – 13:30 Lunch
