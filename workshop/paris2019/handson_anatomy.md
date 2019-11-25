@@ -1,6 +1,6 @@
 ---
 title: Creation of headmodels and sourcemodels for source reconstruction
-tags: [tutorial, meg, headmodel, sourcemodel, sourceanalysis]
+tags: [tutorial, meg, headmodel, sourcemodel, sourceanalysis, paris2019]
 ---
 
 # Creation of headmodels and sourcemodels for source reconstruction
