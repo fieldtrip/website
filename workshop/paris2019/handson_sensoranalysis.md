@@ -78,10 +78,7 @@ Here, we will describe how to calculate time frequency representations using Han
       endsample = min(round([event.sample]) + poststim, hdr.nSamples);
       offset    = -prestim.*ones(numel(begsample),1);
 
-      trl = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
-
-      filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_trl_run%02d', subj.name, run_nr));
-      save(filename, 'trl');
+      subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
       clear trl;
     end
 
@@ -92,7 +89,7 @@ Here, we will describe how to calculate time frequency representations using Han
 
       cfg         = [];
       cfg.dataset = subj.megfile{run_nr};
-      cfg.trl     = trl;
+      cfg.trl     = subj.trl{run_nr};
 
       % MEG specific settings
       cfg.channel = 'MEG';
@@ -111,13 +108,7 @@ Here, we will describe how to calculate time frequency representations using Han
     data = ft_appenddata([], rundata{:});
     clear rundata;
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_data', subj.name));
-    save(filename, 'data');
-
 Once we have the data in memory, we can compute the time-frequency representation, which we do here for each of the conditions separately:
-
-    filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_data', subj.name));
-    load(filename, 'data');
 
     cfg        = [];
     cfg.method = 'mtmconvol';
