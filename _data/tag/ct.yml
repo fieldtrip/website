@@ -1,41 +1,20 @@
-- name:  Whole brain connectivity and network analysis
 - name:  MEG dataformats
-  link:  /tutorial/networkanalysis
   link:  /dataformat/meg
-
-
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_old
 
 - name:  CTF
   link:  /development/realtime/ctf
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
 - name:  Conditional Granger causality in the frequency domain
   link:  /example/connectivity_conditional_granger
-
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
 
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
 
-- name:  Visual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
-
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
-
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/how_to_incorporate_head_movements_in_meg_analysis
-
-- name:  FieldTrip connectivity demo
-  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
 
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign

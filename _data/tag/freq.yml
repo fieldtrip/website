@@ -1,17 +1,8 @@
-- name:  Time-frequency analysis of EEG data
-  link:  /workshop/oslo2019/timefrequency
-
 - name:  Apply clusterrandanalysis on TFRs of power that were computed with BESA
   link:  /example/apply_clusterrandanalysis_on_tfrs_of_power_that_were_computed_with_besa
 
-- name:  Reading in data and performing sensor-level ERF and TFR analyses
-  link:  /workshop/oxford2019/sensor_analysis_plusminus
-
 - name:  Effect of SNR on Coherence
   link:  /example/coherence_snr
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/paris2019/handson_sensoranalysis
 
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming

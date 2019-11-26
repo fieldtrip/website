@@ -1,20 +1,11 @@
 - name:  Example script for leadfield based on FEM headmodel
   link:  /development/project/example_fem
 
-- name:  Classification of event related MEG data using MVPA-Light
-  link:  /tutorial/mvpa_light
-
 - name:  Modular EEG, OpenEEG
   link:  /development/realtime/modulareeg
 
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
-
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/align_eeg_electrode_positions_to_bem_headmodel
-
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
 
 - name:  Example analysis pipeline for Biosemi data
   link:  /example/biosemi
@@ -22,116 +13,59 @@
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /tutorial/timefrequencyanalysis
-
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
-
-- name:  Dealing with TMS-EEG datasets
-  link:  /tutorial/tms-eeg
 
 - name:  Analysis of high-gamma band signals in human ECoG
   link:  /example/ecog_ny
 
-- name:  FieldTrip Walkthrough
-  link:  /walkthrough
-
 - name:  Getting started with reading raw EEG or MEG data
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
-
-- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
-  link:  /workshop/aarhus/beamformingerf
 
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 
-- name:  FieldTrip workshop in Madrid
-  link:  /workshop/madrid2019
-
 - name:  Use your own forward leadfield model in an inverse beamformer computation
   link:  /example/use_your_own_forward_leadfield_model_in_an_inverse_beamformer_computation
-
-- name:  Convert the EEG sedation dataset for sharing in BIDS
-  link:  /workshop/madrid2019/bids_sedation
 
 - name:  Can I do combined EEG and MEG source reconstruction?
   link:  /faq/can_i_do_combined_eeg_and_meg_source_reconstruction
 
-- name:  Details on the resting-state EEG dataset recorded with different sedation levels
-  link:  /workshop/madrid2019/eeg_sedation
-
 - name:  Can I compare EEG channels between different electrode caps?
   link:  /faq/capmapping
-
-- name:  Cleaning and processing resting-state EEG
-  link:  /workshop/madrid2019/tutorial_cleaning
 
 - name:  How should I specify the fiducials for electrode realignment?
   link:  /faq/fiducial
 
-- name:  Getting started with EEG data, quality checks and ERPs
-  link:  /workshop/madrid2019/tutorial_erp
-
 - name:  How are electrodes, magnetometers or gradiometers described?
   link:  /faq/how_are_electrodes_magnetometers_or_gradiometers_described
-
-- name:  Time-frequency and spectral analysis
-  link:  /workshop/madrid2019/tutorial_freq
 
 - name:  How can I inspect the electrode impedances of my data?
   link:  /faq/how_can_i_inspect_the_electrode_impedances_of_my_data
 
-- name:  Cluster-based permutation tests on resting-state EEG power spectra
-  link:  /workshop/madrid2019/tutorial_stats
-
 - name:  How can I merge two datasets that were acquired simultaneously with different amplifiers?
   link:  /faq/how_can_i_merge_two_datasets_that_were_acquired_simultaneously_with_different_amplifiers
-
-- name:  Beamforming oscillatory responses in combined MEG/EEG data
-  link:  /workshop/natmeg/beamforming
 
 - name:  How can I use OpenMEEG for forward modeling?
   link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
 
-- name:  Dipole fitting of combined MEG/EEG data
-  link:  /workshop/natmeg/dipolefitting
-
 - name:  How do I install the OpenMEEG binaries
   link:  /faq/how_do_i_install_the_openmeeg_binaries
-
-- name:  Description of the auditory oddball MEG+EEG dataset
-  link:  /workshop/natmeg/meg_audodd
 
 - name:  How is the segmentation defined?
   link:  /faq/how_is_the_segmentation_defined
 
-- name:  Preprocessing and event-related activity in combined MEG/EEG data
-  link:  /workshop/natmeg/preprocessing
-
 - name:  How to coregister an anatomical MRI with the gradiometer or electrode positions?
   link:  /faq/how_to_coregister_an_anatomical_mri_with_the_gradiometer_or_electrode_positions
-
-- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
-  link:  /workshop/natmeg/statistics
 
 - name:  I have problems reading in neuroscan .cnt files. How can I fix this?
   link:  /faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this
 
-- name:  Time-frequency analysis of combined MEG/EEG data
-  link:  /workshop/natmeg/timefrequency
-
 - name:  Is it important to have accurate measurements of electrode locations for EEG source reconstruction?
   link:  /faq/is_it_important_to_have_accurate_measurements_of_electrode_locations_for_eeg_source_reconstruction
 
-- name:  FieldTrip workshop in Oslo
-  link:  /workshop/oslo2019
-
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
-
-- name:  Forward modeling for EEG source reconstruction
-  link:  /workshop/oslo2019/forward_modeling
 
 - name:  Why is FieldTrip developed separately from EEGLAB?
   link:  /faq/why_is_fieldtrip_developed_separately_from_eeglab
@@ -139,26 +73,14 @@
 - name:  Why should I use an average reference for EEG source reconstruction?
   link:  /faq/why_should_i_use_an_average_reference_for_eeg_source_reconstruction
 
-- name:  Preprocessing and event-related potentials in EEG data
-  link:  /workshop/oslo2019/introduction
-
-- name:  Statistical analysis and multiple comparison correction for EEG data
 - name:  Getting started with 20%, 10% and 5% electrode arrangements
-  link:  /workshop/oslo2019/statistics
   link:  /getting_started/1020
-
-
-- name:  Time-frequency analysis of EEG data
-  link:  /workshop/oslo2019/timefrequency
 
 - name:  Getting started with ASA and EEProbe
   link:  /getting_started/antneuro
 
 - name:  Getting started with BioImage Suite
   link:  /getting_started/bioimage
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/paris2019/handson_sensoranalysis
 
 - name:  Getting started with Biosemi BDF data
   link:  /getting_started/biosemi
