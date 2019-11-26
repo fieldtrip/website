@@ -79,6 +79,8 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 ## Tutorial preparation
 
+### Ensure that you have a recent version of FieldTrip on your computer
+
 {% include markup/info %}
 For this workshop, we have created a set of dedicated tutorials, and fixed some small bugs in FieldTrip in order to get everything to run smoothly. Therefore, you should have a really recent version of the code, otherwise the tutorials will not run through without errors. Specifically, you need to have the code not 'older' than November 25, 2019.
 {% include markup/end %}
@@ -106,3 +108,5 @@ Once FieldTrip is on your computer, the toolbox needs to be added to the matlab 
 
 - Run 'ft_defaults' in MATLAB.
 - Confirm that FT has been successfully added to your path, for example by typing 'which ft_preprocessing' in Matlab; the correct path should be displayed.
+
+### Get the example data that is used throughout this set of tutorials
