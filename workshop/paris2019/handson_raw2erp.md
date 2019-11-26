@@ -70,10 +70,7 @@ We can now run the following chunk of code:
       endsample = min(round([event.sample]) + poststim, hdr.nSamples);
       offset    = -prestim.*ones(numel(begsample),1);
 
-      trl = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
-
-      filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_trl_run%02d', subj.name, run_nr));
-      save(filename, 'trl');
+      subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
       clear trl;
     end
 
@@ -83,12 +80,10 @@ In the section above, we have created a set of files, which contain, for each of
 
       rundata = cell(1,6);
       for run_nr = 1:6
-        filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_trl_run%02d',   subj.name, run_nr));
-        load(filename);
 
         cfg         = [];
         cfg.dataset = subj.megfile{run_nr};
-        cfg.trl     = trl;
+        cfg.trl     = subj.trl{run_nr};
 
         % MEG specific settings
         cfg.channel = 'MEG';
