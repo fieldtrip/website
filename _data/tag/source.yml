@@ -1,14 +1,32 @@
+- name:  Localizing oscillatory sources using beamformer techniques
+  link:  /tutorial/beamformer
+
 - name:  Align EEG electrode positions to BEM headmodel
   link:  /example/align_eeg_electrode_positions_to_bem_headmodel
+
+- name:  Localizing visual gamma and cortico-muscular coherence using DICS
+  link:  /tutorial/beamformingextended
+
+- name:  Analysis of corticomuscular coherence
+  link:  /tutorial/coherence
 
 - name:  Combined EEG and MEG source reconstruction
   link:  /example/combined_eeg_and_meg_source_reconstruction
 
+- name:  Localizing electrodes using a 3D-scanner
+  link:  /tutorial/electrode
+
 - name:  Common filters in beamforming
   link:  /example/common_filters_in_beamforming
 
+- name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_bem
+
 - name:  Compute forward simulated data and apply a beamformer scan
   link:  /example/compute_forward_simulated_data_and_apply_a_beamformer_scan
+
+- name:  Creating a FEM volume conduction model of the head for source-reconstruction of EEG data
+  link:  /tutorial/headmodel_eeg_fem
 
 - name:  Compute forward simulated data and apply a dipole fit
   link:  /example/compute_forward_simulated_data_and_apply_a_dipole_fit
@@ -16,17 +34,35 @@
 - name:  Example use of the ft_compute_leadfield function
   link:  /example/compute_leadfield
 
+- name:  Creating a volume conduction model of the head for source-reconstruction of MEG data
+  link:  /tutorial/headmodel_meg
+
 - name:  Check the quality of the anatomical coregistration
   link:  /example/coregistration_quality_control
+
+- name:  Introduction to the FieldTrip toolbox
+  link:  /tutorial/introduction
 
 - name:  Create MNI-aligned grids in individual head-space
   link:  /example/create_single-subject_grids_in_individual_head_space_that_are_all_aligned_in_mni_space
 
+- name:  Source reconstruction of event-related fields using minimum-norm estimation
+  link:  /tutorial/minimumnormestimate
+
+- name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
+  link:  /tutorial/sourcemodel
+
 - name:  Localizing the sources underlying the difference in event related fields
   link:  /example/difference_erf
 
+- name:  Beamforming oscillatory responses in MEG data
+  link:  /workshop/oslo2019/beamforming
+
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
+
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
 
 - name:  How to create a head model if you do not have an individual MRI
   link:  /example/fittemplate

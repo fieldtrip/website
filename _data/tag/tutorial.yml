@@ -1,56 +1,110 @@
+- name:  Creating a sourcemodel for source-reconstruction of MEG or EEG data
+  link:  /tutorial/sourcemodel
+
 - name:  Which datasets are used in the documentation and where are they used?
   link:  /faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip
 
 - name:  Getting started with real-time analysis for BCI/neurofeedback
   link:  /getting_started/realtime
 
+- name:  Preprocessing and analysis of spike and local field potential data
+  link:  /tutorial/spikefield
+
 - name:  Overview of all tutorials
   link:  /tutorial
+
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /tutorial/timefrequencyanalysis
 
 - name:  Introduction - dealing with artifacts
   link:  /tutorial/artifacts
 
+- name:  Dealing with TMS-EEG datasets
+  link:  /tutorial/tms-eeg
+
 - name:  Automatic artifact rejection
   link:  /tutorial/automatic_artifact_rejection
+
+- name:  Visual artifact rejection
+  link:  /tutorial/visual_artifact_rejection
 
 - name:  Localizing oscillatory sources using beamformer techniques
   link:  /tutorial/beamformer
 
+- name:  Beamforming evoked fields and potentials in combined MEG/EEG data
+  link:  /workshop/aarhus/beamformingerf
+
 - name:  Localizing visual gamma and cortico-muscular coherence using DICS
   link:  /tutorial/beamformingextended
+
+- name:  Simulating and estimating, what about model (mis)match?
+  link:  /workshop/chieti/simulation
 
 - name:  Cluster-based permutation tests on time-frequency data
   link:  /tutorial/cluster_permutation_freq
 
+- name:  Beamforming oscillatory responses in combined MEG/EEG data
+  link:  /workshop/natmeg/beamforming
+
 - name:  Cluster-based permutation tests on event related fields
   link:  /tutorial/cluster_permutation_timelock
+
+- name:  Dipole fitting of combined MEG/EEG data
+  link:  /workshop/natmeg/dipolefitting
 
 - name:  Analysis of corticomuscular coherence
   link:  /tutorial/coherence
 
+- name:  Preprocessing and event-related activity in combined MEG/EEG data
+  link:  /workshop/natmeg/preprocessing
+
 - name:  Analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivity
+
+- name:  Statistical analysis and multiple comparison correction for combined MEG/EEG data
+  link:  /workshop/natmeg/statistics
 
 - name:  Extended analysis of sensor- and source-level connectivity
   link:  /tutorial/connectivityextended
 
+- name:  Time-frequency analysis of combined MEG/EEG data
+  link:  /workshop/natmeg/timefrequency
+
 - name:  Preprocessing - Reading continuous EEG and MEG data
   link:  /tutorial/continuous
+
+- name:  Reading in data and performing sensor-level ERF and TFR analyses
+  link:  /workshop/oxford2019/sensor_analysis_plusminus
 
 - name:  Speeding up your analysis with distributed computing
   link:  /tutorial/distributedcomputing
 
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
+
 - name:  Localizing electrodes using a 3D-scanner
   link:  /tutorial/electrode
+
+- name:  Group analysis
+  link:  /workshop/paris2019/handson_groupanalysis
 
 - name:  Virtual channel analysis of epilepsy MEG data
   link:  /tutorial/epilepsy
 
+- name:  From raw data to ERP
+  link:  /workshop/paris2019/handson_raw2erp
+
 - name:  Event related averaging and MEG planar gradient
   link:  /tutorial/eventrelatedaveraging
 
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/paris2019/handson_sensoranalysis
+
 - name:  Parametric and non-parametric statistics on event-related fields
   link:  /tutorial/eventrelatedstatistics
+
+- name:  Localizing sources of neural sources using beamformer techniques
+  link:  /workshop/paris2019/handson_sourceanalysis
 
 - name:  Creating a BEM volume conduction model of the head for source-reconstruction of EEG data
   link:  /tutorial/headmodel_eeg_bem

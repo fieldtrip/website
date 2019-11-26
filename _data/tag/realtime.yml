@@ -1,20 +1,41 @@
+- name:  How can I monitor a subject's head position during a MEG session?
+  link:  /faq/how_can_i_monitor_a_subject_s_head_position_during_a_meg_session
+
 - name:  Real-time access to neurophysiological data
   link:  /development/realtime
+
+- name:  What kind of cable do I need for a serial port connection between two computers?
+  link:  /faq/how_can_i_test_the_serial_port_connection_between_two_computers
 
 - name:  Streaming realtime EEG data to and from Arduino
   link:  /development/realtime/arduino
 
+- name:  How fast is the FieldTrip buffer for realtime data streaming?
+  link:  /faq/how_fast_is_the_fieldtrip_buffer_for_realtime_data_streaming
+
 - name:  Artinis Medical Systems
   link:  /development/realtime/artinis
 
+- name:  How should I get started with the FieldTrip realtime buffer?
+  link:  /faq/how_should_i_get_started_with_the_fieldtrip_realtime_buffer
+
 - name:  Soundcard input using PortAudio
   link:  /development/realtime/audio2ft
+- name:  Getting started with real-time analysis for BCI/neurofeedback
+
+  link:  /getting_started/realtime
 
 - name:  BCI2000
+- name:  Getting started with real-time head localization in MEG
   link:  /development/realtime/bci2000
+
+  link:  /getting_started/realtime_headlocalizer
 
 - name:  Biosemi ActiveTwo EEG amplifier
   link:  /development/realtime/biosemi
+
+- name:  Realtime MEG BCI hands-on session in Nijmegen
+  link:  /workshop/realtime
 
 - name:  BrainStream
   link:  /development/realtime/brainstream
