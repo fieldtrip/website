@@ -76,7 +76,7 @@ We can now run the following chunk of code:
 
 ## Reading in raw data from disk
 
-In the section above, we have created a set of files, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument:
+In the section above, we have created a set of 'trl' matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the sub-15_data from the derivatives/raw2erp/sub-15 folder:
 
       rundata = cell(1,6);
       for run_nr = 1:6
