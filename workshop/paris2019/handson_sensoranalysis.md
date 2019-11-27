@@ -46,8 +46,6 @@ In this tutorial, procedures of 4 types of time-frequency analysis will be shown
 
 The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.6 s to 1.3 s (t = 0 s defines the time of stimulus); however, for reasons that will become clear later, the script reads the data from -0.8 s to 1.5 s.
 
-{% include /shared/tutorial/preprocessing_fic.md %}
-
 ## Time-frequency analysis I.
 
 ### Hanning taper, fixed window length
