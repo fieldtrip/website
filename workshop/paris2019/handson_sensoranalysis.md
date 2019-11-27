@@ -54,6 +54,8 @@ Here, we will describe how to calculate time frequency representations using Han
 
 **[Ft_freqanalysis](/reference/ft_freqanalysis)** requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)** tutorial, with a few important modifications. As mentioned, the epoch length is increased, in order to account for boundary effects. Moreover, we will not apply a bandpassfilter to the data (why not?) and only read in the MEG data for now.
 
+    subj = datainfo_subject(15);
+
     trl = cell(6,1);
     for run_nr = 1:6
       hdr   = ft_read_header(subj.megfile{run_nr});
@@ -82,9 +84,7 @@ Here, we will describe how to calculate time frequency representations using Han
 
     rundata = cell(1,6);
     for run_nr = 1:6
-      filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_trl_run%02d', subj.name, run_nr));
-      load(filename);
-
+      
       cfg         = [];
       cfg.dataset = subj.megfile{run_nr};
       cfg.trl     = subj.trl{run_nr};
