@@ -79,12 +79,11 @@ Here, we will describe how to calculate time frequency representations using Han
       offset    = -prestim.*ones(numel(begsample),1);
 
       subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
-      clear trl;
     end
 
     rundata = cell(1,6);
     for run_nr = 1:6
-      
+
       cfg         = [];
       cfg.dataset = subj.megfile{run_nr};
       cfg.trl     = subj.trl{run_nr};
