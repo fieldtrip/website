@@ -127,3 +127,9 @@
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 
+- name:  From raw data to ERP
+  link:  /workshop/paris2019/handson_raw2erp
+
+- name:  Localizing sources of neural sources using beamformer techniques
+  link:  /workshop/paris2019/handson_sourceanalysis
+

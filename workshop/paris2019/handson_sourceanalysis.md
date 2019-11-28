@@ -1,6 +1,6 @@
 ---
 title: Localizing sources of neural sources using beamformer techniques
-tags: [tutorial, meg, preprocessing, timelock, beamformer]
+tags: [tutorial, meg, preprocessing, timelock, beamformer, paris2019, mmfaces]
 ---
 
 # Localizing sources of neural activity using beamformer techniques

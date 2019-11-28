@@ -130,3 +130,6 @@
 - name:  Reading in data and performing sensor-level ERF and TFR analyses
   link:  /workshop/oxford2019/sensor_analysis_plusminus
 
+- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
+  link:  /workshop/paris2019/handson_sensoranalysis
+

@@ -85,3 +85,6 @@
 - name:  Forward modeling for EEG source reconstruction
   link:  /workshop/oslo2019/forward_modeling
 
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
+

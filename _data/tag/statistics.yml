@@ -70,3 +70,6 @@
 - name:  Statistical analysis and multiple comparison correction for EEG data
   link:  /workshop/oslo2019/statistics
 
+- name:  Group analysis
+  link:  /workshop/paris2019/handson_groupanalysis
+

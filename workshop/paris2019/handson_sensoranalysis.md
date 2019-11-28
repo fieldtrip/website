@@ -1,6 +1,6 @@
 ---
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
-tags: [tutorial, freq, meg, eeg, plot]
+tags: [tutorial, freq, meg, eeg, plot, paris2019, mmfaces]
 ---
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets
@@ -41,8 +41,6 @@ To calculate the time-frequency analysis for the example dataset we will perform
 _Figure: Schematic overview of the steps in time-frequency analysis_
 
 In this tutorial, procedures of 4 types of time-frequency analysis will be shown. You can see each of them under the titles: Time-frequency analysis I., II. ... and so on. If you are interested in a detailed description about how to visualize the results, look at the Visualization part.
-
-## Preprocessing
 
 The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.6 s to 1.3 s (t = 0 s defines the time of stimulus); however, for reasons that will become clear later, the script reads the data from -0.8 s to 1.5 s.
 

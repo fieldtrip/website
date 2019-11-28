@@ -87,7 +87,7 @@ Making schematic figures in SVG is easy in Microsoft Word or Microsoft Powerpoin
 
 If you make schematic figures yourself we suggest the default Office 2007 color scheme. The lighter (pastel) colors are made by making the images 50% transparent (_right-button_ click on figure, then change transparency under _format shape_), or by using the RGB values in the boxes below. Also, we suggest using the Calibri or Arial font in figures. Here you can find an example of the colors.
 
-{% include image src="/assets/img/development/guideline/documentation/fieltrip_palette.png" %}
+{% include image src="/assets/img/development/guideline/documentation/fieldtrip_palette.png" %}
 
 ## Suggested further reading
 

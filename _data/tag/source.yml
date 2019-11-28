@@ -154,3 +154,6 @@
 - name:  Beamforming oscillatory responses in MEG data
   link:  /workshop/oslo2019/beamforming
 
+- name:  Creation of headmodels and sourcemodels for source reconstruction
+  link:  /workshop/paris2019/handson_anatomy
+
