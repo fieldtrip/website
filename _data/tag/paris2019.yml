@@ -1,6 +1,9 @@
 - name:  Practical MEEG workshop at ICM in Paris
   link:  /workshop/paris2019
 
+- name:  Face recognition dataset
+  link:  /workshop/paris2019/dataset
+
 - name:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/paris2019/handson_anatomy
 

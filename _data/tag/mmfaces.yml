@@ -16,6 +16,9 @@
 - name:  FieldTrip stats demo
   link:  /workshop/meg-uk-2015/fieldtrip-stats-demo
 
+- name:  Face recognition dataset
+  link:  /workshop/paris2019/dataset
+
 - name:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/paris2019/handson_anatomy
 
