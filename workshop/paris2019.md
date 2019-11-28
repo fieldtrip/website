@@ -79,6 +79,8 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 ## Tutorial preparation
 
+For the actual course, we will bring the required data and FieldTrip software on a set of flash drives, to ensure that everybody will be up-and-running relatively quickly. If you are doing these tutorials outside the course you should read on to get information about the FieldTrip software requirements, and where you can get the data.
+
 ### Ensure that you have a recent version of FieldTrip on your computer
 
 {% include markup/info %}
@@ -110,3 +112,5 @@ Once FieldTrip is on your computer, the toolbox needs to be added to the matlab 
 - Confirm that FT has been successfully added to your path, for example by typing 'which ft_preprocessing' in Matlab; the correct path should be displayed.
 
 ### Get the example data that is used throughout this set of tutorials
+
+The full dataset can be obtained at [https://openneuro.org/datasets/ds000117/versions/1.0.3], and has a size of about 460 GB. The subset of the data that is needed for this collection of tutorials can be also obtained from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/paris2019/>.

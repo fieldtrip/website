@@ -50,7 +50,9 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 Here, we will describe how to calculate time frequency representations using Hanning tapers. When choosing for a fixed window length procedure the frequency resolution is defined according to the length of the time window (delta T). The frequency resolution (delta f in figure 1) = 1/length of time window in sec (delta T in figure 1). Thus, a 400 ms time window results in a 2.5 Hz frequency resolution (1/0.4 sec= 2.5 Hz) meaning that power can be calculated for freqiemcu bins centered at 2.5 Hz, 5 Hz, 7.5 Hz etc. An integer number of cycles must fit in the time window.
 
-**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)** tutorial, with a few important modifications. As mentioned, the epoch length is increased, in order to account for boundary effects. Moreover, we will not apply a bandpassfilter to the data (why not?) and only read in the MEG data for now.
+**[Ft_freqanalysis](/reference/ft_freqanalysis)** requires a 'raw' data structure, which is the output of **[ft_preprocessing](/reference/ft_preprocessing)**. In the following code section, we duplicate the preprocessing part of the **[raw2erp tutorial](/workshop/paris2019/handson_raw2erp)** tutorial, with a few important modifications. As mentioned, the epoch length is increased, in order to account for boundary effects. Moreover, we will not apply a bandpassfilter to the data (why not?) and only read in the MEG data for now. The execution of the following chunk of code takes some time. The precomputed data are in the derivatives/sensoranalysis/sub-15 folder, and can be loaded from there:
+
+    subj = datainfo_subject(15);
 
     trl = cell(6,1);
     for run_nr = 1:6
@@ -74,21 +76,15 @@ Here, we will describe how to calculate time frequency representations using Han
       endsample = min(round([event.sample]) + poststim, hdr.nSamples);
       offset    = -prestim.*ones(numel(begsample),1);
 
-      trl = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
-
-      filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_trl_run%02d', subj.name, run_nr));
-      save(filename, 'trl');
-      clear trl;
+      subj.trl{run_nr} = [begsample(:) endsample(:) offset(:) trialcode(:) ones(numel(begsample),1).*run_nr];
     end
 
     rundata = cell(1,6);
     for run_nr = 1:6
-      filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_trl_run%02d', subj.name, run_nr));
-      load(filename);
 
       cfg         = [];
       cfg.dataset = subj.megfile{run_nr};
-      cfg.trl     = trl;
+      cfg.trl     = subj.trl{run_nr};
 
       % MEG specific settings
       cfg.channel = 'MEG';
@@ -107,13 +103,7 @@ Here, we will describe how to calculate time frequency representations using Han
     data = ft_appenddata([], rundata{:});
     clear rundata;
 
-    filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_data', subj.name));
-    save(filename, 'data');
-
 Once we have the data in memory, we can compute the time-frequency representation, which we do here for each of the conditions separately:
-
-    filename = fullfile(subj.outputpath, 'sensoranalysis', sprintf('%s_data', subj.name));
-    load(filename, 'data');
 
     cfg        = [];
     cfg.method = 'mtmconvol';

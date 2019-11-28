@@ -15,7 +15,7 @@ You can download the [averaged dataset for each subject](ftp://ftp.fieldtriptool
 
 The tutorial assumes that the preprocessing and timelock-analysis steps are already clear for the reader. If this is not the case, you can read about those steps in other tutorials.
 
-Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from freqanalysis), nor on source-level statistics. However, FieldTrip does have similar statistical options for frequency data: at the sensor-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function, the latter works on data obtained from **[ft_sourceanalysis](/reference/ft_sourceanalysis)**).
+Note that in this tutorial we will not provide detailed information about statistics on channel-level power spectra, time-frequency representations of power (as obtained from ft_freqanalysis), nor on source-level statistics. However, FieldTrip does have similar statistical options for frequency data: at the sensor-level we have the **[ft_freqstatistics](/reference/ft_freqstatistics)** function, and on the source-level (statistics on source reconstructed activity), we have the **[ft_sourcestatistics](/reference/ft_sourcestatistics)** function, the latter works on data obtained from **[ft_sourceanalysis](/reference/ft_sourceanalysis)**).
 
 A more thorough explanation of randomization tests and cluster-based statistics can be found in the
 [Cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock)
@@ -34,7 +34,7 @@ and the [Cluster-based permutation tests on time-frequency data](/tutorial/clust
 
 ## Procedure
 
-To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been preprocessed, the planar gradient and the subject-averages of two conditions have been computed. The gray boxes of Figure 1 show those steps that have been done already. The orange boxes within the gray boxes represent processing steps that are done on all trials that belong to one subject in one condition. These steps are described in the [Trigger-based trial selection](/tutorial/preprocessing) and in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. How to use the **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** and **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function will be described in this tutorial.
+To do parametric or non-parametric statistics on event-related fields in a within-subject design we will use a dataset of 10 subjects that has been preprocessed, the planar gradient and the subject-averages of two conditions have been computed. The gray boxes of Figure 1 show those steps that have been done already. The orange boxes within the gray boxes represent processing steps that are done on all trials that belong to one subject in one condition. These steps are described in the [Trigger-based trial selection](/tutorial/preprocessing) and in the [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging) tutorial. How to use the  **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function will be described in this tutorial.
 
 We will perform the following steps to do a statistical test in FieldTrip:
 
