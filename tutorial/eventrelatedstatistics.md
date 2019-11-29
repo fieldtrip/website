@@ -38,7 +38,7 @@ To do parametric or non-parametric statistics on event-related fields in a withi
 
 We will perform the following steps to do a statistical test in FieldTrip:
 
-- We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. This step is optional for this tutorial, but in general it is of course good practice to have a feel of what is going on in your data before you decide to do a statistical test.
+- We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. Note that in practice you should *not* guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid p-hacking
 - To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
 - We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoplotER)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
 
@@ -265,7 +265,7 @@ FieldTrip also has other methods implemented for performing a multiple compariso
 
 ### Permutation test based on t statistics
 
-Instead of using the analytic t-distribution to calculate the appropriate p-value for your effect, you can use a nonparametric randomisation test to obtain the p-value.
+Instead of using the analytic t-distribution to calculate the appropriate p-value for your effect, you can use a nonparametric randomization test to obtain the p-value.
 
 This is implemented in FieldTrip in the function statistics_montecarlo which is called by **[ft_timelockstatistics](/reference/ft_timelockstatistics)** when you set cfg.method = 'montecarlo'. A Monte-Carlo estimate of the significance probabilities and/or critical values is calculated based on randomising or permuting your data many times between the conditions.
 
