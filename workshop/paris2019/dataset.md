@@ -1,6 +1,6 @@
 ---
-title: Face recognition dataset
-tags: [paris2019]
+title: Multimodal faces dataset
+tags: [paris2019, mmfaces]
 ---
 
 ## Multimodal faces dataset

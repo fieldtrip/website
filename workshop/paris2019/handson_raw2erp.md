@@ -1,6 +1,6 @@
 ---
 title: From raw data to ERP
-tags: [tutorial, meg, timelock, preprocessing, paris2019, mmfaces]
+tags: [meg, timelock, preprocessing, paris2019, mmfaces]
 ---
 
 # From raw data to ERP
@@ -161,7 +161,7 @@ Each type of channel can be visualised with its corresponding layout. For the vi
     % visualise the magnetometer data
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
-    figure;ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
+    figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
 
     % combine planar gradients and visualise the gradiometer data
     cfg              = [];
@@ -172,7 +172,7 @@ Each type of channel can be visualised with its corresponding layout. For the vi
 
     cfg        = [];
     cfg.layout = 'neuromag306cmb_helmet.mat';
-    figure;ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
+    figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
 
     % create an EEG channel layout on-the-fly and visualise the eeg data
     cfg      = [];
@@ -181,7 +181,7 @@ Each type of channel can be visualised with its corresponding layout. For the vi
 
     cfg        = [];
     cfg.layout = layout_eeg;
-    figure;ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
+    figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
 
 Alternatively, the data of different channel types can be visualised within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts. Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g. expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
 
@@ -220,4 +220,4 @@ Alternatively, the data of different channel types can be visualised within a si
     cfg.magscale  = 0.25e14;
     cfg.gradscale = 1e12;
     cfg.eegscale  = 1e6;
-    figure;ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
+    figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);

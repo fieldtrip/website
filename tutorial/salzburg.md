@@ -313,7 +313,7 @@ We will start with loading a precomputed headmodel [here](ftp://ftp.fieldtriptoo
     template_grid.inside = tmp;
 
     % plot the atlas based grid
-    figure;ft_plot_mesh(template_grid.pos(template_grid.inside,:));
+    figure; ft_plot_mesh(template_grid.pos(template_grid.inside,:));
 
 {% include image src="/assets/img/tutorial/salzburg/atlasbasedtemplategrid.png" %}
 

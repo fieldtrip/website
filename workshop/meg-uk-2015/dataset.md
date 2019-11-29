@@ -1,6 +1,6 @@
 ---
-title: Face recognition dataset
-tags: [meg-uk-2015]
+title: Multimodal faces dataset
+tags: [meg-uk-2015, mmfaces]
 ---
 
 ## Multimodal faces dataset

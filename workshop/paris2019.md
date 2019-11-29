@@ -5,7 +5,7 @@ tags: [paris2019]
 
 # Practical MEEG workshop at ICM in Paris
 
-PracticalMEEG aims at providing an intensive several–days training to MEG and EEG analysts. It will provide its attendees with the ability to create a full analysis pipeline with exemplar (or their own) data in one or several of three leading software dedicated to MEG and EEG analysis (Brainstorm, FieldTrip and MNE-python). More details can be found on <http://practicalmeeg2019.org>.
+PracticalMEEG aims at providing an intensive several–days training to MEG and EEG analysts. It will provide its attendees with the ability to create a full analysis pipeline with exemplar (or their own) data in one or several of three leading software dedicated to MEG and EEG analysis (Brainstorm, FieldTrip and MNE-python). More details can be found [here](http://practicalmeeg2019.org).
 
 ## Where
 
@@ -26,9 +26,9 @@ Robert Oostenveld and Jan-Mathijs Schoffelen will come from the Donders to lectu
 
 # Program and training material
 
-Please visit the <http://practicalmeeg2019.org>. website for more information.
+Please visit the <http://practicalmeeg2019.org> website for more information.
 
-All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dataset).
+All hands on sessions will be using the same [dataset](/workshop/paris2019/dataset).
 
 ## Schedule
 
@@ -79,7 +79,7 @@ All hands on sessions will be using the same [dataset](/workshop/meg-uk-2015/dat
 
 ## Tutorial preparation
 
-For the actual course, we will bring the required data and FieldTrip software on a set of flash drives, to ensure that everybody will be up-and-running relatively quickly. If you are doing these tutorials outside the course you should read on to get information about the FieldTrip software requirements, and where you can get the data.
+For the actual course, we will bring the required data and FieldTrip software on a set of USB flash drives, to ensure that everybody will be up-and-running relatively quickly. If you are doing these tutorials outside the course, you should read on to get information about the FieldTrip software requirements and where you can get the data.
 
 ### Ensure that you have a recent version of FieldTrip on your computer
 
@@ -96,7 +96,8 @@ To quickly get access to the code, you would do the following from the command l
 git clone https://github.com/fieldtrip/fieldtrip.git
 ```
 
-This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on GitHub, fork `fieldtrip/fieldtrip` to your own account and read the abovementioned page.
+This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on GitHub, fork `fieldtrip/fieldtrip` to your own account and read the aforementioned page.
+
 {% include markup/end %}
 
 Once FieldTrip is on your computer, the toolbox needs to be added to the matlab path. To achieve this, do the following:
@@ -104,13 +105,13 @@ Once FieldTrip is on your computer, the toolbox needs to be added to the matlab 
 - Change directory to the location of the FieldTrip package. Note the subfolders present.
 - Add the FieldTrip folder to the path
 
-    addpath(<the name of the fieldtrip folder>);
+    addpath('path_to_fieldtrip')
 
-(Note: **do not** add the folder recursively; i.e. do not use addpath(genpath()))
+Note: **do not** add the folder recursively; i.e. do not use addpath(genpath('path_to_fieldtrip')).
 
 - Run 'ft_defaults' in MATLAB.
 - Confirm that FT has been successfully added to your path, for example by typing 'which ft_preprocessing' in Matlab; the correct path should be displayed.
 
 ### Get the example data that is used throughout this set of tutorials
 
-The full dataset can be obtained at [https://openneuro.org/datasets/ds000117/versions/1.0.3], and has a size of about 460 GB. The subset of the data that is needed for this collection of tutorials can be also obtained from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/paris2019/>.
+The full dataset can be obtained at [https://openneuro.org/datasets/ds000117/versions/1.0.3], and has a size of about 460 GB. The subset of the data that is needed for this collection of tutorials - and the results of running these tutorials - can be downloaded from <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/paris2019/>. The results are located in the `derivatives` folder.

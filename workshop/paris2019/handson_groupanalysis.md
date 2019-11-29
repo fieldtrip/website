@@ -1,9 +1,13 @@
 ---
 title: Group analysis
-tags: [tutorial, meg, timelock, statistics, plot, paris2019, mmfaces]
+tags: [meg, timelock, statistics, plot, paris2019, mmfaces]
 ---
 
 # Group-level statistics with parametric and non-parametric methods
+
+{% include markup/info %}
+This tutorial was written specifically for the practicalMEEG workshop in Paris in December 2019, and is an adjusted version of the [Event-related statistics tutorial](/tutorial/eventrelatedstatistics).
+{% include markup/end %}
 
 ## Introduction
 
@@ -470,7 +474,3 @@ Although the distribution of the p-values can be informative to learn something 
 {% include markup/warning %}
 If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}
-
-## Summary and suggested further reading
-
-This tutorial demonstrated how to perform parametric and non-parametric statistics in FieldTrip, as well as the the equivalent t-test and Bonferroni correction with MATLAB functions. Furthermore, it demonstrated how to visualize the virtual channels and parcels that have a differential activity between conditions.
