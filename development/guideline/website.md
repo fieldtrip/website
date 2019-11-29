@@ -132,6 +132,10 @@ which results in the following list
 
 Tags are indicated with `tag`, `tag1`, `tag2` etcetera, and multiple tags are logically combined with **and**, not with **or**.
 
+## Line breaks
+
+If you have a short piece of text, such as an address, that you want to appear over multiple lines _without_ converting it into a list, you can add two spaces to the end of each line. This will cause explicit line breaks to be inserted.
+
 ## Images
 
 Since images can only be displayed inline in a Markdown document with the size (width and height) determined by the actual bitmap, we are using a piece of Liquid code to insert resizable images. Whereas in Markdown you would to
@@ -189,7 +193,6 @@ and a Vimeo video like this
 ```
 
 {% endraw %}
-
 
 ## News items
 

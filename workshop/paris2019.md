@@ -9,9 +9,9 @@ PracticalMEEG aims at providing an intensive several–days training to MEG and 
 
 ## Where
 
-[ICM Institute for Brain and Spinal Cord](https://goo.gl/maps/B8vuqTo3tcagXFsM8)
-Hôpital Pitié Salpêtrière
-47 Boulevard de l'Hôpital
+[ICM Institute for Brain and Spinal Cord](https://goo.gl/maps/B8vuqTo3tcagXFsM8)  
+Hôpital Pitié Salpêtrière  
+47 Boulevard de l'Hôpital  
 75013 Paris, France
 
 ## When
