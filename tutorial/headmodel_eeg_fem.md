@@ -52,7 +52,7 @@ _Figure 2. Pipeline for creating a FEM model_
 
 ## Reading in the anatomical data
 
-Before starting with FieldTrip, it is important that you set up your [matlab path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
+Before starting with FieldTrip, it is important that you set up your [MATLAB path](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path) properly.
 
     cd PATH_TO_FIELDTRIP
     ft_defaults

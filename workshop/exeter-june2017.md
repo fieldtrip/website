@@ -53,7 +53,7 @@ All the code (correct FieldTrip version) and data for the tutorials are already 
 
   addpath('C:/workshop-exeter/fieldtrip');
 
-Note: **do not** add the folder recursively; i.e. do not use addpath(genpath('C:/workshop-exeter/fieldtrip')).
+Note: **do not** add the folder recursively, i.e., do not use addpath(genpath('C:/workshop-exeter/fieldtrip')).
 
 - Run 'ft_defaults' in Matlab.
 - Then change directory to the one specifically holding the data for the particular tutorial, e.g. the first is preprocessing_erp.

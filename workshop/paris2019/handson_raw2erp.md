@@ -130,7 +130,7 @@ The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)**
 
 ## Compute condition-specific averages (ERFs/ERPs)
 
-Once the data has been epoched and filtered, we can proceed with computing event-related averages. In Fieldtrip, this can be achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the data.trialinfo field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
+Once the data has been epoched and filtered, we can proceed with computing event-related averages. In FieldTrip, this can be achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the data.trialinfo field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
 
     cfg        = [];
     cfg.trials = find(data.trialinfo(:,1)==1);
