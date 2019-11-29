@@ -76,9 +76,3 @@
 - name:  Group analysis
   link:  /workshop/paris2019/handson_groupanalysis
 
-- name:  From raw data to ERP
-  link:  /workshop/paris2019/handson_raw2erp
-
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/paris2019/handson_sensoranalysis
-
