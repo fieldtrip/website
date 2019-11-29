@@ -25,9 +25,8 @@ To localise the evoked sources for this example dataset we will perform the foll
 - Spatially whiten the data to account for differences in sensor type (magnetometers versus gradiometers) with **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)**
 - Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 - Construct the leadfield matrix using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**, in combination with the previously computed head- and sourcemodels + the whitened gradiometer array.
-
 - Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-  - Visualize the results, using **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
+- Visualize the results, using **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
 ## Preprocessing
 
