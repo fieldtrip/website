@@ -223,6 +223,3 @@
 - name:  Time-frequency analysis of EEG data
   link:  /workshop/oslo2019/timefrequency
 
-- name:  Time-frequency analysis using Hanning window, multitapers and wavelets
-  link:  /workshop/paris2019/handson_sensoranalysis
-
