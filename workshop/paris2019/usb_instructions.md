@@ -93,7 +93,19 @@ unzip ds000117-pruned-derivatives-freesurfer-sub-15.zip
 unzip ds000117-pruned-derivatives-freesurfer-sub-16.zip
 ```
 
-Again, subject 15 is required, the others are optional:
+The full data for subject 15 is too large to fit in a single zip file:
+
+```bash
+unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-01.zip
+unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-02.zip
+unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-03.zip
+unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-04.zip
+unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-05.zip
+unzip ds000117-zipped/ds000117-pruned-derivatives-meg_derivatives-sub-15-run-06.zip
+```
+
+
+The others are optional:
 
 ```bash
 unzip ds000117-pruned-derivatives-meg_derivatives-sub-01.zip
