@@ -237,3 +237,13 @@ Alternatively, the data of different channel types can be visualised within a si
     cfg.gradscale = 1e12;
     cfg.eegscale  = 1e6;
     figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
+
+#### Exercise
+
+{% include markup/info %}
+Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
+{% include markup/end %}
+
+{% include image src="/assets/img/workshop/paris2019/raw2erp_topo_appended.png" width="400" %}
+
+_Figure: Topographies of average across selected latency window for one of the conditions._
