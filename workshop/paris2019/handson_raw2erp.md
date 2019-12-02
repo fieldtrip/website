@@ -155,7 +155,7 @@ At this stage, we have a set of spatiotemporal matrices, reflecting the electrop
 
 Each type of channel can be visualised with its corresponding layout. For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
 
-    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock', subj.name));
     load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
 
     % visualise the magnetometer data
