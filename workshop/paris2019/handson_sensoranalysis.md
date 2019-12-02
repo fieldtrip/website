@@ -1,12 +1,12 @@
 ---
 title: Time-frequency analysis using Hanning window, multitapers and wavelets
-tags: [tutorial, freq, meg, eeg, plot, paris2019, mmfaces]
+tags: [meg, freq, paris2019, mmfaces]
 ---
 
 # Time-frequency analysis using Hanning window, multitapers and wavelets
 
 {% include markup/info %}
-This tutorial was written specifically for the practicalMEEG workshop in Paris in December 2019, and is an adjusted version of the [time frequency analysis tutorial](/tutorial/timefrequencyanalysis).
+This tutorial was written specifically for the practicalMEEG workshop in Paris in December 2019, and is an adjusted version of the [time-frequency analysis tutorial](/tutorial/timefrequencyanalysis).
 {% include markup/end %}
 
 ## Introduction
@@ -17,7 +17,7 @@ Here, we will work on the Face recognition [dataset](/workshop/meg-uk-2015/datas
 
 ## Background
 
-Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ([Tallon-Baudry and Bertrand (1999)](https://doi.org/10.1016/S1364-6613(99)01299-1)). The goal of this section is to compute and visualize event related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. The Fourier analysis will include the application of multitapers ([Mitra and Pesaran (1999)](https://doi.org/10.1016/S0006-3495(99)77236-X), [Percival and Walden (1993)](http://lccn.loc.gov/92045862)) which allow a better control of time and frequency smoothing.
+Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ([Tallon-Baudry and Bertrand (1999)](<https://doi.org/10.1016/S1364-6613(99)01299-1>)). The goal of this section is to compute and visualize event related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. The Fourier analysis will include the application of multitapers ([Mitra and Pesaran (1999)](<https://doi.org/10.1016/S0006-3495(99)77236-X>), [Percival and Walden (1993)](http://lccn.loc.gov/92045862)) which allow a better control of time and frequency smoothing.
 
 Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
@@ -123,7 +123,6 @@ Once we have the data in memory, we can compute the time-frequency representatio
     cfg.trials = find(data.trialinfo(:,1)==3);
     freqlow_scrambled = ft_freqanalysis(cfg, data);
 
-
 Regardless of the method used for calculating the TFR, the output format is identical. It is a structure with the following fields:
 
     freqlow_famous =
@@ -218,7 +217,6 @@ Plot the TFR of sensor MEG1921. How do you account for the increased power at ~1
 Visualize the TFR of the gradiometers. Use what you have learnt from the raw2erp tutorial to first combine the horizontal and planar gradient channels into a single estimate.
 {% include markup/end %}
 
-
 ## Time-frequency analysis II.
 
 ### Hanning taper, frequency dependent window length
@@ -279,7 +277,6 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
     cfg.trials       = find(data.trialinfo(:,1)==1);
     TFRhann4         = ft_freqanalysis(cfg, data);
 
-
 5 cycles per time window:
 
     cfg.t_ftimwin = 5./cfg.foi;
@@ -302,7 +299,7 @@ Time-frequency analysis based on multitapers can be performed by the function **
 
 Here, we demonstrate this functionality, by focussing on frequencies > 30 Hz, using a fixed length time window. The cfg settings are largely similar to the fixed time-window Hanning-tapered analysis demonstrated above, but in addition you need to specify the multitaper smoothing parameter, with an optional specification of the type of taper used. Note that by default the cfg.method 'mtmconvol' applies multitapers, unless otherwise specified by the content of cfg.taper. A heuristic for the specification of the 'tapsmofrq' parameter, which in FieldTrip is a number that expresses the half bandwidth of smoothing in Hz., would be to use an integer number of the frequency resolution, determined by the corresponding frequency's specified time window. The relationship bewteen the smoothing parameter (tapsmofrq), the time window length (t_ftimwin) and the number of tapers used, is given by (see [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
 
-  K = 2*t_ftimwin*tapsmofrq-1, where K is required to be larger than 0.
+K = 2*t_ftimwin*tapsmofrq-1, where K is required to be larger than 0.
 
 K is the number of multitapers applied; the more tapers the stronger the smoothing.
 
@@ -355,12 +352,11 @@ Inspect the resulting TFR, using interactive plotting. Note: don't forget to NOT
 
 {% include markup/end %}
 
-
 ## Time-frequency analysis IV.
 
 ### Morlet wavelets
 
-An alternative to calculating TFRs with the multitaper method is to use Morlet wavelets. The approach is equivalent to calculating TFRs with time windows that depend on frequency using a taper with a Gaussian shape. The commands below illustrate how to do this. One crucial parameter to set is cfg.width. It determines the width of the wavelets in number of cycles. Making the value smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width*2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7*2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ([Tallon-Baudry and Bertrand (1999)](https://doi.org/10.1016/S1364-6613(99)01299-1)).
+An alternative to calculating TFRs with the multitaper method is to use Morlet wavelets. The approach is equivalent to calculating TFRs with time windows that depend on frequency using a taper with a Gaussian shape. The commands below illustrate how to do this. One crucial parameter to set is cfg.width. It determines the width of the wavelets in number of cycles. Making the value smaller will increase the temporal resolution at the expense of frequency resolution and vice versa. The spectral bandwidth at a given frequency F is equal to F/width*2 (so, at 30 Hz and a width of 7, the spectral bandwidth is 30/7*2 = 8.6 Hz) while the wavelet duration is equal to width/F/pi (in this case, 7/30/pi = 0.074s = 74ms) ([Tallon-Baudry and Bertrand (1999)](<https://doi.org/10.1016/S1364-6613(99)01299-1>)).
 
 Calculate TFRs using Morlet wavelet
 
@@ -395,21 +391,10 @@ Plot the result
 
 _Figure: Time-frequency representations of power calculated using Morlet wavelets._
 
-#### Exercise 6:
+#### Exercise 6
+
 {% include markup/info %}
- Adjust cfg.width and see how the TFRs change.
+Adjust cfg.width and see how the TFRs change.
 {% include markup/end %}
 
 If you would like to learn more about plotting of time-frequency representations, please see [visualization](#Visualization).
-
-## Summary and suggested further reading
-
-This tutorial showed how to do time-frequency analysis on a single's subject MEG data and how to plot the time-frequency representations. There were 4 methods shown for calculating time-frequency representations and three functions for plotting the results.
-
-After having finished this tutorial on time-frequency analysis, you can continue with the [beamformer source reconstruction](/tutorial/beamformer) tutorial if you are interested in the source-localization of the power changes or the [cluster-based permutation tests on time-frequency data](/tutorial/cluster_permutation_freq) tutorial if you are interested how to do statistics on the time-frequency representations.
-
-Frequently asked question
-{% include seealso tag1="faq" tag2="freq" %}
-
-Example script
-{% include seealso tag1="example" tag2="freq" %}

@@ -19,18 +19,22 @@ This allows you to easily track the changes that we make to the code. If you als
 
 To keep an eye on the changes to the code, you can follow us on [Twitter](http://twitter.com/fieldtriptoolbx).
 
-## Development workflow
+## Summary of the development workflow
 
-We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for our code development. We complement this with code reviews by the core team and quality control using a set of test scripts. The general procedure is as follows
+We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for the development of teh code, and for maintenance of the documentation on gthe website. We complement this with code reviews by the core team and quality control using a set of test scripts. A short summary of the procedure is as follows
 
-1. The contributor/developer makes the suggested changes in a branch, pushes that branch to his/her own fork (on GitHub) and submits a pull request.
-2. The core team reviews the code in the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and should be documented.
-3. The code in the pull request is tested by the core team to ensure that it does not break anything.
-4. After successful reviewing and testing, the core team merges the pull request with the master branch.
+1. The contributor makes a fork of the `fieldtrip/fieldtrip` (or the `fieldtrip/website`) repository to his/her personal GitHub page.
+2. He/she makes a clone of the `personal/fieldtrip` (or the `personal/website`) repository to his/her own computer. It is recommended to set the `fieldtrip/fieldtrip` repository as the upstream remote.
+3. He/she creates a new branch, makes the suggested changes, commits them to that branch, pushes that branch to his/her own fork (on GitHub) and submits a pull request.
+4. The core team reviews the pull request. The suggested change should make sense, fit in the larger strategy, should be consistent with other code, and code should be documented.
+5. The code in the pull request is optionally tested by the core team to ensure that it does not break anything.
+6. After successful reviewing and testing, the core team merges the pull request with the master branch.
+
+In the next section we will explain the technical terms and slang, and will give a more gentle step-by-step introduction.
 
 ## How to contribute with git and github.com
 
-We welcome the contribution of external users, even if the changes consist of a few lines of code. The Git version control system offers a simple and straightforward way to add your contribution to the FieldTrip toolbox.
+We welcome the contributions of all external users, even if the changes are small, consist and/or only of a few lines of code, or fix a typo on the website. The Git version control system offers a simple and straightforward way to contribute to FieldTrip and to make your contribution recognized!
 
 ### What is git?
 
@@ -43,7 +47,7 @@ There are lots of resources available on the internet to learn more about Git. T
 Git usually lives on two levels:
 
 1. on your local computer
-2. on a remote server
+2. on a remote server, for example [github.com](https://github.com), [gitlab.com](https://gitlab.com) or [bitbucket.com](https://bitbucket.com)
 
 #### push, pull, clone
 
@@ -51,7 +55,7 @@ Both your local computer and the remote server contain a full copy of the whole 
 
 #### commit
 
-Your local repository is a complete repository of the whole source code. As such, you can modify some files (or even adding some files) and then include these changes in the local repository. This procedure is called a [commit](http://git-scm.com/docs/git-commit). The changes that are committed to your local repository are called **commits**.
+Your local repository is a complete repository of the whole source code. As such, you can modify some files (or add some files) and then include these changes in the local repository. This procedure is called a [commit](http://git-scm.com/docs/git-commit). The changes that are committed to your local repository are called **commits**.
 
 #### branch, merge
 
@@ -86,11 +90,11 @@ you will switch from a side branch into the main branch of your repository.
 
 ### What is GitHub?
 
-[github.com](https://github.com) is a popular website for sharing code and collaborating. It has a clean and intuitive website interface. Many large projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip).
+[github.com](https://github.com) is a popular website for sharing code and for collaborating. It has a clean and intuitive website interface. Many large projects are hosted there, including [FieldTrip](https://github.com/fieldtrip/fieldtrip).
 
 ### How to add a feature or fix a bug
 
-You only have read permission for the [FieldTrip repo](https://github.com/fieldtrip/fieldtrip), meaning that you cannot directly change the code of the FieldTrip repository. What you can do, and you will see how to do it here, is:
+You only have read permission for the [FieldTrip repo](https://github.com/fieldtrip/fieldtrip), this means that you cannot directly change the code of the FieldTrip repository. What you can do, as demonstrated below, is:
 
 1. Copy the FieldTrip repository under your private account on github.com (this is called **forking**).
 2. This new personal repository will become your **remote repository**. You will need **clone** the remote repository onto your local machine.
@@ -147,11 +151,11 @@ and it'll tell you:
 Switched to a new branch 'welcome'
 ```
 
-If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch _bugXXXX_ where XXXX is the number of the bug. If you have filed an issue on GitHub, you could name your new branch _issueXXXX_ with the number. This helps linking the code suggestions to the discussion on the issue.
+If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch _bugXXXX_ where XXXX is the number of the bug. If you have filed an issue on GitHub, you could name your new branch _issueXXXX_ with the number. This helps linking your code suggestions to the discussion on that specific bug or issue.
 
 ### 4. Add and edit files
 
-Now we need to create a function that says _Welcome to FieldTrip_. Let's call it _ft_welcome.m_, just as you'd create any new MATLAB function.
+Now we will create a function that displays _Welcome to FieldTrip_ on screen. Let's call it _ft_welcome.m_, just as you'd create any new MATLAB function.
 
 {% include markup/warning %}
 When you create a new function or edit an existing one, follow the [code guidelines](/development/guideline/code) for consistent and readable code.
@@ -227,7 +231,7 @@ Follow these [guidelines](/development/guideline/code#svn_log_messages) when wri
 
 #### Switch to master
 
-While you are working on the developmental branch called _welcome_, you might want to run some analysis on the main branch (called by default _master_). You can easily switch into the main branch with:
+While you are working on the developmental branch called _welcome_, you might want to run some analysis on the main branch (called by default _master_). You can easily switch to the main branch with:
 
 ```bash
 git checkout master
@@ -249,7 +253,7 @@ Switching between branches is really fast, so do not be afraid of doing it when 
 
 ### 6. Push the commits
 
-We modified our local repository but the remote repository has not changed. We need to push our commits to the personal remote repository (fork). By default, the remote repository is called **origin**. You can rename it. If you want more information about remote repository, just typ
+We modified our local repository, but the remote repository has not changed. We need to push our commits to our personal remote repository (i.e. our fork). By default, the remote repository is called **origin**. You can rename it. If you want more information about remote repository, just typ
 
 ```bash
 git remote -v
@@ -281,7 +285,7 @@ Do **not** click on **Send Pull Request** when finishing this tutorial.
 
 ### 8. Clean up
 
-When you are done, you can delete the branch _welcome_ on the local and remote repository. To delete the branch on your local and remote repository, you can use:
+When you are done and your suggestion has been merged, you can delete the branch _welcome_ on the local and remote repository. To delete the branch on your local and remote repository, you can use:
 
 ```bash
 git branch -D welcome
@@ -290,7 +294,7 @@ git push origin :welcome
 
 ### 9. Keeping up to date
 
-Your suggested contributions to FieldTrip will not be the only changes: the code on the master branch is constantly being updated. This means that you should regularly synchronize to benefit from these updates and to ensure that you won't be making changes to an outdated copy of the code.
+Your suggested contributions to FieldTrip will not be the only changes; the code on the master branch is constantly being updated by other developers/contributors as well. This means that you should regularly synchronize to benefit from these updates, and to ensure that you won't be making changes to an outdated version of the code.
 
 {% include markup/warning %}
 It is important to first pull the changes from others before you start implementing your own changes, otherwise your (new) changes might conflict with already accepted changes to the code.

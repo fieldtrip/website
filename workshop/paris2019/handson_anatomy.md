@@ -1,12 +1,12 @@
 ---
 title: Creation of headmodels and sourcemodels for source reconstruction
-tags: [tutorial, meg, headmodel, sourcemodel, sourceanalysis, paris2019, mmfaces]
+tags: [meg, headmodel, sourcemodel, sourceanalysis, paris2019, mmfaces]
 ---
 
 # Creation of headmodels and sourcemodels for source reconstruction
 
 {% include markup/info %}
-This tutorial was written specifically for the practicalMEEG workshop in Paris in December 2019, and is an adjusted version of the [headmodel for MEG tutorial](/tutorial/headmodel_meg).
+This tutorial was written specifically for the practicalMEEG workshop in Paris in December 2019, and is an adjusted version of the [MEG headmodel tutorial](/tutorial/headmodel_meg).
 {% include markup/end %}
 
 ## Introduction
@@ -17,7 +17,7 @@ We will use the anatomical images that belong to the same subject whose data wer
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials, or to the [].
 
 {% include markup/success %}
-The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG tutorial](/tutorial/headmodel_eeg).
+The volume conduction model created here is MEG specific and **cannot be used** for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/headmodel_eeg).
 {% include markup/end %}
 
 ## Background
@@ -128,7 +128,7 @@ _Figure: The headmodel visualised on top of the volulmetric anatomical image_
 
 ## Creation of a cortex based source model
 
-To creation of a state-of-the-art sourcemodel that is based on an accurate individual cortical segmentation is described in a **[dedicated tutorial](/tutorial/sourcemodel)**. Source reconstruction algorithms that assume distributed sources (for instance Minimum Norm Estimates MNEs) require these cortical models, whereas for beamformers are not absolutely necessary. The generation of cortically constrained sourcemodels, defined on a triangulated surface mesh can be rather time consuming, so we are not going to do that here. Instead, the sourcemodels have already been computed, according to a slightly modified version of the recipe described in the abovementioned tutorial. Below, the code is referenced that was used to generate the sourcemodels. It serves as an illustrative example, because it was executed on the Donders Institute's compute cluster, which uses a specific way to execute computational jobs (qsub). The overall idea would be however to tweak a set of shell scripts (**ft_freesurferscript.sh** and **ft_postfreesurferscript.sh**), which are located in **fieldtrip/bin**, and execute those on your own computer. This requires a Linux or MatOS environment, with installed freesurfer and workbench)
+To creation of a state-of-the-art sourcemodel that is based on an accurate individual cortical segmentation is described in a **[dedicated tutorial](/tutorial/sourcemodel)**. Source reconstruction algorithms that assume distributed sources (for instance Minimum Norm Estimates MNEs) require these cortical models, whereas for beamformers are not absolutely necessary. The generation of cortically constrained sourcemodels, defined on a triangulated surface mesh can be rather time consuming, so we are not going to do that here. Instead, the sourcemodels have already been computed, according to a slightly modified version of the recipe described in the aforementioned tutorial. Below, the code is referenced that was used to generate the sourcemodels. It serves as an illustrative example, because it was executed on the Donders Institute's compute cluster, which uses a specific way to execute computational jobs (qsub). The overall idea would be however to tweak a set of shell scripts (**ft_freesurferscript.sh** and **ft_postfreesurferscript.sh**), which are located in **fieldtrip/bin**, and execute those on your own computer. This requires a Linux or MatOS environment, with installed freesurfer and workbench)
 In contrast to the **[referenced tutorial](/tutorial/sourcemodel)**, the input MRI image that serves as the starting point for the freesurfer pipeline is the image coregistered to the MEG coordinate system. This coordinate system is sufficently similar to the conventional coordinate system expected by freesurfer, so that the overall (post)freesurfer pipeline runs through fine. If, by contrast, the MEG coordinate system is according to the CTF system's convention, an intermediate (temporary) coregistration is required.
 
     % this part creates a freesurfer output base directory and fills it with
@@ -164,25 +164,17 @@ The result of the **ft_freesurferscript.sh** is a 'standard' set of freesurfer g
 on the MATLAB command line, you see something like this:
 
     >> ls
-    lh.area			lh.pial			lh.volume		rh.inflated.H		rh.smoothwm.S.crv
-    lh.area.mid		lh.qsphere.nofix	lh.w-g.pct.mgh		rh.inflated.K		rh.smoothwm.nofix
-    lh.area.pial		lh.smoothwm		lh.white		rh.inflated.nofix	rh.sphere
-    lh.avg_curv		lh.smoothwm.BE.crv	lh.white.preaparc	rh.jacobian_white	rh.sphere.reg
-    lh.curv			lh.smoothwm.C.crv	lh.white.preaparc.H	rh.orig			rh.sulc
-    lh.curv.pial		lh.smoothwm.FI.crv	lh.white.preaparc.K	rh.orig.nofix		rh.thickness
-    lh.defect_borders	lh.smoothwm.H.crv	rh.area			rh.pial			rh.volume
-    lh.defect_chull		lh.smoothwm.K.crv	rh.area.mid		rh.qsphere.nofix	rh.w-g.pct.mgh
-    lh.defect_labels	lh.smoothwm.K1.crv	rh.area.pial		rh.smoothwm		rh.white
-    lh.inflated		lh.smoothwm.K2.crv	rh.avg_curv		rh.smoothwm.BE.crv	rh.white.preaparc
-    lh.inflated.H		lh.smoothwm.S.crv	rh.curv			rh.smoothwm.C.crv	rh.white.preaparc.H
-    lh.inflated.K		lh.smoothwm.nofix	rh.curv.pial		rh.smoothwm.FI.crv	rh.white.preaparc.K
-    lh.inflated.nofix	lh.sphere		rh.defect_borders	rh.smoothwm.H.crv
-    lh.jacobian_white	lh.sphere.reg		rh.defect_chull		rh.smoothwm.K.crv
-    lh.orig			lh.sulc			rh.defect_labels	rh.smoothwm.K1.crv
-    lh.orig.nofix		lh.thickness		rh.inflated		rh.smoothwm.K2.crv
+    lh.area            lh.inflated         lh.smoothwm         lh.smoothwm.nofix  lh.white.preaparc.H  rh.defect_chull    rh.pial             rh.smoothwm.K2.crv  rh.white
+    lh.area.mid        lh.inflated.H       lh.smoothwm.BE.crv  lh.sphere          lh.white.preaparc.K  rh.defect_labels   rh.qsphere.nofix    rh.smoothwm.S.crv   rh.white.preaparc
+    lh.area.pial       lh.inflated.K       lh.smoothwm.C.crv   lh.sphere.reg      rh.area              rh.inflated        rh.smoothwm         rh.smoothwm.nofix   rh.white.preaparc.H
+    lh.avg_curv        lh.inflated.nofix   lh.smoothwm.FI.crv  lh.sulc            rh.area.mid          rh.inflated.H      rh.smoothwm.BE.crv  rh.sphere           rh.white.preaparc.K
+    lh.curv            lh.jacobian_white   lh.smoothwm.H.crv   lh.thickness       rh.area.pial         rh.inflated.K      rh.smoothwm.C.crv   rh.sphere.reg
+    lh.curv.pial       lh.orig             lh.smoothwm.K.crv   lh.volume          rh.avg_curv          rh.inflated.nofix  rh.smoothwm.FI.crv  rh.sulc
+    lh.defect_borders  lh.orig.nofix       lh.smoothwm.K1.crv  lh.w-g.pct.mgh     rh.curv              rh.jacobian_white  rh.smoothwm.H.crv   rh.thickness
+    lh.defect_chull    lh.pial             lh.smoothwm.K2.crv  lh.white           rh.curv.pial         rh.orig            rh.smoothwm.K.crv   rh.volume
+    lh.defect_labels   lh.qsphere.nofix    lh.smoothwm.S.crv   lh.white.preaparc  rh.defect_borders    rh.orig.nofix      rh.smoothwm.K1.crv  rh.w-g.pct.mgh
 
-
-That is, a bunch of files, which exist in an 'rh', and 'lh' version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in fieldtrip, and visualise them in the following way:
+That is, a bunch of files, which exist in an 'rh', and 'lh' version. Each of the cortical hemispheres is represented in a separate file. We can load these surface based representations in FieldTrip, and visualise them in the following way:
 
     pial = ft_read_headshape({'lh.pial' 'rh.pial'});
     figure;
@@ -190,14 +182,13 @@ That is, a bunch of files, which exist in an 'rh', and 'lh' version. Each of the
     h1 = light('position',[-1 0 0]);
     h2 = light('position',[1 0 0]);
     material dull
-    lighting gouraud;set(gcf,'color','w');  
+    lighting gouraud; set(gcf,'color','w');
 
 {% include image src="/assets/img/workshop/paris2019/surf_native.png" width="400" %}
 
 _Figure: The pial surface extracted by freesurfer_
 
-
-Inspecing the variable 'pial', you will see something like this:
+Inspecting the variable 'pial', you will see something like this:
 
     >> pial
 
@@ -219,25 +210,45 @@ For the purpose of MEG-based source reconstruction, the freesurfer based surface
 The software needed for this step is [connectome workbench](https://www.humanconnectome.org/software/connectome-workbench). The output of this step is stored here in the freesurfer/workbench directory. Checking the content of such a workbench folder, you see something like this:
 
     >> ls
-    fsaverage						sub-15.L.white.8k_fs_LR.surf.gii
-    sub-15.164k_fs_LR.wb.spec				sub-15.L.white.native.surf.gii
-    sub-15.32k_fs_LR.wb.spec				sub-15.R.ArealDistortion_FS.164k_fs_LR.shape.gii
-    sub-15.4k_fs_LR.wb.spec					sub-15.R.ArealDistortion_FS.32k_fs_LR.shape.gii
-    sub-15.8k_fs_LR.wb.spec					sub-15.R.ArealDistortion_FS.4k_fs_LR.shape.gii
-    sub-15.L.ArealDistortion_FS.164k_fs_LR.shape.gii	sub-15.R.ArealDistortion_FS.8k_fs_LR.shape.gii
-    sub-15.L.ArealDistortion_FS.32k_fs_LR.shape.gii		sub-15.R.ArealDistortion_FS.native.shape.gii
-    sub-15.L.ArealDistortion_FS.4k_fs_LR.shape.gii		sub-15.R.aparc.164k_fs_LR.label.gii
-    sub-15.L.ArealDistortion_FS.8k_fs_LR.shape.gii		sub-15.R.aparc.32k_fs_LR.label.gii
-    sub-15.L.ArealDistortion_FS.native.shape.gii		sub-15.R.aparc.4k_fs_LR.label.gii
-    sub-15.L.aparc.164k_fs_LR.label.gii			sub-15.R.aparc.8k_fs_LR.label.gii
-    sub-15.L.aparc.32k_fs_LR.label.gii			sub-15.R.aparc.a2009s.164k_fs_LR.label.gii
-    sub-15.L.aparc.4k_fs_LR.label.gii			sub-15.R.aparc.a2009s.32k_fs_LR.label.gii
-    sub-15.L.aparc.8k_fs_LR.label.gii			sub-15.R.aparc.a2009s.4k_fs_LR.label.gii
-    sub-15.L.aparc.a2009s.164k_fs_LR.label.gii		sub-15.R.aparc.a2009s.8k_fs_LR.label.gii
-    sub-15.L.aparc.a2009s.32k_fs_LR.label.gii		sub-15.R.aparc.a2009s.native.label.gii
-    sub-15.L.aparc.a2009s.4k_fs_LR.label.gii		sub-15.R.aparc.native.label.gii
+    fsaverage                                          sub-15.L.midthickness.164k_fs_LR.surf.gii    sub-15.L.white.8k_fs_LR.surf.gii                  sub-15.R.midthickness.8k_fs_LR.surf.gii
+    sub-15.164k_fs_LR.wb.spec                          sub-15.L.midthickness.32k_fs_LR.surf.gii     sub-15.L.white.native.surf.gii                    sub-15.R.midthickness.native.surf.gii
+    sub-15.32k_fs_LR.wb.spec                           sub-15.L.midthickness.4k_fs_LR.surf.gii      sub-15.R.ArealDistortion_FS.164k_fs_LR.shape.gii  sub-15.R.pial.164k_fs_LR.surf.gii
+    sub-15.4k_fs_LR.wb.spec                            sub-15.L.midthickness.8k_fs_LR.surf.gii      sub-15.R.ArealDistortion_FS.32k_fs_LR.shape.gii   sub-15.R.pial.32k_fs_LR.surf.gii
+    sub-15.8k_fs_LR.wb.spec                            sub-15.L.midthickness.native.surf.gii        sub-15.R.ArealDistortion_FS.4k_fs_LR.shape.gii    sub-15.R.pial.4k_fs_LR.surf.gii
+    sub-15.L.ArealDistortion_FS.164k_fs_LR.shape.gii   sub-15.L.pial.164k_fs_LR.surf.gii            sub-15.R.ArealDistortion_FS.8k_fs_LR.shape.gii    sub-15.R.pial.8k_fs_LR.surf.gii
+    sub-15.L.ArealDistortion_FS.32k_fs_LR.shape.gii    sub-15.L.pial.32k_fs_LR.surf.gii             sub-15.R.ArealDistortion_FS.native.shape.gii      sub-15.R.pial.native.surf.gii
+    sub-15.L.ArealDistortion_FS.4k_fs_LR.shape.gii     sub-15.L.pial.4k_fs_LR.surf.gii              sub-15.R.aparc.164k_fs_LR.label.gii               sub-15.R.refsulc.164k_fs_LR.shape.gii
+    sub-15.L.ArealDistortion_FS.8k_fs_LR.shape.gii     sub-15.L.pial.8k_fs_LR.surf.gii              sub-15.R.aparc.32k_fs_LR.label.gii                sub-15.R.roi.native.shape.gii
+    sub-15.L.ArealDistortion_FS.native.shape.gii       sub-15.L.pial.native.surf.gii                sub-15.R.aparc.4k_fs_LR.label.gii                 sub-15.R.sphere.164k_fs_LR.surf.gii
+    sub-15.L.aparc.164k_fs_LR.label.gii                sub-15.L.refsulc.164k_fs_LR.shape.gii        sub-15.R.aparc.8k_fs_LR.label.gii                 sub-15.R.sphere.32k_fs_LR.surf.gii
+    sub-15.L.aparc.32k_fs_LR.label.gii                 sub-15.L.roi.native.shape.gii                sub-15.R.aparc.a2009s.164k_fs_LR.label.gii        sub-15.R.sphere.4k_fs_LR.surf.gii
+    sub-15.L.aparc.4k_fs_LR.label.gii                  sub-15.L.sphere.164k_fs_LR.surf.gii          sub-15.R.aparc.a2009s.32k_fs_LR.label.gii         sub-15.R.sphere.8k_fs_LR.surf.gii
+    sub-15.L.aparc.8k_fs_LR.label.gii                  sub-15.L.sphere.32k_fs_LR.surf.gii           sub-15.R.aparc.a2009s.4k_fs_LR.label.gii          sub-15.R.sphere.native.surf.gii
+    sub-15.L.aparc.a2009s.164k_fs_LR.label.gii         sub-15.L.sphere.4k_fs_LR.surf.gii            sub-15.R.aparc.a2009s.8k_fs_LR.label.gii          sub-15.R.sphere.reg.native.surf.gii
+    sub-15.L.aparc.a2009s.32k_fs_LR.label.gii          sub-15.L.sphere.8k_fs_LR.surf.gii            sub-15.R.aparc.a2009s.native.label.gii            sub-15.R.sphere.reg.reg_LR.native.surf.gii
+    sub-15.L.aparc.a2009s.4k_fs_LR.label.gii           sub-15.L.sphere.native.surf.gii              sub-15.R.aparc.native.label.gii                   sub-15.R.sulc.164k_fs_LR.shape.gii
+    sub-15.L.aparc.a2009s.8k_fs_LR.label.gii           sub-15.L.sphere.reg.native.surf.gii          sub-15.R.atlasroi.164k_fs_LR.shape.gii            sub-15.R.sulc.32k_fs_LR.shape.gii
+    sub-15.L.aparc.a2009s.native.label.gii             sub-15.L.sphere.reg.reg_LR.native.surf.gii   sub-15.R.atlasroi.32k_fs_LR.shape.gii             sub-15.R.sulc.4k_fs_LR.shape.gii
+    sub-15.L.aparc.native.label.gii                    sub-15.L.sulc.164k_fs_LR.shape.gii           sub-15.R.atlasroi.4k_fs_LR.shape.gii              sub-15.R.sulc.8k_fs_LR.shape.gii
+    sub-15.L.atlasroi.164k_fs_LR.shape.gii             sub-15.L.sulc.32k_fs_LR.shape.gii            sub-15.R.atlasroi.8k_fs_LR.shape.gii              sub-15.R.sulc.native.shape.gii
+    sub-15.L.atlasroi.32k_fs_LR.shape.gii              sub-15.L.sulc.4k_fs_LR.shape.gii             sub-15.R.atlasroi.native.shape.gii                sub-15.R.thickness.164k_fs_LR.shape.gii
+    sub-15.L.atlasroi.4k_fs_LR.shape.gii               sub-15.L.sulc.8k_fs_LR.shape.gii             sub-15.R.curvature.164k_fs_LR.shape.gii           sub-15.R.thickness.32k_fs_LR.shape.gii
+    sub-15.L.atlasroi.8k_fs_LR.shape.gii               sub-15.L.sulc.native.shape.gii               sub-15.R.curvature.32k_fs_LR.shape.gii            sub-15.R.thickness.4k_fs_LR.shape.gii
+    sub-15.L.atlasroi.native.shape.gii                 sub-15.L.thickness.164k_fs_LR.shape.gii      sub-15.R.curvature.4k_fs_LR.shape.gii             sub-15.R.thickness.8k_fs_LR.shape.gii
+    sub-15.L.curvature.164k_fs_LR.shape.gii            sub-15.L.thickness.32k_fs_LR.shape.gii       sub-15.R.curvature.8k_fs_LR.shape.gii             sub-15.R.thickness.native.shape.gii
+    sub-15.L.curvature.32k_fs_LR.shape.gii             sub-15.L.thickness.4k_fs_LR.shape.gii        sub-15.R.curvature.native.shape.gii               sub-15.R.very_inflated.164k_fs_LR.surf.gii
+    sub-15.L.curvature.4k_fs_LR.shape.gii              sub-15.L.thickness.8k_fs_LR.shape.gii        sub-15.R.flat.164k_fs_LR.surf.gii                 sub-15.R.very_inflated.32k_fs_LR.surf.gii
+    sub-15.L.curvature.8k_fs_LR.shape.gii              sub-15.L.thickness.native.shape.gii          sub-15.R.flat.32k_fs_LR.surf.gii                  sub-15.R.very_inflated.4k_fs_LR.surf.gii
+    sub-15.L.curvature.native.shape.gii                sub-15.L.very_inflated.164k_fs_LR.surf.gii   sub-15.R.inflated.164k_fs_LR.surf.gii             sub-15.R.very_inflated.8k_fs_LR.surf.gii
+    sub-15.L.flat.164k_fs_LR.surf.gii                  sub-15.L.very_inflated.32k_fs_LR.surf.gii    sub-15.R.inflated.32k_fs_LR.surf.gii              sub-15.R.very_inflated.native.surf.gii
+    sub-15.L.flat.32k_fs_LR.surf.gii                   sub-15.L.very_inflated.4k_fs_LR.surf.gii     sub-15.R.inflated.4k_fs_LR.surf.gii               sub-15.R.white.164k_fs_LR.surf.gii
+    sub-15.L.inflated.164k_fs_LR.surf.gii              sub-15.L.very_inflated.8k_fs_LR.surf.gii     sub-15.R.inflated.8k_fs_LR.surf.gii               sub-15.R.white.32k_fs_LR.surf.gii
+    sub-15.L.inflated.32k_fs_LR.surf.gii               sub-15.L.very_inflated.native.surf.gii       sub-15.R.inflated.native.surf.gii                 sub-15.R.white.4k_fs_LR.surf.gii
+    sub-15.L.inflated.4k_fs_LR.surf.gii                sub-15.L.white.164k_fs_LR.surf.gii           sub-15.R.midthickness.164k_fs_LR.surf.gii         sub-15.R.white.8k_fs_LR.surf.gii
+    sub-15.L.inflated.8k_fs_LR.surf.gii                sub-15.L.white.32k_fs_LR.surf.gii            sub-15.R.midthickness.32k_fs_LR.surf.gii          sub-15.R.white.native.surf.gii
+    sub-15.L.inflated.native.surf.gii                  sub-15.L.white.4k_fs_LR.surf.gii             sub-15.R.midthickness.4k_fs_LR.surf.gii           sub-15.native.wb.spec
 
-The long story short here is, that the majority of files are gifti-files (with the .gii extension), rather than the legacy fileformat used by freesurfer. Gifti files are versatile files that are used to represent geometric data that are defined as tessellated meshes. Next to a specific naming scheme of the files, connectome workbench uses a specific convention for representing the different types of data. Let's dissect the filenaming in some detail:
+The important thing to note is that the majority of files here are gifti files (with the .gii extension), rather than the legacy fileformat used by freesurfer. Gifti files are versatile files that are used to represent geometric data that are defined as tessellated meshes. Next to a specific naming scheme of the files, connectome workbench uses a specific convention for representing the different types of data. Let's dissect the file naming in some detail:
 
       subjectname.<hemisphere>.<somename>.<number>k_fs_LR.<someothername>.gii
 
@@ -245,30 +256,29 @@ Starting off with <number>, which here is 4, 8, 32, or 164. This refers to the r
 Next to the surf.gii files, there are shape.gii and label.gii files, which contain scalar information about local properties (for instance curvature) or contain parcellation information (i.e. the anatomical parcel to which a given vertex belongs).
 We can have a look at some files in a bit more detail:
 
-    white = ft_read_headshape('sub-15.L.white.8k_fs_LR.surf.gii');
-    midthickness = ft_read_headshape('sub-15.L.midthickness.8k_fs_LR.surf.gii');
-    pial = ft_read_headshape('sub-15.L.pial.8k_fs_LR.surf.gii');
-    inflated = ft_read_headshape('sub-15.L.inflated.8k_fs_LR.surf.gii');
+    white         = ft_read_headshape('sub-15.L.white.8k_fs_LR.surf.gii');
+    midthickness  = ft_read_headshape('sub-15.L.midthickness.8k_fs_LR.surf.gii');
+    pial          = ft_read_headshape('sub-15.L.pial.8k_fs_LR.surf.gii');
+    inflated      = ft_read_headshape('sub-15.L.inflated.8k_fs_LR.surf.gii');
     very_inflated = ft_read_headshape('sub-15.L.very_inflated.8k_fs_LR.surf.gii');
-    sphere = ft_read_headshape('sub-15.L.sphere.8k_fs_LR.surf.gii');
-
+    sphere        = ft_read_headshape('sub-15.L.sphere.8k_fs_LR.surf.gii');
 
     figure;
-    h1=subplot(2,3,1);ft_plot_mesh(white,'vertexcolor',white.thickness);lighting gouraud;material dull;light
-    h2=subplot(2,3,2);ft_plot_mesh(midthickness,'vertexcolor',white.thickness);lighting gouraud;material dull;light
-    h3=subplot(2,3,3);ft_plot_mesh(pial,'vertexcolor',white.thickness);lighting gouraud;material dull;light
-    h4=subplot(2,3,4);ft_plot_mesh(inflated,'vertexcolor',white.thickness);lighting gouraud;material dull;light
-    h5=subplot(2,3,5);ft_plot_mesh(very_inflated,'vertexcolor',white.thickness);lighting gouraud;material dull;light
-    h6=subplot(2,3,6);ft_plot_mesh(sphere,'vertexcolor',white.thickness);lighting gouraud;material dull;light
+    h1=subplot(2,3,1); ft_plot_mesh(white,'vertexcolor',white.thickness); lighting gouraud; material dull;light
+    h2=subplot(2,3,2); ft_plot_mesh(midthickness,'vertexcolor',white.thickness); lighting gouraud; material dull;light
+    h3=subplot(2,3,3); ft_plot_mesh(pial,'vertexcolor',white.thickness); lighting gouraud; material dull;light
+    h4=subplot(2,3,4); ft_plot_mesh(inflated,'vertexcolor',white.thickness); lighting gouraud; material dull;light
+    h5=subplot(2,3,5); ft_plot_mesh(very_inflated,'vertexcolor',white.thickness); lighting gouraud; material dull;light
+    h6=subplot(2,3,6); ft_plot_mesh(sphere,'vertexcolor',white.thickness); lighting gouraud; material dull;light
     linkprop([h1 h2 h3 h4 h5 h6],'cameraposition');
 
-The line with 'linkprop' allows for simultaneous rotation of all objects, when switching on the rotate3d option in the figure.
+The line with **[linkprop](https://nl.mathworks.com/help/matlab/ref/linkprop.html)** allows for simultaneous rotation of all objects, when switching on the rotate3d option in the figure.
 
 {% include image src="/assets/img/workshop/paris2019/surf_wb.png" width="600" %}
 
 _Figure: The different surfaces generated by connectome workbench_
 
-For later reference, we can now create a sourcemodel in MATLAB's .mat format, to be easily used when performing source reconstruction later on.  
+For later reference, we can now create a sourcemodel in MATLAB's .mat format, to be easily used when performing source reconstruction later on.
 
     wb_dir = fullfile(subj.outputpath, 'anatomy', subj.name, 'freesurfer', subj.name, 'workbench');
     filename = fullfile(wb_dir, sprintf('%s.L.midthickness.8k_fs_LR.surf.gii', subj.name));

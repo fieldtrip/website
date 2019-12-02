@@ -1,6 +1,9 @@
 - name:  Practical MEEG workshop at ICM in Paris
   link:  /workshop/paris2019
 
+- name:  Multimodal faces dataset
+  link:  /workshop/paris2019/dataset
+
 - name:  Creation of headmodels and sourcemodels for source reconstruction
   link:  /workshop/paris2019/handson_anatomy
 
@@ -15,4 +18,7 @@
 
 - name:  Localizing sources of neural sources using beamformer techniques
   link:  /workshop/paris2019/handson_sourceanalysis
+
+- name:  Instructions for the USB stick
+  link:  /workshop/paris2019/usb_instructions
 

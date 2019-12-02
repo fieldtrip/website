@@ -1,6 +1,6 @@
 ---
 title: Localizing sources of neural sources using beamformer techniques
-tags: [tutorial, meg, preprocessing, timelock, beamformer, paris2019, mmfaces]
+tags: [meg, sourceanalysis, beamformer, paris2019, mmfaces]
 ---
 
 # Localizing sources of neural activity using beamformer techniques
@@ -25,9 +25,8 @@ To localise the evoked sources for this example dataset we will perform the foll
 - Spatially whiten the data to account for differences in sensor type (magnetometers versus gradiometers) with **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)**
 - Compute the covariance matrix using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 - Construct the leadfield matrix using **[ft_prepare_leadfield](/reference/ft_prepare_leadfield)**, in combination with the previously computed head- and sourcemodels + the whitened gradiometer array.
-
 - Compute a spatial filter and estimate the amplitude of the sources using **[ft_sourceanalysis](/reference/ft_sourceanalysis)**
-  - Visualize the results, using **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
+- Visualize the results, using **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
 ## Preprocessing
 
@@ -65,9 +64,9 @@ Now, if we reorder the channels a bit, we can visualise this covariance matrix a
     C = baseline_avg.cov([find(selmag);find(selgrad)],[find(selmag);find(selgrad)]);
     figure;imagesc(C);hold on;plot(102.5.*[1 1],[0 306],'w','linewidth',2);plot([0 306],102.5.*[1 1],'w','linewidth',2);
 
-  {% include image src="/assets/img/workshop/paris2019/cov_meg.png" width="400" %}
+{% include image src="/assets/img/workshop/paris2019/cov_meg.png" width="400" %}
 
-  _Figure: MEG sensor covariance matrix_
+_Figure: MEG sensor covariance matrix_
 
 The figure shows the covariance between all pairs of magnetometers in the left upper square on the diagonal, between all pairs of gradiometers the right lower square, and the covariance between magnetometers and gradiometers in the off- diagonal blocks. As can be seen, the left upper and off-diagonal blocks appear blue, suggesting that the numerical range of the magnetometer is a lot smaller than the numerical range of the gradiometers. In itself, this might not pose a problem, but it will result in a different weighing of gradiometers versus magnetometers when computing the source reconstruction. In addition to the difference in magnitude of the different channel types, the covariance matrix may be poorly estimated (for instance due to a limited amount of data available), or may be rank deficient due to previous processing steps. Examples of processing steps that cause the data to be rank deficient are artifact cleaning procedures based on independent component analysis (ICA), or signal space projections (SSPs). Another important processing step that reduces the rank of the data massively, is Elekta's maxfilter.
 It is crucial to account for rank deficiency of the data, because if it's not done properly, the noise (be it numerical or real) will blow up the reconstruction.
@@ -77,9 +76,9 @@ To make this a bit more concrete, we first will have a look at the singular valu
     [u,s,v] = svd(baseline_avg.cov);
     figure;plot(log10(diag(s)),'o');
 
-  {% include image src="/assets/img/workshop/paris2019/cov_svd.png" width="400" %}
+{% include image src="/assets/img/workshop/paris2019/cov_svd.png" width="400" %}
 
-  _Figure: Singular values of a MEG sensor covariance matrix_
+_Figure: Singular values of a MEG sensor covariance matrix_
 
 When thus plotted on a log scale, it can be seen that there is a range of 16 orders of magnitude in the signal components, and that there are actually 3 stairs in this singular value spectrum. There is a steep decline around component 70 or so, and another step at component 204. The step at component 204 reflects the magnitude difference between the 204 gradiometer signals and the 102 magnetometer signals. The discontinuity around component 70 reflects the effect of the Maxfilter, which has effectively removed about 236 spatial components out of the data.
 Just using the 'normal' way of computing the covariance matrix' inverse, by using MATLAB's inv() function is asking for numerical problems, because the spatial components with very small singular values (which don't reflect any real signal) are blown up big time in the inverse. For this reason, regularised or truncated inversion techniques are to be used. In addition to applying more thoughtful algorithms for matrix inversion, spatial prewhitening techniques can be used, which manipulate the data in a way to make them, as the name suggests, spatially (more or less) white. This means that the signals are uncorrelated to each other, and have the same variance. As a byproduct, when the whitening is done separately for the magnetometers and gradiometers, the scale difference between the different channel types disappears, and thus prewhitening results in an 'equal' treatment of both channel types, and allows for a relatively straightforward combination of the different channel types during source reconstruction.
@@ -89,7 +88,7 @@ Just using the 'normal' way of computing the covariance matrix' inverse, by usin
 The function **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** can be used for the prewhitening. As an input, it requires a data structure of the to-be-prewhitened data, and a data structure that contains a covariance structure that is used for the computation of the prewhitening operator. For MEG data, one can use an empty room recording for this, or a data structure containing data from a well-defined baseline window. Here, we use the 200 ms time window prior to the onset of the stimulus. In its default behaviour, ft_denoise_prewhiten does a separate prewhitening of the different channeltypes in the input data, so the magnetometers and gradiometers will be prewhitened separately.
 
     % the following lines detect the location of the first large 'cliff' in the singular value spectrum of the grads and mags
-    [u,s_mag,v]  = svd(baseline_avg.cov(selmag,  selmag));  
+    [u,s_mag,v]  = svd(baseline_avg.cov(selmag,  selmag));
     [u,s_grad,v] = svd(baseline_avg.cov(selgrad, selgrad));
     d_mag = -diff(log10(diag(s_mag))); d_mag = d_mag./std(d_mag);
     kappa_mag = find(d_mag>4,1,'first');
@@ -104,8 +103,9 @@ The function **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** can be 
 The prewhitening operator is defined as the inverse of the matrix square root of the covariance matrix that is to be used for the prewhitening. The cfg.kappa option in **[ft_denoise_prewhiten](/reference/ft_denoise_prewhiten)** ensures that a regularised inverse is used. Kappa refers to the number of spatial components to be retained in the inverse, and should be at most the number before which the steep cliff in singular values occurs.
 
 #### Exercise 1:
+
 {% include markup/info %}
- Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with imagesc() after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
+Select the 200 ms baseline from the dataw_meg structure, compute the covariance, and inspect the covariance matrix with imagesc() after grouping the magnetometers and the gradiometers. Also inspect the singular value spectrum of the whitened baseline covariance matrix.
 {% include markup/end %}
 
 A byproduct of the magnetometers and gradiometers being represented at a similar scale, is the possibility to do a quick-and-dirty artifact identification (and rejection) using **[ft_rejectvisual](/reference/ft_rejectvisual/)**.
@@ -124,6 +124,7 @@ A byproduct of the magnetometers and gradiometers being represented at a similar
 _Figure: Visual artifact rejection window_
 
 #### Exercise 2:
+
 {% include markup/info %}
 Consult the **[ft_rejectvisual tutorial](/tutorial/visual_artifact_rejection/)** and remove the obvious outlier trials from the data structure. The specification of a layout in the cfg allows for a more detailed inspection of the outlier trials. Note these trial numbers, inspect the spatial topography and time courses, and remove them from the data. Also inspect trials 72 and 832, and discuss their spatiotemporal properties.
 {% include markup/end %}
@@ -210,9 +211,9 @@ With the source structure computed, we can inspect the fields of the variable so
                label: {306×1 cell}
         filterdimord: '{pos}_ori_chan'
 
-The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the timecourses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in  a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in november 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
+The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the timecourses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in november 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.
 
-    wb_dir = fullfile(subj.outputpath, 'anatomy',subj.name, 'freesurfer', subj.name, 'workbench');
+    wb_dir   = fullfile(subj.outputpath, 'anatomy',subj.name, 'freesurfer', subj.name, 'workbench');
     filename = fullfile(wb_dir, sprintf('%s.L.inflated.8k_fs_LR.surf.gii', subj.name));
     inflated = ft_read_headshape({filename strrep(filename, '.L.', '.R.')});
     inflated = ft_determine_units(inflated);
@@ -223,10 +224,9 @@ The content of source.avg is the interesting stuff. Particularly, the 'mom' fiel
     cfg.colormap  = 'parula';
     cfg.parameter = 'mom';
 
-    % replace the original dipole positions with those of the inflated
-    % surface
+    % replace the original dipole positions with those of the inflated surface
     source.pos = inflated.pos;
-    figure;ft_sourceplot_interactive(cfg, source);
+    figure; ft_sourceplot_interactive(cfg, source);
 
 {% include image src="/assets/img/workshop/paris2019/lcmv_avgovercortex.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_inflated_visualvc.png" width="400" %}{% include image src="/assets/img/workshop/paris2019/lcmv_vc_timecourse.png" width="400"%}
 
@@ -235,13 +235,15 @@ _Figure: Interactive figure windows to inspect virtual channels_
 The function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)** opens two figures, one showing a time course with the event-related field, averaged across all dipoles, and the other showing the cortical surface. Here, we replaced the original source dipole positions with their equivalent 'inflated' counterparts to better appreciate the stuff that is going on in the sulci. Pressing the shift-key while selecting a location on the cortical surface creates a new figure, with the event-related field of the selected location. Clicking in the figure with the time courses shifts the latency at which the corresponding topographical map is shown.
 
 #### Exercise 3:
+
 {% include markup/info %}
- Explore the spatial distribution of the prominent ERF peaks. Try and explain why the topographies occasionally look 'patchy'.
+Explore the spatial distribution of the prominent ERF peaks. Try and explain why the topographies occasionally look 'patchy'.
 {% include markup/end %}
 
 #### Exercise 4:
+
 {% include markup/info %}
- Compute the absolute of the dipole moment with ft_math:
+Compute the absolute of the dipole moment with ft_math:
 
     cfg = [];
     cfg.operation = 'abs';
@@ -277,7 +279,7 @@ With the spatial filters computed from the covariance matrix estimated from all 
     cfg.lcmv.weightnorm = 'unitnoisegain';
     cfg.headmodel       = headmodel;
     cfg.sourcemodel     = leadfield_meg;
-    cfg.sourcemodel.filter = source.avg.filter;
+    cfg.sourcemodel.filter       = source.avg.filter;
     cfg.sourcemodel.filterdimord = source.avg.filterdimord;
     source_famous_orig     = ft_sourceanalysis(cfg, tlckw_famous);
     source_unfamiliar_orig = ft_sourceanalysis(cfg, tlckw_unfamiliar);
@@ -292,7 +294,7 @@ With the spatial filters computed from the covariance matrix estimated from all 
 
     cfg           = [];
     cfg.parameter = 'mom';
-    figure;ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
+    figure; ft_sourceplot_interactive(cfg, source_famous, source_unfamiliar, source_scrambled);
 
 You can also investigate the difference between the 'famous' and 'scrambled' conditions:
 
@@ -304,4 +306,4 @@ You can also investigate the difference between the 'famous' and 'scrambled' con
     cfg           = [];
     cfg.parameter = 'mom';
     cfg.has_diff  = true;
-    figure;ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);
+    figure; ft_sourceplot_interactive(cfg, source_famous, source_scrambled, source_diff);

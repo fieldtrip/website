@@ -61,9 +61,9 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
     % visualize the results
     cfg = [];
     cfg.parameter = 'grangerspctrm';
-    figure;ft_connectivityplot(cfg, g);
+    figure; ft_connectivityplot(cfg, g);
     cfg.parameter = 'cohspctrm';
-    figure;ft_connectivityplot(cfg, c);
+    figure; ft_connectivityplot(cfg, c);
 
 {% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixinggranger.png" width="300" %}
 

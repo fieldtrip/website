@@ -1,6 +1,6 @@
 ---
 title: From raw data to ERP
-tags: [tutorial, meg, timelock, preprocessing, plot, paris2019, mmfaces]
+tags: [meg, timelock, preprocessing, paris2019, mmfaces]
 ---
 
 # From raw data to ERP
@@ -130,7 +130,7 @@ The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)**
 
 ## Compute condition-specific averages (ERFs/ERPs)
 
-Once the data has been epoched and filtered, we can proceed with computing event-related averages. In Fieldtrip, this can be achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the data.trialinfo field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
+Once the data has been epoched and filtered, we can proceed with computing event-related averages. In FieldTrip, this can be achieved with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. In order to selectively average across epochs from different conditions, we make use of the data.trialinfo field, which contains a numeric indicator of the condition to which that particular epoch belongs. Thus, we can do:
 
     cfg        = [];
     cfg.trials = find(data.trialinfo(:,1)==1);
@@ -155,13 +155,13 @@ At this stage, we have a set of spatiotemporal matrices, reflecting the electrop
 
 Each type of channel can be visualised with its corresponding layout. For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
 
-    filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
+    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock', subj.name));
     load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
 
     % visualise the magnetometer data
     cfg        = [];
     cfg.layout = 'neuromag306mag_helmet.mat';
-    figure;ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
+    figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
 
     % combine planar gradients and visualise the gradiometer data
     cfg              = [];
@@ -172,7 +172,7 @@ Each type of channel can be visualised with its corresponding layout. For the vi
 
     cfg        = [];
     cfg.layout = 'neuromag306cmb_helmet.mat';
-    figure;ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
+    figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
 
     % create an EEG channel layout on-the-fly and visualise the eeg data
     cfg      = [];
@@ -181,7 +181,7 @@ Each type of channel can be visualised with its corresponding layout. For the vi
 
     cfg        = [];
     cfg.layout = layout_eeg;
-    figure;ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
+    figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
 
 Alternatively, the data of different channel types can be visualised within a single figure. This leverages the interactive functionality of the figures and allows for easier comparison of latency-specific topographies. This can be achieved by first creating a combined layout with **[ft_appendlayout](/reference/ft_appendlayout)**. This requires some handcrafting to the scaling of the EEG-based layout in relation to the MEG layouts. Also, when actually plotting the data with **[ft_multiplotER](/reference/ft_multiplotER)** we need to specify a channel type specific scaling factor, to accommodate the different order of magnitude of the physical units in which the data are expressed. Alternatively, these scaling difference can be removed by application of a relative baseline (e.g. expressing the signals' magnitude in dB relative to a specified baseline window), or by appropriately whitening the signals. Note, that the scaling factors here were obtained by eyeballing the data and do not represent 'official' scaling values.
 
@@ -220,4 +220,4 @@ Alternatively, the data of different channel types can be visualised within a si
     cfg.magscale  = 0.25e14;
     cfg.gradscale = 1e12;
     cfg.eegscale  = 1e6;
-    figure;ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);
+    figure; ft_multiplotER(cfg, avg_famous_c, avg_unfamiliar_c, avg_scrambled_c);

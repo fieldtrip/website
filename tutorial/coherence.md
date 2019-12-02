@@ -277,7 +277,7 @@ Plot the results of the 5, 2, and 10 Hz smoothin
     cfg.ylim          = [0 0.2];
     cfg.refchannel    = 'EMGlft';
     cfg.channel       = 'MRC21';
-    figure;ft_singleplotER(cfg, fd, fd2, fd10);
+    figure; ft_singleplotER(cfg, fd, fd2, fd10);
 
 Which degree of smoothing do you consider optimal in the calculations above?
 {% include markup/end %}
