@@ -244,6 +244,6 @@ Alternatively, the data of different channel types can be visualised within a si
 Explore the data, using the interactive property of the figure. Visualize the topographies of the ERF/ERPs in the latency window between 175 and 250 ms. Also inspect the topographies in the latency window from 300-450 ms. Explain the differences in topography (between latencies and channel types) based on putative underlying neuronal generators.
 {% include markup/end %}
 
-{% include image src="/assets/img/workshop/paris2019/raw2erp_topo_appended.png" width="400" %}
+{% include image src="/assets/img/workshop/paris2019/raw2erp_topo_appended.png" width="600" %}
 
 _Figure: Topographies of average across selected latency window for one of the conditions._
