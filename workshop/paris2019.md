@@ -7,6 +7,8 @@ tags: [paris2019]
 
 PracticalMEEG aims at providing an intensive several–days training to MEG and EEG analysts. It will provide its attendees with the ability to create a full analysis pipeline with exemplar (or their own) data in one or several of three leading software dedicated to MEG and EEG analysis (Brainstorm, FieldTrip and MNE-python). More details can be found [here](http://practicalmeeg2019.org).
 
+{% include image src="/assets/img/workshop/paris2019/practicalmeeg.jpg" width=235 %}
+
 ## Where
 
 [ICM Institute for Brain and Spinal Cord](https://goo.gl/maps/B8vuqTo3tcagXFsM8)  
@@ -79,7 +81,7 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 
 ## Tutorial preparation
 
-For the actual course, we will bring the required data and a recent FieldTrip version on a set of USB flash drives, to ensure that everybody will be up-and-running relatively quickly. Please read the [USB instructions](/workshop/paris2019/usb_instructions) page carefully to copy the right files, and to unpack them properly on your computer.
+For the actual course, we will bring the required data and a recent FieldTrip version on a set of USB flash drives, to ensure that everybody will be up-and-running relatively quickly. **Please read the [USB instructions](/workshop/paris2019/usb_instructions) page carefully to copy the right files, and to unpack them properly on your computer.**
 
 If you are doing these tutorials outside the practicalMEEG course, you should read on to get information about the FieldTrip software requirements and where you can get the data.
 
