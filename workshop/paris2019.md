@@ -38,7 +38,7 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 - 09:00 – 10:30 Lecture 1: Data organization (Robert) and initial data processing(Alex)
 - 10:30 – 12:30 Hands-on 1a: [From raw to ERPs using FieldTrip](/workshop/paris2019/handson_raw2erp)
 - 10:30 – 12:30 Hands-on 1b: [From raw to ERPs using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
-- 10:30 – 12:30 Hands-on 1c: From raw to ERPs using MNE python
+- 10:30 – 12:30 Hands-on 1c: [From raw to ERPs using MNE python](https://github.com/agramfort/mne_pratical_meeg/blob/master/1-From_raw_to_epochs_evoked_ERF_ERP.ipynb)
 
 
 - 12:30 – 13:30 Lunch
@@ -46,7 +46,7 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 - 13:30 – 15:00 Lecture 2: Sensor level analysis (JM)
 - 15:00 – 17:00 Hands-on 2a: [Sensor level analysis using FieldTrip](/workshop/paris2019/handson_sensoranalysis)
 - 15:00 – 17:00 Hands-on 2b: [Sensor level analysis using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
-- 15:00 – 17:00 Hands-on 2c: Sensor level analysis using MNE python
+- 15:00 – 17:00 Hands-on 2c: [Sensor level analysis using MNE python](https://github.com/agramfort/mne_pratical_meeg/blob/master/2-sensors_time_frequency.ipynb)
 - 17:00 – 17:30 Wrap-up / Q&A session
 
 #### Day 2 (Wednesday December 4, 2019)
@@ -54,14 +54,14 @@ All hands on sessions will be using the same [dataset](/workshop/paris2019/datas
 - 09:00 – 10:30 Lecture 3: Source estimation 1 (Alex & François)
 - 10:30 – 12:30 Hands-on 3a: [Creating head and source models using FieldTrip](/workshop/paris2019/handson_anatomy)
 - 10:30 – 12:30 Hands-on 3b: [Creating head and source models using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
-- 10:30 – 12:30 Hands-on 3c: Creating head and source models using MNE python
+- 10:30 – 12:30 Hands-on 3c: [Creating head and source models using MNE python](https://github.com/agramfort/mne_pratical_meeg/blob/master/3-Forward_model.ipynb)
 
 - 12:30 – 13:30 Lunch
 
 - 13:30 – 15:00 Lecture 4: Source estimation 2 (Denis)
 - 15:00 – 17:00 Hands-on 4a: [Single and distributed sources using FieldTrip](/workshop/paris2019/handson_sourceanalysis)
 - 15:00 – 17:00 Hands-on 4b: [Single and distributed sources using Brainstorm](https://neuroimage.usc.edu/brainstorm/WorkshopParis2019)
-- 15:00 – 17:00 Hands-on 4c: Single and distributed sources using MNE python
+- 15:00 – 17:00 Hands-on 4c: [Single](https://github.com/agramfort/mne_pratical_meeg/blob/master/4a-Inverse_source_localization_dipole_fit.ipynb)  and [distributed sources using MNE python](https://github.com/agramfort/mne_pratical_meeg/blob/master/4b-Inverse_source_localization_mne_dspm.ipynb)
 - 17:00 – 17:30 Wrap-up / Q&A session
 
 #### Day 3 (Thursday December 5, 2019)
