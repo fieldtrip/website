@@ -27,7 +27,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I read all channels from an EDF file that contains multiple sampling rates?](/faq/how_can_i_read_all_channels_from_an_edf_file_that_contains_multiple_sampling_rates)
 - [How can I transform trigger values from bits to decimal representation with a trialfun?](/faq/how_can_i_transform_trigger_values_from_bits_to_decimal_representation_with_a_trialfun)
 - [How can I use the databrowser?](/faq/how_can_i_use_the_databrowser)
-- [How can extend the reading functions with a new dataformat?](/faq/how_can_extend_the_reading_functions_with_a_new_dataformat)
+- [How can I  extend the reading functions with a new dataformat?](/faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat)
 - [How does the CTF higher-order gradiometer work?](/faq/how_does_the_ctf_higher-order_gradiometer_work)
 - [How does the filter padding in preprocessing work?](/faq/how_does_the_filter_padding_in_preprocessing_work)
 - [I have problems reading in neuroscan .cnt files. How can I fix this?](/faq/i_have_problems_reading_in_neuroscan_.cnt_files._how_can_i_fix_this)
