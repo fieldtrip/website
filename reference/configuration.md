@@ -1995,7 +1995,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.opto** - [ft_channelrepair](/reference/ft_channelrepair), [ft_layoutplot](/reference/ft_layoutplot), [ft_neighbourplot](/reference/ft_neighbourplot), [ft_prepare_layout](/reference/ft_prepare_layout)  
 
 
-**cfg.opts** - [ft_volumebiascorrect](/reference/ft_volumebiascorrect), [ft_volumesegment](/reference/ft_volumesegment)  
+**cfg.opts** - [ft_volumebiascorrect](/reference/ft_volumebiascorrect), [ft_volumenormalise](/reference/ft_volumenormalise), [ft_volumesegment](/reference/ft_volumesegment)  
 
 
 **cfg.order** - [ft_channelrepair](/reference/ft_channelrepair), [ft_mvaranalysis](/reference/ft_mvaranalysis), [ft_nonlinearassociation](/reference/ft_nonlinearassociation), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_prepare_headmodel](/reference/ft_prepare_headmodel), [ft_realtime_downsample](/reference/ft_realtime_downsample), [ft_scalpcurrentdensity](/reference/ft_scalpcurrentdensity)  
