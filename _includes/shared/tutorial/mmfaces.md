@@ -2,7 +2,9 @@
 
 The "mmfaces" dataset contains EEG, MEG, functional MRI and structural MRI data from research participants that were recorded in multiple runs of a simple task performed on a large number of Famous, Unfamiliar and Scrambled faces. It is described in more detail the data descriptor publication [doi:10.1038/sdata.2015.1](https://www.nature.com/articles/sdata20151) and analyzed in detail in [doi:10.3389/fnhum.2011.00076](http://journal.frontiersin.org/Journal/10.3389/fnhum.2011.00076/abstract).
 
-The original multimodal dataset included simultaneous MEG/EEG recordings on 19 healthy subjects. In the original study, three subjects (sub001, sub005, sub016) were excluded from the analysis. The complete dataset used to be available from the [MRC-CBU ftp server](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/), but is nowadays maintained on [OpenNeuro](https://openneuro.org/datasets/ds000117).
+The original multimodal dataset included simultaneous MEG/EEG recordings on 19 healthy subjects. In the original study, three subjects (sub001, sub005, sub016) were excluded from further analysis.
+
+The dataset used to be available from the [MRC-CBU ftp server](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/), but is nowadays maintained on [OpenNeuro](https://openneuro.org/datasets/ds000117).
 
 ### Stimulation details
 
@@ -36,4 +38,4 @@ A Polhemus was used to digitize three fiducial points and a large number of othe
 
 ### MRI acquisition details
 
-The MRI data were acquired on a 3T Siemens TIM Trio, and include a 1x1x1mm T1-weighted structural MRI (sMRI) as well as a large number of 3x3x4mm T2\*-weighted functional MRI (fMRI) EPI volumes acquired during 9 runs of the same task (performed by same subjects with different set of stimuli on a separate visit). (The FTP site also contains DTI and ME-FLASH MRI images from the same subject, which could be used for improved head modelling for example, but these are not used here.) For full description of the data and paradigm, see README.txt on the FTP site or [Wakeman & Henson](http://journal.frontiersin.org/Journal/10.3389/fnhum.2011.00076/abstract).
+The MRI data were acquired on a 3T Siemens TIM Trio, and include a 1x1x1mm T1-weighted structural MRI (sMRI) as well as a large number of 3x3x4mm T2\*-weighted functional MRI (fMRI) EPI volumes acquired during 9 runs of the same task (performed by same subjects with different set of stimuli on a separate visit). (The FTP site also contains DTI and ME-FLASH MRI images from the same subject, which could be used for improved head modeling for example, but these are not used here.) For full description of the data and paradigm, see README.txt on the FTP site or [Wakeman & Henson](http://journal.frontiersin.org/Journal/10.3389/fnhum.2011.00076/abstract).

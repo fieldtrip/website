@@ -23,4 +23,4 @@ The scalp topography obtained from EEG forward models shows an inverse relation 
 
 ## Is the tissue conductivity frequency dependent?
 
-It is commonly assumed that at the frequencies that we consider in EEG/MEG, the impedances of the tissues relevant for EEG/MEG source modeling are purely resistive, i.e. there are no capacitive or inductive effects. This means that the conductivity is frequency independent and the attenuation of the source activity by the skull therefore does not depend on the temporal or frequency characteristics.
+It is commonly assumed that - at the frequencies that we consider in EEG/MEG - the impedances of the tissues relevant for EEG/MEG source modeling are purely resistive, i.e. there are no capacitive or inductive effects. This means that the conductivity is frequency independent and the attenuation of the source activity by the skull therefore does not depend on the temporal or frequency characteristics of the sources.
