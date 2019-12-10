@@ -32,8 +32,7 @@ A Polhemus was used to digitize three fiducial points and a large number of othe
   - 102 magnetometers
   - 204 planar gradiometers
   - 70 electrodes recorded with a nose reference (Easycap conforming to extended 10-20% system)
-  - Two sets of bipolar electrodes were used to measure vertical (left eye; EEG062) and horizontal
-  - Electro-oculograms (EEG061). Another set was used to measure ECG (EEG063)
+  - Two sets of bipolar electrodes were used to measure vertical (left eye; EEG062) and horizontal Electro-oculograms (EEG061). Another set was used to measure ECG (EEG063)
 - A fixed 34 ms delay exists between the appearance of a trigger in the trigger channel STI101 and the appearance of the stimulus on the screen
 
 ### MRI acquisition details
