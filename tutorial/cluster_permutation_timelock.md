@@ -7,7 +7,7 @@ tags: [tutorial, statistics, eeg, meg, timelock, plot, meg-language]
 
 ## Introduction
 
-The objective of this tutorial is to give an introduction to the statistical analysis of event-related EEG and MEG data (denoted as MEEG data in the following) by means of cluster-based permutation tests. The tutorial starts with a long background section that sketches the background of permutation tests. Subsequently it is shown how to use FieldTrip to perform cluster-based permutation tests on actual axial and planar event-related fields in a between-trials (using single-subject data) and in a within-subjects design (using data from multiple subjects).
+The objective of this tutorial is to give an introduction to the statistical analysis of event-related EEG and MEG data (denoted as M/EEG data in the following) by means of cluster-based permutation tests. The tutorial starts with a long background section that sketches the background of permutation tests. Subsequently it is shown how to use FieldTrip to perform cluster-based permutation tests on actual axial and planar event-related fields in a between-trials (using single-subject data) and in a within-subjects design (using data from multiple subjects).
 
 In this tutorial we will continue working on the [dataset](/tutorial/meg_language) of a single subject described in the [trigger-based trial selection preprocessing tutorial](/tutorial/preprocessing). Below we will repeat code to select the trials and preprocess the data as described in the first tutorials ([trigger based trial selection](/tutorial/preprocessing), [artifact rejection](/tutorial/artifacts), [event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). We assume that the preprocessing and averaging steps of the analysis are already clear for the reader.
 
@@ -241,7 +241,7 @@ To be sure that your sample-based time windows align with your time windows in s
     sample_count = length(stat.time);
     % number of temporal samples in the statistics object
     j = [0:timestep:1]; % Temporal endpoints (in seconds) of the ERP average computed in each subplot
-    m = [1:timestep*sampling_rate:sample_count]; % temporal endpoints in MEEG samples
+    m = [1:timestep*sampling_rate:sample_count]; % temporal endpoints in M/EEG samples
 
 To plot the data use the following for-loop:
 
@@ -352,7 +352,7 @@ Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER
     sampling_rate = dataFC_LP.fsample;
     sample_count = length(stat.time);
     j = [0:timestep:1]; % Temporal endpoints (in seconds) of the ERP average computed in each subplot
-    m = [1:timestep*sampling_rate:sample_count]; % temporal endpoints in MEEG samples
+    m = [1:timestep*sampling_rate:sample_count]; % temporal endpoints in M/EEG samples
 
     pos_cluster_pvals = [stat.posclusters(:).prob];
 
@@ -492,7 +492,7 @@ With the output, we can now create the plots
     sampling_rate = dataFIC_LP.fsample;
     sample_count = length(stat.time);
     j = [0:timestep:1];   % Temporal endpoints (in seconds) of the ERP average computed in each subplot
-    m = [1:timestep*sampling_rate:sample_count];  % temporal endpoints in MEEG samples
+    m = [1:timestep*sampling_rate:sample_count];  % temporal endpoints in M/EEG samples
     % get relevant (significant) values
     pos_cluster_pvals = [stat.posclusters(:).prob];
 

@@ -7,7 +7,7 @@ tags: [tutorial, statistics, eeg, meg, raw, freq, meg-language]
 
 ## Introduction
 
-The objective of this tutorial is to give an introduction to the statistical analysis of EEG and MEG data (denoted as MEEG data in the following) by means of cluster-based permutation tests.
+The objective of this tutorial is to give an introduction to the statistical analysis of EEG and MEG data (denoted as M/EEG data in the following) by means of cluster-based permutation tests.
 
 The tutorial starts with a long background section that sketches the background of permutation tests. The next sections are more tutorial-like. They deal with the analysis of an actual MEG [dataset](/tutorial/meg_language). In a step-by-step fashion, it will be shown how to statistically compare the data observed in two experimental conditions in a between-trials, in a within-trials and in a within-subjects design. For this, we will use planar TFR's.
 

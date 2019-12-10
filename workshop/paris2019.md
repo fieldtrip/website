@@ -1,9 +1,9 @@
 ---
-title: Practical MEEG workshop at ICM in Paris
+title: PracticalMEEG workshop at ICM in Paris
 tags: [paris2019]
 ---
 
-# Practical MEEG workshop at ICM in Paris
+# PracticalMEEG workshop at ICM in Paris
 
 PracticalMEEG aims at providing an intensive several–days training to MEG and EEG analysts. It will provide its attendees with the ability to create a full analysis pipeline with exemplar (or their own) data in one or several of three leading software dedicated to MEG and EEG analysis (Brainstorm, FieldTrip and MNE-python). More details can be found [here](http://practicalmeeg2019.org).
 
