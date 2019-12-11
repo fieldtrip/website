@@ -78,8 +78,8 @@ These are the triggers we will select for now.
 After the call to **[ft_definetrial](/reference/ft_definetrial)**, the configuration structure cfg now not
 only stores the dataset name, but also contains a field `cfg.trl` with the
 definition of the segments of data that will be used for further
-processing and analysis. Each row in the trl-matrix represents a single
-epoch-of-interest, and the trl-matrix has at least 3 columns. The first
+processing and analysis. Each row in the `trl` matrix represents a single
+epoch-of-interest, and the `trl` matrix has at least 3 columns. The first
 column defines (in samples) the begin sample of each epoch with respect to
 how the data are stored in the raw datafile. The second column defines
 the end sample of each epoch, and the third column specifies the offset of

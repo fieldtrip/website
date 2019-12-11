@@ -243,7 +243,7 @@ The co-registration is usually done in two steps; the first step is an approxima
 1.  To use HPIs (marker coils) as the fiducial points
 2.  To use three anatomical landmarks (Nasion, left, and right pre-auricular points) as the fiducial points
 
-For the case 1, the positions corresponding to the HPIs are needed to be displayed on the MRI (by vitamin-drug dot images in most cases). For the case 2, it is necessary that the three landmarks, NAS, LPA, and RPA, were picked by a 3D scanner (digitizer) and already have been co-registered with HPIs (i.e., MEG). For Ricoh and Yokogawa data (.con, .ave, .mrk), the HPI positions, the anatomical landmarks, and the additional digitized points can be elicited by the FieldTrip function, 'ft_read_headshape'.
+For the case 1, the positions corresponding to the HPIs are needed to be displayed on the MRI (by vitamin-drug dot images in most cases). For the case 2, it is necessary that the three landmarks, NAS, LPA, and RPA, were picked by a 3D scanner (digitizer) and already have been coregistered with HPIs (i.e., MEG). For Ricoh and Yokogawa data (.con, .ave, .mrk), the HPI positions, the anatomical landmarks, and the additional digitized points can be elicited by the FieldTrip function, 'ft_read_headshape'.
 
 In the Ricoh and Yokogawa system, the coordinate system is defined as:
 

@@ -15,7 +15,7 @@ Now you can **specify one DCM model** for this subject’s data:
 
 - Click “new data” and select the file containing low-pass filtered data (“fwmPapMcbdspmeeg_run_01_sss.mat”)
 
-- Select “MEG” as the modality to be modelled. The new pop-up window shows (on the left) the event-related field averaged across trials for single channels (separate lines), and (on the right) the same data in columns.
+- Select “MEG” as the modality to be modeled. The new pop-up window shows (on the left) the event-related field averaged across trials for single channels (separate lines), and (on the right) the same data in columns.
 
 - As we will model the evoked potentials (as opposed to e.g. induced responses or cross-spectral density), in the first drop-down menu please select “ERP”
 
@@ -29,7 +29,7 @@ Now you can **specify one DCM model** for this subject’s data:
 
 - Click the red arrow to continue - this will activate the next part of the “DCM for M/EEG” window where you will be able to specify the electromagnetic model.
 
-- We will use the equivalent current dipole (ECD) spatial model with the following dipoles and their prior location
+- We will use the equivalent current dipole (ECD) spatial model with the following dipoles and their prior locations:
 
   - rOFA [27 -93 -6]
   - lOFA [-36 -84 -12]
@@ -41,7 +41,7 @@ Now you can **specify one DCM model** for this subject’s data:
 
 - Click the red arrow to continue. The data you’re working with should have a pre-specified head model (mapping from source-space to sensor-space). If the head model for this dataset hasn’t been computed, SPM will ask you to do it now. Let’s use the “template” model with a “normal” cortical mesh. To specify Nasion position, click “select” –> “nas” -> “OK”. Please do the same for LPA and RPA. Use headshape points. After a couple of minutes, click on “display MEG”, then use a “3-shell sphere” EEG head model and a “single shell” MEG head model and again click on “display MEG”. This completes the head model.
 
-- You should now be able to define the neuronal model. We would like to compare several alternative models. However, depending on the number of sources, connections and effects to be modelled, the inversion of each model can take from several minutes up to a couple hours. For now let’s define a single model and save it. This is the model that we would like to defin
+- You should now be able to define the neuronal model. We would like to compare several alternative models. However, depending on the number of sources, connections and effects to be modeled, the inversion of each model can take from several minutes up to a couple hours. For now let’s define a single model and save it. This is the model that we would like to define:
 
 {% include image src="/assets/img/workshop/meg-uk-2015/dcm_tutorial/image001hires3.png" width="400" %}
 
@@ -104,7 +104,7 @@ To compare different models and select the winning model, you should use **Bayes
 
 **Parameter inference**
 
-- First, you can inspect a single model from a single participant using the GUI. To do this, in Matlab go to the "pre-computed" directory, and in the GUI load one of Subject 15’s inverted models. Then use the drop-down menu in the lower left corner of the “DCM for M/EEG” window to view the results. For example, selecting “ERPs (mode)” will plot the observed (dashed lines) and model-predicted (solid lines) responses for all experimental conditions and spatiotemporal modes you have modelled. “ERPs (sources)” will plot the activity modeled for each neuronal source, including its different neuronal populations – in case of an ERP neuronal model, the solid lines will represent superficial pyramidal cells which contribute most strongly to the measured signals. Further options include e.g. “Coupling (B)” which will show you posterior estimates of modulatory connectivity parameters (the B matrix), and “trial-specific effects” (see below) which will show you connection strengths for different conditions (here 100% represents the connection strength for the baseline condition). Finally, “Response (image)” will show you the model fits across all modeled time points and sensors. This is the end of our demo.
+- First, you can inspect a single model from a single participant using the GUI. To do this, in Matlab go to the "pre-computed" directory, and in the GUI load one of Subject 15’s inverted models. Then use the drop-down menu in the lower left corner of the “DCM for M/EEG” window to view the results. For example, selecting “ERPs (mode)” will plot the observed (dashed lines) and model-predicted (solid lines) responses for all experimental conditions and spatiotemporal modes you have modeled. “ERPs (sources)” will plot the activity modeled for each neuronal source, including its different neuronal populations – in case of an ERP neuronal model, the solid lines will represent superficial pyramidal cells which contribute most strongly to the measured signals. Further options include e.g. “Coupling (B)” which will show you posterior estimates of modulatory connectivity parameters (the B matrix), and “trial-specific effects” (see below) which will show you connection strengths for different conditions (here 100% represents the connection strength for the baseline condition). Finally, “Response (image)” will show you the model fits across all modeled time points and sensors. This is the end of our demo.
 
 {% include image src="/assets/img/workshop/meg-uk-2015/dcm_tutorial/image007.png" width="400" %}
 
@@ -112,5 +112,4 @@ To compare different models and select the winning model, you should use **Bayes
 
 {% include image src="/assets/img/workshop/meg-uk-2015/dcm_tutorial/image009.png" width="500" %}
 
-More examples and tutorials can be found in the SPM12 manua
-[http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf](http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf)
+More examples and tutorials can be found in the [SPM12 manual](http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf).

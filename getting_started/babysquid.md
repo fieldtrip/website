@@ -15,7 +15,7 @@ The BabySQUID is a series of MEG systems for infants and young children that is 
 
 ## Background
 
-The BabySQUID systems record the data in the fif file format, which is the same format used in the Neuromag/Elekta systems. Consequently the same low-level reading functions can be used and the data can be directly imported into FieldTrip. Certain functionalities in FieldTrip depend on the type of sensors and their arrangements, and therefore we use the **[ft_senstype](/reference/ft_senstype)** helper function to distinguish the different acquisition systems.
+The BabySQUID systems record the data in the fif file format, which is the same format used in the Neuromag/Elekta/MEGIN systems. Consequently the same low-level reading functions can be used and the data can be directly imported into FieldTrip. Certain functionalities in FieldTrip depend on the type of sensors and their arrangements, and therefore we use the **[ft_senstype](/reference/ft_senstype)** helper function to distinguish the different acquisition systems.
 
 To analyze your BabySQUID MEG data in FieldTrip, you would usually start by calling high-level functions such as **[ft_definetrial](/reference/ft_definetrial)** or **[ft_preprocessing](/reference/ft_preprocessing)** (see the [tutorial documentation](/tutorial)). These functions read the raw MEG data by calling low-level functions. The header, data and events are in the fif file, which you specify as
 

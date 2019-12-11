@@ -396,9 +396,9 @@ the following parameters:
   following relation determined by the Shannon number must hold (see
   [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
 
-  K = 2*tw*fw-1, where K is required to be larger than 0.
+`K = 2*tw*fw-1`, where K is required to be larger than 0.
 
-K is the number of multitapers applied; the more tapers the greater the smoothing.
+K is the number of tapers applied; the more, the greater the smoothing.
 
     cfg2 = [];
     cfg2.output    = 'pow';

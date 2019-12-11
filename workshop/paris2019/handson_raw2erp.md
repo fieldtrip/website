@@ -6,14 +6,16 @@ tags: [meg, timelock, preprocessing, paris2019, mmfaces]
 # From raw data to ERP
 
 {% include markup/info %}
-This tutorial was written specifically for the practicalMEEG workshop in Paris in December 2019.
+This tutorial was written specifically for the [PracticalMEEG workshop in Paris](/workshop/paris2019) in December 2019.
 {% include markup/end %}
 
 ## Introduction
 
 In this tutorial, we will learn how to read in 'raw' data from a file, and to apply some basic processing and averaging in order to inspect event-related fields.
 
-This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. This is covered in more detail in the [preprocessing](/tutorial/preprocessing) tutorial, which you can refer to if you want more details.
+{% include markup/warning %}
+This tutorial only briefly covers the steps required to import data into FieldTrip and preprocess it. Rather, this tutorial has a focus on processing multiple runs of the same dataset, and exploring the different channel types. Preprocessing is covered in more detail in the [preprocessing](/tutorial/preprocessing) tutorial, which you can refer to if you want more details.
+{% include markup/end %}
 
 ## Preliminaries, definition of subject specific filenames, and definition of epochs-of-interest
 
@@ -23,16 +25,16 @@ There are largely two alternative approaches for preprocessing, which especially
 
 Preprocessing involves several steps including defining epochs-of-interest from the dataset, filtering and artifact rejections. This tutorial covers how to identify epochs based on the recorded events during the experiment. Typically, this requires the use of **[ft_definetrial](/reference/ft_definetrial)**. For more details, see the [preprocessing](/tutorial/preprocessing) tutorial.
 
-The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
+The output of **[ft_definetrial](/reference/ft_definetrial)** is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the begin of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the end of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
 In this tutorial, we will bypass **[ft_definetrial](/reference/ft_definetrial)** altogether, and create a trl matrix 'by hand', using information obtained from the 'events.tsv' files, which contain the necessary event information, specifically which type of stimulus was presented when. In order to extract the events from a given dataset, FieldTrip has the function **[ft_read_event](/reference/ft_read_event)**. Each event in the output structure is of a particular type (and may have a specific value), and has an associated sample, which reflects the time point expressed in samples relative to the onset of the data recording. According to BIDS, event timing is expressed in units of time in the events.tsv file, and in order to express the event timing in samples, information about the sampling frequency (which is present in the header information of the dataset) needs to be passed into the function as well.
 
 First, to get started, we need to know which files to use. One way to do this, is to work with a subject specific text file that contains this information. Alternatively, in MATLAB, we can represent this information in a subject-specific data structure, where the fields contain the filenames of the files (including the directory) that are relevant. Here, we use the latter strategy.
-We use the **datainfo_subject** function, which is provided in the **code** folder associated with this course. If we do the following:
+We use the `datainfo_subject` function, which is provided in the `code` folder associated with this workshop. If we do the following:
 
     subj = datainfo_subject(15);
 
-We obtain a structure that looks something like this:
+We obtain a structure that looks like this:
 
      subj =
 
@@ -76,7 +78,7 @@ We can now run the following chunk of code:
 
 ## Reading in raw data from disk
 
-In the section above, we have created a set of 'trl' matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the sub-15_data from the derivatives/raw2erp/sub-15 folder:
+In the section above, we have created a set of `trl` matrices, which contain, for each of the runs in the experiment, a specification of the begin, and endpoint of the relevant epochs. We can now proceed with reading in the data, applying a bandpass filter, and excluding filter edge effects in the data-of-interest, by using the cfg.padding argument. The below chunk of code takes some time (and RAM) to compute, so if your computer is not up to this, you can also skip this step, and load in the `sub-15_data.mat` from the `derivatives/raw2erp/sub-15` folder:
 
       rundata = cell(1,6);
       for run_nr = 1:6
@@ -124,7 +126,8 @@ In the section above, we have created a set of 'trl' matrices, which contain, fo
       clear rundata;
 
       filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_data',  subj.name));
-      save(filename, 'data');
+      % save(filename, 'data');
+      % load(filename, 'data');
 
 The above chunk of code uses **[ft_preprocessing](/reference/ft_preprocessing)** three times per run, with channel type specific processing options. Of note is the rereferencing of the EEG data, and the exclusion of a subset of the EEG channels. The excluded channels correspond to non-brain recording EEG signals (EOG/ECG etc.), and are excluded from further analysis. Subsequently, the EEG data are average-referenced. After the data has been read from disk, **[ft_resampledata](/reference/ft_resampledata)** is used to downsample the data to a sampling frequency of 300 Hz. Then, the data structures are combined into a single run-specific data structure, using **[ft_appenddata](/reference/ft_appenddata)**.
 
@@ -147,16 +150,14 @@ Once the data has been epoched and filtered, we can proceed with computing event
     avg_faces  = ft_timelockanalysis(cfg, data);
 
     filename = fullfile(subj.outputpath, 'raw2erp', sprintf('%s_timelock', subj.name));
-    save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
+    % save(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
+    % load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
 
 ## Visualisation of the ERFs
 
 At this stage, we have a set of spatiotemporal matrices, reflecting the electrophysiological response to different types of stimuli. In order to visualise the time courses, and interpret the spatial distribution of the responses, we can use a combination of the following FieldTrip functions: **[ft_multiplotER](/reference/ft_multiplotER)**, **[ft_topoplotER](/reference/ft_topoplotER)**, **[ft_singleplotER](/reference/ft_singleplotER)**. With the exception of **[ft_singleplotER](/reference/ft_singleplotER)** these functions require a specification of (a 2D projection) of the positions of the sensors/elctrodes. In FieldTrip, this is specified by the cfg.layout option. You can read more about layouts in a **[dedicated tutorial](/tutorial/layout)**. More information about the visualisation of sensor (and source) level data can be found in **[this tutorial](/tutorial/plotting)**.
 
 Each type of channel can be visualised with its corresponding layout. For the visualisation of the gradiometers, we first compute the magnitude of the gradient by combining the 'horizontal' and 'vertical' gradients at each sensor location, using **[ft_combineplanar](/reference/ft_combineplanar)**.
-
-    filename = fullfile(subj.outputpath, 'raw2erp', subj.name, sprintf('%s_timelock', subj.name));
-    load(filename, 'avg_famous', 'avg_unfamiliar', 'avg_scrambled', 'avg_faces');
 
     % visualise the magnetometer data
     cfg        = [];
@@ -182,7 +183,7 @@ Each type of channel can be visualised with its corresponding layout. For the vi
     cfg        = [];
     cfg.layout = layout_eeg;
     figure; ft_multiplotER(cfg, avg_famous, avg_unfamiliar, avg_scrambled);
-    
+
 {% include image src="/assets/img/workshop/paris2019/raw2erp_multi_mags.png" width="400" %}
 
 _Figure: Distribution of magnetometer ERFs on a 2D projected sensory layout._
@@ -231,7 +232,7 @@ Alternatively, the data of different channel types can be visualised within a si
     layout = ft_appendlayout(cfg, ft_appendlayout([], layout_mag, layout_cmb), layout_eeg);
 
     cfg = [];
-    cfg.layout = layout;
+    cfg.layout    = layout;
     cfg.gridscale = 150;
     cfg.magscale  = 0.25e14;
     cfg.gradscale = 1e12;

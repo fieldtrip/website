@@ -148,7 +148,7 @@ Documentation referring to this dataset:
 ## mmfaces
 
 - EEG, MEG, fMRI and structural MRI data from 16 subjects, also used in SPM8 and SPM12 documentation
-- Recorded by Rik Hanson and colleagues in Cambridge, using 306-channel Neuromag/Elekta system
+- Recorded by Rik Hanson and colleagues in Cambridge, using 306-channel Neuromag/Elekta/MEGIN system
 - Subjects watch familiar, unfamiliar and scrambled faces
 - Download the dataset from the [MRC-CBU](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/) FTP server.
 - Details [mmfaces](/tutorial/mmfaces)

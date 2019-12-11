@@ -70,7 +70,7 @@ _Figure 1a: Some example trials, with time t=0 marked._
 
 When analyzing EEG or MEG signals, the aim is to investigate the modulation of the measured brain signals with respect to a certain event. However, due to intrinsic and extrinsic noise in the signals - which in single trials is often higher than the signal evoked by the brain - it is typically required to average data from several trials to increase the signal-to-noise ratio(SNR). One approach is to repeat a given event in your experiment and average the corresponding EEG/MEG signals. The assumption is that the noise is independent of the events and thus reduced when averaging, while the effect of interest is time-locked to the event. The approach results in ERPs and ERFs for respectively EEG and MEG. Timelock analysis can be used to calculate ERPs/ERFs.
 
-In FieldTrip, ERPs and ERFs are calculated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. For this particular dataset, we are interested in the ERF locked to visual stimulation. Since visual stimulation was the same in both the response-right and response-left conditions, we can combine the two data sets using \*_[ft_appenddata](/reference/ft_appenddata)_
+In FieldTrip, ERPs and ERFs are calculated by **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. For this particular dataset, we are interested in the ERF locked to visual stimulation. Since visual stimulation was the same in both the response-right and response-left conditions, we can combine the two data sets using **[ft_appenddata](/reference/ft_appenddata)**:
 
     cfg  = [];
     data = ft_appenddata(cfg, data_left, data_right);
@@ -219,7 +219,7 @@ Again we have to combine the two components of the planar gradien
 
 ### Plotting
 
-Then we can plot the results using \*_[ft_multiplotTFR](/reference/ft_multiplotTFR)_
+Then we can plot the results using **[ft_multiplotTFR](/reference/ft_multiplotTFR)**:
 
     cfg                 = [];
     cfg.interactive     = 'yes';

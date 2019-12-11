@@ -8,10 +8,10 @@ Not all the information contained in either MATLAB or Python can be completely c
 
 We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/bugzilla) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
 
-Code under development, the mne-python community currently works on reader functions for FieldTrip data structure
+Code under development, the MNE-Python community currently works on reader functions for FieldTrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)
 
-More functions to work with files coming from MNE-python in MATLAB are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
+More functions to work with files coming from MNE-Python in MATLAB are available at [https://github.com/mne-tools/mne-matlab](https://github.com/mne-tools/mne-matlab).
 
 # Integrate FieldTrip and MNE-Python
 
@@ -43,7 +43,7 @@ The aim is to pass the channel=level data between FieldTrip and MNE. Reading is 
 
 ### datatype_raw (one trial) `<->` Raw
 
-For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip) and extract the ''.ds'' folder in a convenient location.
+For these examples, we'll use the example data of [dataset 10](/faq/what_types_of_datasets_and_their_respective_analyses_are_used_on_fieldtrip#meg-tactile_dipole_fitting). Download [SubjectBraille.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectBraille.zip) and extract the `.ds` folder in a convenient location.
 
 #### Export to Raw
 

@@ -46,7 +46,7 @@ or a time-frequency estimate of power using
 
 For some of the file formats, there happen to be two low-level conversion functions importers. FieldTrip comes with the low-level functions of itself, but there is also a BESA toolbox written by Karsten Hochstatter. The preferred method for using BESA2FIELDTRIP is to download the BESA toolbox and to add it to your MATLAB path. The conversion function will automatically detect and use it when available on your path.
 
-The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the FieldTrip release as \*_fieldtrip/external/besa._ for your convenience.
+The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the FieldTrip release as `fieldtrip/external/besa` for your convenience.
 
 ## Electrode information
 

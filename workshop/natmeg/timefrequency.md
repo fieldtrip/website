@@ -121,7 +121,10 @@ The field TFR_left_MEG.powspctrm contains the temporal evolution of the raw powe
 
 This part of the tutorial shows how to visualize the results of any type of time-frequency analysis.
 
-To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: (a) subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the absolute change in power with respect to the baseline interval. (b) expressing, for each frequency, the raw power values as the relative increase or decrease with respect to the power in the baseline interval. This means active period/baseline. Note that the relative baseline is expressed as a ratio; i.e. no change is represented by 1.
+To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing:
+
+- Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the absolute change in power with respect to the baseline interval.
+- Expressing, for each frequency, the raw power values as the relative increase or decrease with respect to the power in the baseline interval. This means active period/baseline. Note that the relative baseline is expressed as a ratio; i.e. no change is represented by 1.
 
 There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel, 3) topographical 2-D map of the power changes in a specified time-frequency interval.
 

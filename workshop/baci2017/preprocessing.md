@@ -29,7 +29,7 @@ Preprocessing involves several steps including identifying individual trials fro
 - according to a specific trigger channel
 - according to your own criteria when you write your own trial function, e.g. for conditional trigger sequences, or by detecting EMG onset
 
-Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the trl-matrix represents a single epoch-of-interest, and the trl-matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
+Both depend on **[ft_definetrial](/reference/ft_preprocessing)**. The output of **[ft_definetrial](/reference/ft_preprocessing)** is a configuration structure containing the field _cfg.trl_. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has 3 or more columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch. The subsequent columns can be used to keep information about each trial.
 
 If you do not specify your own triallfunction, the 4th column will by default contain the trigger value. When you use your own triallfunction, you can add any number of extra columns to the _trl_ matrix. These will be added to the data in the _.trialinfo_ field. This is very handy if you want to add information of e.g. response-buttons, response-times, etc., to each trial. As you will see, we will use this functionality to preprocess both the standard and deviant tones together, and then separating them later for averaging.
 
@@ -281,7 +281,7 @@ _figure 4: Representation of the P20/N20 component using the function, ft_topopl
 
 ## Summary and suggested further reading
 
-In this tutorial we learned how to look at EEG data, define trials based on trigger codes, preprocess the data (including filtering, artifact rejection, re-referencing, and average the data to SEPs). We then learned how to display the results in terms of their timecourses as well as their corresponding topographies.
+In this tutorial we learned how to look at EEG data, define trials based on trigger codes, preprocess the data (including filtering, artifact rejection, re-referencing, and average the data to SEPs). We then learned how to display the results in terms of their time courses as well as their corresponding topographies.
 
 The next step of workshop will be the source reconstruction among different head models and different inverse methods with [forward problem](/workshop/baci2017/forwardproblem) and
 [inverse problem](/workshop/baci2017/inverseproblem).

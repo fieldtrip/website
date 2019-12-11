@@ -172,9 +172,9 @@ We create the volume conduction models using Openmeeg. This model can be later u
 
 {% include image src="\assets\img\example\fittemplate\headmodel_surface_polhemus.png" %}
 
-### Taking the inner shell for a single shell model
+### Taking the inner shell for a single-shell model
 
-Another option for MEG is to create a single shell model on the basis of the brain compartment.
+Another option for MEG is to create a single-shell model on the basis of the brain compartment.
 
     cfg                          = [];
     cfg.method                   = 'singlesphere';

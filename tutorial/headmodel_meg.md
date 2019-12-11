@@ -190,7 +190,7 @@ What is the difference between the head models?
 ### Exercise 2
 
 {% include markup/info %}
-In exercise 1, you created a head model with method 'singlesphere'. How is its geometrical description defined? What is the difference between the fields of the single sphere and single shell model which contain the geometrical description?
+In exercise 1, you created a head model with method 'singlesphere'. How is its geometrical description defined? What is the difference between the fields of the single sphere and single-shell model which contain the geometrical description?
 {% include markup/end %}
 
 ## Summary and further reading

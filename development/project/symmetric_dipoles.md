@@ -20,7 +20,7 @@ NOTE: the example below uses some low-level functions from the FieldTrip/private
 
 ### Generate simulated data
 
-FIXME in the following section the simulated data should consist of two dipoles with more appropriate timecourses
+FIXME in the following section the simulated data should consist of two dipoles with more appropriate time courses
 
     % create a gradiometer array with magnetometers at 12cm distance from the origin
     [pnt, tri] = icosahedron162;

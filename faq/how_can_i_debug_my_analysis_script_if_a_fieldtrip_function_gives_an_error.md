@@ -69,9 +69,9 @@ It is likely that you don't want to edit all of your analysis scripts to add
 
     cfg.debug = 'saveonerror'
 
-to each individual function call. It is possible to enable this behavior globally, using the ft_default global variable.
+to each individual function call. It is possible to enable this behavior globally, using the `ft_default` global variable.
 
     global ft_default
     ft_default.debug = 'saveonerror'
 
-The fields in ft_default are merged with the input cfg structure to all FieldTrip functions. This is explained in more detail in **[ft_defaults](/reference/ft_defaults)**.
+The fields in `ft_default` are merged with the input cfg structure to all FieldTrip functions. This is explained in more detail in **[ft_defaults](/reference/ft_defaults)**.

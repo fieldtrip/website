@@ -45,6 +45,10 @@ Copying many small and empty files can take a lot of time, hence we expect that 
 
 ### ds000117-zipped
 
+{% include markup/danger %}
+It turned out that this approach with the multiple zip files did not work to distribute the data reliably; Windows users would unzip with the graphical user interface and get all files scattered over different places.
+{% include markup/end %}
+
 This is a zipped version that contains the same as the pruned version. Different subdirectories have been added to separate zip files. You can copy these zip files to your computer and subsequently unzip them. The unzipping should be done in a specific order. You should start with
 
 ```bash

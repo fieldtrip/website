@@ -11,7 +11,7 @@ FieldTrip keeps track of the analyses in the _data.cfg.previous.previous..._ fie
 
 However, the consequence might also be that original file name are present which might identify the subject. You can use the **[ft_anonymizedata](/reference/ft_anonymizedata)** function to scrub the provenance from unwanted information.
 
-Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonymize a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset), i.e. the \*_.ds_ directory with all files in it.
+Better is not to use the subject's name, date of birth or other identifying information as the filename if you acquire the data. If you - or the person from whom you received the data - nevertheless did use identifying information in the file name: the earlier you rename it, the better. Have a look here to learn [how to rename and anonymize a CTF dataset](/faq/how_can_i_anonymize_a_ctf_dataset), i.e. the `.ds` directory with all files in it.
 
 Another concern for subject confidentiality is the anatomical MRI, which might include facial details. Please see this frequently asked question on [how to anonymize an anatomical MRI](/faq/how_can_i_anonymize_an_anatomical_mri).
 

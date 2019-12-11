@@ -133,7 +133,7 @@ Make sure that the coordinate system is correct, i.e. _up_ is _z-positive_, _ant
 
 ### Segment the brain
 
-The next step is to segment our co-registered and resliced MR image into the three kinds of tissues that we need to care about in our forward model for EEG data, namely the _brain_ tissue, the _skull_ tissue and the _scalp_ tissue. We use **[ft_volumesegment](/reference/ft_volumesegment)** for this. (This function relies on implementations from [SPM](https://www.fil.ion.ucl.ac.uk/spm/))
+The next step is to segment our coregistered and resliced MR image into the three kinds of tissues that we need to care about in our forward model for EEG data, namely the _brain_ tissue, the _skull_ tissue and the _scalp_ tissue. We use **[ft_volumesegment](/reference/ft_volumesegment)** for this. (This function relies on implementations from [SPM](https://www.fil.ion.ucl.ac.uk/spm/))
 
     cfg        = [];
     cfg.output = {'brain' 'skull' 'scalp'};

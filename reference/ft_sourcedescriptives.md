@@ -24,7 +24,7 @@ title: ft_sourcedescriptives
    cfg.resolutionmatrix = 'yes' or 'no' (default = 'no')
    cfg.feedback         = 'no', 'text' (default), 'textbar', 'gui'
 
- The following option only applies to LCMV single-trial timecourses.
+ The following option only applies to LCMV single-trial time courses.
    cfg.fixedori         = 'within_trials' or 'over_trials' (default = 'over_trials')
 
  If repeated trials are present that have undergone some sort of

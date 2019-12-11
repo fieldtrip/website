@@ -6,7 +6,7 @@ title: ft_layoutplot
  for topoplotting and the individual channel axes (i.e. width and height
  of the subfigures) for multiplotting. A correct 2-D layout is a
  prerequisite  for plotting the topographical distribution of the
- potential or field distribution, or for plotting timecourses in a
+ potential or field distribution, or for plotting time courses in a
  topographical arrangement.
 
  This function uses the same configuration options as prepare_layout and

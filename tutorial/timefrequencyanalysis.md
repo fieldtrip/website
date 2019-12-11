@@ -44,7 +44,7 @@ To calculate the time-frequency analysis for the example dataset we will perform
 
 _Figure: Schematic overview of the steps in time-frequency analysis_
 
-In this tutorial, procedures of 4 types of time-frequency analysis will be shown. You can see each of them under the titles: Time-frequency analysis I., II. ... and so on. If you are interested in a detailed description about how to visualize the results, look at the Visualization part.
+In this tutorial, procedures of 4 types of time-frequency analysis will be shown. You can see each of them under the titles: Time-frequency analysis I, II ... and so on. If you are interested in a detailed description about how to visualize the results, look at the Visualization part.
 
 ## Preprocessing
 
@@ -52,7 +52,7 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 {% include /shared/tutorial/preprocessing_fic.md %}
 
-## Time-frequency analysis I.
+## Time-frequency analysis I
 
 ### Hanning taper, fixed window length
 
@@ -92,7 +92,10 @@ The field TFRhann.powspctrm contains the temporal evolution of the raw power val
 
 This part of the tutorial shows how to visualize the results of any type of time-frequency analysis.
 
-To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing: (a) subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the absolute change in power with respect to the baseline interval. (b) expressing, for each frequency, the raw power values as the relative increase or decrease with respect to the power in the baseline interval. This means active period/baseline. Note that the relative baseline is expressed as a ratio; i.e. no change is represented by 1.
+To visualize the event-related power changes, a normalization with respect to a baseline interval will be performed. There are two possibilities for normalizing:
+
+- Subtracting, for each frequency, the average power in a baseline interval from all other power values. This gives, for each frequency, the absolute change in power with respect to the baseline interval.
+- Expressing, for each frequency, the raw power values as the relative increase or decrease with respect to the power in the baseline interval. This means active period/baseline. Note that the relative baseline is expressed as a ratio; i.e. no change is represented by 1.
 
 There are three ways of graphically representing the data: 1) time-frequency plots of all channels, in a quasi-topographical layout, 2) time-frequency plot of an individual channel (or average of several channels), 3) topographical 2-D map of the power changes in a specified time-frequency interval.
 
@@ -160,7 +163,7 @@ How are the responses different? Discuss the assumptions behind choosing a relat
 Plot the TFR of sensor MLC24. How do you account for the increased power at ~300 ms (hint: compare to ERFs)?  
 {% include markup/end %}
 
-## Time-frequency analysis II.
+## Time-frequency analysis II
 
 ### Hanning taper, frequency dependent window length
 
@@ -180,7 +183,7 @@ Below is the configuration for a 7-cycle time window. The calculation is only do
     cfg.toi          = -0.5:0.05:1.5;
     TFRhann7 = ft_freqanalysis(cfg, dataFIC);
 
-To plot the result use \*_[ft_singleplotTFR](/reference/ft_singleplotTFR)_
+To plot the result use **[ft_singleplotTFR](/reference/ft_singleplotTFR)**:
 
     cfg              = [];
     cfg.baseline     = [-0.5 -0.1];
@@ -231,7 +234,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
 
 {% include markup/end %}
 
-## Time-frequency analysis III.
+## Time-frequency analysis III
 
 ### Multitapers
 
@@ -244,9 +247,9 @@ Time-frequency analysis based on multitapers can be performed by the function **
 - cfg.t_ftimwin is the length of the sliding time-window in seconds (= tw). We have chosen cfg.t_ftimwin = 5./cfg.foi, i.e. 5 cycles per time-window. When choosing this parameter it is important that a full number of cycles fit within the time-window for a given frequency.
 - cfg.tapsmofrq determines the width of frequency smoothing in Hz (= fw). We have chosen cfg.tapsmofrq = cfg.foi\*0.4, i.e. the smoothing will increase with frequency. Specifying larger values will result in more frequency smoothing. For less smoothing you can specify smaller values, however, the following relation determined by the Shannon number must hold (see [Percival and Walden (1993)](http://lccn.loc.gov/92045862)):
 
-  K = 2*tw*fw-1, where K is required to be larger than 0.
+`K = 2*tw*fw-1`, where K is required to be larger than 0.
 
-K is the number of multitapers applied; the more tapers the greater the smoothing.
+K is the number of tapers applied; the more, the greater the smoothing.
 
 These settings result in the following characteristics as a function of the frequencies of interest:
 
@@ -281,7 +284,7 @@ _Figure: Time-frequency representations of power calculated using multitapers._
 
 If you would like to learn more about plotting of time-frequency representations, please see the [visualization](#Visualization) section.
 
-## Time-frequency analysis IV.
+## Time-frequency analysis IV
 
 ### Morlet wavelets
 

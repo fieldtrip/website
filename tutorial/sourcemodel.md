@@ -56,7 +56,7 @@ For this part of the tutorial you need a working copy of FreeSurfer (the below w
 
 #### 2. Preparation of the anatomical MRI: impose coordinate system according to the M/EEG coordinates
 
-In this example, we are using an MRI which has been processed to contain a transformation matrix that corresponds to the CTF convention. Thus, the coordinate system coincides with the coordinates in which the MEG sensors are expressed, and a coincidence between coordinate systems is a necessary prerequisite for a meaningful source reconstruction. Often, however, the anatomical image is expressed in an arbitrary coordinate system, and it needs to be coregistered to the MEEG-based coordinate system.
+In this example, we are using an MRI which has been processed to contain a transformation matrix that corresponds to the CTF convention. Thus, the coordinate system coincides with the coordinates in which the MEG sensors are expressed, and a coincidence between coordinate systems is a prerequisite for a meaningful source reconstruction. Often, however, the anatomical image is expressed in an arbitrary coordinate system, and it needs to be coregistered to the MEEG-based coordinate system.
 
 To find out about the coordinate system of your mri, you can use the following function to check it.
 

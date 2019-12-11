@@ -13,7 +13,7 @@ The **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** functi
 
 ## Example use
 
-The easiest way to try out the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** example is by starting two MATLAB sessions. In the first session you create some random signal and write it to the buffer by means of \*_[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)_
+The easiest way to try out the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** example is by starting two MATLAB sessions. In the first session you create some random signal and write it to the buffer by means of **[ft_realtime_signalproxy](/reference/ft_realtime_signalproxy)**:
 
     cfg                = [];
     cfg.channel        = 1:10;                         % list with channel "names"
@@ -24,7 +24,7 @@ The easiest way to try out the **[ft_realtime_powerestimate](/reference/ft_realt
     cfg.target.dataset = 'buffer://localhost:1972';    % where to write the data
     ft_realtime_signalproxy(cfg)
 
-In the second MATLAB session you start the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** and point it to the buffe
+In the second MATLAB session you start the **[ft_realtime_powerestimate](/reference/ft_realtime_powerestimate)** and point it to the buffer:
 
     cfg                = [];
     cfg.blocksize      = 1;                            % seconds

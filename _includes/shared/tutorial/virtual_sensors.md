@@ -1,20 +1,16 @@
 ## Computation of virtual MEG channels in source-space
 
-[In the extended beamformer tutorial](/tutorial/beamformingextended) we identified two potentially interesting regions, one which produces visual gamma-band activity and the other which is coherent with the EMG sensors. If you want to continue analyzing those two regions it is pretty unhandy to juggle around with the two source structures all the time. Also, using the DICS method you do not get a time-resolved signal of these sources. In the following example we will show how you can create virtual channels out of these two sources, which can then be used for further analysis, for example connectivity analysis.
+In the [extended beamformer tutorial](/tutorial/beamformingextended) we identified two potentially interesting regions, one which produces visual gamma-band activity and the other which is coherent with the EMG sensors. If you want to continue analyzing those two regions it is pretty unhandy to juggle around with the two source structures all the time. Also, using the DICS method you do not get a time-resolved signal of these sources. In the following example we will show how you can create virtual channels out of these two sources, which can then be used for further analysis, for example connectivity analysis.
 
 ### Compute the spatial filter for the region of interest
 
 After having done all steps in [the extended beamformer tutorial](/tutorial/beamformingextended), you have the preprocessed data, two source structures and a headmodel (you can also download these from [FieldTrip ftp server (source_coh_lft.mat, source_diff.mat, hdm.mat, sourcemodel.mat, data_cmb.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer_extended/)
 
-    data_cmb
-
-    source_coh_lft
-
-    source_diff
-
-    hdm
-
-    sourcemodel
+- `data_cmb`
+- `source_coh_lft`
+- `source_diff`
+- `hdm`
+- `sourcemodel`
 
 We will now determine the positions on which the cortico-muscular coherence is the largest and the position where the induced visual gamma activity is largest:
 
@@ -79,7 +75,7 @@ The LCMV spatial filter is computed here without applying any time-domain filter
 If you would know that the subsequent analysis would be limited to a specific frequency range in the data (e.g. everything above 30 Hz), you could first apply a filter using **[ft_preprocessing](/reference/ft_preprocessing)** (e.g. _cfg.hpfilter=yes_ and _cfg.hpfreq=30_) prior to computing the covariance and the spatial filter.  
 {% include markup/end %}
 
-The structures _coh_lft_data_ and _gam_pow_data_ resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using \*_[ft_databrowser](/reference/ft_databrowser)_
+The structures _coh_lft_data_ and _gam_pow_data_ resemble the raw-data output of **[ft_preprocessing](/reference/ft_preprocessing)** and consequently can be used in any follow-up function. You can for example visualize the single-trial virtual channel time series using **[ft_databrowser](/reference/ft_databrowser)**.
 
     cfg = [];
     cfg.viewmode = 'vertical';  % you can also specify 'butterfly'
