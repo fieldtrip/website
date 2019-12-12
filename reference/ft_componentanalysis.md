@@ -4,7 +4,7 @@ title: ft_componentanalysis
 ```plaintext
  FT_COMPONENTANALYSIS performs independent component analysis or other
  spatio-temporal decompositions of EEG or MEG data. This function computes
- the topography and time courses of the components. The output of this
+ the topography and timecourses of the components. The output of this
  function can be further analyzed with FT_TIMELOCKANALYSIS or
  FT_FREQANALYSIS.
 
@@ -112,7 +112,7 @@ title: ft_componentanalysis
 
  Instead of specifying a component analysis method, you can also specify
  a previously computed unmixing matrix, which will be used to estimate the
- component time courses in this data. This requires
+ component timecourses in this data. This requires
    cfg.unmixing     = NxN unmixing matrix
    cfg.topolabel    = Nx1 cell-array with the channel labels
 

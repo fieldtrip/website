@@ -18,7 +18,7 @@ title: ft_trialfun_brainvision_segmented
  The stimformat instruct this function to parse stimulus triggers according to
  the specific format. The default is 'S %d'. The cfg.stimformat always
  needs to contain exactly one %d code. The trigger values parsed in this way
- will be stored in columns 4 and upwards of the output `trl` matrix , and
+ will be stored in columns 4 and upwards of the output 'trl' matrix, and
  after FT_PREPROCESSING will end up in data.trialinfo.
 
  A BrainVision dataset consists of three files: an .eeg, .vhdr, and a .vmrk 
