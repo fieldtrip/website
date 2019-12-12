@@ -462,7 +462,7 @@ for i=1:numel(filename)
  data2bids(cfg);
 end
 
-%% SMI eye tracker data
+%% SMI eye tracker data, these were converted from the .idf format using the SMI converter software
 
 filename = {
  'POM1FM0023671_rest1 Samples.txt'
