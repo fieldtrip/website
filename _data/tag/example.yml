@@ -94,7 +94,7 @@
 - name:  Effects of tapering for power estimates
   link:  /example/effects_of_tapering_for_power_estimates_in_the_frequency_domain
 
-- name:  Computing and using estimates of effect size
+- name:  Computing and reporting the effect size
   link:  /example/effectsize
 
 - name:  Performing multiscale entropy analysis on EEG/MEG/LFP data
