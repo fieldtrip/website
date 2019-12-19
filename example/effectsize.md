@@ -1,11 +1,17 @@
 ---
-title: Computing and using estimates of effect size
+title: Computing and reporting the effect size
 tags: [example, statistics]
 ---
 
-# Computing and using estimates of effect size
+# Computing and reporting the effect size
 
-The following code demonstrates how you can compute and plot the effect size.
+This example starts with a ROI based on picking the channel and time window with the highest effect; this is only for didactical reasons. In reality it would be inappropriate to test only the largest observed effect. Rather, in the absence of a a-priori region and/or latency of interest, you should test all channels and time points and correct for multiple comparisons to ensure that you are controlling the false alarm rate.
+
+{% include markup/danger %}
+You should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
+{% include markup/end %}
+
+The following code demonstrates how you can compute the effect size.
 
     % find the interesting segments of data
     cfg = [];
@@ -90,26 +96,22 @@ The following code demonstrates how you can compute and plot the effect size.
     % Very large  1.20
     % Huge        2.00
 
-It is interesting to see how the effect size increases by taking the average over more channels and time points.
-
-    %%
+Averaging over channels and over a wider time range increases the effect size:
 
     chansel = match_str(timelock_FC.label, {'MLF22', 'MLF23', 'MLF32', 'MLF33', 'MLF42', 'MLF43', 'MLF52'});
     timesel = nearest(timelock_FC.time, 0.496607) : nearest(timelock_FC.time, 0.765893);
 
     % now repeat the computation of Cohen's d above
 
-Proper preprocessing of the data also increases the effect size.
-
-    %%
+Proper preprocessing of the data increases the effect size:
 
     cfg = [];
     cfg.method = 'summary';
     data = ft_rejectvisual(cfg, data);
 
     % now repeat the computation of Cohen's d above
-    % this requires the following code for plotting
 
+    % you can use the following code for plotting
     edges = linspace(-0.4, 0.4, 30);
     h1 = histcounts(x1,edges);
     h2 = histcounts(x2,edges);

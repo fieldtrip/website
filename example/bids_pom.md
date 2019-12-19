@@ -327,11 +327,13 @@ The anat, dwi, and fmap directories relate to static/structural data. The func, 
 
 ## Converting the MRI data to BIDS
 
-The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.com/Donders-Institute/bidscoin). Marcel (involved in the POM project and informed about the DICOM sequence details) assisted with the conversion by providig a '.yaml' file.
+The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.com/Donders-Institute/bidscoin). Marcel Zwiers (involved in the POM project and informed about the DICOM sequence details) assisted with the conversion by providing a `.yaml` file.
 
 ## Converting the non-MRI data to BIDS
 
-The conversion of the EMG, eyetracker and behavioral data to BIDS uses [data2bids](/example/data2bids) and follows the [other examples](/example/bids) that you can find on this website. The code is as follows.
+The conversion of the EMG, eye tracker and behavioral data to BIDS uses [data2bids](/example/data2bids) and follows the [other examples](/example/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
+
+The first part of the code is general metadata/documentation and applies to all data:
 
 ```
 sourcepath = './original';
@@ -355,9 +357,11 @@ general.dataset_description.License             = 'n/a';
 general.dataset_description.Acknowledgements    = 'n/a';
 general.dataset_description.Funding             = 'n/a';
 general.dataset_description.ReferencesAndLinks  = {'https://www.parkinsonopmaat.nl'};
+```
 
-%% EMG
+### Converting the EMG files
 
+```
 filename = {
  'POM1FM0023671_rest1.vhdr'
  'POM1FM0023671_task1.vhdr'
@@ -388,9 +392,11 @@ for i=1:numel(filename)
  data2bids(cfg);
 
 end
+```
 
-%% Presentation custom .txt files
+### Converting the Presentation custom .txt files
 
+```
 filename = {
  'POM1FM0031237_prac1_logfile.txt'
  'POM1FM0023671_prac1_logfile.txt'
@@ -434,9 +440,11 @@ for i=1:numel(filename)
  cfg.events = log;
  data2bids(cfg);
 end
+```
 
-%% Presentation standard .log files
+### Converting the Presentation standard .log files
 
+```
 filename = {
  'POM1FM0031237_task1-MotorTaskEv_left.log'
  'POM1FM0023671_task1-MotorTaskEv_right.log'
@@ -461,9 +469,13 @@ for i=1:numel(filename)
 
  data2bids(cfg);
 end
+```
 
-%% SMI eye tracker data, these were converted from the .idf format using the SMI converter software
+### Converting the SMI eye tracker files
 
+Note that the SMI eye tracker files were first converted from the `.idf` format using the SMI converter software, since the `.idf` files cannot be read in MATLAB nor in most other software.
+
+```
 filename = {
  'POM1FM0023671_rest1 Samples.txt'
  'POM1FM0023671_task1 Samples.txt'

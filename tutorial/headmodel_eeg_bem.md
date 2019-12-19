@@ -94,7 +94,7 @@ It is also possible to read in anatomical MRI data in [other formats](/faq/dataf
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the three different tissue types: scalp, skull and brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined).
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_eeg/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
     cfg           = [];
