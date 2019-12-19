@@ -38,7 +38,7 @@ To do parametric or non-parametric statistics on virtual-channel event-related f
 
 We will perform the following steps in this tutorial:
 
-- We will visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. Note that in practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid p-hacking
+- We will visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. Note that in practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
 - We will use the standard MATLAB functions for statistical testing in the channel and time of interest
 - We will use **[ft_timelockstatistics](/reference/ft_timelockstatistics)** for statistical testing in the channel and time of interest
 - We will test all channels and latencies and consider multiple comparison corrections
@@ -207,9 +207,15 @@ We can also plot the differences between conditions, for each subject, in a diff
 
 _Figure; Single subject results, averaged for the channel of interest and the time window of interest_
 
+{% include markup/danger %}
+We are starting with a single-channel analysis here for purely didactical reasons, i.e. start with a simple test without multiple comparisons, and then build up the complexity by adding multiple time points and parcels.
+
+In practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
+{% include markup/end %}
+
 #### T-test with MATLAB function
 
-You can do a dependent samples t-test with the MATLAB ttest.m function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of 2.4332 and a p-value of 0.029.
+You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathworks.com/help/stats/ttest.html) function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of 2.4332 and a p-value of 0.029.
 
     % dependent samples ttest
     famous_minus_scrambled = values_famous - values_scrambled;
@@ -248,7 +254,7 @@ Look at the temporal evolution of the effect by changing cfg.latency and cfg.avg
 
 ### Multiple comparisons
 
-In the previous paragraph we picked a channel/parcel and time window by hand after eyeballing the effect. If you would like to test the significance of the effect in all channels/parcels you could make a for-loop over channels.
+In the previous paragraph we picked a channel/parcel and time window by hand after eyeballing the effect. If you would like to test the significance of the effect in all channels/parcels, you could make a for-loop over channels.
 
     time = [0.150 0.200];
     timesel = find(grandavg_famous.time >= time(1) & grandavg_famous.time <= time(2));
@@ -472,5 +478,5 @@ Explain why the results of the cluster-based permutation test are not showing th
 Although the distribution of the p-values can be informative to learn something about the distribution of the effect, the decision to reject the null-hypothesis is only based on the "largest" cluster, i.e. the most unlikely piece of evidence that you have against the H0.
 
 {% include markup/warning %}
-If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
+To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}

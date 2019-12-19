@@ -50,7 +50,7 @@ We use Google to provide the search functionality on the website and discussion 
 
 ## Ftp
 
-We use the DCCN [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/) to distribute the software releases and tutorial data.
+We use the DCCN [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/) to distribute the software releases and tutorial data.
 
 ## Central storage
 

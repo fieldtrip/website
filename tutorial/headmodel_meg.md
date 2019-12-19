@@ -7,7 +7,7 @@ tags: [tutorial, source, meg, headmodel, mri, plot, meg-language]
 
 ## Introduction
 
-This tutorial describes how to construct a volume conduction model of the head (head model) based on an indivdual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the preprocessing and averaging tutorials ([Trigger-based trial selection](/tutorial/preprocessing), [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). The corresponding anatomical MRI data is available from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+This tutorial describes how to construct a volume conduction model of the head (head model) based on an indivdual subject's MRI. We will use the anatomical images that belong to the same subject whose data were analyzed in the preprocessing and averaging tutorials ([Trigger-based trial selection](/tutorial/preprocessing), [Event related averaging and planar gradient](/tutorial/eventrelatedaveraging)). The corresponding anatomical MRI data is available from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 
 The volume conduction model of the head that will be constructed here is specific to the computation and source reconstruction of MEG data. Different strategies can be used for the construction of head models. The processing pipeline of the tutorial is an example which we think is the most appropriate for the tutorial-dataset.
 
@@ -85,7 +85,7 @@ When you read in your own anatomical data, it may not give information on the co
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into [different tissue types](/faq/how_is_the_segmentation_defined) . By default, the gray matter, white matter and the cerebro-spinal fluid (csf) compartments are differentiated. Based on these compartments a so called brainmask is created, which is a binary mask of the content inside the skull. All voxels that are inside the skull (i.e. the complete brain) are represented by 1, all other voxels by 0. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output.
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_meg/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
     cfg           = [];

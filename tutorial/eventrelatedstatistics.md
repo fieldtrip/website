@@ -38,9 +38,9 @@ To do parametric or non-parametric statistics on event-related fields in a withi
 
 We will perform the following steps to do a statistical test in FieldTrip:
 
-- We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. Note that in practice you should *not* guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid p-hacking
-- To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function
-- We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoplotER)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used)
+- We can visually inspect the data and look where are differences between the conditions by plotting the grand-averages and subject-averages using the **[ft_multiplotER](/reference/ft_multiplotER)**, the **[ft_singleplotER](/reference/ft_singleplotER)** and the MATLAB plot functions. Note that in practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
+- To do any kind of statistical testing (parametric or non-parametric, with or without multiple comparison correction) we will use the **[ft_timelockstatistics](/reference/ft_timelockstatistics)** function.
+- We can plot a schematic head with the channels of the significant effect with the **[ft_topoplotER](/reference/ft_topoplotER)** function or optionally with the **[ft_clusterplot](/reference/ft_clusterplot)** function (in case cluster-based non-parametric statistics was used).
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/ft_stat_tutorial2.png" %}
 
@@ -49,13 +49,13 @@ _Figure 1: Pipeline of statistical testing. All analysis steps in the gray boxes
 ## Reading-in preprocessed and time-locked data in planar gradient format, and grand averaged data
 
 We now describe how we can statistically test the difference between the event-related averages for fully incongruent (FIC) and the fully congruent (FC) sentence endings. For this analysis we use planar gradient data. For convenience we will not do the reading-in and preprocessing steps on all subjects. Instead we begin by loading the timelock structures containing the event-related averages (of the planar gradient data) of all ten subjects. You can download the [subject averages](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedstatistics/ERF_orig.mat).
-We will also make use of the function [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage) to calculate the grand average (average across subjects) and plot it to visually inspect the data
+We will also make use of the function **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)** to calculate the grand average (average across subjects) and plot it to visually inspect the data
 
       load ERF_orig;    % averages for each individual subject, for each condition
 
 ERF_orig contains allsubjFIC and allsubjFC, each storing the event-related averages for the fully incongruent, and the fully congruent sentence endings, respectively.
 
-The format for these variables, are a prime example of how you should organise your data to be suitable for ft_XXXstatistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function [ft_timelockanalysis](/reference/ft_timelockanalysis). Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
+The format for these variables, are a prime example of how you should organise your data to be suitable for ft_XXXstatistics. Specifically, each variable is a cell-array of structures, with each subject's averaged stored in one cell. To create this data structure two steps are required. First, the single-subject averages were calculated individually for each subject using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. Second, using a for-loop we have combined the data from each subject, within each condition, into one variable (allsubj_FIC/allsubj_FC). We suggest that you adopt this procedure as well.
 
 On a technical note, it is preferred to represent the multi-subject data as a cell-array of structures, rather than a so-called struct-array. The reason for this is that the cell-array representation allows for easy expansion into a MATLAB function that allows for a variable number of input arguments (which is how the ft_XXXstatistics functions have been designed).
 
@@ -65,9 +65,9 @@ On a technical note, it is preferred to represent the multi-subject data as a ce
 
 #### Plotting the grand-average and the subject-averages
 
-As you might be familiar with, it is always a good idea to visually inspect your data prior to applying any statistical analyses. Below we show a couple ways of plotting data: the grand average (averaged across all subjects) for all sensors and one specific sensor, as well as plotting the individual average for multiple subjects next to each other.
+It is a good idea to visually inspect your data at the different stages of your analysis, including prior to applying any statistical analyses. Below we show a couple ways of plotting data: the grand average (averaged across all subjects) for all sensors and one specific sensor, as well as plotting the individual average for multiple subjects next to each other.
 
-To begin with we will compute the grand average data using [ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)
+To begin with we will compute the grand average data using **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**
 
     % load individual subject data
     load('ERF_orig');
@@ -122,7 +122,7 @@ From the grand average plot we can zoom in on our comparison of interest and onl
 
 From the individual plots and grand average plots above, it seems that between 300ms and 700ms there is a difference between the two conditions in channel MLT12 (channel 52).
 
-We can also plot the differences between conditions, for each subject, in a different manner to further highlight the difference between conditions, using the code belo
+We can also plot the differences between conditions, for each subject, in a different manner to further highlight the difference between conditions, using the code below:
 
     chan = 52;
     time = [0.3 0.7];
@@ -138,16 +138,22 @@ We can also plot the differences between conditions, for each subject, in a diff
     end
 
     % plot to see the effect in each subject
-    M = [values_FC',values_FIC'];
-    figure; plot(M','o-'); xlim([0.5 2.5])
+    M = [values_FC(:) values_FIC(:)];
+    figure; plot(M', 'o-'); xlim([0.5 2.5])
     legend({'subj1', 'subj2', 'subj3', 'subj4', 'subj5', 'subj6', ...
-            'subj7', 'subj8', 'subj9', 'subj10'}, 'location','EastOutside');
+            'subj7', 'subj8', 'subj9', 'subj10'}, 'location', 'EastOutside');
 
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/mlt12_300to700ms_allsubj_fc_fic.png" width="400" %}
 
+{% include markup/danger %}
+We are starting here with a single-channel analysis here for purely didactical reasons, i.e. start with a simple test without multiple comparisons, and then build up the complexity by adding multiple time points and channels.
+
+In practice you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
+{% include markup/end %}
+
 #### T-test with MATLAB function
 
-You can do a dependent samples t-test with the MATLAB ttest.m function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of -4.9999 and a p-value of 0.00073905.
+You can do a dependent samples t-test with the MATLAB [ttest](https://www.mathworks.com/help/stats/ttest.html) function (in the Statistics toolbox) where you average over this time window for each condition, and compare the average between conditions. From the output, we look at the output variable 'stats' and see that the effect on the selected time and channel is significant with a t-value of -4.9999 and a p-value of 0.00073905.
 
     %dependent samples ttest
     FCminFIC = values_FC - values_FIC;
@@ -311,19 +317,18 @@ Also in the non-parametric approach for testing of statistical significance diff
 
 FieldTrip also implements a special way to correct for multiple comparisons, which makes use of the feature in the data that the effects at neighbouring timepoints and sensors are highly correlated. For more details see the cluster permutation tutorials for [ERFs](/tutorial/cluster_permutation_timelock) and [time frequency data](/tutorial/cluster_permutation_freq) and the publication by [Maris and Oostenveld (2007)](/references_to_implemented_methods#statistical_inference_by_means_of_permutation).
 
-This method requires you to define neighbouring sensors. FieldTrip has a function that can do that for you called [ft_prepare_neighbours](/reference/ft_prepare_neighbours). The following example will construct a neighbourhood structure and show which channels are defined as neighbours:
+This method requires you to define neighbouring sensors. FieldTrip has a function that can do that for you called **[ft_prepare_neighbours](/reference/ft_prepare_neighbours)**. The following example will construct a neighbourhood structure and show which channels are defined as neighbours:
 
     cfg = [];
-    cfg.method      = 'template'; % try 'distance' as well
+    cfg.method      = 'template';                        % try 'distance' as well
     cfg.template    = 'ctf151_neighb.mat';               % specify type of template
     cfg.layout      = 'CTF151_helmet.mat';               % specify layout of sensors*
     cfg.feedback    = 'yes';                             % show a neighbour plot
     neighbours      = ft_prepare_neighbours(cfg, GA_FC); % define neighbouring channels
 
     % note that the layout and template fields have to be entered because at the earlier stage
-
-% when ft_timelockgrandaverage is called the field 'grad' is removed. It is this field that holds
-% information about the (layout of the) sensors.
+    % when ft_timelockgrandaverage is called the field 'grad' is removed. It is this field that
+    % holds information about the (layout of the) sensors.
 
     cfg = [];
     cfg.channel     = 'MEG';
@@ -406,9 +411,7 @@ So far we predefined a time window over which the effect was averaged, and teste
 {% include image src="/assets/img/tutorial/eventrelatedstatistics/depttest_nonpara_fieldtrip_cluster_fig4.png" width="400" %}
 
 {% include markup/info %}
-If you want to write up your results for a manuscript, you should check the guidelines on this page: [How NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
-
-And be sure to cite the relevant papers (Robert Oostenveld's FieldTrip paper and the Eric Maris' cluster-based permutation paper) in your methods section!
+To properly write up your results in a manuscript, you should check the guidelines on [how NOT to interpret results from a cluster-based permutation test](/faq/how_not_to_interpret_results_from_a_cluster-based_permutation_test).
 {% include markup/end %}
 
 ## Summary and suggested further reading

@@ -117,7 +117,7 @@ _Figure 3. Mri plotted before reslicement (left) and after reslicement (right)_
 In this step, the voxels of the anatomical MRI are segmented (i.e. separated) into the five different tissue types: scalp, skull, csf (cerebro-spinal fluid), gray and white matter. These latest three tissues belong to the brain. The function **[ft_volumesegment](/reference/ft_volumesegment)** will produce the required output. You can read more about how the tissue-types are represented in the output of this function in this [FAQ](/faq/how_is_the_segmentation_defined). The segmentation should contain a binary representation of 5 tissue types which do not overlap.
 
 {% include markup/warning %}
-Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
+Note that the segmentation is quite time consuming (~15mins) and if you want you can load the result and skip ahead to the next step. You can download the segmented MRI of this tutorial data from the from the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/segmentedmri.mat) (segmentedmri.mat).
 {% include markup/end %}
 
     cfg           = [];
@@ -204,7 +204,7 @@ At the moment FieldTrip only supports hexahedrons for FEM modeling.
 ## Head model
 
 Gray and white matter, csf, skull and skin has been differentiated in the geometrical description of the head. Now, we will create the volume conduction model. We will specify method 'simbio' in the cfg.method field of **[ft_prepare_headmodel](/reference/ft_prepare_headmodel)**. This methods also requires to specify the conductivities for each tissue-types.
-The vol can also be downloaded here [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/vol.mat).
+The vol can also be downloaded here [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/headmodel_fem/vol.mat).
 
     cfg        = [];
     cfg.method ='simbio';

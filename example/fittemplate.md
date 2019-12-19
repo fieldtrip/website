@@ -13,7 +13,7 @@ In this example we will show a few ways on how to create an individual head mode
 
 ## Download
 
-These approaches will be demonstrated using the same dataset, which you can find on the [ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). More information on this dataset can be found [here](/tutorial/epilepsy/).
+These approaches will be demonstrated using the same dataset, which you can find on the [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/epilepsy). More information on this dataset can be found [here](/tutorial/epilepsy/).
 
 ## Loading the data
 
