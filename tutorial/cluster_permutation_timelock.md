@@ -66,7 +66,7 @@ Then we also extract the trials of the fully congruent condition.
 
 Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
 
-To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** you can get it here from our ftp server:[dataFIC_LP](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFIC_LP.mat) and [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFC_LP.mat).
+To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** you can get it here from our FTP server: [dataFIC_LP](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFIC_LP.mat) and [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/dataFC_LP.mat).
 
     load dataFIC_LP
     load dataFC_LP
@@ -79,7 +79,8 @@ To obtain the preprocessed data required by **[ft_timelockanalysis](/reference/f
 ### Permutation test
 
 Cluster-level permutation tests for event-related fields are performed by the function **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. This function takes as its input arguments a configuration structure(cfg) and two or more data structures. These data structures must be produced by **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**, which all operate on preprocessed data. The argument list of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** must contain one data structure for every experimental condition. For comparing the data structures timelockFIC and timelockFC, you must call **[ft_timelockstatistics](/reference/ft_timelockstatistics)** as follows:
-[stat] = ft_timelockstatistics(cfg, timelockFIC, timelockFC);
+
+    [stat] = ft_timelockstatistics(cfg, timelockFIC, timelockFC);
 
 #### The configuration settings
 
@@ -194,7 +195,7 @@ It is possible that the p-values in your output are a little bit different from 
 
 ### Plotting the results
 
-To plot the results of the permutation test, we use the plotting function **[ft_topoplotER](/reference/ft_topoplotER)**. In doing so, we will plot a topography of the difference between the two experimental conditions (FC and FIC). Atop that, and for each timestep of interest, we'll highlight the sensors which are members of significant clusters. First, however, we must calculate the difference between conditions using **[ft_math](/reference/ft_math)**.
+To plot the results of the permutation test, we use the plotting function **[ft_topoplotER](/reference/ft_topoplotER)**. In doing so, we will plot a topography of the difference between the two experimental conditions (FIC and FC). Atop that, and for each timestep of interest, we will highlight the sensors which are members of significant clusters. First, however, we must calculate the difference between conditions using **[ft_math](/reference/ft_math)**.
 
     cfg = [];
     avgFIC = ft_timelockanalysis(cfg, dataFIC_LP);
@@ -204,7 +205,7 @@ To plot the results of the permutation test, we use the plotting function **[ft_
     cfg  = [];
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
-    raweffectFICvsFC = ft_math(cfg,avgFIC,avgFC);
+    raweffectFICvsFC = ft_math(cfg, avgFIC, avgFC);
 
 We then construct a boolean matrix indicating membership in the significant clusters. This matrix has size [Number_of_MEG_channels x Number_of_temporal_samples], like stat.posclusterslabelmat. We'll make two such matrices: one for positive clusters (named pos), and one for negative (neg). All (channel,time)-pairs belonging to the significant clusters will be coded in the new boolean matrix as 1, and all those that don't will be coded as 0.
 
@@ -343,7 +344,7 @@ We now calculate the raw effect in the average with planar gradient data using t
     cfg = [];
     cfg.operation = 'subtract'
     cfg.parameter = 'avg';
-    raweffectFICvsFC     = ft_math(cfg,avgFIC_planar_cmb,avgFC_planar_cmb);
+    raweffectFICvsFC     = ft_math(cfg, avgFIC_planar_cmb, avgFC_planar_cmb);
 
 Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels belonging to the significant cluster
 
@@ -475,8 +476,8 @@ For plotting we first use [ft_timelockgrandaverage](/reference/ft_timelockgranda
     cfg.channel   = 'all';
     cfg.latency   = 'all';
     cfg.parameter = 'avg';
-    GA_FC         = ft_timelockgrandaverage(cfg,allsubjFC{:});
-    GA_FIC        = ft_timelockgrandaverage(cfg,allsubjFIC{:});
+    GA_FIC        = ft_timelockgrandaverage(cfg, allsubjFIC{:});
+    GA_FC         = ft_timelockgrandaverage(cfg, allsubjFC{:});
     % "{:}" means to use data from all elements of the variable
 
 With the output, we can now create the plots
@@ -484,13 +485,13 @@ With the output, we can now create the plots
     cfg = [];
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
-    GA_FICvsFC = ft_math(cfg,GA_FIC,GA_FC);
+    GA_FICvsFC = ft_math(cfg, GA_FIC, GA_FC);
 
     figure;
     % define parameters for plotting
     timestep = 0.05;      %(in seconds)
     sampling_rate = dataFIC_LP.fsample;
-    sample_count = length(stat.time);
+    sample_count  = length(stat.time);
     j = [0:timestep:1];   % Temporal endpoints (in seconds) of the ERP average computed in each subplot
     m = [1:timestep*sampling_rate:sample_count];  % temporal endpoints in M/EEG samples
     % get relevant (significant) values
