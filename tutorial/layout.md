@@ -194,7 +194,7 @@ vertical.
 You can also use the raw or processed iEEG data to specify channel names. For
 example the dataset used in the [ECoG and sEEG tutorial](/tutorial/human_ecog) has
 sEEG electrode shafts that start with the letters LAM, LHH, LTH, RAM, RHH, RTH and
-ROC. You can download the spectrally analyzed data from the [FieldTrip ftp server
+ROC. You can download the spectrally analyzed data from the [FieldTrip FTP server
 (SubjectUCI29_freq.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/human_ecog/SubjectUCI29/SubjectUCI29_freq.mat)
 and use the following
 

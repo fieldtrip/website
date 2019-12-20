@@ -86,7 +86,7 @@ After each of the automated steps the results should be checked. For that I have
 It is important that you use appropriate tools. Command line utilities are very handy, but also a good graphical (code) editor that allows you to navigate through the full directory structure and check the file content. I have been using the Atom editor with the network directory mounted on my desktop computer. There are good [alternatives](https://alternativeto.net/software/atom/).
 
 {% include markup/info %}
-The scripts are included on this page for completeness. You can also download them from our ftp server at <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_mous/>
+The scripts are included on this page for completeness. You can also download them from our FTP server at <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/example/bids_mous/>
 {% include markup/end %}
 
 ### Step 1: create empty directory structure

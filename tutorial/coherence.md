@@ -94,7 +94,7 @@ Note, that due to the artifact rejection, this procedure is very slow and we typ
 
     save data data
 
-The preprocessed data is available as a mat-file from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this:
+The preprocessed data is available as a mat-file from the [FieldTrip FTP server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/coherence/data.mat) and you can skip the preprocessing above by loading the data like this:
 
     load data
 

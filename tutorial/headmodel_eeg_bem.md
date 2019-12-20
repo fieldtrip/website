@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plot, meg-language]
 
 ## Introduction
 
-In this tutorial you can find information about how to construct a Boundary Element Method (BEM) volume conduction model of the head (head model) based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
+In this tutorial you can find information about how to construct a Boundary Element Method (BEM) volume conduction model of the head (head model) based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip).
 
 The volume conduction model shown here is EEG specific. In reality, we do not have corresponding EEG data to the anatomical MRI we use in this tutorial, but we will use a template EEG set to demonstrate how to build a head model for EEG and how to align the electrodes to anatomical data. Different strategies can be used for the construction of head models. The processing pipeline of the tutorial is an example which we think is the most appropriate for the tutorial-dataset.
 

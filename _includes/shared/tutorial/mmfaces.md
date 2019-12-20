@@ -4,7 +4,7 @@ The "mmfaces" dataset contains EEG, MEG, functional MRI and structural MRI data 
 
 The original multimodal dataset included simultaneous MEG/EEG recordings on 19 healthy subjects. In the original study, three subjects (sub001, sub005, sub016) were excluded from further analysis.
 
-The dataset used to be available from the [MRC-CBU ftp server](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/), but is nowadays maintained on [OpenNeuro](https://openneuro.org/datasets/ds000117).
+The dataset used to be available from the [MRC-CBU FTP server](ftp://ftp.mrc-cbu.cam.ac.uk/personal/rik.henson/wakemandg_hensonrn/), but is nowadays maintained on [OpenNeuro](https://openneuro.org/datasets/ds000117).
 
 ### Stimulation details
 

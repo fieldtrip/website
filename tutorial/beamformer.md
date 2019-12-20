@@ -52,7 +52,7 @@ _Figure: The time-frequency presentation used to determine the time- and frequen
 
 ### Time windows of interest
 
-Now we select the time windows of interest: the pre- and post stimulus windows. This requires the preprocessed data (see above), which is available from the [FieldTrip ftp server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data with the following comman
+Now we select the time windows of interest: the pre- and post stimulus windows. This requires the preprocessed data (see above), which is available from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data with the following comman
 
     load dataFIC
 
@@ -116,7 +116,7 @@ Otherwise, segmentation involves the following steps ((**[ft_volumesegment](/ref
     cfg.write      = 'no';
     [segmentedmri] = ft_volumesegment(cfg, mri);
 
-Alternatively, you can load the segmented MRI available from the [FieldTrip ftp server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat)
+Alternatively, you can load the segmented MRI available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat)
 
     load segmentedmri
 
@@ -179,7 +179,7 @@ Save the output:
 
     save sourcePost_nocon sourcePost_nocon
 
-The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip ftp server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also is available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
+The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip FTP server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also is available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
 
     load sourcePost_nocon
 

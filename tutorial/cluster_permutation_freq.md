@@ -90,7 +90,7 @@ This requires preprocessed data (see above), which is also available from the Fi
     dataFIC_planar = ft_megplanar(cfg, dataFIC);
     dataFC_planar  = ft_megplanar(cfg, dataFC);
 
-Without a prior hypothesis (i.e., an hypothesis that is independent of the present data), we must test the difference between the FC and the FIC condition for all frequency bands that may be of interest. However, such an analysis is not suited as a first step in a tutorial. Therefore, we assume that we have a prior hypothesis about the frequency band in which the FC and FIC condition may differ. This frequency band is centered at 20 Hz. We will now investigate if there is a difference between the FC and the FIC condition at this frequency. To calculate the TFRs, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with the configuration below. See the [tutorial Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) for an explanation of the settings. Note that cfg.keeptrials = ‘yes’, which is necessary for the subsequent statistical analysis.
+Without a prior hypothesis (i.e., an hypothesis that is independent of the present data), we must test the difference between the FIC and the FC condition for all frequency bands that may be of interest. However, such an analysis is not suited as a first step in a tutorial. Therefore, we assume that we have a prior hypothesis about the frequency band in which the FIC and FC condition may differ. This frequency band is centered at 20 Hz. We will now investigate if there is a difference between the FIC and the FC condition at this frequency. To calculate the TFRs, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with the configuration below. See the [tutorial Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) for an explanation of the settings. Note that cfg.keeptrials = ‘yes’, which is necessary for the subsequent statistical analysis.
 
     cfg = [];
     cfg.output     = 'pow';
@@ -102,10 +102,10 @@ Without a prior hypothesis (i.e., an hypothesis that is independent of the prese
     cfg.t_ftimwin  = 7./cfg.foi; %7 cycles
     cfg.keeptrials = 'yes';
 
-Calculate the TFRs for the two experimental conditions (FC and FIC).
+Calculate the TFRs for the two experimental conditions (FIC and FC).
 
-    freqFC_planar  = ft_freqanalysis(cfg, dataFC_planar);
     freqFIC_planar = ft_freqanalysis(cfg, dataFIC_planar);
+    freqFC_planar  = ft_freqanalysis(cfg, dataFC_planar);
 
 Finally, we calculate the combined planar gradient and copy the gradiometer structure in the new datasets.
 
@@ -193,30 +193,29 @@ _Figure 1: Raw effect (FIC-FC) and channel-time cluster of planar gradient TFRs 
 
 ## Within trial experiments
 
-We will now show how to statistically test the difference between the TFRs in the pre-stimulus (baseline) and the post-stimulus (activation) period of the fully incongruent sentence endings.
-To perform this comparison by means of a permutation test, we have to select equal-length non-overlapping time intervals in the baseline and the activation period. For the baseline period we choose [-1 0], which is the time interval from 1 to 0 seconds before stimulus onset. And for the activation period we choose [0.6 1.6], which is the time interval from 0.6 to 1.6 seconds after stimulus onset.
+We will now show how to statistically test the difference between the TFRs in the post-stimulus (activation) and the pre-stimulus (baseline) period of the fully incongruent sentence endings. To perform this comparison by means of a permutation test, we have to select equal-length non-overlapping time intervals in the activation and the baseline period. For the activation period we choose [0.6 1.6], which is the time interval from 0.6 to 1.6 seconds after stimulus onset. and for the baseline period we choose [-1 0], which is the time interval from 1 to 0 seconds before stimulus onset.
 
-It must be stressed that the time windows we choose to compare are **nonoverlapping** and of **equal length**. This constraint follows from the null hypothesis that is tested with a permutation test. This null hypothesis involves that the data (spatiotemporal matrices) observed in the two experimental conditions are drawn from the same probability distribution. This null hypothesis only makes sense if the dimensions of the data matrices in the two experimental conditions are equal. In other words, the number of channels and the number of time points of these spatiotemporal data matrices must be equal. This also applies to a within trials experiment in which a baseline and an activation condition are compared: the number of channels and time points of the baseline and the activation data matrices must be equal.
+It must be stressed that the time windows we choose to compare are **nonoverlapping** and of **equal length**. This constraint follows from the null hypothesis that is tested with a permutation test. This null hypothesis involves that the data (spatiotemporal matrices) observed in the two experimental conditions are drawn from the same probability distribution. This null hypothesis only makes sense if the dimensions of the data matrices in the two experimental conditions are equal. In other words, the number of channels and the number of time points of these spatiotemporal data matrices must be equal. This also applies to a within trials experiment in which an activation and a baseline condition are compared: the number of channels and time points of the two data matrices must be equal.
 
 ### Preprocessing and freqanalysis on planar data
 
-We first select equal-length non-overlapping time intervals in the baseline and the activation period. For the baseline period we choose [-1 0], the time interval from 1 to 0 seconds before stimulus onset. And for the activation period we choose [0.6 1.6], the time interval from 0.6 to 1.6 seconds after stimulus onset. We will again focus on the power in the beta band (around 20 Hz).
+We first select equal-length non-overlapping time intervals in the activation and the baseline period. For the activation period we choose [0.6 1.6], the time interval from 0.6 to 1.6 seconds after stimulus onset. We will again focus on the power in the beta band (around 20 Hz). And for the baseline period we choose [-1 0], the time interval from 1 to 0 seconds before stimulus onset.
 
-We now calculate the TFRs for the baseline and the activation period. We use again the preprocessed dataFIC (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat)).
+We now calculate the TFRs for the activation and the baseline period. We use again the preprocessed dataFIC (see above or download from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/dataFIC.mat)).
 
     load dataFIC
 
 To calculate the TFRs with the planar gradient, we first cut out the time intervals of interest with the function **[ft_redefinetrial](/reference/ft_redefinetrial)**.
 
     cfg = [];
-    cfg.toilim = [-1.0 0];
-    dataFIC_baseline = ft_redefinetrial(cfg, dataFIC);
-
-    cfg = [];
     cfg.toilim = [0.6 1.6];
     dataFIC_activation = ft_redefinetrial(cfg, dataFIC);
 
-**[ft_freqstatistics](/reference/ft_freqstatistics)** will always compare data at the same time point, and therefore you get an error if you try to statistically test differences between data structures with non-overlapping time axes. This implies that, in order to statistically test the differences between baseline and activation period data, we have to trick the function by making the time axis the same. We do this by copying the time axis of dataFIC_activation onto dataFIC_baseline.
+    cfg = [];
+    cfg.toilim = [-1.0 0];
+    dataFIC_baseline = ft_redefinetrial(cfg, dataFIC);
+
+**[ft_freqstatistics](/reference/ft_freqstatistics)** will always compare data at the same time point, and therefore you get an error if you try to statistically test differences between data structures with non-overlapping time axes. This implies that, in order to statistically test the differences between activation and baseline period data, we have to trick the function by making the time axis the same. We do this by copying the time axis of dataFIC_activation onto dataFIC_baseline.
 
     dataFIC_baseline.time = dataFIC_activation.time;
 
@@ -259,12 +258,12 @@ To save:
 
 ### Permutation test
 
-To load the planar gradient TFRs (download from FieldTrip FTP, [freqFIC_baseline_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_baseline_planar_cmb.mat) and [freqFIC_activation_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_activation_planar_cmb.mat)), us
+You can download the planar gradient TFRs from the FieldTrip FTP server: [freqFIC_activation_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_activation_planar_cmb.mat)) and [freqFIC_baseline_planar_cmb.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/freqFIC_baseline_planar_cmb.mat). To load them, use:
 
-    load freqFIC_baseline_planar_cmb
     load freqFIC_activation_planar_cmb
+    load freqFIC_baseline_planar_cmb
 
-To compare freqFIC_baseline_planar_cmb and freqFIC_activation_planar_cmb by means of **[ft_freqstatistics](/reference/ft_freqstatistics)**, we use the following configuration:
+To compare freqFIC_activation_planar_cmb and freqFIC_baseline_planar_cmb by means of **[ft_freqstatistics](/reference/ft_freqstatistics)**, we use the following configuration:
 
     cfg = [];
     cfg.channel          = {'MEG', '-MLP31', '-MLO12'};
@@ -301,7 +300,7 @@ You can read more about the **[ft_prepare_neighbours](/reference/ft_prepare_neig
 
 We can now run **[ft_freqstatistics](/reference/ft_freqstatistics)**
 
-`[stat] = ft_freqstatistics(cfg, freqFIC_activation_planar_cmb, freqFIC_baseline_planar_cmb);`
+    [stat] = ft_freqstatistics(cfg, freqFIC_activation_planar_cmb, freqFIC_baseline_planar_cmb);
 
 Save the output:
 
@@ -318,10 +317,10 @@ By inspecting stat.posclusters and stat.negclusters, you will see that there is 
 This time we will plot the largest cluster on top of the statistics, which are present in the .stat field.
 
     cfg = [];
-    cfg.alpha  = 0.025;
+    cfg.alpha     = 0.025;
     cfg.parameter = 'stat';
-    cfg.zlim   = [-4 4];
-    cfg.layout = 'CTF151_helmet.mat';
+    cfg.zlim      = [-4 4];
+    cfg.layout    = 'CTF151_helmet.mat';
     ft_clusterplot(cfg, stat);
 
 {% include image src="/assets/img/tutorial/cluster_permutation_freq/clusperm_freq_topos_20hz_fic_actvsbl_plan_subj1_clusterplot.png" %}
@@ -332,7 +331,7 @@ _Figure 2: Largest cluster that shows a difference between activation and baseli
 
 In this paragraph we describe permutation testing for TFRs obtained in experiments involving multiple subjects that are each observed in multiple experimental conditions. Every subject is observed in a large number of trials, each one belonging to one experimental condition. For every subject, averages are computed over all trials belonging to each of the experimental conditions. Thus, for every subject, the data are summarized in an array of condition-specific averages. The permutation test that will be described in the following informs us about the following null hypothesis: the probability distribution of the condition-specific averages is identical for all experimental conditions.
 
-### Preprocessing, planar gradient and grandaverage
+### Preprocessing, planar gradient and grand average
 
 To test the difference between the average TFRs for fully incongruent (FIC) and fully congruent (FC) sentence endings we use planar gradient data. To load the data structures containing time frequency grand averages of all ten subjects (available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/GA_TFR_orig.mat)), use:
 
@@ -365,10 +364,10 @@ We now perform the permutation test using **[ft_freqstatistics](/reference/ft_fr
     subj = 10;
     design = zeros(2,2*subj);
     for i = 1:subj
-    design(1,i) = i;
+      design(1,i) = i;
     end
     for i = 1:subj
-    design(1,subj+i) = i;
+      design(1,subj+i) = i;
     end
     design(2,1:subj)        = 1;
     design(2,subj+1:2*subj) = 2;
@@ -381,7 +380,7 @@ We now perform the permutation test using **[ft_freqstatistics](/reference/ft_fr
 
 Save the output:
 
-    save stat_freq_planar_FICvsFC_GA stat;
+    save stat_freq_planar_FICvsFC_GA stat
 
 The output can also be obtained from [stat_freq_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_freq/stat_freq_planar_FICvsFC_GA.mat). If you need to reload the statistics output, us
 

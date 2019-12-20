@@ -202,7 +202,7 @@ Using the value and timestamp fields, we built a user-specified function that co
       end
     end
 
-For the purpose of walking through the tutorial, you should copy and paste the code above in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
+For the purpose of walking through the tutorial, you should copy and paste the code above in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
 
 We then call **[ft_definetrial](/reference/ft_definetrial)**
 

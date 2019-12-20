@@ -47,7 +47,7 @@ In short, the dataset consists of combined MEG and EMG recordings while the subj
 
 We start with determining the motor cortex as the region of interest. At the [end of the coherence tutorial](/tutorial/coherence#appendix_1localisation_of_neuronal_sources_coherent_with_the_emg_using_beamformers) it is demonstrated how to make a 3-D reconstruction of the cortico-muscolar coherence (CMC) using the DICS algorithm. That source reconstruction serves as starting point for this analysis.
 
-You can download the result from the DICS reconstruction from the [FieldTrip ftp server (source.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/source.mat)
+You can download the result from the DICS reconstruction from the [FieldTrip FTP server (source.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/source.mat)
 
 We will first determine the position on which the cortico-muscular coherence is the largest.
 
@@ -65,7 +65,7 @@ The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually ap
 
 The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-Rather than doing all the preprocessing again, you can download the preprocessed data from the [FieldTrip ftp server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)
+Rather than doing all the preprocessing again, you can download the preprocessed data from the [FieldTrip FTP server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)
 
     load data
 

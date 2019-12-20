@@ -37,7 +37,7 @@ This tutorial will focus on the first way, and briefly mention the second. Both 
 
 The output of ft_definetrial is a configuration structure containing the field cfg.trl. This is a matrix representing the relevant parts of the raw datafile which are to be selected for further processing. Each row in the `trl` matrix represents a single epoch-of-interest, and the `trl` matrix has at least 3 columns. The first column defines (in samples) the beginpoint of each epoch with respect to how the data are stored in the raw datafile. The second column defines (in samples) the endpoint of each epoch, and the third column specifies the offset (in samples) of the first sample within each epoch with respect to timepoint 0 within that epoch.
 
-We will demonstrate reading in data based on the localizer task for the experiment that was described at the start. These data are available from the [FieldTrip ftp server (SubjectCMC.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). In this localizer task, a simple cue was presented 50 times, instructing the participant to lift the left or right wrist and keep the muscle contracted for 10 seconds. We will use the default trialfun `ft_trialfun_general` to define trials based on the triggers sent alongside these cues. We want to read in 1s of data before each trigger, and 10s of data after each trigger. This is achieved by the following:
+We will demonstrate reading in data based on the localizer task for the experiment that was described at the start. These data are available from the [FieldTrip FTP server (SubjectCMC.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/SubjectCMC.zip). In this localizer task, a simple cue was presented 50 times, instructing the participant to lift the left or right wrist and keep the muscle contracted for 10 seconds. We will use the default trialfun `ft_trialfun_general` to define trials based on the triggers sent alongside these cues. We want to read in 1s of data before each trigger, and 10s of data after each trigger. This is achieved by the following:
 
     cfg = [];
     cfg.dataset = 'SubjectCMC.ds';
@@ -76,7 +76,7 @@ For the rest of this tutorial we will be focusing on the data that were recorded
     clear data;
     load subjectK;
 
-The data file is available from the [FieldTrip ftp server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Loading this will give you two data structures in your workspace: data_left, containing the trials where the subjects had to respond with the left wrist; and data_right, where the right wrist was cued.
+The data file is available from the [FieldTrip FTP server (subjectK.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sensor_analysis/subjectK.mat). Loading this will give you two data structures in your workspace: data_left, containing the trials where the subjects had to respond with the left wrist; and data_right, where the right wrist was cued.
 
 Take a look at one of the data structure
 
