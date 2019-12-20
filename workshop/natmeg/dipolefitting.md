@@ -45,7 +45,7 @@ To fit the dipole models to the data, we will perform the following steps:
 
 ### Read and visualise the anatomical data
 
-We start with the anatomical MRI data, which comes directly from the scanner in DICOM format. You can download the [dicom.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/dicom.zip) from our ftp server. We suggest that you unzip the dicom files in a separate directory.
+We start with the anatomical MRI data, which comes directly from the scanner in DICOM format. You can download the [dicom.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/dicom.zip) from our FTP server. We suggest that you unzip the dicom files in a separate directory.
 
 DICOM datasets consist of a large number of files, one per slice. As filename you have to specify a single file, the reading function will automatically determine which other slices are part of the same anatomical volume and put them in the correct order.
 
@@ -54,7 +54,7 @@ DICOM datasets consist of a large number of files, one per slice. As filename yo
 
 We also read the geometrical data from the fif file. It contains information about the MEG magnetometer and gradiometer positions (the “grad” structure), about the EEG electrodes (the “elec” structure) and about the head shape.
 
-The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server.
+The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server.
 
     dataset = 'oddball1_mc_downsampled.fif';
 

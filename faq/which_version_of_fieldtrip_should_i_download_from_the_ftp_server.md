@@ -1,9 +1,9 @@
 ---
-title: Which version of FieldTrip should I download from the ftp server?
+title: Which version of FieldTrip should I download from the FTP server?
 tags: [faq, download]
 ---
 
-# Which version of FieldTrip should I download from the ftp server?
+# Which version of FieldTrip should I download from the FTP server?
 
 Although initially we considered to use [semantic versioning](https://semver.org) with version 1.0, 1.1, 2.0, etc., we decided against it. We don't have clear development milestones that would warrant a version increment, and we don't want to break backward compatibility. Instead, we have a smooth development path and make changes from day to day. The latest version of the toolbox will generally work with your older scripts (and if not, please report it as a [bug](/bugzilla)). When we add or change functionality in the code, we always test it using the [dashboard](/development/dashboard) prior to releasing it. There is a limited number of people that can directly change the code, and they take their responsibility to the other users very seriously.
 

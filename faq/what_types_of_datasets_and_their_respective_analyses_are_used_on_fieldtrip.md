@@ -5,7 +5,7 @@ tags: [faq, tutorial, dataset, meg-language, meg-artifact, meg-visuomotor151, me
 
 # Which datasets are used in the documentation and where are they used?
 
-The FieldTrip website and ftp server include a variety of datasets. some of these are used in the [tutorials](/tutorial), while others are used in [example MATLAB scripts](/example). All of these datasets were recorded from humans, unless otherwise specified.
+The FieldTrip website and FTP server include a variety of datasets. some of these are used in the [tutorials](/tutorial), while others are used in [example MATLAB scripts](/example). All of these datasets were recorded from humans, unless otherwise specified.
 
 In this [frequently asked question](/faq/open_data) you can find links to other open access datasets.
 

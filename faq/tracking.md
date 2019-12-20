@@ -9,4 +9,4 @@ The FieldTrip software includes the **[ft_trackusage](/reference/ft_trackusage)*
 
 The reason for tracking details of the software usage is to gather information about the number of users, how often the software is used, which MATLAB versions are being used, about popular use cases, about potential frequent problems, etc. This information helps us in deciding where to focus our attention in continued development. Furthermore, this information is used to inform our funding sources about the success of the toolbox.
 
-We also track the downloads from our ftp server and we monitor the usage of this website using Google Analytics.
+We also track the downloads from our FTP server and we monitor the usage of this website using Google Analytics.

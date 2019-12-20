@@ -34,7 +34,7 @@ In constrast to the familiar parametric statistical framework, it is straightfor
 
 The preprocessing and time-frequency computation is similar to how it is done in the previous tutorials, and hence not explained in further detail.
 
-The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our ftp server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
+The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/oddball1_mc_downsampled.fif) from our FTP server. Furthermore, you should download and save the custom trial function [trialfun_oddball_responselocked.m](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/natmeg/trialfun_oddball_responselocked.m) to a directory that is on your MATLAB path.
 
 ### Preprocessing the response-locked data
 

@@ -11,7 +11,7 @@ tags: [example, realtime]
 
 ## Example use
 
-The simplest is to try and classify the tutorial MEG dataset which is available from the ftp server. More information is on the dataset is available [here](/tutorial/meg_language). That dataset contains the stimulus classes FC, IC and FIC, corresponding to trigger values 9, 5 and 3.
+The simplest is to try and classify the tutorial MEG dataset which is available from the FTP server. More information is on the dataset is available [here](/tutorial/meg_language). That dataset contains the stimulus classes FC, IC and FIC, corresponding to trigger values 9, 5 and 3.
 
     cfg = [];
     cfg.dataset  = 'Subject01.ds';

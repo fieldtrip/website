@@ -167,7 +167,7 @@ giving a struct
 
 where spike.trial{i} and spike.time{i} specify, for every i-th unit, the trial in which the spike was fired and the time at which it was fired relative to the trigger, respectively.
 
-An equivalent method (but potentially more error-prone!) would have been to directly use the timestamp representation per event to create the trials, i.e. use the 'trialfun_stimon' that we defined in the [spike](/tutorial/spike) tutorial. For the purpose of walking through this tutorial, you should copy and paste the code of trialfun_stimon.m (from the [spike](/tutorial/spike) tutorial) in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
+An equivalent method (but potentially more error-prone!) would have been to directly use the timestamp representation per event to create the trials, i.e. use the 'trialfun_stimon' that we defined in the [spike](/tutorial/spike) tutorial. For the purpose of walking through this tutorial, you should copy and paste the code of trialfun_stimon.m (from the [spike](/tutorial/spike) tutorial) in the MATLAB editor and save the m-file as trialfun_stimon.m. Alternatively you can download the trial function from [the FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/spike/trialfun_stimon.m).
 
     cfg          = [];
     cfg.dataset  = filename;

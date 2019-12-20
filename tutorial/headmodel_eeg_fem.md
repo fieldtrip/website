@@ -7,7 +7,7 @@ tags: [tutorial, eeg, source, headmodel, mri, plot, meg-language]
 
 ## Introduction
 
-This tutorial demonstrates how to construct a volume conduction model of the head based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip ftp server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Here, an EEG specific FEM model will be shown. In reality, we do not have corresponding EEG data for the subject we will use in this tutorial, rather we will use a template EEG electrode set to demonstrate how to build a FEM model for EEG and how to align the electrodes to anatomical data.
+This tutorial demonstrates how to construct a volume conduction model of the head based on a single subject's MRI. We will use the anatomical images that belong to the same subject whose data was analyzed in other tutorials. The anatomical MRI data is available from the [FieldTrip FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip). Here, an EEG specific FEM model will be shown. In reality, we do not have corresponding EEG data for the subject we will use in this tutorial, rather we will use a template EEG electrode set to demonstrate how to build a FEM model for EEG and how to align the electrodes to anatomical data.
 
 This tutorial will **not** show how to perform the source reconstruction itself. If you are interested in source reconstruction methods, you can go to the [Localizing oscillatory sources using beamformer techniques](/tutorial/beamformer) and to the [Source reconstruction of event-related fields using minimum-norm estimate](/tutorial/minimumnormestimate) tutorials.
 

@@ -20,7 +20,7 @@ If you scroll the script you can see that this image is a particular point of vi
 
 ## Procedure
 
-Get the FieldTripBufferDemo from the workshop_bci2000 folder on the FieldTrip ftp server and . Start BCI2000 and modifiy the config. The script works originally with 40 channels (see the variable 'lab' in the realtime_hilbert script), the samplingrate used is 1000Hz. Use a blocksize of 1000 samples. Ensure BCI2000 runs for more than 2 minutes in the application tab. Set config and start BCI2000.
+Get the FieldTripBufferDemo from the workshop_bci2000 folder on the FieldTrip FTP server and . Start BCI2000 and modifiy the config. The script works originally with 40 channels (see the variable 'lab' in the realtime_hilbert script), the samplingrate used is 1000Hz. Use a blocksize of 1000 samples. Ensure BCI2000 runs for more than 2 minutes in the application tab. Set config and start BCI2000.
 Start MATLAB and in the shell type realtime_hilbert.
 
 Now it will start the function realtime_baseline that for 2 minutes will record the subject baseline and store the results for realtime_hilbert.
