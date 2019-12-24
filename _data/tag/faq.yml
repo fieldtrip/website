@@ -76,9 +76,6 @@
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
 
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
-
 - name:  How can I anonymize or deidentify a CTF dataset?
   link:  /faq/how_can_i_anonymize_a_ctf_dataset
 
@@ -141,6 +138,9 @@
 
 - name:  How can I do time-frequency analysis on continuous data?
   link:  /faq/how_can_i_do_time-frequency_analysis_on_continuous_data
+
+- name:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat
 
 - name:  How can I find out what eventvalues and eventtypes there are in my data?
   link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data

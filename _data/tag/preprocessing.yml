@@ -25,14 +25,14 @@
 - name:  How can I deal with a discontinuous Neuralynx recording?
   link:  /faq/discontinuous_neuralynx
 
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
-
 - name:  How can I consistently represent artifacts in my data?
   link:  /faq/how_can_i_consistently_represent_artifacts_in_my_data
 
 - name:  How can I convert one dataformat into an other?
   link:  /faq/how_can_i_convert_one_dataformat_into_an_other
+
+- name:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat
 
 - name:  How can I find out what eventvalues and eventtypes there are in my data?
   link:  /faq/how_can_i_find_out_what_eventvalues_and_eventtypes_there_are_in_my_data

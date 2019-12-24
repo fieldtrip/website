@@ -19,14 +19,14 @@
 - name:  How are the various MATLAB data structures defined?
   link:  /faq/how_are_the_various_data_structures_defined
 
-- name:  How can I extend the reading functions with a new dataformat?
-  link:  /faq/how_can_extend_the_reading_functions_with_a_new_dataformat
-
 - name:  How can I convert an anatomical MRI from DICOM into CTF format?
   link:  /faq/how_can_i_convert_an_anatomical_mri_from_dicom_into_ctf_format
 
 - name:  How can I convert one dataformat into an other?
   link:  /faq/how_can_i_convert_one_dataformat_into_an_other
+
+- name:  How can I extend the reading functions with a new dataformat?
+  link:  /faq/how_can_i_extend_the_reading_functions_with_a_new_dataformat
 
 - name:  How can I import my own data format?
   link:  /faq/how_can_i_import_my_own_dataformat
