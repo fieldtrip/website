@@ -4,6 +4,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<!-- Add anchors to all headings, see https://www.bryanbraun.com/anchorjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.js"></script>
+
+
 <!-- Google custom search engine -->
 <script>
   (function() {
@@ -17,13 +21,12 @@
   })();
 </script>
 
-
 <footer class="footer">
   <div class="container">
 
     <div class="row">
       <div class="col-sm-1">
-        
+
       </div>
       <div class="footer-content col-md-4 text-muted small">
         <p>Edit <a href="https://github.com/fieldtrip/website/blob/master/{{ page.path }}">this page on GitHub</a>.</p>
@@ -39,3 +42,15 @@
 
   </div>
 </footer>
+
+<!-- Add anchors before the closing body tag, see https://www.bryanbraun.com/anchorjs -->
+<script>
+  anchors.options.visible = 'always';
+  anchors.options.visible = 'touch';
+  anchors.add('h1');
+  anchors.add('h2');
+  anchors.add('h3');
+  anchors.add('h4');
+  anchors.add('h5');
+  anchors.add('h6');
+</script>
