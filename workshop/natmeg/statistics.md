@@ -102,7 +102,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
 
 ### Single-trial time-frequency responses
 
-To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is ‘no’. Since we compute the TFR for each individual trial, we don’t have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in teh _trialinfo_ field.
+To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is ‘no’. Since we compute the TFR for each individual trial, we don’t have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in the _trialinfo_ field.
 
     cfg              = [];
     cfg.output       = 'pow';

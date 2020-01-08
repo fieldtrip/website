@@ -41,7 +41,7 @@ On the trigger sending side, the code looks something like this:
     %% close serial port
     fclose(serobjw);
 
-On the receiving side (the machine, that reads the data online from shared memory), we need to read the appropriate trigger channel, detect incoming triggers and then once a trigger is detected, write a new trigger to the data (in this case this was done by sending a command to serial port that was connnected to PPT1 of teh MEG system and recorded on channel UPPT001 with the data).
+On the receiving side (the machine, that reads the data online from shared memory), we need to read the appropriate trigger channel, detect incoming triggers and then once a trigger is detected, write a new trigger to the data (in this case this was done by sending a command to serial port that was connnected to PPT1 of the MEG system and recorded on channel UPPT001 with the data).
 
     %% This is where we are reading the data from from, this, in this case shared memory for the MEG at FCDC
     cfg.headerfile = 'shm://';
