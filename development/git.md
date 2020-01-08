@@ -21,7 +21,7 @@ To keep an eye on the changes to the code, you can follow us on [Twitter](http:/
 
 ## Summary of the development workflow
 
-We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for the development of teh code, and for maintenance of the documentation on gthe website. We complement this with code reviews by the core team and quality control using a set of test scripts. A short summary of the procedure is as follows
+We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for the development of the code, and for maintenance of the documentation on gthe website. We complement this with code reviews by the core team and quality control using a set of test scripts. A short summary of the procedure is as follows
 
 1. The contributor makes a fork of the `fieldtrip/fieldtrip` (or the `fieldtrip/website`) repository to his/her personal GitHub page.
 2. He/she makes a clone of the `personal/fieldtrip` (or the `personal/website`) repository to his/her own computer. It is recommended to set the `fieldtrip/fieldtrip` repository as the upstream remote.
@@ -147,7 +147,7 @@ git checkout -b welcome
 
 and it'll tell you:
 
-```
+```bash
 Switched to a new branch 'welcome'
 ```
 
@@ -173,7 +173,7 @@ git status
 
 It will tell you:
 
-```
+```bash
 # On branch welcome
 # Changes not staged for commit
 #   (use "git add `<file>`..." to update what will be committed)
@@ -202,7 +202,7 @@ git add ft_welcome.m ft_defaults.m
 
 and now `git status` will tell you:
 
-```
+```bash
 # On branch welcome
 # Changes to be committed
 #   (use "git reset HEAD `<file>`..." to unstage)
@@ -220,7 +220,7 @@ git commit -m "print welcome message when executing ft_defaults"
 
 where the option -m allows you to add a log entry. git will return:
 
-```
+```bash
 1 file changed, 1 insertion(+)
 create mode 100644 ft_welcome.m
 ```
