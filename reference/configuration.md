@@ -1125,6 +1125,9 @@ A detailed description of each function is available in the [reference documenta
 **cfg.flipdimflipdataalongthesliceddimension** - [ft_sliceinterp](/reference/ft_sliceinterp)  
 
 
+**cfg.flipori** - [ft_sourcedescriptives](/reference/ft_sourcedescriptives)  
+
+
 **cfg.foi** - [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis](/reference/ft_freqanalysis), [ft_freqanalysis_mvar](/reference/ft_freqanalysis_mvar), [ft_laggedcoherence](/reference/ft_laggedcoherence), [ft_spiketriggeredspectrum_stat](/reference/ft_spiketriggeredspectrum_stat), [ft_topoplotCC](/reference/ft_topoplotCC)  
 
 
