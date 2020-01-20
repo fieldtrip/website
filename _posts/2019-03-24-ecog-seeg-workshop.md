@@ -1,6 +1,6 @@
 ---
 title: 24 March, 2019 - ECoG/sEEG workshop
-categories: [news]
+categories: []
 ---
 
 ### 24 March, 2019
