@@ -359,6 +359,8 @@ The effect size after averaging the data in the largest cluster is the one that 
 
 More important perhaps is to consider the effect that the cluster-forming-threshold (the `cfg.clusterthreshold` option in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**, for which we used the default here) would have on the effect size. If the cluster threshold is higher, the cluster would have a smaller spatial and temporal extend and would only contain the peak, hence the effect within that cluster would be larger. With a lower cluster threshold the cluster would be larger, and the effect computed over the average in the cluster would be smaller. The cluster threshold has a complex relationship to the statistical sensitivity of the test and to the effect size for the average over the resulting cluster. Note that in a hypothesis-driven study you should not use the cluster threshold to "optimize" (or p-hack) your statistical inference.
 
+### Average over the circumscribed rectangle
+
 Another way of computing and reporting the effect size following a cluster-based test is to determine the circumscribed square area that spans the cluster, i.e. a rectangle (in channels and time and/or frequency) that fits tightly around the cluster. See also <https://en.wikipedia.org/wiki/Circumscribed_circle> for an explanation. This can be computed by converting the Boolean mask into a logical row-vector and finding the minimum and maximum corresponding time points like this:
 
     min(inference.time(any(inference.mask,1)))
@@ -425,8 +427,8 @@ The advantage of the list of channels and the begin- and end-latency is that the
 The effect size for the data averaged in the circumscribed rectangle is 1.43.
 {% include markup/end %}
 
-{% include markup/info %}
+## Summary
+
 Following some discussion in the MEG lab meeting at the DCCN, we think that both the effect size for the circumscribed rectangle _and_ the size of the maximum effect are interesting to report. The first gives a conservative **lower bound** on the effect size, whereas the second gives an **upper bound** on the effect size.  Furthermore, for both it is easy to report the area or location (in channels and time and/or frequency).
 
 Regardless of _how_ you compute the effect size that you report: as long as you compute and report the effect size, plus some details that help the reader interpret the effect size and use it in building upon your work, you are contribute to making science better and more reproducible!
-{% include markup/end %}
