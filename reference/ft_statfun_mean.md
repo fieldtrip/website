@@ -2,15 +2,14 @@
 title: ft_statfun_mean
 ---
 ```plaintext
- FT_STATFUN_MEAN computes the mean over all replications for each of the
- observations (i.e. channel-time-frequency points or voxels).
+ FT_STATFUN_MEAN demonstrates how to compute the mean over all conditions in the
+ data. Since this does NOT depend on the experimental design, it cannot be used for
+ testing for differences between conditions.
 
- This function does not depend on the experimental design and cannot be used for any
- statistical testing. However, it serves as example how you can use the statistical
- framework in FieldTrip to perform a simple (or more complex) task, without having
- to worry about the representation of the data. The output of FT_TIMELOCKSTATISTICS,
- FT_FREQSTATISTICS or FT_SOURCESTATISTICS will be an appropriate structure, that
- contains the result of the computation inside this function in the stat field.
+ This function serves as an example for a statfun. You can use such a function with
+ the statistical framework in FieldTrip using FT_TIMELOCKSTATISTICS,
+ FT_FREQSTATISTICS or FT_SOURCESTATISTICS to perform a statistical test, without
+ having to worry about the representation of the data.
 
- See also FT_STATFUN_DIFF for another example statfun
+ See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS, and see FT_STATFUN_DIFF for a similar example
 ```

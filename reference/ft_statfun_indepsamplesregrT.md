@@ -3,8 +3,8 @@ title: ft_statfun_indepsamplesregrT
 ---
 ```plaintext
  FT_STATFUN_INDEPSAMPLESREGRT calculates independent samples regression coefficient
- T-statistics on the biological data in dat (the dependent variable), using the
- information on the independent variable (predictor) in design.
+ t-statistics on the biological data (the dependent variable), using the information
+ on the independent variable (predictor) in the design.
 
  Use this function by calling one of the high-level statistics functions as
    [stat] = ft_timelockstatistics(cfg, timelock1, timelock2, ...)
@@ -13,23 +13,22 @@ title: ft_statfun_indepsamplesregrT
  with the following configuration option
    cfg.statistic = 'ft_statfun_indepsamplesregrT'
 
- Configuration options
-   cfg.computestat    = 'yes' or 'no', calculate the statistic (default='yes')
-   cfg.computecritval = 'yes' or 'no', calculate the critical values of the test statistics (default='no')
-   cfg.computeprob    = 'yes' or 'no', calculate the p-values (default='no')
+ You can specify the following configuration options:
+   cfg.computestat    = 'yes' or 'no', calculate the statistic (default = 'yes')
+   cfg.computecritval = 'yes' or 'no', calculate the critical values of the test statistics (default = 'no')
+   cfg.computeprob    = 'yes' or 'no', calculate the p-values (default = 'no')
 
- The following options are relevant if cfg.computecritval='yes' and/or
- cfg.computeprob='yes'.
+ The following options are relevant if cfg.computecritval='yes' and/or cfg.computeprob='yes':
    cfg.alpha = critical alpha-level of the statistical test (default=0.05)
    cfg.tail  = -1, 0, or 1, left, two-sided, or right (default=1)
                cfg.tail in combination with cfg.computecritval='yes'
                determines whether the critical value is computed at
                quantile cfg.alpha (with cfg.tail=-1), at quantiles
                cfg.alpha/2 and (1-cfg.alpha/2) (with cfg.tail=0), or at
-               quantile (1-cfg.alpha) (with cfg.tail=1).
+               quantile (1-cfg.alpha) (with cfg.tail=1)
 
- Design specification
-   cfg.ivar  = row number of the design that contains the independent variable (default=1)
+ The experimental design is specified as:
+   cfg.ivar  = row number of the design that contains the independent variable, i.e. the predictor (default=1)
 
  See also FT_TIMELOCKSTATISTICS, FT_FREQSTATISTICS or FT_SOURCESTATISTICS
 ```

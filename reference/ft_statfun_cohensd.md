@@ -21,10 +21,12 @@ title: ft_statfun_cohensd
    cfg.statistic = 'ft_statfun_cohensd'
 
  The experimental design is specified as:
-   cfg.ivar  = row number of the design that contains the labels of the conditions that must be compared (default=1).
-               The labels should be specified as numbers ranging from 1 to the number of conditions.
-   cfg.uvar  = optional, row number of design that contains the labels of the units-of-observation, i.e. subjects or trials (default=2).
-               The labels should be integers ranging from 1 to the number of units-of-observation.
+   cfg.ivar  = independent variable, row number of the design that contains the labels of the conditions to be compared (default=1)
+   cfg.uvar  = optional, row number of design that contains the labels of the units-of-observation, i.e. subjects or trials (default=2)
+
+ The labels for the independent variable should be specified as the number 1 and 2.
+ The labels for the unit of observation should be integers ranging from 1 to the
+ total number of observations (subjects or trials).
 
  The cfg.uvar option is only needed for paired data, you should leave it empty
  for non-paired data.
