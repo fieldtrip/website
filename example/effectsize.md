@@ -9,7 +9,7 @@ It is good practice to compute and report the size of the effect that you are st
 
 The [effect size](https://en.wikipedia.org/wiki/Effect_size) is a way of quantifying the magnitude of an effect on your data. It can be quantified in different ways, e.g. as the uV difference in ERP amplitude on a specific channel  at a specific latency following stimulus presentation, or as a standardized measure such as [Cohen's d](https://en.wikiversity.org/wiki/Cohen%27s_d).
 
-This specific example starts with a ROI that is based on visual inspection, i.e. picking the channel and time window with the highest effect. Note however that this is only for didactical reasons. In reality it would be inappropriate to test only the largest observed effect. Rather, in the absence of a a-priori region and/or latency of interest, you should test all channels and time points and correct for multiple comparisons to ensure that you are controlling the false alarm rate.
+This specific example starts with a ROI that is based on visual inspection, i.e. picking the channel and time window with the highest effect. Note, however, that this is only for didactical reasons. In reality it would be inappropriate to test only the largest observed effect. Rather, in the absence of an a priori region and/or latency of interest, you should test all channels and time points and correct for multiple comparisons to ensure that you are controlling the false alarm rate.
 
 {% include markup/danger %}
 If you are doing hypothesis-driven research, you should _not_ guide your statistical analysis by a visual inspection of the data; you should state your hypothesis up-front and avoid [data dredging or p-hacking](https://en.wikipedia.org/wiki/Data_dredging).
@@ -214,7 +214,7 @@ The effect size is 1.47 when averaging over 7 left-temporal channels, and from 3
 
 ## Statistical inference using a cluster-based permutation test
 
-Although we might have had a clear a-priori hypothesis for the timing of the N400 effect on the basis of previous ERP research, we actually do not have such a clear expectations for the MEG channels on which the effect will show. Hence - rather than picking channels following visual inspection - the correct procedure is to test for the hypothesized effect on all channels, dealing with multiple comparison correction. Please see the [cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) tutorial for more details.
+Although we might have had a clear a priori hypothesis for the timing of the N400 effect on the basis of previous ERP research, we actually do not have such a clear expectations for the MEG channels on which the effect will show. Hence - rather than picking channels following visual inspection - the correct procedure is to test for the hypothesized effect on all channels, dealing with multiple comparison correction. Please see the [cluster-based permutation tests on event related fields](/tutorial/cluster_permutation_timelock) tutorial for more details.
 
     % define neighbouring channels
     load ctf151_neighb.mat
@@ -286,7 +286,7 @@ We can also combine the statistical mask - which corresponds to the clusters tha
 
 {% include image src="/assets/img/example/effectsize/figure5.png" width="400" %}
 
-The cluster on basis of which H0 was rejected does not have a nice rectangular shape, i.e. some channels are part of the cluster for a longer time, some for a shorter time, and some of them are only on and off part part of the cluster.
+The cluster on the basis of which H0 was rejected does not have a nice rectangular shape, i.e. some channels are part of the cluster for a longer time, some for a shorter time, and some of them are only on and off part of the cluster.
 
 ## Computing the effect size for the average over the cluster
 
@@ -338,7 +338,7 @@ And again we can compute the effect size:
       1.7369
 
 {% include markup/success %}
-When averaging the data over the largest cluster, i.e. the one on basis of which we rejected H0, we see that the estimated effect size is 1.74.
+When averaging the data over the largest cluster, i.e. the one on the basis of which we rejected H0, we see that the estimated effect size is 1.74.
 {% include markup/end %}
 
 
@@ -353,11 +353,11 @@ We have demonstrated that there are different ways to estimate the effect size.
 
 Neither of these estimates is per se correct or incorrect; the one to report depends on what you expect the readers of your manuscript to do with it. For example, if you expect your readers to do a follow up experiment with precisely the same experimental setup, i.e., the same EEG or MEG system (although for MEG it will be unlikely that the subjects will be seated exactly the same), then you can report the value at one specific channel. If your readers want to follow up with a system that for example has fewer channels (say 19 channels instead of 64), the effect size averaged over multiple channels might be more informative for them as they can pick a channel in their system that falls within the group that you averaged.
 
-The maximum effect can unambiguously be determined over all observations, but will always be positively biassed. If the data preprocessing would have been done slightly different (e.g. different filter settings), the maximum effect size might already be quite different.
+The maximum effect can unambiguously be determined over all observations, but will always be positively biased. If the data preprocessing would have been done slightly different (e.g. different filter settings), the maximum effect size might already be quite different.
 
-The effect size after averaging the data in the largest cluster is the one that most closely relates to the statistical inference that was done here using a cluster-based permutation test. However, it is very difficult to report the precise details of the cluster due to its ragged shape. Furthermore there is no reason to assume that exactly the same cluster would be found in a follow-up study with independent data; although we would expect a similar effect, the edges of the cluster and its extend would be different.
+The effect size after averaging the data in the largest cluster is the one that most closely relates to the statistical inference that was done here using a cluster-based permutation test. However, it is very difficult to report the precise details of the cluster due to its ragged shape. Furthermore, there is no reason to assume that exactly the same cluster would be found in a follow-up study with independent data; although we would expect a similar effect, the edges of the cluster and its extend would be different.
 
-More important perhaps is to consider the effect that the cluster-forming-threshold (the `cfg.clusterthreshold` option in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**, for which we used the default here) would have on the effect size. If the cluster threshold is higher, the cluster would have a smaller spatial and temporal extent and would only contain the peak, hence the effect within that cluster would be larger. With a lower cluster threshold the cluster would be larger, and the effect computed over the average in the cluster would be smaller. The cluster threshold has a complex relationship to the statistical sensitivity of the test and to the effect size for the average over the resulting cluster. Note that in a hypothesis-driven study you should not use the cluster threshold to "optimize" (or p-hack) your statistical inference.
+More important perhaps is to consider the effect that the cluster-forming-threshold (the `cfg.clusterthreshold` option in **[ft_statistics_montecarlo](/reference/ft_statistics_montecarlo)**, for which we used the default here) would have on the effect size. If the cluster threshold is higher, the cluster would have a smaller spatial and temporal extent and would only contain the peak, hence the effect within that cluster would be larger. With a lower cluster threshold, the cluster would be larger, and the effect computed over the average in the cluster would be smaller. The cluster threshold has a complex relationship to the statistical sensitivity of the test and to the effect size for the average over the resulting cluster. Note that in a hypothesis-driven study you should not use the cluster threshold to "optimize" (or p-hack) your statistical inference.
 
 ### Average over the circumscribed rectangle
 
@@ -370,7 +370,7 @@ Another way of computing and reporting the effect size following a cluster-based
     ans =
         0.5267
 
-For the channels it is similar, except that we form a Boolean column-vector to find all channels that are at a certain time part of the cluster.
+For the channels it is similar, except that we form a Boolean column-vector to find all channels that are part of the cluster at any given time.
 
     inference.label(any(inference.mask,2))
     ans =
@@ -431,4 +431,4 @@ The effect size for the data averaged in the circumscribed rectangle is 1.43.
 
 Following some discussion in the MEG lab meeting at the DCCN, we think that both the effect size for the circumscribed rectangle _and_ the size of the maximum effect are interesting to report. The first gives a conservative **lower bound** on the effect size, whereas the second gives an **upper bound** on the effect size.  Furthermore, for both it is easy to report the area or location (in channels and time and/or frequency).
 
-Regardless of _how_ you compute the effect size that you report: as long as you compute and report the effect size, plus some details that help the reader interpret the effect size and use it in building upon your work, you are contribute to making science better and more reproducible!
+Regardless of _how_ you compute the effect size that you report: as long as you compute and report the effect size, plus some details that help the reader interpret the effect size and use it in building upon your work, you are contributing to making science better and more reproducible!
