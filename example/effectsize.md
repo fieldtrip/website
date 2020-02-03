@@ -99,6 +99,11 @@ Above we demonstrated how to compute it by hand. The same equation for Cohen\'s 
           time: 0.5000
            cfg: [1x1 struct]
 
+ {% include markup/info %}
+ Note that Cohen\'s d is not the only way to quantify the effect size. If you look into the code of `ft_statfun_cohensd`, you will see that it is easy to implement other measures. You could also use a statfun to implement the [Bayes factor](https://www.statisticshowto.datasciencecentral.com/bayes-factor-definition/) to quantify the evidence of one hypothesis versus another.
+ {% include markup/end %}
+
+
 ## Computing the paired effect size by hand
 
 However, note that the computations demonstrated above are not the best way of testing, nor of reporting effect size: the experiment consists of a within-subject experimental manipulation and the observed data is "paired". The appropriate way of computing the effect size therefore is to look at the within-subject differences:
