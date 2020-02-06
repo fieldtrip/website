@@ -29,7 +29,6 @@ Here is the list of the functions in the module Forward (folders: \_fieldtrip/fo
 
     ft_compute_leadfield.m
     ft_convert_units.m
-    ft_estimate_units.m
     ft_average_sens.m (?)
     ft_headmodel_bem_asa.m
     ft_headmodel_bem_cp.m
