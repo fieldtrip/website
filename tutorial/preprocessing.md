@@ -41,88 +41,64 @@ Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you
 
 The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions require the original MEG dataset, which is available at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)
 
-Do the trial definition for the fully incongruent (FIC) condition:
+Do the trial definition for the all conditions together:
 
       cfg                         = [];
       cfg.dataset                 = 'Subject01.ds';
       cfg.trialfun                = 'ft_trialfun_general'; % this is the default
       cfg.trialdef.eventtype      = 'backpanel trigger';
-      cfg.trialdef.eventvalue     = 3; % the value of the stimulus trigger for fully incongruent (FIC).
+      cfg.trialdef.eventvalue     = [3 5 9]; % the values of the stimulus trigger for all three conditions
+      %  (3: fully incongruent (FIC), 5: initially congruent (IC), 9: fully congruent (FC))
       cfg.trialdef.prestim        = 1; % in seconds
       cfg.trialdef.poststim       = 2; % in seconds
 
       cfg = ft_definetrial(cfg);
 
-This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined.
+This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. Additionally, cfg.trial contains a column that specifies the trigger value, so in this case 3 (FIC), 5 (IC), or 9 (FC).
 
 The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **[ft_preprocessing](/reference/ft_preprocessing)**.
 
     cfg.channel    = {'MEG' 'EOG'};
     cfg.continuous = 'yes';
-    dataFIC = ft_preprocessing(cfg);
+    data_all = ft_preprocessing(cfg);
 
-Save the preprocessed data to dis
 
-    save PreprocData dataFIC
+The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure data_all which has the following fields:
 
-The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure dataFIC which has the following fields:
-
-    dataFIC =
+    data_all =
                hdr: [1x1 struct]
              label: {152x1 cell}
-              time: {1x87 cell}
-             trial: {1x87 cell}
+              time: {1x261 cell}
+             trial: {1x261 cell}
            fsample: 300
-        sampleinfo: [87x2 double]
-         trialinfo: [87x1 double]
+        sampleinfo: [261x2 double]
+         trialinfo: [261x1 double]
               grad: [1x1 struct]
                cfg: [1x1 struct]
 
-The most important fields are dataFIC.trial containing the individual trials and dataFIC.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following:
+The most important fields are data_all.trial containing the individual trials and data_all.time containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following:
 
-    plot(dataFIC.time{1}, dataFIC.trial{1}(130,:))
+    plot(data_all.time{1}, data_all.trial{1}(130,:))
 
 {% include image src="/assets/img/tutorial/preprocessing/preprocess1.png" %}
 
-The preprocessing steps will be repeated for the other conditions as well.
+Split up the conditions by selecting trials according to their trigger value (in data_all.trialinfo).
 
-The initially congruent (IC) conditio
+    cfg=[];
+    cfg.trials = data_all.trialinfo==3;
+    dataFIC = ft_selectdata(cfg, data_all);
 
-    cfg                         = [];
-    cfg.dataset                 = 'Subject01.ds';
-    cfg.trialdef.eventtype      = 'backpanel trigger';
-    cfg.trialdef.eventvalue     = 5; % the value of the stimulus trigger for initially congruent (IC).
-    cfg.trialdef.prestim        = 1; % in seconds
-    cfg.trialdef.poststim       = 2; % in seconds
+    cfg.trials = data_all.trialinfo==5;
+    dataIC = ft_selectdata(cfg, data_all);
 
-    cfg = ft_definetrial(cfg);
+    cfg.trials = data_all.trialinfo==9;
+    dataFC = ft_selectdata(cfg, data_all);
 
-    cfg.channel    = {'MEG' 'EOG'};
-    cfg.continuous = 'yes';
-    dataIC = ft_preprocessing(cfg);
 
-Save the preprocessed data to disk:
+Save the preprocessed data to disk
 
-    save PreprocData dataIC -append
+    save PreprocData dataFIC dataIC dataFC
 
-And the fully congruent (FC) condition:
-
-    cfg                         = [];
-    cfg.dataset                 = 'Subject01.ds';
-    cfg.trialdef.eventtype      = 'backpanel trigger';
-    cfg.trialdef.eventvalue     = 9; % the value of the stimulus trigger for fully congruent (FC).
-    cfg.trialdef.prestim        = 1; % in seconds
-    cfg.trialdef.poststim       = 2; % in seconds
-
-    cfg = ft_definetrial(cfg);
-
-    cfg.channel    = {'MEG' 'EOG'};
-    cfg.continuous = 'yes';
-    dataFC = ft_preprocessing(cfg);
-
-Save the preprocessed data to disk:
-
-    save PreprocData dataFC -append
 
 These functions demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. Artifact rejection is described in [Preprocessing - Visual artifact rejection](/tutorial/visual_artifact_rejection)
 
