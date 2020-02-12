@@ -34,6 +34,7 @@ The following steps are taken in this tutorial:
 
 - Define segments of data of interest (the trial definition) using **[ft_definetrial](/reference/ft_definetrial)**
 - Read the data into MATLAB using **[ft_preprocessing](/reference/ft_preprocessing)**
+- Split up the data for the different conditions **[ft_selectdata](/reference/ft_selectdata)**
 
 ## Reading and preprocessing the interesting trials
 
@@ -54,7 +55,7 @@ Do the trial definition for the all conditions together:
 
       cfg = ft_definetrial(cfg);
 
-This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. Additionally, cfg.trial contains a column that specifies the trigger value, so in this case 3 (FIC), 5 (IC), or 9 (FC).
+This results in a cfg.trl in which the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data is defined. Additionally, cfg.trial contains a column that specifies the trigger value for that epoch, so in this case 3 (FIC), 5 (IC), or 9 (FC).
 
 The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **[ft_preprocessing](/reference/ft_preprocessing)**.
 
