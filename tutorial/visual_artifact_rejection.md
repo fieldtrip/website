@@ -222,3 +222,7 @@ Per condition, the following trials contain artifacts:
 - FC: 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85
 
 Channels MLO12 and MLP31 are removed because of artifacts.
+
+## Suggested further reading
+
+For an introduction to how you can deal with artifacts in FieldTrip in general, you can go back to the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to visual artifact detection, you can do it automatically, see the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the email discussion list which can be searched [like this](http://www.google.com/search?q=artifact&sitesearch=mailman.science.ru.nl%2Fpipermail%2Ffieldtrip%2F).
