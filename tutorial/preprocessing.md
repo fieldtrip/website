@@ -63,6 +63,10 @@ The output of **[ft_definetrial](/reference/ft_definetrial)** can be used for **
     cfg.continuous = 'yes';
     data_all = ft_preprocessing(cfg);
 
+    Save the data to disk
+
+        save PreprocData data_all
+
 
 The output of **[ft_preprocessing](/reference/ft_preprocessing)** is the structure data_all which has the following fields:
 
@@ -98,7 +102,7 @@ Split up the conditions by selecting trials according to their trigger value (in
 
 Save the preprocessed data to disk
 
-    save PreprocData dataFIC dataIC dataFC
+    save PreprocData dataFIC dataIC dataFC -append
 
 
 These functions demonstrate how to extract trials from a dataset based on trigger information. Note that some of these trials will be contaminated with various artifact such as eye blinks or MEG sensor jumps. Artifact rejection is described in [Preprocessing - Visual artifact rejection](/tutorial/visual_artifact_rejection)
