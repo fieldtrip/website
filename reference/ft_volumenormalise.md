@@ -13,7 +13,7 @@ title: ft_volumenormalise
  Configuration options are
    cfg.spmversion  = string, 'spm2', 'spm8', 'spm12' (default = 'spm8')
    cfg.opts        = structure with configurable normalisation options,
-                       see spm documentation for details. 
+                       see spm documentation for details.
    cfg.template    = string, filename of the template anatomical MRI (default = 'T1.mnc'
                      for spm2 or 'T1.nii' for spm8)
    cfg.parameter   = cell-array with the functional data to be normalised (default = 'all')

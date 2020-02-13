@@ -16,7 +16,7 @@ title: ft_volumesegment
  The configuration structure can contain
    cfg.output         = string or cell-array of strings, see below (default = 'tpm')
    cfg.spmversion     = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
-   cfg.spmmethod      = string, 'old', 'new', 'mars' (default = 'old'). This pertains 
+   cfg.spmmethod      = string, 'old', 'new', 'mars' (default = 'old'). This pertains
                         to the algorithm used when cfg.spmversion='spm12', see below.
    cfg.opts           = struct, containing spm-version specific options. See
                         the code and/or the SPM-documentation for more detail.

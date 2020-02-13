@@ -8,18 +8,18 @@ title: ft_convert_units
  e.g. a volume conduction model of the head should be approximately 20 cm large.
 
  Use as
-   [object] = ft_convert_units(object, target)
+   [output] = ft_convert_units(input, target)
 
- The following geometrical objects are supported as inputs
+ The following input data structures are supported
    electrode or gradiometer array, see FT_DATATYPE_SENS
    volume conductor, see FT_DATATYPE_HEADMODEL
    anatomical mri, see FT_DATATYPE_VOLUME
    segmented mri, see FT_DATATYPE_SEGMENTATION
-   dipole grid definition, see FT_DATATYPE_SOURCE
+   source model, see FT_DATATYPE_SOURCE and FT_PREPARE_SOURCEMODEL
 
- Possible target units are 'm', 'dm', 'cm ' or 'mm'. If no target units
- are specified, this function will only determine the native geometrical
- units of the object.
+ The possible target units are 'm', 'dm', 'cm ' or 'mm'. If no target units are
+ specified, this function will only determine the geometrical units of the input
+ object.
 
- See also FT_DETERMINE_UNITS, FT_CONVERT_COORDSYS, FT_DETERMINE_COODSYS
+ See also FT_DETERMINE_UNITS, FT_DETERMINE_COODSYS, FT_CONVERT_COORDSYS, FT_PLOT_AXES, FT_PLOT_XXX
 ```

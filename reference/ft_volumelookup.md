@@ -22,7 +22,6 @@ title: ft_volumelookup
    stat   is the output of FT_SOURCESTATISTICS
 
  The configuration options for a mask according to an atlas:
-   cfg.inputcoord          = 'mni' or 'tal', coordinate system of the mri/source/stat
    cfg.atlas               = string, filename of atlas to use, see FT_READ_ATLAS
    cfg.roi                 = string or cell-array of strings, ROI from anatomical atlas
 
@@ -34,7 +33,6 @@ title: ft_volumelookup
                              and box/sphere is centered around coordinates of that voxel
 
  The configuration options for labels from a mask:
-   cfg.inputcoord          = 'mni' or 'tal', coordinate system of the mri/source/stat
    cfg.atlas               = string, filename of atlas to use, see FT_READ_ATLAS
    cfg.maskparameter       = string, field in volume to be looked up, data in field should be logical
    cfg.minqueryrange       = number, should be odd and <= to maxqueryrange (default = 1)
@@ -44,7 +42,6 @@ title: ft_volumelookup
    cfg.output              = 'single' always outputs one label; if several POI are provided, they are considered together as describing a ROI (default)
                              'multiple' outputs one label per POI (e.g., choose to get labels for different electrodes)
    cfg.roi                 = Nx3 vector, coordinates of the POI
-   cfg.inputcoord          = 'mni' or 'tal', coordinate system of the mri/source/stat
    cfg.atlas               = string, filename of atlas to use, see FT_READ_ATLAS
    cfg.minqueryrange       = number, should be odd and <= to maxqueryrange (default = 1)
    cfg.maxqueryrange       = number, should be odd and >= to minqueryrange (default = 1)
