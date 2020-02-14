@@ -17,7 +17,7 @@ This tutorial assumes that the steps of [preprocessing](/tutorial/preprocessing)
 
 ### Multi-modal sleep recordings
 
-Discrete events and continuous shifts in activity during sleep are not easily observed in one modality by itself. They have to be identified and marked by using the combination of the different modalities. This is why sleep recordings span multiple modalities, each with clearly defined changes in the activity that are relatively easy to predict. We have some good understanding about the physiological relationships between the events and what is happening to the different body parts during sleep. Finally, most of the activity which we usually consider as artifacts in our task-related EEG recordings (e.g. eye movements, muscle and heart activity) occur here in a systematic manner and are considered important features of a sleep state rather than an artifact. Thus using sleep data allows us to safely explore how to identify changes in brain state in a well studied example. Here we can gain some skills to explore cross-modality relations in recordings that are less well defined, e.g. task or resting state recordings, or parllel recordings that expand the interpretability by adding features of other or related modalities (e.g. motion sensors, MEG, fMRI).
+Discrete events and continuous shifts in activity during sleep are not easily observed in one modality by itself. They have to be identified and marked by using the combination of the different modalities. This is why sleep recordings span multiple modalities, each with clearly defined changes in the activity that are relatively easy to predict. We have some good understanding about the physiological relationships between the events and what is happening to the different body parts during sleep. Finally, most of the activity which we usually consider as artifacts in our task-related EEG recordings (e.g. eye movements, muscle and heart activity) occur here in a systematic manner and are considered important features of a sleep state rather than an artifact. Thus using sleep data allows us to safely explore how to identify changes in brain state in a well studied example. Here we can gain some skills to explore cross-modality relations in recordings that are less well defined, e.g. task or resting state recordings, or parallel recordings that expand the interpretability by adding features of other or related modalities (e.g. motion sensors, MEG, fMRI).
 
 ### Sleep states by Polysomnography
 
@@ -33,18 +33,18 @@ _Figure 1: Hypnogram and sleep stages according to manual sleep scoring rules by
 
 For this tutorial we will use recordings from the healthy sample of the CAP Sleep Database that are openly available in PhysioNet ([https://www.physionet.org/physiobank/database/capslpdb/](https://www.physionet.org/physiobank/database/capslpdb/)). The number of channels has been reduced and the data has been sampled down to 128 Hz for convenience. The data is stored in EDF format and two subjects can be downloaded from [our FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/sleep/).
 
-The EEG channels are called “C4-A1” and “C3-A2”, according to derivations based on the 10-20 system system. These correspond to the potential at C4 referenced to A1 (behind the left ear) and the same for C3 and the right ear. The EOG channel is called “ROC-LOC” for a bipolar derivation between electrodes on the right and left of the eyes. The EMG is “EMG1-EMG2” for a bipolar derivation between two electrodes on the muscles of the chin. The ECG channel is called “ECG1-ECG2”. In the original data already all channels were notch filtered at 50 Hz and the EEG, ECG and EOG was filtered with a high-pass of 0.3 Hz and a low-pass of 30 Hz; the EMG with was already high-pass filtered at 10 Hz and low-pass filtered at 100 Hz.
+The EEG channels are called “C4-A1” and “C3-A2”, according to derivations based on the 10-20 system. These correspond to the potential at C4 referenced to A1 (behind the left ear) and the same for C3 and the right ear. The EOG channel is called “ROC-LOC” for a bipolar derivation between electrodes on the right and left of the eyes. The EMG is “EMG1-EMG2” for a bipolar derivation between two electrodes on the muscles of the chin. The ECG channel is called “ECG1-ECG2”. In the original data already all channels were notch filtered at 50 Hz and more specifically, the EEG, ECG and EOG was filtered with a high-pass of 0.3 Hz and a low-pass of 30 Hz; the EMG was high-pass filtered at 10 Hz and low-pass filtered at 100 Hz.
 
 ## Procedure
 
 To explore the sleep data, we will perform the following step
 
 - Read the sleep data with **[ft_preprocessing](/reference/ft_preprocessing)** and view the raw signals in 30-second epochs using **[ft_databrowser](/reference/ft_databrowser)**.
-- Detect artifactual Wake epochs using **[ft_artifact_muscle](/reference/ft_artifact_muscle)** by looking at the EMG and EOG excluding artifactual periods and periods with eye activity from further planned analysis using **[ft_rejectartifact](/reference/ft_rejectartifact)**.
-- Estimating the sleep frequencies represented over the course of sleep using **[ft_freqanalysis](/reference/ft_freqanalysis)** and visualize using **[ft_singleplotTFR](/reference/ft_singleplotTFR)** and **[ft_databrowser](/reference/ft_databrowser)**.
-- Identify the sleep state of non-REM by thresholding and combining signals using **[ft_apply_montage](/reference/ft_apply_montage)** and reading in pre-scored hypnograms for a comparison with the here estimated sleep stages **[ft_databrowser](/reference/ft_databrowser)**.
+- Detect artifactual Wake epochs using **[ft_artifact_muscle](/reference/ft_artifact_muscle)** by looking at the EMG and EOG, exclude artifactual periods and periods with eye activity from further planned analysis using **[ft_rejectartifact](/reference/ft_rejectartifact)**.
+- Estimate the sleep frequencies represented over the course of sleep using **[ft_freqanalysis](/reference/ft_freqanalysis)** and visualize using **[ft_singleplotTFR](/reference/ft_singleplotTFR)** and **[ft_databrowser](/reference/ft_databrowser)**.
+- Identify the sleep state of non-REM by thresholding and combining signals using **[ft_apply_montage](/reference/ft_apply_montage)**. Read in pre-scored hypnograms for a comparison with the here estimated sleep stages **[ft_databrowser](/reference/ft_databrowser)**.
 - Find spontaneous ECG events like R-waves and determine the heart rate using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**.
-- Find sleep EEG events like slow waves and sleep spindles in the non-REM signal that was cleaned from artifacts using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_redefinetrial](/reference/ft_redefinetrial)** and visualize their time-locked average signals and time-locked frequency activity (ERF) using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** and then view them in the browser **[ft_databrowser](/reference/ft_databrowser)**.
+- Find sleep EEG events like slow waves and sleep spindles in the non-REM signal that was cleaned from artifacts using **[ft_artifact_zvalue](/reference/ft_artifact_zvalue)**, **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_redefinetrial](/reference/ft_redefinetrial)**. Visualize their time-locked average signals and time-locked frequency activity (ERF) using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**, **[ft_singleplotER](/reference/ft_singleplotER)**, **[ft_freqanalysis](/reference/ft_freqanalysis)** and **[ft_singleplotTFR](/reference/ft_singleplotTFR)** and then view them in the browser **[ft_databrowser](/reference/ft_databrowser)**.
 
 ## Preprocessing
 
@@ -65,7 +65,7 @@ Load the subject specific information. Then read and preprocess the continuous s
       cfg.continuous  = 'yes';
       data_orig = ft_preprocessing(cfg);
 
-The provided example data sets were already originally pre-filtered for scoring thus there is no need to filter them again, but they still retain all artifacts.
+The provided example datasets were already originally pre-filtered (see description above) for scoring thus there is no need to filter them again, but they still retain all artifacts.
 
 The data from Subject01 should have the following structure:
 
@@ -104,7 +104,7 @@ Please also skip through several epochs in the data and zoom out in the time axi
 
 _Figure 2: **[ft_databrowser](/reference/ft_databrowser)** of the original data with renamed channels. The data can be horizontally (time axis) and vertically (y-axis/signal amplitude) zoomed in and out to view the data in smaller or larger segments. And data can be viewed segment by segment.._
 
-We now additionaly segment the continuous data in 30-second trials. This allows us later to perform analyses on the data more efficiently. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
+We now additionally segment the continuous data in 30-second trials. This allows us to perform analyses on the data more efficiently later. Also this is the basis to break down the long signal into more comprehensible equal-sized chunks from which we can reconstruct a new signal to better estimate sleep states that clearly switch only on such longer time scales.
 
       % segment the continuous data in segments of 30-seconds
       % we call these epochs trials, although they are not time-locked to a particular event
@@ -115,7 +115,7 @@ We now additionaly segment the continuous data in 30-second trials. This allows 
 
 ## Detect wake periods using EMG & EOG
 
-To identify periods of wake (including brief arousals), non-REM and REM states during sleep we use all available modalities of a polysomnogram. We can use information about movement reflected in the level of EMG activity. In order to detect movement artifacts we filter the EMG channel in the 20 to 45 Hz range and apply a Hilbert envelope around the signal and smooth it.
+To identify periods of wake (including brief arousals), non-REM and REM states during sleep, we use all available modalities of a polysomnogram. We can use information about movement reflected in the level of EMG activity. In order to detect movement artifacts, we filter the EMG channel in the 20 to 45 Hz range and apply a Hilbert envelope around the signal and smooth it.
 
       cfg                              = [];
       cfg.continuous                   = 'yes';
@@ -140,7 +140,7 @@ Please note that due to the reduced sample rate of 128 Hz we cannot use the typi
 
 We now use **[ft_artifact_muscle](/reference/ft_artifact_muscle)** for automated artifact rejection according to some threshold (for more information on the active mode of this function see also the [automatic artifact rejection tutorial](/tutorial/automatic_artifact_rejection?s[]=ft&s[]=artifact&s[]=muscle#jump_artifact_detection)).
 
-We want to be very cautious with excluding and exclude more than we must since EMG artifacts point towards movement or wake periods have happened probably some seconds earlier and later.
+We want to be very cautious with excluding (i.e., we don't want to exclude more than we must) since EMG artifacts point towards movement or wake periods have happened probably some seconds earlier and later.
 
       % conservative rejection intervals around EMG events
       cfg.artfctdef.muscle.pretim  = 10; % pre-artifact rejection-interval in seconds
@@ -158,7 +158,7 @@ We want to be very cautious with excluding and exclude more than we must since E
 #### Exercise 1
 
 {% include markup/info %}
-Explore and find the best cutoff in z-values (i.e. standard deviations) to exclude most of the artifacts for this subject!
+Explore and find the best cutoff in z-values (i.e. numbers of standard deviation) to exclude most of the artifacts for this subject!
 
 Typically EMG higher than 100 microVolts are best excluded. Note that we exclude the data on the whole data length, i.e. as one big trial.
 {% include markup/end %}
@@ -187,7 +187,7 @@ For the epoched data we can do a similar EMG artifact identification as abov
 Compare the artifact begin and end samples when detected in the continuous data and when detected in the epoched data. What do you notice?
 {% include markup/end %}
 
-Another indicator of wake periods (or REM sleep) is eye movement. In the EOG we observe different types of eye movements (blinks, normal, slow, and rapid eye movements). Therefore, we will next detect periods with increased EO
+Another indicator of wake periods (or REM sleep) is eye movement. In the EOG we observe different types of eye movements (blinks, normal, slow, and rapid eye movements). Therefore, we will next detect periods with increased EOG.
 
       cfg = [];
       cfg.continuous                = 'yes';
@@ -405,7 +405,7 @@ View the whole sleep data in frequency band power now including the combinded sl
 
 {% include image src="/assets/img/tutorial/sleep/sleep_freq_bands_over_sleep_non-rem_estimation.png" width="600" %}
 
-As an estimate to find epochs that are very likely to be non-REM we identify every epoch where the SWA+Spindle signal is above a certain threshold. For example the average of the signal is used here as a threshold and we then keep the information of when those periods begin and end.
+As an estimate to find epochs that are very likely to be non-REM we identify every epoch where the SWA+Spindle signal is above a certain threshold. For example, the average of the signal is used here as a threshold and we then keep the information of when those periods begin and end.
 
     cfg = [];
     cfg.artfctdef.threshold.channel   = {'swa+spindle'};
