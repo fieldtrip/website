@@ -129,7 +129,7 @@ We now describe these options one-by-one.
 
 - We use **cfg.alpha** to control the false alarm rate of the permutation test (the probability of falsely rejecting the null hypothesis). The value of cfg.alpha determines the critical values with which we must compare the test statistic (i.e., the maximum and the minimum cluster-level statistic). _Note that if you want to run a two-sided test, you have to split the critical alpha value by setting cfg.correcttail = 'alpha'; i.e. this sets cfg.alpha = 0.025, corresponding to a false alarm rate of 0.05 in a two-sided test._ The field cfg.alpha is not crucial. This is because the output of **[ft_timelockstatistics](/reference/ft_timelockstatistics)** (see further) contains a p-value for every cluster (calculated under the permutation distribution of the maximum/minimum cluster-level statistic). Instead of the critical values, we can also use these p-values to determine the significance of the clusters.
 
-- We use **cfg.numrandomization** to control the number of draws from the permutation distribution. Remember that **[ft_timelockstatistics](/reference/ft_timelockstatistics)** approximates the permutation distribution by means of a histogram. This histogram is a so-called Monte Carlo approximation of the permutation distribution. This Monte Carlo approximation is used to calculate the p-values and the critical values that are shown in the output of **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. In this tutorial, we use cfg.numrandomization = 100. This number is too small for actual applications. As a rule of thumb, use cfg.numrandomization = 500, and double this number if it turns out that the p-value differs from the critical alpha-level (0.05 or 0.01) by less than 0.02.
+- We use **cfg.numrandomization** to control the number of draws from the permutation distribution. Remember that **[ft_timelockstatistics](/reference/ft_timelockstatistics)** approximates the permutation distribution by means of a histogram. This histogram is a so-called Monte Carlo approximation of the permutation distribution. This Monte Carlo approximation is used to calculate the p-values and the critical values that are shown in the output of **[ft_timelockstatistics](/reference/ft_timelockstatistics)**. In this tutorial, we use cfg.numrandomization = 100. This number is too small for actual applications. As a rule of thumb, use cfg.numrandomization = 500, and double this number if it turns out that the p-value differs from the critical alpha-level (0.05 or 0.01) by less than 0.02. _Note that the **meaningful** number of permutations depends on the number of UO, due to the permutation nature._ For example, there are in total 2^5 = 32 possible permutations for an experiment with 2 conditions and 5 UO, thus setting cfg.numrandomization to a value larger than 32 means that some permutations are evaluated more than once.
 
 - We use **cfg.design** to store information about the UOs. The content of cfg.design must be a matrix. Consider the hypothetical case that your subject has performed 5 trials in the first condition and 4 trials in the second condition. Then the correct design matrix looks like this: cfg.design = [1 1 1 1 1 2 2 2 2].
 
@@ -447,19 +447,19 @@ The configuration looks as follow
 
 We now describe the differences between this configuration and the configuration for a between-trials experiment.
 
-- Instead of an independent samples T-statistic, we use the **dependent samples T-statistic** to evaluate the effect at the sample level (cfg.statistic = 'depsamplesT'). This is because we are dealing with a within-UO instead of a between-UO design.
+- Instead of an independent samples T-statistic, we use the **dependent samples T-statistic** to evaluate the effect at the sample level (cfg.statistic = 'depsamplesT'). This is because we are dealing with a within-UO (i.e., subject) instead of a between-UO design.
 
 - The **design matrix** in a within-UO design is different from the design matrix in a between-UO design. In the design matix for a within-UO design, you have to specify the unit variable. The unit variable specifies the units that have produced the different condition-specific data structures. For example, consider a hypothetical study with 4 subjects and 2 experimental conditions. The design matrix may then look like this: design = [1 2 3 4 1 2 3 4; 1 1 1 1 2 2 2 2 ]. The first row of this matrix is the unit variable: it specifies that the first subject produced the first and the fifth data structure, the second subject produced the second and the sixth data structure, etc. The second row of the design matrix is the independent variable.
 
 - Because the design matrix contains both a unit variable and an independent variable, it has to be specified in the configuration which row contains which variable. This information is passed in the fields **cfg.uvar** (for the unit variable) and **cfg.ivar** (for the independent variable).
 
-Now, use the configuration above to perform the following statistical analysi
+Now, use the configuration above to perform the following statistical analysis
 
     [stat] = ft_timelockstatistics(cfg, allsubjFIC{:}, allsubjFC{:})
 
     save stat_ERF_planar_FICvsFC_GA stat
 
-The output can also be obtained from [stat_ERF_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat). If you need to reload the statistics output, us
+The output can also be obtained from [stat_ERF_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat). If you need to reload the statistics output, use
 
     load stat_ERF_planar_FICvsFC_GA
 
