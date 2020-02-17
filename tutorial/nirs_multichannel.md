@@ -211,8 +211,8 @@ In this experiment, the segment of interest is a period of 5 s before and 20s af
 
     % get the sample number in the original data
     % note that we transpose them to get columns
-    smp001 = [event(adc001).sample]’;
-    smp002 = [event(adc002).sample]’;
+    smp001 = [event(adc001).sample]';
+    smp002 = [event(adc002).sample]';
 
     factor = data_raw.fsample / data_down.fsample
 
