@@ -17,7 +17,7 @@ The cluster represents the thresholded uncorrected massive univariate statistics
 
     t = sqrt(N) * (mean(x1) - mean(x2)) / std(x)
 
-Given that the mean and standard deviation are unbiassed estimators, they won’t systematically change if you change the number of trials. But sqrt(N) changes with the number of trials. Hence the t-score increases with increasing number of trials.
+Given that the mean and standard deviation are unbiassed estimators, they won't systematically change if you change the number of trials. But sqrt(N) changes with the number of trials. Hence the t-score increases with increasing number of trials.
 
 Imagine the typical effect that starts weak and then increases over time until it peaks. The onset that you determine using the thresholded t-score depends on the number of trials, but it is always with finite N biassed to being too late. If you have few trials, it will be much too late (close to the peak), if you have many trials it will only be a bit too late. The more trials, the closer it gets to the true onset. But you know that it will always be too late, and that it depends quite ramdonmly on the amount of data that you happen to have.
 

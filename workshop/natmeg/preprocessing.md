@@ -385,7 +385,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
 
     figure;
     ft_multiplotER(cfg, ERF_standard_cmb, ERF_oddball_cmb, ERF_diff_cmb);
-    legend({'Standard’, ‘Oddball’, ‘Difference'});
+    legend({'Standard', 'Oddball', 'Difference'});
 
     set(gcf,'Position',[1 1 1239 945]);
     print -dpng natmeg_erf4.png
@@ -398,7 +398,7 @@ _Figure: The event related fields plotted using ft_multiplotER. The event relate
 How does this figure compare to the plot with the magnetometer data? Do you understand why these are different?
 {% include markup/end %}
 
-We will now zoom in on one combined channel, for instance in the combined channel ‘MEG0222+0223
+We will now zoom in on one combined channel, for instance in the combined channel 'MEG0222+0223
 
     cfg = [];
     cfg.showlabels = 'yes';
@@ -410,7 +410,7 @@ We will now zoom in on one combined channel, for instance in the combined channe
 
     figure;
     ft_singleplotER(cfg, ERF_standard_cmb, ERF_oddball_cmb, ERF_diff_cmb);
-    legend({'Standard’, ‘Oddball’, ‘Difference'});
+    legend({'Standard', 'Oddball', 'Difference'});
 
     print -dpng natmeg_erf5.png
 

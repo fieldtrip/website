@@ -46,7 +46,7 @@ Here, the response of interest is the well-known P20/N20 complex (or component) 
 
 #### Estimation of the P20/N20 component
 
-The median nerve of the subject’s right wrist was stimulated using square electrical pulses with 0.5 ms duration. The stimulus strength was adjusted to see a clear movement of the thumb. The inter-stimulus interval was varied randomly between 350 to 450 ms to avoid habituation and to obtain a clear pre-stimulus interval. A reduction in stimulus artifacts was achieved by reversing the polarity of the stimulation during the second half of the measurement.
+The median nerve of the subject's right wrist was stimulated using square electrical pulses with 0.5 ms duration. The stimulus strength was adjusted to see a clear movement of the thumb. The inter-stimulus interval was varied randomly between 350 to 450 ms to avoid habituation and to obtain a clear pre-stimulus interval. A reduction in stimulus artifacts was achieved by reversing the polarity of the stimulation during the second half of the measurement.
 
 #### Triggers
 

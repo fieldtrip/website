@@ -479,7 +479,7 @@ You can control the opacity of the functional data by the mask parameter. Which 
 
 #### Example 1: Plotting only positive values
 
-Imagine that your functional data has values ranging from -3 to 3. Here we plot only the positive values (‘zeromax’), using the scale whereby the strongest values are opaque, and the values close to zero are transparen
+Imagine that your functional data has values ranging from -3 to 3. Here we plot only the positive values ('zeromax'), using the scale whereby the strongest values are opaque, and the values close to zero are transparen
 
     cfg.maskparameter = cfg.funparameter
     cfg.colorlim      = [0 3] % or 'zeromax'
@@ -488,7 +488,7 @@ Imagine that your functional data has values ranging from -3 to 3. Here we plot 
 
 #### Example 2: Plotting high absolute values
 
-Suppose the functional data is the same as in example 1, but now we only wants to plot the high negative values and high positive values (using ‘maxabs’). We set these high absolute values to opaque, and the values around zero to transparen
+Suppose the functional data is the same as in example 1, but now we only wants to plot the high negative values and high positive values (using 'maxabs'). We set these high absolute values to opaque, and the values around zero to transparen
 
     cfg.maskparameter = cfg.funparameter
     cfg.colorlim      = [-3 3] % or 'maxabs'

@@ -13,7 +13,7 @@ This tutorial does not cover how to create a 2-D channel layout for plotting, no
 
 ### Background
 
-The quality of EEG source estimates depends on the accuracy of the volume conduction models and of the sensor positions. The volume conduction model comprises a description of the geometry, of the conductivities and of a computational approach for solving Poisson’s equations. The current golden standard is to measure the head geometry with an MRI and the EEG electrode positions with a [Polhemus](https://polhemus.com) electromagnetic digitizer. However, the Polhemus device is expensive and measuring the sensor positions with the Polhemus is time consuming, which can make it challenging or even impossible on specific subject groups.
+The quality of EEG source estimates depends on the accuracy of the volume conduction models and of the sensor positions. The volume conduction model comprises a description of the geometry, of the conductivities and of a computational approach for solving Poisson's equations. The current golden standard is to measure the head geometry with an MRI and the EEG electrode positions with a [Polhemus](https://polhemus.com) electromagnetic digitizer. However, the Polhemus device is expensive and measuring the sensor positions with the Polhemus is time consuming, which can make it challenging or even impossible on specific subject groups.
 
 In this tutorial we demonstrate the localization of EEG electrodes based on 3D-scan of a subject's head. The specific device we are using is the [structure sensor](http://structure.io) by Occipital. However, other 3D scanning devices would also work, as long as you can read the output of the 3D-scanner into MATLAB.
 

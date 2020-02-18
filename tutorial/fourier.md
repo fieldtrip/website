@@ -257,7 +257,7 @@ words, the phase difference should not be random. It turns out that the phase di
 signals is easily obtained if one has the Fourier transform of the two signals. The product of the
 Fourier transform of one signal with the conjugate of the Fourier Transform of the signal gives the
 Cross-Spectral density (CSD). We will not go into the detail what the conjugate actually is and why
-this multiplication gives this particular results. Let’s simply accept this for now as a fact.
+this multiplication gives this particular results. Let's simply accept this for now as a fact.
 
 The CSD is complex and a function of frequency, just like the Fourier Transforms. The amplitude of
 the CSD is the product of the amplitudes of the Fourier Transforms of the two signals. The

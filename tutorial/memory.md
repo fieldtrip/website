@@ -21,7 +21,7 @@ Neurophysiological data can become quite large with the result that disk space, 
 - Check if you really have to “cfg.keeptrials = 'yes'” in **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 - If you are working on a single subject, make sure other subjects are no longer in memory. This might seem trivial, but many people assign unique variables to subjects and forget to clear them.
 - Perhaps most importantly – once in a while let someone else go through your scripts to see if they can be optimized.
-- Within a script or function make sure you clear large variables that you don’t need anymore using the clear statement. Note that MATLAB’s memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
+- Within a script or function make sure you clear large variables that you don't need anymore using the clear statement. Note that MATLAB's memory use might not be intuitive. For instance, reloading a large dataset into the same variable may result in MATLAB allocating twice the memory you actually need.
 
 {% include markup/warning %}
 If you have any more suggestions please add them here.
@@ -50,7 +50,7 @@ Only import into MATLAB as much of a large data set as you need for the problem 
     Seq       1x912211       912211  int8
 
 If there are large arrays in the MAT-file that you do not need for your current task, you can selectively import only those variables that you want using load, for instance:
-seq = load(‘session1.mat’,’Seq’).
+seq = load('session1.mat','Seq').
 
 ## Avoid creating temporary arrays
 

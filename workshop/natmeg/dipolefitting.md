@@ -90,7 +90,7 @@ You can see that the MRI is displayed upside down. That in itself is not a probl
 
 The coregistration of the anatomical MRI with the Neuromag head coordinate system is required to express the anatomical MRI in a consistent fashion relative to the MEG and EEG sensors. Since we will use the anatomical MRI to construct the volume conduction model of the head, coregistration is also a prerequisite to ensure that the volume conduction model is aligned with the sensors.
 
-The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/how_are_the_lpa_and_rpa_points_defined). We use **[ft_volumerealign](/reference)** with cfg.method=‘interactive’. It allows us to click on a voxel, and to press ’n’, ‘l’ or ‘r’ to indicate the nasion, left and right pre-auricular point respectively.
+The first step consists of a coarse coregistration, based on three anatomical landmarks at the nasion (i.e. at the top of the bridge of the nose) and two [pre-auricular points](/faq/how_are_the_lpa_and_rpa_points_defined). We use **[ft_volumerealign](/reference)** with cfg.method='interactive'. It allows us to click on a voxel, and to press 'n', 'l' or 'r' to indicate the nasion, left and right pre-auricular point respectively.
 
     cfg = [];
     cfg.method = 'interactive';
@@ -199,7 +199,7 @@ After having confirmed that the segmentations are consistent with the anatomical
 Why do we use fewer vertices for the outer mesh than for the inner mesh?
 {% include markup/end %}
 
-These meshes are all relatively coarse and don’t look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
+These meshes are all relatively coarse and don't look so nice in a visualization. Using the _isosurface_ method (also known as [Marching Cubes](http://en.wikipedia.org/wiki/Marching_cubes)) we can extract a much nicer looking skin conpartment.
 
     cfg = [];
     cfg.method = 'isosurface';
@@ -448,7 +448,7 @@ Now that we have a better starting point for the dipole fit, we can release the 
 
 You can see that the dipoles have moved a little bit from their original location and that they are not symmetric any more.
 
-Using the dipole locations that we fitted to the rather short time window of the M100, we can estimate the timecourse of activity. That is also done using **[ft_dipolefitting](/reference/ft_dipolefitting)**, now using both cfg.nonlinear=‘no’ and cfg.gridsearch='no’.
+Using the dipole locations that we fitted to the rather short time window of the M100, we can estimate the timecourse of activity. That is also done using **[ft_dipolefitting](/reference/ft_dipolefitting)**, now using both cfg.nonlinear='no' and cfg.gridsearch='no'.
 
     cfg = [];
     cfg.latency = 'all';

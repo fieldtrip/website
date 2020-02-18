@@ -9,7 +9,7 @@ This page describes the interface between the 8-channel [OpenBCI](http://www.ope
 
 {% include image src="/assets/img/development/realtime/openbci/8_perspective_1024x1024.jpg" width="400" %}
 
-The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you’ve worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
+The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on your machine. You may already have these installed, if you've worked with Arduino or other USB hardware accessories. You can download the latest FTDI drivers for your operating system [here](http://www.ftdichip.com/Drivers/VCP.htm).
 
 ## Standalone interface with openbci2ft
 

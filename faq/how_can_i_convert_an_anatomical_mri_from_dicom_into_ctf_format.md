@@ -60,21 +60,21 @@ Where '\$subjectcode' is the coded name of your subject data, for instance: subj
 
 Do the following before starting.the actual conversion procedur
 
-- Create a directory ‘\$subjectcode’
+- Create a directory '\$subjectcode'
 - Create the directory structure as depicted in the format outline.
-- Copy MRI data set to ‘/\$subjectcode/dicom’.
-- Park localizer files (optional): An anatomical MRI data set consist of localizer files and the actual slices that we are interested in. If the localizer files are still present in the data set, please park them in a ‘misc’ directory that you should create in ‘\$subjectcode/dicom’.
+- Copy MRI data set to '/\$subjectcode/dicom'.
+- Park localizer files (optional): An anatomical MRI data set consist of localizer files and the actual slices that we are interested in. If the localizer files are still present in the data set, please park them in a 'misc' directory that you should create in '\$subjectcode/dicom'.
 - Analyze files are only created when using older CTF software versions (e.g. 4.17)
 
 Now that you have prepared the directory structure for the subject data, you can start with the conversion procedure!
 
 ### Convert from DICOM to CTF .mri file
 
-- Start MRIViewer. At the moment (Jan11) the current version on the mentats at the DCCN is release 5.40-linux-20061212. Start it by typing ‘MRIViewer’ in the command line.
+- Start MRIViewer. At the moment (Jan11) the current version on the mentats at the DCCN is release 5.40-linux-20061212. Start it by typing 'MRIViewer' in the command line.
 - Press file -> Import DICOM series...
-- Find the .ima files in ‘/home/.../\$subjectcode/dicom’, select the first one, and press OK. This opens all .ima files
+- Find the .ima files in '/home/.../\$subjectcode/dicom', select the first one, and press OK. This opens all .ima files
 - A new window will open ('Save MRI file') asking you to name the .mri file that will be created
-- Name the file $subject and place it in the ‘/home/.../$subjectcode’ directory.
+- Name the file $subject and place it in the '/home/.../$subjectcode' directory.
 
 ### Assign the head coordinate system
 
@@ -100,7 +100,7 @@ The most elegant way to identify the markers would include:
 - click with your mouse at the voxels where you want to put a marker (an orange cross appears)
 - click with your right mouse and hold the button to get a drop down menu where you click fiducials and choose one of the three options.
 - you can check all marked fiducials under options and then fiduciary points to see if you have done them all.
-- Save the changes in the MRI file (‘File> Save’)
+- Save the changes in the MRI file ('File> Save')
 - Make the .mri file compatible with FieldTrip: choose File -> Convert to CTF v2 format and replace the .mri file
 
 ### Create a headshape

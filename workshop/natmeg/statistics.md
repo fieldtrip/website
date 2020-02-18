@@ -102,7 +102,7 @@ The MEG dataset that we use in this tutorial is available as [oddball1_mc_downsa
 
 ### Single-trial time-frequency responses
 
-To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is ‘no’. Since we compute the TFR for each individual trial, we don’t have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in the _trialinfo_ field.
+To perform the statistical test we need to compute single-trial time-frequency responses. This is done using the cfg.keeptrials configuratino option, which by default is 'no'. Since we compute the TFR for each individual trial, we don't have to split the data in the two conditions. The condition to which each trial belongs is kept with the data in the _trialinfo_ field.
 
     cfg              = [];
     cfg.output       = 'pow';
@@ -340,7 +340,7 @@ However, we will leave the statistical evaluation to the **[ft_timelockstatistic
 
 Note that the dimord is _rpt_chan_time_, i.e. trials by channels by time, which matches with the size of the ERF_all.trial array.
 
-We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1’s and 2’s.
+We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-prior threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1's and 2's.
 
     cfg           = [];
     cfg.statistic = 'indepsamplesT';

@@ -122,7 +122,7 @@ Let us dive deeper into our data for now. For having a quick look at our data, w
 
 _Figure: Databrowser read-in._
 
-Using **[ft_databrowser](/reference/ft_databrowser)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don’t need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
+Using **[ft_databrowser](/reference/ft_databrowser)**, you can also cut out pieces of your data that you do not need. For instance, if you have started the recording while putting the optodes in place, you will probably have a chunk of data at the start of the recording that you don't need and which contains very high (not brain-related) values that rapidly fluctuate. It is useful to cut these pieces out (trimming). In the tutorial dataset, this is not needed, but see here for an [illustration of how trimming works within ft_databrowser](/tutorial/visual_artifact_rejection#use_ft_databrowser_to_mark_the_artifacts_manually).
 
 Additionally, we'll from here select just one channel, to reduce the complexity for those new to fNIRS analyses.
 
@@ -210,7 +210,7 @@ The question mark indicates that we are not sure about the event triggers, and t
 
 In the command window, you will see that 24 events were found, and two types of events were used, namely event 'A' and event 'B'. In case you recorded your files with the Artinis Oxymon system, and you did not add events during the measurement, you can include them here, see FAQ.
 
-Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event ‘A’) and ending 35 seconds after ‘A’ (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)**:
+Furthermore, note that we do not define the output variable [cfg] now, as we are not interested in the output. The variable 'cfg' will thus stay unchanged. We want to have a look at epochs/trials starting 10 second pre-stimulus (before event 'A') and ending 35 seconds after 'A' (post-stimulus). So we can now define our trials and subsequently use this to call **[ft_preprocessing](/reference/ft_preprocessing)**:
 
     cfg.trialdef.eventtype  = 'event';
     cfg.trialdef.eventvalue = 'A';

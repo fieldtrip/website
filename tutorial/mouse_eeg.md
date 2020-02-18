@@ -321,7 +321,7 @@ After creating the layout, you should manually assign the correct name of the ch
 
 FIXME insert figure (6 layout plot)
 
-If you think that some outlines (nose, eyes, head, whiskers and ears) are not necessary, you can pass without assigning any outline. Next step is zero point calibration for the bregma point. If you, however, use customized layout for single subject, you don’t need to carry out next step.
+If you think that some outlines (nose, eyes, head, whiskers and ears) are not necessary, you can pass without assigning any outline. Next step is zero point calibration for the bregma point. If you, however, use customized layout for single subject, you don't need to carry out next step.
 
 In the aspect of mouse anatomy, the bregma point is located in the middle of the 4th layer of the anterior of HD-array that it should be set (0, 0) because we follow the Paxinos coordinate system. To calibrate layout position, we just subtract the value of bregma on acquired layout from previous step.
 

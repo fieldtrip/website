@@ -51,7 +51,7 @@ The two workflows become intrinsically connected for the first time during the e
 
 CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy in demarcating the right hemisphere landmark in the following step is important for avoiding an otherwise hard to detect flip of the scan's left and right orientation.
 
-**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain’s right hemisphere. If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart ([Supplementary Video 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM7_ESM.mp4)).
+**4**) Align the anatomical MRI to the ACPC coordinate system, a preferred convention for the FreeSurfer operation optionally used in a later step. In this coordinate system, the origin (coordinate [0,0,0]) is at the anterior commissure (AC), the Y-axis runs along the line between the anterior and posterior commissure (PC), and the Z-axis lies in the midline dividing the two cerebral hemispheres. Specify the anterior and posterior commissure, an interhemispheric location along the midline at the top of the brain, and a location in the brain's right hemisphere. If the scan was found to have a left-to-right orientation in the previous step, the right hemisphere is identified as the hemisphere having larger values along the left-right axis. Vice versa, in a right-to-left system, the right hemisphere has smaller values along that axis than its left counterpart ([Supplementary Video 2](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM7_ESM.mp4)).
 
     cfg           = [];
     cfg.method    = 'interactive';
@@ -68,7 +68,7 @@ CRITICAL STEP To correctly fuse the MRI and CT scans at a later step, accuracy i
 
 ### Cortical surface extraction with FreeSurfer (optional)
 
-**6**) Execute FreeSurfer's recon-all functionality from the Linux or MacOS terminal (Windows via VirtualBox), or from the MATLAB command window as below. This set of commands will create a folder named ‘freesurfer’ in the subject directory, with subdirectories containing a multitude of FreeSurfer-generated files.
+**6**) Execute FreeSurfer's recon-all functionality from the Linux or MacOS terminal (Windows via VirtualBox), or from the MATLAB command window as below. This set of commands will create a folder named 'freesurfer' in the subject directory, with subdirectories containing a multitude of FreeSurfer-generated files.
 
 {% include markup/warning %}
 For tutorial purposes, the example dataset contains the output from FreeSurfer, a folder named 'freesurfer', for continuation with the protocol. You can therefore skip this time-consuming computation and continue with step 7.
@@ -313,7 +313,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
     atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
 
-**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere’s hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/how_can_i_determine_the_anatomical_label_of_a_source).
+**34**) Look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1, targeting the left hemisphere's hippocampus. [Supplementary File 3](https://static-content.springer.com/esm/art%3A10.1038%2Fs41596-018-0009-6/MediaObjects/41596_2018_9_MOESM5_ESM.pdf) represents a tool that automatically overlays all channels in an electrode structure with all of the above atlases and stores the resulting anatomical labels in an excel table (e.g., SubjectUCI29_electable.xlsx in the zip file). A more recent version of this tool can be found [here](/faq/how_can_i_determine_the_anatomical_label_of_a_source).
 
     cfg            = [];
     cfg.roi        = elec_mni_frv.chanpos(match_str(elec_mni_frv.label,'LHH1'),:);
@@ -334,7 +334,7 @@ CRITICAL STEP Accuracy of the spatial normalization step is important for correc
 
 ### Preprocessing of the neural recordings
 
-**35**) Define the trials, that is, the segments of data that will be used for further processing and analysis. This step produces a matrix cfg.trl containing for each segment the begin and end sample in the recording file. In the case of the example provided in the shared data, the segments of interest begin 400 ms before tone onset, are marked with a ‘4’ in the trigger channel, and end 900 ms thereafter.
+**35**) Define the trials, that is, the segments of data that will be used for further processing and analysis. This step produces a matrix cfg.trl containing for each segment the begin and end sample in the recording file. In the case of the example provided in the shared data, the segments of interest begin 400 ms before tone onset, are marked with a '4' in the trigger channel, and end 900 ms thereafter.
 
 {% include markup/warning %}
 Raw recording files are not shared, in order to protect the subject's identity. For tutorial purposes, load the preprocessed data, which is the product of steps 35 & 36, and continue with step 37: load([subjID '_data.mat'], 'data');
@@ -361,7 +361,7 @@ Raw recording files are not shared, in order to protect the subject's identity. 
     cfg.bsfreq         = [59 61; 119 121; 179 181];
     data = ft_preprocessing(cfg);
 
-**37**) Examine whether the variables in the output data structure match the recording and preprocessing parameters, i.e. the sampling rate (fsample), number of recording channels (label), and segmentation into the experiment’s twenty-six trials (trial, and their respective time axes in time).
+**37**) Examine whether the variables in the output data structure match the recording and preprocessing parameters, i.e. the sampling rate (fsample), number of recording channels (label), and segmentation into the experiment's twenty-six trials (trial, and their respective time axes in time).
 
     data =
 
@@ -479,7 +479,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
     cfg.avgovertime = 'yes';
     freq_sel = ft_selectdata(cfg, freq_blc);
 
-**51**) Visualize the spatial distribution of high-frequency-band activity on a cortical mesh of the subject’s brain.
+**51**) Visualize the spatial distribution of high-frequency-band activity on a cortical mesh of the subject's brain.
 
     cfg              = [];
     cfg.funparameter = 'powspctrm';

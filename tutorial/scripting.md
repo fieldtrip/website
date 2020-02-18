@@ -7,13 +7,13 @@ tags: [tutorial, example, script, matlab, beginner, batching]
 
 ## Introduction
 
-This tutorial is intended to provide some guidelines and suggestions how to set up a chain of analysis steps that makes most efficient use of your (and your computer’s) time and is in accordance to the FieldTrip philosophy. Some MATLAB basics regarding the making of your own function will also be introduced. The idea of batching is introduced. Finally some practical tips regarding computer memory usage are given as well as an example.
+This tutorial is intended to provide some guidelines and suggestions how to set up a chain of analysis steps that makes most efficient use of your (and your computer's) time and is in accordance to the FieldTrip philosophy. Some MATLAB basics regarding the making of your own function will also be introduced. The idea of batching is introduced. Finally some practical tips regarding computer memory usage are given as well as an example.
 
 The examples are about preprocessing of the data, but it does not provide detailed information about it. If you are interested in how to preprocess your data, you can check for example, [this](/tutorial/preprocessing) tutorial.
 
 ## Background
 
-The analysis of an experiment typically involves a lot of repetition as similar analysis steps are taken for every condition and for every subject. Also, the same steps are often repeated with only slightly different settings (e.g. filters, timings). Because of this we should program our own functions around the FieldTrip functions. FieldTrip functions are **not** intended to be just typed into MATLAB’s command window. If you do, you are guaranteed to lose record of preceding steps, repeat yourself unnecessarily, or unknowingly change settings between subjects or conditions. Another '**no-no**' is the practice of collecting all your steps in one large m-file and copy-pasting parts in the command window. Besides becoming easily cluttered with previous tries, different filter settings, etc., it does not create a clear continuity between steps, and most importantly, does not permit batching. Batching is the ultimate aim of any analysis pipeline. It means that in the end most of your analysis steps can be repeated over all subjects and/or conditions with a single command.
+The analysis of an experiment typically involves a lot of repetition as similar analysis steps are taken for every condition and for every subject. Also, the same steps are often repeated with only slightly different settings (e.g. filters, timings). Because of this we should program our own functions around the FieldTrip functions. FieldTrip functions are **not** intended to be just typed into MATLAB's command window. If you do, you are guaranteed to lose record of preceding steps, repeat yourself unnecessarily, or unknowingly change settings between subjects or conditions. Another '**no-no**' is the practice of collecting all your steps in one large m-file and copy-pasting parts in the command window. Besides becoming easily cluttered with previous tries, different filter settings, etc., it does not create a clear continuity between steps, and most importantly, does not permit batching. Batching is the ultimate aim of any analysis pipeline. It means that in the end most of your analysis steps can be repeated over all subjects and/or conditions with a single command.
 
 ## Subject m-files
 
@@ -34,7 +34,7 @@ As stated before, by making our own function around FieldTrip functions we can i
     % more information can be added to this script when needed
     ...
 
-Save this as _Subject01.m_ in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval(‘Subject01’)`. This will return the structure `subjectdata` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`.
+Save this as _Subject01.m_ in a personal folder that you will need to add to the MATLAB path. Using the command line you can now simply retrieve this personal data by calling `Subject01` or from any script by using `eval('Subject01')`. This will return the structure `subjectdata` containing all the fields we have specified. We can now use this structure as input for our own functions, giving us a flexible way of combining generic functions and subject-specific settings. In addition, you could use this file to add further comments such as `% subject made a mistake on the first trial`.
 
 ## Making your own analysis functions
 
@@ -106,13 +106,13 @@ Along the way, you will most likely expand on the subject-specific information. 
 
 ## Batching
 
-In the end we’ll end up with a collection of several functions, either depending on the output of previous functions (e.g. preprocessing or artifact rejection) while others could in principle be called in parallel (e.g. averaging per condition or per subject). This could result in an analysis pipeline such as this (simplified) on
+In the end we'll end up with a collection of several functions, either depending on the output of previous functions (e.g. preprocessing or artifact rejection) while others could in principle be called in parallel (e.g. averaging per condition or per subject). This could result in an analysis pipeline such as this (simplified) on
 
 {% include image src="/assets/img/tutorial/scripting/pipeline.jpg" width="600" %}
 
 This will allow us to automate most of the steps that do not require manual labor (in this example that would be the visual inspection of the data to reject artifacts). This is called _batching_. Large datasets will often require quite some processing time and it will therefore often be the case that a batch will be run overnight.
 
-The worst that can happen is that the next morning you’ll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the `try-catch` option in MATLAB. Whenever something goes wrong between the `try` and `catch` it will jump to the catch after which it will just continue. E.g
+The worst that can happen is that the next morning you'll see some red lines in your MATLAB command window just because of a small mistake in one of the first subjects. Therefore, you might want to try using the `try-catch` option in MATLAB. Whenever something goes wrong between the `try` and `catch` it will jump to the catch after which it will just continue. E.g
 
     for i = 1:number_of_subjects
     try
@@ -121,13 +121,13 @@ The worst that can happen is that the next morning you’ll see some red lines i
             my_freqanalysis_function(i)
             my_sourceanalysis_function(i)
       catch
-      disp([‘Something was wrong with Subject’ int2str(i) ‘! Continuing with next in line’]);
+      disp(['Something was wrong with Subject' int2str(i) '! Continuing with next in line']);
       end
     end
 
 ## Example batches
 
-The following function will load the data as specified in Subject01.m, uses the databrowser for visual inspection of artifacts, rejects those trials containing artifacts and then saves the data in a separate folder as “01_preproc_dataM.mat”. You can simply call it by “do_preprocess_MM(‘Subject01’);”
+The following function will load the data as specified in Subject01.m, uses the databrowser for visual inspection of artifacts, rejects those trials containing artifacts and then saves the data in a separate folder as “01_preproc_dataM.mat”. You can simply call it by “do_preprocess_MM('Subject01');”
 
     function do_preproces_MM(Subjectm)
 

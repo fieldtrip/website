@@ -13,9 +13,9 @@ Then we will use the batch interface to specify a statistical model. There are m
 
 To create 3D scalp-time images for each trial, the 2D representation of the scalp is created by projecting the sensor locations onto a plane, and then interpolating linearly between them onto a 32x32 pixel grid. This grid is then tiled across each timepoint.
 
-- Run MATLAB, make sure the root SPM folder is in your MATLAB path and write ‘spm eeg’ in the command line.
+- Run MATLAB, make sure the root SPM folder is in your MATLAB path and write 'spm eeg' in the command line.
 
-- Press the ‘Batch’ button and select the “SPM – M/EEG – Images – Convert2Images” option in the batch editor.
+- Press the 'Batch' button and select the “SPM – M/EEG – Images – Convert2Images” option in the batch editor.
 
 - For the input file, select the “PapMcbdspmeeg_run_01_sss.mat” file that contains every trial (i.e, before averaging), but with bad trials marked (owing to excessive EOG signals; see the manual chapter for more details).
 
@@ -33,13 +33,13 @@ Random Field Theory, used to correct the statistics below, assumes a certain min
 
 - Click on this module, highlight “Images to smooth” and press the “Dependency” button in the bottom right corner of the batch window. In the list that comes up select “Convert2Images:M/EEG exported images” and press “OK”. This specifies the exported images that have not yet been created as input to the smoothing step.
 
-- Highlight “Implicit masking” and select “Yes”. This makes sure that smoothing doesn’t go beyond the original head boundaries.
+- Highlight “Implicit masking” and select “Yes”. This makes sure that smoothing doesn't go beyond the original head boundaries.
 
-- If everything is specified correctly the ‘run’ button in the toolbar of the batch tool should turn green. Press it to run the batch.
+- If everything is specified correctly the 'run' button in the toolbar of the batch tool should turn green. Press it to run the batch.
 
 ## Reviewing images
 
-Once you have run the batch, a new directory will be created called “mag_img_PapMcbdspmeeg_run_01_sss”. Within that directory will be three unsmoothed 4D NIfTI files, one per condition and three smoothed versions of the same files whose name starts with ‘s’ prefix. It is very important to note that these 4D files contain multiple “frames” (i.e. 3D scalp-time images), one per trial (i.e. 296 in the case of unfamiliar faces).
+Once you have run the batch, a new directory will be created called “mag_img_PapMcbdspmeeg_run_01_sss”. Within that directory will be three unsmoothed 4D NIfTI files, one per condition and three smoothed versions of the same files whose name starts with 's' prefix. It is very important to note that these 4D files contain multiple “frames” (i.e. 3D scalp-time images), one per trial (i.e. 296 in the case of unfamiliar faces).
 
 - To view one of these, press “Display – Images” in the SPM Menu window, and select, say, the “condition_Unfamiliar.nii” file. But note that by default you will only see the first scalp-time image in each file (because the default setting of “Frames” within the Select Image window is “1”). To be able to select from all frames, change the “Frames” value from 1 to “Inf” (infinite) when opening the file, and now you will see all 296 frames (trials) that contained Unfamiliar faces. If you select one of them you can scroll will the cross-hair to see the changes in topography over time.
 
@@ -49,9 +49,9 @@ A useful trick is to use regular expressions to select only part of the availabl
 
 ## Model Specification
 
-Now we have one image per trial (per condition), we can enter these into a GLM using SPM’s statistical machinery (in the same was that we treat other data from other modalities such as PET or fMRI). If we ignore temporal autocorrelation across trials, we can assume that each trial is an independent observation, so our GLM corresponds to a one-way, non-repeated-measures ANOVA with 3 levels (conditions).
+Now we have one image per trial (per condition), we can enter these into a GLM using SPM's statistical machinery (in the same was that we treat other data from other modalities such as PET or fMRI). If we ignore temporal autocorrelation across trials, we can assume that each trial is an independent observation, so our GLM corresponds to a one-way, non-repeated-measures ANOVA with 3 levels (conditions).
 
-- To create this model, open a new batch, select “Factorial design specification” under “Stats” on the “SPM” toolbar at the top of the batch editor window. The first thing is to specify the output directory where the SPM stats files will be saved. So first create such a directory within the subject’s sub-directory, calling it for example “Stats”. Then go back to the batch editor and select this directory.
+- To create this model, open a new batch, select “Factorial design specification” under “Stats” on the “SPM” toolbar at the top of the batch editor window. The first thing is to specify the output directory where the SPM stats files will be saved. So first create such a directory within the subject's sub-directory, calling it for example “Stats”. Then go back to the batch editor and select this directory.
 
 - Highlight “Design” and from the current item window, select “One-way ANOVA”. Highlight “Cell”, select “New: Cell” and repeat until there are three cells.
 
@@ -68,7 +68,7 @@ This now completes the GLM specification, but before running it, we will add one
 
 - Add a module for “Model estimation” from the Stats option on the SPM toolbar menu and define the file name as being dependent on the results of the factorial design specification output. For “write residuals”, keep “no”. Select classical statistics.
 
-- Run the pipeline by pressing the green ‘run’ button.
+- Run the pipeline by pressing the green 'run' button.
 
 ## Setting up contrasts and reviewing results
 
@@ -78,7 +78,7 @@ The first contrast will be a generic one that tests whether significant variance
 - Press the “Results” button in the main SPM window. In the file selector that comes up select the “SPM.mat” file in the “Stats” directory. In the window that comes up check the “F-contrast” radio button and press “Define new contrast” button. Name this contrast “All Effects”. Then define the weights matrix by typing in “eye(7)” (which is MATLAB for a 7x7 identity matrix). We will use this contrast later to plot the parameter estimates for these 7 regressors. Press “OK”
   More interestingly perhaps, we can also define a contrast that compares faces against scrambled faces (e.g. to test whether the N170 seen in the average over trials is reliable given the variability from trial to trial, and to also discover where else in space or time there might be reliable differences between faces and scrambled faces).
 
-- So make another F-contrast, name this one “Faces (Fam+ Unf) `<>` Scrambled”, and type in the weights “0.5 0.5 -1 0 0 0 0” (which contrasts the main effect of faces vs scrambled faces, ignoring any time effects (though SPM will complete the final zeros if you omit)). Note that we use an F-test because we don’t have strong interest in the polarity of the face-scrambled difference. But if we did want to look at just positive and negative differences, you could enter two T-contrasts instead, with opposite signs on their weights.
+- So make another F-contrast, name this one “Faces (Fam+ Unf) `<>` Scrambled”, and type in the weights “0.5 0.5 -1 0 0 0 0” (which contrasts the main effect of faces vs scrambled faces, ignoring any time effects (though SPM will complete the final zeros if you omit)). Note that we use an F-test because we don't have strong interest in the polarity of the face-scrambled difference. But if we did want to look at just positive and negative differences, you could enter two T-contrasts instead, with opposite signs on their weights.
 
 - To test for the differences between Familiar and Unfamiliar faces make an F-contrast named “Fam`<>`Unf”, and type in the weights “1 -1 0 0 0 0 0”.
 
@@ -86,9 +86,9 @@ The first contrast will be a generic one that tests whether significant variance
 
 - Switch back to F-contrasts, highlight the “Faces (Fam+Unf)`<>`Scrambled” contrast and press “Done”. Within the “Stats: Results” bar window which will appear on the left hand side, select the following: Apply Masking: None, P value adjustment to control: FWE, keep the threshold at 0.05, extent threshold {voxels}: 0; Data Type: Scalp-Time.
 
-- Move the cursor to the earliest local maximum –the first local peak in the first cluster - this corresponds to x=+26mm, y=-84mms and t=160ms (i.e. right posterior scalp). If you then press “Plot – Contrast Estimates – All Effects”, you will get 7 bars. The first three reflect the three main conditions (the red bar is the standard error from the model fit). You can see that Famous and Unfamiliar faces produce a more positive amplitude at this space-time point than Scrambled faces (the “N170”. Note that the ‘N’ notation comes from EEG whereas in MEG the polarity can be different depending on the sensor). The next three bars show the parameter estimates for the modulation of the evoked response by time. These effects are much smaller relative to their error bars (i.e., less significant) as is the random regressor effect.
+- Move the cursor to the earliest local maximum –the first local peak in the first cluster - this corresponds to x=+26mm, y=-84mms and t=160ms (i.e. right posterior scalp). If you then press “Plot – Contrast Estimates – All Effects”, you will get 7 bars. The first three reflect the three main conditions (the red bar is the standard error from the model fit). You can see that Famous and Unfamiliar faces produce a more positive amplitude at this space-time point than Scrambled faces (the “N170”. Note that the 'N' notation comes from EEG whereas in MEG the polarity can be different depending on the sensor). The next three bars show the parameter estimates for the modulation of the evoked response by time. These effects are much smaller relative to their error bars (i.e., less significant) as is the random regressor effect.
 
-- Now in the interactive SPM window go to “Contrasts” menu, select “Change Contrast” and “F: Fam`<>`Unf”. You will see that nothing comes out as significant at the FWE p<0.05 level. To try a different way of significance testing go to “Contrasts-Significance level – Change”. Press ‘none’ and select 0.01 as uncorrected (a.k.a. cluster-forming) threshold. You will see several clusters of different sizes. Their significance can be assessed by looking at the third from the left column in the stats table. You can see that only the largest cluster has a p-value of less than 0.05. You can now only display that cluster by changing the significance level again and repeating the steps but this time choosing an extent threshold value somewhere between the significant and the largest insignificant cluster size (e.g. 1500).
+- Now in the interactive SPM window go to “Contrasts” menu, select “Change Contrast” and “F: Fam`<>`Unf”. You will see that nothing comes out as significant at the FWE p<0.05 level. To try a different way of significance testing go to “Contrasts-Significance level – Change”. Press 'none' and select 0.01 as uncorrected (a.k.a. cluster-forming) threshold. You will see several clusters of different sizes. Their significance can be assessed by looking at the third from the left column in the stats table. You can see that only the largest cluster has a p-value of less than 0.05. You can now only display that cluster by changing the significance level again and repeating the steps but this time choosing an extent threshold value somewhere between the significant and the largest insignificant cluster size (e.g. 1500).
 
 - Now try to do the same for the random regressor contrast. Is there any way you can get “significant” results with it?
 
