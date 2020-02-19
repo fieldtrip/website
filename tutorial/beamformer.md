@@ -48,33 +48,29 @@ The aim is to identify the sources of oscillatory activity in the beta band. Fro
 
 _Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.._
 
-{% include /shared/tutorial/preprocessing_fic.md %}
+{% include /shared/tutorial/definetrial_all.md %}
 
-### Time windows of interest
+### Select conditions and time windows of interest
 
-Now we select the time windows of interest: the pre- and post stimulus windows. This requires the preprocessed data (see above), which is available from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data with the following comman
-
-    load dataFIC
-
-Now 'cut' out the pre- and post-stimulus time window
+We have identified the beta band effect on trials belonging to the fully incongruent condition (FIC, coded with a trigger value of 3). We will therefore now only select trials belonging to this condition based on the trigger information, that was saved in the trialinfo field during the call to ft_preprocessing.
+Further we need to 'cut' out the time windows of interest: the pre- and post stimulus windows. We will do the selection of trials and time windows in one call to  **[ft_redefinetrial](/reference/ft_redefinetrial)**:
 
     cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
     cfg.toilim = [-0.5 0];
-    dataPre = ft_redefinetrial(cfg, dataFIC);
+    dataPre = ft_redefinetrial(cfg, data_all);
 
     cfg.toilim = [0.8 1.3];
-    dataPost = ft_redefinetrial(cfg, dataFIC);
+    cfg.trials = data_all.trialinfo == 3;
+    dataPost = ft_redefinetrial(cfg, data_all);
 
-As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
+Subsequently you can save the data to disk.
 
-1.  Suitable control windows are, for example:
-    - Activity contrasted with baseline (example shown here using dataPre)
-    - Activity of condition 1 contrasted with condition 2 (example not shown)
-2.  However, if no other suitable data condition or baseline time-window exists, then
-    - Activity contrasted with estimated noise (example shown below)
-    - Use normalized leadfields (mentioned in ['the forward model and lead field matrix'](/tutorial/beamformer?&#the_forward_model_and_lead_field_matrix) section and Exercise 4 below)
+  save dataFIC
 
-The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
+or simply load the pre-computed data available from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/PreprocData.mat). For loading this data into MATLAB use the following command:
+
+  load PreprocData
 
 ### Exercise 1: data length
 
@@ -107,31 +103,33 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
 The first step in the procedure is to construct a forward model. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
 The first step in constructing the forward model is to find the brain surface from the subjects MRI. This procedure is termed segmentation.
-Note that segmentation is quite time consuming. If you have access to the preprocessed file you can skip ahead to 'load segmentedmri'.
+Note that segmentation is quite time consuming. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can directly load the segmented MRI available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat) using the command 'load segmentedmri'.
 
-Segmentation involves the following steps (**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM. The necessary SPM-files are located in fieldtripXXX/external/spm8)
+Otherwise, segmentation involves the following steps:
+
+First the segmentation (**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM. The necessary SPM-files are located in fieldtripXXX/external/spm8)
 
     mri = ft_read_mri('Subject01.mri');
     cfg = [];
     cfg.write      = 'no';
     [segmentedmri] = ft_volumesegment(cfg, mri);
 
-Alternatively, you can load the segmented MRI available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat)
-
-    load segmentedmri
-
-Now prepare the head model from the segmented brain surface:
+Then prepare the head model from the segmented brain surface:
 
     cfg = [];
     cfg.method = 'singleshell';
     headmodel = ft_prepare_headmodel(cfg, segmentedmri);
 
 {% include markup/warning %}
-If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
+**EEG headmodels**
+
+The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/headmodel_eeg).
+
+For example, if you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
 Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
 
-Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.  
+Furthermore, after selecting the channels you want to use in the source reconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.  
 {% include markup/end %}
 
 ### Exercise 2: head model
@@ -140,9 +138,9 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 Why might a single sphere model be inadequate for performing beamformer estimates?
 {% include markup/end %}
 
-### Compute lead field
+### Lead fields
 
-The next step is to discretize the brain volume into a grid (the sourcemodel). For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
+The next step is to discretise the brain volume into a grid (the sourcemodel). For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
 {% include markup/warning %}
 Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields.
@@ -158,6 +156,19 @@ Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to 
     [grid] = ft_prepare_leadfield(cfg);
 
 As mentioned earlier on, if you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
+
+## Source Analysis
+
+At this point we have computed all necessary ingredients for the beamformer source analysis. As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
+
+1.  Suitable control windows are, for example:
+    - Activity contrasted with baseline (example shown here using dataPre)
+    - Activity of condition 1 contrasted with condition 2 (example not shown)
+2.  However, if no other suitable data condition or baseline time-window exists, then
+    - Activity contrasted with estimated noise (example shown below)
+    - Use normalized lead fields (mentioned in ['the forward model and lead field matrix'](/tutorial/beamformer?&#the_forward_model_and_lead_field_matrix) section and Exercise 4 below)
+
+The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
 
 ## Source Analysis: without contrasting condition
 
@@ -210,7 +221,7 @@ Notice that the power is strongest in the center of the brain. There are several
 ### Exercise 3: center of head bias
 
 {% include markup/info %}
-Discuss why the source power is overestimated in the center of the brain. Hint 1: what are the leadfield values in the center of the head? Why? Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
+Discuss why the source power is overestimated in the center of the brain. Hint 1: what are the lead field values in the center of the head? Why? Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
 {% include markup/end %}
 
 ### Neural Activity Index
