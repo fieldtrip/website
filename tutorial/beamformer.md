@@ -25,7 +25,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 In the [Time-Frequency Analysis tutorial](/tutorial/timefrequencyanalysis) we identified strong oscillations in the beta band in a language paradigm. The goal of this section is to identify the sources responsible for producing this oscillatory activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'. This latter part means that, if a source had power of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct power of amplitude 1 at that location. Beam forming assumes that sources in different parts of the brain are not temporally correlated.
 
-The brain is divided in a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross ET al. 2001). Other beam-former methods rely on sources estimates calculated in the time domain, e.g. the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source power can be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
+The brain is divided into a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross ET al. 2001). Other beamformer methods rely on sources estimates calculated in the time domain, e.g. the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source power can be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
 
 ## Procedure
 
@@ -109,7 +109,7 @@ The first step in the procedure is to construct a forward model. The forward mod
 The first step in constructing the forward model is to find the brain surface from the subjects MRI. This procedure is termed segmentation.
 Note that segmentation is quite time consuming. If you have access to the preprocessed file you can skip ahead to 'load segmentedmri'.
 
-Otherwise, segmentation involves the following steps ((**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM. The necessary SPM-files are located in fieldtripXXX/external/spm8)
+Segmentation involves the following steps (**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM. The necessary SPM-files are located in fieldtripXXX/external/spm8)
 
     mri = ft_read_mri('Subject01.mri');
     cfg = [];
@@ -127,7 +127,7 @@ Now prepare the head model from the segmented brain surface:
     headmodel = ft_prepare_headmodel(cfg, segmentedmri);
 
 {% include markup/warning %}
-If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
+If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
 Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
 
@@ -179,7 +179,7 @@ Save the output:
 
     save sourcePost_nocon sourcePost_nocon
 
-The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip FTP server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also is available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
+The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip FTP server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
 
     load sourcePost_nocon
 
@@ -332,7 +332,7 @@ The regularization parameter was cfg.dics.lambda = '5%'. Change it to 0 or to '1
 
 ## Plotting options
 
-To plot an 'orthogonal cut
+To plot an 'orthogonal' cut
 
     cfg = [];
     cfg.method        = 'ortho';
