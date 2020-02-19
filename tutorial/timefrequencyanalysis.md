@@ -50,7 +50,27 @@ In this tutorial, procedures of 4 types of time-frequency analysis will be shown
 
 The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time of stimulus); however, the script reads the data from -1.0 s to 2.0 s.
 
-{% include /shared/tutorial/preprocessing_fic.md %}
+### Reading in the data
+
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the  command 'load dataFIC' and skip to Time-frequency analysis I.
+
+Otherwise run the following code:
+
+{% include /shared/tutorial/definetrial_all.md %}
+
+### Cleaning
+
+{% include /shared/tutorial/preprocessing_nofilter.md %}
+
+We select one of the conditions from the original dataset for time-frequency analysis:
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
+    dataFIC = ft_redefinetrial(cfg, data_all);
+
+Subsequently you can save the data to disk.
+
+  save dataFIC dataFIC
 
 ## Time-frequency analysis I
 

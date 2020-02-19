@@ -51,9 +51,28 @@ For both preprocessing and averaging, we will follow the steps that have been wr
 
 ### Preprocessing of MEG data
 
-{% include /shared/tutorial/preprocessing_fc_lp.md %}
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat) [& dataFC)LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Averaging and noise-covariance estimation.
 
-{% include /shared/tutorial/preprocessing_fic_lp.md %}
+Otherwise run the following code:
+
+{% include /shared/tutorial/definetrial_all.md %}
+
+### Cleaning
+
+{% include /shared/tutorial/preprocessing_lp.md %}
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
+    dataFIC_LP = ft_redefinetrial(cfg, data_all);
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 5;
+    dataFC_LP = ft_redefinetrial(cfg, data_all);
+
+Subsequently you can save the data to disk.
+
+      save dataFIC dataFIC
+      save dataFC dataFC
 
 ### Averaging and noise-covariance estimation
 
