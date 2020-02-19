@@ -82,8 +82,8 @@ For subsequent analysis we split the data into two different data structures, th
 
 Subsequently you can save the data to disk.
 
-      save dataFIC dataFIC
-      save dataFC dataFC
+      save dataFIC_LP dataFIC_LP
+      save dataFC_LP dataFC_LP
 
 Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
 

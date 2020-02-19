@@ -71,8 +71,8 @@ Otherwise run the following code:
 
 Subsequently you can save the data to disk.
 
-      save dataFIC dataFIC
-      save dataFC dataFC
+      save dataFIC_LP dataFIC_LP
+      save dataFC_LP dataFC_LP
 
 ### Averaging and noise-covariance estimation
 

@@ -71,9 +71,9 @@ For subsequent analysis we split the data into three different data structures, 
 
 Subsequently you can save the data to disk.
 
-      save dataFIC dataFIC
-      save dataFC dataFC
-      save dataIC dataIC
+      save dataFIC_LP dataFIC_LP
+      save dataFC_LP dataFC_LP
+      save dataIC_LP dataIC_LP
 
 If preprocessing was done as described, the data will have the following field
 
