@@ -13,10 +13,10 @@ In this tutorial you will learn about applying beamformer techniques in the freq
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful.
 
-This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
+This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis.md)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
 {% include markup/info %}
-This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
+This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
 
 {% include youtube id="pE0WAKd_Ve4" %}
 {% include markup/end %}
