@@ -125,7 +125,7 @@ Besides the 'v17' version, the 'v18' is also supported.
 
 The VTPM atlas was downloaded from [here](http://www.princeton.edu/~napl/vtpm.htm).The atlas was constructed from a population of 53 subjects and contains probabilistic maps for 22 visual areas. The version of the atlas included with FieldTrip was created by transforming data into standardized space using surface-based anatomical registration approaches.
 
-The atlas is described in the publication belo
+The atlas is described in the publication below
 
 Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human
 Cortex. Cerebral Cortex. 25: 3911-3931
