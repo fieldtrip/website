@@ -21,7 +21,7 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 {% include youtube id="pE0WAKd_Ve4" %}
 {% include markup/end %}
 
-## Background<a name="head_background"></a>
+## Background
 
 In the [Time-Frequency Analysis tutorial](/tutorial/timefrequencyanalysis) we identified strong oscillations in the beta band in a language paradigm. The goal of this section is to identify the sources responsible for producing this oscillatory activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'. This latter part means that, if a source had power of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct power of amplitude 1 at that location. Beam forming assumes that sources in different parts of the brain are not temporally correlated.
 
@@ -182,7 +182,7 @@ If you are not contrasting the activity of interest against another condition or
 
 ## Source Analysis
 
-At this point we have computed all necessary ingredients for the beamformer source analysis. As mentioned in [Background](#head_background), it is ideal to contrast the activity of interest against some control.
+At this point we have computed all necessary ingredients for the beamformer source analysis. As mentioned in [Background](/tutorial/beamformer#background), it is ideal to contrast the activity of interest against some control.
 
 1.  Suitable control windows are, for example:
     - Activity contrasted with baseline (example shown here dataPost - dataPre)
@@ -210,7 +210,7 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
 
     sourcePost_nocon = ft_sourceanalysis(cfg, freqPost);
 
-The purpose of cfg.dics.projectnoise will become more clear in the section on [Neural Activity Index](#head_nai). The purpose of lambda is discussed in Exercise 6.
+The purpose of cfg.dics.projectnoise will become more clear in the section on [Neural Activity Index](/tutorial/beamformer#neural-activity-index). The purpose of lambda is discussed in Exercise 6.
 
 Save the output:
 
@@ -249,7 +249,7 @@ Notice that the power is strongest in the center of the brain. There are several
 Discuss why the source power is overestimated in the center of the brain. Hint 1: what are the lead field values in the center of the head? Why? Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
 {% include markup/end %}
 
-### Neural Activity Index<a name="head_nai"></a>
+### Neural Activity Index
 
 If it is not possible to compare two conditions (e.g. A versus B or post versus pre) one can apply the neural activity index (NAI), in order to remove the center of the head bias shown above. The NAI is the power normalized with an estimate of the spatially inhomogeneous noise. An estimate of the noise has been done by **[ft_sourceanalysis](/reference/ft_sourceanalysis)**, by setting cfg.dics.projectnoise='yes' (default is 'no'). This noise estimate was computed on the basis of the smallest eigenvalue of the cross-spectral density matrix. To calculate the NAI do the following:
 
