@@ -48,22 +48,30 @@ The aim is to identify the sources of oscillatory activity in the beta band. Fro
 
 _Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.._
 
-{% include /shared/tutorial/preprocessing_fic.md %}
+### Reading in the data
+
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the  command 'load dataFIC'.
+
+Otherwise run the following code:
+
+{% include /shared/tutorial/definetrial_all.md %}
+
+### Cleaning
+
+{% include /shared/tutorial/preprocessing_nofilter.md %}
 
 ### Time windows of interest
 
-Now we select the time windows of interest: the pre- and post stimulus windows. This requires the preprocessed data (see above), which is available from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data with the following comman
-
-    load dataFIC
-
-Now 'cut' out the pre- and post-stimulus time window
+Now we select the time windows of interest: the pre- and post stimulus windows:
 
     cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
     cfg.toilim = [-0.5 0];
-    dataPre = ft_redefinetrial(cfg, dataFIC);
+    dataPre = ft_redefinetrial(cfg, data_all);
 
     cfg.toilim = [0.8 1.3];
-    dataPost = ft_redefinetrial(cfg, dataFIC);
+    cfg.trials = data_all.trialinfo == 3;
+    dataPost = ft_redefinetrial(cfg, data_all);
 
 As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
 

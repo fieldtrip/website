@@ -40,20 +40,7 @@ The following steps are taken in this tutorial:
 
 Using the FieldTrip function **[ft_definetrial](/reference/ft_definetrial)** you can define the pieces of data that will be read in for preprocessing. Trials are defined by their begin and end sample in the data file and each trial has an offset that defines where the relative t=0 point (usually the point of the stimulus-trigger) is for that trial.
 
-The **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)** functions require the original MEG dataset, which is available at [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)
-
-Do the trial definition for the all conditions together:
-
-      cfg                         = [];
-      cfg.dataset                 = 'Subject01.ds';
-      cfg.trialfun                = 'ft_trialfun_general'; % this is the default
-      cfg.trialdef.eventtype      = 'backpanel trigger';
-      cfg.trialdef.eventvalue     = [3 5 9]; % the values of the stimulus trigger for all three conditions
-      %  (3: fully incongruent (FIC), 5: initially congruent (IC), 9: fully congruent (FC))
-      cfg.trialdef.prestim        = 1; % in seconds
-      cfg.trialdef.poststim       = 2; % in seconds
-
-      cfg = ft_definetrial(cfg);
+{% include /shared/tutorial/definetrial_all.md %}
 
 This results in a cfg.trl that contains the trial definitions of all conditions (since we specified all three trigger values: 3, 5, and 9). In cfg.trl the beginning, the trigger offset and the end of each trial relative to the beginning of the raw data are defined. Additionally, cfg.trl contains a column that contains the trigger values, i.e., it tells you to which condition each trial belongs.
 

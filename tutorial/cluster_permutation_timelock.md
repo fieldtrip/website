@@ -58,11 +58,32 @@ In a between-trials experiment, we analyze the data of a single subject. By mean
 
 ### Preprocessing and time-locked analysis
 
-We first extract the trials of the fully incongruent condition
-{% include /shared/tutorial/preprocessing_fic_lp.md %}
+### Reading in the data
 
-Then we also extract the trials of the fully congruent condition.
-{% include /shared/tutorial/preprocessing_fc_lp.md %}
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat) [& dataFC)LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Permutation test.
+
+Otherwise run the following code:
+
+{% include /shared/tutorial/definetrial_all.md %}
+
+### Cleaning
+
+{% include /shared/tutorial/preprocessing_lp.md %}
+
+For subsequent analysis we split the data into two different data structures, the fully incongruent condition FIC and the fully congruent condition FC.
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
+    dataFIC_LP = ft_redefinetrial(cfg, data_all);
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 5;
+    dataFC_LP = ft_redefinetrial(cfg, data_all);
+
+Subsequently you can save the data to disk.
+
+      save dataFIC_LP dataFIC_LP
+      save dataFC_LP dataFC_LP
 
 Using the preprocessed data, we now create a data structure that is the average across trials, time-locked to a particular event, using **[ft_timelockanalysis](/reference/ft_timelockanalysis)**. The output of **[ft_timelockanalysis](/reference/ft_timelockanalysis)** contains an .avg field with the average event-related field, and a .trial field with the individual trial data. The output is stored in timelockFIC and timelockFC for the fully incongruent and the fully congruent condition. This output is then suitable, as well, for statististical analyses.
 
