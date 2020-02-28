@@ -1,4 +1,4 @@
-We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field. 
+We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.
 
 The model we are going to use to simulate the data is as follow
 
@@ -78,7 +78,8 @@ Compare the parameters specified for the simulation with the estimated coefficie
 
 ### Computation of the spectral transfer function
 
-From the autoregressive coefficients it is now possible to compute the spectral transfer matrix, for which we use **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+From the autoregressive coefficients it is now possible to compute the spectral transfer matrix, for which we use **[ft_freqanalysis](/reference/ft_freqanalysis)**. There are several ways of computing the spectral transfer function, the parametric and the non-parametric way. We will first illustrate the parametric route:
+... *Fixme*
 
     cfg        = [];
     cfg.method = 'mvar';
