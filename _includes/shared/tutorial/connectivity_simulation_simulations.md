@@ -91,14 +91,15 @@ From the autoregressive coefficients it is now possible to compute the spectral 
     mfreq      = ft_freqanalysis(cfg, mdata);
 
     mfreq =
+
+            freq: [1x101 double]
+        transfer: [3x3x101 double]
+        noisecov: [3x3 double]
+       crsspctrm: [3x3x101 double]
+             dof: 500
             label: {3x1 cell}
-             freq: [1x101 double]
            dimord: 'chan_chan_freq'
-         transfer: [3x3x101 double]
-         noisecov: [3x3 double]
-        crsspctrm: [3x3x101 double]
-              dof: 500
-              cfg: [1x1 struct]
+              cfg: [1x1 struct]          
 
 The resulting **mfreq** data structure contains the pairwise transfer function between the 3 channels for 101 frequencies.
 
