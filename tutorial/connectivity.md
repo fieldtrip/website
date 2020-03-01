@@ -39,7 +39,7 @@ This tutorial consists of three parts:
 
 ## Connectivity between MEG virtual channel and EMG
 
-The previous two examples were using simulated data, either with a clear directed connectivity structure, or with a trivial pick-up of a common source in two channels. We will now continue with connectivity analysis on real MEG data. The dataset is the same as the one used in the [Analysis of corticomuscular coherence](/tutorial/coherence) tutorial.
+The previous two examples were using simulated data, either with a clear directed connectivity structure, or with a trivial pick-up of a common source in two channels. We will now continue with connectivity analysis on real MEG data. The dataset is the same as the one used in the [Analysis of corticomuscular coherence tutorial](/tutorial/coherence).
 
 In short, the dataset consists of combined MEG and EMG recordings while the subject lifted his right hand. The [coherence tutorial](/tutorial/coherence#introduction) contains a more elaborate description of the experiment and the dataset and a detailed analysis can be found in the corresponding paper ([Jan-Mathijs Schoffelen, Robert Oostenveld and Pascal Fries. Neuronal Coherence as a Mechanism of Effective Corticospinal Interaction, Science 2005, Vol. 308 no. 5718 pp. 111-113](http://www.sciencemag.org/content/308/5718/111.abstract)). Due to the long distance between the EMG and the MEG, there is no volume conduction and hence no common pick-up. Hence this dataset lends itself well for connectivity analysis. But rather than using one of the MEG channels (as in the original study) and computing connectivity between that one channel and EMG, we will extract the cortical activity using a beamformer virtual channel.
 
@@ -129,8 +129,7 @@ The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing]
 
 {% include image src="/assets/img/tutorial/connectivity/sourcedata.png" width="300" %}
 
-Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent cu
-rrent dipole source at the location of interest.
+Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent current dipole source at the location of interest.
 
 ### Project along the strongest dipole direction
 
@@ -249,16 +248,16 @@ Let's say you wanted to look at cortico-cortical connectivity, e.g. interactions
 
 ## Summary and further reading
 
-This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence](/tutorial/coherence) tutorial.
+This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence tutorial](/tutorial/coherence).
 
 FAQs:
 
 {% include seealso tag1="faq" tag2="connectivity" %}
-{% include seealso tag1="faq" tag2="coherence"     %}
-{% include seealso tag1="faq" tag2="granger"       %}
+{% include seealso tag1="faq" tag2="coherence" %}
+{% include seealso tag1="faq" tag2="granger" %}
 
 Example scripts:
 
 {% include seealso tag1="example" tag2="connectivity" %}
-{% include seealso tag1="example" tag2="coherence"     %}
-{% include seealso tag1="example" tag2="granger"       %}
+{% include seealso tag1="example" tag2="coherence" %}
+{% include seealso tag1="example" tag2="granger" %}
