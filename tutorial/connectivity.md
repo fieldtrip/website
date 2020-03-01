@@ -252,12 +252,9 @@ This tutorial demonstrates how to compute connectivity measures between two time
 
 FAQs:
 
-{% include seealso tag1="faq" tag2="connectivity" %}
 {% include seealso tag1="faq" tag2="coherence" %}
-{% include seealso tag1="faq" tag2="granger" %}
 
 Example scripts:
 
 {% include seealso tag1="example" tag2="connectivity" %}
 {% include seealso tag1="example" tag2="coherence" %}
-{% include seealso tag1="example" tag2="granger" %}
