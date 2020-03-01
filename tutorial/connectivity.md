@@ -86,6 +86,20 @@ Rather than doing all the preprocessing again, you can download the preprocessed
 
 The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
+{% include markup/warning %}
+In this case, the headmodel coordinates were defined in cm, this might be different for different headmodels. You can inspect the units of the headmodel with **[ft_read_headmodel](/reference/ft_read_headmodel)**:
+  hdm = ft_read_headmodel('SubjectCMC.hdm')
+
+  hdm =
+     orig: [1x1 struct]
+    label: {1x183 cell}
+        r: [183x1 double]
+        o: [183x3 double]
+     unit: 'cm'
+     cond: 1
+
+{% include markup/end %}
+
 ### Extract the virtual channel time series
 
     %% construct the 3-D virtual channel at the location of interest
@@ -120,7 +134,7 @@ rrent dipole source at the location of interest.
 
 ### Project along the strongest dipole direction
 
-The interpretation of connectivity is facilitated if we can compute it between two plain channels rather than between one channel versus a triplet of channels. Therefore we will project the time series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
+The interpretation of connectivity is facilitated if we can compute it between two plain channels rather than between one channel and a triplet of channels. Therefore we will project the time series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
 
     %% construct a single virtual channel in the maximum power orientation
     timeseries = cat(2, sourcedata.trial{:});
