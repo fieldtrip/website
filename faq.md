@@ -191,6 +191,7 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How many lines of code does FieldTrip consist of?](/faq/how_many_lines_of_code_does_fieldtrip_consist_of)
 - [How to select the correct SPM toolbox?](/faq/how_to_select_the_correct_spm_toolbox)
 - [MATLAB complains about a missing or invalid MEX file, what should I do?](/faq/matlab_complains_about_a_missing_or_invalid_mex_file_what_should_i_do)
+- [MATLAB complains that mexmaci64 cannot be opened because the developer cannot be verified](/faq/mexmaci64_cannot_be_opened_because_the_developer_cannot_be_verified)
 - [MATLAB does not see the functions in the "private" directory](/faq/matlab_does_not_see_the_functions_in_the_private_directory)
 - [MATLAB version 7.3 (2006b)_crashes_when_I_try_to_do_...](/faq/matlab_version_7.3_2006b_crashes_when_i_try_to_do)
 - [Should I add FieldTrip with all subdirectories to my MATLAB path?](/faq/should_i_add_fieldtrip_with_all_subdirectories_to_my_matlab_path)
