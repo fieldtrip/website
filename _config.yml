@@ -63,6 +63,7 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-toc          # https://github.com/toshimaru/jekyll-toc
   - jekyll-sitemap      # https://github.com/jekyll/jekyll-sitemap
+  - jekyll-redirect-from # https://blog.webjeda.com/jekyll-redirect/
 
 exclude:
   - README.md
