@@ -1,6 +1,3 @@
-- name:  Bugzilla and GitHub issue tracking
-  link:  /bugzilla
-
 - name:  Contribute or request support
   link:  /contribute
 
@@ -30,6 +27,9 @@
 
 - name:  Website syntax and formatting Website syntax and formatting
   link:  /development/guideline/website
+
+- name:  Reporting issues
+  link:  /development/issues
 
 - name:  Meetings
   link:  /development/meeting

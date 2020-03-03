@@ -1,8 +1,8 @@
-- name:  Bugzilla and GitHub issue tracking
-  link:  /bugzilla
-
 - name:  Contribute or request support
   link:  /contribute
+
+- name:  Reporting issues
+  link:  /development/issues
 
 - name:  Discussion List
   link:  /discussion_list
