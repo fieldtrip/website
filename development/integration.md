@@ -8,7 +8,7 @@ For the documentation, communication and development of the FieldTrip project we
 
 ## Jekyll
 
-We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents are hosted on [GitHub](https://github.com/fieldtrip/website) and use a webhook to trigger the rebuild of the static html files on the webserver. The webserver is hosted as a virtual machine at the DCCN.
+We use [Jekyll](https://jekyllrb.com) for our website. The markdown documents are hosted on [GitHub](https://github.com/fieldtrip/website) and use a webhook to trigger the rebuild of the static html files on the web server. The web server is hosted as a virtual machine at the DCCN.
 
 ## Mailman
 
@@ -54,7 +54,7 @@ We use the DCCN [FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/) to d
 
 ## Central storage
 
-At the DCCN we have a central storage system (i.e. a large and shared network drive) on which an up-to-date copy of the software is maintained. Also the test data used for development and regression testing with the [dashboard](#dashboard) is on central storage.
+At the DCCN we have a central storage system (i.e. a large shared network drive) on which an up-to-date copy of the software is maintained. Also the test data used for development and regression testing with the [dashboard](#dashboard) is on central storage.
 
 ## Dashboard
 
@@ -70,7 +70,7 @@ We are experimenting with [Slack](https://fieldtriptoolbox.slack.com) as a messa
 
 ## Bugzilla - obsolete
 
-In the past we used [Bugzilla](http://www.bugzilla.org) as an "issue tracker". This allows to maintain and distribute to-do lists and supports the follow up communication with users that report problems or suggestions. Our bugzilla server is hosted at the DCCN and more details can be found [here](/bugzilla).
+In the past we used [Bugzilla](http://www.bugzilla.org) as an "issue tracker". This allows to maintain and distribute to-do lists and supports the follow up communication with users that report problems or suggestions. Our bugzilla server is still online for reference and can be found at <http://bugzilla.fieldtriptoolbox.org>.
 
 ## Dokuwiki - obsolete
 

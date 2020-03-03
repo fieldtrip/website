@@ -331,7 +331,7 @@ The MRI data was converted from DICOM to BIDS using [bidscoin](https://github.co
 
 ## Converting the non-MRI data to BIDS
 
-The conversion of the EMG, eye tracker and behavioral data to BIDS uses [data2bids](/example/data2bids) and follows the [other examples](/example/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
+The conversion of the EMG, eye tracker and behavioral data to BIDS uses **[data2bids](/reference/data2bids)** and follows the [other examples](/example/bids) that you can find on this website. Note that in the following code the Presentation files are converted to `_events.tsv` files, but these are not only linked the fMRI data, but also to the EMG and to the eye tracker, and therefore we choose here to place the events in the beh directory, rather than alongside the fMRI in the func directory.
 
 The first part of the code is general metadata/documentation and applies to all data:
 

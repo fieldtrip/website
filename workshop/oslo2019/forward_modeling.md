@@ -9,14 +9,13 @@ tags: [oslo2019, eeg-audodd, headmodel]
 
 This tutorial goes through the necessary steps for creating a robust forward model for EEG source reconstruction.  
 
-It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](link missing), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](link missing).
+It is part of the [Oslo 2019 workshop tutorials](/workshop/oslo2019/), where tutorials can be found on [preprocessing and ERPs](/workshop/oslo2019/introduction), [time-frequency representations](/workshop/oslo2019/timefrequency), [statistics](/workshop/oslo2019/statistics) and [source reconstruction](/workshop/oslo2019/beamforming/).
 
 The data for the tutorial is available [here](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/workshop/oslo2019/)
 
 ## Background
 
-To do source reconstruction, a so-called forward model is needed. The forward model constrains the solution space for the inverse models (source reconstructions) that we may wish to apply to our data sets. If we had no constraints at all, there would be an infinite number of solutions (inverse models) that would satisfy the problem that we are trying to solve, which is: which are the _latent/unobserved_ variables (sources) that give rise to the _observed_ variables (the time courses observed on electrodes, i.e. the EEG data).  
-By constraining the solution in sensible ways and applying sensible algorithms we can find a unique solution for the inverse model. In this tutorial, we will focus on constraining the solution, i.e. providing a sensible _forward model_. The application of sensible algorithms is the source reconstruction presented by Britta Westner yesterday.
+To do source reconstruction, a so-called forward model is needed. The forward model constrains the solution space for the inverse models (source reconstructions) that we may wish to apply to our data sets. If we had no constraints at all, there would be an infinite number of solutions (inverse models) that would satisfy the problem that we are trying to solve, which is: which are the _latent/unobserved_ variables (sources) that give rise to the _observed_ variables (the time courses observed on electrodes, i.e. the EEG data). By constraining the solution in sensible ways and applying sensible algorithms we can find a unique solution for the inverse model. In this tutorial, we will focus on constraining the solution, i.e. providing a sensible _forward model_. The application of sensible algorithms is the source reconstruction presented by Britta Westner yesterday.
 
 Optimally, we have individual Magnetic Resonance Images (MRIs) available for each subject. If this is not so, it is also possible to use a template brain for source reconstruction. See [here](/template/sourcemodel). In this tutorial we will assume that you have individual structural MRIs at your disposal.
 

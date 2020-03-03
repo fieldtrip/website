@@ -5,4 +5,4 @@ tags: [faq, email]
 
 # How many people are subscribed to the email discussion list?
 
-At 29 Februari 2012, 789 people were subscribed to the FieldTrip email discussion list.
+At 3 March 2021, there were 1612 people subscribed to the FieldTrip email discussion list.

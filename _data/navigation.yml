@@ -4,8 +4,8 @@
 - name: Documentation
   link: /documentation
 
-- name: Community
-  link: /community
+- name: Support
+  link: /support
 
 - name: Workshops
   link: /workshop
@@ -17,4 +17,4 @@
   link: /download
 
 - name: About
-  link: /contact
+  link: /about

@@ -17,11 +17,9 @@ git clone https://github.com/fieldtrip/fieldtrip.git
 This allows you to easily track the changes that we make to the code. If you also want to contribute back, please make an account on GitHub, fork `fieldtrip/fieldtrip` to your own account and read on for a complete tutorial.
 {% include markup/end %}
 
-To keep an eye on the changes to the code, you can follow us on [Twitter](http://twitter.com/fieldtriptoolbx).
-
 ## Summary of the development workflow
 
-We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for the development of the code, and for maintenance of the documentation on gthe website. We complement this with code reviews by the core team and quality control using a set of test scripts. A short summary of the procedure is as follows
+We use git (the software) and github.com (the website, see below) in combination with a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow) for the development of the code, and for maintenance of the documentation on the website. We complement this with code reviews by the core team and quality control using a set of test scripts. A short summary of the procedure is as follows
 
 1. The contributor makes a fork of the `fieldtrip/fieldtrip` (or the `fieldtrip/website`) repository to his/her personal GitHub page.
 2. He/she makes a clone of the `personal/fieldtrip` (or the `personal/website`) repository to his/her own computer. It is recommended to set the `fieldtrip/fieldtrip` repository as the upstream remote.
@@ -151,7 +149,7 @@ and it'll tell you:
 Switched to a new branch 'welcome'
 ```
 
-If you have filed a bug on [Bugzilla](/bugzilla), you could name your new branch _bugXXXX_ where XXXX is the number of the bug. If you have filed an issue on GitHub, you could name your new branch _issueXXXX_ with the number. This helps linking your code suggestions to the discussion on that specific bug or issue.
+If you have filed a bug on [Bugzilla](/development/issues), you could name your new branch _bugXXXX_ where XXXX is the number of the bug. If you have filed an issue on [GitHub]((/development/issues), you could name your new branch _issueXXXX_ with the number. This helps linking your code suggestions to the discussion on that specific bug or issue.
 
 ### 4. Add and edit files
 
