@@ -13,19 +13,19 @@ In this tutorial you will learn about applying beamformer techniques in the freq
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful.
 
-This tutorial will not cover the time-domain option for LCMV/SAM beamformers (described in Background), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
+This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis.md)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
 {% include markup/info %}
-This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
+This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
 
-{% include youtube id="Ez72OFjSABs" %}
+{% include youtube id="pE0WAKd_Ve4" %}
 {% include markup/end %}
 
 ## Background
 
 In the [Time-Frequency Analysis tutorial](/tutorial/timefrequencyanalysis) we identified strong oscillations in the beta band in a language paradigm. The goal of this section is to identify the sources responsible for producing this oscillatory activity. We will apply a beamformer technique. This is a spatially adaptive filter, allowing us to estimate the amount of activity at any given location in the brain. The inverse filter is based on minimizing the source power (or variance) at a given location, subject to 'unit-gain constraint'. This latter part means that, if a source had power of amplitude 1 and was projected to the sensors by the lead field, the inverse filter applied to the sensors should then reconstruct power of amplitude 1 at that location. Beam forming assumes that sources in different parts of the brain are not temporally correlated.
 
-The brain is divided in a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross ET al. 2001). Other beam-former methods rely on sources estimates calculated in the time domain, e.g. the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source power can be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
+The brain is divided into a regular three dimensional grid and the source strength for each grid point is computed. The method applied in this example is termed Dynamical Imaging of Coherent Sources (DICS) and the estimates are calculated in the frequency domain (Gross ET al. 2001). Other beamformer methods rely on sources estimates calculated in the time domain, e.g. the Linearly Constrained Minimum Variance (LCMV) and Synthetic Aperture Magnetometry (SAM) methods (van Veen et al., 1997; Robinson and Cheyne, 1997). These methods produce a 3D spatial distribution of the power of the neuronal sources. This distribution is then overlaid on a structural image of the subject's brain. Furthermore, these distributions of source power can be subjected to statistical analysis. It is always ideal to contrast the activity of interest against some control/baseline activity. Options for this will be discussed below, but it is best to keep this in mind when designing your experiment from the start, rather than struggle to find a suitable control/baseline after data collection.
 
 ## Procedure
 
@@ -48,41 +48,25 @@ The aim is to identify the sources of oscillatory activity in the beta band. Fro
 
 _Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.._
 
-### Reading in the data
-
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the  command 'load dataFIC'.
-
-Otherwise run the following code:
+### Reading & Cleaning the data
 
 {% include /shared/tutorial/definetrial_all.md %}
 
-### Cleaning
-
 {% include /shared/tutorial/preprocessing_nofilter.md %}
 
-### Time windows of interest
+### Select conditions and time windows of interest
 
-Now we select the time windows of interest: the pre- and post stimulus windows:
+We have identified the beta band effect on trials belonging to the fully incongruent condition (FIC, coded with a trigger value of 3). We will therefore now select all trials belonging to this condition based on the trigger information, which is preserved in the trialinfo field during the call to ft_preprocessing.
+Further we need to 'cut' out the time windows of interest: the pre- and post stimulus windows. We will do the selection of trials and time windows in one call to **[ft_redefinetrial](/reference/ft_redefinetrial)**:
 
     cfg = [];
     cfg.trials = data_all.trialinfo == 3;
     cfg.toilim = [-0.5 0];
     dataPre = ft_redefinetrial(cfg, data_all);
 
-    cfg.toilim = [0.8 1.3];
     cfg.trials = data_all.trialinfo == 3;
+    cfg.toilim = [0.8 1.3];
     dataPost = ft_redefinetrial(cfg, data_all);
-
-As mentioned in the Background, it is ideal to contrast the activity of interest against some control.
-
-1.  Suitable control windows are, for example:
-    - Activity contrasted with baseline (example shown here using dataPre)
-    - Activity of condition 1 contrasted with condition 2 (example not shown)
-2.  However, if no other suitable data condition or baseline time-window exists, then
-    - Activity contrasted with estimated noise (example shown below)
-    - Use normalized leadfields (mentioned in ['the forward model and lead field matrix'](/tutorial/beamformer?&#the_forward_model_and_lead_field_matrix) section and Exercise 4 below)
-
-The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
 
 ### Exercise 1: data length
 
@@ -90,9 +74,9 @@ The null hypothesis for both options within (1) is that the data in both conditi
 Why is it important that the length of each data piece matches an integer number of oscillatory cycles?
 {% include markup/end %}
 
-## Calculating the cross spectral density matrix
+## The cross-spectral density matrix
 
-The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd'. The frequency of interest is 18 Hz and the smoothing window is +/-4 Hz:
+The beamformer technique is based on an adaptive spatial filter. The DICS spatial filter is derived from the frequency counterpart of the covariance matrix: the cross-spectral density matrix. This matrix contains the cross-spectral densities (CSD) for all sensor combinations and is computed from the Fourier transformed data of the single trials. It is given as output when cfg.output = 'powandcsd'. The frequency of interest is 18 Hz and the smoothing window is +/-4 Hz:
 
     cfg = [];
     cfg.method    = 'mtmfft';
@@ -108,39 +92,66 @@ The beamformer technique is based on an adaptive spatial filter. The DICS spatia
     cfg.foilim    = [18 18];
     freqPost = ft_freqanalysis(cfg, dataPost);
 
+The output of ft_freqanalysis should be familiar to you from the [tutorial for time-frequency analysis](/tutorial/timefrequencyanalysis)
+
+  freqPre =
+
+    struct with fields:
+
+        label: {150×1 cell}
+       dimord: 'chan_freq'
+         freq: 17.8808
+    powspctrm: [150×1 double]
+     labelcmb: {11175×2 cell}
+    crsspctrm: [11175×1 double]
+         elec: [1×1 struct]
+         grad: [1×1 struct]
+          cfg: [1×1 struct]
+
 ## The forward model and lead field matrix
 
 ### Head model
 
-The first step in the procedure is to construct a forward model. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
+The forward model is a prerequisite for source reconstruction. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. Some examples of different MEG-based headmodels are given **[here](/example/make_leadfields_using_different_headmodels)**. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
+For more details on the following steps, you can consult the [tutorial on Creating a volume conduction model of the head for source-reconstruction of MEG data][/tutorial/headmodel_meg].
 The first step in constructing the forward model is to find the brain surface from the subjects MRI. This procedure is termed segmentation.
-Note that segmentation is quite time consuming. If you have access to the preprocessed file you can skip ahead to 'load segmentedmri'.
+Note that segmentation is quite time consuming. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can directly load the segmented MRI available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat) using the command 'load segmentedmri'.
 
-Otherwise, segmentation involves the following steps ((**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM. The necessary SPM-files are located in fieldtripXXX/external/spm8)
+Otherwise, segmentation involves the following steps:
+
+First the segmentation (**[ft_volumesegment](/reference/ft_volumesegment)** makes use of SPM, and in its default behavior returns a probabilistic segmentation of the grey, white and csd compartments. The necessary SPM-files are located in fieldtripXXX/external/spm8)
 
     mri = ft_read_mri('Subject01.mri');
     cfg = [];
     cfg.write      = 'no';
     [segmentedmri] = ft_volumesegment(cfg, mri);
 
-Alternatively, you can load the segmented MRI available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat)
-
-    load segmentedmri
-
-Now prepare the head model from the segmented brain surface:
+Then prepare the head model from the segmented brain surface:
 
     cfg = [];
     cfg.method = 'singleshell';
     headmodel = ft_prepare_headmodel(cfg, segmentedmri);
 
 {% include markup/warning %}
-If you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with an common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
+**EEG headmodels**
+
+The volume conduction model created here is MEG specific and cannot be used for EEG source reconstruction. If you are interested in EEG source reconstruction methods, you can go to the corresponding [EEG headmodel tutorial](/tutorial/headmodel_eeg).
+
+For example, if you want to do a beamformer source reconstruction on EEG data, you have to pay special attention to the EEG referencing. The forward model will be made with a common average reference (except in some rare cases like with bipolar iEEG electrode montages), i.e. the mean value over all electrodes is zero. Consequently, this also has to be true in your data.
 
 Prior to doing the spectral decomposition with ft_freqanalysis you have to ensure with ft_preprocessing that all channels are re-referenced to the common average reference.
 
-Furthermore, after selecting the channels you want to use in the sourcereconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.  
+Furthermore, after selecting the channels you want to use in the source reconstruction (excluding the bad channels) and after re-referencing them, you should not make sub-selections of channels any more and throw out channels, because that would cause the data not be average referenced any more.  
 {% include markup/end %}
+
+You can now visualise the headmodel together with the sensor positions:
+
+  figure
+  ft_plot_sens(freqPost.grad);
+  hold on
+  ft_plot_headmodel(ft_convert_units(headmodel,'cm'));
+
 
 ### Exercise 2: head model
 
@@ -148,7 +159,7 @@ Furthermore, after selecting the channels you want to use in the sourcereconstru
 Why might a single sphere model be inadequate for performing beamformer estimates?
 {% include markup/end %}
 
-### Compute lead field
+### Lead fields
 
 The next step is to discretize the brain volume into a grid (the sourcemodel). For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
@@ -163,9 +174,27 @@ Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to 
     cfg.channel         = {'MEG','-MLP31', '-MLO12'};
     cfg.resolution = 1;   % use a 3-D grid with a 1 cm resolution
     cfg.sourcemodel.unit       = 'cm';
-    [grid] = ft_prepare_leadfield(cfg);
+    grid = ft_prepare_leadfield(cfg);
 
-As mentioned earlier on, if you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
+{% include markup/success %}
+If you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
+{% include markup/end %}
+
+## Source Analysis
+
+At this point we have computed all necessary ingredients for the beamformer source analysis. As mentioned in [Background](/tutorial/beamformer#background), it is ideal to contrast the activity of interest against some control.
+
+1.  Suitable control windows are, for example:
+    - Activity contrasted with baseline (example shown here dataPost - dataPre)
+    - Activity of condition 1 contrasted with condition 2 (example not shown)
+2.  However, if no other suitable data condition or baseline time-window exists, then
+    - Activity contrasted with estimated noise (example shown below using only dataPost)
+    - Use normalized lead fields (see also note above and Exercise 4)
+
+{% include markup/warning %}
+The null hypothesis for both options within (1) is that the data in both conditions are the same, and thus the best spatial filter is the one that is computed using both data conditions together (also known as ['common filters'](/example/common_filters_in_beamforming)). This common filter is then applied separately to each condition.
+Hence, the parameters of your source analysis (i.e. whether to compute common filters, whether to normalize lead fields or not) might change slightly depending on which of those strategies above you decide to use. Which strategy to use, will in turn depend on your experimental design and your research question. In the following we show two possible approaches.
+{% include markup/end %}
 
 ## Source Analysis: without contrasting condition
 
@@ -174,20 +203,20 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
     cfg              = [];
     cfg.method       = 'dics';
     cfg.frequency    = 18;
-    cfg.sourcemodel         = grid;
+    cfg.sourcemodel  = grid;
     cfg.headmodel    = headmodel;
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda       = 0;
 
     sourcePost_nocon = ft_sourceanalysis(cfg, freqPost);
 
-The purpose of cfg.dics.projectnoise will become more clear in the section on Neural Activity Index. The purpose of lambda is discussed in Exercise 6.
+The purpose of cfg.dics.projectnoise will become more clear in the section on [Neural Activity Index](/tutorial/beamformer#neural-activity-index). The purpose of lambda is discussed in Exercise 6.
 
 Save the output:
 
     save sourcePost_nocon sourcePost_nocon
 
-The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip FTP server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also is available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
+The beamformer procedure estimates the power in the beta frequency band at each grid point in the brain volume. The grid of estimated power values can be plotted superimposed on the anatomical MRI. This requires the output of **[ft_sourceanalysis](/reference/ft_sourceanalysis)** (see above or download from the [FieldTrip FTP server (sourcePost_nocon.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/sourcePost_nocon.mat)) and the subject's MRI (also available from the [ftp server (Subject01.zip)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip)).
 
     load sourcePost_nocon
 
@@ -206,7 +235,6 @@ Plot the interpolated data:
     cfg              = [];
     cfg.method       = 'slice';
     cfg.funparameter = 'pow';
-    figure
     ft_sourceplot(cfg,sourcePostInt_nocon);
 
 {% include image src="/assets/img/tutorial/beamformer/figure1bf.png" width="500" %}
@@ -218,7 +246,7 @@ Notice that the power is strongest in the center of the brain. There are several
 ### Exercise 3: center of head bias
 
 {% include markup/info %}
-Discuss why the source power is overestimated in the center of the brain. Hint 1: what are the leadfield values in the center of the head? Why? Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
+Discuss why the source power is overestimated in the center of the brain. Hint 1: what are the lead field values in the center of the head? Why? Hint 2: Remember the 'unit-gain constraint' of beamformer spatial filters.
 {% include markup/end %}
 
 ### Neural Activity Index
@@ -235,19 +263,24 @@ If it is not possible to compare two conditions (e.g. A versus B or post versus 
 
 Plot it:
 
+    maxval = max(sourceNAIInt.pow);
+
     cfg = [];
     cfg.method        = 'slice';
     cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
-    cfg.funcolorlim   = [4.0 6.2];
-    cfg.opacitylim    = [4.0 6.2];
+    cfg.funcolorlim   = [4.0 maxval];
+    cfg.opacitylim    = [4.0 maxval];
     cfg.opacitymap    = 'rampup';
-    figure
     ft_sourceplot(cfg, sourceNAIInt);
+
+{% include markup/warning %}
+We limit the colormap for the functional data together with the opacity parameter to better see where source power is maximal. The lower limit of 4 is an arbitrary choice here. Instead, if you have a statistical map you could mask the data based on where power is significantly stronger (i.e. as compared to baseline).
+{% include markup/end %}
 
 {% include image src="/assets/img/tutorial/beamformer/figure2bf.png" width="500" %}
 
-_Figure: The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate.._
+_Figure: The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate._
 
 ### Exercise 4: lead field normalization
 
@@ -255,9 +288,9 @@ _Figure: The neural activity index (NAI) plotted for the post-stimulus time wind
 Another option, besides contrasting to the noise estimate, is to normalize the lead field when you compute it (cfg.normalize='yes' in the call to ft_prepare_leadfield). Recompute the lead field and source estimate this way and plot the result.
 {% include markup/end %}
 
-## Source Analysis: Contrast activity to another interval
+## Source Analysis: Contrasting activity to another interval
 
-One approach is to compare the post- and pre-stimulus interval, which we describe now here. Another approach is to contrast the same window of interest (relative in time to some stimulus or response) between two or more conditions, which we do not show here, but the calls to FieldTrip functions are conceptually the same.
+One approach for contrasting different intervals of the data is to compare the post- and pre-stimulus interval, which we describe now here. Another approach is to contrast the same window of interest (relative in time to some stimulus or response) between two or more conditions, which we do not show here, but the calls to FieldTrip functions are conceptually the same.
 
 Importantly, if you later want to compare the two conditions statistically, you have to compute the sources based on an inverse filter computed from both conditions, so called ['common filters'](/example/common_filters_in_beamforming), and then apply this filter separately to each condition to obtain the source power estimate in each condition separately.
 
@@ -313,12 +346,14 @@ Then interpolate the source to the MRI:
 
 Now plot the power ratios:
 
+    maxval = max(sourceDiffInt.pow);
+
     cfg = [];
     cfg.method        = 'slice';
     cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
-    cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2];
+    cfg.funcolorlim   = [0.0 maxval];
+    cfg.opacitylim    = [0.0 maxval];
     cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffInt);
 
@@ -335,19 +370,25 @@ Compare figure 3 and 4. It appears that normalizing the power with the baseline 
 ### Exercise 6: regularization
 
 {% include markup/info %}
-The regularization parameter was cfg.dics.lambda = '5%'. Change it to 0 or to '10%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
+The regularization parameter was cfg.dics.lambda = '5%'. Change it to 0 or to '100%' and plot the power estimate with respect to baseline. How does the regularization parameter affect the properties of the spatial filter?  
+{% include markup/end %}
+
+### Exercise 7: lead field normalization
+
+{% include markup/info %}
+Which configuration options you have used above for ft_sourceanalysis were specific to the type of contrast chosen?
 {% include markup/end %}
 
 ## Plotting options
 
-To plot an 'orthogonal cut
+To plot an 'orthogonal' cut
 
     cfg = [];
     cfg.method        = 'ortho';
     cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
-    cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2];
+    cfg.funcolorlim   = [0.0 maxval];
+    cfg.opacitylim    = [0.0 maxval];
     cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffInt);
 
@@ -368,8 +409,8 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
     cfg.interactive   = 'yes';
     cfg.funparameter  = 'pow';
     cfg.maskparameter = cfg.funparameter;
-    cfg.funcolorlim   = [0.0 1.2];
-    cfg.opacitylim    = [0.0 1.2];
+    cfg.funcolorlim   = [0.0 maxval];
+    cfg.opacitylim    = [0.0 maxval];
     cfg.opacitymap    = 'rampup';
     ft_sourceplot(cfg, sourceDiffIntNorm);
 
@@ -377,11 +418,7 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
 
 _Figure: sourceplot with method "ortho" after volume normalisation._
 
-You can also project the power onto a surface using **[ft_sourceplot](/reference/ft_sourceplot)**. FieldTrip has several surface .mat files available. The surface files are in MNI coordinates, so therefore the volume has to be normalized to match those coordinates. This can be done with the FieldTrip function **[ft_volumenormalise](/reference/ft_volumenormalise)** (see above, as well).
-
-    cfg = [];
-    cfg.nonlinear     = 'no';
-    sourceDiffIntNorm = ft_volumenormalise(cfg, sourceDiffInt);
+You can also project the power onto a surface using **[ft_sourceplot](/reference/ft_sourceplot)**. FieldTrip has several surface .mat files available. The surface files are in MNI coordinates, so therefore we use the normalized volume to match those coordinates.
 
 Now the data can be plotted
 
@@ -389,9 +426,9 @@ Now the data can be plotted
     cfg.method         = 'surface';
     cfg.funparameter   = 'pow';
     cfg.maskparameter  = cfg.funparameter;
-    cfg.funcolorlim    = [0.0 1.2];
-    cfg.funcolormap    = 'jet';
-    cfg.opacitylim     = [0.0 1.2];
+    cfg.funcolorlim    = [0.0 maxval];
+    cfg.funcolormap    = 'parula';
+    cfg.opacitylim     = [0.0 maxval];
     cfg.opacitymap     = 'rampup';
     cfg.projmethod     = 'nearest';
     cfg.surffile       = 'surface_white_both.mat';
