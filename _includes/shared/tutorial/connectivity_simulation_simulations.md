@@ -3,7 +3,9 @@ We will first simulate some data with a known connectivity structure built in. T
 The model we are going to use to simulate the data is as follow
 
 x(t) = 0.8*x(t-1) - 0.5*x(t-2)
+
 y(t) = 0.9*y(t-1) + 0.5*z(t-1) - 0.8*y(t-2)
+
 z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
 
 which is done using
@@ -73,7 +75,7 @@ In this tutorial we will use the bsmart toolbox. The relevant functions have bee
 The resulting variable **mdata** contains a description of the data in terms of a multivariate autoregressive model. For each time-lag up to the model order (cfg.order), a 3x3 matrix of coefficients is outputted. The noisecov-field contains covariance matrix of the model's residuals.
 
 {% include markup/warning %}
-Here, we know the model order a priori because we simulated the data and we choose a slightly higher model order (five instead of two) to get more interesting results in the output. For real data the appropriate model order for fitting the autoregressive model can vary depending on subject, experimental task, quality and complexity of the data, and model estimation technique that is used. You can estimate the optimal model order for your data by relying on information criteria methods such as the Akaike information criterion or the bayesian information criterion. Alternatively, you can choose to use a non-parametric approach without having to decide on model order at all (see next section on [Non-parametric computation of the cross-spectral density matrix](/tutorial/connectivity#non-parametric-computation-of-the-cross-spectral-density-matrix))
+Here, we know the model order a priori because we simulated the data and we choose a slightly higher model order (five instead of two) to get more interesting results in the output. For real data the appropriate model order for fitting the autoregressive model can vary depending on subject, experimental task, quality and complexity of the data, and model estimation technique that is used. You can estimate the optimal model order for your data by relying on information criteria methods such as the Akaike information criterion or the Bayesian information criterion. Alternatively, you can choose to use a non-parametric approach without having to decide on model order at all (see next section on [Non-parametric computation of the cross-spectral density matrix](/tutorial/connectivity#non-parametric-computation-of-the-cross-spectral-density-matrix))
 {% include markup/end %}
 
 #### Exercise 1

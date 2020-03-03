@@ -87,16 +87,17 @@ Rather than doing all the preprocessing again, you can download the preprocessed
 The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
 
 {% include markup/warning %}
-In this case, the headmodel coordinates were defined in cm, this might be different for different headmodels. You can inspect the units of the headmodel with **[ft_read_headmodel](/reference/ft_read_headmodel)**:
-  hdm = ft_read_headmodel('SubjectCMC.hdm')
+In this case, the headmodel coordinates were defined in cm, this might be different for different headmodels. You can inspect the units of the headmodel with **[ft_read_headmodel](/reference/ft_read_headmodel)**
 
-  hdm =
-     orig: [1x1 struct]
-    label: {1x183 cell}
-        r: [183x1 double]
-        o: [183x3 double]
-     unit: 'cm'
-     cond: 1
+    hdm = ft_read_headmodel('SubjectCMC.hdm')
+
+    hdm =
+      orig: [1x1 struct]
+     label: {1x183 cell}
+         r: [183x1 double]
+         o: [183x3 double]
+      unit: 'cm'
+      cond: 1
 
 {% include markup/end %}
 
@@ -147,7 +148,7 @@ The interpretation of connectivity is facilitated if we can compute it between t
        u              3x3                  72  double
        v         196800x3             4723200  double
 
-Matrix u contains the spatial decomposition, matrix v the temporal and on the diagonal of matrix s you can find the eigenvalues. See "help svd" for more details.
+Matrix u contains the spatial decomposition, matrix v the temporal and on the diagonal of matrix s you can find the eigenvalues. See *help svd* for more details.
 
 We now recompute the virtual channel time series, but now only for the dipole direction that has the most power.
 
@@ -214,7 +215,7 @@ This computes the spectral decomposition and the coherence spectrum between all 
     ft_connectivityplot(cfg, coherence);
     title('coherence')
 
-{% include image src="/assets/img/tutorial/connectivity/virtualchan.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/virtualchan.png" width="400" %}
 
 To look in more detail into the numerical representation of the coherence results, you can use
 
