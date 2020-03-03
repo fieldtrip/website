@@ -15,11 +15,11 @@ In order to facilitate you in asking good quality questions, this FAQ serves as 
 - when to ask a questions
 - how to ask a question
 
-Also note that when being more experienced, help other users by answering their questions! The community lives from giving and sharing!
+Also note that when you become more experienced, yo9u can help other users by answering their questions! The community lives from giving and sharing!
 
 ## What kind of questions should be asked?
 
-A question can be anything, from a asking about whether an error is a bug or a user-error, fundamental questions on how an algorithm works or asking for advise on how to conduct an analysis given a specific research question or hypothesis. Anything that is related to FieldTrip, but also anything general about electrophysiological data analysis is welcome. We love a variety of topics, so questions about fundamental neuronal mechanism are as welcome as asking if FieldTrip can be used to assessing temporal dependencies of seismic activity, or just to advertise your (neuro-)job opening or neuro-software.
+A question can be anything, from asking about whether an error is a bug or a user-error, fundamental questions on how an algorithm works or asking for advise on how to design the analysis given a specific research question or hypothesis. Anything that is related to FieldTrip, but also anything general about electrophysiological data analysis is welcome. We love a variety of topics, so questions about fundamental neuronal mechanism are as welcome as asking if FieldTrip can be used to assessing temporal dependencies of seismic activity, or just to advertise your (neuro-)job opening or neuro-software.
 
 ## When to ask a question?
 
@@ -41,7 +41,7 @@ If it comes to asking questions about FieldTrip including the following is a mus
 
 The cfg and data can be displayed in MATLAB using the display(variable_name) command. Call display(cfg) and display(data) and copy the answer over to include it in your mail.
 
-If you have data to share and it exceeds 1 MB, use a file hoster!
+If you have data to share and it exceeds 1 MB, do not send it as attachment, but use a file hosting service as explained [here](/faq/how_should_i_send_example_data_to_the_developers).
 {% include markup/end %}
 
 ## Example message
@@ -51,7 +51,7 @@ Here is an example of an inefficient question:
 {% include markup/info %}
 Subject: HELP
 
-**I am getting to load Eyetracking data from .EDF to .ASC then wish to have the image present on the screen in order t draw ROIs. As I follow the step from this link http://www.fieldtriptoolbox.org/getting_started/eyelink. The function of FieldTrip called "dataset2file.m" cannot accept file type of structure in matlab**. The error message show " Undefined function 'dataset2files' for input arguments of type 'struct'." How can I change the code so the function can read structure file.
+**I am getting to load Eyetracking data from .EDF to .ASC then wish to have the image present on the screen in order t draw ROIs. As I follow the step from this link http://www.fieldtriptoolbox.org/getting_started/eyelink. The function of FieldTrip called "dataset2file.m" cannot accept file type of structure in matlab**. The error message show "Undefined function 'dataset2files' for input arguments of type 'struct'." How can I change the code so the function can read structure file.
 
 `<no name>`
 {% include markup/end %}
@@ -83,10 +83,10 @@ The cfg and data I use are as follows:
     >> display(data)
 
     data.freq = [1 2 3 ... 32]
-    data.time = `<1x321 cell>`
+    data.time = <1x321 cell>
     ...
 
-I uploaded my cfg and data on a file hoster such as rapidshare.com as it exceeds the critical file size of 1 MB. You can download it from <http://www.yousendit.com/xxx>.
+I uploaded my cfg and data on WeTransfer as it is too large as attachment; you can download it from <http://www.wetransfer.com/xxx>.
 
 Can someone tell me if there is something wrong with the cfg settings I use or if I am doing something wrong at any other place? The last days, I tried using ... and ... but without success. Also I expected ... to be wrong, but after running intensive tests I could not find anything wrong with it. Any help would be appreciated.
 

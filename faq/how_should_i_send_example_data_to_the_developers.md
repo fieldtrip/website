@@ -11,6 +11,7 @@ If the data that you want to send is too large for an email attachment, you can 
 
 - <https://wetransfer.com>
 - <https://www.dropbox.com>
+- <https://www.google.com/drive/>
 - <https://www.hightail.com>
 - <https://www.sendspace.com>
 
@@ -28,7 +29,7 @@ To share files via Git LFS on GitHub:
 
 - Install [Git LFS](https://git-lfs.github.com/) on your computer
 - On GitHub, [Create a new repository](https://github.com/new)
-  - Name it `example-<description>-yyyy-mm` or something similar; this is just example data so you do not need a memorable name
+  - Name it `example-<description>-yyyy-mm` or something similar; this is just example data, so you do not need a memorable name
 - Clone the repo to your local machine
 - Run `git lfs install` inside the cloned local repo
 - Copy your example data files into the local repo

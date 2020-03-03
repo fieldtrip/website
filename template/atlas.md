@@ -123,9 +123,9 @@ Besides the 'v17' version, the 'v18' is also supported.
 
 ## The VTPM Atlas
 
-The VTPM atlas was downloaded from [here](http://www.princeton.edu/~napl/vtpm.htm).The atlas was constructed from a population of 53 subjects and contains probabilistic maps for 22 visual areas. The version of the atlas included with FieldTrip was created by transforming data into standardized space using surface-based anatomical registration approaches.
+The VTPM atlas was downloaded from [here](http://www.princeton.edu/~napl/vtpm.htm).The atlas was constructed from a population of 53 subjects and contains probabilistic maps for 25 visual areas. The version of the atlas included with FieldTrip was created by the authors of the original paper, by transforming data into standardized space using surface-based anatomical registration approaches, and subsequently assigning a voxel-wise label based on a maximum probability criterion. For convenience, the version of the atlas that is distributed with FieldTrip has the original left and right hemispheres merged in a single file. One known issue is the absence of the right IPS5 parcel.
 
-The atlas is described in the publication belo
+The atlas is described in the publication below
 
 Wang L, Mruczek REB, Arcaro MJ, Kastner S. (2015) Probabilistic Maps of Visual Topography in Human
 Cortex. Cerebral Cortex. 25: 3911-3931
@@ -138,7 +138,7 @@ Cortex. Cerebral Cortex. 25: 3911-3931
               hdr: [1x1 struct]
         transform: [4x4 double]
              unit: 'mm'
-      tissuelabel: {1x50 cell}
+      tissuelabel: {50x1 cell}
            tissue: [182x218x182 double]
          coordsys: 'mni'
 

@@ -291,3 +291,7 @@ Note that only the EOG is scanned in the eye artifacts case, which will take les
 _Typical eyeblink artifacts can be observed in trial 4. Note that the trial considers artifacts to precede and last longer than the threshold crossing, by padding data with 0.1 seconds on the left and 0.1 sec on the right_
 
 See also this [FAQ](/faq/how_can_i_interpret_the_different_types_of_padding_that_i_find_when_dealing_with_artifacts) on the different types of padding.
+
+## Suggested further reading
+
+For an introduction to how you can deal with artifacts in FieldTrip in general, you can go back to the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to automatic artifact detection, you can manually inspect the trial- and channel-data, see the [visual artifact rejection](/tutorial/visual_artifact_rejection) tutorial. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the email discussion list which can be searched [like this](http://www.google.com/search?q=artifact&sitesearch=mailman.science.ru.nl%2Fpipermail%2Ffieldtrip%2F).

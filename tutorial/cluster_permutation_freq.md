@@ -67,11 +67,32 @@ In a between-trials experiment, we analyze the data of a single subject. By mean
 
 ### Preprocessing
 
-We first extract the trials of the fully incongruent condition.
-{% include /shared/tutorial/preprocessing_fic.md %}
+### Reading in the data
 
-Then we also extract the trails of the fully congruent condition.
-{% include /shared/tutorial/preprocessing_fc.md %}
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat) [& dataFC.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Calculation of the planar gradient and time-frequency analysis.
+
+Otherwise run the following code:
+
+{% include /shared/tutorial/definetrial_all.md %}
+
+### Cleaning
+
+{% include /shared/tutorial/preprocessing_nofilter.md %}
+
+For subsequent analysis we extract the trials of the fully incongruent condition and the fully congruent condition to separate data structures.
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
+    dataFIC = ft_redefinetrial(cfg, data_all);
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 9;
+    dataFC = ft_redefinetrial(cfg, data_all);
+
+Subsequently you can save the data to disk.
+
+  save dataFIC dataFIC
+  save dataFC dataFC
 
 ### Calculation of the planar gradient and time-frequency analysis
 
@@ -90,7 +111,7 @@ This requires preprocessed data (see above), which is also available from the Fi
     dataFIC_planar = ft_megplanar(cfg, dataFIC);
     dataFC_planar  = ft_megplanar(cfg, dataFC);
 
-Without a prior hypothesis (i.e., an hypothesis that is independent of the present data), we must test the difference between the FIC and the FC condition for all frequency bands that may be of interest. However, such an analysis is not suited as a first step in a tutorial. Therefore, we assume that we have a prior hypothesis about the frequency band in which the FIC and FC condition may differ. This frequency band is centered at 20 Hz. We will now investigate if there is a difference between the FIC and the FC condition at this frequency. To calculate the TFRs, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with the configuration below. See the [tutorial Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) for an explanation of the settings. Note that cfg.keeptrials = ‘yes’, which is necessary for the subsequent statistical analysis.
+Without a prior hypothesis (i.e., an hypothesis that is independent of the present data), we must test the difference between the FIC and the FC condition for all frequency bands that may be of interest. However, such an analysis is not suited as a first step in a tutorial. Therefore, we assume that we have a prior hypothesis about the frequency band in which the FIC and FC condition may differ. This frequency band is centered at 20 Hz. We will now investigate if there is a difference between the FIC and the FC condition at this frequency. To calculate the TFRs, we use **[ft_freqanalysis](/reference/ft_freqanalysis)** with the configuration below. See the [tutorial Time-frequency analysis using Hanning window, multitapers and wavelets](/tutorial/timefrequencyanalysis) for an explanation of the settings. Note that cfg.keeptrials = 'yes', which is necessary for the subsequent statistical analysis.
 
     cfg = [];
     cfg.output     = 'pow';

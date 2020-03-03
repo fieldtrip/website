@@ -145,7 +145,6 @@ We can compute the volume conduction model on the basis of the refined template 
     template_fit_surface = ft_convert_units(template_fit_surface,'m');
 
 
-
 ### Openmeeg
 
 We create the volume conduction models using Openmeeg. This model can be later used for EEG or MEG volume conduction modeling.
@@ -159,7 +158,7 @@ We create the volume conduction models using Openmeeg. This model can be later u
     ft_plot_mesh(headmodel_sphere.bnd(1))
     ft_plot_mesh(polhemus)
 
-{% include image src="\assets\img\example\fittemplate\headmodel_sphere_polhemus.png" %}
+{% include image src="/assets/img/example/fittemplate/headmodel_sphere_polhemus.png" %}
 
     cfg               = [];
     cfg.conductivity  = [0.33 0.0042 0.33];
@@ -170,7 +169,7 @@ We create the volume conduction models using Openmeeg. This model can be later u
     ft_plot_mesh(headmodel_sphere.bnd(1))
     ft_plot_mesh(polhemus)
 
-{% include image src="\assets\img\example\fittemplate\headmodel_surface_polhemus.png" %}
+{% include image src="/assets/img/example/fittemplate/headmodel_surface_polhemus.png" %}
 
 ### Taking the inner shell for a single-shell model
 

@@ -17,7 +17,7 @@ The function **[ft_read_atlas](/reference/ft_read_atlas)** reads in a specified 
     cfg.funcolormap  = 'jet';
     ft_sourceplot(cfg, atlas)
 
-Atlases can be used in several FieldTrip functions. For instance in the **[ft_sourceplot](/reference/ft_sourceplot)** function if you specify cfg.atlas and cfg.atlascoordinates you can click on a voxel in the interactive mode (cfg.method = ‘ortho’) and the label of that voxel according to the specified atlas is given.
+Atlases can be used in several FieldTrip functions. For instance in the **[ft_sourceplot](/reference/ft_sourceplot)** function if you specify cfg.atlas and cfg.atlascoordinates you can click on a voxel in the interactive mode (cfg.method = 'ortho') and the label of that voxel according to the specified atlas is given.
 
 The most important function for using an atlas is **[ft_volumelookup](/reference/ft_volumelookup)**. It can be used in two approaches.
 
@@ -31,7 +31,7 @@ In the context of intracranial EEG recordings, FieldTrip supports looking up the
     [ftver, ftpath] = ft_version;
     atlas = ft_read_atlas([ftpath filesep 'template/atlas/aal/ROI_MNI_V4.nii']);
 
-Next, look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1 of the iEEG tutorial dataset, targeting the left hemisphere’s hippocampus.
+Next, look up the corresponding anatomical label of an electrode of interest, e.g., electrode LHH1 of the iEEG tutorial dataset, targeting the left hemisphere's hippocampus.
 
     cfg            = [];
     cfg.roi        = elec_mni_frv.chanpos(match_str(elec_mni_frv.label,'LHH1'),:);

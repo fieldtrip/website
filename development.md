@@ -16,7 +16,7 @@ tags: [development]
 
 For direct access to the code, please refer to the [Git and GitHub](/development/git) documentation.
 
-For keeping track of new ideas, feature requests and bugs, we use an [issue tracking system](/bugzilla).
+For keeping track of new ideas, feature requests and bugs, we use an [issue tracking system](/development/issues).
 
 The source code in the FieldTrip toolbox is split over multiple directories reflecting its [modular organization](/development/module). This facilitates a separation between high-level functions that do data bookkeeping, and low-level functions that focus on the algorithms.
 

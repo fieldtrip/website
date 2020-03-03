@@ -184,7 +184,7 @@ As we are also not interested in very slow changes (and/or a constant offset/ DC
     cfg.hpfreq          = 0.01;
     data_flt            = ft_preprocessing(cfg,data_down);
 
-This step has removed some of the variability in the hemodynamic response between channels. Let’s plot the filtered data to see how things have improved.
+This step has removed some of the variability in the hemodynamic response between channels. Let's plot the filtered data to see how things have improved.
 
     cfg                = [];
     cfg.preproc.demean = 'yes';
@@ -211,8 +211,8 @@ In this experiment, the segment of interest is a period of 5 s before and 20s af
 
     % get the sample number in the original data
     % note that we transpose them to get columns
-    smp001 = [event(adc001).sample]’;
-    smp002 = [event(adc002).sample]’;
+    smp001 = [event(adc001).sample]';
+    smp002 = [event(adc002).sample]';
 
     factor = data_raw.fsample / data_down.fsample
 
@@ -271,7 +271,7 @@ which should give you:
 
          8
 
-Let’s take a look at what happens around the first deviant, by plotting the average optical density:
+Let's take a look at what happens around the first deviant, by plotting the average optical density:
 
     cfg          = [];
     cfg.channel  = 'Rx*';

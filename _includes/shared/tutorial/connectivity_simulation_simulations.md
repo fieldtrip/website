@@ -1,12 +1,16 @@
-We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field. 
+We will first simulate some data with a known connectivity structure built in. This way we know what to expect in terms of connectivity. To simulate data we use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)**. We will use an order 2 multivariate autoregressive model. The necessary ingredients are a set of NxN coefficient matrices, one matrix for each time lag. These coefficients need to be stored in the cfg.param field. Next to the coefficients we have to specify the NxN covariance matrix of the innovation noise. This matrix needs to be stored in the cfg.noisecov field.
 
 The model we are going to use to simulate the data is as follow
 
-    x(t) = 0.8*x(t-1) - 0.5*x(t-2)
-    y(t) = 0.9*y(t-1) + 0.5*z(t-1) - 0.8*y(t-2)
-    z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
+x(t) = 0.8*x(t-1) - 0.5*x(t-2)
+
+y(t) = 0.9*y(t-1) + 0.5*z(t-1) - 0.8*y(t-2)
+
+z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
 
 which is done using
+
+    rng(50) %arbitrarily chosen random number generator for reproducibility
 
     cfg             = [];
     cfg.ntrials     = 500;
@@ -29,7 +33,7 @@ which is done using
 
     data              = ft_connectivitysimulation(cfg);
 
-The simulated data consists of 3 channels in 500 trials. You can easily visualize the data for example in the first trial using
+The simulated data consists of 3 channels (cfg.nsignal) in 500 trials (cfg.ntrials). You can easily visualize the data for example in the first trial using
 
     figure
     plot(data.time{1}, data.trial{1})
@@ -48,11 +52,11 @@ or browse through the complete data using
 
 ### Computation of the multivariate autoregressive model
 
-To be able to compute spectrally resolved [Granger causality](http://en.wikipedia.org/wiki/Granger_causality), or other frequency-domain directional measures of connectivity, we have to fit an autoregressive model to the data. This is done using the **[ft_mvaranalysis](/reference/ft_mvaranalysis)** function.
+To be able to compute spectrally resolved [Granger causality](http://en.wikipedia.org/wiki/Granger_causality), or other frequency-domain directional measures of connectivity, we need to estimate two quantities: the spectral transfer matrix and the covariance of an autoregressive model's residuals. We fit an autoregressive model to the data using the **[ft_mvaranalysis](/reference/ft_mvaranalysis)** function.
 
 For the actual computation of the autoregressive coefficients FieldTrip makes use of an implementation from third party toolboxes. At present **[ft_mvaranalysis](/reference/ft_mvaranalysis)** supports the [biosig](http://biosig.sourceforge.net/) and [bsmart](http://www.brain-smart.org) toolboxes for these computations.
 
-In this tutorial we will use the bsmart toolbox. The relevant functions have been included in the FieldTrip release in the fieldtrip/external/bsmart directory.
+In this tutorial we will use the bsmart toolbox. The relevant functions have been included in the FieldTrip release in the fieldtrip/external/bsmart directory. Although the exact implementations within the toolboxes differ, their outputs are comparable.
 
     cfg         = [];
     cfg.order   = 5;
@@ -68,7 +72,11 @@ In this tutorial we will use the bsmart toolbox. The relevant functions have bee
         fsampleorig: 200
                 cfg: [1x1 struct]
 
-The resulting variable **mdata** contains a description of the data in terms of a multivariate autoregressive model. For each time-lag up to the model order (which is 5 in this case), a 3x3 matrix of coefficients is outputted. The noisecov-field contains covariance matrix of the model's residuals.
+The resulting variable **mdata** contains a description of the data in terms of a multivariate autoregressive model. For each time-lag up to the model order (cfg.order), a 3x3 matrix of coefficients is outputted. The noisecov-field contains covariance matrix of the model's residuals.
+
+{% include markup/warning %}
+Here, we know the model order a priori because we simulated the data and we choose a slightly higher model order (five instead of two) to get more interesting results in the output. For real data the appropriate model order for fitting the autoregressive model can vary depending on subject, experimental task, quality and complexity of the data, and model estimation technique that is used. You can estimate the optimal model order for your data by relying on information criteria methods such as the Akaike information criterion or the Bayesian information criterion. Alternatively, you can choose to use a non-parametric approach without having to decide on model order at all (see next section on [Non-parametric computation of the cross-spectral density matrix](/tutorial/connectivity#non-parametric-computation-of-the-cross-spectral-density-matrix))
+{% include markup/end %}
 
 #### Exercise 1
 
@@ -78,21 +86,22 @@ Compare the parameters specified for the simulation with the estimated coefficie
 
 ### Computation of the spectral transfer function
 
-From the autoregressive coefficients it is now possible to compute the spectral transfer matrix, for which we use **[ft_freqanalysis](/reference/ft_freqanalysis)**.
+From the autoregressive coefficients it is now possible to compute the spectral transfer matrix, for which we use **[ft_freqanalysis](/reference/ft_freqanalysis)**. There are several ways of computing the spectral transfer function, the parametric and the non-parametric way. We will first illustrate the parametric route:
 
     cfg        = [];
     cfg.method = 'mvar';
     mfreq      = ft_freqanalysis(cfg, mdata);
 
     mfreq =
+
+            freq: [1x101 double]
+        transfer: [3x3x101 double]
+        noisecov: [3x3 double]
+       crsspctrm: [3x3x101 double]
+             dof: 500
             label: {3x1 cell}
-             freq: [1x101 double]
            dimord: 'chan_chan_freq'
-         transfer: [3x3x101 double]
-         noisecov: [3x3 double]
-        crsspctrm: [3x3x101 double]
-              dof: 500
-              cfg: [1x1 struct]
+              cfg: [1x1 struct]          
 
 The resulting **mfreq** data structure contains the pairwise transfer function between the 3 channels for 101 frequencies.
 
@@ -100,7 +109,7 @@ It is also possible to compute the spectral transfer function using non-parametr
 
 ### Non-parametric computation of the cross-spectral density matrix
 
-Some connectivity metrics can be computed from a non-parametric spectral estimate (i.e. after the application of the FFT-algorithm and conjugate multiplication to get cross-spectral densities), such as coherence, phase-locking value and phase slope index. The following part computes the Fourier-representation of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)**. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**, contains functionality to compute the cross-spectral density from the Fourier coefficients.
+Some connectivity metrics can be computed from a non-parametric spectral estimate (i.e. after the application of the FFT-algorithm and conjugate multiplication to get cross-spectral densities), such as coherence, phase-locking value and phase slope index. The following part computes the Fourier-representation of the data using **[ft_freqanalysis](/reference/ft_freqanalysis)**.
 
     cfg           = [];
     cfg.method    = 'mtmfft';
@@ -118,7 +127,14 @@ Some connectivity metrics can be computed from a non-parametric spectral estimat
             cumtapcnt: [500x1 double]
                   cfg: [1x1 struct]
 
-The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies.
+The resulting **freq** structure contains the spectral estimate for 3 tapers in each of the 500 trials (hence 1500 estimates), for each of the 3 channels and for 101 frequencies. It is not necessary to compute the cross-spectral density at this stage, because the function used in the next step, **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)**, contains functionality to compute the cross-spectral density from the Fourier coefficients.
+
+{% include markup/warning %}
+We apply frequency smoothing of 2Hz. The tapsmofrq parameter should already be familiar to you from the [multitapers section of the frequency analysis tutorial](/tutorial/timefrequencyanalysis/#multitapers). How much smoothing is desired will depend on your research question (i.e. frequency band of interest) but also on wether you decide to use the parametric or non-parametric estimation methods for connectivity analysis:
+
+Parametric and non-parametric estimation of Granger causality yield very comparable results, particularly in well-behaved simulated data. The main advantage in calculating Granger causality using the non-parametric technique is that it does not require the determination of the model order for the autoregressive model. When relying on the non-parametric factorization approach more data is required as well as some smoothing for the algorithm to converge to a stable result. Thus the choice of parametric vs. non-paramteric estimation of Granger causality will depend on your data and your certainty of model order.
+(find this information and more in [Bastos and Schoffelen 2016](http://journal.frontiersin.org/article/10.3389/fnsys.2015.00175/full))
+{% include markup/end %}
 
 ### Computation and inspection of the connectivity measures
 

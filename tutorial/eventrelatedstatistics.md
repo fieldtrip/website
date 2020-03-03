@@ -283,7 +283,7 @@ This is implemented in FieldTrip in the function **[ft_statistics_montecarlo](/r
     cfg.alpha       = 0.05;
     cfg.correctm    = 'no';
     cfg.correcttail = 'prob';
-    cfg.numrandomization = 1000;
+    cfg.numrandomization = 'all';  % there are 10 subjects, so 2^10=1024 possible permutations
 
     Nsub = 10;
     cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];
@@ -339,7 +339,7 @@ This method requires you to define neighbouring channels. FieldTrip has a functi
     cfg.alpha       = 0.05;
     cfg.correctm    = 'cluster';
     cfg.correcttail = 'prob';
-    cfg.numrandomization = 1000;
+    cfg.numrandomization = 'all';  % there are 10 subjects, so 2^10=1024 possible permutations
 
     Nsub = 10;
     cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];
@@ -376,8 +376,8 @@ So far we predefined a time window over which the effect was averaged, and teste
     cfg.alpha       = 0.05;
     cfg.correctm    = 'cluster';
     cfg.correcttail = 'prob';
-    cfg.numrandomization = 1000;
-    cfg.minnbchan        = 2; % minimal neighbouring channels
+    cfg.numrandomization = 'all';  % there are 10 subjects, so 2^10=1024 possible permutations
+    cfg.minnbchan        = 2;      % minimal number of neighbouring channels
 
     Nsub = 10;
     cfg.design(1,1:2*Nsub)  = [ones(1,Nsub) 2*ones(1,Nsub)];

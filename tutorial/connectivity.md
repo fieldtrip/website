@@ -21,13 +21,13 @@ This tutorial contains hands-on material that we use for the [MEG/EEG toolkit co
 
 ## Procedure
 
-This tutorial consists of three part
+This tutorial consists of three parts:
 
-- Simulated data with directed connections. In this part we are going to simulate some data and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model and we will use **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** for this. Subsequently, we will estimate the multivariate autoregressive model and the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
+- **Simulated data with directed connections**: In this part we are going to simulate some data with the help of **[ft_connectivitysimulation](/reference/ft_connectivitysimulation)** and use these data to compute various connectivity metrics. As a generative model of the data we will use a multivariate autoregressive model. Subsequently, we will estimate the multivariate autoregressive model, the spectral transfer function, and the cross-spectral density matrix using the functions **[ft_mvaranalysis](/reference/ft_mvaranalysis)** and **[ft_freqanalysis](/reference/ft_freqanalysis)**. In the next step we will compute and inspect various measures of connectivity with **[ft_connectivityanalysis](/reference/ft_connectivityanalysis)** and **[ft_connectivityplot](/reference/ft_connectivityplot)**.
 
-- Simulated data with common pick-up and different noise levels. In this part we are going to simulate some data consisting of an instantaneous mixture of 3 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
+- **Simulated data with common pick-up and different noise levels**: In this part we are going to simulate some data consisting of an instantaneous mixture of three 'sources', creating a situation of common pick up. We will explore the effect of this common pick up on the consequent estimates of connectivity, and we will investigate the effect of different mixings on these estimates.
 
-- Connectivity between MEG virtual channel and EMG. In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between this virtual channel and EMG. The data used for this part are the same as in the [Analysis of corticomuscular coherence](/tutorial/coherence) tutorial.
+- **Connectivity between MEG virtual channel and EMG**: In this part we are going to reconstruct MEG virtual channel data and estimate connectivity between this virtual channel and EMG. The data used for this part are the same as in the [corticomuscular coherence tutorial](/tutorial/coherence).
 
 ## Simulated data with directed connections
 
@@ -39,9 +39,9 @@ This tutorial consists of three part
 
 ## Connectivity between MEG virtual channel and EMG
 
-The previous two examples were using simulated data, either with a clear directed connectivity structure, or with a trivial pick-up of a common source in two channels. We will now continue with connectivity analysis on real MEG data. The dataset is the same as the one used in the [Analysis of corticomuscular coherence](/tutorial/coherence) tutorial.
+The previous two examples were using simulated data, either with a clear directed connectivity structure, or with a trivial pick-up of a common source in two channels. We will now continue with connectivity analysis on real MEG data. The dataset is the same as the one used in the [Analysis of corticomuscular coherence tutorial](/tutorial/coherence).
 
-In short, the dataset consists of combined MEG and EMG recordings while the subject lifted his right hand. The coherence tutorial [tutorial:coherence#introduction](/tutorial/coherence#introduction) contains a more elaborate description of the experiment and the dataset and a detailed analysis can be found in the corresponding paper ((Jan-Mathijs Schoffelen, Robert Oostenveld and Pascal Fries. [Neuronal Coherence as a Mechanism of Effective Corticospinal Interaction](http://www.sciencemag.org/content/308/5718/111.abstract), Science 2005, Vol. 308 no. 5718 pp. 111-113)). Due to the long distance between the EMG and the MEG, there is no volume conduction and hence no common pick-up. Hence this dataset lends itself well for connectivity analysis. But rather than doing an analysis between the EMG and one of the MEG channels (as in the original study), we will extract the cortical activity using a beamformer virtual channel.
+In short, the dataset consists of combined MEG and EMG recordings while the subject lifted his right hand. The [coherence tutorial](/tutorial/coherence#introduction) contains a more elaborate description of the experiment and the dataset and a detailed analysis can be found in the corresponding paper ([Jan-Mathijs Schoffelen, Robert Oostenveld and Pascal Fries. Neuronal Coherence as a Mechanism of Effective Corticospinal Interaction, Science 2005, Vol. 308 no. 5718 pp. 111-113](http://www.sciencemag.org/content/308/5718/111.abstract)). Due to the long distance between the EMG and the MEG, there is no volume conduction and hence no common pick-up. Hence this dataset lends itself well for connectivity analysis. But rather than using one of the MEG channels (as in the original study) and computing connectivity between that one channel and EMG, we will extract the cortical activity using a beamformer virtual channel.
 
 ### Compute the spatial filter for the region of interest
 
@@ -65,7 +65,7 @@ The **[ft_sourceanalysis](/reference/ft_sourceanalysis)** methods are usually ap
 
 The LCMV beamformer spatial filter for the location of interest will pass the activity at that location with unit-gain, while optimally suppressing all other noise and other source contributions to the MEG data. The LCMV implementation in FieldTrip requires the data covariance matrix to be computed with **[ft_timelockanalysis](/reference/ft_timelockanalysis)**.
 
-Rather than doing all the preprocessing again, you can download the preprocessed data from the [FieldTrip FTP server (data.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)
+Rather than doing all the preprocessing again, you can download the preprocessed data and headmodel from the FieldTrip FTP server ([data.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/data.mat)[SubjectCMC.hdm](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/SubjectCMC.hdm))
 
     load data
 
@@ -85,6 +85,21 @@ Rather than doing all the preprocessing again, you can download the preprocessed
     source               = ft_sourceanalysis(cfg, timelock);
 
 The source reconstruction contains the estimated power and the source-level time series of the averaged ERF, but here we are not interested in those. The _cfg.keepfilter_ option results in the spatial filter being kept in the output source structure. This filter can be used to reconstruct the single-trial time series as a virtual channel by multiplying it with the original MEG data.
+
+{% include markup/warning %}
+In this case, the headmodel coordinates were defined in cm, this might be different for different headmodels. You can inspect the units of the headmodel with **[ft_read_headmodel](/reference/ft_read_headmodel)**
+
+    hdm = ft_read_headmodel('SubjectCMC.hdm')
+
+    hdm =
+      orig: [1x1 struct]
+     label: {1x183 cell}
+         r: [183x1 double]
+         o: [183x3 double]
+      unit: 'cm'
+      cond: 1
+
+{% include markup/end %}
 
 ### Extract the virtual channel time series
 
@@ -115,12 +130,11 @@ The _sourcedata_ structure resembles the raw-data output of **[ft_preprocessing]
 
 {% include image src="/assets/img/tutorial/connectivity/sourcedata.png" width="300" %}
 
-Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent cu
-rrent dipole source at the location of interest.
+Notice that the reconstruction contains three channels, for the x-, the y- and the z-component of the equivalent current dipole source at the location of interest.
 
 ### Project along the strongest dipole direction
 
-The interpretation of connectivity is facilitated if we can compute it between two plain channels rather than between one channel versus a triplet of channels. Therefore we will project the time series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
+The interpretation of connectivity is facilitated if we can compute it between two plain channels rather than between one channel and a triplet of channels. Therefore we will project the time series along the dipole direction that explains most variance. This projection is equivalent to determining the largest (temporal) eigenvector and can be computationally performed using the singular value decomposition (svd).
 
     %% construct a single virtual channel in the maximum power orientation
     timeseries = cat(2, sourcedata.trial{:});
@@ -134,7 +148,7 @@ The interpretation of connectivity is facilitated if we can compute it between t
        u              3x3                  72  double
        v         196800x3             4723200  double
 
-Matrix u contains the spatial decomposition, matrix v the temporal and on the diagonal of matrix s you can find the eigenvalues. See "help svd" for more details.
+Matrix u contains the spatial decomposition, matrix v the temporal and on the diagonal of matrix s you can find the eigenvalues. See *help svd* for more details.
 
 We now recompute the virtual channel time series, but now only for the dipole direction that has the most power.
 
@@ -201,7 +215,7 @@ This computes the spectral decomposition and the coherence spectrum between all 
     ft_connectivityplot(cfg, coherence);
     title('coherence')
 
-{% include image src="/assets/img/tutorial/connectivity/virtualchan.png" width="300" %}
+{% include image src="/assets/img/tutorial/connectivity/virtualchan.png" width="400" %}
 
 To look in more detail into the numerical representation of the coherence results, you can use
 
@@ -235,16 +249,13 @@ Let's say you wanted to look at cortico-cortical connectivity, e.g. interactions
 
 ## Summary and further reading
 
-This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence](/tutorial/coherence) tutorial.
+This tutorial demonstrates how to compute connectivity measures between two time series. If you want to learn how to make a distributed representation of connectivity throughout the whole brain, you may want to continue with the [corticomuscular coherence tutorial](/tutorial/coherence).
 
 FAQs:
 
-{% include seealso tag1="faq" tag2="connectivity" %}
-{% include seealso tag1="faq" tag2="coherence"     %}
-{% include seealso tag1="faq" tag2="granger"       %}
+{% include seealso tag1="faq" tag2="coherence" %}
 
 Example scripts:
 
 {% include seealso tag1="example" tag2="connectivity" %}
-{% include seealso tag1="example" tag2="coherence"     %}
-{% include seealso tag1="example" tag2="granger"       %}
+{% include seealso tag1="example" tag2="coherence" %}

@@ -9,7 +9,7 @@ tags: [fixme, tutorial, artifact, meg, raw, preprocessing, meg-language]
 
 This tutorial makes use of the preprocessed data from [Preprocessing - Trigger based trial selection](/tutorial/preprocessing). Run the script from that section in order to produce the single trial data structure, or download it from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/rejectvisual/PreprocData.mat). Load the data with the following command:
 
-    load PreprocData dataFIC
+    load PreprocData data_all
 
 Before further analysis in any of the other tutorials, it is best to have artifact free data. Within FieldTrip you can choose to do visual/manual or automatic artifact detection and rejection.
 
@@ -35,7 +35,7 @@ Noteworthy is that the **[ft_databrowser](/reference/ft_databrowser)** function 
 
 ## Procedure
 
-The following steps are taken to do visual artifact rejectio
+The following steps are taken to do visual artifact rejection
 
 - Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**, as explained in the [previous tutorial](/tutorial/preprocessing)
 - Visual inspection of the trials and rejection of artifacts using **[ft_rejectvisual](/reference/ft_rejectvisual)**
@@ -67,21 +67,21 @@ If your dataset contains MEG and EEG channels (like this dataset), the MEG and E
     cfg.eogscale = 5e-8;
     dummy        = ft_rejectvisual(cfg,dataFIC);
 
-In trial 15 notice the slower drift observed over a larger group of sensors. This is most likely due to a head movement.
+In trial 46 notice the slower drift observed over a larger group of sensors. This is most likely due to a head movement.
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/untitled.jpg" %}
 
-Trial 84 shows an artifact which is caused by the electronics. Notice the jump in sensor MLT41.
+Trial 250 shows an artifact which is caused by the electronics. Notice the jump in sensor MLT41.
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/untitled-1.jpg" width="530" %}
 
-By browsing through the trials, related artifacts become evident (trial 15, 36, 39, 42, 43, 45 ,49, 50, 81, 82 and 84). They should be marked as 'bad'. After pressing the 'quit' button the trials marked 'bad' are now removed from the data structure.
+By browsing through the trials, related artifacts become evident (trial 2, 5, 6, 8, 9, 10, 12, 39, 43, 46, 49, 52, 58, 84, 102, 107, 114, 115, 116, 119, 121, 123, 126, 127, 128, 132, 133, 137, 143, 144, 147, 149, 158, 181, 229, 230, 233, 241, 243, 245, 250, 254, 260). They should be marked as 'bad'. After pressing the 'quit' button the trials marked 'bad' are now removed from the data structure.
 
-If you would like to keep track of which trials you reject, keep in mind that the trial numbers change when you call **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once. An example: There are 87 trials in your data and first you reject trial 15, 36 and 39. Then trial number 87 becomes trial number 84. Later when you also want to reject trials 42, 43, 45 ,49, 50, 81, 82 and 84 you should be very careful and subtract 3 from all the old trial numbers. If you would like to know which trials you rejected, it is best to call ft_rejectvisual only once.
+If you would like to keep track of which trials you reject, keep in mind that the trial numbers change when you call **[ft_rejectvisual](/reference/ft_rejectvisual)** more than once. An example: There are 261 trials in your data and first you reject trial 2, 5 and 6. Then trial number 8 becomes trial number 5. Later when you also want to reject more trials you should be very careful and subtract 3 from all the old trial numbers. If you would like to know which trials you rejected, it is best to call ft_rejectvisual only once.
 
 ### Manual artifact rejection - display one channel at a time
 
-It can also be convenient to view data from one channel at a time. This can be particularly relevant for the EOG channel. To do so writ
+It can also be convenient to view data from one channel at a time. This can be particularly relevant for the EOG channel. To do so write
 
     cfg          = [];
     cfg.method   = 'channel';
@@ -120,14 +120,15 @@ Before pressing the 'Quit' button, you can always toggle the channels/trials bac
 
 After quitting, the trials/channels will be rejected from the data set and the command line output appears as follow
 
-    the input is raw data with 152 channels and 87 trials
+    the input is raw data with 152 channels and 261 trials
     showing a summary of the data for all channels and trials
     computing metric [---------------------------------------------------------]
-    87 trials marked as GOOD, 0 trials marked as BAD
+    261 trials marked as GOOD, 0 trials marked as BAD
     148 channels marked as GOOD, 4 channels marked as BAD
     no trials were removed
-    the following channels were removed: MLP31, MLT33, MLT41, EOG
-    the call to "ft_rejectvisual" took 20 seconds and an estimated 84 MB
+    the following channels were removed: MLT31, MLT33, MLT41, EOG
+    the call to "ft_selectdata" took 0 seconds
+    the call to "ft_rejectvisual" took 243 seconds
 
 This operation could be repeated for each of the metrics, by clicking on the different radio buttons 'var', 'min', 'max', etc.
 
@@ -159,36 +160,6 @@ You can also call **[ft_rejectvisual](/reference/ft_rejectvisual)** multiple tim
 
 ---
 
-You can repeat this for the initially congruent (IC) condition. To detect all the artifacts use **[ft_rejectvisual](/reference/ft_rejectvisual)** with all 3 methods (trial, channel and summary) like in the examples above.
-
-    clear all
-    load PreprocData dataIC
-
-    cfg          = [];
-    cfg.method   = 'trial'; % also try cfg.method = 'channel' and cfg.method = 'summary'
-    cfg.alim     = 1e-12;
-    cfg.megscale = 1;
-    cfg.eogscale = 5e-8;
-    dummy        = ft_rejectvisual(cfg,dataIC);
-
-Trials 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86 contain various artifacts, classify these as 'BAD'. Also reject the channels MLO12 and MLP31.
-
----
-
-Repeat the procedure for the fully congruent condition (FC
-
-    clear all
-    load PreprocData dataFC
-
-    cfg          = [];
-    cfg.method   = 'trial'; % also try cfg.method = 'channel' and cfg.method = 'summary'
-    cfg.alim     = 1e-12;
-    cfg.megscale = 1;
-    cfg.eogscale = 5e-8;
-    dummy        = ft_rejectvisual(cfg,dataFC);
-
-Trials 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85 contain various artifacts, classify these as 'BAD'. Also reject the channels MLO12 and MLP31.
-
 ### Use ft_databrowser to mark the artifacts manually
 
 An alternative way to remove artifacts is to page through the butterfly plots of the single trials, by using the ft_databrowser function.
@@ -197,17 +168,17 @@ Call the function like
     % first select only the MEG channels
     cfg = [];
     cfg.channel = 'MEG';
-    data = ft_preprocessing(cfg,dataFIC);
+    data = ft_preprocessing(cfg,data_all);
     % open the browser and page through the trials
     cfg=[];
     cfg.channel = 'MEG';
-    artf=ft_databrowser(cfg,dataFIC);
+    artf=ft_databrowser(cfg,data);
 
-In the image below are two figures for the same trial (trial 75). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image). Then, as in the right figure click within the dotted line
+In the image below are two figures for the same trial (trial 228). As in the left figure first drag the mouse on the artifact to create dotted lines on either side of the artifact (left image). Then, as in the right figure click within the dotted line
 
 {% include image src="/assets/img/tutorial/visual_artifact_rejection/fig4.png" width="600" %}
 
-The resulting variable contains the fiel
+The resulting variable contains the field
 
 artf.artfctdef.visual.artifact = [begartf endartf]
 
@@ -215,10 +186,19 @@ with the beginning and ending sample for all marked sections.
 
 ## Summary
 
-Per condition, the following trials contain artifacts:
+Channels MLO12 and MLP31 are removed because of artifacts.
 
+The following trials contain artifacts:
+
+2, 5, 6, 8, 9, 10, 12, 39, 43, 46, 49, 52, 58, 84, 102, 107, 114, 115, 116, 119, 121, 123, 126, 127, 128, 132, 133, 137, 143, 144, 147, 149, 158, 181, 229, 230, 233, 241, 243, 245, 250, 254, 260
+
+Per condition, this corresponds to the following trials:
 - FIC: 15, 36, 39, 42, 43, 49, 50, 81, 82, 84
 - IC: 1, 2, 3, 4, 14, 15, 16, 17, 20, 35, 39, 40, 47, 78, 79, 80, 86
 - FC: 2, 3, 4, 30, 39, 40, 41, 45, 46, 47, 51, 53, 59, 77, 85
 
-Channels MLO12 and MLP31 are removed because of artifacts.
+
+
+## Suggested further reading
+
+For an introduction to how you can deal with artifacts in FieldTrip in general, you can go back to the [Introduction: dealing with artifacts](/tutorial/artifacts) tutorial. As an alternative to visual artifact detection, you can do it automatically, see the [automatic artifact rejection](/tutorial/automatic_artifact_rejection) tutorial. More information on dealing with artifacts can also be found in some example scripts and frequently asked questions. Furthermore, this topic is often discussed on the email discussion list which can be searched [like this](http://www.google.com/search?q=artifact&sitesearch=mailman.science.ru.nl%2Fpipermail%2Ffieldtrip%2F).

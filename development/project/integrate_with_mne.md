@@ -6,7 +6,7 @@ title: Integrate FieldTrip and MNE-Python
 
 Not all the information contained in either MATLAB or Python can be completely copied into the other format.
 
-We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/bugzilla) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
+We cannot assure that the API in MNE-Python will remain the same in the future. Please, report any error on [bugzilla](/development/issues) and include this address ''bugzilla@gpiantoni.com'' to the CC list in the bugreport.
 
 Code under development, the MNE-Python community currently works on reader functions for FieldTrip data structure
 [https://github.com/mne-tools/mne-python/pull/5141](https://github.com/mne-tools/mne-python/pull/5141), [https://github.com/mne-tools/mne-python/issues/4833](https://github.com/mne-tools/mne-python/issues/4833)

@@ -42,7 +42,7 @@ For example, the following will result in an error because of the invalid input 
     Error in ft_timelockanalysis (line 105)
     data = ft_checkdata(data, 'datatype', {'raw+comp', 'raw'}, 'feedback', 'yes', 'hassampleinfo', 'yes');
 
-Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the FieldTrip code (see [bugzilla](/bugzilla)).
+Although the error is not resolved, you can load the file from disk and directly zoom in on the problematic piece of code. It might be that your configuration is inconsistent with the data, that the data is incompatible with the function (as above), or that there is a bug in the FieldTrip code (see [issues](/development/issues)).
 
 You can load the input variables to the function (and some extra information from the file).
 

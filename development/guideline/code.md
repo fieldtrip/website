@@ -58,16 +58,16 @@ should also have the same 'warning' or 'error' tag (e.g. `FieldTrip:fileio:fileN
 In general (although some exceptions apply, see below) the specification of the dimensions in the data structure is like this
 
     datastructure.aaa = 2-D array
-    datastructure.aaadimord = ‘xxx_yyy’
+    datastructure.aaadimord = 'xxx_yyy'
     datastructure.xxx = scalar vector or cell-array that describes the 1st dimension
     datastructure.yyy = scalar vector or cell-array that describes the 2st dimension
 
 This can be extended like
 
     datastructure.aaa
-    datastructure.aaadimord = ‘xxx_yyy’
+    datastructure.aaadimord = 'xxx_yyy'
     datastructure.bbb
-    datastructure.bbbdimord = ‘yyy_zzz’
+    datastructure.bbbdimord = 'yyy_zzz'
     datastructure.xxx
     datastructure.yyy
     datastructure.zzz
@@ -76,7 +76,7 @@ In case multiple fields in a structure have the same dimord, it is allowed to sp
 
     datastructure.aaa
     datastructure.bbb
-    datastructure.dimord = ‘xxx_yyy’ % applies to aaa and bbb
+    datastructure.dimord = 'xxx_yyy' % applies to aaa and bbb
     datastructure.xxx
     datastructure.yyy
 
@@ -84,9 +84,9 @@ And furthermore
 
     datastructure.aaa
     datastructure.bbb
-    datastructure.dimord = ‘xxx_yyy’ % applies to all fields that do not specify their own dimord
+    datastructure.dimord = 'xxx_yyy' % applies to all fields that do not specify their own dimord
     datastructure.ccc
-    datastructure.cccdimord = ‘yyy_zzz’ % applies only to ccc
+    datastructure.cccdimord = 'yyy_zzz' % applies only to ccc
     datastructure.xxx
     datastructure.yyy
     datastructure.zzz
@@ -94,7 +94,7 @@ And furthermore
 If a structure only contains a single data field, all fields (i.e. the only one) have the same dimensions and therefore a general dimord can be used instead of a field-specific one. So the structure would be
 
     datastructure.aaa = 2-D array
-    datastructure.dimord = ‘xxx_yyy’
+    datastructure.dimord = 'xxx_yyy'
     datastructure.xxx = scalar vector or cell-array that describes the 1st dimension
     datastructure.yyy = scalar vector or cell-array that describes the 2st dimension
 
@@ -102,10 +102,10 @@ Some high-level FieldTrip functions allow or require the specification of the pa
 
 The known exceptions are
 
-- the dimension ‘chan’ is described with the cell-array vector ‘label'
-- the dimension ‘chancmb’ is described with the cell-array ‘labelcmb’, which is a Nx2 array
-- if the dimension is indicated as '{xxx}’, then it refers to a cell-array description. An example is ‘{pos}\_ori_time’ for vector dipole moments as a function of time, that are estimated for multiple dipole positions. The positions are here represented in a cell-array to allow for positions (from a 3-D regular grid) outside the brain where the computation is not done. The alternative would be to use a 3D array with pos_ori_time with NaNs to indicate that the data at some positions does not apply, but that is memory-wise inefficient.
-- if the dimension is indicated as ‘(xxx)’, then it refers to a struct-array description. We don’t have this worked out in detail and we don’t use it.
+- the dimension 'chan' is described with the cell-array vector 'label'
+- the dimension 'chancmb' is described with the cell-array 'labelcmb', which is a Nx2 array
+- if the dimension is indicated as '{xxx}', then it refers to a cell-array description. An example is '{pos}\_ori_time' for vector dipole moments as a function of time, that are estimated for multiple dipole positions. The positions are here represented in a cell-array to allow for positions (from a 3-D regular grid) outside the brain where the computation is not done. The alternative would be to use a 3D array with pos_ori_time with NaNs to indicate that the data at some positions does not apply, but that is memory-wise inefficient.
+- if the dimension is indicated as '(xxx)', then it refers to a struct-array description. We don't have this worked out in detail and we don't use it.
 - some fields contain supportive information and not actual data, and therefore are not described with a dimord. Examples are cumtapcnt, sampleinfo, trialinfo.
 - some dimensions do not have an explicit description and are only implicitly numbered. examples are “comp” and “rpt”.
 - rpt is used for repetitions, which are usually trials, but in timelock (ERP) structures we use “rpt" and “subj” interchangeably. The dimord “subj_chan_time" is used to represent an ERP that cas been concatenated over subjects.

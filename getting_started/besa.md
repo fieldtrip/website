@@ -8,11 +8,11 @@ Please add information if you're using BESA data and want to share info with oth
 
 ## Background
 
-BESA is a commercial software package for EEG and MEG data analysis (see www.besa.de). One of BESA’s strong points is source analysis, in particular concerning dipole modeling. By including prior anatomical or functional knowledge as constraints on the source model, it is possible to make robust estimations of relatively complex source configurations. This is further facilitated by the easy to use GUI. Computation can be done using a number of pre-defined head models that can be extended to individual head models (FEM) when using the extension package BESA MRI or adapting your FEM to BESA standards. BESA’s source analysis methods also include some beamformers.
+BESA is a commercial software package for EEG and MEG data analysis (see www.besa.de). One of BESA's strong points is source analysis, in particular concerning dipole modeling. By including prior anatomical or functional knowledge as constraints on the source model, it is possible to make robust estimations of relatively complex source configurations. This is further facilitated by the easy to use GUI. Computation can be done using a number of pre-defined head models that can be extended to individual head models (FEM) when using the extension package BESA MRI or adapting your FEM to BESA standards. BESA's source analysis methods also include some beamformers.
 
 FieldTrip has very extensive support for advanced frequency and time-frequency analysis of EEG and MEG data. The main approach for source analysis that is currently implemented in FieldTrip uses various beamformer methods in the time, but especially in the frequency domain. In that respect, it differs a little bit from BESA. However, a large difference between BESA and FieldTrip is that the latter also includes support for advanced statistical analysis of channel and source level data.
 
-One might wish to combine BESA’s capacities and convenience in spatiotemporal dipole modeling with FieldTrip’s strength on advanced frequency estimates and statistical analysis on the channel and source level. This tutorial describes how you can read in channel and source level data that has been analyzed in BESA, and how you can enhance your analysis of that data in FieldTrip.
+One might wish to combine BESA's capacities and convenience in spatiotemporal dipole modeling with FieldTrip's strength on advanced frequency estimates and statistical analysis on the channel and source level. This tutorial describes how you can read in channel and source level data that has been analyzed in BESA, and how you can enhance your analysis of that data in FieldTrip.
 
 ## Reading in data files from BESA
 
@@ -52,8 +52,8 @@ The BESA toolbox is maintained by [BESA](http://www.besa.de) and included in the
 
 BESA electrode files can also be read into MATLAB, using the **[ft_read_sens](/reference/ft_read_sens)** function. They do not directly correspond to a core FieldTrip data structure, but you can add the electrode information to any FieldTrip data structure according to this:
 
-    data = besa2fieldtrip(‘yourbesafile.avr’);
-    data.elec = ft_read_sens(‘yourelectrodes.sfp’);
+    data = besa2fieldtrip('yourbesafile.avr');
+    data.elec = ft_read_sens('yourelectrodes.sfp');
 
 ## Reading .dat files with source reconstructions
 

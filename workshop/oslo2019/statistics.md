@@ -74,7 +74,7 @@ A ubiquitous test used to assess statistical significance is the Student's t-tes
 To perform the t-test, _t-values_ need to be calculated, which a bit simplified are: \frac{µ}{SEM}, where µ is the mean difference between the conditions and SEM is the standard devation divided by \sqrt{n}, where _n_ is the number of observations.
 
 We will do a within-subject between-trials statistical test  
-We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-priori threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1’s and 2’s.
+We proceed by computing the statistical tets, which returns the t-value, the probability and a binary mask that contains a 0 for all data points where the probability is below the a-priori threshold, and 1 where it is above the threshold. The _cfg.design_ field specifies the condition in which each of the trials is observed. For the _indepsamplesT_ statistic, it should contain 1's and 2's.
 
     cfg           = [];
 

@@ -19,7 +19,7 @@ This data in this tutorial is originally from the [NatMEG workshop](/workshop/na
 
 ## Background
 
-In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) re-referencing. The **[ft_preprocessing](/reference/ft_preprocessiing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
+In FieldTrip, the preprocessing of data refers to the reading of the data, segmenting the data around interesting events, which are defined by triggers in the data, temporal filtering and (optionally) re-referencing. The **[ft_preprocessing](/reference/ft_preprocessing)** function takes care of all these steps, i.e., it reads the data and applies the preprocessing options.
 
 There are largely two alternative approaches for preprocessing, which especially differ in the amount of memory required.
 

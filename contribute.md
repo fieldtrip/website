@@ -13,7 +13,7 @@ The FieldTrip community is organized around the [email discussion list](/discuss
 
 ## Report bugs or request enhancements
 
-You can [provide us with detailed bug reports](/bugzilla). The easier it is for one of us to reproduce the bug, the more likely it is that we can fix the problem. You can use the same approach to request new functionality. We cannot guarantee that we have time to implement it, but it is good to know what people are trying to do or would like to do with FieldTrip.
+You can [provide us with detailed bug reports](/development/issues). The easier it is for one of us to reproduce the bug, the more likely it is that we can fix the problem. You can use the same approach to request new functionality. We cannot guarantee that we have time to implement it, but it is good to know what people are trying to do or would like to do with FieldTrip.
 
 ## Contribute code
 

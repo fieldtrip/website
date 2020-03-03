@@ -87,4 +87,4 @@ Schoffelen JM, Gross J. [Source connectivity analysis with MEG and EEG.](http://
 
 Bastos AM, Schoffelen JM. [A Tutorial Review of Functional Connectivity Analysis Methods and Their Interpretational Pitfalls.](http://doi.org/10.3389/fnsys.2015.00175) Front Syst Neurosci. 2016 Jan 8;9:175. doi: 10.3389/fnsys.2015.00175
 
-O’Neill GC, Barratt EL, Hunt BAE, Tewarie PK, Brookes, MJ. [Measuring electrophysiological connectivity by power envelope correlation: a technical review on MEG methods](https://doi.org/10.1088/0031-9155/60/21/R271). Physics in Medicine and Biology, 2015 60(21), R271–R295.
+O'Neill GC, Barratt EL, Hunt BAE, Tewarie PK, Brookes, MJ. [Measuring electrophysiological connectivity by power envelope correlation: a technical review on MEG methods](https://doi.org/10.1088/0031-9155/60/21/R271). Physics in Medicine and Biology, 2015 60(21), R271–R295.

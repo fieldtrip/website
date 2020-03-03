@@ -50,7 +50,27 @@ In this tutorial, procedures of 4 types of time-frequency analysis will be shown
 
 The first step is to read the data using the function **[ft_preprocessing](/reference/ft_preprocessing)**. With the aim to reduce boundary effects occurring at the start and the end of the trials, it is recommended to read larger time intervals than the time period of interest. In this example, the time of interest is from -0.5 s to 1.5 s (t = 0 s defines the time of stimulus); however, the script reads the data from -1.0 s to 2.0 s.
 
-{% include /shared/tutorial/preprocessing_fic.md %}
+### Reading in the data
+
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the  command 'load dataFIC' and skip to Time-frequency analysis I.
+
+Otherwise run the following code:
+
+{% include /shared/tutorial/definetrial_all.md %}
+
+### Cleaning
+
+{% include /shared/tutorial/preprocessing_nofilter.md %}
+
+We select one of the conditions from the original dataset for time-frequency analysis:
+
+    cfg = [];
+    cfg.trials = data_all.trialinfo == 3;
+    dataFIC = ft_redefinetrial(cfg, data_all);
+
+Subsequently you can save the data to disk.
+
+  save dataFIC dataFIC
 
 ## Time-frequency analysis I
 
@@ -240,7 +260,7 @@ Adjust the length of the time-window and thereby degree of smoothing. Use **[ft_
 
 Multitapers are typically used in order to achieve better control over the frequency smoothing. More tapers for a given time window will result in stronger smoothing. For frequencies above 30 Hz, smoothing has been shown to be advantageous, increasing sensitivity thanks to reduced variance in the estimates despite reduced effective spectral resolution. Oscillatory gamma activity (30-100 Hz) is quite broad band and thus analysis of this signal component benefits from multitapering, which trades spectral resolution against increased sensitivity. For signals lower than 30 Hz it is recommend to use only a single taper, e.g. a Hanning taper as shown above (beware that in the example below multitapers are used to analyze low frequencies because there are no effects in the gamma band in this dataset).
 
-Time-frequency analysis based on multitapers can be performed by the function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transforms the data are ‘tapered’. Several orthogonal tapers might be used for each time window. The power is calculated for each tapered data segment and then combined. In the example below we apply a time window which gradually becomes shorter for higher frequencies (similar to wavelet techniques). The arguments for the chosen parameters are as follows
+Time-frequency analysis based on multitapers can be performed by the function **[ft_freqanalysis](/reference/ft_freqanalysis)**. The function uses a sliding time window for which the power is calculated for a given frequency. Prior to calculating the power by discrete Fourier transforms the data are 'tapered'. Several orthogonal tapers might be used for each time window. The power is calculated for each tapered data segment and then combined. In the example below we apply a time window which gradually becomes shorter for higher frequencies (similar to wavelet techniques). The arguments for the chosen parameters are as follows
 
 - cfg.foi, the frequencies of interest, here from 1 Hz to 30 Hz in steps of 2 Hz. The step size could be decreased at the expense of computation time and redundancy.
 - cfg.toi, the time-interval of interest. This vector determines the center times for the time windows for which the power values should be calculated. The setting cfg.toi = -0.5:0.05:1.5 results in power values from -0.5 to 1.5 s in steps of 50 ms. A finer time resolution will give redundant information and longer computation times, but a smoother graphical output.

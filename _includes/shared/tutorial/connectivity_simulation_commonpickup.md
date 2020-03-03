@@ -1,4 +1,4 @@
-When working with electrophysiological data (EEG/MEG/LFP) the signals that are picked up by the individual channels invariably consist of instantaneous mixtures of the underlying source signals. This mixing can severely affect the outcome of connectivity analysis, and thus affects the interpretation. We will demonstrate this by simulating data in 2 channels, where each of the channels consists of a weighted combination of temporally white noise unique to each of the channels, and a common input of a band-limited signal (filtered between 15 and 25 Hz). We will compute connectivity between these channels, and show that the common input can give rise to spurious estimates of connectivity.
+When working with electrophysiological data (EEG/MEG/LFP) the signals that are picked up by the individual channels invariably consist of instantaneous mixtures of the underlying source signals. This mixing can severely affect the outcome of connectivity analysis, and thus affects the interpretation. We will demonstrate this by simulating data in two channels, where each of the channels consists of a weighted combination of temporal white noise unique to each of the channels, and a common input of a band-limited signal (filtered between 15 and 25 Hz). We will compute connectivity between these channels, and show that the common input can give rise to spurious estimates of connectivity.
 
     % create some instantaneously mixed data
 
@@ -65,9 +65,7 @@ When working with electrophysiological data (EEG/MEG/LFP) the signals that are p
     cfg.parameter = 'cohspctrm';
     figure; ft_connectivityplot(cfg, c);
 
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixinggranger.png" width="300" %}
-
-{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixingcoherence.png" width="300" %}
+{% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixinggranger.png" width="400" %} {% include image src="/assets/img/shared/tutorial/connectivity_simulation_commonpickup/mixingcoherence.png" width="400" %}
 
 #### Exercise 5
 

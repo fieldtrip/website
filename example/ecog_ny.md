@@ -122,7 +122,7 @@ The analysis of event-related potentials is done in accordance with the standard
     ERP_object_bl = ft_timelockbaseline(cfg,ERP_object);
     ERP_face_bl   = ft_timelockbaseline(cfg,ERP_face);
 
-For plotting the data we select channel 'IO_03', located in or in close proximity of the fusiform face area, which is known to strongly respond to face stimuli. In agreement with the literature, the ERPs appear to be larger for 'face' compared to ‘object’ stimuli. Before plotting, we need to average the data across trials, because we kept the individual trials when initially calling ft_timelockanalysis.
+For plotting the data we select channel 'IO_03', located in or in close proximity of the fusiform face area, which is known to strongly respond to face stimuli. In agreement with the literature, the ERPs appear to be larger for 'face' compared to 'object' stimuli. Before plotting, we need to average the data across trials, because we kept the individual trials when initially calling ft_timelockanalysis.
 
     cfg            = [];
     cfg.avgoverrpt = 'yes';
@@ -229,7 +229,7 @@ Although the visual inspection of the data indicated stronger ERP responses for 
     [chans time] = find(stats_HGP.mask);
     chans = unique(chans)
 
-There are six channels with significantly different HGP time courses when comparing the ‘objects’ and ‘faces’ conditions. We will plot each of these channels using **[ft_singleplotER](/reference/ft_singleplotER)**.
+There are six channels with significantly different HGP time courses when comparing the 'objects' and 'faces' conditions. We will plot each of these channels using **[ft_singleplotER](/reference/ft_singleplotER)**.
 
     % first, average over trials, otherwise we'll have problems with ft_singleplotER
     cfg = [];
@@ -302,7 +302,7 @@ To visualize the time-frequency data from the two conditions, we will plot TFRs 
 
 #### 4.2 Time-frequency statistics
 
-In the next step, we statistically compare the TFRs of the ‘house’ and ‘face’ conditions using cluster-based permutation statistics, as implemented in **[ft_freqstatistics](/reference/ft_freqstatistics)**. The statistical approach is presented in more detail in one of the [statistics tutorials](/tutorial/cluster_permutation_freq).
+In the next step, we statistically compare the TFRs of the 'house' and 'face' conditions using cluster-based permutation statistics, as implemented in **[ft_freqstatistics](/reference/ft_freqstatistics)**. The statistical approach is presented in more detail in one of the [statistics tutorials](/tutorial/cluster_permutation_freq).
 
     cfg                  = [];
     cfg.latency          = [0 .6];
