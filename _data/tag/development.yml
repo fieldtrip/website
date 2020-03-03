@@ -1,8 +1,8 @@
-- name:  Contribute or request support
-  link:  /contribute
-
 - name:  Development
   link:  /development
+
+- name:  Contribute
+  link:  /development/contribute
 
 - name:  Accessing the FieldTrip source code through CVS
   link:  /development/cvs
