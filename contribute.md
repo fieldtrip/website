@@ -29,7 +29,7 @@ When you contribute code, please consider the [code guidelines](/development/gui
 
 You are invited to add your own tutorials, example scripts or answers to frequently asked questions to this website. Every time you type an email explaining something, please consider adding it here as well to increase the long term impact.
 
-You can contribute directly to the documentation on this website by going to [the `fieldtrip/website` GitHub repo](https://github.com/fieldtrip/website), editing or adding a page there and sending your suggestion as a "pull request". All contributions are reviewed by the maintainers. If you are not sure about the quality of your contribution, just submit it as pull request and we will check, improve and/or provide feedback if needed.
+You can contribute directly to the documentation on this website by going to the corresponding [website repository](https://github.com/fieldtrip/website) on GitHub, editing or adding a page there and sending your suggestion as a "pull request". All contributions are reviewed by the maintainers. If you are not sure about the quality of your contribution, just submit it as pull request and we will check, improve and/or provide feedback if needed.
 
 {% include markup/info %}
 When adding documentation, please consider the [documentation guidelines](/development/guideline/documentation) to keep it consistent with other documentation and to facilitate cross-linking.

@@ -92,7 +92,7 @@ you will switch from a side branch into the main branch of your repository.
 
 ### How to add a feature or fix a bug
 
-You only have read permission for the [FieldTrip repo](https://github.com/fieldtrip/fieldtrip), this means that you cannot directly change the code of the FieldTrip repository. What you can do, as demonstrated below, is:
+You only have read permission for the [FieldTrip repository](https://github.com/fieldtrip/fieldtrip) on GitHub, this means that you cannot directly change the code of the FieldTrip repository. What you can do, as demonstrated below, is:
 
 1. Copy the FieldTrip repository under your private account on github.com (this is called **forking**).
 2. This new personal repository will become your **remote repository**. You will need **clone** the remote repository onto your local machine.
