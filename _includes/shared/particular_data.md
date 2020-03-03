@@ -1,5 +1,5 @@
 {% include markup/danger %}
-In general you should get started with the [tutorials](/tutorial). The subsequent pages listed below serve to explain system specific details, but lack the complete overview that the tutorials provide. If you have questions, please post them on the [email discussion list](/discussion_list).
+In general you should get started with the [tutorials](/tutorial). The pages that are listed below only serve to explain system specific details and peculiarities, but lack the complete overview that the tutorials provide.
 {% include markup/end %}
 
 ## Getting started with particular MEG data types
