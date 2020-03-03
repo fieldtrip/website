@@ -13,7 +13,7 @@ In this tutorial you will learn about applying beamformer techniques in the freq
 
 It is expected that you understand the previous steps of preprocessing and filtering the sensor data. Some understanding of the options for computing the head model and forward lead field is also useful.
 
-This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis.md)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
+This tutorial will not cover the time-domain option for LCMV/SAM beamformers (but see [this tutorial for an example on data from a Neuromag/Elekta/MEGIN system](/workshop/paris2019/handson_sourceanalysis)), nor for beamformers applied to evoked/averaged data (although see an example of how to calculate [virtual sensors using LCMV](/tutorial/virtual_sensors) for an example of this).
 
 {% include markup/info %}
 This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
@@ -114,7 +114,7 @@ The output of ft_freqanalysis should be familiar to you from the [tutorial for t
 
 The forward model is a prerequisite for source reconstruction. The forward model allows us to calculate an estimate of the field measured by the MEG sensors for a given current distribution. In MEG analysis a forward model is typically constructed for each subject. There are many types of forward models which to various degrees take the individual anatomy into account. Some examples of different MEG-based headmodels are given **[here](/example/make_leadfields_using_different_headmodels)**. We will here use a semi-realistic head model developed by Nolte (2003). It is based on a correction of the lead field for a spherical volume conductor by a superposition of basis functions, gradients of harmonic functions constructed from spherical harmonics.
 
-For more details on the following steps, you can consult the [tutorial on Creating a volume conduction model of the head for source-reconstruction of MEG data][/tutorial/headmodel_meg].
+For more details on the following steps, you can consult the [tutorial on volume conduction models for source-reconstruction of MEG data](/tutorial/headmodel_meg).
 The first step in constructing the forward model is to find the brain surface from the subjects MRI. This procedure is termed segmentation.
 Note that segmentation is quite time consuming. For the purpose of this tutorial, we have precomputed the segmentation for you. If you want to skip ahead, you can directly load the segmented MRI available from the [FieldTrip FTP server (segmentedmri.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/segmentedmri.mat) using the command 'load segmentedmri'.
 
@@ -147,10 +147,10 @@ Furthermore, after selecting the channels you want to use in the source reconstr
 
 You can now visualise the headmodel together with the sensor positions:
 
-  figure
-  ft_plot_sens(freqPost.grad);
-  hold on
-  ft_plot_headmodel(ft_convert_units(headmodel,'cm'));
+    figure
+    ft_plot_sens(freqPost.grad);
+    hold on
+    ft_plot_headmodel(ft_convert_units(headmodel,'cm'));
 
 
 ### Exercise 2: head model
@@ -176,7 +176,7 @@ Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to 
     cfg.sourcemodel.unit       = 'cm';
     grid = ft_prepare_leadfield(cfg);
 
-{% include markup/success %}
+{% include markup/warning %}
 If you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
 {% include markup/end %}
 
