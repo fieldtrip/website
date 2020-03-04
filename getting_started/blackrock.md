@@ -5,8 +5,8 @@ tags: [blackrock, lfp, spike, dataformat]
 
 # Getting started with Blackrock data
 
-FIXME This getting started guide and the reading code are still under development,
-see [bugzilla](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964).
+FIXME This getting started guide and the reading code are still under development, see [bugzilla](http://bugzilla.fieldtriptoolbox.org/show_bug.cgi?id=2964).
+
 However, we very much welcome you to start using this functionality, and would be happy with any feedback provided.
 
 ## Introduction
@@ -47,7 +47,7 @@ To read analog data, use
 
 This calls the NPMK toolbox (using the function _openNSx_) and gives back a data structure in FieldTrip format.
 
-Optional input arguments should be specified in key-value pairs and may includ
+Optional input arguments should be specified in key-value pairs and may include
 
     %   'chanindx'   = list with channel indices to read
     %   'begsample   = first sample to read
@@ -66,4 +66,4 @@ TO BE DONE.
 
 ## External links
 
-- http://www.blackrockmicro.com Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)
+- [Blackrock Microsystems](http://www.blackrockmicro.com), formerly the Research Products Division of Cyberkinetics Inc.

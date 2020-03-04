@@ -1,6 +1,6 @@
 ---
 title: Getting started with Neuromag/Elekta/Megin data
-tags: [elekta, neuromag, megin, dataformat, meg]
+tags: [elekta, neuromag, megin, meg, dataformat]
 ---
 
 # Getting started with Neuromag//Megin data
@@ -28,7 +28,7 @@ To get started, you need to add the paths where the FieldTrip and MNE toolboxes 
 
 The first step is to see if you can read in the data using both the toolboxes by typing the following in the command window:
 
-    >> hdr = ft_read_header(filename); %your fif-filename
+    >> hdr = ft_read_header(filename); % your fif-filename
     >> hdr
 
     hdr =

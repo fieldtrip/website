@@ -23,17 +23,17 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with EGI/Philips data](/getting_started/egi)
 - [Getting started with Nicolet data](/getting_started/nicolet)
 
-
 ## Getting started with other types of data
 
 - [Getting started with Artinis NIRS data](/getting_started/artinis)
 - [Getting started with Blackrock data](/getting_started/blackrock)
+- [Getting started with Cyberkinetics data](/getting_started/cyberkinetics)
 - [Getting started with Neuralynx data](/getting_started/neuralynx)
+- [Getting started with Neuralynx data recorded at the Donders Institute](/getting_started/neuralynx_fcdc)
 - [Getting started with Plexon data](/getting_started/plexon)
-- [Getting started with SR-Research EyeLink eye-tracker data](/getting_started/eyelink)
 - [Getting started with animal electrophysiology data, including spikes](/getting_started/animal)
 - [Getting started with human intracranial electrophysiology data](/getting_started/human_ecog)
-- [Getting started with the Neuralynx data recorded at the Donders Institute](/getting_started/neuralynx_fcdc)
+- [Getting started with SR-Research EyeLink eye-tracker data](/getting_started/eyelink)
 
 ## Getting started with data from other software
 
