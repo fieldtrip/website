@@ -71,6 +71,5 @@ This calls the neuroshare toolbox (using the functions _ns_GetSegmentData_ or _n
 
 ## External links
 
-- [http://neuroshare.org](http://neuroshare.org)
-
-- http://www.blackrockmicro.com Blackrock Microsystems (formerly the Research Products Division of Cyberkinetics Inc.)
+- [NeuroShare](http://neuroshare.org)
+- [Blackrock Microsystems](http://www.blackrockmicro.com), formerly the Research Products Division of Cyberkinetics Inc.
