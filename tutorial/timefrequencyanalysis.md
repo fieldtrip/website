@@ -130,7 +130,7 @@ To plot the TFRs from all the sensors use the function **[ft_multiplotTFR](/refe
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
-    cfg.zlim         = [-3e-27 3e-27];
+    cfg.zlim         = [-2.5e-27 2.5e-27];
     cfg.showlabels   = 'yes';
     cfg.layout       = 'CTF151_helmet.mat';
     figure
@@ -148,7 +148,7 @@ An interesting effect seems to be present in the TFR of sensor MRC15. To make a 
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
     cfg.maskstyle    = 'saturation';
-    cfg.zlim         = [-3e-27 3e-27];
+    cfg.zlim         = [-2.5e-27 2.5e-27];
     cfg.channel      = 'MRC15';
     cfg.layout       = 'CTF151_helmet.mat';
     figure
