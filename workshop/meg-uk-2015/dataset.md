@@ -9,4 +9,4 @@ The dataset that we analyze in these tutorials is part of a dataset recorded by 
 
 {% include /shared/tutorial/mmfaces.md %}
 
-Preprocessing of these data in SPM (that will not be covered at the workshop) is described in detail in SPM12 manual [http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:multi](http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:multi).
+Preprocessing of these data in SPM (that will not be covered at the workshop) is described in detail in the SPM12 manual at <http://www.fil.ion.ucl.ac.uk/spm/doc/manual.pdf#Chap:data:multi>.
