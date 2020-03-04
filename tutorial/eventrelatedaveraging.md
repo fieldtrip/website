@@ -41,7 +41,7 @@ _Figure: A schematic overview of the steps in averaging of event related fields.
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) & [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat). Load the data into MATLAB with the  command 'load' and skip to Timelockanalysis.
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) & [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat)). Load the data into MATLAB with the  command 'load' and skip to Timelockanalysis.
 
 Otherwise run the following code:
 
@@ -119,8 +119,8 @@ The output is the data structure avgFIC with the following field
     avgFIC =
        time: [1x900 double]
       label: {149x1 cell
-       elec: [1×1 struct]
-       grad: [1×1 struct]
+       elec: [1x1 struct]
+       grad: [1x1 struct]
         avg: [149x900 double]
         var: [149x900 double]
         dof: [149x900 double]
