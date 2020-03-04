@@ -41,7 +41,7 @@ _Figure: A schematic overview of the steps in averaging of event related fields.
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat) [& dataFC)LP.mat ](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFC.mat). Load the data into MATLAB with the  command 'load' and skip to Timelockanalysis.
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) & [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat). Load the data into MATLAB with the  command 'load' and skip to Timelockanalysis.
 
 Otherwise run the following code:
 
@@ -80,15 +80,15 @@ If preprocessing was done as described, the data will have the following field
     dataFIC_LP =
            hdr: [1x1 struct]
          label: {149x1 cell}
-          time: {1x77 cell}
-         trial: {1x77 cell}
+          time: {1x76 cell}
+         trial: {1x76 cell}
        fsample: 300
-    sampleinfo: [77x2 double]
-     trialinfo: [77x1 double]
+    sampleinfo: [76x2 double]
+     trialinfo: [76x1 double]
           grad: [1x1 struct]
            cfg: [1x1 struct]
 
-Note that 'dataFIC_LP.label' has 149 in stead of 151 labels since channels MLP31 and MLO12 were excluded. 'dataFIC-LP.trial' has 77 in stead of 87 trials because 10 trials were rejected because of artifacts.
+Note that 'dataFIC_LP.label' has 149 in stead of 151 labels since channels MLP31 and MLO12 were excluded. 'dataFIC-LP.trial' has 76 in stead of 87 trials because 10 trials were rejected because of artifacts.
 
 The most important fields are 'dataFIC_LP.trial' containing the individual trials and 'data.time' containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
 
@@ -117,13 +117,14 @@ The trials belonging to one condition will now be averaged with the onset of the
 The output is the data structure avgFIC with the following field
 
     avgFIC =
+       time: [1x900 double]
+      label: {149x1 cell
+       elec: [1×1 struct]
+       grad: [1×1 struct]
         avg: [149x900 double]
         var: [149x900 double]
-       time: [1x900 double]
         dof: [149x900 double]
-      label: {149x1 cell}
      dimord: 'chan_time'
-       grad: [1x1 struct]
         cfg: [1x1 struct]
 
 The most important field is avgFIC.avg, containing the average over all trials for each sensor.
@@ -141,7 +142,7 @@ Use **[ft_multiplotER](/reference/ft_multiplotER)** to plot all sensors in one f
     cfg.ylim = [-3e-13 3e-13];
     ft_multiplotER(cfg, avgFIC);
 
-{% include image src="/assets/img/tutorial/eventrelatedaveraging/multiplot_1cond_3feb09_erf.png" width="700" %}
+{% include image src="/assets/img/tutorial/eventrelatedaveraging/multiplot_1cond_4mar20_erf.png" width="700" %}
 
 _Figure: The event related fields plotted using ft_multiplotER. The event related fields were calculated using ft_preprocessing followed by ft_timelockanalysis._
 
@@ -156,7 +157,7 @@ This plots the event related fields for all sensors arranged topographically acc
     cfg.ylim = [-3e-13 3e-13];
     ft_multiplotER(cfg, avgFC, avgIC, avgFIC);
 
-{% include image src="/assets/img/tutorial/eventrelatedaveraging/multiplot_allcond_3feb09_erf.png" width="700" %}
+{% include image src="/assets/img/tutorial/eventrelatedaveraging/multiplot_allcond_4mar20_erf.png" width="700" %}
 
 _Figure: The event related fields for three conditions plotted simultaneously using ft_multiplotER._
 
@@ -168,7 +169,7 @@ To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** an
     clf;
     ft_singleplotER(cfg,avgFC, avgIC, avgFIC);
 
-{% include image src="/assets/img/tutorial/eventrelatedaveraging/singleplot_mlc24_3feb09_erf.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedaveraging/singleplot_mlc24_4mar20_erf.png" width="400" %}
 
 _Figure: The event related fields plotted for three conditions for sensor MLC24 using ft_singleplotER._
 
@@ -177,9 +178,10 @@ To plot the topographic distribution of the data averaged over the time interval
     cfg = [];
     cfg.xlim = [0.3 0.5];
     cfg.colorbar = 'yes';
+    cfg.layout = 'CTF151_helmet.mat';
     ft_topoplotER(cfg,avgFIC);
 
-{% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_FIC_3feb09_erf.png" width="400" %}
+{% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_FIC_4mar20_erf.png" width="400" %}
 
 _Figure: A topographic plot of the event related fields obtained using ft_topoplotER._
 
@@ -188,10 +190,11 @@ To plot a sequence of topographic plots define the time intervals in cfg.xlim
     cfg = [];
     cfg.xlim = [-0.2 : 0.1 : 1.0];  % Define 12 time intervals
     cfg.zlim = [-2e-13 2e-13];      % Set the 'color' limits.
+    cfg.layout = 'CTF151_helmet.mat';
     clf;
     ft_topoplotER(cfg,avgFIC);
 
-{% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_timeserie_3feb09_erf.png" width="700" %}
+{% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_timeserie_4mar20_erf.png" width="700" %}
 
 _Figure: The topography of event related fields over time obtained using ft_topoplotER._
 
@@ -215,7 +218,7 @@ With **[ft_megplanar](/reference/ft_megplanar)** we calculate the planar gradien
 
 The planar gradient at a given sensor location can be approximated by comparing the field at that sensor with its neighbors (i.e. finite difference estimate of the derivative). The planar gradient at one location is computed in both the horizontal and the vertical direction with the FieldTrip function **[ft_megplanar](/reference/ft_megplanar)**. These two orthogonal gradients on a single sensor location can be combined using Pythagoras rule with the FieldTrip function **[ft_combineplanar](/reference/ft_combineplanar)**.
 
-Calculate the planar gradient of the averaged dat
+Calculate the planar gradient of the averaged data
 
     cfg                 = [];
     cfg.feedback        = 'yes';
@@ -250,7 +253,7 @@ Plot the results of the field of the axial gradiometers and the planar gradient 
     cfg.layout = 'CTF151_helmet.mat';
     ft_topoplotER(cfg,avgFICplanarComb);
 
-{% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_30apr14_erf.png" width="500" %}
+{% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_4mar20_erf.png" width="500" %}
 
 _Figure: A comparison of event related fields from the axial gradiometers (left) and the planar gradient (right). The planar gradient was calculated using ft_megplanar and ft_combineplanar._
 
