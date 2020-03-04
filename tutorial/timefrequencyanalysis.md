@@ -14,9 +14,9 @@ Here, we will work on the MEG-language dataset, you can click [here](/tutorial/m
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see the [summary and suggested further reading](#Summary and suggested further reading) section).
 
 {% include markup/info %}
-This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
+This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
 
-{% include youtube id="vwPpSglPJTE" %}
+{% include youtube id="dHTuzMsjVJA" %}
 {% include markup/end %}
 
 ## Background
