@@ -28,6 +28,7 @@ The CTF MEG system has (151 in this dataset, or 275 in newer systems) first-orde
 To calculate the event related field / potential for the example dataset we will perform the following step
 
 - Read the data into MATLAB using **[ft_definetrial](/reference/ft_definetrial)** and **[ft_preprocessing](/reference/ft_preprocessing)**
+- Seperate the trials from each condition using **[ft_selectdata](/reference/ft_selectdata)**
 - Compute the average over trials using the function **[ft_timelockanalysis](/reference/ft_timelockanalysis)**
 - Calculate the planar gradient with the functions **[ft_megplanar](/reference/ft_megplanar)** and **[ft_combineplanar](/reference/ft_combineplanar)**
 - Visualize the results. You can plot the ERF/ ERP of one channel with **[ft_singleplotER](/reference/ft_singleplotER)** or several channels with **[ft_multiplotER](/reference/ft_multiplotER)**, or by creating a topographic plot for a specified time- interval with **[ft_topoplotER](/reference/ft_topoplotER)**
