@@ -79,6 +79,9 @@
 - name:  Getting started with real-time head localization in MEG
   link:  /getting_started/realtime_headlocalizer
 
+- name:  Getting started with Ricoh data
+  link:  /getting_started/ricoh
+
 - name:  Getting started with Yokogawa data
   link:  /getting_started/yokogawa
 
