@@ -2,18 +2,23 @@
 title: ft_timelocksimulation
 ---
 ```plaintext
- FT_TIMELOCKSIMULATION computes a simulated signal that resembles an
- event-related potential or field
+ FT_TIMELOCKSIMULATION computes simulated data that consists of multiple trials in
+ with each trial contains an event-related potential or field. Following
+ construction of the time-locked signal in each trial by this function, the signals
+ can be passed into FT_TIMELOCKANALYSIS to obtain the average and the variance.
 
  Use as
-   timelock = ft_timelockstatistics(cfg)
- which will return a datastructure that resembles the output of
- FT_TIMELOCKANALYSIS.
+   [data] = ft_timelockstatistics(cfg)
+ which will return a raw data structure that resembles the output of
+ FT_PREPROCESSING.
 
+ The number of trials and the time axes of the trials can be specified by
    cfg.fsample    = simulated sample frequency (default = 1000)
    cfg.trllen     = length of simulated trials in seconds (default = 1)
    cfg.numtrl     = number of simulated trials (default = 10)
    cfg.baseline   = number (default = 0.3)
+ or by
+   cfg.time       = cell-array with one time axis per trial, which are for example obtained from an existing dataset
 
  The signal is constructed from three underlying functions. The shape is
  controlled with
@@ -24,14 +29,12 @@ title: ft_timelocksimulation
    cfg.s3.numcycli = number (default = 4)
    cfg.s3.ampl     = number (default = 0.2)
    cfg.noise.ampl  = number (default = 0.1)
-
  Specifying numcycli=1 results in a monophasic signal, numcycli=2 is a biphasic,
  etc. The three signals are scaled to the indicated amplitude, summed up and a
  certain amount of noise is added.
 
- Following construction of the signal in each trial according to the
- specification, the signals are averaged over trials. Both the average, the
- variance and the individual trial signals are returned.
+ Other configuration options include
+   cfg.numchan     = number (default = 5) 
 
  See also FT_TIMELOCKANALYSIS, FT_TIMELOCKSTATISTICS, FT_FREQSIMULATION,
  FT_DIPOLESIMULATION, FT_CONNECTIVITYSIMULATION

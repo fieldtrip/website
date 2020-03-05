@@ -39,7 +39,7 @@ title: ft_read_header
  Depending on the file format, additional header information can be
  returned in the hdr.orig subfield.
 
- To use an external reading function, you can specify a function as the
+ To use an external reading function, you can specify an external function as the
  'headerformat' option. This function should take the filename as input argument.
  Please check the code of this function for details, and search for BIDS_TSV as
  example.

@@ -45,7 +45,7 @@ title: ft_read_event
  sample at which the TTF went down, and the value will correspond to the TTL value
  just prior to going down.
 
- To use an external reading function, you can specify a function as the
+ To use an external reading function, you can specify an external function as the
  'eventformat' option. This function should take the filename  and the headeras
  input arguments. Please check the code of this function for details, and search for
  BIDS_TSV as example.

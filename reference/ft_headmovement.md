@@ -11,17 +11,16 @@ title: ft_headmovement
 
  where the configuration should contain
    cfg.dataset      = string with the filename
-   cfg.method       = 'updatesens' (default), 'cluster', 'avgoverrpt',
-                        'pertrial_cluster', 'pertrial'
+   cfg.method       = string, 'updatesens' (default), 'cluster', 'avgoverrpt',
+                      'pertrial_cluster', 'pertrial' (default = 'updatesens')
 
  optional arguments are
-   cfg.trl          = empty (default), or Nx3 matrix with the trial 
-                        definition, can be empty.see FT_DEFINETRIAL. If
-                        defined empty, the whole recording is used
+   cfg.trl          = empty (default), or Nx3 matrix with the trial
+                      definition (see FT_DEFINETRIAL). When specified as empty,
+                      the whole recording is used.
    cfg.numclusters  = number of segments with constant headposition in
-                        which to split the data (default = 10). This
-                        argument is used in some of the methods only (see
-                        below), and is used in a kmeans clustering scheme.
+                      which to split the data (default = 10). This argument
+                      is only used for the clustering methods.
 
  If cfg.method = 'updatesens', the grad in the single output structure has
  a specification of the coils expanded as per the centroids of the position

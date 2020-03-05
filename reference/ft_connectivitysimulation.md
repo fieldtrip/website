@@ -8,7 +8,10 @@ title: ft_connectivitysimulation
 
  Use as
    [data] = ft_connectivitysimulation(cfg)
- where the configuration structure should contain:
+ which will return a raw data structure that resembles the output of
+ FT_PREPROCESSING.
+
+ The configuration structure should contain
    cfg.method      = string, can be 'linear_mix', 'mvnrnd', 'ar', 'ar_reverse' (see below)
    cfg.nsignal     = scalar, number of signals
    cfg.ntrials     = scalar, number of trials
@@ -34,7 +37,7 @@ title: ft_connectivitysimulation
                 specifying the time shift (in samples) between the
                 unobserved signals and the observed signals
 
- Optional configuration options:
+ Optional configuration options
    cfg.bpfilter  = 'yes' (or 'no')
    cfg.bpfreq    = [bplow bphigh] (default: [15 25])
    cfg.demean    = 'yes' (or 'no')
@@ -51,11 +54,11 @@ title: ft_connectivitysimulation
  parameters on the simulation is not really clear. This method will be
  disabled in the future.
 
- Required configuration options:
+ Required configuration options
    cfg.covmat    = covariance matrix between the signals
    cfg.delay     = delay vector between the signals in samples
 
- Optional configuration options:
+ Optional configuration options
    cfg.bpfilter  = 'yes' (or 'no')
    cfg.bpfreq    = [bplow bphigh] (default: [15 25])
    cfg.demean    = 'yes' (or 'no')
@@ -67,7 +70,7 @@ title: ft_connectivitysimulation
  Method 'ar' implements a multivariate autoregressive model to generate
  the data.
 
- Required cfg options:
+ Required configuration options
    cfg.params   = matrix, [nsignal x nsignal x number of lags] specifying the
                   autoregressive coefficient parameters. A non-zero
                   element at cfg.params(i,j,k) means a
@@ -80,7 +83,7 @@ title: ft_connectivitysimulation
  autoregressive model to generate the data, where the model coefficients
  are reverse-computed, based on the interaction pattern specified.
 
- Required cfg options:
+ Required configuration options
    cfg.coupling = nxn matrix, specifying coupling strength, rows causing
                    column
    cfg.delay    = nxn matrix, specifying the delay, in seconds, from one
@@ -91,7 +94,7 @@ title: ft_connectivitysimulation
                    of the bands that are transmitted, rows causing column
 
  The generated signals will have a spectrum that is 1/f + additional
- band-limited components, as specified in the cfg.
+ band-limited components, as specified in the configuration.
 
  See also FT_FREQSIMULATION, FT_DIPOLESIMULATION, FT_SPIKESIMULATION,
  FT_CONNECTIVITYANALYSIS

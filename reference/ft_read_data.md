@@ -31,10 +31,10 @@ title: ft_read_data
  Nchans*Nsamples*Ntrials for epoched or trial-based data when begtrial
  and endtrial are specified.
 
- To use an external reading function, you can specify a function as the 'dataformat'
- option. This function should take five input arguments: filename, hdr, begsample,
- endsample, chanindx. Please check the code of this function for details, and search
- for BIDS_TSV as example.
+ To use an external reading function, you can specify an external function as the
+ 'dataformat' option. This function should take five input arguments: filename, hdr,
+ begsample, endsample, chanindx. Please check the code of this function for details,
+ and search for BIDS_TSV as example.
 
  See also FT_READ_HEADER, FT_READ_EVENT, FT_WRITE_DATA, FT_WRITE_EVENT
 ```

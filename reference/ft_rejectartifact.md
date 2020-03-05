@@ -18,7 +18,7 @@ title: ft_rejectartifact
    data = ft_rejectartifact(cfg, data)
  with the data as obtained from FT_PREPROCESSING
 
- The following configuration options are supported:
+ The following configuration options are supported
    cfg.artfctdef.reject          = 'none', 'partial', 'complete', 'nan', or 'value' (default = 'complete')
    cfg.artfctdef.minaccepttim    = when using partial rejection, minimum length
                                    in seconds of remaining trial (default = 0.1)
@@ -40,7 +40,7 @@ title: ft_rejectartifact
  specified using minaccepttim.
 
  Output:
-   If cfg is used as the only input parameter, the output is a cfg structure with an updated trl.
+   If cfg is the only input parameter, the output is a cfg structure with an updated trl.
    If cfg and data are both input parameters, the output is an updated raw data structure with only the clean data segments.
 
  To facilitate data-handling and distributed computing you can use
