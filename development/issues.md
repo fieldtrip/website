@@ -7,7 +7,7 @@ redirect_from:
 
 # Reporting issues
 
-To report an issue on GitHub you have to [sign up for an account](https://github.com/join) on GitHub. This allows us to follow up on reported issues and keep you automatically updated on the status; i.e., you will get an automatic email whenever someone works on your request.
+You first have to [sign up for an account](https://github.com/join) or log in on GitHub, subsequently you can report the issue [here](https://github.com/fieldtrip/fieldtrip/issues). We automatically will receive an email and will follow up and keep you updated; i.e., you will get an email through GitHub whenever someone works on your issue.
 
 ## Provide informative details about your issue
 
