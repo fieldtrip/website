@@ -14,14 +14,14 @@ Here, we will work on the MEG-language dataset, you can click [here](/tutorial/m
 There is no information in this tutorial about how to compare conditions, how to grandaverage the results across subjects or how to do statistical analysis on the time-frequency data. Some of these issues are covered in other tutorials (see the [summary and suggested further reading](#Summary and suggested further reading) section).
 
 {% include markup/info %}
-This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2015) and it is complemented by this lecture.
+This tutorial contains hands-on material that we use for the [MEG/EEG toolkit course](/workshop/toolkit2018) and it is complemented by this lecture.
 
-{% include youtube id="vwPpSglPJTE" %}
+{% include youtube id="dHTuzMsjVJA" %}
 {% include markup/end %}
 
 ## Background
 
-Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ([Tallon-Baudry and Bertrand, 1999](https://doi.org/10.1016/S1364-6613(99)01299-1)). The goal of this section is to compute and visualize event related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. The Fourier analysis will include the application of multitapers ([Mitra and Pesaran (1999)](https://doi.org/10.1016/S0006-3495(99)77236-X), [Percival and Walden (1993)](http://lccn.loc.gov/92045862)) which allow a better control of time and frequency smoothing.
+Oscillatory components contained in the ongoing EEG or MEG signal often show power changes relative to experimental events. These signals are not necessarily phase-locked to the event and will not be represented in event related fields and potentials ([Tallon-Baudry and Bertrand (1999)](https://doi.org/10.1016/S1364-6613(99)01299-1)). The goal of this section is to compute and visualize event related changes by calculating time-frequency representations (TFRs) of power. This will be done using analysis based on Fourier analysis and wavelets. The Fourier analysis will include the application of multitapers ([Mitra and Pesaran (1999)](https://doi.org/10.1016/S0006-3495(99)77236-X), [Percival and Walden (1993)](http://lccn.loc.gov/92045862)) which allow a better control of time and frequency smoothing.
 
 Calculating time-frequency representations of power is done using a sliding time window. This can be done according to two principles: either the time window has a fixed length independent of frequency, or the time window decreases in length with increased frequency. For each time window the power is calculated. Prior to calculating the power one or more tapers are multiplied with the data. The aim of the tapers is to reduce spectral leakage and control the frequency smoothing.
 
@@ -53,7 +53,7 @@ The first step is to read the data using the function **[ft_preprocessing](/refe
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the  command 'load dataFIC' and skip to [Time-frequency analysis I](#Time-frequency analysis I).
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the [FieldTrip FTP server (dataFIC.mat)](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/dataFIC.mat). Load the data into MATLAB with the  command 'load dataFIC' and skip to [Time-frequency analysis I](#time-frequency analysis-i).
 
 Otherwise run the following code:
 
@@ -130,7 +130,7 @@ To plot the TFRs from all the sensors use the function **[ft_multiplotTFR](/refe
     cfg = [];
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
-    cfg.zlim         = [-3e-27 3e-27];
+    cfg.zlim         = [-2.5e-27 2.5e-27];
     cfg.showlabels   = 'yes';
     cfg.layout       = 'CTF151_helmet.mat';
     figure
@@ -148,7 +148,7 @@ An interesting effect seems to be present in the TFR of sensor MRC15. To make a 
     cfg.baseline     = [-0.5 -0.1];
     cfg.baselinetype = 'absolute';
     cfg.maskstyle    = 'saturation';
-    cfg.zlim         = [-3e-27 3e-27];
+    cfg.zlim         = [-2.5e-27 2.5e-27];
     cfg.channel      = 'MRC15';
     cfg.layout       = 'CTF151_helmet.mat';
     figure
@@ -196,7 +196,7 @@ Plot the TFR of sensor MLC24. How do you account for the increased power at ~300
 
 ### Hanning taper, frequency dependent window length
 
-It is also possible to calculate the TFRs with respect to a time window that varies with frequency. Typically the time window gets shorter with an increase in frequency. The main advantage of this approach is that the temporal smoothing decreases with higher frequencies, leading to increased sensitivity to short-lived effects. However, an increased temporal resolution is at the expense of frequency resolution (why?). We will here show how to perform a frequency-dependent time-window analysis, using a sliding window Hanning taper based approach. The approach is very similar to wavelet analysis. A wavelet analysis performed with a Morlet wavelet mainly differs by applying a Gaussian shaped taper (see [Time-frequency analysis IV](#Time-frequency analysis IV)).
+It is also possible to calculate the TFRs with respect to a time window that varies with frequency. Typically the time window gets shorter with an increase in frequency. The main advantage of this approach is that the temporal smoothing decreases with higher frequencies, leading to increased sensitivity to short-lived effects. However, an increased temporal resolution is at the expense of frequency resolution (why?). We will here show how to perform a frequency-dependent time-window analysis, using a sliding window Hanning taper based approach. The approach is very similar to wavelet analysis. A wavelet analysis performed with a Morlet wavelet mainly differs by applying a Gaussian shaped taper (see [Time-frequency analysis IV](#time-frequency-analysis-iv)).
 
 The analysis is best done by first selecting the numbers of cycles per time window which will be the same for all frequencies. For instance if the number of cycles per window is 7, the time window is 1000 ms for 7 Hz (1/7 x 7 cycles); 700 ms for 10 Hz (1/10 x 7 cycles) and 350 ms for 20 Hz (1/20 x 7 cycles). The frequency can be chosen arbitrarily - however; too fine a frequency resolution is just going to increase the redundancy rather than providing new information.
 
