@@ -628,7 +628,7 @@ This does address the problem, however also causes the skin to become thicker al
 
 A better approach is to return to the segmented anatomical MRI and to use image processing tools to fix the segmentation. The tools we will use are [imerode](http://www.mathworks.nl/help/images/ref/imerode.html) and [imdilate](http://www.mathworks.nl/help/images/ref/imdilate.html). Their effect is demonstrated in one of the [frequently asked questions](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model#converting_segmentation_to_segmentation).
 
-Here we will divert from FieldTrip and use some off-the-shelf MATLAB code. We start by copying the 3-D arrays of the segmentation into three separate variables. Using |, i.e. the logical “OR” operator, we can combine the brain skull and scalp into filled volumes.
+Here we will divert from FieldTrip and use some off-the-shelf MATLAB code. We start by copying the 3-D arrays of the segmentation into three separate variables. Using \|, i.e. the logical “OR” operator, we can combine the brain skull and scalp into filled volumes.
 
     binary_brain = mri_segmented.brain;
     binary_skull = mri_segmented.skull | binary_brain;
@@ -638,7 +638,7 @@ The following code demonstrates the effect of the imdilate function. It makes fo
 
     close all
 
-    % using ft_sourceplot I identified the crossection with voxel
+    % using ft_sourceplot I identified the cross-section with voxel
     % indices [107 100 100] where the problem is visible and I will
     % plot that intersection multiple times
 
@@ -933,7 +933,7 @@ We demonstrated how to use dipole fitting to estimate the location and timecours
 
 This tutorial demonstrates how you can use different assumptions to get stable and meaningful dipole fit locations. However, it also demonstrates that in the dipole fitting procedure there are many choices than can be made, and that it is not easy to get all parameters right for a meaningful dipole fit solution. This explains why commercial software packages such as [BESA](http://www.besa.de) have elaborate graphical user interfaces in which you can more easily explore the effect of the constraints on the dipoles, and why sequential dipole fitting strategies are required to construct dipole models for more complicated source configurations.
 
-More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity timeseries at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
+More details on constructing volume conduction models of the head can be found [here for MEG](/tutorial/headmodel_meg) and [here for EEG](/tutorial/headmodel_meg). Other tutorials are available that demonstrate the [MNE](/tutorial/minimumnormestimate) and [Beamformer](/tutorial/beamformer) methods. An alternative method for computing the activity time series at regions of interest using beamformers is described [here](/tutorial/virtual_sensors).
 
 ### Suggested further reading
 
