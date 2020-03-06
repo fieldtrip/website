@@ -1,5 +1,6 @@
 ---
 title: Support
+tags: [support]
 redirect_from:
   - /community/
 ---
