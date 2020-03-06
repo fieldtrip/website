@@ -1,5 +1,6 @@
 ---
 title: About the FieldTrip project
+tags: [support]
 redirect_from:
   - /contact/
 ---
