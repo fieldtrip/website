@@ -1,6 +1,6 @@
 ---
 title: How to ask good questions to the community?
-tags: [faq, discussion, list, question, ask, question, help]
+tags: [faq, support, email]
 ---
 
 # How to ask good questions to the community?
