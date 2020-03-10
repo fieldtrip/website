@@ -68,14 +68,14 @@ title: ft_rejectvisual
  preprocessing and the selection of the latency window is NOT applied
  to the output data.
 
- The following settings are usefull for identifying EOG artifacts:
+ The following settings are useful for identifying EOG artifacts:
    cfg.preproc.bpfilter    = 'yes'
    cfg.preproc.bpfilttype  = 'but'
    cfg.preproc.bpfreq      = [1 15]
    cfg.preproc.bpfiltord   = 4
    cfg.preproc.rectify     = 'yes'
 
- The following settings are usefull for identifying muscle artifacts:
+ The following settings are useful for identifying muscle artifacts:
    cfg.preproc.bpfilter    = 'yes'
    cfg.preproc.bpfreq      = [110 140]
    cfg.preproc.bpfiltord   =  8
