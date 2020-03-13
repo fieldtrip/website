@@ -456,32 +456,7 @@ You should add something like this to code that you have written yourself, or to
     %
     %    You should have received a copy of the GNU General Public License
     %    along with FieldTrip. If not, see <http://www.gnu.org/licenses/>.
-    %
-    % $Id: ft_preprocessing.m 6987 2012-11-26 11:56:08Z jorhor $
 
-Note the Id tag at the bottom (see below).
-
-## Include the SVN revision number in the file
-
-FIXME this should be updated to reflect the migration to Git
-
-| NOTE: This section is obsolete: FieldTrip has migrated from SVN to Git, and Git does not support `$Id:` tags.|
-|---|
-
-You should include a line like this.
-
-    % $Id: ft_preprocessing.m 6987 2012-11-26 11:56:08Z jorhor $
-
-or simply like this
-
-    % $Id: $
-
-The $Id$ line will be automatically updated when you SVN commit. It helps your co-developers to quickly see when the last change was made and by whom.
-
-This requires that the Id keyword is detected by SVN, which relies on
-[this SVN configuration setting](/development/svn#keeping_the_svn_repository_tidy). You can also do
-
-    svn propset svn:keywords "Rev Id" <yourfile.m>
 
 ## Ask for help
 
