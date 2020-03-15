@@ -7,13 +7,13 @@ tags: [faq, electrode, eeg, meg, layout]
 
 Sensor locations are described by the `elec` or `grad` field in the data structure. These sensor definitions can contain fewer or more sensors than channels actually present in the data, i.e., you can have bipolar EOG channels that do not have a unique position on the scalp, but you might also have reference gradiometers positions for which you did not read or preprocess the data.
 
-## The definition of EEG, ECoG and iEEG electrodes
+## The definition of EEG and IEEG (ECoG and sEEG) electrodes
 
 As of September 23, 2011 we updated the description of how the sensors are defined in FieldTrip. The electrode definition contains the following field
 
-    elec.label   % cell-array of length N with the label of each channel
-    elec.elecpos % Mx3 matrix with the cartesian coordinates of each electrode
-    elec.chanpos % Nx3 matrix with the cartesian coordinates of each channel
+    elec.label   = cell-array of length N with the label of each channel
+    elec.elecpos = Mx3 matrix with the cartesian coordinates of each electrode
+    elec.chanpos = Nx3 matrix with the cartesian coordinates of each channel
 
 We typically think of a one-to-one correspondence between electrodes and channels, but in principle EEG channels and EEG electrodes are conceptually different since the channel represents the potential difference between an electrode of interest and a reference. For EEG you could e.g. consider a bipolar montage, in which each channel represents the voltage difference between an adjacent pair of electrodes. In case of an implicit (i.e. not specified) unipolar reference or a common-average reference, we set the channel position identical to the electrode position. So in general the number of channels N can be different from the number of EEG electrodes M.
 
@@ -31,12 +31,12 @@ The EEG potential is in first instance computed on the locations specified in `e
 
 The gradiometer definition generally consists of multiple coils per channel, e.g. two coils for a 1st order axial gradiometer, in which the orientations of the bottom and top coil are opposite. Each coil is described separately and a `grad.tra` matrix is used to define how the forward computed magnetic field is combined over the coils to generate the MEG gradient of each channel. The gradiometer definition consists of the following fields as of September 23, 201
 
-    grad.coilpos   % Mx3 matrix with the position of each coil
-    grad.coilori   % Mx3 matrix with the orientation of each coil
-    grad.tra       % NxM matrix with the weight of each coil into each channel
-    grad.label     % cell-array of length N with the channel label
-    grad.chanpos   % Nx3 matrix with the position of each channel
-    grad.chanori   % Nx3 matrix with the orientation of each channel
+    grad.coilpos   = Mx3 matrix with the position of each coil
+    grad.coilori   = Mx3 matrix with the orientation of each coil
+    grad.tra       = NxM matrix with the weight of each coil into each channel
+    grad.label     = cell-array of length N with the channel label
+    grad.chanpos   = Nx3 matrix with the position of each channel
+    grad.chanori   = Nx3 matrix with the orientation of each channel
 
 The channel orientation is used for synthetic gradient computation for axial gradiometer or magnetometer systems. If you don't know what it means and if you need to construct your own grad structure, you can set it to `nan(N,3)`.
 
@@ -45,6 +45,22 @@ MEG forward computations are performed for each `grad.coilpos` and `grad.coilori
 
 By default a first order gradiometer is described by 2 "coils", but you could use more integration points to get a more accurate forward model (see `cfg.coilaccuracy` in **[ft_preprocessing](/reference/ft_preprocessing)**).
 {% include markup/end %}
+
+## The definition of NIRS sensors
+
+Channels in a NIRS acquisition system comprise a pair of transmitting and receiving optodes. Furthermore, each optode is used with multiple wavelengths of the infrared light.
+
+The optode definition contains the following fields
+
+    opto.label         = Mx1 cell-array with channel labels
+    opto.chanpos       = contains information about the position of the channels (usually halfway the transmitter and receiver)
+    opto.optopos       = contains information about the position of individual optodes
+    opto.optotype      = contains information about the type of optode (receiver or transmitter)
+    opto.optolabel     = Nx1 cell-array with optode labels
+    opto.transmits     = NxK matrix, boolean, where N is the number of optodes and K the number of wavelengths. Specifies which optode is transmitting at what wavelength (or nothing at all, indicating that it is a receiver)
+    opto.wavelength    = 1xK vector of all wavelengths that were used
+    opto.laserstrength = 1xK vector of the strength of the emitted light of the lasers
+    opto.tra           = MxN matrix, boolean, contains information about how N receivers and transmitters form M channels
 
 ## The old electrode and gradiometer structure
 
