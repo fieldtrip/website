@@ -7,7 +7,10 @@ title: ft_prepare_layout
  field distribution, or for plotting timecourses in a topographical arrangement.
 
  Use as
+   layout = ft_prepare_layout(cfg)
+ or
    layout = ft_prepare_layout(cfg, data)
+ where the optional data input argument is any of the FieldTrip data structures.
 
  There are several ways in which a 2-D layout can be made: 1) it can be read
  directly from a layout file, 2) it can be created on basis of an image or photo, 3)
