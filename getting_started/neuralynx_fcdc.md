@@ -43,7 +43,7 @@ An example of the configuration for spikesplitting is provided belo
     cfg.latency = [0 inf];          % define the segment of the original data to split
     cfg.format  = 'int32';
     cfg.channel = 'all';
-    cfg         = ft_spikesplitting(cfg);
+    data         = ft_spikesplitting(cfg);
 
 It is also important to note that:
 
