@@ -7,14 +7,14 @@ tags: [nirs, artinis]
 
 [Artinis Medical Systems BV](http://www.artinis.com/) is a Dutch company that develops and produces systems for functional NIRS. Artinis has multiple hardware designs, which all work with the same [Oxysoft](http://www.artinis.com/oxysoft) acquisition and analysis software.
 
-The data that is recorded with Oxysoft is organized in various files: all data recorded during a measurement is contained in binary .oxy3 or .oxy4 files. The information about the transmitter and receiver optodes is represented in  `optodetemplates.xml`, which is usually located in `C:\Program files\Artinis Medical Systems\Oxysoft\`. After data acquisition some processing can be done using OxySoft, the results of this are stored in a project file, which again is an XML file.
+The data that is recorded with Oxysoft is organized in various files: all data recorded during a measurement is contained in binary .oxy3 or .oxy4 files. The information about the transmitter and receiver optodes is represented in `optodetemplates.xml`, which is usually located in `C:\Program files\Artinis Medical Systems\Oxysoft\`. After data acquisition some processing can be done using OxySoft, the results of this are stored in a project file, which again is an XML file.
 
 {% include markup/warning %}
 The `optodetemplates.xml` file should be in the same directory as the oxy3 or .oxy4 files.
 {% include markup/end %}
 
 {% include markup/danger %}
-The .oxy4 file format is currently not supported by FieldTrip.
+The .oxy4 file format is currently only supported when you run MATLAB on a Windows computer.
 {% include markup/end %}
 
 The oxy3/oxy4 file contains the optical data and data from the ADC-channels. The file will also contain any triggers recorded during the measurement, which allow for synchronization with a stimulus presentation computer. In FieldTrip we can use **[ft_read_header](/reference/ft_read_header)** and **[ft_read_data](/reference/ft_read_data)** to read the content, but usually we prefer to use the higher level **[ft_preprocessing](/reference/ft_preprocessing)**

@@ -29,31 +29,31 @@ In a similar vein as for MEG data, the .opto field should contain a .tra matrix,
 
 Optode specifications, where M is the number of channels, N is the number of optodes and K is the number of wavelengths:
 
-    hdr.opto               - contains information about the optodes
-    hdr.opto.tra           - MxN matrix, boolean, contains information about how N receivers and transmitters form M channels.
-    hdr.opto.optopos       - contains information about the position of the optodes.
-    hdr.opto.optotype      - contains information about the type of optode (receiver or transmitter).
-    hdr.opto.chanpos       - contains information about the position of the channels (i.e. average of optopos)
-    hdr.opto.chantype      - contains information about the channel type (NIRS)
-    hdr.opto.wavelength    - 1xK vector of all wavelengths that were used
-    hdr.opto.transmits     - NxK matrix, boolean, where N is the number of optodes and K the number of wavelengths. Specifies which optode is transmitting at what wavelength (or nothing at all, indicating that it is a receiver)
-    hdr.opto.laserstrength - 1xK vector of the strength of the emitted light of the lasers.
+    opto.label         = Mx1 cell-array with channel labels
+    opto.chanpos       = contains information about the position of the channels (usually halfway the transmitter and receiver)
+    opto.optopos       = contains information about the position of individual optodes
+    opto.optotype      = contains information about the type of optode (receiver or transmitter)
+    opto.optolabel     = Nx1 cell-array with optode labels
+    opto.transmits     = NxK matrix, boolean, where N is the number of optodes and K the number of wavelengths. Specifies which optode is transmitting at what wavelength (or nothing at all, indicating that it is a receiver)
+    opto.wavelength    = 1xK vector of all wavelengths that were used
+    opto.laserstrength = 1xK vector of the strength of the emitted light of the lasers
+    opto.tra           = MxN matrix, boolean, contains information about how N receivers and transmitters form M channels
 
 ## Datatype
 
-There are different datatypes in FieldTrip. The basic starting point is a raw data, see [ft_datatype_raw](/reference/ft_datatype_raw) for more information. There will be no changes requires for NIRS data structures. Labels will be represented as 'RxY - TxZ [type]', where Y and Z are integer numbers indexing the receiver number and type can be the type of chromophore or the wavelength at which the measurement was taken.
+There are different datatypes in FieldTrip. The basic starting point is a raw data, see **[ft_datatype_raw](/reference/ft_datatype_raw)** for more information. There will be no changes requires for NIRS data structures. Labels will be represented as 'RxY - TxZ [type]', where Y and Z are integer numbers indexing the receiver number and type can be the type of chromophore or the wavelength at which the measurement was taken.
 
 ## Chantype
 
-New channels for ft_chantype should be 'nirs', 'receiver' and 'transmitter'.
+New channels for **[ft_chantype](/reference/ft_chantype)** should be 'nirs', 'receiver' and 'transmitter'.
 
 ## Filetype
 
-[ft_filetype](/reference/ft_filetype) need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example tabl
+**[ft_filetype](/reference/ft_filetype)** need to be able to identify NIRS data files correctly. Die to copyright issues, these files should be best put into fieldtrip\external\manufacturer. The following table shows manufacturers and systems and the respective extension of the data files. Note that I do not know all these different types, and below is just an example table:
 
 | Manufacturer                                                                                               | System(s)                            | File format | Proprietary file format |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- | ----------------------- |
-| [Artinis Medical Systems](http://www.artinis.com)                                                          | Oxymon, Octamon, Portamon, Portalite | .oxy3       | yes                     |
+| [Artinis Medical Systems](http://www.artinis.com)                                                          | Oxymon, Octamon, Portamon, Portalite | .oxy3/.oxy4 | yes                     |
 | [Hitachi Medical Systems](http://www.hitachi-medical-systems.nl/products-and-services/optical-topography/) | ETG-4000                             | .csv        | no                      |
 
 ## Transformations
@@ -104,5 +104,7 @@ In case a high-level FieldTrip function calls a NIRS function, ft_hastoolbox wil
 The original [NIRS-SPM](http://bispl.weebly.com/nirs-spm.html) was developed by Korea Advanced Institute of Science & Technology. The general NIRS-SPM approach is to solve a GLM based on different approaches of nongaussian random field theory. One of the developers, Sungho Tak, is now working at UCL in Will Penny's group. He reworked NIRS-SPM, which can now be found as on [NIRTC as SPM for fNIRS toolbox](http://www.nitrc.org/projects/spm_fnirs). SPM-fNIRS includes DCM as well.
 
 [Homer2](http://www.nmr.mgh.harvard.edu/PMI/resources/homer2/home.htm), developed by the Martinos Centre in Harvard, and primarily maintained by Ted Huppert from University in Pittsburgh. Is the most commonly used toolbox for NIRS analysis. Includes some forward modeling in the AtlasViewer.
+
+The [NIRS toolbox](https://bitbucket.org/huppertt/nirs-toolbox/https://bitbucket.org/huppertt/nirs-toolbox/) for analysis of functional Near-Infrared Spectroscopy developed by the Huppert lab at the University of Pittsburgh is one of the best toolboxes available at the moment.
 
 Other available toolboxes such as [EasyTopo](https://sites.google.com/site/fenghuatian/software/easytopo) (for visualization) or the [NIRS Analysis package (NAP)](https://sites.google.com/site/tomerfekete2/) are not widely used.
