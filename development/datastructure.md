@@ -5,7 +5,7 @@ tags: [development]
 
 # Data structures used by FieldTrip
 
-High-level FieldTrip functions expect input data as a MATLAB structure in a specific format, and produce output data in a specific format. These formats are documented in the following functions:
+High-level FieldTrip functions expect input data as a MATLAB structure in a specific format, and produce output data as a structure in a specific format. These structures are documented in the following functions:
 
 - [ft_datatype_comp](/reference/ft_datatype_comp)
 - [ft_datatype_dip](/reference/ft_datatype_dip)
@@ -21,7 +21,9 @@ High-level FieldTrip functions expect input data as a MATLAB structure in a spec
 - [ft_datatype_timelock](/reference/ft_datatype_timelock)
 - [ft_datatype_volume](/reference/ft_datatype_volume)
 
-Besides documenting the data structures, these functions also check the consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old .mat file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function doing its work. This works by each FieldTrip function calling **[ft_checkdata](/reference/ft_checkdata)** at the start of the function, and ft_checkdata calling the corresponding ft_datatype_xxx function.
+## Checking and converting
+
+Besides documenting the data structures, these ft_datatype_xxx functions also check the internal consistency of the structures and - where needed - update the data structures to the latest standard. This means that if a user loads a data structure from an old .mat file on disk and feeds it into a newer version of a FieldTrip function, the data structure is updated to the expected format prior to the function doing its work. This works by each FieldTrip function calling **[ft_checkdata](/reference/ft_checkdata)** at the start of the function, and ft_checkdata calling the corresponding ft_datatype_xxx function.
 
 ## Dimord
 
