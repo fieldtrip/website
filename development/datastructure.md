@@ -7,19 +7,19 @@ tags: [development]
 
 High-level FieldTrip functions expect input data as a MATLAB structure in a specific format, and produce output data as a structure in a specific format. These structures are documented in the following functions:
 
-- [ft_datatype_comp](/reference/ft_datatype_comp)
-- [ft_datatype_dip](/reference/ft_datatype_dip)
-- [ft_datatype_freq](/reference/ft_datatype_freq)
-- [ft_datatype_headmodel](/reference/ft_datatype_headmodel)
-- [ft_datatype_mvar](/reference/ft_datatype_mvar)
-- [ft_datatype_parcellation](/reference/ft_datatype_parcellation)
-- [ft_datatype_raw](/reference/ft_datatype_raw)
-- [ft_datatype_segmentation](/reference/ft_datatype_segmentation)
-- [ft_datatype_sens](/reference/ft_datatype_sens)
-- [ft_datatype_source](/reference/ft_datatype_source)
-- [ft_datatype_spike](/reference/ft_datatype_spike)
-- [ft_datatype_timelock](/reference/ft_datatype_timelock)
-- [ft_datatype_volume](/reference/ft_datatype_volume)
+- **[ft_datatype_comp](/reference/ft_datatype_comp)**
+- **[ft_datatype_dip](/reference/ft_datatype_dip)**
+- **[ft_datatype_freq](/reference/ft_datatype_freq)**
+- **[ft_datatype_headmodel](/reference/ft_datatype_headmodel)**
+- **[ft_datatype_mvar](/reference/ft_datatype_mvar)**
+- **[ft_datatype_parcellation](/reference/ft_datatype_parcellation)**
+- **[ft_datatype_raw](/reference/ft_datatype_raw)**
+- **[ft_datatype_segmentation](/reference/ft_datatype_segmentation)**
+- **[ft_datatype_sens](/reference/ft_datatype_sens)**
+- **[ft_datatype_source](/reference/ft_datatype_source)**
+- **[ft_datatype_spike](/reference/ft_datatype_spike)**
+- **[ft_datatype_timelock](/reference/ft_datatype_timelock)**
+- **[ft_datatype_volume](/reference/ft_datatype_volume)**
 
 ## Checking and converting
 
@@ -52,7 +52,7 @@ To document the data fields unambiguously, the data structure can include  a "di
 2. A data structure can have a one or multiple `xxxdimord` fields, where xxx refers to the data parameter. For example `powspctrmdimord` to document `powspctrm`, and `cohspctrmdimord` to document `cohspctrm`.
 3. It is also allowed that a data structure does _not_ have an explicit dimord. In that case FieldTrip will - where needed - use heuristics to determine how the data field is to be interpreted.
 
-To determine what the dimensions of a data field represent, FIeldTrip functions use the private [getdimord](https://github.com/fieldtrip/fieldtrip/blob/master/private/getdimord.m) function. To determine their size, they use the private [getdimsiz](https://github.com/fieldtrip/fieldtrip/blob/master/private/getdimsiz.m) function. Another private function that plays a role for managing the dimord field is [fixdimord](https://github.com/fieldtrip/fieldtrip/blob/master/private/fixdimord.m).
+To determine what the dimensions of a data field represent, FIeldTrip functions use the private **[getdimord](https://github.com/fieldtrip/fieldtrip/blob/master/private/getdimord.m)** function. To determine their size, they use the private **[getdimsiz](https://github.com/fieldtrip/fieldtrip/blob/master/private/getdimsiz.m)** function. Another private function that plays a role for managing the dimord field is **[fixdimord](https://github.com/fieldtrip/fieldtrip/blob/master/private/fixdimord.m)**.
 
 Most of the pieces of the dimord matches a corresponding metadata field.
 
@@ -78,4 +78,6 @@ Most data fields are represented as a N-dimensional numeric array; the dimord is
 
 ### Data as a cell-array
 
-Some data fields are represented as a cell-array. This is sometimes used to represent data elements of different size (e.g. spike timings). This is also used to to represent data that is sparse and partially empty (e.g. leadfields and beamformer filters). For these type of data structures the cell-array is always the outer-most (first) dimension and the corresponding dimension is described as `{xxx}`, i.e. with curly brackets. For a multi-dimensional cell-array this could be `{xxx_yyy_zzz}`. The subsequent dimensions of the arrays that are contained in each cell are described as before, subsequently the dimord can be for example `{pos}_chan_ori` (for leadfields) or `{pos_pos}_freq` for a source-level connectivity metric that is frequency resolved.
+Some data fields are represented as a cell-array. This is sometimes used to represent data elements of different size (e.g. spike timings). This is also used to to represent data that is sparse and partially empty (e.g. leadfields and beamformer filters). For these type of data structures the cell-array is always the outer-most (first) dimension and the corresponding dimension is described as `{xxx}`, i.e. with curly brackets. For a multi-dimensional cell-array this could be `{xxx_yyy_zzz}`.
+
+The subsequent dimensions of the arrays that are contained in each cell are described as before, subsequently the dimord can be for example `{pos}_chan_ori` (for leadfields) or `{pos_pos}_freq` for a source-level connectivity metric that is frequency resolved.
