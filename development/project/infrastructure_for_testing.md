@@ -15,7 +15,7 @@ suggested directory layout
 /home/common/matlab/fieldtrip/testdata/raw/ctf151.mat
 /home/common/matlab/fieldtrip/testdata/comp/...
 /home/common/matlab/fieldtrip/testdata/bug42/...
-  
+
  /home/common/matlab/fieldtrip/testcode/test_preproc_bandpassfilter.m
 /home/common/matlab/fieldtrip/testcode/test_public_keyval.m
 /home/common/matlab/fieldtrip/testcode/test_private_whatever.m
@@ -96,5 +96,5 @@ Directory/file layout example:
 * Open issues and challenges
 
 - how and what to reference with?
-- make a distinction between low-level math tests (e.g. specest_mtmconvol) and high level tests (e.g. topoplotER)?
+- make a distinction between low-level math tests (e.g. specest_mtmconvol) and high-level tests (e.g. topoplotER)?
 - how to reference the output of plotting functions?

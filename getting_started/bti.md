@@ -95,7 +95,7 @@ where the numbers (here 0, 1, 2, ...) can be different.
 
 ### Read header
 
-The **[ft_read_header](/reference/ft_read_header)** function reads header information and represents it in a common data-independent format. It takes the name of the data file as input. Header information with respect to a particular data file is stored in two places: the run-specific config-file, and the data file itself. The low level reading function read_4d_hdr reads the header information from the specified data file and then tries to read the corresponding config file which should be stored in the same directory.
+The **[ft_read_header](/reference/ft_read_header)** function reads header information and represents it in a common data-independent format. It takes the name of the data file as input. Header information with respect to a particular data file is stored in two places: the run-specific config-file, and the data file itself. The low-level reading function read_4d_hdr reads the header information from the specified data file and then tries to read the corresponding config file which should be stored in the same directory.
 
 To read the header from one of your datasets, use
 

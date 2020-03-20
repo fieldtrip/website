@@ -131,7 +131,7 @@ We reslice the MRI on to a 1x1x1 mm cubic grid which is aligned with the coordin
 
 {% include image src="/assets/img/workshop/natmeg/dipolefitting/natmeg_dip_mri_resliced.png" width="500" %}
 
-    % the low level plotting functions do not know how to deal with units,
+    % the low-level plotting functions do not know how to deal with units,
     % so make sure we have the MRI expressed in cm as well
     mri_resliced_cm = ft_convert_units(mri_resliced, 'cm');
 

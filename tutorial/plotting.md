@@ -84,7 +84,7 @@ and change the line width or colo
 
 The **[ft_singleplotER](/reference/ft_singleplotER)** function might not look so impressive compared to standard plot; that is because the ERF data representation is quite simple.
 
-The advantage of using the standard MATLAB plot function is that you can easily find all documentation for it ("doc plot") and tweak the low level figure characteristics.
+The advantage of using the standard MATLAB plot function is that you can easily find all documentation for it ("doc plot") and tweak the low-level figure characteristics.
 
 The FieldTrip plotting functions have a lot of built-in intelligence to make plotting of multidimensional data easier. It is for instance possible to do baseline correction before plotting, by specifying the baseline type and time limits. In the plotting functions either the FieldTrip function **[ft_timelockbaseline](/reference/ft_timelockbaseline)** or **[ft_freqbaseline](/reference/ft_freqbaseline)** is called. If you specify multiple channels in cfg.channel both singleplot functions will plot the mean over these channels. In the plotting functions the FieldTrip function **[ft_channelselection](/reference/ft_channelselection)** is called, which makes it straightforward to plot for instance the mean TFR (download here, see time-frequency analysis tutorial)of the left central channels.
 

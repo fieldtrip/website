@@ -78,7 +78,7 @@ What I got looks like this:
 
 {% include image src="/assets/img/faq/how_can_i_test_the_serial_port_connection_between_two_computers/serial_connect_write_read_event.jpg" width="400" %}
 
-Alternatively, one can simply use MATLAB serial objects and low level reading function fread or fscan
+Alternatively, one can simply use MATLAB serial objects and low-level reading function fread or fscan
 
     %% objects are cleared
     clear all;

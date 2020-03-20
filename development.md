@@ -5,11 +5,11 @@ tags: [development]
 
 # Development
 
-- [Contribute or request support](/contribute)
-- [Testing and releasing](/development/dashboard)
+- [Contribute to the development](/contribute)
 - [Guidelines](/development/guideline)
 - [Modules](/development/module)
 - [Data Structures](/development/datastructure)
+- [Testing and releasing](/development/dashboard)
 - [Projects](/development/project)
 - [Meetings](/development/meeting)
 - [Integration](/development/integration)
