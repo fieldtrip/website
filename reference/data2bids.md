@@ -21,7 +21,7 @@ title: data2bids
  and/or realigned and defaced anatomical MRI to disk.
 
  The configuration structure should contains
-   cfg.method       = string, can be 'decorate', 'convert' or 'copy', see below (default is automatic)
+   cfg.method       = string, can be 'decorate', 'copy' or 'convert', see below (default is automatic)
    cfg.dataset      = string, filename of the input data
    cfg.outputfile   = string, optional filename for the output data (default is automatic)
    cfg.writejson    = string, 'yes', 'replace', 'merge' or 'no' (default = 'yes')
