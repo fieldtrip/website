@@ -9,6 +9,7 @@ tags: [development]
 - [Testing and releasing](/development/dashboard)
 - [Guidelines](/development/guideline)
 - [Modules](/development/module)
+- [Data Structures](/development/datastructure)
 - [Projects](/development/project)
 - [Meetings](/development/meeting)
 - [Integration](/development/integration)
