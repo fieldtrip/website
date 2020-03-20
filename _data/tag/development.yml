@@ -10,6 +10,9 @@
 - name:  Code testing and release
   link:  /development/dashboard
 
+- name:  Data structures used by FieldTrip
+  link:  /development/datastructure
+
 - name:  Accessing the FieldTrip source code through Git
   link:  /development/git
 
