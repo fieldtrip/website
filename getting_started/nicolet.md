@@ -13,14 +13,14 @@ The Nicolet system was once known as Nervus, launched in 1994/5 by Taugagreining
 
 It is a popular clinical EEG format, especially in the Nordic countries.
 
-The file format has been through some revisions. FieldTrip can read the file format from at least 2006 through 2018
+The file format has been through some revisions. FieldTrip can read the file format from 2012 through 2020. For older formats, see this repository: https://github.com/janbrogger/NicoletEegImportOld . This requires access to the Nicolet DLLs.
 
 - Files with the extension .e can be read in by FieldTrip 
-- Older .eeg files probably have the same format with minor changes.
+- Older .eeg files probably have the same format with minor changes (from 1994/95 to ca. 2004). 
 
 ## Limits
 
-The file format supports different sampling rates. Currently FieldTrip only reads the channels with the most popular sampling rate. This works well for clinical EEG.
+The file format supports different sampling rates. Currently FieldTrip only reads the channels with the most common sampling rate. This works well for clinical EEG.
 
 ## Integrations
 
