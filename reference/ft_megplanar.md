@@ -28,9 +28,12 @@ title: ft_megplanar
  'sourceproject' method is not supported for frequency domain data.
 
  A dipole layer representing the brain surface must be specified with
-   cfg.inwardshift = depth of the source layer relative to the head model surface (default = 2.5 cm, which is appropriate for a skin-based head model)
+   cfg.inwardshift = depth of the source layer relative to the head model surface ,
+                     (default = 2.5 cm, which is appropriate for a skin-based head model)
    cfg.spheremesh  = number of dipoles in the source layer (default = 642)
-   cfg.pruneratio  = for singular values, default is 1e-3
+   cfg.tolerance   = tolerance ratio for leadfield matrix inverse based on a truncated svd, 
+                     reflects the relative magnitude of the largest singular value
+                     to retain (default =s 1e-3)
    cfg.headshape   = a filename containing headshape, a structure containing a
                      single triangulated boundary, or a Nx3 matrix with surface
                      points

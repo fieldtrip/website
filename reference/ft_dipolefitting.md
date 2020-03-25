@@ -64,7 +64,7 @@ title: ft_dipolefitting
  FT_FREQANALYSIS function. This has the additional options
    cfg.frequency   = single number (in Hz)
 
- low-level details of the fitting can be specified in the cfg.dipfit structure
+ Low level details of the fitting can be specified in the cfg.dipfit structure
    cfg.dipfit.display      = level of display, can be 'off', 'iter', 'notify' or 'final' (default = 'iter')
    cfg.dipfit.optimfun     = function to use, can be 'fminsearch' or 'fminunc' (default is determined automatic)
    cfg.dipfit.maxiter      = maximum number of function evaluations allowed (default depends on the optimfun)
