@@ -230,7 +230,7 @@ The MEG fiducial positions are stored in an ASCII text file that you can open in
 Using the MRI fiducial positions expressed in [head coordinates](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined), and the MEG fiducial positions expressed in dewar coordinates, we can transform the MEG sensor positions from dewar into head coordinates.
 
     % read the gradiometer definition from file, this is in dewar coordinates
-    grad = ft_read_sens('Continuous.con');
+    grad = ft_read_sens('Continuous.con', 'senstype', 'meg');
 
 Alternative to reading the gradiometer definition from the raw data file, you can also obtain the gradiometer definition after **[ft_preprocessing](/reference/ft_preprocessing)**, **[ft_timelockanalysis](/reference/ft_timelockanalysis)** or **[ft_freqanalysis](/reference/ft_freqanalysis)**: the data structures resulting from those functions contain the "grad" field which corresponds to the gradiometer definition from the original raw file.
 

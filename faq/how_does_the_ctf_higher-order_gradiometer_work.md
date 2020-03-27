@@ -15,7 +15,7 @@ The data set on disk contains in the header the parameters that are used to conv
 
 To get an intuition about what "balancing" means in terms of computation, let's run the following code. First, download a CTF data set which is available from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) and use **[ft_read_sens](/reference/ft_read_sens)** to access the sensor position information of the MEG data, in this case CTF15
 
-    grad = ft_read_sens('Subject01.ds')
+    grad = ft_read_sens('Subject01.ds', 'senstype', 'meg')
 
 The grad structure included in the FieldTrip representation (i.e. hdr.grad or data.grad) should be consistent with the data, hence it contain
 

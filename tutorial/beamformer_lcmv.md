@@ -175,7 +175,7 @@ Now prepare the source model. Here one has the option to make a 'normalized grid
 
 
 	% create the subject specific grid
-        grad = ft_read_sens('SubjectSEF.ds');
+        grad = ft_read_sens('SubjectSEF.ds', 'senstype', 'meg');
 
 	cfg             = [];
 	cfg.grad        = grad;

@@ -162,8 +162,8 @@ Alternatively, you can also create and use a multiple-layered head model with Op
 
 The head model (vol) contains the brain-skull boundary as the geometrical description of the head. You can visualize this using the following code. First, we will plot the sensors (MEG channels) with the **[ft_plot_sens](/reference/ft_plot_sens)** function. Second, we will plot the head model with **[ft_plot_headmodel](/reference/ft_plot_headmodel)** in the same figure with the sensors. In order to plot also the location of the MEG channels, we read in the location of the channels using the .ds file from the tutorial data and the **[ft_read_sens](/reference/ft_read_sens)** function. (The .zip file that can be downloaded from the [FieldTrip FTP server](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject01.zip) also contains the .ds file.) The units of the headmodel are defined in 'mm', while the units of the sensors are in 'cm'. When we plot the headmodel together with the sensors, they need to have the same units. Therefore, the units of the headmodel will be converted to 'cm' with the **[ft_convert_units](/reference/ft_convert_units)** function.
 
-    vol = ft_convert_units(vol,'cm');
-    sens = ft_read_sens('Subject01.ds');
+    vol = ft_convert_units(vol, 'cm');
+    sens = ft_read_sens('Subject01.ds', 'senstype', 'meg');
 
     figure
     ft_plot_sens(sens, 'style', '*b');

@@ -58,9 +58,9 @@ The MEG dataset is available as [oddball1_mc_downsampled.fif](ftp://ftp.fieldtri
 
     dataset = 'oddball1_mc_downsampled.fif';
 
-    grad    = ft_read_sens(dataset,'senstype','meg');
-    elec    = ft_read_sens(dataset,'senstype','eeg');
-    shape   = ft_read_headshape(dataset,'unit','cm');
+    grad    = ft_read_sens(dataset, 'senstype', 'meg');
+    elec    = ft_read_sens(dataset, 'senstype', 'eeg');
+    shape   = ft_read_headshape(dataset, 'unit', 'cm');
 
 The high-level plotting functions do not offer support for flexible plotting of the geometrical information. The [plotting module](/development/module/plotting), i.e. the set of functions in the fieldtrip/plotting directory, includes a number of lower-level functions to make nice figures of the various geometrical data objects. In contrast to the high-level functions, these plotting functions do **not** take a cfg as first input argument.
 
@@ -241,7 +241,7 @@ Now that we have the meshes, we use them to compute the volume conduction model.
     cfg.method = 'singleshell';
     headmodel_meg = ft_prepare_headmodel(cfg, mesh_brain);
 
-    headmodel_meg = ft_convert_units(headmodel_meg,'cm');
+    headmodel_meg = ft_convert_units(headmodel_meg, 'cm');
 
     save headmodel_meg headmodel_meg
 

@@ -404,7 +404,7 @@ For both cases, the iterative closest point (ICP) algorithm, in which ''[TR, TT]
 This is the last part of the first step. Load the gradiometer positions and transform them using the transformation matrix ''meg2ctf'
 
     %% Read gradiometer definition in MEG coordinate system
-    grad = ft_read_sens(fullfile(meg_path, meg_file));
+    grad = ft_read_sens(fullfile(meg_path, meg_file), 'senstype', 'meg');
     grad = ft_convert_units(grad, 'mm');
 
     %% Co-registration
