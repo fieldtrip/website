@@ -6,8 +6,9 @@ title: ft_read_sens
  further down for the list of file types that are supported.
 
  Use as
-   grad = ft_read_sens(filename, ...)  % for gradiometers
-   elec = ft_read_sens(filename, ...)  % for electrodes
+   elec = ft_read_sens(filename, 'senstype', 'eeg', ...)  % for EEG electrodes
+   grad = ft_read_sens(filename, 'senstype', 'meg', ...)  % for MEG gradiometers
+   opto = ft_read_sens(filename, 'senstype', 'nirs', ...) % for NIRS optodes
 
  Additional options should be specified in key-value pairs and can be
    'fileformat'     = string, see the list of supported file formats (the default is determined automatically)
