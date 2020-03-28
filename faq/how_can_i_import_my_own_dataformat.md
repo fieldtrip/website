@@ -31,7 +31,7 @@ Keep in mind that your reading functions have to follow the following input/outp
 
     hdr   = read_xxx_header(filename)
     dat   = read_xxx_data(filename, hdr, begsample, endsample, chanindx)
-    event = read_xxx_event(filename)  
+    event = read_xxx_event(filename, hdr)
 
 See the help and the code of ft_read_header, ft_read_data and ft_read_event for the details of each of these variables.
 
