@@ -22,6 +22,7 @@ Please use the menu below to get an overview and to navigate through the worksho
 ## ECoG/sEEG bootcamp, UC Davis (March 2019)
 
 - [Anatomical reconstruction of intracranial data](https://youtu.be/NdIqUSPPAeM) by Arjen Stolk
+- [Insights into human cognition from intracranial recordings](https://youtu.be/3SN9kR9s58o) by Bob Knight
 
 ## Advanced MEG/EEG data analysis toolkit course, Nijmegen (April 2018)
 
