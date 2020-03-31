@@ -7,12 +7,12 @@ tags: [example, irasa]
 
 IRASA allows distinguishing rhythmic activity from concurrent power-spectral 1/f modulations. The technique virtually compresses and expands the time-domain data with a set of non-integer resampling factors prior to Fourier-based spectral decomposition. As a result, rhythmic components in the power-spectrum are redistributed while the arrhythmic 1/f distribution is left intact. Taking the median of the resulting auto-spectral distributions extracts the power-spectral 1/f component, and the subsequent removal of the 1/f component from the original power-spectrum offers a power-spectral estimate of rhythmic content in the recorded signal.
 
-The below MATLAB script demonstrates the use of the [IRASA technique](https://link.springer.com/article/10.1007/s10548-015-0448-0) (on simulated data) for the purpose of [extracting rhythmic spectral features](https://elifesciences.org/articles/48065) from the electrophysiological signal.
+The below MATLAB script demonstrates the use of the [IRASA technique](https://link.springer.com/article/10.1007/s10548-015-0448-0) (on simulated data) for the purpose of [extracting rhythmic spectral features](https://elifesciences.org/articles/48065) from the electrophysiological signal. This procedure allows defining spectral distributions on a participant-by-partipant basis (e.g., participant-specific alpha frequency bands), avoiding reliance on canonical frequency bands that may not accurately capture the neural phenomena of interest in each individual. Please cite these papers when you use the procedure described here.
 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % MATLAB script for the extraction of rhythmic spectral features 
-    % from the electrophysiological signal based on Irregular Resampling
+    % MATLAB script for extracting rhythmic spectral features from the
+    % electrophysiological signal using Irregular Resampling
     % Auto-Spectral Analysis (IRASA, Wen & Liu, Brain Topogr. 2016)
     %
     % Ensure FieldTrip is correcty added to the MATLAB path:
