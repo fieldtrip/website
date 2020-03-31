@@ -10,7 +10,7 @@ The following code starts off with an ERP in two conditions, where it is slightl
 {% include markup/info %}
 See this paper for more details
 
-Maris E., Oostenveld R. //[Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17517438)// J Neurosci Methods. 2007 Apr 10;
+Maris E., Oostenveld R. [Nonparametric statistical testing of EEG- and MEG-data.](http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=17517438) J Neurosci Methods. 2007 Apr 10;
 
 and look in the [reference](/references_to_implemented_methods) section for more literature pointers.
 {% include markup/end %}
