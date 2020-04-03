@@ -7,3 +7,4 @@ _site
 _site/*
 assets/pdf
 assets/root
+*.pptx

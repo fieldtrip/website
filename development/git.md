@@ -350,6 +350,12 @@ Troubleshooting: pushing your master branch to your _origin_ personal GitHub rep
 
 Working with remotes is explained in more detail in the [Git book](http://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes).
 
+## Graphical summary
+
+The following figure gives a graphical summary of some of the steps and terms.
+
+{% include image src="/assets/img/development/git/local_remote.png" %}
+
 ## Want more?
 
 [github.com](https://github.com) offers lots of documentation. In particular, see the detailed instructions to [fork a repository](https://help.github.com/articles/fork-a-repo) and to [create a pull request](https://help.github.com/articles/using-pull-requests). If you plan to continue development, I suggest to set up your remotes with _origin_ pointing to your personal remote repository and _upstream_ pointing to [https://github.com/fieldtrip/fieldtrip](https://github.com/fieldtrip/fieldtrip), as described in [fork a repository](https://help.github.com/articles/fork-a-repo).
