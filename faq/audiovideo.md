@@ -9,10 +9,10 @@ In epilepsy recordings it is common to record video along with the EEG. Also for
 
 FieldTrip has two functions to facilitate the exploration of EEG/MEG recorded in synchrony with audio/video: **[ft_databrowser](/reference/ft_databrowser)** and **[ft_audiovideobrowser](/reference/ft_audiovideobrowser)**.
 
-For both functions you should consider that
+For both functions you should consider that:
 
-- the moment at which the recordings started will in general be different
-- the sampling rate of the two recordings will be different (e.g. much higher for audio, but much lower for video)
+- the moment at which the recordings started will in general be different,
+- the sampling rate of the two recordings will be different (e.g. much higher for audio, but much lower for video).
 
 The synchronization between the two recordings is realized by specifying both in _timestamps_ that are expressed relative a common temporal reference (e.g. the time on an external clock) using the offset and slope, where _timestamp=offset+slope\*sample_.
 
