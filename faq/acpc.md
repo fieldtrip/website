@@ -16,6 +16,6 @@ In all cases the origin is at the [Anterior Commissure](http://en.wikipedia.org/
 
 Coordinates expressed in the TAL, MNI/MNI152/SPM, and MNI305/FSAVERAGE coordinate system all imply that some spatial deformation was done; they can be looked up in the corresponding template or atlas. For ACPC coordinates no deformation was done; they can be used to express location in an individual subject, or measure distance, volume or surface area.
 
-See also [this page](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach) which describes the TT and MNI space in more detail and [this page](http://www.nil.wustl.edu/labs/kevin/man/answers/mnispace.html) that explain the differences between MNI152 and MNI305.
+See also [this page](http://imaging.mrc-cbu.cam.ac.uk/imaging/MniTalairach) which describes the TT and MNI space in more detail and [this page](https://www.lead-dbs.org/about-the-mni-spaces/) that explain the differences between MNI152 and MNI305.
 
 See also this [frequently asked question](/faq/how_are_the_different_head_and_mri_coordinate_systems_defined) that explains how different EEG, MEG and MRI coordinate systems are defined.
