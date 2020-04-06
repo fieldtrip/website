@@ -15,4 +15,6 @@ Some ftp clients may have problems with specific firewall configurations. This c
 
 ## GitHub as alternative to the FTP download
 
-The FieldTrip source code is maintained and also available from <http://github.com/fieldtrip/fieldtrip/>. You can use git and github to keep up to date with the latest updates of the source code, to revert to older versions, and to track all individual changes to the files. Using the GitHub version is the easiest if you install a git client on your computer. However, it is also possible to simply download the latest release as a [zip file](https://github.com/fieldtrip/fieldtrip/releases).
+The FieldTrip release versions are also available from <https://github.com/fieldtrip/fieldtrip/releases>. 
+
+You can also use git to keep up to date with the latest development updates of the source code in the `master` branch, to revert to older versions, and to track all individual changes to the files. Using the GitHub development version requires you to install a git client on your computer. See the [git tutorial](/development/git) for details. 
