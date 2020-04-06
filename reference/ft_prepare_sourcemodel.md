@@ -11,61 +11,58 @@ title: ft_prepare_sourcemodel
  where the details of the configuration structure determine how the source
  model will be constructed.
 
- A source model can be constructed based on
-   - regular 3D grid with explicit specification
-   - regular 3D grid with specification of the resolution
-   - regular 3D grid, based on segmented MRI, restricted to gray matter
-   - regular 3D grid, based on a warped template grid, based on the MNI brain
-   - surface mesh based on the brain surface from the volume conduction model
-   - surface mesh based on the head surface from an external file
-   - cortical sheet that was created in MNE or Freesurfer
-   - using user-supplied source positions, which can be regular or irregular
- The approach that will be used depends on the configuration options that
- you specify.
+ The different approaches for constructing a source model are
+   cfg.method = 'basedongrid'        regular 3D grid with explicit specification
+                'basedonpos'         regular 3D grid with specification of the resolution
+                'basedonshape'       surface mesh based on inward shifted head surface from external file
+                'basedonmri'         regular 3D grid, based on segmented MRI, restricted to gray matter
+                'basedonmni'         regular 3D grid, based on a warped template grid, based on the MNI brain
+                'basedoncortex'      cortical sheet from external software such as Caret or FreeSurfer, can also be two separate hemispheres
+                'basedonresolution'  regular 3D grid with specification of the resolution
+                'basedonvol'         surface mesh based on inward shifted brain surface from volume conductor
+                'basedonfile'        the sourcemodel should be read from file
+ The default for cfg.method is to determine the approach automatically, based on 
+ the configuration options that you specify.
 
- Configuration options for generating a regular 3D grid
-   cfg.xgrid      = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-   cfg.ygrid      = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
-   cfg.zgrid      = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
-   cfg.resolution = number (e.g. 1 cm) for automatic grid generation
+ BASEDONRESOLUTION - uses an explicitly specified grid, or with the desired 
+ resolution, according to the following configuration options:
+   cfg.xgrid         = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+   cfg.ygrid         = vector (e.g. -20:1:20) or 'auto' (default = 'auto')
+   cfg.zgrid         = vector (e.g.   0:1:20) or 'auto' (default = 'auto')
+   cfg.resolution    = number (e.g. 1 cm) for automatic grid generation
 
- Configuration options for predefined source positions
-   cfg.sourcemodel.pos        = N*3 matrix with position of each source
-   cfg.sourcemodel.inside     = N*1 vector with boolean value whether position is inside brain (optional)
-   cfg.sourcemodel.dim        = [Nx Ny Nz] vector with dimensions in case of 3D grid (optional)
- The following fields are not used in this function, but will be copied along to the output
-   cfg.sourcemodel.leadfield
-   cfg.sourcemodel.filter
+ BASEDONPOS - places sources on positions that you explicitly specify, 
+ according to the following configuration options:
+   cfg.sourcemodel.pos       = N*3 matrix with position of each source
+   cfg.sourcemodel.inside    = N*1 vector with boolean value whether position is inside brain (optional)
+   cfg.sourcemodel.dim       = [Nx Ny Nz] vector with dimensions in case of 3D grid (optional)
+ The following fields (from FT_PRERARE_LEADFIELD or FT_SOURCEANALYSIS) are 
+ not used in this function, but will be copied along to the output:
+   cfg.sourcemodel.leadfield = cell-array
+   cfg.sourcemodel.filter    = cell-array
    cfg.sourcemodel.subspace
    cfg.sourcemodel.lbex
 
- Configuration options for a warped MNI grid
-   cfg.mri        = structure with anatomical MRI model or filename, see FT_READ_MRI
-   cfg.warpmni    = 'yes'
-   cfg.resolution = number (e.g. 6) of the resolution of the
-                                template MNI grid, defined in mm
-   cfg.template   = specification of a template grid (grid structure), or a
-                                filename of a template grid (defined in MNI space),
-                                either cfg.resolution or cfg.template needs
-                                to be defined. If both are defined cfg.template prevails
-   cfg.nonlinear  = 'no' (or 'yes'), use non-linear normalization
+ BASEDONMNI - uses source positions from a template sourcemodel that is 
+ inversely warped from MNI coordinates to the individual subjects MRI. 
+ It uses the following configuration options:
+   cfg.mri           = structure with anatomical MRI model or filename, see FT_READ_MRI
+   cfg.warpmni       = 'yes'
+   cfg.nonlinear     = 'no' (or 'yes'), use non-linear normalization
+   cfg.resolution    = number (e.g. 6) of the resolution of the template MNI grid, defined in mm
+   cfg.template      = specification of a template sourcemodel as structure, or the filename of a template sourcemodel (defined in MNI space)
+ Either cfg.resolution or cfg.template needs to be defined; if both are defined, cfg.template prevails.
 
- Configuration options for cortex segmentation, i.e. for placing dipoles in grey matter
+ BASEDONMRI - makes a segmentation of the individual anatomical MRI and places 
+ sources in the grey matter. It uses the following configuration options:
    cfg.mri           = can be filename, MRI structure or segmented MRI structure
    cfg.threshold     = 0.1, relative to the maximum value in the segmentation
    cfg.smooth        = 5, smoothing in voxels
 
- Configuration options for reading a cortical sheet from file
+ BASEDONCORTEX - places sources on the vertices of a cortical surface description
    cfg.headshape     = string, should be a *.fif file
 
- The EEG or MEG sensor positions can be present in the data or can be specified as
-   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
-   cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
-
- The headmodel or volume conduction model can be specified as
-   cfg.headmodel     = structure with volume conduction model or filename, see FT_PREPARE_HEADMODEL
-
- Other configuration options
+ Other configuration options include
    cfg.unit          = string, can be 'mm', 'cm', 'm' (default is automatic)
    cfg.tight         = 'yes' or 'no' (default is automatic)
    cfg.inwardshift   = number, how much should the innermost surface be moved inward to constrain
@@ -78,6 +75,13 @@ title: ft_prepare_sourcemodel
    cfg.headshape     = a filename for the headshape, a structure containing a single surface,
                        or a Nx3 matrix with headshape surface points (default = [])
    cfg.spmversion    = string, 'spm2', 'spm8', 'spm12' (default = 'spm8')
+
+ The EEG or MEG sensor positions can be present in the data or can be specified as
+   cfg.elec          = structure with electrode positions or filename, see FT_READ_SENS
+   cfg.grad          = structure with gradiometer definition or filename, see FT_READ_SENS
+
+ The headmodel or volume conduction model can be specified as
+   cfg.headmodel     = structure with volume conduction model or filename, see FT_PREPARE_HEADMODEL
 
  See also FT_PREPARE_LEADFIELD, FT_PREPARE_HEADMODEL, FT_SOURCEANALYSIS,
  FT_DIPOLEFITTING, FT_MEGREALIGN

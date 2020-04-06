@@ -23,6 +23,7 @@ title: ft_resampledata
  from the different acquisition devices.
    cfg.time        = cell-array with one time axis per trial (i.e. from another dataset)
    cfg.method      = interpolation method, see INTERP1 (default = 'pchip')
+   cfg.extrapval   = extrapolation behaviour, scalar value or 'extrap' (default = as in INTERP1)
 
  Previously this function used to detrend the data by default. The motivation for
  this is that the data is filtered prior to resampling to avoid aliassing and
