@@ -13,7 +13,7 @@ The FTDI chip on the OpenBCI dongle requires you to install the FTDI drivers on 
 
 ## Standalone interface with openbci2ft
 
-You can use **openbci2ft** to transport data from the UDP network connection to a FieldTrip buffer. The **openbci2ft** application is written in C and takes 1 required and 2 optional command line arguments
+You can use **openbci2ft** to transport data from the Cyton USB dongle to a FieldTrip buffer. The **openbci2ft** application is written in C and takes 1 required and 2 optional command line arguments
 
     openbci2ft <device> [ftHostname] [ftPort]
 
