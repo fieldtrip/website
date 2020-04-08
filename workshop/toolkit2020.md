@@ -4,15 +4,13 @@ title: Advanced MEG/EEG toolkit at the Donders
 
 # Advanced MEG/EEG toolkit at the Donders
 
-From 20-24 April 2020 we will again host the “Advanced MEG/EEG toolkit” at the Donders Institute in Nijmegen.
+From 20-24 April 2020 we will again host the “Advanced MEG/EEG toolkit”. Although initially scheduled to take place at the Donders Institute in Nijmegen, the COVID-19 situation made that impossible. We are instead hosting it online.
 
-Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many colleagues.
+Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of many colleagues from the Donders and abroad.
 
 This toolkit course will teach you advanced MEG and EEG data analysis skills. Preprocessing, frequency analysis, source reconstruction and various statistical methods will be covered. Furthermore, there will be a lot of attention to best practices for reproducible analysis and to Open Science. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG and EEG data set using the FieldTrip toolbox.
 
-We can only host a limited number of participants. From past experience we expect the course to be oversubscribed, hence we will start with pre-registration. The final selection of the participants will be based on the motivation, background experience and research interests that are provided in the registration form. The deadline for pre-registration is March 1, 2020.
-
-Please go to the [Donders website to pre-register](https://www.ru.nl/donders/agenda/donders-tool-kits/vm-tool-kits/donders-meg-eeg-toolkit/). There you can also find a copy of the program of last year; this year will be largely similar.
+Even though we host the toolkit course online, we can only host a limited number of participants. To achieve good interaction between lecturers and participants - and especially tutors and participants in the hands-on sessions -  we have to limit the online attendance. Where possible we will record online events and share those afterwards.
 
 We're pleased to have the following colleagues as our tutors:
 * Ashley Lewis (https://www.ru.nl/english/people/lewis-a/)
