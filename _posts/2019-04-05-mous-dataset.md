@@ -1,6 +1,6 @@
 ---
 title: 5 April, 2019 - MOUS dataset
-categories: [news]
+categories: []
 ---
 
 ### 5 April, 2019

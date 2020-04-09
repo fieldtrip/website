@@ -1,6 +1,6 @@
 ---
 title: 01 July, 2019 - FieldTrip workshop at RITMO
-categories: [news]
+categories: []
 ---
 
 ### 01 July, 2019
