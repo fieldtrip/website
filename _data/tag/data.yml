@@ -115,6 +115,9 @@
 - name:  Getting started with Ricoh data
   link:  /getting_started/ricoh
 
+- name:  Getting started with XSens motion capture data
+  link:  /getting_started/xsens
+
 - name:  Getting started with Yokogawa data
   link:  /getting_started/yokogawa
 
