@@ -207,14 +207,14 @@ Inspecting the variable 'pial', you will see something like this:
 
     struct with fields:
 
-                    pos: [259215×3 double]
-                    tri: [518422×3 double]
-                   sulc: [259215×1 double]
-                   curv: [259215×1 double]
-                   area: [259215×1 double]
-              thickness: [259215×1 double]
-         brainstructure: [259215×1 double]
-    brainstructurelabel: {2×1 cell}
+                    pos: [259215x3 double]
+                    tri: [518422x3 double]
+                   sulc: [259215x1 double]
+                   curv: [259215x1 double]
+                   area: [259215x1 double]
+              thickness: [259215x1 double]
+         brainstructure: [259215x1 double]
+    brainstructurelabel: {2x1 cell}
 
 The relevant topological information is represented in the 'pos' and 'tri' fields, where the 259215x3 pos-matrix contains a set of coordinates in 3D space of the vertices of a triangulated mesh, and the 518422x3 tri-matrix contains on each row the indices of the points that make up the individual triangles. The 259215x1 vectors in the sulc/curv/area/thickness/brainstructure reflect scalar parameters corresponding to local properties of the cortical sheet, at each of the vertices.
 

@@ -129,14 +129,14 @@ Regardless of the method used for calculating the TFR, the output format is iden
 
     struct with fields:
 
-        label: {306×1 cell}
+        label: {306x1 cell}
        dimord: 'chan_freq_time'
          freq: [2.5000 5 7.5000 10 12.5000 15 17.5000 20 22.5000 25 27.5000 30]
-         time: [1×43 double]
-    powspctrm: [306×12×43 double]
-         elec: [1×1 struct]
-         grad: [1×1 struct]
-          cfg: [1×1 struct]
+         time: [1x43 double]
+    powspctrm: [306x12x43 double]
+         elec: [1x1 struct]
+         grad: [1x1 struct]
+          cfg: [1x1 struct]
 
 The 'powspctrm' field contains the temporal evolution of the raw power values for each specified channel and frequency bin. The 'freq' and 'time' fields represent the center points of each frequency and time bin in Hz and s. Note that each power value is not a 'point estimate', but always has some temporal and spectral extent.
 

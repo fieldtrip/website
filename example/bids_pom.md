@@ -626,9 +626,9 @@ This shows that for both EMG and eyetracker there are 805 triggers, which corres
       struct with fields:
 
               dim: [88 88 64 805]
-          anatomy: [88×88×64×805 int16]
-              hdr: [1×1 struct]
-        transform: [4×4 double]
+          anatomy: [88x88x64x805 int16]
+              hdr: [1x1 struct]
+        transform: [4x4 double]
              unit: 'mm'
 
 #### Eye tracker data

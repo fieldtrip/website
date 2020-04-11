@@ -45,8 +45,8 @@ We obtain a structure that looks like this:
             mrifile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
             fidfile: '/project_qnap/3010000.02/practicalMEEG/ds00011?'
          outputpath: '/project_qnap/3010000.02/practicalMEEG/process?'
-            megfile: {6×1 cell}
-         eventsfile: {6×1 cell}
+            megfile: {6x1 cell}
+         eventsfile: {6x1 cell}
 
 We can now run the following chunk of code:
 

@@ -20,19 +20,19 @@ This returns a data structure like this:
     data =
       struct with fields:
 
-               hdr: [1×1 struct]
-             label: {192×1 cell}
-              time: {[1×26229 double]}
-             trial: {[192×26229 double]}
+               hdr: [1x1 struct]
+             label: {192x1 cell}
+              time: {[1x26229 double]}
+             trial: {[192x26229 double]}
            fsample: 60
         sampleinfo: [1 26229]
-               cfg: [1×1 struct]  
+               cfg: [1x1 struct]  
 
 where the channels correspond to the time-varying positions of of the reconstructed stick-figure reference points. There are 64 reference points, represented as (x, y, z) in 192 channels:
 
     >> data.label
     ans =
-      192×1 cell array
+      192x1 cell array
         {'pHipOrigin_x'             }
         {'pHipOrigin_y'             }
         {'pHipOrigin_z'             }

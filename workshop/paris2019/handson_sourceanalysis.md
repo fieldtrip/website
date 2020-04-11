@@ -191,13 +191,13 @@ With the source structure computed, we can inspect the fields of the variable so
 
       struct with fields:
 
-          time: [1×510 double]
-        inside: [15684×1 logical]
-           pos: [15684×3 double]
-           tri: [31360×3 double]
+          time: [1x510 double]
+        inside: [15684x1 logical]
+           pos: [15684x3 double]
+           tri: [31360x3 double]
         method: 'average'
-           avg: [1×1 struct]
-           cfg: [1×1 struct]
+           avg: [1x1 struct]
+           cfg: [1x1 struct]
 
     >> source.avg
 
@@ -205,12 +205,12 @@ With the source structure computed, we can inspect the fields of the variable so
 
       struct with fields:
 
-                 ori: {1×15684 cell}
-                 pow: [15684×1 double]
-                 mom: {15684×1 cell}
-               noise: [15684×1 double]
-              filter: {15684×1 cell}
-               label: {306×1 cell}
+                 ori: {1x15684 cell}
+                 pow: [15684x1 double]
+                 mom: {15684x1 cell}
+               noise: [15684x1 double]
+              filter: {15684x1 cell}
+               label: {306x1 cell}
         filterdimord: '{pos}_ori_chan'
 
 The content of source.avg is the interesting stuff. Particularly, the 'mom' field contains the time courses of the event-related field at the source level. Colloquially, these time courses are known as 'virtual channels', reflecting the signal that would be picked up if it could directly be recorded by a channel at that location. The 'pow' field is a scalar per dipole position, and reflects the variance over the time window of interest, and typically does not mean much. The field 'filter' contains the beamformer spatial filter, which we will be using in a next step, in order to extract condition specific data. First, we will now inspect the virtual channels, using the relatively new (added to the FieldTrip repository only in November 2019) function **[ft_sourceplot_interactive](/reference/ft_sourceplot_interactive)**.

@@ -98,15 +98,15 @@ The output of ft_freqanalysis should be familiar to you from the [tutorial for t
 
     struct with fields:
 
-        label: {150×1 cell}
+        label: {150x1 cell}
        dimord: 'chan_freq'
          freq: 17.8808
-    powspctrm: [150×1 double]
-     labelcmb: {11175×2 cell}
-    crsspctrm: [11175×1 double]
-         elec: [1×1 struct]
-         grad: [1×1 struct]
-          cfg: [1×1 struct]
+    powspctrm: [150x1 double]
+     labelcmb: {11175x2 cell}
+    crsspctrm: [11175x1 double]
+         elec: [1x1 struct]
+         grad: [1x1 struct]
+          cfg: [1x1 struct]
 
 ## The forward model and lead field matrix
 

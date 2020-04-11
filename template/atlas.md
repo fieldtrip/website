@@ -192,11 +192,11 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
     yeo7 = 
 
             dim: [256 256 256]
-            hdr: [1×1 struct]
-      transform: [4×4 double]
+            hdr: [1x1 struct]
+      transform: [4x4 double]
            unit: 'mm'
-         tissue: [256×256×256 double]
-    tissuelabel: {7×1 cell}
+         tissue: [256x256x256 double]
+    tissuelabel: {7x1 cell}
        coordsys: 'mni'
 
     yeo17 = ft_read_atlas('/template/atlas/yeo/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask_colin27.nii')
@@ -204,11 +204,11 @@ In FieldTrip, the two atlases are included as nifti files. You can read them lik
     yeo17 = 
 
             dim: [256 256 256]
-            hdr: [1×1 struct]
-      transform: [4×4 double]
+            hdr: [1x1 struct]
+      transform: [4x4 double]
            unit: 'mm'
-         tissue: [256×256×256 double]
-    tissuelabel: {17×1 cell}
+         tissue: [256x256x256 double]
+    tissuelabel: {17x1 cell}
        coordsys: 'mni'
 
 
