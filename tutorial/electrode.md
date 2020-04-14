@@ -11,6 +11,12 @@ This tutorial demonstrates how to construct an electrode model based on a single
 
 This tutorial does not cover how to create a 2-D channel layout for plotting, nor how to do the source estimation itself.
 
+{% include markup/warning %}
+Please cite this paper when using our implementation for localizing electrodes with the Structure Sensor 3D-scanner.
+
+Homölle S, Oostenveld R. [Using a structured-light 3D scanner to improve EEG source modeling with more accurate electrode positions.](https://doi.org/10.1016/j.jneumeth.2019.108378) J Neurosci Methods. 2019 Oct 1;326:108378.
+{% include markup/end %}
+
 ### Background
 
 The quality of EEG source estimates depends on the accuracy of the volume conduction models and of the sensor positions. The volume conduction model comprises a description of the geometry, of the conductivities and of a computational approach for solving Poisson's equations. The current golden standard is to measure the head geometry with an MRI and the EEG electrode positions with a [Polhemus](https://polhemus.com) electromagnetic digitizer. However, the Polhemus device is expensive and measuring the sensor positions with the Polhemus is time consuming, which can make it challenging or even impossible on specific subject groups.
