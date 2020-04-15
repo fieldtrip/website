@@ -34,7 +34,7 @@ We're pleased to have the following colleagues as our tutors:
 * [Vitoria Piai](http://vitoriapiai.ruhosting.nl/)
 * [Xiaochen Zheng](https://www.ru.nl/english/people/zheng-x/)
 
-# Important instruction to execute prior to starting the workshop
+## Important instruction to execute prior to starting the workshop
 
 As a preliminary for the hands-on sessions, we want you to provide us with some information with respect to the computational setup you have on your end. This is needed for us to anticipate (and ideally fix) any restrictions on your end. Also, it is needed to avoid a lot of time to be spent during the first session to get everybody up-and-running.
 
