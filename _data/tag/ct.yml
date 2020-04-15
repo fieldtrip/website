@@ -1,29 +1,14 @@
-- name:  Localizing electrodes using a 3D-scanner
-  link:  /tutorial/electrode
-
 - name:  MEG dataformats
   link:  /dataformat/meg
-
-- name:  Analysis of human ECoG and sEEG recordings
-  link:  /tutorial/human_ecog
 
 - name:  CTF
   link:  /development/realtime/ctf
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis
-
 - name:  Conditional Granger causality in the frequency domain
   link:  /example/connectivity_conditional_granger
 
-- name:  Whole brain connectivity and network analysis
-  link:  /tutorial/networkanalysis_old
-
 - name:  Fit a dipole to the tactile ERF after mechanical stimulation
   link:  /example/fit_a_dipole_to_the_tactile_erf_after_mechanical_stimulation
-
-- name:  Preprocessing of EEG data and computing ERPs
-  link:  /tutorial/preprocessing_erp
 
 - name:  Fixing a missing channel
   link:  /example/fixing_a_missing_sensor
@@ -31,26 +16,14 @@
 - name:  How to incorporate head movements in MEG analysis
   link:  /example/how_to_incorporate_head_movements_in_meg_analysis
 
-- name:  Extracting the brain state and events from continuous sleep EEG
-  link:  /tutorial/sleep
-
 - name:  Interpolating data from the CTF151 to the CTF275 sensor array using megrealign
   link:  /example/megrealign
-
-- name:  Visual artifact rejection
-  link:  /tutorial/visual_artifact_rejection
 
 - name:  Use independent component analysis (ICA) to remove ECG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_ecg_artifacts
 
-- name:  Simulating and estimating, what about model (mis)match?
-  link:  /workshop/chieti/simulation
-
 - name:  Use independent component analysis (ICA) to remove EOG artifacts
   link:  /example/use_independent_component_analysis_ica_to_remove_eog_artifacts
-
-- name:  FieldTrip connectivity demo
-  link:  /workshop/meg-uk-2015/fieldtrip-connectivity-demo
 
 - name:  Can I create an artificial CTF dataset using MATLAB?
   link:  /example/writing_simulated_data_to_a_ctf_dataset
