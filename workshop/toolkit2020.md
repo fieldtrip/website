@@ -18,6 +18,7 @@ We're pleased to have the following colleagues as our tutors:
 * [Eleanor Huizeling](https://www.mpi.nl/people/huizeling-eleanor)
 * [Elie Rassi](https://www.ru.nl/english/people/el-rassi-e/)
 * [Eric Maris](https://www.ru.nl/english/people/maris-e/)
+* [Frederik Weber](https://www.ru.nl/english/people/weber-f/)
 * [Hesham ElShafeh](https://twitter.com/heshamelshaf3i)
 * [Jan-Mathijs Schoffelen](https://www.ru.nl/english/people/schoffelen-j/)
 * [Joey Zhou](https://www.ru.nl/english/people/zhou-y/)
