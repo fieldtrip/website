@@ -18,7 +18,6 @@ If there is no information listed for a potential workshop below, then we don't 
 We are considering and/or concretely planning to have FieldTrip workshops in
 
 - 2020, [MEG/EEG toolkit](/workshop/toolkit2020) - Nijmegen, NL
-- 2020, [EEG workshop](/workshop/chile2020) - Maule, Chile
 
 Previous FieldTrip workshops took place at
 
