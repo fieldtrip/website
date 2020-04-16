@@ -42,7 +42,7 @@ _Figure: A schematic overview of the steps in averaging of event related fields.
 
 ### Reading in the data
 
-We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) & [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat)). Load the data into MATLAB with the  command 'load' and skip to [Timelockanalysis](#Timelockanalysis).
+We will now read and preprocess the data. If you would like to continue directly with the already preprocessed data, you can download it from the FieldTrip FTP server ([dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat)). Load the data into MATLAB with the  command 'load' and skip to [Timelockanalysis](#Timelockanalysis).
 
 Otherwise run the following code:
 
@@ -91,7 +91,7 @@ If preprocessing was done as described, the data will have the following field
 
 Note that 'dataFIC_LP.label' has 149 in stead of 151 labels since channels MLP31 and MLO12 were excluded. 'dataFIC-LP.trial' has 76 in stead of 87 trials because 10 trials were rejected because of artifacts.
 
-The most important fields are 'dataFIC_LP.trial' containing the individual trials and 'data.time' containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the followin
+The most important fields are 'dataFIC_LP.trial' containing the individual trials and 'data.time' containing the time vector for each trial. To visualize the single trial data (trial 1) on one channel (channel 130) do the following
 
     plot(dataFIC_LP.time{1}, dataFIC_LP.trial{1}(130,:))
 
@@ -102,7 +102,7 @@ _Figure: The MEG data from a single trial in a single sensor obtained after ft_p
 
 ## Timelockanalysis
 
-The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes averages of all the trials in a data structure. It requires preprocessed data (see above), which is available from [[dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat).
+The function **[ft_timelockanalysis](/reference/ft_timelockanalysis)** makes averages of all the trials in a data structure. It requires preprocessed data (see above), which is available from [dataFIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFIC_LP.mat), [dataFC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataFC_LP.mat) and [dataIC_LP.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/dataIC_LP.mat).
 
     load dataFIC_LP
     load dataFC_LP
@@ -164,11 +164,12 @@ _Figure: The event related fields for three conditions plotted simultaneously us
 
 To plot one sensor data use **[ft_singleplotER](/reference/ft_singleplotER)** and specify the name of the channel you are interested in, for instance MLC2
 
+    cfg = [];
     cfg.xlim = [-0.2 1.0];
     cfg.ylim = [-1e-13 3e-13];
     cfg.channel = 'MLC24';
     clf;
-    ft_singleplotER(cfg,avgFC, avgIC, avgFIC);
+    ft_singleplotER(cfg, avgFC, avgIC, avgFIC);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/singleplot_mlc24_4mar20_erf.png" width="400" %}
 
@@ -180,7 +181,7 @@ To plot the topographic distribution of the data averaged over the time interval
     cfg.xlim = [0.3 0.5];
     cfg.colorbar = 'yes';
     cfg.layout = 'CTF151_helmet.mat';
-    ft_topoplotER(cfg,avgFIC);
+    ft_topoplotER(cfg, avgFIC);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_FIC_4mar20_erf.png" width="400" %}
 
@@ -193,7 +194,7 @@ To plot a sequence of topographic plots define the time intervals in cfg.xlim
     cfg.zlim = [-2e-13 2e-13];      % Set the 'color' limits.
     cfg.layout = 'CTF151_helmet.mat';
     clf;
-    ft_topoplotER(cfg,avgFIC);
+    ft_topoplotER(cfg, avgFIC);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_timeserie_4mar20_erf.png" width="700" %}
 
@@ -202,9 +203,9 @@ _Figure: The topography of event related fields over time obtained using ft_topo
 #### Exercise 1
 
 {% include markup/info %}
-What changes in data if you extend the baseline correction from -200 ms to 0 ms to -500 ms to 0?
+What changes in the data if you extend the baseline correction (which is initially from -200 ms to 0 ms) to a longer period from -500 ms to 0?
 
-Apply a band-pass filter in the preprocessing instead of only a low-pass filter. Use for example the values from 1 to 30 Hz. What changes in the data? What are the pros and cons of using a high-pass filter?
+Apply a band-pass filter in the preprocessing instead of only a low-pass filter. Use for example the values from 1 Hz to 30 Hz. What changes in the data? What are the pros and cons of using a high-pass filter?
 {% include markup/end %}
 
 #### Exercise 2
@@ -232,7 +233,7 @@ Calculate the planar gradient of the averaged data
 Compute the amplitude of the planar gradient by combining the horizontal and vertical components of the planar gradient according to Pythagoras rul
 
     cfg = [];
-    avgFICplanarComb = ft_combineplanar(cfg,avgFICplanar);
+    avgFICplanarComb = ft_combineplanar(cfg, avgFICplanar);
 
 ## Plot the results (planar gradients)
 
@@ -240,19 +241,22 @@ To compare the axial gradient data to the planar gradient data we plot them both
 
 Plot the results of the field of the axial gradiometers and the planar gradient to compare the
 
-    cfg = [];
     clf
     subplot(121);
+
+    cfg = [];
     cfg.xlim = [0.3 0.5];
     cfg.zlim = 'maxmin';
     cfg.colorbar = 'yes';
     cfg.layout = 'CTF151_helmet.mat';
-    ft_topoplotER(cfg,avgFIC)
-    colorbar;
+    ft_topoplotER(cfg, avgFIC)
+
+    colorbar; % you can also try out cfg.colorbar = 'south'
     subplot(122);
+
     cfg.zlim = 'maxabs';
     cfg.layout = 'CTF151_helmet.mat';
-    ft_topoplotER(cfg,avgFICplanarComb);
+    ft_topoplotER(cfg, avgFICplanarComb);
 
 {% include image src="/assets/img/tutorial/eventrelatedaveraging/topoplot_axialplanar_4mar20_erf.png" width="500" %}
 
@@ -270,9 +274,9 @@ Explain the topography of the planar gradient from the fields of the axial gradi
 
 ## Grand average over subjects
 
-Finally you can make a grand average over all our four subjects with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. Before calculating the grand average, the data of each subject can be realigned to standard sensor positions with **[ft_megrealign](/reference/ft_megrealign)**. For this step, there are the additional datasets Subject02.ds, Subject03.ds and Subject04.ds.
+Finally you can make a grand-average over all our four subjects with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. Before calculating the grand average, the data of each subject can be realigned to standard sensor positions with **[ft_megrealign](/reference/ft_megrealign)**. For this step, there are the additional datasets [Subject02.ds](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.ds), [Subject03.ds](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.ds), and [Subject04.ds](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.ds).
 
-For more information about this type the following commands in the MATLAB command window.
+For more information about this, type the following commands in the MATLAB command window.
 
     help ft_timelockgrandaverage
     help ft_megrealign
