@@ -274,7 +274,7 @@ Explain the topography of the planar gradient from the fields of the axial gradi
 
 ## Grand average over subjects
 
-Finally you can make a grand-average over all our four subjects with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. Before calculating the grand average, the data of each subject can be realigned to standard sensor positions with **[ft_megrealign](/reference/ft_megrealign)**. For this step, there are the additional datasets [Subject02.ds](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.ds), [Subject03.ds](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.ds), and [Subject04.ds](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.ds).
+Finally you can make a grand-average over all our four subjects with **[ft_timelockgrandaverage](/reference/ft_timelockgrandaverage)**. Before calculating the grand average, the data of each subject can be realigned to standard sensor positions with **[ft_megrealign](/reference/ft_megrealign)**. For this step, there are the additional datasets [Subject02.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject02.zip), [Subject03.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject03.zip), and [Subject04.zip](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/Subject04.zip).
 
 For more information about this, type the following commands in the MATLAB command window.
 
