@@ -168,7 +168,7 @@ data2bids(cfg, data_combined);
 
 [XSens](http://www.xsens.com/) makes IMU-based motion capture systems that are used in the animation industry and in research. Their MVN Analyze system comprises full-body sensor systems and aquisition and analysis software. By default the software stores the data in the proprietary MVN file format, but it allows the data to be exported to C3D and MVNX formats, which are supported by FieldTrip. See also the [getting started](/getting_started/xsens/) documentation on this system.
 
-###
+### Example
 
 Here is a short example that demonstrates how XSens data can be converted to BIDS, starting from either C3D files or from MVNX files.
 
