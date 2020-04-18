@@ -1,6 +1,3 @@
 - name:  Converting an example motion tracking dataset for sharing in BIDS
   link:  /example/bids_motion
 
-- name:  Getting started with XSens motion capture data
-  link:  /getting_started/xsens
-
