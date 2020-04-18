@@ -6,7 +6,9 @@ tags: [example, bids, sharing, motion, qualisys, optotrak, xsens]
 # Converting an example motion tracking dataset for sharing in BIDS
 
 {% include markup/danger %}
-BIDS does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. This example may also serve to start a discussion on whether and how this data type should be added to the [BIDS specification](http://bids-specification.readthedocs.io/).  
+BIDS does currently not specify how to represent motion tracking data. This example - and the support that is implemented in the **[data2bids](/reference/data2bids)** function - should be considered as a preliminary proposal to help researchers with their existing data. 
+
+See [this issue](https://github.com/bids-standard/bids-specification/issues/443) on GitHub and [this Google doc](https://docs.google.com/document/d/1iaaLKgWjK5pcISD1MVxHKexB3PZWfE2aAC5HF_pCZWo/edit?usp=sharing) with the draft specification that is being discussed.
 {% include markup/end %}
 
 There are numerous companies that manufacture research-oriented motion capture systems, such as Polhemus, Qualisys, NDI Polaris, X-Sens, etc. Furthermore, there are multiple technologies that are used for motion tracking, such as optical cameras (often with IR markers), electromagnetic tracking, or using inertial measurement units (IMUs). Optical and electromagnetic tracking systems result in measurements that can directly be interpreted as the position of the marker, which changes over time. Systems based on IMUs record signals from multiple accelerometers, gyroscopes, and (sometimes) magnetometers; the raw data from these systems requires further processing before it can be interpreted as position.
@@ -209,7 +211,7 @@ cfg.task = 'walking';
 cfg.bidsroot = './bids';  % write to the present working directory
 cfg.datatype = 'motion';
 
-% we can export c3d files, here for subject one
+%% we can export c3d files, here for subject one
 cfg.sub = 'S01';
 cfg.participants.age = 32;
 cfg.participants.gender = 'm';
@@ -218,9 +220,7 @@ cfg.dataset = c3dfile;
 
 data2bids(cfg);
 
-%%
-
-% we can also export mvnx files, here for subject two
+%% we can also export mvnx files, here for subject two
 cfg.sub = 'S02';
 cfg.participants.age = 28;
 cfg.participants.gender = 'f';
