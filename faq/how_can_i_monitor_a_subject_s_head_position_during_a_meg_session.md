@@ -10,7 +10,7 @@ The CTF/Neuromag acquisition software provides a shared memory in which the the 
 {% include markup/warning %}
 Please cite this paper when you use the realtime head localizer in your research:
 
-Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage. 2013 Mar;68:39-48. doi: 10.1016/j.neuroimage.2012.11.047.
+Stolk A, Todorovic A, Schoffelen JM, Oostenveld R. **[Online and offline tools for head movement compensation in MEG.](https://doi.org/10.1016/j.neuroimage.2012.11.047)** Neuroimage, 2013.
 {% include markup/end %}
 
 ## Acquiring the head shape for more realistic visualization
@@ -51,9 +51,9 @@ Now we have the head shape in the correct coordinate system and can use it for o
 
 After initializing the MEG system, one starts the **acq2ft/neuromag2ft application**. When subsequently starting Acquisition, the data is transferred in realtime to the FieldTrip buffer which can be read from any computer connected through a network. Point to the location of the buffer by correctly specifying cfg.dataset like this:
 
-      cfg = [];
-      cfg.dataset = 'buffer://hostname:1972';     % get data from buffer
-      ft_realtime_headlocalizer(cfg)
+    cfg = [];
+    cfg.dataset = 'buffer://hostname:1972';     % get data from buffer
+    ft_realtime_headlocalizer(cfg)
 
 To improve the real time head movement compensation, we can also specify a realistic head shape and a realistic model of the dewar:
 
@@ -82,20 +82,20 @@ _Figure 1; Top (left plot) and back view (right plot) of the subject's head. Nas
 
 In stead of reading data from the shared memory, one now reads data from a previously recorded MEG dataset. This can be done offline, on any computer running a recent version of MATLAB.
 
-      cfg.bufferdata = 'first';                 % read data from first until last segment
-      cfg.template   = 'previousdataset.ds';
-      cfg.dataset    = 'previousdataset.ds';
-      ft_realtime_headlocalizer(cfg)
+    cfg.bufferdata = 'first';                 % read data from first until last segment
+    cfg.template   = 'previousdataset.ds';
+    cfg.dataset    = 'previousdataset.ds';
+    ft_realtime_headlocalizer(cfg)
 
 Before we can replay the data acquired with the Neuromag/Elekta/MEGIN system, the data has to be preprocessed with maxfilter. The first possibility is to add the relevant information to .fif file with MaxMove (see also under further reading).
 
 The other option is to use maxfilter to create an ASCII file containing the relevant information about head movement. Under 'Head position estimation' the button 'Save head postions in an ASCII file' just need to be pressed (see also under further reading).
 
-      cfg.bufferdata   = 'first';                 % read data from first until last segment
-      cfg.template     = 'previousdataset';
-      cfg.dataset      = 'previousdataset';
-      cfg.headmovement = 'maxfilter.pos';
-      ft_realtime_headlocalizer(cfg)
+    cfg.bufferdata   = 'first';                 % read data from first until last segment
+    cfg.template     = 'previousdataset';
+    cfg.dataset      = 'previousdataset';
+    cfg.headmovement = 'maxfilter.pos';
+    ft_realtime_headlocalizer(cfg)
 
 ### CTF specific protocol
 
@@ -107,19 +107,19 @@ The other option is to use maxfilter to create an ASCII file containing the rele
 
 4. Start MATLAB on the 'real-time computer' by typing on the Linux command line
 
-   matlab79
+       matlab79
 
 5. Visualize the subject's head in real-time. At the Donders, Odin is the default FieldTrip buffer location and therefore, cfg.dataset does not need specification.
 
-   cfg = [];
-   ft_realtime_headlocalizer(cfg)
+       cfg = [];
+       ft_realtime_headlocalizer(cfg)
 
 6. You can project the head localizer into the MSR by one buttonclick. Click the left button on the video matrix and the signal from the presentation computer is being overwritten by the head localizer computer. This way both experimenter and subject get to see the virtual representation of the subject's head.
 
 7. You can also reposition the subject according to a previous session. The headlocalizer dedicated computer has access to Odin's data directory, and thus, the headcoil coordinates. This is the .hc file, located in the .ds directory. Specify the template as follows and run the headlocalizer which should give you the markers from the start.
 
-   cfg.template = '/mnt/megdata/20100812/ArjSto_1200hz_20100812_01.ds';
-   ft_realtime_headlocalizer(cfg)
+       cfg.template = '/mnt/megdata/20100812/ArjSto_1200hz_20100812_01.ds';
+       ft_realtime_headlocalizer(cfg)
 
 Keep in mind that Odin's data directory is automatically cleaned every now and then. If your template dataset has been removed, you could still read it from your own M disk in case you have backed it up there. Logout the meg user on the headlocalizer dedicated computer and login as yourself. Now run the headlocalizer with specifying the file location on your M disk (e.g. cfg.template = '/home/action/arjsto/MEG/ArjSto_1200hz_20100812_01.ds').
 
@@ -133,9 +133,9 @@ Currently the option for online monitoring is only available for the CTF system.
 4. Start MATLAB on the 'real-time computer'
 5. Visualize the subject's head in real-time.
 
-   cfg = [];
-   cfg.dataset = 'buffer://server:port'
-   ft_realtime_headlocalizer(cfg)
+       cfg = [];
+       cfg.dataset = 'buffer://server:port'
+       ft_realtime_headlocalizer(cfg)
 
 ## Further reading
 
