@@ -297,7 +297,7 @@ To plot the data use the following for-loop:
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
 
-In this for-loop, cfg.xlim defines the time interval of each subplot. The variables pos_int and neg_int boolean vectors indicating which channels of pos and neg are significant in the time interval of interest. This is defined in cfg.highlightchannel. The for-loop plots 20 subplots covering a time interval of 50 ms each. Running this for-loop creates the following figur
+In this for-loop, cfg.xlim defines the time interval of each subplot. The variables pos_int and neg_int boolean vectors indicating which channels of pos and neg are significant in the time interval of interest. This is defined in cfg.highlightchannel. The for-loop plots 20 subplots covering a time interval of 50 ms each. Running this for-loop creates the following figure:
 
 {% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_ax_subj1_new.png" width="700" %}
 
@@ -433,7 +433,7 @@ We now perform the permutation test using **[ft_timelockstatistics](/reference/f
 2.  The design matrix is different (i.c., it now contains two lines instead of one)
 3.  The so-called _unit variable_ has to be defined.
 
-The configuration looks as follow
+The configuration looks as follows:
 
     cfg = [];
     cfg.channel = {'MEG'};
@@ -474,13 +474,13 @@ We now describe the differences between this configuration and the configuration
 
 - Because the design matrix contains both a unit variable and an independent variable, it has to be specified in the configuration which row contains which variable. This information is passed in the fields **cfg.uvar** (for the unit variable) and **cfg.ivar** (for the independent variable).
 
-Now, use the configuration above to perform the following statistical analysi
+Now, use the configuration above to perform the following statistical analysis:
 
     [stat] = ft_timelockstatistics(cfg, allsubjFIC{:}, allsubjFC{:})
 
     save stat_ERF_planar_FICvsFC_GA stat
 
-The output can also be obtained from [stat_ERF_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat). If you need to reload the statistics output, us
+The output can also be obtained from [stat_ERF_planar_FICvsFC_GA.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC_GA.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_planar_FICvsFC_GA
 
@@ -544,7 +544,7 @@ With the output, we can now create the plots
        ft_topoplotER(cfg, GA_FICvsFC);
     end
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_ga_newfeb2016.png" width="600" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_ga_new.png" width="600" %}
 
 _Figure 6: Raw effect (FIC-FC) on the grand average planar gradient ERFs the significant cluster is highlighted._
 
