@@ -183,7 +183,7 @@ Save the output to disk:
 
 #### The format of the output
 
-The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_axial_FICvsFC.mat). If you need to reload the statistics output, us
+The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_axial_FICvsFC.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_axial_FICvsFC
 
@@ -249,7 +249,7 @@ In plotting significant clusters, we must of course first determine which cluste
     neg_signif_clust = find(neg_cluster_pvals < stat.cfg.alpha);
     neg = ismember(stat.negclusterslabelmat, neg_signif_clust);
 
-Alternatively, we can manually select which clusters we want to plot. If we only want to see the extext of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follow
+Alternatively, we can manually select which clusters we want to plot. If we only want to see the extext of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follows:
 
     pos = stat.posclusterslabelmat == 1; % or == 2, or 3, etc.
       neg = stat.negclusterslabelmat == 1;
@@ -299,7 +299,7 @@ To plot the data use the following for-loop:
 
 In this for-loop, cfg.xlim defines the time interval of each subplot. The variables pos_int and neg_int boolean vectors indicating which channels of pos and neg are significant in the time interval of interest. This is defined in cfg.highlightchannel. The for-loop plots 20 subplots covering a time interval of 50 ms each. Running this for-loop creates the following figur
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_ax_subj1.png" width="700" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_ax_subj1_new.png" width="700" %}
 
 _Figure 4: Raw effect (FIC-FC) on the ERFs of subject 1, significant clusters are highlighted.._
 
@@ -347,11 +347,11 @@ Having calculated synthetic planar gradient data, one can use the same configura
 
     save stat_ERF_planar_FICvsFC stat
 
-The output can also be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, us
+The output can also be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_planar_FICvsFC
 
-We now calculate the raw effect in the average with planar gradient data using the following configuratio
+We now calculate the raw effect in the average with planar gradient data using the following configuration:
 
     cfg = [];
     cfg.keeptrials = 'no';   % now only the average, not the single trials
@@ -367,7 +367,7 @@ We now calculate the raw effect in the average with planar gradient data using t
     cfg.parameter = 'avg';
     raweffectFICvsFC     = ft_math(cfg, avgFIC_planar_cmb, avgFC_planar_cmb);
 
-Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels belonging to the significant cluster
+Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels contributing to the largest cluster
 
     figure;
     timestep = 0.05; %(in seconds)
@@ -405,7 +405,7 @@ Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_subj1.png" width="700" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_subj1_new.png" width="700" %}
 
 _Figure 5: Raw effect (FIC-FC) on the planar gradient ERFs of subject 1, the significant clusters are highlighted.._
 
