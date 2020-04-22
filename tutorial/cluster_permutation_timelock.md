@@ -347,11 +347,11 @@ Having calculated synthetic planar gradient data, one can use the same configura
 
     save stat_ERF_planar_FICvsFC stat
 
-The output can also be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, us
+The output can also be obtained from [ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_planar_FICvsFC.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_planar_FICvsFC
 
-We now calculate the raw effect in the average with planar gradient data using the following configuratio
+We now calculate the raw effect in the average with planar gradient data using the following configuration:
 
     cfg = [];
     cfg.keeptrials = 'no';   % now only the average, not the single trials
@@ -367,7 +367,7 @@ We now calculate the raw effect in the average with planar gradient data using t
     cfg.parameter = 'avg';
     raweffectFICvsFC     = ft_math(cfg, avgFIC_planar_cmb, avgFC_planar_cmb);
 
-Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels belonging to the significant cluster
+Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER)** we can plot the raw effect and highlight the channels contributing to the largest cluster
 
     figure;
     timestep = 0.05; %(in seconds)
@@ -405,7 +405,7 @@ Using the following configuration for **[ft_topoplotER](/reference/ft_topoplotER
        ft_topoplotER(cfg, raweffectFICvsFC);
     end
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_subj1.png" width="700" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_pl_subj1_new.png" width="700" %}
 
 _Figure 5: Raw effect (FIC-FC) on the planar gradient ERFs of subject 1, the significant clusters are highlighted.._
 
