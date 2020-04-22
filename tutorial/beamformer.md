@@ -159,22 +159,23 @@ You can now visualise the headmodel together with the sensor positions:
 Why might a single sphere model be inadequate for performing beamformer estimates?
 {% include markup/end %}
 
-### Lead fields
+### Source model and lead fields
 
-The next step is to discretize the brain volume into a grid (the sourcemodel). For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
+The next step is to discretize the brain volume into a regular grid with dipoles. For each grid point the lead field matrix is calculated. It is calculated with respect to a grid with a 1 cm resolution.
 
 {% include markup/warning %}
 Sensors MLP31 and MLO12 were removed from the data set. Thus it is essential to remove these sensors as well when calculating the lead fields.
 {% include markup/end %}
 
-    cfg                 = [];
-    cfg.grad            = freqPost.grad;
-    cfg.headmodel       = headmodel;
-    cfg.reducerank      = 2;
-    cfg.channel         = {'MEG','-MLP31', '-MLO12'};
-    cfg.resolution = 1;   % use a 3-D grid with a 1 cm resolution
-    cfg.sourcemodel.unit       = 'cm';
-    grid = ft_prepare_leadfield(cfg);
+    cfg                  = [];
+    cfg.grad             = freqPost.grad;
+    cfg.headmodel        = headmodel;
+    cfg.reducerank       = 2;
+    cfg.channel          = {'MEG','-MLP31', '-MLO12'};
+    % use a 3-D grid with a 1 cm resolution
+    cfg.resolution       = 1;   
+    cfg.sourcemodel.unit = 'cm';
+    sourcemodel = ft_prepare_leadfield(cfg);
 
 {% include markup/warning %}
 If you are not contrasting the activity of interest against another condition or baseline time-window, then you may choose to normalize the lead field (cfg.normalize='yes'), which will help control against the power bias towards the center of the head.
@@ -203,7 +204,7 @@ Using the cross-spectral density and the lead field matrices a spatial filter is
     cfg              = [];
     cfg.method       = 'dics';
     cfg.frequency    = 18;
-    cfg.sourcemodel  = grid;
+    cfg.sourcemodel  = sourcemodel;
     cfg.headmodel    = headmodel;
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda       = 0;
@@ -227,7 +228,7 @@ The function **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** aligns 
 
     cfg            = [];
     cfg.downsample = 2;
-    cfg.parameter = 'pow';
+    cfg.parameter  = 'pow';
     sourcePostInt_nocon  = ft_sourceinterpolate(cfg, sourcePost_nocon , mri);
 
 Plot the interpolated data:
@@ -310,7 +311,7 @@ Then we compute the inverse filter based on both conditions. Note the use of cfg
     cfg              = [];
     cfg.method       = 'dics';
     cfg.frequency    = 18;
-    cfg.sourcemodel         = grid;
+    cfg.sourcemodel  = sourcemodel;
     cfg.headmodel    = headmodel;
     cfg.dics.projectnoise = 'yes';
     cfg.dics.lambda       = '5%';
