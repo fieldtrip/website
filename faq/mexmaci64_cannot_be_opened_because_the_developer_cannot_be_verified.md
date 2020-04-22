@@ -21,7 +21,7 @@ This problem is due to additional security measures implemented in macOS. MATLAB
 If you trust the source where you have downloaded FieldTrip, you can resolve these errors for all mex files at once by opening a terminal and typing
 
 ```bash
-find LOCATION_OF_FIELDTRIP -name “.mex” -exec spctl --add {} ;
+find LOCATION_OF_FIELDTRIP -name “.mex” -exec spctl --add {} \;
 ```
 
 where `LOCATION_OF_FIELDTRIP` is the place where you have unzipped FieldTrip.
