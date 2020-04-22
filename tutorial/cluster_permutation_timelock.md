@@ -183,7 +183,7 @@ Save the output to disk:
 
 #### The format of the output
 
-The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_axial_FICvsFC.mat). If you need to reload the statistics output, us
+The output can also be obtained from [stat_ERF_axial_FICvsFC.mat](ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/stat_ERF_axial_FICvsFC.mat). If you need to reload the statistics output, use:
 
     load stat_ERF_axial_FICvsFC
 
@@ -249,7 +249,7 @@ In plotting significant clusters, we must of course first determine which cluste
     neg_signif_clust = find(neg_cluster_pvals < stat.cfg.alpha);
     neg = ismember(stat.negclusterslabelmat, neg_signif_clust);
 
-Alternatively, we can manually select which clusters we want to plot. If we only want to see the extext of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follow
+Alternatively, we can manually select which clusters we want to plot. If we only want to see the extext of the first (i.e. most significant) positive and negative clusters, for instance, we can do so as follows:
 
     pos = stat.posclusterslabelmat == 1; % or == 2, or 3, etc.
       neg = stat.negclusterslabelmat == 1;
@@ -299,7 +299,7 @@ To plot the data use the following for-loop:
 
 In this for-loop, cfg.xlim defines the time interval of each subplot. The variables pos_int and neg_int boolean vectors indicating which channels of pos and neg are significant in the time interval of interest. This is defined in cfg.highlightchannel. The for-loop plots 20 subplots covering a time interval of 50 ms each. Running this for-loop creates the following figur
 
-{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_ax_subj1.png" width="700" %}
+{% include image src="/assets/img/tutorial/cluster_permutation_timelock/clusperm_erf_topos_raweffect_ficvsfc_ax_subj1_new.png" width="700" %}
 
 _Figure 4: Raw effect (FIC-FC) on the ERFs of subject 1, significant clusters are highlighted.._
 
