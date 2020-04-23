@@ -62,7 +62,7 @@ Now we have one image per trial (per condition), we can enter these into a GLM u
 
 - Press “New: Covariate” under the “Covariates” menu, and for the “Name”, enter “Order”. For vector, enter “1:880” (880 is 295+296+289) and select “Interactions” “With Factor 1” and “Centering” “Factor 1 mean”. By doing so, we create three (mean-centered within each level) regressors that model linear effects of time within each trial type.
 
-- For didactic purposes let us also define a random covariate that should not generate significant effects. Press “New: Covariate” under the “Covariates” menu, for the “Name”, enter “Random” and for the “Vector” enter “randn(1, 880)” (mean-centered by default). Before defining this covariate, we would recommend you type “rng('shuffle')” at the MATLAB prompt such that everyone will create a different covariate.
+- For didactic purposes let us also define a random covariate that should not generate significant effects. Press “New: Covariate” under the “Covariates” menu, for the “Name”, enter “Random” and for the “Vector” enter `randn(1, 880)` (mean-centered by default). Before defining this covariate, we would recommend you type `rng('shuffle')` at the MATLAB prompt such that everyone will create a different covariate.
 
 This now completes the GLM specification, but before running it, we will add one more module.
 
