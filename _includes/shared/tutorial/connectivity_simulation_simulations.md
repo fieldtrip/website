@@ -10,7 +10,9 @@ z(t) = 0.5*z(t-1) + 0.4*x(t-1) - 0.2*z(t-2)
 
 which is done using
 
-    rng(50) %arbitrarily chosen random number generator for reproducibility
+    % always start with the same random numbers to make the figures reproducible
+    rng default
+    rng(50)
 
     cfg             = [];
     cfg.ntrials     = 500;
