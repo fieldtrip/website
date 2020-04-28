@@ -62,18 +62,6 @@ _The following are the practical notes that were distributed to participants and
 
 We would be very happy if you could spend a couple of minutes of your time to have a look at our [Code of Conduct](/workshop/toolkit2020/code_of_conduct) to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please do have a look at and let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
 
-### Shared Google documents
-
-_All tutors received a link to the shared folder on the Google drive, all participants only received a link to the documents relevant to them. The details available to the participants are not shared here, but included the list of participants with some details, the schedule with the assignments of lecturers/tutors, etc._
-
-The tutors have access to the complete shared folder with all documents, the participants only to the subset relevant to them.
-
-### Shared Slack
-
-_Please note that the invite link is not valid any more._
-
-Inviting people goes via [this link](https://join.slack.com/t/meg-toolkit/shared_invite/zt-czwha2zp-sHFYeq1EvmMFVxS1jGGBAg). We will disable this link once everyone is on board.
-
 ### Shared calendar
 
 To access the shared calendar using Google Calendar in your browser, you go to “other calendars”, then “add from URL” and use [this shortened link](https://bit.ly/2UPK5YJ).
@@ -82,7 +70,19 @@ To access the shared calendar from another application (e.g. Apple Calendar), yo
 
 If you want read/write access (to help maintain/update the schedule), please give your Google account name to Robert, Joey or Jan-Mathijs.
 
-### Shared Zoom meetings
+### Shared Google documents
+
+_All tutors received a link to the shared folder on the Google drive, all participants only received a link to the documents relevant to them. The details available to the participants are not shared here, but included the list of participants with some details, the schedule with the assignments of lecturers/tutors, etc._
+
+The tutors have access to the complete shared folder with all documents, the participants only to the subset relevant to them.
+
+### Slack messaging
+
+_Please note that the invite link is not valid any more._
+
+Inviting people goes via [this link](https://join.slack.com/t/meg-toolkit/shared_invite/zt-czwha2zp-sHFYeq1EvmMFVxS1jGGBAg). We will disable this link once everyone is on board.
+
+### Zoom meetings
 
 Robert has a paid pro-account and is able to add/edit scheduled meetings. We have prepared 5 online meetings, one for every day, from 8:00-18:00. Each evening (around 18:30) we will start a new Zoom session; we need some time in between to download and convert the video recordings of the day.
 
