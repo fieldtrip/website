@@ -15,7 +15,7 @@ _This is the list of items that we used to get all work organized prior to and d
 -   Decide on the digital tools to use (zoom, slack, google docs)
 -   Find tutors for the online hands-on sessions
 -   Figure out the fee with the management and administration
--   Invite everyone on slack  
+-   Invite everyone on Slack  
 -   Instruct the tutors/lecturers
 -   Test zoom breakout rooms
 -   Discuss payment with admin
@@ -56,11 +56,11 @@ _This is the list of items that we used to get all work organized prior to and d
 
 ## Misc
 
--   Make more tutors admin of the slack workspace
+-   Make more tutors admin of the Slack workspace
 -   Distribute links to session specific shared Q&A google docs
 -   Add code of conduct (Sophie)
 -   Distribute links to personal hands-on google docs (just before)
--   Make slack channels for each session (during)
+-   Make Slack channels for each session (during)
 -   Share the slides of the lectures
 -   Get permission for recording and sharing video recordings
 -   Highlight or link to the current element (throughout the week)

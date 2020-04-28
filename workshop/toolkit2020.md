@@ -62,37 +62,39 @@ _The following are the practical notes that were distributed to participants and
 
 We would be very happy if you could spend a couple of minutes of your time to have a look at our [Code of Conduct](/workshop/toolkit2020/code_of_conduct) to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please do have a look at and let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
 
-### Shared google documents
+### Shared Google documents
 
-_All tutors received a link to the shared folder on the google drive, all participants only received a link to the documents relevant to them. The details available to the participants are not shared here, but included the list of participants with some details, the schedule with the assignments of lecturers/tutors, etc._
+_All tutors received a link to the shared folder on the Google drive, all participants only received a link to the documents relevant to them. The details available to the participants are not shared here, but included the list of participants with some details, the schedule with the assignments of lecturers/tutors, etc._
 
-The tutors have access to the complete shared folder, the participants only to the subset relevant to them.
+The tutors have access to the complete shared folder with all documents, the participants only to the subset relevant to them.
 
-### Shared slack
+### Shared Slack
 
 _Please note that the invite link is not valid any more._
 
-Inviting people goes via <https://join.slack.com/t/meg-toolkit/shared_invite/zt-czwha2zp-sHFYeq1EvmMFVxS1jGGBAg>. We will disable this link once everyone is on board.
+Inviting people goes via [this link](https://join.slack.com/t/meg-toolkit/shared_invite/zt-czwha2zp-sHFYeq1EvmMFVxS1jGGBAg). We will disable this link once everyone is on board.
 
 ### Shared calendar
 
-To access the shared calendar using Google Calendar in your browser, you go to “other calendars”, then “add from URL” and use the shortened link: <https://bit.ly/2UPK5YJ>.
+To access the shared calendar using Google Calendar in your browser, you go to “other calendars”, then “add from URL” and use [this shortened link](https://bit.ly/2UPK5YJ).
 
-To access the shared calendar from another application (e.g. Apple Calendar), you can use the full subscription link: <https://calendar.google.com/calendar/ical/vmikkt3gfq3q2dt7b65q9h5nqo%40group.calendar.google.com/private-0dc443093b11255847b13f35483465d7/basic.ics>.
+To access the shared calendar from another application (e.g. Apple Calendar), you can use the [full subscription link](https://calendar.google.com/calendar/ical/vmikkt3gfq3q2dt7b65q9h5nqo%40group.calendar.google.com/private-0dc443093b11255847b13f35483465d7/basic.ics).
 
-If you want read/write access (to help maintain/update the schedule), please give your google account name to Robert, Joey or Jan-Mathijs.
+If you want read/write access (to help maintain/update the schedule), please give your Google account name to Robert, Joey or Jan-Mathijs.
 
 ### Shared Zoom meetings
 
-Robert has a paid pro-account and is able to add/edit scheduled meetings. We have prepared 5 online meetings, one for every day, from 8:00-18:00. Each evening (around 18:30) we will start a new zoom session; we need some time in between to download and convert the video recordings of the day. Participants can join all these zoom meetings without the host being present. It is not always required that a host/lecturer/tutor is present, participants can also hang out together.
+Robert has a paid pro-account and is able to add/edit scheduled meetings. We have prepared 5 online meetings, one for every day, from 8:00-18:00. Each evening (around 18:30) we will start a new Zoom session; we need some time in between to download and convert the video recordings of the day.
+
+Participants can join all these Zoom meetings without the host being present. It is not always required that a host/lecturer/tutor is present, participants can also hang out together.
 
 All tutors and participants are made co-host, and at the start of a hands-on session we create enough breakout rooms for everyone. That allows everyone to switch between their assigned breakout room and the main room when they want, but also to switch to other breakout rooms.
 
-Tutors should sign up as “Firstname Lastname” like everyone else, and set their status to “🤓 Tutoring”. Please note that you should set it such that the status does not automatically clear itself.
+Participants should sign up as “Firstname Lastname” and add a profile picture to make it more personal. Tutors should also sign up as “Firstname Lastname” like everyone else, and set their status to “🤓 Tutoring”. Please note that you should set it such that the status does not automatically clear itself.
 
 ### Zoom meeting links
 
-_The links to the Zoom sessions are not valid any more._
+_Note that these links to the Zoom sessions are not valid any more._
 
 -   [Monday](https://zoom.us/j/577983620?pwd=dWoxV1RVYURzbURDMklLQnF1K2tRdz09)
 -   [Tuesday](https://zoom.us/j/457846707?pwd=ODltaXUxSGc2ZTQrN1FMTGdhM0c0UT09)
@@ -102,13 +104,13 @@ _The links to the Zoom sessions are not valid any more._
 
 ### Lectures
 
-We will stream the pre-recorded lectures live, but you can also choose to watch them (on youtube) at a moment that suits you, preferably prior to the Q&A session. There are two lectures that are not pre-recorded (sleep, stats), these are only streamed live.
+We will stream the pre-recorded lectures live, but you can also choose to watch them (on YouTube) at a moment that suits you, preferably prior to the Q&A session. There are two lectures that are not pre-recorded (sleep, stats), these are only streamed live.
 
-If you watch the lecture on youtube, you have the advantage of stop, rewind, etc. Please write questions in the shared Q&A document.
+If you watch the lecture on YouTube, you have the advantage of stop, rewind, etc. Please write questions in the shared Q&A document.
 
-If you watch the youtube lecture live, you have the advantage of feeling more connected to the event, but note that we will not take live questions while streaming the youtube video. Please write them in the shared Q&A document.
+If you watch the YouTube lecture live, you have the advantage of feeling more connected to the event, but note that we will not take live questions while streaming the YouTube video. Please write them in the shared Q&A document.
 
-You can find the links to the online lectures in the google calendar. We will also post all important links for each on-going session in slack and at the top of this document.
+You can find the links to the online lectures in the Google calendar. We will also post all important links for each on-going session in Slack and at the top of this document.
 
 #### Lecture links
 
@@ -123,11 +125,11 @@ You can find the links to the online lectures in the google calendar. We will al
 
 ### Q&A sessions
 
-During the Q&A following the lectures we will go through the questions collected in the shared google doc. This will be an interactive session and you can also ask your questions here or contribute to the discussion.
+During the Q&A following the lectures we will go through the questions collected in the shared Google doc. This will be an interactive session and you can also ask your questions here or contribute to the discussion.
 
 During the Q&A sessions following each hands-on we will do a run-through of the tutorial, explaining what you should have seen (in case it did not work for you) and answer questions that arose during the hands-on. This will be an interactive session and we expect you to contribute.
 
-You can find the links to the shared Q&A documents in the google calendar. We will also post all important links for each on-going session in slack and at the top of this document.
+You can find the links to the shared Q&A documents in the Google calendar. We will also post all important links for each on-going session in Slack and at the top of this document.
 
 #### Links to shared Q&A documents
 
@@ -144,9 +146,9 @@ You can find the links to the shared Q&A documents in the google calendar. We wi
 -   [Connectivity lecture](https://docs.google.com/document/d/14vxuGMf8DhIKcJqWiX-uWYb-i5g_kXmm53JMq3LfNtc/edit)
 -   [Connectivity hands-on](https://docs.google.com/document/d/1555b5hNUa4HCwA-6A-ilMDwsACI6qgG1gT48eaCegYs/edit)
 
-### Zoom recordings of Q&A sessions and lectures
+### Zoom recordings of lectures and Q&A sessions
 
-_This section was edited and extended throughout the week. The links to the videos were also shared via slack once available on YouTube._
+_This section was edited and extended throughout the week. The links to the videos were also shared via Slack once available on YouTube._
 
 #### Monday
 
@@ -181,9 +183,9 @@ _This section was edited and extended throughout the week. The links to the vide
 
 _We discussed the video recordings with the participants prior to the actual recordings._
 
-By attending the online zoom sessions, you implicitly give us permission to record these sessions on video.
+By attending the online Zoom sessions, you implicitly give us permission to record these sessions on video.
 
-We will record the online lectures and the Q&A sessions via Zoom’s local recording function ([see here](https://support.zoom.us/hc/en-us/articles/201362473-Local-Recording)), to enable archiving and sharing (e.g., via the FieldTrip website and YouTube). We will share at least with all toolkit participants (especially those that cannot attend live), and if the quality is good, also with the wider public FieldTrip community.  
+We will record the online lectures and the Q&A sessions via Zoom’s local recording function ([see here](https://support.Zoom.us/hc/en-us/articles/201362473-Local-Recording)), to enable archiving and sharing (e.g., via the FieldTrip website and YouTube). We will share at least with all toolkit participants (especially those that cannot attend live), and if the quality is good, also with the wider public FieldTrip community.  
 
 The layout “Shared screen with active speaker” will be used by default during the recording. By default, all attendees to the Zoom session will be assigned as co-hosts, and therefore technically would have the right to start recording on their local machines. However, as a toolkit participant you are not allowed to make any recordings yourself!
 
@@ -210,17 +212,17 @@ For people that do not use a computer at the DCCN:
         addpath <path_to_fieldtrip>
         ft_defaults
 
-4.  Download the tutorial data required for the hands-on from the ftp server by going to ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/ and download Subject01.zip
+4.  Download the tutorial data required for the hands-on from the ftp server by going to <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/> and download Subject01.zip
 
     You should also download some pre-computed intermediate results for each tutorial: 	
 
-    -   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/
-    -   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/
-    -   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/
-    -   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/
-    -   ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/
+    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/eventrelatedaveraging/>
+    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/timefrequencyanalysis/>
+    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/beamformer/>
+    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/cluster_permutation_timelock/>
+    -   <ftp://ftp.fieldtriptoolbox.org/pub/fieldtrip/tutorial/connectivity/>
 
-Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with <https://cyberduck.io> or <https://filezilla-project.org>.
+Downloading will take some time, especially if everyone tries to do it at the same moment. So please download in advance! If downloading from the FTP server in the web browser gives problems, please try with [CyberDuck](https://cyberduck.io) or [FileZilla](https://filezilla-project.org).
 
 For people that use a computer at the DCCN (either a PC via remote desktop or the DCCN cluster):
 
@@ -236,23 +238,23 @@ For people that use a computer at the DCCN (either a PC via remote desktop or th
 
 4.  The data needed for the tutorials are available on /home/common as well, so you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions of point 4 provided in the section above.
 
-    The raw MEG data set of ‘Subject01’, and associated data are located in /home/common/matlab/fieldtrip/data. Additional hands-on session specific data are located in  /home/common/matlab/fieldtrip/data/ftp/tutorial. These data are needed once we get to the respective hands-on session:
+    The raw MEG data set of ‘Subject01’, and associated data are located in `/home/common/matlab/fieldtrip/data`. Additional hands-on session specific data are located in  `/home/common/matlab/fieldtrip/data/ftp/tutorial`. These data are needed once we get to the respective hands-on session:
 
-    -   /home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging
-    -   /home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis
-    -   /home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer
-    -   /home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock
-    -   /home/common/matlab/fieldtrip/data/ftp/tutorial/connectivity
+    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/eventrelatedaveraging`
+    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/timefrequencyanalysis`
+    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/beamformer`
+    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/cluster_permutation_timelock`
+    -   `/home/common/matlab/fieldtrip/data/ftp/tutorial/connectivity`
 
-You can find the links to the tutorials in the google calendar. We will also post all important links for each on-going session in slack and at the top of this document.
+You can find the links to the tutorials in the Google calendar. We will also post all important links for each on-going session in Slack and at the top of this document.
 
-To kick off each hands-on session we will give a short introduction to the tutorial in the main Zoom meeting room. Then you will have time to work on the respective tutorial at your own pace, while staying connected to others via Zoom and Slack. As you work on the tutorial you should record your progress in your dedicated google doc which will be shared with you in advance. Please copy and paste your terminal output and screenshots of your figures as you run the tutorial code. This way you can record any warnings that might appear in the output, some of which are expected, others potentially indicating that something is going wrong. We will be monitoring your google doc (i.e. “look over your shoulder”) to keep track of your progress and make sure you are on the right track.
+To kick off each hands-on session we will give a short introduction to the tutorial in the main Zoom meeting room. Then you will have time to work on the respective tutorial at your own pace, while staying connected to others via Zoom and Slack. As you work on the tutorial you should record your progress in your dedicated Google doc which will be shared with you in advance. Please copy and paste your terminal output and screenshots of your figures as you run the tutorial code. This way you can record any warnings that might appear in the output, some of which are expected, others potentially indicating that something is going wrong. We will be monitoring your Google doc (i.e. “look over your shoulder”) to keep track of your progress and make sure you are on the right track.
 
 You should keep the main Zoom session open in the background during the entire hands-on. From time to time we will make announcements via the general Zoom session or invite you to join a short breakout session discussing a recurring question.
 
 Besides the main Zoom session there will be multiple breakout rooms, one room dedicated to each participant. If you require one-on-one help from one of the tutors or you would like to have a discussion with other participants you can contact them via Slack and invite them to join you in your breakout room. During the hands-on sessions you will be granted Co-host rights which will allow you to move freely between rooms. You don’t have to stay in your own room, you can also move to another breakout room to join a fellow participant (e.g., a colleague) that is working on similar data. We will practice the breakout rooms in advance.
 
-Next to Zoom you should also monitor the session-specific channel in Slack. This is the place where you can communicate with fellow toolkit participants, the FieldTrip organizers and tutors. You can post questions in the channel or ask for one-on-one help in Zoom. You can identify tutors on slack through their status which will be set to “🤓 tutor”
+Next to Zoom you should also monitor the session-specific channel in Slack. This is the place where you can communicate with fellow toolkit participants, the FieldTrip organizers and tutors. You can post questions in the channel or ask for one-on-one help in Zoom. You can identify tutors on Slack through their status which will be set to “🤓 tutor”
 
 When the hands-on session comes to an end, we will close all breakout rooms and gather in the main Zoom room for a Q&A and wrap-up session.
 
@@ -260,7 +262,7 @@ When the hands-on session comes to an end, we will close all breakout rooms and 
 
 After 3 1/2 days of getting familiar with the FieldTrip functions and possibilities in the analyses and in designing and implementing analysis pipelines that suit specific research questions, everything you have learned will come together in the Playground session. The Playground will largely follow the format of the hands-on sessions, but you will be working on your own data and your very own analysis pipeline. These sessions will provide you with ample time to create your analysis script from scratch with the support of the Toolkit team's expertise. Tutors will be there to help you overcome the occasional noisy trial, misaligned topography or even just find that damn missing parenthesis.
 
-The playground is a great opportunity to do a first exploration of your data or play around with different analysis options. Even if you only have preliminary data, do not hesitate to bring it along! The Playground will give you a headstart on any future analysis and get you FieldTrippin' in no time.
+The playground is a great opportunity to do a first exploration of your data or play around with different analysis options. Even if you only have preliminary data, do not hesitate to bring it along! The Playground will give you a head-start on any future analysis and get you FieldTrippin' in no time.
 
 In case you don’t have your own MEG or EEG data yet, please contact Jan-Mathijs or Robert (preferably a bit in advance). We have a lot of different example and tutorial datasets and we can share one with you that resembles the data from a system similar to the one you will work with and/or the experiment that you plan to do in the future.
 
