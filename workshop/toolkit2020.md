@@ -42,9 +42,9 @@ The program was shared with the participants as a Google calendar, including lin
 
 {% include image src="/assets/img/workshop/toolkit2020/program.png" width=500 %}
 
-## Changing to an online format
+## Changing it to an online format
 
-The toolkit is already happening for many years in real-life at the Donders. To plan all changes that were needed for running it online, we used the following list to keep track of the [preparations](/workshop/toolkit2020/preparation).
+The toolkit has already been organized for many years in real-life at the Donders. To plan all changes that were needed for running it online, we used the following list to keep track of the [preparations](/workshop/toolkit2020/preparation).
 
 ## Test the MATLAB and FieldTrip installation in advance
 
