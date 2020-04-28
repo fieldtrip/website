@@ -60,7 +60,7 @@ _The following are the practical notes that were distributed to participants and
 
 ### Code of conduct
 
-We would be very happy if you could spend a couple of minutes of your time to have a look at our Code of Conduct to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please do have a look at and let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
+We would be very happy if you could spend a couple of minutes of your time to have a look at our [Code of Conduct](/workshop/toolkit2020/code_of_conduct) to make sure we all are taking responsibility to look after each other and make sure we are contributing towards an inclusive and supportive community. Please do have a look at and let us know if you have any questions regarding it. All toolkit participants are responsible to follow the rules listed here, as well as making sure that everyone in the toolkit follows it.
 
 ### Shared google documents
 
