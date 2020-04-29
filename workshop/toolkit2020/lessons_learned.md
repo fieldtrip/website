@@ -17,7 +17,7 @@ People that get the error “DPSS, Signal Processing toolbox not found” do not
 
 Switching between Zoom breakout rooms (to allow participants to self-organize) requires that all participants are assigned as co-host. This needs to be done every time they log in. People have to be aware of this, and ask the host to be reassigned if needed.
 
-The host and the co-hosts in zoom cannot raise their hands.
+The host and the co-hosts in Zoom cannot raise their hands.
 
 Co-hosts can mute anyone, including the host.
 

@@ -7,7 +7,7 @@ tags: [toolkit2020]
 
 From 20-24 April 2020 we will again host the “Advanced MEG/EEG toolkit”. Although initially scheduled to take place at the Donders Institute in Nijmegen, the COVID-19 situation made that impossible. We are instead hosting it online.
 
-Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the help of Sophie Arana and Joey Zhou.
+Organizers: Robert Oostenveld and Jan-Mathijs Schoffelen, with the assistance of Sophie Arana and Joey Zhou.
 
 This toolkit course will teach you advanced MEG and EEG data analysis skills. Preprocessing, frequency analysis, source reconstruction and various statistical methods will be covered. Furthermore, there will be a lot of attention to best practices for reproducible analysis and to Open Science. The toolkit will consist of a number of lectures, followed by hands-on sessions in which you will be tutored through the complete analysis of a MEG and EEG data set using the FieldTrip toolbox.
 
@@ -15,26 +15,27 @@ Even though we host the toolkit course online, we can only host a limited number
 
 We're pleased to have the following colleagues from the Donders and from abroad as our lecturers and tutors:
 
--   [Ashley Lewis](https://www.ru.nl/english/people/lewis-a/)
--   [Christoph Huber-Huber](http://christoph.huber-huber.at/)
+-   [Ashley Lewis](https://www.ru.nl/english/people/lewis-a/) - Donders, Nijmegen
+-   [Christoph Huber-Huber](http://christoph.huber-huber.at/) - Donders, Nijmegen
 -   [Eleanor Huizeling](https://www.mpi.nl/people/huizeling-eleanor)
--   [Elie Rassi](https://www.ru.nl/english/people/el-rassi-e/)
--   [Eric Maris](https://www.ru.nl/english/people/maris-e/)
--   [Frederik Weber](https://www.ru.nl/english/people/weber-f/)
--   [Hesham ElShafeh](https://twitter.com/heshamelshaf3i)
--   [Jan-Mathijs Schoffelen](https://www.ru.nl/english/people/schoffelen-j/)
--   [Joey Zhou](https://www.ru.nl/english/people/zhou-y/)
--   [Johannes Algermissen](https://www.ru.nl/english/people/algermissen-j/)
--   [Kristijan Armeni](https://www.ru.nl/english/people/armeni-k/)
--   [Lau Moller Andersen](https://www.laumollerandersen.org/)
--   [Martin Dresler](https://www.ru.nl/english/people/dresler-m/)
--   [Mats van Es](https://www.ru.nl/english/people/es-m-van/)
--   [Mikkel Vinding](https://natmeg.se/staff/mikkel%20vinding.html)
--   [Robert Oostenveld](https://robertoostenveld.nl/research/)
--   [Sophie Arana](https://www.mpi.nl/people/arana-sophie)
--   [Stephen Whitmarch](https://stephenwhitmarsh.com/)
--   [Vitoria Piai](http://vitoriapiai.ruhosting.nl/)
--   [Xiaochen Zheng](https://www.ru.nl/english/people/zheng-x/)
+-   [Elie Rassi](https://www.ru.nl/english/people/el-rassi-e/) - Donders, Nijmegen
+-   [Eric Maris](https://www.ru.nl/english/people/maris-e/) - Donders, Nijmegen
+-   [Frederik Weber](https://www.ru.nl/english/people/weber-f/) - Donders, Nijmegen
+-   [Hesham ElShafeh](https://twitter.com/heshamelshaf3i) - Donders, Nijmegen
+-   [Jan-Mathijs Schoffelen](https://www.ru.nl/english/people/schoffelen-j/) - Donders, Nijmegen
+-   [Joey Zhou](https://www.ru.nl/english/people/zhou-y/) - Donders, Nijmegen
+-   [Johannes Algermissen](https://www.ru.nl/english/people/algermissen-j/) - Donders, Nijmegen
+-   [Kristijan Armeni](https://www.ru.nl/english/people/armeni-k/) - Donders, Nijmegen
+-   [Kristijan Armeni](https://www.ru.nl/english/people/armeni-k/) - Donders, Nijmegen
+-   [Lau Moller Andersen](https://www.laumollerandersen.org/) - CFIN, Aarhus
+-   [Martin Dresler](https://www.ru.nl/english/people/dresler-m/) - Donders, Nijmegen
+-   [Mats van Es](https://www.ru.nl/english/people/es-m-van/) - Donders, Nijmegen
+-   [Mikkel Vinding](https://natmeg.se/staff/mikkel%20vinding.html) - Karolinska, Stockholm
+-   [Robert Oostenveld](https://robertoostenveld.nl/research/) - Donders, Nijmegen
+-   [Sophie Arana](https://www.mpi.nl/people/arana-sophie) - MPI, Nijmegen
+-   [Stephen Whitmarch](https://stephenwhitmarsh.com/) - ICM, Paris
+-   [Vitoria Piai](http://vitoriapiai.ruhosting.nl/) - Donders, Nijmegen
+-   [Xiaochen Zheng](https://www.ru.nl/english/people/zheng-x/) - Donders, Nijmegen
 
 ## Program
 
@@ -48,7 +49,7 @@ The toolkit has already been organized for many years in real-life at the Donder
 
 ## Test the MATLAB and FieldTrip installation in advance
 
-Since all participants are working at home on their own computer, rather that at the Donders in the training room on the computers that we normally provide, we asked the participants to [test their MATLAB and FieldTrip installation in advance](/workshop/toolkit2020/test_installation)
+Since all participants are working at home on their own computer, rather that at the Donders in the training room on the computers that we normally provide (and therefore control), we asked the participants to [test their MATLAB and FieldTrip installation in advance](/workshop/toolkit2020/test_installation). This not only served to test their installation, but also to check that all participants knew how to share their notes in a Google doc with the tutors.
 
 ## Lessons learned
 
@@ -74,23 +75,29 @@ If you want read/write access (to help maintain/update the schedule), please giv
 
 _All tutors received a link to the shared folder on the Google drive, all participants only received a link to the documents relevant to them. The details available to the participants are not shared here, but included the list of participants with some details, the schedule with the assignments of lecturers/tutors, etc._
 
+_Although the shared Q&A documents were meant to collect questions, tutors and participants also started using them to answer questions as the lectures were still ongoing; this was a great addition to the Q&A format. The hands-on documents shared between participants and all tutors were also used to motivate participants, to ask/answer questions, and to quickly share something on screen or in the MATLAB command window (as alternative to Zoom screen sharing, which was not so smooth)._
+
+We have a shared Google doc for each Q&A session following the lectures and hands-on sessions. Please type your questions in that document, we will discuss them in the subsequent Q&A session.
+
+We also have a Google doc for each individual participant for the hands-on sessions. Please use it to keep your notes during the practicals, to allow tutors to look along with what you have managed to complete and monitor your progress.
+
 The tutors have access to the complete shared folder with all documents, the participants only to the subset relevant to them.
 
-### Slack messaging
+### Slack instant messaging
 
 _Please note that the invite link is not valid any more._
 
 Inviting people goes via [this link](https://join.slack.com/t/meg-toolkit/shared_invite/zt-czwha2zp-sHFYeq1EvmMFVxS1jGGBAg). We will disable this link once everyone is on board.
 
+Participants should sign up as “Firstname Lastname” and add a profile picture to make it more personal. Tutors should also sign up as “Firstname Lastname” like everyone else, and set their status to "🤓 tutor" so that they are easily recognized. Please note that you should set it such that the status does not automatically clear itself.
+
 ### Zoom meetings
 
 Robert has a paid pro-account and is able to add/edit scheduled meetings. We have prepared 5 online meetings, one for every day, from 8:00-18:00. Each evening (around 18:30) we will start a new Zoom session; we need some time in between to download and convert the video recordings of the day.
 
-Participants can join all these Zoom meetings without the host being present. It is not always required that a host/lecturer/tutor is present, participants can also hang out together.
+Participants can join all these Zoom meetings without the host being present. It is not always required that a host/lecturer/tutor is present, participants can also hang out together. Please join in Zoom using your full “Firstname Lastname” details.
 
 All tutors and participants are made co-host, and at the start of a hands-on session we create enough breakout rooms for everyone. That allows everyone to switch between their assigned breakout room and the main room when they want, but also to switch to other breakout rooms.
-
-Participants should sign up as “Firstname Lastname” and add a profile picture to make it more personal. Tutors should also sign up as “Firstname Lastname” like everyone else, and set their status to “🤓 Tutoring”. Please note that you should set it such that the status does not automatically clear itself.
 
 ### Zoom meeting links
 
@@ -104,7 +111,7 @@ _Note that these links to the Zoom sessions are not valid any more._
 
 ### Lectures
 
-We will stream the pre-recorded lectures live, but you can also choose to watch them (on YouTube) at a moment that suits you, preferably prior to the Q&A session. There are two lectures that are not pre-recorded (sleep, stats), these are only streamed live.
+We will stream the pre-recorded lectures live (using [CamTwist](http://camtwiststudio.com)), but you can also choose to watch them (on YouTube) at a moment that suits you, preferably prior to the Q&A session. There are two lectures that are not pre-recorded (sleep, stats), these are only streamed live.
 
 If you watch the lecture on YouTube, you have the advantage of stop, rewind, etc. Please write questions in the shared Q&A document.
 
@@ -125,11 +132,11 @@ You can find the links to the online lectures in the Google calendar. We will al
 
 ### Q&A sessions
 
-During the Q&A following the lectures we will go through the questions collected in the shared Google doc. This will be an interactive session and you can also ask your questions here or contribute to the discussion.
+During the Q&A following the lectures we will go through the questions collected in the shared Google doc. This will be an interactive session and you can also directly ask your questions here or contribute to the discussion.
 
 During the Q&A sessions following each hands-on we will do a run-through of the tutorial, explaining what you should have seen (in case it did not work for you) and answer questions that arose during the hands-on. This will be an interactive session and we expect you to contribute.
 
-You can find the links to the shared Q&A documents in the Google calendar. We will also post all important links for each on-going session in Slack and at the top of this document.
+You can find the links to the shared Q&A documents in the Google calendar. We will also post all important links for each on-going session in Slack and at the top of this document (_i.e., the shared "practical notes" Google doc_).
 
 #### Links to shared Q&A documents
 
@@ -236,7 +243,7 @@ For people that use a computer at the DCCN (either a PC via remote desktop or th
         addpath <path_to_fieldtrip>
         ft_defaults
 
-4.  The data needed for the tutorials are available on /home/common as well, so you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions of point 4 provided in the section above.
+4.  The data needed for the tutorials are available on `/home/common` as well, so you don’t need to download this in advance. If you insist on downloading the data in advance, you can follow the instructions of point 4 provided in the section above.
 
     The raw MEG data set of ‘Subject01’, and associated data are located in `/home/common/matlab/fieldtrip/data`. Additional hands-on session specific data are located in  `/home/common/matlab/fieldtrip/data/ftp/tutorial`. These data are needed once we get to the respective hands-on session:
 
@@ -254,7 +261,7 @@ You should keep the main Zoom session open in the background during the entire h
 
 Besides the main Zoom session there will be multiple breakout rooms, one room dedicated to each participant. If you require one-on-one help from one of the tutors or you would like to have a discussion with other participants you can contact them via Slack and invite them to join you in your breakout room. During the hands-on sessions you will be granted Co-host rights which will allow you to move freely between rooms. You don’t have to stay in your own room, you can also move to another breakout room to join a fellow participant (e.g., a colleague) that is working on similar data. We will practice the breakout rooms in advance.
 
-Next to Zoom you should also monitor the session-specific channel in Slack. This is the place where you can communicate with fellow toolkit participants, the FieldTrip organizers and tutors. You can post questions in the channel or ask for one-on-one help in Zoom. You can identify tutors on Slack through their status which will be set to “🤓 tutor”
+Next to Zoom you should also monitor the session-specific channel in Slack. This is the place where you can communicate with fellow toolkit participants, the FieldTrip organizers and tutors. You can post questions in the channel or ask for one-on-one help in Zoom. You can identify tutors on Slack through their status which will be set to "🤓 tutor".
 
 When the hands-on session comes to an end, we will close all breakout rooms and gather in the main Zoom room for a Q&A and wrap-up session.
 

@@ -12,12 +12,12 @@ _This is the list of items that we used to get all work organized prior to and d
 -   Restructure the format so that it works online
 -   Organize online documentation for everyone
 -   Settle on a new time schedule
--   Decide on the digital tools to use (zoom, slack, google docs)
+-   Decide on the digital tools to use (Zoom, Slack, Google docs)
 -   Find tutors for the online hands-on sessions
 -   Figure out the fee with the management and administration
 -   Invite everyone on Slack  
 -   Instruct the tutors/lecturers
--   Test zoom breakout rooms
+-   Test breakout rooms in Zoom
 -   Discuss payment with admin
 -   Inform management
 
