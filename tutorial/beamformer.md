@@ -46,7 +46,7 @@ The aim is to identify the sources of oscillatory activity in the beta band. Fro
 
 {% include image src="/assets/img/tutorial/beamformer/tfrbmf.png" width="700" %}
 
-_Figure: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.._
+_Figure 1: The time-frequency presentation used to determine the time- and frequency-windows prior to beamforming. The squares indicate the selected time-frequency tiles for the pre- and post-response.._
 
 ### Reading & Cleaning the data
 
@@ -240,7 +240,7 @@ Plot the interpolated data:
 
 {% include image src="/assets/img/tutorial/beamformer/figure1bf.png" width="500" %}
 
-_Figure: The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**.._
+_Figure 2: The power estimates of the post-stimulus activity only at ~18 Hz. Note the strong noise bias toward the center of the head. The image was done using **[ft_sourceinterpolate](/reference/ft_sourceinterpolate)** and **[ft_sourceplot](/reference/ft_sourceplot)**.._
 
 Notice that the power is strongest in the center of the brain. There are several ways of circumventing the noise bias towards the center of the head which we will show below.
 
@@ -281,7 +281,7 @@ We limit the colormap for the functional data together with the opacity paramete
 
 {% include image src="/assets/img/tutorial/beamformer/figure2bf.png" width="500" %}
 
-_Figure: The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate._
+_Figure 3: The neural activity index (NAI) plotted for the post-stimulus time window normalized with respect to the noise estimate._
 
 ### Exercise 4: lead field normalization
 
@@ -360,7 +360,7 @@ Now plot the power ratios:
 
 {% include image src="/assets/img/tutorial/beamformer/figure4bf.png" width="500" %}
 
-_Figure: sourceplot with method "slice" ._
+_Figure 4: sourceplot with method "slice" ._
 
 ### Exercise 5: comparing normalizations
 
@@ -395,7 +395,7 @@ To plot an 'orthogonal' cut
 
 {% include image src="/assets/img/tutorial/beamformer/figure7bf.png" width="500" %}
 
-_Figure: sourceplot with method "ortho"._
+_Figure 5: sourceplot with method "ortho"._
 
 The FieldTrip function **[ft_volumenormalise](/reference/ft_volumenormalise)** normalises anatomical and functional volume data to a template anatomical MRI. Spatially aligning the source structures for multiple subjects allows you to compute grandaverages and over subjects statistics. Here we will illustrate the use of volume normalisation for one subject.
 
@@ -417,7 +417,7 @@ When plotting the orthogonal view it is possible to enter interactive mode by sp
 
 {% include image src="/assets/img/tutorial/beamformer/figure8bf.png" width="500" %}
 
-_Figure: sourceplot with method "ortho" after volume normalisation._
+_Figure 6: sourceplot with method "ortho" after volume normalisation._
 
 You can also project the power onto a surface using **[ft_sourceplot](/reference/ft_sourceplot)**. FieldTrip has several surface .mat files available. The surface files are in MNI coordinates, so therefore we use the normalized volume to match those coordinates.
 
@@ -439,7 +439,7 @@ Now the data can be plotted
 
 {% include image src="/assets/img/tutorial/beamformer/bf_tut_surfacepowrelnorm_comfilt.png" width="500" %}
 
-_Figure: sourceplot with method "surface"._
+_Figure 7: sourceplot with method "surface"._
 
 ## Summary and suggested further reading
 
