@@ -69,7 +69,6 @@ See also the [tutorials](/tutorial) and [example scripts](/example).
 - [How can I determine the anatomical label of a source or electrode?](/faq/how_can_i_determine_the_anatomical_label_of_a_source)
 - [How can I fine-tune my BEM volume conduction model?](/faq/how_can_i_fine-tune_my_bem_volume_conduction_model)
 - [How can I map source locations onto an anatomical label in an atlas?](/faq/how_can_i_map_source_locations_between_two_different_representations)
-- [How can I use OpenMEEG for forward modelling?](/faq/how_can_i_use_openmeeg_for_forward_modelling)
 - [How can I visualize the different geometrical objects that are needed for forward and inverse computations?](/faq/how_can_i_visualize_the_different_geometrical_objects_that_are_needed_for_forward_and_inverse_computations)
 - [How do I install the OpenMEEG binaries?](/faq/how_do_i_install_the_openmeeg_binaries)
 - [How do homogenous coordinate transformation matrices work?](/faq/homogenous)

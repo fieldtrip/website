@@ -11,4 +11,4 @@ Dipoli is a command line application that was developed by [Thom Oostendorp](htt
 
 ## Linux
 
-The dipoli executable for Linux was compiled on a 32bit system. To run it on a 64bit system, you need to install the "ia32-libs" library (sudo apt-get install ia32-libs). On newer systems, ia32-libs are deprecated so you should enable the i386 architecture (sudo dpkg --add-architecture i386 && sudo apt-get update) and install the 32-bit libraries (sudo apt-get install libc6:i386 libstdc++6:i386).
+The dipoli executable for Linux was compiled on a 32-bit system. To run it on a 64-bit system, you need to install the "ia32-libs" library (sudo apt-get install ia32-libs). On newer systems, ia32-libs are deprecated so you should enable the i386 architecture (sudo dpkg --add-architecture i386 && sudo apt-get update) and install the 32-bit libraries (sudo apt-get install libc6:i386 libstdc++6:i386).

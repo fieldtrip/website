@@ -52,7 +52,7 @@ The most recent interface, called **ctf2ft_v3**, does everything that version 2 
 
     ctf2ft_v3 hostname:port:flags:decimation:channels
 
-where "flags" can be any combination of **R**, which enables writing the ".res4" file into the FieldTrip buffer header, **E** which enables sending events as decoded from the trigger channels, and **G** which enables multiplying the samples by the correct gain values, and consequently writing out single precision floating point numbers instead of the default 32bit integers. "Decimation" needs to be a positive integer number, and "channels" is a comma-separated list of channel labels, or a star (*) for sending all channels. However, it is important to note that *no\* lowpass filtering is applied before decimation, that is, you have to use the hardware filters (setup in Acq) to use this option.
+where "flags" can be any combination of **R**, which enables writing the ".res4" file into the FieldTrip buffer header, **E** which enables sending events as decoded from the trigger channels, and **G** which enables multiplying the samples by the correct gain values, and consequently writing out single precision floating point numbers instead of the default 32-bit integers. "Decimation" needs to be a positive integer number, and "channels" is a comma-separated list of channel labels, or a star (*) for sending all channels. However, it is important to note that *no\* lowpass filtering is applied before decimation, that is, you have to use the hardware filters (setup in Acq) to use this option.
 
     ctf2ft_v3 -:1972:RE:1:*
 
