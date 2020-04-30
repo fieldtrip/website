@@ -13,15 +13,13 @@ The OpenMEEG binaries are **not** included in the FieldTrip release, but the Ope
 This documentation is most likely outdated. The latest version, more up to date installation instructions and support are available from <http://openmeeg.github.io>.
 {% include markup/end %}
 
-## Installing OpenMEEG
-
 OpenMEEG is available on Linux, macOS and Windows. A 64-bit machine is preferred due to the computational load of M/EEG forward modeling using the BEM.
 
 OpenMEEG can be downloaded from <https://openmeeg.github.io>.
 
-### Installation procedure for Linux
+## Installation procedure for Linux
 
-#### Install from the tar.gz file
+### Install from the tar.gz file
 
 -   untar the .tar file
 -   Set the PATH environment variable in the appropriate .rc configuration file (e.g. .bashrc or .bash_profile)
@@ -29,7 +27,7 @@ OpenMEEG can be downloaded from <https://openmeeg.github.io>.
 -   Set the LIB environment variable
 -   Example (for a Bash shell): `export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:openmeeg_folder/lib`
 
-#### Install from the RPM
+### Install from the RPM
 
 -   open the RPM file with `rpm` from command line in Linux or with an alternative front-end program (e.g. `up2date` for CentOS or `yum` for Fedora/RedHat)
 
@@ -37,18 +35,18 @@ OpenMEEG can be downloaded from <https://openmeeg.github.io>.
 $ rpm -ivh OpenMEEG-2.0-0.x86_64.rpm
 ```
 
-### Installation procedure for Windows
+## Installation procedure for Windows
 
 -   Run the installer
 -   Choose to agree the license terms
 -   Select option to add OpenMEEG to the Windows path
 
-### Installation procedure for macOS
+## Installation procedure for macOS
 
 -   Run the installer
 -   Choose to agree the license terms
 
-### Installing from source
+## Installing from source
 
 The source code of OpenMEEG can be accessed on <https://github.com/openmeeg/openmeeg/>
 
@@ -64,23 +62,6 @@ gcc version 4.3.2 (GCC)
 ```
 
 -   If your version of gcc is superior to 4.2 download OpenMEEG for gcc 4. Otherwise download OpenMEEG for gcc 3. The OpenMEEG version for gcc 4 provides support of OpenMP for parallel and faster computation.
-
-## Make sure that it works
-
-After installing, you should check on the MATLAB command line that the OpenMEEG command-line executable can be found. This is done by typing in your MATLAB prompt:
-
-    > system('om_assemble')
-
-You should see something like this:
-
-    > system('om_assemble');
-    om_assemble version 2.0.svn (570) compiled at Mar 28 2010 07:25:26
-    Not enough arguments
-    Please try "om_assemble -h" or "om_assemble --help "
-
-If the system call prints the correct version information, then you are all done and you can use the forward modeling of OpenMEEG in combination with the inverse methods implemented in FieldTrip.
-
-A good start is the example script "openmeeg_eeg_leadfield_example.m" found in "external/openmeeg"
 
 ## Make sure that MATLAB can find them
 
@@ -115,6 +96,23 @@ setenv('LD_LIBRARY_PATH', ['/opt/openmeeg/lib:' getenv('LD_LIBRARY_PATH')]);
 ```
 
 on Linux.
+
+## Make sure that it works
+
+After installing, you should check on the MATLAB command line that the OpenMEEG command-line executable can be found. This is done by typing in your MATLAB prompt:
+
+    > system('om_assemble')
+
+You should see something like this:
+
+    > system('om_assemble');
+    om_assemble version 2.0.svn (570) compiled at Mar 28 2010 07:25:26
+    Not enough arguments
+    Please try "om_assemble -h" or "om_assemble --help "
+
+If the system call prints the correct version information, then you are all done and you can use the forward modeling of OpenMEEG in combination with the inverse methods implemented in FieldTrip.
+
+A good start is the example script `openmeeg_eeg_leadfield_example.m` found in `external/openmeeg`.
 
 ## If it does not seem to work
 
