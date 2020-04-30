@@ -220,9 +220,6 @@
 - name:  How can I use my MacBook Pro for stimulus presentation in the MEG lab?
   link:  /faq/how_can_i_use_my_macbook_pro_for_stimulus_presentation_in_the_meg_lab
 
-- name:  How can I use OpenMEEG for forward modeling?
-  link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
-
 - name:  How can I use the command-line peerslave and optimize the MATLAB licenses?
   link:  /faq/how_can_i_use_the_command-line_peerslave_and_optimize_the_matlab_licenses
 
