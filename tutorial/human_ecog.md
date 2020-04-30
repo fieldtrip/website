@@ -389,7 +389,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
     data = ft_rejectartifact(cfg, data);
 
-**41**) Re-montage the cortical grids to a common average reference in order to remove noise that is shared across all channels. Box 4 provides a background on re- montaging. Bad channels identified in Step 39 can be excluded from this step by adding those channels to cfg.channel with a minus prefix. That is, cfg.channel = {'LPG*', 'LTG*', '-LPG1'} if one were to exclude the LPG1 channel from the list of LPG and LTG channels.
+**41**) Re-montage the cortical grids to a common average reference in order to remove noise that is shared across all channels. Box 4 provides a background on re-montaging. Bad channels identified in Step 39 can be excluded from this step by adding those channels to cfg.channel with a minus prefix. That is, cfg.channel = {'LPG*', 'LTG*', '-LPG1'} if one were to exclude the LPG1 channel from the list of LPG and LTG channels.
 
     cfg             = [];
     cfg.channel     = {'LPG*', 'LTG*'};
@@ -423,7 +423,7 @@ CRITICAL STEP Identifying bad channels is important for avoiding the contaminati
 
 ### Time-frequency analysis (optional)
 
-**45**) Decompose the signal in time and frequency bins using time-resolved Fourier- based spectral decomposition. The settings for spectral decomposition depend on the clinical or research question at hand and contingencies in the experimental paradigm. Given that we plan to look at task-related changes in high-frequency-band activity (70 to 150 Hz) in a following step, we sample the neural activity using cfg.toi throughout the 300 ms baseline period before tone onset at 0 ms and until after the approximate button press time at 700 ms. At each time point, we estimate spectral content using 200 ms windows (cfg.t_ftimwin). This time window captures 20 cycles of a 100 Hz rhythm, which is well over the 3 cycles minimally required to unambiguously recover the spectral information. For a broader view of powerspectral modulations, we extend the frequency range using cfg.foi from 5 to 200 Hz. Finally, note that cfg.keeptrials is set to 'no' here (as it is by default), meaning that the average spectral content across all trials is returned (see the documentation of ft_freqanalysis).
+**45**) Decompose the signal in time and frequency bins using time-resolved Fourier-based spectral decomposition. The settings for spectral decomposition depend on the clinical or research question at hand and contingencies in the experimental paradigm. Given that we plan to look at task-related changes in high-frequency-band activity (70 to 150 Hz) in a following step, we sample the neural activity using cfg.toi throughout the 300 ms baseline period before tone onset at 0 ms and until after the approximate button press time at 700 ms. At each time point, we estimate spectral content using 200 ms windows (cfg.t_ftimwin). This time window captures 20 cycles of a 100 Hz rhythm, which is well over the 3 cycles minimally required to unambiguously recover the spectral information. For a broader view of powerspectral modulations, we extend the frequency range using cfg.foi from 5 to 200 Hz. Finally, note that cfg.keeptrials is set to 'no' here (as it is by default), meaning that the average spectral content across all trials is returned (see the documentation of ft_freqanalysis).
 
     cfg            = [];
     cfg.method     = 'mtmconvol';
