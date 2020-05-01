@@ -22,6 +22,9 @@
 - name:  Getting started with reading raw EEG or MEG data
   link:  /example/getting_started_with_reading_raw_eeg_or_meg_data
 
+- name:  Using General Linear Modeling on time series data
+  link:  /example/glm_timeseries
+
 - name:  Testing BEM created EEG lead fields
   link:  /example/testing_bem_created_leadfields
 

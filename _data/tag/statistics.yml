@@ -4,6 +4,9 @@
 - name:  Computing and reporting the effect size
   link:  /example/effectsize
 
+- name:  Using General Linear Modeling on time series data
+  link:  /example/glm_timeseries
+
 - name:  Source statistics
   link:  /example/source_statistics
 
