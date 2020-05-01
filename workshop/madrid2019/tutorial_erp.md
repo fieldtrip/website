@@ -65,7 +65,7 @@ S153, S163, S173, S183 (tools) correspond to the presented auditory stimuli.
 These are the triggers we will select for now.
 
     trigVIS = {'S112', 'S122', 'S132', 'S142', 'S152', 'S162', 'S172', 'S182'};
-    trigAUD = {'S113', 'S123', 'S133','S143' , 'S153', 'S163', 'S173', 'S183'};
+    trigAUD = {'S113', 'S123', 'S133', 'S143', 'S153', 'S163', 'S173', 'S183'};
 
     cfg = [];
     cfg.dataset             = 'single_subject_task/raw/subj2.vhdr';
@@ -392,11 +392,11 @@ For each trial, the condition information is kept with the data structure in `da
 
     cfg = [];
     cfg.trials = ismember(data_clean.trialinfo, [112, 122, 132, 142]);
-    dataVIS = ft_timelockanalysis(cfg, data_clean);
+    timelockVIS = ft_timelockanalysis(cfg, data_clean);
 
     cfg = [];
     cfg.trials = ismember(data_clean.trialinfo, [113, 123, 133, 143]);
-    dataAUD = ft_timelockanalysis(cfg, data_clean);
+    timelockAUD = ft_timelockanalysis(cfg, data_clean);
 
 ##### Exercise 4
 
@@ -415,8 +415,8 @@ back and forth between the topographic and time representation of the data.
     cfg = [];
     cfg.layout      = 'easycapM10.mat';
     cfg.interactive = 'yes';
-    cfg.baseline    =[-0.2 0];
-    ft_topoplotER(cfg, dataAUD, dataVIS)
+    cfg.baseline    = [-0.2 0];
+    ft_topoplotER(cfg, timelockAUD, timelockVIS)
 
 {% include image src="/assets/img/workshop/madrid2019/tutorial_erp/tsk_topoVIS.png" width="200" %}
 
@@ -450,12 +450,12 @@ The following code allows you to compute at the ERP difference waves.
     cfg = [];
     cfg.operation = 'subtract';
     cfg.parameter = 'avg';
-    difference = ft_math(cfg, dataAUD, dataVIS);
+    difference = ft_math(cfg, timelockAUD, timelockVIS);
 
 This in principle does the same as
 
-    difference     = dataAUD;                   % copy one of the structures
-    difference.avg = dataAUD.avg - dataVIS.avg;   % compute the difference ERP
+    difference     = timelockAUD;                        % copy one of the structures
+    difference.avg = timelockAUD.avg - timelockVIS.avg;  % compute the difference ERP
 
 but **[ft_math](/reference/ft_math)** will keep provenance (i.e. historical
 information) in the `cfg` structure, whereas if you do it by hand you will loose
