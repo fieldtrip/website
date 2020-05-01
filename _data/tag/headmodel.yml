@@ -34,9 +34,6 @@
 - name:  How can I fine-tune my BEM volume conduction model?
   link:  /faq/how_can_i_fine-tune_my_bem_volume_conduction_model
 
-- name:  How can I use OpenMEEG for forward modeling?
-  link:  /faq/how_can_i_use_openmeeg_for_forward_modelling
-
 - name:  How can I visualize a localspheres volume conductor model?
   link:  /faq/how_can_i_visualize_a_localspheres_volume_conductor_model
 
