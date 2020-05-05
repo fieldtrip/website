@@ -16,13 +16,13 @@ The compiled application includes all code that it requires to run and cannot in
 A common use is to have a "startup.m" script in which the path is set. If present, your startup.m will be compiled into your application. The "isdeployed" MATLAB command can be used to exclude a part (or the complete) startup.m from being executed within your compiled application. So instead of
 
     addpath /home/common/matlab/fieldtrip
-    addpath /home/common/matlab/spm8
+    addpath /home/common/matlab/spm12
     ft_defaults
 
 you should change your startup.m into
 
     if ~isdeployed
     addpath /home/common/matlab/fieldtrip
-    addpath /home/common/matlab/spm8
+    addpath /home/common/matlab/spm12
     ft_defaults
     end
