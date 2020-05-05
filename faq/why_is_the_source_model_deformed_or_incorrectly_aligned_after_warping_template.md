@@ -31,7 +31,7 @@ You can do a "manual" normalization with **[ft_volumenormalise](/reference/ft_vo
 
     %% Warp MRI to template with default parameters
     cfg = [];
-    cfg.spmversion = 'spm8';
+    cfg.spmversion = 'spm8'; % default is now spm12
     cfg.nonlinear = 'yes';
     mri_spm8 = ft_volumenormalise(cfg, mri)
 
@@ -69,7 +69,7 @@ Add config options to the _cfg_ structure when calling **[ft_prepare_sourcemodel
     cfg.unit = 'mm';
     cfg.template = template_grid;
     cfg.mri = mri;
-    cfg.spmversion = 'spm12';   % default is 'spm8'
+    cfg.spmversion = 'spm12';  
     cfg.spmmethod = 'new'      % default is 'old'
 
     sourcespace = ft_prepare_sourcemodel(cfg);

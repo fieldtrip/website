@@ -5,16 +5,15 @@ tags: [faq, spm, toolbox, path]
 
 # How to select the correct SPM toolbox?
 
-Before May 2010, FieldTrip relied on old SPM2 code to do some operations on volumetric images. These operations entailed volumetric smoothing, spatial normalisation, segmentation, and the reading in of a few mri-filetypes. The SPM2 code dates from 2002 and the toolbox does not run correctly on recent versions of matlab. In particular, some MATLAB functions (on which the SPM2 code relied) do not exist in recent versions of MATLAB anymore. Moreover, SPM2 is not compiled for a 64-bit architecture.
+FieldTrip relies on SPM code to do operations on volumetric images. These operations entail volumetric smoothing, spatial normalisation, segmentation, the reading and writing of a certain (old-style) mri-filetypes, and spatial clustering. Over the years that FieldTrip has been developing, the SPM developers have released a newer versions of the software, each of which with slightly different functionalities. The older the version of SPM, the more likely it is that it will not run smoothly on current computers. For instance, the SPM2 code dates from 2002 and the toolbox does not run correctly on recent versions of MATLAB. In particular, some MATLAB functions (on which the SPM2 code relied) do not exist in recent versions of MATLAB anymore. Moreover, some relevant functions are compiled mex-files and these functions don't work if they the computer's operating system is too different from the one on which the original files was compiled.
 
-At some point, we included a functional (subpart of the) SPM2-toolbox in fieldtrip/external/spm2, dealing with the first problem. Yet, we recently implemented support for SPM8 throughout the FieldTrip code, so there is no need to rely on the external/spm2 toolbox anymore. To use SPM8 you will need to have a copy of SPM8 on your MATLAB path.
+FieldTrip includes functional (subparts of the) SPM-toolbox in fieldtrip/external/spm2, fieldtrip/external/spm8, fieldtrip/external/spm12, ensuring a fully functional version of FieldTrip without requiring the user to maintain a separate installation of SPM.
 
-In certain cases you may find (n)one or more spm toolboxes added to your path but still be unable to use the appropriate functions. An example is the reading of mri images with ft_read_mri which may give you the 'the SPM2 or SPM5 toolbox is required to read .mnc files' error. SPM8 does not support reading in .mnc files.
+FieldTrip functions that rely on SPM functionality have a cfg.spmversion option, which can be 'spm2', 'spm5', 'spm8' or 'spm12'. As of May 2020, the default spmversion is 'spm12', to ensure robust behavior of the mex-files on various operating systems. Thus, in principle users don't need to specify a particular spmversion in their scripts, unless they want to:
 
-In such case you have to put a lower SPM-version higher on your MATLAB path. One way to do this is to add the following path to your path list. Use the following command:
+1) emulate the old default behavior, in which case cfg.spmversion = 'spm8';
+2) read or write volumetric images in the old-style '.mnc' format (ft_read_mri, ft_write_mri), in which case cfg.spmversion = 'spm2';
 
-    addpath fieldtrip/external/spm2
-
-You can check in your command window which SPM is currently in your path with:
+You can check in the MATLAB command window which SPM is currently in your path with:
 
     which spm
