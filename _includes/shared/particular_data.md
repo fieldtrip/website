@@ -10,6 +10,7 @@ In general you should get started with the [tutorials](/tutorial). The pages tha
 - [Getting started with BabySQUID data](/getting_started/babysquid)
 - [Getting started with Yokogawa data](/getting_started/yokogawa)
 - [Getting started with Ricoh data](/getting_started/ricoh)
+- [Getting started with OPM data recorded at the FIL](/getting_started/opm_fil)
 
 ## Getting started with particular EEG data types
 
