@@ -7,6 +7,10 @@ tags: [opm, fil]
 
 Optically Pumped Magnetometers offer an exiting opportunity to advance the recording of MEG data. This page provides a short summary on how to get started with processing OPM MEG data that was recorded at the FIL in London. This documentation is largely based on the [OPM GitHub repository](https://github.com/tierneytim/OPM) of Tim Tierney which is geared towards processing the data in SPM.
 
+{% include markup/info %}
+On GitHub you can also find the [neurofractal/analyse_OPMEG](https://github.com/neurofractal/analyse_OPMEG) repository, which contains a bunch of scripts and functions to analyse OPM data using the FieldTrip toolbox.
+{% include markup/end %}
+
 This is how the test dataset looks like. It consists of multiple files, that are largely organized to [BIDS](https://bids-specification.readthedocs.io/en/stable/). The data was recorded during median nerve stimulation of the left wrist, the sensors were placed over the right hemisphere.
 
     channelsfile  = 'testData/channels.tsv';
