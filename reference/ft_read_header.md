@@ -33,7 +33,7 @@ title: ft_read_header
  For some data formats that are recorded on animal electrophysiology
  systems (e.g. Neuralynx, Plexon), the following optional fields are
  returned, which allows for relating the timing of spike and LFP data
-   hdr.FirstTimeStamp      number, represented as 32-bit or 64-bit unsigned integer
+   hdr.FirstTimeStamp      number, represented as 32 bit or 64 bit unsigned integer
    hdr.TimeStampPerSample  number, represented in double precision
 
  Depending on the file format, additional header information can be
