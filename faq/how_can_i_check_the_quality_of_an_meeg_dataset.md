@@ -26,4 +26,4 @@ One can also inspect previously analyzed data without running the analysis again
     cfg.analyze = 'no'
     ft_qualitycheck(cfg)
 
-On Odin (the MEG acquisition computer at the DCCN) the recorded data is analyzed and visualized automatically with a 'cronjob' running every night. The most recent .png and .pdf files are stored in /home/common/meg_quality.
+On Odin (the MEG acquisition computer at the DCCN) the recorded data is analyzed and visualized automatically with a 'cronjob' running every night. Some recent (2011 - 2018) .png and .pdf files are stored in /home/common/meg_quality. For more information, please ask Robert.
