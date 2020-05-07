@@ -10,7 +10,7 @@ title: ft_volumebiascorrect
  as obtained from the FT_READ_MRI function
 
  The configuration structure can contain
-   cfg.spmversion     = string, 'spm8', 'spm12' (default = 'spm8')
+   cfg.spmversion     = string, 'spm8', 'spm12' (default = 'spm12')
    cfg.opts           = struct, containing spmversion specific options.
                         See the code below and the SPM-documentation for
                         more information.

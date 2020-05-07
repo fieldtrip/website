@@ -22,7 +22,7 @@ title: ft_prepare_mesh
 
  When providing an anatomical MRI or a segmentation, you should specify
    cfg.downsample  = integer number (default = 1, i.e. no downsampling), see FT_VOLUMEDOWNSAMPLE
-   cfg.spmversion  = string, 'spm2', 'spm8', 'spm12' (default = 'spm8')
+   cfg.spmversion  = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
 
  For method 'headshape' you should specify
    cfg.headshape   = a filename containing headshape, a Nx3 matrix with surface

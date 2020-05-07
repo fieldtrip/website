@@ -24,7 +24,7 @@ title: ft_volumewrite
    cfg.vmpversion    = 1 or 2 (default) version of the vmp-format to use
 
  The default filetype is 'nifti', which means that a single *.nii file
- will be written using the SPM8 toolbox. The 'nifti_img' filetype uses SPM8 for
+ will be written using the freesurfer toolbox. The 'nifti_img' filetype uses SPM for
  a dual file (*.img/*.hdr) nifti-format file.
  The analyze, analyze_spm, nifti, nifti_img and mgz filetypes support a homogeneous
  transformation matrix, the other filetypes do not support a homogeneous transformation

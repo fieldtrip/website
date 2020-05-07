@@ -11,7 +11,7 @@ title: ft_volumenormalise
  example read with FT_READ_MRI.
 
  Configuration options are
-   cfg.spmversion  = string, 'spm2', 'spm8', 'spm12' (default = 'spm8')
+   cfg.spmversion  = string, 'spm2', 'spm8', 'spm12' (default = 'spm12')
    cfg.opts        = structure with configurable normalisation options,
                        see spm documentation for details.
    cfg.template    = string, filename of the template anatomical MRI (default = 'T1.mnc'
