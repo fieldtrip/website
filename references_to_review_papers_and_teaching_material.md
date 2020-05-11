@@ -73,6 +73,8 @@ The following paper illustrates several problems associated with the lack of rob
 
 The blog post [Correlations in neuroscience: are small n, interaction fallacies, lack of illustrations and confidence intervals the norm?](https://garstats.wordpress.com/2018/06/11/ejn2017) by Guillaume Rousselet has some interesting observations and recommendations.
 
+[The Meaningfulness of Effect Sizes in Psychological Research: Differences Between Sub-Disciplines and the Impact of Potential Biases](https://doi.org/10.3389/fpsyg.2019.00813) by Thomas Schäfer and Marcus A. Schwarz discusses the relevance and challenges of using and reporting effect sizes.
+
 ## Source estimation
 
 Michel, C.M. et al. [EEG source imaging.](http://www.ncbi.nlm.nih.gov/pubmed/15351361) Clin Neurophysiol, 2004; 115(10):2195-222.
