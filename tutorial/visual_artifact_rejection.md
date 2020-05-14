@@ -156,6 +156,33 @@ You can also call **[ft_rejectvisual](/reference/ft_rejectvisual)** multiple tim
     cfg.channel = 'EEG';
     clean3  = ft_rejectvisual(cfg, clean2);
 
+The previous example of calling ft_rejectvisual sequentially does not allow to exclude bad channels from the data structure. If youw ant to select both trials _and_ channels, you can use the following approach:
+
+    % split the data over three different channel types
+    cfg = [];
+    cfg.channel = 'MEGMAG';
+    dummy1 = ft_selectdata(cfg, orig);
+    cfg.channel = 'MEGGRAD';
+    dummy2 = ft_selectdata(cfg, orig);
+    cfg.channel = 'EEG';
+    dummy3 = ft_selectdata(cfg, orig);
+
+    cfg = [];
+    cfg.method = 'summary';
+    cfg.keepchannel = 'no'; % actually this does not matter
+    cfg.keeptrials = 'no';  % actually this does not matter
+
+    % select channels and trials in each dataset
+    dummy1 = ft_rejectvisual(cfg, dummy1);
+    dummy2 = ft_rejectvisual(cfg, dummy2);
+    dummy3 = ft_rejectvisual(cfg, dummy3);
+
+    % make the final selection of channels and trials in the ORIGINAL data
+    cfg = [];
+    cfg.channel = union(dummy1.cfg.channel, dummy1.cfg.channel, dummy1.cfg.channel);
+    cfg.trials  = intersect(dummy1.cfg.trials, dummy1.cfg.trials, dummy1.cfg.trials);
+    clean = ft_selectdata(cfg, orig);
+
 {% include markup/end %}
 
 ---
