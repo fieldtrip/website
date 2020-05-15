@@ -176,7 +176,7 @@ title: ft_sourceplot
  a single or multiple triangulated surface mesh(es) in an Nx1 cell-array
  to be plotted with the interpolated functional data (see FT_PLOT_CLOUD)
 
- The following parameters apply to cfg.method='elec'
+ The following parameters apply to cfg.method='cloud'
    cfg.cloudtype       = 'point' plots a single point at each sensor position
                          'cloud' (default) plots each a group of spherically arranged points at each sensor position
                          'surf' plots a single spherical surface mesh at each sensor position
