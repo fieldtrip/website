@@ -7,7 +7,7 @@ tags: [faq, source]
 
 FieldTrip supports the use of an anatomical atlas to look up the anatomical label of a source that you have localized. Vice versa you can also first look up the location of an anatomical region and subsequently use that in source analysis, e.g. as region of interest for beamforming or as starting point for dipole fitting.
 
-The function **[ft_read_atlas](/reference/ft_read_atlas)** reads in a specified atlas with coordinates and anatomical labels. It either uses the [AFNI brik file](https://afni.nimh.nih.gov/pub/dist/doc/program_help/README.compression.html), or it uses one of the [WFU atlases](http://fmri.wfubmc.edu) (see also https://www.nitrc.org/projects/wfu_pickatlas/). The following example code shows a simple demonstration:
+The function **[ft_read_atlas](/reference/ft_read_atlas)** reads in a specified atlas with coordinates and anatomical labels. It either uses the [AFNI brik file](https://www.google.com/search?q=afni+brik+file+format), or it uses one of the [WFU atlases](http://fmri.wfubmc.edu) (see also https://www.nitrc.org/projects/wfu_pickatlas/). The following example code shows a simple demonstration:
 
     atlas = ft_read_atlas('ROI_MNI_V4.nii');
 
