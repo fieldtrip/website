@@ -7,7 +7,7 @@ tags: [faq, neuralynx, corrupt, preprocessing]
 
 It may occur that there are gaps in the Neuralynx recordings, e.g. when the experimenter stops and re-starts the recording in the Cheetah acquisition software. The consequence is that the data samples do not form a continuous representation any more. This can be detected offline, since the time-stamps that are stored along with the data will show gaps.
 
-In case there are gaps in the recording, the default way of linking timestamps to samples and vice versa will be incorrect. The default is is to assume a linear relationship, i.e.
+In case there are gaps in the recording, the default way of linking timestamps to samples and vice versa will be incorrect. The default is to assume a linear relationship, i.e.
 
     timestamp = hdr.TimeStampPerSample * sample hdr.FirstTimeStamp
 
@@ -15,7 +15,7 @@ Due to the gaps in the recording, the timestamps that relate to events cannot be
 
 The low-level `read_neuralynx_ncs` function detects the presence of gaps in the `.ncs` file and issues a warning. If you get this warning, the solution is to read in the raw timestamps for all individual samples rather than relying on the monotonous linear relationship. This is possible for a single channel, the procedure does not yet work when reading a whole dataset at once (i.e. a directory containing multiple `.ncs` files).
 
-You can then construct a time-stamp vector with all time stamps for all samples, interpolate missing samples, and set the values for missing samples (in the recording gap) to NaNs. This is demonstrated in the following code:
+You can then construct a timestamp vector with all timestamps for all samples, interpolate missing samples, and set the values for missing samples (in the recording gap) to NaNs. This is demonstrated in the following code:
 
     % start with normal preprocessing of a single channel
     cfg         = [];
