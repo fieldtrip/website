@@ -11,12 +11,12 @@ The **[ft_write_data](/reference/ft_write_data)** function requires that you con
 
     hdr = ft_fetch_header(data);
 
-If your data is continuous and hence the data structure contains only a single (very long) trial do:
+If your data is continuous and hence the data structure contains only a single (very long) trial:
 
     dat = data.trial{1};
     ft_write_data('yourfile.ext', dat, 'header', hdr, ...)
 
-If you want to write multiple trials, you have to concatenate them and like this:
+If you want to write multiple trials, you have to concatenate them like this:
 
     dat = cat(2,data.trial{:})
     ft_write_data('yourfile.ext', dat, 'header', hdr, ...)
@@ -25,12 +25,13 @@ Note that in the additional options to ft_write_data you should specify the file
 
 - edf
 - gdf
+- anywave_ades
 - brainvision_eeg
 - neuralynx_ncs
 - neuralynx_sdma
 - plexon_nex
-- riff_wave
 - fcdc_matbin
 - fcdc_mysql
 - fcdc_buffer
+- flac, m4a, mp4, oga, ogg, wav (audio formats)
 - MATLAB
