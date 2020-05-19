@@ -38,7 +38,8 @@ title: ft_plot_vector
    'vlim'            = vertical scaling limits within the local axes
 
  When using a local pseudo-axis, you can plot a label next to the data
-   'label'           = string, label to be plotted at the upper left corner
+   'label'           = string, label to be plotted in the corner of the box
+   'labelpos'        = string, position for the label (default = 'upperleft')
    'fontcolor'       = string, color specification (default = 'k')
    'fontsize'        = number, sets the size of the text (default = 10)
    'fontunits'       =

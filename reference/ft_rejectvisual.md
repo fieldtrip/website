@@ -2,13 +2,12 @@
 title: ft_rejectvisual
 ---
 ```plaintext
- FT_REJECTVISUAL shows the preprocessed data in all channels and/or trials to
- allow the user to make a visual selection of the data that should be
- rejected. The data can be displayed in a "summary" mode, in which case
- the variance (or another metric) in each channel and each trial is
- computed. Alternatively, all channels can be shown at once allowing
- paging through the trials, or all trials can be shown, allowing paging
- through the channels.
+ FT_REJECTVISUAL shows the preprocessed data in all channels and/or trials to allow
+ the user to make a visual selection of the data that should be rejected. The data
+ can be displayed in a "summary" mode, in which case the variance (or another
+ metric) in each channel and each trial is computed. Alternatively, all channels can
+ be shown at once allowing paging through the trials, or all trials can be shown,
+ allowing paging through the channels.
 
  Use as
    [data] = ft_rejectvisual(cfg, data)
@@ -18,8 +17,7 @@ title: ft_rejectvisual
                      'summary'  show a single number for each channel and trial (default)
                      'channel'  show the data per channel, all trials at once
                      'trial'    show the data per trial, all channels at once
-   cfg.channel     = Nx1 cell-array with selection of channels (default = 'all'),
-                     see FT_CHANNELSELECTION for details
+   cfg.channel     = Nx1 cell-array with selection of channels (default = 'all'), see FT_CHANNELSELECTION for details
    cfg.keepchannel = string, determines how to deal with channels that are not selected, can be
                      'no'          completely remove deselected channels from the data (default)
                      'yes'         keep deselected channels in the output data
@@ -41,11 +39,9 @@ title: ft_rejectvisual
                      'range'     range from min to max in each channel
                      'kurtosis'  kurtosis, i.e. measure of peakedness of the amplitude distribution
                      'zvalue'    mean and std computed over all time and trials, per channel
-   cfg.latency     = [begin end] in seconds, or 'all', 'minperiod', 'maxperiod',
-                     'prestim', 'poststim' (default = 'all')
-   cfg.alim        = value that determines the amplitude scaling for the
-                     channel and trial display, if empty then the amplitude
-                     scaling is automatic (default = [])
+   cfg.latency     = [begin end] in seconds, or 'all', 'minperiod', 'maxperiod', 'prestim', 'poststim' (default = 'all')
+   cfg.viewmode    = 'remove', 'toggle' or 'hide', only applies to summary mode (default = 'remove')
+   cfg.box         = string, 'yes' or 'no' whether to draw a box around each graph (default = 'no')
 
  The following options for the scaling of the EEG, EOG, ECG, EMG, MEG and NIRS channels
  is optional and can be used to bring the absolute numbers of the different
@@ -63,10 +59,9 @@ title: ft_rejectvisual
    cfg.mychan      = Nx1 cell-array with selection of channels
    cfg.chanscale   = Nx1 vector with scaling factors, one per channel specified in cfg.channel
 
- Optionally, the raw data is preprocessed (filtering etc.) prior to
- displaying it or prior to computing the summary metric. The
- preprocessing and the selection of the latency window is NOT applied
- to the output data.
+ Optionally, the raw data is preprocessed (filtering etc.) prior to displaying it or
+ prior to computing the summary metric. The preprocessing and the selection of the
+ latency window is NOT applied to the output data.
 
  The following settings are useful for identifying EOG artifacts:
    cfg.preproc.bpfilter    = 'yes'

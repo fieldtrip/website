@@ -32,9 +32,6 @@ A detailed description of each function is available in the [reference documenta
 **cfg.align** - [ft_appendlayout](/reference/ft_appendlayout), [ft_spike_waveform](/reference/ft_spike_waveform)  
 
 
-**cfg.alim** - [ft_rejectvisual](/reference/ft_rejectvisual)  
-
-
 **cfg.allowoverlap** - [ft_databrowser](/reference/ft_databrowser)  
 
 
@@ -499,7 +496,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.borderspikes** - [ft_spiketriggeredspectrum_convol](/reference/ft_spiketriggeredspectrum_convol)  
 
 
-**cfg.box** - [ft_layoutplot](/reference/ft_layoutplot), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_volumelookup](/reference/ft_volumelookup)  
+**cfg.box** - [ft_layoutplot](/reference/ft_layoutplot), [ft_multiplotER](/reference/ft_multiplotER), [ft_multiplotTFR](/reference/ft_multiplotTFR), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_volumelookup](/reference/ft_volumelookup)  
 
 
 **cfg.boxchannel** - [ft_prepare_layout](/reference/ft_prepare_layout)  
@@ -3050,7 +3047,7 @@ A detailed description of each function is available in the [reference documenta
 **cfg.videohdr** - [ft_audiovideobrowser](/reference/ft_audiovideobrowser)  
 
 
-**cfg.viewmode** - [ft_databrowser](/reference/ft_databrowser), [ft_volumerealign](/reference/ft_volumerealign)  
+**cfg.viewmode** - [ft_databrowser](/reference/ft_databrowser), [ft_rejectvisual](/reference/ft_rejectvisual), [ft_volumerealign](/reference/ft_volumerealign)  
 
 
 **cfg.viewpoint** - [ft_prepare_layout](/reference/ft_prepare_layout)  

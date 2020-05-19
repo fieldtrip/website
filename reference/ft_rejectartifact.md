@@ -9,7 +9,7 @@ title: ft_rejectartifact
  You should start by detecting the artifacts in the data using the function
  FT_ARTIFACT_xxx where xxx is the type of artifact. Subsequently FT_REJECTARTIFACT
  looks at the detected artifacts and removes them from the trial definition or from
- the data. In case you wish to replace bad parts by nans, you have to specify data
+ the data. In case you wish to replace bad parts by NaNs, you have to specify data
  as an input parameter.
 
  Use as
