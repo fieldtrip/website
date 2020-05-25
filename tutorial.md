@@ -22,11 +22,11 @@ When adding or contributing to the tutorials please consider the [documentation 
 
 ## Preprocessing of MEG and EEG data
 
+- [Preprocessing - Reading continuous EEG and MEG data](/tutorial/continuous)
 - [Introduction on artifacts](/tutorial/artifacts)
 - [Visual artifact detection](/tutorial/visual_artifact_rejection)
 - [Automatic artifact detection](/tutorial/automatic_artifact_rejection)
 - [Preprocessing - Trigger based trial selection](/tutorial/preprocessing)
-- [Preprocessing - Reading continuous EEG data](/tutorial/continuous)
 - [Preprocessing and event-related activity in combined MEG/EEG data](/workshop/natmeg/preprocessing)
 
 ## Sensor-level analyses of MEG and EEG data
