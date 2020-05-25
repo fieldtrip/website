@@ -14,7 +14,7 @@ EEGLAB supports external plug-ins and one of them is DIPFIT. With the DIPFIT plu
 
 Both EEGLAB and FieldTrip work with data structures in MATLAB memory. The design philosophy in EEGLAB is to gather all data from one subject in a single "EEG" structure, and all data from a group of subjects in a "STUDY" structure. This is different from the design philosophy of FieldTrip, which does not gather all results in a single structure, but keeps the results from different analyses in [different structures](/faq/how_are_the_various_data_structures_defined).
 
-Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **fieldtrip2eeglab** and **eeglab2fieldtrip**. Please note that eeglab2fieldtrip is included in the FieldTrip release, and that fieldtrip2eeglab is included in the EEGLAB release.
+Together with the EEGLAB developers we maintain two functions for converting the data back and forth: **fieldtrip2eeglab** and **eeglab2fieldtrip**.
 
 ## Using FieldTrip with the DIPFIT plug-in
 
