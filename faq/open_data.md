@@ -13,6 +13,8 @@ The FieldTrip tutorials include a lot of smaller datasets that are available for
 
 Note that other MEG/EEG data analysis toolboxes like SPM, MNE, EEGLAB and BrainStorm also share tutorial datasets.
 
+On the [Donders Repository](https://data.donders.ru.nl/collections/published), [OpenNeuro](https://openneuro.org) and on [Zenodo](https://zenodo.org) you can find many publicly accessible EEG, MEG and fMRI datasets. On [DataCite](https://search.datacite.org) and on [Google Dataset Search](https://datasetsearch.research.google.com) you san search for datasets.
+
 ## Other MEG datasets
 
 The [Human Connectome Project](http://www.humanconnectome.org) contains MEG data from close to 100 subjects, which were scanned on the 248-channel 4D/BTi MEG system at SLU, St Louis. The MEG data includes resting-state and three different experimental tasks, and anatomical, functional (1200 subjects, resting and task) and associated behavioral and demographic data is available. See also [doi: 10.1016/j.neuroimage.2013.05.056](http://dx.doi.org/10.1016/j.neuroimage.2013.05.056) and [doi: 10.1016/j.neuroimage.2015.04.046](http://dx.doi.org/10.1016/j.neuroimage.2015.04.046).
@@ -25,9 +27,19 @@ The [Kymata Atlas](https://kymata-atlas.org) also shares datasets with electroma
 
 Wakeman and Henson have shared [A multi-subject, multi-modal human neuroimaging dataset](http://www.nature.com/articles/sdata20151) that includes raw MEG and EEG data from 16 subjects. This data also forms the basis for the SPM documentation.
 
+The [Mother Of Unification Studies (MOUS) dataset](https://doi.org/10.34973/37n0-yc51) contains MEG and fMRI data acquired from 204 healthy human subjects during rest and while they performed a language task. During the language task they processed linguistic utterances that either consisted of normal or scrambled sentences. Half of the subjects were reading the stimuli, the other half listened to the stimuli. The resting state measurements consisted of 5 minutes eyes-open for the MEG and 7 minutes eyes-closed for fMRI. The neuroimaging data, as well as the information about the experimental events are shared according to the Brain Imaging Data Structure (BIDS) format.
+
 ## Other EEG datasets
 
+The [FieldTrip made easy](https://doi.org/10.3389/fnins.2018.00711) paper includes [high-density EEG data](https://doi.org/10.34973/fkgz-8d22) from 29 healthy human participants, recorded in an auditory steady state responses (ASSR) paradigm. The data collection contains not only all data, but also the analysis scripts to reproduce the results presented in the paper.
+
 The [BNCI Horizon 2020 consortium](http://bnci-horizon-2020.eu/database/data-sets) hosts a repository of datasets from brain-computer interface (BCI) and decoding experiments available for free download. The datasets include EEG, fNIRS, and ECoG data collected mainly by the consortium partners in several European countries.
+
+The [National Sleep Research Resource](https://sleepdata.org) website links to a large collection of sleep EEG datasets.
+
+The Child Mind Institute provides both raw and preprocessed EEG data in the [Multimodal Resource for Studying Information Processing in the Developing Brain (MIPDB) dataset](http://fcon_1000.projects.nitrc.org/indi/cmi_eeg/eeg.html). This includes data from subject in different age ranges from 9 years up to 44 years. The Child Mind Institute also shares EEG data from more than 600 subjects in the [Healthy Brain Network dataset](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/index.html).
+
+The Max Planck Institut in Leipzig shares the [LEMON Mind-Brain-Body Dataset](http://fcon_1000.projects.nitrc.org/indi/retro/MPI_LEMON.html) which includes data from 228 healthy participants comprising a young (N=154, range 20–35 years) and an elderly group (N=74, range 59–77 years). During a two-day assessment, participants completed 3T MRI and a 62-channel EEG experiment at rest.
 
 The [Brain Signals](http://www.brainsignals.de) website has a list of references to shared EEG data sets.
 
